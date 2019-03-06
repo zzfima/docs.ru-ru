@@ -7,21 +7,21 @@ helpviewer_keywords:
 - Panel control [WPF], how-to topics
 - controls [WPF], Panel
 ms.assetid: 28d8faf2-490c-4e17-a447-df25a66f6679
-ms.openlocfilehash: 309a5df174a2366fda411678d95a9701dcebb9cc
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: a0cb1e0b569fb69adf1e474ca3666d5e387274ce
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747922"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366248"
 ---
 # <a name="panel-how-to-topics"></a>Разделы руководства по Panel
 В этом разделе описываются способы использования <xref:System.Windows.Controls.Panel> элемент и связанные [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Создание пользовательского элемента панели](../../../../docs/framework/wpf/controls/how-to-create-a-custom-panel-element.md)  
- [Переопределение метода панели OnRender](../../../../docs/framework/wpf/controls/how-to-override-the-panel-onrender-method.md)  
- [Определение свойств высоты элемента](../../../../docs/framework/wpf/controls/how-to-set-the-height-properties-of-an-element.md)  
- [Определение свойств ширины элемента](../../../../docs/framework/wpf/controls/how-to-set-the-width-properties-of-an-element.md)  
+ [Создание пользовательского элемента панели](how-to-create-a-custom-panel-element.md)  
+ [Переопределение метода панели OnRender](how-to-override-the-panel-onrender-method.md)  
+ [Определение свойств высоты элемента](how-to-set-the-height-properties-of-an-element.md)  
+ [Определение свойств ширины элемента](how-to-set-the-width-properties-of-an-element.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Controls.Panel>  
@@ -39,8 +39,8 @@ ms.locfileid: "56747922"
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Макет](../../../../docs/framework/wpf/advanced/layout.md)  
+ [Макет](../advanced/layout.md)  
   
- [Пошаговое руководство: My first WPF desktop application](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md) (Пошаговое руководство. Создание классического приложения WPF)  
+ [Пошаговое руководство: My first WPF desktop application](../getting-started/walkthrough-my-first-wpf-desktop-application.md) (Пошаговое руководство. Создание классического приложения WPF)  
   
- [Общие сведения об элементе управления ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [Общие сведения об элементе управления ScrollViewer](scrollviewer-overview.md)

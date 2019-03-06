@@ -9,12 +9,12 @@ helpviewer_keywords:
 - documents [WPF], annotations
 - sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
-ms.openlocfilehash: e88383126c1fb618b2a2a96bdf5998560864af50
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: a0c6260eee10487034655b5e4abbfa1f1a7bce71
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746446"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355185"
 ---
 # <a name="annotations-overview"></a>Общие сведения о заметках
 Добавление заметок или примечаний на печатные документы — это настолько обыденное действие, что мы воспринимаем его как должное. Такие примечания или комментарии являются "заметками", которые мы добавляем в документ для пометки информации или выделения интересующих элементов, к которым будем обращаться в дальнейшем. Хотя написание заметок на печатных документах является простым и обыденным, возможность добавлять личные примечания в электронные документы, как правило, очень ограниченна, если вообще доступна.  
@@ -28,12 +28,12 @@ ms.locfileid: "56746446"
   
  Ниже показаны некоторые примеры заметок: выделение, текстовая записка и рукописная записка.  
   
- ![Выделение, текстовая и рукописная записка](../../../../docs/framework/wpf/advanced/media/caf-stickynote.jpg "CAF_StickyNote")  
+ ![Выделение, текстовая и рукописная записка](./media/caf-stickynote.jpg "CAF_StickyNote")  
   
  В следующем примере показан метод, который можно использовать для включения поддержки заметок в приложении.  
   
- [!code-csharp[DocViewerAnnotationsXml#DocViewXmlStartAnnotations](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXml/CSharp/Window1.xaml.cs#docviewxmlstartannotations)]
- [!code-vb[DocViewerAnnotationsXml#DocViewXmlStartAnnotations](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DocViewerAnnotationsXml/visualbasic/window1.xaml.vb#docviewxmlstartannotations)]  
+ [!code-csharp[DocViewerAnnotationsXml#DocViewXmlStartAnnotations](~/samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXml/CSharp/Window1.xaml.cs#docviewxmlstartannotations)]
+ [!code-vb[DocViewerAnnotationsXml#DocViewXmlStartAnnotations](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DocViewerAnnotationsXml/visualbasic/window1.xaml.vb#docviewxmlstartannotations)]  
   
 <a name="caf1_type_callouts"></a>   
 ## <a name="highlights"></a>Выделение  
@@ -41,17 +41,17 @@ ms.locfileid: "56746446"
   
  На следующем рисунке показан пример заметки-выделения.  
   
- ![Заметка-выделение](../../../../docs/framework/wpf/advanced/media/caf-callouts.png "CAF_Callouts")  
+ ![Заметка-выделение](./media/caf-callouts.png "CAF_Callouts")  
   
  Пользователи обычно создают заметки, сначала выбирая некоторый текст или интересующий элемент, а затем щелкните правой кнопкой мыши для отображения <xref:System.Windows.Controls.ContextMenu> для параметров заметки.  В следующем примере показан [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] можно использовать для объявления <xref:System.Windows.Controls.ContextMenu> с маршрутизированных команд, доступных пользователям для создания заметок и управления ими.  
   
- [!code-xaml[DocViewerAnnotationsXps#CreateDeleteAnnotations](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXps/CSharp/Window1.xaml#createdeleteannotations)]  
+ [!code-xaml[DocViewerAnnotationsXps#CreateDeleteAnnotations](~/samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXps/CSharp/Window1.xaml#createdeleteannotations)]  
   
 <a name="caf1_framework_data_anchoring"></a>   
 ## <a name="data-anchoring"></a>Привязка данных  
  [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] привязывает заметки к данным, выбранным пользователем, а не только к расположению. Таким образом, при изменении представления документа, например когда пользователь прокручивает его или изменяет размер окна отображения, заметка остается привязанной к выбранным данным. Например, на следующем графике показана заметка, которую пользователь задал для выделенного текста. При изменении представления документа (прокрутка, изменение размера, масштаба и т. д.) заметка-выделение перемещается вместе с исходным фрагментом данных.  
   
- ![Привязка данных заметки](../../../../docs/framework/wpf/advanced/media/caf-dataanchoring.png "CAF_DataAnchoring")  
+ ![Привязка данных заметки](./media/caf-dataanchoring.png "CAF_DataAnchoring")  
   
 <a name="matching_annotations_with_annotated_objects"></a>   
 ## <a name="matching-annotations-with-annotated-objects"></a>Сопоставление заметок с объектами заметок  
@@ -59,8 +59,8 @@ ms.locfileid: "56746446"
   
  Ниже приведен пример, демонстрирующий реализацию обработчика событий такого списка, который служит в качестве панели комментариев.  
   
- [!code-csharp[FlowDocumentAnnotatedViewer#Handler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/CSharp/Window1.xaml.cs#handler)]
- [!code-vb[FlowDocumentAnnotatedViewer#Handler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/visualbasic/window1.xaml.vb#handler)]  
+ [!code-csharp[FlowDocumentAnnotatedViewer#Handler](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/CSharp/Window1.xaml.cs#handler)]
+ [!code-vb[FlowDocumentAnnotatedViewer#Handler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/visualbasic/window1.xaml.vb#handler)]  
   
  Другой пример сценария касается приложений, позволяющих производить обмен заметками и записками между читателями документа по электронной почте. Эта функция позволяет таким приложениям направлять пользователя на страницу, содержащую заметку для обмена.  
   
@@ -71,8 +71,8 @@ ms.locfileid: "56746446"
 - <xref:System.Windows.Controls.FlowDocumentScrollViewer>
 - <xref:System.Windows.Controls.FlowDocumentReader>
 - <xref:System.Windows.Annotations.IAnchorInfo>
-- [Схема примечаний](../../../../docs/framework/wpf/advanced/annotations-schema.md)
-- [Общие сведения об элементе ContextMenu](../../../../docs/framework/wpf/controls/contextmenu-overview.md)
-- [Общие сведения о системе команд](../../../../docs/framework/wpf/advanced/commanding-overview.md)
-- [Общие сведения о документах нефиксированного формата](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+- [Схема примечаний](annotations-schema.md)
+- [Общие сведения об элементе ContextMenu](../controls/contextmenu-overview.md)
+- [Общие сведения о системе команд](commanding-overview.md)
+- [Общие сведения о документах нефиксированного формата](flow-document-overview.md)
 - [Практическое руководство. Добавление команды в объект MenuItem](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms741839(v=vs.90))

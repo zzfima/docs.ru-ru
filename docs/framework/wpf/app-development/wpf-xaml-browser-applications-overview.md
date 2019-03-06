@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: 04bfc2df15829b63e6f2541eb95a4dd14836744c
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 6229e7fff4171f04d35bbc5be0596526f513191a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747023"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370193"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Общие сведения о приложениях браузера WPF XAML
 <a name="introduction"></a>
@@ -37,10 +37,10 @@ ms.locfileid: "56747023"
 ## <a name="creating-a-new-xaml-browser-application-xbap"></a>Создание приложения обозревателя XAML (XBAP)  
  Самый простой способ создать проект XBAP — с помощью Microsoft Visual Studio. При создании нового проекта выберите из списка шаблонов **приложение браузера WPF**. Дополнительные сведения см. в разделе [Как Создание нового проекта приложения браузера WPF](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100)).  
   
- При запуске проект XBAP откроется в окне браузера, а не в отдельном окне. При отладке XBAP в Visual Studio, приложение запускается с разрешениями зоны Интернета и, следовательно, если эти разрешения будут превышены исключения безопасности. Дополнительные сведения см. в разделах [Безопасность](../../../../docs/framework/wpf/security-wpf.md) и [Безопасность частичного доверия в WPF](../../../../docs/framework/wpf/wpf-partial-trust-security.md).  
+ При запуске проект XBAP откроется в окне браузера, а не в отдельном окне. При отладке XBAP в Visual Studio, приложение запускается с разрешениями зоны Интернета и, следовательно, если эти разрешения будут превышены исключения безопасности. Дополнительные сведения см. в разделах [Безопасность](../security-wpf.md) и [Безопасность частичного доверия в WPF](../wpf-partial-trust-security.md).  
   
 > [!NOTE]
->  Если вы не разрабатываете с помощью Visual Studio или желаете узнать больше о файлы проекта, см. в разделе [построение приложения WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md).  
+>  Если вы не разрабатываете с помощью Visual Studio или желаете узнать больше о файлы проекта, см. в разделе [построение приложения WPF](building-a-wpf-application-wpf.md).  
   
 <a name="deploying_a_xbap"></a>   
 ## <a name="deploying-an-xbap"></a>Развертывание XBAP  
@@ -52,7 +52,7 @@ ms.locfileid: "56747023"
 |Манифест приложения (.MANIFEST)|Содержит метаданные, связанные с приложением, и имеет расширение MANIFEST.|  
 |Манифест развертывания (.XBAP)|Этот файл содержит сведения, что ClickOnce использует для развертывания приложения и имеет расширение XBAP.|  
   
- XBAP развертывается на веб-сервере, например [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] или более поздней версии. Необходимо установить .NET Framework на веб-сервере, но вам необходимо зарегистрировать [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] типы и расширения имен файлов. Дополнительные сведения см. в разделе [Практическое руководство. Настройка служб IIS 5.0 и IIS 6.0 для развертывания приложений WPF](../../../../docs/framework/wpf/app-development/how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md).  
+ XBAP развертывается на веб-сервере, например [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] или более поздней версии. Необходимо установить .NET Framework на веб-сервере, но вам необходимо зарегистрировать [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] типы и расширения имен файлов. Дополнительные сведения см. в разделе [Практическое руководство. Настройка служб IIS 5.0 и IIS 6.0 для развертывания приложений WPF](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md).  
   
  Чтобы подготовить XBAP для развертывания, скопируйте файл EXE и связанные с ним манифесты на веб-сервер. Создайте HTML-страницу, содержащую гиперссылку, чтобы открыть манифест развертывания, который является файлом с расширением XBAP. Когда пользователь щелкает ссылку на файл XBAP, ClickOnce автоматически обрабатывает механизм загрузки и запуска приложения. В следующем примере кода показана HTML-страница, которая содержит гиперссылку, указывающую на XBAP.  
   
@@ -88,14 +88,14 @@ ms.locfileid: "56747023"
  Mage.exe -cc
  ```
   
- Она обеспечивает запуск последней версии XBAP. При отладке приложения в Visual Studio, должен запускаться последняя версия XBAP. Как правило, номер версии развертывания необходимо обновлять при каждой сборке. Дополнительные сведения о команде Mage см. в разделе [Mage.exe (средство создания и редактирования манифеста)](../../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md).  
+ Она обеспечивает запуск последней версии XBAP. При отладке приложения в Visual Studio, должен запускаться последняя версия XBAP. Как правило, номер версии развертывания необходимо обновлять при каждой сборке. Дополнительные сведения о команде Mage см. в разделе [Mage.exe (средство создания и редактирования манифеста)](../../tools/mage-exe-manifest-generation-and-editing-tool.md).  
   
 <a name="communicating_with_the_host_web_page"></a>   
 ## <a name="communicating-with-the-host-web-page"></a>Связь с веб-страницей размещения  
  Если приложение находится во фрейме HTML, вы можете взаимодействовать с веб-страницей, которая содержит XBAP. Это делается путем извлечения <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> свойство <xref:System.Windows.Interop.BrowserInteropHelper>. Оно возвращает объект скрипта, представляющий окно HTML. Доступ к свойствам, методам и событиям можно получить в [объекте окна](https://go.microsoft.com/fwlink/?LinkId=160274), используя обычный синтаксис с точками. Также можно получить доступ к методам скрипта и глобальным переменным. В следующем примере показано, как извлечь объект скрипта и закрыть браузер.  
   
- [!code-csharp[XbapBrowserInterop#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/xbapbrowserinterop/cs/page1.xaml.cs#10)]
- [!code-vb[XbapBrowserInterop#10](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/xbapbrowserinterop/vb/page1.xaml.vb#10)]  
+ [!code-csharp[XbapBrowserInterop#10](~/samples/snippets/csharp/VS_Snippets_Wpf/xbapbrowserinterop/cs/page1.xaml.cs#10)]
+ [!code-vb[XbapBrowserInterop#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/xbapbrowserinterop/vb/page1.xaml.vb#10)]  
   
 ### <a name="debugging-xbaps-that-use-hostscript"></a>Отладка XBAP, в котором используется HostScript  
  Если XBAP использует <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> объект для связи с окном HTML, существует два параметра, которые необходимо задать для запуска и отладки приложения в Visual Studio. Приложение должно иметь доступ к своему исходному сайту, а запустить его необходимо с HTML-страницы, которая содержит XBAP. Ниже описаны процедуры проверки двух этих параметров:  
@@ -127,11 +127,11 @@ ms.locfileid: "56747023"
   
 <a name="xbap_security_considerations"></a>   
 ## <a name="xbap-security-considerations"></a>Вопросы безопасности XBAP  
- Обычно XBAP выполняются в изолированной среде безопасности частичного доверия, ограниченной набором разрешений зоны Интернета. Следовательно ваша реализация должна поддерживать подмножество элементов WPF, которые поддерживаются в зоне Интернета, или необходимо повысить уровень разрешений приложения. Дополнительные сведения см. в разделе [Безопасность](../../../../docs/framework/wpf/security-wpf.md).  
+ Обычно XBAP выполняются в изолированной среде безопасности частичного доверия, ограниченной набором разрешений зоны Интернета. Следовательно ваша реализация должна поддерживать подмножество элементов WPF, которые поддерживаются в зоне Интернета, или необходимо повысить уровень разрешений приложения. Дополнительные сведения см. в разделе [Безопасность](../security-wpf.md).  
   
  При использовании <xref:System.Windows.Controls.WebBrowser> элемента управления в приложении WPF внутренним образом устанавливает собственный элемент управления WebBrowser ActiveX. Если ваше приложение — это XBAP частичного доверия, запущенный в браузере Internet Explorer, элемент управления ActiveX выполняется в выделенном потоке процесса Internet Explorer. В связи с этим применяются указанные ниже ограничения.  
   
--   <xref:System.Windows.Controls.WebBrowser> Элемент управления должен обеспечивать поведение, аналогичное браузеру узла, включая ограничения безопасности. Некоторыми из этих ограничений безопасности можно управлять с помощью параметров безопасности Internet Explorer. Дополнительные сведения см. в разделе [Безопасность](../../../../docs/framework/wpf/security-wpf.md).  
+-   <xref:System.Windows.Controls.WebBrowser> Элемент управления должен обеспечивать поведение, аналогичное браузеру узла, включая ограничения безопасности. Некоторыми из этих ограничений безопасности можно управлять с помощью параметров безопасности Internet Explorer. Дополнительные сведения см. в разделе [Безопасность](../security-wpf.md).  
   
 -   Если XBAP загружается на HTML-странице в междоменном режиме, возникнет исключение.  
   
@@ -187,5 +187,5 @@ ms.locfileid: "56747023"
  Кроме того улучшенный параллелизм последовательности загрузки ClickOnce сокращает время запуска почти на десять процентов. После ClickOnce загрузит и проверит манифесты, запускается загрузка приложения и индикатор выполнения начинает обновляться.  
   
 ## <a name="see-also"></a>См. также
-- [Настройка Visual Studio для отладки приложений браузера XAML для вызова веб-службы](../../../../docs/framework/wpf/app-development/configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)
-- [Развертывание приложений WPF](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)
+- [Настройка Visual Studio для отладки приложений браузера XAML для вызова веб-службы](configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)
+- [Развертывание приложений WPF](deploying-a-wpf-application-wpf.md)

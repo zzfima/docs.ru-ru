@@ -7,24 +7,24 @@ helpviewer_keywords:
 - input API [WPF]
 - commanding [WPF]
 ms.assetid: 9a7ccd30-095b-4f34-b284-8fb7e8f95a9b
-ms.openlocfilehash: 1510c037dcb3d5e386e1d4c4dd3a3fe002f13c59
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c72aa41aeb4c2da5577f1581a8f65afbefb222c6
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544236"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57350752"
 ---
 # <a name="input-wpf"></a>Ввод (WPF)
-Windows Presentation Foundation (WPF) поддерживает несколько типов входных данных. Этот входной включает текст, сенсорный ввод, мыши, команды, фокус, сенсорный ввод, и перетащите и рукописного ввода. В этом разделе описываются темы, связанные с входных данных в WPF.  
+Windows Presentation Foundation (WPF) поддерживает несколько видов входных данных. Эти входные данные, включает в себя текст, сенсорного ввода, мыши, команды, фокус, касания, перетаскивания и вставки и рукописный ввод. В этом разделе описываются темы, связанные с ввода в WPF.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Общие сведения о входных данных](../../../../docs/framework/wpf/advanced/input-overview.md)  
- [Общие сведения о системе команд](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
- [Общие сведения о фокусе](../../../../docs/framework/wpf/advanced/focus-overview.md)  
- [Стилизация фокуса в элементах управления и FocusVisualStyle](../../../../docs/framework/wpf/advanced/styling-for-focus-in-controls-and-focusvisualstyle.md)  
- [Пошаговое руководство. Создание первого приложения для обработки касаний](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md)  
- [Разделы практического руководства](../../../../docs/framework/wpf/advanced/input-and-commands-how-to-topics.md)  
- [Рукописный ввод](../../../../docs/framework/wpf/advanced/digital-ink.md)  
+ [Общие сведения о входных данных](input-overview.md)  
+ [Общие сведения о системе команд](commanding-overview.md)  
+ [Общие сведения о фокусе](focus-overview.md)  
+ [Стилизация фокуса в элементах управления и FocusVisualStyle](styling-for-focus-in-controls-and-focusvisualstyle.md)  
+ [Пошаговое руководство: Создание первого приложения для сенсорного ввода](walkthrough-creating-your-first-touch-application.md)  
+ [Разделы практического руководства](input-and-commands-how-to-topics.md)  
+ [Рукописный ввод](digital-ink.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.UIElement>  
@@ -42,5 +42,5 @@ Windows Presentation Foundation (WPF) поддерживает нескольк�
  <xref:System.Windows.Input.FocusManager>  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Элементы управления](../../../../docs/framework/wpf/controls/index.md)  
-  [События](../../../../docs/framework/wpf/advanced/events-wpf.md)
+ [Элементы управления](../controls/index.md)  
+  [События](events-wpf.md)

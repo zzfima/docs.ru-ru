@@ -7,29 +7,29 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], how-to topics
 ms.assetid: aafce40c-9bfe-45ec-86a3-599616a11276
-ms.openlocfilehash: 0e99793a1c8ec179ee01744f8618ff6463766704
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2665fc60e1366f30fb7f3621bb0669db1ea3db0a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555806"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374249"
 ---
 # <a name="listview-how-to-topics"></a>Практические руководства, посвященные ListView
-В подразделах этого раздела описывается использование <xref:System.Windows.Controls.ListView> элемента управления для отображения набора элементов данных.  
+В этом разделе описываются способы использования <xref:System.Windows.Controls.ListView> управления для отображения набора элементов данных.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Сортировка столбцов GridView при нажатии на заголовок](../../../../docs/framework/wpf/controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md)  
- [Создание пользовательского режима представления для ListView](../../../../docs/framework/wpf/controls/how-to-create-a-custom-view-mode-for-a-listview.md)  
- [Использование шаблонов для задания стиля ListView, использующего GridView](../../../../docs/framework/wpf/controls/how-to-use-templates-to-style-a-listview-that-uses-gridview.md)  
- [Создание стиля для перетаскиваемого заголовка столбца GridView](../../../../docs/framework/wpf/controls/how-to-create-a-style-for-a-dragged-gridview-column-header.md)  
- [Отображение содержимого ListView с помощью GridView](../../../../docs/framework/wpf/controls/how-to-display-listview-contents-by-using-a-gridview.md)  
- [Применение триггеров для определения стиля выбранных элементов в ListView](../../../../docs/framework/wpf/controls/how-to-use-triggers-to-style-selected-items-in-a-listview.md)  
- [Создание элементов ListView с помощью CheckBox](../../../../docs/framework/wpf/controls/how-to-create-listviewitems-with-a-checkbox.md)  
- [Отображение данных с помощью GridViewRowPresenter](../../../../docs/framework/wpf/controls/how-to-display-data-by-using-gridviewrowpresenter.md)  
- [Группировка элементов в элементе ListView, реализующем GridView](../../../../docs/framework/wpf/controls/how-to-group-items-in-a-listview-that-implements-a-gridview.md)  
- [Стиль строки в элементе ListView, реализующем GridView](../../../../docs/framework/wpf/controls/how-to-style-a-row-in-a-listview-that-implements-a-gridview.md)  
- [Изменение горизонтального выравнивания столбцов в элементе ListView](../../../../docs/framework/wpf/controls/how-to-change-the-horizontal-alignment-of-a-column-in-a-listview.md)  
- [Обработка события MouseDoubleClick для каждого элемента в ListView](../../../../docs/framework/wpf/controls/how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview.md)  
+ [Сортировка столбцов GridView при нажатии на заголовок](how-to-sort-a-gridview-column-when-a-header-is-clicked.md)  
+ [Создание пользовательского режима представления для ListView](how-to-create-a-custom-view-mode-for-a-listview.md)  
+ [Использование шаблонов для задания стиля ListView, использующего GridView](how-to-use-templates-to-style-a-listview-that-uses-gridview.md)  
+ [Создание стиля для перетаскиваемого заголовка столбца GridView](how-to-create-a-style-for-a-dragged-gridview-column-header.md)  
+ [Отображение содержимого ListView с помощью GridView](how-to-display-listview-contents-by-using-a-gridview.md)  
+ [Применение триггеров для определения стиля выбранных элементов в ListView](how-to-use-triggers-to-style-selected-items-in-a-listview.md)  
+ [Создание элементов ListView с помощью CheckBox](how-to-create-listviewitems-with-a-checkbox.md)  
+ [Отображение данных с помощью GridViewRowPresenter](how-to-display-data-by-using-gridviewrowpresenter.md)  
+ [Группировка элементов в элементе ListView, реализующем GridView](how-to-group-items-in-a-listview-that-implements-a-gridview.md)  
+ [Стиль строки в элементе ListView, реализующем GridView](how-to-style-a-row-in-a-listview-that-implements-a-gridview.md)  
+ [Изменение горизонтального выравнивания столбцов в элементе ListView](how-to-change-the-horizontal-alignment-of-a-column-in-a-listview.md)  
+ [Обработка события MouseDoubleClick для каждого элемента в ListView](how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Controls.ListView>  
@@ -39,4 +39,4 @@ ms.locfileid: "33555806"
  <xref:System.Windows.Controls.GridView>  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Общие сведения об элементе управления ListView](../../../../docs/framework/wpf/controls/listview-overview.md)
+ [Общие сведения об элементе управления ListView](listview-overview.md)

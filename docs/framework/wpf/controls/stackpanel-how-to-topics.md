@@ -7,20 +7,20 @@ helpviewer_keywords:
 - StackPanel control [WPF], how-to topics
 - controls [WPF], StackPanel
 ms.assetid: c9849df3-d000-4cdf-8345-5edcd053919d
-ms.openlocfilehash: c70fba3cd07d6ec88160783c3e922e2f1bafe934
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b7456eeb4fc248998730a21f757699497c83f4e9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555124"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351272"
 ---
 # <a name="stackpanel-how-to-topics"></a>Разделы руководства по StackPanel
-В подразделах этого раздела описывается использование <xref:System.Windows.Controls.StackPanel> элемента для расположения содержимого по горизонтали или вертикали.  
+В этом разделе описываются способы использования <xref:System.Windows.Controls.StackPanel> элемент для расположения содержимого, горизонтально или вертикально.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Выбор между StackPanel и DockPanel](../../../../docs/framework/wpf/controls/how-to-choose-between-stackpanel-and-dockpanel.md)  
- [Создание StackPanel](../../../../docs/framework/wpf/controls/how-to-create-a-stackpanel.md)  
- [Выравнивание содержимого StackPanel по горизонтали или по вертикали](../../../../docs/framework/wpf/controls/how-to-horizontally-or-vertically-align-content-in-a-stackpanel.md)  
+ [Выбор между StackPanel и DockPanel](how-to-choose-between-stackpanel-and-dockpanel.md)  
+ [Создание StackPanel](how-to-create-a-stackpanel.md)  
+ [Выравнивание содержимого StackPanel по горизонтали или по вертикали](how-to-horizontally-or-vertically-align-content-in-a-stackpanel.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Controls.Panel>  
@@ -38,8 +38,8 @@ ms.locfileid: "33555124"
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Макет](../../../../docs/framework/wpf/advanced/layout.md)  
+ [Макет](../advanced/layout.md)  
   
- [Пошаговое руководство. Создание первого классического приложения WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [Пошаговое руководство: My first WPF desktop application](../getting-started/walkthrough-my-first-wpf-desktop-application.md) (Пошаговое руководство. Создание классического приложения WPF)  
   
- [Общие сведения об элементе управления ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [Общие сведения об элементе управления ScrollViewer](scrollviewer-overview.md)

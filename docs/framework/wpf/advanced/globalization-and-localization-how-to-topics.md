@@ -7,22 +7,22 @@ helpviewer_keywords:
 - localization [WPF], features
 - globalization [WPF], features
 ms.assetid: c4b484fb-bc90-4186-a08d-f081e7109cad
-ms.openlocfilehash: 14ec1bb9ca6e6d6702818cf316e100e5bbe97e6b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a2ab04f40a3299bc0cd5a17c0f31e4f4ee0433ad
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544476"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369153"
 ---
 # <a name="globalization-and-localization-how-to-topics"></a>Разделы руководства по глобализации и локализации
 В этом разделе описываются способы разработки международных приложений.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Локализация приложения](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)  
- [Использование автоматической разметки для создания кнопки](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)  
- [Использование сетки для автоматической разметки](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)  
- [Использование ResourceDictionary для управления локализуемыми строковыми ресурсами](../../../../docs/framework/wpf/advanced/how-to-use-a-resourcedictionary-to-manage-localizable-string-resources.md)  
- [Использование ресурсов в локализуемых приложениях](../../../../docs/framework/wpf/advanced/how-to-use-resources-in-localizable-applications.md)  
+ [Локализация приложения](how-to-localize-an-application.md)  
+ [Использование автоматической разметки для создания кнопки](how-to-use-automatic-layout-to-create-a-button.md)  
+ [Использование сетки для автоматической разметки](how-to-use-a-grid-for-automatic-layout.md)  
+ [Использование ResourceDictionary для управления локализуемыми строковыми ресурсами](how-to-use-a-resourcedictionary-to-manage-localizable-string-resources.md)  
+ [Использование ресурсов в локализуемых приложениях](how-to-use-resources-in-localizable-applications.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Globalization>  
@@ -31,6 +31,6 @@ ms.locfileid: "33544476"
   
  <xref:System.Resources.NeutralResourcesLanguageAttribute>  
   
- [Обработка xml:lang в XAML](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md)  
+ [Обработка xml:lang в XAML](../../xaml-services/xml-lang-handling-in-xaml.md)  
   
 ## <a name="related-sections"></a>Связанные разделы

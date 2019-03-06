@@ -8,23 +8,23 @@ helpviewer_keywords:
 - menus [WPF], context
 - controls [WPF], ContextMenu
 ms.assetid: 2f40b2bb-b702-4706-9fc4-10bcfd7cc35d
-ms.openlocfilehash: fc2fe332916b4edd89025f8cf77f8a45034a4ce9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 17b2df1e3712dc0755130a9ac979c05fadcf53a3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550128"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354639"
 ---
 # <a name="contextmenu"></a>ContextMenu
-<xref:System.Windows.Controls.ContextMenu> Позволяет элементу управления для отображения <xref:System.Windows.Controls.Menu> , зависит от контекста элемента управления. Как правило <xref:System.Windows.Controls.ContextMenu> предоставляется в [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] через правой кнопкой мыши или клавиатуры кнопки меню.  
+<xref:System.Windows.Controls.ContextMenu> Позволяет элементу управления для отображения <xref:System.Windows.Controls.Menu> , зависящего от контекста элемента управления. Как правило <xref:System.Windows.Controls.ContextMenu> предоставляется в [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] через правой кнопкой мыши или клавиатуры кнопки меню.  
   
- На следующем рисунке показана <xref:System.Windows.Controls.ContextMenu> в двух различных состояниях: состоянии по умолчанию и открытом состоянии. В состоянии по умолчанию элемент управления сворачивается. При нажатии правой кнопки мыши родительского элемента меню элемент управления развернут и отображает элементы меню.  
+ На следующем рисунке показана <xref:System.Windows.Controls.ContextMenu> в двух разных состояниях: состояние по умолчанию и открытом состоянии. В состоянии по умолчанию элемент управления свернут. При нажатии правой кнопки мыши родительского элемента меню элемент управления развернут и отображает элементы меню.  
   
- ![Состояния ContextMenu](../../../../docs/framework/wpf/controls/media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")  
+ ![Состояния ContextMenu](./media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")  
 ContextMenu в различных состояниях  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Общие сведения об элементе ContextMenu](../../../../docs/framework/wpf/controls/contextmenu-overview.md)  
+ [Общие сведения об элементе ContextMenu](contextmenu-overview.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Controls.ContextMenu>  

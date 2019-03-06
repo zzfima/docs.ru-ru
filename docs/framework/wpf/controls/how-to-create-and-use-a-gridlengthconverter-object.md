@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Создание и использование объекта GridLengthConverter
+title: Практическое руководство. Создание и использование объекта GridLengthConverter
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - Grid control [WPF], creating [WPF], GridLengthConverter objects
 ms.assetid: 5ab75911-e36a-4825-80e4-081c57e8e182
-ms.openlocfilehash: b5ab15df4aaf5f6c4ba7bc7a4b36cc5e122b1320
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0455d91eff820e5c087af20207ece1313f6f3a39
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562065"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352260"
 ---
-# <a name="how-to-create-and-use-a-gridlengthconverter-object"></a>Как выполнить Создание и использование объекта GridLengthConverter
+# <a name="how-to-create-and-use-a-gridlengthconverter-object"></a>Практическое руководство. Создание и использование объекта GridLengthConverter
 ## <a name="example"></a>Пример  
  В следующем примере показано, как создать и использовать экземпляр <xref:System.Windows.GridLengthConverter>. В примере определяется пользовательский метод с именем `changeCol`, который передает <xref:System.Windows.Controls.ListBoxItem> для <xref:System.Windows.GridLengthConverter> , преобразующий <xref:System.Windows.Controls.ContentControl.Content%2A> из <xref:System.Windows.Controls.ListBoxItem> к экземпляру <xref:System.Windows.GridLength>. Преобразованное значение затем передается обратно в качестве значения <xref:System.Windows.Controls.ColumnDefinition.Width%2A> свойство <xref:System.Windows.Controls.ColumnDefinition> элемент.  
   
@@ -22,8 +22,8 @@ ms.locfileid: "54562065"
   
  Обратите внимание, что отдельный [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] файл определяет содержание <xref:System.Windows.Controls.ListBoxItem>.  
   
- [!code-csharp[gridlengthConverterGrid#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/gridlengthConverterGrid/CSharp/Window1.xaml.cs#1)]
- [!code-vb[gridlengthConverterGrid#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/gridlengthConverterGrid/VisualBasic/Window1.xaml.vb#1)]  
+ [!code-csharp[gridlengthConverterGrid#1](~/samples/snippets/csharp/VS_Snippets_Wpf/gridlengthConverterGrid/CSharp/Window1.xaml.cs#1)]
+ [!code-vb[gridlengthConverterGrid#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/gridlengthConverterGrid/VisualBasic/Window1.xaml.vb#1)]  
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.GridLengthConverter>

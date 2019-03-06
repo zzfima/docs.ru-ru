@@ -5,18 +5,18 @@ helpviewer_keywords:
 - WPF [WPF], Direct3D9 interop performance
 - Direct3D9 [WPF interoperability], performance
 ms.assetid: ea8baf91-12fe-4b44-ac4d-477110ab14dd
-ms.openlocfilehash: f595e75c90ebef480200e9210a57087eb4d20e87
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd3c99f22a1d097c82494ba6eff344820162ed87
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608866"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356732"
 ---
 # <a name="performance-considerations-for-direct3d9-and-wpf-interoperability"></a>Вопросы производительности, связанные с взаимодействием Direct3D9 и WPF
 С помощью можно разместить содержимого Direct3D9 <xref:System.Windows.Interop.D3DImage> класса. Размещение содержимого Direct3D9 может повлиять на производительность приложения. В этом разделе описываются рекомендации по оптимизации производительности при размещении содержимого Direct3D9 в приложении Windows Presentation Foundation (WPF). Эти рекомендации о том, как использовать <xref:System.Windows.Interop.D3DImage> и рекомендации, когда вы используете Windows Vista, Windows XP, и нескольких мониторов.  
   
 > [!NOTE]
->  Примеры кода, иллюстрирующие эти рекомендации, см. в разделе [взаимодействие WPF и Direct3D9](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md).  
+>  Примеры кода, иллюстрирующие эти рекомендации, см. в разделе [взаимодействие WPF и Direct3D9](wpf-and-direct3d9-interoperation.md).  
   
 ## <a name="use-d3dimage-sparingly"></a>Как можно реже используйте D3DImage  
  Размещенного содержимого Direct3D9 в <xref:System.Windows.Interop.D3DImage> отображается не так быстро, как чистые приложения Direct3D. Копирование поверхности и очистка буфера команд может быть дорогостоящей операции. Как количество <xref:System.Windows.Interop.D3DImage> экземпляров увеличивается, очистки буфера, а производительность снижается. Таким образом, следует использовать <xref:System.Windows.Interop.D3DImage> только в случае необходимости.  
@@ -47,7 +47,7 @@ ms.locfileid: "54608866"
 ## <a name="best-practices-for-multi-monitor-displays"></a>Рекомендации при использовании нескольких мониторов  
  Если вы используете компьютер с несколькими мониторами, соблюдайте выше рекомендациям. Кроме того, существуют также некоторые дополнительные рекомендации по производительности для нескольких мониторов.  
   
- При создании задний буфер, он создается для конкретного устройства и адаптера, но WPF может отобразить кадровый буфер на одном адаптере. Копирование через адаптеры для обновления передний буфер может быть очень дорогим. В Windows Vista, настроенный на использование модели WDDM с несколькими видеоадаптерами и `IDirect3DDevice9Ex` устройства, если передний буфер в другой адаптер, но по-прежнему же видеоадаптера, производительность снижается, нет. Однако в Windows XP и XDDM с несколькими видеоадаптерами, есть к значительному снижению производительности при отображении передний буфер в другой адаптер задний буфер. Дополнительные сведения см. в разделе [взаимодействие WPF и Direct3D9](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md).  
+ При создании задний буфер, он создается для конкретного устройства и адаптера, но WPF может отобразить кадровый буфер на одном адаптере. Копирование через адаптеры для обновления передний буфер может быть очень дорогим. В Windows Vista, настроенный на использование модели WDDM с несколькими видеоадаптерами и `IDirect3DDevice9Ex` устройства, если передний буфер в другой адаптер, но по-прежнему же видеоадаптера, производительность снижается, нет. Однако в Windows XP и XDDM с несколькими видеоадаптерами, есть к значительному снижению производительности при отображении передний буфер в другой адаптер задний буфер. Дополнительные сведения см. в разделе [взаимодействие WPF и Direct3D9](wpf-and-direct3d9-interoperation.md).  
   
 ## <a name="performance-summary"></a>Отчет о производительности  
  Следующая таблица показывает производительность обновления передний буфер как функция операционной системы, формат пикселей и поверхности. Передний буфер и задний буфер считаются в одном адаптере. В зависимости от конфигурации адаптера обновления оборудования обычно гораздо быстрее, чем обновлений программного обеспечения.  
@@ -61,6 +61,6 @@ ms.locfileid: "54608866"
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Interop.D3DImage>
-- [Взаимодействие WPF и Direct3D9](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)
-- [Пошаговое руководство: Создание содержимого Direct3D9 для размещения в WPF](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
-- [Пошаговое руководство: Размещение содержимого Direct3D9 в WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md)
+- [Взаимодействие WPF и Direct3D9](wpf-and-direct3d9-interoperation.md)
+- [Пошаговое руководство: Создание содержимого Direct3D9 для размещения в WPF](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
+- [Пошаговое руководство: Размещение содержимого Direct3D9 в WPF](walkthrough-hosting-direct3d9-content-in-wpf.md)

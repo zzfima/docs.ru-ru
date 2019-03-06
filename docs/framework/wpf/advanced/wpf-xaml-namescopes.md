@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [WPF], namescopes
 - classes [WPF], FrameworkContentElement
 ms.assetid: 52bbf4f2-15fc-40d4-837b-bb4c21ead7d4
-ms.openlocfilehash: 52fc542996f2fe691b62aeff5296e045643fcc7f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f5a49198d6f55c9a3aa3c7557a96ab791d54351b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498350"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366755"
 ---
 # <a name="wpf-xaml-namescopes"></a>Области видимости имен XAML в WPF
 Области имен XAML — это понятие, которое идентифицирует объекты, определенные в XAML. Имена из области имен XAML можно использовать для установления связей между именами объектов, определенными в XAML, и эквивалентными им экземплярами из дерева объектов. Области имен XAML в управляемом коде [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], как правило, создаются при загрузке отдельных корневых страниц XAML для приложения XAML. Области видимости имен XAML как программируемые объекты определяются <xref:System.Windows.Markup.INameScope> и реализуются также посредством практического класса <xref:System.Windows.NameScope>.  
@@ -36,7 +36,7 @@ ms.locfileid: "54498350"
 ### <a name="adding-objects-to-runtime-object-trees"></a>Добавление объектов в деревья объектов среды выполнения  
  Область имен XAML системы WPF создается и определяется в момент синтаксического анализа кода XAML. Если объект добавляется в дерево объектов уже после того, как выполнен синтаксический анализ кода XAML, сформировавшего это дерево, значение `Name` или `x:Name` нового объекта не приводит к автоматическому обновлению сведений из области имен XAML. Чтобы добавить имя для объекта в области видимости имен XAML WPF после загрузки XAML, необходимо вызвать соответствующую реализацию <xref:System.Windows.Markup.INameScope.RegisterName%2A> на объект, который определяет область видимости имен XAML, который обычно является корневой страницы XAML. Если имя не зарегистрирован, добавленный объект нельзя ссылаться по имени через методы например <xref:System.Windows.FrameworkElement.FindName%2A>, и вы не может использовать это имя для анимации.  
   
- Является наиболее распространенным сценарием для разработчиков приложений, который будет использоваться <xref:System.Windows.FrameworkElement.RegisterName%2A> для регистрации имен в области видимости имен XAML в текущем корне страницы. <xref:System.Windows.FrameworkElement.RegisterName%2A> является частью важных сценария для раскадровок, целевых объектов для анимации. Дополнительные сведения см. в разделе [Общие сведения о Storyboard](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).  
+ Является наиболее распространенным сценарием для разработчиков приложений, который будет использоваться <xref:System.Windows.FrameworkElement.RegisterName%2A> для регистрации имен в области видимости имен XAML в текущем корне страницы. <xref:System.Windows.FrameworkElement.RegisterName%2A> является частью важных сценария для раскадровок, целевых объектов для анимации. Дополнительные сведения см. в разделе [Общие сведения о Storyboard](../graphics-multimedia/storyboards-overview.md).  
   
  При вызове метода <xref:System.Windows.FrameworkElement.RegisterName%2A> объект, отличный от объекта, который определяет область видимости имен XAML, имя по-прежнему регистрируется в области видимости имен XAML, вызывающего объекта, находящееся в, как если бы Вы вызвали <xref:System.Windows.FrameworkElement.RegisterName%2A> на область видимости имен XAML, определение объекта.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "54498350"
   
  Если объект, предоставленный как `dependencyObject` для <xref:System.Windows.NameScope.SetNameScope%2A> не <xref:System.Windows.Markup.INameScope> реализации <xref:System.Windows.FrameworkElement> или <xref:System.Windows.FrameworkContentElement>, вызов <xref:System.Windows.FrameworkElement.RegisterName%2A> для любых дочерних элементов не окажет никакого воздействия. Если вам не удается создать новую область видимости имен XAML явно, то вызывает для <xref:System.Windows.FrameworkElement.RegisterName%2A> приведет к появлению исключения.  
   
- Пример использования интерфейсов API для области имен XAML в коде см. в разделе [Определение пространства имен](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-name-scope.md).  
+ Пример использования интерфейсов API для области имен XAML в коде см. в разделе [Определение пространства имен](../graphics-multimedia/how-to-define-a-name-scope.md).  
   
 <a name="Namescopes_in_Styles_and_Templates"></a>   
 ## <a name="xaml-namescopes-in-styles-and-templates"></a>Области имен XAML в стилях и шаблонах  
@@ -57,7 +57,7 @@ ms.locfileid: "54498350"
   
  Рассмотрим следующий пример.  
   
- [!code-xaml[XamlOvwSupport#NameScopeTemplates](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page6.xaml#namescopetemplates)]  
+ [!code-xaml[XamlOvwSupport#NameScopeTemplates](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page6.xaml#namescopetemplates)]  
   
  Здесь один тот же шаблон применяется к двум разным кнопкам. Если у шаблонов не было дискретных областей имен XAML, имя `TheBorder`, используемое в шаблоне, вызовет конфликт имен в области имен XAML. Каждый экземпляр шаблона имеет свою собственную область имен XAML, поэтому в данном примере каждая область имен XAML экземпляра шаблона будет содержать ровно одно имя.  
   
@@ -97,5 +97,5 @@ ms.locfileid: "54498350"
 -   <xref:System.Windows.FrameworkContentElement>  
   
 ## <a name="see-also"></a>См. также
-- [Пространства имен XAML и сопоставление пространств имен для WPF XAML](../../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)
-- [Директива x:Name](../../../../docs/framework/xaml-services/x-name-directive.md)
+- [Пространства имен XAML и сопоставление пространств имен для WPF XAML](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)
+- [Директива x:Name](../../xaml-services/x-name-directive.md)

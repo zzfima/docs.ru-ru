@@ -5,12 +5,12 @@ helpviewer_keywords:
 - localization [WPF interoperability]
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
-ms.openlocfilehash: b2f771f124cee6ad52ea841006a6749408540048
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 116a847d4f7b0591e823416cf5744e68d689c6ee
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746076"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378084"
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>Пошаговое руководство. Локализация гибридного приложения
 
@@ -48,7 +48,7 @@ ms.locfileid: "56746076"
 
 2.  Добавить [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl> элемент с именем `SimpleControl` в проект.
 
-3.  Используйте <xref:System.Windows.Forms.Integration.ElementHost> элементу управления размещение `SimpleControl` элемент на форме. Дополнительные сведения см. в разделе [Пошаговое руководство: Размещение составного элемента управления WPF, трехмерного в Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md).
+3.  Используйте <xref:System.Windows.Forms.Integration.ElementHost> элементу управления размещение `SimpleControl` элемент на форме. Дополнительные сведения см. в разделе [Пошаговое руководство: Размещение составного элемента управления WPF, трехмерного в Windows Forms](walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md).
 
 ## <a name="adding-localizable-content"></a>Добавление локализуемого содержимого
 
@@ -60,7 +60,7 @@ ms.locfileid: "56746076"
 
 2.  Установка содержимого для <xref:System.Windows.Controls.Button> управления, используя следующий код.
 
-     [!code-xaml[LocalizingWpfInWf#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/SimpleControl0.xaml#10)]
+     [!code-xaml[LocalizingWpfInWf#10](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/SimpleControl0.xaml#10)]
 
 3.  В **обозревателе решений**, дважды щелкните **Form1** чтобы открыть его в конструкторе Windows Forms.
 
@@ -92,7 +92,7 @@ ms.locfileid: "56746076"
 
 7.  Скопируйте следующий код в `Form1` конструктор, предшествующий вызову `InitializeComponent`.
 
-     [!code-csharp[LocalizingWpfInWf#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/Form1.cs#2)]
+     [!code-csharp[LocalizingWpfInWf#2](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/Form1.cs#2)]
 
 8.  В **обозревателе решений**, щелкните правой кнопкой мыши **LocalizingWpfInWf** и нажмите кнопку **выгрузить проект**.
 
@@ -128,7 +128,7 @@ ms.locfileid: "56746076"
 
 3.  В **обозревателе решений**, дважды щелкните **SimpleControl.xaml** чтобы открыть его в редакторе кода. Вы увидите, что `msbuild` команды добавил `Uid` атрибута ко всем элементам. Это облегчает локализацию через назначение идентификаторов ресурсов.
 
-     [!code-xaml[LocalizingWpfInWf#20](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/SimpleControl.xaml#20)]
+     [!code-xaml[LocalizingWpfInWf#20](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/SimpleControl.xaml#20)]
 
 4.  Нажмите клавишу **F6** для сборки решения.
 
@@ -138,7 +138,7 @@ ms.locfileid: "56746076"
 
 ### <a name="to-produce-a-satellite-assembly"></a>Создание вспомогательной сборки
 
-1.  Скопируйте файл LocBaml.exe в папку проекта obj\Debug. Дополнительные сведения см. в разделе [локализация приложения](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md).
+1.  Скопируйте файл LocBaml.exe в папку проекта obj\Debug. Дополнительные сведения см. в разделе [локализация приложения](how-to-localize-an-application.md).
 
 2.  В окне командной строки используйте приведенную ниже команду для извлечения строк ресурсов во временный файл.
 
@@ -176,6 +176,6 @@ ms.locfileid: "56746076"
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Локализация приложения](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)
+- [Локализация приложения](how-to-localize-an-application.md)
 - [Пошаговое руководство: Локализация форм Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/y99d1cd3(v=vs.100))
 - [Проектирование XAML в Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)

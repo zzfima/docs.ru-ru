@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - windows [WPF], managing
 ms.assetid: 3090b408-94e4-446a-92ca-50f1fd36e5d8
-ms.openlocfilehash: df22dcbc64bff95e2263ba11195146622b9d58cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8de810843ea7de9bb7f27c6582a0254661dbf643
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550141"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351662"
 ---
 # <a name="window-management-how-to-topics"></a>Инструкции по управлению окна
 В следующих темах управление [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] windows.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Автоматическое изменение размера окна в соответствии с размером содержимого](../../../../docs/framework/wpf/app-development/how-to-automatically-size-a-window-to-fit-its-content.md)  
-  [Получение всех окон в приложении](../../../../docs/framework/wpf/app-development/how-to-get-all-windows-in-an-application.md)  
-  [Получение и задание главного окна приложения](../../../../docs/framework/wpf/app-development/how-to-get-and-set-the-main-application-window.md)  
-  [Отображение диалогового окна](../../../../docs/framework/wpf/app-development/how-to-open-a-dialog-box.md)  
-  [Отображение окна сообщения](../../../../docs/framework/wpf/app-development/how-to-open-a-message-box.md)  
-  [Отображение окна](../../../../docs/framework/wpf/app-development/how-to-open-a-window.md)  
-  [Возвращение результата диалогового окна](../../../../docs/framework/wpf/app-development/how-to-return-a-dialog-box-result.md)  
+ [Автоматическое изменение размера окна в соответствии с размером содержимого](how-to-automatically-size-a-window-to-fit-its-content.md)  
+  [Получение всех окон в приложении](how-to-get-all-windows-in-an-application.md)  
+  [Получение и задание главного окна приложения](how-to-get-and-set-the-main-application-window.md)  
+  [Отображение диалогового окна](how-to-open-a-dialog-box.md)  
+  [Отображение окна сообщения](how-to-open-a-message-box.md)  
+  [Отображение окна](how-to-open-a-window.md)  
+  [Возвращение результата диалогового окна](how-to-return-a-dialog-box-result.md)  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Общие сведения об управлении приложением](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
+ [Общие сведения об управлении приложением](application-management-overview.md)  
   
- [Общие сведения о переходах](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
+ [Общие сведения о переходах](navigation-overview.md)  
   
- [Размещение](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)  
+ [Размещение](hosting-wpf-applications.md)  
   
- [Сборка и развертывание](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)
+ [Сборка и развертывание](building-and-deploying-wpf-applications.md)

@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Создание надстройки, являющейся пользовательским интерфейсом
+title: Практическое руководство. Создание надстройки, являющейся пользовательским интерфейсом
 ms.date: 03/30/2017
 helpviewer_keywords:
 - creating an add-in that is a UI [WPF]
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-ms.openlocfilehash: f3e1ba5fe58802e42bfaf60a98767591ec13e7c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f81812b766242311ac29c43de68906d65ae52b32
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510811"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366391"
 ---
-# <a name="how-to-create-an-add-in-that-is-a-ui"></a>Как выполнить Создание надстройки, являющейся пользовательским интерфейсом
+# <a name="how-to-create-an-add-in-that-is-a-ui"></a>Практическое руководство. Создание надстройки, являющейся пользовательским интерфейсом
 В этом примере показано, как создать надстройку, Windows Presentation Foundation (WPF), размещаемый в автономное приложение WPF.  
   
  Надстройка — это пользовательский Интерфейс, который является пользовательский элемент управления WPF. Содержимое пользовательского элемента управления составляет одна кнопка, при нажатии которой отображается окно сообщения. Автономное приложение WPF размещает пользовательского интерфейса надстройки как содержимое главного окна приложения.  
@@ -27,7 +27,7 @@ ms.locfileid: "54510811"
   
 -   Знание модели надстроек платформы .NET Framework, включая конвейер, надстройка и разработку основного приложения. Если вы не знакомы с этими понятиями, см. в разделе [надстройки и расширения](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)). Учебник, в котором демонстрируется реализация конвейера, надстройки и ведущего приложения, см. в разделе [Пошаговое руководство: Создание расширяемого приложения](/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100)).  
   
--   Знание расширений WPF в .NET Framework модель. См. в разделе [Общие сведения о надстройках WPF](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  
+-   Знание расширений WPF в .NET Framework модель. См. в разделе [Общие сведения о надстройках WPF](wpf-add-ins-overview.md).  
   
 ## <a name="example"></a>Пример  
  Создание надстройки, являющейся пользовательским Интерфейсом WPF требуется специальный код для каждого сегмента конвейера, надстройки и ведущего приложения.  
@@ -37,13 +37,13 @@ ms.locfileid: "54510811"
 ## <a name="implementing-the-contract-pipeline-segment"></a>Реализация сегмента конвейера контракта  
  Если надстройка является пользовательским Интерфейсом, контракт для надстройки должен реализовывать <xref:System.AddIn.Contract.INativeHandleContract>. В примере `IWPFAddInContract` реализует <xref:System.AddIn.Contract.INativeHandleContract>, как показано в следующем коде.  
   
- [!code-csharp[SimpleAddInIsAUISample#ContractCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/Contracts/IWPFAddInContract.cs#contractcode)]  
+ [!code-csharp[SimpleAddInIsAUISample#ContractCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/Contracts/IWPFAddInContract.cs#contractcode)]  
   
 <a name="AddInViewPipeline"></a>   
 ## <a name="implementing-the-add-in-view-pipeline-segment"></a>Реализация сегмента конвейера представления надстройки  
  Поскольку надстройка реализуется как подкласс <xref:System.Windows.FrameworkElement> тип, представление надстройки также должно быть подклассом <xref:System.Windows.FrameworkElement>. Ниже показано представление надстройки контракта, реализованное как `WPFAddInView` класса.  
   
- [!code-csharp[SimpleAddInIsAUISample#AddInViewCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInViews/WPFAddInView.cs#addinviewcode)]  
+ [!code-csharp[SimpleAddInIsAUISample#AddInViewCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInViews/WPFAddInView.cs#addinviewcode)]  
   
  Здесь представление надстройки является производным от <xref:System.Windows.Controls.UserControl>. Следовательно, пользовательского интерфейса надстройки также должен быть производным от <xref:System.Windows.Controls.UserControl>.  
   
@@ -51,12 +51,12 @@ ms.locfileid: "54510811"
 ## <a name="implementing-the-add-in-side-adapter-pipeline-segment"></a>Реализация сегмента конвейера адаптера надстройки  
  Контракт — <xref:System.AddIn.Contract.INativeHandleContract>, надстройка — <xref:System.Windows.FrameworkElement> (как указано в сегменте конвейера представления надстройки). Таким образом <xref:System.Windows.FrameworkElement> должны быть преобразованы в <xref:System.AddIn.Contract.INativeHandleContract> перед пересечением границы изоляции. Эту работу выполняет адаптер стороне надстройки, вызвав <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>, как показано в следующем коде.  
   
- [!code-csharp[SimpleAddInIsAUISample#AddInSideAdapterCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.cs#addinsideadaptercode)]  
+ [!code-csharp[SimpleAddInIsAUISample#AddInSideAdapterCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.cs#addinsideadaptercode)]  
   
- В модели надстройки, где надстройка возвращает пользовательский Интерфейс (см. в разделе [создание надстройки, возвращающей пользовательский Интерфейс](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md)), преобразовать адаптер надстройки <xref:System.Windows.FrameworkElement> для <xref:System.AddIn.Contract.INativeHandleContract> путем вызова <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> также должен вызываться в этой модели, несмотря на то, что вам нужно реализовать метод, с которым следует записывать код для его вызова. Это делается путем переопределения <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> и реализация кода, который вызывает <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> Если код, который вызывает <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> ожидает <xref:System.AddIn.Contract.INativeHandleContract>. В этом случае вызывающий объект будет адаптером приложения, который рассматривается в следующем подразделе.  
+ В модели надстройки, где надстройка возвращает пользовательский Интерфейс (см. в разделе [создание надстройки, возвращающей пользовательский Интерфейс](how-to-create-an-add-in-that-returns-a-ui.md)), преобразовать адаптер надстройки <xref:System.Windows.FrameworkElement> для <xref:System.AddIn.Contract.INativeHandleContract> путем вызова <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> также должен вызываться в этой модели, несмотря на то, что вам нужно реализовать метод, с которым следует записывать код для его вызова. Это делается путем переопределения <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> и реализация кода, который вызывает <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> Если код, который вызывает <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> ожидает <xref:System.AddIn.Contract.INativeHandleContract>. В этом случае вызывающий объект будет адаптером приложения, который рассматривается в следующем подразделе.  
   
 > [!NOTE]
->  Необходимо также переопределить <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> в этой модели, чтобы разрешить переходы между ведущим приложением пользовательский Интерфейс и интерфейс пользователя надстройки. Дополнительные сведения см. в разделе «Add-In ограничения WPF» в [Общие сведения о надстройках WPF](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  
+>  Необходимо также переопределить <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> в этой модели, чтобы разрешить переходы между ведущим приложением пользовательский Интерфейс и интерфейс пользователя надстройки. Дополнительные сведения см. в разделе «Add-In ограничения WPF» в [Общие сведения о надстройках WPF](wpf-add-ins-overview.md).  
   
  Так как адаптер на стороне надстройки реализует интерфейс, который является производным от <xref:System.AddIn.Contract.INativeHandleContract>, необходимо также реализовать <xref:System.AddIn.Contract.INativeHandleContract.GetHandle%2A>, несмотря на то, что этот параметр игнорируется при <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> переопределяется.  
   
@@ -106,4 +106,4 @@ ms.locfileid: "54510811"
   
 ## <a name="see-also"></a>См. также
 - [Надстройки и расширения среды](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
-- [Общие сведения о надстройках WPF](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)
+- [Общие сведения о надстройках WPF](wpf-add-ins-overview.md)

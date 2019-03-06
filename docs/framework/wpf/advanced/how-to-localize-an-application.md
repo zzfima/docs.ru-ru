@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Локализация приложения
+title: Практическое руководство. Локализация приложения
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 1761fbf1cb8ec337ea5733e3ab693031b1934179
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 777d0fa9217b647b9ee9bd952addaa83b5f825fc
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725551"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374119"
 ---
-# <a name="how-to-localize-an-application"></a>Как выполнить Локализация приложения
+# <a name="how-to-localize-an-application"></a>Практическое руководство. Локализация приложения
 В этом учебнике рассматривается создание локализованного приложения с помощью средства LocBaml.  
   
 > [!NOTE]
@@ -30,7 +30,7 @@ ms.locfileid: "54725551"
 ## <a name="requirements"></a>Требования  
  В ходе данного обсуждения будет использоваться [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)], который является компилятором, запускаемым из командной строки.  
   
- Кроме того, будет рекомендовано использовать файл проекта. Инструкции по использованию [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] и файлы проекта, см. в разделе [сборки и развертывания](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md).  
+ Кроме того, будет рекомендовано использовать файл проекта. Инструкции по использованию [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] и файлы проекта, см. в разделе [сборки и развертывания](../app-development/building-and-deploying-wpf-applications.md).  
   
  Во всех примерах в этом разделе в качестве языка и региональных параметров используется en-US (английский (США)). Это позволяет проходить по шагам примеров без установки другого языка.  
   
@@ -137,13 +137,13 @@ ms.locfileid: "54725551"
   
    2.  **Ключ ресурса**. Идентификатор локализованного ресурса.  
   
-   3.  **Категория**. Тип значения. См. в разделе [атрибуты и комментарии локализации](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
+   3.  **Категория**. Тип значения. См. в разделе [атрибуты и комментарии локализации](localization-attributes-and-comments.md).  
   
-   4.  **Удобочитаемость**. Может ли значение быть прочитано средством локализации. См. в разделе [атрибуты и комментарии локализации](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
+   4.  **Удобочитаемость**. Может ли значение быть прочитано средством локализации. См. в разделе [атрибуты и комментарии локализации](localization-attributes-and-comments.md).  
   
-   5.  **Изменяемость**. Может ли значение изменяться средством локализации. См. в разделе [атрибуты и комментарии локализации](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
+   5.  **Изменяемость**. Может ли значение изменяться средством локализации. См. в разделе [атрибуты и комментарии локализации](localization-attributes-and-comments.md).  
   
-   6.  **Комментарии**. Дополнительное описание значения, помогающее определить способ локализации значения. См. в разделе [атрибуты и комментарии локализации](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
+   6.  **Комментарии**. Дополнительное описание значения, помогающее определить способ локализации значения. См. в разделе [атрибуты и комментарии локализации](localization-attributes-and-comments.md).  
   
    7.  **Значение**. Текстовое значение для перевода на нужный язык.  
   
@@ -192,9 +192,9 @@ ms.locfileid: "54725551"
   
     -   В своем приложении добавьте в файл App.xaml.cs следующий код:  
   
-   [!code-xaml[LocBamlChangeCultureSnippets#LocBamlChangeCultureMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/CSharp/App.xaml#locbamlchangeculturemarkup)]
-   [!code-csharp[LocBamlChangeCultureSnippets#LocBamlChangeCultureCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/CSharp/App.xaml.cs#locbamlchangeculturecodebehind)]
-   [!code-vb[LocBamlChangeCultureSnippets#LocBamlChangeCultureCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/VisualBasic/Application.xaml.vb#locbamlchangeculturecodebehind)]  
+   [!code-xaml[LocBamlChangeCultureSnippets#LocBamlChangeCultureMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/CSharp/App.xaml#locbamlchangeculturemarkup)]
+   [!code-csharp[LocBamlChangeCultureSnippets#LocBamlChangeCultureCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/CSharp/App.xaml.cs#locbamlchangeculturecodebehind)]
+   [!code-vb[LocBamlChangeCultureSnippets#LocBamlChangeCultureCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/VisualBasic/Application.xaml.vb#locbamlchangeculturecodebehind)]  
   
 <a name="Some_Tips_for_Using_LocBaml"></a>   
 ## <a name="some-tips-for-using-locbaml"></a>Советы по использованию LocBaml  
@@ -210,5 +210,5 @@ ms.locfileid: "54725551"
  Теперь у вас есть базовое представление о том, как использовать средство LocBaml.  Вы можете создать файл, содержащий ИД пользователей. С помощью средства LocBaml вы можете анализировать файл для извлечения локализуемого содержимого и после перевода этого содержимого можете создать файл .resources.dll, объединяющий переведенное содержимое. В этом разделе не рассматриваются все возможные детали, но теперь у вас есть знания, необходимые для использования LocBaml для локализации приложений.  
   
 ## <a name="see-also"></a>См. также
-- [Глобализация для WPF](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
-- [Обзор использования автоматической разметки](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)
+- [Глобализация для WPF](globalization-for-wpf.md)
+- [Обзор использования автоматической разметки](use-automatic-layout-overview.md)

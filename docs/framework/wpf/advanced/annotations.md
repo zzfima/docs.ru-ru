@@ -6,19 +6,19 @@ helpviewer_keywords:
 - documents [WPF], annotations
 - sticky notes [WPF]
 ms.assetid: 232ad0d7-2264-4bed-aae3-10dfde116a9c
-ms.openlocfilehash: 7696781ec8f77a670f7e2133466bc8068ba18203
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c7b6d68d558125cdd5887485c72359f1fe3ceb5
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537207"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373599"
 ---
 # <a name="annotations"></a>Заметки
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет элементы управления, которые поддерживают Составление примечаний для содержимого документа для просмотра документа.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет элементы управления, поддерживающие создания примечаний содержимого документа для просмотра документа.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Общие сведения о заметках](../../../../docs/framework/wpf/advanced/annotations-overview.md)  
-  [Схема примечаний](../../../../docs/framework/wpf/advanced/annotations-schema.md)  
+ [Общие сведения о заметках](annotations-overview.md)  
+  [Схема примечаний](annotations-schema.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Annotations.Annotation>  
@@ -26,5 +26,5 @@ ms.locfileid: "33537207"
   <xref:System.Windows.Controls.DocumentViewer>  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Документы в WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
-  [Общие сведения о документе нефиксированного формата](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+ [Документы в WPF](documents-in-wpf.md)  
+  [Общие сведения о документах нефиксированного формата](flow-document-overview.md)

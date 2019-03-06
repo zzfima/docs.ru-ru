@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
 ms.openlocfilehash: 8d079613d1970d2a50ddb3449c2a3072010b2c55
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55280011"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358324"
 ---
 # <a name="whats-new-in-windows-communication-foundation-45"></a>Новые возможности в Windows Communication Foundation 4.5
 
@@ -34,7 +34,7 @@ ms.locfileid: "55280011"
  Проекты переносимого подмножества позволяют программистам, создающим сборки .NET, поддерживать одно дерево исходного кода и создавать сборки, одновременно поддерживая несколько платформ .NET (настольные приложения, Silverlight, Windows Phone и XBOX). Проекты переносимого подмножества ссылаться только на переносимые библиотеки .NET, которые являются сборкой .NET framework, который можно использовать на любой платформе .NET. Процесс добавления такой же, как и при добавлении ссылки на службу в рамках любого другого клиентского приложения WCF. Дополнительные сведения см. в разделе [добавить ссылку на службу в проект переносного подмножества](../../../docs/framework/wcf/add-service-reference-in-a-portable-subset-project.md).
 
 ### <a name="aspnet-compatibility-mode-default-changed"></a>Изменились значения по умолчанию для режима совместимости с ASP.NET
- WCF предоставляет режим совместимости с ASP.NET, дающий разработчикам при создании служб WCF полный доступ к возможностям HTTP-конвейера ASP.NET. Для использования этого режима необходимо задать `aspNetCompatibilityEnabled` атрибута в значение true в [ \<serviceHostingEnvironment >](../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) разделе файла web.config. Кроме того, у любой службы в данном домене приложения свойство `RequirementsMode` в ее атрибуте <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> должно быть задано как значение <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> или <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>. По умолчанию <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> теперь настроен для <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>. Дополнительные сведения см. в разделе [новые возможности в Windows Communication Foundation](../../../docs/framework/wcf/whats-new.md) и [службы WCF и ASP.NET](../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).
+ WCF предоставляет режим совместимости с ASP.NET, дающий разработчикам при создании служб WCF полный доступ к функциям HTTP-конвейера ASP.NET. Для использования этого режима необходимо задать `aspNetCompatibilityEnabled` атрибута в значение true в [ \<serviceHostingEnvironment >](../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) разделе файла web.config. Кроме того, у любой службы в данном домене приложения свойство `RequirementsMode` в ее атрибуте <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> должно быть задано как значение <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> или <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>. По умолчанию <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> теперь настроен для <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>. Дополнительные сведения см. в разделе [новые возможности в Windows Communication Foundation](../../../docs/framework/wcf/whats-new.md) и [службы WCF и ASP.NET](../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).
 
 ### <a name="new-transport-default-values"></a>Новые значения по умолчанию для свойств транспорта
  Для упрощения настройки были изменены несколько значений по умолчанию для свойств транспорта. Дополнительные сведения см. в разделе [возможности упрощения WCF](../../../docs/framework/wcf/wcf-simplification-features.md).

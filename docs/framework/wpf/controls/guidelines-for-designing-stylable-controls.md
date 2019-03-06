@@ -5,12 +5,12 @@ helpviewer_keywords:
 - style design for controls [WPF]
 - controls [WPF], style design
 ms.assetid: c52dde45-a311-4531-af4c-853371c4d5f4
-ms.openlocfilehash: 02333d05bc1c0f9804caa36af1a1842cba22908c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 88f03b8084b0160e5c61bfdc4dc6984fbd1cddde
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545034"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352988"
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>Рекомендации по разработке элементов управления с возможностью использования стилей
 В этом документе содержатся рекомендации по разработке элементов управления, стили и шаблоны которых можно с легкостью изменять. Эти рекомендации являются результатом продолжительного периода проб и ошибок при работе над стилями тем оформления для встроенного набора элементов управления [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Было выяснено, что успешное изменение стилей зависит как от хорошо спроектированной объектной модели, так и самого стиля. Данный документ предназначен именно для разработчиков элементов управления, а не для разработчиков стилей.  
@@ -27,7 +27,7 @@ ms.locfileid: "54545034"
   
 -   шаблоны данных.  
   
- Вводная информация, касающаяся стилей и шаблонов, представлена в разделе [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
+ Вводная информация, касающаяся стилей и шаблонов, представлена в разделе [Стилизация и использование шаблонов](styling-and-templating.md).  
   
 <a name="Before_You_Start__Understanding_Your_Control"></a>   
 ## <a name="before-you-start-understanding-your-control"></a>Перед началом работы: Основные сведения о элемент управления  
@@ -119,5 +119,5 @@ ms.locfileid: "54545034"
 -   **Для стилей тем не требуется согласованной для всех тем семантики "макета"**. Например, стиль по умолчанию не должен гарантировать, что элемент управления будет иметь тот же размер во всех темах или что у него во всех темах будут те же границы/поля содержимого.  
   
 ## <a name="see-also"></a>См. также
-- [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [Общие сведения о разработке элементов управления](../../../../docs/framework/wpf/controls/control-authoring-overview.md)
+- [Стилизация и использование шаблонов](styling-and-templating.md)
+- [Общие сведения о разработке элементов управления](control-authoring-overview.md)

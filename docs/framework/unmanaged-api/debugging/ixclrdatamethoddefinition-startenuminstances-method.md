@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: c78af112e9239143c4854e34e9b6aa8e99344ec3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e92eea9677731756bdbfcbdcfac1531861fb5dce
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623655"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361347"
 ---
 # <a name="ixclrdatamethoddefinitionstartenuminstances-method"></a>Метод IXCLRDataMethodDefinition::StartEnumInstances
 
@@ -37,11 +37,13 @@ HRESULT StartEnumInstances(
 );
 ```
 
-### <a name="parameters"></a>Параметры
+## <a name="parameters"></a>Параметры
 
-`appDomain` [in] Домен приложения для перечисления.
+`appDomain`\
+[in] Домен приложения для перечисления.
 
-`handle` [out] Дескриптор для перечисления экземпляров.
+`handle`\
+[out] Дескриптор для перечисления экземпляров.
 
 ## <a name="remarks"></a>Примечания
 
@@ -56,6 +58,6 @@ HRESULT StartEnumInstances(
 
 ## <a name="see-also"></a>См. также
 
-- [Перечисление CLRDataSourceType](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md)
-- [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Интерфейс IXCLRDataMethodDefinition](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethoddefinition-interface.md)
+- [Перечисление CLRDataSourceType](clrdatasourcetype-enumeration.md)
+- [Отладка](index.md)
+- [Интерфейс IXCLRDataMethodDefinition](ixclrdatamethoddefinition-interface.md)

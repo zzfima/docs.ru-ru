@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 09f3a88d-b132-4505-a8bb-55cbfc6bb55a
-ms.openlocfilehash: df9628fab80faf6431290bbc4176a6e0d148dc8d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f0d53d1ec37d200c20ed1b0053b8992cf89c4e0
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540466"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370947"
 ---
 # <a name="base-elements-how-to-topics"></a>Разделы руководства, посвященные базовым элементам
-В подразделах этого раздела описывается использование четырех базовых элементов WPF: <xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, и <xref:System.Windows.FrameworkContentElement>.  
+В этом разделе описываются способы использования четырех базовых элементов WPF: <xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, и <xref:System.Windows.FrameworkContentElement>.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Создание прозрачного или полупрозрачного элемента UIElement](../../../../docs/framework/wpf/advanced/how-to-make-a-uielement-transparent-or-semi-transparent.md)  
- [Анимация размера элемента FrameworkElement](../../../../docs/framework/wpf/advanced/how-to-animate-the-size-of-a-frameworkelement.md)  
- [Определение фиксации объекта Freezable](../../../../docs/framework/wpf/advanced/how-to-determine-whether-a-freezable-is-frozen.md)  
- [Обработка загруженного события](../../../../docs/framework/wpf/advanced/how-to-handle-a-loaded-event.md)  
- [Установка полей для элементов и элементов управления](../../../../docs/framework/wpf/advanced/how-to-set-margins-of-elements-and-controls.md)  
- [Определение объекта Freezable как доступного только для чтения](../../../../docs/framework/wpf/advanced/how-to-make-a-freezable-read-only.md)  
- [Получение копии с возможностью записи объекта Freezable только для чтения](../../../../docs/framework/wpf/advanced/how-to-obtain-a-writable-copy-of-a-read-only-freezable.md)  
- [Отражение объекта UIElement по горизонтали или вертикали](../../../../docs/framework/wpf/advanced/how-to-flip-a-uielement-horizontally-or-vertically.md)  
- [Использование объекта ThicknessConverter](../../../../docs/framework/wpf/advanced/how-to-use-a-thicknessconverter-object.md)  
- [Обработка события ContextMenuOpening](../../../../docs/framework/wpf/advanced/how-to-handle-the-contextmenuopening-event.md)  
+ [Создание прозрачного или полупрозрачного элемента UIElement](how-to-make-a-uielement-transparent-or-semi-transparent.md)  
+ [Анимация размера элемента FrameworkElement](how-to-animate-the-size-of-a-frameworkelement.md)  
+ [Определение фиксации объекта Freezable](how-to-determine-whether-a-freezable-is-frozen.md)  
+ [Обработка загруженного события](how-to-handle-a-loaded-event.md)  
+ [Установка полей для элементов и элементов управления](how-to-set-margins-of-elements-and-controls.md)  
+ [Определение объекта Freezable как доступного только для чтения](how-to-make-a-freezable-read-only.md)  
+ [Получение копии с возможностью записи объекта Freezable только для чтения](how-to-obtain-a-writable-copy-of-a-read-only-freezable.md)  
+ [Отражение объекта UIElement по горизонтали или вертикали](how-to-flip-a-uielement-horizontally-or-vertically.md)  
+ [Использование объекта ThicknessConverter](how-to-use-a-thicknessconverter-object.md)  
+ [Обработка события ContextMenuOpening](how-to-handle-the-contextmenuopening-event.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.UIElement>  
@@ -38,4 +38,4 @@ ms.locfileid: "33540466"
  <xref:System.Windows.FrameworkContentElement>  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Базовые элементы](../../../../docs/framework/wpf/advanced/base-elements.md)
+ [Базовые элементы](base-elements.md)

@@ -7,19 +7,19 @@ helpviewer_keywords:
 - graphics [WPF], PathGeometry class
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
-ms.openlocfilehash: 03f9c4f8156c5f14ff127dd47c7ade6f6ee22e5e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 65a86b82af9269d1af7198b8106ad478e88f3691
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671269"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379163"
 ---
 # <a name="path-markup-syntax"></a>Синтаксис разметки пути
-Путями, рассматриваются в [фигур и базовых средств рисования в WPF Обзор](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md) и [Общие сведения о геометрии](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md), однако в этом разделе подробно описываются сложной и мощной мини-язык, который можно использовать для указания пути более [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
+Путями, рассматриваются в [фигур и базовых средств рисования в WPF Обзор](shapes-and-basic-drawing-in-wpf-overview.md) и [Общие сведения о геометрии](geometry-overview.md), однако в этом разделе подробно описываются сложной и мощной мини-язык, который можно использовать для указания пути более [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Предварительные требования  
- Для понимания этого раздела необходимо ознакомиться с основным функциям <xref:System.Windows.Media.Geometry> объектов. Дополнительные сведения см. в разделе [Общие сведения о геометрии](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md).  
+ Для понимания этого раздела необходимо ознакомиться с основным функциям <xref:System.Windows.Media.Geometry> объектов. Дополнительные сведения см. в разделе [Общие сведения о геометрии](geometry-overview.md).  
   
 <a name="abouthisdocument"></a>   
 ## <a name="streamgeometry-and-pathfigurecollection-mini-languages"></a>Мини-языки StreamGeometry и PathFigureCollection  
@@ -27,15 +27,15 @@ ms.locfileid: "54671269"
   
 -   Использовании <xref:System.Windows.Media.StreamGeometry> мини-язык, при задании свойства типа <xref:System.Windows.Media.Geometry>, такие как <xref:System.Windows.UIElement.Clip%2A> свойство <xref:System.Windows.UIElement> или <xref:System.Windows.Shapes.Path.Data%2A> свойство <xref:System.Windows.Shapes.Path> элемент. В следующем примере синтаксис атрибутов для создания <xref:System.Windows.Media.StreamGeometry>.  
   
-     [!code-xaml[GeometrySample_snip_XAML#GraphicsMMStreamGeometryAttributeSyntaxInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample_snip_XAML/CS/MiniLanguageExample.xaml#graphicsmmstreamgeometryattributesyntaxinline)]  
+     [!code-xaml[GeometrySample_snip_XAML#GraphicsMMStreamGeometryAttributeSyntaxInline](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample_snip_XAML/CS/MiniLanguageExample.xaml#graphicsmmstreamgeometryattributesyntaxinline)]  
   
 -   Использовании <xref:System.Windows.Media.PathFigureCollection> мини-язык, при задании <xref:System.Windows.Media.PathGeometry.Figures%2A> свойство <xref:System.Windows.Media.PathGeometry>. В следующем примере синтаксис атрибутов для создания <xref:System.Windows.Media.PathFigureCollection> для <xref:System.Windows.Media.PathGeometry>.  
   
-     [!code-xaml[GeometrySample_snip_XAML#GraphicsMMPathFigureCollectionAttributeSyntaxInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample_snip_XAML/CS/MiniLanguageExample.xaml#graphicsmmpathfigurecollectionattributesyntaxinline)]  
+     [!code-xaml[GeometrySample_snip_XAML#GraphicsMMPathFigureCollectionAttributeSyntaxInline](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample_snip_XAML/CS/MiniLanguageExample.xaml#graphicsmmpathfigurecollectionattributesyntaxinline)]  
   
  Как видно из предыдущих примеров мини-языки очень похожи. Это всегда можно использовать <xref:System.Windows.Media.PathGeometry> в любой ситуации, когда можно использовать <xref:System.Windows.Media.StreamGeometry>; поэтому какой из них следует использовать? Используйте <xref:System.Windows.Media.StreamGeometry> при не требуется изменять путь после его создания; используйте <xref:System.Windows.Media.PathGeometry> Если вам нужно изменить путь.  
   
- Дополнительные сведения о различиях между <xref:System.Windows.Media.PathGeometry> и <xref:System.Windows.Media.StreamGeometry> объектов, см. в разделе [Общие сведения о геометрии](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md).  
+ Дополнительные сведения о различиях между <xref:System.Windows.Media.PathGeometry> и <xref:System.Windows.Media.StreamGeometry> объектов, см. в разделе [Общие сведения о геометрии](geometry-overview.md).  
   
 ### <a name="a-note-about-white-space"></a>Примечание о пробелах  
  В следующих разделах для краткости в примерах синтаксиса показан один пробел, но допускается использовать по нескольку пробелов везде, где указан один пробел.  
@@ -90,7 +90,7 @@ ms.locfileid: "54671269"
 |------------|  
 |`L` *endPoint*<br /><br /> -или-<br /><br /> `l` *endPoint*|  
   
-|Термин|Описание:|  
+|Термин|Описание|  
 |----------|-----------------|  
 |*endPoint*|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Конечная точка строки.|  
 
@@ -131,7 +131,7 @@ ms.locfileid: "54671269"
 |------------|  
 |`C` `controlPoint`1`controlPoint`2`endPoint`<br /><br /> -или-<br /><br /> `c` `controlPoint`1`controlPoint`2`endPoint`|  
   
-|Термин|Описание|  
+|Термин|Описание:|  
 |----------|-----------------|  
 |`controlPoint`1|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Первая контрольная точка кривой, которая определяет начальную касательную к кривой.|  
 |`controlPoint`2|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Вторая контрольная точка кривой, которая определяет конечную касательную к кривой.|  
@@ -180,7 +180,7 @@ ms.locfileid: "54671269"
 |------------|  
 |`A` `size` `rotationAngle` `isLargeArcFlag` `sweepDirectionFlag` `endPoint`<br /><br /> -или-<br /><br /> `a` `size` `rotationAngle` `isLargeArcFlag` `sweepDirectionFlag` `endPoint`|  
   
-|Термин|Описание|  
+|Термин|Описание:|  
 |----------|-----------------|  
 |`size`|<xref:System.Windows.Size?displayProperty=nameWithType><br /><br /> Радиусы арки X и Y.|  
 |`rotationAngle`|<xref:System.Double?displayProperty=nameWithType><br /><br /> Поворот эллипса в градусах.|  
@@ -229,6 +229,6 @@ ms.locfileid: "54671269"
 - <xref:System.Windows.Media.StreamGeometry>
 - <xref:System.Windows.Media.PathGeometry>
 - <xref:System.Windows.Media.PathFigureCollection>
-- [Обзор фигур и базовых средств рисования в приложении WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
-- [Общие сведения о классе Geometry](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)
-- [Разделы практического руководства](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)
+- [Обзор фигур и базовых средств рисования в приложении WPF](shapes-and-basic-drawing-in-wpf-overview.md)
+- [Общие сведения о классе Geometry](geometry-overview.md)
+- [Разделы практического руководства](geometries-how-to-topics.md)

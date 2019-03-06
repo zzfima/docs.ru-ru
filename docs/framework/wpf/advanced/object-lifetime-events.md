@@ -24,12 +24,12 @@ helpviewer_keywords:
 - startup events [WPF]
 - lifetime events of objects [WPF]
 ms.assetid: face6fc7-465b-4502-bfe5-e88d2e729a78
-ms.openlocfilehash: 8b42104522be854fe4e49d08e110497469d64980
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b5f38492fff9aa87094542b174becc54ee324a78
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555366"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371493"
 ---
 # <a name="object-lifetime-events"></a>События времени жизни объекта
 В этом разделе описываются определенные события [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], обозначающие этапы создания, использования и удаления времени жизни объекта.  
@@ -38,7 +38,7 @@ ms.locfileid: "54555366"
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Предварительные требования  
- Предполагается, что вы имеете представление о свойствах зависимостей с точки зрения потребителя существующих свойств зависимостей в классах [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] и ознакомились с разделом [Общие сведения о свойствах зависимостей](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md). Чтобы выполнить примеры в этом разделе, следует также иметь представление о [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] (см. раздел [Обзор XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)) и знать, как создаются приложения [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+ Предполагается, что вы имеете представление о свойствах зависимостей с точки зрения потребителя существующих свойств зависимостей в классах [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] и ознакомились с разделом [Общие сведения о свойствах зависимостей](dependency-properties-overview.md). Чтобы выполнить примеры в этом разделе, следует также иметь представление о [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] (см. раздел [Обзор XAML (WPF)](xaml-overview-wpf.md)) и знать, как создаются приложения [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
 <a name="intro"></a>   
 ## <a name="object-lifetime-events"></a>События времени жизни объекта  
@@ -68,12 +68,12 @@ ms.locfileid: "54555366"
 ## <a name="lifetime-events-application-model-elements"></a>Элементы модели приложений событий времени жизни  
  Основываясь на общих события времени жизни для элементов являются следующие элементы модели приложений: <xref:System.Windows.Application>, <xref:System.Windows.Window>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Navigation.NavigationWindow>, и <xref:System.Windows.Controls.Frame>. Они расширяют общие события времени жизни дополнительными событиями, которые связаны с их конкретными целями. Эти темы подробно рассматриваются в следующих разделах.  
   
--   <xref:System.Windows.Application>: [Общие сведения об управлении приложением](../../../../docs/framework/wpf/app-development/application-management-overview.md).  
+-   <xref:System.Windows.Application>: [Общие сведения об управлении приложением](../app-development/application-management-overview.md).  
   
--   <xref:System.Windows.Window>: [Общие сведения о Windows WPF](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md).  
+-   <xref:System.Windows.Window>: [Общие сведения о Windows WPF](../app-development/wpf-windows-overview.md).  
   
--   <xref:System.Windows.Controls.Page>, <xref:System.Windows.Navigation.NavigationWindow>, и <xref:System.Windows.Controls.Frame>: [Общие сведения о переходах](../../../../docs/framework/wpf/app-development/navigation-overview.md).  
+-   <xref:System.Windows.Controls.Page>, <xref:System.Windows.Navigation.NavigationWindow>, и <xref:System.Windows.Controls.Frame>: [Общие сведения о переходах](../app-development/navigation-overview.md).  
   
 ## <a name="see-also"></a>См. также
-- [Приоритет значения свойства зависимостей](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)
-- [Общие сведения о перенаправленных событиях](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [Приоритет значения свойства зависимостей](dependency-property-value-precedence.md)
+- [Общие сведения о перенаправленных событиях](routed-events-overview.md)

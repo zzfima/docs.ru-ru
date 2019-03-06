@@ -9,21 +9,21 @@ helpviewer_keywords:
 - bitmap images [WPF]
 - images [WPF], bitmap
 ms.assetid: be180b56-ca6e-4da3-a839-f6b0bf482f7d
-ms.openlocfilehash: fef5cec4da09f8cd1a29cb9ebaccc83ee7c48311
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eb81644bc69edcd1465cf43224eb6af369b5fb3d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555819"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373469"
 ---
 # <a name="bitmap-effects"></a>Эффекты для точечных рисунков
-В этом разделе описываются способы применения эффектов к точечным рисункам с помощью [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
+В этом разделе описываются способы применения эффектов к растровым изображениям с помощью [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
 > [!IMPORTANT]
->  В [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] или более поздней версии, <xref:System.Windows.Media.Effects.BitmapEffect> класс устарел. При попытке использовать <xref:System.Windows.Media.Effects.BitmapEffect> класса, будет вызвано исключение устарел. Поддерживаемый аналог для <xref:System.Windows.Media.Effects.BitmapEffect> класс <xref:System.Windows.Media.Effects.Effect> класса. В большинстве случаев <xref:System.Windows.Media.Effects.Effect> класс значительно быстрее.  
+>  В [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] или более поздней версии, <xref:System.Windows.Media.Effects.BitmapEffect> класс является устаревшим. Если вы попытаетесь использовать <xref:System.Windows.Media.Effects.BitmapEffect> класса, будет вызвано исключение устаревшего. Неустаревшая альтернатива для <xref:System.Windows.Media.Effects.BitmapEffect> класс является <xref:System.Windows.Media.Effects.Effect> класса. В большинстве случаев <xref:System.Windows.Media.Effects.Effect> класс значительно быстрее.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Общие сведения об эффектах для точечных рисунков](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)  
+ [Общие сведения об эффектах для точечных рисунков](bitmap-effects-overview.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Media.Effects.BitmapEffect>  
@@ -31,6 +31,6 @@ ms.locfileid: "33555819"
  <xref:System.Windows.Media.Effects>  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Графика и мультимедиа](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [Графика и мультимедиа](index.md)  
   
- [Общие сведения об обработке изображений](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+ [Общие сведения об обработке изображений](imaging-overview.md)

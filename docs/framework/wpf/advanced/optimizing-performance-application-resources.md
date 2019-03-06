@@ -9,17 +9,17 @@ helpviewer_keywords:
 - brushes [WPF], performance
 - sharing brushes without copying [WPF]
 ms.assetid: 62b88488-c08e-4804-b7de-a1c34fbe929c
-ms.openlocfilehash: fa412a4f900179c22868b2ef3e7429e7dc2acc9c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 921a67a24464ff5ac782045ae022f7766f32d579
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507555"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352403"
 ---
 # <a name="optimizing-performance-application-resources"></a>Оптимизация производительности: Ресурсы приложения
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] позволяет совместно использовать ресурсы приложения таким образом, можно поддерживать согласованный вид или поведение с помощью элементов одинакового типа. Этот раздел содержит несколько рекомендаций в этой области, которые могут помочь повысить производительность приложений.  
   
- Дополнительные сведения о ресурсах см. в разделе [Ресурсы XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
+ Дополнительные сведения о ресурсах см. в разделе [Ресурсы XAML](xaml-resources.md).  
   
 ## <a name="sharing-resources"></a>Совместное использование ресурсов  
  Если приложение использует пользовательские элементы управления и определяет ресурсы в <xref:System.Windows.ResourceDictionary> (или узел ресурсов XAML), рекомендуется определить ресурсы на <xref:System.Windows.Application> или <xref:System.Windows.Window> объекта уровень, или их определения в тему по умолчанию для пользовательские элементы управления. Определение ресурсов в пользовательский элемент управления <xref:System.Windows.ResourceDictionary> оказывает влияние на производительность для каждого экземпляра этого элемента управления. Например при наличии кисть производительность операций, определенных как часть определения ресурсов для пользовательского элемента управления и несколько экземпляров пользовательского элемента управления, рабочего набора приложения будет значительно увеличить.  
@@ -31,7 +31,7 @@ ms.locfileid: "54507555"
   
  В следующем примере разметки показано этой точки.  
   
- [!code-xaml[Performance#PerformanceSnippet7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/BrushResource.xaml#performancesnippet7)]  
+ [!code-xaml[Performance#PerformanceSnippet7](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/BrushResource.xaml#performancesnippet7)]  
   
 ## <a name="use-static-resources-when-possible"></a>Используйте статические ресурсы, когда это возможно  
  Статический ресурс обеспечивает значение для любого атрибута свойства XAML, поиска ссылки на уже определенный ресурс. Поведение подстановки для этого ресурса является аналогом во время компиляции.  
@@ -40,15 +40,15 @@ ms.locfileid: "54507555"
   
  В следующем примере разметки показано использование обоих типов ресурсов:  
   
- [!code-xaml[Performance#PerformanceSnippet8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/DynamicResource.xaml#performancesnippet8)]  
+ [!code-xaml[Performance#PerformanceSnippet8](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/DynamicResource.xaml#performancesnippet8)]  
   
 ## <a name="see-also"></a>См. также
-- [Улучшение производительности приложений WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
-- [Планирование производительности приложения](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)
-- [Использование преимуществ оборудования](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
-- [Разметка и разработка](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
-- [Двумерная графика и изображения](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Поведение объекта](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)
-- [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
-- [Привязка данных](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
-- [Дополнительные рекомендации по повышению производительности](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
+- [Улучшение производительности приложений WPF](optimizing-wpf-application-performance.md)
+- [Планирование производительности приложения](planning-for-application-performance.md)
+- [Использование преимуществ оборудования](optimizing-performance-taking-advantage-of-hardware.md)
+- [Разметка и разработка](optimizing-performance-layout-and-design.md)
+- [Двумерная графика и изображения](optimizing-performance-2d-graphics-and-imaging.md)
+- [Поведение объекта](optimizing-performance-object-behavior.md)
+- [Text](optimizing-performance-text.md)
+- [Привязка данных](optimizing-performance-data-binding.md)
+- [Дополнительные рекомендации по повышению производительности](optimizing-performance-other-recommendations.md)

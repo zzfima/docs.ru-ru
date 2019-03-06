@@ -7,32 +7,32 @@ helpviewer_keywords:
 - flow content elements [WPF], how-to topics
 - documents [WPF], flow content reference
 ms.assetid: ef5175df-6ab9-4096-be0c-804003b44c64
-ms.openlocfilehash: e5be189ed6bf5cf2baf676825dffca49e57a3dec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 241f3736eef55fcca13d4cb9994bb04aaf4eda66
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546378"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354431"
 ---
 # <a name="flow-content-elements-how-to-topics"></a>Разделы пошагового руководства, посвященные элементам содержимого нефиксированного формата
-В этом разделе описываются способы выполнения типичных задач с использованием различных элементов содержимого нефиксированного формата и связанных функций.  
+В этом разделе описываются способы выполнения типичных задач с помощью различных элементов содержимого нефиксированного формата и связанных функций.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Настройка интервалов между абзацами](../../../../docs/framework/wpf/advanced/how-to-adjust-spacing-between-paragraphs.md)  
- [Создание таблицы программным способом](../../../../docs/framework/wpf/advanced/how-to-build-a-table-programmatically.md)  
- [Изменение FlowDirection содержимого программным способом](../../../../docs/framework/wpf/advanced/how-to-change-the-flowdirection-of-content-programmatically.md)  
- [Изменение свойства TextWrapping программным способом](../../../../docs/framework/wpf/advanced/how-to-change-the-textwrapping-property-programmatically.md)  
- [Определение таблицы с помощью XAML](../../../../docs/framework/wpf/advanced/how-to-define-a-table-with-xaml.md)  
- [Изменение оформления текста](../../../../docs/framework/wpf/advanced/how-to-alter-the-typography-of-text.md)  
- [Включение обрезки текста](../../../../docs/framework/wpf/advanced/how-to-enable-text-trimming.md)  
- [Вставка элемента в текст программным способом](../../../../docs/framework/wpf/advanced/how-to-insert-an-element-into-text-programmatically.md)  
- [Управление элементами потокового содержимого с помощью свойства Blocks](../../../../docs/framework/wpf/advanced/how-to-manipulate-flow-content-elements-through-the-blocks-property.md)  
- [Управление элементами потокового содержимого с помощью свойства Inlines](../../../../docs/framework/wpf/advanced/how-to-manipulate-flow-content-elements-through-the-inlines-property.md)  
- [Управление FlowDocument с помощью свойства Blocks](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  
- [Управление столбцами таблицы с помощью свойства Columns](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-columns-through-the-columns-property.md)  
- [Управление группами строк таблицы пользователя с помощью свойства RowGroups](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)  
- [Использование элементов потокового содержимого](../../../../docs/framework/wpf/advanced/how-to-use-flow-content-elements.md)  
- [Использование атрибутов разделения столбцов FlowDocument](../../../../docs/framework/wpf/advanced/how-to-use-flowdocument-column-separating-attributes.md)  
+ [Настройка интервалов между абзацами](how-to-adjust-spacing-between-paragraphs.md)  
+ [Создание таблицы программным способом](how-to-build-a-table-programmatically.md)  
+ [Изменение FlowDirection содержимого программным способом](how-to-change-the-flowdirection-of-content-programmatically.md)  
+ [Изменение свойства TextWrapping программным способом](how-to-change-the-textwrapping-property-programmatically.md)  
+ [Определение таблицы с помощью XAML](how-to-define-a-table-with-xaml.md)  
+ [Изменение оформления текста](how-to-alter-the-typography-of-text.md)  
+ [Включение обрезки текста](how-to-enable-text-trimming.md)  
+ [Вставка элемента в текст программным способом](how-to-insert-an-element-into-text-programmatically.md)  
+ [Управление элементами потокового содержимого с помощью свойства Blocks](how-to-manipulate-flow-content-elements-through-the-blocks-property.md)  
+ [Управление элементами потокового содержимого с помощью свойства Inlines](how-to-manipulate-flow-content-elements-through-the-inlines-property.md)  
+ [Управление FlowDocument с помощью свойства Blocks](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  
+ [Управление столбцами таблицы с помощью свойства Columns](how-to-manipulate-table-columns-through-the-columns-property.md)  
+ [Управление группами строк таблицы пользователя с помощью свойства RowGroups](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)  
+ [Использование элементов потокового содержимого](how-to-use-flow-content-elements.md)  
+ [Использование атрибутов разделения столбцов FlowDocument](how-to-use-flowdocument-column-separating-attributes.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Documents.FlowDocument>  
@@ -40,4 +40,4 @@ ms.locfileid: "33546378"
   <xref:System.Windows.Documents.Inline>  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Документы в WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+ [Документы в WPF](documents-in-wpf.md)

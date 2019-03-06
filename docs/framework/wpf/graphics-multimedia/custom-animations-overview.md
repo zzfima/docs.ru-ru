@@ -8,21 +8,21 @@ helpviewer_keywords:
 - animation [WPF], custom classes
 - custom animation classes [WPF]
 ms.assetid: 9be69d50-3384-4938-886f-08ce00e4a7a6
-ms.openlocfilehash: 20bf15040d22d334800d6a163937c22928499f3d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0ab553f6ac22813533710e8b2ed7a3be31f6914d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527644"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358526"
 ---
 # <a name="custom-animations-overview"></a>Общие сведения о пользовательской анимации
 В этом разделе описывается, как и когда расширять систему анимации [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] путем создания пользовательских ключевых кадров и классов анимации или путем использования покадрового обратного вызова, чтобы пропустить ее.  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Предварительные требования  
- Чтобы понять материал этого раздела, необходимо ознакомиться с различными типами анимации, предоставляемыми [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Дополнительные сведения см. в разделах "Общие сведения об анимациях From/To/By", [Общие сведения об анимации по ключевым кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md) и [Общие сведения об анимация с использованием пути](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md).  
+ Чтобы понять материал этого раздела, необходимо ознакомиться с различными типами анимации, предоставляемыми [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Дополнительные сведения см. в разделах "Общие сведения об анимациях From/To/By", [Общие сведения об анимации по ключевым кадрам](key-frame-animations-overview.md) и [Общие сведения об анимация с использованием пути](path-animations-overview.md).  
   
- Поскольку классы анимации наследуют от <xref:System.Windows.Freezable> класса, вы должны быть знакомы с <xref:System.Windows.Freezable> объекты и способами наследования от класса <xref:System.Windows.Freezable>. Дополнительные сведения см. в разделе [Общие сведения об объектах класса Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
+ Поскольку классы анимации наследуют от <xref:System.Windows.Freezable> класса, вы должны быть знакомы с <xref:System.Windows.Freezable> объекты и способами наследования от класса <xref:System.Windows.Freezable>. Дополнительные сведения см. в разделе [Общие сведения об объектах класса Freezable](../advanced/freezable-objects-overview.md).  
   
 <a name="extendingtheanimationsystem"></a>   
 ## <a name="extending-the-animation-system"></a>Расширение системы анимации  
@@ -45,7 +45,7 @@ ms.locfileid: "54527644"
   
 <a name="createacustomkeyframe"></a>   
 ## <a name="create-a-custom-key-frame"></a>Создание пользовательского ключевого кадра  
- Создание пользовательского ключевого кадра является простейшим способом расширения системы анимации. Этот подход следует использовать в случае, если требуется другой метод интерполяции для анимации по ключевым кадрам.  Как описано в разделе [Общие сведения об анимации по ключевым кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md), в анимации по ключевым кадрам используются объекты ключевых кадров для создания выходных значений. Каждый объект ключевого кадра выполняет три функции:  
+ Создание пользовательского ключевого кадра является простейшим способом расширения системы анимации. Этот подход следует использовать в случае, если требуется другой метод интерполяции для анимации по ключевым кадрам.  Как описано в разделе [Общие сведения об анимации по ключевым кадрам](key-frame-animations-overview.md), в анимации по ключевым кадрам используются объекты ключевых кадров для создания выходных значений. Каждый объект ключевого кадра выполняет три функции:  
   
 -   Указывает целевое значение с помощью его <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> свойство.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "54527644"
   
  Выполните наследование от абстрактного класса *\<Type>* KeyFrame и реализуйте метод InterpolateValueCore. Метод InterpolateValueCore возвращает текущее значение ключевого кадра. Он принимает два параметра: значение предыдущего ключевого кадра и значение хода выполнения в диапазоне от 0 до 1. 0 означает ключевой кадр только что запущен, а значение 1 указывает, что ключевой кадр завершил работу и должен возвращать значение, заданное его <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> свойство.  
   
- Так как  *\<тип >* опорный кадр классы наследуют от <xref:System.Windows.Freezable> класса, необходимо также переопределить <xref:System.Windows.Freezable.CreateInstanceCore%2A> core для возврата нового экземпляра класса. Если класс не использует свойства зависимостей для хранения своих данных или требует дополнительной инициализации после создания, может потребоваться переопределить дополнительные методы. Дополнительные сведения см. в разделе [Общие сведения об объектах класса Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
+ Так как  *\<тип >* опорный кадр классы наследуют от <xref:System.Windows.Freezable> класса, необходимо также переопределить <xref:System.Windows.Freezable.CreateInstanceCore%2A> core для возврата нового экземпляра класса. Если класс не использует свойства зависимостей для хранения своих данных или требует дополнительной инициализации после создания, может потребоваться переопределить дополнительные методы. Дополнительные сведения см. в разделе [Общие сведения об объектах класса Freezable](../advanced/freezable-objects-overview.md).  
   
  После создания пользовательской анимации *\<Type>* KeyFrame ее можно использовать *\<Type>* AnimationUsingKeyFrames для данного типа.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "54527644"
   
  Выполните наследование от класса *\<Type>* Animation и реализуйте метод GetCurrentValueCore. Метод GetCurrentValueCore возвращает текущее значение анимации. Он принимает три параметра: предлагаемое начальное значение, предлагаемое конечное значение и <xref:System.Windows.Media.Animation.AnimationClock>, используемый для определения хода выполнения анимации.  
   
- Так как  *\<тип >* AnimationBase наследуют от <xref:System.Windows.Freezable> класса, необходимо также переопределить <xref:System.Windows.Freezable.CreateInstanceCore%2A> core для возврата нового экземпляра класса. Если класс не использует свойства зависимостей для хранения своих данных или требует дополнительной инициализации после создания, может потребоваться переопределить дополнительные методы. Дополнительные сведения см. в разделе [Общие сведения об объектах класса Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
+ Так как  *\<тип >* AnimationBase наследуют от <xref:System.Windows.Freezable> класса, необходимо также переопределить <xref:System.Windows.Freezable.CreateInstanceCore%2A> core для возврата нового экземпляра класса. Если класс не использует свойства зависимостей для хранения своих данных или требует дополнительной инициализации после создания, может потребоваться переопределить дополнительные методы. Дополнительные сведения см. в разделе [Общие сведения об объектах класса Freezable](../advanced/freezable-objects-overview.md).  
   
  Дополнительные сведения см. в документации по методу GetCurrentValueCore для класса *\<Type>* AnimationBase по типу, который требуется анимировать. Например, см. раздел [Пример пользовательской анимации](https://go.microsoft.com/fwlink/?LinkID=159981).  
   
@@ -95,7 +95,7 @@ ms.locfileid: "54527644"
   
 -   <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> — Нужно переопределить это свойство позволяет указать <xref:System.Type> выходных данных анимации.  
   
- Если класс не использует свойства зависимостей для хранения своих данных или требует дополнительной инициализации после создания, может потребоваться переопределить дополнительные методы. Дополнительные сведения см. в разделе [Общие сведения об объектах класса Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
+ Если класс не использует свойства зависимостей для хранения своих данных или требует дополнительной инициализации после создания, может потребоваться переопределить дополнительные методы. Дополнительные сведения см. в разделе [Общие сведения об объектах класса Freezable](../advanced/freezable-objects-overview.md).  
   
  Рекомендуемой концепцией (используемой анимациями [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]) является использование двух уровней наследования.  
   
@@ -126,10 +126,10 @@ ms.locfileid: "54527644"
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Media.Animation.AnimationTimeline>
 - <xref:System.Windows.Media.Animation.IKeyFrame>
-- [Общие сведения о методах анимации свойств](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)
-- [Общие сведения об объектах класса Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)
-- [Общие сведения об анимации по ключевым кадрам](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
-- [Общие сведения об анимации с использованием пути](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)
-- [Общие сведения об эффектах анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [Общие сведения об анимации и системе управления временем](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)
+- [Общие сведения о методах анимации свойств](property-animation-techniques-overview.md)
+- [Общие сведения об объектах класса Freezable](../advanced/freezable-objects-overview.md)
+- [Общие сведения об анимации по ключевым кадрам](key-frame-animations-overview.md)
+- [Общие сведения об анимации с использованием пути](path-animations-overview.md)
+- [Общие сведения об эффектах анимации](animation-overview.md)
+- [Общие сведения об анимации и системе управления временем](animation-and-timing-system-overview.md)
 - [Пример пользовательской анимации](https://go.microsoft.com/fwlink/?LinkID=159981)

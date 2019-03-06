@@ -5,23 +5,23 @@ helpviewer_keywords:
 - timing system [WPF]
 - animation [WPF]
 ms.assetid: 172cd5a8-a333-4c81-9456-fafccc19f382
-ms.openlocfilehash: e50714e8cf50f42aad41ffa77fda34c55f9adb4a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 36a71213b2c96d2ea1aa7597216f420f47493f43
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502992"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360515"
 ---
 # <a name="animation-and-timing-system-overview"></a>Общие сведения об анимации и системе управления временем
 В этом разделе описывается, как система управления временем использует анимацию, <xref:System.Windows.Media.Animation.Timeline>, и <xref:System.Windows.Media.Animation.Clock> классы для анимации свойств.  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Предварительные требования  
- Чтобы понять содержимое этого раздела, необходимо знать, как использовать анимацию [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] для анимации свойств, как описано в разделе [Общие сведения об эффектах анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md). В нем также можно ознакомиться со свойствами зависимостей. Дополнительные сведения см. в разделе [Общие сведения о свойствах зависимостей](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).  
+ Чтобы понять содержимое этого раздела, необходимо знать, как использовать анимацию [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] для анимации свойств, как описано в разделе [Общие сведения об эффектах анимации](animation-overview.md). В нем также можно ознакомиться со свойствами зависимостей. Дополнительные сведения см. в разделе [Общие сведения о свойствах зависимостей](../advanced/dependency-properties-overview.md).  
   
 <a name="timelinesandclocks"></a>   
 ## <a name="timelines-and-clocks"></a>Временные шкалы и часы  
- [Общие сведения об анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md) описано как <xref:System.Windows.Media.Animation.Timeline> представляет сегмент времени и анимации — это разновидность <xref:System.Windows.Media.Animation.Timeline> , формирующий значения выходных данных. Сама по себе <xref:System.Windows.Media.Animation.Timeline>, не выполняет никаких действий кроме описания сегмента времени. Он является временной шкалы <xref:System.Windows.Media.Animation.Clock> объект, который не работает. Аналогичным образом, анимация не выполняет анимирования фактически свойства: класс анимации описывает способ вычисления выходные значения, но это <xref:System.Windows.Media.Animation.Clock> , созданных для данной анимации, анимацию и применяет его к свойствам.  
+ [Общие сведения об анимации](animation-overview.md) описано как <xref:System.Windows.Media.Animation.Timeline> представляет сегмент времени и анимации — это разновидность <xref:System.Windows.Media.Animation.Timeline> , формирующий значения выходных данных. Сама по себе <xref:System.Windows.Media.Animation.Timeline>, не выполняет никаких действий кроме описания сегмента времени. Он является временной шкалы <xref:System.Windows.Media.Animation.Clock> объект, который не работает. Аналогичным образом, анимация не выполняет анимирования фактически свойства: класс анимации описывает способ вычисления выходные значения, но это <xref:System.Windows.Media.Animation.Clock> , созданных для данной анимации, анимацию и применяет его к свойствам.  
   
  Объект <xref:System.Windows.Media.Animation.Clock> — это специальный тип объекта, который поддерживает состояние времени для выполнения <xref:System.Windows.Media.Animation.Timeline>. Он предоставляет три бита информации, которые необходимы для анимации и системы: <xref:System.Windows.Media.Animation.Clock.CurrentTime%2A>, <xref:System.Windows.Media.Animation.Clock.CurrentProgress%2A>, и <xref:System.Windows.Media.Animation.Clock.CurrentState%2A>. Объект <xref:System.Windows.Media.Animation.Clock> определяет его текущее время, ход выполнения и состояние с помощью поведения времени, описываемого его <xref:System.Windows.Media.Animation.Timeline>: <xref:System.Windows.Media.Animation.Timeline.Duration%2A>, <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>, <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>, и т. д.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "54502992"
   
  На следующем рисунке показано отношение между диспетчером времени и <xref:System.Windows.Media.Animation.AnimationClock>, а также анимированными свойствами зависимостей.  
   
- ![Время компоненты системы](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-clocks-1clock1prop.png "graphicsmm_clocks_1clock1prop")  
+ ![Время компоненты системы](./media/graphicsmm-clocks-1clock1prop.png "graphicsmm_clocks_1clock1prop")  
 Анимирование свойства  
   
  Когда диспетчер времени "тикает", он обновляет время каждого <xref:System.Windows.Media.Animation.ClockState.Active> <xref:System.Windows.Media.Animation.Clock> в приложении. Если <xref:System.Windows.Media.Animation.Clock> — <xref:System.Windows.Media.Animation.AnimationClock>, он использует <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> метод <xref:System.Windows.Media.Animation.AnimationTimeline> из которого он был создан для расчета его текущего выходного значения. <xref:System.Windows.Media.Animation.AnimationClock> Предоставляет <xref:System.Windows.Media.Animation.AnimationTimeline> с текущее местное время, входное значение, которое обычно является базовым значением свойства и конечное значение по умолчанию. После получения значения анимированного свойства с помощью <xref:System.Windows.DependencyObject.GetValue%2A> метода или метода доступа CLR, вы получите выходные данные его <xref:System.Windows.Media.Animation.AnimationClock>.  
@@ -54,13 +54,13 @@ ms.locfileid: "54502992"
 #### <a name="clock-groups"></a>Группы часов  
  Выше описаны различные типы <xref:System.Windows.Media.Animation.Clock> объектов для различных типов шкал времени. На следующем рисунке показано отношение между диспетчером времени <xref:System.Windows.Media.Animation.ClockGroup>, <xref:System.Windows.Media.Animation.AnimationClock>, а также анимированными свойствами зависимостей. Объект <xref:System.Windows.Media.Animation.ClockGroup> создается для временных шкал, которые группируют другие временные шкалы, такие как <xref:System.Windows.Media.Animation.Storyboard> класс, который группирует анимации и другие временные шкалы.  
   
- ![Время компоненты системы](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-clocks-2clock1clockgroup2prop.png "graphicsmm_clocks_2clock1clockgroup2prop")  
+ ![Время компоненты системы](./media/graphicsmm-clocks-2clock1clockgroup2prop.png "graphicsmm_clocks_2clock1clockgroup2prop")  
 ClockGroup  
   
 #### <a name="composition"></a>Композиция  
  Можно связать несколько часов с одним свойством. При этом каждые часы используют выходное значение предыдущих часов в качестве своего базового значения. На следующем рисунке показаны три <xref:System.Windows.Media.Animation.AnimationClock> объекты, которые применены к тому же свойству. Clock1 использует базовое значение анимируемого свойства в качестве входных данных и для создания выходных данных. Clock2 принимает выходные данные от Clock1 в качестве входных данных и использует их для создания выходных данных. Clock3 принимает выходные данные от Clock2 в качестве входных данных и использует их для создания выходных данных. Когда несколько часов влияют на одно и то же свойство одновременно, считается, что они находятся в цепочке композиции.  
   
- ![Время компоненты системы](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-clocks-2clock1prop.png "graphicsmm_clocks_2clock1prop")  
+ ![Время компоненты системы](./media/graphicsmm-clocks-2clock1prop.png "graphicsmm_clocks_2clock1prop")  
 Цепочка композиции  
   
  Обратите внимание, что, несмотря на то, что связь создается между входными и выходными из <xref:System.Windows.Media.Animation.AnimationClock> объекты в цепочке композиции, их поведение времени не меняется. <xref:System.Windows.Media.Animation.Clock> объекты (включая <xref:System.Windows.Media.Animation.AnimationClock> объекты) имеют иерархическую зависимость от их родительских <xref:System.Windows.Media.Animation.Clock> объектов.  
@@ -74,7 +74,7 @@ ClockGroup
   
  При <xref:System.Windows.Media.Animation.Clock> изменяет состояние и возвращается обратно в исходное состояние между тактами (например после изменения <xref:System.Windows.Media.Animation.ClockState.Active> для <xref:System.Windows.Media.Animation.ClockState.Stopped> и вернуться к <xref:System.Windows.Media.Animation.ClockState.Active>), по-прежнему возникновении связанного события.  
   
- Дополнительные сведения о временных событиях см. в разделе [Общие сведения о временных событиях](../../../../docs/framework/wpf/graphics-multimedia/timing-events-overview.md).  
+ Дополнительные сведения о временных событиях см. в разделе [Общие сведения о временных событиях](timing-events-overview.md).  
   
 <a name="currentvaluesbasevaluesofproperties"></a>   
 ## <a name="current-values-and-base-values-of-properties"></a>Текущие и базовые значения свойств  
@@ -83,6 +83,6 @@ ClockGroup
  При анимации свойства, <xref:System.Windows.Media.Animation.AnimationClock> задает свойства *текущей* значение. Получение значения свойства посредством метода доступа CLR или <xref:System.Windows.DependencyObject.GetValue%2A> метод возвращает выходные данные <xref:System.Windows.Media.Animation.AnimationClock> при <xref:System.Windows.Media.Animation.AnimationClock> — <xref:System.Windows.Media.Animation.ClockState.Active> или <xref:System.Windows.Media.Animation.ClockState.Filling>. Базовое значение этого свойства можно получить с помощью <xref:System.Windows.Media.Animation.IAnimatable.GetAnimationBaseValue%2A> метод.  
   
 ## <a name="see-also"></a>См. также
-- [Общие сведения об эффектах анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [Общие сведения о временных событиях](../../../../docs/framework/wpf/graphics-multimedia/timing-events-overview.md)
-- [Общие сведения о характере поведения во времени](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)
+- [Общие сведения об эффектах анимации](animation-overview.md)
+- [Общие сведения о временных событиях](timing-events-overview.md)
+- [Общие сведения о характере поведения во времени](timing-behaviors-overview.md)

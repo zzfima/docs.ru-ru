@@ -3,11 +3,11 @@ title: <endpoint> - элемент
 ms.date: 03/30/2017
 ms.assetid: 2fc8fedc-78d0-4e87-8142-fbfd26c15a4e
 ms.openlocfilehash: 94b6cc6225171d90164e6d6880e1095513f16ece
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254461"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354740"
 ---
 # <a name="endpoint-element"></a>\<Конечная точка > элемент
 Задает свойства привязки, контракта и адреса для конечной точки службы, которая используется для предоставления доступа к службам.  
@@ -64,7 +64,7 @@ ms.locfileid: "55254461"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<службы >](../../../../../docs/framework/configure-apps/file-schema/wcf/service.md)|Раздел конфигурации, определяющий список конечных точек, к которым может подключаться клиент.|  
   

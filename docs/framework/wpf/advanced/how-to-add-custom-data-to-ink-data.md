@@ -5,17 +5,17 @@ helpviewer_keywords:
 - ink data [WPF], adding custom data
 - InkCanvas [WPF], displaying
 ms.assetid: f02aac6f-3436-4f7c-b6ea-0452cba5332c
-ms.openlocfilehash: 40d883f3d3e1d504c8757c31325aa72a03da37e0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c524e30943a21426e2e5e8fe6ae009999924fead
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544515"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361672"
 ---
 # <a name="how-to-add-custom-data-to-ink-data"></a>Практическое руководство. Добавление данных пользователя в данные рукописного ввода
-Можно добавлять пользовательские данные для рукописного ввода, которая будет сохранена при сохранении рукописный ввод как рукописный ввод сериализованного формата (ISF).  Можно сохранить пользовательские данные для <xref:System.Windows.Ink.DrawingAttributes>, <xref:System.Windows.Ink.StrokeCollection>, или <xref:System.Windows.Ink.Stroke>.  Возможность сохранить пользовательские данные в трех объектов дает возможность выбрать лучшее место для сохранения данных.  Все три класса используют аналогичные методы для хранения и доступа к пользовательским данным.  
+Можно добавить пользовательские данные для рукописного ввода, который будет сохранен при сохранении рукописного ввода в форме рукописного ввода сериализации формат ISF.  Можно сохранить пользовательские данные для <xref:System.Windows.Ink.DrawingAttributes>, <xref:System.Windows.Ink.StrokeCollection>, или <xref:System.Windows.Ink.Stroke>.  Возможность сохранить пользовательские данные в трех объектов дает возможность выбрать лучшее место для сохранения данных.  Все три класса используйте аналогичные методы для хранения и доступа к пользовательским данным.  
   
- Только следующие типы могут сохраняться как пользовательские данные:  
+ Как пользовательские данные могут сохраняться только следующие типы:  
   
 -   <xref:System.Boolean>  
   
@@ -74,10 +74,10 @@ ms.locfileid: "33544515"
 ## <a name="example"></a>Пример  
  Следующий пример демонстрирует добавление и извлечение пользовательских данных из <xref:System.Windows.Ink.StrokeCollection>.  
   
- [!code-csharp[HowToAddCustomDataToInk#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HowToAddCustomDataToInk/CSharp/Window1.xaml.cs#1)]  
+ [!code-csharp[HowToAddCustomDataToInk#1](~/samples/snippets/csharp/VS_Snippets_Wpf/HowToAddCustomDataToInk/CSharp/Window1.xaml.cs#1)]  
   
- В следующем примере создается приложение, которое отображает <xref:System.Windows.Controls.InkCanvas> и две кнопки.  Кнопка, `switchAuthor`, позволяет использовать два разных авторах два пера.  Кнопки `changePenColors` изменяет цвет каждого штриха на <xref:System.Windows.Controls.InkCanvas> согласно автору.  Приложение определяет два <xref:System.Windows.Ink.DrawingAttributes> объектов и добавляет пользовательское свойство для каждого из них, указывающее, какой автор, перетащенной <xref:System.Windows.Ink.Stroke>.  Когда пользователь щелкает `changePenColors`, приложение изменяет внешний вид штриха согласно значению пользовательского свойства.  
+ В следующем примере создается приложение, отображающее <xref:System.Windows.Controls.InkCanvas> и две кнопки.  Кнопки, `switchAuthor`, позволяет использовать два разных авторов два пера.  Кнопки `changePenColors` изменяет цвет всех рукописных на <xref:System.Windows.Controls.InkCanvas> в соответствии с автором.  Приложение определяет два <xref:System.Windows.Ink.DrawingAttributes> объектов и добавляет пользовательское свойство для каждого из них, указывающее, какой автор рисовал <xref:System.Windows.Ink.Stroke>.  Когда пользователь щелкает `changePenColors`, приложение не меняет внешний вид штриха в соответствии с значением настраиваемого свойства.  
   
- [!code-xaml[HowToAddCustomDataToInk#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HowToAddCustomDataToInk/CSharp/Window1.xaml#2)]  
+ [!code-xaml[HowToAddCustomDataToInk#2](~/samples/snippets/csharp/VS_Snippets_Wpf/HowToAddCustomDataToInk/CSharp/Window1.xaml#2)]  
   
- [!code-csharp[HowToAddCustomDataToInk#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HowToAddCustomDataToInk/CSharp/Window1.xaml.cs#3)]
+ [!code-csharp[HowToAddCustomDataToInk#3](~/samples/snippets/csharp/VS_Snippets_Wpf/HowToAddCustomDataToInk/CSharp/Window1.xaml.cs#3)]

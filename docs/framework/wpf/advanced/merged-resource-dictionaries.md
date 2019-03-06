@@ -5,12 +5,12 @@ helpviewer_keywords:
 - merged resource dictionaries [WPF]
 - dictionaries [WPF], merged resources
 ms.assetid: d159531f-05d4-49fd-b951-c332de51e5bc
-ms.openlocfilehash: f8549dedc9c6f37fb8a06a376351ed96b808bfd4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ae6c8dc3669ed46165f3d78e78735187ebbc3776
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572929"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377064"
 ---
 # <a name="merged-resource-dictionaries"></a>Объединенные словари ресурсов
 Ресурсы [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] поддерживают функцию объединенных словарей ресурсов. Эта функция обеспечивает способ определения части ресурсов приложения [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] за пределами скомпилированного приложения [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Затем ресурсы можно совместно использовать в приложениях; они также более удобно изолируются для локализации.  
@@ -18,9 +18,9 @@ ms.locfileid: "54572929"
 ## <a name="introducing-a-merged-resource-dictionary"></a>Общие сведения об объединенном словаре ресурсов  
  Для представления на странице объединенного словаря ресурсов используйте в разметке следующий синтаксис.  
   
- [!code-xaml[ResourceMergeDictionary#MergedXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ResourceMergeDictionary/CS/default.xaml#mergedxaml)]  
+ [!code-xaml[ResourceMergeDictionary#MergedXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/ResourceMergeDictionary/CS/default.xaml#mergedxaml)]  
   
- Обратите внимание, что <xref:System.Windows.ResourceDictionary> элемент не имеет [директивы x: Key](../../../../docs/framework/xaml-services/x-key-directive.md), которая обычно используется для всех элементов в коллекции ресурсов. Но другой <xref:System.Windows.ResourceDictionary> будет сослаться <xref:System.Windows.ResourceDictionary.MergedDictionaries%2A> коллекции является особым случаем, зарезервированные для этого сценария объединенного словаря ресурсов. <xref:System.Windows.ResourceDictionary> Представляющий объединенный словарь ресурсов не может иметь [директивы x: Key](../../../../docs/framework/xaml-services/x-key-directive.md). Как правило, каждый <xref:System.Windows.ResourceDictionary> в <xref:System.Windows.ResourceDictionary.MergedDictionaries%2A> указывает коллекцию <xref:System.Windows.ResourceDictionary.Source%2A> атрибута. Значение <xref:System.Windows.ResourceDictionary.Source%2A> должно быть [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] , разрешает путь к файлу ресурсов для объединения. Назначением [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] должен быть другой [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] файла, с помощью <xref:System.Windows.ResourceDictionary> качестве корневого элемента.  
+ Обратите внимание, что <xref:System.Windows.ResourceDictionary> элемент не имеет [директивы x: Key](../../xaml-services/x-key-directive.md), которая обычно используется для всех элементов в коллекции ресурсов. Но другой <xref:System.Windows.ResourceDictionary> будет сослаться <xref:System.Windows.ResourceDictionary.MergedDictionaries%2A> коллекции является особым случаем, зарезервированные для этого сценария объединенного словаря ресурсов. <xref:System.Windows.ResourceDictionary> Представляющий объединенный словарь ресурсов не может иметь [директивы x: Key](../../xaml-services/x-key-directive.md). Как правило, каждый <xref:System.Windows.ResourceDictionary> в <xref:System.Windows.ResourceDictionary.MergedDictionaries%2A> указывает коллекцию <xref:System.Windows.ResourceDictionary.Source%2A> атрибута. Значение <xref:System.Windows.ResourceDictionary.Source%2A> должно быть [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] , разрешает путь к файлу ресурсов для объединения. Назначением [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] должен быть другой [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] файла, с помощью <xref:System.Windows.ResourceDictionary> качестве корневого элемента.  
   
 > [!NOTE]
 >  Можно определять ресурсы в <xref:System.Windows.ResourceDictionary> , который указан как объединенный словарь, либо в качестве альтернативы указанию <xref:System.Windows.ResourceDictionary.Source%2A>, или в дополнение к любым ресурсам включаются из указанного источника. Однако это не очень распространенный сценарий; основным сценарием для объединенных словарей является объединение ресурсов из внешних файлов. Если вы хотите указать ресурсы в разметке страницы, обычно следует определить их в главном <xref:System.Windows.ResourceDictionary> , а не в объединенных словарях.  
@@ -39,7 +39,7 @@ ms.locfileid: "54572929"
 > [!NOTE]
 >  Не используйте действие сборки внедренного ресурса. Само действие сборки поддерживается для [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения, но разрешение <xref:System.Windows.ResourceDictionary.Source%2A> не может включать <xref:System.Resources.ResourceManager>и поэтому невозможно отдельного ресурса из потока. Внедренный ресурс по-прежнему можно использовать для других целей до тех пор, пока вы также использовали <xref:System.Resources.ResourceManager> доступ к ресурсам.  
   
- Близким методом являются использование URI типа pack в файле [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] и ссылка на него в качестве источника. URI типа pack позволяет ссылки на компоненты связанных сборок и другие методы. Дополнительные сведения об URI типа pack см. в разделе [Ресурсы, контент и файлы данных приложения WPF](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md).  
+ Близким методом являются использование URI типа pack в файле [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] и ссылка на него в качестве источника. URI типа pack позволяет ссылки на компоненты связанных сборок и другие методы. Дополнительные сведения об URI типа pack см. в разделе [Ресурсы, контент и файлы данных приложения WPF](../app-development/wpf-application-resource-content-and-data-files.md).  
   
  Для ресурсов, которые не компилируются как часть проекта, URI вычисляется во время выполнения. Для ссылки на файл ресурсов можно использовать общий транспорт URI, такой как file: или http:. Недостаток подхода с использованием некомпилированного ресурса заключается в том, что для доступа file: требуются дополнительные действия по развертыванию, а доступ http: подразумевает зону безопасности Интернета.  
   
@@ -49,10 +49,10 @@ ms.locfileid: "54572929"
  Запись объединенных словарей как локальных файлов приложения или в локальное общее хранилище является другим возможным сценарием объединенного словаря или развертывания приложения.  
   
 ### <a name="localization"></a>Локализация  
- Если ресурсы, которые необходимо локализовать, изолированы от словарей, объединенных в основные словари, и хранятся как свободные [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], эти файлы можно локализовать отдельно. Этот способ является упрощенной альтернативой для локализации вспомогательных сборок ресурсов. Дополнительные сведения см. в статье [Общие сведения о глобализации и локализации WPF](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md).  
+ Если ресурсы, которые необходимо локализовать, изолированы от словарей, объединенных в основные словари, и хранятся как свободные [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], эти файлы можно локализовать отдельно. Этот способ является упрощенной альтернативой для локализации вспомогательных сборок ресурсов. Дополнительные сведения см. в статье [Общие сведения о глобализации и локализации WPF](wpf-globalization-and-localization-overview.md).  
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.ResourceDictionary>
-- [Ресурсы XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md)
-- [Ресурсы и код](../../../../docs/framework/wpf/advanced/resources-and-code.md)
-- [Файлы ресурсов, содержимого и данных WPF-приложения](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)
+- [Ресурсы XAML](xaml-resources.md)
+- [Ресурсы и код](resources-and-code.md)
+- [Файлы ресурсов, содержимого и данных WPF-приложения](../app-development/wpf-application-resource-content-and-data-files.md)
