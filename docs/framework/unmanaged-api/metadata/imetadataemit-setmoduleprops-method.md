@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 86cb99023c0abfc70d292427b14986dbcea1d333
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5219a414c5961128d4eaa27c1f18d635938dc5ba
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586167"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497409"
 ---
-# <a name="imetadataemitsetmoduleprops-method"></a><span data-ttu-id="40a13-102">Метод IMetaDataEmit::SetModuleProps</span><span class="sxs-lookup"><span data-stu-id="40a13-102">IMetaDataEmit::SetModuleProps Method</span></span>
-<span data-ttu-id="40a13-103">Обновляет ссылки на модуль, определяются в первом вызове [IMetaDataEmit::DefineModuleRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md).</span><span class="sxs-lookup"><span data-stu-id="40a13-103">Updates references to a module defined by a prior call to [IMetaDataEmit::DefineModuleRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md).</span></span>  
+# <a name="imetadataemitsetmoduleprops-method"></a><span data-ttu-id="fb8de-102">Метод IMetaDataEmit::SetModuleProps</span><span class="sxs-lookup"><span data-stu-id="fb8de-102">IMetaDataEmit::SetModuleProps Method</span></span>
+<span data-ttu-id="fb8de-103">Обновляет ссылки на модуль, определяются в первом вызове [IMetaDataEmit::DefineModuleRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md).</span><span class="sxs-lookup"><span data-stu-id="fb8de-103">Updates references to a module defined by a prior call to [IMetaDataEmit::DefineModuleRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="40a13-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="40a13-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fb8de-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="fb8de-104">Syntax</span></span>  
   
 ```  
 HRESULT SetModuleProps (   
@@ -35,19 +35,19 @@ HRESULT SetModuleProps (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="40a13-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="40a13-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="fb8de-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="fb8de-105">Parameters</span></span>  
  `szName`  
- <span data-ttu-id="40a13-106">[in] Имя модуля в кодировке Юникод.</span><span class="sxs-lookup"><span data-stu-id="40a13-106">[in] The module name in Unicode.</span></span> <span data-ttu-id="40a13-107">Это только имя файла, а не полное имя пути.</span><span class="sxs-lookup"><span data-stu-id="40a13-107">This is the file name only and not the full path name.</span></span>  
+ <span data-ttu-id="fb8de-106">[in] Имя модуля в кодировке Юникод.</span><span class="sxs-lookup"><span data-stu-id="fb8de-106">[in] The module name in Unicode.</span></span> <span data-ttu-id="fb8de-107">Это только имя файла, а не полное имя пути.</span><span class="sxs-lookup"><span data-stu-id="fb8de-107">This is the file name only and not the full path name.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="40a13-108">Требования</span><span class="sxs-lookup"><span data-stu-id="40a13-108">Requirements</span></span>  
- <span data-ttu-id="40a13-109">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="40a13-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fb8de-108">Требования</span><span class="sxs-lookup"><span data-stu-id="fb8de-108">Requirements</span></span>  
+ <span data-ttu-id="fb8de-109">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fb8de-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="40a13-110">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="40a13-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="fb8de-110">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="fb8de-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="40a13-111">**Библиотека:** Используется как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="40a13-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="fb8de-111">**Библиотека:** Используется как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="fb8de-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="40a13-112">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="40a13-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="fb8de-112">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fb8de-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="40a13-113">См. также</span><span class="sxs-lookup"><span data-stu-id="40a13-113">See also</span></span>
-- [<span data-ttu-id="40a13-114">Интерфейс IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="40a13-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="40a13-115">Интерфейс IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="40a13-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="fb8de-113">См. также</span><span class="sxs-lookup"><span data-stu-id="fb8de-113">See also</span></span>
+- [<span data-ttu-id="fb8de-114">Интерфейс IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="fb8de-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="fb8de-115">Интерфейс IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="fb8de-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
