@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 949cf322be4b7981a8c569f24abd1d9e29fa5ae6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: e2ae79e53d6f87dca24dff105b9538e04b667fd1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973149"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485943"
 ---
-# <a name="icordebugcodegetiltonativemapping-method"></a><span data-ttu-id="571c7-102">Метод ICorDebugCode::GetILToNativeMapping</span><span class="sxs-lookup"><span data-stu-id="571c7-102">ICorDebugCode::GetILToNativeMapping Method</span></span>
-<span data-ttu-id="571c7-103">Возвращает массив экземпляров «COR_DEBUG_IL_TO_NATIVE_MAP», которые представляют сопоставление из смещений промежуточного языка MSIL в собственные смещения.</span><span class="sxs-lookup"><span data-stu-id="571c7-103">Gets an array of "COR_DEBUG_IL_TO_NATIVE_MAP" instances that represent mappings from Microsoft intermediate language (MSIL) offsets to native offsets.</span></span>  
+# <a name="icordebugcodegetiltonativemapping-method"></a><span data-ttu-id="3f7e2-102">Метод ICorDebugCode::GetILToNativeMapping</span><span class="sxs-lookup"><span data-stu-id="3f7e2-102">ICorDebugCode::GetILToNativeMapping Method</span></span>
+<span data-ttu-id="3f7e2-103">Возвращает массив экземпляров «COR_DEBUG_IL_TO_NATIVE_MAP», которые представляют сопоставление из смещений промежуточного языка MSIL в собственные смещения.</span><span class="sxs-lookup"><span data-stu-id="3f7e2-103">Gets an array of "COR_DEBUG_IL_TO_NATIVE_MAP" instances that represent mappings from Microsoft intermediate language (MSIL) offsets to native offsets.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="571c7-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="571c7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3f7e2-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="3f7e2-104">Syntax</span></span>  
   
 ```  
 HRESULT GetILToNativeMapping (  
@@ -38,29 +38,29 @@ HRESULT GetILToNativeMapping (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="571c7-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="571c7-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3f7e2-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="3f7e2-105">Parameters</span></span>  
  `cMap`  
- <span data-ttu-id="571c7-106">[in] Размер массива `map`.</span><span class="sxs-lookup"><span data-stu-id="571c7-106">[in] The size of the `map` array.</span></span>  
+ <span data-ttu-id="3f7e2-106">[in] Размер массива `map`.</span><span class="sxs-lookup"><span data-stu-id="3f7e2-106">[in] The size of the `map` array.</span></span>  
   
  `pcMap`  
- <span data-ttu-id="571c7-107">[out] Указатель на фактическое число элементов, возвращаемых в `map` массива.</span><span class="sxs-lookup"><span data-stu-id="571c7-107">[out] A pointer to the actual number of elements returned in the `map` array.</span></span>  
+ <span data-ttu-id="3f7e2-107">[out] Указатель на фактическое число элементов, возвращаемых в `map` массива.</span><span class="sxs-lookup"><span data-stu-id="3f7e2-107">[out] A pointer to the actual number of elements returned in the `map` array.</span></span>  
   
  `map`  
- <span data-ttu-id="571c7-108">[out] Массив `COR_DEBUG_IL_TO_NATIVE_MAP` структуры, каждый из которых представляет сопоставление смещение MSIL для смещения машинного кода.</span><span class="sxs-lookup"><span data-stu-id="571c7-108">[out] An array of `COR_DEBUG_IL_TO_NATIVE_MAP` structures, each of which represents a mapping from an MSIL offset to a native offset.</span></span>  
+ <span data-ttu-id="3f7e2-108">[out] Массив `COR_DEBUG_IL_TO_NATIVE_MAP` структуры, каждый из которых представляет сопоставление смещение MSIL для смещения машинного кода.</span><span class="sxs-lookup"><span data-stu-id="3f7e2-108">[out] An array of `COR_DEBUG_IL_TO_NATIVE_MAP` structures, each of which represents a mapping from an MSIL offset to a native offset.</span></span>  
   
- <span data-ttu-id="571c7-109">Нет, не упорядочение массива возвращаемых элементов.</span><span class="sxs-lookup"><span data-stu-id="571c7-109">There is no ordering to the array of elements returned.</span></span>  
+ <span data-ttu-id="3f7e2-109">Нет, не упорядочение массива возвращаемых элементов.</span><span class="sxs-lookup"><span data-stu-id="3f7e2-109">There is no ordering to the array of elements returned.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="571c7-110">Примечания</span><span class="sxs-lookup"><span data-stu-id="571c7-110">Remarks</span></span>  
- <span data-ttu-id="571c7-111">`GetILToNativeMapping` Метод возвращает значимые результаты только в том случае, если этот экземпляр «ICorDebugCode» представляет машинный код, который был just-in-time (JIT) скомпилированной на основе кода MSIL.</span><span class="sxs-lookup"><span data-stu-id="571c7-111">The `GetILToNativeMapping` method returns meaningful results only if this "ICorDebugCode" instance represents native code that was just-in-time (JIT) compiled from MSIL code.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3f7e2-110">Примечания</span><span class="sxs-lookup"><span data-stu-id="3f7e2-110">Remarks</span></span>  
+ <span data-ttu-id="3f7e2-111">`GetILToNativeMapping` Метод возвращает значимые результаты только в том случае, если этот экземпляр «ICorDebugCode» представляет машинный код, который был just-in-time (JIT) скомпилированной на основе кода MSIL.</span><span class="sxs-lookup"><span data-stu-id="3f7e2-111">The `GetILToNativeMapping` method returns meaningful results only if this "ICorDebugCode" instance represents native code that was just-in-time (JIT) compiled from MSIL code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="571c7-112">Требования</span><span class="sxs-lookup"><span data-stu-id="571c7-112">Requirements</span></span>  
- <span data-ttu-id="571c7-113">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="571c7-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3f7e2-112">Требования</span><span class="sxs-lookup"><span data-stu-id="3f7e2-112">Requirements</span></span>  
+ <span data-ttu-id="3f7e2-113">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3f7e2-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="571c7-114">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="571c7-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="3f7e2-114">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3f7e2-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="571c7-115">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="571c7-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="3f7e2-115">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3f7e2-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="571c7-116">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="571c7-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="3f7e2-116">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3f7e2-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="571c7-117">См. также</span><span class="sxs-lookup"><span data-stu-id="571c7-117">See also</span></span>
-- [<span data-ttu-id="571c7-118">Интерфейс ICorDebugCode</span><span class="sxs-lookup"><span data-stu-id="571c7-118">ICorDebugCode Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-interface1.md)
+## <a name="see-also"></a><span data-ttu-id="3f7e2-117">См. также</span><span class="sxs-lookup"><span data-stu-id="3f7e2-117">See also</span></span>
+- [<span data-ttu-id="3f7e2-118">Интерфейс ICorDebugCode</span><span class="sxs-lookup"><span data-stu-id="3f7e2-118">ICorDebugCode Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-interface1.md)

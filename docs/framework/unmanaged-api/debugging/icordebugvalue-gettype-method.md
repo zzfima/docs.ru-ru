@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b4d2ba850ffc6e49cf330174dda9524c7bac4549
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f99495b04942b7902619e0383522caf9f78ae984
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709199"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492508"
 ---
-# <a name="icordebugvaluegettype-method"></a><span data-ttu-id="8c86a-102">Метод ICorDebugValue::GetType</span><span class="sxs-lookup"><span data-stu-id="8c86a-102">ICorDebugValue::GetType Method</span></span>
-<span data-ttu-id="8c86a-103">Возвращает примитивный тип объекта «ICorDebugValue».</span><span class="sxs-lookup"><span data-stu-id="8c86a-103">Gets the primitive type of this "ICorDebugValue" object.</span></span>  
+# <a name="icordebugvaluegettype-method"></a><span data-ttu-id="7d2d6-102">Метод ICorDebugValue::GetType</span><span class="sxs-lookup"><span data-stu-id="7d2d6-102">ICorDebugValue::GetType Method</span></span>
+<span data-ttu-id="7d2d6-103">Возвращает примитивный тип объекта «ICorDebugValue».</span><span class="sxs-lookup"><span data-stu-id="7d2d6-103">Gets the primitive type of this "ICorDebugValue" object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8c86a-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="8c86a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7d2d6-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="7d2d6-104">Syntax</span></span>  
   
 ```  
 HRESULT GetType (  
@@ -35,23 +35,23 @@ HRESULT GetType (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="8c86a-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="8c86a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7d2d6-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="7d2d6-105">Parameters</span></span>  
  `pType`  
- <span data-ttu-id="8c86a-106">[out] Указатель на значение, указывающее тип значения перечисления «CorElementType».</span><span class="sxs-lookup"><span data-stu-id="8c86a-106">[out] A pointer to a value of the "CorElementType" enumeration that indicates the value's type.</span></span>  
+ <span data-ttu-id="7d2d6-106">[out] Указатель на значение, указывающее тип значения перечисления «CorElementType».</span><span class="sxs-lookup"><span data-stu-id="7d2d6-106">[out] A pointer to a value of the "CorElementType" enumeration that indicates the value's type.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="8c86a-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="8c86a-107">Remarks</span></span>  
- <span data-ttu-id="8c86a-108">Если объект является сложного типа во время выполнения, этот тип можно проанализировать с помощью соответствующих подклассов `ICorDebugValue` интерфейс.</span><span class="sxs-lookup"><span data-stu-id="8c86a-108">If the object is a complex run-time type, that type may be examined through the appropriate subclasses of the `ICorDebugValue` interface.</span></span> <span data-ttu-id="8c86a-109">Например, «ICorDebugObjectValue», который наследуется от `ICorDebugValue`, представляет сложный тип.</span><span class="sxs-lookup"><span data-stu-id="8c86a-109">For example, "ICorDebugObjectValue", which inherits from `ICorDebugValue`, represents a complex type.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7d2d6-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="7d2d6-107">Remarks</span></span>  
+ <span data-ttu-id="7d2d6-108">Если объект является сложного типа во время выполнения, этот тип можно проанализировать с помощью соответствующих подклассов `ICorDebugValue` интерфейс.</span><span class="sxs-lookup"><span data-stu-id="7d2d6-108">If the object is a complex run-time type, that type may be examined through the appropriate subclasses of the `ICorDebugValue` interface.</span></span> <span data-ttu-id="7d2d6-109">Например, «ICorDebugObjectValue», который наследуется от `ICorDebugValue`, представляет сложный тип.</span><span class="sxs-lookup"><span data-stu-id="7d2d6-109">For example, "ICorDebugObjectValue", which inherits from `ICorDebugValue`, represents a complex type.</span></span>  
   
- <span data-ttu-id="8c86a-110">`GetType` И [ICorDebugObjectValue::GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getclass-method.md) методы возвращают сведения о типе значения.</span><span class="sxs-lookup"><span data-stu-id="8c86a-110">The `GetType` and [ICorDebugObjectValue::GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getclass-method.md) methods each return information about the type of a value.</span></span> <span data-ttu-id="8c86a-111">Они оба заменяемые поддержкой универсальных типов [ICorDebugValue2::GetExactType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="8c86a-111">They are both superseded by the generics-aware [ICorDebugValue2::GetExactType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md) method.</span></span>  
+ <span data-ttu-id="7d2d6-110">`GetType` И [ICorDebugObjectValue::GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getclass-method.md) методы возвращают сведения о типе значения.</span><span class="sxs-lookup"><span data-stu-id="7d2d6-110">The `GetType` and [ICorDebugObjectValue::GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getclass-method.md) methods each return information about the type of a value.</span></span> <span data-ttu-id="7d2d6-111">Они оба заменяемые поддержкой универсальных типов [ICorDebugValue2::GetExactType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="7d2d6-111">They are both superseded by the generics-aware [ICorDebugValue2::GetExactType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8c86a-112">Требования</span><span class="sxs-lookup"><span data-stu-id="8c86a-112">Requirements</span></span>  
- <span data-ttu-id="8c86a-113">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8c86a-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7d2d6-112">Требования</span><span class="sxs-lookup"><span data-stu-id="7d2d6-112">Requirements</span></span>  
+ <span data-ttu-id="7d2d6-113">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7d2d6-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8c86a-114">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8c86a-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="7d2d6-114">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7d2d6-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="8c86a-115">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8c86a-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="7d2d6-115">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7d2d6-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="8c86a-116">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8c86a-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="7d2d6-116">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7d2d6-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8c86a-117">См. также</span><span class="sxs-lookup"><span data-stu-id="8c86a-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7d2d6-117">См. также</span><span class="sxs-lookup"><span data-stu-id="7d2d6-117">See also</span></span>
 

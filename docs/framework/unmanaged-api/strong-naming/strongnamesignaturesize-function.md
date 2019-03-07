@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b5e4e2a817abff7b0cf24223b7f245fc6f86c1d9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dac6f2ca813f3b8cbed48d540a991e6396edf679
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544995"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57495225"
 ---
-# <a name="strongnamesignaturesize-function"></a><span data-ttu-id="a2011-102">Функция StrongNameSignatureSize</span><span class="sxs-lookup"><span data-stu-id="a2011-102">StrongNameSignatureSize Function</span></span>
-<span data-ttu-id="a2011-103">Возвращает размер подписи строгого имени.</span><span class="sxs-lookup"><span data-stu-id="a2011-103">Returns the size of the strong name signature.</span></span> <span data-ttu-id="a2011-104">`StrongNameSignatureSize` обычно используется компиляторами, чтобы определить, какой объем места, резервируемого в файле, при создании сборки с отложенной подписью.</span><span class="sxs-lookup"><span data-stu-id="a2011-104">`StrongNameSignatureSize` is typically used by compilers to determine how much space to reserve in the file when creating a delay-signed assembly.</span></span>  
+# <a name="strongnamesignaturesize-function"></a><span data-ttu-id="01726-102">Функция StrongNameSignatureSize</span><span class="sxs-lookup"><span data-stu-id="01726-102">StrongNameSignatureSize Function</span></span>
+<span data-ttu-id="01726-103">Возвращает размер подписи строгого имени.</span><span class="sxs-lookup"><span data-stu-id="01726-103">Returns the size of the strong name signature.</span></span> <span data-ttu-id="01726-104">`StrongNameSignatureSize` обычно используется компиляторами, чтобы определить, какой объем места, резервируемого в файле, при создании сборки с отложенной подписью.</span><span class="sxs-lookup"><span data-stu-id="01726-104">`StrongNameSignatureSize` is typically used by compilers to determine how much space to reserve in the file when creating a delay-signed assembly.</span></span>  
   
- <span data-ttu-id="a2011-105">Эта функция является устаревшей.</span><span class="sxs-lookup"><span data-stu-id="a2011-105">This function has been deprecated.</span></span> <span data-ttu-id="a2011-106">Используйте [ICLRStrongName::StrongNameSignatureSize](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturesize-method.md) метод вместо этого.</span><span class="sxs-lookup"><span data-stu-id="a2011-106">Use the [ICLRStrongName::StrongNameSignatureSize](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturesize-method.md) method instead.</span></span>  
+ <span data-ttu-id="01726-105">Эта функция является устаревшей.</span><span class="sxs-lookup"><span data-stu-id="01726-105">This function has been deprecated.</span></span> <span data-ttu-id="01726-106">Используйте [ICLRStrongName::StrongNameSignatureSize](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturesize-method.md) метод вместо этого.</span><span class="sxs-lookup"><span data-stu-id="01726-106">Use the [ICLRStrongName::StrongNameSignatureSize](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturesize-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a2011-107">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a2011-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="01726-107">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="01726-107">Syntax</span></span>  
   
 ```  
 BOOLEAN StrongNameSignatureSize (   
@@ -38,31 +38,31 @@ BOOLEAN StrongNameSignatureSize (
 );   
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="a2011-108">Параметры</span><span class="sxs-lookup"><span data-stu-id="a2011-108">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="01726-108">Параметры</span><span class="sxs-lookup"><span data-stu-id="01726-108">Parameters</span></span>  
  `pbPublicKeyBlob`  
- <span data-ttu-id="a2011-109">[in] Структура типа [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) , содержащий открытую часть пары ключей, использованного для создания подписи строгого имени.</span><span class="sxs-lookup"><span data-stu-id="a2011-109">[in] A structure of type [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) that contains the public portion of the key pair used to generate the strong name signature.</span></span>  
+ <span data-ttu-id="01726-109">[in] Структура типа [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) , содержащий открытую часть пары ключей, использованного для создания подписи строгого имени.</span><span class="sxs-lookup"><span data-stu-id="01726-109">[in] A structure of type [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) that contains the public portion of the key pair used to generate the strong name signature.</span></span>  
   
  `cbPublicKeyBlob`  
- <span data-ttu-id="a2011-110">[in] Размер в байтах из `pbPublicKeyBlob`.</span><span class="sxs-lookup"><span data-stu-id="a2011-110">[in] The size, in bytes, of `pbPublicKeyBlob`.</span></span>  
+ <span data-ttu-id="01726-110">[in] Размер в байтах из `pbPublicKeyBlob`.</span><span class="sxs-lookup"><span data-stu-id="01726-110">[in] The size, in bytes, of `pbPublicKeyBlob`.</span></span>  
   
  `pcbSize`  
- <span data-ttu-id="a2011-111">[in] Число байтов, необходимое для хранения подписи строгого имени.</span><span class="sxs-lookup"><span data-stu-id="a2011-111">[in] The number of bytes required to store the strong name signature.</span></span>  
+ <span data-ttu-id="01726-111">[in] Число байтов, необходимое для хранения подписи строгого имени.</span><span class="sxs-lookup"><span data-stu-id="01726-111">[in] The number of bytes required to store the strong name signature.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a2011-112">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="a2011-112">Return Value</span></span>  
- <span data-ttu-id="a2011-113">`true` После успешного выполнения; в противном случае `false`.</span><span class="sxs-lookup"><span data-stu-id="a2011-113">`true` on successful completion; otherwise, `false`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="01726-112">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="01726-112">Return Value</span></span>  
+ <span data-ttu-id="01726-113">`true` После успешного выполнения; в противном случае `false`.</span><span class="sxs-lookup"><span data-stu-id="01726-113">`true` on successful completion; otherwise, `false`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a2011-114">Примечания</span><span class="sxs-lookup"><span data-stu-id="a2011-114">Remarks</span></span>  
- <span data-ttu-id="a2011-115">Если `StrongNameSignatureSize` функция не завершена, вызвать [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) функции для получения последнего формируемой ошибки.</span><span class="sxs-lookup"><span data-stu-id="a2011-115">If the `StrongNameSignatureSize` function does not complete successfully, call the [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) function to retrieve the last generated error.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="01726-114">Примечания</span><span class="sxs-lookup"><span data-stu-id="01726-114">Remarks</span></span>  
+ <span data-ttu-id="01726-115">Если `StrongNameSignatureSize` функция не завершена, вызвать [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) функции для получения последнего формируемой ошибки.</span><span class="sxs-lookup"><span data-stu-id="01726-115">If the `StrongNameSignatureSize` function does not complete successfully, call the [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) function to retrieve the last generated error.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a2011-116">Требования</span><span class="sxs-lookup"><span data-stu-id="a2011-116">Requirements</span></span>  
- <span data-ttu-id="a2011-117">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a2011-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="01726-116">Требования</span><span class="sxs-lookup"><span data-stu-id="01726-116">Requirements</span></span>  
+ <span data-ttu-id="01726-117">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="01726-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a2011-118">**Заголовок.** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="a2011-118">**Header:** StrongName.h</span></span>  
+ <span data-ttu-id="01726-118">**Заголовок.** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="01726-118">**Header:** StrongName.h</span></span>  
   
- <span data-ttu-id="a2011-119">**Библиотека:** Включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="a2011-119">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="01726-119">**Библиотека:** Включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="01726-119">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="a2011-120">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a2011-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="01726-120">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="01726-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a2011-121">См. также</span><span class="sxs-lookup"><span data-stu-id="a2011-121">See also</span></span>
-- [<span data-ttu-id="a2011-122">Метод StrongNameSignatureSize</span><span class="sxs-lookup"><span data-stu-id="a2011-122">StrongNameSignatureSize Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturesize-method.md)
-- [<span data-ttu-id="a2011-123">Интерфейс ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="a2011-123">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="01726-121">См. также</span><span class="sxs-lookup"><span data-stu-id="01726-121">See also</span></span>
+- [<span data-ttu-id="01726-122">Метод StrongNameSignatureSize</span><span class="sxs-lookup"><span data-stu-id="01726-122">StrongNameSignatureSize Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturesize-method.md)
+- [<span data-ttu-id="01726-123">Интерфейс ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="01726-123">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
