@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a1df57e82309d42092c38dfcdd8b65ccc2797f9a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c13898443f27d7275a58823c8a94ec5657748f28
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743287"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57477105"
 ---
 # <a name="icordebugmanagedcallbackbreakpoint-method"></a>Метод ICorDebugManagedCallback::Breakpoint
 Уведомляет отладчик о достижении точки останова.  
@@ -37,7 +37,7 @@ HRESULT Breakpoint (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `pAppDomain`  
  [in] Указатель на объект ICorDebugAppDomain, представляющий домен приложения, содержащего точку останова.  
   

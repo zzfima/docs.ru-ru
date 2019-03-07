@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf8bc747f643819eb82448b4ad6b7fab696c9c91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 84ab475ecb538dcf5bd24c750dfe9c993ea5a0ee
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572504"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57470904"
 ---
 # <a name="icordebugcode2getcodechunks-method"></a>Метод ICorDebugCode2::GetCodeChunks
 Возвращает фрагменты кода, который представляет собой этого кода объекта.  
@@ -38,7 +38,7 @@ HRESULT GetCodeChunks (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `cbufSize`  
  [in] Размер `chunks` массива.  
   

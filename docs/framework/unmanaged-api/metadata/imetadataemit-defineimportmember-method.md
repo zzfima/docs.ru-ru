@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 021c4819036b85e1085c639bc2d874d2843b0c64
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ac44d29dd99e0205c515905f9846263033babf3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570035"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479302"
 ---
 # <a name="imetadataemitdefineimportmember-method"></a>Метод IMetaDataEmit::DefineImportMember
 Создает ссылку к указанному члену типа или модуль, который определен за пределами текущей области и определяет маркер для этой ссылки.  
@@ -42,7 +42,7 @@ HRESULT DefineImportMember (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `pAssemImport`  
  [in] [IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) интерфейс, представляющий сборку, из которого импортируется целевому элементу.  
   
@@ -70,7 +70,7 @@ HRESULT DefineImportMember (
 ## <a name="remarks"></a>Примечания  
  `DefineImportMember` Метод выполняет поиск элемента, определяемого `mbMember`, который определен в другой области, определяемой `pImport`и извлекает его свойства. Он использует эти сведения для вызова [IMetaDataEmit::DefineMemberRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md) метод в текущей области, чтобы создать ссылку на элемент.  
   
- Как правило, прежде чем использовать `DefineImportMember` метод, необходимо создать, в текущей области, ссылка на тип или ссылка на модуль для родительского класса, интерфейса или модуля целевого элемента. Маркер метаданных для этой ссылки затем передается в `tkParent` аргумент. Необходимо создать ссылку на родительский объект целевого члена, если она будет разрешена позже компилятора или компоновщика. Подведение итогов.  
+ Как правило, прежде чем использовать `DefineImportMember` метод, необходимо создать, в текущей области, ссылка на тип или ссылка на модуль для родительского класса, интерфейса или модуля целевого элемента. Маркер метаданных для этой ссылки затем передается в `tkParent` аргумент. Необходимо создать ссылку на родительский объект целевого члена, если она будет разрешена позже компилятора или компоновщика. Итоги вышесказанного приведены ниже.  
   
 -   Если целевой член является полем или методом, используйте либо [IMetaDataEmit::DefineTypeRefByName](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) или [IMetaDataEmit::DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md) метод, чтобы создать ссылку на тип, в текущей области, для родительский класс члена или родительского интерфейса.  
   

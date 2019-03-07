@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a3c20e2787eb8071b10e06b980572c347959fe3c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6021cd0126f4dd85b796a3110cd95a83c0f77ff4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619452"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466795"
 ---
 # <a name="imetadataimportenummethodsemantics-method"></a>Метод IMetaDataImport::EnumMethodSemantics
 Перечисляет свойства и события их изменения, с которыми связан указанный метод.  
@@ -39,7 +39,7 @@ HRESULT EnumMethodSemantics (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `phEnum`  
  [in, out] Указатель на перечислитель. Это должно быть NULL при первом вызове этого метода.  
   
@@ -57,7 +57,7 @@ HRESULT EnumMethodSemantics (
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
-|HRESULT|Описание|  
+|HRESULT|Описание:|  
 |-------------|-----------------|  
 |`S_OK`|`EnumMethodSemantics` успешно возвращен.|  
 |`S_FALSE`|Отсутствуют события или свойства для перечисления. В этом случае `pcEventProp` равно нулю.|  

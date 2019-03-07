@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6e8d0c16000c78fab0371b68c3a350bd2018aa1c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a35072b788321d22cec6de2f05a2863341417dc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664529"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474765"
 ---
 # <a name="icordebugnativeframegetlocalmemoryvalue-method"></a>Метод ICorDebugNativeFrame::GetLocalMemoryValue
 Получает значение аргумента или локальной переменной, которая хранится в заданном расположении памяти для данного кадра машинного кода.  
@@ -38,7 +38,7 @@ HRESULT GetLocalMemoryValue (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `address`  
  [in] Объект `CORDB_ADDRESS` значение, указывающее область памяти, содержащий значение.  
   

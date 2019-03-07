@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2741f2f1a6c5f92c3d15ba7d0127cd69494afdce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9825901b3e45e31269198e8612464aad1ac626db
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545138"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482435"
 ---
 # <a name="icorprofilercallback2survivingreferences-method"></a>Метод ICorProfilerCallback2::SurvivingReferences
 Предоставляет информацию о структуре объектов в куче в результате сборки мусора без сжатия.  
@@ -38,7 +38,7 @@ HRESULT SurvivingReferences(
                 cObjectIDRangeLength[] );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `cSurvivingObjectIDRanges`  
  [in] Количество блоков смежных объектов, оставшихся в результате сборки мусора без сжатия. То есть значение `cSurvivingObjectIDRanges` является размером массивов `objectIDRangeStart` и `cObjectIDRangeLength`, в которых хранятся идентификаторы `ObjectID` и длины каждого блока объектов соответственно.  
   
@@ -55,7 +55,7 @@ HRESULT SurvivingReferences(
 ## <a name="remarks"></a>Примечания  
   
 > [!IMPORTANT]
->  Этот метод сообщает размеры как `MAX_ULONG` для объектов с размером более 4 ГБ на 64-разрядных платформах. Для объектов, размер которых превышает 4 ГБ, используйте [ICorProfilerCallback4::SurvivingReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-survivingreferences2-method.md) метод вместо этого.  
+>  Этот метод сообщает размеры как `MAX_ULONG` для объектов с размером более 4 Гб на 64-разрядных платформах. Для объектов, размер которых превышает 4 ГБ, используйте [ICorProfilerCallback4::SurvivingReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-survivingreferences2-method.md) метод вместо этого.  
   
  Для определения того, уцелел ли объект после сборки мусора, элементы массивов `objectIDRangeStart` и `cObjectIDRangeLength` должны интерпретироваться следующим образом. Предположим, что значение `ObjectID` (`ObjectID`) находится в следующем диапазоне:  
   

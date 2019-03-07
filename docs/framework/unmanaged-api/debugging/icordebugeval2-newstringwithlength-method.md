@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b3b77a0ffc7af3b3640d1b255bd3be522f45a7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b84a2fad53feda2996515781035c0eaad5828d54
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413554"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473439"
 ---
 # <a name="icordebugeval2newstringwithlength-method"></a>Метод ICorDebugEval2::NewStringWithLength
-Создает строку указанной длины с указанным содержимым.  
+Создает строку указанной длины, с указанным содержимым.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,7 +36,7 @@ HRESULT NewStringWithLength (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `string`  
  [in] Указатель на строковое значение.  
   
@@ -44,15 +44,15 @@ HRESULT NewStringWithLength (
  [in] Длина строки.  
   
 ## <a name="remarks"></a>Примечания  
- Если строка замыкающие символ null должно быть в строке управляемый код, вызывающий `NewStringWithLength` метода необходимо убедиться, что длина строки включает конечный символ null.  
+ Если в конце строки нуль-символ должен быть в управляемую строку, объект, вызывающий `NewStringWithLength` метода необходимо убедиться, что длина строки включает конечный символ null.  
   
  Строка всегда создается в домене приложения, в котором в настоящее время выполняется поток.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

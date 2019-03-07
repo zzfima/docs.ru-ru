@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: a4af1e3b-6a9f-4855-95ba-5317565c8e2b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04d866888c15585ff5058f870257b317ac888be7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: be2119b1ce43d5969c8d083e955210c69af69b44
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696988"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491442"
 ---
 # <a name="icordebuginstancefieldsymbolgetsize-method"></a>Метод ICorDebugInstanceFieldSymbol::GetSize
 Получает размер поля экземпляра в байтах.  
@@ -22,14 +22,14 @@ HRESULT GetSize(
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `pcbSize`  
  [out] Указатель на длину этого поля.  
   
 ## <a name="remarks"></a>Примечания  
   
 > [!NOTE]
->  Этот метод доступен только в машинном коде .NET.  
+>  Этот метод доступен только в .NET Native.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

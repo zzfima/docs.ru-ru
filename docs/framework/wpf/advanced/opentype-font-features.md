@@ -9,17 +9,16 @@ helpviewer_keywords:
 - typography [WPF], OpenType font technology
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
-ms.openlocfilehash: b96ad3266ce32a26af573a3a35392518055df37f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a3bcca1e7d031a9351881a5192370bead18aa7bb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376953"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57467161"
 ---
 # <a name="opentype-font-features"></a>Возможности шрифта OpenType
-В этом разделе содержится обзор некоторых ключевых возможностей [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] технологии шрифтов в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
-  
 
+В этом разделе содержится обзор некоторых ключевых возможностей [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] технологии шрифтов в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
 <a name="overview"></a>   
 ## <a name="opentype-font-format"></a>Формат шрифта OpenType  
@@ -64,8 +63,7 @@ ms.locfileid: "57376953"
   
  Следующий текст демонстрирует надстрочные знаки для шрифта Palatino Linotype.  
   
- ![Текст, использующий верхние индексы OpenType](./media/opentypefont14.gif "opentypefont14")  
-Текст, использующий верхние индексы OpenType  
+ ![Текст, использующий верхние индексы OpenType](./media/opentype-font-features/opentype-superscripts.gif "текст, использующий верхние индексы OpenType")  
   
  В следующем примере разметки показано, как задаются надстрочные знаки для шрифта Palatino Linotype с помощью свойств класса <xref:System.Windows.Documents.Typography> объекта.  
   
@@ -73,8 +71,7 @@ ms.locfileid: "57376953"
   
  Следующий текст демонстрирует подстрочные знаки для шрифта Palatino Linotype.  
   
- ![Текст, использующий нижние индексы OpenType](./media/opentypefont15.gif "opentypefont15")  
-Текст, использующий нижние индексы OpenType  
+ ![Текст, использующий нижние индексы OpenType](./media/opentype-font-features/opentype-subscripts.gif "текст, использующий нижние индексы OpenType")  
   
  В следующем примере разметки показано, как задаются подстрочные знаки для шрифта Palatino Linotype с помощью свойств класса <xref:System.Windows.Documents.Typography> объекта.  
   
@@ -83,9 +80,8 @@ ms.locfileid: "57376953"
 ### <a name="decorative-uses-of-superscripts-and-subscripts"></a>Применение надстрочных и подстрочных знаков в декоративных целях  
  Надстрочные и подстрочные знаки можно также использовать для создания декоративных эффектов текста в смешанном регистре. Следующий текст демонстрирует надстрочный и подстрочный текст для шрифта Palatino Linotype. Обратите внимание, что заглавные буквы не затрагиваются.  
   
- ![Текст, использующий OpenType надстрочные и подстрочные знаки](./media/opentypefont16.gif "opentypefont16")  
-Текст, использующий верхние и нижние индексы OpenType  
-  
+ ![Текст, использующий OpenType надстрочные и подстрочные знаки](./media/opentype-font-features/opentype-superscripts-subscripts.gif "текст, использующий OpenType надстрочные и подстрочные знаки")  
+
  В следующем примере разметки показано, как задаются надстрочные и подстрочные знаки для шрифта, с использованием свойства <xref:System.Windows.Documents.Typography> объекта.  
   
  [!code-xaml[OpenTypeFontSamples#14](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#14)]  
@@ -96,8 +92,7 @@ ms.locfileid: "57376953"
   
  Следующий текст демонстрирует стандартные прописные буквы, буквы в стиле SmallCaps и в стиле AllSmallCaps для шрифта Pescadero. В данном случае для всех трех слов используется один и тот же размер шрифта.  
   
- ![Текст, использующий прописные буквы OpenType](./media/opentypefont11.gif "opentypefont11")  
-Текст, использующий прописные буквы OpenType  
+ ![Текст, использующий прописные буквы OpenType](./media/opentype-font-features/opentype-capitals.gif "текст, использующий прописные буквы OpenType")  
   
  В следующем примере разметки показано, как задаются прописные буквы для шрифта Pescadero с помощью свойств класса <xref:System.Windows.Documents.Typography> объекта. При использовании формата SmallCaps начальные прописные буквы игнорируются.  
   
@@ -106,8 +101,7 @@ ms.locfileid: "57376953"
 ### <a name="titling-capitals"></a>Титульные прописные буквы  
  Титульные прописные буквы имеют меньшую плотность и пропорции и разработаны для придания более изысканного вида, чем при использовании обычных прописных букв. Титульные прописные буквы обычно используются в больших размерах шрифтов для заголовков. Следующий текст демонстрирует обычные и титульные прописные буквы для шрифта Pescadero. Обратите внимание на более узкие ножки в тексте во второй строке.  
   
- ![Текст, использующий титульные прописные буквы OpenType](./media/opentypefont20.gif "OpenTypeFont20")  
-Текст, использующий титульные прописные буквы OpenType  
+ ![Текст, использующий титульные прописные буквы OpenType](./media/opentype-font-features/opentype-titling-capitals.gif "текст, использующий титульные прописные буквы OpenType")  
   
  В следующем примере разметки показано, как задаются титульные прописные буквы для шрифта Pescadero с помощью свойств класса <xref:System.Windows.Documents.Typography> объекта.  
   
@@ -116,9 +110,8 @@ ms.locfileid: "57376953"
 ### <a name="capital-spacing"></a>Интервалы прописных букв  
  Прописной интервал — это функция, которая позволяет обеспечить дополнительные интервалы при использовании в тексте только прописных букв. Прописные буквы обычно разрабатываются для использования вместе со строчными. Интервал между прописной и строчной буквами, который кажется вполне подходящим, может выглядеть слишком маленьким при использовании только прописных букв. Следующий текст демонстрирует обычный и прописной интервалы для шрифта Pescadero.  
   
- ![Текст, использующий прописной интервал OpenType](./media/opentypefont21.gif "OpenTypeFont21")  
-Текст, использующий прописной интервал OpenType  
-  
+ ![Текст, использующий прописной интервал OpenType](./media/opentype-font-features/opentype-capital-spacing.gif "текст, использующий прописной интервал OpenType ")  
+ 
  В следующем примере разметки показано, как задается прописной интервал для шрифта Pescadero с помощью свойств класса <xref:System.Windows.Documents.Typography> объекта.  
   
  [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet18](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet18)]  
@@ -137,8 +130,7 @@ ms.locfileid: "57376953"
   
  Следующий текст демонстрирует глифы стандартных лигатур для шрифта Pericles.  
   
- ![Текст, использующий стандартные лигатуры OpenType](./media/opentypefont04.gif "opentypefont04")  
-Текст, использующий стандартные лигатуры OpenType  
+ ![Текст, использующий стандартные лигатуры OpenType](./media/opentype-font-features/opentype-standard-ligatures.gif "текст, использующий стандартные лигатуры OpenType")  
   
  В следующем примере разметки показано, как задаются глифы стандартных лигатур для шрифта Pericles с помощью свойств класса <xref:System.Windows.Documents.Typography> объекта.  
   
@@ -146,8 +138,7 @@ ms.locfileid: "57376953"
   
  Следующий текст демонстрирует глифы дискретных лигатур для шрифта Pericles.  
   
- ![Текст, использующий избирательные лигатуры OpenType](./media/opentypefont05.gif "opentypefont05")  
-Текст, использующий избирательные лигатуры OpenType  
+ ![Текст, использующий избирательные лигатуры OpenType](./media/opentype-font-features/opentype-discretionary-ligatures.gif "текст, использующий избирательные лигатуры OpenType")  
   
  В следующем примере разметки показано, как определить глифы дискретных лигатур для шрифта Pericles с помощью свойств класса <xref:System.Windows.Documents.Typography> объекта.  
   
@@ -155,14 +146,12 @@ ms.locfileid: "57376953"
   
  По умолчанию шрифты [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] используют стандартные лигатуры. Например, при использовании шрифта Palatino Linotype стандартные лигатуры fi, ff и fl отображаются как глиф объединенных символов. Обратите внимание, что пары знаков для каждой стандартной лигатуры касаются друг друга.  
   
- ![Текст, использующий стандартные лигатуры OpenType](./media/opentypefont06.gif "opentypefont06")  
-Текст, использующий стандартные лигатуры OpenType  
-  
+ ![Текст, использующий стандартные лигатуры OpenType с Palatino Linotype](./media/opentype-font-features/opentype-standard-ligatures-palatino.gif "текста при использовании шрифта Palatino Linotype стандартные лигатуры OpenType")    
+   
  Однако функции стандартных лигатур можно отключить, чтобы стандартные лигатуры, такие как ff, отображались как два отдельных глифа, а не как глиф объединенных символов.  
   
- ![Текст, использующий отключенные стандартные лигатуры OpenType](./media/opentypefont07.gif "opentypefont07")  
-Текст, использующий неактивные стандартные лигатуры OpenType  
-  
+ ![Текст, использующий отключенные стандартные лигатуры OpenType](./media/opentype-font-features/disabled-opentype-standard-ligatures.gif "текст, использующий отключенные стандартные лигатуры OpenType")  
+    
  В следующем примере разметки показано, как отключить глифы стандартных лигатур для шрифта Palatino Linotype с помощью свойств класса <xref:System.Windows.Documents.Typography> объекта.  
   
  [!code-xaml[OpenTypeFontSamples#6](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#6)]  
@@ -171,13 +160,12 @@ ms.locfileid: "57376953"
 ## <a name="swashes"></a>Орнаменты  
  Swash-глифы являются декоративными глифами, которые используют сложную орнаментацию, часто связанную с каллиграфией. Следующий текст отображает стандартные и swash-глифы для шрифта Pescadero.  
   
- ![Текст, использующий стандартные и swash-глифы OpenType](./media/opentypefont08.gif "opentypefont08")  
-Текст, использующий стандартные и swash глифы OpenType  
+ ![Текст, использующий стандартные и swash-глифы OpenType](./media/opentype-font-features/opentype-standard-swash-glyphs.gif "текст, использующий стандартные и swash-глифы OpenType")  
+  
   
  Орнаменты часто используются как декоративные элементы в коротких фразах, таких как объявления о событиях. В следующем тексте орнаменты используются для выделения прописных букв названия события.  
   
- ![Текст, использующий орнаментированные глифы OpenType](./media/opentypefont09.gif "opentypefont09")  
-Текст, использующий swash глифы OpenType  
+ ![Текст, использующий орнаментированные глифы OpenType](./media/opentype-font-features/opentype-swashes.gif "текст, использующий орнаментированные глифы OpenType")  
   
  В следующем примере разметки показано определение swash-глифы для шрифта, с помощью свойств класса <xref:System.Windows.Documents.Typography> объекта.  
   
@@ -186,8 +174,7 @@ ms.locfileid: "57376953"
 ### <a name="contextual-swashes"></a>Контекстные орнаментированные глифы  
  Некоторые комбинации орнаментированных глифов могут приводить к непривлекательному результату, например когда перекрываются подстрочные элементы на соседних буквах. Контекстные орнаментированные глифы позволяют использовать замещающий орнаментированный глиф, улучшающий внешний вид. Следующий текст показывает одно и то же слово до и после применения контекстного орнаментированного глифа.  
   
- ![Текст, использующий контекстные орнаментированные глифы OpenType](./media/opentypefont19.gif "OpenTypeFont19")  
-Текст, использующий контекстные swash-глифы OpenType  
+ ![Текст, использующий контекстные орнаментированные глифы OpenType](./media/opentype-font-features/opentype-contextual-swashes.gif "текст, использующий контекстные орнаментированные глифы OpenType")  
   
  В следующем примере разметки показано, как задается контекстный глиф для шрифта Pescadero с помощью свойств класса <xref:System.Windows.Documents.Typography> объекта.  
   
@@ -197,13 +184,12 @@ ms.locfileid: "57376953"
 ## <a name="alternates"></a>Варианты  
  Варианты — это глифы, на которые может заменяться стандартный глиф. Шрифты [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)], например Pericles, используемый в следующих примерах, могут содержать варианты глифов, которые можно использовать для создания другого внешнего вида текста. Следующий текст демонстрирует стандартные глифы для шрифта Pericles.  
   
- ![Текст, использующий стандартные глифы OpenType](./media/opentypefont01.gif "opentypefont01")  
-Текст, использующий стандартные глифы OpenType  
+ ![Текст, использующий стандартные глифы OpenType](./media/opentype-font-features/opentype-standard-glyphs.gif "текст, использующий стандартные глифы OpenType")  
+  
   
  Шрифт [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Pericles содержит дополнительные глифы, поддерживающие изменение стилей для стандартных наборов глифов. Приведенный ниже текст отображает глифы с изменением стиля.  
   
- ![Текст, использующий OpenType Стилистические варианты глифов](./media/opentypefont02.gif "opentypefont02")  
-Текст, использующий глифы с изменением стилей OpenType  
+ ![Текст, использующий OpenType Стилистические варианты глифов](./media/opentype-font-features/opentype-stylistic-alternate-glyphs.gif "текст, использующий OpenType Стилистические варианты глифов")  
   
  В следующем примере разметки показано, как определить Стилистические варианты глифов для шрифта Pericles с помощью свойств класса <xref:System.Windows.Documents.Typography> объекта.  
   
@@ -211,9 +197,8 @@ ms.locfileid: "57376953"
   
  Следующий текст демонстрирует несколько других стилистических вариантов глифов для шрифта Pericles.  
   
- ![Текст, использующий OpenType Стилистические варианты глифов](./media/opentypefont03.gif "opentypefont03")  
-Текст, использующий глифы с изменением стилей OpenType  
-  
+ ![Текст, использующий OpenType Стилистические варианты глифов для шрифта Pericles](./media/opentype-font-features/opentype-stylistic-alternate-glyphs-pericles.gif "текст, использующий OpenType Стилистические варианты глифов для шрифта Pericles")
+
  В следующем примере разметки показано, как определяются эти другие стилистические варианты глифов.  
   
  [!code-xaml[OpenTypeFontSamples#3](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#3)]  
@@ -221,8 +206,7 @@ ms.locfileid: "57376953"
 ### <a name="random-contextual-alternates"></a>Случайные контекстные варианты  
  Случайные контекстные варианты предоставляют несколько заменяющих глифов для одного символа. При реализации со шрифтами рукописного типа эта функция может имитировать рукописный ввод, используя набор случайно выбранных глифов с незначительными различиями во внешнем виде. В следующем тексте используются случайные контекстные варианты глифов для шрифта Lindsey. Обратите внимание, что буква «a» немного отличается.  
   
- ![Текст, использующий случайные контекстные варианты глифов OpenType](./media/opentypefont23.gif "OpenTypeFont23")  
-Текст, использующий случайные контекстные alternate-глифы OpenType  
+ ![Текст, использующий случайные контекстные варианты глифов OpenType](./media/opentype-font-features/opentype-random-contextual-alternates.gif "текст, использующий случайные контекстные варианты глифов OpenType")  
   
  В следующем примере разметки показано, как задаются случайные контекстные варианты для шрифта Lindsey с помощью свойств класса <xref:System.Windows.Documents.Typography> объекта.  
   
@@ -231,9 +215,8 @@ ms.locfileid: "57376953"
 ### <a name="historical-forms"></a>Исторические формы  
  Исторические формы — это типографские соглашения, которые были приняты в прошлом. Следующий текст отображает фразу Boston, Massachusetts с помощью исторической формы глифов для шрифта Palatino Linotype.  
   
- ![Текст, использующий исторические формы OpenType](./media/opentypefont10.gif "opentypefont10")  
-Текст, использующий исторические формы OpenType  
-  
+ ![Текст, использующий исторические формы OpenType](./media/opentype-font-features/opentype-historical-forms.gif "текст, использующий исторические формы OpenType")  
+   
  В следующем примере разметки показано, как задаются исторические формы для шрифта Palatino Linotype с помощью свойств класса <xref:System.Windows.Documents.Typography> объекта.  
   
  [!code-xaml[OpenTypeFontSamples#8](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#8)]  
@@ -247,9 +230,8 @@ ms.locfileid: "57376953"
   
  Следующий текст демонстрирует стили дробей для шрифта Palatino Linotype.  
   
- ![Текст, использующий OpenType диагональные и вертикальные дроби](./media/opentypefont12.gif "opentypefont12")  
-Текст, использующий диагональные и вертикальные дроби OpenType  
-  
+ ![Текст, использующий OpenType диагональные и вертикальные дроби](./media/opentype-font-features/opentype-slashed-stacked-fractions.gif "текст, использующий OpenType диагональные и вертикальные дроби")  
+   
  В следующем примере разметки показано, как задаются стили дробей для шрифта Palatino Linotype с помощью свойств класса <xref:System.Windows.Documents.Typography> объекта.  
   
  [!code-xaml[OpenTypeFontSamples#10](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#10)]  
@@ -257,13 +239,11 @@ ms.locfileid: "57376953"
 ### <a name="old-style-numerals"></a>Числа в старом стиле  
  Шрифты [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] поддерживают формат чисел в старом стиле. Этот формат используется для отображения чисел в стилях, которые уже не являются стандартными. Следующий текст демонстрирует дату 18 века в стандартном формате и в формате старого стиля для шрифта Palatino Linotype.  
   
- ![Текст, использующий старый стиль числа OpenType](./media/opentypefont24.gif "OpenTypeFont24")  
-Текст, использующий старый стиль числа OpenType  
-  
+ ![Текст, использующий старый стиль числа OpenType](./media/opentype-font-features/opentype-old-style-numerals.gif "текст, использующий старый стиль числа OpenType")  
+    
  Следующий текст демонстрирует стандартные числа и числа в старом стиле для шрифта Palatino Linotype.  
   
- ![Текст, использующий OpenType наборы чисел старого стиля](./media/opentypefont13.gif "opentypefont13")  
-Текст, использующий наборы чисел старого стиля OpenType  
+ ![Текст, использующий OpenType наборы чисел старого стиля](./media/opentype-font-features/opentype-old-style-numeral-sets.gif "текст, использующий OpenType наборы чисел старого стиля")  
   
  В следующем примере разметки показано, как для определения числа в старом стиле для шрифта Palatino Linotype с помощью свойств класса <xref:System.Windows.Documents.Typography> объекта.  
   
@@ -274,9 +254,8 @@ ms.locfileid: "57376953"
   
  В первом столбце следующего текста показаны два числа, использующие пропорциональные цифры и шрифт Miramonte. Обратите внимание на разную ширину цифр 5 и 1. Во втором столбце показаны те же два числа, ширина которых скорректирована с помощью функции табличных цифр.  
   
- ![Текст, использующий пропорциональные и табличные цифры OpenType](./media/opentypefont22.gif "OpenTypeFont22")  
-Текст, использующий пропорциональные и табличные цифры OpenType  
-  
+ ![Текст, использующий пропорциональные и табличные цифры OpenType](./media/opentype-font-features/opentype-proportional-tabular-figures.gif "текст, использующий пропорциональные и табличные цифры OpenType")  
+    
  В следующем примере разметки показано, как определить пропорциональные и табличные цифры для шрифта Miramonte с помощью свойств класса <xref:System.Windows.Documents.Typography> объекта.  
   
  [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet19](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/Window1.xaml#opentypefontsnippet19)]  
@@ -286,9 +265,8 @@ ms.locfileid: "57376953"
   
  Следующий текст демонстрирует пример идентификатора заказа с использованием шрифта Miramonte. В первой строке используются стандартные цифры. Во второй строке используются перечеркнутые нули для лучшего контраста с прописной буквой O.  
   
- ![Текст, использующий OpenType перечеркнутые нули](./media/opentypefont17.gif "OpenTypeFont17")  
-Текст, использующий перечеркнутые нули OpenType  
-  
+ ![Текст, использующий OpenType перечеркнутые нули](./media/opentype-font-features/opentype-slashed-zero-numerals.gif "текст, использующий OpenType перечеркнутые нули")  
+    
  В следующем примере разметки показано, как определить перечеркнутые нули для шрифта Miramonte с помощью свойств класса <xref:System.Windows.Documents.Typography> объекта.  
   
  [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet15](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet15)]  
@@ -299,9 +277,8 @@ ms.locfileid: "57376953"
   
  Следующий текст демонстрирует стандартные прописные буквы, буквы в стиле SmallCaps и в стиле AllSmallCaps для шрифта Pescadero. В данном случае для всех трех слов используется один и тот же размер шрифта.  
   
- ![Текст, использующий прописные буквы OpenType](./media/opentypefont11.gif "opentypefont11")  
-Текст, использующий прописные буквы OpenType  
-  
+ ![Текст, использующий прописные буквы OpenType](./media/opentype-font-features/opentype-capitals.gif "текст, использующий прописные буквы OpenType")  
+    
  В следующем примере разметки показано, как задаются прописные буквы для шрифта Pescadero с помощью свойств класса <xref:System.Windows.Documents.Typography> объекта. При использовании формата SmallCaps начальные прописные буквы игнорируются.  
   
  [!code-xaml[OpenTypeFontSamples#9](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#9)]  

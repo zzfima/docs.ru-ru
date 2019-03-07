@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 60f2057330f1a06cdd3e6ff5560f8ca7aeefe857
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e2958fe31ff0065cfb028eaddf8bbb02f3618f9d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725731"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471736"
 ---
 # <a name="importtypes2-method"></a>Метод ImportTypes2
 Инициирует импорт типов. Вызовите этот метод, чтобы начать импорт типов из каждой области, импортированной с помощью [метод ImportFile](../../../../docs/framework/unmanaged-api/alink/importfile-method.md).  
@@ -39,7 +39,7 @@ HRESULT ImportTypes2(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `AssemblyID`  
  Идентификатор сборки, в который планируется импортировать.  
   

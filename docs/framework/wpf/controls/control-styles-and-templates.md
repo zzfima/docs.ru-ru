@@ -10,12 +10,12 @@ helpviewer_keywords:
 - states [WPF]
 - templates [WPF]
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
-ms.openlocfilehash: 36589b13fc336b78ec87cccba0a2790d8242f5d6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c5c33327c5a80a4e275d1eaa505c1d20d3d7ba4c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373209"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488842"
 ---
 # <a name="control-styles-and-templates"></a>Стили и шаблоны элемента Control
 Элементы управления в Windows Presentation Foundation (WPF) имеют <xref:System.Windows.Controls.ControlTemplate> , содержит визуальное дерево этого элемента управления. Можно изменить структуру и внешний вид элемента управления, изменив <xref:System.Windows.Controls.ControlTemplate> этого элемента управления. Невозможно заменить только часть визуального дерева элемента управления; Чтобы изменить визуальное дерево элемента управления, необходимо задать <xref:System.Windows.Controls.Control.Template%2A> свойство элемента управления, его нового и полного <xref:System.Windows.Controls.ControlTemplate>.  
@@ -50,24 +50,24 @@ ms.locfileid: "57373209"
  [Стили и шаблоны элемента ListView](listview-styles-and-templates.md)  
  [Стили и шаблоны элемента Menu](menu-styles-and-templates.md)  
  [Стили и шаблоны элемента NavigationWindow](navigationwindow-styles-and-templates.md)  
- [PasswordBox стили и шаблоны](passwordbox-syles-and-templates.md)  
+ [PasswordBox стили и шаблоны](passwordbox-styles-and-templates.md)  
  [Стили и шаблоны элемента ProgressBar](progressbar-styles-and-templates.md)  
  [Стили и шаблоны элемента RadioButton](radiobutton-styles-and-templates.md)  
- [RepeatButton стили и шаблоны](repeatbutton-syles-and-templates.md)  
+ [RepeatButton стили и шаблоны](repeatbutton-styles-and-templates.md)  
  [Стили и шаблоны элемента ScrollBar](scrollbar-styles-and-templates.md)  
  [Стили и шаблоны элемента ScrollViewer](scrollviewer-styles-and-templates.md)  
  [Стили и шаблоны элемента Slider](slider-styles-and-templates.md)  
  [Стили и шаблоны элемента StatusBar](statusbar-styles-and-templates.md)  
  [Стили и шаблоны элемента TabControl](tabcontrol-styles-and-templates.md)  
  [Стили и шаблоны элемента TextBox](textbox-styles-and-templates.md)  
- [Бегунок стили и шаблоны](thumb-syles-and-templates.md)  
- [Элемент управления ToggleButton стили и шаблоны](togglebutton-syles-and-templates.md)  
+ [Бегунок стили и шаблоны](thumb-styles-and-templates.md)  
+ [Элемент управления ToggleButton стили и шаблоны](togglebutton-styles-and-templates.md)  
  [Стили и шаблоны элемента ToolBar](toolbar-styles-and-templates.md)  
  [Стили и шаблоны элемента ToolTip](tooltip-styles-and-templates.md)  
  [Стили и шаблоны элемента TreeView](treeview-styles-and-templates.md)  
  [Стили и шаблоны элемента Window](window-styles-and-templates.md)  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Ссылки  
  <xref:System.Windows.Controls>  
   
  <xref:System.Windows.Controls.ControlTemplate>  

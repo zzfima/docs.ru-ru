@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7859beae572f05863fb24f0257aae8b0ec16bbcf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fe0b465d0e15fadde48c2278aa367632bda3f9ef
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640879"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473839"
 ---
 # <a name="iassemblynamegetname-method"></a>Метод IAssemblyName::GetName
 Получает простое и незашифрованное имя сборки, упоминаемой в этом [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) объекта.  
@@ -36,7 +36,7 @@ HRESULT GetName (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `lpcwBuffer`  
  [in, out] Размер `pwzName` из расширенных символов, включая завершающий нуль-символ-символ.  
   

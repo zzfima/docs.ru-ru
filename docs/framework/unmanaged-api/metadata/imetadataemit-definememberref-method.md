@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 578f79136f6ccc8a6b7eac644b2a5084d30d2ba0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ad2b3e5c452a5fc79e7a1cc0342cfc1d119a5fbd
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722833"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481993"
 ---
 # <a name="imetadataemitdefinememberref-method"></a>Метод IMetaDataEmit::DefineMemberRef
 Определяет ссылку на член модуля вне текущей области и получает маркер для этого определения ссылки.  
@@ -39,7 +39,7 @@ HRESULT DefineMemberRef (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `tkImport`  
  [in] Маркер для целевого члена класса или интерфейса, если элемент не является общим; Если элемент является глобальным, `mdModuleRef` маркеров для других файла.  
   

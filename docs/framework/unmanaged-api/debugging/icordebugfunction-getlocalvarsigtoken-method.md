@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9a09741ed778436f1cb35d094885bd3effa813a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a682999c888a93cef94162a8179673c862dc43ce
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411598"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476650"
 ---
 # <a name="icordebugfunctiongetlocalvarsigtoken-method"></a>Метод ICorDebugFunction::GetLocalVarSigToken
-Получает маркер метаданных для подписи локальной переменной функции, представленной данным экземпляром ICorDebugFunction.  
+Получает токен метаданных для подписи локальной переменной функции, представленного данным экземпляром ICorDebugFunction.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,15 +35,15 @@ HRESULT GetLocalVarSigToken (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `pmdSig`  
- [out] Указатель на `mdSignature` маркер для подписи локальной переменной функции, или `mdSignatureNil`, если эта функция не имеет локальных переменных.  
+ [out] Указатель на `mdSignature` токена для подписи локальной переменной функции, или `mdSignatureNil`, если эта функция имеет нет локальных переменных.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

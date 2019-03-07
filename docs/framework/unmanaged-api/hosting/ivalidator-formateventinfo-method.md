@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 17217146d8e5ed53feb8305ca4ac16c8f96ddeb7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 084b80e90ea3950245606c56de7ed3e18fd27662
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653866"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57486437"
 ---
 # <a name="ivalidatorformateventinfo-method"></a>Метод IValidator::FormatEventInfo
 Получает сообщение об ошибке, соответствующее указанной ошибкой проверки.  
@@ -39,7 +39,7 @@ HRESULT FormatEventInfo(
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `hVECode`  
  [in] Значение HRESULT, который был передан в обработчик ошибок проверки.  
   

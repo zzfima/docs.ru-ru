@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f20c24984aadd05139d1a427b75bc65438539ff1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c35baaee13782566c64dd8447c6a034f699b5cd0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412809"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479614"
 ---
 # <a name="icordebugeval2newparameterizedobject-method"></a>Метод ICorDebugEval2::NewParameterizedObject
-Создает новый объект параметризованного типа и вызывает метод конструктора объекта.  
+Создает новый объект параметризованного типа и вызывает метод-конструктор объекта.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,30 +39,30 @@ HRESULT NewParameterizedObject (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `pConstructor`  
- [in] Указатель на объект ICorDebugFunction, который представляет конструктор для создания экземпляра объекта.  
+ [in] Указатель на объект ICorDebugFunction, представляющий конструктор для создания экземпляра объекта.  
   
  `nTypeArgs`  
- [in] Число аргументов типа передано.  
+ [in] Передано число аргументов типа.  
   
  `ppTypeArgs`  
- [in] Массив указателей, каждый из которых указывает на объект ICorDebugType, представляющий аргумент типа для объекта, экземпляр которого создается.  
+ [in] Массив указателей, каждый из которых указывает на объект, представляющий аргумент типа для объекта, экземпляр которого создается ICorDebugType.  
   
  `nArgs`  
- [in] Количество аргументов, переданные в конструктор.  
+ [in] Число аргументов, переданных в конструктор.  
   
  `ppArgs`  
- [in] Массив указателей, каждый из которых указывает на объект ICorDebugValue, представляющее значение аргумента, переданного конструктору.  
+ [in] Массив указателей, каждый из которых указывает ICorDebugValue объект, представляющий значение аргумента, который передается в конструктор.  
   
 ## <a name="remarks"></a>Примечания  
  Конструктор объекта может занять <xref:System.Type> параметров.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

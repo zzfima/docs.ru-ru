@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d7e07450b108eb3c5ea083a2ec2f51981941153f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1a190041cacb635f1ad6703a634923e0bb9ddb3f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669020"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484268"
 ---
 # <a name="ihostiocompletionmanagersetclriocompletionmanager-method"></a>Метод IHostIoCompletionManager::SetCLRIoCompletionManager
 Предоставляет указатель интерфейса на узле [ICLRIoCompletionManager](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md) экземпляра, реализуемый общеязыковой среды выполнения (CLR).  
@@ -35,7 +35,7 @@ HRESULT SetCLRIoCompletionManager (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `pManager`  
  [in] Указатель интерфейса на `ICLRIoCompletionManager` экземпляра, предоставляемыми средой CLR.  
   

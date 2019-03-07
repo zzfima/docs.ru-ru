@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18b4ad9590b57b629587af8f421a3f5902e5527f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 53001d6dfef2813df86dc4bb4f9647900143aae7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704034"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469070"
 ---
 # <a name="ihostmemorymanagergetmemoryload-method"></a>Метод IHostMemoryManager::GetMemoryLoad
 Получает объем физической памяти, который используется в настоящий момент используется и следовательно, недоступной, с помощью узла.  
@@ -36,7 +36,7 @@ HRESULT GetMemoryLoad (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `pMemoryLoad`  
  [out] Указатель на примерное процентное соотношение общего объема физической памяти, который сейчас используется.  
   

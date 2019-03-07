@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 69a3b0921528ed09ee4ab3a1ede6b9efe565e02a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd1d97d9f3a44e2237cfc7a9e054a5ecfa2ebb01
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619237"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57470761"
 ---
 # <a name="iclrruntimeinfoisloaded-method"></a>Метод ICLRRuntimeInfo::IsLoaded
 Указывает, связан ли общеязыковой среды выполнения (CLR) [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) интерфейс загружается в процесс. Среда выполнения может быть загружен без ее запуск.  
@@ -35,7 +35,7 @@ HRESULT IsLoaded(
 [out, retval] BOOL *pbLoaded);  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `hndProcess`  
  [in] Дескриптор процесса.  
   
@@ -48,7 +48,7 @@ HRESULT IsLoaded(
 |HRESULT|Описание|  
 |-------------|-----------------|  
 |S_OK|Метод завершился успешно.|  
-|E_POINTER|Параметр `pbLoaded` имеет значение null.|  
+|E_POINTER|Параметр `pbLoaded` имеет значение NULL.|  
   
 ## <a name="remarks"></a>Примечания  
  Этот метод обеспечивает обратную совместимость с следующие функции и интерфейсы:  

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d52f38412366880389e963b5ec6af63dcf5d768f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 557b15fe2bd04a3362532f190a88ee2ad52ed366
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555054"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499840"
 ---
 # <a name="iclrassemblyreferencelistisassemblyreferenceinlist-method"></a>Метод ICLRAssemblyReferenceList::IsAssemblyReferenceInList
 Получает значение, указывающее, ссылается ли заданный указатель на сборку в списке.  
@@ -35,7 +35,7 @@ HRESULT IsAssemblyReferenceInList (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `pName`  
  [in] Указатель интерфейса на сборку, который требуется найти. Допустимые значения имеют тип `IAssemblyName` или `IReferenceIdentity`.  
   

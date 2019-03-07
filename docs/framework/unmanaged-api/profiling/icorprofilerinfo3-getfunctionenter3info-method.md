@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6a12e747344f4943dafced2402e0f08a08ac6e7b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0bda97afe3e88e2bab6a57c4bb2271d58541d4e9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498242"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484060"
 ---
 # <a name="icorprofilerinfo3getfunctionenter3info-method"></a>Метод ICorProfilerInfo3::GetFunctionEnter3Info
 Предоставляет данные кадра и аргумент стека функции, которая сообщается профилировщику [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md) функции. Этот метод может быть вызван только во время обратного вызова `FunctionEnter3WithInfo`.  
@@ -39,7 +39,7 @@ HRESULT GetFunctionEnter3Info(
                   COR_PRF_FUNCTION_ARGUMENT_INFO *pArgumentInfo);  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `functionId`  
  [in] `FunctionID` функции, которая вводится.  
   

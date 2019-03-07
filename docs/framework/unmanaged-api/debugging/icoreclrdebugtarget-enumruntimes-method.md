@@ -19,12 +19,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac0cee9affff03a95cd7635a8b1afd42e6edc6ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b9b434edc10a7c11d738bd3fc10402ef3f83d9dc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684334"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468277"
 ---
 # <a name="icoreclrdebugtargetenumruntimes-method"></a>Метод ICoreClrDebugTarget::EnumRuntimes
 Перечисляет среды CLR в указанном процессе, который выполняется на удаленном компьютере.  
@@ -39,12 +39,12 @@ HRESULT EnumRuntimes (
     );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `dwInternalProcessID`  
  [in] Внутренний идентификатор процесса, для которого требуется перечислить среды выполнения. Это будет `m_dwInternalID` из соответствующего [CoreClrDebugProcInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md).  
   
  `pcRuntimes`  
- [out] Число сред выполнения, возвращаемых в `ppRuntimes`. Это значение может быть 0 (ноль).  
+ [out] Число сред выполнения, возвращаемых в `ppRuntimes`. Это значение может быть равно 0 (нулю).  
   
  `ppRuntimes`  
  [out] Массив [CoreClrDebugRuntimeInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugruntimeinfo-structure.md) структуры, которые представляют среды выполнения, загруженных в удаленном целевом процессе.  
@@ -60,7 +60,7 @@ HRESULT EnumRuntimes (
  Не удается выделить достаточно памяти для `ppRuntimes`.  
   
  E_FAIL (или другие коды возврата E_)  
- Прочие сбои.  
+ Другие сбои.  
   
 ## <a name="remarks"></a>Примечания  
  Чтобы освободить память, выделенную этим методом, вызовите [ICoreClrDebugTarget::FreeMemory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md) метод.  

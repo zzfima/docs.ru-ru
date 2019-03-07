@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2e4a727dcfbc80b131f526a08b00bd0ec91ca209
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 49d7fb1de0b2ea63c1a766023b23acc42e027af8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415026"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475662"
 ---
 # <a name="icordebugilframeenumeratearguments-method"></a>Метод ICorDebugILFrame::EnumerateArguments
 Получает перечислитель для аргументов в кадре.  
@@ -35,18 +35,18 @@ HRESULT EnumerateArguments (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `ppValueEnum`  
- [out] Указатель на адрес объекта ICorDebugValueEnum, который является перечислителем для аргументов в этом кадре.  
+ [out] Указатель на адрес объекта ICorDebugValueEnum, который является перечислителем для аргументов в кадре.  
   
 ## <a name="remarks"></a>Примечания  
- `EnumerateArguments` Возвращает перечислитель, который может содержать аргументы, доступных в кадр вызова, который представлен этим объектом ICorDebugILFrame. В списке будут содержаться аргументы, которые являются [vararg](/cpp/windows/vararg) (то есть с переменным числом аргументов) и аргументы, которые не являются `vararg`.  
+ `EnumerateArguments` Возвращает перечислитель, который можно вывести список доступных в кадр вызова, который представлен этим объектом ICorDebugILFrame аргументов. В списке будут содержаться аргументы, которые являются [vararg](/cpp/windows/vararg) (то есть несколько переменных аргументов) а также аргументы, которые не являются `vararg`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

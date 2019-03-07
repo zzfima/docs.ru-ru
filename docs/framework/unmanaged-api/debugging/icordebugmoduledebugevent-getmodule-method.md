@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: b1141c35-4253-4e34-b3e4-ed406a9dea4f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ad20bdee5fee83b62d5da7f52c607835055616f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e99477bd8750f79ae711d47f295b6b39b90c92c3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672335"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492131"
 ---
 # <a name="icordebugmoduledebugeventgetmodule-method"></a>Метод ICorDebugModuleDebugEvent::GetModule
 Возвращает объединенный модуль, который только что был загружен или выгружен.  
@@ -22,7 +22,7 @@ HRESULT GetModule(
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `ppModule`  
  [out] Указатель на адрес ICorDebugModule объект, представляющий объединенный модуль, который был только что загружен или выгружен.  
   
@@ -30,7 +30,7 @@ HRESULT GetModule(
  Можно вызвать [GetEventKind](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-geteventkind-method.md) метод, чтобы определить, был ли модуль загрузке или выгрузке.  
   
 > [!NOTE]
->  Этот метод доступен только в машинном коде .NET.  
+>  Этот метод доступен только в .NET Native.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c4a67e1eb5a257cc6d4e4c9bc8798b61c97fba38
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4fe47a155b29fe452a59adfaffe59162f60f58aa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661754"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469578"
 ---
 # <a name="ihostmemorymanagerneedsvirtualaddressspace-method"></a>Метод IHostMemoryManager::NeedsVirtualAddressSpace
 Уведомляет основное приложение, что общеязыковая среда выполнения (CLR) будет пытаться использовать указанный объем памяти.  
@@ -36,7 +36,7 @@ HRESULT NeedsVirtualAddressSpace (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `startAddress`  
  [in] Начальный адрес памяти.  
   

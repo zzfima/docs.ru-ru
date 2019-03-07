@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a0b5d702e9718ce6ac537beae67fc190b152b9f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fd65de77209f5a981c0a4c291f8573a61cf6335b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405147"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489557"
 ---
 # <a name="icordebugchaingetcaller-method"></a>Метод ICorDebugChain::GetCaller
-Получает цепь, вызвавшую данную цепь.  
+Получает цепочку, вызвавшей эту цепочку.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,20 +35,20 @@ HRESULT GetCaller (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `ppChain`  
- [out] Указатель на адрес объекта ICorDebugChain, который представляет цепочки вызовов.  
+ [out] Указатель на адрес ICorDebugChain объект, представляющий цепочки вызовов.  
   
- Если эта цепь была вызвана спонтанно (как это может произойти, если эта цепочка или отладчиком инициализирован стек вызовов), `ppChain` будет иметь значение null.  
+ Если эта цепочка была вызвана спонтанно (как можно добиться, если эта цепочка или отладчик инициализирован стека вызовов), `ppChain` будет иметь значение null.  
   
 ## <a name="remarks"></a>Примечания  
- Цепочки вызовов может быть в другом потоке, если вызов был маршалинг между потоками.  
+ Если вызов был маршалирован в потоки, цепочки вызовов возможно в другом потоке.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

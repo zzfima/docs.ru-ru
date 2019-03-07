@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e7733bd3-68da-47f9-82ef-477db5f2e32d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8674fc7f079bd67ea95ac9d2a9891267b315098e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c6c2a9c806b70ab33f68e3213d82ed96aca47d62
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694741"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484203"
 ---
 # <a name="icordebugprocess6enablevirtualmodulesplitting-method"></a>Метод ICorDebugProcess6::EnableVirtualModuleSplitting
 Позволяет включить или отключить разделение виртуальных модулей.  
@@ -22,7 +22,7 @@ HRESULT EnableVirtualModuleSplitting(
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `enableSplitting`  
  `true`, чтобы включить разделение виртуальных модулей; `false`, чтобы отключить его.  
   
@@ -30,7 +30,7 @@ HRESULT EnableVirtualModuleSplitting(
  Разделении виртуальных модулей метод [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) для распознавания модули, которые были объединены во время сборки и представляет их в виде группы отдельных модулей, а не одного крупного модуля. При этом изменяется поведение различных [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) описанных ниже методов.  
   
 > [!NOTE]
->  Этот метод доступен только в машинном коде .NET.  
+>  Этот метод доступен только в .NET Native.  
   
  Этот метод может быть вызван, и значение `enableSplitting` может быть изменено, в любое время. Это не вызывает любой с отслеживанием состояния функциональные изменения в [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) объекта, но только меняет поведение методов, перечисленных в [разделение виртуальных модулей и неуправляемые интерфейсы API отладки](#APIs) раздел, в момент их вызова. Применение виртуальных модулей приводит к ухудшению производительности при вызове этих методов. Кроме того, значительное кэширование в памяти виртуализованных метаданных могут потребоваться для правильной реализации [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) API-интерфейсы и эти кэши могут сохраняться даже после разделения виртуальных модулей был отключен.  
   

@@ -17,14 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aad5a285fc2280dc062b0f4cbb69977a7e605e9c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6feef7b1e1f09107cd2a57555df07bebec86effa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466990"
 ---
 # <a name="icordebugeval2newparameterizedobjectnoconstructor-method"></a>Метод ICorDebugEval2::NewParameterizedObjectNoConstructor
-Создает новый объект параметризованного типа указанного класса без попытки вызова метода конструктора.  
+Создает новый объект параметризованного типа указанного класса не пытается вызвать метод-конструктор.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,24 +37,24 @@ HRESULT NewParameterizedObjectNoConstructor (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `pClass`  
  [in] Указатель на объект ICorDebugClass, который представляет класс для создания экземпляра объекта.  
   
  `nTypeArgs`  
- [in] Число аргументов типа передано.  
+ [in] Передано число аргументов типа.  
   
  `ppTypeArgs`  
- [in] Массив указателей, каждый из которых указывает на объект ICorDebugType, представляющий аргумент типа для объекта, экземпляр которого создается.  
+ [in] Массив указателей, каждый из которых указывает на объект, представляющий аргумент типа для объекта, экземпляр которого создается ICorDebugType.  
   
 ## <a name="remarks"></a>Примечания  
- `NewParameterizedObjectNoConstructor` Метод завершится ошибкой, если неверное количество аргументов-типов или передаются неправильный типы аргументов типа.  
+ `NewParameterizedObjectNoConstructor` Метод завершится ошибкой, если неверное число аргументов типа, или неправильный типы аргументов типа передаются.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

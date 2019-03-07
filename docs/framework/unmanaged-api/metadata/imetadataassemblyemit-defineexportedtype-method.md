@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 071466858c79fdb74d9055fed09990cdb02a88b6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 984eef16ff576d63a445b199eba8c2364285f62e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624353"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57483878"
 ---
 # <a name="imetadataassemblyemitdefineexportedtype-method"></a>Метод IMetaDataAssemblyEmit::DefineExportedType
 Создает структуру `ExportedType`, содержащую метаданные для указанного экспортированного типа, и возвращает связанный токен метаданных.  
@@ -39,7 +39,7 @@ HRESULT DefineExportedType (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `szName`  
  [in] Имя типа должны быть экспортированы. Для версии 1.1 среда CLR, имя экспортируемого типа должен точно соответствовать имени, заданному в `TypeDef` для типа.  
   

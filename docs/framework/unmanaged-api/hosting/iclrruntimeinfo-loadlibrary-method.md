@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7dbcbf1b66793a67c815b420e6d5fe221febe719
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 878d68dd690a8764ef26f5f180fabd6c22841a25
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716886"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466843"
 ---
 # <a name="iclrruntimeinfoloadlibrary-method"></a>Метод ICLRRuntimeInfo::LoadLibrary
 Загружает библиотеку .NET Framework из общеязыковой среды выполнения (CLR), представленный [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) интерфейс.  
@@ -37,7 +37,7 @@ HRESULT LoadLibrary(
      [out, retval] HMODULE *phndModule);  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `pwzDllName`  
  [in] Имя сборки для загрузки.  
   
@@ -50,7 +50,7 @@ HRESULT LoadLibrary(
 |HRESULT|Описание|  
 |-------------|-----------------|  
 |S_OK|Метод завершился успешно.|  
-|E_POINTER|`pwzDllName` или `phndModule` равно null.|  
+|E_POINTER|`pwzDllName` или `phndModule` имеет значение null.|  
 |E_OUTOFMEMORY|Недостаточно памяти для обработки запроса.|  
   
 ## <a name="remarks"></a>Примечания  

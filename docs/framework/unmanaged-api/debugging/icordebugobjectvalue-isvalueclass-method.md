@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 932d4ecbf34a636d37a60af0ba11f3fc149ffcea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 12ba95eca2a103cffa07247a6ce474263e42e5ad
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649652"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487529"
 ---
 # <a name="icordebugobjectvalueisvalueclass-method"></a>Метод ICorDebugObjectValue::IsValueClass
 Получает значение, указывающее, является ли значение этого объекта является типом значения.  
@@ -35,7 +35,7 @@ HRESULT IsValueClass (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `pbIsValueClass`  
  [out] Указатель на логическое значение, которое является `true` Если значение объекта, представленного этот «ICorDebugObjectValue» является типом значения, а не ссылочный тип; в противном случае `pbIsValueClass` является `false`.  
   

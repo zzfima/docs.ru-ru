@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9018ccc27d0afc35b9dfa2d2ebad323c9150ae60
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b4ab183bbe82c8e64b833c8fcdbc1e05ceb18e1f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580698"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482253"
 ---
 # <a name="iclrdatatargetsetthreadcontext-method"></a>Метод ICLRDataTarget::SetThreadContext
 Задает текущий контекст заданного потока в целевом процессе. Этот метод вызывается службами доступа к данным среды CLR.  
@@ -38,7 +38,7 @@ HRESULT SetThreadContext (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `threadID`  
  [in] Идентификатор потока в целевом процессе операционной системы.  
   

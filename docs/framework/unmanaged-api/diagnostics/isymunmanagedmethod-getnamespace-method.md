@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a2bba44af50607772f2a52203a47e21d8699f78b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 544fffd1b230469227d6ddbe3afcba54b6a7d5c1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716160"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484593"
 ---
 # <a name="isymunmanagedmethodgetnamespace-method"></a>Метод ISymUnmanagedMethod::GetNamespace
 Получает пространство имен, в котором определен этот метод.  
@@ -34,7 +34,7 @@ HRESULT GetNamespace(
    [out] ISymUnmanagedNamespace  **pRetVal);  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `pRetVal`  
  [out] Указатель, который имеет значение равное возвращаемому [ISymUnmanagedNamespace](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md) интерфейс.  
   

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dfa4db00662ed3abffbfd01e6e36005cd272a271
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 675bf2ad36fe5006a44890f8ccd6e6197f264ac1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664594"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484476"
 ---
 # <a name="efngetmanagedobjectfieldinfo-function"></a>Функция _EFN_GetManagedObjectFieldInfo
 Возвращает смещение от начала объекта до поля и значение поля, используя предоставленный указатель объекта и имя поля.  
@@ -38,7 +38,7 @@ HRESULT _EFN_GetManagedObjectFieldInfo(
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `Client`  
  [in] Указатель на клиент отладки.  
   

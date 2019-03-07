@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f404fef10f83dac8938953e29b233d3a01135559
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6406e280cd9fd86e32169a77dbb5ef468b8cf564
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547349"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473739"
 ---
 # <a name="ihosttaskjoin-method"></a>Метод IHostTask::Join
 Блокирует вызывающий задачу до выполнения задачи, представленный текущим [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) завершения экземпляра, по истечении указанного интервала времени, или [IHostTask::Alert](../../../../docs/framework/unmanaged-api/hosting/ihosttask-alert-method.md) вызывается.  
@@ -36,7 +36,7 @@ HRESULT Join (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `milliseconds`  
  [in] Интервал времени в миллисекундах для ожидания завершения задачи. Если это время истекает до завершения задачи, задача вызова разблокируется.  
   

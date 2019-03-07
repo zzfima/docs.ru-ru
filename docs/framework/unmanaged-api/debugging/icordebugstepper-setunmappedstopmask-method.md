@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dc4e51ec60c7526f36bbe4909bec91a527e0862c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: da799b0d4f4e5e4b281445baa35d95f992ba0b63
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419914"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474960"
 ---
 # <a name="icordebugsteppersetunmappedstopmask-method"></a>Метод ICorDebugStepper::SetUnmappedStopMask
-Задает значение, которое указывает тип несопоставимого кода, в котором выполнение будет остановлено.  
+Задает значение, указывающее тип кода, в котором выполнение будет остановлено.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,22 +35,22 @@ HRESULT SetUnmappedStopMask (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `mask`  
- [in] Значение перечисления CorDebugUnmappedStop, которое указывает тип несопоставимого кода, в котором отладчик остановится выполнения.  
+ [in] Значение, указывающее тип кода, в котором отладчик остановит выполнение перечисления CorDebugUnmappedStop.  
   
- Значение по умолчанию — STOP_OTHER_UNMAPPED. Значение по умолчанию STOP_UNMANAGED допустимо только при отладке взаимодействия.  
+ Значение по умолчанию — STOP_OTHER_UNMAPPED. Значение по умолчанию STOP_UNMANAGED допустим только для отладки взаимодействия.  
   
 ## <a name="remarks"></a>Примечания  
- Когда отладчик обнаруживает компиляции just-in-time (JIT), в которой отсутствует сопоставление в промежуточный язык Microsoft (MSIL), он прерывает выполнение, если установлен флаг, указывающий, что тип несопоставимого кода; в противном случае проверка прозрачно продолжается.  
+ Когда отладчик обнаруживает компиляции just-in-time (JIT), который не имеет соответствующего сопоставления промежуточного языка Майкрософт (MSIL), он прерывает выполнение, если установлен флаг, указывающий типа неуправляемого кода; в противном случае проверка прозрачно продолжается.  
   
- Если отладчик не использует средство организации пошагового режима для входа в метод, затем он не будет обходить обязательно неуправляемого кода.  
+ Если отладчик не использует средство организации пошагового режима для входа в метод, то он не будет обход обязательно неуправляемого кода.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

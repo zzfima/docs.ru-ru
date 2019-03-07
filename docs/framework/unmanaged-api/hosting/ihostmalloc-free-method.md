@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 719c963d1627250da5f3705af9801dc287e1bb19
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9cf60d4e711d0c88b5fb8b4c213b19bdea564324
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507256"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57477833"
 ---
 # <a name="ihostmallocfree-method"></a>Метод IHostMAlloc::Free
 Освобождает память, выделенную с помощью [Alloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-alloc-method.md) функции.  
@@ -35,7 +35,7 @@ HRESULT Free (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `pMem`  
  [in] Указатель на область памяти, который требуется освободить.  
   

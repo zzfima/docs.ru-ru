@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4d3c3c0c5634653d14577de9a1334048d75216b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6b67f5ec233679461f61715d7562b47c2a195fb8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405630"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471632"
 ---
 # <a name="icordebugclassgetstaticfieldvalue-method"></a>Метод ICorDebugClass::GetStaticFieldValue
 Получает значение указанного статического поля.  
@@ -37,26 +37,26 @@ HRESULT GetStaticFieldValue (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `fieldDef`  
- [in] Поле `Def` маркер, который ссылается на поле должно быть извлечено.  
+ [in] Поле `Def` маркер, который ссылается на поля для извлечения.  
   
  `pFrame`  
- [in] Указатель на объект ICorDebugFrame, который представляет кадр, используемый для однозначного определения потока, контекста или статических переменных для домена приложения.  
+ [in] Указатель на интерфейс ICorDebugFrame объект, представляющий кадр и использоваться для однозначного определения потока, контекста или статических элементов домена приложения.  
   
  Если поле является статическим относительно потока, контекста или домена приложения, кадр определит соответствующее значение.  
   
  `ppValue`  
- [out] Указатель на адрес объекта ICorDebugValue, представляющий значение статического поля.  
+ [out] Указатель на адрес ICorDebugValue объект, представляющий значение статического поля.  
   
 ## <a name="remarks"></a>Примечания  
- Для параметризированных типов значение статического поля — относительно определенного процесса создания экземпляров. Таким образом Если конструктор классов принимает параметры типа <xref:System.Type>, вызовите [ICorDebugType::GetStaticFieldValue](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getstaticfieldvalue-method.md) вместо `ICorDebugClass::GetStaticFieldValue`.  
+ Для параметризованных типов значение статического поля задается относительно определенного процесса создания экземпляров. Таким образом Если конструктор классов принимает параметры типа <xref:System.Type>, вызовите [ICorDebugType::GetStaticFieldValue](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getstaticfieldvalue-method.md) вместо `ICorDebugClass::GetStaticFieldValue`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

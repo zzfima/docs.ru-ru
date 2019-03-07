@@ -4,17 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 086e02601e527229eed7dc3e2fab73df1f918a8c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 16897413c31e39be5c1d45b43d6ef816d3f80aad
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359553"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482695"
 ---
 # <a name="typography-in-wpf"></a>Оформление в WPF
 В этом разделе содержатся вводные сведения об основных типографических возможностях [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Эти возможности включают в себя повышение качества и производительности отрисовки текста, типографическую поддержку [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)], расширенный международный текст, улучшенную поддержку шрифтов и новые текстовые API.  
-  
-
   
 <a name="Improved_Quality_and_Performance_of_Text"></a>   
 ## <a name="improved-quality-and-performance-of-text"></a>Улучшенное качество и производительность работы с текстом  
@@ -36,13 +34,11 @@ ms.locfileid: "57359553"
   
  Шрифт [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] Pericles содержит дополнительные глифы, поддерживающие изменение стилей для стандартных наборов глифов. Приведенный ниже текст отображает глифы с изменением стиля.  
   
- ![Текст, использующий OpenType Стилистические варианты глифов](./media/opentypefont02.gif "opentypefont02")  
-Текст, использующий глифы с изменением стилей OpenType  
+ ![Текст, использующий OpenType Стилистические варианты глифов](./media/typography-in-wpf/opentype-stylistic-alternate-glyphs.gif "текст, использующий OpenType Стилистические варианты глифов")  
   
  Swash-глифы являются декоративными глифами, которые используют сложную орнаментацию, часто связанную с каллиграфией. Следующий текст отображает стандартные и swash-глифы для шрифта Pescadero.  
   
- ![Текст, использующий стандартные и swash-глифы OpenType](./media/opentypefont08.gif "opentypefont08")  
-Текст, использующий стандартные и swash глифы OpenType  
+ ![Текст, использующий стандартные и swash-глифы OpenType](./media/typography-in-wpf/opentype-standard-swash-glyphs.gif "текст, использующий стандартные и swash-глифы OpenType")  
   
  Дополнительные сведения о возможностях [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] см. в разделе [Возможности шрифта OpenType](opentype-font-features.md).  
   
@@ -175,4 +171,4 @@ ms.locfileid: "57359553"
 - [Рисование форматированного текста](drawing-formatted-text.md)
 - [Дополнительное форматирование текста](advanced-text-formatting.md)
 - [Text](optimizing-performance-text.md)
-- [Типография Майкрософт](https://www.microsoft.com/typography/default.mspx)
+- [Типография Майкрософт](https://docs.microsoft.com/typography/)

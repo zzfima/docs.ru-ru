@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 77d9ec0cf1cbca63382e7f29de85c2f9566dc2bb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cba4eb2b76d7057a5ed66a35342a79615cb8539f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416170"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487733"
 ---
 # <a name="icordebugeval2callparameterizedfunction-method"></a>Метод ICorDebugEval2::CallParameterizedFunction
 Устанавливает для указанного ICorDebugFunction, который может быть вложен в класс, конструктор которого принимает вызов <xref:System.Type> параметры или сам может занять <xref:System.Type> параметров.  
@@ -39,34 +39,34 @@ HRESULT CallParameterizedFunction (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `pFunction`  
- [in] Указатель на `ICorDebugFunction` объект, который представляет вызываемую функцию.  
+ [in] Указатель на `ICorDebugFunction` объект, который представляет функцию для вызова.  
   
  `nTypeArgs`  
- [in] Количество аргументов, которые принимает функция.  
+ [in] Число аргументов, функция принимает.  
   
  `ppTypeArgs`  
- [in] Массив указателей, каждый из которых указывает на объект ICorDebugType, представляющий аргумент функции.  
+ [in] Массив указателей, каждый из которых указывает ICorDebugType объект, представляющий аргумент функции.  
   
  `nArgs`  
- [in] Количество значений, переданных в функцию.  
+ [in] Число значений, переданных в функцию.  
   
  `ppArgs`  
- [in] Массив указателей, каждый из которых указывает на объект ICorDebugValue, представляющий значение, переданное аргументу функции.  
+ [in] Массив указателей, каждый из которых указывает ICorDebugValue объект, представляющий значение передается в качестве аргумента функции.  
   
 ## <a name="remarks"></a>Примечания  
- `CallParameterizedFunction` Подобно [ICorDebugEval::CallFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-callfunction-method.md) за исключением того, что функция может быть внутри класса с параметрами типов, может сам принимают параметры типа или оба. Аргументы типа должны быть заданы сначала для класса, а затем для функции.  
+ `CallParameterizedFunction` Подобно [ICorDebugEval::CallFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-callfunction-method.md) за исключением того, что функция может быть внутри класса с параметрами типа, может сам принимают параметры типа или оба. Аргументы типа должны быть заданы сначала для класса, а затем для функции.  
   
- Если функция находится в другом домене приложения, будет выполнен переход. Однако все аргументы типа и значения должны быть в целевом домене приложения.  
+ Если функция находится в другом домене приложения, будет выполнен переход. Тем не менее все аргументы типа и значения должны быть в целевом домене приложения.  
   
- Вычисление функции могут выполняться только в ограниченных сценариях. Если `CallParameterizedFunction` или `ICorDebugEval::CallFunction` завершается ошибкой, возвращенное значение HRESULT указывает наиболее общие возможную причину сбоя.  
+ Вычисление функции могут выполняться только в ограниченном числе сценариев. Если `CallParameterizedFunction` или `ICorDebugEval::CallFunction` завершается сбоем, возвращенное значение HRESULT указывает наиболее общие возможные причины сбоя.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

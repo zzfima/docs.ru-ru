@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6962824551c108907929e19d75fc4a31f7001f03
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3d58174aa8b8d0e0544566faa6b1d79c2c3d6197
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727161"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472620"
 ---
 # <a name="icorprofilerinfo2getclassidinfo2-method"></a>Метод ICorProfilerInfo2::GetClassIDInfo2
 Получает родительский модуль и метаданные маркер для определения откройте универсальный класс `ClassID` его родительского класса и `ClassID` для каждого аргумента типа, если он имеется, класса.  
@@ -40,7 +40,7 @@ HRESULT GetClassIDInfo2(
     [out] ClassID typeArgs[]);  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `classId`  
  [in] Идентификатор класса, для которого будут извлекаться сведения.  
   

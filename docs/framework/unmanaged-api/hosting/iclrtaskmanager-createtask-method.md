@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3556c9c73d354f096316cf67741a055e9f46adfe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a801afeac690c02ef08652a923c31be14967cdc0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600278"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57465795"
 ---
 # <a name="iclrtaskmanagercreatetask-method"></a>Метод ICLRTaskManager::CreateTask
 Запрашивает явным образом, что общеязыковая среда выполнения (CLR) создайте новую задачу.  
@@ -35,7 +35,7 @@ HRESULT CreateTask (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `pTask`  
  [out] Указатель на адрес вновь созданного [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md), или значение null, если не удалось создать задачу.  
   

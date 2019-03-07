@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf915af48262a0f48e85623de95b76ad94d860b1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1995321e8598d010188fee2437640b4489eaa294
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573300"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472035"
 ---
 # <a name="ihostgcmanagersuspensionending-method"></a>Метод IHostGCManager::SuspensionEnding
 Уведомляет основное приложение, что общеязыковая среда выполнения (CLR) возобновляет выполнение задачи в потоках, которые были приостановлены для сборки мусора.  
@@ -35,7 +35,7 @@ HRESULT SuspensionEnding (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `generation`  
  [in] Поколении сборки мусора, просто завершается, из которого поток возобновляет работу.  
   

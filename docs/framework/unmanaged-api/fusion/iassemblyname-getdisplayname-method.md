@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d8cbc540377c8f2a26b8fafef35c19e94a59c51
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ddcfe7a4066686da918cf5ed93aebec0d6f306f5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536013"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482045"
 ---
 # <a name="iassemblynamegetdisplayname-method"></a>Метод IAssemblyName::GetDisplayName
 Возвращает понятное имя сборки, упоминаемой в этом [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) объекта.  
@@ -37,7 +37,7 @@ HRESULT GetDisplayName (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `szDisplayName`  
  [out] Строковый буфер, который содержит имя сборки, на которую указывает ссылка.  
   

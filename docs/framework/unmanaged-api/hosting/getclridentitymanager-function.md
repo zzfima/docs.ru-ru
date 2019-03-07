@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f40100be3ab05c0c8e8a55d48494569424e88371
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea711cc03716f4cd0a06a96208da942a69f36d66
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637272"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471684"
 ---
 # <a name="getclridentitymanager-function"></a>Функция GetCLRIdentityManager
 Возвращает указатель на интерфейс, позволяющий общеязыковой среды выполнения (CLR) для управления удостоверениями.  
@@ -37,7 +37,7 @@ STDAPI GetCLRIdentityManager(
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `riid`  
  [in] Объект `REFIID` (идентификатор интерфейса), указывающий интерфейс, который нужно получить. Это значение должно быть IID_ICLRAssemblyIdentityManager или IID_ICLRHostBindingPolicyManager.  
   

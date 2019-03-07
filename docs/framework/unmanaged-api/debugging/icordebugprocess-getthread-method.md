@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 008f945b5301894261ce1529cbd915dd614b919d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 36070d5374a11daf4b7800481c86d61057989631
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418959"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57470085"
 ---
 # <a name="icordebugprocessgetthread-method"></a>Метод ICorDebugProcess::GetThread
-Возвращает поток этот процесс, который имеет идентификатор потока операционной системы (ОС)  
+Возвращает поток этот процесс, который имеет идентификатор потока операционной системы (ОС).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,18 +35,18 @@ HRESULT GetThread(
     [out] ICorDebugThread **ppThread);  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `dwThreadId`  
- [in] Идентификатор потока должны быть получены потока операционной системы.  
+ [in] Идентификатор потока, требуется получить потока операционной системы.  
   
  `ppThread`  
- [out] Указатель на адрес объекта, представляющего поток ICorDebugThread.  
+ [out] Указатель на адрес ICorDebugThread объект, представляющий поток.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

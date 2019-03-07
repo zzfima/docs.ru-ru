@@ -17,16 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95532d6721467b482b1d79d611f8055b606bb4a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e1edb1d25a62a9a689c397339740e563d986c8b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478769"
 ---
 # <a name="icordebugheapvalueisvalid-method"></a>Метод ICorDebugHeapValue::IsValid
-Возвращает значение, указывающее, допустим ли объект, представленный в этом ICorDebugHeapValue.  
+Получает значение, указывающее, является ли допустимым объект, представленный этой ICorDebugHeapValue.  
   
- Этот метод является устаревшим в .NET Framework версии 2.0.  
+ Этот метод был объявлен устаревшим в .NET Framework версии 2.0.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,20 +37,20 @@ HRESULT IsValid (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `pbValid`  
- [out] Указатель на значение Boolean, указывающее, допустим ли это значение в куче.  
+ [out] Указатель на логическое значение, указывающее, допустим ли это значение в куче.  
   
 ## <a name="remarks"></a>Примечания  
  Значение является недопустимым, если удален сборщиком мусора.  
   
- Этот метод использовать не рекомендуется. В .NET Framework 2.0 все значения являются допустимыми до [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) вызывается во время которого значения становятся недействительными.  
+ Этот метод использовать не рекомендуется. В .NET Framework 2.0, все значения являются действительными до [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) вызывается во время которого значения становятся недействительными.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 646fe01f3c27979348fc19dcc63c993c006e53ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c850a1e3a2e2d3526623140afbc2056cbf8cb8a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54641347"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57470072"
 ---
 # <a name="imetadataemitdeletetoken-method"></a>Метод IMetaDataEmit::DeleteToken
 Удаляет указанный маркер из текущей области метаданных.  
@@ -35,7 +35,7 @@ HRESULT DeleteToken (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `tkObj`  
  [in] Токен для удаления.  
   

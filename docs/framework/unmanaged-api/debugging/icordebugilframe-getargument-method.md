@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1653913ca7410728f0f90a546f613a9d8b88be7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 46852ed8ac53c3a7720edff4833f3dc3cce42bbb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414057"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475792"
 ---
 # <a name="icordebugilframegetargument-method"></a>Метод ICorDebugILFrame::GetArgument
-Возвращает значение указанного аргумента в кадре стека промежуточного языка MSIL.  
+Получает значение указанного аргумента в кадре стека промежуточного языка MSIL.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,7 +36,7 @@ HRESULT GetArgument (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `dwIndex`  
  [in] Индекс аргумента в кадре стека MSIL.  
   
@@ -44,13 +44,13 @@ HRESULT GetArgument (
  [out] Указатель на адрес объекта ICorDebugValue, представляющего извлеченное значение.  
   
 ## <a name="remarks"></a>Примечания  
- `GetArgument` Метод может использоваться в кадре стека MSIL или в кадре скомпилированных just-in-time (JIT).  
+ `GetArgument` Метод может использоваться в кадре стека MSIL или во фрейме скомпилированного just-in-time (JIT).  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

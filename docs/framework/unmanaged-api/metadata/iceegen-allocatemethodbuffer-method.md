@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bd51f9c05c49fefc790ce69dcdc3117680c8e6b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b5e86461973d24e9bd61df9ce27da5a614a49aa3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54500038"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471021"
 ---
 # <a name="iceegenallocatemethodbuffer-method"></a>Метод ICeeGen::AllocateMethodBuffer
 Создает буфер заданного размера для метода и возвращает относительный виртуальный адрес метода.  
@@ -39,7 +39,7 @@ HRESULT AllocateMethodBuffer (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `cchBuffer`  
  [in] Длина буфера.  
   

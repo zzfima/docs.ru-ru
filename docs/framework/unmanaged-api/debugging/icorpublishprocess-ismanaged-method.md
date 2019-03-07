@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b57a8bcc584ffd209def5a84a99b15daa7480ee6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 404403576b7fd32362a690d470a5ea4b48489d26
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534947"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484801"
 ---
 # <a name="icorpublishprocessismanaged-method"></a>Метод ICorPublishProcess::IsManaged
 Получает значение, указывающее, является ли процесс ссылается этот [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) известно, что есть управляемый код.  
@@ -35,7 +35,7 @@ HRESULT IsManaged (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `pbManaged`  
  [out] Указатель на логическое значение, указывающее, ли процесс управляемого кода. Значение равно `true` Если процесс с управляемым кодом; в противном случае `false`.  
   

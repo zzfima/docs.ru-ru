@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dce8a11b68cc2a7f03060265956c9355dd1a05ba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 03972ac38a5259443f43a4f91002bf8dc717509f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609308"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466301"
 ---
 # <a name="corbindtoruntimeex-function"></a>Функция CorBindToRuntimeEx
 Позволяет неуправляемым основным приложениям загружать в процесс общеязыковой среды выполнения (CLR). [CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md) и `CorBindToRuntimeEx` функции выполняют та же операция, но `CorBindToRuntimeEx` функция позволяет задавать флаги для определения поведения этой СРЕДЫ.  
@@ -57,7 +57,7 @@ HRESULT CorBindToRuntimeEx (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `pwszVersion`  
  [in] Строка, описывающая версию среды CLR, вы хотите загрузить.  
   

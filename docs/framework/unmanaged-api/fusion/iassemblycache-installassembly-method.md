@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 112c42f15b39c72ba8519877e5ee6a8700953ba5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50152b72cade763a5b890c0c9d45109d88ce65a7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625865"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469213"
 ---
 # <a name="iassemblycacheinstallassembly-method"></a>Метод IAssemblyCache::InstallAssembly
 Устанавливает указанную сборку в глобальный кэш сборок.  
@@ -37,7 +37,7 @@ HRESULT InstallAssembly (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `dwFlags`  
  [in] Флаги, определенные в Fusion.idl. Поддерживаются следующие значения:  
   
