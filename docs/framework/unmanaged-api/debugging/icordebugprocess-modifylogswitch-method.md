@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20ceed164631169b3a47809381b2cc4e630ae718
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4b1c85499e5269027da2c2a01ab67aab2c5da626
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418621"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488179"
 ---
 # <a name="icordebugprocessmodifylogswitch-method"></a>Метод ICorDebugProcess::ModifyLogSwitch
-Задает уровень важности указанного переключателя журнала.  
+Задает уровень серьезности, указанный журнал коммутатора.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,21 +35,21 @@ HRESULT ModifyLogSwitch(
     [in] LONG  lLevel);  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `pLogSwitchName`  
- [in] Строка, указывающая имя коммутатора журнала указатель.  
+ [in] Указатель на строку, которая указывает имя переключателя журнала.  
   
  `lLevel`  
- [in] Уровень серьезности, задаваемое для указанного переключателя журнала.  
+ [in] Уровень серьезности, который нужно задать для параметра указанного журнала.  
   
 ## <a name="remarks"></a>Примечания  
  Этот метод допустим только после [ICorDebugManagedCallback::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) произошла обратного вызова.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

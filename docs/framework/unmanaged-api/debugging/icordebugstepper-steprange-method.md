@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 838f2df06f8875037edbe39d2db0411f31abe01f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7b18474aeaa79224de5371df3ff0cac5ed9bf4ff
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421368"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475740"
 ---
 # <a name="icordebugsteppersteprange-method"></a>Метод ICorDebugStepper::StepRange
-В результате ICorDebugStepper выполнить один шаг через содержащую и возвратить при достижении кода за последним из указанных диапазонов.  
+Принуждает ICorDebugStepper выполнить один шаг через содержащую и должны быть возвращены при достижении кода за последним из указанных диапазонов.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,7 +37,7 @@ HRESULT StepRange (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `bStepIn`  
  [in] Значение `true` на шаг с заходом в функцию, которая вызывается в потоке. Значение `false` на шаг с обходом функции.  
   
@@ -48,17 +48,17 @@ HRESULT StepRange (
  [in] Размер массива `ranges`.  
   
 ## <a name="remarks"></a>Примечания  
- `StepRange` Действия метода [ICorDebugStepper::Step](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-step-method.md) метода, за исключением того, что она не завершается до кода за пределами данного диапазона достигается.  
+ `StepRange` Метод работает подобно [ICorDebugStepper::Step](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-step-method.md) метода, за исключением того, что она не завершается до кода за пределами данного диапазона будет достигнут.  
   
- Это может быть более эффективным, чем пошаговое выполнение одной инструкции за раз. Диапазоны задаются в виде списка пар смещения от начала пошаговым кадра.  
+ Это может быть более эффективным, чем пошаговое выполнение одной инструкции одновременно. Диапазоны задаются в виде списка пар смещения от начала несопоставимого кадра.  
   
- Диапазоны относятся к Microsoft кода промежуточного языка MSIL метода. Вызовите [ICorDebugStepper::SetRangeIL](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setrangeil-method.md) с `false` вносить диапазоны машинному коду метода.  
+ Диапазоны указываются относительно кода промежуточного языка MSIL Microsoft метода. Вызовите [ICorDebugStepper::SetRangeIL](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setrangeil-method.md) с `false` вносить диапазоны машинному коду метода.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

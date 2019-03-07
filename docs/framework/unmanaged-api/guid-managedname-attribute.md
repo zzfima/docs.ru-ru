@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3bae50f695de81856d4fddcb2af3d1188d896642
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 48ad6e4d1d03d8362123e65f16907880b18893f9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430015"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496395"
 ---
 # <a name="guidmanagedname-attribute"></a>Атрибут GUID_ManagedName
-Определяет настраиваемый атрибут интерфейса, указывающее имя управляемого пространства имен для библиотеки COM-модели объектов компонента.  
+Определяет пользовательский интерфейс, указывающее имя управляемого пространства имен для библиотеки компонентов объекта модели (COM).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,7 +34,7 @@ ms.locfileid: "33430015"
 ]  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `value`  
  Имя управляемого пространства имен для библиотеки.  
   
@@ -47,7 +47,7 @@ EXTERN_GUID(GUID_ManagedName, 0xf21f359, 0xab84, 0x41e8, 0x9a, 0x78, 0x36, 0xd1,
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Настраиваемый атрибут интерфейса определяет метаданные для объекта в библиотеке типов.  
+ Пользовательский интерфейс определяет метаданные для объекта в библиотеке типов.  
   
  Используйте <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetCustData%2A?displayProperty=nameWithType> или <xref:System.Runtime.InteropServices.ComTypes.ITypeLib2.GetCustData%2A?displayProperty=nameWithType> получить имя управляемого из атрибута.  
   
@@ -68,4 +68,4 @@ library Microsoft_VisualStudio_CommandBars
 ```  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** Cor.h
+ **Заголовок.** Cor.h

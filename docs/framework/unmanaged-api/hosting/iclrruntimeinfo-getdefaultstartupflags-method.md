@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a4615200bce3aa11401abc9e9c264ab8d8e797b6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b7ef61c8ae1d8c2e5cf1fee80d8900a0e0e7f73b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720019"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493431"
 ---
 # <a name="iclrruntimeinfogetdefaultstartupflags-method"></a>Метод ICLRRuntimeInfo::GetDefaultStartupFlags
 Получает флаги загрузки и файл конфигурации узла, который будет использоваться для запуска среды выполнения.  
@@ -36,7 +36,7 @@ HRESULT GetDefaultStartupFlags(
      [in, out]  DWORD *pcchHostConfigFile);  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `pdwStartupFlags`  
  [out] Указатель на флаги запуска узла, которые в настоящее время заданы.  
   

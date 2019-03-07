@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 203c31129218be585960e771b1d7e669defd8cde
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a04162a870833ff409c93527733e2380d9c3eed2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743300"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474739"
 ---
 # <a name="imetadataassemblyemitsetfileprops-method"></a>Метод IMetaDataAssemblyEmit::SetFileProps
 Изменяет указанную структуру метаданных `File`.  
@@ -38,7 +38,7 @@ HRESULT SetFileProps (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `file`  
  [in] Токен метаданных, указывающее `File` изменение структуры метаданных.  
   

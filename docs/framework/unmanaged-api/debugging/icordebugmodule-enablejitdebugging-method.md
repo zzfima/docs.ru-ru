@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 71722293bfb80a7e57393916560f922d970ea2ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 642c4fd600d10ef89a08aa32bef5c8e7455552c7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415646"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473834"
 ---
 # <a name="icordebugmoduleenablejitdebugging-method"></a>Метод ICorDebugModule::EnableJITDebugging
-Определяет, сохраняет ли компилятор just-in-time (JIT), сведения об отладке для методов в этом модуле.  
+Определяет, сохраняет ли компилятор just-in-time (JIT) сведения об отладке для методов в данном модуле.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,21 +36,21 @@ HRESULT EnableJITDebugging(
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `bTrackJITInfo`  
- [in] Это значение равно `true` для включения JIT-компилятором для сохранения сведений о сопоставлении между версией Microsoft промежуточного языка MSIL и версии JIT-компиляции каждого метода в данном модуле.  
+ [in] Это значение равно `true` для включения JIT-компилятор для сохранения сведений о сопоставлении между версией Microsoft промежуточного языка MSIL и версии JIT-компиляции каждого метода в данном модуле.  
   
  `bAllowJitOpts`  
- [in] Это значение равно `true` для включения JIT-компилятору создавать код с помощью определенные оптимизации конкретных JIT-компилятора для отладки.  
+ [in] Это значение равно `true` для включения JIT-компилятор для создания кода с помощью определенных реализаций определенных JIT-компилятора для отладки.  
   
 ## <a name="remarks"></a>Примечания  
- JIT-отладка включена по умолчанию для всех модулей, загруженных при активном отладчик. Программное Включение или отключение параметров переопределяет глобальные настройки.  
+ JIT-отладка включена по умолчанию для всех модулей, загруженных при активном отладчике. Программное Включение или отключение параметров переопределяет глобальные параметры.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

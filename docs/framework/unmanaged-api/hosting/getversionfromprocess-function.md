@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 843236243563ce3dff82726aaab05845fa295b9d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fad069a15cb4079dac2b4ee65ca3d9669a53cac0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518141"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479266"
 ---
 # <a name="getversionfromprocess-function"></a>Функция GetVersionFromProcess
 Получает номер версии общей языковой среды выполнения (CLR), связанный с указанным дескриптором процесса.  
@@ -40,7 +40,7 @@ HRESULT GetVersionFromProcess (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `hProcess`  
  [in] Дескриптор процесса.  
   
@@ -56,7 +56,7 @@ HRESULT GetVersionFromProcess (
 ## <a name="return-value"></a>Возвращаемое значение  
  Этот метод возвращает стандартные коды ошибок объектов модели компонентов (COM), как определено в файле WinError.h, помимо следующих значений.  
   
-|Код возврата|Описание:|  
+|Код возврата|Описание|  
 |-----------------|-----------------|  
 |S_OK|Метод завершился успешно.|  
 |E_INVALIDARG|`pVersion` имеет значение null и `cchBuffer` не равно null, или наоборот.<br /><br /> - или -<br /><br /> `hProcess` не является допустимым дескриптором к процессу.<br /><br /> - или -<br /><br /> Среда CLR не загружается.|  

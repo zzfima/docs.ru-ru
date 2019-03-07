@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e3ce303e8bcf33d192dbc7e2447ea6737577dcc5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 00fa0fb7c257500eb0bc24c6c43bd0dd265bc00b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554885"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481642"
 ---
 # <a name="ihostmallocdebugalloc-method"></a>Метод IHostMAlloc::DebugAlloc
 Запрашивает, что узел выделить указанный объем памяти из кучи и Кроме того, отслеживать, где была выделена память.  
@@ -39,7 +39,7 @@ HRESULT DebugAlloc (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `cbSize`  
  [in] Размер в байтах, выделение памяти.  
   

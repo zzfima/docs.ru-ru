@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c1c05918965e40801757462ce53257bc36a5d8c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7e86a1d2dfeb0d36b369d3b6cd7ea985591b5959
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587717"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488415"
 ---
 # <a name="efngetmanagedexcepstack-function"></a>Функция _EFN_GetManagedExcepStack
 Учитывая адрес объекта управляемого исключения, возвращает строковую версию трассировки стека, содержащейся внутри.  
@@ -37,7 +37,7 @@ HRESULT _EFN_GetManagedExcepStack(
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `Client`  
  [in] Клиент, для которого выполняется отладка.  
   

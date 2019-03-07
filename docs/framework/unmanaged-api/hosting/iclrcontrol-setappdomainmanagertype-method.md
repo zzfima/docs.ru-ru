@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d79d3651bb949899681eac2e7d2ac49d9233ccc7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bb1632b5d9379eb35d4188a218f3184acf8d0ed3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531783"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497110"
 ---
 # <a name="iclrcontrolsetappdomainmanagertype-method"></a>Метод ICLRControl::SetAppDomainManagerType
 Задает тип, производный от <xref:System.AppDomainManager> как тип для диспетчеров доменов приложений.  
@@ -36,7 +36,7 @@ HRESULT SetAppDomainManagerType (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `pwzAppDomainManagerAssembly`  
  [in] Имя сборки, в котором запрошенный тип, производный от <xref:System.AppDomainManager> реализуется.  
   

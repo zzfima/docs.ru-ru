@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5227de340bec85620f8c8d45538ad9a9d7f688fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2048062267131f6b6cc6672d74c7f9d76b4b59f9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630961"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484749"
 ---
 # <a name="isymunmanagedreadergetnamespaces-method"></a>Метод ISymUnmanagedReader::GetNamespaces
 Получает пространства имен, определенные в глобальной области в данном хранилище символов.  
@@ -38,7 +38,7 @@ HRESULT GetNamespaces (
         ISymUnmanagedNamespace*  namespaces[]);  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `cNameSpaces`  
  [in] Размер массива пространства имен.  
   

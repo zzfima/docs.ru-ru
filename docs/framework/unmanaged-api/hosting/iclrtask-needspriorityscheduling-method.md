@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a2a26e32040f705fd46f9d9d8909fd47e963baa8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c5d061227e4094c96f14bd8f4f3e80e869b838a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510785"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487172"
 ---
 # <a name="iclrtaskneedspriorityscheduling-method"></a>Метод ICLRTask::NeedsPriorityScheduling
 Получает значение, указывающее, должен ли быть помечен как высокий приоритет для перепланирования текущую задачу, которая была отключена.  
@@ -35,7 +35,7 @@ HRESULT NeedsPriorityScheduling (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `pbNeedsPriorityRescheduling`  
  [out] `true`, если узел должен попытаться изменить расписание текущий экземпляр задачи, как можно скорее, в противном случае — `false`.  
   

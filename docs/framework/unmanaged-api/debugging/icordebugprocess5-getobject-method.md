@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9588a22feb27d2bd40af2b003179638ef6f34e83
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 56b5796a6edb3d9fb7e0dc1072951a93a6e508a3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660870"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502518"
 ---
 # <a name="icordebugprocess5getobject-method"></a>Метод ICorDebugProcess5::GetObject
 Преобразует адрес объекта в объект «ICorDebugObjectValue».  
@@ -36,7 +36,7 @@ HRESULT GetObject(
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `addr`  
  [in] Адрес объекта.  
   

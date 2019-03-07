@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f5b4cb07cbc1ea3f8f297b96a124b8f5a04f0fce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8b45cda05a386efef320d2caad0ed241a4767b9c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54647274"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484853"
 ---
 # <a name="isymunmanagedvariablegetaddresskind-method"></a>Метод ISymUnmanagedVariable::GetAddressKind
 Возвращает вид адрес этой переменной.  
@@ -34,7 +34,7 @@ HRESULT GetAddressKind(
     [out, retval] ULONG32* pRetVal);  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `pRetVal`  
  [out] Указатель на `ULONG32` , получающий значение. Возможные значения определяются в [CorSymAddrKind](../../../../docs/framework/unmanaged-api/diagnostics/corsymaddrkind-enumeration.md) перечисления.  
   

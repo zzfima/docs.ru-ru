@@ -17,14 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2452f4be0acde300676bf56011416e0a9ef16464
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 82902e6a395fe62464065ccea4cca5b52c960f0d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492222"
 ---
 # <a name="icordebugframegetcaller-method"></a>Метод ICorDebugFrame::GetCaller
-Получает указатель на объект ICorDebugFrame в текущей цепи, вызванной этим кадром.  
+Получает указатель на объект ICorDebugFrame в текущей цепи, вызван этот кадр.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,15 +35,15 @@ HRESULT GetCaller (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `ppFrame`  
- [out] Указатель на адрес `ICorDebugFrame` , представляющий вызывающий кадр. Это значение равно null, если вызываемый кадр является самым внешним кадром текущей цепи.  
+ [out] Указатель на адрес `ICorDebugFrame` , представляющий вызывающий кадр. Это значение равно null, если вызываемый кадр является самым крайним кадром в текущей цепи.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

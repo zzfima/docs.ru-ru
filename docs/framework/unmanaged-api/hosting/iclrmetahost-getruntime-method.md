@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 273891b0814d9383d9640c79f5df959f2b9398b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 55fd6e6eec0c5107398bd0a7dda0281f69eb471b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707912"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492521"
 ---
 # <a name="iclrmetahostgetruntime-method"></a>Метод ICLRMetaHost::GetRuntime
 Получает [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) интерфейс, используемый для конкретной версии общеязыковой среды выполнения (CLR). Этот метод заменяет [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) функция, используемая с [STARTUP_LOADER_SAFEMODE](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) флаг.  
@@ -37,7 +37,7 @@ HRESULT GetRuntime (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `pwzVersion`  
  [in] Версия .NET Framework компиляции, хранятся в метаданных, в формате «v*объект*. *B*[. *X*]». *Объект*, *B*, и *X* — десятичные числа, соответствующие основной номер версии, дополнительный номер версии и номер сборки.  
   
@@ -58,7 +58,7 @@ HRESULT GetRuntime (
 |HRESULT|Описание|  
 |-------------|-----------------|  
 |S_OK|Метод завершился успешно.|  
-|E_POINTER|`pwzVersion` или `ppRuntime` равно null.|  
+|E_POINTER|`pwzVersion` или `ppRuntime` имеет значение null.|  
   
 ## <a name="remarks"></a>Примечания  
  Этот метод постоянно взаимодействует с устаревшими интерфейсами, такие как [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) и устаревшими функциями, таких как устаревшие `CorBindTo*` функции (см. в разделе [устаревшей функции среды CLR размещение](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) в .NET Framework 2.0, интерфейс API размещения). То есть являются видимыми для нового API среды выполнения, загруженные с старый API, и среды выполнения, загруженные с новым API будут видимы для старый API. .  

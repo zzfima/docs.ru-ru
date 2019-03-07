@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0e6314a76433276561a8b4b87a852464dae69824
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a285543571c843a982b6615fdc4b5f1325ed066
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656262"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466964"
 ---
 # <a name="imetadataimportenumtypedefs-method"></a>Метод IMetaDataImport::EnumTypeDefs
 Перечисляет токены TypeDef, представляющие все типы в текущей области.  
@@ -38,7 +38,7 @@ HRESULT EnumTypeDefs (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `phEnum`  
  [out] Указатель на новый перечислитель. Это должно быть NULL при первом вызове этого метода.  
   
@@ -53,7 +53,7 @@ HRESULT EnumTypeDefs (
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
-|HRESULT|Описание:|  
+|HRESULT|Описание|  
 |-------------|-----------------|  
 |`S_OK`|`EnumTypeDefs` успешно возвращен.|  
 |`S_FALSE`|Существуют маркеры для перечисления отсутствуют. В этом случае `pcTypeDefs` равно нулю.|  

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bb91c5dfbe5c83e08d786043d7e4732fa19e53db
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4fa5807a52565a5444334b313dc8dfa315a15c13
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566792"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480563"
 ---
 # <a name="ihosttaskmanagercallneedshosthook-method"></a>Метод IHostTaskManager::CallNeedsHostHook
 Ведущее приложение может указать, сможет ли среда CLR (CLR) вводить заданный вызов в неуправляемую функцию.  
@@ -36,7 +36,7 @@ HRESULT CallNeedsHostHook (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `target`  
  [in] Адрес в файле сопоставленные переносимого исполняемого (PE) из неуправляемой функции, который должен вызываться.  
   

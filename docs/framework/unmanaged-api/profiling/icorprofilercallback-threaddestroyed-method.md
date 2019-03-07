@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 40bbde940538d7b06aa74ab55986da2dca3ec225
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 09c2aef9cc27a2e9aba34f36c1fbfd0973d3b0fa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599508"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474245"
 ---
 # <a name="icorprofilercallbackthreaddestroyed-method"></a>Метод ICorProfilerCallback::ThreadDestroyed
 Уведомляет профилировщик, что поток был удален.  
@@ -34,7 +34,7 @@ HRESULT ThreadDestroyed(
     [in] ThreadID threadId);  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `threadId`  
  [in] Идентификатор потока, который был удален.  
   

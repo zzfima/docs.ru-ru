@@ -17,14 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e605859a3049abc0c17d9d6792ade78f4ad2bd78
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c71ccbc62ea026a55a7e84f6925a78850594a813
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473791"
 ---
 # <a name="icordebugmodule2setjitcompilerflags-method"></a>Метод ICorDebugModule2::SetJITCompilerFlags
-Задает флаги, управляющие компиляции этого ICorDebugModule2 just-in-time (JIT).  
+Задает флаги, определяющие компиляции этого ICorDebugModule2 just-in-time (JIT).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,22 +35,22 @@ HRESULT SetJITCompilerFlags (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `dwFlags`  
  [in] Побитовое сочетание [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) значений перечисления.  
   
 ## <a name="remarks"></a>Примечания  
- Если `dwFlags` недопустимое значение `SetJITCompilerFlags` метод завершится с ошибкой.  
+ Если `dwFlags` значение является недопустимым, `SetJITCompilerFlags` метод завершится с ошибкой.  
   
- `SetJITCompilerFlags` Метод может вызываться только изнутри [ICorDebugManagedCallback::LoadModule](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadmodule-method.md) обратного вызова для этого модуля. Пытается вызвать его после `ICorDebugManagedCallback::LoadModule` обратного вызова доставки будет ошибкой.  
+ `SetJITCompilerFlags` Метод может вызываться только в пределах [ICorDebugManagedCallback::LoadModule](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadmodule-method.md) обратного вызова для этого модуля. Пытается вызвать его после `ICorDebugManagedCallback::LoadModule` обратного вызова доставки будет ошибкой.  
   
- Изменить и продолжить не поддерживается на платформах Win9x и 64-разрядной. Таким образом при вызове метода `SetJITCompilerFlags` метода на любой из этих двух платформ с флагом CORDEBUG_JIT_ENABLE_ENC в `dwFlags`, `SetJITCompilerFlags` метод и всех методах, используемых для редактирования и продолжения, такой как [ICorDebugModule2:: ApplyChanges](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-applychanges-method.md), завершится ошибкой.  
+ Изменить и продолжить в 64-разрядной или платформах операционных системах Win9x не поддерживается. Таким образом при вызове метода `SetJITCompilerFlags` метод на любой из этих двух платформ с флагом CORDEBUG_JIT_ENABLE_ENC, установленным `dwFlags`, `SetJITCompilerFlags` метод и всех методах, используемых для изменения и продолжить, такие как [ICorDebugModule2:: Метод ApplyChanges](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-applychanges-method.md), завершится ошибкой.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

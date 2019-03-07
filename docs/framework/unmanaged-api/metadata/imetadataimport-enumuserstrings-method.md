@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 79e65d86eda2f01e1d6f2af46c5ee8e15ff03ccb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2a82456c8bc53e7828e447de3bab79388aa102cd
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730247"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493743"
 ---
 # <a name="imetadataimportenumuserstrings-method"></a>Метод IMetaDataImport::EnumUserStrings
 Перечисляет токены String, представляющие жестко заданные строки в текущей области метаданных.  
@@ -38,7 +38,7 @@ HRESULT EnumUserStrings (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `phEnum`  
  [in, out] Указатель на перечислитель. Это должно быть NULL при первом вызове этого метода.  
   
@@ -53,7 +53,7 @@ HRESULT EnumUserStrings (
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
-|HRESULT|Описание|  
+|HRESULT|Описание:|  
 |-------------|-----------------|  
 |`S_OK`|`EnumUserStrings` успешно возвращен.|  
 |`S_FALSE`|Существуют маркеры для перечисления отсутствуют. В этом случае `pcStrings` равно нулю.|  

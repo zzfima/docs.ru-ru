@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2dc7d8c339e5f77bad44960092198035e13735b9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b627a09db595cfbeb38aa605259eb42bdb77cc0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621296"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57477066"
 ---
 # <a name="imetadatatablesgetnumtables-method"></a>Метод IMetaDataTables::GetNumTables
 Получает количество таблиц в области текущего `IMetaDataTables` экземпляра.  
@@ -35,7 +35,7 @@ HRESULT GetNumTables (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `pcTables`  
  [out] Указатель на количество таблиц в области текущего экземпляра.  
   

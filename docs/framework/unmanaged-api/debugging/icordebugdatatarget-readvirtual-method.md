@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8bc807906af67350f309a4fc9439899cea328be8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b401a70e34a1686f3a69c657f6417cf8e1d0d938
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54575493"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499905"
 ---
 # <a name="icordebugdatatargetreadvirtual-method"></a>Метод ICorDebugDataTarget::ReadVirtual
 Получает блок непрерывной памяти, начиная с указанного адреса и возвращает его в указанный буфер.  
@@ -38,7 +38,7 @@ HRESULT ReadVirtual(
     [out] ULONG32 *  pBytesRead);  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `address`  
  [in] Начальный адрес требуемым объемом свободной памяти.  
   

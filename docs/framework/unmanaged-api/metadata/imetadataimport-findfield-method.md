@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b07d75b6a8839f9a223ef2c0be52830e107e4088
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4a6f2e428366d2fe96313879ef1256d7b86ddd29
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527605"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490415"
 ---
 # <a name="imetadataimportfindfield-method"></a>Метод IMetaDataImport::FindField
 Возвращает указатель на FieldDef токен для поля, которое заключено заданным <xref:System.Type> , с указанной сигнатурой имени и метаданных.  
@@ -39,7 +39,7 @@ HRESULT FindField (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `td`  
  [in] Токен TypeDef для класса или интерфейса, который содержит поле для поиска. Если это значение равно `mdTokenNil`, поиск выполняется для глобальной переменной.  
   

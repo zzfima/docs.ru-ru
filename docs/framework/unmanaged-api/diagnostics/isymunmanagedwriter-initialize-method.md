@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e9c38a2d87f8c8db0b77dd60460d6d00a73f41ea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 626e10dfe6215c8f148a9705c5a97b88f3489b99
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710993"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501335"
 ---
 # <a name="isymunmanagedwriterinitialize-method"></a>Метод ISymUnmanagedWriter::Initialize
 Задает интерфейс включения метаданных, с которым будет связан этот модуль записи и задает имя выходного файла, в который записываются символы отладки.  
@@ -39,7 +39,7 @@ HRESULT Initialize(
     [in] BOOL         fFullBuild);  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `emitter`  
  [in] Указатель на интерфейс включения метаданных.  
   

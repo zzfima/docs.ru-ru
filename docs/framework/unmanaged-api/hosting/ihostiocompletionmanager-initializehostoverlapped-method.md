@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2951b408efa39e1ac2afbd7d8ebcb5ea139a8a71
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 97d2959a27bb848d05dc44492152866b2d535b68
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582454"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57503168"
 ---
 # <a name="ihostiocompletionmanagerinitializehostoverlapped-method"></a>Метод IHostIoCompletionManager::InitializeHostOverlapped
 Предоставляет возможность инициализировать любые пользовательские данные, добавляемые в Win32 основному `OVERLAPPED` структура, используемая для асинхронных запросов ввода-вывода.  
@@ -35,7 +35,7 @@ HRESULT InitializeHostOverlapped (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `pvOverlapped`  
  [in] Указатель на Win32 `OVERLAPPED` структуры, которые нужно включить в запрос ввода-вывода.  
   

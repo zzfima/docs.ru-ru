@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 3c564396-ac64-4ef3-b4f6-df96f1d46fc7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99714a50d0b3966476cea2f7ed02f04a2ebf6cea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 10374f76edb9446093b89d064570ce05193129b3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512415"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498332"
 ---
 # <a name="icordebugsymbolprovidergetobjectsize-method"></a>Метод ICorDebugSymbolProvider::GetObjectSize
 Возвращает размер объекта для объекта на основе его сигнатуры TypeSpec.  
@@ -24,7 +24,7 @@ HRESULT GetObjectSize(
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `cbSignature`  
  [in] Число байтов в сигнатуре TypeSpec.  
   
@@ -37,7 +37,7 @@ HRESULT GetObjectSize(
 ## <a name="remarks"></a>Примечания  
   
 > [!NOTE]
->  Этот метод доступен только в машинном коде .NET.  
+>  Этот метод доступен только в .NET Native.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

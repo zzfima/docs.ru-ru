@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38b00d903fdd7301415a8df7642e12366178fd10
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d1abe307e3b9fa607912f98e456a11176eb17c56
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413944"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471515"
 ---
 # <a name="icordebugevalnewarray-method"></a>Метод ICorDebugEval::NewArray
-Выделяет новый массив с заданным типом элементов и измерений.  
+Выделяет новый массив элементов указанного типа и измерений.  
   
- Этот метод является устаревшим в .NET Framework версии 2.0. Используйте [ICorDebugEval2::NewParameterizedArray](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedarray-method.md) вместо него.  
+ Этот метод является устаревшим в .NET Framework версии 2.0. Используйте [ICorDebugEval2::NewParameterizedArray](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedarray-method.md) вместо этого.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,18 +41,18 @@ HRESULT NewArray (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `elementType`  
- [in] Значение CorElementType перечисление, которое указывает тип элемента массива.  
+ [in] Значение перечисления CorElementType, показывающий тип элемента массива.  
   
  `pElementClass`  
- [in] Указатель на объект ICorDebugClass, указывающий класс элемента. Это значение может быть null, если тип элемента является типом-примитивом.  
+ [in] Указатель на объект ICorDebugClass, указывающий класс элемента. Это значение может иметь значение null, если тип элемента является типом-примитивом.  
   
  `rank`  
  [in] Число измерений массива. В .NET Framework 2.0 это значение должно быть 1.  
   
  `dims`  
- [in] Размер в байтах для каждого измерения массива.  
+ [in] Размер в байтах каждого измерения массива.  
   
  `lowBounds`  
  [в] Необязательно. Нижняя граница каждого измерения массива. Если это значение указано, для каждого измерения предполагается нижнюю границу, равную нулю.  
@@ -61,9 +61,9 @@ HRESULT NewArray (
  Массив всегда создается в домене приложения, в котором в настоящее время выполняется поток.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   

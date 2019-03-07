@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f7e5fceacc3fefa9267a9d7f989e745c392322e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a0b6f0550bad534379b562c3df9da9ab917f5270
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414129"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493041"
 ---
 # <a name="icordebuginternalframegetframetype-method"></a>Метод ICorDebugInternalFrame::GetFrameType
 Получает тип данного внутреннего фрейма.  
@@ -35,18 +35,18 @@ HRESULT GetFrameType (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `pType`  
- [out] Указатель на значение перечисления CorDebugInternalFrameType, которое указывает тип внутреннего фрейма, представленный этим `ICorDebugInternalFrame` объекта.  
+ [out] Указатель на значение, указывающее тип внутреннего кадра, представленный этим перечисление CorDebugInternalFrameType `ICorDebugInternalFrame` объекта.  
   
 ## <a name="remarks"></a>Примечания  
- Тип внутреннего фрейма STUBFRAME_NONE никогда не будет. Отладчики правильно учитывать типы нераспознанный внутреннего фрейма.  
+ Тип внутренний фрейм никогда не будет STUBFRAME_NONE. Отладчики корректно должен игнорировать Неизвестный кадр внутренних типов.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: af4e9124140c2b311fb2c10800200f5d4d8dc679
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 630895e131c2b3fd5a175a7a3c45140ad65d03aa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545768"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57503038"
 ---
 # <a name="isymunmanagedbindergetreaderfromstream-method"></a>Метод ISymUnmanagedBinder::GetReaderFromStream
 Данный интерфейс метаданных и поток, содержащий хранилище символов, возвращает правильную [ISymUnmanagedReader](isymunmanagedreader-interface.md) структуру, которая будет считывать отладочных символов из данного хранилища символов.  
@@ -36,7 +36,7 @@ HRESULT GetReaderFromStream(
     [out,retval] ISymUnmanagedReader **pRetVal);  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `importer`  
  [in] Указатель на интерфейс импорта метаданных.  
   

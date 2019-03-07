@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 515e925c9b086823450b73cfbb558d0409b4948a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d2b7f0925946435bd69596f47e956f1f96eec7b2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576003"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502934"
 ---
 # <a name="imetadataemitsavetostream-method"></a>Метод IMetaDataEmit::SaveToStream
 Сохраняет все метаданные в текущей области в указанном `IStream`.  
@@ -36,7 +36,7 @@ HRESULT SaveToStream (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `pIStream`  
  [in] Доступный для записи поток для сохранения.  
   

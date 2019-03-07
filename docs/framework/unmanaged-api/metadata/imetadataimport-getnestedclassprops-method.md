@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9e54b4c4b1b3184b6aa0d50f82a501312db6a8e8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6462496a8804d9aa5304107a6c01122b745038fc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655665"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500256"
 ---
 # <a name="imetadataimportgetnestedclassprops-method"></a>Метод IMetaDataImport::GetNestedClassProps
 Возвращает токен TypeDef для родительского <xref:System.Type> заданного вложенного типа.  
@@ -36,7 +36,7 @@ HRESULT GetNestedClassProps (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `tdNestedClass`  
  [in] TypeDef маркер, представляющий <xref:System.Type> для возврата родительского класса для токена.  
   

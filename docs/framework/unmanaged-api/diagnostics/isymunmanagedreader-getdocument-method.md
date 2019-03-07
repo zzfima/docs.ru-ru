@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ecd11b57d1901c4618ee0d27442753559b85c509
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f20f7aabc05bb9e15b040d968c08d10444efd8fc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738109"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485815"
 ---
 # <a name="isymunmanagedreadergetdocument-method"></a>Метод ISymUnmanagedReader::GetDocument
 Находит документ. Документ языка, поставщика и тип являются необязательными.  
@@ -38,7 +38,7 @@ HRESULT GetDocument (
     [out, retval] ISymUnmanagedDocument** pRetVal);  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `url`  
  [in] URL-адрес для идентификации документа.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ee56a7f343de999d68a71d9eac04eed6e06b444e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c4887d44f0ac5603280efa0abdbd7e65c71fc3ca
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568898"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485461"
 ---
 # <a name="icordebugregistersetgetregisters-method"></a>Метод ICorDebugRegisterSet::GetRegisters
 Получает значение каждого из регистров (на компьютере, на который в данный момент выполняется код), который указан битовой маской.  
@@ -38,7 +38,7 @@ HRESULT GetRegisters (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `mask`  
  [in] Битовую маску, которая указывает, зарегистрируйтесь, какие значения должны быть получены. Каждый бит соответствует регистру. Если немного присваивается одно, извлекается значение регистра; в противном случае значение регистра не извлекается.  
   

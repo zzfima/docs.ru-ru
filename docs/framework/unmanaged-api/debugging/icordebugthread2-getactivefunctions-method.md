@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f7ed7787f0302826cab67664780177f05e551199
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ed13f78d5a1f6d54b12c86613715f4878a521bfa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421110"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489934"
 ---
 # <a name="icordebugthread2getactivefunctions-method"></a>Метод ICorDebugThread2::GetActiveFunctions
-Получает сведения о активной функции, в каждой из рамок этот поток.  
+Получает сведения о активной функции в каждом из кадров этот поток.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,28 +38,28 @@ HRESULT GetActiveFunctions (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `cFunctions`  
  [in] Размер массива `pFunctions`.  
   
  `pcFunctions`  
- [out] Указатель на число объектов, возвращаемых `pFunctions` массива. Число возвращенных объектов будет равно числу управляемые фреймы в стеке.  
+ [out] Указатель на число объектов, возвращаемых в `pFunctions` массива. Количество возвращенных объектов будет равно числу управляемые фреймы в стеке.  
   
  `pFunctions`  
- [in, out] Массив объектов COR_ACTIVE_FUNCTION, каждый из которых содержит сведения о функциях активные в рамках данного потока.  
+ [in, out] Массив объектов COR_ACTIVE_FUNCTION, каждый из которых содержит сведения об активных функциях в рамках этого потока.  
   
- Первый элемент будет использоваться для конечного кадра и т. д. обратно в корень стека.  
+ Первый элемент будет использоваться для фрейме конечного узла и т. д. обратно в корень стека.  
   
 ## <a name="remarks"></a>Примечания  
- Если `pFunctions` имеет значение null, если на входе `GetActiveFunctions` возвращает количество функций, которые находятся в стеке. То есть если `pFunctions` имеет значение null, если на входе `GetActiveFunctions` возвращает значение только в `pcFunctions`.  
+ Если `pFunctions` имеет значение null, если во входных данных, `GetActiveFunctions` возвращает количество функций, которые находятся в стеке. То есть если `pFunctions` имеет значение null, если во входных данных, `GetActiveFunctions` возвращает значение только в `pcFunctions`.  
   
- `GetActiveFunctions` Метод предназначен для оптимизации за получение те же сведения из кадров в трассировке стека и содержит только кадры, которые бы объект ICorDebugILFrame для них в полную трассировку стека.  
+ `GetActiveFunctions` Метод предназначен для оптимизации за получение те же сведения из кадров в трассировке стека и включает в себя только кадры, которые бы объект ICorDebugILFrame для них в полную трассировку стека.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

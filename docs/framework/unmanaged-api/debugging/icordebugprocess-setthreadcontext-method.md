@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9ed79eb799971dfcbc9fd787cd0290795f79d96
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e281022cd7bc9b2095fdbd3964061b811ef60e0d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417977"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496967"
 ---
 # <a name="icordebugprocesssetthreadcontext-method"></a>Метод ICorDebugProcess::SetThreadContext
 Задает контекст для данного потока в этом процессе.  
@@ -37,9 +37,9 @@ HRESULT SetThreadContext(
     BYTE context[]);  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `threadID`  
- [in] Идентификатор потока, для которого требуется задать контекст.  
+ [in] Идентификатор потока, для которого необходимо задать контекст.  
   
  `contextSize`  
  [in] Размер массива `context`.  
@@ -50,17 +50,17 @@ HRESULT SetThreadContext(
  Контекст задает архитектуру процессора, на котором выполняется поток.  
   
 ## <a name="remarks"></a>Примечания  
- Отладчик должен вызвать этот метод вместо Win32 `SetThreadContext` работать, поскольку фактически поток может находиться в состоянии «крадеными», в котором его контекст был временно изменен. Этот метод следует использовать только в том случае, когда поток находится в машинном коде. Используйте [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) для потоков в управляемом коде. Никогда не требуется изменить контекст потока во время события отладки по каналу (OOB).  
+ Отладчик должен вызвать этот метод вместо Win32 `SetThreadContext` работать, поскольку фактически поток может находиться в состоянии «перехваченного», в котором его контекст был временно изменен. Этот метод должен использоваться только в том случае, когда поток находится в машинном коде. Используйте [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) для потоков в управляемом коде. Никогда не требуется изменения контекста потока во время события отладки (OOB)-каналу.  
   
- Переданные данные должны быть структурой контекста для текущей платформы.  
+ Данные, передаваемые должно быть структурой контекст для текущей платформы.  
   
  Этот метод может привести к повреждению среды выполнения при неправильном.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

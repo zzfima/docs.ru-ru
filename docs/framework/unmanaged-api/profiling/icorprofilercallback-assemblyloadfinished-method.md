@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f76a3cb232042ba6b91046d1f7b6e1d46ad6faef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5bb5586271c252879b503dd093c88380197d5bce
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634861"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479731"
 ---
 # <a name="icorprofilercallbackassemblyloadfinished-method"></a>Метод ICorProfilerCallback::AssemblyLoadFinished
 Уведомляет профилировщик об окончании загрузки сборки.  
@@ -35,7 +35,7 @@ HRESULT AssemblyLoadFinished(
     [in] HRESULT    hrStatus);  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `assemblyId`  
  [in] Идентифицирует сборку, которая была загружена.  
   

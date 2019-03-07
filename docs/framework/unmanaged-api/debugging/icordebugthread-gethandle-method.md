@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 358597edc9fbc5203e5c00a5fb4d04019281060d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 900fece1dd29f73f77b85ff08e4deff1396f8aaf
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418276"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484515"
 ---
 # <a name="icordebugthreadgethandle-method"></a>Метод ICorDebugThread::GetHandle
-Возвращает текущий дескриптор для активной части ICorDebugThread.  
+Получает текущий дескриптор для активной части ICorDebugThread.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,20 +35,20 @@ HRESULT GetHandle (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `phThreadHandle`  
- [out] Указатель на HTHREAD, который представляет собой дескриптор активной части данного потока.  
+ [out] Указатель на HTHREAD, представляющую собой дескриптор активной части этого потока.  
   
 ## <a name="remarks"></a>Примечания  
- Дескриптор может меняться, поскольку процесс выполняется и может быть разным для разных частей потока.  
+ Дескриптор может меняться, процесс выполнения, и может быть разным для разных частей потока.  
   
- Этот дескриптор принадлежит API отладки. Отладчик должен его скопировать перед его использованием.  
+ Этот дескриптор является владельцем API отладки. Отладчик должен его скопировать перед его использованием.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

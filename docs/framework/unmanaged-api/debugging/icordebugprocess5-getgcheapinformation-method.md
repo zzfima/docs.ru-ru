@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bf3d362902eb338e5d797b66c5fe2af4f3e1ae9b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 81c590dd1f3f6682179645fb384cdd82d1d7ed96
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508331"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57503259"
 ---
 # <a name="icordebugprocess5getgcheapinformation-method"></a>Метод ICorDebugProcess5::GetGCHeapInformation
 Содержит общие сведения о куче для сборки мусора, включая является ли он в настоящее время enumerable.  
@@ -35,7 +35,7 @@ HRESULT GetGCHeapInformation(
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `pHeapInfo`  
  [out] Указатель на [COR_HEAPINFO](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md) значение, которое предоставляет общие сведения о куче для сборки мусора.  
   

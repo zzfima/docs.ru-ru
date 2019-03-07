@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d13a291db484fd4e1d235ce3bb84a55118214379
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ca0d1c647ed23d9540377068b7fd75fbb88bdfeb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520429"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480758"
 ---
 # <a name="icorprofilercallbackmovedreferences-method"></a>Метод ICorProfilerCallback::MovedReferences
 Вызывается для предоставления сведений о структуре объектов в куче в результате сжатия сборки мусора.  
@@ -37,7 +37,7 @@ HRESULT MovedReferences(
     [in, size_is(cMovedObjectIDRanges)] ULONG    cObjectIDRangeLength[] );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `cMovedObjectIDRanges`  
  [in] Количество блоков смежных объектов, перемещенных в результате сжатия сборки мусора. Таким образом значение `cMovedObjectIDRanges` представляет общий размер массивов `oldObjectIDRangeStart`, `newObjectIDRangeStart` и `cObjectIDRangeLength`.  
   
@@ -57,7 +57,7 @@ HRESULT MovedReferences(
 ## <a name="remarks"></a>Примечания  
   
 > [!IMPORTANT]
->  Этот метод сообщает размеры как `MAX_ULONG` для объектов с размером более 4 ГБ на 64-разрядных платформах. Чтобы получить размер объектов, размер которых превышает 4 ГБ, используйте [ICorProfilerCallback4::MovedReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-movedreferences2-method.md) метод вместо этого.  
+>  Этот метод сообщает размеры как `MAX_ULONG` для объектов с размером более 4 Гб на 64-разрядных платформах. Чтобы получить размер объектов, размер которых превышает 4 ГБ, используйте [ICorProfilerCallback4::MovedReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-movedreferences2-method.md) метод вместо этого.  
   
  Сжатие сборки мусора без сжатия освобождает память, занятую "мертвыми" объектами, и сжимает это освобожденное пространство. В результате динамические объекты могут быть перемещены в кучу, и значения `ObjectID`, распространенные предыдущими уведомлениями, могут измениться.  
   

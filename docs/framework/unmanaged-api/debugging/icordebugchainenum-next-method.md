@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd4f27b958aa4b25c2662d8a5e9da6bcdc73d5d3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 26df40297d080d1ccc9464f7b09e7731f135e270
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404460"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489830"
 ---
 # <a name="icordebugchainenumnext-method"></a>Метод ICorDebugChainEnum::Next
-Получает заданное число экземпляров ICorDebugChain из перечисления, начиная с текущей позиции.  
+Получает указанное число экземпляров ICorDebugChain из перечисления, начиная с текущей позиции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,21 +38,21 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `celt`  
  [in] Количество `ICorDebugChain` извлекаемых экземпляров.  
   
  `chains`  
- [out] Массив указателей, каждый из которых указывает на `ICorDebugChain` , представляющий цепочки.  
+ [out] Массив указателей, каждый из которых указывает `ICorDebugChain` , представляющий цепочку.  
   
  `pceltFetched`  
- [out] Указатель на число `ICorDebugChain` фактически возвращаемых экземпляров. Это значение может быть значение null, если `celt` — один.  
+ [out] Указатель на число `ICorDebugChain` фактически возвращенных экземпляров. Это значение может иметь значение null Если `celt` — один.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

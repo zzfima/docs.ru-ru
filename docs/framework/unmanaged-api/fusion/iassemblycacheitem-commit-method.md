@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9b39cdec6d5cc10256c2911c98f94b7565295408
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d234910429961a8a0add1d88d0c0eed96ed12a58
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538002"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496213"
 ---
 # <a name="iassemblycacheitemcommit-method"></a>Метод IAssemblyCacheItem::Commit
 Фиксирует ссылки на сборку, кэшированных в памяти.  
@@ -36,7 +36,7 @@ HRESULT Commit (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `dwFlags`  
  [in] Флаги, определенные в Fusion.idl.  
   

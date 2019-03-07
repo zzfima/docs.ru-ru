@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e6f739902738f05e103cce9365a3afc0379f9b0e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f5cff3f3f577a0c7ef04a226ec70a2722c89b5c8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646988"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496889"
 ---
 # <a name="icordebugprocess5getarraylayout-method"></a>Метод ICorDebugProcess5::GetArrayLayout
 Предоставляет сведения о структуре типов массивов.  
@@ -33,7 +33,7 @@ ms.locfileid: "54646988"
 HRESULT GetArrayLayout(    [in] COR_TYPEID id,     [out] COR_ARRAY_LAYOUT *pLayout);  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `id`  
  [in] Объект [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) токен, который указывает заданный массив, в которых запрашиваются.  
   

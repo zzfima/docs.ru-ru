@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 191a6e4fcfe340ed43e85a9aa90f8a2ec0931730
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0e6f76750f82655922f00c9d9fa71e87ab3c05df
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671659"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487139"
 ---
 # <a name="imetadataimportgettyperefprops-method"></a>Метод IMetaDataImport::GetTypeRefProps
 Возвращает метаданные, связанные с <xref:System.Type> ссылается указанный токен TypeRef.  
@@ -39,7 +39,7 @@ HRESULT GetTypeRefProps (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `tr`  
  [in] Токен TypeRef, который представляет метаданные для возвращаемого типа.  
   

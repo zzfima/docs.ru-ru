@@ -17,14 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9d02a68e80e34be906e9fe09f3457a0f2214c6f0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 48650a370f7d15724e20850e9d3b47dc8215f960
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498358"
 ---
 # <a name="icordebugchaingetreason-method"></a>Метод ICorDebugChain::GetReason
-Возвращает причину происхождения данной вызывающей цепи.  
+Получает причину происхождения этой цепочки вызовов.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,15 +35,15 @@ HRESULT GetReason (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `pReason`  
- [out] Указатель на значение (побитовое сочетание) CorDebugChainReason перечисления, указывающее причину происхождения данной вызывающей цепи.  
+ [out] Указатель на значение (побитовое сочетание) CorDebugChainReason перечисления, указывающее причину происхождения этой цепочки вызовов.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

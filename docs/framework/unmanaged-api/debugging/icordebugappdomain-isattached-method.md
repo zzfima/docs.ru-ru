@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0412089fee27e556c2f9230e9b34de3391b9bd4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fa9576f568ef1f6da3eef812abb9674aa0d81dfb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402565"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496382"
 ---
 # <a name="icordebugappdomainisattached-method"></a>Метод ICorDebugAppDomain::IsAttached
-Возвращает значение, показывающее, присоединен ли отладчик в домен приложения.  
+Получает значение, указывающее, присоединен ли отладчик в домен приложения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,18 +35,18 @@ HRESULT IsAttached (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `pbAttached`  
- [out] `true` Если отладчик присоединен к домену приложения; в противном случае — `false`.  
+ [out] `true` Если отладчик присоединен в домен приложения; в противном случае — значение `false`.  
   
 ## <a name="remarks"></a>Примечания  
- Методы ICorDebugController нельзя, пока отладчик подключается к домену приложения.  
+ ICorDebugController методы нельзя использовать до подключения отладчика к домену приложения.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

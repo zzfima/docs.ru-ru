@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2009104d31723b9fed383b7bbb41146127d89bd0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a91c8de67a095a2f89a69f43375c9ebdd4fc767c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611960"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491299"
 ---
 # <a name="imetadataimportenumunresolvedmethods-method"></a>Метод IMetaDataImport::EnumUnresolvedMethods
 Перечисляет токены MemberDef, представляющие неразрешенные методы в текущей области метаданных.  
@@ -38,7 +38,7 @@ HRESULT EnumUnresolvedMethods (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `phEnum`  
  [in, out] Указатель на перечислитель. Это должно быть NULL при первом вызове этого метода.  
   
@@ -53,7 +53,7 @@ HRESULT EnumUnresolvedMethods (
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
-|HRESULT|Описание:|  
+|HRESULT|Описание|  
 |-------------|-----------------|  
 |`S_OK`|`EnumUnresolvedMethods` успешно возвращен.|  
 |`S_FALSE`|Существуют маркеры для перечисления отсутствуют. В этом случае `pcTokens` равно нулю.|  
