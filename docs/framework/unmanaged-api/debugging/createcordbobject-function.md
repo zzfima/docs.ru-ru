@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 12898f75d2575e539b018ea367bc870a3dc738a9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f546d7707c40f7f26a46177ae972a988e54e1e45
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406335"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487867"
 ---
 # <a name="createcordbobject-function"></a>Функция CreateCordbObject
 Создает интерфейс отладчика ([ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)), обеспечивающий функциональность для создания управляемого сеанса отладки в удаленном процессе.  
@@ -37,12 +37,12 @@ HRESULT CordbCreateObject (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `iDebuggerVersion`  
  [in] Версия отладчика целевого процесса. Для удаленной отладки этот параметр должен иметь значение CorDebugVersion_2_0.  
   
  `ppCordb`  
- [out] Указатель на указатель на объект, который будет приведен к [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) и возвращаться.  
+ [out] Указатель на указатель на объект, который приводится к [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) интерфейс и возвращается.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  S_OK  
@@ -58,13 +58,13 @@ HRESULT CordbCreateObject (
  Прочие сбои.  
   
 ## <a name="remarks"></a>Примечания  
- [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) интерфейс, который возвращается в `ppCordb` является интерфейсом верхнего уровня отладки для всех управляемых служб отладки.  
+ [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) интерфейс, который возвращается в `ppCordb` — это интерфейс верхнего уровня отладки для всех управляемых служб отладки.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CoreClrRemoteDebuggingInterfaces.h  
+ **Заголовок.** CoreClrRemoteDebuggingInterfaces.h  
   
- **Библиотека:** mscordbi_macx86.dll  
+ **Library:** mscordbi_macx86.dll  
   
- **Версии платформы .NET framework:** 3.5 SP1
+ **Версии платформы .NET framework:** 3.5 с пакетом обновления 1 (SP1)

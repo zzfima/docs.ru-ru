@@ -17,14 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f03d8c993be1ac83ca84275bcb94f1bb3cdf884
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b92885d2a6514839a864d6a345dd8af8b07b90c1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489817"
 ---
 # <a name="icordebugilframe2remapfunction-method"></a>Метод ICorDebugILFrame2::RemapFunction
-Перераспределяет отредактированную функцию путем указания нового смещения промежуточного языка MSIL Microsoft  
+Перераспределяет отредактированную функцию, указав новое смещение промежуточного языка MSIL Microsoft  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,29 +35,29 @@ HRESULT RemapFunction (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `newILOffset`  
- [in] Кадр стека следует поместить указатель инструкций новое смещение MSIL. Это значение должно являться точкой следования.  
+ [in] Кадр стека по которому должен быть помещен указатель инструкции новое смещение MSIL. Это значение должно являться точкой следования.  
   
- Это обязанность вызывающего, чтобы обеспечить правильность этого значения. Например не является допустимым, если оно находится за пределами функции смещение MSIL.  
+ Это обязанность вызывающего, чтобы обеспечить правильность этого значения. Например смещение MSIL является недопустимым, если он находится за пределами функции.  
   
 ## <a name="remarks"></a>Примечания  
- Когда функция фрейма была изменена, отладчик может вызвать `RemapFunction` метод для замены в последней версии функции фрейма, могут быть выполнены. Выполнение кода начинается с заданного смещения MSIL.  
+ Когда функция фрейма был изменен, то отладчик может вызвать `RemapFunction` замену в последней версии функции фрейма, поэтому он может выполняться методом. Выполнение кода начинается с заданного смещения MSIL.  
   
 > [!NOTE]
->  Вызов `RemapFunction`, таких как вызов [ICorDebugILFrame::SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md), немедленно сделает недействительными все отладочные интерфейсы, связанные с генерацией трассировки стека для потока. Среди этих интерфейсов: [ICorDebugChain](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-interface.md), ICorDebugILFrame ICorDebugInternalFrame и ICorDebugNativeFrame.  
+>  Вызов `RemapFunction`, например вызов [ICorDebugILFrame::SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md), немедленно сделает недействительными все интерфейсы отладки, которые связаны с генерацией трассировки стека для потока. Такие интерфейсы включают [ICorDebugChain](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-interface.md), ICorDebugILFrame ICorDebugInternalFrame и ICorDebugNativeFrame.  
   
- `RemapFunction` Метод может вызываться только в контексте текущего кадра и только в одном из следующих случаев:  
+ `RemapFunction` Метод может вызываться только в контексте текущего кадра и только в следующих случаях:  
   
 -   После получения [ICorDebugManagedCallback2::FunctionRemapOpportunity](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-functionremapopportunity-method.md) обратный вызов, который еще не был продолжен.  
   
--   При остановке выполнения кода из-за [ICorDebugManagedCallback::EditAndContinueRemap](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-editandcontinueremap-method.md) событий для этого кадра.  
+-   Когда выполнение кода остановлен из-за [ICorDebugManagedCallback::EditAndContinueRemap](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-editandcontinueremap-method.md) событий для данного кадра.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 050bfb08dfd95e29b6534f69dbd35400d59e6099
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b80e0cc026ce80950c14436abb2e84548f9adb64
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419608"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499580"
 ---
 # <a name="icordebugthreadenumnext-method"></a>Метод ICorDebugThreadEnum::Next
 Возвращает количество экземпляров указанного ICorDebugThread из перечисления, начиная с текущей позиции.  
@@ -38,21 +38,21 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `celt`  
  [in] Количество `ICorDebugThread` извлекаемых экземпляров.  
   
  `threads`  
- [out] Массив указателей, каждый из которых указывает на `ICorDebugThread` , представляющий поток.  
+ [out] Массив указателей, каждый из которых указывает `ICorDebugThread` , представляющий поток.  
   
  `pceltFetched`  
- [out] Указатель на число `ICorDebugThread` фактически возвращаемых экземпляров. Это значение может быть значение null, если `celt` — один.  
+ [out] Указатель на число `ICorDebugThread` фактически возвращенных экземпляров. Это значение может иметь значение null Если `celt` — один.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

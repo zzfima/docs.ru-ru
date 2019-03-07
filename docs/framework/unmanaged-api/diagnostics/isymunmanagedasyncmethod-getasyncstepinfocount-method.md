@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 32a4e084-09b2-4946-a4a7-19a1fed9f7cc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a1a839291c14b093aceb220810764c40f5b468f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 31c8dbfc6562e2f5da42586160e2b23911fc2bfb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590439"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494640"
 ---
 # <a name="isymunmanagedasyncmethodgetasyncstepinfocount-method"></a>Метод ISymUnmanagedAsyncMethod::GetAsyncStepInfoCount
 См. в разделе [метод DefineAsyncStepInfo](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-defineasyncstepinfo-method.md).  
@@ -20,9 +20,9 @@ ms.locfileid: "54590439"
 HRESULT GetAsyncStepInfoCount(    [out, retval] ULONG32* pRetVal);  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |`pRetVal`||  
   

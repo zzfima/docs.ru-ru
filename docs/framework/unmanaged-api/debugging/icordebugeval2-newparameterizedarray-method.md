@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 552d2fa8a7c35066e32fb9f8e9455b3092b1e65b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8c639204fa207774b0e362f1ba8fe71937494ae2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413284"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487705"
 ---
 # <a name="icordebugeval2newparameterizedarray-method"></a>Метод ICorDebugEval2::NewParameterizedArray
-Выделяет новый массив с заданным типом элементов и измерений.  
+Выделяет новый массив элементов указанного типа и измерений.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,27 +38,27 @@ HRESULT NewParameterizedArray(
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `pElementType`  
- [in] Указатель на объект ICorDebugType, представляющий тип элементов, которые хранятся в массиве.  
+ [in] Указатель на интерфейс ICorDebugType объект, представляющий тип элементов, которые хранятся в массиве.  
   
  `rank`  
  [in] Число измерений массива. В платформе .NET Framework версии 2.0 это значение должно быть 1.  
   
  `dims`  
- [in] Размер в байтах для каждого измерения массива.  
+ [in] Размер в байтах каждого измерения массива.  
   
  `lowBounds`  
  [в] Необязательно. Нижняя граница каждого измерения массива. Если это значение указано, для каждого измерения предполагается нижнюю границу, равную нулю.  
   
 ## <a name="remarks"></a>Примечания  
- Элементы массива могут быть экземпляры универсального типа. Массив всегда создается в домене приложения, в котором в настоящее время выполняется поток. В .NET Framework версии 2.0 значение `rank` должно иметь значение 1.  
+ Элементы массива могут быть экземпляры универсального типа. Массив всегда создается в домене приложения, в котором поток выполняется в данный момент. В .NET Framework 2.0, значение `rank` должно быть равно 1.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

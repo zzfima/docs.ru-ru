@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b3c145bae61922894f4893d532923319ccf16f85
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 88006703ba4a491ae458868a1431be618d37252a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499016"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471203"
 ---
 # <a name="importfile2-method"></a>Метод ImportFile2
 Импортирует сборок и несвязанных модулей. Этот метод аналогичен [метод ImportFile](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), но работает, даже если импортируемого файла не существует на диске.  
@@ -40,7 +40,7 @@ HRESULT ImportFile2(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `pszFilename`  
  Имя файла для импорта.  
   

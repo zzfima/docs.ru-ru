@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b88c49ba93ff3c4cc3f5c7a656dfa5da6e82109e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d6f8a9c62a1be682d3f0259c27f311e2dcbb2f11
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559848"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492729"
 ---
 # <a name="icordebugvaluegetaddress-method"></a>Метод ICorDebugValue::GetAddress
 Возвращает адрес объекта «ICorDebugValue», который находится в отлаживаемом процессе.  
@@ -35,7 +35,7 @@ HRESULT GetAddress (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `pAddress`  
  [out] Указатель на `CORDB_ADDRESS` , указывающий адрес этого объекта значение.  
   

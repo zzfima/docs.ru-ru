@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9bf3e5d427698673576f71e290fde54275b75317
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 876f74d7fe7555f71db0bd77e68f657dfc80b179
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683460"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478964"
 ---
 # <a name="imetadatatablesgettableinfo-method"></a>Метод IMetaDataTables::GetTableInfo
 Получает имя, размер строки, количество строк, число столбцов и ключевой столбец индекса указанной таблицы.  
@@ -40,7 +40,7 @@ HRESULT GetTableInfo (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `ixTbl`  
  [in] Идентификатор таблицы, свойства которого следует вернуть.  
   

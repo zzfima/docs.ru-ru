@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6c3d71c75527daa9a9c130d5aaa0d6838816c276
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 92911469383e9e8a1484eff4dedfaf61117e5982
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559428"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496265"
 ---
 # <a name="igchostgetthreadstats-method"></a>Метод IGCHost::GetThreadStats
 Получает статистику по потокам для сборки мусора.  
@@ -36,7 +36,7 @@ HRESULT GetThreadStats (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `pFiberCookie`  
  [in] Указатель на Многослойный файл cookie, указывающее поток, для которого требуется извлечь статистику.  
   

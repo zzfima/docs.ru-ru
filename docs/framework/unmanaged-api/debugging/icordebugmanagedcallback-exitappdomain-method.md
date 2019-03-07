@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: baeac4ee3e4a22b023420caa7caffa238ff5a5c3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d1b6d23ab5d773f6f25becefd45895c365271e6a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696117"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476195"
 ---
 # <a name="icordebugmanagedcallbackexitappdomain-method"></a>Метод ICorDebugManagedCallback::ExitAppDomain
 Уведомляет отладчик о том, что завершил работу домена приложения.  
@@ -36,7 +36,7 @@ HRESULT ExitAppDomain (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `pProcess`  
  [in] Указатель на объект ICorDebugProcess, представляющий процесс, содержащий указанный домен приложения.  
   

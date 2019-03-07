@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eae7831d9a6d7bdee2c632359f317515c810428b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6f95ac4e4c21a2cbaab9f91c1257a868bdce65af
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626788"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499190"
 ---
 # <a name="strongnametokenfromassemblyex-function"></a>Функция StrongNameTokenFromAssemblyEx
 Создает маркер строгого имени из указанного файла сборки и возвращает открытый ключ, представляющий токен.  
@@ -40,7 +40,7 @@ BOOLEAN StrongNameTokenFromAssemblyEx (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `wszFilePath`  
  [in] Путь к переносимого исполняемого (PE) файла для сборки.  
   

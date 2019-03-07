@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e7a51d1ddf7a5a65ce8713161c53c1c54a5d8861
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cdc617039ac8328e0153abc7cc3752c54060a8c4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617698"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481473"
 ---
 # <a name="imetadataimport2enumgenericparamconstraints-method"></a>Метод IMetaDataImport2::EnumGenericParamConstraints
 Получает перечислитель для массива универсальный параметр ограничения, связанные с универсального параметра, представленного указанным токеном.  
@@ -39,7 +39,7 @@ HRESULT EnumGenericParamConstraints (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `phEnum`  
  [in, out] Указатель на перечислитель.  
   
@@ -57,7 +57,7 @@ HRESULT EnumGenericParamConstraints (
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
-|HRESULT|Описание|  
+|HRESULT|Описание:|  
 |-------------|-----------------|  
 |`S_OK`|`EnumGenericParameterConstraints` успешно возвращен.|  
 |`S_FALSE`|`phEnum` не имеет члена элементов. В этом случае `pcGenericParameterConstraints` имеет значение 0 (ноль).|  

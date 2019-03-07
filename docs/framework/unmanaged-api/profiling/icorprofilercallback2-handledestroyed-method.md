@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 57b814f01d7da8d5b3f9e5bda7d0cf517bb870ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d666b01ae202831df38e0537221e238b9e2bf35e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592319"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484411"
 ---
 # <a name="icorprofilercallback2handledestroyed-method"></a>Метод ICorProfilerCallback2::HandleDestroyed
 Уведомляет профилировщик кода, что дескриптор сборки мусора был удален.  
@@ -34,7 +34,7 @@ HRESULT HandleDestroyed(
     [in] GCHandleID handleId);  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `handleId`  
  [in] Идентификатор дескриптора для сборки мусора.  
   

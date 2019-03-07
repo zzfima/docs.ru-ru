@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d234e01e3d47a64b9a001591ee2b61074eea8afb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6ed6570e11008e52d4b1f97c2dc90e2ccbef2e35
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403398"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471391"
 ---
 # <a name="icordebugclass2setjmcstatus-method"></a>Метод ICorDebugClass2::SetJMCStatus
-Для каждого метода класса задает значение, указывающее, является ли метод пользовательским кодом.  
+Для каждого метода класса задает значение, указывающее, является ли метод определяемого пользователем кода.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,20 +35,20 @@ HRESULT SetJMCStatus (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `bIsJustMyCode`  
- [in] Значение `true` для указания, что метод является определяемой пользователем код; в противном случае — значение `false`.  
+ [in] Значение `true` для указания, что метод определяется пользователем кода; в противном случае — значение `false`.  
   
 ## <a name="remarks"></a>Примечания  
- Только мой код (JMC) пошаговым пропустит не пользовательский код. Пользовательский код должен быть подмножеством отлаживаемого кода.  
+ Только мой код (JMC) несопоставимого пропустит не пользовательский код. Пользовательский код должен представлять собой подмножество отлаживаемый код.  
   
- `SetJMCStatus` Возвращает значение HRESULT S_FALSE, если ему не удается задать значение для любого метода, даже если он успешно устанавливает значение для всех других методов.  
+ `SetJMCStatus` Возвращает значение HRESULT S_FALSE, если не удается задать значение для любого метода, даже если он успешно устанавливает значение для всех других методов.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

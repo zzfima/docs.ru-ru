@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8abe1b63aad7b73b3260553550112ded75b77bb9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7a928aed73c0287a4cad2432fa6b6ebec43ea285
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537742"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489570"
 ---
 # <a name="icordebugmanagedcallbackexitthread-method"></a>Метод ICorDebugManagedCallback::ExitThread
 Уведомляет отладчик о завершении потока, время выполнения управляемого кода.  
@@ -36,7 +36,7 @@ HRESULT ExitThread (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `pAppDomain`  
  [in] Указатель на объект ICorDebugAppDomain, который представляет домен приложения, содержащий управляемого потока.  
   

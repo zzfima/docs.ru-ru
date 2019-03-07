@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2143524b92ca34299877fe935ae5a603c3e86563
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c8fde6772a43cc763df82ec109c11f8548ba240e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540511"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476182"
 ---
 # <a name="icordebugmanagedcallbackloadassembly-method"></a>Метод ICorDebugManagedCallback::LoadAssembly
 Уведомляет отладчик, что сборки среды выполнения (CLR) CLR была успешно загружена.  
@@ -36,7 +36,7 @@ HRESULT LoadAssembly (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `pAppDomain`  
  [in] Указатель на объект ICorDebugAppDomain, который представляет домен приложения, в который была загружена сборка.  
   

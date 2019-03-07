@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8a18e079f84d8adf2cc6f9bd22b35eb1445eaaf3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6a7541a2093fe877fb84a8a05237f18c4da43c44
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585020"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57465989"
 ---
 # <a name="icorpublishappdomaingetid-method"></a>Метод ICorPublishAppDomain::GetID
 Возвращает уникальный идентификатор для данного [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md).  
@@ -35,7 +35,7 @@ HRESULT GetID (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `puId`  
  [out] Указатель на идентификатор домена приложения.  
   

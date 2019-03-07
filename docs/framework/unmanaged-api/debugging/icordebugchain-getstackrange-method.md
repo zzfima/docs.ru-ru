@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 226f8c431b90d53366aa5e504101e7de581ec570
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ac40927ac9469e4a2fb74fb550287130b9bb9f83
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402474"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481564"
 ---
 # <a name="icordebugchaingetstackrange-method"></a>Метод ICorDebugChain::GetStackRange
-Возвращает диапазон адресов сегмента стека для этой цепи.  
+Получает диапазон адресов сегмента стека для этой цепочки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,21 +36,21 @@ HRESULT GetStackRange (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `pStart`  
- [out] Указатель на `CORDB_ADDRESS` значение, которое начальный адрес сегмента стека.  
+ [out] Указатель на `CORDB_ADDRESS` значение, равное начальный адрес сегмента стека.  
   
  `pEnd`  
- [out] Указатель на `CORDB_ADDRESS` значение, которое конечный адрес сегмента стека.  
+ [out] Указатель на `CORDB_ADDRESS` значение, равное конечный адрес сегмента стека.  
   
 ## <a name="remarks"></a>Примечания  
- Числовой диапазон имеет смысл только для сравнения расположений кадров стека. Нельзя делать никаких предположений о том, что фактически хранятся в стеке.  
+ Числовой диапазон имеет смысл только для сравнения расположений кадра стека. Нельзя делать никаких предположений о фактическое содержимое в стеке.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

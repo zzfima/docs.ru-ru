@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 72020b72-9611-4bc3-b1e7-5a16b023bfa3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f77871c8547f250d4b46c11c1a0be25b6ef68a88
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 726ded615fb6d1bcd0a3a4b92e93f3675d9ce8fa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54581957"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484567"
 ---
 # <a name="icordebugmergedassemblyrecordgetpublickeytoken-method"></a>Метод ICorDebugMergedAssemblyRecord::GetPublicKeyToken
 Возвращает токен открытого ключа сборки.  
@@ -24,7 +24,7 @@ HRESULT GetPublicKeyToken(
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `cbPublicKeyToken`  
  [in] Максимальное число байтов в массиве `pbPublicKeyToken`.  
   
@@ -38,7 +38,7 @@ HRESULT GetPublicKeyToken(
  Токен открытого ключа сборки — это последние восемь байтов хэша SHA1 ее открытого ключа.  
   
 > [!NOTE]
->  Этот метод доступен только в машинном коде .NET.  
+>  Этот метод доступен только в .NET Native.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

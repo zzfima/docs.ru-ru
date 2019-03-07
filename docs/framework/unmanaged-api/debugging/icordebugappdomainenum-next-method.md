@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 84ca240f937e210846e6eb9a17abfe70a280b87d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5fefc933cc84fede1f3dea16d4b13e09801a96e0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403560"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497357"
 ---
 # <a name="icordebugappdomainenumnext-method"></a>Метод ICorDebugAppDomainEnum::Next
-Возвращает заданное число доменов приложений из коллекции, начиная с текущей позиции курсора.  
+Возвращает указанное число доменов приложений из коллекции, начиная с текущей позиции курсора.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,21 +38,21 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `celt`  
- [in] Число доменов приложений, должны быть получены.  
+ [in] Количество доменов приложений требуется получить.  
   
  `values`  
  [out] Массив указателей, каждый из которых указывает на объект ICorDebugAppDomain, который представляет домен приложения.  
   
  `pceltFetched`  
- [out] Указатель на число фактически извлеченных доменов приложений. Это значение может быть значение null, если `celt` — один.  
+ [out] Указатель на количество фактически возвращенных доменов приложений. Это значение может иметь значение null Если `celt` — один.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
