@@ -1,12 +1,6 @@
 ---
-title: Сериализация (C#)
+title: 'Сериализация (C#)'
 ms.date: 04/26/2018
-ms.openlocfilehash: 7d72be92e5568037264438e3fde1e7565366c962
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858321"
 ---
 # <a name="serialization-c"></a>Сериализация (C#)
 
@@ -68,12 +62,12 @@ ms.locfileid: "43858321"
 
 Сериализация конструктора — это особая форма сериализации, при которой применяется способ постоянного хранения объектов, используемый в средствах разработки. Сериализация конструктора выполняет преобразование графа объекта в файл исходного кода, с помощью которого впоследствии можно восстановить граф объекта. Этот файл исходного кода может содержать программный код, разметку или даже информацию из таблицы SQL.
 
-##  <a name="BKMK_RelatedTopics"></a> Связанные разделы и примеры  
-[Walkthrough: Persisting an Object in Visual Studio (C#)](walkthrough-persisting-an-object-in-visual-studio.md) (Пошаговое руководство. Сохранение объекта в Visual Studio (C#))  
+## <a name="BKMK_RelatedTopics"></a> Связанные разделы и примеры  
+[Пошаговое руководство: Сохранение объекта в Visual Studio (C#)](walkthrough-persisting-an-object-in-visual-studio.md)  
 Демонстрирует, как с помощью сериализации сохранить данные объекта между экземплярами, чтобы сохранять значения и извлекать их при следующем создании экземпляра объекта.
 
-[How to: Read Object Data from an XML File (C#)](how-to-read-object-data-from-an-xml-file.md) (Практическое руководство. Чтение данных объекта из XML-файла (C#))  
+[Практическое руководство. Чтение данных объекта из XML-файла (C#)](how-to-read-object-data-from-an-xml-file.md)  
  Показывает считывание данных объекта, которые ранее были записаны в XML-файл с помощью класса <xref:System.Xml.Serialization.XmlSerializer>.
 
-[How to: Write Object Data to an XML File (C#)](how-to-write-object-data-to-an-xml-file.md) (Практическое руководство. Запись данных объекта в XML-файл (C#))  
+[Практическое руководство. Запись данных объекта в XML-файл (C#)](how-to-write-object-data-to-an-xml-file.md)  
 Показывает, как записать объект из класса в XML-файл с помощью класса <xref:System.Xml.Serialization.XmlSerializer>.
