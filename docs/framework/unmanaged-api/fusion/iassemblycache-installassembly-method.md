@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 112c42f15b39c72ba8519877e5ee6a8700953ba5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50152b72cade763a5b890c0c9d45109d88ce65a7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625865"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469213"
 ---
-# <a name="iassemblycacheinstallassembly-method"></a><span data-ttu-id="03217-102">Метод IAssemblyCache::InstallAssembly</span><span class="sxs-lookup"><span data-stu-id="03217-102">IAssemblyCache::InstallAssembly Method</span></span>
-<span data-ttu-id="03217-103">Устанавливает указанную сборку в глобальный кэш сборок.</span><span class="sxs-lookup"><span data-stu-id="03217-103">Installs the specified assembly in the global assembly cache.</span></span>  
+# <a name="iassemblycacheinstallassembly-method"></a><span data-ttu-id="b41dc-102">Метод IAssemblyCache::InstallAssembly</span><span class="sxs-lookup"><span data-stu-id="b41dc-102">IAssemblyCache::InstallAssembly Method</span></span>
+<span data-ttu-id="b41dc-103">Устанавливает указанную сборку в глобальный кэш сборок.</span><span class="sxs-lookup"><span data-stu-id="b41dc-103">Installs the specified assembly in the global assembly cache.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="03217-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="03217-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b41dc-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b41dc-104">Syntax</span></span>  
   
 ```  
 HRESULT InstallAssembly (  
@@ -37,26 +37,26 @@ HRESULT InstallAssembly (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="03217-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="03217-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b41dc-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="b41dc-105">Parameters</span></span>  
  `dwFlags`  
- <span data-ttu-id="03217-106">[in] Флаги, определенные в Fusion.idl.</span><span class="sxs-lookup"><span data-stu-id="03217-106">[in] Flags defined in Fusion.idl.</span></span> <span data-ttu-id="03217-107">Поддерживаются следующие значения:</span><span class="sxs-lookup"><span data-stu-id="03217-107">The following values are supported:</span></span>  
+ <span data-ttu-id="b41dc-106">[in] Флаги, определенные в Fusion.idl.</span><span class="sxs-lookup"><span data-stu-id="b41dc-106">[in] Flags defined in Fusion.idl.</span></span> <span data-ttu-id="b41dc-107">Поддерживаются следующие значения:</span><span class="sxs-lookup"><span data-stu-id="b41dc-107">The following values are supported:</span></span>  
   
--   <span data-ttu-id="03217-108">IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0X00000001)</span><span class="sxs-lookup"><span data-stu-id="03217-108">IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0x00000001)</span></span>  
+-   <span data-ttu-id="b41dc-108">IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0X00000001)</span><span class="sxs-lookup"><span data-stu-id="b41dc-108">IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0x00000001)</span></span>  
   
--   <span data-ttu-id="03217-109">IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)</span><span class="sxs-lookup"><span data-stu-id="03217-109">IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)</span></span>  
+-   <span data-ttu-id="b41dc-109">IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)</span><span class="sxs-lookup"><span data-stu-id="b41dc-109">IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)</span></span>  
   
  `pszManifestFilePath`  
- <span data-ttu-id="03217-110">[in] Путь к манифест сборки для установки.</span><span class="sxs-lookup"><span data-stu-id="03217-110">[in] The path to the manifest for the assembly to install.</span></span>  
+ <span data-ttu-id="b41dc-110">[in] Путь к манифест сборки для установки.</span><span class="sxs-lookup"><span data-stu-id="b41dc-110">[in] The path to the manifest for the assembly to install.</span></span>  
   
  `pRefData`  
- <span data-ttu-id="03217-111">[in] Объект [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) структура, содержащая данные для установки.</span><span class="sxs-lookup"><span data-stu-id="03217-111">[in] A [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) structure that contains data for the installation.</span></span>  
+ <span data-ttu-id="b41dc-111">[in] Объект [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) структура, содержащая данные для установки.</span><span class="sxs-lookup"><span data-stu-id="b41dc-111">[in] A [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) structure that contains data for the installation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="03217-112">Требования</span><span class="sxs-lookup"><span data-stu-id="03217-112">Requirements</span></span>  
- <span data-ttu-id="03217-113">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="03217-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b41dc-112">Требования</span><span class="sxs-lookup"><span data-stu-id="b41dc-112">Requirements</span></span>  
+ <span data-ttu-id="b41dc-113">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b41dc-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="03217-114">**Заголовок.** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="03217-114">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="b41dc-114">**Заголовок.** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="b41dc-114">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="03217-115">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="03217-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="b41dc-115">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b41dc-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="03217-116">См. также</span><span class="sxs-lookup"><span data-stu-id="03217-116">See also</span></span>
-- [<span data-ttu-id="03217-117">Интерфейс IAssemblyCache</span><span class="sxs-lookup"><span data-stu-id="03217-117">IAssemblyCache Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+## <a name="see-also"></a><span data-ttu-id="b41dc-116">См. также</span><span class="sxs-lookup"><span data-stu-id="b41dc-116">See also</span></span>
+- [<span data-ttu-id="b41dc-117">Интерфейс IAssemblyCache</span><span class="sxs-lookup"><span data-stu-id="b41dc-117">IAssemblyCache Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)

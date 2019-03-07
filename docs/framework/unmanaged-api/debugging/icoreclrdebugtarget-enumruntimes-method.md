@@ -19,17 +19,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac0cee9affff03a95cd7635a8b1afd42e6edc6ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b9b434edc10a7c11d738bd3fc10402ef3f83d9dc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684334"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468277"
 ---
-# <a name="icoreclrdebugtargetenumruntimes-method"></a><span data-ttu-id="befbf-102">Метод ICoreClrDebugTarget::EnumRuntimes</span><span class="sxs-lookup"><span data-stu-id="befbf-102">ICoreClrDebugTarget::EnumRuntimes Method</span></span>
-<span data-ttu-id="befbf-103">Перечисляет среды CLR в указанном процессе, который выполняется на удаленном компьютере.</span><span class="sxs-lookup"><span data-stu-id="befbf-103">Enumerates the common language runtimes (CLRs) in the specified process that is running on a remote computer.</span></span>  
+# <a name="icoreclrdebugtargetenumruntimes-method"></a><span data-ttu-id="7e4e9-102">Метод ICoreClrDebugTarget::EnumRuntimes</span><span class="sxs-lookup"><span data-stu-id="7e4e9-102">ICoreClrDebugTarget::EnumRuntimes Method</span></span>
+<span data-ttu-id="7e4e9-103">Перечисляет среды CLR в указанном процессе, который выполняется на удаленном компьютере.</span><span class="sxs-lookup"><span data-stu-id="7e4e9-103">Enumerates the common language runtimes (CLRs) in the specified process that is running on a remote computer.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="befbf-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="befbf-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7e4e9-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="7e4e9-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumRuntimes (  
@@ -39,40 +39,40 @@ HRESULT EnumRuntimes (
     );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="befbf-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="befbf-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7e4e9-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="7e4e9-105">Parameters</span></span>  
  `dwInternalProcessID`  
- <span data-ttu-id="befbf-106">[in] Внутренний идентификатор процесса, для которого требуется перечислить среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="befbf-106">[in] The internal process ID of the process for which you want to enumerate runtimes.</span></span> <span data-ttu-id="befbf-107">Это будет `m_dwInternalID` из соответствующего [CoreClrDebugProcInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md).</span><span class="sxs-lookup"><span data-stu-id="befbf-107">This will be `m_dwInternalID` from the corresponding [CoreClrDebugProcInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md).</span></span>  
+ <span data-ttu-id="7e4e9-106">[in] Внутренний идентификатор процесса, для которого требуется перечислить среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="7e4e9-106">[in] The internal process ID of the process for which you want to enumerate runtimes.</span></span> <span data-ttu-id="7e4e9-107">Это будет `m_dwInternalID` из соответствующего [CoreClrDebugProcInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md).</span><span class="sxs-lookup"><span data-stu-id="7e4e9-107">This will be `m_dwInternalID` from the corresponding [CoreClrDebugProcInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md).</span></span>  
   
  `pcRuntimes`  
- <span data-ttu-id="befbf-108">[out] Число сред выполнения, возвращаемых в `ppRuntimes`.</span><span class="sxs-lookup"><span data-stu-id="befbf-108">[out] The number of runtimes returned in `ppRuntimes`.</span></span> <span data-ttu-id="befbf-109">Это значение может быть 0 (ноль).</span><span class="sxs-lookup"><span data-stu-id="befbf-109">This value can be 0 (zero).</span></span>  
+ <span data-ttu-id="7e4e9-108">[out] Число сред выполнения, возвращаемых в `ppRuntimes`.</span><span class="sxs-lookup"><span data-stu-id="7e4e9-108">[out] The number of runtimes returned in `ppRuntimes`.</span></span> <span data-ttu-id="7e4e9-109">Это значение может быть равно 0 (нулю).</span><span class="sxs-lookup"><span data-stu-id="7e4e9-109">This value can be 0 (zero).</span></span>  
   
  `ppRuntimes`  
- <span data-ttu-id="befbf-110">[out] Массив [CoreClrDebugRuntimeInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugruntimeinfo-structure.md) структуры, которые представляют среды выполнения, загруженных в удаленном целевом процессе.</span><span class="sxs-lookup"><span data-stu-id="befbf-110">[out] An array of [CoreClrDebugRuntimeInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugruntimeinfo-structure.md) structures that represent the runtimes loaded in the remote target process.</span></span>  
+ <span data-ttu-id="7e4e9-110">[out] Массив [CoreClrDebugRuntimeInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugruntimeinfo-structure.md) структуры, которые представляют среды выполнения, загруженных в удаленном целевом процессе.</span><span class="sxs-lookup"><span data-stu-id="7e4e9-110">[out] An array of [CoreClrDebugRuntimeInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugruntimeinfo-structure.md) structures that represent the runtimes loaded in the remote target process.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="befbf-111">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="befbf-111">Return Value</span></span>  
- <span data-ttu-id="befbf-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="befbf-112">S_OK</span></span>  
- <span data-ttu-id="befbf-113">Выполнено.</span><span class="sxs-lookup"><span data-stu-id="befbf-113">Success.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="7e4e9-111">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="7e4e9-111">Return Value</span></span>  
+ <span data-ttu-id="7e4e9-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="7e4e9-112">S_OK</span></span>  
+ <span data-ttu-id="7e4e9-113">Выполнено.</span><span class="sxs-lookup"><span data-stu-id="7e4e9-113">Success.</span></span>  
   
- <span data-ttu-id="befbf-114">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="befbf-114">S_FALSE</span></span>  
- <span data-ttu-id="befbf-115">`dwInternalProcessID` не соответствует ни одному процессу, который выполняется на компьютере, возможно потому, что этот процесс был завершен.</span><span class="sxs-lookup"><span data-stu-id="befbf-115">`dwInternalProcessID` does not match any process that is running on the computer, probably because the process was terminated.</span></span> <span data-ttu-id="befbf-116">`pcRuntimes` и `ppRuntimes` будут иметь значение null.</span><span class="sxs-lookup"><span data-stu-id="befbf-116">`pcRuntimes` and `ppRuntimes` will be null.</span></span>  
+ <span data-ttu-id="7e4e9-114">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="7e4e9-114">S_FALSE</span></span>  
+ <span data-ttu-id="7e4e9-115">`dwInternalProcessID` не соответствует ни одному процессу, который выполняется на компьютере, возможно потому, что этот процесс был завершен.</span><span class="sxs-lookup"><span data-stu-id="7e4e9-115">`dwInternalProcessID` does not match any process that is running on the computer, probably because the process was terminated.</span></span> <span data-ttu-id="7e4e9-116">`pcRuntimes` и `ppRuntimes` будут иметь значение null.</span><span class="sxs-lookup"><span data-stu-id="7e4e9-116">`pcRuntimes` and `ppRuntimes` will be null.</span></span>  
   
- <span data-ttu-id="befbf-117">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="befbf-117">E_OUTOFMEMORY</span></span>  
- <span data-ttu-id="befbf-118">Не удается выделить достаточно памяти для `ppRuntimes`.</span><span class="sxs-lookup"><span data-stu-id="befbf-118">Unable to allocate enough memory for `ppRuntimes`.</span></span>  
+ <span data-ttu-id="7e4e9-117">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="7e4e9-117">E_OUTOFMEMORY</span></span>  
+ <span data-ttu-id="7e4e9-118">Не удается выделить достаточно памяти для `ppRuntimes`.</span><span class="sxs-lookup"><span data-stu-id="7e4e9-118">Unable to allocate enough memory for `ppRuntimes`.</span></span>  
   
- <span data-ttu-id="befbf-119">E_FAIL (или другие коды возврата E_)</span><span class="sxs-lookup"><span data-stu-id="befbf-119">E_FAIL (or other E_ return codes)</span></span>  
- <span data-ttu-id="befbf-120">Прочие сбои.</span><span class="sxs-lookup"><span data-stu-id="befbf-120">Other failures.</span></span>  
+ <span data-ttu-id="7e4e9-119">E_FAIL (или другие коды возврата E_)</span><span class="sxs-lookup"><span data-stu-id="7e4e9-119">E_FAIL (or other E_ return codes)</span></span>  
+ <span data-ttu-id="7e4e9-120">Другие сбои.</span><span class="sxs-lookup"><span data-stu-id="7e4e9-120">Other failures.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="befbf-121">Примечания</span><span class="sxs-lookup"><span data-stu-id="befbf-121">Remarks</span></span>  
- <span data-ttu-id="befbf-122">Чтобы освободить память, выделенную этим методом, вызовите [ICoreClrDebugTarget::FreeMemory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="befbf-122">To free the memory that was allocated by this method, call the [ICoreClrDebugTarget::FreeMemory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7e4e9-121">Примечания</span><span class="sxs-lookup"><span data-stu-id="7e4e9-121">Remarks</span></span>  
+ <span data-ttu-id="7e4e9-122">Чтобы освободить память, выделенную этим методом, вызовите [ICoreClrDebugTarget::FreeMemory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="7e4e9-122">To free the memory that was allocated by this method, call the [ICoreClrDebugTarget::FreeMemory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="befbf-123">Требования</span><span class="sxs-lookup"><span data-stu-id="befbf-123">Requirements</span></span>  
- <span data-ttu-id="befbf-124">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="befbf-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7e4e9-123">Требования</span><span class="sxs-lookup"><span data-stu-id="7e4e9-123">Requirements</span></span>  
+ <span data-ttu-id="7e4e9-124">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7e4e9-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="befbf-125">**Заголовок.** CoreClrRemoteDebuggingInterfaces.h</span><span class="sxs-lookup"><span data-stu-id="befbf-125">**Header:** CoreClrRemoteDebuggingInterfaces.h</span></span>  
+ <span data-ttu-id="7e4e9-125">**Заголовок.** CoreClrRemoteDebuggingInterfaces.h</span><span class="sxs-lookup"><span data-stu-id="7e4e9-125">**Header:** CoreClrRemoteDebuggingInterfaces.h</span></span>  
   
- <span data-ttu-id="befbf-126">**Library:** mscordbi_macx86.dll</span><span class="sxs-lookup"><span data-stu-id="befbf-126">**Library:** mscordbi_macx86.dll</span></span>  
+ <span data-ttu-id="7e4e9-126">**Library:** mscordbi_macx86.dll</span><span class="sxs-lookup"><span data-stu-id="7e4e9-126">**Library:** mscordbi_macx86.dll</span></span>  
   
- <span data-ttu-id="befbf-127">**Версии платформы .NET framework:** 3.5 с пакетом обновления 1 (SP1)</span><span class="sxs-lookup"><span data-stu-id="befbf-127">**.NET Framework Versions:** 3.5 SP1</span></span>  
+ <span data-ttu-id="7e4e9-127">**Версии платформы .NET framework:** 3.5 с пакетом обновления 1 (SP1)</span><span class="sxs-lookup"><span data-stu-id="7e4e9-127">**.NET Framework Versions:** 3.5 SP1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="befbf-128">См. также</span><span class="sxs-lookup"><span data-stu-id="befbf-128">See also</span></span>
-- [<span data-ttu-id="befbf-129">Интерфейс ICoreClrDebugTarget</span><span class="sxs-lookup"><span data-stu-id="befbf-129">ICoreClrDebugTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)
+## <a name="see-also"></a><span data-ttu-id="7e4e9-128">См. также</span><span class="sxs-lookup"><span data-stu-id="7e4e9-128">See also</span></span>
+- [<span data-ttu-id="7e4e9-129">Интерфейс ICoreClrDebugTarget</span><span class="sxs-lookup"><span data-stu-id="7e4e9-129">ICoreClrDebugTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)

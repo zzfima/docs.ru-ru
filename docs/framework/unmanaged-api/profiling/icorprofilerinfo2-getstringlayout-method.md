@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b87444165f0504964b6489beb562ca2e8bd4697e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fdfa6f5cb5aae2124f04580ce49064ba857e2602
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524290"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473036"
 ---
-# <a name="icorprofilerinfo2getstringlayout-method"></a><span data-ttu-id="46149-102">Метод ICorProfilerInfo2::GetStringLayout</span><span class="sxs-lookup"><span data-stu-id="46149-102">ICorProfilerInfo2::GetStringLayout Method</span></span>
-<span data-ttu-id="46149-103">Получает сведения о структуре строкового объекта.</span><span class="sxs-lookup"><span data-stu-id="46149-103">Gets information about the layout of a string object.</span></span> <span data-ttu-id="46149-104">Этот метод является устаревшим в [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]и заменяется [ICorProfilerInfo3::GetStringLayout2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="46149-104">This method is deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)], and is superseded by the [ICorProfilerInfo3::GetStringLayout2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md) method.</span></span>  
+# <a name="icorprofilerinfo2getstringlayout-method"></a><span data-ttu-id="52101-102">Метод ICorProfilerInfo2::GetStringLayout</span><span class="sxs-lookup"><span data-stu-id="52101-102">ICorProfilerInfo2::GetStringLayout Method</span></span>
+<span data-ttu-id="52101-103">Получает сведения о структуре строкового объекта.</span><span class="sxs-lookup"><span data-stu-id="52101-103">Gets information about the layout of a string object.</span></span> <span data-ttu-id="52101-104">Этот метод является устаревшим в [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]и заменяется [ICorProfilerInfo3::GetStringLayout2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="52101-104">This method is deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)], and is superseded by the [ICorProfilerInfo3::GetStringLayout2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="46149-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="46149-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="52101-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="52101-105">Syntax</span></span>  
   
 ```  
 HRESULT GetStringLayout(  
@@ -36,39 +36,39 @@ HRESULT GetStringLayout(
     [out] ULONG *pBufferOffset);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="46149-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="46149-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="52101-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="52101-106">Parameters</span></span>  
  `pBufferLengthOffset`  
- <span data-ttu-id="46149-107">[out] Указатель на смещение расположения, относительно `ObjectID` указатель, который хранит длину строки.</span><span class="sxs-lookup"><span data-stu-id="46149-107">[out] A pointer to the offset of the location, relative to the `ObjectID` pointer, that stores the length of the string.</span></span> <span data-ttu-id="46149-108">Длина хранится в виде `DWORD`.</span><span class="sxs-lookup"><span data-stu-id="46149-108">The length is stored as a `DWORD`.</span></span>  
+ <span data-ttu-id="52101-107">[out] Указатель на смещение расположения, относительно `ObjectID` указатель, который хранит длину строки.</span><span class="sxs-lookup"><span data-stu-id="52101-107">[out] A pointer to the offset of the location, relative to the `ObjectID` pointer, that stores the length of the string.</span></span> <span data-ttu-id="52101-108">Длина хранится в виде `DWORD`.</span><span class="sxs-lookup"><span data-stu-id="52101-108">The length is stored as a `DWORD`.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="46149-109">Этот параметр Возвращает длину самой строки, а не длину буфера.</span><span class="sxs-lookup"><span data-stu-id="46149-109">This parameter returns the length of the string itself, not the length of the buffer.</span></span> <span data-ttu-id="46149-110">Длина буфера больше недоступен.</span><span class="sxs-lookup"><span data-stu-id="46149-110">The length of the buffer is no longer available.</span></span>  
+>  <span data-ttu-id="52101-109">Этот параметр Возвращает длину самой строки, а не длину буфера.</span><span class="sxs-lookup"><span data-stu-id="52101-109">This parameter returns the length of the string itself, not the length of the buffer.</span></span> <span data-ttu-id="52101-110">Длина буфера больше недоступен.</span><span class="sxs-lookup"><span data-stu-id="52101-110">The length of the buffer is no longer available.</span></span>  
   
  `PStringLengthOffset`  
- <span data-ttu-id="46149-111">[out] Указатель на смещение расположения, относительно `ObjectID` указатель, который хранит длину строки, сам.</span><span class="sxs-lookup"><span data-stu-id="46149-111">[out] A pointer to the offset of the location, relative to the `ObjectID` pointer, that stores the length of the string itself.</span></span> <span data-ttu-id="46149-112">Длина хранится в виде `DWORD`.</span><span class="sxs-lookup"><span data-stu-id="46149-112">The length is stored as a `DWORD`.</span></span>  
+ <span data-ttu-id="52101-111">[out] Указатель на смещение расположения, относительно `ObjectID` указатель, который хранит длину строки, сам.</span><span class="sxs-lookup"><span data-stu-id="52101-111">[out] A pointer to the offset of the location, relative to the `ObjectID` pointer, that stores the length of the string itself.</span></span> <span data-ttu-id="52101-112">Длина хранится в виде `DWORD`.</span><span class="sxs-lookup"><span data-stu-id="52101-112">The length is stored as a `DWORD`.</span></span>  
   
  `pBufferOffset`  
- <span data-ttu-id="46149-113">[out] Указатель на смещение буфера, относительно `ObjectID` указатель, в котором хранится строка расширенных символов.</span><span class="sxs-lookup"><span data-stu-id="46149-113">[out] A pointer to the offset of the buffer, relative to the `ObjectID` pointer, that stores the string of wide characters.</span></span>  
+ <span data-ttu-id="52101-113">[out] Указатель на смещение буфера, относительно `ObjectID` указатель, в котором хранится строка расширенных символов.</span><span class="sxs-lookup"><span data-stu-id="52101-113">[out] A pointer to the offset of the buffer, relative to the `ObjectID` pointer, that stores the string of wide characters.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="46149-114">Примечания</span><span class="sxs-lookup"><span data-stu-id="46149-114">Remarks</span></span>  
- <span data-ttu-id="46149-115">`GetStringLayout` Метод получает смещения, относительно `ObjectID` указатель из расположений, в которых хранятся следующие:</span><span class="sxs-lookup"><span data-stu-id="46149-115">The `GetStringLayout` method gets the offsets, relative to the `ObjectID` pointer, of the locations in which the following are stored:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="52101-114">Примечания</span><span class="sxs-lookup"><span data-stu-id="52101-114">Remarks</span></span>  
+ <span data-ttu-id="52101-115">`GetStringLayout` Метод получает смещения, относительно `ObjectID` указатель из расположений, в которых хранятся следующие:</span><span class="sxs-lookup"><span data-stu-id="52101-115">The `GetStringLayout` method gets the offsets, relative to the `ObjectID` pointer, of the locations in which the following are stored:</span></span>  
   
--   <span data-ttu-id="46149-116">Длина буфера строки.</span><span class="sxs-lookup"><span data-stu-id="46149-116">The length of the string's buffer.</span></span>  
+-   <span data-ttu-id="52101-116">Длина буфера строки.</span><span class="sxs-lookup"><span data-stu-id="52101-116">The length of the string's buffer.</span></span>  
   
--   <span data-ttu-id="46149-117">Длина самой строки.</span><span class="sxs-lookup"><span data-stu-id="46149-117">The length of the string itself.</span></span>  
+-   <span data-ttu-id="52101-117">Длина самой строки.</span><span class="sxs-lookup"><span data-stu-id="52101-117">The length of the string itself.</span></span>  
   
--   <span data-ttu-id="46149-118">Буфер, содержащий фактический строку расширенных символов.</span><span class="sxs-lookup"><span data-stu-id="46149-118">The buffer that contains the actual string of wide characters.</span></span>  
+-   <span data-ttu-id="52101-118">Буфер, содержащий фактический строку расширенных символов.</span><span class="sxs-lookup"><span data-stu-id="52101-118">The buffer that contains the actual string of wide characters.</span></span>  
   
- <span data-ttu-id="46149-119">Строки могут представлять собой нулем.</span><span class="sxs-lookup"><span data-stu-id="46149-119">Strings may be null-terminated.</span></span>  
+ <span data-ttu-id="52101-119">Строки могут представлять собой нулем.</span><span class="sxs-lookup"><span data-stu-id="52101-119">Strings may be null-terminated.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="46149-120">Требования</span><span class="sxs-lookup"><span data-stu-id="46149-120">Requirements</span></span>  
- <span data-ttu-id="46149-121">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="46149-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="52101-120">Требования</span><span class="sxs-lookup"><span data-stu-id="52101-120">Requirements</span></span>  
+ <span data-ttu-id="52101-121">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="52101-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="46149-122">**Заголовок.** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="46149-122">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="52101-122">**Заголовок.** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="52101-122">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="46149-123">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="46149-123">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="52101-123">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="52101-123">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="46149-124">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="46149-124">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="52101-124">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="52101-124">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="46149-125">См. также</span><span class="sxs-lookup"><span data-stu-id="46149-125">See also</span></span>
-- [<span data-ttu-id="46149-126">Интерфейс ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="46149-126">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [<span data-ttu-id="46149-127">Интерфейс ICorProfilerInfo2</span><span class="sxs-lookup"><span data-stu-id="46149-127">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="52101-125">См. также</span><span class="sxs-lookup"><span data-stu-id="52101-125">See also</span></span>
+- [<span data-ttu-id="52101-126">Интерфейс ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="52101-126">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="52101-127">Интерфейс ICorProfilerInfo2</span><span class="sxs-lookup"><span data-stu-id="52101-127">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

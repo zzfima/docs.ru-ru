@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8c61cc12e438c0786b6e093b8bb1ea288a42e3a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a27ea95ca78f7db8f67ec2a13f02767e67619e97
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401171"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488062"
 ---
-# <a name="icordebugchainismanaged-method"></a><span data-ttu-id="e2e92-102">Метод ICorDebugChain::IsManaged</span><span class="sxs-lookup"><span data-stu-id="e2e92-102">ICorDebugChain::IsManaged Method</span></span>
-<span data-ttu-id="e2e92-103">Возвращает значение, указывающее, выполняется ли эта цепочка управляемого кода.</span><span class="sxs-lookup"><span data-stu-id="e2e92-103">Gets a value that indicates whether this chain is running managed code.</span></span>  
+# <a name="icordebugchainismanaged-method"></a><span data-ttu-id="2d29f-102">Метод ICorDebugChain::IsManaged</span><span class="sxs-lookup"><span data-stu-id="2d29f-102">ICorDebugChain::IsManaged Method</span></span>
+<span data-ttu-id="2d29f-103">Получает значение, указывающее, выполняется ли эта цепочка управляемого кода.</span><span class="sxs-lookup"><span data-stu-id="2d29f-103">Gets a value that indicates whether this chain is running managed code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e2e92-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="e2e92-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2d29f-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="2d29f-104">Syntax</span></span>  
   
 ```  
 HRESULT IsManaged (  
@@ -35,15 +35,15 @@ HRESULT IsManaged (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="e2e92-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="e2e92-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2d29f-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="2d29f-105">Parameters</span></span>  
  `pManaged`  
- <span data-ttu-id="e2e92-106">[out] `true` Если эта цепочка выполняется управляемого кода; в противном случае `false`.</span><span class="sxs-lookup"><span data-stu-id="e2e92-106">[out] `true` if this chain is running managed code; otherwise, `false`.</span></span>  
+ <span data-ttu-id="2d29f-106">[out] `true` Если эта цепочка работает под управлением управляемого кода; в противном случае `false`.</span><span class="sxs-lookup"><span data-stu-id="2d29f-106">[out] `true` if this chain is running managed code; otherwise, `false`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e2e92-107">Требования</span><span class="sxs-lookup"><span data-stu-id="e2e92-107">Requirements</span></span>  
- <span data-ttu-id="e2e92-108">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e2e92-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2d29f-107">Требования</span><span class="sxs-lookup"><span data-stu-id="2d29f-107">Requirements</span></span>  
+ <span data-ttu-id="2d29f-108">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2d29f-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e2e92-109">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e2e92-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="2d29f-109">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2d29f-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="e2e92-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e2e92-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2d29f-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2d29f-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e2e92-111">**Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e2e92-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="2d29f-111">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2d29f-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

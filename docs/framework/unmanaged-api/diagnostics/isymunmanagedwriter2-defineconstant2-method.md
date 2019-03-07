@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e843acc82d52e2c7a772f4799e7bb0af8ecff10d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6674c706222fe9e00a0115bef83f955384f14172
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545729"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485356"
 ---
-# <a name="isymunmanagedwriter2defineconstant2-method"></a><span data-ttu-id="387bc-102">Метод ISymUnmanagedWriter2::DefineConstant2</span><span class="sxs-lookup"><span data-stu-id="387bc-102">ISymUnmanagedWriter2::DefineConstant2 Method</span></span>
-<span data-ttu-id="387bc-103">Определяет имя для значения константы.</span><span class="sxs-lookup"><span data-stu-id="387bc-103">Defines a name for a constant value.</span></span>  
+# <a name="isymunmanagedwriter2defineconstant2-method"></a><span data-ttu-id="2a892-102">Метод ISymUnmanagedWriter2::DefineConstant2</span><span class="sxs-lookup"><span data-stu-id="2a892-102">ISymUnmanagedWriter2::DefineConstant2 Method</span></span>
+<span data-ttu-id="2a892-103">Определяет имя для значения константы.</span><span class="sxs-lookup"><span data-stu-id="2a892-103">Defines a name for a constant value.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="387bc-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="387bc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2a892-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="2a892-104">Syntax</span></span>  
   
 ```  
 HRESULT DefineConstant2(  
@@ -36,22 +36,22 @@ HRESULT DefineConstant2(
     [in] mdSignature  sigToken);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="387bc-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="387bc-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2a892-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="2a892-105">Parameters</span></span>  
  `name`  
- <span data-ttu-id="387bc-106">[in] Постоянное имя.</span><span class="sxs-lookup"><span data-stu-id="387bc-106">[in] The constant name.</span></span>  
+ <span data-ttu-id="2a892-106">[in] Постоянное имя.</span><span class="sxs-lookup"><span data-stu-id="2a892-106">[in] The constant name.</span></span>  
   
  `value`  
- <span data-ttu-id="387bc-107">[in] Значение константы.</span><span class="sxs-lookup"><span data-stu-id="387bc-107">[in] The value of the constant.</span></span>  
+ <span data-ttu-id="2a892-107">[in] Значение константы.</span><span class="sxs-lookup"><span data-stu-id="2a892-107">[in] The value of the constant.</span></span>  
   
  `sigToken`  
- <span data-ttu-id="387bc-108">[in] Токен метаданных константы.</span><span class="sxs-lookup"><span data-stu-id="387bc-108">[in] The metadata token of the constant.</span></span>  
+ <span data-ttu-id="2a892-108">[in] Токен метаданных константы.</span><span class="sxs-lookup"><span data-stu-id="2a892-108">[in] The metadata token of the constant.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="387bc-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="387bc-109">Return Value</span></span>  
- <span data-ttu-id="387bc-110">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="387bc-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="2a892-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="2a892-109">Return Value</span></span>  
+ <span data-ttu-id="2a892-110">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="2a892-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="387bc-111">Требования</span><span class="sxs-lookup"><span data-stu-id="387bc-111">Requirements</span></span>  
- <span data-ttu-id="387bc-112">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="387bc-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2a892-111">Требования</span><span class="sxs-lookup"><span data-stu-id="2a892-111">Requirements</span></span>  
+ <span data-ttu-id="2a892-112">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="2a892-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="387bc-113">См. также</span><span class="sxs-lookup"><span data-stu-id="387bc-113">See also</span></span>
-- [<span data-ttu-id="387bc-114">Интерфейс ISymUnmanagedWriter2</span><span class="sxs-lookup"><span data-stu-id="387bc-114">ISymUnmanagedWriter2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)
-- [<span data-ttu-id="387bc-115">Метод DefineConstant</span><span class="sxs-lookup"><span data-stu-id="387bc-115">DefineConstant Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineconstant-method.md)
+## <a name="see-also"></a><span data-ttu-id="2a892-113">См. также</span><span class="sxs-lookup"><span data-stu-id="2a892-113">See also</span></span>
+- [<span data-ttu-id="2a892-114">Интерфейс ISymUnmanagedWriter2</span><span class="sxs-lookup"><span data-stu-id="2a892-114">ISymUnmanagedWriter2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)
+- [<span data-ttu-id="2a892-115">Метод DefineConstant</span><span class="sxs-lookup"><span data-stu-id="2a892-115">DefineConstant Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineconstant-method.md)

@@ -17,42 +17,42 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f12398a2423e7e0081556dbdb279e4a2f23c3af7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ffef0b7296e2742d6e6207f66f91273f41652469
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54723424"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57483762"
 ---
-# <a name="icordebugprocess5gettypelayout-method"></a><span data-ttu-id="9ba83-102">Метод ICorDebugProcess5::GetTypeLayout</span><span class="sxs-lookup"><span data-stu-id="9ba83-102">ICorDebugProcess5::GetTypeLayout Method</span></span>
-<span data-ttu-id="9ba83-103">Получает сведения о расположении объекта в памяти, на основе его идентификатора типа.</span><span class="sxs-lookup"><span data-stu-id="9ba83-103">Gets information about the layout of an object in memory based on its type identifier.</span></span>  
+# <a name="icordebugprocess5gettypelayout-method"></a><span data-ttu-id="89815-102">Метод ICorDebugProcess5::GetTypeLayout</span><span class="sxs-lookup"><span data-stu-id="89815-102">ICorDebugProcess5::GetTypeLayout Method</span></span>
+<span data-ttu-id="89815-103">Получает сведения о расположении объекта в памяти, на основе его идентификатора типа.</span><span class="sxs-lookup"><span data-stu-id="89815-103">Gets information about the layout of an object in memory based on its type identifier.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9ba83-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="9ba83-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="89815-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="89815-104">Syntax</span></span>  
   
 ```  
 HRESULT GetTypeLayout(    [in] COR_TYPEID id,     [out] COR_TYPE_LAYOUT *pLayout);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="9ba83-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="9ba83-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="89815-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="89815-105">Parameters</span></span>  
  `id`  
- <span data-ttu-id="9ba83-106">[in] Объект [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) маркер, указывающий тип требуемого, макет.</span><span class="sxs-lookup"><span data-stu-id="9ba83-106">[in] A [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) token that specifies the type whose layout is desired.</span></span>  
+ <span data-ttu-id="89815-106">[in] Объект [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) маркер, указывающий тип требуемого, макет.</span><span class="sxs-lookup"><span data-stu-id="89815-106">[in] A [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) token that specifies the type whose layout is desired.</span></span>  
   
  `pLayout`  
- <span data-ttu-id="9ba83-107">[out] Указатель на [COR_TYPE_LAYOUT](../../../../docs/framework/unmanaged-api/debugging/cor-type-layout-structure.md) структуру, содержащую сведения о расположении объекта в памяти.</span><span class="sxs-lookup"><span data-stu-id="9ba83-107">[out] A pointer to a [COR_TYPE_LAYOUT](../../../../docs/framework/unmanaged-api/debugging/cor-type-layout-structure.md) structure that contains information about the layout of the object in memory.</span></span>  
+ <span data-ttu-id="89815-107">[out] Указатель на [COR_TYPE_LAYOUT](../../../../docs/framework/unmanaged-api/debugging/cor-type-layout-structure.md) структуру, содержащую сведения о расположении объекта в памяти.</span><span class="sxs-lookup"><span data-stu-id="89815-107">[out] A pointer to a [COR_TYPE_LAYOUT](../../../../docs/framework/unmanaged-api/debugging/cor-type-layout-structure.md) structure that contains information about the layout of the object in memory.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="9ba83-108">Примечания</span><span class="sxs-lookup"><span data-stu-id="9ba83-108">Remarks</span></span>  
- <span data-ttu-id="9ba83-109">`ICorDebugProcess5::GetTypeLayout` Метод предоставляет сведения об объекте на основе его [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md), который возвращается количество других [ICorDebugProcess5](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md) методы.</span><span class="sxs-lookup"><span data-stu-id="9ba83-109">The `ICorDebugProcess5::GetTypeLayout` method provides information about an object based on its [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md), which is returned by a number of other [ICorDebugProcess5](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md) methods.</span></span> <span data-ttu-id="9ba83-110">Информация предоставляется по [COR_TYPE_LAYOUT](../../../../docs/framework/unmanaged-api/debugging/cor-type-layout-structure.md) структуру, которая заполняется с помощью метода.</span><span class="sxs-lookup"><span data-stu-id="9ba83-110">The information is provided by a [COR_TYPE_LAYOUT](../../../../docs/framework/unmanaged-api/debugging/cor-type-layout-structure.md) structure that is populated by the method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="89815-108">Примечания</span><span class="sxs-lookup"><span data-stu-id="89815-108">Remarks</span></span>  
+ <span data-ttu-id="89815-109">`ICorDebugProcess5::GetTypeLayout` Метод предоставляет сведения об объекте на основе его [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md), который возвращается количество других [ICorDebugProcess5](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md) методы.</span><span class="sxs-lookup"><span data-stu-id="89815-109">The `ICorDebugProcess5::GetTypeLayout` method provides information about an object based on its [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md), which is returned by a number of other [ICorDebugProcess5](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md) methods.</span></span> <span data-ttu-id="89815-110">Информация предоставляется по [COR_TYPE_LAYOUT](../../../../docs/framework/unmanaged-api/debugging/cor-type-layout-structure.md) структуру, которая заполняется с помощью метода.</span><span class="sxs-lookup"><span data-stu-id="89815-110">The information is provided by a [COR_TYPE_LAYOUT](../../../../docs/framework/unmanaged-api/debugging/cor-type-layout-structure.md) structure that is populated by the method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9ba83-111">Требования</span><span class="sxs-lookup"><span data-stu-id="9ba83-111">Requirements</span></span>  
- <span data-ttu-id="9ba83-112">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9ba83-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="89815-111">Требования</span><span class="sxs-lookup"><span data-stu-id="89815-111">Requirements</span></span>  
+ <span data-ttu-id="89815-112">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="89815-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9ba83-113">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9ba83-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="89815-113">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="89815-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="9ba83-114">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9ba83-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="89815-114">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="89815-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9ba83-115">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9ba83-115">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="89815-115">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="89815-115">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9ba83-116">См. также</span><span class="sxs-lookup"><span data-stu-id="9ba83-116">See also</span></span>
-- [<span data-ttu-id="9ba83-117">Структура COR_TYPE_LAYOUT</span><span class="sxs-lookup"><span data-stu-id="9ba83-117">COR_TYPE_LAYOUT Structure</span></span>](../../../../docs/framework/unmanaged-api/debugging/cor-type-layout-structure.md)
-- [<span data-ttu-id="9ba83-118">Интерфейс ICorDebugProcess5</span><span class="sxs-lookup"><span data-stu-id="9ba83-118">ICorDebugProcess5 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
-- [<span data-ttu-id="9ba83-119">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="9ba83-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="89815-116">См. также</span><span class="sxs-lookup"><span data-stu-id="89815-116">See also</span></span>
+- [<span data-ttu-id="89815-117">Структура COR_TYPE_LAYOUT</span><span class="sxs-lookup"><span data-stu-id="89815-117">COR_TYPE_LAYOUT Structure</span></span>](../../../../docs/framework/unmanaged-api/debugging/cor-type-layout-structure.md)
+- [<span data-ttu-id="89815-118">Интерфейс ICorDebugProcess5</span><span class="sxs-lookup"><span data-stu-id="89815-118">ICorDebugProcess5 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
+- [<span data-ttu-id="89815-119">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="89815-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

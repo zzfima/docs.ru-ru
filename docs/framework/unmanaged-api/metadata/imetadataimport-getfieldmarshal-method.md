@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3bc90a17a0469cd716c1e3e990b5c0fb2ff8bf5a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9b3c9b879faf49ec7a485641c622d40a684dfb35
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54647583"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469304"
 ---
-# <a name="imetadataimportgetfieldmarshal-method"></a><span data-ttu-id="8c21c-102">Метод IMetaDataImport::GetFieldMarshal</span><span class="sxs-lookup"><span data-stu-id="8c21c-102">IMetaDataImport::GetFieldMarshal Method</span></span>
-<span data-ttu-id="8c21c-103">Возвращает указатель на машинный неуправляемый тип поля, представленного маркер метаданных указанного поля.</span><span class="sxs-lookup"><span data-stu-id="8c21c-103">Gets a pointer to the native, unmanaged type of the field represented by the specified field metadata token.</span></span>  
+# <a name="imetadataimportgetfieldmarshal-method"></a><span data-ttu-id="322bf-102">Метод IMetaDataImport::GetFieldMarshal</span><span class="sxs-lookup"><span data-stu-id="322bf-102">IMetaDataImport::GetFieldMarshal Method</span></span>
+<span data-ttu-id="322bf-103">Возвращает указатель на машинный неуправляемый тип поля, представленного маркер метаданных указанного поля.</span><span class="sxs-lookup"><span data-stu-id="322bf-103">Gets a pointer to the native, unmanaged type of the field represented by the specified field metadata token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8c21c-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="8c21c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="322bf-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="322bf-104">Syntax</span></span>  
   
 ```  
 HRESULT GetFieldMarshal (  
@@ -37,25 +37,25 @@ HRESULT GetFieldMarshal (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="8c21c-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="8c21c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="322bf-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="322bf-105">Parameters</span></span>  
  `tk`  
- <span data-ttu-id="8c21c-106">[in] Токен метаданных, представляющий поле, чтобы получить взаимодействия сведения о маршалинге для.</span><span class="sxs-lookup"><span data-stu-id="8c21c-106">[in] The metadata token that represents the field to get interop marshaling information for.</span></span>  
+ <span data-ttu-id="322bf-106">[in] Токен метаданных, представляющий поле, чтобы получить взаимодействия сведения о маршалинге для.</span><span class="sxs-lookup"><span data-stu-id="322bf-106">[in] The metadata token that represents the field to get interop marshaling information for.</span></span>  
   
  `ppvNativeType`  
- <span data-ttu-id="8c21c-107">[out] Указатель на собственный тип поля подпись метаданных.</span><span class="sxs-lookup"><span data-stu-id="8c21c-107">[out] A pointer to the metadata signature of the field's native type.</span></span>  
+ <span data-ttu-id="322bf-107">[out] Указатель на собственный тип поля подпись метаданных.</span><span class="sxs-lookup"><span data-stu-id="322bf-107">[out] A pointer to the metadata signature of the field's native type.</span></span>  
   
  `pcbNativeType`  
- <span data-ttu-id="8c21c-108">[out] Размер в байтах `ppvNativeType`.</span><span class="sxs-lookup"><span data-stu-id="8c21c-108">[out] The size in bytes of `ppvNativeType`.</span></span>  
+ <span data-ttu-id="322bf-108">[out] Размер в байтах `ppvNativeType`.</span><span class="sxs-lookup"><span data-stu-id="322bf-108">[out] The size in bytes of `ppvNativeType`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8c21c-109">Требования</span><span class="sxs-lookup"><span data-stu-id="8c21c-109">Requirements</span></span>  
- <span data-ttu-id="8c21c-110">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8c21c-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="322bf-109">Требования</span><span class="sxs-lookup"><span data-stu-id="322bf-109">Requirements</span></span>  
+ <span data-ttu-id="322bf-110">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="322bf-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8c21c-111">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="8c21c-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="322bf-111">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="322bf-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="8c21c-112">**Библиотека:** Включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="8c21c-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="322bf-112">**Библиотека:** Включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="322bf-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="8c21c-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8c21c-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="322bf-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="322bf-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8c21c-114">См. также</span><span class="sxs-lookup"><span data-stu-id="8c21c-114">See also</span></span>
-- [<span data-ttu-id="8c21c-115">Интерфейс IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="8c21c-115">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="8c21c-116">Интерфейс IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="8c21c-116">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="322bf-114">См. также</span><span class="sxs-lookup"><span data-stu-id="322bf-114">See also</span></span>
+- [<span data-ttu-id="322bf-115">Интерфейс IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="322bf-115">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="322bf-116">Интерфейс IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="322bf-116">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

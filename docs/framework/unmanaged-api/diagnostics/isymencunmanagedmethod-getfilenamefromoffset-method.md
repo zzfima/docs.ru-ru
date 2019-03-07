@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e0582714c157de69293eb1e8dfa40e0cd2f44cba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: df1e9d317294127a931bebf100295290a0dd6b23
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621202"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471841"
 ---
-# <a name="isymencunmanagedmethodgetfilenamefromoffset-method"></a><span data-ttu-id="d4b22-102">Метод ISymENCUnmanagedMethod::GetFileNameFromOffset</span><span class="sxs-lookup"><span data-stu-id="d4b22-102">ISymENCUnmanagedMethod::GetFileNameFromOffset Method</span></span>
-<span data-ttu-id="d4b22-103">Получает имя файла для строки, связанной со смещением.</span><span class="sxs-lookup"><span data-stu-id="d4b22-103">Gets the file name for the line associated with an offset.</span></span>  
+# <a name="isymencunmanagedmethodgetfilenamefromoffset-method"></a><span data-ttu-id="b6d74-102">Метод ISymENCUnmanagedMethod::GetFileNameFromOffset</span><span class="sxs-lookup"><span data-stu-id="b6d74-102">ISymENCUnmanagedMethod::GetFileNameFromOffset Method</span></span>
+<span data-ttu-id="b6d74-103">Получает имя файла для строки, связанной со смещением.</span><span class="sxs-lookup"><span data-stu-id="b6d74-103">Gets the file name for the line associated with an offset.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d4b22-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d4b22-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b6d74-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b6d74-104">Syntax</span></span>  
   
 ```  
 HRESULT GetFileNameFromOffset(  
@@ -38,24 +38,24 @@ HRESULT GetFileNameFromOffset(
        length_is(*pcchName)] WCHAR szName[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d4b22-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="d4b22-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b6d74-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="b6d74-105">Parameters</span></span>  
  `dwOffset`  
- <span data-ttu-id="d4b22-106">[in] Объект `ULONG32` , содержащий смещение.</span><span class="sxs-lookup"><span data-stu-id="d4b22-106">[in] A `ULONG32` that contains the offset.</span></span>  
+ <span data-ttu-id="b6d74-106">[in] Объект `ULONG32` , содержащий смещение.</span><span class="sxs-lookup"><span data-stu-id="b6d74-106">[in] A `ULONG32` that contains the offset.</span></span>  
   
  `cchName`  
- <span data-ttu-id="d4b22-107">[in] Объект `ULONG32` указывает размер `szName` буфера.</span><span class="sxs-lookup"><span data-stu-id="d4b22-107">[in] A `ULONG32` that indicates the size of the `szName` buffer.</span></span>  
+ <span data-ttu-id="b6d74-107">[in] Объект `ULONG32` указывает размер `szName` буфера.</span><span class="sxs-lookup"><span data-stu-id="b6d74-107">[in] A `ULONG32` that indicates the size of the `szName` buffer.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="d4b22-108">[out] Указатель на `ULONG32` размер, который получает в символах, буфера, требуемого для хранения имен файлов.</span><span class="sxs-lookup"><span data-stu-id="d4b22-108">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the file names.</span></span>  
+ <span data-ttu-id="b6d74-108">[out] Указатель на `ULONG32` размер, который получает в символах, буфера, требуемого для хранения имен файлов.</span><span class="sxs-lookup"><span data-stu-id="b6d74-108">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the file names.</span></span>  
   
  `szName`  
- <span data-ttu-id="d4b22-109">[out] Буфер, содержащий имена файлов.</span><span class="sxs-lookup"><span data-stu-id="d4b22-109">[out] The buffer that contains the file names.</span></span>  
+ <span data-ttu-id="b6d74-109">[out] Буфер, содержащий имена файлов.</span><span class="sxs-lookup"><span data-stu-id="b6d74-109">[out] The buffer that contains the file names.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d4b22-110">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="d4b22-110">Return Value</span></span>  
- <span data-ttu-id="d4b22-111">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="d4b22-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="b6d74-110">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="b6d74-110">Return Value</span></span>  
+ <span data-ttu-id="b6d74-111">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="b6d74-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d4b22-112">Требования</span><span class="sxs-lookup"><span data-stu-id="d4b22-112">Requirements</span></span>  
- <span data-ttu-id="d4b22-113">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="d4b22-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b6d74-112">Требования</span><span class="sxs-lookup"><span data-stu-id="b6d74-112">Requirements</span></span>  
+ <span data-ttu-id="b6d74-113">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="b6d74-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d4b22-114">См. также</span><span class="sxs-lookup"><span data-stu-id="d4b22-114">See also</span></span>
-- [<span data-ttu-id="d4b22-115">Интерфейс ISymENCUnmanagedMethod</span><span class="sxs-lookup"><span data-stu-id="d4b22-115">ISymENCUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+## <a name="see-also"></a><span data-ttu-id="b6d74-114">См. также</span><span class="sxs-lookup"><span data-stu-id="b6d74-114">See also</span></span>
+- [<span data-ttu-id="b6d74-115">Интерфейс ISymENCUnmanagedMethod</span><span class="sxs-lookup"><span data-stu-id="b6d74-115">ISymENCUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
