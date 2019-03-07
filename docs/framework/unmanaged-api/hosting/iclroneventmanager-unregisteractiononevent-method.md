@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5ebe0ad045c2047ed0756c7efee5f4cfc919c7d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8fcc5a6c2f2aa6f22a243c53898cdeda807b6774
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559246"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471825"
 ---
-# <a name="iclroneventmanagerunregisteractiononevent-method"></a><span data-ttu-id="496c5-102">Метод ICLROnEventManager::UnregisterActionOnEvent</span><span class="sxs-lookup"><span data-stu-id="496c5-102">ICLROnEventManager::UnregisterActionOnEvent Method</span></span>
-<span data-ttu-id="496c5-103">Отменяет регистрацию ранее зарегистрированного обратного вызова указатель для указанного события.</span><span class="sxs-lookup"><span data-stu-id="496c5-103">Unregisters a previously registered callback pointer for the specified event.</span></span>  
+# <a name="iclroneventmanagerunregisteractiononevent-method"></a><span data-ttu-id="9b9cd-102">Метод ICLROnEventManager::UnregisterActionOnEvent</span><span class="sxs-lookup"><span data-stu-id="9b9cd-102">ICLROnEventManager::UnregisterActionOnEvent Method</span></span>
+<span data-ttu-id="9b9cd-103">Отменяет регистрацию ранее зарегистрированного обратного вызова указатель для указанного события.</span><span class="sxs-lookup"><span data-stu-id="9b9cd-103">Unregisters a previously registered callback pointer for the specified event.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="496c5-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="496c5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9b9cd-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="9b9cd-104">Syntax</span></span>  
   
 ```  
 HRESULT UnregisterActionOnEvent (  
@@ -36,35 +36,35 @@ HRESULT UnregisterActionOnEvent (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="496c5-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="496c5-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9b9cd-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="9b9cd-105">Parameters</span></span>  
  `event`  
- <span data-ttu-id="496c5-106">[in] Один из [EClrEvent](../../../../docs/framework/unmanaged-api/hosting/eclrevent-enumeration.md) значений, указывающее, события, для которого для отмены регистрации обратного вызова указатель, описываемого `pAction`.</span><span class="sxs-lookup"><span data-stu-id="496c5-106">[in] One of the [EClrEvent](../../../../docs/framework/unmanaged-api/hosting/eclrevent-enumeration.md) values, indicating the event for which to unregister the callback pointer described by `pAction`.</span></span>  
+ <span data-ttu-id="9b9cd-106">[in] Один из [EClrEvent](../../../../docs/framework/unmanaged-api/hosting/eclrevent-enumeration.md) значений, указывающее, события, для которого для отмены регистрации обратного вызова указатель, описываемого `pAction`.</span><span class="sxs-lookup"><span data-stu-id="9b9cd-106">[in] One of the [EClrEvent](../../../../docs/framework/unmanaged-api/hosting/eclrevent-enumeration.md) values, indicating the event for which to unregister the callback pointer described by `pAction`.</span></span>  
   
  `pAction`  
- <span data-ttu-id="496c5-107">[in] Указатель на [IActionOnCLREvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md) объект, который был передан в качестве параметра [RegisterActionOnEvent](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="496c5-107">[in] A pointer to an [IActionOnCLREvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md) object that was passed as a parameter to the [RegisterActionOnEvent](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md) method.</span></span>  
+ <span data-ttu-id="9b9cd-107">[in] Указатель на [IActionOnCLREvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md) объект, который был передан в качестве параметра [RegisterActionOnEvent](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="9b9cd-107">[in] A pointer to an [IActionOnCLREvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md) object that was passed as a parameter to the [RegisterActionOnEvent](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md) method.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="496c5-108">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="496c5-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="9b9cd-108">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="9b9cd-108">Return Value</span></span>  
   
-|<span data-ttu-id="496c5-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="496c5-109">HRESULT</span></span>|<span data-ttu-id="496c5-110">Описание</span><span class="sxs-lookup"><span data-stu-id="496c5-110">Description</span></span>|  
+|<span data-ttu-id="9b9cd-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="9b9cd-109">HRESULT</span></span>|<span data-ttu-id="9b9cd-110">Описание</span><span class="sxs-lookup"><span data-stu-id="9b9cd-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="496c5-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="496c5-111">S_OK</span></span>|<span data-ttu-id="496c5-112">`UnregisterActionOnEvent` успешно возвращен.</span><span class="sxs-lookup"><span data-stu-id="496c5-112">`UnregisterActionOnEvent` returned successfully.</span></span>|  
-|<span data-ttu-id="496c5-113">ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="496c5-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="496c5-114">Общеязыковая среда выполнения (CLR) не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.</span><span class="sxs-lookup"><span data-stu-id="496c5-114">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="496c5-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="496c5-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="496c5-116">Истекло время ожидания вызова.</span><span class="sxs-lookup"><span data-stu-id="496c5-116">The call timed out.</span></span>|  
-|<span data-ttu-id="496c5-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="496c5-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="496c5-118">Вызывающий объект не является владельцем блокировки.</span><span class="sxs-lookup"><span data-stu-id="496c5-118">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="496c5-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="496c5-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="496c5-120">Событие было отменено с сохранением заблокированный поток или ожидал волокон.</span><span class="sxs-lookup"><span data-stu-id="496c5-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="496c5-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="496c5-121">E_FAIL</span></span>|<span data-ttu-id="496c5-122">Неизвестный Разрушительный сбой.</span><span class="sxs-lookup"><span data-stu-id="496c5-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="496c5-123">После метод вернет значение E_FAIL, среда CLR больше не использовать в данном процессе.</span><span class="sxs-lookup"><span data-stu-id="496c5-123">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="496c5-124">Последующие вызовы к размещению методы возвращают значение HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="496c5-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="9b9cd-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="9b9cd-111">S_OK</span></span>|<span data-ttu-id="9b9cd-112">`UnregisterActionOnEvent` успешно возвращен.</span><span class="sxs-lookup"><span data-stu-id="9b9cd-112">`UnregisterActionOnEvent` returned successfully.</span></span>|  
+|<span data-ttu-id="9b9cd-113">ЗНАЧЕНИЕ HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="9b9cd-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="9b9cd-114">Общеязыковая среда выполнения (CLR) не был загружен в процесс или находится в состоянии, в котором не может выполнять управляемый код или успешно обработать вызов.</span><span class="sxs-lookup"><span data-stu-id="9b9cd-114">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="9b9cd-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="9b9cd-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="9b9cd-116">Истекло время ожидания вызова.</span><span class="sxs-lookup"><span data-stu-id="9b9cd-116">The call timed out.</span></span>|  
+|<span data-ttu-id="9b9cd-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="9b9cd-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="9b9cd-118">Вызывающий объект не является владельцем блокировки.</span><span class="sxs-lookup"><span data-stu-id="9b9cd-118">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="9b9cd-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="9b9cd-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="9b9cd-120">Событие было отменено с сохранением заблокированный поток или ожидал волокон.</span><span class="sxs-lookup"><span data-stu-id="9b9cd-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="9b9cd-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="9b9cd-121">E_FAIL</span></span>|<span data-ttu-id="9b9cd-122">Неизвестный Разрушительный сбой.</span><span class="sxs-lookup"><span data-stu-id="9b9cd-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="9b9cd-123">После метод вернет значение E_FAIL, среда CLR больше не использовать в данном процессе.</span><span class="sxs-lookup"><span data-stu-id="9b9cd-123">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="9b9cd-124">Последующие вызовы к размещению методы возвращают значение HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="9b9cd-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="496c5-125">Требования</span><span class="sxs-lookup"><span data-stu-id="496c5-125">Requirements</span></span>  
- <span data-ttu-id="496c5-126">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="496c5-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9b9cd-125">Требования</span><span class="sxs-lookup"><span data-stu-id="9b9cd-125">Requirements</span></span>  
+ <span data-ttu-id="9b9cd-126">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9b9cd-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="496c5-127">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="496c5-127">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="9b9cd-127">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="9b9cd-127">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="496c5-128">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="496c5-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="9b9cd-128">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="9b9cd-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="496c5-129">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="496c5-129">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="9b9cd-129">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9b9cd-129">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="496c5-130">См. также</span><span class="sxs-lookup"><span data-stu-id="496c5-130">See also</span></span>
-- [<span data-ttu-id="496c5-131">Перечисление EClrEvent</span><span class="sxs-lookup"><span data-stu-id="496c5-131">EClrEvent Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/eclrevent-enumeration.md)
-- [<span data-ttu-id="496c5-132">Интерфейс IActionOnCLREvent</span><span class="sxs-lookup"><span data-stu-id="496c5-132">IActionOnCLREvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md)
-- [<span data-ttu-id="496c5-133">Интерфейс ICLRControl</span><span class="sxs-lookup"><span data-stu-id="496c5-133">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
-- [<span data-ttu-id="496c5-134">Интерфейс ICLROnEventManager</span><span class="sxs-lookup"><span data-stu-id="496c5-134">ICLROnEventManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="9b9cd-130">См. также</span><span class="sxs-lookup"><span data-stu-id="9b9cd-130">See also</span></span>
+- [<span data-ttu-id="9b9cd-131">Перечисление EClrEvent</span><span class="sxs-lookup"><span data-stu-id="9b9cd-131">EClrEvent Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/eclrevent-enumeration.md)
+- [<span data-ttu-id="9b9cd-132">Интерфейс IActionOnCLREvent</span><span class="sxs-lookup"><span data-stu-id="9b9cd-132">IActionOnCLREvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md)
+- [<span data-ttu-id="9b9cd-133">Интерфейс ICLRControl</span><span class="sxs-lookup"><span data-stu-id="9b9cd-133">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
+- [<span data-ttu-id="9b9cd-134">Интерфейс ICLROnEventManager</span><span class="sxs-lookup"><span data-stu-id="9b9cd-134">ICLROnEventManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md)

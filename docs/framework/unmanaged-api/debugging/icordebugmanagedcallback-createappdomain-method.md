@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 36ded85cd2d8ebe49ee0b1e190266061cb56dfb7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0682aec060d5f65a3034d482c92a04e0880f7a6b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496745"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484775"
 ---
-# <a name="icordebugmanagedcallbackcreateappdomain-method"></a><span data-ttu-id="5b2af-102">Метод ICorDebugManagedCallback::CreateAppDomain</span><span class="sxs-lookup"><span data-stu-id="5b2af-102">ICorDebugManagedCallback::CreateAppDomain Method</span></span>
-<span data-ttu-id="5b2af-103">Уведомляет отладчик о том, что домен приложения был создан.</span><span class="sxs-lookup"><span data-stu-id="5b2af-103">Notifies the debugger that an application domain has been created.</span></span>  
+# <a name="icordebugmanagedcallbackcreateappdomain-method"></a><span data-ttu-id="f27bb-102">Метод ICorDebugManagedCallback::CreateAppDomain</span><span class="sxs-lookup"><span data-stu-id="f27bb-102">ICorDebugManagedCallback::CreateAppDomain Method</span></span>
+<span data-ttu-id="f27bb-103">Уведомляет отладчик о том, что домен приложения был создан.</span><span class="sxs-lookup"><span data-stu-id="f27bb-103">Notifies the debugger that an application domain has been created.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5b2af-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="5b2af-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f27bb-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f27bb-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateAppDomain (  
@@ -36,21 +36,21 @@ HRESULT CreateAppDomain (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="5b2af-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="5b2af-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f27bb-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="f27bb-105">Parameters</span></span>  
  `pProcess`  
- <span data-ttu-id="5b2af-106">[in] Указатель на объект ICorDebugProcess, представляющий процесс, в котором был создан домен приложения.</span><span class="sxs-lookup"><span data-stu-id="5b2af-106">[in] A pointer to an ICorDebugProcess object that represents the process in which the application domain was created.</span></span>  
+ <span data-ttu-id="f27bb-106">[in] Указатель на объект ICorDebugProcess, представляющий процесс, в котором был создан домен приложения.</span><span class="sxs-lookup"><span data-stu-id="f27bb-106">[in] A pointer to an ICorDebugProcess object that represents the process in which the application domain was created.</span></span>  
   
  `pAppDomain`  
- <span data-ttu-id="5b2af-107">[in] Указатель на объект ICorDebugAppDomain, представляющий домен приложения, который был создан.</span><span class="sxs-lookup"><span data-stu-id="5b2af-107">[in] A pointer to an ICorDebugAppDomain object that represents the application domain that has been created.</span></span>  
+ <span data-ttu-id="f27bb-107">[in] Указатель на объект ICorDebugAppDomain, представляющий домен приложения, который был создан.</span><span class="sxs-lookup"><span data-stu-id="f27bb-107">[in] A pointer to an ICorDebugAppDomain object that represents the application domain that has been created.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5b2af-108">Требования</span><span class="sxs-lookup"><span data-stu-id="5b2af-108">Requirements</span></span>  
- <span data-ttu-id="5b2af-109">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5b2af-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f27bb-108">Требования</span><span class="sxs-lookup"><span data-stu-id="f27bb-108">Requirements</span></span>  
+ <span data-ttu-id="f27bb-109">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f27bb-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5b2af-110">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5b2af-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="f27bb-110">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f27bb-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="5b2af-111">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5b2af-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f27bb-111">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f27bb-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="5b2af-112">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5b2af-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="f27bb-112">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f27bb-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5b2af-113">См. также</span><span class="sxs-lookup"><span data-stu-id="5b2af-113">See also</span></span>
-- [<span data-ttu-id="5b2af-114">Интерфейс ICorDebugManagedCallback</span><span class="sxs-lookup"><span data-stu-id="5b2af-114">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="f27bb-113">См. также</span><span class="sxs-lookup"><span data-stu-id="f27bb-113">See also</span></span>
+- [<span data-ttu-id="f27bb-114">Интерфейс ICorDebugManagedCallback</span><span class="sxs-lookup"><span data-stu-id="f27bb-114">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

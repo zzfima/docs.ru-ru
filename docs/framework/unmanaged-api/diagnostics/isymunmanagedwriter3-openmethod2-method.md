@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b641f463eb9b664597b4806a6353278e8027d5b8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 14a8acc2e3babd376cb9754d35ce8fc5eaa1fd7c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709108"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492326"
 ---
-# <a name="isymunmanagedwriter3openmethod2-method"></a><span data-ttu-id="03589-102">Метод ISymUnmanagedWriter3::OpenMethod2</span><span class="sxs-lookup"><span data-stu-id="03589-102">ISymUnmanagedWriter3::OpenMethod2 Method</span></span>
-<span data-ttu-id="03589-103">Открывает метод и предоставляет его фактическое смещение раздела в образе.</span><span class="sxs-lookup"><span data-stu-id="03589-103">Opens a method and provides its real section offset in the image.</span></span>  
+# <a name="isymunmanagedwriter3openmethod2-method"></a><span data-ttu-id="4fd20-102">Метод ISymUnmanagedWriter3::OpenMethod2</span><span class="sxs-lookup"><span data-stu-id="4fd20-102">ISymUnmanagedWriter3::OpenMethod2 Method</span></span>
+<span data-ttu-id="4fd20-103">Открывает метод и предоставляет его фактическое смещение раздела в образе.</span><span class="sxs-lookup"><span data-stu-id="4fd20-103">Opens a method and provides its real section offset in the image.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="03589-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="03589-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4fd20-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="4fd20-104">Syntax</span></span>  
   
 ```  
 HRESULT OpenMethod2(   
@@ -36,22 +36,22 @@ HRESULT OpenMethod2(
     [in] ULONG32 offset);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="03589-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="03589-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4fd20-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="4fd20-105">Parameters</span></span>  
  `method`  
- <span data-ttu-id="03589-106">[in] Токен метаданных для открываемого метода.</span><span class="sxs-lookup"><span data-stu-id="03589-106">[in] The metadata token for the method to be opened.</span></span>  
+ <span data-ttu-id="4fd20-106">[in] Токен метаданных для открываемого метода.</span><span class="sxs-lookup"><span data-stu-id="4fd20-106">[in] The metadata token for the method to be opened.</span></span>  
   
  `isect`  
- <span data-ttu-id="03589-107">[in] Смещение раздела в образе.</span><span class="sxs-lookup"><span data-stu-id="03589-107">[in] The section offset in the image.</span></span>  
+ <span data-ttu-id="4fd20-107">[in] Смещение раздела в образе.</span><span class="sxs-lookup"><span data-stu-id="4fd20-107">[in] The section offset in the image.</span></span>  
   
  `offset`  
- <span data-ttu-id="03589-108">[in] Смещение в образе.</span><span class="sxs-lookup"><span data-stu-id="03589-108">[in] The offset in the image.</span></span>  
+ <span data-ttu-id="4fd20-108">[in] Смещение в образе.</span><span class="sxs-lookup"><span data-stu-id="4fd20-108">[in] The offset in the image.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="03589-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="03589-109">Return Value</span></span>  
- <span data-ttu-id="03589-110">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="03589-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="4fd20-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="4fd20-109">Return Value</span></span>  
+ <span data-ttu-id="4fd20-110">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="4fd20-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="03589-111">Требования</span><span class="sxs-lookup"><span data-stu-id="03589-111">Requirements</span></span>  
- <span data-ttu-id="03589-112">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="03589-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4fd20-111">Требования</span><span class="sxs-lookup"><span data-stu-id="4fd20-111">Requirements</span></span>  
+ <span data-ttu-id="4fd20-112">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="4fd20-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="03589-113">См. также</span><span class="sxs-lookup"><span data-stu-id="03589-113">See also</span></span>
-- [<span data-ttu-id="03589-114">Интерфейс ISymUnmanagedWriter3</span><span class="sxs-lookup"><span data-stu-id="03589-114">ISymUnmanagedWriter3 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)
-- [<span data-ttu-id="03589-115">Метод OpenMethod</span><span class="sxs-lookup"><span data-stu-id="03589-115">OpenMethod Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)
+## <a name="see-also"></a><span data-ttu-id="4fd20-113">См. также</span><span class="sxs-lookup"><span data-stu-id="4fd20-113">See also</span></span>
+- [<span data-ttu-id="4fd20-114">Интерфейс ISymUnmanagedWriter3</span><span class="sxs-lookup"><span data-stu-id="4fd20-114">ISymUnmanagedWriter3 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)
+- [<span data-ttu-id="4fd20-115">Метод OpenMethod</span><span class="sxs-lookup"><span data-stu-id="4fd20-115">OpenMethod Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)

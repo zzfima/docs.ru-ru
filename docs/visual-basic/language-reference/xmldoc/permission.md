@@ -5,38 +5,38 @@ helpviewer_keywords:
 - <permission> XML tag
 - permission XML tag
 ms.assetid: 0edf0500-5cd7-49c0-9255-64c48f972b77
-ms.openlocfilehash: 6c684a674e8d6e3bf218e0131e5fac2821855456
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d8fe70445b2a2500f99a0156604238665b7bbd1c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966376"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473504"
 ---
-# <a name="permission-visual-basic"></a><span data-ttu-id="cdda3-102">\<разрешение > (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cdda3-102">\<permission> (Visual Basic)</span></span>
-<span data-ttu-id="cdda3-103">Указывает разрешение, необходимые для элемента.</span><span class="sxs-lookup"><span data-stu-id="cdda3-103">Specifies a required permission for the member.</span></span>  
+# <a name="permission-visual-basic"></a><span data-ttu-id="40300-102">\<разрешение > (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="40300-102">\<permission> (Visual Basic)</span></span>
+<span data-ttu-id="40300-103">Указывает разрешение, необходимые для элемента.</span><span class="sxs-lookup"><span data-stu-id="40300-103">Specifies a required permission for the member.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cdda3-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="cdda3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="40300-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="40300-104">Syntax</span></span>  
   
 ```xml  
 <permission cref="member">description</permission>  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="cdda3-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="cdda3-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="40300-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="40300-105">Parameters</span></span>  
  `member`  
- <span data-ttu-id="cdda3-106">Ссылка на член или поле, которые доступны для вызова из текущей среды компиляции.</span><span class="sxs-lookup"><span data-stu-id="cdda3-106">A reference to a member or field that is available to be called from the current compilation environment.</span></span> <span data-ttu-id="cdda3-107">Компилятор проверяет, существует ли элемент кода, и приводит `member` к каноническому имени элемента в выходных XML-данных.</span><span class="sxs-lookup"><span data-stu-id="cdda3-107">The compiler checks that the given code element exists and translates `member` to the canonical element name in the output XML.</span></span> <span data-ttu-id="cdda3-108">Заключите `member` в кавычки (» «).</span><span class="sxs-lookup"><span data-stu-id="cdda3-108">Enclose `member` in quotation marks (" ").</span></span>  
+ <span data-ttu-id="40300-106">Ссылка на член или поле, которые доступны для вызова из текущей среды компиляции.</span><span class="sxs-lookup"><span data-stu-id="40300-106">A reference to a member or field that is available to be called from the current compilation environment.</span></span> <span data-ttu-id="40300-107">Компилятор проверяет, существует ли элемент кода, и приводит `member` к каноническому имени элемента в выходных XML-данных.</span><span class="sxs-lookup"><span data-stu-id="40300-107">The compiler checks that the given code element exists and translates `member` to the canonical element name in the output XML.</span></span> <span data-ttu-id="40300-108">Заключите `member` в кавычки (» «).</span><span class="sxs-lookup"><span data-stu-id="40300-108">Enclose `member` in quotation marks (" ").</span></span>  
   
  `description`  
- <span data-ttu-id="cdda3-109">Описание уровня доступа для члена.</span><span class="sxs-lookup"><span data-stu-id="cdda3-109">A description of the access to the member.</span></span>  
+ <span data-ttu-id="40300-109">Описание уровня доступа для члена.</span><span class="sxs-lookup"><span data-stu-id="40300-109">A description of the access to the member.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="cdda3-110">Примечания</span><span class="sxs-lookup"><span data-stu-id="cdda3-110">Remarks</span></span>  
- <span data-ttu-id="cdda3-111">Используйте `<permission>` тег, чтобы документировать уровень доступа члена.</span><span class="sxs-lookup"><span data-stu-id="cdda3-111">Use the `<permission>` tag to document the access of a member.</span></span> <span data-ttu-id="cdda3-112">Используйте <xref:System.Security.PermissionSet> для задания доступа к члену.</span><span class="sxs-lookup"><span data-stu-id="cdda3-112">Use the <xref:System.Security.PermissionSet> class to specify access to a member.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="40300-110">Примечания</span><span class="sxs-lookup"><span data-stu-id="40300-110">Remarks</span></span>  
+ <span data-ttu-id="40300-111">Используйте `<permission>` тег, чтобы документировать уровень доступа члена.</span><span class="sxs-lookup"><span data-stu-id="40300-111">Use the `<permission>` tag to document the access of a member.</span></span> <span data-ttu-id="40300-112">Используйте <xref:System.Security.PermissionSet> для задания доступа к члену.</span><span class="sxs-lookup"><span data-stu-id="40300-112">Use the <xref:System.Security.PermissionSet> class to specify access to a member.</span></span>  
   
- <span data-ttu-id="cdda3-113">Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](../../../visual-basic/reference/command-line-compiler/doc.md).</span><span class="sxs-lookup"><span data-stu-id="cdda3-113">Compile with [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
+ <span data-ttu-id="40300-113">Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](../../../visual-basic/reference/command-line-compiler/doc.md).</span><span class="sxs-lookup"><span data-stu-id="40300-113">Compile with [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="cdda3-114">Пример</span><span class="sxs-lookup"><span data-stu-id="cdda3-114">Example</span></span>  
- <span data-ttu-id="cdda3-115">В этом примере используется `<permission>` тегов для описания, <xref:System.Security.Permissions.FileIOPermission> необходим `ReadFile` метод.</span><span class="sxs-lookup"><span data-stu-id="cdda3-115">This example uses the `<permission>` tag to describe that the <xref:System.Security.Permissions.FileIOPermission> is required by the `ReadFile` method.</span></span>  
+## <a name="example"></a><span data-ttu-id="40300-114">Пример</span><span class="sxs-lookup"><span data-stu-id="40300-114">Example</span></span>  
+ <span data-ttu-id="40300-115">В этом примере используется `<permission>` тегов для описания, <xref:System.Security.Permissions.FileIOPermission> необходим `ReadFile` метод.</span><span class="sxs-lookup"><span data-stu-id="40300-115">This example uses the `<permission>` tag to describe that the <xref:System.Security.Permissions.FileIOPermission> is required by the `ReadFile` method.</span></span>  
   
  [!code-vb[VbVbcnXmlDocComments#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#7)]  
   
-## <a name="see-also"></a><span data-ttu-id="cdda3-116">См. также</span><span class="sxs-lookup"><span data-stu-id="cdda3-116">See also</span></span>
-- [<span data-ttu-id="cdda3-117">XML-теги для комментариев</span><span class="sxs-lookup"><span data-stu-id="cdda3-117">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a><span data-ttu-id="40300-116">См. также</span><span class="sxs-lookup"><span data-stu-id="40300-116">See also</span></span>
+- [<span data-ttu-id="40300-117">XML-теги для комментариев</span><span class="sxs-lookup"><span data-stu-id="40300-117">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)

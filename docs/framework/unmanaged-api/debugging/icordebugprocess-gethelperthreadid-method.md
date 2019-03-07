@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c3f879e04a710d65f812a5165c3edbfa31f8542
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cd5e30d08e667dcd5a8be1f9502462f28290068e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419072"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494224"
 ---
-# <a name="icordebugprocessgethelperthreadid-method"></a><span data-ttu-id="a77a7-102">Метод ICorDebugProcess::GetHelperThreadID</span><span class="sxs-lookup"><span data-stu-id="a77a7-102">ICorDebugProcess::GetHelperThreadID Method</span></span>
-<span data-ttu-id="a77a7-103">Получает идентификатор потока операционной системы (ОС) вспомогательный внутренний поток отладчика.</span><span class="sxs-lookup"><span data-stu-id="a77a7-103">Gets the operating system (OS) thread ID of the debugger's internal helper thread.</span></span>  
+# <a name="icordebugprocessgethelperthreadid-method"></a><span data-ttu-id="983ee-102">Метод ICorDebugProcess::GetHelperThreadID</span><span class="sxs-lookup"><span data-stu-id="983ee-102">ICorDebugProcess::GetHelperThreadID Method</span></span>
+<span data-ttu-id="983ee-103">Получает идентификатор потока операционной системы (ОС) внутреннего вспомогательного потока отладчика.</span><span class="sxs-lookup"><span data-stu-id="983ee-103">Gets the operating system (OS) thread ID of the debugger's internal helper thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a77a7-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a77a7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="983ee-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="983ee-104">Syntax</span></span>  
   
 ```  
 HRESULT GetHelperThreadID (  
@@ -35,22 +35,22 @@ HRESULT GetHelperThreadID (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="a77a7-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="a77a7-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="983ee-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="983ee-105">Parameters</span></span>  
  `pThreadID`  
- <span data-ttu-id="a77a7-106">[out] Указатель на ОС потока идентификатор вспомогательный внутренний поток отладчика.</span><span class="sxs-lookup"><span data-stu-id="a77a7-106">[out] A pointer to the OS thread ID of the debugger's internal helper thread.</span></span>  
+ <span data-ttu-id="983ee-106">[out] Идентификатор внутреннего вспомогательного потока отладчика потока в указатель на ОС.</span><span class="sxs-lookup"><span data-stu-id="983ee-106">[out] A pointer to the OS thread ID of the debugger's internal helper thread.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a77a7-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="a77a7-107">Remarks</span></span>  
- <span data-ttu-id="a77a7-108">При отладке управляемого и неуправляемого кода это отладчик обязан гарантировать непрерывное потока с указанным Идентификатором, если он попадает на точку останова размещенную отладчиком.</span><span class="sxs-lookup"><span data-stu-id="a77a7-108">During managed and unmanaged debugging, it is the debugger's responsibility to ensure that the thread with the specified ID remains running if it hits a breakpoint placed by the debugger.</span></span> <span data-ttu-id="a77a7-109">Отладчик может возникнуть необходимость скрыть этот поток от пользователя.</span><span class="sxs-lookup"><span data-stu-id="a77a7-109">A debugger may also wish to hide this thread from the user.</span></span> <span data-ttu-id="a77a7-110">Если ни один вспомогательный поток существует в процессе, `GetHelperThreadID` метод возвращает нуль в \*`pThreadID`.</span><span class="sxs-lookup"><span data-stu-id="a77a7-110">If no helper thread exists in the process yet, the `GetHelperThreadID` method returns zero in \*`pThreadID`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="983ee-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="983ee-107">Remarks</span></span>  
+ <span data-ttu-id="983ee-108">Во время отладки управляемых и неуправляемых отвечает за отладчика убедитесь, что непрерывное выполнение потока с указанным Идентификатором при его попадании в точку останова, размещенную отладчиком.</span><span class="sxs-lookup"><span data-stu-id="983ee-108">During managed and unmanaged debugging, it is the debugger's responsibility to ensure that the thread with the specified ID remains running if it hits a breakpoint placed by the debugger.</span></span> <span data-ttu-id="983ee-109">Отладчик может возникнуть необходимость скрыть этот поток от пользователя.</span><span class="sxs-lookup"><span data-stu-id="983ee-109">A debugger may also wish to hide this thread from the user.</span></span> <span data-ttu-id="983ee-110">Если существует вспомогательного потока в процессе, тем не менее, `GetHelperThreadID` метод возвращает нуль в \*`pThreadID`.</span><span class="sxs-lookup"><span data-stu-id="983ee-110">If no helper thread exists in the process yet, the `GetHelperThreadID` method returns zero in \*`pThreadID`.</span></span>  
   
- <span data-ttu-id="a77a7-111">Идентификатор потока вспомогательного потока кэшировать нельзя, поскольку со временем может меняться.</span><span class="sxs-lookup"><span data-stu-id="a77a7-111">You cannot cache the thread ID of the helper thread, because it may change over time.</span></span> <span data-ttu-id="a77a7-112">Необходимо повторно запросить идентификатор потока при каждом событии остановки.</span><span class="sxs-lookup"><span data-stu-id="a77a7-112">You must re-query the thread ID at every stopping event.</span></span>  
+ <span data-ttu-id="983ee-111">Идентификатор потока вспомогательного потока кэшировать нельзя, поскольку со временем может меняться.</span><span class="sxs-lookup"><span data-stu-id="983ee-111">You cannot cache the thread ID of the helper thread, because it may change over time.</span></span> <span data-ttu-id="983ee-112">Необходимо повторно запрашивать идентификатор потока при каждом событии остановки.</span><span class="sxs-lookup"><span data-stu-id="983ee-112">You must re-query the thread ID at every stopping event.</span></span>  
   
- <span data-ttu-id="a77a7-113">Идентификатор потока вспомогательный поток отладчика будут правильными для каждой неуправляемой [ICorDebugManagedCallback::CreateThread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md) события, позволяя тем самым отладчику определить ИД вспомогательного потока и скрыть его от пользователя.</span><span class="sxs-lookup"><span data-stu-id="a77a7-113">The thread ID of the debugger's helper thread will be correct on every unmanaged [ICorDebugManagedCallback::CreateThread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md) event, thus allowing a debugger to determine the thread ID of its helper thread and hide it from the user.</span></span> <span data-ttu-id="a77a7-114">Поток, который указан в качестве вспомогательного потока во время неуправляемый `ICorDebugManagedCallback::CreateThread` событие никогда не будет выполняться управляемого пользовательского кода.</span><span class="sxs-lookup"><span data-stu-id="a77a7-114">A thread that is identified as a helper thread during an unmanaged `ICorDebugManagedCallback::CreateThread` event will never run managed user code.</span></span>  
+ <span data-ttu-id="983ee-113">Идентификатор вспомогательного потока отладчика будет корректироваться при каждой неуправляемой [ICorDebugManagedCallback::CreateThread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md) событий, что позволяет отладчику определить идентификатор вспомогательного потока и скрыть его от пользователя.</span><span class="sxs-lookup"><span data-stu-id="983ee-113">The thread ID of the debugger's helper thread will be correct on every unmanaged [ICorDebugManagedCallback::CreateThread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md) event, thus allowing a debugger to determine the thread ID of its helper thread and hide it from the user.</span></span> <span data-ttu-id="983ee-114">Поток, который указан в качестве вспомогательного потока во время неуправляемую `ICorDebugManagedCallback::CreateThread` событие никогда не будет выполняться управляемый пользовательский код.</span><span class="sxs-lookup"><span data-stu-id="983ee-114">A thread that is identified as a helper thread during an unmanaged `ICorDebugManagedCallback::CreateThread` event will never run managed user code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a77a7-115">Требования</span><span class="sxs-lookup"><span data-stu-id="a77a7-115">Requirements</span></span>  
- <span data-ttu-id="a77a7-116">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a77a7-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="983ee-115">Требования</span><span class="sxs-lookup"><span data-stu-id="983ee-115">Requirements</span></span>  
+ <span data-ttu-id="983ee-116">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="983ee-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a77a7-117">**Заголовок:** CorDebug.idl.</span><span class="sxs-lookup"><span data-stu-id="a77a7-117">**Header:** CorDebug.idl.</span></span> <span data-ttu-id="a77a7-118">CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a77a7-118">CorDebug.h</span></span>  
+ <span data-ttu-id="983ee-117">**Заголовок.** CorDebug.idl.</span><span class="sxs-lookup"><span data-stu-id="983ee-117">**Header:** CorDebug.idl.</span></span> <span data-ttu-id="983ee-118">CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="983ee-118">CorDebug.h</span></span>  
   
- <span data-ttu-id="a77a7-119">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a77a7-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="983ee-119">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="983ee-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a77a7-120">**Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a77a7-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="983ee-120">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="983ee-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

@@ -17,20 +17,20 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3e5ae097314a935bc06272c0e8febfbaad620f13
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 52a1f30612899fddc29af1a437fb9437e9a2b93c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667639"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490701"
 ---
-# <a name="isymunmanagedreaderupdatesymbolstore-method"></a><span data-ttu-id="74997-102">Метод ISymUnmanagedReader::UpdateSymbolStore</span><span class="sxs-lookup"><span data-stu-id="74997-102">ISymUnmanagedReader::UpdateSymbolStore Method</span></span>
-<span data-ttu-id="74997-103">Обновляет существующее хранилище символов разностным хранилищем символов.</span><span class="sxs-lookup"><span data-stu-id="74997-103">Updates the existing symbol store with a delta symbol store.</span></span> <span data-ttu-id="74997-104">Этот метод используется в сценариях, редактирование и продолжение для обновления хранилища символов в соответствии с изменениями исходного переносимого исполняемого (PE) файла.</span><span class="sxs-lookup"><span data-stu-id="74997-104">This method is used in edit-and-continue scenarios to update the symbol store to match deltas to the original portable executable (PE) file.</span></span>  
+# <a name="isymunmanagedreaderupdatesymbolstore-method"></a><span data-ttu-id="5de71-102">Метод ISymUnmanagedReader::UpdateSymbolStore</span><span class="sxs-lookup"><span data-stu-id="5de71-102">ISymUnmanagedReader::UpdateSymbolStore Method</span></span>
+<span data-ttu-id="5de71-103">Обновляет существующее хранилище символов разностным хранилищем символов.</span><span class="sxs-lookup"><span data-stu-id="5de71-103">Updates the existing symbol store with a delta symbol store.</span></span> <span data-ttu-id="5de71-104">Этот метод используется в сценариях, редактирование и продолжение для обновления хранилища символов в соответствии с изменениями исходного переносимого исполняемого (PE) файла.</span><span class="sxs-lookup"><span data-stu-id="5de71-104">This method is used in edit-and-continue scenarios to update the symbol store to match deltas to the original portable executable (PE) file.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="74997-105">Вы должны указать только один из `filename` или `pIStream` параметров, не оба.</span><span class="sxs-lookup"><span data-stu-id="74997-105">You need specify only one of the `filename` or `pIStream` parameters, not both.</span></span> <span data-ttu-id="74997-106">Если `filename` указан, обновляется в хранилище символов с символами в этом файле.</span><span class="sxs-lookup"><span data-stu-id="74997-106">If `filename` is specified, the symbol store will be updated with the symbols in that file.</span></span> <span data-ttu-id="74997-107">Если `pIStream` указан, хранилище будет обновлено с данными из <xref:System.Runtime.InteropServices.ComTypes.IStream>.</span><span class="sxs-lookup"><span data-stu-id="74997-107">If `pIStream` is specified, the store will be updated with the data from the <xref:System.Runtime.InteropServices.ComTypes.IStream>.</span></span>  
+>  <span data-ttu-id="5de71-105">Вы должны указать только один из `filename` или `pIStream` параметров, не оба.</span><span class="sxs-lookup"><span data-stu-id="5de71-105">You need specify only one of the `filename` or `pIStream` parameters, not both.</span></span> <span data-ttu-id="5de71-106">Если `filename` указан, обновляется в хранилище символов с символами в этом файле.</span><span class="sxs-lookup"><span data-stu-id="5de71-106">If `filename` is specified, the symbol store will be updated with the symbols in that file.</span></span> <span data-ttu-id="5de71-107">Если `pIStream` указан, хранилище будет обновлено с данными из <xref:System.Runtime.InteropServices.ComTypes.IStream>.</span><span class="sxs-lookup"><span data-stu-id="5de71-107">If `pIStream` is specified, the store will be updated with the data from the <xref:System.Runtime.InteropServices.ComTypes.IStream>.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="74997-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="74997-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5de71-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="5de71-108">Syntax</span></span>  
   
 ```  
 HRESULT UpdateSymbolStore (  
@@ -38,18 +38,18 @@ HRESULT UpdateSymbolStore (
     [in] IStream *pIStream);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="74997-109">Параметры</span><span class="sxs-lookup"><span data-stu-id="74997-109">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5de71-109">Параметры</span><span class="sxs-lookup"><span data-stu-id="5de71-109">Parameters</span></span>  
  `filename`  
- <span data-ttu-id="74997-110">[in] Имя файла, содержащего хранилище символов.</span><span class="sxs-lookup"><span data-stu-id="74997-110">[in] The name of the file that contains the symbol store.</span></span>  
+ <span data-ttu-id="5de71-110">[in] Имя файла, содержащего хранилище символов.</span><span class="sxs-lookup"><span data-stu-id="5de71-110">[in] The name of the file that contains the symbol store.</span></span>  
   
  `pIStream`  
- <span data-ttu-id="74997-111">[in] Файловый поток, используемый в качестве альтернативы для `filename` параметра.</span><span class="sxs-lookup"><span data-stu-id="74997-111">[in] The file stream, used as an alternative to the `filename` parameter.</span></span>  
+ <span data-ttu-id="5de71-111">[in] Файловый поток, используемый в качестве альтернативы для `filename` параметра.</span><span class="sxs-lookup"><span data-stu-id="5de71-111">[in] The file stream, used as an alternative to the `filename` parameter.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="74997-112">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="74997-112">Return Value</span></span>  
- <span data-ttu-id="74997-113">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="74997-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="5de71-112">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="5de71-112">Return Value</span></span>  
+ <span data-ttu-id="5de71-113">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="5de71-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="74997-114">Требования</span><span class="sxs-lookup"><span data-stu-id="74997-114">Requirements</span></span>  
- <span data-ttu-id="74997-115">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="74997-115">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5de71-114">Требования</span><span class="sxs-lookup"><span data-stu-id="5de71-114">Requirements</span></span>  
+ <span data-ttu-id="5de71-115">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="5de71-115">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="74997-116">См. также</span><span class="sxs-lookup"><span data-stu-id="74997-116">See also</span></span>
-- [<span data-ttu-id="74997-117">Интерфейс ISymUnmanagedReader</span><span class="sxs-lookup"><span data-stu-id="74997-117">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a><span data-ttu-id="5de71-116">См. также</span><span class="sxs-lookup"><span data-stu-id="5de71-116">See also</span></span>
+- [<span data-ttu-id="5de71-117">Интерфейс ISymUnmanagedReader</span><span class="sxs-lookup"><span data-stu-id="5de71-117">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

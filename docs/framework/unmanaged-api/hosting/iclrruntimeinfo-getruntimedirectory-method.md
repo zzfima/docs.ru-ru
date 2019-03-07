@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26bee605724fd69d972a7e07c6fe6be2fbcabfa3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 159e9b3d81db5b416eb98e1b7587712ba14033c5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563864"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466985"
 ---
-# <a name="iclrruntimeinfogetruntimedirectory-method"></a><span data-ttu-id="30bca-102">Метод ICLRRuntimeInfo::GetRuntimeDirectory</span><span class="sxs-lookup"><span data-stu-id="30bca-102">ICLRRuntimeInfo::GetRuntimeDirectory Method</span></span>
-<span data-ttu-id="30bca-103">Получает каталог установки общеязыковой среды выполнения (CLR), связанных с этим интерфейсом.</span><span class="sxs-lookup"><span data-stu-id="30bca-103">Gets the installation directory of the common language runtime (CLR) associated with this interface.</span></span>  
+# <a name="iclrruntimeinfogetruntimedirectory-method"></a><span data-ttu-id="a19f6-102">Метод ICLRRuntimeInfo::GetRuntimeDirectory</span><span class="sxs-lookup"><span data-stu-id="a19f6-102">ICLRRuntimeInfo::GetRuntimeDirectory Method</span></span>
+<span data-ttu-id="a19f6-103">Получает каталог установки общеязыковой среды выполнения (CLR), связанных с этим интерфейсом.</span><span class="sxs-lookup"><span data-stu-id="a19f6-103">Gets the installation directory of the common language runtime (CLR) associated with this interface.</span></span>  
   
- <span data-ttu-id="30bca-104">Этот метод заменяет [GetCORSystemDirectory](../../../../docs/framework/unmanaged-api/hosting/getcorsystemdirectory-function.md) функция, предоставленная в .NET Framework версий 2.0, 3.0 и 3.5.</span><span class="sxs-lookup"><span data-stu-id="30bca-104">This method supersedes the [GetCORSystemDirectory](../../../../docs/framework/unmanaged-api/hosting/getcorsystemdirectory-function.md) function provided in the .NET Framework versions 2.0, 3.0, and 3.5.</span></span>  
+ <span data-ttu-id="a19f6-104">Этот метод заменяет [GetCORSystemDirectory](../../../../docs/framework/unmanaged-api/hosting/getcorsystemdirectory-function.md) функция, предоставленная в .NET Framework версий 2.0, 3.0 и 3.5.</span><span class="sxs-lookup"><span data-stu-id="a19f6-104">This method supersedes the [GetCORSystemDirectory](../../../../docs/framework/unmanaged-api/hosting/getcorsystemdirectory-function.md) function provided in the .NET Framework versions 2.0, 3.0, and 3.5.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="30bca-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="30bca-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a19f6-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a19f6-105">Syntax</span></span>  
   
 ```  
 HRESULT GetRuntimeDirectory(  
@@ -37,32 +37,32 @@ HRESULT GetRuntimeDirectory(
 [in, out]  DWORD *pcchBuffer);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="30bca-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="30bca-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a19f6-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="a19f6-106">Parameters</span></span>  
  `pwzBuffer`  
- <span data-ttu-id="30bca-107">[out] Возвращает каталог установки среды CLR.</span><span class="sxs-lookup"><span data-stu-id="30bca-107">[out] Returns the CLR installation directory.</span></span> <span data-ttu-id="30bca-108">Путь установки будет полностью; например «c:\windows\microsoft.net\framework\v1.0.3705\\«.</span><span class="sxs-lookup"><span data-stu-id="30bca-108">The installation path is fully qualified; for example, "c:\windows\microsoft.net\framework\v1.0.3705\\".</span></span>  
+ <span data-ttu-id="a19f6-107">[out] Возвращает каталог установки среды CLR.</span><span class="sxs-lookup"><span data-stu-id="a19f6-107">[out] Returns the CLR installation directory.</span></span> <span data-ttu-id="a19f6-108">Путь установки будет полностью; например «c:\windows\microsoft.net\framework\v1.0.3705\\«.</span><span class="sxs-lookup"><span data-stu-id="a19f6-108">The installation path is fully qualified; for example, "c:\windows\microsoft.net\framework\v1.0.3705\\".</span></span>  
   
  `pchBuffer`  
- <span data-ttu-id="30bca-109">[in, out] Указывает размер `pwzBuffer` для предотвращения переполнения буфера.</span><span class="sxs-lookup"><span data-stu-id="30bca-109">[in, out] Specifies the size of `pwzBuffer` to avoid buffer overruns.</span></span> <span data-ttu-id="30bca-110">Если `pwzBuffer` имеет значение null, `pchBuffer` возвращает требуемый размер `pwzBuffer`.</span><span class="sxs-lookup"><span data-stu-id="30bca-110">If `pwzBuffer` is null, `pchBuffer` returns the required size of `pwzBuffer`.</span></span>  
+ <span data-ttu-id="a19f6-109">[in, out] Указывает размер `pwzBuffer` для предотвращения переполнения буфера.</span><span class="sxs-lookup"><span data-stu-id="a19f6-109">[in, out] Specifies the size of `pwzBuffer` to avoid buffer overruns.</span></span> <span data-ttu-id="a19f6-110">Если `pwzBuffer` имеет значение null, `pchBuffer` возвращает требуемый размер `pwzBuffer`.</span><span class="sxs-lookup"><span data-stu-id="a19f6-110">If `pwzBuffer` is null, `pchBuffer` returns the required size of `pwzBuffer`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="30bca-111">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="30bca-111">Return Value</span></span>  
- <span data-ttu-id="30bca-112">Этот метод возвращает следующие конкретные результаты HRESULT, а также ошибки HRESULT, которые указывают на сбой метода.</span><span class="sxs-lookup"><span data-stu-id="30bca-112">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="a19f6-111">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="a19f6-111">Return Value</span></span>  
+ <span data-ttu-id="a19f6-112">Этот метод возвращает следующие конкретные результаты HRESULT, а также ошибки HRESULT, которые указывают на сбой метода.</span><span class="sxs-lookup"><span data-stu-id="a19f6-112">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="30bca-113">HRESULT</span><span class="sxs-lookup"><span data-stu-id="30bca-113">HRESULT</span></span>|<span data-ttu-id="30bca-114">Описание</span><span class="sxs-lookup"><span data-stu-id="30bca-114">Description</span></span>|  
+|<span data-ttu-id="a19f6-113">HRESULT</span><span class="sxs-lookup"><span data-stu-id="a19f6-113">HRESULT</span></span>|<span data-ttu-id="a19f6-114">Описание</span><span class="sxs-lookup"><span data-stu-id="a19f6-114">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="30bca-115">S_OK</span><span class="sxs-lookup"><span data-stu-id="30bca-115">S_OK</span></span>|<span data-ttu-id="30bca-116">Метод завершился успешно.</span><span class="sxs-lookup"><span data-stu-id="30bca-116">The method completed successfully.</span></span>|  
-|<span data-ttu-id="30bca-117">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="30bca-117">E_POINTER</span></span>|<span data-ttu-id="30bca-118">`pwzBuffer` или `pchBuffer` равно null.</span><span class="sxs-lookup"><span data-stu-id="30bca-118">`pwzBuffer` or `pchBuffer` is null.</span></span>|  
+|<span data-ttu-id="a19f6-115">S_OK</span><span class="sxs-lookup"><span data-stu-id="a19f6-115">S_OK</span></span>|<span data-ttu-id="a19f6-116">Метод завершился успешно.</span><span class="sxs-lookup"><span data-stu-id="a19f6-116">The method completed successfully.</span></span>|  
+|<span data-ttu-id="a19f6-117">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="a19f6-117">E_POINTER</span></span>|<span data-ttu-id="a19f6-118">`pwzBuffer` или `pchBuffer` имеет значение null.</span><span class="sxs-lookup"><span data-stu-id="a19f6-118">`pwzBuffer` or `pchBuffer` is null.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="30bca-119">Примечания</span><span class="sxs-lookup"><span data-stu-id="30bca-119">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a19f6-119">Примечания</span><span class="sxs-lookup"><span data-stu-id="a19f6-119">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="30bca-120">Требования</span><span class="sxs-lookup"><span data-stu-id="30bca-120">Requirements</span></span>  
- <span data-ttu-id="30bca-121">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="30bca-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a19f6-120">Требования</span><span class="sxs-lookup"><span data-stu-id="a19f6-120">Requirements</span></span>  
+ <span data-ttu-id="a19f6-121">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a19f6-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="30bca-122">**Заголовок.** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="30bca-122">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="a19f6-122">**Заголовок.** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="a19f6-122">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="30bca-123">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="30bca-123">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="a19f6-123">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="a19f6-123">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="30bca-124">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="30bca-124">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="a19f6-124">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a19f6-124">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="30bca-125">См. также</span><span class="sxs-lookup"><span data-stu-id="30bca-125">See also</span></span>
-- [<span data-ttu-id="30bca-126">Интерфейс ICLRRuntimeInfo</span><span class="sxs-lookup"><span data-stu-id="30bca-126">ICLRRuntimeInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
-- [<span data-ttu-id="30bca-127">Размещение</span><span class="sxs-lookup"><span data-stu-id="30bca-127">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a><span data-ttu-id="a19f6-125">См. также</span><span class="sxs-lookup"><span data-stu-id="a19f6-125">See also</span></span>
+- [<span data-ttu-id="a19f6-126">Интерфейс ICLRRuntimeInfo</span><span class="sxs-lookup"><span data-stu-id="a19f6-126">ICLRRuntimeInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
+- [<span data-ttu-id="a19f6-127">Размещение</span><span class="sxs-lookup"><span data-stu-id="a19f6-127">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)

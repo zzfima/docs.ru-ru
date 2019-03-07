@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 226f8c431b90d53366aa5e504101e7de581ec570
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ac40927ac9469e4a2fb74fb550287130b9bb9f83
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402474"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481564"
 ---
-# <a name="icordebugchaingetstackrange-method"></a><span data-ttu-id="35121-102">Метод ICorDebugChain::GetStackRange</span><span class="sxs-lookup"><span data-stu-id="35121-102">ICorDebugChain::GetStackRange Method</span></span>
-<span data-ttu-id="35121-103">Возвращает диапазон адресов сегмента стека для этой цепи.</span><span class="sxs-lookup"><span data-stu-id="35121-103">Gets the address range of the stack segment for this chain.</span></span>  
+# <a name="icordebugchaingetstackrange-method"></a><span data-ttu-id="ef464-102">Метод ICorDebugChain::GetStackRange</span><span class="sxs-lookup"><span data-stu-id="ef464-102">ICorDebugChain::GetStackRange Method</span></span>
+<span data-ttu-id="ef464-103">Получает диапазон адресов сегмента стека для этой цепочки.</span><span class="sxs-lookup"><span data-stu-id="ef464-103">Gets the address range of the stack segment for this chain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="35121-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="35121-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ef464-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="ef464-104">Syntax</span></span>  
   
 ```  
 HRESULT GetStackRange (  
@@ -36,21 +36,21 @@ HRESULT GetStackRange (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="35121-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="35121-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ef464-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="ef464-105">Parameters</span></span>  
  `pStart`  
- <span data-ttu-id="35121-106">[out] Указатель на `CORDB_ADDRESS` значение, которое начальный адрес сегмента стека.</span><span class="sxs-lookup"><span data-stu-id="35121-106">[out] A pointer to a `CORDB_ADDRESS` value that is the starting address of the stack segment.</span></span>  
+ <span data-ttu-id="ef464-106">[out] Указатель на `CORDB_ADDRESS` значение, равное начальный адрес сегмента стека.</span><span class="sxs-lookup"><span data-stu-id="ef464-106">[out] A pointer to a `CORDB_ADDRESS` value that is the starting address of the stack segment.</span></span>  
   
  `pEnd`  
- <span data-ttu-id="35121-107">[out] Указатель на `CORDB_ADDRESS` значение, которое конечный адрес сегмента стека.</span><span class="sxs-lookup"><span data-stu-id="35121-107">[out] A pointer to a `CORDB_ADDRESS` value that is the ending address of the stack segment.</span></span>  
+ <span data-ttu-id="ef464-107">[out] Указатель на `CORDB_ADDRESS` значение, равное конечный адрес сегмента стека.</span><span class="sxs-lookup"><span data-stu-id="ef464-107">[out] A pointer to a `CORDB_ADDRESS` value that is the ending address of the stack segment.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="35121-108">Примечания</span><span class="sxs-lookup"><span data-stu-id="35121-108">Remarks</span></span>  
- <span data-ttu-id="35121-109">Числовой диапазон имеет смысл только для сравнения расположений кадров стека.</span><span class="sxs-lookup"><span data-stu-id="35121-109">The numeric range is meaningful only for comparison of stack frame locations.</span></span> <span data-ttu-id="35121-110">Нельзя делать никаких предположений о том, что фактически хранятся в стеке.</span><span class="sxs-lookup"><span data-stu-id="35121-110">You cannot make any assumptions about what is actually stored on the stack.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ef464-108">Примечания</span><span class="sxs-lookup"><span data-stu-id="ef464-108">Remarks</span></span>  
+ <span data-ttu-id="ef464-109">Числовой диапазон имеет смысл только для сравнения расположений кадра стека.</span><span class="sxs-lookup"><span data-stu-id="ef464-109">The numeric range is meaningful only for comparison of stack frame locations.</span></span> <span data-ttu-id="ef464-110">Нельзя делать никаких предположений о фактическое содержимое в стеке.</span><span class="sxs-lookup"><span data-stu-id="ef464-110">You cannot make any assumptions about what is actually stored on the stack.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="35121-111">Требования</span><span class="sxs-lookup"><span data-stu-id="35121-111">Requirements</span></span>  
- <span data-ttu-id="35121-112">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="35121-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ef464-111">Требования</span><span class="sxs-lookup"><span data-stu-id="ef464-111">Requirements</span></span>  
+ <span data-ttu-id="ef464-112">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ef464-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="35121-113">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="35121-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="ef464-113">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ef464-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="35121-114">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="35121-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ef464-114">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ef464-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="35121-115">**Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="35121-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="ef464-115">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ef464-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

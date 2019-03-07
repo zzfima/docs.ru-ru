@@ -1,14 +1,6 @@
 ---
-title: "Метод ICorDebugFunction::GetCurrentVersionNumber"
-ms.custom: 
+title: Метод ICorDebugFunction::GetCurrentVersionNumber
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugFunction.GetCurrentVersionNumber
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: c3af1575-cbe6-457a-bc08-c53460edcbc8
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0c230c8ca6da69b45d05b3319220eacfa6c1f212
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ea615eacb30fd4e7a0fd7d730094c2ab4f9dc285
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478483"
 ---
-# <a name="icordebugfunctiongetcurrentversionnumber-method"></a><span data-ttu-id="69298-102">Метод ICorDebugFunction::GetCurrentVersionNumber</span><span class="sxs-lookup"><span data-stu-id="69298-102">ICorDebugFunction::GetCurrentVersionNumber Method</span></span>
-<span data-ttu-id="69298-103">Получает номер версии последней правки, внесенными в функцию, представленный этим объектом ICorDebugFunction.</span><span class="sxs-lookup"><span data-stu-id="69298-103">Gets the version number of the latest edit made to the function represented by this ICorDebugFunction object.</span></span>  
+# <a name="icordebugfunctiongetcurrentversionnumber-method"></a><span data-ttu-id="15eb0-102">Метод ICorDebugFunction::GetCurrentVersionNumber</span><span class="sxs-lookup"><span data-stu-id="15eb0-102">ICorDebugFunction::GetCurrentVersionNumber Method</span></span>
+<span data-ttu-id="15eb0-103">Получает номер версии последней правки, внесенной в функцию, представленный этим объектом ICorDebugFunction.</span><span class="sxs-lookup"><span data-stu-id="15eb0-103">Gets the version number of the latest edit made to the function represented by this ICorDebugFunction object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="69298-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="69298-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="15eb0-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="15eb0-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCurrentVersionNumber (  
@@ -46,18 +35,18 @@ HRESULT GetCurrentVersionNumber (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="69298-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="69298-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="15eb0-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="15eb0-105">Parameters</span></span>  
  `pnCurrentVersion`  
- <span data-ttu-id="69298-106">[out] Указатель на целое значение, представляющее номер версии последней правки этой функции.</span><span class="sxs-lookup"><span data-stu-id="69298-106">[out] A pointer to an integer value that is the version number of the latest edit made to this function.</span></span>  
+ <span data-ttu-id="15eb0-106">[out] Указатель на целочисленное значение, — это номер версии последней правки этой функции.</span><span class="sxs-lookup"><span data-stu-id="15eb0-106">[out] A pointer to an integer value that is the version number of the latest edit made to this function.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="69298-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="69298-107">Remarks</span></span>  
- <span data-ttu-id="69298-108">Номер версии последней правки этой функции может быть больше номера версии самой функции.</span><span class="sxs-lookup"><span data-stu-id="69298-108">The version number of the latest edit made to this function may be greater than the version number of the function itself.</span></span> <span data-ttu-id="69298-109">Используйте либо [ICorDebugFunction2::GetVersionNumber](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-getversionnumber-method.md) метода или [ICorDebugCode::GetVersionNumber](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getversionnumber-method.md) метод, чтобы получить номер версии функции.</span><span class="sxs-lookup"><span data-stu-id="69298-109">Use either the [ICorDebugFunction2::GetVersionNumber](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-getversionnumber-method.md) method or the [ICorDebugCode::GetVersionNumber](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getversionnumber-method.md) method to retrieve the version number of the function.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="15eb0-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="15eb0-107">Remarks</span></span>  
+ <span data-ttu-id="15eb0-108">Номер версии последней правки этой функции может быть больше, чем номер версии самой функции.</span><span class="sxs-lookup"><span data-stu-id="15eb0-108">The version number of the latest edit made to this function may be greater than the version number of the function itself.</span></span> <span data-ttu-id="15eb0-109">Использовать [ICorDebugFunction2::GetVersionNumber](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-getversionnumber-method.md) метод или [ICorDebugCode::GetVersionNumber](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getversionnumber-method.md) метод для извлечения номер версии функции.</span><span class="sxs-lookup"><span data-stu-id="15eb0-109">Use either the [ICorDebugFunction2::GetVersionNumber](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-getversionnumber-method.md) method or the [ICorDebugCode::GetVersionNumber](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getversionnumber-method.md) method to retrieve the version number of the function.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="69298-110">Требования</span><span class="sxs-lookup"><span data-stu-id="69298-110">Requirements</span></span>  
- <span data-ttu-id="69298-111">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="69298-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="15eb0-110">Требования</span><span class="sxs-lookup"><span data-stu-id="15eb0-110">Requirements</span></span>  
+ <span data-ttu-id="15eb0-111">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="15eb0-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="69298-112">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="69298-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="15eb0-112">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="15eb0-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="69298-113">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="69298-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="15eb0-113">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="15eb0-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="69298-114">**Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="69298-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="15eb0-114">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="15eb0-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

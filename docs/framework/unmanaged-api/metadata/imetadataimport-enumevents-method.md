@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f205615db29878bcfe936e88cab26c3d5a8e3562
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4771ed5578fe8f100c3d6a9476e5f2b15463fd8e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514534"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57486424"
 ---
-# <a name="imetadataimportenumevents-method"></a><span data-ttu-id="8dd3e-102">Метод IMetaDataImport::EnumEvents</span><span class="sxs-lookup"><span data-stu-id="8dd3e-102">IMetaDataImport::EnumEvents Method</span></span>
-<span data-ttu-id="8dd3e-103">Перечисляет токены определений событий для указанного токена TypeDef.</span><span class="sxs-lookup"><span data-stu-id="8dd3e-103">Enumerates event definition tokens for the specified TypeDef token.</span></span>  
+# <a name="imetadataimportenumevents-method"></a><span data-ttu-id="eaaff-102">Метод IMetaDataImport::EnumEvents</span><span class="sxs-lookup"><span data-stu-id="eaaff-102">IMetaDataImport::EnumEvents Method</span></span>
+<span data-ttu-id="eaaff-103">Перечисляет токены определений событий для указанного токена TypeDef.</span><span class="sxs-lookup"><span data-stu-id="eaaff-103">Enumerates event definition tokens for the specified TypeDef token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8dd3e-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="8dd3e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="eaaff-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="eaaff-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumEvents (   
@@ -39,38 +39,38 @@ HRESULT EnumEvents (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="8dd3e-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="8dd3e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="eaaff-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="eaaff-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="8dd3e-106">[in, out] Указатель на перечислитель.</span><span class="sxs-lookup"><span data-stu-id="8dd3e-106">[in, out] A pointer to the enumerator.</span></span>  
+ <span data-ttu-id="eaaff-106">[in, out] Указатель на перечислитель.</span><span class="sxs-lookup"><span data-stu-id="eaaff-106">[in, out] A pointer to the enumerator.</span></span>  
   
  `td`  
- <span data-ttu-id="8dd3e-107">[in] Токен TypeDef, определения которых событий являются перечисляемые.</span><span class="sxs-lookup"><span data-stu-id="8dd3e-107">[in] The TypeDef token whose event definitions are to be enumerated.</span></span>  
+ <span data-ttu-id="eaaff-107">[in] Токен TypeDef, определения которых событий являются перечисляемые.</span><span class="sxs-lookup"><span data-stu-id="eaaff-107">[in] The TypeDef token whose event definitions are to be enumerated.</span></span>  
   
  `rEvents`  
- <span data-ttu-id="8dd3e-108">[out] Массив возвращаемых событий.</span><span class="sxs-lookup"><span data-stu-id="8dd3e-108">[out] The array of returned events.</span></span>  
+ <span data-ttu-id="eaaff-108">[out] Массив возвращаемых событий.</span><span class="sxs-lookup"><span data-stu-id="eaaff-108">[out] The array of returned events.</span></span>  
   
  `cMax`  
- <span data-ttu-id="8dd3e-109">[in] Максимальный размер массива `rEvents`.</span><span class="sxs-lookup"><span data-stu-id="8dd3e-109">[in] The maximum size of the `rEvents` array.</span></span>  
+ <span data-ttu-id="eaaff-109">[in] Максимальный размер массива `rEvents`.</span><span class="sxs-lookup"><span data-stu-id="eaaff-109">[in] The maximum size of the `rEvents` array.</span></span>  
   
  `pcEvents`  
- <span data-ttu-id="8dd3e-110">[out] Фактическое число событий, возвращаемых в `rEvents`.</span><span class="sxs-lookup"><span data-stu-id="8dd3e-110">[out] The actual number of events returned in `rEvents`.</span></span>  
+ <span data-ttu-id="eaaff-110">[out] Фактическое число событий, возвращаемых в `rEvents`.</span><span class="sxs-lookup"><span data-stu-id="eaaff-110">[out] The actual number of events returned in `rEvents`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="8dd3e-111">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="8dd3e-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="eaaff-111">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="eaaff-111">Return Value</span></span>  
   
-|<span data-ttu-id="8dd3e-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="8dd3e-112">HRESULT</span></span>|<span data-ttu-id="8dd3e-113">Описание</span><span class="sxs-lookup"><span data-stu-id="8dd3e-113">Description</span></span>|  
+|<span data-ttu-id="eaaff-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="eaaff-112">HRESULT</span></span>|<span data-ttu-id="eaaff-113">Описание</span><span class="sxs-lookup"><span data-stu-id="eaaff-113">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="8dd3e-114">`EnumEvents` успешно возвращен.</span><span class="sxs-lookup"><span data-stu-id="8dd3e-114">`EnumEvents` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="8dd3e-115">Нет событий для перечисления.</span><span class="sxs-lookup"><span data-stu-id="8dd3e-115">There are no events to enumerate.</span></span> <span data-ttu-id="8dd3e-116">В этом случае `pcEvents` равно нулю.</span><span class="sxs-lookup"><span data-stu-id="8dd3e-116">In that case, `pcEvents` is zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="eaaff-114">`EnumEvents` успешно возвращен.</span><span class="sxs-lookup"><span data-stu-id="eaaff-114">`EnumEvents` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="eaaff-115">Нет событий для перечисления.</span><span class="sxs-lookup"><span data-stu-id="eaaff-115">There are no events to enumerate.</span></span> <span data-ttu-id="eaaff-116">В этом случае `pcEvents` равно нулю.</span><span class="sxs-lookup"><span data-stu-id="eaaff-116">In that case, `pcEvents` is zero.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="8dd3e-117">Требования</span><span class="sxs-lookup"><span data-stu-id="8dd3e-117">Requirements</span></span>  
- <span data-ttu-id="8dd3e-118">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8dd3e-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="eaaff-117">Требования</span><span class="sxs-lookup"><span data-stu-id="eaaff-117">Requirements</span></span>  
+ <span data-ttu-id="eaaff-118">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="eaaff-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8dd3e-119">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="8dd3e-119">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="eaaff-119">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="eaaff-119">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="8dd3e-120">**Библиотека:** Включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="8dd3e-120">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="eaaff-120">**Библиотека:** Включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="eaaff-120">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="8dd3e-121">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8dd3e-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="eaaff-121">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="eaaff-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8dd3e-122">См. также</span><span class="sxs-lookup"><span data-stu-id="8dd3e-122">See also</span></span>
-- [<span data-ttu-id="8dd3e-123">Интерфейс IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="8dd3e-123">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="8dd3e-124">Интерфейс IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="8dd3e-124">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="eaaff-122">См. также</span><span class="sxs-lookup"><span data-stu-id="eaaff-122">See also</span></span>
+- [<span data-ttu-id="eaaff-123">Интерфейс IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="eaaff-123">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="eaaff-124">Интерфейс IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="eaaff-124">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

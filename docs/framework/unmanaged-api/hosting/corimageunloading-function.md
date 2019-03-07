@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: be2edd5b217466a58aa9c478dadc10004ebda721
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 72c851858ab2f294601d2e7f97b43e21ca815857
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556146"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474830"
 ---
-# <a name="corimageunloading-function"></a><span data-ttu-id="9ddab-102">Функция _CorImageUnloading</span><span class="sxs-lookup"><span data-stu-id="9ddab-102">_CorImageUnloading Function</span></span>
-<span data-ttu-id="9ddab-103">Уведомляет загрузчик о выгрузке образов управляемого модуля.</span><span class="sxs-lookup"><span data-stu-id="9ddab-103">Notifies the loader when the managed module images are unloaded.</span></span>  
+# <a name="corimageunloading-function"></a><span data-ttu-id="d2313-102">Функция _CorImageUnloading</span><span class="sxs-lookup"><span data-stu-id="d2313-102">_CorImageUnloading Function</span></span>
+<span data-ttu-id="d2313-103">Уведомляет загрузчик о выгрузке образов управляемого модуля.</span><span class="sxs-lookup"><span data-stu-id="d2313-103">Notifies the loader when the managed module images are unloaded.</span></span>  
   
- <span data-ttu-id="9ddab-104">Эта функция не реализована.</span><span class="sxs-lookup"><span data-stu-id="9ddab-104">This function is not implemented.</span></span> <span data-ttu-id="9ddab-105">При вызове, он возвращает E_NOTIMPL.</span><span class="sxs-lookup"><span data-stu-id="9ddab-105">If called, it returns E_NOTIMPL.</span></span>  
+ <span data-ttu-id="d2313-104">Эта функция не реализована.</span><span class="sxs-lookup"><span data-stu-id="d2313-104">This function is not implemented.</span></span> <span data-ttu-id="d2313-105">При вызове, он возвращает E_NOTIMPL.</span><span class="sxs-lookup"><span data-stu-id="d2313-105">If called, it returns E_NOTIMPL.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9ddab-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="9ddab-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d2313-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d2313-106">Syntax</span></span>  
   
 ```  
 STDAPI (VOID) _CorImageUnloading(   
@@ -36,18 +36,18 @@ STDAPI (VOID) _CorImageUnloading(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="9ddab-107">Параметры</span><span class="sxs-lookup"><span data-stu-id="9ddab-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d2313-107">Параметры</span><span class="sxs-lookup"><span data-stu-id="d2313-107">Parameters</span></span>  
  `ImageBase`  
- <span data-ttu-id="9ddab-108">[in] Указатель на начальное расположение образа для выгрузки.</span><span class="sxs-lookup"><span data-stu-id="9ddab-108">[in] A pointer to the starting location of the image to unload.</span></span>  
+ <span data-ttu-id="d2313-108">[in] Указатель на начальное расположение образа для выгрузки.</span><span class="sxs-lookup"><span data-stu-id="d2313-108">[in] A pointer to the starting location of the image to unload.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9ddab-109">Требования</span><span class="sxs-lookup"><span data-stu-id="9ddab-109">Requirements</span></span>  
- <span data-ttu-id="9ddab-110">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9ddab-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d2313-109">Требования</span><span class="sxs-lookup"><span data-stu-id="d2313-109">Requirements</span></span>  
+ <span data-ttu-id="d2313-110">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d2313-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9ddab-111">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="9ddab-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="d2313-111">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="d2313-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="9ddab-112">**Библиотека:** Включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="9ddab-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="d2313-112">**Библиотека:** Включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="d2313-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="9ddab-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9ddab-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="d2313-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d2313-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9ddab-114">См. также</span><span class="sxs-lookup"><span data-stu-id="9ddab-114">See also</span></span>
-- [<span data-ttu-id="9ddab-115">Глобальные статические функции метаданных</span><span class="sxs-lookup"><span data-stu-id="9ddab-115">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a><span data-ttu-id="d2313-114">См. также</span><span class="sxs-lookup"><span data-stu-id="d2313-114">See also</span></span>
+- [<span data-ttu-id="d2313-115">Глобальные статические функции метаданных</span><span class="sxs-lookup"><span data-stu-id="d2313-115">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

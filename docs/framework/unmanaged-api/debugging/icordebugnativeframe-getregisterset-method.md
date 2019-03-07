@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8714cecb343d21fd119a925d2fc7c23abbaebbe1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 18db366bde4211afa0f65052affa0ab9639df122
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664451"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498930"
 ---
-# <a name="icordebugnativeframegetregisterset-method"></a><span data-ttu-id="eb38e-102">Метод ICorDebugNativeFrame::GetRegisterSet</span><span class="sxs-lookup"><span data-stu-id="eb38e-102">ICorDebugNativeFrame::GetRegisterSet Method</span></span>
-<span data-ttu-id="eb38e-103">Получает набор регистров для этого кадра стека.</span><span class="sxs-lookup"><span data-stu-id="eb38e-103">Gets the register set for this stack frame.</span></span>  
+# <a name="icordebugnativeframegetregisterset-method"></a><span data-ttu-id="1b571-102">Метод ICorDebugNativeFrame::GetRegisterSet</span><span class="sxs-lookup"><span data-stu-id="1b571-102">ICorDebugNativeFrame::GetRegisterSet Method</span></span>
+<span data-ttu-id="1b571-103">Получает набор регистров для этого кадра стека.</span><span class="sxs-lookup"><span data-stu-id="1b571-103">Gets the register set for this stack frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="eb38e-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="eb38e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1b571-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="1b571-104">Syntax</span></span>  
   
 ```  
 HRESULT GetRegisterSet (  
@@ -35,18 +35,18 @@ HRESULT GetRegisterSet (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="eb38e-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="eb38e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1b571-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="1b571-105">Parameters</span></span>  
  `ppRegisters`  
- <span data-ttu-id="eb38e-106">[out] Указатель на адрес [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) , представляющий регистра задать для этого кадра стека.</span><span class="sxs-lookup"><span data-stu-id="eb38e-106">[out] A pointer to the address of an [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) object that represents the register set for this stack frame.</span></span>  
+ <span data-ttu-id="1b571-106">[out] Указатель на адрес [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) , представляющий регистра задать для этого кадра стека.</span><span class="sxs-lookup"><span data-stu-id="1b571-106">[out] A pointer to the address of an [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) object that represents the register set for this stack frame.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="eb38e-107">Требования</span><span class="sxs-lookup"><span data-stu-id="eb38e-107">Requirements</span></span>  
- <span data-ttu-id="eb38e-108">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="eb38e-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1b571-107">Требования</span><span class="sxs-lookup"><span data-stu-id="1b571-107">Requirements</span></span>  
+ <span data-ttu-id="1b571-108">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1b571-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="eb38e-109">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="eb38e-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="1b571-109">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1b571-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="eb38e-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="eb38e-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="1b571-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1b571-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="eb38e-111">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="eb38e-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="1b571-111">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1b571-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="eb38e-112">См. также</span><span class="sxs-lookup"><span data-stu-id="eb38e-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1b571-112">См. также</span><span class="sxs-lookup"><span data-stu-id="1b571-112">See also</span></span>
 

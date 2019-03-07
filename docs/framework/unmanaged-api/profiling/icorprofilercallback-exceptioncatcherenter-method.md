@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cb31da8b3fb9148bb41cf7216b44e7cbf610eaee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 91a149a33dcf283f9ab4fedafbff53c8b46c503e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671620"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475064"
 ---
-# <a name="icorprofilercallbackexceptioncatcherenter-method"></a><span data-ttu-id="d5dac-102">Метод ICorProfilerCallback::ExceptionCatcherEnter</span><span class="sxs-lookup"><span data-stu-id="d5dac-102">ICorProfilerCallback::ExceptionCatcherEnter Method</span></span>
-<span data-ttu-id="d5dac-103">Уведомляет профилировщик, что управление передается соответствующему блоку `catch`.</span><span class="sxs-lookup"><span data-stu-id="d5dac-103">Notifies the profiler that control is being passed to the appropriate `catch` block.</span></span>  
+# <a name="icorprofilercallbackexceptioncatcherenter-method"></a><span data-ttu-id="dcd87-102">Метод ICorProfilerCallback::ExceptionCatcherEnter</span><span class="sxs-lookup"><span data-stu-id="dcd87-102">ICorProfilerCallback::ExceptionCatcherEnter Method</span></span>
+<span data-ttu-id="dcd87-103">Уведомляет профилировщик, что управление передается соответствующему блоку `catch`.</span><span class="sxs-lookup"><span data-stu-id="dcd87-103">Notifies the profiler that control is being passed to the appropriate `catch` block.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d5dac-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d5dac-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dcd87-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="dcd87-104">Syntax</span></span>  
   
 ```  
 HRESULT ExceptionCatcherEnter(  
@@ -35,29 +35,29 @@ HRESULT ExceptionCatcherEnter(
     [in] ObjectID   objectId);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d5dac-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="d5dac-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="dcd87-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="dcd87-105">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="d5dac-106">[in] Функция, содержащая идентификатор `catch` блока.</span><span class="sxs-lookup"><span data-stu-id="d5dac-106">[in] The identifier of the function containing the `catch` block.</span></span>  
+ <span data-ttu-id="dcd87-106">[in] Функция, содержащая идентификатор `catch` блока.</span><span class="sxs-lookup"><span data-stu-id="dcd87-106">[in] The identifier of the function containing the `catch` block.</span></span>  
   
  `objectId`  
- <span data-ttu-id="d5dac-107">[in] Идентификатор обрабатываемое исключение.</span><span class="sxs-lookup"><span data-stu-id="d5dac-107">[in] The identifier of the exception being handled.</span></span>  
+ <span data-ttu-id="dcd87-107">[in] Идентификатор обрабатываемое исключение.</span><span class="sxs-lookup"><span data-stu-id="dcd87-107">[in] The identifier of the exception being handled.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d5dac-108">Примечания</span><span class="sxs-lookup"><span data-stu-id="d5dac-108">Remarks</span></span>  
- <span data-ttu-id="d5dac-109">`ExceptionCatcherEnter` Метод вызывается только в том случае, если точка catch находится в коде, скомпилированном с помощью компилятора just-in-time (JIT).</span><span class="sxs-lookup"><span data-stu-id="d5dac-109">The `ExceptionCatcherEnter` method is called only if the catch point is in code compiled with the just-in-time (JIT) compiler.</span></span> <span data-ttu-id="d5dac-110">Это уведомление не вызывает исключения, перехваченные в неуправляемом коде, или во внутреннем коде среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="d5dac-110">An exception that is caught in unmanaged code or in the internal code of the runtime will not call this notification.</span></span> <span data-ttu-id="d5dac-111">`objectId` Значение передается снова, поскольку сбор мусора может перемещена объекта с момента `ExceptionThrown` уведомлений.</span><span class="sxs-lookup"><span data-stu-id="d5dac-111">The `objectId` value is passed again since a garbage collection could have moved the object since the `ExceptionThrown` notification.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="dcd87-108">Примечания</span><span class="sxs-lookup"><span data-stu-id="dcd87-108">Remarks</span></span>  
+ <span data-ttu-id="dcd87-109">`ExceptionCatcherEnter` Метод вызывается только в том случае, если точка catch находится в коде, скомпилированном с помощью компилятора just-in-time (JIT).</span><span class="sxs-lookup"><span data-stu-id="dcd87-109">The `ExceptionCatcherEnter` method is called only if the catch point is in code compiled with the just-in-time (JIT) compiler.</span></span> <span data-ttu-id="dcd87-110">Это уведомление не вызывает исключения, перехваченные в неуправляемом коде, или во внутреннем коде среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="dcd87-110">An exception that is caught in unmanaged code or in the internal code of the runtime will not call this notification.</span></span> <span data-ttu-id="dcd87-111">`objectId` Значение передается снова, поскольку сбор мусора может перемещена объекта с момента `ExceptionThrown` уведомлений.</span><span class="sxs-lookup"><span data-stu-id="dcd87-111">The `objectId` value is passed again since a garbage collection could have moved the object since the `ExceptionThrown` notification.</span></span>  
   
- <span data-ttu-id="d5dac-112">Профилировщик не должен блокироваться при реализации этого метода, поскольку стек может находиться в состоянии, допускающем сбор мусора, и поэтому не удастся включить сборку мусора.</span><span class="sxs-lookup"><span data-stu-id="d5dac-112">The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled.</span></span> <span data-ttu-id="d5dac-113">Если здесь профилировщик блокируется и предпринимается попытка сбора мусора, среда выполнения будет блокироваться до этого обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="d5dac-113">If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.</span></span>  
+ <span data-ttu-id="dcd87-112">Профилировщик не должен блокироваться при реализации этого метода, поскольку стек может находиться в состоянии, допускающем сбор мусора, и поэтому не удастся включить сборку мусора.</span><span class="sxs-lookup"><span data-stu-id="dcd87-112">The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled.</span></span> <span data-ttu-id="dcd87-113">Если здесь профилировщик блокируется и предпринимается попытка сбора мусора, среда выполнения будет блокироваться до этого обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="dcd87-113">If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.</span></span>  
   
- <span data-ttu-id="d5dac-114">Реализация этого метода профилировщика не следует вызывать управляемый код или каким-либо образом вызывать распределения управляемой памяти.</span><span class="sxs-lookup"><span data-stu-id="d5dac-114">The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.</span></span>  
+ <span data-ttu-id="dcd87-114">Реализация этого метода профилировщика не следует вызывать управляемый код или каким-либо образом вызывать распределения управляемой памяти.</span><span class="sxs-lookup"><span data-stu-id="dcd87-114">The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d5dac-115">Требования</span><span class="sxs-lookup"><span data-stu-id="d5dac-115">Requirements</span></span>  
- <span data-ttu-id="d5dac-116">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d5dac-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dcd87-115">Требования</span><span class="sxs-lookup"><span data-stu-id="dcd87-115">Requirements</span></span>  
+ <span data-ttu-id="dcd87-116">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="dcd87-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d5dac-117">**Заголовок.** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="d5dac-117">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="dcd87-117">**Заголовок.** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="dcd87-117">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="d5dac-118">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d5dac-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="dcd87-118">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="dcd87-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d5dac-119">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d5dac-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="dcd87-119">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dcd87-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d5dac-120">См. также</span><span class="sxs-lookup"><span data-stu-id="d5dac-120">See also</span></span>
-- [<span data-ttu-id="d5dac-121">Интерфейс ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="d5dac-121">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="d5dac-122">Метод ExceptionCatcherLeave</span><span class="sxs-lookup"><span data-stu-id="d5dac-122">ExceptionCatcherLeave Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherleave-method.md)
+## <a name="see-also"></a><span data-ttu-id="dcd87-120">См. также</span><span class="sxs-lookup"><span data-stu-id="dcd87-120">See also</span></span>
+- [<span data-ttu-id="dcd87-121">Интерфейс ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="dcd87-121">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="dcd87-122">Метод ExceptionCatcherLeave</span><span class="sxs-lookup"><span data-stu-id="dcd87-122">ExceptionCatcherLeave Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherleave-method.md)

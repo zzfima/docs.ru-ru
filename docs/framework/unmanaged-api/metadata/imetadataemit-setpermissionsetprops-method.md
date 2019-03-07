@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c8a4d3b7014d0da88e83b507c39c039d39ba93d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 372d2fd62503969e47b5ab28528fa554ecd551ca
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54542682"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57470111"
 ---
-# <a name="imetadataemitsetpermissionsetprops-method"></a><span data-ttu-id="f00d8-102">Метод IMetaDataEmit::SetPermissionSetProps</span><span class="sxs-lookup"><span data-stu-id="f00d8-102">IMetaDataEmit::SetPermissionSetProps Method</span></span>
-<span data-ttu-id="f00d8-103">Задает или обновляет функции сигнатуры метаданных набора разрешений, определенные с помощью предыдущего вызова [IMetaDataEmit::DefinePermissionSet](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepermissionset-method.md).</span><span class="sxs-lookup"><span data-stu-id="f00d8-103">Sets or updates features of the metadata signature of a permission set defined by a prior call to [IMetaDataEmit::DefinePermissionSet](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepermissionset-method.md).</span></span>  
+# <a name="imetadataemitsetpermissionsetprops-method"></a><span data-ttu-id="d6dc1-102">Метод IMetaDataEmit::SetPermissionSetProps</span><span class="sxs-lookup"><span data-stu-id="d6dc1-102">IMetaDataEmit::SetPermissionSetProps Method</span></span>
+<span data-ttu-id="d6dc1-103">Задает или обновляет функции сигнатуры метаданных набора разрешений, определенные с помощью предыдущего вызова [IMetaDataEmit::DefinePermissionSet](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepermissionset-method.md).</span><span class="sxs-lookup"><span data-stu-id="d6dc1-103">Sets or updates features of the metadata signature of a permission set defined by a prior call to [IMetaDataEmit::DefinePermissionSet](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepermissionset-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f00d8-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f00d8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d6dc1-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d6dc1-104">Syntax</span></span>  
   
 ```  
 HRESULT SetPermissionSetProps (   
@@ -39,31 +39,31 @@ HRESULT SetPermissionSetProps (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="f00d8-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="f00d8-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d6dc1-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="d6dc1-105">Parameters</span></span>  
  `tk`  
- <span data-ttu-id="f00d8-106">[in] Токен метаданных, представляющий объект параметризация.</span><span class="sxs-lookup"><span data-stu-id="f00d8-106">[in] A metadata token that represents the object to be decorated.</span></span>  
+ <span data-ttu-id="d6dc1-106">[in] Токен метаданных, представляющий объект параметризация.</span><span class="sxs-lookup"><span data-stu-id="d6dc1-106">[in] A metadata token that represents the object to be decorated.</span></span>  
   
  `dwAction`  
- <span data-ttu-id="f00d8-107">[in] Объект [CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) значение, указывающее тип декларативной безопасности для использования.</span><span class="sxs-lookup"><span data-stu-id="f00d8-107">[in] A [CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) value that specifies the type of declarative security to be used.</span></span>  
+ <span data-ttu-id="d6dc1-107">[in] Объект [CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) значение, указывающее тип декларативной безопасности для использования.</span><span class="sxs-lookup"><span data-stu-id="d6dc1-107">[in] A [CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) value that specifies the type of declarative security to be used.</span></span>  
   
  `pvPermission`  
- <span data-ttu-id="f00d8-108">[in] Разрешение BLOB-ОБЪЕКТОВ.</span><span class="sxs-lookup"><span data-stu-id="f00d8-108">[in] The permission BLOB.</span></span>  
+ <span data-ttu-id="d6dc1-108">[in] Разрешение BLOB-ОБЪЕКТОВ.</span><span class="sxs-lookup"><span data-stu-id="d6dc1-108">[in] The permission BLOB.</span></span>  
   
  `cbPermission`  
- <span data-ttu-id="f00d8-109">[in] Размер в байтах из `pvPermission`.</span><span class="sxs-lookup"><span data-stu-id="f00d8-109">[in] The size, in bytes, of `pvPermission`.</span></span>  
+ <span data-ttu-id="d6dc1-109">[in] Размер в байтах из `pvPermission`.</span><span class="sxs-lookup"><span data-stu-id="d6dc1-109">[in] The size, in bytes, of `pvPermission`.</span></span>  
   
  `ppm`  
- <span data-ttu-id="f00d8-110">[out] `mdPermission` Токен метаданных, представляющий обновленные разрешения.</span><span class="sxs-lookup"><span data-stu-id="f00d8-110">[out] An `mdPermission` metadata token that represents the updated permissions.</span></span>  
+ <span data-ttu-id="d6dc1-110">[out] `mdPermission` Токен метаданных, представляющий обновленные разрешения.</span><span class="sxs-lookup"><span data-stu-id="d6dc1-110">[out] An `mdPermission` metadata token that represents the updated permissions.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f00d8-111">Требования</span><span class="sxs-lookup"><span data-stu-id="f00d8-111">Requirements</span></span>  
- <span data-ttu-id="f00d8-112">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f00d8-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d6dc1-111">Требования</span><span class="sxs-lookup"><span data-stu-id="d6dc1-111">Requirements</span></span>  
+ <span data-ttu-id="d6dc1-112">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d6dc1-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f00d8-113">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="f00d8-113">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="d6dc1-113">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="d6dc1-113">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="f00d8-114">**Библиотека:** Используется как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="f00d8-114">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="d6dc1-114">**Библиотека:** Используется как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="d6dc1-114">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="f00d8-115">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f00d8-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="d6dc1-115">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d6dc1-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f00d8-116">См. также</span><span class="sxs-lookup"><span data-stu-id="f00d8-116">See also</span></span>
-- [<span data-ttu-id="f00d8-117">Интерфейс IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="f00d8-117">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="f00d8-118">Интерфейс IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="f00d8-118">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="d6dc1-116">См. также</span><span class="sxs-lookup"><span data-stu-id="d6dc1-116">See also</span></span>
+- [<span data-ttu-id="d6dc1-117">Интерфейс IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="d6dc1-117">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="d6dc1-118">Интерфейс IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="d6dc1-118">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
