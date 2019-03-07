@@ -14,19 +14,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f770182ef8489d503ed092bb4c6cf43ae5b9ce10
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3ab2cf814297397bcc6eddcb4ce7379e7444eb60
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663353"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478899"
 ---
-# <a name="icordebugilframe4enumeratelocalvariablesex-method"></a><span data-ttu-id="6c67a-102">Метод ICorDebugILFrame4::EnumerateLocalVariablesEx</span><span class="sxs-lookup"><span data-stu-id="6c67a-102">ICorDebugILFrame4::EnumerateLocalVariablesEx Method</span></span>
-<span data-ttu-id="6c67a-103">[Поддерживается в .NET Framework 4.5.2 и более поздних версиях.]</span><span class="sxs-lookup"><span data-stu-id="6c67a-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
+# <a name="icordebugilframe4enumeratelocalvariablesex-method"></a><span data-ttu-id="059ec-102">Метод ICorDebugILFrame4::EnumerateLocalVariablesEx</span><span class="sxs-lookup"><span data-stu-id="059ec-102">ICorDebugILFrame4::EnumerateLocalVariablesEx Method</span></span>
+<span data-ttu-id="059ec-103">[Поддерживается в .NET Framework 4.5.2 и более поздних версиях.]</span><span class="sxs-lookup"><span data-stu-id="059ec-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
   
- <span data-ttu-id="6c67a-104">Получает перечислитель для локальной переменной в кадре и может включать переменные, добавленные в инструментарий ReJIT профилировщика.</span><span class="sxs-lookup"><span data-stu-id="6c67a-104">Gets an enumerator for the local variable in the frame, and optionally includes variables added in profiler ReJIT instrumentation.</span></span>  
+ <span data-ttu-id="059ec-104">Получает перечислитель для локальной переменной в кадре и может включать переменные, добавленные в инструментарий ReJIT профилировщика.</span><span class="sxs-lookup"><span data-stu-id="059ec-104">Gets an enumerator for the local variable in the frame, and optionally includes variables added in profiler ReJIT instrumentation.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6c67a-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="6c67a-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="059ec-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="059ec-105">Syntax</span></span>  
   
 ```cpp
 HRESULT EnumerateLocalVariablesEx(  
@@ -35,28 +35,28 @@ HRESULT EnumerateLocalVariablesEx(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="6c67a-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="6c67a-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="059ec-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="059ec-106">Parameters</span></span>  
  `flags`  
- <span data-ttu-id="6c67a-107">[in] [ILCodeKind](../../../../docs/framework/unmanaged-api/debugging/ilcodekind-enumeration.md) член перечисления, указывающее, включаются ли в кадр переменным, добавленным в инструментарий ReJIT профилировщика.</span><span class="sxs-lookup"><span data-stu-id="6c67a-107">[in] An [ILCodeKind](../../../../docs/framework/unmanaged-api/debugging/ilcodekind-enumeration.md) enumeration member that specifies whether variables added in profiler ReJIT instrumentation are included in the frame.</span></span>  
+ <span data-ttu-id="059ec-107">[in] [ILCodeKind](../../../../docs/framework/unmanaged-api/debugging/ilcodekind-enumeration.md) член перечисления, указывающее, включаются ли в кадр переменным, добавленным в инструментарий ReJIT профилировщика.</span><span class="sxs-lookup"><span data-stu-id="059ec-107">[in] An [ILCodeKind](../../../../docs/framework/unmanaged-api/debugging/ilcodekind-enumeration.md) enumeration member that specifies whether variables added in profiler ReJIT instrumentation are included in the frame.</span></span>  
   
  `ppValueEnum`  
- <span data-ttu-id="6c67a-108">[out] Указатель на адрес объекта «ICorDebugValueEnum», который является перечислителем для локальных переменных в кадре.</span><span class="sxs-lookup"><span data-stu-id="6c67a-108">[out] A pointer to the address of an "ICorDebugValueEnum" object that is the enumerator for the local variables in this frame.</span></span>  
+ <span data-ttu-id="059ec-108">[out] Указатель на адрес объекта «ICorDebugValueEnum», который является перечислителем для локальных переменных в кадре.</span><span class="sxs-lookup"><span data-stu-id="059ec-108">[out] A pointer to the address of an "ICorDebugValueEnum" object that is the enumerator for the local variables in this frame.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="6c67a-109">Примечания</span><span class="sxs-lookup"><span data-stu-id="6c67a-109">Remarks</span></span>  
- <span data-ttu-id="6c67a-110">Этот метод аналогичен методу [EnumerateLocalVariables](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-enumeratelocalvariables-method.md) за тем исключением, что он дополнительно получает доступ к переменным, добавленным в инструментарий ReJIT профилировщика.</span><span class="sxs-lookup"><span data-stu-id="6c67a-110">This method is similar to the [EnumerateLocalVariables](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-enumeratelocalvariables-method.md) method, except that it optionally accesses variables added in profiler ReJIT instrumentation.</span></span> <span data-ttu-id="6c67a-111">Установка `flags` для `ILCODE_ORIGINAL_IL` эквивалентно вызову [ICorDebugILFrame::EnumerateLocalVariables](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-enumeratelocalvariables-method.md).</span><span class="sxs-lookup"><span data-stu-id="6c67a-111">Setting `flags` to `ILCODE_ORIGINAL_IL` is equivalent to calling [ICorDebugILFrame::EnumerateLocalVariables](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-enumeratelocalvariables-method.md).</span></span> <span data-ttu-id="6c67a-112">Установка значения `flags` для параметра `ILCODE_REJIT_IL` позволяет отладчику получить доступ к локальным переменным, добавленным в инструментарий ReJIT профилировщика.</span><span class="sxs-lookup"><span data-stu-id="6c67a-112">Setting `flags` to `ILCODE_REJIT_IL` allows the debugger to access the local variables added in profiler ReJIT instrumentation.</span></span> <span data-ttu-id="6c67a-113">Если промежуточный язык не инструментирован, перечисление будет пустым, а метод вернет значение `S_OK`.</span><span class="sxs-lookup"><span data-stu-id="6c67a-113">If the intermediate language (IL) is not instrumented, the enumeration is empty and the method returns `S_OK`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="059ec-109">Примечания</span><span class="sxs-lookup"><span data-stu-id="059ec-109">Remarks</span></span>  
+ <span data-ttu-id="059ec-110">Этот метод аналогичен методу [EnumerateLocalVariables](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-enumeratelocalvariables-method.md) за тем исключением, что он дополнительно получает доступ к переменным, добавленным в инструментарий ReJIT профилировщика.</span><span class="sxs-lookup"><span data-stu-id="059ec-110">This method is similar to the [EnumerateLocalVariables](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-enumeratelocalvariables-method.md) method, except that it optionally accesses variables added in profiler ReJIT instrumentation.</span></span> <span data-ttu-id="059ec-111">Установка `flags` для `ILCODE_ORIGINAL_IL` эквивалентно вызову [ICorDebugILFrame::EnumerateLocalVariables](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-enumeratelocalvariables-method.md).</span><span class="sxs-lookup"><span data-stu-id="059ec-111">Setting `flags` to `ILCODE_ORIGINAL_IL` is equivalent to calling [ICorDebugILFrame::EnumerateLocalVariables](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-enumeratelocalvariables-method.md).</span></span> <span data-ttu-id="059ec-112">Установка значения `flags` для параметра `ILCODE_REJIT_IL` позволяет отладчику получить доступ к локальным переменным, добавленным в инструментарий ReJIT профилировщика.</span><span class="sxs-lookup"><span data-stu-id="059ec-112">Setting `flags` to `ILCODE_REJIT_IL` allows the debugger to access the local variables added in profiler ReJIT instrumentation.</span></span> <span data-ttu-id="059ec-113">Если промежуточный язык не инструментирован, перечисление будет пустым, а метод вернет значение `S_OK`.</span><span class="sxs-lookup"><span data-stu-id="059ec-113">If the intermediate language (IL) is not instrumented, the enumeration is empty and the method returns `S_OK`.</span></span>  
   
- <span data-ttu-id="6c67a-114">Перечислитель может не включать все локальные переменные выполняемого метода, так как некоторые из них могут быть неактивными.</span><span class="sxs-lookup"><span data-stu-id="6c67a-114">The enumerator may not include all of the local variables in the running method, since some of them may not be active.</span></span>  
+ <span data-ttu-id="059ec-114">Перечислитель может не включать все локальные переменные выполняемого метода, так как некоторые из них могут быть неактивными.</span><span class="sxs-lookup"><span data-stu-id="059ec-114">The enumerator may not include all of the local variables in the running method, since some of them may not be active.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6c67a-115">Требования</span><span class="sxs-lookup"><span data-stu-id="6c67a-115">Requirements</span></span>  
- <span data-ttu-id="6c67a-116">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6c67a-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="059ec-115">Требования</span><span class="sxs-lookup"><span data-stu-id="059ec-115">Requirements</span></span>  
+ <span data-ttu-id="059ec-116">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="059ec-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6c67a-117">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6c67a-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="059ec-117">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="059ec-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="6c67a-118">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6c67a-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="059ec-118">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="059ec-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6c67a-119">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6c67a-119">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
+ <span data-ttu-id="059ec-119">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="059ec-119">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6c67a-120">См. также</span><span class="sxs-lookup"><span data-stu-id="6c67a-120">See also</span></span>
-- [<span data-ttu-id="6c67a-121">Интерфейс ICorDebugILFrame4</span><span class="sxs-lookup"><span data-stu-id="6c67a-121">ICorDebugILFrame4 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-interface.md)
-- [<span data-ttu-id="6c67a-122">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="6c67a-122">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="6c67a-123">ReJIT: Практическое руководство</span><span class="sxs-lookup"><span data-stu-id="6c67a-123">ReJIT: A How-To Guide</span></span>](https://blogs.msdn.com/b/davbr/archive/2011/10/12/rejit-a-how-to-guide.aspx)
+## <a name="see-also"></a><span data-ttu-id="059ec-120">См. также</span><span class="sxs-lookup"><span data-stu-id="059ec-120">See also</span></span>
+- [<span data-ttu-id="059ec-121">Интерфейс ICorDebugILFrame4</span><span class="sxs-lookup"><span data-stu-id="059ec-121">ICorDebugILFrame4 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-interface.md)
+- [<span data-ttu-id="059ec-122">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="059ec-122">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="059ec-123">ReJIT: Практическое руководство</span><span class="sxs-lookup"><span data-stu-id="059ec-123">ReJIT: A How-To Guide</span></span>](https://blogs.msdn.com/b/davbr/archive/2011/10/12/rejit-a-how-to-guide.aspx)

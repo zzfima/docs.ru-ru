@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cb686be625d0d38bcf0de496c192276ebaa3410d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b13402b6bccd825629b0110c948ed920c1fdf8a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54629583"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487971"
 ---
-# <a name="icorprofilerinfogetthreadcontext-method"></a><span data-ttu-id="302b7-102">Метод ICorProfilerInfo::GetThreadContext</span><span class="sxs-lookup"><span data-stu-id="302b7-102">ICorProfilerInfo::GetThreadContext Method</span></span>
-<span data-ttu-id="302b7-103">Получает идентификатор контекста ассоциированы с указанным потоком.</span><span class="sxs-lookup"><span data-stu-id="302b7-103">Gets the context identity currently associated with the specified thread.</span></span>  
+# <a name="icorprofilerinfogetthreadcontext-method"></a><span data-ttu-id="f64c4-102">Метод ICorProfilerInfo::GetThreadContext</span><span class="sxs-lookup"><span data-stu-id="f64c4-102">ICorProfilerInfo::GetThreadContext Method</span></span>
+<span data-ttu-id="f64c4-103">Получает идентификатор контекста ассоциированы с указанным потоком.</span><span class="sxs-lookup"><span data-stu-id="f64c4-103">Gets the context identity currently associated with the specified thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="302b7-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="302b7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f64c4-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f64c4-104">Syntax</span></span>  
   
 ```  
 HRESULT GetThreadContext(  
@@ -35,21 +35,21 @@ HRESULT GetThreadContext(
     [out] ContextID *pContextId);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="302b7-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="302b7-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f64c4-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="f64c4-105">Parameters</span></span>  
  `threadId`  
- <span data-ttu-id="302b7-106">[in] Идентификатор потока.</span><span class="sxs-lookup"><span data-stu-id="302b7-106">[in] The ID of the thread.</span></span>  
+ <span data-ttu-id="f64c4-106">[in] Идентификатор потока.</span><span class="sxs-lookup"><span data-stu-id="f64c4-106">[in] The ID of the thread.</span></span>  
   
  `pContextId`  
- <span data-ttu-id="302b7-107">[out] Указатель на идентификатор контекста ассоциированы с указанным потоком.</span><span class="sxs-lookup"><span data-stu-id="302b7-107">[out] A pointer to the context ID currently associated with the specified thread.</span></span> <span data-ttu-id="302b7-108">Если поток не имеет контекста ассоциированы с ним, эта функция возвращает CORPROF_E_DATAINCOMPLETE.</span><span class="sxs-lookup"><span data-stu-id="302b7-108">If the thread has no context currently associated with it, this function will return CORPROF_E_DATAINCOMPLETE.</span></span>  
+ <span data-ttu-id="f64c4-107">[out] Указатель на идентификатор контекста ассоциированы с указанным потоком.</span><span class="sxs-lookup"><span data-stu-id="f64c4-107">[out] A pointer to the context ID currently associated with the specified thread.</span></span> <span data-ttu-id="f64c4-108">Если поток не имеет контекста ассоциированы с ним, эта функция возвращает CORPROF_E_DATAINCOMPLETE.</span><span class="sxs-lookup"><span data-stu-id="f64c4-108">If the thread has no context currently associated with it, this function will return CORPROF_E_DATAINCOMPLETE.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="302b7-109">Требования</span><span class="sxs-lookup"><span data-stu-id="302b7-109">Requirements</span></span>  
- <span data-ttu-id="302b7-110">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="302b7-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f64c4-109">Требования</span><span class="sxs-lookup"><span data-stu-id="f64c4-109">Requirements</span></span>  
+ <span data-ttu-id="f64c4-110">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f64c4-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="302b7-111">**Заголовок.** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="302b7-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="f64c4-111">**Заголовок.** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="f64c4-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="302b7-112">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="302b7-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f64c4-112">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f64c4-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="302b7-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="302b7-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="f64c4-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f64c4-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="302b7-114">См. также</span><span class="sxs-lookup"><span data-stu-id="302b7-114">See also</span></span>
-- [<span data-ttu-id="302b7-115">Интерфейс ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="302b7-115">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a><span data-ttu-id="f64c4-114">См. также</span><span class="sxs-lookup"><span data-stu-id="f64c4-114">See also</span></span>
+- [<span data-ttu-id="f64c4-115">Интерфейс ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="f64c4-115">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

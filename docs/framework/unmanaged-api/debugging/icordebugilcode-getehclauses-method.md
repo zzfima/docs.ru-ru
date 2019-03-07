@@ -14,19 +14,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 455b8f5434974f2bb424faf23bb2a49e91214e7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 60d9ae1abc97d348dced9e4a21236c70658a9141
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731092"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488140"
 ---
-# <a name="icordebugilcodegetehclauses-method"></a><span data-ttu-id="bb127-102">Метод ICorDebugILCode::GetEHClauses</span><span class="sxs-lookup"><span data-stu-id="bb127-102">ICorDebugILCode::GetEHClauses Method</span></span>
-<span data-ttu-id="bb127-103">[Поддерживается в .NET Framework 4.5.2 и более поздних версиях.]</span><span class="sxs-lookup"><span data-stu-id="bb127-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
+# <a name="icordebugilcodegetehclauses-method"></a><span data-ttu-id="d29b3-102">Метод ICorDebugILCode::GetEHClauses</span><span class="sxs-lookup"><span data-stu-id="d29b3-102">ICorDebugILCode::GetEHClauses Method</span></span>
+<span data-ttu-id="d29b3-103">[Поддерживается в .NET Framework 4.5.2 и более поздних версиях.]</span><span class="sxs-lookup"><span data-stu-id="d29b3-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
   
- <span data-ttu-id="bb127-104">Возвращает указатель на список предложений обработки исключений, определенных для этого промежуточного языка.</span><span class="sxs-lookup"><span data-stu-id="bb127-104">Returns a pointer to a list of exception handling (EH) clauses that are defined for this intermediate language (IL).</span></span>  
+ <span data-ttu-id="d29b3-104">Возвращает указатель на список предложений обработки исключений, определенных для этого промежуточного языка.</span><span class="sxs-lookup"><span data-stu-id="d29b3-104">Returns a pointer to a list of exception handling (EH) clauses that are defined for this intermediate language (IL).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bb127-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="bb127-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d29b3-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d29b3-105">Syntax</span></span>  
   
 ```cpp
 HRESULT GetEHClauses(  
@@ -35,29 +35,29 @@ HRESULT GetEHClauses(
    [out, size_is(cClauses), length_is(*pcClauses)] CorDebugEHClause clauses[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="bb127-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="bb127-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d29b3-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="d29b3-106">Parameters</span></span>  
  `cClauses`  
- <span data-ttu-id="bb127-107">[в] Емкость хранилища массива `clauses`.</span><span class="sxs-lookup"><span data-stu-id="bb127-107">[in] The storage capacity of the `clauses` array.</span></span> <span data-ttu-id="bb127-108">Дополнительные сведения см. в разделе "Примечания".</span><span class="sxs-lookup"><span data-stu-id="bb127-108">See the Remarks section for more information.</span></span>  
+ <span data-ttu-id="d29b3-107">[в] Емкость хранилища массива `clauses`.</span><span class="sxs-lookup"><span data-stu-id="d29b3-107">[in] The storage capacity of the `clauses` array.</span></span> <span data-ttu-id="d29b3-108">Дополнительные сведения см. в разделе "Примечания".</span><span class="sxs-lookup"><span data-stu-id="d29b3-108">See the Remarks section for more information.</span></span>  
   
  `pcClauses`  
- <span data-ttu-id="bb127-109">[из] Количество предложений, информация о которых записывается в массив `clauses`.</span><span class="sxs-lookup"><span data-stu-id="bb127-109">[out] The number of clauses about which information is written to the `clauses` array.</span></span>  
+ <span data-ttu-id="d29b3-109">[из] Количество предложений, информация о которых записывается в массив `clauses`.</span><span class="sxs-lookup"><span data-stu-id="d29b3-109">[out] The number of clauses about which information is written to the `clauses` array.</span></span>  
   
- <span data-ttu-id="bb127-110">предложения</span><span class="sxs-lookup"><span data-stu-id="bb127-110">clauses</span></span>  
- <span data-ttu-id="bb127-111">[out] Массив [CorDebugEHClause](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md) объектов, содержащих сведения о предложениях, определенных для этого Промежуточного обработки исключений.</span><span class="sxs-lookup"><span data-stu-id="bb127-111">[out] An array of [CorDebugEHClause](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md) objects that contain information on exception handling clauses defined for this IL.</span></span>  
+ <span data-ttu-id="d29b3-110">предложения</span><span class="sxs-lookup"><span data-stu-id="d29b3-110">clauses</span></span>  
+ <span data-ttu-id="d29b3-111">[out] Массив [CorDebugEHClause](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md) объектов, содержащих сведения о предложениях, определенных для этого Промежуточного обработки исключений.</span><span class="sxs-lookup"><span data-stu-id="d29b3-111">[out] An array of [CorDebugEHClause](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md) objects that contain information on exception handling clauses defined for this IL.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="bb127-112">Примечания</span><span class="sxs-lookup"><span data-stu-id="bb127-112">Remarks</span></span>  
- <span data-ttu-id="bb127-113">Если `cClauses` равно 0 и `pcClauses` отличается от**null**, `pcClauses` присваивается количество доступных предложений обработки исключений.</span><span class="sxs-lookup"><span data-stu-id="bb127-113">If `cClauses` is 0 and `pcClauses` is non-**null**, `pcClauses` is set to the number of available exception handling clauses.</span></span> <span data-ttu-id="bb127-114">Если значение `cClauses` не равно 0, оно обозначает емкость хранилища массива `clauses`.</span><span class="sxs-lookup"><span data-stu-id="bb127-114">If `cClauses` is non-zero, it represents the storage capacity of the `clauses` array.</span></span> <span data-ttu-id="bb127-115">Когда метод возвращает не пустое значение, `clauses` содержит максимум элементов `cClauses`, а значению `pcClauses` присваивается количество предложений, записанных в массив `clauses` на данный момент.</span><span class="sxs-lookup"><span data-stu-id="bb127-115">When the method returns, `clauses` contains a maximum of `cClauses` items, and `pcClauses` is set to the number of clauses actually written to the `clauses` array.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d29b3-112">Примечания</span><span class="sxs-lookup"><span data-stu-id="d29b3-112">Remarks</span></span>  
+ <span data-ttu-id="d29b3-113">Если `cClauses` равно 0 и `pcClauses` отличается от**null**, `pcClauses` присваивается количество доступных предложений обработки исключений.</span><span class="sxs-lookup"><span data-stu-id="d29b3-113">If `cClauses` is 0 and `pcClauses` is non-**null**, `pcClauses` is set to the number of available exception handling clauses.</span></span> <span data-ttu-id="d29b3-114">Если значение `cClauses` не равно 0, оно обозначает емкость хранилища массива `clauses`.</span><span class="sxs-lookup"><span data-stu-id="d29b3-114">If `cClauses` is non-zero, it represents the storage capacity of the `clauses` array.</span></span> <span data-ttu-id="d29b3-115">Когда метод возвращает не пустое значение, `clauses` содержит максимум элементов `cClauses`, а значению `pcClauses` присваивается количество предложений, записанных в массив `clauses` на данный момент.</span><span class="sxs-lookup"><span data-stu-id="d29b3-115">When the method returns, `clauses` contains a maximum of `cClauses` items, and `pcClauses` is set to the number of clauses actually written to the `clauses` array.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bb127-116">Требования</span><span class="sxs-lookup"><span data-stu-id="bb127-116">Requirements</span></span>  
- <span data-ttu-id="bb127-117">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bb127-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d29b3-116">Требования</span><span class="sxs-lookup"><span data-stu-id="d29b3-116">Requirements</span></span>  
+ <span data-ttu-id="d29b3-117">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d29b3-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bb127-118">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="bb127-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="d29b3-118">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d29b3-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="bb127-119">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="bb127-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d29b3-119">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d29b3-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="bb127-120">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bb127-120">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
+ <span data-ttu-id="d29b3-120">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d29b3-120">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bb127-121">См. также</span><span class="sxs-lookup"><span data-stu-id="bb127-121">See also</span></span>
-- [<span data-ttu-id="bb127-122">Интерфейс ICorDebugILCode</span><span class="sxs-lookup"><span data-stu-id="bb127-122">ICorDebugILCode Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md)
-- [<span data-ttu-id="bb127-123">Структура CorDebugEHClause</span><span class="sxs-lookup"><span data-stu-id="bb127-123">CorDebugEHClause Structure</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md)
-- [<span data-ttu-id="bb127-124">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="bb127-124">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="d29b3-121">См. также</span><span class="sxs-lookup"><span data-stu-id="d29b3-121">See also</span></span>
+- [<span data-ttu-id="d29b3-122">Интерфейс ICorDebugILCode</span><span class="sxs-lookup"><span data-stu-id="d29b3-122">ICorDebugILCode Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md)
+- [<span data-ttu-id="d29b3-123">Структура CorDebugEHClause</span><span class="sxs-lookup"><span data-stu-id="d29b3-123">CorDebugEHClause Structure</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md)
+- [<span data-ttu-id="d29b3-124">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="d29b3-124">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

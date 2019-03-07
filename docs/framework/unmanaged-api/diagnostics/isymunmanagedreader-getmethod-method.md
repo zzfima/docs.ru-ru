@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: deb5d7aa24cf750a9584ef2aa32d10816ec12f57
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 031e51919d9abd7092756cc42fb35dcc0592758c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614410"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57503052"
 ---
-# <a name="isymunmanagedreadergetmethod-method"></a><span data-ttu-id="0f71f-102">Метод ISymUnmanagedReader::GetMethod</span><span class="sxs-lookup"><span data-stu-id="0f71f-102">ISymUnmanagedReader::GetMethod Method</span></span>
-<span data-ttu-id="0f71f-103">Возвращает метода средства чтения символов, маркер метода.</span><span class="sxs-lookup"><span data-stu-id="0f71f-103">Gets a symbol reader method, given a method token.</span></span>  
+# <a name="isymunmanagedreadergetmethod-method"></a><span data-ttu-id="4b7f1-102">Метод ISymUnmanagedReader::GetMethod</span><span class="sxs-lookup"><span data-stu-id="4b7f1-102">ISymUnmanagedReader::GetMethod Method</span></span>
+<span data-ttu-id="4b7f1-103">Возвращает метода средства чтения символов, маркер метода.</span><span class="sxs-lookup"><span data-stu-id="4b7f1-103">Gets a symbol reader method, given a method token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0f71f-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="0f71f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4b7f1-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="4b7f1-104">Syntax</span></span>  
   
 ```  
 HRESULT GetMethod (  
@@ -35,18 +35,18 @@ HRESULT GetMethod (
     [out, retval] ISymUnmanagedMethod**  pRetVal);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="0f71f-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="0f71f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4b7f1-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="4b7f1-105">Parameters</span></span>  
  `token`  
- <span data-ttu-id="0f71f-106">[in] Маркер метода.</span><span class="sxs-lookup"><span data-stu-id="0f71f-106">[in] The method token.</span></span>  
+ <span data-ttu-id="4b7f1-106">[in] Маркер метода.</span><span class="sxs-lookup"><span data-stu-id="4b7f1-106">[in] The method token.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="0f71f-107">[out] Указатель на возвращенный интерфейс.</span><span class="sxs-lookup"><span data-stu-id="0f71f-107">[out] A pointer to the returned interface.</span></span>  
+ <span data-ttu-id="4b7f1-107">[out] Указатель на возвращенный интерфейс.</span><span class="sxs-lookup"><span data-stu-id="4b7f1-107">[out] A pointer to the returned interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="0f71f-108">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="0f71f-108">Return Value</span></span>  
- <span data-ttu-id="0f71f-109">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="0f71f-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="4b7f1-108">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="4b7f1-108">Return Value</span></span>  
+ <span data-ttu-id="4b7f1-109">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="4b7f1-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0f71f-110">Требования</span><span class="sxs-lookup"><span data-stu-id="0f71f-110">Requirements</span></span>  
- <span data-ttu-id="0f71f-111">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="0f71f-111">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4b7f1-110">Требования</span><span class="sxs-lookup"><span data-stu-id="4b7f1-110">Requirements</span></span>  
+ <span data-ttu-id="4b7f1-111">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="4b7f1-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0f71f-112">См. также</span><span class="sxs-lookup"><span data-stu-id="0f71f-112">See also</span></span>
-- [<span data-ttu-id="0f71f-113">Интерфейс ISymUnmanagedReader</span><span class="sxs-lookup"><span data-stu-id="0f71f-113">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a><span data-ttu-id="4b7f1-112">См. также</span><span class="sxs-lookup"><span data-stu-id="4b7f1-112">See also</span></span>
+- [<span data-ttu-id="4b7f1-113">Интерфейс ISymUnmanagedReader</span><span class="sxs-lookup"><span data-stu-id="4b7f1-113">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

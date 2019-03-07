@@ -14,17 +14,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 19e348f63af181b80b0924b0f2d3be156703595d
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: ca53995daec372c75aa8c0beb305a6c36f1e6e07
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55065925"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489783"
 ---
-# <a name="iclrdatatarget3getexceptionrecord-method"></a><span data-ttu-id="41d91-102">Метод ICLRDataTarget3::GetExceptionRecord</span><span class="sxs-lookup"><span data-stu-id="41d91-102">ICLRDataTarget3::GetExceptionRecord Method</span></span>
-<span data-ttu-id="41d91-103">Вызывается службами доступа к данным среды CLR для извлечения записи исключения, связанной с целевым процессом.</span><span class="sxs-lookup"><span data-stu-id="41d91-103">Called by the common language runtime (CLR) data access services to retrieve the exception record associated with the target process.</span></span> <span data-ttu-id="41d91-104">Например, для целевого объекта дампа, это будет эквивалентно записи исключения, переданной через `ExceptionParam` аргумент [MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) функции в Windows отладка библиотеки справки (DbgHelp).</span><span class="sxs-lookup"><span data-stu-id="41d91-104">For example, for a dump target, this would be equivalent to the exception record passed in via the `ExceptionParam` argument to the [MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) function in the Windows Debug Help Library (DbgHelp).</span></span>  
+# <a name="iclrdatatarget3getexceptionrecord-method"></a><span data-ttu-id="8780c-102">Метод ICLRDataTarget3::GetExceptionRecord</span><span class="sxs-lookup"><span data-stu-id="8780c-102">ICLRDataTarget3::GetExceptionRecord Method</span></span>
+<span data-ttu-id="8780c-103">Вызывается службами доступа к данным среды CLR для извлечения записи исключения, связанной с целевым процессом.</span><span class="sxs-lookup"><span data-stu-id="8780c-103">Called by the common language runtime (CLR) data access services to retrieve the exception record associated with the target process.</span></span> <span data-ttu-id="8780c-104">Например, для целевого объекта дампа, это будет эквивалентно записи исключения, переданной через `ExceptionParam` аргумент [MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) функции в Windows отладка библиотеки справки (DbgHelp).</span><span class="sxs-lookup"><span data-stu-id="8780c-104">For example, for a dump target, this would be equivalent to the exception record passed in via the `ExceptionParam` argument to the [MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) function in the Windows Debug Help Library (DbgHelp).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="41d91-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="41d91-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8780c-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="8780c-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetExceptionRecord(  
@@ -34,40 +34,40 @@ HRESULT GetExceptionRecord(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="41d91-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="41d91-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8780c-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="8780c-106">Parameters</span></span>  
  `bufferSize`  
- <span data-ttu-id="41d91-107">[в] Размер входного буфера в байтах.</span><span class="sxs-lookup"><span data-stu-id="41d91-107">[in] The input buffer size, in bytes.</span></span> <span data-ttu-id="41d91-108">Это должно быть равно `sizeof(` [MINIDUMP_EXCEPTION](/windows/desktop/api/minidumpapiset/ns-minidumpapiset-_minidump_exception)`)`.</span><span class="sxs-lookup"><span data-stu-id="41d91-108">This must be equal to `sizeof(`[MINIDUMP_EXCEPTION](/windows/desktop/api/minidumpapiset/ns-minidumpapiset-_minidump_exception)`)`.</span></span>  
+ <span data-ttu-id="8780c-107">[в] Размер входного буфера в байтах.</span><span class="sxs-lookup"><span data-stu-id="8780c-107">[in] The input buffer size, in bytes.</span></span> <span data-ttu-id="8780c-108">Это должно быть равно `sizeof(` [MINIDUMP_EXCEPTION](/windows/desktop/api/minidumpapiset/ns-minidumpapiset-_minidump_exception)`)`.</span><span class="sxs-lookup"><span data-stu-id="8780c-108">This must be equal to `sizeof(`[MINIDUMP_EXCEPTION](/windows/desktop/api/minidumpapiset/ns-minidumpapiset-_minidump_exception)`)`.</span></span>  
   
  `bufferUsed`  
- <span data-ttu-id="41d91-109">[из] Указатель на тип `ULONG32`, который получает количество байтов, фактически записанных в буфер.</span><span class="sxs-lookup"><span data-stu-id="41d91-109">[out] A pointer to a `ULONG32` type that receives the number of bytes actually written to the buffer.</span></span>  
+ <span data-ttu-id="8780c-109">[из] Указатель на тип `ULONG32`, который получает количество байтов, фактически записанных в буфер.</span><span class="sxs-lookup"><span data-stu-id="8780c-109">[out] A pointer to a `ULONG32` type that receives the number of bytes actually written to the buffer.</span></span>  
   
  `buffer`  
- <span data-ttu-id="41d91-110">[из] Указатель на буфер памяти, который получает копию записи исключения.</span><span class="sxs-lookup"><span data-stu-id="41d91-110">[out] A pointer to a memory buffer that receives a copy of the exception record.</span></span> <span data-ttu-id="41d91-111">Запись исключения возвращается в виде [MINIDUMP_EXCEPTION](/windows/desktop/api/minidumpapiset/ns-minidumpapiset-_minidump_exception) типа.</span><span class="sxs-lookup"><span data-stu-id="41d91-111">The exception record is returned as a [MINIDUMP_EXCEPTION](/windows/desktop/api/minidumpapiset/ns-minidumpapiset-_minidump_exception) type.</span></span>  
+ <span data-ttu-id="8780c-110">[из] Указатель на буфер памяти, который получает копию записи исключения.</span><span class="sxs-lookup"><span data-stu-id="8780c-110">[out] A pointer to a memory buffer that receives a copy of the exception record.</span></span> <span data-ttu-id="8780c-111">Запись исключения возвращается в виде [MINIDUMP_EXCEPTION](/windows/desktop/api/minidumpapiset/ns-minidumpapiset-_minidump_exception) типа.</span><span class="sxs-lookup"><span data-stu-id="8780c-111">The exception record is returned as a [MINIDUMP_EXCEPTION](/windows/desktop/api/minidumpapiset/ns-minidumpapiset-_minidump_exception) type.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="41d91-112">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="41d91-112">Return Value</span></span>  
- <span data-ttu-id="41d91-113">Возвращается значение `S_OK` при успешном выполнении или код ошибки `HRESULT` при сбое.</span><span class="sxs-lookup"><span data-stu-id="41d91-113">The return value is `S_OK` on success, or a failure `HRESULT` code on failure.</span></span> <span data-ttu-id="41d91-114">Коды `HRESULT` могут включать значения, приведенные в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="41d91-114">The `HRESULT` codes can include but are not limited to the following:</span></span>  
+## <a name="return-value"></a><span data-ttu-id="8780c-112">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="8780c-112">Return Value</span></span>  
+ <span data-ttu-id="8780c-113">Возвращается значение `S_OK` при успешном выполнении или код ошибки `HRESULT` при сбое.</span><span class="sxs-lookup"><span data-stu-id="8780c-113">The return value is `S_OK` on success, or a failure `HRESULT` code on failure.</span></span> <span data-ttu-id="8780c-114">Коды `HRESULT` могут включать значения, приведенные в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="8780c-114">The `HRESULT` codes can include but are not limited to the following:</span></span>  
   
-|<span data-ttu-id="41d91-115">Код возврата</span><span class="sxs-lookup"><span data-stu-id="41d91-115">Return code</span></span>|<span data-ttu-id="41d91-116">Описание</span><span class="sxs-lookup"><span data-stu-id="41d91-116">Description</span></span>|  
+|<span data-ttu-id="8780c-115">Код возврата</span><span class="sxs-lookup"><span data-stu-id="8780c-115">Return code</span></span>|<span data-ttu-id="8780c-116">Описание</span><span class="sxs-lookup"><span data-stu-id="8780c-116">Description</span></span>|  
 |-----------------|-----------------|  
-|`S_OK`|<span data-ttu-id="41d91-117">Метод успешно выполнен.</span><span class="sxs-lookup"><span data-stu-id="41d91-117">Method succeeded.</span></span> <span data-ttu-id="41d91-118">Запись исключения скопирована в буфер вывода.</span><span class="sxs-lookup"><span data-stu-id="41d91-118">The exception record has been copied to the output buffer.</span></span>|  
-|`HRESULT_FROM_WIN32(ERROR_NOT_FOUND)`|<span data-ttu-id="41d91-119">Нет записей исключения, связанных с целевым объектом.</span><span class="sxs-lookup"><span data-stu-id="41d91-119">No exception record is associated with the target.</span></span>|  
-|`HRESULT_FROM_WIN32(ERROR_BAD_LENGTH)`|<span data-ttu-id="41d91-120">Размер входного буфера не равен `sizeof(MINIDUMP_EXCEPTION)`.</span><span class="sxs-lookup"><span data-stu-id="41d91-120">The input buffer size is not equal to `sizeof(MINIDUMP_EXCEPTION)`.</span></span>|  
+|`S_OK`|<span data-ttu-id="8780c-117">Метод успешно выполнен.</span><span class="sxs-lookup"><span data-stu-id="8780c-117">Method succeeded.</span></span> <span data-ttu-id="8780c-118">Запись исключения скопирована в буфер вывода.</span><span class="sxs-lookup"><span data-stu-id="8780c-118">The exception record has been copied to the output buffer.</span></span>|  
+|`HRESULT_FROM_WIN32(ERROR_NOT_FOUND)`|<span data-ttu-id="8780c-119">Нет записей исключения, связанных с целевым объектом.</span><span class="sxs-lookup"><span data-stu-id="8780c-119">No exception record is associated with the target.</span></span>|  
+|`HRESULT_FROM_WIN32(ERROR_BAD_LENGTH)`|<span data-ttu-id="8780c-120">Размер входного буфера не равен `sizeof(MINIDUMP_EXCEPTION)`.</span><span class="sxs-lookup"><span data-stu-id="8780c-120">The input buffer size is not equal to `sizeof(MINIDUMP_EXCEPTION)`.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="41d91-121">Примечания</span><span class="sxs-lookup"><span data-stu-id="41d91-121">Remarks</span></span>  
- <span data-ttu-id="41d91-122">[MINIDUMP_EXCEPTION](/windows/desktop/api/minidumpapiset/ns-minidumpapiset-_minidump_exception) — это структура, определенные в файлах dbghelp.h и IMAGEHLP.h, входящих с состав пакета Windows SDK.</span><span class="sxs-lookup"><span data-stu-id="41d91-122">[MINIDUMP_EXCEPTION](/windows/desktop/api/minidumpapiset/ns-minidumpapiset-_minidump_exception) is a structure defined in dbghelp.h and imagehlp.h in the Windows SDK.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8780c-121">Примечания</span><span class="sxs-lookup"><span data-stu-id="8780c-121">Remarks</span></span>  
+ <span data-ttu-id="8780c-122">[MINIDUMP_EXCEPTION](/windows/desktop/api/minidumpapiset/ns-minidumpapiset-_minidump_exception) — это структура, определенные в файлах dbghelp.h и IMAGEHLP.h, входящих с состав пакета Windows SDK.</span><span class="sxs-lookup"><span data-stu-id="8780c-122">[MINIDUMP_EXCEPTION](/windows/desktop/api/minidumpapiset/ns-minidumpapiset-_minidump_exception) is a structure defined in dbghelp.h and imagehlp.h in the Windows SDK.</span></span>  
   
- <span data-ttu-id="41d91-123">Этот метод реализуется модулем записи отладчика.</span><span class="sxs-lookup"><span data-stu-id="41d91-123">This method is implemented by the writer of the debugging application.</span></span>  
+ <span data-ttu-id="8780c-123">Этот метод реализуется модулем записи отладчика.</span><span class="sxs-lookup"><span data-stu-id="8780c-123">This method is implemented by the writer of the debugging application.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="41d91-124">Требования</span><span class="sxs-lookup"><span data-stu-id="41d91-124">Requirements</span></span>  
- <span data-ttu-id="41d91-125">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="41d91-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8780c-124">Требования</span><span class="sxs-lookup"><span data-stu-id="8780c-124">Requirements</span></span>  
+ <span data-ttu-id="8780c-125">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8780c-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="41d91-126">**Заголовок.** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="41d91-126">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="8780c-126">**Заголовок.** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="8780c-126">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="41d91-127">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="41d91-127">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8780c-127">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8780c-127">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="41d91-128">**Версии платформы .NET Framework:** [!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]</span><span class="sxs-lookup"><span data-stu-id="41d91-128">**.NET Framework Versions:** [!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]</span></span>  
+ <span data-ttu-id="8780c-128">**Версии платформы .NET Framework:** [!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]</span><span class="sxs-lookup"><span data-stu-id="8780c-128">**.NET Framework Versions:** [!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="41d91-129">См. также</span><span class="sxs-lookup"><span data-stu-id="41d91-129">See also</span></span>
-- [<span data-ttu-id="41d91-130">Интерфейс ICLRDataTarget3</span><span class="sxs-lookup"><span data-stu-id="41d91-130">ICLRDataTarget3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-interface.md)
-- [<span data-ttu-id="41d91-131">Метод GetExceptionContextRecord</span><span class="sxs-lookup"><span data-stu-id="41d91-131">GetExceptionContextRecord Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptioncontextrecord-method.md)
-- [<span data-ttu-id="41d91-132">Метод GetExceptionThreadID</span><span class="sxs-lookup"><span data-stu-id="41d91-132">GetExceptionThreadID Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptionthreadid-method.md)
+## <a name="see-also"></a><span data-ttu-id="8780c-129">См. также</span><span class="sxs-lookup"><span data-stu-id="8780c-129">See also</span></span>
+- [<span data-ttu-id="8780c-130">Интерфейс ICLRDataTarget3</span><span class="sxs-lookup"><span data-stu-id="8780c-130">ICLRDataTarget3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-interface.md)
+- [<span data-ttu-id="8780c-131">Метод GetExceptionContextRecord</span><span class="sxs-lookup"><span data-stu-id="8780c-131">GetExceptionContextRecord Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptioncontextrecord-method.md)
+- [<span data-ttu-id="8780c-132">Метод GetExceptionThreadID</span><span class="sxs-lookup"><span data-stu-id="8780c-132">GetExceptionThreadID Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptionthreadid-method.md)

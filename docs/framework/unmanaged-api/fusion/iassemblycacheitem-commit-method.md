@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9b39cdec6d5cc10256c2911c98f94b7565295408
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d234910429961a8a0add1d88d0c0eed96ed12a58
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538002"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496213"
 ---
-# <a name="iassemblycacheitemcommit-method"></a><span data-ttu-id="bb60a-102">Метод IAssemblyCacheItem::Commit</span><span class="sxs-lookup"><span data-stu-id="bb60a-102">IAssemblyCacheItem::Commit Method</span></span>
-<span data-ttu-id="bb60a-103">Фиксирует ссылки на сборку, кэшированных в памяти.</span><span class="sxs-lookup"><span data-stu-id="bb60a-103">Commits the cached assembly reference to memory.</span></span>  
+# <a name="iassemblycacheitemcommit-method"></a><span data-ttu-id="75a4d-102">Метод IAssemblyCacheItem::Commit</span><span class="sxs-lookup"><span data-stu-id="75a4d-102">IAssemblyCacheItem::Commit Method</span></span>
+<span data-ttu-id="75a4d-103">Фиксирует ссылки на сборку, кэшированных в памяти.</span><span class="sxs-lookup"><span data-stu-id="75a4d-103">Commits the cached assembly reference to memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bb60a-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="bb60a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="75a4d-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="75a4d-104">Syntax</span></span>  
   
 ```  
 HRESULT Commit (  
@@ -36,19 +36,19 @@ HRESULT Commit (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="bb60a-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="bb60a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="75a4d-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="75a4d-105">Parameters</span></span>  
  `dwFlags`  
- <span data-ttu-id="bb60a-106">[in] Флаги, определенные в Fusion.idl.</span><span class="sxs-lookup"><span data-stu-id="bb60a-106">[in] Flags defined in Fusion.idl.</span></span>  
+ <span data-ttu-id="75a4d-106">[in] Флаги, определенные в Fusion.idl.</span><span class="sxs-lookup"><span data-stu-id="75a4d-106">[in] Flags defined in Fusion.idl.</span></span>  
   
  `pulDisposition`  
- <span data-ttu-id="bb60a-107">[out, optional] Значение, указывающее результат операции.</span><span class="sxs-lookup"><span data-stu-id="bb60a-107">[out, optional] A value that indicates the result of the operation.</span></span>  
+ <span data-ttu-id="75a4d-107">[out, optional] Значение, указывающее результат операции.</span><span class="sxs-lookup"><span data-stu-id="75a4d-107">[out, optional] A value that indicates the result of the operation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bb60a-108">Требования</span><span class="sxs-lookup"><span data-stu-id="bb60a-108">Requirements</span></span>  
- <span data-ttu-id="bb60a-109">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bb60a-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="75a4d-108">Требования</span><span class="sxs-lookup"><span data-stu-id="75a4d-108">Requirements</span></span>  
+ <span data-ttu-id="75a4d-109">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="75a4d-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bb60a-110">**Заголовок.** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="bb60a-110">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="75a4d-110">**Заголовок.** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="75a4d-110">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="bb60a-111">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bb60a-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="75a4d-111">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="75a4d-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bb60a-112">См. также</span><span class="sxs-lookup"><span data-stu-id="bb60a-112">See also</span></span>
-- [<span data-ttu-id="bb60a-113">Интерфейс IAssemblyCacheItem</span><span class="sxs-lookup"><span data-stu-id="bb60a-113">IAssemblyCacheItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)
+## <a name="see-also"></a><span data-ttu-id="75a4d-112">См. также</span><span class="sxs-lookup"><span data-stu-id="75a4d-112">See also</span></span>
+- [<span data-ttu-id="75a4d-113">Интерфейс IAssemblyCacheItem</span><span class="sxs-lookup"><span data-stu-id="75a4d-113">IAssemblyCacheItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)

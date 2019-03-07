@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dbf52a352000150766cd9a8277278491ad7d5152
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5fe1fa99cb7376aae6dffb2a0973955f417b0b8f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616736"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494352"
 ---
-# <a name="icorprofilerinfogetappdomaininfo-method"></a><span data-ttu-id="9d574-102">Метод ICorProfilerInfo::GetAppDomainInfo</span><span class="sxs-lookup"><span data-stu-id="9d574-102">ICorProfilerInfo::GetAppDomainInfo Method</span></span>
-<span data-ttu-id="9d574-103">Принимает идентификатор домена приложения.</span><span class="sxs-lookup"><span data-stu-id="9d574-103">Accepts an application domain ID.</span></span> <span data-ttu-id="9d574-104">Возвращает имя домена приложения и идентификатор процесса, который его содержит.</span><span class="sxs-lookup"><span data-stu-id="9d574-104">Returns an application domain name and the ID of the process that contains it.</span></span>  
+# <a name="icorprofilerinfogetappdomaininfo-method"></a><span data-ttu-id="ab1cf-102">Метод ICorProfilerInfo::GetAppDomainInfo</span><span class="sxs-lookup"><span data-stu-id="ab1cf-102">ICorProfilerInfo::GetAppDomainInfo Method</span></span>
+<span data-ttu-id="ab1cf-103">Принимает идентификатор домена приложения.</span><span class="sxs-lookup"><span data-stu-id="ab1cf-103">Accepts an application domain ID.</span></span> <span data-ttu-id="ab1cf-104">Возвращает имя домена приложения и идентификатор процесса, который его содержит.</span><span class="sxs-lookup"><span data-stu-id="ab1cf-104">Returns an application domain name and the ID of the process that contains it.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9d574-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="9d574-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ab1cf-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="ab1cf-105">Syntax</span></span>  
   
 ```  
 HRESULT GetAppDomainInfo(  
@@ -39,37 +39,37 @@ HRESULT GetAppDomainInfo(
     [out] ProcessID   *pProcessId);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="9d574-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="9d574-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ab1cf-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="ab1cf-106">Parameters</span></span>  
  `appDomainId`  
- <span data-ttu-id="9d574-107">[in] Идентификатор домена приложения.</span><span class="sxs-lookup"><span data-stu-id="9d574-107">[in] The ID of the application domain.</span></span>  
+ <span data-ttu-id="ab1cf-107">[in] Идентификатор домена приложения.</span><span class="sxs-lookup"><span data-stu-id="ab1cf-107">[in] The ID of the application domain.</span></span>  
   
  `cchName`  
- <span data-ttu-id="9d574-108">[in] Длина буфера возврата `szName` в символах.</span><span class="sxs-lookup"><span data-stu-id="9d574-108">[in] The length, in characters, of the `szName` return buffer.</span></span>  
+ <span data-ttu-id="ab1cf-108">[in] Длина буфера возврата `szName` в символах.</span><span class="sxs-lookup"><span data-stu-id="ab1cf-108">[in] The length, in characters, of the `szName` return buffer.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="9d574-109">[out] Указатель на общую длину имени домена приложения в символах.</span><span class="sxs-lookup"><span data-stu-id="9d574-109">[out] A pointer to the total character length of the application domain name.</span></span>  
+ <span data-ttu-id="ab1cf-109">[out] Указатель на общую длину имени домена приложения в символах.</span><span class="sxs-lookup"><span data-stu-id="ab1cf-109">[out] A pointer to the total character length of the application domain name.</span></span>  
   
  `szName`  
- <span data-ttu-id="9d574-110">[out] Буфер расширенных символов, предоставленный вызывающим объектом.</span><span class="sxs-lookup"><span data-stu-id="9d574-110">[out] A caller-provided wide character buffer.</span></span> <span data-ttu-id="9d574-111">При возврате метода параметр `szName` будет содержать полное или частичное имя домена приложения.</span><span class="sxs-lookup"><span data-stu-id="9d574-111">When the method returns, `szName` will contain the full or partial application domain name.</span></span>  
+ <span data-ttu-id="ab1cf-110">[out] Буфер расширенных символов, предоставленный вызывающим объектом.</span><span class="sxs-lookup"><span data-stu-id="ab1cf-110">[out] A caller-provided wide character buffer.</span></span> <span data-ttu-id="ab1cf-111">При возврате метода параметр `szName` будет содержать полное или частичное имя домена приложения.</span><span class="sxs-lookup"><span data-stu-id="ab1cf-111">When the method returns, `szName` will contain the full or partial application domain name.</span></span>  
   
  `pProcessId`  
- <span data-ttu-id="9d574-112">[out] Указатель на идентификатор процесса, который содержит этот домен приложения.</span><span class="sxs-lookup"><span data-stu-id="9d574-112">[out] A pointer to the ID of the process that contains the application domain.</span></span>  
+ <span data-ttu-id="ab1cf-112">[out] Указатель на идентификатор процесса, который содержит этот домен приложения.</span><span class="sxs-lookup"><span data-stu-id="ab1cf-112">[out] A pointer to the ID of the process that contains the application domain.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="9d574-113">Примечания</span><span class="sxs-lookup"><span data-stu-id="9d574-113">Remarks</span></span>  
- <span data-ttu-id="9d574-114">После возврата этого метода необходимо убедиться, что буфер `szName` был достаточно велик, чтобы вместить в себя полное имя домена приложения.</span><span class="sxs-lookup"><span data-stu-id="9d574-114">After this method returns, you must verify that the `szName` buffer was large enough to contain the full name of the application domain.</span></span> <span data-ttu-id="9d574-115">Для этого сравните значение, на которое указывает параметр `pcchName`, со значением параметра `cchName`.</span><span class="sxs-lookup"><span data-stu-id="9d574-115">To do this, compare the value that `pcchName` points to with the value of the `cchName` parameter.</span></span> <span data-ttu-id="9d574-116">Если параметр `pcchName` указывает на значение, превышающее значение `cchName`, выделите буфер `szName` большего размера, обновите параметр `cchName`, задав новый, больший размер, и вызовите метод `GetAppDomainInfo` снова.</span><span class="sxs-lookup"><span data-stu-id="9d574-116">If `pcchName` points to a value that is larger than `cchName`, allocate a larger `szName` buffer, update `cchName` with the new, larger size, and call `GetAppDomainInfo` again.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ab1cf-113">Примечания</span><span class="sxs-lookup"><span data-stu-id="ab1cf-113">Remarks</span></span>  
+ <span data-ttu-id="ab1cf-114">После возврата этого метода необходимо убедиться, что буфер `szName` был достаточно велик, чтобы вместить в себя полное имя домена приложения.</span><span class="sxs-lookup"><span data-stu-id="ab1cf-114">After this method returns, you must verify that the `szName` buffer was large enough to contain the full name of the application domain.</span></span> <span data-ttu-id="ab1cf-115">Для этого сравните значение, на которое указывает параметр `pcchName`, со значением параметра `cchName`.</span><span class="sxs-lookup"><span data-stu-id="ab1cf-115">To do this, compare the value that `pcchName` points to with the value of the `cchName` parameter.</span></span> <span data-ttu-id="ab1cf-116">Если параметр `pcchName` указывает на значение, превышающее значение `cchName`, выделите буфер `szName` большего размера, обновите параметр `cchName`, задав новый, больший размер, и вызовите метод `GetAppDomainInfo` снова.</span><span class="sxs-lookup"><span data-stu-id="ab1cf-116">If `pcchName` points to a value that is larger than `cchName`, allocate a larger `szName` buffer, update `cchName` with the new, larger size, and call `GetAppDomainInfo` again.</span></span>  
   
- <span data-ttu-id="9d574-117">Кроме того, сначала можно вызвать метод `GetAppDomainInfo` с буфером `szName` нулевой длины для получения правильного размера буфера.</span><span class="sxs-lookup"><span data-stu-id="9d574-117">Alternatively, you can first call `GetAppDomainInfo` with a zero-length `szName` buffer to obtain the correct buffer size.</span></span> <span data-ttu-id="9d574-118">Затем можно задать размер буфера равным значению, возвращенному в параметре `pcchName`, и вызвать метод `GetAppDomainInfo` снова.</span><span class="sxs-lookup"><span data-stu-id="9d574-118">You can then set the buffer size to the value returned in `pcchName` and call `GetAppDomainInfo` again.</span></span>  
+ <span data-ttu-id="ab1cf-117">Кроме того, сначала можно вызвать метод `GetAppDomainInfo` с буфером `szName` нулевой длины для получения правильного размера буфера.</span><span class="sxs-lookup"><span data-stu-id="ab1cf-117">Alternatively, you can first call `GetAppDomainInfo` with a zero-length `szName` buffer to obtain the correct buffer size.</span></span> <span data-ttu-id="ab1cf-118">Затем можно задать размер буфера равным значению, возвращенному в параметре `pcchName`, и вызвать метод `GetAppDomainInfo` снова.</span><span class="sxs-lookup"><span data-stu-id="ab1cf-118">You can then set the buffer size to the value returned in `pcchName` and call `GetAppDomainInfo` again.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9d574-119">Требования</span><span class="sxs-lookup"><span data-stu-id="9d574-119">Requirements</span></span>  
- <span data-ttu-id="9d574-120">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9d574-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ab1cf-119">Требования</span><span class="sxs-lookup"><span data-stu-id="ab1cf-119">Requirements</span></span>  
+ <span data-ttu-id="ab1cf-120">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ab1cf-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9d574-121">**Заголовок.** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="9d574-121">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="ab1cf-121">**Заголовок.** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="ab1cf-121">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="9d574-122">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9d574-122">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ab1cf-122">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ab1cf-122">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9d574-123">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9d574-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="ab1cf-123">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ab1cf-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9d574-124">См. также</span><span class="sxs-lookup"><span data-stu-id="9d574-124">See also</span></span>
-- [<span data-ttu-id="9d574-125">Интерфейс ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="9d574-125">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [<span data-ttu-id="9d574-126">Интерфейсы профилирования</span><span class="sxs-lookup"><span data-stu-id="9d574-126">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="9d574-127">Профилирование</span><span class="sxs-lookup"><span data-stu-id="9d574-127">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a><span data-ttu-id="ab1cf-124">См. также</span><span class="sxs-lookup"><span data-stu-id="ab1cf-124">See also</span></span>
+- [<span data-ttu-id="ab1cf-125">Интерфейс ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="ab1cf-125">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="ab1cf-126">Интерфейсы профилирования</span><span class="sxs-lookup"><span data-stu-id="ab1cf-126">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="ab1cf-127">Профилирование</span><span class="sxs-lookup"><span data-stu-id="ab1cf-127">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
