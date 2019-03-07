@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 839052b72d908e48a4b6f88dab05ec3c3d575d65
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6ecb4f8a5519fb819161ed917ad03d2537bd9551
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405415"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499268"
 ---
 # <a name="icordebugchaingetnext-method"></a>Метод ICorDebugChain::GetNext
 Получает следующую цепь кадров для потока.  
@@ -35,15 +35,15 @@ HRESULT GetNext (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `ppChain`  
- [out] Указатель на адрес объекта ICorDebugChain, который представляет следующую цепь кадров для потока. Если эта цепь является последней, `ppChain` имеет значение null.  
+ [out] Указатель на адрес ICorDebugChain объект, представляющий Далее цепочки кадров для потока. Если эта цепь является последней, `ppChain` имеет значение null.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

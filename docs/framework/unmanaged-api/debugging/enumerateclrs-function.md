@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 56f7f36baa71a3e58dfa3314ebe06a018cfd3468
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e7532218728aead72186b5156da87db6d3bc0a8c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408233"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469341"
 ---
 # <a name="enumerateclrs-function"></a>Функция EnumerateCLRs
 Предоставляет механизм для перечисления сред CLR в процессе.  
@@ -39,7 +39,7 @@ HRESULT EnumerateCLRs (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `debuggeePID`  
  [in] Идентификатор процесса, из которого будут перечислены загруженные среды CLR.  
   
@@ -75,10 +75,10 @@ HRESULT EnumerateCLRs (
  Эта функция может вызываться с параметрами обоих массивов, имеющими значение null, для возврата числа CLR в целевом процессе. Из этого числа вызывающий объект может определить размер буфера, который будет создан: `(sizeof(HANDLE) * count) + (sizeof(LPWSTR) * count) + (sizeof(WCHAR*) * count * MAX_PATH)`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Заголовок:** dbgshim.h  
   
  **Библиотека:** dbgshim.dll  
   
- **Версии платформы .NET framework:** 3.5 SP1
+ **Версии платформы .NET framework:** 3.5 с пакетом обновления 1 (SP1)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8d1198a931b79cb469048bf5afd48f5172a45721
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 20a34da8f868a34f3d447ac1a5f6a56eb0bdafe1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517712"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481421"
 ---
 # <a name="icorprofilercallbackruntimethreadresumed-method"></a>Метод ICorProfilerCallback::RuntimeThreadResumed
 Уведомляет профилировщик о том, что указанный поток возобновлен после приостановки.  
@@ -34,7 +34,7 @@ HRESULT RuntimeThreadResumed(
     [in] ThreadID threadId);  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `threadId`  
  [in] Идентификатор потока, который было возобновлено.  
   

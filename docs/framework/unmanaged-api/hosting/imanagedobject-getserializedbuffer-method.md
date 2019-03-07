@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a94891b91f6ac14469e18ed6840a083ce5e9d64d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7930e993640e1ae88ce65b6c2025a5b62a0d0999
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516922"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502466"
 ---
 # <a name="imanagedobjectgetserializedbuffer-method"></a>Метод IManagedObject::GetSerializedBuffer
 Возвращает строковое представление этого управляемого объекта.  
@@ -35,7 +35,7 @@ HRESULT GetSerializedBuffer (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `pBSTR`  
  [out] Указатель на строку, являющуюся сериализованного объекта.  
   

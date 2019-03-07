@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dadfabf1d2507b2bd719b5b73238bb38c9ae7563
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ab5200cbd3a37bba31d52f9934e11aecc88c59c0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602433"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502414"
 ---
 # <a name="imetadataimportenumparams-method"></a>Метод IMetaDataImport::EnumParams
 Перечисляет токены ParamDef, представляющие параметры метода, на который ссылается указанный токен MethodDef.  
@@ -39,7 +39,7 @@ HRESULT EnumParams (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `phEnum`  
  [in, out] Указатель на перечислитель. Это должно быть NULL при первом вызове этого метода.  
   
@@ -57,7 +57,7 @@ HRESULT EnumParams (
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
-|HRESULT|Описание|  
+|HRESULT|Описание:|  
 |-------------|-----------------|  
 |`S_OK`|`EnumParams` успешно возвращен.|  
 |`S_FALSE`|Существуют маркеры для перечисления отсутствуют. В этом случае `pcTokens` равно нулю.|  

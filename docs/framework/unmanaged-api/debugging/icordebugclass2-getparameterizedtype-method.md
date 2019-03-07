@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6a5b3a28c7250a16e78e199bceff7c9e64517319
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5e1734ca91fd48cc15b8dbf25f11518ed0455b6f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408217"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475645"
 ---
 # <a name="icordebugclass2getparameterizedtype-method"></a>Метод ICorDebugClass2::GetParameterizedType
-Возвращает объявление типа для этого класса.  
+Получает объявление типа для этого класса.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,36 +38,36 @@ HRESULT GetParameterizedType (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `elementType`  
- [in] Значение CorElementType перечисление, которое указывает тип элемента для данного класса: это значение равно ELEMENT_TYPE_VALUETYPE при этом ICorDebugClass2 представляет тип значения. Это значение равно ELEMENT_TYPE_CLASS при этом `ICorDebugClass2` представляет сложный тип.  
+ [in] Значение перечисления CorElementType, показывающий тип элемента для данного класса: Это значение равно ELEMENT_TYPE_VALUETYPE при этом ICorDebugClass2 представляет тип значения. Это значение равно ELEMENT_TYPE_CLASS при этом `ICorDebugClass2` представляет сложный тип.  
   
  `nTypeArgs`  
- [in] Число параметров типа, если тип является универсальным. Число параметров типа (если имеется) должно соответствовать числу, требуемым для класса.  
+ [in] Число параметров типа, если тип является универсальным. Число параметров типа (если таковые имеются) должно совпадать с номером, требуемых для класса.  
   
  `ppTypeArgs`  
- [in] Массив указателей, каждый из которых указывает на объект ICorDebugType, который представляет параметр типа. Если класс является неуниверсальным, это значение равно null.  
+ [in] Массив указателей, каждый из которых указывает на объект ICorDebugType, который представляет параметр типа. Если класс является не являющегося универсальным, это значение равно null.  
   
  `ppType`  
- [out] Указатель на адрес `ICorDebugType` , представляющий объявление типа. Этот объект эквивалентен <xref:System.Type> объекта в управляемом коде.  
+ [out] Указатель на адрес `ICorDebugType` объект, который представляет объявление типа. Этот объект эквивалентен <xref:System.Type> объект в управляемом коде.  
   
 ## <a name="remarks"></a>Примечания  
- Если класс является неуниверсальных, то есть, если он не имеет параметров типа, `GetParameterizedType` просто возвращает объект типа среды выполнения, соответствующий данному классу. `elementType` Параметра должно быть присвоено типом правильный элемент для данного класса: ELEMENT_TYPE_VALUETYPE, если класс является типом значения; в противном случае ELEMENT_TYPE_CLASS.  
+ Если класс является не являющегося универсальным, то есть, если он не имеет параметров типа, `GetParameterizedType` просто возвращает объект типа среды выполнения, соответствующий данному классу. `elementType` Параметра должно быть присвоено типом правильный элемент для данного класса: ELEMENT_TYPE_VALUETYPE, если класс является типом значения; в противном случае ELEMENT_TYPE_CLASS.  
   
- Если класс принимает параметры типа (например, `ArrayList<T>`), можно использовать `GetParameterizedType` , чтобы создать объект типа экземпляры типа, такие как `ArrayList<int>`.  
+ Если этот класс принимает параметры типа (например, `ArrayList<T>`), можно использовать `GetParameterizedType` для создания объекта типа для экземпляры типа, таких как `ArrayList<int>`.  
   
 ## <a name="background-information"></a>Основные сведения  
- В .NET Framework версий 1.0 и 1.1 каждый тип в метаданных может быть напрямую сопоставлен с типом выполняющегося процесса. Таким образом тип метаданных и тип среды выполнения было единое представление выполняющегося процесса. Однако одного универсального типа в метаданных можно сопоставить нескольким различным экземплярам типа в выполняемом процессе. Например, тип метаданных `SortedList<K,V>` можно сопоставить с `SortedList<String, EmployeeRecord>`, `SortedList<Int32, String>`, `SortedList<String,Array<Int32>>`, и т. д. Таким образом вам необходим способ для обработки экземпляра типа.  
+ В .NET Framework версий 1.0 и 1.1 каждый тип в метаданных может быть непосредственно сопоставить с типом выполняющегося процесса. Таким образом тип метаданных и тип среды выполнения было единое представление выполняющегося процесса. Тем не менее одного универсального типа в метаданных могут сопоставляться нескольким различным экземплярам типа в выполняющийся процесс. Например, тип метаданных `SortedList<K,V>` можно сопоставить с `SortedList<String, EmployeeRecord>`, `SortedList<Int32, String>`, `SortedList<String,Array<Int32>>`, и т. д. Таким образом вам нужен способ обрабатывать создание экземпляров типа.  
   
- .NET Framework версии 2.0 появился `ICorDebugType` интерфейса. Для универсального типа `ICorDebugClass` или `ICorDebugClass2` представляет объект типа без экземпляров (`SortedList<K,V>`) и `ICorDebugType` объект представляет экземпляр различных типов. Получает `ICorDebugClass` или `ICorDebugClass2` объекта, можно создать `ICorDebugType` объекта для любого экземпляра путем вызова `ICorDebugClass2::GetParameterizedType` метод. Можно также создать `ICorDebugType` объекта для простого типа, например, Int32, или для неуниверсального типа.  
+ В .NET Framework версии 2.0 вводит `ICorDebugType` интерфейс. Для универсального типа `ICorDebugClass` или `ICorDebugClass2` представляет объект типа без экземпляров (`SortedList<K,V>`) и `ICorDebugType` объект представляет различные типы созданным экземпляром. Учитывая `ICorDebugClass` или `ICorDebugClass2` объекта, можно создать `ICorDebugType` объекта для любого экземпляра путем вызова `ICorDebugClass2::GetParameterizedType` метод. Вы также можете создать `ICorDebugType` объект для простого типа, например Int32, или для неуниверсального типа.  
   
- Введение `ICorDebugType` объект для представления времени выполнения понятие типа имеет оказывает влияние на протяжении API. Функции, которые ранее были `ICorDebugClass` или `ICorDebugClass2` объекта или даже `CorElementType` значение обобщены, чтобы воспользоваться `ICorDebugType` объекта.  
+ Введение `ICorDebugType` объект для представления времени выполнения понятие типа имеет окажет влияние на протяжении всего API. Функции, которые ранее были `ICorDebugClass` или `ICorDebugClass2` объекта или даже `CorElementType` значение обобщены вступили `ICorDebugType` объекта.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 31a554fc57611f4abd5322fdc0c147e5dc110fb7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25af2c8fa3e3d49b3c2832a69f14b2691585d775
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654949"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489856"
 ---
 # <a name="icordebugmanagedcallbackdebuggererror-method"></a>Метод ICorDebugManagedCallback::DebuggerError
 Уведомляет отладчик о том, что произошла ошибка при попытке обработать события из общеязыковой среды выполнения (CLR).  
@@ -37,7 +37,7 @@ HRESULT DebuggerError (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `pProcess`  
  [in] Указатель на объект «ICorDebugProcess», представляющий процесс, в котором произошло событие.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5f2a05009caed7bef6da9edee57a4a54b876b18f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e10a92b1748fcdf518fa68cb7054731f4511396b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580997"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487191"
 ---
 # <a name="corlaunchapplication-function"></a>Функция CorLaunchApplication
 Запускает приложение по указанному сетевому пути, используя заданные манифесты и другие данные приложения.  
@@ -43,7 +43,7 @@ HRESULT CorLaunchApplication (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `dwClickOnceHost`  
  [in] Значение [HOST_TYPE](../../../../docs/framework/unmanaged-api/hosting/host-type-enumeration.md) перечисление, указывающее тип узла, которое запускает приложение.  
   

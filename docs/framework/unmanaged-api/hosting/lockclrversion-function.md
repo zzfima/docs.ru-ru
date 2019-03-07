@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95f61170d401161dcf217f139dbe6e4c6d3a0e0c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f3b263efa95936190ed771e811a84886b11be75b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735043"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57465756"
 ---
 # <a name="lockclrversion-function"></a>Функция LockClrVersion
 Позволяет основному приложению определить, какую версию общеязыковой среды выполнения (CLR), которая будет использоваться в процессе до явной инициализации среды CLR.  
@@ -39,7 +39,7 @@ HRESULT LockClrVersion (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `hostCallback`  
  [in] Функция, которая вызывается средой CLR при инициализации.  
   
@@ -52,7 +52,7 @@ HRESULT LockClrVersion (
 ## <a name="return-value"></a>Возвращаемое значение  
  Этот метод возвращает стандартные коды ошибок COM, как определено в файле WinError.h, помимо следующих значений.  
   
-|Код возврата|Описание:|  
+|Код возврата|Описание|  
 |-----------------|-----------------|  
 |S_OK|Метод завершился успешно.|  
 |E_INVALIDARG|Один или несколько аргументов имеет значение null.|  

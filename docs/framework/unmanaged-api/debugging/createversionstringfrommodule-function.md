@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0988b2c4471cb5449f7c7fac82c6e94bcd537b7e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3ed8b85475dc7327c1aac6f920aba627215e27c7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409284"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492027"
 ---
 # <a name="createversionstringfrommodule-function"></a>Функция CreateVersionStringFromModule
 Создает строку версии из пути среды CLR в целевом процессе.  
@@ -41,7 +41,7 @@ HRESULT CreateVersionStringFromModule (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `pidDebuggee`  
  [in] Идентификатор процесса, в котором загружается целевая среды CLR.  
   
@@ -79,10 +79,10 @@ HRESULT CreateVersionStringFromModule (
  Эта функция должна вызываться дважды. При первом вызове передайте значение null для обоих параметров `pBuffer` и `cchBuffer`. После этого размер буфера, необходимый для `pBuffer`, будет возвращен в `pdwLength`. Затем можно вызвать эту функцию во второй раз и передать буфер в `pBuffer` и его размер в `cchBuffer`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Заголовок:** dbgshim.h  
   
  **Библиотека:** dbgshim.dll  
   
- **Версии платформы .NET framework:** 3.5 SP1
+ **Версии платформы .NET framework:** 3.5 с пакетом обновления 1 (SP1)

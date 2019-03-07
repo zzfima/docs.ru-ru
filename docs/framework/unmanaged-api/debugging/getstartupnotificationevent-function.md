@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3692471e0652a1a812b1d0cbed9e38cc32112ef4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8ed1db49be78d7d16648a9ef9735e79ef1b3ab98
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404314"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487334"
 ---
 # <a name="getstartupnotificationevent-function"></a>Функция GetStartupNotificationEvent
 Создает или открывает обработчик событий, который будет информироваться любой средой CLR, загружаемой в указанный целевой процесс.  
@@ -38,7 +38,7 @@ HRESULT GetStartupNotificationEvent
     );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `debuggeePID`  
  [in] Идентификатор целевого процесса, из которого следует получать уведомления при запуске среды CLR.  
   
@@ -61,10 +61,10 @@ HRESULT GetStartupNotificationEvent
  Событие сигнализирует перед любым выполнением управляемого кода средой CLR, которая оповещает событие.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Заголовок:** dbgshim.h  
   
  **Библиотека:** dbgshim.dll  
   
- **Версии платформы .NET framework:** 3.5 SP1
+ **Версии платформы .NET framework:** 3.5 с пакетом обновления 1 (SP1)

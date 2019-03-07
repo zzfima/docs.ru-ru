@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d1c3bcc0ed22fa970d92e2384277d0786016db19
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aeadcbd8f2d09320645c36fdc771cfb2cb976036
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402113"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471257"
 ---
 # <a name="icordebugassemblygetprocess-method"></a>Метод ICorDebugAssembly::GetProcess
-Получает указатель интерфейса на процесс, в котором выполняется данный экземпляр ICorDebugAssembly.  
+Получает указатель интерфейса на процесс, в котором выполняется этот экземпляр ICorDebugAssembly.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,15 +35,15 @@ HRESULT GetProcess (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `ppProcess`  
- [out] Указатель на интерфейс ICorDebugProcess, представляет собой процесс.  
+ [out] Указатель на интерфейс ICorDebugProcess, представляющий процесс.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

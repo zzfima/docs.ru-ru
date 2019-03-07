@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aebfd41a232a3284f79e4229a8845bf5a34f9d1f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de333ea1ff376918df8069438ce275fde392ae0b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574772"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57503116"
 ---
 # <a name="imetadataimportenummethodimpls-method"></a>Метод IMetaDataImport::EnumMethodImpls
 Перечисляет токены MethodBody и MethodDeclaration, представляющие методы указанного типа.  
@@ -40,7 +40,7 @@ HRESULT EnumMethodImpls (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `phEnum`  
  [in, out] Указатель на перечислитель. Это должно быть NULL при первом вызове этого метода.  
   
@@ -61,7 +61,7 @@ HRESULT EnumMethodImpls (
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
-|HRESULT|Описание|  
+|HRESULT|Описание:|  
 |-------------|-----------------|  
 |`S_OK`|`EnumMethodImpls` успешно возвращен.|  
 |`S_FALSE`|Существуют маркеры нет метода для перечисления. В этом случае `pcTokens` равно нулю.|  

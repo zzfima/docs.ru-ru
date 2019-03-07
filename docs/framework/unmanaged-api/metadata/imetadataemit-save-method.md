@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1a2be03e82d5be9bae64d7169709d16c40b66e37
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 90ddc540115a60154953ac6e8cb931103a650752
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54511885"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492419"
 ---
 # <a name="imetadataemitsave-method"></a>Метод IMetaDataEmit::Save
 Сохраняет все метаданные в текущей области в файл по указанному адресу.  
@@ -36,7 +36,7 @@ HRESULT Save (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `wzFile`  
  [in] Имя файла для сохранения. Если это значение равно null, в памяти копия будет сохранена до последнего расположения, который был использован.  
   
