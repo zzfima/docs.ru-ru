@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51878f0334afe52608b60ca540e49c86fded148e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 12a37ee8367006975b0f8ee4fa638ae3d72f9486
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418049"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487755"
 ---
 # <a name="icordebugthreadgetappdomain-method"></a>Метод ICorDebugThread::GetAppDomain
-Получает указатель интерфейса на домен приложения, в котором в настоящее время выполняется ICorDebugThread.  
+Получает указатель интерфейса на домен приложения, в котором ICorDebugThread в данный момент.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,15 +35,15 @@ HRESULT GetAppDomain (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `ppAppDomain`  
  [out] Указатель на объект ICorDebugAppDomain, который представляет домен приложения, в котором этот поток в данный момент.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

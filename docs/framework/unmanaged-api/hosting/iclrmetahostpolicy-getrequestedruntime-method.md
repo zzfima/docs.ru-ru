@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1516b6661402ee71448e0d6987e4ed32a0ce5296
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 73d5c98500c510630b1f8d6081b654a6dbd88a5b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371467"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501699"
 ---
 # <a name="iclrmetahostpolicygetrequestedruntime-method"></a>Метод ICLRMetaHostPolicy::GetRequestedRuntime
 
@@ -44,9 +44,9 @@ HRESULT GetRequestedRuntime(
     [out, iid_is(riid), retval] LPVOID *ppRuntime);
 ```
 
-#### <a name="parameters"></a>Параметры
+## <a name="parameters"></a>Параметры
 
-|name|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |`dwPolicyFlags`|[in] Обязательный. Указывает, является членом [METAHOST_POLICY_FLAGS](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md) перечисления, представляющий политику привязки и любое число модификаторов. Который в данный момент доступна только политика [METAHOST_POLICY_HIGHCOMPAT](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md).<br /><br /> Модификаторам относятся [METAHOST_POLICY_EMULATE_EXE_LAUNCH](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md), [METAHOST_POLICY_APPLY_UPGRADE_POLICY](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md), [METAHOST_POLICY_SHOW_ERROR_DIALOG](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md), [METAHOST_POLICY_USE_PROCESS_IMAGE_PATH](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md), и [METAHOST_POLICY_ENSURE_SKU_SUPPORTED](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md).|
 |`pwzBinary`|[в] Необязательно. Задает путь к файлу сборки.|

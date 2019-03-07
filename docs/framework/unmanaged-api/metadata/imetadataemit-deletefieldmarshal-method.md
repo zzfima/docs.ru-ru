@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e7ba2d6f143b6bbb9ddc5a056191e53f719bfeb1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cf9cc16ba2702e814f27adb009a5e9b63acc97e3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643953"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500201"
 ---
 # <a name="imetadataemitdeletefieldmarshal-method"></a>Метод IMetaDataEmit::DeleteFieldMarshal
 Уничтожает PInvoke, маршалинг подпись метаданных для объекта, который ссылается указанный токен.  
@@ -35,7 +35,7 @@ HRESULT DeleteFieldMarshal (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `tk`  
  [in] `mdFieldDef` Или `mdParamDef` токен, представляющий поля или параметра, для которого необходимо удалить маршалинга подпись метаданных.  
   

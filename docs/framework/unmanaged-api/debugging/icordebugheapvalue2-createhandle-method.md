@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c69d1f83a4591df4d2dcb7fb9724fa582ea28387
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 078dfd7162c250f0279b8bc372aeb39662aa0119
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413583"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498540"
 ---
 # <a name="icordebugheapvalue2createhandle-method"></a>Метод ICorDebugHeapValue2::CreateHandle
 Создает дескриптор указанного типа для значения кучи, представленный этим объектом ICorDebugHeapValue2.  
@@ -36,23 +36,23 @@ HRESULT CreateHandle (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `type`  
- [in] Значение cordebughandletype-перечисление, указывающее тип дескриптора.  
+ [in] Значение перечисления CorDebugHandleType, которое указывает тип дескриптора.  
   
  `ppHandle`  
- [out] Указатель на адрес объекта ICorDebugHandleValue, который представляет новый маркер для этого значения кучи.  
+ [out] Указатель на адрес ICorDebugHandleValue объект, представляющий новый маркер для этого значения кучи.  
   
 ## <a name="remarks"></a>Примечания  
- Дескриптор создается в домене приложения, связанный со значением кучи и станут недопустимыми, если момента выгрузки домена приложения.  
+ Дескриптор будет создан в домене приложения, который связан со значением кучи и станет недействительным, если выгрузки домена приложения.  
   
- Несколько вызовов этой функции для одного значения кучи создадут множественные дескрипторы. Так как дескрипторы влияют на производительность сборщика мусора, отладчик должен задать ограничение относительно небольшого числа дескрипторов (около 256), которые активны одновременно.  
+ Несколько вызовов этой функции для одного значения кучи создаст несколько дескрипторов. Так как дескрипторы влияют на производительность сборщика мусора, отладчик должен задать ограничение относительно небольшое количество дескрипторов (около 256), которые активны одновременно.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

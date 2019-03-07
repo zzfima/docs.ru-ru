@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8122f1b5017faac3425d59d12d77f84180134d65
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b0aefc19ca0c255c9c8ea40fcc12fc5cba1b00f6
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401633"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501460"
 ---
 # <a name="icordebugappdomaingetid-method"></a>Метод ICorDebugAppDomain::GetId
-Возвращает уникальный идентификатор домена приложения.  
+Получает уникальный идентификатор домена приложения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,7 +35,7 @@ HRESULT GetID (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `pId`  
  [out] Уникальный идентификатор домена приложения.  
   
@@ -43,10 +43,10 @@ HRESULT GetID (
  Идентификатор домена приложения уникален в пределах содержащего его процесса.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

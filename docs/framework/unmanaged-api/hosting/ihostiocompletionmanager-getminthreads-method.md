@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0ba01b576903d08139cfa57c285d079ea692c78
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a0ac90729e4885f0b76e1cd78ec31a0e2e251452
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614475"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497812"
 ---
 # <a name="ihostiocompletionmanagergetminthreads-method"></a>Метод IHostIoCompletionManager::GetMinThreads
 Получает минимальное количество потоков, предоставляемых хостом для обработки запросов ввода-вывода.  
@@ -35,7 +35,7 @@ HRESULT GetMinThreads (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `pdwMinIOCompletionThreads`  
  [out] Указатель на минимальное количество потоков, предоставляемых хостом для обработки операций ввода-вывода запросов.  
   

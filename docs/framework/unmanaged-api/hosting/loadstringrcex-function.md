@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ec8e5dfc92a818bfc23c28f3058086c3bd1a8ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c3185bdc0776d6536458ce03c348ed77b8ba0b9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597948"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499099"
 ---
 # <a name="loadstringrcex-function"></a>Функция LoadStringRCEx
 Преобразовывает значение HRESULT в соответствующее сообщение об ошибке для указанного языка и региональных параметров.  
@@ -41,7 +41,7 @@ HRESULT LoadStringRCEx (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `lcid`  
  [in] Идентификатор языка и региональных параметров. Передайте значение -1 `lcid` использовать культуры по умолчанию.  
   
@@ -63,7 +63,7 @@ HRESULT LoadStringRCEx (
 ## <a name="return-value"></a>Возвращаемое значение  
  Этот метод возвращает стандартные коды ошибок COM, как определено в файле WinError.h, помимо следующих значений.  
   
-|Код возврата|Описание:|  
+|Код возврата|Описание|  
 |-----------------|-----------------|  
 |S_OK|Метод завершился успешно.|  
 |E_INVALIDARG|`szBuffer` имеет значение null, или `iMax` равно нулю (0).|  

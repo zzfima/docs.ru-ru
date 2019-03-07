@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cdd8f8a1120e3e6e82c87cc02afa5c503493da1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b2372aac00473786df9b5deefb969fc02abd8daa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719837"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496110"
 ---
 # <a name="imetadataemitdefinemethod-method"></a>Метод IMetaDataEmit::DefineMethod
 Создает определение для метода или глобальной функции с указанной сигнатурой и возвращает маркер для этого определения метода.  
@@ -42,7 +42,7 @@ HRESULT DefineMethod (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `td`  
  [in] `mdTypedef` Маркеров родительского класса или интерфейса родительского метода. Задайте `td` для `mdTokenNil`, при определении глобальной функции.  
   

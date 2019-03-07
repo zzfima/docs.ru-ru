@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f417fcd001d9e442ae518dbcd9df26eecb6efae9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 01b883a5c6dd0cff119ff09747d32c607ac7ec60
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421978"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500997"
 ---
 # <a name="icordebugthread2interceptcurrentexception-method"></a>Метод ICorDebugThread2::InterceptCurrentException
-Позволяет отладчику перехватить текущее исключение в этом потоке.  
+Позволяет отладчику перехватить текущее исключение в данном потоке.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,18 +35,18 @@ HRESULT InterceptCurrentException (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `pFrame`  
- [in] Указатель ICorDebugFrame, который представляет активный кадр стека.  
+ [in] Указатель на интерфейс ICorDebugFrame, представляющий активный кадр стека.  
   
 ## <a name="remarks"></a>Примечания  
- `InterceptCurrentException` Метод может вызываться между обратный вызов исключения ([ICorDebugManagedCallback::Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exception-method.md) или [ICorDebugManagedCallback2::Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md)) и связанные вызов [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md).  
+ `InterceptCurrentException` Метод может вызываться между обратного вызова исключения ([ICorDebugManagedCallback::Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exception-method.md) или [ICorDebugManagedCallback2::Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md)) и связанные вызов [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md).  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

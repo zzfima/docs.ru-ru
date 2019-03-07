@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7415e7b5ee03353e8e0e45cf46aa47c4266109af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8ef4049ee8b1a4881128047b4d7e50fd0a28ea31
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704307"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499203"
 ---
 # <a name="icordebugthread4hadunhandledexception-method"></a>Метод ICorDebugThread4::HadUnhandledException
 Указывает, возникало ли когда-либо поток необработанное исключение.  
@@ -35,7 +35,7 @@ HRESULT GetBlockingObjects (
     );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `ppBlockingObjectEnum`  
  [out] Указатель на адрес, упорядоченный перечисления [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) структуры.  
   

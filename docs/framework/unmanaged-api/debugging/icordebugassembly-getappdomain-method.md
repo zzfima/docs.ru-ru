@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e22d112d1414b13033f73723821e5e4b5764e1c8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a9ba09b80d7118b0ccd9b1647011a7fc7cd74e22
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401983"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485113"
 ---
 # <a name="icordebugassemblygetappdomain-method"></a>Метод ICorDebugAssembly::GetAppDomain
 Получает указатель интерфейса на домен приложения, который содержит это `ICorDebugAssembly` экземпляра.  
@@ -35,18 +35,18 @@ HRESULT GetAppDomain (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `ppAppDomain`  
  [out] Указатель на адрес ICorDebugAppDomain-интерфейс, который представляет домен приложения.  
   
 ## <a name="remarks"></a>Примечания  
- Если эта сборка является системную сборку `GetAppDomain` возвращает значение null.  
+ Если эта сборка является сборкой системы, `GetAppDomain` возвращает значение null.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb1e0aec9ce746c3082ad9cc57b572cbca0fd7e0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cc4ba4f87cd53e12baa0a7cf8b853db0e948201f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552271"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500399"
 ---
 # <a name="iclrdatatargetgetcurrentthreadid-method"></a>Метод ICLRDataTarget::GetCurrentThreadID
 Получает идентификатор операционной системы для текущего потока.  
@@ -35,7 +35,7 @@ HRESULT GetCurrentThreadID (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `threadID`  
  [out] Указатель на идентификатор операционной системы, текущего потока для целевого процесса.  
   

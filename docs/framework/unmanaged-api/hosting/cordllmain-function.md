@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f62ad2c9ec6e1c9672ac5c78e838e926b02359f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e3c529e77cad16f0bde12e34491829b58add17aa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512376"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500395"
 ---
 # <a name="cordllmain-function"></a>Функция _CorDllMain
 Инициализирует общеязыковой среды выполнения (CLR), размещает управляемую точку входа в заголовке среды CLR сборки DLL и начинает выполнение.  
@@ -36,7 +36,7 @@ BOOL STDMETHODCALLTYPE _CorDllMain (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `hInst`  
  [in] Дескриптор экземпляра загруженного модуля.  
   
@@ -54,7 +54,7 @@ BOOL STDMETHODCALLTYPE _CorDllMain (
   
  Загрузчик операционной системы вызывает этот метод независимо от точки входа, указанной в файле DLL.  
   
- В Windows 98, Windows ME, Windows NT и Windows 2000 `_CorDllMain` функция вызывается косвенно через fixupin загрузчик операционной системы. Во всех других версиях Windows он вызывается загрузчиком операционной системы.  
+`_CorDllMain` Функция вызывается загрузчиком операционной системы.
   
  Дополнительные сведения см. в разделе "Примечания" в [_CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md) раздела.  
   

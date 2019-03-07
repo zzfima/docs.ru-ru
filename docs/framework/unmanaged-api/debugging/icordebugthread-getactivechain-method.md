@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9030319ca12aafcf452e3ecd816fc269f0abfc0e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b05f5a3f29c7b72ed83c1456175f68ef9b986e3e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417519"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57483320"
 ---
 # <a name="icordebugthreadgetactivechain-method"></a>Метод ICorDebugThread::GetActiveChain
-Получает указатель интерфейса активной (последней) цепи стека для этого объекта ICorDebugThread.  
+Получает указатель интерфейса на этот объект ICorDebugThread active (последней) Цепочка стека.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,18 +35,18 @@ HRESULT GetActiveChain (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `ppChain`  
- [out] Указатель на адрес объекта ICorDebugChain, который представляет цепочка стека.  
+ [out] Указатель на адрес ICorDebugChain объект, представляющий цепочка стека.  
   
 ## <a name="remarks"></a>Примечания  
  `ppChain` Параметр имеет значение null, если нет цепочка стека в данный момент активна.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cfd7ee890a7f2c3ea8cd3de9fbe830575c0ca10c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b00afc900a27aea94389ee81065ea22ae359440d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402778"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498345"
 ---
 # <a name="icordebugappdomainenumeratebreakpoints-method"></a>Метод ICorDebugAppDomain::EnumerateBreakpoints
 Возвращает перечислитель для всех активных точек останова в домене приложения.  
@@ -35,18 +35,18 @@ HRESULT EnumerateBreakpoints (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `ppBreakpoints`  
  [out] Указатель на адрес объекта ICorDebugBreakpointEnum, который является перечислителем для всех активных точек останова в домене приложения.  
   
 ## <a name="remarks"></a>Примечания  
- Перечислитель включает все типы точек останова, включая функции точки останова и точки останова в данных.  
+ Перечислитель включает все типы точек останова, включая точки останова функции и точки останова по данным.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15b102be5a792f982edeb320199576bdddbd859a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 49ced1b4be888c7550c3927d1b319ab2f0bef086
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412364"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501010"
 ---
 # <a name="icordebugfunction2setjmcstatus-method"></a>Метод ICorDebugFunction2::SetJMCStatus
-Обозначает функцию, представленную в этом ICorDebugFunction2 только мой код пошаговое выполнение.  
+Помечает функцию, представленный этой ICorDebugFunction2 только мой код пошагового выполнения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,25 +35,25 @@ HRESULT SetJMCStatus (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `bIsJustMyCode`  
- [in] Значение `true` пометить ее как код пользователя; в противном случае — значение `false`.  
+ [in] Значение `true` пометить ее как код пользователя; в противном случае значение `false`.  
   
 ## <a name="return-values"></a>Возвращаемые значения  
   
-|HRESULT|Описание|  
+|HRESULT|Описание:|  
 |-------------|-----------------|  
-|`S_OK`|Функция была успешно отмечена.|  
-|`CORDBG_E_FUNCTION_NOT_DEBUGGABLE`|Функция не может быть помечена как код пользователя, так как он не может быть отлажен.|  
+|`S_OK`|Функция был успешно помечен.|  
+|`CORDBG_E_FUNCTION_NOT_DEBUGGABLE`|Функции не могут быть помечены как пользовательский код, поскольку он не может быть отлажен.|  
   
 ## <a name="remarks"></a>Примечания  
- Пошаговым только мой код будет пропускать код, не написанный пользователем. Пользовательский код должен быть подмножеством отлаживаемого кода.  
+ Несопоставимого только мой код будет пропускать код, не написанный пользователем. Пользовательский код должен представлять собой подмножество отлаживаемый код.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

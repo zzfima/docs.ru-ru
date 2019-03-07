@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1b5e021116b29045837a5afae14aa560690cc944
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6feee7c5137501dbaf1c8cf8d097dfbf06071906
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595374"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499112"
 ---
 # <a name="icorprofilerinfo3requestprofilerdetach-method"></a>Метод ICorProfilerInfo3::RequestProfilerDetach
 Дает среде выполнения команду на отключение профилировщика.  
@@ -34,7 +34,7 @@ HRESULT RequestProfilerDetach(
    [in] DWORD    dwExpectedCompletionMilliseconds);  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `dwExpectedCompletionMilliseconds`  
  [in] Время в миллисекундах, которое должна ожидать среда CLR, прежде чем проверить, безопасно ли выгружать профилировщик.  
   

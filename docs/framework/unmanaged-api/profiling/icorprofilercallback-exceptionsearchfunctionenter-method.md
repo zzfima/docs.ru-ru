@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c2f27eccc506ce7145b383132260ad4e470f8906
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0615f37d97359f73eb1277da174b7e6401bfc313
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519233"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500347"
 ---
 # <a name="icorprofilercallbackexceptionsearchfunctionenter-method"></a>Метод ICorProfilerCallback::ExceptionSearchFunctionEnter
 Уведомляет профилировщик о начале этапа поиска обработки исключений поиск функции с целью найти обработчик для текущего исключения.  
@@ -34,7 +34,7 @@ HRESULT ExceptionSearchFunctionEnter(
     [in] FunctionID functionId);  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `functionId`  
  [in] Идентификатор функции, которая была введена.  
   

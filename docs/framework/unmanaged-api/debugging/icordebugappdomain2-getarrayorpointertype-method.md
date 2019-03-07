@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb3f0ca6d930b22f30fe9bbc5b5a04bf1e034f34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 58a39771bd89fc9c4947f80a3c87b4d340b5461c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405829"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484242"
 ---
 # <a name="icordebugappdomain2getarrayorpointertype-method"></a>Метод ICorDebugAppDomain2::GetArrayOrPointerType
-Возвращает массив указанного типа, указатель или ссылку на указанный тип.  
+Получает массив указанного типа, указатель или ссылка на указанный тип.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,21 +38,21 @@ HRESULT GetArrayOrPointerType (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `elementType`  
- [in] Значение CorElementType перечисление, указывающее базовый собственный тип (массив, указатель или ссылка) должен быть создан.  
+ [in] Значение CorElementType перечисления, указывающее базовый собственный тип (массив, указатель или ссылка) должен быть создан.  
   
  `nRank`  
  [in] Ранг (то есть число измерений) массива. Это значение должно быть 0, если `elementType` указывает тип указателя или ссылки.  
   
  `pTypeArg`  
- [in] Указатель на объект ICorDebugType, представляющий тип массива, указателя или ссылки должен быть создан.  
+ [in] Указатель на интерфейс ICorDebugType объект, представляющий тип массива, указателя или ссылки должен быть создан.  
   
  `ppType`  
  [out] Указатель на адрес `ICorDebugType` тип, представляющий сконструированный массива, тип указателя или ссылки.  
   
 ## <a name="remarks"></a>Примечания  
- Значение *elementType* должен быть одним из следующих:  
+ Значение *elementType* должно быть одно из следующих:  
   
 -   ELEMENT_TYPE_PTR  
   
@@ -60,13 +60,13 @@ HRESULT GetArrayOrPointerType (
   
 -   ELEMENT_TYPE_ARRAY или ELEMENT_TYPE_SZARRAY  
   
- Если значение *elementType* ELEMENT_TYPE_PTR или ELEMENT_TYPE_BYREF, *nRank* должен быть равен нулю.  
+ Если значение *elementType* ELEMENT_TYPE_PTR или ELEMENT_TYPE_BYREF, *nRank* должно быть равно нулю.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

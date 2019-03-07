@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9086cff38e0232d6054d6b1f590be6d8d76ed1af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a7187076eb338d5a57388d19f62e79af041ee774
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527376"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501049"
 ---
 # <a name="loadtypelibwithresolver-function"></a>Функция LoadTypeLibWithResolver
 Загружает библиотеку типов и использует предоставленный [интерфейс ITypeLibResolver](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) для разрешения любых типов, на которые библиотек.  
@@ -36,7 +36,7 @@ HRESULT LoadTypeLibWithResolver(
     [out] ITypeLib          **pptlib);  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `szFile`  
  [in] Путь к файлу библиотеки типов.  
   

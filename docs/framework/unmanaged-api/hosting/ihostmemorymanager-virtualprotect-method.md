@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6ebba2f6d7f40c835b6ffdc479bdc9f2fdc354e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b712b7e88e6cb5693c0823799e0980d90e34ff0a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568066"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492612"
 ---
 # <a name="ihostmemorymanagervirtualprotect-method"></a>Метод IHostMemoryManager::VirtualProtect
 Служит в качестве логической программой-оболочкой для соответствующей функции Win32. Реализация Win32 `VirtualProtect` изменяет защиту на области зафиксированных страниц в виртуальном адресном пространстве вызывающего процесса.  
@@ -38,7 +38,7 @@ HRESULT VirtualProtect (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `lpAddress`  
  [in] Указатель на базовый адрес виртуальной памяти, атрибуты которого защиты должны быть изменены.  
   

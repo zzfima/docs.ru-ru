@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d0fc5fd29b8b423ddd3a659ee2fc8a339eea0105
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4b29faaaceb3006ffa114beb78ba245817c58ee8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733887"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494198"
 ---
 # <a name="isymunmanagedmethodgetparameters-method"></a>Метод ISymUnmanagedMethod::GetParameters
 Получает параметры для этого метода. Параметры возвращаются в порядке, в котором они определены в подписи метода.  
@@ -37,7 +37,7 @@ HRESULT GetParameters(
         length_is(*pcParams)] ISymUnmanagedVariable*  params[]);  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `cParams`  
  [in] Размер массива `params`.  
   

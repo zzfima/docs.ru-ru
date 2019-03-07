@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 40631a15bd07b5aa54488e5d3b99cee751e2e0bd
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: fa1fa59bf3bb33e115989eae9095752eea00a041
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748340"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487646"
 ---
 # <a name="imetadataimportgetmemberprops-method"></a>Метод IMetaDataImport::GetMemberProps
 Получает сведения, хранящиеся в метаданных для определения указанного элемента, включая имя, двоичную подпись и относительный виртуальный адрес из <xref:System.Type> члена ссылается указанный токен метаданных. Это простой вспомогательный метод: Если *МБ* является MethodDef, затем **GetMethodProps** вызывается; Если *МБ* будет FieldDef **GetFieldProps** вызывается. См. в статье эти другие методы, Дополнительные сведения. 
@@ -47,7 +47,7 @@ HRESULT GetMemberProps (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `mb`  
  [in] Токен, который ссылается на связанные метаданные для члена.  
   

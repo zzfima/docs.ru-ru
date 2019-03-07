@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d456dac488805d6d028c89781131daf5ac777512
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 11e45e5a834c27f825db3419b2d8675f9a9a37d5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54504240"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493418"
 ---
 # <a name="iclrstrongnamegethashfromassemblyfile-method"></a>Метод ICLRStrongName::GetHashFromAssemblyFile
 Получает хэш указанного файла сборки с помощью указанного хэш-алгоритма.  
@@ -39,7 +39,7 @@ HRESULT GetHashFromAssemblyFile (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `szFilePath`  
  [in] Путь к файлу, хэширование которого требуется выполнить.  
   

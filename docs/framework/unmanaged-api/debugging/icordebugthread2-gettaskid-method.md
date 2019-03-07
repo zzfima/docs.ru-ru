@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f5690856b526bf0f7bc4527d04ae8044cda1f6e5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 417f99c2b9fa7e77f8696c27cb3929c92956c08c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417870"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494653"
 ---
 # <a name="icordebugthread2gettaskid-method"></a>Метод ICorDebugThread2::GetTaskID
-Получает идентификатор задачи, выполняемой в этом потоке.  
+Получает идентификатор задачи, выполняемой в данном потоке.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,18 +35,18 @@ HRESULT GetTaskID (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `pTaskId`  
- [out] Указатель на идентификатор задачи, выполняемые в потоке, представленный этим объектом ICorDebugThread2.  
+ [out] Указатель на идентификатор задачи, выполняемой в потоке, представленный этим объектом ICorDebugThread2.  
   
 ## <a name="remarks"></a>Примечания  
- Задачу можно выполняется только в потоке, если поток связан с соединением. `GetTaskID` Возвращает нуль `pTaskId` Если поток не связан с соединением.  
+ Задача может быть запущен только в потоке, если поток связан с соединением. `GetTaskID` Возвращает нуль `pTaskId` Если поток не связан с соединением.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

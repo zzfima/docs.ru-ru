@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e9780020abe609212fe3c4bd65f70200467ff9c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 586882ad7577c367576da9b32e6d3b8fe2f806c3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533693"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501218"
 ---
 # <a name="iclrruntimeinfoisloadable-method"></a>Метод ICLRRuntimeInfo::IsLoadable
 Указывает ли среда выполнения, связанных с этим интерфейсом могут быть загружены в текущий процесс, с учетом других сред выполнения, которые уже могут быть загружены в процесс.  
@@ -34,7 +34,7 @@ HRESULT IsLoadable(
         [out, retval] BOOL *pbLoadable);  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `pbLoadable`  
  [out] `true` Если эта среда выполнения может быть загружена в текущем процессе; в противном случае `false`.  
   
@@ -44,7 +44,7 @@ HRESULT IsLoadable(
 |HRESULT|Описание|  
 |-------------|-----------------|  
 |S_OK|Метод завершился успешно.|  
-|E_POINTER|Параметр `pbLoadable` имеет значение null.|  
+|E_POINTER|Параметр `pbLoadable` имеет значение NULL.|  
   
 ## <a name="remarks"></a>Примечания  
  Если в процесс уже загружена другая среда выполнения и среды выполнения, связанных с этим интерфейсом, которые могут быть загружены для выполнения-process side-by-side, `pbLoadable` возвращает `true`. Если две среды выполнения не может выполняться side-by-side в процессе, `pbLoadable` возвращает `false`. Например среда CLR (CLR) версии 4 можно запустить side-by-side, в том же процессе, в среде CLR версии 2.0 или среда CLR версии 1.1. Однако среда CLR версии 1.1 и среда CLR версии 2.0 не могут выполняться side-by-side в процессе.  

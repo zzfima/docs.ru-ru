@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e23026241a836bfa6cf6f186a47037370c174e61
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 872f5a9eaa17a777cfbb14fea34cc80e0b7c04ad
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680941"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487490"
 ---
 # <a name="imetadatatablesgetnextguid-method"></a>Метод IMetaDataTables::GetNextGuid
 Получает индекс следующего значения GUID в текущем столбце таблицы.  
@@ -36,7 +36,7 @@ HRESULT GetNextGuid (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `ixGuid`  
  [in] Значение индекса из таблицы столбец GUID.  
   

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6da4c282c7f969a406a657d1e30dd6120a32b4e3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2e9d640fb1c9dae5bb195baa504e560ba8e45821
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420912"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497097"
 ---
 # <a name="icordebugprocesswritememory-method"></a>Метод ICorDebugProcess::WriteMemory
-Записывает данные в область памяти в данном процессе.  
+Записывает данные в область памяти, в этом процессе.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,9 +37,9 @@ HRESULT WriteMemory(
     [out] SIZE_T *written);  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `address`  
- [in] Объект `CORDB_ADDRESS` записывается значение, базовый адрес области памяти для данных. Прежде чем произойдет передача данных, система проверяет, область памяти указанного размера, начиная с базового адреса, доступен для записи. Если он недоступен, произойдет ошибка.  
+ [in] Объект `CORDB_ADDRESS` записывается значение, базовый адрес области памяти для данных. Прежде чем происходит передача данных, система проверяет, область памяти указанного размера, начиная с базового адреса, доступного для записи. Если он недоступен, происходит сбой метода.  
   
  `size`  
  [in] Число байтов для записи в область памяти.  
@@ -51,15 +51,15 @@ HRESULT WriteMemory(
  [out] Указатель на переменную, которая получает число байтов, записанных в область памяти, в этом процессе. Если `written` имеет значение NULL, этот параметр учитывается.  
   
 ## <a name="remarks"></a>Примечания  
- Данные автоматически записываются за любыми точками останова. В платформе .NET Framework версии 2.0 машинные отладчики не следует использовать этот метод для вставки точки останова в поток инструкций. Используйте [ICorDebugProcess2::SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md) вместо него.  
+ Данные автоматически записываются за любыми точками останова. В платформе .NET Framework версии 2.0 машинные отладчики не следует использовать этот метод для вставки точки останова в потоке инструкций. Используйте [ICorDebugProcess2::SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md) вместо этого.  
   
  `WriteMemory` Метод должен использоваться только за пределами управляемого кода. Этот метод может привести к повреждению среды выполнения при неправильном.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Заголовок:** CorDebug.idl, CorDebug.h  
+ **Заголовок.** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

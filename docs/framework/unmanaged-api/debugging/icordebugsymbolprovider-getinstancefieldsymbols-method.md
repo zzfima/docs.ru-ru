@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: a29b9233-ee67-4b53-b8bc-c00b281e7edb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 908d53acb9130173327149db95d2d6ec9abc3ae7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d149eeec545909d9d6b7413c7ad6d537c1493bb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540849"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501322"
 ---
 # <a name="icordebugsymbolprovidergetinstancefieldsymbols-method"></a>Метод ICorDebugSymbolProvider::GetInstanceFieldSymbols
 Получает символы поля экземпляра, которые соответствуют сигнатуре TypeSpec.  
@@ -26,7 +26,7 @@ HRESULT GetInstanceFieldSymbols(
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `cbSignature`  
  [in] Число байтов в массиве `typeSig`.  
   

@@ -14,12 +14,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 762ebbe141473277dc064b36c6229f82d348f976
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ae7d896ee8e06921d685fad9ae2fcc0ac215d64a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582111"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485061"
 ---
 # <a name="icorprofilerassemblyreferenceprovideraddassemblyreference-method"></a>Метод ICorProfilerAssemblyReferenceProvider::AddAssemblyReference
 [Поддерживается в .NET Framework 4.5.2 и более поздних версиях.]  
@@ -34,7 +34,7 @@ HRESULT AddAssemblyReference(
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  pAssemblyRefInfo  
  Указатель на [COR_PRF_ASSEMBLY_REFERENCE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-assembly-reference-info-structure.md) структуру, которая предоставляет среде CLR сведения о ссылку на сборку, которую ей следует учитывать при выполнении обхода замыкания.  
   

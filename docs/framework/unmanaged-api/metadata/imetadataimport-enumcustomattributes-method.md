@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b53347e9f446d6340bfc5dab2d8f898ebbbf93f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b7197f905c974bafc5b3892e498083f6abc18c12
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527111"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498319"
 ---
 # <a name="imetadataimportenumcustomattributes-method"></a>Метод IMetaDataImport::EnumCustomAttributes
 Перечисляет токены определений настраиваемых атрибутов, связанных с указанным типом или членом.  
@@ -40,7 +40,7 @@ HRESULT EnumCustomAttributes (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `phEnum`  
  [in, out] Указатель на возвращенном перечислителе.  
   
@@ -61,7 +61,7 @@ HRESULT EnumCustomAttributes (
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
-|HRESULT|Описание|  
+|HRESULT|Описание:|  
 |-------------|-----------------|  
 |`S_OK`|`EnumCustomAttributes` успешно возвращен.|  
 |`S_FALSE`|Нет никаких настраиваемых атрибутов для перечисления. В этом случае `pcCustomAttributes` равно нулю.|  
