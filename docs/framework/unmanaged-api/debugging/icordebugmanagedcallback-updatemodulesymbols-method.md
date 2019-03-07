@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b66cc09eda1fe5ea46a55b6239e05b5acec851c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 70f4d61eac381ede94fd9f7369c84d9d1d210c55
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566909"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476520"
 ---
 # <a name="icordebugmanagedcallbackupdatemodulesymbols-method"></a>Метод ICorDebugManagedCallback::UpdateModuleSymbols
 Уведомляет отладчик о том, что изменились символы для модуля среды CLR.  
@@ -37,7 +37,7 @@ HRESULT UpdateModuleSymbols (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `pAppDomain`  
  [in] Указатель на объект ICorDebugAppDomain, который представляет домен приложения, содержащей модуль, в котором символы были изменены.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 597c5071f9ea0ceacaf429ca10cc899f115772eb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e49c20d7627f666efd6561cee19ca505f723b714
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715638"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474440"
 ---
 # <a name="icordebugmanagedcallbackloadmodule-method"></a>Метод ICorDebugManagedCallback::LoadModule
 Уведомляет отладчик, что общий модуль среды выполнения (CLR) язык был успешно загружен.  
@@ -36,7 +36,7 @@ HRESULT LoadModule (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `pAppDomain`  
  [in] Указатель на объект ICorDebugAppDomain, который представляет домен приложения, в который загружен модуль.  
   

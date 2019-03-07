@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 164cdc5c04a55e9c33dda51e10dfb37f38ec1b6d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16984fe108abd1cfc01c471bcfc091a805b28e83
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746548"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501507"
 ---
 # <a name="imetadataemitgetsavesize-method"></a>Метод IMetaDataEmit::GetSaveSize
 Получает приблизительный двоичный размер сборки и ее метаданные в текущей области.  
@@ -36,7 +36,7 @@ HRESULT GetSaveSize (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `fSave`  
  [in] Значение [CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) перечисление, указывающее, следует ли получить точное или приблизительное размер. Допустимы только три значения: cssAccurate, cssQuick и cssDiscardTransientCAs:  
   

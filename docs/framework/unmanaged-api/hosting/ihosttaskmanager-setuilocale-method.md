@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a263410e898ee5805ce2a3dc9d534c25f6b9106
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0379e7a0f1e82f15b2457b270760c7b8a3cf1a36
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496157"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502362"
 ---
 # <a name="ihosttaskmanagersetuilocale-method"></a>Метод IHostTaskManager::SetUILocale
 Уведомляет ведущее приложение об изменении общеязыковой среды выполнения (CLR) национальной настройки пользовательского интерфейса пользователя, то есть язык и региональные параметры, в текущей выполняемой задаче.  
@@ -35,7 +35,7 @@ HRESULT SetUILocale (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `lcid`  
  [in] Значения идентификатора языкового стандарта, сопоставляется только что назначенного географических языка и региональных параметров.  
   
