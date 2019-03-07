@@ -19,17 +19,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 98758ce2c1fb0373ce5a94ad153c0f07144616e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cb7e64da5002f438198a8389d2d8385d7a4210a4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729918"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492716"
 ---
-# <a name="icoreclrdebugtargetenumprocesses-method"></a><span data-ttu-id="b2787-102">Метод ICoreClrDebugTarget::EnumProcesses</span><span class="sxs-lookup"><span data-stu-id="b2787-102">ICoreClrDebugTarget::EnumProcesses Method</span></span>
-<span data-ttu-id="b2787-103">Перечисляет процессы, работающие на удаленном компьютере.</span><span class="sxs-lookup"><span data-stu-id="b2787-103">Enumerates the processes that are running on a remote computer.</span></span>  
+# <a name="icoreclrdebugtargetenumprocesses-method"></a><span data-ttu-id="f263a-102">Метод ICoreClrDebugTarget::EnumProcesses</span><span class="sxs-lookup"><span data-stu-id="f263a-102">ICoreClrDebugTarget::EnumProcesses Method</span></span>
+<span data-ttu-id="f263a-103">Перечисляет процессы, работающие на удаленном компьютере.</span><span class="sxs-lookup"><span data-stu-id="f263a-103">Enumerates the processes that are running on a remote computer.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b2787-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b2787-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f263a-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f263a-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumProcesses (  
@@ -38,34 +38,34 @@ HRESULT EnumProcesses (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="b2787-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="b2787-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f263a-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="f263a-105">Parameters</span></span>  
  `pcProcs`  
- <span data-ttu-id="b2787-106">[out] Число процессов, возвращаемых в `ppProcs`.</span><span class="sxs-lookup"><span data-stu-id="b2787-106">[out] The number of processes returned in `ppProcs`.</span></span> <span data-ttu-id="b2787-107">Это значение может быть 0 (ноль).</span><span class="sxs-lookup"><span data-stu-id="b2787-107">This value can be 0 (zero).</span></span>  
+ <span data-ttu-id="f263a-106">[out] Число процессов, возвращаемых в `ppProcs`.</span><span class="sxs-lookup"><span data-stu-id="f263a-106">[out] The number of processes returned in `ppProcs`.</span></span> <span data-ttu-id="f263a-107">Это значение может быть 0 (ноль).</span><span class="sxs-lookup"><span data-stu-id="f263a-107">This value can be 0 (zero).</span></span>  
   
  `ppProcs`  
- <span data-ttu-id="b2787-108">[out] Массив [CoreClrDebugProcInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md) структур, представляющих процессы, запущенные на удаленном компьютере.</span><span class="sxs-lookup"><span data-stu-id="b2787-108">[out] An array of [CoreClrDebugProcInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md) structures that represent the processes running on the remote computer.</span></span>  
+ <span data-ttu-id="f263a-108">[out] Массив [CoreClrDebugProcInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md) структур, представляющих процессы, запущенные на удаленном компьютере.</span><span class="sxs-lookup"><span data-stu-id="f263a-108">[out] An array of [CoreClrDebugProcInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md) structures that represent the processes running on the remote computer.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="b2787-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="b2787-109">Return Value</span></span>  
- <span data-ttu-id="b2787-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="b2787-110">S_OK</span></span>  
- <span data-ttu-id="b2787-111">Выполнено.</span><span class="sxs-lookup"><span data-stu-id="b2787-111">Success.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f263a-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="f263a-109">Return Value</span></span>  
+ <span data-ttu-id="f263a-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="f263a-110">S_OK</span></span>  
+ <span data-ttu-id="f263a-111">Выполнено.</span><span class="sxs-lookup"><span data-stu-id="f263a-111">Success.</span></span>  
   
- <span data-ttu-id="b2787-112">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="b2787-112">E_OUTOFMEMORY</span></span>  
- <span data-ttu-id="b2787-113">Не удается выделить достаточно памяти для `ppProcs`.</span><span class="sxs-lookup"><span data-stu-id="b2787-113">Unable to allocate enough memory for `ppProcs`.</span></span>  
+ <span data-ttu-id="f263a-112">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="f263a-112">E_OUTOFMEMORY</span></span>  
+ <span data-ttu-id="f263a-113">Не удается выделить достаточно памяти для `ppProcs`.</span><span class="sxs-lookup"><span data-stu-id="f263a-113">Unable to allocate enough memory for `ppProcs`.</span></span>  
   
- <span data-ttu-id="b2787-114">E_FAIL (или другие коды возврата E_)</span><span class="sxs-lookup"><span data-stu-id="b2787-114">E_FAIL (or other E_ return codes)</span></span>  
- <span data-ttu-id="b2787-115">Прочие сбои.</span><span class="sxs-lookup"><span data-stu-id="b2787-115">Other failures.</span></span>  
+ <span data-ttu-id="f263a-114">E_FAIL (или другие коды возврата E_)</span><span class="sxs-lookup"><span data-stu-id="f263a-114">E_FAIL (or other E_ return codes)</span></span>  
+ <span data-ttu-id="f263a-115">Прочие сбои.</span><span class="sxs-lookup"><span data-stu-id="f263a-115">Other failures.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b2787-116">Примечания</span><span class="sxs-lookup"><span data-stu-id="b2787-116">Remarks</span></span>  
- <span data-ttu-id="b2787-117">Чтобы освободить память, выделенную этим методом, вызовите [ICoreClrDebugTarget::FreeMemory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="b2787-117">To free the memory that was allocated by this method, call the [ICoreClrDebugTarget::FreeMemory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f263a-116">Примечания</span><span class="sxs-lookup"><span data-stu-id="f263a-116">Remarks</span></span>  
+ <span data-ttu-id="f263a-117">Чтобы освободить память, выделенную этим методом, вызовите [ICoreClrDebugTarget::FreeMemory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="f263a-117">To free the memory that was allocated by this method, call the [ICoreClrDebugTarget::FreeMemory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b2787-118">Требования</span><span class="sxs-lookup"><span data-stu-id="b2787-118">Requirements</span></span>  
- <span data-ttu-id="b2787-119">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b2787-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f263a-118">Требования</span><span class="sxs-lookup"><span data-stu-id="f263a-118">Requirements</span></span>  
+ <span data-ttu-id="f263a-119">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f263a-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b2787-120">**Заголовок.** CoreClrRemoteDebuggingInterfaces.h</span><span class="sxs-lookup"><span data-stu-id="b2787-120">**Header:** CoreClrRemoteDebuggingInterfaces.h</span></span>  
+ <span data-ttu-id="f263a-120">**Заголовок.** CoreClrRemoteDebuggingInterfaces.h</span><span class="sxs-lookup"><span data-stu-id="f263a-120">**Header:** CoreClrRemoteDebuggingInterfaces.h</span></span>  
   
- <span data-ttu-id="b2787-121">**Library:** mscordbi_macx86.dll</span><span class="sxs-lookup"><span data-stu-id="b2787-121">**Library:** mscordbi_macx86.dll</span></span>  
+ <span data-ttu-id="f263a-121">**Library:** mscordbi_macx86.dll</span><span class="sxs-lookup"><span data-stu-id="f263a-121">**Library:** mscordbi_macx86.dll</span></span>  
   
- <span data-ttu-id="b2787-122">**Версии платформы .NET framework:** 3.5 с пакетом обновления 1 (SP1)</span><span class="sxs-lookup"><span data-stu-id="b2787-122">**.NET Framework Versions:** 3.5 SP1</span></span>  
+ <span data-ttu-id="f263a-122">**Версии платформы .NET framework:** 3.5 с пакетом обновления 1 (SP1)</span><span class="sxs-lookup"><span data-stu-id="f263a-122">**.NET Framework Versions:** 3.5 SP1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b2787-123">См. также</span><span class="sxs-lookup"><span data-stu-id="b2787-123">See also</span></span>
-- [<span data-ttu-id="b2787-124">Интерфейс ICoreClrDebugTarget</span><span class="sxs-lookup"><span data-stu-id="b2787-124">ICoreClrDebugTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)
+## <a name="see-also"></a><span data-ttu-id="f263a-123">См. также</span><span class="sxs-lookup"><span data-stu-id="f263a-123">See also</span></span>
+- [<span data-ttu-id="f263a-124">Интерфейс ICoreClrDebugTarget</span><span class="sxs-lookup"><span data-stu-id="f263a-124">ICoreClrDebugTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)
