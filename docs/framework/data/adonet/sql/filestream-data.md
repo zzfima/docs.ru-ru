@@ -2,185 +2,191 @@
 title: Данные FILESTREAM
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-ms.openlocfilehash: 4002f95e47b3c1ac7d8415d590b8c4c8a5d95a91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cd496909a387f5726b2d22adae14085a60eae881
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701096"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674744"
 ---
-# <a name="filestream-data"></a><span data-ttu-id="464fc-102">Данные FILESTREAM</span><span class="sxs-lookup"><span data-stu-id="464fc-102">FILESTREAM Data</span></span>
-<span data-ttu-id="464fc-103">Для двоичных данных (BLOB), хранящихся в столбце varbinary(max), появился новый атрибут хранилища FILESTREAM.</span><span class="sxs-lookup"><span data-stu-id="464fc-103">The FILESTREAM storage attribute is for binary (BLOB) data stored in a varbinary(max) column.</span></span> <span data-ttu-id="464fc-104">До появления FILESTREAM для хранения двоичных данных была необходима специальная обработка.</span><span class="sxs-lookup"><span data-stu-id="464fc-104">Before FILESTREAM, storing binary data required special handling.</span></span> <span data-ttu-id="464fc-105">Неструктурированные данные, например текстовые документы, изображения и видеоролики, зачастую хранятся вне базы данных, что затрудняет работу с ними.</span><span class="sxs-lookup"><span data-stu-id="464fc-105">Unstructured data, such as text documents, images and video, is often stored outside of the database, making it difficult to manage.</span></span>  
-  
+# <a name="filestream-data"></a><span data-ttu-id="95fd5-102">Данные FILESTREAM</span><span class="sxs-lookup"><span data-stu-id="95fd5-102">FILESTREAM Data</span></span>
+
+<span data-ttu-id="95fd5-103">Для двоичных данных (BLOB), хранящихся в столбце varbinary(max), появился новый атрибут хранилища FILESTREAM.</span><span class="sxs-lookup"><span data-stu-id="95fd5-103">The FILESTREAM storage attribute is for binary (BLOB) data stored in a varbinary(max) column.</span></span> <span data-ttu-id="95fd5-104">До появления FILESTREAM для хранения двоичных данных была необходима специальная обработка.</span><span class="sxs-lookup"><span data-stu-id="95fd5-104">Before FILESTREAM, storing binary data required special handling.</span></span> <span data-ttu-id="95fd5-105">Неструктурированные данные, например текстовые документы, изображения и видеоролики, зачастую хранятся вне базы данных, что затрудняет работу с ними.</span><span class="sxs-lookup"><span data-stu-id="95fd5-105">Unstructured data, such as text documents, images and video, is often stored outside of the database, making it difficult to manage.</span></span>
+
 > [!NOTE]
->  <span data-ttu-id="464fc-106">Для работы с данными FILESTREAM через SqlClient необходимо установить .NET Framework 3.5 с пакетом обновления 1 (SP1) или более поздней версии.</span><span class="sxs-lookup"><span data-stu-id="464fc-106">You must install the .NET Framework 3.5 SP1 (or later) to work with FILESTREAM data using SqlClient.</span></span>  
-  
- <span data-ttu-id="464fc-107">При указании для столбца varbinary(max) атрибута FILESTREAM сервер SQL Server сохраняет данные не в файле базы данных, а в файловой системе NTFS на локальном компьютере.</span><span class="sxs-lookup"><span data-stu-id="464fc-107">Specifying the FILESTREAM attribute on a varbinary(max) column causes SQL Server to store the data on the local NTFS file system instead of in the database file.</span></span> <span data-ttu-id="464fc-108">Хотя эти данные хранятся отдельно, для работы с ними можно использовать те же инструкции [!INCLUDE[tsql](../../../../../includes/tsql-md.md)], что и для данных varbinary(max), хранящихся в базе данных.</span><span class="sxs-lookup"><span data-stu-id="464fc-108">Although it is stored separately, you can use the same [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] statements that are supported for working with varbinary(max) data that is stored in the database.</span></span>  
-  
-## <a name="sqlclient-support-for-filestream"></a><span data-ttu-id="464fc-109">Поддержка атрибута FILESTREAM в SqlClient</span><span class="sxs-lookup"><span data-stu-id="464fc-109">SqlClient Support for FILESTREAM</span></span>  
- <span data-ttu-id="464fc-110">[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] Поставщик данных для SQL Server, <xref:System.Data.SqlClient>, поддерживает чтение и запись данных FILESTREAM с помощью <xref:System.Data.SqlTypes.SqlFileStream> класс, определенный в <xref:System.Data.SqlTypes> пространства имен.</span><span class="sxs-lookup"><span data-stu-id="464fc-110">The [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server, <xref:System.Data.SqlClient>, supports reading and writing to FILESTREAM data using the <xref:System.Data.SqlTypes.SqlFileStream> class defined in the <xref:System.Data.SqlTypes> namespace.</span></span> <span data-ttu-id="464fc-111">Класс `SqlFileStream` является производным от класса <xref:System.IO.Stream>, который содержит методы для чтения и записи потоков данных.</span><span class="sxs-lookup"><span data-stu-id="464fc-111">`SqlFileStream` inherits from the <xref:System.IO.Stream> class, which provides methods for reading and writing to streams of data.</span></span> <span data-ttu-id="464fc-112">При чтении из потока данные передаются в структуру данных, например в массив байтов.</span><span class="sxs-lookup"><span data-stu-id="464fc-112">Reading from a stream transfers data from the stream into a data structure, such as an array of bytes.</span></span> <span data-ttu-id="464fc-113">При записи данные передаются из структуры данных в поток.</span><span class="sxs-lookup"><span data-stu-id="464fc-113">Writing transfers the data from the data structure into a stream.</span></span>  
-  
-### <a name="creating-the-sql-server-table"></a><span data-ttu-id="464fc-114">Создание таблицы SQL Server</span><span class="sxs-lookup"><span data-stu-id="464fc-114">Creating the SQL Server Table</span></span>  
- <span data-ttu-id="464fc-115">Приведенная ниже инструкция [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] создает таблицу employees и вставляет в нее строку данных.</span><span class="sxs-lookup"><span data-stu-id="464fc-115">The following [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] statements creates a table named employees and inserts a row of data.</span></span> <span data-ttu-id="464fc-116">После включения атрибута FILESTREAM эту таблицу можно использовать в приведенных ниже примерах кода.</span><span class="sxs-lookup"><span data-stu-id="464fc-116">Once you have enabled FILESTREAM storage, you can use this table in conjunction with the code examples that follow.</span></span> <span data-ttu-id="464fc-117">Ссылки на ресурсы в электронной документации по SQL Server приведены в конце этого раздела.</span><span class="sxs-lookup"><span data-stu-id="464fc-117">The links to resources in SQL Server Books Online are located at the end of this topic.</span></span>  
-  
-```  
-CREATE TABLE employees  
-(  
-  EmployeeId INT  NOT NULL  PRIMARY KEY,  
-  Photo VARBINARY(MAX) FILESTREAM  NULL,  
-  RowGuid UNIQUEIDENTIFIER  NOT NULL  ROWGUIDCOL  
-  UNIQUE DEFAULT NEWID()  
-)  
-GO  
-Insert into employees  
-Values(1, 0x00, default)  
-GO  
-```  
-  
-### <a name="example-reading-overwriting-and-inserting-filestream-data"></a><span data-ttu-id="464fc-118">Пример Чтение, перезапись и вставка данных FILESTREAM</span><span class="sxs-lookup"><span data-stu-id="464fc-118">Example: Reading, Overwriting, and Inserting FILESTREAM Data</span></span>  
- <span data-ttu-id="464fc-119">В приведенном ниже образце демонстрируется чтение данных из потока FILESTREAM.</span><span class="sxs-lookup"><span data-stu-id="464fc-119">The following sample demonstrates how to read data from a FILESTREAM.</span></span> <span data-ttu-id="464fc-120">В коде определяется логический путь к файлу, свойству `FileAccess` присваивается значение `Read`, а свойству `FileOptions` - значение `SequentialScan`.</span><span class="sxs-lookup"><span data-stu-id="464fc-120">The code gets the logical path to the file, setting the `FileAccess` to `Read` and the `FileOptions` to `SequentialScan`.</span></span> <span data-ttu-id="464fc-121">Затем в коде считываются в буфер байты данных из потока SqlFileStream.</span><span class="sxs-lookup"><span data-stu-id="464fc-121">The code then reads the bytes from the SqlFileStream into the buffer.</span></span> <span data-ttu-id="464fc-122">Эти байты данных затем выводятся в окно консоли.</span><span class="sxs-lookup"><span data-stu-id="464fc-122">The bytes are then written to the console window.</span></span>  
-  
- <span data-ttu-id="464fc-123">В приведенном ниже образце также демонстрируется запись данных в поток FILESTREAM с перезаписью всех существующих данных.</span><span class="sxs-lookup"><span data-stu-id="464fc-123">The sample also demonstrates how to write data to a FILESTREAM in which all existing data is overwritten.</span></span> <span data-ttu-id="464fc-124">В коде определяется логический путь к файлу, создается поток `SqlFileStream`, свойству `FileAccess` присваивается значение `Write`, а свойству `FileOptions` - значение `SequentialScan`.</span><span class="sxs-lookup"><span data-stu-id="464fc-124">The code gets the logical path to the file and creates the `SqlFileStream`, setting the `FileAccess` to `Write` and the `FileOptions` to `SequentialScan`.</span></span> <span data-ttu-id="464fc-125">В поток `SqlFileStream` записывается один байт, заменяющий все данные в файле.</span><span class="sxs-lookup"><span data-stu-id="464fc-125">A single byte is written to the `SqlFileStream`, replacing any data in the file.</span></span>  
-  
- <span data-ttu-id="464fc-126">В этом примере кода также демонстрируется запись данных в поток FILESTREAM с использованием метода Seek для добавления данных в конец файла.</span><span class="sxs-lookup"><span data-stu-id="464fc-126">The sample also demonstrates how to write data to a FILESTREAM by using the Seek method to append data to the end of the file.</span></span> <span data-ttu-id="464fc-127">В коде определяется логический путь к файлу, создается поток `SqlFileStream`, свойству `FileAccess` присваивается значение `ReadWrite`, а свойству `FileOptions` - значение `SequentialScan`.</span><span class="sxs-lookup"><span data-stu-id="464fc-127">The code gets the logical path to the file and creates the `SqlFileStream`, setting the `FileAccess` to `ReadWrite` and the `FileOptions` to `SequentialScan`.</span></span> <span data-ttu-id="464fc-128">Для поиска конца файла в коде используется метод Seek, после чего в конец файла добавляется один байт.</span><span class="sxs-lookup"><span data-stu-id="464fc-128">The code uses the Seek method to seek to the end of the file, appending a single byte to the existing file.</span></span>  
-  
-```csharp  
-using System;  
-using System.Data.SqlClient;  
-using System.Data.SqlTypes;  
-using System.Data;  
-using System.IO;  
-  
-namespace FileStreamTest  
-{  
-    class Program  
-    {  
-        static void Main(string[] args)  
-        {  
-            SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder("server=(local);integrated security=true;database=myDB");  
-            ReadFilestream(builder);  
-            OverwriteFilestream(builder);  
-            InsertFilestream(builder);  
-  
-            Console.WriteLine("Done");  
-        }  
-  
-        private static void ReadFilestream(SqlConnectionStringBuilder connStringBuilder)  
-        {  
-            using (SqlConnection connection = new SqlConnection(connStringBuilder.ToString()))  
-            {  
-                connection.Open();  
-                SqlCommand command = new SqlCommand("SELECT TOP(1) Photo.PathName(), GET_FILESTREAM_TRANSACTION_CONTEXT() FROM employees", connection);  
-  
-                SqlTransaction tran = connection.BeginTransaction(IsolationLevel.ReadCommitted);  
-                command.Transaction = tran;  
-  
-                using (SqlDataReader reader = command.ExecuteReader())  
-                {  
-                    while (reader.Read())  
-                    {  
-                        // Get the pointer for the file  
-                        string path = reader.GetString(0);  
-                        byte[] transactionContext = reader.GetSqlBytes(1).Buffer;  
-  
-                        // Create the SqlFileStream  
-                        using (Stream fileStream = new SqlFileStream(path, transactionContext, FileAccess.Read, FileOptions.SequentialScan, allocationSize: 0))  
-                        {  
-                            // Read the contents as bytes and write them to the console  
-                            for (long index = 0; index < fileStream.Length; index++)  
-                            {  
-                                Console.WriteLine(fileStream.ReadByte());  
-                            }  
-                        }  
-                    }  
-                }  
-                tran.Commit();  
-            }  
-        }  
-  
-        private static void OverwriteFilestream(SqlConnectionStringBuilder connStringBuilder)  
-        {  
-            using (SqlConnection connection = new SqlConnection(connStringBuilder.ToString()))  
-            {  
-                connection.Open();  
-  
-                SqlCommand command = new SqlCommand("SELECT TOP(1) Photo.PathName(), GET_FILESTREAM_TRANSACTION_CONTEXT() FROM employees", connection);  
-  
-                SqlTransaction tran = connection.BeginTransaction(IsolationLevel.ReadCommitted);  
-                command.Transaction = tran;  
-  
-                using (SqlDataReader reader = command.ExecuteReader())  
-                {  
-                    while (reader.Read())  
-                    {  
-                        // Get the pointer for file   
-                        string path = reader.GetString(0);  
-                        byte[] transactionContext = reader.GetSqlBytes(1).Buffer;  
-  
-                        // Create the SqlFileStream  
-                        using (Stream fileStream = new SqlFileStream(path, transactionContext, FileAccess.Write, FileOptions.SequentialScan, allocationSize: 0))  
-                        {  
-                            // Write a single byte to the file. This will  
-                            // replace any data in the file.  
-                            fileStream.WriteByte(0x01);  
-                        }  
-                    }  
-                }  
-                tran.Commit();  
-            }  
-        }  
-  
-        private static void InsertFilestream(SqlConnectionStringBuilder connStringBuilder)  
-        {  
-            using (SqlConnection connection = new SqlConnection(connStringBuilder.ToString()))  
-            {  
-                connection.Open();  
-  
-                SqlCommand command = new SqlCommand("SELECT TOP(1) Photo.PathName(), GET_FILESTREAM_TRANSACTION_CONTEXT() FROM employees", connection);  
-  
-                SqlTransaction tran = connection.BeginTransaction(IsolationLevel.ReadCommitted);  
-                command.Transaction = tran;  
-  
-                using (SqlDataReader reader = command.ExecuteReader())  
-                {  
-                    while (reader.Read())  
-                    {  
-                        // Get the pointer for file  
-                        string path = reader.GetString(0);  
-                        byte[] transactionContext = reader.GetSqlBytes(1).Buffer;  
-  
-                        using (Stream fileStream = new SqlFileStream(path, transactionContext, FileAccess.ReadWrite, FileOptions.SequentialScan, allocationSize: 0))  
-                        {  
-                            // Seek to the end of the file  
-                            fileStream.Seek(0, SeekOrigin.End);  
-  
-                            // Append a single byte   
-                            fileStream.WriteByte(0x01);  
-                        }  
-                    }  
-                }  
-                tran.Commit();  
-            }  
-  
-        }  
-    }  
+> <span data-ttu-id="95fd5-106">Для работы с данными FILESTREAM через SqlClient необходимо установить .NET Framework 3.5 с пакетом обновления 1 (SP1) или более поздней версии.</span><span class="sxs-lookup"><span data-stu-id="95fd5-106">You must install the .NET Framework 3.5 SP1 (or later) to work with FILESTREAM data using SqlClient.</span></span>
+
+<span data-ttu-id="95fd5-107">При указании для столбца varbinary(max) атрибута FILESTREAM сервер SQL Server сохраняет данные не в файле базы данных, а в файловой системе NTFS на локальном компьютере.</span><span class="sxs-lookup"><span data-stu-id="95fd5-107">Specifying the FILESTREAM attribute on a varbinary(max) column causes SQL Server to store the data on the local NTFS file system instead of in the database file.</span></span> <span data-ttu-id="95fd5-108">Хотя эти данные хранятся отдельно, для работы с ними можно использовать те же инструкции [!INCLUDE[tsql](../../../../../includes/tsql-md.md)], что и для данных varbinary(max), хранящихся в базе данных.</span><span class="sxs-lookup"><span data-stu-id="95fd5-108">Although it is stored separately, you can use the same [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] statements that are supported for working with varbinary(max) data that is stored in the database.</span></span>
+
+## <a name="sqlclient-support-for-filestream"></a><span data-ttu-id="95fd5-109">Поддержка атрибута FILESTREAM в SqlClient</span><span class="sxs-lookup"><span data-stu-id="95fd5-109">SqlClient Support for FILESTREAM</span></span>
+
+<span data-ttu-id="95fd5-110">[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] Поставщик данных для SQL Server, <xref:System.Data.SqlClient>, поддерживает чтение и запись данных FILESTREAM с помощью <xref:System.Data.SqlTypes.SqlFileStream> класс, определенный в <xref:System.Data.SqlTypes> пространства имен.</span><span class="sxs-lookup"><span data-stu-id="95fd5-110">The [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server, <xref:System.Data.SqlClient>, supports reading and writing to FILESTREAM data using the <xref:System.Data.SqlTypes.SqlFileStream> class defined in the <xref:System.Data.SqlTypes> namespace.</span></span> <span data-ttu-id="95fd5-111">Класс `SqlFileStream` является производным от класса <xref:System.IO.Stream>, который содержит методы для чтения и записи потоков данных.</span><span class="sxs-lookup"><span data-stu-id="95fd5-111">`SqlFileStream` inherits from the <xref:System.IO.Stream> class, which provides methods for reading and writing to streams of data.</span></span> <span data-ttu-id="95fd5-112">При чтении из потока данные передаются в структуру данных, например в массив байтов.</span><span class="sxs-lookup"><span data-stu-id="95fd5-112">Reading from a stream transfers data from the stream into a data structure, such as an array of bytes.</span></span> <span data-ttu-id="95fd5-113">При записи данные передаются из структуры данных в поток.</span><span class="sxs-lookup"><span data-stu-id="95fd5-113">Writing transfers the data from the data structure into a stream.</span></span>
+
+### <a name="creating-the-sql-server-table"></a><span data-ttu-id="95fd5-114">Создание таблицы SQL Server</span><span class="sxs-lookup"><span data-stu-id="95fd5-114">Creating the SQL Server Table</span></span>
+
+<span data-ttu-id="95fd5-115">Приведенная ниже инструкция [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] создает таблицу employees и вставляет в нее строку данных.</span><span class="sxs-lookup"><span data-stu-id="95fd5-115">The following [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] statements creates a table named employees and inserts a row of data.</span></span> <span data-ttu-id="95fd5-116">После включения атрибута FILESTREAM эту таблицу можно использовать в приведенных ниже примерах кода.</span><span class="sxs-lookup"><span data-stu-id="95fd5-116">Once you have enabled FILESTREAM storage, you can use this table in conjunction with the code examples that follow.</span></span> <span data-ttu-id="95fd5-117">Ссылки на ресурсы в электронной документации по SQL Server приведены в конце этого раздела.</span><span class="sxs-lookup"><span data-stu-id="95fd5-117">The links to resources in SQL Server Books Online are located at the end of this topic.</span></span>
+
+```sql
+CREATE TABLE employees
+(
+  EmployeeId INT  NOT NULL  PRIMARY KEY,
+  Photo VARBINARY(MAX) FILESTREAM  NULL,
+  RowGuid UNIQUEIDENTIFIER  NOT NULL  ROWGUIDCOL
+  UNIQUE DEFAULT NEWID()
+)
+GO
+Insert into employees
+Values(1, 0x00, default)
+GO
+```
+
+### <a name="example-reading-overwriting-and-inserting-filestream-data"></a><span data-ttu-id="95fd5-118">Пример Чтение, перезапись и вставка данных FILESTREAM</span><span class="sxs-lookup"><span data-stu-id="95fd5-118">Example: Reading, Overwriting, and Inserting FILESTREAM Data</span></span>
+
+<span data-ttu-id="95fd5-119">В приведенном ниже образце демонстрируется чтение данных из потока FILESTREAM.</span><span class="sxs-lookup"><span data-stu-id="95fd5-119">The following sample demonstrates how to read data from a FILESTREAM.</span></span> <span data-ttu-id="95fd5-120">В коде определяется логический путь к файлу, свойству `FileAccess` присваивается значение `Read`, а свойству `FileOptions` - значение `SequentialScan`.</span><span class="sxs-lookup"><span data-stu-id="95fd5-120">The code gets the logical path to the file, setting the `FileAccess` to `Read` and the `FileOptions` to `SequentialScan`.</span></span> <span data-ttu-id="95fd5-121">Затем в коде считываются в буфер байты данных из потока SqlFileStream.</span><span class="sxs-lookup"><span data-stu-id="95fd5-121">The code then reads the bytes from the SqlFileStream into the buffer.</span></span> <span data-ttu-id="95fd5-122">Эти байты данных затем выводятся в окно консоли.</span><span class="sxs-lookup"><span data-stu-id="95fd5-122">The bytes are then written to the console window.</span></span>
+
+<span data-ttu-id="95fd5-123">В приведенном ниже образце также демонстрируется запись данных в поток FILESTREAM с перезаписью всех существующих данных.</span><span class="sxs-lookup"><span data-stu-id="95fd5-123">The sample also demonstrates how to write data to a FILESTREAM in which all existing data is overwritten.</span></span> <span data-ttu-id="95fd5-124">В коде определяется логический путь к файлу, создается поток `SqlFileStream`, свойству `FileAccess` присваивается значение `Write`, а свойству `FileOptions` - значение `SequentialScan`.</span><span class="sxs-lookup"><span data-stu-id="95fd5-124">The code gets the logical path to the file and creates the `SqlFileStream`, setting the `FileAccess` to `Write` and the `FileOptions` to `SequentialScan`.</span></span> <span data-ttu-id="95fd5-125">В поток `SqlFileStream` записывается один байт, заменяющий все данные в файле.</span><span class="sxs-lookup"><span data-stu-id="95fd5-125">A single byte is written to the `SqlFileStream`, replacing any data in the file.</span></span>
+
+<span data-ttu-id="95fd5-126">В этом примере кода также демонстрируется запись данных в поток FILESTREAM с использованием метода Seek для добавления данных в конец файла.</span><span class="sxs-lookup"><span data-stu-id="95fd5-126">The sample also demonstrates how to write data to a FILESTREAM by using the Seek method to append data to the end of the file.</span></span> <span data-ttu-id="95fd5-127">В коде определяется логический путь к файлу, создается поток `SqlFileStream`, свойству `FileAccess` присваивается значение `ReadWrite`, а свойству `FileOptions` - значение `SequentialScan`.</span><span class="sxs-lookup"><span data-stu-id="95fd5-127">The code gets the logical path to the file and creates the `SqlFileStream`, setting the `FileAccess` to `ReadWrite` and the `FileOptions` to `SequentialScan`.</span></span> <span data-ttu-id="95fd5-128">Для поиска конца файла в коде используется метод Seek, после чего в конец файла добавляется один байт.</span><span class="sxs-lookup"><span data-stu-id="95fd5-128">The code uses the Seek method to seek to the end of the file, appending a single byte to the existing file.</span></span>
+
+```csharp
+using System;
+using System.Data.SqlClient;
+using System.Data.SqlTypes;
+using System.Data;
+using System.IO;
+
+namespace FileStreamTest
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder("server=(local);integrated security=true;database=myDB");
+            ReadFileStream(builder);
+            OverwriteFileStream(builder);
+            InsertFileStream(builder);
+
+            Console.WriteLine("Done");
+        }
+
+        private static void ReadFileStream(SqlConnectionStringBuilder connStringBuilder)
+        {
+            using (SqlConnection connection = new SqlConnection(connStringBuilder.ToString()))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand("SELECT TOP(1) Photo.PathName(), GET_FILESTREAM_TRANSACTION_CONTEXT() FROM employees", connection);
+
+                SqlTransaction tran = connection.BeginTransaction(IsolationLevel.ReadCommitted);
+                command.Transaction = tran;
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        // Get the pointer for the file
+                        string path = reader.GetString(0);
+                        byte[] transactionContext = reader.GetSqlBytes(1).Buffer;
+
+                        // Create the SqlFileStream
+                        using (Stream fileStream = new SqlFileStream(path, transactionContext, FileAccess.Read, FileOptions.SequentialScan, allocationSize: 0))
+                        {
+                            // Read the contents as bytes and write them to the console
+                            for (long index = 0; index < fileStream.Length; index++)
+                            {
+                                Console.WriteLine(fileStream.ReadByte());
+                            }
+                        }
+                    }
+                }
+                tran.Commit();
+            }
+        }
+
+        private static void OverwriteFileStream(SqlConnectionStringBuilder connStringBuilder)
+        {
+            using (SqlConnection connection = new SqlConnection(connStringBuilder.ToString()))
+            {
+                connection.Open();
+
+                SqlCommand command = new SqlCommand("SELECT TOP(1) Photo.PathName(), GET_FILESTREAM_TRANSACTION_CONTEXT() FROM employees", connection);
+
+                SqlTransaction tran = connection.BeginTransaction(IsolationLevel.ReadCommitted);
+                command.Transaction = tran;
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        // Get the pointer for file
+                        string path = reader.GetString(0);
+                        byte[] transactionContext = reader.GetSqlBytes(1).Buffer;
+
+                        // Create the SqlFileStream
+                        using (Stream fileStream = new SqlFileStream(path, transactionContext, FileAccess.Write, FileOptions.SequentialScan, allocationSize: 0))
+                        {
+                            // Write a single byte to the file. This will
+                            // replace any data in the file.
+                            fileStream.WriteByte(0x01);
+                        }
+                    }
+                }
+                tran.Commit();
+            }
+        }
+
+        private static void InsertFileStream(SqlConnectionStringBuilder connStringBuilder)
+        {
+            using (SqlConnection connection = new SqlConnection(connStringBuilder.ToString()))
+            {
+                connection.Open();
+
+                SqlCommand command = new SqlCommand("SELECT TOP(1) Photo.PathName(), GET_FILESTREAM_TRANSACTION_CONTEXT() FROM employees", connection);
+
+                SqlTransaction tran = connection.BeginTransaction(IsolationLevel.ReadCommitted);
+                command.Transaction = tran;
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        // Get the pointer for file
+                        string path = reader.GetString(0);
+                        byte[] transactionContext = reader.GetSqlBytes(1).Buffer;
+
+                        using (Stream fileStream = new SqlFileStream(path, transactionContext, FileAccess.ReadWrite, FileOptions.SequentialScan, allocationSize: 0))
+                        {
+                            // Seek to the end of the file
+                            fileStream.Seek(0, SeekOrigin.End);
+
+                            // Append a single byte
+                            fileStream.WriteByte(0x01);
+                        }
+                    }
+                }
+                tran.Commit();
+            }
+
+        }
+    }
 }
-```  
-  
- <span data-ttu-id="464fc-129">Другой пример, см. в разделе [способы хранения и получения двоичных данных в столбце файлового потока](https://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str).</span><span class="sxs-lookup"><span data-stu-id="464fc-129">For another sample, see [How to store and fetch binary data into a file stream column](https://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str).</span></span>  
-  
-## <a name="resources-in-sql-server-books-online"></a><span data-ttu-id="464fc-130">Ресурсы электронной документации по SQL Server</span><span class="sxs-lookup"><span data-stu-id="464fc-130">Resources in SQL Server Books Online</span></span>  
- <span data-ttu-id="464fc-131">Полная документация по FILESTREAM содержится в следующих разделах документации по SQL Server.</span><span class="sxs-lookup"><span data-stu-id="464fc-131">The complete documentation for FILESTREAM is located in the following sections in SQL Server Books Online.</span></span>  
-  
-|<span data-ttu-id="464fc-132">Раздел</span><span class="sxs-lookup"><span data-stu-id="464fc-132">Topic</span></span>|<span data-ttu-id="464fc-133">Описание:</span><span class="sxs-lookup"><span data-stu-id="464fc-133">Description</span></span>|  
-|-----------|-----------------|  
-|[<span data-ttu-id="464fc-134">FILESTREAM (SQL Server)</span><span class="sxs-lookup"><span data-stu-id="464fc-134">FILESTREAM (SQL Server)</span></span>](/sql/relational-databases/blob/filestream-sql-server)|<span data-ttu-id="464fc-135">Приводятся сведения о том, когда необходимо использовать хранилище FILESTREAM; также описывается интеграция ядра СУБД SQL Server и файловой системы NTFS.</span><span class="sxs-lookup"><span data-stu-id="464fc-135">Describes when to use FILESTREAM storage and how it integrates the SQL Server Database Engine with an NTFS file system.</span></span>|  
-|[<span data-ttu-id="464fc-136">Создание клиентских приложений для данных FILESTREAM</span><span class="sxs-lookup"><span data-stu-id="464fc-136">Create Client Applications for FILESTREAM Data</span></span>](/sql/relational-databases/blob/create-client-applications-for-filestream-data)|<span data-ttu-id="464fc-137">Описываются функции API-интерфейса Win32, предназначенные для работы с данными FILESTREAM.</span><span class="sxs-lookup"><span data-stu-id="464fc-137">Describes the Win32 API functions for working with FILESTREAM data.</span></span>|  
-|[<span data-ttu-id="464fc-138">FILESTREAM и другими компонентами SQL Server</span><span class="sxs-lookup"><span data-stu-id="464fc-138">FILESTREAM and Other SQL Server Features</span></span>](/sql/relational-databases/blob/filestream-compatibility-with-other-sql-server-features)|<span data-ttu-id="464fc-139">Приводятся общие сведения, рекомендации и ограничения при использовании данных FILESTREAM совместно с другими возможностями SQL Server.</span><span class="sxs-lookup"><span data-stu-id="464fc-139">Provides considerations, guidelines and limitations for using FILESTREAM data with other features of SQL Server.</span></span>|  
-  
-## <a name="see-also"></a><span data-ttu-id="464fc-140">См. также</span><span class="sxs-lookup"><span data-stu-id="464fc-140">See also</span></span>
-- [<span data-ttu-id="464fc-141">Типы данных SQL Server и ADO.NET</span><span class="sxs-lookup"><span data-stu-id="464fc-141">SQL Server Data Types and ADO.NET</span></span>](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
-- [<span data-ttu-id="464fc-142">Извлечение и изменение данных в ADO.NET</span><span class="sxs-lookup"><span data-stu-id="464fc-142">Retrieving and Modifying Data in ADO.NET</span></span>](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [<span data-ttu-id="464fc-143">Управление доступом для кода и ADO.NET</span><span class="sxs-lookup"><span data-stu-id="464fc-143">Code Access Security and ADO.NET</span></span>](../../../../../docs/framework/data/adonet/code-access-security.md)
-- [<span data-ttu-id="464fc-144">Двоичные данные и данные большого объема SQL Server</span><span class="sxs-lookup"><span data-stu-id="464fc-144">SQL Server Binary and Large-Value Data</span></span>](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
-- [<span data-ttu-id="464fc-145">Общие сведения об ADO.NET</span><span class="sxs-lookup"><span data-stu-id="464fc-145">ADO.NET Overview</span></span>](../../../../../docs/framework/data/adonet/ado-net-overview.md)
+```
+
+<span data-ttu-id="95fd5-129">Другой пример, см. в разделе [способы хранения и получения двоичных данных в столбце файлового потока](https://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str).</span><span class="sxs-lookup"><span data-stu-id="95fd5-129">For another sample, see [How to store and fetch binary data into a file stream column](https://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str).</span></span>
+
+## <a name="resources-in-sql-server-books-online"></a><span data-ttu-id="95fd5-130">Ресурсы электронной документации по SQL Server</span><span class="sxs-lookup"><span data-stu-id="95fd5-130">Resources in SQL Server Books Online</span></span>
+
+<span data-ttu-id="95fd5-131">Полная документация по FILESTREAM содержится в следующих разделах документации по SQL Server.</span><span class="sxs-lookup"><span data-stu-id="95fd5-131">The complete documentation for FILESTREAM is located in the following sections in SQL Server Books Online.</span></span>
+
+|<span data-ttu-id="95fd5-132">Раздел</span><span class="sxs-lookup"><span data-stu-id="95fd5-132">Topic</span></span>|<span data-ttu-id="95fd5-133">Описание</span><span class="sxs-lookup"><span data-stu-id="95fd5-133">Description</span></span>|
+|-----------|-----------------|
+|[<span data-ttu-id="95fd5-134">FILESTREAM (SQL Server)</span><span class="sxs-lookup"><span data-stu-id="95fd5-134">FILESTREAM (SQL Server)</span></span>](/sql/relational-databases/blob/filestream-sql-server)|<span data-ttu-id="95fd5-135">Приводятся сведения о том, когда необходимо использовать хранилище FILESTREAM; также описывается интеграция ядра СУБД SQL Server и файловой системы NTFS.</span><span class="sxs-lookup"><span data-stu-id="95fd5-135">Describes when to use FILESTREAM storage and how it integrates the SQL Server Database Engine with an NTFS file system.</span></span>|
+|[<span data-ttu-id="95fd5-136">Создание клиентских приложений для данных FILESTREAM</span><span class="sxs-lookup"><span data-stu-id="95fd5-136">Create Client Applications for FILESTREAM Data</span></span>](/sql/relational-databases/blob/create-client-applications-for-filestream-data)|<span data-ttu-id="95fd5-137">Описываются функции API-интерфейса Win32, предназначенные для работы с данными FILESTREAM.</span><span class="sxs-lookup"><span data-stu-id="95fd5-137">Describes the Win32 API functions for working with FILESTREAM data.</span></span>|
+|[<span data-ttu-id="95fd5-138">FILESTREAM и другими компонентами SQL Server</span><span class="sxs-lookup"><span data-stu-id="95fd5-138">FILESTREAM and Other SQL Server Features</span></span>](/sql/relational-databases/blob/filestream-compatibility-with-other-sql-server-features)|<span data-ttu-id="95fd5-139">Приводятся общие сведения, рекомендации и ограничения при использовании данных FILESTREAM совместно с другими возможностями SQL Server.</span><span class="sxs-lookup"><span data-stu-id="95fd5-139">Provides considerations, guidelines and limitations for using FILESTREAM data with other features of SQL Server.</span></span>|
+
+## <a name="see-also"></a><span data-ttu-id="95fd5-140">См. также</span><span class="sxs-lookup"><span data-stu-id="95fd5-140">See also</span></span>
+
+- [<span data-ttu-id="95fd5-141">Типы данных SQL Server и ADO.NET</span><span class="sxs-lookup"><span data-stu-id="95fd5-141">SQL Server Data Types and ADO.NET</span></span>](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
+- [<span data-ttu-id="95fd5-142">Извлечение и изменение данных в ADO.NET</span><span class="sxs-lookup"><span data-stu-id="95fd5-142">Retrieving and Modifying Data in ADO.NET</span></span>](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [<span data-ttu-id="95fd5-143">Управление доступом для кода и ADO.NET</span><span class="sxs-lookup"><span data-stu-id="95fd5-143">Code Access Security and ADO.NET</span></span>](../../../../../docs/framework/data/adonet/code-access-security.md)
+- [<span data-ttu-id="95fd5-144">Двоичные данные и данные большого объема SQL Server</span><span class="sxs-lookup"><span data-stu-id="95fd5-144">SQL Server Binary and Large-Value Data</span></span>](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
+- [<span data-ttu-id="95fd5-145">Общие сведения об ADO.NET</span><span class="sxs-lookup"><span data-stu-id="95fd5-145">ADO.NET Overview</span></span>](../../../../../docs/framework/data/adonet/ado-net-overview.md)

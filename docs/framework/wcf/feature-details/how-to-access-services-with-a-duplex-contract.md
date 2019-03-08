@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Службы доступа с дуплексным контрактом
+title: Практическое руководство. Службы доступа с дуплексным контрактом
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,30 +7,30 @@ dev_langs:
 helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 746a9d64-f21c-426c-b85d-972e916ec6c5
-ms.openlocfilehash: 2f83b8ac71bfc53791f7de42d127badbda0d3881
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 366fd9d6aa220bcbec1ee8fb2a04d1b84755800a
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610319"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678687"
 ---
-# <a name="how-to-access-services-with-a-duplex-contract"></a><span data-ttu-id="21604-102">Как выполнить Службы доступа с дуплексным контрактом</span><span class="sxs-lookup"><span data-stu-id="21604-102">How to: Access services with a duplex contract</span></span>
+# <a name="how-to-access-services-with-a-duplex-contract"></a><span data-ttu-id="d6d6b-102">Практическое руководство. Службы доступа с дуплексным контрактом</span><span class="sxs-lookup"><span data-stu-id="d6d6b-102">How to: Access services with a duplex contract</span></span>
 
-<span data-ttu-id="21604-103">Одной из функций Windows Communication Foundation (WCF) предоставляет возможность создать службу, использующую дуплексный шаблон обмена сообщениями.</span><span class="sxs-lookup"><span data-stu-id="21604-103">One feature of Windows Communication Foundation (WCF) is the ability to create a service that uses a duplex messaging pattern.</span></span> <span data-ttu-id="21604-104">Такой шаблон позволяет службе взаимодействовать с клиентом с помощью обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="21604-104">This pattern allows a service to communicate with the client through a callback.</span></span> <span data-ttu-id="21604-105">В этом разделе показаны шаги для создания клиентского класса, реализующего интерфейс обратного вызова клиента WCF.</span><span class="sxs-lookup"><span data-stu-id="21604-105">This topic shows the steps to create a WCF client in a client class that implements the callback interface.</span></span>
+<span data-ttu-id="d6d6b-103">Одной из функций Windows Communication Foundation (WCF) предоставляет возможность создать службу, использующую дуплексный шаблон обмена сообщениями.</span><span class="sxs-lookup"><span data-stu-id="d6d6b-103">One feature of Windows Communication Foundation (WCF) is the ability to create a service that uses a duplex messaging pattern.</span></span> <span data-ttu-id="d6d6b-104">Такой шаблон позволяет службе взаимодействовать с клиентом с помощью обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="d6d6b-104">This pattern allows a service to communicate with the client through a callback.</span></span> <span data-ttu-id="d6d6b-105">В этом разделе показаны шаги для создания клиентского класса, реализующего интерфейс обратного вызова клиента WCF.</span><span class="sxs-lookup"><span data-stu-id="d6d6b-105">This topic shows the steps to create a WCF client in a client class that implements the callback interface.</span></span>
 
-<span data-ttu-id="21604-106">Двойная привязка предоставляет службе IP-адрес клиента.</span><span class="sxs-lookup"><span data-stu-id="21604-106">A dual binding exposes the IP address of the client to the service.</span></span> <span data-ttu-id="21604-107">Клиент должен использовать механизм безопасности, чтобы обеспечить подключение только к доверенным службам.</span><span class="sxs-lookup"><span data-stu-id="21604-107">The client should use security to ensure that it connects only to services it trusts.</span></span>
+<span data-ttu-id="d6d6b-106">Двойная привязка предоставляет службе IP-адрес клиента.</span><span class="sxs-lookup"><span data-stu-id="d6d6b-106">A dual binding exposes the IP address of the client to the service.</span></span> <span data-ttu-id="d6d6b-107">Клиент должен использовать механизм безопасности, чтобы обеспечить подключение только к доверенным службам.</span><span class="sxs-lookup"><span data-stu-id="d6d6b-107">The client should use security to ensure that it connects only to services it trusts.</span></span>
 
-<span data-ttu-id="21604-108">Инструкции по созданию базовой службы WCF и клиента, см. в разделе [Приступая к работе](../../../../docs/framework/wcf/getting-started-tutorial.md).</span><span class="sxs-lookup"><span data-stu-id="21604-108">For a tutorial on creating a basic WCF service and client, see [Getting Started Tutorial](../../../../docs/framework/wcf/getting-started-tutorial.md).</span></span>
+<span data-ttu-id="d6d6b-108">Инструкции по созданию базовой службы WCF и клиента, см. в разделе [Приступая к работе](../../../../docs/framework/wcf/getting-started-tutorial.md).</span><span class="sxs-lookup"><span data-stu-id="d6d6b-108">For a tutorial on creating a basic WCF service and client, see [Getting Started Tutorial](../../../../docs/framework/wcf/getting-started-tutorial.md).</span></span>
 
-## <a name="to-access-a-duplex-service"></a><span data-ttu-id="21604-109">Доступ к дуплексной службе</span><span class="sxs-lookup"><span data-stu-id="21604-109">To access a duplex service</span></span>
+## <a name="to-access-a-duplex-service"></a><span data-ttu-id="d6d6b-109">Доступ к дуплексной службе</span><span class="sxs-lookup"><span data-stu-id="d6d6b-109">To access a duplex service</span></span>
 
-1. <span data-ttu-id="21604-110">Создайте службу, содержащую два интерфейса.</span><span class="sxs-lookup"><span data-stu-id="21604-110">Create a service that contains two interfaces.</span></span> <span data-ttu-id="21604-111">Первый интерфейс предназначен для службы, второй - для обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="21604-111">The first interface is for the service, the second is for the callback.</span></span> <span data-ttu-id="21604-112">Дополнительные сведения о создании дуплексной службы см. в разделе [как: Создание дуплексного контракта](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).</span><span class="sxs-lookup"><span data-stu-id="21604-112">For more information about creating a duplex service, see [How to: Create a Duplex Contract](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).</span></span>
+1. <span data-ttu-id="d6d6b-110">Создайте службу, содержащую два интерфейса.</span><span class="sxs-lookup"><span data-stu-id="d6d6b-110">Create a service that contains two interfaces.</span></span> <span data-ttu-id="d6d6b-111">Первый интерфейс предназначен для службы, второй - для обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="d6d6b-111">The first interface is for the service, the second is for the callback.</span></span> <span data-ttu-id="d6d6b-112">Дополнительные сведения о создании дуплексной службы см. в разделе [как: Создание дуплексного контракта](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).</span><span class="sxs-lookup"><span data-stu-id="d6d6b-112">For more information about creating a duplex service, see [How to: Create a Duplex Contract](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).</span></span>
 
-2. <span data-ttu-id="21604-113">Запустите службу.</span><span class="sxs-lookup"><span data-stu-id="21604-113">Run the service.</span></span>
+2. <span data-ttu-id="d6d6b-113">Запустите службу.</span><span class="sxs-lookup"><span data-stu-id="d6d6b-113">Run the service.</span></span>
 
-3. <span data-ttu-id="21604-114">Используйте [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для создания контрактов (интерфейсы) для клиента.</span><span class="sxs-lookup"><span data-stu-id="21604-114">Use the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) to generate contracts (interfaces) for the client.</span></span> <span data-ttu-id="21604-115">Сведения о том, как это сделать, см. в разделе [как: Создание клиента](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).</span><span class="sxs-lookup"><span data-stu-id="21604-115">For information about how to do this, see  [How to: Create a Client](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).</span></span>
+3. <span data-ttu-id="d6d6b-114">Используйте [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для создания контрактов (интерфейсы) для клиента.</span><span class="sxs-lookup"><span data-stu-id="d6d6b-114">Use the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) to generate contracts (interfaces) for the client.</span></span> <span data-ttu-id="d6d6b-115">Сведения о том, как это сделать, см. в разделе [как: Создание клиента](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).</span><span class="sxs-lookup"><span data-stu-id="d6d6b-115">For information about how to do this, see  [How to: Create a Client](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).</span></span>
 
-4. <span data-ttu-id="21604-116">Реализуйте в классе клиента интерфейс обратного вызова, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="21604-116">Implement the callback interface in the client class, as shown in the following example.</span></span>
+4. <span data-ttu-id="d6d6b-116">Реализуйте в классе клиента интерфейс обратного вызова, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="d6d6b-116">Implement the callback interface in the client class, as shown in the following example.</span></span>
 
     ```csharp
     public class CallbackHandler : ICalculatorDuplexCallback
@@ -53,12 +53,12 @@ ms.locfileid: "54610319"
           Console.WriteLine("Result ({0})", result)
        End Sub
         Public Sub Equation(ByVal equation As String)
-            Console.Writeline("Equation({0})", equation)
+            Console.WriteLine("Equation({0})", equation)
         End Sub
     End Class
     ```
 
-5. <span data-ttu-id="21604-117">Создайте экземпляр класса <xref:System.ServiceModel.InstanceContext>.</span><span class="sxs-lookup"><span data-stu-id="21604-117">Create an instance of the <xref:System.ServiceModel.InstanceContext> class.</span></span> <span data-ttu-id="21604-118">Конструктору требуется экземпляр класса клиента.</span><span class="sxs-lookup"><span data-stu-id="21604-118">The constructor requires an instance of the client class.</span></span>
+5. <span data-ttu-id="d6d6b-117">Создайте экземпляр класса <xref:System.ServiceModel.InstanceContext>.</span><span class="sxs-lookup"><span data-stu-id="d6d6b-117">Create an instance of the <xref:System.ServiceModel.InstanceContext> class.</span></span> <span data-ttu-id="d6d6b-118">Конструктору требуется экземпляр класса клиента.</span><span class="sxs-lookup"><span data-stu-id="d6d6b-118">The constructor requires an instance of the client class.</span></span>
 
     ```csharp
     InstanceContext site = new InstanceContext(new CallbackHandler());
@@ -68,7 +68,7 @@ ms.locfileid: "54610319"
     Dim site As InstanceContext = New InstanceContext(new CallbackHandler())
     ```
 
-6. <span data-ttu-id="21604-119">Создайте экземпляр клиента WCF с помощью конструктора, который требует <xref:System.ServiceModel.InstanceContext> объекта.</span><span class="sxs-lookup"><span data-stu-id="21604-119">Create an instance of the WCF client using the constructor that requires an <xref:System.ServiceModel.InstanceContext> object.</span></span> <span data-ttu-id="21604-120">Вторым параметром конструктора является имя конечной точки, определенное в файле конфигурации.</span><span class="sxs-lookup"><span data-stu-id="21604-120">The second parameter of the constructor is the name of an endpoint found in the configuration file.</span></span>
+6. <span data-ttu-id="d6d6b-119">Создайте экземпляр клиента WCF с помощью конструктора, который требует <xref:System.ServiceModel.InstanceContext> объекта.</span><span class="sxs-lookup"><span data-stu-id="d6d6b-119">Create an instance of the WCF client using the constructor that requires an <xref:System.ServiceModel.InstanceContext> object.</span></span> <span data-ttu-id="d6d6b-120">Вторым параметром конструктора является имя конечной точки, определенное в файле конфигурации.</span><span class="sxs-lookup"><span data-stu-id="d6d6b-120">The second parameter of the constructor is the name of an endpoint found in the configuration file.</span></span>
 
     ```csharp
     CalculatorDuplexClient wcfClient = new CalculatorDuplexClient(site, "default");
@@ -78,19 +78,19 @@ ms.locfileid: "54610319"
     Dim wcfClient As New CalculatorDuplexClient(site, "default")
     ```
 
-7. <span data-ttu-id="21604-121">Вызовите методы класса клиента WCF, при необходимости.</span><span class="sxs-lookup"><span data-stu-id="21604-121">Call the methods of the WCF client as required.</span></span>
+7. <span data-ttu-id="d6d6b-121">Вызовите методы класса клиента WCF, при необходимости.</span><span class="sxs-lookup"><span data-stu-id="d6d6b-121">Call the methods of the WCF client as required.</span></span>
 
-## <a name="example"></a><span data-ttu-id="21604-122">Пример</span><span class="sxs-lookup"><span data-stu-id="21604-122">Example</span></span>
+## <a name="example"></a><span data-ttu-id="d6d6b-122">Пример</span><span class="sxs-lookup"><span data-stu-id="d6d6b-122">Example</span></span>
 
-<span data-ttu-id="21604-123">В следующем примере кода показано, как создать класс клиента, обращающийся к дуплексному контракту.</span><span class="sxs-lookup"><span data-stu-id="21604-123">The following code example demonstrates how to create a client class that accesses a duplex contract.</span></span>
+<span data-ttu-id="d6d6b-123">В следующем примере кода показано, как создать класс клиента, обращающийся к дуплексному контракту.</span><span class="sxs-lookup"><span data-stu-id="d6d6b-123">The following code example demonstrates how to create a client class that accesses a duplex contract.</span></span>
 
 [!code-csharp[S_DuplexClients#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_duplexclients/cs/client.cs#1)]
 [!code-vb[S_DuplexClients#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_duplexclients/vb/client.vb#1)]
 
-## <a name="see-also"></a><span data-ttu-id="21604-124">См. также</span><span class="sxs-lookup"><span data-stu-id="21604-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d6d6b-124">См. также</span><span class="sxs-lookup"><span data-stu-id="d6d6b-124">See also</span></span>
 
-- [<span data-ttu-id="21604-125">Руководство по началу работы</span><span class="sxs-lookup"><span data-stu-id="21604-125">Getting Started Tutorial</span></span>](../../../../docs/framework/wcf/getting-started-tutorial.md)
-- [<span data-ttu-id="21604-126">Практическое руководство. Создание дуплексного контракта</span><span class="sxs-lookup"><span data-stu-id="21604-126">How to: Create a Duplex Contract</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
-- [<span data-ttu-id="21604-127">Служебная программа для метаданных ServiceModel (Svcutil.exe)</span><span class="sxs-lookup"><span data-stu-id="21604-127">ServiceModel Metadata Utility Tool (Svcutil.exe)</span></span>](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [<span data-ttu-id="21604-128">Практическое руководство. Создание клиента</span><span class="sxs-lookup"><span data-stu-id="21604-128">How to: Create a Client</span></span>](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
-- [<span data-ttu-id="21604-129">Практическое руководство. Использование ChannelFactory</span><span class="sxs-lookup"><span data-stu-id="21604-129">How to: Use the ChannelFactory</span></span>](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+- [<span data-ttu-id="d6d6b-125">Руководство по началу работы</span><span class="sxs-lookup"><span data-stu-id="d6d6b-125">Getting Started Tutorial</span></span>](../../../../docs/framework/wcf/getting-started-tutorial.md)
+- [<span data-ttu-id="d6d6b-126">Практическое руководство. Создание дуплексного контракта</span><span class="sxs-lookup"><span data-stu-id="d6d6b-126">How to: Create a Duplex Contract</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+- [<span data-ttu-id="d6d6b-127">Служебная программа для метаданных ServiceModel (Svcutil.exe)</span><span class="sxs-lookup"><span data-stu-id="d6d6b-127">ServiceModel Metadata Utility Tool (Svcutil.exe)</span></span>](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [<span data-ttu-id="d6d6b-128">Практическое руководство. Создание клиента</span><span class="sxs-lookup"><span data-stu-id="d6d6b-128">How to: Create a Client</span></span>](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+- [<span data-ttu-id="d6d6b-129">Практическое руководство. Использование ChannelFactory</span><span class="sxs-lookup"><span data-stu-id="d6d6b-129">How to: Use the ChannelFactory</span></span>](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
