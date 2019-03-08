@@ -6,14 +6,12 @@ helpviewer_keywords:
 - control types, Scroll Bar
 - Scroll Bar control type
 ms.assetid: 329891d7-b609-49e6-920a-09ea8a627d07
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 2fe8071ac1b0d1c0917f5522a895a71d277f869f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 554d3dd2efbd0e7b1e1cf32c8f4dd8d8f41ffd33
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526552"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678271"
 ---
 # <a name="ui-automation-support-for-the-scrollbar-control-type"></a>Поддержка автоматизации пользовательского интерфейса для типа элемента управления ScrollBar
 > [!NOTE]
@@ -52,8 +50,8 @@ ms.locfileid: "54526552"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|ScrollBar|Это значение одинаково для всех инфраструктур. Полосы прокрутки, функционирующие как ползунки, должны использовать тип элемента управления Slider.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"полоса прокрутки"|Локализованная строка, соответствующая типу элемента управления Button.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|False|Элемент управления "Полоса прокрутки" никогда не является элементом содержимого. Если полоса прокрутки является автономным элементом управления, то она должна воплощать тип элемента управления Slider и возвращать `ControlType.Slider` для свойства `ControlType` .|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|Да|Полоса прокрутки всегда должна быть элементом управления.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.OrientationProperty>|Да|Элемент управления "Полоса прокрутки" всегда должен представлять горизонтальную или вертикальную ориентацию.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|Полоса прокрутки всегда должна быть элементом управления.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.OrientationProperty>|True|Элемент управления "Полоса прокрутки" всегда должен представлять горизонтальную или вертикальную ориентацию.|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>   
 ## <a name="required-ui-automation-control-patterns"></a>Необходимые шаблоны элементов управления модели автоматизации пользовательского интерфейса  

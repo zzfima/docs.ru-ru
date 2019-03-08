@@ -1,24 +1,24 @@
 ---
-title: Как выполнить  Включить мозаичное представление в элементе управления ListView формы Windows с помощью конструктора
+title: Практическое руководство. Включить мозаичное представление в элементе управления ListView формы Windows с помощью конструктора
 ms.date: 03/30/2017
 helpviewer_keywords:
 - tile view feature
 - ListView control [Windows Forms], tile view
 - tiling [Windows Forms], Windows Forms, controls
 ms.assetid: 12f0816a-52b8-41ee-a6d9-ded3a8a5817a
-ms.openlocfilehash: 0acd235fe015b3f93364482b83008b388c1b86d9
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: b365ada2d38f8fca97b66bb3d46b2c8e93d7cb1d
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56303976"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676243"
 ---
-# <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control-using-the-designer"></a>Как выполнить  Включить мозаичное представление в элементе управления ListView формы Windows с помощью конструктора
+# <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control-using-the-designer"></a>Практическое руководство. Включить мозаичное представление в элементе управления ListView формы Windows с помощью конструктора
 Функция мозаичного представления элемента <xref:System.Windows.Forms.ListView> элемент управления позволяет обеспечивает визуальный баланс между графическими и текстовыми представлениями информации. Текстовые данные, отображаемые для мозаичного представления элемента совпадают с данными о столбцах, определенных для подробного представления. Вид мозаики, работает в сочетании с группирования или вставки метки возможностях <xref:System.Windows.Forms.ListView> элемента управления.  
   
  Мозаичное представление использует значок в виде 32 x 32 и несколько строк текста, как показано на следующем рисунке.  
   
- ![Мозаичное представление в элементе управления ListView](../../../../docs/framework/winforms/controls/media/listviewtile.gif "ListViewTile")  
+ ![Мозаичное представление в элементе управления ListView](./media/enable-tile-view-in-a-wf-listview-control-using-the-designer/tile-view-in-listview-control.gif "плитки, значки и текст")  
   
  Мозаичное представление, свойства и методы позволяют указать, какие поля столбца для отображения для каждого элемента и управлять размером и внешним видом всех элементов в окно представления плитки. Для ясности первая часть текста заголовка всегда является имя элемента; его нельзя изменить.  
   

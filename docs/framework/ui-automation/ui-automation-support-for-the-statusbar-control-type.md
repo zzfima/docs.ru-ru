@@ -6,14 +6,12 @@ helpviewer_keywords:
 - UI Automation, Status Bar control type
 - control types, Status Bar
 ms.assetid: 48dee94a-5119-4939-a4c7-ffeaf794c732
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 1e67499bb33d68375522d9e6e51a69049fcbbf2f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8628b81ba3a3cb6ff623ee899c7f244d6913e7b7
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54647755"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674930"
 ---
 # <a name="ui-automation-support-for-the-statusbar-control-type"></a>Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления StatusBar
 > [!NOTE]
@@ -47,8 +45,8 @@ ms.locfileid: "54647755"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`|Элемент управления "Строка состояния" обычно не имеет метки.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|StatusBar|Это значение является одинаковым для всех инфраструктур пользовательского интерфейса.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"строка состояния"|Локализованная строка, соответствующая типу элемента управления StatusBar.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|Да|Элемент управления "Строка состояния" всегда имеет содержимое.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|Да|Элемент управления "Строка состояния" всегда является элементом управления.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|Элемент управления "Строка состояния" всегда имеет содержимое.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|Элемент управления "Строка состояния" всегда является элементом управления.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>|Зависит от обстоятельств|Элемент управления "Строка состояния" возвратит значение True для этого свойства, если в текущий момент он не отображается на экране.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.OrientationProperty>|Зависит от обстоятельств|Значение ориентации элемента управления: горизонтальная или вертикальная.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|False|Неприменимо|  

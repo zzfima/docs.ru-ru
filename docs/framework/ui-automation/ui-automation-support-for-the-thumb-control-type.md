@@ -6,14 +6,12 @@ helpviewer_keywords:
 - UI Automation, Thumb control type
 - Thumb control type
 ms.assetid: 13636338-e320-4355-b071-ede20a3fb1de
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: d0d123371c298fd02bf1a0a7e4152822cb16116d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1e40cfd36f8dcbe75ab8b443f956b96db18be2ed
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556604"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675892"
 ---
 # <a name="ui-automation-support-for-the-thumb-control-type"></a>Поддержка автоматизации пользовательского интерфейса для элемента управления типа Thumb
 > [!NOTE]
@@ -50,7 +48,7 @@ ms.locfileid: "54556604"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Бегунок|Это значение является одинаковым для всех инфраструктур пользовательского интерфейса.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"бегунок"|Локализованная строка, соответствующая типу элемента управления Thumb.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|False|Бегунок никогда не является содержимым.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|Да|Бегунок всегда должен быть элементом управления.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|Бегунок всегда должен быть элементом управления.|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>   
 ## <a name="required-ui-automation-control-patterns"></a>Необходимые шаблоны элементов управления модели автоматизации пользовательского интерфейса  

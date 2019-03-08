@@ -6,14 +6,12 @@ helpviewer_keywords:
 - List Item control type
 - UI Automation, List Item control type
 ms.assetid: 34f533bf-fc14-4e78-8fee-fb7107345fab
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: c256e0adf42099271d5e754a84f48c0d5268aae6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cca5bd90798c8879c25b22746c2aac1b3f0b27d3
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594009"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675853"
 ---
 # <a name="ui-automation-support-for-the-listitem-control-type"></a>Поддержка автоматизированного пользовательского интерфейса для типа элемента управления ListItem
 > [!NOTE]
@@ -48,9 +46,9 @@ ms.locfileid: "54594009"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|См. примечания.|Если имеется статическая текстовая метка, то данное свойство должно предоставлять ссылку на этот элемент управления.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|ListItem|Это значение является одинаковым для всех инфраструктур пользовательского интерфейса.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"элемент списка"|Локализованная строка, соответствующая типу элемента управления ListItem.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|Да|Элемент управления "Список" всегда включается в представление содержимого дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|Да|Элемент управления "Список" всегда включается в представление элемента управления дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|Да|Если контейнер может принимать ввод с клавиатуры, это свойство должно иметь значение true.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|Элемент управления "Список" всегда включается в представление содержимого дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|Элемент управления "Список" всегда включается в представление элемента управления дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|True|Если контейнер может принимать ввод с клавиатуры, это свойство должно иметь значение true.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>|""|Текст справки для элементов управления "Список" должен объяснять, почему пользователю предлагается сделать выбор из списка вариантов; обычно в этой справке содержатся сведения того же типа, что и в подсказке. Например, "Выберите элемент, чтобы установить разрешение экрана монитора".|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ItemTypeProperty>|Зависит от обстоятельств|Это свойство должно предоставляться для элементов управления "Список", которые представляют базовый объект. Такие элементы управления "Список" обычно имеют значок, связанный с элементом управления, который пользователи связывают с базовым объектом.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>|Зависит от обстоятельств|Это свойство должно возвращать значение, указывающее, прокручивается ли в данный момент элемент списка в представление в родительском контейнере, реализующем шаблон элемента управления Scroll.|  

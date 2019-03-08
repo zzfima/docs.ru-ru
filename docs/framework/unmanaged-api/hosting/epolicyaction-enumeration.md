@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 80a0e8d37e834ea0a7623517e2e1228a79d9ea10
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aa8589b3f27ba97d32e77dbfecb190edc69dbc18
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655716"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677335"
 ---
 # <a name="epolicyaction-enumeration"></a>Перечисление EPolicyAction
 Описывает действия политики, основное приложение может задать для операций, описанных [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) и сбоев, описанных [EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md).  
@@ -50,7 +50,7 @@ typedef enum {
 |`eAbortThread`|Указывает, что среда CLR (CLR) следует прервать поток корректно. Корректное прерывание включает пытается запустить все `finally` блокирует любой `catch` , связанных с прерывания потоков и методы завершения.|  
 |`eDisableRuntime`|Указывает, что среда CLR следует перейти в отключенное состояние. Дальнейшая управляемый код может выполняться в соответствующий процесс, а потоки блокируются из входа в среду CLR.|  
 |`eExitProcess`|Указывает, что среда CLR следует выполнять надлежащего выхода из процесса, включая выполнение методов завершения и очистки и операции ведения журнала.|  
-|`eFastExitProcess`|Указывает, что среда CLR следует выйти из процесса немедленно, без выполнения методов завершения или очистки и операции ведения журнала. При этом отладчику отправляется уведомление отладчика.|  
+|`eFastExitProcess`|Указывает, что среда CLR следует выйти из процесса немедленно, без выполнения методов завершения или очистки и операции ведения журнала. Тем не менее отладчик отправляется уведомление.|  
 |`eNoAction`|Указывает, что следует принимать никаких действий.|  
 |`eRudeAbortThread`|Указывает, что среда CLR выполнение грубое прерывание потока. Только те `catch` и `finally` блоки, отмеченные <xref:System.EnterpriseServices.MustRunInClientContextAttribute> выполняются.|  
 |`eRudeExitProcess`|Указывает, что среда CLR следует выйти из процесса без выполнения методов завершения или ведение журнала операций.|  

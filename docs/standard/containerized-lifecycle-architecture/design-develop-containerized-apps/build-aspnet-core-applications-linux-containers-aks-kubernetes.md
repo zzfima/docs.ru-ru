@@ -4,12 +4,12 @@ description: Жизненный цикл контейнерного прилож
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/25/2019
-ms.openlocfilehash: cb84f4ebb0681792a820f8ed7bc32c5d1d8c08b5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c6d778d345466b1b852d06bc01ce40ccfdebf964
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967169"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676659"
 ---
 # <a name="build-aspnet-core-21-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Создавать приложения ASP.NET Core 2.1, разворачиваются как контейнеры Linux в оркестраторе AKS и Kubernetes
 
@@ -27,7 +27,7 @@ ms.locfileid: "56967169"
 
 ## <a name="creating-the-aspnet-core-21-project-using-visual-studio-2017"></a>Создание ASP.NET Core 2.1 проекта с помощью Visual Studio 2017
 
-ASP.NET Core — это платформа разработки общего назначения, поддерживается корпорацией Майкрософт и сообществом .NET на GitHub. Она является кроссплатформенной, поддерживает Windows, Mac OS и Linux и может использоваться на устройствах, в облаке, во внедренных системах и в сценариях Интернета вещей.
+ASP.NET Core — это платформа разработки общего назначения, поддерживается корпорацией Майкрософт и сообществом .NET на GitHub. Он работает на разных платформах, которые поддерживают Windows, macOS и Linux и может использоваться в устройство, облака и сценариях внедрения и Интернета вещей.
 
 В этом примере используется простой проект на основе шаблона Visual Studio веб-API, поэтому вам не нужны дополнительные сведения для создания образца. Необходимо создать проект, используя стандартный шаблон, который включает в себя все элементы для запуска небольшого проекта с помощью REST API, с использованием технологии ASP.NET Core 2.1.
 

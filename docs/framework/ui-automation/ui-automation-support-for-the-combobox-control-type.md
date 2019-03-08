@@ -6,14 +6,12 @@ helpviewer_keywords:
 - UI Automation, Combo Box control type
 - ComboBox controls
 ms.assetid: bb321126-4770-41da-983a-67b7b89d45dd
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: f83651af78efc66f2add235a250fc938d2a54268
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ebd298d11ef74034c69c0926032ebca3d2c1fe4f
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54739262"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673552"
 ---
 # <a name="ui-automation-support-for-the-combobox-control-type"></a>Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления ComboBox
 > [!NOTE]
@@ -46,9 +44,9 @@ ms.locfileid: "54739262"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|См. примечания.|Поддерживается при наличии ограничивающего прямоугольника. Если не все точки внутри ограничивающего прямоугольника являются интерактивными и выполняется специализированная проверка на наличие данных, выполните переопределение и предоставьте интерактивную точку.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|ComboBox|Это значение является одинаковым для всех инфраструктур [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] .|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>|См. примечания.|Текст справки для элементов управления "Поле со списком" должен объяснять, почему пользователю предлагается выбрать вариант из поля со списком. Этот текст совпадает со сведениями, которые предоставляются в подсказке. Например, "Выберите элемент, чтобы установить разрешение экрана монитора".|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|Да|Элементы управления "Поле со списком" всегда включаются в представление содержимого дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|Да|Элементы управления "Поле со списком" всегда включаются в представление элемента управления дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|Да|Элементы управления "Поле со списком" предоставляют набор элементов из контейнера выбора. Элемент управления "Поле со списком" может получать фокус клавиатуры, хотя когда клиент автоматизации пользовательского интерфейса устанавливает фокус в поле со списком, любой элемент в поддереве этого поля со списком может получить фокус.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|Элементы управления "Поле со списком" всегда включаются в представление содержимого дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|Элементы управления "Поле со списком" всегда включаются в представление элемента управления дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|True|Элементы управления "Поле со списком" предоставляют набор элементов из контейнера выбора. Элемент управления "Поле со списком" может получать фокус клавиатуры, хотя когда клиент автоматизации пользовательского интерфейса устанавливает фокус в поле со списком, любой элемент в поддереве этого поля со списком может получить фокус.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|См. примечания.|Элементы управления "Поле со списком" обычно имеют метку со статическим текстом, на который ссылается это свойство.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"поле со списком"|Локализованная строка, соответствующая типу элемента управления ComboBox.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|См. примечания.|Элемент управления "Поле со списком" обычно получает свое имя из элемента управления "Статический текст".|  

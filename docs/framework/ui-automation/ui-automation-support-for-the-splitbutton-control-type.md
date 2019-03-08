@@ -6,14 +6,12 @@ helpviewer_keywords:
 - control types, Split Button
 - UI Automation, Split Button control type
 ms.assetid: 14b05ccf-bcd8-4045-9bae-f7679cd98711
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: fa9ae1bf544a879c9152db05a16765e6a4bec244
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 41c4d087b81b56bb4c3c19aa718fedac32701419
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547083"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679013"
 ---
 # <a name="ui-automation-support-for-the-splitbutton-control-type"></a>Поддержка автоматизации пользовательского интерфейса для типа элемента управления SplitButton
 > [!NOTE]
@@ -48,8 +46,8 @@ ms.locfileid: "54547083"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|SplitButton|Это значение является одинаковым для всех инфраструктур пользовательского интерфейса.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"разворачивающаяся кнопка"|Локализованная строка, соответствующая типу элемента управления SplitButton.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>|См. примечания.|Текст справки может указывать результат активации разворачивающейся кнопки и обычно предоставляет тот же тип сведений, что и подсказка.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|Да|Элемент управления "Разворачивающаяся кнопка" содержит сведения для конечного пользователя.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|Да|Элемент управления "Разворачивающаяся кнопка" является видимым для конечного пользователя.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|Элемент управления "Разворачивающаяся кнопка" содержит сведения для конечного пользователя.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|Элемент управления "Разворачивающаяся кнопка" является видимым для конечного пользователя.|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>   
 ## <a name="required-ui-automation-control-patterns"></a>Необходимые шаблоны элементов управления модели автоматизации пользовательского интерфейса  

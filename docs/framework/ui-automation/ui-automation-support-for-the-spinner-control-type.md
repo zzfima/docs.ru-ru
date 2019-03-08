@@ -6,14 +6,12 @@ helpviewer_keywords:
 - Spinner control type
 - control types, Spinner
 ms.assetid: 3a29d185-65d8-42e3-bcc3-7f43e96f40c5
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: e476674e99f0951148dc7cfc95deeeaede3862ae
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 43e892f681669cd80c83b23dc4e16c81026f1d7e
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066302"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676104"
 ---
 # <a name="ui-automation-support-for-the-spinner-control-type"></a>Поддержка Автоматизации Пользовательского Интерфейса для типа элемента управления "Счетчик"
 > [!NOTE]
@@ -57,8 +55,8 @@ ms.locfileid: "55066302"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|См. примечания.|Элементы управления "Счетчик" имеют метку со статическим текстом.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Spinner|Это значение является одинаковым для всех инфраструктур пользовательского интерфейса.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"счетчик"|Локализованная строка, соответствующая типу элемента управления Spinner.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|Да|Элемент управления "Счетчик" всегда должен быть содержимым.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|Да|Элемент управления "Счетчик" всегда должен быть элементом управления.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|Элемент управления "Счетчик" всегда должен быть содержимым.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|Элемент управления "Счетчик" всегда должен быть элементом управления.|  
   
 <a name="Required_UI_Automation_Control_Patterns_and_Properties"></a>   
 ## <a name="required-ui-automation-control-patterns-and-properties"></a>Необходимые шаблоны и свойства элементов управления модели автоматизации пользовательского интерфейса  

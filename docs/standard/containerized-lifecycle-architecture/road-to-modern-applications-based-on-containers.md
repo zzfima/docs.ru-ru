@@ -4,16 +4,16 @@ description: Понять, что Docker, контейнеры и архитек
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/23/2018
-ms.openlocfilehash: be7799fe0ac3c22d0ffda5bc4b7e5e42f956a15e
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: ac4ca2d4a24e2d26fd639eafd62968188dbeb483
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442429"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674436"
 ---
 # <a name="road-to-modern-applications-based-on-containers"></a>Пути для современных приложений, в зависимости от контейнеров
 
-В этой книге, вероятно, читаете так, как вы планируете разработку новых приложений и/или оценке влияния с помощью Docker, контейнеры и новые подходы, таким как Микрослужбы в вашей компании.
+Вы читаете в этой книге, вероятно, так как вы планируете разработку новых приложений или которые вы оцениваете последствия с помощью Docker, контейнеры и новые подходы, таким как Микрослужбы в вашей компании.
 
 Переход на новые парадигмы разработки необходимо принимать с осторожностью перед запуском проекта, чтобы оценить влияние на команды разработчиков, бюджета или инфраструктуры.
 

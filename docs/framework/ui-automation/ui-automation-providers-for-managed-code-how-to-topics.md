@@ -8,18 +8,16 @@ helpviewer_keywords:
 - UI Automation, custom user interface (UI) elements
 - providers, UI Automation
 ms.assetid: 88bc4212-3f4e-4bac-bae0-faef31944b71
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 8670b6cca65003a1f86e5caacda9aa4545434c01
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 559c2c3f13aa92f5d4e27504e37fd886334e69bf
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036198"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680026"
 ---
 # <a name="ui-automation-providers-for-managed-code-how-to-topics"></a>Разделы практического руководства, посвященные поставщикам автоматизации пользовательского интерфейса для управляемого кода
 > [!NOTE]
->  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Для получения последних сведений о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], см. в разделе [API автоматизации Windows: модели автоматизации пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Для получения последних сведений о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], см. в разделе [API автоматизации Windows: Модели автоматизации пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Этот раздел содержит примеры кода, демонстрирующие задачи написания [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] поставщиков для [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] элементов.  
   

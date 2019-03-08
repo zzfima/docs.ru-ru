@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 55fd6e6eec0c5107398bd0a7dda0281f69eb471b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a9889ddf1c03f14835101f31d0a3b264f0016267
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492521"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676555"
 ---
 # <a name="iclrmetahostgetruntime-method"></a>Метод ICLRMetaHost::GetRuntime
 Получает [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) интерфейс, используемый для конкретной версии общеязыковой среды выполнения (CLR). Этот метод заменяет [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) функция, используемая с [STARTUP_LOADER_SAFEMODE](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) флаг.  
@@ -61,7 +61,7 @@ HRESULT GetRuntime (
 |E_POINTER|`pwzVersion` или `ppRuntime` имеет значение null.|  
   
 ## <a name="remarks"></a>Примечания  
- Этот метод постоянно взаимодействует с устаревшими интерфейсами, такие как [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) и устаревшими функциями, таких как устаревшие `CorBindTo*` функции (см. в разделе [устаревшей функции среды CLR размещение](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) в .NET Framework 2.0, интерфейс API размещения). То есть являются видимыми для нового API среды выполнения, загруженные с старый API, и среды выполнения, загруженные с новым API будут видимы для старый API. .  
+ Этот метод постоянно взаимодействует с устаревшими интерфейсами, такие как [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) и устаревшими функциями, таких как устаревшие `CorBindTo*` функции (см. в разделе [устаревшей функции среды CLR размещение](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) в .NET Framework 2.0, интерфейс API размещения). То есть являются видимыми для нового API среды выполнения, загруженные с старый API, и среды выполнения, загруженные с новым API будут видимы для старый API.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

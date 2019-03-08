@@ -6,14 +6,12 @@ helpviewer_keywords:
 - UI Automation, Text control type
 - control types, Text
 ms.assetid: ab0d0ada-8a71-4547-9c03-aadf675938f2
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: d8b841a6100a02c784e6e80260e42c2c56e22147
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e2242f5b93157e8bc8031ed5beaf35175bcdcc5
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574567"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678635"
 ---
 # <a name="ui-automation-support-for-the-text-control-type"></a>Поддержка автоматизированного пользовательского интерфейса для текстовых элементов управления
 > [!NOTE]
@@ -58,7 +56,7 @@ ms.locfileid: "54574567"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Текста|Это значение является одинаковым для всех инфраструктур пользовательского интерфейса.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"текст"|Локализованная строка, соответствующая типу элемента управления Text.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|Зависит от обстоятельств|Элемент управления "Текст" будет содержимым, если он содержит сведения, которые не представлены в NameProperty другого элемента управления.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|Да|Элемент управления "Текст" всегда должен быть элементом управления.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|Элемент управления "Текст" всегда должен быть элементом управления.|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>   
 ## <a name="required-ui-automation-control-patterns"></a>Необходимые шаблоны элементов управления модели автоматизации пользовательского интерфейса  

@@ -6,14 +6,12 @@ helpviewer_keywords:
 - ProgressBar control type
 - UI Automation, Progress Bar control type
 ms.assetid: 302e778c-24b0-4789-814a-c8d37cf53a5f
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: ce3bcfac780e5a19f5d6f0b9614e33b04ce9806d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ff513b157b29a407a09fbffc9a7d54652317cd2
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543020"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673526"
 ---
 # <a name="ui-automation-support-for-the-progressbar-control-type"></a>Поддержка автоматизации пользовательского интерфейса для типа элемента управления ProgressBar
 > [!NOTE]
@@ -49,8 +47,8 @@ ms.locfileid: "54543020"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|См. примечания.|Если имеется статическая текстовая метка, то данное свойство должно предоставлять ссылку на этот элемент управления.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|ProgressBar|Это значение является одинаковым для всех инфраструктур пользовательского интерфейса.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"индикатор выполнения"|Локализованная строка, соответствующая типу элемента управления ProgressBar.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|Да|Элемент управления "Индикатор выполнения" всегда включается в представление содержимого дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|Да|Элемент управления "Индикатор выполнения" всегда включается в представление элемента управления дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|Элемент управления "Индикатор выполнения" всегда включается в представление содержимого дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|Элемент управления "Индикатор выполнения" всегда включается в представление элемента управления дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
   
 <a name="Required_UI_Automation_Control_Patterns_and_Properties"></a>   
 ## <a name="required-ui-automation-control-patterns-and-properties"></a>Необходимые шаблоны и свойства элементов управления модели автоматизации пользовательского интерфейса  
@@ -59,7 +57,7 @@ ms.locfileid: "54543020"
 |Шаблон элемента управления/свойство шаблона|Поддержка/значение|Примечания|  
 |---------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IValueProvider>|Зависит от обстоятельств|Элементы управления "Индикатор выполнения", которые предоставляют текстовый указатель хода выполнения, должны реализовывать <xref:System.Windows.Automation.Provider.IValueProvider>.|  
-|<xref:System.Windows.Automation.Provider.IValueProvider.IsReadOnly%2A>|Да|Это свойство всегда имеет значение True.|  
+|<xref:System.Windows.Automation.Provider.IValueProvider.IsReadOnly%2A>|True|Это свойство всегда имеет значение True.|  
 |<xref:System.Windows.Automation.Provider.IValueProvider.Value%2A>|См. примечания.|Это свойство предоставляет ход выполнения в текстовом виде для элемента управления "Индикатор выполнения".|  
 |<xref:System.Windows.Automation.Provider.IRangeValueProvider>|Зависит от обстоятельств|Элементы управления "Индикатор выполнения", принимающие числовой диапазон, должны реализовывать <xref:System.Windows.Automation.Provider.IRangeValueProvider>|  
 |<xref:System.Windows.Automation.Provider.IRangeValueProvider.Minimum%2A>|0,0|Значение этого свойства представляет наименьшее значение, которое может быть задано для элемента управления.|  

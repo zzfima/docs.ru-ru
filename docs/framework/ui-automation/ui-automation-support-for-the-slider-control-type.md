@@ -6,14 +6,12 @@ helpviewer_keywords:
 - UI Automation, Slider control type
 - Slider control type
 ms.assetid: 045ea62f-7b50-46cf-a5a9-8eb97704355f
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: be3b7206a171bd485eaa86e9abf2bf22514399ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3cc17de86981bf0130a623c8459974befd2bb4b5
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706765"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675086"
 ---
 # <a name="ui-automation-support-for-the-slider-control-type"></a>Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления ползунка
 > [!NOTE]
@@ -47,8 +45,8 @@ ms.locfileid: "54706765"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|См. примечания.|Если статическая текстовая метка связана с элементом управления, то данное свойство должно предоставлять ссылку на этот элемент управления. Если элемент управления "Текст" является подкомпонентом другого элемента управления, он не будет иметь набор свойств `LabeledBy` .|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Slider|Это значение является одинаковым для всех инфраструктур [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] .|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"ползунок"|Локализованная строка, соответствующая типу элемента управления Edit.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|Да|Элемент управления "Поле ввода" всегда включается в представление содержимого дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|Да|Элемент управления "Поле ввода" всегда включается в представление элемента управления дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|Элемент управления "Поле ввода" всегда включается в представление содержимого дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|Элемент управления "Поле ввода" всегда включается в представление элемента управления дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>   
 ## <a name="required-ui-automation-control-patterns"></a>Необходимые шаблоны элементов управления модели автоматизации пользовательского интерфейса  

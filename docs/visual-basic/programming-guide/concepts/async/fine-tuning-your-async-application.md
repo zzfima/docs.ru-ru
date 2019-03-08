@@ -2,12 +2,12 @@
 title: Настройка асинхронного приложения (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 4c3e7997-a95f-4fbe-a6ac-60ba042d30b9
-ms.openlocfilehash: 0dc03e1063b16c96916d4cac9214ddfa3333620b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bd03e0874cedd360f5b31984b4b49b3d5b647c7f
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625164"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677049"
 ---
 # <a name="fine-tuning-your-async-application-visual-basic"></a>Настройка асинхронного приложения (Visual Basic)
 Методы и свойства, доступные при использовании типа <xref:System.Threading.Tasks.Task>, позволяют сделать приложение более точным и гибким. В подразделах этого раздела приводятся примеры, в которых используются <xref:System.Threading.CancellationToken> и важные методы `Task`, такие как <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> и <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>.  
@@ -20,7 +20,7 @@ ms.locfileid: "54625164"
   
 -   `WhenAll` возвращает задачу, которая завершается после завершения всех задач в коллекции.  
   
-     Дополнительные сведения и пример, использующий `WhenAll`, см. в разделе [как: Расширение Async пошагового руководства с использованием метода Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).  
+     Дополнительные сведения и пример кода, использующий `WhenAll`, см. в разделе [Практический пример. Расширение Async пошагового руководства с использованием метода Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).  
   
  Этот раздел содержит следующие примеры.  
   
@@ -37,9 +37,9 @@ ms.locfileid: "54625164"
   
  Проекты создают пользовательский интерфейс, содержащий кнопку, которая запускает процесс, и кнопку, которая его отменяет, как показано на следующем рисунке. Кнопки называются `startButton` и `cancelButton`.  
   
- ![Окно WPF с кнопкой "Отмена"](../../../../csharp/programming-guide/concepts/async/media/cancellation.png "Cancellation")  
+ ![Окно WPF с помощью кнопки "Отмена"](./media/fine-tuning-your-async-application/cancellation-and-start-button.png "диалоговое окно с кнопкой запуска и остановки")  
   
- Вы можете загрузить полные проекты Windows Presentation Foundation (WPF) из [пример асинхронности: По настройке приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
+ Скачать полный проект Windows Presentation Foundation (WPF) можно со страницы [Пример асинхронности. Тонкая настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
   
 ## <a name="see-also"></a>См. также
 - [Асинхронное программирование с использованием ключевых слов Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)

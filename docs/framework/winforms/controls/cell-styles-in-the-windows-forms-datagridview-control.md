@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cells [Windows Forms], styles
 - data grids [Windows Forms], cell styles
 ms.assetid: dbb75ed6-8804-4232-8382-f9920c2e380c
-ms.openlocfilehash: 7ff8f8b0c047601e092b8ccb347095d9d1d0a1d1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3cb46ec5b203451cb2f9fd1c87457ad52552359c
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54575165"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674683"
 ---
 # <a name="cell-styles-in-the-windows-forms-datagridview-control"></a>Стили ячеек элемента управления DataGridView в Windows Forms
 Каждая ячейка в <xref:System.Windows.Forms.DataGridView> элемент управления может иметь свой собственный стиль, включая формат текста, цвет фона, цвет переднего плана и шрифта. Как правило Однако несколько ячеек будет обладают одинаковым стилем.  
@@ -87,7 +87,7 @@ ms.locfileid: "54575165"
   
  Следующая диаграмма иллюстрирует этот процесс.  
   
- ![Свойства типа DataGridViewCellStyle](../../../../docs/framework/winforms/controls/media/datagridviewcells1.gif "DataGridViewCells1")  
+ ![Свойства типа DataGridViewCellStyle](./media/cell-styles-in-the-windows-forms-datagridview-control/datagridviewcells-inheritance-diagram.gif "DataGridViewCells диаграмма наследования")  
   
  Также можно получить доступ к стилям, унаследованным от определенных строк и столбцов. Столбец <xref:System.Windows.Forms.DataGridViewColumn.InheritedStyle%2A> свойство наследует значения от следующие свойства.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "54575165"
   
  На следующей схеме показано как разные <xref:System.Windows.Forms.DataGridViewCellStyle> свойства могут наследовать значения из различных мест.  
   
- ![Свойство DataGridView&#45;наследование значения](../../../../docs/framework/winforms/controls/media/datagridviewcells2.gif "DataGridViewCells2")  
+ ![Свойство DataGridView&#45;наследование значения](./media/cell-styles-in-the-windows-forms-datagridview-control/datagridviewcells-value-inheritance-diagram.gif "схема наследования DataGridViewCells значение")  
   
  Используя преимущества наследования стиля, можно предоставить соответствующие стили для всего элемента управления без необходимости указывать те же данные в нескольких местах.  
   

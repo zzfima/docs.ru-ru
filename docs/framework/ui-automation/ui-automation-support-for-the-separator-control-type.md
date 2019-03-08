@@ -6,14 +6,12 @@ helpviewer_keywords:
 - Separator control type
 - control types, Separator
 ms.assetid: 89f42247-c699-4afa-91e1-2baaf0d86c9d
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: a51ed653146421b22d6db4f7b9b2fd2faca1b0b1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 415acb678dd8eb15d6001c5cefa75335cb8d2c16
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597987"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680377"
 ---
 # <a name="ui-automation-support-for-the-separator-control-type"></a>Поддержка автоматизации пользовательского интерфейса для элемента управления Separator
 > [!NOTE]
@@ -48,7 +46,7 @@ ms.locfileid: "54597987"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Separator|Это значение является одинаковым для всех инфраструктур пользовательского интерфейса.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"разделитель"|Локализованная строка, соответствующая типу элемента управления Separator.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|False|Элемент управления "Разделитель" никогда не является содержимым.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|Да|Элемент управления "Разделитель" всегда должен быть элементом управления.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|Элемент управления "Разделитель" всегда должен быть элементом управления.|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>   
 ## <a name="required-ui-automation-control-patterns"></a>Необходимые шаблоны элементов управления модели автоматизации пользовательского интерфейса  

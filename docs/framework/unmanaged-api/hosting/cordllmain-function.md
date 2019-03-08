@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e3c529e77cad16f0bde12e34491829b58add17aa
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: c509f475d5bf0105ece9791ee3e51d21c298a31f
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57500395"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679311"
 ---
-# <a name="cordllmain-function"></a>Функция _CorDllMain
+# <a name="cordllmain-function"></a>\_Функция CorDllMain
+
 Инициализирует общеязыковой среды выполнения (CLR), размещает управляемую точку входа в заголовке среды CLR сборки DLL и начинает выполнение.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -41,7 +42,7 @@ BOOL STDMETHODCALLTYPE _CorDllMain (
  [in] Дескриптор экземпляра загруженного модуля.  
   
  `dwReason`  
- [in] Указывает, почему вызывается функция точки входа библиотеки DLL. Этот параметр может принимать одно из следующих значений: DLL_PROCESS_ATTACH, DLL_THREAD_ATTACH, DLL_THREAD_ATTACH или DLL_PROCESS_DETACH. Описание этих значений, см. в разделе `DllMain` документации пакета Platform SDK.  
+ [in] Указывает, почему вызывается функция точки входа библиотеки DLL. Этот параметр может принимать одно из следующих значений: Библиотеки DLL\_PROCESS_ATTACH, DLL\_ПОТОКОВ\_ATTACH, DLL\_ПОТОКОВ\_ATTACH или DLL\_процесс\_ОТСОЕДИНЕНИЯ. Описание этих значений, см. в разделе `DllMain` документации пакета Platform SDK.  
   
  `lpReserved`  
  [in] Не используется.  
@@ -50,15 +51,16 @@ BOOL STDMETHODCALLTYPE _CorDllMain (
  Этот метод возвращает `true` для достижения успеха и `false` при возникновении ошибки.  
   
 ## <a name="remarks"></a>Примечания  
- Эта функция вызывается загрузчиком операционной системы для DLL-сборки. Исполняемые сборки, загрузчик вызывает [_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) вместо этого функцию.  
+ Эта функция вызывается загрузчиком операционной системы для DLL-сборки. Исполняемые сборки, загрузчик вызывает [ \_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) вместо этого функцию.  
   
  Загрузчик операционной системы вызывает этот метод независимо от точки входа, указанной в файле DLL.  
   
 `_CorDllMain` Функция вызывается загрузчиком операционной системы.
   
- Дополнительные сведения см. в разделе "Примечания" в [_CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md) раздела.  
+ Дополнительные сведения см. в разделе "Примечания" в [ \_CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md) раздела.  
   
 ## <a name="requirements"></a>Требования  
+
  **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Заголовок.** Cor.h  
@@ -68,4 +70,5 @@ BOOL STDMETHODCALLTYPE _CorDllMain (
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Глобальные статические функции метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

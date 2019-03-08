@@ -2,23 +2,23 @@
 title: Формирование классов типов данных из XML
 ms.date: 03/30/2017
 ms.assetid: e4e5e4e8-527f-44d1-92fa-8904a08784ea
-ms.openlocfilehash: 6b38a0aea3101c70b3c3ec0c8feb4ee88018b64e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a6666f1ba23dd563bd7a005d458cd7fe8253c3af
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498671"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679090"
 ---
 # <a name="generating-data-type-classes-from-xml"></a>Формирование классов типов данных из XML
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] включает новую функцию для создания классов типа данных из XML. В этом разделе описывается автоматически создавать типы данных для блога .NET RSS-канала.  
+[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] включает новую функцию для создания классов типа данных из XML. В этом разделе описывается, как для автоматического создания типов данных для веб-канала RSS блоге .NET.  
   
 ### <a name="obtaining-the-xml-from-the-net-blog-rss-feed"></a>Получение XML-данных из блога .NET RSS-канала  
   
-1.  В Internet Explorer, перейдите к [.NET блог RSS-канал](https://blogs.msdn.microsoft.com/dotnet/feed/).  
+1.  В Internet Explorer, перейдите к [.NET блог RSS-канал](https://devblogs.microsoft.com/dotnet/feed/).  
   
 2.  Щелкните страницу правой кнопкой мыши и выберите **Просмотр исходного кода**.  
   
-3.  Скопируйте текст канала, нажав **Ctrl + A** можно выделить весь текст и **Ctrl + C** для копирования.  
+3.  Скопируйте текст канала, нажав клавишу **Ctrl + A** выделит весь текст и **Ctrl + C** для копирования.  
   
 ### <a name="creating-the-data-types"></a>Создание типов данных  
   
@@ -28,7 +28,7 @@ ms.locfileid: "33498671"
   
 3.  Выберите **изменить**, **Специальная вставка**, **вставке XML как классы**.  
   
-4.  Классы, называемые `link`, `rss`, `rssChannel`, `rssChannelImage`, `rssChannelItem` и `rssChannelItemGuid` создаются с необходимыми членами для обращения к элементам в RSS-канала.  
+4.  Классы, называемые `link`, `rss`, `rssChannel`, `rssChannelImage`, `rssChannelItem` и `rssChannelItemGuid` создаются с необходимыми членами для доступа к элементам в RSS-канала.  
   
 ### <a name="using-the-generated-classes"></a>Использование созданных классов  
   

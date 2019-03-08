@@ -2,12 +2,12 @@
 title: Создание службы долго выполняющегося рабочего процесса
 ms.date: 03/30/2017
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-ms.openlocfilehash: b3c5cd8a64f32a199932a40ed2d94b0a545b0dc7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8fe1ad70db6c788a304d9099fb2f35a4d89db489
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585410"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679441"
 ---
 # <a name="creating-a-long-running-workflow-service"></a>Создание службы долго выполняющегося рабочего процесса
 В данном разделе описывается, как создать службу длительных рабочих процессов. Службы длительных рабочих процессов могут работать в течение долгого времени. В определенные моменты рабочий процесс может переходить в состояние бездействия в ожидании дополнительных данных. В этом случае рабочий процесс сохраняется в базе данных SQL и удаляется из памяти. При поступлении дополнительных данных экземпляр рабочего процесса снова загружается в память и его выполнение продолжается.  В этом сценарии реализуется очень упрощенная система обработки заказов.  Клиент отправляет первоначальное сообщение службе рабочего процесса с указанием начать заказ. Служба возвращает клиенту идентификатор заказа. С этого момента в ожидании нового сообщения от клиента служба рабочего процесса переходит в состояние бездействия и сохраняется в базе данных SQL Server.  Когда клиент отправит следующее сообщение, чтобы заказать товар, служба рабочего процесса будет снова загружена в память, после чего она завершит обработку заказа. В приведенном образце кода служба возвращает строку, указывающую на то, что товар добавлен в заказ. Этот образец кода не предполагает реализацию такого приложения в реальности, скорее это простой образец, иллюстрирующий работу служб длительных рабочих процессов. В этом разделе предполагается, что вы умеете создавать проекты Visual Studio 2012 и решения.
@@ -45,11 +45,11 @@ ms.locfileid: "54585410"
 
     1.  В разделе **действие при запуске** выберите **определенную страницу** и укажите `Service1.xamlx`.
 
-         ![Веб-свойства проекта службы рабочего процесса](../../../../docs/framework/wcf/feature-details/media/startaction.png "StartAction")
+         ![Веб-свойства проекта службы рабочего процесса](./media/creating-a-long-running-workflow-service/start-action-specific-page-option.png "создание размещенных на веб-службы рабочего процесса - параметр определенную страницу")
 
     2.  В разделе **серверы** выберите **используйте локальный веб-сервере IIS**.
 
-         ![Параметры локального веб-сервера](../../../../docs/framework/wcf/feature-details/media/uselocalwebserver.png "UseLocalWebServer")
+         ![Параметры локального веб-сервера](./media/creating-a-long-running-workflow-service/use-local-web-server.png "создание размещенных на веб-службы рабочего процесса - параметр использовать локальный веб-сервер IIS")
 
         > [!WARNING]
         >  В режиме администратора, чтобы установить этот параметр, необходимо запустить Visual Studio 2012.
@@ -63,55 +63,55 @@ ms.locfileid: "54585410"
     > [!NOTE]
     >  Если в раскрывающемся списке тип переменной не является CorrelationHandle, выберите **Выбор типов** из раскрывающегося списка. Введите CorrelationHandle в **имя типа** поле, выберите CorrelationHandle из списка и нажмите кнопку **ОК**.
 
-     ![Добавьте переменные](../../../../docs/framework/wcf/feature-details/media/addvariables.gif "AddVariables")
+     ![Добавьте переменные](./media/creating-a-long-running-workflow-service/add-variables-sequential-service-activity.gif "добавьте переменные в действие последовательная служба.")
 
 6.  Перетаскивание **ReceiveAndSendReply** шаблон действия в **последовательная служба** действия. Этот набор действий будет получать сообщение от клиента и возвращать ему ответ.
 
     1.  Выберите **Receive** действия и задайте свойства, отмеченные на следующем рисунке.
 
-         ![Задание свойств действия Receive](../../../../docs/framework/wcf/feature-details/media/setreceiveproperties.png "SetReceiveProperties")
+         ![Задайте свойства действия получения](./media/creating-a-long-running-workflow-service/set-receive-activity-properties.png "задание свойств действия Receive.")
 
          Свойство DisplayName задает имя, отображаемое для действия «Receive» в конструкторе. Свойства ServiceContractName и OperationName задают имя контракта службы и операции, которые реализуются действием Receive. Дополнительные сведения об использовании контрактов в службах рабочих процессов см. в разделе [использование контрактов в рабочем процессе](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md).
 
     2.  Нажмите кнопку **определить...**  ссылку в **ReceiveStartOrder** действия и задайте свойства, показанные на следующем рисунке.  Обратите внимание, что **параметры** переключатель, параметр с именем `p_customerName` привязан к `customerName` переменной. Это позволит настроить **Receive** действия для получения некоторых данных и связать эти данные с локальных переменных.
 
-         ![Задание данных, получаемых действием Receive](../../../../docs/framework/wcf/feature-details/media/setreceivecontent.png "SetReceiveContent")
+         ![Задание данных, получаемых действием Receive](./media/creating-a-long-running-workflow-service/set-properties-for-receive-content.png "задать свойства для данных, получаемых действием Receive.")
 
     3.  Выберите **SendReplyToReceive** действия и задайте свойство, отмеченное на следующем рисунке.
 
-         ![Задание свойств действия SendReply](../../../../docs/framework/wcf/feature-details/media/setreplyproperties.png "SetReplyProperties")
+         ![Задание свойств действия SendReply](./media/creating-a-long-running-workflow-service/set-properties-for-reply-activities.png "SetReplyProperties")
 
     4.  Нажмите кнопку **определить...**  ссылку в **SendReplyToStartOrder** действия и задайте свойства, показанные на следующем рисунке. Обратите внимание, что **параметры** переключатель; параметр с именем `p_orderId` привязан к `orderId` переменной. Этот параметр указывает, что действие SendReplyToStartOrder возвратит вызывающему объекту значение типа String.
 
-         ![Настройка данных для содержимого действия SendReply](../../../../docs/framework/wcf/feature-details/media/setreplycontent.png "SetReplyContent")
+         ![Настройка данных для содержимого действия SendReply](./media/creating-a-long-running-workflow-service/setreplycontent-for-sendreplytostartorder-activity.png "настройку можно SetReplyToStartOrder действия.")
 
     5.  Перетащите действие Assign в диапазоне от **Receive** и **SendReply** действий и задайте свойства, как показано на следующем рисунке:
 
-         ![Добавление действия assign](../../../../docs/framework/wcf/feature-details/media/addassign.png "AddAssign")
+         ![Добавление действия assign](./media/creating-a-long-running-workflow-service/add-an-assign-activity.png "Добавление действия assign.")
 
          При этом будет создан новый идентификатор заказа, а его значение будет помещено в переменную orderId.
 
     6.  Выберите **ReplyToStartOrder** действия. В окне свойств нажмите кнопку с многоточием для **CorrelationInitializers**. Выберите **добавить инициализатор** ссылку, введите `orderIdHandle` в текстовом поле инициализатор выберите инициализатор корреляции запросов для типа Correlation и выберите p_orderId в раскрывающемся списке запросов XPATH. Эти параметры показаны на следующем рисунке. Нажмите кнопку **ОК**.  При этом будет инициализирована новая корреляция между клиентом и этим экземпляром службы рабочего процесса. При получении сообщения с этим идентификатором заказа оно будет направлено этому экземпляру службы рабочего процесса.
 
-         ![Добавление инициализатора корреляции](../../../../docs/framework/wcf/feature-details/media/addcorrelationinitializers.png "AddCorrelationInitializers")
+         ![Добавление инициализатора корреляции](./media/creating-a-long-running-workflow-service/add-correlationinitializers.png "добавить инициализатор корреляции.")
 
 7.  Перетащите другое **ReceiveAndSendReply** действие в конец рабочего процесса (за пределами **последовательности** содержащей первые **Receive** и  **SendReply** действий). Оно получит второе сообщение от клиента и ответит на него.
 
     1.  Выберите **последовательности** , содержащий только что добавленного **Receive** и **SendReply** действия и нажмите кнопку **переменных** кнопки. Добавьте переменную, отмеченную на следующем рисунке.
 
-         ![Добавление новых переменных](../../../../docs/framework/wcf/feature-details/media/addorderitemidvariable.png "AddOrderItemIdVariable")
+         ![Добавление новых переменных](./media/creating-a-long-running-workflow-service/add-the-itemid-variable.png "Добавьте переменную ItemId.")
 
     2.  Выберите **Receive** действия и задайте свойства, показанные на следующем рисунке:
 
-         ![Набор свойств действия receive](../../../../docs/framework/wcf/feature-details/media/setreceiveproperties2.png "SetReceiveProperties2")
+         ![Набор свойств действия receive](./media/creating-a-long-running-workflow-service/set-receive-activities-properties.png "задание свойств действия Receive.")
 
     3.  Нажмите кнопку **определить...**  ссылку в **ReceiveAddItem** действия и добавьте параметры, показанные на следующем рисунке: Это позволит настроить действие receive и принимать два параметра, идентификатор заказа и идентификатора заказываемого товара.
 
-         ![Указание параметров для второго получения](../../../../docs/framework/wcf/feature-details/media/addreceive2parameters.png "AddReceive2Parameters")
+         ![Указание параметров для второго получения](./media/creating-a-long-running-workflow-service/add-receive-two-parameters.png "настроить выбранное действие receive для получения двух параметров.")
 
     4.  Нажмите кнопку **CorrelateOn** кнопку с многоточием и ввести `orderIdHandle`. В разделе **запросы XPath**, щелкните стрелку раскрывающегося списка и выберите `p_orderId`. При этом будет настроена корреляция второго действия Receive. Дополнительные сведения о корреляции см. в разделе [корреляции](../../../../docs/framework/wcf/feature-details/correlation.md).
 
-         ![Задание свойства CorrelatesOn](../../../../docs/framework/wcf/feature-details/media/correlateson.png "CorrelatesOn")
+         ![Задание свойства CorrelatesOn](./media/creating-a-long-running-workflow-service/correlateson-setting.png "свойство CorrelatesOn.")
 
     5.  Перетаскивание **Если** действия сразу после **ReceiveAddItem** действия. Это действие работает аналогично инструкции IF.
 
@@ -119,17 +119,17 @@ ms.locfileid: "54585410"
 
         2.  Перетаскивание **назначить** действие в **затем** раздел, а второе-в **Else** разделе Задание свойств **назначить** действия, как показано на следующем рисунке.
 
-             ![Задание результата вызова службы](../../../../docs/framework/wcf/feature-details/media/resultassign.png "ResultAssign")
+             ![Задание результата вызова службы](./media/creating-a-long-running-workflow-service/assign-result-of-service-call.png "назначить результат вызова службы.")
 
              Если условие равно `true` **затем** будет выполнен раздел. Если условие равно `false` **Else** будет выполнен раздел.
 
         3.  Выберите **SendReplyToReceive** действие и набор **DisplayName** свойства, показанного на следующем рисунке.
 
-             ![Задание свойств действия SendReply](../../../../docs/framework/wcf/feature-details/media/setreply2properties.png "SetReply2Properties")
+             ![Задание свойств действия SendReply](./media/creating-a-long-running-workflow-service/send-reply-activity-property.png "задайте свойства действия SendReply.")
 
         4.  Нажмите кнопку **определить...**  ссылку в **SetReplyToAddItem** действия и настройте его, как показано на следующем рисунке. Это позволит настроить **SendReplyToAddItem** действие будет возвращать значение в `orderResult` переменной.
 
-             ![Задание привязки данных для действия SendReply](../../../../docs/framework/wcf/feature-details/media/replytoadditemcontent.gif "ReplyToAddItemContent")
+             ![Задание привязки данных для действия SendReply](./media/creating-a-long-running-workflow-service/set-property-for-sendreplytoadditem.gif "задать свойство для SendReplyToAddItem действия.")
 
 8.  Откройте файл web.config и добавьте следующие элементы в \<поведение > раздела, чтобы включить сохранение рабочего процесса.
 

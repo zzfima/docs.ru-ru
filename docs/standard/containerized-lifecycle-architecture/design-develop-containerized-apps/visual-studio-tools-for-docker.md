@@ -5,12 +5,12 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: e4422f325566724e3ea65d47d97c42e57e3fe621
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 78ea3e553e4e449b307bc3585ed66fa48d2c0d8e
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835607"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680364"
 ---
 # <a name="use-docker-tools-in-visual-studio-2017-on-windows"></a>С помощью средств Docker в Visual Studio 2017 в Windows
 
@@ -75,7 +75,7 @@ ms.locfileid: "56835607"
 
 | name | По умолчанию | Применение | Описание |
 | -----|:---------------:|:----------:| ----------- |
-| Автоматически извлекать требуемые образы Docker при загрузке проекта | включить | Docker Compose | Для повышения производительности при загрузке проектов Visual Studio запустит операцию извлечения Docker в фоновом режиме, когда будете готовы для выполнения кода, уже будет загружен образ или находится в процессе загрузки. Если вам нужно просто загрузить проекты и просмотр кода, можно отключить это во избежание загрузки образов контейнеров, которые не нужны. |
+| Автоматически извлекать требуемые образы Docker при загрузке проекта | включить | Docker Compose | Для повышения производительности при загрузке проектов Visual Studio запустит операцию извлечения Docker в фоновом режиме, когда вы будете готовы для выполнения кода, уже будет загружен образ или находится в процессе загрузки. Если вам нужно просто загрузить проекты и просмотр кода, можно отключить это во избежание загрузки образов контейнеров, которые не нужны. |
 | Автоматически запускать контейнеры в фоновом режиме | включить | Docker Compose | Еще раз для повышения производительности Visual Studio создает контейнер с подключенных томов готова к после построения и запуска контейнера. Если вы хотите управлять, при создании контейнера, отключите этот параметр. |
 | Автоматически kill контейнеров при закрытии решения | включить | Docker Compose | Отключите этот параметр, если вы хотите контейнеры для вашего решения продолжить выполнение после закрыть Visual Studio или решение. |
 | Не запрашивать доверяющем SSL-сертификату localhost | Off | Проекты ASP.NET Core 2.1 | Если SSL-сертификату localhost не является доверенным, Visual Studio предложит каждый раз при запуске проекта, если этот флажок установлен. |
@@ -85,9 +85,9 @@ ms.locfileid: "56835607"
 
 > [! Сведения о] Дополнительные сведения о реализации служб и использование набора средств Visual Studio для Docker в следующих статьях:
 >
->Отладка приложений в локальном контейнере Docker: [https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh/](https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh)
+>Отладка приложений в локальном контейнере Docker: <https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh>
 >
->Развертывание контейнера ASP.NET в реестр контейнеров с помощью Visual Studio: [https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker/](https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker)
+>Развертывание контейнера ASP.NET в реестр контейнеров с помощью Visual Studio: <https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker>
 
 >[!div class="step-by-step"]
 >[Назад](docker-apps-inner-loop-workflow.md)

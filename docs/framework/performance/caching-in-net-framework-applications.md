@@ -6,13 +6,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
-author: tdykstra
-ms.openlocfilehash: 329e09744199b8063f98d3a38026f55bf02c228f
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 39fd5e7bb6e12178df0f75c6dadb575dac82c228
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219507"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674852"
 ---
 # <a name="caching-in-net-framework-applications"></a>Кэширование в приложениях платформы .NET Framework
 Кэширование позволяет хранить данные в памяти для быстрого доступа. При повторном доступе к данным приложения могут получать их из кэша вместо извлечения из исходного источника. Это может повысить производительность и масштабируемость. Кроме того, кэширование обеспечивает доступность данных при временной недоступности источника данных.  

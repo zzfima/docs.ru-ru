@@ -2,12 +2,12 @@
 title: Программа Service Trace Viewer (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: be6879810bde30a81ee9fb23e5cf031c4ff1976e
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 723b1c6858f0c56d4834dc937b9f4883e22156e6
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442897"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680390"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Программа Service Trace Viewer (SvcTraceViewer.exe)
 Средство просмотра трассировки службы Windows Communication Foundation (WCF) помогает анализировать диагностические трассировки, которые создаются платформой WCF. Программа Service Trace Viewer предоставляет возможность легко слияния, просмотра и фильтрации сообщений трассировки в журнале, поэтому диагностика, исправление и проверять неисправности служб WCF.  
@@ -50,7 +50,13 @@ ms.locfileid: "56442897"
 |ActivityTracing|События переходов между действиями по обработке и компонентами.<br /><br /> Этот уровень позволяет администраторам и разработчикам коррелировать приложения из одного домена приложений.<br /><br /> -Трассировки границ действий: запуск и остановка.<br />-Трассировки для перенаправлений.|  
   
  С помощью `add` можно задать имя и тип прослушивателя трассировки, который требуется использовать. В примере конфигурации прослушиватель имеет имя `sdt`, а в качестве типа добавляется стандартный прослушиватель трассировки .NET Framework (`System.Diagnostics.XmlWriterTraceListener`). Чтобы задать имя файла журнала для этого прослушивателя, используйте `initializeData`. Кроме того, можно заменить простое имя файла полным путем.  
-  
+
+Начиная с .NET Framework 4.8, поле со списком отображаются элементы управления в некоторых темах высокой контрастности в правильный цвет. Это изменение можно отключить, удалив следующий параметр из *svcTraceViewer.exe.config* файла:
+
+```xml
+<AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false" />
+```
+
 ## <a name="using-the-service-trace-viewer-tool"></a>Использование программы Service Trace Viewer  
   
 ### <a name="opening-and-viewing-wcf-trace-files"></a>Открытие и просмотр файлов трассировки WCF  

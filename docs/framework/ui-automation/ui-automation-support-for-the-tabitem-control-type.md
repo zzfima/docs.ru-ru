@@ -6,14 +6,12 @@ helpviewer_keywords:
 - control types, Tab Item
 - UI Automation, Tab Item control type
 ms.assetid: 9b21160d-e1c2-468b-9275-26e4369ae40d
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: da030330f0f7ec285084e4a11f113a5fa44b6e0f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9802237c9c73fa88c60dd10c011c3189752a3cd2
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512961"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677465"
 ---
 # <a name="ui-automation-support-for-the-tabitem-control-type"></a>Поддержка автоматизации пользовательского интерфейса для типа элемента управления TabItem
 > [!NOTE]
@@ -47,8 +45,8 @@ ms.locfileid: "54512961"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`|Элементы управления «Элемент вкладки» не имеют меток со статическим текстом.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|TabItem|Это значение является одинаковым для всех инфраструктур пользовательского интерфейса.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|«элемент вкладки»|Локализованная строка, соответствующая этому типу элемента управления.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|Да|Элемент управления «Элемент вкладки» всегда должен быть содержимым.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|Да|Элемент управления «Элемент вкладки» всегда должен быть элементом управления.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|Элемент управления «Элемент вкладки» всегда должен быть содержимым.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|Элемент управления «Элемент вкладки» всегда должен быть элементом управления.|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>   
 ## <a name="required-ui-automation-control-patterns"></a>Необходимые шаблоны элементов управления модели автоматизации пользовательского интерфейса  

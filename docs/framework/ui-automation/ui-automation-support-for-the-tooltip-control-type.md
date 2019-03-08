@@ -6,14 +6,12 @@ helpviewer_keywords:
 - ToolTip control type
 - control types, ToolTip
 ms.assetid: c3779d78-3164-43ae-8dae-bfaeafffdd65
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 4f3eb840bcbfa6dea224247a9a2553f6d57cbf4e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fa8ddc3fb8f1f46349eeb1f7dd7af203a7459457
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497490"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680169"
 ---
 # <a name="ui-automation-support-for-the-tooltip-control-type"></a>Поддержка автоматизации пользовательского интерфейса для типа элементов управления ToolTip
 > [!NOTE]
@@ -52,7 +50,7 @@ ms.locfileid: "54497490"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|ToolTip|Это значение одинаково для всех инфраструктур пользовательского интерфейса.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"подсказка"|Локализованная строка, соответствующая типу элемента управления ToolTip.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|Зависит от обстоятельств|Если элемент управления "Подсказка" может получать фокус клавиатуры, он должен отображаться в представлении содержимого дерева. Если это только текст, то он доступен как свойство HelpTextProperty элемента управления, вызвавшего подсказку.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|Да|Элемент управления "Подсказка" всегда должен быть элементом управления.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|Элемент управления "Подсказка" всегда должен быть элементом управления.|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>   
 ## <a name="required-ui-automation-control-patterns"></a>Необходимые шаблоны элементов управления модели автоматизации пользовательского интерфейса  

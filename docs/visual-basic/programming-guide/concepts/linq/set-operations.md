@@ -2,12 +2,12 @@
 title: Операции с множествами (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2b06e822-e030-438f-9db7-ee402bd3a706
-ms.openlocfilehash: 3aaccd2b91e842bb433fe97e59314860c631341e
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 8ec7f2785617c354a1aa506ac0df9eef7d051b59
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200765"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679298"
 ---
 # <a name="set-operations-visual-basic"></a>Операции с множествами (Visual Basic)
 Операции над множествами в LINQ — это операции запросов, результирующие наборы которых основываются на наличии или отсутствии эквивалентных элементов в одной или другой коллекции (или наборе).  
@@ -16,7 +16,7 @@ ms.locfileid: "57200765"
   
 ## <a name="methods"></a>Методы  
   
-|Имя метода|Описание:|Синтаксис выражений запросов Visual Basic|Дополнительные сведения|  
+|Имя метода|Описание|Синтаксис выражений запросов Visual Basic|Дополнительные сведения|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
 |Distinct|Удаляет повторяющиеся значения из коллекции.|`Distinct`|<xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Distinct%2A?displayProperty=nameWithType>|  
 |Исключения|Возвращает разность множеств, т. е. элементы одной коллекции, которые отсутствуют во второй.|Неприменимо.|<xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Except%2A?displayProperty=nameWithType>|  
@@ -33,7 +33,7 @@ ms.locfileid: "57200765"
 ### <a name="except"></a>Исключения  
  На следующем рисунке показано поведение <xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType>. Возвращаемая последовательность содержит только те элементы из первой входной последовательности, которых нет во второй.  
   
- ![График, отображающий действие Except&#40;&#41;.](../../../../csharp/programming-guide/concepts/linq/media/except.png "Except")  
+ ![График, отображающий действие Except&#40;&#41;. ](./media/set-operations/except-behavior-graphic.png "Показано поведение за исключением.")  
   
 ### <a name="intersect"></a>Пересечение  
  На следующем рисунке показано поведение <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType>. Возвращаемая последовательность содержит элементы, общие для обеих входных последовательностей.  

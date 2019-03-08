@@ -6,14 +6,12 @@ helpviewer_keywords:
 - control types, Table
 - UI Automation, Table control type
 ms.assetid: 9050dde5-6469-4c83-abb7-f861c24ff985
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: b341b104b6a028a870d1b6f427dc0d088bc0bbcc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a4e59258550cb2fad92a3eacc726f952f3b0164c
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654923"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674527"
 ---
 # <a name="ui-automation-support-for-the-table-control-type"></a>Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления Table
 > [!NOTE]
@@ -50,8 +48,8 @@ ms.locfileid: "54654923"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Таблица|Это значение является одинаковым для всех инфраструктур пользовательского интерфейса.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"таблица"|Локализованная строка, соответствующая типу элемента управления Tab.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>|См. примечания.|Дополнительные сведения о назначении таблицы должны предоставляться через это свойство, сведений из NameProperty недостаточно.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|Да|Элемент управления "Таблица" всегда должен быть содержимым.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|Да|Элемент управления "Таблица" всегда должен быть элементом управления.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|Элемент управления "Таблица" всегда должен быть содержимым.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|Элемент управления "Таблица" всегда должен быть элементом управления.|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>   
 ## <a name="required-ui-automation-control-patterns"></a>Необходимые шаблоны элементов управления модели автоматизации пользовательского интерфейса  

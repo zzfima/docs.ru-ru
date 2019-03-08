@@ -2,12 +2,12 @@
 title: свойство внешнего ключа
 ms.date: 03/30/2017
 ms.assetid: 23cb6729-544d-4f67-9ee7-44e8a6545587
-ms.openlocfilehash: a33d60e28c7c4e5a90199437fc95a83b5a304b06
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8680019f6f1a53233b5c49163f474cf33409b69b
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746613"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674475"
 ---
 # <a name="foreign-key-property"></a>свойство внешнего ключа
 Объект *свойство внешнего ключа* в Entity Data Model (EDM) является типом-примитивом [свойство](../../../../docs/framework/data/adonet/property.md) (или набор свойств примитивного типа) на [тип сущности](../../../../docs/framework/data/adonet/entity-type.md) , содержащий [ключ сущности](../../../../docs/framework/data/adonet/entity-key.md) другого типа сущности.  
@@ -17,7 +17,7 @@ ms.locfileid: "54746613"
 ## <a name="example"></a>Пример  
  На приведенной ниже схеме показана концептуальная модель с тремя типами сущностей: `Book`, `Publisher` и `Author`. Тип сущности `Book` имеет свойство `PublisherId`, которое ссылается на ключ сущности типа сущности `Publisher` при определении ограничения ссылочной целостности ассоциации `PublishedBy`.  
   
- ![RefConstraintModel](../../../../docs/framework/data/adonet/media/refconstraintmodel.gif "RefConstraintModel")  
+ ![RefConstraintModel](./media/foreign-key-property/reference-constraint-model.gif "пример модели справочное ограничение")  
   
  [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) использует доменный язык (DSL), называемый языком определения концептуальной схемы ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) для определения концептуальных моделей. Следующий язык CSDL использует свойство внешнего ключа `PublisherId` для определения ограничения ссылочной целостности в ассоциации `PublishedBy`, приведенной ранее в концептуальной модели.  
   

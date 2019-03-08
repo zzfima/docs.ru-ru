@@ -6,14 +6,12 @@ helpviewer_keywords:
 - Pane control type
 - control types, Pane
 ms.assetid: 79761191-4449-4630-899c-9cbdb8867d3f
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: b6e2c2d7f7bd72ad2b2bd9ac7302cd0e0af2c38b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2fcb116ed0bc2ae06980bbf9a80a661cbcf5ab3f
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725055"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674891"
 ---
 # <a name="ui-automation-support-for-the-pane-control-type"></a>Поддержка автоматизации пользовательского интерфейса для элемента управления Pane
 > [!NOTE]
@@ -47,8 +45,8 @@ ms.locfileid: "54725055"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|См. примечания.|Элементы управления "Панель" обычно не имеют статических меток. Если метка со статическим текстом присутствует, она должна предоставляться через это свойство.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Панель|Это значение является одинаковым для всех инфраструктур [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] .|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"панель"|Локализованная строка, соответствующая типу элемента управления Pane.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|Да|Элементы управления "Панель" всегда включаются в представление содержимого дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|Да|Элементы управления "Панель" всегда включаются в представление элемента управления дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|Элементы управления "Панель" всегда включаются в представление содержимого дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|Элементы управления "Панель" всегда включаются в представление элемента управления дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>|""|Текст справки для элементов управления "Панель" должен объяснять назначение этой рамки и ее связь с другими рамками. Описание необходимо, если назначение и взаимосвязь рамок не ясны из значения свойства `NameProperty`. "|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AccessKeyProperty>|См. примечания.|Если определенное сочетание клавиш переводит фокус в конкретную панель, сведения об этом должны предоставляться через данное свойство.|  
   

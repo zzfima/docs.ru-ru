@@ -1,5 +1,5 @@
 ---
-title: Как выполнить  Включить мозаичное представление в элементе управления ListView формы Windows
+title: Практическое руководство. Включить мозаичное представление в элементе управления ListView формы Windows
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,20 +11,20 @@ helpviewer_keywords:
 - Windows Forms, controls
 - ListView control [Windows Forms], tile view
 ms.assetid: c20e67a3-2d94-413d-9fcf-ecbd0fe251da
-ms.openlocfilehash: 34e7025ab29ec2e0d2035fa07f2a6d53c2b197c9
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 4bc5a9dfc17acc453030c6213b9c76572d21c474
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261717"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675814"
 ---
-# <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control"></a>Как выполнить  Включить мозаичное представление в элементе управления ListView формы Windows
+# <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control"></a>Практическое руководство. Включить мозаичное представление в элементе управления ListView формы Windows
 Функция мозаичного представления элемента управления <xref:System.Windows.Forms.ListView> обеспечивает визуальный баланс между графическими и текстовыми представлениями информации. Текстовые данные, отображаемые для мозаичного представления элемента совпадают с данными о столбцах, определенных для подробного представления. Мозаичное представление работает в сочетании с возможностями группирования или вставки метки элемента управления <xref:System.Windows.Forms.ListView>.  
   
  Мозаичное представление использует значок размером 32 x 32 пикселя и несколько строк текста, как показано на следующих рисунках.  
   
- ![Мозаичное представление в элементе управления ListView](../../../../docs/framework/winforms/controls/media/listviewtile.gif "ListViewTile")  
-Значки и текст мозаичного представления  
+ ![Мозаичное представление в элементе управления ListView](./media/how-to-enable-tile-view-in-a-windows-forms-listview-control/tile-view-in-listview-control.gif "плитки, значки и текст")  
+  
   
  Чтобы включить мозаичное представление, присвойте свойству <xref:System.Windows.Forms.ListView.View%2A> значение <xref:System.Windows.Forms.View.Tile>. Размер элементов мозаики можно настроить, задав свойство <xref:System.Windows.Forms.ListView.TileSize%2A> и количество отображаемых строк текста в плитке путем настройки коллекции <xref:System.Windows.Forms.ListView.Columns%2A>.  
   

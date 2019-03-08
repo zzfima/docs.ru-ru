@@ -6,14 +6,12 @@ helpviewer_keywords:
 - Header Item control type
 - control types, Header Item
 ms.assetid: 09ce1310-ee31-493c-a71e-010bafc42fcf
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 93c44848fe5febf2845e4a7c64bbb916bd3b200f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 978b40fdf38bd44cd44f430799d3d2a39b050ce5
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600447"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673734"
 ---
 # <a name="ui-automation-support-for-the-headeritem-control-type"></a>Поддержка модели автоматизации пользовательского интерфейса типа элемента управления HeaderItem
 > [!NOTE]
@@ -48,7 +46,7 @@ ms.locfileid: "54600447"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|HeaderItem|Это значение является одинаковым для всех инфраструктур [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] .|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"элемент заголовка"|Локализованная строка для типа элемента управления HeaderItem.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|False|Элемент управления "Элемент заголовка" не включается в представление содержимого дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|Да|Элемент управления "Элемент заголовка" всегда включается в представление элемента управления дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|Элемент управления "Элемент заголовка" всегда включается в представление элемента управления дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ItemStatusProperty>|См. примечания.|Это свойство предоставляет сведения для порядков сортировки по элементу заголовка.|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>   

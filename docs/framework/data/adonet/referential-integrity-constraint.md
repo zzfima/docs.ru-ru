@@ -2,12 +2,12 @@
 title: ограничение ссылочной целостности
 ms.date: 03/30/2017
 ms.assetid: 3d3ba44b-4302-40d8-a7a9-62932e0395e5
-ms.openlocfilehash: 1b6c5bb6e04b72f32f8c905526176a649257abeb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7d3304393ef4e97887d9b8afec94ed265e38eaf0
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637258"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679116"
 ---
 # <a name="referential-integrity-constraint"></a>ограничение ссылочной целостности
 Объект *ограничение ссылочной целостности* в Entity Data Model (EDM) аналогичен ограничения ссылочной целостности в реляционной базе данных. Таким же образом, столбец или столбцы из таблицы базы данных можно ссылаться на первичный ключ другой таблицы [свойство](../../../../docs/framework/data/adonet/property.md) (или свойства) из [тип сущности](../../../../docs/framework/data/adonet/entity-type.md) могут ссылаться на [ключ сущности ](../../../../docs/framework/data/adonet/entity-key.md) другого типа сущности. Тип сущности, на который приведена ссылка называется *основного конца* ограничения. Тип сущности, который ссылается на основном конечном элементе называется *зависимого конца* ограничения.  
@@ -27,7 +27,7 @@ ms.locfileid: "54637258"
 ## <a name="example"></a>Пример  
  На приведенной ниже схеме показана концептуальная модель с двумя ассоциациями: `WrittenBy` и `PublishedBy`. Тип сущности `Book` имеет свойство `PublisherId`, которое ссылается на ключ сущности типа сущности `Publisher` при определении ограничения ссылочной целостности ассоциации `PublishedBy`.  
   
- ![RefConstraintModel](../../../../docs/framework/data/adonet/media/refconstraintmodel.gif "RefConstraintModel")  
+ ![RefConstraintModel](./media/referential-integrity-constraint/reference-constraint-model.gif "пример модели справочное ограничение")  
   
  [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) использует доменный язык (DSL), называемый языком определения концептуальной схемы ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) для определения концептуальных моделей. Далее на языке CSDL определяется ограничение ссылочной целостности для ассоциации `PublishedBy`, которая ранее приводилась в концептуальной модели.  
   

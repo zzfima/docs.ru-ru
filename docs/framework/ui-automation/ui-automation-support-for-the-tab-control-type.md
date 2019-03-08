@@ -6,14 +6,12 @@ helpviewer_keywords:
 - UI Automation, Tab control type
 - control types, Tab
 ms.assetid: f8be2732-836d-4e4d-85e2-73aa39479bf4
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: d6630131143dbdaf79ceb2c838a23d2875dbd87b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8fbbda5cb8f57d69e4abbd5b84977c7f16fd0cb6
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558063"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678395"
 ---
 # <a name="ui-automation-support-for-the-tab-control-type"></a>Поддержка UI Automation для типа элемента управления Tab
 > [!NOTE]
@@ -53,9 +51,9 @@ ms.locfileid: "54558063"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|См. примечания.|Элементы управления "Вкладка" обычно имеют метку со статическим текстом, на который ссылается это свойство.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Tab|Это значение является одинаковым для всех инфраструктур пользовательского интерфейса.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"вкладка"|Локализованная строка, соответствующая типу элемента управления Tab.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|Да|Тип элемента управления Tab должен иметь возможность получать фокус клавиатуры. Обычно клиент [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] вызывает SetFocus в элементе управления Tab, и один из его элементов будет направлять фокус клавиатуры в элемент управления "Вкладка". Некоторые контейнеры вкладок могут получать фокус без установки фокуса в одном из их элементов.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|Да|Элемент управления "Вкладка" всегда включается в представление содержимого дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|Да|Элемент управления "Вкладка" всегда включается в представление элемента управления дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|True|Тип элемента управления Tab должен иметь возможность получать фокус клавиатуры. Обычно клиент [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] вызывает SetFocus в элементе управления Tab, и один из его элементов будет направлять фокус клавиатуры в элемент управления "Вкладка". Некоторые контейнеры вкладок могут получать фокус без установки фокуса в одном из их элементов.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|Элемент управления "Вкладка" всегда включается в представление содержимого дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|Элемент управления "Вкладка" всегда включается в представление элемента управления дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.OrientationProperty>|См. примечания.|Элемент управления "Вкладка" должен всегда указывать, располагается ли он горизонтально или вертикально.|  
   
 <a name="Required_UI_Automation_Control_Patterns_and_Properties"></a>   
@@ -65,7 +63,7 @@ ms.locfileid: "54558063"
 |Шаблон элемента управления/свойство шаблона|Поддержка/значение|Примечания|  
 |---------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider>|Да|Все элементы управления "Вкладка" должны поддерживать шаблон Selection.|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A>|Да|Элементы управления "Вкладка" всегда требуют, чтобы был сделан выбор.|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A>|True|Элементы управления "Вкладка" всегда требуют, чтобы был сделан выбор.|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A>|False|Элементы управления "Вкладка" всегда являются контейнерами с возможностью выбора одного варианта.|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider>|Зависит от обстоятельств|Шаблон Scroll, который должен поддерживаться в элементе управления "Вкладка", имеет мини-приложения, которые позволяют прокручивать набор элементов вкладки.|  
   

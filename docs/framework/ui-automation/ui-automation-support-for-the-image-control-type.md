@@ -6,14 +6,12 @@ helpviewer_keywords:
 - control types, Image
 - Image control type
 ms.assetid: 4e0eeefb-e09b-46d2-b83b-0a7e35543ab8
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: cfd5057ee95c5a569d85a29a25afe9a32240e801
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cf4c67382eac718ed1acf81ce88eeb9ea2c4993e
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707795"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676880"
 ---
 # <a name="ui-automation-support-for-the-image-control-type"></a>Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления изображения
 > [!NOTE]
@@ -48,7 +46,7 @@ ms.locfileid: "54707795"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Изображение|Это значение является одинаковым для всех инфраструктур пользовательского интерфейса.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"изображение"|Локализованная строка, соответствующая типу элемента управления Image.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|См. примечания.|Элемент управления "Изображение" должен включаться в представление содержимого дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , если он содержит существенные сведения, еще не предоставленные конечному пользователю.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|Да|Элемент управления "Изображение" всегда включается в представление элемента управления дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|Элемент управления "Изображение" всегда включается в представление элемента управления дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>|См. примечания.|Свойство HelpText представляет локализованную строку, которая описывает фактический внешний вид элемента управления (например, красный квадрат с белым символом "X") или другую подсказку, связанной с изображением.<br /><br /> Это свойство должно поддерживаться, если требуется длинное описание для передачи дополнительных сведений об элементе управления "Изображение". Например, для сложного графика или диаграммы. Это свойство сопоставляется с HTML-тегом LongDesc и тегом SVG (Scalable Vector Graphics — масштабируемый векторный рисунок) Desc. Разработчики, работающие с элементами управления "Изображение", должны поддерживать свойство, разрешающее задавать визуальное описание в элементе управления. Это свойство должно сопоставляться со свойством VisualDescription модели автоматизации пользовательского интерфейса.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ItemStatusProperty>|См. примечания.|Если элемент управления "Изображение" представляет сведения о состоянии определенного элемента на экране, данный элемент управления должен находиться внутри этого элемента. Если изображение содержится в элементе, этот элемент должен поддерживать свойство состояния и вызывать соответствующие уведомления при изменении состояния.<br /><br /> Если изображение является автономным элементом управления и передает состояние, это свойство должно поддерживаться.|  
   

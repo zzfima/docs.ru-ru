@@ -6,14 +6,12 @@ helpviewer_keywords:
 - Title Bar control type
 - UI Automation, Title Bar control type
 ms.assetid: 3b7a4e13-0305-45d5-bc33-1f4133c50782
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 29cb2df149c484caca45bb63e173e375b5d97515
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4e3b980aaa64dcfd53f533808be3ae5887cbfb61
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607151"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676854"
 ---
 # <a name="ui-automation-support-for-the-titlebar-control-type"></a>Поддержка Автоматизации Пользовательского Интерфейса для Элементов Управления Типа "Заголовок Окна"
 > [!NOTE]
@@ -48,7 +46,7 @@ ms.locfileid: "54607151"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|TitleBar|Это значение является одинаковым для всех инфраструктур пользовательского интерфейса.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"заголовок окна"|Локализованная строка, соответствующая типу элемента управления TitleBar.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|False|Элемент управления "Заголовок окна" никогда не является содержимым.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|Да|Элемент управления "Заголовок окна" всегда должен быть элементом управления.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|Элемент управления "Заголовок окна" всегда должен быть элементом управления.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>|Зависит от обстоятельств|Этот элемент управления будет возвращать значение в зависимости от того, отображается ли заголовок окна на экране.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>|""|Отображать текст справки не обязательно.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AcceleratorKeyProperty>|""|Заголовки окна никогда не имеют клавиш быстрого доступа.|  
