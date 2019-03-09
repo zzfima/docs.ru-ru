@@ -1,15 +1,9 @@
 ---
 title: Процесс разработки для приложений на основе Docker
-description: Общий обзор возможностей для разработки приложений Docker. Использование Visual Studio для Windows, Visual Studio для Mac и Visual Studio Code для поддержки нескольких платформ (Windows, Mac и Linux).
+description: 'Общий обзор возможностей для разработки приложений Docker. Использование Visual Studio для Windows, Visual Studio для Mac и Visual Studio Code для поддержки нескольких платформ (Windows, Mac и Linux).'
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/27/2018
-ms.openlocfilehash: eb87f9a214dbffe71dae1e1739f2563c08fac280
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084931"
 ---
 # <a name="development-process-for-docker-based-applications"></a>Процесс разработки для приложений на основе Docker
 
@@ -42,7 +36,7 @@ ms.locfileid: "54084931"
 
 ## <a name="net-languages-and-frameworks-for-docker-containers"></a>Языки и платформы .NET для контейнеров Docker
 
-Как уже упоминалось в предыдущих разделах этого руководства, при разработке приложений .NET, помещенных в контейнеры Docker, можно использовать .NET Framework, .NET Core или проект Mono с открытым кодом. При разработке приложений на основе контейнеров Linux или Windows можно использовать язык C\#, F\# или Visual Basic в зависимости от применяемой платформы .NET. Дополнительные сведения о языках .NET см. в записи блога [Стратегия .NET в отношении языков](https://blogs.msdn.microsoft.com/dotnet/2017/02/01/the-net-language-strategy/).
+Как уже упоминалось в предыдущих разделах этого руководства, при разработке приложений .NET, помещенных в контейнеры Docker, можно использовать .NET Framework, .NET Core или проект Mono с открытым кодом. При разработке приложений на основе контейнеров Linux или Windows можно использовать язык C\#, F\# или Visual Basic в зависимости от применяемой платформы .NET. Дополнительные сведения о языках .NET см. в записи блога [Стратегия .NET в отношении языков](https://devblogs.microsoft.com/dotnet/the-net-language-strategy/).
 
 >[!div class="step-by-step"]
 >[Назад](../architect-microservice-container-applications/using-azure-service-fabric.md)
