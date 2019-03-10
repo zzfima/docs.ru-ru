@@ -8,17 +8,17 @@ helpviewer_keywords:
 - events [Windows Forms], defining within Windows Forms custom controls
 - custom controls [Windows Forms], events using code
 ms.assetid: d89f1096-8061-42e2-a855-a1f053f1940a
-ms.openlocfilehash: 60ae01ca63f895bfb1c7aabbe3337596cd13933d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 4235c8b3c513509023388112071e78cfd079ec6f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199579"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705385"
 ---
-# <a name="defining-an-event-in-windows-forms-controls"></a><span data-ttu-id="362f7-102">Определение событий в элементах управления Windows Forms</span><span class="sxs-lookup"><span data-stu-id="362f7-102">Defining an Event in Windows Forms Controls</span></span>
-<span data-ttu-id="362f7-103">Дополнительные сведения о пользовательских событиях см. в разделе [события](../../../../docs/standard/events/index.md).</span><span class="sxs-lookup"><span data-stu-id="362f7-103">For details about defining custom events, see [Events](../../../../docs/standard/events/index.md).</span></span> <span data-ttu-id="362f7-104">При определении события, не имеющего связанных данных, необходимо использовать базовый тип данных о событиях, <xref:System.EventArgs> и <xref:System.EventHandler> в качестве делегата события.</span><span class="sxs-lookup"><span data-stu-id="362f7-104">If you define an event that does not have any associated data, use the base type for event data, <xref:System.EventArgs>, and use <xref:System.EventHandler> as the event delegate.</span></span> <span data-ttu-id="362f7-105">Все, что остается только определить член события и защищенный `On` *EventName* метод, который вызывает событие.</span><span class="sxs-lookup"><span data-stu-id="362f7-105">All that remains to do is to define an event member and a protected `On`*EventName* method that raises the event.</span></span>  
+# <a name="defining-an-event-in-windows-forms-controls"></a><span data-ttu-id="d712e-102">Определение событий в элементах управления Windows Forms</span><span class="sxs-lookup"><span data-stu-id="d712e-102">Defining an Event in Windows Forms Controls</span></span>
+<span data-ttu-id="d712e-103">Дополнительные сведения о пользовательских событиях см. в разделе [события](../../../standard/events/index.md).</span><span class="sxs-lookup"><span data-stu-id="d712e-103">For details about defining custom events, see [Events](../../../standard/events/index.md).</span></span> <span data-ttu-id="d712e-104">При определении события, не имеющего связанных данных, необходимо использовать базовый тип данных о событиях, <xref:System.EventArgs> и <xref:System.EventHandler> в качестве делегата события.</span><span class="sxs-lookup"><span data-stu-id="d712e-104">If you define an event that does not have any associated data, use the base type for event data, <xref:System.EventArgs>, and use <xref:System.EventHandler> as the event delegate.</span></span> <span data-ttu-id="d712e-105">Все, что остается только определить член события и защищенный `On` *EventName* метод, который вызывает событие.</span><span class="sxs-lookup"><span data-stu-id="d712e-105">All that remains to do is to define an event member and a protected `On`*EventName* method that raises the event.</span></span>  
   
- <span data-ttu-id="362f7-106">В следующем фрагменте кода показано, как пользовательский элемент управления `FlashTrackBar` определяет пользовательское событие, `ValueChanged`.</span><span class="sxs-lookup"><span data-stu-id="362f7-106">The following code fragment shows how the `FlashTrackBar` custom control defines a custom event, `ValueChanged`.</span></span> <span data-ttu-id="362f7-107">Для получения полного кода для `FlashTrackBar` пример, см. в разделе [как: создание Windows Forms элемента управления, показывающего прогресс в](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md).</span><span class="sxs-lookup"><span data-stu-id="362f7-107">For the complete code for the `FlashTrackBar` sample, see the [How to: Create a Windows Forms Control That Shows Progress](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md).</span></span>  
+ <span data-ttu-id="d712e-106">В следующем фрагменте кода показано, как пользовательский элемент управления `FlashTrackBar` определяет пользовательское событие, `ValueChanged`.</span><span class="sxs-lookup"><span data-stu-id="d712e-106">The following code fragment shows how the `FlashTrackBar` custom control defines a custom event, `ValueChanged`.</span></span> <span data-ttu-id="d712e-107">Для получения полного кода для `FlashTrackBar` пример, см. в разделе [как: Создание элемента управления Windows Forms, показывающего прогресс](how-to-create-a-windows-forms-control-that-shows-progress.md).</span><span class="sxs-lookup"><span data-stu-id="d712e-107">For the complete code for the `FlashTrackBar` sample, see the [How to: Create a Windows Forms Control That Shows Progress](how-to-create-a-windows-forms-control-that-shows-progress.md).</span></span>  
   
 ```vb  
 Option Explicit  
@@ -76,7 +76,7 @@ public class FlashTrackBar : Control {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="362f7-108">См. также</span><span class="sxs-lookup"><span data-stu-id="362f7-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d712e-108">См. также</span><span class="sxs-lookup"><span data-stu-id="d712e-108">See also</span></span>
 
-- [<span data-ttu-id="362f7-109">События элементов управления Windows Forms</span><span class="sxs-lookup"><span data-stu-id="362f7-109">Events in Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)
-- [<span data-ttu-id="362f7-110">События</span><span class="sxs-lookup"><span data-stu-id="362f7-110">Events</span></span>](../../../../docs/standard/events/index.md)
+- [<span data-ttu-id="d712e-109">События элементов управления Windows Forms</span><span class="sxs-lookup"><span data-stu-id="d712e-109">Events in Windows Forms Controls</span></span>](events-in-windows-forms-controls.md)
+- [<span data-ttu-id="d712e-110">События</span><span class="sxs-lookup"><span data-stu-id="d712e-110">Events</span></span>](../../../standard/events/index.md)
