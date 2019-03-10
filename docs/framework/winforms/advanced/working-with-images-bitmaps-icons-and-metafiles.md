@@ -9,57 +9,57 @@ helpviewer_keywords:
 - images [Windows Forms], working with
 - examples [Windows Forms], metafiles
 ms.assetid: a626d701-bd99-4fd8-b92f-7b8f794e042b
-ms.openlocfilehash: 6d2f0a2f4acebaac59f2d8180f2de4ccb88b2965
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 61d534f8299c920f656abe4280cc3ea5e609c0b2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526840"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710463"
 ---
-# <a name="working-with-images-bitmaps-icons-and-metafiles"></a><span data-ttu-id="f54e0-102">Работа с растровыми и векторными изображениями</span><span class="sxs-lookup"><span data-stu-id="f54e0-102">Working with Images, Bitmaps, Icons, and Metafiles</span></span>
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="f54e0-103"> предоставляет класс `Bitmap` для работы с растровыми изображениями и класс `Metafile` для работы с векторными изображениями.</span><span class="sxs-lookup"><span data-stu-id="f54e0-103"> provides the `Bitmap` class for working with raster images and the `Metafile` class for working with vector images.</span></span> <span data-ttu-id="f54e0-104">Классы `Bitmap` и `Metafile` являются производными от класса `Image`.</span><span class="sxs-lookup"><span data-stu-id="f54e0-104">The `Bitmap` and the `Metafile` classes both inherit from the `Image` class.</span></span>  
+# <a name="working-with-images-bitmaps-icons-and-metafiles"></a><span data-ttu-id="82c8c-102">Работа с растровыми и векторными изображениями</span><span class="sxs-lookup"><span data-stu-id="82c8c-102">Working with Images, Bitmaps, Icons, and Metafiles</span></span>
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <span data-ttu-id="82c8c-103">предоставляет класс `Bitmap` для работы с растровыми изображениями и класс `Metafile` для работы с векторными изображениями.</span><span class="sxs-lookup"><span data-stu-id="82c8c-103">provides the `Bitmap` class for working with raster images and the `Metafile` class for working with vector images.</span></span> <span data-ttu-id="82c8c-104">Классы `Bitmap` и `Metafile` являются производными от класса `Image`.</span><span class="sxs-lookup"><span data-stu-id="82c8c-104">The `Bitmap` and the `Metafile` classes both inherit from the `Image` class.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="f54e0-105">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="f54e0-105">In This Section</span></span>  
- [<span data-ttu-id="f54e0-106">Практическое руководство. Рисование существующего растрового изображения на экране</span><span class="sxs-lookup"><span data-stu-id="f54e0-106">How to: Draw an Existing Bitmap to the Screen</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-an-existing-bitmap-to-the-screen.md)  
- <span data-ttu-id="f54e0-107">Описано, как загружать и отображать точечные рисунки.</span><span class="sxs-lookup"><span data-stu-id="f54e0-107">Describes how to load and draw bitmaps.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="82c8c-105">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="82c8c-105">In This Section</span></span>  
+ [<span data-ttu-id="82c8c-106">Практическое руководство. Рисование существующего растрового изображения на экране</span><span class="sxs-lookup"><span data-stu-id="82c8c-106">How to: Draw an Existing Bitmap to the Screen</span></span>](how-to-draw-an-existing-bitmap-to-the-screen.md)  
+ <span data-ttu-id="82c8c-107">Описано, как загружать и отображать точечные рисунки.</span><span class="sxs-lookup"><span data-stu-id="82c8c-107">Describes how to load and draw bitmaps.</span></span>  
   
- [<span data-ttu-id="f54e0-108">Практическое руководство. Загрузка и отображение метафайлов</span><span class="sxs-lookup"><span data-stu-id="f54e0-108">How to: Load and Display Metafiles</span></span>](../../../../docs/framework/winforms/advanced/how-to-load-and-display-metafiles.md)  
- <span data-ttu-id="f54e0-109">Описано, как загружать и отображать метафайлы.</span><span class="sxs-lookup"><span data-stu-id="f54e0-109">Shows how to load and draw metafiles.</span></span>  
+ [<span data-ttu-id="82c8c-108">Практическое руководство. Загрузка и отображение метафайлов</span><span class="sxs-lookup"><span data-stu-id="82c8c-108">How to: Load and Display Metafiles</span></span>](how-to-load-and-display-metafiles.md)  
+ <span data-ttu-id="82c8c-109">Описано, как загружать и отображать метафайлы.</span><span class="sxs-lookup"><span data-stu-id="82c8c-109">Shows how to load and draw metafiles.</span></span>  
   
- [<span data-ttu-id="f54e0-110">Обрезка и масштабирование изображений в GDI+</span><span class="sxs-lookup"><span data-stu-id="f54e0-110">Cropping and Scaling Images in GDI+</span></span>](../../../../docs/framework/winforms/advanced/cropping-and-scaling-images-in-gdi.md)  
- <span data-ttu-id="f54e0-111">Описано, как обрезать и масштабировать векторные и растровые изображения.</span><span class="sxs-lookup"><span data-stu-id="f54e0-111">Explains how to crop and scale vector and raster images.</span></span>  
+ [<span data-ttu-id="82c8c-110">Обрезка и масштабирование изображений в GDI+</span><span class="sxs-lookup"><span data-stu-id="82c8c-110">Cropping and Scaling Images in GDI+</span></span>](cropping-and-scaling-images-in-gdi.md)  
+ <span data-ttu-id="82c8c-111">Описано, как обрезать и масштабировать векторные и растровые изображения.</span><span class="sxs-lookup"><span data-stu-id="82c8c-111">Explains how to crop and scale vector and raster images.</span></span>  
   
- [<span data-ttu-id="f54e0-112">Практическое руководство. Поворот, отражение и наклон изображений</span><span class="sxs-lookup"><span data-stu-id="f54e0-112">How to: Rotate, Reflect, and Skew Images</span></span>](../../../../docs/framework/winforms/advanced/how-to-rotate-reflect-and-skew-images.md)  
- <span data-ttu-id="f54e0-113">Описано, как поворачивать, отражать и наклонять изображения.</span><span class="sxs-lookup"><span data-stu-id="f54e0-113">Describes how to draw rotated, reflected and skewed images.</span></span>  
+ [<span data-ttu-id="82c8c-112">Практическое руководство. Поворот, отражение и наклон изображений</span><span class="sxs-lookup"><span data-stu-id="82c8c-112">How to: Rotate, Reflect, and Skew Images</span></span>](how-to-rotate-reflect-and-skew-images.md)  
+ <span data-ttu-id="82c8c-113">Описано, как поворачивать, отражать и наклонять изображения.</span><span class="sxs-lookup"><span data-stu-id="82c8c-113">Describes how to draw rotated, reflected and skewed images.</span></span>  
   
- [<span data-ttu-id="f54e0-114">Практическое руководство. Использование режима интерполяции для управления качеством изображений при масштабировании</span><span class="sxs-lookup"><span data-stu-id="f54e0-114">How to: Use Interpolation Mode to Control Image Quality During Scaling</span></span>](../../../../docs/framework/winforms/advanced/how-to-use-interpolation-mode-to-control-image-quality-during-scaling.md)  
- <span data-ttu-id="f54e0-115">Показано, как использовать перечисления <xref:System.Drawing.Drawing2D.InterpolationMode> для изменения качества изображения.</span><span class="sxs-lookup"><span data-stu-id="f54e0-115">Shows how to use the <xref:System.Drawing.Drawing2D.InterpolationMode> enumeration to change image quality.</span></span>  
+ [<span data-ttu-id="82c8c-114">Практическое руководство. Использование режима интерполяции для управления качеством изображений при масштабировании</span><span class="sxs-lookup"><span data-stu-id="82c8c-114">How to: Use Interpolation Mode to Control Image Quality During Scaling</span></span>](how-to-use-interpolation-mode-to-control-image-quality-during-scaling.md)  
+ <span data-ttu-id="82c8c-115">Показано, как использовать перечисления <xref:System.Drawing.Drawing2D.InterpolationMode> для изменения качества изображения.</span><span class="sxs-lookup"><span data-stu-id="82c8c-115">Shows how to use the <xref:System.Drawing.Drawing2D.InterpolationMode> enumeration to change image quality.</span></span>  
   
- [<span data-ttu-id="f54e0-116">Практическое руководство. Создание эскизов изображений</span><span class="sxs-lookup"><span data-stu-id="f54e0-116">How to: Create Thumbnail Images</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-thumbnail-images.md)  
- <span data-ttu-id="f54e0-117">Описано, как создавать эскизы изображений.</span><span class="sxs-lookup"><span data-stu-id="f54e0-117">Describes how to create thumbnail images.</span></span>  
+ [<span data-ttu-id="82c8c-116">Практическое руководство. Создание эскизов изображений</span><span class="sxs-lookup"><span data-stu-id="82c8c-116">How to: Create Thumbnail Images</span></span>](how-to-create-thumbnail-images.md)  
+ <span data-ttu-id="82c8c-117">Описано, как создавать эскизы изображений.</span><span class="sxs-lookup"><span data-stu-id="82c8c-117">Describes how to create thumbnail images.</span></span>  
   
- [<span data-ttu-id="f54e0-118">Практическое руководство. Повышение производительности за счет отключения автоматического масштабирования</span><span class="sxs-lookup"><span data-stu-id="f54e0-118">How to: Improve Performance by Avoiding Automatic Scaling</span></span>](../../../../docs/framework/winforms/advanced/how-to-improve-performance-by-avoiding-automatic-scaling.md)  
- <span data-ttu-id="f54e0-119">Объясняется, как рисовать изображения без автоматического масштабирования.</span><span class="sxs-lookup"><span data-stu-id="f54e0-119">Explains how to draw an image without automatic scaling.</span></span>  
+ [<span data-ttu-id="82c8c-118">Практическое руководство. Повышение производительности за счет отключения автоматического масштабирования</span><span class="sxs-lookup"><span data-stu-id="82c8c-118">How to: Improve Performance by Avoiding Automatic Scaling</span></span>](how-to-improve-performance-by-avoiding-automatic-scaling.md)  
+ <span data-ttu-id="82c8c-119">Объясняется, как рисовать изображения без автоматического масштабирования.</span><span class="sxs-lookup"><span data-stu-id="82c8c-119">Explains how to draw an image without automatic scaling.</span></span>  
   
- [<span data-ttu-id="f54e0-120">Практическое руководство. Чтение метаданных изображения</span><span class="sxs-lookup"><span data-stu-id="f54e0-120">How to: Read Image Metadata</span></span>](../../../../docs/framework/winforms/advanced/how-to-read-image-metadata.md)  
- <span data-ttu-id="f54e0-121">Описано, как производить чтение метаданных изображения.</span><span class="sxs-lookup"><span data-stu-id="f54e0-121">Describes how to read metadata from an image.</span></span>  
+ [<span data-ttu-id="82c8c-120">Практическое руководство. Чтение метаданных изображения</span><span class="sxs-lookup"><span data-stu-id="82c8c-120">How to: Read Image Metadata</span></span>](how-to-read-image-metadata.md)  
+ <span data-ttu-id="82c8c-121">Описано, как производить чтение метаданных изображения.</span><span class="sxs-lookup"><span data-stu-id="82c8c-121">Describes how to read metadata from an image.</span></span>  
   
- [<span data-ttu-id="f54e0-122">Практическое руководство. Создание растрового изображения во время выполнения</span><span class="sxs-lookup"><span data-stu-id="f54e0-122">How to: Create a Bitmap at Run Time</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-a-bitmap-at-run-time.md)  
- <span data-ttu-id="f54e0-123">Показано, как рисовать точечный рисунок во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="f54e0-123">Shows how to draw a bitmap at runtime.</span></span>  
+ [<span data-ttu-id="82c8c-122">Практическое руководство. Создание растрового изображения во время выполнения</span><span class="sxs-lookup"><span data-stu-id="82c8c-122">How to: Create a Bitmap at Run Time</span></span>](how-to-create-a-bitmap-at-run-time.md)  
+ <span data-ttu-id="82c8c-123">Показано, как рисовать точечный рисунок во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="82c8c-123">Shows how to draw a bitmap at runtime.</span></span>  
   
- [<span data-ttu-id="f54e0-124">Практическое руководство. Извлечение связанного с файлом значка в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="f54e0-124">How to: Extract the Icon Associated with a File in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/how-to-extract-the-icon-associated-with-a-file-in-windows-forms.md)  
- <span data-ttu-id="f54e0-125">Описано, как извлекать значок, являющийся внедренным ресурсом файла.</span><span class="sxs-lookup"><span data-stu-id="f54e0-125">Describes how to extract an icon that is an embedded resource of a file.</span></span>  
+ [<span data-ttu-id="82c8c-124">Практическое руководство. Извлечение значка, связанного с файлом в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="82c8c-124">How to: Extract the Icon Associated with a File in Windows Forms</span></span>](how-to-extract-the-icon-associated-with-a-file-in-windows-forms.md)  
+ <span data-ttu-id="82c8c-125">Описано, как извлекать значок, являющийся внедренным ресурсом файла.</span><span class="sxs-lookup"><span data-stu-id="82c8c-125">Describes how to extract an icon that is an embedded resource of a file.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="f54e0-126">Ссылка</span><span class="sxs-lookup"><span data-stu-id="f54e0-126">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="82c8c-126">Ссылка</span><span class="sxs-lookup"><span data-stu-id="82c8c-126">Reference</span></span>  
  <xref:System.Drawing.Image>  
- <span data-ttu-id="f54e0-127">Описывает данный класс и предоставляет ссылки на все его члены.</span><span class="sxs-lookup"><span data-stu-id="f54e0-127">Describes this class and has links to all of its members.</span></span>  
+ <span data-ttu-id="82c8c-127">Описывает данный класс и предоставляет ссылки на все его члены.</span><span class="sxs-lookup"><span data-stu-id="82c8c-127">Describes this class and has links to all of its members.</span></span>  
   
  <xref:System.Drawing.Imaging.Metafile>  
- <span data-ttu-id="f54e0-128">Описывает данный класс и предоставляет ссылки на все его члены.</span><span class="sxs-lookup"><span data-stu-id="f54e0-128">Describes this class and has links to all of its members.</span></span>  
+ <span data-ttu-id="82c8c-128">Описывает данный класс и предоставляет ссылки на все его члены.</span><span class="sxs-lookup"><span data-stu-id="82c8c-128">Describes this class and has links to all of its members.</span></span>  
   
  <xref:System.Drawing.Bitmap>  
- <span data-ttu-id="f54e0-129">Описывает данный класс и предоставляет ссылки на все его члены.</span><span class="sxs-lookup"><span data-stu-id="f54e0-129">Describes this class and has links to all of its members.</span></span>  
+ <span data-ttu-id="82c8c-129">Описывает данный класс и предоставляет ссылки на все его члены.</span><span class="sxs-lookup"><span data-stu-id="82c8c-129">Describes this class and has links to all of its members.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="f54e0-130">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="f54e0-130">Related Sections</span></span>  
- [<span data-ttu-id="f54e0-131">Изображения, точечные рисунки и метафайлы</span><span class="sxs-lookup"><span data-stu-id="f54e0-131">Images, Bitmaps, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
- <span data-ttu-id="f54e0-132">Содержит ссылки на разделы с описанием различных типов растровых изображений и способов работы с ними в приложениях.</span><span class="sxs-lookup"><span data-stu-id="f54e0-132">Contains links to topics that discuss different types of bitmaps and manipulating them in your applications.</span></span>
+## <a name="related-sections"></a><span data-ttu-id="82c8c-130">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="82c8c-130">Related Sections</span></span>  
+ [<span data-ttu-id="82c8c-131">Изображения, точечные рисунки и метафайлы</span><span class="sxs-lookup"><span data-stu-id="82c8c-131">Images, Bitmaps, and Metafiles</span></span>](images-bitmaps-and-metafiles.md)  
+ <span data-ttu-id="82c8c-132">Содержит ссылки на разделы с описанием различных типов растровых изображений и способов работы с ними в приложениях.</span><span class="sxs-lookup"><span data-stu-id="82c8c-132">Contains links to topics that discuss different types of bitmaps and manipulating them in your applications.</span></span>

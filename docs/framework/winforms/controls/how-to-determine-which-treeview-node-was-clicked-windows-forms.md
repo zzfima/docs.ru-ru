@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Определить, какой узел элемента управления TreeView была нажата (Windows Forms)
+title: Практическое руководство. Определить, какой узел элемента управления TreeView была нажата (Windows Forms)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,21 +12,21 @@ helpviewer_keywords:
 - tree nodes in TreeView control [Windows Forms], determining node clicked
 - TreeView control [Windows Forms], determining node clicked
 ms.assetid: 06a4a191-d918-42af-9f49-956c93eff261
-ms.openlocfilehash: 802367c26562d1b5aaf2398ed122cb97afbff255
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1bc883cca2ef7fa7abd65362da054251513af76a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580116"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713921"
 ---
-# <a name="how-to-determine-which-treeview-node-was-clicked-windows-forms"></a><span data-ttu-id="f8d15-102">Как выполнить Определить, какой узел элемента управления TreeView была нажата (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="f8d15-102">How to: Determine Which TreeView Node Was Clicked (Windows Forms)</span></span>
-<span data-ttu-id="f8d15-103">При работе с Windows Forms <xref:System.Windows.Forms.TreeView> управления общей задачей является определение узла была нажата и реагировать соответствующим образом.</span><span class="sxs-lookup"><span data-stu-id="f8d15-103">When working with the Windows Forms <xref:System.Windows.Forms.TreeView> control, a common task is to determine which node was clicked, and respond appropriately.</span></span>  
+# <a name="how-to-determine-which-treeview-node-was-clicked-windows-forms"></a><span data-ttu-id="1e99b-102">Практическое руководство. Определить, какой узел элемента управления TreeView была нажата (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="1e99b-102">How to: Determine Which TreeView Node Was Clicked (Windows Forms)</span></span>
+<span data-ttu-id="1e99b-103">При работе с Windows Forms <xref:System.Windows.Forms.TreeView> управления общей задачей является определение узла была нажата и реагировать соответствующим образом.</span><span class="sxs-lookup"><span data-stu-id="1e99b-103">When working with the Windows Forms <xref:System.Windows.Forms.TreeView> control, a common task is to determine which node was clicked, and respond appropriately.</span></span>  
   
-### <a name="to-determine-which-treeview-node-was-clicked"></a><span data-ttu-id="f8d15-104">Чтобы определить, была нажата узла TreeView</span><span class="sxs-lookup"><span data-stu-id="f8d15-104">To determine which TreeView node was clicked</span></span>  
+### <a name="to-determine-which-treeview-node-was-clicked"></a><span data-ttu-id="1e99b-104">Чтобы определить, была нажата узла TreeView</span><span class="sxs-lookup"><span data-stu-id="1e99b-104">To determine which TreeView node was clicked</span></span>  
   
-1.  <span data-ttu-id="f8d15-105">Используйте <xref:System.EventArgs> объекта, чтобы вернуть ссылку на объект узла, которую щелкнул пользователь.</span><span class="sxs-lookup"><span data-stu-id="f8d15-105">Use the <xref:System.EventArgs> object to return a reference to the clicked node object.</span></span>  
+1.  <span data-ttu-id="1e99b-105">Используйте <xref:System.EventArgs> объекта, чтобы вернуть ссылку на объект узла, которую щелкнул пользователь.</span><span class="sxs-lookup"><span data-stu-id="1e99b-105">Use the <xref:System.EventArgs> object to return a reference to the clicked node object.</span></span>  
   
-2.  <span data-ttu-id="f8d15-106">Определить, какой из узлов была нажата, проверив <xref:System.Windows.Forms.TreeViewEventArgs> класс, который содержит данные, относящиеся к событию.</span><span class="sxs-lookup"><span data-stu-id="f8d15-106">Determine which node was clicked by checking the <xref:System.Windows.Forms.TreeViewEventArgs> class, which contains data related to the event.</span></span>  
+2.  <span data-ttu-id="1e99b-106">Определить, какой из узлов была нажата, проверив <xref:System.Windows.Forms.TreeViewEventArgs> класс, который содержит данные, относящиеся к событию.</span><span class="sxs-lookup"><span data-stu-id="1e99b-106">Determine which node was clicked by checking the <xref:System.Windows.Forms.TreeViewEventArgs> class, which contains data related to the event.</span></span>  
   
     ```vb  
     Private Sub TreeView1_AfterSelect(ByVal sender As System.Object, _  
@@ -56,7 +56,7 @@ ms.locfileid: "54580116"
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="f8d15-107">Кроме того, можно использовать <xref:System.Windows.Forms.MouseEventArgs> из <xref:System.Windows.Forms.Control.MouseDown> или <xref:System.Windows.Forms.Control.MouseUp> событие, чтобы просмотреть <xref:System.Drawing.Point.X%2A> и <xref:System.Drawing.Point.Y%2A> значения из координат <xref:System.Drawing.Point> места выполнения щелчка.</span><span class="sxs-lookup"><span data-stu-id="f8d15-107">As an alternative, you can use the <xref:System.Windows.Forms.MouseEventArgs> of the <xref:System.Windows.Forms.Control.MouseDown> or <xref:System.Windows.Forms.Control.MouseUp> event to get the <xref:System.Drawing.Point.X%2A> and <xref:System.Drawing.Point.Y%2A> coordinate values of the <xref:System.Drawing.Point> where the click occurred.</span></span> <span data-ttu-id="f8d15-108">Затем с помощью <xref:System.Windows.Forms.TreeView> элемента управления <xref:System.Windows.Forms.TreeView.GetNodeAt%2A> метод, чтобы определить, какой из узлов была нажата.</span><span class="sxs-lookup"><span data-stu-id="f8d15-108">Then, use the <xref:System.Windows.Forms.TreeView> control's <xref:System.Windows.Forms.TreeView.GetNodeAt%2A> method to determine which node was clicked.</span></span>  
+    >  <span data-ttu-id="1e99b-107">Кроме того, можно использовать <xref:System.Windows.Forms.MouseEventArgs> из <xref:System.Windows.Forms.Control.MouseDown> или <xref:System.Windows.Forms.Control.MouseUp> событие, чтобы просмотреть <xref:System.Drawing.Point.X%2A> и <xref:System.Drawing.Point.Y%2A> значения из координат <xref:System.Drawing.Point> места выполнения щелчка.</span><span class="sxs-lookup"><span data-stu-id="1e99b-107">As an alternative, you can use the <xref:System.Windows.Forms.MouseEventArgs> of the <xref:System.Windows.Forms.Control.MouseDown> or <xref:System.Windows.Forms.Control.MouseUp> event to get the <xref:System.Drawing.Point.X%2A> and <xref:System.Drawing.Point.Y%2A> coordinate values of the <xref:System.Drawing.Point> where the click occurred.</span></span> <span data-ttu-id="1e99b-108">Затем с помощью <xref:System.Windows.Forms.TreeView> элемента управления <xref:System.Windows.Forms.TreeView.GetNodeAt%2A> метод, чтобы определить, какой из узлов была нажата.</span><span class="sxs-lookup"><span data-stu-id="1e99b-108">Then, use the <xref:System.Windows.Forms.TreeView> control's <xref:System.Windows.Forms.TreeView.GetNodeAt%2A> method to determine which node was clicked.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f8d15-109">См. также</span><span class="sxs-lookup"><span data-stu-id="f8d15-109">See also</span></span>
-- [<span data-ttu-id="f8d15-110">Элемент управления TreeView</span><span class="sxs-lookup"><span data-stu-id="f8d15-110">TreeView Control</span></span>](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="1e99b-109">См. также</span><span class="sxs-lookup"><span data-stu-id="1e99b-109">See also</span></span>
+- [<span data-ttu-id="1e99b-110">Элемент управления TreeView</span><span class="sxs-lookup"><span data-stu-id="1e99b-110">TreeView Control</span></span>](treeview-control-windows-forms.md)
