@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Определение клавиш доступа для элементов управления Windows Forms
+title: Практическое руководство. Определение клавиш доступа для элементов управления Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -20,19 +20,19 @@ helpviewer_keywords:
 - access keys [Windows Forms], Windows Forms
 - ALT key
 ms.assetid: 4faa0991-28ec-4eca-91db-51dc2cd6a7ac
-ms.openlocfilehash: 1bfbd2c6cd8aae410dfed506437bc85fbcb1d311
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5713bc9fa02e6122cc42348160dbe9315e023bc4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597857"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708006"
 ---
-# <a name="how-to-create-access-keys-for-windows-forms-controls"></a><span data-ttu-id="54784-102">Как выполнить Определение клавиш доступа для элементов управления Windows Forms</span><span class="sxs-lookup"><span data-stu-id="54784-102">How to: Create Access Keys for Windows Forms Controls</span></span>
-<span data-ttu-id="54784-103">*Ключ доступа* , подчеркивается в тексте элемента меню, пункт меню или метка элемента управления, такого как кнопка.</span><span class="sxs-lookup"><span data-stu-id="54784-103">An *access key* is an underlined character in the text of a menu, menu item, or the label of a control such as a button.</span></span> <span data-ttu-id="54784-104">С помощью ключа доступа пользователь может «щелкните» кнопки с помощью клавиши ALT и клавишу с буквой.</span><span class="sxs-lookup"><span data-stu-id="54784-104">With an access key, the user can "click" a button by pressing the ALT key in combination with the predefined access key.</span></span> <span data-ttu-id="54784-105">Например, если кнопка запускает процесс печати формы и поэтому его `Text` свойство имеет значение «Print», добавив амперсанд перед буквой «P» приводит к буква «P» будет подчеркнут в тексте кнопки во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="54784-105">For example, if a button runs a procedure to print a form, and therefore its `Text` property is set to "Print," adding an ampersand before the letter "P" causes the letter "P" to be underlined in the button text at run time.</span></span> <span data-ttu-id="54784-106">Пользователь может выполнять команда, связанная с кнопкой, нажав клавиши ALT + P.</span><span class="sxs-lookup"><span data-stu-id="54784-106">The user can run the command associated with the button by pressing ALT+P.</span></span> <span data-ttu-id="54784-107">Не может иметь ключ доступа для элемента управления, который не может получить фокус.</span><span class="sxs-lookup"><span data-stu-id="54784-107">You cannot have an access key for a control that cannot receive focus.</span></span>  
+# <a name="how-to-create-access-keys-for-windows-forms-controls"></a><span data-ttu-id="4a4d4-102">Практическое руководство. Определение клавиш доступа для элементов управления Windows Forms</span><span class="sxs-lookup"><span data-stu-id="4a4d4-102">How to: Create Access Keys for Windows Forms Controls</span></span>
+<span data-ttu-id="4a4d4-103">*Ключ доступа* , подчеркивается в тексте элемента меню, пункт меню или метка элемента управления, такого как кнопка.</span><span class="sxs-lookup"><span data-stu-id="4a4d4-103">An *access key* is an underlined character in the text of a menu, menu item, or the label of a control such as a button.</span></span> <span data-ttu-id="4a4d4-104">С помощью ключа доступа пользователь может «щелкните» кнопки с помощью клавиши ALT и клавишу с буквой.</span><span class="sxs-lookup"><span data-stu-id="4a4d4-104">With an access key, the user can "click" a button by pressing the ALT key in combination with the predefined access key.</span></span> <span data-ttu-id="4a4d4-105">Например, если кнопка запускает процесс печати формы и поэтому его `Text` свойство имеет значение «Print», добавив амперсанд перед буквой «P» приводит к буква «P» будет подчеркнут в тексте кнопки во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="4a4d4-105">For example, if a button runs a procedure to print a form, and therefore its `Text` property is set to "Print," adding an ampersand before the letter "P" causes the letter "P" to be underlined in the button text at run time.</span></span> <span data-ttu-id="4a4d4-106">Пользователь может выполнять команда, связанная с кнопкой, нажав клавиши ALT + P.</span><span class="sxs-lookup"><span data-stu-id="4a4d4-106">The user can run the command associated with the button by pressing ALT+P.</span></span> <span data-ttu-id="4a4d4-107">Не может иметь ключ доступа для элемента управления, который не может получить фокус.</span><span class="sxs-lookup"><span data-stu-id="4a4d4-107">You cannot have an access key for a control that cannot receive focus.</span></span>  
   
-### <a name="to-create-an-access-key-for-a-control"></a><span data-ttu-id="54784-108">Чтобы создать ключ доступа для элемента управления</span><span class="sxs-lookup"><span data-stu-id="54784-108">To create an access key for a control</span></span>  
+### <a name="to-create-an-access-key-for-a-control"></a><span data-ttu-id="4a4d4-108">Чтобы создать ключ доступа для элемента управления</span><span class="sxs-lookup"><span data-stu-id="4a4d4-108">To create an access key for a control</span></span>  
   
-1.  <span data-ttu-id="54784-109">Задайте `Text` свойство на строку, которая включает знак амперсанда (&) перед буквой, которая будет использоваться в сочетании клавиш.</span><span class="sxs-lookup"><span data-stu-id="54784-109">Set the `Text` property to a string that includes an ampersand (&) before the letter that will be the shortcut.</span></span>  
+1.  <span data-ttu-id="4a4d4-109">Задайте `Text` свойство на строку, которая включает знак амперсанда (&) перед буквой, которая будет использоваться в сочетании клавиш.</span><span class="sxs-lookup"><span data-stu-id="4a4d4-109">Set the `Text` property to a string that includes an ampersand (&) before the letter that will be the shortcut.</span></span>  
   
     ```vb  
     ' Set the letter "P" as an access key.  
@@ -50,10 +50,10 @@ ms.locfileid: "54597857"
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="54784-110">Чтобы включить знак амперсанда в захвате без создания ключа доступа, добавьте два амперсанда (& &).</span><span class="sxs-lookup"><span data-stu-id="54784-110">To include an ampersand in a caption without creating an access key, include two ampersands (&&).</span></span> <span data-ttu-id="54784-111">Один знак амперсанда отображается в заголовке, и никакие символы не будут подчеркнуты.</span><span class="sxs-lookup"><span data-stu-id="54784-111">A single ampersand is displayed in the caption and no characters are underlined.</span></span>  
+    >  <span data-ttu-id="4a4d4-110">Чтобы включить знак амперсанда в захвате без создания ключа доступа, добавьте два амперсанда (& &).</span><span class="sxs-lookup"><span data-stu-id="4a4d4-110">To include an ampersand in a caption without creating an access key, include two ampersands (&&).</span></span> <span data-ttu-id="4a4d4-111">Один знак амперсанда отображается в заголовке, и никакие символы не будут подчеркнуты.</span><span class="sxs-lookup"><span data-stu-id="4a4d4-111">A single ampersand is displayed in the caption and no characters are underlined.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="54784-112">См. также</span><span class="sxs-lookup"><span data-stu-id="54784-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4a4d4-112">См. также</span><span class="sxs-lookup"><span data-stu-id="4a4d4-112">See also</span></span>
 - <xref:System.Windows.Forms.Button>
-- [<span data-ttu-id="54784-113">Практическое руководство. Ответ на нажатие кнопки Windows Forms</span><span class="sxs-lookup"><span data-stu-id="54784-113">How to: Respond to Windows Forms Button Clicks</span></span>](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)
-- [<span data-ttu-id="54784-114">Практическое руководство. Задать текст, отображаемый элементом управления форм Windows</span><span class="sxs-lookup"><span data-stu-id="54784-114">How to: Set the Text Displayed by a Windows Forms Control</span></span>](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [<span data-ttu-id="54784-115">Создание меток и назначение сочетаний клавиш для элементов управления Windows Forms</span><span class="sxs-lookup"><span data-stu-id="54784-115">Labeling Individual Windows Forms Controls and Providing Shortcuts to Them</span></span>](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [<span data-ttu-id="4a4d4-113">Практическое руководство. Ответ на нажатие кнопки Windows Forms</span><span class="sxs-lookup"><span data-stu-id="4a4d4-113">How to: Respond to Windows Forms Button Clicks</span></span>](how-to-respond-to-windows-forms-button-clicks.md)
+- [<span data-ttu-id="4a4d4-114">Практическое руководство. Задать текст, отображаемый элементом управления форм Windows</span><span class="sxs-lookup"><span data-stu-id="4a4d4-114">How to: Set the Text Displayed by a Windows Forms Control</span></span>](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [<span data-ttu-id="4a4d4-115">Создание меток и назначение сочетаний клавиш для элементов управления Windows Forms</span><span class="sxs-lookup"><span data-stu-id="4a4d4-115">Labeling Individual Windows Forms Controls and Providing Shortcuts to Them</span></span>](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
