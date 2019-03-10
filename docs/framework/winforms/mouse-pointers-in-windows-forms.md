@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cursors [Windows Forms], setting
 - mouse [Windows Forms], cursors
 ms.assetid: c3400d85-de5b-42e8-abc3-d6088d69ee53
-ms.openlocfilehash: 02f93a85ecaa13f5f72cd0f31a1f5ffc24c59f68
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c018986498bfbd7e492c3e7a26c94e0baa0576d5
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491783"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712738"
 ---
 # <a name="mouse-pointers-in-windows-forms"></a>Указатели мыши в Windows Forms
 Указатель мыши *указатель*, которые иногда называют курсор, — это битовая карта, задает точку фокуса на экране для ввода данных пользователем с помощью мыши. В этом разделе представлен обзор указателя мыши в Windows Forms и описаны некоторые из способов изменения и управления указатель мыши.  
@@ -32,5 +32,5 @@ ms.locfileid: "54491783"
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.Cursor>
-- [Ввод данных мышью в приложении Windows Forms](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
-- [Функциональная возможность перетаскивания в Windows Forms](../../../docs/framework/winforms/drag-and-drop-functionality-in-windows-forms.md)
+- [Ввод данных мышью в приложении Windows Forms](mouse-input-in-a-windows-forms-application.md)
+- [Функциональная возможность перетаскивания в Windows Forms](drag-and-drop-functionality-in-windows-forms.md)

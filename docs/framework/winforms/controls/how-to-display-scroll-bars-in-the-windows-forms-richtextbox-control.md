@@ -1,19 +1,19 @@
 ---
-title: Как выполнить Отображение полос прокрутки в Windows Forms элемента управления RichTextBox
+title: Практическое руководство. Отображение полос прокрутки в Windows Forms элемента управления RichTextBox
 ms.date: 03/30/2017
 helpviewer_keywords:
 - text boxes [Windows Forms], displaying scroll bars
 - scroll bars [Windows Forms], displaying in controls
 - RichTextBox control [Windows Forms], displaying scroll bars
 ms.assetid: cdeb42e1-86e8-410c-ba46-18aec264ef5f
-ms.openlocfilehash: 6b6cfb8c21c8f3a48bb85a0591f3390d5b5575b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 119cf736dfa7b8b8fce57b7e8fcb24dd09f01ce0
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610400"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716495"
 ---
-# <a name="how-to-display-scroll-bars-in-the-windows-forms-richtextbox-control"></a>Как выполнить Отображение полос прокрутки в Windows Forms элемента управления RichTextBox
+# <a name="how-to-display-scroll-bars-in-the-windows-forms-richtextbox-control"></a>Практическое руководство. Отображение полос прокрутки в Windows Forms элемента управления RichTextBox
 По умолчанию в Windows Forms <xref:System.Windows.Forms.RichTextBox> элемент управления отображает горизонтальные и вертикальные полосы прокрутки при необходимости. Существует семь возможных значений для <xref:System.Windows.Forms.RichTextBox.ScrollBars%2A> свойство <xref:System.Windows.Forms.RichTextBox> элемента управления, которые описаны в следующей таблице.  
   
 ### <a name="to-display-scroll-bars-in-a-richtextbox-control"></a>Для отображения полос прокрутки в элементе управления RichTextBox  
@@ -22,7 +22,7 @@ ms.locfileid: "54610400"
   
 2.  Задайте <xref:System.Windows.Forms.RichTextBox.ScrollBars%2A> свойства соответствующее значение из <xref:System.Windows.Forms.RichTextBoxScrollBars> перечисления.  
   
-    |Значение|Описание:|  
+    |Значение|Описание|  
     |-----------|-----------------|  
     |<xref:System.Windows.Forms.RichTextBoxScrollBars.Both> (по умолчанию)|Отображает полосы прокрутки по горизонтали или вертикали, так и в, только в том случае, если длина текста превышает ширину или длина элемента управления.|  
     |<xref:System.Windows.Forms.RichTextBoxScrollBars.None>|Не отображаются ни полосы прокрутки.|  
@@ -42,5 +42,5 @@ ms.locfileid: "54610400"
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.RichTextBoxScrollBars>
 - <xref:System.Windows.Forms.RichTextBox>
-- [Элемент управления RichTextBox](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)
-- [Элементы управления для использования в Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [Элемент управления RichTextBox](richtextbox-control-windows-forms.md)
+- [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)

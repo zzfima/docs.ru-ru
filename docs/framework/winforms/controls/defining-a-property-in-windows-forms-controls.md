@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties [Windows Forms], defining in code
 - custom controls [Windows Forms], defining properties in code
 ms.assetid: c2eb8277-a842-4d99-89a9-647b901a0434
-ms.openlocfilehash: 8d040d4de566ea750b9a9d14531061a63524e668
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 84273d2fab36df287eaca70f5f32fd8024a9204d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441896"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712205"
 ---
 # <a name="defining-a-property-in-windows-forms-controls"></a>Определение свойства элемента управления Windows Forms
 Обзор свойств см. в разделе [Общие сведения о свойствах](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120)). При определении свойства обратите внимание на приведенные ниже соображения:  
@@ -121,7 +121,7 @@ public int Value {
 ```  
   
 ## <a name="see-also"></a>См. также
-- [Свойства элементов управления Windows Forms](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)
-- [Определение значений по умолчанию с помощью методов ShouldSerialize и Reset](../../../../docs/framework/winforms/controls/defining-default-values-with-the-shouldserialize-and-reset-methods.md)
-- [События изменения свойств](../../../../docs/framework/winforms/controls/property-changed-events.md)
-- [Атрибуты в элементах управления Windows Forms](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)
+- [Свойства элементов управления Windows Forms](properties-in-windows-forms-controls.md)
+- [Определение значений по умолчанию с помощью методов ShouldSerialize и Reset](defining-default-values-with-the-shouldserialize-and-reset-methods.md)
+- [События изменения свойств](property-changed-events.md)
+- [Атрибуты в элементах управления Windows Forms](attributes-in-windows-forms-controls.md)

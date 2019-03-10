@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, hosting ActiveX controls
 - ActiveX controls [Windows Forms], adding
 ms.assetid: 2509302d-a74e-484f-9890-2acdbfa67a68
-ms.openlocfilehash: d1b015fbd35c07611816195c4498a74fb232383f
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 354c524924794cd240a230e325a4f0eee58cdc50
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441987"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705211"
 ---
 # <a name="considerations-when-hosting-an-activex-control-on-a-windows-form"></a>Вопросы размещения элемента управления ActiveX в форме Windows Forms
 Несмотря на то что формы Windows Forms оптимизированы для размещения элементов управления Windows Forms, в формах также можно использовать элементы управления ActiveX. При планировании приложения, использующего элементы управления ActiveX, необходимо учитывать следующие факторы:  
@@ -29,8 +29,8 @@ ms.locfileid: "56441987"
     >  Если имя члена элемента управления ActiveX совпадает с именем, определенные в [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], а затем программа импорта элементов управления ActiveX добавит префикс к имени члена **Ctl** при создании <xref:System.Windows.Forms.AxHost> производного класса. Например, если элемент управления ActiveX содержит член с именем **Layout**, в производном от AxHost классе он будет переименован в **CtlLayout**, так как в [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] задано событие **Layout**.  
   
 ## <a name="see-also"></a>См. также
-- [Практическое руководство. Добавление элементов управления ActiveX в формы Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)
-- [Управление доступом для кода](../../../../docs/framework/misc/code-access-security.md)
+- [Практическое руководство. Добавление элементов управления ActiveX в формы Windows Forms](how-to-add-activex-controls-to-windows-forms.md)
+- [Управление доступом для кода](../../misc/code-access-security.md)
 - [Сравнение элементов управления и программируемых объектов в разных языках и библиотеках](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))
-- [Размещение элементов управления в формах Windows Forms](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)
-- [Элементы управления Windows Forms](../../../../docs/framework/winforms/controls/index.md)
+- [Размещение элементов управления в формах Windows Forms](putting-controls-on-windows-forms.md)
+- [Элементы управления Windows Forms](index.md)

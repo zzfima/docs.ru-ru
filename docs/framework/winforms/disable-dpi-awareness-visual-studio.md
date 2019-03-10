@@ -6,12 +6,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 0820450fb9ae257cba87b3055ea1dde91112b19e
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: 92096663032b85058dc8c918d1f90153820f6f71
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656002"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710541"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Отключение поддержки определения DPI в Visual Studio
 
@@ -21,11 +21,11 @@ Visual Studio является точек на дюйм (DPI) приложени
 
 **Конструктор Windows Forms** в Visual Studio не имеет масштабирования. При открытии некоторых форм, в результате проблем с отображением **конструктор Windows Forms** на большое число точек на дюйм (HDPI) мониторов. Например элементы управления могут иметь пересекаются, как показано на следующем рисунке:
 
-![Конструктор Windows Forms на мониторе HDPI](media/disable-dpi-awareness-visual-studio/win-forms-designer-hdpi.png)
+![Конструктор Windows Forms на мониторе HDPI](./media/disable-dpi-awareness-visual-studio/win-forms-designer-hdpi.png)
 
 В Visual Studio 2017 версии 15,8 и более поздние версии, при открытии формы в **конструктор Windows Forms** на мониторе HDPI, Visual Studio отображает желтый, информационные панели в верхней части конструктора:
 
-![Информационные панели в Visual Studio, чтобы перезагрузить компьютер в режиме не поддерживают DPI](media/disable-dpi-awareness-visual-studio/scaling-gold-bar.png)
+![Информационные панели в Visual Studio, чтобы перезагрузить компьютер в режиме не поддерживают DPI](./media/disable-dpi-awareness-visual-studio/scaling-gold-bar.png)
 
 Считывает сообщение **масштабирование на главном экране равен 200% (192 dpi). Это может вызвать проблемы отрисовки в окне конструктора.**
 
@@ -51,14 +51,14 @@ Visual Studio является точек на дюйм (DPI) приложени
 
 Visual Studio можно пометить как не поддерживающие точек на ДЮЙМ, путем изменения реестра. Откройте **редактора реестра** и добавить запись **NT\CurrentVersion\AppCompatFlags\Layers этот** подраздел:
 
-**Запись**: C:\Program файлы (x86) \Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe
+**Запись**: C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe
 
    > [!NOTE]
    > Если вы используете выпуск Visual Studio 2017 Professional или Enterprise, замените **сообщества** с **Professional** или **Enterprise** в записи. Кроме того, замените букву диска, при необходимости.
 
 **Тип**: REG_SZ
 
-**Значение**: DPIUNAWARE
+**Значение**. DPIUNAWARE
 
 > [!NOTE]
 > Visual Studio остается в режиме не поддерживают DPI, пока вы не удалите запись в реестр.
@@ -75,7 +75,7 @@ Visual Studio можно пометить как не поддерживающи
 
 Чтобы отключить уведомления, выберите **средства** > **параметры** открыть **параметры** диалоговое окно. Выберите **конструктор Windows Forms** > **Общие**и задайте **уведомления масштабирование DPI** для **False**.
 
-![Разрешение DPI, параметр уведомлений в Visual Studio](media/disable-dpi-awareness-visual-studio/notifications-option.png)
+![Разрешение DPI, параметр уведомлений в Visual Studio](./media/disable-dpi-awareness-visual-studio/notifications-option.png)
 
 Если требуется, чтобы позднее снова включить функцию масштабирования уведомления, присвойте свойству **True**.
 

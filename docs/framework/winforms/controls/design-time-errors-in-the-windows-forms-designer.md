@@ -8,12 +8,12 @@ helpviewer_keywords:
 - errors [Windows Forms Designer]
 - design-time errors [Windows Forms Designer]
 ms.assetid: ad408380-825a-46d8-9a4a-531b130b88ce
-ms.openlocfilehash: 70ca9c2c0bcaa258acaa7649adad32acdcd90dfb
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 64a0b8d0d0d9f0cc2bc2a841b999af58f29b4f75
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441649"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718055"
 ---
 # <a name="design-time-errors-in-the-windows-forms-designer"></a>Ошибки во время разработки в конструкторе Windows Forms Designer
 В этом разделе разъясняются значения и использование списка ошибок во время разработки, отображаемого в Microsoft Visual Studio при невозможности загрузить конструктор Windows Forms. При появления такого списка его надо использовать для исправлении ошибок в коде, а не воспринимать как ошибку в конструкторе.  
@@ -54,6 +54,6 @@ ms.locfileid: "56441649"
   
 ## <a name="see-also"></a>См. также
 - [Устранение неполадок при разработке во время разработки](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171843(v=vs.120))
-- [Разрешение вопросов, связанных с созданием элементов управления и компонентов](../../../../docs/framework/winforms/controls/troubleshooting-control-and-component-authoring.md)
-- [Создание элементов управления Windows Forms во время разработки](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)
+- [Разрешение вопросов, связанных с созданием элементов управления и компонентов](troubleshooting-control-and-component-authoring.md)
+- [Создание элементов управления Windows Forms во время разработки](developing-windows-forms-controls-at-design-time.md)
 - [Сообщения об ошибках конструктора Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233640(v=vs.100))

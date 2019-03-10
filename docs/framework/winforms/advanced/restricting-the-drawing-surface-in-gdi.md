@@ -9,30 +9,30 @@ helpviewer_keywords:
 - clipping [Windows Forms], using GDI+
 - GDI+, restricting drawing surface
 ms.assetid: 8b5f71d9-d2f0-4540-9c41-740f90fd4c26
-ms.openlocfilehash: 3784c833098a5585c5cdc38014d5a9542daf39f2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: da12ece815d8ae9d1f974b02198498b250885843
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583412"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717129"
 ---
 # <a name="restricting-the-drawing-surface-in-gdi"></a>Ограничение поверхности для рисования в GDI+
 Обрезка заключается в ограничении Рисование прямоугольника или области. На следующем рисунке строку «Hello», была выполнена Обрезка область в форме сердца.  
   
- ![Ограничение поверхности для рисования](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art30.gif "AboutGdip02_Art30")  
+ ![Ограничение поверхности для рисования](./media/aboutgdip02-art30.gif "AboutGdip02_Art30")  
   
 ## <a name="clipping-with-regions"></a>Задание области обрезки  
  Регионы могут создаваться из пути и пути могут содержать границы строк, поэтому контурного текста можно использовать для обрезки. Ниже показан набор концентрических эллипсов, была выполнена Обрезка внутреннюю часть текстовой строки.  
   
- ![Ограничение поверхности для рисования](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art31.gif "AboutGdip02_Art31")  
+ ![Ограничение поверхности для рисования](./media/aboutgdip02-art31.gif "AboutGdip02_Art31")  
   
  Для рисования с использованием обрезки, создание <xref:System.Drawing.Graphics> , задать его <xref:System.Drawing.Graphics.Clip%2A> свойство и затем вызвать методы рисования этого же <xref:System.Drawing.Graphics> объекта:  
   
- [!code-csharp[LinesCurvesAndShapes#91](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#91)]
- [!code-vb[LinesCurvesAndShapes#91](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#91)]  
+ [!code-csharp[LinesCurvesAndShapes#91](~/samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#91)]
+ [!code-vb[LinesCurvesAndShapes#91](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#91)]  
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Region?displayProperty=nameWithType>
-- [Линии, кривые и фигуры](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)
-- [Использование областей](../../../../docs/framework/winforms/advanced/using-regions.md)
+- [Линии, кривые и фигуры](lines-curves-and-shapes.md)
+- [Использование областей](using-regions.md)

@@ -9,33 +9,33 @@ helpviewer_keywords:
 - layout [Windows Forms], TableLayoutPanel control
 - automatic sizing
 ms.assetid: f55175c6-424e-4782-a86e-3f79c1550235
-ms.openlocfilehash: 9813a1b969d0232ec842b91385d0ad893b71c0d6
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 6d0a693feeb241b5772f2e1049e7876ed1c0da20
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747331"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703146"
 ---
 # <a name="tablelayoutpanel-control-windows-forms"></a>Элемент управления TableLayoutPanel (Windows Forms)
 Элемент управления <xref:System.Windows.Forms.TableLayoutPanel> упорядочивает содержимое в сетке. Поскольку макет выполняется как во время разработки, так и во время выполнения, его можно изменять динамически по мере изменения среды приложения. Это позволяет пропорционально изменять размер элементов управления в панели, так чтобы они учитывали изменения, такие как изменение размера родительского элемента управления или длины текста в случае локализации.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Общие сведения об элементе управления TableLayoutPanel](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-overview.md)  
+ [Общие сведения об элементе управления TableLayoutPanel](tablelayoutpanel-control-overview.md)  
  Основные понятия, связанные с элементом управления <xref:System.Windows.Forms.TableLayoutPanel>, который позволяет создавать макет со строками и столбцами.  
   
- [Советы по использованию элемента управления TableLayoutPanel](../../../../docs/framework/winforms/controls/best-practices-for-the-tablelayoutpanel-control.md)  
+ [Советы по использованию элемента управления TableLayoutPanel](best-practices-for-the-tablelayoutpanel-control.md)  
  Описаны рекомендации, помогающие наиболее эффективно использовать возможности макета элемента управления <xref:System.Windows.Forms.TableLayoutPanel>.  
   
- [Автоматическое изменение размеров элемента управления TableLayoutPanel](../../../../docs/framework/winforms/controls/autosize-behavior-in-the-tablelayoutpanel-control.md)  
+ [Автоматическое изменение размеров элемента управления TableLayoutPanel](autosize-behavior-in-the-tablelayoutpanel-control.md)  
  Объясняются способы поддержки элементом управления <xref:System.Windows.Forms.TableLayoutPanel> автоматического изменения размеров.  
   
- [Практическое руководство. Привязка и закрепление дочерних элементов управления в элементе управления TableLayoutPanel](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)  
+ [Практическое руководство. Привязка и закрепление дочерних элементов управления в элементе управления TableLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)  
  Показано, как осуществляется привязка и закрепление дочерних элементов управления в элементе управления <xref:System.Windows.Forms.TableLayoutPanel>.  
   
- [Практическое руководство. Разработка макета формы Windows, с учетом будущей локализации](../../../../docs/framework/winforms/controls/how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)  
+ [Практическое руководство. Разработка макета формы Windows, с учетом будущей локализации](how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)  
  Демонстрирует использование элемента управления <xref:System.Windows.Forms.TableLayoutPanel> для создания формы, оптимизированной для локализации.  
   
- [Практическое руководство. Создание переменного размера Windows формы для ввода данных](../../../../docs/framework/winforms/controls/how-to-create-a-resizable-windows-form-for-data-entry.md)  
+ [Практическое руководство. Создание переменного размера Windows формы для ввода данных](how-to-create-a-resizable-windows-form-for-data-entry.md)  
  Демонстрирует использование элемента управления <xref:System.Windows.Forms.TableLayoutPanel> для создания формы, оптимизированной для изменения размеров.  
   
 1.  [Практическое руководство. Выравнивание и Растягивание элемента управления в элементе управления TableLayoutPanel](how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control.md)  
@@ -57,7 +57,7 @@ ms.locfileid: "56747331"
  Справочная документация по элементу управления <xref:System.Windows.Forms.FlowLayoutPanel>.  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Локализация](../../../../docs/standard/globalization-localization/localization.md)  
+ [Локализация](../../../standard/globalization-localization/localization.md)  
  Обзор разделов, связанных с локализацией.  
   
  Также см. в разделе [локализация приложений](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/z68135h5(v=vs.120)).

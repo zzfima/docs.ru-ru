@@ -7,12 +7,12 @@ helpviewer_keywords:
 - WebBrowser control [Windows Forms], about
 - Web pages [Windows Forms], displaying in applications
 ms.assetid: 6e3e1cc2-9c48-4136-9659-e99e4e60b7e9
-ms.openlocfilehash: 919098fd5eb6578b91a7b44cf99ba3aef9076081
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cc998fd88f3487aa20f6cef73aacb6c07f92c7ad
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610985"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710099"
 ---
 # <a name="webbrowser-control-overview"></a>Общие сведения об элементе управления WebBrowser
 <xref:System.Windows.Forms.WebBrowser> Управления предоставляет управляемую оболочку для элемента управления WebBrowser ActiveX. Управляемая оболочка позволяет отображать веб-страницы в клиентских приложениях Windows Forms. Можно использовать <xref:System.Windows.Forms.WebBrowser> управления дублировать возможности просмотра веб-обозревателя в приложении. также можно отключить функциональные возможности Internet Explorer по умолчанию и использовать элемент управления в качестве простого средства просмотра документа HTML. Можно также использовать элемент управления для добавления элементов интерфейса пользователя на основе DHTML в форму и скрыть тот факт, что они размещаются в <xref:System.Windows.Forms.WebBrowser> элемента управления. Такой подход позволяет без проблем Сочетайте веб-элементов управления с помощью элементов управления Windows Forms в одном приложении.  
@@ -24,7 +24,7 @@ ms.locfileid: "54610985"
   
  `Document` Свойство также позволяет вызова методов, реализованных в веб-страницы, код из кода клиентского приложения сценария. Чтобы получить доступ к коду клиентского приложения из кода сценария, задайте `ObjectForScripting` свойство. Объект, который вы укажите может осуществляться в код скрипта в виде `window.external` объекта.  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |Свойство <xref:System.Windows.Forms.WebBrowser.Document%2A>|Возвращает объект, который предоставляет управляемый доступ HTML объектной модели документа (DOM) текущего веб-страницы.|  
 |Событие<xref:System.Windows.Forms.WebBrowser.DocumentCompleted> |Происходит по завершении загрузки веб-страницы.|  
@@ -52,9 +52,9 @@ ms.locfileid: "54610985"
 - <xref:System.Windows.Forms.WebBrowserProgressChangedEventArgs>
 - <xref:System.Windows.Forms.WebBrowserReadyState>
 - <xref:System.Windows.Forms.WebBrowserRefreshOption>
-- [Практическое руководство. Перейдите на URL-адрес с элементом управления WebBrowser](../../../../docs/framework/winforms/controls/how-to-navigate-to-a-url-with-the-webbrowser-control.md)
-- [Практическое руководство. Печать с элементом управления WebBrowser](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md)
-- [Практическое руководство. Добавление функциональности веб-браузера в приложения Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)
-- [Практическое руководство. Создание средства просмотра HTML-документ в приложении Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)
-- [Практическое руководство. Реализация двунаправленного взаимодействия между кодом DHTML и клиентским кодом приложений](../../../../docs/framework/winforms/controls/implement-two-way-com-between-dhtml-and-client.md)
-- [Безопасность элемента управления WebBrowser](../../../../docs/framework/winforms/controls/webbrowser-security.md)
+- [Практическое руководство. Перейдите на URL-адрес с элементом управления WebBrowser](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
+- [Практическое руководство. Печать с элементом управления WebBrowser](how-to-print-with-a-webbrowser-control.md)
+- [Практическое руководство. Добавление функциональности веб-браузера в приложения Windows Forms](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)
+- [Практическое руководство. Создание средства просмотра HTML-документ в приложении Windows Forms](how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)
+- [Практическое руководство. Реализация двунаправленного взаимодействия между кодом DHTML и клиентским кодом приложений](implement-two-way-com-between-dhtml-and-client.md)
+- [Безопасность элемента управления WebBrowser](webbrowser-security.md)

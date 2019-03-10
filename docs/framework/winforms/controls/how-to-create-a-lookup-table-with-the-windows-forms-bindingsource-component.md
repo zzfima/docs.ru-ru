@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Создание таблицы подстановок с помощью компонента BindingSource в Windows Forms
+title: Практическое руководство. Создание таблицы подстановок с помощью компонента BindingSource в Windows Forms
 ms.date: 03/30/2017
 helpviewer_keywords:
 - lookup tables
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], creating a lookup table
 - BindingSource component [Windows Forms], examples
 ms.assetid: 622fce80-879d-44be-abbf-8350ec22ca2b
-ms.openlocfilehash: 79459364fba51e8e10194a5e3681d6384beb16a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de61369f9fcc7493dbc3197d91c58cec9e926c13
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539900"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723924"
 ---
-# <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>Как выполнить Создание таблицы подстановок с помощью компонента BindingSource в Windows Forms
+# <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>Практическое руководство. Создание таблицы подстановок с помощью компонента BindingSource в Windows Forms
 Таблица подстановки — это таблица данных, в одном из столбцов которой отображаются данные из записей в связанной таблице. В следующих процедурах для отображения поля с отношением по внешнему ключу от родительской к дочерней таблице используется элемент управления <xref:System.Windows.Forms.ComboBox>.  
   
  Чтобы вы могли представить это отношение, приведем пример родительской и дочерней таблицы.  
@@ -35,7 +35,7 @@ ms.locfileid: "54539900"
   
  В данном случае одна таблица, CustomersTable, содержит актуальную информацию, которую необходимо отобразить и сохранить. Для экономии места в таблице опущены пояснения. Другая таблица, OrdersTable, содержит только внешнюю информацию о том, какой номер идентификатора клиента соответствует тем или иным данным и идентификатору заказа. При этом имена клиентов не указываются.  
   
- Чтобы создать таблицу подстановки, в элементе управления [ComboBox](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md) устанавливаются четыре важных свойства.  
+ Чтобы создать таблицу подстановки, в элементе управления [ComboBox](combobox-control-windows-forms.md) устанавливаются четыре важных свойства.  
   
 -   Свойство <xref:System.Windows.Forms.ComboBox.DataSource%2A> содержит имя таблицы.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "54539900"
   
      Этот элемент управления будет отображать столбец из родительской таблицы.  
   
-2.  Перетащите другие элементы управления для отображения сведений из дочерней таблицы. Формат данных в таблице следует определить, исходя из выбранных элементов управления. Дополнительные сведения см. в разделе [Функциональная классификация элементов управления Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md).  
+2.  Перетащите другие элементы управления для отображения сведений из дочерней таблицы. Формат данных в таблице следует определить, исходя из выбранных элементов управления. Дополнительные сведения см. в разделе [Функциональная классификация элементов управления Windows Forms](windows-forms-controls-by-function.md).  
   
 3.  Перетащите в форму элемент управления <xref:System.Windows.Forms.BindingNavigator>. Это позволит перемещаться по данным в дочерней таблице.  
   
@@ -93,6 +93,6 @@ ms.locfileid: "54539900"
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.BindingSource>
-- [Компонент BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component.md)
-- [Элемент управления ComboBox](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)
+- [Компонент BindingSource](bindingsource-component.md)
+- [Элемент управления ComboBox](combobox-control-windows-forms.md)
 - [Привязка элементов управления к данным в Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

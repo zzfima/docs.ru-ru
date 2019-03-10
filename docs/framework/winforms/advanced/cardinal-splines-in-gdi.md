@@ -9,32 +9,32 @@ helpviewer_keywords:
 - GDI+, cardinal splines
 - cardinal splines
 ms.assetid: 09b3797a-6294-422d-9adf-a5a0a7695c0c
-ms.openlocfilehash: f7d04f59e2424b71eb5bd0015f9496e6e67edbfa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6cc57698c8e43aefff0e0a63b0384417483d3b48
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589536"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705289"
 ---
 # <a name="cardinal-splines-in-gdi"></a>Фундаментальные сплайны в GDI+
 Фундаментальный сплайн — это последовательность отдельных кривых, объединенных в одну большую кривую. Сплайн, определяется массив точек и параметром натяжение. Фундаментальный сплайн проходящую через все точки в массиве. Существуют не острые углы и внезапные изменения tightness кривой. Ниже показан набор точек и фундаментальный сплайн, проходящий через все точки в наборе.  
   
- ![Фундаментальный сплайн](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art09.gif "Aboutgdip02_art09")  
+ ![Фундаментальный сплайн](./media/aboutgdip02-art09.gif "Aboutgdip02_art09")  
   
 ## <a name="physical-and-mathematical-splines"></a>Физические и математические сплайны  
  Физический сплайн — это тонкая часть дерева или прочих материалов, гибкие. До появления математических сплайнов проектировщики использовали физических сплайнов для рисования кривых. Конструктор будет размещать сплайн на листе бумаги и привязать его к определенному набору точек. Конструктор может создать кривую вдоль сплайн пера или карандаша. Заданный набор точек может порождать множество различных кривых, в зависимости от свойств физического сплайна. Например сплайн с высокой Сопротивляться корректировать вызовет отличаться от кривой чрезвычайную гибкость сплайна.  
   
  Формулы для математических сплайны основаны на свойства гибкие стержни, поэтому кривых, создаваемые математические сплайны аналогичны кривых, созданных при физической сплайны один раз. Так же, как физические сплайны разных натяжение будет порождать различные кривые данного набора точек, математические сплайны с разными значениями для параметра натяжение создаст различные кривые для данного набора точек. Ниже показан четыре фундаментального сплайна, проходящих через тот же набор точек. Для каждого сплайна отображается натяжение. Напряжение 0 соответствует бесконечный физических натяжение, принудительное кривая кратчайшему (прямые линии) пути между точками. Напряжение 1 соответствует нет физических натяжение, позволяя сплайн путь бы общее изгиба вступили в силу. Напряжение для значений больше 1 кривой ведет себя как сжатый spring, в более длинный маршрут.  
   
- ![Фундаментальные сплайны](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art10.gif "Aboutgdip02_art10")  
+ ![Фундаментальные сплайны](./media/aboutgdip02-art10.gif "Aboutgdip02_art10")  
   
  Все четыре сплайна на предыдущем рисунке обладают одинаковой касательной в начальной точке. Тангенс является линию от начальной точки к следующей точке кривой. Аналогично общей касательной конечной точки является линии, соединяющей конечной точки в предыдущем точку на кривой.  
   
  Чтобы нарисовать фундаментальный сплайн, вам потребуется экземпляр <xref:System.Drawing.Graphics> класс, <xref:System.Drawing.Pen>и массив <xref:System.Drawing.Point> объекты <xref:System.Drawing.Graphics> класс предоставляет <xref:System.Drawing.Graphics.DrawCurve%2A> метод, который строит сплайн, и <xref:System.Drawing.Pen> сохраняет атрибуты сплайна, например толщины и цвета. Массив <xref:System.Drawing.Point> объектов хранит точки, которые будут переданы кривой. В следующем примере кода показано, как нарисовать фундаментальный сплайн, проходящий через точек в `myPointArray`. Третий параметр — натяжение.  
   
- [!code-csharp[LinesCurvesAndShapes#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#31)]
- [!code-vb[LinesCurvesAndShapes#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#31)]  
+ [!code-csharp[LinesCurvesAndShapes#31](~/samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#31)]
+ [!code-vb[LinesCurvesAndShapes#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#31)]  
   
 ## <a name="see-also"></a>См. также
-- [Линии, кривые и фигуры](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)
-- [Построение и рисование кривых](../../../../docs/framework/winforms/advanced/constructing-and-drawing-curves.md)
+- [Линии, кривые и фигуры](lines-curves-and-shapes.md)
+- [Построение и рисование кривых](constructing-and-drawing-curves.md)

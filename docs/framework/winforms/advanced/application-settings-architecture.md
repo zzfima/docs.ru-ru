@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: 0e26684933ee2e35dfb0daa52588c2c87505f3f9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd527234b90e94b5883d15b336f5e5abc9709880
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54687249"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710684"
 ---
 # <a name="application-settings-architecture"></a>Архитектура параметров приложения
 В этом разделе описываются принципы работы архитектуры параметров приложения и рассматриваются дополнительные возможности архитектуры, такие как сгруппированные параметры и ключи параметров.  
@@ -34,12 +34,12 @@ ms.locfileid: "54687249"
   
 -   Проверка параметров, либо до их изменения, либо до их сохранения  
   
- Параметры можно описать с помощью нескольких атрибутов, определенных в <xref:System.Configuration> пространству имен; они описаны в [атрибуты параметров приложения](../../../../docs/framework/winforms/advanced/application-settings-attributes.md). При определении параметра его необходимо применить с помощью <xref:System.Configuration.ApplicationScopedSettingAttribute> или <xref:System.Configuration.UserScopedSettingAttribute>, которая описывает, применяется ли параметр ко всему приложению, или просто для текущего пользователя.  
+ Параметры можно описать с помощью нескольких атрибутов, определенных в <xref:System.Configuration> пространству имен; они описаны в [атрибуты параметров приложения](application-settings-attributes.md). При определении параметра его необходимо применить с помощью <xref:System.Configuration.ApplicationScopedSettingAttribute> или <xref:System.Configuration.UserScopedSettingAttribute>, которая описывает, применяется ли параметр ко всему приложению, или просто для текущего пользователя.  
   
  В следующем примере кода определяется пользовательский класс параметров с одним параметром `BackgroundColor`.  
   
- [!code-csharp[ApplicationSettings.Create#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/MyAppSettings.cs#1)]
- [!code-vb[ApplicationSettings.Create#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/MyAppSettings.vb#1)]  
+ [!code-csharp[ApplicationSettings.Create#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/MyAppSettings.cs#1)]
+ [!code-vb[ApplicationSettings.Create#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/MyAppSettings.vb#1)]  
   
 ## <a name="settings-persistence"></a>Сохраняемость параметров  
  <xref:System.Configuration.ApplicationSettingsBase> Класс не сохраняемость или загрузку параметров; это выполняет поставщик параметров, а класс, производный от <xref:System.Configuration.SettingsProvider>. Если класс, производный от <xref:System.Configuration.ApplicationSettingsBase> не указывает поставщика параметров посредством <xref:System.Configuration.SettingsProviderAttribute>, а затем поставщика по умолчанию, <xref:System.Configuration.LocalFileSettingsProvider>, используется.  
@@ -88,7 +88,7 @@ ms.locfileid: "54687249"
 </configuration>  
 ```  
   
- Определение элементов в разделе параметров приложения файла конфигурации см. в разделе [Схема параметров приложения](../../../../docs/framework/configure-apps/file-schema/application-settings-schema.md).  
+ Определение элементов в разделе параметров приложения файла конфигурации см. в разделе [Схема параметров приложения](../../configure-apps/file-schema/application-settings-schema.md).  
   
 ### <a name="settings-bindings"></a>Привязки параметров  
  Параметры приложения используют архитектуру привязки данных Windows Forms для обеспечения двустороннего обмена обновлениями параметров между объектом параметров и компонентами. Если для создания параметров приложения и их назначения свойствам компонентов используется Visual Studio, эти привязки создаются автоматически.  
@@ -106,7 +106,7 @@ ms.locfileid: "54687249"
   
 3.  Распределяет параметры по файлам на основе атрибута параметра.  
   
- При реализации собственного класса параметров можно использовать <xref:System.Configuration.SettingsSerializeAsAttribute> чтобы отметить параметр для настраиваемой или двоичной сериализации с помощью <xref:System.Configuration.SettingsSerializeAs> перечисления. Дополнительные сведения о создании собственных классов параметров в коде, см. в разделе [как: Создание параметров приложения](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md).  
+ При реализации собственного класса параметров можно использовать <xref:System.Configuration.SettingsSerializeAsAttribute> чтобы отметить параметр для настраиваемой или двоичной сериализации с помощью <xref:System.Configuration.SettingsSerializeAs> перечисления. Дополнительные сведения о создании собственных классов параметров в коде, см. в разделе [как: Создание параметров приложения](how-to-create-application-settings.md).  
   
 ### <a name="settings-file-locations"></a>Расположение файлов параметров  
  Расположение файлов `app`.exe.config и *user*.config зависит от способа установки приложения. Для приложения на базе Windows Forms, скопировать на локальном компьютере `app`. exe.config будет находиться в той же папке, что базовый каталог основного исполняемого файла приложения, и *пользователя*.config будет находиться в расположение которого задается <xref:System.Windows.Forms.Application.LocalUserAppDataPath%2A?displayProperty=nameWithType> свойство. Для приложения, установленного с помощью [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], оба этих файла будут находиться в каталоге данных [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] в каталоге %InstallRoot%\Documents and Settings\\*имя_пользователя*\Local Settings.  
@@ -127,8 +127,8 @@ ms.locfileid: "54687249"
   
  Вашему поставщику будет необходимо реализовать одно свойство и один метод, реализация которых может оказаться сложной. <xref:System.Configuration.SettingsProvider.ApplicationName%2A> Свойство является абстрактным свойством класса <xref:System.Configuration.SettingsProvider>; оно для возврата следующее:  
   
- [!code-csharp[ApplicationSettings.Architecture#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Architecture/CS/DummyClass.cs#2)]
- [!code-vb[ApplicationSettings.Architecture#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Architecture/VB/DummyProviderClass.vb#2)]  
+ [!code-csharp[ApplicationSettings.Architecture#2](~/samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Architecture/CS/DummyClass.cs#2)]
+ [!code-vb[ApplicationSettings.Architecture#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Architecture/VB/DummyProviderClass.vb#2)]  
   
  Ваш производный класс также должен реализовать метод `Initialize`, который не принимает аргументы и не возвращает значения. Этот метод не определяется <xref:System.Configuration.SettingsProvider>.  
   
@@ -136,8 +136,8 @@ ms.locfileid: "54687249"
   
  После реализации и компиляции поставщика необходимо указать, что класс параметров должен использовать этого поставщика вместо значения по умолчанию. Для этого через <xref:System.Configuration.SettingsProviderAttribute>. Если применяется ко всему классу параметров поставщик используется для каждого параметра, который определяется в классе; Если применяется к отдельным параметрам архитектура параметров приложения использует этого поставщика только для этих параметров и использует <xref:System.Configuration.LocalFileSettingsProvider> для остальных. В следующем примере кода показано, как указать классу параметров, что необходимо использовать пользовательского поставщика.  
   
- [!code-csharp[ApplicationSettings.Architecture#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Architecture/CS/DummyClass.cs#1)]
- [!code-vb[ApplicationSettings.Architecture#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Architecture/VB/DummyProviderClass.vb#1)]  
+ [!code-csharp[ApplicationSettings.Architecture#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Architecture/CS/DummyClass.cs#1)]
+ [!code-vb[ApplicationSettings.Architecture#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Architecture/VB/DummyProviderClass.vb#1)]  
   
  Поставщик можно вызывать одновременно из нескольких потоков, но он всегда будет выполнять запись данных в одно место хранения. Таким образом, архитектура параметров приложения будет всегда создавать только один экземпляр класса поставщика.  
   
@@ -150,7 +150,7 @@ ms.locfileid: "54687249"
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.SettingsProvider>
 - <xref:System.Configuration.LocalFileSettingsProvider>
-- [Общие сведения о параметрах приложений](../../../../docs/framework/winforms/advanced/application-settings-overview.md)
-- [Application Settings for Custom Controls](../../../../docs/framework/winforms/advanced/application-settings-for-custom-controls.md)
+- [Общие сведения о параметрах приложений](application-settings-overview.md)
+- [Application Settings for Custom Controls](application-settings-for-custom-controls.md)
 - [ClickOnce и параметры приложения](/visualstudio/deployment/clickonce-and-application-settings)
-- [Схема параметров приложения](../../../../docs/framework/configure-apps/file-schema/application-settings-schema.md)
+- [Схема параметров приложения](../../configure-apps/file-schema/application-settings-schema.md)

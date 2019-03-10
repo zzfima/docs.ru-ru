@@ -5,21 +5,21 @@ helpviewer_keywords:
 - Save File dialog box
 - SaveFileDialog component
 ms.assetid: 6f5d9321-37d7-4448-ac4c-a33c42b2a766
-ms.openlocfilehash: e402f9835f3ca03ac0632d7202000fa3208ed6e3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 552e6cae64ab3b30279e04512a87b18c2f2b068a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193935"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713089"
 ---
 # <a name="savefiledialog-component-windows-forms"></a>Компонент SaveFileDialog (Windows Forms)
 Компонент Windows Forms <xref:System.Windows.Forms.SaveFileDialog> является стандартным диалоговым окном. Он аналогичен диалоговому окну сохранения файла, используемому в операционных системах Windows. Он наследуется от класса <xref:System.Windows.Forms.CommonDialog>.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Общие сведения о компоненте SaveFileDialog](../../../../docs/framework/winforms/controls/savefiledialog-component-overview-windows-forms.md)  
+ [Общие сведения о компоненте SaveFileDialog](savefiledialog-component-overview-windows-forms.md)  
  Основные понятия, связанные с компонентом <xref:System.Windows.Forms.SaveFileDialog>, который служит для вывода стандартного диалогового окна для сохранения файла в указанном пользователем месте.  
   
- [Практическое руководство. Сохранение файлов с помощью компонента SaveFileDialog](../../../../docs/framework/winforms/controls/how-to-save-files-using-the-savefiledialog-component.md)  
+ [Практическое руководство. Сохранение файлов с помощью компонента SaveFileDialog](how-to-save-files-using-the-savefiledialog-component.md)  
  Описывается, как сохранить файл с помощью экземпляра компонента <xref:System.Windows.Forms.SaveFileDialog> во время выполнения.  
   
 ## <a name="reference"></a>Ссылка  
@@ -27,10 +27,10 @@ ms.locfileid: "47193935"
  Справочная информация о классе и его членах.  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Элементы управления для использования в Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)  
  Полный список элементов управления Windows Forms со ссылками на информацию об их применении.  
   
- [Элементы управления и компоненты диалоговых окон](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)  
+ [Элементы управления и компоненты диалоговых окон](dialog-box-controls-and-components-windows-forms.md)  
  Описание набора элементов управления и компонентов для выполнения пользователем стандартных действий в приложении или системе.  
   
  [Основной код для диалоговых окон Windows Forms](https://go.microsoft.com/fwlink/?LinkID=102575)  

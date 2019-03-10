@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Определение свойств страницы с помощью компонента PageSetupDialog
+title: Практическое руководство. Определение свойств страницы с помощью компонента PageSetupDialog
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - page setup
 - PageSetupDialog component
 ms.assetid: 6dae05bc-c0fd-4357-bb93-841a1631d98f
-ms.openlocfilehash: c72ed5e6db6149f2161e0586c783e041eb0b731b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 482825c1e17811b31c3520a0280d7d0434489bf5
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713542"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713206"
 ---
-# <a name="how-to-determine-page-properties-using-the-pagesetupdialog-component"></a>Как выполнить Определение свойств страницы с помощью компонента PageSetupDialog
-Компонент [PageSetupDialog](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md) предоставляет пользователю макет, размер бумаги и другие параметры разметки страницы для документа.  
+# <a name="how-to-determine-page-properties-using-the-pagesetupdialog-component"></a>Практическое руководство. Определение свойств страницы с помощью компонента PageSetupDialog
+Компонент [PageSetupDialog](pagesetupdialog-component-windows-forms.md) предоставляет пользователю макет, размер бумаги и другие параметры разметки страницы для документа.  
   
  Необходимо указать экземпляр класса <xref:System.Drawing.Printing.PrintDocument> — это распечатываемый документ. Кроме того, на компьютере пользователя должен быть установлен локальный или сетевой принтер, поскольку компонент <xref:System.Windows.Forms.PageSetupDialog> использует эти сведения, чтобы определить параметры форматирования страницы, предоставляемые пользователю.  
   
@@ -89,5 +89,5 @@ ms.locfileid: "54713542"
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.PageSetupDialog>
-- [Практическое руководство. Создание заданий печати стандартный Windows Forms](../../../../docs/framework/winforms/advanced/how-to-create-standard-windows-forms-print-jobs.md)
-- [Компонент PageSetupDialog](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md)
+- [Практическое руководство. Создание заданий печати стандартный Windows Forms](../advanced/how-to-create-standard-windows-forms-print-jobs.md)
+- [Компонент PageSetupDialog](pagesetupdialog-component-windows-forms.md)

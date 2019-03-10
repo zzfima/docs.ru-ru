@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [Windows Forms], managing state
 - graphics [Windows Forms], clipping
 ms.assetid: 6207cad1-7a34-4bd6-bfc1-db823ca7a73e
-ms.openlocfilehash: 5e9e75876862a73be7ace08c09610923d007de4b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fc961b59dabc2f7f123b792e7e45a4ff3b535fc1
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540862"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717626"
 ---
 # <a name="managing-the-state-of-a-graphics-object"></a>Управление состоянием объекта Graphics
 <xref:System.Drawing.Graphics> Класс является сердцем [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]. Чтобы нарисовать что-либо, необходимо получить <xref:System.Drawing.Graphics> , задать его свойства и вызывать его методы <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawImage%2A>, <xref:System.Drawing.Graphics.DrawString%2A>и ей подобные).  
@@ -67,7 +67,7 @@ graphics.DrawEllipse(pen, 0, 150, 200, 100);
 ```  
   
 ### <a name="transformations"></a>Преобразования  
- Объект <xref:System.Drawing.Graphics> поддерживает два преобразования (мировое и страничное), которые применяются ко всем элементам, отображаемым <xref:System.Drawing.Graphics> объекта. Любой аффинного преобразования могут храниться в мировое преобразование. Аффинные преобразования включают масштабирование, поворот, отражение, наклон и преобразования. Преобразование страницы может использоваться для масштабирования и преобразования единиц измерения (например, точек в дюймах). Дополнительные сведения см. в разделе [системы координат и преобразования](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md).  
+ Объект <xref:System.Drawing.Graphics> поддерживает два преобразования (мировое и страничное), которые применяются ко всем элементам, отображаемым <xref:System.Drawing.Graphics> объекта. Любой аффинного преобразования могут храниться в мировое преобразование. Аффинные преобразования включают масштабирование, поворот, отражение, наклон и преобразования. Преобразование страницы может использоваться для масштабирования и преобразования единиц измерения (например, точек в дюймах). Дополнительные сведения см. в разделе [системы координат и преобразования](coordinate-systems-and-transformations.md).  
   
  В следующем примере задается мировое и страничное преобразования из <xref:System.Drawing.Graphics> объекта. Мировое преобразование присваивается поворот на 30 градусов. Преобразование страницы устанавливается таким образом, координаты передать второй <xref:System.Drawing.Graphics.DrawEllipse%2A> будет рассматриваться как миллиметрах вместо пикселей. Код вызывает два идентичных <xref:System.Drawing.Graphics.DrawEllipse%2A> метод. Мировое преобразование применяется к первому <xref:System.Drawing.Graphics.DrawEllipse%2A> вызов и оба вида преобразований (мировое и страничное) применяются к второй <xref:System.Drawing.Graphics.DrawEllipse%2A> вызова.  
   
@@ -95,7 +95,7 @@ graphics.DrawEllipse(pen, 0, 0, 100, 50);
   
  На следующем рисунке двух эллипсов. Обратите внимание, что поворот на 30 градусов относительно начала координат (в левом верхнем углу клиентской области), не о центров эллипсов. Обратите внимание на то, что толщина пера, равная 1, означает 1 пиксель для первого эллипса и 1 миллиметр второго эллипса.  
   
- ![Овалы](../../../../docs/framework/winforms/advanced/media/csgraphicsascon1.png "csgraphicsascon1")  
+ ![Овалы](./media/csgraphicsascon1.png "csgraphicsascon1")  
   
 ### <a name="clipping-region"></a>Отсеченная область  
  Объект <xref:System.Drawing.Graphics> объект поддерживает область обрезки, применяются ко всем элементам, отображаемым <xref:System.Drawing.Graphics> объекта. Можно задать области обрезки, вызвав <xref:System.Drawing.Graphics.SetClip%2A> метод.  
@@ -148,8 +148,8 @@ graphics.DrawLine(pen, 40, 20, 190, 150);
   
  На следующем рисунке усеченные строки.  
   
- ![Ограниченная область отсечения](../../../../docs/framework/winforms/advanced/media/graphicsascon2.png "graphicsascon2")  
+ ![Ограниченная область отсечения](./media/graphicsascon2.png "graphicsascon2")  
   
 ## <a name="see-also"></a>См. также
-- [Объекты Graphics и Drawing в Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
-- [Использование вложенных графических контейнеров](../../../../docs/framework/winforms/advanced/using-nested-graphics-containers.md)
+- [Объекты Graphics и Drawing в Windows Forms](graphics-and-drawing-in-windows-forms.md)
+- [Использование вложенных графических контейнеров](using-nested-graphics-containers.md)

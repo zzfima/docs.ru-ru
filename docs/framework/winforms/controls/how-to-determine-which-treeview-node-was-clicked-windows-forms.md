@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Определить, какой узел элемента управления TreeView была нажата (Windows Forms)
+title: Практическое руководство. Определить, какой узел элемента управления TreeView была нажата (Windows Forms)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - tree nodes in TreeView control [Windows Forms], determining node clicked
 - TreeView control [Windows Forms], determining node clicked
 ms.assetid: 06a4a191-d918-42af-9f49-956c93eff261
-ms.openlocfilehash: 802367c26562d1b5aaf2398ed122cb97afbff255
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1bc883cca2ef7fa7abd65362da054251513af76a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580116"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713921"
 ---
-# <a name="how-to-determine-which-treeview-node-was-clicked-windows-forms"></a>Как выполнить Определить, какой узел элемента управления TreeView была нажата (Windows Forms)
+# <a name="how-to-determine-which-treeview-node-was-clicked-windows-forms"></a>Практическое руководство. Определить, какой узел элемента управления TreeView была нажата (Windows Forms)
 При работе с Windows Forms <xref:System.Windows.Forms.TreeView> управления общей задачей является определение узла была нажата и реагировать соответствующим образом.  
   
 ### <a name="to-determine-which-treeview-node-was-clicked"></a>Чтобы определить, была нажата узла TreeView  
@@ -59,4 +59,4 @@ ms.locfileid: "54580116"
     >  Кроме того, можно использовать <xref:System.Windows.Forms.MouseEventArgs> из <xref:System.Windows.Forms.Control.MouseDown> или <xref:System.Windows.Forms.Control.MouseUp> событие, чтобы просмотреть <xref:System.Drawing.Point.X%2A> и <xref:System.Drawing.Point.Y%2A> значения из координат <xref:System.Drawing.Point> места выполнения щелчка. Затем с помощью <xref:System.Windows.Forms.TreeView> элемента управления <xref:System.Windows.Forms.TreeView.GetNodeAt%2A> метод, чтобы определить, какой из узлов была нажата.  
   
 ## <a name="see-also"></a>См. также
-- [Элемент управления TreeView](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)
+- [Элемент управления TreeView](treeview-control-windows-forms.md)

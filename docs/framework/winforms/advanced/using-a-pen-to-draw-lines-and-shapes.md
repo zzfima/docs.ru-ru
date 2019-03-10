@@ -7,37 +7,37 @@ helpviewer_keywords:
 - examples [Windows Forms], pens
 - drawing
 ms.assetid: 8a7542ab-3e9e-443f-8405-2d6053528e20
-ms.openlocfilehash: 667a5b13c5e8cb5d9a693d6f8512b254f130d606
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3846c59712cec6003c35f336714041544dec94b3
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524346"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716296"
 ---
 # <a name="using-a-pen-to-draw-lines-and-shapes"></a>Рисование линий и фигур с помощью пера
-Используйте [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] `Pen` объектов для рисования линейных сегментов, кривых и контуров фигур. В этом разделе *строки* ссылается на любой из них, если не указано означает сегмент линии. Настройка параметров пера для управления цвет, ширину, выравнивание и стиль линий, нарисованных при помощи этого пера.  
+Используйте [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] `Pen` объектов, чтобы нарисовать сегменты линии, кривые и контуры фигуры. В этом разделе *строки* ссылается на любой из них, если не указано для обозначения только сегмент линии. Задание свойств пера для управления цвет, ширину, выравнивание и стиль линий, нарисованных при помощи этого пера.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Практическое руководство. Рисование линий с помощью пера](../../../../docs/framework/winforms/advanced/how-to-use-a-pen-to-draw-lines.md)  
- Описываются способы рисования линий.  
+ [Практическое руководство. С помощью пера для рисования линий](how-to-use-a-pen-to-draw-lines.md)  
+ Объясняется, как для рисования линий.  
   
- [Практическое руководство. Рисование прямоугольников с помощью пера](../../../../docs/framework/winforms/advanced/how-to-use-a-pen-to-draw-rectangles.md)  
+ [Практическое руководство. Рисование прямоугольников с помощью пера](how-to-use-a-pen-to-draw-rectangles.md)  
  Описывает, как Рисование прямоугольников.  
   
- [Практическое руководство. Задание толщины и выравнивания пера](../../../../docs/framework/winforms/advanced/how-to-set-pen-width-and-alignment.md)  
+ [Практическое руководство. Набор толщины и выравнивания пера](how-to-set-pen-width-and-alignment.md)  
  Объясняется, как изменить ширину и выравнивание `Pen` объекта.  
   
- [Практическое руководство. Рисование линий с наконечниками](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-with-line-caps.md)  
- Описывает добавление оконечных линиям.  
+ [Практическое руководство. Рисование линий с наконечниками](how-to-draw-a-line-with-line-caps.md)  
+ В этой статье описывается добавление оконечных, линиям.  
   
- [Практическое руководство. Соединение линий](../../../../docs/framework/winforms/advanced/how-to-join-lines.md)  
+ [Практическое руководство. Соединение линий](how-to-join-lines.md)  
  Показано, как соединить две строки.  
   
- [Практическое руководство. Рисование пользовательских пунктирных линий](../../../../docs/framework/winforms/advanced/how-to-draw-a-custom-dashed-line.md)  
+ [Практическое руководство. Рисование пользовательских пунктирных линий](how-to-draw-a-custom-dashed-line.md)  
  Описывает способ рисования пунктирной линией.  
   
- [Практическое руководство. Рисование линии с текстурным заполнением](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-filled-with-a-texture.md)  
- Объясняет, как рисование линии с текстурным заполнением.  
+ [Практическое руководство. Рисование линии с текстурным заполнением](how-to-draw-a-line-filled-with-a-texture.md)  
+ Объясняется, как рисование линии с текстурным заполнением.  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Drawing.Pen>  

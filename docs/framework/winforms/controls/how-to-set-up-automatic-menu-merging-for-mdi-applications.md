@@ -1,18 +1,18 @@
 ---
-title: Как выполнить Задайте автоматическое слияние меню приложениях MDI
+title: Практическое руководство. Задайте автоматическое слияние меню приложениях MDI
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MenuStrip [Windows Forms], merging
 - Merging [Windows Forms], automatic menu
 ms.assetid: 55e32cad-1141-4a56-aa33-d9543ca3d393
-ms.openlocfilehash: 3aeaf9ee4818b6689905c10d2bd46fc887609c35
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 152db39e7c947d5a49eaed81b00d13c02aa8014c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549828"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719739"
 ---
-# <a name="how-to-set-up-automatic-menu-merging-for-mdi-applications"></a>Как выполнить Задайте автоматическое слияние меню приложениях MDI
+# <a name="how-to-set-up-automatic-menu-merging-for-mdi-applications"></a>Практическое руководство. Задайте автоматическое слияние меню приложениях MDI
 В следующей процедуре представлены основные шаги по настройке автоматического слияния в приложении многодокументного интерфейса (MDI) с <xref:System.Windows.Forms.MenuStrip>.  
   
 ### <a name="to-set-up-automatic-menu-merging"></a>Чтобы задать автоматическое слияние меню  
@@ -34,4 +34,4 @@ ms.locfileid: "54549828"
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
-- [Общие сведения об элементе управления MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
+- [Общие сведения об элементе управления MenuStrip](menustrip-control-overview-windows-forms.md)

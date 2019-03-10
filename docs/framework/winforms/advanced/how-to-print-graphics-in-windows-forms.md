@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Печать графических изображений в Windows Forms
+title: Практическое руководство. Печать графических изображений в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - graphics [Windows Forms], printing
 - printing [Windows Forms], graphics
 ms.assetid: 32b891e6-52ff-4fea-a9ff-2ce5db20a4c6
-ms.openlocfilehash: db83d03d38acebfe42d383efdb2caa550bc2013a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cb8c9f291103915c82fb31af5c6668fbd0648f66
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636109"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721323"
 ---
-# <a name="how-to-print-graphics-in-windows-forms"></a>Как выполнить Печать графических изображений в Windows Forms
+# <a name="how-to-print-graphics-in-windows-forms"></a>Практическое руководство. Печать графических изображений в Windows Forms
 Часто требуется печать графических изображений в приложении Windows. <xref:System.Drawing.Graphics> Класс предоставляет методы для рисования объектов на таких устройствах, как экран или принтер.  
   
 ### <a name="to-print-graphics"></a>Чтобы печать графических изображений  
@@ -69,4 +69,4 @@ ms.locfileid: "54636109"
 ## <a name="see-also"></a>См. также
 - <xref:System.Drawing.Graphics>
 - <xref:System.Drawing.Brush>
-- [Поддержка печати в Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
+- [Поддержка печати в Windows Forms](windows-forms-print-support.md)

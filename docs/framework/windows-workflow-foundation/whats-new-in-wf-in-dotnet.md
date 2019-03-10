@@ -2,16 +2,16 @@
 title: Новые возможности Windows Workflow Foundation в .NET 4.5
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-ms.openlocfilehash: b907a592bd644bc7a9c4aa19cef78a49bf729561
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: a76ec56cf6ac5260f00031bc815b32b1e10804a4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212408"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718926"
 ---
 # <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>Новые возможности Windows Workflow Foundation в .NET 4.5
 
-Windows Workflow Foundation (WF) в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] содержит множество новых функций, таких как новые действия, возможности конструктора и модели разработки рабочего процесса. Многие, хотя и не все, новые возможности рабочего процесса, представленные в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], поддерживаются в повторно размещенном конструкторе рабочих процессов. Дополнительные сведения о новых возможностях, которые поддерживаются, см. в разделе [Поддержка новых функций Workflow Foundation 4.5 в конструкторе рабочих процессов, повторно размещенными](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md). Дополнительные сведения о миграции .NET 3.0 и .NET 3.5 приложений рабочих процессов для использования последней версии, см. в разделе [руководство по миграции](../../../docs/framework/windows-workflow-foundation/migration-guidance.md). В этом разделе содержится общее описание новых возможностей рабочего процесса, представленных в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].
+Windows Workflow Foundation (WF) в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] содержит множество новых функций, таких как новые действия, возможности конструктора и модели разработки рабочего процесса. Многие, хотя и не все, новые возможности рабочего процесса, представленные в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], поддерживаются в повторно размещенном конструкторе рабочих процессов. Дополнительные сведения о новых возможностях, которые поддерживаются, см. в разделе [Поддержка новых функций Workflow Foundation 4.5 в конструкторе рабочих процессов, повторно размещенными](wf-features-in-the-rehosted-workflow-designer.md). Дополнительные сведения о миграции .NET 3.0 и .NET 3.5 приложений рабочих процессов для использования последней версии, см. в разделе [руководство по миграции](migration-guidance.md). В этом разделе содержится общее описание новых возможностей рабочего процесса, представленных в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].
 
 > [!WARNING]
 > Новые функции Windows Workflow Foundation, представленные в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] не доступны для проектов, предназначенных для предыдущих версий платформы. Если проект, ориентированный на [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], переориентируется на предыдущую версию платформы .NET Framework, может возникнуть несколько проблем.
@@ -25,13 +25,13 @@ Windows Workflow Foundation (WF) в [!INCLUDE[net_v45](../../../includes/net-v45
 
 В [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] предоставлено несколько новых функций управления версиями с помощью нового класса <xref:System.Activities.WorkflowIdentity>. <xref:System.Activities.WorkflowIdentity> позволяет авторам приложений рабочего процесса сопоставить сохраненный экземпляр рабочего процесса с его определением.
 
-- Разработчики, использующие среду размещения <xref:System.Activities.WorkflowApplication>, могут использовать <xref:System.Activities.WorkflowIdentity> для параллельного размещения нескольких версий рабочего процесса. Сохраненные экземпляры рабочего процесса можно загрузить с помощью нового класса <xref:System.Activities.WorkflowApplicationInstance>, а затем узел может использовать <xref:System.Activities.WorkflowApplicationInstance.DefinitionIdentity%2A> для предоставления правильной версии определения рабочего процесса при создании экземпляра <xref:System.Activities.WorkflowApplication>. Дополнительные сведения см. в разделе [с помощью WorkflowIdentity и управления версиями](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md) и [как: Размещение нескольких версий рабочего процесса Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).
+- Разработчики, использующие среду размещения <xref:System.Activities.WorkflowApplication>, могут использовать <xref:System.Activities.WorkflowIdentity> для параллельного размещения нескольких версий рабочего процесса. Сохраненные экземпляры рабочего процесса можно загрузить с помощью нового класса <xref:System.Activities.WorkflowApplicationInstance>, а затем узел может использовать <xref:System.Activities.WorkflowApplicationInstance.DefinitionIdentity%2A> для предоставления правильной версии определения рабочего процесса при создании экземпляра <xref:System.Activities.WorkflowApplication>. Дополнительные сведения см. в разделе [с помощью WorkflowIdentity и управления версиями](using-workflowidentity-and-versioning.md) и [как: Размещение нескольких версий рабочего процесса Side-by-Side](how-to-host-multiple-versions-of-a-workflow-side-by-side.md).
 
-- Узел <xref:System.ServiceModel.WorkflowServiceHost> может теперь содержать несколько версий. Когда развертывается новая версия службы рабочего процесса, новые экземпляры создаются с помощью новой службы, но существующие экземпляры завершают работу, используя предыдущую версию. Дополнительные сведения см. в разделе [параллельное управление версиями в WorkflowServiceHost](../../../docs/framework/wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md).
+- Узел <xref:System.ServiceModel.WorkflowServiceHost> может теперь содержать несколько версий. Когда развертывается новая версия службы рабочего процесса, новые экземпляры создаются с помощью новой службы, но существующие экземпляры завершают работу, используя предыдущую версию. Дополнительные сведения см. в разделе [параллельное управление версиями в WorkflowServiceHost](../wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md).
 
-- Введено динамическое обновление, которое позволяет обновить определение сохраненного экземпляра рабочего процесса. Дополнительные сведения см. в разделе [динамического обновления](../../../docs/framework/windows-workflow-foundation/dynamic-update.md) и [как: Обновить определение выполняющегося экземпляра рабочего процесса](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).
+- Введено динамическое обновление, которое позволяет обновить определение сохраненного экземпляра рабочего процесса. Дополнительные сведения см. в разделе [динамического обновления](dynamic-update.md) и [как: Обновить определение выполняющегося экземпляра рабочего процесса](how-to-update-the-definition-of-a-running-workflow-instance.md).
 
-- Предоставляется скрипт базы данных SqlWorkflowInstanceStoreSchemaUpgrade.sql для обновления баз данных сохраняемости, созданных с помощью скриптов базы данных [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]. Этот скрипт обновляет базы данных сохраняемости [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] для поддержки новых возможностей управления версиями, представленных в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Сохраняемые экземпляры рабочих процессов в базе данных получают значения управления версиями по умолчанию и могут участвовать в параллельном выполнении и динамическом обновлении. Дополнительные сведения см. в разделе [обновление .NET Framework 4 баз данных постоянного хранения для поддержки управления версиями рабочего процесса](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases).
+- Предоставляется скрипт базы данных SqlWorkflowInstanceStoreSchemaUpgrade.sql для обновления баз данных сохраняемости, созданных с помощью скриптов базы данных [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]. Этот скрипт обновляет базы данных сохраняемости [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] для поддержки новых возможностей управления версиями, представленных в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Сохраняемые экземпляры рабочих процессов в базе данных получают значения управления версиями по умолчанию и могут участвовать в параллельном выполнении и динамическом обновлении. Дополнительные сведения см. в разделе [обновление .NET Framework 4 баз данных постоянного хранения для поддержки управления версиями рабочего процесса](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases).
 
 ## <a name="BKMK_NewActivities"></a> Действия
 
@@ -72,7 +72,7 @@ Windows Workflow Foundation (WF) в [!INCLUDE[net_v45](../../../includes/net-v45
 
      Если исключения не должны сериализоваться, убедитесь в том, что они используются в <xref:System.Activities.Statements.NoPersistScope>.
 
-4. Создатели действия должны переопределить метод <xref:System.Activities.Activity.CacheMetadata%2A>, чтобы в среде выполнения рабочего процесса отражение не использовалось автоматически для этого типа. Аргументы и дочерние действия не должны иметь значение NULL, а метод <xref:System.Activities.ActivityMetadata.Bind%2A> должен вызываться явным образом. Дополнительные сведения о переопределении <xref:System.Activities.Activity.CacheMetadata%2A>, см. в разделе [предоставление данных с помощью CacheMetadata](../../../docs/framework/windows-workflow-foundation/exposing-data-with-cachemetadata.md). Кроме того, экземпляры аргументов, которые относятся к типу, который является `internal` или **частного** должен быть явно создан в <xref:System.Activities.Activity.CacheMetadata%2A> во избежание создавались путем отражения.
+4. Создатели действия должны переопределить метод <xref:System.Activities.Activity.CacheMetadata%2A>, чтобы в среде выполнения рабочего процесса отражение не использовалось автоматически для этого типа. Аргументы и дочерние действия не должны иметь значение NULL, а метод <xref:System.Activities.ActivityMetadata.Bind%2A> должен вызываться явным образом. Дополнительные сведения о переопределении <xref:System.Activities.Activity.CacheMetadata%2A>, см. в разделе [предоставление данных с помощью CacheMetadata](exposing-data-with-cachemetadata.md). Кроме того, экземпляры аргументов, которые относятся к типу, который является `internal` или **частного** должен быть явно создан в <xref:System.Activities.Activity.CacheMetadata%2A> во избежание создавались путем отражения.
 
 5. Типы не будут использовать <xref:System.Runtime.Serialization.ISerializable> или <xref:System.SerializableAttribute> для сериализации. Типы, которые должны быть сериализованы, должны поддерживать <xref:System.Runtime.Serialization.DataContractSerializer>.
 
@@ -118,7 +118,7 @@ Windows Workflow Foundation (WF) в [!INCLUDE[net_v45](../../../includes/net-v45
 
 На следующем снимке экрана показано контекстное меню конструктора переменных и аргументов.
 
-![Переменных и аргументов контекстное меню конструктора](../../../docs/framework/windows-workflow-foundation/media/designercontextmenu.png "DesignerContextMenu")
+![Переменных и аргументов контекстное меню конструктора](./media/designercontextmenu.png "DesignerContextMenu")
 
 ### <a name="BKMK_AutoSurround"></a> Автоматическое создание последовательностей
 
@@ -126,11 +126,11 @@ Windows Workflow Foundation (WF) в [!INCLUDE[net_v45](../../../includes/net-v45
 
 На следующем снимке экрана показано действие `WriteLine` в `Body` для `NoPersistScope`.
 
-![Автоматическое&#45;заключить расположение сброса](../../../docs/framework/windows-workflow-foundation/media/autosurround1.png "AutoSurround1")
+![Автоматическое&#45;заключить расположение сброса](./media/autosurround1.png "AutoSurround1")
 
 На следующем снимке экрана показано автоматически созданное действие `Sequence` в `Body`, когда второй объект `WriteLine` сбрасывается ниже первого.
 
-![Автоматически созданное действие sequence](../../../docs/framework/windows-workflow-foundation/media/autosurround2.png "AutoSurround2")
+![Автоматически созданное действие sequence](./media/autosurround2.png "AutoSurround2")
 
 ### <a name="BKMK_PanMode"></a> Панорамный режим
 
@@ -138,7 +138,7 @@ Windows Workflow Foundation (WF) в [!INCLUDE[net_v45](../../../includes/net-v45
 
 На следующем снимке экрана показана кнопка панорамирования, расположенная в правом нижнем углу конструктора рабочих процессов.
 
-![Кнопка панорамирования в конструкторе рабочих процессов](../../../docs/framework/windows-workflow-foundation/media/panbutton.png "PanButton")
+![Кнопка панорамирования в конструкторе рабочих процессов](./media/panbutton.png "PanButton")
 
 Панорамирование в конструкторе рабочих процессов возможно также с помощью средней кнопки мыши или клавиши пробела.
 
@@ -152,9 +152,9 @@ Windows Workflow Foundation (WF) в [!INCLUDE[net_v45](../../../includes/net-v45
 
 Для упрощения навигации по иерархическим рабочим процессам компоненты рабочего процесса отображаются в виде древовидной структуры. Структура отображается в **Структура документа** представления. Чтобы открыть это представление в верхней строке меню, выберите **представление**, **Other Windows**, **Структура документа**, или нажмите клавиши Ctrl W, U. Щелкнув узел в представлении структуры, можно перейти к соответствующему действию в конструкторе рабочих процессов. Представление структуры будет обновлено с отображением действий, выбранных в конструкторе.
 
-На следующем снимке экрана завершенного рабочего процесса из [Приступая к работе](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) показано представление структуры с помощью последовательного рабочего процесса.
+На следующем снимке экрана завершенного рабочего процесса из [Приступая к работе](getting-started-tutorial.md) показано представление структуры с помощью последовательного рабочего процесса.
 
-![Режим в конструкторе рабочих процессов структуры](../../../docs/framework/windows-workflow-foundation/media/outlineviewinworkflowdesigner.jpg "OutlineViewinWorkflowDesigner")
+![Режим в конструкторе рабочих процессов структуры](./media/outlineviewinworkflowdesigner.jpg "OutlineViewinWorkflowDesigner")
 
 ### <a name="BKMK_CSharpExpressions"></a> Выражения C#
 
@@ -162,7 +162,7 @@ Windows Workflow Foundation (WF) в [!INCLUDE[net_v45](../../../includes/net-v45
 
 Выражения на C# проверяются во время разработки. Ошибки в выражениях C# будут помечены подчеркиванием красной волнистой линией.
 
-Дополнительные сведения о выражениях C# см. в разделе [выражения C#](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md).
+Дополнительные сведения о выражениях C# см. в разделе [выражения C#](csharp-expressions.md).
 
 ### <a name="BKMK_Visibility"></a> Дополнительные возможности управления видимостью панели оболочки и заголовка элементы
 
@@ -174,17 +174,17 @@ Windows Workflow Foundation (WF) в [!INCLUDE[net_v45](../../../includes/net-v45
 
 На следующем снимке экрана показаны точки присоединения, которые появляются при перетаскивании действия из области элементов.
 
-![Начальный узел блок-схема, с точками автоматического соединения](../../../docs/framework/windows-workflow-foundation/media/autoconnect1.png "Autoconnect1")
+![Начальный узел блок-схема, с точками автоматического соединения](./media/autoconnect1.png "Autoconnect1")
 
 Действия можно также перетаскивать на соединения между узлами блок-схемы и состояниями для автоматической вставки узла между двумя другими узлами. На следующем снимке экрана показана выделенная соединительная линия, на которую можно перетаскивать действия из области элементов.
 
-![Автоматическое&#45;дескриптор для действий сброса вставить](../../../docs/framework/windows-workflow-foundation/media/autoinsert.png "автоматически вставить")
+![Автоматическое&#45;дескриптор для действий сброса вставить](./media/autoinsert.png "автоматически вставить")
 
 ### <a name="BKMK_Annotations"></a> Заметки конструктора
 
 Для упрощения разработки крупных рабочих процессов конструктор теперь поддерживает добавление заметок, помогающих отслеживать процесс проектирования. Заметки можно добавлять к действиям, состояниям, узлам блок-схемы, переменным и аргументам. На следующем снимке экрана показано контекстное меню, которое используется для добавления заметок к конструктору.
 
-![Контекстное меню примечания](../../../docs/framework/windows-workflow-foundation/media/annotationdialog.png "annotationdialog")
+![Контекстное меню примечания](./media/annotationdialog.png "annotationdialog")
 
 ### <a name="debugging-states"></a>Состояния отладки
 
@@ -230,12 +230,12 @@ Windows Workflow Foundation (WF) в [!INCLUDE[net_v45](../../../includes/net-v45
 
 4. Действия для создания рабочих процессов конечного автомата, включая <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State> и <xref:System.Activities.Statements.Transition>
 
-На следующем рисунке показан рабочего процесса конечного автомата завершенное состояние из [Приступая к работе](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) шаг [как: Создание рабочего процесса конечного автомата](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md).
+На следующем рисунке показан рабочего процесса конечного автомата завершенное состояние из [Приступая к работе](getting-started-tutorial.md) шаг [как: Создание рабочего процесса конечного автомата](how-to-create-a-state-machine-workflow.md).
 
-![Завершения рабочего процесса конечного автомата](../../../docs/framework/windows-workflow-foundation/media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")
+![Завершения рабочего процесса конечного автомата](./media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")
 
-Дополнительные сведения о создании рабочих процессов конечного автомата состояния см. в разделе [автоматов](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md).
+Дополнительные сведения о создании рабочих процессов конечного автомата состояния см. в разделе [автоматов](state-machine-workflows.md).
 
 ### <a name="BKMK_ContractFirst"></a> Разработка рабочего процесса первого контракта
 
-Средство разработки рабочего процесса с первоначальным контрактом позволяет разработчику создать контракт в code first, а затем, с помощью нескольких щелчков в Visual Studio автоматически сформировать шаблон действия в области элементов с представлением каждой операции. Эти действия затем используются для создания рабочего процесса с операциями, указанными в контракте. Конструктор рабочих процессов проверяет службу рабочего процесса для проверки того, что эти операции реализованы, а сигнатура рабочего процесса соответствует сигнатуре контракта. Разработчик также может связать службу рабочего процесса с коллекцией реализованных контрактов. Дополнительные сведения о разработке службы рабочего процесса первого контракта, см. в разделе [как: Создание службы рабочего процесса, который использует существующий контракт службы](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).
+Средство разработки рабочего процесса с первоначальным контрактом позволяет разработчику создать контракт в code first, а затем, с помощью нескольких щелчков в Visual Studio автоматически сформировать шаблон действия в области элементов с представлением каждой операции. Эти действия затем используются для создания рабочего процесса с операциями, указанными в контракте. Конструктор рабочих процессов проверяет службу рабочего процесса для проверки того, что эти операции реализованы, а сигнатура рабочего процесса соответствует сигнатуре контракта. Разработчик также может связать службу рабочего процесса с коллекцией реализованных контрактов. Дополнительные сведения о разработке службы рабочего процесса первого контракта, см. в разделе [как: Создание службы рабочего процесса, который использует существующий контракт службы](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).

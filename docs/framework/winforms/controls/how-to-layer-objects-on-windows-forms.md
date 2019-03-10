@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Многоуровневое расположение объектов в формах Windows Forms
+title: Практическое руководство. Многоуровневое расположение объектов в формах Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - z-order
 ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
-ms.openlocfilehash: 2911542f93bf6afaf1560d0f627af3de1b2871ba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea97e26d31d2cdda353b6ada554cac27c5b56c62
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509189"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719108"
 ---
-# <a name="how-to-layer-objects-on-windows-forms"></a>Как выполнить Многоуровневое расположение объектов в формах Windows Forms
+# <a name="how-to-layer-objects-on-windows-forms"></a>Практическое руководство. Многоуровневое расположение объектов в формах Windows Forms
 При создании сложного пользовательского интерфейса, или работать с формой многодокументного интерфейса (MDI), часто требуется слоя элементы управления и дочерние формы для создания более сложных интерфейсов пользователя (UI). Чтобы переместить и хранить список элементов управления и окон в контексте группы, управлять z порядком. *Z-порядок* является видимое расположение элементов управления на форме вдоль оси z формы (глубина). Окно, в верхней части z порядок перекрывает все остальные окна. Все остальные окна перекрывают окно в нижней части z порядка.  
   
 > [!NOTE]
@@ -53,8 +53,8 @@ ms.locfileid: "54509189"
 >  Windows Forms поддерживает *вложении элементов управления*. Включение элементов управления заключается в размещении нескольких элементов управления внутри элемента управления, такие как ряд <xref:System.Windows.Forms.RadioButton> внутри элементов управления <xref:System.Windows.Forms.GroupBox> элемента управления. Можно размещать элементы управления внутри содержащего элемента управления. Перемещение группы перемещает элементы управления, так как они содержатся внутри него.  
   
 ## <a name="see-also"></a>См. также
-- [Элементы управления Windows Forms](../../../../docs/framework/winforms/controls/index.md)
-- [Упорядочение элементов управления в формах Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
-- [Создание меток и назначение сочетаний клавиш для элементов управления Windows Forms](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [Элементы управления для использования в Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
-- [Функциональная классификация элементов управления Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+- [Элементы управления Windows Forms](index.md)
+- [Упорядочение элементов управления в формах Windows Forms](arranging-controls-on-windows-forms.md)
+- [Создание меток и назначение сочетаний клавиш для элементов управления Windows Forms](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)
+- [Функциональная классификация элементов управления Windows Forms](windows-forms-controls-by-function.md)

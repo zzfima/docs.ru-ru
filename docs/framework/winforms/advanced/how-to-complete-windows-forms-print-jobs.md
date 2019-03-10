@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Полный Windows Forms заданий печати
+title: Практическое руководство. Полный Windows Forms заданий печати
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,17 +9,17 @@ helpviewer_keywords:
 - print jobs [Windows Forms], completing in Windows Forms
 - printing [Windows Forms], print jobs
 ms.assetid: 23ec74f7-34c5-4710-82a0-ee2914518548
-ms.openlocfilehash: f7504d645ea1fca6f45b17f79eb576919b782263
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1ae20e4fdc3a4fc3de8c462c355bcc700eddf22e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572829"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711737"
 ---
-# <a name="how-to-complete-windows-forms-print-jobs"></a>Как выполнить Полный Windows Forms заданий печати
+# <a name="how-to-complete-windows-forms-print-jobs"></a>Практическое руководство. Полный Windows Forms заданий печати
 Часто текстовые редакторы и другие приложения, использующие печать предоставит возможность отобразить сообщение для пользователей, что задание на печать завершена. Можно предоставить эти функции в формах Windows путем обработки <xref:System.Drawing.Printing.PrintDocument.EndPrint> событие <xref:System.Drawing.Printing.PrintDocument> компонента.  
   
- Следующая процедура требует, что вы создали приложения на основе Windows с помощью <xref:System.Drawing.Printing.PrintDocument> компонентом, который является стандартным способом включения печати из приложения на основе Windows. Дополнительные сведения о печати из Windows Forms с помощью <xref:System.Drawing.Printing.PrintDocument> компонента, см. в разделе [как: Создание заданий печати стандартный Windows Forms](../../../../docs/framework/winforms/advanced/how-to-create-standard-windows-forms-print-jobs.md).  
+ Следующая процедура требует, что вы создали приложения на основе Windows с помощью <xref:System.Drawing.Printing.PrintDocument> компонентом, который является стандартным способом включения печати из приложения на основе Windows. Дополнительные сведения о печати из Windows Forms с помощью <xref:System.Drawing.Printing.PrintDocument> компонента, см. в разделе [как: Создание заданий печати стандартный Windows Forms](how-to-create-standard-windows-forms-print-jobs.md).  
   
 ### <a name="to-complete-a-print-job"></a>Чтобы выполнить задание печати  
   
@@ -82,4 +82,4 @@ ms.locfileid: "54572829"
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Drawing.Printing.PrintDocument>
-- [Поддержка печати в Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
+- [Поддержка печати в Windows Forms](windows-forms-print-support.md)

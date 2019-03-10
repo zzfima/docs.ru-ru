@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms, bi-directional support
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ecd167b46a3d600852b5b12a7f18d0013502523d
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: f494d3176d72563a82b50fd5e077917e46045b91
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442975"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712295"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Поддержка двунаправленного письма для приложений Windows Forms
 Visual Studio можно использовать для создания приложений на основе Windows, которые поддерживают такие языки (справа налево), такие как арабский и иврит. Сюда входят стандартные формы, диалоговые окна, MDI-формы и все элементы управления, с которыми можно работать в этих формах, то есть все объекты в пространстве имен <xref:System.Windows.Forms.Control>.  
@@ -79,7 +79,7 @@ Visual Studio можно использовать для создания при
 |<xref:System.Windows.Forms.VScrollBar>|Отображается не в правой, а в левой части элементов управления с прокруткой.|Не влияет.|Нет|  
   
 ## <a name="encoding"></a>кодировка  
- Windows Forms поддерживает Юникод, поэтому можно включить любой набор символов при создании приложений с двунаправленным письмом. Однако не все элементы управления Windows Forms поддерживают Юникод во всех платформах. Дополнительные сведения см. в разделе [Кодировка и глобализация Windows Forms](../../../../docs/framework/winforms/advanced/encoding-and-windows-forms-globalization.md).  
+ Windows Forms поддерживает Юникод, поэтому можно включить любой набор символов при создании приложений с двунаправленным письмом. Однако не все элементы управления Windows Forms поддерживают Юникод во всех платформах. Дополнительные сведения см. в разделе [Кодировка и глобализация Windows Forms](encoding-and-windows-forms-globalization.md).  
   
 ## <a name="gdi"></a>GDI+  
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] можно использовать для рисования текста с порядком чтения справа налево. Метод <xref:System.Drawing.Graphics.DrawString%2A>, используемый для отрисовки текста, поддерживает параметр `StringFormat`, который можно задать для члена <xref:System.Drawing.StringFormatFlags.DirectionRightToLeft> перечисления <xref:System.Drawing.StringFormatFlags>, чтобы обратить точку начала координат для текста.  

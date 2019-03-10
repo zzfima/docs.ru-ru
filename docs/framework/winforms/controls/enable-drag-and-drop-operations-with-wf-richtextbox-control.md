@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Включение операций перетаскивания и вставки с помощью элемента управления RichTextBox в Windows Forms
+title: Практическое руководство. Включение операций перетаскивания и вставки с помощью элемента управления RichTextBox в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - text boxes [Windows Forms], drag-and-drop operations
 - RichTextBox control [Windows Forms], drag-and-drop operations
 ms.assetid: ca167d1c-2014-4cf0-96a0-20598470be3b
-ms.openlocfilehash: ccf98ee1afe82b2e76679406a08e98e6f4e6fb15
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ead61b4b889119b47675e49bc95e9631a8ad664e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637470"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711009"
 ---
-# <a name="how-to-enable-drag-and-drop-operations-with-the-windows-forms-richtextbox-control"></a>Как выполнить Включение операций перетаскивания и вставки с помощью элемента управления RichTextBox в Windows Forms
+# <a name="how-to-enable-drag-and-drop-operations-with-the-windows-forms-richtextbox-control"></a>Практическое руководство. Включение операций перетаскивания и вставки с помощью элемента управления RichTextBox в Windows Forms
 Операции перетаскивания для элемента управления <xref:System.Windows.Forms.RichTextBox> Windows Forms выполняются путем обработки событий <xref:System.Windows.Forms.RichTextBox.DragEnter> и <xref:System.Windows.Forms.RichTextBox.DragDrop> . Таким образом, операции перетаскивания для элемента управления <xref:System.Windows.Forms.RichTextBox> являются очень простыми.  
   
 ### <a name="to-enable-drag-operations-in-a-richtextbox-control"></a>Включение операций перетаскивания в элементе управления RichTextBox  
@@ -166,6 +166,6 @@ ms.locfileid: "54637470"
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.RichTextBox>
-- [Практическое руководство. Выполнение операции перетаскивания и вставки между приложениями](../../../../docs/framework/winforms/advanced/how-to-perform-drag-and-drop-operations-between-applications.md)
-- [Элемент управления RichTextBox](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)
-- [Элементы управления для использования в Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [Практическое руководство. Выполнение операции перетаскивания и вставки между приложениями](../advanced/how-to-perform-drag-and-drop-operations-between-applications.md)
+- [Элемент управления RichTextBox](richtextbox-control-windows-forms.md)
+- [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)

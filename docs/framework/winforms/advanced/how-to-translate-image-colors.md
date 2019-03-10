@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Преобразование цветов изображения
+title: Практическое руководство. Преобразование цветов изображения
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - images [Windows Forms], changing colors
 - image colors [Windows Forms]
 ms.assetid: 2106fb9a-4d60-4dcf-9220-9f189a6c4d19
-ms.openlocfilehash: 7a3ed1f3f6b3e89c8df160b7e753839e20acd877
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 81aecddb28903649ff2d59e80fc90368df5e2db4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549763"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703027"
 ---
-# <a name="how-to-translate-image-colors"></a>Как выполнить Преобразование цветов изображения
+# <a name="how-to-translate-image-colors"></a>Практическое руководство. Преобразование цветов изображения
 Перевод добавляет значение к одному или нескольким из четырех компонентов цвета. В следующей таблице приведены элементы матрицы цветов, представляющих переводы.  
   
 |Преобразуемый компонент|Элемент матрицы|  
@@ -31,7 +31,7 @@ ms.locfileid: "54549763"
   
  Ниже показан исходное изображение в левой части и преобразованные изображения справа.  
   
- ![Преобразование цветов](../../../../docs/framework/winforms/advanced/media/colortrans2.png "colortrans2")  
+ ![Преобразование цветов](./media/colortrans2.png "colortrans2")  
   
  Ниже перечислены эти векторы четырех полос до и после преобразования. Обратите внимание на то, что так как максимальное значение для компонента цвета равно 1, красный компонент во второй строке остается неизменным. (Аналогичным образом, минимальное значение для компонента цвета — 0).  
   
@@ -42,14 +42,14 @@ ms.locfileid: "54549763"
 |Зеленый (0, 1, 0, 1)|(0.75, 1, 0, 1)|  
 |Синий (0, 0, 1, 1)|(0.75, 0, 1, 1)|  
   
- [!code-csharp[System.Drawing.RecoloringImages#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#11)]
- [!code-vb[System.Drawing.RecoloringImages#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#11)]  
+ [!code-csharp[System.Drawing.RecoloringImages#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#11)]
+ [!code-vb[System.Drawing.RecoloringImages#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Предыдущий пример предназначен для работы с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs> `e`, который является параметром <xref:System.Windows.Forms.Control.Paint> обработчик событий. Замените `ColorBars.bmp` в вашей системе путь и имя файла изображения.  
+ Предыдущий пример предназначен для работы с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs> `e`, который является параметром обработчика события <xref:System.Windows.Forms.Control.Paint>. Замените `ColorBars.bmp` в вашей системе путь и имя файла изображения.  
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Drawing.Imaging.ColorMatrix>
 - <xref:System.Drawing.Imaging.ImageAttributes>
-- [Объекты Graphics и Drawing в Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
-- [перекрашивание изображений](../../../../docs/framework/winforms/advanced/recoloring-images.md)
+- [Объекты Graphics и Drawing в Windows Forms](graphics-and-drawing-in-windows-forms.md)
+- [перекрашивание изображений](recoloring-images.md)

@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Привязка к данным Windows Forms ComboBox или ListBox-элемент управления
+title: Практическое руководство. Привязка к данным Windows Forms ComboBox или ListBox-элемент управления
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,19 +15,19 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: dfd7f081-8bea-4a41-86a3-86a1934828ef
-ms.openlocfilehash: 4220e3e7d750e0d0caf0adbcbd2e1d96131e7c88
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c8eb224cbb8ec7ab271edaed8bb25f9cc7fb8ddc
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698379"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709930"
 ---
-# <a name="how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data"></a>Как выполнить Привязка к данным Windows Forms ComboBox или ListBox-элемент управления
+# <a name="how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data"></a>Практическое руководство. Привязка к данным Windows Forms ComboBox или ListBox-элемент управления
 Можно привязать <xref:System.Windows.Forms.ComboBox> и <xref:System.Windows.Forms.ListBox> к данным для выполнения задач, таких как просмотр данных в базе данных, ввод новых данных и изменение существующих данных.  
   
 ### <a name="to-bind-a-combobox-or-listbox-control"></a>Для привязки элемента управления ComboBox или ListBox  
   
-1.  Задайте `DataSource` свойство для объекта источника данных. Возможные источники данных <xref:System.Windows.Forms.BindingSource> привязаны к данным, таблицу данных, представление данных, набор данных, представление данных диспетчера, массив или любой класс, реализующий <xref:System.Collections.IList> интерфейс. Дополнительные сведения см. в разделе [Data Sources Supported by Windows Forms](../../../../docs/framework/winforms/data-sources-supported-by-windows-forms.md).  
+1.  Задайте `DataSource` свойство для объекта источника данных. Возможные источники данных <xref:System.Windows.Forms.BindingSource> привязаны к данным, таблицу данных, представление данных, набор данных, представление данных диспетчера, массив или любой класс, реализующий <xref:System.Collections.IList> интерфейс. Дополнительные сведения см. в разделе [Data Sources Supported by Windows Forms](../data-sources-supported-by-windows-forms.md).  
   
 2.  Если выполнить привязку к таблице, задать `DisplayMember` значения свойства имя столбца в источнике данных.  
   
@@ -56,6 +56,6 @@ ms.locfileid: "54698379"
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
-- [Привязка данных Windows Forms](../../../../docs/framework/winforms/windows-forms-data-binding.md)
-- [Привязка данных и Windows Forms](../../../../docs/framework/winforms/data-binding-and-windows-forms.md)
-- [Создание списка для выбора элементов в Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+- [Привязка данных Windows Forms](../windows-forms-data-binding.md)
+- [Привязка данных и Windows Forms](../data-binding-and-windows-forms.md)
+- [Создание списка для выбора элементов в Windows Forms](windows-forms-controls-used-to-list-options.md)

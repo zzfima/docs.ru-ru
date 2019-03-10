@@ -15,15 +15,15 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], debugging
 - design-time debugging
 ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
-ms.openlocfilehash: 0a251aabe7acdc8e59b31d9534e27f0afeab3633
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 9bd3f822e5a1f8572ebb7f5991abccde904150b8
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664228"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717834"
 ---
 # <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>Пошаговое руководство. Отладка пользовательских элементов управления Windows Forms во время разработки
-При создании пользовательского элемента управления, вам будет часто понадобиться для отладки его поведение во время разработки. Это особенно верно в случае, если вы создаете пользовательский конструктор для элемента управления. Дополнительные сведения см. в разделе [Пошаговое руководство: Создание Windows Forms элемент управления, который использует преимущества средств разработки Visual Studio](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md).  
+При создании пользовательского элемента управления, вам будет часто понадобиться для отладки его поведение во время разработки. Это особенно верно в случае, если вы создаете пользовательский конструктор для элемента управления. Дополнительные сведения см. в разделе [Пошаговое руководство: Создание Windows Forms элемент управления, который использует преимущества средств разработки Visual Studio](creating-a-wf-control-design-time-features.md).  
   
  Можно выполнять отладку пользовательских элементов управления с помощью Visual Studio, так же, как отладка любого других классов .NET Framework. Разница заключается в том, что необходимо отладить отдельный экземпляр Visual Studio, на котором выполняется код настраиваемого элемента управления  
   
@@ -134,7 +134,7 @@ ms.locfileid: "56664228"
   
 2.  В **DebugControlLibrary** свойств, выберите **Отладка** вкладки.  
   
-     В **действие при запуске** выберите **запуск внешней программы**. Вы будете отладка отдельного экземпляра Visual Studio, поэтому нажмите кнопку с многоточием (![экрана VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) чтобы перейти в интегрированной среде разработки Visual Studio. Имя исполняемого файла — **devenv.exe**, и если вы установили в расположение по умолчанию, его путь — 9.0\Common7\IDE\devenv.exe %programfiles%\Microsoft Visual Studio.  
+     В **действие при запуске** выберите **запуск внешней программы**. Вы будете отладка отдельного экземпляра Visual Studio, поэтому нажмите кнопку с многоточием (![экрана VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) чтобы перейти в интегрированной среде разработки Visual Studio. Имя исполняемого файла — **devenv.exe**, и если вы установили в расположение по умолчанию, его путь — 9.0\Common7\IDE\devenv.exe %programfiles%\Microsoft Visual Studio.  
   
 3.  Нажмите кнопку **ОК**, чтобы закрыть диалоговое окно.  
   
@@ -170,9 +170,9 @@ ms.locfileid: "56664228"
   
 -   Существует несколько атрибутов можно применить к свойствам элемента управления для управления взаимодействием элемента управления с помощью конструктора. Вы найдете эти атрибуты в <xref:System.ComponentModel?displayProperty=nameWithType> пространства имен.  
   
--   Можно написать пользовательский конструктор для элемента управления. Это дает полный контроль над разработкой с помощью расширяемой инфраструктуры конструкторов в Visual Studio. Дополнительные сведения см. в разделе [Пошаговое руководство: Создание Windows Forms элемент управления, который использует преимущества средств разработки Visual Studio](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md).  
+-   Можно написать пользовательский конструктор для элемента управления. Это дает полный контроль над разработкой с помощью расширяемой инфраструктуры конструкторов в Visual Studio. Дополнительные сведения см. в разделе [Пошаговое руководство: Создание Windows Forms элемент управления, который использует преимущества средств разработки Visual Studio](creating-a-wf-control-design-time-features.md).  
   
 ## <a name="see-also"></a>См. также
-- [Пошаговое руководство: Создание элемента управления Windows Forms, используются преимущества функций Visual Studio во время разработки](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)
+- [Пошаговое руководство: Создание элемента управления Windows Forms, используются преимущества функций Visual Studio во время разработки](creating-a-wf-control-design-time-features.md)
 - [Практическое руководство. Доступа к службам времени разработки](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171822(v=vs.120))
 - [Практическое руководство. Поддержка разработки доступа в Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171827(v=vs.120))

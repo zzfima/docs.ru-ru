@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Отображать веб-ссылки с помощью элемента управления RichTextBox в Windows Forms
+title: Практическое руководство. Отображать веб-ссылки с помощью элемента управления RichTextBox в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - examples [Windows Forms], text boxes
 - RichTextBox control [Windows Forms], linking to Web pages
 ms.assetid: 95089a37-a202-4f7a-94ee-6ee312908851
-ms.openlocfilehash: e32dfc394f91ed44b702136d3177f6307f3991ba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 64a2c8d9a9f6b8a7271a659b80ca2a63c423b3bc
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727590"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718532"
 ---
-# <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a>Как выполнить Отображать веб-ссылки с помощью элемента управления RichTextBox в Windows Forms
+# <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a>Практическое руководство. Отображать веб-ссылки с помощью элемента управления RichTextBox в Windows Forms
 Windows Forms <xref:System.Windows.Forms.RichTextBox> веб-ссылок может отображать элемент управления цветом и подчеркиванием. Можно написать код, который открывает окно браузера, веб-узлом, указанный в тексте ссылки, при щелчке ссылки.  
   
 ### <a name="to-link-to-a-web-page-with-the-richtextbox-control"></a>Чтобы связать веб-страницу с элементом управления RichTextBox  
@@ -33,7 +33,7 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> веб-ссылок мож
      В следующем примере <xref:System.Windows.Forms.RichTextBox.LinkClicked> событий открывает экземпляр Internet Explorer на URL-адрес, указанный в <xref:System.Windows.Forms.RichTextBox.Text%2A> свойство <xref:System.Windows.Forms.RichTextBox> элемента управления. В этом примере предполагается, что форма <xref:System.Windows.Forms.RichTextBox> элемента управления.  
   
     > [!IMPORTANT]
-    >  В вызывающем <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> метод, вы столкнетесь <xref:System.Security.SecurityException> исключение, если код выполняется в контексте частичного доверия из-за недостатка прав. Дополнительные сведения см. в разделе [Основы управления доступом для кода](../../../../docs/framework/misc/code-access-security-basics.md).  
+    >  В вызывающем <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> метод, вы столкнетесь <xref:System.Security.SecurityException> исключение, если код выполняется в контексте частичного доверия из-за недостатка прав. Дополнительные сведения см. в разделе [Основы управления доступом для кода](../../misc/code-access-security-basics.md).  
   
     ```vb  
     Public p As New System.Diagnostics.Process  
@@ -120,5 +120,5 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> веб-ссылок мож
 - <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>
 - <xref:System.Windows.Forms.RichTextBox.LinkClicked>
 - <xref:System.Windows.Forms.RichTextBox>
-- [Элемент управления RichTextBox](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)
-- [Элементы управления для использования в Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [Элемент управления RichTextBox](richtextbox-control-windows-forms.md)
+- [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)

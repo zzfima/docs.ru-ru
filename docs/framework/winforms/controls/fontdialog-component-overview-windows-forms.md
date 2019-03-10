@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Font dialog box
 - FontDialog component [Windows Forms], about FontDialog component
 ms.assetid: daf46e57-1b4b-4b7a-bad0-b50ca7ba75dc
-ms.openlocfilehash: 854f54454c0c88f965d9ac8240c11f6821f0c64b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 26bfb561c1050438b78c4ae0a3e6e8da32458cdd
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594568"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725042"
 ---
 # <a name="fontdialog-component-overview-windows-forms"></a>Общие сведения о компоненте FontDialog (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.FontDialog> компонент является стандартным диалоговым окном, который является стандартной Windows **шрифта** диалоговое окно, используемое для предоставления шрифтов, установленных в системе. Используйте его в приложении Windows в качестве простого решения для выбора шрифтов, вместо настройки собственного диалогового окна.  
@@ -25,4 +25,4 @@ Windows Forms <xref:System.Windows.Forms.FontDialog> компонент явля
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.FontDialog>
-- [Компонент FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md)
+- [Компонент FontDialog](fontdialog-component-windows-forms.md)

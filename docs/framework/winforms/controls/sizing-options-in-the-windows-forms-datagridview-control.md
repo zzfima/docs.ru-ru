@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], row sizing
 - data grids [Windows Forms], sizing options
 ms.assetid: a5620a9c-0d06-41e3-8934-c25ddb16c9e6
-ms.openlocfilehash: d3082da455df7497a4c54f963017910e54ac677a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a236289939b9355e961ce1bfc9a7e0ff5349a95a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536312"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717912"
 ---
 # <a name="sizing-options-in-the-windows-forms-datagridview-control"></a>Изменение размеров управления DataGridView в Windows Forms
 <xref:System.Windows.Forms.DataGridView> размер во многих случаях можно изменить строк, столбцов и заголовков. В следующей таблице показаны эти случаи.  
@@ -61,7 +61,7 @@ ms.locfileid: "54536312"
 ## <a name="automatic-sizing"></a>Автоматическое изменение размеров  
  Существует два типа автоматического изменения размеров в <xref:System.Windows.Forms.DataGridView> управления: режим заполнения столбца и автоматического изменения размеров на основе содержимого.  
   
- Режим заполнения столбца приводит к видимых столбцов в элементе управления для заполнения отображаемой области элемента управления. Дополнительные сведения об этом режиме см. в разделе [режим заполнения столбцов в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/column-fill-mode-in-the-windows-forms-datagridview-control.md).  
+ Режим заполнения столбца приводит к видимых столбцов в элементе управления для заполнения отображаемой области элемента управления. Дополнительные сведения об этом режиме см. в разделе [режим заполнения столбцов в элементе управления DataGridView Windows Forms](column-fill-mode-in-the-windows-forms-datagridview-control.md).  
   
  Можно также настроить строк, столбцов и заголовков на автоматическое изменение размеров в соответствии с содержимым ячейки. В этом случае изменение размера происходит при каждом изменении содержимого ячейки.  
   
@@ -154,6 +154,6 @@ ms.locfileid: "54536312"
 - <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode>
 - <xref:System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode>
 - <xref:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode>
-- [Изменение размера столбцов и строк элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
-- [Установка режимов заполнения для столбцов элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/column-fill-mode-in-the-windows-forms-datagridview-control.md)
-- [Практическое руководство. Режимы изменения размеров элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)
+- [Изменение размера столбцов и строк элемента управления DataGridView в Windows Forms](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
+- [Установка режимов заполнения для столбцов элемента управления DataGridView в Windows Forms](column-fill-mode-in-the-windows-forms-datagridview-control.md)
+- [Практическое руководство. Режимы изменения размеров элемента управления DataGridView в Windows Forms](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)

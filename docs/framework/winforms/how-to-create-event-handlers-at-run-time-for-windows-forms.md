@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Создание обработчиков событий во время выполнения для форм Windows Forms
+title: Практическое руководство. Создание обработчиков событий во время выполнения для форм Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - examples [Windows Forms], event handling
 - Button control [Windows Forms], event handlers
 ms.assetid: 2e7c9e1a-61fe-444d-8113-3c5bacf1c8cb
-ms.openlocfilehash: 4e02fec0a131523059f88d4f12f62398d80fddf0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ebafd745290a40fa6f4f83910fb32d67cdcff75
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632054"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705272"
 ---
-# <a name="how-to-create-event-handlers-at-run-time-for-windows-forms"></a>Как выполнить Создание обработчиков событий во время выполнения для форм Windows Forms
+# <a name="how-to-create-event-handlers-at-run-time-for-windows-forms"></a>Практическое руководство. Создание обработчиков событий во время выполнения для форм Windows Forms
 Помимо создания событий с помощью конструктора Windows Forms можно также создать обработчик событий во время выполнения. Это позволит подключать обработчики событий в зависимости от условий в коде во время выполнения, а не при начальном запуске программы.  
   
 ### <a name="to-create-an-event-handler-at-run-time"></a>Создание обработчика событий во время выполнения  
@@ -73,6 +73,6 @@ ms.locfileid: "54632054"
      <xref:System.ComponentModel.EventHandlerList.AddHandler%2A> Метод демонстрируется в приведенном выше коде Visual Basic, устанавливает обработчик событий щелчка для кнопки.  
   
 ## <a name="see-also"></a>См. также
-- [Создание обработчиков событий в Windows Forms](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
-- [Общие сведения об обработчиках событий](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)
+- [Создание обработчиков событий в Windows Forms](creating-event-handlers-in-windows-forms.md)
+- [Общие сведения об обработчиках событий](event-handlers-overview-windows-forms.md)
 - [Устранение неполадок, связанных с унаследованными обработчиками событий, в Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)

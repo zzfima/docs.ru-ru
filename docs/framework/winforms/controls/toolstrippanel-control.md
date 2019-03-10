@@ -8,12 +8,12 @@ helpviewer_keywords:
 - tool area [Windows Forms]
 - vertical space
 ms.assetid: aa47af39-1e71-40ee-bb75-2d2478f81bd0
-ms.openlocfilehash: 86940b97ed373dc90f82520104b9b85019873cd2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9982d7b1edde083d546681b37966358d2aac23bd
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745263"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718497"
 ---
 # <a name="toolstrippanel-control"></a>Элемент управления ToolStripPanel
 Элемент управления `ToolStripPanel` обеспечивает совместное использование горизонтального или вертикального пространства в области инструментов при прикреплении и размещении элементов управления <xref:System.Windows.Forms.ToolStrip> в том случае, когда четыре панели и центральная панель <xref:System.Windows.Forms.ToolStripContainer> не нужны.  
@@ -21,18 +21,18 @@ ms.locfileid: "54745263"
  В подразделах данного раздела описываются принципы и методы применения возможностей `ToolStripPanel` в приложениях.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Общие сведения об элементе управления ToolStripPanel](../../../../docs/framework/winforms/controls/toolstrippanel-control-overview.md)  
- Приводятся разделы с описанием назначения элемента управления Windows Forms <xref:System.Windows.Forms.ToolStripContainer> и основных понятий, связанных с ним.  
+ [Общие сведения об элементе управления ToolStripPanel](toolstrippanel-control-overview.md)  
+ Содержит разделы с описанием назначения и основных понятий элемента управления <xref:System.Windows.Forms.ToolStripContainer> Windows Forms.  
   
- [Практическое руководство. Соединение нескольких ToolStripPanel](../../../../docs/framework/winforms/controls/how-to-join-toolstrippanels.md)  
+ [Практическое руководство. Соединение нескольких ToolStripPanel](how-to-join-toolstrippanels.md)  
  Демонстрируется добавление элементов управления <xref:System.Windows.Forms.ToolStrip> в `ToolStripPanel`.  
   
- [Практическое руководство. Руководство.](../../../../docs/framework/winforms/controls/how-to-use-toolstrippanels-for-mdi.md)  
+ [Практическое руководство. Руководство.](how-to-use-toolstrippanels-for-mdi.md)  
  Демонстрируется гибкость, обеспечиваемая элементами управления `ToolStripPanel` в приложении с интерфейсом MDI.  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Forms.ToolStripPanel>  
- Содержит справочную документацию по элементу управления <xref:System.Windows.Forms.ToolStripPanel>.  
+ Справочная документация по элементу управления <xref:System.Windows.Forms.ToolStripPanel>.  
   
 ## <a name="see-also"></a>См. также
-- [Элементы управления для использования в Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)

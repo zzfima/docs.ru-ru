@@ -15,18 +15,18 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-ms.openlocfilehash: 40a07ddffa68d0dac3cb9b4956510fa7dc124a7c
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 145e14f4a6e11209e46e8761f8a0551c1400a605
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664748"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711308"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Источники данных, поддерживаемые Windows Forms
 В большинстве случаев привязки данных используется в приложениях для использования данных, хранящихся в базах данных. Привязки данных Windows Forms, предоставляет доступ к данным из баз данных, а также данные в других структурах, таких как массивы и коллекции, до тех пор, пока определенные минимальные требования будут соблюдены.  
   
 ## <a name="structures-to-bind-to"></a>Структуры для привязки  
- В Windows Forms, можно привязать к самые разнообразные структур, от простых объектов (простая привязка) до сложных списков, таких как таблицы данных ADO.NET (сложная привязка). Для простой привязки Windows Forms поддерживает привязку к общим свойствам простого объекта. Привязки на основе списка Windows Forms обычно требуется, чтобы объект поддерживал <xref:System.Collections.IList> интерфейс или <xref:System.ComponentModel.IListSource> интерфейс. Кроме того при связывании с помощью <xref:System.Windows.Forms.BindingSource> компонента, можно привязать к объекту, который поддерживает <xref:System.Collections.IEnumerable> интерфейс. Дополнительные сведения об интерфейсах, связанных с привязкой данных, см. в разделе [интерфейсах, которые относятся к привязке данных](../../../docs/framework/winforms/interfaces-related-to-data-binding.md).  
+ В Windows Forms, можно привязать к самые разнообразные структур, от простых объектов (простая привязка) до сложных списков, таких как таблицы данных ADO.NET (сложная привязка). Для простой привязки Windows Forms поддерживает привязку к общим свойствам простого объекта. Привязки на основе списка Windows Forms обычно требуется, чтобы объект поддерживал <xref:System.Collections.IList> интерфейс или <xref:System.ComponentModel.IListSource> интерфейс. Кроме того при связывании с помощью <xref:System.Windows.Forms.BindingSource> компонента, можно привязать к объекту, который поддерживает <xref:System.Collections.IEnumerable> интерфейс. Дополнительные сведения об интерфейсах, связанных с привязкой данных, см. в разделе [интерфейсах, которые относятся к привязке данных](interfaces-related-to-data-binding.md).  
   
  Ниже перечислены структуры можно привязать к в Windows Forms.  
   
@@ -58,6 +58,6 @@ ms.locfileid: "56664748"
 -   <xref:System.Data.DataViewManager>. Объект <xref:System.Data.DataViewManager> — это настраиваемое представление для всего <xref:System.Data.DataSet>, аналогично <xref:System.Data.DataView>, но с отношениями, которые включены. С помощью <xref:System.Data.DataViewManager.DataViewSettings%2A> коллекции, можно задать фильтры по умолчанию и параметры сортировки для всех представлений, <xref:System.Data.DataViewManager> имеет для данной таблицы.  
   
 ## <a name="see-also"></a>См. также
-- [Уведомления об изменениях в привязке данных Windows Forms](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)
-- [Привязка данных и Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
-- [Привязка данных Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)
+- [Уведомления об изменениях в привязке данных Windows Forms](change-notification-in-windows-forms-data-binding.md)
+- [Привязка данных и Windows Forms](data-binding-and-windows-forms.md)
+- [Привязка данных Windows Forms](windows-forms-data-binding.md)

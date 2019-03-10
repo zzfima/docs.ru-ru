@@ -1,18 +1,18 @@
 ---
-title: Как выполнить Создание элемента управления простой привязкой в форме Windows
+title: Практическое руководство. Создание элемента управления простой привязкой в форме Windows
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: 129301354c67d43783e997bcf42f848c5c39ab3c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f481b85c07a107b10d88d47c4873b555191bac7f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643576"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708344"
 ---
-# <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Как выполнить Создание элемента управления простой привязкой в форме Windows
+# <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Практическое руководство. Создание элемента управления простой привязкой в форме Windows
 С помощью *простая привязка*, одному элементу данных, таких как значение столбца из таблицы набора данных, можно отобразить в элементе управления. Вы можете простую привязку любого свойства элемента управления к значению данных.  
   
 > [!NOTE]
@@ -20,7 +20,7 @@ ms.locfileid: "54643576"
   
 ### <a name="to-simple-bind-a-control"></a>Чтобы выполнить простую привязку элемента управления  
   
-1.  Подключение к источнику данных. Дополнительные сведения см. в разделе [подключение к источнику данных](../../../docs/framework/data/adonet/connecting-to-a-data-source.md).  
+1.  Подключение к источнику данных. Дополнительные сведения см. в разделе [подключение к источнику данных](../data/adonet/connecting-to-a-data-source.md).  
   
 2.  В форме выберите элемент управления и отображения **свойства** окна.  
   
@@ -28,7 +28,7 @@ ms.locfileid: "54643576"
   
      Чаще всего привязанного свойства отображаются под **(DataBindings)** свойство. Например, для большинства элементов управления **текст** наиболее часто связано свойство.  
   
-4.  Если свойство для привязки не является одним из часто используемых свойств, нажмите кнопку **кнопку с многоточием** кнопки (![экрана VisualStudioEllipsesButton](../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton") ) в **(Дополнительно)** окна для отображения **форматирование и дополнительная привязка** диалоговое окно с полным списком свойств для этого элемента управления.  
+4.  Если свойство для привязки не является одним из часто используемых свойств, нажмите кнопку **кнопку с многоточием** кнопки (![экрана VisualStudioEllipsesButton](./media/vbellipsesbutton.png "vbEllipsesButton") ) в **(Дополнительно)** окна для отображения **форматирование и дополнительная привязка** диалоговое окно с полным списком свойств для этого элемента управления.  
   
 5.  Выберите свойство для привязки и щелкните стрелку раскрывающегося списка под полем **привязки**.  
   
@@ -47,5 +47,5 @@ ms.locfileid: "54643576"
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.Binding>
-- [Привязка данных Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)
-- [Привязка данных и Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+- [Привязка данных Windows Forms](windows-forms-data-binding.md)
+- [Привязка данных и Windows Forms](data-binding-and-windows-forms.md)

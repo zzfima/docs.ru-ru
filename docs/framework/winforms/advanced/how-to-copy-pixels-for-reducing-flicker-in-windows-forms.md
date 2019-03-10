@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Копирование пикселов для уменьшения эффекта дрожания изображения в Windows Forms
+title: Практическое руководство. Копирование пикселов для уменьшения эффекта дрожания изображения в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - flicker
 - bit-block transfer
 ms.assetid: 33b76910-13a3-4521-be98-5c097341ae3b
-ms.openlocfilehash: cdcb64588f91ece02f1e7f446d4020d68262c93d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d03a9b79dc2c0ec61bbafe2ff09b5aba7fffc57b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559454"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719251"
 ---
-# <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>Как выполнить Копирование пикселов для уменьшения эффекта дрожания изображения в Windows Forms
+# <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>Практическое руководство. Копирование пикселов для уменьшения эффекта дрожания изображения в Windows Forms
 При анимации простой график, могут появиться мерцание или другие нежелательные визуальные эффекты. Чтобы ограничить эту проблему рекомендуется использовать процесс «bitblt» на рисунок. BitBlt является «битов перемещение» данных о цвете из исходного прямоугольника из пикселей в конечный прямоугольник пикселей.  
   
  С помощью Windows Forms, bitblt осуществляется с помощью <xref:System.Drawing.Graphics.CopyFromScreen%2A> метод <xref:System.Drawing.Graphics> класса. В параметры метода указать источник и назначения (в виде точек), размер области для копирования и объект graphics, используемый для рисования новой фигуры.  
@@ -66,5 +66,5 @@ private void Form1_Paint(System.Object sender,
 - <xref:System.Drawing.CopyPixelOperation>
 - <xref:System.Drawing.Graphics.FillRectangle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Control.OnPaint%2A?displayProperty=nameWithType>
-- [Объекты Graphics и Drawing в Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
-- [Рисование линий и фигур с помощью пера](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)
+- [Объекты Graphics и Drawing в Windows Forms](graphics-and-drawing-in-windows-forms.md)
+- [Рисование линий и фигур с помощью пера](using-a-pen-to-draw-lines-and-shapes.md)

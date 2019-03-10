@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Изменение размера или размещения изображения во время выполнения (Windows Forms)
+title: Практическое руководство. Изменение размера или размещения изображения во время выполнения (Windows Forms)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - PictureBox control [Windows Forms], picture size and alignment
 - pictures [Windows Forms], controlling placement in PictureBox control [Windows Forms]
 ms.assetid: d0b332a3-fae2-4891-957c-dc3e17743326
-ms.openlocfilehash: fa8bdf17f7dc7f6d09059e54b208acaec6207e48
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 021cb448e5dbcb3ea1405d5cedaed1ae6d4f1b53
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604786"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709819"
 ---
-# <a name="how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms"></a>Как выполнить Изменение размера или размещения изображения во время выполнения (Windows Forms)
+# <a name="how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms"></a>Практическое руководство. Изменение размера или размещения изображения во время выполнения (Windows Forms)
 При использовании Windows Forms <xref:System.Windows.Forms.PictureBox> элемента управления в форме, можно задать <xref:System.Windows.Forms.PictureBox.SizeMode%2A> свойства:  
   
 -   Выравнивание верхнего левого угла рисунка с верхнего левого угла элемента управления  
@@ -84,7 +84,7 @@ ms.locfileid: "54604786"
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.PictureBox>
-- [Практическое руководство. Загрузка изображения с помощью конструктора](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)
-- [Общие сведения об элементе управления PictureBox](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)
-- [Практическое руководство. Установка изображений во время выполнения](../../../../docs/framework/winforms/controls/how-to-set-pictures-at-run-time-windows-forms.md)
-- [Элемент управления PictureBox](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)
+- [Практическое руководство. Загрузка изображения с помощью конструктора](how-to-load-a-picture-using-the-designer-windows-forms.md)
+- [Общие сведения об элементе управления PictureBox](picturebox-control-overview-windows-forms.md)
+- [Практическое руководство. Установка изображений во время выполнения](how-to-set-pictures-at-run-time-windows-forms.md)
+- [Элемент управления PictureBox](picturebox-control-windows-forms.md)

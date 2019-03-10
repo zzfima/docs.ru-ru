@@ -15,16 +15,16 @@ helpviewer_keywords:
 - threading [Windows Forms], cross-thread calls
 - controls [Windows Forms], multithreading
 ms.assetid: 138f38b6-1099-4fd5-910c-390b41cbad35
-ms.openlocfilehash: ef7836721df6c090a4d09c38c176641331c3e8a4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3211df1f0e585780039471b80b5b913613ad9bbd
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362569"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714012"
 ---
 # <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>Практическое руководство. Сделать потокобезопасных вызовов элементов управления Windows Forms
 
-Многопотоковость позволяет повысить производительность приложений Windows Forms, но доступ к элементам управления Windows Forms не по своей природе потокобезопасными. Многопоточность можно предоставить код, чтобы очень серьезных и сложных ошибок. Два или более потоков, управление элементом управления можно перевести в несогласованном состоянии и привести к гонки, взаимоблокировки и перестает отвечать или зависает. При реализации многопоточности в приложении, убедитесь, что для вызова элементов управления между потоками в потокобезопасным способом. Дополнительные сведения см. в разделе [управляемых потоков рекомендации](../../../../docs/standard/threading/managed-threading-best-practices.md). 
+Многопотоковость позволяет повысить производительность приложений Windows Forms, но доступ к элементам управления Windows Forms не по своей природе потокобезопасными. Многопоточность можно предоставить код, чтобы очень серьезных и сложных ошибок. Два или более потоков, управление элементом управления можно перевести в несогласованном состоянии и привести к гонки, взаимоблокировки и перестает отвечать или зависает. При реализации многопоточности в приложении, убедитесь, что для вызова элементов управления между потоками в потокобезопасным способом. Дополнительные сведения см. в разделе [управляемых потоков рекомендации](../../../standard/threading/managed-threading-best-practices.md). 
 
 Безопасно вызвать элемент управления Windows Forms из потока, который не создавали этого элемента управления двумя способами. Можно использовать <xref:System.Windows.Forms.Control.Invoke%2A?displayProperty=fullName> метод для вызова делегата, созданного в основном потоке, который в свою очередь вызывает элемент управления. Или можно реализовать <xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType>, который использует модель на основе событий для разделения работы, выполненной в фоновом потоке из отчетов о результатах. 
 
@@ -75,8 +75,8 @@ End Sub
 
 `SafeCallDelegate` Позволяет задавать <xref:System.Windows.Forms.TextBox> элемента управления <xref:System.Windows.Forms.TextBox.Text%2A> свойство. `WriteTextSafe` Запросы метод <xref:System.Windows.Forms.Control.InvokeRequired%2A>. Если <xref:System.Windows.Forms.Control.InvokeRequired%2A> возвращает `true`, `WriteTextSafe` передает `SafeCallDelegate` для <xref:System.Windows.Forms.Control.Invoke%2A> метод фактически вызывающим элемент управления. Если <xref:System.Windows.Forms.Control.InvokeRequired%2A> возвращает `false`, `WriteTextSafe` задает <xref:System.Windows.Forms.TextBox.Text%2A?displayProperty=nameWithType> напрямую. `Button1_Click` Обработчик событий создает новый поток и запускает `WriteTextSafe` метод. 
 
- [!code-csharp[ThreadSafeCalls#1](../../../../samples/snippets/winforms/thread-safe/example1/cs/Form1.cs)]
- [!code-vb[ThreadSafeCalls#1](../../../../samples/snippets/winforms/thread-safe/example1/vb/Form1.vb)]  
+ [!code-csharp[ThreadSafeCalls#1](~/samples/snippets/winforms/thread-safe/example1/cs/Form1.cs)]
+ [!code-vb[ThreadSafeCalls#1](~/samples/snippets/winforms/thread-safe/example1/vb/Form1.vb)]  
 
 ## <a name="example-use-a-backgroundworker-event-handler"></a>Пример Используйте обработчик событий компонента BackgroundWorker
 
@@ -86,12 +86,12 @@ End Sub
 
 В примере используется <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> обработчик событий, чтобы задать <xref:System.Windows.Forms.TextBox> элемента управления <xref:System.Windows.Forms.TextBox.Text%2A> свойство. В качестве примера использования <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> событий, см. в разделе <xref:System.ComponentModel.BackgroundWorker>. 
 
- [!code-csharp[ThreadSafeCalls#2](../../../../samples/snippets/winforms/thread-safe/example2/cs/Form1.cs)]
- [!code-vb[ThreadSafeCalls#2](../../../../samples/snippets/winforms/thread-safe/example2/vb/Form1.vb)]  
+ [!code-csharp[ThreadSafeCalls#2](~/samples/snippets/winforms/thread-safe/example2/cs/Form1.cs)]
+ [!code-vb[ThreadSafeCalls#2](~/samples/snippets/winforms/thread-safe/example2/vb/Form1.vb)]  
 
 ## <a name="see-also"></a>См. также
 
 - <xref:System.ComponentModel.BackgroundWorker>
-- [Практическое руководство. Выполнение операции в фоновом режиме](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [Практическое руководство. Реализация формы, в который выполняется фоновая операция](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
-- [Разработка пользовательских элементов управления Windows Forms в .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+- [Практическое руководство. Выполнение операции в фоновом режиме](how-to-run-an-operation-in-the-background.md)
+- [Практическое руководство. Реализация формы, в который выполняется фоновая операция](how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Разработка пользовательских элементов управления Windows Forms в .NET Framework](developing-custom-windows-forms-controls.md)
