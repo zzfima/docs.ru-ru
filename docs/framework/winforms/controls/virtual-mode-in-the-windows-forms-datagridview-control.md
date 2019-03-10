@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], virtual mode
 ms.assetid: feae5d43-2848-4b1a-8ea7-77085dc415b5
-ms.openlocfilehash: f2ab0cc789b026a139e1421b72e9215bf52c6147
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 92b45f026470f312fe788ed30e4ff8d172735a98
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672023"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709488"
 ---
 # <a name="virtual-mode-in-the-windows-forms-datagridview-control"></a>Виртуальный режим элемента управления DataGridView в Windows Forms
 Виртуальный режим можно управлять взаимодействием между <xref:System.Windows.Forms.DataGridView> управления и пользовательские данные кэша. Чтобы реализовать виртуальный режим, задать <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> свойства `true` и обрабатывать один или несколько событий, описанных в этом разделе. Как правило, будет обрабатывать по крайней мере `CellValueNeeded` событие, которое позволяет производить поиск значения в кэше данных элемента управления.  
@@ -27,14 +27,14 @@ ms.locfileid: "54672023"
 ## <a name="replacing-bound-mode"></a>Замещение связанного режима  
  Если связанный режим не удовлетворяет требованиям к производительности, вы можете управлять данными в пользовательском кэше посредством обработчиков событий в виртуальном режиме. Например, можно использовать виртуальный режим реализовать механизм, который извлекает только загрузки данных just-in-time столько данных из базы данных сети необходим для обеспечения оптимальной производительности. Этот сценарий является особенно полезна при работе с большими объемами данных через медленное сетевое подключение, так и с клиентскими компьютерами, которые имеют ограниченный объем оперативной памяти или дисковое пространство.  
   
- Дополнительные сведения об использовании виртуального режима в сценарии just-in-time, см. в разделе [реализация виртуального режима с JIT-загрузкой данных в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid.md).  
+ Дополнительные сведения об использовании виртуального режима в сценарии just-in-time, см. в разделе [реализация виртуального режима с JIT-загрузкой данных в элементе управления DataGridView Windows Forms](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md).  
   
 ## <a name="virtual-mode-events"></a>Виртуальный режим события  
  Если ваши данные только для чтения, `CellValueNeeded` событий может быть единственным событием, вам потребуется обрабатывать. Дополнительные события виртуального режима позволяют включения определенных функций, таких как пользовательские изменения, добавления и удаления и строк транзакций на уровне строк.  
   
  Некоторые стандартные <xref:System.Windows.Forms.DataGridView> события (например, события, происходящие при добавлении пользователей или удаления строк или значений ячеек редактировать, синтаксический анализ, проверять или в формате) полезны в виртуальном режиме. Также можно обрабатывать события, которые позволяют поддерживать значения, обычно не хранящиеся в связанного источника данных, таких как текст подсказки для ячейки, ячейки и текст ошибки строки, ячейки и строки контекстное меню данных и данных высоты строк.  
   
- Дополнительные сведения о реализация виртуального режима для управления данными чтения и записи с областью фиксации на уровне строк, см. в разделе [Пошаговое руководство: Реализация виртуального режима в Windows Forms элемента управления DataGridView](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md).  
+ Дополнительные сведения о реализация виртуального режима для управления данными чтения и записи с областью фиксации на уровне строк, см. в разделе [Пошаговое руководство: Реализация виртуального режима в Windows Forms элемента управления DataGridView](implementing-virtual-mode-wf-datagridview-control.md).  
   
  Пример реализации виртуального режима с областью фиксации на уровне ячейки, см. в разделе <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> свойство справочном разделе.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "54672023"
   
  Следующие события полезны в виртуальном режиме, но может использоваться вне зависимости от <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> значение свойства.  
   
-|События|Описание:|  
+|События|Описание|  
 |------------|-----------------|  
 |<xref:System.Windows.Forms.DataGridView.UserDeletingRow><br /><br /> <xref:System.Windows.Forms.DataGridView.UserDeletedRow><br /><br /> <xref:System.Windows.Forms.DataGridView.RowsRemoved><br /><br /> <xref:System.Windows.Forms.DataGridView.RowsAdded>|Используется элементом управления, чтобы указать, когда строки удаляются или добавлен, что соответствующим образом обновить кэш данных.|  
 |<xref:System.Windows.Forms.DataGridView.CellFormatting><br /><br /> <xref:System.Windows.Forms.DataGridView.CellParsing><br /><br /> <xref:System.Windows.Forms.DataGridView.CellValidating><br /><br /> <xref:System.Windows.Forms.DataGridView.CellValidated><br /><br /> <xref:System.Windows.Forms.DataGridView.RowValidating><br /><br /> <xref:System.Windows.Forms.DataGridView.RowValidated>|Используется элементом управления для форматирования значений ячеек для отображения, а также для анализа и проверки пользовательского ввода.|  
@@ -60,12 +60,12 @@ ms.locfileid: "54672023"
 |<xref:System.Windows.Forms.DataGridView.RowHeightInfoNeeded><br /><br /> <xref:System.Windows.Forms.DataGridView.RowHeightInfoPushed>|Используется элементом управления для извлечения или сохранения сведений о высоте строки в кэше данных. Вызовите <xref:System.Windows.Forms.DataGridView.UpdateRowHeightInfo%2A> метод при изменении сведений о высоте кэшированной строке за пределами <xref:System.Windows.Forms.DataGridView.RowHeightInfoPushed> обработчик событий, чтобы убедиться, что текущее значение используется при отображении элемента управления.|  
   
 ## <a name="best-practices-in-virtual-mode"></a>Рекомендации в виртуальном режиме  
- Если вы реализуете виртуального режима для эффективной работы с большими объемами данных, также требуется убедиться, что вы работаете эффективно <xref:System.Windows.Forms.DataGridView> самого элемента управления. Дополнительные сведения об эффективном использовании стилей для ячейки, автоматическое изменение размеров, выбранные параметры и общий доступ к строкам, см. в разделе [масштабирование элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
+ Если вы реализуете виртуального режима для эффективной работы с большими объемами данных, также требуется убедиться, что вы работаете эффективно <xref:System.Windows.Forms.DataGridView> самого элемента управления. Дополнительные сведения об эффективном использовании стилей для ячейки, автоматическое изменение размеров, выбранные параметры и общий доступ к строкам, см. в разделе [масштабирование элемента управления DataGridView в Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>
-- [Оптимизация производительности элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)
-- [Масштабирование элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)
-- [Пошаговое руководство: Реализация виртуального режима для элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)
-- [Реализация виртуального режима с JIT-загрузкой данных для элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)
+- [Оптимизация производительности элемента управления DataGridView в Windows Forms](performance-tuning-in-the-windows-forms-datagridview-control.md)
+- [Масштабирование элемента управления DataGridView в Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
+- [Пошаговое руководство: Реализация виртуального режима для элемента управления DataGridView в Windows Forms](implementing-virtual-mode-wf-datagridview-control.md)
+- [Реализация виртуального режима с JIT-загрузкой данных для элемента управления DataGridView в Windows Forms](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)

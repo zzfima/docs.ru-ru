@@ -7,26 +7,26 @@ helpviewer_keywords:
 - toolbars [Windows Forms], progress bars
 - progress controls [Windows Forms]
 ms.assetid: cb3eb0a8-60b1-483e-a03f-93b0b1351dae
-ms.openlocfilehash: 4de580b515189fb8eac71158bffaa6239a2a9dfd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3b56d31cab84a43a488499748710355671980ad0
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617022"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711889"
 ---
 # <a name="toolstripprogressbar-control"></a>Элемент управления ToolStripProgressBar
 <xref:System.Windows.Forms.ToolStripProgressBar> Объединяет <xref:System.Windows.Forms.ToolStrip> функции отрисовки и нависания с его обычные функциональные возможности отслеживания процесса.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Элемент управления ToolStripProgressBar](../../../../docs/framework/winforms/controls/toolstripprogressbar-control-overview.md)  
- Приводятся разделы с описанием назначения элемента управления Windows Forms <xref:System.Windows.Forms.ToolStripProgressBar> и основных понятий, связанных с ним.  
+ [Элемент управления ToolStripProgressBar](toolstripprogressbar-control-overview.md)  
+ Содержит разделы с описанием назначения и основных понятий элемента управления <xref:System.Windows.Forms.ToolStripProgressBar> Windows Forms.  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Forms.ToolStripPanel>  
- Содержит справочную документацию по элементу управления <xref:System.Windows.Forms.ToolStripPanel>.  
+ Справочная документация по элементу управления <xref:System.Windows.Forms.ToolStripPanel>.  
   
  <xref:System.Windows.Forms.ToolStripProgressBar>  
- Содержит справочную документацию по элементу управления <xref:System.Windows.Forms.ToolStripProgressBar>.  
+ Справочная документация по элементу управления <xref:System.Windows.Forms.ToolStripProgressBar>.  
   
 ## <a name="see-also"></a>См. также
-- [Элементы управления для использования в Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)

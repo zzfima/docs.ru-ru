@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Повышение производительности за счет отключения автоматического масштабирования
+title: Практическое руководство. Повышение производительности за счет отключения автоматического масштабирования
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,20 +10,20 @@ helpviewer_keywords:
 - images [Windows Forms], using without automatic scaling
 - performance [Windows Forms], improving image
 ms.assetid: 5fe2c95d-8653-4d55-bf0d-e5afa28f223b
-ms.openlocfilehash: 50079e1666f2069ea7fe3c0183b9fc104a19eabd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b8238a4f0ce482d63ab33833c4bceaaa2814253d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568911"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705350"
 ---
-# <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a>Как выполнить Повышение производительности за счет отключения автоматического масштабирования
+# <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a>Практическое руководство. Повышение производительности за счет отключения автоматического масштабирования
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Автоматическое масштабирование образа при рисовании, снижает производительность. Кроме того, можно управлять масштабирования изображения, передав размеры прямоугольника назначения <xref:System.Drawing.Graphics.DrawImage%2A> метод.  
   
  Например, следующий вызов <xref:System.Drawing.Graphics.DrawImage%2A> метод задает верхний левый угол (50, 30), но не указывает прямоугольник назначения.  
   
- [!code-csharp[System.Drawing.WorkingWithImages#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#31)]
- [!code-vb[System.Drawing.WorkingWithImages#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#31)]  
+ [!code-csharp[System.Drawing.WorkingWithImages#31](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#31)]
+ [!code-vb[System.Drawing.WorkingWithImages#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#31)]  
   
  Несмотря на то, что это простейший вариант <xref:System.Drawing.Graphics.DrawImage%2A> метод с точки зрения количества обязательных аргументов, не обязательно наиболее эффективен. Если используется разрешение [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] (обычно 96 точек на дюйм) отличается от разрешения, указанного в <xref:System.Drawing.Image> объекта, а затем <xref:System.Drawing.Graphics.DrawImage%2A> метод производит масштабирование рисунка. Например, предположим, что <xref:System.Drawing.Image> объект имеет 216 пикселей в ширину и значение хранимых разрешение по горизонтали 72 точек на дюйм. Поскольку 216/72 равно 3, <xref:System.Drawing.Graphics.DrawImage%2A> производит масштабирование рисунка, чтобы он включал линию толщиной 3 дюйма с разрешением 96 точек на дюйм. То есть <xref:System.Drawing.Graphics.DrawImage%2A> выводит изображение шириной 96 x 3 = 288 пикселей.  
   
@@ -32,14 +32,14 @@ ms.locfileid: "54568911"
 ## <a name="example"></a>Пример  
  В следующем примере рисуется тот же образ дважды. В первом случае ширина и высота прямоугольника назначения не указаны, а изображение масштабируется автоматически. Во втором случае ширину и высоту (измеряется в пикселях) прямоугольника назначения указываются должны совпадать как ширину и высоту исходного изображения. Ниже показано изображение, рисуемое дважды.  
   
- ![Масштабировать текстуры](../../../../docs/framework/winforms/advanced/media/csscaledtexture1.png "csscaledtexture1")  
+ ![Масштабировать текстуры](./media/csscaledtexture1.png "csscaledtexture1")  
   
- [!code-csharp[System.Drawing.WorkingWithImages#32](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#32)]
- [!code-vb[System.Drawing.WorkingWithImages#32](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#32)]  
+ [!code-csharp[System.Drawing.WorkingWithImages#32](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#32)]
+ [!code-vb[System.Drawing.WorkingWithImages#32](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#32)]  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Предыдущий пример предназначен для работы с Windows Forms, и для него необходим объект <xref:System.Windows.Forms.PaintEventArgs> `e`, передаваемый в качестве параметра обработчику событий <xref:System.Windows.Forms.Control.Paint>. Замените Texture.jpg в вашей системе путь и имя образа.  
   
 ## <a name="see-also"></a>См. также
-- [Изображения, точечные рисунки и метафайлы](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
-- [Работа с растровыми и векторными изображениями, значками и метафайлами](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+- [Изображения, точечные рисунки и метафайлы](images-bitmaps-and-metafiles.md)
+- [Работа с растровыми и векторными изображениями, значками и метафайлами](working-with-images-bitmaps-icons-and-metafiles.md)

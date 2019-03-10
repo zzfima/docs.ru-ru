@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Изменение значения задержки для компонента ToolTip в Windows Forms
+title: Практическое руководство. Изменение значения задержки для компонента ToolTip в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - tooltips [Windows Forms], delay values
 - examples [Windows Forms], tooltips
 ms.assetid: 08979ba7-dd84-477b-ab17-8d06e759be99
-ms.openlocfilehash: 494691a6f91a58f2689c1668d95b2df581b76d79
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5f3be7467aad8b14aa67dc57b8c23e585a62fa25
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54593905"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57704492"
 ---
-# <a name="how-to-change-the-delay-of-the-windows-forms-tooltip-component"></a>Как выполнить Изменение значения задержки для компонента ToolTip в Windows Forms
+# <a name="how-to-change-the-delay-of-the-windows-forms-tooltip-component"></a>Практическое руководство. Изменение значения задержки для компонента ToolTip в Windows Forms
 Существует несколько значений задержки, которые можно задать для форм Windows <xref:System.Windows.Forms.ToolTip> компонента. Единица измерения для этих свойств — миллисекунд. <xref:System.Windows.Forms.ToolTip.InitialDelay%2A> Свойство определяет, как долго пользователь должен указывать на элементом управления, чтобы появилась строка подсказки. <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A> Свойство задает время в миллисекундах, затрачиваемое последующие строки подсказки будут выводиться при перемещении мыши от одного элемента управления связанный всплывающей подсказки в другой. <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A> Определяет продолжительность времени, строки всплывающей подсказки. Эти значения можно задать по отдельности, или установив значение <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> свойство; другие свойства задаются с учетом на значение, присваиваемое задержка <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> свойство. Например, если <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> присваивается значение N, <xref:System.Windows.Forms.ToolTip.InitialDelay%2A> имеет значение N, <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A> присваивается значение <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> деленное на пять (или N/5), и <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A> присваивается значение, пять раз значение <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> свойство (или 5N).  
   
 ### <a name="to-set-the-delay"></a>Чтобы задать задержку  
@@ -43,6 +43,6 @@ ms.locfileid: "54593905"
     ```  
   
 ## <a name="see-also"></a>См. также
-- [Общие сведения об элементе управления ToolTip](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md)
-- [Практическое руководство. Определение всплывающих подсказок для элементов управления формы Windows во время разработки](../../../../docs/framework/winforms/controls/how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)
-- [Компонент ToolTip](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md)
+- [Общие сведения об элементе управления ToolTip](tooltip-component-overview-windows-forms.md)
+- [Практическое руководство. Определение всплывающих подсказок для элементов управления формы Windows во время разработки](how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)
+- [Компонент ToolTip](tooltip-component-windows-forms.md)

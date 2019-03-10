@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], interfaces
 - IDataErrorInfo interface [Windows Forms], Windows Forms data binding
 ms.assetid: 14e49a2e-3e46-47ca-b491-70d546333277
-ms.openlocfilehash: 5a83198a665563c3d283cac042c9fec95c60f8e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ec72b67da72bde9392d523787e8c0d4d0981ad7b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547135"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703541"
 ---
 # <a name="interfaces-related-to-data-binding"></a>Интерфейсы, относящиеся к привязке данных
 С помощью [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] можно создать различные структуры данных в соответствии с требованиями привязки приложения и данных, с которыми приходится работать. Можно создать собственные классы, которые предоставляют или используют данные в Windows Forms. Такие объекты могут предоставлять функциональные возможности и обеспечивать сложность различного уровня, такие как базовая привязка данных, поддержка на этапе разработки, проверка ошибок, уведомление об изменениях или даже поддержка структурированного отката изменений, внесенных в сами данные.  
@@ -150,6 +150,6 @@ ms.locfileid: "54547135"
     >  Класс, наследуемый от <xref:System.Windows.Forms.Control> управляет привязками автоматически посредством его <xref:System.Windows.Forms.Control.BindingContext%2A> свойство, поэтому случаев, в которых необходимо реализовать <xref:System.Windows.Forms.ICurrencyManagerProvider> довольно редки.  
   
 ## <a name="see-also"></a>См. также
-- [Привязка данных и Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
-- [Практическое руководство. Создание элемента управления простой привязкой в форме Windows](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)
-- [Привязка данных Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)
+- [Привязка данных и Windows Forms](data-binding-and-windows-forms.md)
+- [Практическое руководство. Создание элемента управления простой привязкой в форме Windows](how-to-create-a-simple-bound-control-on-a-windows-form.md)
+- [Привязка данных Windows Forms](windows-forms-data-binding.md)

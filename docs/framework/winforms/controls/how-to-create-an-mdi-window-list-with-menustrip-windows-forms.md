@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Создание списка в окне интерфейса MDI с помощью MenuStrip (Windows Forms)
+title: Практическое руководство. Создание списка в окне интерфейса MDI с помощью MenuStrip (Windows Forms)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating window lists
 - MenuStrip control [Windows Forms], creating window lists
 ms.assetid: 04fb414b-811f-4a83-aab6-b4a24646dec5
-ms.openlocfilehash: 00f35fe872fc5702595108646e2605ed419823f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e58f35304f70c82973ebbc9928bae5a7477e9c53
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585317"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716131"
 ---
-# <a name="how-to-create-an-mdi-window-list-with-menustrip-windows-forms"></a>Как выполнить Создание списка в окне интерфейса MDI с помощью MenuStrip (Windows Forms)
+# <a name="how-to-create-an-mdi-window-list-with-menustrip-windows-forms"></a>Практическое руководство. Создание списка в окне интерфейса MDI с помощью MenuStrip (Windows Forms)
 Используйте многодокументного интерфейса (MDI) для создания приложений, которые могут открывать несколько документов, в том же время и скопируйте и вставьте содержимое из одного документа в другой.  
   
  Эта процедура показано, как создать список всех активных дочерних форм в меню родительского окна.  
@@ -82,6 +82,6 @@ ms.locfileid: "54585317"
 -   ссылки на сборки <xref:System?displayProperty=nameWithType> и <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>См. также
-- [Практическое руководство. Создание родительских MDI-форм](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)
-- [Практическое руководство. Создание дочерних MDI-форм](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)
-- [Элемент управления MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)
+- [Практическое руководство. Создание родительских MDI-форм](../advanced/how-to-create-mdi-parent-forms.md)
+- [Практическое руководство. Создание дочерних MDI-форм](../advanced/how-to-create-mdi-child-forms.md)
+- [Элемент управления MenuStrip](menustrip-control-windows-forms.md)

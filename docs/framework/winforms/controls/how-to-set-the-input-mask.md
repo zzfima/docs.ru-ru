@@ -1,19 +1,19 @@
 ---
-title: Как выполнить Определение маски ввода
+title: Практическое руководство. Определение маски ввода
 ms.date: 03/30/2017
 f1_keywords:
 - net.ComponentModel.MaskPropertyEditor
 helpviewer_keywords:
 - MaskedTextBox control [Windows Forms]
 ms.assetid: 779b3a12-cd74-4e58-b46e-04983bda5b2c
-ms.openlocfilehash: 68a3e72f23e881bc68441e8aee9674f1a822882a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 53bb8d0e301f83c25ab292b1cb6324dd5f21f100
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658917"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702364"
 ---
-# <a name="how-to-set-the-input-mask"></a>Как выполнить Определение маски ввода
+# <a name="how-to-set-the-input-mask"></a>Практическое руководство. Определение маски ввода
 Элементе скрытого текстового поля является элементом поля расширенный текст, который поддерживает декларативный синтаксис для принятия или отклонения введенных пользователем данных. Установив свойство маски, можно указать допустимых входных данных без написания настраиваемую логику проверки в приложении. Дополнительные сведения см. в разделе "Примечания" <xref:System.Windows.Forms.MaskedTextBox> класса.  
   
 ## <a name="setting-the-mask-property-manually"></a>Установка свойства маски вручную  
@@ -64,4 +64,4 @@ ms.locfileid: "54658917"
      Маска вводится в **маска** свойство в **свойства** окна.  
   
 ## <a name="see-also"></a>См. также
-- [Пошаговое руководство: Работа с элементом управления MaskedTextBox](../../../../docs/framework/winforms/controls/walkthrough-working-with-the-maskedtextbox-control.md)
+- [Пошаговое руководство: Работа с элементом управления MaskedTextBox](walkthrough-working-with-the-maskedtextbox-control.md)

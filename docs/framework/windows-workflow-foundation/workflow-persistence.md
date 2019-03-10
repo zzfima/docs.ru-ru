@@ -4,23 +4,23 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], persistence
 ms.assetid: 39e69d1f-b771-4c16-9e18-696fa43b65b2
-ms.openlocfilehash: 0a938f2f4d4cc790fe03db1e2b57862e54af48a7
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: db0e4acc76f758004948857fc0b23a9cbc62f244
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43748571"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715546"
 ---
 # <a name="workflow-persistence"></a>Сохраняемость рабочего процесса
 Сохраняемость рабочего процесса - это постоянное отслеживание состояний экземпляра рабочего процесса независимо от выполняемого процесса или данных компьютера. Делается это для обеспечения хорошо известной точки восстановления для экземпляра рабочего процесса в случае сбоя системы или сохранения памяти путем выгрузки экземпляров рабочих процессов, которые в настоящий момент не выполняют активных действий, или переноса состояния экземпляра рабочего процесса с одного узла на другой узел в ферме серверов.  
   
  Сохраняемость обеспечивает гибкость, масштабируемость и восстановление процесса в случае сбоя, а также возможность более эффективного управления памятью. Процесс сохраняемости состоит из определения точки сохраняемости, сбора данных для сохранения и, наконец, делегирование фактического хранения данных поставщику сохраняемости.  
   
- Чтобы включить сохраняемость для рабочего процесса, необходимо связать хранилище экземпляров с **WorkflowApplication** или **WorkflowServiceHost** как уже упоминалось в [как: Включение сохраняемости для Рабочие процессы и служб рабочих процессов](../../../docs/framework/windows-workflow-foundation/how-to-enable-persistence-for-workflows-and-workflow-services.md). **WorkflowApplication** и **WorkflowServiceHost** позволяет включить сохранение экземпляров рабочего процесса в хранилище сохраняемости и загрузки экземпляров рабочего процесса в хранилище экземпляров, связанных с ними объем памяти, на основе данных экземпляра рабочего процесса, хранящиеся в хранилище сохраняемости.  
+ Чтобы включить сохраняемость для рабочего процесса, необходимо связать хранилище экземпляров с **WorkflowApplication** или **WorkflowServiceHost** как уже упоминалось в [как: Включение сохраняемости для рабочих процессов и служб рабочих процессов](how-to-enable-persistence-for-workflows-and-workflow-services.md). **WorkflowApplication** и **WorkflowServiceHost** позволяет включить сохранение экземпляров рабочего процесса в хранилище сохраняемости и загрузки экземпляров рабочего процесса в хранилище экземпляров, связанных с ними объем памяти, на основе данных экземпляра рабочего процесса, хранящиеся в хранилище сохраняемости.  
   
- [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] Поставляется с **SqlWorkflowInstanceStore** класс, который обеспечивает сохраняемость данных и метаданные экземпляров рабочего процесса в базу данных SQL Server 2005 или SQL Server 2008. См. в разделе [Store экземпляра рабочего процесса SQL](../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md) для получения дополнительных сведений.  
+ [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] Поставляется с **SqlWorkflowInstanceStore** класс, который обеспечивает сохраняемость данных и метаданные экземпляров рабочего процесса в базу данных SQL Server 2005 или SQL Server 2008. См. в разделе [Store экземпляра рабочего процесса SQL](sql-workflow-instance-store.md) для получения дополнительных сведений.  
   
- Для сохранения и загрузки данных приложения вместе со сведениями, относящимися к экземпляру рабочего процесса, можно создать участников сохраняемости, расширяющих класс <xref:System.Activities.Persistence.PersistenceParticipant>. Участник сохраняемости принимает участие в процессе сохраняемости и сохраняет пользовательские сериализуемые данные в хранилище сохраняемости, загружает данные из хранилища экземпляров в память и выполняет любую дополнительную логику в транзакции сохраняемости. Дополнительные сведения см. в разделе [участников сохраняемости](../../../docs/framework/windows-workflow-foundation/persistence-participants.md).  
+ Для сохранения и загрузки данных приложения вместе со сведениями, относящимися к экземпляру рабочего процесса, можно создать участников сохраняемости, расширяющих класс <xref:System.Activities.Persistence.PersistenceParticipant>. Участник сохраняемости принимает участие в процессе сохраняемости и сохраняет пользовательские сериализуемые данные в хранилище сохраняемости, загружает данные из хранилища экземпляров в память и выполняет любую дополнительную логику в транзакции сохраняемости. Дополнительные сведения см. в разделе [участников сохраняемости](persistence-participants.md).  
   
  Windows Server App Fabric упрощает процесс настройки сохраняемости. Дополнительные сведения см. в разделе [основные понятия сохраняемости в Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201200)  
   
@@ -43,14 +43,14 @@ ms.locfileid: "43748571"
   
 ## <a name="in-this-section"></a>В этом разделе  
   
--   [Хранилище экземпляров рабочих процессов SQL](../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md)  
+-   [Хранилище экземпляров рабочих процессов SQL](sql-workflow-instance-store.md)  
   
--   [Хранилища экземпляров](../../../docs/framework/windows-workflow-foundation/instance-stores.md)  
+-   [Хранилища экземпляров](instance-stores.md)  
   
--   [Участники сохраняемости](../../../docs/framework/windows-workflow-foundation/persistence-participants.md)  
+-   [Участники сохраняемости](persistence-participants.md)  
   
--   [Рекомендации по сохраняемости](../../../docs/framework/windows-workflow-foundation/persistence-best-practices.md)  
+-   [Рекомендации по сохраняемости](persistence-best-practices.md)  
   
--   [Несохраняемые экземпляры рабочих процессов](../../../docs/framework/windows-workflow-foundation/non-persisted-workflow-instances.md)  
+-   [Несохраняемые экземпляры рабочих процессов](non-persisted-workflow-instances.md)  
   
--   [Приостановка и возобновление рабочего процесса](../../../docs/framework/windows-workflow-foundation/pausing-and-resuming-a-workflow.md)
+-   [Приостановка и возобновление рабочего процесса](pausing-and-resuming-a-workflow.md)

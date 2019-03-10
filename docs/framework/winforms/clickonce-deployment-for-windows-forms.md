@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms, ClickOnce deployment
 - walkthroughs [Windows Forms], ClickOnce deployment
 ms.assetid: 1451fce9-1965-4a03-b4d3-831b5fe4ad66
-ms.openlocfilehash: b30bb28e816f27cc8661d478758a05e52fb45037
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 9e3e05a1327f2f1d5f4c064a7982b2d6e38940d9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442130"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702572"
 ---
 # <a name="clickonce-deployment-for-windows-forms"></a>Развертывание ClickOnce для форм Windows Forms
 В приведенных ниже разделах описывается технология [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], предназначенная для простого развертывания приложений Windows Forms на клиентских компьютерах.  
@@ -63,7 +63,7 @@ ms.locfileid: "56442130"
  Демонстрируется, как пометить файл так, чтобы он был доступен в каталоге данных [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)].  
   
 ## <a name="see-also"></a>См. также
-- [Общие сведения о параметрах приложений](../../../docs/framework/winforms/advanced/application-settings-overview.md)
+- [Общие сведения о параметрах приложений](./advanced/application-settings-overview.md)
 - [Публикация приложений ClickOnce](/visualstudio/deployment/publishing-clickonce-applications)
 - [Построение ClickOnce-приложений из командной строки](/visualstudio/deployment/building-clickonce-applications-from-the-command-line)
 - [Отладка ClickOnce-приложений, использующих System.Deployment.Application](/visualstudio/deployment/debugging-clickonce-applications-that-use-system-deployment-application)

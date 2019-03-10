@@ -5,12 +5,12 @@ helpviewer_keywords:
 - application settings [Windows Forms], design time
 - application settings [Windows Forms], creating
 ms.assetid: c5d60a66-6507-462f-a81f-e3bc0a804e16
-ms.openlocfilehash: c936adb6d4d80032b862994c21178a505da6789b
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 54f64de8cdd47b7fd451d266cca3b7577e9e1d78
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56964257"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702780"
 ---
 # <a name="how-to-create-a-new-setting-at-design-time"></a>Как выполнить: Создание новых параметров во время разработки
 Можно создать новый параметр во время разработки с помощью конструктора параметров. Этот конструктор имеет табличный интерфейс, который позволяет создавать новые параметры и указать свойства для этих параметров. Необходимо указать имя, значение, тип и область для новых параметров. Создав параметр, он доступен в коде.  
@@ -32,6 +32,6 @@ ms.locfileid: "56964257"
 3.  В конструкторе параметров задайте имя, значение, тип и область действия параметра. Каждая строка представляет один параметр.  
   
 ## <a name="see-also"></a>См. также
-- [Использование параметров приложения и параметров пользователя](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)
-- [Общие сведения о параметрах приложений](../../../../docs/framework/winforms/advanced/application-settings-overview.md)
-- [Практическое руководство. Изменить значение существующего параметра во время разработки](../../../../docs/framework/winforms/advanced/how-to-change-the-value-of-an-existing-setting-at-design-time.md)
+- [Использование параметров приложения и параметров пользователя](using-application-settings-and-user-settings.md)
+- [Общие сведения о параметрах приложений](application-settings-overview.md)
+- [Практическое руководство. Изменить значение существующего параметра во время разработки](how-to-change-the-value-of-an-existing-setting-at-design-time.md)

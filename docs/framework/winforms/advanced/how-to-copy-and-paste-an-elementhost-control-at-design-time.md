@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Копирование и вставка элемента управления ElementHost во время разработки
+title: Практическое руководство. Копирование и вставка элемента управления ElementHost во время разработки
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, content copying and pasting
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - ElementHost control [Windows Forms], copying and pasting at design time
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: e570375d-2a68-44ba-b4f7-c781af2d20e8
-ms.openlocfilehash: 6ff1ccc5e8f188bdec2e09048974fdc20a785920
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 203a01ef82554bf4104f3000c0821cceeafac9f7
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572635"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710424"
 ---
-# <a name="how-to-copy-and-paste-an-elementhost-control-at-design-time"></a>Как выполнить Копирование и вставка элемента управления ElementHost во время разработки
+# <a name="how-to-copy-and-paste-an-elementhost-control-at-design-time"></a>Практическое руководство. Копирование и вставка элемента управления ElementHost во время разработки
 Эта процедура показано, как скопировать элемент управления Windows Presentation Foundation (WPF) в Windows Forms.  
   
 > [!NOTE]
@@ -22,7 +22,7 @@ ms.locfileid: "54572635"
   
 ### <a name="to-copy-and-paste-an-elementhost-control-at-design-time"></a>Копирование и вставка элемента управления ElementHost во время разработки  
   
-1.  Добавить новый элемент управления WPF <xref:System.Windows.Controls.UserControl> в проект Windows Forms. Используйте имя по умолчанию для этого типа элемента управления (`UserControl1.xaml`). Дополнительные сведения см. в разделе [Пошаговое руководство: Создание нового содержимого WPF в формах Windows Forms во время разработки](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).  
+1.  Добавить новый элемент управления WPF <xref:System.Windows.Controls.UserControl> в проект Windows Forms. Используйте имя по умолчанию для этого типа элемента управления (`UserControl1.xaml`). Дополнительные сведения см. в разделе [Пошаговое руководство: Создание нового содержимого WPF в формах Windows Forms во время разработки](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).  
   
 2.  В **свойства** окна, установите для параметра <xref:System.Windows.FrameworkElement.Width%2A> и <xref:System.Windows.FrameworkElement.Height%2A> свойства `UserControl1` для `200`.  
   
@@ -46,6 +46,6 @@ ms.locfileid: "54572635"
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Миграция и взаимодействие систем](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
-- [Использование элементов управления WPF](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)
+- [Миграция и взаимодействие систем](../../wpf/advanced/migration-and-interoperability.md)
+- [Использование элементов управления WPF](using-wpf-controls.md)
 - [Проектирование XAML в Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)

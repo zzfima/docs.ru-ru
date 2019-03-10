@@ -6,12 +6,12 @@ helpviewer_keywords:
 - rows [Windows Forms], new records
 - DataGridView control [Windows Forms], data entry
 ms.assetid: 6110f1ea-9794-442c-a98a-f104a1feeaf4
-ms.openlocfilehash: 86e61afd0882fea9015cdfe3b40e6d3cd329391b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 041738ba375022be7c80526f25e5761314dffbf1
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734965"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703924"
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>Использование строки элемента управления DataGridView, предназначенной для ввода новых данных, в Windows Forms
 При использовании <xref:System.Windows.Forms.DataGridView> для редактирования данных в приложении, часто требуется предоставить пользователям возможность добавлять новые строки данных в хранилище данных. <xref:System.Windows.Forms.DataGridView> Элемент управления поддерживает данную функцию, предоставляя строку для новых записей, которая всегда находится в последней строке. Оно помечено символ звездочки (*) в заголовке строки. В следующих разделах рассматриваются некоторые аспекты, следует учитывать при включении программы со строкой для новых записей.  
@@ -24,7 +24,7 @@ ms.locfileid: "54734965"
 ## <a name="populating-the-row-for-new-records-with-default-data"></a>Заполнение строки для новых записей с данными по умолчанию  
  Когда пользователь выбирает строку для новых записей как текущую строку, <xref:System.Windows.Forms.DataGridView> управления вызывает <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> событий.  
   
- Это событие предоставляет доступ к новому <xref:System.Windows.Forms.DataGridViewRow> и позволяет заполнить новую строку с данными по умолчанию. Дополнительные сведения см. в разделе [Как Определение значения по умолчанию для новых строк в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/specify-default-values-for-new-rows-in-the-datagrid.md)  
+ Это событие предоставляет доступ к новому <xref:System.Windows.Forms.DataGridViewRow> и позволяет заполнить новую строку с данными по умолчанию. Дополнительные сведения см. в разделе [Как Определение значения по умолчанию для новых строк в элементе управления DataGridView Windows Forms](specify-default-values-for-new-rows-in-the-datagrid.md)  
   
 ## <a name="the-rows-collection"></a>Набор строк  
  Содержится в строке для новых записей <xref:System.Windows.Forms.DataGridView> элемента управления <xref:System.Windows.Forms.DataGridView.Rows%2A> коллекции но ведет себя по-разному в двух аспектах:  
@@ -34,7 +34,7 @@ ms.locfileid: "54734965"
 -   Строка не могут добавляться после строки для новых записей. <xref:System.InvalidOperationException> Возникает при попытке такой. Таким образом, строка для новых записей всегда является последней строкой в <xref:System.Windows.Forms.DataGridView> элемента управления. Методы в <xref:System.Windows.Forms.DataGridViewRowCollection> , которые добавляют строки —<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A>, <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopy%2A>, и <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopies%2A>— все вызывать методы вставки внутренне при наличии строки для новых записей.  
   
 ## <a name="visual-customization-of-the-row-for-new-records"></a>Настройка внешнего вида строки для новых записей  
- При создании строки для новых записей, он основан на строки, указанной в <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> свойство. Стили ячеек, которые не указаны для этой строки, наследуются от других свойств. Дополнительные сведения о наследовании стилей ячеек, см. в разделе [стили ячеек элемента управления DataGridView Windows Forms в](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md).  
+ При создании строки для новых записей, он основан на строки, указанной в <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> свойство. Стили ячеек, которые не указаны для этой строки, наследуются от других свойств. Дополнительные сведения о наследовании стилей ячеек, см. в разделе [стили ячеек элемента управления DataGridView Windows Forms в](cell-styles-in-the-windows-forms-datagridview-control.md).  
   
  Начальные значения для загрузки новых записей из каждой ячейки, ячейки в строке отображается <xref:System.Windows.Forms.DataGridViewCell.DefaultNewRowValue%2A> свойство. Для типа <xref:System.Windows.Forms.DataGridViewImageCell>, это свойство возвращает изображение-заполнитель. В противном случае это свойство возвращает `null`. Можно переопределить это свойство для возврата пользовательское значение. Тем не менее, можно заменить исходные значения <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> обработчик событий, когда фокус вводит строку для новых записей.  
   
@@ -55,10 +55,10 @@ ms.locfileid: "54734965"
  Строки для новых записей всегда создается в невыбранном состоянии.  
   
 ## <a name="virtual-mode"></a>Виртуальный режим  
- Если вы реализуете виртуальный режим, необходимо отслеживать, когда требуется строку для новых записей в модели данных, а также когда откатывать добавления строки. Конкретная реализация этих функций зависит от реализации модели данных и соответствующей семантики транзакций, например, является ли область фиксации на уровне ячейки или строки. Дополнительные сведения см. в разделе [виртуальный режим в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md).  
+ Если вы реализуете виртуальный режим, необходимо отслеживать, когда требуется строку для новых записей в модели данных, а также когда откатывать добавления строки. Конкретная реализация этих функций зависит от реализации модели данных и соответствующей семантики транзакций, например, является ли область фиксации на уровне ячейки или строки. Дополнительные сведения см. в разделе [виртуальный режим в элементе управления DataGridView Windows Forms](virtual-mode-in-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded?displayProperty=nameWithType>
-- [Ввод данных с помощью элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)
-- [Практическое руководство. Определение значения по умолчанию для новых строк в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/specify-default-values-for-new-rows-in-the-datagrid.md)
+- [Ввод данных с помощью элемента управления DataGridView в Windows Forms](data-entry-in-the-windows-forms-datagridview-control.md)
+- [Практическое руководство. Определение значения по умолчанию для новых строк в элементе управления DataGridView Windows Forms](specify-default-values-for-new-rows-in-the-datagrid.md)

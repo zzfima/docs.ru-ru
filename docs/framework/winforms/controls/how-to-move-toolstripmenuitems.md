@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Перемещение объектов ToolStripMenuItem
+title: Практическое руководство. Перемещение объектов ToolStripMenuItem
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStripMenuItems [Windows Forms], moving
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], arranging items
 - ToolStripMenuItems [Windows Forms], cutting and pasting
 ms.assetid: cab9e03e-4edd-4c25-b3e3-bd1edc602bd9
-ms.openlocfilehash: 12554ee2225dbb186392b910ddfd7c2f69695e7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50b5fd16780147ad7592035a901d993495dcb878
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660220"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708955"
 ---
-# <a name="how-to-move-toolstripmenuitems"></a>Как выполнить Перемещение объектов ToolStripMenuItem
+# <a name="how-to-move-toolstripmenuitems"></a>Практическое руководство. Перемещение объектов ToolStripMenuItem
 Во время разработки, можно переместить все меню верхнего уровня и их пункты меню в другое место на <xref:System.Windows.Forms.MenuStrip>. Можно также перемещать отдельные элементы между меню верхнего уровня или изменение положения элементов в меню.  
   
 > [!NOTE]
@@ -73,4 +73,4 @@ ms.locfileid: "54660220"
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
-- [Общие сведения об элементе управления MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
+- [Общие сведения об элементе управления MenuStrip](menustrip-control-overview-windows-forms.md)

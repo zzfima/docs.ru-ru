@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Создание настраиваемого шаблона действий
+title: Практическое руководство. Создание настраиваемого шаблона действий
 ms.date: 03/30/2017
 ms.assetid: 6760a5cc-6eb8-465f-b4fa-f89b39539429
-ms.openlocfilehash: c90721676fc5b77704ee86bcd5e98c99e3af6683
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f9594f799e1b6a176e7bbf28cdea77c9cdfb70ac
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512715"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703469"
 ---
-# <a name="how-to-create-a-custom-activity-template"></a>Как выполнить Создание настраиваемого шаблона действий
+# <a name="how-to-create-a-custom-activity-template"></a>Практическое руководство. Создание настраиваемого шаблона действий
 
 Настраиваемые шаблоны действий служат для настройки конфигурации действий, в том числе настраиваемых составных действий, чтобы позволяет не создавать отдельно каждое действие и не настраивать все свойства и другие параметры вручную. Эти настраиваемые шаблоны могут быть сделаны доступными в **элементов** на [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] или в повторно размещенном конструкторе, из которого пользователи могут перетащить их в предварительно настроенную область конструктора. [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] поставляется с хорошими примерами таких шаблонов: [конструктора шаблонов SendAndReceiveReply](/visualstudio/workflow-designer/sendandreceivereply-template-designer) и [конструктора шаблонов ReceiveAndSendReply](/visualstudio/workflow-designer/receiveandsendreply-template-designer) в [конструкторы действий обмена сообщениями](/visualstudio/workflow-designer/messaging-activity-designers) категории.
 
@@ -127,4 +127,4 @@ namespace DelayActivityTemplate
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Activities.Presentation.IActivityTemplateFactory>
-- [Настройка конструктора рабочих процессов](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)
+- [Настройка конструктора рабочих процессов](customizing-the-workflow-design-experience.md)

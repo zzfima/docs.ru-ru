@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Настройка параметров с помощью элементов управления Windows Forms CheckBox
+title: Практическое руководство. Настройка параметров с помощью элементов управления Windows Forms CheckBox
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - check boxes [Windows Forms], using to set options
 - CheckBox control [Windows Forms], using to set options
 ms.assetid: 2ac70498-7e3e-4e07-8901-ccabaeb5fd3e
-ms.openlocfilehash: a8159e9e9a2484b95399aba67b1a10b1252a4357
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3eb68d76d936f13e78d13629455c6ac7fb537b40
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525564"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714792"
 ---
-# <a name="how-to-set-options-with-windows-forms-checkbox-controls"></a>Как выполнить Настройка параметров с помощью элементов управления Windows Forms CheckBox
+# <a name="how-to-set-options-with-windows-forms-checkbox-controls"></a>Практическое руководство. Настройка параметров с помощью элементов управления Windows Forms CheckBox
 Windows Forms <xref:System.Windows.Forms.CheckBox> элемент управления используется для предоставления пользователям True/False или Да/нет параметров. Элемент управления отображает флажок, когда он выбран.  
   
 ### <a name="to-set-options-with-checkbox-controls"></a>Настройка параметров с помощью элементов управления CheckBox  
@@ -67,6 +67,6 @@ Windows Forms <xref:System.Windows.Forms.CheckBox> элемент управле
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.CheckBox>
-- [Общие сведения об элементе управления CheckBox](../../../../docs/framework/winforms/controls/checkbox-control-overview-windows-forms.md)
-- [Практическое руководство. Обработка события в Windows Forms щелчка элемента управления CheckBox](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-checkbox-clicks.md)
-- [Элемент управления CheckBox](../../../../docs/framework/winforms/controls/checkbox-control-windows-forms.md)
+- [Общие сведения об элементе управления CheckBox](checkbox-control-overview-windows-forms.md)
+- [Практическое руководство. Обработка события в Windows Forms щелчка элемента управления CheckBox](how-to-respond-to-windows-forms-checkbox-clicks.md)
+- [Элемент управления CheckBox](checkbox-control-windows-forms.md)

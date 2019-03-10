@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - custom controls [Windows Forms]
 ms.assetid: fddbe951-4485-459d-a5fd-665ea346dbc1
-ms.openlocfilehash: 8ab1fa9ccbffc7ca9621e32e00455a9b75a91126
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e8ae5ec00ee488f0b7400bfa99483c4efc29e016
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533092"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703248"
 ---
 # <a name="overview-of-using-controls-in-windows-forms"></a>Общие сведения об использовании элементов управления в формах Windows Forms
 В этом разделе описываются основные элементы в приложении Windows Forms и предоставляет простой пример, в котором используются элементы управления и обрабатывает события в приложении Windows Forms.  
@@ -224,5 +224,5 @@ public class MyForm : Form {
 ```  
   
 ## <a name="see-also"></a>См. также
-- [Разработка пользовательских элементов управления Windows Forms в .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
-- [Основы разработки элементов управления форм Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)
+- [Разработка пользовательских элементов управления Windows Forms в .NET Framework](developing-custom-windows-forms-controls.md)
+- [Основы разработки элементов управления форм Windows Forms](windows-forms-control-development-basics.md)

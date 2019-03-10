@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Заливка фигуры сплошным цветом
+title: Практическое руководство. Заливка фигуры сплошным цветом
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - colors [Windows Forms], adding to shapes
 - shapes [Windows Forms], filling
 ms.assetid: 06088b31-bac9-4ef3-9ebe-06c2c764d6df
-ms.openlocfilehash: 576042d9d8e7a7f77d5375b7dfafafdc63b3e824
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8bc782f9496a9c1562bad2df1ba196fb39572e68
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601965"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57704452"
 ---
-# <a name="how-to-fill-a-shape-with-a-solid-color"></a>Как выполнить Заливка фигуры сплошным цветом
+# <a name="how-to-fill-a-shape-with-a-solid-color"></a>Практическое руководство. Заливка фигуры сплошным цветом
 Чтобы заливка фигуры сплошным цветом, создайте <xref:System.Drawing.SolidBrush> , а затем передать, <xref:System.Drawing.SolidBrush> объект в качестве аргумента одному из методов заливки класса <xref:System.Drawing.Graphics> класса. В следующем примере показано, как заливка эллипса красный цвет.  
   
 ## <a name="example"></a>Пример  
@@ -23,11 +23,11 @@ ms.locfileid: "54601965"
   
  Четыре цифры (0, 0, 100, 60), передаваемый <xref:System.Drawing.Graphics.FillEllipse%2A> метод укажите расположение и размер прямоугольника, ограничивающего эллипса. Прямоугольник имеет в левом верхнем углу (0, 0), шириной 100, а высота — 60.  
   
- [!code-csharp[System.Drawing.UsingABrush#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#11)]
- [!code-vb[System.Drawing.UsingABrush#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#11)]  
+ [!code-csharp[System.Drawing.UsingABrush#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#11)]
+ [!code-vb[System.Drawing.UsingABrush#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Предыдущий пример предназначен для работы с Windows Forms, и для него необходим объект <xref:System.Windows.Forms.PaintEventArgs> `e`, передаваемый в качестве параметра обработчику событий <xref:System.Windows.Forms.Control.Paint>.  
   
 ## <a name="see-also"></a>См. также
-- [Использование кисти для заливки фигур](../../../../docs/framework/winforms/advanced/using-a-brush-to-fill-shapes.md)
+- [Использование кисти для заливки фигур](using-a-brush-to-fill-shapes.md)

@@ -1,19 +1,19 @@
 ---
-title: Пошаговое руководство. Создание Windows-приложения с поддержкой специальных возможностей
+title: Пошаговое руководство. Создание приложения специальных возможностей на базе Windows
 ms.date: 03/30/2017
 helpviewer_keywords:
 - accessibility [Windows Forms], Windows applications
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: 6c798d0f6a454c7ee819d5556970bca12f1812e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b27203f46c1d89577825e40541d9789d3b9e17de
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529627"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708279"
 ---
-# <a name="walkthrough-creating-an-accessible-windows-based-application"></a>Пошаговое руководство. Создание Windows-приложения с поддержкой специальных возможностей
+# <a name="walkthrough-creating-an-accessible-windows-based-application"></a>Пошаговое руководство. Создание приложения специальных возможностей на базе Windows
 Создание приложений со специальными возможностями необходимо по деловым соображениям. Во многих странах для продаваемого программного обеспечения существуют правительственные требования в отношении специальных возможностей. Логотип "Сертифицировано для Windows" предполагает соответствие продукта требованиям в отношении специальных возможностей. По предварительным оценкам, только в США 30 миллионов пользователей нуждаются в программном обеспечении со специальными возможностями. Многие из них являются потенциальными клиентами.  
   
  В этом пошаговом руководстве рассматриваются пять требований в отношении специальных возможностей, выполнение которых необходимо для использования эмблемы "Сертифицировано для Windows". Согласно этим требованиям в приложении со специальными возможностями обеспечиваются:  
@@ -30,7 +30,7 @@ ms.locfileid: "33529627"
   
  Подробнее см. в разделе [Ресурсы для создания приложений со специальными возможностями](/visualstudio/ide/reference/resources-for-designing-accessible-applications).  
   
- Информацию о поддержке различных раскладок клавиатуры см. в разделе [Рекомендации по разработке международных приложений](../../../../docs/standard/globalization-localization/best-practices-for-developing-world-ready-apps.md).  
+ Информацию о поддержке различных раскладок клавиатуры см. в разделе [Рекомендации по разработке международных приложений](../../../standard/globalization-localization/best-practices-for-developing-world-ready-apps.md).  
   
 ## <a name="creating-the-project"></a>Создание проекта  
  В этом пошаговом руководстве создается пользовательский интерфейс для приложения, принимающего заказы на пиццу. Оно содержит поле (<xref:System.Windows.Forms.TextBox>) для имени заказчика, группу переключателей (<xref:System.Windows.Forms.RadioButton>) для выбора размера пиццы, флажки (<xref:System.Windows.Forms.CheckedListBox>) для выбора начинки, две кнопки с надписями "Заказать" и "Отмена", а также меню с командой "Выход".  
@@ -46,7 +46,7 @@ ms.locfileid: "33529627"
 ## <a name="adding-the-controls-to-the-form"></a>Добавление элементов управления в форму  
  При добавлении элементов управления в форму придерживайтесь приведенных ниже правил для того, чтобы приложение было доступным для пользователей с физическими ограничениями.  
   
--   Задайте свойства <xref:System.Windows.Forms.Control.AccessibleDescription%2A> и <xref:System.Windows.Forms.Control.AccessibleName%2A>. В этом примере для свойства <xref:System.Windows.Forms.Control.AccessibleRole%2A> достаточным является значение Default. Подробнее о свойствах специальных возможностей см. в разделе [Определение сведений, связанных со специальными возможностями, для элементов управления в Windows Forms](../../../../docs/framework/winforms/controls/providing-accessibility-information-for-controls-on-a-windows-form.md).  
+-   Задайте свойства <xref:System.Windows.Forms.Control.AccessibleDescription%2A> и <xref:System.Windows.Forms.Control.AccessibleName%2A>. В этом примере для свойства <xref:System.Windows.Forms.Control.AccessibleRole%2A> достаточным является значение Default. Подробнее о свойствах специальных возможностей см. в разделе [Определение сведений, связанных со специальными возможностями, для элементов управления в Windows Forms](../controls/providing-accessibility-information-for-controls-on-a-windows-form.md).  
   
 -   Задайте размер шрифта 10 пунктов или выше.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "33529627"
     |MenuItem|Имя|exitApp|  
     ||Text|Вы&ход|  
   
-     ![Форма заказа пиццы](../../../../docs/framework/winforms/advanced/media/vbpizzaorderform.gif "vbPizzaOrderForm")  
+     ![Форма заказа пиццы](./media/vbpizzaorderform.gif "vbPizzaOrderForm")  
 Форма будет иметь вид, аналогичный представленному ниже.  
   
 ## <a name="supporting-high-contrast-mode"></a>Поддержка режима высокой контрастности  
@@ -287,7 +287,7 @@ ms.locfileid: "33529627"
   
 #### <a name="to-supply-information-by-some-other-means-than-sound"></a>Обеспечение передачи важной информации способами помимо звукового сигнала  
   
-1.  Сделайте строку заголовка мигающей с помощью функции FlashWindow интерфейса Windows API. Пример вызова функций Windows API см. в разделе [Пошаговое руководство. Вызов API Windows](~/docs/visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).  
+1.  Сделайте строку заголовка мигающей с помощью функции FlashWindow интерфейса Windows API. Пример вызова функций Windows API, см. в разделе [Пошаговое руководство: Вызов Windows API](~/docs/visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).  
   
     > [!NOTE]
     >  У пользователя может быть включена служба визуального оповещения Windows, что также приведет к миганию окна при подаче системных звуковых сигналов через встроенные динамики компьютера.  
@@ -296,7 +296,7 @@ ms.locfileid: "33529627"
   
 3.  При выводе окна сообщения передавайте ему фокус клавиатуры. Этот способ не следует применять в момент, когда пользователь может осуществлять ввод с клавиатуры.  
   
-4.  Выводите индикатор состояния в области уведомлений о состоянии панели задач. Подробнее см. в разделе [Практическое руководство. Добавление значков приложения на панель задач с помощью компонента NotifyIcon в Windows Forms](../../../../docs/framework/winforms/controls/app-icons-to-the-taskbar-with-wf-notifyicon.md).  
+4.  Выводите индикатор состояния в области уведомлений о состоянии панели задач. Подробнее см. в разделе [Практическое руководство. Добавление значков приложения на панель задач с помощью компонента NotifyIcon в Windows Forms](../controls/app-icons-to-the-taskbar-with-wf-notifyicon.md).  
   
 ## <a name="testing-the-application"></a>Тестирование приложения  
  Перед развертыванием приложения необходимо протестировать реализованные специальные возможности.  

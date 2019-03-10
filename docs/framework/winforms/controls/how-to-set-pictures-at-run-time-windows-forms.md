@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Установка изображений во время выполнения (Windows Forms)
+title: Практическое руководство. Установка изображений во время выполнения (Windows Forms)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - images [Windows Forms], adding with PictureBox control [Windows Forms]
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 18ca41d0-68a5-4660-985e-a6c1fbc01d76
-ms.openlocfilehash: c7a65bcc65710324a4457c17dd728b4771550c06
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5afb4fe3ebef705cd0671312aacb6f9ad8219621
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694078"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711236"
 ---
-# <a name="how-to-set-pictures-at-run-time-windows-forms"></a>Как выполнить Установка изображений во время выполнения (Windows Forms)
+# <a name="how-to-set-pictures-at-run-time-windows-forms"></a>Практическое руководство. Установка изображений во время выполнения (Windows Forms)
 Можно программно установить изображения, отображаемого в формах Windows <xref:System.Windows.Forms.PictureBox> элемента управления.  
   
 ### <a name="to-set-a-picture-programmatically"></a>Задание рисунка программным образом  
@@ -93,14 +93,14 @@ ms.locfileid: "54694078"
     ```  
   
     > [!NOTE]
-    >  Дополнительные сведения о том, почему следует использовать <xref:System.Drawing.Image.Dispose%2A> метод таким образом, см. в разделе [очистки неуправляемых ресурсов](../../../../docs/standard/garbage-collection/unmanaged.md).  
+    >  Дополнительные сведения о том, почему следует использовать <xref:System.Drawing.Image.Dispose%2A> метод таким образом, см. в разделе [очистки неуправляемых ресурсов](../../../standard/garbage-collection/unmanaged.md).  
   
      Этот код удалит изображение, даже если рисунок был загружен в элемент управления во время разработки.  
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.PictureBox>
 - <xref:System.Drawing.Image.FromFile%2A?displayProperty=nameWithType>
-- [Общие сведения об элементе управления PictureBox](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)
-- [Практическое руководство. Загрузка изображения с помощью конструктора](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)
-- [Практическое руководство. Изменение размера или размещения изображения во время выполнения](../../../../docs/framework/winforms/controls/how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
-- [Элемент управления PictureBox](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)
+- [Общие сведения об элементе управления PictureBox](picturebox-control-overview-windows-forms.md)
+- [Практическое руководство. Загрузка изображения с помощью конструктора](how-to-load-a-picture-using-the-designer-windows-forms.md)
+- [Практическое руководство. Изменение размера или размещения изображения во время выполнения](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
+- [Элемент управления PictureBox](picturebox-control-windows-forms.md)

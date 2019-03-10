@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Проверка параметров приложения
+title: Практическое руководство. Проверка параметров приложения
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
-ms.openlocfilehash: 6ebdf1ee74e3ed41b02fdeb545ffc57aaa2d6d7d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 96323e0edd643e20338bd10a9eb1744c3b0aef2f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496290"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705835"
 ---
-# <a name="how-to-validate-application-settings"></a>Как выполнить Проверка параметров приложения
+# <a name="how-to-validate-application-settings"></a>Практическое руководство. Проверка параметров приложения
 В этом разделе показано, как проверить параметры приложения перед их сохранением.  
   
  Поскольку параметры приложений являются строго типизированными, это дает некоторую уверенность в том, что пользователи не могут назначить тому или иному параметру данные неверного типа. Тем не менее, пользователь по-прежнему может попытаться присвоить значение вне допустимого диапазона, наприме указать дату рождения в будущем. <xref:System.Configuration.ApplicationSettingsBase>, родительским классом для всех классов параметров приложения, предоставляет четыре события для проверки границ. Благодаря обработке этих событий весь код проверки размещается в одном месте, а не в разных частях проекта.  
@@ -40,9 +40,9 @@ ms.locfileid: "54496290"
   
 -   Для событий, возникающих до связанных с ними действий, таких как <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> и <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>, использует <xref:System.ComponentModel.CancelEventArgs> аргумент для отмены операции.  
   
- Дополнительные сведения об обработке событий см. в разделе [Общие сведения об обработчиках событий](../../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).  
+ Дополнительные сведения об обработке событий см. в разделе [Общие сведения об обработчиках событий](../event-handlers-overview-windows-forms.md).  
   
- Следующие процедуры показывают, как для проверки корректности даты рождения с помощью <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> или <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> событий. В этих процедурах предполагается, что вы уже создали параметры приложения. В этом примере будет выполнена проверка границ для параметра с именем `DateOfBirth`. Дополнительные сведения о создании параметров см. в разделе [как: Создание параметров приложения](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md).  
+ Следующие процедуры показывают, как для проверки корректности даты рождения с помощью <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> или <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> событий. В этих процедурах предполагается, что вы уже создали параметры приложения. В этом примере будет выполнена проверка границ для параметра с именем `DateOfBirth`. Дополнительные сведения о создании параметров см. в разделе [как: Создание параметров приложения](how-to-create-application-settings.md).  
   
 ### <a name="to-obtain-the-application-settings-object"></a>Получение объекта параметров приложения  
   
@@ -161,5 +161,5 @@ ms.locfileid: "54496290"
     ```  
   
 ## <a name="see-also"></a>См. также
-- [Создание обработчиков событий в Windows Forms](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
-- [Практическое руководство. Создание параметров приложения](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)
+- [Создание обработчиков событий в Windows Forms](../creating-event-handlers-in-windows-forms.md)
+- [Практическое руководство. Создание параметров приложения](how-to-create-application-settings.md)
