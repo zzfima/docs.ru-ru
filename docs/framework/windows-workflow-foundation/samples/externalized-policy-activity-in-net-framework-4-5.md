@@ -2,24 +2,24 @@
 title: Реализованное действие политики в .NET Framework 4.5
 ms.date: 03/30/2017
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
-ms.openlocfilehash: 1c2f66caeb9932422681ba7176346a5e5e084c11
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 2ec358dbe2ba2b60df707d1ce580bb88e4c4ba1b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850241"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57706380"
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>Реализованное действие политики в .NET Framework 4.5
 
-В этом образце показано, как с помощью действия externalizedpolicy4 можно выполнять существующие [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Windows Workflow Foundation (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> объекты в [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Windows Workflow Foundation (WF 4.5) непосредственно с помощью обработчика правил входящий в комплект поставки WF 3.5. Используя это действие, можно создавать и выполнять любой существующий набор правил <xref:System.Workflow.Activities.Rules.RuleSet> WF 3.5. Дополнительные сведения о обработчик правил WF 3.5, являющемся частью Windows Workflow Foundation, см. [введение в обработчик правил Windows Workflow Foundation](https://go.microsoft.com/fwlink/?LinkId=166079). Дополнительные сведения о миграции правил к [!INCLUDE[wf1](../../../../includes/wf1-md.md)] в [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)], прочтите инструкции по миграции [руководство по миграции](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md).
+В этом образце показано, как с помощью действия externalizedpolicy4 можно выполнять существующие [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Windows Workflow Foundation (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> объекты в [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Windows Workflow Foundation (WF 4.5) непосредственно с помощью обработчика правил входящий в комплект поставки WF 3.5. Используя это действие, можно создавать и выполнять любой существующий набор правил <xref:System.Workflow.Activities.Rules.RuleSet> WF 3.5. Дополнительные сведения о обработчик правил WF 3.5, являющемся частью Windows Workflow Foundation, см. [введение в обработчик правил Windows Workflow Foundation](https://go.microsoft.com/fwlink/?LinkId=166079). Дополнительные сведения о миграции правил к [!INCLUDE[wf1](../../../../includes/wf1-md.md)] в [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)], прочтите инструкции по миграции [руководство по миграции](../migration-guidance.md).
 
 ## <a name="projects-in-this-sample"></a>Проекты в этом образце
 
 |Имя проекта|Описание|Основные файлы|
 |-|-|-|
-|ExternalizedPolicy4|Содержит действие PolicyExternalizedPolicy4 и его конструктор WF 4.5.|**ExternalizedPolicy4.cs**: определение действия.<br /><br /> **ExternalizedPolicy4Designer.xaml**: пользовательский конструктор действия ExternalizedPolicy4. Он использует редактор правил (<xref:System.Workflow.Activities.Rules.Design.RuleSetDialog>), определенный в конструкторе правил WF 3.5.|
-|ImperativeCodeClientSample|Образец клиентского приложения, осуществляющего конфигурирование и запуск рабочего процесса с использованием приложения PolicyExternalizedPolicy4, использующего императивный код C# (конструктор не используется).|**ApplyDiscount.rules**: файл с [!INCLUDE[wf1](../../../../includes/wf1-md.md)] определениями правил.<br /><br /> **Order.cs**: тип, представляющий заказ клиента. Правила применяются к объектам этого типа.<br /><br /> **Program.cs**: настраивает и запускает рабочий процесс с действием Policy4 для применения правил, определенных в ApplyDiscount.rules, к экземплярам объектов Order.<br /><br /> App.config: файл конфигурации, содержащий путь к файлу правил.|
-|DesignerClientSample|Образец клиентского приложения, осуществляющего конфигурирование и запуск рабочего процесса с использованием приложения ExternalPolicy4 в конструкторе [!INCLUDE[wf1](../../../../includes/wf1-md.md)].|**Sequence1.XAML**: последовательный рабочий процесс, использующий действие Policy4 для проверки правил.<br /><br /> **Program.cs**: выполняет экземпляр рабочего процесса, определенного в Sequence1.xaml.|
+|ExternalizedPolicy4|Содержит действие PolicyExternalizedPolicy4 и его конструктор WF 4.5.|**ExternalizedPolicy4.cs**: определение действия.<br /><br /> **ExternalizedPolicy4Designer.xaml**: Пользовательский конструктор действия ExternalizedPolicy4. Он использует редактор правил (<xref:System.Workflow.Activities.Rules.Design.RuleSetDialog>), определенный в конструкторе правил WF 3.5.|
+|ImperativeCodeClientSample|Образец клиентского приложения, осуществляющего конфигурирование и запуск рабочего процесса с использованием приложения PolicyExternalizedPolicy4, использующего императивный код C# (конструктор не используется).|**ApplyDiscount.rules**: Файл с [!INCLUDE[wf1](../../../../includes/wf1-md.md)] определениями правил.<br /><br /> **Order.cs**: Тип, представляющий заказ клиента. Правила применяются к объектам этого типа.<br /><br /> **Program.cs**: Настраивает и запускает рабочий процесс с действием Policy4 для применения правил, определенных в ApplyDiscount.rules, к экземплярам объектов Order.<br /><br /> App.config: Файл конфигурации, содержащий путь к файлу правил.|
+|DesignerClientSample|Образец клиентского приложения, осуществляющего конфигурирование и запуск рабочего процесса с использованием приложения ExternalPolicy4 в конструкторе [!INCLUDE[wf1](../../../../includes/wf1-md.md)].|**Sequence1.XAML**: Последовательный рабочий процесс, использующий действие Policy4 для проверки правил.<br /><br /> **Program.cs**: Выполняет экземпляр рабочего процесса, определенного в Sequence1.xaml.|
 
 ## <a name="the-externalizedpolicy4-activity"></a>Действие ExternalizedPolicy4
 

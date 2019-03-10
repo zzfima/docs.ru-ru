@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Отображение значков ошибок для проверки формы с помощью компонента ErrorProvider в Windows Forms
+title: Практическое руководство. Отображение значков ошибок для проверки формы с помощью компонента ErrorProvider в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ErrorProvider component [Windows Forms], displaying error icons
 - error messages [Windows Forms], displaying icons
 ms.assetid: 3b681a32-9db4-497b-a34b-34980eabee46
-ms.openlocfilehash: fa230e326a91853d6b23d5901317a86f628f6c72
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f676454849c37da8c0a5f944be05c3f6c95887b4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679114"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707642"
 ---
-# <a name="how-to-display-error-icons-for-form-validation-with-the-windows-forms-errorprovider-component"></a>Как выполнить Отображение значков ошибок для проверки формы с помощью компонента ErrorProvider в Windows Forms
+# <a name="how-to-display-error-icons-for-form-validation-with-the-windows-forms-errorprovider-component"></a>Практическое руководство. Отображение значков ошибок для проверки формы с помощью компонента ErrorProvider в Windows Forms
 Вы можете использовать формы Windows <xref:System.Windows.Forms.ErrorProvider> компонент для отображения значка ошибки, когда пользователь вводит недопустимые данные. Необходимо иметь по крайней мере два элемента управления в форме для перехода между ними и тем самым вызвать код проверки.  
   
 ### <a name="to-display-an-error-icon-when-a-controls-value-is-invalid"></a>Для отображения значков ошибок при недопустимом значение элемента управления  
@@ -27,7 +27,7 @@ ms.locfileid: "54679114"
   
 2.  Добавить <xref:System.Windows.Forms.ErrorProvider> в форму компонент.  
   
-3.  Выберите первый элемент управления и добавьте код для его <xref:System.Windows.Forms.Control.Validating> обработчик событий. Чтобы этот код для запуска должным образом процедура должны быть подключены к событию. Дополнительные сведения см. в разделе [Как Создание обработчиков событий во время выполнения для форм Windows Forms](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
+3.  Выберите первый элемент управления и добавьте код для его <xref:System.Windows.Forms.Control.Validating> обработчик событий. Чтобы этот код для запуска должным образом процедура должны быть подключены к событию. Дополнительные сведения см. в разделе [Как Создание обработчиков событий во время выполнения для форм Windows Forms](../how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
   
      Следующий код проверяет допустимость данных, которые пользователь ввел; Если данные являются недопустимыми, <xref:System.Windows.Forms.ErrorProvider.SetError%2A> вызывается метод. Первый аргумент <xref:System.Windows.Forms.ErrorProvider.SetError%2A> метод указывает, какой элемент управления для отображения значка рядом с полем. Вторым аргументом является текст ошибки для отображения.  
   
@@ -94,5 +94,5 @@ ms.locfileid: "54679114"
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.ErrorProvider.SetError%2A>
-- [Общие сведения о компоненте ErrorProvider](../../../../docs/framework/winforms/controls/errorprovider-component-overview-windows-forms.md)
-- [Практическое руководство. Просмотр ошибок в наборе данных с помощью компонента ErrorProvider в Windows Forms](../../../../docs/framework/winforms/controls/view-errors-within-a-dataset-with-wf-errorprovider-component.md)
+- [Общие сведения о компоненте ErrorProvider](errorprovider-component-overview-windows-forms.md)
+- [Практическое руководство. Просмотр ошибок в наборе данных с помощью компонента ErrorProvider в Windows Forms](view-errors-within-a-dataset-with-wf-errorprovider-component.md)

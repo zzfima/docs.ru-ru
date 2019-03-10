@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Отправки данных в активную дочернюю форму MDI
+title: Практическое руководство. Отправки данных в активную дочернюю форму MDI
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,25 +10,25 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], pasting
 - Clipboard [Windows Forms], getting data from
 ms.assetid: 1047d2fe-1235-46db-aad9-563aea1d743b
-ms.openlocfilehash: dab72d64cdd013125ae7c302ccf297ecdc0c98b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a89956595ff98e8cda717c90a3f96c95abc8118a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589979"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707408"
 ---
-# <a name="how-to-send-data-to-the-active-mdi-child"></a>Как выполнить Отправки данных в активную дочернюю форму MDI
-Часто в контексте [приложений многодокументного интерфейса (MDI)](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md), вам потребуется для отправки данных в активное дочернее окно, например когда пользователь вставляет данные из буфера обмена в приложении MDI.  
+# <a name="how-to-send-data-to-the-active-mdi-child"></a>Практическое руководство. Отправки данных в активную дочернюю форму MDI
+Часто в контексте [приложений многодокументного интерфейса (MDI)](multiple-document-interface-mdi-applications.md), вам потребуется для отправки данных в активное дочернее окно, например когда пользователь вставляет данные из буфера обмена в приложении MDI.  
   
 > [!NOTE]
->  Сведения о проверке, какие дочернее окно имеет фокус и отправка его содержимое в буфер обмена, см. в разделе [определение активной дочерней MDI-формы](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md).  
+>  Сведения о проверке, какие дочернее окно имеет фокус и отправка его содержимое в буфер обмена, см. в разделе [определение активной дочерней MDI-формы](how-to-determine-the-active-mdi-child.md).  
   
 ### <a name="to-send-data-to-the-active-mdi-child-window-from-the-clipboard"></a>Для отправки данных в активную дочернюю MDI из буфера обмена  
   
 1.  Внутри метода скопируйте текст в буфер обмена для активного элемента управления активной дочерней формы.  
   
     > [!NOTE]
-    >  В этом примере предполагается, имеется родительская форма MDI (`Form1`), имеет один или несколько дочерних MDI-окон содержащий <xref:System.Windows.Forms.RichTextBox> элемента управления. Дополнительные сведения см. в разделе [Создание родительских MDI-форм](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md).  
+    >  В этом примере предполагается, имеется родительская форма MDI (`Form1`), имеет один или несколько дочерних MDI-окон содержащий <xref:System.Windows.Forms.RichTextBox> элемента управления. Дополнительные сведения см. в разделе [Создание родительских MDI-форм](how-to-create-mdi-parent-forms.md).  
   
     ```vb  
     Public Sub mniPaste_Click(ByVal sender As Object, _  
@@ -92,8 +92,8 @@ ms.locfileid: "54589979"
     ```  
   
 ## <a name="see-also"></a>См. также
-- [Приложения с интерфейсом MDI](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)
-- [Практическое руководство. Создание родительских MDI-форм](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)
-- [Практическое руководство. Создание дочерних MDI-форм](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)
-- [Практическое руководство. Определить активную дочернюю форму MDI](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)
-- [Практическое руководство. Упорядочение дочерних форм MDI](../../../../docs/framework/winforms/advanced/how-to-arrange-mdi-child-forms.md)
+- [Приложения с интерфейсом MDI](multiple-document-interface-mdi-applications.md)
+- [Практическое руководство. Создание родительских MDI-форм](how-to-create-mdi-parent-forms.md)
+- [Практическое руководство. Создание дочерних MDI-форм](how-to-create-mdi-child-forms.md)
+- [Практическое руководство. Определить активную дочернюю форму MDI](how-to-determine-the-active-mdi-child.md)
+- [Практическое руководство. Упорядочение дочерних форм MDI](how-to-arrange-mdi-child-forms.md)

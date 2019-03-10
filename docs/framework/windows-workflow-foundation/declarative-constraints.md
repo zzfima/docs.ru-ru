@@ -2,12 +2,12 @@
 title: Декларативные ограничения
 ms.date: 03/30/2017
 ms.assetid: 67001ed1-7f4d-4ada-ae57-a31176901a53
-ms.openlocfilehash: 5599513405c77aa213b329b085075660baed5c47
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: e3ced8f6f88d698273ace5c8b74fe90b94fa9720
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842376"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708158"
 ---
 # <a name="declarative-constraints"></a>Декларативные ограничения
 Декларативные ограничения - это мощный метод проверки допустимости действия и его связей с другими действиями. Ограничения для действий настраиваются во время процесса создания, однако дополнительные ограничения также могут задаваться ведущим приложением рабочего процесса. В этом разделе приводятся общие сведения об использовании декларативных ограничений для обеспечения проверки допустимости действий.  
@@ -63,7 +63,7 @@ public sealed class SampleActivity : CodeActivity
 
 Доступны несколько действий проверки допустимости, которые предоставляют сведения о других действиях в рабочем процессе относительно проверяемого действия. <xref:System.Activities.Validation.GetParentChain> возвращает коллекцию действий, содержащую все действия, лежащие между текущим и корневым действиями. <xref:System.Activities.Validation.GetChildSubtree> предоставляет коллекцию действий, содержащую дочерние действия в рекурсивном шаблоне, и <xref:System.Activities.Validation.GetWorkflowTree> возвращает все действия в рабочем процессе.  
   
-В следующем примере определяется действие `CreateState`. Действие `CreateState` должно содержаться в действии `CreateCountry`; метод `GetParent` возвращает ограничение, принудительно реализующее это требование. `GetParent` использует действие <xref:System.Activities.Validation.GetParentChain> совместно с действием <xref:System.Activities.Statements.ForEach%601> для проверки родительских действий действия `CreateState`, чтобы определить, удовлетворяется ли это требование.  
+В следующем примере определяется действие `CreateState` . Действие `CreateState` должно содержаться в действии `CreateCountry`; метод `GetParent` возвращает ограничение, принудительно реализующее это требование. `GetParent` использует действие <xref:System.Activities.Validation.GetParentChain> совместно с действием <xref:System.Activities.Statements.ForEach%601> для проверки родительских действий действия `CreateState`, чтобы определить, удовлетворяется ли это требование.  
   
 ```csharp  
 public sealed class CreateState : CodeActivity  
@@ -176,4 +176,4 @@ else
 }  
 ```  
   
- Если свойство <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> у <xref:System.Activities.Validation.ValidationSettings> имеет значение `true`, то при вызове проверки допустимости путем вызова <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> выполняется проверка только дополнительных ограничений. Это может быть полезно при проверке рабочих процессов по отдельным конфигурациям проверки. Необходимо отметить, что при вызове рабочего процесса выполняется проверка логики проверки, настроенной в рабочем процессе; для запуска рабочего процесса проверка должна быть пройдена успешно. Дополнительные сведения о вызове проверки см. в разделе [вызов проверки действия](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).
+ Если свойство <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> у <xref:System.Activities.Validation.ValidationSettings> имеет значение `true`, то при вызове проверки допустимости путем вызова <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> выполняется проверка только дополнительных ограничений. Это может быть полезно при проверке рабочих процессов по отдельным конфигурациям проверки. Необходимо отметить, что при вызове рабочего процесса выполняется проверка логики проверки, настроенной в рабочем процессе; для запуска рабочего процесса проверка должна быть пройдена успешно. Дополнительные сведения о вызове проверки см. в разделе [вызов проверки действия](invoking-activity-validation.md).

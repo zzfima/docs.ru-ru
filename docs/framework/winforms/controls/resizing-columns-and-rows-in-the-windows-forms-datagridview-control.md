@@ -6,12 +6,12 @@ helpviewer_keywords:
 - columns [Windows Forms], resizing in grids
 - data grids [Windows Forms], resizing columns and rows
 ms.assetid: 7532764d-e5c1-4943-a08b-6377a722d3b6
-ms.openlocfilehash: e2be90a1367bdcbb5b9c6441a407e3e23e5204c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8eae5dafa314bb293f55a780f6be67d06f376004
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711253"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709664"
 ---
 # <a name="resizing-columns-and-rows-in-the-windows-forms-datagridview-control"></a>Изменение размера столбцов и строк элемента управления DataGridView в Windows Forms
 `DataGridView` Элемент управления предоставляет множество возможностей для настройки поведения изменения размеров его столбцов и строк. Как правило `DataGridView` не меняют размер ячеек на основе их содержимого. Вместо этого они клипов любой отображаемого значения, которое больше, чем ячейки. Содержимое может отображаться в виде строки, в ячейке отображается во всплывающей подсказке.  
@@ -21,24 +21,24 @@ ms.locfileid: "54711253"
  `DataGridView` Элемент управления предоставляет свойства, методы и события, которые позволяют настроить или отключить такое поведение, управляемое пользователем. Кроме того можно программно изменить размер строк, столбцов и заголовков в соответствии с содержимым, или можно настроить их автоматическое изменение при изменении содержимого. Можно также настроить столбцы для автоматического распределения доступную ширину элемента управления в пропорций.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Изменение размеров управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md)  
+ [Изменение размеров управления DataGridView в Windows Forms](sizing-options-in-the-windows-forms-datagridview-control.md)  
  Описывает параметры для изменения размеров строк, столбцов и заголовков. Также содержит сведения о связанных с изменения размера свойства и методы и описываются распространенные сценарии использования.  
   
- [Установка режимов заполнения для столбцов элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/column-fill-mode-in-the-windows-forms-datagridview-control.md)  
+ [Установка режимов заполнения для столбцов элемента управления DataGridView в Windows Forms](column-fill-mode-in-the-windows-forms-datagridview-control.md)  
  Описание режима заполнения подробно, а также демонстрационный код, который можно использовать для экспериментов с помощью режима заполнения и другие режимы.  
   
- [Практическое руководство. Режимы изменения размеров элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)  
+ [Практическое руководство. Режимы изменения размеров элемента управления DataGridView в Windows Forms](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)  
  В этой статье описывается настройка режимы установки размеров для общих целей.  
   
- [Практическое руководство. Программное изменение размера ячеек в соответствии с размером в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/programmatically-resize-cells-to-fit-content-in-the-datagrid.md)  
+ [Практическое руководство. Программное изменение размера ячеек в соответствии с размером в элементе управления DataGridView Windows Forms](programmatically-resize-cells-to-fit-content-in-the-datagrid.md)  
  Предоставляет демонстрационный код, который можно использовать для экспериментов с программного изменения размеров.  
   
- [Практическое руководство. Автоматическое изменение размера ячеек при изменении содержимого в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/automatically-resize-cells-when-content-changes-in-the-datagrid.md)  
+ [Практическое руководство. Автоматическое изменение размера ячеек при изменении содержимого в элементе управления DataGridView Windows Forms](automatically-resize-cells-when-content-changes-in-the-datagrid.md)  
  Предоставляет демонстрационный код, который можно использовать для экспериментов с режимами автоматического изменения размера.  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Forms.DataGridView>  
- Содержит справочную документацию по элементу управления <xref:System.Windows.Forms.DataGridView>.  
+ Справочная документация по элементу управления <xref:System.Windows.Forms.DataGridView>.  
   
 ## <a name="see-also"></a>См. также
-- [Элемент управления DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)
+- [Элемент управления DataGridView](datagridview-control-windows-forms.md)

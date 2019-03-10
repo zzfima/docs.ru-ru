@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Добавление пользовательских данных в элемент управления TreeView или элемент управления ListView (Windows Forms)
+title: Практическое руководство. Добавление пользовательских данных в элемент управления TreeView или элемент управления ListView (Windows Forms)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding custom information
 - TreeView control [Windows Forms], adding custom information
 ms.assetid: 68be11de-1d5b-430e-901f-cfbe48d14b19
-ms.openlocfilehash: 8120f35f866c353ae1493515bed3d216776ede23
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 40ac3fb3a148c351cf5acca235569e2a1a439a3e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694598"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709681"
 ---
-# <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>Как выполнить Добавление пользовательских данных в элемент управления TreeView или элемент управления ListView (Windows Forms)
+# <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>Практическое руководство. Добавление пользовательских данных в элемент управления TreeView или элемент управления ListView (Windows Forms)
 В Windows Forms можно создать производный узел <xref:System.Windows.Forms.TreeView> управления или производный элемент в <xref:System.Windows.Forms.ListView> элемента управления. Наследование позволяет добавлять любые необходимые поля, а также пользовательские методы и конструкторы для их обработки. Эту возможность можно использовать для присоединения объекта Customer к каждому узлу дерева или элементу списка. Приведенные ниже примеры предназначены для <xref:System.Windows.Forms.TreeView> элемента управления, но тот же подход можно использовать для <xref:System.Windows.Forms.ListView> элемента управления.  
   
 ### <a name="to-derive-a-tree-node"></a>Наследование узла дерева  
@@ -131,5 +131,5 @@ ms.locfileid: "54694598"
     ```  
   
 ## <a name="see-also"></a>См. также
-- [Элемент управления TreeView](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)
-- [Элемент управления ListView](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)
+- [Элемент управления TreeView](treeview-control-windows-forms.md)
+- [Элемент управления ListView](listview-control-windows-forms.md)

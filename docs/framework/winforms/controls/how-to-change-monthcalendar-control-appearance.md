@@ -9,12 +9,12 @@ helpviewer_keywords:
 - examples [Windows Forms], calendar controls
 - MonthCalendar control [Windows Forms], formatting display
 ms.assetid: d09b95c9-e108-4608-9b31-b9100c0677bf
-ms.openlocfilehash: f182a65a74507411f2474aca294c479e3b2b9ca6
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 2e26f7a9db8e19b584000089f99e99aab7c25a32
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56584048"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716378"
 ---
 # <a name="how-to-change-the-windows-forms-monthcalendar-controls-appearance"></a>Практическое руководство. Изменение внешнего вида управления Windows Forms MonthCalendar
 Windows Forms <xref:System.Windows.Forms.MonthCalendar> элемент управления позволяет настраивать внешний вид календаря во многих отношениях. Например можно установить цветовую схему и выберите для отображения или скрытия номеров недель или текущей даты.  
@@ -104,7 +104,7 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> элемент упра�
     ```  
   
 ## <a name="see-also"></a>См. также
-- [Элемент управления MonthCalendar](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)
-- [Практическое руководство. Выбор диапазона дат в элементе управления Windows Forms MonthCalendar](../../../../docs/framework/winforms/controls/how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
-- [Практическое руководство. Отображение определенных дней полужирным шрифтом с Windows Forms в элементе управления MonthCalendar](../../../../docs/framework/winforms/controls/display-specific-days-in-bold-with-wf-monthcalendar-control.md)
-- [Практическое руководство. Отображение более чем одного месяца в элементе управления Windows Forms MonthCalendar](../../../../docs/framework/winforms/controls/display-more-than-one-month-wf-monthcalendar-control.md)
+- [Элемент управления MonthCalendar](monthcalendar-control-windows-forms.md)
+- [Практическое руководство. Выбор диапазона дат в элементе управления Windows Forms MonthCalendar](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
+- [Практическое руководство. Отображение определенных дней полужирным шрифтом с Windows Forms в элементе управления MonthCalendar](display-specific-days-in-bold-with-wf-monthcalendar-control.md)
+- [Практическое руководство. Отображение более чем одного месяца в элементе управления Windows Forms MonthCalendar](display-more-than-one-month-wf-monthcalendar-control.md)

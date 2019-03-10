@@ -10,12 +10,12 @@ helpviewer_keywords:
 - event handling [Windows Forms], Windows Forms
 - event handlers [Windows Forms], about event handlers
 ms.assetid: 228112e1-1711-42ee-8ffa-ff3555bffe66
-ms.openlocfilehash: cab35250f4fedf0a08dc7198430a668c7428c207
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6dbcffadfd484dc33db2fcd3ee3f680dcc0740e5
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567757"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703393"
 ---
 # <a name="event-handlers-overview-windows-forms"></a>Обзор обработчиков событий (Windows Forms)
 Обработчик событий — метод, связанный с событием. При возникновении события выполняется код в обработчик событий. Каждый обработчик событий предоставляет два параметра, которые дают возможность обрабатывать событие должным образом. В примере показан обработчик событий для <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Click> событий.  
@@ -46,8 +46,8 @@ private:
   
  Обычно каждое событие создает обработчик событий с типом другой объект события для второго параметра. Некоторые обработчики событий, например, для <xref:System.Windows.Forms.Control.MouseDown> и <xref:System.Windows.Forms.Control.MouseUp> события, имеют один и тот же тип объекта для второго параметра. Для этих типов событий можно использовать один и тот же обработчик событий для обработки обоих событий.  
   
- Можно также использовать тот же обработчик событий для обработки того же события для различных элементов управления. Например, если у вас есть группы <xref:System.Windows.Forms.RadioButton> элементы управления формы, можно создать один обработчик событий для <xref:System.Windows.Forms.Control.Click> событий и каждого элемента управления <xref:System.Windows.Forms.Control.Click> привязки событий к одному обработчику событий. Дополнительные сведения см. в разделе [Как Подключение нескольких событий к одному обработчику в Windows Forms](../../../docs/framework/winforms/how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms.md).  
+ Можно также использовать тот же обработчик событий для обработки того же события для различных элементов управления. Например, если у вас есть группы <xref:System.Windows.Forms.RadioButton> элементы управления формы, можно создать один обработчик событий для <xref:System.Windows.Forms.Control.Click> событий и каждого элемента управления <xref:System.Windows.Forms.Control.Click> привязки событий к одному обработчику событий. Дополнительные сведения см. в разделе [Как Подключение нескольких событий к одному обработчику в Windows Forms](how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms.md).  
   
 ## <a name="see-also"></a>См. также
-- [Создание обработчиков событий в Windows Forms](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
-- [Общие сведения о событиях](../../../docs/framework/winforms/events-overview-windows-forms.md)
+- [Создание обработчиков событий в Windows Forms](creating-event-handlers-in-windows-forms.md)
+- [Общие сведения о событиях](events-overview-windows-forms.md)

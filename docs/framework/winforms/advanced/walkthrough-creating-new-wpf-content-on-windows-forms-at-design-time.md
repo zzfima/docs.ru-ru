@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ElementHost control
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: 2e92d8e8-f0e4-4df7-9f07-2acf35cd798c
-ms.openlocfilehash: cc5e1acd26763e2dd4324497f5d9ecde216ea975
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: ed48db399ba47f0e6be96f7bca33d3892b19e433
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441467"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707915"
 ---
 # <a name="walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time"></a>Пошаговое руководство. Создание нового содержимого WPF в формах Windows Forms во время разработки
 
@@ -102,16 +102,16 @@ ms.locfileid: "56441467"
 
 Windows Forms и WPF — это разные технологии, но они предназначены для тесного взаимодействия. Чтобы обеспечить богатый внешний вид и поведение в приложениях, попробуйте сделайте следующее:
 
-- Размещение элемента управления Windows Forms на странице WPF. Дополнительные сведения см. в разделе [Пошаговое руководство: Размещение Windows Forms элемента управления в WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).
+- Размещение элемента управления Windows Forms на странице WPF. Дополнительные сведения см. в разделе [Пошаговое руководство: Размещение Windows Forms элемента управления в WPF](../../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).
 
-- Применение стилей оформления Windows Forms к содержимому WPF. Дополнительные сведения см. в разделе [Как Включение визуальных стилей в гибридном приложении](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md).
+- Применение стилей оформления Windows Forms к содержимому WPF. Дополнительные сведения см. в разделе [Как Включение визуальных стилей в гибридном приложении](../../wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md).
 
-- Изменение стиля оформления содержимого WPF. Дополнительные сведения см. в разделе [Пошаговое руководство: Применение стилей к содержимому WPF](../../../../docs/framework/winforms/advanced/walkthrough-styling-wpf-content.md).
+- Изменение стиля оформления содержимого WPF. Дополнительные сведения см. в разделе [Пошаговое руководство: Применение стилей к содержимому WPF](walkthrough-styling-wpf-content.md).
 
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Миграция и взаимодействие систем](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
-- [Использование элементов управления WPF](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)
+- [Миграция и взаимодействие систем](../../wpf/advanced/migration-and-interoperability.md)
+- [Использование элементов управления WPF](using-wpf-controls.md)
 - [Проектирование XAML в Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)

@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Использование матрицы цветов для преобразования отдельного цвета
+title: Практическое руководство. Использование матрицы цветов для преобразования отдельного цвета
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - image colors [Windows Forms], transforming
 - color matrices [Windows Forms], using
 ms.assetid: 44df4556-a433-49c0-ac0f-9a12063a5860
-ms.openlocfilehash: 050bb147358636ff9ce250bd5026facd53e9bf51
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f19039c69f27f78e838ea1a891690451af3f0cdc
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498951"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705601"
 ---
-# <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>Как выполнить Использование матрицы цветов для преобразования отдельного цвета
+# <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>Практическое руководство. Использование матрицы цветов для преобразования отдельного цвета
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] предоставляет <xref:System.Drawing.Image> и <xref:System.Drawing.Bitmap> классы для хранения и управления изображениями. <xref:System.Drawing.Image> и <xref:System.Drawing.Bitmap> объекты хранят цвет каждого пикселя как 32-разрядное число: 8 бит на красный, зеленый, синий и альфа-канала. Каждый из четырех компонентов является число от 0 до 255, где 0 соответствует нулевой интенсивности, а 255 — наибольшей интенсивности. Альфа-компонент определяет прозрачность цвета: 0 является полностью прозрачным, а 255 — полностью непрозрачный.  
   
  Цветовой вектор является кортежем в форме (красный, зеленый, синий, альфа-версия). Например вектор цвет (0, 255, 0, 255) представляет непрозрачный цвет, который не имеет красный и синий, а зеленый полная насыщенность.  
@@ -32,22 +32,22 @@ ms.locfileid: "54498951"
   
  Следующие Перемножение матриц выполнит эти два преобразования в указанном порядке.  
   
- ![Перекрашивание](../../../../docs/framework/winforms/advanced/media/recoloring01.gif "recoloring01")  
+ ![Перекрашивание](./media/recoloring01.gif "recoloring01")  
   
  Элементы матрицы цветов индексируются (начинающийся с нуля), строк и столбцов. Например запись в пятой строке и третьем столбце матрицы M обозначается M [4] [2].  
   
  5 × 5 единичной матрицей (показано на следующем рисунке) имеет единицы на диагонали и размерностью. При умножении вектора на единичную матрицу, цвет не изменяется. Начать с единичной матрицы и внесите небольшое изменение, которое формирует нужные преобразования — удобный способ создания матрицы преобразования цветов.  
   
- ![Перекрашивание](../../../../docs/framework/winforms/advanced/media/recoloring02.gif "recoloring02")  
+ ![Перекрашивание](./media/recoloring02.gif "recoloring02")  
   
- Более подробное описание матрицы и преобразований, см. в разделе [системы координат и преобразования](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md).  
+ Более подробное описание матрицы и преобразований, см. в разделе [системы координат и преобразования](coordinate-systems-and-transformations.md).  
   
 ## <a name="example"></a>Пример  
  В следующем примере выполняются образ, который был только один цвет (0,2, 0,0, 0,4, 1.0) и применяется преобразование, описанное выше.  
   
  Ниже показан исходное изображение в левой части и преобразованные изображения справа.  
   
- ![Цвета](../../../../docs/framework/winforms/advanced/media/colortrans1.png "colortrans1")  
+ ![Цвета](./media/colortrans1.png "colortrans1")  
   
  В следующем примере код выполняет указанные ниже действия для выполнения гамме:  
   
@@ -57,12 +57,12 @@ ms.locfileid: "54498951"
   
 3.  Передайте <xref:System.Drawing.Imaging.ImageAttributes> объект <xref:System.Drawing.Graphics.DrawImage%2A> метод <xref:System.Drawing.Graphics> объекта.  
   
- [!code-csharp[System.Drawing.RecoloringImages#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#21)]
- [!code-vb[System.Drawing.RecoloringImages#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#21)]  
+ [!code-csharp[System.Drawing.RecoloringImages#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#21)]
+ [!code-vb[System.Drawing.RecoloringImages#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#21)]  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Предыдущий пример предназначен для работы с Windows Forms, и для него необходим объект <xref:System.Windows.Forms.PaintEventArgs> `e`, передаваемый в качестве параметра обработчику событий <xref:System.Windows.Forms.Control.Paint>.  
   
 ## <a name="see-also"></a>См. также
-- [перекрашивание изображений](../../../../docs/framework/winforms/advanced/recoloring-images.md)
-- [Системы координат и преобразования](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)
+- [перекрашивание изображений](recoloring-images.md)
+- [Системы координат и преобразования](coordinate-systems-and-transformations.md)

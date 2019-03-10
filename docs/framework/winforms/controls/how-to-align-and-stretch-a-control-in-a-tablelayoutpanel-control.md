@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Выравнивание и Растягивание элемента управления в элементе управления TableLayoutPanel
+title: Практическое руководство. Выравнивание и Растягивание элемента управления в элементе управления TableLayoutPanel
 ms.date: 03/30/2017
 f1_keywords:
 - net.ComponentModel.StyleCollectionEditor.TLP.AlignStretchCtrl
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - controls [Windows Forms], stretching
 - controls [Windows Forms], aligning
 ms.assetid: 7dc1a157-6fee-4995-8ebc-b65bdc0909a8
-ms.openlocfilehash: 91464108a6ac4600c14a06b4a7dcea200d7f0254
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 511ed20e63778b70355d1deb12e4256b4d2e9101
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535935"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702923"
 ---
-# <a name="how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control"></a>Как выполнить Выравнивание и Растягивание элемента управления в элементе управления TableLayoutPanel
+# <a name="how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control"></a>Практическое руководство. Выравнивание и Растягивание элемента управления в элементе управления TableLayoutPanel
 Вы можете выравнивание и Растягивание элементов управления в <xref:System.Windows.Forms.TableLayoutPanel> с <xref:System.Windows.Forms.Control.Anchor%2A> и <xref:System.Windows.Forms.Control.Dock%2A> свойства.  
   
 > [!NOTE]
@@ -40,4 +40,4 @@ ms.locfileid: "54535935"
 8.  Установите для параметра <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Anchor%2A> свойства <xref:System.Windows.Forms.AnchorStyles.None>. <xref:System.Windows.Forms.Button> Управления перемещается по центру ячейки.  
   
 ## <a name="see-also"></a>См. также
-- [Элемент управления TableLayoutPanel](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-windows-forms.md)
+- [Элемент управления TableLayoutPanel](tablelayoutpanel-control-windows-forms.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-ms.openlocfilehash: 136a655064fc0c955cadd2f15e5900579e90187a
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: f898a15fd2157c625767d53d8b53c5469fb9a957
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748038"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703599"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms, с помощью линий привязки
 Точное расположение элементов управления на форме является важным для многих приложений. В конструкторе Windows Forms предоставляет множество средств форматирования, для выполнения этой задачи. Одним из наиболее важных является <xref:System.Windows.Forms.Design.Behavior.SnapLine> функции.  
@@ -92,7 +92,7 @@ ms.locfileid: "56748038"
 > [!NOTE]
 >  Если формы <xref:System.Windows.Forms.Control.Padding%2A> свойству присваивается значение 0,0,0,0, конструктор Windows Forms предоставляет виде затененного <xref:System.Windows.Forms.Control.Padding%2A> значение 9,9,9,9. Чтобы переопределить это поведение, следует назначьте значение, отличное от 0,0,0,0.  
   
-1.  Измените значение свойства <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Margin%2A> , развернув <xref:System.Windows.Forms.Control.Margin%2A> запись в **свойства** и установив <xref:System.Windows.Forms.Padding.All%2A> значение 0. Дополнительные сведения см. в разделе [Пошаговое руководство: Размещение Windows Forms элементы управления с помощью свойств Padding, Margins и свойство AutoSize](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md).  
+1.  Измените значение свойства <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Margin%2A> , развернув <xref:System.Windows.Forms.Control.Margin%2A> запись в **свойства** и установив <xref:System.Windows.Forms.Padding.All%2A> значение 0. Дополнительные сведения см. в разделе [Пошаговое руководство: Размещение Windows Forms элементы управления с помощью свойств Padding, Margins и свойство AutoSize](windows-forms-controls-padding-autosize.md).  
   
 2.  Переместить <xref:System.Windows.Forms.Button> управления ближе к правой границе формы, пока не появится линия привязки. Это расстояние теперь задается значение формы <xref:System.Windows.Forms.Control.Padding%2A> свойство.  
   
@@ -154,7 +154,7 @@ ms.locfileid: "56748038"
   
 1.  Перетащите элемент управления <xref:System.Windows.Forms.Button> из **панели элементов** в свою форму.  
   
-2.  Изменение размера <xref:System.Windows.Forms.Button> элемента управления, перетаскивая один из угловых маркеров изменения размера. Подробную информацию см. в разделе [Практическое руководство. Изменение размера элементов управления в формах Windows Forms](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md).  
+2.  Изменение размера <xref:System.Windows.Forms.Button> элемента управления, перетаскивая один из угловых маркеров изменения размера. Подробную информацию см. в разделе [Практическое руководство. Изменение размера элементов управления в формах Windows Forms](how-to-resize-controls-on-windows-forms.md).  
   
 3.  Перетащите маркер изменения размера, пока один из <xref:System.Windows.Forms.Button> границы элемента управления выравнивается с другим элементом управления. Обратите внимание, что появляется линия привязки. Обратите внимание на то, что маркер изменения размера привязывается к положению, указанному по линии привязки.  
   
@@ -165,7 +165,7 @@ ms.locfileid: "56748038"
   
 #### <a name="to-align-a-label-to-a-controls-text"></a>Для выравнивания метки к тексту элемента управления  
   
-1.  Перетащите элемент управления <xref:System.Windows.Forms.TextBox> из **панели элементов** в свою форму. При размещении <xref:System.Windows.Forms.TextBox> в форму, щелкните глиф смарт тега и выберите **значение текста textBox1** параметр. Дополнительные сведения см. в разделе [Пошаговое руководство: Выполнение типичных задач, с помощью смарт-тегов в Windows Forms элементы управления](../../../../docs/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md).  
+1.  Перетащите элемент управления <xref:System.Windows.Forms.TextBox> из **панели элементов** в свою форму. При размещении <xref:System.Windows.Forms.TextBox> в форму, щелкните глиф смарт тега и выберите **значение текста textBox1** параметр. Дополнительные сведения см. в разделе [Пошаговое руководство: Выполнение типичных задач, с помощью смарт-тегов в Windows Forms элементы управления](performing-common-tasks-using-smart-tags-on-wf-controls.md).  
   
 2.  Перетащите элемент управления <xref:System.Windows.Forms.Label> из **панели элементов** в свою форму.  
   
@@ -241,7 +241,7 @@ ms.locfileid: "56748038"
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.Design.Behavior.SnapLine>
-- [Пошаговое руководство: Упорядочение элементов управления в Windows Forms, с помощью элемента FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [Пошаговое руководство: Упорядочение элементов управления в Windows Forms, с помощью элемента управления TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [Пошаговое руководство: Создание структуры Windows Forms элементов управления с помощью свойств Padding, Margins и свойство AutoSize](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)
-- [Упорядочение элементов управления в формах Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
+- [Пошаговое руководство: Упорядочение элементов управления в Windows Forms, с помощью элемента FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [Пошаговое руководство: Упорядочение элементов управления в Windows Forms, с помощью элемента управления TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [Пошаговое руководство: Создание структуры Windows Forms элементов управления с помощью свойств Padding, Margins и свойство AutoSize](windows-forms-controls-padding-autosize.md)
+- [Упорядочение элементов управления в формах Windows Forms](arranging-controls-on-windows-forms.md)

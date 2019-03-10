@@ -6,12 +6,12 @@ helpviewer_keywords:
 - smart tags
 - designer actions
 ms.assetid: cac337e6-00f6-4584-80f4-75728f5ea113
-ms.openlocfilehash: 93a477bcaed8ebdc2c7cb4daaa1dce1651cccd12
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 2805ebc66be5908c333e9a5db41076518ad77c1a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664319"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705861"
 ---
 # <a name="walkthrough-performing-common-tasks-using-smart-tags-on-windows-forms-controls"></a>Пошаговое руководство. Выполнение типичных задач с помощью смарт-тегов в элементах управления Windows Forms
 При создании форм и элементов управления для приложения Windows Forms есть множество задач, которые выполняются несколько раз. Ниже перечислены некоторые наиболее типичных задач, которыми вы столкнетесь:  
@@ -53,7 +53,7 @@ ms.locfileid: "56664319"
   
 #### <a name="to-use-smart-tags"></a>Использование смарт-тегов  
   
-1.  Перетащите <xref:System.Windows.Forms.TabControl> из **элементов** на форму. Обратите внимание, глиф смарт тега (![глиф смарт-тега](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")), отображаемый на краю <xref:System.Windows.Forms.TabControl>.  
+1.  Перетащите <xref:System.Windows.Forms.TabControl> из **элементов** на форму. Обратите внимание, глиф смарт тега (![глиф смарт-тега](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")), отображаемый на краю <xref:System.Windows.Forms.TabControl>.  
   
 2.  Щелкните глиф смарт тега. Выберите в контекстном меню, отображаемый рядом с глифом, **добавить вкладку** элемента. Обратите внимание, что новую страницу вкладки добавляется <xref:System.Windows.Forms.TabControl>.  
   

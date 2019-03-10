@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], tracking and tracing
 ms.assetid: b965ded6-370a-483d-8790-f794f65b137e
-ms.openlocfilehash: 4510ac86cec556734d3d238ba1f02b00074e2609
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 298791fc43d976e339c42c45a8fd30c25d73bdb9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54687171"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708019"
 ---
 # <a name="workflow-tracking-and-tracing"></a>Отслеживание и трассировка рабочих процессов
 Отслеживание рабочих процессов Windows является возможностью [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)], разработанной для обеспечения возможности отслеживания выполнения рабочих процессов. Она обеспечивает инфраструктуру отслеживания выполнения экземпляра рабочего процесса. Инфраструктура отслеживания WF прозрачно инструментирует рабочий процесс таким образом, что выдаются записи, отражающие ключевые события выполнения. Эта функция доступна по умолчанию для всех рабочих процессов [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]. Для выполнения отслеживания в рабочий процесс [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] не нужно вносить изменения. Необходимо лишь определить объем данных отслеживания, которые требуется получать. При запуске или завершении экземпляра рабочего процесса создаются записи отслеживания, которые затем обрабатываются. Отслеживание также позволяет извлекать важные для бизнеса данные, связанные с переменными рабочего процесса. Например, если рабочий процесс представляет собой систему обработки заказов, вместе с объектом <xref:System.Activities.Tracking.TrackingRecord> можно извлечь идентификатор заказа. Как правило, функции отслеживания WF позволяют упростить диагностику и доступ к данным бизнес-аналитики из выполняемого рабочего процесса.  
@@ -18,38 +18,38 @@ ms.locfileid: "54687171"
   
  Windows Server App Fabric также дает возможность наблюдать за выполнением WCF и службы Workflow Service. Дополнительные сведения см. в разделе [наблюдения за Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201273) и [отслеживание приложений с помощью Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=201287)  
   
- Чтобы провести диагностику среды выполнения рабочего процесса, можно включить трассировку рабочего процесса диагностики. Дополнительные сведения см. в разделе [трассировки рабочего процесса](../../../docs/framework/windows-workflow-foundation/workflow-tracing.md).  
+ Чтобы провести диагностику среды выполнения рабочего процесса, можно включить трассировку рабочего процесса диагностики. Дополнительные сведения см. в разделе [трассировки рабочего процесса](workflow-tracing.md).  
   
  В этом разделе описаны основные компоненты инфраструктуры отслеживания, которые позволяют понять принципы работы модели программирования:  
   
--   Объекты <xref:System.Activities.Tracking.TrackingRecord>, создаваемые во время выполнения рабочего процесса. Дополнительные сведения см. в разделе [записи отслеживания](../../../docs/framework/windows-workflow-foundation/tracking-records.md).  
+-   Объекты <xref:System.Activities.Tracking.TrackingRecord>, создаваемые во время выполнения рабочего процесса. Дополнительные сведения см. в разделе [записи отслеживания](tracking-records.md).  
   
--   Объекты <xref:System.Activities.Tracking.TrackingParticipant> подписываются на объекты <xref:System.Activities.Tracking.TrackingRecord>. Участники отслеживания содержат логику обработки полезных данных из объектов <xref:System.Activities.Tracking.TrackingRecord> (например, они могут записывать данные в файл). Дополнительные сведения см. в разделе [участники отслеживания](../../../docs/framework/windows-workflow-foundation/tracking-participants.md).  
+-   Объекты <xref:System.Activities.Tracking.TrackingParticipant> подписываются на объекты <xref:System.Activities.Tracking.TrackingRecord>. Участники отслеживания содержат логику обработки полезных данных из объектов <xref:System.Activities.Tracking.TrackingRecord> (например, они могут записывать данные в файл). Дополнительные сведения см. в разделе [участники отслеживания](tracking-participants.md).  
   
--   Записи отслеживания фильтра объекта <xref:System.Activities.Tracking.TrackingProfile>, создаваемые экземпляром рабочего процесса. Дополнительные сведения см. в разделе [профили отслеживания](../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
+-   Записи отслеживания фильтра объекта <xref:System.Activities.Tracking.TrackingProfile>, создаваемые экземпляром рабочего процесса. Дополнительные сведения см. в разделе [профили отслеживания](tracking-profiles.md).  
   
 ## <a name="workflow-tracking-infrastructure"></a>Инфраструктура отслеживания рабочих процессов  
  Инфраструктура отслеживания рабочего процесса основана на принципе публикации и подписки. Экземпляр рабочего процесса является издателем записей отслеживания, а подписчики записей отслеживания регистрируются как расширения рабочего процесса. Эти расширения, подписанные на объекты <xref:System.Activities.Tracking.TrackingRecord>, называются участниками отслеживания. Участниками отслеживания являются точки расширения, обращающиеся к объектам <xref:System.Activities.Tracking.TrackingRecord> и обрабатывающие их с использованием заданных для них способов. Инфраструктура отслеживания позволяет применять к исходящим записям отслеживания фильтр таким образом, что участник может подписаться на определенное подмножество записей. Механизм фильтрации реализуется с помощью файла профиля отслеживания.  
   
  На следующем рисунке показано высокоуровневое представление инфраструктуры отслеживания.  
   
- ![Инфраструктура отслеживания рабочего процесса](../../../docs/framework/windows-workflow-foundation/media/wv.gif "WV")  
+ ![Инфраструктура отслеживания рабочего процесса](./media/wv.gif "WV")  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Записи отслеживания](../../../docs/framework/windows-workflow-foundation/tracking-records.md)  
+ [Записи отслеживания](tracking-records.md)  
  Описывает записи отслеживания, создаваемые средой выполнения рабочего процесса.  
   
- [Профили отслеживания](../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+ [Профили отслеживания](tracking-profiles.md)  
  Описывает использование профилей отслеживания.  
   
- [Участники отслеживания](../../../docs/framework/windows-workflow-foundation/tracking-participants.md)  
+ [Участники отслеживания](tracking-participants.md)  
  Описывает использование предоставленных системой участников отслеживания и создание настраиваемых участников отслеживания.  
   
- [Настройка отслеживания рабочего процесса](../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)  
+ [Настройка отслеживания рабочего процесса](configuring-tracking-for-a-workflow.md)  
  Описывает настройку отслеживания рабочего процесса.  
   
- [Трассировка рабочих процессов](../../../docs/framework/windows-workflow-foundation/workflow-tracing.md)  
+ [Трассировка рабочих процессов](workflow-tracing.md)  
  Описывает два способа включения трассировки отладки рабочего процесса.  
   
 ## <a name="see-also"></a>См. также
-- [Отслеживание SQL](../../../docs/framework/windows-workflow-foundation/samples/sql-tracking.md)
+- [Отслеживание SQL](./samples/sql-tracking.md)
