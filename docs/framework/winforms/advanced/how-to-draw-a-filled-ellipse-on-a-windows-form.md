@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Рисование заполненного эллипса в Windows Forms
+title: Практическое руководство. Рисование заполненного эллипса в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,29 +15,29 @@ helpviewer_keywords:
 - shapes [Windows Forms], drawing
 - forms [Windows Forms], drawing ellipses
 ms.assetid: 781db806-950d-4c5b-b022-493f7fd0c4a8
-ms.openlocfilehash: 09c98ec2874566cc49319d174ef7f1650a436d38
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 42316cd0d55b5154b21b4462157e044b30674ebd
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616914"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716300"
 ---
-# <a name="how-to-draw-a-filled-ellipse-on-a-windows-form"></a><span data-ttu-id="497ce-102">Как выполнить Рисование заполненного эллипса в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="497ce-102">How to: Draw a Filled Ellipse on a Windows Form</span></span>
-<span data-ttu-id="497ce-103">В этом примере рисование заполненного эллипса в форме.</span><span class="sxs-lookup"><span data-stu-id="497ce-103">This example draws a filled ellipse on a form.</span></span>  
+# <a name="how-to-draw-a-filled-ellipse-on-a-windows-form"></a><span data-ttu-id="4700c-102">Практическое руководство. Рисование заполненного эллипса в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="4700c-102">How to: Draw a Filled Ellipse on a Windows Form</span></span>
+<span data-ttu-id="4700c-103">В этом примере рисование заполненного эллипса в форме.</span><span class="sxs-lookup"><span data-stu-id="4700c-103">This example draws a filled ellipse on a form.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="497ce-104">Пример</span><span class="sxs-lookup"><span data-stu-id="497ce-104">Example</span></span>  
- [!code-cpp[System.Drawing.ConceptualHowTos#1](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/cpp/form1.cpp#1)]
- [!code-csharp[System.Drawing.ConceptualHowTos#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/CS/form1.cs#1)]
- [!code-vb[System.Drawing.ConceptualHowTos#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/VB/form1.vb#1)]  
+## <a name="example"></a><span data-ttu-id="4700c-104">Пример</span><span class="sxs-lookup"><span data-stu-id="4700c-104">Example</span></span>  
+ [!code-cpp[System.Drawing.ConceptualHowTos#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/cpp/form1.cpp#1)]
+ [!code-csharp[System.Drawing.ConceptualHowTos#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/CS/form1.cs#1)]
+ [!code-vb[System.Drawing.ConceptualHowTos#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/VB/form1.vb#1)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="497ce-105">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="497ce-105">Compiling the Code</span></span>  
- <span data-ttu-id="497ce-106">Этот метод нельзя вызывать <xref:System.Windows.Forms.Form.Load> обработчик событий.</span><span class="sxs-lookup"><span data-stu-id="497ce-106">You cannot call this method in the <xref:System.Windows.Forms.Form.Load> event handler.</span></span> <span data-ttu-id="497ce-107">Если скрыта другой формой или изменении размера формы, рисунок перерисовываться не будет.</span><span class="sxs-lookup"><span data-stu-id="497ce-107">The drawn content will not be redrawn if the form is resized or obscured by another form.</span></span> <span data-ttu-id="497ce-108">Чтобы сделать автоматическую перерисовку, нужно переопределить <xref:System.Windows.Forms.Control.OnPaint%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="497ce-108">To make your content automatically repaint, you should override the <xref:System.Windows.Forms.Control.OnPaint%2A> method.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="4700c-105">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="4700c-105">Compiling the Code</span></span>  
+ <span data-ttu-id="4700c-106">Этот метод нельзя вызывать <xref:System.Windows.Forms.Form.Load> обработчик событий.</span><span class="sxs-lookup"><span data-stu-id="4700c-106">You cannot call this method in the <xref:System.Windows.Forms.Form.Load> event handler.</span></span> <span data-ttu-id="4700c-107">Если скрыта другой формой или изменении размера формы, рисунок перерисовываться не будет.</span><span class="sxs-lookup"><span data-stu-id="4700c-107">The drawn content will not be redrawn if the form is resized or obscured by another form.</span></span> <span data-ttu-id="4700c-108">Чтобы сделать автоматическую перерисовку, нужно переопределить <xref:System.Windows.Forms.Control.OnPaint%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="4700c-108">To make your content automatically repaint, you should override the <xref:System.Windows.Forms.Control.OnPaint%2A> method.</span></span>  
   
-## <a name="robust-programming"></a><span data-ttu-id="497ce-109">Отказоустойчивость</span><span class="sxs-lookup"><span data-stu-id="497ce-109">Robust Programming</span></span>  
- <span data-ttu-id="497ce-110">Следует всегда вызывать <xref:System.IDisposable.Dispose%2A> на любые объекты, которые потребляют системные ресурсы, такие как <xref:System.Drawing.Brush> и <xref:System.Drawing.Graphics> объектов.</span><span class="sxs-lookup"><span data-stu-id="497ce-110">You should always call <xref:System.IDisposable.Dispose%2A> on any objects that consume system resources, such as <xref:System.Drawing.Brush> and <xref:System.Drawing.Graphics> objects.</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="4700c-109">Отказоустойчивость</span><span class="sxs-lookup"><span data-stu-id="4700c-109">Robust Programming</span></span>  
+ <span data-ttu-id="4700c-110">Следует всегда вызывать <xref:System.IDisposable.Dispose%2A> на любые объекты, которые потребляют системные ресурсы, такие как <xref:System.Drawing.Brush> и <xref:System.Drawing.Graphics> объектов.</span><span class="sxs-lookup"><span data-stu-id="4700c-110">You should always call <xref:System.IDisposable.Dispose%2A> on any objects that consume system resources, such as <xref:System.Drawing.Brush> and <xref:System.Drawing.Graphics> objects.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="497ce-111">См. также</span><span class="sxs-lookup"><span data-stu-id="497ce-111">See also</span></span>
-- [<span data-ttu-id="497ce-112">Объекты Graphics и Drawing в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="497ce-112">Graphics and Drawing in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
-- [<span data-ttu-id="497ce-113">Приступая к программированию графики</span><span class="sxs-lookup"><span data-stu-id="497ce-113">Getting Started with Graphics Programming</span></span>](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)
-- [<span data-ttu-id="497ce-114">Альфа-смешение цвета для линий и заливок</span><span class="sxs-lookup"><span data-stu-id="497ce-114">Alpha Blending Lines and Fills</span></span>](../../../../docs/framework/winforms/advanced/alpha-blending-lines-and-fills.md)
-- [<span data-ttu-id="497ce-115">Использование кисти для заливки фигур</span><span class="sxs-lookup"><span data-stu-id="497ce-115">Using a Brush to Fill Shapes</span></span>](../../../../docs/framework/winforms/advanced/using-a-brush-to-fill-shapes.md)
+## <a name="see-also"></a><span data-ttu-id="4700c-111">См. также</span><span class="sxs-lookup"><span data-stu-id="4700c-111">See also</span></span>
+- [<span data-ttu-id="4700c-112">Объекты Graphics и Drawing в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="4700c-112">Graphics and Drawing in Windows Forms</span></span>](graphics-and-drawing-in-windows-forms.md)
+- [<span data-ttu-id="4700c-113">Приступая к программированию графики</span><span class="sxs-lookup"><span data-stu-id="4700c-113">Getting Started with Graphics Programming</span></span>](getting-started-with-graphics-programming.md)
+- [<span data-ttu-id="4700c-114">Альфа-смешение цвета для линий и заливок</span><span class="sxs-lookup"><span data-stu-id="4700c-114">Alpha Blending Lines and Fills</span></span>](alpha-blending-lines-and-fills.md)
+- [<span data-ttu-id="4700c-115">Использование кисти для заливки фигур</span><span class="sxs-lookup"><span data-stu-id="4700c-115">Using a Brush to Fill Shapes</span></span>](using-a-brush-to-fill-shapes.md)

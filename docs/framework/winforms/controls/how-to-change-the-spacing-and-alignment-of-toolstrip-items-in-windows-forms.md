@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Изменить интервал и выравнивание элемента управления ToolStrip в Windows Forms
+title: Практическое руководство. Изменить интервал и выравнивание элемента управления ToolStrip в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,21 +9,21 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - toolbars [Windows Forms], aligning items
 ms.assetid: cd483466-0f49-43df-addf-e2b5fcd64027
-ms.openlocfilehash: 2c9c60a3bfd78b7111b9cdff6a791d70c8e53c82
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 954087fa893baf3aa623c912efb081491304d3fb
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685067"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719446"
 ---
-# <a name="how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms"></a><span data-ttu-id="90466-102">Как выполнить Изменить интервал и выравнивание элемента управления ToolStrip в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="90466-102">How to: Change the Spacing and Alignment of ToolStrip Items in Windows Forms</span></span>
-<span data-ttu-id="90466-103"><xref:System.Windows.Forms.ToolStrip> Управления полностью поддерживает функции макета, такие как определения размера, расстояние между <xref:System.Windows.Forms.ToolStripItem> элементов управления относительно друг друга, размещения элементов управления в <xref:System.Windows.Forms.ToolStrip>и расстояние между элементами управления <xref:System.Windows.Forms.ToolStrip>.</span><span class="sxs-lookup"><span data-stu-id="90466-103">The <xref:System.Windows.Forms.ToolStrip> control fully supports layout features such as sizing, the spacing of <xref:System.Windows.Forms.ToolStripItem> controls relative to each other, the arrangement of controls on the <xref:System.Windows.Forms.ToolStrip>, and the spacing of controls relative to the <xref:System.Windows.Forms.ToolStrip>.</span></span>  
+# <a name="how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms"></a><span data-ttu-id="078f5-102">Практическое руководство. Изменить интервал и выравнивание элемента управления ToolStrip в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="078f5-102">How to: Change the Spacing and Alignment of ToolStrip Items in Windows Forms</span></span>
+<span data-ttu-id="078f5-103"><xref:System.Windows.Forms.ToolStrip> Управления полностью поддерживает функции макета, такие как определения размера, расстояние между <xref:System.Windows.Forms.ToolStripItem> элементов управления относительно друг друга, размещения элементов управления в <xref:System.Windows.Forms.ToolStrip>и расстояние между элементами управления <xref:System.Windows.Forms.ToolStrip>.</span><span class="sxs-lookup"><span data-stu-id="078f5-103">The <xref:System.Windows.Forms.ToolStrip> control fully supports layout features such as sizing, the spacing of <xref:System.Windows.Forms.ToolStripItem> controls relative to each other, the arrangement of controls on the <xref:System.Windows.Forms.ToolStrip>, and the spacing of controls relative to the <xref:System.Windows.Forms.ToolStrip>.</span></span>  
   
- <span data-ttu-id="90466-104">Так как значение по умолчанию <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> свойство `true`, элементов управления изменяются автоматически, если не задать <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> свойства `false`.</span><span class="sxs-lookup"><span data-stu-id="90466-104">Because the default value of the <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> property is `true`, controls are sized automatically unless you set the <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> property to `false`.</span></span>  
+ <span data-ttu-id="078f5-104">Так как значение по умолчанию <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> свойство `true`, элементов управления изменяются автоматически, если не задать <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> свойства `false`.</span><span class="sxs-lookup"><span data-stu-id="078f5-104">Because the default value of the <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> property is `true`, controls are sized automatically unless you set the <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> property to `false`.</span></span>  
   
-### <a name="to-manually-size-a-toolstripitem"></a><span data-ttu-id="90466-105">Чтобы вручную размер ToolStripItem</span><span class="sxs-lookup"><span data-stu-id="90466-105">To manually size a ToolStripItem</span></span>  
+### <a name="to-manually-size-a-toolstripitem"></a><span data-ttu-id="078f5-105">Чтобы вручную размер ToolStripItem</span><span class="sxs-lookup"><span data-stu-id="078f5-105">To manually size a ToolStripItem</span></span>  
   
-1.  <span data-ttu-id="90466-106">Задайте <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> свойства `false` для сопоставленного элемента управления.</span><span class="sxs-lookup"><span data-stu-id="90466-106">Set the <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> property to `false` for the associated control.</span></span>  
+1.  <span data-ttu-id="078f5-106">Задайте <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> свойства `false` для сопоставленного элемента управления.</span><span class="sxs-lookup"><span data-stu-id="078f5-106">Set the <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> property to `false` for the associated control.</span></span>  
   
     ```vb  
     ToolStripButton1.AutoSize = False  
@@ -33,13 +33,13 @@ ms.locfileid: "54685067"
     toolStripButton1.AutoSize = false;  
     ```  
   
-2.  <span data-ttu-id="90466-107">Задайте <xref:System.Windows.Forms.ToolStripItem.Size%2A> свойства, как нужно для связанного <xref:System.Windows.Forms.ToolStripItem>.</span><span class="sxs-lookup"><span data-stu-id="90466-107">Set the <xref:System.Windows.Forms.ToolStripItem.Size%2A> property the way you want for the associated <xref:System.Windows.Forms.ToolStripItem>.</span></span>  
+2.  <span data-ttu-id="078f5-107">Задайте <xref:System.Windows.Forms.ToolStripItem.Size%2A> свойства, как нужно для связанного <xref:System.Windows.Forms.ToolStripItem>.</span><span class="sxs-lookup"><span data-stu-id="078f5-107">Set the <xref:System.Windows.Forms.ToolStripItem.Size%2A> property the way you want for the associated <xref:System.Windows.Forms.ToolStripItem>.</span></span>  
   
-### <a name="to-set-the-spacing-of-a-toolstripitem"></a><span data-ttu-id="90466-108">Чтобы задать расстояние между ToolStripItem</span><span class="sxs-lookup"><span data-stu-id="90466-108">To set the spacing of a ToolStripItem</span></span>  
+### <a name="to-set-the-spacing-of-a-toolstripitem"></a><span data-ttu-id="078f5-108">Чтобы задать расстояние между ToolStripItem</span><span class="sxs-lookup"><span data-stu-id="078f5-108">To set the spacing of a ToolStripItem</span></span>  
   
-1.  <span data-ttu-id="90466-109">Вставьте нужные значения в пикселях <xref:System.Windows.Forms.ToolStripItem.Margin%2A> свойства сопоставленного элемента управления.</span><span class="sxs-lookup"><span data-stu-id="90466-109">Insert the desired values, in pixels, into the <xref:System.Windows.Forms.ToolStripItem.Margin%2A> property of the associated control.</span></span>  
+1.  <span data-ttu-id="078f5-109">Вставьте нужные значения в пикселях <xref:System.Windows.Forms.ToolStripItem.Margin%2A> свойства сопоставленного элемента управления.</span><span class="sxs-lookup"><span data-stu-id="078f5-109">Insert the desired values, in pixels, into the <xref:System.Windows.Forms.ToolStripItem.Margin%2A> property of the associated control.</span></span>  
   
-     <span data-ttu-id="90466-110">Значения <xref:System.Windows.Forms.ToolStripItem.Margin%2A> свойства укажите расстояние между элементом и соседними элементами в следующем порядке: Слева, сверху, справа и нижней.</span><span class="sxs-lookup"><span data-stu-id="90466-110">The values of the <xref:System.Windows.Forms.ToolStripItem.Margin%2A> property specify the spacing between the item and adjacent items in this order: Left, Top, Right, and Bottom.</span></span>  
+     <span data-ttu-id="078f5-110">Значения <xref:System.Windows.Forms.ToolStripItem.Margin%2A> свойства укажите расстояние между элементом и соседними элементами в следующем порядке: Слева, сверху, справа и нижней.</span><span class="sxs-lookup"><span data-stu-id="078f5-110">The values of the <xref:System.Windows.Forms.ToolStripItem.Margin%2A> property specify the spacing between the item and adjacent items in this order: Left, Top, Right, and Bottom.</span></span>  
   
     ```vb  
     ToolStripTextBox1.Margin = New System.Windows.Forms.Padding _  
@@ -51,9 +51,9 @@ ms.locfileid: "54685067"
         (3, 0, 3, 0);  
     ```  
   
-### <a name="to-align-a-toolstripitem-to-the-right-side-of-the-toolstrip"></a><span data-ttu-id="90466-111">Чтобы выровнять ToolStripItem в правой части панели инструментов</span><span class="sxs-lookup"><span data-stu-id="90466-111">To align a ToolStripItem to the right side of the ToolStrip</span></span>  
+### <a name="to-align-a-toolstripitem-to-the-right-side-of-the-toolstrip"></a><span data-ttu-id="078f5-111">Чтобы выровнять ToolStripItem в правой части панели инструментов</span><span class="sxs-lookup"><span data-stu-id="078f5-111">To align a ToolStripItem to the right side of the ToolStrip</span></span>  
   
-1.  <span data-ttu-id="90466-112">Задайте <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> свойства <xref:System.Windows.Forms.ToolStripItemAlignment.Right> для сопоставленного элемента управления.</span><span class="sxs-lookup"><span data-stu-id="90466-112">Set the <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> property to <xref:System.Windows.Forms.ToolStripItemAlignment.Right> for the associated control.</span></span> <span data-ttu-id="90466-113">По умолчанию <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> присваивается <xref:System.Windows.Forms.ToolStripItemAlignment.Left>, который элементы управления выравниваются по левому краю <xref:System.Windows.Forms.ToolStrip>.</span><span class="sxs-lookup"><span data-stu-id="90466-113">By default, <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> is set to <xref:System.Windows.Forms.ToolStripItemAlignment.Left>, which aligns controls to the left side of the <xref:System.Windows.Forms.ToolStrip>.</span></span>  
+1.  <span data-ttu-id="078f5-112">Задайте <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> свойства <xref:System.Windows.Forms.ToolStripItemAlignment.Right> для сопоставленного элемента управления.</span><span class="sxs-lookup"><span data-stu-id="078f5-112">Set the <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> property to <xref:System.Windows.Forms.ToolStripItemAlignment.Right> for the associated control.</span></span> <span data-ttu-id="078f5-113">По умолчанию <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> присваивается <xref:System.Windows.Forms.ToolStripItemAlignment.Left>, который элементы управления выравниваются по левому краю <xref:System.Windows.Forms.ToolStrip>.</span><span class="sxs-lookup"><span data-stu-id="078f5-113">By default, <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> is set to <xref:System.Windows.Forms.ToolStripItemAlignment.Left>, which aligns controls to the left side of the <xref:System.Windows.Forms.ToolStrip>.</span></span>  
   
     ```vb  
     ToolStripSplitButton1.Alignment = _  
@@ -65,9 +65,9 @@ ms.locfileid: "54685067"
         System.Windows.Forms.ToolStripItemAlignment.Right;  
     ```  
   
-### <a name="to-arrange-toolstrip-items-on-the-toolstrip"></a><span data-ttu-id="90466-114">Чтобы упорядочить элементы ToolStrip на панели инструментов</span><span class="sxs-lookup"><span data-stu-id="90466-114">To arrange ToolStrip items on the ToolStrip</span></span>  
+### <a name="to-arrange-toolstrip-items-on-the-toolstrip"></a><span data-ttu-id="078f5-114">Чтобы упорядочить элементы ToolStrip на панели инструментов</span><span class="sxs-lookup"><span data-stu-id="078f5-114">To arrange ToolStrip items on the ToolStrip</span></span>  
   
--   <span data-ttu-id="90466-115">Задайте <xref:System.Windows.Forms.ToolStrip.LayoutStyle%2A> свойства к значению <xref:System.Windows.Forms.ToolStripLayoutStyle> нужную.</span><span class="sxs-lookup"><span data-stu-id="90466-115">Set the <xref:System.Windows.Forms.ToolStrip.LayoutStyle%2A> property to the value of <xref:System.Windows.Forms.ToolStripLayoutStyle> that you want.</span></span>  
+-   <span data-ttu-id="078f5-115">Задайте <xref:System.Windows.Forms.ToolStrip.LayoutStyle%2A> свойства к значению <xref:System.Windows.Forms.ToolStripLayoutStyle> нужную.</span><span class="sxs-lookup"><span data-stu-id="078f5-115">Set the <xref:System.Windows.Forms.ToolStrip.LayoutStyle%2A> property to the value of <xref:System.Windows.Forms.ToolStripLayoutStyle> that you want.</span></span>  
   
     ```vb  
     ToolStripDropDown1.LayoutStyle = _  
@@ -79,7 +79,7 @@ ms.locfileid: "54685067"
         System.Windows.Forms.ToolStripLayoutStyle.Flow;  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="90466-116">См. также</span><span class="sxs-lookup"><span data-stu-id="90466-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="078f5-116">См. также</span><span class="sxs-lookup"><span data-stu-id="078f5-116">See also</span></span>
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.Control.Layout>
 - <xref:System.Windows.Forms.ToolStrip.LayoutCompleted>
@@ -87,6 +87,6 @@ ms.locfileid: "54685067"
 - <xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A>
 - <xref:System.Windows.Forms.ToolStripItem.Placement%2A>
 - <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A>
-- [<span data-ttu-id="90466-117">Общие сведения об элементе управления ToolStrip</span><span class="sxs-lookup"><span data-stu-id="90466-117">ToolStrip Control Overview</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
-- [<span data-ttu-id="90466-118">Архитектура элемента управления ToolStrip</span><span class="sxs-lookup"><span data-stu-id="90466-118">ToolStrip Control Architecture</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)
-- [<span data-ttu-id="90466-119">Технологии, положенные в основу работы элемента управления ToolStrip</span><span class="sxs-lookup"><span data-stu-id="90466-119">ToolStrip Technology Summary</span></span>](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)
+- [<span data-ttu-id="078f5-117">Общие сведения об элементе управления ToolStrip</span><span class="sxs-lookup"><span data-stu-id="078f5-117">ToolStrip Control Overview</span></span>](toolstrip-control-overview-windows-forms.md)
+- [<span data-ttu-id="078f5-118">Архитектура элемента управления ToolStrip</span><span class="sxs-lookup"><span data-stu-id="078f5-118">ToolStrip Control Architecture</span></span>](toolstrip-control-architecture.md)
+- [<span data-ttu-id="078f5-119">Технологии, положенные в основу работы элемента управления ToolStrip</span><span class="sxs-lookup"><span data-stu-id="078f5-119">ToolStrip Technology Summary</span></span>](toolstrip-technology-summary.md)
