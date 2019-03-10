@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Label control [Windows Forms], about Label control
 - LinkLabel control [Windows Forms], about LinkLabel control
 ms.assetid: 9e248549-10ca-43a3-bb5e-60f583d369f1
-ms.openlocfilehash: b39c682ccb73a71da1752e6e9f3f79e5916d106c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 81edab0d44ae0bb9dcabe77ad568f281e6f5fffb
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503993"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722374"
 ---
 # <a name="linklabel-control-overview-windows-forms"></a>Общие сведения об элементе управления LinkLabel (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.LinkLabel> управления позволяет добавлять веб-ссылок для приложений Windows Forms. Можно использовать <xref:System.Windows.Forms.LinkLabel> управления для всех элементов, можно использовать <xref:System.Windows.Forms.Label> управления для; часть текста можно задать как ссылку на файл, папку или веб-страницы.  
@@ -25,6 +25,6 @@ Windows Forms <xref:System.Windows.Forms.LinkLabel> управления поз�
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.LinkLabel>
-- [Общие сведения об элементе управления Label](../../../../docs/framework/winforms/controls/label-control-overview-windows-forms.md)
-- [Практическое руководство. Ссылка на объект или веб-страницей с помощью элемента управления LinkLabel в Windows Forms](../../../../docs/framework/winforms/controls/link-to-an-object-or-web-page-with-wf-linklabel-control.md)
-- [Практическое руководство. Изменение внешнего вида элемента управления LinkLabel в Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)
+- [Общие сведения об элементе управления Label](label-control-overview-windows-forms.md)
+- [Практическое руководство. Ссылка на объект или веб-страницей с помощью элемента управления LinkLabel в Windows Forms](link-to-an-object-or-web-page-with-wf-linklabel-control.md)
+- [Практическое руководство. Изменение внешнего вида элемента управления LinkLabel в Windows Forms](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)

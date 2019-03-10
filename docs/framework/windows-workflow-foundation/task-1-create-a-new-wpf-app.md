@@ -2,12 +2,12 @@
 title: Упражнение 1. Создание нового приложения Windows Presentation Foundation.
 ms.date: 03/30/2017
 ms.assetid: 270eaeba-9492-4532-af9f-403ce5c9935b
-ms.openlocfilehash: 39cd901c0129124bece8e8d3a573fd45209cfb00
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 533b4a1030ab5f47eb96ca62dc2805eae7933b9b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679413"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711902"
 ---
 # <a name="task-1-create-a-new-windows-presentation-foundation-application"></a>Упражнение 1. Создание нового приложения Windows Presentation Foundation.
 В этой задаче будет создать пустое приложение Windows Presentation Foundation (WPF), используя шаблон WPF Application Visual Studio и добавьте ссылки на соответствующие [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] сборки рабочих процессов.  
@@ -40,8 +40,8 @@ ms.locfileid: "54679413"
   
 10. Нажмите кнопку **ОК**.  
   
-11. См. в разделе [задача 2: Размещение конструктора рабочих процессов](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md) Дополнительные сведения о размещении визуальной разработки конструктора рабочих процессов.  
+11. См. в разделе [задача 2: Размещение конструктора рабочих процессов](task-2-host-the-workflow-designer.md) Дополнительные сведения о размещении визуальной разработки конструктора рабочих процессов.  
   
 ## <a name="see-also"></a>См. также
-- [Отдельное размещение конструктора рабочих процессов](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)
-- [Задача 2. Размещение конструктора рабочих процессов](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)
+- [Отдельное размещение конструктора рабочих процессов](rehosting-the-workflow-designer.md)
+- [Задача 2. Размещение конструктора рабочих процессов](task-2-host-the-workflow-designer.md)

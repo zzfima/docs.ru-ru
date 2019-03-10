@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 075ea4c3-900c-4f8a-9dd2-13ea6804346b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b5ad28fbfd668819b0bcab30c33892679b4bd8c
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 3dbb5af9c5cf1d8796544592602c645584d21a04
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674923"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711805"
 ---
 # <a name="high-dpi-support-in-windows-forms"></a>Поддержка высокого DPI в Windows Forms
 
@@ -49,7 +49,7 @@ ms.locfileid: "55674923"
 
 - Включить awareness DPI для каждого монитора в *app.config* файл.
 
-  Windows Forms вводится новый [ `<System.Windows.Forms.ApplicationConfigurationSection>` ](../../../docs/framework/configure-apps/file-schema/winforms/index.md) элемент для поддержки новых функций и добавлены сведения о настройках, начиная с .NET Framework 4.7. Чтобы воспользоваться преимуществами новых функций, которые поддерживают высокое разрешение, добавьте следующее в файл конфигурации приложения.   
+  Windows Forms вводится новый [ `<System.Windows.Forms.ApplicationConfigurationSection>` ](../configure-apps/file-schema/winforms/index.md) элемент для поддержки новых функций и добавлены сведения о настройках, начиная с .NET Framework 4.7. Чтобы воспользоваться преимуществами новых функций, которые поддерживают высокое разрешение, добавьте следующее в файл конфигурации приложения.   
 
   ```xml
   <System.Windows.Forms.ApplicationConfigurationSection>
@@ -84,7 +84,7 @@ ms.locfileid: "55674923"
 </System.Windows.Forms.ApplicationConfigurationSection>    
 ```
 
-Список отдельных ключей и их значения, см. в разделе [добавьте элемент конфигурации Windows Forms](../../../docs/framework/configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md).
+Список отдельных ключей и их значения, см. в разделе [добавьте элемент конфигурации Windows Forms](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md).
 
 ## <a name="new-dpi-change-events"></a>Новые события изменения DPI
 
@@ -132,5 +132,5 @@ Console.WriteLine(AppDomain.CurrentDomain.SetupInformation.TargetFrameworkName);
 
 ## <a name="see-also"></a>См. также
 
-- [Windows Forms добавьте элемент конфигурации](../../../docs/framework/configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)
-- [Настройка размера и масштаба формы Windows Forms](../../../docs/framework/winforms/adjusting-the-size-and-scale-of-windows-forms.md)
+- [Windows Forms добавьте элемент конфигурации](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)
+- [Настройка размера и масштаба формы Windows Forms](adjusting-the-size-and-scale-of-windows-forms.md)

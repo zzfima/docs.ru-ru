@@ -2,12 +2,12 @@
 title: Безопасность
 ms.date: 03/30/2017
 ms.assetid: 737ec121-bfc5-4b75-a504-2d53c2c8af39
-ms.openlocfilehash: 6c4e64e928e3ada4210138878426fea9ffe5bdec
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c27ac9cf41436332d560e11987e3ce4b68576895
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519253"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720635"
 ---
 # <a name="security"></a>Безопасность
 Хранилище экземпляров рабочих процессов SQL использует следующие роли безопасности базы данных для обеспечения безопасного доступа к сведениям о состоянии экземпляров в базе данных сохраняемости.  
@@ -16,7 +16,7 @@ ms.locfileid: "43519253"
   
 -   **System.Activities.DurableInstancing.InstanceStoreObservers**. Эта роль имеет доступ только для чтения открытых представлений.  
   
--   **System.Activities.DurableInstancing.WorkflowActivationUsers**. Эта роль имеет права на выполнение хранимых процедур, участвующих в процессе активации экземпляра. Дополнительные сведения об активации экземпляров см. в разделе [активации экземпляра](../../../docs/framework/windows-workflow-foundation/instance-activation.md). Учетная запись пользователя, в которой выполняется универсальное ведущее приложение (например, служба управления рабочего процесса для [!INCLUDE[dublin](../../../includes/dublin-md.md)]), должна быть добавлена к этой роли базы данных.  
+-   **System.Activities.DurableInstancing.WorkflowActivationUsers**. Эта роль имеет права на выполнение хранимых процедур, участвующих в процессе активации экземпляра. Дополнительные сведения об активации экземпляров см. в разделе [активации экземпляра](instance-activation.md). Учетная запись пользователя, в которой выполняется универсальное ведущее приложение (например, служба управления рабочего процесса для [!INCLUDE[dublin](../../../includes/dublin-md.md)]), должна быть добавлена к этой роли базы данных.  
   
  Дополнительные сведения о безопасности для хранилищ сохраняемости в Windows Server App Fabric, см. в разделе [конфигурация безопасности для хранилищ сохраняемости в фабрике приложений](https://go.microsoft.com/fwlink/?LinkId=201208)  
   

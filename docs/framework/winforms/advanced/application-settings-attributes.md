@@ -6,12 +6,12 @@ helpviewer_keywords:
 - attributes [Windows Forms], application settings
 - wrapper classes [Windows Forms], application settings
 ms.assetid: 53caa66c-a9fb-43a5-953c-ad092590098d
-ms.openlocfilehash: a46f1fd14400995fef91c117502df24eae613fac
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: cfbaac8ad9a8576d076ed34059fb62e9e0a91ebc
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442559"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714662"
 ---
 # <a name="application-settings-attributes"></a>Атрибуты параметров приложения
 Архитектура параметров приложения предоставляет множество атрибутов, которые могут быть применены к классу-оболочке параметров приложения или его отдельным свойствам. Эти атрибуты проверяются во время выполнения с помощью инфраструктуры параметры приложения, часто поставщиком параметров, чтобы адаптировать работу с указанными потребностям настраиваемой оболочки.  
@@ -21,7 +21,7 @@ ms.locfileid: "56442559"
 > [!NOTE]
 >  Настраиваемый поставщик параметров, производным от <xref:System.Configuration.SettingsProvider> класса, требуется только для распознавания следующие три атрибута: **ApplicationScopedSettingAttribute**, **UserScopedSettingAttribute**, и **DefaultSettingValueAttribute**.  
   
-|Атрибут|целевого объекта|Описание:|  
+|Атрибут|целевого объекта|Описание|  
 |---------------|------------|-----------------|  
 |<xref:System.Configuration.SettingsProviderAttribute>|Оба|Задает короткое имя поставщика параметров, используемый для сохранения состояния.<br /><br /> Если этот атрибут не задан, поставщик по умолчанию, <xref:System.Configuration.LocalFileSettingsProvider>, предполагается, что.|  
 |<xref:System.Configuration.UserScopedSettingAttribute>|Оба|Определяет свойство как параметр приложений пользователя.|  
@@ -40,5 +40,5 @@ ms.locfileid: "56442559"
 ## <a name="see-also"></a>См. также
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.SettingsProvider>
-- [Архитектура параметров приложения](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)
+- [Архитектура параметров приложения](application-settings-architecture.md)
 - [Практическое руководство. Создание параметров приложения](how-to-create-application-settings.md)

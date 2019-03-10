@@ -11,12 +11,12 @@ helpviewer_keywords:
 - StatusBar control [Windows Forms], refreshing panels
 - panels [Windows Forms], refreshing status bar
 ms.assetid: cc2abb06-c082-49f7-a5a3-2fd1bbcb58d1
-ms.openlocfilehash: 88aacd77742baea5ebf04ddca311100bd44edb3e
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 3ad76899f86013e3395b5b7859538c4c59c9b1ee
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56665151"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716469"
 ---
 # <a name="walkthrough-updating-status-bar-information-at-run-time"></a>Пошаговое руководство. Обновление строки состояния во время выполнения
 > [!IMPORTANT]
@@ -30,9 +30,9 @@ ms.locfileid: "56665151"
   
 1.  Создание новой формы Windows Forms.  
   
-2.  Добавьте элемент управления <xref:System.Windows.Forms.StatusBar> в форму. Подробную информацию см. в разделе [Практическое руководство. Добавление элементов управления в Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
+2.  Добавьте элемент управления <xref:System.Windows.Forms.StatusBar> в форму. Подробную информацию см. в разделе [Практическое руководство. Добавление элементов управления в Windows Forms](how-to-add-controls-to-windows-forms.md).  
   
-3.  Добавьте панель строки состояния для вашей <xref:System.Windows.Forms.StatusBar> элемента управления. Подробную информацию см. в разделе [Практическое руководство. Добавление панелей в элемент управления StatusBar](../../../../docs/framework/winforms/controls/how-to-add-panels-to-a-statusbar-control.md).  
+3.  Добавьте панель строки состояния для вашей <xref:System.Windows.Forms.StatusBar> элемента управления. Подробную информацию см. в разделе [Практическое руководство. Добавление панелей в элемент управления StatusBar](how-to-add-panels-to-a-statusbar-control.md).  
   
 4.  Для <xref:System.Windows.Forms.StatusBar> вы добавили в форму элемента управления значение <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> свойства `true`.  
   
@@ -87,6 +87,6 @@ ms.locfileid: "56665151"
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [Практическое руководство. Добавление панелей в элемент управления StatusBar](../../../../docs/framework/winforms/controls/how-to-add-panels-to-a-statusbar-control.md)
-- [Практическое руководство. Определить, какая из панелей в элемент управления Windows Forms StatusBar была нажата](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)
-- [Общие сведения об элементе управления StatusBar](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)
+- [Практическое руководство. Добавление панелей в элемент управления StatusBar](how-to-add-panels-to-a-statusbar-control.md)
+- [Практическое руководство. Определить, какая из панелей в элемент управления Windows Forms StatusBar была нажата](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [Общие сведения об элементе управления StatusBar](statusbar-control-overview-windows-forms.md)

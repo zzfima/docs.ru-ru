@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], tile view
 - tiling [Windows Forms], Windows Forms, controls
 ms.assetid: 12f0816a-52b8-41ee-a6d9-ded3a8a5817a
-ms.openlocfilehash: b365ada2d38f8fca97b66bb3d46b2c8e93d7cb1d
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 2b075cdb4ec9910e81c7baa7c714c5c155a8586d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676243"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720099"
 ---
 # <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control-using-the-designer"></a>Практическое руководство. Включить мозаичное представление в элементе управления ListView формы Windows с помощью конструктора
 Функция мозаичного представления элемента <xref:System.Windows.Forms.ListView> элемент управления позволяет обеспечивает визуальный баланс между графическими и текстовыми представлениями информации. Текстовые данные, отображаемые для мозаичного представления элемента совпадают с данными о столбцах, определенных для подробного представления. Вид мозаики, работает в сочетании с группирования или вставки метки возможностях <xref:System.Windows.Forms.ListView> элемента управления.  
@@ -22,7 +22,7 @@ ms.locfileid: "57676243"
   
  Мозаичное представление, свойства и методы позволяют указать, какие поля столбца для отображения для каждого элемента и управлять размером и внешним видом всех элементов в окно представления плитки. Для ясности первая часть текста заголовка всегда является имя элемента; его нельзя изменить.  
   
- Следующая процедура требуется **приложения Windows** проекта с формой, содержащей <xref:System.Windows.Forms.ListView> элемента управления. Сведения о настройке такого проекта см. в разделе [как: Создайте проект приложения Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project) и [как: Добавление элементов управления в Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
+ Следующая процедура требуется **приложения Windows** проекта с формой, содержащей <xref:System.Windows.Forms.ListView> элемента управления. Сведения о настройке такого проекта см. в разделе [как: Создайте проект приложения Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project) и [как: Добавление элементов управления в Windows Forms](how-to-add-controls-to-windows-forms.md).  
   
 > [!NOTE]
 >  Функция мозаичного представления доступна только в [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)], когда приложение вызывает метод <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType>. В предыдущих версиях операционных систем код, связанный с мозаичным представлением, не оказывает никакого влияния, элемент управления <xref:System.Windows.Forms.ListView> отображается в представлении крупных значков. Дополнительные сведения см. в разделе <xref:System.Windows.Forms.ListView.View%2A?displayProperty=nameWithType>.  
@@ -37,4 +37,4 @@ ms.locfileid: "57676243"
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.ListView.TileSize%2A>
-- [Общие сведения об элементе управления ListView](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)
+- [Общие сведения об элементе управления ListView](listview-control-overview-windows-forms.md)

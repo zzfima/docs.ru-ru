@@ -10,12 +10,12 @@ helpviewer_keywords:
 - context menus [Windows Forms], for Windows Forms
 - shortcut menus [Windows Forms], ContextMenu component
 ms.assetid: 9b93ccbc-c0fe-44a2-968e-faac25971831
-ms.openlocfilehash: 9f24bfceaf4e2e21916624da6d970dd90a0fdbd0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 240a85ed4c68a7f22bee8b884a416ff1dc68b66c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552818"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724535"
 ---
 # <a name="contextmenu-component-windows-forms"></a>Компонент ContextMenu (Windows Forms)
 > [!NOTE]
@@ -24,10 +24,10 @@ ms.locfileid: "54552818"
  Windows Forms `ContextMenu` компонент используется для предоставления пользователям доступного контекстного меню часто используемых команд, которые связаны с выбранным объектом. Элементы в контекстном меню часто представляют собой подмножество элементов из главного меню, которые отображаются в другом месте в приложении. Контекстные меню обычно осуществляется с помощью правой кнопки мыши. В формах Windows Forms они связаны с другими элементами управления.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Общие сведения об элементе управления ContextMenu](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md)  
+ [Общие сведения об элементе управления ContextMenu](contextmenu-component-overview-windows-forms.md)  
  Основные понятия `ContextMenu` компонент, который дает пользователям возможность создавать меню часто используемых команд, связанных с выбранным объектом.  
   
- [Практическое руководство. Добавление и удаление элементов меню с помощью компонента ContextMenu в Windows Forms](../../../../docs/framework/winforms/controls/add-and-remove-menu-items-with-wf-contextmenu-component.md)  
+ [Практическое руководство. Добавление и удаление элементов меню с помощью компонента ContextMenu в Windows Forms](add-and-remove-menu-items-with-wf-contextmenu-component.md)  
  Объясняется, как добавлять и удалять элементы контекстного меню в Windows Forms.  
   
 ## <a name="reference"></a>Ссылка  
@@ -35,7 +35,7 @@ ms.locfileid: "54552818"
  Содержит справочные сведения о классе <xref:System.Windows.Forms.ContextMenu> и его членах.  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Элементы управления для использования в Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)  
  Полный список элементов управления Windows Forms со ссылками на информацию об их применении.  
   
 ## <a name="see-also"></a>См. также

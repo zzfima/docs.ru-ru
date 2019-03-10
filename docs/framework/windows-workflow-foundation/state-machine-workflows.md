@@ -2,12 +2,12 @@
 title: Рабочие процессы конечного автомата
 ms.date: 03/30/2017
 ms.assetid: 344caacd-bf3b-4716-bd5a-eca74fc5a61d
-ms.openlocfilehash: 89819f6b37fdaf601cf4e8b99fd5156c8e40af99
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 78ce1124137e3b97978f3522a59ad1febd23135d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521300"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724964"
 ---
 # <a name="state-machine-workflows"></a>Рабочие процессы конечного автомата
 Конечный автомат - широко известный принцип разработки программ. Действие <xref:System.Activities.Statements.StateMachine>, а также <xref:System.Activities.Statements.State>, <xref:System.Activities.Statements.Transition> и другие действия могут использоваться для сборки программ рабочего процесса конечных автоматов. В этом разделе представлены общие сведения о создании рабочих процессов конечного автомата.  
@@ -21,16 +21,16 @@ ms.locfileid: "54521300"
   
 -   <xref:System.Activities.Statements.Transition>  
   
- В ходе создания рабочего процесса конечного автомата состояния добавляются к действию <xref:System.Activities.Statements.StateMachine>, а переходы используются для управления переключением между состояниями. Следующий снимок экрана, из [Приступая к работе](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) шаг [как: Создание конечного автомата](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md), показывает автомата с тремя состояниями и тремя переходами. **Инициализировать целевой объект** -исходное состояние и представляющее первое состояние в рабочем процессе. Это обозначается линией, ведущей к нему из **запустить** узла. Конечное состояние в рабочем процессе называется **FinalState**и представляет тот момент, в котором рабочий процесс завершается.  
+ В ходе создания рабочего процесса конечного автомата состояния добавляются к действию <xref:System.Activities.Statements.StateMachine>, а переходы используются для управления переключением между состояниями. Следующий снимок экрана, из [Приступая к работе](getting-started-tutorial.md) шаг [как: Создание конечного автомата](how-to-create-a-state-machine-workflow.md), показывает автомата с тремя состояниями и тремя переходами. **Инициализировать целевой объект** -исходное состояние и представляющее первое состояние в рабочем процессе. Это обозначается линией, ведущей к нему из **запустить** узла. Конечное состояние в рабочем процессе называется **FinalState**и представляет тот момент, в котором рабочий процесс завершается.  
   
- ![Завершения рабочего процесса конечного автомата](../../../docs/framework/windows-workflow-foundation/media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
+ ![Завершения рабочего процесса конечного автомата](./media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
   
  Рабочий процесс конечного автомата должен содержать только одно начальное состояние и хотя бы одно конечное состояние. Каждое состояние, отличное от конечного, должно иметь по крайней мере один переход. В следующих разделах описывается создание и настройка состояний и переходов.  
   
 ## <a name="creating-and-configuring-states"></a>Создание и настройка состояний  
  <xref:System.Activities.Statements.State> представляет состояние, в котором может находиться конечный автомат. Чтобы добавить <xref:System.Activities.Statements.State> в рабочий процесс, перетащите **состояние** конструктор из **конечный автомат** раздел **элементов** и сбросьте его в <xref:System.Activities.Statements.StateMachine> действие на [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] поверхности.  
   
- ![WF4 Состояние действия машиной](../../../docs/framework/windows-workflow-foundation/media/netframework4platformupdate1statemachineactivities.jpg "NETFramework4PlatformUpdate1StateMachineActivities")  
+ ![WF4 Состояние действия машиной](./media/netframework4platformupdate1statemachineactivities.jpg "NETFramework4PlatformUpdate1StateMachineActivities")  
   
  Чтобы настроить состояние как **начальное состояние**, щелкните правой кнопкой мыши состояние и выберите **задать как начальное состояние**. Кроме того, если нет текущего начальное состояние, начальное состояние может быть назначено путем перетаскивания линии от **запустить** узел в верхней части рабочего процесса в нужное состояние. Когда <xref:System.Activities.Statements.StateMachine> действия сбрасывается в конструкторе рабочих процессов, он предварительно настроен с именем начальным состоянием **State1**. Рабочий процесс конечного автомата должен содержать только одно начальное состояние.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "54521300"
 > [!NOTE]
 >  Обратите внимание, что если состояние <xref:System.Activities.Statements.Transition.Condition%2A> перехода оценивается как `False` (или все условия общего перехода триггера оцениваются как `False`), переход не выполняется, а все триггеры для всех переходов из состояния будут запланированы заново.  
   
- Дополнительные сведения о создании рабочих процессов конечного автомата состояния см. в разделе [как: Создание рабочего процесса конечного автомата](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md), [конструктора операций StateMachine](/visualstudio/workflow-designer/statemachine-activity-designer), [состояние конструктора действий](/visualstudio/workflow-designer/state-activity-designer), [конструктора действий FinalState](/visualstudio/workflow-designer/finalstate-activity-designer)и [Переход конструктора действий](/visualstudio/workflow-designer/transition-activity-designer).  
+ Дополнительные сведения о создании рабочих процессов конечного автомата состояния см. в разделе [как: Создание рабочего процесса конечного автомата](how-to-create-a-state-machine-workflow.md), [конструктора операций StateMachine](/visualstudio/workflow-designer/statemachine-activity-designer), [состояние конструктора действий](/visualstudio/workflow-designer/state-activity-designer), [конструктора действий FinalState](/visualstudio/workflow-designer/finalstate-activity-designer)и [Переход конструктора действий](/visualstudio/workflow-designer/transition-activity-designer).  
   
 ## <a name="state-machine-terminology"></a>Терминология конечного автомата  
  В этом разделе описывается словарь конечного автомата, используемый на протяжении данного раздела.  
@@ -101,7 +101,7 @@ ms.locfileid: "54521300"
  Состояние, представляющее завершение конечного автомата.  
   
 ## <a name="see-also"></a>См. также
-- [Практическое руководство. Создание рабочего процесса конечного автомата](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md)
+- [Практическое руководство. Создание рабочего процесса конечного автомата](how-to-create-a-state-machine-workflow.md)
 - [Конструктор действия StateMachine](/visualstudio/workflow-designer/statemachine-activity-designer)
 - [Конструктор действия State](/visualstudio/workflow-designer/state-activity-designer)
 - [Конструктор действия FinalState](/visualstudio/workflow-designer/finalstate-activity-designer)

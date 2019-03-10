@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Сохранение файлов с использованием элемента управления RichTextBox в Windows Forms
+title: Практическое руководство. Сохранение файлов с использованием элемента управления RichTextBox в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - .rtf files [Windows Forms], saving in RichTextBox control
 - text files [Windows Forms], saving from RichTextBox control
 ms.assetid: 4a58ec19-84d1-4383-9110-298c06adcfca
-ms.openlocfilehash: 739cc33df873ef2c8ec7a2f5eaf867abadb8da75
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c9a5d471a58c646c786cf441ee7d7ec235788f10
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539783"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723045"
 ---
-# <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>Как выполнить Сохранение файлов с использованием элемента управления RichTextBox в Windows Forms
+# <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>Практическое руководство. Сохранение файлов с использованием элемента управления RichTextBox в Windows Forms
 Windows Forms <xref:System.Windows.Forms.RichTextBox> управления может записывать сведения, которые отображаются в одном из следующих форматов:  
   
 -   Обычный текст  
@@ -41,7 +41,7 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> управления мо�
   
 1.  Определите путь к файлу должен быть сохранен.  
   
-     Для этого в реальном приложении обычно используется <xref:System.Windows.Forms.SaveFileDialog> компонента. Дополнительные сведения см. в разделе [Общие сведения о компоненте SaveFileDialog](../../../../docs/framework/winforms/controls/savefiledialog-component-overview-windows-forms.md).  
+     Для этого в реальном приложении обычно используется <xref:System.Windows.Forms.SaveFileDialog> компонента. Дополнительные сведения см. в разделе [Общие сведения о компоненте SaveFileDialog](savefiledialog-component-overview-windows-forms.md).  
   
 2.  Вызовите <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> метод <xref:System.Windows.Forms.RichTextBox> управления, указав имя файла для сохранения и при необходимости тип файла. Если вызвать метод с именем файла в качестве единственного аргумента, файл будет сохранен как RTF. Чтобы указать другой тип файла, вызовите метод со значением перечисления <xref:System.Windows.Forms.RichTextBoxStreamType> в качестве второго аргумента.  
   
@@ -90,5 +90,5 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> управления мо�
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.RichTextBox.SaveFile%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.RichTextBox>
-- [Элемент управления RichTextBox](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)
-- [Элементы управления для использования в Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [Элемент управления RichTextBox](richtextbox-control-windows-forms.md)
+- [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)

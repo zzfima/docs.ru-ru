@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Изменить интервал и выравнивание элемента управления ToolStrip в Windows Forms
+title: Практическое руководство. Изменить интервал и выравнивание элемента управления ToolStrip в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - toolbars [Windows Forms], aligning items
 ms.assetid: cd483466-0f49-43df-addf-e2b5fcd64027
-ms.openlocfilehash: 2c9c60a3bfd78b7111b9cdff6a791d70c8e53c82
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 954087fa893baf3aa623c912efb081491304d3fb
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685067"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719446"
 ---
-# <a name="how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms"></a>Как выполнить Изменить интервал и выравнивание элемента управления ToolStrip в Windows Forms
+# <a name="how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms"></a>Практическое руководство. Изменить интервал и выравнивание элемента управления ToolStrip в Windows Forms
 <xref:System.Windows.Forms.ToolStrip> Управления полностью поддерживает функции макета, такие как определения размера, расстояние между <xref:System.Windows.Forms.ToolStripItem> элементов управления относительно друг друга, размещения элементов управления в <xref:System.Windows.Forms.ToolStrip>и расстояние между элементами управления <xref:System.Windows.Forms.ToolStrip>.  
   
  Так как значение по умолчанию <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> свойство `true`, элементов управления изменяются автоматически, если не задать <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> свойства `false`.  
@@ -87,6 +87,6 @@ ms.locfileid: "54685067"
 - <xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A>
 - <xref:System.Windows.Forms.ToolStripItem.Placement%2A>
 - <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A>
-- [Общие сведения об элементе управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
-- [Архитектура элемента управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)
-- [Технологии, положенные в основу работы элемента управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)
+- [Общие сведения об элементе управления ToolStrip](toolstrip-control-overview-windows-forms.md)
+- [Архитектура элемента управления ToolStrip](toolstrip-control-architecture.md)
+- [Технологии, положенные в основу работы элемента управления ToolStrip](toolstrip-technology-summary.md)

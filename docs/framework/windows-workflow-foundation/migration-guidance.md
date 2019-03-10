@@ -2,12 +2,12 @@
 title: Руководство по миграции
 ms.date: 03/30/2017
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
-ms.openlocfilehash: b3a3e1efee44ef11f3c5a91dddb1172f20ea01ed
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 405ed0dcbd730f08b84ad0b40008c4d77b02e26f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441220"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719680"
 ---
 # <a name="migration-guidance"></a>Руководство по миграции
 В [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], корпорация Майкрософт выпускает второй основной номер версии Windows Workflow Foundation (WF). [!INCLUDE[wf1](../../../includes/wf1-md.md)] была выпущена в составе [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] (она включала типы в пространствах имен System.Workflow.*, которые теперь называются WF3) и улучшена в [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. WF3 также является частью [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], но он сосуществует с новой технологией рабочего процесса (типы в System.Activities.\* пространства имен; Далее именуется WF4). При принятии решения об использовании WF4 важно помнить, что управление временем осуществляет пользователь.  
@@ -35,7 +35,7 @@ ms.locfileid: "56441220"
  [Руководство по WF: Конечный автомат](https://go.microsoft.com/fwlink/?LinkId=153855)  
  Описывает моделирование потока управления WF4 при отсутствии действия конечного автомата.  
   
- Обратите внимание, что это руководство относится только к проектам рабочих процессов, использующих платформу .NET Framework 4. Рабочие процессы конечного автомата были добавлены в .NET 4.0.1 с выпуском обновления платформы версии 1 и являлись частью платформы .NET Framework 4.5. Дополнительные сведения о состоянии рабочих процессов конечного автомата в .NET 4.0.1 - 4.0.3 и .NET Framework 4.5 см. в разделе [обновление 4.0.1 платформы Microsoft .NET Framework 4 функции](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hh290669(v=vs.100)) и [автоматов](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md).  
+ Обратите внимание, что это руководство относится только к проектам рабочих процессов, использующих платформу .NET Framework 4. Рабочие процессы конечного автомата были добавлены в .NET 4.0.1 с выпуском обновления платформы версии 1 и являлись частью платформы .NET Framework 4.5. Дополнительные сведения о состоянии рабочих процессов конечного автомата в .NET 4.0.1 - 4.0.3 и .NET Framework 4.5 см. в разделе [обновление 4.0.1 платформы Microsoft .NET Framework 4 функции](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hh290669(v=vs.100)) и [автоматов](state-machine-workflows.md).  
   
  [Рецепты миграции WF: Настраиваемые действия](https://go.microsoft.com/fwlink/?LinkId=153856)  
  Обеспечивает примеры и инструкции по изменению структуры настраиваемых действий WF3 в WF4.  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], sort modes
 - DataGridView control [Windows Forms], sort mode
 ms.assetid: 43715887-2df9-4da7-bcf1-b9c7c842b2bf
-ms.openlocfilehash: b2b73d36230d12f4e1075dde201e941cbe9d228d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 935251c783bbe74903cee6afd5e14eed4483d69d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615059"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717860"
 ---
 # <a name="column-sort-modes-in-the-windows-forms-datagridview-control"></a>Установка режимов сортировки для столбцов элемента управления DataGridView в Windows Forms
 <xref:System.Windows.Forms.DataGridView> столбцы имеют три режима сортировки. Режим сортировки для каждого столбца указывается с помощью <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> свойство столбца, который может быть присвоено одно из следующих <xref:System.Windows.Forms.DataGridViewColumnSortMode> значений перечисления.  
@@ -31,7 +31,7 @@ ms.locfileid: "54615059"
   
  Когда <xref:System.Windows.Forms.DataGridView> — сортировка, можно определить столбец для сортировки и порядок сортировки путем проверки значения <xref:System.Windows.Forms.DataGridView.SortedColumn%2A> и <xref:System.Windows.Forms.DataGridView.SortOrder%2A> свойства. Эти значения не имеют смысла после операцию пользовательской сортировки. Дополнительные сведения о пользовательской сортировке см. в статье в разделе пользовательская сортировка далее в этом разделе.  
   
- Когда <xref:System.Windows.Forms.DataGridView> сортировке элемента управления, содержащего связанные и несвязанные столбцы, автоматическое сохранение значений в несвязанных столбцов невозможно. Для сохранения этих значений, необходимо реализовать виртуальный режим, задав <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> свойства `true` и обработка <xref:System.Windows.Forms.DataGridView.CellValueNeeded> и <xref:System.Windows.Forms.DataGridView.CellValuePushed> события. Дополнительные сведения см. в разделе [Как Реализация виртуального режима в Windows Forms элемента управления DataGridView](../../../../docs/framework/winforms/controls/how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md). Сортировка по несвязанных столбцов в связанном режиме не поддерживается.  
+ Когда <xref:System.Windows.Forms.DataGridView> сортировке элемента управления, содержащего связанные и несвязанные столбцы, автоматическое сохранение значений в несвязанных столбцов невозможно. Для сохранения этих значений, необходимо реализовать виртуальный режим, задав <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> свойства `true` и обработка <xref:System.Windows.Forms.DataGridView.CellValueNeeded> и <xref:System.Windows.Forms.DataGridView.CellValuePushed> события. Дополнительные сведения см. в разделе [Как Реализация виртуального режима в Windows Forms элемента управления DataGridView](how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md). Сортировка по несвязанных столбцов в связанном режиме не поддерживается.  
   
 ## <a name="programmatic-sorting"></a>Программная сортировка  
  Можно сортировать <xref:System.Windows.Forms.DataGridView> программным образом путем вызова его <xref:System.Windows.Forms.DataGridView.Sort%2A> метод.  
@@ -65,6 +65,6 @@ ms.locfileid: "54615059"
 - <xref:System.Windows.Forms.DataGridView.SortOrder%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumnHeaderCell.SortGlyphDirection%2A?displayProperty=nameWithType>
-- [Сортировка данных в элементе управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/sorting-data-in-the-windows-forms-datagridview-control.md)
-- [Практическое руководство. Определение режимов сортировки для столбцов в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/set-the-sort-modes-for-columns-wf-datagridview-control.md)
-- [Практическое руководство. Настройка сортировки в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)
+- [Сортировка данных в элементе управления DataGridView в Windows Forms](sorting-data-in-the-windows-forms-datagridview-control.md)
+- [Практическое руководство. Определение режимов сортировки для столбцов в элементе управления DataGridView Windows Forms](set-the-sort-modes-for-columns-wf-datagridview-control.md)
+- [Практическое руководство. Настройка сортировки в элементе управления DataGridView Windows Forms](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)

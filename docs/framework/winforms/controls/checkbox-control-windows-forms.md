@@ -9,24 +9,24 @@ helpviewer_keywords:
 - checked list items
 - check boxes
 ms.assetid: 0719d798-c307-40d3-9040-72a62679c227
-ms.openlocfilehash: a71fefd8d1c0edb23119cdd6b2604e274302935a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 207f8f884e8382614bf7d6cbc4a628d98fb3542b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524915"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711301"
 ---
 # <a name="checkbox-control-windows-forms"></a>Элемент управления CheckBox (Windows Forms)
 Элемент управления `CheckBox` Windows Forms указывает, включено или отключено какое-либо условие. Обычно он используется для предоставления пользователю выбора типа "Да/Нет" или "Истина/Ложь". Элементы управления типа "флажок" можно объединять в группы для предоставления нескольких вариантов ответа, из которых пользователь может выбрать один или несколько. Это похоже на элемент управления <xref:System.Windows.Forms.RadioButton>, но можно выбрать любое число объединенных в группу элементов `CheckBox`.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Общие сведения об элементе управления CheckBox](../../../../docs/framework/winforms/controls/checkbox-control-overview-windows-forms.md)  
- Описывается элемент управления, его основные возможности и свойства.  
+ [Общие сведения об элементе управления CheckBox](checkbox-control-overview-windows-forms.md)  
+ Описание элемента управления, его основных возможностей и свойств.  
   
- [Практическое руководство. Обработка события щелчка элемента управления CheckBox в Windows Forms](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-checkbox-clicks.md)  
+ [Практическое руководство. Обработка события в Windows Forms щелчка элемента управления CheckBox](how-to-respond-to-windows-forms-checkbox-clicks.md)  
  Описание способов использования флажка для определения действий, выполняемых приложением.  
   
- [Практическое руководство. Задание параметров с помощью элементов управления CheckBox в Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-options-with-windows-forms-checkbox-controls.md)  
+ [Практическое руководство. Настройка параметров с помощью элементов управления Windows Forms CheckBox](how-to-set-options-with-windows-forms-checkbox-controls.md)  
  Описание способов использования флажка для задания параметров, таких как свойства объекта.  
   
 ## <a name="reference"></a>Ссылка  
@@ -34,5 +34,5 @@ ms.locfileid: "33524915"
  Описание класса и всех его членов.  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Элементы управления для использования в Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)  
  Полный список элементов управления Windows Forms со ссылками на информацию об их применении.

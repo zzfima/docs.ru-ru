@@ -10,18 +10,18 @@ helpviewer_keywords:
 - status bars [Windows Forms], adding panels
 - StatusBar control [Windows Forms], adding panels
 ms.assetid: 835e3902-288c-4c38-9d69-0696d8695009
-ms.openlocfilehash: d94f43d250e9b6bacca59e1e5e310ab6866ba4cc
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 0c7c843fd3b837cb221e055bd96f735fb5e9c4ed
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441740"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713300"
 ---
 # <a name="how-to-add-panels-to-a-statusbar-control"></a>Практическое руководство. Добавление панелей в элемент управления StatusBar
 > [!IMPORTANT]
 >  <xref:System.Windows.Forms.StatusStrip> И <xref:System.Windows.Forms.ToolStripStatusLabel> элементы управления заменяют и расширяют функциональные возможности для <xref:System.Windows.Forms.StatusBar> и <xref:System.Windows.Forms.StatusBarPanel> управляет; Однако <xref:System.Windows.Forms.StatusBar> и <xref:System.Windows.Forms.StatusBarPanel> элементы управления сохраняются для обеспечения обратной совместимости и использования в будущем, если вы Выберите этот параметр.  
   
- Программируемая область [элемента управления StatusBar](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md) управления состоит из экземпляров <xref:System.Windows.Forms.StatusBarPanel> класса. Они добавляются с помощью дополнения к <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> класса.  
+ Программируемая область [элемента управления StatusBar](statusbar-control-windows-forms.md) управления состоит из экземпляров <xref:System.Windows.Forms.StatusBarPanel> класса. Они добавляются с помощью дополнения к <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> класса.  
   
 ### <a name="to-add-panels-to-a-status-bar"></a>Чтобы добавить панели в строке состояния  
   
@@ -124,7 +124,7 @@ ms.locfileid: "56441740"
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
 - [Диалоговое окно редактора коллекции](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/xc4yyekt(v=vs.100))
-- [Практическое руководство. Задать размер панели строки состояния](../../../../docs/framework/winforms/controls/how-to-set-the-size-of-status-bar-panels.md)
-- [Пошаговое руководство: Обновление строки состояния во время выполнения](../../../../docs/framework/winforms/controls/walkthrough-updating-status-bar-information-at-run-time.md)
-- [Практическое руководство. Определить, какая из панелей в элемент управления Windows Forms StatusBar была нажата](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)
-- [Общие сведения об элементе управления StatusBar](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)
+- [Практическое руководство. Задать размер панели строки состояния](how-to-set-the-size-of-status-bar-panels.md)
+- [Пошаговое руководство: Обновление строки состояния во время выполнения](walkthrough-updating-status-bar-information-at-run-time.md)
+- [Практическое руководство. Определить, какая из панелей в элемент управления Windows Forms StatusBar была нажата](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [Общие сведения об элементе управления StatusBar](statusbar-control-overview-windows-forms.md)

@@ -5,41 +5,41 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 26dfac36-ae23-4909-9867-62495b55fb5e
-ms.openlocfilehash: abd25c21cf98bb0ec426ef772f8cd26baa4e8e47
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d3ff9d217d085e3afe5171cce9d80f8dbc32ff36
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57467146"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722910"
 ---
 # <a name="how-to-update-the-definition-of-a-running-workflow-instance"></a>Практическое руководство. Обновить определение выполняющегося экземпляра рабочего процесса
 
-Динамическое обновление предоставляет разработчикам приложений рабочих процессов механизм обновления определения рабочего процесса для сохраненного экземпляра рабочего процесса. Это позволяет реализовать исправление ошибки, внедрение новых требований или учет непредвиденных изменений. Этот шаг в этом руководстве показано, как использовать динамическое обновление для изменения сохраненных экземпляров `v1` рабочего процесса угадывания чисел в соответствии с новыми функциями, представленными в [как: Размещение нескольких версий рабочего процесса Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).
+Динамическое обновление предоставляет разработчикам приложений рабочих процессов механизм обновления определения рабочего процесса для сохраненного экземпляра рабочего процесса. Это позволяет реализовать исправление ошибки, внедрение новых требований или учет непредвиденных изменений. Этот шаг в этом руководстве показано, как использовать динамическое обновление для изменения сохраненных экземпляров `v1` рабочего процесса угадывания чисел в соответствии с новыми функциями, представленными в [как: Размещение нескольких версий рабочего процесса Side-by-Side](how-to-host-multiple-versions-of-a-workflow-side-by-side.md).
 
 > [!NOTE]
 > Чтобы скачать полную версию или просмотреть пошаговое видео учебника, см. в разделе [Windows Workflow Foundation (WF45) - Приступая к работе](https://go.microsoft.com/fwlink/?LinkID=248976).
 
 ## <a name="in-this-topic"></a>Содержание раздела
 
-- [Создание проекта CreateUpdateMaps](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_CreateProject)
+- [Создание проекта CreateUpdateMaps](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_CreateProject)
 
-- [Обновление StateMachineNumberGuessWorkflow](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StateMachine)
+- [Обновление StateMachineNumberGuessWorkflow](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StateMachine)
 
-- [Обновление FlowchartNumberGuessWorkflow](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_Flowchart)
+- [Обновление FlowchartNumberGuessWorkflow](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_Flowchart)
 
-- [Обновление SequentialNumberGuessWorkflow](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_Sequential)
+- [Обновление SequentialNumberGuessWorkflow](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_Sequential)
 
-- [Построение и запуск приложения CreateUpdateMaps](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_CreateUpdateMaps)
+- [Построение и запуск приложения CreateUpdateMaps](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_CreateUpdateMaps)
 
-- [Для создания обновленной сборки рабочих процессов](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAssembly)
+- [Для создания обновленной сборки рабочих процессов](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAssembly)
 
-- [Обновление WorkflowVersionMap новыми версиями](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_UpdateWorkflowVersionMap)
+- [Обновление WorkflowVersionMap новыми версиями](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_UpdateWorkflowVersionMap)
 
-- [Для применения динамического обновления](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_ApplyUpdate)
+- [Для применения динамического обновления](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_ApplyUpdate)
 
-- [Для запуска приложения с обновленными рабочими процессами](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAndRun)
+- [Для запуска приложения с обновленными рабочими процессами](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAndRun)
 
-- [Чтобы разрешить запуск предыдущих версий рабочих процессов](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StartPreviousVersions)
+- [Чтобы разрешить запуск предыдущих версий рабочих процессов](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StartPreviousVersions)
 
 ### <a name="BKMK_CreateProject"></a> Создание проекта CreateUpdateMaps
 
@@ -257,7 +257,7 @@ ms.locfileid: "57467146"
     StateMachine sm = wf.Implementation as StateMachine;
     ```
 
-3. Затем обновите выражения двух `WriteLine` действий, которые отображают, является ли догадка пользователя слишком большое или слишком мало, чтобы они соответствовали обновлениям, сделанным в [как: Размещение нескольких версий рабочего процесса Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).
+3. Затем обновите выражения двух `WriteLine` действий, которые отображают, является ли догадка пользователя слишком большое или слишком мало, чтобы они соответствовали обновлениям, сделанным в [как: Размещение нескольких версий рабочего процесса Side-by-Side](how-to-host-multiple-versions-of-a-workflow-side-by-side.md).
 
     ```vb
     'Update the Text of the two WriteLine activities that write the
@@ -652,13 +652,13 @@ ms.locfileid: "57467146"
 
 2. Выберите **откройте**, **решение или проект** из **файл** меню.
 
-3. Перейдите к **NumberGuessWorkflowActivities_du** папку, созданную в [как: Размещение нескольких версий рабочего процесса Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)выберите **NumberGuessWorkflowActivities.csproj** (или **vbproj**) и нажмите кнопку **откройте**.
+3. Перейдите к **NumberGuessWorkflowActivities_du** папку, созданную в [как: Размещение нескольких версий рабочего процесса Side-by-Side](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)выберите **NumberGuessWorkflowActivities.csproj** (или **vbproj**) и нажмите кнопку **откройте**.
 
 4. В **обозревателе решений**, щелкните правой кнопкой мыши **SequentialNumberGuessWorkflow.xaml** и выберите **исключить из проекта**. Сделать то же самое **FlowchartNumberGuessWorkflow.xaml** и **StateMachineNumberGuessWorkflow.xaml**. Эта процедура удаляет предыдущие версии определений рабочих процессов из проекта.
 
 5. Выберите **добавить существующий элемент** из **проекта** меню.
 
-6. Перейдите к **NumberGuessWorkflowActivities_du** папку, созданную в [как: Размещение нескольких версий рабочего процесса Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).
+6. Перейдите к **NumberGuessWorkflowActivities_du** папку, созданную в [как: Размещение нескольких версий рабочего процесса Side-by-Side](how-to-host-multiple-versions-of-a-workflow-side-by-side.md).
 
 7. Выберите **файлы XAML (\*.xaml;\*. XOML)** из **файлы типа** стрелку раскрывающегося списка.
 
@@ -675,7 +675,7 @@ ms.locfileid: "57467146"
 
 11. Откройте проводник Windows и перейдите к **NumberGuessWorkflowActivities_du\bin\Debug** папку (или **bin\Release** в зависимости от параметров проекта).
 
-12. Переименуйте **NumberGuessWorkflowActivities.dll** для **NumberGuessWorkflowActivities_v15.dll**и скопируйте его **PreviousVersions** папку, созданную в [Как: Размещение нескольких версий рабочего процесса Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).
+12. Переименуйте **NumberGuessWorkflowActivities.dll** для **NumberGuessWorkflowActivities_v15.dll**и скопируйте его **PreviousVersions** папку, созданную в [Как: Размещение нескольких версий рабочего процесса Side-by-Side](how-to-host-multiple-versions-of-a-workflow-side-by-side.md).
 
 ### <a name="BKMK_UpdateWorkflowVersionMap"></a> Обновление WorkflowVersionMap новыми версиями
 
@@ -1447,7 +1447,7 @@ ms.locfileid: "57467146"
 
 3. Нажмите кнопку **новая игра** для запуска нового рабочего процесса и обратите внимание, сведения о версии под окном состояния, которые указывает рабочий процесс является `v2` рабочего процесса.
 
-4. Выберите один из `v1` рабочих процессов, запущенных в начале [как: Размещение нескольких версий рабочего процесса Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md) раздела. Обратите внимание, что сведения о версии под окном состояния указывает, что рабочий процесс — это версия **1.5.0.0** рабочего процесса. Следует отметить, что сведения о предыдущих догадках не отображаются; показано только то, оказались они больше или меньше нужного значения.
+4. Выберите один из `v1` рабочих процессов, запущенных в начале [как: Размещение нескольких версий рабочего процесса Side-by-Side](how-to-host-multiple-versions-of-a-workflow-side-by-side.md) раздела. Обратите внимание, что сведения о версии под окном состояния указывает, что рабочий процесс — это версия **1.5.0.0** рабочего процесса. Следует отметить, что сведения о предыдущих догадках не отображаются; показано только то, оказались они больше или меньше нужного значения.
 
     **Введите число от 1 до 10**\
     **Функция слишком мал.**

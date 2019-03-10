@@ -1,5 +1,5 @@
 ---
-title: Как выполнить  Цикл звуков в Windows Forms
+title: Практическое руководство. Цикл звуков в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - sounds [Windows Forms], looping
 - playing sounds [Windows Forms], looping
 ms.assetid: ea95dd46-10a3-46c0-8263-4b205f00df7f
-ms.openlocfilehash: 238d269f9c3d3b2612eab70341200221c5b43d3a
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 43fcc472960cc3f2432d3872160d9ace4c617836
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56260924"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719277"
 ---
-# <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>Как выполнить  Цикл звуков в Windows Forms
+# <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>Практическое руководство. Цикл звуков в Windows Forms
 В следующем примере кода выполняется повторяющееся воспроизведение звука. Когда этот код запускается в обработчике события `stopPlayingButton_Click`, воспроизведение звука останавливается. Если звук не воспроизводится, то ничего не происходит.  
   
 ## <a name="example"></a>Пример  
- [!code-csharp[System.Media.SoundPlayer.PlayLooping#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Media.SoundPlayer.PlayLooping/CS/Form1.cs#1)]
- [!code-vb[System.Media.SoundPlayer.PlayLooping#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Media.SoundPlayer.PlayLooping/VB/Form1.vb#1)]  
+ [!code-csharp[System.Media.SoundPlayer.PlayLooping#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Media.SoundPlayer.PlayLooping/CS/Form1.cs#1)]
+ [!code-vb[System.Media.SoundPlayer.PlayLooping#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Media.SoundPlayer.PlayLooping/VB/Form1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
@@ -55,5 +55,5 @@ ms.locfileid: "56260924"
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Media.SoundPlayer.PlayLooping%2A>
-- [Практическое руководство. Воспроизведение звука в Windows Forms](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)
-- [Общие сведения о классе SoundPlayer](../../../../docs/framework/winforms/controls/soundplayer-class-overview.md)
+- [Практическое руководство. Воспроизведение звука в Windows Forms](how-to-play-a-sound-from-a-windows-form.md)
+- [Общие сведения о классе SoundPlayer](soundplayer-class-overview.md)

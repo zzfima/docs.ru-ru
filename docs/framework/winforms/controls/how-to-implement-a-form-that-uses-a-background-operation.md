@@ -1,5 +1,5 @@
 ---
-title: Как выполнить  Реализация формы, в который выполняется фоновая операция
+title: Практическое руководство. Реализация формы, в который выполняется фоновая операция
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 9f483f93-1613-4be1-a021-b4934e9c78f3
-ms.openlocfilehash: 9ace37b1c79ff2e5cd06fce08557dc6cdf2fcc11
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 9fe514cce4d4aec386f9d61cb84f3a39273c35b0
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261312"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723339"
 ---
-# <a name="how-to-implement-a-form-that-uses-a-background-operation"></a>Как выполнить  Реализация формы, в который выполняется фоновая операция
+# <a name="how-to-implement-a-form-that-uses-a-background-operation"></a>Практическое руководство. Реализация формы, в который выполняется фоновая операция
 В примере ниже программа создает форму, которая вычисляет числа Фибоначчи. Вычисление выполняется в потоке, отдельном от потока пользовательского интерфейса, поэтому в ходе вычисления пользовательский интерфейс продолжает выполняться без задержек.  
   
  В Visual Studio предусмотрена расширенная поддержка данной задачи.  
@@ -31,9 +31,9 @@ ms.locfileid: "56261312"
  Также см. в разделе [Пошаговое руководство: Реализация формы, в который выполняется фоновая операция](walkthrough-implementing-a-form-that-uses-a-background-operation.md).  
   
 ## <a name="example"></a>Пример  
- [!code-cpp[System.ComponentModel.BackgroundWorker#1](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#1)]
- [!code-csharp[System.ComponentModel.BackgroundWorker#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#1)]
- [!code-vb[System.ComponentModel.BackgroundWorker#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/VB/fibonacciform.vb#1)]  
+ [!code-cpp[System.ComponentModel.BackgroundWorker#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#1)]
+ [!code-csharp[System.ComponentModel.BackgroundWorker#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#1)]
+ [!code-vb[System.ComponentModel.BackgroundWorker#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/VB/fibonacciform.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
@@ -45,10 +45,10 @@ ms.locfileid: "56261312"
 ## <a name="robust-programming"></a>Отказоустойчивость  
   
 > [!CAUTION]
->  При использовании любой многопоточности существует потенциальная возможность возникновения серьезных ошибок. Перед реализацией любого решения, в котором используется многопоточность, ознакомьтесь с разделом [Рекомендации по работе с потоками](../../../../docs/standard/threading/managed-threading-best-practices.md).  
+>  При использовании любой многопоточности существует потенциальная возможность возникновения серьезных ошибок. Перед реализацией любого решения, в котором используется многопоточность, ознакомьтесь с разделом [Рекомендации по работе с потоками](../../../standard/threading/managed-threading-best-practices.md).  
   
 ## <a name="see-also"></a>См. также
 - <xref:System.ComponentModel.BackgroundWorker>
 - <xref:System.ComponentModel.DoWorkEventArgs>
-- [Обзор асинхронной модели, основанной на событиях](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
-- [Рекомендации по работе с потоками](../../../../docs/standard/threading/managed-threading-best-practices.md)
+- [Обзор асинхронной модели, основанной на событиях](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [Рекомендации по работе с потоками](../../../standard/threading/managed-threading-best-practices.md)

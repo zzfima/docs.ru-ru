@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Добавление кнопок в элемент управления ToolBar
+title: Практическое руководство. Добавление кнопок в элемент управления ToolBar
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: 78a58a8d-1041-4e38-9219-4096fa6a5c5c
-ms.openlocfilehash: 134cda4aa0042323e39966d60a7d51fda54cb954
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 347ca067a5ae5544351f29afe3ebcfe11d0b1e0f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711555"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713264"
 ---
-# <a name="how-to-add-buttons-to-a-toolbar-control"></a>Как выполнить Добавление кнопок в элемент управления ToolBar
+# <a name="how-to-add-buttons-to-a-toolbar-control"></a>Практическое руководство. Добавление кнопок в элемент управления ToolBar
 > [!NOTE]
 >  Элемент управления <xref:System.Windows.Forms.ToolStrip> заменяет элемент управления <xref:System.Windows.Forms.ToolBar> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.ToolBar> можно сохранить для обратной совместимости и использования в будущем.  
   
@@ -150,7 +150,7 @@ ms.locfileid: "54711555"
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.ToolBar>
-- [Практическое руководство. Определение значка для кнопки панели инструментов](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)
-- [Практическое руководство. Триггер событий меню для кнопок панели инструментов](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)
-- [Общие сведения об элементе управления ToolBar](../../../../docs/framework/winforms/controls/toolbar-control-overview-windows-forms.md)
-- [Элемент управления ToolBar](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)
+- [Практическое руководство. Определение значка для кнопки панели инструментов](how-to-define-an-icon-for-a-toolbar-button.md)
+- [Практическое руководство. Триггер событий меню для кнопок панели инструментов](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [Общие сведения об элементе управления ToolBar](toolbar-control-overview-windows-forms.md)
+- [Элемент управления ToolBar](toolbar-control-windows-forms.md)

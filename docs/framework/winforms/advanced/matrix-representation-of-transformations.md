@@ -16,21 +16,21 @@ helpviewer_keywords:
 - transformations [Windows Forms], translation
 - affine transformations
 ms.assetid: 0659fe00-9e0c-41c4-9118-016f2404c905
-ms.openlocfilehash: ec1feda5547a96a0deac6f9d2e6ba1139e3fa73f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1f98dac8b9d14cac01e109627d40fe01c37c6954
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732093"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720830"
 ---
 # <a name="matrix-representation-of-transformations"></a>Матричное представление преобразований
 Матрица m n × — это набор чисел, расположенных в строках m и n столбцах. Ниже показано несколько матрицы.  
   
- ![Преобразования](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art04.gif "AboutGdip05_art04")  
+ ![Преобразования](./media/aboutgdip05-art04.gif "AboutGdip05_art04")  
   
  Можно добавить двух матриц такого же размера, путем добавления отдельных элементов. Ниже показаны два примера сложения матриц.  
   
- ![Преобразования](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art05.gif "AboutGdip05_art05")  
+ ![Преобразования](./media/aboutgdip05-art05.gif "AboutGdip05_art05")  
   
  Матрица m n × можно будет умножено на матрицу n × p, а результатом является матрица m × p. Число столбцов в первой матрице должен быть таким же, как количество строк в матрице второй. Например матрицу 4 × 2 умножается на 2 × 3 матрицу, чтобы создать матрицу 4 × 3.  
   
@@ -48,23 +48,23 @@ ms.locfileid: "54732093"
   
  Ниже показано несколько примеров перемножения матриц.  
   
- ![Преобразования](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art06.gif "AboutGdip05_art06")  
+ ![Преобразования](./media/aboutgdip05-art06.gif "AboutGdip05_art06")  
   
  Если вы считаете, что точки на плоскости как матрицу 1 × 2, можно преобразовать эту точку путем его умножения матрицу 2 × 2. Ниже показано несколько преобразования, примененные к точке (2, 1).  
   
- ![Преобразования](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art07.gif "AboutGdip05_art07")  
+ ![Преобразования](./media/aboutgdip05-art07.gif "AboutGdip05_art07")  
   
  Все преобразования, показанные на рисунке выше, являются линейными преобразованиями. Некоторые другие преобразования, такие как трансляции, не являются линейными и не может быть выражен как умножение на матрицу размером 2 × 2. Предположим, что нужно для начала точка (2, 1), повернуть на 90 градусов, сдвинуть на 3 единицы по оси x и 4 единицы по оси y. Это можно сделать с помощью выполнения умножения и сложения матриц.  
   
- ![Преобразования](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art08.gif "AboutGdip05_art08")  
+ ![Преобразования](./media/aboutgdip05-art08.gif "AboutGdip05_art08")  
   
  Линейное преобразование (умножение на матрицу 2 × 2) и сдвиг (Добавление матрицу 1 × 2) вызывается аффинные преобразования. Для хранения всего преобразования в матрицу 3 × 3 является альтернативой аффинные преобразования в пару матриц (одна для линейной) и один для перевода. Чтобы это работало в матрице 1 × 3 с фиктивной третьей координатой должны храниться точки на плоскости. Обычно является сделать все сторонние координаты, равным 1. Например точка (2, 1) будет представлен в матрице [1 1, 2]. На следующем рисунке показан пример аффинного преобразования (поворот на 90 градусов; сдвиг на 3 единицы по оси x и 4 единицы по оси y) выраженное как умножение на матрицу 3 × 3.  
   
- ![Преобразования](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art09.gif "AboutGdip05_art09")  
+ ![Преобразования](./media/aboutgdip05-art09.gif "AboutGdip05_art09")  
   
  В предыдущем примере точка (2, 1) сопоставляется точка (2, 6). Обратите внимание, что третий столбец матрицы 3 × 3 содержит числа от 0, 0, 1. Это всегда будет в случае матрицы 3 × 3 аффинные преобразования. Важные числа — шесть столбцов 1 и 2. Часть 2 × 2 верхнего левого матрицы представляет линейную часть преобразования, а первые две записи в третьей строке представляют перевод.  
   
- ![Преобразования](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art10.gif "AboutGdip05_art10")  
+ ![Преобразования](./media/aboutgdip05-art10.gif "AboutGdip05_art10")  
   
  В [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] можно хранить аффинные преобразования в <xref:System.Drawing.Drawing2D.Matrix> объекта. Так как третий столбец матрицы, задающей аффинное преобразование всегда является (0, 0, 1), укажите только шесть чисел в первых двух столбцах при создании <xref:System.Drawing.Drawing2D.Matrix> объекта. Инструкция `Matrix myMatrix = new Matrix(0, 1, -1, 0, 3, 4)` создает матрицу, изображенную на рисунке выше.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "54732093"
   
  На следующем рисунке показан матрицы A, B, C и D.  
   
- ![Преобразования](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art12.gif "AboutGdip05_art12")  
+ ![Преобразования](./media/aboutgdip05-art12.gif "AboutGdip05_art12")  
   
  Тот факт, что матрица составного преобразования может быть создана путем перемножения матриц отдельных преобразования означает, что любая последовательность аффинных преобразований могут храниться в одном <xref:System.Drawing.Drawing2D.Matrix> объекта.  
   
@@ -96,13 +96,13 @@ ms.locfileid: "54732093"
   
  <xref:System.Drawing.Drawing2D.Matrix> Класс предоставляет несколько методов для составных преобразований: <xref:System.Drawing.Drawing2D.Matrix.Multiply%2A>, <xref:System.Drawing.Drawing2D.Matrix.Rotate%2A>, <xref:System.Drawing.Drawing2D.Matrix.RotateAt%2A>, <xref:System.Drawing.Drawing2D.Matrix.Scale%2A>, <xref:System.Drawing.Drawing2D.Matrix.Shear%2A>, и <xref:System.Drawing.Drawing2D.Matrix.Translate%2A>. В следующем примере создается матрица составного преобразования, сначала поворачивается на 30 градусов, а затем масштабируется с коэффициентом 2 по оси y и транслирует 5 единиц по оси x:  
   
- [!code-csharp[System.Drawing.CoordinateSystems#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#11)]
- [!code-vb[System.Drawing.CoordinateSystems#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#11)]  
+ [!code-csharp[System.Drawing.CoordinateSystems#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#11)]
+ [!code-vb[System.Drawing.CoordinateSystems#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#11)]  
   
  На следующем рисунке матрицы.  
   
- ![Преобразования](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art13.gif "AboutGdip05_art13")  
+ ![Преобразования](./media/aboutgdip05-art13.gif "AboutGdip05_art13")  
   
 ## <a name="see-also"></a>См. также
-- [Системы координат и преобразования](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)
-- [Использование преобразований в управляемом GDI+](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)
+- [Системы координат и преобразования](coordinate-systems-and-transformations.md)
+- [Использование преобразований в управляемом GDI+](using-transformations-in-managed-gdi.md)

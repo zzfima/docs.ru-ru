@@ -2,12 +2,12 @@
 title: Участники отслеживания
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-ms.openlocfilehash: 3165e08a02954facb7e016606e2f94662c6edfe9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 934c49aaa48ecb319d55fa997aaac4eec93b54c3
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613559"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711971"
 ---
 # <a name="tracking-participants"></a>Участники отслеживания
 Участниками отслеживания являются точки расширения, обеспечивающие разработчику рабочего процесса доступ к объектам <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> и возможность их обработки. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] включает стандартного участника отслеживания, который пишет записи отслеживания в виде средства трассировки событий для Windows (ETW). Если это не отвечает заданным требованиям, то можно создать своего собственного участника отслеживания.  
@@ -60,10 +60,10 @@ ms.locfileid: "54613559"
   
  На следующей иллюстрации показан поток данных отслеживания, проходящих через участника отслеживание ETW. Когда данные отслеживания попадают в сеанс ETW, обратиться к ним можно несколькими способами. Обращаться к этим событиям лучше всего с помощью обозревателя событий - простого инструмента Windows для просмотра журналов и данных трассировки, полученных от приложений и служб.  
   
- ![Поток отслеживания и поставщик отслеживания трассировки событий Windows](../../../docs/framework/windows-workflow-foundation/media/trackingdatathroughetwparticipant.gif "TrackingDatathroughETWParticipant")  
+ ![Поток отслеживания и поставщик отслеживания трассировки событий Windows](./media/trackingdatathroughetwparticipant.gif "TrackingDatathroughETWParticipant")  
   
 ## <a name="tracking-participant-event-data"></a>Данные события участника отслеживания  
- Участник отслеживания сериализует данные отслеживания события в сеансе ETW в формате «одно событие - одна запись отслеживания».  Событие определяется по идентификатору в диапазоне от 100 до 199. Для определения события отслеживания записей, созданных участником отслеживания, см. в разделе [отслеживание ссылок на события](../../../docs/framework/windows-workflow-foundation/tracking-events-reference.md) раздела.  
+ Участник отслеживания сериализует данные отслеживания события в сеансе ETW в формате «одно событие - одна запись отслеживания».  Событие определяется по идентификатору в диапазоне от 100 до 199. Для определения события отслеживания записей, созданных участником отслеживания, см. в разделе [отслеживание ссылок на события](tracking-events-reference.md) раздела.  
   
  Размер события ETW ограничен меньшей из двух величин: размером буфера ETW и максимальным размером полезных данных о событии ETW. Если размер события превышает любое из этих ограничений ETW, событие усекается и его содержание удаляется случайным образом. Переменные, аргументы, заметки и настраиваемые данные не удаляются выборочно. В случае усечения все они усекаются независимо от значения, из-за которого размер события превысил предела ETW.  Удаленные данные заменяются `<item>..<item>`.  
   
@@ -114,7 +114,8 @@ class ConsoleTrackingParticipant : TrackingParticipant
 myInstance.Extensions.Add(new ConsoleTrackingParticipant());  
 ```  
   
- В следующем примере создается рабочий процесс, состоящий из действия <xref:System.Activities.Statements.Sequence>, включающего действие <xref:System.Activities.Statements.WriteLine>. `ConsoleTrackingParticipant` добавляется к расширениям, и вызывается рабочий процесс.  
+ В следующем примере создается рабочий процесс, состоящий из действия <xref:System.Activities.Statements.Sequence>, включающего действие <xref:System.Activities.Statements.WriteLine>. 
+  `ConsoleTrackingParticipant` добавляется к расширениям, и вызывается рабочий процесс.  
   
 ```csharp  
 Activity activity= new Sequence()  

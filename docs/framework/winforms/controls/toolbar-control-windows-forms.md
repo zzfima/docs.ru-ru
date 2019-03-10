@@ -5,12 +5,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - ToolBar control [Windows Forms]
 ms.assetid: 6b40e9ce-6a7a-4784-bfc9-7f1d36b7462e
-ms.openlocfilehash: 8162dfc898f7965d65de918d2a5b1f7afbfdf9b2
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 3f0a1b6a7f83753ccae1a129528ed320a2613122
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863287"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723050"
 ---
 # <a name="toolbar-control-windows-forms"></a>Элемент управления ToolBar (Windows Forms)
 > [!NOTE]
@@ -22,27 +22,27 @@ ms.locfileid: "43863287"
 >  Свойство <xref:System.Windows.Forms.ToolBarButton.DropDownMenu%2A> элемента управления `ToolBar` принимает в качестве ссылки экземпляр класса <xref:System.Windows.Forms.ContextMenu>. При использовании подобных кнопок на панели инструментов приложения будьте внимательны в выборе передаваемой ссылки, так как это свойство принимает любой объект, наследуемый от класса <xref:System.Windows.Forms.Menu>.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Общие сведения об элементе управления ToolBar](../../../../docs/framework/winforms/controls/toolbar-control-overview-windows-forms.md)  
+ [Общие сведения об элементе управления ToolBar](toolbar-control-overview-windows-forms.md)  
  Общие понятия, связанные с элементом управления `ToolBar`, который позволяет разрабатывать пользовательские панели инструментов.  
   
- [Практическое руководство. Добавление кнопок в элемент управления ToolBar](../../../../docs/framework/winforms/controls/how-to-add-buttons-to-a-toolbar-control.md)  
+ [Практическое руководство. Добавление кнопок в элемент управления ToolBar](how-to-add-buttons-to-a-toolbar-control.md)  
  Описываются способы добавления кнопок в элемент управления `ToolBar`.  
   
- [Практическое руководство. Определение значка для кнопки элемента управления ToolBar](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)  
+ [Практическое руководство. Определение значка для кнопки панели инструментов](how-to-define-an-icon-for-a-toolbar-button.md)  
  Описываются способы отображения значков на кнопках элемента управления `ToolBar`.  
   
- [Практическое руководство. Активация событий меню для кнопок элемента управления ToolBar](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)  
+ [Практическое руководство. Триггер событий меню для кнопок панели инструментов](how-to-trigger-menu-events-for-toolbar-buttons.md)  
  Инструкции по написанию кода для определения нажатой пользователем кнопки элемента управления `ToolBar`.  
   
- Также см. в разделе [как: определение значка для панели инструментов кнопку с помощью конструктора](how-to-define-an-icon-for-a-toolbar-button-using-the-designer.md), [как: Добавление кнопок в панели инструментов элемента управления с помощью конструктора](how-to-add-buttons-to-a-toolbar-control-using-the-designer.md).  
+ Также см. раздел [Как Определение значка для кнопки панели инструментов, с помощью конструктора](how-to-define-an-icon-for-a-toolbar-button-using-the-designer.md), [как: Добавление кнопок в элемент управления ToolBar с помощью конструктора](how-to-add-buttons-to-a-toolbar-control-using-the-designer.md).  
   
 ## <a name="reference"></a>Ссылка  
  Класс <xref:System.Windows.Forms.ToolBar>  
  Справочная информация о классе и его членах.  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Элементы управления для использования в Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)  
  Полный список элементов управления Windows Forms со ссылками на информацию об их применении.  
   
- [Элемент управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)  
+ [Элемент управления ToolStrip](toolstrip-control-windows-forms.md)  
  Описываются панели инструментов, на которых можно разместить меню, элементы управления и пользовательские элементы управления в приложениях Windows Forms.

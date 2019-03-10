@@ -1,19 +1,19 @@
 ---
-title: Как выполнить Привязка элемента управления Windows Forms к типу с помощью конструктора
+title: Практическое руководство. Привязка элемента управления Windows Forms к типу с помощью конструктора
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], binding to a type
 - BindingSource component [Windows Forms], binding to a type
 - types [Windows Forms], binding controls to
 ms.assetid: 5ab984b5-c2d0-4638-a572-1c84013e8746
-ms.openlocfilehash: 6c307c913fc8deb62bc18ca2c01bb8621d9b0642
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29a28052b149f565e47a2e0366ed6845b83234ba
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496443"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712101"
 ---
-# <a name="how-to-bind-a-windows-forms-control-to-a-type-using-the-designer"></a>Как выполнить Привязка элемента управления Windows Forms к типу с помощью конструктора
+# <a name="how-to-bind-a-windows-forms-control-to-a-type-using-the-designer"></a>Практическое руководство. Привязка элемента управления Windows Forms к типу с помощью конструктора
 При создании элементов управления, взаимодействующих с данными, иногда бывает нужно привязать элемент управления к типу, а не к объекту. Обычно подобная ситуация возникает на этапе разработки, когда данные недоступны, однако нужно, чтобы элементы управления с привязкой к данным отображали данные из открытого интерфейса типа. Ниже описано, как создать новый <xref:System.Windows.Forms.BindingSource> то есть связанного с типом, а затем привязать одно из свойств типа к <xref:System.Windows.Forms.TextBox.Text%2A> свойство <xref:System.Windows.Forms.TextBox>.  
   
 ### <a name="to-bind-the-bindingsource-to-a-type"></a>Привязка BindingSource к типу  
@@ -52,6 +52,6 @@ ms.locfileid: "54496443"
 4.  В **редактора типов пользовательского интерфейса DataSource**, разверните узел для <xref:System.Windows.Forms.BindingSource> добавленной ранее и выберите свойство типа, необходимо выполнить привязку к <xref:System.Windows.Forms.TextBox.Text%2A> свойство <xref:System.Windows.Forms.TextBox>.  
   
 ## <a name="see-also"></a>См. также
-- [Компонент BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component.md)
-- [Практическое руководство. Привязка элемента управления Windows Forms к типу](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)
+- [Компонент BindingSource](bindingsource-component.md)
+- [Практическое руководство. Привязка элемента управления Windows Forms к типу](how-to-bind-a-windows-forms-control-to-a-type.md)
 - [Привязка элементов управления к данным в Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

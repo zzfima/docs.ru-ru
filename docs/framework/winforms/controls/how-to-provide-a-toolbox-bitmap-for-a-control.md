@@ -9,12 +9,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], Toolbox bitmaps
 - bitmaps [Windows Forms], custom controls
 ms.assetid: 0ed0840a-616d-41ba-a27d-3573241932ad
-ms.openlocfilehash: aa32850b9bcd1a15a93bd6c80b2278278d12c417
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 9072f96bd6e3485e759ed72819229b3f0c33d641
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43746549"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715962"
 ---
 # <a name="how-to-provide-a-toolbox-bitmap-for-a-control"></a>Практическое руководство. Предоставление точечного рисунка панели элементов для элемента управления
 Если вы хотите иметь специальный значок для элемента управления отображаются в **элементов**, можно указать образ с помощью <xref:System.Drawing.ToolboxBitmapAttribute>. Он представляет собой *атрибут* — особый вид классов, который можно прикреплять к другим классам. Дополнительные сведения об атрибутах см. в разделе [Обзор атрибутов (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/index.md) для Visual Basic или [атрибуты (C#)](../../../csharp/programming-guide/concepts/attributes/index.md) для C#.  
@@ -61,12 +61,12 @@ ms.locfileid: "43746549"
 2.  Перестройте проект.  
   
     > [!NOTE]
-    >  Для автоматически созданных элементов управления и компонентов растровое изображение на панели элементов не отображается. Чтобы увидеть растровое изображение, перезагрузите элемент управления с помощью диалогового окна **Выбор элементов панели элементов**. Дополнительные сведения см. в разделе [Пошаговое руководство. Автоматическое заполнение панели элементов пользовательскими компонентами](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md).  
+    >  Для автоматически созданных элементов управления и компонентов растровое изображение на панели элементов не отображается. Чтобы увидеть растровое изображение, перезагрузите элемент управления с помощью диалогового окна **Выбор элементов панели элементов**. Дополнительные сведения см. в разделе [Пошаговое руководство: Автоматическое заполнение панели элементов пользовательскими компонентами](walkthrough-automatically-populating-the-toolbox-with-custom-components.md).  
   
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Drawing.ToolboxBitmapAttribute>
-- [Пошаговое руководство. Автоматическое заполнение панели элементов пользовательскими компонентами](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
+- [Пошаговое руководство: Автоматическое заполнение панели элементов пользовательскими компонентами](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
 - [Создание элементов управления Windows Forms во время разработки](developing-windows-forms-controls-at-design-time.md)
 - [Общие сведения об атрибутах (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/index.md)
 - [Атрибуты (C#)](../../../csharp/programming-guide/concepts/attributes/index.md)

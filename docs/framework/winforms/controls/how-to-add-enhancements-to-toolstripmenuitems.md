@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Практическое
+title: Практическое руководство. Практическое
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -24,14 +24,14 @@ helpviewer_keywords:
 - images [Windows Forms], adding to menus
 - ToolStripMenuItems [Windows Forms], showing separator bars
 ms.assetid: aa5f19bb-b545-4378-bfa6-36ba592f0d7c
-ms.openlocfilehash: 621b96805543abb92bc73f734f1a090d9cdb7319
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68a926eba184d12d58e537d8db0a5baefb0fbe95
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685093"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719329"
 ---
-# <a name="how-to-add-enhancements-to-toolstripmenuitems"></a>Как выполнить Практическое
+# <a name="how-to-add-enhancements-to-toolstripmenuitems"></a>Практическое руководство. Практическое
 Можно повысить удобство использования <xref:System.Windows.Forms.MenuStrip> и <xref:System.Windows.Forms.ContextMenuStrip> элементы управления одним из следующих способов:  
   
 -   Добавьте галочки для обозначения включено или отключить, например, следует ли отображать линейки вдоль поля текстового редактора, или для указания файла в список файлов, отображаемых, например на **окно** меню.  
@@ -116,4 +116,4 @@ ms.locfileid: "54685093"
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
-- [Общие сведения об элементе управления MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
+- [Общие сведения об элементе управления MenuStrip](menustrip-control-overview-windows-forms.md)

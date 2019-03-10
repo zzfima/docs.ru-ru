@@ -5,12 +5,12 @@ helpviewer_keywords:
 - application settings [Windows Forms], design time
 - application settings [Windows Forms], changing
 ms.assetid: 5da91272-ad7e-49e7-9d1f-eb64439a1e4d
-ms.openlocfilehash: f40b6b6e38785b1e8dcc9061f8cf0b459f4ed8b5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f9a7f5aefc07bb9700e0b0b59684e5882d7109b2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965284"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722702"
 ---
 # <a name="how-to-change-the-value-of-an-existing-setting-at-design-time"></a>Как выполнить: Изменить значение существующего параметра во время разработки
 Visual Studio можно использовать для изменения значений существующих параметров в проекте.  
@@ -32,6 +32,6 @@ Visual Studio можно использовать для изменения зн
 3.  В конструкторе параметров найти нужный параметр, для которого требуется изменить значение и введите новое значение в столбце.  
   
 ## <a name="see-also"></a>См. также
-- [Использование параметров приложения и параметров пользователя](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)
-- [Практическое руководство. Создание новых параметров во время разработки](../../../../docs/framework/winforms/advanced/how-to-create-a-new-setting-at-design-time.md)
-- [Общие сведения о параметрах приложений](../../../../docs/framework/winforms/advanced/application-settings-overview.md)
+- [Использование параметров приложения и параметров пользователя](using-application-settings-and-user-settings.md)
+- [Практическое руководство. Создание новых параметров во время разработки](how-to-create-a-new-setting-at-design-time.md)
+- [Общие сведения о параметрах приложений](application-settings-overview.md)

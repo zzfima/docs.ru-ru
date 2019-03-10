@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Создание дочерних MDI-форм
+title: Практическое руководство. Создание дочерних MDI-форм
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating forms
 - child forms
 ms.assetid: 164b69bb-2eca-4339-ada3-0679eb2c6dda
-ms.openlocfilehash: 6ff5873fc2e0a321ad682805457be87c609972fe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 02e19470aaac76e7bcab5a324138bb50dedb212f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708471"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720203"
 ---
-# <a name="how-to-create-mdi-child-forms"></a>Как выполнить Создание дочерних MDI-форм
-Дочерние формы MDI являются важным элементом [приложений многодокументного интерфейса (MDI)](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md), как эти находятся в центре взаимодействия с пользователем.  
+# <a name="how-to-create-mdi-child-forms"></a>Практическое руководство. Создание дочерних MDI-форм
+Дочерние формы MDI являются важным элементом [приложений многодокументного интерфейса (MDI)](multiple-document-interface-mdi-applications.md), как эти находятся в центре взаимодействия с пользователем.  
   
  С помощью описанной ниже процедуры создаются дочерние формы MDI, отображающие элемент управления <xref:System.Windows.Forms.RichTextBox> аналогично большинству текстовых приложений. Замена элемента управления <xref:System.Windows.Forms> на другие элементы управления, такие как <xref:System.Windows.Forms.DataGridView>, или на сочетание элементов управления позволяет создавать дочерние окна MDI (а также приложения MDI) с различными возможностями.  
   
@@ -107,8 +107,8 @@ ms.locfileid: "54708471"
     >  Когда в дочерней форме MDI есть компонент <xref:System.Windows.Forms.MainMenu> (обычно обладающий структурой пунктов меню) и он открыт внутри родительской формы MDI, также имеющей компонент <xref:System.Windows.Forms.MainMenu> (обычно обладающий структурой пунктов меню), пункты меню будут объединены автоматически, если задано свойство <xref:System.Windows.Forms.MenuItem.MergeType%2A> (и, возможно, свойство <xref:System.Windows.Forms.MenuItem.MergeOrder%2A>). Установите для свойства <xref:System.Windows.Forms.MenuItem.MergeType%2A> обоих компонентов <xref:System.Windows.Forms.MainMenu> и всех пунктов меню дочерней формы значение <xref:System.Windows.Forms.MenuMerge.MergeItems>. Кроме того, установите свойство <xref:System.Windows.Forms.MenuItem.MergeOrder%2A> таким образом, чтобы пункты обоих меню приводились в нужном порядке. Необходимо помнить, что при закрытии родительской формы MDI каждая из дочерних форм MDI создает событие <xref:System.Windows.Forms.Form.Closing> до создания события <xref:System.Windows.Forms.Form.Closing> для родительской формы MDI. Отмена события <xref:System.Windows.Forms.Form.Closing> дочерней формы MDI не отменяет событие <xref:System.Windows.Forms.Form.Closing> родительской формы MDI. Однако для аргумента <xref:System.ComponentModel.CancelEventArgs> для события <xref:System.Windows.Forms.Form.Closing> родительской формы MDI будет установлено значение `true`. Чтобы принудительно закрыть родительскую и все дочерние формы MDI, задайте для аргумента <xref:System.ComponentModel.CancelEventArgs> значение `false`.  
   
 ## <a name="see-also"></a>См. также
-- [Приложения с интерфейсом MDI](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)
-- [Практическое руководство. Создание родительских MDI-форм](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)
-- [Практическое руководство. Определить активную дочернюю форму MDI](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)
-- [Практическое руководство. Отправки данных в активную дочернюю форму MDI](../../../../docs/framework/winforms/advanced/how-to-send-data-to-the-active-mdi-child.md)
-- [Практическое руководство. Упорядочение дочерних форм MDI](../../../../docs/framework/winforms/advanced/how-to-arrange-mdi-child-forms.md)
+- [Приложения с интерфейсом MDI](multiple-document-interface-mdi-applications.md)
+- [Практическое руководство. Создание родительских MDI-форм](how-to-create-mdi-parent-forms.md)
+- [Практическое руководство. Определить активную дочернюю форму MDI](how-to-determine-the-active-mdi-child.md)
+- [Практическое руководство. Отправки данных в активную дочернюю форму MDI](how-to-send-data-to-the-active-mdi-child.md)
+- [Практическое руководство. Упорядочение дочерних форм MDI](how-to-arrange-mdi-child-forms.md)

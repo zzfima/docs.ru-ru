@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Меняем цвет фона панели формы Windows Forms
+title: Практическое руководство. Меняем цвет фона панели формы Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Panel control [Windows Forms], background
 - colors [Windows Forms], Windows Forms Panel controls
 ms.assetid: 096cbd8d-45cc-47b8-b1ef-a27f60ea8be0
-ms.openlocfilehash: 1c4eadaadf561e127ac2eaa87f62aea4e1dc7ea4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0cf7666e6d969b3d02d13e86eb45904307d3ce3
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636083"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722689"
 ---
-# <a name="how-to-set-the-background-of-a-windows-forms-panel"></a>Как выполнить Меняем цвет фона панели формы Windows Forms
+# <a name="how-to-set-the-background-of-a-windows-forms-panel"></a>Практическое руководство. Меняем цвет фона панели формы Windows Forms
 Windows Forms <xref:System.Windows.Forms.Panel> может отображать элемент управления цветом фона и фоновое изображение. <xref:System.Windows.Forms.Control.BackColor%2A> Свойство задает цвет фона для вложенные элементы управления, такие как метки и переключатели. Если <xref:System.Windows.Forms.Control.BackgroundImage%2A> свойство не задано, <xref:System.Windows.Forms.Control.BackColor%2A> выбора заполнит всей панели. Если <xref:System.Windows.Forms.Control.BackgroundImage%2A> свойству, осуществляющая отображается изображение.  
   
 ### <a name="to-set-the-background-programmatically"></a>Для установки фона программным способом  
@@ -70,5 +70,5 @@ Windows Forms <xref:System.Windows.Forms.Panel> может отображать 
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.Control.BackColor%2A>
 - <xref:System.Windows.Forms.Control.BackgroundImage%2A>
-- [Элемент управления Panel](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)
-- [Общие сведения об элементе управления Panel](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)
+- [Элемент управления Panel](panel-control-windows-forms.md)
+- [Общие сведения об элементе управления Panel](panel-control-overview-windows-forms.md)

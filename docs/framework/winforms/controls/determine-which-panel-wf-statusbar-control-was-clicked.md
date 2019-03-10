@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Определить, какая из панелей в элемент управления Windows Forms StatusBar была нажата
+title: Практическое руководство. Определить, какая из панелей в элемент управления Windows Forms StatusBar была нажата
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,18 +13,18 @@ helpviewer_keywords:
 - PanelClick event [Windows Forms], determining panel clicked
 - Panel control [Windows Forms], determining click
 ms.assetid: d14c6092-04b2-4a07-8ddf-0dd11277ff5f
-ms.openlocfilehash: 2907b6344cd4fcc7c7d84c110dbc638cdc86f23c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: adc54ace6ea7511f1f92945b9e0c8f44b5d8f4fe
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708328"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712725"
 ---
-# <a name="how-to-determine-which-panel-in-the-windows-forms-statusbar-control-was-clicked"></a>Как выполнить Определить, какая из панелей в элемент управления Windows Forms StatusBar была нажата
+# <a name="how-to-determine-which-panel-in-the-windows-forms-statusbar-control-was-clicked"></a>Практическое руководство. Определить, какая из панелей в элемент управления Windows Forms StatusBar была нажата
 > [!IMPORTANT]
 >  <xref:System.Windows.Forms.StatusStrip> И <xref:System.Windows.Forms.ToolStripStatusLabel> элементы управления заменяют и расширяют функциональные возможности для <xref:System.Windows.Forms.StatusBar> и <xref:System.Windows.Forms.StatusBarPanel> управляет; Однако <xref:System.Windows.Forms.StatusBar> и <xref:System.Windows.Forms.StatusBarPanel> элементы управления сохраняются для обеспечения обратной совместимости и использования в будущем, если вы Выберите этот параметр.  
   
- Для программы [элемента управления StatusBar](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md) элемента управления, чтобы отвечать на щелчок пользователя, используйте инструкции case в <xref:System.Windows.Forms.StatusBar.PanelClick> событий. Событие содержит аргумент (аргумент панели), который содержит ссылку на нажатый элемент <xref:System.Windows.Forms.StatusBarPanel>. Используя эту ссылку, можно определить индекс выбранной панели и программировать соответствующим образом.  
+ Для программы [элемента управления StatusBar](statusbar-control-windows-forms.md) элемента управления, чтобы отвечать на щелчок пользователя, используйте инструкции case в <xref:System.Windows.Forms.StatusBar.PanelClick> событий. Событие содержит аргумент (аргумент панели), который содержит ссылку на нажатый элемент <xref:System.Windows.Forms.StatusBarPanel>. Используя эту ссылку, можно определить индекс выбранной панели и программировать соответствующим образом.  
   
 > [!NOTE]
 >  Убедитесь, что <xref:System.Windows.Forms.StatusBar> элемента управления <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> свойству `true`.  
@@ -96,6 +96,6 @@ ms.locfileid: "54708328"
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [Практическое руководство. Задать размер панели строки состояния](../../../../docs/framework/winforms/controls/how-to-set-the-size-of-status-bar-panels.md)
-- [Пошаговое руководство: Обновление строки состояния во время выполнения](../../../../docs/framework/winforms/controls/walkthrough-updating-status-bar-information-at-run-time.md)
-- [Общие сведения об элементе управления StatusBar](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)
+- [Практическое руководство. Задать размер панели строки состояния](how-to-set-the-size-of-status-bar-panels.md)
+- [Пошаговое руководство: Обновление строки состояния во время выполнения](walkthrough-updating-status-bar-information-at-run-time.md)
+- [Общие сведения об элементе управления StatusBar](statusbar-control-overview-windows-forms.md)

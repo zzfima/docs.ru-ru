@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Выберите папки с помощью компонента FolderBrowserDialog в Windows Forms
+title: Практическое руководство. Выберите папки с помощью компонента FolderBrowserDialog в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - folders [Windows Forms], choosing
 - directories [Windows Forms], selecting
 ms.assetid: 4593670e-7c7d-4661-b46b-4ffb63258adb
-ms.openlocfilehash: 7055875f25aa0f39feb2d944f4b6684c6ae5d9a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea5fdc9708d8e896eb66fa42f64cac672baff08b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614697"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724561"
 ---
-# <a name="how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component"></a>Как выполнить Выберите папки с помощью компонента FolderBrowserDialog в Windows Forms
+# <a name="how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component"></a>Практическое руководство. Выберите папки с помощью компонента FolderBrowserDialog в Windows Forms
 Часто в создаваемых приложениях Windows требуется предлагать пользователю выбрать папку, как правило, для сохранения набора файлов. Windows Forms <xref:System.Windows.Forms.FolderBrowserDialog> компонент позволяет легко решать эту задачу.  
   
 ### <a name="to-choose-folders-with-the-folderbrowserdialog-component"></a>Выбор папки с помощью компонента FolderBrowserDialog  
@@ -62,11 +62,11 @@ ms.locfileid: "54614697"
     ```  
   
     > [!IMPORTANT]
-    >  Чтобы использовать этот класс, сборке требуется уровень привилегий, предоставленных <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A> свойство, которое входит в состав из <xref:System.Security.Permissions.FileIOPermissionAccess> перечисления. При выполнении в контексте частичного доверия процесс может выдавать исключение из-за недостаточных привилегий. Дополнительные сведения см. в разделе [Основы управления доступом для кода](../../../../docs/framework/misc/code-access-security-basics.md).  
+    >  Чтобы использовать этот класс, сборке требуется уровень привилегий, предоставленных <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A> свойство, которое входит в состав из <xref:System.Security.Permissions.FileIOPermissionAccess> перечисления. При выполнении в контексте частичного доверия процесс может выдавать исключение из-за недостаточных привилегий. Дополнительные сведения см. в разделе [Основы управления доступом для кода](../../misc/code-access-security-basics.md).  
   
- Сведения о том, как сохранить файлы, см. в разделе [как: Сохранение файлов с помощью компонента SaveFileDialog](../../../../docs/framework/winforms/controls/how-to-save-files-using-the-savefiledialog-component.md).  
+ Сведения о том, как сохранить файлы, см. в разделе [как: Сохранение файлов с помощью компонента SaveFileDialog](how-to-save-files-using-the-savefiledialog-component.md).  
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.FolderBrowserDialog>
-- [Общие сведения о компоненте FolderBrowserDialog (Windows Forms)](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-overview-windows-forms.md)
-- [Компонент FolderBrowserDialog](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-windows-forms.md)
+- [Общие сведения о компоненте FolderBrowserDialog (Windows Forms)](folderbrowserdialog-component-overview-windows-forms.md)
+- [Компонент FolderBrowserDialog](folderbrowserdialog-component-windows-forms.md)

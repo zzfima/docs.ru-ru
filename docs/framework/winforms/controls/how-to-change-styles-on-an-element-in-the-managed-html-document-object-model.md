@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - managed HTML DOM [Windows Forms], changing styles on elements
 ms.assetid: 154e8d9f-3e2d-4e8b-a6f3-c85a070e9cc1
-ms.openlocfilehash: ad91f7591e2fa07605fe4f7ac026b7c969ab7ef0
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: a1abfaeab735746edbf089d576dc6f56dc4a6eea
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678942"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712777"
 ---
 # <a name="how-to-change-styles-on-an-element-in-the-managed-html-document-object-model"></a>Практическое руководство. Изменение стилей элемента в объектной модели управляемого HTML-документ
 
@@ -63,20 +63,19 @@ ms.locfileid: "57678942"
 6. Добавьте следующий код в файл кода проекта.
 
     > [!IMPORTANT]
-    > Убедитесь, что `webBrowser1_DocumentCompleted` обработчик событий работает в режиме прослушивателя для <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> событий. В Visual Studio, дважды щелкните <xref:System.Windows.Forms.WebBrowser> управления; в текстовом редакторе, настройте прослушиватель программными средствами.
-
-    [!code-csharp[ManagedDOMStyles#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/Form1.cs#2)]
-    [!code-vb[ManagedDOMStyles#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/Form1.vb#2)]
-
-7. Запустите проект. Наведите курсор на первый `DIV` Обратите внимание на действия кода.
-
-## <a name="example"></a>Пример
-
-В следующем примере кода показан полный код для `StyleGenerator` класс, который выполняет синтаксический анализ значение существующего стиля, поддерживает добавление, изменение и удаление стилей и возвращает новое значение стиля с требуемыми изменениями.
-
-[!code-csharp[ManagedDOMStyles#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/StyleGenerator.cs#1)]
-[!code-vb[ManagedDOMStyles#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/StyleGenerator.vb#1)]
-
+    >  Убедитесь, что `webBrowser1_DocumentCompleted` обработчик событий работает в режиме прослушивателя для <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> событий. В Visual Studio, дважды щелкните <xref:System.Windows.Forms.WebBrowser> управления; в текстовом редакторе, настройте прослушиватель программными средствами.  
+  
+     [!code-csharp[ManagedDOMStyles#2](~/samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/Form1.cs#2)]
+     [!code-vb[ManagedDOMStyles#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/Form1.vb#2)]  
+  
+7.  Запустите проект. Наведите курсор на первый `DIV` Обратите внимание на действия кода.  
+  
+## <a name="example"></a>Пример  
+ В следующем примере кода показан полный код для `StyleGenerator` класс, который выполняет синтаксический анализ значение существующего стиля, поддерживает добавление, изменение и удаление стилей и возвращает новое значение стиля с требуемыми изменениями.  
+  
+ [!code-csharp[ManagedDOMStyles#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/StyleGenerator.cs#1)]
+ [!code-vb[ManagedDOMStyles#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/StyleGenerator.vb#1)]  
+  
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Windows.Forms.HtmlElement>

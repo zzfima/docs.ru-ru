@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Добавление загрузки, сохранения и кнопки "Отмена" для Windows Forms элемента управления BindingNavigator
+title: Практическое руководство. Добавление загрузки, сохранения и кнопки "Отмена" для Windows Forms элемента управления BindingNavigator
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - controls [Windows Forms], manipulating
 - BindingNavigator control [Windows Forms], adding buttons
 ms.assetid: faa33042-186e-4bb2-8798-17ceb987ec62
-ms.openlocfilehash: dc91a4a91d26cd51a06b1c08dcb76f8966c52594
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d86ded0b93d876eac4b97938678cafbb22c3ac8a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671113"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722442"
 ---
-# <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>Как выполнить Добавление загрузки, сохранения и кнопки "Отмена" для Windows Forms элемента управления BindingNavigator
+# <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>Практическое руководство. Добавление загрузки, сохранения и кнопки "Отмена" для Windows Forms элемента управления BindingNavigator
 <xref:System.Windows.Forms.BindingNavigator> Элемент управления является специализированным <xref:System.Windows.Forms.ToolStrip> элемент управления, который предназначен для навигации и управление элементами управления в форме, привязанных к данным.  
   
  Так как это <xref:System.Windows.Forms.ToolStrip> управления <xref:System.Windows.Forms.BindingNavigator> компонента можно легко изменить для включения дополнительных или альтернативных команд для пользователя.  
@@ -34,7 +34,7 @@ ms.locfileid: "54671113"
   
 5.  Выберите элемент управления <xref:System.Windows.Forms.BindingNavigator>.  
   
-6.  Щелкните глиф смарт-тега (![глиф смарт-тега](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) поэтому **задачи BindingNavigator** диалоговое окно и выберите пункт **изменение элементов**.  
+6.  Щелкните глиф смарт-тега (![глиф смарт-тега](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) поэтому **задачи BindingNavigator** диалоговое окно и выберите пункт **изменение элементов**.  
   
      **Редактор коллекции элементов** отображается.  
   
@@ -113,5 +113,5 @@ ms.locfileid: "54671113"
 - <xref:System.Windows.Forms.BindingNavigator>
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.ToolStrip>
-- [Элемент управления BindingNavigator](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)
-- [Общие сведения о компоненте BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component-overview.md)
+- [Элемент управления BindingNavigator](bindingnavigator-control-windows-forms.md)
+- [Общие сведения о компоненте BindingSource](bindingsource-component-overview.md)

@@ -2,12 +2,12 @@
 title: Компенсация
 ms.date: 03/30/2017
 ms.assetid: 722e9766-48d7-456c-9496-d7c5c8f0fa76
-ms.openlocfilehash: e8a7140e677b553d07014d0ac5a77dd1c7488f53
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af29ba61ff5bede9208f2ab706f5e0ce1ff12274
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607609"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721315"
 ---
 # <a name="compensation"></a>Компенсация
 Компенсация в Windows Workflow Foundation (WF) — это механизм, по которому ранее выполненной работы можно отменить или компенсировать (логикой, определенной приложением) при привели к возникновению ошибки. В данном разделе описывается применение компенсации в рабочих процессах.  
@@ -16,12 +16,12 @@ ms.locfileid: "54607609"
  Транзакция позволяет объединить несколько операций в одну единицу работы. Использование транзакции дает приложению возможность прерывать (откатывать) все изменения, выполненные в транзакции, если во время выполнения какой-либо части обработки транзакции возникнет ошибка. Однако использование транзакций может быть неприемлемо, если работа является долговременной. Пусть, например, приложение планирования путешествия реализовано как рабочий процесс. Шагами рабочего процесса могут быть заказ авиабилетов, ожидание подтверждения диспетчера и, наконец, оплата билета. Этот процесс может занять несколько дней, и включение шагов заказа и оплаты авиабилетов в одну транзакцию непрактично. Если позднее в процессе произойдет ошибка, в таком сценарии можно воспользоваться компенсацией для отмены шага заказа в рабочем процессе.  
   
 > [!NOTE]
->  В этом разделе описывается компенсация в рабочих процессах. Дополнительные сведения о транзакциях в рабочих процессах см. в разделе [транзакций](../../../docs/framework/windows-workflow-foundation/workflow-transactions.md) и <xref:System.Activities.Statements.TransactionScope>. Дополнительные сведения о транзакциях см. в разделе <xref:System.Transactions?displayProperty=nameWithType> и <xref:System.Transactions.Transaction?displayProperty=nameWithType>.  
+>  В этом разделе описывается компенсация в рабочих процессах. Дополнительные сведения о транзакциях в рабочих процессах см. в разделе [транзакций](workflow-transactions.md) и <xref:System.Activities.Statements.TransactionScope>. Дополнительные сведения о транзакциях см. в разделе <xref:System.Transactions?displayProperty=nameWithType> и <xref:System.Transactions.Transaction?displayProperty=nameWithType>.  
   
 ## <a name="using-compensableactivity"></a>Использование действия CompensableActivity  
  <xref:System.Activities.Statements.CompensableActivity> - это базовое действие компенсации в [!INCLUDE[wf1](../../../includes/wf1-md.md)]. Все выполняющие работу действия, для которых может понадобиться выполнить компенсацию, помещаются в элемент <xref:System.Activities.Statements.CompensableActivity.Body%2A> действия <xref:System.Activities.Statements.CompensableActivity>. В данном примере шаг бронирования при покупке авиабилета размещен в элементе <xref:System.Activities.Statements.CompensableActivity.Body%2A> действия <xref:System.Activities.Statements.CompensableActivity>, а отмена бронирования помещается в обработчик <xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A>. Сразу за действием <xref:System.Activities.Statements.CompensableActivity> в рабочем процессе идут два действия, ожидающие одобрения от диспетчера и выполняющие шаг приобретения билета. Если состояние ошибки вызывает отмену рабочего процесса после успешного завершения работы действия <xref:System.Activities.Statements.CompensableActivity>, то действия в обработчике <xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A> планируются к выполнению, а полет отменяется.  
   
- [!code-csharp[CFX_CompensationExample#1](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_CompensationExample/cs/Program.cs#1)]  
+ [!code-csharp[CFX_CompensationExample#1](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_CompensationExample/cs/Program.cs#1)]  
   
  Далее показан пример рабочего процесса в XAML.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "54607609"
   
  В данном примере исключение выдается после бронирования авиабилета, но до шага подтверждения диспетчера.  
   
- [!code-csharp[CFX_CompensationExample#2](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_CompensationExample/cs/Program.cs#2)]  
+ [!code-csharp[CFX_CompensationExample#2](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_CompensationExample/cs/Program.cs#2)]  
   
  Этот пример является рабочим процессом в XAML.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "54607609"
 </Sequence>  
 ```  
   
- [!code-csharp[CFX_CompensationExample#100](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_CompensationExample/cs/Program.cs#100)]  
+ [!code-csharp[CFX_CompensationExample#100](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_CompensationExample/cs/Program.cs#100)]  
   
  Если вызывается рабочий процесс, исключение смоделированного условия ошибки обрабатывается ведущим приложением в <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>, рабочий процесс отменяется, и вызывается логика компенсации.  
   
@@ -166,12 +166,12 @@ Activity wf = new Sequence()
 **Необработанное исключение рабочего процесса:**   
 **System.ApplicationException: Смоделированное состояние ошибки в рабочем процессе.**   
 **CancelCreditCard: Отмените кредитной карте.**   
-**Рабочий процесс успешно выполнен с состоянием: Отменено.**  Дополнительные сведения об отмене см. в разделе [отмены](../../../docs/framework/windows-workflow-foundation/modeling-cancellation-behavior-in-workflows.md).  
+**Рабочий процесс успешно выполнен с состоянием: Отменено.**  Дополнительные сведения об отмене см. в разделе [отмены](modeling-cancellation-behavior-in-workflows.md).  
   
 ### <a name="explicit-compensation-using-the-compensate-activity"></a>Явная компенсация с использованием действия компенсации  
  В предыдущем разделе была описана неявная компенсация. Неявная компенсация может использоваться в простых сценариях, но если требуется более явный контроль над планированием обработки компенсации, можно использовать действие <xref:System.Activities.Statements.Compensate>. Для инициации процесса компенсации с применением действия <xref:System.Activities.Statements.Compensate> используется маркер <xref:System.Activities.Statements.CompensationToken> действия <xref:System.Activities.Statements.CompensableActivity>, для которого необходимо провести компенсацию. Действие <xref:System.Activities.Statements.Compensate> может использоваться для запуска компенсации для любого выполненного действия <xref:System.Activities.Statements.CompensableActivity>, которое не было подтверждено или компенсировано. Например, действие <xref:System.Activities.Statements.Compensate> может использоваться в разделе <xref:System.Activities.Statements.TryCatch.Catches%2A> действия <xref:System.Activities.Statements.TryCatch> или в любой момент после завершения действия <xref:System.Activities.Statements.CompensableActivity>. В данном примере действие <xref:System.Activities.Statements.Compensate> используется в разделе <xref:System.Activities.Statements.TryCatch.Catches%2A> действия <xref:System.Activities.Statements.TryCatch> для обращения действия <xref:System.Activities.Statements.CompensableActivity>.  
   
- [!code-csharp[CFX_CompensationExample#3](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_CompensationExample/cs/Program.cs#3)]  
+ [!code-csharp[CFX_CompensationExample#3](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_CompensationExample/cs/Program.cs#3)]  
   
  Этот пример является рабочим процессом в XAML.  
   
@@ -251,7 +251,7 @@ Activity wf = new Sequence()
 ### <a name="confirming-compensation"></a>Подтверждение компенсации  
  По умолчанию подлежащие компенсации действия могут быть компенсированы в любой момент после их завершения. Но в некоторых ситуациях это может быть невозможно. В предыдущем примере компенсацией для бронирования авиабилета служит отмена бронирования. Однако после выполнения перелета такой шаг компенсации уже недопустим. Подтверждение подлежащего компенсации действия вызывает действие, заданное обработчиком <xref:System.Activities.Statements.CompensableActivity.ConfirmationHandler%2A>. Это может использоваться, например, для освобождения любых ресурсов, которые требуются при выполнении компенсации. После подтверждения действия, которое могло быть компенсировано, его компенсация становится невозможной, и при попытке такой компенсации возникнет исключение <xref:System.InvalidOperationException>. Если рабочий процесс завершается успешно, все неподтвержденные и некомпенсированные действия, завершенные успешно, подтверждаются в порядке, обратном порядку их завершения. В данном примере авиабилет бронируется, приобретается и завершается, после чего выполняется подтверждение действия, подлежащего компенсации. Для подтверждения действия <xref:System.Activities.Statements.CompensableActivity> следует использовать действие <xref:System.Activities.Statements.Confirm> и задать маркер <xref:System.Activities.Statements.CompensationToken> действия <xref:System.Activities.Statements.CompensableActivity>, подлежащего подтверждению.  
   
- [!code-csharp[CFX_CompensationExample#4](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_CompensationExample/cs/Program.cs#4)]  
+ [!code-csharp[CFX_CompensationExample#4](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_CompensationExample/cs/Program.cs#4)]  
   
  Этот пример является рабочим процессом в XAML.  
   

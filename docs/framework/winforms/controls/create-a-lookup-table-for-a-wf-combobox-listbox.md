@@ -14,12 +14,12 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], lookup tables
 - ListBox control [Windows Forms], creating lookup tables
 ms.assetid: 4ce35f12-1f4e-4317-92d1-af8686a8cfaa
-ms.openlocfilehash: 5f1a2b220c3fb5d348f8aa45fbf07140844c9adf
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: eaa92c2b95d8dd8578b46e44a948127e201bb351
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441633"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724631"
 ---
 # <a name="how-to-create-a-lookup-table-for-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Практическое руководство. Создание таблицы подстановки для Windows Forms ComboBox, ListBox или элементе управления CheckedListBox
 Иногда полезно отображать данные в удобном для пользователя формате в форме Windows Forms и при этом сохранять их в формате, требуемом в используемой программе. Например, в бланке заказа продуктов питания могут отображаться элементы меню с названиями продуктов в списке. Однако таблица данных регистрации заказа будет содержать уникальные идентификаторы, представляющие продукты питания. В таблице ниже представлен пример хранения и отображения данных бланка заказа продуктов питания.  
@@ -71,8 +71,8 @@ ms.locfileid: "56441633"
     ```  
   
 ## <a name="see-also"></a>См. также
-- [Привязка данных и Windows Forms](../../../../docs/framework/winforms/data-binding-and-windows-forms.md)
-- [Общие сведения об элементе управления ListBox](../../../../docs/framework/winforms/controls/listbox-control-overview-windows-forms.md)
-- [Общие сведения об элементе управления ComboBox](../../../../docs/framework/winforms/controls/combobox-control-overview-windows-forms.md)
-- [Общие сведения об элементе управления CheckedListBox](../../../../docs/framework/winforms/controls/checkedlistbox-control-overview-windows-forms.md)
-- [Создание списка для выбора элементов в Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+- [Привязка данных и Windows Forms](../data-binding-and-windows-forms.md)
+- [Общие сведения об элементе управления ListBox](listbox-control-overview-windows-forms.md)
+- [Общие сведения об элементе управления ComboBox](combobox-control-overview-windows-forms.md)
+- [Общие сведения об элементе управления CheckedListBox](checkedlistbox-control-overview-windows-forms.md)
+- [Создание списка для выбора элементов в Windows Forms](windows-forms-controls-used-to-list-options.md)

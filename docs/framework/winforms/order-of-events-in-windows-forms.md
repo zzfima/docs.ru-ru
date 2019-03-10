@@ -9,15 +9,15 @@ helpviewer_keywords:
 - validation events [Windows Forms], order of
 - application startup event order
 ms.assetid: e81db09b-4453-437f-b78a-62d7cd5c9829
-ms.openlocfilehash: 814c788285d974db5a8ef2bbaec1368a860c21d2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a88fd7b912063af5961a2bb366b42b0f67411f5f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643966"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720298"
 ---
 # <a name="order-of-events-in-windows-forms"></a>Порядок событий в формах Windows Forms
-Особый интерес для разработчиков представляет порядок, в котором вызываются события в приложениях Windows Forms, для обеспечения обработки каждого из этих событий в свою очередь. Если ситуация требует аккуратной обработки событий, например когда производится перерисовка части формы, то необходимо знать точный порядок, в котором вызываются события во время выполнения. В этом разделе приведены некоторые сведения о порядке событий, возникающих на нескольких важных этапах жизненного цикла приложений и элементов управления. Конкретные сведения о порядке событий щелчков мыши см. в разделе [события мыши в Windows Forms](../../../docs/framework/winforms/mouse-events-in-windows-forms.md). Обзор событий в формах Windows Forms, см. в разделе [Общие сведения о событиях](../../../docs/framework/winforms/events-overview-windows-forms.md). Дополнительные сведения о создании обработчиков событий, см. в разделе [Обзор обработчиков событий](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).  
+Особый интерес для разработчиков представляет порядок, в котором вызываются события в приложениях Windows Forms, для обеспечения обработки каждого из этих событий в свою очередь. Если ситуация требует аккуратной обработки событий, например когда производится перерисовка части формы, то необходимо знать точный порядок, в котором вызываются события во время выполнения. В этом разделе приведены некоторые сведения о порядке событий, возникающих на нескольких важных этапах жизненного цикла приложений и элементов управления. Конкретные сведения о порядке событий щелчков мыши см. в разделе [события мыши в Windows Forms](mouse-events-in-windows-forms.md). Обзор событий в формах Windows Forms, см. в разделе [Общие сведения о событиях](events-overview-windows-forms.md). Дополнительные сведения о создании обработчиков событий, см. в разделе [Обзор обработчиков событий](event-handlers-overview-windows-forms.md).  
   
 ## <a name="application-startup-and-shutdown-events"></a>События запуска и завершения работы приложения  
  Классы <xref:System.Windows.Forms.Form> и <xref:System.Windows.Forms.Control> предоставляют набор событий, связанных с запуском и завершением приложения. При запуске приложения Windows Forms события запуска главной формы вызываются в следующем порядке:  
@@ -81,4 +81,4 @@ ms.locfileid: "54643966"
 -   <xref:System.Windows.Forms.Control.Validated>  
   
 ## <a name="see-also"></a>См. также
-- [Создание обработчиков событий в Windows Forms](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
+- [Создание обработчиков событий в Windows Forms](creating-event-handlers-in-windows-forms.md)

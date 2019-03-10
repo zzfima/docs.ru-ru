@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Создание линейного градиента
+title: Практическое руководство. Создание линейного градиента
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - colors [Windows Forms], creating linear gradients
 - gradients
 ms.assetid: 6c88e1cc-1217-4399-ac12-cb37592b9f01
-ms.openlocfilehash: d9ceb10eb5990742271c8d952d9293807c21677a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e47707d040cd7bf67008fab33ac482706963ce39
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696302"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725250"
 ---
-# <a name="how-to-create-a-linear-gradient"></a>Как выполнить Создание линейного градиента
+# <a name="how-to-create-a-linear-gradient"></a>Практическое руководство. Создание линейного градиента
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] поддерживает горизонтальные, вертикальные и диагональные линейные градиенты. По умолчанию цвет в линейном градиенте меняется равномерно. Тем не менее можно настроить линейный градиент, таким образом, чтобы цвет меняется образом неоднородной.  
   
  В следующем примере заполняется линии, эллипсы и прямоугольник с горизонтальной кисти линейного градиента.  
@@ -28,14 +28,14 @@ ms.locfileid: "54696302"
   
  Ниже показаны строки, эллипс и прямоугольник. Обратите внимание на то, что цвет градиента, повторяет саму себя как горизонтальная координата выйдет за пределы 200.  
   
- ![Линейный градиент](../../../../docs/framework/winforms/advanced/media/cslineargradient1.png "cslineargradient1")  
+ ![Линейный градиент](./media/cslineargradient1.png "cslineargradient1")  
   
 ### <a name="to-use-horizontal-linear-gradients"></a>Использование горизонтальных линейных градиентов  
   
 -   Передайте непрозрачный синий, красный и непрозрачный как третий и четвертый аргумент, соответственно.  
   
-     [!code-csharp[System.Drawing.UsingaGradientBrush#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#21)]
-     [!code-vb[System.Drawing.UsingaGradientBrush#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#21)]  
+     [!code-csharp[System.Drawing.UsingaGradientBrush#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#21)]
+     [!code-vb[System.Drawing.UsingaGradientBrush#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#21)]  
   
  В предыдущем примере цветовые компоненты линейно меняются при переходе из горизонтальную координату 0 горизонтальную координату 200. Например точки, в которых первая координата на равном расстоянии от 0 до 200 будет иметь синего компонента, который находится на равном расстоянии от 0 до 255.  
   
@@ -53,14 +53,14 @@ ms.locfileid: "54696302"
   
  Ниже показан окончательный вид эллипса и прямоугольника.  
   
- ![Линейный градиент](../../../../docs/framework/winforms/advanced/media/cslineargradient2.png "cslineargradient2")  
+ ![Линейный градиент](./media/cslineargradient2.png "cslineargradient2")  
   
 ### <a name="to-customize-linear-gradients"></a>Настройка линейных градиентов  
   
 -   Передайте непрозрачный черный и непрозрачный красный как третий и четвертый аргумент, соответственно.  
   
-     [!code-csharp[System.Drawing.UsingaGradientBrush#22](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#22)]
-     [!code-vb[System.Drawing.UsingaGradientBrush#22](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#22)]  
+     [!code-csharp[System.Drawing.UsingaGradientBrush#22](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#22)]
+     [!code-vb[System.Drawing.UsingaGradientBrush#22](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#22)]  
   
  Градиенты в предыдущих примерах были по горизонтали; то есть цвет постепенно изменяется при переходе по любой горизонтальной линии. Можно также определить вертикальные и диагональные градиенты.  
   
@@ -68,15 +68,15 @@ ms.locfileid: "54696302"
   
  Ниже показаны строки, а также эллипса. Обратите внимание, что цвет эллипса постепенно при переходе по любой строке, — параллельное выполнение на строку, обрабатываемым (0, 0) и (200, 100).  
   
- ![Линейный градиент](../../../../docs/framework/winforms/advanced/media/cslineargradient3.png "cslineargradient3")  
+ ![Линейный градиент](./media/cslineargradient3.png "cslineargradient3")  
   
 ### <a name="to-create-diagonal-linear-gradients"></a>Чтобы создать диагональный линейным градиентом  
   
 -   Передайте непрозрачный синий и непрозрачный зеленый как третий и четвертый аргумент, соответственно.  
   
-     [!code-csharp[System.Drawing.UsingaGradientBrush#23](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#23)]
-     [!code-vb[System.Drawing.UsingaGradientBrush#23](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#23)]  
+     [!code-csharp[System.Drawing.UsingaGradientBrush#23](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#23)]
+     [!code-vb[System.Drawing.UsingaGradientBrush#23](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#23)]  
   
 ## <a name="see-also"></a>См. также
-- [Заливка фигур с помощью градиентной кисти](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)
-- [Объекты Graphics и Drawing в Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+- [Заливка фигур с помощью градиентной кисти](using-a-gradient-brush-to-fill-shapes.md)
+- [Объекты Graphics и Drawing в Windows Forms](graphics-and-drawing-in-windows-forms.md)

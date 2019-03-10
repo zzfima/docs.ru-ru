@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MenuStrip [Windows Forms], merging
 - merging [Windows Forms], general concepts
 ms.assetid: 95e113ba-f362-4dda-8a76-6d95ddc45cee
-ms.openlocfilehash: 96168c197771cbfebf3a090ac236b21e487cb3a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 292c299bd15cd62eabd9a13db1abab1ed07fe57e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54551856"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722368"
 ---
 # <a name="merging-menu-items-in-the-windows-forms-menustrip-control"></a>Слияние элементов меню в элементе управления MenuStrip в Windows Forms
 Если у вас есть приложения многодокументного интерфейса (MDI), можно объединить пункты меню или целые меню из дочерней формы в меню родительской формы.  
@@ -56,6 +56,6 @@ ms.locfileid: "54551856"
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.ToolStripManager>
 - <xref:System.Windows.Forms.MenuStrip>
-- [Элемент управления MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)
-- [Практическое руководство. Создание списка в окне интерфейса MDI с помощью MenuStrip](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)
-- [Практическое руководство. Задайте автоматическое слияние меню приложениях MDI](../../../../docs/framework/winforms/controls/how-to-set-up-automatic-menu-merging-for-mdi-applications.md)
+- [Элемент управления MenuStrip](menustrip-control-windows-forms.md)
+- [Практическое руководство. Создание списка в окне интерфейса MDI с помощью MenuStrip](how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)
+- [Практическое руководство. Задайте автоматическое слияние меню приложениях MDI](how-to-set-up-automatic-menu-merging-for-mdi-applications.md)

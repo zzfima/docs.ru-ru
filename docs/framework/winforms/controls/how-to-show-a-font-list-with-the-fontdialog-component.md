@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Отображение списка шрифтов с помощью компонента FontDialog
+title: Практическое руководство. Отображение списка шрифтов с помощью компонента FontDialog
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Font dialog box [Windows Forms], displaying
 - fonts [Windows Forms], selecting
 ms.assetid: 35692c1b-0937-4b7a-9207-1ae6bdc244a0
-ms.openlocfilehash: 18a9a4bca42117233c4b01a4aeb6cffcb79119d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4036b6e12d8c4df2c4edfd5df293160d9197b61a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726407"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717067"
 ---
-# <a name="how-to-show-a-font-list-with-the-fontdialog-component"></a>Как выполнить Отображение списка шрифтов с помощью компонента FontDialog
-[FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md) компонент позволяет пользователям выбрать шрифт, а также менять параметры его отображения, например, вес и размер.  
+# <a name="how-to-show-a-font-list-with-the-fontdialog-component"></a>Практическое руководство. Отображение списка шрифтов с помощью компонента FontDialog
+[FontDialog](fontdialog-component-windows-forms.md) компонент позволяет пользователям выбрать шрифт, а также менять параметры его отображения, например, вес и размер.  
   
  Шрифта, выбранного в диалоговом окне возвращается в <xref:System.Windows.Forms.FontDialog.Font%2A> свойство. Таким образом используя преимущества шрифта, выбранного пользователем так же просто, как чтение свойства.  
   
@@ -78,4 +78,4 @@ ms.locfileid: "54726407"
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.FontDialog>
-- [Компонент FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md)
+- [Компонент FontDialog](fontdialog-component-windows-forms.md)

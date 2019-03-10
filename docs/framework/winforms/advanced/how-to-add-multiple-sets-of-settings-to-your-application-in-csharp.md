@@ -5,12 +5,12 @@ helpviewer_keywords:
 - application settings [Windows Forms], multiple sets
 - application settings [Windows Forms], C#
 ms.assetid: 45007ac6-cf07-4be7-bc38-3f0ef962faf9
-ms.openlocfilehash: 447d171cf9dbe2672ae138e9e902cbd72a206c94
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 43402d8a1b0b1ca26e656be1424a5fa341ac4728
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969647"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719654"
 ---
 # <a name="how-to-add-multiple-sets-of-settings-to-your-application-in-c"></a>Как выполнить: Добавление несколько наборов параметров в приложение на языке C\#
 В некоторых случаях вам может потребоваться несколько наборов параметров в приложении. К примеру Если вы разрабатываете приложения там, где ожидается определенная группа параметров изменяться чаще остальных, возможно, удобнее поместить их в один файл, чтобы его можно заменить, изменяя другие параметры. Visual Studio позволяет добавлять несколько наборов параметров в проект. Дополнительные наборы параметров может осуществляться через объект Properties.Settings.  
@@ -26,5 +26,5 @@ ms.locfileid: "56969647"
 4.  Добавить и использовать параметры в этом файле, как и любыми другими файлами параметров. Эта группа параметров с помощью объекта Properties.Settings доступны.  
   
 ## <a name="see-also"></a>См. также
-- [Использование параметров приложения и параметров пользователя](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)
-- [Общие сведения о параметрах приложений](../../../../docs/framework/winforms/advanced/application-settings-overview.md)
+- [Использование параметров приложения и параметров пользователя](using-application-settings-and-user-settings.md)
+- [Общие сведения о параметрах приложений](application-settings-overview.md)

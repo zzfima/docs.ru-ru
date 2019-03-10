@@ -9,12 +9,12 @@ helpviewer_keywords:
 - graphics [Windows Forms], clipping
 - graphics [Windows Forms], transformations in nested objects
 ms.assetid: a0d9f178-43a4-4323-bb5a-d3e3f77ae6c1
-ms.openlocfilehash: e13993f5d8ac3c543e2d3f1f10d5596a09e7617b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 639b53ada8639ed686d04b4aa2e5295ca08240b0
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622524"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714181"
 ---
 # <a name="using-nested-graphics-containers"></a>Использование вложенных графических контейнеров
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] предоставляет контейнеры, которые можно использовать для временно заменить или дополнить некоторую часть состояния в <xref:System.Drawing.Graphics> объекта. Вы создадите контейнер путем вызова <xref:System.Drawing.Graphics.BeginContainer%2A> метод <xref:System.Drawing.Graphics> объекта. Вы можете вызвать <xref:System.Drawing.Graphics.BeginContainer%2A> несколько раз для создания вложенных контейнеров. Каждый вызов <xref:System.Drawing.Graphics.BeginContainer%2A> должны быть связаны с вызовом <xref:System.Drawing.Graphics.EndContainer%2A>.  
@@ -22,22 +22,22 @@ ms.locfileid: "54622524"
 ## <a name="transformations-in-nested-containers"></a>Преобразования во вложенных контейнерах  
  В следующем примере создается <xref:System.Drawing.Graphics> объект и контейнер внутри этого <xref:System.Drawing.Graphics> объекта. Мировое преобразование объекта <xref:System.Drawing.Graphics> объект является сдвиг 100 единиц по оси x и на 80 единиц по оси y. Мировое преобразование контейнера является поворот на 30 градусов. Код выполняет вызов `DrawRectangle(pen, -60, -30, 120, 60)` дважды. Первый вызов <xref:System.Drawing.Graphics.DrawRectangle%2A> находится внутри контейнера; то есть происходит между вызовы <xref:System.Drawing.Graphics.BeginContainer%2A> и <xref:System.Drawing.Graphics.EndContainer%2A>. Второй вызов <xref:System.Drawing.Graphics.DrawRectangle%2A> — после вызова <xref:System.Drawing.Graphics.EndContainer%2A>.  
   
- [!code-csharp[System.Drawing.MiscLegacyTopics#61](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#61)]
- [!code-vb[System.Drawing.MiscLegacyTopics#61](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#61)]  
+ [!code-csharp[System.Drawing.MiscLegacyTopics#61](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#61)]
+ [!code-vb[System.Drawing.MiscLegacyTopics#61](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#61)]  
   
  В приведенном выше коде прямоугольника, отображаемые из контейнера, применяется сначала объемное преобразование контейнера (поворот), а затем по мировое преобразование объекта <xref:System.Drawing.Graphics> (сдвиг). Прямоугольник, извлеченных из вне контейнера, применяется только мировое преобразование объекта <xref:System.Drawing.Graphics> (сдвиг). На следующем рисунке двух прямоугольников.  
   
- ![Вложенные контейнеры](../../../../docs/framework/winforms/advanced/media/csnestedcontainers1.png "csnestedcontainers1")  
+ ![Вложенные контейнеры](./media/csnestedcontainers1.png "csnestedcontainers1")  
   
 ## <a name="clipping-in-nested-containers"></a>Обрезка во вложенных контейнерах  
  В следующем примере показано, как вложенные контейнеры обрабатывать отсеченных областей. Код создает <xref:System.Drawing.Graphics> объект и контейнер внутри этого <xref:System.Drawing.Graphics> объекта. Отсеченная область объекта <xref:System.Drawing.Graphics> объект представляет собой прямоугольник, а отсеченная область объекта контейнера — эллипс. Код делает два вызова <xref:System.Drawing.Graphics.DrawLine%2A> метод. Первый вызов <xref:System.Drawing.Graphics.DrawLine%2A> находится внутри контейнера, а второй вызов <xref:System.Drawing.Graphics.DrawLine%2A> выходит за пределы контейнера (после вызова <xref:System.Drawing.Graphics.EndContainer%2A>). Первая строка обрезается пересечение двух отсеченных областей. Вторая строка обрезается по прямоугольный вырезанной <xref:System.Drawing.Graphics> объекта.  
   
- [!code-csharp[System.Drawing.MiscLegacyTopics#62](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#62)]
- [!code-vb[System.Drawing.MiscLegacyTopics#62](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#62)]  
+ [!code-csharp[System.Drawing.MiscLegacyTopics#62](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#62)]
+ [!code-vb[System.Drawing.MiscLegacyTopics#62](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#62)]  
   
  Ниже показан две усеченные строки.  
   
- ![Вложенные контейнера](../../../../docs/framework/winforms/advanced/media/nestedcontainers2.png "nestedcontainers2")  
+ ![Вложенные контейнера](./media/nestedcontainers2.png "nestedcontainers2")  
   
  Как показано в двух приведенных выше примерах, преобразования и отсеченные области накапливаются в вложенные контейнеры. Если задать объемные преобразования контейнера и <xref:System.Drawing.Graphics> объекта, оба вида преобразований применяются к отображаемым внутри контейнера. Преобразование контейнера будут сначала применяется и преобразование <xref:System.Drawing.Graphics> объекта, которые будут применяться во-вторых. Если задать отсеченные области контейнера и <xref:System.Drawing.Graphics> объектов, отображаемых внутри контейнера будет обрезаться пересечение двух отсеченных областей.  
   
@@ -49,13 +49,13 @@ ms.locfileid: "54622524"
   
  В следующем примере создается <xref:System.Drawing.Graphics> и устанавливает его подсказка отрисовки текста <xref:System.Drawing.Drawing2D.SmoothingMode.AntiAlias>. Код создает два контейнеров — по одному вложен в другой. Подсказка по визуализации текста внешнего контейнера имеет значение <xref:System.Drawing.Text.TextRenderingHint.SingleBitPerPixel>, и подсказка по визуализации текста внутреннего контейнера имеет значение <xref:System.Drawing.Drawing2D.SmoothingMode.AntiAlias>. Код рисует три строки: одну из внутреннего контейнера, одну из внешнего контейнера и один из <xref:System.Drawing.Graphics> сам объект.  
   
- [!code-csharp[System.Drawing.MiscLegacyTopics#63](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#63)]
- [!code-vb[System.Drawing.MiscLegacyTopics#63](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#63)]  
+ [!code-csharp[System.Drawing.MiscLegacyTopics#63](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#63)]
+ [!code-vb[System.Drawing.MiscLegacyTopics#63](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#63)]  
   
  На следующем рисунке эти три строки. Строки, выводимые из внутреннего контейнера и <xref:System.Drawing.Graphics> объект Сглаживается, с помощью сглаживания. Строка, выводимая из внешнего контейнера не подвергается сглаживанию, так как <xref:System.Drawing.Graphics.TextRenderingHint%2A> свойству <xref:System.Drawing.Text.TextRenderingHint.SingleBitPerPixel>.  
   
- ![Вложенные контейнеры](../../../../docs/framework/winforms/advanced/media/nestedcontainers3.png "nestedcontainers3")  
+ ![Вложенные контейнеры](./media/nestedcontainers3.png "nestedcontainers3")  
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Drawing.Graphics>
-- [Управление состоянием графического объекта](../../../../docs/framework/winforms/advanced/managing-the-state-of-a-graphics-object.md)
+- [Управление состоянием графического объекта](managing-the-state-of-a-graphics-object.md)

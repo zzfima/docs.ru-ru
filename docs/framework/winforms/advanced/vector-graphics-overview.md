@@ -9,26 +9,26 @@ helpviewer_keywords:
 - coordinate systems
 - graphics [Windows Forms], vector graphics
 ms.assetid: 0195df81-66be-452d-bb53-5a582ebfdc09
-ms.openlocfilehash: 2fe3beaa13def25f8b7311e38a654d2e82922407
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a78030dd53f526e7d4403f4696ea54e881b60022
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663983"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720414"
 ---
 # <a name="vector-graphics-overview"></a>Общие сведения о векторной графике
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Рисует линии, прямоугольники и других фигур в системе координат. Можно выбрать из различных систем координат, но система координат по умолчанию имеет начало координат в левом верхнем углу ось x вправо, а ось y направлена вниз. Единицы измерения в системе координат по умолчанию является пиксель.  
   
 ## <a name="the-building-blocks-of-gdi"></a>Стандартные блоки GDI +  
- ![Векторная графика](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art01.gif "AboutGdip02_Art01")  
+ ![Векторная графика](./media/aboutgdip02-art01.gif "AboutGdip02_Art01")  
   
  Монитор компьютера создает его отображение на прямоугольный массив точек, называемых элементами изображения. Разное количество пикселей, отображаемых на экране монитора к другому, а количество пикселей, которые отображаются на отдельных мониторе обычно можно в некоторой степени пользователем.  
   
- ![Векторная графика](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art02.gif "AboutGdip02_Art02")  
+ ![Векторная графика](./media/aboutgdip02-art02.gif "AboutGdip02_Art02")  
   
  При использовании [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Чтобы нарисовать линию, прямоугольник или кривой, предоставляют ключевая информация об элементе для отрисовки. Например можно указать строку, предоставляя две точки, и можно указать, предоставляя точку, высоту и ширину прямоугольника. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] работает в сочетании с программным обеспечением драйвера экрана, чтобы определить, какие точек должен быть включен для отображения линии, прямоугольника или кривой. На следующем рисунке пиксели, которые включены для отображения линии из точки (4, 2) в точку ("12", "8").  
   
- ![Векторная графика](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art03.gif "AboutGdip02_Art03")  
+ ![Векторная графика](./media/aboutgdip02-art03.gif "AboutGdip02_Art03")  
   
  Со временем некоторые основные стандартные блоки оказались наиболее удобно для создания двухмерных изображений. Эти стандартные блоки, которые поддерживаются системой [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], приведены в следующем списке:  
   
@@ -53,11 +53,11 @@ ms.locfileid: "54663983"
   
  Все методы рисования <xref:System.Drawing.Graphics> используют с <xref:System.Drawing.Pen> объекта. Чтобы нарисовать что-либо, необходимо создать по крайней мере два объекта: <xref:System.Drawing.Graphics> объекта и <xref:System.Drawing.Pen> объекта. <xref:System.Drawing.Pen> Объект сохраняет атрибуты, такие как толщины и цвета, рисуемого элемента. <xref:System.Drawing.Pen> Объект передается в качестве одного из аргументов метод рисования. Например, один из вариантов <xref:System.Drawing.Graphics.DrawLine%2A> метод получает <xref:System.Drawing.Pen> объекта и четырех целых чисел, как показано в следующем примере, который рисует прямоугольник с шириной 100, высотой 50 и координатами верхнего левого угла (20, 10):  
   
- [!code-csharp[LinesCurvesAndShapes#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#11)]
- [!code-vb[LinesCurvesAndShapes#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#11)]  
+ [!code-csharp[LinesCurvesAndShapes#11](~/samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#11)]
+ [!code-vb[LinesCurvesAndShapes#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#11)]  
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
-- [Линии, кривые и фигуры](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)
-- [Практическое руководство. Создание объектов Graphics для рисования](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)
+- [Линии, кривые и фигуры](lines-curves-and-shapes.md)
+- [Практическое руководство. Создание объектов Graphics для рисования](how-to-create-graphics-objects-for-drawing.md)

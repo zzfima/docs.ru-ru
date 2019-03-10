@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data [Windows Forms], navigating
 - data navigation
 ms.assetid: 18c1e2a5-9834-40d3-9b2e-2b545e4e769e
-ms.openlocfilehash: c44d338bbe026726abe77d41812363b9b10851f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ce67a06a5fe43602258d52548e8d933b99548f44
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526068"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720479"
 ---
 # <a name="bindingnavigator-control-windows-forms"></a>Элемент управления BindingNavigator (Windows Forms)
 Элемент управления `BindingNavigator` представляет собой пользовательский интерфейс для перехода и обработки для элементов управления, которые привязываются к данным. Элемент управления `BindingNavigator` позволяет пользователям просматривать и управлять данными в форме Windows Forms.  
@@ -19,23 +19,23 @@ ms.locfileid: "33526068"
  В этом разделе содержится обзор элемента управления `BindingNavigator` и проводятся пошаговые инструкции по его использованию для перехода по данным и перемещения в <xref:System.Data.DataSet>.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Общие сведения об элементе управления BindingNavigator](../../../../docs/framework/winforms/controls/bindingnavigator-control-overview-windows-forms.md)  
+ [Общие сведения об элементе управления BindingNavigator](bindingnavigator-control-overview-windows-forms.md)  
  Основные понятия, связанные с элементом управления `BindingNavigator`, позволяющим пользователям переходить по элементам источника данных.  
   
- [Практическое руководство. Переход между данными с помощью элемента управления BindingNavigator в Windows Forms](../../../../docs/framework/winforms/controls/how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md)  
+ [Практическое руководство. Навигация по набору данных с помощью элемента управления BindingNavigator в Windows Forms](how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md)  
  Пошаговые инструкции по привязке элемента управления `BindingNavigator` к источнику данных.  
   
- [Практическое руководство. Перемещение по набору данных с помощью элемента управления BindingNavigator в Windows Forms](../../../../docs/framework/winforms/controls/move-through-a-dataset-with-wf-bindingnavigator-control.md)  
+ [Практическое руководство. Перемещение по набору данных с помощью элемента управления BindingNavigator в Windows Forms](move-through-a-dataset-with-wf-bindingnavigator-control.md)  
  Демонстрируется использование элемента управления `BindingNavigator` для перемещения между записями в <xref:System.Data.DataSet>.  
   
- См. также [Практическое руководство. Добавление кнопок загрузки, сохранения и отмены в элемент управления BindingNavigator в формах Windows Forms](../../../../docs/framework/winforms/controls/load-save-and-cancel-bindingnavigator.md).  
+ Также см. раздел [Как Добавление загрузки, сохранения и кнопки "Отмена" для Windows Forms элемента управления BindingNavigator](load-save-and-cancel-bindingnavigator.md).  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Forms.BindingNavigator>  
- Содержит справочную документацию по элементу управления <xref:System.Windows.Forms.BindingNavigator>.  
+ Справочная документация по элементу управления <xref:System.Windows.Forms.BindingNavigator>.  
   
  <xref:System.Windows.Forms.BindingSource>  
- Содержит справочную документацию по элементу управления <xref:System.Windows.Forms.BindingSource>.  
+ Справочная документация по элементу управления <xref:System.Windows.Forms.BindingSource>.  
   
 ## <a name="related-sections"></a>Связанные разделы  
  [Привязка элементов управления к данным в Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

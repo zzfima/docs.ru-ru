@@ -10,12 +10,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], graphics resources
 - custom controls [Windows Forms], invalidation and painting
 ms.assetid: aae8e1e6-4786-432b-a15e-f4c44760d302
-ms.openlocfilehash: 9d2cb5041fbceb2e5c2d35d37a2001deffab40d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c32d6bff7171bb43d1f288500c9b24e8b288340b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659375"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712166"
 ---
 # <a name="rendering-a-windows-forms-control"></a>Отрисовка элементов управления Windows Forms
 Визуализации — это процесс создания визуального представления на экране пользователя. Windows Forms используется [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (новая Windows графическая библиотека) для подготовки к просмотру. Управляемые классы, предоставляющие доступ к [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] в <xref:System.Drawing?displayProperty=nameWithType> пространства имен и его подпространства имен.  
@@ -31,7 +31,7 @@ ms.locfileid: "54659375"
 -   Процедура освобождения графических ресурсов.  
   
 ## <a name="drawing-functionality-provided-by-control"></a>Функции рисования, обеспечиваемые элементом управления  
- Базовый класс <xref:System.Windows.Forms.Control> предоставляет функциональные возможности рисования посредством его <xref:System.Windows.Forms.Control.Paint> событий. Элемент управления вызывает <xref:System.Windows.Forms.Control.Paint> событие при каждой попытке обновления его отображения. Дополнительные сведения о событиях в .NET Framework, см. в разделе [обработка и вызов событий](../../../../docs/standard/events/index.md).  
+ Базовый класс <xref:System.Windows.Forms.Control> предоставляет функциональные возможности рисования посредством его <xref:System.Windows.Forms.Control.Paint> событий. Элемент управления вызывает <xref:System.Windows.Forms.Control.Paint> событие при каждой попытке обновления его отображения. Дополнительные сведения о событиях в .NET Framework, см. в разделе [обработка и вызов событий](../../../standard/events/index.md).  
   
  Класс данных события для <xref:System.Windows.Forms.Control.Paint> событий, <xref:System.Windows.Forms.PaintEventArgs>, содержащий данные, необходимые для рисования элемента управления — дескриптора графический объект и объект прямоугольник, представляющий область для рисования. Эти объекты отображаются в полужирным шрифтом в следующем фрагменте кода.  
   
@@ -73,7 +73,7 @@ Protected Overridable Sub OnPaint(pe As PaintEventArgs)
 protected virtual void OnPaint(PaintEventArgs pe);  
 ```  
   
- <xref:System.Windows.Forms.Control.OnPaint%2A> Метод базового <xref:System.Windows.Forms.Control> класс не реализует какой-либо функциональности, но просто вызывает делегаты событий, зарегистрированные в <xref:System.Windows.Forms.Control.Paint> событий. При переопределении <xref:System.Windows.Forms.Control.OnPaint%2A>, как правило, следует вызвать <xref:System.Windows.Forms.Control.OnPaint%2A> получать метод базового класса, чтобы зарегистрированные делегаты <xref:System.Windows.Forms.Control.Paint> событий. Тем не менее, элементы управления, их всю поверхность рисования не следует вызывать базовый класс <xref:System.Windows.Forms.Control.OnPaint%2A>, как это вызовет мерцание. Пример переопределения <xref:System.Windows.Forms.Control.OnPaint%2A> событий, см. в разделе [как: Создание элемента управления Windows Forms, показывающего прогресс](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md).  
+ <xref:System.Windows.Forms.Control.OnPaint%2A> Метод базового <xref:System.Windows.Forms.Control> класс не реализует какой-либо функциональности, но просто вызывает делегаты событий, зарегистрированные в <xref:System.Windows.Forms.Control.Paint> событий. При переопределении <xref:System.Windows.Forms.Control.OnPaint%2A>, как правило, следует вызвать <xref:System.Windows.Forms.Control.OnPaint%2A> получать метод базового класса, чтобы зарегистрированные делегаты <xref:System.Windows.Forms.Control.Paint> событий. Тем не менее, элементы управления, их всю поверхность рисования не следует вызывать базовый класс <xref:System.Windows.Forms.Control.OnPaint%2A>, как это вызовет мерцание. Пример переопределения <xref:System.Windows.Forms.Control.OnPaint%2A> событий, см. в разделе [как: Создание элемента управления Windows Forms, показывающего прогресс](how-to-create-a-windows-forms-control-that-shows-progress.md).  
   
 > [!NOTE]
 >  Они не вызывают <xref:System.Windows.Forms.Control.OnPaint%2A> непосредственно из вашего элемента управления; вместо этого вызовите <xref:System.Windows.Forms.Control.Invalidate%2A> метод (наследуется от <xref:System.Windows.Forms.Control>) или другим методом, который вызывает <xref:System.Windows.Forms.Control.Invalidate%2A>. <xref:System.Windows.Forms.Control.Invalidate%2A> В свою очередь вызывает метод <xref:System.Windows.Forms.Control.OnPaint%2A>. <xref:System.Windows.Forms.Control.Invalidate%2A> Метод перегружен, и, в зависимости от аргументов предоставляемое <xref:System.Windows.Forms.Control.Invalidate%2A> `e`, перерисовывает элемент управления, некоторые или все его области экрана.  
@@ -93,29 +93,29 @@ protected virtual void OnPaintBackground(PaintEventArgs pevent);
  Хотя <xref:System.Windows.Forms.Control.OnPaintBackground%2A> имеет аналогичное номенклатуру и принимает того же аргумента как `OnPaint` метода <xref:System.Windows.Forms.Control.OnPaintBackground%2A> не является методом значение true, событие. Существует не `PaintBackground` событий и <xref:System.Windows.Forms.Control.OnPaintBackground%2A> вызывает делегаты событий. При переопределении метода <xref:System.Windows.Forms.Control.OnPaintBackground%2A> метода производного класса не требуется для вызова <xref:System.Windows.Forms.Control.OnPaintBackground%2A> метод базового класса.  
   
 ## <a name="gdi-basics"></a>Основные сведения о GDI +  
- <xref:System.Drawing.Graphics> Класс предоставляет методы для рисования различных фигур, таких как круги, треугольники, дуги и эллипсы, а также методы для отображения текста. <xref:System.Drawing?displayProperty=nameWithType> Пространство имен и его подпространства имен содержат классы, инкапсулирующие графические элементы, такие как фигуры (круги, прямоугольники, дуги и другие), цвета, шрифты, кистей и т. д. Дополнительные сведения о [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)], см. в разделе [использование управляемых графических классов](../../../../docs/framework/winforms/advanced/using-managed-graphics-classes.md). Основы [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] также описаны в [как: Создание элемента управления Windows Forms, показывающего прогресс](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md).  
+ <xref:System.Drawing.Graphics> Класс предоставляет методы для рисования различных фигур, таких как круги, треугольники, дуги и эллипсы, а также методы для отображения текста. <xref:System.Drawing?displayProperty=nameWithType> Пространство имен и его подпространства имен содержат классы, инкапсулирующие графические элементы, такие как фигуры (круги, прямоугольники, дуги и другие), цвета, шрифты, кистей и т. д. Дополнительные сведения о [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)], см. в разделе [использование управляемых графических классов](../advanced/using-managed-graphics-classes.md). Основы [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] также описаны в [как: Создание элемента управления Windows Forms, показывающего прогресс](how-to-create-a-windows-forms-control-that-shows-progress.md).  
   
 ## <a name="geometry-of-the-drawing-region"></a>Геометрия области рисования  
  <xref:System.Windows.Forms.Control.ClientRectangle%2A> Свойства элемента управления задает прямоугольную область, доступную для элемента управления на экране пользователя, хотя <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> свойство <xref:System.Windows.Forms.PaintEventArgs> задает область, которая фактически закрашивается. (Помните, что рисование выполняется в <xref:System.Windows.Forms.Control.Paint> событие метода, принимающего <xref:System.Windows.Forms.PaintEventArgs> экземпляр в качестве аргумента). Элемент управления может потребоваться рисовать только часть ее доступной области, как в случае изменения отображения элемента управления при небольшом разделе. В этих случаях разработчик элемента управления следует вычислять фактическое прямоугольника для рисования и передать его <xref:System.Windows.Forms.Control.Invalidate%2A>. Перегруженные версии <xref:System.Windows.Forms.Control.Invalidate%2A> , принимающих <xref:System.Drawing.Rectangle> или <xref:System.Drawing.Region> в качестве аргумента, используют этот аргумент для создания <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> свойство <xref:System.Windows.Forms.PaintEventArgs>.  
   
- В следующем фрагменте кода показано как `FlashTrackBar` прямоугольную область для рисования вычисляет пользовательского элемента управления. `client` Обозначает переменную <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> свойство. Полный пример см. в разделе [как: Создание элемента управления Windows Forms, показывающего прогресс](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md).  
+ В следующем фрагменте кода показано как `FlashTrackBar` прямоугольную область для рисования вычисляет пользовательского элемента управления. `client` Обозначает переменную <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> свойство. Полный пример см. в разделе [как: Создание элемента управления Windows Forms, показывающего прогресс](how-to-create-a-windows-forms-control-that-shows-progress.md).  
   
- [!code-csharp[System.Windows.Forms.FlashTrackBar#6](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#6)]
- [!code-vb[System.Windows.Forms.FlashTrackBar#6](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#6)]  
+ [!code-csharp[System.Windows.Forms.FlashTrackBar#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#6)]
+ [!code-vb[System.Windows.Forms.FlashTrackBar#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#6)]  
   
 ## <a name="freeing-graphics-resources"></a>Освобождение ресурсов графики  
  Графические объекты ресурсоемки, потому что они используют системные ресурсы. Такие объекты содержат экземпляры <xref:System.Drawing.Graphics?displayProperty=nameWithType> класса, а также экземпляры <xref:System.Drawing.Brush?displayProperty=nameWithType>, <xref:System.Drawing.Pen?displayProperty=nameWithType>и другие графические классы. Очень важно, создания ресурса графики, только в том случае, когда она необходима и отпустите его сразу после его использования. Если вы создаете тип, реализующий <xref:System.IDisposable> интерфейс, вызовите его <xref:System.IDisposable.Dispose%2A> метод, когда вы закончите с ним для освобождения ресурсов.  
   
- В следующем фрагменте кода показано как `FlashTrackBar` пользовательский элемент управления создает и освобождает <xref:System.Drawing.Brush> ресурсов. Полный исходный код, см. в разделе [как: Создание элемента управления Windows Forms, показывающего прогресс](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md).  
+ В следующем фрагменте кода показано как `FlashTrackBar` пользовательский элемент управления создает и освобождает <xref:System.Drawing.Brush> ресурсов. Полный исходный код, см. в разделе [как: Создание элемента управления Windows Forms, показывающего прогресс](how-to-create-a-windows-forms-control-that-shows-progress.md).  
   
- [!code-csharp[System.Windows.Forms.FlashTrackBar#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#5)]
- [!code-vb[System.Windows.Forms.FlashTrackBar#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#5)]  
+ [!code-csharp[System.Windows.Forms.FlashTrackBar#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#5)]
+ [!code-vb[System.Windows.Forms.FlashTrackBar#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#5)]  
   
- [!code-csharp[System.Windows.Forms.FlashTrackBar#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#4)]
- [!code-vb[System.Windows.Forms.FlashTrackBar#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#4)]  
+ [!code-csharp[System.Windows.Forms.FlashTrackBar#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#4)]
+ [!code-vb[System.Windows.Forms.FlashTrackBar#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#4)]  
   
- [!code-csharp[System.Windows.Forms.FlashTrackBar#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#3)]
- [!code-vb[System.Windows.Forms.FlashTrackBar#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#3)]  
+ [!code-csharp[System.Windows.Forms.FlashTrackBar#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#3)]
+ [!code-vb[System.Windows.Forms.FlashTrackBar#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#3)]  
   
 ## <a name="see-also"></a>См. также
-- [Практическое руководство. Создание элемента управления Windows Forms, показывающего прогресс](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md)
+- [Практическое руководство. Создание элемента управления Windows Forms, показывающего прогресс](how-to-create-a-windows-forms-control-that-shows-progress.md)

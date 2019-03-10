@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Сохранение файлов с помощью компонента SaveFileDialog
+title: Практическое руководство. Сохранение файлов с помощью компонента SaveFileDialog
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - files [Windows Forms], saving
 - OpenFile method [Windows Forms], saving files with SaveFileDialog component
 ms.assetid: 02e8f409-b83f-4707-babb-e71f6b223d90
-ms.openlocfilehash: 2b84d36bd15d61fb21444e01302da86563cced9c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2a6f21f79f56c1fcad4c94ec89cbf7dc43b19638
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615966"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719433"
 ---
-# <a name="how-to-save-files-using-the-savefiledialog-component"></a>Как выполнить Сохранение файлов с помощью компонента SaveFileDialog
+# <a name="how-to-save-files-using-the-savefiledialog-component"></a>Практическое руководство. Сохранение файлов с помощью компонента SaveFileDialog
 <xref:System.Windows.Forms.SaveFileDialog> Компонент позволяет пользователям просматривать файловую систему и выбирать файлы для сохранения. Диалоговое окно возвращает путь и имя файла, который пользователь выбрал в диалоговом окне. Тем не менее для фактического сохранения файла на диск необходимо написать специальный код.  
   
 ### <a name="to-save-a-file-using-the-savefiledialog-component"></a>Сохранение файла с помощью компонента SaveFileDialog  
@@ -32,7 +32,7 @@ ms.locfileid: "54615966"
      В следующем примере имеется <xref:System.Windows.Forms.Button> элемента управления с изображением, назначенные ему. При нажатии кнопки, <xref:System.Windows.Forms.SaveFileDialog> создается экземпляр компонента с фильтром, допускающим файлов типа GIF, JPEG и BMP. При выборе файла такого типа в диалоговом окне "Сохранить файл" изображение кнопки сохраняется.  
   
     > [!IMPORTANT]
-    >  Для получения или задания <xref:System.Windows.Forms.FileDialog.FileName%2A> свойство, сборке требуется уровень привилегий предоставляются по <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> класса. Если процесс выполняется в контексте с частичным доверием, он может сгенерировать исключение из-за недостатка привилегий. Дополнительные сведения см. в разделе [Основы управления доступом для кода](../../../../docs/framework/misc/code-access-security-basics.md).  
+    >  Для получения или задания <xref:System.Windows.Forms.FileDialog.FileName%2A> свойство, сборке требуется уровень привилегий предоставляются по <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> класса. Если процесс выполняется в контексте с частичным доверием, он может сгенерировать исключение из-за недостатка привилегий. Дополнительные сведения см. в разделе [Основы управления доступом для кода](../../misc/code-access-security-basics.md).  
   
      В примере предполагается, в форме есть <xref:System.Windows.Forms.Button> управления с его <xref:System.Windows.Forms.ButtonBase.Image%2A> свойство в файл типа GIF, JPEG и BMP.  
   
@@ -179,4 +179,4 @@ ms.locfileid: "54615966"
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.SaveFileDialog>
-- [Компонент SaveFileDialog](../../../../docs/framework/winforms/controls/savefiledialog-component-windows-forms.md)
+- [Компонент SaveFileDialog](savefiledialog-component-windows-forms.md)

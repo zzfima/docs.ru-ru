@@ -9,12 +9,12 @@ helpviewer_keywords:
 - size [Windows Forms], controls
 - Windows Forms controls, size
 ms.assetid: d2dba441-a8c0-4705-b8e8-2e5d86d6e7ec
-ms.openlocfilehash: 6d74b382230b2ab11bb9fce8d6314e3a0e533572
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 486564f8092733ad253aac4ad9ee60ff0f83dce7
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583411"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719771"
 ---
 # <a name="how-to-resize-controls-on-windows-forms"></a>Практическое руководство. Изменение размера элементов управления в формах Windows Forms
 Вы можете изменить размер отдельных элементов управления, и вы можете изменить размер набора элементов управления одного или разных типов, таких как <xref:System.Windows.Forms.Button> и <xref:System.Windows.Forms.GroupBox> элементов управления.  
@@ -33,9 +33,9 @@ ms.locfileid: "56583411"
 2.  На **формат** меню, выберите **установить тот же размер**, а затем выберите один из четырех вариантов. Первые три команды изменения размеров элементов управления в соответствии с первого выбранного элемента управления.  
   
 ## <a name="see-also"></a>См. также
-- [Элементы управления Windows Forms](../../../../docs/framework/winforms/controls/index.md)
-- [Упорядочение элементов управления в формах Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
-- [Создание меток и назначение сочетаний клавиш для элементов управления Windows Forms](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [Элементы управления для использования в Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
-- [Функциональная классификация элементов управления Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+- [Элементы управления Windows Forms](index.md)
+- [Упорядочение элементов управления в формах Windows Forms](arranging-controls-on-windows-forms.md)
+- [Создание меток и назначение сочетаний клавиш для элементов управления Windows Forms](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)
+- [Функциональная классификация элементов управления Windows Forms](windows-forms-controls-by-function.md)
 - [Практическое руководство. Изменение размера формы Windows Forms, с помощью конструктора](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100))

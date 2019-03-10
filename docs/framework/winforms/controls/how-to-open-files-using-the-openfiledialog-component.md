@@ -9,18 +9,18 @@ helpviewer_keywords:
 - OpenFile method [Windows Forms], OpenFileDialog component
 - files [Windows Forms], opening with OpenFileDialog component
 ms.assetid: 9d88367a-cc21-4ffd-be74-89fd63767d35
-ms.openlocfilehash: f297b557e86c13c00a57a2033ba4cd61753b3d0b
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 5781543a61d77ef8f0658e95759c57fdb77cfc4f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202656"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723092"
 ---
 # <a name="how-to-open-files-with-the-openfiledialog"></a>Практическое руководство. Открытие файлов с использованием OpenFileDialog 
 
 <xref:System.Windows.Forms.OpenFileDialog?displayProperty=nameWithType> Компонент открывает диалоговое окно Windows для просмотра и выбора файлов. Чтобы открыть и прочитать выбранных файлов, можно использовать <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A?displayProperty=nameWithType> метод, или создать экземпляр <xref:System.IO.StreamReader?displayProperty=nameWithType> класса. В следующих примерах оба подхода. 
 
-В .NET Framework, для получения или задания <xref:System.Windows.Forms.FileDialog.FileName%2A> свойство требуется уровень привилегий предоставляемый <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> класса. Примеры выполняют <xref:System.Security.Permissions.FileIOPermission> разрешение проверки и может создавать исключения из-за недостатка привилегий, если выполняются в контексте частичного доверия. Дополнительные сведения см. в разделе [основы управления доступом для кода](../../../../docs/framework/misc/code-access-security-basics.md).
+В .NET Framework, для получения или задания <xref:System.Windows.Forms.FileDialog.FileName%2A> свойство требуется уровень привилегий предоставляемый <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> класса. Примеры выполняют <xref:System.Security.Permissions.FileIOPermission> разрешение проверки и может создавать исключения из-за недостатка привилегий, если выполняются в контексте частичного доверия. Дополнительные сведения см. в разделе [основы управления доступом для кода](../../misc/code-access-security-basics.md).
 
 Можно создавать и запускать эти примеры приложений .NET Framework из C# или командной строки Visual Basic. Дополнительные сведения см. в разделе [сборка с помощью csc.exe из командной строки](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) или [построения из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md). 
 
@@ -30,16 +30,16 @@ ms.locfileid: "57202656"
   
 В следующем примере используется Windows Forms <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Click> обработчик событий, чтобы открыть <xref:System.Windows.Forms.OpenFileDialog> с <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> метод. Когда пользователь выберет файл, а также выбирает **ОК**, экземпляр <xref:System.IO.StreamReader> класс читает файл и выведет его содержимое в текстовое поле формы. Дополнительные сведения о чтении из файловых потоков, см. в разделе <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> и <xref:System.IO.FileStream.Read%2A?displayProperty=nameWithType>.  
 
- [!code-csharp[OpenFileDialog#1](../../../../samples/snippets/winforms/open-files/example1/cs/Form1.cs)]
- [!code-vb[OpenFileDialog#1](../../../../samples/snippets/winforms/open-files/example1/vb/Form1.vb)]  
+ [!code-csharp[OpenFileDialog#1](~/samples/snippets/winforms/open-files/example1/cs/Form1.cs)]
+ [!code-vb[OpenFileDialog#1](~/samples/snippets/winforms/open-files/example1/vb/Form1.vb)]  
 
 ## <a name="example-open-a-file-from-a-filtered-selection-with-openfile"></a>Пример Откройте файл из отфильтрованные объекты с помощью OpenFile 
 
 В следующем примере используется <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Click> обработчик событий, чтобы открыть <xref:System.Windows.Forms.OpenFileDialog> с фильтром, который показывает только текстовые файлы. Когда пользователь выберет в текстовый файл, а также выбирает **ОК**, <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> метод используется, чтобы открыть файл в блокноте.
 
- [!code-csharp[OpenFileDialog#2](../../../../samples/snippets/winforms/open-files/example2/cs/Form1.cs)]
- [!code-vb[OpenFileDialog#2](../../../../samples/snippets/winforms/open-files/example2/vb/Form1.vb)]  
+ [!code-csharp[OpenFileDialog#2](~/samples/snippets/winforms/open-files/example2/cs/Form1.cs)]
+ [!code-vb[OpenFileDialog#2](~/samples/snippets/winforms/open-files/example2/vb/Form1.vb)]  
 
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.OpenFileDialog>
-- [Компонент OpenFileDialog](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md)
+- [Компонент OpenFileDialog](openfiledialog-component-windows-forms.md)

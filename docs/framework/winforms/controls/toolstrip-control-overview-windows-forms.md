@@ -9,12 +9,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - what's new [Windows Forms], toolbars
 ms.assetid: 81d067ed-297c-4dad-90de-1bcac15336ec
-ms.openlocfilehash: 49f544727ee82b1e36357fc4312bcd449ffc3c0c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c701ed6ff155ca507f827874a955b2361a3b2359
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558752"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719390"
 ---
 # <a name="toolstrip-control-overview-windows-forms"></a>Общие сведения об элементе управления ToolStrip (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ToolStrip> управления и связанные с ним классы предоставляют общую инфраструктуру для объединения элементов пользовательского интерфейса в панели инструментов, строк состояния и меню. <xref:System.Windows.Forms.ToolStrip> элементы управления предлагают широкие возможности разработки, включающий встроенной активации и редактирования, пользовательский макет и нависания, который является возможность совместного использования горизонтального или вертикального пространства панели инструментов.  
@@ -62,7 +62,7 @@ Windows Forms <xref:System.Windows.Forms.ToolStrip> управления и св
   
 ### <a name="important-toolstrip-companion-classes"></a>Важные сопутствующие ToolStrip классы  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.MenuStrip>|Заменяет и расширяет его функциональные возможности <xref:System.Windows.Forms.MainMenu> класса.|  
 |<xref:System.Windows.Forms.StatusStrip>|Заменяет и расширяет его функциональные возможности <xref:System.Windows.Forms.StatusBar> класса.|  
@@ -77,7 +77,7 @@ Windows Forms <xref:System.Windows.Forms.ToolStrip> управления и св
 |<xref:System.Windows.Forms.ToolStripControlHost>|Размещает другие элементы управления, которые не являются <xref:System.Windows.Forms.ToolStrip> элементов управления, но для которого необходимо <xref:System.Windows.Forms.ToolStrip> функциональные возможности.|  
 |<xref:System.Windows.Forms.ToolStripItemPlacement>|Указывает ли <xref:System.Windows.Forms.ToolStripItem> будет располагаться в главном <xref:System.Windows.Forms.ToolStrip>, в случае переполнения <xref:System.Windows.Forms.ToolStrip>, или ни одного.|  
   
- Дополнительные сведения см. в разделе [ToolStrip, технологии, положенные](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md) и [архитектура элемента управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md).  
+ Дополнительные сведения см. в разделе [ToolStrip, технологии, положенные](toolstrip-technology-summary.md) и [архитектура элемента управления ToolStrip](toolstrip-control-architecture.md).  
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.ToolStrip>

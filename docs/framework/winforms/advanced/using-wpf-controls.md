@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Forms Designer [Windows Forms], interoperability with WPF
 - interoperability [WPF]
 ms.assetid: 03c85dce-26ad-44cd-bc1d-8e0cb56de096
-ms.openlocfilehash: be925bdceea3dd01c568d85fe025d6e037066454
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 24b88e456628c5a0bdc3cded60b0e52a92057851
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841622"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713804"
 ---
 # <a name="using-wpf-controls"></a>Использование элементов управления WPF
 Элементы управления Windows Presentation Foundation (WPF) можно использовать в приложениях Windows Forms. Несмотря на то, что они являются две различные технологии, они взаимодействуют.  
@@ -20,19 +20,19 @@ ms.locfileid: "48841622"
  Можно также использовать элементы управления Windows Forms в WPF-приложениях. Дополнительные сведения см. в разделе [конструктора XAML в Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio).  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Практическое руководство. Копирование и вставка элемента управления ElementHost во время разработки](../../../../docs/framework/winforms/advanced/how-to-copy-and-paste-an-elementhost-control-at-design-time.md)  
+ [Практическое руководство. Копирование и вставка элемента управления ElementHost во время разработки](how-to-copy-and-paste-an-elementhost-control-at-design-time.md)  
  Показано, как скопировать элемент управления Windows Presentation Foundation в Windows Forms.  
   
- [Пошаговое руководство. Упорядочение содержимого WPF для формы Windows Forms во время разработки](../../../../docs/framework/winforms/advanced/walkthrough-arranging-wpf-content-on-windows-forms-at-design-time.md)  
+ [Пошаговое руководство: Упорядочение содержимого WPF в формах Windows Forms во время разработки](walkthrough-arranging-wpf-content-on-windows-forms-at-design-time.md)  
  Показано, как использовать возможности макета Windows Forms, такие как закрепление и линии привязки, для размещения элементов управления Windows Presentation Foundation.
   
- [Пошаговое руководство. Создание нового содержимого WPF для формы Windows Forms во время разработки](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)  
+ [Пошаговое руководство: Создание нового содержимого WPF в формах Windows Forms во время разработки](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)  
  В этой статье демонстрируется создание элемента управления Windows Presentation Foundation для использования в приложениях Windows Forms.
   
- [Пошаговое руководство. Назначение содержимого WPF в формах Windows Forms во время разработки](../../../../docs/framework/winforms/advanced/walkthrough-assigning-wpf-content-on-windows-forms-at-design-time.md)  
+ [Пошаговое руководство: Назначение содержимого WPF в формах Windows Forms во время разработки](walkthrough-assigning-wpf-content-on-windows-forms-at-design-time.md)  
  Показано, как выбрать типы элементов управления Windows Presentation Foundation, который будет отображаться в форме.  
   
- [Пошаговое руководство. Применение стилей к содержимому WPF](../../../../docs/framework/winforms/advanced/walkthrough-styling-wpf-content.md)  
+ [Пошаговое руководство: Применение стилей к содержимому WPF](walkthrough-styling-wpf-content.md)  
  Показывает рабочий процесс между в конструкторе Windows Forms и [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] применения стилей к элементам управления Windows Presentation Foundation.  
   
 ## <a name="reference"></a>Ссылка  
@@ -43,7 +43,7 @@ ms.locfileid: "48841622"
  Описывает класс, который можно использовать для размещения элементов управления Windows Forms в приложении Windows Presentation Foundation.  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Миграция и взаимодействие систем](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
+ [Миграция и взаимодействие систем](../../wpf/advanced/migration-and-interoperability.md)  
  Содержит описание взаимодействия между технологиями Windows Presentation Foundation и Windows Forms.  
   
  [Проектирование XAML в Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)  

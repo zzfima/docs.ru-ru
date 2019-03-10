@@ -8,12 +8,12 @@ helpviewer_keywords:
 - vector graphics
 - typography
 ms.assetid: 068c0ef3-f6ee-4d58-a7b6-eb2531ead408
-ms.openlocfilehash: 2c2ddc76faaf0c15cc56345c607678985b9c4656
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f7aa4de8a0d646c441d0921fb2561ef5a9480f4e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576386"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711240"
 ---
 # <a name="three-categories-of-graphics-services"></a>Три категории графических служб
 Графические элементы Windows Forms делятся на три основные категории:  
@@ -40,6 +40,6 @@ ms.locfileid: "54576386"
  Кроме того, Windows Forms предоставляет возможность использования [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] для рисования текста с помощью класса <xref:System.Windows.Forms.TextRenderer>.  
   
 ## <a name="see-also"></a>См. также
-- [Общие сведения о графике](../../../../docs/framework/winforms/advanced/graphics-overview-windows-forms.md)
-- [Управляемый код GDI+](../../../../docs/framework/winforms/advanced/about-gdi-managed-code.md)
-- [Использование управляемых графических классов](../../../../docs/framework/winforms/advanced/using-managed-graphics-classes.md)
+- [Общие сведения о графике](graphics-overview-windows-forms.md)
+- [Управляемый код GDI+](about-gdi-managed-code.md)
+- [Использование управляемых графических классов](using-managed-graphics-classes.md)

@@ -7,20 +7,20 @@ helpviewer_keywords:
 - attributes [Windows Forms], control properties
 - attributes [Windows Forms], classes
 ms.assetid: 2c5640e9-6c6c-49d7-a5e4-a768f6be7853
-ms.openlocfilehash: a8bbc59087b5d1d296c25b6aaf0836b31611a54a
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 8e845df7eb83f01adb2086025cf47e7fdc896ba6
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441246"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724405"
 ---
 # <a name="attributes-in-windows-forms-controls"></a>Атрибуты в элементах управления Windows Forms
 .NET Framework предоставляет широкий набор атрибутов, которые можно применять к членам пользовательских элементов управления и компонентов. Некоторые из этих атрибутов влияют на поведение класса во время выполнения, а другие – на поведение во время разработки.  
   
 ## <a name="attributes-for-control-and-component-properties"></a>Атрибуты для свойств элементов управления и компонентов  
- В следующей таблице представлены атрибуты, которые можно применять к свойствам или другим членам пользовательских элементов управления и компонентов. Пример, который использует многие из этих атрибутов, см. в разделе [как: Применение атрибутов в элементах управления Windows Forms](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md).  
+ В следующей таблице представлены атрибуты, которые можно применять к свойствам или другим членам пользовательских элементов управления и компонентов. Пример, который использует многие из этих атрибутов, см. в разделе [как: Применение атрибутов в элементах управления Windows Forms](how-to-apply-attributes-in-windows-forms-controls.md).  
   
-|Атрибут|Описание|  
+|Атрибут|Описание:|  
 |---------------|-----------------|  
 |<xref:System.ComponentModel.AmbientValueAttribute>|Указывает значение, которое нужно передать в свойство, чтобы свойство получило свое значение из другого источника. Это называется *окружением*.|  
 |<xref:System.ComponentModel.BrowsableAttribute>|Указывает, должно ли отображаться свойство в окне **Свойства**.|  
@@ -51,7 +51,7 @@ ms.locfileid: "56441246"
 ## <a name="attributes-for-classes"></a>Атрибуты для классов  
  В следующей таблице представлены атрибуты, с помощью которых можно указать поведение пользовательских элементов управления и компонентов во время разработки.  
   
-|Атрибут|Описание|  
+|Атрибут|Описание:|  
 |---------------|-----------------|  
 |<xref:System.ComponentModel.DefaultEventAttribute>|Задает событие по умолчанию для компонента.|  
 |<xref:System.ComponentModel.DefaultPropertyAttribute>|Задает свойство по умолчанию для компонента.|  
@@ -62,6 +62,6 @@ ms.locfileid: "56441246"
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Attribute>
-- [Практическое руководство. Применение атрибутов в элементах управления Windows Forms](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)
+- [Практическое руководство. Применение атрибутов в элементах управления Windows Forms](how-to-apply-attributes-in-windows-forms-controls.md)
 - [Расширения поддержки времени разработки](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
-- [Разработка пользовательских элементов управления Windows Forms в .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+- [Разработка пользовательских элементов управления Windows Forms в .NET Framework](developing-custom-windows-forms-controls.md)
