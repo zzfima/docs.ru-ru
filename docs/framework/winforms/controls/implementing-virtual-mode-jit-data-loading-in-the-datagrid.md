@@ -12,12 +12,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], large data sets
 - virtual mode [Windows Forms], just-in-time data loading
 ms.assetid: c2a052b9-423c-4ff7-91dc-d8c7c79345f6
-ms.openlocfilehash: c8290fe7722dba564bf5addab662a9f6b62d924f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 44c985cef035e33e88ba246584efcb30fe0e9b97
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607885"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705562"
 ---
 # <a name="implementing-virtual-mode-with-just-in-time-data-loading-in-the-windows-forms-datagridview-control"></a>Реализация виртуального режима с JIT-загрузкой данных для элемента управления DataGridView в Windows Forms
 Одна из причин для реализации виртуальный режим в <xref:System.Windows.Forms.DataGridView> элемент управления является получение данных только по мере необходимости. Это называется *загрузка данных just-in-time*.  
@@ -26,7 +26,7 @@ ms.locfileid: "54607885"
   
  В следующих разделах рассматривается использование <xref:System.Windows.Forms.DataGridView> элемента управления с кэшем just-in-time.  
   
- Чтобы скопировать код из этого раздела единым блоком, см. в разделе [как: Реализация виртуального режима с JIT в загрузкой данных в Windows Forms элемента управления DataGridView](../../../../docs/framework/winforms/controls/virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md).  
+ Чтобы скопировать код из этого раздела единым блоком, см. раздел [Практическое руководство. Реализация виртуального режима с JIT в загрузкой данных в Windows Forms элемента управления DataGridView](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md).  
   
 ## <a name="the-form"></a>Формы  
  В следующем примере кода определяется форму, содержащую только для чтения <xref:System.Windows.Forms.DataGridView> элемента управления, который взаимодействует с `Cache` объекта через <xref:System.Windows.Forms.DataGridView.CellValueNeeded> обработчик событий. `Cache` Объекта управляет значениями, хранящимися локально и использует `DataRetriever` объект для извлечения значения из таблицы Orders учебной базы данных "Борей". `DataRetriever` Объект, который реализует `IDataPageRetriever` интерфейс, необходимый `Cache` класса, также используется для инициализации <xref:System.Windows.Forms.DataGridView> управления строками и столбцами.  
@@ -34,24 +34,24 @@ ms.locfileid: "54607885"
  `IDataPageRetriever`, `DataRetriever`, И `Cache` типы описаны далее в этом разделе.  
   
 > [!NOTE]
->  Хранение конфиденциальных сведений (например, пароля) в строке подключения может повлиять на безопасность приложения. Использование проверки подлинности Windows (также называемой встроенными средствами безопасности) — более безопасный способ управления доступом к базе данных. Дополнительные сведения см. в разделе [Защита сведений о подключении](../../../../docs/framework/data/adonet/protecting-connection-information.md).  
+>  Хранение конфиденциальных сведений (например, пароля) в строке подключения может повлиять на безопасность приложения. Использование проверки подлинности Windows (также называемой встроенными средствами безопасности) — более безопасный способ управления доступом к базе данных. Дополнительные сведения см. в разделе [Защита сведений о подключении](../../data/adonet/protecting-connection-information.md).  
   
- [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#100](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#100)]
- [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#100](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#100)]  
+ [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#100](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#100)]
+ [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#100](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#100)]  
   
 ## <a name="the-idatapageretriever-interface"></a>Интерфейс IDataPageRetriever  
  В следующем примере кода определяется `IDataPageRetriever` интерфейс, который реализуется `DataRetriever` класса. — Единственный метод, объявленный в этом интерфейсе `SupplyPageOfData` метод, который требуется индекс начальной строки и число строк на одной странице данных. Эти значения используются средством реализации для извлечения подмножества данных из источника данных.  
   
  Объект `Cache` использует реализацию этого интерфейса во время построения для загрузки двух начальных страниц данных. Каждый раз, когда требуется значение без кэширования, отменяет одну из этих страниц и запрашивает новую страницу с значением из кэша `IDataPageRetriever`.  
   
- [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#201](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#201)]
- [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#201](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#201)]  
+ [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#201](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#201)]
+ [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#201](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#201)]  
   
 ## <a name="the-dataretriever-class"></a>Класс DataRetriever  
  В следующем примере кода определяется `DataRetriever` класса, который реализует `IDataPageRetriever` интерфейс для извлечения страниц данных с сервера. `DataRetriever` Класс также предоставляет `Columns` и `RowCount` свойства, который <xref:System.Windows.Forms.DataGridView> элемент управления использует для создания необходимых столбцов и добавьте соответствующее количество пустых строк <xref:System.Windows.Forms.DataGridView.Rows%2A> коллекции. Добавление пустых строк необходим, чтобы элемент управления будет действовать как если бы, если он содержит все данные в таблице. Это означает, что бегунка полосы прокрутки будет иметь соответствующий размер, что пользователь сможет получить доступ к любой строки в таблице. Строки заполняются <xref:System.Windows.Forms.DataGridView.CellValueNeeded> обработчик событий только в том случае, если они оказались в представление.  
   
- [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#200](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#200)]
- [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#200](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#200)]  
+ [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#200](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#200)]
+ [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#200](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#200)]  
   
 ## <a name="the-cache-class"></a>Класс кэша  
  В следующем примере кода определяется `Cache` класс, который управляет двумя страницами данных, которое заполняется с помощью `IDataPageRetriever` реализации. `Cache` Класс определяет внутреннее `DataPage` структуру, которая содержит <xref:System.Data.DataTable> для хранения значений в одном кэше страницы и которая вычисляет индексы строк, представляющих верхнюю и нижнюю границы страницы.  
@@ -60,8 +60,8 @@ ms.locfileid: "54607885"
   
  Предположим, что количество строк на странице данных является таким же, как количество строк, которые могут отображаться на экране за один раз, эта модель позволяет пользователям, разбиение по страницам в таблице, эффективно вернуться на последнюю просмотренную страницу.  
   
- [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#300](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#300)]
- [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#300](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#300)]  
+ [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#300](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#300)]
+ [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#300](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#300)]  
   
 ## <a name="additional-considerations"></a>Дополнительные сведения  
  Приведенные выше примеры кода предоставляются в качестве демонстрации загрузки данных just-in-time. Необходимо будет изменить код для ваших нужд для достижения максимальной эффективности. Как минимум необходимо будет выбрать соответствующее значение для числа строк на одной странице данных в кэше. Это значение передается в `Cache` конструктор. Количество строк на странице должно быть не меньше, чем количество строк, которые могут отображаться одновременно в вашей <xref:System.Windows.Forms.DataGridView> элемента управления.  
@@ -73,8 +73,8 @@ ms.locfileid: "54607885"
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>
-- [Оптимизация производительности элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)
-- [Масштабирование элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)
-- [Виртуальный режим элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md)
-- [Пошаговое руководство: Реализация виртуального режима для элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)
-- [Практическое руководство. Реализация виртуального режима с JIT в загрузкой данных в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)
+- [Оптимизация производительности элемента управления DataGridView в Windows Forms](performance-tuning-in-the-windows-forms-datagridview-control.md)
+- [Масштабирование элемента управления DataGridView в Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
+- [Виртуальный режим элемента управления DataGridView в Windows Forms](virtual-mode-in-the-windows-forms-datagridview-control.md)
+- [Пошаговое руководство: Реализация виртуального режима для элемента управления DataGridView в Windows Forms](implementing-virtual-mode-wf-datagridview-control.md)
+- [Практическое руководство. Реализация виртуального режима с JIT в загрузкой данных в элементе управления DataGridView Windows Forms](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)

@@ -1,18 +1,18 @@
 ---
-title: Как выполнить Перемещение элемента ToolStrip из контейнера ToolStripContainer в форму
+title: Практическое руководство. Перемещение элемента ToolStrip из контейнера ToolStripContainer в форму
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStrip control [Windows Forms], parenting to forms
 - Windows Forms, parenting ToolStrip controls
 ms.assetid: a1c94a7f-6fc5-4e4c-84cf-ff11dc573d33
-ms.openlocfilehash: 4e5c621b9738ce6b5f259425e63a2369556c4ded
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 96fe863cee296ec292bf7010494af587d43fd8b3
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597724"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708422"
 ---
-# <a name="how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form"></a>Как выполнить Перемещение элемента ToolStrip из контейнера ToolStripContainer в форму
+# <a name="how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form"></a>Практическое руководство. Перемещение элемента ToolStrip из контейнера ToolStripContainer в форму
 Используйте следующую процедуру для перемещения <xref:System.Windows.Forms.ToolStrip> из <xref:System.Windows.Forms.ToolStripContainer> на форму.  
   
 > [!NOTE]
@@ -33,4 +33,4 @@ ms.locfileid: "54597724"
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStripContainer>
-- [Общие сведения об элементе управления ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
+- [Общие сведения об элементе управления ToolStrip](toolstrip-control-overview-windows-forms.md)
