@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/31/2018
-ms.openlocfilehash: 47a5ae3e81b0320a094ecc79e6b08035de66e785
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 89264098ed17b398c83bc2dcddd98d9d8fc958f7
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443079"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679740"
 ---
 # <a name="whats-new-in-net-core-30-preview-2"></a>Новые возможности .NET Core 3.0 (предварительная версия 2)
 
@@ -24,16 +24,16 @@ ms.locfileid: "56443079"
 
 Ддля получения дополнительных сведений о новых возможностях в каждой версии см. следующие объявления:
 
-- [Объявление о .NET Core 3.0, предварительная версия 1](https://blogs.msdn.microsoft.com/dotnet/2018/12/04/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/)
-- [Объявление о .NET Core 3.0, предварительная версия 2](https://blogs.msdn.microsoft.com/dotnet/2019/01/29/announcing-net-core-3-preview-2/)
+- [Объявление о .NET Core 3.0, предварительная версия 1](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/)
+- [Объявление о .NET Core 3.0, предварительная версия 2](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-2/)
 
 ## <a name="c-8"></a>C# 8
 
 .NET Core 3.0 поддерживает C# 8, а начиная с .NET Core 3.0, предварительная версия 2, поддерживает эти новые функции. Дополнительные сведения о функциях C# 8.0 см. в следующих записях блога:
 
-- [Расширенные возможности шаблонов в C# 8.0](https://blogs.msdn.microsoft.com/dotnet/2019/01/24/do-more-with-patterns-in-c-8-0/)
-- [C# 8.0 для ускорения работы](https://blogs.msdn.microsoft.com/dotnet/2018/12/05/take-c-8-0-for-a-spin/)
-- [Сборка на C# 8.0](https://blogs.msdn.microsoft.com/dotnet/2018/11/12/building-c-8-0/)
+- [Расширенные возможности шаблонов в C# 8.0](https://devblogs.microsoft.com/dotnet/do-more-with-patterns-in-c-8-0/)
+- [C# 8.0 для ускорения работы](https://devblogs.microsoft.com/dotnet/take-c-8-0-for-a-spin/)
+- [Сборка на C# 8.0](https://devblogs.microsoft.com/dotnet/building-c-8-0/)
 
 
 ### <a name="ranges-and-indices"></a>Диапазоны и индексы
@@ -108,7 +108,7 @@ static string Display(object o) => o switch
 
 По-прежнему будут происходить ситуации, к которым *операторы switch* подходят лучше, чем *выражения switch*, и шаблоны могут использоваться в обоих стилях синтаксиса.
 
-Дополнительные сведения см. в разделе [Расширенные возможности шаблонов в C# 8.0](https://blogs.msdn.microsoft.com/dotnet/2019/01/24/do-more-with-patterns-in-c-8-0/).
+Дополнительные сведения см. в разделе [Расширенные возможности шаблонов в C# 8.0](https://devblogs.microsoft.com/dotnet/do-more-with-patterns-in-c-8-0/).
 
 ## <a name="ieee-floating-point-improvements"></a>Усовершенствования чисел с плавающей запятой по IEEE
 
@@ -271,7 +271,7 @@ dotnet new winforms
 
 Visual Studio 2019, предварительная версия 2, добавляет шаблоны **Новый проект** для .NET Core 3.0 Windows Forms и WPF. Конструкторы по-прежнему не поддерживаются. Вы можете открывать, запускать и отлаживать эти проекты в Visual Studio 2019.
 
-Visual Studio 2017 15.9 добавляет возможность [включать предварительные версии .NET Core](https://blogs.msdn.microsoft.com/dotnet/2018/11/13/net-core-tooling-update-for-visual-studio-2017-version-15-9/), но необходимо включить эту функцию, и это не поддерживаемый сценарий.
+Visual Studio 2017 15.9 добавляет возможность [включать предварительные версии .NET Core](https://devblogs.microsoft.com/dotnet/net-core-tooling-update-for-visual-studio-2017-version-15-9/), но необходимо включить эту функцию, и это не поддерживаемый сценарий.
 
 Новые проекты идентичны имеющимся проектам .NET Core с некоторыми добавлениями. Ниже приведено сравнение базового консольного проекта .NET Core и базового проекта Windows Forms и WPF.
 
@@ -730,9 +730,9 @@ privateExponent:
 
 ## <a name="tiered-compilation"></a>Многоуровневая компиляция
 
-[Многоуровневая компиляция](https://blogs.msdn.microsoft.com/dotnet/2018/08/02/tiered-compilation-preview-in-net-core-2-1/) по умолчанию включена в .NET Core 3.0. Это возможность, благодаря которой среда выполнения более адаптивно использует компилятор JIT для повышения производительности при запуске и максимального увеличения пропускной способности.
+[Многоуровневая компиляция](https://devblogs.microsoft.com/dotnet/tiered-compilation-preview-in-net-core-2-1/) по умолчанию включена в .NET Core 3.0. Это возможность, благодаря которой среда выполнения более адаптивно использует компилятор JIT для повышения производительности при запуске и максимального увеличения пропускной способности.
 
-Эта возможность добавлена в качестве возможности, включаемой пользователем в [.NET Core 2.1](https://blogs.msdn.microsoft.com/dotnet/2018/05/30/announcing-net-core-2-1/), а затем была включена по умолчанию в [.NET Core 2.2 (предварительная версия 2)](https://blogs.msdn.microsoft.com/dotnet/2018/09/12/announcing-net-core-2-2-preview-2/). Затем в выпуске .NET Core 2.2 она была возвращена в состояние возможности, включаемой пользователем.
+Эта возможность добавлена в качестве возможности, включаемой пользователем в [.NET Core 2.1](https://devblogs.microsoft.com/dotnet/announcing-net-core-2-1/), а затем была включена по умолчанию в [.NET Core 2.2 (предварительная версия 2)](https://devblogs.microsoft.com/dotnet/announcing-net-core-2-2-preview-2/). Затем в выпуске .NET Core 2.2 она была возвращена в состояние возможности, включаемой пользователем.
 
 ## <a name="arm64-linux-support"></a>Поддержка ARM64 Linux
 

@@ -1,15 +1,14 @@
 ---
 title: Модель расширяемости CLI .NET Core
 description: Узнайте, как расширить средства интерфейса командной строки (CLI).
-author: blackdwarf
 ms.date: 04/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: e93c9c85383d7c541b8ef55a74045307810cbb05
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: ca6bf30fb6aaf815a859a00bc391ef790566acaf
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093012"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675099"
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>Модель расширяемости средств интерфейса командной строки .NET Core
 

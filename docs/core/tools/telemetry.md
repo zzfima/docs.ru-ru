@@ -4,16 +4,16 @@ description: Сведения о функциях телеметрии паке�
 author: richlander
 ms.date: 06/20/2018
 ms.custom: seodec18
-ms.openlocfilehash: 8b0b546d70eab837c2e075f839990870ae9ea6b1
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 3a757daab372b8be8bfe2ee27d910e21fa4e3337
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168849"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718042"
 ---
 # <a name="net-core-sdk-telemetry"></a>Телеметрия пакета SDK для .NET Core
 
-[Пакет SDK для .NET Core](index.md) включает в себя [функцию телеметрии](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry), которая собирает сведения об использовании. Команде разработчиков .NET важно знать, как используются эти средства, чтобы их можно было улучшить. Дополнительные сведения см. в разделе [Что мы узнали благодаря данным телеметрии пакета SDK для .NET Core](https://blogs.msdn.microsoft.com/dotnet/2017/07/21/what-weve-learned-from-net-core-sdk-telemetry/).
+[Пакет SDK для .NET Core](index.md) включает в себя [функцию телеметрии](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry), которая собирает сведения об использовании. Команде разработчиков .NET важно знать, как используются эти средства, чтобы их можно было улучшить. Дополнительные сведения см. в разделе [Что мы узнали благодаря данным телеметрии пакета SDK для .NET Core](https://devblogs.microsoft.com/dotnet/what-weve-learned-from-net-core-sdk-telemetry/).
 
 Данные собираются анонимно и публикуются в сводной форме для использования корпорацией Майкрософт и сообществом по [лицензии Creative Commons Attribution](https://creativecommons.org/licenses/by/4.0/).
 
@@ -130,6 +130,6 @@ Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemet
 
 ## <a name="see-also"></a>См. также
 
-- [Что мы узнали благодаря данным телеметрии пакета SDK для .NET Core](https://blogs.msdn.microsoft.com/dotnet/2017/07/21/what-weve-learned-from-net-core-sdk-telemetry/)
+- [Что мы узнали благодаря данным телеметрии пакета SDK для .NET Core](https://devblogs.microsoft.com/dotnet/what-weve-learned-from-net-core-sdk-telemetry/)
 - [Справочные материалы по телеметрии (репозиторий dotnet/cli)](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry)
 - [Данные по использованию пакета SDK для .NET Core](https://github.com/dotnet/core/blob/master/release-notes/cli-usage-data.md)

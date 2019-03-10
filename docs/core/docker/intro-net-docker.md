@@ -3,12 +3,12 @@ title: Введение в Docker
 description: Эта статья содержит общие сведения об использовании Docker в контексте приложения .NET Core.
 ms.date: 11/06/2017
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 54bad8fcb34e46700fedf508bbc84ad846b05d76
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: b2640a1cea4d77158b7d9ed6ec63cf36d9e1f9cd
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656171"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676282"
 ---
 # <a name="introduction-to-net-and-docker"></a>Введение в .NET и Docker
 
@@ -178,7 +178,7 @@ ms.locfileid: "53656171"
 
 Теперь, когда вы узнали о платформе Docker и различных образах Docker, мы перейдем к изучению обширной экосистемы Docker. Из указанных ниже ресурсов вы узнаете, как средства Майкрософт дополняют средства разработки контейнеров.
 
-* [Using .NET and Docker Together](https://blogs.msdn.microsoft.com/dotnet/2017/05/25/using-net-and-docker-together/) (Совместное использование .NET и Docker)
+* [Using .NET and Docker Together](https://devblogs.microsoft.com/dotnet/using-net-and-docker-together/) (Совместное использование .NET и Docker)
 * [Проектирование и разработка приложений .NET на основе множества контейнеров и микрослужб](../../standard/microservices-architecture/multi-container-microservice-net-applications/index.md)
 * [Расширение Docker для Visual Studio Code](https://code.visualstudio.com/docs/languages/dockerfile)
 * [Сведения об использовании Azure Service Fabric](/azure/service-fabric/index)
