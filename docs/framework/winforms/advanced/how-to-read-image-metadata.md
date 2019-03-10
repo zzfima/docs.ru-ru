@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Чтение метаданных изображения
+title: Практическое руководство. Чтение метаданных изображения
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - metadata [Windows Forms], property item
 - metadata [Windows Forms], reading image
 ms.assetid: 72ec0b31-0be7-444a-9575-1dbcb864e0be
-ms.openlocfilehash: a22085e0bbaeda1a166c6d46b2604858fb403d8a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eba21519e6ea6cf4a2a412750fd305d7af620c1b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741448"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720802"
 ---
-# <a name="how-to-read-image-metadata"></a>Как выполнить Чтение метаданных изображения
+# <a name="how-to-read-image-metadata"></a>Практическое руководство. Чтение метаданных изображения
 Некоторые файлы изображений содержат метаданные, которые можно прочитать, чтобы определить возможности изображения. Например цифровой фотографии может содержать метаданные, которые можно прочитать, чтобы определить марки и модели фотоаппарата, использованного для создания образа. С помощью [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], можно считывать существующие метаданные, и можно также добавлять новые метаданные в файлы изображений.  
   
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] хранит каждый отдельный блок метаданных в <xref:System.Drawing.Imaging.PropertyItem> объекта. Можно прочитать <xref:System.Drawing.Image.PropertyItems%2A> свойство <xref:System.Drawing.Image> объекта для извлечения метаданных из файла. <xref:System.Drawing.Image.PropertyItems%2A> Свойство возвращает массив <xref:System.Drawing.Imaging.PropertyItem> объектов.  
@@ -25,7 +25,7 @@ ms.locfileid: "54741448"
 ## <a name="id"></a>Идентификатор  
  Тег, определяющий элемент метаданных. Некоторые значения, которые могут быть назначены <xref:System.Drawing.Imaging.PropertyItem.Id%2A> показаны в следующей таблице.  
   
-|Шестнадцатеричное значение|Описание:|  
+|Шестнадцатеричное значение|Описание|  
 |-----------------------|-----------------|  
 |0x0320<br /><br /> 0x010F<br /><br /> 0x0110<br /><br /> 0x9003<br /><br /> 0x829A<br /><br /> 0x5090<br /><br /> 0x5091|Изображение заголовка<br /><br /> Поставщик вычислительной техники<br /><br /> Модель оборудования<br /><br /> ExifDTOriginal<br /><br /> Время выдержки EXIF<br /><br /> Таблицы освещенности<br /><br /> Таблицы цветности|  
   
@@ -117,12 +117,12 @@ ms.locfileid: "54741448"
  `The equipment make is Northwind Camera.`  
   
 ### <a name="code"></a>Код  
- [!code-csharp[System.Drawing.WorkingWithImages#51](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#51)]
- [!code-vb[System.Drawing.WorkingWithImages#51](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#51)]  
+ [!code-csharp[System.Drawing.WorkingWithImages#51](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#51)]
+ [!code-vb[System.Drawing.WorkingWithImages#51](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#51)]  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Предыдущий пример предназначен для работы с Windows Forms, и для него необходим объект <xref:System.Windows.Forms.PaintEventArgs> `e`, передаваемый в качестве параметра обработчику событий <xref:System.Windows.Forms.Control.Paint>. Обработка формы <xref:System.Windows.Forms.Control.Paint> событий и вставьте этот код в обработчик событий paint. Необходимо заменить `FakePhoto.jpg` допустимы для системы и импорта путь и имя образа `System.Drawing.Imaging` пространства имен.  
   
 ## <a name="see-also"></a>См. также
-- [Изображения, точечные рисунки и метафайлы](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
-- [Работа с растровыми и векторными изображениями, значками и метафайлами](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+- [Изображения, точечные рисунки и метафайлы](images-bitmaps-and-metafiles.md)
+- [Работа с растровыми и векторными изображениями, значками и метафайлами](working-with-images-bitmaps-icons-and-metafiles.md)

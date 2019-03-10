@@ -2,12 +2,12 @@
 title: Профили отслеживания
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
-ms.openlocfilehash: f7acb46e16894dd287512541ad4c2be1adafb42a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2fa4d65a6f0056824b2fc9dd67b93608777fc75d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482305"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721376"
 ---
 # <a name="tracking-profiles"></a>Профили отслеживания
 
@@ -344,7 +344,7 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
 > [!WARNING]
 > Для WF с использованием узла служб рабочих процессов профиль отслеживания обычно создается при помощи файла конфигурации. Также можно создать профиль отслеживания при помощи кода, используя профиль отслеживания и API-интерфейс запросов отслеживания.
 
-Профиль, настроенный как XML-файл конфигурации, применяется к участнику отслеживания при помощи расширения поведения. Поведение добавляется к WorkflowServiceHost, как описано в разделе [Настройка отслеживания для рабочего процесса](../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).
+Профиль, настроенный как XML-файл конфигурации, применяется к участнику отслеживания при помощи расширения поведения. Поведение добавляется к WorkflowServiceHost, как описано в разделе [Настройка отслеживания для рабочего процесса](configuring-tracking-for-a-workflow.md).
 
 Детализация записей отслеживания, создаваемых узлом, определяется параметрами конфигурации в профиле отслеживания. Участник отслеживания подписывается на записи отслеживания путем добавления запросов в профиль отслеживания. Чтобы подписаться на все записи отслеживания, необходимо указать все запросы отслеживания, используя профиль отслеживания "\*" в полях имен для каждого из запросов.
 
@@ -387,6 +387,6 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
 
 ## <a name="see-also"></a>См. также
 
-- [Отслеживание SQL](../../../docs/framework/windows-workflow-foundation/samples/sql-tracking.md)
+- [Отслеживание SQL](./samples/sql-tracking.md)
 - [Мониторинг Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201273)
 - [Мониторинг приложений с помощью фабрики приложения](https://go.microsoft.com/fwlink/?LinkId=201275)

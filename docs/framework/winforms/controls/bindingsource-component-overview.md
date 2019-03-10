@@ -7,22 +7,22 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], about BindingSource component
 - data binding [Windows Forms], BindingSource component
 ms.assetid: be838caf-fcb0-4b68-827f-58b2c04b747f
-ms.openlocfilehash: 6fbd089cef6f014979cf8bbdf376b2f76ac9bcf9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fcec2fd81bfb9a662fc98c811ab69ffde5949916
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686952"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724479"
 ---
 # <a name="bindingsource-component-overview"></a>Общие сведения о компоненте BindingSource
 Компонент <xref:System.Windows.Forms.BindingSource> предназначен для упрощения процесса привязки элементов управления к источнику данных. Компонент <xref:System.Windows.Forms.BindingSource> выступает в качестве источника и канала передачи данных для привязки других элементов управления. Он реализует абстракцию подключения данных формы, перенаправляя команды к базовому списку данных. Кроме того, можно добавлять данные непосредственно в него, поэтому сам компонент выступает и в качестве источника данных.  
   
 ## <a name="bindingsource-component-as-an-intermediary"></a>Компонент BindingSource в качестве посредника  
- Компонент <xref:System.Windows.Forms.BindingSource> выступает в качестве источника данных для некоторых или всех элементов управления формы. В Visual Studio <xref:System.Windows.Forms.BindingSource> можно привязать к элементу управления с помощью параметра `DataBindings` свойство, доступное из **свойства** окна. Также см. раздел [Как Привязка элементов управления Windows Forms с компонентом BindingSource с помощью конструктора](../../../../docs/framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md).  
+ Компонент <xref:System.Windows.Forms.BindingSource> выступает в качестве источника данных для некоторых или всех элементов управления формы. В Visual Studio <xref:System.Windows.Forms.BindingSource> можно привязать к элементу управления с помощью параметра `DataBindings` свойство, доступное из **свойства** окна. Также см. раздел [Как Привязка элементов управления Windows Forms с компонентом BindingSource с помощью конструктора](bind-wf-controls-with-the-bindingsource.md).  
   
  Компонент <xref:System.Windows.Forms.BindingSource> можно привязать как к источникам простых данных, например одиночному свойству объекта или базовой коллекции, такому как <xref:System.Collections.ArrayList>, так и к источникам сложных данных, таким как таблица базы данных. Компонент <xref:System.Windows.Forms.BindingSource> является посредником, обеспечивающим привязку и управление валютой. Во время разработки или во время выполнения компонент <xref:System.Windows.Forms.BindingSource> можно привязать к источнику сложных данных, указав в качестве значений его свойств <xref:System.Windows.Forms.BindingSource.DataSource%2A> и <xref:System.Windows.Forms.BindingSource.DataMember%2A> базу данных и таблицу. На следующем рисунке показано, как компонент <xref:System.Windows.Forms.BindingSource> встраивается в существующую архитектуру привязки данных.  
   
- ![Источник привязки и архитектура привязки данных](../../../../docs/framework/winforms/controls/media/net-bindsrcdatabindarch.gif "NET_BindSrcDataBindArch")  
+ ![Источник привязки и архитектура привязки данных](./media/net-bindsrcdatabindarch.gif "NET_BindSrcDataBindArch")  
   
 > [!NOTE]
 >  Во время разработки некоторые действия, например перетаскивание таблицы базы данных из окна данных в пустую форму, приведут к созданию компонента <xref:System.Windows.Forms.BindingSource>, его привязке к базовому источнику данных и добавлению элементов управления данными в одной операции. См. также [Привязка элементов управления Windows Forms к данным в Visual Studio](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio).  
@@ -30,10 +30,10 @@ ms.locfileid: "54686952"
 ## <a name="bindingsource-component-as-a-data-source"></a>Компонент BindingSource в качестве источника данных  
  Если начать добавлять элементы в компонент <xref:System.Windows.Forms.BindingSource> компонента без указания списка для привязки, то компонент будет действовать как источник данных в виде списка и примет эти элементы.  
   
- Кроме того, можно написать код, чтобы добавить пользовательскую функциональность "AddNew" с помощью события <xref:System.Windows.Forms.BindingSource.AddingNew>, которое возникает при вызове метода <xref:System.Windows.Forms.BindingSource.AddNew%2A> перед добавлением элемента в список. Дополнительные сведения см. в разделе [Архитектура компонента BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component-architecture.md).  
+ Кроме того, можно написать код, чтобы добавить пользовательскую функциональность "AddNew" с помощью события <xref:System.Windows.Forms.BindingSource.AddingNew>, которое возникает при вызове метода <xref:System.Windows.Forms.BindingSource.AddNew%2A> перед добавлением элемента в список. Дополнительные сведения см. в разделе [Архитектура компонента BindingSource](bindingsource-component-architecture.md).  
   
 ## <a name="navigation"></a>Навигация  
- Для пользователей, которым необходимо перемещение данных в форме, компонент  <xref:System.Windows.Forms.BindingNavigator> предоставляет возможность перемещения данных и управления ими совместно с компонентом <xref:System.Windows.Forms.BindingSource>. Дополнительные сведения см. в разделе [Элемент управления BindingNavigator](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md).  
+ Для пользователей, которым необходимо перемещение данных в форме, компонент  <xref:System.Windows.Forms.BindingNavigator> предоставляет возможность перемещения данных и управления ими совместно с компонентом <xref:System.Windows.Forms.BindingSource>. Дополнительные сведения см. в разделе [Элемент управления BindingNavigator](bindingnavigator-control-windows-forms.md).  
   
 ## <a name="data-manipulation"></a>Обработка данных  
  <xref:System.Windows.Forms.BindingSource> выступает в качестве <xref:System.Windows.Forms.CurrencyManager> для всех привязок и, таким образом, может предоставлять доступ к сведениям о валюте и положении в зависимости от источника данных. В следующей таблице показаны члены, предоставляемые компонентом <xref:System.Windows.Forms.BindingSource> для доступа и обработки базовых данных.  
@@ -60,8 +60,8 @@ ms.locfileid: "54686952"
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.BindingNavigator>
-- [Архитектура компонента BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component-architecture.md)
-- [Компонент BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component.md)
-- [Элемент управления BindingNavigator](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)
-- [Привязка данных Windows Forms](../../../../docs/framework/winforms/windows-forms-data-binding.md)
-- [Элементы управления для использования в Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [Архитектура компонента BindingSource](bindingsource-component-architecture.md)
+- [Компонент BindingSource](bindingsource-component.md)
+- [Элемент управления BindingNavigator](bindingnavigator-control-windows-forms.md)
+- [Привязка данных Windows Forms](../windows-forms-data-binding.md)
+- [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)

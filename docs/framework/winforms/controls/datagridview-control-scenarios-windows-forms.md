@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], about data grids
 - DataGridView control [Windows Forms], scenarios
 ms.assetid: 09a5fd05-3447-47ec-a4ec-6082a2b7f0dd
-ms.openlocfilehash: c8d6f3d9b1d0380ccf78badd44484c96e0593bd8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 882b210a19f1ec5515bd7f37ccc55343f84767bc
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621439"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721321"
 ---
 # <a name="datagridview-control-scenarios-windows-forms"></a>Сценарии использования элементов управления DataGridView (Windows Forms)
 С помощью <xref:System.Windows.Forms.DataGridView> элемента управления, можно отобразить табличных данных из различных источников данных. В простых случаях вы можете вручную заполнять <xref:System.Windows.Forms.DataGridView> и манипулировать данными напрямую через элемент управления. Как правило, но будет хранить данные в внешнего источника данных и привязка элемента управления с помощью <xref:System.Windows.Forms.BindingSource> компонента.  
@@ -19,7 +19,7 @@ ms.locfileid: "54621439"
  В этом разделе описываются некоторые распространенные сценарии, охватывающие <xref:System.Windows.Forms.DataGridView> элемента управления.  
   
 ## <a name="scenario-1-displaying-small-amounts-of-data"></a>Сценарий 1. Отображение небольших объемов данных  
- Нет необходимости хранить данные в внешнего источника данных для отображения на <xref:System.Windows.Forms.DataGridView> элемента управления. Если вы работаете с небольшой объем данных, можно самостоятельно заполнить элемент управления и работы с данными в элементе управления. Это называется *Несвязанный режим*. Дополнительные сведения см. в разделе [Как Создание элемента управления DataGridView в Windows свободной формы](../../../../docs/framework/winforms/controls/how-to-create-an-unbound-windows-forms-datagridview-control.md).  
+ Нет необходимости хранить данные в внешнего источника данных для отображения на <xref:System.Windows.Forms.DataGridView> элемента управления. Если вы работаете с небольшой объем данных, можно самостоятельно заполнить элемент управления и работы с данными в элементе управления. Это называется *Несвязанный режим*. Дополнительные сведения см. в разделе [Как Создание элемента управления DataGridView в Windows свободной формы](how-to-create-an-unbound-windows-forms-datagridview-control.md).  
   
 ### <a name="scenario-key-points"></a>Ключевые моменты сценария  
   
@@ -30,7 +30,7 @@ ms.locfileid: "54621439"
 -   Несвязанный режим также подходит для электронной таблицы или разреженное таблиц.  
   
 ## <a name="scenario-2-viewing-and-updating-data-stored-in-an-external-data-source"></a>Сценарий 2. Просмотр и обновление данных, хранящихся в внешнего источника данных  
- Можно использовать <xref:System.Windows.Forms.DataGridView> управления как пользовательский интерфейс (UI), через какие пользователи могут обращаться к данным, хранящимся в источнике данных, таких как таблицы базы данных или коллекции бизнес-объектов. Дополнительные сведения см. в разделе [Как Привязка данных к Windows Forms элемента управления DataGridView](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md).  
+ Можно использовать <xref:System.Windows.Forms.DataGridView> управления как пользовательский интерфейс (UI), через какие пользователи могут обращаться к данным, хранящимся в источнике данных, таких как таблицы базы данных или коллекции бизнес-объектов. Дополнительные сведения см. в разделе [Как Привязка данных к Windows Forms элемента управления DataGridView](how-to-bind-data-to-the-windows-forms-datagridview-control.md).  
   
 ### <a name="scenario-key-points"></a>Ключевые моменты сценария  
   
@@ -47,14 +47,14 @@ ms.locfileid: "54621439"
   
  Например если вы работаете с большими объемами данных, может потребоваться реализация виртуального режима, чтобы обеспечить оптимальную производительность. Виртуальный режим также полезна для сохранения значений в непривязанные столбцы, которые отображаются вместе со столбцами, извлеченными из другого источника данных.  
   
- Дополнительные сведения о виртуальном режиме, см. в разделе [Пошаговое руководство: Реализация виртуального режима в Windows Forms элемента управления DataGridView](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md).  
+ Дополнительные сведения о виртуальном режиме, см. в разделе [Пошаговое руководство: Реализация виртуального режима в Windows Forms элемента управления DataGridView](implementing-virtual-mode-wf-datagridview-control.md).  
   
 ### <a name="scenario-key-points"></a>Ключевые моменты сценария  
   
 -   Виртуальный режим подходит для отображения очень больших объемов данных, когда необходимо оптимизировать производительность.  
   
 ## <a name="scenario-4-automatically-resizing-rows-and-columns"></a>Сценарий 4. Автоматическое изменение размера строк и столбцов  
- При отображении данных, который регулярно обновляется, можно автоматически масштабировать строки и столбцы, чтобы убедиться, что все содержимое является видимым. <xref:System.Windows.Forms.DataGridView> Элемент управления предоставляет несколько параметров, которые позволяют включить или отключить возможность изменения размера вручную, изменение размера программными средствами в указанное время или изменения размера автоматически при изменении содержимого. Дополнительные сведения см. в разделе [параметров изменения размеров элемента управления DataGridView Windows Forms в](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md).  
+ При отображении данных, который регулярно обновляется, можно автоматически масштабировать строки и столбцы, чтобы убедиться, что все содержимое является видимым. <xref:System.Windows.Forms.DataGridView> Элемент управления предоставляет несколько параметров, которые позволяют включить или отключить возможность изменения размера вручную, изменение размера программными средствами в указанное время или изменения размера автоматически при изменении содержимого. Дополнительные сведения см. в разделе [параметров изменения размеров элемента управления DataGridView Windows Forms в](sizing-options-in-the-windows-forms-datagridview-control.md).  
   
 ### <a name="scenario-key-points"></a>Ключевые моменты сценария  
   
@@ -65,7 +65,7 @@ ms.locfileid: "54621439"
 -   Программное изменение размеров дает возможность изменения размера ячеек в определенное время, чтобы избежать потери производительности, непрерывной автоматическом изменении размера.  
   
 ## <a name="scenario-5-simple-customization"></a>Сценарий 5. Простую настройку  
- <xref:System.Windows.Forms.DataGridView> Управления предоставляет множество способов, которые позволяют изменять его основной внешний вид и поведение. Дополнительные сведения см. в разделе [стили ячеек элемента управления DataGridView Windows Forms в](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md).  
+ <xref:System.Windows.Forms.DataGridView> Управления предоставляет множество способов, которые позволяют изменять его основной внешний вид и поведение. Дополнительные сведения см. в разделе [стили ячеек элемента управления DataGridView Windows Forms в](cell-styles-in-the-windows-forms-datagridview-control.md).  
   
 ### <a name="scenario-key-points"></a>Ключевые моменты сценария  
   
@@ -78,14 +78,14 @@ ms.locfileid: "54621439"
   
 ### <a name="scenario-key-points"></a>Ключевые моменты сценария  
   
--   Можно предоставить собственный код рисования ячейки. Дополнительные сведения см. в разделе [Как Настройка внешнего вида ячеек элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md).  
+-   Можно предоставить собственный код рисования ячейки. Дополнительные сведения см. в разделе [Как Настройка внешнего вида ячеек элемента управления DataGridView в Windows Forms](customize-the-appearance-of-cells-in-the-datagrid.md).  
   
--   Вы можете предоставить собственную окраску строк. Это полезно, например, для создания строк с содержимым для нескольких столбцов. Дополнительные сведения см. в разделе [Как Настройка внешнего вида строк элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md).  
+-   Вы можете предоставить собственную окраску строк. Это полезно, например, для создания строк с содержимым для нескольких столбцов. Дополнительные сведения см. в разделе [Как Настройка внешнего вида строк элемента управления DataGridView в Windows Forms](customize-the-appearance-of-rows-in-the-datagrid.md).  
   
--   Можно реализовать собственные классы ячеек и столбцов, для настройки внешнего вида ячеек. Дополнительные сведения см. в разделе [Как Ячеек и столбцов в Windows Forms элемента управления DataGridView с видом и поведением](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md).  
+-   Можно реализовать собственные классы ячеек и столбцов, для настройки внешнего вида ячеек. Дополнительные сведения см. в разделе [Как Ячеек и столбцов в Windows Forms элемента управления DataGridView с видом и поведением](customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md).  
   
--   Можно реализовать собственные классы ячеек и столбцов для размещения элементов управления, не поддерживаемые встроенными типами столбцов. Дополнительные сведения см. в разделе [Как Ведущие элементы управления в формах Windows Forms ячеек элемента управления DataGridView](../../../../docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md).  
+-   Можно реализовать собственные классы ячеек и столбцов для размещения элементов управления, не поддерживаемые встроенными типами столбцов. Дополнительные сведения см. в разделе [Как Ведущие элементы управления в формах Windows Forms ячеек элемента управления DataGridView](how-to-host-controls-in-windows-forms-datagridview-cells.md).  
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.DataGridView>
-- [Общие сведения об элементе управления DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)
+- [Общие сведения об элементе управления DataGridView](datagridview-control-overview-windows-forms.md)

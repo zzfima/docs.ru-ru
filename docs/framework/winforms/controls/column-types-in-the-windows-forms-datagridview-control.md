@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column types
 - data grids [Windows Forms], columns
 ms.assetid: f0a0a9f1-8757-4bfd-891f-d7d12870dbed
-ms.openlocfilehash: d4331d5f502165a73c7f322358b2d6ee88d92977
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8fd3ad0da369702c2a5e27c0b8b9a39a71c372ac
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591600"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724574"
 ---
 # <a name="column-types-in-the-windows-forms-datagridview-control"></a>Типы столбцов элемента управления DataGridView в Windows Forms
 <xref:System.Windows.Forms.DataGridView> Элемент управления использует несколько типов столбцов для отображения данных и позволяют пользователям изменять или добавлять данные.  
@@ -22,7 +22,7 @@ ms.locfileid: "54591600"
   
  В следующей таблице описаны различные классы столбцов, доступных для использования в <xref:System.Windows.Forms.DataGridView> элемента управления.  
   
-|Класс|Описание:|  
+|Класс|Описание|  
 |-----------|-----------------|  
 |<xref:System.Windows.Forms.DataGridViewTextBoxColumn>|Используется с текстовыми значениями. Создается автоматически при привязке к чисел и строк.|  
 |<xref:System.Windows.Forms.DataGridViewCheckBoxColumn>|Используется с <xref:System.Boolean> и <xref:System.Windows.Forms.CheckState> значения. Создается автоматически, при привязке к значениям из этих типов.|  
@@ -30,7 +30,7 @@ ms.locfileid: "54591600"
 |<xref:System.Windows.Forms.DataGridViewButtonColumn>|Используется для отображения кнопок в ячейках. Создается автоматически при привязке. Обычно используется в качестве несвязанных столбцов.|  
 |<xref:System.Windows.Forms.DataGridViewComboBoxColumn>|Используется для отображения раскрывающихся списков в ячейках. Создается автоматически при привязке. Обычно связан с данными вручную.|  
 |<xref:System.Windows.Forms.DataGridViewLinkColumn>|Используется для отображения ссылки в ячейках. Создается автоматически при привязке. Обычно связан с данными вручную.|  
-|Пользовательский тип столбцов|Можно создать свой собственный класс столбца путем наследования <xref:System.Windows.Forms.DataGridViewColumn> класса или любого из его производных классов, чтобы предоставить пользовательское оформление, поведение или размещенные элементы управления. Дополнительные сведения см. в разделе [Как Настройка ячеек и столбцов в элементе управления DataGridView Windows Forms, расширяя их поведение и внешний вид](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)|  
+|Пользовательский тип столбцов|Можно создать свой собственный класс столбца путем наследования <xref:System.Windows.Forms.DataGridViewColumn> класса или любого из его производных классов, чтобы предоставить пользовательское оформление, поведение или размещенные элементы управления. Дополнительные сведения см. в разделе [Как Настройка ячеек и столбцов в элементе управления DataGridView Windows Forms, расширяя их поведение и внешний вид](customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)|  
   
  Типы столбцов описаны более подробно в следующих разделах.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "54591600"
 ## <a name="datagridviewcomboboxcolumn"></a>DataGridViewComboBoxColumn  
  С помощью <xref:System.Windows.Forms.DataGridViewComboBoxColumn>, можно отобразить столбец ячеек, содержащих поля с раскрывающимся списком. Это полезно для ввода данных в полях, которые может содержать только определенные значения, такие как столбец категории таблицы продуктов в базе данных Northwind.  
   
- Можно заполнить стрелку раскрывающегося списка, используемого для всех ячеек так же, заполнению <xref:System.Windows.Forms.ComboBox> стрелку раскрывающегося списка, либо вручную с помощью коллекции, возвращаемой <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A> свойство, или через привязку к источнику данных с помощью <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A>, <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A>, и <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> свойства. Дополнительные сведения см. в разделе [элемент управления ComboBox](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md).  
+ Можно заполнить стрелку раскрывающегося списка, используемого для всех ячеек так же, заполнению <xref:System.Windows.Forms.ComboBox> стрелку раскрывающегося списка, либо вручную с помощью коллекции, возвращаемой <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A> свойство, или через привязку к источнику данных с помощью <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A>, <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A>, и <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> свойства. Дополнительные сведения см. в разделе [элемент управления ComboBox](combobox-control-windows-forms.md).  
   
  Фактические значения ячеек можно привязать к источнику данных, который используется командой <xref:System.Windows.Forms.DataGridView> управления <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A> свойство <xref:System.Windows.Forms.DataGridViewComboBoxColumn?displayProperty=nameWithType>.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "54591600"
 - <xref:System.Windows.Forms.DataGridViewImageColumn>
 - <xref:System.Windows.Forms.DataGridViewTextBoxColumn>
 - <xref:System.Windows.Forms.DataGridViewLinkColumn>
-- [Элемент управления DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)
-- [Практическое руководство. Отображение изображений в ячейках элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)
-- [Практическое руководство. Работа со столбцами изображений в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)
-- [Настройка элементов управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)
+- [Элемент управления DataGridView](datagridview-control-windows-forms.md)
+- [Практическое руководство. Отображение изображений в ячейках элемента управления DataGridView в Windows Forms](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)
+- [Практическое руководство. Работа со столбцами изображений в элементе управления DataGridView Windows Forms](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)
+- [Настройка элементов управления DataGridView в Windows Forms](customizing-the-windows-forms-datagridview-control.md)

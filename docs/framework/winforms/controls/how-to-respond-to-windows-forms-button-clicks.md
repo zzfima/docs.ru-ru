@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Ответ на нажатие кнопки Windows Forms
+title: Практическое руководство. Ответ на нажатие кнопки Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 - Click event [Windows Forms], responding to
 ms.assetid: 7a4951bd-369c-4662-b246-28ad83eda484
-ms.openlocfilehash: 98b52e914a891baec0b52dcc7b38d4f9f2198c90
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e6e6d041422a79171ec4b6159f0789b8aa6a50d5
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539556"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724990"
 ---
-# <a name="how-to-respond-to-windows-forms-button-clicks"></a>Как выполнить Ответ на нажатие кнопки Windows Forms
+# <a name="how-to-respond-to-windows-forms-button-clicks"></a>Практическое руководство. Ответ на нажатие кнопки Windows Forms
 Самый простой способ использования форм Windows <xref:System.Windows.Forms.Button> элемент управления должен выполнять определенный код, при нажатии кнопки.  
   
  Щелкнув <xref:System.Windows.Forms.Button> создает элемент управления также ряд других событий, таких как <xref:System.Windows.Forms.Control.MouseEnter>, <xref:System.Windows.Forms.Control.MouseDown>, и <xref:System.Windows.Forms.Control.MouseUp> события. Если вы планируете присоединить обработчики событий для этих связанных событий, убедитесь, что их действия не конфликтуют. Например если нажатие кнопки удаляет сведения, которые пользователь ввел в текстовое поле, при наведении указателя мыши на кнопку не должно отображать подсказки с несуществующими сведениями.  
@@ -31,7 +31,7 @@ ms.locfileid: "54539556"
   
 ### <a name="to-respond-to-a-button-click"></a>Реагировать на нажатие кнопки  
   
--   На кнопке панели `Click` <xref:System.EventHandler> напишите код для выполнения. `Button1_Click` должен быть привязан к элементу управления. Дополнительные сведения см. в разделе [Как Создание обработчиков событий во время выполнения для форм Windows Forms](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
+-   На кнопке панели `Click` <xref:System.EventHandler> напишите код для выполнения. `Button1_Click` должен быть привязан к элементу управления. Дополнительные сведения см. в разделе [Как Создание обработчиков событий во время выполнения для форм Windows Forms](../how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -56,6 +56,6 @@ ms.locfileid: "54539556"
     ```  
   
 ## <a name="see-also"></a>См. также
-- [Общие сведения об элементе управления Button](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)
-- [Способы активации элемента управления Button в Windows Forms](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)
-- [Элемент управления Button](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)
+- [Общие сведения об элементе управления Button](button-control-overview-windows-forms.md)
+- [Способы активации элемента управления Button в Windows Forms](ways-to-select-a-windows-forms-button-control.md)
+- [Элемент управления Button](button-control-windows-forms.md)

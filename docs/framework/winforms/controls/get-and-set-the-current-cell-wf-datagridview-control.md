@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Получение и установка значения текущей ячейки в элементе управления DataGridView Windows Forms
+title: Практическое руководство. Получение и установка значения текущей ячейки в элементе управления DataGridView Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,34 +9,34 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], setting current cell
 - cells [Windows Forms], getting and setting current
 ms.assetid: b0e41e57-493a-4bd0-9376-a6f76723540c
-ms.openlocfilehash: 2508551cd4bcb056d1e746b2dc962c4500093ea5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 712340e6fbc081cbac9ecfb516bffb7a58bf0c12
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495608"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724028"
 ---
-# <a name="how-to-get-and-set-the-current-cell-in-the-windows-forms-datagridview-control"></a>Как выполнить Получение и установка значения текущей ячейки в элементе управления DataGridView Windows Forms
+# <a name="how-to-get-and-set-the-current-cell-in-the-windows-forms-datagridview-control"></a>Практическое руководство. Получение и установка значения текущей ячейки в элементе управления DataGridView Windows Forms
 Взаимодействие с <xref:System.Windows.Forms.DataGridView> часто требуется программно найденные ячейки, которая в данный момент активна. Кроме того, может потребоваться изменить текущую ячейку. Можно выполнять эти задачи с помощью <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> свойство.  
   
 > [!NOTE]
 >  Невозможно задать текущую ячейку в строке или столбце с его <xref:System.Windows.Forms.DataGridViewBand.Visible%2A> свойство значение `false`.  
   
- В зависимости от <xref:System.Windows.Forms.DataGridView> Выбор можно изменить режим выбора элемента управления, изменение текущей ячейки. Дополнительные сведения см. в разделе [режимы выделения в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/selection-modes-in-the-windows-forms-datagridview-control.md).  
+ В зависимости от <xref:System.Windows.Forms.DataGridView> Выбор можно изменить режим выбора элемента управления, изменение текущей ячейки. Дополнительные сведения см. в разделе [режимы выделения в элементе управления DataGridView Windows Forms](selection-modes-in-the-windows-forms-datagridview-control.md).  
   
 ### <a name="to-get-the-current-cell-programmatically"></a>Чтобы получить текущую ячейку программным способом  
   
 -   Используйте <xref:System.Windows.Forms.DataGridView> элемента управления <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> свойство.  
   
-     [!code-csharp[System.Windows.Forms.DataGridViewMisc#080](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#080)]
-     [!code-vb[System.Windows.Forms.DataGridViewMisc#080](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#080)]  
+     [!code-csharp[System.Windows.Forms.DataGridViewMisc#080](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#080)]
+     [!code-vb[System.Windows.Forms.DataGridViewMisc#080](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#080)]  
   
 ### <a name="to-set-the-current-cell-programmatically"></a>Установка текущей ячейки программным способом  
   
 -   Задайте <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> свойство <xref:System.Windows.Forms.DataGridView> элемента управления. В следующем примере кода текущая ячейка имеет значение в строке 0, столбец 1.  
   
-     [!code-csharp[System.Windows.Forms.DataGridViewMisc#085](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#085)]
-     [!code-vb[System.Windows.Forms.DataGridViewMisc#085](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#085)]  
+     [!code-csharp[System.Windows.Forms.DataGridViewMisc#085](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#085)]
+     [!code-vb[System.Windows.Forms.DataGridViewMisc#085](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#085)]  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
@@ -50,5 +50,5 @@ ms.locfileid: "54495608"
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.CurrentCell%2A?displayProperty=nameWithType>
-- [Базовые характеристики столбцов, строк и ячеек элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)
-- [Режимы выделения содержимого элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/selection-modes-in-the-windows-forms-datagridview-control.md)
+- [Базовые характеристики столбцов, строк и ячеек элемента управления DataGridView в Windows Forms](basic-column-row-and-cell-features-wf-datagridview-control.md)
+- [Режимы выделения содержимого элемента управления DataGridView в Windows Forms](selection-modes-in-the-windows-forms-datagridview-control.md)

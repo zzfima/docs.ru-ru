@@ -9,12 +9,12 @@ helpviewer_keywords:
 - frames [Windows Forms], accessing
 - DOM [Windows Forms], accessing frames in managed HTML
 ms.assetid: cdeeaa22-0be4-4bbf-9a75-4ddc79199f8d
-ms.openlocfilehash: e42a4f63245c16bddc219f6fff8205121f6d705c
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: f02e5cf054f8891b134ee914b54e22e975d835a9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443228"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723794"
 ---
 # <a name="accessing-frames-in-the-managed-html-document-object-model"></a>Доступ к фреймам с использованием управляемой объектной модели HTML-документов
 Некоторые HTML-документы состоят из *кадров*, или windows, которые могут содержать другие документы HTML. Использование фреймов упрощает создание HTML-страниц, в которых одна или несколько частей страницы остаются статичными, например панель навигации, а в остальных фреймах содержимое постоянно изменяется.  
@@ -40,4 +40,4 @@ ms.locfileid: "56443228"
   
 ## <a name="see-also"></a>См. также
 - [\<кадр > элемент](https://developer.mozilla.org/docs/Web/HTML/Element/frame)
-- [Использование управляемой объектной модели HTML-документов](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)
+- [Использование управляемой объектной модели HTML-документов](using-the-managed-html-document-object-model.md)

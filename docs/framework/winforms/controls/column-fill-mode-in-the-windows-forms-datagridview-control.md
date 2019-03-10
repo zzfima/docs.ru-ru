@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column fill mode
 - data grids [Windows Forms], column fill mode
 ms.assetid: b4ef7411-ebf4-4e26-bb33-aecec90de80c
-ms.openlocfilehash: 823d3c06648ed37003176eab9df538d95f1ced69
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: bd6c27203284b392742b766b22f664b08a7b3a40
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304314"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722416"
 ---
 # <a name="column-fill-mode-in-the-windows-forms-datagridview-control"></a>Установка режимов заполнения для столбцов элемента управления DataGridView в Windows Forms
 В режиме заполнения столбцов элемент управления <xref:System.Windows.Forms.DataGridView> автоматически изменяет размер своих столбцов, чтобы они полностью заполняли доступную область отображения по ширине. Элемент управления не отображает горизонтальную полосу прокрутки, за исключением случаев, когда необходимо сохранить ширину каждого столбца равной или большей, чем значение его свойства <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>.  
@@ -39,8 +39,8 @@ ms.locfileid: "56304314"
  В следующем примере кода можно поэкспериментировать с различными значениями для свойств <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>, <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> и <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> различных столбцов. В этом примере элемент управления <xref:System.Windows.Forms.DataGridView> привязан к собственной коллекции <xref:System.Windows.Forms.DataGridView.Columns%2A>, а один столбец связан с каждым из свойств <xref:System.Windows.Forms.DataGridViewColumn.HeaderText%2A>, <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>, <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>, <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> и <xref:System.Windows.Forms.DataGridViewColumn.Width%2A>. Каждый из столбцов также представлен строкой в элементе управления, и изменение значений в строке приведет к обновлению свойства соответствующего столбца, чтобы можно было увидеть взаимодействие значений.  
   
 ### <a name="code"></a>Код  
- [!code-csharp[System.Windows.Forms.DataGridViewFillColumnsDemo#00](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewFillColumnsDemo/CS/fillcolumns.cs#00)]
- [!code-vb[System.Windows.Forms.DataGridViewFillColumnsDemo#00](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewFillColumnsDemo/vb/fillcolumns.vb#00)]  
+ [!code-csharp[System.Windows.Forms.DataGridViewFillColumnsDemo#00](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewFillColumnsDemo/CS/fillcolumns.cs#00)]
+ [!code-vb[System.Windows.Forms.DataGridViewFillColumnsDemo#00](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewFillColumnsDemo/vb/fillcolumns.vb#00)]  
   
 ### <a name="comments"></a>Комментарии  
  Использование этого демонстрационного приложения.  
@@ -76,4 +76,4 @@ ms.locfileid: "56304314"
 - <xref:System.Windows.Forms.DataGridViewColumn.Width%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumn.Resizable%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Control.RightToLeft%2A?displayProperty=nameWithType>
-- [Изменение размера столбцов и строк элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
+- [Изменение размера столбцов и строк элемента управления DataGridView в Windows Forms](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)

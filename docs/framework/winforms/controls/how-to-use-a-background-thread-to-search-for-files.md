@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Используйте фоновый поток для поиска файлов
+title: Практическое руководство. Используйте фоновый поток для поиска файлов
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,17 +10,17 @@ helpviewer_keywords:
 - threading [Windows Forms], custom controls
 - custom controls [Windows Forms], samples
 ms.assetid: 7fe3956f-5b8f-4f78-8aae-c9eb0b28f13a
-ms.openlocfilehash: a4bb4f0e1c54429e1d014050fc85d956493f9080
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5bf345e4195c64d3cf7fab7bf9a826dc99d47463
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536337"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723170"
 ---
-# <a name="how-to-use-a-background-thread-to-search-for-files"></a>Как выполнить Используйте фоновый поток для поиска файлов
-<xref:System.ComponentModel.BackgroundWorker> Компонент заменяет и расширяет его функциональные возможности <xref:System.Threading> пространства имен, однако <xref:System.Threading> пространство имен сохраняется для обратной совместимости и использования в будущем, если выбран. Дополнительные сведения см. в разделе [Общие сведения о компоненте BackgroundWorker](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md).  
+# <a name="how-to-use-a-background-thread-to-search-for-files"></a>Практическое руководство. Используйте фоновый поток для поиска файлов
+<xref:System.ComponentModel.BackgroundWorker> Компонент заменяет и расширяет его функциональные возможности <xref:System.Threading> пространства имен, однако <xref:System.Threading> пространство имен сохраняется для обратной совместимости и использования в будущем, если выбран. Дополнительные сведения см. в разделе [Общие сведения о компоненте BackgroundWorker](backgroundworker-component-overview.md).  
   
- Windows Forms использует однопотоковое подразделение (STA) модели так, как Windows Forms основан на Win32 для windows, которые являются по своей природе поддержкой потоков. Модель STA подразумевает окна могут создаваться в любом потоке, но не может переключать созданные потоки, что все вызовы функций к нему должно находиться в своем потоке создания. За пределами Windows Forms классы в .NET Framework используют бесплатный потоковой модели. Сведения о работе с потоками в платформе .NET Framework, см. в разделе [работа с потоками](../../../../docs/standard/threading/index.md).  
+ Windows Forms использует однопотоковое подразделение (STA) модели так, как Windows Forms основан на Win32 для windows, которые являются по своей природе поддержкой потоков. Модель STA подразумевает окна могут создаваться в любом потоке, но не может переключать созданные потоки, что все вызовы функций к нему должно находиться в своем потоке создания. За пределами Windows Forms классы в .NET Framework используют бесплатный потоковой модели. Сведения о работе с потоками в платформе .NET Framework, см. в разделе [работа с потоками](../../../standard/threading/index.md).  
   
  Модель STA требует, что все методы управления, которые должны вызывать не из необходимо маршалировать в (которые выполняются на) поток создания элемента управления. Базовый класс <xref:System.Windows.Forms.Control> предоставляет несколько методов (<xref:System.Windows.Forms.Control.Invoke%2A>, <xref:System.Windows.Forms.Control.BeginInvoke%2A>, и <xref:System.Windows.Forms.Control.EndInvoke%2A>) для этой цели. <xref:System.Windows.Forms.Control.Invoke%2A> осуществляет синхронные вызовы метода; <xref:System.Windows.Forms.Control.BeginInvoke%2A> вызывает асинхронный метод.  
   
@@ -764,5 +764,5 @@ namespace SampleUsage
   
 ## <a name="see-also"></a>См. также
 - <xref:System.ComponentModel.BackgroundWorker>
-- [Разработка пользовательских элементов управления Windows Forms в .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
-- [Обзор асинхронной модели, основанной на событиях](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [Разработка пользовательских элементов управления Windows Forms в .NET Framework](developing-custom-windows-forms-controls.md)
+- [Обзор асинхронной модели, основанной на событиях](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

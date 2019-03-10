@@ -5,15 +5,15 @@ helpviewer_keywords:
 - Windows Forms, mouse input
 - mouse [Windows Forms], input
 ms.assetid: 48fc5240-75a6-44bf-9fce-6aa21b49705a
-ms.openlocfilehash: ac6cdbdb690a1e5e6693f2e5d1c5d2236a643ddb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7817b6a414f313cd2891fe0e124e230643b06e07
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496011"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725332"
 ---
 # <a name="how-mouse-input-works-in-windows-forms"></a>Осуществление ввода мышью в Windows Forms
-Получение и обработка ввода с мыши является важной частью каждое приложение Windows. Можно обработать события мыши для выполнения действий в приложении, или использовать сведения о расположении мыши для проверки нажатия или других действий. Кроме того можно изменить способ, элементы управления в приложении обрабатывать ввод от мыши. В этом разделе описываются события мыши в подробности, а также как получать и изменять параметры системы для мыши. Дополнительные сведения о данных, передаваемых с помощью мыши вызываются события и порядок, в котором события щелчка мыши, см. в разделе [события мыши в Windows Forms](../../../docs/framework/winforms/mouse-events-in-windows-forms.md).  
+Получение и обработка ввода с мыши является важной частью каждое приложение Windows. Можно обработать события мыши для выполнения действий в приложении, или использовать сведения о расположении мыши для проверки нажатия или других действий. Кроме того можно изменить способ, элементы управления в приложении обрабатывать ввод от мыши. В этом разделе описываются события мыши в подробности, а также как получать и изменять параметры системы для мыши. Дополнительные сведения о данных, передаваемых с помощью мыши вызываются события и порядок, в котором события щелчка мыши, см. в разделе [события мыши в Windows Forms](mouse-events-in-windows-forms.md).  
   
 ## <a name="mouse-location-and-hit-testing"></a>Положение указателя мыши и попадания  
  Когда пользователь перемещает мышь, операционная система перемещает указатель мыши. Указатель содержит один пиксель, называется активной точкой, которой операционная система отслеживает и распознает как положения указателя. Когда пользователь перемещает мышь или нажимает кнопку мыши, <xref:System.Windows.Forms.Control> , содержащий <xref:System.Windows.Forms.Cursor.HotSpot%2A> вызывает соответствующее событие мыши. Вы можете получить текущее положение мыши с <xref:System.Windows.Forms.MouseEventArgs.Location%2A> свойство <xref:System.Windows.Forms.MouseEventArgs> при обработке события мыши или с помощью <xref:System.Windows.Forms.Cursor.Position%2A> свойство <xref:System.Windows.Forms.Cursor> класса. Можно впоследствии использовать сведения о расположении мыши для проверки нажатия и затем выполнить действие на основе расположения указателя мыши. Проверка нажатия возможности встроены некоторые элементы управления Windows Forms такие как <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.MonthCalendar> и <xref:System.Windows.Forms.DataGridView> элементов управления. Используется с соответствующее событие мыши, <xref:System.Windows.Forms.Control.MouseHover> к примеру, попадания очень полезен для определения, когда приложение должно выполнить определенное действие.  
@@ -53,6 +53,6 @@ ms.locfileid: "54496011"
 |<xref:System.Windows.Forms.SystemInformation.MouseWheelScrollLines%2A>|Возвращает число строк, прокручиваемых при вращении колесика мыши.|  
   
 ## <a name="see-also"></a>См. также
-- [Ввод данных мышью в приложении Windows Forms](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
-- [Захват мыши в Windows Forms](../../../docs/framework/winforms/mouse-capture-in-windows-forms.md)
-- [Указатели мыши в Windows Forms](../../../docs/framework/winforms/mouse-pointers-in-windows-forms.md)
+- [Ввод данных мышью в приложении Windows Forms](mouse-input-in-a-windows-forms-application.md)
+- [Захват мыши в Windows Forms](mouse-capture-in-windows-forms.md)
+- [Указатели мыши в Windows Forms](mouse-pointers-in-windows-forms.md)

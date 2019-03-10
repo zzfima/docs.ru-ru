@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Предоставление справки в приложении Windows
+title: Практическое руководство. Предоставление справки в приложении Windows
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Help [Windows Forms], Windows applications
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - forms [Windows Forms], providing Help
 ms.assetid: 7c4e5cec-2bd2-4f0b-8d75-c2b88929bd61
-ms.openlocfilehash: 00ee19f343d8f471d84f3dc8180e61b7354e3985
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bb05842eb7cd30611c68f685ea3dae9200d87d35
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738606"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724938"
 ---
-# <a name="how-to-provide-help-in-a-windows-application"></a>Как выполнить Предоставление справки в приложении Windows
+# <a name="how-to-provide-help-in-a-windows-application"></a>Практическое руководство. Предоставление справки в приложении Windows
 Можно использовать для включения <xref:System.Windows.Forms.HelpProvider> компонента для присоединения разделов справки в файле справки для определенных элементов управления в формах Windows Forms. Файл справки может быть в формате HTML, HTMLHelp 1.x или следующих версий.  
   
 > [!NOTE]
@@ -53,10 +53,10 @@ ms.locfileid: "54738606"
 > [!IMPORTANT]
 >  Обязательно проверьте все сведения, отправляемые с клиента, перед их использованием в приложении. Злоумышленники могут попытаться послать или вставить исполняемый сценарий, инструкции SQL или другой код. Перед отображением ввода пользователя, сохранением его в базе данных или работой с ним убедитесь, что он не содержит потенциально небезопасных сведений. Например, можно порекомендовать использование регулярного выражения для поиска ключевых слов, таких как SCRIPT, при получении данных от пользователя.  
   
- Можно также использовать <xref:System.Windows.Forms.HelpProvider> компонент для отображения всплывающей справки, даже если он настроен для отображения файлов справки для элементов управления Windows Forms. Дополнительные сведения см. в разделе [Как Отображение всплывающей справки](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md).  
+ Можно также использовать <xref:System.Windows.Forms.HelpProvider> компонент для отображения всплывающей справки, даже если он настроен для отображения файлов справки для элементов управления Windows Forms. Дополнительные сведения см. в разделе [Как Отображение всплывающей справки](how-to-display-pop-up-help.md).  
   
 ## <a name="see-also"></a>См. также
-- [Практическое руководство. Отображение всплывающей справки](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md)
-- [Отображение справки по элементам управления с помощью подсказок](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md)
-- [Интеграция справки пользователя в формы Windows Forms](../../../../docs/framework/winforms/advanced/integrating-user-help-in-windows-forms.md)
-- [Windows Forms](../../../../docs/framework/winforms/index.md)
+- [Практическое руководство. Отображение всплывающей справки](how-to-display-pop-up-help.md)
+- [Отображение справки по элементам управления с помощью подсказок](control-help-using-tooltips.md)
+- [Интеграция справки пользователя в формы Windows Forms](integrating-user-help-in-windows-forms.md)
+- [Windows Forms](../index.md)

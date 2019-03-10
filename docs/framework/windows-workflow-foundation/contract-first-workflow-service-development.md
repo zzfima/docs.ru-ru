@@ -2,48 +2,48 @@
 title: Разработка службы рабочих процессов на основе контракта
 ms.date: 03/30/2017
 ms.assetid: e5dbaa7b-005f-4330-848d-58ac4f42f093
-ms.openlocfilehash: 3b015b8c58e5ee3acbb1277d00523a85ee96da46
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c326f91bc8673180db755a91ab080bcf0ba72052
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373066"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721792"
 ---
 # <a name="contract-first-workflow-service-development"></a>Разработка службы рабочих процессов на основе контракта
-Начиная с [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Windows Workflow Foundation (WF) отличается улучшенной интеграцией между веб-службами и рабочими процессами в форме разработки рабочего процесса первого контракта. Средство разработки рабочих процессов на основе контракта позволяет создать контракт в Code First. Затем это средство автоматически создает в области элементов шаблон действия для каждой операции в контракте. В этом разделе содержатся общие сведения о том, как действия и свойства в службе рабочих процессов сопоставляются с атрибутами контракта службы. Для пошаговых инструкций по созданию рабочего процесса первого контракта службы, см. в разделе [как: Создание службы рабочего процесса, который использует существующий контракт службы](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
+Начиная с [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Windows Workflow Foundation (WF) отличается улучшенной интеграцией между веб-службами и рабочими процессами в форме разработки рабочего процесса первого контракта. Средство разработки рабочих процессов на основе контракта позволяет создать контракт в Code First. Затем это средство автоматически создает в области элементов шаблон действия для каждой операции в контракте. В этом разделе содержатся общие сведения о том, как действия и свойства в службе рабочих процессов сопоставляются с атрибутами контракта службы. Для пошаговых инструкций по созданию рабочего процесса первого контракта службы, см. в разделе [как: Создание службы рабочего процесса, который использует существующий контракт службы](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
   
 ## <a name="in-this-topic"></a>Содержание раздела  
   
--   [Сопоставление атрибутов контракта службы с атрибутами рабочего процесса](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#MappingAttributes)  
+-   [Сопоставление атрибутов контракта службы с атрибутами рабочего процесса](contract-first-workflow-service-development.md#MappingAttributes)  
   
-    -   [Атрибуты контракта службы](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ServiceContract)  
+    -   [Атрибуты контракта службы](contract-first-workflow-service-development.md#ServiceContract)  
   
-    -   [Атрибуты контракта операции](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#OperationContract)  
+    -   [Атрибуты контракта операции](contract-first-workflow-service-development.md#OperationContract)  
   
-    -   [Атрибуты контракта сообщения](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#MessageContract)  
+    -   [Атрибуты контракта сообщения](contract-first-workflow-service-development.md#MessageContract)  
   
-    -   [Атрибуты контракта данных](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#DataContract)  
+    -   [Атрибуты контракта данных](contract-first-workflow-service-development.md#DataContract)  
   
-    -   [Атрибуты контракта ошибок](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#FaultContract)  
+    -   [Атрибуты контракта ошибок](contract-first-workflow-service-development.md#FaultContract)  
   
--   [Дополнительная поддержка и сведения о реализации](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#AdditionalSupport)  
+-   [Дополнительная поддержка и сведения о реализации](contract-first-workflow-service-development.md#AdditionalSupport)  
   
-    -   [Неподдерживаемые возможности контракта службы](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#UnsupportedFeatures)  
+    -   [Неподдерживаемые возможности контракта службы](contract-first-workflow-service-development.md#UnsupportedFeatures)  
   
-    -   [Создание настроенных действий обмена сообщениями](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ActivityGeneration)  
+    -   [Создание настроенных действий обмена сообщениями](contract-first-workflow-service-development.md#ActivityGeneration)  
   
 ## <a name="MappingAttributes"></a> Сопоставление атрибутов контракта службы с атрибутами рабочего процесса  
  Таблицы в следующих разделах показывают различные атрибуты и свойства WCF, а также как они сопоставляются с действиями по обмену сообщениями и их свойствами в рабочем процессе на основе контракта.  
   
--   [Атрибуты контракта службы](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ServiceContract)  
+-   [Атрибуты контракта службы](contract-first-workflow-service-development.md#ServiceContract)  
   
--   [Атрибуты контракта операции](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#OperationContract)  
+-   [Атрибуты контракта операции](contract-first-workflow-service-development.md#OperationContract)  
   
--   [Атрибуты контракта сообщения](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#MessageContract)  
+-   [Атрибуты контракта сообщения](contract-first-workflow-service-development.md#MessageContract)  
   
--   [Атрибуты контракта данных](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#DataContract)  
+-   [Атрибуты контракта данных](contract-first-workflow-service-development.md#DataContract)  
   
--   [Атрибуты контракта ошибок](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#FaultContract)  
+-   [Атрибуты контракта ошибок](contract-first-workflow-service-development.md#FaultContract)  
   
 ### <a name="ServiceContract"></a> Атрибуты контракта службы  
   
@@ -109,9 +109,9 @@ ms.locfileid: "57373066"
   
 ## <a name="AdditionalSupport"></a> Дополнительная поддержка и сведения о реализации  
   
--   [Неподдерживаемые возможности контракта службы](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#UnsupportedFeatures)  
+-   [Неподдерживаемые возможности контракта службы](contract-first-workflow-service-development.md#UnsupportedFeatures)  
   
--   [Создание настроенных действий обмена сообщениями](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ActivityGeneration)  
+-   [Создание настроенных действий обмена сообщениями](contract-first-workflow-service-development.md#ActivityGeneration)  
   
 ### <a name="UnsupportedFeatures"></a> Неподдерживаемые возможности контракта службы  
   

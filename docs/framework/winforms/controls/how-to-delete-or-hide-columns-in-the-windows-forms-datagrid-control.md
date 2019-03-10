@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Удаление или скрытие столбцов элемента управления DataGrid в Windows Forms
+title: Практическое руководство. Удаление или скрытие столбцов элемента управления DataGrid в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - columns [Windows Forms], deleting in data grids
 - DataGrid control [Windows Forms], hiding columns
 ms.assetid: bcd0dd96-6687-4c48-b0e1-d5287b93ac91
-ms.openlocfilehash: 635fbc112a241c4c8b17d2b49c22042c6bd59a21
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 42a697992d4c6c75fe5958a7a17d6df8a7b4f6e4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653948"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724531"
 ---
-# <a name="how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control"></a>Как выполнить Удаление или скрытие столбцов элемента управления DataGrid в Windows Forms
+# <a name="how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control"></a>Практическое руководство. Удаление или скрытие столбцов элемента управления DataGrid в Windows Forms
 > [!NOTE]
->  Элемент управления <xref:System.Windows.Forms.DataGridView> заменяет элемент управления <xref:System.Windows.Forms.DataGrid> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.DataGrid> можно сохранить для обратной совместимости и использования в будущем. Дополнительные сведения см. в разделе [Различия элементов управления DataGridView и DataGrid в Windows Forms](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+>  Элемент управления <xref:System.Windows.Forms.DataGridView> заменяет элемент управления <xref:System.Windows.Forms.DataGrid> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.DataGrid> можно сохранить для обратной совместимости и использования в будущем. Дополнительные сведения см. в разделе [Различия элементов управления DataGridView и DataGrid в Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
  Можно программно удалить или скрыть столбцы в Windows Forms <xref:System.Windows.Forms.DataGrid> элемента управления с помощью свойств и методов <xref:System.Windows.Forms.GridColumnStylesCollection> и <xref:System.Windows.Forms.DataGridColumnStyle> объектов (которые являются членами <xref:System.Windows.Forms.DataGridTableStyle> класса).  
   
@@ -125,5 +125,5 @@ ms.locfileid: "54653948"
     ```  
   
 ## <a name="see-also"></a>См. также
-- [Практическое руководство. Изменение данных, отображаемых в элементе управления DataGrid Windows Forms во время выполнения](../../../../docs/framework/winforms/controls/change-displayed-data-at-run-time-wf-datagrid-control.md)
-- [Практическое руководство. Добавление таблиц и столбцов элемента управления DataGrid в Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [Практическое руководство. Изменение данных, отображаемых в элементе управления DataGrid Windows Forms во время выполнения](change-displayed-data-at-run-time-wf-datagrid-control.md)
+- [Практическое руководство. Добавление таблиц и столбцов элемента управления DataGrid в Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)

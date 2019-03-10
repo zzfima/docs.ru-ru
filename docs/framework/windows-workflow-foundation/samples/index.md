@@ -2,12 +2,6 @@
 title: Пример документации Windows Workflow (WF)
 ms.date: 09/24/2018
 ms.assetid: e0aef017-4381-4f2f-a904-6e1ed898687e
-ms.openlocfilehash: e451ecd18b68ba42aa2c8a71e394077ee6b492ce
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201339"
 ---
 # <a name="windows-workflow-wf-samples"></a>Образцы Windows Workflow (WF)
 
@@ -20,8 +14,8 @@ ms.locfileid: "50201339"
 
 ## <a name="in-this-section"></a>Содержание раздела
 
-[Приложение](../../../../docs/framework/windows-workflow-foundation/samples/application.md) -предоставляет образцы, связанные с приложениями рабочих процессов.
+[Приложение](application.md) -предоставляет образцы, связанные с приложениями рабочих процессов.
 
-[Основные](../../../../docs/framework/windows-workflow-foundation/samples/basic.md) -примеры, демонстрирующие основные функциональные возможности Windows Workflow Foundation (WF).
+[Основные](basic.md) -примеры, демонстрирующие основные функциональные возможности Windows Workflow Foundation (WF).
 
-[Сценарий](../../../../docs/framework/windows-workflow-foundation/samples/scenario.md) -предоставляет примеры сценариев для Windows Workflow Foundation (WF).
+[Сценарий](scenario.md) -предоставляет примеры сценариев для Windows Workflow Foundation (WF).

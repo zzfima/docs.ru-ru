@@ -10,15 +10,15 @@ helpviewer_keywords:
 - paths [Windows Forms], drawing
 - drawing [Windows Forms], paths
 ms.assetid: a5500dec-666c-41fd-9da3-2169dd89c5eb
-ms.openlocfilehash: 55cd3284f331e9793a0bb73f26ed16bbd99fa116
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b6f0ebd500aa3503c0c0d473ebe21a61f4438862
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685656"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720427"
 ---
 # <a name="graphics-paths-in-gdi"></a>Контуры в GDI+
-Пути сформированном путем объединения линии, прямоугольники и простой кривых. Как следует из [Общие сведения о векторной графики](../../../../docs/framework/winforms/advanced/vector-graphics-overview.md) что следующих основных блоков оказались наиболее подходят для рисования изображений:  
+Пути сформированном путем объединения линии, прямоугольники и простой кривых. Как следует из [Общие сведения о векторной графики](vector-graphics-overview.md) что следующих основных блоков оказались наиболее подходят для рисования изображений:  
   
 -   Прямых линий  
   
@@ -36,7 +36,7 @@ ms.locfileid: "54685656"
   
  В GDI + <xref:System.Drawing.Drawing2D.GraphicsPath> объект позволяет собирать последовательность из этих блоков в единое целое. Вся последовательность линии, прямоугольники, многоугольники и кривых могут быть нарисована за одно обращение <xref:System.Drawing.Graphics.DrawPath%2A> метод <xref:System.Drawing.Graphics> класса. Ниже показан путь, полученное путем объединения строки, дуги, сплайна Безье и фундаментальный сплайн.  
   
- ![Путь](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art14.gif "Aboutgdip02_art14")  
+ ![Путь](./media/aboutgdip02-art14.gif "Aboutgdip02_art14")  
   
 ## <a name="using-a-path"></a>С помощью пути  
  <xref:System.Drawing.Drawing2D.GraphicsPath> Класс предоставляет следующие методы для создания последовательность элементов для отрисовки: <xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A>, <xref:System.Drawing.Drawing2D.GraphicsPath.AddRectangle%2A>, <xref:System.Drawing.Drawing2D.GraphicsPath.AddEllipse%2A>, <xref:System.Drawing.Drawing2D.GraphicsPath.AddArc%2A>, <xref:System.Drawing.Drawing2D.GraphicsPath.AddPolygon%2A>, <xref:System.Drawing.Drawing2D.GraphicsPath.AddCurve%2A> (для фундаментальные сплайны), и <xref:System.Drawing.Drawing2D.GraphicsPath.AddBezier%2A>. Каждый из этих методов перегружена; то есть каждый метод поддерживает несколько различными списками параметров. Например, один из вариантов <xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A> метод получает четырех целых чисел, а в другом варианте <xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A> метод получает два <xref:System.Drawing.Point> объектов.  
@@ -45,30 +45,30 @@ ms.locfileid: "54685656"
   
  Чтобы нарисовать контур, вам потребуется <xref:System.Drawing.Graphics> объекта, <xref:System.Drawing.Pen> объекта и <xref:System.Drawing.Drawing2D.GraphicsPath> объекта. <xref:System.Drawing.Graphics> Предоставляет <xref:System.Drawing.Graphics.DrawPath%2A> метод и <xref:System.Drawing.Pen> объект сохраняет атрибуты, например, ширина и цвет линии, используемый для визуализации путь. <xref:System.Drawing.Drawing2D.GraphicsPath> Объект сохраняет последовательность линий и кривых линий, составляющих путь. <xref:System.Drawing.Pen> Объекта и <xref:System.Drawing.Drawing2D.GraphicsPath> объекта передаются как аргументы для <xref:System.Drawing.Graphics.DrawPath%2A> метод. В следующем примере рисуется путь, который состоит из строки, эллипс и сплайн Безье:  
   
- [!code-csharp[LinesCurvesAndShapes#101](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#101)]
- [!code-vb[LinesCurvesAndShapes#101](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#101)]  
+ [!code-csharp[LinesCurvesAndShapes#101](~/samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#101)]
+ [!code-vb[LinesCurvesAndShapes#101](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#101)]  
   
  На следующем рисунке путь.  
   
- ![Путь](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art15.gif "Aboutgdip02_art15")  
+ ![Путь](./media/aboutgdip02-art15.gif "Aboutgdip02_art15")  
   
  Помимо добавления линии, прямоугольники и кривые к пути, можно добавить пути к пути. Это позволяет объединять существующие пути для формирования больших и сложных путей.  
   
- [!code-csharp[LinesCurvesAndShapes#102](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#102)]
- [!code-vb[LinesCurvesAndShapes#102](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#102)]  
+ [!code-csharp[LinesCurvesAndShapes#102](~/samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#102)]
+ [!code-vb[LinesCurvesAndShapes#102](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#102)]  
   
  Два других элемента, можно добавить в путь: строку и сектор. Сектор — часть внутреннюю часть эллипса. В следующем примере создается путь из дуги, фундаментальный сплайн, строка и сектора:  
   
- [!code-csharp[LinesCurvesAndShapes#103](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#103)]
- [!code-vb[LinesCurvesAndShapes#103](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#103)]  
+ [!code-csharp[LinesCurvesAndShapes#103](~/samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#103)]
+ [!code-vb[LinesCurvesAndShapes#103](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#103)]  
   
  На следующем рисунке путь. Обратите внимание, что путь не обязательно должен быть подключен; arc, фундаментальный сплайн, строка и круговой разделены.  
   
- ![Пути](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art16.gif "Aboutgdip02_Art16")  
+ ![Пути](./media/aboutgdip02-art16.gif "Aboutgdip02_Art16")  
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Drawing.Drawing2D.GraphicsPath?displayProperty=nameWithType>
 - <xref:System.Drawing.Point?displayProperty=nameWithType>
-- [Линии, кривые и фигуры](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)
-- [Практическое руководство. Создание объектов Graphics для рисования](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)
-- [Построение и рисование контуров](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)
+- [Линии, кривые и фигуры](lines-curves-and-shapes.md)
+- [Практическое руководство. Создание объектов Graphics для рисования](how-to-create-graphics-objects-for-drawing.md)
+- [Построение и рисование контуров](constructing-and-drawing-paths.md)

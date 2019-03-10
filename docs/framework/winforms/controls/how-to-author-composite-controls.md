@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user controls [Windows Forms], inheriting from
 - composite controls [Windows Forms], creating
 ms.assetid: 79c9cf05-5ab6-4a18-886d-88a64748b098
-ms.openlocfilehash: b2ccbfaf8305270116e3a85578e3e560ed0b4836
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: cd82200706c98df18b1b9f464ebd62d797eea960
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56584217"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724468"
 ---
 # <a name="how-to-author-composite-controls"></a>Практическое руководство. Создание составных элементов управления
 Составные элементы управления можно применять различным образом. Их можно создать как часть проекта приложения рабочего стола Windows и использовать только в формах проекта. Или их можно создать в проекте библиотеки элементов управления Windows, скомпилировать проект в сборку и использовать элементы управления в других проектах. Можно даже от них наследовать и использовать визуальное наследование для их быстрой настройки.  
@@ -79,10 +79,10 @@ ms.locfileid: "56584217"
      Вы увидите вложенные элементы управления, унаследованные от составного элемента управления в библиотеке DLL, и сможете изменить свойства элементов управления, для свойства **Модификаторы** которых установлено значение **Открытый**. Свойства элемента управления, для свойства **Модификаторы** которого установлено значение **Закрытый**, менять нельзя.  
   
 ## <a name="see-also"></a>См. также
-- [Пошаговое руководство: Создание составного элемента управления с помощью Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [Пошаговое руководство: Создание составного элемента управления с помощью VisualC#](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)
-- [Пошаговое руководство: Наследование элементов управления Windows Forms с помощью Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
-- [Пошаговое руководство: Наследование элементов управления Windows Forms с помощью VisualC#](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
-- [Рекомендации относительно типов элементов управления](../../../../docs/framework/winforms/controls/control-type-recommendations.md)
-- [Практическое руководство. Автор элементы управления для форм Windows Forms](../../../../docs/framework/winforms/controls/how-to-author-controls-for-windows-forms.md)
-- [Разновидности пользовательских элементов управления](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+- [Пошаговое руководство: Создание составного элемента управления с помощью Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [Пошаговое руководство: Создание составного элемента управления с помощью VisualC#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [Пошаговое руководство: Наследование элементов управления Windows Forms с помощью Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
+- [Пошаговое руководство: Наследование элементов управления Windows Forms с помощью VisualC#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [Рекомендации относительно типов элементов управления](control-type-recommendations.md)
+- [Практическое руководство. Автор элементы управления для форм Windows Forms](how-to-author-controls-for-windows-forms.md)
+- [Разновидности пользовательских элементов управления](varieties-of-custom-controls.md)

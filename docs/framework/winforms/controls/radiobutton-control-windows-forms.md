@@ -8,27 +8,27 @@ helpviewer_keywords:
 - radio buttons
 - RadioButton control [Windows Forms]
 ms.assetid: e895b2a5-9bcb-4486-b165-eaf4c3ea9644
-ms.openlocfilehash: e62f3dddb75a5652f1edb3ef5c6bfb7d8029210d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cf2da32dd286e03b89cfa59e09d38eceb030f5ea
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534971"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725312"
 ---
 # <a name="radiobutton-control-windows-forms"></a>Элемент управления RadioButton (Windows Forms)
-Windows Forms `RadioButton` элементы управления представляют собой набор из двух или более взаимоисключающих вариантов для пользователя. Переключатели и флажки могут показаться работают так же, является важным отличием: когда пользователь выбирает переключатель, другие переключатели в той же группе, не могут быть выбраны также.  
+Windows Forms `RadioButton` элементов управления пользователь получает набор из двух или более взаимоисключающих вариантов. Переключатели и флажки могут показаться работают так же, является важным отличием: при выборе типа "переключатель", другие переключатели в той же группе, не могут быть выбраны также.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Общие сведения об элементе управления RadioButton](../../../../docs/framework/winforms/controls/radiobutton-control-overview-windows-forms.md)  
- Описывается элемент управления, его основные возможности и свойства.  
+ [Общие сведения об элементе управления RadioButton](radiobutton-control-overview-windows-forms.md)  
+ Описание элемента управления, его основных возможностей и свойств.  
   
- [Практическое руководство. Создание переключателя для выбора одной из нескольких установок на базе элементов управления RadioButton в Windows Forms](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)  
- Описание способов переключателей, из которых можно выбрать только один набор.  
+ [Практическое руководство. Группа элементов управления RadioButton Windows Forms выступать в качестве набора](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)  
+ В этой статье описывается переключателей набор, из которых можно выбрать только один.  
   
 ## <a name="reference"></a>Ссылка  
  Класс <xref:System.Windows.Forms.RadioButton>  
  Описание класса и всех его членов.  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Элементы управления для использования в Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)  
  Полный список элементов управления Windows Forms со ссылками на информацию об их применении.

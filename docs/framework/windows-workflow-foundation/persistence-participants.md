@@ -2,12 +2,12 @@
 title: Участники сохраняемости
 ms.date: 03/30/2017
 ms.assetid: f84d2d5d-1c1b-4f19-be45-65b552d3e9e3
-ms.openlocfilehash: 66178adda593192678542ebf5ed8906e0dffc908
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a8392bd756d8315a72d9df131476414f8982cf03
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569509"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723768"
 ---
 # <a name="persistence-participants"></a>Участники сохраняемости
 Участник сохраняемости может участвовать в операции сохраняемости («Сохранение» или «Загрузка»), запущенной узлом приложения. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] Поставляется с двумя абстрактными классами **PersistenceParticipant** и **PersistenceIOParticipant**, который можно использовать для создания участника сохраняемости. Участник сохраняемости создается как производное от одного из этих классов, реализует методы, представляющие интерес, а затем добавляет экземпляр класса в коллекцию <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> узла <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Узел приложения может искать такие расширения рабочих процессов при сохранении экземпляра рабочего процесса и в нужное время вызывать соответствующие методы для участников сохраняемости.  
@@ -58,7 +58,7 @@ ms.locfileid: "54569509"
   
 ## <a name="in-this-section"></a>В этом разделе  
   
--   [Практическое руководство. Создание настраиваемого участника сохраняемости](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-persistence-participant.md)  
+-   [Практическое руководство. Создание настраиваемого участника сохраняемости](how-to-create-a-custom-persistence-participant.md)  
   
 ## <a name="see-also"></a>См. также
-- [Расширяемость хранилища](../../../docs/framework/windows-workflow-foundation/store-extensibility.md)
+- [Расширяемость хранилища](store-extensibility.md)

@@ -2,12 +2,12 @@
 title: Особенности возможностей Windows Workflow Foundation
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: b7fed8c40c998ff0ecc0080139690614d985fc42
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 4b9a9c5c6395ed27845c8b618e49150a02aa3bda
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492599"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721857"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Особенности возможностей Windows Workflow Foundation
 
@@ -43,9 +43,9 @@ ms.locfileid: "57492599"
 
 - Образцы <xref:System.ServiceModel.WorkflowServiceHost> приведены в следующих разделах:
 
-    - [Выполнение](samples/execution.md)
+    - [Выполнение](./samples/execution.md)
 
-    - Приложение: [Управление приостановленным экземпляром](samples/suspended-instance-management.md)
+    - Приложение: [Управление приостановленным экземпляром](./samples/suspended-instance-management.md)
 
 - [Общие сведения о размещении служб рабочих процессов](../wcf/feature-details/hosting-workflow-services-overview.md)
 
@@ -121,7 +121,7 @@ ms.locfileid: "57492599"
 
 - Пользователи не смогли указать xsi:type, который должен появиться в канале, например уменьшить размер экземпляра сериализации в канале.
 
-[DataContractResolver](../../../docs/framework/wcf/samples/datacontractresolver.md) решает эти проблемы в .NET 4.5.
+[DataContractResolver](../wcf/samples/datacontractresolver.md) решает эти проблемы в .NET 4.5.
 
 ### <a name="getting-started"></a>Начало работы
 
@@ -131,9 +131,9 @@ ms.locfileid: "57492599"
 
 - Образцы:
 
-    - [DataContractResolver](../../../docs/framework/wcf/samples/datacontractresolver.md)
+    - [DataContractResolver](../wcf/samples/datacontractresolver.md)
 
-    - [Атрибут KnownAssemblyAttribute](../../../docs/framework/wcf/samples/knownassemblyattribute.md)
+    - [Атрибут KnownAssemblyAttribute](../wcf/samples/knownassemblyattribute.md)
 
 ### <a name="data-contract-resolver-scenarios"></a>Сценарии арбитра контрактов данных
 
@@ -163,9 +163,9 @@ ms.locfileid: "57492599"
 
 - Образцы:
 
-    - [Обработка ошибок в действии блок-схемы с помощью TryCatch](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
+    - [Обработка ошибок в действии блок-схемы с помощью TryCatch](./samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
 
-    - [Процесс найма](../../../docs/framework/windows-workflow-foundation/samples/hiring-process.md)
+    - [Процесс найма](./samples/hiring-process.md)
 
 - Документация по конструктору:
 
@@ -197,9 +197,9 @@ ms.locfileid: "57492599"
 
 - Образцы:
 
-    - [Процесс найма](../../../docs/framework/windows-workflow-foundation/samples/hiring-process.md)
+    - [Процесс найма](./samples/hiring-process.md)
 
-    - [Процесс корпоративных закупок](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md)
+    - [Процесс корпоративных закупок](./samples/corporate-purchase-process.md)
 
 - Документация по конструктору:
 
@@ -237,7 +237,7 @@ ms.locfileid: "57492599"
 
 - В Visual Studio 2012 создайте консольное приложение рабочего процесса. В конструкторе рабочих процессов добавьте действие <xref:System.Activities.Statements.TryCatch>.
 
-- Пример: [Обработка ошибок в действии блок-схемы с помощью TryCatch](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
+- Пример: [Обработка ошибок в действии блок-схемы с помощью TryCatch](./samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
 
 - Документация по конструктору: [Конструкторы действий обработки ошибок](/visualstudio/workflow-designer/error-handling-activity-designers)
 
@@ -253,7 +253,7 @@ ms.locfileid: "57492599"
 
 - В Visual Studio 2012 создайте консольное приложение рабочего процесса. В конструкторе рабочих процессов добавьте действие <xref:System.Activities.Statements.Pick>.
 
-- Пример: [Использование действия Pick](../../../docs/framework/windows-workflow-foundation/samples/using-the-pick-activity.md)
+- Пример: [Использование действия Pick](./samples/using-the-pick-activity.md)
 
 - Документация по конструктору: [Конструктор действия Pick](/visualstudio/workflow-designer/pick-activity-designer)
 
@@ -283,9 +283,9 @@ ms.locfileid: "57492599"
 
 ### <a name="getting-started"></a>Начало работы
 
-1. Документация: [Routing](../../../docs/framework/wcf/feature-details/routing.md)
+1. Документация: [Routing](../wcf/feature-details/routing.md)
 
-2. Образцы: [Службы маршрутизации &#91;образцы WCF&#93;](../../../docs/framework/wcf/samples/routing-services.md)
+2. Образцы: [Службы маршрутизации &#91;образцы WCF&#93;](../wcf/samples/routing-services.md)
 
 3. Блог: [Правила маршрутизации!](https://go.microsoft.com/fwlink/?LinkId=204956)
 
@@ -317,9 +317,9 @@ ms.locfileid: "57492599"
 
 ### <a name="getting-started"></a>Начало работы
 
-- Документация: [Обнаружение WCF](../../../docs/framework/wcf/feature-details/wcf-discovery.md)
+- Документация: [Обнаружение WCF](../wcf/feature-details/wcf-discovery.md)
 
-- Образцы: [Обнаружение (образцы)](../../../docs/framework/wcf/samples/discovery-samples.md)
+- Образцы: [Обнаружение (образцы)](../wcf/samples/discovery-samples.md)
 
 ### <a name="discovery-scenarios"></a>Сценарии обнаружения
 
@@ -343,9 +343,9 @@ ms.locfileid: "57492599"
 
     4. Просмотрите события отслеживания рабочего процесса в средстве просмотра событий.
 
-3. Образцы: [Отслеживание](../../../docs/framework/windows-workflow-foundation/samples/tracking.md)
+3. Образцы: [Отслеживание](./samples/tracking.md)
 
-4. Основная документация: [Отслеживание и трассировка рабочих процессов](../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+4. Основная документация: [Отслеживание и трассировка рабочих процессов](workflow-tracking-and-tracing.md)
 
 ## <a name="sql-workflow-instance-store"></a>Хранилище экземпляров рабочих процессов SQL
 
@@ -355,6 +355,6 @@ ms.locfileid: "57492599"
 
 1. В Visual Studio 2012, создать рабочий процесс, который содержит явный или неявный <xref:System.Activities.Statements.Persist> действия. Добавьте поведение <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> на узел службы рабочего процесса. Это можно сделать в коде или в файле конфигурации приложения.
 
-2. Образцы: [Сохраняемость](../../../docs/framework/windows-workflow-foundation/samples/persistence.md)
+2. Образцы: [Сохраняемость](./samples/persistence.md)
 
-3. Основная документация: [Store экземпляра рабочего процесса SQL](../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).
+3. Основная документация: [Store экземпляра рабочего процесса SQL](sql-workflow-instance-store.md).
