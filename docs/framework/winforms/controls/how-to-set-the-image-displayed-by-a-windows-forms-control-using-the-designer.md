@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Задайте изображения, отображаемого элементом управления, с помощью конструктора форм Windows
+title: Практическое руководство. Задайте изображения, отображаемого элементом управления, с помощью конструктора форм Windows
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Button control [Windows Forms], images
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 - setting images [Windows Forms], Windows Forms controls
 ms.assetid: ae80d07a-e469-4251-90ca-df71f5852454
-ms.openlocfilehash: 0f8c2ef747a160adc292a3330a4478b7a8c432d7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 265fc88fb2bb9aef0696ea0d7e707ae07084df1d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562314"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702261"
 ---
-# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a>Как выполнить Задайте изображения, отображаемого элементом управления, с помощью конструктора форм Windows
+# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a>Практическое руководство. Задайте изображения, отображаемого элементом управления, с помощью конструктора форм Windows
 Несколько элементов управления Windows Forms можно отображать изображения. Изображение может быть значок, поясняющий назначение элемента управления, такие как значок диска на кнопку, обозначающая **Сохранить** команды. Кроме того значок может быть фоновое изображение для предоставления необходимого внешнего вида элемента управления.  
   
 > [!NOTE]
@@ -26,7 +26,7 @@ ms.locfileid: "54562314"
   
 1.  В **свойства** выберите **изображение** или **BackgroundImage** свойство элемента управления, нажмите кнопку с многоточием ()  
   
-     ![Снимок экрана VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")  
+     ![Снимок экрана VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")  
   
      ) для отображения **Выбор ресурса** диалоговое окно.  
   
@@ -36,4 +36,4 @@ ms.locfileid: "54562314"
 - <xref:System.Drawing.Image.FromFile%2A>
 - <xref:System.Drawing.Image>
 - <xref:System.Windows.Forms.Control.BackgroundImage%2A>
-- [Создание меток и назначение сочетаний клавиш для элементов управления Windows Forms](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [Создание меток и назначение сочетаний клавиш для элементов управления Windows Forms](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

@@ -2,16 +2,16 @@
 title: Практическое руководство. создать настраиваемое хранилище экземпляров
 ms.date: 03/30/2017
 ms.assetid: 593c4e9d-8a49-4e12-8257-cee5e6b4c075
-ms.openlocfilehash: de3602b928a861500e7984fe88bbb2176d58b840
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: cacee7d95a543525ba031de0cc0636d05fc72fc8
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57503194"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707773"
 ---
 # <a name="how-to-create-a-custom-instance-store"></a>Практическое руководство. создать настраиваемое хранилище экземпляров
 
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] содержит <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> - хранилище экземпляров SQL Server, которое используется для сохранения данных рабочих процессов. Если приложению необходимо сохранить данные рабочего процесса в другой среде передачи, например базе данных или файловой системе, вы можете создать настраиваемое хранилище экземпляров. Пользовательское хранилище экземпляров создается путем расширения абстрактного класса <xref:System.Runtime.DurableInstancing.InstanceStore> и реализации методов, которые необходимы для реализации. Полную реализацию пользовательского хранилища экземпляров, см. в разделе [процесс корпоративных закупок](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md) образца.
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] содержит <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> - хранилище экземпляров SQL Server, которое используется для сохранения данных рабочих процессов. Если приложению необходимо сохранить данные рабочего процесса в другой среде передачи, например базе данных или файловой системе, вы можете создать настраиваемое хранилище экземпляров. Пользовательское хранилище экземпляров создается путем расширения абстрактного класса <xref:System.Runtime.DurableInstancing.InstanceStore> и реализации методов, которые необходимы для реализации. Полную реализацию пользовательского хранилища экземпляров, см. в разделе [процесс корпоративных закупок](./samples/corporate-purchase-process.md) образца.
 
 ## <a name="implementing-the-begintrycommand-method"></a>Реализация метода BeginTryCommand
 
@@ -226,11 +226,11 @@ ms.locfileid: "57503194"
 
 ## <a name="using-a-custom-instance-store"></a>Использование пользовательского хранилища экземпляров
 
-Чтобы реализовать пользовательское хранилище экземпляров, присвойте <xref:System.Activities.WorkflowApplication.InstanceStore%2A> экземпляр хранилища экземпляров и реализуйте метод <xref:System.Activities.WorkflowApplication.PersistableIdle%2A>. См. в разделе [как: Создание и запуск длительно выполняющегося рабочего процесса](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md) учебнике.
+Чтобы реализовать пользовательское хранилище экземпляров, присвойте <xref:System.Activities.WorkflowApplication.InstanceStore%2A> экземпляр хранилища экземпляров и реализуйте метод <xref:System.Activities.WorkflowApplication.PersistableIdle%2A>. См. в разделе [как: Создание и запуск длительно выполняющегося рабочего процесса](how-to-create-and-run-a-long-running-workflow.md) учебнике.
 
 ## <a name="a-sample-instance-store"></a>Образец хранилища экземпляров
 
-В следующем образце кода показана реализация хранилища полный экземпляр, взятое из [процесс корпоративных закупок](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md) образца. Это хранилище экземпляров сохраняет данные рабочих процессов в файл с помощью XML.
+В следующем образце кода показана реализация хранилища полный экземпляр, взятое из [процесс корпоративных закупок](./samples/corporate-purchase-process.md) образца. Это хранилище экземпляров сохраняет данные рабочих процессов в файл с помощью XML.
 
 ```csharp
 using System;

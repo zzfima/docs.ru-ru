@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], application settings
 - application settings [Windows Forms], custom controls
 ms.assetid: f44afb74-76cc-44f2-890a-44b7cdc211a1
-ms.openlocfilehash: 96145a6205c3e80b23f3c69750f7faaec04aabba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d12caf9ed2cb80d837080badab436b2e9b0b3728
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526747"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714350"
 ---
 # <a name="application-settings-for-custom-controls"></a>Параметры приложения для пользовательских элементов управления
 Необходимо выполнить определенные задачи, чтобы предоставить возможность сохранения параметров приложения элементы управления расположены в сторонних приложениях пользовательских элементов управления.  
@@ -26,7 +26,7 @@ ms.locfileid: "54526747"
   
 2.  Создайте этот пользовательский класс параметров после создан и помещен в форму, например в форме элемент управления <xref:System.Windows.Forms.Form.Load> обработчик событий.  
   
- Инструкции по созданию пользовательского класса параметров см. в разделе [как: Создание параметров приложения](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md).  
+ Инструкции по созданию пользовательского класса параметров см. в разделе [как: Создание параметров приложения](how-to-create-application-settings.md).  
   
 ## <a name="settings-keys-and-shared-settings"></a>Параметры ключей и общими настройками  
  Некоторые элементы управления можно использовать несколько раз в пределах той же форме. В большинстве случаев, требуется эти элементы управления, чтобы сохранить свои собственные отдельные параметры. С помощью <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> свойство <xref:System.Configuration.IPersistComponentSettings>, можно указать уникальная строка, которая используется для однозначного определения нескольких версий элемента управления в форме.  
@@ -48,4 +48,4 @@ ms.locfileid: "54526747"
 ## <a name="see-also"></a>См. также
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.IPersistComponentSettings>
-- [Архитектура параметров приложения](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)
+- [Архитектура параметров приложения](application-settings-architecture.md)

@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Задайте и возвращаемого значения дат с помощью элемента управления DateTimePicker в Windows Forms
+title: Практическое руководство. Задайте и возвращаемого значения дат с помощью элемента управления DateTimePicker в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,21 +10,21 @@ helpviewer_keywords:
 - DateTimePicker control [Windows Forms], setting and returning dates
 - examples [Windows Forms], DateTimePicker control
 ms.assetid: a8a48d68-e4b5-426e-9764-51230fc9acd2
-ms.openlocfilehash: 678fc5883096d82937c4a1677d2f7f345e955ae1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 73c40a48a75955d1ba44decae6b50ca641a63f7b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562210"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703222"
 ---
-# <a name="how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control"></a>Как выполнить Задайте и возвращаемого значения дат с помощью элемента управления DateTimePicker в Windows Forms
+# <a name="how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control"></a>Практическое руководство. Задайте и возвращаемого значения дат с помощью элемента управления DateTimePicker в Windows Forms
 Текущая выбранная дата или время в элементе управления Windows Forms <xref:System.Windows.Forms.DateTimePicker> определяется свойством <xref:System.Windows.Forms.DateTimePicker.Value%2A>. Перед отображением элемента управления можно задать свойство <xref:System.Windows.Forms.DateTimePicker.Value%2A> (например, во время разработки или в виде событий <xref:System.Windows.Forms.Form.Load>) для определения даты, которая изначально будет выбрана в элементе управления. По умолчанию в свойстве <xref:System.Windows.Forms.DateTimePicker.Value%2A> элемента управления установлена текущая дата. Если свойство <xref:System.Windows.Forms.DateTimePicker.Value%2A> элемента управления изменяется в коде, элемент управления автоматически обновляется, отображая новое значение в форме.  
   
  Свойство <xref:System.Windows.Forms.DateTimePicker.Value%2A> возвращает структуру <xref:System.DateTime>, которая является его значением. Существует несколько свойств структуры <xref:System.DateTime>, возвращающих определенные сведения об отображаемой дате. Эти свойства можно использовать только для возврата значения; не используйте их для задания значения.  
   
 -   Для значений даты свойства <xref:System.DateTime.Month%2A>, <xref:System.DateTime.Day%2A> и <xref:System.DateTime.Year%2A> возвращают целочисленные значения в единицах времени выбранной даты. Свойство <xref:System.DateTime.DayOfWeek%2A> возвращает значение, указывающее выбранный день недели (возможные значения указаны в перечислении <xref:System.DayOfWeek>).  
   
--   Для значений времени свойства <xref:System.DateTime.Hour%2A>, <xref:System.DateTime.Minute%2A>, <xref:System.DateTime.Second%2A> и <xref:System.DateTime.Millisecond%2A> возвращают целочисленные значения для единиц времени. Чтобы настроить элемент управления для отображения времени, см. в разделе [как: Отображение времени с помощью элемента управления DateTimePicker](../../../../docs/framework/winforms/controls/how-to-display-time-with-the-datetimepicker-control.md).  
+-   Для значений времени свойства <xref:System.DateTime.Hour%2A>, <xref:System.DateTime.Minute%2A>, <xref:System.DateTime.Second%2A> и <xref:System.DateTime.Millisecond%2A> возвращают целочисленные значения для единиц времени. Чтобы настроить элемент управления для отображения времени, см. в разделе [как: Отображение времени с помощью элемента управления DateTimePicker](how-to-display-time-with-the-datetimepicker-control.md).  
   
 ### <a name="to-set-the-date-and-time-value-of-the-control"></a>Указание значения даты и времени элемента управления  
   
@@ -73,5 +73,5 @@ ms.locfileid: "54562210"
     ```  
   
 ## <a name="see-also"></a>См. также
-- [Элемент управления DateTimePicker](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md)
-- [Практическое руководство. Отображение даты в пользовательском формате с элемента управления DateTimePicker в Windows Forms](../../../../docs/framework/winforms/controls/display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)
+- [Элемент управления DateTimePicker](datetimepicker-control-windows-forms.md)
+- [Практическое руководство. Отображение даты в пользовательском формате с элемента управления DateTimePicker в Windows Forms](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)

@@ -6,22 +6,22 @@ helpviewer_keywords:
 - GroupBox control [Windows Forms]
 - grouping controls [Windows Forms]
 ms.assetid: ee7fb3ed-2fae-4df3-bdeb-15d42e5d7d75
-ms.openlocfilehash: ca302dc78b177241065cde60d1b887ad0d9813a3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b808a76f4aa9d2c28c838d0c6cfd7bc28d589061
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525146"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57704574"
 ---
 # <a name="groupbox-control-windows-forms"></a>Элемент управления GroupBox (Windows Forms)
-Windows Forms <xref:System.Windows.Forms.GroupBox> элементы управления используются для предоставления возможность группировки других элементов управления. Как правило группы используются для разделения формы по функциям. Например имеется формой заказа, указаны параметры доставки почты ночное для использования. Объединение всех параметров в группу дает пользователю логическую визуальную подсказку. <xref:System.Windows.Forms.GroupBox> Управления аналогичен <xref:System.Windows.Forms.Panel> управления; Однако только <xref:System.Windows.Forms.GroupBox> управления отображается заголовок и только <xref:System.Windows.Forms.Panel> управления можно использовать полосы прокрутки.  
+Windows Forms <xref:System.Windows.Forms.GroupBox> элементы управления используются для предоставления возможность идентифицируемой группировки других элементов управления. Как правило группы используются для разделения формы функцией. Например возможно с формой заказа, указаны параметры доставки почты ночное для использования. Объединение всех параметров в группу дает пользователю логическую визуальную подсказку. <xref:System.Windows.Forms.GroupBox> Управления аналогичен <xref:System.Windows.Forms.Panel> управления; тем не менее, только <xref:System.Windows.Forms.GroupBox> управления отображается заголовок и только <xref:System.Windows.Forms.Panel> управления можно использовать полосы прокрутки.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Общие сведения об элементе управления GroupBox](../../../../docs/framework/winforms/controls/groupbox-control-overview-windows-forms.md)  
- Описывается элемент управления, его основные возможности и свойства.  
+ [Общие сведения об элементе управления GroupBox](groupbox-control-overview-windows-forms.md)  
+ Описание элемента управления, его основных возможностей и свойств.  
   
- [Практическое руководство. Группировка элементов управления с помощью элемента управления GroupBox в формах Windows Forms](../../../../docs/framework/winforms/controls/how-to-group-controls-with-the-windows-forms-groupbox-control.md)  
- Описывает способы использования этого элемента управления для группы элементов управления.  
+ [Практическое руководство. Группа элементов управления с помощью элемента управления GroupBox в Windows Forms](how-to-group-controls-with-the-windows-forms-groupbox-control.md)  
+ В этой статье описывается использование этого элемента управления для группы элементов управления.  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Forms.GroupBox>  
@@ -31,5 +31,5 @@ Windows Forms <xref:System.Windows.Forms.GroupBox> элементы управл
  Описание класса и всех его членов.  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Элементы управления для использования в Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)  
  Полный список элементов управления Windows Forms со ссылками на информацию об их применении.

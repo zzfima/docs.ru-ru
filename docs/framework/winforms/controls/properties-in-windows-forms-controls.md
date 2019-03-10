@@ -6,12 +6,12 @@ helpviewer_keywords:
 - controls [Windows Forms], properties
 - properties [Windows Forms]
 ms.assetid: 2785279b-fb57-4937-8f6b-2050e475db6f
-ms.openlocfilehash: b1f7e0f5c1c9a01e47d0d972c56db8da922d2d0b
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: e531b80cffabb94d2589383936a425b740c9cc07
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664579"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708916"
 ---
 # <a name="properties-in-windows-forms-controls"></a>Свойства элементов управления Windows Forms
 Элемент управления Windows Forms наследует многие свойства базового класса <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. К ним относятся свойства, такие как <xref:System.Windows.Forms.Control.Font%2A>, <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Bounds%2A>, <xref:System.Windows.Forms.Control.ClientRectangle%2A>, <xref:System.Windows.Forms.Control.DisplayRectangle%2A>, <xref:System.Windows.Forms.Control.Enabled%2A>, <xref:System.Windows.Forms.Control.Focused%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>, <xref:System.Windows.Forms.Control.Visible%2A>, <xref:System.Windows.Forms.Control.AutoSize%2A>и многие другие. Дополнительные сведения о наследуемых свойствах см. в разделе <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
@@ -19,19 +19,19 @@ ms.locfileid: "56664579"
  Вы можете переопределять наследуемые свойства в элементе управления, а также задавать новые свойства.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Определение свойства](../../../../docs/framework/winforms/controls/defining-a-property-in-windows-forms-controls.md)  
+ [Определение свойства](defining-a-property-in-windows-forms-controls.md)  
  Показывает, как реализовать свойство настраиваемого элемента управления или компонента и интегрировать свойство в среду разработки.  
   
- [Определение значений по умолчанию с помощью методов ShouldSerialize и Reset](../../../../docs/framework/winforms/controls/defining-default-values-with-the-shouldserialize-and-reset-methods.md)  
+ [Определение значений по умолчанию с помощью методов ShouldSerialize и Reset](defining-default-values-with-the-shouldserialize-and-reset-methods.md)  
  Показывает, как определить значения свойства по умолчанию для настраиваемого элемента управления или компонента.  
   
- [События изменения свойств](../../../../docs/framework/winforms/controls/property-changed-events.md)  
+ [События изменения свойств](property-changed-events.md)  
  Показывает, как включить уведомления об изменении свойств при изменении значения свойства.  
   
- [Практическое руководство. Обеспечение доступа к свойствам составных элементов управления](../../../../docs/framework/winforms/controls/how-to-expose-properties-of-constituent-controls.md)  
+ [Практическое руководство. Обеспечение доступа к свойствам составных элементов управления](how-to-expose-properties-of-constituent-controls.md)  
  Показывает, как предоставить доступ к свойствам составных элементов управления в настраиваемом составном элементе управления.  
   
- [Реализация методов в специализированных элементах управления](../../../../docs/framework/winforms/controls/method-implementation-in-custom-controls.md)  
+ [Реализация методов в специализированных элементах управления](method-implementation-in-custom-controls.md)  
  Показывает, как реализовывать методы в настраиваемых элементах управления и компонентах.  
   
 ## <a name="reference"></a>Ссылка  
@@ -45,7 +45,7 @@ ms.locfileid: "56664579"
  Описывает атрибут, задающий <xref:System.Drawing.Design.UITypeEditor> для пользовательского свойства.  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Атрибуты в элементах управления Windows Forms](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
+ [Атрибуты в элементах управления Windows Forms](attributes-in-windows-forms-controls.md)  
  Описываются атрибуты, которые можно применять к свойствам или другим членам пользовательских элементов управления и компонентов.  
   
  [Атрибуты времени разработки для компонентов](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120))  

@@ -2,12 +2,12 @@
 title: Обязательные аргументы и группы перегруженных аргументов
 ms.date: 03/30/2017
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
-ms.openlocfilehash: d7cfe00d93f1eede77bcda5881c63843722c9a17
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: b5006a201ce5db68e925bd5764fadde308bbccb4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452905"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707876"
 ---
 # <a name="required-arguments-and-overload-groups"></a>Обязательные аргументы и группы перегруженных аргументов
 Действия можно настроить таким образом, чтобы для их выполнения требовалась привязка определенных аргументов. Атрибут `RequiredArgument` указывает, что для действия необходимы определенные аргументы, а атрибут `OverloadGroup` используется для группирования категорий необходимых аргументов. С помощью атрибутов авторы действий могут реализовать простые или сложные конфигурации проверки правильности действий.  
@@ -63,7 +63,7 @@ public sealed class Add : CodeActivity<int>
   
  **Не указано значение необходимого аргумента действия «Операнд1».**  
 > [!NOTE]
-> Дополнительные сведения о проверке и обработке ошибок и предупреждений проверки, см. в разделе [вызов проверки действия](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).  
+> Дополнительные сведения о проверке и обработке ошибок и предупреждений проверки, см. в разделе [вызов проверки действия](invoking-activity-validation.md).  
   
 ## <a name="using-overload-groups"></a>Использование групп перегрузки
 
@@ -106,7 +106,7 @@ class CreateLocation: Activity
   
  Задача данного действия - указать местоположение в США. Для этого пользователь действия может указать местоположение с помощью одной из трех групп аргументов. Чтобы указать допустимые сочетания аргументов, определены 3 группы перегрузки. `G1` содержит аргументы `Latitude` и `Longitude`. `G2` содержит `Street`, `City` и `State`. `G3` содержит `Street` и `Zip`. `Name` также является обязательным аргументом, но не входит в группу перегрузки. Чтобы данное действие было допустимым, `Name` должно быть привязано вместе со всеми аргументами только из одной группы перегрузки.  
   
- В следующем примере, взятом из [действия доступа к базе данных](../../../docs/framework/windows-workflow-foundation/samples/database-access-activities.md) образца имеется 2 группы перегрузки: `ConnectionString` и `ConfigFileSectionName`. Чтобы данное действие было допустимым, должны быть связаны либо аргументы `ProviderName` и `ConnectionString`, либо аргумент `ConfigName`, но не оба.  
+ В следующем примере, взятом из [действия доступа к базе данных](./samples/database-access-activities.md) образца имеется 2 группы перегрузки: `ConnectionString` и `ConfigFileSectionName`. Чтобы данное действие было допустимым, должны быть связаны либо аргументы `ProviderName` и `ConnectionString`, либо аргумент `ConfigName`, но не оба.  
   
 ```  
 Public class DbUpdate: AsyncCodeActivity  

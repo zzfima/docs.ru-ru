@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c2870e79d82d92bd0c853e6e042add3b4243f888
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 750bddce508a72c6aaac659feac90b7c17e53137
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835490"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708409"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Поддержка приложений для Магазина Windows и среды выполнения Windows в .NET Framework
 
@@ -41,7 +41,7 @@ ms.locfileid: "56835490"
 
     -   Функции, которые просто являются оболочками системного API, также удалены, поскольку функции [!INCLUDE[wrt](../../../includes/wrt-md.md)] просто вызываются из управляемого кода.
 
-     Дополнительные сведения о [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], см. в разделе [Обзор приложений .NET для Windows Store](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)). Чтобы прочитать о процессе выбора API, см. в разделе [.NET для приложений в стиле Metro](https://blogs.msdn.microsoft.com/dotnet/2012/04/17/net-for-metro-style-apps/) запись в блоге .NET.
+     Дополнительные сведения о [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], см. в разделе [Обзор приложений .NET для Windows Store](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)). Чтобы прочитать о процессе выбора API, см. в разделе [.NET для приложений в стиле Metro](https://devblogs.microsoft.com/dotnet/net-for-metro-style-apps/) запись в блоге .NET.
 
 -   [Среды выполнения Windows](/uwp/api/) предоставляет элементы интерфейса пользователя для создания [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] приложения и предоставляет доступ к функциям операционной системы. Как и платформа .NET Framework, [!INCLUDE[wrt](../../../includes/wrt-md.md)] содержит метаданные, которые позволяют компиляторам C# и Visual Basic использовать [!INCLUDE[wrt](../../../includes/wrt-md.md)] так же, как они используют библиотеки классов платформы .NET Framework. Платформа .NET Framework упрощает использование [!INCLUDE[wrt](../../../includes/wrt-md.md)], скрывая некоторые различия:
 
@@ -145,7 +145,7 @@ ms.locfileid: "56835490"
 
 ## <a name="related-topics"></a>См. также
 
-|Заголовок|Описание|
+|Заголовок|Описание:|
 |-----------|-----------------|
 |[Общие сведения о платформе .NET для приложений Магазина Windows](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))|Описывает типы и члены платформы .NET Framework, которые можно использовать для создания приложений [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] и компонентов [!INCLUDE[wrt](../../../includes/wrt-md.md)]. (В Центре разработки для Windows.)|
 |[Схема создания приложений Windows Store, с помощью C# или Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10))|Предоставляет основные ресурсы, помогающие начать разрабатывать приложения [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] с помощью C# или Visual Basic, а также многие разделы краткого руководства, правила и рекомендации. (В Центре разработки для Windows.)|

@@ -1,22 +1,22 @@
 ---
-title: Как выполнить Создание рабочего процесса конечного автомата
+title: Практическое руководство. Создание рабочего процесса конечного автомата
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3ec60e8f-fad4-493e-a426-e7962d7aee8c
-ms.openlocfilehash: 556a3c8953f72a1272d74c4f887ded4845d3cd28
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d3ec8c1b8c9b30a23dacabeb033d525c34709931
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54739606"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708266"
 ---
-# <a name="how-to-create-a-state-machine-workflow"></a>Как выполнить Создание рабочего процесса конечного автомата
-Рабочие процессы могут создаваться как из встроенных, так и из пользовательских действий. В этом разделе действия по созданию рабочего процесса, который использует как встроенные действия, например <xref:System.Activities.Statements.StateMachine> действия и пользовательские действия из предыдущего [как: Создание действия](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) раздела. Рабочий процесс моделирует игру по угадыванию числа.  
+# <a name="how-to-create-a-state-machine-workflow"></a>Практическое руководство. Создание рабочего процесса конечного автомата
+Рабочие процессы могут создаваться как из встроенных, так и из пользовательских действий. В этом разделе действия по созданию рабочего процесса, который использует как встроенные действия, например <xref:System.Activities.Statements.StateMachine> действия и пользовательские действия из предыдущего [как: Создание действия](how-to-create-an-activity.md) раздела. Рабочий процесс моделирует игру по угадыванию числа.  
   
 > [!NOTE]
->  Каждый раздел в учебнике «Приступая к работе» построен на основе предыдущих разделов. Для изучения этого раздела, необходимо сначала выполнить [как: Создание действия](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md).  
+>  Каждый раздел в учебнике «Приступая к работе» построен на основе предыдущих разделов. Для изучения этого раздела, необходимо сначала выполнить [как: Создание действия](how-to-create-an-activity.md).  
   
 > [!NOTE]
 >  Чтобы скачать завершенную версию учебника, см. раздел [Windows Workflow Foundation (WF45), учебник "Приступая к работе"](https://go.microsoft.com/fwlink/?LinkID=248976).  
@@ -179,19 +179,19 @@ ms.locfileid: "54739606"
   
      В следующем примере показан завершенный рабочий процесс.  
   
-     ![Завершения рабочего процесса конечного автомата](../../../docs/framework/windows-workflow-foundation/media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
+     ![Завершения рабочего процесса конечного автомата](./media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
   
 ### <a name="to-build-the-workflow"></a>Построение рабочего процесса  
   
 1.  Чтобы построить решение, нажмите CTRL+SHIFT+B.  
   
-     Для указания о том, как запустить рабочий процесс, см. следующий раздел, [как: Запуск рабочего процесса](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md). Если вы уже выполнили [как: Запуск рабочего процесса](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md) шаг с другим стилем рабочего процесса и планируете запустить его с помощью рабочего процесса конечного автомата состояния с этого шага, сразу перейти к [построение и запуск приложения](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md#BKMK_ToRunTheApplication) раздел [как: Запуск рабочего процесса](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md).  
+     Для указания о том, как запустить рабочий процесс, см. следующий раздел, [как: Запуск рабочего процесса](how-to-run-a-workflow.md). Если вы уже выполнили [как: Запуск рабочего процесса](how-to-run-a-workflow.md) шаг с другим стилем рабочего процесса и планируете запустить его с помощью рабочего процесса конечного автомата состояния с этого шага, сразу перейти к [построение и запуск приложения](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) раздел [как: Запуск рабочего процесса](how-to-run-a-workflow.md).  
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Activities.Statements.Flowchart>
 - <xref:System.Activities.Statements.FlowDecision>
-- [Программирование в Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/programming.md)
-- [Разработка рабочих процессов](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)
-- [Руководство по началу работы](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)
-- [Практическое руководство. Создание действия](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)
-- [Практическое руководство. Запуск рабочего процесса](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)
+- [Программирование в Windows Workflow Foundation](programming.md)
+- [Разработка рабочих процессов](designing-workflows.md)
+- [Руководство по началу работы](getting-started-tutorial.md)
+- [Практическое руководство. Создание действия](how-to-create-an-activity.md)
+- [Практическое руководство. Запуск рабочего процесса](how-to-run-a-workflow.md)

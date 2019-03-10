@@ -6,28 +6,28 @@ helpviewer_keywords:
 - shapes [Windows Forms], filling
 - brushes
 ms.assetid: bf8f7fff-5a90-41e8-9051-494449fb2844
-ms.openlocfilehash: dad26479a3790f40e50760ac9e9282aa692a4ea7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 95112321794359dc282749b94fd9061305b42c23
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33523735"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708903"
 ---
 # <a name="using-a-brush-to-fill-shapes"></a>Использование кисти для заливки фигур
-Объект [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Brush> объект используется для заливки замкнутой фигуры. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] определены следующие стили заливки: сплошной цвет, шаблон штриховки, текстура с изображением и цветового градиента.  
+Объект [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Brush> объект используется для заливки внутренней части замкнутой фигуры. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] определяет следующие стили заливки: сплошной цвет, шаблон штриховки, изображение текстуры и цветового градиента.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Практическое руководство. Заливка фигуры сплошным цветом](../../../../docs/framework/winforms/advanced/how-to-fill-a-shape-with-a-solid-color.md)  
- Описывает, как с помощью сплошного цвета кисти для заливки фигур.  
+ [Практическое руководство. Заливка фигуры сплошным цветом](how-to-fill-a-shape-with-a-solid-color.md)  
+ В этой статье описывается использование сплошные кисти для заливки фигур.  
   
- [Практическое руководство. Штриховая заливка фигуры](../../../../docs/framework/winforms/advanced/how-to-fill-a-shape-with-a-hatch-pattern.md)  
- Показано, как с помощью штриховки кисти для заливки фигур.  
+ [Практическое руководство. Заливка фигуры штриховая](how-to-fill-a-shape-with-a-hatch-pattern.md)  
+ Показано, как использовать штриховку кисть для заливки фигур.  
   
- [Практическое руководство. Заливка фигуры текстурой, созданной на основе изображения](../../../../docs/framework/winforms/advanced/how-to-fill-a-shape-with-an-image-texture.md)  
- Описывается использование текстур кисти для заливки фигур.  
+ [Практическое руководство. Заливка фигуры текстурой с изображением](how-to-fill-a-shape-with-an-image-texture.md)  
+ В этой статье описывается использование текстуры кисти для заливки фигур.  
   
- [Практическое руководство. Мозаичное заполнение фигуры заданным изображением](../../../../docs/framework/winforms/advanced/how-to-tile-a-shape-with-an-image.md)  
- Описывает, как для мозаичного изображения в форме.  
+ [Практическое руководство. Мозаичное заполнение фигуры заданным изображением](how-to-tile-a-shape-with-an-image.md)  
+ В этой статье описывается мозаичное заполнение изображением в фигуре.  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Drawing.Brush?displayProperty=nameWithType>  
@@ -46,11 +46,11 @@ ms.locfileid: "33523735"
  Описывает данный класс и содержит ссылки на все его члены.  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Заливка фигур с помощью градиентной кисти](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)  
- Содержит список разделов, в которых показано, как с помощью градиентной кисти.  
+ [Заливка фигур с помощью градиентной кисти](using-a-gradient-brush-to-fill-shapes.md)  
+ Содержит список разделов, которые демонстрируют использование градиентной кисти.  
   
- [Рисование линий и фигур с помощью пера](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)  
- Предоставляет список разделов, показывающих, как рисовать контурные фигуры.  
+ [Рисование линий и фигур с помощью пера](using-a-pen-to-draw-lines-and-shapes.md)  
+ Предоставляет список разделов, которые демонстрируют способ рисования контурные фигуры.  
   
- [Использование управляемых графических классов](../../../../docs/framework/winforms/advanced/using-managed-graphics-classes.md)  
- Содержит список разделов, описывающих использование управляемых графических классов.
+ [Использование управляемых графических классов](using-managed-graphics-classes.md)  
+ Содержит список разделов, в которых описываются способы использования управляемых графических классов.

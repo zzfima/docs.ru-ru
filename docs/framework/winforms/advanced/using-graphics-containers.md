@@ -6,23 +6,23 @@ helpviewer_keywords:
 - graphics containers
 - examples [Windows Forms], graphics containers
 ms.assetid: 74632f91-cefa-4f51-ab7c-f9ac91942caf
-ms.openlocfilehash: 8755a95434d3fed06a55cfca0f71d86e5521cb39
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cfad7254057a31ea8268784cd4b6849850f3e2aa
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525025"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57704496"
 ---
 # <a name="using-graphics-containers"></a>Использование графических контейнеров
-Объект <xref:System.Drawing.Graphics> объект предоставляет методы, такие как <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawImage%2A>, и <xref:System.Drawing.Graphics.DrawString%2A> для отображения векторных изображений, растровые изображения и текст. Объект <xref:System.Drawing.Graphics> также имеет несколько свойств, которые влияют на качество и ориентацию элементов, которые являются производными. Например свойство режим сглаживания определяет ли применять сглаживание к прямых и кривых линий, а свойство преобразования world влияет положения и поворота элементов, которые являются производными.  
+Объект <xref:System.Drawing.Graphics> объект предоставляет методы, такие как <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawImage%2A>, и <xref:System.Drawing.Graphics.DrawString%2A> для отображения векторных изображений, растровых изображений и текста. Объект <xref:System.Drawing.Graphics> объект также имеет несколько свойств, которые влияют на качество и ориентацию элементов, которые являются производными. Например свойство сглаживания режим определяет ли применять сглаживание к линии и кривые и влияет на свойство "преобразование" world, положения и поворота элементов, которые являются производными.  
   
- Объект <xref:System.Drawing.Graphics> объект связан с конкретного устройства отображения. При использовании <xref:System.Drawing.Graphics> для рисования в окне <xref:System.Drawing.Graphics> объекта также привязывается к рассматриваемому окну.  
+ Объект <xref:System.Drawing.Graphics> связывается с конкретного устройства отображения. При использовании <xref:System.Drawing.Graphics> для рисования в окне <xref:System.Drawing.Graphics> объект также связан с этого конкретного окна.  
   
- Объект <xref:System.Drawing.Graphics> объект можно рассматривать как контейнер, так как она содержит набор параметров, влияющих на отображение, и привязывается к конкретному устройству. Можно создать вторичный контейнер внутри существующего <xref:System.Drawing.Graphics> путем вызова метода <xref:System.Drawing.Graphics.BeginContainer%2A> , метод <xref:System.Drawing.Graphics> объекта.  
+ Объект <xref:System.Drawing.Graphics> объект может рассматриваться как контейнер так как он содержит набор свойств, влияющих на отображение, и привязывается к конкретному устройству. Можно создать дополнительный контейнер внутри существующего <xref:System.Drawing.Graphics> путем вызова метода <xref:System.Drawing.Graphics.BeginContainer%2A> , метод <xref:System.Drawing.Graphics> объекта.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Управление состоянием графического объекта](../../../../docs/framework/winforms/advanced/managing-the-state-of-a-graphics-object.md)  
- Описывает способ управления параметрами качества, областью обрезки и преобразования <xref:System.Drawing.Graphics> объекта.  
+ [Управление состоянием графического объекта](managing-the-state-of-a-graphics-object.md)  
+ Описывает управление параметрами качества, области отсечения и преобразования <xref:System.Drawing.Graphics> объекта.  
   
- [Использование вложенных графических контейнеров](../../../../docs/framework/winforms/advanced/using-nested-graphics-containers.md)  
- Показано, как использовать контейнеры для контроля состояния <xref:System.Drawing.Graphics> объекта.
+ [Использование вложенных графических контейнеров](using-nested-graphics-containers.md)  
+ Показано, как использование контейнеров для управления состоянием <xref:System.Drawing.Graphics> объекта.

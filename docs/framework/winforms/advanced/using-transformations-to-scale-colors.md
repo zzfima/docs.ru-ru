@@ -8,12 +8,12 @@ helpviewer_keywords:
 - transformations [Windows Forms], for scaling colors
 - colors [Windows Forms], scaling
 ms.assetid: df23c887-7fd6-4b15-ad94-e30b5bd4b849
-ms.openlocfilehash: ff6172d571a7ca449ab21d1f7a7f9a699bf40f8e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea4abc38968b929412945cddaca3ca3fe6f377d6
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737979"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707434"
 ---
 # <a name="using-transformations-to-scale-colors"></a>Масштабирование цветов с применением преобразований
 Преобразование масштабирования умножает одно или несколько из четырех компонентов цвета по номеру. В следующей таблице приведены элементы матрицы цветов, представляющих масштабирования.  
@@ -28,12 +28,12 @@ ms.locfileid: "54737979"
 ## <a name="scaling-one-color"></a>Масштабирование одного цвета  
  В следующем примере создается <xref:System.Drawing.Image> объекта из файла ColorBars2.bmp. Затем код масштабирует синего компонента каждого пикселя изображения с коэффициентом 2. Исходное изображение отображается вместе с преобразованные изображения.  
   
- [!code-csharp[System.Drawing.RecoloringImages#41](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#41)]
- [!code-vb[System.Drawing.RecoloringImages#41](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#41)]  
+ [!code-csharp[System.Drawing.RecoloringImages#41](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#41)]
+ [!code-vb[System.Drawing.RecoloringImages#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#41)]  
   
  Ниже показан исходное изображение в левой части и масштабированное изображение справа.  
   
- ![Масштабирование цветов](../../../../docs/framework/winforms/advanced/media/colortrans3.png "colortrans3")  
+ ![Масштабирование цветов](./media/colortrans3.png "colortrans3")  
   
  Ниже перечислены эти векторы четырех полос до и после масштабирования. Обратите внимание, что синий компонент цвета четвертой полосы изменился с 0,8 на 0,6. Это потому, что [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] сохраняет только дробная часть результата. Например (2)(0,8) = 1,6, а дробная часть параметра 1.6 равно 0,6. Сохранение только дробной части гарантирует, что результат всегда находится в интервале [0, 1].  
   
@@ -47,12 +47,12 @@ ms.locfileid: "54737979"
 ## <a name="scaling-multiple-colors"></a>Масштабирование нескольких цветов  
  В следующем примере создается <xref:System.Drawing.Image> объекта из файла ColorBars2.bmp. Затем код масштабирует красного, зеленого и синего компонентов каждого пикселя в изображении. Красные компоненты уменьшаются на 25 процентов, зеленые компоненты уменьшаются на 35 процентов и синий компоненты уменьшаются на 50 процентов.  
   
- [!code-csharp[System.Drawing.RecoloringImages#42](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#42)]
- [!code-vb[System.Drawing.RecoloringImages#42](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#42)]  
+ [!code-csharp[System.Drawing.RecoloringImages#42](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#42)]
+ [!code-vb[System.Drawing.RecoloringImages#42](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#42)]  
   
  Ниже показан исходное изображение в левой части и масштабированное изображение справа.  
   
- ![Масштабирование цветов](../../../../docs/framework/winforms/advanced/media/colortrans4.png "colortrans4")  
+ ![Масштабирование цветов](./media/colortrans4.png "colortrans4")  
   
  Ниже перечислены эти векторы четырех полос до и после красного, зеленого и синего масштабирования.  
   
@@ -66,5 +66,5 @@ ms.locfileid: "54737979"
 ## <a name="see-also"></a>См. также
 - <xref:System.Drawing.Imaging.ColorMatrix>
 - <xref:System.Drawing.Imaging.ImageAttributes>
-- [Объекты Graphics и Drawing в Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
-- [перекрашивание изображений](../../../../docs/framework/winforms/advanced/recoloring-images.md)
+- [Объекты Graphics и Drawing в Windows Forms](graphics-and-drawing-in-windows-forms.md)
+- [перекрашивание изображений](recoloring-images.md)

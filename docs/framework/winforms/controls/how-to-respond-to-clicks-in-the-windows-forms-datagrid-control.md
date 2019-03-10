@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Обработка щелчка мыши в элементе управления DataGrid Windows Forms
+title: Практическое руководство. Обработка щелчка мыши в элементе управления DataGrid Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - examples [Windows Forms], DataGrid control
 - DataGrid control [Windows Forms], click events
 ms.assetid: a0aa204b-8351-4d82-9933-ee21a5c9e409
-ms.openlocfilehash: be9c5c213f9bb52bf620b3d7edec95279220abdf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7310557bad7e845c4b193debdefba68db2e1d116
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722911"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708219"
 ---
-# <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a>Как выполнить Обработка щелчка мыши в элементе управления DataGrid Windows Forms
+# <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a>Практическое руководство. Обработка щелчка мыши в элементе управления DataGrid Windows Forms
 > [!NOTE]
->  Элемент управления <xref:System.Windows.Forms.DataGridView> заменяет элемент управления <xref:System.Windows.Forms.DataGrid> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.DataGrid> можно сохранить для обратной совместимости и использования в будущем. Дополнительные сведения см. в разделе [Различия элементов управления DataGridView и DataGrid в Windows Forms](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+>  Элемент управления <xref:System.Windows.Forms.DataGridView> заменяет элемент управления <xref:System.Windows.Forms.DataGrid> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.DataGrid> можно сохранить для обратной совместимости и использования в будущем. Дополнительные сведения см. в разделе [Различия элементов управления DataGridView и DataGrid в Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
  После Windows Forms <xref:System.Windows.Forms.DataGrid> подключен к базе данных, вы можете отслеживать, который ячеек пользователем.  
   
@@ -141,5 +141,5 @@ ms.locfileid: "54722911"
     ```  
   
 ## <a name="see-also"></a>См. также
-- [Элемент управления DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
-- [Практическое руководство. Изменение данных, отображаемых в элементе управления DataGrid Windows Forms во время выполнения](../../../../docs/framework/winforms/controls/change-displayed-data-at-run-time-wf-datagrid-control.md)
+- [Элемент управления DataGrid](datagrid-control-windows-forms.md)
+- [Практическое руководство. Изменение данных, отображаемых в элементе управления DataGrid Windows Forms во время выполнения](change-displayed-data-at-run-time-wf-datagrid-control.md)

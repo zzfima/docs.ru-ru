@@ -5,12 +5,12 @@ helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-ms.openlocfilehash: 4c4d3c2f323492cafaa2dc4d52ab994323eba69b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bbc77c0074b35a95140b35d71e89c51ad8abac62
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375328"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705848"
 ---
 # <a name="windows-forms-overview"></a>Общие сведения о Windows Forms
 
@@ -26,9 +26,9 @@ ms.locfileid: "57375328"
 
  В Windows Forms *форма* — это визуальная поверхность, на которой выводится информация для пользователя. Обычно приложение Windows Forms строится путем помещения элементов управления на форму и написания кода для реагирования на действия пользователя, такие как щелчки мыши или нажатия клавиш. *Элемент управления* — это отдельный элемент пользовательского интерфейса, предназначенный для отображения или ввода данных.
 
- При выполнении пользователем какого-либо действия с формой или одним из ее элементов управления создается событие. Приложение реагирует на эти события с помощью кода и обрабатывает события при их возникновении. Подробнее см. в разделе [Создание обработчиков событий в Windows Forms](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md).
+ При выполнении пользователем какого-либо действия с формой или одним из ее элементов управления создается событие. Приложение реагирует на эти события с помощью кода и обрабатывает события при их возникновении. Подробнее см. в разделе [Создание обработчиков событий в Windows Forms](creating-event-handlers-in-windows-forms.md).
 
- Windows Forms включает широкий набор элементов управления, которые можно добавлять на формы: текстовые поля, кнопки, раскрывающиеся списки, переключатели и даже веб-страницы. Список всех элементов управления, которые можно использовать в форме, представлены в разделе [Элементы управления для использования в формах Windows Forms](../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md). Если существующий элемент управления не удовлетворяет потребностям, в Windows Forms можно создать пользовательские элементы управления с помощью класса <xref:System.Windows.Forms.UserControl>.
+ Windows Forms включает широкий набор элементов управления, которые можно добавлять на формы: текстовые поля, кнопки, раскрывающиеся списки, переключатели и даже веб-страницы. Список всех элементов управления, которые можно использовать в форме, представлены в разделе [Элементы управления для использования в формах Windows Forms](./controls/controls-to-use-on-windows-forms.md). Если существующий элемент управления не удовлетворяет потребностям, в Windows Forms можно создать пользовательские элементы управления с помощью класса <xref:System.Windows.Forms.UserControl>.
 
  В состав Windows Forms входят многофункциональные элементы пользовательского интерфейса, позволяющие воссоздавать возможности таких сложных приложений, как Microsoft Office. Используя элементы управления <xref:System.Windows.Forms.ToolStrip> и <xref:System.Windows.Forms.MenuStrip>, можно создавать панели инструментов и меню, содержащие текст и рисунки, подменю и другие элементы управления, такие как текстовые поля и поля со списками.
 
@@ -45,10 +45,10 @@ ms.locfileid: "57375328"
 
 |Описание|Раздел справки|
 |-----------------|----------------|
-|Использование элементов управления в формах|[Практическое руководство. Добавление элементов управления Windows Forms](../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|
-|Использование элемента управления <xref:System.Windows.Forms.ToolStrip>|[Практическое руководство. Создание базового элемента управления ToolStrip со стандартными элементами с помощью конструктора](../../../docs/framework/winforms/controls/create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)|
-|Создание графических элементов с помощью <xref:System.Drawing>|[Приступая к программированию графики](../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)|
-|Создание пользовательских элементов управления|[Практическое руководство. Наследование класса UserControl](../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|
+|Использование элементов управления в формах|[Практическое руководство. Добавление элементов управления Windows Forms](./controls/how-to-add-controls-to-windows-forms.md)|
+|Использование элемента управления <xref:System.Windows.Forms.ToolStrip>|[Практическое руководство. Создание базового элемента управления ToolStrip со стандартными элементами с помощью конструктора](./controls/create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)|
+|Создание графических элементов с помощью <xref:System.Drawing>|[Приступая к программированию графики](./advanced/getting-started-with-graphics-programming.md)|
+|Создание пользовательских элементов управления|[Практическое руководство. Наследование класса UserControl](./controls/how-to-inherit-from-the-usercontrol-class.md)|
 
 ### <a name="display-and-manipulate-data"></a>Отображение данных и управления ими
  Во многих приложениях нужно отображать данные из базы данных, XML-файла, веб-службы XML или другого источника данных. Windows Forms предоставляет гибкий элемент управления с именем <xref:System.Windows.Forms.DataGridView> для отображения таких табличных данных в традиционном формате строк и столбцов так, что каждый фрагмент данных занимает свою собственную ячейку. С помощью <xref:System.Windows.Forms.DataGridView> можно, помимо прочего, настроить внешний вид отдельных ячеек, зафиксировать строки и столбцы на своем месте, а также обеспечить отображение сложных элементов управления внутри ячеек.
@@ -65,10 +65,10 @@ ms.locfileid: "57375328"
 
 |Описание|Раздел справки|
 |-----------------|----------------|
-|Использование компонента <xref:System.Windows.Forms.BindingSource>|[Практическое руководство. Привязка элементов управления Windows Forms с компонентом BindingSource с помощью конструктора](../../../docs/framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|
-|Работа с источниками данных [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]|[Практическое руководство. Сортировка и фильтрация данных ADO.NET с помощью Windows Forms посредством компонента BindingSource](../../../docs/framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
+|Использование компонента <xref:System.Windows.Forms.BindingSource>|[Практическое руководство. Привязка элементов управления Windows Forms с компонентом BindingSource с помощью конструктора](./controls/bind-wf-controls-with-the-bindingsource.md)|
+|Работа с источниками данных [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]|[Практическое руководство. Сортировка и фильтрация данных ADO.NET с помощью Windows Forms посредством компонента BindingSource](./controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
 |Использование окна "Источники данных"|[Привязка элементов управления Windows Forms к данным в Visual Studio](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio)|
-|Использование параметров приложения|[Практическое руководство. Создание параметров приложения](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)|
+|Использование параметров приложения|[Практическое руководство. Создание параметров приложения](./advanced/how-to-create-application-settings.md)|
 
 ### <a name="deploy-apps-to-client-computers"></a>Развертывание приложений на клиентских компьютерах
 
@@ -98,15 +98,15 @@ ms.locfileid: "57375328"
 
 |Описание|Раздел справки|
 |-----------------|----------------|
-|Печать содержимого формы|[Практическое руководство. Печать графических изображений в Windows Forms](../../../docs/framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [Практическое руководство. Печать многостраничных текстовых файлов в Windows Forms](../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|
-|Дополнительные сведения о безопасности форм Windows Forms|[Общие сведения о безопасности в Windows Forms](../../../docs/framework/winforms/security-in-windows-forms-overview.md)|
+|Печать содержимого формы|[Практическое руководство. Печать графических изображений в Windows Forms](./advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [Практическое руководство. Печать многостраничных текстовых файлов в Windows Forms](./advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|
+|Дополнительные сведения о безопасности форм Windows Forms|[Общие сведения о безопасности в Windows Forms](security-in-windows-forms-overview.md)|
 
 ## <a name="see-also"></a>См. также
 
-- [Приступая к работе с Windows Forms](../../../docs/framework/winforms/getting-started-with-windows-forms.md)
-- [Создание новой формы Windows Forms](../../../docs/framework/winforms/creating-a-new-windows-form.md)
-- [Общие сведения об элементе управления ToolStrip](../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
-- [Общие сведения об элементе управления DataGridView](../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)
-- [Общие сведения о компоненте BindingSource](../../../docs/framework/winforms/controls/bindingsource-component-overview.md)
-- [Общие сведения о параметрах приложений](../../../docs/framework/winforms/advanced/application-settings-overview.md)
+- [Приступая к работе с Windows Forms](getting-started-with-windows-forms.md)
+- [Создание новой формы Windows Forms](creating-a-new-windows-form.md)
+- [Общие сведения об элементе управления ToolStrip](./controls/toolstrip-control-overview-windows-forms.md)
+- [Общие сведения об элементе управления DataGridView](./controls/datagridview-control-overview-windows-forms.md)
+- [Общие сведения о компоненте BindingSource](./controls/bindingsource-component-overview.md)
+- [Общие сведения о параметрах приложений](./advanced/application-settings-overview.md)
 - [Развертывание и безопасность технологии ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)

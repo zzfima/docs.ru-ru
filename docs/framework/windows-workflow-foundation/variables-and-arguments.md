@@ -2,12 +2,12 @@
 title: Переменные и аргументы
 ms.date: 03/30/2017
 ms.assetid: d03dbe34-5b2e-4f21-8b57-693ee49611b8
-ms.openlocfilehash: 7d4bcbb28ffac0ea0f2f6d4aa238523855570f7c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e534a54802228d6d001838008fc9d8f36fc0827
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520111"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717821"
 ---
 # <a name="variables-and-arguments"></a>Переменные и аргументы
 В Windows Workflow Foundation (WF), переменные представляют хранилище данных, а аргументы представляют поток данных в действие и из действия. Действие имеет набор аргументов, которые составляют сигнатуру действия. Действие может также поддерживать список переменных, к которым разработчик может добавлять или удалять переменные при разработке рабочего процесса. Привязка аргумента выполнена с помощью выражения, возвращающего значение.  
@@ -67,7 +67,7 @@ Variable<string> var = new Variable<string>
   
 2.  При вызове <xref:System.Activities.InOutArgument%601.Set%2A> среда выполнения немедленно задает значение.  
   
-3.  Для аргументов может быть дополнительно задан их <xref:System.Activities.Argument.EvaluationOrder%2A>. <xref:System.Activities.Argument.EvaluationOrder%2A> - отсчитываемое от нуля значение, которое указывает порядок вычисления аргумента. По умолчанию порядок вычисления аргумента не указан и равен значению <xref:System.Activities.Argument.UnspecifiedEvaluationOrder>. Свойству <xref:System.Activities.Argument.EvaluationOrder%2A> задайте значение, большее или равное нулю, чтобы указать порядок вычисления для этого аргумента. Windows Workflow Foundation вычисляет аргументы в заданном порядке вычисления в возрастающем порядке. Следует отметить, что аргументы с незаданным порядком вычисления вычисляются до вычисления аргументов, порядок вычисления которых задан.  
+3.  Для аргументов может быть дополнительно задан их <xref:System.Activities.Argument.EvaluationOrder%2A>. <xref:System.Activities.Argument.EvaluationOrder%2A> - отсчитываемое от нуля значение, которое указывает порядок вычисления аргумента. По умолчанию порядок вычисления аргумента не указан и равен значению <xref:System.Activities.Argument.UnspecifiedEvaluationOrder>. Свойству <xref:System.Activities.Argument.EvaluationOrder%2A> задайте значение, большее или равное нулю, чтобы указать порядок вычисления для этого аргумента. Windows Workflow Foundation вычисляет аргументы в заданном порядке вычисления в порядке возрастания. Следует отметить, что аргументы с незаданным порядком вычисления вычисляются до вычисления аргументов, порядок вычисления которых задан.  
   
  Создатель действия для предоставления доступа к аргументам действия может использовать механизм со строгой типизацией. Для этого объявляются свойства типа <xref:System.Activities.InArgument%601>, <xref:System.Activities.OutArgument%601> и <xref:System.Activities.InOutArgument%601>. Благодаря этому для создателя действия обеспечивается возможность установки определенного контракта, касающегося потока данных в действие и из действия.  
   
@@ -141,4 +141,4 @@ public sealed class Add : CodeActivity<int>
 }  
 ```  
   
- Дополнительные сведения о работе с аргументов, переменных и выражений в коде см. в разделе [разработки рабочих процессов, действий и выражений с помощью императивного кода](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md) и [необходимые аргументы и групп перегруженных вариантов](../../../docs/framework/windows-workflow-foundation/required-arguments-and-overload-groups.md).
+ Дополнительные сведения о работе с аргументами, переменными и выражениями в коде, см. в разделе [создание рабочих процессов, действий и выражений с помощью императивного кода](authoring-workflows-activities-and-expressions-using-imperative-code.md) и [необходимые аргументы и групп перегруженных вариантов](required-arguments-and-overload-groups.md).

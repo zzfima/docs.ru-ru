@@ -9,12 +9,12 @@ helpviewer_keywords:
 - best practices [Windows Forms], dataGridView control
 - DataGridView control [Windows Forms], scaling
 ms.assetid: 8321a8a6-6340-4fd1-b475-fa090b905aaf
-ms.openlocfilehash: 5adbcdb4aa34b3878e278d47337defe4388dd892
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 895dd132c070157355c28a935e43240f2750159e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710876"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57706421"
 ---
 # <a name="best-practices-for-scaling-the-windows-forms-datagridview-control"></a>Масштабирование элемента управления DataGridView в Windows Forms
 <xref:System.Windows.Forms.DataGridView> Управления предназначен для обеспечения максимальной масштабируемости. Если требуется для отображения больших объемов данных, необходимо следовать рекомендациям, приведенным в этом разделе, чтобы избежать использования большого объема памяти или замедления работы пользовательский интерфейс (UI). В этом разделе обсуждаются следующие вопросы:  
@@ -31,16 +31,16 @@ ms.locfileid: "54710876"
   
 -   Предотвращение строкам  
   
- Если у вас есть особые требования к производительности, можно реализовать виртуальный режим и предоставить собственные операции управления данными. Дополнительные сведения см. в разделе [режимы отображения данных в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md).  
+ Если у вас есть особые требования к производительности, можно реализовать виртуальный режим и предоставить собственные операции управления данными. Дополнительные сведения см. в разделе [режимы отображения данных в элементе управления DataGridView Windows Forms](data-display-modes-in-the-windows-forms-datagridview-control.md).  
   
 ## <a name="using-cell-styles-efficiently"></a>Эффективное использование стилей для ячейки  
  Каждой ячейки, строки и столбца может иметь свои собственные сведения о стиле. Сведения о стиле хранится в <xref:System.Windows.Forms.DataGridViewCellStyle> объектов. Создание объектов стиля ячеек для множества отдельных <xref:System.Windows.Forms.DataGridView> элементы могут быть неэффективным, особенно при работе с большими объемами данных. Чтобы избежать снижения производительности, следуйте приведенным ниже рекомендациям:  
   
 -   Не рекомендуется устанавливать свойства стиля ячейки для отдельных <xref:System.Windows.Forms.DataGridViewCell> или <xref:System.Windows.Forms.DataGridViewRow> объектов. Сюда входят строки объекта, заданного параметром <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> свойство. Каждой новой строки, которая клонируется из шаблона строки получит свою собственную копию объекта стиля шаблона ячейки. Для максимальной масштабируемости, задайте свойства стиля ячейки в <xref:System.Windows.Forms.DataGridView> уровень. Например, задать <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType> свойства, а не <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType> свойство.  
   
--   Если некоторые ячейки требуется форматирования, отличные от форматирования по умолчанию, используйте тот же <xref:System.Windows.Forms.DataGridViewCellStyle> экземпляра на группы ячеек, строк или столбцов. Избегайте прямого задания свойств типа <xref:System.Windows.Forms.DataGridViewCellStyle> на отдельных ячеек, строк и столбцов. Пример совместного использования стиля ячеек, см. в разделе [как: Установка стилей ячейки по умолчанию для управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md). Можно также избежать снижения производительности при задании стили ячеек по отдельности, обрабатывая <xref:System.Windows.Forms.DataGridView.CellFormatting> обработчик событий. Пример см. в статье [Практическое руководство. Настройка форматирования данных в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md).  
+-   Если некоторые ячейки требуется форматирования, отличные от форматирования по умолчанию, используйте тот же <xref:System.Windows.Forms.DataGridViewCellStyle> экземпляра на группы ячеек, строк или столбцов. Избегайте прямого задания свойств типа <xref:System.Windows.Forms.DataGridViewCellStyle> на отдельных ячеек, строк и столбцов. Пример совместного использования стиля ячеек, см. в разделе [как: Установка стилей ячейки по умолчанию для управления DataGridView в Windows Forms](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md). Можно также избежать снижения производительности при задании стили ячеек по отдельности, обрабатывая <xref:System.Windows.Forms.DataGridView.CellFormatting> обработчик событий. Пример см. в статье [Практическое руководство. Настройка форматирования данных в элементе управления DataGridView Windows Forms](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md).  
   
--   При определении стиля ячейки, используйте <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A?displayProperty=nameWithType> свойства, а не <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType> свойство. Доступ к <xref:System.Windows.Forms.DataGridViewCell.Style%2A> свойство создает новый экземпляр класса <xref:System.Windows.Forms.DataGridViewCellStyle> , если свойство не уже используется. Кроме того этот объект может не содержать полные сведения о стиле для ячейки, если некоторые стили наследуются от строк, столбцов или элемента управления. Дополнительные сведения о наследовании стилей ячеек, см. в разделе [стили ячеек элемента управления DataGridView Windows Forms в](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md).  
+-   При определении стиля ячейки, используйте <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A?displayProperty=nameWithType> свойства, а не <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType> свойство. Доступ к <xref:System.Windows.Forms.DataGridViewCell.Style%2A> свойство создает новый экземпляр класса <xref:System.Windows.Forms.DataGridViewCellStyle> , если свойство не уже используется. Кроме того этот объект может не содержать полные сведения о стиле для ячейки, если некоторые стили наследуются от строк, столбцов или элемента управления. Дополнительные сведения о наследовании стилей ячеек, см. в разделе [стили ячеек элемента управления DataGridView Windows Forms в](cell-styles-in-the-windows-forms-datagridview-control.md).  
   
 ## <a name="using-shortcut-menus-efficiently"></a>Эффективное использование контекстных меню  
  Каждой ячейки, строки и столбца может иметь собственное контекстное меню. Контекстные меню в <xref:System.Windows.Forms.DataGridView> управления представлены <xref:System.Windows.Forms.ContextMenuStrip> элементов управления. Как и в объекты стиля ячейки, Создание контекстного меню для множества отдельных <xref:System.Windows.Forms.DataGridView> элементов может отрицательно сказаться на производительности. Чтобы избежать потерь производительности, следуйте приведенным ниже рекомендациям:  
@@ -60,7 +60,7 @@ ms.locfileid: "54710876"
   
 -   Для максимальной масштабируемости выключите автоматического изменения размеров и используйте программного изменения размеров.  
   
- Дополнительные сведения см. в разделе [параметров изменения размеров элемента управления DataGridView Windows Forms в](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md).  
+ Дополнительные сведения см. в разделе [параметров изменения размеров элемента управления DataGridView Windows Forms в](sizing-options-in-the-windows-forms-datagridview-control.md).  
   
 ## <a name="using-the-selected-cells-rows-and-columns-collections-efficiently"></a>Эффективное использование выделенных ячеек, строк и столбцов коллекций  
  <xref:System.Windows.Forms.DataGridView.SelectedCells%2A> Коллекции, неэффективно с большой выбор. <xref:System.Windows.Forms.DataGridView.SelectedRows%2A> И <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A> коллекции также могут быть неэффективным, хотя и в меньшей степени, так как существует много меньше строк, чем ячеек в стандартном <xref:System.Windows.Forms.DataGridView> элемента управления и гораздо меньше столбцов, чем строк. Чтобы избежать снижения производительности при работе с этими коллекциями, следуйте приведенным ниже рекомендациям:  
@@ -137,9 +137,9 @@ ms.locfileid: "54710876"
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.DataGridView>
-- [Оптимизация производительности элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)
-- [Виртуальный режим элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md)
-- [Режимы отображения данных в элементе управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)
-- [Стили ячеек элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)
-- [Практическое руководство. Установка стилей ячейки по умолчанию для элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)
-- [Изменение размеров управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md)
+- [Оптимизация производительности элемента управления DataGridView в Windows Forms](performance-tuning-in-the-windows-forms-datagridview-control.md)
+- [Виртуальный режим элемента управления DataGridView в Windows Forms](virtual-mode-in-the-windows-forms-datagridview-control.md)
+- [Режимы отображения данных в элементе управления DataGridView в Windows Forms](data-display-modes-in-the-windows-forms-datagridview-control.md)
+- [Стили ячеек элемента управления DataGridView в Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)
+- [Практическое руководство. Установка стилей ячейки по умолчанию для элемента управления DataGridView в Windows Forms](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)
+- [Изменение размеров управления DataGridView в Windows Forms](sizing-options-in-the-windows-forms-datagridview-control.md)

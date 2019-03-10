@@ -9,37 +9,37 @@ helpviewer_keywords:
 - forms. Help (using designer)
 - Windows applications [Windows Forms], Help (using designer)
 ms.assetid: a8563d25-8a75-4bc7-a024-f1870591b50f
-ms.openlocfilehash: b16ba14eea68083cd7bdfc91c88375406137f450
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 207ceeafa2ea06340310577c636deb5ea1977aae
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527227"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715312"
 ---
 # <a name="integrating-user-help-in-windows-forms"></a>Интеграция справки пользователя в формы Windows Forms
-Важным аспектом построения приложений Windows essential, но часто уделяется недостаточно внимания представлены справочной системы, где пользователи обращаются за помощью в недоразумений. Windows Forms поддерживает два типа справки, в каждом предоставляемые [компонент HelpProvider](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md). Первый направляет пользователя на файл справки HTML или HTML Help 1. *x* или следующих версий. Второй может отображать краткую «Что это такое» — введите Help для отдельных элементов управления; Это особенно удобно в диалоговых окнах. Оба типа справки можно использовать в той же форме.  
+Аспект essential, но часто не уделяют должного внимания, создания приложений на основе Windows — справочной системы, так как это которой пользователи обращаются за помощью в путаницы. Windows Forms поддерживает два различных типов поддержки, в каждом предоставляемые [компонент HelpProvider](../controls/helpprovider-component-windows-forms.md). Первый направляет пользователя к файлу справки HTML или HTML Help 1. *x* или следующих версий. Второй может отображать краткое «Что это такое» — введите Help для отдельных элементов управления; Это особенно полезно в диалоговых окнах. Оба типа справки можно использовать в той же форме.  
   
- Кроме того [компонент ToolTip](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md) может использоваться для предоставления отдельной справки для элементов управления в формах Windows Forms.  
+ Кроме того [компонент ToolTip](../controls/tooltip-component-windows-forms.md) может использоваться для предоставления отдельной справки для элементов управления в формах Windows Forms.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Руководство: предоставление справки в приложении Windows](../../../../docs/framework/winforms/advanced/how-to-provide-help-in-a-windows-application.md)  
- Описание способов использования `HelpProvider` компонента, чтобы связать элементы управления с файлами справочной системы.  
+ [Практическое руководство. Предоставление справки в приложении Windows](how-to-provide-help-in-a-windows-application.md)  
+ Содержит сведения об использовании `HelpProvider` компонента, чтобы связать элементы управления с файлами справочной системы.  
   
- [Практическое руководство. Отображение всплывающей справки](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md)  
- Описание способов использования `HelpProvider` компонент для отображения всплывающей справки в формах Windows Forms.  
+ [Практическое руководство. Отображение всплывающей справки](how-to-display-pop-up-help.md)  
+ Содержит сведения об использовании `HelpProvider` компонент для отображения всплывающей справки в формах Windows Forms.  
   
- [Отображение справки по элементам управления с помощью подсказок](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md)  
+ [Отображение справки по элементам управления с помощью подсказок](control-help-using-tooltips.md)  
  Описывает использование `ToolTip` компонент для отображения справки для элемента управления.  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Компонент HelpProvider](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md)  
+ [Компонент HelpProvider](../controls/helpprovider-component-windows-forms.md)  
  Основные сведения о `HelpProvider` компонента.  
   
- [Компонент ToolTip](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md)  
+ [Компонент ToolTip](../controls/tooltip-component-windows-forms.md)  
  Основные сведения о `ToolTip` компонента.  
   
- [Общие сведения о Windows Forms](../../../../docs/framework/winforms/windows-forms-overview.md)  
+ [Общие сведения о Windows Forms](../windows-forms-overview.md)  
  Основные сведения о Windows Forms.  
   
- [Windows Forms](../../../../docs/framework/winforms/index.md)  
- Общие сведения о Windows Forms.
+ [Windows Forms](../index.md)  
+ Предоставляет общие сведения о Windows Forms.

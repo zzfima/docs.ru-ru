@@ -1,19 +1,19 @@
 ---
-title: Как выполнить Группа элементов управления с помощью элемента управления GroupBox в Windows Forms
+title: Практическое руководство. Группа элементов управления с помощью элемента управления GroupBox в Windows Forms
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], grouping
 - GroupBox control [Windows Forms], grouping controls
 - Windows Forms controls, grouping
 ms.assetid: 0bda316d-bd2a-43aa-ac73-342453303169
-ms.openlocfilehash: 44f0116511165c021f8e3dc35fb14e5cfb6f619e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 14c832251a76eaff21611c88179c4d2ffa7ab738
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686924"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708560"
 ---
-# <a name="how-to-group-controls-with-the-windows-forms-groupbox-control"></a>Как выполнить Группа элементов управления с помощью элемента управления GroupBox в Windows Forms
+# <a name="how-to-group-controls-with-the-windows-forms-groupbox-control"></a>Практическое руководство. Группа элементов управления с помощью элемента управления GroupBox в Windows Forms
 Windows Forms <xref:System.Windows.Forms.GroupBox> элементы управления используются для группировки других элементов управления. Существуют три причины для группировки элементов управления:  
   
 -   Чтобы создать визуальную группировку элементов связанных форм для упрощения пользовательского интерфейса.  
@@ -34,4 +34,4 @@ Windows Forms <xref:System.Windows.Forms.GroupBox> элементы управл
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.GroupBox>
-- [Элемент управления GroupBox](../../../../docs/framework/winforms/controls/groupbox-control-windows-forms.md)
+- [Элемент управления GroupBox](groupbox-control-windows-forms.md)

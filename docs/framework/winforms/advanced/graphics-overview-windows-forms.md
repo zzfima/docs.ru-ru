@@ -8,24 +8,24 @@ helpviewer_keywords:
 - GDI+, Windows Forms
 - graphics
 ms.assetid: 94084509-2c6f-477d-923b-d25d37a36b1c
-ms.openlocfilehash: 197f9dfcc14260017911b37dd6e6b7ce49e44ed4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fce756fc9c6a22372bd849c8bd60f0e416f3031e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33521761"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714335"
 ---
 # <a name="graphics-overview-windows-forms"></a>Общие сведения о графике (Windows Forms)
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Представляет интерфейс графических устройств, который дает программистам возможность создавать аппаратно независимые приложения. В службах [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] , предоставляются через набор управляемых классов.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] является интерфейса графических устройств, позволяющий программистам создавать аппаратно независимые приложения. В службах [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] , предоставляются с помощью набора управляемых классов.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Обзор графических возможностей](../../../../docs/framework/winforms/advanced/overview-of-graphics.md)  
+ [Обзор графических возможностей](overview-of-graphics.md)  
  Предоставляет общие сведения о [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
   
- [Три категории графических служб](../../../../docs/framework/winforms/advanced/three-categories-of-graphics-services.md)  
+ [Три категории графических служб](three-categories-of-graphics-services.md)  
  Описание трех категорий, составляющих программирование с использованием [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
   
- [Структура графического интерфейса](../../../../docs/framework/winforms/advanced/structure-of-the-graphics-interface.md)  
+ [Структура графического интерфейса](structure-of-the-graphics-interface.md)  
  Описывает интерфейс управляемого класса [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
   
 ## <a name="reference"></a>Ссылка  

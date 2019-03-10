@@ -6,15 +6,15 @@ helpviewer_keywords:
 - keyboards [Windows Forms], keyboard input
 - Windows Forms, keyboard input
 ms.assetid: 9a29433c-a180-49bb-b74c-d187786584c8
-ms.openlocfilehash: 540388e316a761df3c32842cbe626e9e52f7e3f5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a7965c1dcf36e956abd7930b8ff0154b13173b76
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645487"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718029"
 ---
 # <a name="how-keyboard-input-works"></a>Принцип работы ввод с клавиатуры
-Ввод с клавиатуры обрабатывается в Windows Forms посредством вызова событий клавиатуры в ответ на сообщения Windows. В большинстве приложений Windows Forms для обработки ввода с клавиатуры используются только события клавиатуры. Тем не менее, чтобы реализовать более сложные сценарии ввода с клавиатуры, например перехват клавиш до того, как они достигнут элемента управления, необходимо понимать, как работают сообщения клавиатуры. В этом разделе описываются типы данных ключа, распознаваемых приложением Windows Forms, и приводятся общие сведения о маршрутизацией сообщений клавиатуры. Сведения о событиях клавиатуры см. в разделе [Использование событий клавиатуры](../../../docs/framework/winforms/using-keyboard-events.md).  
+Ввод с клавиатуры обрабатывается в Windows Forms посредством вызова событий клавиатуры в ответ на сообщения Windows. В большинстве приложений Windows Forms для обработки ввода с клавиатуры используются только события клавиатуры. Тем не менее, чтобы реализовать более сложные сценарии ввода с клавиатуры, например перехват клавиш до того, как они достигнут элемента управления, необходимо понимать, как работают сообщения клавиатуры. В этом разделе описываются типы данных ключа, распознаваемых приложением Windows Forms, и приводятся общие сведения о маршрутизацией сообщений клавиатуры. Сведения о событиях клавиатуры см. в разделе [Использование событий клавиатуры](using-keyboard-events.md).  
   
 ## <a name="types-of-keys"></a>Типы ключей  
  Windows Forms идентифицирует ввод с клавиатуры как коды виртуальных клавиш, представленные побитового <xref:System.Windows.Forms.Keys> перечисления. С помощью <xref:System.Windows.Forms.Keys> перечисления, можно объединять несколько нажатых клавиш в одно значение. Эти значения соответствуют значениям, сопровождающим сообщения Windows WM_KEYDOWN и WM_SYSKEYDOWN. Нажатие большинства физических клавиш можно обнаружить путем обработки <xref:System.Windows.Forms.Control.KeyDown> или <xref:System.Windows.Forms.Control.KeyUp> события. Клавиши знаков являются подмножеством <xref:System.Windows.Forms.Keys> перечисления и соответствуют значениям, сопровождающим сообщения WM_CHAR и WM_SYSCHAR Windows. Если сочетание нажатых клавиш образует знак, его можно определить символ путем обработки <xref:System.Windows.Forms.Control.KeyPress> событий. Кроме того, можно использовать <xref:Microsoft.VisualBasic.Devices.Keyboard>, предоставляемый интерфейсом программирования Visual Basic, обнаруживать, какие клавиши были нажаты и отправлять ключи. Дополнительные сведения см. в разделе [Доступ к клавиатуре](~/docs/visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md).  
@@ -74,4 +74,4 @@ ms.locfileid: "54645487"
 - <xref:System.Windows.Forms.Control.PreProcessMessage%2A>
 - [Объект My.Computer.Keyboard](~/docs/visual-basic/language-reference/objects/my-computer-keyboard-object.md)
 - [Доступ к клавиатуре](~/docs/visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md)
-- [Использование событий клавиатуры](../../../docs/framework/winforms/using-keyboard-events.md)
+- [Использование событий клавиатуры](using-keyboard-events.md)

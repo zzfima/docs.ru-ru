@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TrackBar control [Windows Forms], about TrackBar control
 - slider controls [Windows Forms], about slider controls
 ms.assetid: 95910ecb-8a4c-4776-89fa-206c89ed6973
-ms.openlocfilehash: 27a43befd69bc3fb33f8027bd32fc4d66414951c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 74a8feba14b7e2186fb64729cb915e53132805d5
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712003"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707018"
 ---
 # <a name="trackbar-control-overview-windows-forms"></a>Общие сведения об элементе управления TrackBar (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.TrackBar> элемент управления (также элемент управления «ползунок») используется для просмотра сведений большого объема или для визуальной настройки числовых параметров. <xref:System.Windows.Forms.TrackBar> Управления состоит из двух частей: ползунка и делений. Бегунок является часть, которая может настраиваться. Его положение соответствует <xref:System.Windows.Forms.TrackBar.Value%2A> свойство. Деления — это визуальные индикаторы, расположенные с регулярными интервалами. Ползунок перемещается с шагом, которые могут быть выровнены горизонтально или вертикально. Например можно использовать полосы прокрутки для управления мерцания курсора скорость или мыши скорости для системы.  
@@ -25,4 +25,4 @@ Windows Forms <xref:System.Windows.Forms.TrackBar> элемент управле
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.TrackBar>
-- [Элемент управления TrackBar](../../../../docs/framework/winforms/controls/trackbar-control-windows-forms.md)
+- [Элемент управления TrackBar](trackbar-control-windows-forms.md)

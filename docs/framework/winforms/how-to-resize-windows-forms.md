@@ -9,12 +9,12 @@ helpviewer_keywords:
 - resizing Windows Forms
 - Windows Forms, resizing
 ms.assetid: 5d9dd47e-e68c-48c9-a0a3-a9ff34ba009d
-ms.openlocfilehash: 57a75cf07e3487c5a115e57c068b412c33538bce
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 9399069ad5365b025fe8c92b2f10c36c4666f4b4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664540"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705428"
 ---
 # <a name="how-to-resize-windows-forms"></a>Практическое руководство. Изменение размера формы Windows Forms
 Размер формы Windows Forms можно указать несколькими способами. Вы можете изменить высоту и ширину формы программными средствами, задав новое значение для свойства <xref:System.Windows.Forms.Form.Size%2A> или изменив свойства <xref:System.Windows.Forms.Control.Height%2A> или <xref:System.Windows.Forms.Control.Width%2A> по отдельности. Если вы используете Visual Studio, можно изменить размер, с помощью конструктора Windows Forms. Также см. раздел [Как Изменение размера формы Windows Forms, с помощью конструктора](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100)).  
@@ -113,5 +113,5 @@ ms.locfileid: "56664540"
     ```  
   
 ## <a name="see-also"></a>См. также
-- [Приступая к работе с Windows Forms](../../../docs/framework/winforms/getting-started-with-windows-forms.md)
-- [Усовершенствование приложений Windows Forms](../../../docs/framework/winforms/advanced/index.md)
+- [Приступая к работе с Windows Forms](getting-started-with-windows-forms.md)
+- [Усовершенствование приложений Windows Forms](./advanced/index.md)

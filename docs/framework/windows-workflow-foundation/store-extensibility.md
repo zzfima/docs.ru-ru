@@ -2,12 +2,12 @@
 title: Расширяемость хранилища
 ms.date: 03/30/2017
 ms.assetid: 7c3f4a46-4bac-4138-ae6a-a7c7ee0d28f5
-ms.openlocfilehash: 0c6f67469db04705a9ac7827ef301ff226ea3bdb
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 46c1ea40925a5c79180171da9a705d7e6b7c8b89
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57465733"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703288"
 ---
 # <a name="store-extensibility"></a>Расширяемость хранилища
 
@@ -36,7 +36,7 @@ ms.locfileid: "57465733"
     application.Extensions.Add(documentStatusExtension);
     ```
 
-     Дополнительные сведения о добавлении нестандартного участника сохраняемости см. в разделе [участников сохраняемости](../../../docs/framework/windows-workflow-foundation/persistence-participants.md) образца.
+     Дополнительные сведения о добавлении нестандартного участника сохраняемости см. в разделе [участников сохраняемости](persistence-participants.md) образца.
 
 3. Настраиваемые действия в приложение обработки Документов заполняют различные поля состояния в **Execute** метод.
 

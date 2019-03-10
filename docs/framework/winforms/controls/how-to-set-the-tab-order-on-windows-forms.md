@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Установка последовательности переходов в формах Windows Forms
+title: Практическое руководство. Установка последовательности переходов в формах Windows Forms
 ms.date: 03/30/2017
 f1_keywords:
 - TabStop
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - controls [Windows Forms], setting tab order
 - Windows Forms, setting tab order
 ms.assetid: 71fa8e76-0472-414b-ad3c-0f90166e0ad7
-ms.openlocfilehash: 118785e14dddcd5ff19aa8c143f9e8df05d8980b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3f566dfb5dbc118c5a6be7f874b5b4857756075a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54675263"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705887"
 ---
-# <a name="how-to-set-the-tab-order-on-windows-forms"></a>Как выполнить Установка последовательности переходов в формах Windows Forms
+# <a name="how-to-set-the-tab-order-on-windows-forms"></a>Практическое руководство. Установка последовательности переходов в формах Windows Forms
 Последовательность табуляции заключается в порядке, в котором пользователь перемещает фокус от одного элемента управления в другую, нажав клавишу TAB. Каждая форма имеет свои собственные последовательности табуляции. По умолчанию последовательности табуляции совпадает в порядке создания элементов управления. Последовательности табуляции нумерация начинается с нуля.  
   
 > [!NOTE]
@@ -32,7 +32,7 @@ ms.locfileid: "54675263"
 2.  Щелкните элементы управления последовательно, чтобы установить нужные последовательности табуляции.  
   
     > [!NOTE]
-    >  Место элемента управления в последовательности табуляции можно присвоить любое значение больше или равно 0. Для дубликатов оценивается z порядка двух элементов управления и элемент управления в верхней части является первой вкладкой. (Z порядок является видимое расположение элементов управления на форме вдоль оси z формы [глубины]. Z порядок определяет, какие элементы управления располагаются перед другими элементами.) Дополнительные сведения о z порядка, см. в разделе [иерархическое представление объектов в формах Windows Forms](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md).  
+    >  Место элемента управления в последовательности табуляции можно присвоить любое значение больше или равно 0. Для дубликатов оценивается z порядка двух элементов управления и элемент управления в верхней части является первой вкладкой. (Z порядок является видимое расположение элементов управления на форме вдоль оси z формы [глубины]. Z порядок определяет, какие элементы управления располагаются перед другими элементами.) Дополнительные сведения о z порядка, см. в разделе [иерархическое представление объектов в формах Windows Forms](how-to-layer-objects-on-windows-forms.md).  
   
 3.  Когда вы закончите, нажмите кнопку **последовательности табуляции** на **представление** меню еще раз, чтобы выйти из режима выбора последовательности перехода.  
   
@@ -52,10 +52,10 @@ ms.locfileid: "54675263"
      Объект со свойством <xref:System.Windows.Forms.Control.TabStop%2A> было присвоено свойство `false` сохраняет свое место в последовательности табуляции, несмотря на то, что этот элемент управления пропускается, если цикл по элементам управления с помощью клавиши TAB.  
   
     > [!NOTE]
-    >  Группы переключателей есть одна позиция табуляции во время выполнения. Выбранную кнопку (то есть кнопка с его <xref:System.Windows.Forms.RadioButton.Checked%2A> свойству присвоено `true`) имеет его <xref:System.Windows.Forms.Control.TabStop%2A> свойству автоматически присваивается `true`, тогда как другие кнопки имеют свои <xref:System.Windows.Forms.Control.TabStop%2A> свойству присвоено `false`. Дополнительные сведения о группировании <xref:System.Windows.Forms.RadioButton> элементов управления, см. в разделе [группирования Windows Forms элементов управления RadioButton как набор](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md).  
+    >  Группы переключателей есть одна позиция табуляции во время выполнения. Выбранную кнопку (то есть кнопка с его <xref:System.Windows.Forms.RadioButton.Checked%2A> свойству присвоено `true`) имеет его <xref:System.Windows.Forms.Control.TabStop%2A> свойству автоматически присваивается `true`, тогда как другие кнопки имеют свои <xref:System.Windows.Forms.Control.TabStop%2A> свойству присвоено `false`. Дополнительные сведения о группировании <xref:System.Windows.Forms.RadioButton> элементов управления, см. в разделе [группирования Windows Forms элементов управления RadioButton как набор](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md).  
   
 ## <a name="see-also"></a>См. также
-- [Элементы управления Windows Forms](../../../../docs/framework/winforms/controls/index.md)
-- [Упорядочение элементов управления в формах Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
-- [Элементы управления для использования в Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
-- [Функциональная классификация элементов управления Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+- [Элементы управления Windows Forms](index.md)
+- [Упорядочение элементов управления в формах Windows Forms](arranging-controls-on-windows-forms.md)
+- [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)
+- [Функциональная классификация элементов управления Windows Forms](windows-forms-controls-by-function.md)

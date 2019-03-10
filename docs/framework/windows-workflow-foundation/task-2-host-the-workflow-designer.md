@@ -2,12 +2,12 @@
 title: Задача 2. Размещение конструктора рабочих процессов
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-ms.openlocfilehash: e8895e4b2c90f189c88ec3a803615e736dada455
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e02134408b38e5c9aee9c59d86b1dfce032653d1
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572777"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708643"
 ---
 # <a name="task-2-host-the-workflow-designer"></a>Задача 2. Размещение конструктора рабочих процессов
 В этом разделе описывается процедура по размещению экземпляра [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] в приложении Windows Presentation Foundation (WPF).  
@@ -16,7 +16,7 @@ ms.locfileid: "54572777"
   
 ### <a name="to-host-the-workflow-designer"></a>Размещение конструктора рабочих процессов  
   
-1.  Откройте проект HostingApplication, созданный в [задаче 1: Создание нового приложения Windows Presentation Foundation](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md).  
+1.  Откройте проект HostingApplication, созданный в [задаче 1: Создание нового приложения Windows Presentation Foundation](task-1-create-a-new-wpf-app.md).  
   
 2.  Отрегулируйте размер окна, чтобы было проще использовать [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]. Чтобы сделать это, выберите **MainWindow** в конструкторе, нажмите клавишу F4, чтобы открыть **свойства** окно и в **макета** раздел существует, задайте **ширины** значению, равному 600 и **высота** значение 350.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "54572777"
         }  
         ```  
   
-         Дополнительные сведения о регистрации конструкторов действий см. в разделе [как: Создание пользовательского конструктора действий](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer.md).  
+         Дополнительные сведения о регистрации конструкторов действий см. в разделе [как: Создание пользовательского конструктора действий](how-to-create-a-custom-activity-designer.md).  
   
     5.  В конструкторе класса `MainWindow` добавьте вызовы объявленных ранее методов для регистрации метаданных для поддержки конструктора и создания <xref:System.Activities.Presentation.WorkflowDesigner>.  
   
@@ -119,9 +119,9 @@ ms.locfileid: "54572777"
   
 9. Нажмите клавишу F5 для построения и выполнения решения.  
   
-10. См. в разделе [задача 3: Создание элементов и сетки свойств](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md) вы научитесь добавлять **элементов** и **PropertyGrid** поддержки в повторно размещенном рабочего процесса конструктор.  
+10. См. в разделе [задача 3: Создание элементов и сетки свойств](task-3-create-the-toolbox-and-propertygrid-panes.md) вы научитесь добавлять **элементов** и **PropertyGrid** поддержки в повторно размещенном рабочего процесса конструктор.  
   
 ## <a name="see-also"></a>См. также
-- [Отдельное размещение конструктора рабочих процессов](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)
-- [Упражнение 1. Создание нового приложения Windows Presentation Foundation](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)
-- [Задача 3. Создание элементов и сетки свойств](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md)
+- [Отдельное размещение конструктора рабочих процессов](rehosting-the-workflow-designer.md)
+- [Упражнение 1. Создание нового приложения Windows Presentation Foundation](task-1-create-a-new-wpf-app.md)
+- [Задача 3. Создание элементов и сетки свойств](task-3-create-the-toolbox-and-propertygrid-panes.md)

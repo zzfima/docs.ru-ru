@@ -1,19 +1,19 @@
 ---
-title: Как выполнить Создание интерфейса в стиле проводника Windows в форме Windows
+title: Практическое руководство. Создание интерфейса в стиле проводника Windows в форме Windows
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Explorer [Windows Forms], creating with Windows Forms
 - SplitContainer control [Windows Forms], Explorer-style interface
 - forms [Windows Forms], Windows Explorer type
 ms.assetid: 9a3d5f4f-5dda-4350-9ad5-57ce5976dc47
-ms.openlocfilehash: 0b61961aff04a089ce12f4b96637e3f05023e929
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 444d85265822b5dd4b3a5fd5f4329ec6cc1427f5
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54511108"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705016"
 ---
-# <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>Как выполнить Создание интерфейса в стиле проводника Windows в форме Windows
+# <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>Практическое руководство. Создание интерфейса в стиле проводника Windows в форме Windows
 Windows Explorer является распространенным вариантом пользовательского интерфейса для приложений из-за его хорошо знаком всем пользователям.  
   
  Windows Explorer является, по сути, <xref:System.Windows.Forms.TreeView> управления и <xref:System.Windows.Forms.ListView> на отдельных панелях. Панелей вносятся можно изменять с помощью разделителя. Это упорядочение элементов управления является весьма эффективным для отображения и просмотра информации.  
@@ -51,7 +51,7 @@ Windows Explorer является распространенным вариан�
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.SplitContainer>
-- [Практическое руководство. Создание с несколькими областями пользовательского интерфейса с помощью Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)
-- [Практическое руководство. Определение изменения размеров и позиционирования в окне с перемещаемым разделителем](../../../../docs/framework/winforms/controls/how-to-define-resize-and-positioning-behavior-in-a-split-window.md)
-- [Практическое руководство. Разделение окна по горизонтали](../../../../docs/framework/winforms/controls/how-to-split-a-window-horizontally.md)
-- [Элемент управления SplitContainer](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)
+- [Практическое руководство. Создание с несколькими областями пользовательского интерфейса с помощью Windows Forms](how-to-create-a-multipane-user-interface-with-windows-forms.md)
+- [Практическое руководство. Определение изменения размеров и позиционирования в окне с перемещаемым разделителем](how-to-define-resize-and-positioning-behavior-in-a-split-window.md)
+- [Практическое руководство. Разделение окна по горизонтали](how-to-split-a-window-horizontally.md)
+- [Элемент управления SplitContainer](splitcontainer-control-windows-forms.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - user-drawn controls [Windows Forms]
 ms.assetid: 034af4b5-457f-4160-a937-22891817faa8
-ms.openlocfilehash: e9eab78695db128c0538914c5364aaa54c135403
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1529d4d62004becca4495d96fa893da20caa3954
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509965"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709682"
 ---
 # <a name="user-drawn-controls"></a>Элементы управления, разработанные пользователем
 .NET Framework дает возможность легко разрабатывать собственные элементы управления. Вы можете создать пользовательский элемент управления, который представляет собой набор стандартных элементов управления, связанных с помощью кода, или можно разработать собственный элемент управления с нуля вверх. Можно даже использовать наследование создать элемент управления, который наследует от существующего элемента управления и добавить его функциональные возможности. Какой бы подход, вы используете, платформа .NET Framework предоставляет функциональные возможности для создания пользовательского интерфейса для любого элемента управления, которые можно создать.  
@@ -25,7 +25,7 @@ ms.locfileid: "54509965"
   
 -   <xref:System.Drawing.Graphics> объект - инкапсулирует несколько графических объектов и методов, которые предоставляют функциональные возможности, необходимые для рисования элемента управления.  
   
- Дополнительные сведения о <xref:System.Drawing.Graphics> объекта и как его использовать, см. в разделе [как: Создание объектов Graphics для рисования](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md).  
+ Дополнительные сведения о <xref:System.Drawing.Graphics> объекта и как его использовать, см. в разделе [как: Создание объектов Graphics для рисования](../advanced/how-to-create-graphics-objects-for-drawing.md).  
   
  <xref:System.Windows.Forms.Control.OnPaint%2A> Событие каждый раз, когда рисуется элемент управления или обновляется на экране и <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> представляет прямоугольник, в котором рисования, будет иметь место. Если весь элемент управления необходимо обновить, <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> будет представлять размер всего элемента управления. Если только часть элемента управления должен быть обновлен, однако <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> объект будет представлять только область, которая должна быть перерисована. Примером такого случая может быть, если элемент управления частично закрыт другим элементом управления или формы в пользовательском интерфейсе.  
   
@@ -81,6 +81,6 @@ SetStyle(ControlStyles.ResizeRedraw, true);
 - <xref:System.Drawing.Graphics>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
 - <xref:System.Windows.Forms.PaintEventArgs>
-- [Практическое руководство. Создание объектов Graphics для рисования](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)
-- [Составные элементы управления](../../../../docs/framework/winforms/controls/constituent-controls.md)
-- [Разновидности пользовательских элементов управления](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+- [Практическое руководство. Создание объектов Graphics для рисования](../advanced/how-to-create-graphics-objects-for-drawing.md)
+- [Составные элементы управления](constituent-controls.md)
+- [Разновидности пользовательских элементов управления](varieties-of-custom-controls.md)

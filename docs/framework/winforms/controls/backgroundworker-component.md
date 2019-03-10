@@ -11,33 +11,33 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: bef7b0ab-ce57-475a-a2d6-fb8a702a9417
-ms.openlocfilehash: 38505876e2f944139622a0d7cf7aaab9c510ef89
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0baf54d27cf33eef7e4df7019ee98b42eba40205
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525756"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710671"
 ---
 # <a name="backgroundworker-component"></a>Компонент BackgroundWorker
-`BackgroundWorker` Компонент позволяет формы или элемента управления для асинхронного выполнения операции.  
+`BackgroundWorker` Компонент позволяет форме или элементу управления выполнять операцию асинхронно.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Общие сведения о компоненте BackgroundWorker](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md)  
- Описывает `BackgroundWorker` компонент, который дает возможность выполнять длительные операции асинхронно (в фоновом режиме»), в потоке, отличном от основного потока пользовательского интерфейса приложения.  
+ [Общие сведения о компоненте BackgroundWorker](backgroundworker-component-overview.md)  
+ Описывает `BackgroundWorker` компонент, который дает возможность выполнять длительные операции асинхронно (в фоновом режиме»), в потоке, отличающемся от основного потока пользовательского интерфейса приложения.  
   
- [Пример. Фоновое выполнение операции](../../../../docs/framework/winforms/controls/walkthrough-running-an-operation-in-the-background.md)  
+ [Пошаговое руководство: Выполнение операции в фоновом режиме](walkthrough-running-an-operation-in-the-background.md)  
  Демонстрирует использование `BackgroundWorker` компонента в конструкторе для выполнения длительной операции в отдельном потоке.  
   
- [Практическое руководство. Фоновое выполнение операции](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
+ [Практическое руководство. Фоновое выполнение операции](how-to-run-an-operation-in-the-background.md)  
  Демонстрирует использование `BackgroundWorker` компонент для выполнения длительной операции в отдельном потоке.  
   
- [Пошаговое руководство. Реализация формы, в которой выполняется фоновая операция](../../../../docs/framework/winforms/controls/walkthrough-implementing-a-form-that-uses-a-background-operation.md)  
+ [Пошаговое руководство: Реализация формы, в который выполняется фоновая операция](walkthrough-implementing-a-form-that-uses-a-background-operation.md)  
  Создание приложения с помощью конструктора, выполняющего математические вычисления в асинхронном режиме.  
   
- [Практическое руководство. Реализация формы, в которой выполняется фоновая операция](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)  
+ [Практическое руководство. Реализация формы, в которой выполняется фоновая операция](how-to-implement-a-form-that-uses-a-background-operation.md)  
  Создание приложения, выполняющего математические вычисления в асинхронном режиме.  
   
- [Практическое руководство. Фоновая загрузка файла](../../../../docs/framework/winforms/controls/how-to-download-a-file-in-the-background.md)  
+ [Практическое руководство. Загрузите файл в фоновом режиме](how-to-download-a-file-in-the-background.md)  
  Демонстрирует использование `BackgroundWorker` компонента для загрузки файла в отдельном потоке.  
   
 ## <a name="reference"></a>Ссылка  
@@ -45,11 +45,11 @@ ms.locfileid: "33525756"
  Описание класса и всех его членов.  
   
  <xref:System.ComponentModel.RunWorkerCompletedEventArgs>  
- Описывает тип, содержащий данные для <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> события.  
+ Описывает тип, содержащий данные для <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> событий.  
   
  <xref:System.ComponentModel.ProgressChangedEventArgs>  
- Описывает тип, содержащий данные для <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> события.  
+ Описывает тип, содержащий данные для <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> событий.  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Обзор асинхронной модели, основанной на событиях](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  
- Описывает, как асинхронная модель позволяет использовать преимущества многопоточных приложений, скрывая многие сложные проблемы, присущие многопоточности.
+ [Обзор асинхронной модели, основанной на событиях](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  
+ Описывает, как асинхронная модель позволяет использовать преимущества многопоточных приложений устраняет многие сложности, присущие многопоточности.

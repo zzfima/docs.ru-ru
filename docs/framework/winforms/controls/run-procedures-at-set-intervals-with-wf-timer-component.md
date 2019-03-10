@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Timer component [Windows Forms], initializing
 - procedures [Windows Forms], specific time intervals
 ms.assetid: 8025247a-2de4-4d86-b8ab-a8cb8aeab2ea
-ms.openlocfilehash: 6a5a30b77e19e316bdf08234767cab2c9b72b296
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 03f386917e554cfdf9d65778474ae809d81d1939
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56663994"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705575"
 ---
 # <a name="how-to-run-procedures-at-set-intervals-with-the-windows-forms-timer-component"></a>Практическое руководство. Выполните процедуры, заданной периодичностью с помощью компонента Timer в Windows Forms
 Иногда может потребоваться создать процедуру, которая выполняется через определенные интервалы времени до окончания цикла или запускается по истечении установленного интервала. Создание такой процедуры возможно благодаря компоненту <xref:System.Windows.Forms.Timer>.  
@@ -26,7 +26,7 @@ ms.locfileid: "56663994"
  Этот компонент предназначен для работы в среде Windows Forms. Если вам требуется таймер, подходящий для серверной среды, см. раздел [Общие сведения о серверных таймерах](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90)).  
   
 > [!NOTE]
->  Существуют некоторые ограничения при использовании компонента <xref:System.Windows.Forms.Timer>. Дополнительные сведения см. в разделе [ограничения свойства Interval компонента Timer Windows Forms](../../../../docs/framework/winforms/controls/limitations-of-the-timer-component-interval-property.md).  
+>  Существуют некоторые ограничения при использовании компонента <xref:System.Windows.Forms.Timer>. Дополнительные сведения см. в разделе [ограничения свойства Interval компонента Timer Windows Forms](limitations-of-the-timer-component-interval-property.md).  
   
 ## <a name="to-run-a-procedure-at-set-intervals-with-the-timer-component"></a>Выполнение процедуры через заданные интервалы времени с помощью компонента Timer  
   
@@ -244,5 +244,5 @@ private:
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.Timer>
-- [Компонент Timer](../../../../docs/framework/winforms/controls/timer-component-windows-forms.md)
-- [Общие сведения о компоненте Timer](../../../../docs/framework/winforms/controls/timer-component-overview-windows-forms.md)
+- [Компонент Timer](timer-component-windows-forms.md)
+- [Общие сведения о компоненте Timer](timer-component-overview-windows-forms.md)

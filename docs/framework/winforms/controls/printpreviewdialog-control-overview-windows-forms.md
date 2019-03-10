@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: efd4ee8d-6edd-47ec-88e4-4a4759bd2384
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e28a6c82a8dd40885c04c56f2adfb3d38e674066
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aad8673051b22db1df6d525094394dd2a43285ca
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667561"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711282"
 ---
 # <a name="printpreviewdialog-control-overview-windows-forms"></a>Обзор управления PrintPreviewDialog (Windows Forms)
-Windows Forms <xref:System.Windows.Forms.PrintPreviewDialog> элемент управления является стандартным диалоговым окном, используемый для отображения как [PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md) будет выглядеть при печати. Используется в качестве простого решения вместо настройки собственного диалогового приложения на базе Windows. Элемент управления содержит кнопки для печати, увеличения масштаба, отображения одной или нескольких страниц и закрытия диалогового окна.  
+Windows Forms <xref:System.Windows.Forms.PrintPreviewDialog> элемент управления является стандартным диалоговым окном, используемый для отображения как [PrintDocument](printdocument-component-windows-forms.md) будет выглядеть при печати. Используется в качестве простого решения вместо настройки собственного диалогового приложения на базе Windows. Элемент управления содержит кнопки для печати, увеличения масштаба, отображения одной или нескольких страниц и закрытия диалогового окна.  
   
 ## <a name="key-properties-and-methods"></a>Ключевые свойства и методы  
  Ключевое свойство элемента управления — <xref:System.Windows.Forms.PrintPreviewDialog.Document%2A>, который задает документ, который необходимо просмотреть. Документ должен быть <xref:System.Drawing.Printing.PrintDocument> объекта. Чтобы отобразить диалоговое окно, необходимо вызвать его <xref:System.Windows.Forms.Form.ShowDialog%2A> метод. Сглаживание может сделать текст более однородным, но оно может привести к замедлению отображения; Чтобы использовать его, задайте <xref:System.Windows.Forms.PrintPreviewDialog.UseAntiAlias%2A> свойства `true`.  
@@ -53,6 +53,6 @@ Windows Forms <xref:System.Windows.Forms.PrintPreviewDialog> элемент уп
 
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Forms.PrintPreviewDialog>
-- [Общие сведения об элементе управления PrintPreviewControl](../../../../docs/framework/winforms/controls/printpreviewcontrol-control-overview-windows-forms.md)
-- [Элемент управления PrintPreviewDialog](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)
-- [Элементы управления и компоненты диалоговых окон](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)
+- [Общие сведения об элементе управления PrintPreviewControl](printpreviewcontrol-control-overview-windows-forms.md)
+- [Элемент управления PrintPreviewDialog](printpreviewdialog-control-windows-forms.md)
+- [Элементы управления и компоненты диалоговых окон](dialog-box-controls-and-components-windows-forms.md)

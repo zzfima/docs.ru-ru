@@ -1,18 +1,18 @@
 ---
-title: Как создать действие
+title: Практическое руководство. создать действие
 ms.date: 09/14/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
-ms.openlocfilehash: 8aa6900b26bbe9f77fe0802a7929febe5af61269
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 271f26888e8b140b64464f5c9c4eabb7170afe05
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48872961"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709022"
 ---
-# <a name="how-to-create-an-activity"></a>Как создать действие
+# <a name="how-to-create-an-activity"></a>Практическое руководство. создать действие
 
 Действия являются базовой единицей режима работы в [!INCLUDE[wf1](../../../includes/wf1-md.md)]. Логика выполнения действия может быть реализована в управляемом коде или с помощью других действий. В этом разделе показано создание двух действий. Первое действие - простое действие с использованием кода для реализации логики выполнения. Реализация второго действия определяется с помощью других действий. Эти действия используются в следующих шагах учебника.
 
@@ -42,8 +42,8 @@ ms.locfileid: "48872961"
 
 4.  Замените существующее определение `ReadInt` следующим определением.
 
-     [!code-csharp[CFX_WF_GettingStarted#1](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/readint.cs#1)]
-     [!code-vb[CFX_WF_GettingStarted#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/readint.vb#1)]
+     [!code-csharp[CFX_WF_GettingStarted#1](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/readint.cs#1)]
+     [!code-vb[CFX_WF_GettingStarted#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/readint.vb#1)]
 
     > [!NOTE]
     > Действие `ReadInt` является производным от <xref:System.Activities.NativeActivity%601>, а не от <xref:System.Activities.CodeActivity>, которое задается по умолчанию для шаблона действия кода. <xref:System.Activities.CodeActivity%601> можно использовать, если действие возвращает один результат, который предоставляется с помощью аргумента <xref:System.Activities.Activity%601.Result%2A>. Однако <xref:System.Activities.CodeActivity%601> не поддерживает использование закладок, поэтому используется <xref:System.Activities.NativeActivity%601>.
@@ -100,13 +100,13 @@ ms.locfileid: "48872961"
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Инструкции по созданию рабочего процесса с помощью этих действий см. Далее в этом руководстве, [как: Создание рабочего процесса](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md).
+Инструкции по созданию рабочего процесса с помощью этих действий см. Далее в этом руководстве, [как: Создание рабочего процесса](how-to-create-a-workflow.md).
 
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Activities.CodeActivity>
 - <xref:System.Activities.NativeActivity%601>
-- [Разработка и реализация настраиваемых действий](../../../docs/framework/windows-workflow-foundation/designing-and-implementing-custom-activities.md)
-- [Руководство по началу работы](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)
-- [Практическое руководство. Создание рабочего процесса](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)
-- [Использование ExpressionTextBox в пользовательском конструкторе действия](../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)
+- [Разработка и реализация настраиваемых действий](designing-and-implementing-custom-activities.md)
+- [Руководство по началу работы](getting-started-tutorial.md)
+- [Практическое руководство. Создание рабочего процесса](how-to-create-a-workflow.md)
+- [Использование ExpressionTextBox в пользовательском конструкторе действия](./samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)
