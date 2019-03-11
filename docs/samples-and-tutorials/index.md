@@ -1,24 +1,14 @@
 ---
-title: Примеры и руководства
-description: Сведения о примерах и руководствах для .NET Core, ASP.NET Core и языке C#, которые помогут вам изучить платформу .NET.
-keywords: .NET, .NET Core, ASP.NET, C#, пример, руководство
+title: Примеры и руководства .NET
+description: 'Сведения о примерах и руководствах для .NET Core, ASP.NET Core и языке C#, которые помогут вам изучить платформу .NET.'
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.topic: article
-ms.prod: .net
-ms.devlang: dotnet
-ms.assetid: 617310e7-336b-4864-8dab-7e2021512929
-ms.openlocfilehash: f69aa704b05bffeaf932a093b991810f8678251c
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2018
-ms.locfileid: "30957650"
 ---
-# <a name="samples-and-tutorials"></a>примеры и учебники;
 
-Документация по .NET содержит набор примеров и руководств, которые помогают изучить .NET. Из этой статьи вы узнаете, как находить, просматривать и скачивать примеры и руководства для .NET Core, ASP.NET Core и C#. Ресурсы, посвященные языку программирования F#, доступны на [сайте F# Foundation](http://fsharp.org/learn.html). Если вы хотите изучать язык C# в интерактивном редакторе кода, ознакомьтесь с этим [интерактивным руководством](https://www.microsoft.com/net/learn/in-browser-tutorial/1), а затем переходите к [следующим](../csharp/quick-starts/index.md). Инструкции по просмотру и скачиванию примеров кода см. в разделе [Просмотр и скачивание примеров](#viewing-and-downloading-samples).
+# <a name="net-samples-and-tutorials"></a>Примеры и руководства .NET
+
+Документация по .NET содержит набор примеров и руководств, которые помогают изучить .NET. Из этой статьи вы узнаете, как находить, просматривать и скачивать примеры и руководства для .NET Core, ASP.NET Core и C#. Ресурсы, посвященные языку программирования F#, доступны на [сайте F# Foundation](https://fsharp.org/learn.html). Если вы хотите изучать язык C# в интерактивном редакторе кода, ознакомьтесь с этим [интерактивным руководством](https://www.microsoft.com/net/learn/in-browser-tutorial/1), а затем переходите к [следующему](../csharp/tutorials/intro-to-csharp/index.md). Инструкции по просмотру и скачиванию примеров кода см. в разделе [Просмотр и скачивание примеров](#viewing-and-downloading-samples).
 
 ## <a name="net-core"></a>.NET Core
 
@@ -66,6 +56,10 @@ ms.locfileid: "30957650"
 
 В этой серии примеров демонстрируются многие функции встроенного языка запросов (LINQ). [Готовый пример](https://github.com/dotnet/samples/tree/master/core/linq/csharp) доступен в репозитории dotnet/samples на сайте GitHub.
 
+**Пример Microsoft Office PIA**
+
+В примере [ExcelDemo](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo) демонстрируется использование [Microsoft Office PIA](/visualstudio/vsto/office-primary-interop-assemblies) в .NET Core.
+
 ### <a name="tutorials"></a>Учебники
 
 **[Консольное приложение](../csharp/tutorials/console-teleprompter.md)**
@@ -80,10 +74,6 @@ ms.locfileid: "30957650"
 
 В этом учебнике демонстрируется множество функций LINQ и элементы языка, которые их поддерживают. [Готовый пример](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-linq) доступен в репозитории dotnet/samples на сайте GitHub.
 
-**[Микрослужбы, размещенные в Docker](../csharp/tutorials/microservices.md)**
-
-В этом учебнике демонстрируется создание микрослужбы ASP.NET Core и ее размещение в Docker. [Готовый пример](https://github.com/dotnet/samples/tree/master/csharp/getting-started/WeatherMicroservice) доступен в репозитории dotnet/samples на сайте GitHub.
-
 **[Начало работы с .NET Core в macOS с помощью Visual Studio для Mac](../core/tutorials/using-on-mac-vs.md)**
 
 В этом руководстве показано, как создать простое консольное приложение .NET Core с помощью Visual Studio для Mac.
@@ -91,6 +81,10 @@ ms.locfileid: "30957650"
 **[Создание полноценного решения .NET Core на базе macOS с помощью Visual Studio для Mac](../core/tutorials/using-on-mac-vs-full-solution.md)**
 
 Этот учебник описывает, как выполнить сборку полноценного решения .NET Core, включающего многоразовую библиотеку и модульное тестирование.
+
+**[Создание приложения .NET Core, поддерживающего подключаемые модули](../core/tutorials/creating-app-with-plugin-support.md)**
+
+В этом руководстве показано, как создать простое приложение в .NET Core, которое поддерживает архитектуру подключаемых модулей. [Готовый пример](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin) доступен в репозитории dotnet/samples на сайте GitHub.
 
 ## <a name="deploying-to-containers"></a>Развертывание в контейнеры
 
@@ -112,7 +106,7 @@ ms.locfileid: "30957650"
    * Клонируйте репозиторий локально. Если вы клонируете репозиторий docs непосредственно на свой компьютер, вы не сможете сохранять изменения напрямую в официальном репозитории и, соответственно, не сможете участвовать в работе над документацией в дальнейшем. Чтобы сохранить возможность последующего участия в работе над документацией, используйте описанную выше процедуру ответвления и клонирования.
 1. Откройте в репозитории папку с примером. Относительный путь к папке с примером отображается в адресной строке браузера при переходе по ссылке на пример.
 1. Запустить пример можно несколькими способами:
-   * Воспользуйтесь [средствами CLI dotnet](../core/tools/index.md): в окне консоли перейдите в папку с примером и используйте команды CLI dotnet.
-   * Воспользуйтесь программой [Visual Studio](https://www.visualstudio.com/) или [Visual Studio для Mac](https://www.visualstudio.com/vs/visual-studio-mac/): откройте пример, последовательно щелкнув **"Файл" > "Открыть" > "Проект/решение"**, перейдите в папку проекта, содержащую пример, и выберите файл проекта (*.csproj* или *.fsproj*).
-   * Воспользуйтесь программой [Visual Studio Code](https://code.visualstudio.com/): откройте пример, последовательно щелкнув **"Файл" > "Открыть папку"** и выбрав папку проекта, содержащую пример.
+   * Используйте [средства интерфейса командной строки dotnet](../core/tools/index.md): в окне консоли перейдите в папку с примером и используйте команды интерфейса командной строки dotnet.
+   * Воспользуйтесь программой [Visual Studio](https://visualstudio.microsoft.com/) или [Visual Studio для Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/): откройте пример, последовательно щелкнув **"Файл" > "Открыть" > "Проект/решение"**, перейдите в папку проекта, содержащую пример, и выберите файл проекта (*.csproj* или *.fsproj*).
+   * Воспользуйтесь программой [Visual Studio Code](https://code.visualstudio.com/): откройте пример, последовательно щелкнув **"Файл" > "Открыть папку"** и выбрав папку проекта, содержащую пример.
    * Воспользуйтесь другой средой IDE, которая поддерживает проекты .NET Core.
