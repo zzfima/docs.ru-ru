@@ -9,35 +9,35 @@ helpviewer_keywords:
 - <summary> C# XML tag
 - summary C# XML tag
 ms.assetid: b4c43d92-2067-4eac-a59a-d32f5248c08b
-ms.openlocfilehash: 12898d5cd10d9ecca4ec0fd1f7d06be0761b57b8
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 0e6408f1f45bb5f1406b4b1a7f6fe2cf543109e4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978557"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493574"
 ---
-# <a name="summary-c-programming-guide"></a><span data-ttu-id="a16a7-102">\<summary> (руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="a16a7-102">\<summary> (C# Programming Guide)</span></span>
-## <a name="syntax"></a><span data-ttu-id="a16a7-103">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a16a7-103">Syntax</span></span>  
+# <a name="summary-c-programming-guide"></a><span data-ttu-id="a3019-102">\<summary> (руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="a3019-102">\<summary> (C# Programming Guide)</span></span>
+## <a name="syntax"></a><span data-ttu-id="a3019-103">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a3019-103">Syntax</span></span>  
   
 ```xml  
 <summary>description</summary>  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="a16a7-104">Параметры</span><span class="sxs-lookup"><span data-stu-id="a16a7-104">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a3019-104">Параметры</span><span class="sxs-lookup"><span data-stu-id="a3019-104">Parameters</span></span>  
  `description`  
- <span data-ttu-id="a16a7-105">Сводка объекта.</span><span class="sxs-lookup"><span data-stu-id="a16a7-105">A summary of the object.</span></span>  
+ <span data-ttu-id="a3019-105">Сводка объекта.</span><span class="sxs-lookup"><span data-stu-id="a3019-105">A summary of the object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a16a7-106">Примечания</span><span class="sxs-lookup"><span data-stu-id="a16a7-106">Remarks</span></span>  
- <span data-ttu-id="a16a7-107">Тег \<summary> следует использовать для описания типа или члена типа.</span><span class="sxs-lookup"><span data-stu-id="a16a7-107">The \<summary> tag should be used to describe a type or a type member.</span></span> <span data-ttu-id="a16a7-108">Чтобы добавить дополнительную информацию в описание типа, используйте [\<remarks>](../../../csharp/programming-guide/xmldoc/remarks.md).</span><span class="sxs-lookup"><span data-stu-id="a16a7-108">Use [\<remarks>](../../../csharp/programming-guide/xmldoc/remarks.md) to add supplemental information to a type description.</span></span> <span data-ttu-id="a16a7-109">Чтобы включить средства документации, такие как [DocFX](https://dotnet.github.io/docfx/) и [Sandcastle](https://github.com/EWSoftware/SHFB), для создания внутренних гиперссылок на страницы документации для элементов кода, используйте атрибут [cref](../../../csharp/programming-guide/xmldoc/cref-attribute.md).</span><span class="sxs-lookup"><span data-stu-id="a16a7-109">Use the [cref Attribute](../../../csharp/programming-guide/xmldoc/cref-attribute.md) to enable documentation tools such as [DocFX](https://dotnet.github.io/docfx/) and [Sandcastle](https://github.com/EWSoftware/SHFB) to create internal hyperlinks to documentation pages for code elements.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a3019-106">Примечания</span><span class="sxs-lookup"><span data-stu-id="a3019-106">Remarks</span></span>  
+ <span data-ttu-id="a3019-107">Тег \<summary> следует использовать для описания типа или члена типа.</span><span class="sxs-lookup"><span data-stu-id="a3019-107">The \<summary> tag should be used to describe a type or a type member.</span></span> <span data-ttu-id="a3019-108">Чтобы добавить дополнительную информацию в описание типа, используйте [\<remarks>](../../../csharp/programming-guide/xmldoc/remarks.md).</span><span class="sxs-lookup"><span data-stu-id="a3019-108">Use [\<remarks>](../../../csharp/programming-guide/xmldoc/remarks.md) to add supplemental information to a type description.</span></span> <span data-ttu-id="a3019-109">Чтобы включить средства документации, такие как [DocFX](https://dotnet.github.io/docfx/) и [Sandcastle](https://github.com/EWSoftware/SHFB), для создания внутренних гиперссылок на страницы документации для элементов кода, используйте атрибут [cref](../../../csharp/programming-guide/xmldoc/cref-attribute.md).</span><span class="sxs-lookup"><span data-stu-id="a3019-109">Use the [cref Attribute](../../../csharp/programming-guide/xmldoc/cref-attribute.md) to enable documentation tools such as [DocFX](https://dotnet.github.io/docfx/) and [Sandcastle](https://github.com/EWSoftware/SHFB) to create internal hyperlinks to documentation pages for code elements.</span></span>  
   
- <span data-ttu-id="a16a7-110">Текст в теге \<summary> является единственным источником сведений о типе для технологии IntelliSense и также отображается в окне обозревателя объектов.</span><span class="sxs-lookup"><span data-stu-id="a16a7-110">The text for the \<summary> tag is the only source of information about the type in IntelliSense, and is also displayed in the Object Browser Window.</span></span>  
+ <span data-ttu-id="a3019-110">Текст в теге \<summary> является единственным источником сведений о типе для технологии IntelliSense и также отображается в окне обозревателя объектов.</span><span class="sxs-lookup"><span data-stu-id="a3019-110">The text for the \<summary> tag is the only source of information about the type in IntelliSense, and is also displayed in the Object Browser Window.</span></span>  
   
- <span data-ttu-id="a16a7-111">Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="a16a7-111">Compile with [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span> <span data-ttu-id="a16a7-112">Для создания окончательной документации на основе сгенерированного компилятором файла можно создать пользовательское средство или применить такие средства, как [DocFX](https://dotnet.github.io/docfx/) или [Sandcastle](https://github.com/EWSoftware/SHFB).</span><span class="sxs-lookup"><span data-stu-id="a16a7-112">To create the final documentation based on the compiler-generated file, you can create a custom tool, or use a tool such as [DocFX](https://dotnet.github.io/docfx/) or [Sandcastle](https://github.com/EWSoftware/SHFB).</span></span>  
+ <span data-ttu-id="a3019-111">Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="a3019-111">Compile with [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span> <span data-ttu-id="a3019-112">Для создания окончательной документации на основе сгенерированного компилятором файла можно создать пользовательское средство или применить такие средства, как [DocFX](https://dotnet.github.io/docfx/) или [Sandcastle](https://github.com/EWSoftware/SHFB).</span><span class="sxs-lookup"><span data-stu-id="a3019-112">To create the final documentation based on the compiler-generated file, you can create a custom tool, or use a tool such as [DocFX](https://dotnet.github.io/docfx/) or [Sandcastle](https://github.com/EWSoftware/SHFB).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a16a7-113">Пример</span><span class="sxs-lookup"><span data-stu-id="a16a7-113">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="a3019-113">Пример</span><span class="sxs-lookup"><span data-stu-id="a3019-113">Example</span></span>  
  [!code-csharp[csProgGuideDocComments#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#12)]  
   
- <span data-ttu-id="a16a7-114">В предыдущем примере выводится следующий XML-файл.</span><span class="sxs-lookup"><span data-stu-id="a16a7-114">The previous example produces the following XML file.</span></span>  
+ <span data-ttu-id="a3019-114">В предыдущем примере выводится следующий XML-файл.</span><span class="sxs-lookup"><span data-stu-id="a3019-114">The previous example produces the following XML file.</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -62,12 +62,12 @@ ms.locfileid: "56978557"
 </doc>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="a16a7-115">Пример</span><span class="sxs-lookup"><span data-stu-id="a16a7-115">Example</span></span>  
- <span data-ttu-id="a16a7-116">В следующем примере показано, как создать ссылку `cref` на универсальный тип.</span><span class="sxs-lookup"><span data-stu-id="a16a7-116">The following example shows how to make a `cref` reference to a generic type.</span></span>  
+## <a name="example"></a><span data-ttu-id="a3019-115">Пример</span><span class="sxs-lookup"><span data-stu-id="a3019-115">Example</span></span>  
+ <span data-ttu-id="a3019-116">В следующем примере показано, как создать ссылку `cref` на универсальный тип.</span><span class="sxs-lookup"><span data-stu-id="a3019-116">The following example shows how to make a `cref` reference to a generic type.</span></span>  
   
  [!code-csharp[csProgGuideDocComments#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#11)]  
   
- <span data-ttu-id="a16a7-117">В предыдущем примере выводится следующий XML-файл.</span><span class="sxs-lookup"><span data-stu-id="a16a7-117">The previous example produces the following XML file.</span></span>  
+ <span data-ttu-id="a3019-117">В предыдущем примере выводится следующий XML-файл.</span><span class="sxs-lookup"><span data-stu-id="a3019-117">The previous example produces the following XML file.</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -93,7 +93,7 @@ ms.locfileid: "56978557"
 </doc>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="a16a7-118">См. также</span><span class="sxs-lookup"><span data-stu-id="a16a7-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a3019-118">См. также</span><span class="sxs-lookup"><span data-stu-id="a3019-118">See also</span></span>
 
-- [<span data-ttu-id="a16a7-119">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="a16a7-119">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="a16a7-120">Рекомендуемые теги для комментариев документации</span><span class="sxs-lookup"><span data-stu-id="a16a7-120">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [<span data-ttu-id="a3019-119">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="a3019-119">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="a3019-120">Рекомендуемые теги для комментариев документации</span><span class="sxs-lookup"><span data-stu-id="a3019-120">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
