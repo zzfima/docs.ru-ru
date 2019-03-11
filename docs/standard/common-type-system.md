@@ -1,17 +1,15 @@
 ---
 title: Система общих типов CTS и спецификация CLS
 description: Сведения о том, как система общих типов (CTS) и спецификация CLS позволяют .NET поддерживать несколько языков.
-author: blackdwarf
-ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 3b1f5725-ac94-4f17-8e5f-244442438a4d
-ms.openlocfilehash: 992f70cc7c2e55a0a2cfd08e08a3a9f16aad8c8a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a6704b09a51a509cb7fbd786f9040454f78cc862
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569552"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675372"
 ---
 # <a name="common-type-system--common-language-specification"></a>Система общих типов CTS и спецификация CLS
 

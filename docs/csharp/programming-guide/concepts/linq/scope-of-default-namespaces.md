@@ -2,12 +2,12 @@
 title: Области пространств имен по умолчанию в C#1
 ms.date: 07/20/2015
 ms.assetid: fe826236-830f-457a-9027-7ad62c909fae
-ms.openlocfilehash: dfc86e2e58eb936106807aba21b2953f52101cbc
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d60f489f616a413e25bf5cd427bd467852a97c7b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979714"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379449"
 ---
 # <a name="scope-of-default-namespaces-in-c"></a>Области пространств имен по умолчанию в C\#
 Применяемые по умолчанию пространства имен, представленные в XML-дереве, находятся вне области запросов. Если имеется XML, расположенный в используемом по умолчанию пространстве имен, для получения полного имени, которое может быть применено в запросе, то необходимо объявить переменную <xref:System.Xml.Linq.XNamespace> и использовать ее в сочетании с локальным именем.  
@@ -53,7 +53,7 @@ End of result set
 ## <a name="example"></a>Пример  
  Этот пример показывает создание XML в пространстве имен, а также запрос, код которого написан правильно.  
   
- В отличие от вышеприведенного примера с неправильным кодом, правильный подход с использованием C# заключается в объявлении и инициализации объекта <xref:System.Xml.Linq.XNamespace> и его использовании при указании объектов <xref:System.Xml.Linq.XName>. В данном случае аргументом для метода <xref:System.Xml.Linq.XElement.Elements%2A> является объект <xref:System.Xml.Linq.XName>.  
+ В отличие от вышеприведенного примера с неправильным кодом, правильный подход с использованием C# заключается в объявлении и инициализации объекта <xref:System.Xml.Linq.XNamespace> и его использовании при указании объектов <xref:System.Xml.Linq.XName>. В данном случае аргументом для метода <xref:System.Xml.Linq.XContainer.Elements%2A> является объект <xref:System.Xml.Linq.XName>.  
   
 ### <a name="code"></a>Код  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <typeparam> C# XML tag
 - typeparam C# XML tag
 ms.assetid: 9b99d400-e911-4e55-99c6-64367c96aa4f
-ms.openlocfilehash: 9150ab3e29eaa6b692e2ab2be90bb0e87ba54941
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: fc2c0ec29dd2652d48a6f941bec939bbd9aac8e9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978664"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471645"
 ---
 # <a name="typeparam-c-programming-guide"></a>\<typeparam> (руководство по программированию на C#)
 ## <a name="syntax"></a>Синтаксис  
@@ -22,7 +22,7 @@ ms.locfileid: "56978664"
 <typeparam name="name">description</typeparam>  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `name`  
  Имя параметра типа. Имя заключается в двойные кавычки (" ").  
   

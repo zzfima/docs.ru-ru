@@ -6,14 +6,12 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: d8a6d604e78e1568714d5b574594af752abe221e
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: df2c1fcd6c84b7670c53a8f06f97c2ea46b8b33d
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56305511"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679415"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Реализация поставщика автоматизации пользовательского интерфейса на стороне сервера
 > [!NOTE]
@@ -50,7 +48,7 @@ ms.locfileid: "56305511"
 ### <a name="provider-interfaces"></a>Интерфейсы поставщика  
  Каждый поставщик [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] должен реализовывать один из следующих интерфейсов.  
   
-|Интерфейс|Описание:|  
+|Интерфейс|Описание|  
 |---------------|-----------------|  
 |<xref:System.Windows.Automation.Provider.IRawElementProviderSimple>|Предоставляет функциональные возможности для простого элемента управления, размещенного в окне, включая поддержку для шаблонов и свойств элементов управления.|  
 |<xref:System.Windows.Automation.Provider.IRawElementProviderFragment>|Наследует от <xref:System.Windows.Automation.Provider.IRawElementProviderSimple>. Добавляет функциональные возможности для элемента в сложном элементе управления, включая навигацию внутри фрагмента, установку фокуса и возврат ограничивающего прямоугольника элемента.|  
@@ -117,7 +115,7 @@ ms.locfileid: "56305511"
 ### <a name="events-in-non-wpf-providers"></a>События в поставщиках, отличных от WPF  
  Поставщики[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] должны вызывать события, чтобы уведомлять клиентские приложения об изменениях состояния пользовательского интерфейса. Для создания событий используются следующие методы.  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
 |<xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseAutomationEvent%2A>|Создает различные события, включая события, вызываемые шаблонами элементов управления.|  
 |<xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseAutomationPropertyChangedEvent%2A>|Вызывает событие при изменении свойства [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
@@ -127,7 +125,7 @@ ms.locfileid: "56305511"
   
  Для оптимизации производительности поставщик можно выборочно вызывать события или вообще не создавать события, если отсутствует клиентское приложение, зарегистрированное для их получения. Для оптимизации используются следующие методы.  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
 |<xref:System.Windows.Automation.Provider.AutomationInteropProvider.ClientsAreListening%2A>|Это статическое свойство указывает, подписано ли какое-либо клиентское приложение на события [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
 |<xref:System.Windows.Automation.Provider.IRawElementProviderAdviseEvents>|Реализация поставщика этого интерфейса в корневом элементе фрагмента позволяет ему знать, когда клиенты регистрируют и отменяют регистрацию обработчиков событий для событий в фрагменте.|  

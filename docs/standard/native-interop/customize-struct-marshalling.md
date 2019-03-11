@@ -7,12 +7,12 @@ ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: c4d2d84a59aebedda2d1e6380caeef170051c0a3
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 5bce891a0061bb1810559febf1ab904a5fb6fc94
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "56411445"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675788"
 ---
 # <a name="customizing-structure-marshalling"></a>Настройка маршалинга структуры
 
@@ -65,7 +65,7 @@ struct WinBool
 };
 ```
 
-Если использовать значение `UmanagedType.U1` или `UnmanagedType.I1` ниже, среда выполнения сможет маршалировать поле `b` как 1-байтный собственный тип `bool`.
+Если использовать значение `UnmanagedType.U1` или `UnmanagedType.I1` ниже, среда выполнения сможет маршалировать поле `b` как 1-байтный собственный тип `bool`.
 
 ```csharp
 public struct CBool
@@ -342,7 +342,7 @@ struct Currency
 В системе Windows можно маршалировать поля типа `object` в машинный код. Эти поля можно маршалировать в один из трех типов:
 - [`VARIANT`](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)
 - [`IUnknown*`](/windows/desktop/api/unknwn/nn-unknwn-iunknown)
-- [`IDispatch*`](/windows/desktop/api/oaidl/nn-oaidl-idispatch). 
+- [`IDispatch*`](/windows/desktop/api/oaidl/nn-oaidl-idispatch)
 
 По умолчанию поля типа `object` маршалируются в тип `IUnknown*`, который создает оболочку объекта.
 

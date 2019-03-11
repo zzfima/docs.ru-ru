@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd1f7679a3c2ecc234724e6417c5b12a78ff7ddc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 35ff03eb830a02b05dd128da4c072a8c2c918921
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54598295"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501517"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (средство PEVerify)
 Средство PEVerify помогает разработчикам, создающим код на языке CIL — авторам компиляторов, обработчиков скриптов и т. д. — определить, соответствует ли этот код и связанные с ним метаданные требованиям безопасности типов. Некоторые компиляторы создают проверяемый типобезопасный код только в том случае, если разработчик не применяет определенные языковые конструкции. При работе с таким компилятором разработчику иногда требуется проверить, сохранена ли в коде безопасность типов. В этом случае для проверки CIL и метаданных в файлах можно использовать инструмент PEVerify.  
@@ -32,7 +32,7 @@ ms.locfileid: "54598295"
 peverify filename [options]  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
   
 |Аргумент|Описание|  
 |--------------|-----------------|  

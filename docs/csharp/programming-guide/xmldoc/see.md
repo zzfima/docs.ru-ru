@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cross-references [C#]
 - see C# XML tag
 ms.assetid: 0200de01-7e2f-45c4-9094-829d61236383
-ms.openlocfilehash: 1816aeb0ddf783c8ad0baa7f5d460f0fc60747e1
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 90fd73346d255d195fa7384ebc2f60ebc4f32fba
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974826"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480681"
 ---
 # <a name="see-c-programming-guide"></a>\<see> (руководство по программированию на C#)
 ## <a name="syntax"></a>Синтаксис  
@@ -25,7 +25,7 @@ ms.locfileid: "56974826"
 <see cref="member"/>  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  cref = "`member`"  
  Ссылка на член или поле, которые доступны для вызова из текущей среды компиляции. Компилятор проверяет, существует ли элемент кода, и передает `member` в имя элемента в выходных XML-данных. *member* необходимо заключать в двойные кавычки (" ").  
   

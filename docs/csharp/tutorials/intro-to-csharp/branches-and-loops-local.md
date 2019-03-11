@@ -3,12 +3,12 @@ title: Ветви и циклы. Вводное руководство по C#
 description: В рамках этого руководства, посвященного ветвям и циклам, вы создадите пример кода на C#, который демонстрирует возможности языка для организации условного ветвления и циклического выполнения операторов.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: bfb260ccfd0cf2b922c1bc3eaa98aa2c26b464d8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c9e2ede3ee8632304a86efdf25bb2a8db5354a13
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153778"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677790"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Изучение условной логики с операторами ветви и цикла
 
@@ -20,7 +20,7 @@ ms.locfileid: "53153778"
 
 Создайте каталог с именем **branches-tutorial**. Откройте этот каталог и выполните команду `dotnet new console -n BranchesAndLoops -o .`. Эта команда создает консольное приложение .NET Core в текущем каталоге.
 
-Откройте файл **Program.cs** в любом редакторе и замените строку `Console.Writeline("Hello World!");` следующим кодом:
+Откройте файл **Program.cs** в любом редакторе и замените строку `Console.WriteLine("Hello World!");` следующим кодом:
 
 ```csharp
 int a = 5;
@@ -31,7 +31,7 @@ if (a + b > 10)
 
 Чтобы выполнить этот код, введите `dotnet run` в окне консоли. В консоли должно появиться сообщение The answer is greater than 10 (Ответ больше 10).
 
-Измените объявление `b`, чтобы сумма была меньше 10: 
+Измените объявление `b`, чтобы сумма была меньше 10:
 
 ```csharp
 int b = 3;
@@ -63,7 +63,8 @@ else
 
 > [!IMPORTANT]
 > Отступы под операторами `if` и `else` предназначены только для удобства чтения.
-> В языке C# необязательно ставить отступы или пробелы. Операторы после ключевого слова `if` или `else` будут выполняться на основе условия. Во всех строках в примерах кода, представленных в этом руководстве, отступы традиционно соответствуют потоку управления операторов.
+> В языке C# необязательно ставить отступы или пробелы.
+> Операторы после ключевого слова `if` или `else` будут выполняться на основе условия. Во всех строках в примерах кода, представленных в этом руководстве, отступы традиционно соответствуют потоку управления операторов.
 
 Так как отступ не обязателен, используйте скобки `{` и `}`, если нужно указать несколько операторов в блоке кода, который выполняется в зависимости от условий. Программисты C# обычно используют эти фигурные скобки во всех предложениях `if` и `else`. Следующий пример аналогичен только что созданному. Измените код выше, чтобы он соответствовал следующему коду:
 
@@ -158,7 +159,7 @@ namespace BranchesAndLoops
             {
                 Console.WriteLine("The answer is not greater than 10");
                 Console.WriteLine("And the first number is not greater than the second");
-            }            
+            }
         }
 
         static void Main(string[] args)
@@ -218,7 +219,7 @@ do
 for(int index = 0; index < 10; index++)
 {
     Console.WriteLine($"Hello World! The index is {index}");
-} 
+}
 ```
 
 Этот цикл работает так же, как циклы `while` и `do`, использованные ранее. Оператор `for` состоит из трех частей, которые отвечают за его работу.
@@ -252,7 +253,7 @@ for(int index = 0; index < 10; index++)
 
 Дополнительные сведения об этих понятиях см. в следующих разделах:
 
-[if-else (справочник по C#)](../../language-reference/keywords/if-else.md)  
-[while (справочник по C#)](../../language-reference/keywords/while.md)  
-[do (справочник по C#)](../../language-reference/keywords/do.md)  
-[for (справочник по C#)](../../language-reference/keywords/for.md)  
+- [if-else (справочник по C#)](../../language-reference/keywords/if-else.md)
+- [while (справочник по C#)](../../language-reference/keywords/while.md)
+- [do (справочник по C#)](../../language-reference/keywords/do.md)
+- [for (справочник по C#)](../../language-reference/keywords/for.md)

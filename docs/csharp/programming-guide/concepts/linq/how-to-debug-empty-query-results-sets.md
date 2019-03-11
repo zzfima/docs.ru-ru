@@ -2,12 +2,12 @@
 title: Как выполнить Отладка пустых наборов результатов запроса (C#)
 ms.date: 07/20/2015
 ms.assetid: b569f0dc-425e-45a6-acbf-770fb761c981
-ms.openlocfilehash: 0503c09bbdd28276ea4fdc1147e0bca5471fa6e8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d77a92acf54420b5add3bb9ae8b3f0b8c5448d18
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54723187"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357915"
 ---
 # <a name="how-to-debug-empty-query-results-sets-c"></a>Как выполнить Отладка пустых наборов результатов запроса (C#)
 Одной из наиболее типичных проблем при запросах к XML-деревьям является то, что, если XML-дерево содержит пространство имен по умолчанию, разработчик иногда пишет запрос так, как если бы XML-код не располагался в пространстве имен.  
@@ -50,7 +50,7 @@ End of result set
 ## <a name="example"></a>Пример  
  Этот пример показывает создание XML в пространстве имен, а также запрос, код которого написан правильно.  
   
- Решение заключается в объявлении и инициализации объекта <xref:System.Xml.Linq.XNamespace> и его использовании при указании объектов <xref:System.Xml.Linq.XName>. В данном случае аргументом для метода <xref:System.Xml.Linq.XElement.Elements%2A> является объект <xref:System.Xml.Linq.XName>.  
+ Решение заключается в объявлении и инициализации объекта <xref:System.Xml.Linq.XNamespace> и его использовании при указании объектов <xref:System.Xml.Linq.XName>. В данном случае аргументом для метода <xref:System.Xml.Linq.XContainer.Elements%2A> является объект <xref:System.Xml.Linq.XName>.  
   
 ```csharp  
 XElement root = XElement.Parse(  

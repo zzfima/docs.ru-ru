@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bb1fed9455add5a6fa48443bc7b862112b74a871
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 4649663338efd0cc07b435991f90ba15843cc301
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220644"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496837"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (средство экспорта метаданных среды выполнения Windows)
 Программа экспорта метаданных (Winmdexp.exe) [!INCLUDE[wrt](../../../includes/wrt-md.md)] преобразует модуль .NET Framework в файл, содержащий метаданные [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Несмотря на то что сборки .NET Framework и файлы метаданных [!INCLUDE[wrt](../../../includes/wrt-md.md)] используют один и тот же физический формат, существуют различия в содержимом таблиц метаданных, то есть сборки .NET Framework невозможно автоматически использовать как компоненты [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Процесс преобразования модуля .NET Framework в компонент [!INCLUDE[wrt](../../../includes/wrt-md.md)] называется *экспортированием*. В [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] и [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] конечный файл метаданных Windows (WINMD) содержит и метаданные, и реализацию.  
@@ -29,7 +29,7 @@ ms.locfileid: "56220644"
 winmdexp [options] winmdmodule  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
   
 |Аргумент или параметр|Описание|  
 |------------------------|-----------------|  

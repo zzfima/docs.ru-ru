@@ -4,12 +4,12 @@ description: Архитектура микрослужб .NET для конте�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 01e326b049ab8bb8d9c7f8c78acfc272d1d57ae9
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 637e51c45217c9ff214395235348b09119200fe7
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146138"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676347"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Реализация уровня сохраняемости инфраструктуры с помощью Entity Framework Core
 
@@ -56,7 +56,7 @@ public class Order : Entity
     private DateTime _orderDate;
     // Other fields ...
 
-    private readonly List<OrderItem> _orderItems; 
+    private readonly List<OrderItem> _orderItems;
     public IReadOnlyCollection<OrderItem> OrderItems => _orderItems;
 
     protected Order() { }
@@ -72,7 +72,7 @@ public class Order : Entity
     {
         // Validation logic...
 
-        var orderItem = new OrderItem(productId, productName, 
+        var orderItem = new OrderItem(productId, productName,
                                       unitPrice, discount,
                                       pictureUrl, units);
         _orderItems.Add(orderItem);
@@ -80,7 +80,7 @@ public class Order : Entity
 }
 ```
 
-Обратите внимание, что свойство `OrderItems` может быть доступно только для чтения с помощью `IReadOnlyCollection<OrderItem>`. Этот тип доступен только для чтения, поэтому он защищен от обычных внешних обновлений. 
+Обратите внимание, что свойство `OrderItems` может быть доступно только для чтения с помощью `IReadOnlyCollection<OrderItem>`. Этот тип доступен только для чтения, поэтому он защищен от обычных внешних обновлений.
 
 EF Core предоставляет способ сопоставления модели предметной области с физической базой данных без "засорения" этой модели предметной области. Это чистый код POCO .NET, так как действие сопоставления реализовано на уровне сохраняемости. В данном действии сопоставления необходимо настроить сопоставление полей с базой данных. В следующем примере метода `OnModelCreating` из `OrderingContext` и класса `OrderEntityTypeConfiguration` вызов `SetPropertyAccessMode` указывает EF Core на необходимость обратиться к свойству `OrderItems` через его поле.
 
@@ -101,7 +101,7 @@ class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
         orderConfiguration.ToTable("orders", OrderingContext.DEFAULT_SCHEMA);
         // Other configuration
 
-        var navigation = 
+        var navigation =
               orderConfiguration.Metadata.FindNavigation(nameof(Order.OrderItems));
 
         //EF access the OrderItem collection property through its backing field
@@ -140,7 +140,7 @@ namespace Microsoft.eShopOnContainers.Services.Ordering.Infrastructure.Repositor
 
         public Buyer Add(Buyer buyer)
         {
-            return _context.Buyers.Add(buyer).Entity; 
+            return _context.Buyers.Add(buyer).Entity;
         }
 
         public async Task<Buyer> FindAsync(string BuyerIdentityGuid)
@@ -357,7 +357,7 @@ EF Core поддерживает алгоритм [HiLo](https://stackoverflow.c
 
 ```csharp
 // GENERIC SPECIFICATION INTERFACE
-// https://github.com/dotnet-architecture/eShopOnWeb 
+// https://github.com/dotnet-architecture/eShopOnWeb
 
 public interface ISpecification<T>
 {
@@ -372,7 +372,7 @@ public interface ISpecification<T>
 ```csharp
 // GENERIC SPECIFICATION IMPLEMENTATION (BASE CLASS)
 // https://github.com/dotnet-architecture/eShopOnWeb
- 
+
 public abstract class BaseSpecification<T> : ISpecification<T>
 {
     public BaseSpecification(Expression<Func<T, bool>> criteria)
@@ -381,16 +381,16 @@ public abstract class BaseSpecification<T> : ISpecification<T>
     }
     public Expression<Func<T, bool>> Criteria { get; }
 
-    public List<Expression<Func<T, object>>> Includes { get; } = 
+    public List<Expression<Func<T, object>>> Includes { get; } =
                                            new List<Expression<Func<T, object>>>();
 
     public List<string> IncludeStrings { get; } = new List<string>();
- 
+
     protected virtual void AddInclude(Expression<Func<T, object>> includeExpression)
     {
         Includes.Add(includeExpression);
     }
-    
+
     // string-based includes allow for including children of children
     // e.g. Basket.Items.Product
     protected virtual void AddInclude(string includeString)
@@ -432,18 +432,19 @@ public IEnumerable<T> List(ISpecification<T> spec)
     var queryableResultWithIncludes = spec.Includes
         .Aggregate(_dbContext.Set<T>().AsQueryable(),
             (current, include) => current.Include(include));
- 
+
     // modify the IQueryable to include any string-based include statements
     var secondaryResult = spec.IncludeStrings
         .Aggregate(queryableResultWithIncludes,
             (current, include) => current.Include(include));
- 
+
     // return the result of the query using the specification's criteria expression
     return secondaryResult
                     .Where(spec.Criteria)
                     .AsEnumerable();
 }
 ```
+
 Помимо инкапсуляции логики фильтрации, эта спецификация может указывать форму возвращаемых данных, включая свойства, которые следует заполнить.
 
 Хотя не рекомендуется возвращать IQueryable из репозитория, совершенно нормально использовать их в репозитории для создания набора результатов. Вы видели применение этого подхода в методе List выше, где промежуточные выражения IQueryable использовались для построения списка Includes запроса перед выполнением запроса с условиями спецификации в последней строке.
@@ -468,6 +469,6 @@ public IEnumerable<T> List(ISpecification<T> spec)
 - **Шаблон спецификации** \
   [*https://deviq.com/specification-pattern/*](https://deviq.com/specification-pattern/)
 
->[!div class="step-by-step"]
->[Назад](infrastructure-persistence-layer-design.md)
->[Вперед](nosql-database-persistence-infrastructure.md)
+> [!div class="step-by-step"]
+> [Назад](infrastructure-persistence-layer-design.md)
+> [Вперед](nosql-database-persistence-infrastructure.md)

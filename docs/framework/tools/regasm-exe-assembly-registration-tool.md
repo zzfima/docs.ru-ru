@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 30b13c75907ad0bc4d6dbce6a3ecd07f1fbede11
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 99e1b2cb67bb434cc3c3770900c6189a4ab22242
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48264438"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492443"
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (средство регистрации сборок)
 
@@ -30,13 +30,13 @@ ms.locfileid: "48264438"
 regasm assemblyFile [options]
 ```
 
-#### <a name="parameters"></a>Параметры
+## <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*assemblyFile*|Сборка, которая должна быть зарегистрирована в COM.|
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |------------|-----------------|
 |**/codebase**|Создает в реестре запись Codebase. Запись Codebase указывает путь к файлу сборки, которая не установлена в глобальном кэше сборок. Не следует указывать этот параметр, если впоследствии вы будете устанавливать регистрируемую сборку в глобальном кэше сборок. Аргумент *assemblyFile*, задаваемый с помощью параметра **/codebase**, должен быть [сборкой со строгим именем](../../../docs/framework/app-domains/strong-named-assemblies.md).|
 |**/registered**|Указывает, что это средство будет ссылаться только на библиотеки типов, которые уже были зарегистрированы.|

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 01bbd3e4fd113c39fe6fdd95945381978ab49f9f
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: ac6dbf4792df9e287c849ba2a1a93468a444d221
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093948"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715689"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Установка .NET Framework для разработчиков
 
@@ -228,7 +228,7 @@ ms.locfileid: "56093948"
 
 - Сведения о миграции приложения с платформы .NET Framework 4 на [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] и ее доработанные выпуски см. в [руководстве по миграции](~/docs/framework/migration-guide/index.md).
 
-- [Библиотека справочников .NET Framework Reference Source](https://referencesource.microsoft.com/) включает примеры исходного кода .NET Framework. Справочник по исходному коду также доступен на сайте [Github](https://github.com/Microsoft/referencesource). Вы можете [скачать справочник](https://referencesource.microsoft.com/download.html) для автономной работы и пошагово просматривать исходный код (включая исправления и обновления) во время отладки. Дополнительные сведения см. в записи блога [Новый облик .NET Reference Source](https://blogs.msdn.com/b/dotnet/archive/2014/02/24/a-new-look-for-net-reference-source.aspx).
+- [Библиотека справочников .NET Framework Reference Source](https://referencesource.microsoft.com/) включает примеры исходного кода .NET Framework. Справочник по исходному коду также доступен на сайте [Github](https://github.com/Microsoft/referencesource). Вы можете [скачать справочник](https://referencesource.microsoft.com/download.html) для автономной работы и пошагово просматривать исходный код (включая исправления и обновления) во время отладки. Дополнительные сведения см. в записи блога [Новый облик .NET Reference Source](https://devblogs.microsoft.com/dotnet/a-new-look-for-net-reference-source/).
 
 ## <a name="see-also"></a>См. также
 

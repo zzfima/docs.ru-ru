@@ -2,12 +2,12 @@
 title: Коллекции (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: ddbbc60c497b324bdeb2614149569d5de5f4c114
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: d5e3aeab2e035ec2b5f97fd41c84ffa7625ba0b4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675417"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373443"
 ---
 # <a name="collections-c"></a>Коллекции (C#)
 Во многих приложениях требуется создавать группы связанных объектов и управлять ими. Существует два способа группировки объектов: создать массив объектов и создать коллекцию.  
@@ -541,7 +541,7 @@ public class Color
 ```  
 
 <a name="BKMK_Iterators"></a> 
-##  <a name="iterators"></a>Итераторы  
+## <a name="iterators"></a>Итераторы  
  *Итератор* используется для выполнения настраиваемого перебора коллекции. Итератор может быть методом или методом доступа `get`. Итератор использует оператор [yield return](../../../csharp/language-reference/keywords/yield.md) для возврата всех элементов коллекции по одному за раз.  
   
  Итератор вызывается с помощью оператора [foreach](../../../csharp/language-reference/keywords/foreach-in.md). Каждая итерация цикла `foreach` вызывает итератор. При достижении оператора `yield return` в итераторе возвращается выражение, и текущее расположение в коде сохраняется. При следующем вызове итератора выполнение возобновляется с этого места.  

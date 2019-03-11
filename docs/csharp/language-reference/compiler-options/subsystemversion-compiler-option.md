@@ -2,12 +2,12 @@
 title: -subsystemversion (параметры компилятора C#)
 ms.date: 07/20/2015
 ms.assetid: a99fce81-9d92-4813-9874-bee777041445
-ms.openlocfilehash: 42d9d81c4cfbf98c1d7a470a5863ac9198f16395
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cafa10447e08758499f5d5dc66ab61c5bbd1d54a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738083"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474882"
 ---
 # <a name="-subsystemversion-c-compiler-options"></a>-subsystemversion (параметры компилятора C#)
 Указывает минимальную версию подсистемы, в которой может выполняться созданный исполняемый файл, то есть определяет версии Windows, в которых может работать исполняемый файл. Чаще всего этот параметр предоставляет исполняемому файлу возможность использовать определенные возможности безопасности, недоступные в прежних версиях Windows.  
@@ -21,7 +21,7 @@ ms.locfileid: "54738083"
 -subsystemversion:major.minor  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `major.minor`  
  Минимальная требуемая версия подсистемы, через точку записывается основная и дополнительная версии. Например, можно указать, что приложение не может выполняться в операционной системе старше Windows 7, если задать для этого параметра значение 6.01, как указано в таблице ниже в этом разделе. Необходимо указать значения для параметра `major` и `minor` в виде целых чисел.  
   

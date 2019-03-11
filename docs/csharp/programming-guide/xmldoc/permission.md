@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <permission> C# XML tag
 - permission C# XML tag
 ms.assetid: 769e93fe-8404-443f-bf99-577aa42b6a49
-ms.openlocfilehash: 475e9ab5c59260544b0e413e165953c0b84449b5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ea0b8c37f6ef803fd36592376a7a8c0c334f719c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973903"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489401"
 ---
 # <a name="permission-c-programming-guide"></a>\<permission> (руководство по программированию на C#)
 ## <a name="syntax"></a>Синтаксис  
@@ -23,7 +23,7 @@ ms.locfileid: "56973903"
 <permission cref="member">description</permission>  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  cref = "`member`"  
  Ссылка на член или поле, которые доступны для вызова из текущей среды компиляции. Компилятор проверяет, существует ли элемент кода, и приводит `member` к каноническому имени элемента в выходных XML-данных. *member* необходимо заключать в двойные кавычки (" ").  
   
