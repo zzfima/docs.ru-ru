@@ -197,6 +197,7 @@
 ### [Организация проектов для .NET Core](core/porting/project-structure.md)
 ### [Вспомогательные инструменты для переноса на .NET Core](core/porting/tools.md)
 ### [Использование пакета совместимости Windows](core/porting/windows-compat-pack.md)
+### [Перенос проектов Windows Forms](core/porting/winforms.md)
 <!--### [🔧 NuGet packages](core/porting/nuget-packages.md)-->
 ## [Сборка .NET Core из исходного кода](core/build/index.md)
 ### [Упаковка дистрибутивов .NET Core](core/build/distribution-packaging.md)
