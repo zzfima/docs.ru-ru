@@ -12,7 +12,7 @@ author: rpetrusha
 ms.author: ronpet
 ---
 
-# Новые возможности .NET Framework <a name="introduction"></a>
+# <a name="whats-new-in-the-net-framework"></a>Новые возможности .NET Framework
 
 В этой статье кратко рассматриваются основные новые возможности и усовершенствования в следующих версиях .NET Framework:
 
@@ -1570,8 +1570,6 @@ WPF включает [пакет NuGet](https://go.microsoft.com/fwlink/?LinkID=
 
      Пакеты .NET Core, такие как неизменяемые коллекции, [API SIMD](https://go.microsoft.com/fwlink/?LinkID=518639) и API-интерфейсы сетевых подключений, например из пространства имен <xref:System.Net.Http>, теперь доступны в виде пакетов с открытым исходным кодом на сайте [GitHub](https://github.com/). Сведения о доступе к этому коду см. в разделе [CoreFx на GitHub](https://github.com/dotnet/corefx). Дополнительные сведения и инструкции, как принять участие в этих пакетах, см. в разделе [Ядро .NET и открытый исходный код](../../../docs/framework/get-started/net-core-and-open-source.md)[домашней странице .NET на GitHub](https://github.com/dotnet/home).
 
-[К началу](#introduction)
-
 <a name="v452" />
 
 ## <a name="whats-new-in-the-net-framework-452"></a>Новые возможности .NET Framework 4.5.2
@@ -1643,8 +1641,6 @@ WPF включает [пакет NuGet](https://go.microsoft.com/fwlink/?LinkID=
 
      Метод может использоваться зачислением, ранее созданным <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=nameWithType> в ответ на метод <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType>. Он запрашивает у `System.Transactions` повышение уровня транзакции до транзакции MSDTC и "преобразование" зачисления, допускающего повышение уровня, в зачисление устойчивых ресурсов. После успешного завершения этого метода `System.Transactions` больше не будет ссылаться на интерфейс <xref:System.Transactions.IPromotableSinglePhaseNotification>, и все будущие уведомления будут поступать в предоставленном интерфейсе <xref:System.Transactions.ISinglePhaseNotification>. Рассматриваемое зачисление должно работать как зачисление устойчивых ресурсов, поддерживая ведение журнала транзакций и восстановления. Подробные сведения см. в разделе <xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=nameWithType>. Кроме того, зачисление должно поддерживать <xref:System.Transactions.ISinglePhaseNotification>.  Этот метод может вызываться *только* во время обработки вызова <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType>. Если это не так, создается исключение <xref:System.Transactions.TransactionException>.
 
-[К началу](#introduction)
-
 <a name="v451" />
 
 ## <a name="whats-new-in-the-net-framework-451"></a>Новые возможности .NET Framework 4.5.1
@@ -1706,8 +1702,6 @@ WPF включает [пакет NuGet](https://go.microsoft.com/fwlink/?LinkID=
 Начиная с Visual Studio 2013 вы можете использовать [Управляемое средство профильной оптимизации (Mpgo.exe)](../../../docs/framework/tools/mpgo-exe-managed-profile-guided-optimization-tool.md) для оптимизации классических приложений и приложений [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].
 
 См. новые возможности ASP.NET 4.5.1 в статье [Заметки о выпуске ASP.NET and Web Tools для Visual Studio 2013](/aspnet/visual-studio/overview/2013/release-notes).
-
-[К началу](#introduction)
 
 <a name="v45" />
 

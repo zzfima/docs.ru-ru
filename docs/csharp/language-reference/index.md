@@ -1,19 +1,13 @@
 ---
-title: Справочник по C#
+title: 'Справочник по C#'
 ms.date: 02/14/2017
 helpviewer_keywords:
-- Visual C#, language reference
-- language reference [C#]
-- Programmer's Reference for C#
-- C# language, reference
-- reference, C# language
+  - 'Visual C#, language reference'
+  - 'language reference [C#]'
+  - 'Programmer''s Reference for C#'
+  - 'C# language, reference'
+  - 'reference, C# language'
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: c9400c2836d923fe92ed88ec947a1953800bc47d
-ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34472507"
 ---
 # <a name="c-reference"></a>Справочник по C#
 Этот раздел содержит подробные справочные сведения о ключевых словах, операторах, специальных символах, директивах препроцессора, параметрах компилятора и ошибках и предупреждениях компилятора в среде C#.  
@@ -37,8 +31,11 @@ ms.locfileid: "34472507"
  [Ошибки компилятора C#](../../csharp/language-reference/compiler-messages/index.md)  
  Фрагменты кода, демонстрирующие причины и способы исправления ошибок и предупреждений компилятора C#.  
   
- [Спецификация языка C#](../../csharp/language-reference/language-specification/index.md)  
- Ссылки на последнюю версию спецификации C#.  
+ [Спецификация языка C#](../../../_csharplang/spec/introduction.md)  
+ Спецификация языка C# версии 6.0 Это черновой вариант для языка C# версии 6.0. Версия 5.0 была выпущена в декабре 2017 г. как [стандартный 5-й выпуск ECMA-334](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf).
+  
+ [Предложения для языка C# версии 7.0](../../../_csharplang/proposals/csharp-7.0/pattern-matching.md)  
+ В версии C# 7.0 реализован ряд новых возможностей, включая сопоставления шаблонов, локальные функции, объявления выходной переменной, выражения throw, двоичные литералы и разделители между цифрами. Эта папка содержит спецификации для каждой из этих функций.
   
 ## <a name="related-sections"></a>Связанные разделы  
 
