@@ -21,7 +21,7 @@ ms.locfileid: "57375536"
   
 <a name="role_of_visual_object"></a>   
 ## <a name="role-of-the-visual-object"></a>Роль объекта Visual
- Класс <xref:System.Windows.Media.Visual> — это базовая абстракция, каждый объект <xref:System.Windows.FrameworkElement> явялется производным от него. Эта абстракция также служит точкой входа для написания новых элементов управления [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], и во многих случаях ее можно рассматривать как аналог дескриптора окна (HWND) в модели приложений Win32.  
+ Класс <xref:System.Windows.Media.Visual> — это базовая абстракция, каждый объект <xref:System.Windows.FrameworkElement> является производным от него. Эта абстракция также служит точкой входа для написания новых элементов управления [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], и во многих случаях ее можно рассматривать как аналог дескриптора окна (HWND) в модели приложений Win32.  
   
  Объект <xref:System.Windows.Media.Visual> — это основной объект [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], главная роль которого заключается в поддержке отрисовки. Элементы управления пользовательского интерфейса, такие как <xref:System.Windows.Controls.Button> и <xref:System.Windows.Controls.TextBox>, являются производными от класса <xref:System.Windows.Media.Visual> и используют его для сохранения данных отрисовки. Объект <xref:System.Windows.Media.Visual> обеспечивает поддержку следующих функций:  
   
