@@ -4,12 +4,12 @@ description: Узнайте, как создать приложение .NET Cor
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/28/2019
-ms.openlocfilehash: f2997c778b87ecd88c0fd2fadf491763066a4950
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 85ea06d56ed1c3312a010c5e575dd193c00b93e9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739601"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363908"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>Создание приложения .NET Core с подключаемыми модулями
 
@@ -244,7 +244,7 @@ static Assembly LoadPlugin(string relativePath)
 
 ## <a name="other-plugin-examples-in-the-sample"></a>Другие примеры подключаемого модуля в образце
 
-Объект `AssemblyDependencyResolver` также может разрешить собственные библиотеки, включенные в пакеты NuGet, и локализованные вспомогательные сборки. `UVPlugin` и `FrenchPlugin` демонстрируют эти сценарии.
+Полный исходный код для этого руководства можно найти в [репозитории dotnet/samples](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin). Полный пример включает несколько других примеров поведения `AssemblyDependencyResolver`. Например, объект `AssemblyDependencyResolver` может разрешить собственные библиотеки, а также локализованные вспомогательные сборки, включенные в пакеты NuGet. `UVPlugin` и `FrenchPlugin` в репозитории примеров демонстрируют такие сценарии.
 
 ## <a name="how-to-reference-a-plugin-interface-assembly-defined-in-a-nuget-package"></a>Способ создания ссылок на сборку интерфейса подключаемого модуля, определенную в пакете NuGet
 

@@ -1,16 +1,21 @@
 ---
 title: Обучение регрессионной модели для прогнозирования значения с помощью ML.NET.
 description: Узнайте, как обучить регрессионную модель машинного обучения для прогнозирования значения с помощью ML.NET
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: faee51550250f08443d4d9349fa2f1c92bf411dc
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: e7ea07471e155804a7ad36481aa469beda7028ae
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092908"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673149"
 ---
 # <a name="train-a-regression-model-to-predict-a-value-using-mlnet"></a>Обучение регрессионной модели для прогнозирования значения с помощью ML.NET.
+
+> [!NOTE]
+> В этом разделе описано, как использовать платформу ML.NET, которая сейчас доступна в режиме предварительной версии. Этот материал может быть изменен. Дополнительные сведения см. в [обзоре ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+
+Сейчас в этих инструкциях и примере используется **ML.NET версии 0.10**. Дополнительные сведения см. в заметках о выпуске в [репозитории GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 Обычно обучение модели с помощью ML.NET состоит из трех этапов:
 

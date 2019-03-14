@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 107de172e523758474bafb3b86a2960b926a010a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: eca84aa3a3d7bffaac31cc36ed14e5d5bb5a37cc
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371376"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788483"
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows Forms добавьте элемент конфигурации
 
@@ -41,14 +41,14 @@ ms.locfileid: "57371376"
 
 | `key` Имя | Значения | Описание |
 | ---------- | ------ | ----------- |
-| «AnchorLayout.DisableSinglePassControlScaling» | «true»&#124;«false» | Указывает, являются ли привязанные элементы управления масштабируется за один проход. «true», чтобы отключить единый передать масштабирование; в противном случае — значение false. См. в разделе «Pass одним масштабирование» ["Примечания"](#Remarks) Дополнительные сведения. |
+| «AnchorLayout.DisableSinglePassControlScaling» | «true»&#124;«false» | Указывает, являются ли привязанные элементы управления масштабируется за один проход. «true», чтобы отключить единый передать масштабирование; в противном случае — значение false. См. в разделе «Pass одним масштабирование» ["Примечания"](#remarks) Дополнительные сведения. |
 | «DpiAwareness» | "PerMonitorV2"&#124;"false" | Указывает, является ли приложение поддерживает определение DPI. Ключ «PerMonitorV2» для поддержки поддержка DPI; в противном случае ему присвоено значение «false». Поддержка DPI является дополнительной функции; Чтобы воспользоваться преимуществами поддержка высокого Разрешения Windows Forms, необходимо задать его значение для «PerMonitorV2». См. в разделе ["Примечания"](#remarks) Дополнительные сведения. |
 | «CheckedListBox.DisableHighDpiImprovements» | «true»&#124;«false» | Указывает, является ли <xref:System.Windows.Forms.CheckedListBox> элемент управления использует преимущества масштабирования и разметки улучшений, появившихся в .NET Framework 4.7. «true», чтобы отказаться от улучшения caling и макет; в противном случае — значение «false». |
 | «DataGridView.DisableHighDpiImprovements» | «true»&#124;«false» | Указывает, является ли <xref:System.Windows.Forms.DataGridView> управления масштабирования и разметки усовершенствования, появившиеся в .NET Framework 4.7. «true», чтобы отказаться от поддержки определения DPI; «false» в противном случае. |
 | «DisableDpiChangedMessageHandling» | «true»&#124;«false» | «true», чтобы отказаться от получения сообщений, связанных с точек на ДЮЙМ, масштабирование изменения; «false» в противном случае. См. в разделе ["Примечания"](#remarks) Дополнительные сведения. |
 | «EnableWindowsFormsHighDpiAutoResizing» | «true»&#124;«false» | Указывает, изменяется ли автоматически в приложении Windows Forms из-за изменений масштабирования точек на ДЮЙМ. «true», чтобы включить автоматическое изменение размера; в противном случае — значение false. |
-| «Form.DisableSinglePassControlScaling» | «true»&#124;«false» | Указывает, является ли <xref:System.Windows.Forms.Form> масштабируется за один проход. «true», чтобы отключить однократного прохода масштабирование; в противном случае — значение false. См. в разделе «Pass одним масштабирование» ["Примечания"](#Remarks) Дополнительные сведения. |
-| «MonthCalendar.DisableSinglePassControlScaling» | «true»&#124;«false» | Указывает, является ли <xref:System.Windows.Forms.MonthCalendar> масштабируется элемент управления за один проход. «true», чтобы отключить однократного прохода масштабирование; в противном случае — значение false. См. в разделе «Pass одним масштабирование» ["Примечания"](#Remarks) Дополнительные сведения. |
+| «Form.DisableSinglePassControlScaling» | «true»&#124;«false» | Указывает, является ли <xref:System.Windows.Forms.Form> масштабируется за один проход. «true», чтобы отключить однократного прохода масштабирование; в противном случае — значение false. См. в разделе «Pass одним масштабирование» ["Примечания"](#remarks) Дополнительные сведения. |
+| «MonthCalendar.DisableSinglePassControlScaling» | «true»&#124;«false» | Указывает, является ли <xref:System.Windows.Forms.MonthCalendar> масштабируется элемент управления за один проход. «true», чтобы отключить однократного прохода масштабирование; в противном случае — значение false. См. в разделе «Pass одним масштабирование» ["Примечания"](#remarks) Дополнительные сведения. |
 | «Toolstrip.DisableHighDpiImprovements» | «true»&#124;«false» | Указывает, является ли <xref:System.Windows.Forms.ToolStrip> элемент управления использует преимущества масштабирования и разметки улучшений, появившихся в .NET Framework 4.7. «true», чтобы отказаться от поддержки определения DPI; «false» в противном случае. |
 
 ### <a name="child-elements"></a>Дочерние элементы
@@ -57,11 +57,11 @@ ms.locfileid: "57371376"
 
 ### <a name="parent-elements"></a>Родительские элементы
 
-| Элемент | Описание |
+| Элемент | Описание: |
 | ------- | ----------- |
 | [`<System.Windows.Forms.ApplicationConfigurationSection>`](../../../../../docs/framework/configure-apps/file-schema/winforms/index.md) | Настраивает Поддержка новых функций приложения Windows Forms. |
 
-## <a name="a-nameremarks--remarks"></a><a name="remarks" /> "Примечания"
+## <a name="remarks"></a>Примечания
 
 Начиная с версии .NET Framework 4.7 элемент `<System.Windows.Forms.ApplicationConfigurationSection>` позволяет настраивать в приложениях Windows Forms функции, добавленные в последних выпусках .NET Framework.
 
@@ -96,6 +96,7 @@ ms.locfileid: "57371376"
    <add key="EnableWindowsFormsHighDpiAutoResizing" value="false" />
 </System.Windows.Forms.ApplicationConfigurationSection>
 ```
+
 Как правило можно отказаться от определенный компонент так, как вы решили программным образом обрабатывать его.
 
 Дополнительные сведения о благодаря преимуществам поддержка высокого DPI в приложениях Windows Forms, см. в разделе [поддержка высокого DPI в Windows Forms](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md).

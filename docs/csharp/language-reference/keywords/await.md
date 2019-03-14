@@ -8,12 +8,12 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: 86da57c0f8ecca7e5dada3ae6756739197c3f206
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1afd763d41ac3ffd42409ff8d1b8823979ab0c08
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618978"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713054"
 ---
 # <a name="await-c-reference"></a>await (Справочник по C#)
 Оператор `await` применяется к задаче в асинхронном методе для вставки точки приостановки выполнения метода до завершения выполнения ожидаемой задачи. Задача представляет выполняющуюся работу.  
@@ -21,17 +21,16 @@ ms.locfileid: "54618978"
 Оператор `await` можно использовать только в асинхронном методе, измененном с использованием ключевого слова [async](../../../csharp/language-reference/keywords/async.md). Такой метод, определенный с помощью модификатора `async` и обычно содержащий одно или несколько выражений `await`, называется *асинхронным методом*.  
   
 > [!NOTE]
->  Ключевые слова `async` и `await` появились в версии C# 5. Общие сведения об асинхронном программировании см. в разделе [Асинхронное программирование с использованием ключевых слов async и await](../../../csharp/programming-guide/concepts/async/index.md).  
+> Ключевые слова `async` и `await` появились в версии C# 5. Общие сведения об асинхронном программировании см. в разделе [Асинхронное программирование с использованием ключевых слов async и await](../../../csharp/programming-guide/concepts/async/index.md).  
   
-Задача, к которой применяется оператор `await`, обычно является возвращаемым значением из вызова метода, реализующего [асинхронную модель на основе задач](../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md). К ним относятся методы, возвращающие объекты <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601> и `System.Threading.Tasks.ValueType<TResult>`.  
+Задача, к которой применяется оператор `await`, обычно является возвращаемым значением из вызова метода, реализующего [асинхронную модель на основе задач](../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md). К ним относятся методы, возвращающие объекты <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.ValueTask> и <xref:System.Threading.Tasks.ValueTask%601>.  
 
-  
- В следующем примере метод <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A?displayProperty=nameWithType> возвращает `Task<byte[]>`. Задача является обещанием создать фактический массив байтов после завершения задачи. Оператор `await` приостанавливает выполнение до тех пор, пока не завершится работа метода <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A>. В то же время управление возвращается вызывающему объекту `GetPageSizeAsync`. После завершения выполнения задачи выражение `await` вычисляется как массив байтов.  
+В следующем примере метод <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A?displayProperty=nameWithType> возвращает `Task<byte[]>`. Задача является обещанием создать фактический массив байтов после завершения задачи. Оператор `await` приостанавливает выполнение до тех пор, пока не завершится работа метода <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A>. В то же время управление возвращается вызывающему объекту `GetPageSizeAsync`. После завершения выполнения задачи выражение `await` вычисляется как массив байтов.  
 
 [!code-csharp[await-example](../../../../samples/snippets/csharp/language-reference/keywords/await/await1.cs)]  
 
 > [!IMPORTANT]
->  Полный пример см. в [руководстве по получению доступа к Интернету с помощью модификатора Async и оператора Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Вы можете скачать этот пример в разделе [Примеры кода для разработчиков](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) на веб-сайте Майкрософт. Этот пример представлен в проекте AsyncWalkthrough_HttpClient.  
+> Полный пример см. в [руководстве по получению доступа к Интернету с помощью модификатора Async и оператора Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Вы можете скачать этот пример в разделе [Примеры кода для разработчиков](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) на веб-сайте Майкрософт. Этот пример представлен в проекте AsyncWalkthrough_HttpClient.  
   
 Как показано в предыдущем примере, если `await` применяется к результату вызова метода, который возвращает `Task<TResult>`, то типом выражения `await` является `TResult`. Если `await` применяется к результату вызова метода, который возвращает `Task`, то типом выражения `await` является `void`. В следующем примере демонстрируется это различие.  
   

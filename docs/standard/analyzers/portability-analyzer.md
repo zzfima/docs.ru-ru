@@ -1,17 +1,15 @@
 ---
 title: Анализатор переносимости .NET
 description: Сведения о том, как применять анализатор переносимости .NET для оценки переносимости кода в разных реализациях .NET, включая .NET Core, .NET Standard, UWP и Xamarin.
-author: blackdwarf
-ms.author: mairaw
 ms.date: 07/26/2017
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 515dd7a393d87811377aa5d9fb02de35943b6966
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: bd92e39a7b53e2807aff687f6dfbf71be34a506d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44205761"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717652"
 ---
 # <a name="the-net-portability-analyzer"></a>Анализатор переносимости .NET
 
@@ -19,11 +17,11 @@ ms.locfileid: "44205761"
 
 ## <a name="new-targets"></a>Новые цели
 
-* [.NET Core](../../core/index.md): имеет модульную архитектуру, использует сценарии параллельного выполнения и поддерживает работу на различных платформах. Принцип параллелизма позволяет внедрять новые версии .NET Core, не нарушая функционирования других приложений.
+* [.NET Core](../../core/index.md). Имеет модульную архитектуру, использует сценарии параллельного выполнения и поддерживает работу на различных платформах. Принцип параллелизма позволяет внедрять новые версии .NET Core, не нарушая функционирования других приложений.
 * [ASP.NET Core](/aspnet/core): представляет собой современную веб-платформу, созданную на основе .NET Core и в связи с этим предоставляющую разработчикам те же преимущества.
-* [Универсальная платформа Windows](https://blogs.msdn.microsoft.com/dotnet/2014/04/24/net-native-performance): способствует повышению производительности приложений из Магазина Windows, работающих на компьютерах с архитектурой x64 и ARM, за счет статический компиляции .NET Native. 
-* .NET Core + расширения платформы: включает API-интерфейсы .NET Core помимо других API-интерфейсов в экосистеме .NET, такие как WCF, ASP.NET Core, FSharp и Azure.
-* .NET Standard + расширения платформы: включает API-интерфейсы .NET Standard помимо других в экосистеме .NET, такие как WCF, ASP.NET Core, FSharp и Azure.
+* [Универсальная платформа Windows](https://devblogs.microsoft.com/dotnet/net-native-performance/). Способствует повышению производительности приложений из Магазина Windows, работающих на компьютерах с архитектурой x64 и ARM, за счет статический компиляции .NET Native. 
+* Платформа .NET Core и ее расширения. Включает API .NET Core наряду с другими API в экосистеме .NET, такие как WCF, ASP.NET Core, FSharp и Azure.
+* Платформа .NET Standard и ее расширения. Включает API .NET Standard наряду с другими API в экосистеме .NET, такие как WCF, ASP.NET Core, FSharp и Azure.
 
 ## <a name="how-to-use-portability-analyzer"></a>Как использовать анализатор переносимости
 

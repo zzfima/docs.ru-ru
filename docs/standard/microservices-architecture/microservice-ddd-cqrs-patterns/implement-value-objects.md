@@ -4,12 +4,12 @@ description: Архитектура микрослужб .NET для упако�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 2a8e0ad97f2ad6b4645fb493b5148667a2830ec8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 28f5a5148b39b60d69fecc8bf1273445ebad4953
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145271"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675021"
 ---
 # <a name="implement-value-objects"></a>Реализация объектов значений
 
@@ -92,8 +92,8 @@ public abstract class ValueObject
         return GetAtomicValues()
          .Select(x => x != null ? x.GetHashCode() : 0)
          .Aggregate((x, y) => x ^ y);
-    }        
-    // Other utilility methods
+    }
+    // Other utility methods
 }
 ```
 
@@ -133,7 +133,7 @@ public class Address : ValueObject
 
 Вы можете видеть, что у этой реализации объекта значения для Address нет удостоверения, а следовательно, и поля ID, ни в классе Address, ни даже в классе ValueObject.
 
-Отсутствие поля ID в классе, используемом Entity Framework, было недопустимым до выпуска EF Core 2.0. Эта возможность помогает реализовывать более эффективные объекты значений без ID. Именно это пояснение используется в следующем разделе. 
+Отсутствие поля ID в классе, используемом Entity Framework, было недопустимым до выпуска EF Core 2.0. Эта возможность помогает реализовывать более эффективные объекты значений без ID. Именно это пояснение используется в следующем разделе.
 
 Можно возразить, что объекты значений, являясь неизменяемыми, должны быть доступны только для чтения (например, свойства, отвечающие только за получение), и это действительно так. Однако объекты значений обычно сериализируются и десериализируются для прохождения очередей сообщений, а наличие доступа только для чтения не позволяет десериализатору назначать значения, поэтому мы просто оставляем их в виде частного набора, доступного только для чтения, чего хватает для практического применения.
 
@@ -143,16 +143,16 @@ public class Address : ValueObject
 
 ### <a name="background-and-older-approaches-using-ef-core-11"></a>Общие сведения и устаревший подход с использованием EF Core 1.1
 
-Для справки: при использовании EF Core 1.0 и 1.1 было невозможно использовать [сложные типы](xref:System.ComponentModel.DataAnnotations.Schema.ComplexTypeAttribute) в том виде, в котором они были определены в EF 6.x в традиционной платформе .NET Framework. Таким образом, при использовании EF Core 1.0 и 1.1 необходимо хранить объект значения в виде сущности EF с полем ID. Затем, чтобы сущность больше походила на объект значения, нужно скрыть поле ID, дав понять таким образом, что удостоверение объекта значения не важно в данной модели домена. Можно скрыть поле ID при помощи [затемнения свойства](https://docs.microsoft.com/ef/core/modeling/shadow-properties ). Так как такой вариант скрытия удостоверения в модели задается на уровне инфраструктуры EF, это будет в каком-то смысле прозрачно для модели домена.
+Для справки: при использовании EF Core 1.0 и 1.1 было невозможно использовать [сложные типы](xref:System.ComponentModel.DataAnnotations.Schema.ComplexTypeAttribute) в том виде, в котором они были определены в EF 6.x в традиционном решении .NET Framework. Таким образом, при использовании EF Core 1.0 и 1.1 необходимо хранить объект значения в виде сущности EF с полем ID. Затем, чтобы сущность больше походила на объект значения, нужно скрыть поле ID, дав понять таким образом, что удостоверение объекта значения не важно в данной модели домена. Можно скрыть поле ID при помощи [затемнения свойства](https://docs.microsoft.com/ef/core/modeling/shadow-properties ). Так как такой вариант скрытия удостоверения в модели задается на уровне инфраструктуры EF, это будет в каком-то смысле прозрачно для модели домена.
 
 В первоначальной версии eShopOnContainers (.NET Core 1.1) скрытие поля ID, необходимое для инфраструктуры EF Core, было реализовано на уровне DbContext при помощи текучего API в инфраструктуре проекта следующим образом. Таким образом, удостоверение было скрыто с точки зрения модели домена, но все еще присутствует в инфраструктуре.
 
 ```csharp
 // Old approach with EF Core 1.1
 // Fluent API within the OrderingContext:DbContext in the Infrastructure project
-void ConfigureAddress(EntityTypeBuilder<Address> addressConfiguration) 
+void ConfigureAddress(EntityTypeBuilder<Address> addressConfiguration)
 {
-    addressConfiguration.ToTable("address", DEFAULT_SCHEMA); 
+    addressConfiguration.ToTable("address", DEFAULT_SCHEMA);
 
     addressConfiguration.Property<int>("Id")  // Id is a shadow property
         .IsRequired();
@@ -192,7 +192,7 @@ void ConfigureAddress(EntityTypeBuilder<Address> addressConfiguration)
 
 ```csharp
 // Part of the OrderingContext.cs class at the Ordering.Infrastructure project
-// 
+//
 protected override void OnModelCreating(ModelBuilder modelBuilder)
 {
     modelBuilder.ApplyConfiguration(new ClientRequestEntityTypeConfiguration());
@@ -206,8 +206,8 @@ protected override void OnModelCreating(ModelBuilder modelBuilder)
 В следующем коде инфраструктура сохраняемости определяется для сущности Order:
 
 ```csharp
-// Part of the OrderEntityTypeConfiguration.cs class 
-// 
+// Part of the OrderEntityTypeConfiguration.cs class
+//
 public void Configure(EntityTypeBuilder<Order> orderConfiguration)
 {
     orderConfiguration.ToTable("orders", OrderingContext.DEFAULT_SCHEMA);
@@ -220,7 +220,7 @@ public void Configure(EntityTypeBuilder<Order> orderConfiguration)
     orderConfiguration.OwnsOne(o => o.Address);
 
     orderConfiguration.Property<DateTime>("OrderDate").IsRequired();
-    
+
     //...Additional validations, constraints and code...
     //...
 }
@@ -312,7 +312,7 @@ public class Address
 - **Мартин Фоулер (Martin Fowler). Шаблон ValueObject** \
   [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
 
-- **Эрик Эванс (Eric Evans). Предметно-ориентированное проектирование (DDD). Структуризация сложных программных систем.** (Книга, в которой рассматриваются объекты значений) \
+- **Эрик Эванс (Eric Evans). Domain-Driven Design: Tackling Complexity in the Heart of Software**. (Книга, в которой рассматриваются объекты значений) \
   [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 - **Вон Вернон (Vaughn Vernon). Реализация проблемно-ориентированного проектирования (DDD).** (Книга, в которой рассматриваются объекты значений) \
@@ -330,6 +330,6 @@ public class Address
 - **Класс Address.** Пример класса объекта значений в eShopOnContainers. \
   [*https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs*](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs)
 
->[!div class="step-by-step"]
->[Назад](seedwork-domain-model-base-classes-interfaces.md)
->[Вперед](enumeration-classes-over-enum-types.md)
+> [!div class="step-by-step"]
+> [Назад](seedwork-domain-model-base-classes-interfaces.md)
+> [Вперед](enumeration-classes-over-enum-types.md)

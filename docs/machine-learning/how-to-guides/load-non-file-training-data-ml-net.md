@@ -1,16 +1,21 @@
 ---
 title: Обучение модели машинного обучения, данные для которой находятся не в текстовом файле — ML.NET
 description: Сведения об использовании ML.NET для загрузки обучающих данных, находящихся не в файле, для обучения модели машинного обучения в рамках конвейера прогнозирования.
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 4ffbc69629aa9dc6cea5d33c704bc9c57a4a612c
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 27b327a63cb55b7fce0f4ff7facd3ee7c4a1c85c
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092024"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678631"
 ---
 # <a name="train-a-machine-learning-model-with-data-thats-not-in-a-text-file---mlnet"></a>Обучение модели машинного обучения, данные для которой находятся не в текстовом файле — ML.NET
+
+> [!NOTE]
+> В этом разделе описано, как использовать платформу ML.NET, которая сейчас доступна в режиме предварительной версии. Этот материал может быть изменен. Дополнительные сведения см. в [обзоре ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+
+Сейчас в этих инструкциях и примере используется **ML.NET версии 0.10**. Дополнительные сведения см. в заметках о выпуске в [репозитории GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 Как правило, при работе с ML.NET используется вариант с чтением данных для обучения из файла с помощью `TextLoader`.
 Тем не менее, в сценариях обучения в реальном времени возможны и другие варианты размещения данных. Данные могут:

@@ -4,12 +4,12 @@ description: Изучите компоненты проектирования п
 author: JRAlexander
 ms.custom: seodec18
 ms.date: 01/14/2019
-ms.openlocfilehash: 54dffec37318b79edf546ba1f6e1145e35782bfb
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: e649c9a27f0409cb9cdfb554963b5c0e732991f2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415355"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355418"
 ---
 # <a name="machine-learning-data-transforms---mlnet"></a>Преобразование данных машинного обучения в ML.NET
 
@@ -25,7 +25,7 @@ ms.locfileid: "54415355"
 | <xref:Microsoft.ML.Transforms.GroupTransform> | Группирует значения скалярного столбца в вектор на основе идентификатора смежной группы. |
 | <xref:Microsoft.ML.Transforms.UngroupTransform> | Разделяет столбцы векторов на последовательности строк; операция, обратная группированию. |
 
-## <a name="conversions"></a>Преобразования 
+## <a name="conversions"></a>Преобразования
 
 | Transform | Определение |
 | --- | --- |
@@ -36,7 +36,6 @@ ms.locfileid: "54415355"
 | <xref:Microsoft.ML.Transforms.Conversions.KeyToVectorMappingTransformer> | Преобразует ключ в векторный столбец. |
 | <xref:Microsoft.ML.Transforms.Conversions.TypeConvertingTransformer> | Изменяет базовый тип столбца при условии, что тип может быть преобразован. |
 | <xref:Microsoft.ML.Transforms.Conversions.ValueToKeyMappingTransformer> | Преобразует входные значения (слова, числа и др.) для индексации в словаре. |
-
 
 ## <a name="deep-learning"></a>Глубокое обучение
 
@@ -49,17 +48,17 @@ ms.locfileid: "54415355"
 
 | Transform | Определение |
 | --- | --- |
-| <xref:Microsoft.ML.Transforms.Text.CustomStopWordsRemovingTransform> | Удаляет указанный список стоп-слов, сравнивая отдельные токены (сравнение без учета регистра) со стоп-словами.| 
+| <xref:Microsoft.ML.Transforms.Text.CustomStopWordsRemovingTransform> | Удаляет указанный список стоп-слов, сравнивая отдельные токены (сравнение без учета регистра) со стоп-словами.|
 | <xref:Microsoft.ML.ImageAnalytics.ImageGrayscaleTransform> | Преобразует один или несколько столбцов ImageType в представление того же изображения в оттенках серого.|
 | <xref:Microsoft.ML.ImageAnalytics.ImageLoaderTransform> | Загружает один или несколько столбцов ReadOnlyMemory как ImageType. |
 | <xref:Microsoft.ML.ImageAnalytics.ImagePixelExtractorTransform> | Преобразует один или несколько столбцов ImageType в векторное представление.|
 | <xref:Microsoft.ML.ImageAnalytics.ImageResizerTransform> | Изменяет размер одного или нескольких столбцов ImageType до заданной высоты и ширины.|
 | <xref:Microsoft.ML.Transforms.Text.LatentDirichletAllocationTransformer> | Реализует LightLDA — современную реализацию латентного размещения Дирихле.|
 | <xref:Microsoft.ML.Transforms.LoadTransform> | Загружает определенные преобразования из указанного файла модели. Позволяет выборочное преобразование из сериализованной цепочки или применить предварительно обученное преобразование к другому (но все еще совместимому) представлению данных. |
-| <xref:Microsoft.ML.Transforms.Text.NgramExtractingTransformer> | Создает контейнер n-грамм (ряд последовательных значений длиной 1-n) в заданном векторе ключей. Для этого создает словарь n-грамм и использует идентификатор в словаре как индекс в контейнере. | 
-| <xref:Microsoft.ML.Transforms.Text.NgramExtractorTransform> | Превращает коллекцию размеченного текста (вектор ReadOnlyMemory) или векторы ключей в векторы числовых признаков. Векторы признаков — это число n-грамм (ряд последовательных токенов-слов или ключей длиной 1-n). | 
-| <xref:Microsoft.ML.Transforms.Text.NgramHashExtractingTransformer> | Превращает коллекцию размеченного текста (вектор ReadOnlyMemory) в векторы числовых признаков с помощью хэширования. | 
-| <xref:Microsoft.ML.Transforms.Text.NgramHashingTransformer> | Создает контейнер n-грамм (ряд последовательных слов длиной 1-n) в заданном тексте. | 
+| <xref:Microsoft.ML.Transforms.Text.NgramExtractingTransformer> | Создает контейнер n-грамм (ряд последовательных значений длиной 1-n) в заданном векторе ключей. Для этого создает словарь n-грамм и использует идентификатор в словаре как индекс в контейнере. |
+| <xref:Microsoft.ML.Transforms.Text.NgramExtractorTransform> | Превращает коллекцию размеченного текста (вектор ReadOnlyMemory) или векторы ключей в векторы числовых признаков. Векторы признаков — это число n-грамм (ряд последовательных токенов-слов или ключей длиной 1-n). |
+| <xref:Microsoft.ML.Transforms.Text.NgramHashExtractingTransformer> | Превращает коллекцию размеченного текста (вектор ReadOnlyMemory) в векторы числовых признаков с помощью хэширования. |
+| <xref:Microsoft.ML.Transforms.Text.NgramHashingTransformer> | Создает контейнер n-грамм (ряд последовательных слов длиной 1-n) в заданном тексте. |
 | <xref:Microsoft.ML.Transforms.Categorical.OneHotEncodingTransformer> | Преобразует категориальное значение в массив индикатора путем создания словаря категорий на основе данных и использования идентификатора в словаре в качестве индекса в массиве. |
 | <xref:Microsoft.ML.Transforms.Projections.PcaTransform> | Вычисляет проекцию вектора признаков на подпространство низкого ранга. |
 | <xref:Microsoft.ML.Transforms.Text.SentimentAnalyzingTransformer> | Использует предварительно обученную модель тональности для оценки входных строк. |
@@ -73,7 +72,7 @@ ms.locfileid: "54415355"
 
 | Transform | Определение |
 | --- | --- |
-| <xref:Microsoft.ML.Transforms.AlexNetExtension> | Это применяемый с <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> метод расширения для использования предварительно обученной модели [AlexNet](https://en.wikipedia.org/wiki/AlexNet). NuGet, содержащий это расширение, также обязательно содержит файл двоичной модели. | 
+| <xref:Microsoft.ML.Transforms.AlexNetExtension> | Это применяемый с <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> метод расширения для использования предварительно обученной модели [AlexNet](https://en.wikipedia.org/wiki/AlexNet). NuGet, содержащий это расширение, также обязательно содержит файл двоичной модели. |
 | <xref:Microsoft.ML.Transforms.ResNet18Extension> | Это применяемый с <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> метод расширения для использования предварительно обученной модели ResNet18. NuGet, содержащий это расширение, также обязательно содержит файл двоичной модели. |
 | <xref:Microsoft.ML.Transforms.ResNet50Extension> | Это применяемый с <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> метод расширения для использования предварительно обученной модели ResNet50. NuGet, содержащий это расширение, также обязательно содержит файл двоичной модели. |
 | <xref:Microsoft.ML.Transforms.ResNet101Extension> | Это применяемый с <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> метод расширения для использования предварительно обученной модели ResNet101. NuGet, содержащий это расширение, также обязательно содержит файл двоичной модели. |
