@@ -1,16 +1,21 @@
 ---
 title: Конструирование признаков для обучения модели по текстовым данным — ML.NET
 description: Узнайте о том, как конструировать признаки для обучения модели машинного обучения по категориальным данным с помощью ML.NET
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: eedbe0499784e7a99b0101c42892652daef3a114
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c8e7a6f2429dd5ceda065332770e0ba3af374143
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968417"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677283"
 ---
 # <a name="apply-feature-engineering-for-model-training-on-categorical-data---mlnet"></a>Конструирование признаков для обучения модели по текстовым данным — ML.NET
+
+> [!NOTE]
+> В этом разделе описано, как использовать платформу ML.NET, которая сейчас доступна в режиме предварительной версии. Этот материал может быть изменен. Дополнительные сведения см. в [обзоре ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+
+Сейчас в этих инструкциях и примере используется **ML.NET версии 0.10**. Дополнительные сведения см. в заметках о выпуске в [репозитории GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 Вам нужно преобразовать все данные, не связанные с числами с плавающей запятой, в типы данных `float`, так как все `learners` ML.NET ожидают признаки в виде `float vector`.
 

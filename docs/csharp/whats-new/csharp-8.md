@@ -2,12 +2,12 @@
 title: Новые возможности C# 8.0. Руководство по языку C#
 description: Обзор новых функций, доступных в C# 8.0. В этой статье представлены возможности предварительной версии 2.
 ms.date: 02/12/2019
-ms.openlocfilehash: 1aa5a200f84b35fda3c33a900655249d07000e8e
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 3a19cc7ffae706769cf1b1a19fdaff7c7cdc07fc
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835438"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674449"
 ---
 # <a name="whats-new-in-c-80"></a>Новые возможности C# 8.0
 
@@ -269,11 +269,11 @@ int M()
 
 Начиная с C# версии 8.0 можно создавать и использовать потоки асинхронно. В методе, который возвращает асинхронный поток, есть три свойства:
 
-1. Он был объявлен с помощью модификатора `async`.
+1. Он объявлен с помощью модификатора `async`.
 1. Он возвращает интерфейс <xref:System.Collections.Generic.IAsyncEnumerable%601>.
 1. Метод содержит инструкции `yield return` для возвращения последовательных элементов в асинхронном потоке.
 
-Для использования асинхронного потока требуется добавить ключевое слово `await` перед ключевым словом `foreach` при перечислении элементов потока. Для добавления ключевого слова `await` требуется, чтобы метод, который перечисляет асинхронный поток, был объявлен с помощью модификатора `async` и возвращал тип, допустимый для метода `async`. Обычно это означает возвращение структуры <xref:System.Threading.Tasks.Task> или <xref:System.Threading.Tasks.Task%601>. Это также может быть структура <xref:System.Threading.Tasks.ValueTask> или <xref:System.Threading.Tasks.ValueTask%601>. Метод может использовать и создавать асинхронный поток. Это означает, что будет возвращен интерфейс <xref:System.Collections.Generic.IAsyncEnumerable%601>. Следующий код создает последовательность чисел от 1 до 20, ожидая 100 мс между формированием каждого числа:
+Для использования асинхронного потока требуется добавить ключевое слово `await` перед ключевым словом `foreach` при перечислении элементов потока. Для добавления ключевого слова `await` требуется, чтобы метод, который перечисляет асинхронный поток, был объявлен с помощью модификатора `async` и возвращал тип, допустимый для метода `async`. Обычно это означает возвращение структуры <xref:System.Threading.Tasks.Task> или <xref:System.Threading.Tasks.Task%601>. Это также может быть структура <xref:System.Threading.Tasks.ValueTask> или <xref:System.Threading.Tasks.ValueTask%601>. Метод может использовать и создавать асинхронный поток. Это означает, что будет возвращен интерфейс <xref:System.Collections.Generic.IAsyncEnumerable%601>. Следующий код создает последовательность чисел от 0 до 19 с интервалом 100 мс между генерированием каждого числа:
 
 ```csharp
 public static async System.Collections.Generic.IAsyncEnumerable<int> GenerateSequence()
@@ -335,7 +335,7 @@ Console.WriteLine($"The last word is {words[^1]}");
 Следующий код создает поддиапазон со словами "quick", "brown" и "fox". Он включает в себя элементы от `words[1]` до `words[3]`. Элемент `words[4]` находится вне диапазона.
 
 ```csharp
-var brownFox = words[1..4];
+var quickBrownFox = words[1..4];
 ```
 
 Следующий код создает поддиапазон со словами "lazy" и "dog". Он включает элементы `words[^2]` и `words[^1]`. Конечный индекс `words[^0]` не включен:

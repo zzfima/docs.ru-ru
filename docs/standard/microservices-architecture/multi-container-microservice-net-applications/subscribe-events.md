@@ -4,28 +4,28 @@ description: Архитектура микрослужб .NET для конте�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: eef1ad347cb621e1f26c9c65d46d71e83a2c3a23
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 8ddc966710f6a9a949983726fd93505fbc88391f
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971784"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675034"
 ---
 # <a name="subscribing-to-events"></a>Подписка на события
 
 Первый шаг при использовании шины событий — подписать микрослужбы на события, которые они должны получать. Это нужно сделать для микрослужб-получателей.
 
-В следующем простом коде видно, что должна реализовать каждая микрослужба-получатель при запуске службы (то есть в классе `Startup`), чтобы подписаться на нужные события. В этом случае микрослужба `basket.api` должна подписаться на сообщения `ProductPriceChangedIntegrationEvent` и `OrderStartedIntegrationEvent`. 
+В следующем простом коде видно, что должна реализовать каждая микрослужба-получатель при запуске службы (то есть в классе `Startup`), чтобы подписаться на нужные события. В этом случае микрослужба `basket.api` должна подписаться на сообщения `ProductPriceChangedIntegrationEvent` и `OrderStartedIntegrationEvent`.
 
 Например, при подписке на событие `ProductPriceChangedIntegrationEvent` микрослужба корзины узнает об изменении цены товара и уведомляет пользователя об этом изменении, если товар находится в корзине пользователя.
 
 ```csharp
 var eventBus = app.ApplicationServices.GetRequiredService<IEventBus>();
 
-eventBus.Subscribe<ProductPriceChangedIntegrationEvent, 
+eventBus.Subscribe<ProductPriceChangedIntegrationEvent,
                    ProductPriceChangedIntegrationEventHandler>();
 
-eventBus.Subscribe<OrderStartedIntegrationEvent, 
+eventBus.Subscribe<OrderStartedIntegrationEvent,
                    OrderStartedIntegrationEventHandler>();
 
 ```
@@ -87,9 +87,9 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 }
 ```
 
-В этом случае, поскольку источником является простая микрослужба CRUD, этот код помещается прямо в контроллер веб-API. 
- 
-В более сложных микрослужбах, например на основе подходов CQRS, это можно реализовать в классе `CommandHandler` в методе `Handle()`. 
+В этом случае, поскольку источником является простая микрослужба CRUD, этот код помещается прямо в контроллер веб-API.
+
+В более сложных микрослужбах, например на основе подходов CQRS, это можно реализовать в классе `CommandHandler` в методе `Handle()`.
 
 ### <a name="designing-atomicity-and-resiliency-when-publishing-to-the-event-bus"></a>Проектирование атомарности и устойчивости при публикации в шине событий
 
@@ -103,11 +103,11 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 
 Как уже упоминалось в разделе об архитектуре, существует несколько подходов к решению этой проблемы:
 
--   Использование полной модели [источников событий](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing).
+- Использование полной модели [источников событий](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing).
 
--   [Интеллектуальный анализ данных журнала транзакций](https://www.scoop.it/t/sql-server-transaction-log-mining).
+- [Интеллектуальный анализ данных журнала транзакций](https://www.scoop.it/t/sql-server-transaction-log-mining).
 
--   Использование [шаблона Outbox](http://gistlabs.com/2014/05/the-outbox/). Это таблица транзакций, в которой хранятся события интеграции (расширяющие локальную транзакцию).
+- Использование [шаблона Outbox](http://gistlabs.com/2014/05/the-outbox/). Это таблица транзакций, в которой хранятся события интеграции (расширяющие локальную транзакцию).
 
 В этом сценарии одним из лучших, если не *лучшим*, подходом будет использование полного шаблона источников событий. Однако часто вы не можете реализовать полную систему источников событий. Источник событий подразумевает хранение в базе данных о транзакциях только событий в предметной области, а не данных о текущем состоянии. Хранить только события в предметной области очень удобно. Например, у вас есть история системы, и вы можете определить состояние системы в любой момент в прошлом. Однако реализация полной системы источников событий требует перестройки большей части системы и приводит к другим сложностям и требованиям. В частности, придется использовать базу данных, созданную специально для источников событий, например [хранилище событий](https://eventstore.org/), или документоориентированную базу данных, например Azure Cosmos DB, MongoDB, Cassandra, CouchDB или RavenDB. Модель источников событий может стать отличным решением этой проблемы, но не самым простым, особенно если вы еще не знакомы с этой концепцией.
 
@@ -125,19 +125,19 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 
 Пошаговый процесс выглядит следующим образом:
 
-1.  Приложение запускает транзакцию в локальной базе данных.
+1. Приложение запускает транзакцию в локальной базе данных.
 
-2.  Затем оно обновляет состояние сущностей предметной области и вставляет событие в таблицу событий интеграции.
+2. Затем оно обновляет состояние сущностей предметной области и вставляет событие в таблицу событий интеграции.
 
-3.  Наконец, оно фиксирует транзакцию. Вы получаете необходимую атомарность и
+3. Наконец, оно фиксирует транзакцию. Вы получаете необходимую атомарность и
 
-4.  публикуете событие каким-либо образом (далее).
+4. публикуете событие каким-либо образом (далее).
 
 Для выполнения этапов публикации события у вас есть следующие варианты:
 
--   Опубликуйте событие интеграции сразу после фиксации транзакции и используйте другую локальную транзакцию, чтобы отметить события в таблице как опубликованные. Затем используйте таблицу просто как объект для отслеживания событий интеграции в случае проблем в удаленных микрослужбах и выполняйте необходимые действия, основываясь на хранящихся событиях интеграции.
+- Опубликуйте событие интеграции сразу после фиксации транзакции и используйте другую локальную транзакцию, чтобы отметить события в таблице как опубликованные. Затем используйте таблицу просто как объект для отслеживания событий интеграции в случае проблем в удаленных микрослужбах и выполняйте необходимые действия, основываясь на хранящихся событиях интеграции.
 
--   Используйте таблицу как очередь. Отдельный поток или процесс приложения обращается к таблице событий интеграции, публикует события в шине событий, а затем выполняет местную транзакцию, чтобы отметить события как опубликованные.
+- Используйте таблицу как очередь. Отдельный поток или процесс приложения обращается к таблице событий интеграции, публикует события в шине событий, а затем выполняет местную транзакцию, чтобы отметить события как опубликованные.
 
 На рисунке 6-22 показана архитектура для первого из этих подходов.
 
@@ -166,55 +166,55 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 ```csharp
 // Update Product from the Catalog microservice
 //
-public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem productToUpdate) 
+public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem productToUpdate)
 {
-  var catalogItem = 
-       await _catalogContext.CatalogItems.SingleOrDefaultAsync(i => i.Id == 
-                                                               productToUpdate.Id); 
+  var catalogItem =
+       await _catalogContext.CatalogItems.SingleOrDefaultAsync(i => i.Id ==
+                                                               productToUpdate.Id);
   if (catalogItem == null) return NotFound();
 
-  bool raiseProductPriceChangedEvent = false; 
-  IntegrationEvent priceChangedEvent = null; 
+  bool raiseProductPriceChangedEvent = false;
+  IntegrationEvent priceChangedEvent = null;
 
-  if (catalogItem.Price != productToUpdate.Price) 
-          raiseProductPriceChangedEvent = true; 
+  if (catalogItem.Price != productToUpdate.Price)
+          raiseProductPriceChangedEvent = true;
 
   if (raiseProductPriceChangedEvent) // Create event if price has changed
   {
-      var oldPrice = catalogItem.Price; 
+      var oldPrice = catalogItem.Price;
       priceChangedEvent = new ProductPriceChangedIntegrationEvent(catalogItem.Id,
-                                                                  productToUpdate.Price, 
-                                                                  oldPrice); 
+                                                                  productToUpdate.Price,
+                                                                  oldPrice);
   }
   // Update current product
-  catalogItem = productToUpdate; 
+  catalogItem = productToUpdate;
 
   // Just save the updated product if the Product's Price hasn't changed.
-  if (!raiseProductPriceChangedEvent) 
+  if (!raiseProductPriceChangedEvent)
   {
       await _catalogContext.SaveChangesAsync();
   }
   else  // Publish to event bus only if product price changed
   {
-        // Achieving atomicity between original DB and the IntegrationEventLog 
+        // Achieving atomicity between original DB and the IntegrationEventLog
         // with a local transaction
         using (var transaction = _catalogContext.Database.BeginTransaction())
         {
-           _catalogContext.CatalogItems.Update(catalogItem); 
+           _catalogContext.CatalogItems.Update(catalogItem);
            await _catalogContext.SaveChangesAsync();
 
            // Save to EventLog only if product price changed
-           if(raiseProductPriceChangedEvent) 
-               await _integrationEventLogService.SaveEventAsync(priceChangedEvent); 
+           if(raiseProductPriceChangedEvent)
+               await _integrationEventLogService.SaveEventAsync(priceChangedEvent);
 
            transaction.Commit();
-        }   
+        }
 
-      // Publish the intergation event through the event bus
-      _eventBus.Publish(priceChangedEvent); 
+      // Publish the integration event through the event bus
+      _eventBus.Publish(priceChangedEvent);
 
       integrationEventLogService.MarkEventAsPublishedAsync(
-                                                priceChangedEvent); 
+                                                priceChangedEvent);
   }
 
   return Ok();
@@ -303,7 +303,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Соблюдение идемпотентности сообщений** <br/>
+- **Соблюдение идемпотентности сообщений** <br/>
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591565(v=pandp.10)#honoring-message-idempotency>
 
 ## <a name="deduplicating-integration-event-messages"></a>Дедупликация сообщений о событиях интеграции
@@ -324,69 +324,69 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Ветвление eShopOnContainers с использованием NServiceBus (Particular Software)** <br/>
+- **Ветвление eShopOnContainers с использованием NServiceBus (Particular Software)** <br/>
     [*https://go.particular.net/eShopOnContainers*](https://go.particular.net/eShopOnContainers)
 
--   **Обмен сообщениями на основе событий** <br/>
+- **Обмен сообщениями на основе событий** <br/>
     [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
--   **Джимми Богард (Jimmy Bogard). Рефакторинг для обеспечения отказоустойчивости: оценка взаимозависимости** <br/>
+- **Джимми Богард (Jimmy Bogard). Рефакторинг для обеспечения отказоустойчивости: оценка взаимозависимости** <br/>
     [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
--   **Канал публикации и подписки** <br/>
+- **Канал публикации и подписки** <br/>
     [*https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
--   **Взаимодействие между ограниченными контекстами** <br/>
+- **Взаимодействие между ограниченными контекстами** <br/>
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)>
 
--   **Итоговая согласованность** <br/>
+- **Итоговая согласованность** <br/>
     [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
--   **Филип Браун (Philip Brown). Стратегии интеграции ограниченных контекстов** <br/>
+- **Филип Браун (Philip Brown). Стратегии интеграции ограниченных контекстов** <br/>
     [*https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/*](https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/)
 
--   **Крис Ричардсон (Chris Richardson). Разработка транзакционных микрослужб с помощью агрегатов, порождения событий и CQRS. Часть 2** <br/>
+- **Крис Ричардсон (Chris Richardson). Разработка транзакционных микрослужб с помощью агрегатов, порождения событий и CQRS. Часть 2** <br/>
     [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson)
 
--   **Крис Ричардсон (Chris Richardson). Шаблон порождения событий** <br/>
+- **Крис Ричардсон (Chris Richardson). Шаблон порождения событий** <br/>
     [*https://microservices.io/patterns/data/event-sourcing.html*](https://microservices.io/patterns/data/event-sourcing.html)
 
--   **Знакомство с порождением событий** <br/>
+- **Знакомство с порождением событий** <br/>
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591559(v=pandp.10)>
 
--   **База данных хранилища событий**. Официальный сайт <br/>
+- **База данных хранилища событий**. Официальный сайт <br/>
     [*https://geteventstore.com/*](https://geteventstore.com/)
 
--   **Патрик Номменсен (Patrick Nommensen). Управление данными на основе событий для микрослужб** <br/>
+- **Патрик Номменсен (Patrick Nommensen). Управление данными на основе событий для микрослужб** <br/>
     *<https://dzone.com/articles/event-driven-data-management-for-microservices-1> *
 
--   **Теорема CAP** <br/>
+- **Теорема CAP** <br/>
     [*https://en.wikipedia.org/wiki/CAP\_theorem*](https://en.wikipedia.org/wiki/CAP_theorem)
 
--   **Что такое теорема CAP?** <br/>
+- **Что такое теорема CAP?** <br/>
     [*https://www.quora.com/What-Is-CAP-Theorem-1*](https://www.quora.com/What-Is-CAP-Theorem-1)
 
--   **Основные сведения о согласованности данных** <br/>
+- **Основные сведения о согласованности данных** <br/>
     <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
--   **Рик Сейлинг (Rick Saling). Теорема CAP: почему в случае с облачными средами и Интернетом все иначе** <br/>
+- **Рик Сейлинг (Rick Saling). Теорема CAP: почему в случае с облачными средами и Интернетом все иначе** <br/>
     [*https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/*](https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/)
 
--   **Эрик Брюер (Eric Brewer). CAP двенадцать лет спустя: Как изменились "правила"** <br/>
+- **Эрик Брюер (Eric Brewer). CAP двенадцать лет спустя: Как изменились "правила"** <br/>
     [*https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed*](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed)
 
--   **Служебная шина Azure. Обмен сообщениями через брокер: обнаружение повторений**  <br/>
+- **Служебная шина Azure. Обмен сообщениями через брокер: обнаружение повторений**  <br/>
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
--   **Руководство по обеспечению надежности** (документация RabbitMQ)* <br/>
+- **Руководство по обеспечению надежности** (документация RabbitMQ)* <br/>
     [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html#consumer)
 
--   **Служебная шина Azure. Обмен сообщениями через брокер: обнаружение повторений** <br/>
+- **Служебная шина Azure. Обмен сообщениями через брокер: обнаружение повторений** <br/>
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
--   **Руководство по обеспечению надежности** (документация RabbitMQ) <br/>
+- **Руководство по обеспечению надежности** (документация RabbitMQ) <br/>
     [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html%23consumer)
 
->[!div class="step-by-step"]
->[Назад](rabbitmq-event-bus-development-test-environment.md)
->[Вперед](test-aspnet-core-services-web-apps.md)
+> [!div class="step-by-step"]
+> [Назад](rabbitmq-event-bus-development-test-environment.md)
+> [Вперед](test-aspnet-core-services-web-apps.md)

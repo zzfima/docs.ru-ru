@@ -1,16 +1,21 @@
 ---
 title: Определение важности признаков моделей с помощью средства Permutation Feature Importance в ML.NET
 description: Сведения об определении важности признаков моделей с помощью средства Permutation Feature Importance в ML.NET
-ms.date: 02/01/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: a61e5dbbd544aa7df56291db9207343cb6f03e6e
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: b0457bc07168579403e5a00383864c5612e1d17f
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738816"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675554"
 ---
 # <a name="determine-the-feature-importance-of-models-with-permutation-feature-importance-in-mlnet"></a>Определение важности признаков моделей с помощью средства Permutation Feature Importance в ML.NET
+
+> [!NOTE]
+> В этом разделе описано, как использовать платформу ML.NET, которая сейчас доступна в режиме предварительной версии. Этот материал может быть изменен. Дополнительные сведения см. в [обзоре ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+
+Сейчас в этих инструкциях и примере используется **ML.NET версии 0.10**. Дополнительные сведения см. в заметках о выпуске в [репозитории GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 При создании моделей машинного обучения зачастую недостаточно просто делать прогнозы. Часто разработчики машинного обучения, руководители, принимающие решения, и те, на чью работу влияют модели, должны понимать, как модели машинного обучения принимают решения и какие признаки влияют на их эффективность. `Permutation Feature Importance` (PFI) — это инструмент объяснения модели, который корпорация Майкрософт использует, чтобы помочь внутренним разработчикам машинного обучения понять важность признаков моделей.
 

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74d2f9df5f9a9d34baa6a487730d5a1614d2d142
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 7d64e254f5dd1f7d35150953c31854f45eb06b12
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219936"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496954"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (средство настройки политики управления доступом для кода)
 Программа для настройки политики разграничения доступа кода (Caspol.exe) позволяет пользователям и администраторам изменять политику безопасности на уровне компьютера, пользователя и предприятия.  
@@ -43,7 +43,7 @@ ms.locfileid: "56219936"
 caspol [options]  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
   
 |Параметр|Описание|  
 |------------|-----------------|  
@@ -90,7 +90,7 @@ caspol [options]
 |**-pub** {**-cert** *cert_file_name* &#124;<br /><br /> **-file** *signed_file_name* &#124; **-hex**  *hex_string*}|Задает код указанного издателя программного обеспечения, определенного файлом сертификата, подписью файла или шестнадцатеричным представлением сертификата X509. Дополнительные сведения об этом условии членства см. в разделе <xref:System.Security.Policy.PublisherMembershipCondition?displayProperty=nameWithType>.|  
 |**-site** *website*|Задает код с указанным исходным веб-сайтом. Например:<br /><br /> `-site** www.proseware.com`<br /><br /> Дополнительные сведения об этом условии членства см. в разделе <xref:System.Security.Policy.SiteMembershipCondition?displayProperty=nameWithType>.|  
 |**-strong -file** *file_name* {*name* &#124; **-noname**} {*version* &#124; **-noversion**}|Задает код с указанным строгим именем (определяется по имени файла), имя сборки в виде строкового значения и версию сборки в формате *основная*.*вспомогательная*.*сборка*.*редакция*. Например:<br /><br /> **-strong -file** myAssembly.exe myAssembly 1.2.3.4<br /><br /> Дополнительные сведения об этом условии членства см. в разделе <xref:System.Security.Policy.StrongNameMembershipCondition?displayProperty=nameWithType>.|  
-|**-url** *URL*|Задает код, полученный с указанного URL-адреса. URL-адрес должен включать протокол, например `http://` или `ftp://`. При необходимости задать несколько сборок с определенного URL-адреса используется подстановочный знак (\*). **Примечание.**  Ввиду возможности указывать URL-адрес несколькими способами применение URL-адреса в качестве условия членства нельзя считать безопасным способом идентификации кода. Там, где это возможно, используйте условие членства строгого имени, условие членства издателя или условие членства хэша. <br /><br /> Дополнительные сведения об этом условии членства см. в разделе <xref:System.Security.Policy.UrlMembershipCondition?displayProperty=nameWithType>.|  
+|**-url** *URL*|Задает код, полученный с указанного URL-адреса. URL-адрес должен включать протокол, например `http://` или `ftp://`. При необходимости задать несколько сборок с определенного URL-адреса используется подстановочный знак (\*). **Примечание.**  Так как URL-адрес можно указать с помощью разных имен, применение URL-адреса в качестве условия членства нельзя считать безопасным способом идентификации кода. Там, где это возможно, используйте условие членства строгого имени, условие членства издателя или условие членства хэша. <br /><br /> Дополнительные сведения об этом условии членства см. в разделе <xref:System.Security.Policy.UrlMembershipCondition?displayProperty=nameWithType>.|  
 |**-zone** *zonename*|Задает код с указанной исходной зоной. Аргумент *zonename* может принимать одно из следующих значений: **MyComputer**, **Intranet**, **Trusted**, **Internet** или **Untrusted**. Дополнительные сведения об этом условии членства см. в разделе с описанием класса <xref:System.Security.Policy.ZoneMembershipCondition>.|  
   
  Аргумент *flags*, который может использоваться с параметрами **-addgroup** и **-chggroup**, определяется с использованием одного из следующих аргументов.  

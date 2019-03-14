@@ -1,16 +1,21 @@
 ---
 title: Проверка значений промежуточных данных при конвейерной обработке ML.NET
 description: Сведения о проверке значений промежуточных данных при конвейерной обработке машинного обучения ML.NET
-ms.date: 01/30/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: b3a554bf7cd88219a66f91a18b9d983bb91c0f0e
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 3d20f153be7b502fb5a542a942245546412efde2
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675016"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678648"
 ---
 # <a name="inspect-intermediate-data-values-during-mlnet-pipeline-processing"></a>Проверка значений промежуточных данных при конвейерной обработке ML.NET
+
+> [!NOTE]
+> В этом разделе описано, как использовать платформу ML.NET, которая сейчас доступна в режиме предварительной версии. Этот материал может быть изменен. Дополнительные сведения см. в [обзоре ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+
+Сейчас в этих инструкциях и примере используется **ML.NET версии 0.10**. Дополнительные сведения см. в заметках о выпуске в [репозитории GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 Во время эксперимента вам может потребоваться просмотреть и проверить результаты обработки данных в заданной точке. Это не просто сделать, так как операции ML.NET медлительны и создают объекты, представляющие собой "обещания" данных.
 

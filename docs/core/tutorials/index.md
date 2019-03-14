@@ -24,7 +24,7 @@ ms.custom: seodec18
 ## <a name="building-applications-with-visual-studio-code"></a>Разработка приложений с помощью Visual Studio Code
 
 - [Начало работы с C# и Visual Studio Code](with-visual-studio-code.md)
-- [Начало работы с .NET Core в Mac OS](using-on-macos.md)
+- [Начало работы с .NET Core в macOS](using-on-macos.md)
 
 ## <a name="building-applications-with-visual-studio-for-mac"></a>Создание приложений с помощью Visual Studio для Mac
 
@@ -33,7 +33,7 @@ ms.custom: seodec18
 
 ## <a name="building-applications-with-the-net-core-cli-tools"></a>Создание приложений с помощью инструментов командной строки .NET Core
 
-- [Приступая к работе с .NET Core в Windows, Linux и Mac OS с помощью инструментов командной строки .NET Core](using-with-xplat-cli.md)
+- [Начало работы с .NET Core в Windows, Linux и macOS с помощью средств интерфейса командной строки .NET Core](using-with-xplat-cli.md)
 - [Организация и тестирование проектов с помощью инструментов командной строки .NET Core](testing-with-cli.md)
 - [Начало работы с F#](../../fsharp/get-started/get-started-command-line.md)
 

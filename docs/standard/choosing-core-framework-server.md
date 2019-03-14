@@ -4,12 +4,12 @@ description: Рекомендации по использованию реали
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 398a504e60ce47da6923eebb261ff68e8ca3c5ee
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 03d008230d263853e322bb582706e2dbd3a11eec
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828518"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678804"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Выбор между .NET Core и .NET Framework для серверных приложений
 
@@ -52,7 +52,7 @@ ms.locfileid: "55828518"
 
 Контейнеры обычно используются вместе с архитектурой микрослужб. Их также можно использовать, чтобы поместить в контейнер веб-приложения или службы на базе любого архитектурного шаблона. Среду .NET Framework можно использовать для контейнеров Windows, но упрощенные возможности и модульный принцип среды .NET Core делают ее оптимальной для контейнеров. При создании и развертывании контейнера размер его образа гораздо меньше в среде .NET Core. Так как эта среда поддерживает разные платформы, серверные приложения можно развертывать, например, в контейнеры Docker в Linux.
 
-Затем эти контейнеры можно размещать в собственной инфраструктуре Linux или Windows или в облачной службе,такой как [Служба контейнеров Azure](https://azure.microsoft.com/services/container-service/). Служба контейнеров Azure может выполнять оркестрацию и масштабировать приложения на основе контейнеров, а также управлять ими в облаке.
+Затем эти контейнеры можно размещать в собственной инфраструктуре Linux или Windows или в облачной службе,такой как [Служба Azure Kubernetes](https://azure.microsoft.com/services/kubernetes-service/). Служба Azure Kubernetes может выполнять оркестрацию и масштабировать приложения на основе контейнеров, а также управлять ими в облаке.
 
 ### <a name="a-need-for-high-performance-and-scalable-systems"></a>Масштабируемые системы с высокой производительностью
 
@@ -77,7 +77,7 @@ ms.locfileid: "55828518"
 Библиотеки быстро распространяются в .NET Standard. .NET Standard позволяет совместно использовать код во всех реализациях .NET, включая .NET Core. С .NET Standard 2.0 это стало еще проще.
 
 - Значительно расширен API-интерфейс. 
-- Появился режим совместимости .NET Framework. Этот режим совместимости позволяет проектам .NET Standard и .NET Core ссылаться на библиотеки .NET Framework. Дополнительные сведения о режиме совместимости см. в статье [Объявление о выпуске .NET Standard 2.0](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-net-standard-2-0/).
+- Появился режим совместимости .NET Framework. Этот режим совместимости позволяет проектам .NET Standard и .NET Core ссылаться на библиотеки .NET Framework. Дополнительные сведения о режиме совместимости см. в статье [Объявление о выпуске .NET Standard 2.0](https://devblogs.microsoft.com/dotnet/announcing-net-standard-2-0/).
 
 Таким образом, платформу .NET Framework следует применять только в случаях, где библиотеки или пакеты NuGet используют технологии, которые недоступны в .NET Standard и .NET Core.
 

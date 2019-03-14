@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: ef900f8f-71ca-4dde-9b8c-95ddb0d7d89c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae2efe619d9c6ebcf2c570b5a63d569faf3b3343
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a97ba44cfadc27582b2ae9119c01b392f14a19f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690752"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496499"
 ---
 # <a name="corflagsexe-corflags-conversion-tool"></a>CorFlags.exe (средство преобразования CorFlags)
 Средство преобразования CorFlags позволяет настраивать раздел CorFlags в заголовке переносимого исполняемого образа.  
@@ -28,7 +28,7 @@ ms.locfileid: "54690752"
 CorFlags.exe assembly [options]  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
   
 |Обязательный параметр|Описание|  
 |------------------------|-----------------|  
@@ -47,7 +47,7 @@ CorFlags.exe assembly [options]
 |**/ILONLY-**|Снимает флаг ILONLY.|  
 |**/nologo**|Отключает отображение эмблемы Майкрософт при запуске.|  
 |**/RevertCLRHeader**|Задает версии заголовка CLR значение 2.0.|  
-|**/ UpgradeCLRHeader**|Обновляет версию заголовка CLR до версии 2.5. **Примечание.**  Для оптимального выполнения сборок они должны иметь версию заголовка CLR 2.5.|  
+|**/ UpgradeCLRHeader**|Обновляет версию заголовка CLR до версии 2.5. **Примечание.**  Для оптимального выполнения сборок они должны иметь версию заголовка CLR 2.5.|  
   
 ## <a name="remarks"></a>Примечания  
  Если другие параметры не заданы, средство преобразования CorFlags отображает флаги заданной сборки.  

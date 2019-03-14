@@ -6,17 +6,19 @@ ms.author: johalex
 ms.date: 02/19/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: fcbd75597d6fdce8dceffc9d47d06cc13dd11570
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: d8d324cdcad793ac8ade8124f56734bade695421
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664475"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488166"
 ---
 # <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>Учебник. Кластеризация цветков ириса с помощью задачи машинного обучения по кластеризации в ML.NET
 
 > [!NOTE]
 > В этом разделе описано, как использовать платформу ML.NET, которая сейчас доступна в режиме предварительной версии. Этот материал может быть изменен. Дополнительные сведения см. в [обзоре ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+
+Сейчас в этом руководстве и соответствующем примере используется **ML.NET версии 0.10**. Дополнительные сведения см. в заметках о выпуске в [репозитории GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 В этом руководстве описано, как с помощью ML.NET создать [модель кластеризации](../resources/tasks.md#clustering) для [набора данных ирисов](https://en.wikipedia.org/wiki/Iris_flower_data_set).
 

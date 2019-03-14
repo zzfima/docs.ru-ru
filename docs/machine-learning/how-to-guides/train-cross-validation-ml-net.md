@@ -1,16 +1,21 @@
 ---
 title: Обучение модели машинного обучения с помощью перекрестной проверки — ML.NET
 description: Сведения о том, как обучить модель машинного обучения с помощью перекрестной проверки с использованием ML.NET, чтобы обеспечить более высокий уровень точности для прогнозов модели
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 8d74b69340895bcfe3cdc3d3a6121d7331a0a5e2
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 7191d8bdbb9375dff6ccc7acb0aacab3cbef56a2
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092284"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676542"
 ---
 # <a name="train-a-machine-learning-model-using-cross-validation---mlnet"></a>Обучение модели машинного обучения с помощью перекрестной проверки — ML.NET
+
+> [!NOTE]
+> В этом разделе описано, как использовать платформу ML.NET, которая сейчас доступна в режиме предварительной версии. Этот материал может быть изменен. Дополнительные сведения см. в [обзоре ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+
+Сейчас в этих инструкциях и примере используется **ML.NET версии 0.10**. Дополнительные сведения см. в заметках о выпуске в [репозитории GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 [Перекрестная проверка](https://en.wikipedia.org/wiki/Cross-validation_(statistics)) является полезной методикой для приложений машинного обучения. Она помогает оценить вариативность качества модели между разными выполнениями, а также избавляет от необходимости извлекать отдельный набор тестов для оценки.
 

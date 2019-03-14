@@ -4,12 +4,12 @@ description: Архитектура микрослужб .NET для конте�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 10e2a05e8fa33ecbf2aec2432c0cf51204fc35c1
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c5010b521dc80a61718de1c797ae451bb1f5ad93
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969366"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674670"
 ---
 # <a name="asynchronous-message-based-communication"></a>Асинхронное взаимодействие на основе сообщений
 
@@ -106,6 +106,6 @@ ms.locfileid: "56969366"
 - **Джимми Богард (Jimmy Bogard). Рефакторинг для обеспечения отказоустойчивости: оценка взаимозависимости** \
   [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
->[!div class="step-by-step"]
->[Назад](communication-in-microservice-architecture.md)
->[Вперед](maintain-microservice-apis.md)
+> [!div class="step-by-step"]
+> [Назад](communication-in-microservice-architecture.md)
+> [Вперед](maintain-microservice-apis.md)

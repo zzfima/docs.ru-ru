@@ -4,12 +4,12 @@ description: Архитектура микрослужб .NET для конте�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 884a558827e0e016e27315cee1ea9ed3e0d03dc4
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: ec56a02e27f4218b3abc5839d1265815e188d2ea
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55065912"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363024"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>Реализация модели предметной области микрослужбы с помощью .NET Core 
 
@@ -171,11 +171,11 @@ myOrder.AddOrderItem(productId, productName, pictureUrl, unitPrice, discount, un
 - **Вон Вернон (Vaughn Vernon). Моделирование агрегатов с помощью DDD и Entity Framework.** Обратите внимание, что речь идет *не* об Entity Framework Core. \
   <https://kalele.io/blog-posts/modeling-aggregates-with-ddd-and-entity-framework/>
 
-- **Julie Lerman (Джули Лерман). Создание кода при проблемно-ориентированном проектировании: советы для разработчиков, ориентированных на данные** \
-  [*https://msdn.microsoft.com/magazine/dn342868.aspx*](https://msdn.microsoft.com/magazine/dn342868.aspx)
+- **Julie Lerman (Джули Лерман). Точки данных — создание кода при проблемно-ориентированном проектировании: советы для разработчиков, ориентированных на данные** \
+  <https://msdn.microsoft.com/magazine/dn342868.aspx>
 
 - **Уди Дахан (Udi Dahan). Создание полностью инкапсулированных моделей предметной области** \
-  [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)
+  <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
 
 >[!div class="step-by-step"]
 >[Назад](microservice-domain-model.md)
