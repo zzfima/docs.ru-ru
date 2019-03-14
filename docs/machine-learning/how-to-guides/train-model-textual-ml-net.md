@@ -1,29 +1,34 @@
 ---
 title: Применение конструирования признаков для обучения модели по текстовым данным — ML.NET
 description: Сведения о применении конструирования признаков для обучения модели по текстовым данным с помощью ML.NET
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 4206bfe1e840c420c90e62957036a629ecf34445
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 8733db281dbc60ae3f4ac0c139c482b39089f2b8
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092219"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680078"
 ---
-# <a name="apply-feature-engineering-for-machine-learning-model-training-on-textual-data-with-mlnet"></a><span data-ttu-id="56ec6-103">Применение конструирования признаков для обучения модели машинного обучения по текстовым данным с помощью ML.NET</span><span class="sxs-lookup"><span data-stu-id="56ec6-103">Apply feature engineering for machine learning model training on textual data with ML.NET</span></span>
+# <a name="apply-feature-engineering-for-machine-learning-model-training-on-textual-data-with-mlnet"></a><span data-ttu-id="28270-103">Применение конструирования признаков для обучения модели машинного обучения по текстовым данным с помощью ML.NET</span><span class="sxs-lookup"><span data-stu-id="28270-103">Apply feature engineering for machine learning model training on textual data with ML.NET</span></span>
 
-<span data-ttu-id="56ec6-104">Вам нужно преобразовать все данные, не связанные с числами с плавающей запятой, в типы данных `float`, так как все `learners` ML.NET ожидают признаки в виде `float vector`.</span><span class="sxs-lookup"><span data-stu-id="56ec6-104">You need to convert any non float data to `float` data types since all ML.NET `learners` expect features as a `float vector`.</span></span>
+> [!NOTE]
+> <span data-ttu-id="28270-104">В этом разделе описано, как использовать платформу ML.NET, которая сейчас доступна в режиме предварительной версии. Этот материал может быть изменен.</span><span class="sxs-lookup"><span data-stu-id="28270-104">This topic refers to ML.NET, which is currently in Preview, and material may be subject to change.</span></span> <span data-ttu-id="28270-105">Дополнительные сведения см. в [обзоре ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span><span class="sxs-lookup"><span data-stu-id="28270-105">For more information, visit [the ML.NET introduction](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span></span>
 
-<span data-ttu-id="56ec6-105">Чтобы осуществлять обучение по текстовым данным, вам нужно извлечь текстовые признаки.</span><span class="sxs-lookup"><span data-stu-id="56ec6-105">To learn on textual data, you need to extract text features.</span></span> <span data-ttu-id="56ec6-106">ML.NET предоставляет некоторые базовые механизмы для извлечения текстовых признаков:</span><span class="sxs-lookup"><span data-stu-id="56ec6-106">ML.NET has some basic text feature extraction mechanisms:</span></span>
+<span data-ttu-id="28270-106">Сейчас в этих инструкциях и примере используется **ML.NET версии 0.10**.</span><span class="sxs-lookup"><span data-stu-id="28270-106">This how-to and related sample are currently using **ML.NET version 0.10**.</span></span> <span data-ttu-id="28270-107">Дополнительные сведения см. в заметках о выпуске в [репозитории GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).</span><span class="sxs-lookup"><span data-stu-id="28270-107">For more information, see the release notes at the [dotnet/machinelearning GitHub repo](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).</span></span>
 
-- <span data-ttu-id="56ec6-107">`Text normalization` (удаление знаков препинания, диакритических знаков, переключение в нижний регистр и т. п.)</span><span class="sxs-lookup"><span data-stu-id="56ec6-107">`Text normalization` (removing punctuation, diacritics, switching to lowercase etc.)</span></span>
-- <span data-ttu-id="56ec6-108">`Separator-based tokenization`.</span><span class="sxs-lookup"><span data-stu-id="56ec6-108">`Separator-based tokenization`.</span></span>
-- <span data-ttu-id="56ec6-109">Удаление `Stopword`.</span><span class="sxs-lookup"><span data-stu-id="56ec6-109">`Stopword` removal.</span></span>
-- <span data-ttu-id="56ec6-110">Извлечение `Ngram` и `skip-gram`.</span><span class="sxs-lookup"><span data-stu-id="56ec6-110">`Ngram` and `skip-gram` extraction.</span></span>
-- <span data-ttu-id="56ec6-111">Изменение масштаба `TF-IDF`.</span><span class="sxs-lookup"><span data-stu-id="56ec6-111">`TF-IDF` rescaling.</span></span>
-- <span data-ttu-id="56ec6-112">Преобразование `Bag of words`.</span><span class="sxs-lookup"><span data-stu-id="56ec6-112">`Bag of words` conversion.</span></span>
+<span data-ttu-id="28270-108">Вам нужно преобразовать все данные, не связанные с числами с плавающей запятой, в типы данных `float`, так как все `learners` ML.NET ожидают признаки в виде `float vector`.</span><span class="sxs-lookup"><span data-stu-id="28270-108">You need to convert any non float data to `float` data types since all ML.NET `learners` expect features as a `float vector`.</span></span>
 
-<span data-ttu-id="56ec6-113">Следующий пример демонстрирует механизмы извлечения текстовых признаков ML.NET с помощью [набора данных Wikipedia detox](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv):</span><span class="sxs-lookup"><span data-stu-id="56ec6-113">The following example demonstrates ML.NET text feature extraction mechanisms using the [Wikipedia detox dataset](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv):</span></span>
+<span data-ttu-id="28270-109">Чтобы осуществлять обучение по текстовым данным, вам нужно извлечь текстовые признаки.</span><span class="sxs-lookup"><span data-stu-id="28270-109">To learn on textual data, you need to extract text features.</span></span> <span data-ttu-id="28270-110">ML.NET предоставляет некоторые базовые механизмы для извлечения текстовых признаков:</span><span class="sxs-lookup"><span data-stu-id="28270-110">ML.NET has some basic text feature extraction mechanisms:</span></span>
+
+- <span data-ttu-id="28270-111">`Text normalization` (удаление знаков препинания, диакритических знаков, переключение в нижний регистр и т. п.)</span><span class="sxs-lookup"><span data-stu-id="28270-111">`Text normalization` (removing punctuation, diacritics, switching to lowercase etc.)</span></span>
+- <span data-ttu-id="28270-112">`Separator-based tokenization`.</span><span class="sxs-lookup"><span data-stu-id="28270-112">`Separator-based tokenization`.</span></span>
+- <span data-ttu-id="28270-113">Удаление `Stopword`.</span><span class="sxs-lookup"><span data-stu-id="28270-113">`Stopword` removal.</span></span>
+- <span data-ttu-id="28270-114">Извлечение `Ngram` и `skip-gram`.</span><span class="sxs-lookup"><span data-stu-id="28270-114">`Ngram` and `skip-gram` extraction.</span></span>
+- <span data-ttu-id="28270-115">Изменение масштаба `TF-IDF`.</span><span class="sxs-lookup"><span data-stu-id="28270-115">`TF-IDF` rescaling.</span></span>
+- <span data-ttu-id="28270-116">Преобразование `Bag of words`.</span><span class="sxs-lookup"><span data-stu-id="28270-116">`Bag of words` conversion.</span></span>
+
+<span data-ttu-id="28270-117">Следующий пример демонстрирует механизмы извлечения текстовых признаков ML.NET с помощью [набора данных Wikipedia detox](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv):</span><span class="sxs-lookup"><span data-stu-id="28270-117">The following example demonstrates ML.NET text feature extraction mechanisms using the [Wikipedia detox dataset](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv):</span></span>
 
 ```console
 Sentiment   SentimentText

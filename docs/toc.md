@@ -94,7 +94,7 @@
 ### [Новые возможности .NET Core 2.1](core/whats-new/dotnet-core-2-1.md)
 ### [Новые возможности .NET Core 2.0](core/whats-new/dotnet-core-2-0.md)
 ## [Учебники](core/tutorials/index.md)
-### [Начало работы с .NET Core в Mac OS](core/tutorials/using-on-macos.md)
+### [Начало работы с .NET Core в macOS](core/tutorials/using-on-macos.md)
 ### [Начало работы с .NET Core в macOS с помощью Visual Studio для Mac](core/tutorials/using-on-mac-vs.md)
 ### [Создание полноценного решения .NET Core на базе macOS с помощью Visual Studio для Mac](core/tutorials/using-on-mac-vs-full-solution.md)
 ### [Начало работы с .NET Core с помощью средств интерфейса командной строки](core/tutorials/using-with-xplat-cli.md)
@@ -1209,6 +1209,7 @@
 ### Использование обученной модели
 #### [Использование PredictionEngine для поочередного прогнозирования](machine-learning/how-to-guides/single-predict-model-ml-net.md)
 #### [Реализация обученной модели](machine-learning/how-to-guides/consuming-model-ml-net.md)
+#### [Функции Azure модели обслуживания](machine-learning/how-to-guides/serve-model-serverless-azure-functions-ml-net.md)
 ### Infer.NET
 #### [Вероятностное программирование с использованием Infer.NET](machine-learning/how-to-guides/matchup-app-infer-net.md)
 ## Ссылка
