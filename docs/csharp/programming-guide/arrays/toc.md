@@ -5,5 +5,4 @@
 ## [Массивы массивов](jagged-arrays.md)
 ## [Использование оператора foreach с массивами](using-foreach-with-arrays.md)
 ## [Передача массивов в качестве аргументов](passing-arrays-as-arguments.md)
-## [Передача массивов при помощи параметров ref и out](passing-arrays-using-ref-and-out.md)
 ## [Неявно типизированные массивы](implicitly-typed-arrays.md)
