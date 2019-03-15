@@ -2,12 +2,12 @@
 title: Строки подключения в ADO.NET
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: c765eee661858499240344cb5059fe1fa9a58ab5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1197335f3ba2a09b6e7303d31bc32383d1fd3436
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627568"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57844876"
 ---
 # <a name="connection-strings-in-adonet"></a>Строки подключения в ADO.NET
 
@@ -16,9 +16,9 @@ ms.locfileid: "54627568"
 ## <a name="connection-string-syntax"></a>Синтаксис строки соединения
 
 Строка подключения — список разделенных точкой с запятой пар ключ/значение параметра:
-  
+
     keyword1=value; keyword2=value;
-  
+
 Ключевые слова не учитывают регистр. Значения, тем не менее, могут быть с учетом регистра, в зависимости от источника данных. Ключевые слова и значения могут содержать [пробельных символов](https://en.wikipedia.org/wiki/Whitespace_character#Unicode). Начальные и конечные пробелы пропускается в ключевые слова и не заключаться в кавычки значения.
 
 Если значение содержит точку с запятой, [управляющие символы Юникода](https://en.wikipedia.org/wiki/Unicode_control_characters), или начальные или конечные пробелы, то он должен быть заключен в одинарные или двойные кавычки. Пример:
@@ -44,19 +44,21 @@ ms.locfileid: "54627568"
 
 Строки соединения вручную из непроверенных пользовательских входных данных во время выполнения уязвимы для атак внедрения в строку и подвергнуть риску безопасность источника данных. Для решения этих проблем *ADO.NET* 2.0 введена [построители строк подключения](../../../../docs/framework/data/adonet/connection-string-builders.md) для каждого *.NET Framework* поставщика данных. Эти построители строк подключения предоставлять параметры в качестве строго типизированных свойств и сделать его можно проверить строку подключения, перед их отправкой к источнику данных.
 
-## <a name="in-this-section"></a>В этом разделе  
- [Построители строк подключения](../../../../docs/framework/data/adonet/connection-string-builders.md)  
- Демонстрирует использование классов `ConnectionStringBuilder` для создания достоверных строк соединения во время выполнения.
-  
- [Строки подключения и файлы конфигурации](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)  
- Демонстрирует хранение и получение строк соединения в файлах конфигурации.
-  
- [Синтаксис строки подключения](../../../../docs/framework/data/adonet/connection-string-syntax.md)  
- Описывает настройку строк соединения, зависящих от поставщика, для `SqlClient`, `OracleClient`, `OleDb` и `Odbc`.
-  
- [Защита сведений о подключении](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
- Демонстрирует методы защиты сведений, используемых для подключения к источнику данных.
-  
+## <a name="in-this-section"></a>В этом разделе
+
+[Построители строк подключения](../../../../docs/framework/data/adonet/connection-string-builders.md)\
+Демонстрирует использование классов `ConnectionStringBuilder` для создания достоверных строк соединения во время выполнения.
+
+[Строки подключения и файлы конфигурации](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)\
+Демонстрирует хранение и получение строк соединения в файлах конфигурации.
+
+[Синтаксис строки соединения](../../../../docs/framework/data/adonet/connection-string-syntax.md)\
+Описывает настройку строк соединения, зависящих от поставщика, для `SqlClient`, `OracleClient`, `OleDb` и `Odbc`.
+
+[Защита сведений о подключении](../../../../docs/framework/data/adonet/protecting-connection-information.md)\
+Демонстрирует методы защиты сведений, используемых для подключения к источнику данных.
+
 ## <a name="see-also"></a>См. также
+
 - [Подключение к источнику данных](/cpp/data/odbc/connecting-to-a-data-source)
 - [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -4,12 +4,12 @@ description: Модернизация существующих приложен�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 15ea074693a75aa04b4f3a03e6e5e3d7f748cea1
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: e89f1e79eec16919b2e70952392b6f640433156b
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674943"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846263"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>Пошаговые руководства и Технический обзор работы
 
@@ -83,7 +83,7 @@ ms.locfileid: "57674943"
 Это содержимое более подробный обзор на вики-сайте GitHub:
 
 - [Обзор на базовых ASP.NET MVC и веб-форм «устаревшего» приложений](https://github.com/dotnet-architecture/eShopModernizing/wiki/01.-Tour-on-the-ASP.NET-MVC-and-WebForms-apps-implementation-code)
--   [Обзор базовая служба WCF и «устаревшего» приложение WinForms (3-уровневой)](https://github.com/dotnet-architecture/eShopModernizing/wiki/21.-Tour-on-the-WCF-service-and-WinForms-apps)
+- [Обзор базовая служба WCF и «устаревшего» приложение WinForms (3-уровневой)](https://github.com/dotnet-architecture/eShopModernizing/wiki/21.-Tour-on-the-WCF-service-and-WinForms-apps)
 
 ## <a name="walkthrough-2-containerize-your-existing-net-applications-with-windows-containers"></a>Пошаговое руководство 2. Контейнеризация существующие приложения .NET с контейнерами Windows
 

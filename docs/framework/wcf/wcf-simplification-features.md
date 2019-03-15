@@ -2,12 +2,12 @@
 title: Возможности упрощения WCF
 ms.date: 03/30/2017
 ms.assetid: 4535a511-6064-4da0-b361-80262a891663
-ms.openlocfilehash: f4c5d1c0dc5aa9df92368de1266044db3a6c294a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 54255e07df5a46cc975ffd4db5c18dc828a1de44
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57467185"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845283"
 ---
 # <a name="wcf-simplification-features"></a>Возможности упрощения WCF
 
@@ -96,7 +96,7 @@ WCF предоставляет режим совместимости с ASP.NET,
 
 |Свойство.|включить|Новое значение по умолчанию|Дополнительные сведения|
 |--------------|--------|-----------------|----------------------|
-|channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 секунд|Это свойство задает время, в течение которого подключение TCP может выполнить свою проверку подлинности с помощью протокола кадрирования .Net. Клиенту необходимо отправить некоторые исходные данные, прежде чем сервер получит достаточно сведений для аутентификации. Это время ожидания специально сделано меньше значения параметра ReceiveTimeout (10 мин) для того, чтобы непроверенные вредоносные клиенты не сохраняли соединение с сервером в течение долгого времени. Значение по умолчанию - 30 секунды. Дополнительные сведения о <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
+|channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 секунд|Это свойство определяет, сколько подключение TCP может выполнить свою проверку подлинности с помощью протокола кадрирования .NET. Клиенту необходимо отправить некоторые исходные данные, прежде чем сервер получит достаточно сведений для аутентификации. Это время ожидания специально сделано меньше значения параметра ReceiveTimeout (10 мин) для того, чтобы непроверенные вредоносные клиенты не сохраняли соединение с сервером в течение долгого времени. Значение по умолчанию - 30 секунды. Дополнительные сведения о <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|16 * количество процессоров|Это свойство уровня сокетов, которое описывает количество допустимых, ожидающих подтверждения запросов в очереди. Если очередь по невыполненной работе по ожиданию передачи данных заполнится полностью, новые запросы будут отклоняться. Дополнительные сведения о <xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|
 |maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * количество процессоров для транспорта<br /><br /> 4 \* количество процессоров для SMSvcHost.exe|Это свойство ограничивает число каналов, которое может прослушиваться в режиме ожидания на сервере. Когда параметру MaxPendingAccepts задано слишком маленькое значение, возникает небольшой промежуток времени, в течение которого ожидающие каналы начнут обслуживать подключения, но новые каналы прослушиваться не будут. Соединение может произойти именно в этот интервал, и оно не будет установлено, потому что на сервере нет ожидающих каналов. Это свойство может быть сконфигурировано путем задания свойству <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A> большего значения. Дополнительные сведения см. в разделе <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A> и [Настройка службы совместного использования портов Net.TCP](../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)|
 |maxPendingConnections|ConnectionOrientedTransportBindingElement|12 * количество процессоров|Это свойство определяет количество соединений, которое может быть принято транспортом, но которое не было принято диспетчером ServiceModel. Для настройки этого значения используйте свойство `MaxConnections` привязки или свойство `maxOutboundConnectionsPerEndpoint` элемента привязки. Дополнительные сведения о <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A>|

@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 075ea4c3-900c-4f8a-9dd2-13ea6804346b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3dbb5af9c5cf1d8796544592602c645584d21a04
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1641702c7b1c3d3b0e83c59a96529de70f699d17
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711805"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57843613"
 ---
 # <a name="high-dpi-support-in-windows-forms"></a>Поддержка высокого DPI в Windows Forms
 
-Начиная с .NET Framework 4.7, Windows Forms включает усовершенствования для распространенных высокое разрешение и динамических сценариев точек на ДЮЙМ. Сюда входит следующее. 
+Начиная с .NET Framework 4.7, Windows Forms включает усовершенствования для распространенных высокое разрешение и динамических сценариев точек на ДЮЙМ. Сюда входит следующее.
 
-- Усовершенствования в масштабировании и макет ряд Windows Forms элементы управления, такие как <xref:System.Windows.Forms.MonthCalendar> управления и <xref:System.Windows.Forms.CheckedListBox> элемента управления. 
+- Усовершенствования в масштабировании и макет ряд Windows Forms элементы управления, такие как <xref:System.Windows.Forms.MonthCalendar> управления и <xref:System.Windows.Forms.CheckedListBox> элемента управления.
 
 - Один проход масштабирования.  В .NET Framework 4.6 и более ранних версий масштабирование было выполнено через несколько проходов, которые вызвала некоторые элементы управления масштабировать больше, чем была необходима.
 
@@ -30,7 +30,7 @@ ms.locfileid: "57711805"
 
 ## <a name="configuring-your-windows-forms-app-for-high-dpi-support"></a>Настройка поддержка высокого Разрешения в приложении Windows Forms
 
-Новые функции Windows Forms, которые поддерживают высокий уровень поддержки определения DPI доступны только в приложениях, предназначенных для .NET Framework 4.7 и работают в операционных системах Windows, начиная с Windows 10 Creators Update. 
+Новые функции Windows Forms, которые поддерживают высокий уровень поддержки определения DPI доступны только в приложениях, предназначенных для .NET Framework 4.7 и работают в операционных системах Windows, начиная с Windows 10 Creators Update.
 
 Кроме того чтобы настроить поддержка высокого Разрешения в приложении Windows Forms, выполните следующие действия.
 
@@ -49,27 +49,27 @@ ms.locfileid: "57711805"
 
 - Включить awareness DPI для каждого монитора в *app.config* файл.
 
-  Windows Forms вводится новый [ `<System.Windows.Forms.ApplicationConfigurationSection>` ](../configure-apps/file-schema/winforms/index.md) элемент для поддержки новых функций и добавлены сведения о настройках, начиная с .NET Framework 4.7. Чтобы воспользоваться преимуществами новых функций, которые поддерживают высокое разрешение, добавьте следующее в файл конфигурации приложения.   
+  Windows Forms вводится новый [ `<System.Windows.Forms.ApplicationConfigurationSection>` ](../configure-apps/file-schema/winforms/index.md) элемент для поддержки новых функций и добавлены сведения о настройках, начиная с .NET Framework 4.7. Чтобы воспользоваться преимуществами новых функций, которые поддерживают высокое разрешение, добавьте следующее в файл конфигурации приложения.
 
   ```xml
   <System.Windows.Forms.ApplicationConfigurationSection>
     <add key="DpiAwareness" value="PerMonitorV2" />
-  </System.Windows.Forms.ApplicationConfigurationSection>      
+  </System.Windows.Forms.ApplicationConfigurationSection>
   ```
-   
+
   > [!IMPORTANT]
   > В предыдущих версиях .NET Framework используемой манифест для добавления поддержка высокого Разрешения. Этот подход не рекомендуется, так как он переопределяет параметры, определенные в файле app.config.
-   
+
 - Вызовите статический <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> метод.
-   
+
   Это должен быть первый вызов метода в точку входа приложения. Пример:
-   
+
   ```csharp
   static void Main()
   {
       Application.EnableVisualStyles();
       Application.SetCompatibleTextRenderingDefault(false);
-      Application.Run(new Form2());   
+      Application.Run(new Form2());
   }
   ```
 
@@ -80,8 +80,8 @@ ms.locfileid: "57711805"
 ```xml
 <System.Windows.Forms.ApplicationConfigurationSection>
   <add key="DpiAwareness" value="PerMonitorV2" />
-  <add key="EnableWindowsFormsHighDpiAutoResizing" value="false" /> 
-</System.Windows.Forms.ApplicationConfigurationSection>    
+  <add key="EnableWindowsFormsHighDpiAutoResizing" value="false" />
+</System.Windows.Forms.ApplicationConfigurationSection>
 ```
 
 Список отдельных ключей и их значения, см. в разделе [добавьте элемент конфигурации Windows Forms](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md).

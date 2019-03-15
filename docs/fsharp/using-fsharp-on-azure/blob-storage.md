@@ -3,12 +3,12 @@ title: Начало работы с хранилищем BLOB-объектов A
 description: Store неструктурированных данных в облаке в хранилище BLOB-объектов Azure.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: e38f58fefa63f922bcb1a78254249a3626bfac43
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 62178edf22ad48d0388f34488b68d135068d50a2
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981911"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846432"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>Начало работы с хранилищем BLOB-объектов Azure, с помощью F\#
 
@@ -102,14 +102,14 @@ ms.locfileid: "56981911"
 
 Например, рассмотрим следующий набор блочных BLOB-объектов в контейнере с именем `photos`:
 
-*photo1.jpg*
-*2015/architecture/description.txt*
-*2015/architecture/photo3.jpg*
-*2015 / Архитектура/photo4.jpg*
-*2016/architecture/photo5.jpg*
-*2016/architecture/photo6.jpg* 
- *2016/architecture/description.txt*
-*2016/photo7.jpg*
+*photo1.jpg*\
+*2015/Architecture/Description.txt*\
+*2015/Architecture/photo3.jpg*\
+*2015/Architecture/photo4.jpg*\
+*2016/Architecture/photo5.jpg*\
+*2016/Architecture/photo6.jpg*\
+*2016/Architecture/Description.txt*\
+*2016/photo7.jpg*\
 
 При вызове `ListBlobs` в контейнере (как в примере выше) возвращается иерархический список. Если он содержит оба `CloudBlobDirectory` и `CloudBlockBlob` объекты, представляющие каталоги и большие двоичные объекты в контейнере, соответственно, а затем полученный результат выглядит примерно так:
 
