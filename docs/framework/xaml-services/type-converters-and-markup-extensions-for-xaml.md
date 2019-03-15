@@ -8,12 +8,12 @@ helpviewer_keywords:
 - value converters for XAML [XAML Services]
 - XAML [XAML Services], service context
 ms.assetid: db07a952-05ce-4aa4-b6f9-aac7397d0326
-ms.openlocfilehash: 3bcf78ce6fe0e56e027b2d473a95d6663971744d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1704a7a86e89685763da7bf49a67c1fe8373124a
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588227"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58050539"
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>Преобразователи типов или расширения разметки для XAML
 Преобразователи типов и расширения разметки — это два метода, используемых системами типов XAML и средствами записи XAML для создания компонентов графа объектов. Хотя они обладают общими характеристиками, преобразователи типов и расширения разметки представляются по-разному в потоке узлов XAML. В этой документации преобразователи типов, расширения разметки и аналогичные конструкции иногда называются преобразователями значений.  
@@ -32,7 +32,7 @@ ms.locfileid: "54588227"
   
 <a name="type_converters"></a>   
 ## <a name="type-converters"></a>Преобразователи типов  
- Согласно определению служб XAML .NET Framework преобразователи типов — это классы, производные от класса <xref:System.ComponentModel.TypeConverter> среды CLR. <xref:System.ComponentModel.TypeConverter> — Это класс, который был в Microsoft .NET Framework до появления XAML. Его первоначальное назначение заключалось в поддержке окон свойств и аналогичных текстовых метафор для редактирования свойств [!INCLUDE[TLA2#tla_ide](../../../includes/tla2sharptla-ide-md.md)] . После реализации XAML в .NET Framework платформа использует <xref:System.ComponentModel.TypeConverter> для преобразования текстового синтаксиса (в значении атрибута или в узле значения XAML) в объект. <xref:System.ComponentModel.TypeConverter> может также использоваться для сериализации значения объекта в текстовый синтаксис. <xref:System.ComponentModel.TypeConverter> также применялся в предыдущих реализациях XAML для отдельных платформ в Windows Presentation Foundation (WPF) и Windows Communication Foundation (WCF). Дополнительные сведения о <xref:System.ComponentModel.TypeConverter> в XAML см. в разделе [Type Converters for XAML Overview](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md).  
+ Согласно определению служб XAML .NET Framework преобразователи типов — это классы, производные от класса <xref:System.ComponentModel.TypeConverter> среды CLR. <xref:System.ComponentModel.TypeConverter> — Это класс, который был в Microsoft .NET Framework до появления XAML. Его первоначальное назначение заключалось в поддержке окон свойств и аналогичных текстовых метафор для редактирования свойств [!INCLUDE[TLA2#tla_ide](../../../includes/tla2sharptla-ide-md.md)] . После реализации XAML в .NET Framework платформа использует <xref:System.ComponentModel.TypeConverter> для преобразования текстового синтаксиса (в значении атрибута или в узле значения XAML) в объект. <xref:System.ComponentModel.TypeConverter> может также использоваться для сериализации значения объекта в текстовый синтаксис. <xref:System.ComponentModel.TypeConverter> также применялся в предыдущих реализациях XAML для отдельных платформ в Windows Presentation Foundation (WPF) и Windows Communication Foundation (WCF). Дополнительные сведения о <xref:System.ComponentModel.TypeConverter> в XAML см. в разделе [Type Converters for XAML Overview](type-converters-for-xaml-overview.md).  
   
 <a name="markup_extensions"></a>   
 ## <a name="markup-extensions"></a>Расширения разметки  
@@ -42,10 +42,10 @@ ms.locfileid: "54588227"
   
  Расширения разметки связаны с отдельным вспомогательным классом службы, но могут применяться к любому значению члена. (Однако вы можете реализовать расширение разметки, чтобы намеренно ограничить его использование определенными членами или конечными типами с помощью контекста службы.) Расширения разметки могут переопределять ассоциации преобразователей типов. Кроме того, их можно использовать, чтобы указать значение атрибута для членов, которые в противном случае не поддерживают текстовый синтаксис.  
   
- Дополнительные сведения о реализации шаблона расширения разметки для XAML см. в разделе [Markup Extensions for XAML Overview](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md).  
+ Дополнительные сведения о реализации шаблона расширения разметки для XAML см. в разделе [Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md).  
   
 > [!NOTE]
->  Типы <xref:System.Windows.Markup.MarkupExtension> и <xref:System.Windows.Markup.ValueSerializer> находятся в пространстве имен <xref:System.Windows.Markup> , а не в <xref:System.Xaml> . Это не означает, что эти типы относятся к технологии WPF или Windows Forms, которые заполняют пространства имен CLR, которые содержат строку `Windows`. <xref:System.Windows.Markup.MarkupExtension> и <xref:System.Windows.Markup.ValueSerializer> находятся в сборке System.Xaml и не зависят от конкретной платформы. Эти типы существовали в пространстве имен среды CLR для [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] и остаются в нем в [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] для предотвращения повреждения ссылок в существующих проектах WPF. Для получения дополнительной информации см. [Types Migrated from WPF to System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md).  
+>  Типы <xref:System.Windows.Markup.MarkupExtension> и <xref:System.Windows.Markup.ValueSerializer> находятся в пространстве имен <xref:System.Windows.Markup> , а не в <xref:System.Xaml> . Это не означает, что эти типы относятся к технологии WPF или Windows Forms, которые заполняют пространства имен CLR, которые содержат строку `Windows`. <xref:System.Windows.Markup.MarkupExtension> и <xref:System.Windows.Markup.ValueSerializer> находятся в сборке System.Xaml и не зависят от конкретной платформы. Эти типы существовали в пространстве имен среды CLR для [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] и остаются в нем в [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] для предотвращения повреждения ссылок в существующих проектах WPF. Для получения дополнительной информации см. [Types Migrated from WPF to System.Xaml](types-migrated-from-wpf-to-system-xaml.md).  
   
 <a name="value_serializers"></a>   
 ## <a name="value-serializers"></a>Сериализаторы значений  
@@ -63,11 +63,11 @@ ms.locfileid: "54588227"
   
 <a name="service_context_for_a_value_converter"></a>   
 ## <a name="service-context-for-a-value-converter"></a>Контекст службы для преобразователя значений  
- При реализации преобразователя значений часто требуется доступ к контексту, в котором он применяется. Этот контекст называют контекстом службы. Контекст службы может включать в себя такие сведения, как контекст активной схемы XAML, доступ к системе сопоставления типов, предоставляемый контекстом схемы XAML и средством записи объектов XAML, и т. д. Дополнительные сведения о контекстах служб, доступных для преобразователя значений, и способах доступа к службам, которые могут предоставить контекст службы, см. в разделе [Service Contexts Available to Type Converters and Markup Extensions](../../../docs/framework/xaml-services/service-contexts-available-to-type-converters-and-markup-extensions.md).  
+ При реализации преобразователя значений часто требуется доступ к контексту, в котором он применяется. Этот контекст называют контекстом службы. Контекст службы может включать в себя такие сведения, как контекст активной схемы XAML, доступ к системе сопоставления типов, предоставляемый контекстом схемы XAML и средством записи объектов XAML, и т. д. Дополнительные сведения о контекстах служб, доступных для преобразователя значений, и способах доступа к службам, которые могут предоставить контекст службы, см. в разделе [Service Contexts Available to Type Converters and Markup Extensions](service-contexts-available-to-type-converters-and-markup-extensions.md).  
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Markup.MarkupExtension>
 - <xref:System.Xaml.XamlObjectWriter>
-- [Общие сведения о расширениях разметки для XAML](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)
-- [Общие сведения о преобразователях типов для XAML](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md)
-- [Service Contexts Available to Type Converters and Markup Extensions](../../../docs/framework/xaml-services/service-contexts-available-to-type-converters-and-markup-extensions.md)
+- [Общие сведения о расширениях разметки для XAML](markup-extensions-for-xaml-overview.md)
+- [Общие сведения о преобразователях типов для XAML](type-converters-for-xaml-overview.md)
+- [Service Contexts Available to Type Converters and Markup Extensions](service-contexts-available-to-type-converters-and-markup-extensions.md)

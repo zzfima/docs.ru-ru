@@ -6,12 +6,12 @@ helpviewer_keywords:
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-ms.openlocfilehash: 261c44ae06959ed387a4619bf2fdb99b37141c86
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e75d7f9454018b4a5f31eb36f1790d3a7b49af78
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365728"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58034744"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>Общее представление о понятиях и структурах потока узлов XAML
 
@@ -232,7 +232,7 @@ public class GameBoard {
 
 ### <a name="xamlobjectwriter-behavior-and-node-order"></a>Поведение XamlObjectWriter и порядок узлов
 
-`StartObject` в <xref:System.Xaml.XamlObjectWriter> не обязательно сигнализирует средству записи объектов XAML немедленно создать экземпляр объекта. В XAML имеется несколько языковых возможностей, с помощью которых можно инициализировать объект с использованием дополнительных входных данных и не полагаться полностью на вызов конструктора по умолчанию для создания начального объекта, и только затем установить свойства. Эти возможности включают <xref:System.Windows.Markup.XamlDeferLoadAttribute>; текст инициализации; [x: TypeArguments](../../../docs/framework/xaml-services/x-typearguments-directive.md); позиционные параметры расширения разметки; фабричные методы и связанные узлы [x: Arguments](../../../docs/framework/xaml-services/x-arguments-directive.md) (XAML 2009 г.). В каждом из этих случаев фактическое создание объекта задерживается, а поскольку поток узлов переупорядочивается, средство записи объектов XAML может рассчитывать на поведение фактического создания экземпляра при обнаружении начального члена, не представляющего собой директиву построения для данного типа объекта.
+`StartObject` в <xref:System.Xaml.XamlObjectWriter> не обязательно сигнализирует средству записи объектов XAML немедленно создать экземпляр объекта. В XAML имеется несколько языковых возможностей, с помощью которых можно инициализировать объект с использованием дополнительных входных данных и не полагаться полностью на вызов конструктора по умолчанию для создания начального объекта, и только затем установить свойства. Эти возможности включают <xref:System.Windows.Markup.XamlDeferLoadAttribute>; текст инициализации; [x: TypeArguments](x-typearguments-directive.md); позиционные параметры расширения разметки; фабричные методы и связанные узлы [x: Arguments](x-arguments-directive.md) (XAML 2009 г.). В каждом из этих случаев фактическое создание объекта задерживается, а поскольку поток узлов переупорядочивается, средство записи объектов XAML может рассчитывать на поведение фактического создания экземпляра при обнаружении начального члена, не представляющего собой директиву построения для данного типа объекта.
 
 ### <a name="getobject"></a>GetObject
 
@@ -241,5 +241,5 @@ public class GameBoard {
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Xaml.XamlObjectReader>
-- [Службы XAML](../../../docs/framework/xaml-services/index.md)
-- [Пространства имен языка XAML](../../../docs/framework/xaml-services/xaml-namespaces-for-net-framework-xaml-services.md)
+- [Службы XAML](index.md)
+- [Пространства имен языка XAML](xaml-namespaces-for-net-framework-xaml-services.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - x:Shared attribute [XAML Services]
 - Shared attribute in XAML [XAML Services]
 ms.assetid: c8cff434-2785-405f-9f95-16deb34c9e64
-ms.openlocfilehash: 1c718522a20fb2047ebf500adbf4044265e3af3d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 42de341d59e3e70103db765faf3160b5fe3250d3
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54542265"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58039403"
 ---
 # <a name="xshared-attribute"></a>Атрибут x:Shared
 Если задано значение `false`, изменяет поведение извлечения ресурсов WPF, чтобы запросы с атрибутами ресурсов создают новый экземпляр для каждого запроса, а не один и тот же экземпляр для всех запросов.  
@@ -33,7 +33,7 @@ ms.locfileid: "54542265"
   
  Изменение объекта, который возвращается через API, ресурс, такие как <xref:System.Windows.FrameworkElement.FindResource%2A>, или изменении объекта непосредственно в <xref:System.Windows.ResourceDictionary>, изменяет исходный ресурс. Если ссылки на этот ресурс были ссылки на динамические ресурсы, потребители этого ресурса получение измененных ресурсов.  
   
- Если ссылки на ресурс были статическими, изменения ресурса после [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] актуальны ли время обработки. Дополнительные сведения о статических и ссылки на динамические ресурсы, см. в разделе [ресурсы XAML](../../../docs/framework/wpf/advanced/xaml-resources.md).  
+ Если ссылки на ресурс были статическими, изменения ресурса после [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] актуальны ли время обработки. Дополнительные сведения о статических и ссылки на динамические ресурсы, см. в разделе [ресурсы XAML](../wpf/advanced/xaml-resources.md).  
   
  Явно указав `x:Shared="true"` делается редко, так как он уже имеет значение по умолчанию. Нет эквивалента для прямого кода `x:Shared` в WPF объектной модели; он может указываться только при использовании XAML и должны быть обработаны с WPF по умолчанию или в промежуточный поток узлов XAML в пути загрузки при обработке с помощью .NET Framework XAML Se служб и его средства чтения XAML.  
   
@@ -51,5 +51,5 @@ ms.locfileid: "54542265"
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.ResourceDictionary>
-- [Ресурсы XAML](../../../docs/framework/wpf/advanced/xaml-resources.md)
-- [Базовые элементы](../../../docs/framework/wpf/advanced/base-elements.md)
+- [Ресурсы XAML](../wpf/advanced/xaml-resources.md)
+- [Базовые элементы](../wpf/advanced/base-elements.md)

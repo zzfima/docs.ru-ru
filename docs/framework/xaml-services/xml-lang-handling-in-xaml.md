@@ -7,12 +7,12 @@ helpviewer_keywords:
 - RFC 3066 standard [XAML Services]
 - standards [XAML Services], RFC 3066
 ms.assetid: 7aac0078-a1c5-41f8-b8b0-975510d9dca0
-ms.openlocfilehash: 508c1151b1b196a84b7c3a576e18d10c0a706fad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9ec844c37ee2ef7979c82b308cdf167a46a3c072
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692406"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58034424"
 ---
 # <a name="xmllang-handling-in-xaml"></a>Обработка xml:lang в XAML
 Атрибут `xml:lang` — это определенный [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)]атрибут, который объявляет язык и региональные параметры для элемента в XML. Такое же значение атрибута сохраняется в XAML; однако действуют некоторые дополнительные факторы.  
@@ -44,4 +44,4 @@ ms.locfileid: "54692406"
  Для элементов, которые являются производными классами от <xref:System.Windows.FrameworkElement> или <xref:System.Windows.FrameworkContentElement>, можно использовать эквивалентное свойство зависимостей <xref:System.Windows.FrameworkElement.Language%2A> вместо атрибута `xml:lang` . По умолчанию свойство <xref:System.Windows.FrameworkElement.Language%2A> использует "en-US", если не установлено иное, посредством этого свойства или путем обработки атрибута `xml:lang` .  
   
 ## <a name="see-also"></a>См. также
-- [Глобализация для WPF](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
+- [Глобализация для WPF](../wpf/advanced/globalization-for-wpf.md)
