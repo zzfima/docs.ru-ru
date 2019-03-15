@@ -7,12 +7,12 @@ helpviewer_keywords:
 - white-space processing in XAML [XAML Services]
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
-ms.openlocfilehash: 750f054c908cd9d837a18ee6c8a537285b325288
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: da559a7e009861faaba16484276eb97be537482b
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728372"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58048045"
 ---
 # <a name="white-space-processing-in-xaml"></a>Обработки пробелов в XAML
 Состояние согласно правилам языка XAML, значащим пробелом должны обрабатываться [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] реализации обработчика. В этом разделе описываются эти правила языка XAML. Здесь также описывается обработка дополнительных пробелов, определяемое [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] реализация обработчика XAML и записи XAML для сериализации.  
@@ -35,7 +35,7 @@ ms.locfileid: "54728372"
   
 5.  Пробел перед закрывающим тегом удаляется.  
   
- "Default" соответствует состоянию, обозначаемому значением атрибута [XML: space](../../../docs/framework/xaml-services/xml-space-handling-in-xaml.md) по умолчанию.  
+ "Default" соответствует состоянию, обозначаемому значением атрибута [XML: space](xml-space-handling-in-xaml.md) по умолчанию.  
   
 <a name="whitespace_in_inner_text_and_string_primitives"></a>   
 ## <a name="white-space-in-inner-text-and-string-primitives"></a>Пустое пространство в внутреннем тексте и строковые примитивы  
@@ -75,6 +75,6 @@ ms.locfileid: "54728372"
  Кроме того некоторые встроенные элементы, которые разрыву строки в модели потокового документа намеренно не должны отображать лишние пробелы даже в коллекции значительных пробелов. Например <xref:System.Windows.Documents.LineBreak> элемент имеет ту же функцию, что \<BR / > тегом [!INCLUDE[TLA2#tla_html](../../../includes/tla2sharptla-html-md.md)]и для удобства чтения в разметке, обычно <xref:System.Windows.Documents.LineBreak> отделяется от любого последующего текста созданные перевода строки. Этот символ не следует нормализовать, чтобы он не стал начальным пробелом в следующей строке. Чтобы включить это поведение, в определении класса для <xref:System.Windows.Documents.LineBreak> элемент применяется <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>, который затем интерпретируется [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] процессора, чтобы пробелы вокруг <xref:System.Windows.Documents.LineBreak> всегда отсекались.  
   
 ## <a name="see-also"></a>См. также
-- [Обзор XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [Сущности знаков XML и XAML](../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)
-- [XML: space в XAML](../../../docs/framework/xaml-services/xml-space-handling-in-xaml.md)
+- [Обзор XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [Сущности знаков XML и XAML](xml-character-entities-and-xaml.md)
+- [XML: space в XAML](xml-space-handling-in-xaml.md)

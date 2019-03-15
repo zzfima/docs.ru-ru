@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrFinancial_LifeNEZero
 ms.assetid: c402da97-a2b2-4219-a83a-0cebbfdffef2
-ms.openlocfilehash: b6d57859d138c6a2ecda3efe1f2ed30ad32198d5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 689dc82f76d113e01bd2da9d7531c58df3b1409a
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667863"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58038516"
 ---
 # <a name="argument-life-cannot-be-zero"></a>Аргумент Life не может быть равен нулю
 Недопустимый аргумент для `Life`, который должен быть `Double` , указывающий срок эксплуатации актива.  
@@ -21,4 +21,5 @@ ms.locfileid: "54667863"
 -   Проверьте предыдущие операции с переменными в выражении, в особенности те, которые передавались в процедуру как аргументы из других процедур.  
   
 ## <a name="see-also"></a>См. также
+
 - [Передача аргументов по значению и по ссылке](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

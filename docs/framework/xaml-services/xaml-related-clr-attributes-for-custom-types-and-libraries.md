@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR attributes for custom types [XAML Services]
 ms.assetid: 5dfb299a-b6e2-41b8-8694-e6ac987547f1
-ms.openlocfilehash: e194dbef0f18657646161a3f5cc4812b3ab78f7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80127bae06a90dccd204b0f2a4baef10732ade76
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530116"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58039460"
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>Относящиеся к XAML атрибуты среды CLR для пользовательских типов и библиотек
 В этом разделе описаны наиболее распространенные атрибуты среды выполнения (CLR) языка, определенных службами XAML платформы .NET Framework. Здесь также описываются другие атрибуты CLR, которые определены в .NET Framework, которые используются связанные с XAML для приложения к сборкам и типам. Присвоение атрибутов сборки, типы или члены этих атрибутов CLR предоставляет о системе типов XAML, связанные с типами. Информация предоставляется потребителю XAML, использующий служб XAML .NET Framework для обработки в потоке узлов XAML напрямую или через выделенные средства чтения XAML и записи XAML.  
@@ -81,7 +81,7 @@ ms.locfileid: "54530116"
   
  **Аргументы:** Объект <xref:System.Type> , указывающий наиболее точный тип, ожидать в качестве `ProvideValue` результат с атрибутами <xref:System.Windows.Markup.MarkupExtension>.  
   
- Дополнительные сведения см. в разделе [Markup Extensions for XAML Overview](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md).  
+ Дополнительные сведения см. в разделе [Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md).  
   
 ### <a name="namescopepropertyattribute"></a>NameScopePropertyAttribute  
  **Справочная документация по:**  <xref:System.Windows.Markup.NameScopePropertyAttribute>  
@@ -103,7 +103,7 @@ ms.locfileid: "54530116"
   
  **Аргументы:** Строка, указывающая имя свойства времени выполнения имя типа с атрибутом.  
   
- <xref:System.Windows.Markup.RuntimeNamePropertyAttribute> сообщает о свойстве типа атрибута, который сопоставляется с XAML [директива x: Name](../../../docs/framework/xaml-services/x-name-directive.md). Свойство должно быть типа <xref:System.String> и должны быть чтения/записи.  
+ <xref:System.Windows.Markup.RuntimeNamePropertyAttribute> сообщает о свойстве типа атрибута, который сопоставляется с XAML [директива x: Name](x-name-directive.md). Свойство должно быть типа <xref:System.String> и должны быть чтения/записи.  
   
  Определение наследует все производные типы, которые можно назначить типу. Определение в определенном производном типе можно переопределить, применив <xref:System.Windows.Markup.RuntimeNamePropertyAttribute> на конкретный производный тип.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "54530116"
   
  **Аргументы:** Отсутствует.  
   
- <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute> применяется к определенным типам, которые могут отображаться как дочерние элементы внутри существенного содержимого пустого пространства (содержимого, хранящихся в коллекции, в которой <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>). <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute> главным образом используется для сохранения пути, но доступен в системе типов XAML в пути загрузки с помощью проверки <xref:System.Xaml.XamlType.TrimSurroundingWhitespace%2A?displayProperty=nameWithType>. Дополнительные сведения см. в разделе [-обработки пробелов в XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md).  
+ <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute> применяется к определенным типам, которые могут отображаться как дочерние элементы внутри существенного содержимого пустого пространства (содержимого, хранящихся в коллекции, в которой <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>). <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute> главным образом используется для сохранения пути, но доступен в системе типов XAML в пути загрузки с помощью проверки <xref:System.Xaml.XamlType.TrimSurroundingWhitespace%2A?displayProperty=nameWithType>. Дополнительные сведения см. в разделе [-обработки пробелов в XAML](whitespace-processing-in-xaml.md).  
   
 ### <a name="typeconverterattribute"></a>TypeConverterAttribute  
  **Справочная документация по:**  <xref:System.ComponentModel.TypeConverterAttribute>  
@@ -127,7 +127,7 @@ ms.locfileid: "54530116"
   
  Можно применить <xref:System.ComponentModel.TypeConverterAttribute> атрибута к типу, ссылающиеся на реализации преобразователя пользовательского типа. Можно определить преобразователи типов для XAML на классами, структурами или интерфейсами. Необходимо предоставить преобразование для перечислений, встроенными средствами преобразования.  
   
- Преобразователь типов должен иметь возможность преобразования из строки, которая используется для атрибутов или инициализации текста в разметке, в требуемый тип назначения. Дополнительные сведения см. в разделе [TypeConverters и XAML](../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md).  
+ Преобразователь типов должен иметь возможность преобразования из строки, которая используется для атрибутов или инициализации текста в разметке, в требуемый тип назначения. Дополнительные сведения см. в разделе [TypeConverters и XAML](../wpf/advanced/typeconverters-and-xaml.md).  
   
  Вместо того чтобы применять ко всем значениям типа, поведение преобразователя типов для XAML также можно установить на определенное свойство. В этом случае можно применить <xref:System.ComponentModel.TypeConverterAttribute> к определению свойства (внешнему определению, а не к конкретным `get` и `set` определения).  
   
@@ -142,7 +142,7 @@ ms.locfileid: "54530116"
   
  **Аргументы:** Строка, указывающая соответствующего свойства по имени.  
   
- Указывает свойство CLR класса, который является псевдонимом [x: Uid Directive](../../../docs/framework/xaml-services/x-uid-directive.md).  
+ Указывает свойство CLR класса, который является псевдонимом [x: Uid Directive](x-uid-directive.md).  
   
 ### <a name="usableduringinitializationattribute"></a>UsableDuringInitializationAttribute  
  **Справочная документация по:**  <xref:System.Windows.Markup.UsableDuringInitializationAttribute>  
@@ -169,7 +169,7 @@ ms.locfileid: "54530116"
   
  **Аргументы:** Отсутствует.  
   
- <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute> Указывает, что тип коллекции должен обрабатываться как значительные пробела, обработчиком XAML, который влияет на создание узлов значений потока узлов XAML в коллекции. Дополнительные сведения см. в разделе [-обработки пробелов в XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md).  
+ <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute> Указывает, что тип коллекции должен обрабатываться как значительные пробела, обработчиком XAML, который влияет на создание узлов значений потока узлов XAML в коллекции. Дополнительные сведения см. в разделе [-обработки пробелов в XAML](whitespace-processing-in-xaml.md).  
   
 ### <a name="xamldeferloadattribute"></a>XamlDeferLoadAttribute  
  **Справочная документация по:**  <xref:System.Windows.Markup.XamlDeferLoadAttribute>  
@@ -270,4 +270,4 @@ ms.locfileid: "54530116"
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Attribute>
-- [Определение пользовательских типов для использования со службами XAML .NET Framework](../../../docs/framework/xaml-services/defining-custom-types-for-use-with-net-framework-xaml-services.md)
+- [Определение пользовательских типов для использования со службами XAML .NET Framework](defining-custom-types-for-use-with-net-framework-xaml-services.md)
