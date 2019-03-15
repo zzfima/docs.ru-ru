@@ -449,7 +449,7 @@
 ### [Файлы подписи](fsharp/language-reference/signature-files.md)
 ### [Единицы измерения](fsharp/language-reference/units-of-measure.md)
 ### [Документация XML](fsharp/language-reference/xml-documentation.md)
-### [Отложенные вычисления](fsharp/language-reference/lazy-computations.md)
+### [Отложенные выражения](fsharp/language-reference/lazy-expressions.md)
 ### [Выражения вычисления](fsharp/language-reference/computation-expressions.md)
 ### [Асинхронные рабочие потоки](fsharp/language-reference/asynchronous-workflows.md)
 ### [Выражения запросов](fsharp/language-reference/query-expressions.md)
@@ -1210,6 +1210,7 @@
 #### [Использование PredictionEngine для поочередного прогнозирования](machine-learning/how-to-guides/single-predict-model-ml-net.md)
 #### [Реализация обученной модели](machine-learning/how-to-guides/consuming-model-ml-net.md)
 #### [Функции Azure модели обслуживания](machine-learning/how-to-guides/serve-model-serverless-azure-functions-ml-net.md)
+#### [Обслуживание модели с использованием веб-API](machine-learning/how-to-guides/serve-model-web-api-ml-net.md)
 ### Infer.NET
 #### [Вероятностное программирование с использованием Infer.NET](machine-learning/how-to-guides/matchup-app-infer-net.md)
 ## Ссылка
