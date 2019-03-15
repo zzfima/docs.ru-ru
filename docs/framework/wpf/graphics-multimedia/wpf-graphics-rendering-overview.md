@@ -159,14 +159,14 @@ ms.locfileid: "57375536"
 Схема порядка отрисовки визуального дерева  
   
 ### <a name="root-visual"></a>Корневой визуальный элемент  
- **Корневой визуальный элемент** — это самый верхний элемент в иерархии визуального дерева. В большинстве приложений базовым классом корневого визуального элемента является либо <xref:System.Windows.Window>, либо <xref:System.Windows.Navigation.NavigationWindow>. Однако, при размещении визуальных объектов в приложении Win32 в качестве корневого визуального элемента использовался бы самый верхний визуальный элемент в окне Win32. Дополнительные сведения см. в статье [Руководство: Размещение визуальных объектов в приложении Win32](tutorial-hosting-visual-objects-in-a-win32-application.md).  
+ **Корневой визуальный элемент** — это самый верхний элемент в иерархии визуального дерева. В большинстве приложений базовым классом корневого визуального элемента является либо <xref:System.Windows.Window>, либо <xref:System.Windows.Navigation.NavigationWindow>. Однако при размещении визуальных объектов в приложении Win32 корневым визуальным элементом будет самый верхний визуальный элемент в окне Win32. Дополнительные сведения см. в статье [Руководство по размещению визуальных объектов в приложении Win32](tutorial-hosting-visual-objects-in-a-win32-application.md).  
   
 ### <a name="relationship-to-the-logical-tree"></a>Связь с логическом деревом  
  Логическое дерево в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] представляет элементы приложения во время выполнения. Хотя этим деревом нельзя управлять напрямую, с помощью этой схемы удобно представить наследование свойств и маршрутизацию событий. В отличие от визуального дерева, логическое дерево может представлять и невизуальные объекты, например <xref:System.Windows.Documents.ListItem>. Во многих случаях логическое дерево приближается к определению разметки приложения. В следующем коде показан элемент <xref:System.Windows.Controls.DockPanel>, определенный в разметке.  
   
  [!code-xaml[VisualsOverview#VisualsOverviewSnippet5](~/samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml#visualsoverviewsnippet5)]  
   
- Если бы пришлось перечислить логические объекты, которые составляют элемент <xref:System.Windows.Controls.DockPanel> в примере разметки, обнаружилась бы иерархия логических объектов, показанная ниже:  
+ Если перечислить логические объекты, которые составляют элемент <xref:System.Windows.Controls.DockPanel> в примере разметки, обнаружится иерархия логических объектов, показанная ниже:  
   
  ![Диаграмма дерева](./media/tree1-wcp.gif "Tree1_wcp")  
 Схема логического дерева  
@@ -181,7 +181,7 @@ ms.locfileid: "57375536"
  ![Панель обозревателя визуального дерева в XamlPad](./media/visuallayeroverview08.png "VisualLayerOverview08")  
 Панель обозревателя визуального дерева в XamlPad  
   
- Обратите внимание, что <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBox> и <xref:System.Windows.Controls.Button> каждый отображают отдельную иерархию визуальных объектов в панели **Обозреватель визуального дерева** XamlPad. Это обусловлено тем, что элементы управления [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] имеют <xref:System.Windows.Controls.ControlTemplate>, который содержит визуальное дерево этого элемента управления. При явной ссылке на элемент управления вы неявно ссылаетесь на его визуальную иерархию.  
+ Обратите внимание, что каждый из элементов управления <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBox> и <xref:System.Windows.Controls.Button> отображает отдельную иерархию визуальных объектов в панели **Обозреватель визуального дерева** XamlPad. Это обусловлено тем, что элементы управления [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] имеют шаблон <xref:System.Windows.Controls.ControlTemplate>, который содержит визуальное дерево этого элемента управления. При явной ссылке на элемент управления вы неявно ссылаетесь на его визуальную иерархию.  
   
 ### <a name="profiling-visual-performance"></a>Профилирование производительности для объекта Visual  
  В состав [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] входит пакет инструментов для профилирования производительности, с помощью которых можно проанализировать поведение приложения во время выполнения и определить, каким образом можно повысить производительность. Средство Visual Profiler предоставляет подробные данные о производительности в удобном графическом формате, сопоставляя их напрямую с визуальным деревом приложения. На этом снимке экрана показан раздел **Использование ЦП** средства Visual Profiler. В этом разделе вы можете получить точное представление об использовании объектом служб [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], таких как отрисовка и разметка.  
@@ -217,7 +217,7 @@ ms.locfileid: "57375536"
  ![Различия между растровой и векторной графикой](./media/vectorgraphics01.png "VectorGraphics01")  
 Различия между растровой и векторной графикой  
   
- В следующем примере показано определение двух элементов <xref:System.Windows.Shapes.Path>. Во втором элементе с помощью <xref:System.Windows.Media.ScaleTransform> к инструкциям отрисовки первого элемента применяется операция изменения размера на 300%. Обратите внимание, что инструкции отрисовки в элементе <xref:System.Windows.Shapes.Path> остаются без изменений.  
+ В следующем примере показано определение двух элементов <xref:System.Windows.Shapes.Path>. Во втором элементе с помощью <xref:System.Windows.Media.ScaleTransform> к инструкциям отрисовки первого элемента применяется операция изменения размера на 300 %. Обратите внимание, что инструкции отрисовки в элементе <xref:System.Windows.Shapes.Path> остаются без изменений.  
   
  [!code-xaml[VectorGraphicsSnippets#VectorGraphicsSnippet1](~/samples/snippets/csharp/VS_Snippets_Wpf/VectorGraphicsSnippets/CS/PageOne.xaml#vectorgraphicssnippet1)]  
   
@@ -235,7 +235,7 @@ ms.locfileid: "57375536"
   
 <a name="visualtreehelper_class"></a>   
 ## <a name="visualtreehelper-class"></a>Класс VisualTreeHelper  
- Класс <xref:System.Windows.Media.VisualTreeHelper> — это статический вспомогательный класс, предоставляющий низкоуровневые функции для программирования на уровне визуального объекта, что полезно в определенных случаях, например при разработке пользовательских элементов управления высокой производительности. В большинстве случаев, высокоуровневые объекты [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], например <xref:System.Windows.Controls.Canvas> и <xref:System.Windows.Controls.TextBlock>, обладают большей гибкостью и простотой использования.  
+ Класс <xref:System.Windows.Media.VisualTreeHelper> — это статический вспомогательный класс, предоставляющий низкоуровневые функции для программирования на уровне визуального объекта, что полезно в определенных случаях, например при разработке пользовательских элементов управления высокой производительности. В большинстве случаев высокоуровневые объекты [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], например <xref:System.Windows.Controls.Canvas> и <xref:System.Windows.Controls.TextBlock>, обладают большей гибкостью и простотой использования.
   
 ### <a name="hit-testing"></a>Проверка нажатия  
  Класс <xref:System.Windows.Media.VisualTreeHelper> предоставляет методы проверки нажатия визуальных объектов, если поддержка проверки нажатия по умолчанию не соответствует вашим потребностям. Можно использовать методы <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> класса <xref:System.Windows.Media.VisualTreeHelper>, чтобы определить, находится ли геометрический объект или значение координат точки в пределах границ заданного объекта, например элемента управления или графического элемента. Например, с помощью проверки нажатия можно определить, попадает ли щелчок мыши в пределах ограничивающего прямоугольника объекта в окружность. Также можно переопределить реализацию проверки нажатия по умолчанию и выполнять собственные вычисления для проверки нажатия.  
@@ -264,5 +264,5 @@ ms.locfileid: "57375536"
 - [Двумерная графика и изображения](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [Проверка нажатия на визуальном уровне](hit-testing-in-the-visual-layer.md)
 - [Использование объектов DrawingVisual](using-drawingvisual-objects.md)
-- [Учебник. Размещение визуальных объектов в приложении Win32](tutorial-hosting-visual-objects-in-a-win32-application.md)
+- [Руководство по размещению визуальных объектов в приложении Win32](tutorial-hosting-visual-objects-in-a-win32-application.md)
 - [Улучшение производительности приложений WPF](../advanced/optimizing-wpf-application-performance.md)
