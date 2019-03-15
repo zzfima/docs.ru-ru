@@ -15,12 +15,12 @@ helpviewer_keywords:
 - x:Single [XAML Services]
 - x:Int32 [XAML Services]
 ms.assetid: 11de2f08-5b95-4989-b5ec-5178eb968184
-ms.openlocfilehash: f6225dfcc02b90da58ccafd5c70726b6f80f29d4
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: feda058a9672a3150f7beb5c1bc124eee1eae9eb
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839096"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58048673"
 ---
 # <a name="built-in-types-for-common-xaml-language-primitives"></a>Встроенные типы для общих примитивов языка XAML
 В XAML 2009 появилась поддержка уровня языка XAML для некоторых типов данных, которые являются часто используемыми примитивами в среде CLR и в других языках программирования. В XAML 2009 добавлена поддержка следующих примитивов: `x:Object`, `x:Boolean`, `x:Char`, `x:String`, `x:Decimal`, `x:Single`, `x:Double`, `x:Int16`, `x:Int32`, `x:Int64`, `x:TimeSpan`, `x:Uri`, `x:Byte`и `x:Array`  
@@ -66,14 +66,14 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
 ### <a name="xdecimal"></a>x:Decimal  
  Для резервирования CLR примитив `x:Decimal` соответствует <xref:System.Decimal>.  
   
- Обратите внимание, что анализ XAML по существу выполняется в рамках языка и региональных параметров `en-US`. В рамках языка и региональных параметров `en-US` правильным разделителем компонентов десятичного числа всегда является точка (`.`), независимо от региональных параметров среды разработки или конечного клиентского компьютера, на котором во время выполнения загружается XAML.  
+ Обратите внимание, что анализ XAML по существу выполняется в рамках языка и региональных параметров `en-US` . В рамках языка и региональных параметров `en-US` правильным разделителем компонентов десятичного числа всегда является точка (`.`), независимо от региональных параметров среды разработки или конечного клиентского компьютера, на котором во время выполнения загружается XAML.  
   
  Определение спецификации языка XAML см. в разделе [ \[MS-XAML\] разделах 5.2.14 и 5.4.8 руководства](https://go.microsoft.com/fwlink/?LinkId=114525).  
   
 ### <a name="xsingle"></a>x:Single  
  Для резервирования CLR примитив `x:Single` соответствует <xref:System.Single>.  
   
- Помимо числовых значений текстовый синтаксис для `x:Single` также позволяет использовать токены `Infinity`, `-Infinity` и `NaN`. Эти токены обрабатываются с учетом регистра.  
+ Помимо числовых значений текстовый синтаксис для `x:Single` также позволяет использовать токены `Infinity`, `-Infinity`и `NaN`. Эти токены обрабатываются с учетом регистра.  
   
  `x:Single` может поддерживать значения в экспоненциальном представлении, если первый символ в текстовом синтаксисе `e` или `E`.  
   
@@ -82,7 +82,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
 ### <a name="xdouble"></a>x:Double  
  Для резервирования CLR примитив `x:Double` соответствует <xref:System.Double>.  
   
- Помимо числовых значений текстовый синтаксис для `x:Double` позволяет использовать токены `Infinity`, `-Infinity` и `NaN`. Эти токены обрабатываются с учетом регистра.  
+ Помимо числовых значений текстовый синтаксис для `x:Double` позволяет использовать токены `Infinity`, `-Infinity`и `NaN`. Эти токены обрабатываются с учетом регистра.  
   
  `x:Double` может поддерживать значения в экспоненциальном представлении. Чтобы представить часть экспоненты, используйте символ `e` или `E` .  
   
@@ -125,7 +125,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
 ### <a name="xarray"></a>x:Array  
  Для резервирования CLR примитив `x:Array` соответствует <xref:System.Array>.  
   
- Можно определить массив в XAML 2006 г. с помощью синтаксиса расширения разметки; однако синтаксис XAML 2009 является определенным языком примитивом, которому не требуется доступ к расширению разметки. Дополнительные сведения о поддержке XAML 2006 см. в разделе [x:Array Markup Extension](../../../docs/framework/xaml-services/x-array-markup-extension.md).  
+ Можно определить массив в XAML 2006 г. с помощью синтаксиса расширения разметки; однако синтаксис XAML 2009 является определенным языком примитивом, которому не требуется доступ к расширению разметки. Дополнительные сведения о поддержке XAML 2006 см. в разделе [x:Array Markup Extension](x-array-markup-extension.md).  
   
  Определение спецификации языка XAML см. в разделе [ \[MS-XAML\] 5.2.18 руководства](https://go.microsoft.com/fwlink/?LinkId=114525).  
   
@@ -133,4 +133,4 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
 ## <a name="wpf-support"></a>Поддержка WPF  
  В WPF можно использовать возможности XAML 2009, но только для XAML, не скомпилированного с разметкой. Скомпилированный с разметкой XAML и форма BAML кода XAML в настоящее время не поддерживают ключевые слова и компоненты XAML 2009.  
   
- Сценарий, где можно использовать возможности XAML 2009 вместе с WPF, если вы создаете Свободный XAML, а вы затем загрузили этот XAML в WPF среды выполнения и граф объектов с <xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType>. WPF <xref:System.Windows.Markup.XamlReader?displayProperty=nameWithType> и его <xref:System.Windows.Markup.XamlReader.Load%2A> может обрабатывать ключевые слова языка XAML 2009 и компоненты в правильное представление графа объектов.
+ Сценарий, где можно использовать возможности XAML 2009 вместе с WPF, если разработчик выпустил свободный XAML, а вы затем загрузили этот XAML в среду выполнения WPF и граф объектов с <xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType>. <xref:System.Windows.Markup.XamlReader?displayProperty=nameWithType> WPF и его <xref:System.Windows.Markup.XamlReader.Load%2A> может обрабатывать ключевые слова языка XAML 2009 и компоненты в правильное представление графа объектов.

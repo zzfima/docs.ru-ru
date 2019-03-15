@@ -8,12 +8,12 @@ helpviewer_keywords:
 - x:Array [XAML Services]
 - XAML [XAML Services], x:Array markup extension
 ms.assetid: c5358e14-d24c-44c7-b5eb-6062a4fd981c
-ms.openlocfilehash: e94928f17a31cdadae11f69c37a4f148452b5d2f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d528039245e2720f78e8817e1752d88ca94e6e0
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699744"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58047883"
 ---
 # <a name="xarray-markup-extension"></a>Расширение разметки x:Array
 Предоставляет общую поддержку для массивов объектов в XAML посредством расширения разметки. Это соответствует `x:ArrayExtension` тип XAML в [MS-XAML].  
@@ -46,9 +46,9 @@ ms.locfileid: "54699744"
   
  `x:Array` является расширением разметки. Расширения разметки обычно реализуются, если требуется заменить значения атрибутов на нелитеральные значения или имена обработчиков и если требуется больше, чем простая настройка преобразователей типов на работу с определенными типами или свойствами. `x:Array` частично является исключением из этого правила, так как вместо предоставления альтернативной обработки значения атрибута, `x:Array` обеспечивает альтернативную обработку его внутреннего текстового содержимого. Такое поведение позволяет типов, которые могут не поддерживаться существующей модели содержимого сгруппированы в массив и ссылается позже в коде доступа к именованным массива. Вы можете вызвать <xref:System.Array> методы для получения отдельных элементов массива.  
   
- Все расширения разметки в XAML используйте фигурные скобки ({,} `)` в синтаксисе их атрибутов, который является соглашением, по которому обработчик XAML узнает, что расширение разметки должно обработать значение атрибута. Дополнительные сведения о расширениях разметки в целом см. в разделе [Type Converters and Markup Extensions for XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md).  
+ Все расширения разметки в XAML используйте фигурные скобки ({,} `)` в синтаксисе их атрибутов, который является соглашением, по которому обработчик XAML узнает, что расширение разметки должно обработать значение атрибута. Дополнительные сведения о расширениях разметки в целом см. в разделе [Type Converters and Markup Extensions for XAML](type-converters-and-markup-extensions-for-xaml.md).  
   
- В XAML 2009 г. `x:Array` определяется как примитив вместо расширения разметки языка. Дополнительные сведения см. в разделе [встроенные типы для общих примитивов языка XAML](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md).  
+ В XAML 2009 г. `x:Array` определяется как примитив вместо расширения разметки языка. Дополнительные сведения см. в разделе [встроенные типы для общих примитивов языка XAML](built-in-types-for-common-xaml-language-primitives.md).  
   
 ## <a name="wpf-usage-notes"></a>Примечания об использовании WPF  
  Как правило, объектные элементы, заполняющие `x:Array` , не являются элементами, которые существуют в [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] пространства имен XAML и необходимо выполнить сопоставление префикса пространства имен XAML не по умолчанию.  
@@ -67,8 +67,8 @@ ms.locfileid: "54699744"
   
  `</x:Array>`  
   
- Для пользовательских типов, которые используются в качестве элементов массива класс должен также поддерживать требования для создания экземпляров в XAML как элементы объекта. Дополнительные сведения см. в разделе [XAML и пользовательские классы для WPF](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md).  
+ Для пользовательских типов, которые используются в качестве элементов массива класс должен также поддерживать требования для создания экземпляров в XAML как элементы объекта. Дополнительные сведения см. в разделе [XAML и пользовательские классы для WPF](../wpf/advanced/xaml-and-custom-classes-for-wpf.md).  
   
 ## <a name="see-also"></a>См. также
-- [Расширения разметки и XAML WPF](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
-- [Типы, перенесенные из WPF в System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)
+- [Расширения разметки и XAML WPF](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [Типы, перенесенные из WPF в System.Xaml](types-migrated-from-wpf-to-system-xaml.md)
