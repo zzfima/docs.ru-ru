@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [XAML Services], type converter services how-to
 ms.assetid: b4dad00f-03da-4579-a4e9-d8d72d2ccbce
-ms.openlocfilehash: f3417ed53131a695623ea6c365314ab2c5eedd37
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04d1a8b1c6f05537f12c3df79fda007332621264
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54629306"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58049458"
 ---
 # <a name="service-contexts-available-to-type-converters-and-markup-extensions"></a>Служебные контексты, доступные для расширений разметки и преобразователей типов
 Авторам типов, поддерживающих использование преобразователей типов и расширений разметки, часто необходимы контекстные сведения о расположении использования в разметке или в окружающей структуре графа объектов. Сведения могут понадобиться, чтобы правильно создать экземпляр предоставленного объекта или чтобы объект ссылался на существующие объекты в графе объектов. При использовании служб XAML .NET Framework контекст, который может потребоваться, указывается в виде набора интерфейсов служб. Код поддержки преобразователей типов или разметки расширения может запросить службу, используя контекст поставщика службы, доступный и переданный из <xref:System.Xaml.XamlObjectWriter> или связанных типов. Контекст схемы XAML доступен напрямую через одну такую службу. В этом разделе описывается порядок доступа к контексту службы из реализации преобразователя значений и указывается список доступных служб и их роли.  
@@ -90,7 +90,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 ### <a name="ixamltyperesolver"></a>IXamlTypeResolver  
  **Справочная документация**: <xref:System.Windows.Markup.IXamlTypeResolver>  
   
- **Определяется:** <xref:System.Windows.Markup> пространства имен, сборка System.Xaml    
+ **Определяется:** <xref:System.Windows.Markup> пространства имен, сборка System.Xaml  
   
  **Представленные в:** Сценарии пути загрузки и взаимодействие с контекстом схемы XAML  
   
@@ -101,7 +101,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 ### <a name="iuricontext"></a>IUriContext  
  **Справочная документация**: <xref:System.Windows.Markup.IUriContext>  
   
- **Определяется:** <xref:System.Windows.Markup> пространства имен, сборка System.Xaml    
+ **Определяется:** <xref:System.Windows.Markup> пространства имен, сборка System.Xaml  
   
  **Представленные в:** Загрузки и сохранения пути обработки значений элементов, которые представляют собой URI или `x:Uri` значения.  
   
@@ -112,7 +112,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 ### <a name="iambientprovider"></a>IAmbientProvider  
  **Справочная документация**: <xref:System.Xaml.IAmbientProvider>  
   
- **Определяется:** <xref:System.Xaml> пространства имен, сборка System.Xaml    
+ **Определяется:** <xref:System.Xaml> пространства имен, сборка System.Xaml  
   
  **Представленные в:** Загрузить пути обработки и тип Задержка или оптимизация поиска.  
   
@@ -123,18 +123,18 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 ### <a name="ixamlschemacontextprovider"></a>IXamlSchemaContextProvider  
  **Справочная документация**: <xref:System.Xaml.IXamlSchemaContextProvider>  
   
- **Определяется:** <xref:System.Xaml> пространства имен, сборка System.Xaml    
+ **Определяется:** <xref:System.Xaml> пространства имен, сборка System.Xaml  
   
  **Представленные в:** Путь загрузки и любые операции, которым необходимо разрешить тип XAML в базовый тип.  
   
  **API службы:**  <xref:System.Xaml.IXamlSchemaContextProvider.SchemaContext%2A>  
   
- Контекст схемы XAML необходим для всех отложенных операций загрузки, так как этот же контекст схемы должен применяться в отложенной области, чтобы интегрировать отложенное содержимое. Дополнительные сведения о роли контекста схемы XAML см. в разделе [XAML Services](../../../docs/framework/xaml-services/index.md).  
+ Контекст схемы XAML необходим для всех отложенных операций загрузки, так как этот же контекст схемы должен применяться в отложенной области, чтобы интегрировать отложенное содержимое. Дополнительные сведения о роли контекста схемы XAML см. в разделе [XAML Services](index.md).  
   
 ### <a name="irootobjectprovider"></a>IRootObjectProvider  
  **Справочная документация**: <xref:System.Xaml.IRootObjectProvider>  
   
- **Определяется:** <xref:System.Xaml> пространства имен, сборка System.Xaml    
+ **Определяется:** <xref:System.Xaml> пространства имен, сборка System.Xaml  
   
  **Представленные в:** Путь загрузки.  
   
@@ -145,7 +145,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 ### <a name="ixamlnamespaceresolver"></a>IXamlNamespaceResolver  
  **Справочная документация**: <xref:System.Xaml.IXamlNamespaceResolver>  
   
- **Определяется:** <xref:System.Xaml> пространства имен, сборка System.Xaml    
+ **Определяется:** <xref:System.Xaml> пространства имен, сборка System.Xaml  
   
  **Представленные в:** Путь загрузки, путь сохранения.  
   
@@ -156,7 +156,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 ### <a name="iprovidevaluetarget"></a>IProvideValueTarget  
  **Справочная документация**: <xref:System.Windows.Markup.IProvideValueTarget>  
   
- **Определяется:** <xref:System.Windows.Markup> пространства имен, сборка System.Xaml    
+ **Определяется:** <xref:System.Windows.Markup> пространства имен, сборка System.Xaml  
   
  **Представленные в:** Загрузки и сохранения пути.  
   
@@ -167,7 +167,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 ### <a name="ixamlnameresolver"></a>IXamlNameResolver  
  **Справочная документация**: <xref:System.Xaml.IXamlNameResolver>  
   
- **Определяется:** <xref:System.Xaml> пространства имен, сборка System.Xaml    
+ **Определяется:** <xref:System.Xaml> пространства имен, сборка System.Xaml  
   
  **Представленные в:** Загрузить определение графа пути, разрешение объектов, обозначенных `x:Name`, `x:Reference`, или методы, зависящие от платформы.  
   
@@ -178,7 +178,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 ### <a name="idestinationtypeprovider"></a>IDestinationTypeProvider  
  **Справочная документация**: <xref:System.Xaml.IDestinationTypeProvider>  
   
- **Определяется:** <xref:System.Xaml> пространства имен, сборка System.Xaml    
+ **Определяется:** <xref:System.Xaml> пространства имен, сборка System.Xaml  
   
  **Представленные в:** Разрешение пути дополнительных сведений о типе среды CLR для загрузки.  
   
@@ -189,5 +189,5 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Markup.MarkupExtension>
 - <xref:System.Xaml.XamlObjectWriter>
-- [Общие сведения о расширениях разметки для XAML](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)
-- [Общие сведения о преобразователях типов для XAML](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md)
+- [Общие сведения о расширениях разметки для XAML](markup-extensions-for-xaml-overview.md)
+- [Общие сведения о преобразователях типов для XAML](type-converters-for-xaml-overview.md)
