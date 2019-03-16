@@ -4,34 +4,34 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrAppModel_SingleInstanceCantConnect
 ms.assetid: 7c2c0cee-02a1-4157-be03-39d18e18408f
-ms.openlocfilehash: 80c1ec0bf1aa4b6dbf885294c680b3bfe8897eac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 241ad5b9986e78f88ab5ca39bc73f7372162ba76
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565713"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58037505"
 ---
-# <a name="this-single-instance-application-could-not-connect-to-the-original-instance"></a><span data-ttu-id="92a9e-102">Данное приложение, допускающее только один экземпляр, не может подключиться к первоначальному экземпляру</span><span class="sxs-lookup"><span data-stu-id="92a9e-102">This single-instance application could not connect to the original instance</span></span>
-<span data-ttu-id="92a9e-103">Данное приложение, допускающее только один экземпляр, не может подключиться к первоначальному экземпляру.</span><span class="sxs-lookup"><span data-stu-id="92a9e-103">This single-instance application could not connect to the original instance.</span></span> <span data-ttu-id="92a9e-104">Вот некоторые возможные причины этой проблемы.</span><span class="sxs-lookup"><span data-stu-id="92a9e-104">Some of the possible causes for this problem are as follows:</span></span>  
+# <a name="this-single-instance-application-could-not-connect-to-the-original-instance"></a><span data-ttu-id="8fee3-102">Данное приложение, допускающее только один экземпляр, не может подключиться к первоначальному экземпляру</span><span class="sxs-lookup"><span data-stu-id="8fee3-102">This single-instance application could not connect to the original instance</span></span>
+<span data-ttu-id="8fee3-103">Данное приложение, допускающее только один экземпляр, не может подключиться к первоначальному экземпляру.</span><span class="sxs-lookup"><span data-stu-id="8fee3-103">This single-instance application could not connect to the original instance.</span></span> <span data-ttu-id="8fee3-104">Вот некоторые возможные причины этой проблемы.</span><span class="sxs-lookup"><span data-stu-id="8fee3-104">Some of the possible causes for this problem are as follows:</span></span>  
   
--   <span data-ttu-id="92a9e-105">Исходный экземпляр перестал отвечать.</span><span class="sxs-lookup"><span data-stu-id="92a9e-105">The original instance stopped responding.</span></span>  
+-   <span data-ttu-id="8fee3-105">Исходный экземпляр перестал отвечать.</span><span class="sxs-lookup"><span data-stu-id="8fee3-105">The original instance stopped responding.</span></span>  
   
--   <span data-ttu-id="92a9e-106">Приложение не имеет разрешений на создание объектов ядра.</span><span class="sxs-lookup"><span data-stu-id="92a9e-106">The application does not have permissions to create kernel objects.</span></span> <span data-ttu-id="92a9e-107">Дополнительные сведения об объектах ядра см. в разделе [мьютексы](../../standard/threading/mutexes.md).</span><span class="sxs-lookup"><span data-stu-id="92a9e-107">For more information about kernel objects, see [Mutexes](../../standard/threading/mutexes.md).</span></span>  
+-   <span data-ttu-id="8fee3-106">Приложение не имеет разрешений на создание объектов ядра.</span><span class="sxs-lookup"><span data-stu-id="8fee3-106">The application does not have permissions to create kernel objects.</span></span> <span data-ttu-id="8fee3-107">Дополнительные сведения об объектах ядра см. в разделе [мьютексы](../../standard/threading/mutexes.md).</span><span class="sxs-lookup"><span data-stu-id="8fee3-107">For more information about kernel objects, see [Mutexes](../../standard/threading/mutexes.md).</span></span>  
   
-     <span data-ttu-id="92a9e-108">Базовое имя для объектов ядра получается из последовательного объединения GUID сборки, основного номера версии и дополнительного номера версии.</span><span class="sxs-lookup"><span data-stu-id="92a9e-108">The base name for the kernel objects comes from concatenating the assembly's GUID, major version number, and minor version number.</span></span> <span data-ttu-id="92a9e-109">Например, базовое имя может быть `3639f15d-9547-43da-8145-60da347829915.1`.</span><span class="sxs-lookup"><span data-stu-id="92a9e-109">For example, the base name could be `3639f15d-9547-43da-8145-60da347829915.1`.</span></span>  
+     <span data-ttu-id="8fee3-108">Базовое имя для объектов ядра получается из последовательного объединения GUID сборки, основного номера версии и дополнительного номера версии.</span><span class="sxs-lookup"><span data-stu-id="8fee3-108">The base name for the kernel objects comes from concatenating the assembly's GUID, major version number, and minor version number.</span></span> <span data-ttu-id="8fee3-109">Например, базовое имя может быть `3639f15d-9547-43da-8145-60da347829915.1`.</span><span class="sxs-lookup"><span data-stu-id="8fee3-109">For example, the base name could be `3639f15d-9547-43da-8145-60da347829915.1`.</span></span>  
   
-## <a name="to-correct-this-error-when-developing-the-application"></a><span data-ttu-id="92a9e-110">Исправление этой ошибки при разработке приложения</span><span class="sxs-lookup"><span data-stu-id="92a9e-110">To correct this error when developing the application</span></span>  
+## <a name="to-correct-this-error-when-developing-the-application"></a><span data-ttu-id="8fee3-110">Исправление этой ошибки при разработке приложения</span><span class="sxs-lookup"><span data-stu-id="8fee3-110">To correct this error when developing the application</span></span>  
   
-1.  <span data-ttu-id="92a9e-111">Проверьте, не переходит ли приложение в состояние, в котором оно не отвечает на запросы.</span><span class="sxs-lookup"><span data-stu-id="92a9e-111">Check that the application does not go into an unresponsive state.</span></span>  
+1.  <span data-ttu-id="8fee3-111">Проверьте, не переходит ли приложение в состояние, в котором оно не отвечает на запросы.</span><span class="sxs-lookup"><span data-stu-id="8fee3-111">Check that the application does not go into an unresponsive state.</span></span>  
   
-2.  <span data-ttu-id="92a9e-112">Убедитесь в том, что приложение имеет достаточно разрешений на создание объектов ядра.</span><span class="sxs-lookup"><span data-stu-id="92a9e-112">Check that the application has sufficient permissions to create kernel objects.</span></span>  
+2.  <span data-ttu-id="8fee3-112">Убедитесь в том, что приложение имеет достаточно разрешений на создание объектов ядра.</span><span class="sxs-lookup"><span data-stu-id="8fee3-112">Check that the application has sufficient permissions to create kernel objects.</span></span>  
   
-3.  <span data-ttu-id="92a9e-113">Перезапустите исходный экземпляр приложения.</span><span class="sxs-lookup"><span data-stu-id="92a9e-113">Restart the original instance of the application.</span></span>  
+3.  <span data-ttu-id="8fee3-113">Перезапустите исходный экземпляр приложения.</span><span class="sxs-lookup"><span data-stu-id="8fee3-113">Restart the original instance of the application.</span></span>  
   
-4.  <span data-ttu-id="92a9e-114">Перезагрузите компьютер, чтобы удалить все процессы, которые могут использовать ресурсы, необходимые приложению для подключения к исходному экземпляру.</span><span class="sxs-lookup"><span data-stu-id="92a9e-114">Restart the computer to clear any process that may be using the resource that is required to connect to the original instance application.</span></span>  
+4.  <span data-ttu-id="8fee3-114">Перезагрузите компьютер, чтобы удалить все процессы, которые могут использовать ресурсы, необходимые приложению для подключения к исходному экземпляру.</span><span class="sxs-lookup"><span data-stu-id="8fee3-114">Restart the computer to clear any process that may be using the resource that is required to connect to the original instance application.</span></span>  
   
-5.  <span data-ttu-id="92a9e-115">Задокументируйте обстоятельства возникновения ошибки и обратитесь в службу технической поддержки Майкрософт.</span><span class="sxs-lookup"><span data-stu-id="92a9e-115">Note the circumstances under which the error occurred, and telephone Microsoft Product Support Services.</span></span>  
+5.  <span data-ttu-id="8fee3-115">Задокументируйте обстоятельства возникновения ошибки и обратитесь в службу технической поддержки Майкрософт.</span><span class="sxs-lookup"><span data-stu-id="8fee3-115">Note the circumstances under which the error occurred, and telephone Microsoft Product Support Services.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="92a9e-116">См. также</span><span class="sxs-lookup"><span data-stu-id="92a9e-116">See also</span></span>
-- [<span data-ttu-id="92a9e-117">Основы отладки</span><span class="sxs-lookup"><span data-stu-id="92a9e-117">Debugger Basics</span></span>](/visualstudio/debugger/debugger-basics)
+## <a name="see-also"></a><span data-ttu-id="8fee3-116">См. также</span><span class="sxs-lookup"><span data-stu-id="8fee3-116">See also</span></span>
 
+- [<span data-ttu-id="8fee3-117">Основы отладки</span><span class="sxs-lookup"><span data-stu-id="8fee3-117">Debugger Basics</span></span>](/visualstudio/debugger/debugger-basics)
