@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Static markup extension in XAML [XAML Services]
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
-ms.openlocfilehash: 5dd454cb323d4dc2ab9b4ebd8b233ffda3e77820
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0956bb6daa60f947c1cd410ce4728da7d1bb707d
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619331"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58037692"
 ---
 # <a name="xstatic-markup-extension"></a>Расширение разметки x:Static
 Ссылается на любой сущности кода статический по значению, определенному в [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]— надлежащим способом. Статическое свойство, которое указывается может использоваться для предоставления значения свойства в XAML.  
@@ -69,7 +69,7 @@ ms.locfileid: "54619331"
 
 В реализации служб XAML .NET Framework, обработка данного расширения разметки определяется <xref:System.Windows.Markup.StaticExtension> класса.  
 
-`x:Static` является расширением разметки. Все расширения разметки в XAML используют `{` и `}` символов в синтаксисе их атрибутов, который является соглашением, по которому обработчик XAML узнает, что расширение разметки необходимо указать значение. Дополнительные сведения о расширениях разметки см. в разделе [Markup Extensions for XAML Overview](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md).  
+`x:Static` является расширением разметки. Все расширения разметки в XAML используют `{` и `}` символов в синтаксисе их атрибутов, который является соглашением, по которому обработчик XAML узнает, что расширение разметки необходимо указать значение. Дополнительные сведения о расширениях разметки см. в разделе [Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md).  
   
 ## <a name="wpf-usage-notes"></a>Примечания об использовании WPF  
  Пространство имен XAML по умолчанию, используемое для программирования WPF не содержит множество полезных статических свойств, а большинство полезных статические свойства имеют поддержку, таких как преобразователи типов, которые облегчают использование без необходимости `{x:Static}` . Для статических свойств его необходимо сопоставить префикс для пространства имен XAML, если выполняется одно из следующих:  
@@ -78,10 +78,10 @@ ms.locfileid: "54619331"
   
 -   Ссылка на тип из пользовательской сборки.  
   
--   Ссылка типом, который существует в сборке WPF, но этот тип находится в пределах пространства имен CLR, который не был сопоставлен с быть частью пространства имен XAML по умолчанию WPF. Сопоставление пространств имен CLR в пространство имен XAML по умолчанию для WPF выполняется путем определения в различных сборках WPF (Дополнительные сведения о трудностях, см. в разделе [пространства имен XAML и сопоставление пространств имен для WPF XAML](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)). Несопоставленные пространства имен CLR могут существовать, если пространство имен CLR состоит главным образом из определения классов, которые обычно не предназначены для XAML, таких как <xref:System.Windows.Threading>.  
+-   Ссылка типом, который существует в сборке WPF, но этот тип находится в пределах пространства имен CLR, который не был сопоставлен с быть частью пространства имен XAML по умолчанию WPF. Сопоставление пространств имен CLR в пространство имен XAML по умолчанию для WPF выполняется путем определения в различных сборках WPF (Дополнительные сведения о трудностях, см. в разделе [пространства имен XAML и сопоставление пространств имен для WPF XAML](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)). Несопоставленные пространства имен CLR могут существовать, если пространство имен CLR состоит главным образом из определения классов, которые обычно не предназначены для XAML, таких как <xref:System.Windows.Threading>.  
   
- Дополнительные сведения о том, как использовать префиксы и пространства имен XAML для WPF см. в разделе [пространства имен XAML и сопоставление пространств имен для WPF XAML](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
+ Дополнительные сведения о том, как использовать префиксы и пространства имен XAML для WPF см. в разделе [пространства имен XAML и сопоставление пространств имен для WPF XAML](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
   
 ## <a name="see-also"></a>См. также
-- [Расширение разметки x:Type](../../../docs/framework/xaml-services/x-type-markup-extension.md)
-- [Типы, перенесенные из WPF в System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)
+- [Расширение разметки x:Type](x-type-markup-extension.md)
+- [Типы, перенесенные из WPF в System.Xaml](types-migrated-from-wpf-to-system-xaml.md)

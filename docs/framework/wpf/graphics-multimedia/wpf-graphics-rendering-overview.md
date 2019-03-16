@@ -1,4 +1,4 @@
-﻿---
+---
 title: Общие сведения об отрисовке графики в WPF
 ms.date: 03/30/2017
 dev_langs:
@@ -27,7 +27,7 @@ ms.locfileid: "57375536"
   
 -   Отображение выходных данных: Визуализация сохраненного, сериализованного содержимого визуального элемента.  
   
--   Преобразования: Выполнение преобразования визуального элемента.  
+-   Преобразования: Выполнение преобразования на визуальный элемент.  
   
 -   Отсечение: Позволяет указать область отсечения для визуального элемента.  
   
@@ -159,10 +159,10 @@ ms.locfileid: "57375536"
 Схема порядка отрисовки визуального дерева  
   
 ### <a name="root-visual"></a>Корневой визуальный элемент  
- **Корневой визуальный элемент** — это самый верхний элемент в иерархии визуального дерева. В большинстве приложений базовым классом корневого визуального элемента является либо <xref:System.Windows.Window>, либо <xref:System.Windows.Navigation.NavigationWindow>. Однако при размещении визуальных объектов в приложении Win32 корневым визуальным элементом будет самый верхний визуальный элемент в окне Win32. Дополнительные сведения см. в статье [Руководство по размещению визуальных объектов в приложении Win32](tutorial-hosting-visual-objects-in-a-win32-application.md).  
+ **Корневой визуальный элемент** — это самый верхний элемент в иерархии визуального дерева. В большинстве приложений базовым классом корневого визуального является либо <xref:System.Windows.Window> или <xref:System.Windows.Navigation.NavigationWindow>. Однако при размещении визуальных объектов в приложении Win32 в качестве корневого визуального элемента использовался бы самый верхний визуальный элемент в окне Win32. Дополнительные сведения см. в статье [Руководство. По размещению визуальных объектов в приложении Win32](tutorial-hosting-visual-objects-in-a-win32-application.md).  
   
 ### <a name="relationship-to-the-logical-tree"></a>Связь с логическом деревом  
- Логическое дерево в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] представляет элементы приложения во время выполнения. Хотя этим деревом нельзя управлять напрямую, с помощью этой схемы удобно представить наследование свойств и маршрутизацию событий. В отличие от визуального дерева, логическое дерево может представлять данные по невизуальных объектов, таких как <xref:System.Windows.Documents.ListItem>. Во многих случаях логическое дерево приближается к определению разметки приложения. В следующем коде показан элемент <xref:System.Windows.Controls.DockPanel>, определенный в разметке.  
+ Логическое дерево в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] представляет элементы приложения во время выполнения. Хотя этим деревом нельзя управлять напрямую, с помощью этой схемы удобно представить наследование свойств и маршрутизацию событий. В отличие от визуального дерева, логическое дерево может представлять данные невизуальных объектов, таких как <xref:System.Windows.Documents.ListItem>. Во многих случаях логическое дерево приближается к определению разметки приложения. В следующем коде показан элемент <xref:System.Windows.Controls.DockPanel>, определенный в разметке.  
   
  [!code-xaml[VisualsOverview#VisualsOverviewSnippet5](~/samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml#visualsoverviewsnippet5)]  
   
@@ -217,7 +217,7 @@ ms.locfileid: "57375536"
  ![Различия между растровой и векторной графикой](./media/vectorgraphics01.png "VectorGraphics01")  
 Различия между растровой и векторной графикой  
   
- В следующем примере показано определение двух элементов <xref:System.Windows.Shapes.Path>. Во втором элементе с помощью <xref:System.Windows.Media.ScaleTransform> к инструкциям отрисовки первого элемента применяется операция изменения размера на 300 %. Обратите внимание, что инструкции отрисовки в элементе <xref:System.Windows.Shapes.Path> остаются без изменений.  
+ В следующем примере показано определение двух элементов <xref:System.Windows.Shapes.Path>. Во втором элементе с помощью <xref:System.Windows.Media.ScaleTransform> к инструкциям отрисовки первого элемента применяется операция изменения размера на 300 %. Обратите внимание, что инструкции отрисовки в элементе <xref:System.Windows.Shapes.Path> остаются без изменений.  
   
  [!code-xaml[VectorGraphicsSnippets#VectorGraphicsSnippet1](~/samples/snippets/csharp/VS_Snippets_Wpf/VectorGraphicsSnippets/CS/PageOne.xaml#vectorgraphicssnippet1)]  
   
@@ -235,7 +235,7 @@ ms.locfileid: "57375536"
   
 <a name="visualtreehelper_class"></a>   
 ## <a name="visualtreehelper-class"></a>Класс VisualTreeHelper  
- Класс <xref:System.Windows.Media.VisualTreeHelper> — это статический вспомогательный класс, предоставляющий низкоуровневые функции для программирования на уровне визуального объекта, что полезно в определенных случаях, например при разработке пользовательских элементов управления высокой производительности. В большинстве случаев высокоуровневые объекты [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], например <xref:System.Windows.Controls.Canvas> и <xref:System.Windows.Controls.TextBlock>, обладают большей гибкостью и простотой использования.
+ Класс <xref:System.Windows.Media.VisualTreeHelper> — это статический вспомогательный класс, предоставляющий низкоуровневые функции для программирования на уровне визуального объекта, что полезно в определенных случаях, например при разработке пользовательских элементов управления высокой производительности. В большинстве случаев высокоуровневые объекты [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], например <xref:System.Windows.Controls.Canvas> и <xref:System.Windows.Controls.TextBlock>, обладают большей гибкостью и простотой использования.  
   
 ### <a name="hit-testing"></a>Проверка нажатия  
  Класс <xref:System.Windows.Media.VisualTreeHelper> предоставляет методы проверки нажатия визуальных объектов, если поддержка проверки нажатия по умолчанию не соответствует вашим потребностям. Можно использовать методы <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> класса <xref:System.Windows.Media.VisualTreeHelper>, чтобы определить, находится ли геометрический объект или значение координат точки в пределах границ заданного объекта, например элемента управления или графического элемента. Например, с помощью проверки нажатия можно определить, попадает ли щелчок мыши в пределах ограничивающего прямоугольника объекта в окружность. Также можно переопределить реализацию проверки нажатия по умолчанию и выполнять собственные вычисления для проверки нажатия.  
@@ -252,7 +252,7 @@ ms.locfileid: "57375536"
   
  В большинстве случаев логическое дерево более удобно для представления элементов приложения [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Хотя логическое дерево нельзя изменить напрямую, с помощью этой схемы удобно представить наследование свойств и маршрутизацию событий. В отличие от визуального дерева, логическое дерево может представлять данные невизуальных объектов, таких как <xref:System.Windows.Documents.ListItem>. Дополнительные сведения о логическом дереве см. в разделе [Деревья в WPF](../advanced/trees-in-wpf.md).  
   
- Класс <xref:System.Windows.Media.VisualTreeHelper> предоставляет методы для получения ограничивающего прямоугольника визуальных объектов. Ограничивающий прямоугольник визуального объекта возвращается методом <xref:System.Windows.Media.VisualTreeHelper.GetContentBounds%2A>. Ограничивающий прямоугольник всех потомков визуального объекта, включая сам визуальный объект, возвращается методом <xref:System.Windows.Media.VisualTreeHelper.GetDescendantBounds%2A>. В следующем коде показано, как вычислить ограничивающие прямоугольники для визуального объекта и всех его потомков.  
+ Класс <xref:System.Windows.Media.VisualTreeHelper> предоставляет методы для получения ограничивающего прямоугольника визуальных объектов. Ограничивающий прямоугольник визуального объекта возвращается методом <xref:System.Windows.Media.VisualTreeHelper.GetContentBounds%2A>. Ограничивающий прямоугольник всех потомков визуального объекта, включая сам визуальный объект, возвращается методом <xref:System.Windows.Media.VisualTreeHelper.GetDescendantBounds%2A>. В следующем коде показано, как вычислить ограничивающий прямоугольник для визуального объекта и всех его потомков.  
   
  [!code-csharp[VisualsOverview#102](~/samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml.cs#102)]
  [!code-vb[VisualsOverview#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsOverview/visualbasic/window1.xaml.vb#102)]  
@@ -264,5 +264,5 @@ ms.locfileid: "57375536"
 - [Двумерная графика и изображения](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [Проверка нажатия на визуальном уровне](hit-testing-in-the-visual-layer.md)
 - [Использование объектов DrawingVisual](using-drawingvisual-objects.md)
-- [Руководство по размещению визуальных объектов в приложении Win32](tutorial-hosting-visual-objects-in-a-win32-application.md)
+- [Учебник. По размещению визуальных объектов в приложении Win32](tutorial-hosting-visual-objects-in-a-win32-application.md)
 - [Улучшение производительности приложений WPF](../advanced/optimizing-wpf-application-performance.md)
