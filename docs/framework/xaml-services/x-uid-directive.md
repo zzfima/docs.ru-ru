@@ -7,12 +7,12 @@ helpviewer_keywords:
 - x:Uid attribute [XAML Services]
 - Uid attribute [XAML Services]
 ms.assetid: 81defade-483b-4a89-b76d-9b25bba34010
-ms.openlocfilehash: 361240c2d2c140c7bf521ece423df4aaed075ba4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6e946c63227a06b2032ce27e61899c1b8f05ec9f
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745419"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58042974"
 ---
 # <a name="xuid-directive"></a>Директива x:Uid
 Предоставляет уникальный идентификатор для элементов разметки. Во многих случаях этот уникальный идентификатор используется процесс локализации XAML и инструменты.  
@@ -39,9 +39,9 @@ ms.locfileid: "54745419"
  Платформы можно указать конкретного свойства в модели объекта в качестве псевдонима для `x:Uid` путем применения атрибута <xref:System.Windows.Markup.UidPropertyAttribute> типу. Если платформа задает определенное свойство, не допускается указывать оба `x:Uid` и член с псевдонимом в одном объекте. Если оба `x:Uid` и указаны член с псевдонимом, обычно вызывает API служб XAML платформы .NET Framework <xref:System.Xaml.XamlDuplicateMemberException> для этого случая.  
   
 ## <a name="wpf-usage-notes"></a>Примечания об использовании WPF  
- Дополнительные сведения о роли `x:Uid` в процесс локализации WPF и форма BAML кода XAML, см. в разделе [Глобализация для WPF](../../../docs/framework/wpf/advanced/globalization-for-wpf.md) или <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
+ Дополнительные сведения о роли `x:Uid` в процесс локализации WPF и форма BAML кода XAML, см. в разделе [Глобализация для WPF](../wpf/advanced/globalization-for-wpf.md) или <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>
 - <xref:Microsoft.Build.Tasks.Windows.UidManager>
-- [Глобализация для WPF](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
+- [Глобализация для WPF](../wpf/advanced/globalization-for-wpf.md)

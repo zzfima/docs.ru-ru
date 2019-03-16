@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Subclass attribute
 - Subclass attribute in XAML [XAML Services]
 ms.assetid: 99f66072-8107-4362-ab99-8171dc83b469
-ms.openlocfilehash: 67d699782cd2ce2b13e159d2b7218b4868a8794c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c348d8fa2bd66a9abbb64c9363bb4dae0933ba34
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54670931"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58047998"
 ---
 # <a name="xsubclass-directive"></a>Директива x:Subclass
 Изменяет поведение компиляции разметки XAML при `x:Class` также предоставляется. Вместо создания разделяемый класс, основанный на `x:Class`, предоставленный `x:Class` создается как промежуточный класс, и затем предоставленный производный класс может основываться на `x:Class`.  
@@ -38,7 +38,7 @@ ms.locfileid: "54670931"
 |`subclassName`|Обязательный. Указывает имя подкласса CLR.|  
   
 ## <a name="dependencies"></a>Зависимости  
- [Директива x: Class](../../../docs/framework/xaml-services/x-class-directive.md) также должен быть предоставлен в тот же объект, и этот объект должен быть корневой элемент XAML производства.  
+ [Директива x: Class](x-class-directive.md) также должен быть предоставлен в тот же объект, и этот объект должен быть корневой элемент XAML производства.  
   
 ## <a name="remarks"></a>Примечания  
  `x:Subclass` в основном режим предназначен для языков, которые не поддерживают объявление разделяемого класса.  
@@ -57,5 +57,5 @@ ms.locfileid: "54670931"
  При определении обоих `x:Class` и `x:Subclass`, необходимо использовать любую реализацию для класса, на который ссылается `x:Class`. Необходимо присвоить ему имя с помощью `x:Class` таким образом, чтобы у компилятора есть некоторые рекомендации для класса, который он создает промежуточные файлы, (компилятор не выбирает имя по умолчанию в данном случае). Можно предоставить `x:Class` реализации класса; Однако это не типичный сценарий использования обоих `x:Class` и `x:Subclass`.  
   
 ## <a name="see-also"></a>См. также
-- [Директива x:Class](../../../docs/framework/xaml-services/x-class-directive.md)
-- [Код XAML и пользовательские классы для WPF](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+- [Директива x:Class](x-class-directive.md)
+- [Код XAML и пользовательские классы для WPF](../wpf/advanced/xaml-and-custom-classes-for-wpf.md)

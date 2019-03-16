@@ -2,12 +2,12 @@
 title: Контекст схемы языка XAML по умолчанию и контекст схемы языка XAML WPF
 ms.date: 03/30/2017
 ms.assetid: 04e06a15-09b3-4210-9bdf-9a64c2eccb83
-ms.openlocfilehash: 2bf7d7b3b5a871d358088fe652653fa0e6be5620
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a916d202ab256789a73c713bee49e502ea49ffd3
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492199"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58018523"
 ---
 # <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a>Контекст схемы языка XAML по умолчанию и контекст схемы языка XAML WPF
 Контекст схемы XAML представляет собой концептуальную сущность, которая определяет, как производство XAML, использующий определенные языковые XAML взаимодействует с поведением записи объектов, включая порядок разрешения сопоставлений типов, как сборки загружаются, определенных модулей чтения и записи параметры интерпретируются. В этом разделе описываются функции служб XAML .NET Framework и контекст схемы XAML по умолчанию, который основан на системе типов CLR. Кроме того, описывается контекст схемы XAML, который используется для WPF.  
@@ -89,4 +89,4 @@ ms.locfileid: "54492199"
     -   Использовать короткое имя + токен открытого ключа для вызова <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>См. также
-- [Общее представление о понятиях и структурах потока узлов XAML](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md)
+- [Общее представление о понятиях и структурах потока узлов XAML](understanding-xaml-node-stream-structures-and-concepts.md)

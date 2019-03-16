@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TypeArguments attribute in XAML [XAML Services]
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
-ms.openlocfilehash: ef08a550ebd1784514bc47ae02089847c6f1b578
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d3edf6c7a16fc206832d8d6deff9d4ac2f69ba3
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520182"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58043269"
 ---
 # <a name="xtypearguments-directive"></a>Директива x:TypeArguments
 Передает аргументы типов ограничений универсального в конструктор универсального типа.  
@@ -73,7 +73,7 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
 ## <a name="xaml-2009-or-xaml-2006-with-no-wpf-30-or-wpf-35-dependency"></a>XAML 2009 или XAML 2006 без WPF 3.0 или WPF 3.5 зависимостей  
  В службах XAML .NET Framework для XAML 2006 или XAML 2009 относящихся к WPF ограничения для универсального использования XAML освобождаются. Можно создать экземпляр универсального объектного элемента в любом положении в разметке XAML, которые может поддерживать резервного типа системы и объект модели.  
   
- При использовании XAML 2009 вместо сопоставление среды CLR базовые типы для получения типов XAML для общих примитивов языка, можно использовать [встроенные типы для общих примитивов языка XAML](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md) сведения в виде элементов `typeString`. Например, можно объявить следующее (префикс сопоставления не отображаются, но x — это пространство имен XAML языка XAML для XAML 2009 г.):  
+ При использовании XAML 2009 вместо сопоставление среды CLR базовые типы для получения типов XAML для общих примитивов языка, можно использовать [встроенные типы для общих примитивов языка XAML](built-in-types-for-common-xaml-language-primitives.md) сведения в виде элементов `typeString`. Например, можно объявить следующее (префикс сопоставления не отображаются, но x — это пространство имен XAML языка XAML для XAML 2009 г.):  
   
 ```xaml  
 <my:BusinessObject x:TypeArguments="x:String,x:Int32"/>  
@@ -82,7 +82,7 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
  В WPF и при нацеливании на [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], можно использовать возможности XAML 2009 вместе с `x:TypeArguments` , но только для свободного XAML (XAML, который не является компилированной разметкой). Скомпилированный с разметкой XAML и форма BAML кода XAML в настоящее время не поддерживают ключевые слова и компоненты XAML 2009. Если вы необходимости компиляции разметки XAML, нужно следовать ограничениям, указанным в разделе «XAML 2006 и универсального XAML способы использования WPF».  
   
 ## <a name="see-also"></a>См. также
-- [Директива x:Class](../../../docs/framework/xaml-services/x-class-directive.md)
-- [Расширение разметки x:Type](../../../docs/framework/xaml-services/x-type-markup-extension.md)
-- [Встроенные типы для общих примитивов языка XAML](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md)
-- [Универсальные шаблоны в XAML](../../../docs/framework/xaml-services/generics-in-xaml.md)
+- [Директива x:Class](x-class-directive.md)
+- [Расширение разметки x:Type](x-type-markup-extension.md)
+- [Встроенные типы для общих примитивов языка XAML](built-in-types-for-common-xaml-language-primitives.md)
+- [Универсальные шаблоны в XAML](generics-in-xaml.md)

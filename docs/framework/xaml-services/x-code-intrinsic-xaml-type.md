@@ -10,12 +10,12 @@ helpviewer_keywords:
 - x:Code XAML directive element [XAML Services]
 - XAML [XAML Services], x:Code directive element
 ms.assetid: 87986b13-1a2e-4830-ae36-15f9dc5629e8
-ms.openlocfilehash: 74fcc158c0556b85ac5175584fa4948513c69053
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8d0dbc03bb5eaedd89d5a6ce97d625a51507e820
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54641113"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58050597"
 ---
 # <a name="xcode-intrinsic-xaml-type"></a>Встроенный тип XAML x:Code
 Позволяет помещать код в рабочем XAML. Такой код может компилироваться либо с любой реализации обработчика XAML, которая компилирует XAML или влево в рабочей среде XAML для использования более поздней версии, например для интерпретации во время выполнения.  
@@ -40,7 +40,7 @@ ms.locfileid: "54641113"
   
 -   `x:Code` Элемент директивы должен быть непосредственным дочерним элементом корневого элемента XAML производства.  
   
--   [Директива x: Class](../../../docs/framework/xaml-services/x-class-directive.md) должен быть предоставлен в родительском корневом элементе.  
+-   [Директива x: Class](x-class-directive.md) должен быть предоставлен в родительском корневом элементе.  
   
 -   Код помещен в `x:Code` будет рассматриваться при компиляции в пределах разделяемый класс, который уже создан для этой страницы XAML. Поэтому весь код вами необходимо членам или переменным этого разделяемого класса.  
   
@@ -49,6 +49,6 @@ ms.locfileid: "54641113"
 -   Ссылки на сущности кода за пределами пространства имен CLR разделяемого класса должен иметь полное имя. Члены объявленные переопределения, чтобы переопределяемые члены разделяемого класса, необходимо указать с помощью ключевого слова переопределения для конкретного языка. Если члены, объявленные в `x:Code` область конфликтуют с членами разделяемого класса, могут быть созданы из XAML, таким образом, что компилятор сообщает конфликт, файл XAML не удается скомпилировать или загрузить.  
   
 ## <a name="see-also"></a>См. также
-- [Директива x:Class](../../../docs/framework/xaml-services/x-class-directive.md)
-- [Код программной части и XAML в WPF](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)
-- [Общие сведения о языке XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [Директива x:Class](x-class-directive.md)
+- [Код программной части и XAML в WPF](../wpf/advanced/code-behind-and-xaml-in-wpf.md)
+- [Общие сведения о языке XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
