@@ -10,12 +10,12 @@ helpviewer_keywords:
 - formatted text [WPF]
 - drawing [WPF], formatted text
 ms.assetid: b1d851c1-331c-4814-9964-6fe769db6f1f
-ms.openlocfilehash: 538cc23a3ee7696a28de43e5724dc450328205ff
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 705e91923f6ab38f7dce83e511027102112539f3
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372182"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125438"
 ---
 # <a name="drawing-formatted-text"></a>Рисование форматированного текста
 В этом разделе представлен обзор функций <xref:System.Windows.Media.FormattedText> объекта. Этот объект предоставляет низкоуровневый элемент управления для рисования текста в приложениях [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -24,8 +24,7 @@ ms.locfileid: "57372182"
 ## <a name="technology-overview"></a>Общие сведения о технологии  
  <xref:System.Windows.Media.FormattedText> Объект позволяет рисовать многострочный текст, в котором каждый символ в текст можно форматировать по отдельности. В следующем примере показан текст, к которому применено несколько форматов.  
   
- ![Текст, отображаемый с использованием объекта FormattedText](./media/formattedtext01.jpg "FormattedText01")  
-Отображенный текст с использованием метода FormattedText  
+ ![Отображенный текст с использованием объекта FormattedText](./media/typography-in-wpf/text-formatted-linear-gradient.jpg)  
   
 > [!NOTE]
 >  Для разработчиков, осуществляющих переход с API [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], в таблице из раздела [Миграция Win32](#win32_migration) перечислены флаги DrawText [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] и примерный эквивалент в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -42,8 +41,7 @@ ms.locfileid: "57372182"
   
  Используйте <xref:System.Windows.Media.FormattedText.MaxTextWidth%2A> свойство для ограничения текста по ширине. Текст будет автоматически перенесен, чтобы заданная ширина не была нарушена. Используйте <xref:System.Windows.Media.FormattedText.MaxTextHeight%2A> свойство для ограничения текста по высоте. Если текст выходит за указанные пределы по высоте, отображается многоточие (…).  
   
- ![Текст, отображаемый с использованием объекта FormattedText](./media/formattedtext02.png "FormattedText02")  
-Отображенный текст с переносом слов и многоточием  
+ ![Текст, отображаемый с переноса слов и многоточием.](./media/drawing-formatted-text/formatted-text-wordwrap-ellipsis.png)    
   
  К одному или более символам можно применить несколько стилей форматирования. Например, можно вызвать оба <xref:System.Windows.Media.FormattedText.SetFontSize%2A> и <xref:System.Windows.Media.FormattedText.SetForegroundBrush%2A> методы для изменения форматирования первые пять символов в тексте.  
   
@@ -62,19 +60,15 @@ ms.locfileid: "57372182"
 ### <a name="converting-formatted-text-to-a-geometry"></a>Преобразование форматированного текста в геометрический объект  
  Можно преобразовать форматированный текст в <xref:System.Windows.Media.Geometry> объектов, что позволяет создавать другие типы наглядного текста. Например, можно создать <xref:System.Windows.Media.Geometry> объект, основанный на контуре строки текста.  
   
- ![Оконтуривание текста с использованием кисти линейного градиента](./media/outlinedtext02.jpg "OutlinedText02")  
-Оконтуривание текста с использованием кисти линейного градиента  
+ ![Оконтуривание текста с использованием кисти линейного градиента](./media/typography-in-wpf/text-outline-linear-gradient.jpg)    
   
  В следующих примерах показаны несколько способов создания визуальных эффектов посредством изменения штриха, заливки и выделения преобразованного текста.  
   
- ![Текст с различными цветами для заполнения штриха](./media/outlinedtext03.jpg "OutlinedText03")  
-Пример установки разного цвета для штриха и заливки  
+ ![Текст с различными цветами для заполнения штриха](./media/typography-in-wpf/fill-stroke-text-effect.jpg)  
   
- ![Текст с кистью изображения, примененной к штриху](./media/outlinedtext04.jpg "OutlinedText04")  
-Пример применения кисти к штриху  
+ ![Текст с кистью изображения, примененной к штриху](./media/typography-in-wpf/image-brush-application.jpg)
   
- ![Текст с кистью изображения, примененной к штриху](./media/outlinedtext05.jpg "OutlinedText05")  
-Пример применения кисти к штриху и выделению  
+ ![Текст с кистью изображения, примененной для вычерчивания и выделения](./media/typography-in-wpf/image-brush-text-application.jpg)
   
  Если текст преобразуется в <xref:System.Windows.Media.Geometry> объекта, он больше не является набором символов — изменение символов в текстовой строке невозможно. Тем не менее можно повлиять на внешний вид преобразованного текст, изменив его свойства штриха и заливки. Штрих — это контур преобразованного текста; заливка — это область внутри контура преобразованного текста. Дополнительные сведения см. в разделе [Создание контурного текста](how-to-create-outlined-text.md).  
   
@@ -82,15 +76,14 @@ ms.locfileid: "57372182"
   
  В следующем примере показано форматированный текст, который был преобразован в <xref:System.Windows.Media.PathGeometry> объекта. Анимированное многоточие повторяет путь штрихов отрисованного текста.  
   
- ![Сфера, следующая по геометрическому пути текста](./media/textpathgeometry01.gif "TextPathGeometry01")  
+ ![Сфера, следующая по геометрическому пути текста](./media/drawing-formatted-text/sphere-following-geometry-path.gif)  
 Сфера, следующая по геометрическому пути текста  
   
  Дополнительные сведения см. в разделе [Как Создание анимации PathGeometry для текста](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms743610(v=vs.100)).  
   
  Можно создать другие интересные сферы применения форматированного текста после преобразования в <xref:System.Windows.Media.PathGeometry> объекта. Например, можно обрезать видео для отображения внутри текста.  
   
- ![Отображение видео по геометрическому пути текста](./media/videotextdemo01.png "VideoTextDemo01")  
-Отображение видео по геометрическому пути текста  
+ ![Отображение видео по геометрическому пути текста](./media/drawing-formatted-text/video-displaying-text-path-geometry.png)
   
 <a name="win32_migration"></a>   
 ## <a name="win32-migration"></a>Миграция Win32  

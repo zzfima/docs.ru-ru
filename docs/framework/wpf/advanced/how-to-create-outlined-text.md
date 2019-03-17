@@ -11,39 +11,34 @@ helpviewer_keywords:
 - linear gradient brush [WPF]
 - typography [WPF], outline effects
 ms.assetid: 4aa3cf6e-1953-4f26-8230-7c1409e5f28d
-ms.openlocfilehash: 409981e9c751144d26151210977a45b5e1eccf0a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5de1068401dac61c5de5b86604da9417e18a94ae
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368155"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125945"
 ---
 # <a name="how-to-create-outlined-text"></a>Практическое руководство. Создание контурного текста
 В большинстве случаев при добавлении декоративных элементов в текстовые строки в вашей [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] приложения, вы используете текст в виде коллекции дискретных символов или глифов. Например, можно создать кисть линейного градиента и применить его к <xref:System.Windows.Controls.Control.Foreground%2A> свойство <xref:System.Windows.Controls.TextBox> объекта. При отображении или измените текстовое поле, кисти линейного градиента применяется автоматически в текущий набор символов в текстовой строке.  
   
- ![Текст, отображаемый кисти линейного градиента](./media/outlinedtext01.jpg "OutlinedText01")  
-Пример применения к текстовому полю кисти линейного градиента  
+ ![Текст, отображенный при помощи кисти линейного градиента](./media/how-to-create-outlined-text/text-linear-gradient.jpg)    
   
  Тем не менее, можно также преобразовать текст в <xref:System.Windows.Media.Geometry> объектами, позволяет создавать другие типы визуально форматированного текста. Например, можно создать <xref:System.Windows.Media.Geometry> объект, основанный на контуре строки текста.  
   
- ![Оконтуривание текста с использованием кисти линейного градиента](./media/outlinedtext02.jpg "OutlinedText02")  
-Пример кисти линейного градиента, применяемое к геометрии структуры текста  
+ ![Оконтуривание текста с использованием кисти линейного градиента](./media/how-to-create-outlined-text/text-outline-linear-gradient.jpg)  
   
  Если текст преобразуется в <xref:System.Windows.Media.Geometry> объекта, он больше не является набором символов — изменение символов в текстовой строке невозможно. Тем не менее можно повлиять на внешний вид преобразованного текст, изменив его свойства штриха и заливки. Штрих — это контур преобразованного текста; заливка — это область внутри контура преобразованного текста.  
   
  Следующие примеры иллюстрируют несколько способов создания визуальных эффектов посредством изменения штриха и заливки преобразованного текста.  
   
- ![Текст с различными цветами для заполнения штриха](./media/outlinedtext03.jpg "OutlinedText03")  
-Пример установки разного цвета для штриха и заливки  
+ ![Текст с различными цветами для заполнения штриха](./media/how-to-create-outlined-text/fill-stroke-text-effect.jpg)  
   
- ![Текст с кистью изображения, примененной к штриху](./media/outlinedtext04.jpg "OutlinedText04")  
-Пример применения кисти к штриху  
+ ![Текст с кистью изображения, примененной к штриху](./media/how-to-create-outlined-text/image-brush-application.jpg)
   
  Можно также изменить ограничивающий прямоугольник или выделения преобразованного текста. Следующий пример иллюстрирует способ создания визуальных эффектов посредством изменения штриха и выделения преобразованного текста.  
   
- ![Текст с кистью изображения, примененной к штриху](./media/outlinedtext05.jpg "OutlinedText05")  
-Пример применения кисти к штриху и выделению  
-  
+ ![Текст с кистью изображения, примененной для вычерчивания и выделения](./media/how-to-create-outlined-text/image-brush-text-application.jpg)
+
 ## <a name="example"></a>Пример  
  Ключ, чтобы преобразовать текст в <xref:System.Windows.Media.Geometry> объекта заключается в использовании <xref:System.Windows.Media.FormattedText> объекта. После создания этот объект можно использовать <xref:System.Windows.Media.FormattedText.BuildGeometry%2A> и <xref:System.Windows.Media.FormattedText.BuildHighlightGeometry%2A> методы, чтобы преобразовать текст в <xref:System.Windows.Media.Geometry> объектов. Первый метод возвращает геометрию форматированного текста. Второй метод возвращает ограничивающий прямоугольник геометрии форматированного текста. В следующем примере кода показано, как создать <xref:System.Windows.Media.FormattedText> объекта и извлечение геометрических форм форматированного текста и его ограничивающего прямоугольника.  
   

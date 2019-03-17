@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 0a10a3f5fd07c7e3ceb7e08802f2c821b7d9a7f2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7c8c1697ff18e919711e84e724b5b8698dfe088e
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369751"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125607"
 ---
 # <a name="structured-navigation-overview"></a>Общие сведения о структурной навигации
 Содержимое, которое может размещаться в [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], <xref:System.Windows.Controls.Frame>, или <xref:System.Windows.Navigation.NavigationWindow> состоит из страниц, которые могут быть идентифицированы пакетом [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] и просматриваться с помощью гиперссылок. Структура страниц и способы навигации по ним с помощью гиперссылок называется топологией навигации. Такая топология подходит для различных типов приложений, особенно тех, в которых необходим переход по документам. В таких приложениях пользователь может перемещаться с одной страницы на другую даже при отсутствии связи между ними.  
@@ -37,9 +37,9 @@ ms.locfileid: "57369751"
   
 -   Когда вызывающая страница возвращается к вызываемой, вызванная страница удаляется из журнала навигации, чтобы изолировать один экземпляр вызываемой страницы от другого.  
   
- Эти виды поведения показаны на следующем рисунке.  
+ Эти виды поведения показаны на следующем рисунке:  
   
- ![Поток между вызывающей и вызываемой страницей](./media/structurednavigationoverviewfigure1.png "StructuredNavigationOverviewFigure1")  
+ ![Снимок экрана показан поток между вызывающей и вызываемой страницей.](./media/structured-navigation-overview/flow-between-calling-page-called-page.png)  
   
  Эти поведения можно реализовать с помощью <xref:System.Windows.Navigation.PageFunction%601> качестве вызываемой страницы.  
   
