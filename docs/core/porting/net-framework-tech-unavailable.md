@@ -4,12 +4,12 @@ description: Узнайте о технологиях .NET Framework, недос
 author: cartermp
 ms.author: mairaw
 ms.date: 12/7/2018
-ms.openlocfilehash: 8b43c15a942e0effab486e5399325bec746484a2
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 9d7860184806288dd0d5eb3b0447839d5e47c27f
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904891"
+ms.lasthandoff: 03/17/2019
+ms.locfileid: "58125477"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>Технологии .NET Framework, недоступные в .NET Core
 
@@ -21,7 +21,7 @@ ms.locfileid: "55904891"
 
 Домены приложений позволяют изолировать приложения друг от друга. Для этих доменов требуется поддержка среды выполнения и, как правило, они довольно дорого стоят. Создание дополнительных доменов приложений не поддерживается. И мы не планируем добавлять эту возможность в будущем. Вместо нее для изоляции кода мы рекомендуем использовать отдельные процессы или контейнеры. Для динамической загрузки сборок рекомендуется использовать новый класс <xref:System.Runtime.Loader.AssemblyLoadContext>.
 
-Чтобы упростить перенос кода из .NET Framework, .NET Core предоставляет некоторые рабочие области API <xref:System.AppDomain>. Некоторые API-интерфейсы работают без изменений (например, <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>), одни элементы не выполняют никаких действий (например, <xref:System.AppDomain.SetCachePath%2A>), а другие создают исключение <xref:System.PlatformNotSupportedException> (например, <xref:System.AppDomain.CreateDomain%2A>). Просмотрите типы, используемые для [эталонного исходного кода `System.AppDomain`](https://github.com/dotnet/corefx/blob/master/src/System.Runtime.Extensions/src/System/AppDomain.cs) в [репозитории DotNet и CoreFX на сайте GitHub](https://github.com/dotnet/corefx), и выберите ветвь, которая соответствует реализованной версии.
+Чтобы упростить перенос кода из .NET Framework, .NET Core предоставляет некоторые рабочие области API <xref:System.AppDomain>. Некоторые API-интерфейсы работают без изменений (например, <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>), одни элементы не выполняют никаких действий (например, <xref:System.AppDomain.SetCachePath%2A>), а другие создают исключение <xref:System.PlatformNotSupportedException> (например, <xref:System.AppDomain.CreateDomain%2A>). Просмотрите типы, используемые для [эталонного исходного кода `System.AppDomain`](https://github.com/dotnet/corefx/blob/master/src/Common/src/CoreLib/System/AppDomain.cs) в [репозитории DotNet и CoreFX на сайте GitHub](https://github.com/dotnet/corefx), и выберите ветвь, которая соответствует реализованной версии.
 
 ## <a name="remoting"></a>Удаленное взаимодействие
 
