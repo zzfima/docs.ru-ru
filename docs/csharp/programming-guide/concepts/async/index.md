@@ -100,7 +100,7 @@ string urlContents = await client.GetStringAsync("https://docs.microsoft.com");
 ## <a name="BKMK_WhatHappensUnderstandinganAsyncMethod"></a> Что происходит в методе Async  
  В асинхронном программировании важнее всего понимать, как поток управления перемещается из метода в метод. Следующая схема описывает этот процесс.  
   
- ![Трассировка асинхронной программы](../../../../csharp/programming-guide/concepts/async/media/navigationtrace.png "NavigationTrace")  
+ ![Схема, показывающая трассировку асинхронной программы.](./media/index/navigation-trace-async-program.png)  
   
  Числа в схеме соответствуют следующим шагам.  
   
