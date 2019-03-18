@@ -264,5 +264,5 @@ ms.locfileid: "57375536"
 - [Двумерная графика и изображения](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [Проверка нажатия на визуальном уровне](hit-testing-in-the-visual-layer.md)
 - [Использование объектов DrawingVisual](using-drawingvisual-objects.md)
-- [Учебник. По размещению визуальных объектов в приложении Win32](tutorial-hosting-visual-objects-in-a-win32-application.md)
+- [Учебник. Руководство по размещению визуальных объектов в приложении Win32](tutorial-hosting-visual-objects-in-a-win32-application.md)
 - [Улучшение производительности приложений WPF](../advanced/optimizing-wpf-application-performance.md)
