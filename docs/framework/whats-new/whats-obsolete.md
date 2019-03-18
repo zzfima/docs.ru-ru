@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86928c734583cfc8cae0be53458a0d5c1769f292
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 416192d431234b2ce7d6e53f21803f88371a6805
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55287824"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58018741"
 ---
 # <a name="whats-obsolete-in-the-net-framework-class-library"></a>Устаревшие классы библиотеки классов .NET Framework
 Со временем в платформу .NET Framework вносятся изменения. В каждой новой версии добавляются новые типы и члены типов, предоставляющие новые функциональные возможности. Существующие типы и их члены постепенно изменяются. Например, некоторые типы становятся менее важными из-за того, что поддерживаемая ими технология заменяется на другую технологию, а некоторые методы вытесняются новыми методами, которые более удобны в использовании или обладают большей функциональностью.  
@@ -68,9 +68,9 @@ ms.locfileid: "55287824"
 |1.0|v1.0.3705|  
   
 ## <a name="obsolete-lists-for-the-net-framework-45-and-later-versions"></a>Списки устаревших типов и членов для .NET Framework 4.5 и более поздних версий  
- [Устаревшие типы](../../../docs/framework/whats-new/obsolete-types.md)  
+ [Устаревшие типы](obsolete-types.md)  
   
- [Устаревшие члены](../../../docs/framework/whats-new/obsolete-members.md)  
+ [Устаревшие члены](obsolete-members.md)  
   
 ## <a name="obsolete-lists-for-previous-versions"></a>Списки устаревших типов и членов для предыдущих версий  
  [Устаревшие типы в платформе .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=224224)  
@@ -82,4 +82,4 @@ ms.locfileid: "55287824"
  [Список устаревших элементов в платформе .NET Framework 2.0](https://go.microsoft.com/fwlink/?LinkID=125264)  
   
 ## <a name="see-also"></a>См. также
-- [\<Поддерживаемый элемент среды выполнения](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
+- [\<Поддерживаемый элемент среды выполнения](../configure-apps/file-schema/startup/supportedruntime-element.md)

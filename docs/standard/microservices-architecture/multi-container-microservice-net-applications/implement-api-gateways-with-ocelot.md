@@ -4,12 +4,12 @@ description: Узнайте, как реализовывать шлюзы API с
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: b51341b25fb81d93f85ff33fe6f2225196126ea0
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 404f19f55b3be1e4be161543556bb2619f164b9b
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679493"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57846108"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Реализация шлюзов API с помощью Ocelot
 
@@ -176,10 +176,10 @@ namespace OcelotApiGw
             var builder = WebHost.CreateDefaultBuilder(args);
 
             builder.ConfigureServices(s => s.AddSingleton(builder))
-                                                          .ConfigureAppConfiguration(
-                              ic => ic.AddJsonFile(Path.Combine("configuration",
-                                                                "configuration.json")))
-                                                                .UseStartup<Startup>();
+                    .ConfigureAppConfiguration(
+                          ic => ic.AddJsonFile(Path.Combine("configuration",
+                                                            "configuration.json")))
+                    .UseStartup<Startup>();
             var host = builder.Build();
             return host;
         }
@@ -541,19 +541,19 @@ services.AddAuthentication(options =>
 
 В идеальной архитектуре есть входящий уровень Nginx в Kubernetes перед веб-приложениями, а также несколько шлюзов API Ocelot/BFF, как показано на приведенной ниже схеме.
 
- ![Kubernetes Ingress выступает в качестве обратного прокси-сервера для всего трафика, направляемого в приложение, включая веб-приложения, которые обычно выходят из области действия шлюза API.](./media/image41.png)
+![Kubernetes Ingress выступает в качестве обратного прокси-сервера для всего трафика, направляемого в приложение, включая веб-приложения, которые обычно выходят из области действия шлюза API.](./media/image41.png)
 
 **Рис. 6-41**. Входящий уровень в eShopOnContainers при развертывании в Kubernetes
 
 При развертывании eShopOnContainers в Kubernetes предоставляется всего несколько служб или конечных точек через _точку входа_, в основном только следующий список постфиксов в URL-адресах:
 
--   `/` для клиента веб-приложения SPA
--   `/webmvc` для клиента веб-приложения MVC
--   `/webstatus` для клиента веб-приложения с отображением состояния или проверки работоспособности
--   `/webshoppingapigw` для веб-BFF и бизнес-процессов покупок
--   `/webmarketingapigw` для веб-BFF и бизнес-процессов маркетинга
--   `/mobileshoppingapigw` для мобильного BFF и бизнес-процессов покупок
--   `/mobilemarketingapigw` для мобильного -BFF и бизнес-процессов маркетинга
+- `/` для клиента веб-приложения SPA
+- `/webmvc` для клиента веб-приложения MVC
+- `/webstatus` для клиента веб-приложения с отображением состояния или проверки работоспособности
+- `/webshoppingapigw` для веб-BFF и бизнес-процессов покупок
+- `/webmarketingapigw` для веб-BFF и бизнес-процессов маркетинга
+- `/mobileshoppingapigw` для мобильного BFF и бизнес-процессов покупок
+- `/mobilemarketingapigw` для мобильного -BFF и бизнес-процессов маркетинга
 
 При развертывании в Kubernetes каждый шлюз API Ocelot использует отдельный файл configuration.json для каждого модуля _pod_, управляющего шлюзами API. Эти файлы configuration.json предоставляются путем подключения (изначально с помощью сценария deploy.ps1) тома, созданного на основе _схемы конфигурации_ Kubernetes с именем "ocelot". Каждый контейнер подключает связанный файл конфигурации в папку контейнера с именем `/app/configuration`.
 

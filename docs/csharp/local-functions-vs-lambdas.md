@@ -3,16 +3,16 @@ title: Локальные функции или лямбда-выражения
 description: Узнайте, чем локальные функции могут быть лучше лямбда-выражений.
 ms.date: 06/27/2016
 ms.assetid: 368d1752-3659-489a-97b4-f15d87e49ae3
-ms.openlocfilehash: 2b98ebeeb3866779715fa629c2518f739e196ae8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 17ad1e8782adbf9e0f892d72849e58ef9c5ddce1
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43740436"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58125776"
 ---
 # <a name="local-functions-compared-to-lambda-expressions"></a>Сравнение локальных функций и лямбда-выражений
 
-На первый взгляд [локальные функции](programming-guide/classes-and-structs/local-functions.md) и [лямбда-выражения](lambda-expressions.md) во многом похожи. Во многих случаях выбор между использованием лямбда-выражений и локальных функций определяется стилем и личными предпочтениями. Однако существуют реальные различия в использовании этих сущностей, о которых нужно знать.
+На первый взгляд [локальные функции](programming-guide/classes-and-structs/local-functions.md) и [лямбда-выражения](./programming-guide/statements-expressions-operators/lambda-expressions.md) во многом похожи. Во многих случаях выбор между использованием лямбда-выражений и локальных функций определяется стилем и личными предпочтениями. Однако существуют реальные различия в использовании этих сущностей, о которых нужно знать.
 
 Рассмотрим различия в реализации алгоритма вычисления факториала с использованием локальной функции и лямбда-выражения. В первой версии используется локальная функция:
 

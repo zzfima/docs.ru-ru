@@ -3,14 +3,14 @@ title: Перечисления в C#. Краткий обзор языка C#
 description: Узнайте больше о перечислениях — дискретных именованных константах в C#
 ms.date: 08/10/2016
 ms.assetid: 7faba1cc-6ea9-4a19-adb9-0335e4b132e5
-ms.openlocfilehash: d55462f0360b6896c398d581918a9c17a87583be
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8c1c29c3c06829da81a9c9be8bb5bd99f1c9e395
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126658"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57843128"
 ---
-# <a name="enums"></a>Перечисления
+# <a name="enums"></a>перечислениям;
 
 ***Тип enum*** представляет собой тип значения с набором именованных констант. Перечисления удобно использовать в том случае, когда переменная может иметь только дискретные значения из определенного набора. В качестве базового хранилища в перечислении используется один из целочисленных типов значений. Перечисления предоставляют семантическое значение для дискретных значений.
 
@@ -34,6 +34,6 @@ ms.locfileid: "53126658"
 
 [!code-csharp[EnumZero](../../../samples/snippets/csharp/tour/enums/Program.cs#L58-L58)]
 
->[!div class="step-by-step"]
->[Назад](interfaces.md)
->[Вперед](delegates.md)
+> [!div class="step-by-step"]
+> [Назад](interfaces.md)
+> [Вперед](delegates.md)

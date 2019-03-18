@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d8957a5376e17ff69bf9e811125af5a4af1e3b6
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 4b40e12c7cb077d6ef128d4ee1aada6086cb9c1d
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836556"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57846471"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Независимость от языка и независимые от языка компоненты
 Платформа .NET Framework является независимой от языка. Это означает, что код можно разрабатывать на одном из многих языков, ориентированных на .NET Framework, например C#, C++/CLI, Eiffel, F#, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL и Windows PowerShell. Чтобы использовать типы и члены библиотек классов, разработанных для платформы .NET Framework, не требуется знать их исходный язык и следовать его правилам. Если вы разрабатываете компоненты, они будут доступны всем приложениям .NET Framework вне зависимости от используемого вами языка.  
@@ -343,7 +343,7 @@ ms.locfileid: "56836556"
 ### <a name="member-accessibility"></a>Доступность членов  
  Переопределение наследуемого члена не влияет на его доступность. Например, открытый метод базового класса невозможно переопределить с помощью закрытого метода производного класса. Существует одно исключение: член `protected internal` (в C#) или член `Protected Friend` (в Visual Basic) в одной сборке может переопределяться типом в другой сборке. Тогда переопределенный член будет иметь доступность `Protected`.  
   
- Рассмотрим следующий пример. Атрибут <xref:System.CLSCompliantAttribute> имеет значение `true`. Когда класс `Person`, производный от класса `Animal`, изменяет доступность свойства `Species` с открытой на закрытую, компилятор выдает ошибку. Однако если доступность меняется на открытую, ошибки не возникает.  
+ Рассмотрим следующий пример. Атрибут <xref:System.CLSCompliantAttribute> имеет значение `true`. Когда класс `Human`, производный от класса `Animal`, изменяет доступность свойства `Species` с открытой на закрытую, компилятор выдает ошибку. Однако если доступность меняется на открытую, ошибки не возникает.  
   
  [!code-csharp[Conceptual.CLSCompliant#28](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/accessibility1.cs#28)]
  [!code-vb[Conceptual.CLSCompliant#28](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/accessibility1.vb#28)]  
