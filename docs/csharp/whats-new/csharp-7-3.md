@@ -2,12 +2,12 @@
 title: Что нового в C# 7.3
 description: Обзор новых возможностей в C# 7.3
 ms.date: 05/16/2018
-ms.openlocfilehash: 570da53059242c0242609ddcba5cb23f1728aa9f
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: f97bda11d1da3f6deb4597c8d7742fd47e9cf15f
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873804"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58028674"
 ---
 # <a name="whats-new-in-c-73"></a>Что нового в C# 7.3
 
@@ -51,7 +51,7 @@ unsafe struct S
 }
 ```
 
-В более ранних версиях C# переменную необходимо закрепить, чтобы получить доступ к целым числам, входящим в `myFixedField`. Теперь такой код компилируется в безопасном контексте:
+В более ранних версиях C# переменную необходимо закрепить, чтобы получить доступ к целым числам, входящим в `myFixedField`. Теперь приведенный ниже код компилируется без закрепления переменной `p` внутри отдельного оператора `fixed`:
 
 ```csharp
 class C

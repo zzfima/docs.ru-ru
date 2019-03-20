@@ -3,12 +3,12 @@ title: System.Delegate и ключевое слово `delegate`
 description: Сведения о классах в .NET Framework, поддерживающих делегаты, а также их сопоставление с ключевым словом delegate.
 ms.date: 06/20/2016
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 39dca1053f87a5059bdc60f8b722091ba991cbd5
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: 88179af0ac072464d8e9903f685ff578ca591bf0
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827304"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58126179"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate и ключевое слово `delegate`
 
@@ -67,7 +67,7 @@ int result = comparator(left, right);
 В строке выше код *вызывает* метод, подключенный к делегату.
 Переменная считается именем метода и вызывается с помощью обычного синтаксиса вызова метода.
 
-Эта строка кода содержит небезопасное условие: нет никакой гарантии, что целевой объект было добавлен к делегату. Если целевые объекты не были вложены, строка выше приведет к возникновению исключения `NullReferenceException`. Идиомы, используемые для решения этой проблемы, более сложны, чем простые проверки значений NULL, и рассматриваются далее в этой [серии](delegates-patterns.md) материалов.
+Эта строка кода делает содержит небезопасное условие: Нет никакой гарантии, что целевой объект был добавлен к делегату. Если целевые объекты не были вложены, строка выше приведет к возникновению исключения `NullReferenceException`. Идиомы, используемые для решения этой проблемы, более сложны, чем простые проверки значений NULL, и рассматриваются далее в этой [серии](delegates-patterns.md) материалов.
 
 ## <a name="assigning-adding-and-removing-invocation-targets"></a>Назначение, добавление и удаление целевых объектов вызова
 
@@ -99,7 +99,7 @@ Comparison<string> comparer = CompareLength;
 phrases.Sort(comparer);
 ```
 
-В случаях, когда в качестве объекта делегата используется небольшой метод, для назначения обычно применяется синтаксис [лямбда-выражения](lambda-expressions.md).
+Если в качестве объекта делегата используется небольшой метод, для назначения обычно применяется синтаксис [лямбда-выражения](./programming-guide/statements-expressions-operators/lambda-expressions.md):
 
 ```csharp
 Comparison<string> comparer = (left, right) => left.Length.CompareTo(right.Length);

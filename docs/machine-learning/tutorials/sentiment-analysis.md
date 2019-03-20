@@ -4,12 +4,12 @@ description: На примере двоичной классификации с 
 ms.date: 03/07/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: d7e46b489506f4adad843ba5315afde4c7689b4e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b0d02babd126a62ef9a87b251f525a08376069aa
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723326"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57845795"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Учебник. Использование ML.NET для анализа тональности методом двоичной классификации
 
@@ -180,7 +180,7 @@ public static (IDataView trainSet, IDataView testSet) LoadData(MLContext mlConte
 ```
 ## <a name="load-the-data"></a>Загрузка данных
 
-Так как созданный ранее тип модели данных `SentimentData` соответствует схеме набора данных, вы можете объединить инициализацию, сопоставление и загрузку набора данных в одной строке кода с использованием оболочки `MLContext.Data.ReadFromTextFile` для <xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29>. В результате возвратится <xref:Microsoft.Data.DataView.IDataView>. 
+Так как созданный ранее тип модели данных `SentimentData` соответствует схеме набора данных, вы можете объединить инициализацию, сопоставление и загрузку набора данных в одной строке кода с использованием оболочки `MLContext.Data.LoadFromTextFile` для [метода LoadFromTextFile](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29). В результате возвратится <xref:Microsoft.Data.DataView.IDataView>. 
 
  Точно так же как входные и выходные данные `Transforms`, `DataView` является основным типом конвейера данных, сравнимым с `IEnumerable` для `LINQ`.
 
@@ -215,7 +215,7 @@ public static (IDataView trainSet, IDataView testSet) LoadData(MLContext mlConte
 * прогноз тональности на основе тестовых данных;
 * возвращение модели.
 
-Создайте метод `Train` сразу после метода `Main`, вставив в него следующий код:
+Создайте метод `BuildAndTrainModel` сразу после метода `Main`, вставив в него следующий код:
 
 ```csharp
 public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView splitTrainSet)

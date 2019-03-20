@@ -1,7 +1,7 @@
 ---
 title: Лямбда-выражения (руководство по программированию на C#)
 ms.custom: seodec18
-ms.date: 03/03/2017
+ms.date: 03/14/2019
 helpviewer_keywords:
 - lambda expressions [C#]
 - outer variables [C#]
@@ -9,285 +9,226 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: 77701653abacbe6d876c0890a11586f0840bad5d
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: dd9b77a90030a96d17104c8c0e48964b6a85d165
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200901"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58125737"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Лямбда-выражения (руководство по программированию на C#)
 
-Лямбда-выражение — это [анонимная функция](anonymous-methods.md) , с помощью которой можно создавать типы [делегатов](../delegates/using-delegates.md) или [деревьев выражений](../concepts/expression-trees/index.md) . С помощью лямбда-выражений можно писать локальные функции, которые можно передавать в качестве аргументов или возвращать в качестве значений из вызовов функций. Лямбда-выражения особенно полезны при написании выражений запросов LINQ.
-  
-Чтобы создать лямбда-выражение, необходимо указать входные параметры (если они есть) с левой стороны лямбда-оператора [=>](../../../csharp/language-reference/operators/lambda-operator.md), и поместить блок выражений или операторов с другой стороны. Например, лямбда-выражение `x => x * x` задает параметр с именем `x` и возвращает значение `x` . Можно назначить это выражение типу делегата, как показано в следующем примере:  
-  
-```csharp  
-delegate int del(int i);  
-static void Main(string[] args)  
-{  
-    del myDelegate = x => x * x;  
-    int j = myDelegate(5); //j = 25  
-}  
-```  
-  
- Создание типа дерева выражений:  
-  
-```csharp  
-using System.Linq.Expressions;  
-  
-namespace ConsoleApplication1  
-{  
-    class Program  
-    {  
-        static void Main(string[] args)  
-        {  
-            Expression<del> myET = x => x * x;  
-        }  
-    }  
-}  
-```  
-  
- Оператор `=>` имеет такой же приоритет, как и присваивание (`=`), и является [правоассоциативным](../../../csharp/programming-guide/statements-expressions-operators/operators.md) (см. раздел "Ассоциативность" статьи об операторах).  
-  
- Лямбда-операторы используются в запросах [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] на основе методов в качестве аргументов стандартных методов операторов запроса, таких как <xref:System.Linq.Enumerable.Where%2A>.  
-  
- При использовании синтаксиса на основе методов для вызова метода <xref:System.Linq.Enumerable.Where%2A> в классе <xref:System.Linq.Enumerable> (как это делается в [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] на объекты и [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]) параметром является тип делегата <xref:System.Func%602?displayProperty=nameWithType>. Лямбда-выражение — это наиболее удобный способ создания делегата. При вызове того же метода, к примеру, в классе <xref:System.Linq.Queryable?displayProperty=nameWithType> (как это делается в [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]) типом параметра будет <xref:System.Linq.Expressions.Expression?displayProperty=nameWithType><Func\>, где Func — это любые делегаты Func с числом входных параметров не более шестнадцати. Опять же, лямбда-выражения представляют собой самый быстрый способ построения дерева выражений. Лямбда-выражения позволяют вызовам `Where` выглядеть одинаково, хотя на самом деле объект, созданный из лямбда-выражения, имеет другой тип.  
-  
- Обратите внимание: в приведенном выше примере сигнатура делегата имеет один неявный входной параметр типа `int`и возвращает значение типа `int`. Лямбда-выражение можно преобразовать в делегат соответствующего типа, поскольку он также имеет один входной параметр (`x`) и возвращает значение, которое компилятор может неявно преобразовать в тип `int`. (Вывод типов более подробно рассматривается в следующих разделах.) Делегат, вызываемый посредством входного параметра 5, возвращает результат 25.  
-  
- Лямбда-выражения нельзя использовать с левой стороны оператора [is](../../../csharp/language-reference/keywords/is.md) или [as](../../../csharp/language-reference/keywords/as.md).  
-  
- Все ограничения, применяемые к анонимным методам, применяются также к лямбда-выражениям. Дополнительные сведения см. в разделе [Анонимные методы](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md).  
+*Лямбда-выражение* представляет собой блок кода (выражение или блок оператора), который рассматривается как объект. Оно может передаваться в качестве аргумента в методы, а также возвращаться вызовами метода. Лямбда-выражения широко используются для:
+
+- передачи выполняемого кода в асинхронные методы, такие как <xref:System.Threading.Tasks.Task.Run(System.Action)?displayProperty=nameWithType>;
+
+- написания [выражений запросов LINQ](../../linq/index.md);
+
+- создания [деревьев выражений](../concepts/expression-trees/index.md).
+
+Лямбда-выражения — это код, который может быть представлен как делегат или дерево выражений, которое компилируется в делегат. Конкретный тип делегата лямбда-выражения зависит от его параметров и возвращаемого значения. Лямбда-выражения, которые не возвращают значение, соответствуют конкретному делегату `Action` в зависимости от числа параметров. Лямбда-выражения, которые возвращают значение, соответствуют конкретному делегату `Func` в зависимости от числа параметров. Например, лямбда-выражение, которое имеет два параметра, но не возвращает значение, соответствует делегату <xref:System.Action%602>. Лямбда-выражение, которое имеет один параметр и возвращает значение, соответствует делегату <xref:System.Func%602>.
+
+Лямбда-выражение использует `=>`, [оператор объявления лямбда-выражения](../../language-reference/operators/lambda-operator.md), для отделения списка параметров лямбда-выражения от исполняемого кода. Чтобы создать лямбда-выражение, необходимо указать входные параметры (если они есть) с левой стороны лямбда-оператора, и поместить блок выражений или операторов с другой стороны. Например, однострочное лямбда-выражение `x => x * x` задает параметр с именем `x` и возвращает значение `x` в квадрате. Можно назначить это выражение типу делегата, как показано в следующем примере:
+
+[!code-csharp-interactive[lambda is delegate](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#Delegate)]
+
+Кроме того, вы можете назначить лямбда-выражение в качестве типа дерева выражения:
+
+[!code-csharp-interactive[lambda is expression tree](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#ExpressionTree)]
+
+Можно также передать его непосредственно в качестве аргумента метода:
+
+[!code-csharp-interactive[lambda is argument](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#Argument)]
+
+При использовании синтаксиса на основе методов для вызова метода <xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType> в классе <xref:System.Linq.Enumerable?displayProperty=nameWithType> (как это делается в LINQ to Objects и LINQ to XML) параметром является тип делегата <xref:System.Func%602?displayProperty=nameWithType>. Лямбда-выражение — это наиболее удобный способ создания делегата. При вызове метода <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType> в классе <xref:System.Linq.Queryable?displayProperty=nameWithType> (как это делается в LINQ to SQL) типом параметра является тип дерева выражения [`Expression<Func<TSource,TResult>>`](<xref:System.Linq.Expressions.Expression%601>). Опять же, лямбда-выражения представляют собой самый быстрый способ построения дерева выражений. Лямбда-выражения позволяют вызовам `Select` выглядеть одинаково, хотя на самом деле объект, созданный из лямбда-выражения, имеет другой тип.
+
+Все ограничения, применяемые к [анонимным методам](anonymous-methods.md), применяются также к лямбда-выражениям.
   
 ## <a name="expression-lambdas"></a>Выражения-лямбды
 
- Лямбда-выражение с выражением с правой стороны оператора => называется *выражением-лямбдой*. Выражения-лямбды широко используются при конструировании [деревьев выражений](../concepts/expression-trees/index.md). Выражения-лямбды возвращают результат выражения и принимают следующую основную форму.
-  
+Лямбда-выражение с выражением с правой стороны оператора `=>` называется *выражением лямбда*. Выражения-лямбды широко используются при конструировании [деревьев выражений](../concepts/expression-trees/index.md). Выражения-лямбды возвращают результат выражения и принимают следующую основную форму.
+
 ```csharp
 (input-parameters) => expression
 ```
 
- Если лямбда-выражение имеет только один входной параметр, скобки можно не ставить; во всех остальных случаях они обязательны. Два и более входных параметра разделяются запятыми и заключаются в скобки:  
-  
-```csharp
-(x, y) => x == y
-```
+Если лямбда-выражение имеет только один входной параметр, скобки можно не ставить; во всех остальных случаях они обязательны.
 
- Иногда компилятору бывает трудно или даже невозможно определить входные типы. В этом случае типы можно указать в явном виде, как показано в следующем примере.  
-  
-```csharp
-(int x, string s) => s.Length > x
-```
- Для входных параметров нужно задать либо все типы в явном виде, либо все типы в неявном. В противном случае компилятор C# выдает ошибку [CS0748](../../misc/cs0748.md).
+Нулевое количество входных параметры задается пустыми скобками:  
 
- Нулевое количество входных параметров задается пустыми скобками:  
-  
-```csharp
-() => SomeMethod()
-```
+[!code-csharp[zero parameters](~/samples/snippets/csharp/programming-guide/lambda-expressions/ExpressionAndStatementLambdas.cs#ZeroParameters)]
 
- Обратите внимание, что тело выражения-лямбды может состоять из вызова метода, как было показано в предыдущем примере. Однако при создании деревьев выражений, которые вычисляются вне .NET Framework, например в SQL Server, не следует использовать вызовы методов в лямбда-выражениях. Эти методы не имеют смысла вне контекста среды CLR .NET.  
-  
+Два и более входных параметра разделяются запятыми и заключаются в скобки:
+
+[!code-csharp[two parameters](~/samples/snippets/csharp/programming-guide/lambda-expressions/ExpressionAndStatementLambdas.cs#TwoParameters)]
+
+Иногда компилятору не удается определить входные типы. Вы можете указать типы данных в явном виде, как показано в следующем примере:
+
+[!code-csharp[explicitly typed parameters](~/samples/snippets/csharp/programming-guide/lambda-expressions/ExpressionAndStatementLambdas.cs#ExplicitlyTypedParameters)]
+
+Для входных параметров все типы нужно задать либо в явном, либо в неявном виде. В противном случае компилятор выдает ошибку [CS0748](../../misc/cs0748.md).
+
+Текст выражения лямбды может состоять из вызова метода. Но при создании деревьев выражений, которые вычисляются вне контекста поддержки общеязыковой среды выполнения .NET, например в SQL Server, вызовы методов не следует использовать в лямбда-выражениях. Эти методы не имеют смысла вне контекста среды CLR .NET.
+
 ## <a name="statement-lambdas"></a>Лямбды операторов
 
- Лямбда оператора напоминает выражение-лямбду, за исключением того, что оператор (или операторы) заключается в фигурные скобки:  
-  
-(входные-параметры) => { оператор; }
+Лямбда оператора напоминает выражение-лямбду, за исключением того, что оператор (или операторы) заключается в фигурные скобки:
 
- Тело лямбды оператора может состоять из любого количества операторов; однако на практике обычно используется не более двух-трех.  
-  
-[!code-csharp[StatementLambda#1](~/samples/snippets/csharp/programming-guide/lambda-expressions/statements.cs#1)]
+```csharp  
+(input-parameters) => { statement; }
+```
 
-[!code-csharp[StatementLambda#2](~/samples/snippets/csharp/programming-guide/lambda-expressions/statements.cs#2)]
+Тело лямбды оператора может состоять из любого количества операторов; однако на практике обычно используется не более двух-трех.
 
- Лямбды операторов, как и анонимные методы, не могут использоваться для создания деревьев выражений.  
+[!code-csharp-interactive[statement lambda](~/samples/snippets/csharp/programming-guide/lambda-expressions/ExpressionAndStatementLambdas.cs#StatementLambda)]
+
+Лямбды операторов, как и анонимные методы, не могут использоваться для создания деревьев выражений.
   
 ## <a name="async-lambdas"></a>Асинхронные лямбда-выражения
 
- С помощью ключевых слов [async](../../../csharp/language-reference/keywords/async.md) и [await](../../../csharp/language-reference/keywords/await.md) можно легко создавать лямбда-выражения и операторы, включающие асинхронную обработку. Например, в следующем примере Windows Forms содержится обработчик событий, который вызывает асинхронный метод `ExampleMethodAsync`и ожидает его.  
-  
+С помощью ключевых слов [async](../../language-reference/keywords/async.md) и [await](../../language-reference/keywords/await.md) можно легко создавать лямбда-выражения и операторы, включающие асинхронную обработку. Например, в следующем примере Windows Forms содержится обработчик событий, который вызывает асинхронный метод `ExampleMethodAsync`и ожидает его.
+
 ```csharp
-public partial class Form1 : Form  
-{  
-    public Form1()  
-    {  
-        InitializeComponent();  
-    }  
-  
-    private async void button1_Click(object sender, EventArgs e)  
-    {  
-        // ExampleMethodAsync returns a Task.  
-        await ExampleMethodAsync();  
-        textBox1.Text += "\r\nControl returned to Click event handler.\n";  
-    }  
-  
-    async Task ExampleMethodAsync()  
-    {  
-        // The following line simulates a task-returning asynchronous process.  
-        await Task.Delay(1000);  
-    }  
-}  
+public partial class Form1 : Form
+{
+    public Form1()
+    {
+        InitializeComponent();
+        button1.Click += button1_Click;
+    }
+
+    private async void button1_Click(object sender, EventArgs e)
+    {
+        await ExampleMethodAsync();
+        textBox1.Text += "\r\nControl returned to Click event handler.\n";
+    }
+
+    private async Task ExampleMethodAsync()
+    {
+        // The following line simulates a task-returning asynchronous process.
+        await Task.Delay(1000);
+    }
+}
 ```
 
- Такой же обработчик событий можно добавить с помощью асинхронного лямбда-выражения. Чтобы добавить этот обработчик, поставьте модификатор `async` перед списком параметров лямбда-выражения, как показано в следующем примере.  
-  
-```csharp  
-public partial class Form1 : Form  
-{  
-    public Form1()  
-    {  
-        InitializeComponent();  
-        button1.Click += async (sender, e) =>  
-        {  
-            // ExampleMethodAsync returns a Task.  
-            await ExampleMethodAsync();  
-            textBox1.Text += "\nControl returned to Click event handler.\n";  
-        };  
-    }  
-  
-    async Task ExampleMethodAsync()  
-    {  
-        // The following line simulates a task-returning asynchronous process.  
-        await Task.Delay(1000);  
-    }  
-}  
-```  
+Такой же обработчик событий можно добавить с помощью асинхронного лямбда-выражения. Чтобы добавить этот обработчик, поставьте модификатор `async` перед списком параметров лямбда-выражения, как показано в следующем примере:
 
- Дополнительные сведения о создании и использовании асинхронных методов см. в разделе [Асинхронное программирование с использованием ключевых слов Async и Await](../../../csharp/programming-guide/concepts/async/index.md).  
-  
+```csharp
+public partial class Form1 : Form
+{
+    public Form1()
+    {
+        InitializeComponent();
+        button1.Click += async (sender, e) =>
+        {
+            await ExampleMethodAsync();
+            textBox1.Text += "\r\nControl returned to Click event handler.\n";
+        };
+    }
+
+    private async Task ExampleMethodAsync()
+    {
+        // The following line simulates a task-returning asynchronous process.
+        await Task.Delay(1000);
+    }
+}
+```
+
+Дополнительные сведения о создании и использовании асинхронных методов см. в разделе [Асинхронное программирование с использованием ключевых слов Async и Await](../concepts/async/index.md).
+
+## <a name="lambda-expressions-and-tuples"></a>Лямбда-выражения и кортежи
+
+В C# 7.0 представлена встроенная поддержка [кортежей](../../tuples.md). Кортеж можно ввести в качестве аргумента лямбда-выражения, и лямбда-выражение также может возвращать кортеж. В некоторых случаях компилятор C# использует определение типа для определения типов компонентов кортежа.
+
+Кортеж определяется путем заключения в скобки списка его компонентов с разделителями-запятыми. В следующем примере кортеж с тремя компонентами используется для передачи последовательности чисел в лямбда-выражение. Оно удваивает каждое значение и возвращает кортеж с тремя компонентами, содержащий результат операций умножения.
+
+[!code-csharp-interactive[lambda and tuples](~/samples/snippets/csharp/programming-guide/lambda-expressions/LambdasAndTuples.cs#WithoutComponentName)]
+
+Как правило, поля кортежи именуются как `Item1`, `Item2` и т. д. Тем не менее кортеж с именованными компонентами можно определить, как показано в следующем примере:
+
+[!code-csharp-interactive[lambda and named tuples](~/samples/snippets/csharp/programming-guide/lambda-expressions/LambdasAndTuples.cs#WithComponentName)]
+
+См. дополнительные сведения о [типах кортежей в C#](../../tuples.md).
+
 ## <a name="lambdas-with-the-standard-query-operators"></a>Лямбда-выражения со стандартными операторами запросов
 
- Многие стандартные операторы запросов имеют входной параметр, тип которого принадлежит к семейству <xref:System.Func%602> универсальных делегатов. Эти делегаты используют параметры типа для определения количества и типов входных параметров, а также тип возвращаемого значения делегата. Делегаты`Func` очень полезны для инкапсуляции пользовательских выражений, которые применяются к каждому элементу в наборе исходных данных. В качестве примера рассмотрим следующий тип делегата.  
-  
-```csharp  
-public delegate TResult Func<TArg0, TResult>(TArg0 arg0)  
-```  
-  
- Экземпляр этого делегата можно создать как `Func<int,bool> myFunc` , где `int` — входной параметр, а `bool` — возвращаемое значение. Возвращаемое значение всегда указывается в последнем параметре типа. `Func<int, string, bool>` определяет делегат с двумя входными параметрами, `int` и `string`, и типом возвращаемого значения `bool`. Следующий делегат `Func` при вызове возвращает значение true или false, которое показывает, равен ли входной параметр 5.  
-  
-```csharp  
-Func<int, bool> myFunc = x => x == 5;  
-bool result = myFunc(4); // returns false of course  
-```  
-  
- Также лямбда-выражения можно использовать, когда аргумент имеет тип `Expression<Func>`, например в стандартных операторах запросов, как указано в System.Linq.Queryable. При определении аргумента `Expression<Func>` лямбда компилируется в дерево выражений.  
-  
- Ниже показан метод <xref:System.Linq.Enumerable.Count%2A> , являющийся стандартным оператором запроса.  
-  
-```csharp  
-int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };  
-int oddNumbers = numbers.Count(n => n % 2 == 1);  
-```  
-  
- Компилятор может вывести тип входного параметра ввода; но его также можно определить явным образом. Данное лямбда-выражение подсчитывает указанные целые значения (`n`), которые при делении на два дают остаток 1.  
-  
- Следующая строка кода создает последовательность, которая содержит все элементы массива `numbers` , расположенные слева от 9, поскольку это первое число последовательности, не удовлетворяющее условию:  
-  
-```csharp  
-var firstNumbersLessThan6 = numbers.TakeWhile(n => n < 6);  
-```  
-  
- В этом примере показано, как определить несколько входных параметров путем их заключения в скобки. Этот метод возвращает все элементы в массиве чисел до того числа, величина которого меньше номера его позиции. Не следует путать лямбда-оператор (`=>`) с оператором "больше или равно" (`>=`).  
-  
-```csharp  
-var firstSmallNumbers = numbers.TakeWhile((n, index) => n >= index);  
-```  
-  
-## <a name="type-inference-in-lambdas"></a>Вывод типа в лямбда-выражениях
+В LINQ to Objects, наряду с другими реализациями, есть входной параметр, тип которого принадлежит к семейству универсальных делегатов <xref:System.Func%601>. Эти делегаты используют параметры типа для определения количества и типов входных параметров, а также тип возвращаемого значения делегата. Делегаты`Func` очень полезны для инкапсуляции пользовательских выражений, которые применяются к каждому элементу в наборе исходных данных. В качестве примера рассмотрим следующий тип делегата <xref:System.Func%602>:  
 
- При написании лямбда-выражений обычно не требуется указывать тип входных параметров, поскольку компилятор может выводить этот тип на основе тела лямбда-выражения, типа делегата параметра и других факторов, как описано в спецификации языка C#. Для большинства стандартных операторов запросов первой входное значение имеет тип элементов в исходной последовательности. Поэтому при запросе `IEnumerable<Customer>`входная переменная считается объектом `Customer` , а это означает, что у вас есть доступ к его методам и свойствам.  
+```csharp
+public delegate TResult Func<in T, out TResult>(T arg)
+```
+
+Экземпляр этого делегата можно создать как `Func<int, bool>`, где `int` — входной параметр, а `bool` — возвращаемое значение. Возвращаемое значение всегда указывается в последнем параметре типа. Например, `Func<int, string, bool>` определяет делегат с двумя входными параметрами, `int` и `string`, и типом возвращаемого значения `bool`. Следующий делегат `Func` при вызове возвращает логическое значение, которое показывает, равен ли входной параметр 5:
+
+[!code-csharp-interactive[Func example](~/samples/snippets/csharp/programming-guide/lambda-expressions/LambdasWithQueryMethods.cs#Func)]
+
+Лямбда-выражения также можно использовать, когда аргумент имеет тип <xref:System.Linq.Expressions.Expression%601>, например в стандартных операторах запросов, которые определены в типе <xref:System.Linq.Queryable>. При указании аргумента <xref:System.Linq.Expressions.Expression%601> лямбда-выражение компилируется в дерево выражения.
   
-```csharp  
-customers.Where(c => c.City == "London");  
-```  
+В этом примере используется стандартный оператор запроса <xref:System.Linq.Enumerable.Count%2A>:
+
+[!code-csharp-interactive[Count example](~/samples/snippets/csharp/programming-guide/lambda-expressions/LambdasWithQueryMethods.cs#Count)]
+
+Компилятор может вывести тип входного параметра ввода; но его также можно определить явным образом. Данное лямбда-выражение подсчитывает указанные целые значения (`n`), которые при делении на два дают остаток 1.
+
+В следующем примере кода показано, как создать последовательность, которая содержит все элементы массива `numbers`, предшествующие 9, так как это первое число последовательности, не удовлетворяющее условию:
+
+[!code-csharp-interactive[TakeWhile example](~/samples/snippets/csharp/programming-guide/lambda-expressions/LambdasWithQueryMethods.cs#TakeWhile)]
+
+В следующем примере показано, как указать несколько входных параметров путем их заключения в скобки. Этот метод возвращает все элементы в массиве `numbers` до того числа, значение которого меньше его порядкового номера в массиве:
+
+[!code-csharp-interactive[TakeWhile example 2](~/samples/snippets/csharp/programming-guide/lambda-expressions/LambdasWithQueryMethods.cs#TakeWhileWithIndex)]
+
+## <a name="type-inference-in-lambda-expressions"></a>Определение типа в лямбда-выражениях
+
+При написании лямбда-выражений обычно не требуется указывать тип входных параметров, так как компилятор может выводить этот тип на основе тела лямбда-выражения, типов параметров и других факторов, как описано в спецификации языка C#. Для большинства стандартных операторов запросов первой входное значение имеет тип элементов в исходной последовательности. При запросе `IEnumerable<Customer>` входная переменная считается объектом `Customer`, а это означает, что у вас есть доступ к его методам и свойствам.  
+
+```csharp
+customers.Where(c => c.City == "London");
+```
+
+Общие правила определения типа для лямбда-выражений формулируются следующим образом:
+
+- лямбда-выражение должно содержать то же число параметров, что и тип делегата;
+
+- каждый входной параметр в лямбда-выражении должен быть неявно преобразуемым в соответствующий параметр делегата;
+
+- возвращаемое значение лямбда-выражения (если таковое имеется) должно быть неявно преобразуемым в возвращаемый тип делегата.
   
- Общие правила для лямбда-выражений формулируются следующим образом:  
-  
--   лямбда-выражение должно содержать то же число параметров, что и тип делегата;  
-  
--   каждый входной параметр в лямбда-выражении должен быть неявно преобразуемым в соответствующий параметр делегата;  
-  
--   возвращаемое значение лямбда-выражения (если таковое имеется) должно быть неявно преобразуемым в возвращаемый тип делегата.  
-  
- Обратите внимание: лямбда-выражения сами по себе не имеют типа, поскольку в системе общих типов изначально отсутствует понятие "лямбда-выражения". Однако иногда бывает удобно оперировать понятием "типа" применительно к лямбда-выражениям. При этом под типом понимается тип делегата или тип <xref:System.Linq.Expressions.Expression> , в который преобразуется лямбда-выражение.  
-  
+Обратите внимание, что у лямбда-выражений нет типа, так как в системе общих типов изначально отсутствует такое понятие, как лямбда-выражения. Но применительно к лямбда-выражениям иногда бывает удобно оперировать понятием типа. При этом под типом понимается тип делегата или тип <xref:System.Linq.Expressions.Expression> , в который преобразуется лямбда-выражение.
+
 ## <a name="variable-scope-in-lambda-expressions"></a>Область действия переменной в лямбда-выражениях
 
- Лямбда-выражения могут ссылаться на *внешние переменные* (см. раздел [Анонимные методы](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)), находящиеся в области метода, в котором определена лямбда-функция, или в области типа, который содержит лямбда-выражение. Переменные, полученные таким способом, сохраняются для использования в лямбда-выражениях, даже если бы в ином случае они оказались за границами области действия и уничтожились сборщиком мусора. Внешняя переменная должна быть определенным образом присвоена, прежде чем она сможет использоваться в лямбда-выражениях. В следующем примере демонстрируются эти правила.  
-  
-```csharp  
-delegate bool D();  
-delegate bool D2(int i);  
-  
-class Test  
-{  
-    D del;  
-    D2 del2;  
-    public void TestMethod(int input)  
-    {  
-        int j = 0;  
-        // Initialize the delegates with lambda expressions.  
-        // Note access to 2 outer variables.  
-        // del will be invoked within this method.  
-        del = () => { j = 10;  return j > input; };  
-  
-        // del2 will be invoked after TestMethod goes out of scope.  
-        del2 = (x) => {return x == j; };  
-  
-        // Demonstrate value of j:  
-        // Output: j = 0   
-        // The delegate has not been invoked yet.  
-        Console.WriteLine("j = {0}", j);        // Invoke the delegate.  
-        bool boolResult = del();  
-  
-        // Output: j = 10 b = True  
-        Console.WriteLine("j = {0}. b = {1}", j, boolResult);  
-    }  
-  
-    static void Main()  
-    {  
-        Test test = new Test();  
-        test.TestMethod(5);  
-  
-        // Prove that del2 still has a copy of  
-        // local variable j from TestMethod.  
-        bool result = test.del2(10);  
-  
-        // Output: True  
-        Console.WriteLine(result);  
-  
-        Console.ReadKey();  
-    }  
-}  
-```  
-  
- Следующие правила применимы к области действия переменной в лямбда-выражениях.  
-  
--   Захваченная переменная не будет уничтожена сборщиком мусора до тех пор, пока делегат, который на нее ссылается, не перейдет в статус подлежащего уничтожению при сборке мусора.  
-  
--   Переменные, вводимые в лямбда-выражении, невидимы во внешнем методе.  
-  
--   Лямбда-выражение не может непосредственно захватывать параметры `in`, `ref` или `out` из метода, в котором они находятся.  
-  
--   Оператор return в лямбда-выражении не вызывает возвращение значения внешним методом.  
-  
--   Лямбда-выражение не может содержать оператора `goto` , оператора `break` или оператора `continue` внутри лямбда-функции, если целевой объект перехода находится вне блока. Если целевой объект находится внутри блока, то наличие оператора перехода за пределами лямбда-функции также будет ошибкой.  
-  
+Лямбда-выражения могут ссылаться на *внешние переменные* (см. раздел [Анонимные методы](anonymous-methods.md)), находящиеся в области метода, в котором определено лямбда-выражение, или области типа, который содержит лямбда-выражение. Переменные, полученные таким способом, сохраняются для использования в лямбда-выражениях, даже если бы в ином случае они оказались за границами области действия и уничтожились сборщиком мусора. Внешняя переменная должна быть определенным образом присвоена, прежде чем она сможет использоваться в лямбда-выражениях. В следующем примере демонстрируются эти правила.
+
+[!code-csharp[variable scope](~/samples/snippets/csharp/programming-guide/lambda-expressions/VariableScopeWithLambdas.cs#VariableScope)]
+
+Следующие правила применимы к области действия переменной в лямбда-выражениях.  
+
+- Захваченная переменная не будет уничтожена сборщиком мусора до тех пор, пока делегат, который на нее ссылается, не перейдет в статус подлежащего уничтожению при сборке мусора.
+
+- Переменные, представленные в лямбда-выражении, невидимы в заключающем методе.
+
+- Лямбда-выражение не может непосредственно захватывать параметры [in](../../language-reference/keywords/in-parameter-modifier.md), [ref](../../language-reference/keywords/ref.md) или [out](../../language-reference/keywords/out-parameter-modifier.md) из заключающего метода.
+
+- Оператор [return](../../language-reference/keywords/return.md) в лямбда-выражении не вызывает возврат значения заключающим методом.
+
+- Лямбда-выражение не может содержать операторы [goto](../../language-reference/keywords/goto.md), [break](../../language-reference/keywords/break.md) или [continue](../../language-reference/keywords/continue.md), если целевой объект этого оператора перехода находится за пределами блока лямбда-выражения. Если целевой объект находится внутри блока, использование оператора перехода за пределами лямбда-выражения также будет ошибкой.
+
 ## <a name="c-language-specification"></a>Спецификация языка C#
 
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
+Дополнительные сведения см. в разделе [Выражения анонимных функций](~/_csharplang/spec/expressions.md#anonymous-function-expressions) в [спецификации языка C#](~/_csharplang/spec/introduction.md).
+
 ## <a name="featured-book-chapter"></a>Важная глава книги
 
- [Делегаты, события и лямбда-выражения](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518994%28v=orm.10%29) в [справочном руководстве по C# 3.0, третье издание. Более 250 решений для программистов на C# 3.0](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518995%28v=orm.10%29)  
+[Делегаты, события и лямбда-выражения](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518994%28v=orm.10%29) в [справочном руководстве по C# 3.0, третье издание. Более 250 решений для программистов на C# 3.0](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518995%28v=orm.10%29)  
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Встроенный язык запросов LINQ](../../../csharp/programming-guide/concepts/linq/index.md)
-- [Анонимные методы](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)
-- [is](../../../csharp/language-reference/keywords/is.md)
-- [Деревья выражений](../../../csharp/programming-guide/concepts/expression-trees/index.md)
+- [Руководство по программированию на C#](../index.md)
+- [Встроенный язык запросов LINQ](../concepts/linq/index.md)
+- [Анонимные методы](anonymous-methods.md)
+- [Деревья выражений](../concepts/expression-trees/index.md)
+- [Локальные функции в сравнении с лямбда-выражениями](../../local-functions-vs-lambdas.md)
+- [Неявно типизированные лямбда-выражения](../../implicitly-typed-lambda-expressions.md)
 - [Примеры C# в Visual Studio 2008 (см. файлы примеров запросов LINQ и программу XQuery)](https://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)
 - [Рекурсивные лямбда-выражения](https://blogs.msdn.microsoft.com/madst/2007/05/11/recursive-lambda-expressions/)

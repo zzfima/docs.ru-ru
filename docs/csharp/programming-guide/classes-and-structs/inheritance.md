@@ -10,12 +10,12 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-ms.openlocfilehash: a6e9e095caaa8c0e4330df3f766dbef927c5acd2
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 9ad7253fb9efc891e1f0fdea118e1fe7bde6a857
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202357"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58125919"
 ---
 # <a name="inheritance-c-programming-guide"></a>Наследование (Руководство по программированию на C#)
 
@@ -30,8 +30,7 @@ ms.locfileid: "57202357"
   
  На следующем рисунке показан класс `WorkItem`, представляющий рабочий элемент в бизнес-процессе. Как и другие классы, он является производным от <xref:System.Object?displayProperty=nameWithType> и наследует все его методы. В `WorkItem` имеется пять собственных членов. К ним относятся конструктор, поскольку конструкторы не наследуются. Класс `ChangeRequest` наследует от `WorkItem` и представляет конкретный вид рабочего элемента. `ChangeRequest` добавляет еще два члена к членам, унаследованным от `WorkItem` и <xref:System.Object>. Он должен добавить собственный конструктор, и он также добавляет `originalItemID`. Свойство `originalItemID` позволяет `ChangeRequest` связать экземпляр с исходным объектом `WorkItem`, к которому применен запрос на изменение.  
   
- ![Наследование классов](../../../csharp/programming-guide/classes-and-structs/media/class_inheritance.png "Class_Inheritance")  
-Наследование классов  
+ ![Схема, показывающая наследование классов](./media/inheritance/class-inheritance-diagram.png)  
   
  В следующем примере показано, как выражаются в C# отношения между классами, продемонстрированные на предыдущем рисунке. В примере также показано, как `WorkItem` переопределяет виртуальный метод <xref:System.Object.ToString%2A?displayProperty=nameWithType> и как класс `ChangeRequest` наследует `WorkItem` реализацию метода.  
   

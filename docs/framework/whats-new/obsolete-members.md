@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f63d5213ac8544b41d79ccb78d96b232c7c66936
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c5920935637393f8cfd11aed85a600dc28d49011
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635979"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58038184"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>Устаревшие члены в платформе .NET Framework
-В таблицах этой статьи перечислены устаревшие в .NET Framework 4.5 и более поздних версий члены типов, упорядоченные по сборкам. Перейдите по следующим ссылкам, чтобы просмотреть список устаревших членов и рекомендованных альтернативных вариантов в каждой сборке. В этом разделе не перечисляются члены устаревших типов. Список устаревших типов см. в разделе [Устаревшие типы](../../../docs/framework/whats-new/obsolete-types.md).  
+В таблицах этой статьи перечислены устаревшие в .NET Framework 4.5 и более поздних версий члены типов, упорядоченные по сборкам. Перейдите по следующим ссылкам, чтобы просмотреть список устаревших членов и рекомендованных альтернативных вариантов в каждой сборке. В этом разделе не перечисляются члены устаревших типов. Список устаревших типов см. в разделе [Устаревшие типы](obsolete-types.md).  
   
 -   [Устаревшие члены в системных сборках](#SystemMembers)  
   
@@ -609,7 +609,7 @@ ms.locfileid: "54635979"
 |<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint?displayProperty=nameWithType>|<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.TransportSettings%2A>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Свойство <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.TransportSettings%2A> является устаревшим. Чтобы задать свойства транспорта, рассмотрите возможность использования <xref:System.ServiceModel.Channels.UdpTransportBindingElement?displayProperty=nameWithType>.|  
   
 <a name="datavisualization"></a>   
-### <a name="assembly-systemwebdatavisualizationdll"></a>Сборка: System.Web.DataVisualization.dll.  
+### <a name="assembly-systemwebdatavisualizationdll"></a>Сборка: System.Web.DataVisualization.dll  
   
 |Тип|Член|Сообщение|  
 |----------|------------|-------------|  
@@ -651,7 +651,7 @@ ms.locfileid: "54635979"
 |<xref:System.Web.UI.WebControls.Xml?displayProperty=nameWithType>|<xref:System.Web.UI.WebControls.Xml.Document%2A>|Взамен рекомендуется использовать свойство <xref:System.Web.UI.WebControls.Xml.XPathNavigator%2A?displayProperty=nameWithType>. Чтобы создать <xref:System.Xml.XPath.XPathDocument?displayProperty=nameWithType>, следует вначале создать <xref:System.Xml.XPath.XPathDocument.CreateNavigator%2A?displayProperty=nameWithType>, а затем вызвать <xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>.|  
   
 <a name="dynamicdata"></a>   
-### <a name="assembly-systemwebdynamicdatadll"></a>Сборка: System.Web.DynamicData.dll.  
+### <a name="assembly-systemwebdynamicdatadll"></a>Сборка: System.Web.DynamicData.dll  
   
 |Тип|Член|Сообщение|  
 |----------|------------|-------------|  
@@ -731,7 +731,7 @@ ms.locfileid: "54635979"
  В следующих таблицах перечислены устаревшие члены в системных сборках корпорации Microsoft. Это сборки специального назначения, включающие сборки для конкретного языка (например, Microsoft.VisualBasic.dll) или систему построения (например, Microsoft.Build.Engine.dll).  
   
 <a name="IEHost"></a>   
-### <a name="assembly-iehostdll-and-ieexecexe"></a>Сборка: IEHost.dll и IEExec.exe  
+### <a name="assembly-iehostdll-and-ieexecexe"></a>Сборка: IEHost.dll and IEExec.exe  
  Сборки IEHost.dll и IEExec.exe удалены из платформы .NET Framework. Все их типы и члены устарели и не поддерживаются в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Эти сборки использовались для размещения элементов управления Windows Forms и для запуска исполняемых файлов в Internet Explorer. Взамен этой технологии рекомендуется использовать ClickOnce, XAML-приложения браузера (XBAP) и Microsoft Silverlight.  
   
 <a name="isymwrapper"></a>   
@@ -799,5 +799,5 @@ ms.locfileid: "54635979"
 |<xref:Microsoft.VisualBasic.MyServices.RegistryProxy?displayProperty=nameWithType>|<xref:Microsoft.VisualBasic.MyServices.RegistryProxy.DynData%2A>|Раздел реестра `DynData` применим только на платформе Win9x, для которой эта версия .NET Framework не предназначена. Вместо этого используйте раздел реестра `PerformanceData`. В одной из будущих версий платформы это свойство будет удалено.|  
   
 ## <a name="see-also"></a>См. также
-- [Устаревшие классы библиотеки классов](../../../docs/framework/whats-new/whats-obsolete.md)
-- [Устаревшие типы](../../../docs/framework/whats-new/obsolete-types.md)
+- [Устаревшие классы библиотеки классов](whats-obsolete.md)
+- [Устаревшие типы](obsolete-types.md)
