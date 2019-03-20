@@ -7,29 +7,29 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView control [WPF]
 ms.assetid: fc3784a7-c9e8-4e2b-909a-7af37cef9b43
-ms.openlocfilehash: 7de612992c7ccab57259146e8b8fa294e503b733
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c90849c27f7bbef2338ef255350a7dccd40c99e3
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376225"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58186056"
 ---
-# <a name="listview"></a><span data-ttu-id="a5f95-102">ListView</span><span class="sxs-lookup"><span data-stu-id="a5f95-102">ListView</span></span>
-<span data-ttu-id="a5f95-103"><xref:System.Windows.Controls.ListView> Управления предоставляет инфраструктуру для отображения набора элементов данных в различных макетах или представлениях.</span><span class="sxs-lookup"><span data-stu-id="a5f95-103">The <xref:System.Windows.Controls.ListView> control provides the infrastructure to display a set of data items in different layouts or views.</span></span>  
+# <a name="listview"></a><span data-ttu-id="fd2bb-102">ListView</span><span class="sxs-lookup"><span data-stu-id="fd2bb-102">ListView</span></span>
+<span data-ttu-id="fd2bb-103"><xref:System.Windows.Controls.ListView> Управления предоставляет инфраструктуру для отображения набора элементов данных в различных макетах или представлениях.</span><span class="sxs-lookup"><span data-stu-id="fd2bb-103">The <xref:System.Windows.Controls.ListView> control provides the infrastructure to display a set of data items in different layouts or views.</span></span>  
   
- <span data-ttu-id="a5f95-104">На следующем рисунке показано <xref:System.Windows.Controls.ListView>.</span><span class="sxs-lookup"><span data-stu-id="a5f95-104">The following illustration shows a <xref:System.Windows.Controls.ListView>.</span></span>  
+ <span data-ttu-id="fd2bb-104">На следующем рисунке показано <xref:System.Windows.Controls.ListView>.</span><span class="sxs-lookup"><span data-stu-id="fd2bb-104">The following illustration shows a <xref:System.Windows.Controls.ListView>.</span></span>  
   
- <span data-ttu-id="a5f95-105">![ListView с выходными данными GridView](./media/listviewgridview.JPG "ListViewGridView")</span><span class="sxs-lookup"><span data-stu-id="a5f95-105">![ListView with GridView output](./media/listviewgridview.JPG "ListViewGridView")</span></span>  
+ ![Снимок экрана с ListView с выводом GridView.](./media/gridview-overview/listview-gridview-output.jpg)  
   
-## <a name="in-this-section"></a><span data-ttu-id="a5f95-106">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="a5f95-106">In This Section</span></span>  
- [<span data-ttu-id="a5f95-107">Разделы общих сведений</span><span class="sxs-lookup"><span data-stu-id="a5f95-107">Overviews</span></span>](listview-overviews.md)  
- [<span data-ttu-id="a5f95-108">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="a5f95-108">How-to Topics</span></span>](listview-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="fd2bb-106">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="fd2bb-106">In This Section</span></span>  
+ [<span data-ttu-id="fd2bb-107">Разделы общих сведений</span><span class="sxs-lookup"><span data-stu-id="fd2bb-107">Overviews</span></span>](listview-overviews.md)  
+ [<span data-ttu-id="fd2bb-108">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="fd2bb-108">How-to Topics</span></span>](listview-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="a5f95-109">Ссылка</span><span class="sxs-lookup"><span data-stu-id="a5f95-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="fd2bb-109">Ссылка</span><span class="sxs-lookup"><span data-stu-id="fd2bb-109">Reference</span></span>  
  <xref:System.Windows.Controls.ListView>  
   <xref:System.Windows.Controls.ListViewItem>  
   <xref:System.Windows.Controls.GridView>  
   
-## <a name="related-sections"></a><span data-ttu-id="a5f95-110">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="a5f95-110">Related Sections</span></span>  
- [<span data-ttu-id="a5f95-111">Общие сведения о привязке данных</span><span class="sxs-lookup"><span data-stu-id="a5f95-111">Data Binding Overview</span></span>](../data/data-binding-overview.md)  
-  [<span data-ttu-id="a5f95-112">Общие сведения о шаблонах данных</span><span class="sxs-lookup"><span data-stu-id="a5f95-112">Data Templating Overview</span></span>](../data/data-templating-overview.md)
+## <a name="related-sections"></a><span data-ttu-id="fd2bb-110">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="fd2bb-110">Related Sections</span></span>  
+ [<span data-ttu-id="fd2bb-111">Общие сведения о привязке данных</span><span class="sxs-lookup"><span data-stu-id="fd2bb-111">Data Binding Overview</span></span>](../data/data-binding-overview.md)  
+  [<span data-ttu-id="fd2bb-112">Общие сведения о шаблонах данных</span><span class="sxs-lookup"><span data-stu-id="fd2bb-112">Data Templating Overview</span></span>](../data/data-templating-overview.md)
