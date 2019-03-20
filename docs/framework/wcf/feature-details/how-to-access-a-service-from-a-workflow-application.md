@@ -2,12 +2,12 @@
 title: 'Как выполнить: получить доступ к службе из приложения рабочего процесса'
 ms.date: 03/30/2017
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
-ms.openlocfilehash: 5ce2c4839d4b59fdc0f5fcd55ffe91d3adbcadcc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 790f8f24ed8a6c3b7592fb8e78befc8ee5e2214d
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653701"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185432"
 ---
 # <a name="how-to-access-a-service-from-a-workflow-application"></a>Как выполнить: получить доступ к службе из приложения рабочего процесса
 В этом разделе описывается вызов службы рабочего процесса из консольного приложения рабочего процесса. Он зависит от выполнения [как: Создание службы рабочего процесса с действиями обмена сообщениями](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) раздела. Несмотря на то, что в этом разделе описывается вызов службы рабочего процесса в приложении рабочего процесса, можно использовать те же методы для вызова любой службы Windows Communication Foundation (WCF) из приложения рабочего процесса.
@@ -20,7 +20,7 @@ ms.locfileid: "54653701"
 
 3.  Щелкните правой кнопкой мыши **MyWFService** решение в **обозревателе решений** и выберите **добавить**, **новый проект**. Выберите **рабочего процесса** в **установленные шаблоны** и **консольное приложение рабочего процесса** в списке типов проектов. Назовите проект MyWFClient и используйте расположение по умолчанию, как показано на следующем рисунке.
 
-     ![Добавить диалоговое окно нового проекта](../../../../docs/framework/wcf/feature-details/media/addnewprojectdlg.JPG "AddNewProjectDlg")
+     ![Диалоговое окно "Добавить новый проект"](./media/how-to-access-a-service-from-a-workflow-application/add-new-project-dialog.jpg)
 
      Нажмите кнопку **ОК** кнопку, чтобы закрыть **добавить диалоговое окно нового проекта**.
 
@@ -28,37 +28,37 @@ ms.locfileid: "54653701"
 
 5.  Нажмите клавишу **Ctrl**+**F5** для построения и запуска службы. Как и раньше, будет запущен ASP.NET Development Server, а в обозревателе Internet Explorer откроется страница справки WCF. Запомните URI этой страницы, поскольку его будет необходимо использовать в следующем шаге.
 
-     ![IE отображение страница справки WCF и URI](../../../../docs/framework/wcf/feature-details/media/iewcfhelppagewuri.JPG "IEWCFHelpPageWURI")
+     ![Internet Explorer со страницы справки WCF и URI](./media/how-to-access-a-service-from-a-workflow-application/ie-wcf-help-page-uri.jpg)
 
 6.  Щелкните правой кнопкой мыши **MyWFClient** в проекте **обозревателе решений** и выберите **добавить** > **ссылки на службу**. Нажмите кнопку **Discover** кнопку для поиска текущего решения для всех служб. Нажмите треугольник рядом с Service1.xamlx в списке «Службы». Нажмите треугольник рядом с Service1, чтобы открыть список контрактов, реализованных службой Service1. Разверните **Service1** узел в **служб** списка. Операцию Echo отображается в **операций** так, как показано на следующем рисунке.
 
-     ![Добавление диалога ссылки на службу](../../../../docs/framework/wcf/feature-details/media/addservicereference.JPG "AddServiceReference")
+     ![Диалоговое окно "Добавить ссылку на службу"](./media/how-to-access-a-service-from-a-workflow-application/add-service-reference.jpg)
 
      Оставьте пространство имен по умолчанию и нажмите кнопку **ОК** Отклонить **Add Service Reference** диалоговое окно. Отобразится следующее диалоговое окно.
 
-     ![Диалоговое окно с уведомлением добавить службы ссылку](../../../../docs/framework/wcf/feature-details/media/asrdlg.JPG "ASRDlg")
+     ![Уведомление о ссылке на службу диалоговое окно добавления](./media/how-to-access-a-service-from-a-workflow-application/add-service-reference-dialog.jpg)
 
      Нажмите кнопку **ОК** для закрытия диалога. Затем, чтобы выполнить сборку решения, нажмите сочетание клавиш CTRL+SHIFT+B. Обратите внимание, что на панели элементов был добавлен новый раздел называется **MyWFClient.ServiceReference1.Activities**. Разверните этот раздел и обратите внимание на действие с именем Echo, которое было добавлено, как показано на следующем рисунке.
 
-     ![Вывести на экран в области элементов](../../../../docs/framework/wcf/feature-details/media/echoactivity.JPG "EchoActivity")
+     ![Вывод на экран в области элементов](./media/how-to-access-a-service-from-a-workflow-application/echo-activity-toolbox.jpg)
 
 7.  Перетащите действие <xref:System.Activities.Statements.Sequence> в область конструктора. Под **поток управления** разделе области элементов.
 
 8.  С помощью <xref:System.Activities.Statements.Sequence> щелкните действие в фокусе, **переменных** ссылку и добавьте строковую переменную с именем `inString`. Присвойте переменной значение по умолчанию `"Hello, world"` а также строковую переменную с именем `outString` как показано на следующей схеме.
 
-     ![Добавление переменной](../../../../docs/framework/wcf/feature-details/media/instringvar.JPG "inStringVar")
+     ![Добавление переменной inString](./media/how-to-access-a-service-from-a-workflow-application/add-instring-variable.jpg)
 
 9. Перетаскивание **Echo** действия в <xref:System.Activities.Statements.Sequence>. В окне свойств привязки `inMsg` аргумент `inString` переменной и `outMsg` аргумент `outString` переменной, как показано на следующем рисунке. При этом операции будет передано значение переменной `inString`, а затем будет принято возвращаемое значение и помещено в переменную `outString`.
 
-     ![Привязка аргументов к переменным](../../../../docs/framework/wcf/feature-details/media/argumentbind.JPG "ArgumentBind")
+     ![Привязка аргументов к переменным](./media/how-to-access-a-service-from-a-workflow-application/bind-arguments-variables.jpg)
 
 10. Перетаскивание **WriteLine** действия ниже **Echo** действия, чтобы отобразить строку, возвращаемую вызовом службы. **WriteLine** действие находится в **примитивы** на панели элементов. Привязать **текст** аргумент **WriteLine** действие `outString` переменных, введя `outString` в текстовое поле на **WriteLine** действия. После этого рабочий процесс должен выглядеть так, как показано на следующем рисунке.
 
-     ![Полный рабочий процесс клиента](../../../../docs/framework/wcf/feature-details/media/completeclientwf.JPG "CompleteClientWF")
+     ![Полный рабочий процесс клиента](./media/how-to-access-a-service-from-a-workflow-application/complete-client-workflow.jpg)
 
 11. Щелкните правой кнопкой мыши решение MyWFService и выберите **назначить запускаемые проекты...** . Выберите **несколько запускаемых проектов** "переключатель" и выберите **запустить** для каждого проекта в **действие** столбца, как показано на следующем рисунке.
 
-     ![Параметры запускаемых проектов](../../../../docs/framework/wcf/feature-details/media/startupprojects.JPG "StartupProjects")
+     ![Параметры запускаемых проектов](./media/how-to-access-a-service-from-a-workflow-application/startup-project-options.jpg)
 
 12. Используйте сочетание клавиш Ctrl+F5 для запуска службы и клиента. ASP.NET Development Server размещает службу, Internet Explorer откроется страница справки WCF и клиентское приложение рабочего процесса запускается в окне консоли и отображает строки, возвращенные из службы («Hello, world»).
 

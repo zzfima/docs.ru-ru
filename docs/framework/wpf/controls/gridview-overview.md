@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ListView controls [WPF], GridView view mode
 - controls [WPF], ListView
 ms.assetid: b2d02267-32b3-40ce-8e9f-06972d8749d9
-ms.openlocfilehash: 37332e529992f963f576a273dac917d671a3c198
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9457430ab61681ad154aba98d72850f19d30280d
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360203"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185445"
 ---
 # <a name="gridview-overview"></a>Общие сведения о GridView
 <xref:System.Windows.Controls.GridView> режим — один из режимов представления для <xref:System.Windows.Controls.ListView> элемента управления. <xref:System.Windows.Controls.GridView> Класса и его вспомогательные классы позволяют вам и пользователям для просмотра коллекций элементов в таблице, в качестве интерактивных заголовков столбцов обычно используются кнопки. В данном разделе представлены <xref:System.Windows.Controls.GridView> класса и возможности его использования.  
@@ -26,10 +26,8 @@ ms.locfileid: "57360203"
 >  Кнопочные элементы управления, <xref:System.Windows.Controls.GridView> использует для заголовков столбцов являются производными от <xref:System.Windows.Controls.Primitives.ButtonBase>.  
   
  На следующем рисунке показано <xref:System.Windows.Controls.GridView> представление <xref:System.Windows.Controls.ListView> содержимого.  
-  
- **Представление GridView содержимого ListView**  
-  
- ![Стилизированный ListView](./media/styledlistview.PNG "StyledListView")  
+    
+ ![Снимок экрана: представление GridView содержимого ListView.](./media/gridview-overview/styled-listview-content.png)  
   
  <xref:System.Windows.Controls.GridView> столбцы представляются <xref:System.Windows.Controls.GridViewColumn> объекты, размер которых может автоматически в соответствии с содержимым. При необходимости можно явно задать <xref:System.Windows.Controls.GridViewColumn> ширину. Можно изменить размеры столбцов, перетащив границу между заголовками столбцов. Также динамически можно добавлять, удалять, заменять и изменять порядок столбцов, так как эта функция встроена в <xref:System.Windows.Controls.GridView>. Тем не менее <xref:System.Windows.Controls.GridView> нельзя напрямую обновлять данные, он отображает.  
   
@@ -37,11 +35,9 @@ ms.locfileid: "57360203"
   
  [!code-xaml[ListViewCode#ListViewEmployee](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#listviewemployee)]  
   
- На следующем рисунке показана таблица, которая создается в предыдущем примере.  
-  
- **Объект GridView, отображающий данные из ItemsSource**  
-  
- ![ListView с выходными данными GridView](./media/listviewgridview.JPG "ListViewGridView")  
+ На следующем рисунке показана таблица, которая создается в предыдущем примере. Элемент GridView отображает данные из ItemsSource объекта:
+    
+ ![Снимок экрана с ListView с выводом GridView.](./media/gridview-overview/listview-gridview-output.jpg)  
   
 <a name="GridViewLayoutandStyle"></a>   
 ## <a name="gridview-layout-and-style"></a>Макет и стиль GridView  

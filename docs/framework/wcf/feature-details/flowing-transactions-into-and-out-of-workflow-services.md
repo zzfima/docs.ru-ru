@@ -2,12 +2,12 @@
 title: Направление транзакций в службы рабочего процесса и из них
 ms.date: 03/30/2017
 ms.assetid: 03ced70e-b540-4dd9-86c8-87f7bd61f609
-ms.openlocfilehash: 4a5cde045c6c676c2efc694c67fd049b6eb611b2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 272e188b448864450621665f80ea0ab8b0037b37
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708640"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185692"
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>Направление транзакций в службы рабочего процесса и из них
 Службы и клиенты рабочих процессов могут использоваться в транзакциях.  Чтобы сделать операцию службы частью внешней транзакции, поместите действие <xref:System.ServiceModel.Activities.Receive> в действие <xref:System.ServiceModel.Activities.TransactedReceiveScope>. Все вызовы, выполненные действием <xref:System.ServiceModel.Activities.Send> или <xref:System.ServiceModel.Activities.SendReply> в области <xref:System.ServiceModel.Activities.TransactedReceiveScope>, также будут выполнены во внешней транзакции. Клиентское приложение рабочего процесса может создавать внешнюю транзакцию с помощью действия <xref:System.Activities.Statements.TransactionScope> и вызывать операции службы с помощью внешних транзакций. В данном разделе описывается создание службы рабочего процесса и клиента рабочего процесса, которые участвуют в транзакции.  
@@ -78,21 +78,21 @@ ms.locfileid: "54708640"
   
 1.  Добавить новую службу рабочего процесса WCF, вызывается `WorkflowService` для `Common` проекта. Для этого щелкните правой кнопкой `Common` проекта, выберите **добавить**, **новый элемент...** Выберите **рабочего процесса** под **установленные шаблоны** и выберите **службы WCF Workflow Service**.  
   
-     ![Добавление службы рабочего процесса](../../../../docs/framework/wcf/feature-details/media/addwfservice.JPG "AddWFService")  
+     ![Добавление службы рабочего процесса](./media/flowing-transactions-into-and-out-of-workflow-services/add-workflow-service.jpg)  
   
 2.  Удалите заданные по умолчанию действия `ReceiveRequest` и `SendResponse`.  
   
 3.  Перетащите действие с именем <xref:System.Activities.Statements.WriteLine> в `Sequential Service`. Задайте значение для свойства текста `"Workflow Service starting ..."`, как показано в следующем примере.  
   
-     ![Добавление действия WriteLine](../../../../docs/framework/wcf/feature-details/media/addwriteline.JPG "AddWriteLine")  
+     ! [Добавление действия WriteLine activity(./media/flowing-transactions-into-and-out-of-workflow-services/add-writeline-sequential-service.jpg) последовательная служба  
   
 4.  Перетащите действие <xref:System.ServiceModel.Activities.TransactedReceiveScope> и поместите его после действия <xref:System.Activities.Statements.WriteLine>. <xref:System.ServiceModel.Activities.TransactedReceiveScope> Действия можно найти в **Messaging** раздел **элементов**. <xref:System.ServiceModel.Activities.TransactedReceiveScope> Действие состоит из двух разделов **запроса** и **текст**. **Запроса** раздел содержит <xref:System.ServiceModel.Activities.Receive> действия. **Текст** раздел содержит действия, которые необходимо выполнить в рамках транзакции, после получения сообщения.  
   
-     ![Добавление действия TransactedReceiveScope](../../../../docs/framework/wcf/feature-details/media/trs.JPG "TRS")  
+     ![Добавление действия TransactedReceiveScope](./media/flowing-transactions-into-and-out-of-workflow-services/transactedreceivescope-activity.jpg)  
   
 5.  Выберите <xref:System.ServiceModel.Activities.TransactedReceiveScope> действие и нажмите кнопку **переменных** кнопки. Добавьте следующие переменные.  
   
-     ![Добавление переменных в transactedreceivescope](../../../../docs/framework/wcf/feature-details/media/trsvariables.JPG "TRSVariables")  
+     ![Добавление переменных в transactedreceivescope](./media/flowing-transactions-into-and-out-of-workflow-services/add-transactedreceivescope-variables.jpg)  
   
     > [!NOTE]
     >  Можно удалить переменную данных, заданную по умолчанию. Также можно использовать существующую переменную обработки.  
@@ -107,11 +107,11 @@ ms.locfileid: "54708640"
   
      Рабочий процесс должен выглядеть так:  
   
-     ![Добавление действия Receive](../../../../docs/framework/wcf/feature-details/media/serviceaddreceive.JPG "ServiceAddReceive")  
+     ![Добавление действия Receive](./media/flowing-transactions-into-and-out-of-workflow-services/add-receive-activity.jpg)  
   
 7.  Нажмите кнопку **определить...**  ссылку в <xref:System.ServiceModel.Activities.Receive> действия и задайте следующие параметры:  
   
-     ![Задание параметров сообщения для действия receive](../../../../docs/framework/wcf/feature-details/media/receivemessagesettings.JPG "ReceiveMessageSettings")  
+     ![Задание параметров сообщения для действия Receive](./media/flowing-transactions-into-and-out-of-workflow-services/receive-message-settings.jpg)  
   
 8.  Перетащите действие <xref:System.Activities.Statements.Sequence> в разделе «Текст» <xref:System.ServiceModel.Activities.TransactedReceiveScope>. В действии <xref:System.Activities.Statements.Sequence> перетащите два действия <xref:System.Activities.Statements.WriteLine> и настройте свойства <xref:System.Activities.Statements.WriteLine.Text%2A>, как показано в следующей таблице.  
   
@@ -122,11 +122,11 @@ ms.locfileid: "54708640"
   
      После этого рабочий процесс должен выглядеть так:  
   
-     ![Добавление действий WriteLine](../../../../docs/framework/wcf/feature-details/media/afteraddingwritelines.JPG "AfterAddingWriteLines")  
+     ![Последовательность после добавления действий WriteLine](./media/flowing-transactions-into-and-out-of-workflow-services/after-adding-writelines.jpg)  
   
 9. Перетаскивание `PrintTransactionInfo` действия после второго <xref:System.Activities.Statements.WriteLine> действия в **текст** в <xref:System.ServiceModel.Activities.TransactedReceiveScope> действия.  
   
-     ![После добавления PrintTransactionInfo](../../../../docs/framework/wcf/feature-details/media/afteraddingprinttransactioninfo.JPG "AfterAddingPrintTransactionInfo")  
+     ![Последовательность после добавления PrintTransactionInfo](./media/flowing-transactions-into-and-out-of-workflow-services/after-adding-printtransactioninfo.jpg )  
   
 10. Перетащите действие <xref:System.Activities.Statements.Assign>, поместите его после действия `PrintTransactionInfo` и задайте свойства в соответствии со следующей таблицей.  
   
@@ -139,11 +139,11 @@ ms.locfileid: "54708640"
   
      После этого рабочий процесс должен выглядеть так:  
   
-     ![После добавления Assign и WriteLine](../../../../docs/framework/wcf/feature-details/media/afteraddingsbrwriteline.JPG "AfterAddingSBRWriteLine")  
+     ![После добавления Assign и WriteLine](./media/flowing-transactions-into-and-out-of-workflow-services/after-adding-sbr-writeline.jpg)  
   
 12. Щелкните правой кнопкой мыши <xref:System.ServiceModel.Activities.Receive> действие и выберите **создать SendReply** и вставьте его после последнего <xref:System.Activities.Statements.WriteLine> действия. Нажмите кнопку **определить...**  ссылку в `SendReplyToReceive` действия и задайте следующие параметры.  
   
-     ![Параметры сообщения ответа](../../../../docs/framework/wcf/feature-details/media/replymessagesettings.JPG "ReplyMessageSettings")  
+     ![Параметры ответного сообщения](./media/flowing-transactions-into-and-out-of-workflow-services/reply-message-settings.jpg)  
   
 13. Путем перетаскивания <xref:System.Activities.Statements.WriteLine> действия после `SendReplyToReceive` действие и набор имеет <xref:System.Activities.Statements.WriteLine.Text%2A> значение «Service: Ответ.»  
   
@@ -151,23 +151,23 @@ ms.locfileid: "54708640"
   
      Завершенный рабочий процесс службы должен выглядеть следующим образом:  
   
-     ![Полный рабочий процесс службы](../../../../docs/framework/wcf/feature-details/media/servicecomplete.jpg "ServiceComplete")  
+     ![Полный рабочий процесс службы](./media/flowing-transactions-into-and-out-of-workflow-services/service-complete-workflow.jpg)  
   
 ### <a name="implement-the-workflow-client"></a>Реализуйте клиент рабочего процесса  
   
 1.  Добавьте новое приложение WCF Workflow с именем `WorkflowClient` к проекту `Common`. Для этого щелкните правой кнопкой `Common` проекта, выберите **добавить**, **новый элемент...** Выберите **рабочего процесса** под **установленные шаблоны** и выберите **действия**.  
   
-     ![Добавление проекта действия](../../../../docs/framework/wcf/feature-details/media/addactivity.JPG "AddActivity")  
+     ![Добавление проекта действия](./media/flowing-transactions-into-and-out-of-workflow-services/add-activity-project.jpg)  
   
 2.  Перетащите действие <xref:System.Activities.Statements.Sequence> в область конструктора.  
   
 3.  В действии <xref:System.Activities.Statements.Sequence> перетащите действие <xref:System.Activities.Statements.WriteLine> и задайте для его свойства <xref:System.Activities.Statements.WriteLine.Text%2A> значение `"Client: Workflow starting"`. После этого рабочий процесс должен выглядеть так:  
   
-     ![Добавление действия WriteLine](../../../../docs/framework/wcf/feature-details/media/clientaddwriteline.JPG "ClientAddWriteLine")  
+     ![Добавление действия WriteLine](./media/flowing-transactions-into-and-out-of-workflow-services/add-writeline-activity.jpg)  
   
 4.  Перетащите действие <xref:System.Activities.Statements.TransactionScope> и поместите его после действия <xref:System.Activities.Statements.WriteLine>.  Выберите действие <xref:System.Activities.Statements.TransactionScope>, нажмите кнопку «Переменные» и добавьте следующие переменные.  
   
-     ![Добавление переменных в TransactionScope](../../../../docs/framework/wcf/feature-details/media/tsvariables.JPG "TSVariables")  
+     ![Добавление переменных в TransactionScope](./media/flowing-transactions-into-and-out-of-workflow-services/transactionscope-variables.jpg)  
   
 5.  Перетащите действие <xref:System.Activities.Statements.Sequence> в текст действия <xref:System.Activities.Statements.TransactionScope>.  
   
@@ -175,7 +175,7 @@ ms.locfileid: "54708640"
   
 7.  Перетаскивание <xref:System.Activities.Statements.WriteLine> действия после `PrintTransactionInfo` действие и набор его <xref:System.Activities.Statements.WriteLine.Text%2A> свойства «клиента: Начало отправки». После этого рабочий процесс должен выглядеть так:  
   
-     ![Добавление действий](../../../../docs/framework/wcf/feature-details/media/clientaddcbswriteline.JPG "ClientAddCBSWriteLine")  
+     ![Добавление клиента: Начало действий "Send"](./media/flowing-transactions-into-and-out-of-workflow-services/client-add-cbs-writeline.jpg)  
   
 8.  Перетащите действие <xref:System.ServiceModel.Activities.Send>, поместите его после действия <xref:System.Activities.Statements.Assign> и задайте следующие свойства:  
   
@@ -187,17 +187,17 @@ ms.locfileid: "54708640"
   
      После этого рабочий процесс должен выглядеть так:  
   
-     ![Задание свойств действия Send](../../../../docs/framework/wcf/feature-details/media/clientsendsettings.JPG "ClientSendSettings")  
+     ![Задание свойств действия Send](./media/flowing-transactions-into-and-out-of-workflow-services/client-send-activity-settings.jpg)  
   
 9. Нажмите кнопку **определить...**  ссылку и задайте следующие параметры:  
   
-     ![Параметры сообщения действия send](../../../../docs/framework/wcf/feature-details/media/sendmessagesettings.JPG "SendMessageSettings")  
+     ![Параметры сообщения действия Send](./media/flowing-transactions-into-and-out-of-workflow-services/send-message-settings.jpg)  
   
 10. Щелкните правой кнопкой мыши <xref:System.ServiceModel.Activities.Send> действие и выберите **создать ReceiveReply**. Действие <xref:System.ServiceModel.Activities.ReceiveReply> будет автоматически помещено после действия <xref:System.ServiceModel.Activities.Send>.  
   
 11. Щелкните ссылку «Определить...» в действии ReceiveReplyForSend и задайте следующие параметры:  
   
-     ![Задание параметров сообщения ReceiveForSend](../../../../docs/framework/wcf/feature-details/media/clientreplymessagesettings.JPG "ClientReplyMessageSettings")  
+     ![Задание параметров сообщения ReceiveForSend](./media/flowing-transactions-into-and-out-of-workflow-services/client-reply-message-settings.jpg)  
   
 12. Перетаскивание <xref:System.Activities.Statements.WriteLine> действия между <xref:System.ServiceModel.Activities.Send> и <xref:System.ServiceModel.Activities.ReceiveReply> действий и задайте его <xref:System.Activities.Statements.WriteLine.Text%2A> свойства «клиента: Отправка выполнена.»  
   
@@ -207,7 +207,7 @@ ms.locfileid: "54708640"
   
 15. Перетащите действие <xref:System.Activities.Statements.WriteLine> в конец рабочего процесса и задайте для свойства <xref:System.Activities.Statements.WriteLine.Text%2A> значение "Client workflow ends". Завершенный рабочий процесс клиента должен выглядеть следующим образом на приведенной ниже схеме.  
   
-     ![Полный рабочий процесс клиента](../../../../docs/framework/wcf/feature-details/media/clientcompleteworkflow.jpg "ClientCompleteWorkflow")  
+     ![Готовый рабочий процесс клиента](./media/flowing-transactions-into-and-out-of-workflow-services/client-complete-workflow.jpg)  
   
 16. Постройте решение.  
   

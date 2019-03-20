@@ -7,19 +7,19 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView control [WPF]
 ms.assetid: fc3784a7-c9e8-4e2b-909a-7af37cef9b43
-ms.openlocfilehash: 7de612992c7ccab57259146e8b8fa294e503b733
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c90849c27f7bbef2338ef255350a7dccd40c99e3
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376225"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58186056"
 ---
 # <a name="listview"></a>ListView
 <xref:System.Windows.Controls.ListView> Управления предоставляет инфраструктуру для отображения набора элементов данных в различных макетах или представлениях.  
   
  На следующем рисунке показано <xref:System.Windows.Controls.ListView>.  
   
- ![ListView с выходными данными GridView](./media/listviewgridview.JPG "ListViewGridView")  
+ ![Снимок экрана с ListView с выводом GridView.](./media/gridview-overview/listview-gridview-output.jpg)  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Разделы общих сведений](listview-overviews.md)  

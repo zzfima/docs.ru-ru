@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
-ms.openlocfilehash: 07328a83e431bab02a72c3f252299e4b6b919b82
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 33f4cc55a52a67381c1fbf0d0a92bfad5e50b1ec
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379150"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58186121"
 ---
 # <a name="listview-overview"></a>Общие сведения об элементе управления ListView
 <xref:System.Windows.Controls.ListView> Управления предоставляет инфраструктуру для отображения набора элементов данных в различных макетах или представлениях. Например, у пользователя может возникнуть необходимость в отображении элементов данных в таблице, а также в сортировке ее столбцов.  
@@ -33,7 +33,7 @@ ms.locfileid: "57379150"
   
  На следующем рисунке показано, как будут отображаться данные для предыдущего примера.  
   
- ![ListView с выходными данными GridView](./media/listviewgridview.JPG "ListViewGridView")  
+ ![Снимок экрана с ListView с выводом GridView.](./media/gridview-overview/listview-gridview-output.jpg)  
   
  Пользовательского режима представления можно создать, определив класс, наследуемый от <xref:System.Windows.Controls.ViewBase> класса. <xref:System.Windows.Controls.ViewBase> Класс предоставляет инфраструктуру, вам нужно создать пользовательское представление. Дополнительные сведения о создании пользовательского представления см. в разделе [Создание пользовательского режима представления для ListView](how-to-create-a-custom-view-mode-for-a-listview.md).  
   

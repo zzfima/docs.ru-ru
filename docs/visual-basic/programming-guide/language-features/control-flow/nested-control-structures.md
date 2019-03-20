@@ -10,12 +10,12 @@ helpviewer_keywords:
 - structures [Visual Basic], nested control
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
-ms.openlocfilehash: fec1b4dbca0a4c6979e52fc74ceeb3e8c7ac6cad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9b10363e2273a22ac7ee3d9a943a1bec4616d232
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520468"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185731"
 ---
 # <a name="nested-control-structures-visual-basic"></a>Вложенные структуры управления (Visual Basic)
 Можно разместить операторы управления внутри других операторов управления, например `If...Then...Else` блок `For...Next` цикла. Операторы управления внутрь другого оператора управления называется *вложенных*.  
@@ -25,7 +25,7 @@ ms.locfileid: "54520468"
   
  В следующем примере процедура `sumRows` складывает положительные элементы каждой строки матрицы.  
   
-```  
+```vb
 Public Sub sumRows(ByVal a(,) As Double, ByRef r() As Double)  
     Dim i, j As Integer  
     For i = 0 To UBound(a, 1)  
@@ -49,7 +49,7 @@ End Sub
 ## <a name="nesting-different-kinds-of-control-structures"></a>Вложение структур управления различных типов  
  Можно вложить один тип структуры управления в другой тип. В следующем примере используется `With` блок `For Each` цикл и вложенные `If` блокирует внутри `With` блока.  
   
-```  
+```vb
 For Each ctl As System.Windows.Forms.Control In Me.Controls  
     With ctl  
         .BackColor = System.Drawing.Color.Yellow  
