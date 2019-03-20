@@ -2,30 +2,30 @@
 title: Команда dotnet pack
 description: Команда dotnet pack создает пакеты NuGet для проекта .NET Core.
 ms.date: 12/04/2018
-ms.openlocfilehash: ca88dd4c7dfd45c9295043cd2352ba6bdf5464af
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 43ee31c7cd070cf0e73975c1444ef13496afae91
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170097"
+ms.lasthandoff: 03/17/2019
+ms.locfileid: "58020932"
 ---
-# <a name="dotnet-pack"></a><span data-ttu-id="89603-103">dotnet pack</span><span class="sxs-lookup"><span data-stu-id="89603-103">dotnet pack</span></span>
+# <a name="dotnet-pack"></a><span data-ttu-id="7c36e-103">dotnet pack</span><span class="sxs-lookup"><span data-stu-id="7c36e-103">dotnet pack</span></span>
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a><span data-ttu-id="89603-104">name</span><span class="sxs-lookup"><span data-stu-id="89603-104">Name</span></span>
+## <a name="name"></a><span data-ttu-id="7c36e-104">name</span><span class="sxs-lookup"><span data-stu-id="7c36e-104">Name</span></span>
 
-<span data-ttu-id="89603-105">`dotnet pack` — упаковывает код в пакет NuGet.</span><span class="sxs-lookup"><span data-stu-id="89603-105">`dotnet pack` - Packs the code into a NuGet package.</span></span>
+<span data-ttu-id="7c36e-105">`dotnet pack` — упаковывает код в пакет NuGet.</span><span class="sxs-lookup"><span data-stu-id="7c36e-105">`dotnet pack` - Packs the code into a NuGet package.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="89603-106">Краткий обзор</span><span class="sxs-lookup"><span data-stu-id="89603-106">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="7c36e-106">Краткий обзор</span><span class="sxs-lookup"><span data-stu-id="7c36e-106">Synopsis</span></span>
 
-# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="89603-107">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="89603-107">.NET Core 2.x</span></span>](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="7c36e-107">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="7c36e-107">.NET Core 2.x</span></span>](#tab/netcore2x)
 ```
 dotnet pack [<PROJECT>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--no-build] [--no-dependencies]
     [--no-restore] [-o|--output] [--runtime] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
 ```
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="89603-108">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="89603-108">.NET Core 1.x</span></span>](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="7c36e-108">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="7c36e-108">.NET Core 1.x</span></span>](#tab/netcore1x)
 ```
 dotnet pack [<PROJECT>] [-c|--configuration] [--include-source] [--include-symbols] [--no-build] [-o|--output]
     [-s|--serviceable] [-v|--verbosity] [--version-suffix]
@@ -33,179 +33,179 @@ dotnet pack [-h|--help]
 ```
 ---
 
-## <a name="description"></a><span data-ttu-id="89603-109">Описание</span><span class="sxs-lookup"><span data-stu-id="89603-109">Description</span></span>
+## <a name="description"></a><span data-ttu-id="7c36e-109">Описание</span><span class="sxs-lookup"><span data-stu-id="7c36e-109">Description</span></span>
 
-<span data-ttu-id="89603-110">Команда `dotnet pack` выполняет сборку проекта и создает пакеты NuGet.</span><span class="sxs-lookup"><span data-stu-id="89603-110">The `dotnet pack` command builds the project and creates NuGet packages.</span></span> <span data-ttu-id="89603-111">Результат выполнения команды — пакет NuGet.</span><span class="sxs-lookup"><span data-stu-id="89603-111">The result of this command is a NuGet package.</span></span> <span data-ttu-id="89603-112">При наличии параметра `--include-symbols` создается другой пакет, содержащий отладочные символы.</span><span class="sxs-lookup"><span data-stu-id="89603-112">If the `--include-symbols` option is present, another package containing the debug symbols is created.</span></span>
+<span data-ttu-id="7c36e-110">Команда `dotnet pack` выполняет сборку проекта и создает пакеты NuGet.</span><span class="sxs-lookup"><span data-stu-id="7c36e-110">The `dotnet pack` command builds the project and creates NuGet packages.</span></span> <span data-ttu-id="7c36e-111">Результат выполнения команды — пакет NuGet.</span><span class="sxs-lookup"><span data-stu-id="7c36e-111">The result of this command is a NuGet package.</span></span> <span data-ttu-id="7c36e-112">При наличии параметра `--include-symbols` создается другой пакет, содержащий отладочные символы.</span><span class="sxs-lookup"><span data-stu-id="7c36e-112">If the `--include-symbols` option is present, another package containing the debug symbols is created.</span></span>
 
-<span data-ttu-id="89603-113">Зависимости NuGet упакованного проекта добавляются в файл *NUSPEC*, чтобы их можно было разрешить при установке пакета.</span><span class="sxs-lookup"><span data-stu-id="89603-113">NuGet dependencies of the packed project are added to the *.nuspec* file, so they're properly resolved when the package is installed.</span></span> <span data-ttu-id="89603-114">Межпроектные ссылки не упаковываются в проекте.</span><span class="sxs-lookup"><span data-stu-id="89603-114">Project-to-project references aren't packaged inside the project.</span></span> <span data-ttu-id="89603-115">Сейчас при наличии межпроектных зависимостей требуется один пакет на каждый проект.</span><span class="sxs-lookup"><span data-stu-id="89603-115">Currently, you must have a package per project if you have project-to-project dependencies.</span></span>
+<span data-ttu-id="7c36e-113">Зависимости NuGet упакованного проекта добавляются в файл *NUSPEC*, чтобы их можно было разрешить при установке пакета.</span><span class="sxs-lookup"><span data-stu-id="7c36e-113">NuGet dependencies of the packed project are added to the *.nuspec* file, so they're properly resolved when the package is installed.</span></span> <span data-ttu-id="7c36e-114">Межпроектные ссылки не упаковываются в проекте.</span><span class="sxs-lookup"><span data-stu-id="7c36e-114">Project-to-project references aren't packaged inside the project.</span></span> <span data-ttu-id="7c36e-115">Сейчас при наличии межпроектных зависимостей требуется один пакет на каждый проект.</span><span class="sxs-lookup"><span data-stu-id="7c36e-115">Currently, you must have a package per project if you have project-to-project dependencies.</span></span>
 
-<span data-ttu-id="89603-116">`dotnet pack` по умолчанию сначала выполняет сборку проекта.</span><span class="sxs-lookup"><span data-stu-id="89603-116">By default, `dotnet pack` builds the project first.</span></span> <span data-ttu-id="89603-117">Чтобы избежать этого, передайте параметр `--no-build`.</span><span class="sxs-lookup"><span data-stu-id="89603-117">If you wish to avoid this behavior, pass the `--no-build` option.</span></span> <span data-ttu-id="89603-118">Этот вариант часто бывает полезен, например в сценариях сборки с непрерывной интеграцией (CI), когда вы знаете, что код был собран недавно.</span><span class="sxs-lookup"><span data-stu-id="89603-118">This option is often useful in Continuous Integration (CI) build scenarios where you know the code was previously built.</span></span>
+<span data-ttu-id="7c36e-116">`dotnet pack` по умолчанию сначала выполняет сборку проекта.</span><span class="sxs-lookup"><span data-stu-id="7c36e-116">By default, `dotnet pack` builds the project first.</span></span> <span data-ttu-id="7c36e-117">Чтобы избежать этого, передайте параметр `--no-build`.</span><span class="sxs-lookup"><span data-stu-id="7c36e-117">If you wish to avoid this behavior, pass the `--no-build` option.</span></span> <span data-ttu-id="7c36e-118">Этот вариант часто бывает полезен, например в сценариях сборки с непрерывной интеграцией (CI), когда вы знаете, что код был собран недавно.</span><span class="sxs-lookup"><span data-stu-id="7c36e-118">This option is often useful in Continuous Integration (CI) build scenarios where you know the code was previously built.</span></span>
 
-<span data-ttu-id="89603-119">Может предоставлять свойства MSBuild команде `dotnet pack` для процесса упаковки.</span><span class="sxs-lookup"><span data-stu-id="89603-119">You can provide MSBuild properties to the `dotnet pack` command for the packing process.</span></span> <span data-ttu-id="89603-120">Дополнительные сведения см. в разделах [Свойства метаданных NuGet](csproj.md#nuget-metadata-properties) и [Справочник по командной строке MSBuild](/visualstudio/msbuild/msbuild-command-line-reference).</span><span class="sxs-lookup"><span data-stu-id="89603-120">For more information, see [NuGet metadata properties](csproj.md#nuget-metadata-properties) and the [MSBuild Command-Line Reference](/visualstudio/msbuild/msbuild-command-line-reference).</span></span> <span data-ttu-id="89603-121">В разделе [Примеры](#examples) показано, как использовать параметр -p MSBuild в различных сценариях.</span><span class="sxs-lookup"><span data-stu-id="89603-121">The [Examples](#examples) section shows how to use the MSBuild -p switch for a couple of different scenarios.</span></span>
+<span data-ttu-id="7c36e-119">Может предоставлять свойства MSBuild команде `dotnet pack` для процесса упаковки.</span><span class="sxs-lookup"><span data-stu-id="7c36e-119">You can provide MSBuild properties to the `dotnet pack` command for the packing process.</span></span> <span data-ttu-id="7c36e-120">Дополнительные сведения см. в разделах [Свойства метаданных NuGet](csproj.md#nuget-metadata-properties) и [Справочник по командной строке MSBuild](/visualstudio/msbuild/msbuild-command-line-reference).</span><span class="sxs-lookup"><span data-stu-id="7c36e-120">For more information, see [NuGet metadata properties](csproj.md#nuget-metadata-properties) and the [MSBuild Command-Line Reference](/visualstudio/msbuild/msbuild-command-line-reference).</span></span> <span data-ttu-id="7c36e-121">В разделе [Примеры](#examples) показано, как использовать параметр -p MSBuild в различных сценариях.</span><span class="sxs-lookup"><span data-stu-id="7c36e-121">The [Examples](#examples) section shows how to use the MSBuild -p switch for a couple of different scenarios.</span></span>
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
-## <a name="arguments"></a><span data-ttu-id="89603-122">Аргументы</span><span class="sxs-lookup"><span data-stu-id="89603-122">Arguments</span></span>
+## <a name="arguments"></a><span data-ttu-id="7c36e-122">Аргументы</span><span class="sxs-lookup"><span data-stu-id="7c36e-122">Arguments</span></span>
 
 * **`PROJECT`**
 
-  <span data-ttu-id="89603-123">Упаковываемый проект.</span><span class="sxs-lookup"><span data-stu-id="89603-123">The project to pack.</span></span> <span data-ttu-id="89603-124">Это путь к файлу [CSPROJ](csproj.md) или каталогу.</span><span class="sxs-lookup"><span data-stu-id="89603-124">It's either a path to a [csproj file](csproj.md) or to a directory.</span></span> <span data-ttu-id="89603-125">Если значение не задано, по умолчанию используется текущий каталог.</span><span class="sxs-lookup"><span data-stu-id="89603-125">If not specified, it defaults to the current directory.</span></span>
+  <span data-ttu-id="7c36e-123">Упаковываемый проект.</span><span class="sxs-lookup"><span data-stu-id="7c36e-123">The project to pack.</span></span> <span data-ttu-id="7c36e-124">Это путь к файлу [CSPROJ](csproj.md) или каталогу.</span><span class="sxs-lookup"><span data-stu-id="7c36e-124">It's either a path to a [csproj file](csproj.md) or to a directory.</span></span> <span data-ttu-id="7c36e-125">Если значение не задано, по умолчанию используется текущий каталог.</span><span class="sxs-lookup"><span data-stu-id="7c36e-125">If not specified, it defaults to the current directory.</span></span>
 
-## <a name="options"></a><span data-ttu-id="89603-126">Параметры</span><span class="sxs-lookup"><span data-stu-id="89603-126">Options</span></span>
+## <a name="options"></a><span data-ttu-id="7c36e-126">Параметры</span><span class="sxs-lookup"><span data-stu-id="7c36e-126">Options</span></span>
 
-# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="89603-127">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="89603-127">.NET Core 2.x</span></span>](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="7c36e-127">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="7c36e-127">.NET Core 2.x</span></span>](#tab/netcore2x)
 
 * **`-c|--configuration {Debug|Release}`**
 
-  <span data-ttu-id="89603-128">Определяет конфигурацию сборки.</span><span class="sxs-lookup"><span data-stu-id="89603-128">Defines the build configuration.</span></span> <span data-ttu-id="89603-129">Значение по умолчанию — `Debug`.</span><span class="sxs-lookup"><span data-stu-id="89603-129">The default value is `Debug`.</span></span>
+  <span data-ttu-id="7c36e-128">Определяет конфигурацию сборки.</span><span class="sxs-lookup"><span data-stu-id="7c36e-128">Defines the build configuration.</span></span> <span data-ttu-id="7c36e-129">Значение по умолчанию — `Debug`.</span><span class="sxs-lookup"><span data-stu-id="7c36e-129">The default value is `Debug`.</span></span>
 
 * **`--force`**
 
-  <span data-ttu-id="89603-130">Принудительное разрешение всех зависимостей, даже если последнее восстановление прошло успешно.</span><span class="sxs-lookup"><span data-stu-id="89603-130">Forces all dependencies to be resolved even if the last restore was successful.</span></span> <span data-ttu-id="89603-131">Указание этого флага дает тот же результат, что удаление файла *project.assets.json*.</span><span class="sxs-lookup"><span data-stu-id="89603-131">Specifying this flag is the same as deleting the *project.assets.json* file.</span></span>
+  <span data-ttu-id="7c36e-130">Принудительное разрешение всех зависимостей, даже если последнее восстановление прошло успешно.</span><span class="sxs-lookup"><span data-stu-id="7c36e-130">Forces all dependencies to be resolved even if the last restore was successful.</span></span> <span data-ttu-id="7c36e-131">Указание этого флага дает тот же результат, что удаление файла *project.assets.json*.</span><span class="sxs-lookup"><span data-stu-id="7c36e-131">Specifying this flag is the same as deleting the *project.assets.json* file.</span></span>
 
 * **`-h|--help`**
 
-  <span data-ttu-id="89603-132">Выводит краткую справку по команде.</span><span class="sxs-lookup"><span data-stu-id="89603-132">Prints out a short help for the command.</span></span>
+  <span data-ttu-id="7c36e-132">Выводит краткую справку по команде.</span><span class="sxs-lookup"><span data-stu-id="7c36e-132">Prints out a short help for the command.</span></span>
 
 * **`--include-source`**
 
-  <span data-ttu-id="89603-133">Включает исходные файлы в пакет NuGet.</span><span class="sxs-lookup"><span data-stu-id="89603-133">Includes the source files in the NuGet package.</span></span> <span data-ttu-id="89603-134">Исходные файлы включены в папку `src` пакета `nupkg`.</span><span class="sxs-lookup"><span data-stu-id="89603-134">The sources files are included in the `src` folder within the `nupkg`.</span></span>
+  <span data-ttu-id="7c36e-133">Включает исходные файлы в пакет NuGet.</span><span class="sxs-lookup"><span data-stu-id="7c36e-133">Includes the source files in the NuGet package.</span></span> <span data-ttu-id="7c36e-134">Исходные файлы включены в папку `src` пакета `nupkg`.</span><span class="sxs-lookup"><span data-stu-id="7c36e-134">The sources files are included in the `src` folder within the `nupkg`.</span></span>
 
 * **`--include-symbols`**
 
-  <span data-ttu-id="89603-135">Создает символы `nupkg`.</span><span class="sxs-lookup"><span data-stu-id="89603-135">Generates the symbols `nupkg`.</span></span>
+  <span data-ttu-id="7c36e-135">Создает символы `nupkg`.</span><span class="sxs-lookup"><span data-stu-id="7c36e-135">Generates the symbols `nupkg`.</span></span>
 
 * **`--no-build`**
 
-  <span data-ttu-id="89603-136">Не выполняет сборку проекта перед упаковкой.</span><span class="sxs-lookup"><span data-stu-id="89603-136">Doesn't build the project before packing.</span></span> <span data-ttu-id="89603-137">Он также неявно задает флаг `--no-restore`.</span><span class="sxs-lookup"><span data-stu-id="89603-137">It also implicit sets the `--no-restore` flag.</span></span>
+  <span data-ttu-id="7c36e-136">Не выполняет сборку проекта перед упаковкой.</span><span class="sxs-lookup"><span data-stu-id="7c36e-136">Doesn't build the project before packing.</span></span> <span data-ttu-id="7c36e-137">Он также неявно задает флаг `--no-restore`.</span><span class="sxs-lookup"><span data-stu-id="7c36e-137">It also implicit sets the `--no-restore` flag.</span></span>
 
 * **`--no-dependencies`**
 
-  <span data-ttu-id="89603-138">Межпроектные ссылки игнорируются, и восстанавливается только корневой проект.</span><span class="sxs-lookup"><span data-stu-id="89603-138">Ignores project-to-project references and only restores the root project.</span></span>
+  <span data-ttu-id="7c36e-138">Межпроектные ссылки игнорируются, и восстанавливается только корневой проект.</span><span class="sxs-lookup"><span data-stu-id="7c36e-138">Ignores project-to-project references and only restores the root project.</span></span>
 
 * **`--no-restore`**
 
-  <span data-ttu-id="89603-139">Не выполняет неявное восстановление при выполнении команды.</span><span class="sxs-lookup"><span data-stu-id="89603-139">Doesn't execute an implicit restore when running the command.</span></span>
+  <span data-ttu-id="7c36e-139">Не выполняет неявное восстановление при выполнении команды.</span><span class="sxs-lookup"><span data-stu-id="7c36e-139">Doesn't execute an implicit restore when running the command.</span></span>
 
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  <span data-ttu-id="89603-140">Собранные пакеты помещаются в указанный каталог.</span><span class="sxs-lookup"><span data-stu-id="89603-140">Places the built packages in the directory specified.</span></span>
+  <span data-ttu-id="7c36e-140">Собранные пакеты помещаются в указанный каталог.</span><span class="sxs-lookup"><span data-stu-id="7c36e-140">Places the built packages in the directory specified.</span></span>
 
 * **`--runtime <RUNTIME_IDENTIFIER>`**
 
-  <span data-ttu-id="89603-141">Задает целевую среду выполнения для восстановления пакетов.</span><span class="sxs-lookup"><span data-stu-id="89603-141">Specifies the target runtime to restore packages for.</span></span> <span data-ttu-id="89603-142">Список идентификаторов сред выполнения (RID) см. в [каталоге RID](../rid-catalog.md).</span><span class="sxs-lookup"><span data-stu-id="89603-142">For a list of Runtime Identifiers (RIDs), see the [RID catalog](../rid-catalog.md).</span></span>
+  <span data-ttu-id="7c36e-141">Задает целевую среду выполнения для восстановления пакетов.</span><span class="sxs-lookup"><span data-stu-id="7c36e-141">Specifies the target runtime to restore packages for.</span></span> <span data-ttu-id="7c36e-142">Список идентификаторов сред выполнения (RID) см. в [каталоге RID](../rid-catalog.md).</span><span class="sxs-lookup"><span data-stu-id="7c36e-142">For a list of Runtime Identifiers (RIDs), see the [RID catalog](../rid-catalog.md).</span></span>
 
 * **`-s|--serviceable`**
 
-  <span data-ttu-id="89603-143">Задает флаг "подлежит обслуживанию" в пакете.</span><span class="sxs-lookup"><span data-stu-id="89603-143">Sets the serviceable flag in the package.</span></span> <span data-ttu-id="89603-144">Дополнительные сведения см. в записи блога о том, что [.NET 4.5.1 поддерживает обновления системы безопасности Майкрософт для библиотек .NET NuGet](https://aka.ms/nupkgservicing).</span><span class="sxs-lookup"><span data-stu-id="89603-144">For more information, see [.NET Blog: .NET 4.5.1 Supports Microsoft Security Updates for .NET NuGet Libraries](https://aka.ms/nupkgservicing).</span></span>
+  <span data-ttu-id="7c36e-143">Задает флаг "подлежит обслуживанию" в пакете.</span><span class="sxs-lookup"><span data-stu-id="7c36e-143">Sets the serviceable flag in the package.</span></span> <span data-ttu-id="7c36e-144">Дополнительные сведения см. в записи блога о том, что [.NET 4.5.1 поддерживает обновления системы безопасности Майкрософт для библиотек .NET NuGet](https://aka.ms/nupkgservicing).</span><span class="sxs-lookup"><span data-stu-id="7c36e-144">For more information, see [.NET Blog: .NET 4.5.1 Supports Microsoft Security Updates for .NET NuGet Libraries](https://aka.ms/nupkgservicing).</span></span>
 
 * **`--version-suffix <VERSION_SUFFIX>`**
 
-  <span data-ttu-id="89603-145">Определяет значение для свойства `$(VersionSuffix)` MSBuild в проекте.</span><span class="sxs-lookup"><span data-stu-id="89603-145">Defines the value for the `$(VersionSuffix)` MSBuild property in the project.</span></span>
+  <span data-ttu-id="7c36e-145">Определяет значение для свойства `$(VersionSuffix)` MSBuild в проекте.</span><span class="sxs-lookup"><span data-stu-id="7c36e-145">Defines the value for the `$(VersionSuffix)` MSBuild property in the project.</span></span>
 
 * **`-v|--verbosity <LEVEL>`**
 
-  <span data-ttu-id="89603-146">Задает уровень детализации команды.</span><span class="sxs-lookup"><span data-stu-id="89603-146">Sets the verbosity level of the command.</span></span> <span data-ttu-id="89603-147">Допустимые значения: `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` и `diag[nostic]`.</span><span class="sxs-lookup"><span data-stu-id="89603-147">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
+  <span data-ttu-id="7c36e-146">Задает уровень детализации команды.</span><span class="sxs-lookup"><span data-stu-id="7c36e-146">Sets the verbosity level of the command.</span></span> <span data-ttu-id="7c36e-147">Допустимые значения: `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` и `diag[nostic]`.</span><span class="sxs-lookup"><span data-stu-id="7c36e-147">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="89603-148">Веб-проекты по умолчанию не упаковываются.</span><span class="sxs-lookup"><span data-stu-id="89603-148">Web projects aren't packable by default.</span></span> <span data-ttu-id="89603-149">Чтобы переопределить такое поведение по умолчанию, добавьте следующее свойство в файл с расширением *.csproj*:</span><span class="sxs-lookup"><span data-stu-id="89603-149">To override the default behavior, add the following property to your *.csproj* file:</span></span>
+> <span data-ttu-id="7c36e-148">Веб-проекты по умолчанию не упаковываются.</span><span class="sxs-lookup"><span data-stu-id="7c36e-148">Web projects aren't packable by default.</span></span> <span data-ttu-id="7c36e-149">Чтобы переопределить такое поведение по умолчанию, добавьте следующее свойство в файл с расширением *.csproj*:</span><span class="sxs-lookup"><span data-stu-id="7c36e-149">To override the default behavior, add the following property to your *.csproj* file:</span></span>
 > ```xml
 > <PropertyGroup>
 >    <IsPackable>true</IsPackable>
 > </PropertyGroup>
 > ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="89603-150">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="89603-150">.NET Core 1.x</span></span>](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="7c36e-150">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="7c36e-150">.NET Core 1.x</span></span>](#tab/netcore1x)
 
 * **`-c|--configuration {Debug|Release}`**
 
-  <span data-ttu-id="89603-151">Определяет конфигурацию сборки.</span><span class="sxs-lookup"><span data-stu-id="89603-151">Defines the build configuration.</span></span> <span data-ttu-id="89603-152">Значение по умолчанию — `Debug`.</span><span class="sxs-lookup"><span data-stu-id="89603-152">The default value is `Debug`.</span></span>
+  <span data-ttu-id="7c36e-151">Определяет конфигурацию сборки.</span><span class="sxs-lookup"><span data-stu-id="7c36e-151">Defines the build configuration.</span></span> <span data-ttu-id="7c36e-152">Значение по умолчанию — `Debug`.</span><span class="sxs-lookup"><span data-stu-id="7c36e-152">The default value is `Debug`.</span></span>
 
 * **`-h|--help`**
 
-  <span data-ttu-id="89603-153">Выводит краткую справку по команде.</span><span class="sxs-lookup"><span data-stu-id="89603-153">Prints out a short help for the command.</span></span>
+  <span data-ttu-id="7c36e-153">Выводит краткую справку по команде.</span><span class="sxs-lookup"><span data-stu-id="7c36e-153">Prints out a short help for the command.</span></span>
 
 * **`--include-source`**
 
-  <span data-ttu-id="89603-154">Включает исходные файлы в пакет NuGet.</span><span class="sxs-lookup"><span data-stu-id="89603-154">Includes the source files in the NuGet package.</span></span> <span data-ttu-id="89603-155">Исходные файлы включены в папку `src` пакета `nupkg`.</span><span class="sxs-lookup"><span data-stu-id="89603-155">The sources files are included in the `src` folder within the `nupkg`.</span></span>
+  <span data-ttu-id="7c36e-154">Включает исходные файлы в пакет NuGet.</span><span class="sxs-lookup"><span data-stu-id="7c36e-154">Includes the source files in the NuGet package.</span></span> <span data-ttu-id="7c36e-155">Исходные файлы включены в папку `src` пакета `nupkg`.</span><span class="sxs-lookup"><span data-stu-id="7c36e-155">The sources files are included in the `src` folder within the `nupkg`.</span></span>
 
 * **`--include-symbols`**
 
-  <span data-ttu-id="89603-156">Создает символы `nupkg`.</span><span class="sxs-lookup"><span data-stu-id="89603-156">Generates the symbols `nupkg`.</span></span>
+  <span data-ttu-id="7c36e-156">Создает символы `nupkg`.</span><span class="sxs-lookup"><span data-stu-id="7c36e-156">Generates the symbols `nupkg`.</span></span>
 
 * **`--no-build`**
 
-  <span data-ttu-id="89603-157">Не выполняет сборку проекта перед упаковкой.</span><span class="sxs-lookup"><span data-stu-id="89603-157">Doesn't build the project before packing.</span></span>
+  <span data-ttu-id="7c36e-157">Не выполняет сборку проекта перед упаковкой.</span><span class="sxs-lookup"><span data-stu-id="7c36e-157">Doesn't build the project before packing.</span></span>
 
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  <span data-ttu-id="89603-158">Собранные пакеты помещаются в указанный каталог.</span><span class="sxs-lookup"><span data-stu-id="89603-158">Places the built packages in the directory specified.</span></span>
+  <span data-ttu-id="7c36e-158">Собранные пакеты помещаются в указанный каталог.</span><span class="sxs-lookup"><span data-stu-id="7c36e-158">Places the built packages in the directory specified.</span></span>
 
 * **`-s|--serviceable`**
 
-  <span data-ttu-id="89603-159">Задает флаг "подлежит обслуживанию" в пакете.</span><span class="sxs-lookup"><span data-stu-id="89603-159">Sets the serviceable flag in the package.</span></span> <span data-ttu-id="89603-160">Дополнительные сведения см. в записи блога о том, что [.NET 4.5.1 поддерживает обновления системы безопасности Майкрософт для библиотек .NET NuGet](https://aka.ms/nupkgservicing).</span><span class="sxs-lookup"><span data-stu-id="89603-160">For more information, see [.NET Blog: .NET 4.5.1 Supports Microsoft Security Updates for .NET NuGet Libraries](https://aka.ms/nupkgservicing).</span></span>
+  <span data-ttu-id="7c36e-159">Задает флаг "подлежит обслуживанию" в пакете.</span><span class="sxs-lookup"><span data-stu-id="7c36e-159">Sets the serviceable flag in the package.</span></span> <span data-ttu-id="7c36e-160">Дополнительные сведения см. в записи блога о том, что [.NET 4.5.1 поддерживает обновления системы безопасности Майкрософт для библиотек .NET NuGet](https://aka.ms/nupkgservicing).</span><span class="sxs-lookup"><span data-stu-id="7c36e-160">For more information, see [.NET Blog: .NET 4.5.1 Supports Microsoft Security Updates for .NET NuGet Libraries](https://aka.ms/nupkgservicing).</span></span>
 
 * **`--version-suffix <VERSION_SUFFIX>`**
 
-  <span data-ttu-id="89603-161">Определяет значение для свойства `$(VersionSuffix)` MSBuild в проекте.</span><span class="sxs-lookup"><span data-stu-id="89603-161">Defines the value for the `$(VersionSuffix)` MSBuild property in the project.</span></span>
+  <span data-ttu-id="7c36e-161">Определяет значение для свойства `$(VersionSuffix)` MSBuild в проекте.</span><span class="sxs-lookup"><span data-stu-id="7c36e-161">Defines the value for the `$(VersionSuffix)` MSBuild property in the project.</span></span>
 
 * **`-v|--verbosity <LEVEL>`**
 
-  <span data-ttu-id="89603-162">Задает уровень детализации команды.</span><span class="sxs-lookup"><span data-stu-id="89603-162">Sets the verbosity level of the command.</span></span> <span data-ttu-id="89603-163">Допустимые значения: `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` и `diag[nostic]`.</span><span class="sxs-lookup"><span data-stu-id="89603-163">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
+  <span data-ttu-id="7c36e-162">Задает уровень детализации команды.</span><span class="sxs-lookup"><span data-stu-id="7c36e-162">Sets the verbosity level of the command.</span></span> <span data-ttu-id="7c36e-163">Допустимые значения: `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` и `diag[nostic]`.</span><span class="sxs-lookup"><span data-stu-id="7c36e-163">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
 
 ---
 
-## <a name="examples"></a><span data-ttu-id="89603-164">Примеры</span><span class="sxs-lookup"><span data-stu-id="89603-164">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="7c36e-164">Примеры</span><span class="sxs-lookup"><span data-stu-id="7c36e-164">Examples</span></span>
 
-* <span data-ttu-id="89603-165">Упаковка проекта в текущем каталоге:</span><span class="sxs-lookup"><span data-stu-id="89603-165">Pack the project in the current directory:</span></span>
+* <span data-ttu-id="7c36e-165">Упаковка проекта в текущем каталоге:</span><span class="sxs-lookup"><span data-stu-id="7c36e-165">Pack the project in the current directory:</span></span>
 
   ```console
   dotnet pack
   ```
 
-* <span data-ttu-id="89603-166">Упаковка проекта `app1`:</span><span class="sxs-lookup"><span data-stu-id="89603-166">Pack the `app1` project:</span></span>
+* <span data-ttu-id="7c36e-166">Упаковка проекта `app1`:</span><span class="sxs-lookup"><span data-stu-id="7c36e-166">Pack the `app1` project:</span></span>
 
   ```console
   dotnet pack ~/projects/app1/project.csproj
   ```
 
-* <span data-ttu-id="89603-167">Упаковка проекта в текущем каталоге; полученные пакеты помещаются в папку `nupkgs`:</span><span class="sxs-lookup"><span data-stu-id="89603-167">Pack the project in the current directory and place the resulting packages into the `nupkgs` folder:</span></span>
+* <span data-ttu-id="7c36e-167">Упаковка проекта в текущем каталоге; полученные пакеты помещаются в папку `nupkgs`:</span><span class="sxs-lookup"><span data-stu-id="7c36e-167">Pack the project in the current directory and place the resulting packages into the `nupkgs` folder:</span></span>
 
   ```console
   dotnet pack --output nupkgs
   ```
 
-* <span data-ttu-id="89603-168">Упаковка проекта в текущем каталоге в папку `nupkgs` и пропуск этапа сборки:</span><span class="sxs-lookup"><span data-stu-id="89603-168">Pack the project in the current directory into the `nupkgs` folder and skip the build step:</span></span>
+* <span data-ttu-id="7c36e-168">Упаковка проекта в текущем каталоге в папку `nupkgs` и пропуск этапа сборки:</span><span class="sxs-lookup"><span data-stu-id="7c36e-168">Pack the project in the current directory into the `nupkgs` folder and skip the build step:</span></span>
 
   ```console
   dotnet pack --no-build --output nupkgs
   ```
 
-* <span data-ttu-id="89603-169">Если суффикс версии пакета в файле *CSPROJ* настроен как `<VersionSuffix>$(VersionSuffix)</VersionSuffix>`, упаковка текущего проекта и обновление версии полученных пакетов с использованием указанного суффикса:</span><span class="sxs-lookup"><span data-stu-id="89603-169">With the project's version suffix configured as `<VersionSuffix>$(VersionSuffix)</VersionSuffix>` in the *.csproj* file, pack the current project and update the resulting package version with the given suffix:</span></span>
+* <span data-ttu-id="7c36e-169">Если суффикс версии пакета в файле *CSPROJ* настроен как `<VersionSuffix>$(VersionSuffix)</VersionSuffix>`, упаковка текущего проекта и обновление версии полученных пакетов с использованием указанного суффикса:</span><span class="sxs-lookup"><span data-stu-id="7c36e-169">With the project's version suffix configured as `<VersionSuffix>$(VersionSuffix)</VersionSuffix>` in the *.csproj* file, pack the current project and update the resulting package version with the given suffix:</span></span>
 
   ```console
   dotnet pack --version-suffix "ci-1234"
   ```
 
-* <span data-ttu-id="89603-170">Устанавливает версию пакета в `2.1.0` с использованием свойства MSBuild `PackageVersion`:</span><span class="sxs-lookup"><span data-stu-id="89603-170">Set the package version to `2.1.0` with the `PackageVersion` MSBuild property:</span></span>
+* <span data-ttu-id="7c36e-170">Устанавливает версию пакета в `2.1.0` с использованием свойства MSBuild `PackageVersion`:</span><span class="sxs-lookup"><span data-stu-id="7c36e-170">Set the package version to `2.1.0` with the `PackageVersion` MSBuild property:</span></span>
 
   ```console
   dotnet pack -p:PackageVersion=2.1.0
   ```
 
-* <span data-ttu-id="89603-171">Упакуйте проект для [требуемой версии .NET Framework](../../standard/frameworks.md):</span><span class="sxs-lookup"><span data-stu-id="89603-171">Pack the project for a specific [target framework](../../standard/frameworks.md):</span></span>
+* <span data-ttu-id="7c36e-171">Упакуйте проект для [требуемой версии .NET Framework](../../standard/frameworks.md):</span><span class="sxs-lookup"><span data-stu-id="7c36e-171">Pack the project for a specific [target framework](../../standard/frameworks.md):</span></span>
 
   ```console
   dotnet pack -p:TargetFrameworks=net45
   ```
 
-* <span data-ttu-id="89603-172">Упакуйте проект и используйте определенную среду выполнения (Windows 10) для операции восстановления (пакет SDK для .NET Core 2.0 и более поздних версий).</span><span class="sxs-lookup"><span data-stu-id="89603-172">Pack the project and use a specific runtime (Windows 10) for the restore operation (.NET Core SDK 2.0 and later versions):</span></span>
+* <span data-ttu-id="7c36e-172">Упакуйте проект и используйте определенную среду выполнения (Windows 10) для операции восстановления (пакет SDK для .NET Core 2.0 и более поздних версий).</span><span class="sxs-lookup"><span data-stu-id="7c36e-172">Pack the project and use a specific runtime (Windows 10) for the restore operation (.NET Core SDK 2.0 and later versions):</span></span>
 
   ```console
   dotnet pack --runtime win10-x64
   ```
 
-* <span data-ttu-id="89603-173">Упакуйте проект с помощью [NUSPEC-файла](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec).</span><span class="sxs-lookup"><span data-stu-id="89603-173">Pack the projec using a [.nuspec file](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec):</span></span>
+* <span data-ttu-id="7c36e-173">Упакуйте проект с помощью [NUSPEC-файла](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec):</span><span class="sxs-lookup"><span data-stu-id="7c36e-173">Pack the project using a [.nuspec file](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec):</span></span>
 
   ```console
   dotnet pack  ~/projects/app1/project.csproj /p:NuspecFile=~/projects/app1/project.nuspec /p:NuspecBasePath=~/projects/app1/nuget
