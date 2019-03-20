@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5280e816-ae17-48c4-8de0-a1e6895dd8f0
-ms.openlocfilehash: 2213d766435aaafbf37b8646a66ea3007bfcb734
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d924d684561a2dd90ff18c803c3b12e8ac3581ce
+ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719641"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58262567"
 ---
 # <a name="how-to-create-a-sequential-workflow"></a>Практическое руководство. Создание последовательного рабочего процесса
 Рабочие процессы могут создаваться как из встроенных, так и из пользовательских действий. В этом разделе действия по созданию рабочего процесса, который использует как встроенные действия, например <xref:System.Activities.Statements.Sequence> действия и пользовательские действия из предыдущего [как: Создание действия](how-to-create-an-activity.md) раздела. Рабочий процесс моделирует игру по угадыванию числа.  
@@ -21,7 +21,7 @@ ms.locfileid: "57719641"
 > [!NOTE]
 >  Чтобы скачать завершенную версию учебника, см. раздел [Windows Workflow Foundation (WF45), учебник "Приступая к работе"](https://go.microsoft.com/fwlink/?LinkID=248976).  
   
-### <a name="to-create-the-workflow"></a>Создание рабочего процесса  
+## <a name="to-create-the-workflow"></a>Создание рабочего процесса  
   
 1.  Щелкните правой кнопкой мыши **NumberGuessWorkflowActivities** в **обозревателе решений** и выберите **добавить**, **новый элемент**.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "57719641"
   
 4.  Перетащите **последовательности** действия из **поток управления** раздел **элементов** и сбросьте его в **Перетащите сюда действие** метки на область конструктора рабочих процессов.  
   
-### <a name="to-create-the-workflow-variables-and-arguments"></a>Создание переменных и аргументов рабочего процесса  
+## <a name="to-create-the-workflow-variables-and-arguments"></a>Создание переменных и аргументов рабочего процесса  
   
 1.  Дважды щелкните **SequentialNumberGuessWorkflow.xaml** в **обозревателе решений** для отображения рабочего процесса в конструкторе, если он еще не отображается.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "57719641"
   
 13. Нажмите кнопку **переменных** в нижнем левом углу конструктора действий, чтобы закрыть **переменных** области.  
   
-### <a name="to-add-the-workflow-activities"></a>Добавление действий рабочего процесса  
+## <a name="to-add-the-workflow-activities"></a>Добавление действий рабочего процесса  
   
 1.  Перетащите **назначить** действия из **примитивы** раздел **элементов** и сбросьте его в **последовательности** действия. Тип `Target` в **для** поле и следующее выражение в **введите выражение C#** или **введите выражение VB** поле.  
   
@@ -137,13 +137,13 @@ ms.locfileid: "57719641"
   
 13. Нажмите кнопку **WriteLine** действия в **затем** раздела, чтобы выбрать его и введите следующее выражение в **текст** поле значения свойства.  
   
-    ```vb  
+    ```text
     "Your guess is too low."  
     ```  
   
 14. Нажмите кнопку **WriteLine** действия в **Else** раздела, чтобы выбрать его и введите следующее выражение в **текст** поле значения свойства.  
   
-    ```vb  
+    ```text
     "Your guess is too high."  
     ```  
   
@@ -151,7 +151,7 @@ ms.locfileid: "57719641"
   
      ![Полный последовательный рабочий процесс](./media/wfsequentialgettingstartedtutorialcomplete.JPG "WFSequentialGettingStartedTutorialComplete")  
   
-### <a name="to-build-the-workflow"></a>Построение рабочего процесса  
+## <a name="to-build-the-workflow"></a>Построение рабочего процесса  
   
 1.  Чтобы построить решение, нажмите CTRL+SHIFT+B.  
   
