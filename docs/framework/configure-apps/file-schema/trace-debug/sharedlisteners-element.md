@@ -11,12 +11,12 @@ helpviewer_keywords:
 - trace listeners, <sharedListeners> element
 - sharedListeners element
 ms.assetid: de200534-19dd-4156-86cf-c50521802c4c
-ms.openlocfilehash: 56a4111f2e0fd290321756c43c7f245e46044b02
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 281cc0bd2e577dedaffb7f7eaf04fe46e6ee0b59
+ms.sourcegitcommit: 344d82456f27d09a210671214a14cfd7daf1f97c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254943"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58348821"
 ---
 # <a name="sharedlisteners-element"></a>\<sharedListeners > элемент
 Содержит прослушиватели, на которые может ссылаться любой источник или элемент трассировки.  Эти прослушиватели не получают все трассировки по умолчанию, и невозможно извлечь эти прослушиватели во время выполнения. Прослушиватели, определенные как общие могут добавляться к источникам и трассировки по имени.  
@@ -47,7 +47,7 @@ ms.locfileid: "55254943"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |`Configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`system.diagnostics`|Задает корневой элемент для раздела конфигурации ASP.NET.|  
@@ -85,7 +85,7 @@ ms.locfileid: "55254943"
       </listeners>  
     </trace>  
   </system.diagnostics>  
-</configuration></system.diagnostics>   
+</configuration>
 ```  
   
 ## <a name="see-also"></a>См. также
