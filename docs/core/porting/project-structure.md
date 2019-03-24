@@ -4,12 +4,12 @@ description: Эта статья поможет владельцам проек�
 author: conniey
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 57bb766f1d91c502a508b6362dc642310009c8c4
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: ab484ccc2c5b51b2ee1dca57df51669d288f3e6b
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904026"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58186069"
 ---
 # <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>Организация проекта для параллельной поддержки .NET Framework и .NET Core
 
@@ -36,7 +36,7 @@ ms.locfileid: "55904026"
 
 Рассмотрим показанный ниже репозиторий.
 
-![Существующий проект](media/project-structure/project.png)
+![Существующий проект](./media/project-structure/existing-project-structure.png)
 
 [**Исходный код**](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library/)
 
@@ -46,7 +46,7 @@ ms.locfileid: "55904026"
 
 Измените файлы в репозитории, удалив все существующие файлы *\*.csproj* и создав единственный файл *\*.csproj*, предназначенный для нескольких платформ. Это удобно по той причине, что один проект можно компилировать для разных платформ. Это также позволяет управлять различными параметрами компиляции и зависимостями для каждой целевой платформы.
 
-![Создание файла CSPROJ, предназначенного для нескольких платформ](media/project-structure/project.csproj.png)
+![Создание файла CSPROJ, предназначенного для нескольких платформ](./media/project-structure/multi-targeted-project.png)
 
 [**Исходный код**](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj/)
 
@@ -58,7 +58,7 @@ ms.locfileid: "55904026"
 
 При наличии существующих проектов, предназначенных для более старых платформ, можно оставить эти проекты без изменения и использовать проект .NET Core для новых платформ.
 
-![Проект .NET Core с существующим проектом в другой папке](media/project-structure/project.csproj.different.png)
+![Проект .NET Core с существующим проектом в другой папке](./media/project-structure/separate-projects-same-source.png)
 
 [**Исходный код**](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj-keep-existing/)
 

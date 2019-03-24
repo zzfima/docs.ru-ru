@@ -2,12 +2,12 @@
 title: Команда dotnet
 description: Сведения о команде dotnet (универсальном драйвере для средств CLI .NET Core) и ее использовании.
 ms.date: 06/04/2018
-ms.openlocfilehash: 53eb96ee6fe809b2e6e42eec4e7e9b5f7c5edf2a
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 107a529952cce62dac840874fa5d6d8986376adf
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066445"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185640"
 ---
 # <a name="dotnet-command"></a>Команда dotnet
 
@@ -81,9 +81,9 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 `--roll-forward-on-no-candidate-fx <N>`
 
 Определяет поведение, когда требуемая общая платформа недоступна. Параметр `N` может принимать следующие значения:
- * `0` — отключает увеличение дополнительных версий.
- * `1` — позволяет увеличивать дополнительный номер версии, но не основной. Это поведение установлено по умолчанию.
- * `2` — включает увеличение основных и дополнительных версий.
+* `0` — отключает увеличение дополнительных версий.
+* `1` — позволяет увеличивать дополнительный номер версии, но не основной. Это поведение установлено по умолчанию.
+* `2` — включает увеличение основных и дополнительных версий.
 
  Дополнительные сведения о накате можно найти в [этой статье](../whats-new/dotnet-core-2-1.md#roll-forward).
 
@@ -258,7 +258,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 [dotnet tool uninstall](dotnet-tool-uninstall.md) | Удаляет глобальное средство с компьютера.
 [dotnet tool update](dotnet-tool-update.md) | Обновляет глобальное средство на локальном компьютере.
 
-### <a name="additional-tools"></a>Дополнительные инструменты
+### <a name="additional-tools"></a>Дополнительные средства
 
 Ряд средств, которые ранее были доступны только для отдельных проектов через `DotnetCliToolReference`, стали частью пакета SDK для .NET начиная с версии 2.1.300. Эти средства перечислены в следующей таблице.
 
