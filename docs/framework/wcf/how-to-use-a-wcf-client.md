@@ -1,34 +1,38 @@
 ---
-title: Практическое руководство. Использование клиента Windows Communication Foundation
-ms.date: 09/14/2018
+title: Учебник. Использование клиента Windows Communication Foundation
+ms.date: 03/19/2019
 helpviewer_keywords:
 - WCF clients [WCF], using
 dev_langs:
 - CSharp
 - VB
 ms.assetid: 190349fc-0573-49c7-bb85-8e316df7f31f
-ms.openlocfilehash: 780a51e3e0f61f292c997202614e43a85dd90820
-ms.sourcegitcommit: a532e8314c3a4b5b039656567fedff9787a31957
+ms.openlocfilehash: 4d883277f795ea84c59aee91ffcb9b9802b0933b
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57250927"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411724"
 ---
-# <a name="how-to-use-a-windows-communication-foundation-client"></a><span data-ttu-id="d7782-102">Практическое руководство. Использование клиента Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="d7782-102">How to: Use a Windows Communication Foundation Client</span></span>
+# <a name="tutorial-use-a-windows-communication-foundation-client"></a><span data-ttu-id="b3fc6-102">Учебник. Использование клиента Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="b3fc6-102">Tutorial: Use a Windows Communication Foundation client</span></span>
 
-<span data-ttu-id="d7782-103">Это последняя из шести задач, необходимых для создания базового приложения Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="d7782-103">This is the last of six tasks required to create a basic Windows Communication Foundation (WCF) application.</span></span> <span data-ttu-id="d7782-104">Общие сведения обо всех шести задачах можно получить в разделе [Учебник по началу работы](../../../docs/framework/wcf/getting-started-tutorial.md).</span><span class="sxs-lookup"><span data-stu-id="d7782-104">For an overview of all six of the tasks, see the [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md) topic.</span></span>
+<span data-ttu-id="b3fc6-103">В данном учебнике последнего из пяти шагов, необходимых для создания базового приложения Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="b3fc6-103">This tutorial describes the last of five tasks required to create a basic Windows Communication Foundation (WCF) application.</span></span> <span data-ttu-id="b3fc6-104">Обзор руководства, см. в разделе [руководства: Начало работы с приложениями Windows Communication Foundation](getting-started-tutorial.md).</span><span class="sxs-lookup"><span data-stu-id="b3fc6-104">For an overview of the tutorials, see [Tutorial: Get started with Windows Communication Foundation applications](getting-started-tutorial.md).</span></span>
 
-<span data-ttu-id="d7782-105">После создания и настройки прокси-сервера Windows Communication Foundation (WCF) можно создать экземпляр клиента и клиентское приложение можно скомпилировать и использовать для взаимодействия со службой WCF.</span><span class="sxs-lookup"><span data-stu-id="d7782-105">Once a Windows Communication Foundation (WCF) proxy has been created and configured, a client instance can be created and the client application can be compiled and used to communicate with the WCF service.</span></span> <span data-ttu-id="d7782-106">В этом разделе описаны процедуры создания и использования клиента WCF.</span><span class="sxs-lookup"><span data-stu-id="d7782-106">This topic describes procedures for instantiating and using a WCF client.</span></span> <span data-ttu-id="d7782-107">Эта процедура выполняет три операции.</span><span class="sxs-lookup"><span data-stu-id="d7782-107">This procedure does three things:</span></span>
+<span data-ttu-id="b3fc6-105">После создания и настройки прокси-сервера Windows Communication Foundation (WCF) можно создать экземпляр клиента и Скомпилируйте клиентское приложение.</span><span class="sxs-lookup"><span data-stu-id="b3fc6-105">After you've created and configured a Windows Communication Foundation (WCF) proxy, you create a client instance and compile the client application.</span></span> <span data-ttu-id="b3fc6-106">Затем используется для взаимодействия со службой WCF.</span><span class="sxs-lookup"><span data-stu-id="b3fc6-106">You then use it to communicate with the WCF service.</span></span> 
 
-1.  <span data-ttu-id="d7782-108">Создает экземпляр клиента WCF.</span><span class="sxs-lookup"><span data-stu-id="d7782-108">Instantiates a WCF client.</span></span>
+<span data-ttu-id="b3fc6-107">В этом руководстве вы узнаете, как:</span><span class="sxs-lookup"><span data-stu-id="b3fc6-107">In this tutorial, you learn how to:</span></span>
+> [!div class="checklist"]
+> - <span data-ttu-id="b3fc6-108">Добавьте код, чтобы использовать клиент WCF.</span><span class="sxs-lookup"><span data-stu-id="b3fc6-108">Add code to use the WCF client.</span></span>
+> - <span data-ttu-id="b3fc6-109">Тестовый клиент WCF.</span><span class="sxs-lookup"><span data-stu-id="b3fc6-109">Test the WCF client.</span></span>
 
-2.  <span data-ttu-id="d7782-109">Вызывает операции службы из созданной учетной записи-посредника.</span><span class="sxs-lookup"><span data-stu-id="d7782-109">Calls the service operations from the generated proxy.</span></span>
+## <a name="add-code-to-use-the-wcf-client"></a><span data-ttu-id="b3fc6-110">Добавьте код, чтобы использовать клиент WCF</span><span class="sxs-lookup"><span data-stu-id="b3fc6-110">Add code to use the WCF client</span></span>
 
-3.  <span data-ttu-id="d7782-110">Закрывает клиент после завершения вызова операции.</span><span class="sxs-lookup"><span data-stu-id="d7782-110">Closes the client once the operation call is completed.</span></span>
+<span data-ttu-id="b3fc6-111">Клиентский код выполняет следующие действия:</span><span class="sxs-lookup"><span data-stu-id="b3fc6-111">The client code does the following steps:</span></span>
+- <span data-ttu-id="b3fc6-112">Создает экземпляр клиента WCF.</span><span class="sxs-lookup"><span data-stu-id="b3fc6-112">Instantiates the WCF client.</span></span>
+- <span data-ttu-id="b3fc6-113">Вызывает операции службы из созданной учетной записи-посредника.</span><span class="sxs-lookup"><span data-stu-id="b3fc6-113">Calls the service operations from the generated proxy.</span></span>
+- <span data-ttu-id="b3fc6-114">Закрывает клиент после завершения вызова операции.</span><span class="sxs-lookup"><span data-stu-id="b3fc6-114">Closes the client after the operation call is completed.</span></span>
 
-## <a name="use-a-windows-communication-foundation-client"></a><span data-ttu-id="d7782-111">Использование клиента Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="d7782-111">Use a Windows Communication Foundation client</span></span>
-
-<span data-ttu-id="d7782-112">Откройте файл Program.cs или Program.vb из проекта GettingStartedClient и замените существующий код в файлах следующим:</span><span class="sxs-lookup"><span data-stu-id="d7782-112">Open the Program.cs or Program.vb file from the GettingStartedClient project and replace the existing code with the following code:</span></span>
+<span data-ttu-id="b3fc6-115">Откройте **Program.cs** или **Module1.vb** файла из **GettingStartedClient** проекта и замените его код следующим кодом:</span><span class="sxs-lookup"><span data-stu-id="b3fc6-115">Open the **Program.cs** or **Module1.vb** file from the **GettingStartedClient** project and replace its code with the following code:</span></span>
 
 ```csharp
 using System;
@@ -71,7 +75,9 @@ namespace GettingStartedClient
             result = client.Divide(value1, value2);
             Console.WriteLine("Divide({0},{1}) = {2}", value1, value2, result);
 
-            //Step 3: Closing the client gracefully closes the connection and cleans up resources.
+            // Step 3: Close the client to gracefully close the connection and clean up resources.
+            Console.WriteLine("\nPress <Enter> to terminate the client.");
+            Console.ReadLine();
             client.Close();
         }
     }
@@ -83,89 +89,108 @@ Imports System
 Imports System.Collections.Generic
 Imports System.Text
 Imports System.ServiceModel
-Imports GettingStartedClientVB2.ServiceReference1
+Imports GettingStartedClient.ServiceReference1
 
 Module Module1
 
     Sub Main()
-        ' Step 1: Create an instance of the WCF proxy
+        ' Step 1: Create an instance of the WCF proxy.
         Dim Client As New CalculatorClient()
 
-        'Step 2: Call the service operations.
-        'Call the Add service operation.
+        ' Step 2: Call the service operations.
+        ' Call the Add service operation.
         Dim value1 As Double = 100D
         Dim value2 As Double = 15.99D
         Dim result As Double = Client.Add(value1, value2)
         Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
 
-        'Call the Subtract service operation.
+        ' Call the Subtract service operation.
         value1 = 145D
         value2 = 76.54D
         result = Client.Subtract(value1, value2)
         Console.WriteLine("Subtract({0},{1}) = {2}", value1, value2, result)
 
-        'Call the Multiply service operation.
+        ' Call the Multiply service operation.
         value1 = 9D
         value2 = 81.25D
         result = Client.Multiply(value1, value2)
         Console.WriteLine("Multiply({0},{1}) = {2}", value1, value2, result)
 
-        'Call the Divide service operation.
+        ' Call the Divide service operation.
         value1 = 22D
         value2 = 7D
         result = Client.Divide(value1, value2)
         Console.WriteLine("Divide({0},{1}) = {2}", value1, value2, result)
 
-        ' Step 3: Closing the client gracefully closes the connection and cleans up resources.
-        Client.Close()
-
+        ' Step 3: Close the client to gracefully close the connection and clean up resources.
         Console.WriteLine()
-        Console.WriteLine("Press <ENTER> to terminate client.")
+        Console.WriteLine("Press <Enter> to terminate the client.")
         Console.ReadLine()
+        Client.Close()
 
     End Sub
 
 End Module
 ```
 
-<span data-ttu-id="d7782-113">Обратите внимание, что `using` или `Imports` инструкцию, которая импортирует `GettingStartedClient.ServiceReference1`.</span><span class="sxs-lookup"><span data-stu-id="d7782-113">Notice the `using` or `Imports` statement that imports the `GettingStartedClient.ServiceReference1`.</span></span> <span data-ttu-id="d7782-114">Он импортирует код, сгенерированный **Add Service Reference** в Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="d7782-114">This imports the code generated by **Add Service Reference** in Visual Studio.</span></span> <span data-ttu-id="d7782-115">Код создает WCF-прокси и затем вызывает каждый из операции службы, предоставленные службой калькулятора, закрывает прокси и завершает.</span><span class="sxs-lookup"><span data-stu-id="d7782-115">The code instantiates the WCF proxy and then calls each of the service operations exposed by the calculator service, closes the proxy, and terminates.</span></span>
+<span data-ttu-id="b3fc6-116">Обратите внимание, что `using` (для визуального C#) или `Imports` (для Visual Basic) инструкцию, которая импортирует `GettingStartedClient.ServiceReference1`.</span><span class="sxs-lookup"><span data-stu-id="b3fc6-116">Notice the `using` (for Visual C#) or `Imports` (for Visual Basic) statement that imports `GettingStartedClient.ServiceReference1`.</span></span> <span data-ttu-id="b3fc6-117">Эта инструкция импортирует код, созданный средой Visual Studio с **Add Service Reference** функции.</span><span class="sxs-lookup"><span data-stu-id="b3fc6-117">This statement imports the code that Visual Studio generated with the **Add Service Reference** function.</span></span> <span data-ttu-id="b3fc6-118">Этот код создает экземпляр прокси-сервер WCF и вызывает каждый из операции службы, которые предоставляет служба калькулятора.</span><span class="sxs-lookup"><span data-stu-id="b3fc6-118">The code instantiates the WCF proxy and calls each of the service operations that the calculator service exposes.</span></span> <span data-ttu-id="b3fc6-119">Затем закрывает прокси и завершает выполнение программы.</span><span class="sxs-lookup"><span data-stu-id="b3fc6-119">It then closes the proxy and ends the program.</span></span>
 
-<span data-ttu-id="d7782-116">Вы завершили работу с учебником.</span><span class="sxs-lookup"><span data-stu-id="d7782-116">You have now completed the tutorial.</span></span> <span data-ttu-id="d7782-117">Был определен и реализован контракт службы, создан WCF-прокси, настроено клиентское приложение WCF, и использованы прокси для вызова операций службы.</span><span class="sxs-lookup"><span data-stu-id="d7782-117">You defined a service contract, implemented the service contract, generated a WCF proxy, configured a WCF client application, and then used the proxy to call service operations.</span></span> <span data-ttu-id="d7782-118">Чтобы проверить приложение, сначала запустите GettingStartedHost для запуска службы, а затем запустите GettingStartedClient.</span><span class="sxs-lookup"><span data-stu-id="d7782-118">To test out the application, first run GettingStartedHost to start the service and then run GettingStartedClient.</span></span>
+## <a name="test-the-wcf-client"></a><span data-ttu-id="b3fc6-120">Тестовый клиент WCF</span><span class="sxs-lookup"><span data-stu-id="b3fc6-120">Test the WCF client</span></span>
 
-<span data-ttu-id="d7782-119">Вывод из GettingStartedHost должен выглядеть следующим образом:</span><span class="sxs-lookup"><span data-stu-id="d7782-119">The output from GettingStartedHost should look like this:</span></span>
+### <a name="test-the-application-from-visual-studio"></a><span data-ttu-id="b3fc6-121">Тестирование приложения из Visual Studio</span><span class="sxs-lookup"><span data-stu-id="b3fc6-121">Test the application from Visual Studio</span></span>
 
-```text
-The service is ready.
-Press <ENTER> to terminate service.
+1. <span data-ttu-id="b3fc6-122">Сохраните и выполните сборку решения.</span><span class="sxs-lookup"><span data-stu-id="b3fc6-122">Save and build the solution.</span></span>
 
-Received Add(100,15.99)
-Return: 115.99
-Received Subtract(145,76.54)
-Return: 68.46
-Received Multiply(9,81.25)
-Return: 731.25
-Received Divide(22,7)
-Return: 3.14285714285714
-```
+2. <span data-ttu-id="b3fc6-123">Выберите **GettingStartedLib** папку, а затем выберите **Назначить запускаемым проектом** в контекстном меню.</span><span class="sxs-lookup"><span data-stu-id="b3fc6-123">Select the **GettingStartedLib** folder, and then select **Set as Startup Project** from the shortcut menu.</span></span>
 
-<span data-ttu-id="d7782-120">Вывод GettingStartedClient должен выглядеть следующим образом:</span><span class="sxs-lookup"><span data-stu-id="d7782-120">The output from GettingStartedClient should look like this:</span></span>
+3. <span data-ttu-id="b3fc6-124">Из **запускаемых проектов**выберите **GettingStartedLib** стрелку раскрывающегося списка, а затем нажмите **запуска** или нажмите клавишу **F5**.</span><span class="sxs-lookup"><span data-stu-id="b3fc6-124">From **Startup Projects**, select **GettingStartedLib** from the drop-down list, then select **Run** or press **F5**.</span></span>
 
-```text
-Add(100,15.99) = 115.99
-Subtract(145,76.54) = 68.46
-Multiply(9,81.25) = 731.25
-Divide(22,7) = 3.14285714285714
+### <a name="test-the-application-from-a-command-prompt"></a><span data-ttu-id="b3fc6-125">Тестирование приложения из командной строки</span><span class="sxs-lookup"><span data-stu-id="b3fc6-125">Test the application from a command prompt</span></span>
 
-Press <ENTER> to terminate client.
-```
+1. <span data-ttu-id="b3fc6-126">Откройте командную строку от имени администратора и перейдите в каталог решения Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="b3fc6-126">Open a command prompt as an administrator, and then navigate to your Visual Studio solution directory.</span></span> 
 
-## <a name="see-also"></a><span data-ttu-id="d7782-121">См. также</span><span class="sxs-lookup"><span data-stu-id="d7782-121">See also</span></span>
+2. <span data-ttu-id="b3fc6-127">Чтобы запустить службу: Введите *GettingStartedHost\bin\Debug\GettingStartedHost.exe*.</span><span class="sxs-lookup"><span data-stu-id="b3fc6-127">To start the service: Enter *GettingStartedHost\bin\Debug\GettingStartedHost.exe*.</span></span>
 
-- [<span data-ttu-id="d7782-122">Создание клиентов</span><span class="sxs-lookup"><span data-stu-id="d7782-122">Building Clients</span></span>](../../../docs/framework/wcf/building-clients.md)
-- [<span data-ttu-id="d7782-123">Практическое руководство. Создание клиента</span><span class="sxs-lookup"><span data-stu-id="d7782-123">How to: Create a Client</span></span>](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
-- [<span data-ttu-id="d7782-124">Руководство по началу работы</span><span class="sxs-lookup"><span data-stu-id="d7782-124">Getting Started Tutorial</span></span>](../../../docs/framework/wcf/getting-started-tutorial.md)
-- [<span data-ttu-id="d7782-125">Базовое программирование для WCF</span><span class="sxs-lookup"><span data-stu-id="d7782-125">Basic WCF Programming</span></span>](../../../docs/framework/wcf/basic-wcf-programming.md)
-- [<span data-ttu-id="d7782-126">Практическое руководство. Создание дуплексного контракта</span><span class="sxs-lookup"><span data-stu-id="d7782-126">How to: Create a Duplex Contract</span></span>](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
-- [<span data-ttu-id="d7782-127">Практическое руководство. Службы доступа с дуплексным контрактом</span><span class="sxs-lookup"><span data-stu-id="d7782-127">How to: Access Services with a Duplex Contract</span></span>](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
-- [<span data-ttu-id="d7782-128">Начало работы</span><span class="sxs-lookup"><span data-stu-id="d7782-128">Getting Started</span></span>](../../../docs/framework/wcf/samples/getting-started-sample.md)
-- [<span data-ttu-id="d7782-129">Резидентное размещение</span><span class="sxs-lookup"><span data-stu-id="d7782-129">Self-Host</span></span>](../../../docs/framework/wcf/samples/self-host.md)
+3. <span data-ttu-id="b3fc6-128">Чтобы запустить клиент: Откройте другую командную строку, перейдите в каталог решения Visual Studio, а затем введите *GettingStartedClient\bin\Debug\GettingStartedClient.exe*.</span><span class="sxs-lookup"><span data-stu-id="b3fc6-128">To start the client: Open another command prompt, navigate to your Visual Studio solution directory, then enter *GettingStartedClient\bin\Debug\GettingStartedClient.exe*.</span></span>
+
+   <span data-ttu-id="b3fc6-129">*GettingStartedHost.exe* выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="b3fc6-129">*GettingStartedHost.exe* produces the following output:</span></span>
+
+   ```text
+   The service is ready.
+   Press <Enter> to terminate the service.
+
+   Received Add(100,15.99)
+   Return: 115.99
+   Received Subtract(145,76.54)
+   Return: 68.46
+   Received Multiply(9,81.25)
+   Return: 731.25
+   Received Divide(22,7)
+   Return: 3.14285714285714
+   ```
+
+   <span data-ttu-id="b3fc6-130">*GettingStartedClient.exe* выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="b3fc6-130">*GettingStartedClient.exe* produces the following output:</span></span>
+
+   ```text
+   Add(100,15.99) = 115.99
+   Subtract(145,76.54) = 68.46
+   Multiply(9,81.25) = 731.25
+   Divide(22,7) = 3.14285714285714
+
+   Press <Enter> to terminate the client.
+   ```
+
+## <a name="next-steps"></a><span data-ttu-id="b3fc6-131">Следующие шаги</span><span class="sxs-lookup"><span data-stu-id="b3fc6-131">Next steps</span></span>
+
+<span data-ttu-id="b3fc6-132">Теперь вы выполнили все задачи в WCF пособие по началу работы.</span><span class="sxs-lookup"><span data-stu-id="b3fc6-132">You've now completed all the tasks in the WCF get started tutorial.</span></span> <span data-ttu-id="b3fc6-133">В этом руководстве вы узнали, как:</span><span class="sxs-lookup"><span data-stu-id="b3fc6-133">In this tutorial, you learned how to:</span></span>
+
+<span data-ttu-id="b3fc6-134">В этом руководстве вы узнаете, как:</span><span class="sxs-lookup"><span data-stu-id="b3fc6-134">In this tutorial, you learn how to:</span></span>
+> [!div class="checklist"]
+> - <span data-ttu-id="b3fc6-135">Добавьте код, чтобы использовать клиент WCF.</span><span class="sxs-lookup"><span data-stu-id="b3fc6-135">Add code to use the WCF client.</span></span>
+> - <span data-ttu-id="b3fc6-136">Тестовый клиент WCF.</span><span class="sxs-lookup"><span data-stu-id="b3fc6-136">Test the WCF client.</span></span>
+
+<span data-ttu-id="b3fc6-137">При наличии проблем или ошибок в любом из шагов, следуйте указаниям в статье об устранении неполадок для их исправления.</span><span class="sxs-lookup"><span data-stu-id="b3fc6-137">If you have problems or errors in any of the steps, follow the steps in the troubleshooting article to fix them.</span></span>
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="b3fc6-138">Устранение неполадок с Get к работе с WCF учебники</span><span class="sxs-lookup"><span data-stu-id="b3fc6-138">Troubleshoot the Get started with WCF tutorials</span></span>](troubleshooting-the-getting-started-tutorial.md)
+
