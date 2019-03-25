@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Защита службы с помощью учетных данных Windows
+title: Практическое руководство. Защита службы с помощью учетных данных Windows
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
-ms.openlocfilehash: 83b55ca42a3cebb6ceb2aec128202f14dc35da0a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b5fece86dca524cb3f94f64dcb98361a93bf84a3
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657562"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410931"
 ---
-# <a name="how-to-secure-a-service-with-windows-credentials"></a>Как выполнить Защита службы с помощью учетных данных Windows
+# <a name="how-to-secure-a-service-with-windows-credentials"></a>Практическое руководство. Защита службы с помощью учетных данных Windows
 В этом разделе показано, как включить режим безопасности транспорта для службы Windows Communication Foundation (WCF), которая находится в домене Windows и вызывается клиентами в одном домене. Дополнительные сведения об этом сценарии см. в разделе [безопасность транспорта с проверкой подлинности Windows](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Образец приложения, см. в разделе [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) образца.  
   
  Начинать изучение этого раздела рекомендуется только после определения существующего интерфейса контракта и его реализации. Также можно изменять существующие службу и клиент.  
@@ -52,7 +52,7 @@ ms.locfileid: "54657562"
   
 2.  Создайте переменную <xref:System.Type> с именем `contractType` и присвойте ей тип интерфейса (`ICalculator`). При использовании Visual Basic, используйте `GetType` оператора; при использовании C#, используйте `typeof` ключевое слово.  
   
-3.  Создайте вторую переменную `Type` с именем `serviceType` и присвойте ей тип реализованного контракта (`Calculator`).  
+3.  Создайте вторую переменную <xref:System.Type> с именем `serviceType` и присвойте ей тип реализованного контракта (`Calculator`).  
   
 4.  Создайте экземпляр класса <xref:System.Uri> с именем `baseAddress` с базовым адресом службы. Базовый адрес должен иметь схему, которая сочетается с транспортом. В этом случае схема транспорта является HTTP, и адрес включает специальный универсальный код ресурса (URI) «localhost» и номер порта (8036) а также базовый адрес конечной точки ("serviceModelSamples /): `http://localhost:8036/serviceModelSamples/`.  
   
@@ -102,11 +102,11 @@ ms.locfileid: "54657562"
   
 1.  Добавить [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) элемент [ \<привязки >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) раздел элемента файла конфигурации.  
   
-2.  Добавьте элемент <`binding`> в элемент <`WSHttpBinding`> и присвойте атрибуту `configurationName` значение, подходящее для используемого приложения.  
+2.  Добавьте <`binding`> элемента <`WSHttpBinding`> и присвойте `configurationName` требуемыми в приложении значение атрибута.  
   
-3.  Добавьте элемент <`security`> и присвойте атрибуту `mode` значение Message.  
+3.  Добавьте <`security`> и присвойте `mode` атрибут к сообщению.  
   
-4.  Добавьте элемент <`message`> и присвойте атрибуту `clientCredentialType` значение Windows.  
+4.  Добавьте <`message`> и присвойте `clientCredentialType` атрибут для Windows.  
   
 5.  В файле конфигурации службы замените раздел `<bindings>` с помощью следующего кода. Если у вас еще нет файла конфигурации службы, см. в разделе [с помощью привязок для настройки служб и клиентов](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
   

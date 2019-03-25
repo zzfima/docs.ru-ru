@@ -2,25 +2,25 @@
 title: Операции, использующие квантификаторы (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ae1a2b73-503c-4f4b-a3fd-31b5adbee67c
-ms.openlocfilehash: 966bc958d6feac77ebe1c229bfe5dbb993031676
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c358c3181ecbefeedcbe22e6f3c877d2924c66b3
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976750"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409514"
 ---
 # <a name="quantifier-operations-visual-basic"></a>Операции, использующие квантификаторы (Visual Basic)
 Квантификаторы возвращают значение <xref:System.Boolean>, которое указывает, удовлетворяют ли условию некоторые или все элементы в последовательности.  
   
  На приведенном ниже рисунке показаны два различных квантификатора, примененные к двум разным исходным последовательностям. Первая операция проверяет, является ли один или несколько элементов буквой "А"; результатом является `true`. Вторая операция проверяет, являются ли все элементы буквой "А"; результатом является `true`.  
   
- ![Операции, использующие квантификаторы LINQ](../../../../csharp/programming-guide/concepts/linq/media/linq_quantifier.png "LINQ_Quantifier")  
+ ![Операции, использующие кванторы LINQ](./media/quantifier-operations/linq-quantifier-operations.png)  
   
  В следующем разделе перечислены методы стандартных операторов запросов, которые выполняют операции с использованием квантификаторов.  
   
 ## <a name="methods"></a>Методы  
   
-|Имя метода|Описание:|Синтаксис выражений запросов Visual Basic|Дополнительные сведения|  
+|Имя метода|Описание|Синтаксис выражений запросов Visual Basic|Дополнительные сведения|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
 |Все|Определяет, все ли элементы последовательности удовлетворяют условию.|`Aggregate … In … Into All(…)`|<xref:System.Linq.Enumerable.All%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.All%2A?displayProperty=nameWithType>|  
 |Любой|Определяет, удовлетворяют ли условию какие-либо элементы последовательности.|`Aggregate … In … Into Any()`|<xref:System.Linq.Enumerable.Any%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Any%2A?displayProperty=nameWithType>|  

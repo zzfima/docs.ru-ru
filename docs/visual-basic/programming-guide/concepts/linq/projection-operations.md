@@ -2,12 +2,12 @@
 title: Операции проекции (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b8d38e6d-21cf-4619-8dbb-94476f4badc7
-ms.openlocfilehash: 4d92405d9f3da69df4fa3964468599d6549480cb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f7f1ba7b595d5ea63468aaa2d4fdda62cb9d0693
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740970"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58408955"
 ---
 # <a name="projection-operations-visual-basic"></a>Операции проекции (Visual Basic)
 Проекцией называют операцию преобразования объекта в новую форму, которая часто состоит только из тех его свойств, которые будут использоваться впоследствии. С помощью проекции можно создать новый тип, построенный из каждого объекта. Вы можете проецировать свойство и выполнять над ним математические функции. Также можно проецировать исходный объект, не изменяя его.  
@@ -85,11 +85,11 @@ MsgBox(sb.ToString())
   
  На этом рисунке представлено, как `Select()` возвращает коллекцию, которая имеет то же количество элементов, что и исходная коллекция.  
   
- ![Концептуальная иллюстрация действия Select&#40;&#41;](../../../../csharp/programming-guide/concepts/linq/media/selectaction.png "SelectAction")  
+ ![Рисунок, показывающий действие Select&#40;&#41;](./media/projection-operations/select-action-graphic.png)  
   
  На этом рисунке показано, как `SelectMany()` объединяет промежуточные последовательности массивов в один конечный результат, содержащий все значения из промежуточных массивов.  
   
- ![Схема работы SelectMany&#40;&#41;.](../../../../csharp/programming-guide/concepts/linq/media/selectmany.png "SelectMany")  
+ ![График, отображающий действие SelectMany&#40;&#41;.](./media/projection-operations/select-many-action-graphic.png )  
   
 ### <a name="code-example"></a>Пример кода  
  В приведенном ниже примере сравнивается действие `Select()` и `SelectMany()`. Код создает "букет" из цветов путем получения первых двух элементов из каждого списка названий цветов в исходной коллекции. В этом примере отдельное значение, используемое функцией преобразования <xref:System.Linq.Enumerable.Select%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%29>, представляет собой коллекцию значений. Этот требует дополнительного цикла `For Each` для перечисления каждой строки в каждой подпоследовательности.  

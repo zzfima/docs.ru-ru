@@ -1,44 +1,62 @@
 ---
-title: Практическое руководство. Определение контракта службы Windows Communication Foundation
-ms.date: 09/14/2018
+title: Учебник. Определение контракта службы Windows Communication Foundation
+ms.date: 03/19/2019
 helpviewer_keywords:
 - service contracts [WCF], defining
 dev_langs:
 - CSharp
 - VB
 ms.assetid: 67bf05b7-1d08-4911-83b7-a45d0b036fc3
-ms.openlocfilehash: 9f7f696b1f5be2e96c50938f4627271d891deb32
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: f93ef787c74a4581d45c24c5a704cc5fb044bd46
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582204"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409969"
 ---
-# <a name="how-to-define-a-windows-communication-foundation-service-contract"></a>Практическое руководство. Определение контракта службы Windows Communication Foundation
-Это первый из шести задач, необходимых для создания базового приложения Windows Communication Foundation (WCF). Общие сведения обо всех шести задачах можно получить в разделе [Учебник по началу работы](../../../docs/framework/wcf/getting-started-tutorial.md).
+# <a name="tutorial-define-a-windows-communication-foundation-service-contract"></a>Учебник. Определение контракта службы Windows Communication Foundation
 
- При создании службы WCF, первым делом следует определить контракт службы. В контракте службы указаны операции, поддерживаемые службой. Операцию можно представлять себе как метод веб-службы. Контракты создаются путем определения интерфейса C++, C# или Visual Basic. Каждый метод в интерфейсе соответствует определенной операции службы. К каждому интерфейсу должен быть применен атрибут <xref:System.ServiceModel.ServiceContractAttribute>, и к каждой операции должен быть применен атрибут <xref:System.ServiceModel.OperationContractAttribute>. Если один из методов в интерфейсе, имеющем атрибут <xref:System.ServiceModel.ServiceContractAttribute>, не имеет атрибута <xref:System.ServiceModel.OperationContractAttribute>, этот метод не представлен службой.
+В данном учебнике первый из пяти шагов, необходимых для создания базового приложения Windows Communication Foundation (WCF). Обзор руководства, см. в разделе [руководства: Начало работы с приложениями Windows Communication Foundation](getting-started-tutorial.md).
 
- Код, используемый для выполнения этой задачи, приведен в примере после описания процедуры.
+При создании службы WCF, в первую очередь является определение контракта службы. В контракте службы указаны операции, поддерживаемые службой. Операцию можно представлять себе как метод веб-службы. Вы создаете контракты служб, определяя визуального C# или Visual Basic (Visual Basic) интерфейса. Интерфейс имеет следующие характеристики:
 
-## <a name="define-a-service-contract"></a>Определите контракт службы
+- Каждый метод в интерфейсе соответствует определенной операции службы. 
+- Для каждого интерфейса, необходимо применить <xref:System.ServiceModel.ServiceContractAttribute> атрибута.
+- Для каждой операции или метода, необходимо применить <xref:System.ServiceModel.OperationContractAttribute> атрибута. 
 
-1. Откройте Visual Studio с правами администратора, щелкнув правой кнопкой мыши в программе в **запустить** меню и выбрав **дополнительные** > **Запуск от имени администратора**.
+В этом руководстве вы узнаете, как:
+> [!div class="checklist"]
+> - Создание **библиотека службы WCF** проекта.
+> - Определите интерфейс контракта службы.
 
-2. Создайте проект библиотеки служб WCF.
+
+## <a name="create-a-wcf-service-library-project-and-define-a-service-contract-interface"></a>Создайте проект библиотеки служб WCF и определить интерфейс контракта службы
+
+1. Откройте Visual Studio с правами администратора. Чтобы сделать это, выберите в программе Visual Studio в **запустить** меню, а затем выберите **дополнительные** > **Запуск от имени администратора** в контекстном меню.
+
+2. Создание **библиотека службы WCF** проекта.
 
    1. В меню **Файл** выберите пункт **Создать** > **Проект**.
 
-   2. В **новый проект** диалоговое окно, в левой части окна разверните **Visual C#** или **Visual Basic**, а затем выберите **WCF** категории. Шаблоны проектов отображаются в центральной части диалогового окна. Выберите **библиотека службы WCF**.
+   2. В **новый проект** диалоговое окно, в левой части окна разверните **Visual C#** или **Visual Basic**, а затем выберите **WCF** категории. Visual Studio отображает список шаблонов проектов в центральной части окна. Выберите **библиотека службы WCF**.
 
-   3. Введите `GettingStartedLib` в **имя** textbox и `GettingStarted` в **имя решения** текстовое поле в нижней части диалогового окна.
+      > [!NOTE]
+      > Если вы не видите **WCF** Категория шаблона проекта, может потребоваться установить **Windows Communication Foundation** компонент Visual Studio. В **новый проект** выберите **открыть установщик Visual Studio** ссылку в левой части. Выберите **отдельные компоненты** вкладке, а затем найдите и выберите **Windows Communication Foundation** под **действия разработки** категории. Выберите **изменить** для начала установки компонента.
 
-   > [!NOTE]
-   > Если вы не видите **WCF** Категория шаблона проекта, может потребоваться установить **Windows Communication Foundation** компонент Visual Studio. В **новый проект** диалогового окна выберите ссылку **открыть установщик Visual Studio**. Выберите **отдельные компоненты** вкладке, а затем найдите и выберите **Windows Communication Foundation** под **действия разработки** категории. Выберите **изменить** для начала установки компонента.
+   3. В нижней части окна, введите *GettingStartedLib* для **имя** и *GettingStarted* для **имя решения**. 
 
-   Visual Studio создает проект, содержащий 3 файла: IService1.cs (или IService1.vb), Service1.cs (или Service1.vb) и App.config. В файле IService1 содержится контракт службы по умолчанию. В файле Service1 содержится контракт службы, реализованный методом по умолчанию. В файле App.config содержатся настройки, необходимые для загрузки службы по умолчанию средством WCF Service Host в Visual Studio. Дополнительные сведения о средстве WCF Service Host см. в разделе [узел службы WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
+   4. Нажмите кнопку **ОК**.
 
-3. Откройте файл IService1.cs или IService1.vb и удалите код в объявление пространства имен, оставив объявление пространства имен. В пределах объявления пространства имен определите новый интерфейс с именем `ICalculator`, как показано в приведенном ниже примере кода.
+      Visual Studio создает проект, который имеет три файла: *IService1.cs* (или *IService1.vb* для проекта Visual Basic), *Service1.cs* (или *Service1.vb* для проекта Visual Basic), и  *App.config*. Visual Studio определяет эти файлы следующим образом: 
+      - *IService1* файл содержит определение контракта службы по умолчанию. 
+      - *Service1* файл содержит реализацию по умолчанию контракта службы. 
+      - *App.config* файл содержит сведения о конфигурации, необходимые для загрузки службы по умолчанию с помощью средства узел службы WCF Visual Studio. Дополнительные сведения о средстве WCF Service Host см. в разделе [узел службы WCF (WcfSvcHost.exe)](wcf-service-host-wcfsvchost-exe.md).
+
+      > [!NOTE]
+      > Если вы установили Visual Studio с параметрами среды разработки Visual Basic, решение может быть скрыт. Если это так, выберите **параметры** из **средства** меню, затем выберите **проекты и решения** > **Общие** в **параметры** окна. Выберите **всегда показывать решение**. Кроме того, убедитесь, что **сохранять новые проекты при создании** выбран.
+
+
+3. Из **обозревателе решений**откройте **IService1.cs** или **IService1.vb** файл и замените его код следующим кодом:
 
     ```csharp
     using System;
@@ -81,17 +99,16 @@ ms.locfileid: "48582204"
     End Namespace
     ```
 
-     В этом контракте определен калькулятор в сети. Обратите внимание, что интерфейс `ICalculator` помечен атрибутом <xref:System.ServiceModel.ServiceContractAttribute>. Этот атрибут определяет пространство имен, которое используется для устранения неоднозначности имени контракта. Каждая операция калькулятора помечена атрибутом <xref:System.ServiceModel.OperationContractAttribute>.
+     В этом контракте определен калькулятор в сети. Обратите внимание, что `ICalculator` интерфейс отмечен атрибутом <xref:System.ServiceModel.ServiceContractAttribute> атрибут (упрощенная как `ServiceContract`). Этот атрибут определяет пространство имен для устранения неоднозначности имени контракта. Каждая операция калькулятора с помечает код <xref:System.ServiceModel.OperationContractAttribute> атрибут (упрощенная как `OperationContract`).
 
 ## <a name="next-steps"></a>Следующие шаги
 
+В этом руководстве вы узнали, как:
+> [!div class="checklist"]
+> - Создайте проект библиотеки служб WCF.
+> - Определите интерфейс контракта службы.
+
+Перейдите к следующему руководству, чтобы узнать, как реализовать контракт службы WCF.
+
 > [!div class="nextstepaction"]
-> [Практическое: реализация контракта службы](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)
-
-## <a name="see-also"></a>См. также
-
-- <xref:System.ServiceModel.ServiceContractAttribute>
-- <xref:System.ServiceModel.OperationContractAttribute>
-- [Практическое руководство. Реализация контракта службы](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)
-- [Начало работы](../../../docs/framework/wcf/samples/getting-started-sample.md)
-- [Резидентное размещение](../../../docs/framework/wcf/samples/self-host.md)
+> [Учебник. Реализация контракта службы WCF](how-to-implement-a-wcf-contract.md)

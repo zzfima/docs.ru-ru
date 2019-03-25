@@ -2,12 +2,12 @@
 title: Пользовательские службы времени существования
 ms.date: 08/20/2018
 ms.assetid: 52806c07-b91c-48fe-b992-88a41924f51f
-ms.openlocfilehash: 1946608c69401fb08f6eb458a8adabea24563963
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: be6013d568e3625c5eac7e0c145db7df1c6917e3
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520775"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410385"
 ---
 # <a name="custom-lifetime"></a>Пользовательские службы времени существования
 
@@ -201,7 +201,7 @@ public void InitializeInstanceContext(InstanceContext instanceContext,
 }
 ```
 
- Наконец <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> реализации прикрепленный к модели службы с помощью <xref:System.ServiceModel.Description.IServiceBehavior> реализации. Эта реализация помещается в класс `CustomLeaseTimeAttribute`, кроме того, она является производной от базового класса `Attribute` для предоставления этого поведения в виде атрибута.
+ Наконец <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> реализации прикрепленный к модели службы с помощью <xref:System.ServiceModel.Description.IServiceBehavior> реализации. Эта реализация помещается в класс `CustomLeaseTimeAttribute`, кроме того, она является производной от базового класса <xref:System.Attribute> для предоставления этого поведения в виде атрибута.
 
 ```csharp
 public void ApplyDispatchBehavior(ServiceDescription description,
@@ -240,7 +240,7 @@ public class EchoService : IEchoService
 
 1. Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).
 
-2. Чтобы создать выпуск решения на C# или Visual Basic .NET, следуйте инструкциям в [сборка образцов Windows Communication Foundation](building-the-samples.md).
+2. Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](building-the-samples.md).
 
 3. Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](running-the-samples.md).
 

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - objects [Visual Basic], names
 - names [Visual Basic], shadowing
 ms.assetid: 54bb4c25-12c4-4181-b4a0-93546053964e
-ms.openlocfilehash: 6ac973493b67fa15ca935f61bbb8e5c07bda1e0f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 15c7112f7e318542859162655c78e19558178e5a
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580867"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411009"
 ---
 # <a name="shadowing-in-visual-basic"></a>Сокрытие в Visual Basic
 Если два программных элемента имеют одинаковые имена, один из них может скрыть, или *тени*, другой. В таком случае затененный элемент недоступен для обращения. Вместо этого когда код использует имя элемента, компилятор Visual Basic разрешает его скрывающий элемент.  
@@ -41,8 +41,7 @@ ms.locfileid: "54580867"
   
  На следующем рисунке показаны две переменные, обе с именем `temp`. Локальная переменная `temp` скрывает переменную-член `temp` при доступе из своей собственной процедуры `p`. Тем не менее `MyClass` ключевое слово обходит затенение и обращается к переменной-члена.  
   
- ![График схемы затемнения посредством области](../../../../visual-basic/programming-guide/language-features/declared-elements/media/shadowscope.gif "ShadowScope")  
-Затемнения посредством области  
+ ![Рисунок, показывающий затемнения посредством области.](./media/shadowing/shadow-scope-diagram.gif)
   
  Пример затемнения посредством области, см. в разделе [как: Сокрытие переменной с тем же именем, что и ваша переменная](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md).  
   
@@ -51,8 +50,7 @@ ms.locfileid: "54580867"
   
  На следующем рисунке показан базовый класс `b` и производный класс `d` , наследуемый от `b`. Базовый класс определяет процедуру с именем `proc`, и его скрывает производного класса с тем же именем. Первый `Call` оператор обращается к затенение `proc` в производном классе. Тем не менее `MyBase` ключевое слово обходит затенение и обращается к затененной процедуре в базовом классе.  
   
- ![График схемы затемнения посредством наследования](../../../../visual-basic/programming-guide/language-features/declared-elements/media/shadowinherit.gif "ShadowInherit")  
-Затемнения посредством наследования  
+ ![График схемы затемнения посредством наследования](./media/shadowing/shadowing-inherit-diagram.gif)  
   
  Пример затемнения посредством наследования, см. в разделе [как: Сокрытие переменной с тем же именем, что и ваша переменная](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md) и [как: Сокрытие наследуемой переменной](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md).  
   

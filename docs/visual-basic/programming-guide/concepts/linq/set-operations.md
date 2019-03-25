@@ -2,12 +2,12 @@
 title: Операции с множествами (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2b06e822-e030-438f-9db7-ee402bd3a706
-ms.openlocfilehash: 8ec7f2785617c354a1aa506ac0df9eef7d051b59
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 7b8dcaaa82ac5a30c35222417245153e55a522cc
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679298"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409254"
 ---
 # <a name="set-operations-visual-basic"></a>Операции с множествами (Visual Basic)
 Операции над множествами в LINQ — это операции запросов, результирующие наборы которых основываются на наличии или отсутствии эквивалентных элементов в одной или другой коллекции (или наборе).  
@@ -28,23 +28,21 @@ ms.locfileid: "57679298"
 ### <a name="distinct"></a>Distinct  
  На следующем рисунке показано поведение метода <xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType> применительно к последовательности символов. Возвращаемая последовательность содержит уникальные элементы из входной последовательности.  
   
- ![График, демонстрирующий поведение Distinct&#40;&#41;.](../../../../csharp/programming-guide/concepts/linq/media/distinct.png "Distinct")  
+ ![График, демонстрирующий поведение Distinct&#40;&#41;.](./media/set-operations/distinct-method-behavior.png)  
   
 ### <a name="except"></a>Исключения  
  На следующем рисунке показано поведение <xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType>. Возвращаемая последовательность содержит только те элементы из первой входной последовательности, которых нет во второй.  
   
- ![График, отображающий действие Except&#40;&#41;. ](./media/set-operations/except-behavior-graphic.png "Показано поведение за исключением.")  
+ ![Рисунок, показывающий действие Except&#40;&#41;.](./media/set-operations/except-behavior-graphic.png "Показывает поведение исключения.")  
   
 ### <a name="intersect"></a>Пересечение  
  На следующем рисунке показано поведение <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType>. Возвращаемая последовательность содержит элементы, общие для обеих входных последовательностей.  
   
- ![График, отображающий пересечение двух последовательностей.](../../../../csharp/programming-guide/concepts/linq/media/intersect.png "Intersect")  
-  
+ ![График, отображающий пересечение двух пакетов.](./media/set-operations/intersection-two-sequences.png)    
 ### <a name="union"></a>Объединение  
  На следующем рисунке показана операция объединения двух последовательностей символов. Возвращаемая последовательность содержит уникальные элементы из обеих входных последовательностей.  
   
- ![График, показывающий объединение двух последовательностей.](../../../../csharp/programming-guide/concepts/linq/media/union.png "Union")  
-  
+ ![График, показывающий объединение двух пакетов.](./media/set-operations/union-operation-two-sequences.png)    
 ## <a name="query-expression-syntax-example"></a>Пример синтаксиса выражения запроса  
  В следующем примере используется `Distinct` предложение в запросе LINQ для возврата уникальных чисел из списка целых чисел.  
   

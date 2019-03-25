@@ -11,12 +11,12 @@ helpviewer_keywords:
 - text [WPF], performance
 - glyphs [WPF]
 ms.assetid: 66b1b9a7-8618-48db-b616-c57ea4327b98
-ms.openlocfilehash: db0738008766343fa19454cac14e75b318663f34
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 14751d8241dabd0cf7c41f2920fab32e21dc43e2
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352780"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409410"
 ---
 # <a name="optimizing-performance-text"></a>Оптимизация производительности: Текста
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]включает поддержку представления текстового контента с помощью многофункциональных элементов управления [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. В целом можно разделить отрисовку текста на три уровня.  
@@ -133,8 +133,9 @@ ms.locfileid: "57352780"
 ### <a name="showing-underlines-on-hyperlinks-only-on-mouseenter-events"></a>Отображение подчеркивания гиперссылок только при возникновении события MouseEnter  
  Объект <xref:System.Windows.TextDecoration> объект — это визуальное украшение, можно добавить к тексту, однако он может быть производительность при создании. При внесении широкое использование <xref:System.Windows.Documents.Hyperlink> элементов, рассмотрите возможность отображать подчеркивание только при возникновении события, такие как <xref:System.Windows.ContentElement.MouseEnter> событий. Дополнительные сведения см. в разделе [Определение того, подчеркнута ли ссылка](how-to-specify-whether-a-hyperlink-is-underlined.md).  
   
- ![Гиперссылки, отображение TextDecorations](./media/textdecoration03.png "TextDecoration03")  
-Гиперссылка, появляющаяся при возникновении события MouseEnter  
+  На следующем рисунке показано, как запускается событием MouseEnter подчеркнутой гиперссылки:
+
+  ![Гиперссылки, отображающие TextDecorations](./media/how-to-specify-whether-a-hyperlink-is-underlined/text-decorations-hyperlinks.png)   
   
  В следующем примере разметки демонстрируется <xref:System.Windows.Documents.Hyperlink> определен с подчеркиванием и без него:  
   

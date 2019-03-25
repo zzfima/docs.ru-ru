@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [WPF], rendering
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
-ms.openlocfilehash: c1d7654dc190b00363fa6cc47c362b5f9e90d8f9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: da455adb23dd70a915e81217c6c30f2d523e001c
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375536"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409657"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>Общие сведения об отрисовке графики в WPF
 В этом разделе приведены общие сведения о визуальном слое [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Основное внимание в нем уделено роли класса <xref:System.Windows.Media.Visual> в поддержке отрисовки в модели [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -49,8 +49,7 @@ ms.locfileid: "57375536"
   
  <xref:System.Windows.Media.Visual> предоставляется в виде открытого абстрактного класса, от которого должны наследоваться дочерние классы. На следующем рисунке показана иерархия визуальных объектов, которые предоставляются в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
- ![Схема классов, производных от объекта Visual](./media/visualclass01.png "VisualClass01")  
-Иерархия класса Visual  
+ ![Схема классов, производных от Visual-объекта](./media/wpf-graphics-rendering-overview/classes-derived-visual-object.png)    
   
 ### <a name="drawingvisual-class"></a>Класс DrawingVisual  
  <xref:System.Windows.Media.DrawingVisual> — упрощенный класс, используемый для отрисовки фигур, изображений и текста. Этот класс считается упрощенным, так как не предоставляет средств для работы с разметкой и обработку событий, что повышает его производительность. Поэтому этот класс идеально подходит для фоновых рисунков или клипов. <xref:System.Windows.Media.DrawingVisual> может быть использован для создания пользовательского визуального объекта. Дополнительные сведения см. в разделе [Использование объектов DrawingVisual](using-drawingvisual-objects.md).  
@@ -110,8 +109,7 @@ ms.locfileid: "57375536"
   
  Если бы мы перечислили визуальные объекты, составляющие стандартный элемент управления <xref:System.Windows.Controls.Button>, обнаружилась бы показанная ниже иерархия визуальных объектов:  
   
- ![Схема иерархии визуального дерева](./media/visuallayeroverview03.gif "VisualLayerOverview03")  
-Схема иерархии визуального дерева  
+ ![Схема иерархии визуального дерева](./media/wpf-graphics-rendering-overview/visual-object-diagram.gif) 
   
  Элемент управления <xref:System.Windows.Controls.Button> содержит элемент <xref:Microsoft.Windows.Themes.ClassicBorderDecorator>, который, в свою очередь, содержит элемент <xref:System.Windows.Controls.ContentPresenter>. Элемент <xref:Microsoft.Windows.Themes.ClassicBorderDecorator> отвечает за рисование границ и фона для <xref:System.Windows.Controls.Button>. Элемент <xref:System.Windows.Controls.ContentPresenter> отвечает за отображение содержимого <xref:System.Windows.Controls.Button>. В данном случае, поскольку отображается текст, элемент <xref:System.Windows.Controls.ContentPresenter> содержит элемент <xref:System.Windows.Controls.TextBlock>. Тот факт, что элемент управления <xref:System.Windows.Controls.Button> использует <xref:System.Windows.Controls.ContentPresenter>, означает, что его содержимое можно представить в виде других элементов, например <xref:System.Windows.Controls.Image>, или геометрического объекта, например <xref:System.Windows.Media.EllipseGeometry>.  
   
@@ -124,8 +122,7 @@ ms.locfileid: "57375536"
   
  Если перечислить визуальные объекты и списки инструкций векторной графики, которые составляют элемент управления <xref:System.Windows.Controls.Button>, обнаружится показанная ниже иерархия объектов:  
   
- ![Схема визуального дерева и отрисовки данных](./media/visuallayeroverview04.png "VisualLayerOverview04")  
-Схема визуального дерева и отрисовки данных  
+ ![Схема визуального дерева и отрисовки данных](./media/wpf-graphics-rendering-overview/visual-tree-rendering-data.png)  
   
  Элемент управления <xref:System.Windows.Controls.Button> содержит элемент <xref:Microsoft.Windows.Themes.ClassicBorderDecorator>, который, в свою очередь, содержит элемент <xref:System.Windows.Controls.ContentPresenter>. <xref:Microsoft.Windows.Themes.ClassicBorderDecorator> Элемент отвечает за рисование всех отдельных графических элементов, составляющих границу и фон кнопки. Элемент <xref:System.Windows.Controls.ContentPresenter> отвечает за отображение содержимого <xref:System.Windows.Controls.Button>. В этом случае, поскольку выполняется отображение изображения, <xref:System.Windows.Controls.ContentPresenter> элемент содержит <xref:System.Windows.Controls.Image> элемент.  
   
@@ -149,14 +146,12 @@ ms.locfileid: "57375536"
   
  Если перечислить визуальные объекты, которые составляют элемент <xref:System.Windows.Controls.StackPanel> в примере разметки, обнаружится показанная ниже иерархия визуальных объектов:  
   
- ![Схема иерархии визуального дерева](./media/visuallayeroverview05.gif "VisualLayerOverview05")  
-Схема иерархии визуального дерева  
+ ![Схема иерархии визуального дерева](./media/wpf-graphics-rendering-overview/visual-tree-hierarchy.gif)  
   
 ### <a name="rendering-order"></a>Порядок отрисовки  
  Визуальное дерево определяет порядок отрисовки визуальных элементов и графических объектов [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Обработка начинается с корневого визуального элемента, самого верхнего узла в визуальном дереве. Затем обрабатываются дочерние элементы корневого визуального элемента слева направо. Если у визуального элемента есть дочерние элементы, они обрабатываются перед элементами, находящимися на одном уровне с визуальным элементом. Это означает, что содержимое дочерних визуальных элементов отображается перед содержимым самого визуального элемента.  
   
- ![Схема порядка отрисовки визуального дерева](./media/visuallayeroverview06.gif "VisualLayerOverview06")  
-Схема порядка отрисовки визуального дерева  
+ ![Схема порядка отрисовки визуального дерева](./media/wpf-graphics-rendering-overview/visual-tree-rendering-order.gif) 
   
 ### <a name="root-visual"></a>Корневой визуальный элемент  
  **Корневой визуальный элемент** — это самый верхний элемент в иерархии визуального дерева. В большинстве приложений базовым классом корневого визуального элемента является либо <xref:System.Windows.Window>, либо <xref:System.Windows.Navigation.NavigationWindow>. Однако при размещении визуальных объектов в приложении Win32 корневым визуальным элементом будет самый верхний визуальный элемент в окне Win32. Дополнительные сведения см. в статье [Руководство по размещению визуальных объектов в приложении Win32](tutorial-hosting-visual-objects-in-a-win32-application.md).  
@@ -178,9 +173,8 @@ ms.locfileid: "57375536"
 ### <a name="viewing-the-visual-tree-with-xamlpad"></a>Просмотр визуального дерева с помощью XamlPad  
  Средство [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XamlPad позволяет просматривать и изучать визуальное дерево, соответствующее текущему содержимому [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]. Для отображения визуального дерева нажмите кнопку **Показать визуальное дерево**. Ниже показано расширение содержимого [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] в узлы визуального дерева на панели **Обозреватель визуального дерева** XamlPad.  
   
- ![Панель обозревателя визуального дерева в XamlPad](./media/visuallayeroverview08.png "VisualLayerOverview08")  
-Панель обозревателя визуального дерева в XamlPad  
-  
+ ![Панель обозревателя визуального дерева в XamlPad](./media/wpf-graphics-rendering-overview/visual-tree-explorer.png)  
+
  Обратите внимание, что каждый из элементов управления <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBox> и <xref:System.Windows.Controls.Button> отображает отдельную иерархию визуальных объектов в панели **Обозреватель визуального дерева** XamlPad. Это обусловлено тем, что элементы управления [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] имеют шаблон <xref:System.Windows.Controls.ControlTemplate>, который содержит визуальное дерево этого элемента управления. При явной ссылке на элемент управления вы неявно ссылаетесь на его визуальную иерархию.  
   
 ### <a name="profiling-visual-performance"></a>Профилирование производительности для объекта Visual  
@@ -196,14 +190,12 @@ ms.locfileid: "57375536"
 ### <a name="retained-mode-graphics"></a>Абстрактный графический режим  
  Для понимания роли объекта Visual необходимо хорошо представлять различие между системами с **непосредственным** и **абстрактным** графическими режимами. В стандартном приложении Win32 на основе GDI или GDI+ используется непосредственный графический режим. Это означает, что приложение отвечает за перерисовку той части клиентской области, которая стала недействительной из-за таких действий, как изменение размера окна или изменение внешнего вида объекта.  
   
- ![Схема последовательности отрисовки Win32](./media/visuallayeroverview01.png "VisualLayerOverview01")  
-Схема последовательности отрисовки Win32  
+ ![Схема последовательности отрисовки Win32](./media/wpf-graphics-rendering-overview/win32-rendering-squence.png)  
   
  В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], напротив, используется абстрактный графический режим. Это означает, что в объектах приложения, у которых есть внешний облик, определяется набор сериализованных графических данных. После определения графических данных система отвечает на все запросы перерисовки для отрисовки объектов приложения. Даже во время выполнения можно изменять или создавать объекты приложения, при этом система будет обрабатывать запросы на перерисовку. Преимущество абстрактного режима состоит в том, что данные отрисовки всегда сохраняются приложением в сериализованном виде, при этом за отрисовку отвечает система. На следующей схеме показано, как приложение полагается на [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] в обработке запросов на отрисовку.  
   
- ![Схема последовательности отрисовки WPF](./media/visuallayeroverview02.png "VisualLayerOverview02")  
-Схема последовательности отрисовки WPF  
-  
+ ![Схема последовательности отрисовки WPF](./media/wpf-graphics-rendering-overview/wpf-rendering-sequence.png)  
+
 #### <a name="intelligent-redrawing"></a>Интеллектуальная перерисовка  
  Одним из основных преимуществ использования абстрактного графического режима является то, что [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] может эффективно оптимизировать элементы приложения, которые требуют перерисовки. Даже при наличии сложной сцены с различными уровнями прозрачности разработчикам обычно не нужно писать специальный код для оптимизации перерисовки. Сравните это с программированием для Win32, в котором можно потратить значительные усилия на оптимизацию приложения, уменьшая объем перерисовки в области обновления. Пример сложного случая оптимизации перерисовки для приложений Win32 см. в разделе [Перерисовка в области обновления](/windows/desktop/gdi/redrawing-in-the-update-region).  
   
@@ -214,8 +206,7 @@ ms.locfileid: "57375536"
   
  На следующем рисунке показано исходное изображение, которое было увеличено в 3 раза (масштаб 300 %). Обратите внимание на искажения, которые появляются при растяжении исходного изображения в растровом формате по сравнению с векторным.  
   
- ![Различия между растровой и векторной графикой](./media/vectorgraphics01.png "VectorGraphics01")  
-Различия между растровой и векторной графикой  
+ ![Различия между растровой и векторной графикой](./media/wpf-graphics-rendering-overview/raster-vector-differences.png)  
   
  В следующем примере показано определение двух элементов <xref:System.Windows.Shapes.Path>. Во втором элементе с помощью <xref:System.Windows.Media.ScaleTransform> к инструкциям отрисовки первого элемента применяется операция изменения размера на 300 %. Обратите внимание, что инструкции отрисовки в элементе <xref:System.Windows.Shapes.Path> остаются без изменений.  
   

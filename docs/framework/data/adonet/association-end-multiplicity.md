@@ -2,12 +2,12 @@
 title: кратность конечной точки ассоциации
 ms.date: 03/30/2017
 ms.assetid: 340926ee-aefb-4bef-92cc-453e5251fd03
-ms.openlocfilehash: 151b15a6df021a25f6c3ecea00af147c6b7196ff
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 183bbafaf1de3adf8719c7ee562be3513832ef10
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185679"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412101"
 ---
 # <a name="association-end-multiplicity"></a>кратность конечной точки ассоциации
 *Кратность конечной* определяет количество [тип сущности](../../../../docs/framework/data/adonet/entity-type.md) экземпляров, которые могут быть на одном конце [ассоциации](../../../../docs/framework/data/adonet/association-type.md).  
@@ -25,7 +25,7 @@ ms.locfileid: "58185679"
 ## <a name="example"></a>Пример  
  На приведенной ниже схеме показана концептуальная модель с двумя ассоциациями: `PublishedBy` и `WrittenBy`. Конечные точки ассоциации для ассоциации `PublishedBy` - это типы сущности `Book` и `Publisher`. Кратность `Publisher` один (1), а кратность `Book` окончания многих (\*).  
   
- ![Пример модели](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
+ ![Пример модели с тремя типами сущностей](./media/association-end-multiplicity/example-model-three-entity-types.gif)  
   
  ADO.NET Entity Framework использует доменный язык (DSL), называемый языком определения концептуальной схемы ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) для определения концептуальных моделей. Далее язык CSDL определяет ассоциацию `PublishedBy`, которая ранее приводилась в схеме.  
   

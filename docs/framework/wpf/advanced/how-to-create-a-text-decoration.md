@@ -16,33 +16,30 @@ helpviewer_keywords:
 - typography [WPF], text decorations
 - baseline type [WPF]
 ms.assetid: cf3cb4e7-782a-4be7-b2d4-e0935e21e4e0
-ms.openlocfilehash: a142604fdb36ec6f85e9411b37077bfffff587d4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 22ff91770786e39e019de307167007548396ab33
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363921"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411334"
 ---
 # <a name="how-to-create-a-text-decoration"></a>Практическое руководство. Создание оформления текста
 Объект <xref:System.Windows.TextDecoration> объект представляет визуальную орнаментацию, можно добавить в текст. There are four types of text decorations: underline, baseline, strikethrough, and overline. Пример расположения оформления текста относительно текста.  
   
- ![Схема расположений украшений текста](./media/textdecoration01.gif "TextDecoration01")  
-Пример типов оформления текста  
+ ![Схема типов оформления текста](./media/how-to-create-a-text-decoration/text-decoration-types.gif)  
   
  Чтобы добавить оформление текста в текст, создайте <xref:System.Windows.TextDecoration> объекта и измените его свойства. Используйте <xref:System.Windows.TextDecoration.Location%2A> свойство, чтобы указать, где отображается оформления текста, такие как подчеркивание. Используйте <xref:System.Windows.TextDecoration.Pen%2A> свойство, чтобы указать внешний вид оформления текста, например сплошная заливка или цвет градиента. Если не указать значение для <xref:System.Windows.TextDecoration.Pen%2A> свойство, оформление будет по умолчанию цвет текста. После определения <xref:System.Windows.TextDecoration> объекта, добавьте ее в <xref:System.Windows.TextDecorations> коллекции объекта нужный текст.  
   
  Пример с кисти линейного градиента и штрихового пера оформление текста.  
   
- ![Украшение текста с подчеркиванием линейным градиентом](./media/textdecoration02.png "TextDecoration02")  
-Пример подчеркивания, таким образом, с помощью линейного градиента кисти и штриховой пера  
+ ![Украшение текста с подчеркиванием линейным градиентом](./media/how-to-create-a-text-decoration/text-decoration-gradient.png)  
   
  <xref:System.Windows.Documents.Hyperlink> Объект — это элемент содержимого потока встроенного уровня, позволяющим размещать гиперссылки в содержимом потока. По умолчанию <xref:System.Windows.Documents.Hyperlink> использует <xref:System.Windows.TextDecoration> объекта для отображения подчеркивания. <xref:System.Windows.TextDecoration> объекты могут быть производительность при создании, особенно в том случае, если имеется много <xref:System.Windows.Documents.Hyperlink> объектов. При внесении широкое использование <xref:System.Windows.Documents.Hyperlink> элементов, может потребоваться отображать подчеркивание только при возникновении события, такие как <xref:System.Windows.ContentElement.MouseEnter> событий.  
   
  В следующем примере подчеркивание ссылки «Мой MSN» является динамическим — оно появляется только при <xref:System.Windows.ContentElement.MouseEnter> активируется событие.  
   
- ![Гиперссылки, отображение TextDecorations](./media/textdecoration03.png "TextDecoration03")  
-Гиперссылки, определенные с помощью TextDecorations  
-  
+ ![Гиперссылки, отображающие TextDecorations](./media/how-to-create-a-text-decoration/text-decorations-hyperlinks.png)  
+   
  Дополнительные сведения см. в разделе [Определение того, подчеркнута ли ссылка](how-to-specify-whether-a-hyperlink-is-underlined.md).  
   
 ## <a name="example"></a>Пример  

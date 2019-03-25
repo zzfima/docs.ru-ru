@@ -2,12 +2,12 @@
 title: Использование каналов OData из рабочего процесса - WF
 ms.date: 03/30/2017
 ms.assetid: 1b26617c-53e9-476a-81af-675c36d95919
-ms.openlocfilehash: ac7a5aef6a699f85ac5a1ce7417d02d42f6c0281
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: aec23667e7388d6bc31d122617795ff5dfdefa5f
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55275825"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58408999"
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>Использование каналов OData из рабочего процесса
 
@@ -25,7 +25,7 @@ ms.locfileid: "55275825"
 
 Чтобы сформировать клиентские библиотеки Northwind, можно использовать **Add Service Reference** диалогового окна в Visual Studio 2012, чтобы добавить ссылку на службу Northwind OData.
 
-![Добавление ссылки на службу](./media/addservicereferencetonorthwindodataservice.gif "AddServiceReferencetoNorthwindODataService")
+![Снимок экрана: диалоговое окно Add Service Reference.](./media/consuming-odata-feeds-from-a-workflow/add-service-reference-dialog.gif)
 
 Обратите внимание, что эта служба не предоставляет доступ к операциям службы, а в списке **Службы** имеются элементы, представляющие сущности, предоставляемые службой данных «Борей». При добавлении ссылки на службу для этих сущностей будут созданы классы, которые будут использоваться в клиентском коде. В примерах в этом разделе для выполнения запросов используются эти классы, а также `NorthwindEntities` .
 
@@ -43,7 +43,7 @@ ms.locfileid: "55275825"
 
 Класс <xref:System.Data.Services.Client.DataServiceQuery%601> предусматривает методы <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> и <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> для асинхронных запросов службы OData. Эти методы могут быть вызваны из переопределений <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> и <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> класса, производного от <xref:System.Activities.AsyncCodeActivity> . Когда переопределение <xref:System.Activities.AsyncCodeActivity> <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> возвращает управление, рабочий процесс может перейти в состояние простоя (при этом он не будет сохранен), а после завершения асинхронных операций <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> вызывается средой выполнения.
 
-В следующем примере действие `OrdersByCustomer` определено с двумя входными аргументами. Аргумент `CustomerId` представляет клиента, для которого необходимо вернуть заказы, а аргумент `ServiceUri` - URI службы OData, которой будет отправлен запрос. Поскольку действие является производным от `AsyncCodeActivity<IEnumerable<Order>>` , имеется также выходной аргумент <xref:System.Activities.Activity%601.Result%2A> , который служит для возврата результатов запроса. Переопределение <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> создает запрос LINQ, выбирающий все заказы указанного клиента. Запрос указывается как <xref:System.Activities.AsyncCodeActivityContext.UserState%2A> переданного <xref:System.Activities.AsyncCodeActivityContext>, а затем вызывается метод запроса <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> . Обратите внимание, что обратный вызов и состояние, передаваемые в <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> запроса, представляют собой обратный вызов и состояние, переданные методу действия <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> . После завершения обработки запроса вызывается метод действия <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> . Запрос извлекается из <xref:System.Activities.AsyncCodeActivityContext.UserState%2A>, а затем вызывается метод запроса <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> . Метод возвращает <xref:System.Collections.Generic.IEnumerable%601> указанного типа сущности, в данном случае - `Order`. Поскольку `IEnumerable<Order>` является универсальным типом <xref:System.Activities.AsyncCodeActivity%601>, этот `IEnumerable` задается как <xref:System.Activities.Activity%601.Result%2A> <xref:System.Activities.OutArgument%601> действия.
+В следующем примере действие `OrdersByCustomer` определено с двумя входными аргументами. Аргумент `CustomerId` представляет клиента, для которого необходимо вернуть заказы, а аргумент `ServiceUri` - URI службы OData, которой будет отправлен запрос. Поскольку действие является производным от `AsyncCodeActivity<IEnumerable<Order>>` , имеется также выходной аргумент <xref:System.Activities.Activity%601.Result%2A> , который служит для возврата результатов запроса. Переопределение <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> создает запрос LINQ, выбирающий все заказы указанного клиента. Запрос указывается как <xref:System.Activities.AsyncCodeActivityContext.UserState%2A> переданного <xref:System.Activities.AsyncCodeActivityContext>, а затем вызывается метод запроса <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> . Обратите внимание, что обратный вызов и состояние, передаваемые в <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> запроса, представляют собой обратный вызов и состояние, переданные методу действия <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> . После завершения обработки запроса вызывается метод действия <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> . Запрос извлекается из <xref:System.Activities.AsyncCodeActivityContext.UserState%2A>, а затем вызывается метод запроса <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> . Метод возвращает <xref:System.Collections.Generic.IEnumerable%601> указанного типа сущности, в данном случае - `Order`. Поскольку `IEnumerable<Order>` является универсальным типом <xref:System.Activities.AsyncCodeActivity%601>, этот <xref:System.Collections.IEnumerable> задается как <xref:System.Activities.Activity%601.Result%2A> <xref:System.Activities.OutArgument%601> действия.
 
 [!code-csharp[CFX_WCFDataServicesActivityExample#100](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_WCFDataServicesActivityExample/cs/Program.cs#100)]
 
@@ -79,7 +79,7 @@ Calling WCF Data Service...
 > [!NOTE]
 > Дополнительные сведения о разбиении на страницы в службах WCF Data Services см. в разделе [как: Загрузка разбитых на страницы результатов (службы данных WCF)](../data/wcf/how-to-load-paged-results-wcf-data-services.md).
 
-После добавления всех клиентов возвращается список. Метод `GetCustomers` указывается в переопределении действия <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> . Поскольку у метода имеется возвращаемое значение, то для его указания создается `Func<string, List<Customer>>`.
+После добавления всех клиентов возвращается список. Метод `GetCustomers` указывается в переопределении действия <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> . Поскольку у метода имеется возвращаемое значение, то для его указания создается `Func<string, List<Customer>>` .
 
 > [!NOTE]
 > Если метод, выполняющий асинхронные операции, не имеет возвращаемого значения, то используется <xref:System.Action> вместо <xref:System.Func%601>. Примеры создания асинхронного образца с использованием обоих методов, см. в разделе [создание асинхронных действий](creating-asynchronous-activities-in-wf.md).

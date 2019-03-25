@@ -2,12 +2,12 @@
 title: конечная точка ассоциации
 ms.date: 03/30/2017
 ms.assetid: 2c345213-0296-4d90-ac6d-cef179798a75
-ms.openlocfilehash: c1b43dea98b65427065387aedd2305f9c7b370bd
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 7fb9b48c5ed832e83f2a1e344d17d9a9797d393b
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185588"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410333"
 ---
 # <a name="association-end"></a>конечная точка ассоциации
 *Ассоциации* идентифицирует [тип сущности](../../../../docs/framework/data/adonet/entity-type.md) на одном конце [ассоциации](../../../../docs/framework/data/adonet/association-type.md) и номер сущности введите экземпляров, которые могут существовать на одной конечной точке ассоциации. Элементы ассоциации определяются при определении ассоциации; ассоциация должна иметь два элемента. [Свойства навигации](../../../../docs/framework/data/adonet/navigation-property.md) позволяют осуществлять переход от одного конечного элемента ассоциации к другому.  
@@ -28,7 +28,7 @@ ms.locfileid: "58185588"
 ## <a name="example"></a>Пример  
  На приведенной ниже схеме показана концептуальная модель с двумя ассоциациями: `PublishedBy` и `WrittenBy`. Конечные точки ассоциации для ассоциации `PublishedBy` - это типы сущности `Book` и `Publisher`. Кратность `Publisher` один (1), а кратность `Book` окончания многих (\*), том, что издатель публикует много книг, и одна книга публикуется одним издателем.  
   
- ![Пример модели](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
+ ![Пример модели с тремя типами сущностей](./media/association-end/example-model-three-entity-types.gif)  
   
  ADO.NET Entity Framework использует доменный язык (DSL), называемый языком определения концептуальной схемы ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) для определения концептуальных моделей. Ниже язык определения концептуальной схемы определяет ассоциацию `PublishedBy`, которая ранее приводилась в схеме. Обратите внимание, что тип, имя и кратность каждой конечной точки ассоциации указаны атрибутами XML (атрибуты `Type`, `Role` и `Multiplicity` соответственно). Дополнительные сведения об операциях, выполненных на конечной точке, указываются в элементе XML (элемент `OnDelete`). В данном случае, если издатель удаляется, удаляются и все связанные книги.  
   

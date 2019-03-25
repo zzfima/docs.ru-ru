@@ -10,12 +10,12 @@ helpviewer_keywords:
 - structures [Visual Basic], nested control
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
-ms.openlocfilehash: 9b10363e2273a22ac7ee3d9a943a1bec4616d232
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 13e2c5c8d818a09ec5e77ec47fe8a2c83b675d82
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185731"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409800"
 ---
 # <a name="nested-control-structures-visual-basic"></a>Вложенные структуры управления (Visual Basic)
 Можно разместить операторы управления внутри других операторов управления, например `If...Then...Else` блок `For...Next` цикла. Операторы управления внутрь другого оператора управления называется *вложенных*.  
@@ -67,8 +67,7 @@ Next ctl
 ## <a name="overlapping-control-structures"></a>Перекрывающиеся структуры управления  
  Управляющие структуры не могут перекрываться. Это означает, что любой вложенной структуры должны полностью содержаться в следующей внутренней структуры. Например, следующее расположение является недопустимым из-за `For` цикл завершается раньше внутреннего `With` блока.  
   
- ![Схема графика недопустимого вложения](../../../../visual-basic/programming-guide/language-features/control-flow/media/nestexampleinvalid.gif "NestExampleInvalid")  
-Недопустимое вложение для и со структурами  
+ ![Схема, показывающая пример недопустимого вложения.](./media/nested-control-structures/example-invalid-nesting.gif) 
   
  Компилятор Visual Basic обнаруживает такие перекрывающиеся структуры управления и сигнализирует об ошибке времени компиляции.  
   

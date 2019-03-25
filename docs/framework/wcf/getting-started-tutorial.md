@@ -1,69 +1,76 @@
 ---
-title: Приступая к работе Tutorial1 он
-ms.date: 03/30/2017
+title: Учебник. Начало работы с приложениями Windows Communication Foundation
+description: Эти учебники предоставляет вводные сведения по созданию приложений WCF.
+ms.date: 01/25/2019
 helpviewer_keywords:
-- WCF [WCF], getting started
-- Windows Communication Foundation [WCF], getting started
-- getting started [WCF]
+- WCF [WCF], get started
+- Windows Communication Foundation [WCF], get started
+- get started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
-ms.openlocfilehash: b7ba25795dd69e5bd978c77928f9b9797f4d4e19
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 66211cfcf2b742e43eccbefb2bc7c4bd1147b05b
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200888"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58408864"
 ---
-# <a name="getting-started-tutorial"></a>Учебник по началу работы
-В подразделах этого раздела призваны кратко познакомить читателя в Windows Communication Foundation (WCF) опыт программирования. Их нужно выполнять в том порядке, в котором они перечислены в конце этой страницы. Прохождение этого учебника дает начальное понимание шагов, необходимых для создания служб WCF и клиентских приложений. Служба предоставляет одну или несколько конечных точек, каждая из которых предоставляет одну или несколько операций службы. *Конечной точки* службы задает адрес, по которому можно найти службу, привязку, содержащую сведения, описывающие, как клиент должен связаться со службой и контракт, который определяет функциональные возможности предоставляемую службой клиентам.
+# <a name="tutorial-get-started-with-windows-communication-foundation-applications"></a>Учебник. Начало работы с приложениями Windows Communication Foundation
+Следующие учебники представлена в Windows Communication Foundation (WCF) опыт программирования. Работе с этими руководствами, в порядке обеспечит начальное понимание шагов, необходимых для создания приложений WCF. После завершения, вы получите работающей службы WCF и клиент WCF, который вызывает службу. 
 
- После изучения разделов этого учебника вы получите готовую службу и клиента, который может вызывать операции этой службы. В первых трех разделах описано, как определить контракт службы, реализовать контракт службы и разместить службу. Созданная служба является резидентной в консольном приложении. Службы можно размещать в службах Internet Information Services (IIS). Дополнительные сведения об этой операции см. в разделе [Практическое руководство. Размещение службы WCF в IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md). Эта служба настроена в коде, однако службы можно настраивать с помощью файла конфигурации. Дополнительные сведения об использовании файла конфигурации см. в разделе [Настройка служб с помощью файла конфигурации](../../../docs/framework/wcf/configuring-services-using-configuration-files.md).
+В учебнике предполагается, что вы используете Visual Studio в качестве среды разработки. Если используется другая среда разработки, игнорировать инструкции конкретных Visual Studio. 
 
- В следующих трех разделах описано, как создать клиентский прокси, настроить клиентское приложение и использовать клиентский прокси для вызова служебных действий, предоставляемых службой. Службы публикуют доступные метаданные, определяющие сведения, необходимые клиентским приложениям для взаимодействия со службой. Visual Studio 2012 автоматизирует процесс доступа к этим метаданным и использует его для создания и настройки клиентского приложения для службы. Если вы не используете Visual Studio 2012, можно использовать [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для создания и настройки клиентского приложения для службы.
+Образцы приложений WCF, которые можно загрузить и запустить, см. в разделе [образцов Windows Communication Foundation](samples/index.md). Общие сведения о примерах, см. в разделе [Приступая к работе образца](samples/getting-started-sample.md).
 
-В подразделах этого раздела предполагается, что вы используете Visual Studio в качестве среды разработки. Если используется другая среда разработки, игнорировать инструкции конкретных Visual Studio.
+Дополнительные сведения о создании служб и клиентов см. в разделе [базовое Программирование WCF](basic-wcf-programming.md).
 
-Примеры приложений, которые можно загрузить на жесткий диск и запуска, см. в пункте [образцов Windows Communication Foundation (WCF)](./samples/index.md). Для этого раздела, см. в разделе, в частности, [Приступая к работе](../../../docs/framework/wcf/samples/getting-started-sample.md).
+## <a name="wcf-tutorials"></a>Учебники по WCF
 
-Дополнительные сведения о создании служб и клиентов см. в разделе [базовое Программирование WCF](../../../docs/framework/wcf/basic-wcf-programming.md).
+Первые три руководства описывают, как определить контракт службы WCF, как реализовать его и как разместить его. Создаваемая служба является резидентной в консольном приложении. Вы также можете разместить службы в группе Microsoft Internet Information Services (IIS). Дополнительные сведения см. в разделе [Как Размещение службы WCF в IIS](feature-details/how-to-host-a-wcf-service-in-iis.md). Несмотря на то, что для настройки службы в этом руководстве используется код, вы также можете [настраивать службы в файле конфигурации](configuring-services-using-configuration-files.md). 
 
-## <a name="in-this-section"></a>В этом разделе
- [Практическое руководство. Определите контракт службы](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
+- [Учебник. Определите контракт службы](how-to-define-a-wcf-service-contract.md)
 
- В этой статье описывается создание контракта WCF с помощью определенного пользователем интерфейса. Контракт определяет функциональные возможности, предоставляемые службой.
+    Создание контракта WCF с интерфейсом, определяемые пользователем. Этот контракт определяет функциональность, предоставленную службой.
 
- [Практическое руководство. Реализация контракта службы](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)
+- [Учебник. Реализация контракта службы](how-to-implement-a-wcf-contract.md)
 
- Реализация контракта службы. После определения контракта, должен быть реализован классом службы.
+    После определения контракта, должен быть реализован классом службы.
 
- [Практическое руководство. Размещение и запуск базовой службы](../../../docs/framework/wcf/how-to-host-and-run-a-basic-wcf-service.md)
+- [Учебник. Размещение и запуск базовой службы](how-to-host-and-run-a-basic-wcf-service.md)
 
- Настройка конечной точки службы в коде, ее размещение в консольном приложении и запуск службы. Чтобы служба стала активной, ее необходимо настроить и разместить в среде выполнения. Эта среда создает службу и управляет ее контекстом и временем существования.
+    Настройте конечную точку для службы и разместите службу в консольном приложении. Для службы станет активным необходимо настроить его и разместить ее внутри среды выполнения. Эта среда выполнения создает службу и управляет ее контекстом и временем существования.
 
- [Практическое руководство. Создание клиента](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+Следующие два руководства описывается, как создавать, настраивать, а предоставляет используйте клиентское приложение для вызова операций службы. Службы публикуют доступные метаданные, определяющие сведения, необходимые клиентским приложениям для взаимодействия со службой. Visual Studio автоматизирует процесс доступа к этим метаданным и использует его для создания клиентского приложения для службы. Если вы решили не использовать Visual Studio, можно использовать [средство ServiceModel Metadata Utility (*Svcutil.exe*)](servicemodel-metadata-utility-tool-svcutil-exe.md) вместо этого.
 
- Описывает получение метаданных, используемый для создания прокси клиента WCF из службы WCF. В этом процессе используется функция Add Service Reference в Visual Studio.
+- [Учебник. Создание клиента](how-to-create-a-wcf-client.md)
 
- [Практическое руководство. Настройка клиента](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md)
+    Получение метаданных для создания прокси клиента WCF из службы WCF. Получить метаданные с помощью Visual Studio для добавления ссылки на службу, или можно использовать средство ServiceModel Metadata Utility. Можно указать конечную точку, клиент использует для доступа к службе.
 
- Описывает, как настроить клиент WCF. Настройка клиента требует задания конечной точки, которую клиент использует для получения доступа к службе.
+- [Учебник. Использование клиента](how-to-use-a-wcf-client.md)
 
- [Практическое руководство. Использование клиента](../../../docs/framework/wcf/how-to-use-a-wcf-client.md)
-
- В этой статье описывается использование прокси клиента WCF для вызова операций службы.
+    Используйте прокси клиента WCF для вызова операций службы.
 
 ## <a name="reference"></a>Ссылка
 
 - <xref:System.ServiceModel.ServiceContractAttribute>
 - <xref:System.ServiceModel.OperationContractAttribute>
 
-## <a name="related-sections"></a>Связанные разделы
-
-- [Примеры Windows Communication Foundation (WCF)](./samples/index.md)
-- [Базовый жизненный цикл программирования](../../../docs/framework/wcf/basic-programming-lifecycle.md)
-
 ## <a name="see-also"></a>См. также
 
-- [Концептуальный обзор](../../../docs/framework/wcf/conceptual-overview.md)
-- [Руководство по работе с документацией](../../../docs/framework/wcf/guide-to-the-documentation.md)
-- [Что такое Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
-- [Подробные сведения о возможностях WCF](../../../docs/framework/wcf/feature-details/index.md)
+- [Общие сведения](conceptual-overview.md)
+- [Руководство по документации](guide-to-the-documentation.md)
+- [Что такое Windows Communication Foundation](whats-wcf.md)
+- [Подробные сведения о возможностях WCF](feature-details/index.md)
+- [Базовый жизненный цикл программирования](basic-programming-lifecycle.md)
+- [Создание клиентов](building-clients.md)
+- [Базовое Программирование WCF](basic-wcf-programming.md)
+- [Практическое руководство. Создание дуплексного контракта](feature-details/how-to-create-a-duplex-contract.md)
+- [Практическое руководство. Службы доступа с дуплексным контрактом](feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [Служебное средство ServiceModel Metadata Utility tool (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [Практическое руководство. Использование Svcutil.exe для загрузки документов метаданных](feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)
+- [Практическое руководство. Публикация метаданных для службы с помощью файла конфигурации](feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [Использование привязок для настройки служб и клиентов](using-bindings-to-configure-services-and-clients.md)
+- [Пример для начала работы](samples/getting-started-sample.md)
+- [Примеры Windows Communication Foundation](samples/index.md)
+- [Резидентное размещение](samples/self-host.md)
+
+

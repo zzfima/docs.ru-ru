@@ -2,12 +2,12 @@
 title: Объединение (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 39ab4854-ac84-4738-9d0b-3cb79be84db4
-ms.openlocfilehash: 6113949986aafdcaa2afa55d0a56d8e2186811b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c7bd81f729558c8ec41baacda99765eb2f862b29
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527865"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411152"
 ---
 # <a name="join-operations-visual-basic"></a>Объединение (Visual Basic)
 *Соединение* двух источников данных — это связь объектов в одном источнике данных с объектами, которые имеют общий атрибут в другом источнике данных.  
@@ -18,13 +18,13 @@ ms.locfileid: "54527865"
   
  На следующем рисунке показано концептуальное представление из двух наборов и элементов, входящих в эти наборы, которые включены либо во внутреннее соединение, либо в левое внешнее соединение.  
   
- ![Два перекрывающихся кольца, отображающие внешнее и внутреннее соединение.](../../../../csharp/programming-guide/concepts/linq/media/joincircles.png "JoinCircles")  
+ ![Два круга отображение внутреннее&#47;внешней.](./media/join-operations/join-method-overlapping-circles.png)  
   
 ## <a name="methods"></a>Методы  
   
-|Имя метода|Описание:|Синтаксис выражений запросов Visual Basic|Дополнительные сведения|  
+|Имя метода|Описание|Синтаксис выражений запросов Visual Basic|Дополнительные сведения|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
-|Join|Соединяет две последовательности на основании функций селектора ключа и извлекает пары значений.|`From x In …, y In … Where x.a = y.a`<br /><br /> -или-<br /><br /> `Join … [As …]In … On …`|<xref:System.Linq.Enumerable.Join%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Join%2A?displayProperty=nameWithType>|  
+|Join|Соединяет две последовательности на основании функций селектора ключа и извлекает пары значений.|`From x In …, y In … Where x.a = y.a`<br /><br /> - или -<br /><br /> `Join … [As …]In … On …`|<xref:System.Linq.Enumerable.Join%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Join%2A?displayProperty=nameWithType>|  
 |GroupJoin|Соединяет две последовательности на основании функций селектора ключа и группирует полученные при сопоставлении данные для каждого элемента.|`Group Join … In … On …`|<xref:System.Linq.Enumerable.GroupJoin%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupJoin%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>См. также

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-ms.openlocfilehash: d7a00f2508769534e49c965d098dbacb01a1f189
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 8da1f49bf5b7d3daf6319906fb49390c008d209c
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57843536"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412218"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>Использование стеклянной рамки в приложении WPF
 
@@ -26,11 +26,9 @@ ms.locfileid: "57843536"
 
 ## <a name="example"></a>Пример
 
-На следующем рисунке показана стеклянная рамка, расширенная на адресную строку Internet Explorer 7.
+На следующем рисунке показан Стеклянная рамка, расширенная в адресной строке Internet Explorer 7:
 
-**Internet Explorer со стеклянной рамкой, расширенной за адресной строкой.**
-
-![IE7 со стеклянной рамкой, расширенной за адресной строкой.](./media/ie7glasstopbar.PNG "IE7glasstopbar")
+![Снимок экрана, показывающий стекла фреймом, расширенный за адресной строки обозревателя IE7.](./media/extend-glass-frame-into-a-wpf-application/internet-explorer-glass-frame-extended-address-bar.png)
 
 Чтобы расширить стеклянную рамку в приложении [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], требуется доступ к неуправляемому [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]. В следующем примере кода выполняется платформенный вызов (pinvoke) для двух [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)], необходимых для расширения рамки на клиентскую область. Каждый из этих [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] объявляется в классе с именем **NonClientRegionAPI**.
 
@@ -147,11 +145,9 @@ void OnLoaded(object sender, RoutedEventArgs e)
 </Window>
 ```
 
-На следующем рисунке показана стеклянная рамка, расширенная на приложение [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].
+На следующем рисунке показан Стеклянная рамка, расширенная в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложения:
 
-**Прозрачная рамка, расширенная на**  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложение **.**
-
-![Прозрачная рамка, расширенная на приложение WPF.](./media/wpfextendedglassintoclient.PNG "WPFextendedGlassIntoClient")
+![Снимок экрана, показывающий Стеклянная рамка, расширенная в приложение WPF.](./media/extend-glass-frame-into-a-wpf-application/glass-frame-extended-wpf-application.png)
 
 ## <a name="see-also"></a>См. также
 

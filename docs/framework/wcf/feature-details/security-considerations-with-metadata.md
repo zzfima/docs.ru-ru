@@ -2,12 +2,12 @@
 title: Вопросы безопасности при использовании метаданных
 ms.date: 03/30/2017
 ms.assetid: e78ef8ab-4f63-4656-ab93-b1deab2666d5
-ms.openlocfilehash: fa1a79a0be6682a8459043955a7956f6f8444bf5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e1ad9f3c7d2a77ec6237bf1fc12c0d1a67181ad
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585569"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411917"
 ---
 # <a name="security-considerations-with-metadata"></a>Вопросы безопасности при использовании метаданных
 При использовании функций метаданных в Windows Communication Foundation (WCF), следует рассмотрите влияние на безопасность из публикации, извлечения и использования метаданных службы.  
@@ -28,7 +28,7 @@ ms.locfileid: "54585569"
 ## <a name="using-safe-techniques-for-processing-metadata"></a>Использование безопасных методов обработки метаданных  
  Метаданные службы часто запрашиваются у службы по сети с использованием стандартных протоколов, например WS-MetadataExchange (MEX). Многие форматы метаданных включают механизмы, позволяющие ссылаться на дополнительные метаданные. Тип <xref:System.ServiceModel.Description.MetadataExchangeClient> автоматически обрабатывает ссылки в документах WSDL, схемах XML и документах MEX. Размер объекта <xref:System.ServiceModel.Description.MetadataSet>, созданного на базе полученных метаданных, прямо пропорционален значению <xref:System.ServiceModel.Description.MetadataExchangeClient.MaximumResolvedReferences%2A> используемого экземпляра <xref:System.ServiceModel.Description.MetadataExchangeClient> и значению `MaxReceivedMessageSize` привязки, используемой данным экземпляром <xref:System.ServiceModel.Description.MetadataExchangeClient>. Устанавливайте эти квоты в соответствии с потребностями конкретной задачи.  
   
- В WCF метаданные службы обрабатываются в формате XML. При обработке документов XML приложения должны защищать себя от опасных структур XML. Используйте `XmlDictionaryReader` с соответствующими значениями квот, при обработке XML, а также задать <xref:System.Xml.XmlTextReader.DtdProcessing%2A> свойства `Prohibit`.  
+ В WCF метаданные службы обрабатываются в формате XML. При обработке документов XML приложения должны защищать себя от опасных структур XML. Используйте <xref:System.Xml.XmlDictionaryReader> с соответствующими значениями квот, при обработке XML, а также задать <xref:System.Xml.XmlTextReader.DtdProcessing%2A> свойства <xref:System.Xml.DtdProcessing.Prohibit>.  
   
  Система метаданных в WCF является расширяемой и расширения метаданных могут регистрироваться в файле конфигурации приложения (см. в разделе [расширении системы метаданных](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)). Расширения метаданных могут выполнять произвольный код, поэтому файлы конфигурации приложений необходимо защищать с помощью соответствующих списков управления доступом и регистрировать только надежные реализации расширений метаданных.  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: 9e7ded2869e3553eab302e150d80608b8dd7091f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e84f586e621aa54d7e8a8f62e605ec3016cfb757
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377324"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411282"
 ---
 # <a name="pack-uris-in-wpf"></a>URI типа "pack" в WPF
 В Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] используются для идентификации и загрузки файлов несколькими способами, включая следующие:  
@@ -44,7 +44,7 @@ ms.locfileid: "57377324"
 ## <a name="the-pack-uri-scheme"></a>Схема URI типа "pack"  
  Пакет [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] используется схема [спецификации Open Packaging Conventions](https://go.microsoft.com/fwlink/?LinkID=71255) спецификации (OPC), которая описывает модель для организации и идентификации содержимого. Основными элементами этой модели являются пакеты и элементы, где *пакета* — это логический контейнер для одного или более логическими *частей*. Эта структура показана на следующем рисунке.  
   
- ![Схема пакета и элементов](./media/wpfpackurischemefigure1.PNG "WPFPackURISchemeFigure1")  
+ ![Схема пакета и частей](./media/pack-uris-in-wpf/wpf-package-parts-diagram.png)  
   
  Для определения частей, спецификации OPC используется расширяемость RFC 2396 (универсальных кодов ресурса (URI): Общий синтаксис) для определения в пакете [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] схемы.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "57377324"
   
  Эта концепция показана на следующей схеме:  
   
- ![Связь между пакетом, центром и путем](./media/wpfpackurischemefigure2.PNG "WPFPackURISchemeFigure2")  
+ ![Отношение между пакетом, сертификацией и путем](./media/pack-uris-in-wpf/wpf-relationship-diagram.png)  
   
  Пакеты и элементы аналогичны приложениям и файлам. Приложение (пакет) может содержать один или несколько файлов (элементов), в том числе:  
   
@@ -72,7 +72,7 @@ ms.locfileid: "57377324"
   
  Для доступа к этим типам файлов, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] поддерживает два центра: application: / / / и siteoforigin: / / /. Центр application:/// определяет файлы данных приложения, известные во время компиляции, включая файлы ресурсов и файлы содержимого. Центр siteoforigin:/// определяет файлы исходного узла. На следующем рисунке показана область каждого центра.  
   
- ![Схема URI типа "pack"](./media/wpfpackurischemefigure4.png "WPFPackURISchemeFigure4")  
+ ![Схема URI типа “pack”](./media/pack-uris-in-wpf/wpf-pack-uri-scheme.png)  
   
 > [!NOTE]
 >  Компонент центра пакета [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] является встроенным [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] , указывающий на пакет и должен соответствовать стандарту RFC 2396. Кроме того, символ "/" необходимо заменить символом ",", и необходимо обособлять escape-символами такие зарезервированные символы, как "%" и "?". Подробные сведения см. в OPC.  

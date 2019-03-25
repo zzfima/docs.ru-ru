@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Миграция с поддержкой AJAX веб-служб ASP.NET в WCF
+title: Практическое руководство. Миграция с поддержкой AJAX веб-служб ASP.NET в WCF
 ms.date: 03/30/2017
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
-ms.openlocfilehash: de90f4b89f182c55dec3f6fee6836c64535aa2d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3c7052a67e756ae0c3fa1692c3ed746419384de4
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638292"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410944"
 ---
-# <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Как выполнить Миграция с поддержкой AJAX веб-служб ASP.NET в WCF
+# <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Практическое руководство. Миграция с поддержкой AJAX веб-служб ASP.NET в WCF
 В этом разделе описаны процедуры по переносу базовой службы ASP.NET AJAX для службы с поддержкой AJAX Windows Communication Foundation (WCF). В этом примере показано создание функционально эквивалентны WCF версию службы ASP.NET AJAX. Две службы затем используется рядом друг с другом или службы WCF можно использовать для замены службы ASP.NET AJAX.
 
  Перенос существующего ASP.NET AJAX вызовы между службами WCF AJAX предоставляет следующие преимущества:
@@ -113,7 +113,7 @@ ms.locfileid: "54638292"
 ## <a name="example"></a>Пример
  Код, получаемый в результате применения описанных в этом разделе процедур, приведен в следующем примере.
 
-```
+```csharp
 //This is the ASP.NET code in the Service1.asmx.cs file.
 
 using System;

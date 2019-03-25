@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: 6229e7fff4171f04d35bbc5be0596526f513191a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a9ac7fcc3ea4da699111ac288a5786e9f9f8b572
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370193"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410165"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Общие сведения о приложениях браузера WPF XAML
 <a name="introduction"></a>
@@ -46,7 +46,7 @@ ms.locfileid: "57370193"
 ## <a name="deploying-an-xbap"></a>Развертывание XBAP  
  При построении XBAP создаются следующие три файла:  
   
-|Файл|Описание:|  
+|Файл|Описание|  
 |----------|-----------------|  
 |Исполняемый файл (.EXE)|Содержит скомпилированный код и имеет расширение EXE.|  
 |Манифест приложения (.MANIFEST)|Содержит метаданные, связанные с приложением, и имеет расширение MANIFEST.|  
@@ -154,7 +154,7 @@ ms.locfileid: "57370193"
   
 -   В файле проекта значение элемента `<TargetZone>` изменяется на `Custom`.  
   
--   В манифесте приложения (app.manifest) к элементу `PermissionSet` добавляется атрибут `Unrestricted="true"`.  
+-   В манифесте приложения (app.manifest) `Unrestricted="true"` добавляется атрибут "<xref:System.Security.PermissionSet> элемент.  
   
     ```xml
     <PermissionSet class="System.Security.PermissionSet"   

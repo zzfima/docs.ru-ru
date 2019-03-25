@@ -1,18 +1,18 @@
 ---
-title: Как выполнить  Обмен сообщениями с конечными точками WCF в очереди
+title: Практическое руководство. Обмен сообщениями с конечными точками WCF в очереди
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 938e7825-f63a-4c3d-b603-63772fabfdb3
-ms.openlocfilehash: 11435dc6f941a566427c0e0cb797e84f33dd66a2
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: ea052a2dd843205a8108ea48f17ea84577817215
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56303651"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411035"
 ---
-# <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>Как выполнить  Обмен сообщениями с конечными точками WCF в очереди
+# <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>Практическое руководство. Обмен сообщениями с конечными точками WCF в очереди
 Очереди обеспечивают надежный обмен сообщениями может произойти между клиентом и службой Windows Communication Foundation (WCF), что, даже если служба доступна не во время обмена данными. Следующие процедуры показывают, как для обеспечения устойчивого взаимодействия между клиентом и службой за счет использования стандартной поставленной в очередь привязки при реализации службы WCF.  
   
  В этом разделе описываются способы использования <xref:System.ServiceModel.NetMsmqBinding> для взаимодействия с использованием очередей между клиентом WCF и службы WCF.  
@@ -24,7 +24,7 @@ ms.locfileid: "56303651"
      [!code-csharp[S_Msmq_Transacted#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/service.cs#1)]
      [!code-vb[S_Msmq_Transacted#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/service.vb#1)]  
   
-2.  Необходимо определить контракты данных для определяемых пользователем типов, если их передает контракт службы. В следующем коде показано два контракта данных - `PurchaseOrder` и `PurchaseOrderLineItem`. Эти два типа определяют данные, отправляемые службе. (Обратите внимание, что классы, определяющие этот контракт данных, определяют и число методов. Эти методы не являются частью контракта данных. Частью контракта данных являются только члены, объявленные с атрибутом `DataMember`.)  
+2.  Необходимо определить контракты данных для определяемых пользователем типов, если их передает контракт службы. В следующем коде показано два контракта данных - `PurchaseOrder` и `PurchaseOrderLineItem`. Эти два типа определяют данные, отправляемые службе. (Обратите внимание, что классы, определяющие этот контракт данных, определяют и число методов. Эти методы не являются частью контракта данных. Частью контракта данных являются только члены, объявленные с атрибутом <xref:System.Runtime.Serialization.DataMemberAttribute>.)  
   
      [!code-csharp[S_Msmq_Transacted#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/service.cs#2)]
      [!code-vb[S_Msmq_Transacted#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/service.vb#2)]  

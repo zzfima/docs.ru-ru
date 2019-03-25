@@ -2,12 +2,12 @@
 title: тип ассоциации
 ms.date: 03/30/2017
 ms.assetid: 26c409f6-06e8-4441-ac78-1b1076a3c005
-ms.openlocfilehash: 65fb5c8e37c8edf7f36cc08258874eeaf234c402
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 895d7fdc464741723322717c3ace027dc49eed9c
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185601"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411451"
 ---
 # <a name="association-type"></a>тип ассоциации
 *Тип ассоциации* (также называемый ассоциацией) — это фундаментальный блок построения для описания связей в Entity Data Model (EDM). В концептуальной модели ассоциация представляет отношение между двумя [типы сущностей](../../../../docs/framework/data/adonet/entity-type.md) (такие как `Customer` и `Order`). В приложении экземпляр ассоциации представляет собой специфическую ассоциацию (такую как ассоциация между экземпляром `Customer` и экземпляром `Order`). Экземпляры ассоциации логически сгруппированы в [набор ассоциаций](../../../../docs/framework/data/adonet/association-set.md).  
@@ -28,7 +28,7 @@ ms.locfileid: "58185601"
 ## <a name="example"></a>Пример  
  На приведенной ниже схеме показана концептуальная модель с двумя ассоциациями: `PublishedBy` и `WrittenBy`. Конечные точки ассоциации для ассоциации `PublishedBy` - это типы сущности `Book` и `Publisher`. Кратность `Publisher` один (1), а кратность `Book` окончания многих (\*), том, что издатель публикует много книг, и одна книга публикуется одним издателем.  
   
- ![Пример модели](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
+ ![Пример модели с тремя типами сущностей](./media/association-type/example-model-three-entity-types.gif)  
   
  [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) использует доменный язык (DSL), называемый языком определения концептуальной схемы ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) для определения концептуальных моделей. Далее язык CSDL определяет ассоциацию `PublishedBy`, которая ранее приводилась в схеме.  
   

@@ -2,12 +2,12 @@
 title: Суррогат DataContract
 ms.date: 03/30/2017
 ms.assetid: b0188f3c-00a9-4cf0-a887-a2284c8fb014
-ms.openlocfilehash: 5729943f455d4669f047eb2d86fb7292824c0f2c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 341b56727c910d552a5238d95976884162f1c524
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645422"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409839"
 ---
 # <a name="datacontract-surrogate"></a>Суррогат DataContract
 В этом образце показано, каким образом такие процессы, как сериализация, десериализация, экспорт и импорт схемы, могут быть настроены при помощи заменяющего класса контракта данных. В этом примере показано, как использовать заменяющий класс в сценарий клиента и сервера, где данные сериализуются и передаются между клиентом Windows Communication Foundation (WCF) и службы.  
@@ -64,9 +64,9 @@ public class Person
 }  
 ```  
   
- Можно применить атрибут `DataContract` к классу `Person`, но это не всегда возможно. Например, класс `Person` может быть определен в отдельной сборке, управлять которой невозможно.  
+ Можно применить атрибут <xref:System.Runtime.Serialization.DataContractAttribute> к классу `Person`, но это не всегда возможно. Например, класс `Person` может быть определен в отдельной сборке, управлять которой невозможно.  
   
- С учетом этого ограничения одним из способов сериализации класса `Person` является его замена на другой класс, отмеченный атрибутом `DataContractAttribute`, и копирование необходимых данных в новый класс. Целью является отображение класса `Person` как DataContract в сериализаторе <xref:System.Runtime.Serialization.DataContractSerializer>. Обратите внимание, что это один способ сериализации классов, отличных от классов контракта данных.  
+ С учетом этого ограничения одним из способов сериализации класса `Person` является его замена на другой класс, отмеченный атрибутом <xref:System.Runtime.Serialization.DataContractAttribute>, и копирование необходимых данных в новый класс. Целью является отображение класса `Person` как DataContract в сериализаторе <xref:System.Runtime.Serialization.DataContractSerializer>. Обратите внимание, что это один способ сериализации классов, отличных от классов контракта данных.  
   
  В этом образце класс `Person` логически заменяется на другой класс с именем `PersonSurrogated`.  
   

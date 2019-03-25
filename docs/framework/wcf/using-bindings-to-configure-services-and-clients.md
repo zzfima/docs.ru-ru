@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
-ms.openlocfilehash: 8aed2b2efa0408371a8da47fef64340fd30fffcc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45a904eb9e38b13fc3502264f4659bfd25465630
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577104"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410424"
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>Использование привязок для настройки служб и клиентов
 Привязки - это объекты, которые указывают подробные сведения о связи, требуемые для подключения к конечной точке. В частности, привязки содержат информацию о конфигурации, используемую для создания среды выполнения клиента или службы путем определения подробной информации о транспорте, форматах подключения (кодировка сообщения) и протоколах, используемых для соответствующей конечной точки или канала клиента. Чтобы создать работоспособную службу Windows Communication Foundation (WCF), каждая конечная точка службы требует привязки. В настоящем разделе описывается, что такое привязки, как они определяются и как для конечной точки указывается конкретная привязка.  
@@ -54,7 +54,7 @@ ms.locfileid: "54577104"
   
 -   [Практическое руководство. Размещение службы WCF в приложении управляемых](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md) приведен пример создания привязки в коде.  
   
--   [Практическое руководство. Настройка клиента](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md) предоставляет пример создания клиента, с помощью конфигурации.  
+-   [Учебник. Создание клиента Windows Communication Foundation](../../../docs/framework/wcf/how-to-create-a-wcf-client.md) приведен пример создания клиента с помощью конфигурации.  
   
 ## <a name="see-also"></a>См. также
 - [Общие сведения о создании конечных точек](../../../docs/framework/wcf/endpoint-creation-overview.md)

@@ -2,12 +2,12 @@
 title: ключ сущности
 ms.date: 03/30/2017
 ms.assetid: 0d447a6d-fa7a-4db0-8e7a-fd45e385fca0
-ms.openlocfilehash: 02b877efb463e47f9147239c895c482f2d716714
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c3a809884fc7b7c1f188af9881f784527fa87ba
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664030"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58408968"
 ---
 # <a name="entity-key"></a>ключ сущности
 *Ключ сущности* — [свойство](../../../../docs/framework/data/adonet/property.md) или набор свойств [тип сущности](../../../../docs/framework/data/adonet/entity-type.md) , которые используются для определения удостоверения. Свойства, составляющие ключ сущности, выбираются во время разработки. Значения свойств ключа сущности должны уникально определять экземпляр типа сущности внутри [набор сущностей](../../../../docs/framework/data/adonet/entity-set.md) во время выполнения. Свойства, составляющие ключ сущности, должны гарантировать уникальность экземпляра набора сущностей.  
@@ -25,7 +25,7 @@ ms.locfileid: "54664030"
 ## <a name="example"></a>Пример  
  На приведенной ниже схеме показана концептуальная модель с тремя типами сущностей: `Book`, `Publisher` и `Author`. Свойства каждого типа сущности, составляющие его ключ сущности, обозначаются знаком «(Ключ)». Обратите внимание, что тип сущности `Author` имеет ключ сущности, состоящий из двух свойств - `Name` и `Address`.  
   
- ![Пример модели](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
+ ![Пример модели с тремя типами сущностей](./media/entity-key/example-model-three-entity-types.gif)  
   
  [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) использует доменный язык (DSL), называемый языком определения концептуальной схемы ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) для определения концептуальных моделей. Ниже язык определения концептуальной схемы определяет тип сущности `Book`, который ранее приводился в схеме. Обратите внимание, что ключ сущности определяется ссылкой на свойство `ISBN` типа сущности.  
   

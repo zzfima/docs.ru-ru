@@ -10,12 +10,12 @@ helpviewer_keywords:
 - drawing text [Windows Forms], specified locations [Windows Forms]
 - Windows Forms, drawing text at a specified location
 ms.assetid: 60816423-1c38-465e-980d-2c2b64d74086
-ms.openlocfilehash: 3bca6cd364ed4e0d0179c13fb378449b7cf05739
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8327043f9afdec7e2d84e564801342d7d7cbef9d
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705354"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412244"
 ---
 # <a name="how-to-draw-text-at-a-specified-location"></a>Практическое руководство. Рисование текста в указанном расположении
 При выполнении пользовательского рисования можно рисовать текст в одной строке по горизонтали, начиная с указанной точки. Таким образом можно рисовать текст с помощью <xref:System.Drawing.Graphics.DrawString%2A> перегруженным методом <xref:System.Drawing.Graphics> класс, принимающий <xref:System.Drawing.Point> или <xref:System.Drawing.PointF> параметра. <xref:System.Drawing.Graphics.DrawString%2A> Также требует <xref:System.Drawing.Brush> и <xref:System.Drawing.Font>  
@@ -24,7 +24,7 @@ ms.locfileid: "57705354"
   
  На следующем рисунке показан вывод текста, рисуемого в заданной точке при использовании <xref:System.Drawing.Graphics.DrawString%2A> перегруженный метод.  
   
- ![Текст шрифтов](./media/csfontstext1.png "csfontstext1")  
+ ![Снимок экрана: текст в заданной точке.](./media/how-to-draw-text-at-a-specified-location/font-text-specified-point.png)  
   
 ### <a name="to-draw-a-line-of-text-with-gdi"></a>Рисование линии текста с помощью GDI +  
   

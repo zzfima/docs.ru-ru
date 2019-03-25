@@ -2,21 +2,21 @@
 title: Использование NetHttpBinding
 ms.date: 03/30/2017
 ms.assetid: fe134acf-ceca-49de-84a9-05a37e3841f1
-ms.openlocfilehash: b00b4ed24d15519baf91ce38678fd91056eff521
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47a4da6dd709c300b62a7380e6e0754e31782dd8
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658732"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411074"
 ---
 # <a name="using-the-nethttpbinding"></a>Использование NetHttpBinding
 <xref:System.ServiceModel.NetHttpBinding> - это привязка, предназначенная для использования служб HTTP или WebSocket и использующая по умолчанию двоичное кодирование. <xref:System.ServiceModel.NetHttpBinding> определит, будет ли она использоваться с дуплексным контрактом и контрактом типа «запрос-ответ» и изменит ли свое поведение для соответствия контракту. HTTP будет использоваться для контрактов типа «запрос-ответ», и WebSockets - для дуплексных контрактов. Данное поведение можно переопределить с помощью параметра <xref:System.ServiceModel.Channels.WebSocketTransportUsage>:.  
   
-1. `Always` -Это обеспечивает использование службы WebSockets даже для контрактов типа запрос ответ.  
+1. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.Always> -Это обеспечивает использование службы WebSockets даже для контрактов типа запрос ответ.  
   
-2. `Never` -Это предотвращает использование WebSockets. Попытка использования дуплексного контракта с этим параметром приведет к возникновению исключения.  
+2. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.Never> -Это предотвращает использование WebSockets. Попытка использования дуплексного контракта с этим параметром приведет к возникновению исключения.  
   
-3. `WhenDuplex` -Это значение по умолчанию и ведет себя так, как описано выше.  
+3. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.WhenDuplex> -Это значение по умолчанию и ведет себя так, как описано выше.  
   
  <xref:System.ServiceModel.NetHttpBinding> поддерживает надежные сеансы как в режиме HTTP, так и в режиме WebSocket. В режиме WebSocket сеансы предоставляются транспортом.  
   

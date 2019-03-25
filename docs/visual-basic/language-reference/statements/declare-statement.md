@@ -27,12 +27,12 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-ms.openlocfilehash: 4a2e1704e72e608f5b5fd9c6dace42c144f92bb4
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5f9ac99078d64387acee9160118928ad8de1764c
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973175"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411542"
 ---
 # <a name="declare-statement"></a>Declare Statement
 Объявляет ссылку на процедуру, реализованную во внешнем файле.  
@@ -128,7 +128,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 -   **Механизм.** Visual Basic использует .NET Framework *неуправляемого* (PInvoke) механизм для разрешения и доступа к внешней процедуры. `Declare` Инструкции и <xref:System.Runtime.InteropServices.DllImportAttribute> класс оба используют этот механизм автоматически и не обязательно знать PInvoke. Дополнительные сведения см. в разделе [Пошаговое руководство: Вызов Windows API](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).  
   
 > [!IMPORTANT]
->  Если внешняя процедура выполняется вне общеязыковой среды выполнения (CLR), это *неуправляемый код*. При вызове процедуры, например функции Win32 API или метода COM, может предоставлять приложения угрозам безопасности. Дополнительные сведения см. в разделе [правил написания безопасного кода для неуправляемого кода](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md).  
+>  Если внешняя процедура выполняется вне общеязыковой среды выполнения (CLR), это *неуправляемый код*. При вызове процедуры, например функции Windows API или метода COM, может предоставлять приложения угрозам безопасности. Дополнительные сведения см. в разделе [правил написания безопасного кода для неуправляемого кода](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md).  
   
 ## <a name="example"></a>Пример  
  В следующем примере объявляется внешняя ссылка на `Function` процедуру, которая возвращает имя текущего пользователя. Затем он вызывает внешнюю процедуру `GetUserNameA` как часть `getUser` процедуры.  

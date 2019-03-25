@@ -2,12 +2,12 @@
 title: Выбор кодировщика сообщений
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
-ms.openlocfilehash: 027c9e460e15b4b038147cd79c04bd082bc3356d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c960505d6c8368396cddebe37c76c8d95550727
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538431"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409488"
 ---
 # <a name="choosing-a-message-encoder"></a>Выбор кодировщика сообщений
 В этом разделе описываются критерии выбора одного из кодировщиков сообщений, которые включены в Windows Communication Foundation (WCF): двоичный файл, текст и механизм оптимизации передачи сообщений (MTOM).  
@@ -63,11 +63,11 @@ public void OperationContract(XElement input)
   
 ## <a name="compression-and-the-binary-encoder"></a>Сжатие и двоичный кодировщик
 
-Начиная с версии WCF 4.5, в двоичном кодировщике появилась поддержка сжатия. Это позволяет использовать алгоритм gzip/deflate для передачи сжатых сообщений из WCF-клиента и отправлять сжатые сообщения из резидентной службы WCF. Эта функция обеспечивает сжатие сообщения для HTTP и TCP-каналов. WCF-службу, размещенную в IIS, можно настроить на повсеместную отправку сжатых ответов, выполнив соответствующую настройку узла IIS. Тип сжатия задается с помощью свойства <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.CompressionFormat%2A?displayProperty=nameWithType>. Свойству присваивается одно из значений перечисления <xref:System.ServiceModel.Channels.CompressionFormat?displayProperty=nameWithType>.
+Начиная с версии WCF 4.5, в двоичном кодировщике появилась поддержка сжатия. Это позволяет использовать алгоритм gzip/deflate для передачи сжатых сообщений из WCF-клиента и отправлять сжатые сообщения из резидентной службы WCF. Эта возможность обеспечивает сжатие сообщения для HTTP и TCP-каналов. WCF-службу, размещенную в IIS, можно настроить на повсеместную отправку сжатых ответов, выполнив соответствующую настройку узла IIS. Тип сжатия задается с помощью свойства <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.CompressionFormat%2A?displayProperty=nameWithType>. Свойству присваивается одно из значений перечисления <xref:System.ServiceModel.Channels.CompressionFormat?displayProperty=nameWithType>.
 
-* `CompressionFormat.Deflate`
-* `CompressionFormat.GZip`
-* `CompressionFormat.None`
+- <xref:System.ServiceModel.Channels.CompressionFormat.Deflate>
+- <xref:System.ServiceModel.Channels.CompressionFormat.GZip>
+- <xref:System.ServiceModel.Channels.CompressionFormat.None>
   
 Так как это свойство доступны только на элемента binaryMessageEncodingBindingElement, необходимо создать пользовательскую привязку следующим образом для использования этой функции:
 

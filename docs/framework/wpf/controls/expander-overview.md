@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], Expander
 - Expander control [WPF], about Expander control
 ms.assetid: 877bf425-0e54-49ec-8fd2-13a211377abb
-ms.openlocfilehash: 2eff66377a3ba9b0e30417cc7dd1e1413d9074d9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 29003779825b92402fa12b810c1a099731ac8af6
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369933"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409462"
 ---
 # <a name="expander-overview"></a>Общие сведения об элементе управления Expander
 <xref:System.Windows.Controls.Expander> Управления обеспечивает способ предоставления содержимого в развертываемой области, имеющей вид окна и включающей заголовок.  
@@ -45,7 +45,7 @@ ms.locfileid: "57369933"
   
  **Expander в ScrollViewer**  
   
- ![Элемент управления Expander со ScrollBar](./media/expanderwithscrollbar.JPG "ExpanderWithScrollBar")  
+ ![Снимок экрана, показывающий управления expander со ScrollBar.](./media/expander-overview/expander-scrollbar-control.jpg)  
   
  При размещении <xref:System.Windows.Controls.Expander> контролировать <xref:System.Windows.Controls.ScrollViewer>, задайте <xref:System.Windows.Controls.ScrollViewer> измерения свойство, соответствующее направление, в котором <xref:System.Windows.Controls.Expander> открывается содержимое размер <xref:System.Windows.Controls.Expander> области содержимого. Например, если задать <xref:System.Windows.Controls.Expander.ExpandDirection%2A> свойство <xref:System.Windows.Controls.Expander> для <xref:System.Windows.Controls.ExpandDirection.Down> (область содержимого открывается вниз), задайте <xref:System.Windows.FrameworkElement.Height%2A> свойство <xref:System.Windows.Controls.ScrollViewer> требуемую высоту для области содержимого элемента управления. Если вместо этого задать размерность высоты самого содержимого, <xref:System.Windows.Controls.ScrollViewer> не распознает этот параметр и таким образом, не предоставит прокручиваемое содержимое.  
   

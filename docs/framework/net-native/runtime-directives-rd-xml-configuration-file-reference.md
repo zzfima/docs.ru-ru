@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f8314f34f9fe0be43e7371d29cb4b366a819807c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5ca8cf76745190bd9819dde522c34e57952cd1ca
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356108"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410463"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>Ссылка на файл конфигурации директив среды выполнения (rd.xml)
 
@@ -405,7 +405,7 @@ ms.locfileid: "57356108"
 
 #### <a name="the-effect-of-xmlserializer-datacontractserializer-and-datacontractjsonserializer-policies"></a>Эффект политик XmlSerializer, DataContractSerializer и DataContractJsonSerializer
 
-В отличие от политики `Serialize`, которая предназначена для сериализаторов на основе отражения, политики `XmlSerializer`, `DataContractSerializer` и `DataContractJsonSerializer` используются для включения набора сериализаторов, известных цепочке инструментов [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Эти сериализаторы не реализуются с помощью отражения, но наборы типов, которые могут быть сериализованы во время выполнения определяются так же, как типы, которые могут отражаться.
+В отличие от политики `Serialize`, которая предназначена для сериализаторов на основе отражения, политики <xref:System.Xml.Serialization.XmlSerializer>, <xref:System.Runtime.Serialization.DataContractSerializer> и <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> используются для включения набора сериализаторов, известных цепочке инструментов [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Эти сериализаторы не реализуются с помощью отражения, но наборы типов, которые могут быть сериализованы во время выполнения определяются так же, как типы, которые могут отражаться.
 
 Применение одной из этих политик для типа позволяет сериализовать тип с помощью соответствующего сериализатора. Все типы, которые обработчик сериализации может статически определить, как нуждающиеся в сериализации, будут также сериализуемыми.
 

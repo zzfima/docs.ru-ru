@@ -1,17 +1,17 @@
 ---
-title: Как выполнить Проверка подлинности с помощью имени пользователя и пароля
+title: Практическое руководство. Проверка подлинности с помощью имени пользователя и пароля
 ms.date: 03/30/2017
 helpviewer_keywords:
 - authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
-ms.openlocfilehash: 2fb384fe0012b5c0a72e961f027c3db629891e09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f6939659249ea40e97f340771017d0587ec6a08f
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532296"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412270"
 ---
-# <a name="how-to-authenticate-with-a-user-name-and-password"></a>Как выполнить Проверка подлинности с помощью имени пользователя и пароля
+# <a name="how-to-authenticate-with-a-user-name-and-password"></a>Практическое руководство. Проверка подлинности с помощью имени пользователя и пароля
 
 В этом разделе показано, как включить службу Windows Communication Foundation (WCF) для проверки подлинности клиента с помощью имени пользователя домена Windows и пароль. Предполагается, что это рабочая резидентная служба WCF. Пример создания основных резидентной службы WCF см [Приступая к работе](../../../../docs/framework/wcf/getting-started-tutorial.md). В этом разделе предполагается, что служба настраивается в коде. Если вы хотите см. в разделе Пример настройки похожей службы с помощью файла конфигурации см. в разделе [имя пользователя для безопасности сообщений](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
   
@@ -21,7 +21,7 @@ ms.locfileid: "54532296"
   
 ## <a name="to-configure-a-wcf-service-to-authenticate-using-windows-domain-username-and-password"></a>Чтобы настроить службу WCF для проверки подлинности имя пользователя домена Windows и пароль
   
-1.  Создайте экземпляр <xref:System.ServiceModel.WSHttpBinding>, установите режим безопасности привязки в `SecurityMode.Message`, установите `ClientCredentialType` привязки в значение `MessageCredentialType.UserName` и добавьте в узел службы конечную точку службы с помощью заданной привязки, как показано в следующем коде:  
+1.  Создайте экземпляр <xref:System.ServiceModel.WSHttpBinding>, установите режим безопасности привязки в <xref:System.ServiceModel.WSHttpSecurity.Message?displayProperty=nameWithType>, установите `ClientCredentialType` привязки в значение <xref:System.ServiceModel.MessageCredentialType.UserName?displayProperty=nameWithType> и добавьте в узел службы конечную точку службы с помощью заданной привязки, как показано в следующем коде:  
   
     ```  
     // ...  

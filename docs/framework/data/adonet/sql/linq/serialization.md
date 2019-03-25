@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a15ae411-8dc2-4ca3-84d2-01c9d5f1972a
-ms.openlocfilehash: 12d7dd8d47262f8eefe8f71f144c5648f089be45
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 56ebe888b816972f8d72873e4fca9f5204e6c772
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54593580"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58408929"
 ---
 # <a name="serialization"></a>Сериализация
 В этом разделе описывается [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] возможности сериализации. В приведенных ниже подразделах приводятся сведения о добавлении сериализации в процессе создания кода во время разработки, а также о поведении классов [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] при сериализации во время выполнения.  
@@ -26,7 +26,7 @@ ms.locfileid: "54593580"
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Возможность сериализации устраняет эту проблему, главным образом с помощью двух механизмов:  
   
--   Режим <xref:System.Data.Linq.DataContext> для выключения отложенной загрузки (<xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A>). Для получения дополнительной информации см. <xref:System.Data.Linq.DataContext>.  
+-   Режим <xref:System.Data.Linq.DataContext> для выключения отложенной загрузки (<xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A>). Дополнительные сведения см. в разделе <xref:System.Data.Linq.DataContext>.  
   
 -   Переключение создания кода на создания атрибутов <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType> и <xref:System.Runtime.Serialization.DataMemberAttribute?displayProperty=nameWithType> в создаваемых классах. Главной темой этого раздела является именно этот аспект, включая поведение классов с отложенной загрузкой при сериализации.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "54593580"
  [!code-csharp[DLinqSerialization#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSerialization/cs/northwind-ser.cs#3)]
  [!code-vb[DLinqSerialization#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/northwind-ser.vb#3)]  
   
- Для краткости в следующем примере для класса `Order` показано только обратное свойство отношения, соответствующее классу `Customer`. Этот класс не имеет атрибута `DataMember`, чтобы избежать зацикливания.  
+ Для краткости в следующем примере для класса `Order` показано только обратное свойство отношения, соответствующее классу `Customer`. Этот класс не имеет атрибута <xref:System.Runtime.Serialization.DataMemberAttribute>, чтобы избежать зацикливания.  
   
  [!code-csharp[DLinqSerialization#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSerialization/cs/northwind-ser.cs#4)]
  [!code-vb[DLinqSerialization#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/northwind-ser.vb#4)]  
@@ -65,7 +65,7 @@ ms.locfileid: "54593580"
  [!code-vb[DLinqSerialization#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/Module1.vb#6)]  
   
 ### <a name="self-recursive-relationships"></a>Саморекурсивные отношения  
- Саморекурсивные отношения следуют тому же шаблону. Свойство отношения, соответствующее внешнему ключу, не имеет атрибута `DataMember`, в то время как родительское свойство этот атрибут имеет.  
+ Саморекурсивные отношения следуют тому же шаблону. Свойство отношения, соответствующее внешнему ключу, не имеет атрибута <xref:System.Runtime.Serialization.DataMemberAttribute>, в то время как родительское свойство этот атрибут имеет.  
   
  Рассмотрим следующий класс, содержащий две саморекурсивные связи: Employee.Manager/Reports и Employee.Mentor/Mentees.  
   

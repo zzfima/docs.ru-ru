@@ -2,19 +2,19 @@
 title: Действие Pick
 ms.date: 03/30/2017
 ms.assetid: b3e49b7f-0285-4720-8c09-11ae18f0d53e
-ms.openlocfilehash: 7626dda3689f89831d98ad484d7eab62c25def5b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b9ee6c06377760d27bc54d39c1d1f3ecf67ea0d8
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717951"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409995"
 ---
 # <a name="pick-activity"></a>Действие Pick
 Действие <xref:System.Activities.Statements.Pick> позволяет упростить моделирование набора триггеров событий, а затем соответствующих обработчиков.  Действие содержит <xref:System.Activities.Statements.Pick> коллекцию действий <xref:System.Activities.Statements.PickBranch>, в которой все элементы <xref:System.Activities.Statements.PickBranch> являются парами, состоящими из действия <xref:System.Activities.Statements.PickBranch.Trigger%2A> и действия <xref:System.Activities.Statements.PickBranch.Action%2A>.  Во время выполнения триггеры для всех ветвей выполняются параллельно.  Когда срабатывает один триггер, выполняется соответствующее действие, а остальные триггеры отменяются.  Поведение действия [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]<xref:System.Activities.Statements.Pick> схоже с поведением действия [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]<xref:System.Workflow.Activities.ListenActivity>.  
   
  На следующем снимке экрана из примера пакета SDK [Использование действия Pick](./samples/using-the-pick-activity.md) показано действие Pick с двумя ветвями.  В одной ветви есть триггер с именем **Read input** — настраиваемое действие, считывающее входные данные из командной строки. Во второй ветви имеется триггер действия <xref:System.Activities.Statements.Delay>. Если **чтение входных данных** действие получает данные до <xref:System.Activities.Statements.Delay> завершения действия <xref:System.Activities.Statements.Delay> задержка будет отменен и приветствие будет записываться в консоль.  В противном случае, если действие **Read input** не получает данные в отведенное время, это действие отменяется, и в консоль выводится сообщение об окончании времени ожидания.  Это стандартный прием для добавления периода времени ожидания к любому действию.  
   
- ![Действие Pick](./media/pickconceptual.JPG "PickConceptual")  
+ ![Действие Pick](./media/pick-activity/pick-activity-two-branches.jpg)  
   
 ## <a name="best-practices"></a>Рекомендации  
  При использовании действия Pick выполняемой ветвью действия становится ветвь, триггеры которой первыми завершат выполнение.  Теоретически, все триггеры выполняются параллельно, и один триггер может выполнить большую часть свой логики до того, как будет отменен из-за завершения работы другого.  С учетом этого необходимо соблюдать следующие инструкции при работе с действием Pick: работать с триггером, как если бы он представлял одно событие, и помещать в него минимально возможный объем логики.  В идеале триггер должен содержать объем логики, достаточный лишь для получения события, и обработка этого события должна выполняться в действии этой ветви.  Этот метод минимизирует объем перекрытия при выполнении триггеров.  Для примера можно представить <xref:System.Activities.Statements.Pick> с двумя триггерами, где каждый триггер содержит действие <xref:System.ServiceModel.Activities.Receive> с дополнительной логикой.  Если дополнительная логика представляет точку бездействия, то существует вероятность успешного завершения обоих действий <xref:System.ServiceModel.Activities.Receive>.  Один триггер будет полностью выполнен, а второй будет выполнен частично.  В определенных ситуациях принятие сообщения и последующее частичное выполнение его обработки недопустимо.  Следовательно, что касается применения таких встроенных действий обмена сообщениями WF, как <xref:System.ServiceModel.Activities.Receive> и <xref:System.ServiceModel.Activities.SendReply>, то <xref:System.ServiceModel.Activities.Receive> часто используется в триггерах, а <xref:System.ServiceModel.Activities.SendReply> и другая логика должны быть при любой возможности помещены в действие.  

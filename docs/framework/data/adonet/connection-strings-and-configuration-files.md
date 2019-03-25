@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: 5de30627d6d0e1209b12912437ae3403890f1678
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 5e83d13d24a0b17fd886995e552dd0a7e2cf8ff4
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828349"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409956"
 ---
 # <a name="connection-strings-and-configuration-files"></a>Строки подключения и файлы конфигурации
 Внедрение строк соединения в код приложения может привести к появлению уязвимых мест в системе безопасности и проблем с обслуживанием. Незашифрованные строки подключения, скомпилированные в исходный код приложения, можно просматривать с помощью средства [Ildasm.exe (IL Disassembler)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md). Кроме того, после изменения строки соединения необходимо перекомпилировать приложение. По этим причинам рекомендуется хранить строки соединения в файле конфигурации приложения.  
@@ -74,14 +74,14 @@ ms.locfileid: "55828349"
   
  Для получения строк соединения из файлов конфигурации приложения используется <xref:System.Configuration.ConnectionStringSettingsCollection>. Этот объект содержит коллекцию объектов <xref:System.Configuration.ConnectionStringSettings>, каждый из которых представляет одну запись в разделе **connectionStrings**. Его свойства сопоставляются с атрибутами строк соединения, что позволяет получить строку соединения, указав имя строки или имя поставщика.  
   
-|Свойство|Описание|  
+|Свойство.|Описание|  
 |--------------|-----------------|  
 |<xref:System.Configuration.ConnectionStringSettings.Name%2A>|Имя строки соединения. Сопоставляется с атрибутом **name**.|  
 |<xref:System.Configuration.ConnectionStringSettings.ProviderName%2A>|Полное имя поставщика. Сопоставляется с атрибутом **providerName**.|  
 |<xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A>|Строка подключения. Сопоставляется с атрибутом **connectionString**.|  
   
 ### <a name="example-listing-all-connection-strings"></a>Пример Список всех строк соединения  
- В данном примере выполняется итерация в коллекции `ConnectionStringSettings` и отображение свойств <xref:System.Configuration.ConnectionStringSettings.Name%2A>, <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A> и <xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A> в окне консоли.  
+ Этот пример проходит по <xref:System.Configuration.ConnectionStringSettingsCollection> и отображает <xref:System.Configuration.ConnectionStringSettings.Name%2A?displayProperty=nameWithType>, <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A?displayProperty=nameWithType>, и <xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A?displayProperty=nameWithType> свойства в окне консоли.  
   
 > [!NOTE]
 >  Файл System.Configuration.dll не включается в проекты всех типов, поэтому для использования классов конфигурации может потребоваться сформировать на него ссылку. Имя и расположение файла конфигурации определенного приложения зависит от типа приложения и процесса размещения.  
@@ -139,7 +139,7 @@ ms.locfileid: "55828349"
 |<xref:System.Configuration.RsaProtectedConfigurationProvider>|Использует алгоритм RSA для шифрования и расшифровки данных. Алгоритм RSA можно использовать для шифрования с открытым ключом и цифровых сигнатур. Он также известен как алгоритм с «открытым ключом» или алгоритм асимметричного шифрования, поскольку в нем используется два разных ключа. Для шифрования разделов в файле Web.config и управления ключами шифрования можно использовать [средство регистрации служб IIS ASP.NET (Aspnet_regiis.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90)). ASP.NET расшифровывает файл конфигурации при обработке файла. Удостоверение приложения ASP.NET должно иметь права на чтение ключа шифрования, который используется для шифрования и расшифровки зашифрованных разделов.|  
 |<xref:System.Configuration.DpapiProtectedConfigurationProvider>|Использует API-интерфейс защиты данных (DPAPI) для шифрования разделов конфигурации. Он использует встроенные службы шифрования Windows и может быть настроен для защиты отдельных компьютеров или отдельных учетных записей пользователей. Защиту отдельных компьютеров удобно использовать для нескольких приложений на одном сервере, которым требуется совместное использование данных. Защиту учетных записей можно использовать со службами, выполняемыми с определенным удостоверением пользователя, например с общей средой размещения. Каждое приложение выполняется с отдельным удостоверением, которое ограничивает доступ к ресурсам, например к файлам и базам данных.|  
   
- Оба поставщика обеспечивают надежное шифрование данных. Однако, если планируется использовать один файл конфигурации на нескольких серверах, как в веб-ферме, то только `RsaProtectedConfigurationProvider` позволяет экспортировать ключи шифрования, применяемые для шифрования данных, и импортировать их в другой сервер. Дополнительные сведения см. в разделе [Импорт и экспорт защищенных контейнеров ключей RSA для конфигурации](https://docs.microsoft.com/previous-versions/aspnet/yxw286t2(v=vs.100)).  
+ Оба поставщика обеспечивают надежное шифрование данных. Однако, если планируется использовать один файл конфигурации на нескольких серверах, как в веб-ферме, то только <xref:System.Configuration.RsaProtectedConfigurationProvider> позволяет экспортировать ключи шифрования, применяемые для шифрования данных, и импортировать их в другой сервер. Дополнительные сведения см. в разделе [Импорт и экспорт защищенных контейнеров ключей RSA для конфигурации](https://docs.microsoft.com/previous-versions/aspnet/yxw286t2(v=vs.100)).  
   
 ### <a name="using-the-configuration-classes"></a>Использование классов конфигурации  
  Пространство имен <xref:System.Configuration> предоставляет классы для программной обработки параметров конфигурации. Класс <xref:System.Configuration.ConfigurationManager> обеспечивает доступ к компьютеру, приложению и пользовательским файлам конфигурации. При создании приложения ASP.NET можно использовать класс <xref:System.Web.Configuration.WebConfigurationManager>, который предоставляет те же функциональные возможности и одновременно позволяет обращаться к уникальным настройкам приложений ASP.NET, в частности, в файле **\<system.web>**.  
