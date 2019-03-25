@@ -4,12 +4,12 @@ description: На примере двоичной классификации с 
 ms.date: 03/07/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: b0d02babd126a62ef9a87b251f525a08376069aa
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: a88ed38b76a230095f35304aa2b52af0a7c9c22d
+ms.sourcegitcommit: 77854e8704b9689b73103d691db34d71c2bf1dad
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57845795"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58307945"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Учебник. Использование ML.NET для анализа тональности методом двоичной классификации
 
@@ -173,7 +173,7 @@ ms.locfileid: "57845795"
 Создайте метод `LoadData` сразу после метода `Main`, вставив в него следующий код:
 
 ```csharp
-public static (IDataView trainSet, IDataView testSet) LoadData(MLContext mlContext)
+public static TrainCatalogBase.TrainTestData LoadData(MLContext mlContext)
 {
 
 }
@@ -321,8 +321,6 @@ private static void SaveModelAsFile(MLContext mlContext, ITransformer model)
 Далее создайте метод для сохранения модели, чтобы ее можно было использовать повторно, а также применять в других приложениях. `ITransformer` содержит метод <xref:Microsoft.ML.Data.TransformerChain%601.SaveTo(Microsoft.ML.IHostEnvironment,System.IO.Stream)>, который принимает глобальное поле `_modelPath`, и <xref:System.IO.Stream>. Чтобы сохранить модель в качестве ZIP-файла, мы создадим `FileStream` непосредственно перед вызовом метода `SaveTo`. В качестве следующей строки в методе `SaveModelAsFile` добавьте приведенный ниже код:
 
 [!code-csharp[SaveToMethod](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#SaveModel "Add the SaveTo Method")]
-
-## <a name="deploy-and-predict-with-a-loaded-model"></a>Развертывание и прогнозирование с помощью загруженной модели
 
 Вы также можете просмотреть, куда был записан файл, написав консольное сообщение с `_modelPath`, используя следующий код:
 

@@ -4,12 +4,12 @@ description: Из этой статьи вы узнаете, как платфо
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 2c62581d34e77f208b7764f955dfa37613615ee4
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: b4846f2e6cd945a25ec6a747c9038d48fe115559
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "56411427"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185419"
 ---
 # <a name="type-marshalling"></a>Маршалинг типов
 
@@ -38,8 +38,8 @@ static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
 | `uint`    | `uint32_t`              |
 | `long`    | `int64_t`               |
 | `ulong`   | `uint64_t`              |
-| `char`    | Тип `char` или `char16_t` в зависимости от кодировки `CharSet` P/Invoke или структуры. См. дополнительные сведения в [документации по кодировке](/.charset.md). |
-| `string`  | Тип `char*` или `char16_t*` в зависимости от кодировки `CharSet` P/Invoke или структуры. См. дополнительные сведения в [документации по кодировке](/.charset.md). |
+| `char`    | Тип `char` или `char16_t` в зависимости от кодировки `CharSet` P/Invoke или структуры. См. дополнительные сведения в [документации по кодировке](charset.md). |
+| `string`  | Тип `char*` или `char16_t*` в зависимости от кодировки `CharSet` P/Invoke или структуры. См. дополнительные сведения в [документации по кодировке](charset.md). |
 | `System.IntPtr` | `intptr_t`        |
 | `System.UIntPtr` | `uintptr_t`      |
 | Типы указателей .NET (за исключением `void*`)  | `void*` |
@@ -73,7 +73,7 @@ static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
 
 | Тип .NET | Собственный тип (только параметр) |
 |-----------|------------------------------|
-| `System.Text.StringBuilder` | Тип `char*` или `char16_t*` в зависимости от кодировки `CharSet` P/Invoke.  См. дополнительные сведения в [документации по кодировке](/.charset.md). |
+| `System.Text.StringBuilder` | Тип `char*` или `char16_t*` в зависимости от кодировки `CharSet` P/Invoke.  См. дополнительные сведения в [документации по кодировке](charset.md). |
 | `System.ArgIterator` | `va_list` (только в Windows x86/x64/arm64) |
 | `System.Runtime.InteropServices.ArrayWithOffset` | `void*` |
 | `System.Runtime.InteropServices.HandleRef` | `void*` |
