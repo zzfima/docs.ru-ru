@@ -17,8 +17,7 @@ ms.lasthandoff: 03/09/2019
 ms.locfileid: "57722065"
 ---
 # <a name="how-to-use-toolstrippanels-for-mdi"></a>Практическое руководство. Руководство.
-
-  <xref:System.Windows.Forms.ToolStripPanel> обеспечивает гибкость для приложений многодокументного интерфейса (MDI) с помощью метода <xref:System.Windows.Forms.ToolStripPanel.Join%2A>.  
+<xref:System.Windows.Forms.ToolStripPanel> обеспечивает гибкость для приложений многодокументного интерфейса (MDI) с помощью метода <xref:System.Windows.Forms.ToolStripPanel.Join%2A>.  
   
 ## <a name="example"></a>Пример  
  В примере кода ниже показано использование элементов управления <xref:System.Windows.Forms.ToolStripPanel> с формой MDI.  

@@ -1,5 +1,5 @@
 ---
-title: Недопустимый оператор для типа "<typename>"
+title: Недопустимый оператор для типа '<typename>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbrNoValidOperator_OneOperand
@@ -11,7 +11,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58035245"
 ---
-# <a name="operator-is-not-valid-for-type-typename"></a>Недопустимый оператор для типа "\<typename >"
+# <a name="operator-is-not-valid-for-type-typename"></a>Недопустимый оператор для типа '\<typename >'
 Оператор недопустим для типов.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  

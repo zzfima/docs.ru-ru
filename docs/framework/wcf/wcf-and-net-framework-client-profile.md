@@ -13,8 +13,7 @@ ms.locfileid: "57844305"
 [!INCLUDE[arrowhead](../../../includes/arrowhead-md.md)] — это облегченная версия полной версии .NET Framework, созданная для клиентов, которые не требуются все возможности платформы. Платформа клиента поддерживает не все функции Windows Communication Foundation.  
   
 ## <a name="wcf-features-supported-by-the-net-framework-client-profile"></a>Возможности WCF, поддерживаемые для клиентского профиля .NET Framework  
- 
-  [!INCLUDE[arrowhead](../../../includes/arrowhead-md.md)] поддерживает следующие возможности Windows Communication Foundation.  
+ [!INCLUDE[arrowhead](../../../includes/arrowhead-md.md)] поддерживает следующие возможности Windows Communication Foundation.  
   
 -   Поддерживаются все функции WCF, кроме Cardspace и размещения на веб-сервере.  
   

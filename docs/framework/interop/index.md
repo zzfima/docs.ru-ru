@@ -2,28 +2,22 @@
 title: Взаимодействие с неуправляемым кодом
 ms.date: 01/17/2018
 helpviewer_keywords:
-- unmanaged code, interoperation
-- managed code, interoperation with unmanaged code
-- .NET Framework, interoperation with unmanaged code
-- unmanaged code
-- interoperation with unmanaged code
-- interoperation with unmanaged code, about interoperation
-- components [.NET Framework], interoperation with unmanaged code
+  - 'unmanaged code, interoperation'
+  - 'managed code, interoperation with unmanaged code'
+  - '.NET Framework, interoperation with unmanaged code'
+  - unmanaged code
+  - interoperation with unmanaged code
+  - 'interoperation with unmanaged code, about interoperation'
+  - 'components [.NET Framework], interoperation with unmanaged code'
 ms.assetid: ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 583cfb6e3a5145c6c0dfc82ec9ff64c6d87414ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389538"
 ---
 # <a name="interoperating-with-unmanaged-code"></a>Взаимодействие с неуправляемым кодом
 
 Платформа .NET Framework обеспечивает взаимодействие с COM-компонентами, службами COM+, внешними библиотеками типов и многими службами операционной системы. Типы данных, подписи методов и механизмы обработки ошибок различны в управляемой и неуправляемой моделях объектов. Для упрощения взаимодействия между компонентами .NET Framework и неуправляемым программным кодом, а также для облегчения перехода от одной модели к другой среда CLR скрывает имеющиеся в этих объектных моделях различия от клиентов и серверов.
 
-Код, выполняющийся под управлением среды выполнения, называется управляемым кодом. И наоборот, код, выполняемый вне среды выполнения, называется неуправляемым кодом. Примерами неуправляемого кода являются компоненты COM, интерфейсы ActiveX и функции Win32 API.
+Код, выполняющийся под управлением среды выполнения, называется управляемым кодом. И наоборот, код, выполняемый вне среды выполнения, называется неуправляемым кодом. Примерами неуправляемого кода являются компоненты COM, интерфейсы ActiveX и функции Windows API.
 
 ## <a name="in-this-section"></a>Содержание раздела
 

@@ -1,5 +1,5 @@
 ---
-title: Аргумент "<argumentname>" должен быть в диапазоне от 1 до 255
+title: Аргумент '<argumentname>' должен быть в диапазоне от 1 до 255
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_Range1toFF1
@@ -11,7 +11,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58022804"
 ---
-# <a name="argument-argumentname-must-be-within-the-range-1-to-255"></a>Аргумент "\<имя_аргумента >" должен быть в диапазоне от 1 до 255
+# <a name="argument-argumentname-must-be-within-the-range-1-to-255"></a>Аргумент '\<имя_аргумента >' должен быть в диапазоне от 1 до 255
 Аргумент недопустим, так как его значение не попадает в диапазон от 0 до 255.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
