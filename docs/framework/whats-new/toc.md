@@ -1,5 +1,0 @@
-# [Новые возможности](index.md)
-## [Улучшенные специальные возможности](whats-new-in-accessibility.md) 
-## [Устаревшие классы библиотеки классов](whats-obsolete.md)
-### [Устаревшие типы](obsolete-types.md)
-### [Устаревшие члены](obsolete-members.md)

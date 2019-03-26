@@ -1,5 +1,0 @@
-# [Main() и аргументы командной строки](index.md)
-## [Аргументы командной строки](command-line-arguments.md)
-## [Практическое руководство. Отображение аргументов командной строки](how-to-display-command-line-arguments.md)
-## [Практическое руководство. Доступ к аргументам командной строки с помощью оператора foreach](how-to-access-command-line-arguments-using-foreach.md)
-## [Значения, возвращаемые методом main()](main-return-values.md)

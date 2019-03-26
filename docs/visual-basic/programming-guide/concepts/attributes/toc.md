@@ -1,6 +1,0 @@
-# [Атрибуты](index.md)
-## [Создание настраиваемых атрибутов](creating-custom-attributes.md)
-### [AttributeUsage](attributeusage.md)
-## [Обращение к атрибутам с помощью отражения](accessing-attributes-by-using-reflection.md)
-## [Практическое руководство. Создание объединения C/C++ с помощью атрибутов](how-to-create-a-c-cpp-union-by-using-attributes.md)
-## [Общие атрибуты](common-attributes.md)
