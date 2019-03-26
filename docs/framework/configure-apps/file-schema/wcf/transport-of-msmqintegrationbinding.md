@@ -2,12 +2,12 @@
 title: <transport> из <msmqIntegrationBinding>
 ms.date: 03/30/2017
 ms.assetid: 054579e3-7fdd-47df-99ca-952706ba5c8e
-ms.openlocfilehash: 53b434002d81e4735688ae3821db356c4e6e0fb1
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: f404782ed54d27d5dcfdfba126f6992d9badf060
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58040290"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463401"
 ---
 # <a name="transport-of-msmqintegrationbinding"></a>\<Транспорт > из \<msmqIntegrationBinding >
 Определяет параметры безопасности для транспорта интеграции очереди сообщений.  
@@ -43,11 +43,11 @@ msmqIntegrationBinding
 |`msmqSecureHashAlgorithm`|— Указывает алгоритм, используемый при вычислении дайджеста в составе сигнатур. Допустимы следующие значения:<br />-MD5<br />-SHA1<br />-SHA256<br />-SHA512<br /><br /> Значение по умолчанию - SHA1. Это атрибут типа <xref:System.ServiceModel.MsmqSecureHashAlgorithm>.<br>Из-за конфликта проблем с MD5 и SHA1 Корпорация Майкрософт рекомендует SHA256 или выше.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
- Нет  
+ None  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<Безопасность >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|Определяет параметры безопасности для привязки MSMQ.|  
   
@@ -59,7 +59,6 @@ msmqIntegrationBinding
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurity.Transport%2A>
 - <xref:System.ServiceModel.Configuration.MsmqIntegrationSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.MsmqTransportSecurity>
-- [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [Привязки](../../../../../docs/framework/wcf/bindings.md)
 - [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)

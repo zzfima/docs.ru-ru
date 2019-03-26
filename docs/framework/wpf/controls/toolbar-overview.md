@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [WPF], ToolBar
 - ToolBar control [WPF]
 ms.assetid: a8edb32c-118d-4f31-b6e6-8899082b504b
-ms.openlocfilehash: 7d591c85211492e4ad0b7e226cffba309e8d418b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6bd44e4b8406e945ea8f0913563d2f2f6e0b3822
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379644"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464961"
 ---
 # <a name="toolbar-overview"></a>Общие сведения о панели инструментов ToolBar
 <xref:System.Windows.Controls.ToolBar> элементы управления являются контейнерами для группы команд или элементов управления, которые обычно связаны в их функции. Объект <xref:System.Windows.Controls.ToolBar> обычно содержит кнопки, которые активируют команды.  
@@ -28,10 +28,9 @@ ms.locfileid: "57379644"
   
 <a name="ToolBars_with_Overflow_Items"></a>   
 ## <a name="toolbars-with-overflow-items"></a>Элементы управления ToolBar с элементами в области переполнения  
- Часто <xref:System.Windows.Controls.ToolBar> содержит больше элементов, чем может поместиться в размер панели инструментов. В этом случае <xref:System.Windows.Controls.ToolBar> отображается кнопка переполнения. Для просмотра элементов переполнения пользователь нажимает кнопку переполнения, и эти элементы отображаются во всплывающем окне ниже <xref:System.Windows.Controls.ToolBar>. Показано на следующем рисунке <xref:System.Windows.Controls.ToolBar> с элементами в области переполнения.  
+ Часто <xref:System.Windows.Controls.ToolBar> содержит больше элементов, чем может поместиться в размер панели инструментов. В этом случае <xref:System.Windows.Controls.ToolBar> отображается кнопка переполнения. Для просмотра элементов переполнения пользователь нажимает кнопку переполнения, и эти элементы отображаются во всплывающем окне ниже <xref:System.Windows.Controls.ToolBar>. Показано на следующем рисунке <xref:System.Windows.Controls.ToolBar> с элементами в области переполнения:  
   
- ![Панель инструментов с перекрытием](./media/toolbarwithoverflowitem.png "ToolbarWithOverflowItem")  
-Панель инструментов с элементами в области переполнения  
+ ![Снимок экрана, показывающий элемент toolbar с элементами в области переполнения.](./media/toolbar-overview/toolbar-overflow-items.png)  
   
  Можно указать при помещении элемента на панели инструментов в области переполнения, установив <xref:System.Windows.Controls.ToolBar.OverflowMode%2A?displayProperty=nameWithType> вложенное свойство, чтобы <xref:System.Windows.Controls.OverflowMode.Always?displayProperty=nameWithType>, <xref:System.Windows.Controls.OverflowMode.Never?displayProperty=nameWithType>, или <xref:System.Windows.Controls.OverflowMode.AsNeeded?displayProperty=nameWithType>. В следующем примере показано, что последние четыре кнопки панели инструментов всегда должны быть в области переполнения.  
   

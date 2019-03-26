@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Размещение службы рабочего процесса с помощью Windows Server App Fabric
+title: Практическое руководство. Размещение службы рабочего процесса с помощью Windows Server App Fabric
 ms.date: 03/30/2017
 ms.assetid: 83b62cce-5fc2-4c6d-b27c-5742ba3bac73
-ms.openlocfilehash: 94eff2a01c70e34e57ff153d0cbdef44b6377b01
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 287067391f47a0b4bcbe11bd4bfab971954cd706
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651192"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465130"
 ---
-# <a name="how-to-host-a-workflow-service-with-windows-server-app-fabric"></a>Как выполнить Размещение службы рабочего процесса с помощью Windows Server App Fabric
+# <a name="how-to-host-a-workflow-service-with-windows-server-app-fabric"></a>Практическое руководство. Размещение службы рабочего процесса с помощью Windows Server App Fabric
 Размещение служб рабочих процессов в фабрике приложений аналогично их размещению в виртуальном каталоге служб IIS/WAS. Разница состоит лишь в предоставлении фабрикой приложений средств для развертывания, наблюдения и управления службами рабочих процессов. В этом разделе используется служба рабочего процесса, созданная в [создания длительные службы рабочего процесса](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md). Указанный раздел содержит пошаговые инструкции по созданию службы рабочих процессов. В этом разделе объясняется, как разместить службу рабочих процессов с помощью фабрики приложений. Дополнительные сведения о Windows Server App Fabric, см. в разделе [Windows Server App Fabric документации](https://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409). Перед выполнением описанных далее шагов убедитесь, что фабрика приложений Windows Server уже установлена.  Для этого откройте диспетчер служб IIS (inetmgr.exe), щелкните имя сервера в **подключений** просмотра щелкните узлы и нажмите кнопку **веб-сайт по умолчанию**. В правой части экрана вы увидите раздел **App Fabric**. Если вы не видите этот раздел (он находится на верхней правой панели), значит фабрика приложений не установлена. Дополнительные сведения об установке Windows Server App Fabric см. в разделе [Установка Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=193136).  
   
 ### <a name="creating-a-simple-workflow-service"></a>Создание простой службы рабочих процессов  
@@ -56,13 +56,13 @@ ms.locfileid: "54651192"
   
 8.  Выберите **автозапуска** вкладки. Здесь можно указать параметры автозапуска служб рабочих процессов в приложении, как показано на следующем снимке экрана.  
   
-     ![App Fabric автоматически&#45;запустить настройку](../../../../docs/framework/wcf/feature-details/media/appfabricconfigurationautostart.gif "AppFabricConfigurationAutostart")  
+     ![Снимок экрана, показывающий App Fabric автоматически&#45;запуск конфигурации.](./media/how-to-host-a-workflow-service-with-windows-server-app-fabric/app-fabric-auto-start-configuration.gif)  
   
      Дополнительные сведения о настройке автоматического запуска см. в разделе [Настройка автозапуска при работе с App Fabric](https://go.microsoft.com/fwlink/?LinkId=193150).  
   
 9. Выберите **регулирование** вкладки. Здесь можно настроить параметры регулирования для службы рабочих процессов, как показано на следующем снимке экрана.  
   
-     ![Регулирование конфигурации фабрики приложения](../../../../docs/framework/wcf/feature-details/media/appfabricconfigurationthrottling.gif "AppFabricConfigurationThrottling")  
+     ![Снимок экрана, показывающий регулирование конфигурации фабрики приложения.](./media/how-to-host-a-workflow-service-with-windows-server-app-fabric/app-fabric-throttling-configuration.gif)  
   
      Дополнительные сведения о настройке регулирования см. в разделе [Настройка регулирования при работе с App Fabric](https://go.microsoft.com/fwlink/?LinkId=193149).  
   
@@ -82,11 +82,11 @@ ms.locfileid: "54651192"
   
 4.  Клиентское приложение немедленно вызовет службу рабочих процессов и перейдет в состояние ожидания. Служба рабочих процессов перейдет в состояние бездействия и будет сохранена. Чтобы это проверить, запустите диспетчер служб IIS (inetmgr.exe), перейдите к элементу OrderService в области «Соединения» и выберите его. Затем щелкните значок панели мониторинга фабрики приложений на панели справа. В разделе «Сохраненные экземпляры WF» можно видеть один сохраненный экземпляр службы рабочих процессов, как показано на следующем снимке экрана.  
   
-     ![Панель мониторинга фабрики приложения](../../../../docs/framework/wcf/feature-details/media/appfabricdashboard.gif "AppFabricDashboard")  
+     ![Снимок экрана с панели мониторинга фабрики приложений.](./media/how-to-host-a-workflow-service-with-windows-server-app-fabric/app-fabric-dashboard.gif)  
   
      **Журнал экземпляра WF** выводит сведения о службе рабочего процесса, например количество активаций, число завершений экземпляров службы рабочего процесса и число экземпляров рабочих процессов со сбоями. Под активными и бездействующими экземплярами отображается ссылка, перейдя по которой можно просмотреть дополнительные сведения о бездействующих экземплярах рабочих процессов, как показано на следующем снимке экрана.  
   
-     ![Подробные сведения об экземпляре рабочего процесса сохраняются](../../../../docs/framework/wcf/feature-details/media/persisteddetail.gif "PersistedDetail")  
+     ![Снимок экрана, показывающий сохраняются сведения об экземпляре рабочего процесса.](./media/how-to-host-a-workflow-service-with-windows-server-app-fabric/persisted-workflow-instance-detail.gif)  
   
      Дополнительные сведения о Windows Server App Fabric возможности и способы их использования см. в разделе [функции размещения Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=193143&clcid=0x409)  
   

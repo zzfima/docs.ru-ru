@@ -2,12 +2,12 @@
 title: Использование в WCF нескольких схем проверки подлинности
 ms.date: 03/30/2017
 ms.assetid: f32a56a0-e2b2-46bf-a302-29e1275917f9
-ms.openlocfilehash: 8aa593803354628354e5ed3bf02cbcea44505e5e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9f2c9944b424ba527fb20562706d5ad7fc3f8359
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54593814"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465498"
 ---
 # <a name="using-multiple-authentication-schemes-with-wcf"></a>Использование в WCF нескольких схем проверки подлинности
 В WCF теперь можно указать несколько схем проверки подлинности на одной конечной точке. Кроме того, службы, размещенные на веб-серверах, могут наследовать свои параметры проверки подлинности непосредственно из IIS. Резидентные службы могут указывать, какие схемы проверки подлинности можно использовать. Дополнительные сведения о настройке параметров проверки подлинности в службах IIS, см. в разделе [проверки подлинности IIS](https://go.microsoft.com/fwlink/?LinkId=232458)  
@@ -124,6 +124,5 @@ else
 - [Конечные точки: Адреса, привязки и контракты](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
 - [Настройка привязок, предоставляемых системой](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
 - [Возможности безопасности при использовании пользовательских привязок](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
-- [Привязки](../../../../docs/framework/wcf/feature-details/bindings.md)
 - [Привязки](../../../../docs/framework/wcf/feature-details/bindings.md)
 - [Пользовательские привязки](../../../../docs/framework/wcf/extending/custom-bindings.md)

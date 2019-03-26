@@ -4,12 +4,12 @@ description: Понять, что Docker, контейнеры и архитек
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/23/2018
-ms.openlocfilehash: ac4ca2d4a24e2d26fd639eafd62968188dbeb483
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 94f7bc27409048ec80a4e485cea4a16d30e7c1e2
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674436"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58462686"
 ---
 # <a name="road-to-modern-applications-based-on-containers"></a>Пути для современных приложений, в зависимости от контейнеров
 
@@ -24,10 +24,10 @@ Microsoft продолжила работу в широкие рекоменда
 Вы можете найти дополнительные электронными книгами от Майкрософт связанные с контейнерами Docker в списке ниже:
 
 - **Микрослужбы .NET. Архитектура контейнерных приложений .NET** \
-  [*https://docs.microsoft.com/dotnet/standard/microservices-architecture/*](../microservices-architecture/index.md)
+  [https://docs.microsoft.com/dotnet/standard/microservices-architecture/](../microservices-architecture/index.md)
 
 - **Модернизация существующих приложений .NET с помощью облака Azure и контейнеров Windows** \
-  [*https://docs.microsoft.com/dotnet/standard/modernize-with-azure-and-containers/*](../modernize-with-azure-and-containers/index.md)
+  [https://docs.microsoft.com/dotnet/standard/modernize-with-azure-and-containers/](../modernize-with-azure-and-containers/index.md)
 
 >[!div class="step-by-step"]
 >[Назад](docker-containers-images-and-registries.md)

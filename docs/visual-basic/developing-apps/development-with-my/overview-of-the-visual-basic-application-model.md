@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Application object [Visual Basic], Visual Basic application model
 - Visual Basic application model
 ms.assetid: 17538984-84fe-43c9-82c8-724c9529fe8b
-ms.openlocfilehash: 16522424ecd3009cb905bacb39694189a9540318
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 258e3862da79e78510991df26cc286c7231ad097
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517387"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464103"
 ---
 # <a name="overview-of-the-visual-basic-application-model"></a>Обзор модели приложения в Visual Basic
 Visual Basic предоставляет четко определенную модель для управления поведением приложений Windows Forms: модель приложения Visual Basic. Эта модель включает события для обработки приложения запуска и завершения работы, а также события для перехвата необработанных исключений. Он также обеспечивает поддержку для разработки приложения с одним процессом. Модель приложения является расширяемой, поэтому разработчики, которым требуется больший контроль можно настраивать переопределяемые методы.  
@@ -28,7 +28,7 @@ Visual Basic предоставляет четко определенную мо
   
      На этой схеме показано, как последующий экземпляр уведомляет первый экземпляр.  
   
-     ![Единый образ экземпляра приложения](../../../visual-basic/developing-apps/development-with-my/media/singleinstance.gif "SingleInstance")  
+     ![Схема, показывающая изображение приложения одного экземпляра.](./media/overview-of-the-visual-basic-application-model/single-instance-application.gif)  
   
  При обработке `StartupNextInstance` событий, можно управлять поведением одним экземпляром приложения. Например Microsoft Outlook обычно запускается как приложение одного экземпляра; Если Outlook работает, и попытке запустить Outlook снова, фокуса в исходном экземпляре, но другой экземпляр не открывается.  
   

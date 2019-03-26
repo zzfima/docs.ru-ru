@@ -3,17 +3,17 @@ title: Модель программирования требований WIF
 ms.date: 03/30/2017
 ms.assetid: 149cb875-9b1c-4695-b88a-fbf1725a02f9
 author: BrucePerlerMS
-ms.openlocfilehash: 91b719967cd4ab9fd412e5c0799bb5e1921a4801
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 543db91eaa058a87cfe579a23abb710f21ec1b85
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316510"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58462816"
 ---
 # <a name="wif-claims-programming-model"></a>Модель программирования требований WIF
 Для работы с удостоверениями пользователей разработчики на ASP.NET и Windows Communication Foundation (WCF) обычно используют интерфейсы IIdentity и IPrincipal. В .NET 4.5 интегрирована платформа Windows Identity Foundation (WIF), благодаря чему утверждения теперь всегда присутствуют для любого субъекта, как показано на схеме ниже.
 
- ![Модель программирования утверждений WIF](../../../docs/framework/security/media/wifclaimsprogrammingmodel.png "WIFClaimsProgrammingModel")
+ ![Схема, показывающая модель программирования утверждений WIF.](./media/wif-claims-programming-model/wif-claims-programming-model.png)
 
  В .NET 4.5 пространство имен System.Security.Claims содержит новые классы ClaimsPrincipal и ClaimsIdentity (см. схему выше). Все субъекты в .NET теперь являются производными от ClaimsPrincipal. Все встроенные классы удостоверений, такие как FormsIdentity для ASP.NET и WindowsIdentity, теперь являются производными от ClaimsIdentity. Аналогичным образом, все встроенные классы субъектов, такие как GenericPrincipal и WindowsPrincipal, являются производными от ClaimsPrincipal.
 
@@ -59,7 +59,7 @@ WIF изначально поддерживает несколько сочет�
 |SAML 2.0|См. "SAML 1.1".|См. "SAML 1.1, сопоставление с учетной записью Windows".|
 |X509|1.  Утверждения с различающимся именем X500, свойствами emailName, dnsName, SimpleName, UpnName, UrlName, thumbprint, RsaKey (может извлекаться с помощью метода RSACryptoServiceProvider.ExportParameters из свойства X509Certificate2.PublicKey.Key), DsaKey (может извлекаться с помощью метода DSACryptoServiceProvider.ExportParameters из свойства X509Certificate2.PublicKey.Key), SerialNumber из сертификата X509.<br />2.  Утверждение AuthenticationMethod со значением `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509`. Утверждение AuthenticationInstant со значением времени, когда сертификат был проверен в формате DateTime XmlSchema.|1.  В качестве значения утверждения `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name` используется полное доменное имя учетной записи Windows. .<br />2.  Утверждения из сертификата X509, не сопоставленные с Windows, и утверждения из учетной записи Windows, полученные путем сопоставления сертификата с Windows.|
 |Имя участника-пользователя|1.  Утверждения сходны с утверждениями из раздела проверки подлинности Windows.<br />2.  Утверждение AuthenticationMethod со значением `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password`. Утверждение AuthenticationInstant со значением времени, когда пароль был проверен в формате DateTime XmlSchema.||
-|Windows (Kerberos или NTLM)|1.  Утверждения, созданные на основе токена доступа, такие как PrimarySID, DenyOnlyPrimarySID, PrimaryGroupSID, DenyOnlyPrimaryGroupSID, GroupSID, DenyOnlySID и Name.<br />2.  Утверждение AuthenticationMethod со значением `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows`. Утверждение AuthenticationInstant со значением времени, когда токен доступа Windows был создан в формате DateTime XmlSchema.||
+|Windows (Kerberos или NTLM)|1.  Утверждения, созданные из маркера доступа, такие как: PrimarySID, DenyOnlyPrimarySID, PrimaryGroupSID, DenyOnlyPrimaryGroupSID, GroupSID, DenyOnlySID и Name<br />2.  Утверждение AuthenticationMethod со значением `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows`. Утверждение AuthenticationInstant со значением времени, когда токен доступа Windows был создан в формате DateTime XmlSchema.||
 |Пара ключей RSA|1.  Утверждение `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/rsa` со значением RSAKeyValue.<br />2.  Утверждение AuthenticationMethod со значением `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/signature`. Утверждение AuthenticationInstant со значением времени, когда была проверена подлинность ключа RSA (то есть времени проверки подписи) в формате DateTime XMLSchema.||
 
 |Тип проверки подлинности|Коды URI, выпущенные в утверждении AuthenticationMethod|

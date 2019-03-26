@@ -28,12 +28,12 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: d1a93fe81b892b85f77547d48428d3d9a78d5173
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ab9b36857e2508190a212844f3c6b53d777c0552
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373116"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466222"
 ---
 # <a name="wpf-windows-overview"></a>Общие сведения об окнах WPF
 Пользователи взаимодействуют с Windows Presentation Foundation (WPF) автономных приложений с помощью windows. Основная цель окна — разместить содержимое, которое визуализирует данные и позволяет пользователям взаимодействовать с ними. Автономный [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложения предоставляют собственные окна с помощью <xref:System.Windows.Window> класса. В данном разделе представлены <xref:System.Windows.Window> затем освещаются основы создания и управления окнами в автономных приложениях.  
@@ -44,9 +44,9 @@ ms.locfileid: "57373116"
   
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>Класс окна  
- На следующем рисунке показаны составляющие части окна.  
+ На следующем рисунке показана составляющие части окна:  
   
- ![Элементы окна](./media/windowoverviewfigure1.PNG "WindowOverviewFigure1")  
+ ![Снимок экрана, показывающий элементов окна.](./media/wpf-windows-overview/window-constituent-elements.png)  
   
  Окно разделено на две области: неклиентскую и клиентскую.  
   
@@ -146,7 +146,7 @@ ms.locfileid: "57373116"
   
  Наконец, открывается окно путем вызова <xref:System.Windows.Window.Show%2A> метода; результат показан на рисунке ниже.  
   
- ![Окно, открытое посредством вызова метода Window.Show](./media/windowoverviewfigure8.png "WindowOverviewFigure8")  
+ ![Окно открывается путем вызова Window.Show](./media/wpf-windows-overview//window-opened-show-method.png)  
   
  Окно, которое открывается путем вызова <xref:System.Windows.Window.Show%2A> безрежимным окном, это означает, что приложение работает в режиме, который позволяет пользователям активировать и другие окна в одном приложении.  
   
@@ -282,13 +282,13 @@ ms.locfileid: "57373116"
   
 <a name="Window_Lifetime_Events"></a>   
 ### <a name="window-lifetime-events"></a>События времени существования окна  
- На следующем рисунке показана последовательность основных событий во время существования окна.  
+ Ниже показана последовательность основных событий во время существования окна:  
   
- ![Время существования окна](./media/windowlifetimeevents.png "WindowLifetimeEvents")  
+ ![Схема, показывающая события за время существования окна.](./media/wpf-windows-overview/window-lifetime-events.png)  
   
- Ниже показана последовательность основных событий во время существования окна, которое отображается без активации (<xref:System.Windows.Window.ShowActivated%2A> присваивается `false` перед отображением окна).  
+ Ниже показана последовательность основных событий во время существования окна, которое отображается без активации (<xref:System.Windows.Window.ShowActivated%2A> присваивается `false` перед отображением окна):  
   
- ![Время существования окна &#40;Window.ShowActivated &#61; False&#41;](./media/windowlifetimenoact.png "WindowLifetimeNoAct")  
+ ![Схема, показывающая события за время существования окна без активации.](./media/wpf-windows-overview/window-lifetime-no-activation.png)  
   
 <a name="WindowLocation"></a>   
 ## <a name="window-location"></a>Расположение окна  
@@ -351,21 +351,21 @@ ms.locfileid: "57373116"
   
  **Для свойств высоты:**  
   
-1.  <xref:System.Windows.FrameworkElement.MinHeight%2A?displayProperty=nameWithType> >  
+1.  <xref:System.Windows.FrameworkElement.MinHeight%2A?displayProperty=nameWithType>
   
-2.  <xref:System.Windows.FrameworkElement.MaxHeight%2A?displayProperty=nameWithType> >  
+2.  <xref:System.Windows.FrameworkElement.MaxHeight%2A?displayProperty=nameWithType>
   
-3.  <xref:System.Windows.SizeToContent.Height?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType> >  
+3.  <xref:System.Windows.SizeToContent.Height?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType>
   
 4.  <xref:System.Windows.FrameworkElement.Height%2A?displayProperty=nameWithType>  
   
  **Для свойств ширины:**  
   
-1.  <xref:System.Windows.FrameworkElement.MinWidth%2A?displayProperty=nameWithType> >  
+1.  <xref:System.Windows.FrameworkElement.MinWidth%2A?displayProperty=nameWithType>
   
-2.  <xref:System.Windows.FrameworkElement.MaxWidth%2A?displayProperty=nameWithType> >  
+2.  <xref:System.Windows.FrameworkElement.MaxWidth%2A?displayProperty=nameWithType>
   
-3.  <xref:System.Windows.SizeToContent.Width?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType> >  
+3.  <xref:System.Windows.SizeToContent.Width?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType>
   
 4.  <xref:System.Windows.FrameworkElement.Width%2A?displayProperty=nameWithType>  
   
@@ -437,9 +437,9 @@ ms.locfileid: "57373116"
   
 -   <xref:System.Windows.WindowStyle.ToolWindow>  
   
- Эффект этих стилей окон показан на следующем рисунке.  
+ На следующем рисунке показаны последствия этих стилей окон:  
   
- ![Стили окна](./media/windowoverviewfigure6.PNG "WindowOverviewFigure6")  
+ ![Иллюстрация стили границ окна.](./media/wpf-windows-overview/window-border-styles.png)  
   
  Можно задать <xref:System.Windows.Window.WindowStyle%2A> одним [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] разметки или кода; так как это редко изменяется во время существования окна, то скорее задать его с помощью [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] разметки.  
   
@@ -448,9 +448,9 @@ ms.locfileid: "57373116"
 #### <a name="non-rectangular-window-style"></a>Непрямоугольный стиль окна  
  Существуют также ситуации, где стилей границ, предоставляемых <xref:System.Windows.Window.WindowStyle%2A> позволяет вам потребуется недостаточно. Например, вы можете создать приложение с непрямоугольной границей, таких как [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] использует.  
   
- Рассмотрим окно "облачко с текстом", показанное на следующем рисунке.  
+ Например рассмотрим речи пузырьковой окно, показанное на следующем рисунке:  
   
- ![Непрямоугольное окно](./media/nonrectangularwindowfigure.PNG "NonRectangularWindowFigure")  
+ ![Окно пузырьковой речи с текстом перетащите Me.](./media/wpf-windows-overview/non-rectangular-window-figure.png)  
   
  Этот тип окна можно создать, задав <xref:System.Windows.Window.WindowStyle%2A> свойства <xref:System.Windows.WindowStyle.None>и с помощью специальной поддержки, <xref:System.Windows.Window> прозрачности.  
   
@@ -460,9 +460,10 @@ ms.locfileid: "57373116"
   
 <a name="Task_Bar_Presence"></a>   
 ### <a name="task-bar-presence"></a>Наличие панели задач  
- По умолчанию внешний вид окна включает кнопку панели задач, как показано на следующем рисунке.  
-  
- ![Окно с кнопкой панели задач](./media/windowoverviewfigure7.PNG "WindowOverviewFigure7")  
+
+По умолчанию внешний вид окна включает кнопку панели задач, как показано на следующем рисунке:
+
+ ![Снимок экрана: окно с кнопкой панели задач.](./media/wpf-windows-overview/window-taskbar-button.png)  
   
  Некоторые типы окон не имеют кнопки панели задач, таких как окна сообщений и диалоговые окна (см. в разделе [Общие сведения о полях диалогового окна](dialog-boxes-overview.md)). Вы можете управлять, отображаются ли кнопки панели задач для окна, задав <xref:System.Windows.Window.ShowInTaskbar%2A> свойство (`true` по умолчанию).  
   

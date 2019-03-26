@@ -9,12 +9,12 @@ helpviewer_keywords:
 - drawing [Windows Forms], cardinal splines
 - graphics [Windows Forms], cardinal splines
 ms.assetid: a4a41e80-4461-4b47-b6bd-2c5e68881994
-ms.openlocfilehash: 687143273a07acba4b4d60acb1be25eee165b91d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0f5c7a8555130e884b641648d1ffc9865f44dc1e
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710489"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464701"
 ---
 # <a name="how-to-draw-cardinal-splines"></a>Практическое руководство. Рисование фундаментальных сплайнов
 Фундаментальный сплайн представляет кривую, проходящую через заданные точки. Чтобы нарисовать фундаментальный сплайн, создайте <xref:System.Drawing.Graphics> и передать адрес массив точек для <xref:System.Drawing.Graphics.DrawCurve%2A> метод.  
@@ -23,16 +23,16 @@ ms.locfileid: "57710489"
   
 -   Следующий пример выводит колоколообразной фундаментальный сплайн, проходящий через пять определенных точек. На следующем рисунке кривой и пять точек.  
   
-     ![Фундаментальный сплайн](./media/cardinalspline1.png "CardinalSpline1")  
+     ![Схема, показывающая колоколообразной фундаментальный сплайн.](./media/how-to-draw-cardinal-splines/bell-shaped-cardinal-spline.png)  
   
  [!code-csharp[System.Drawing.ConstructingDrawingCurves#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.ConstructingDrawingCurves#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/VB/Class1.vb#21)]  
   
 ### <a name="drawing-a-closed-cardinal-spline"></a>Рисование замкнутую кривую Кардинала  
   
--   Используйте <xref:System.Drawing.Graphics.DrawClosedCurve%2A> метод <xref:System.Drawing.Graphics> классе для рисования замкнутый фундаментальный сплайн. В замкнутой фундаментальной кривой продолжается с помощью последней точки в массиве и подключается с первой точки в массиве. В следующем примере рисуется замкнутый фундаментальный сплайн, проходящий через шесть определенных точек. Ниже показан замкнутый сплайн и шесть точек.  
+-   Используйте <xref:System.Drawing.Graphics.DrawClosedCurve%2A> метод <xref:System.Drawing.Graphics> классе для рисования замкнутый фундаментальный сплайн. В замкнутой фундаментальной кривой продолжается с помощью последней точки в массиве и подключается с первой точки в массиве. В следующем примере рисуется замкнутый фундаментальный сплайн, проходящий через шесть определенных точек. На следующем рисунке показан замкнутый сплайн и шесть точек:  
   
- ![Фундаментальный сплайн](./media/cardinalspline1a.png "CardinalSpline1A")  
+ ![Схема, показывающая замкнутый фундаментальный сплайн.](./media/how-to-draw-cardinal-splines/closed-cardinal-spine.png)  
   
  [!code-csharp[System.Drawing.ConstructingDrawingCurves#22](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/CS/Class1.cs#22)]
  [!code-vb[System.Drawing.ConstructingDrawingCurves#22](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/VB/Class1.vb#22)]  
@@ -41,7 +41,7 @@ ms.locfileid: "57710489"
   
 -   Изменить способ изгиб фундаментального сплайна, передав аргумент натяжение <xref:System.Drawing.Graphics.DrawCurve%2A> метод. В следующем примере рисуется три фундаментальные сплайны, которые проходят через тот же набор точек. Ниже представлены три сплайна вместе со значениями натяжение. Обратите внимание, что если натяжение равно 0, точки соединенных прямых линий.  
   
- ![Фундаментальный сплайн](./media/cardinalspline2.png "CardinalSpline2")  
+ ![Схема, показывающая три фундаментальные сплайны.](./media/how-to-draw-cardinal-splines/three-cardinal-splines.png)  
   
  [!code-csharp[System.Drawing.ConstructingDrawingCurves#23](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/CS/Class1.cs#23)]
  [!code-vb[System.Drawing.ConstructingDrawingCurves#23](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/VB/Class1.vb#23)]  

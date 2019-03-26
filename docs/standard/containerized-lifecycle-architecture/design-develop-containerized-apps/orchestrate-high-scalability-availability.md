@@ -4,12 +4,12 @@ description: Реальное производственное приложен�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: b8c947ffc34b62204b6a370f1133111a3e2d3198
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 834e0b91a596f489c10e4eb11b0de2b5eaeb9f1c
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679051"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466404"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Управление микрослужбами и многоконтейнерными приложениями для обеспечения высокого уровня масштабируемости и доступности
 
@@ -37,7 +37,7 @@ ms.locfileid: "57679051"
 
 ## <a name="software-platforms-for-container-clustering-orchestration-and-scheduling"></a>Программные платформы для кластеризации контейнеров, оркестрации и планирования
 
-| Platform | Комментарии |
+| Платформа | Комментарии |
 |:---:|:---|
 | **Kubernetes** <br/> ![Логотип Kubernetes](./media/kubernetes-logo.png) | [*Kubernetes*](https://kubernetes.io/) — это решение с открытым кодом, которое предоставляет широкий ряд возможностей: от организации инфраструктуры кластера и планирования контейнеров до оркестрации. Оно позволяет автоматизировать развертывание, масштабирование и выполнение операций с контейнерами приложений в кластерах узлов. <br/> <br/> *Kubernetes* предоставляет ориентированную на контейнеры инфраструктуру, которая объединяет контейнеры приложений в логические блоки, чтобы упростить управление и обнаружение. <br/> <br/> Решение *Kubernetes* является зрелым в Linux и менее зрелым в Windows. |
 | **Служба Azure Kubernetes (AKS)** <br/> ![Логотип служба Azure Kubernetes](./media/aks-logo.png) | [Служба Azure Kubernetes (AKS)](https://azure.microsoft.com/services/kubernetes-service/) является управляемой службой оркестрации контейнеров Kubernetes в Azure, которая упрощает управление, развертывание и эксплуатацию кластера Kubernetes. |
@@ -115,13 +115,13 @@ Azure пробелы разработки реализует концепцию 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
 - **Начало работы со службой Azure Kubernetes (AKS)** \
-  [*https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal*](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal)
+  [https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal)
 
 - **Azure Dev Spaces** \
-  [*https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces*](https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces)
+  [https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces](https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces)
 
 - **Kubernetes.** Официальный сайт. \
-  [*https://kubernetes.io/*](https://kubernetes.io/)
+  [https://kubernetes.io/](https://kubernetes.io/)
 
 ## <a name="using-azure-service-fabric"></a>Использование Azure Service Fabric
 

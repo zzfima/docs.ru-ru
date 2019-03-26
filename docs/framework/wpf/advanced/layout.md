@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 4c114d7ed22ac01b69f9ad77a69b4089f574c13f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4c967bf34c66cd2dcc4365a2a3ec214c9bac5623
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369855"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464571"
 ---
 # <a name="layout"></a>Макет
 В этом разделе описывается система макета [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Для создания пользовательских интерфейсов в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] важно понимание того, как и когда происходят вычисления макета.  
@@ -41,7 +41,7 @@ ms.locfileid: "57369855"
   
  На рисунке ниже представлен простой макет.  
   
- ![Обычная сетка без ограничивающего прямоугольника.](./media/boundingbox1.png "boundingbox1")  
+ ![Снимок экрана, показывающий обычная сетка, без обрамляющего прямоугольника.](./media/layout/grid-no-bounding-box-superimpose.png)  
   
  Этот макет можно получить с помощью приведенного ниже кода [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
@@ -49,7 +49,7 @@ ms.locfileid: "57369855"
   
  Один <xref:System.Windows.Controls.TextBlock> элемент размещается внутри <xref:System.Windows.Controls.Grid>. Хотя текст заполняет только верхний левый угол первого столбца, выделенное пространство для <xref:System.Windows.Controls.TextBlock> самом деле гораздо больше. Ограничивающий прямоугольник любого <xref:System.Windows.FrameworkElement> можно получить с помощью <xref:System.Windows.Controls.Primitives.LayoutInformation.GetLayoutSlot%2A> метод. На следующем рисунке показан ограничивающий прямоугольник для <xref:System.Windows.Controls.TextBlock> элемент.  
   
- ![Теперь ограничивающий прямоугольник для TextBlock отображается.](./media/boundingbox2.png "boundingbox2")  
+ ![Снимок экрана, показывающий, что ограничивающий прямоугольник для TextBlock теперь является видимым.](./media/layout/visible-textblock-bounding-box.png)  
   
  Как показано желтым прямоугольником, выделенное пространство для <xref:System.Windows.Controls.TextBlock> элемент деле гораздо больше, чем кажется. При добавлении дополнительных элементов <xref:System.Windows.Controls.Grid>, это выделение может сжиматься или растягиваться в зависимости от типа и размера добавляемых элементов.  
   

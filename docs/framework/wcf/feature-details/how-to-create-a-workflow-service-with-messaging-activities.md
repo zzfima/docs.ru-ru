@@ -1,15 +1,15 @@
 ---
-title: Как выполнить создать службу рабочего процесса с помощью действий обмена сообщениями
+title: Практическое руководство. создать службу рабочего процесса с помощью действий обмена сообщениями
 ms.date: 03/30/2017
 ms.assetid: 53d094e2-6901-4aa1-88b8-024b27ccf78b
-ms.openlocfilehash: a90f525e23fcad0e46ebc378d22b8282e613643a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83e96a91348cd8f703801252109bd474df58a679
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584981"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466209"
 ---
-# <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Как выполнить создать службу рабочего процесса с помощью действий обмена сообщениями
+# <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Практическое руководство. создать службу рабочего процесса с помощью действий обмена сообщениями
 В этом разделе приведены сведения о том, как создать простую службу рабочего процесса с помощью действий обмена сообщениями. В нем рассматривается механизм создания службы рабочего процесса, когда служба состоит только из действий обмена сообщениями. В реальных службах рабочий процесс содержит множество других действий. Служба реализует одну операцию с именем Echo, которая принимает строку и возвращает строку вызывающему коду. Это первый из двух разделов. Следующий раздел [How To: Доступ к службе из рабочего процесса приложения](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) рассматривается процесс создания приложения рабочего процесса, способного обращаться к службе, созданной в этом разделе.  
   
 ### <a name="to-create-a-workflow-service-project"></a>Создание проекта службы рабочего процесса  
@@ -22,7 +22,7 @@ ms.locfileid: "54584981"
   
 3.  После создания проекта в конструкторе открывается файл Service1.xamlx, как показано на следующем рисунке.  
   
-     ![Рабочий процесс по умолчанию, отображается в конструкторе](../../../../docs/framework/wcf/feature-details/media/defaultworkflowservice.JPG "DefaultWorkflowService")  
+     ![Снимок экрана показывает откройте файл Service1.xamlx в конструкторе.](./media/how-to-create-a-workflow-service-with-messaging-activities/default-workflow-service.jpg)  
   
      Щелкните правой кнопкой мыши действие **последовательная служба** и выберите **удалить**.  
   
@@ -30,37 +30,37 @@ ms.locfileid: "54584981"
   
 1.  Выберите **элементов** вкладка в левой части экрана, чтобы открыть панель элементов и щелкните вешку, чтобы окно оставалось открытым. Разверните **Messaging** панели элементов для отображения действий обмена сообщениями и шаблоны действий обмена сообщениями, как показано на следующем рисунке.  
   
-     ![Расширен элементов со вкладкой обмена сообщениями](../../../../docs/framework/wcf/feature-details/media/wfdesignertoolbox.JPG "WFDesignerToolbox")  
+     ![Снимок экрана, показывающий панели элементов с разделе Messaging расширен.](./media/how-to-create-a-workflow-service-with-messaging-activities/toolbox-messaging-section.jpg)  
   
 2.  Перетаскивание **ReceiveAndSendReply** шаблона в конструктор рабочих процессов. При этом создается <xref:System.Activities.Statements.Sequence> действие с **Receive** действия, за которым следует <xref:System.ServiceModel.Activities.SendReply> действия, как показано на следующем рисунке.  
   
-     ![Шаблон ReceiveAndSendReply в конструкторе](../../../../docs/framework/wcf/feature-details/media/receiveandsendreply.JPG "ReceiveAndSendReply")  
+     ![Снимок экрана, показывающий шаблон ReceiveAndSendReply.](./media/how-to-create-a-workflow-service-with-messaging-activities/receiveandsendreply-template.jpg)  
   
      Обратите внимание, что у действия <xref:System.ServiceModel.Activities.SendReply> свойство <xref:System.ServiceModel.Activities.SendReply.Request%2A> имеет значение `Receive`, это имя действия <xref:System.ServiceModel.Activities.Receive>, на которое отвечает действие <xref:System.ServiceModel.Activities.SendReply>.  
   
 3.  В <xref:System.ServiceModel.Activities.Receive> тип действия `Echo` в текстовое поле с меткой **Имя_операции**. Это задает имя операции, которую реализует служба.  
   
-     ![Укажите имя операции](../../../../docs/framework/wcf/feature-details/media/defineoperation.JPG "DefineOperation")  
+     ![Снимок экрана, показывающий, где можно указать имя операции.](./media/how-to-create-a-workflow-service-with-messaging-activities/define-operation-name.jpg)  
   
 4.  С помощью <xref:System.ServiceModel.Activities.Receive> действии, выбранном, откройте окно свойств Если он еще не открыт, щелкнув **представление** меню и выбрав **окно "Свойства"**. В **окно "Свойства"** прокрутите вниз, пока не увидите **CanCreateInstance** и установите флажок, как показано на следующем рисунке. Этот параметр позволяет службе рабочего процесса создавать новый экземпляр службы при получении сообщения (если это необходимо).  
   
-     ![Свойство CanCreateInstance](../../../../docs/framework/wcf/feature-details/media/cancreateinstance.JPG "CanCreateInstance")  
+     ![Снимок экрана, показывающий свойство CanCreateInstance.](./media/how-to-create-a-workflow-service-with-messaging-activities/cancreateinstance-property.jpg)  
   
 5.  Выберите <xref:System.Activities.Statements.Sequence> действие и нажмите кнопку **переменных** кнопку в левом нижнем углу конструктора. Откроется редактор переменных. Нажмите кнопку **Создание переменной** ссылку, чтобы добавить переменную для хранения строки, отправляемой в операции. Имя переменной `msg` и задайте его **переменной** введите строку, как показано на следующем рисунке.  
   
-     ![Добавьте переменную](../../../../docs/framework/wcf/feature-details/media/addvariable.JPG "AddVariable")  
+     ![Снимок экрана, показывающий, как добавление переменной.](./media/how-to-create-a-workflow-service-with-messaging-activities/add-variable-msg-string.jpg)  
   
      Нажмите кнопку **переменных** кнопку, чтобы закрыть редактор переменных.  
   
 6.  Нажмите кнопку **определить...** ссылка в **содержимого** текстовое поле в <xref:System.ServiceModel.Activities.Receive> действие, чтобы отобразить **определение содержимого** диалоговое окно. Выберите **параметры** кнопку-переключатель, нажмите кнопку **добавьте параметр** , введите `inMsg` в **имя** текстовое поле, выберите **строка**в **тип** раскрывающемся поле со списком, а также тип `msg` в **назначено** текстового поля, как показано на следующем рисунке.  
   
-     ![Добавление содержимого параметров](../../../../docs/framework/wcf/feature-details/media/parameterscontent.jpg "ParametersContent")  
+     ![Снимок экрана, показывающий Добавление содержимого параметров.](./media/how-to-create-a-workflow-service-with-messaging-activities/adding-parameters-content.jpg)  
   
      Это указывает, что действие Receive получает строковый параметр, а данные будут привязаны к переменной `msg`. Нажмите кнопку **ОК** закрыть **определение содержимого** диалоговое окно.  
   
 7.  Нажмите кнопку **определить...**  ссылку в **содержимого** поле <xref:System.ServiceModel.Activities.SendReply> действие, чтобы отобразить **определение содержимого** диалоговое окно. Выберите **параметры** кнопку-переключатель, нажмите кнопку **добавьте параметр** , введите `outMsg` в **имя** текстовом поле выберите **строка**в **тип** раскрывающегося списка и `msg` в **значение** текстового поля, как показано на следующем рисунке.  
   
-     ![Добавление содержимого параметров](../../../../docs/framework/wcf/feature-details/media/parameterscontent2.jpg "ParametersContent2")  
+     ![Снимок экрана, показывающий, как добавить параметр outMsg.](./media/how-to-create-a-workflow-service-with-messaging-activities/outmsg-parameters-content.jpg)  
   
      Это указывает, что действие <xref:System.ServiceModel.Activities.SendReply> отправляет сообщение или тип контракта сообщения, а данные привязаны к переменной `msg`. Поскольку это действие <xref:System.ServiceModel.Activities.SendReply>, данные в `msg` используются для заполнения сообщения, которое действие возвращает клиенту. Нажмите кнопку **ОК** закрыть **определение содержимого** диалоговое окно.  
   
@@ -75,17 +75,17 @@ ms.locfileid: "54584981"
   
 2.  Выберите **Web** и выберите **определенную страницу** под **действие при запуске** и тип `Service1.xamlx` в текстовом поле, как показано на следующем рисунке.  
   
-     ![Диалоговое окно свойств проекта](../../../../docs/framework/wcf/feature-details/media/projectpropertiesdlg.JPG "ProjectPropertiesDlg")  
+     ![Снимок экрана: диалоговое окно свойств проекта.](./media/how-to-create-a-workflow-service-with-messaging-activities/project-properties-dialog.jpg)  
   
      Служба, которая определена в Service1.xamlx, будет размещена на сервере разработки ASP.NET.  
   
 3.  Чтобы запустить службу, нажмите сочетание клавиш CTRL+F5. В нижней правой области рабочего стола появится значок сервера разработки ASP.NET, как показано на следующем рисунке.  
   
-     ![Значок сервера разработчика ASP.NET](../../../../docs/framework/wcf/feature-details/media/aspnetdevservericon.JPG "ASPNETDEVServerIcon")  
+     ![Снимок экрана: значок сервера разработчика ASP.NET.](./media/how-to-create-a-workflow-service-with-messaging-activities/asp-net-dev-server-icon.jpg)  
   
      Кроме того, в Internet Explorer для службы откроется справочная страница службы WCF.  
   
-     ![Страница справки WCF](../../../../docs/framework/wcf/feature-details/media/wcfhelppate.JPG "WCFHelpPate")  
+     ![Снимок экрана, показывающий справочная страница службы WCF.](./media/how-to-create-a-workflow-service-with-messaging-activities/wcf-service-help-page.jpg)  
   
 4.  Перейдите к [как: Доступ к службе из рабочего процесса приложения](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) раздела, чтобы создать клиент рабочего процесса, вызывающего эту службу.  
   

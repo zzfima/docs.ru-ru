@@ -2,12 +2,12 @@
 title: Службы WCF и ASP.NET
 ms.date: 03/30/2017
 ms.assetid: b980496a-f0b0-4319-8e55-a0f0fa32da70
-ms.openlocfilehash: 837d03bbbac01be48d03c9170fc0a9a36c970da0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 80f4f9a473f223928981ee3f0c2e9f2464cbafaf
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55282611"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463479"
 ---
 # <a name="wcf-services-and-aspnet"></a>Службы WCF и ASP.NET
 
@@ -17,7 +17,7 @@ ms.locfileid: "55282611"
 
 Службы WCF, размещенные в Internet Information Services (IIS) можно найти с помощью. Страницы ASPX и веб-служб ASMX внутри одного общего домена приложения. ASP.NET предоставляет общие службы инфраструктуры, такие как управление доменом приложения и динамическая компиляция для среды выполнения ASP.NET HTTP и WCF. Конфигурация по умолчанию для WCF — side-by-side с ASP.NET.
 
-![Службы WCF и ASP .NET: совместное использование состояния](./media/hostingwcfwithaspnet.gif "HostingWCFwithASPNET")
+![Снимок экрана, показывающий службы WCF и ASP .NET: совместное использование состояния.](./media/wcf-services-and-aspnet/windows-communication-foundation-services-asp-dotnet-configuration.gif)
 
 Среда выполнения ASP.NET HTTP обрабатывает запросы ASP.NET, но не участвует в обработке запросов, предназначенный для служб WCF, несмотря на то, что эти службы размещены в одном домене приложений, так как ASP.NET содержимого. Вместо этого модели службы WCF перехватывает сообщения, адресованные службам WCF и направляет их через стек каналов или транспортный WCF.
 
@@ -59,7 +59,7 @@ ms.locfileid: "55282611"
 
 В отличие от конфигурации по умолчанию side-by-side где размещающая инфраструктура WCF перехватывает сообщения WCF и направляет их из конвейера HTTP, службы WCF, работающие в режиме совместимости ASP.NET полностью участвовать в жизненном цикле запроса ASP.NET HTTP. В режиме совместимости WCF-сервисы используют конвейер HTTP через <xref:System.Web.IHttpHandler> реализации, аналогичную запросы так, для обработки страниц ASPX и веб-служб ASMX. В результате WCF работает аналогично ASMX в отношении следующих возможностей ASP.NET:
 
-- <xref:System.Web.HttpContext>: Службы WCF, работающие в режиме совместимости ASP.NET можно получить доступ к <xref:System.Web.HttpContext.Current%2A> и связанное состояние.
+- <xref:System.Web.HttpContext>. Службы WCF, работающие в режиме совместимости ASP.NET можно получить доступ к <xref:System.Web.HttpContext.Current%2A> и связанное состояние.
 
 - Авторизация на основе файлов: Службы WCF, работающие в режиме совместимости ASP.NET можно защитить путем присоединения файл системы управления доступом (ACL) к службе SVC-файла.
 

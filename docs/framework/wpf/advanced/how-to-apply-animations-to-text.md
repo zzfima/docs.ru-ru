@@ -5,12 +5,12 @@ helpviewer_keywords:
 - typography [WPF], animations
 - animation [WPF], text
 ms.assetid: eec3d26c-0a21-420f-8012-671621c47089
-ms.openlocfilehash: e62c8288460206e7ebfbc18787bd9c2f2144a5bc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4cc7932b43f8a3c35d750f9a9020e16257867f76
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356966"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463128"
 ---
 # <a name="how-to-apply-animations-to-text"></a>Практическое руководство. Применение анимаций к тексту
 Анимации могут менять отображение и внешний вид текста в приложении. В следующих примерах используются различные виды анимации влияющие на отображение текста в <xref:System.Windows.Controls.TextBlock> элемента управления.  
@@ -26,9 +26,8 @@ ms.locfileid: "57356966"
   
  В примере ниже показан эффект <xref:System.Windows.Controls.TextBlock> управления, прозрачность которого меняется с `1.00` для `0.00` во время 5-секундный интервал, определяемый <xref:System.Windows.Media.Animation.Timeline.Duration%2A>.  
   
- ![Изменение непрозрачности текста с 1,00 до 0,00](./media/fadedtext01.png "FadedText01")  
-Изменение прозрачности текста с 1,00 до 0,00  
-  
+ ![Изменение непрозрачности текста с 1,00 до 0,00.](./media/how-to-apply-animations-to-text/faded-text-opacity-change.png)  
+   
  В следующем примере используется <xref:System.Windows.Media.Animation.ColorAnimation> для анимации основного цвета текстового блока. Значение основного цвета меняется с первого цвета на второй в течение 5 секунд, затем значения цвета меняются местами и анимация продолжается.  
   
  [!code-xaml[TextAnimationSample#TextAnimationSample3](~/samples/snippets/csharp/VS_Snippets_Wpf/TextAnimationSample/CS/Window1.xaml#textanimationsample3)]  
