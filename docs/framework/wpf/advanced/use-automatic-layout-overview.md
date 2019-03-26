@@ -5,12 +5,12 @@ helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-ms.openlocfilehash: af564c4ca865c47c7efdda6ed86732581f677218
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 74c4e10e8f28fb00a5528c1ab860b88d0caa4303
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353599"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58408760"
 ---
 # <a name="use-automatic-layout-overview"></a>Обзор использования автоматической разметки
 В этом разделе представлены рекомендации разработчикам о написании [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] приложений с локализуемым [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]. В прошлом локализации интерфейса пользователя было много времени. Каждый язык, на который переводился пользовательского интерфейса требовал попиксельного выравнивания. Сегодня при правом разработки и кодирования стандартов, [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] могут создаваться таким образом, чтобы локализаторам требовалось выполнять меньше изменений размеров и расположений для выполнения. Подход к написанию приложений, в которых проще изменять размер и положение элементов называется автоматической разметкой и может осуществляться с помощью [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] разработки приложения.  
@@ -39,10 +39,9 @@ ms.locfileid: "57353599"
   
  [!code-xaml[LocalizationBtn#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn/CS/Pane1.xaml#1)]  
   
- На приведенном ниже рисунке показан результат выполнения примеров кода.  
+ На следующем рисунке показан результат выполнения примеров кода:  
   
- ![Та же кнопка с текстом на разных языках](./media/globalizationbutton.png "GlobalizationButton")  
-Кнопка с автоматически изменяемым размером  
+ ![Та же кнопка с текстовой подписью на различных языках](./media/use-automatic-layout-overview/auto-resizable-button.png)  
   
 <a name="autolayout_coding"></a>   
 ## <a name="automatic-layout-and-coding-standards"></a>Автоматическая разметка и стандарты кодирования  

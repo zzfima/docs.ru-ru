@@ -9,12 +9,12 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing
 - lines [Windows Forms], dashed
 ms.assetid: cd0ed96a-cce4-47b9-b58a-3bae2e3d1bee
-ms.openlocfilehash: 830fa45fc88c35b8aa5f047e065ae1efc161f581
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 06555309b8432397e754bc9dfa717c89b052343f
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718952"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410229"
 ---
 # <a name="how-to-draw-a-custom-dashed-line"></a>Практическое руководство. Рисование пользовательских пунктирных линий
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] предоставляет несколько стили штрихов, которые перечислены в <xref:System.Drawing.Drawing2D.DashStyle> перечисления. Если эти стандартные штриха не соответствуют вашим потребностям, можно создать пользовательские штриха.  
@@ -24,7 +24,7 @@ ms.locfileid: "57718952"
   
  Ниже показан итоговый пунктирная линия. Обратите внимание, что это должно быть короче 25 единиц, таким образом, чтобы конец линии в последний штрих (405, 5).  
   
- ![Перья](./media/pens6.gif "pens6")  
+ ![Рисунок, показывающий пунктирной линией. ](./media/how-to-draw-a-custom-dashed-line/dashed-line-illustration.gif "pens6")  
   
  [!code-csharp[System.Drawing.UsingAPen#51](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#51)]
  [!code-vb[System.Drawing.UsingAPen#51](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#51)]  
