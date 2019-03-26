@@ -1,8 +1,0 @@
-# [Массивы](index.md)
-## [Массивы как объекты](arrays-as-objects.md)
-## [Одномерные массивы](single-dimensional-arrays.md)
-## [Многомерные массивы](multidimensional-arrays.md)
-## [Массивы массивов](jagged-arrays.md)
-## [Использование оператора foreach с массивами](using-foreach-with-arrays.md)
-## [Передача массивов в качестве аргументов](passing-arrays-as-arguments.md)
-## [Неявно типизированные массивы](implicitly-typed-arrays.md)
