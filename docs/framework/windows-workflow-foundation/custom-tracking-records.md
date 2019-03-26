@@ -27,8 +27,7 @@ protected override void Execute(CodeActivityContext context)
 }
 ```
 
-
-  <xref:System.Activities.Tracking.CustomTrackingRecord> выдается в действии кода с помощью вызова метода <xref:System.Activities.NativeActivityContext.Track%2A> в `ActivityContext`.
+<xref:System.Activities.Tracking.CustomTrackingRecord> выдается в действии кода с помощью вызова метода <xref:System.Activities.NativeActivityContext.Track%2A> в `ActivityContext`.
 
 ## <a name="see-also"></a>См. также
 
