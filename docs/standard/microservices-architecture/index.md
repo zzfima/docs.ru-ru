@@ -1,15 +1,9 @@
 ---
 title: Микрослужбы .NET. Архитектура контейнерных приложений .NET
-description: 'Микрослужбы .NET: архитектура контейнерных приложений .NET | Микрослужбы — это модульные службы, развертываемые независимо друг от друга. Контейнеры Docker (для Linux и Windows) упрощают развертывание и тестирование путем объединения службы и ее зависимостей в единый модуль, запускаемый в изолированной среде.'
+description: "Микрослужбы\_.NET: архитектура контейнерных приложений\_.NET\_| Микрослужбы\_— это модульные службы, развертываемые независимо друг от друга. Контейнеры Docker (для Linux и Windows) упрощают развертывание и тестирование путем объединения службы и ее зависимостей в единый модуль, запускаемый в изолированной среде."
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 6b75485d34b90b4807e82f629bbb05979add8eea
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479949"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>Микрослужбы .NET: Архитектура контейнерных приложений .NET
 
@@ -58,7 +52,7 @@ Docker становится стандартом де-факто в област
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
 -   **Containerized Docker Application Lifecycle with Microsoft Platform and Tools** (Жизненный цикл контейнерного приложения Docker на основе платформы и средств Майкрософт) (электронная книга, доступная для скачивания)  
-    [*https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
+    [https://aka.ms/dockerlifecycleebook](https://aka.ms/dockerlifecycleebook)
 
 ## <a name="who-should-use-this-guide"></a>Кому необходимо это руководство
 

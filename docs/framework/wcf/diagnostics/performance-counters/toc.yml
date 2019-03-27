@@ -1,0 +1,153 @@
+items:
+- name: Счетчики производительности
+  href: index.md
+  items:
+  - name: Счетчики производительности операций
+    href: operation-performance-counters.md
+    items:
+    - name: Вызовы
+      href: calls.md
+    - name: Количество вызовов в секунду
+      href: calls-per-second.md
+    - name: Незавершенные вызовы
+      href: calls-outstanding.md
+    - name: Сбои вызовов
+      href: calls-failed.md
+    - name: Количество сбоев вызовов в секунду
+      href: calls-failed-per-second.md
+    - name: Сбои вызовов
+      href: calls-faulted.md
+    - name: Количество сбоев вызовов в секунду
+      href: calls-faulted-per-second.md
+    - name: Длительность обработки вызовов
+      href: calls-duration.md
+    - name: Сбои при проверке безопасности и проверке подлинности
+      href: security-validation-and-authentication-failures.md
+    - name: Количество сбоев при проверке безопасности и проверке подлинности в секунду
+      href: security-validation-and-authentication-failures-per-second.md
+    - name: Неавторизованные вызовы системы безопасности
+      href: security-calls-not-authorized.md
+    - name: Количество неавторизованных вызовов системы безопасности в секунду
+      href: security-calls-not-authorized-per-second.md
+    - name: Количество поступивших транзакций
+      href: transactions-flowed.md
+    - name: Количество поступивших транзакций в секунду
+      href: transactions-flowed-per-second.md
+  - name: Счетчики производительности службы
+    href: service-performance-counters.md
+    items:
+    - name: Вызовы
+      href: service-calls.md
+    - name: Количество вызовов в секунду
+      href: service-calls-per-second.md
+    - name: Незавершенные вызовы
+      href: service-calls-outstanding.md
+    - name: Сбои вызовов
+      href: service-calls-failed.md
+    - name: Количество сбоев вызовов в секунду
+      href: service-calls-failed-per-second.md
+    - name: Сбои вызовов
+      href: service-calls-faulted.md
+    - name: Количество сбоев вызовов в секунду
+      href: service-calls-faulted-per-second.md
+    - name: Длительность обработки вызовов
+      href: service-calls-duration.md
+    - name: Экземпляры
+      href: instances.md
+    - name: Количество экземпляров в секунду
+      href: instances-per-second.md
+    - name: Процент максимального количества одновременных вызовов
+      href: percent-of-max-concurrent-calls.md
+    - name: Процент максимального количества одновременных экземпляров
+      href: percent-of-max-concurrent-instances.md
+    - name: Процент максимального количества одновременных сеансов
+      href: percent-of-max-concurrent-sessions.md
+    - name: Удаленные из очереди сообщения
+      href: queue-dropped-messages.md
+    - name: Количество удаленных из очереди сообщений в секунду
+      href: queue-dropped-messages-per-second.md
+    - name: Подозрительные сообщения в очереди
+      href: queued-poison-messages.md
+    - name: Количество подозрительных сообщений из очереди в секунду
+      href: queued-poison-messages-per-second.md
+    - name: Количество отклоненных сообщений из очереди
+      href: queued-rejected-messages.md
+    - name: Количество сообщений из очереди, отклоненных за секунду
+      href: queued-rejected-messages-per-second.md
+    - name: Количество сброшенных сообщений, передаваемых по надежным каналам
+      href: reliable-messaging-messages-dropped.md
+    - name: Количество отброшенных сообщений, передаваемых по надежным каналам, в секунду
+      href: reliable-messaging-messages-dropped-per-second.md
+    - name: Надежные сеансы обмена сообщениями, в которых произошел сбой
+      href: reliable-messaging-sessions-faulted.md
+    - name: Количество надежных сеансов обмена сообщениями, в которых произошел сбой, в секунду
+      href: reliable-messaging-sessions-faulted-per-second.md
+    - name: Неавторизованные вызовы системы безопасности
+      href: service-security-calls-not-authorized.md
+    - name: Количество неавторизованных вызовов системы безопасности в секунду
+      href: service-security-calls-not-authorized-per-second.md
+    - name: Сбои при проверке безопасности и проверке подлинности
+      href: service-security-validation-and-authentication-failures.md
+    - name: Количество сбоев при проверке безопасности и проверке подлинности в секунду
+      href: service-security-validation-and-authentication-failures-per-second.md
+    - name: Количество поступивших транзакций
+      href: service-transactions-flowed.md
+    - name: Количество поступивших транзакций в секунду
+      href: service-transactions-flowed-per-second.md
+    - name: Количество прерванных операций с поддержкой транзакций
+      href: transacted-operations-aborted.md
+    - name: Количество прерванных операций с поддержкой транзакций в секунду
+      href: transacted-operations-aborted-per-second.md
+    - name: Количество зафиксированных операций с поддержкой транзакций
+      href: transacted-operations-committed.md
+    - name: Количество зафиксированных операций с поддержкой транзакций в секунду
+      href: transacted-operations-committed-per-second.md
+    - name: Количество операций с поддержкой транзакций с сомнительным результатом
+      href: transacted-operations-in-doubt.md
+    - name: Количество операций с поддержкой транзакций с сомнительным результатом в секунду
+      href: transacted-operations-in-doubt-per-second.md
+  - name: Счетчики производительности конечных точек
+    href: endpoint-performance-counters.md
+    items:
+    - name: Вызовы
+      href: endpoint-calls.md
+    - name: Количество вызовов в секунду
+      href: endpoint-calls-per-second.md
+    - name: Незавершенные вызовы
+      href: endpoint-calls-outstanding.md
+    - name: Сбои вызовов
+      href: endpoint-calls-failed.md
+    - name: Количество сбоев вызовов в секунду
+      href: endpoint-calls-failed-per-second.md
+    - name: Сбои вызовов
+      href: endpoint-calls-faulted.md
+    - name: Количество сбоев вызовов в секунду
+      href: endpoint-calls-faulted-per-second.md
+    - name: Длительность обработки вызовов
+      href: endpoint-calls-duration.md
+    - name: Количество сброшенных сообщений, передаваемых по надежным каналам
+      href: endpoint-reliable-messaging-messages-dropped.md
+    - name: Количество отброшенных сообщений, передаваемых по надежным каналам, в секунду
+      href: endpoint-reliable-messaging-messages-dropped-per-second.md
+    - name: Надежные сеансы обмена сообщениями, в которых произошел сбой
+      href: endpoint-reliable-messaging-sessions-faulted.md
+    - name: Количество надежных сеансов обмена сообщениями, в которых произошел сбой, в секунду
+      href: endpoint-reliable-messaging-sessions-faulted-per-second.md
+    - name: Неавторизованные вызовы системы безопасности
+      href: endpoint-security-calls-not-authorized.md
+    - name: Количество неавторизованных вызовов системы безопасности в секунду
+      href: endpoint-security-calls-not-authorized-per-second.md
+    - name: Сбои при проверке безопасности и проверке подлинности
+      href: endpoint-security-validation-and-authentication-failures.md
+    - name: Количество сбоев при проверке безопасности и проверке подлинности в секунду
+      href: endpoint-security-validation-and-authentication-failures-per-second.md
+    - name: Количество поступивших транзакций
+      href: endpoint-transactions-flowed.md
+    - name: Количество поступивших транзакций в секунду
+      href: endpoint-transactions-flowed-per-second.md
+ms.openlocfilehash: 1330af4c40fecfb31fd26ddf3dd152bd5b33deb6
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469832"

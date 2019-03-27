@@ -3,16 +3,11 @@ layout: HubPage
 ms.topic: hub-page
 hide_bc: true
 title: Документация по .NET
-description: Сведения об использовании .NET для создания различных приложений на любой платформе с помощью C#, Visual Basic и F#. Ознакомьтесь со справочником по API, образцами кода, учебниками и другими материалами.
+description: 'Сведения об использовании .NET для создания различных приложений на любой платформе с помощью C#, Visual Basic и F#. Ознакомьтесь со справочником по API, образцами кода, учебниками и другими материалами.'
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
-ms.openlocfilehash: 1eb9f263c26dd86873df1320f77c3944e9bfd7d2
-ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53286511"
 ---
+<!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
     <div class="container">
         <ul class="cardsY panelContent featuredContent">

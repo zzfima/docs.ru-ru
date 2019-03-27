@@ -1,0 +1,30 @@
+items:
+- name: Руководство по библиотекам с открытым кодом
+  href: index.md
+  items:
+  - name: Начало работы
+    href: get-started.md
+  - name: Кроссплатформенное нацеливание
+    href: cross-platform-targeting.md
+  - name: Строгое именование
+    href: strong-naming.md
+  - name: NuGet
+    href: nuget.md
+    items:
+    - name: Зависимости
+      href: dependencies.md
+    - name: Source Link
+      href: sourcelink.md
+    - name: Публикация
+      href: publish-nuget-package.md
+  - name: Управление версиями
+    href: versioning.md
+    items:
+    - name: Критические изменения
+      href: breaking-changes.md
+ms.openlocfilehash: eb2748f71480aee063efadd8291c76440347169b
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469741"
