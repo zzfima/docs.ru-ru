@@ -1,6 +1,6 @@
 ---
-title: Создание приложения службы Windows в Visual Studio
-ms.date: 09/10/2018
+title: Учебник. Создание приложения службы Windows
+ms.date: 03/14/2019
 dev_langs:
 - csharp
 - vb
@@ -9,68 +9,80 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: 52c2f64bbb71e07dcab1fd7cd42662f9ed2c8445
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 786b9e28607cced0a15793415ff5fd470b559374
+ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56665034"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58262490"
 ---
-# <a name="walkthrough-create-a-windows-service-app"></a>Пошаговое руководство. Создание приложения службы Windows
+# <a name="tutorial-create-a-windows-service-app"></a>Учебник. Создание приложения службы Windows
 
-Из этой статьи вы узнаете, как создать в Visual Studio простое приложение службы Windows, которое записывает сообщения в журнал событий.
+Из этой статьи вы узнаете, как создать в Visual Studio приложение службы Windows, которое записывает сообщения в журнал событий.
 
 ## <a name="create-a-service"></a>Создание службы
 
 Для начала создайте проект и настройте значения, необходимые для правильной работы службы.
 
-1. В Visual Studio в строке меню последовательно выберите **Файл** > **Создать** > **Проект** (или нажмите сочетание клавиш **CTRL**+**SHIFT**+**N**), чтобы открыть диалоговое окно **Новый проект**.
+1. В Visual Studio в меню **Файл** последовательно выберите пункты **Создать** > **Проект** (или нажмите клавиши **CTRL**+**SHIFT**+**N**), чтобы открыть окно **Новый проект**.
 
-2. Найдите и выберите шаблон проекта **Служба Windows**. Разверните элементы **Установленные** > [**Visual C#** или **Visual Basic**] > **Windows Desktop** или введите строку **Служба Windows** в поле поиска в правом верхнем углу.
+2. Найдите и выберите шаблон проекта **Служба Windows (.NET Framework)**. Чтобы найти его, разверните узел **Установленные**, затем узел **Visual C#** или **Visual Basic** и выберите **Рабочий стол Windows**. Можно также ввести запрос *Служба Windows* в поле поиска в правом верхнем углу и нажать клавишу **ВВОД**.
 
    ![Шаблон приложения Windows в диалоговом окне нового проекта Visual Studio](media/new-project-dialog.png)
 
    > [!NOTE]
-   > Если вы не видите здесь шаблон **Служба Windows**, попробуйте установить рабочую нагрузку **Разработка классических приложений .NET**. В диалоговом окне **Новый проект** щелкните ссылку с текстом **Открыть Visual Studio Installer** в левом нижнем углу. В окне **Visual Studio Installer** выберите рабочую нагрузку **Разработка классических приложений .NET** и щелкните **Изменить**.
+   > Если вы не видите здесь шаблон **Служба Windows**, попробуйте установить рабочую нагрузку **Разработка классических приложений .NET**.
+   >  
+   > В диалоговом окне **Новый проект** выберите ссылку **Открыть установщик Visual Studio**. Выберите рабочую нагрузку **Разработка классических приложений .NET** и нажмите кнопку **Изменить**.
 
-3. Присвойте проекту имя **MyNewService** и щелкните **ОК**.
+3. В поле **Имя** введите *MyNewService*, а затем нажмите кнопку **ОК**.
 
+   Откроется вкладка **Проект** (**Service1.cs [Проект]** или **Service1.vb [Проект]**).
+   
    Этот шаблон проекта содержит класс компонента с именем `Service1`, наследуемый от <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>. В нем собран основной служебный код, в том числе код для запуска службы.
 
 ## <a name="rename-the-service"></a>Переименование службы
 
 Измените имя службы с **Service1** на **MyNewService**.
 
-1. В представлении **Конструктор** для файла Service1.cs (или Service1.vb) щелкните ссылку **перехода к представлению кода**. Щелкните **Service1** правой кнопкой мыши и выберите в контекстном меню действие **Переименовать**. Введите **MyNewService** и нажмите клавишу **ВВОД** или щелкните **Применить**.
+1. В **обозревателе решений** выберите файл **Service1.cs** или **Service1.vb**, а затем выберите в контекстном меню команду **Переименовать**. Переименуйте файл в **MyNewService.cs** или **MyNewService.vb** и нажмите клавишу **ВВОД**.
 
-2. В окне **Свойства** для **Service1.cs [Проект]** или **Service1.vb [Проект]**, измените значение **ServiceName** на **MyNewService**.
+    Появится всплывающее окно, предлагающее переименовать все ссылки на элемент кода *Service1*.
 
-3. В **обозревателе решений** переименуйте **Service1.cs** в **MyNewService.cs** (или **Service1.vb** в **MyNewService.vb**).
+2. Выберите **Да**.
+
+    ![Запрос на переименование](media/windows-service-rename.png "Запрос на переименование службы Windows")
+
+2. На вкладке **Проект** выберите в контекстном меню пункт **Свойства**. В окне **Свойства** измените значение **ServiceName** на *MyNewService*.
+
+    ![Свойства службы](media/windows-service-properties.png "Свойства службы Windows")
+
+3. В меню **Файл** выберите команду **Сохранить все**.
+
 
 ## <a name="add-features-to-the-service"></a>Добавление компонентов в службу
 
-В этом разделе к службе Windows будет добавлен настраиваемый журнал событий. Журналы событий никак не связаны со службами Windows. Компонент <xref:System.Diagnostics.EventLog> используется здесь в качестве примера типа компонента, который можно добавить в службу Windows.
+В этом разделе к службе Windows будет добавлен настраиваемый журнал событий. Компонент <xref:System.Diagnostics.EventLog> — это пример типа компонента, который можно добавить в службу Windows.
 
 ### <a name="add-custom-event-log-functionality"></a>Добавление возможности работы с настраиваемым журналом событий
 
-1. В окне **Обозреватель решений**откройте контекстное меню для элемента **MyNewService.cs** или **MyNewService.vb**и выберите **Конструктор представлений**.
+1. В **обозревателе решений** в контекстном меню для файла **MyNewService.cs** или **MyNewService.vb** выберите пункт **Показать конструктор**.
 
-2. Из раздела **Компоненты** **панели элементов**перетащите в окно конструктора компонент <xref:System.Diagnostics.EventLog> .
+2. На **панели элементов** разверните раздел **Компоненты** и перетащите компонент **EventLog** на вкладку **Service1.cs [Проект]** или **Service1.vb [Проект]**.
 
-3. В окне **Обозреватель решений**откройте контекстное меню для элемента **MyNewService.cs** или **MyNewService.vb**и выберите **Просмотр кода**.
+3. В **обозревателе решений** в контекстном меню для файла **MyNewService.cs** или **MyNewService.vb** выберите пункт **Просмотреть код**.
 
-4. Измените конструктор, чтобы определить настраиваемый журнал событий:
+4. Определите пользовательский журнал событий. Для C# измените существующий конструктор `MyNewService()`. Для Visual Basic добавьте конструктор `New()`.
 
    ```csharp
    public MyNewService()
    {
         InitializeComponent();
 
-        eventLog1 = new System.Diagnostics.EventLog();
-        if (!System.Diagnostics.EventLog.SourceExists("MySource"))
+        eventLog1 = new EventLog();
+        if (!EventLog.SourceExists("MySource"))
         {
-            System.Diagnostics.EventLog.CreateEventSource(
-                "MySource", "MyNewLog");
+            EventLog.CreateEventSource("MySource", "MyNewLog");
         }
         eventLog1.Source = "MySource";
         eventLog1.Log = "MyNewLog";
@@ -79,64 +91,99 @@ ms.locfileid: "56665034"
 
    [!code-vb[VbRadconService#2](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#2)]
 
+5. Добавьте оператор `using` в файл **MyNewService.cs** (если его еще нет) или оператор `Imports` в файл **MyNewService.vb** для пространства имен <xref:System.Diagnostics?displayProperty=nameWithType>.
+
+    ```csharp
+    using System.Diagnostics;
+    ```
+
+    ```vb
+    Imports System.Diagnostics
+    ```
+
+6. В меню **Файл** выберите команду **Сохранить все**.
+
 ### <a name="define-what-occurs-when-the-service-starts"></a>Определение действий при запуске службы
 
-В редакторе кода найдите метод <xref:System.ServiceProcess.ServiceBase.OnStart%2A>, который был автоматически переопределен при создании проекта. Добавьте строку кода, с помощью которой запись сохраняется в журнале событий при запуске службы:
+В редакторе кода для файла **MyNewService.cs** или **MyNewService.vb** найдите метод <xref:System.ServiceProcess.ServiceBase.OnStart%2A>. Пустое определение метода было автоматически добавлено при создании проекта в Visual Studio. Добавьте код, с помощью которой запись сохраняется в журнале событий при запуске службы:
 
 [!code-csharp[VbRadconService#3](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#3)]
 [!code-vb[VbRadconService#3](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#3)]
 
-Приложение службы предполагает длительное время выполнения, поэтому оно обычно опрашивает или отслеживает что-либо в системе. Отслеживание настраивается в методе <xref:System.ServiceProcess.ServiceBase.OnStart%2A> . Тем не менее, метод <xref:System.ServiceProcess.ServiceBase.OnStart%2A> не отвечает за фактическое отслеживание. После начала работы службы метод <xref:System.ServiceProcess.ServiceBase.OnStart%2A> должен возвращать управление операционной системе. Он не должен уходить в бесконечный цикл или блокироваться. Для настройки простого механизма опроса можно воспользоваться компонентом <xref:System.Timers.Timer?displayProperty=nameWithType>, как показано ниже: В методе <xref:System.ServiceProcess.ServiceBase.OnStart%2A> можно задать параметры компонента и установить значение <xref:System.Timers.Timer.Enabled%2A> для свойства `true`. Таймер периодическую генерирует события в вашем коде, при возникновении которых служба сможет выполнять отслеживание. Для этого можно использовать следующий код:
+#### <a name="polling"></a>Опрос
 
-```csharp
-// Set up a timer that triggers every minute.
-System.Timers.Timer timer = new System.Timers.Timer();
-timer.Interval = 60000; // 60 seconds
-timer.Elapsed += new System.Timers.ElapsedEventHandler(this.OnTimer);
-timer.Start();
-```
+Так как приложение службы предполагает длительное время выполнения, оно обычно опрашивает или отслеживает систему. Отслеживание настраивается в методе <xref:System.ServiceProcess.ServiceBase.OnStart%2A>. После начала работы службы метод `OnStart` должен возвращать управление операционной системе, чтобы она не блокировалась. 
 
-```vb
-' Set up a timer that triggers every minute.
-Dim timer As System.Timers.Timer = New System.Timers.Timer()
-timer.Interval = 60000 ' 60 seconds
-AddHandler timer.Elapsed, AddressOf Me.OnTimer
-timer.Start()
-```
+Для создания простого механизма опроса используйте компонент <xref:System.Timers.Timer?displayProperty=nameWithType>. Таймер через определенные интервалы времени генерирует событие <xref:System.Timers.Timer.Elapsed>, при возникновении которых служба может выполнять отслеживание. Компонент <xref:System.Timers.Timer> используется следующим образом:
 
-Добавьте в класс переменную-член. Она содержит идентификатор следующего события, которое сохраняется в журнале событий.
+- Задайте свойства компонента <xref:System.Timers.Timer> в методе `MyNewService.OnStart`.
+- Запустите таймер, вызвав метод <xref:System.Timers.Timer.Start%2A>.
 
-```csharp
-private int eventId = 1;
-```
+##### <a name="set-up-the-polling-mechanism"></a>Настройка механизма опроса.
 
-```vb
-Private eventId As Integer = 1
-```
+1. Чтобы настроить механизм опроса, добавьте следующий код в событие `MyNewService.OnStart`:
 
-Добавьте новый метод для обработки этого события таймера:
+   ```csharp
+   // Set up a timer that triggers every minute.
+   Timer timer = new Timer();
+   timer.Interval = 60000; // 60 seconds
+   timer.Elapsed += new ElapsedEventHandler(this.OnTimer);
+   timer.Start();
+   ```
 
-```csharp
-public void OnTimer(object sender, System.Timers.ElapsedEventArgs args)
-{
-    // TODO: Insert monitoring activities here.
-    eventLog1.WriteEntry("Monitoring the System", EventLogEntryType.Information, eventId++);
-}
-```
+   ```vb
+   ' Set up a timer that triggers every minute.
+   Dim timer As Timer = New Timer()
+   timer.Interval = 60000 ' 60 seconds
+   AddHandler timer.Elapsed, AddressOf Me.OnTimer
+   timer.Start()
+   ```
 
-```vb
-Private Sub OnTimer(sender As Object, e As Timers.ElapsedEventArgs)
-    ' TODO: Insert monitoring activities here.
-    eventLog1.WriteEntry("Monitoring the System", EventLogEntryType.Information, eventId)
-    eventId = eventId + 1
-End Sub
-```
+2. Добавьте оператор `using` в файл **MyNewService.cs** или оператор `Imports` в файл **MyNewService.vb** для пространства имен <xref:System.Timers?displayProperty=nameWithType>.
+
+
+   ```csharp
+   using System.Timers;
+   ```
+
+   ```vb
+   Imports System.Timers
+   ```
+
+
+3. В классе `MyNewService` добавьте метод `OnTimer` для обработки события <xref:System.Timers.Timer.Elapsed?displayProperty=nameWithType>.
+
+   ```csharp
+   public void OnTimer(object sender, ElapsedEventArgs args)
+   {
+       // TODO: Insert monitoring activities here.
+       eventLog1.WriteEntry("Monitoring the System", EventLogEntryType.Information, eventId++);
+   }
+   ```
+
+   ```vb
+   Private Sub OnTimer(sender As Object, e As Timers.ElapsedEventArgs)
+      ' TODO: Insert monitoring activities here.
+      eventLog1.WriteEntry("Monitoring the System", EventLogEntryType.Information, eventId)
+      eventId = eventId + 1
+   End Sub
+   ```
+
+4. В класс `MyNewService` добавьте переменную-член. Она содержит идентификатор следующего события, которое сохраняется в журнале событий.
+
+   ```csharp
+   private int eventId = 1;
+   ```
+
+   ```vb
+   Private eventId As Integer = 1
+   ```
 
 Задачи можно выполнять с помощью фоновых рабочих потоков, а не выполнять всю работу в основном потоке. Для получения дополнительной информации см. <xref:System.ComponentModel.BackgroundWorker?displayProperty=fullName>.
 
 ### <a name="define-what-occurs-when-the-service-is-stopped"></a>Определение действий при остановке службы
 
-Добавьте в метод <xref:System.ServiceProcess.ServiceBase.OnStop%2A> строку кода, с помощью которой запись сохраняется в журнале событий при остановке службы:
+Вставьте в метод <xref:System.ServiceProcess.ServiceBase.OnStop%2A> строку кода, с помощью которой запись сохраняется в журнале событий при остановке службы:
 
 ```csharp
 eventLog1.WriteEntry("In OnStop.");
@@ -146,20 +193,24 @@ eventLog1.WriteEntry("In OnStop.");
 
 ### <a name="define-other-actions-for-the-service"></a>Определение других действий для службы
 
-Вы можете переопределить методы <xref:System.ServiceProcess.ServiceBase.OnPause%2A>, <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> и <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A>, добавив дополнительные процессы обработки. Следующий код показывает, как можно переопределить метод <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> :
+Вы можете переопределить методы <xref:System.ServiceProcess.ServiceBase.OnPause%2A>, <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> и <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A>, добавив дополнительные процессы обработки. 
+
+Следующий код показывает, как можно переопределить метод <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> в классе `MyNewService`:
 
 [!code-csharp[VbRadconService#5](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#5)]
 [!code-vb[VbRadconService#5](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#5)]
 
-Когда служба Windows устанавливается классом <xref:System.Configuration.Install.Installer> , должны выполняться некоторые специализированные действия. С помощью Visual Studio для службы Windows можно специально создавать подобные установщики и добавлять их в проект.
 
 ## <a name="set-service-status"></a>Установка состояния службы
 
-Службы сообщают о своем состоянии диспетчеру управления службами, чтобы пользователи могли определить, работает ли служба корректно. По умолчанию, службы, которые наследуют из <xref:System.ServiceProcess.ServiceBase> , сообщают ограниченный набор параметров состояния, включая "Остановлена", Приостановлена" и "Выполняется". Если служба сразу не запускается, то может быть полезно обеспечить индикацию состояния "Ожидание запуска". Параметры состояния ожидания запуска и ожидания остановки также можно реализовать путем добавления кода, вызывающего функцию Windows [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus).
+Службы сообщают о своем состоянии [диспетчеру служб](/windows/desktop/Services/service-control-manager), чтобы пользователь мог определить, работает ли служба правильно. По умолчанию служба, которая наследуется от <xref:System.ServiceProcess.ServiceBase>, сообщает ограниченный набор состояний, включая SERVICE_STOPPED, SERVICE_PAUSED и SERVICE_RUNNING. Если служба запускается не сразу, полезно обеспечить сообщение состояния SERVICE_START_PENDING. 
 
-Чтобы реализовать состояние ожидания службы, сделайте следующее:
+Состояния ERVICE_START_PENDING и SERVICE_STOP_PENDING можно реализовать путем добавления кода, вызывающего функцию Windows [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus).
 
-1. Добавьте оператор `using` или объявление `Imports` в пространство имен <xref:System.Runtime.InteropServices?displayProperty=nameWithType> в файле MyNewService.cs или MyNewService.vb.
+
+### <a name="implement-service-pending-status"></a>Реализация состояния ожидания службы
+
+1. Добавьте оператор `using` в файл **MyNewService.cs** или оператор `Imports` в файл **MyNewService.vb** для пространства имен <xref:System.Runtime.InteropServices?displayProperty=nameWithType>.
 
     ```csharp
     using System.Runtime.InteropServices;
@@ -169,7 +220,7 @@ eventLog1.WriteEntry("In OnStop.");
     Imports System.Runtime.InteropServices
     ```
 
-2. Добавьте следующий код в файл MyNewService.cs для объявления значений `ServiceState` и добавления структуры для состояния, которая будет использоваться при вызове неуправляемого кода:
+2. Добавьте следующий код в файл **MyNewService.cs** или **MyNewService.vb** для объявления значений `ServiceState` и добавления структуры для состояния, которая будет использоваться при вызове неуправляемого кода:
 
     ```csharp
     public enum ServiceState
@@ -219,7 +270,7 @@ eventLog1.WriteEntry("In OnStop.");
     End Structure
     ```
 
-3. Теперь в классе `MyNewService` объявите [функцию SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) с помощью вызова [неуправляемого кода](../interop/consuming-unmanaged-dll-functions.md):
+3. В классе `MyNewService` объявите функцию [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) с помощью [вызова неуправляемого кода](../interop/consuming-unmanaged-dll-functions.md):
 
     ```csharp
     [DllImport("advapi32.dll", SetLastError = true)]
@@ -230,7 +281,7 @@ eventLog1.WriteEntry("In OnStop.");
     Declare Auto Function SetServiceStatus Lib "advapi32.dll" (ByVal handle As IntPtr, ByRef serviceStatus As ServiceStatus) As Boolean
     ```
 
-4. Для реализации состояния ожидания запуска добавьте следующий код в начало метода <xref:System.ServiceProcess.ServiceBase.OnStart%2A> :
+4. Для реализации состояния SERVICE_START_PENDING добавьте следующий код в начало метода <xref:System.ServiceProcess.ServiceBase.OnStart%2A>:
 
     ```csharp
     // Update the service state to Start Pending.
@@ -248,7 +299,7 @@ eventLog1.WriteEntry("In OnStop.");
     SetServiceStatus(Me.ServiceHandle, serviceStatus)
     ```
 
-5. Для присвоения состоянию значения "Запуск" добавьте код в конце метода <xref:System.ServiceProcess.ServiceBase.OnStart%2A> .
+5. Для установки состояния SERVICE_RUNNING добавьте код в конце метода `OnStart`:
 
     ```csharp
     // Update the service state to Running.
@@ -262,52 +313,88 @@ eventLog1.WriteEntry("In OnStop.");
     SetServiceStatus(Me.ServiceHandle, serviceStatus)
     ```
 
-6. (Необязательно) Повторите данную процедуру для метода <xref:System.ServiceProcess.ServiceBase.OnStop%2A> .
+6. Если метод <xref:System.ServiceProcess.ServiceBase.OnStop%2A> выполняется долго, повторите данную процедуру для `OnStop` (необязательно). Реализуйте состояние SERVICE_STOP_PENDING и обеспечьте возврат состояния SERVICE_STOPPED до того, как метод `OnStop` вернет управление.
+
+   Например:
+
+    ```csharp
+    // Update the service state to Stop Pending.
+    ServiceStatus serviceStatus = new ServiceStatus();
+    serviceStatus.dwCurrentState = ServiceState.SERVICE_STOP_PENDING;
+    serviceStatus.dwWaitHint = 100000;
+    SetServiceStatus(this.ServiceHandle, ref serviceStatus);
+
+    // Update the service state to Stopped.
+    serviceStatus.dwCurrentState = ServiceState.SERVICE_STOPPED;
+    SetServiceStatus(this.ServiceHandle, ref serviceStatus);
+    ```
+
+    ```vb
+    ' Update the service state to Stop Pending.
+    Dim serviceStatus As ServiceStatus = New ServiceStatus()
+    serviceStatus.dwCurrentState = ServiceState.SERVICE_STOP_PENDING
+    serviceStatus.dwWaitHint = 100000
+    SetServiceStatus(Me.ServiceHandle, serviceStatus)
+
+    ' Update the service state to Stopped.
+    serviceStatus.dwCurrentState = ServiceState.SERVICE_STOPPED
+    SetServiceStatus(Me.ServiceHandle, serviceStatus)    
+    ```
 
 > [!NOTE]
-> [Диспетчер служб](/windows/desktop/Services/service-control-manager) использует члены `dwWaitHint` и `dwCheckpoint` [структуры SERVICE_STATUS](/windows/desktop/api/winsvc/ns-winsvc-_service_status), чтобы определить время, в течение которого нужно ожидать запуск или завершение работы службы Windows. Если ваши методы <xref:System.ServiceProcess.ServiceBase.OnStart%2A> и <xref:System.ServiceProcess.ServiceBase.OnStop%2A> выполняются долго, ваша служба может запросить больше времени, повторно вызвав функцию [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) с увеличенным значением `dwCheckPoint`.
+> Диспетчер служб использует члены `dwWaitHint` и `dwCheckpoint` [структуры SERVICE_STATUS](/windows/desktop/api/winsvc/ns-winsvc-_service_status), чтобы определить время, в течение которого нужно ожидать запуска или завершения работы службы Windows. Если методы `OnStart` и `OnStop` выполняются долго, служба может запросить больше времени, повторно вызвав функцию `SetServiceStatus` с увеличенным значением `dwCheckPoint`.
 
 ## <a name="add-installers-to-the-service"></a>Добавление установщиков в службу
 
-Чтобы получить возможность запустить службу Windows, выполните установку, при которой служба будет зарегистрирована в диспетчере служб. В проект можно добавить установщики, которые обрабатывают  сведения о регистрации.
+Перед тем как запускать службу Windows, ее нужно установить. При этом она регистрируется в диспетчере служб. В проект можно добавить установщики, которые обрабатывают сведения о регистрации.
 
-1. В окне **Обозреватель решений**откройте контекстное меню для элемента **MyNewService.cs** или **MyNewService.vb**и выберите **Конструктор представлений**.
+1. В **обозревателе решений** в контекстном меню для файла **MyNewService.cs** или **MyNewService.vb** выберите пункт **Показать конструктор**.
 
-2. Щелкните фон конструктора, чтобы выбрать саму службу, а не какой-либо из ее элементов.
+2. В представлении **Конструктор** щелкните область фона правой кнопкой мыши и выберите в контекстном меню команду **Добавить установщик**.
 
-3. Откройте контекстное меню в окне конструктора (в случае применения указательного устройства щелкните правой кнопкой мыши внутри окна) и нажмите **Добавить установщик**.
+     По умолчанию Visual Studio добавляет в проект класс компонента `ProjectInstaller`, содержащий два установщика. Они предназначены для установки службы и связанного со службой процесса.
 
-   По умолчанию в проект добавляется класс компонента, содержащий два установщика. Компоненту присваивается имя **ProjectInstaller**, а содержащиеся в нем установщики предназначаются для установки службы и связанного со службой процесса.
+4. В представлении **Конструктор** для **ProjectInstaller** выберите **serviceInstaller1** для проекта Visual C# или **ServiceInstaller1** для проекта Visual Basic. Затем в контекстном меню выберите пункт **Свойства**.
 
-4. В представлении **Конструктор** для **ProjectInstaller**выберите **serviceInstaller1** для проекта Visual C# или **ServiceInstaller1** для проекта Visual Basic.
+5. Убедитесь в том, что в окне **Свойства** свойство <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> имеет значение **MyNewService**.
 
-5. Убедитесь, что в окне **Свойства** свойство <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> имеет значение **MyNewService**.
+6. Введите для свойства <xref:System.ServiceProcess.ServiceInstaller.Description%2A> какой нибудь текст, например *Пример службы*. 
 
-6. Введите для свойства **Описание** какой нибудь текст, например, "Пример службы". Этот текст отображается в окне «Службы» и помогает пользователю идентифицировать службу, а также и понять, для чего она используется.
+     Этот текст отображается в столбце **Описание** в окне **Службы** и помогает пользователю понять, для чего служба нужна.
 
-7. Введите для свойства <xref:System.ServiceProcess.ServiceInstaller.DisplayName%2A> текст, который будет отображаться в окне «Службы» в столбце **Имя** . Например, можно ввести «Отображаемое имя MyNewService». Это имя может отличаться от значения свойства <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> , которое представляет собой имя, используемое в системе (например, если для запуска своей службы вы используете команду `net start` ).
+    ![Описание службы в окне "Службы".](media/windows-service-description.png "Описание службы")
 
-8. Задайте для свойства <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> значение <xref:System.ServiceProcess.ServiceStartMode.Automatic>.
+7. Введите текст для свойства <xref:System.ServiceProcess.ServiceInstaller.DisplayName%2A>, например *Отображаемое имя MyNewService*. 
 
-     ![Свойства установщика для службы Windows](../../../docs/framework/windows-services/media/windowsservice-installerproperties.PNG "WindowsService_InstallerProperties")
+     Этот текст отображается в столбце **Отображаемое имя** в окне **Службы**. Это имя может отличаться от значения свойства <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A>, которое представляет собой имя, используемое в системе (например, когда вы запускаете службу с помощью команды `net start`).
 
-9. В конструкторе щелкните **serviceProcessInstaller1** для проекта Visual C# или **ServiceProcessInstaller1** для проекта Visual Basic. Задайте для свойства <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> значение <xref:System.ServiceProcess.ServiceAccount.LocalSystem>. Это позволит установить и запускать службу от имени локальной системной учетной записи.
+8. Выберите для свойства <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> значение <xref:System.ServiceProcess.ServiceStartMode.Automatic> в раскрывающемся списке.
+
+9. В итоге окно **Свойства** должно выглядеть так:
+
+     ![Свойства установщика для службы Windows](media/windows-service-installer-properties.png "Свойства установщика службы Windows")
+
+9. В представлении **Конструктор** для **ProjectInstaller** выберите **serviceProcessInstaller1** для проекта Visual C# или **ServiceProcessInstaller1** для проекта Visual Basic. Затем в контекстном меню выберите пункт **Свойства**. Выберите для свойства <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> значение <xref:System.ServiceProcess.ServiceAccount.LocalSystem> в раскрывающемся списке. 
+
+     Это позволит установить и запускать службу от имени локальной системной учетной записи.
 
     > [!IMPORTANT]
     > У учетной записи <xref:System.ServiceProcess.ServiceAccount.LocalSystem> имеется множество разрешений, включая разрешение на запись в журнал событий. Эту учетную запись следует использовать с осторожностью, поскольку это может увеличить риск атак с помощью вредоносных программ. Для других задач следует рассмотреть возможность использования учетной записи <xref:System.ServiceProcess.ServiceAccount.LocalService> , которая аналогична учетной записи непривилегированного пользователя локального компьютера. Удаленным серверам при этом передаются учетные данные анонимного пользователя. В этом примере произойдет ошибка, если вы попытаетесь использовать учетную запись <xref:System.ServiceProcess.ServiceAccount.LocalService> , так как для нее требуется разрешение на запись в журнал событий.
 
-Дополнительные сведения об установщиках см. в руководстве по [ добавлению установщиков в приложение-службу](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).
+Дополнительные сведения об установщиках см. в руководстве по [ добавлению установщиков в приложение-службу](how-to-add-installers-to-your-service-application.md).
 
 ## <a name="optional-set-startup-parameters"></a>Установка параметров запуска (необязательно)
 
-Служба Windows, как и любой другой исполняемый файл, может принимать аргументы командной строки или параметры запуска. При добавлении кода в параметры запуска процесса пользователи могут запускать свою службу со своими собственными специальными параметрами с помощью окна "Службы" на панели управления Windows. Тем не менее, эти параметры запуска не сохраняются при следующем запуске службы. Чтобы окончательно задать параметры запуска, их можно указать в реестре, как показано в данной процедуре.
-
 > [!NOTE]
-> Прежде чем добавить параметры запуска, убедитесь, что это наилучший способ передачи информации в службу. Хотя параметры запуска просты при использовании и синтаксическом анализе, и пользователи могут легко их переопределять, для пользователей их поиск и применение может оказаться затрудненным (без документации). Как правило, если для вашей службы требуется всего несколько параметров запуска, то целесообразно использовать реестр или файл конфигурации. Для каждой службы Windows создается запись в разделе реестра **HKLM\System\CurrentControlSet\services**. Для хранения информации, к которой может обращаться ваша служба, в разделе ключа службы можно использовать подраздел **Параметры** . Файлы конфигурации приложения для службы Windows можно использовать так же, как и для программ других типов. Пример кода см. в разделе <xref:System.Configuration.ConfigurationManager.AppSettings%2A>.
+> Прежде чем добавлять параметры запуска, решите, является ли это наилучшим способом передачи информации в службу. Хотя параметры запуска просты для использования и синтаксического анализа и пользователи могут легко их переопределять, для пользователей их поиск и применение могут оказаться затрудненными (без документации). Как правило, если вашей службе требуется всего несколько параметров запуска, то следует использовать реестр или файл конфигурации. 
 
-Чтобы добавить параметры запуска, сделайте следующее:
+Служба Windows может принимать аргументы командной строки или параметры запуска. При добавлении кода в параметры запуска процесса пользователь может запускать службу со своими собственными специальными параметрами из окна свойств службы. Однако эти параметры запуска не сохраняются при следующем запуске службы. Задать постоянные параметры запуска можно в реестре.
 
-1. Добавьте в метод `Main` файла Program.cs или MyNewService.Designer.vb входной параметр, который будет передавать конструктор службы.
+Для каждой службы Windows создается запись в разделе реестра **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services**. Для хранения информации, к которой может обращаться ваша служба, в разделе службы можно использовать подраздел **Parameters**. Файлы конфигурации приложения для службы Windows можно использовать так же, как и для программ других типов. Пример кода см. в разделе <xref:System.Configuration.ConfigurationManager.AppSettings?displayProperty=nameWithType>.
+
+### <a name="to-add-startup-parameters"></a>Добавление параметров запуска
+
+1. Выберите файл **Program.cs** или **MyNewService.Designer.vb**, а затем в контекстном меню выберите пункт **Просмотреть код**. Измените код метода `Main`, добавив входной параметр, который будет передаваться в конструктор службы:
 
    ```csharp
    static void Main(string[] args)
@@ -323,44 +410,48 @@ eventLog1.WriteEntry("In OnStop.");
 
    ```vb
    Shared Sub Main(ByVal cmdArgs() As String)
-       Dim ServicesToRun() As System.ServiceProcess.ServiceBase = New System.ServiceProcess.ServiceBase() {New MyNewServiceVB(cmdArgs)}
+       Dim ServicesToRun() As System.ServiceProcess.ServiceBase = New System.ServiceProcess.ServiceBase() {New MyNewService(cmdArgs)}
        System.ServiceProcess.ServiceBase.Run(ServicesToRun)
    End Sub
    ```
 
-2. Измените конструктор `MyNewService` следующим образом:
+2. В файле **MyNewService.cs** или **MyNewService.vb** измените конструктор `MyNewService` для обработки входного параметра следующим образом:
 
    ```csharp
+   using System.Diagnostics;
+
    public MyNewService(string[] args)
    {
        InitializeComponent();
 
-        string eventSourceName = "MySource";
-        string logName = "MyNewLog";
+       string eventSourceName = "MySource";
+       string logName = "MyNewLog";
 
-        if (args.Length > 0)
-        {
-            eventSourceName = args[0];
-        }
+       if (args.Length > 0)
+       {
+          eventSourceName = args[0];
+       }
 
-        if (args.Length > 1)
-        {
-            logName = args[1];
-        }
+       if (args.Length > 1)
+       {
+           logName = args[1];
+       }
 
-        eventLog1 = new System.Diagnostics.EventLog();
+       eventLog1 = new EventLog();
 
-        if (!System.Diagnostics.EventLog.SourceExists(eventSourceName))
-        {
-            System.Diagnostics.EventLog.CreateEventSource(eventSourceName, logName);
-        }
+       if (!EventLog.SourceExists(eventSourceName))
+       {
+           EventLog.CreateEventSource(eventSourceName, logName);
+       }
 
-        eventLog1.Source = eventSourceName;
-        eventLog1.Log = logName;
+       eventLog1.Source = eventSourceName;
+       eventLog1.Log = logName;
    }
    ```
 
    ```vb
+   Imports System.Diagnostics
+
    Public Sub New(ByVal cmdArgs() As String)
        InitializeComponent()
        Dim eventSourceName As String = "MySource"
@@ -371,18 +462,18 @@ eventLog1.WriteEntry("In OnStop.");
        If (cmdArgs.Count() > 1) Then
            logName = cmdArgs(1)
        End If
-       eventLog1 = New System.Diagnostics.EventLog()
-       If (Not System.Diagnostics.EventLog.SourceExists(eventSourceName)) Then
-           System.Diagnostics.EventLog.CreateEventSource(eventSourceName, logName)
+       eventLog1 = New EventLog()
+       If (Not EventLog.SourceExists(eventSourceName)) Then
+           EventLog.CreateEventSource(eventSourceName, logName)
        End If
        eventLog1.Source = eventSourceName
        eventLog1.Log = logName
    End Sub
    ```
 
-   Этот код задает имя источника события и журнала в соответствии с заданными параметрами запуска или использует значения по умолчанию, если никакие аргументы не заданы.
+   Этот код задает имя источника события и журнала в соответствии с указанными пользователем параметрами запуска. Если аргументы не заданы, используются значения по умолчанию.
 
-3. Чтобы задать аргументы командной строки, добавьте следующий код в класс `ProjectInstaller` в файле ProjectInstaller.cs или ProjectInstaller.vb:
+3. Чтобы задать аргументы командной строки, добавьте следующий код в класс `ProjectInstaller` в файле **ProjectInstaller.cs** или **ProjectInstaller.vb**:
 
    ```csharp
    protected override void OnBeforeInstall(IDictionary savedState)
@@ -401,70 +492,78 @@ eventLog1.WriteEntry("In OnStop.");
    End Sub
    ```
 
-   С помощью этого кода изменяется раздел реестра **ImagePath**, который обычно содержит полный путь к исполняемому файлу для службы Windows, путем добавления значений параметров по умолчанию. Для корректного запуска службы путь (а также каждый параметр) должен быть заключен в кавычки. Чтобы изменить параметры запуска службы Windows, пользователи могут изменять параметры в разделе реестра **ImagePath**. Но лучше изменять их программными средствами и создать для пользователей удобный интерфейс для этой возможности (например, в программе управления или настройки).
+   Как правило, это значение представляет собой полный путь к исполняемому файлу службы Windows. Для правильного запуска службы пользователь должен заключить путь и каждый параметр в кавычки. Чтобы изменить параметры запуска службы Windows, пользователь может настроить параметры в разделе реестра **ImagePath**. Однако лучше изменять их программными средствами и создать для пользователей удобный интерфейс для этой возможности, например в виде программы управления или настройки.
+
 
 ## <a name="build-the-service"></a>Сборка службы
 
-1. В **Обозревателе решений**откройте контекстное меню для своего проекта и выберите **Свойства**.
+1. В **обозревателе решений** выберите пункт **Свойства** в контекстном меню проекта **MyNewService**.
 
    Отобразятся страницы свойств для проекта.
 
-2. На вкладке **Приложение** в списке **Автоматически запускаемый объект** выберите **MyNewService.Program**.
+2. На вкладке **Приложение** в списке **Автоматически запускаемый объект** выберите **MyNewService.Program** (или **Sub Main** для проекта Visual Basic).
 
-3. В **обозревателе решений** откройте контекстное меню проекта и щелкните **Сборка**, чтобы выполнить компиляцию проекта (или нажмите сочетание клавиш **CTRL**+**SHIFT**+**B**).
+3. Чтобы выполнить сборку проекта, в **обозревателе решений** выберите в контекстном меню проекта пункт **Сборка** (или нажмите клавиши **CTRL**+**SHIFT**+**B**).
 
 ## <a name="install-the-service"></a>Установка службы
 
 После создания службы Windows ее можно установить. Чтобы установить службу Windows, необходимо иметь разрешения администратора на том компьютере, где выполняется установка.
 
-1. Откройте **Командную строку разработчика Visual Studio** с учетными данными администратора. Если вы используете мышь, щелкните правой кнопкой элемент **Developer Command Prompt for VS 2017** (Командная строка разработчика для VS 2017) в меню "Пуск" Windows и последовательно выберите **Дополнительно** > **Запуск от имени администратора**.
+1. Откройте [Командную строку разработчика Visual Studio](https://docs.microsoft.com/dotnet/framework/tools/developer-command-prompt-for-vs) с учетными данными администратора. В меню **Пуск** Windows выберите в папке Visual Studio элемент **Командная строка разработчика для VS 2017**, а затем в контекстном меню последовательно выберите **Дополнительно** > **Запуск от имени администратора**.
 
-2. В окне **Командной строки разработчика** перейдите к папке, которая содержит выходные данные проекта (по умолчанию это подкаталог *\bin\Debug* в проекте).
+2. В окне **Командная строка разработчика для Visual Studio** перейдите к папке, которая содержит выходные данные проекта (по умолчанию это подкаталог *\bin\Debug* проекта).
 
 3. Введите следующую команду:
 
     ```shell
-    installutil.exe MyNewService.exe
+    installutil MyNewService.exe
     ```
 
-    Если служба установлена успешно, **installutil.exe** сообщит об успешном выполнении. Если система не может найти файл **InstallUtil.exe**, убедитесь, что он есть на вашем компьютере. Этот инструмент устанавливается вместе с платформой .NET Framework в папку *%windir%\Microsoft.NET\Framework[64]\\[версия платформы]*. Например, для 32-разрядной версии по умолчанию используется путь *%windir%\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe*.
+    Если служба установлена успешно, команда сообщит об успешном выполнении. 
 
-    Если процесс **installutil.exe** сообщает о сбое, найдите причину в журнале установки. По умолчанию журнал находится в той же папке, что и исполняемый файл службы. Установка может завершиться сбоем, если класс <xref:System.ComponentModel.RunInstallerAttribute> отсутствует в классе `ProjectInstaller`, значение атрибута отличается от **true** или класс `ProjectInstaller` не имеет атрибута **public**.
+    Если система не может найти файл *installutil.exe*, убедитесь в том, что он есть на вашем компьютере. Это средство устанавливается вместе с платформой .NET Framework в папке *%windir%\Microsoft.NET\Framework[64]\\&lt;версия платформы&gt;*. Например, для 64-разрядной версии по умолчанию используется путь *%windir%\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe*.
 
-Дополнительные сведения см. в разделе [Как Установка и удаление служб](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).
+    Если процесс **installutil.exe** завершается сбоем, найдите причину в журнале установки. По умолчанию журнал находится в той же папке, что и исполняемый файл службы. Установка может завершиться сбоем по указанным ниже причинам. 
+    - Класс <xref:System.ComponentModel.RunInstallerAttribute> отсутствует в классе `ProjectInstaller`.
+    -  Значение атрибута отличается от `true`. 
+    - Класс `ProjectInstaller` не определен как `public`.
+
+Дополнительные сведения см. в разделе [Как Установка и удаление служб](how-to-install-and-uninstall-services.md).
 
 ## <a name="start-and-run-the-service"></a>Запуск и выполнение службы
 
-1. В Windows откройте классическое приложение **Службы**. Нажмите сочетание клавиш **Windows**+**R**, чтобы открыть окно **Запуск**, введите имя файла **services.msc** и нажмите клавишу **ВВОД** или щелкните **ОК**.
+1. В Windows откройте классическое приложение **Службы**. Нажмите клавиши **Windows**+**R**, чтобы открыть окно **Выполнить**, введите *services.msc* и нажмите клавишу **ВВОД** или кнопку **ОК**.
 
      Заданное вами отображаемое имя службы отобразится в списке **Службы**, представленном в алфавитном порядке.
 
-     ![MyNewService в окне "Службы".](../../../docs/framework/windows-services/media/windowsservices-serviceswindow.PNG)
+     ![MyNewService в окне "Службы".](media/windowsservices-serviceswindow.PNG)
 
-2. В окне **Службы** откройте контекстное меню службы и нажмите **Пуск**.
+2. Чтобы запустить службу, в ее контекстном меню выберите пункт **Запустить**.
 
-3. Чтобы остановить работу службы, снова откройте контекстное меню службы и нажмите **Стоп**.
+3. Чтобы остановить службу, в ее контекстном меню выберите пункт **Остановить**.
 
-4. Для запуска и остановки службы из командной строки можно использовать команды `net start ServiceName` и `net stop ServiceName` (необязательно).
+4. Для запуска и остановки службы в командной строке можно использовать команды **net start &lt;имя службы&gt;** и **net stop &lt;имя службы&gt;** (необязательно).
 
 ### <a name="verify-the-event-log-output-of-your-service"></a>Проверка журнала событий для службы
 
-1. Чтобы открыть компонент **Просмотр событий**, начните вводить строку **Просмотр событий** в поле поиска на панели задач Windows и выберите **Просмотр событий** в результатах поиска.
+1. В Windows откройте классическое приложение **Просмотр событий**. Введите строку *Просмотр событий* в поле поиска Windows и выберите **Просмотр событий** в результатах поиска.
 
    > [!TIP]
-   > В Visual Studio доступ к журналам событий можно получить, открыв **обозреватель сервера** (клавиши **CTRL**+**Alt**+**S**) и развернув узел **Журналы событий** узел для локального компьютера.
+   > В Visual Studio доступ к журналам событий можно получить, открыв **обозреватель сервера** в меню **Вид** (или нажав клавиши **CTRL**+**ALT**+**S**) и развернув узел **Журналы событий** для локального компьютера.
 
 2. В **средстве просмотра событий** разверните узел **Журналы приложений и служб**.
 
-3. Найдите в списке элемент **MyNewLog** (или **MyLogFile1**, если вы использовали необязательную процедуру с аргументами командной строки) и разверните его. Вы увидите записи для двух действий (запуск и остановка), которые выполнила ваша служба.
+3. Найдите в списке элемент **MyNewLog** (или **MyLogFile1**, если вы использовали процедуру добавления аргументов командной строки) и разверните его. Вы увидите записи для двух действий (запуск и остановка), которые выполнила ваша служба.
 
-     ![Просмотр записей в журнале событий с помощью компонента "Просмотр событий"](../../../docs/framework/windows-services/media/windows-service-event-viewer.png)
+     ![Просмотр записей в журнале событий с помощью компонента "Просмотр событий"](media/windows-service-event-viewer.png)
 
-## <a name="uninstall-the-service"></a>Удаление службы
+## <a name="clean-up-resources"></a>Очистка ресурсов
+
+Если приложение службы Windows вам больше не нужно, его можно удалить. 
 
 1. Откройте **Командную строку разработчика Visual Studio** с учетными данными администратора.
 
-2. В окне командной строки перейдите к папке, которая содержит выходные данные проекта.
+2. В окне **Командная строка разработчика для Visual Studio** перейдите к папке, которая содержит выходные данные проекта.
 
 3. Введите следующую команду:
 
@@ -472,19 +571,21 @@ eventLog1.WriteEntry("In OnStop.");
     installutil.exe /u MyNewService.exe
     ```
 
-   Если служба удалена успешно, **installutil.exe** сообщит об этом. Дополнительные сведения см. в разделе [Как Установка и удаление служб](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).
+   Если служба удалена успешно, команда сообщит об этом. Дополнительные сведения см. в разделе [Как Установка и удаление служб](how-to-install-and-uninstall-services.md).
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Завершив создание службы, вы можете создать автономную программу установки, с помощью которой другие пользователи будут устанавливать вашу службу Windows. ClickOnce не поддерживает службы Windows, но вы можете создать установщик службы Windows с помощью [набора средств WiX](http://wixtoolset.org/). Другие идеи можно почерпнуть в статье [о создании пакета установщика](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).
+Теперь, после создания службы, можно выполнить указанные ниже действия.
 
-Также изучите возможности компонента <xref:System.ServiceProcess.ServiceController>, который позволяет отправлять команды в установленную службу.
+- Создайте автономную программу установки, с помощью которой другие пользователи могут устанавливать вашу службу Windows. Создать установщик для службы Windows можно с помощью [набора инструментов WiX](http://wixtoolset.org/). Другие идеи можно почерпнуть в статье [о создании пакета установщика](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).
 
-Для создания журнала событий при установке приложения можно воспользоваться установщиком, а не создавать журнал после запуска приложения. Кроме того, в этом случае журнал событий будет удален установщиком при удалении приложения. Дополнительные сведения см. на странице <xref:System.Diagnostics.EventLogInstaller> .
+- Изучите возможности компонента <xref:System.ServiceProcess.ServiceController>, который позволяет отправлять команды в установленную службу.
+
+- Для создания журнала событий при установке приложения, а не во время его запуска, можно воспользоваться установщиком. В этом случае журнал событий удаляется установщиком при удалении приложения. Для получения дополнительной информации см. <xref:System.Diagnostics.EventLogInstaller>.
 
 ## <a name="see-also"></a>См. также
 
-- [Приложения служб Windows](../../../docs/framework/windows-services/index.md)
-- [Знакомство с приложениями служб Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [Практическое руководство. Отладка приложений служб Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)
+- [Приложения служб Windows](index.md)
+- [Знакомство с приложениями служб Windows](introduction-to-windows-service-applications.md)
+- [Практическое руководство. Отладка приложений служб Windows](how-to-debug-windows-service-applications.md)
 - [Службы (Windows)](/windows/desktop/Services/services)
