@@ -1,0 +1,16 @@
+items:
+- name: Атрибуты
+  href: index.md
+  items:
+  - name: Применение атрибутов
+    href: applying-attributes.md
+  - name: Написание настраиваемых атрибутов
+    href: writing-custom-attributes.md
+  - name: Извлечение информации, сохраненной в атрибуте
+    href: retrieving-information-stored-in-attributes.md
+ms.openlocfilehash: d86731782c3b35fe265ef21ae3d32ced4bd8b6d6
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58470648"

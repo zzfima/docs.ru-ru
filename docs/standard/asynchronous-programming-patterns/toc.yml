@@ -1,0 +1,58 @@
+items:
+- name: Шаблоны асинхронного программирования
+  href: index.md
+  items:
+  - name: Асинхронный шаблон, основанный на задачах (TAP)
+    href: task-based-asynchronous-pattern-tap.md
+    items:
+    - name: Реализация асинхронного шаблона, основанного на задачах
+      href: implementing-the-task-based-asynchronous-pattern.md
+    - name: Использование асинхронного шаблона, основанного на задачах
+      href: consuming-the-task-based-asynchronous-pattern.md
+    - name: Взаимодействие с другими асинхронными шаблонами и типами
+      href: interop-with-other-asynchronous-patterns-and-types.md
+  - name: Асинхронная модель на основе событий (EAP)
+    href: event-based-asynchronous-pattern-eap.md
+    items:
+    - name: Обзор асинхронной модели, основанной на событиях
+      href: event-based-asynchronous-pattern-overview.md
+    - name: Реализация асинхронной модели, основанной на событиях
+      href: implementing-the-event-based-asynchronous-pattern.md
+    - name: Рекомендации по реализации асинхронной модели, основанной на событиях
+      href: best-practices-for-implementing-the-event-based-asynchronous-pattern.md
+    - name: Определение, когда следует реализовать асинхронную модель, основанную на событиях
+      href: deciding-when-to-implement-the-event-based-asynchronous-pattern.md
+    - name: Практическое руководство. Реализация компонента, поддерживающего асинхронную модель на основе событий
+      href: component-that-supports-the-event-based-asynchronous-pattern.md
+    - name: Практическое руководство. Реализация клиента асинхронной модели на основе событий
+      href: how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md
+    - name: Практическое руководство. Использование компонентов, поддерживающих асинхронную модель, основанную на событиях
+      href: how-to-use-components-that-support-the-event-based-asynchronous-pattern.md
+  - name: Асинхронная модель программирования (APM)
+    href: asynchronous-programming-model-apm.md
+    items:
+    - name: Вызов асинхронных методов с помощью IAsyncResult
+      href: calling-asynchronous-methods-using-iasyncresult.md
+      items:
+      - name: Блокирование выполнения приложения с помощью AsyncWaitHandle
+        href: blocking-application-execution-using-an-asyncwaithandle.md
+      - name: Блокировка выполнения приложения путем завершения асинхронной операции
+        href: blocking-application-execution-by-ending-an-async-operation.md
+      - name: Запрос состояния асинхронной операции
+        href: polling-for-the-status-of-an-asynchronous-operation.md
+      - name: Использование делегата AsyncCallback для завершения асинхронной операции
+        href: using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md
+        items:
+        - name: Использование делегата AsyncCallback и объекта состояния
+          href: using-an-asynccallback-delegate-and-state-object.md
+    - name: Асинхронное программирование с использованием делегатов
+      href: asynchronous-programming-using-delegates.md
+      items:
+      - name: Асинхронный вызов синхронных методов
+        href: calling-synchronous-methods-asynchronously.md
+ms.openlocfilehash: 2f93abd762516ade20948cceb3b2a1617af04885
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58470197"

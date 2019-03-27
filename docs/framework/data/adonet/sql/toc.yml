@@ -1,0 +1,154 @@
+items:
+- name: SQL Server и ADO.NET
+  href: index.md
+- name: Безопасность SQL Server
+  href: sql-server-security.md
+  items:
+  - name: Общие сведения о безопасности SQL Server
+    href: overview-of-sql-server-security.md
+    items:
+    - name: Аутентификация в SQL Server
+      href: authentication-in-sql-server.md
+    - name: Роли сервера и базы данных в SQL Server
+      href: server-and-database-roles-in-sql-server.md
+    - name: Владение и отделение пользователей от схем в SQL Server
+      href: ownership-and-user-schema-separation-in-sql-server.md
+    - name: Авторизация и разрешения в SQL Server
+      href: authorization-and-permissions-in-sql-server.md
+    - name: Шифрование данных в SQL Server
+      href: data-encryption-in-sql-server.md
+    - name: Безопасность интеграции CLR в SQL Server
+      href: clr-integration-security-in-sql-server.md
+  - name: Сценарии безопасности приложений в SQL Server
+    href: application-security-scenarios-in-sql-server.md
+    items:
+    - name: Управление разрешениями с использованием хранимых процедур в SQL Server
+      href: managing-permissions-with-stored-procedures-in-sql-server.md
+    - name: Написание безопасного динамического кода SQL в SQL Server
+      href: writing-secure-dynamic-sql-in-sql-server.md
+    - name: Подписывание хранимых процедур в SQL Server
+      href: signing-stored-procedures-in-sql-server.md
+    - name: Настройка разрешений с олицетворением в SQL Server
+      href: customizing-permissions-with-impersonation-in-sql-server.md
+    - name: Предоставление разрешений уровня строки в SQL Server
+      href: granting-row-level-permissions-in-sql-server.md
+    - name: Создание ролей приложений в SQL Server
+      href: creating-application-roles-in-sql-server.md
+    - name: Организация межбазового доступа в SQL Server
+      href: enabling-cross-database-access-in-sql-server.md
+  - name: Безопасность SQL Server, экспресс-выпуск
+    href: sql-server-express-security.md
+- name: Типы данных SQL Server и ADO.NET
+  href: sql-server-data-types.md
+  items:
+  - name: Типы SqlType и набор данных
+    href: sqltypes-and-the-dataset.md
+  - name: Обработка значений NULL
+    href: handling-null-values.md
+  - name: Сравнение значений идентификатора GUID и uniqueidentifier
+    href: comparing-guid-and-uniqueidentifier-values.md
+  - name: Данные даты и времени
+    href: date-and-time-data.md
+  - name: Большие, определяемые пользователем типы
+    href: large-udts.md
+  - name: Данные XML в SQL Server
+    href: xml-data-in-sql-server.md
+    items:
+    - name: Значения столбцов XML SQL
+      href: sql-xml-column-values.md
+    - name: Указание значений XML как параметров
+      href: specifying-xml-values-as-parameters.md
+- name: Двоичные данные и данные большого объема SQL Server
+  href: sql-server-binary-and-large-value-data.md
+  items:
+  - name: Изменение данных больших объемов (max) в ADO.NET
+    href: modifying-large-value-max-data.md
+  - name: Данные FILESTREAM
+    href: filestream-data.md
+  - name: Вставка изображения из файла
+    href: inserting-an-image-from-a-file.md
+- name: Операции данных SQL Server Data в ADO.NET
+  href: sql-server-data-operations.md
+  items:
+  - name: Операции массового копирования в SQL Server
+    href: bulk-copy-operations-in-sql-server.md
+    items:
+    - name: Установка примера массового копирования
+      href: bulk-copy-example-setup.md
+    - name: Отдельные операции массового копирования
+      href: single-bulk-copy-operations.md
+    - name: Несколько операций массового копирования
+      href: multiple-bulk-copy-operations.md
+    - name: Транзакции и операции массового копирования
+      href: transaction-and-bulk-copy-operations.md
+  - name: Несколько активных результирующих наборов (MARS)
+    href: multiple-active-result-sets-mars.md
+    items:
+    - name: Включение нескольких активных результирующих наборов
+      href: enabling-multiple-active-result-sets.md
+    - name: Управление данными
+      href: manipulating-data.md
+  - name: Асинхронные операции
+    href: asynchronous-operations.md
+    items:
+    - name: Приложения Windows, использующие обратные вызовы
+      href: windows-applications-using-callbacks.md
+    - name: Приложения ASP.NET, использующие дескрипторы ожидания
+      href: aspnet-apps-using-wait-handles.md
+    - name: Выполнение опросов в консольных приложениях
+      href: polling-in-console-applications.md
+  - name: Возвращающие табличное значение параметры
+    href: table-valued-parameters.md
+- name: Возможности SQL Server и ADO.NET
+  href: sql-server-features-and-adonet.md
+  items:
+  - name: Перечисление экземпляров SQL Server (ADO.NET)
+    href: enumerating-instances-of-sql-server.md
+  - name: Статистика поставщика для SQL Server
+    href: provider-statistics-for-sql-server.md
+  - name: Пользовательские экземпляры SQL Server, экспресс-выпуск
+    href: sql-server-express-user-instances.md
+  - name: Зеркальное отображение баз данных в SQL Server
+    href: database-mirroring-in-sql-server.md
+  - name: Интеграция среды CLR и SQL Server
+    href: sql-server-common-language-runtime-integration.md
+    items:
+    - name: Знакомство с интеграцией CLR в SQL Server
+      href: introduction-to-sql-server-clr-integration.md
+    - name: Пользовательские функции CLR
+      href: clr-user-defined-functions.md
+    - name: Пользовательские типы CLR
+      href: clr-user-defined-types.md
+    - name: Хранимые процедуры CLR
+      href: clr-stored-procedures.md
+    - name: Триггеры CLR
+      href: clr-triggers.md
+    - name: Подключение контекста
+      href: the-context-connection.md
+    - name: Внутрипроцессное поведение ADO.NET в SQL Server
+      href: sql-server-in-process-specific-behavior-of-adonet.md
+  - name: Уведомления запросов в SQL Server
+    href: query-notifications-in-sql-server.md
+    items:
+    - name: Включение уведомлений запросов
+      href: enabling-query-notifications.md
+    - name: SqlDependency в приложении ASP.NET
+      href: sqldependency-in-an-aspnet-app.md
+    - name: Обнаружение изменений с использованием SqlDependency
+      href: detecting-changes-with-sqldependency.md
+    - name: Выполнение SqlCommand с помощью SqlNotificationRequest
+      href: sqlcommand-execution-with-a-sqlnotificationrequest.md
+  - name: Изоляция снимков в SQL Server
+    href: snapshot-isolation-in-sql-server.md
+  - name: Поддержка SqlClient для высокого уровня доступности, аварийного восстановления
+    href: sqlclient-support-for-high-availability-disaster-recovery.md
+  - name: Поддержка SqlClient LocalDB
+    href: sqlclient-support-for-localdb.md
+- name: LINQ to SQL
+  href: linq/
+ms.openlocfilehash: ab9104f2a2d626748988c89bc78cbf0668c51512
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58470946"
