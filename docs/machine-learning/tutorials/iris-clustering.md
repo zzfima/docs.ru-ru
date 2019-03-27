@@ -3,22 +3,22 @@ title: Кластеризация цветков ириса с помощью з
 description: Сведения об использовании ML.NET при кластеризации
 author: pkulikov
 ms.author: johalex
-ms.date: 02/19/2019
+ms.date: 03/18/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: d8d324cdcad793ac8ade8124f56734bade695421
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 502a7aafd434650d09cefa2781d3749e5a435564
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57488166"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58186134"
 ---
 # <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>Учебник. Кластеризация цветков ириса с помощью задачи машинного обучения по кластеризации в ML.NET
 
 > [!NOTE]
 > В этом разделе описано, как использовать платформу ML.NET, которая сейчас доступна в режиме предварительной версии. Этот материал может быть изменен. Дополнительные сведения см. в [обзоре ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
 
-Сейчас в этом руководстве и соответствующем примере используется **ML.NET версии 0.10**. Дополнительные сведения см. в заметках о выпуске в [репозитории GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
+Сейчас в этом руководстве и соответствующем примере используется **ML.NET версии 0.11**. Дополнительные сведения см. в заметках о выпуске в [репозитории GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 В этом руководстве описано, как с помощью ML.NET создать [модель кластеризации](../resources/tasks.md#clustering) для [набора данных ирисов](https://en.wikipedia.org/wiki/Iris_flower_data_set).
 
@@ -129,11 +129,7 @@ ms.locfileid: "57488166"
 
 [!code-csharp[Create text loader](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#SetupTextLoader)]
 
-Используйте [универсальный метод `CreateTextLoader`](xref:Microsoft.ML.TextLoaderSaverCatalog.CreateTextLoader%60%601(Microsoft.ML.DataOperationsCatalog,System.Boolean,System.Char,System.Boolean,System.Boolean,System.Boolean)) для определения схемы набора данных из определения класса `IrisData`.
-
-Используйте созданный экземпляр <xref:Microsoft.ML.Data.TextLoader>, чтобы создать экземпляр <xref:Microsoft.Data.DataView.IDataView>, который представляет источник данных для набора данных для обучения:
-
-[!code-csharp[Create IDataView](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#CreateDataView)]
+Загрузите данные с помощью универсальной оболочки `MLContext.Data.LoadFromTextFile` для [метода LoadFromTextFile](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29). Он возвращает <xref:Microsoft.Data.DataView.IDataView> для вывода схемы набора данных из типа модели данных `IrisData`, использует заголовок набора данных и отделяется запятой.
 
 ## <a name="create-a-learning-pipeline"></a>Создание конвейера обучения
 
