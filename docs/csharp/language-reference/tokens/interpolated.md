@@ -60,10 +60,10 @@ ms.locfileid: "54307179"
 
 [!code-csharp-interactive[example with ternary conditional operator](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#3)]
 
-В интерполированных строках verbatim используется символ `$`, за которым следует символ `@`. Дополнительные сведения о строках Verbatim см. в разделе о [строках](../keywords/string.md) и [идентификаторе verbatim](verbatim.md).
+В буквальных интерполированных строках используется символ `$`, за которым следует символ `@`. Дополнительные сведения о буквальных строках см. в разделах о [строках](../keywords/string.md) и [буквальном идентификаторе](verbatim.md).
 
 > [!NOTE]
-> В интерполированной строке Verbatim токен `$` должен находиться перед токеном `@`.
+> В буквальной интерполированной строке токен `$` должен находиться перед токеном `@`.
 
 ## <a name="implicit-conversions-and-specifying-iformatprovider-implementation"></a>Неявные преобразования и указание реализации `IFormatProvider`
 
