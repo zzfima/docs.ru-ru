@@ -127,13 +127,13 @@ ms.locfileid: "56333408"
   
  Удаляемые ключи:  
   
- \- Xmlns:wst =» http://schemas.xmlsoap.org/ws/2004/04/trust"и xmlns:wst =» http://schemas.xmlsoap.org/ws/2005/02/trust"  
+ \- Xmlns:wst ="http://schemas.xmlsoap.org/ws/2004/04/trust" и xmlns:wst ="http://schemas.xmlsoap.org/ws/2005/02/trust"  
   
  wst:BinarySecret  
   
  wst:Entropy  
   
- \- Xmlns:wsse =» http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd"и xmlns:wsse =» http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- Xmlns:wsse ="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" и xmlns:wsse ="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse:Password  
   
@@ -141,7 +141,7 @@ ms.locfileid: "56333408"
   
  Удаляемые потенциально персональные данные:  
   
- \- Xmlns:wsse =» http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd"и xmlns:wsse =» http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- Xmlns:wsse ="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" и xmlns:wsse ="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse:Username  
   
@@ -304,7 +304,7 @@ ms.locfileid: "56333408"
   
  Для следующих пространств имен:  
   
- xmlns:WST =» http://schemas.xmlsoap.org/ws/2004/04/trust"и xmlns:wst =» http://schemas.xmlsoap.org/ws/2005/02/trust" (например, если нет действия)  
+ xmlns:WST ="http://schemas.xmlsoap.org/ws/2004/04/trust" и xmlns:wst =» http://schemas.xmlsoap.org/ws/2005/02/trust" (например, если нет действия)  
   
  Информация удаляется для элементов тел, участвующих в обмене ключами:  
   
