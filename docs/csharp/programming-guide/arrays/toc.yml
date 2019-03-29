@@ -1,0 +1,24 @@
+items:
+- name: Массивы
+  href: index.md
+  items:
+  - name: Массивы как объекты
+    href: arrays-as-objects.md
+  - name: Одномерные массивы
+    href: single-dimensional-arrays.md
+  - name: Многомерные массивы
+    href: multidimensional-arrays.md
+  - name: Массивы массивов
+    href: jagged-arrays.md
+  - name: Использование оператора foreach с массивами
+    href: using-foreach-with-arrays.md
+  - name: Передача массивов в качестве аргументов
+    href: passing-arrays-as-arguments.md
+  - name: Неявно типизированные массивы
+    href: implicitly-typed-arrays.md
+ms.openlocfilehash: b587998861fba9ae9f13da1e58fd24e9279c6224
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58470885"

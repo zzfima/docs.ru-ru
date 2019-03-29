@@ -1,0 +1,34 @@
+items:
+- name: Основные понятия программирования
+  href: index.md
+  items:
+  - name: Сборки и глобальный кэш сборок
+    href: assemblies-gac/
+  - name: Асинхронное программирование с использованием ключевых слов Async и Await
+    href: async/
+  - name: Атрибуты
+    href: attributes/
+  - name: Сведения о вызывающем
+    href: caller-information.md
+  - name: Коллекции
+    href: collections.md
+  - name: Ковариация и контрвариация
+    href: covariance-contravariance/
+  - name: Деревья выражений
+    href: expression-trees/
+  - name: Итераторы
+    href: iterators.md
+  - name: LINQ
+    href: linq/
+  - name: Объектно-ориентированное программирование
+    href: object-oriented-programming.md
+  - name: Отражение
+    href: reflection.md
+  - name: Сериализация (C#)
+    href: serialization/
+ms.openlocfilehash: 43357f3e4d438d96ba5778100585453792ed29c6
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58470784"

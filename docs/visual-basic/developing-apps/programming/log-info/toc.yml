@@ -1,0 +1,32 @@
+items:
+- name: Запись сведений в журнал из приложения
+  href: index.md
+  items:
+  - name: Практическое руководство. Запись сообщений в журнал
+    href: how-to-write-log-messages.md
+  - name: Практическое руководство. Запись исключений в журнал
+    href: how-to-log-exceptions.md
+  - name: Практическое руководство. Запись в журнал сообщений при запуске и завершении приложения
+    href: how-to-log-messages-when-the-application-starts-or-shuts-down.md
+  - name: Практическое руководство. Запись в журнал событий приложения
+    href: how-to-write-to-an-application-event-log.md
+  - name: Практическое руководство. Запись сведений о событиях в текстовый файл
+    href: how-to-write-event-information-to-a-text-file.md
+  - name: Работа с журналами приложения
+    href: working-with-application-logs.md
+  - name: Пошаговое руководство. Определение места записи сведений для My.Application.Log
+    href: walkthrough-determining-where-my-application-log-writes-information.md
+  - name: Пошаговое руководство. Изменение места записи сведений для My.Application.Log
+    href: walkthrough-changing-where-my-application-log-writes-information.md
+  - name: Пошаговое руководство. Фильтрация выходных данных My.Application.Log
+    href: walkthrough-filtering-my-application-log-output.md
+  - name: Пошаговое руководство. Создание пользовательских прослушивателей журнала
+    href: walkthrough-creating-custom-log-listeners.md
+  - name: 'Устранение неполадок: Прослушиватели журнала'
+    href: troubleshooting-log-listeners.md
+ms.openlocfilehash: 9b1d9ae3a2fdda80723180e7eef1b31aa06a28ea
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58470477"

@@ -1,0 +1,18 @@
+items:
+- name: Деревья выражений
+  href: index.md
+  items:
+  - name: Практическое руководство. Выполнение деревьев выражений
+    href: how-to-execute-expression-trees.md
+  - name: Практическое руководство. Изменение деревьев выражений
+    href: how-to-modify-expression-trees.md
+  - name: Практическое руководство. Использование деревьев выражений для построения динамических запросов
+    href: how-to-use-expression-trees-to-build-dynamic-queries.md
+  - name: Отладка деревьев выражений в Visual Studio
+    href: debugging-expression-trees-in-visual-studio.md
+ms.openlocfilehash: 4f5abd220c0835eec40fd815088ef5dca1dca417
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58470584"

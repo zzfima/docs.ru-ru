@@ -1,0 +1,41 @@
+items:
+- name: Приложения служб Windows
+  href: index.md
+  items:
+  - name: Знакомство с приложениями служб Windows
+    href: introduction-to-windows-service-applications.md
+  - name: Пошаговое руководство. Создание приложения службы Windows
+    href: walkthrough-creating-a-windows-service-application-in-the-component-designer.md
+  - name: Программная архитектура приложений служб
+    href: service-application-programming-architecture.md
+  - name: Практическое руководство. Создание служб Windows
+    href: how-to-create-windows-services.md
+    items:
+    - name: Практическое руководство. Создание службы программным способом
+      href: how-to-write-services-programmatically.md
+    - name: Практическое руководство. Добавление установщиков в приложение-службу
+      href: how-to-add-installers-to-your-service-application.md
+    - name: Практическое руководство. Назначение службам контекста безопасности
+      href: how-to-specify-the-security-context-for-services.md
+    - name: Практическое руководство. Установка и удаление служб
+      href: how-to-install-and-uninstall-services.md
+    - name: Практическое руководство. Запуск служб
+      href: how-to-start-services.md
+    - name: Практическое руководство. Приостановка выполнения службы Windows (Visual Basic)
+      href: how-to-pause-a-windows-service-visual-basic.md
+    - name: Практическое руководство. Возобновление выполнения службы Windows (Visual Basic)
+      href: how-to-continue-a-windows-service-visual-basic.md
+    - name: Практическое руководство. Отладка приложений служб Windows
+      href: how-to-debug-windows-service-applications.md
+    - name: Практическое руководство. Запись сведений о службах в журнал
+      href: how-to-log-information-about-services.md
+    - name: 'Устранение неполадок: Отладка служб Windows'
+      href: troubleshooting-debugging-windows-services.md
+    - name: 'Устранение неполадок: невозможно установить приложение-службу'
+      href: troubleshooting-service-application-wont-install.md
+ms.openlocfilehash: 0b60da73c822f1b87d437076915735c327ca60f8
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469960"

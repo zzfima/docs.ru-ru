@@ -1,0 +1,22 @@
+items:
+- name: События
+  href: index.md
+  items:
+  - name: Практическое руководство. Подписка и отмена подписки на события
+    href: how-to-subscribe-to-and-unsubscribe-from-events.md
+  - name: Практическое руководство. Публикация событий в соответствии с рекомендациями по .NET Framework
+    href: how-to-publish-events-that-conform-to-net-framework-guidelines.md
+  - name: Практическое руководство. Создание событий базового класса в производных классах
+    href: how-to-raise-base-class-events-in-derived-classes.md
+  - name: Практическое руководство. Реализация событий интерфейса
+    href: how-to-implement-interface-events.md
+  - name: Практическое руководство. Использование словаря для хранения экземпляров событий
+    href: how-to-use-a-dictionary-to-store-event-instances.md
+  - name: Практическое руководство. Реализация пользовательских методов доступа к событиям
+    href: how-to-implement-custom-event-accessors.md
+ms.openlocfilehash: ad3adc4026915e1173dacd33dde9746cfb0adcdd
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471041"

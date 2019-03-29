@@ -1,0 +1,349 @@
+items:
+- name: ADO.NET
+  href: index.md
+- name: Новые возможности в ADO.NET
+  href: whats-new.md
+- name: Общие сведения о ADO.NET
+  href: ado-net-overview.md
+  items:
+  - name: Архитектура ADO.NET
+    href: ado-net-architecture.md
+  - name: Возможности технологии и рекомендации по ADO.NET
+    href: ado-net-technology-options-and-guidelines.md
+  - name: LINQ и ADO.NET
+    href: linq-and-ado-net.md
+  - name: Поставщики данных .NET Framework
+    href: data-providers.md
+  - name: Наборы данных ADO.NET
+    href: ado-net-datasets.md
+  - name: Одновременное выполнение в ADO.NET
+    href: side-by-side-execution.md
+  - name: Примеры кода ADO.NET
+    href: ado-net-code-examples.md
+- name: Защита приложений ADO.NET
+  href: securing-ado-net-applications.md
+  items:
+  - name: Общие сведения о безопасности
+    href: security-overview.md
+  - name: Безопасный доступ к данным
+    href: secure-data-access.md
+  - name: Безопасные клиентские приложения
+    href: secure-client-applications.md
+  - name: Управление доступом для кода и ADO.NET
+    href: code-access-security.md
+  - name: Конфиденциальность и безопасность данных
+    href: privacy-and-data-security.md
+- name: Сопоставления типов данных в ADO.NET
+  href: data-type-mappings-in-ado-net.md
+  items:
+  - name: Сопоставления типов данных SQL Server
+    href: sql-server-data-type-mappings.md
+  - name: Сопоставления типов данных OLE DB
+    href: ole-db-data-type-mappings.md
+  - name: Сопоставления типов данных ODBC
+    href: odbc-data-type-mappings.md
+  - name: Сопоставления типов данных Oracle
+    href: oracle-data-type-mappings.md
+  - name: Числа с плавающей запятой
+    href: floating-point-numbers.md
+- name: Извлечение и изменение данных в ADO.NET
+  href: retrieving-and-modifying-data.md
+  items:
+  - name: Подключение к источнику данных
+    href: connecting-to-a-data-source.md
+    items:
+    - name: Установка подключения
+      href: establishing-the-connection.md
+    - name: События подключения
+      href: connection-events.md
+  - name: Строки подключения
+    href: connection-strings.md
+    items:
+    - name: Построители строк подключения
+      href: connection-string-builders.md
+    - name: Строки подключения и файлы конфигурации
+      href: connection-strings-and-configuration-files.md
+    - name: Синтаксис строки подключения
+      href: connection-string-syntax.md
+    - name: Защита сведений о подключении
+      href: protecting-connection-information.md
+  - name: Объединение подключений в пул
+    href: connection-pooling.md
+    items:
+    - name: Объединение подключений в пул в SQL Server (ADO.NET)
+      href: sql-server-connection-pooling.md
+    - name: OLE DB, ODBC и объединение подключений в пул в Oracle
+      href: ole-db-odbc-and-oracle-connection-pooling.md
+  - name: Команды и параметры
+    href: commands-and-parameters.md
+    items:
+    - name: Выполнение команды
+      href: executing-a-command.md
+    - name: Настройка параметров и типы данных параметров
+      href: configuring-parameters-and-parameter-data-types.md
+    - name: Создание команд с помощью построителей CommandBuilder
+      href: generating-commands-with-commandbuilders.md
+    - name: Получение одного значения из базы данных
+      href: obtaining-a-single-value-from-a-database.md
+    - name: Использование команд для изменения данных
+      href: using-commands-to-modify-data.md
+      items:
+      - name: Обновление данных в источнике данных
+        href: updating-data-in-a-data-source.md
+      - name: Выполнение операций каталога
+        href: performing-catalog-operations.md
+  - name: Объекты DataAdapter и DataReader
+    href: dataadapters-and-datareaders.md
+    items:
+    - name: Извлечение данных с помощью объекта DataReader
+      href: retrieving-data-using-a-datareader.md
+    - name: Заполнение набора данных с помощью адаптера данных DataAdapter
+      href: populating-a-dataset-from-a-dataadapter.md
+    - name: Параметры DataAdapter
+      href: dataadapter-parameters.md
+    - name: Добавление существующих ограничений к набору данных
+      href: adding-existing-constraints-to-a-dataset.md
+    - name: Сопоставления DataAdapter DataTable и DataColumn
+      href: dataadapter-datatable-and-datacolumn-mappings.md
+    - name: Разбивка на страницы результатов запроса
+      href: paging-through-a-query-result.md
+    - name: Обновление источников данных с объектами DataAdapter
+      href: updating-data-sources-with-dataadapters.md
+    - name: Обработка событий DataAdapter
+      href: handling-dataadapter-events.md
+    - name: Выполнение пакетных операций с использованием объектов DataAdapters
+      href: performing-batch-operations-using-dataadapters.md
+  - name: Транзакции и параллельность
+    href: transactions-and-concurrency.md
+    items:
+    - name: Локальные транзакции
+      href: local-transactions.md
+    - name: Распределенные транзакции
+      href: distributed-transactions.md
+    - name: Интеграция System.Transactions с SQL Server
+      href: system-transactions-integration-with-sql-server.md
+    - name: Оптимистическая блокировка
+      href: optimistic-concurrency.md
+  - name: Извлечение идентификации или значений автонумерации
+    href: retrieving-identity-or-autonumber-values.md
+  - name: Извлечение двоичных данных
+    href: retrieving-binary-data.md
+  - name: Изменение данных с помощью хранимых процедур
+    href: modifying-data-with-stored-procedures.md
+  - name: Извлечение сведений о схеме базы данных
+    href: retrieving-database-schema-information.md
+    items:
+    - name: Коллекции GetSchema и Schema
+      href: getschema-and-schema-collections.md
+    - name: Ограничения схемы
+      href: schema-restrictions.md
+    - name: Общие коллекции схемы
+      href: common-schema-collections.md
+    - name: Коллекции схемы SQL Server
+      href: sql-server-schema-collections.md
+    - name: Коллекции схемы в Oracle
+      href: oracle-schema-collections.md
+    - name: Коллекции схемы ODBC
+      href: odbc-schema-collections.md
+    - name: Коллекции схемы OLE DB
+      href: ole-db-schema-collections.md
+  - name: DbProviderFactories
+    href: dbproviderfactories.md
+    items:
+    - name: Общие сведения о модели фабрики
+      href: factory-model-overview.md
+    - name: Получение класса DbProviderFactory
+      href: obtaining-a-dbproviderfactory.md
+    - name: DbConnection, DbCommand и DbException
+      href: dbconnection-dbcommand-and-dbexception.md
+    - name: Изменение данных с помощью DbDataAdapter
+      href: modifying-data-with-a-dbdataadapter.md
+  - name: Трассировка данных в ADO.NET
+    href: data-tracing.md
+  - name: Счетчики производительности
+    href: performance-counters.md
+  - name: Асинхронное программирование
+    href: asynchronous-programming.md
+  - name: Поддержка потоковой передачи SqlClient
+    href: sqlclient-streaming-support.md
+  - name: LINQ to DataSet
+    href: linq-to-dataset.md
+    items:
+    - name: Начало работы
+      href: getting-started-linq-to-dataset.md
+      items:
+      - name: Общие сведения о LINQ to DataSet
+        href: linq-to-dataset-overview.md
+      - name: Загрузка данных в набор данных
+        href: loading-data-into-a-dataset.md
+      - name: Загрузка примеров баз данных
+        href: downloading-sample-databases-linq-to-dataset.md
+      - name: Практическое руководство. Создание проектов LINQ to DataSet в Visual Studio
+        href: how-to-create-a-linq-to-dataset-project-in-vs.md
+    - name: Руководство по программированию
+      href: programming-guide-linq-to-dataset.md
+      items:
+      - name: Запросы в LINQ to DataSet
+        href: queries-in-linq-to-dataset.md
+      - name: Запросы к DataSet
+        href: querying-datasets-linq-to-dataset.md
+        items:
+        - name: Запросы к одной таблице
+          href: single-table-queries-linq-to-dataset.md
+        - name: Запросы между таблицами
+          href: cross-table-queries-linq-to-dataset.md
+        - name: Запросы к типизированным наборам данных
+          href: querying-typed-datasets.md
+      - name: Сравнение объектов DataRow
+        href: comparing-datarows-linq-to-dataset.md
+      - name: Создание DataTable из запроса
+        href: creating-a-datatable-from-a-query-linq-to-dataset.md
+      - name: Практическое руководство. Реализация CopyToDataTable<T>, где универсальный тип T не является объектом DataRow
+        href: implement-copytodatatable-where-type-not-a-datarow.md
+      - name: Универсальные методы Field и SetField
+        href: generic-field-and-setfield-methods-linq-to-dataset.md
+      - name: Привязка данных и LINQ to DataSet
+        href: data-binding-and-linq-to-dataset.md
+        items:
+        - name: Создание объекта DataView
+          href: creating-a-dataview-object-linq-to-dataset.md
+        - name: Фильтрация с использованием объекта DataView
+          href: filtering-with-dataview-linq-to-dataset.md
+        - name: Сортировка с использованием объекта DataView
+          href: sorting-with-dataview-linq-to-dataset.md
+        - name: Запрос к коллекции DataRowView в объекте DataView
+          href: querying-the-datarowview-collection-in-a-dataview.md
+        - name: Производительность объекта DataView
+          href: dataview-performance.md
+        - name: Практическое руководство. Связывание объекта DataView с элементом управления DataGridView в Windows Forms
+          href: how-to-bind-a-dataview-object-to-a-winforms-datagridview-control.md
+      - name: Отладка запросов в LINQ to DataSet
+        href: debugging-linq-to-dataset-queries.md
+      - name: Безопасность
+        href: security-linq-to-dataset.md
+      - name: Примеры LINQ to DataSet
+        href: linq-to-dataset-examples.md
+        items:
+        - name: Примеры выражений запросов
+          href: query-expression-examples-linq-to-dataset.md
+          items:
+          - name: Проекция
+            href: query-expression-syntax-examples-projection-linq-to-dataset.md
+          - name: Ограничение
+            href: query-expression-syntax-examples-restriction-linq-to-dataset.md
+          - name: Секционирование
+            href: query-expression-syntax-examples-partitioning.md
+          - name: Упорядочение
+            href: query-expression-syntax-examples-ordering-linq-to-dataset.md
+          - name: Операторы элементов
+            href: query-expression-syntax-examples-element-operators.md
+          - name: Статистические операторы
+            href: query-expression-syntax-examples-aggregate-operators.md
+          - name: Операторы соединения
+            href: query-expression-syntax-examples-join-operators.md
+        - name: Примеры запросов на основе методов
+          href: method-based-query-examples-linq-to-dataset.md
+          items:
+          - name: Проекция
+            href: method-based-query-syntax-examples-projection.md
+          - name: Секционирование
+            href: method-based-query-syntax-examples-partitioning-linq.md
+          - name: Упорядочение
+            href: method-based-query-syntax-examples-ordering-linq-to-dataset.md
+          - name: Операторы набора
+            href: method-based-query-syntax-examples-set-operators.md
+          - name: Операторы преобразования
+            href: method-based-query-syntax-examples-conversion-operators.md
+          - name: Операторы элементов
+            href: method-based-query-syntax-examples-element-operators.md
+          - name: Статистические операторы
+            href: method-based-query-syntax-examples-aggregate-operators.md
+          - name: Join
+            href: method-based-query-syntax-examples-join-linq-to-dataset.md
+        - name: Связанные с определенными наборами данных примеры операторов
+          href: dataset-specific-operator-examples-linq-to-dataset.md
+- name: EDM (модель данных с использованием сущностей)
+  href: entity-data-model.md
+  items:
+  - name: Основные понятия модели EDM
+    href: entity-data-model-key-concepts.md
+  - name: 'EDM (модель данных с использованием сущностей): Пространства имен'
+    href: entity-data-model-namespaces.md
+  - name: 'EDM (модель данных с использованием сущностей): примитивные типы данных'
+    href: entity-data-model-primitive-data-types.md
+  - name: 'EDM (модель данных с использованием сущностей): Наследование'
+    href: entity-data-model-inheritance.md
+  - name: конечная точка ассоциации
+    href: association-end.md
+  - name: кратность конечной точки ассоциации
+    href: association-end-multiplicity.md
+  - name: набор ассоциаций
+    href: association-set.md
+  - name: конечная точка набора ассоциаций
+    href: association-set-end.md
+  - name: тип ассоциации
+    href: association-type.md
+  - name: сложный тип
+    href: complex-type.md
+  - name: контейнер сущностей
+    href: entity-container.md
+  - name: ключ сущности
+    href: entity-key.md
+  - name: набор сущностей
+    href: entity-set.md
+  - name: тип сущности
+    href: entity-type.md
+  - name: facet
+    href: facet.md
+  - name: свойство внешнего ключа
+    href: foreign-key-property.md
+  - name: объявляемая моделью функция
+    href: model-declared-function.md
+  - name: функция определенной модели
+    href: model-defined-function.md
+  - name: свойство навигации
+    href: navigation-property.md
+  - name: свойство;
+    href: property.md
+  - name: ограничение ссылочной целостности
+    href: referential-integrity-constraint.md
+- name: Oracle и ADO.NET
+  href: oracle-and-adonet.md
+  items:
+  - name: Требования к системе
+    href: system-requirements-for-the-dotnet-data-provider-for-oracle.md
+  - name: BFILE в Oracle
+    href: oracle-bfiles.md
+  - name: Большие двоичные объекты (LOB) Oracle
+    href: oracle-lobs.md
+  - name: REF CURSOR в Oracle
+    href: oracle-ref-cursors.md
+    items:
+    - name: Примеры REF CURSOR
+      href: ref-cursor-examples.md
+    - name: Параметры REF CURSOR в объекте OracleDataReader
+      href: ref-cursor-parameters-in-an-oracledatareader.md
+    - name: Извлечение данных нескольких REF CURSOR с использованием OracleDataReader
+      href: retrieving-data-from-multiple-ref-cursors.md
+    - name: Заполнение набора данных с помощью одного или нескольких параметров REF CURSOR
+      href: filling-a-dataset-using-one-or-more-ref-cursors.md
+  - name: OracleTypes
+    href: oracletypes.md
+  - name: Последовательности Oracle
+    href: oracle-sequences.md
+  - name: Сопоставления типов данных Oracle
+    href: oracle-data-type-mappings.md
+  - name: Распределенные транзакции Oracle
+    href: oracle-distributed-transactions.md
+- name: ADO.NET Entity Framework
+  href: ef/
+- name: SQL Server и ADO.NET
+  href: sql/
+- name: Наборы данных, таблицы данных и объекты DataView
+  href: dataset-datatable-dataview/
+ms.openlocfilehash: 53eb24e8a320ec9d6b3cce0acfde59facc8b1511
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58470933"

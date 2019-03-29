@@ -1,0 +1,35 @@
+items:
+- name: Руководства по миграции
+  href: index.md
+  items:
+  - name: Совместимость приложений
+    href: application-compatibility.md
+    items:
+    - name: Изменения в среде выполнения
+      href: runtime/index.md
+    - name: Изменение целевой платформы
+      href: retargeting/index.md
+  - name: Совместимость версий
+    href: version-compatibility.md
+  - name: Версии и зависимости
+    href: versions-and-dependencies.md
+    items:
+    - name: Практическое руководство. Определение установленных версий платформы .NET Framework
+      href: how-to-determine-which-versions-are-installed.md
+      items:
+      - name: Ключи выпуска .NET Framework и версии операционной системы Windows
+        href: release-keys-and-os-versions.md
+    - name: Практическое руководство. Определение установленных обновлений платформы .NET Framework
+      href: how-to-determine-which-net-framework-updates-are-installed.md
+  - name: Практическое руководство. Настройка приложения для включения поддержки .NET Framework версии 4 и выше
+    href: how-to-configure-an-app-to-support-net-framework-4-or-4-5.md
+  - name: Миграция из .NET Framework 1.1
+    href: migrating-from-the-net-framework-1-1.md
+  - name: Проблемы при переходе на .NET Framework 4
+    href: net-framework-4-migration-issues.md
+ms.openlocfilehash: c46b7ac4680e6aa988e39055cb51c80a4bb0e8b4
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58470493"

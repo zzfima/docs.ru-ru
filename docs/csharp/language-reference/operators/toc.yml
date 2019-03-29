@@ -1,0 +1,94 @@
+items:
+- name: Операторы C#
+  href: index.md
+  items:
+  - name: Оператор []
+    href: index-operator.md
+  - name: Оператор ()
+    href: invocation-operator.md
+  - name: . Оператор
+    href: member-access-operator.md
+  - name: ?. Операторы ?. и ?[]
+    href: null-conditional-operators.md
+  - name: ':: Оператор'
+    href: namespace-alias-qualifer.md
+  - name: + Оператор
+    href: addition-operator.md
+  - name: '- Оператор'
+    href: subtraction-operator.md
+  - name: '* Оператор'
+    href: multiplication-operator.md
+  - name: Оператор /
+    href: division-operator.md
+  - name: Оператор %
+    href: modulus-operator.md
+  - name: Оператор &
+    href: and-operator.md
+  - name: Оператор |
+    href: or-operator.md
+  - name: Оператор ^
+    href: xor-operator.md
+  - name: '! Оператор'
+    href: logical-negation-operator.md
+  - name: Оператор ~
+    href: bitwise-complement-operator.md
+  - name: Оператор =
+    href: assignment-operator.md
+  - name: Оператор <
+    href: less-than-operator.md
+  - name: '> Оператор'
+    href: greater-than-operator.md
+  - name: '?: Оператор'
+    href: conditional-operator.md
+  - name: Оператор ++
+    href: increment-operator.md
+  - name: Оператор --
+    href: decrement-operator.md
+  - name: Оператор &&
+    href: conditional-and-operator.md
+  - name: Оператор ||
+    href: conditional-or-operator.md
+  - name: Оператор <<
+    href: left-shift-operator.md
+  - name: '>> Оператор'
+    href: right-shift-operator.md
+  - name: Оператор ==
+    href: equality-comparison-operator.md
+  - name: Оператор !=
+    href: not-equal-operator.md
+  - name: Оператор <=
+    href: less-than-equal-operator.md
+  - name: '>Оператор ='
+    href: greater-than-equal-operator.md
+  - name: Оператор +=
+    href: addition-assignment-operator.md
+  - name: Оператор -=
+    href: subtraction-assignment-operator.md
+  - name: Оператор *=
+    href: multiplication-assignment-operator.md
+  - name: Оператор /=
+    href: division-assignment-operator.md
+  - name: Оператор %=
+    href: modulus-assignment-operator.md
+  - name: Оператор &=
+    href: and-assignment-operator.md
+  - name: Оператор |=
+    href: or-assignment-operator.md
+  - name: Оператор ^=
+    href: xor-assignment-operator.md
+  - name: Оператор <<=
+    href: left-shift-assignment-operator.md
+  - name: '>>Оператор ='
+    href: right-shift-assignment-operator.md
+  - name: Оператор ->
+    href: dereference-operator.md
+  - name: ?? Оператор
+    href: null-coalescing-operator.md
+  - name: Оператор =>
+    href: lambda-operator.md
+ms.openlocfilehash: 43c791ad292ef95e3e3e2bc8f58e7b92280e6747
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469976"

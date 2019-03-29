@@ -1,0 +1,32 @@
+items:
+- name: Операторы и выражения
+  href: index.md
+  items:
+  - name: Общие задачи, выполняемые с помощью операторов
+    href: common-tasks-performed-with-visual-basic-operators.md
+  - name: Арифметические операторы
+    href: arithmetic-operators.md
+  - name: Операторы сравнения
+    href: comparison-operators.md
+  - name: Практическое руководство. Проверка совпадения двух объектов
+    href: how-to-test-whether-two-objects-are-the-same.md
+  - name: Практическое руководство. Сравнение строки на соответствие с шаблоном
+    href: how-to-match-a-string-against-a-pattern.md
+  - name: Операторы объединения
+    href: concatenation-operators.md
+  - name: Логические и побитовые операторы
+    href: logical-and-bitwise-operators.md
+  - name: Эффективное сочетание операторов
+    href: efficient-combination-of-operators.md
+  - name: Практическое руководство. Вычисление числовых значений
+    href: how-to-calculate-numeric-values.md
+  - name: Сравнения значений
+    href: value-comparisons.md
+  - name: Логические выражения
+    href: boolean-expressions.md
+ms.openlocfilehash: b16598c335031cf099e0549d491adfc204fc6d35
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58470213"
