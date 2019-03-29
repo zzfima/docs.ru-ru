@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: ad86577aa4a66d9296c3c1844c9f8fa8c2b89d24
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9e55714db55168c95f744665165e333d7f2ca730
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364831"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634561"
 ---
 # <a name="data-binding-overview"></a>Общие сведения о привязке данных
 Привязка данных [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет приложениям простой и последовательный способ представления данных и взаимодействия с ними. Можно связывать элементы с данными из различных источников данных в виде объектов [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] и [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. <xref:System.Windows.Controls.ContentControl>например <xref:System.Windows.Controls.Button> и <xref:System.Windows.Controls.ItemsControl>, например <xref:System.Windows.Controls.ListBox> и <xref:System.Windows.Controls.ListView> у встроенной возможностью включения гибких стилей для отдельных элементов данных и коллекций элементов данных. Представления сортировки, фильтрации и группировки могут быть организованы поверх данных.  
@@ -61,7 +61,7 @@ ms.locfileid: "57364831"
   
  Независимо от того, какой элемент привязывается и какой источник данных используется, каждая привязка всегда соответствует модели, показанной на следующем рисунке.  
   
- ![Основная схема привязки данных](./media/databindingmostbasic.png "DataBindingMostBasic")  
+ ![Схема, показывающая модель привязки данных.](./media/data-binding-overview/basic-data-binding-diagram.png)  
   
  Как показано на приведенном выше рисунке, привязка данных является по существу мостом между целью привязки и источником привязки. На рисунке представлены следующие основные концепции привязки данных [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
@@ -101,7 +101,7 @@ ms.locfileid: "57364831"
   
  Однако обновляется ли значение источника при изменении текста или после завершения изменения текста и отвода указателя мыши от элемента TextBox? <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> Свойство привязки определяет, что инициирует обновления источника. Точки стрелок вправо на следующем рисунке показывают роль <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> свойство:  
   
- ![Схема UpdateSourceTrigger](./media/databindingupdatesourcetrigger.png "DataBindingUpdateSourceTrigger")  
+ ![Схема, показывающая роль свойство UpdateSourceTrigger.](./media/data-binding-overview/data-binding-updatesource-trigger.png)  
   
  Если <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> значение <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>, затем значение указывает правую стрелку действия <xref:System.Windows.Data.BindingMode.TwoWay> или <xref:System.Windows.Data.BindingMode.OneWayToSource> привязки обновляется сразу, как изменения целевого свойства. Тем не менее если <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> значение <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>, а затем это значение обновляется только новое значение при свойство цели теряет фокус.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "57364831"
   
  Если применить этот пример к основной диаграмме, полученное изображение будет выглядеть следующим образом. Это <xref:System.Windows.Data.BindingMode.OneWay> привязке, так как свойство Background поддерживает <xref:System.Windows.Data.BindingMode.OneWay> привязки по умолчанию.  
   
- ![Схема привязки данных](./media/databindingbuttonbackgroundexample.png "DataBindingButtonBackgroundExample")  
+ ![Схема, показывающая свойства Background привязки данных.](./media/data-binding-overview/data-binding-button-background-example.png)  
   
  Может возникнуть вопрос, почему это работает, даже если *ColorName* свойство имеет строковый тип при <xref:System.Windows.Controls.Control.Background%2A> свойство имеет тип <xref:System.Windows.Media.Brush>. Это происходит в результате преобразования типов по умолчанию, которое обсуждается в разделе [Преобразование данных](#data_conversion).  
   
@@ -185,7 +185,7 @@ ms.locfileid: "57364831"
   
  Если добавить эти сведения в рисунок из раздела [Создание привязки](#creating_a_binding), схема будет выглядеть следующим образом.  
   
- ![Схема привязки данных](./media/databindingbuttondefaultconversion.png "DataBindingButtonDefaultConversion")  
+ ![Схема, показывающая свойство привязки данных по умолчанию.](./media/data-binding-overview/data-binding-button-default-conversion.png)  
   
  Однако, что делать, если вместо свойства строкового типа объект источника привязки имеет *цвет* свойство типа <xref:System.Windows.Media.Color>? В этом случае в порядке для создания привязки необходимо включить первый *цвет* значение свойства в нечто, <xref:System.Windows.Controls.Control.Background%2A> значение свойства. Необходимо создать пользовательский преобразователь, реализовав <xref:System.Windows.Data.IValueConverter> интерфейс, как показано в следующем примере:  
   
@@ -196,7 +196,7 @@ ms.locfileid: "57364831"
   
  Теперь пользовательский преобразователь используется вместо преобразования по умолчанию и схема выглядит следующим образом.  
   
- ![Схема привязки данных](./media/databindingconvertercolorexample.png "DataBindingConverterColorExample")  
+ ![Схема, показывающая пользовательский преобразователь привязки данных.](./media/data-binding-overview/data-binding-converter-color-example.png)  
   
  Таким образом, преобразования по умолчанию могут быть доступны благодаря преобразователям типов, присутствующим в типе, к которому производится привязка. Такое поведение будет зависеть от того, какие преобразователи типов доступны в целевом объекте. Если существуют какие-то сомнением, создайте свой собственный преобразователь.  
   
@@ -217,7 +217,7 @@ ms.locfileid: "57364831"
   
  К счастью, наша основная схема по-прежнему применима. При связывании <xref:System.Windows.Controls.ItemsControl> коллекции, то диаграмма будет выглядеть следующим образом:  
   
- ![Схема ItemsControl привязки данных](./media/databindingitemscontrol.png "DataBindingItemsControl")  
+ ![Схема, показывающая объект ItemsControl привязки данных.](./media/data-binding-overview/data-binding-itemscontrol.png)  
   
  Как показано на этой схеме для привязки <xref:System.Windows.Controls.ItemsControl> на объект коллекции <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> свойством является свойство для использования. Можно представить себе <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> свойство как содержимое <xref:System.Windows.Controls.ItemsControl>. Обратите внимание, что привязка <xref:System.Windows.Data.BindingMode.OneWay> поскольку <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> поддерживает свойство <xref:System.Windows.Data.BindingMode.OneWay> привязки по умолчанию.  
   
@@ -340,7 +340,7 @@ ms.locfileid: "57364831"
 ## <a name="data-templating"></a>Шаблоны данных  
  Без использования шаблонов данных [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] приложения в подразделе [Понятие привязки данных](#what_is_data_binding) будет выглядеть следующим образом.  
   
- ![Демонстрация привязки данных без шаблонов данных](./media/databindingdemotemplates.png "DataBindingDemoTemplates")  
+ ![Демонстрация привязки данных без шаблонов данных](./media/data-binding-overview/data-binding-demo-templates.png)  
   
  Как показано в примере в предыдущем разделе, как <xref:System.Windows.Controls.ListBox> управления и <xref:System.Windows.Controls.ContentControl> привязаны к всему объекту коллекции (или точнее, представление объекта коллекции) из *AuctionItem*s. Отсутствии особых инструкций по способу отображения сбора данных <xref:System.Windows.Controls.ListBox> отображает строковое представление каждого объекта в базовой коллекции и <xref:System.Windows.Controls.ContentControl> отображает строковое представление объекта, он связан.  
   

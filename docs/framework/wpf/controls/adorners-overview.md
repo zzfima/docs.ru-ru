@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - adorners [WPF], about adorners
 ms.assetid: 33d4c5c2-2daf-4e45-ba9a-5b673e2b8280
-ms.openlocfilehash: 9c9d77c9771fd8759530267bd38cb7c0bb59598c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 94075189d82e5d446b3058b944c789a4288c26ca
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357954"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634535"
 ---
 # <a name="adorners-overview"></a>Общие сведения о декоративных элементах
 Графические элементы — это специальный тип <xref:System.Windows.FrameworkElement>, которое используется для предоставления визуальных сигналов пользователю. Помимо прочего, декоративные элементы можно использовать для добавления функциональных дескрипторов к элементам или предоставления информации о состоянии элемента управления.  
@@ -55,7 +55,7 @@ ms.locfileid: "57357954"
   
  На следующем рисунке показана SimpleCircleAdorner, применяется к <xref:System.Windows.Controls.TextBox>.  
   
- ![Пример использования декоративных элементов: TextBox с декоративными элементами](./media/adornedtextbox.png "AdornedTextBox")  
+ ![Снимок экрана, показывающий декорируемого текстовое поле.](./media/adorners-overview/simplecircleadorner-textbox.png)  
   
 <a name="rendering_behavior_for_Adorners"></a>   
 ## <a name="rendering-behavior-for-adorners"></a>Поведение отрисовки для декоративных элементов  
