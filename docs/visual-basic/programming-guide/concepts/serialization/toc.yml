@@ -1,0 +1,16 @@
+items:
+- name: Сериализация
+  href: index.md
+  items:
+  - name: Практическое руководство. Запись данных объекта в XML-файл
+    href: how-to-write-object-data-to-an-xml-file.md
+  - name: Практическое руководство. Чтение данных объекта из XML-файла
+    href: how-to-read-object-data-from-an-xml-file.md
+  - name: Пошаговое руководство. Сохранение объекта
+    href: walkthrough-persisting-an-object-in-visual-studio.md
+ms.openlocfilehash: fb7160fa8eae06a13bf917fff42316fb608d6a95
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58470629"

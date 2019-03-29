@@ -1,0 +1,121 @@
+items:
+- name: Процедуры в Visual Basic
+  href: index.md
+  items:
+  - name: Практическое руководство. Создание процедуры
+    href: how-to-create-a-procedure.md
+  - name: Подпрограммы
+    href: sub-procedures.md
+    items:
+    - name: Практическое руководство. Вызов процедуры, которая не возвращает значение
+      href: how-to-call-a-procedure-that-does-not-return-a-value.md
+    - name: Практическое руководство. Вызов обработчика событий
+      href: how-to-call-an-event-handler.md
+  - name: Процедуры функций
+    href: function-procedures.md
+    items:
+    - name: Практическое руководство. Создание процедуры, возвращающей значение
+      href: how-to-create-a-procedure-that-returns-a-value.md
+    - name: Практическое руководство. Возврат значения из процедуры
+      href: how-to-return-a-value-from-a-procedure.md
+    - name: Практическое руководство. Вызов процедуры, возвращающей значение
+      href: how-to-call-a-procedure-that-returns-a-value.md
+  - name: Процедуры свойств
+    href: property-procedures.md
+    items:
+    - name: Автоматически реализуемые свойства
+      href: auto-implemented-properties.md
+    - name: Различия между свойствами и переменными
+      href: differences-between-properties-and-variables.md
+    - name: Практическое руководство. Создание свойства
+      href: how-to-create-a-property.md
+    - name: Практическое руководство. Объявление свойства со смешанным уровнем доступа
+      href: how-to-declare-a-property-with-mixed-access-levels.md
+    - name: Практическое руководство. Вызов процедуры свойства
+      href: how-to-call-a-property-procedure.md
+    - name: Практическое руководство. Объявление и вызов свойства по умолчанию
+      href: how-to-declare-and-call-a-default-property.md
+    - name: Практическое руководство. Запись значения в свойство
+      href: how-to-put-a-value-in-a-property.md
+    - name: Практическое руководство. Получение значения из свойства
+      href: how-to-get-a-value-from-a-property.md
+  - name: Процедуры операторов
+    href: operator-procedures.md
+    items:
+    - name: Практическое руководство. Определение оператора
+      href: how-to-define-an-operator.md
+    - name: Практическое руководство. Определение оператора преобразования
+      href: how-to-define-a-conversion-operator.md
+    - name: Практическое руководство. Вызов процедуры оператора
+      href: how-to-call-an-operator-procedure.md
+    - name: Практическое руководство. Использование класса, в котором определяются операторы
+      href: how-to-use-a-class-that-defines-operators.md
+  - name: Параметры и аргументы процедуры
+    href: procedure-parameters-and-arguments.md
+    items:
+    - name: Различия между параметрами и аргументами
+      href: differences-between-parameters-and-arguments.md
+    - name: Практическое руководство. Определение параметра для процедуры
+      href: how-to-define-a-parameter-for-a-procedure.md
+    - name: Практическое руководство. Передача аргументов в процедуру
+      href: how-to-pass-arguments-to-a-procedure.md
+    - name: Передача аргументов по значению и по ссылке
+      href: passing-arguments-by-value-and-by-reference.md
+      items:
+      - name: Различия между изменяемыми и неизменяемыми аргументами
+        href: differences-between-modifiable-and-nonmodifiable-arguments.md
+      - name: Различия между передачей аргумента по значению и по ссылке
+        href: differences-between-passing-an-argument-by-value-and-by-reference.md
+      - name: Практическое руководство. Изменение значения аргумента процедуры
+        href: how-to-change-the-value-of-a-procedure-argument.md
+      - name: Практическое руководство. Защита аргумента процедуры от изменений значения
+        href: how-to-protect-a-procedure-argument-against-value-changes.md
+      - name: Практическое руководство. Принудительная передача аргумента по значению
+        href: how-to-force-an-argument-to-be-passed-by-value.md
+    - name: Передача аргументов по позиции и по имени
+      href: passing-arguments-by-position-and-by-name.md
+    - name: Необязательные параметры
+      href: optional-parameters.md
+    - name: Массивы параметров
+      href: parameter-arrays.md
+  - name: Возвращаемые ссылочные значения
+    href: ref-return-values.md
+  - name: Рекурсивные процедуры
+    href: recursive-procedures.md
+  - name: Перегрузка процедур
+    href: procedure-overloading.md
+    items:
+    - name: Практическое руководство. Определение различных версий процедуры
+      href: how-to-define-multiple-versions-of-a-procedure.md
+    - name: Практическое руководство. Вызов перегруженной процедуры
+      href: how-to-call-an-overloaded-procedure.md
+    - name: Практическое руководство. Перегрузка процедуры, которая принимает необязательные параметры
+      href: how-to-overload-a-procedure-that-takes-optional-parameters.md
+    - name: Практическое руководство. Перегрузка процедуры, принимающей неопределенное число параметров
+      href: how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md
+    - name: Вопросы, связанные с перегрузкой процедур
+      href: considerations-in-overloading-procedures.md
+    - name: Overload Resolution
+      href: overload-resolution.md
+  - name: Рекомендации по устранению неполадок
+    href: troubleshooting-procedures.md
+  - name: Методы расширения
+    href: extension-methods.md
+    items:
+    - name: Практическое руководство. Написание метода расширения
+      href: how-to-write-an-extension-method.md
+    - name: Практическое руководство. Вызов метода расширения
+      href: how-to-call-an-extension-method.md
+  - name: Лямбда-выражения
+    href: lambda-expressions.md
+    items:
+    - name: Практическое руководство. Создание лямбда-выражения
+      href: how-to-create-a-lambda-expression.md
+  - name: Разделяемые методы
+    href: partial-methods.md
+ms.openlocfilehash: 56cc10bf082515dcf646f005522162b4c9e3bdf0
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469965"

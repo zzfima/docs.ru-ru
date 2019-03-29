@@ -1,0 +1,1659 @@
+items:
+- name: Отладка
+  href: index.md
+  items:
+  - name: Компонентные классы отладки
+    href: debugging-coclasses.md
+    items:
+    - name: Кокласс CorpubPublish
+      href: corpubpublish-coclass.md
+  - name: Интерфейсы отладки
+    href: debugging-interfaces.md
+    items:
+    - name: Интерфейс ICLRDataEnumMemoryRegions
+      href: iclrdataenummemoryregions-interface.md
+      items:
+      - name: Метод EnumMemoryRegions
+        href: iclrdataenummemoryregions-enummemoryregions-method.md
+    - name: Интерфейс ICLRDataEnumMemoryRegionsCallback
+      href: iclrdataenummemoryregionscallback-interface.md
+      items:
+      - name: Метод EnumMemoryRegion
+        href: iclrdataenummemoryregionscallback-enummemoryregion-method.md
+    - name: Интерфейс ICLRDataTarget
+      href: iclrdatatarget-interface.md
+      items:
+      - name: Метод GetCurrentThreadID
+        href: iclrdatatarget-getcurrentthreadid-method.md
+      - name: Метод GetImageBase
+        href: iclrdatatarget-getimagebase-method.md
+      - name: Метод GetMachineType
+        href: iclrdatatarget-getmachinetype-method.md
+      - name: Метод GetPointerSize
+        href: iclrdatatarget-getpointersize-method.md
+      - name: Метод GetThreadContext
+        href: iclrdatatarget-getthreadcontext-method.md
+      - name: Метод GetTLSValue
+        href: iclrdatatarget-gettlsvalue-method.md
+      - name: Метод ReadVirtual
+        href: iclrdatatarget-readvirtual-method.md
+      - name: Метод Request
+        href: iclrdatatarget-request-method.md
+      - name: Метод SetThreadContext
+        href: iclrdatatarget-setthreadcontext-method.md
+      - name: Метод SetTLSValue
+        href: iclrdatatarget-settlsvalue-method.md
+      - name: Метод WriteVirtual
+        href: iclrdatatarget-writevirtual-method.md
+    - name: Интерфейс ICLRDataTarget2
+      href: iclrdatatarget2-interface.md
+      items:
+      - name: Метод AllocVirtual
+        href: iclrdatatarget2-allocvirtual-method.md
+      - name: Метод FreeVirtual
+        href: iclrdatatarget2-freevirtual-method.md
+    - name: Интерфейс ICLRDataTarget3
+      href: iclrdatatarget3-interface.md
+      items:
+      - name: Метод GetExceptionRecord
+        href: iclrdatatarget3-getexceptionrecord-method.md
+      - name: Метод GetExceptionContextRecord
+        href: iclrdatatarget3-getexceptioncontextrecord-method.md
+      - name: Метод GetExceptionThreadID
+        href: iclrdatatarget3-getexceptionthreadid-method.md
+    - name: Интерфейс ICLRDebugging
+      href: iclrdebugging-interface.md
+      items:
+      - name: Метод OpenVirtualProcess
+        href: iclrdebugging-openvirtualprocess-method.md
+      - name: Метод CanUnloadNow
+        href: iclrdebugging-canunloadnow-method.md
+    - name: Интерфейс ICLRDebuggingLibraryProvider
+      href: iclrdebugginglibraryprovider-interface.md
+      items:
+      - name: Метод ProvideLibrary
+        href: iclrdebugginglibraryprovider-providelibrary-method.md
+    - name: Интерфейс ICLRMetadataLocator
+      href: iclrmetadatalocator-interface.md
+      items:
+      - name: Метод GetMetaData
+        href: iclrmetadatalocator-getmetadata-method.md
+    - name: Интерфейс ICorDebug
+      href: icordebug-interface.md
+      items:
+      - name: Метод CanLaunchOrAttach
+        href: icordebug-canlaunchorattach-method.md
+      - name: Метод CreateProcess
+        href: icordebug-createprocess-method.md
+      - name: Метод DebugActiveProcess
+        href: icordebug-debugactiveprocess-method.md
+      - name: Метод EnumerateProcesses
+        href: icordebug-enumerateprocesses-method.md
+      - name: Метод GetProcess
+        href: icordebug-getprocess-method.md
+      - name: Метод Initialize
+        href: icordebug-initialize-method.md
+      - name: Метод SetManagedHandler
+        href: icordebug-setmanagedhandler-method.md
+      - name: Метод SetUnmanagedHandler
+        href: icordebug-setunmanagedhandler-method.md
+      - name: Метод Terminate
+        href: icordebug-terminate-method.md
+    - name: Интерфейс ICorDebugAppDomain
+      href: icordebugappdomain-interface.md
+      items:
+      - name: Метод Attach
+        href: icordebugappdomain-attach-method.md
+      - name: Метод EnumerateAssemblies
+        href: icordebugappdomain-enumerateassemblies-method.md
+      - name: Метод EnumerateBreakpoints
+        href: icordebugappdomain-enumeratebreakpoints-method.md
+      - name: Метод EnumerateSteppers
+        href: icordebugappdomain-enumeratesteppers-method.md
+      - name: Метод GetID
+        href: icordebugappdomain-getid-method.md
+      - name: Метод GetModuleFromMetaDataInterface
+        href: icordebugappdomain-getmodulefrommetadatainterface-method.md
+      - name: Метод GetName
+        href: icordebugappdomain-getname-method.md
+      - name: Метод GetObject
+        href: icordebugappdomain-getobject-method.md
+      - name: Метод GetProcess
+        href: icordebugappdomain-getprocess-method.md
+      - name: Метод IsAttached
+        href: icordebugappdomain-isattached-method.md
+    - name: Интерфейс ICorDebugAppDomain2
+      href: icordebugappdomain2-interface.md
+      items:
+      - name: Метод GetArrayOrPointerType
+        href: icordebugappdomain2-getarrayorpointertype-method.md
+      - name: Метод GetFunctionPointerType
+        href: icordebugappdomain2-getfunctionpointertype-method.md
+    - name: Интерфейс ICorDebugAppDomain3
+      href: icordebugappdomain3-interface.md
+      items:
+      - name: Метод GetCachedWinRTTypes
+        href: icordebugappdomain3-getcachedwinrttypes-method.md
+      - name: Метод GetCachedWinRTTypesForIIDs
+        href: icordebugappdomain3-getcachedwinrttypesforiids-method.md
+    - name: Интерфейс ICorDebugAppDomain4
+      href: icordebugappdomain4-interface.md
+      items:
+      - name: Метод GetObjectForCCW
+        href: icordebugappdomain4-getobjectforccw-method.md
+    - name: Интерфейс ICorDebugAppDomainEnum
+      href: icordebugappdomainenum-interface.md
+      items:
+      - name: Метод Next
+        href: icordebugappdomainenum-next-method.md
+    - name: Интерфейс ICorDebugArrayValue
+      href: icordebugarrayvalue-interface.md
+      items:
+      - name: Метод GetBaseIndicies
+        href: icordebugarrayvalue-getbaseindicies-method.md
+      - name: Метод GetCount
+        href: icordebugarrayvalue-getcount-method.md
+      - name: Метод GetDimensions
+        href: icordebugarrayvalue-getdimensions-method.md
+      - name: Метод GetElement
+        href: icordebugarrayvalue-getelement-method.md
+      - name: Метод GetElementAtPosition
+        href: icordebugarrayvalue-getelementatposition-method.md
+      - name: Метод GetElementType
+        href: icordebugarrayvalue-getelementtype-method.md
+      - name: Метод GetRank
+        href: icordebugarrayvalue-getrank-method.md
+      - name: Метод HasBaseIndicies
+        href: icordebugarrayvalue-hasbaseindicies-method.md
+    - name: Интерфейс ICorDebugAssembly
+      href: icordebugassembly-interface.md
+      items:
+      - name: Метод EnumerateModules
+        href: icordebugassembly-enumeratemodules-method.md
+      - name: Метод GetAppDomain
+        href: icordebugassembly-getappdomain-method.md
+      - name: Метод GetCodeBase
+        href: icordebugassembly-getcodebase-method.md
+      - name: Метод GetName
+        href: icordebugassembly-getname-method.md
+      - name: Метод GetProcess
+        href: icordebugassembly-getprocess-method.md
+    - name: Интерфейс ICorDebugAssembly2
+      href: icordebugassembly2-interface.md
+      items:
+      - name: Метод IsFullyTrusted
+        href: icordebugassembly2-isfullytrusted-method.md
+    - name: Интерфейс ICorDebugAssembly3
+      href: icordebugassembly3-interface.md
+      items:
+      - name: Метод EnumerateContainedAssemblies
+        href: icordebugassembly3-enumeratecontainedassemblies-method.md
+      - name: Метод GetContainerAssembly
+        href: icordebugassembly3-getcontainerassembly-method.md
+    - name: Интерфейс ICorDebugAssemblyEnum
+      href: icordebugassemblyenum-interface.md
+      items:
+      - name: Метод Next
+        href: icordebugassemblyenum-next-method.md
+    - name: Интерфейс ICorDebugBlockingObjectEnum
+      href: icordebugblockingobjectenum-interface.md
+      items:
+      - name: Метод Next
+        href: icordebugblockingobjectenum-next-method.md
+    - name: Интерфейс ICorDebugBoxValue
+      href: icordebugboxvalue-interface.md
+      items:
+      - name: Метод GetObject
+        href: icordebugboxvalue-getobject-method.md
+    - name: Интерфейс ICorDebugBreakpoint
+      href: icordebugbreakpoint-interface.md
+      items:
+      - name: Метод Activate
+        href: icordebugbreakpoint-activate-method.md
+      - name: Метод IsActive
+        href: icordebugbreakpoint-isactive-method.md
+    - name: Интерфейс ICorDebugBreakpointEnum
+      href: icordebugbreakpointenum-interface.md
+      items:
+      - name: Метод Next
+        href: icordebugbreakpointenum-next-method.md
+    - name: Интерфейс ICorDebugChain
+      href: icordebugchain-interface.md
+      items:
+      - name: Метод EnumerateFrames
+        href: icordebugchain-enumerateframes-method.md
+      - name: Метод GetActiveFrame
+        href: icordebugchain-getactiveframe-method.md
+      - name: Метод GetCallee
+        href: icordebugchain-getcallee-method.md
+      - name: Метод GetCaller
+        href: icordebugchain-getcaller-method.md
+      - name: Метод GetContext
+        href: icordebugchain-getcontext-method.md
+      - name: Метод GetNext
+        href: icordebugchain-getnext-method.md
+      - name: Метод GetPrevious
+        href: icordebugchain-getprevious-method.md
+      - name: Метод GetReason
+        href: icordebugchain-getreason-method.md
+      - name: Метод GetRegisterSet
+        href: icordebugchain-getregisterset-method.md
+      - name: Метод GetStackRange
+        href: icordebugchain-getstackrange-method.md
+      - name: Метод GetThread
+        href: icordebugchain-getthread-method.md
+      - name: Метод IsManaged
+        href: icordebugchain-ismanaged-method.md
+    - name: Интерфейс ICorDebugChainEnum
+      href: icordebugchainenum-interface.md
+      items:
+      - name: Метод Next
+        href: icordebugchainenum-next-method.md
+    - name: Интерфейс ICorDebugClass
+      href: icordebugclass-interface.md
+      items:
+      - name: Метод GetModule
+        href: icordebugclass-getmodule-method.md
+      - name: Метод GetStaticFieldValue
+        href: icordebugclass-getstaticfieldvalue-method.md
+      - name: Метод GetToken
+        href: icordebugclass-gettoken-method.md
+    - name: Интерфейс ICorDebugClass2
+      href: icordebugclass2-interface.md
+      items:
+      - name: Метод GetParameterizedType
+        href: icordebugclass2-getparameterizedtype-method.md
+      - name: Метод SetJMCStatus
+        href: icordebugclass2-setjmcstatus-method.md
+    - name: Интерфейс ICorDebugCode
+      href: icordebugcode-interface1.md
+      items:
+      - name: Метод CreateBreakpoint
+        href: icordebugcode-createbreakpoint-method.md
+      - name: Метод GetAddress
+        href: icordebugcode-getaddress-method.md
+      - name: Метод GetCode
+        href: icordebugcode-getcode-method.md
+      - name: Метод GetEnCRemapSequencePoints
+        href: icordebugcode-getencremapsequencepoints-method.md
+      - name: Метод GetFunction
+        href: icordebugcode-getfunction-method.md
+      - name: Метод GetILToNativeMapping
+        href: icordebugcode-getiltonativemapping-method.md
+      - name: Метод GetSize
+        href: icordebugcode-getsize-method.md
+      - name: Метод GetVersionNumber
+        href: icordebugcode-getversionnumber-method.md
+      - name: Метод IsIL
+        href: icordebugcode-isil-method.md
+    - name: Интерфейс ICorDebugCode2
+      href: icordebugcode2-interface.md
+      items:
+      - name: Метод GetCodeChunks
+        href: icordebugcode2-getcodechunks-method.md
+      - name: Метод GetCompilerFlags
+        href: icordebugcode2-getcompilerflags-method.md
+    - name: Интерфейс ICorDebugCode3
+      href: icordebugcode3-interface.md
+      items:
+      - name: Метод GetReturnValueLiveOffset
+        href: icordebugcode3-getreturnvalueliveoffset-method.md
+    - name: Интерфейс ICorDebugCode4
+      href: icordebugcode4-interface.md
+      items:
+      - name: Метод EnumerateVariableHomes
+        href: icordebugcode4-enumeratevariablehomes-method.md
+    - name: Интерфейс ICorDebugCodeEnum
+      href: icordebugcodeenum-interface.md
+      items:
+      - name: Метод Next
+        href: icordebugcodeenum-next-method.md
+    - name: Интерфейс ICorDebugComObjectValue Interface
+      href: icordebugcomobjectvalue-interface.md
+      items:
+      - name: Метод GetCachedInterfacePointers
+        href: icordebugcomobjectvalue-getcachedinterfacepointers-method.md
+      - name: Метод GetCachedInterfaceTypes
+        href: icordebugcomobjectvalue-getcachedinterfacetypes-method.md
+    - name: Интерфейс ICorDebugContext
+      href: icordebugcontext-interface.md
+    - name: Интерфейс ICorDebugController
+      href: icordebugcontroller-interface.md
+      items:
+      - name: Метод CanCommitChanges
+        href: icordebugcontroller-cancommitchanges-method.md
+      - name: Метод CommitChanges
+        href: icordebugcontroller-commitchanges-method.md
+      - name: Метод Continue
+        href: icordebugcontroller-continue-method.md
+      - name: Метод Detach
+        href: icordebugcontroller-detach-method.md
+      - name: Метод EnumerateThreads
+        href: icordebugcontroller-enumeratethreads-method.md
+      - name: Метод HasQueuedCallbacks
+        href: icordebugcontroller-hasqueuedcallbacks-method.md
+      - name: Метод IsRunning
+        href: icordebugcontroller-isrunning-method.md
+      - name: Метод SetAllThreadsDebugState
+        href: icordebugcontroller-setallthreadsdebugstate-method.md
+      - name: Метод Stop
+        href: icordebugcontroller-stop-method.md
+      - name: Метод Terminate
+        href: icordebugcontroller-terminate-method.md
+    - name: Интерфейс ICorDebugDataTarget
+      href: icordebugdatatarget-interface.md
+      items:
+      - name: Метод GetPlatform
+        href: icordebugdatatarget-getplatform-method.md
+      - name: Метод ReadVirtual
+        href: icordebugdatatarget-readvirtual-method.md
+      - name: Метод GetThreadContext
+        href: icordebugdatatarget-getthreadcontext-method.md
+    - name: Интерфейс ICorDebugDataTarget2
+      href: icordebugdatatarget2-interface.md
+      items:
+      - name: Метод CreateVirtualUnwinder
+        href: icordebugdatatarget2-createvirtualunwinder-method.md
+      - name: Метод EnumerateThreadIDs
+        href: icordebugdatatarget2-enumeratethreadids-method.md
+      - name: Метод GetImageFromPointer
+        href: icordebugdatatarget2-getimagefrompointer-method.md
+      - name: Метод GetImageLocation
+        href: icordebugdatatarget2-getimagelocation-method.md
+      - name: Метод GetSymbolProviderForImage
+        href: icordebugdatatarget2-getsymbolproviderforimage-method.md
+    - name: Интерфейс ICorDebugDataTarget3
+      href: icordebugdatatarget3-interface.md
+      items:
+      - name: Метод GetLoadedModules
+        href: icordebugdatatarget3-getloadedmodules-method.md
+    - name: Интерфейс ICorDebugDebugEvent
+      href: icordebugdebugevent-interface.md
+      items:
+      - name: Метод GetEventKind
+        href: icordebugdebugevent-geteventkind-method.md
+      - name: Метод GetThread
+        href: icordebugdebugevent-getthread-method.md
+    - name: Интерфейс ICorDebugEditAndContinueErrorInfo
+      href: icordebugeditandcontinueerrorinfo-interface.md
+      items:
+      - name: Метод GetErrorCode
+        href: icordebugeditandcontinueerrorinfo-geterrorcode-method.md
+      - name: Метод GetModule
+        href: icordebugeditandcontinueerrorinfo-getmodule-method.md
+      - name: Метод GetString
+        href: icordebugeditandcontinueerrorinfo-getstring-method.md
+      - name: Метод GetToken
+        href: icordebugeditandcontinueerrorinfo-gettoken-method.md
+    - name: Интерфейс ICorDebugEditAndContinueSnapshot
+      href: icordebugeditandcontinuesnapshot-interface.md
+      items:
+      - name: Метод CopyMetaData
+        href: icordebugeditandcontinuesnapshot-copymetadata-method.md
+      - name: Метод GetMvid
+        href: icordebugeditandcontinuesnapshot-getmvid-method.md
+      - name: Метод GetRoDataRVA
+        href: icordebugeditandcontinuesnapshot-getrodatarva-method.md
+      - name: Метод GetRwDataRVA
+        href: icordebugeditandcontinuesnapshot-getrwdatarva-method.md
+      - name: Метод SetILMap
+        href: icordebugeditandcontinuesnapshot-setilmap-method.md
+      - name: Метод SetPEBytes
+        href: icordebugeditandcontinuesnapshot-setpebytes-method.md
+      - name: Метод SetPESymbolBytes
+        href: icordebugeditandcontinuesnapshot-setpesymbolbytes-method.md
+    - name: Интерфейс ICorDebugEnum
+      href: icordebugenum-interface1.md
+      items:
+      - name: Метод Clone
+        href: icordebugenum-clone-method.md
+      - name: Метод GetCount
+        href: icordebugenum-getcount-method.md
+      - name: Метод Reset
+        href: icordebugenum-reset-method.md
+      - name: Метод Skip
+        href: icordebugenum-skip-method.md
+    - name: Интерфейс ICorDebugErrorInfoEnum
+      href: icordebugerrorinfoenum-interface.md
+      items:
+      - name: Метод Next
+        href: icordebugerrorinfoenum-next-method.md
+    - name: Интерфейс ICorDebugEval
+      href: icordebugeval-interface.md
+      items:
+      - name: Метод Abort
+        href: icordebugeval-abort-method.md
+      - name: Метод CallFunction
+        href: icordebugeval-callfunction-method.md
+      - name: Метод CreateValue
+        href: icordebugeval-createvalue-method.md
+      - name: Метод GetResult
+        href: icordebugeval-getresult-method.md
+      - name: Метод GetThread
+        href: icordebugeval-getthread-method.md
+      - name: Метод IsActive
+        href: icordebugeval-isactive-method.md
+      - name: Метод NewArray
+        href: icordebugeval-newarray-method.md
+      - name: Метод NewObject
+        href: icordebugeval-newobject-method.md
+      - name: Метод NewObjectNoConstructor
+        href: icordebugeval-newobjectnoconstructor-method.md
+      - name: Метод NewString
+        href: icordebugeval-newstring-method.md
+    - name: Интерфейс ICorDebugEval2
+      href: icordebugeval2-interface.md
+      items:
+      - name: Метод CallParameterizedFunction
+        href: icordebugeval2-callparameterizedfunction-method.md
+      - name: Метод CreateValueForType
+        href: icordebugeval2-createvaluefortype-method.md
+      - name: Метод NewParameterizedArray
+        href: icordebugeval2-newparameterizedarray-method.md
+      - name: Метод NewParameterizedObject
+        href: icordebugeval2-newparameterizedobject-method.md
+      - name: Метод NewParameterizedObjectNoConstructor
+        href: icordebugeval2-newparameterizedobjectnoconstructor-method.md
+      - name: Метод NewStringWithLength
+        href: icordebugeval2-newstringwithlength-method.md
+      - name: Метод RudeAbort
+        href: icordebugeval2-rudeabort-method.md
+    - name: Интерфейс ICorDebugExceptionDebugEvent
+      href: icordebugexceptiondebugevent-interface.md
+      items:
+      - name: Метод GetFlags
+        href: icordebugexceptiondebugevent-getflags-method.md
+      - name: Метод GetNativeIP
+        href: icordebugexceptiondebugevent-getnativeip-method.md
+      - name: Метод GetStackPointer
+        href: icordebugexceptiondebugevent-getstackpointer-method.md
+    - name: Интерфейс ICorDebugExceptionObjectCallStackEnum
+      href: icordebugexceptionobjectcallstackenum-interface.md
+      items:
+      - name: Метод Next
+        href: icordebugexceptionobjectcallstackenum-next-method.md
+    - name: Интерфейс ICorDebugExceptionObjectValue
+      href: icordebugexceptionobjectvalue-interface.md
+      items:
+      - name: Метод EnumerateExceptionCallStack
+        href: icordebugexceptionobjectvalue-enumerateexceptioncallstack-method.md
+    - name: Интерфейс ICorDebugFrame
+      href: icordebugframe-interface.md
+      items:
+      - name: Метод CreateStepper
+        href: icordebugframe-createstepper-method.md
+      - name: Метод GetCallee
+        href: icordebugframe-getcallee-method.md
+      - name: Метод GetCaller
+        href: icordebugframe-getcaller-method.md
+      - name: Метод GetChain
+        href: icordebugframe-getchain-method.md
+      - name: Метод GetCode
+        href: icordebugframe-getcode-method.md
+      - name: Метод GetFunction
+        href: icordebugframe-getfunction-method.md
+      - name: Метод GetFunctionToken
+        href: icordebugframe-getfunctiontoken-method.md
+      - name: Метод GetStackRange
+        href: icordebugframe-getstackrange-method.md
+    - name: Интерфейс ICorDebugFrameEnum
+      href: icordebugframeenum-interface.md
+      items:
+      - name: Метод Next
+        href: icordebugframeenum-next-method.md
+    - name: Интерфейс ICorDebugFunction
+      href: icordebugfunction-interface1.md
+      items:
+      - name: Метод CreateBreakpoint
+        href: icordebugfunction-createbreakpoint-method.md
+      - name: Метод GetClass
+        href: icordebugfunction-getclass-method.md
+      - name: Метод GetCurrentVersionNumber
+        href: icordebugfunction-getcurrentversionnumber-method.md
+      - name: Метод GetILCode
+        href: icordebugfunction-getilcode-method.md
+      - name: Метод GetLocalVarSigToken
+        href: icordebugfunction-getlocalvarsigtoken-method.md
+      - name: Метод GetModule
+        href: icordebugfunction-getmodule-method.md
+      - name: Метод GetNativeCode
+        href: icordebugfunction-getnativecode-method.md
+      - name: Метод GetToken
+        href: icordebugfunction-gettoken-method.md
+    - name: Интерфейс ICorDebugFunction2
+      href: icordebugfunction2-interface.md
+      items:
+      - name: Метод EnumerateNativeCode
+        href: icordebugfunction2-enumeratenativecode-method.md
+      - name: Метод GetJMCStatus
+        href: icordebugfunction2-getjmcstatus-method.md
+      - name: Метод GetVersionNumber
+        href: icordebugfunction2-getversionnumber-method.md
+      - name: Метод SetJMCStatus
+        href: icordebugfunction2-setjmcstatus-method.md
+    - name: Интерфейс ICorDebugFunction3
+      href: icordebugfunction3-interface.md
+      items:
+      - name: Метод GetActiveReJitRequestILCode
+        href: icordebugfunction3-getactiverejitrequestilcode-method.md
+    - name: Интерфейс ICorDebugFunctionBreakpoint
+      href: icordebugfunctionbreakpoint-interface.md
+      items:
+      - name: Метод GetFunction
+        href: icordebugfunctionbreakpoint-getfunction-method.md
+      - name: Метод GetOffset
+        href: icordebugfunctionbreakpoint-getoffset-method.md
+    - name: Интерфейс ICorDebugGCReferenceEnum
+      href: icordebuggcreferenceenum-interface.md
+      items:
+      - name: Метод Next
+        href: icordebuggcreferenceenum-next-method.md
+    - name: Интерфейс ICorDebugGenericValue
+      href: icordebuggenericvalue-interface.md
+      items:
+      - name: Метод GetValue
+        href: icordebuggenericvalue-getvalue-method.md
+      - name: Метод SetValue
+        href: icordebuggenericvalue-setvalue-method.md
+    - name: Интерфейс ICorDebugGuidToTypeEnum
+      href: icordebugguidtotypeenum-interface.md
+      items:
+      - name: Метод Next
+        href: icordebugguidtotypeenum-next-method.md
+    - name: Интерфейс ICorDebugHandleValue
+      href: icordebughandlevalue-interface.md
+      items:
+      - name: Метод Dispose
+        href: icordebughandlevalue-dispose-method.md
+      - name: Метод GetHandleType
+        href: icordebughandlevalue-gethandletype-method.md
+    - name: Интерфейс ICorDebugHeapEnum
+      href: icordebugheapenum-interface.md
+      items:
+      - name: Метод Next
+        href: icordebugheapenum-next-method.md
+    - name: Интерфейс ICorDebugHeapSegmentEnum
+      href: icordebugheapsegmentenum-interface.md
+      items:
+      - name: Метод Next
+        href: icordebugheapsegmentenum-next-method.md
+    - name: Интерфейс ICorDebugHeapValue
+      href: icordebugheapvalue-interface.md
+      items:
+      - name: Метод CreateRelocBreakpoint
+        href: icordebugheapvalue-createrelocbreakpoint-method.md
+      - name: Метод IsValid
+        href: icordebugheapvalue-isvalid-method.md
+    - name: Интерфейс ICorDebugHeapValue2
+      href: icordebugheapvalue2-interface1.md
+      items:
+      - name: Метод CreateHandle
+        href: icordebugheapvalue2-createhandle-method.md
+    - name: Интерфейс ICorDebugHeapValue3
+      href: icordebugheapvalue3-interface.md
+      items:
+      - name: Метод GetThreadOwningMonitorLock
+        href: icordebugheapvalue3-getthreadowningmonitorlock-method.md
+      - name: Метод GetMonitorEventWaitList
+        href: icordebugheapvalue3-getmonitoreventwaitlist-method.md
+    - name: Интерфейс ICorDebugILCode
+      href: icordebugilcode-interface.md
+      items:
+      - name: Метод GetEHClauses
+        href: icordebugilcode-getehclauses-method.md
+    - name: Интерфейс ICorDebugILCode2
+      href: icordebugilcode2-interface.md
+      items:
+      - name: Метод GetInstrumentedILMap
+        href: icordebugilcode2-getinstrumentedilmap-method.md
+      - name: Метод GetLocalVarSigToken
+        href: icordebugilcode2-getlocalvarsigtoken-method.md
+    - name: Интерфейс ICorDebugILFrame
+      href: icordebugilframe-interface.md
+      items:
+      - name: Метод CanSetIP
+        href: icordebugilframe-cansetip-method.md
+      - name: Метод EnumerateArguments
+        href: icordebugilframe-enumeratearguments-method.md
+      - name: Метод EnumerateLocalVariables
+        href: icordebugilframe-enumeratelocalvariables-method.md
+      - name: Метод GetArgument
+        href: icordebugilframe-getargument-method.md
+      - name: Метод GetIP
+        href: icordebugilframe-getip-method.md
+      - name: Метод GetLocalVariable
+        href: icordebugilframe-getlocalvariable-method.md
+      - name: Метод GetStackDepth
+        href: icordebugilframe-getstackdepth-method.md
+      - name: Метод GetStackValue
+        href: icordebugilframe-getstackvalue-method.md
+      - name: Метод SetIP
+        href: icordebugilframe-setip-method.md
+    - name: Интерфейс ICorDebugILFrame2
+      href: icordebugilframe2-interface.md
+      items:
+      - name: Метод EnumerateTypeParameters
+        href: icordebugilframe2-enumeratetypeparameters-method.md
+      - name: Метод RemapFunction
+        href: icordebugilframe2-remapfunction-method.md
+    - name: Интерфейс ICorDebugILFrame3
+      href: icordebugilframe3-interface.md
+      items:
+      - name: Метод GetReturnValueForILOffset
+        href: icordebugilframe3-getreturnvalueforiloffset-method.md
+    - name: Интерфейс ICorDebugILFrame4
+      href: icordebugilframe4-interface.md
+      items:
+      - name: Метод EnumerateLocalVariablesEx
+        href: icordebugilframe4-enumeratelocalvariablesex-method.md
+      - name: Метод GetCodeEx
+        href: icordebugilframe4-getcodeex-method.md
+      - name: Метод GetLocalVariableEx
+        href: icordebugilframe4-getlocalvariableex-method.md
+    - name: Интерфейс ICorDebugInstanceFieldSymbol
+      href: icordebuginstancefieldsymbol-interface.md
+      items:
+      - name: Метод GetName
+        href: icordebuginstancefieldsymbol-getname-method.md
+      - name: Метод GetOffset
+        href: icordebuginstancefieldsymbol-getoffset-method.md
+      - name: Метод GetSize
+        href: icordebuginstancefieldsymbol-getsize-method.md
+    - name: Интерфейс ICorDebugInternalFrame
+      href: icordebuginternalframe-interface.md
+      items:
+      - name: Метод GetFrameType
+        href: icordebuginternalframe-getframetype-method.md
+    - name: Интерфейс ICorDebugInternalFrame2
+      href: icordebuginternalframe2-interface.md
+      items:
+      - name: Метод GetFrameAddress
+        href: icordebuginternalframe2-getframeaddress-method.md
+      - name: Метод IsCloserToLeaf
+        href: icordebuginternalframe2-isclosertoleaf-method.md
+    - name: Интерфейс ICorDebugLoadedModule
+      href: icordebugloadedmodule-interface.md
+      items:
+      - name: Метод GetBaseAddress
+        href: icordebugloadedmodule-getbaseaddress-method.md
+      - name: Метод GetName
+        href: icordebugloadedmodule-getname-method.md
+      - name: Метод GetSize
+        href: icordebugloadedmodule-getsize-method.md
+    - name: Интерфейс ICorDebugManagedCallback
+      href: icordebugmanagedcallback-interface.md
+      items:
+      - name: Метод Break
+        href: icordebugmanagedcallback-break-method.md
+      - name: Метод Breakpoint
+        href: icordebugmanagedcallback-breakpoint-method.md
+      - name: Метод BreakpointSetError
+        href: icordebugmanagedcallback-breakpointseterror-method.md
+      - name: Метод ControlCTrap
+        href: icordebugmanagedcallback-controlctrap-method.md
+      - name: Метод CreateAppDomain
+        href: icordebugmanagedcallback-createappdomain-method.md
+      - name: Метод CreateProcess
+        href: icordebugmanagedcallback-createprocess-method.md
+      - name: Метод CreateThread
+        href: icordebugmanagedcallback-createthread-method.md
+      - name: Метод DebuggerError
+        href: icordebugmanagedcallback-debuggererror-method.md
+      - name: Метод EditAndContinueRemap
+        href: icordebugmanagedcallback-editandcontinueremap-method.md
+      - name: Метод EvalComplete
+        href: icordebugmanagedcallback-evalcomplete-method.md
+      - name: Метод EvalException
+        href: icordebugmanagedcallback-evalexception-method.md
+      - name: Метод Exception
+        href: icordebugmanagedcallback-exception-method.md
+      - name: Метод ExitAppDomain
+        href: icordebugmanagedcallback-exitappdomain-method.md
+      - name: Метод ExitProcess
+        href: icordebugmanagedcallback-exitprocess-method.md
+      - name: Метод ExitThread
+        href: icordebugmanagedcallback-exitthread-method.md
+      - name: Метод LoadAssembly
+        href: icordebugmanagedcallback-loadassembly-method.md
+      - name: Метод LoadClass
+        href: icordebugmanagedcallback-loadclass-method.md
+      - name: Метод LoadModule
+        href: icordebugmanagedcallback-loadmodule-method.md
+      - name: Метод LogMessage
+        href: icordebugmanagedcallback-logmessage-method.md
+      - name: Метод LogSwitch
+        href: icordebugmanagedcallback-logswitch-method.md
+      - name: Метод NameChange
+        href: icordebugmanagedcallback-namechange-method.md
+      - name: Метод StepComplete
+        href: icordebugmanagedcallback-stepcomplete-method.md
+      - name: Метод UnloadAssembly
+        href: icordebugmanagedcallback-unloadassembly-method.md
+      - name: Метод UnloadClass
+        href: icordebugmanagedcallback-unloadclass-method.md
+      - name: Метод UnloadModule
+        href: icordebugmanagedcallback-unloadmodule-method.md
+      - name: Метод UpdateModuleSymbols
+        href: icordebugmanagedcallback-updatemodulesymbols-method.md
+    - name: Интерфейс ICorDebugManagedCallback2
+      href: icordebugmanagedcallback2-interface.md
+      items:
+      - name: Метод ChangeConnection
+        href: icordebugmanagedcallback2-changeconnection-method.md
+      - name: Метод CreateConnection
+        href: icordebugmanagedcallback2-createconnection-method.md
+      - name: Метод DestroyConnection
+        href: icordebugmanagedcallback2-destroyconnection-method.md
+      - name: Метод Exception
+        href: icordebugmanagedcallback2-exception-method.md
+      - name: Метод ExceptionUnwind
+        href: icordebugmanagedcallback2-exceptionunwind-method.md
+      - name: Метод FunctionRemapComplete
+        href: icordebugmanagedcallback2-functionremapcomplete-method.md
+      - name: Метод FunctionRemapOpportunity
+        href: icordebugmanagedcallback2-functionremapopportunity-method.md
+      - name: Метод MDANotification
+        href: icordebugmanagedcallback2-mdanotification-method.md
+    - name: Интерфейс ICorDebugManagedCallback3
+      href: icordebugmanagedcallback3-interface.md
+      items:
+      - name: Метод CustomNotification
+        href: icordebugmanagedcallback3-customnotification-method.md
+    - name: Интерфейс ICorDebugMDA
+      href: icordebugmda-interface.md
+      items:
+      - name: Метод GetDescription
+        href: icordebugmda-getdescription-method.md
+      - name: Метод GetFlags
+        href: icordebugmda-getflags-method.md
+      - name: Метод GetName
+        href: icordebugmda-getname-method.md
+      - name: Метод GetOSThreadId
+        href: icordebugmda-getosthreadid-method.md
+      - name: Метод GetXML
+        href: icordebugmda-getxml-method.md
+    - name: Интерфейс ICorDebugMemoryBuffer
+      href: icordebugmemorybuffer-interface.md
+      items:
+      - name: Метод GetSize
+        href: icordebugmemorybuffer-getsize-method.md
+      - name: Метод GetStartAddress
+        href: icordebugmemorybuffer-getstartaddress-method.md
+    - name: Интерфейс ICorDebugMergedAssemblyRecord
+      href: icordebugmergedassemblyrecord-interface.md
+      items:
+      - name: Метод GetCulture
+        href: icordebugmergedassemblyrecord-getculture-method.md
+      - name: Метод GetIndex
+        href: icordebugmergedassemblyrecord-getindex-method.md
+      - name: Метод GetPublicKey
+        href: icordebugmergedassemblyrecord-getpublickey-method.md
+      - name: Метод GetPublicKeyToken
+        href: icordebugmergedassemblyrecord-getpublickeytoken-method.md
+      - name: Метод GetSimpleName
+        href: icordebugmergedassemblyrecord-getsimplename-method.md
+      - name: Метод GetVersion
+        href: icordebugmergedassemblyrecord-getversion-method.md
+    - name: Интерфейс ICorDebugMetaDataLocator
+      href: icordebugmetadatalocator-interface.md
+      items:
+      - name: Метод GetMetaData
+        href: icordebugmetadatalocator-getmetadata-method.md
+    - name: Интерфейс ICorDebugModule
+      href: icordebugmodule-interface.md
+      items:
+      - name: Метод CreateBreakpoint
+        href: icordebugmodule-createbreakpoint-method.md
+      - name: Метод EnableClassLoadCallbacks
+        href: icordebugmodule-enableclassloadcallbacks-method.md
+      - name: Метод EnableJITDebugging
+        href: icordebugmodule-enablejitdebugging-method.md
+      - name: Метод GetAssembly
+        href: icordebugmodule-getassembly-method.md
+      - name: Метод GetBaseAddress
+        href: icordebugmodule-getbaseaddress-method.md
+      - name: Метод GetClassFromToken
+        href: icordebugmodule-getclassfromtoken-method.md
+      - name: Метод GetEditAndContinueSnapshot
+        href: icordebugmodule-geteditandcontinuesnapshot-method.md
+      - name: Метод GetFunctionFromRVA
+        href: icordebugmodule-getfunctionfromrva-method.md
+      - name: Метод GetFunctionFromToken
+        href: icordebugmodule-getfunctionfromtoken-method.md
+      - name: Метод GetGlobalVariableValue
+        href: icordebugmodule-getglobalvariablevalue-method.md
+      - name: Метод GetMetaDataInterface
+        href: icordebugmodule-getmetadatainterface-method.md
+      - name: Метод GetName
+        href: icordebugmodule-getname-method.md
+      - name: Метод GetProcess
+        href: icordebugmodule-getprocess-method.md
+      - name: Метод GetSize
+        href: icordebugmodule-getsize-method.md
+      - name: Метод GetToken
+        href: icordebugmodule-gettoken-method.md
+      - name: Метод IsDynamic
+        href: icordebugmodule-isdynamic-method.md
+      - name: Метод IsInMemory
+        href: icordebugmodule-isinmemory-method.md
+    - name: Интерфейс ICorDebugModule2
+      href: icordebugmodule2-interface.md
+      items:
+      - name: Метод ApplyChanges
+        href: icordebugmodule2-applychanges-method.md
+      - name: Метод GetJITCompilerFlags
+        href: icordebugmodule2-getjitcompilerflags-method.md
+      - name: Метод ResolveAssembly
+        href: icordebugmodule2-resolveassembly-method.md
+      - name: Метод SetJITCompilerFlags
+        href: icordebugmodule2-setjitcompilerflags-method.md
+      - name: Метод SetJMCStatus
+        href: icordebugmodule2-setjmcstatus-method.md
+    - name: Интерфейс ICorDebugModule3
+      href: icordebugmodule3-interface.md
+      items:
+      - name: Метод ICorDebugModule3::CreateReaderForInMemorySymbols
+        href: icordebugmodule3-createreaderforinmemorysymbols-method.md
+    - name: Интерфейс ICorDebugModuleBreakpoint
+      href: icordebugmodulebreakpoint-interface.md
+      items:
+      - name: Метод GetModule
+        href: icordebugmodulebreakpoint-getmodule-method.md
+    - name: Интерфейс ICorDebugModuleDebugEvent
+      href: icordebugmoduledebugevent-interface.md
+      items:
+      - name: Метод GetModule
+        href: icordebugmoduledebugevent-getmodule-method.md
+    - name: Интерфейс ICorDebugModuleEnum
+      href: icordebugmoduleenum-interface.md
+      items:
+      - name: Метод Next
+        href: icordebugmoduleenum-next-method.md
+    - name: Интерфейс ICorDebugMutableDataTarget
+      href: icordebugmutabledatatarget-interface.md
+      items:
+      - name: Метод ContinueStatusChanged
+        href: icordebugmutabledatatarget-continuestatuschanged-method.md
+      - name: Метод SetThreadContext
+        href: icordebugmutabledatatarget-setthreadcontext-method.md
+      - name: Метод WriteVirtual
+        href: icordebugmutabledatatarget-writevirtual-method.md
+    - name: Интерфейс ICorDebugNativeFrame
+      href: icordebugnativeframe-interface.md
+      items:
+      - name: Метод CanSetIP
+        href: icordebugnativeframe-cansetip-method.md
+      - name: Метод GetIP
+        href: icordebugnativeframe-getip-method.md
+      - name: Метод GetLocalDoubleRegisterValue
+        href: icordebugnativeframe-getlocaldoubleregistervalue-method.md
+      - name: Метод GetLocalMemoryRegisterValue
+        href: icordebugnativeframe-getlocalmemoryregistervalue-method.md
+      - name: Метод GetLocalMemoryValue
+        href: icordebugnativeframe-getlocalmemoryvalue-method.md
+      - name: Метод GetLocalRegisterMemoryValue
+        href: icordebugnativeframe-getlocalregistermemoryvalue-method.md
+      - name: Метод GetLocalRegisterValue
+        href: icordebugnativeframe-getlocalregistervalue-method.md
+      - name: Метод GetRegisterSet
+        href: icordebugnativeframe-getregisterset-method.md
+      - name: Метод SetIP
+        href: icordebugnativeframe-setip-method.md
+    - name: Интерфейс ICorDebugNativeFrame2
+      href: icordebugnativeframe2-interface.md
+      items:
+      - name: Метод IsChild
+        href: icordebugnativeframe2-ischild-method.md
+      - name: Метод IsMatchingParentFrame
+        href: icordebugnativeframe2-ismatchingparentframe-method.md
+      - name: Метод GetStackParameterSize
+        href: icordebugnativeframe2-getstackparametersize-method.md
+    - name: Интерфейс ICorDebugObjectEnum
+      href: icordebugobjectenum-interface.md
+      items:
+      - name: Метод Next
+        href: icordebugobjectenum-next-method.md
+    - name: Интерфейс ICorDebugObjectValue
+      href: icordebugobjectvalue-interface.md
+      items:
+      - name: Метод GetClass
+        href: icordebugobjectvalue-getclass-method.md
+      - name: Метод GetContext
+        href: icordebugobjectvalue-getcontext-method.md
+      - name: Метод GetFieldValue
+        href: icordebugobjectvalue-getfieldvalue-method.md
+      - name: Метод GetManagedCopy
+        href: icordebugobjectvalue-getmanagedcopy-method.md
+      - name: Метод GetVirtualMethod
+        href: icordebugobjectvalue-getvirtualmethod-method.md
+      - name: Метод IsValueClass
+        href: icordebugobjectvalue-isvalueclass-method.md
+      - name: Метод SetFromManagedCopy
+        href: icordebugobjectvalue-setfrommanagedcopy-method.md
+    - name: Интерфейс ICorDebugObjectValue2
+      href: icordebugobjectvalue2-interface.md
+      items:
+      - name: Метод GetVirtualMethodAndType
+        href: icordebugobjectvalue2-getvirtualmethodandtype-method.md
+    - name: Интерфейс ICorDebugProcess
+      href: icordebugprocess-interface.md
+      items:
+      - name: Метод ClearCurrentException
+        href: icordebugprocess-clearcurrentexception-method.md
+      - name: Метод EnableLogMessages
+        href: icordebugprocess-enablelogmessages-method.md
+      - name: Метод EnumerateAppDomains
+        href: icordebugprocess-enumerateappdomains-method.md
+      - name: Метод EnumerateObjects
+        href: icordebugprocess-enumerateobjects-method.md
+      - name: Метод GetHandle
+        href: icordebugprocess-gethandle-method.md
+      - name: Метод GetHelperThreadID
+        href: icordebugprocess-gethelperthreadid-method.md
+      - name: Метод GetID
+        href: icordebugprocess-getid-method.md
+      - name: Метод GetObject
+        href: icordebugprocess-getobject-method.md
+      - name: Метод GetThread
+        href: icordebugprocess-getthread-method.md
+      - name: Метод GetThreadContext
+        href: icordebugprocess-getthreadcontext-method.md
+      - name: Метод IsOSSuspended
+        href: icordebugprocess-isossuspended-method.md
+      - name: Метод IsTransitionStub
+        href: icordebugprocess-istransitionstub-method.md
+      - name: Метод ModifyLogSwitch
+        href: icordebugprocess-modifylogswitch-method.md
+      - name: Метод ReadMemory
+        href: icordebugprocess-readmemory-method.md
+      - name: Метод SetThreadContext
+        href: icordebugprocess-setthreadcontext-method.md
+      - name: Метод ThreadForFiberCookie
+        href: icordebugprocess-threadforfibercookie-method.md
+      - name: Метод WriteMemory
+        href: icordebugprocess-writememory-method.md
+    - name: Интерфейс ICorDebugProcess2
+      href: icordebugprocess2-interface1.md
+      items:
+      - name: Метод ClearUnmanagedBreakpoint
+        href: icordebugprocess2-clearunmanagedbreakpoint-method.md
+      - name: Метод GetDesiredNGENCompilerFlags
+        href: icordebugprocess2-getdesiredngencompilerflags-method.md
+      - name: Метод GetReferenceValueFromGCHandle
+        href: icordebugprocess2-getreferencevaluefromgchandle-method.md
+      - name: Метод GetThreadForTaskID
+        href: icordebugprocess2-getthreadfortaskid-method.md
+      - name: Метод GetVersion
+        href: icordebugprocess2-getversion-method.md
+      - name: Метод SetDesiredNGENCompilerFlags
+        href: icordebugprocess2-setdesiredngencompilerflags-method.md
+      - name: Метод SetUnmanagedBreakpoint
+        href: icordebugprocess2-setunmanagedbreakpoint-method.md
+    - name: Интерфейс ICorDebugProcess3
+      href: icordebugprocess3-interface.md
+      items:
+      - name: Метод SetEnableCustomNotification
+        href: icordebugprocess3-setenablecustomnotification-method.md
+    - name: Интерфейс ICorDebugProcess4
+      href: icordebugprocess4-interface.md
+      items:
+      - name: Метод ProcessStateChanged
+        href: icordebugprocess4-processstatechanged-method.md
+    - name: Интерфейс ICorDebugProcess5
+      href: icordebugprocess5-interface.md
+      items:
+      - name: Метод EnableNGenPolicy
+        href: icordebugprocess5-enablengenpolicy-method.md
+      - name: Метод EnumerateGCReferences
+        href: icordebugprocess5-enumerategcreferences-method.md
+      - name: Метод EnumerateHandles
+        href: icordebugprocess5-enumeratehandles-method.md
+      - name: Метод EnumerateHeap
+        href: icordebugprocess5-enumerateheap-method.md
+      - name: Метод EnumerateHeapRegions
+        href: icordebugprocess5-enumerateheapregions-method.md
+      - name: Метод GetArrayLayout
+        href: icordebugprocess5-getarraylayout-method.md
+      - name: Метод GetGCHeapInformation
+        href: icordebugprocess5-getgcheapinformation-method.md
+      - name: Метод GetObject
+        href: icordebugprocess5-getobject-method.md
+      - name: Метод GetTypeFields
+        href: icordebugprocess5-gettypefields-method.md
+      - name: Метод GetTypeForTypeID
+        href: icordebugprocess5-gettypefortypeid-method.md
+      - name: Метод GetTypeID
+        href: icordebugprocess5-gettypeid-method.md
+      - name: Метод GetTypeLayout
+        href: icordebugprocess5-gettypelayout-method.md
+    - name: Интерфейс ICorDebugProcess6
+      href: icordebugprocess6-interface.md
+      items:
+      - name: Метод DecodeEvent
+        href: icordebugprocess6-decodeevent-method.md
+      - name: Метод EnableVirtualModuleSplitting
+        href: icordebugprocess6-enablevirtualmodulesplitting-method.md
+      - name: Метод GetCode
+        href: icordebugprocess6-getcode-method.md
+      - name: Метод GetExportStepInfo
+        href: icordebugprocess6-getexportstepinfo-method.md
+      - name: Метод MarkDebuggerAttached
+        href: icordebugprocess6-markdebuggerattached-method.md
+      - name: Метод ProcessStateChanged
+        href: icordebugprocess6-processstatechanged-method.md
+    - name: Интерфейс ICorDebugProcess7
+      href: icordebugprocess7-interface.md
+      items:
+      - name: Метод SetWriteableMetadataUpdateMode
+        href: icordebugprocess7-setwriteablemetadataupdatemode-method.md
+    - name: Интерфейс ICorDebugProcess8
+      href: icordebugprocess8-interface.md
+      items:
+      - name: Метод EnableExceptionCallbacksOutsideOfMyCode
+        href: icordebugprocess8-enableexceptioncallbacksoutsideofmycode-method.md
+    - name: Интерфейс ICorDebugProcessEnum
+      href: icordebugprocessenum-interface.md
+      items:
+      - name: Метод Next
+        href: icordebugprocessenum-next-method.md
+    - name: Интерфейс ICorDebugReferenceValue
+      href: icordebugreferencevalue-interface.md
+      items:
+      - name: Метод Dereference
+        href: icordebugreferencevalue-dereference-method.md
+      - name: Метод DereferenceStrong
+        href: icordebugreferencevalue-dereferencestrong-method.md
+      - name: Метод GetValue
+        href: icordebugreferencevalue-getvalue-method.md
+      - name: Метод IsNull
+        href: icordebugreferencevalue-isnull-method.md
+      - name: Метод SetValue
+        href: icordebugreferencevalue-setvalue-method.md
+    - name: Интерфейс ICorDebugRegisterSet
+      href: icordebugregisterset-interface.md
+      items:
+      - name: Метод GetRegisters
+        href: icordebugregisterset-getregisters-method.md
+      - name: Метод GetRegistersAvailable
+        href: icordebugregisterset-getregistersavailable-method.md
+      - name: Метод GetThreadContext
+        href: icordebugregisterset-getthreadcontext-method.md
+      - name: Метод SetRegisters
+        href: icordebugregisterset-setregisters-method.md
+      - name: Метод SetThreadContext
+        href: icordebugregisterset-setthreadcontext-method.md
+    - name: Интерфейс ICorDebugRegisterSet2
+      href: icordebugregisterset2-interface.md
+      items:
+      - name: Метод GetRegisters
+        href: icordebugregisterset2-getregisters-method.md
+      - name: Метод GetRegistersAvailable
+        href: icordebugregisterset2-getregistersavailable-method.md
+      - name: Метод SetRegisters
+        href: icordebugregisterset2-setregisters-method.md
+    - name: Интерфейс ICorDebugRemote
+      href: icordebugremote-interface.md
+      items:
+      - name: Метод ICorDebugRemote::CreateProcessEx
+        href: icordebugremote-createprocessex-method.md
+      - name: Метод ICorDebugRemote::DebugActiveProcessEx
+        href: icordebugremote-debugactiveprocessex-method.md
+    - name: Интерфейс ICorDebugRemoteTarget
+      href: icordebugremotetarget-interface.md
+      items:
+      - name: Метод ICorDebugRemoteTarget::GetHostName
+        href: icordebugremotetarget-gethostname-method.md
+    - name: Интерфейс ICorDebugRuntimeUnwindableFrame
+      href: icordebugruntimeunwindableframe-interface.md
+    - name: Интерфейс ICorDebugStackWalk
+      href: icordebugstackwalk-interface.md
+      items:
+      - name: Метод GetContext
+        href: icordebugstackwalk-getcontext-method.md
+      - name: Метод SetContext
+        href: icordebugstackwalk-setcontext-method.md
+      - name: Метод Next
+        href: icordebugstackwalk-next-method.md
+      - name: Метод GetFrame
+        href: icordebugstackwalk-getframe-method.md
+    - name: Интерфейс ICorDebugStaticFieldSymbol
+      href: icordebugstaticfieldsymbol-interface.md
+      items:
+      - name: Метод GetAddress
+        href: icordebugstaticfieldsymbol-getaddress-method.md
+      - name: Метод GetName
+        href: icordebugstaticfieldsymbol-getname-method.md
+      - name: Метод GetSize
+        href: icordebugstaticfieldsymbol-getsize-method.md
+    - name: Интерфейс ICorDebugStepper
+      href: icordebugstepper-interface.md
+      items:
+      - name: Метод Deactivate
+        href: icordebugstepper-deactivate-method.md
+      - name: Метод IsActive
+        href: icordebugstepper-isactive-method.md
+      - name: Метод SetInterceptMask
+        href: icordebugstepper-setinterceptmask-method.md
+      - name: Метод SetRangeIL
+        href: icordebugstepper-setrangeil-method.md
+      - name: Метод SetUnmappedStopMask
+        href: icordebugstepper-setunmappedstopmask-method.md
+      - name: Метод Step
+        href: icordebugstepper-step-method.md
+      - name: Метод StepOut
+        href: icordebugstepper-stepout-method.md
+      - name: Метод StepRange
+        href: icordebugstepper-steprange-method.md
+    - name: Интерфейс ICorDebugStepper2
+      href: icordebugstepper2-interface1.md
+      items:
+      - name: Метод SetJMC
+        href: icordebugstepper2-setjmc-method.md
+    - name: Интерфейс ICorDebugStepperEnum
+      href: icordebugstepperenum-interface.md
+      items:
+      - name: Метод Next
+        href: icordebugstepperenum-next-method.md
+    - name: Интерфейс ICorDebugStringValue
+      href: icordebugstringvalue-interface.md
+      items:
+      - name: Метод GetLength
+        href: icordebugstringvalue-getlength-method.md
+      - name: Метод GetString
+        href: icordebugstringvalue-getstring-method.md
+    - name: Интерфейс ICorDebugSymbolProvider
+      href: icordebugsymbolprovider-interface.md
+      items:
+      - name: Метод GetAssemblyImageBytes
+        href: icordebugsymbolprovider-getassemblyimagebytes-method.md
+      - name: Метод GetAssemblyImageMetadata
+        href: icordebugsymbolprovider-getassemblyimagemetadata-method.md
+      - name: Метод GetCodeRange
+        href: icordebugsymbolprovider-getcoderange-method.md
+      - name: Метод GetInstanceFieldSymbols
+        href: icordebugsymbolprovider-getinstancefieldsymbols-method.md
+      - name: Метод GetMergedAssemblyRecords
+        href: icordebugsymbolprovider-getmergedassemblyrecords-method.md
+      - name: Метод GetMethodLocalSymbols
+        href: icordebugsymbolprovider-getmethodlocalsymbols-method.md
+      - name: Метод GetMethodParameterSymbols
+        href: icordebugsymbolprovider-getmethodparametersymbols-method.md
+      - name: Метод GetMethodProps
+        href: icordebugsymbolprovider-getmethodprops-method.md
+      - name: Метод GetObjectSize
+        href: icordebugsymbolprovider-getobjectsize-method.md
+      - name: Метод GetStaticFieldSymbols
+        href: icordebugsymbolprovider-getstaticfieldsymbols-method.md
+      - name: Метод GetTypeProps
+        href: icordebugsymbolprovider-gettypeprops-method.md
+    - name: Интерфейс ICorDebugSymbolProvider2
+      href: icordebugsymbolprovider2-interface.md
+      items:
+      - name: Метод GetFrameProps
+        href: icordebugsymbolprovider2-getframeprops-method.md
+      - name: Метод GetGenericDictionaryInfo
+        href: icordebugsymbolprovider2-getgenericdictionaryinfo-method.md
+    - name: Интерфейс ICorDebugThread
+      href: icordebugthread-interface.md
+      items:
+      - name: Метод ClearCurrentException
+        href: icordebugthread-clearcurrentexception-method.md
+      - name: Метод CreateEval
+        href: icordebugthread-createeval-method.md
+      - name: Метод CreateStepper
+        href: icordebugthread-createstepper-method.md
+      - name: Метод EnumerateChains
+        href: icordebugthread-enumeratechains-method.md
+      - name: Метод GetActiveChain
+        href: icordebugthread-getactivechain-method.md
+      - name: Метод GetActiveFrame
+        href: icordebugthread-getactiveframe-method.md
+      - name: Метод GetAppDomain
+        href: icordebugthread-getappdomain-method.md
+      - name: Метод GetCurrentException
+        href: icordebugthread-getcurrentexception-method.md
+      - name: Метод GetDebugState
+        href: icordebugthread-getdebugstate-method.md
+      - name: Метод GetHandle
+        href: icordebugthread-gethandle-method.md
+      - name: Метод GetID
+        href: icordebugthread-getid-method.md
+      - name: Метод GetObject
+        href: icordebugthread-getobject-method.md
+      - name: Метод GetProcess
+        href: icordebugthread-getprocess-method.md
+      - name: Метод GetRegisterSet
+        href: icordebugthread-getregisterset-method.md
+      - name: Метод GetUserState
+        href: icordebugthread-getuserstate-method.md
+      - name: Метод SetDebugState
+        href: icordebugthread-setdebugstate-method.md
+    - name: Интерфейс ICorDebugThread2
+      href: icordebugthread2-interface.md
+      items:
+      - name: Метод GetActiveFunctions
+        href: icordebugthread2-getactivefunctions-method.md
+      - name: Метод GetConnectionID
+        href: icordebugthread2-getconnectionid-method.md
+      - name: Метод GetTaskID
+        href: icordebugthread2-gettaskid-method.md
+      - name: Метод GetVolatileOSThreadID
+        href: icordebugthread2-getvolatileosthreadid-method.md
+      - name: Метод InterceptCurrentException
+        href: icordebugthread2-interceptcurrentexception-method.md
+    - name: Интерфейс ICorDebugThread3
+      href: icordebugthread3-interface.md
+      items:
+      - name: Метод CreateStackWalk
+        href: icordebugthread3-createstackwalk-method.md
+      - name: Метод GetActiveInternalFrames
+        href: icordebugthread3-getactiveinternalframes-method.md
+    - name: Интерфейс ICorDebugThread4
+      href: icordebugthread4-interface.md
+      items:
+      - name: Метод GetBlockingObjects
+        href: icordebugthread4-getblockingobjects-method.md
+      - name: Метод HadUnhandledException
+        href: icordebugthread4-hadunhandledexception-method.md
+      - name: Метод GetCurrentCustomDebuggerNotification
+        href: icordebugthread4-getcurrentcustomdebuggernotification-method.md
+    - name: Интерфейс ICorDebugThreadEnum
+      href: icordebugthreadenum-interface1.md
+      items:
+      - name: Метод Next
+        href: icordebugthreadenum-next-method.md
+    - name: Интерфейс ICorDebugType
+      href: icordebugtype-interface.md
+      items:
+      - name: Метод EnumerateTypeParameters
+        href: icordebugtype-enumeratetypeparameters-method.md
+      - name: Метод GetBase
+        href: icordebugtype-getbase-method.md
+      - name: Метод GetClass
+        href: icordebugtype-getclass-method.md
+      - name: Метод GetFirstTypeParameter
+        href: icordebugtype-getfirsttypeparameter-method.md
+      - name: Метод GetRank
+        href: icordebugtype-getrank-method.md
+      - name: Метод GetStaticFieldValue
+        href: icordebugtype-getstaticfieldvalue-method.md
+      - name: Метод GetType
+        href: icordebugtype-gettype-method.md
+    - name: Интерфейс ICorDebugType2
+      href: icordebugtype2-interface.md
+      items:
+      - name: Метод GetTypeID
+        href: icordebugtype2-gettypeid-method.md
+    - name: Интерфейс ICorDebugTypeEnum
+      href: icordebugtypeenum-interface.md
+      items:
+      - name: Метод Next
+        href: icordebugtypeenum-next-method.md
+    - name: Интерфейс ICorDebugUnmanagedCallback
+      href: icordebugunmanagedcallback-interface.md
+      items:
+      - name: Метод DebugEvent
+        href: icordebugunmanagedcallback-debugevent-method.md
+    - name: Интерфейс ICorDebugValue
+      href: icordebugvalue-interface.md
+      items:
+      - name: Метод CreateBreakpoint
+        href: icordebugvalue-createbreakpoint-method.md
+      - name: Метод GetAddress
+        href: icordebugvalue-getaddress-method.md
+      - name: Метод GetSize
+        href: icordebugvalue-getsize-method.md
+      - name: Метод GetType
+        href: icordebugvalue-gettype-method.md
+    - name: Интерфейс ICorDebugValue2
+      href: icordebugvalue2-interface.md
+      items:
+      - name: Метод GetExactType
+        href: icordebugvalue2-getexacttype-method.md
+    - name: Интерфейс ICorDebugValue3
+      href: icordebugvalue3-interface.md
+      items:
+      - name: Метод GetSize64
+        href: icordebugvalue3-getsize64-method.md
+    - name: Интерфейс ICorDebugValueBreakpoint
+      href: icordebugvaluebreakpoint-interface.md
+      items:
+      - name: Метод GetValue
+        href: icordebugvaluebreakpoint-getvalue-method.md
+    - name: Интерфейс ICorDebugValueEnum
+      href: icordebugvalueenum-interface.md
+      items:
+      - name: Метод Next
+        href: icordebugvalueenum-next-method.md
+    - name: Интерфейс ICorDebugVariableHome
+      href: icordebugvariablehome-interface.md
+      items:
+      - name: Метод GetArgumentIndex
+        href: icordebugvariablehome-getargumentindex-method.md
+      - name: Метод GetCode
+        href: icordebugvariablehome-getcode-method.md
+      - name: Метод GetLiveRange
+        href: icordebugvariablehome-getliverange-method.md
+      - name: Метод GetLocationType
+        href: icordebugvariablehome-getlocationtype-method.md
+      - name: Метод GetOffset
+        href: icordebugvariablehome-getoffset-method.md
+      - name: Метод GetRegister
+        href: icordebugvariablehome-getregister-method.md
+      - name: Метод GetSlotIndex
+        href: icordebugvariablehome-getslotindex-method.md
+    - name: Интерфейс ICorDebugVariableHomeEnum
+      href: icordebugvariablehomeenum-interface.md
+      items:
+      - name: Метод Next
+        href: icordebugvariablehomeenum-next-method.md
+    - name: Интерфейс ICorDebugVariableSymbol
+      href: icordebugvariablesymbol-interface.md
+      items:
+      - name: Метод GetName
+        href: icordebugvariablesymbol-getname-method.md
+      - name: Метод GetSize
+        href: icordebugvariablesymbol-getsize-method.md
+      - name: Метод GetSlotIndex
+        href: icordebugvariablesymbol-getslotindex-method.md
+      - name: Метод GetValue
+        href: icordebugvariablesymbol-getvalue-method.md
+      - name: Метод SetValue
+        href: icordebugvariablesymbol-setvalue-method.md
+    - name: Интерфейс ICorDebugVirtualUnwinder
+      href: icordebugvirtualunwinder-interface.md
+      items:
+      - name: Метод GetContext
+        href: icordebugvirtualunwinder-getcontext-method.md
+      - name: Метод Next
+        href: icordebugvirtualunwinder-next-method.md
+    - name: Интерфейс ICorPublish
+      href: icorpublish-interface.md
+      items:
+      - name: Метод EnumProcesses
+        href: icorpublish-enumprocesses-method.md
+      - name: Метод GetProcess
+        href: icorpublish-getprocess-method.md
+    - name: Интерфейс ICorPublishAppDomain
+      href: icorpublishappdomain-interface.md
+      items:
+      - name: Метод GetID
+        href: icorpublishappdomain-getid-method.md
+      - name: Метод GetName
+        href: icorpublishappdomain-getname-method.md
+    - name: Интерфейс ICorPublishAppDomainEnum
+      href: icorpublishappdomainenum-interface.md
+      items:
+      - name: Метод Next
+        href: icorpublishappdomainenum-next-method.md
+    - name: Интерфейс ICorPublishEnum
+      href: icorpublishenum-interface.md
+      items:
+      - name: Метод Clone
+        href: icorpublishenum-clone-method.md
+      - name: Метод GetCount
+        href: icorpublishenum-getcount-method.md
+      - name: Метод Reset
+        href: icorpublishenum-reset-method.md
+      - name: Метод Skip
+        href: icorpublishenum-skip-method.md
+    - name: Интерфейс ICorPublishProcess
+      href: icorpublishprocess-interface.md
+      items:
+      - name: Метод EnumAppDomains
+        href: icorpublishprocess-enumappdomains-method.md
+      - name: Метод GetDisplayName
+        href: icorpublishprocess-getdisplayname-method.md
+      - name: Метод GetProcessID
+        href: icorpublishprocess-getprocessid-method.md
+      - name: Метод IsManaged
+        href: icorpublishprocess-ismanaged-method.md
+    - name: Интерфейс ICorPublishProcessEnum
+      href: icorpublishprocessenum-interface.md
+      items:
+      - name: Метод Next
+        href: icorpublishprocessenum-next-method.md
+    - name: Интерфейс ISOSDacInterface
+      href: isosdacinterface-interface.md
+      items:
+      - name: GetMethodDescData
+        href: isosdacinterface-getmethoddescdata-method.md
+      - name: GetMethodDescPtrFromIP
+        href: isosdacinterface-getmethoddescptrfromip-method.md
+      - name: GetModuleData
+        href: isosdacinterface-getmoduledata-method.md
+    - name: Интерфейс IXCLRDataMethodDefinition
+      href: ixclrdatamethoddefinition-interface.md
+      items:
+      - name: StartEnumInstances
+        href: ixclrdatamethoddefinition-startenuminstances-method.md
+      - name: EnumInstance
+        href: ixclrdatamethoddefinition-enuminstance-method.md
+      - name: EnumInstance
+        href: ixclrdatamethoddefinition-endenuminstances-method.md
+    - name: Интерфейс IXCLRDataMethodInstance
+      href: ixclrdatamethodinstance-interface.md
+      items:
+      - name: GetILAddressMap
+        href: ixclrdatamethodinstance-getiladdressmap-method.md
+      - name: GetRepresentativeEntryAddress
+        href: ixclrdatamethodinstance-getrepresentativeentryaddress-method.md
+    - name: Интерфейс IXCLRDataModule
+      href: ixclrdatamodule-interface.md
+      items:
+      - name: GetMethodDefinitionByToken
+        href: ixclrdatamodule-getmethoddefinitionbytoken-method.md
+      - name: Запрос
+        href: ixclrdatamodule-request-method.md
+      - name: GetVersionId
+        href: ixclrdatamodule-getversionid-method.md
+    - name: Интерфейс IXCLRDataProcess
+      href: ixclrdataprocess-interface.md
+      items:
+      - name: GetAppDomainByUniqueId
+        href: ixclrdataprocess-getappdomainbyuniqueid-method.md
+      - name: StartEnumModules
+        href: ixclrdataprocess-startenummodules-method.md
+      - name: EnumModule
+        href: ixclrdataprocess-enummodule-method.md
+      - name: EndEnumModules
+        href: ixclrdataprocess-endenummodules-method.md
+      - name: StartEnumMethodInstancesByAddress
+        href: ixclrdataprocess-startenummethodinstancesbyaddress-method.md
+      - name: EnumMethodInstanceByAddress
+        href: ixclrdataprocess-enummethodinstancebyaddress-method.md
+      - name: EndEnumMethodInstancesByAddress
+        href: ixclrdataprocess-endenummethodinstancesbyaddress-method.md
+  - name: Глобальные статические функции отладки
+    href: debugging-global-static-functions.md
+    items:
+    - name: Функция _EFN_GetManagedExcepStack
+      href: efn-getmanagedexcepstack-function.md
+    - name: Функция _EFN_GetManagedObjectFieldInfo
+      href: efn-getmanagedobjectfieldinfo-function.md
+    - name: Функция _EFN_GetManagedObjectName
+      href: efn-getmanagedobjectname-function.md
+    - name: Функция _EFN_StackTrace
+      href: efn-stacktrace-function.md
+    - name: Функция CLRDataCreateInstance
+      href: clrdatacreateinstance-function.md
+    - name: Указатель функции PFN_CLRDataCreateInstance
+      href: pfn-clrdatacreateinstance-function-pointer.md
+  - name: Перечисления отладки
+    href: debugging-enumerations.md
+    items:
+    - name: Перечисление CLR_DEBUGGING_PROCESS_FLAGS
+      href: clr-debugging-process-flags-enumeration.md
+    - name: Перечисление CLRDataEnumMemoryFlags
+      href: clrdataenummemoryflags-enumeration.md
+    - name: Перечисление ClrDataSourceType
+      href: clrdatasourcetype-enumeration.md
+    - name: Перечисление COR_PUB_ENUMPROCESS
+      href: cor-pub-enumprocess-enumeration.md
+    - name: Перечисление CorDebugBlockingReason
+      href: cordebugblockingreason-enumeration.md
+    - name: Перечисление CorDebugChainReason
+      href: cordebugchainreason-enumeration.md
+    - name: Перечисление CorDebugCodeInvokeKind
+      href: cordebugcodeinvokekind-enumeration.md
+    - name: Перечисление CorDebugCodeInvokePurpose
+      href: cordebugcodeinvokepurpose-enumeration.md
+    - name: Перечисление CorDebugCreateProcessFlags
+      href: cordebugcreateprocessflags-enumeration.md
+    - name: Перечисление CorDebugDebugEventKind
+      href: cordebugdebugeventkind-enumeration.md
+    - name: Перечисление CorDebugDecodeEventFlagsWindows
+      href: cordebugdecodeeventflagswindows-enumeration.md
+    - name: Перечисление CorDebugExceptionCallbackType
+      href: cordebugexceptioncallbacktype-enumeration.md
+    - name: Перечисление CorDebugExceptionFlags
+      href: cordebugexceptionflags-enumeration.md
+    - name: Перечисление CorDebugExceptionUnwindCallbackType
+      href: cordebugexceptionunwindcallbacktype-enumeration.md
+    - name: Перечисление CorDebugGCType
+      href: cordebuggctype-enumeration.md
+    - name: Перечисление CorDebugGenerationTypes
+      href: cordebuggenerationtypes-enumeration.md
+    - name: Перечисление CorDebugHandleType
+      href: cordebughandletype-enumeration.md
+    - name: Перечисление CorDebugIlToNativeMappingTypes
+      href: cordebugiltonativemappingtypes-enumeration.md
+    - name: Перечисление CorDebugIntercept
+      href: cordebugintercept-enumeration.md
+    - name: Перечисление CorDebugInterfaceVersion
+      href: cordebuginterfaceversion-enumeration.md
+    - name: Перечисление CorDebugInternalFrameType
+      href: cordebuginternalframetype-enumeration.md
+    - name: Перечисление CorDebugJITCompilerFlags
+      href: cordebugjitcompilerflags-enumeration.md
+    - name: Перечисление CorDebugJITCompilerFlagsDeprecated
+      href: cordebugjitcompilerflagsdeprecated-enumeration.md
+    - name: Перечисление CorDebugMappingResult
+      href: cordebugmappingresult-enumeration.md
+    - name: Перечисление CorDebugMDAFlags
+      href: cordebugmdaflags-enumeration.md
+    - name: Перечисление CorDebugNGenPolicy
+      href: cordebugngenpolicy-enumeration.md
+    - name: Перечисление CorDebugPlatform
+      href: cordebugplatform-enumeration.md
+    - name: Перечисление CorDebugRecordFormat
+      href: cordebugrecordformat-enumeration.md
+    - name: Перечисление CorDebugRegister
+      href: cordebugregister-enumeration.md
+    - name: Перечисление CorDebugSetContextFlag
+      href: cordebugsetcontextflag-enumeration.md
+    - name: Перечисление CorDebugStateChange
+      href: cordebugstatechange-enumeration.md
+    - name: Перечисление CorDebugStepReason
+      href: cordebugstepreason-enumeration.md
+    - name: Перечисление CorDebugThreadState
+      href: cordebugthreadstate-enumeration.md
+    - name: Перечисление CorDebugUnmappedStop
+      href: cordebugunmappedstop-enumeration.md
+    - name: Перечисление CorDebugUserState
+      href: cordebuguserstate-enumeration.md
+    - name: Перечисление CorGCReferenceType
+      href: corgcreferencetype-enumeration.md
+    - name: Перечисление ILCodeKind
+      href: ilcodekind-enumeration.md
+    - name: Перечисление LoggingLevelEnum
+      href: logginglevelenum-enumeration.md
+    - name: Перечисление LogSwitchCallReason
+      href: logswitchcallreason-enumeration.md
+    - name: Перечисление VariableLocationType
+      href: variablelocationtype-enumeration.md
+    - name: Перечисление WriteableMetadataUpdateMode
+      href: writeablemetadataupdatemode-enumeration.md
+  - name: Структуры отладки
+    href: debugging-structures.md
+    items:
+    - name: Структура CLRDATA_ADDRESS_RANGE
+      href: clrdata-address-range-structure.md
+    - name: Структура CLRDATA_IL_ADDRESS_MAP
+      href: clrdata-il-address-map-structure.md
+    - name: Структура CLR_DEBUGGING_VERSION
+      href: clr-debugging-version-structure.md
+    - name: Структура CodeChunkInfo
+      href: codechunkinfo-structure.md
+    - name: Структура COR_ACTIVE_FUNCTION
+      href: cor-active-function-structure.md
+    - name: Структура COR_ARRAY_LAYOUT
+      href: cor-array-layout-structure.md
+    - name: Структура COR_DEBUG_IL_TO_NATIVE_MAP
+      href: cor-debug-il-to-native-map-structure.md
+    - name: Структура COR_DEBUG_STEP_RANGE
+      href: cor-debug-step-range-structure.md
+    - name: Структура COR_FIELD
+      href: cor-field-structure.md
+    - name: Структура COR_GC_REFERENCE
+      href: cor-gc-reference-structure.md
+    - name: Структура COR_HEAPINFO
+      href: cor-heapinfo-structure.md
+    - name: Структура COR_HEAPOBJECT
+      href: cor-heapobject-structure.md
+    - name: Структура COR_IL_MAP
+      href: cor-il-map-structure.md
+    - name: Структура COR_SEGMENT
+      href: cor-segment-structure.md
+    - name: Структура COR_TYPEID
+      href: cor-typeid-structure.md
+    - name: Структура COR_TYPE_LAYOUT
+      href: cor-type-layout-structure.md
+    - name: Структура COR_VERSION
+      href: cor-version-structure.md
+    - name: Структура CorDebugBlockingObject
+      href: cordebugblockingobject-structure.md
+    - name: Структура CorDebugEHClause
+      href: cordebugehclause-structure.md
+    - name: Структура CorDebugExceptionObjectStackFrame
+      href: cordebugexceptionobjectstackframe-structure.md
+    - name: Структура CorDebugGuidToTypeMapping
+      href: cordebugguidtotypemapping-structure.md
+    - name: Структура DacpMethodDescData
+      href: dacpmethoddescdata-structure.md
+    - name: Структура DacpModuleData
+      href: dacpmoduledata-structure.md
+    - name: Структура DacpReJitData
+      href: dacprejitdata-structure.md
+    - name: Структура StackTrace_SimpleContext
+      href: stacktrace-simplecontext-structure.md
+  - name: Отладка в Silverlight
+    href: silverlight-debugging.md
+    items:
+    - name: Функция CloseCLREnumeration
+      href: closeclrenumeration-function.md
+    - name: Функция CreateCoreClrDebugTarget
+      href: createcoreclrdebugtarget-function.md
+    - name: Функция CreateCordbObject
+      href: createcordbobject-function.md
+    - name: Функция CreateVersionStringFromModule
+      href: createversionstringfrommodule-function.md
+    - name: Функция CreateDebuggingInterfaceFromVersion
+      href: createdebugginginterfacefromversion-function-for-silverlight.md
+    - name: Структура CoreClrDebugProcInfo
+      href: coreclrdebugprocinfo-structure.md
+    - name: Структура CoreClrDebugRuntimeInfo
+      href: coreclrdebugruntimeinfo-structure.md
+    - name: Функция EnumerateCLRs
+      href: enumerateclrs-function.md
+    - name: Функция GetStartupNotificationEvent
+      href: getstartupnotificationevent-function.md
+    - name: Интерфейс ICoreClrDebugTarget
+      href: icoreclrdebugtarget-interface.md
+      items:
+      - name: Метод ICoreClrDebugTarget::EnumProcesses
+        href: icoreclrdebugtarget-enumprocesses-method.md
+      - name: Метод ICoreClrDebugTarget::EnumRuntimes
+        href: icoreclrdebugtarget-enumruntimes-method.md
+      - name: Метод ICoreClrDebugTarget::FreeMemory
+        href: icoreclrdebugtarget-freememory-method.md
+    - name: Функция InitDbgTransportManager
+      href: initdbgtransportmanager-function.md
+    - name: Функция ShutdownDbgTransportManager
+      href: shutdowndbgtransportmanager-function.md
+ms.openlocfilehash: ce615739742902be9ce45754b9c263a5b1538b74
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58470920"

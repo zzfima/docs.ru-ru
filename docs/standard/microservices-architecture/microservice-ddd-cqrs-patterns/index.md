@@ -4,12 +4,6 @@ description: Архитектура микрослужб .NET для упако�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 2780e2d46ae1e9caf45e715a835998c8ef70413a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152556"
 ---
 # <a name="tackle-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns"></a>Использование микрослужб с шаблонами DDD и CQRS для решения сложных бизнес-задач
 
@@ -32,44 +26,44 @@ DDD — это обширная тема, по которой доступно 
 ##### <a name="ddd-domain-driven-design"></a>DDD (проблемно-ориентированное проектирование)
 
 - **Эрик Эванс (Eric Evans). Предметно-ориентированный язык**  \
-  [*https://domainlanguage.com/*](https://domainlanguage.com/)
+  [https://domainlanguage.com/](https://domainlanguage.com/)
 
 - **Мартин Фоулер (Martin Fowler). Предметно-ориентированное проектирование** \
-  [*https://martinfowler.com/tags/domain%20driven%20design.html*](https://martinfowler.com/tags/domain%20driven%20design.html)
+  [https://martinfowler.com/tags/domain%20driven%20design.html](https://martinfowler.com/tags/domain%20driven%20design.html)
 
 - **Джимми Богард (Jimmy Bogard). Усиление предметной области: руководство для начинающих** \
-  [*https://lostechies.com/jimmybogard/2010/02/04/strengthening-your-domain-a-primer/*](https://lostechies.com/jimmybogard/2010/02/04/strengthening-your-domain-a-primer/)
+  [https://lostechies.com/jimmybogard/2010/02/04/strengthening-your-domain-a-primer/](https://lostechies.com/jimmybogard/2010/02/04/strengthening-your-domain-a-primer/)
 
 ##### <a name="ddd-books"></a>Книги по DDD
 
-- **Эрик Эванс (Eric Evans). Предметно-ориентированное проектирование. Структуризация сложных программных систем** \
-  [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+- **Эрик Эванс (Eric Evans). Domain-Driven Design: Tackling Complexity in the Heart of Software** \ (Предметно-ориентированное проектирование. Структуризация сложных программных систем)
+  [https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
-- **Эрик Эванс (Eric Evans). Справочник по предметно-ориентированному проектированию: общие сведения об определениях и шаблонах** \
-  [*https://www.amazon.com/Domain-Driven-Design-Reference-Definitions-2014-09-22/dp/B01N8YB4ZO/*](https://www.amazon.com/Domain-Driven-Design-Reference-Definitions-2014-09-22/dp/B01N8YB4ZO/)
+- **Эрик Эванс (Eric Evans). Справочник по предметно-ориентированному проектированию: Определения и обзор шаблонов** \
+  [https://www.amazon.com/Domain-Driven-Design-Reference-Definitions-2014-09-22/dp/B01N8YB4ZO/](https://www.amazon.com/Domain-Driven-Design-Reference-Definitions-2014-09-22/dp/B01N8YB4ZO/)
 
 - **Вон Вернон (Vaughn Vernon). Реализация проблемно-ориентированного проектирования** \
-  [*https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/*](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/)
+  [https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/)
 
 - **Вон Вернон (Vaughn Vernon). Основные сведения о предметно-ориентированном проектировании** \
-  [*https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420/*](https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420/)
+  [https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420/](https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420/)
 
 - **Джимми Нилссон (Jimmy Nilsson). Применение предметно-ориентированного проектирования и шаблонов** \
-  [*https://www.amazon.com/Applying-Domain-Driven-Design-Patterns-Examples/dp/0321268202/*](https://www.amazon.com/Applying-Domain-Driven-Design-Patterns-Examples/dp/0321268202/)
+  [https://www.amazon.com/Applying-Domain-Driven-Design-Patterns-Examples/dp/0321268202/](https://www.amazon.com/Applying-Domain-Driven-Design-Patterns-Examples/dp/0321268202/)
 
 - **Сезар де ла Торре (Cesar de la Torre). Руководство по N-уровневой предметно-ориентированной архитектуре на .NET** \
-  [*https://www.amazon.com/N-Layered-Domain-Oriented-Architecture-Guide-NET/dp/8493903612/*](https://www.amazon.com/N-Layered-Domain-Oriented-Architecture-Guide-NET/dp/8493903612/)
+  [https://www.amazon.com/N-Layered-Domain-Oriented-Architecture-Guide-NET/dp/8493903612/](https://www.amazon.com/N-Layered-Domain-Oriented-Architecture-Guide-NET/dp/8493903612/)
 
 - **Абель Аврам (Abel Avram) и Флойд Маринеску (Floyd Marinescu). Кратко о предметно-ориентированном проектировании** \
-  [*https://www.amazon.com/Domain-Driven-Design-Quickly-Abel-Avram/dp/1411609255/*](https://www.amazon.com/Domain-Driven-Design-Quickly-Abel-Avram/dp/1411609255/)
+  [https://www.amazon.com/Domain-Driven-Design-Quickly-Abel-Avram/dp/1411609255/](https://www.amazon.com/Domain-Driven-Design-Quickly-Abel-Avram/dp/1411609255/)
 
 - **Скотт Миллетт (Scott Millett), Ник Тюн (Nick Tune). Шаблоны, принципы и методы предметно-ориентированного проектирования** \
-  [*http://www.wrox.com/WileyCDA/WroxTitle/Patterns-Principles-and-Practices-of-Domain-Driven-Design.productCd-1118714709.html*](http://www.wrox.com/WileyCDA/WroxTitle/Patterns-Principles-and-Practices-of-Domain-Driven-Design.productCd-1118714709.html)
+  [http://www.wrox.com/WileyCDA/WroxTitle/Patterns-Principles-and-Practices-of-Domain-Driven-Design.productCd-1118714709.html](http://www.wrox.com/WileyCDA/WroxTitle/Patterns-Principles-and-Practices-of-Domain-Driven-Design.productCd-1118714709.html)
 
 ##### <a name="ddd-training"></a>Обучение по DDD
 
 - **Джули Лерман (Julie Lerman) и Стив Смит (Steve Smith). Основы предметно-ориентированного проектирования** \
-  [*https://bit.ly/PS-DDD*](https://bit.ly/PS-DDD)
+  [https://bit.ly/PS-DDD](https://bit.ly/PS-DDD)
 
 >[!div class="step-by-step"]
 >[Назад](../multi-container-microservice-net-applications/implement-api-gateways-with-ocelot.md)

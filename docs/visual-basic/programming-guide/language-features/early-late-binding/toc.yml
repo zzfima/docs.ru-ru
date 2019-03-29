@@ -1,0 +1,16 @@
+items:
+- name: Раннее и позднее связывание
+  href: index.md
+  items:
+  - name: Определение типа объекта
+    href: determining-object-type.md
+  - name: Вызов свойства или метода с помощью строкового имени
+    href: calling-a-property-or-method-using-a-string-name.md
+  - name: Работа с динамическими объектами
+    href: working-with-dynamic-objects.md
+ms.openlocfilehash: edd2a6e97163ceb4dce728639a6651482e58ab6d
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469768"

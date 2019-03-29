@@ -1,0 +1,87 @@
+items:
+- name: Компиляция приложений с помощью машинного кода .NET
+  href: index.md
+  items:
+  - name: Машинный код .NET и компиляция
+    href: net-native-and-compilation.md
+  - name: Начало работы
+    href: getting-started-with-net-native.md
+    items:
+    - name: Пример Устранение неполадок динамического программирования
+      href: example-troubleshooting-dynamic-programming.md
+    - name: Пример Обработка исключений при привязке данных
+      href: example-handling-exceptions-when-binding-data.md
+    - name: Исключения среды выполнения в собственных приложениях .NET
+      href: runtime-exceptions-in-net-native-apps.md
+  - name: Измерение улучшения запуска с машинным кодом .NET
+    href: measuring-startup-improvement-with-net-native.md
+  - name: Отражение и машинный код .NET
+    href: reflection-and-net-native.md
+    items:
+    - name: API-интерфейсы, основанные на отражении
+      href: apis-that-rely-on-reflection.md
+    - name: Справочник по API отражения
+      href: net-native-reflection-api-reference.md
+      items:
+      - name: Класс MissingInteropDataException
+        href: missinginteropdataexception-class-net-native.md
+      - name: Класс MissingMetadataException
+        href: missingmetadataexception-class-net-native.md
+      - name: Класс MissingRuntimeArtifactException
+        href: missingruntimeartifactexception-class-net-native.md
+    - name: Ссылка на файл конфигурации директив среды выполнения (rd.xml)
+      href: runtime-directives-rd-xml-configuration-file-reference.md
+      items:
+      - name: Элементы директив среды выполнения
+        href: runtime-directive-elements.md
+        items:
+        - name: Элемент <Application>
+          href: application-element-net-native.md
+        - name: Элемент <Assembly>
+          href: assembly-element-net-native.md
+        - name: Элемент <AttributeImplies>
+          href: attributeimplies-element-net-native.md
+        - name: Элемент <Directives>
+          href: directives-element-net-native.md
+        - name: Элемент <Event>
+          href: event-element-net-native.md
+        - name: Элемент <Field>
+          href: field-element-net-native.md
+        - name: Элемент <GenericParameter>
+          href: genericparameter-element-net-native.md
+        - name: Элемент <ImpliesType>
+          href: impliestype-element-net-native.md
+        - name: Элемент <Library>
+          href: library-element-net-native.md
+        - name: Элемент <Method>
+          href: method-element-net-native.md
+        - name: Элемент <MethodInstantiation>
+          href: methodinstantiation-element-net-native.md
+        - name: Элемент <Namespace>
+          href: namespace-element-net-native.md
+        - name: Элемент <Parameter>
+          href: parameter-element-net-native.md
+        - name: Элемент <Property>
+          href: property-element-net-native.md
+        - name: Элемент <Subtypes>
+          href: subtypes-element-net-native.md
+        - name: Элемент <Type>
+          href: type-element-net-native.md
+        - name: Элемент <TypeInstantiation>
+          href: typeinstantiation-element-net-native.md
+        - name: Элемент <TypeParameter>
+          href: typeparameter-element-net-native.md
+      - name: Параметры политики директив среды выполнения
+        href: runtime-directive-policy-settings.md
+  - name: Сериализация и метаданные
+    href: serialization-and-metadata.md
+  - name: Миграция приложения для магазина Windows в машинный код .NET
+    href: migrating-your-windows-store-app-to-net-native.md
+  - name: 'Машинный код .NET: Устранение общих неполадок'
+    href: net-native-general-troubleshooting.md
+ms.openlocfilehash: 85d8306c93d50cc595fcd3bcbf9ee404a84e7ab2
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58470280"

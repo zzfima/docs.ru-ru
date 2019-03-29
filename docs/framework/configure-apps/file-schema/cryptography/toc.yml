@@ -1,0 +1,26 @@
+items:
+- name: Схема параметров криптографии
+  href: index.md
+  items:
+  - name: Элемент <cryptoClasses>
+    href: cryptoclasses-element.md
+  - name: Элемент <cryptoClass>
+    href: cryptoclass-element.md
+  - name: Элемент <cryptographySettings>
+    href: cryptographysettings-element.md
+  - name: Элемент <cryptoNameMapping>
+    href: cryptonamemapping-element.md
+  - name: Элемент <mscorlib> для параметров шифрования
+    href: mscorlib-element-for-cryptography-settings.md
+  - name: Элемент <nameEntry>
+    href: nameentry-element.md
+  - name: Элемент <oidEntry>
+    href: oidentry-element.md
+  - name: Элемент <oidMap>
+    href: oidmap-element.md
+ms.openlocfilehash: 71237984ce59000cbef102480f7610f5a7b1bc43
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58470869"

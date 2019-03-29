@@ -1,0 +1,48 @@
+items:
+- name: Даты, время и часовые пояса
+  href: index.md
+  items:
+  - name: Общие сведения о часовых поясах
+    href: time-zone-overview.md
+  - name: Выбор между типами DateTime, DateTimeOffset, TimeSpan и TimeZoneInfo
+    href: choosing-between-datetime.md
+  - name: Поиск часового пояса, заданного в локальной системе
+    href: finding-the-time-zones-on-local-system.md
+  - name: Практическое руководство. Перечисление присутствующих на компьютере часовых поясов
+    href: enumerate-time-zones.md
+  - name: Практическое руководство. Доступ к предварительно определенным объектам UTC и объектам местных часовых поясов
+    href: access-utc-and-local.md
+  - name: Практическое руководство. Создание экземпляра объекта TimeZoneInfo
+    href: instantiate-time-zone-info.md
+  - name: Создание экземпляра объекта DateTimeOffset
+    href: instantiating-a-datetimeoffset-object.md
+  - name: Практическое руководство. Создание часовых поясов без правил коррекции
+    href: create-time-zones-without-adjustment-rules.md
+  - name: Практическое руководство. Создание часовых поясов с правилами коррекции
+    href: create-time-zones-with-adjustment-rules.md
+  - name: Сохранение и восстановление часовых поясов
+    href: saving-and-restoring-time-zones.md
+  - name: Практическое руководство. Сохранение часовых поясов во внедренном ресурсе
+    href: save-time-zones-to-an-embedded-resource.md
+  - name: Практическое руководство. Восстановление часовых поясов из внедренного ресурса
+    href: restore-time-zones-from-an-embedded-resource.md
+  - name: Работа с календарями
+    href: working-with-calendars.md
+  - name: Выполнение арифметических операций с датами и временем
+    href: performing-arithmetic-operations.md
+  - name: Практическое руководство. Использование часовых поясов в арифметических операциях с датами и временем
+    href: use-time-zones-in-arithmetic.md
+  - name: Взаимное преобразование структур DateTime и DateTimeOffset
+    href: converting-between-datetime-and-offset.md
+  - name: Преобразование времени из одного часового пояса в другой
+    href: converting-between-time-zones.md
+  - name: Практическое руководство. Разрешение проблемы неоднозначности времени
+    href: resolve-ambiguous-times.md
+  - name: Практическое руководство. Предоставление пользователям возможности разрешения неоднозначности времени
+    href: let-users-resolve-ambiguous-times.md
+ms.openlocfilehash: 302dc3e44cacb3148ae0e246220721ccfda44d98
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58470293"
