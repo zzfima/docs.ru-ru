@@ -2,7 +2,7 @@
 title: Анализаторы на основе Roslyn в .NET
 description: 'Сведения об анализаторах на основе Roslyn, которые находят проблемы и предлагают способы их решения.'
 author: billwagner
-ms.author: billwagner
+ms.author: wiwagn
 ms.date: 01/24/2018
 ms.technology: dotnet-standard
 ---
