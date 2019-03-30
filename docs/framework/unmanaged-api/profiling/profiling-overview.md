@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dd0fef0e8a2c4b94cd5dd7beb140e669c52a07a8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 598722c44d8d20adab9ce7d624edb820f67c0fa4
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862320"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654098"
 ---
 # <a name="profiling-overview"></a>Общие сведения о профилировании
 <a name="top"></a> Профилировщик — это средство, которое наблюдает за выполнением другого приложения. Профилировщик среды CLR — это библиотека DLL, содержащая функции, которые получают сообщения из среды CLR и отправляют сообщения в среду CLR с помощью API профилирования. Библиотека DLL профилировщика загружается средой CLR во время выполнения.  
@@ -78,13 +78,12 @@ ms.locfileid: "43862320"
   
  На следующем рисунке показано, как библиотека DLL профилировщика взаимодействует с профилируемым приложением и средой CLR.  
   
- ![Архитектура профилирования](../../../../docs/framework/unmanaged-api/profiling/media/profilingarch.png "ProfilingArch")  
-Архитектура профилирования  
+ ![Снимок экрана, показана архитектура профилирования.](./media/profiling-overview/profiling-architecture.png)  
   
 ### <a name="the-notification-interfaces"></a>Интерфейсы уведомлений  
  [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) и [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) можно считать интерфейсами уведомлений. Эти интерфейсы содержат методы, такие как [ClassLoadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md), [ClassLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md), и [JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md). Каждый раз, когда среда CLR загружает или выгружает класс, компилирует функцию и т. д., она вызывает соответствующий метод в интерфейсе `ICorProfilerCallback` или `ICorProfilerCallback2` профилировщика.  
   
- Например, профилировщик может измерять производительность кода с помощью двух функций уведомлений: [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) и [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md). Он просто устанавливает метки времени для каждого уведомления, собирает результаты и выводит список, в котором указывается, на какие функции было затрачено больше ресурсов ЦП или физического времени во время выполнения приложения.  
+ Например профилировщик может измерять производительность кода с помощью двух функций уведомлений: [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) и [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md). Он просто устанавливает метки времени для каждого уведомления, собирает результаты и выводит список, в котором указывается, на какие функции было затрачено больше ресурсов ЦП или физического времени во время выполнения приложения.  
   
 ### <a name="the-information-retrieval-interfaces"></a>Интерфейсы для извлечения сведений  
  Других основных интерфейсов, необходимых для профилирования, [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) и [ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md). Профилировщик вызывает эти интерфейсы по мере необходимости для получения дополнительных сведений, помогающих выполнить анализ. Например, каждый раз, когда среда CLR вызывает [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) функция, она предоставляет ее идентификатор. Профилировщик может получить дополнительные сведения о функции путем вызова [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) метод обнаружения родительский класс функции, ее имя и т. д.  
@@ -186,7 +185,7 @@ ms.locfileid: "43862320"
 ## <a name="profiling-unmanaged-code"></a>Профилирование неуправляемого кода  
  API профилирования среды CLR предоставляет минимальную поддержку профилирования неуправляемого кода. Предоставляются следующие функциональные возможности.  
   
--   Перечисление цепочек стека. Эта функция позволяет профилировщику кода определить границу между управляемым и неуправляемым кодом.  
+-   Перечисление цепочек стека. Эта возможность позволяет профилировщику кода определить границу между управляемым и неуправляемым кодом.  
   
 -   Определение, соответствует ли цепочка стека управляемому коду или машинному коду.  
   

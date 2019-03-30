@@ -8,12 +8,12 @@ helpviewer_keywords:
 - images [Windows Forms], cropping
 - images [Windows Forms], scaling
 ms.assetid: 053e3360-bca0-4b25-9afa-0e77a6f17b03
-ms.openlocfilehash: 95343ad2c7bc6a83bc4d935f33712ab910d658ff
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ff0567dca0fd86736e02a9dd827ec15df8bf2df8
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705822"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654501"
 ---
 # <a name="how-to-crop-and-scale-images"></a>Практическое руководство. Обрезка и масштабирование изображений
 <xref:System.Drawing.Graphics> Класс предоставляет несколько <xref:System.Drawing.Graphics.DrawImage%2A> методы, некоторые из которых имеют параметры прямоугольника источника и назначения, которые можно использовать для обрезки и масштабирования изображений.  
@@ -27,13 +27,13 @@ ms.locfileid: "57705822"
   
  Ниже показан исходный apple и масштабированное обрезанное изображение.  
   
- ![Обрезка и масштабирование](./media/cscropscale1.png "csCropScale1")  
+ ![Снимок экрана исходный образ и то же изображение обрезается.](./media/how-to-crop-and-scale-images/original-image-cropped-image.png)  
   
  [!code-csharp[System.Drawing.WorkingWithImages#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#11)]
  [!code-vb[System.Drawing.WorkingWithImages#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Предыдущий пример предназначен для работы с Windows Forms, и для него необходим объект <xref:System.Windows.Forms.PaintEventArgs> `e`, передаваемый в качестве параметра обработчику событий <xref:System.Windows.Forms.Control.Paint>. Не забудьте заменить `Apple.gif` путь, допустимые в вашей системе и имя файла изображения.  
+ Предыдущий пример предназначен для работы с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs> `e`, который является параметром <xref:System.Windows.Forms.Control.Paint> обработчик событий. Не забудьте заменить `Apple.gif` путь, допустимые в вашей системе и имя файла изображения.  
   
 ## <a name="see-also"></a>См. также
 - [Изображения, точечные рисунки и метафайлы](images-bitmaps-and-metafiles.md)

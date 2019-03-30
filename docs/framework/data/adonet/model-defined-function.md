@@ -2,12 +2,12 @@
 title: функция определенной модели
 ms.date: 03/30/2017
 ms.assetid: 8bb2edc8-e8e7-44c2-adc7-f44e11bda4f0
-ms.openlocfilehash: 371af3ae090e37cfd425a9e9d5946bb0751dc527
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 67821c68ee79b42bc54e22f1e15673d2d9243a68
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538886"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653864"
 ---
 # <a name="model-defined-function"></a>функция определенной модели
 Объект *определяемой моделью функции* — это функция, которая определена в концептуальной модели. Текст определяемой моделью функции выражается в [Entity SQL](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md), что позволяет функция может быть представлена независимо от правил или языков, поддерживаемых в источнике данных.  
@@ -30,7 +30,7 @@ ms.locfileid: "54538886"
 ## <a name="example"></a>Пример  
  На приведенной ниже схеме показана концептуальная модель с тремя типами сущностей: `Book`, `Publisher` и `Author`.  
   
- ![Модель с опубликованной датой](../../../../docs/framework/data/adonet/media/modelwithpublisheddate.gif "ModelWithPublishedDate")  
+ ![Снимок экрана, показывающая модель с опубликованной датой.](./media/model-defined-function/model-published-date-three-entity-types.gif)  
   
  [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) использует доменный язык (DSL), называемый языком определения концептуальной схемы ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) для определения концептуальных моделей. Следующий язык CSDL определяет функцию в концептуальной модели, которая возвращает числа лет с момента публикации экземпляра `Book` (ранее приведенного на схеме).  
   
