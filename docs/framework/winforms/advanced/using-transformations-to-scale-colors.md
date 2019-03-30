@@ -8,12 +8,12 @@ helpviewer_keywords:
 - transformations [Windows Forms], for scaling colors
 - colors [Windows Forms], scaling
 ms.assetid: df23c887-7fd6-4b15-ad94-e30b5bd4b849
-ms.openlocfilehash: ea4abc38968b929412945cddaca3ca3fe6f377d6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 9255dd4adba19bfef1332e5e3dfa463ee96f43f0
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707434"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653994"
 ---
 # <a name="using-transformations-to-scale-colors"></a>Масштабирование цветов с применением преобразований
 Преобразование масштабирования умножает одно или несколько из четырех компонентов цвета по номеру. В следующей таблице приведены элементы матрицы цветов, представляющих масштабирования.  
@@ -31,9 +31,9 @@ ms.locfileid: "57707434"
  [!code-csharp[System.Drawing.RecoloringImages#41](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#41)]
  [!code-vb[System.Drawing.RecoloringImages#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#41)]  
   
- Ниже показан исходное изображение в левой части и масштабированное изображение справа.  
+ Ниже показан исходное изображение в левой части и масштабированное изображение справа:  
   
- ![Масштабирование цветов](./media/colortrans3.png "colortrans3")  
+ ![Снимок экрана, сравнивает исходные и масштабированное цвета.](./media/using-transformations-to-scale-colors/four-bar-scale-one-color.png)  
   
  Ниже перечислены эти векторы четырех полос до и после масштабирования. Обратите внимание, что синий компонент цвета четвертой полосы изменился с 0,8 на 0,6. Это потому, что [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] сохраняет только дробная часть результата. Например (2)(0,8) = 1,6, а дробная часть параметра 1.6 равно 0,6. Сохранение только дробной части гарантирует, что результат всегда находится в интервале [0, 1].  
   
@@ -50,9 +50,9 @@ ms.locfileid: "57707434"
  [!code-csharp[System.Drawing.RecoloringImages#42](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#42)]
  [!code-vb[System.Drawing.RecoloringImages#42](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#42)]  
   
- Ниже показан исходное изображение в левой части и масштабированное изображение справа.  
+ Ниже показан исходное изображение в левой части и масштабированное изображение справа:  
   
- ![Масштабирование цветов](./media/colortrans4.png "colortrans4")  
+ ![Снимок экрана, сравнивает исходные и масштабированное цвета.](./media/using-transformations-to-scale-colors/four-bar-scale-multiple-colors.png)  
   
  Ниже перечислены эти векторы четырех полос до и после красного, зеленого и синего масштабирования.  
   

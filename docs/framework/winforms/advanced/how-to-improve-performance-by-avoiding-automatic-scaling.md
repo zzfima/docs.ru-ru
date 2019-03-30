@@ -10,12 +10,12 @@ helpviewer_keywords:
 - images [Windows Forms], using without automatic scaling
 - performance [Windows Forms], improving image
 ms.assetid: 5fe2c95d-8653-4d55-bf0d-e5afa28f223b
-ms.openlocfilehash: b8238a4f0ce482d63ab33833c4bceaaa2814253d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8580bd2212a025edddada9e47b0dc2b6195b53c7
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705350"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653799"
 ---
 # <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a>Практическое руководство. Повышение производительности за счет отключения автоматического масштабирования
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Автоматическое масштабирование образа при рисовании, снижает производительность. Кроме того, можно управлять масштабирования изображения, передав размеры прямоугольника назначения <xref:System.Drawing.Graphics.DrawImage%2A> метод.  
@@ -30,15 +30,15 @@ ms.locfileid: "57705350"
  Даже если разрешение экрана 96 точек на дюйм, [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] , вероятно масштабирования изображения так, будто разрешение экрана 96 точек на дюйм. Это потому, что [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Graphics> связывается с контекста устройства и когда [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] контекст устройства для разрешения экрана и результат обычно является 96, независимо от фактического экранного разрешения запросов. Можно избежать автоматического масштабирования, указав в прямоугольник назначения в <xref:System.Drawing.Graphics.DrawImage%2A> метод.  
   
 ## <a name="example"></a>Пример  
- В следующем примере рисуется тот же образ дважды. В первом случае ширина и высота прямоугольника назначения не указаны, а изображение масштабируется автоматически. Во втором случае ширину и высоту (измеряется в пикселях) прямоугольника назначения указываются должны совпадать как ширину и высоту исходного изображения. Ниже показано изображение, рисуемое дважды.  
+ В следующем примере рисуется тот же образ дважды. В первом случае ширина и высота прямоугольника назначения не указаны, а изображение масштабируется автоматически. Во втором случае ширину и высоту (измеряется в пикселях) прямоугольника назначения указываются должны совпадать как ширину и высоту исходного изображения. На следующем рисунке показано изображение, рисуемое дважды:  
   
- ![Масштабировать текстуры](./media/csscaledtexture1.png "csscaledtexture1")  
+ ![Снимок экрана, показывающий образов с помощью масштабированная текстура.](./media/how-to-improve-performance-by-avoiding-automatic-scaling/two-scaled-texture-images.png)  
   
  [!code-csharp[System.Drawing.WorkingWithImages#32](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#32)]
  [!code-vb[System.Drawing.WorkingWithImages#32](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#32)]  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Предыдущий пример предназначен для работы с Windows Forms, и для него необходим объект <xref:System.Windows.Forms.PaintEventArgs> `e`, передаваемый в качестве параметра обработчику событий <xref:System.Windows.Forms.Control.Paint>. Замените Texture.jpg в вашей системе путь и имя образа.  
+ Предыдущий пример предназначен для работы с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs> `e`, который является параметром <xref:System.Windows.Forms.Control.Paint> обработчик событий. Замените Texture.jpg в вашей системе путь и имя образа.  
   
 ## <a name="see-also"></a>См. также
 - [Изображения, точечные рисунки и метафайлы](images-bitmaps-and-metafiles.md)
