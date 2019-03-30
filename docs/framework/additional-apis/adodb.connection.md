@@ -9,23 +9,23 @@ api_location:
 - adodb.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 7f8b6d6e1c9a87e5a87e0f036e4ad1a31b8763b9
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: f5c2fba0224b7e457f45dd4b31cfbcd2d89d5d6b
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58635624"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675852"
 ---
-# <a name="connection-interface"></a><span data-ttu-id="c1d45-102">Интерфейс подключения</span><span class="sxs-lookup"><span data-stu-id="c1d45-102">Connection Interface</span></span>
+# <a name="connection-interface"></a><span data-ttu-id="27df8-102">Интерфейс подключения</span><span class="sxs-lookup"><span data-stu-id="27df8-102">Connection Interface</span></span>
 
 ```csharp
 [GuidAttribute("00000550-0000-0010-8000-00AA006D2EA4")]
 public interface Connection : _Connection, 
-    ConnectionEvents_Event
+  ConnectionEvents_Event
 ```
 
-## <a name="requirements"></a><span data-ttu-id="c1d45-103">Требования</span><span class="sxs-lookup"><span data-stu-id="c1d45-103">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="27df8-103">Требования</span><span class="sxs-lookup"><span data-stu-id="27df8-103">Requirements</span></span>
 
-<span data-ttu-id="c1d45-104">**Пространство имен:** `adodb`</span><span class="sxs-lookup"><span data-stu-id="c1d45-104">**Namespace:** `adodb`</span></span>
+<span data-ttu-id="27df8-104">**Пространство имен:** `adodb`</span><span class="sxs-lookup"><span data-stu-id="27df8-104">**Namespace:** `adodb`</span></span>
 
-<span data-ttu-id="c1d45-105">**Сборка:** adodb (в adodb.dll)</span><span class="sxs-lookup"><span data-stu-id="c1d45-105">**Assembly:** adodb (in adodb.dll)</span></span>
+<span data-ttu-id="27df8-105">**Сборка:** adodb (в adodb.dll)</span><span class="sxs-lookup"><span data-stu-id="27df8-105">**Assembly:** adodb (in adodb.dll)</span></span>
