@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: 471a94333260d30bc9c650f13e3a7489d9d5db7e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a2b24077145b3b24fa021121450534264aea0c8b
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369725"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675904"
 ---
 # <a name="cleartype-registry-settings"></a>Параметры реестра ClearType
 В этом разделе содержится обзор [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] параметры реестра, используемые [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложений.  
@@ -57,7 +57,7 @@ ms.locfileid: "57369725"
   
  Для каждого имени устройства отображения для пользователя `ClearTypeLevel` определено значение DWORD. На следующем рисунке показан параметр редактора реестра для [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] уровень.  
   
- ![Параметры ClearType в редакторе реестра](./media/cleartyperegistry01.png "ClearTypeRegistry01")  
+ ![Параметры ClearType в редакторе реестра.](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
   
 > [!NOTE]
 >  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения для вывода текста в одном из двух режимов, с и без [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]. Если текст отрисовывается без [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], он называется отрисовке в оттенках серого.  
@@ -75,7 +75,7 @@ ms.locfileid: "57369725"
   
  Для каждого имени устройства отображения для пользователя `GammaLevel` определено значение DWORD. На следующем снимке экрана показан параметр редактора реестра для гамма-уровня.  
   
- ![Параметры ClearType в редакторе реестра](./media/cleartyperegistry02.png "ClearTypeRegistry02")  
+ ![Параметры уровня гамма ClearType в редакторе реестра](./media/cleartype-registry-settings/cleartype-gamma-level-settings-registry-editor.png)  
   
 <a name="pixel_structure"></a>   
 ## <a name="pixel-structure"></a>Структура пикселей  
@@ -99,7 +99,7 @@ ms.locfileid: "57369725"
   
  Для каждого имени устройства отображения для пользователя `PixelStructure` определено значение DWORD. На следующем снимке экрана показан параметр редактора реестра для структуры пикселей.  
   
- ![Параметры ClearType в редакторе реестра](./media/cleartyperegistry02.png "ClearTypeRegistry02")  
+ ![Параметры уровня гамма ClearType в редакторе реестра](./media/cleartype-registry-settings/cleartype-gamma-level-settings-registry-editor.png)  
   
 <a name="text_contrast_level"></a>   
 ## <a name="text-contrast-level"></a>Уровень контрастности текста  
@@ -112,7 +112,7 @@ ms.locfileid: "57369725"
   
  Для каждого имени устройства отображения для пользователя `TextContrastLevel` определено значение DWORD. На следующем снимке экрана показан параметр редактора реестра для уровня контрастности текста.  
   
- ![Параметры ClearType в редакторе реестра](./media/cleartyperegistry01.png "ClearTypeRegistry01")  
+ ![Параметры ClearType в редакторе реестра.](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
   
 ## <a name="see-also"></a>См. также
 - [Общие сведения о технологии ClearType](cleartype-overview.md)
