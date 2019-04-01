@@ -1,5 +1,5 @@
 ---
-title: Аргумент "<argumentname>" должно быть больше или равно-1
+title: Аргумент '<argumentname>' должно быть больше или равно-1
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_GEMinusOne1
@@ -11,7 +11,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58038598"
 ---
-# <a name="argument-argumentname-must-be-greater-than-or-equal-to--1"></a>Аргумент "\<имя_аргумента >" должен быть больше или равно-1
+# <a name="argument-argumentname-must-be-greater-than-or-equal-to--1"></a>Аргумент '\<имя_аргумента >' должен быть больше или равно-1
 Значение аргумента меньше -1.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  

@@ -1,5 +1,5 @@
 ---
-title: КОД языка "<name>" не поддерживается в этой системе
+title: КОД языка '<name>' не поддерживается в этой системе
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_LCIDNotSupported1
@@ -11,7 +11,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58038996"
 ---
-# <a name="locale-id-name-is-not-supported-on-this-system"></a>КОД языка "\<имя >" не поддерживается в этой системе
+# <a name="locale-id-name-is-not-supported-on-this-system"></a>КОД языка '\<имя >' не поддерживается в этой системе
 Предпринята попытка использования `VbStrConv`, но система не поддерживает указанный языковой стандарт.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  

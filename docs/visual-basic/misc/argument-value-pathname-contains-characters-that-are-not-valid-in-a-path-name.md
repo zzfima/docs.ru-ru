@@ -1,5 +1,5 @@
 ---
-title: Значение аргумента "<pathname>" содержит символы, недопустимые в имени пути
+title: Значение аргумента '<pathname>' содержит символы, недопустимые в имени пути
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_InvalidPathChars1
@@ -11,7 +11,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58026185"
 ---
-# <a name="argument-value-pathname-contains-characters-that-are-not-valid-in-a-path-name"></a>Значение аргумента "\<путь >" содержит символы, недопустимые в имени пути
+# <a name="argument-value-pathname-contains-characters-that-are-not-valid-in-a-path-name"></a>Значение аргумента '\<путь >' содержит символы, недопустимые в имени пути
 Путь содержит недопустимые символы.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  

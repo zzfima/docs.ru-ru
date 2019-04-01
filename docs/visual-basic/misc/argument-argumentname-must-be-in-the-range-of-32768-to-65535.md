@@ -1,5 +1,5 @@
 ---
-title: Аргумент "<argumentname>" должно находиться в диапазоне от -32768 до 65535
+title: Аргумент '<argumentname>' должно находиться в диапазоне от -32768 до 65535
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_RangeTwoBytes1
@@ -11,7 +11,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58037180"
 ---
-# <a name="argument-argumentname-must-be-in-the-range-of--32768-to-65535"></a>Аргумент "\<имя_аргумента >" должен быть в диапазоне от -32768 до 65535
+# <a name="argument-argumentname-must-be-in-the-range-of--32768-to-65535"></a>Аргумент '\<имя_аргумента >' должен быть в диапазоне от -32768 до 65535
 Значение аргумента не попадает в допустимый диапазон от –32 768 до 65 535.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  

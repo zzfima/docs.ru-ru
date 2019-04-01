@@ -1,5 +1,5 @@
 ---
-title: Поле "<fieldname>«типа»<typename>" помечено как «ReadOnly»
+title: Поле '<fieldname>«типа»<typename>' помечено как «ReadOnly»
 ms.date: 07/20/2015
 f1_keywords:
 - vbrMissingMember_ReadOnlyField2
@@ -11,7 +11,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58043717"
 ---
-# <a name="field-fieldname-of-type-typename-is-readonly"></a>Поле "\<имя_поля >" типа "\<typename >" помечено как «ReadOnly»
+# <a name="field-fieldname-of-type-typename-is-readonly"></a>Поле '\<имя_поля >' типа '\<typename >' помечено как «ReadOnly»
 Предпринята попытка записи в поле, которое объявлено как `ReadOnly`.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  

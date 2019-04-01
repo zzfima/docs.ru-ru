@@ -1,5 +1,5 @@
 ---
-title: Аргумент "<argumentname>" не может быть преобразовано в тип «Date».
+title: Аргумент '<argumentname>' не может быть преобразовано в тип «Date».
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_InvalidDateValue1
@@ -11,7 +11,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58038607"
 ---
-# <a name="argument-argumentname-cannot-be-converted-to-type-date"></a>Аргумент "\<имя_аргумента >" не может быть преобразовано в тип «Date».
+# <a name="argument-argumentname-cannot-be-converted-to-type-date"></a>Аргумент '\<имя_аргумента >' не может быть преобразовано в тип «Date».
 Преобразование пыталось изменить тип переменной на `Date`, однако значение не распознано как допустимая дата.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  

@@ -1,5 +1,5 @@
 ---
-title: Диск "<drivename>" не найден
+title: Диск '<drivename>' не найден
 ms.date: 07/20/2015
 f1_keywords:
 - vbrFileSystem_DriveNotFound1
@@ -11,7 +11,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58034411"
 ---
-# <a name="drive-drivename-not-found"></a>Диск "\<имя_диска >" не найден
+# <a name="drive-drivename-not-found"></a>Диск '\<имя_диска >' не найден
 Не удается найти диск. Сетевое подключение разорвано или диск, к которому вы пытаетесь получить доступ, отключен либо не существует.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  

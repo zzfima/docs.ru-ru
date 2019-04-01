@@ -1,5 +1,5 @@
 ---
-title: Аргумент "<argumentname>" не является допустимым значением
+title: Аргумент '<argumentname>' не является допустимым значением
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_InvalidValue1
@@ -11,7 +11,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58032039"
 ---
-# <a name="argument-argumentname-is-not-a-valid-value"></a>Аргумент "\<имя_аргумента >" не является допустимым значением
+# <a name="argument-argumentname-is-not-a-valid-value"></a>Аргумент '\<имя_аргумента >' не является допустимым значением
 Значение аргумента недопустимо.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  

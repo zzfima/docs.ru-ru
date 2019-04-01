@@ -1,5 +1,5 @@
 ---
-title: Раздел реестра "<keyname>" не удалось создать
+title: Раздел реестра '<keyname>' не удалось создать
 ms.date: 07/20/2015
 f1_keywords:
 - vbrInteraction_ResKeyNotCreated1
@@ -11,7 +11,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58048537"
 ---
-# <a name="registry-key-keyname-could-not-be-created"></a>Раздел реестра "\<keyname >" не удалось создать
+# <a name="registry-key-keyname-could-not-be-created"></a>Раздел реестра '\<keyname >' не удалось создать
 Указанный раздел реестра не может быть создан, возможно из-за недостаточных разрешений.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  

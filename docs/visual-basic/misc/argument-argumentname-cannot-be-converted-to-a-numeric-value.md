@@ -1,5 +1,5 @@
 ---
-title: Аргумент "<argumentname>" невозможно преобразовать в числовое значение
+title: Аргумент '<argumentname>' невозможно преобразовать в числовое значение
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgumentNotNumeric1
@@ -11,7 +11,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58028395"
 ---
-# <a name="argument-argumentname-cannot-be-converted-to-a-numeric-value"></a>Аргумент "\<имя_аргумента >" невозможно преобразовать в числовое значение
+# <a name="argument-argumentname-cannot-be-converted-to-a-numeric-value"></a>Аргумент '\<имя_аргумента >' невозможно преобразовать в числовое значение
 Предпринята попытка преобразовать переменную, например строку, в числовое значение.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  

@@ -1,5 +1,5 @@
 ---
-title: 'Нет доступных перегруженных "<methodname>" может вызываться с этими аргументами без расширяющего преобразования: <list>'
+title: "Нет доступных перегруженных '<methodname>' может вызываться с этими аргументами без расширяющего преобразования: <list>"
 ms.date: 07/20/2015
 f1_keywords:
 - vbrAmbiguousCall_WideningConversion2
@@ -11,7 +11,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58027421"
 ---
-# <a name="no-accessible-overloaded-methodname-can-be-called-with-these-arguments-without-a-widening-conversion-list"></a>Нет доступных перегруженных "\<имя_метода >" может вызываться с этими аргументами без расширяющего преобразования: \<список >
+# <a name="no-accessible-overloaded-methodname-can-be-called-with-these-arguments-without-a-widening-conversion-list"></a>Нет доступных перегруженных '\<имя_метода >' может вызываться с этими аргументами без расширяющего преобразования: \<список >
 Вызван перегруженный метод, однако метод не может быть сопоставлен со списком указанных аргументов без расширяющего преобразования.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  

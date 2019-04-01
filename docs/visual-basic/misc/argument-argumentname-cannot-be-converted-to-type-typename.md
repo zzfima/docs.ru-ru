@@ -1,5 +1,5 @@
 ---
-title: Аргумент "<argumentname>«нельзя преобразовать в тип»<typename>"
+title: Аргумент '<argumentname>«нельзя преобразовать в тип»<typename>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_InvalidValueType2
@@ -11,7 +11,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58018575"
 ---
-# <a name="argument-argumentname-cannot-be-converted-to-type-typename"></a>Аргумент "\<имя_аргумента >" не может быть преобразовано в тип "\<typename >"
+# <a name="argument-argumentname-cannot-be-converted-to-type-typename"></a>Аргумент '\<имя_аргумента >' не может быть преобразовано в тип '\<typename >'
 Преобразование пытается изменить аргумент на тип, который является недопустимым.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  

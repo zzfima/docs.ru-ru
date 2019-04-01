@@ -1,5 +1,5 @@
 ---
-title: Длина аргумента "<argumentname>" должно быть больше нуля
+title: Длина аргумента '<argumentname>' должно быть больше нуля
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_LengthGTZero1
@@ -11,7 +11,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58042552"
 ---
-# <a name="length-of-argument-argumentname-must-be-greater-than-zero"></a>Длина аргумента "\<имя_аргумента >" должен быть больше нуля
+# <a name="length-of-argument-argumentname-must-be-greater-than-zero"></a>Длина аргумента '\<имя_аргумента >' должен быть больше нуля
 Аргумент имеет значение, которое меньше или равно нулю.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  

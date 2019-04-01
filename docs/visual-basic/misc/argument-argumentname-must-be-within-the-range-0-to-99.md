@@ -1,5 +1,5 @@
 ---
-title: Аргумент "<argumentname>" должно находиться в диапазоне от 0 до 99
+title: Аргумент '<argumentname>' должно находиться в диапазоне от 0 до 99
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_Range0to99_1
@@ -11,7 +11,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58032106"
 ---
-# <a name="argument-argumentname-must-be-within-the-range-0-to-99"></a>Аргумент "\<имя_аргумента >" должно находиться в диапазоне от 0 до 99
+# <a name="argument-argumentname-must-be-within-the-range-0-to-99"></a>Аргумент '\<имя_аргумента >' должно находиться в диапазоне от 0 до 99
 Аргумент недопустим, так как не попадает в диапазон от 0 до 99.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  

@@ -1,5 +1,5 @@
 ---
-title: Аргумент "<argumentname>" имеет значение Nothing или пуст
+title: Аргумент '<argumentname>' имеет значение Nothing или пуст
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_PathNullOrEmpty1
@@ -11,7 +11,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58036905"
 ---
-# <a name="argument-argumentname-is-nothing-or-empty"></a>Аргумент "\<имя_аргумента >" имеет значение Nothing или пуст
+# <a name="argument-argumentname-is-nothing-or-empty"></a>Аргумент '\<имя_аргумента >' имеет значение Nothing или пуст
 Имя аргумента является недопустимым, поскольку он инициализируется значением `Nothing` или является пустым. Аргумент должен иметь определенный тип данных и допустимое имя.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  

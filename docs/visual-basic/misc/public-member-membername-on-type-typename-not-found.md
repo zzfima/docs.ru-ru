@@ -1,5 +1,5 @@
 ---
-title: Открытый член "<membername>«в типе»<typename>" не найден
+title: Открытый член '<membername>«в типе»<typename>' не найден
 ms.date: 07/20/2015
 f1_keywords:
 - vbrMissingMember_MemberNotFoundOnType2
@@ -11,7 +11,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58050583"
 ---
-# <a name="public-member-membername-on-type-typename-not-found"></a>Открытый член "\<имя_члена >" в типе "\<typename >" не найден
+# <a name="public-member-membername-on-type-typename-not-found"></a>Открытый член '\<имя_члена >' в типе '\<typename >' не найден
 Не удается найти член, к которому вы пытаетесь получить доступ. Эта ошибка может возникать при доступе к закрытым членам объектов с поздней привязкой.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  

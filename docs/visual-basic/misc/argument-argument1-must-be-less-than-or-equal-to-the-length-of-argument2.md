@@ -1,5 +1,5 @@
 ---
-title: Аргумент "<argument1>«должно быть меньше или равен длине аргумента»<argument2>"
+title: Аргумент '<argument1>«должно быть меньше или равен длине аргумента»<argument2>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_IndexLELength2
@@ -11,7 +11,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58032250"
 ---
-# <a name="argument-argument1-must-be-less-than-or-equal-to-the-length-of-argument-argument2"></a>Аргумент "\<аргумент1 >" должно быть меньше или равен длине аргумента "\<аргумент2 >"
+# <a name="argument-argument1-must-be-less-than-or-equal-to-the-length-of-argument-argument2"></a>Аргумент '\<аргумент1 >' должно быть меньше или равен длине аргумента '\<аргумент2 >'
 Длина аргумента превышает допустимый предел, который определяется длиной второго аргумента.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
