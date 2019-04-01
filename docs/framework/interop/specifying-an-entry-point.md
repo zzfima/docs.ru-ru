@@ -8,88 +8,94 @@ helpviewer_keywords:
 ms.assetid: d1247f08-0965-416a-b978-e0b50652dfe3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c278eca421020bea4f36f87eb6c8a9a8ba7d2a43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 787406b1fa7e5beb59ff3f8715c1215a734ed895
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658290"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411308"
 ---
-# <a name="specifying-an-entry-point"></a><span data-ttu-id="4ad0a-102">Задание точки входа</span><span class="sxs-lookup"><span data-stu-id="4ad0a-102">Specifying an Entry Point</span></span>
-<span data-ttu-id="4ad0a-103">Точка входа определяет расположение функции в библиотеке DLL.</span><span class="sxs-lookup"><span data-stu-id="4ad0a-103">An entry point identifies the location of a function in a DLL.</span></span> <span data-ttu-id="4ad0a-104">В управляемом проекте исходное имя или порядковый номер точки входа целевой функции определяет эту функцию в границах взаимодействия.</span><span class="sxs-lookup"><span data-stu-id="4ad0a-104">Within a managed project, the original name or ordinal entry point of a target function identifies that function across the interoperation boundary.</span></span> <span data-ttu-id="4ad0a-105">Вы можете сопоставить точку входа с другим именем, чтобы фактически переименовать функцию.</span><span class="sxs-lookup"><span data-stu-id="4ad0a-105">Further, you can map the entry point to a different name, effectively renaming the function.</span></span>  
+# <a name="specifying-an-entry-point"></a><span data-ttu-id="2cb1d-102">Задание точки входа</span><span class="sxs-lookup"><span data-stu-id="2cb1d-102">Specifying an Entry Point</span></span>
+<span data-ttu-id="2cb1d-103">Точка входа определяет расположение функции в библиотеке DLL.</span><span class="sxs-lookup"><span data-stu-id="2cb1d-103">An entry point identifies the location of a function in a DLL.</span></span> <span data-ttu-id="2cb1d-104">В управляемом проекте исходное имя или порядковый номер точки входа целевой функции определяет эту функцию в границах взаимодействия.</span><span class="sxs-lookup"><span data-stu-id="2cb1d-104">Within a managed project, the original name or ordinal entry point of a target function identifies that function across the interoperation boundary.</span></span> <span data-ttu-id="2cb1d-105">Вы можете сопоставить точку входа с другим именем, чтобы фактически переименовать функцию.</span><span class="sxs-lookup"><span data-stu-id="2cb1d-105">Further, you can map the entry point to a different name, effectively renaming the function.</span></span>  
   
- <span data-ttu-id="4ad0a-106">Ниже перечислено, зачем может потребоваться переименовывать функции DLL:</span><span class="sxs-lookup"><span data-stu-id="4ad0a-106">Following is a list of possible reasons to rename a DLL function:</span></span>  
+ <span data-ttu-id="2cb1d-106">Ниже перечислено, зачем может потребоваться переименовывать функции DLL:</span><span class="sxs-lookup"><span data-stu-id="2cb1d-106">Following is a list of possible reasons to rename a DLL function:</span></span>  
   
--   <span data-ttu-id="4ad0a-107">чтобы избежать использования имен функций API, в которых учитывается регистр символов;</span><span class="sxs-lookup"><span data-stu-id="4ad0a-107">To avoid using case-sensitive API function names</span></span>  
+-   <span data-ttu-id="2cb1d-107">чтобы избежать использования имен функций API, в которых учитывается регистр символов;</span><span class="sxs-lookup"><span data-stu-id="2cb1d-107">To avoid using case-sensitive API function names</span></span>  
   
--   <span data-ttu-id="4ad0a-108">чтобы привести имена в соответствие с существующими стандартами именования;</span><span class="sxs-lookup"><span data-stu-id="4ad0a-108">To comply with existing naming standards</span></span>  
+-   <span data-ttu-id="2cb1d-108">чтобы привести имена в соответствие с существующими стандартами именования;</span><span class="sxs-lookup"><span data-stu-id="2cb1d-108">To comply with existing naming standards</span></span>  
   
--   <span data-ttu-id="4ad0a-109">чтобы сделать возможным вызов функций, принимающих данные разных типов (путем объявления нескольких версий одной и той же функции DLL);</span><span class="sxs-lookup"><span data-stu-id="4ad0a-109">To accommodate functions that take different data types (by declaring multiple versions of the same DLL function)</span></span>  
+-   <span data-ttu-id="2cb1d-109">чтобы сделать возможным вызов функций, принимающих данные разных типов (путем объявления нескольких версий одной и той же функции DLL);</span><span class="sxs-lookup"><span data-stu-id="2cb1d-109">To accommodate functions that take different data types (by declaring multiple versions of the same DLL function)</span></span>  
   
--   <span data-ttu-id="4ad0a-110">чтобы упростить применение интерфейсов API, которые содержат версии функции для ANSI и Юникода.</span><span class="sxs-lookup"><span data-stu-id="4ad0a-110">To simplify using APIs that contain ANSI and Unicode versions</span></span>  
+-   <span data-ttu-id="2cb1d-110">чтобы упростить применение интерфейсов API, которые содержат версии функции для ANSI и Юникода.</span><span class="sxs-lookup"><span data-stu-id="2cb1d-110">To simplify using APIs that contain ANSI and Unicode versions</span></span>  
   
- <span data-ttu-id="4ad0a-111">В этом разделе показано, как переименовать функцию DLL в управляемом коде.</span><span class="sxs-lookup"><span data-stu-id="4ad0a-111">This topic demonstrates how to rename a DLL function in managed code.</span></span>  
+ <span data-ttu-id="2cb1d-111">В этом разделе показано, как переименовать функцию DLL в управляемом коде.</span><span class="sxs-lookup"><span data-stu-id="2cb1d-111">This topic demonstrates how to rename a DLL function in managed code.</span></span>  
   
-## <a name="renaming-a-function-in-visual-basic"></a><span data-ttu-id="4ad0a-112">Переименование функции в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="4ad0a-112">Renaming a Function in Visual Basic</span></span>  
- <span data-ttu-id="4ad0a-113">В Visual Basic для установки поля <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> используется ключевое слово **Function** в операторе **Declare**.</span><span class="sxs-lookup"><span data-stu-id="4ad0a-113">Visual Basic uses the **Function** keyword in the **Declare** statement to set the <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> field.</span></span> <span data-ttu-id="4ad0a-114">В приведенном ниже примере показан базовый вариант объявления.</span><span class="sxs-lookup"><span data-stu-id="4ad0a-114">The following example shows a basic declaration.</span></span>  
+## <a name="renaming-a-function-in-visual-basic"></a><span data-ttu-id="2cb1d-112">Переименование функции в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="2cb1d-112">Renaming a Function in Visual Basic</span></span>  
+ <span data-ttu-id="2cb1d-113">В Visual Basic для установки поля <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> используется ключевое слово **Function** в операторе **Declare**.</span><span class="sxs-lookup"><span data-stu-id="2cb1d-113">Visual Basic uses the **Function** keyword in the **Declare** statement to set the <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> field.</span></span> <span data-ttu-id="2cb1d-114">В приведенном ниже примере показан базовый вариант объявления.</span><span class="sxs-lookup"><span data-stu-id="2cb1d-114">The following example shows a basic declaration.</span></span>  
   
-```vb  
-Imports System.Runtime.InteropServices  
+```vb
+Imports System
+
+Friend Class WindowsAPI
+    Friend Shared Declare Auto Function MessageBox Lib "user32.dll" (
+        ByVal hWnd As IntPtr,
+        ByVal lpText As String,
+        ByVal lpCaption As String,
+        ByVal uType As UInteger) As Integer
+End Class
+```
   
-Public Class Win32  
-    Declare Auto Function MessageBox Lib "user32.dll" _  
-       (ByVal hWnd As Integer, ByVal txt As String,_  
-       ByVal caption As String, ByVal Typ As Integer) As Integer  
-End Class  
-```  
+ <span data-ttu-id="2cb1d-115">Как показано в следующем примере, можно заменить точку входа **MessageBox** на **MsgBox**, включив в определение ключевое слово **Alias**.</span><span class="sxs-lookup"><span data-stu-id="2cb1d-115">You can replace the **MessageBox** entry point with **MsgBox** by including the **Alias** keyword in your definition, as shown in the following example.</span></span> <span data-ttu-id="2cb1d-116">В обоих примерах ключевое слово **Auto** позволяет не указывать версию кодировки для точки входа.</span><span class="sxs-lookup"><span data-stu-id="2cb1d-116">In both examples the **Auto** keyword eliminates the need to specify the character-set version of the entry point.</span></span> <span data-ttu-id="2cb1d-117">Дополнительные сведения о выборе кодировки см. в разделе [Определение кодировки](../../../docs/framework/interop/specifying-a-character-set.md).</span><span class="sxs-lookup"><span data-stu-id="2cb1d-117">For more information about selecting a character set, see [Specifying a Character Set](../../../docs/framework/interop/specifying-a-character-set.md).</span></span>  
   
- <span data-ttu-id="4ad0a-115">Как показано в следующем примере, можно заменить точку входа **MessageBox** на **MsgBox**, включив в определение ключевое слово **Alias**.</span><span class="sxs-lookup"><span data-stu-id="4ad0a-115">You can replace the **MessageBox** entry point with **MsgBox** by including the **Alias** keyword in your definition, as shown in the following example.</span></span> <span data-ttu-id="4ad0a-116">В обоих примерах ключевое слово **Auto** позволяет не указывать версию кодировки для точки входа.</span><span class="sxs-lookup"><span data-stu-id="4ad0a-116">In both examples the **Auto** keyword eliminates the need to specify the character-set version of the entry point.</span></span> <span data-ttu-id="4ad0a-117">Дополнительные сведения о выборе кодировки см. в разделе [Определение кодировки](../../../docs/framework/interop/specifying-a-character-set.md).</span><span class="sxs-lookup"><span data-stu-id="4ad0a-117">For more information about selecting a character set, see [Specifying a Character Set](../../../docs/framework/interop/specifying-a-character-set.md).</span></span>  
+```vb
+Imports System
+
+Friend Class WindowsAPI
+    Friend Shared Declare Auto Function MsgBox _
+        Lib "user32.dll" Alias "MessageBox" (
+        ByVal hWnd As IntPtr,
+        ByVal lpText As String,
+        ByVal lpCaption As String,
+        ByVal uType As UInteger) As Integer
+End Class
+```
   
-```vb  
-Imports System.Runtime.InteropServices  
+## <a name="renaming-a-function-in-c-and-c"></a><span data-ttu-id="2cb1d-118">Переименование функции в C# и C++</span><span class="sxs-lookup"><span data-stu-id="2cb1d-118">Renaming a Function in C# and C++</span></span>  
+ <span data-ttu-id="2cb1d-119">Для задания функции DLL по имени или порядковому номеру можно использовать поле <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="2cb1d-119">You can use the <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> field to specify a DLL function by name or ordinal.</span></span> <span data-ttu-id="2cb1d-120">Если имя функции в определении метода совпадает с именем точки входа в библиотеке DLL, явно задавать функцию с помощью поля **EntryPoint** не требуется.</span><span class="sxs-lookup"><span data-stu-id="2cb1d-120">If the name of the function in your method definition is the same as the entry point in the DLL, you do not have to explicitly identify the function with the **EntryPoint** field.</span></span> <span data-ttu-id="2cb1d-121">В противном случае, чтобы указать имя или порядковый номер, следует использовать одну из следующих форм атрибута:</span><span class="sxs-lookup"><span data-stu-id="2cb1d-121">Otherwise, use one of the following attribute forms to indicate a name or ordinal:</span></span>  
   
-Public Class Win32  
-    Declare Auto Function MsgBox Lib "user32.dll" _  
-       Alias "MessageBox" (ByVal hWnd As Integer, ByVal txt As String,_  
-       ByVal caption As String, ByVal Typ As Integer) As Integer  
-End Class  
-```  
+```csharp
+[DllImport("DllName", EntryPoint = "Functionname")]
+[DllImport("DllName", EntryPoint = "#123")]
+```
   
-## <a name="renaming-a-function-in-c-and-c"></a><span data-ttu-id="4ad0a-118">Переименование функции в C# и C++</span><span class="sxs-lookup"><span data-stu-id="4ad0a-118">Renaming a Function in C# and C++</span></span>  
- <span data-ttu-id="4ad0a-119">Для задания функции DLL по имени или порядковому номеру можно использовать поле <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="4ad0a-119">You can use the <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> field to specify a DLL function by name or ordinal.</span></span> <span data-ttu-id="4ad0a-120">Если имя функции в определении метода совпадает с именем точки входа в библиотеке DLL, явно задавать функцию с помощью поля **EntryPoint** не требуется.</span><span class="sxs-lookup"><span data-stu-id="4ad0a-120">If the name of the function in your method definition is the same as the entry point in the DLL, you do not have to explicitly identify the function with the **EntryPoint** field.</span></span> <span data-ttu-id="4ad0a-121">В противном случае, чтобы указать имя или порядковый номер, следует использовать одну из следующих форм атрибута:</span><span class="sxs-lookup"><span data-stu-id="4ad0a-121">Otherwise, use one of the following attribute forms to indicate a name or ordinal:</span></span>  
+ <span data-ttu-id="2cb1d-122">Обратите внимание, что порядковому номеру должен предшествовать знак #.</span><span class="sxs-lookup"><span data-stu-id="2cb1d-122">Notice that you must prefix an ordinal with the pound sign (#).</span></span>  
   
-```  
-[DllImport("dllname", EntryPoint="Functionname")]  
-[DllImport("dllname", EntryPoint="#123")]  
-```  
+ <span data-ttu-id="2cb1d-123">В приведенном ниже примере показан способ замены в коде **MessageBoxA** на **MsgBox** с помощью поля **EntryPoint**.</span><span class="sxs-lookup"><span data-stu-id="2cb1d-123">The following example demonstrates how to replace **MessageBoxA** with **MsgBox** in your code by using the **EntryPoint** field.</span></span>  
   
- <span data-ttu-id="4ad0a-122">Обратите внимание, что порядковому номеру должен предшествовать знак #.</span><span class="sxs-lookup"><span data-stu-id="4ad0a-122">Notice that you must prefix an ordinal with the pound sign (#).</span></span>  
+```csharp
+using System;
+using System.Runtime.InteropServices;
+
+internal static class WindowsAPI
+{
+    [DllImport("user32.dll", EntryPoint = "MessageBoxA")]
+    internal static extern int MessageBox(
+        IntPtr hWnd, string lpText, string lpCaption, uint uType);
+}
+```
   
- <span data-ttu-id="4ad0a-123">В приведенном ниже примере показан способ замены в коде **MessageBoxA** на **MsgBox** с помощью поля **EntryPoint**.</span><span class="sxs-lookup"><span data-stu-id="4ad0a-123">The following example demonstrates how to replace **MessageBoxA** with **MsgBox** in your code by using the **EntryPoint** field.</span></span>  
+```cpp
+using namespace System;
+using namespace System::Runtime::InteropServices;
+
+typedef void* HWND;
+[DllImport("user32", EntryPoint = "MessageBoxA")]
+extern "C" int MsgBox(
+    HWND hWnd, String* lpText, String* lpCaption, unsigned int uType);
+```
   
-```csharp  
-using System.Runtime.InteropServices;  
-  
-public class Win32 {  
-    [DllImport("user32.dll", EntryPoint="MessageBoxA")]  
-    public static extern int MsgBox(int hWnd, String text, String caption,  
-                                    uint type);  
-}  
-```  
-  
-```cpp  
-using namespace System::Runtime::InteropServices;  
-  
-typedef void* HWND;  
-[DllImport("user32", EntryPoint="MessageBoxA")]  
-extern "C" int MsgBox(HWND hWnd,  
-                      String*  pText,  
-                      String*  pCaption,  
-                      unsigned int uType);  
-```  
-  
-## <a name="see-also"></a><span data-ttu-id="4ad0a-124">См. также</span><span class="sxs-lookup"><span data-stu-id="4ad0a-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2cb1d-124">См. также</span><span class="sxs-lookup"><span data-stu-id="2cb1d-124">See also</span></span>
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
-- [<span data-ttu-id="4ad0a-125">Создание прототипов в управляемом коде</span><span class="sxs-lookup"><span data-stu-id="4ad0a-125">Creating Prototypes in Managed Code</span></span>](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
-- [<span data-ttu-id="4ad0a-126">Примеры вызовов неуправляемого кода</span><span class="sxs-lookup"><span data-stu-id="4ad0a-126">Platform Invoke Examples</span></span>](../../../docs/framework/interop/platform-invoke-examples.md)
-- [<span data-ttu-id="4ad0a-127">Маршалинг данных при вызове неуправляемого кода</span><span class="sxs-lookup"><span data-stu-id="4ad0a-127">Marshaling Data with Platform Invoke</span></span>](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)
+- [<span data-ttu-id="2cb1d-125">Создание прототипов в управляемом коде</span><span class="sxs-lookup"><span data-stu-id="2cb1d-125">Creating Prototypes in Managed Code</span></span>](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
+- [<span data-ttu-id="2cb1d-126">Примеры вызовов неуправляемого кода</span><span class="sxs-lookup"><span data-stu-id="2cb1d-126">Platform Invoke Examples</span></span>](../../../docs/framework/interop/platform-invoke-examples.md)
+- [<span data-ttu-id="2cb1d-127">Маршалинг данных при вызове неуправляемого кода</span><span class="sxs-lookup"><span data-stu-id="2cb1d-127">Marshaling Data with Platform Invoke</span></span>](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)
