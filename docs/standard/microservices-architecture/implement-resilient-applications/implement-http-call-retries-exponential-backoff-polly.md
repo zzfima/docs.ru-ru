@@ -4,12 +4,12 @@ description: Узнайте, как обрабатывать сбои HTTP-за�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: d0c3042f2831e5f256f43e32e70645213054f247
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: 07333b84896c223f076e9c36cc90ab7ea7ac37c7
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479650"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465728"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>Реализация повторных попыток вызова HTTP с экспоненциальной выдержкой с помощью HttpClientFactory и политик Polly
 
@@ -72,16 +72,16 @@ Policy
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
 - **Шаблон повтора**\
-  [*https://docs.microsoft.com/azure/architecture/patterns/retry*](/azure/architecture/patterns/retry)
+  [https://docs.microsoft.com/azure/architecture/patterns/retry](/azure/architecture/patterns/retry)
 
 - **Использование Polly и HttpClientFactory**\
-  [*https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory*](https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory)
+  [https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory](https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory)
 
 - **Polly (библиотека для обеспечения отказоустойчивости .NET и обработки временных сбоев)**\
-  [*https://github.com/App-vNext/Polly*](https://github.com/App-vNext/Polly)
+  [https://github.com/App-vNext/Polly](https://github.com/App-vNext/Polly)
 
 - **Марк Брукер (Marc Brooker). Колебания. Оптимизация с помощью случайности**\
-  [*https://brooker.co.za/blog/2015/03/21/backoff.html*](https://brooker.co.za/blog/2015/03/21/backoff.html)
+  [https://brooker.co.za/blog/2015/03/21/backoff.html](https://brooker.co.za/blog/2015/03/21/backoff.html)
 
 >[!div class="step-by-step"]
 >[Назад](explore-custom-http-call-retries-exponential-backoff.md)

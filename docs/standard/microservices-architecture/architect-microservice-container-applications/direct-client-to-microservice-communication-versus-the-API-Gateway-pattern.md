@@ -4,12 +4,12 @@ description: Общие сведения о различиях использо�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 35bebd9429dabbe0e3ddc3549a504719321e47e1
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 0e2db3629d504065a122a69b916f19aa3b838aab
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675456"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58462959"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Сравнение шаблона шлюза API с прямым взаимодействием клиента и микрослужбы
 
@@ -173,25 +173,25 @@ Ocelot используется в [примере приложения eShopOnC
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
 - **Чарльз Ричардсон (Charles Richardson). Шаблон: шлюз API, серверная часть для внешнего интерфейса** \
-  [*https://microservices.io/patterns/apigateway.html*](https://microservices.io/patterns/apigateway.html)
+  [https://microservices.io/patterns/apigateway.html](https://microservices.io/patterns/apigateway.html)
 
 - **Шаблон шлюза API** \
-  [*https://docs.microsoft.com/azure/architecture/microservices/gateway*](https://docs.microsoft.com/azure/architecture/microservices/gateway)
+  [https://docs.microsoft.com/azure/architecture/microservices/gateway](https://docs.microsoft.com/azure/architecture/microservices/gateway)
 
 - **Шаблон агрегирования и компоновки** \
-  [*https://microservices.io/patterns/data/api-composition.html*](https://microservices.io/patterns/data/api-composition.html)
+  [https://microservices.io/patterns/data/api-composition.html](https://microservices.io/patterns/data/api-composition.html)
 
 - **Управление API Azure** \
-  [*https://azure.microsoft.com/services/api-management/*](https://azure.microsoft.com/services/api-management/)
+  [https://azure.microsoft.com/services/api-management/](https://azure.microsoft.com/services/api-management/)
 
 - **Уди Дахан (Udi Dahan). Объединение на основе служб** \
-  [*http://udidahan.com/2014/07/30/service-oriented-composition-with-video/*](http://udidahan.com/2014/07/30/service-oriented-composition-with-video/)
+  [http://udidahan.com/2014/07/30/service-oriented-composition-with-video/](http://udidahan.com/2014/07/30/service-oriented-composition-with-video/)
 
 - **Клеменс Вастерс (Clemens Vasters). Messaging and Microservices (Обмен сообщениями и микрослужбы) на GOTO 2016 (видео)** \
-  [*https://www.youtube.com/watch?v=rXi5CLjIQ9k*](https://www.youtube.com/watch?v=rXi5CLjIQ9k)
+  [https://www.youtube.com/watch?v=rXi5CLjIQ9k](https://www.youtube.com/watch?v=rXi5CLjIQ9k)
 
 - **API Gateway in a Nutshell** (Краткие сведения о шлюзе API) — серия руководств по шлюзу API ASP.NET Core \
-  [*https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html*](https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html)
+  [https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html](https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html)
 
 >[!div class="step-by-step"]
 >[Назад](identify-microservice-domain-model-boundaries.md)

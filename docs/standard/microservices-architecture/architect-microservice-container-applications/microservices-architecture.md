@@ -4,12 +4,12 @@ description: Архитектура микрослужб .NET для конте�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 8cac40c0a6e5f31087296416616c8a8b9e54b528
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 6a3262c65fb221f3b9e058a581b5dc6bfed92076
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145259"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465195"
 ---
 # <a name="microservices-architecture"></a>Архитектура микрослужб
 
@@ -46,19 +46,19 @@ ms.locfileid: "54145259"
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
 - **Марк Руссинович (Mark Russinovich). Микрослужбы: революция в сфере приложений, движимая облачными технологиями** \
-  [*https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/*](https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/)
+  [https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/](https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/)
 
 - **Мартин Фоулер (Martin Fowler). Микрослужбы** \
-  [*https://www.martinfowler.com/articles/microservices.html*](https://www.martinfowler.com/articles/microservices.html)
+  [https://www.martinfowler.com/articles/microservices.html](https://www.martinfowler.com/articles/microservices.html)
 
 - **Мартин Фоулер (Martin Fowler). Требования для микрослужб** \
-  [*https://martinfowler.com/bliki/MicroservicePrerequisites.html*](https://martinfowler.com/bliki/MicroservicePrerequisites.html)
+  [https://martinfowler.com/bliki/MicroservicePrerequisites.html](https://martinfowler.com/bliki/MicroservicePrerequisites.html)
 
 - **Джимми Нилссон (Jimmy Nilsson). Фрагментирование облачных вычислений** \
-  [*https://www.infoq.com/articles/CCC-Jimmy-Nilsson*](https://www.infoq.com/articles/CCC-Jimmy-Nilsson)
+  [https://www.infoq.com/articles/CCC-Jimmy-Nilsson](https://www.infoq.com/articles/CCC-Jimmy-Nilsson)
 
 - **Сезар де ла Торре (Cesar de la Torre). Containerized Docker Application Lifecycle with Microsoft Platform and Tools** (Жизненный цикл контейнерного приложения Docker на основе платформы и средств Майкрософт) (электронная книга, доступная для скачивания) \
-  [*https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
+  [https://aka.ms/dockerlifecycleebook](https://aka.ms/dockerlifecycleebook)
 
 >[!div class="step-by-step"]
 >[Назад](service-oriented-architecture.md)

@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 03/08/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: 9b7ef12591e0a231b633f461547ec0eeaec1a530
-ms.sourcegitcommit: 77854e8704b9689b73103d691db34d71c2bf1dad
+ms.openlocfilehash: e78772df1cf7e5f8999305a1b726a7085f94601b
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58308124"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410073"
 ---
 # <a name="tutorial-create-a-movie-recommender-with-mlnet"></a>Учебник. Создание системы рекомендации фильмов с помощью ML.NET
 
@@ -106,7 +106,7 @@ ms.locfileid: "58308124"
 | Функции      | Метка         |
 | ------------- |:-------------:|
 | `userId`        |    `rating`     |
-| `movieId `      |               |
+| `movieId`      |               |
 | `timestamp`     |               |
 
 Какие признаки (`Features`) будут использоваться для прогнозирования метки (`Label`) — решать вам. Для выбора подходящих признаков (`Features`) можно также использовать такие методы, как [Feature Permutation Importance](../how-to-guides/determine-global-feature-importance-in-model.md).
@@ -116,7 +116,7 @@ ms.locfileid: "58308124"
 | Функции      | Метка         |
 | ------------- |:-------------:|
 | `userId`        |    `rating`     |
-| `movieId `      |               |
+| `movieId`      |               |
 
 Далее необходимо определить структуру данных для входного класса.
 

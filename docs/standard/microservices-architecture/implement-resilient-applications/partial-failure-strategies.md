@@ -4,12 +4,12 @@ description: Узнайте о нескольких стратегиях пра�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/16/2018
-ms.openlocfilehash: 2da0dfee97ac9c7c33ab4edeb670e0f813e6c463
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: dd485eae7163ecf5e5622b960448385e33ae718a
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981326"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464272"
 ---
 # <a name="strategies-to-handle-partial-failure"></a>Стратегии обработки частичного сбоя
 
@@ -30,19 +30,19 @@ ms.locfileid: "56981326"
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
 - **Шаблоны устойчивости**\
-  [*https://docs.microsoft.com/azure/architecture/patterns/category/resiliency*](/azure/architecture/patterns/category/resiliency)
+  [https://docs.microsoft.com/azure/architecture/patterns/category/resiliency](/azure/architecture/patterns/category/resiliency)
 
 - **Повышение устойчивости и оптимизация производительности**\
   <https://docs.microsoft.com/previous-versions/msp-n-p/jj591574(v=pandp.10)>
 
 - **Переборка.** Репозиторий GitHub. Реализация с помощью политики Polly.
-  [*https://github.com/App-vNext/Polly/wiki/Bulkhead*](https://github.com/App-vNext/Polly/wiki/Bulkhead)
+  [https://github.com/App-vNext/Polly/wiki/Bulkhead](https://github.com/App-vNext/Polly/wiki/Bulkhead)
 
 - **Проектирование устойчивых приложений для Azure**\
-  [*https://docs.microsoft.com/azure/architecture/resiliency/*](/azure/architecture/resiliency/)
+  [https://docs.microsoft.com/azure/architecture/resiliency/](/azure/architecture/resiliency/)
 
 - **Обработка временных сбоев**\
-  [*https://docs.microsoft.com/azure/architecture/best-practices/transient-faults*](/azure/architecture/best-practices/transient-faults)
+  [https://docs.microsoft.com/azure/architecture/best-practices/transient-faults](/azure/architecture/best-practices/transient-faults)
 
 >[!div class="step-by-step"]
 >[Назад](handle-partial-failure.md)

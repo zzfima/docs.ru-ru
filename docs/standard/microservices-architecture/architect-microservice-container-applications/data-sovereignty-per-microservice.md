@@ -4,12 +4,12 @@ description: Владение данными в каждой микрослуж�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 4900c294f94f4b4d604ba841595fc5c6d7952c10
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 8db5e4ae8e0da63493a09c76614d898358bdea98
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54144906"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464039"
 ---
 # <a name="data-sovereignty-per-microservice"></a>Владение данными в каждой микрослужбе
 
@@ -50,16 +50,16 @@ ms.locfileid: "54144906"
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
 - **Крис Ричардсон (Chris Richardson). Шаблон: база данных для каждой службы** \
-  [*https://microservices.io/patterns/data/database-per-service.html*](https://microservices.io/patterns/data/database-per-service.html)
+  [https://microservices.io/patterns/data/database-per-service.html](https://microservices.io/patterns/data/database-per-service.html)
 
 - **Мартин Фоулер (Martin Fowler). BoundedContext** \
-  [*https://martinfowler.com/bliki/BoundedContext.html*](https://martinfowler.com/bliki/BoundedContext.html)
+  [https://martinfowler.com/bliki/BoundedContext.html](https://martinfowler.com/bliki/BoundedContext.html)
 
 - **Мартин Фоулер (Martin Fowler). PolyglotPersistence** \
-  [*https://martinfowler.com/bliki/PolyglotPersistence.html*](https://martinfowler.com/bliki/PolyglotPersistence.html)
+  [https://martinfowler.com/bliki/PolyglotPersistence.html](https://martinfowler.com/bliki/PolyglotPersistence.html)
 
 - **Альберто Брандолини (Alberto Brandolini). Стратегическое предметно-ориентированное проектирование с сопоставлением контекста** \
-  [*https://www.infoq.com/articles/ddd-contextmapping*](https://www.infoq.com/articles/ddd-contextmapping)
+  [https://www.infoq.com/articles/ddd-contextmapping](https://www.infoq.com/articles/ddd-contextmapping)
 
 >[!div class="step-by-step"]
 >[Назад](microservices-architecture.md)

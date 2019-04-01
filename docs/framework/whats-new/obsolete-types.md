@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d2800e4608d6055f4815f835a1375f9fffee9fc
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 1a8c6046d05dc706074a732d9ba2a9c1ec73c56f
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58049730"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412348"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>Устаревшие типы в платформе .NET Framework
 <a name="introduction"></a>В таблицах этой статьи перечислены типы, которые являются устаревшими в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] и [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]. Они сгруппированы по сборкам. Используйте следующие ссылки для просмотра списка устаревших типов и рекомендованных альтернатив в каждой сборке. Поскольку эти типы считаются устаревшими, все их члены также являются устаревшими. Список дополнительных устаревших членов в библиотеке классов платформы .NET Framework см. в разделе [Устаревшие члены](obsolete-members.md).
@@ -205,7 +205,7 @@ ms.locfileid: "58049730"
 |----------|-------------|
 |<xref:System.ComponentModel.IComNativeDescriptorHandler?displayProperty=nameWithType>|Этот интерфейс не рекомендуется к использованию. Вместо него следует добавить поставщик <xref:System.ComponentModel.TypeDescriptionProvider?displayProperty=nameWithType> для обработки типа <xref:System.ComponentModel.TypeDescriptor.ComObjectType%2A?displayProperty=nameWithType>.|
 |<xref:System.ComponentModel.RecommendedAsConfigurableAttribute?displayProperty=nameWithType>|Взамен для работы с новой моделью параметров рекомендуется использовать <xref:System.ComponentModel.SettingsBindableAttribute?displayProperty=nameWithType>.|
-|<xref:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute?displayProperty=nameWithType>|Этот атрибут является устаревшим. Взамен рекомендуется использовать <xref:System.ComponentModel.Design.Serialization.DesignerSerializerAttribute?displayProperty=nameWithType>. Например, чтобы задать корневой конструктор для CodeDom следует использовать `DesignerSerializerAttribute\(...,typeof\(TypeCodeDomSerializer\)\)`.|
+|<xref:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute?displayProperty=nameWithType>|Этот атрибут является устаревшим. Взамен рекомендуется использовать <xref:System.ComponentModel.Design.Serialization.DesignerSerializerAttribute?displayProperty=nameWithType>.|
 |<xref:System.Diagnostics.DiagnosticsConfigurationHandler?displayProperty=nameWithType>|Этот класс не рекомендуется к использованию.|
 |<xref:System.Diagnostics.PerformanceCounterManager?displayProperty=nameWithType>|Этот класс не рекомендуется к использованию. Вместо этого посредством класса <xref:System.Diagnostics.PerformanceCounter?displayProperty=nameWithType> можно использовать счетчики производительности.|
 |<xref:System.Net.GlobalProxySelection?displayProperty=nameWithType>|Этот класс не рекомендуется к использованию. Взамен для получения доступа и задания глобального прокси-сервера по умолчанию следует использовать <xref:System.Net.WebRequest.DefaultWebProxy%2A?displayProperty=nameWithType>. Вместо <xref:System.Net.GlobalProxySelection.GetEmptyWebProxy%2A?displayProperty=nameWithType> следует использовать null.|

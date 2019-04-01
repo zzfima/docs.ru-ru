@@ -4,12 +4,12 @@ description: Узнайте, как использовать фабрику Http
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 679de8577d1ce876823954cb7917c50daae9e230
-ms.sourcegitcommit: 344d82456f27d09a210671214a14cfd7daf1f97c
+ms.openlocfilehash: a55181e787b5c94e13d3945a5d97a12fed61e927
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58348717"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465936"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>Использование HttpClientFactory для реализации устойчивых HTTP-запросов
 
@@ -158,10 +158,10 @@ namespace Microsoft.eShopOnContainers.WebMVC.Controllers
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
 - **Использование HttpClientFactory в .NET Core**\
-  [*https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1*](/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1)
+  [https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1](/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1)
 
 - **Репозиторий GitHub HttpClientFactory**\
-  [*https://github.com/aspnet/Extensions/tree/master/src/HttpClientFactory*](https://github.com/aspnet/Extensions/tree/master/src/HttpClientFactory)
+  <https://github.com/aspnet/Extensions/tree/master/src/HttpClientFactory>
 
 >[!div class="step-by-step"]
 >[Назад](explore-custom-http-call-retries-exponential-backoff.md)

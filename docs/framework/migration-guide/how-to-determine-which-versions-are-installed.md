@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b7c7704c4f417ef16d3a79fa6d955265e42cf14
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
+ms.openlocfilehash: 9c4ad3ca5694457637a82a36c8db4534df43a9d7
+ms.sourcegitcommit: 8258515adc6c37ab6278e5a3d102d593246f8672
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262442"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58504435"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Практическое руководство. Определение установленных версий платформы .NET Framework
 
@@ -44,14 +44,14 @@ ms.locfileid: "58262442"
      - [Поиск версий .NET Framework с помощью редактора реестра](#net_b)  
      - [Запрос версий .NET Framework из реестра с помощью кода](#net_d)  
      - [Запрос версий .NET Framework из реестра с помощью PowerShell](#ps_a)
- - Поиск более ранних версий .NET Framework (1–4):
+- Поиск более ранних версий .NET Framework (1–4):
      - [Поиск версий .NET Framework с помощью редактора реестра](#net_a)
      - [Запрос версий .NET Framework из реестра с помощью кода](#net_c)   
 
 Получить список версий среды CLR, установленных на компьютере, можно с помощью специального средства или кода.  
   
- - [Использование средства Clrver](#clr_a)  
- - [Использование кода для отправки запроса в класс Environment](#clr_b)  
+- [Использование средства Clrver](#clr_a)  
+- [Использование кода для отправки запроса в класс Environment](#clr_b)  
 
 Сведения об определении установленных обновлений для каждой версии платформы .NET Framework см. в статье [Практическое руководство. Определение установленных обновлений платформы .NET Framework](how-to-determine-which-net-framework-updates-are-installed.md). 
   
@@ -133,7 +133,7 @@ ms.locfileid: "58262442"
 
 ```PowerShell
 # PowerShell 4
-(Get-ItemProperty "HKLM:SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full").Release -gt 394802
+(Get-ItemProperty "HKLM:SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full").Release -ge 394802
 ```
 
 Чтобы проверить наличие другой минимальной необходимой версии .NET Framework, замените значение *394802* в этих примерах на значение **Release** из [таблицы версий NET Framework](#version_table).

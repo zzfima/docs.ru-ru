@@ -4,12 +4,12 @@ description: Архитектура микрослужб .NET для конте�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 3804ac13580a967bc95617acbce86a3a0c8e7292
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.openlocfilehash: 38de5d686c17810f406a57d58554046ba2d888d9
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058546"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545732"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (многократно используемые базовые классы и интерфейсы для модели предметной области)
 
@@ -25,7 +25,7 @@ ms.locfileid: "54058546"
 
 ## <a name="the-custom-entity-base-class"></a>Пользовательский базовый класс Entity
 
-Следующий код представляет пример базового класса Entity, где можно разместить код, который может многократно использоваться тем же способом в любой сущности предметной области, например идентификатор сущности, [операторы равенства](~/docs/csharp/language-reference/operators/equality-comparison-operator.md), список событий предметной области по сущностям и т. п.
+Следующий код представляет пример базового класса Entity, где можно разместить код, который может многократно использоваться тем же способом в любой сущности предметной области, например идентификатор сущности, [операторы равенства](~/docs/csharp/language-reference/operators/equality-operators.md), список событий предметной области по сущностям и т. п.
 
 ```csharp
 // COMPATIBLE WITH ENTITY FRAMEWORK CORE (1.1 and later)
@@ -140,7 +140,7 @@ public interface IRepository<T> where T : IAggregateRoot
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
 - **Мартин Фоулер (Martin Fowler). Отделяемый интерфейс.** \
-  [*https://www.martinfowler.com/eaaCatalog/separatedInterface.html*](https://www.martinfowler.com/eaaCatalog/separatedInterface.html)
+  [https://www.martinfowler.com/eaaCatalog/separatedInterface.html](https://www.martinfowler.com/eaaCatalog/separatedInterface.html)
 
 >[!div class="step-by-step"]
 >[Назад](net-core-microservice-domain-model.md)

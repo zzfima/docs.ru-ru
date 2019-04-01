@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 03/18/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 502a7aafd434650d09cefa2781d3749e5a435564
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: be59760091767b7229d80693cd69434581a8b140
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58186134"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634418"
 ---
 # <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>Учебник. Кластеризация цветков ириса с помощью задачи машинного обучения по кластеризации в ML.NET
 
@@ -136,7 +136,7 @@ ms.locfileid: "58186134"
 В этом руководстве настройка конвейера обучения задач кластеризации состоит из следующих двух шагов:
 
 - объедините загруженные столбцы в один столбец **Функции**, который используется тренером кластеризации;
-- используйте тренер <xref:Microsoft.ML.Trainers.KMeans.KMeansPlusPlusTrainer> для обучения модели с помощью алгоритма кластеризации k-means++.
+- используйте тренер <xref:Microsoft.ML.Trainers.KMeansPlusPlusTrainer> для обучения модели с помощью алгоритма кластеризации k-means++.
 
 Добавьте следующий код в метод `Main`:
 
