@@ -1,5 +1,5 @@
 ---
-title: Именованный аргумент "<argumentname>" задан несколько раз.
+title: Именованный аргумент '<argumentname>' задан несколько раз.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrNamedArgumentAlreadyUsed1
@@ -11,13 +11,13 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58041912"
 ---
-# <a name="named-argument-argumentname-specified-multiple-times"></a><span data-ttu-id="bf292-102">Именованный аргумент "\<имя_аргумента >" задан несколько раз.</span><span class="sxs-lookup"><span data-stu-id="bf292-102">Named argument '\<argumentname>' specified multiple times</span></span>
-<span data-ttu-id="bf292-103">Именованный аргумент указан несколько раз.</span><span class="sxs-lookup"><span data-stu-id="bf292-103">You specified a named argument more than once.</span></span>  
+# <a name="named-argument-argumentname-specified-multiple-times"></a><span data-ttu-id="68cca-102">Именованный аргумент '\<имя_аргумента >' задан несколько раз.</span><span class="sxs-lookup"><span data-stu-id="68cca-102">Named argument '\<argumentname>' specified multiple times</span></span>
+<span data-ttu-id="68cca-103">Именованный аргумент указан несколько раз.</span><span class="sxs-lookup"><span data-stu-id="68cca-103">You specified a named argument more than once.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="bf292-104">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="bf292-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="68cca-104">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="68cca-104">To correct this error</span></span>  
   
--   <span data-ttu-id="bf292-105">Удалите все вхождения аргумента, кроме одного.</span><span class="sxs-lookup"><span data-stu-id="bf292-105">Remove all but one of the specifications.</span></span>  
+-   <span data-ttu-id="68cca-105">Удалите все вхождения аргумента, кроме одного.</span><span class="sxs-lookup"><span data-stu-id="68cca-105">Remove all but one of the specifications.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bf292-106">См. также</span><span class="sxs-lookup"><span data-stu-id="bf292-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="68cca-106">См. также</span><span class="sxs-lookup"><span data-stu-id="68cca-106">See also</span></span>
 
-- [<span data-ttu-id="bf292-107">Передача аргументов по позиции и по имени</span><span class="sxs-lookup"><span data-stu-id="bf292-107">Passing Arguments by Position and by Name</span></span>](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)
+- [<span data-ttu-id="68cca-107">Передача аргументов по позиции и по имени</span><span class="sxs-lookup"><span data-stu-id="68cca-107">Passing Arguments by Position and by Name</span></span>](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)

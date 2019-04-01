@@ -1,5 +1,5 @@
 ---
-title: Аргумент "<argumentname>«нельзя преобразовать в тип»<typename>"
+title: Аргумент '<argumentname>«нельзя преобразовать в тип»<typename>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_InvalidValueType2
@@ -11,13 +11,13 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58018575"
 ---
-# <a name="argument-argumentname-cannot-be-converted-to-type-typename"></a><span data-ttu-id="1c52e-102">Аргумент "\<имя_аргумента >" не может быть преобразовано в тип "\<typename >"</span><span class="sxs-lookup"><span data-stu-id="1c52e-102">Argument '\<argumentname>' cannot be converted to type '\<typename>'</span></span>
-<span data-ttu-id="1c52e-103">Преобразование пытается изменить аргумент на тип, который является недопустимым.</span><span class="sxs-lookup"><span data-stu-id="1c52e-103">A conversion attempts to change an argument to a type that is not valid.</span></span>  
+# <a name="argument-argumentname-cannot-be-converted-to-type-typename"></a><span data-ttu-id="7e2f5-102">Аргумент '\<имя_аргумента >' не может быть преобразовано в тип '\<typename >'</span><span class="sxs-lookup"><span data-stu-id="7e2f5-102">Argument '\<argumentname>' cannot be converted to type '\<typename>'</span></span>
+<span data-ttu-id="7e2f5-103">Преобразование пытается изменить аргумент на тип, который является недопустимым.</span><span class="sxs-lookup"><span data-stu-id="7e2f5-103">A conversion attempts to change an argument to a type that is not valid.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="1c52e-104">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="1c52e-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="7e2f5-104">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="7e2f5-104">To correct this error</span></span>  
   
--   <span data-ttu-id="1c52e-105">Измените тип на допустимый.</span><span class="sxs-lookup"><span data-stu-id="1c52e-105">Change the type to one that is valid.</span></span>  
+-   <span data-ttu-id="7e2f5-105">Измените тип на допустимый.</span><span class="sxs-lookup"><span data-stu-id="7e2f5-105">Change the type to one that is valid.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1c52e-106">См. также</span><span class="sxs-lookup"><span data-stu-id="1c52e-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7e2f5-106">См. также</span><span class="sxs-lookup"><span data-stu-id="7e2f5-106">See also</span></span>
 
-- [<span data-ttu-id="1c52e-107">Функции преобразования</span><span class="sxs-lookup"><span data-stu-id="1c52e-107">Conversion Functions</span></span>](../../visual-basic/language-reference/functions/conversion-functions.md)
+- [<span data-ttu-id="7e2f5-107">Функции преобразования</span><span class="sxs-lookup"><span data-stu-id="7e2f5-107">Conversion Functions</span></span>](../../visual-basic/language-reference/functions/conversion-functions.md)
