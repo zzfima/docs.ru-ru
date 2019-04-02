@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStrip control [Windows Forms], architecture
 ms.assetid: 71df2d18-862e-4701-9ff9-c1fe606f94f2
-ms.openlocfilehash: 6e0c5a426f05590523c178f4b56d07ee98b39d7e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: bede247ca9e1c2c20ffc8fef9fd4fab89aa78453
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719394"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654774"
 ---
 # <a name="toolstrip-control-architecture"></a>Архитектура элемента управления ToolStrip
 <xref:System.Windows.Forms.ToolStrip> И <xref:System.Windows.Forms.ToolStripItem> классы предоставляют гибкую, расширяемую систему для отображения элементов панели инструментов, состояния и меню. Все эти классы содержатся в <xref:System.Windows.Forms> пространство имен и они обычно именуются с префиксом «ToolStrip» (такие как <xref:System.Windows.Forms.ToolStripOverflow>) или с суффиксом «Лента» (такие как <xref:System.Windows.Forms.MenuStrip>).  
@@ -19,8 +19,7 @@ ms.locfileid: "57719394"
   
  <xref:System.Windows.Forms.ToolStrip> является абстрактным базовым классом для <xref:System.Windows.Forms.MenuStrip>, <xref:System.Windows.Forms.StatusStrip>, и <xref:System.Windows.Forms.ContextMenuStrip>. Следующий объект модели показана <xref:System.Windows.Forms.ToolStrip> иерархии наследования.  
   
- ![Модель объекта ToolStrip](./media/toolstripobjectmodel.gif "ToolStripObjectModel")  
-Модель объекта ToolStrip  
+ ![Схема, показывающая модель объекта ToolStrip.](./media/toolstrip-control-architecture/toolstrip-object-model.gif)  
   
  Вы можете получить доступ к все элементы в <xref:System.Windows.Forms.ToolStrip> через <xref:System.Windows.Forms.ToolStrip.Items%2A> коллекции. Вы можете получить доступ к все элементы в <xref:System.Windows.Forms.ToolStripDropDownItem> через <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItems%2A> коллекции. В классе, производном от <xref:System.Windows.Forms.ToolStrip>, можно также использовать <xref:System.Windows.Forms.ToolStrip.DisplayedItems%2A> свойство для доступа к только элементы, отображаемые в данный момент. Ниже приведены элементы, которые в настоящее время не находятся в меню переполнения.  
   
@@ -251,8 +250,7 @@ ms.locfileid: "57719394"
   
  <xref:System.Windows.Forms.ToolStripItem> — Абстрактный базовый класс для всех элементов, входящих в <xref:System.Windows.Forms.ToolStrip>. Следующий объект модели показана <xref:System.Windows.Forms.ToolStripItem> иерархии наследования.  
   
- ![Модель объекта ToolStripItem](./media/toolstripitemobjectmodel.gif "ToolStripItemObjectModel")  
-Модель объекта ToolStripItem  
+ ![Схема, показывающая модель объекта ToolStripItem.](./media/toolstrip-control-architecture/toolstripitem-object-model.gif)  
   
  <xref:System.Windows.Forms.ToolStripItem> классы, которые наследуются непосредственно из <xref:System.Windows.Forms.ToolStripItem>, или они неявно наследуют от <xref:System.Windows.Forms.ToolStripItem> через <xref:System.Windows.Forms.ToolStripControlHost> или <xref:System.Windows.Forms.ToolStripDropDownItem>.  
   

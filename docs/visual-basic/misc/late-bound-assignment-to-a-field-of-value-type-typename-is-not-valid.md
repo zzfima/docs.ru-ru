@@ -1,5 +1,5 @@
 ---
-title: С поздним связыванием присвоение полю значения типа "<typename>«является недопустимым при»<name>" является результатом выражения с поздним связыванием
+title: С поздним связыванием присвоение полю значения типа '<typename>«является недопустимым при»<name>' является результатом выражения с поздним связыванием
 ms.date: 07/20/2015
 f1_keywords:
 - vbrRValueBaseForValueType
@@ -11,7 +11,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58049360"
 ---
-# <a name="late-bound-assignment-to-a-field-of-value-type-typename-is-not-valid-when-name-is-the-result-of-a-late-bound-expression"></a>С поздним связыванием присвоение полю значения типа "\<typename >" является недопустимым при "\<имя >" является результатом выражения с поздним связыванием
+# <a name="late-bound-assignment-to-a-field-of-value-type-typename-is-not-valid-when-name-is-the-result-of-a-late-bound-expression"></a>С поздним связыванием присвоение полю значения типа '\<typename >' является недопустимым при '\<имя >' является результатом выражения с поздним связыванием
 Вы попытались выполнить присвоение с поздним связыванием, что недопустимо.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  

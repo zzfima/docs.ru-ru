@@ -1,5 +1,5 @@
 ---
-title: Переменная управления циклом типа "<typename>" не реализует интерфейс «System.IComparable»
+title: Переменная управления циклом типа '<typename>' не реализует интерфейс «System.IComparable»
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_IComparable2
@@ -11,7 +11,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58029471"
 ---
-# <a name="loop-control-variable-of-type-typename-does-not-implement-the-systemicomparable-interface"></a>Переменная управления циклом типа "\<typename >" не реализует интерфейс «System.IComparable»
+# <a name="loop-control-variable-of-type-typename-does-not-implement-the-systemicomparable-interface"></a>Переменная управления циклом типа '\<typename >' не реализует интерфейс «System.IComparable»
 Переменная имеет тип, который не реализует интерфейс `System.IComparable` . `System.IComparable` должен быть реализован типом значения или классом.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  

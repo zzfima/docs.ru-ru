@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: a0174ca42cb65c7c8f0c8ba2dc9adfd5c43c22b8
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7d0ceb0cddc49722d7122e4fde6149fe1ea86208
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981586"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545472"
 ---
 # <a name="operators-c-programming-guide"></a>Операторы (Руководство по программированию на C#)
 
@@ -45,8 +45,8 @@ ms.locfileid: "56981586"
 |x[.](../../../csharp/language-reference/operators/member-access-operator.md)y<br /><br /> x?.y|Доступ к членам<br /><br /> Условный доступ к членам|  
 |f[(x)](../../../csharp/language-reference/operators/invocation-operator.md)|Вызов метода и делегата|  
 |a[&#91;x&#93;](../../../csharp/language-reference/operators/index-operator.md)<br /><br /> a?[x]|Доступ к массиву и индексатору<br /><br /> Условный доступ к массиву и индексатору|  
-|x[++](../../../csharp/language-reference/operators/increment-operator.md)|Постфиксный инкремент|  
-|x[--](../../../csharp/language-reference/operators/decrement-operator.md)|Постфиксный декремент|  
+|x[++](../../../csharp/language-reference/operators/arithmetic-operators.md#increment-operator-)|Постфиксный инкремент|  
+|x[--](../../../csharp/language-reference/operators/arithmetic-operators.md#decrement-operator---)|Постфиксный декремент|  
 |[new](../../../csharp/language-reference/keywords/new-operator.md) T(...)|Создание объекта и делегата|  
 |`new` T(...){...}|Создание объекта с инициализатором. См. раздел [Инициализаторы объектов и коллекций](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).|  
 |`new` {...}|Анонимный инициализатор объекта. См. раздел [Анонимные типы](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).|  
@@ -65,17 +65,17 @@ ms.locfileid: "56981586"
 |[-](../../../csharp/language-reference/operators/subtraction-operator.md)x|Отрицание|  
 |[\!](../../../csharp/language-reference/operators/logical-negation-operator.md)x|Логическое отрицание|  
 |[~](../../../csharp/language-reference/operators/bitwise-complement-operator.md)x|Поразрядное отрицание|  
-|[++](../../../csharp/language-reference/operators/increment-operator.md)x|Префиксный инкремент|  
-|[--](../../../csharp/language-reference/operators/decrement-operator.md)x|Префиксный декремент|  
+|[++](../../../csharp/language-reference/operators/arithmetic-operators.md#increment-operator-)x|Префиксный инкремент|  
+|[--](../../../csharp/language-reference/operators/arithmetic-operators.md#decrement-operator---)x|Префиксный декремент|  
 |[(T)](../../../csharp/language-reference/operators/invocation-operator.md)x|Явное преобразование x в тип T|  
   
  **Мультипликативные операторы**  
   
 |Выражение|Описание|  
 |----------------|-----------------|  
-|[*](../../../csharp/language-reference/operators/multiplication-operator.md)|Умножение|  
-|[/](../../../csharp/language-reference/operators/division-operator.md)|Деление|  
-|[%](../../../csharp/language-reference/operators/modulus-operator.md)|Остаток|  
+|[*](../../../csharp/language-reference/operators/arithmetic-operators.md#multiplication-operator-)|Умножение|  
+|[/](../../../csharp/language-reference/operators/arithmetic-operators.md#division-operator-)|Деление|  
+|[%](../../../csharp/language-reference/operators/arithmetic-operators.md#remainder-operator-)|Остаток|  
   
  **Аддитивные операторы**  
   
@@ -106,8 +106,8 @@ ms.locfileid: "56981586"
   
 |Выражение|Описание|  
 |----------------|-----------------|  
-|x [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) y|Равно|  
-|x [!=](../../../csharp/language-reference/operators/not-equal-operator.md) y|Не равно|  
+|x [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) y|Равно|  
+|x [!=](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) y|Не равно|  
   
  **Логические, условные операторы и NULL-операторы**  
   
@@ -126,7 +126,7 @@ ms.locfileid: "56981586"
 |Выражение|Описание|  
 |----------------|-----------------|  
 |[=](../../../csharp/language-reference/operators/assignment-operator.md)|Назначение|  
-|x op= y|Составное присваивание. Поддерживает следующие операторы: [+=](../../../csharp/language-reference/operators/addition-assignment-operator.md), [-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md), [*=](../../../csharp/language-reference/operators/multiplication-assignment-operator.md), [/=](../../../csharp/language-reference/operators/division-assignment-operator.md), [%=](../../../csharp/language-reference/operators/modulus-assignment-operator.md), [&=](../../../csharp/language-reference/operators/and-assignment-operator.md), [&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md), [^=](../../../csharp/language-reference/operators/xor-assignment-operator.md), [<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md), [>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md).|  
+|x op= y|Составное присваивание. Поддерживает следующие операторы: [+=](../../../csharp/language-reference/operators/addition-assignment-operator.md), [-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md), [*=](../../../csharp/language-reference/operators/arithmetic-operators.md#compound-assignment), [/=](../../../csharp/language-reference/operators/arithmetic-operators.md#compound-assignment), [%=](../../../csharp/language-reference/operators/arithmetic-operators.md#compound-assignment), [&=](../../../csharp/language-reference/operators/and-assignment-operator.md), [&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md), [^=](../../../csharp/language-reference/operators/xor-assignment-operator.md), [<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md), [>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md).|  
 |(T x) [=>](../../../csharp/language-reference/operators/lambda-operator.md) y|Анонимная функция (лямбда-выражение)|  
   
 ## <a name="associativity"></a>Ассоциативность

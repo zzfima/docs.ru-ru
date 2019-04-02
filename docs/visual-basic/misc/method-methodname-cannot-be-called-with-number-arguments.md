@@ -1,5 +1,5 @@
 ---
-title: Метод "<methodname>" не может вызываться с <number> аргументы
+title: Метод '<methodname>' не может вызываться с <number> аргументы
 ms.date: 07/20/2015
 f1_keywords:
 - vbrNoMethodTakingXArguments2
@@ -11,7 +11,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58025113"
 ---
-# <a name="method-methodname-cannot-be-called-with-number-arguments"></a>Метод "\<имя_метода >" не может вызываться с \<число > аргументами
+# <a name="method-methodname-cannot-be-called-with-number-arguments"></a>Метод '\<имя_метода >' не может вызываться с \<число > аргументами
 Вызов метода содержит неверное число аргументов.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  

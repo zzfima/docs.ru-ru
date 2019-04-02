@@ -56,7 +56,7 @@ Dim sales()() As Double = New Double(11)() {}
 
 - значение, содержащееся в элементе, представляет число учеников в этом классе.
 
-![Изображение массива, отображающее количество студентов](../../language-features/arrays/media/arrayexampleschool.gif "ArrayExampleSchool") элементов массива «students»
+![Схема, показывающая массив количество студентов](./media/index/students-array-elements.gif)
 
 Следующий пример содержит код Visual Basic, который создает и использует массив:
 

@@ -1,5 +1,5 @@
 ---
-title: Преобразование из типа "<typename1>«в тип»<typename2>" является недопустимым
+title: Преобразование из типа '<typename1>«в тип»<typename2>' является недопустимым
 ms.date: 07/20/2015
 f1_keywords:
 - vbrInvalidCast_FromTo
@@ -11,7 +11,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58021608"
 ---
-# <a name="cast-from-type-typename1-to-type-typename2-is-not-valid"></a>Преобразование из типа "\<Имя_типа1 >" к типу "\<имя_типа2 >" является недопустимым
+# <a name="cast-from-type-typename1-to-type-typename2-is-not-valid"></a>Преобразование из типа '\<Имя_типа1 >' к типу '\<имя_типа2 >' является недопустимым
 Предпринята попытка недопустимого преобразования переменной из одного типа в другой.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  

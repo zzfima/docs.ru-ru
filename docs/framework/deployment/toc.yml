@@ -1,0 +1,43 @@
+items:
+- name: Развертывание
+  href: index.md
+  items:
+  - name: Развертывание .NET Framework
+    href: deploying-the-net-framework.md
+    items:
+    - name: Руководство по развертыванию для разработчиков
+      href: deployment-guide-for-developers.md
+    - name: Руководство по развертыванию для администраторов
+      href: guide-for-administrators.md
+    - name: Уменьшение числа перезагрузок при установке платформы .NET Framework 4.5
+      href: reducing-system-restarts.md
+    - name: Практическое руководство. Получение хода выполнения установщика .NET Framework 4.5
+      href: how-to-get-progress-from-the-dotnet-installer.md
+    - name: 'Ошибки инициализации платформы .NET Framework: управление пользовательской средой'
+      href: initialization-errors-managing-the-user-experience.md
+    - name: Практическое руководство. Отладка проблем при активации среды CLR
+      href: how-to-debug-clr-activation-issues.md
+  - name: Развертывание приложений .NET Framework
+    href: net-framework-applications.md
+    items:
+    - name: Обнаружение сборок в среде выполнения
+      href: how-the-runtime-locates-assemblies.md
+    - name: Рекомендации для загрузки сборок
+      href: best-practices-for-assembly-loading.md
+  - name: .NET Framework (клиентский профиль)
+    href: client-profile.md
+  - name: Параллельное выполнение
+    href: side-by-side-execution.md
+    items:
+    - name: Настройка перенаправления привязки сборок
+      href: configuring-assembly-binding-redirection.md
+    - name: Рекомендации по созданию компонентов для параллельного выполнения
+      href: guidelines-for-creating-components-for-side-by-side-execution.md
+    - name: Внутрипроцессное параллельное выполнение
+      href: in-process-side-by-side-execution.md
+ms.openlocfilehash: 73f101fc5031c1ae97a626025d6b16c5729a2568
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58470328"

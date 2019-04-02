@@ -1,17 +1,17 @@
 ---
 title: Отключение поддержки определения DPI в Visual Studio
 description: Обсуждает ограничения конструктор Windows Forms на HDPI-мониторах, а также как запустить Visual Studio как процесс не поддерживают DPI.
-ms.date: 12/17/2018
-ms.prod: visual-studio-dev15
+ms.date: 03/19/2019
+ms.prod: visual-studio-windows
 ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 92096663032b85058dc8c918d1f90153820f6f71
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 73f2371c40facf8902958cce020a6f02047615ba
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710541"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58633872"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Отключение поддержки определения DPI в Visual Studio
 
@@ -23,11 +23,14 @@ Visual Studio является точек на дюйм (DPI) приложени
 
 ![Конструктор Windows Forms на мониторе HDPI](./media/disable-dpi-awareness-visual-studio/win-forms-designer-hdpi.png)
 
-В Visual Studio 2017 версии 15,8 и более поздние версии, при открытии формы в **конструктор Windows Forms** на мониторе HDPI, Visual Studio отображает желтый, информационные панели в верхней части конструктора:
+При открытии формы в **конструктор Windows Forms** в Visual Studio на мониторе HDPI Visual Studio отображает желтый, информационные панели в верхней части конструктора:
 
 ![Информационные панели в Visual Studio, чтобы перезагрузить компьютер в режиме не поддерживают DPI](./media/disable-dpi-awareness-visual-studio/scaling-gold-bar.png)
 
 Считывает сообщение **масштабирование на главном экране равен 200% (192 dpi). Это может вызвать проблемы отрисовки в окне конструктора.**
+
+> [!NOTE]
+> Эта информационная панель была введена в Visual Studio 2017 версии 15.8.
 
 Если вы не работают в конструкторе, не требуется для настройки макета формы можно игнорировать информационные панели и продолжить работу в редакторе кода или в других типах конструкторов. (Вы также можете [отключение уведомлений](#disable-notifications) , чтобы информационные панели не отображаются.) Только **конструктор Windows Forms** снижается. Если вам нужно работать в **конструктор Windows Forms**, следующий раздел поможет вам [решить проблему](#to-resolve-the-problem).
 
@@ -51,10 +54,13 @@ Visual Studio является точек на дюйм (DPI) приложени
 
 Visual Studio можно пометить как не поддерживающие точек на ДЮЙМ, путем изменения реестра. Откройте **редактора реестра** и добавить запись **NT\CurrentVersion\AppCompatFlags\Layers этот** подраздел:
 
-**Запись**: C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe
+**Запись**: В зависимости от того, используете ли вы Visual Studio 2017 или 2019 г. Используйте одно из следующих значений:
 
-   > [!NOTE]
-   > Если вы используете выпуск Visual Studio 2017 Professional или Enterprise, замените **сообщества** с **Professional** или **Enterprise** в записи. Кроме того, замените букву диска, при необходимости.
+- C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe
+- C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\devenv.exe
+
+> [!NOTE]
+> Если вы используете выпуск Visual Studio Professional или Enterprise, замените **сообщества** с **Professional** или **Enterprise** в записи. Кроме того, замените букву диска, при необходимости.
 
 **Тип**: REG_SZ
 

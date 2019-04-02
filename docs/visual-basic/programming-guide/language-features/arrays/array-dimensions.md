@@ -9,12 +9,12 @@ helpviewer_keywords:
 - rectangular arrays
 - ranking, arrays
 ms.assetid: 385e911b-18c1-4e98-9924-c6d279101dd9
-ms.openlocfilehash: 5ba92e113faf9d68bad97968937cc736132b2065
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47b90a6c513a5808dc0669d2d861de5e16406a34
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708536"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634171"
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Array Dimensions in Visual Basic
 Объект *измерения* — это направление, в котором можно изменять спецификацию элементов массива. Массив, содержащий суммы продаж за каждый день месяца, имеет одно измерение (день месяца). Массив, содержащий суммы по отделу продаж за каждый день месяца, имеет два измерения (номер отдела и день месяца). Число измерений массива называется его *ранг*.  
@@ -27,14 +27,11 @@ ms.locfileid: "54708536"
   
  На следующих рисунках показаны концептуальная структура массивов с использованием разных рангов. Каждый элемент на рисунках показаны значения индекса, доступ к нему. Например, можно получить доступ к первый элемент второй строки двумерного массива, указав индексы `(1, 0)`.  
   
- ![Графическая схема одного&#45;одномерным массивом](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimone.gif "ArrayExDimOne")  
-Одномерный массив  
+ ![Схема, показывающая одномерного массива.](./media/array-dimensions/one-dimensional-array.gif)  
   
- ![Графическая схема двух&#45;одномерным массивом](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimtwo.gif "ArrayExDimTwo")  
-двумерный массив  
+ ![Схема, показывающая двумерный массив.](./media/array-dimensions/two-dimensional-array.gif)  
   
- ![Графическая схема из трех&#45;одномерным массивом](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimthree.gif "ArrayExDimThree")  
-трехмерный массив  
+ ![Схема, показывающая трехмерного массива.](./media/array-dimensions/three-dimensional-array.gif)  
   
 ### <a name="one-dimension"></a>Одно измерение  
  Многие массивы имеют только одно измерение, например количество людей каждого возраста. Единственным требованием для указания элемента является возраст, для которого этот элемент содержит счетчик. Таким образом такой массив использует только один индекс. В следующем примере объявляется переменная для хранения *одномерный массив* возраста подсчитывает для возраста от 0 до 120.  

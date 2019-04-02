@@ -1,0 +1,42 @@
+items:
+- name: Объявленные элементы
+  href: index.md
+  items:
+  - name: Declared Element Names
+    href: declared-element-names.md
+  - name: Характеристики объявленных элементов
+    href: declared-element-characteristics.md
+    items:
+    - name: Время существования
+      href: lifetime.md
+    - name: Область
+      href: scope.md
+      items:
+      - name: Практическое руководство. Управление областью действия переменной
+        href: how-to-control-the-scope-of-a-variable.md
+      - name: Повышение типа
+        href: type-promotion.md
+    - name: Уровни доступа
+      href: access-levels.md
+      items:
+      - name: Практическое руководство. Управление доступностью переменной
+        href: how-to-control-the-availability-of-a-variable.md
+    - name: References to Declared Elements
+      href: references-to-declared-elements.md
+    - name: Удаленное управление
+      href: shadowing.md
+      items:
+      - name: Различия между удаленным управлением и переопределением
+        href: differences-between-shadowing-and-overriding.md
+      - name: Практическое руководство. Сокрытие переменной с тем же именем, что и ваша переменная
+        href: how-to-hide-a-variable-with-the-same-name-as-your-variable.md
+      - name: Практическое руководство. Сокрытие наследуемой переменной
+        href: how-to-hide-an-inherited-variable.md
+      - name: Практическое руководство. Доступ к переменной, скрытой производным классом
+        href: how-to-access-a-variable-hidden-by-a-derived-class.md
+ms.openlocfilehash: d747436df2e7ad7187e39808ea19d64ac1b082fc
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469869"

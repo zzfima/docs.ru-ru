@@ -1,5 +1,5 @@
 ---
-title: Именованный аргумент "<argumentname>" задан несколько раз.
+title: Именованный аргумент '<argumentname>' задан несколько раз.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrNamedArgumentAlreadyUsed1
@@ -11,7 +11,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58041912"
 ---
-# <a name="named-argument-argumentname-specified-multiple-times"></a>Именованный аргумент "\<имя_аргумента >" задан несколько раз.
+# <a name="named-argument-argumentname-specified-multiple-times"></a>Именованный аргумент '\<имя_аргумента >' задан несколько раз.
 Именованный аргумент указан несколько раз.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  

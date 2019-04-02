@@ -36,10 +36,6 @@ ms.date: 08/23/2017
 
 ## <a name="related-sections"></a>Связанные разделы
 
-* [Использование среды разработки Visual Studio для C#](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
-
-    Предоставляет руководство по использованию интегрированной среды разработки Visual C#.
-
 * [Руководство по программированию на C#](../../csharp/programming-guide/index.md)
 
     Содержит сведения о понятиях программирования C# и описание выполнения различных задач на C#.
@@ -48,14 +44,10 @@ ms.date: 08/23/2017
 
     Содержит подробные справочные сведения о ключевых словах, операторах, директивах препроцессора, параметрах компилятора и ошибках и предупреждениях компилятора в среде C#.
 
-* [Примеры Visual Studio](/visualstudio/ide/visual-studio-samples)
-
-    Представлены сведения о способах доступа к примерам в сети.
-
 * [Пошаговые руководства](../../csharp/walkthroughs.md)
 
     Приведены ссылки на пошаговые руководства по написанию программ, использующих C#, и дано краткое описание каждого пошагового руководства.
 
 ## <a name="see-also"></a>См. также
 
-- [Начало работы с Visual C# и Visual Basic в Visual Studio](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+- * [Разработка на C# в Visual Studio](/visualstudio/get-started/csharp/)

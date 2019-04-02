@@ -2,12 +2,12 @@
 title: Явные поля. Val ключевое слово
 description: Дополнительные сведения о ключевом слове val в F#, которое используется для объявления места хранения значения в типе класса или структуры без инициализации.
 ms.date: 05/16/2016
-ms.openlocfilehash: 492541f6eeba94d2177e92de935fa524b9def567
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: 6557514f13a9e86c7f367713775535db79e99a0c
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53773631"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634015"
 ---
 # <a name="explicit-fields-the-val-keyword"></a>Явные поля. Val ключевое слово
 
@@ -41,7 +41,7 @@ val [ mutable ] [ access-modifier ] field-name : type-name
 Для изменяемого поля скомпилированное в .NET представление является полем .NET.
 
 >[!WARNING]
-`Note` Пространство имен .NET Framework `System.ComponentModel` содержит атрибут с тем же именем. Сведения об этом атрибуте см. в разделе `System.ComponentModel.DefaultValueAttribute`.
+>Пространство имен .NET Framework `System.ComponentModel` содержит атрибут с тем же именем. Сведения об этом атрибуте см. в разделе `System.ComponentModel.DefaultValueAttribute`.
 
 В следующем коде показано использование явных полей и для сравнения привязки `let` в классе, имеющем первичный конструктор. Обратите внимание, что привязанное с помощью `let` поле `myInt1` является закрытым. Если на привязанное с помощью `let` поле `myInt1` существует ссылка из метода-члена, идентификатор самого поля `this` не требуется. Но если вы обращаетесь к явным полям `myInt2` и `myString`, идентификатор самого поля обязателен.
 

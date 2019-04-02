@@ -4,12 +4,12 @@ description: Архитектура микрослужб подходит не �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 95f6c9dca62f3c524a6530b344daaebb118040b9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b481a76052efdd1ce0da406732230d41701ac354
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126042"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464844"
 ---
 # <a name="creating-composite-ui-based-on-microservices"></a>Создание составного пользовательского интерфейса на основе микрослужб
 
@@ -42,19 +42,19 @@ ms.locfileid: "53126042"
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
 - **Составной пользовательский интерфейс в ASP.NET (семинар от Particular)** \
-  [*https://github.com/Particular/Workshop/tree/master/demos/asp-net-core*](https://github.com/Particular/Workshop/tree/master/demos/asp-net-core)
+  [https://github.com/Particular/Workshop/tree/master/demos/asp-net-core](https://github.com/Particular/Workshop/tree/master/demos/asp-net-core)
 
 - **Рубен Оостинга (Ruben Oostinga). Монолитный пользовательский интерфейс в архитектуре микрослужб** \
-  [*https://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/*](https://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/)
+  [https://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/](https://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/)
 
 - **Мауро Сервьенти (Mauro Servienti). Как лучше всего скомпоновать пользовательский интерфейс** \
-  [*https://particular.net/blog/secret-of-better-ui-composition*](https://particular.net/blog/secret-of-better-ui-composition)
+  [https://particular.net/blog/secret-of-better-ui-composition](https://particular.net/blog/secret-of-better-ui-composition)
 
 - **Виктор Фарчич (Viktor Farcic). Включение внешних веб-компонентов в микрослужбы** \
-  [*https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/*](https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/)
+  [https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/](https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/)
 
 - **Управление клиентской частью в архитектуре микрослужб** \
-  [*https://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html*](https://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html)
+  [https://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html](https://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html)
 
 >[!div class="step-by-step"]
 >[Назад](microservices-addressability-service-registry.md)

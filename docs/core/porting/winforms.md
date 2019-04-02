@@ -2,16 +2,17 @@
 title: Перенос приложения Windows Forms в .NET Core 3.0
 description: В этой статье объясняется, как перенести приложение Windows Forms из .NET Framework в .NET Core 3.0 для Windows.
 author: Thraka
+ms.author: adegeo
 ms.date: 03/01/2019
 ms.custom: ''
-ms.openlocfilehash: 89540ebbed834f41ce9d84c32e69e6f5e1ab0a21
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 3a50b5f085aee4afc2f388aeac8a4f68823b92c7
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57681499"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675865"
 ---
-# <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Как выполнить Перенос приложения Windows Forms в .NET Core
+# <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Практическое руководство. Перенос приложения Windows Forms в .NET Core
 
 В этой статье объясняется, как перенести классическое приложение, созданное на основе Windows Forms, из .NET Framework в .NET Core 3.0. В пакет SDK для .NET Core 3.0 включена поддержка приложений Windows Forms. Windows Forms — это платформа, которая по-прежнему поддерживается и функционирует только в ОС Windows. В этом примере для создания проекта и управления им используется CLI пакета SDK для .NET Core.
 
@@ -223,7 +224,7 @@ SolutionFolder
      <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 -    <AssemblyName>MyCoreApp</AssemblyName>
 -    <RootNamespace>WindowsFormsApp1</RootNamespace>
-+    <AssemblyName>MyCoreControls</AssemblyName>
++    <AssemblyName>MyControlsCore</AssemblyName>
 +    <RootNamespace>WindowsFormsControlLibrary1</RootNamespace>
    </PropertyGroup>
 
@@ -265,14 +266,14 @@ SolutionFolder
 Теперь в главном проекте .NET Core **MyFormsCore.csproj** нужно добавить ссылку на новую библиотеку элементов управления Windows Forms в .NET Core. Добавьте ссылку с помощью Visual Studio или .NET Core CLI из каталога **SolutionFolder**.
 
 ```cli
-dotnet add .\MyFormsAppCore\MyFormsCore.csproj reference .\MyFormsControlsCore\MyControlsCoreProject.csproj
+dotnet add .\MyFormsAppCore\MyFormsCore.csproj reference .\MyFormsControlsCore\MyControlsCore.csproj
 ```
 
 Предыдущая команда добавляет следующую ссылку в проект **MyFormsCore.csproj**:
 
 ```xml
   <ItemGroup>
-    <ProjectReference Include="..\MyFormsControlsCore\MyControlsCoreProject.csproj" />
+    <ProjectReference Include="..\MyFormsControlsCore\MyControlsCore.csproj" />
   </ItemGroup>
 ```
 

@@ -4,12 +4,12 @@ description: Архитектура микрослужб .NET для упако�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: fa292cb97db612506eb7a6f83bb24f37425d690a
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 4a6a7faac6d0419d88e613ca23d9862475659918
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678661"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464207"
 ---
 # <a name="design-the-microservice-application-layer-and-web-api"></a>Разработка веб-API и уровня приложений для микрослужб
 
@@ -38,13 +38,13 @@ ms.locfileid: "57678661"
 #### <a name="additional-resources"></a>Дополнительные ресурсы
 
 - **SOLID: базовые принципы ООП** \
-  [*https://deviq.com/solid/*](https://deviq.com/solid/%20)
+  [https://deviq.com/solid/](https://deviq.com/solid/)
 
 - **Контейнеры с инверсией управления и шаблон внедрения зависимостей** \
-  [*https://martinfowler.com/articles/injection.html*](https://martinfowler.com/articles/injection.html)
+  [https://martinfowler.com/articles/injection.html](https://martinfowler.com/articles/injection.html)
 
 - **Стив Смит (Steve Smith). Ключевое слово new** \
-  [*https://ardalis.com/new-is-glue*](https://ardalis.com/new-is-glue)
+  [https://ardalis.com/new-is-glue](https://ardalis.com/new-is-glue)
 
 > [!div class="step-by-step"]
 > [Назад](nosql-database-persistence-infrastructure.md)

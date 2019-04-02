@@ -1,0 +1,71 @@
+items:
+- name: Производительность
+  href: index.md
+  items:
+  - name: Разработка больших, быстро реагирующих приложений .NET Framework
+    href: writing-large-responsive-apps.md
+  - name: Кэширование в приложениях платформы .NET Framework
+    href: caching-in-net-framework-applications.md
+  - name: Отложенная инициализация
+    href: lazy-initialization.md
+    items:
+    - name: Практическое руководство. Неактивная инициализация объектов
+      href: how-to-perform-lazy-initialization-of-objects.md
+  - name: ETW Events in the .NET Framework
+    href: etw-events.md
+    items:
+    - name: События трассировки событий Windows в библиотеке параллельных задач и PLINQ
+      href: etw-events-in-task-parallel-library-and-plinq.md
+    - name: События в среде CLR (трассировка событий Windows)
+      href: etw-events-in-the-common-language-runtime.md
+      items:
+      - name: Контроль ведения журнала .NET Framework
+        href: controlling-logging.md
+      - name: Поставщики ETW среды CLR
+        href: clr-etw-providers.md
+      - name: Ключевые слова и уровни среды CLR (трассировка событий Windows)
+        href: clr-etw-keywords-and-levels.md
+      - name: События трассировки событий Windows в среде CLR
+        href: clr-etw-events.md
+        items:
+        - name: События сведений времени выполнения
+          href: runtime-information-etw-events.md
+        - name: Событие ExceptionThrown_V1
+          href: exception-thrown-v1-etw-event.md
+        - name: События состязания
+          href: contention-etw-events.md
+        - name: События пула потоков
+          href: thread-pool-etw-events.md
+        - name: События загрузчика
+          href: loader-etw-events.md
+        - name: События методов
+          href: method-etw-events.md
+        - name: События сборки мусора
+          href: garbage-collection-etw-events.md
+        - name: События трассировки JIT-компилятора
+          href: jit-tracing-etw-events.md
+        - name: События взаимодействия
+          href: interop-etw-events.md
+        - name: События ARM
+          href: application-domain-resource-monitoring-arm-etw-events.md
+        - name: События безопасности
+          href: security-etw-events.md
+        - name: События стека
+          href: stack-etw-event.md
+  - name: Надежность
+    href: reliability.md
+    items:
+    - name: программирование SQL Server и атрибуты защиты ведущего приложения
+      href: sql-server-programming-and-host-protection-attributes.md
+    - name: Рекомендации по обеспечению надежности
+      href: reliability-best-practices.md
+    - name: области с ограничением выполнения
+      href: constrained-execution-regions.md
+  - name: Советы по производительности
+    href: performance-tips.md
+ms.openlocfilehash: 9030bc17ebfe2cda3b6b1ebb15196a24ac992715
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58470520"

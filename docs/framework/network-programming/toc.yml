@@ -1,0 +1,235 @@
+items:
+- name: Сетевое программирование в .NET Framework
+  href: index.md
+  items:
+  - name: Практические руководства по сетевому программированию
+    href: network-programming-how-to-topics.md
+  - name: Введение в подключаемые протоколы
+    href: introducing-pluggable-protocols.md
+  - name: Запрос данных
+    href: requesting-data.md
+    items:
+    - name: Создание интернет-запросов
+      href: creating-internet-requests.md
+    - name: Практическое руководство. Запрос веб-страницы и получение результатов в виде потока
+      href: how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md
+    - name: Практическое руководство. Запрос данных с помощью класса WebRequest
+      href: how-to-request-data-using-the-webrequest-class.md
+    - name: Практическое руководство. Отправка данных с помощью класса WebRequest
+      href: how-to-send-data-using-the-webrequest-class.md
+    - name: Практическое руководство. Получение объекта WebResponse, соответствующего объекту WebRequest, для определенного протокола
+      href: how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md
+    - name: Использование потоков в сети
+      href: using-streams-on-the-network.md
+    - name: Выполнение асинхронных запросов
+      href: making-asynchronous-requests.md
+    - name: Обработка ошибок
+      href: handling-errors.md
+  - name: программирование подключаемых протоколов
+    href: programming-pluggable-protocols.md
+    items:
+    - name: Практическое руководство. Регистрация пользовательского протокола с помощью WebRequest
+      href: how-to-register-a-custom-protocol-using-webrequest.md
+    - name: Практическое руководство. Приведение типа объекта WebRequest для доступа к свойствам, связанным с определенным протоколом
+      href: how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md
+    - name: Наследование от WebResponse
+      href: deriving-from-webrequest.md
+    - name: Наследование от класса WebResponse
+      href: deriving-from-webresponse.md
+  - name: Использование протоколов приложений
+    href: using-application-protocols.md
+    items:
+    - name: HTTP
+      href: http.md
+      items:
+      - name: Класс HttpListener
+        href: httplistener.md
+    - name: Практическое руководство. Доступ к свойствам, относящимся с HTTP
+      href: how-to-access-http-specific-properties.md
+    - name: Управление подключениями
+      href: managing-connections.md
+      items:
+      - name: Группирование подключений
+        href: connection-grouping.md
+      - name: Практическое руководство. Присвоение данных пользователя групповым подключениям
+        href: how-to-assign-user-information-to-group-connections.md
+    - name: TCP-UDP
+      href: tcp-udp.md
+      items:
+      - name: Использование служб TCP
+        href: using-tcp-services.md
+      - name: Использование служб UDP
+        href: using-udp-services.md
+    - name: сокеты
+      href: sockets.md
+      items:
+      - name: Практическое руководство. Создание сокета
+        href: how-to-create-a-socket.md
+      - name: Использование сокетов клиента
+        href: using-client-sockets.md
+        items:
+        - name: Использование синхронного сокета клиента
+          href: using-a-synchronous-client-socket.md
+        - name: Использование асинхронных сокетов клиента
+          href: using-an-asynchronous-client-socket.md
+      - name: прослушивание с помощью сокетов
+        href: listening-with-sockets.md
+        items:
+        - name: Использование синхронного сокета сервера
+          href: using-a-synchronous-server-socket.md
+        - name: Использование асинхронных сокетов сервера
+          href: using-an-asynchronous-server-socket.md
+      - name: Примеры кода сокетов
+        href: socket-code-examples.md
+        items:
+        - name: Пример синхронного сокета клиента
+          href: synchronous-client-socket-example.md
+        - name: Пример синхронного сокета сервера
+          href: synchronous-server-socket-example.md
+        - name: Примеры асинхронных сокетов клиента
+          href: asynchronous-client-socket-example.md
+        - name: Пример асинхронного сокета сервера
+          href: asynchronous-server-socket-example.md
+    - name: FTP
+      href: ftp.md
+      items:
+      - name: Практическое руководство. Скачивание файлов с использованием FTP
+        href: how-to-download-files-with-ftp.md
+      - name: Практическое руководство. Отправка файлов с использованием FTP
+        href: how-to-upload-files-with-ftp.md
+      - name: Практическое руководство. Перечисление содержимого каталога с помощью FTP
+        href: how-to-list-directory-contents-with-ftp.md
+    - name: Основные сведения о проблемах и исключениях WebRequest
+      href: understanding-webrequest-problems-and-exceptions.md
+  - name: протокол IP версии 6
+    href: internet-protocol-version-6.md
+    items:
+    - name: Адресация IPv6
+      href: ipv6-addressing.md
+    - name: Маршрутизация IPv6
+      href: ipv6-routing.md
+    - name: Автоматическая настройка IPv6
+      href: ipv6-auto-configuration.md
+    - name: Включение и отключение IPv6
+      href: enabling-and-disabling-ipv6.md
+    - name: Практическое руководство. Изменение файла конфигурации компьютера для включения поддержки IPv6
+      href: how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md
+  - name: Настройка веб-приложений
+    href: configuring-internet-applications.md
+  - name: Трассировка сети в .NET Framework
+    href: network-tracing.md
+    items:
+    - name: Интерпретация сетевой трассировки
+      href: interpreting-network-tracing.md
+    - name: Включение сетевой трассировки
+      href: enabling-network-tracing.md
+    - name: Практическое руководство. Настройка трассировки сети
+      href: how-to-configure-network-tracing.md
+  - name: Управление кэшем для сетевых приложений
+    href: cache-management-for-network-applications.md
+    items:
+    - name: Политика кэша
+      href: cache-policy.md
+    - name: политики кэша на основе расположения
+      href: location-based-cache-policies.md
+    - name: политики кэша на основе времени
+      href: time-based-cache-policies.md
+      items:
+      - name: 'Взаимодействие с политикой кэша: максимальный возраст и устаревание'
+        href: cache-policy-interaction-maximum-age-and-maximum-staleness.md
+      - name: 'Взаимодействие с политикой кэша: максимальный возраст и минимальная актуальность'
+        href: cache-policy-interaction-maximum-age-and-minimum-freshness.md
+    - name: Настройка кэширования в сетевых приложениях
+      href: configuring-caching-in-network-applications.md
+      items:
+      - name: Практическое руководство. Установка политики кэша для приложения на основе расположения
+        href: how-to-set-a-location-based-cache-policy-for-an-application.md
+      - name: Практическое руководство. Установка политики кэша для приложения на основе времени по умолчанию
+        href: how-to-set-the-default-time-based-cache-policy-for-an-application.md
+      - name: Практическое руководство. Настройка политики кэша на основе времени
+        href: how-to-customize-a-time-based-cache-policy.md
+      - name: Практическое руководство. Задание политики кэширования для запроса
+        href: how-to-set-cache-policy-for-a-request.md
+  - name: Безопасность в сетевом программировании
+    href: security-in-network-programming.md
+    items:
+    - name: Рекомендации для протокола TLS
+      href: tls.md
+    - name: Использование протокола SSL
+      href: using-secure-sockets-layer.md
+      items:
+      - name: Выбор и проверка сертификата
+        href: certificate-selection-and-validation.md
+    - name: Аутентификация в Интернете
+      href: internet-authentication.md
+      items:
+      - name: Обычная и дайджест-аутентификация
+        href: basic-and-digest-authentication.md
+      - name: проверка подлинности NTLM и Kerberos
+        href: ntlm-and-kerberos-authentication.md
+    - name: Веб-разрешения и разрешения сокетов
+      href: web-and-socket-permissions.md
+  - name: Рекомендации по использованию классов System.Net
+    href: best-practices-for-system-net-classes.md
+  - name: Доступ к Интернету через прокси-сервер
+    href: accessing-the-internet-through-a-proxy.md
+    items:
+    - name: Настройка прокси-сервера
+      href: proxy-configuration.md
+    - name: Автоматическое обнаружение прокси-сервера
+      href: automatic-proxy-detection.md
+    - name: Практическое руководство. Включение в WebRequest использования прокси-сервера для связи с Интернетом
+      href: how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md
+    - name: Практическое руководство. Переопределение глобальных прокси-серверов
+      href: how-to-override-a-global-proxy-selection.md
+  - name: NetworkInformation
+    href: networkinformation.md
+    items:
+    - name: Практическое руководство. Определение доступности сети и изменений адреса
+      href: how-to-detect-network-availability-and-address-changes.md
+    - name: Практическое руководство. Получение информации об интерфейсах и протоколах
+      href: how-to-get-interface-and-protocol-information.md
+    - name: Практическое руководство. Проверка связи с узлом
+      href: how-to-ping-a-host.md
+  - name: Изменения пространства имен System.Uri в версии 2.0
+    href: changes-to-the-system-uri-namespace-in-version-2-0.md
+  - name: Поддержка международного кода ресурса в System.Uri
+    href: international-resource-identifier-support-in-system-uri.md
+  - name: Улучшения производительности сокетов в версии 3.5
+    href: socket-performance-enhancements-in-version-3-5.md
+  - name: Протокол PNRP
+    href: peer-name-resolution-protocol.md
+    items:
+    - name: Одноранговые имена и идентификаторы PNRP
+      href: peer-names-and-pnrp-ids.md
+    - name: Публикация и разрешение имени однорангового узла
+      href: peer-name-publication-and-resolution.md
+    - name: Облака PNRP
+      href: pnrp-clouds.md
+    - name: Кэши PNRP
+      href: pnrp-caches.md
+    - name: PNRP в разработке приложений
+      href: pnrp-in-application-development.md
+  - name: Одноранговая совместная работа
+    href: peer-to-peer-collaboration.md
+    items:
+    - name: О пространстве имен System.Net.PeerToPeer.Collaboration
+      href: about-the-system-net-peertopeer-collaboration-namespace.md
+    - name: Сценарии организации одноранговой сети
+      href: peer-to-peer-networking-scenarios.md
+  - name: Изменения в аутентификации NTLM для HttpWebRequest в версии 3.5 с пакетом обновления 1 (SP1)
+    href: changes-to-ntlm-authentication-for-httpwebrequest-in-version-3-5-sp1.md
+  - name: Встроенная аутентификация Windows с расширенной защитой
+    href: integrated-windows-authentication-with-extended-protection.md
+  - name: Обход NAT с помощью IPv6 и Teredo
+    href: nat-traversal-using-ipv6-and-teredo.md
+  - name: Сетевая изоляция для приложений Магазина Windows
+    href: network-isolation-for-windows-store-apps.md
+  - name: Примеры сетевого программирования
+    href: network-programming-samples.md
+ms.openlocfilehash: 9f44403f015f28fe92aed3309584abc51156db3a
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469709"

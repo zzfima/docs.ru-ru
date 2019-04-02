@@ -7,7 +7,7 @@ ms.date: 04/28/2018
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Модернизация существующих приложений .NET с помощью облака Azure и контейнеров Windows (второе издание)
 
-![изображение обложки](./media/cover.png)
+![Изображение обложки руководства по .NET, модернизируйте приложения.](./media/index/web-application-guide-cover-image.png)
 
 ИЗДАТЕЛЬ  
 Microsoft Press и Microsoft DevDiv  

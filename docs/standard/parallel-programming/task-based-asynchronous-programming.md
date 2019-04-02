@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d2a525a8aff6f6b05777de736d97c72c38a2fa62
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0ecc1090f2697eb0243a081cde70338c0e6fffec
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268032"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409930"
 ---
 # <a name="task-based-asynchronous-programming"></a>Асинхронное программирование на основе задач
 
@@ -135,7 +135,7 @@ ms.locfileid: "55268032"
 
 С помощью методов <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> и <xref:System.Threading.Tasks.Task%601.ContinueWith%2A?displayProperty=nameWithType> можно указать задачу, которую нужно запускать по завершении *предшествующей задачи*. Делегат задачи продолжения передается в качестве ссылки на предшествующую задачу, чтобы он мог проверить состояние предшествующей задачи и, получив значение свойства <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType>, использовать выходные данные предшествующей задачи в качестве входных данных для продолжения.
 
-В следующем примере задача `getData` запускается вызовом метода <xref:System.Threading.Tasks.TaskFactory.StartNew%60%601%28System.Func%7B%60%600%7D%29?displayProperty=nameWithType>. Задача `processData` запускается автоматически по завершении задачи `getData`, а задача `displayData` запускается по завершении задачи `processData`. Задача `getData` создает целочисленный массив, доступный задаче `processData` через свойство `getData` задачи <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType>. Задача `processData` обрабатывает этот массив и возвращает результат, тип которого определяется на основе возвращаемого типа лямбда-выражения, переданного методу <xref:System.Threading.Tasks.Task%601.ContinueWith%60%601%28System.Func%7BSystem.Threading.Tasks.Task%7B%600%7D%2C%60%600%7D%29?displayProperty=nameWithType>. Задача `displayData` выполняется автоматически по завершении задачи `processData`, и объект <xref:System.Tuple%603>, возвращенный лямбда-выражением `processData`, доступен задаче `displayData` через свойство `processData` задачи <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType>. Задача `displayData` принимает результат задачи `processData` и выдает результат, тип которого определяется аналогичным образом. Этот результат становится доступным программе в свойстве <xref:System.Threading.Tasks.Task%601.Result%2A>.
+В следующем примере задача `getData` запускается вызовом метода <xref:System.Threading.Tasks.TaskFactory.StartNew%60%601%28System.Func%7B%60%600%7D%29?displayProperty=nameWithType>. Задача `processData` запускается автоматически по завершении задачи `getData`, а задача `displayData` запускается по завершении задачи `processData`. Задача `getData` создает целочисленный массив, доступный задаче `processData` через свойство `getData` задачи <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType>. Задача `processData` обрабатывает этот массив и возвращает результат, тип которого определяется на основе типа возвращаемого значения лямбда-выражения, переданного методу <xref:System.Threading.Tasks.Task%601.ContinueWith%60%601%28System.Func%7BSystem.Threading.Tasks.Task%7B%600%7D%2C%60%600%7D%29?displayProperty=nameWithType>. Задача `displayData` выполняется автоматически по завершении задачи `processData`, и объект <xref:System.Tuple%603>, возвращенный лямбда-выражением `processData`, доступен задаче `displayData` через свойство `processData` задачи <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType>. Задача `displayData` принимает результат задачи `processData` и выдает результат, тип которого определяется аналогичным образом. Этот результат становится доступным программе в свойстве <xref:System.Threading.Tasks.Task%601.Result%2A>.
 
 [!code-csharp[TPL_TaskIntro#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/continuations1.cs#5)]
 [!code-vb[TPL_TaskIntro#5](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/continuations1.vb#5)]
@@ -236,7 +236,7 @@ ms.locfileid: "55268032"
 
 ## <a name="canceling-tasks"></a>Отмена задач
 
-Класс `Task` поддерживает совместную отмену и полностью интегрирован с классами <xref:System.Threading.CancellationTokenSource?displayProperty=nameWithType> и <xref:System.Threading.CancellationToken?displayProperty=nameWithType>, появившимися в .NET Framework 4. Большинство конструкторов в классе <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> принимают объект <xref:System.Threading.CancellationToken> в качестве входного параметра. Многие из перегрузок <xref:System.Threading.Tasks.TaskFactory.StartNew%2A> и <xref:System.Threading.Tasks.Task.Run%2A> также содержат параметр <xref:System.Threading.CancellationToken>.
+Класс <xref:System.Threading.Tasks.Task> поддерживает совместную отмену и полностью интегрирован с классами <xref:System.Threading.CancellationTokenSource?displayProperty=nameWithType> и <xref:System.Threading.CancellationToken?displayProperty=nameWithType>, появившимися в .NET Framework 4. Большинство конструкторов в классе <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> принимают объект <xref:System.Threading.CancellationToken> в качестве входного параметра. Многие из перегрузок <xref:System.Threading.Tasks.TaskFactory.StartNew%2A> и <xref:System.Threading.Tasks.Task.Run%2A> также содержат параметр <xref:System.Threading.CancellationToken>.
 
 Можно создать токен и выдать запрос отмены позднее с помощью класса <xref:System.Threading.CancellationTokenSource>. Передайте токен <xref:System.Threading.Tasks.Task> в качестве аргумента и ссылайтесь на тот же токен в пользовательском делегате, который не отвечает на запрос отмены.
 

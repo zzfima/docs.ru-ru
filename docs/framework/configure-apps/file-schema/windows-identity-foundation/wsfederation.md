@@ -3,12 +3,12 @@ title: <wsFederation>
 ms.date: 03/30/2017
 ms.assetid: c537f770-68bd-4f82-96ad-6424ad91369f
 author: BrucePerlerMS
-ms.openlocfilehash: 801970ec05fc88587a5b45b5bb3a855d1a81afb3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: de79ad6447fe67afc596783eff3fa3e6a02b600c
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356095"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654592"
 ---
 # <a name="wsfederation"></a>\<wsFederation >
 Предоставляет конфигурацию для <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM).  
@@ -48,11 +48,11 @@ ms.locfileid: "57356095"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание:|  
+|Атрибут|Описание|  
 |---------------|-----------------|  
 |authenticationType|URI, указывающий тип проверки подлинности. Задает параметр wauth запроса входа запроса WS-Federation. Необязательный параметр. Значение по умолчанию является пустой строкой, который указывает, что параметр wauth не включен в запрос.|  
 |актуальность|Требуемая Максимальная длительность запросов аутентификации в минутах. Задает параметр wfresh запроса входа запроса WS-Federation. Необязательный параметр. По умолчанию используется значение ноль. Необязательный параметр. **Предупреждение.**  В следующем выпуске платформы .NET Framework 4.5 `freshness` атрибут будет иметь тип `xs:string` и его значение по умолчанию будет `null`.|  
-|homeRealm|Домашней области поставщика удостоверений (IP) для проверки подлинности. Задает параметр whr запроса входа запроса WS-Federation. Необязательный параметр. Значение по умолчанию является пустой строкой, который указывает, что параметр whr не включен в запрос.|  
+|homeRealm|Домашней области поставщика удостоверений (IdP), используемый для проверки подлинности. Задает параметр whr запроса входа запроса WS-Federation. Необязательный параметр. Значение по умолчанию является пустой строкой, который указывает, что параметр whr не включен в запрос.|  
 |issuer|URI предполагаемого издателя токена. Задает базовый URL-адрес из WS-Federation в запросах входа и выхода запросов требуется.|  
 |persistentCookiesOnPassiveRedirects|Указывает, выпускаются ли постоянные файлы cookie для проверки подлинности. Необязательный параметр. Значение по умолчанию — «false», файлы cookie не выдаются.|  
 |passiveRedirectEnabled|Указывает, включена ли WSFAM автоматически перенаправлять неавторизованные запросы в службу STS. Необязательный параметр. Значение по умолчанию — «true», неавторизованные запросы автоматически перенаправляются.|  
@@ -72,7 +72,7 @@ ms.locfileid: "57356095"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<federationConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)|Содержит параметры, определяющие <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) и <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM).|  
   

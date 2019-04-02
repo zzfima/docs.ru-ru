@@ -1,5 +1,5 @@
 ---
-title: Оператор не является допустимым для "<name1>«и»<name2>"
+title: Оператор не является допустимым для '<name1>«и»<name2>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbrNoValidOperator_TwoOperands
@@ -11,7 +11,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58026871"
 ---
-# <a name="operator-is-not-valid-for-name1-and-name2"></a>Оператор не является допустимым для "\<Имя1 >" и "\<имя2 >"
+# <a name="operator-is-not-valid-for-name1-and-name2"></a>Оператор не является допустимым для '\<Имя1 >' и '\<имя2 >'
 Оператор не является допустимым для типов, с которыми совершаются операции.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  

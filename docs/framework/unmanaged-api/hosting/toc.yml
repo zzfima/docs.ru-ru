@@ -1,0 +1,1007 @@
+items:
+- name: Размещение
+  href: index.md
+  items:
+  - name: Размещение коклассов
+    href: hosting-coclasses.md
+    items:
+    - name: Кокласс CLRRuntimeHost
+      href: clrruntimehost-coclass.md
+    - name: Компонентный класс ComCallUnmarshal
+      href: comcallunmarshal-coclass.md
+    - name: Компонентный класс CorRuntimeHost
+      href: corruntimehost-coclass.md
+    - name: Компонентный класс TypeNameFactory
+      href: typenamefactory-coclass.md
+  - name: Размещение перечислений
+    href: hosting-enumerations.md
+    items:
+    - name: Перечисление CLSID_RESOLUTION_FLAGS
+      href: clsid-resolution-flags-enumeration.md
+    - name: Перечисление COR_GC_STAT_TYPES
+      href: cor-gc-stat-types-enumeration.md
+    - name: Перечисление COR_GC_THREAD_STATS_TYPES
+      href: cor-gc-thread-stats-types-enumeration.md
+    - name: Перечисление EApiCategories
+      href: eapicategories-enumeration.md
+    - name: Перечисление EBindPolicyLevels
+      href: ebindpolicylevels-enumeration.md
+    - name: Перечисление ECLRAssemblyIdentityFlags
+      href: eclrassemblyidentityflags-enumeration.md
+    - name: Перечисление EClrEvent
+      href: eclrevent-enumeration.md
+    - name: Перечисление EClrFailure
+      href: eclrfailure-enumeration.md
+    - name: Перечисление EClrOperation
+      href: eclroperation-enumeration.md
+    - name: Перечисление EClrUnhandledException
+      href: eclrunhandledexception-enumeration.md
+    - name: Перечисление EContextType
+      href: econtexttype-enumeration.md
+    - name: Перечисление ECustomDumpFlavor
+      href: ecustomdumpflavor-enumeration.md
+    - name: Перечисление ECustomDumpItemKind
+      href: ecustomdumpitemkind-enumeration.md
+    - name: Перечисление EHostApplicationPolicy
+      href: ehostapplicationpolicy-enumeration.md
+    - name: Перечисление EHostBindingPolicyModifyFlags
+      href: ehostbindingpolicymodifyflags-enumeration.md
+    - name: Перечисление EInitializeNewDomainFlags
+      href: einitializenewdomainflags-enumeration.md
+    - name: Перечисление EMemoryAvailable
+      href: ememoryavailable-enumeration.md
+    - name: Перечисление EMemoryCriticalLevel
+      href: ememorycriticallevel-enumeration.md
+    - name: Перечисление EPolicyAction
+      href: epolicyaction-enumeration.md
+    - name: Перечисление ESymbolReadingPolicy
+      href: esymbolreadingpolicy-enumeration.md
+    - name: Перечисление ETaskType
+      href: etasktype-enumeration.md
+    - name: Перечисление HOST_TYPE
+      href: host-type-enumeration.md
+    - name: MALLOC_TYPE - перечисление
+      href: malloc-type-enumeration.md
+    - name: Перечисление METAHOST_CONFIG_FLAGS
+      href: metahost-config-flags-enumeration.md
+    - name: Перечисление METAHOST_POLICY_FLAGS
+      href: metahost-policy-flags-enumeration.md
+    - name: Перечисление RUNTIME_INFO_FLAGS
+      href: runtime-info-flags-enumeration.md
+    - name: Перечисление StackOverflowType
+      href: stackoverflowtype-enumeration.md
+    - name: Перечисление STARTUP_FLAGS
+      href: startup-flags-enumeration.md
+    - name: Перечисление ValidatorFlags
+      href: validatorflags-enumeration.md
+    - name: Перечисление WAIT_OPTION
+      href: wait-option-enumeration.md
+  - name: Функции Hosting Global Static
+    href: hosting-global-static-functions.md
+    items:
+    - name: Глобальные статические функции размещения платформы .NET Framework 4
+      href: net-framework-4-hosting-global-static-functions.md
+      items:
+      - name: Функция CLRCreateInstance
+        href: clrcreateinstance-function.md
+    - name: Устаревшие функции размещения CLR
+      href: deprecated-clr-hosting-functions.md
+      items:
+      - name: Функция _CorDllMain
+        href: cordllmain-function.md
+      - name: Функция _CorExeMain
+        href: corexemain-function.md
+      - name: Функция _CorExeMain2
+        href: corexemain2-function.md
+      - name: Функция _CorImageUnloading
+        href: corimageunloading-function.md
+      - name: Функция _CorValidateImage
+        href: corvalidateimage-function.md
+      - name: Функция CallFunctionShim
+        href: callfunctionshim-function.md
+      - name: Функция ClrCreateManagedInstance
+        href: clrcreatemanagedinstance-function.md
+      - name: Функция CoEEShutDownCOM
+        href: coeeshutdowncom-function.md
+      - name: Функция CoInitializeCor
+        href: coinitializecor-function.md
+      - name: Функция CoInitializeEE
+        href: coinitializeee-function.md
+      - name: Функция CorBindToCurrentRuntime
+        href: corbindtocurrentruntime-function.md
+      - name: Функция CorBindToRuntime
+        href: corbindtoruntime-function.md
+      - name: Функция CorBindToRuntimeByCfg
+        href: corbindtoruntimebycfg-function.md
+      - name: Функция CorBindToRuntimeEx
+        href: corbindtoruntimeex-function.md
+      - name: Функция CorBindToRuntimeHost
+        href: corbindtoruntimehost-function.md
+      - name: Функция CorExitProcess
+        href: corexitprocess-function.md
+      - name: Функция CorLaunchApplication
+        href: corlaunchapplication-function.md
+      - name: Функция CorMarkThreadInThreadPool
+        href: cormarkthreadinthreadpool-function.md
+      - name: Функция CoUninitializeCor
+        href: couninitializecor-function.md
+      - name: Функция CoUninitializeEE
+        href: couninitializeee-function.md
+      - name: Функция CreateDebuggingInterfaceFromVersion
+        href: createdebugginginterfacefromversion-function.md
+      - name: Функция CreateICeeFileGen
+        href: createiceefilegen-function.md
+      - name: Функция DestroyICeeFileGen
+        href: destroyiceefilegen-function.md
+      - name: Указатель функции FExecuteInAppDomainCallback
+        href: fexecuteinappdomaincallback-function-pointer.md
+      - name: Указатель функции FLockClrVersionCallback
+        href: flockclrversioncallback-function-pointer.md
+      - name: Функция GetCLRIdentityManager
+        href: getclridentitymanager-function.md
+      - name: Функция GetCORRequiredVersion
+        href: getcorrequiredversion-function.md
+      - name: Функция GetCORSystemDirectory
+        href: getcorsystemdirectory-function.md
+      - name: Функция GetCORVersion
+        href: getcorversion-function.md
+      - name: Функция GetFileVersion
+        href: getfileversion-function.md
+      - name: Функция GetRealProcAddress
+        href: getrealprocaddress-function.md
+      - name: Функция GetRequestedRuntimeInfo
+        href: getrequestedruntimeinfo-function.md
+      - name: Функция GetRequestedRuntimeVersion
+        href: getrequestedruntimeversion-function.md
+      - name: Функция GetRequestedRuntimeVersionForCLSID
+        href: getrequestedruntimeversionforclsid-function.md
+      - name: Функция GetVersionFromProcess
+        href: getversionfromprocess-function.md
+      - name: Функция LoadLibraryShim
+        href: loadlibraryshim-function.md
+      - name: Функция LoadStringRC
+        href: loadstringrc-function.md
+      - name: Функция LoadStringRCEx
+        href: loadstringrcex-function.md
+      - name: Функция LockClrVersion
+        href: lockclrversion-function.md
+      - name: Указатель функции LPOVERLAPPED_COMPLETION_ROUTINE
+        href: lpoverlapped-completion-routine-function-pointer.md
+      - name: Указатель функции LPTHREAD_START_ROUTINE
+        href: lpthread-start-routine-function-pointer.md
+      - name: Функция RunDll32ShimW
+        href: rundll32shimw-function.md
+      - name: Указатель функции WAITORTIMERCALLBACK
+        href: waitortimercallback-function-pointer.md
+  - name: Интерфейсы размещения
+    href: hosting-interfaces.md
+    items:
+    - name: Устаревшие интерфейсы размещения CLR и CoClasses
+      href: deprecated-clr-hosting-interfaces-and-coclasses.md
+      items:
+      - name: Интерфейс IAppDomainSetup
+        href: iappdomainsetup-interface.md
+      - name: Класс ICeeFileGen
+        href: iceefilegen-class.md
+      - name: Интерфейс ICorRuntimeHost
+        href: icorruntimehost-interface.md
+        items:
+        - name: Метод CloseEnum
+          href: icorruntimehost-closeenum-method.md
+        - name: Метод CreateDomain
+          href: icorruntimehost-createdomain-method.md
+        - name: Метод CreateDomainSetup
+          href: icorruntimehost-createdomainsetup-method.md
+        - name: Метод CreateDomainEx
+          href: icorruntimehost-createdomainex-method.md
+        - name: Метод CreateEvidence
+          href: icorruntimehost-createevidence-method.md
+        - name: Метод CreateLogicalThreadState
+          href: icorruntimehost-createlogicalthreadstate-method.md
+        - name: Метод CurrentDomain
+          href: icorruntimehost-currentdomain-method.md
+        - name: Метод DeleteLogicalThreadState
+          href: icorruntimehost-deletelogicalthreadstate-method.md
+        - name: Метод EnumDomains
+          href: icorruntimehost-enumdomains-method.md
+        - name: Метод GetConfiguration
+          href: icorruntimehost-getconfiguration-method.md
+        - name: Метод GetDefaultDomain
+          href: icorruntimehost-getdefaultdomain-method.md
+        - name: Метод LocksHeldByLogicalThread
+          href: icorruntimehost-locksheldbylogicalthread-method.md
+        - name: Метод MapFile
+          href: icorruntimehost-mapfile-method.md
+        - name: Метод NextDomain
+          href: icorruntimehost-nextdomain-method.md
+        - name: Метод Start
+          href: icorruntimehost-start-method.md
+        - name: Метод Stop
+          href: icorruntimehost-stop-method.md
+        - name: Метод SwitchInLogicalThreadState
+          href: icorruntimehost-switchinlogicalthreadstate-method.md
+        - name: Метод SwitchOutLogicalThreadState
+          href: icorruntimehost-switchoutlogicalthreadstate-method.md
+        - name: Метод UnloadDomain
+          href: icorruntimehost-unloaddomain-method.md
+    - name: Интерфейсы размещения CLR
+      href: clr-hosting-interfaces.md
+      items:
+      - name: Интерфейс IActionOnCLREvent
+        href: iactiononclrevent-interface.md
+        items:
+        - name: Метод OnEvent
+          href: iactiononclrevent-onevent-method.md
+      - name: Интерфейс IApartmentCallback
+        href: iapartmentcallback-interface.md
+        items:
+        - name: Метод DoCallback
+          href: iapartmentcallback-docallback-method.md
+      - name: Интерфейс IAppDomainBinding
+        href: iappdomainbinding-interface.md
+        items:
+        - name: Метод OnAppDomain
+          href: iappdomainbinding-onappdomain-method.md
+      - name: Интерфейс ICatalogServices
+        href: icatalogservices-interface.md
+        items:
+        - name: Метод Autodone
+          href: icatalogservices-autodone-method.md
+        - name: Метод NotAutodone
+          href: icatalogservices-notautodone-method.md
+      - name: Интерфейс ICLRAssemblyIdentityManager
+        href: iclrassemblyidentitymanager-interface.md
+        items:
+        - name: Метод GetBindingIdentityFromFile
+          href: iclrassemblyidentitymanager-getbindingidentityfromfile-method.md
+        - name: Метод GetBindingIdentityFromStream
+          href: iclrassemblyidentitymanager-getbindingidentityfromstream-method.md
+        - name: Метод GetCLRAssemblyReferenceList
+          href: iclrassemblyidentitymanager-getclrassemblyreferencelist-method.md
+        - name: Метод GetProbingAssembliesFromReference
+          href: iclrassemblyidentitymanager-getprobingassembliesfromreference-method.md
+        - name: Метод GetReferencedAssembliesFromFile
+          href: iclrassemblyidentitymanager-getreferencedassembliesfromfile-method.md
+        - name: Метод GetReferencedAssembliesFromStream
+          href: iclrassemblyidentitymanager-getreferencedassembliesfromstream-method.md
+        - name: Метод IsStronglyNamed
+          href: iclrassemblyidentitymanager-isstronglynamed-method.md
+      - name: Интерфейс ICLRAssemblyReferenceList
+        href: iclrassemblyreferencelist-interface.md
+        items:
+        - name: Метод IsAssemblyReferenceInList
+          href: iclrassemblyreferencelist-isassemblyreferenceinlist-method.md
+        - name: Метод IsStringAssemblyReferenceInList
+          href: iclrassemblyreferencelist-isstringassemblyreferenceinlist-method.md
+      - name: Интерфейс ICLRControl
+        href: iclrcontrol-interface.md
+        items:
+        - name: Метод GetCLRManager
+          href: iclrcontrol-getclrmanager-method.md
+        - name: Метод SetAppDomainManagerType
+          href: iclrcontrol-setappdomainmanagertype-method.md
+      - name: Интерфейс ICLRDebugManager
+        href: iclrdebugmanager-interface.md
+        items:
+        - name: Метод BeginConnection
+          href: iclrdebugmanager-beginconnection-method.md
+        - name: Метод EndConnection
+          href: iclrdebugmanager-endconnection-method.md
+        - name: Метод GetDacl
+          href: iclrdebugmanager-getdacl-method.md
+        - name: Метод IsDebuggerAttached
+          href: iclrdebugmanager-isdebuggerattached-method.md
+        - name: Метод SetConnectionTasks
+          href: iclrdebugmanager-setconnectiontasks-method.md
+        - name: Метод SetDacl
+          href: iclrdebugmanager-setdacl-method.md
+        - name: Метод SetSymbolReadingPolicy
+          href: iclrdebugmanager-setsymbolreadingpolicy-method.md
+      - name: Интерфейс ICLRErrorReportingManager
+        href: iclrerrorreportingmanager-interface.md
+        items:
+        - name: Метод BeginCustomDump
+          href: iclrerrorreportingmanager-begincustomdump-method.md
+        - name: Метод EndCustomDump
+          href: iclrerrorreportingmanager-endcustomdump-method.md
+        - name: Метод GetBucketParametersForCurrentException
+          href: iclrerrorreportingmanager-getbucketparametersforcurrentexception-method.md
+      - name: Интерфейс ICLRGCManager
+        href: iclrgcmanager-interface.md
+        items:
+        - name: Метод Collect
+          href: iclrgcmanager-collect-method.md
+        - name: Метод GetStats
+          href: iclrgcmanager-getstats-method.md
+        - name: Метод SetGCStartupLimits
+          href: iclrgcmanager-setgcstartuplimits-method.md
+      - name: Интерфейс ICLRHostBindingPolicyManager
+        href: iclrhostbindingpolicymanager-interface.md
+        items:
+        - name: Метод EvaluatePolicy
+          href: iclrhostbindingpolicymanager-evaluatepolicy-method.md
+        - name: Метод ModifyApplicationPolicy
+          href: iclrhostbindingpolicymanager-modifyapplicationpolicy-method.md
+      - name: Интерфейс ICLRHostProtectionManager
+        href: iclrhostprotectionmanager-interface.md
+        items:
+        - name: SetEagerSerializeGrantSets
+          href: iclrhostprotectionmanager-seteagerserializegrantsets-method.md
+        - name: Метод SetProtectedCategories
+          href: iclrhostprotectionmanager-setprotectedcategories-method.md
+      - name: Интерфейс ICLRIoCompletionManager
+        href: iclriocompletionmanager-interface.md
+        items:
+        - name: Метод OnComplete
+          href: iclriocompletionmanager-oncomplete-method.md
+      - name: Интерфейс ICLRMemoryNotificationCallback
+        href: iclrmemorynotificationcallback-interface.md
+        items:
+        - name: Метод OnMemoryNotification
+          href: iclrmemorynotificationcallback-onmemorynotification-method.md
+      - name: Интерфейс ICLROnEventManager
+        href: iclroneventmanager-interface.md
+        items:
+        - name: Метод RegisterActionOnEvent
+          href: iclroneventmanager-registeractiononevent-method.md
+        - name: Метод UnregisterActionOnEvent
+          href: iclroneventmanager-unregisteractiononevent-method.md
+      - name: Интерфейс ICLRPolicyManager
+        href: iclrpolicymanager-interface.md
+        items:
+        - name: Метод SetActionOnFailure
+          href: iclrpolicymanager-setactiononfailure-method.md
+        - name: Метод SetActionOnTimeout
+          href: iclrpolicymanager-setactionontimeout-method.md
+        - name: Метод SetDefaultAction
+          href: iclrpolicymanager-setdefaultaction-method.md
+        - name: Метод SetTimeout
+          href: iclrpolicymanager-settimeout-method.md
+        - name: Метод SetTimeoutAndAction
+          href: iclrpolicymanager-settimeoutandaction-method.md
+        - name: Метод SetUnhandledExceptionPolicy
+          href: iclrpolicymanager-setunhandledexceptionpolicy-method.md
+      - name: Интерфейс ICLRProbingAssemblyEnum
+        href: iclrprobingassemblyenum-interface.md
+        items:
+        - name: Метод Get
+          href: iclrprobingassemblyenum-get-method.md
+      - name: Интерфейс ICLRReferenceAssemblyEnum
+        href: iclrreferenceassemblyenum-interface.md
+        items:
+        - name: Метод Get
+          href: iclrreferenceassemblyenum-get-method.md
+      - name: Интерфейс ICLRRuntimeHost
+        href: iclrruntimehost-interface.md
+        items:
+        - name: Метод ExecuteApplication
+          href: iclrruntimehost-executeapplication-method.md
+        - name: Метод ExecuteInAppDomain
+          href: iclrruntimehost-executeinappdomain-method.md
+        - name: Метод ExecuteInDefaultAppDomain
+          href: iclrruntimehost-executeindefaultappdomain-method.md
+        - name: Метод GetCLRControl
+          href: iclrruntimehost-getclrcontrol-method.md
+        - name: Метод GetCurrentAppDomainId
+          href: iclrruntimehost-getcurrentappdomainid-method.md
+        - name: Метод SetHostControl
+          href: iclrruntimehost-sethostcontrol-method.md
+        - name: Метод Start
+          href: iclrruntimehost-start-method.md
+        - name: Метод Stop
+          href: iclrruntimehost-stop-method.md
+        - name: Метод UnloadAppDomain
+          href: iclrruntimehost-unloadappdomain-method.md
+      - name: Интерфейс ICLRSyncManager
+        href: iclrsyncmanager-interface.md
+        items:
+        - name: Метод CreateRWLockOwnerIterator
+          href: iclrsyncmanager-createrwlockowneriterator-method.md
+        - name: Метод DeleteRWLockOwnerIterator
+          href: iclrsyncmanager-deleterwlockowneriterator-method.md
+        - name: Метод GetMonitorOwner
+          href: iclrsyncmanager-getmonitorowner-method.md
+        - name: Метод GetRWLockOwnerNext
+          href: iclrsyncmanager-getrwlockownernext-method.md
+      - name: Интерфейс ICLRTask
+        href: iclrtask-interface.md
+        items:
+        - name: Метод Abort
+          href: iclrtask-abort-method.md
+        - name: Метод ExitTask
+          href: iclrtask-exittask-method.md
+        - name: Метод GetMemStats
+          href: iclrtask-getmemstats-method.md
+        - name: Метод LocksHeld
+          href: iclrtask-locksheld-method.md
+        - name: Метод NeedsPriorityScheduling
+          href: iclrtask-needspriorityscheduling-method.md
+        - name: Метод Reset
+          href: iclrtask-reset-method.md
+        - name: Метод RudeAbort
+          href: iclrtask-rudeabort-method.md
+        - name: Метод SetTaskIdentifier
+          href: iclrtask-settaskidentifier-method.md
+        - name: Метод SwitchIn
+          href: iclrtask-switchin-method.md
+        - name: Метод SwitchOut
+          href: iclrtask-switchout-method.md
+        - name: Метод YieldTask
+          href: iclrtask-yieldtask-method.md
+      - name: Интерфейс ICLRTaskManager
+        href: iclrtaskmanager-interface.md
+        items:
+        - name: Метод CreateTask
+          href: iclrtaskmanager-createtask-method.md
+        - name: Метод GetCurrentTask
+          href: iclrtaskmanager-getcurrenttask-method.md
+        - name: Метод GetCurrentTaskType
+          href: iclrtaskmanager-getcurrenttasktype-method.md
+        - name: Метод SetLocale
+          href: iclrtaskmanager-setlocale-method.md
+        - name: Метод SetUILocale
+          href: iclrtaskmanager-setuilocale-method.md
+      - name: Интерфейс ICLRValidator
+        href: iclrvalidator-interface.md
+        items:
+        - name: Метод FormatEventInfo
+          href: iclrvalidator-formateventinfo-method.md
+        - name: Метод Validate
+          href: iclrvalidator-validate-method.md
+      - name: Интерфейс ICorConfiguration
+        href: icorconfiguration-interface.md
+        items:
+        - name: Метод AddDebuggerSpecialThread
+          href: icorconfiguration-adddebuggerspecialthread-method.md
+        - name: Метод SetDebuggerThreadControl
+          href: icorconfiguration-setdebuggerthreadcontrol-method.md
+        - name: Метод SetGCHostControl
+          href: icorconfiguration-setgchostcontrol-method.md
+        - name: Метод SetGCThreadControl
+          href: icorconfiguration-setgcthreadcontrol-method.md
+      - name: Интерфейс ICorThreadpool
+        href: icorthreadpool-interface.md
+        items:
+        - name: Метод CorBindIoCompletionCallback
+          href: icorthreadpool-corbindiocompletioncallback-method.md
+        - name: Метод CorCallOrQueueUserWorkItem
+          href: icorthreadpool-corcallorqueueuserworkitem-method.md
+        - name: Метод CorChangeTimer
+          href: icorthreadpool-corchangetimer-method.md
+        - name: Метод CorCreateTimer
+          href: icorthreadpool-corcreatetimer-method.md
+        - name: Метод CorDeleteTimer
+          href: icorthreadpool-cordeletetimer-method.md
+        - name: Метод CorGetAvailableThreads
+          href: icorthreadpool-corgetavailablethreads-method.md
+        - name: Метод CorGetMaxThreads
+          href: icorthreadpool-corgetmaxthreads-method.md
+        - name: Метод CorQueueUserWorkItem
+          href: icorthreadpool-corqueueuserworkitem-method.md
+        - name: Метод CorRegisterWaitForSingleObject
+          href: icorthreadpool-corregisterwaitforsingleobject-method.md
+        - name: Метод CorSetMaxThreads
+          href: icorthreadpool-corsetmaxthreads-method.md
+        - name: Метод CorUnregisterWait
+          href: icorthreadpool-corunregisterwait-method.md
+      - name: Интерфейс IDebuggerInfo
+        href: idebuggerinfo-interface.md
+        items:
+        - name: Метод IsDebuggerAttached
+          href: idebuggerinfo-isdebuggerattached-method.md
+      - name: Интерфейс IDebuggerThreadControl
+        href: idebuggerthreadcontrol-interface.md
+        items:
+        - name: Метод ReleaseAllRuntimeThreads
+          href: idebuggerthreadcontrol-releaseallruntimethreads-method.md
+        - name: Метод StartBlockingForDebugger
+          href: idebuggerthreadcontrol-startblockingfordebugger-method.md
+        - name: Метод ThreadIsBlockingForDebugger
+          href: idebuggerthreadcontrol-threadisblockingfordebugger-method.md
+      - name: Интерфейс IGCHost
+        href: igchost-interface.md
+        items:
+        - name: Метод Collect
+          href: igchost-collect-method.md
+        - name: Метод GetStats
+          href: igchost-getstats-method.md
+        - name: Метод GetThreadStats
+          href: igchost-getthreadstats-method.md
+        - name: Метод SetGCStartupLimits
+          href: igchost-setgcstartuplimits-method.md
+        - name: Метод SetVirtualMemLimit
+          href: igchost-setvirtualmemlimit-method.md
+      - name: Интерфейс IGCHost2
+        href: igchost2-interface.md
+        items:
+        - name: Метод SetGCStartupLimitsEx
+          href: igchost2-setgcstartuplimitsex-method.md
+      - name: Интерфейс IGCHostControl
+        href: igchostcontrol-interface.md
+        items:
+        - name: Метод RequestVirtualMemLimit
+          href: igchostcontrol-requestvirtualmemlimit-method.md
+      - name: Интерфейс IGCThreadControl
+        href: igcthreadcontrol-interface.md
+        items:
+        - name: Метод SuspensionEnding
+          href: igcthreadcontrol-suspensionending-method.md
+        - name: Метод SuspensionStarting
+          href: igcthreadcontrol-suspensionstarting-method.md
+        - name: Метод ThreadIsBlockingForSuspension
+          href: igcthreadcontrol-threadisblockingforsuspension-method.md
+      - name: Интерфейс IHostAssemblyManager
+        href: ihostassemblymanager-interface.md
+        items:
+        - name: Метод GetAssemblyStore
+          href: ihostassemblymanager-getassemblystore-method.md
+        - name: Метод GetNonHostStoreAssemblies
+          href: ihostassemblymanager-getnonhoststoreassemblies-method.md
+      - name: Интерфейс IHostAssemblyStore
+        href: ihostassemblystore-interface.md
+        items:
+        - name: Метод ProvideAssembly
+          href: ihostassemblystore-provideassembly-method.md
+        - name: Метод ProvideModule
+          href: ihostassemblystore-providemodule-method.md
+      - name: Интерфейс IHostAutoEvent
+        href: ihostautoevent-interface.md
+        items:
+        - name: Метод Set
+          href: ihostautoevent-set-method.md
+        - name: Метод Wait
+          href: ihostautoevent-wait-method.md
+      - name: Интерфейс IHostControl
+        href: ihostcontrol-interface.md
+        items:
+        - name: Метод GetHostManager
+          href: ihostcontrol-gethostmanager-method.md
+        - name: Метод SetAppDomainManager
+          href: ihostcontrol-setappdomainmanager-method.md
+      - name: Интерфейс IHostCrst
+        href: ihostcrst-interface.md
+        items:
+        - name: Метод Enter
+          href: ihostcrst-enter-method.md
+        - name: Метод Leave
+          href: ihostcrst-leave-method.md
+        - name: Метод SetSpinCount
+          href: ihostcrst-setspincount-method.md
+        - name: Метод TryEnter
+          href: ihostcrst-tryenter-method.md
+      - name: Интерфейс IHostGCManager
+        href: ihostgcmanager-interface.md
+        items:
+        - name: Метод SuspensionEnding
+          href: ihostgcmanager-suspensionending-method.md
+        - name: Метод SuspensionStarting
+          href: ihostgcmanager-suspensionstarting-method.md
+        - name: Метод ThreadIsBlockingForSuspension
+          href: ihostgcmanager-threadisblockingforsuspension-method.md
+      - name: Интерфейс IHostIoCompletionManager
+        href: ihostiocompletionmanager-interface.md
+        items:
+        - name: Метод Bind
+          href: ihostiocompletionmanager-bind-method.md
+        - name: Метод CloseIoCompletionPort
+          href: ihostiocompletionmanager-closeiocompletionport-method.md
+        - name: Метод CreateIoCompletionPort
+          href: ihostiocompletionmanager-createiocompletionport-method.md
+        - name: Метод GetAvailableThreads
+          href: ihostiocompletionmanager-getavailablethreads-method.md
+        - name: Метод GetHostOverlappedSize
+          href: ihostiocompletionmanager-gethostoverlappedsize-method.md
+        - name: Метод GetMaxThreads
+          href: ihostiocompletionmanager-getmaxthreads-method.md
+        - name: Метод GetMinThreads
+          href: ihostiocompletionmanager-getminthreads-method.md
+        - name: Метод InitializeHostOverlapped
+          href: ihostiocompletionmanager-initializehostoverlapped-method.md
+        - name: Метод SetCLRIoCompletionManager
+          href: ihostiocompletionmanager-setclriocompletionmanager-method.md
+        - name: Метод SetMaxThreads
+          href: ihostiocompletionmanager-setmaxthreads-method.md
+        - name: Метод SetMinThreads
+          href: ihostiocompletionmanager-setminthreads-method.md
+      - name: Интерфейс IHostMalloc
+        href: ihostmalloc-interface.md
+        items:
+        - name: Метод Alloc
+          href: ihostmalloc-alloc-method.md
+        - name: Метод DebugAlloc
+          href: ihostmalloc-debugalloc-method.md
+        - name: Метод Free
+          href: ihostmalloc-free-method.md
+      - name: Интерфейс IHostManualEvent
+        href: ihostmanualevent-interface.md
+        items:
+        - name: Метод Reset
+          href: ihostmanualevent-reset-method.md
+        - name: Метод Set
+          href: ihostmanualevent-set-method.md
+        - name: Метод Wait
+          href: ihostmanualevent-wait-method.md
+      - name: Интерфейс IHostMemoryManager
+        href: ihostmemorymanager-interface.md
+        items:
+        - name: Метод AcquiredVirtualAddressSpace
+          href: ihostmemorymanager-acquiredvirtualaddressspace-method.md
+        - name: Метод CreateMAlloc
+          href: ihostmemorymanager-createmalloc-method.md
+        - name: Метод GetMemoryLoad
+          href: ihostmemorymanager-getmemoryload-method.md
+        - name: Метод NeedsVirtualAddressSpace
+          href: ihostmemorymanager-needsvirtualaddressspace-method.md
+        - name: Метод RegisterMemoryNotificationCallback
+          href: ihostmemorymanager-registermemorynotificationcallback-method.md
+        - name: Метод ReleasedVirtualAddressSpace
+          href: ihostmemorymanager-releasedvirtualaddressspace-method.md
+        - name: Метод VirtualAlloc
+          href: ihostmemorymanager-virtualalloc-method.md
+        - name: Метод VirtualFree
+          href: ihostmemorymanager-virtualfree-method.md
+        - name: Метод VirtualProtect
+          href: ihostmemorymanager-virtualprotect-method.md
+        - name: Метод VirtualQuery
+          href: ihostmemorymanager-virtualquery-method.md
+      - name: Интерфейс IHostPolicyManager
+        href: ihostpolicymanager-interface.md
+        items:
+        - name: Метод OnDefaultAction
+          href: ihostpolicymanager-ondefaultaction-method.md
+        - name: Метод OnFailure
+          href: ihostpolicymanager-onfailure-method.md
+        - name: Метод OnTimeout
+          href: ihostpolicymanager-ontimeout-method.md
+      - name: Интерфейс IHostSecurityContext
+        href: ihostsecuritycontext-interface.md
+        items:
+        - name: Метод Capture
+          href: ihostsecuritycontext-capture-method.md
+      - name: Интерфейс IHostSecurityManager
+        href: ihostsecuritymanager-interface.md
+        items:
+        - name: Метод GetSecurityContext
+          href: ihostsecuritymanager-getsecuritycontext-method.md
+        - name: Метод ImpersonateLoggedOnUser
+          href: ihostsecuritymanager-impersonateloggedonuser-method.md
+        - name: Метод OpenThreadToken
+          href: ihostsecuritymanager-openthreadtoken-method.md
+        - name: Метод RevertToSelf
+          href: ihostsecuritymanager-reverttoself-method.md
+        - name: Метод SetSecurityContext
+          href: ihostsecuritymanager-setsecuritycontext-method.md
+        - name: Метод SetThreadToken
+          href: ihostsecuritymanager-setthreadtoken-method.md
+      - name: Интерфейс IHostSemaphore
+        href: ihostsemaphore-interface.md
+        items:
+        - name: Метод ReleaseSemaphore
+          href: ihostsemaphore-releasesemaphore-method.md
+        - name: Метод Wait
+          href: ihostsemaphore-wait-method.md
+      - name: Интерфейс IHostSyncManager
+        href: ihostsyncmanager-interface.md
+        items:
+        - name: Метод CreateAutoEvent
+          href: ihostsyncmanager-createautoevent-method.md
+        - name: Метод CreateCrst
+          href: ihostsyncmanager-createcrst-method.md
+        - name: Метод CreateCrstWithSpinCount
+          href: ihostsyncmanager-createcrstwithspincount-method.md
+        - name: Метод CreateManualEvent
+          href: ihostsyncmanager-createmanualevent-method.md
+        - name: Метод CreateMonitorEvent
+          href: ihostsyncmanager-createmonitorevent-method.md
+        - name: Метод CreateRWLockReaderEvent
+          href: ihostsyncmanager-createrwlockreaderevent-method.md
+        - name: Метод CreateRWLockWriterEvent
+          href: ihostsyncmanager-createrwlockwriterevent-method.md
+        - name: Метод CreateSemaphore
+          href: ihostsyncmanager-createsemaphore-method.md
+        - name: Метод SetCLRSyncManager
+          href: ihostsyncmanager-setclrsyncmanager-method.md
+      - name: Интерфейс IHostTask
+        href: ihosttask-interface.md
+        items:
+        - name: Метод Alert
+          href: ihosttask-alert-method.md
+        - name: Метод GetPriority
+          href: ihosttask-getpriority-method.md
+        - name: Метод Join
+          href: ihosttask-join-method.md
+        - name: Метод SetCLRTask
+          href: ihosttask-setclrtask-method.md
+        - name: Метод SetPriority
+          href: ihosttask-setpriority-method.md
+        - name: Метод Start
+          href: ihosttask-start-method.md
+      - name: Интерфейс IHostTaskManager
+        href: ihosttaskmanager-interface.md
+        items:
+        - name: Метод BeginDelayAbort
+          href: ihosttaskmanager-begindelayabort-method.md
+        - name: Метод BeginThreadAffinity
+          href: ihosttaskmanager-beginthreadaffinity-method.md
+        - name: Метод CallNeedsHostHook
+          href: ihosttaskmanager-callneedshosthook-method.md
+        - name: Метод CreateTask
+          href: ihosttaskmanager-createtask-method.md
+        - name: Метод EndDelayAbort
+          href: ihosttaskmanager-enddelayabort-method.md
+        - name: Метод EndThreadAffinity
+          href: ihosttaskmanager-endthreadaffinity-method.md
+        - name: Метод EnterRuntime
+          href: ihosttaskmanager-enterruntime-method.md
+        - name: Метод GetCurrentTask
+          href: ihosttaskmanager-getcurrenttask-method.md
+        - name: Метод GetStackGuarantee
+          href: ihosttaskmanager-getstackguarantee-method.md
+        - name: Метод LeaveRuntime
+          href: ihosttaskmanager-leaveruntime-method.md
+        - name: Метод ReverseEnterRuntime
+          href: ihosttaskmanager-reverseenterruntime-method.md
+        - name: Метод ReverseLeaveRuntime
+          href: ihosttaskmanager-reverseleaveruntime-method.md
+        - name: Метод SetCLRTaskManager
+          href: ihosttaskmanager-setclrtaskmanager-method.md
+        - name: Метод SetLocale
+          href: ihosttaskmanager-setlocale-method.md
+        - name: Метод SetStackGuarantee
+          href: ihosttaskmanager-setstackguarantee-method.md
+        - name: Метод SetUILocale
+          href: ihosttaskmanager-setuilocale-method.md
+        - name: Метод Sleep
+          href: ihosttaskmanager-sleep-method.md
+        - name: Метод SwitchToTask
+          href: ihosttaskmanager-switchtotask-method.md
+      - name: Интерфейс IHostThreadPoolManager
+        href: ihostthreadpoolmanager-interface.md
+        items:
+        - name: Метод GetAvailableThreads
+          href: ihostthreadpoolmanager-getavailablethreads-method.md
+        - name: Метод GetMaxThreads
+          href: ihostthreadpoolmanager-getmaxthreads-method.md
+        - name: Метод GetMinThreads
+          href: ihostthreadpoolmanager-getminthreads-method.md
+        - name: Метод QueueUserWorkItem
+          href: ihostthreadpoolmanager-queueuserworkitem-method.md
+        - name: Метод SetMaxThreads
+          href: ihostthreadpoolmanager-setmaxthreads-method.md
+        - name: Метод SetMinThreads
+          href: ihostthreadpoolmanager-setminthreads-method.md
+      - name: Интерфейс IManagedObject
+        href: imanagedobject-interface.md
+        items:
+        - name: Метод GetObjectIdentity
+          href: imanagedobject-getobjectidentity-method.md
+        - name: Метод GetSerializedBuffer
+          href: imanagedobject-getserializedbuffer-method.md
+      - name: Интерфейс IObjectHandle
+        href: iobjecthandle-interface.md
+        items:
+        - name: Метод Unwrap
+          href: iobjecthandle-unwrap-method.md
+      - name: Интерфейс ITypeName
+        href: itypename-interface.md
+        items:
+        - name: Метод GetAssemblyName
+          href: itypename-getassemblyname-method.md
+        - name: Метод GetModifierLength
+          href: itypename-getmodifierlength-method.md
+        - name: Метод GetModifiers
+          href: itypename-getmodifiers-method.md
+        - name: Метод GetNameCount
+          href: itypename-getnamecount-method.md
+        - name: Метод GetNames
+          href: itypename-getnames-method.md
+        - name: Метод GetTypeArgumentCount
+          href: itypename-gettypeargumentcount-method.md
+        - name: Метод GetTypeArguments
+          href: itypename-gettypearguments-method.md
+      - name: Интерфейс ITypeNameBuilder
+        href: itypenamebuilder-interface.md
+        items:
+        - name: Метод AddArray
+          href: itypenamebuilder-addarray-method.md
+        - name: Метод AddAssemblySpec
+          href: itypenamebuilder-addassemblyspec-method.md
+        - name: Метод AddByRef
+          href: itypenamebuilder-addbyref-method.md
+        - name: Метод AddName
+          href: itypenamebuilder-addname-method.md
+        - name: Метод AddPointer
+          href: itypenamebuilder-addpointer-method.md
+        - name: Метод AddSzArray
+          href: itypenamebuilder-addszarray-method.md
+        - name: Метод Clear
+          href: itypenamebuilder-clear-method.md
+        - name: Метод CloseGenericArgument
+          href: itypenamebuilder-closegenericargument-method.md
+        - name: Метод CloseGenericArguments
+          href: itypenamebuilder-closegenericarguments-method.md
+        - name: Метод OpenGenericArgument
+          href: itypenamebuilder-opengenericargument-method.md
+        - name: Метод OpenGenericArguments
+          href: itypenamebuilder-opengenericarguments-method.md
+        - name: Метод ToString
+          href: itypenamebuilder-tostring-method.md
+      - name: Интерфейс ITypeNameFactory
+        href: itypenamefactory-interface.md
+        items:
+        - name: Метод GetTypeNameBuilder
+          href: itypenamefactory-gettypenamebuilder-method.md
+        - name: Метод ParseTypeName
+          href: itypenamefactory-parsetypename-method.md
+      - name: Интерфейс IValidator
+        href: ivalidator-interface.md
+        items:
+        - name: Метод FormatEventInfo
+          href: ivalidator-formateventinfo-method.md
+        - name: Метод Validate
+          href: ivalidator-validate-method.md
+    - name: Интерфейсы размещения CLR, добавленные в версиях .NET Framework 4 и 4.5
+      href: clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md
+      items:
+      - name: Интерфейс ICLRAppDomainResourceMonitor
+        href: iclrappdomainresourcemonitor-interface.md
+        items:
+        - name: Метод GetCurrentAllocated
+          href: iclrappdomainresourcemonitor-getcurrentallocated-method.md
+        - name: Метод GetCurrentSurvived
+          href: iclrappdomainresourcemonitor-getcurrentsurvived-method.md
+        - name: Метод GetCurrentCpuTime
+          href: iclrappdomainresourcemonitor-getcurrentcputime-method.md
+      - name: Интерфейс ICLRDomainManager
+        href: iclrdomainmanager-interface.md
+        items:
+        - name: Метод SetAppDomainManagerType
+          href: iclrdomainmanager-setappdomainmanagertype-method.md
+        - name: Метод SetPropertiesForDefaultAppDomain
+          href: iclrdomainmanager-setpropertiesfordefaultappdomain-method.md
+      - name: Интерфейс ICLRGCManager2
+        href: iclrgcmanager2-interface.md
+        items:
+        - name: Метод SetGCStartupLimitsEx
+          href: iclrgcmanager2-setgcstartuplimitsex-method.md
+      - name: Интерфейс ICLRMetaHost
+        href: iclrmetahost-interface.md
+        items:
+        - name: Метод EnumerateInstalledRuntimes
+          href: iclrmetahost-enumerateinstalledruntimes-method.md
+        - name: Метод EnumerateLoadedRuntimes
+          href: iclrmetahost-enumerateloadedruntimes-method.md
+        - name: Метод ExitProcess
+          href: iclrmetahost-exitprocess-method.md
+        - name: Метод GetRuntime
+          href: iclrmetahost-getruntime-method.md
+        - name: Метод GetVersionFromFile
+          href: iclrmetahost-getversionfromfile-method.md
+        - name: Метод QueryLegacyV2RuntimeBinding
+          href: iclrmetahost-querylegacyv2runtimebinding-method.md
+        - name: Метод RequestRuntimeLoadedNotification
+          href: iclrmetahost-requestruntimeloadednotification-method.md
+      - name: Интерфейс ICLRMetaHostPolicy
+        href: iclrmetahostpolicy-interface.md
+        items:
+        - name: Метод GetRequestedRuntime
+          href: iclrmetahostpolicy-getrequestedruntime-method.md
+      - name: Интерфейс ICLRRuntimeInfo
+        href: iclrruntimeinfo-interface.md
+        items:
+        - name: Метод BindAsLegacyV2Runtime
+          href: iclrruntimeinfo-bindaslegacyv2runtime-method.md
+        - name: Метод GetDefaultStartupFlags
+          href: iclrruntimeinfo-getdefaultstartupflags-method.md
+        - name: Метод GetInterface
+          href: iclrruntimeinfo-getinterface-method.md
+        - name: Метод GetProcAddress
+          href: iclrruntimeinfo-getprocaddress-method.md
+        - name: Метод GetRuntimeDirectory
+          href: iclrruntimeinfo-getruntimedirectory-method.md
+        - name: Метод GetVersionString
+          href: iclrruntimeinfo-getversionstring-method.md
+        - name: Метод IsLoadable
+          href: iclrruntimeinfo-isloadable-method.md
+        - name: Метод IsLoaded
+          href: iclrruntimeinfo-isloaded-method.md
+        - name: Метод IsStarted
+          href: iclrruntimeinfo-isstarted-method.md
+        - name: Метод LoadErrorString
+          href: iclrruntimeinfo-loaderrorstring-method.md
+        - name: Метод LoadLibrary
+          href: iclrruntimeinfo-loadlibrary-method.md
+        - name: Метод SetDefaultStartupFlags
+          href: iclrruntimeinfo-setdefaultstartupflags-method.md
+      - name: Интерфейс ICLRStrongName
+        href: iclrstrongname-interface.md
+        items:
+        - name: Метод GetHashFromAssemblyFile
+          href: iclrstrongname-gethashfromassemblyfile-method.md
+        - name: Метод GetHashFromAssemblyFileW
+          href: iclrstrongname-gethashfromassemblyfilew-method.md
+        - name: Метод GetHashFromBlob
+          href: iclrstrongname-gethashfromblob-method.md
+        - name: Метод GetHashFromFile
+          href: iclrstrongname-gethashfromfile-method.md
+        - name: Метод GetHashFromFileW
+          href: iclrstrongname-gethashfromfilew-method.md
+        - name: Метод GetHashFromHandle
+          href: iclrstrongname-gethashfromhandle-method.md
+        - name: Метод StrongNameCompareAssemblies
+          href: iclrstrongname-strongnamecompareassemblies-method.md
+        - name: Метод StrongNameFreeBuffer
+          href: iclrstrongname-strongnamefreebuffer-method.md
+        - name: Метод StrongNameGetBlob
+          href: iclrstrongname-strongnamegetblob-method.md
+        - name: Метод StrongNameGetBlobFromImage
+          href: iclrstrongname-strongnamegetblobfromimage-method.md
+        - name: Метод StrongNameGetPublicKey
+          href: iclrstrongname-strongnamegetpublickey-method.md
+        - name: Метод StrongNameHashSize
+          href: iclrstrongname-strongnamehashsize-method.md
+        - name: Метод StrongNameKeyDelete
+          href: iclrstrongname-strongnamekeydelete-method.md
+        - name: Метод StrongNameKeyGen
+          href: iclrstrongname-strongnamekeygen-method.md
+        - name: Метод StrongNameKeyGenEx
+          href: iclrstrongname-strongnamekeygenex-method.md
+        - name: Метод StrongNameKeyInstall
+          href: iclrstrongname-strongnamekeyinstall-method.md
+        - name: Метод StrongNameSignatureGeneration
+          href: iclrstrongname-strongnamesignaturegeneration-method.md
+        - name: Метод StrongNameSignatureGenerationEx
+          href: iclrstrongname-strongnamesignaturegenerationex-method.md
+        - name: Метод StrongNameSignatureSize
+          href: iclrstrongname-strongnamesignaturesize-method.md
+        - name: Метод StrongNameSignatureVerification
+          href: iclrstrongname-strongnamesignatureverification-method.md
+        - name: Метод StrongNameSignatureVerificationEx
+          href: iclrstrongname-strongnamesignatureverificationex-method.md
+        - name: Метод StrongNameSignatureVerificationFromImage
+          href: iclrstrongname-strongnamesignatureverificationfromimage-method.md
+        - name: Метод StrongNameTokenFromAssembly
+          href: iclrstrongname-strongnametokenfromassembly-method.md
+        - name: Метод StrongNameTokenFromAssemblyEx
+          href: iclrstrongname-strongnametokenfromassemblyex-method.md
+        - name: Метод StrongNameTokenFromPublicKey
+          href: iclrstrongname-strongnametokenfrompublickey-method.md
+      - name: Интерфейс ICLRStrongName2
+        href: iclrstrongname2-interface.md
+        items:
+        - name: Метод StrongNameGetPublicKeyEx
+          href: strongnamegetpublickeyex-method.md
+        - name: Метод StrongNameSignatureVerificationEx2
+          href: strongnamesignatureverificationex2-method.md
+      - name: Интерфейс ICLRTask2
+        href: iclrtask2-interface.md
+        items:
+        - name: Метод BeginPreventAsyncAbort
+          href: iclrtask2-beginpreventasyncabort-method.md
+        - name: Метод EndPreventAsyncAbort
+          href: iclrtask2-endpreventasyncabort-method.md
+  - name: Структуры размещения
+    href: hosting-structures.md
+    items:
+    - name: Структура AssemblyBindInfo
+      href: assemblybindinfo-structure.md
+    - name: Структура BucketParameters
+      href: bucketparameters-structure.md
+    - name: Структура COR_GC_STATS
+      href: cor-gc-stats-structure.md
+    - name: Структура COR_GC_THREAD_STATS
+      href: cor-gc-thread-stats-structure.md
+    - name: Структура CustomDumpItem
+      href: customdumpitem-structure.md
+    - name: Структура MDAInfo
+      href: mdainfo-structure.md
+    - name: Структура ModuleBindInfo
+      href: modulebindinfo-structure.md
+    - name: Структура StackOverflowInfo
+      href: stackoverflowinfo-structure.md
+ms.openlocfilehash: c00bee82be09f0c49877ccc8aa4105e64a47f2df
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58470856"

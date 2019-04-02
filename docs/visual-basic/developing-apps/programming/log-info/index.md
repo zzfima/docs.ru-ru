@@ -2,19 +2,13 @@
 title: Запись сведений в журнал из приложения (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-- Log object
-- My.Log object
-- applications [Visual Basic], logging information from
-- logging
-- My.Application.Log object
-- examples [Visual Basic], logging application information
+  - Log object
+  - My.Log object
+  - 'applications [Visual Basic], logging information from'
+  - logging
+  - My.Application.Log object
+  - 'examples [Visual Basic], logging application information'
 ms.assetid: 8bf4f047-22d6-48d6-aec5-93b98ad5b8e8
-ms.openlocfilehash: d7cdf5a309da1f32b337bea4d609fe34487a5457
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746815"
 ---
 # <a name="logging-information-from-the-application-visual-basic"></a>Запись сведений в журнал из приложения (Visual Basic)
 Этот раздел содержит сведения о том, как регистрировать в журнале информацию из приложения с помощью объектов `My.Application.Log` или `My.Log` и как расширить возможности ведения журнала в приложении.  
@@ -38,6 +32,7 @@ ms.locfileid: "54746815"
 |Фильтрация выходных данных журналов `My.Application.Log`.|[Пошаговое руководство: Фильтрация вывода My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)|  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - [Работа с журналами приложения](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
 - [Устранение неполадок. Прослушиватели журнала](../../../../visual-basic/developing-apps/programming/log-info/troubleshooting-log-listeners.md)

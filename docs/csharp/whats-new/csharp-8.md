@@ -2,12 +2,12 @@
 title: Новые возможности C# 8.0. Руководство по языку C#
 description: Обзор новых функций, доступных в C# 8.0. В этой статье представлены возможности предварительной версии 2.
 ms.date: 02/12/2019
-ms.openlocfilehash: 23197a051109d6c6c22c8855e3772cf4f824264c
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: d95ec3dc050f5633b4b069caa5bd2811f6b61300
+ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57843946"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58262590"
 ---
 # <a name="whats-new-in-c-80"></a>Новые возможности C# 8.0
 
@@ -180,6 +180,8 @@ static string Quadrant(Point p) => p switch
 ```
 
 Шаблон пустой переменной в предыдущем операторе switch совпадает с выражением, если значение `x` или `y`, но не оба, равно 0. Выражение switch должно создавать значение или исключение. Если ни один из вариантов не совпадает, выражение switch создает исключение. Компилятор создает предупреждение, если в выражении switch не охватываются все возможные случаи.
+
+Ознакомиться с методами сопоставления шаблонов можно в [этом подробном учебнике](../tutorials/pattern-matching.md).
 
 ## <a name="using-declarations"></a>Объявления using
 

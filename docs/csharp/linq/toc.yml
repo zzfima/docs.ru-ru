@@ -1,0 +1,48 @@
+items:
+- name: Синтаксис LINQ
+  href: index.md
+  items:
+  - name: Основы выражения запроса
+    href: query-expression-basics.md
+  - name: LINQ в C#
+    href: linq-in-csharp.md
+  - name: Создание запросов LINQ на языке C#
+    href: write-linq-queries.md
+  - name: Запрос коллекции объектов
+    href: query-a-collection-of-objects.md
+  - name: Возврат запроса из метода
+    href: return-a-query-from-a-method.md
+  - name: Сохранение результатов запроса в памяти
+    href: store-the-results-of-a-query-in-memory.md
+  - name: Группировка результатов запросов
+    href: group-query-results.md
+  - name: Создание вложенной группы
+    href: create-a-nested-group.md
+  - name: Вложенный запрос в операции группирования
+    href: perform-a-subquery-on-a-grouping-operation.md
+  - name: Группирование результатов по смежным ключам
+    href: group-results-by-contiguous-keys.md
+  - name: Динамическое определение фильтров предикатов во время выполнения
+    href: dynamically-specify-predicate-filters-at-runtime.md
+  - name: Выполнение внутренних соединений
+    href: perform-inner-joins.md
+  - name: Выполнение групповых соединений
+    href: perform-grouped-joins.md
+  - name: Выполнение левых внешних соединений
+    href: perform-left-outer-joins.md
+  - name: Упорядочение результатов предложения соединения
+    href: order-the-results-of-a-join-clause.md
+  - name: Соединение с помощью составных ключей
+    href: join-by-using-composite-keys.md
+  - name: Выполнение пользовательских операций соединения
+    href: perform-custom-join-operations.md
+  - name: Обработка значений NULL в выражениях запросов
+    href: handle-null-values-in-query-expressions.md
+  - name: Обработка исключений в выражениях запросов
+    href: handle-exceptions-in-query-expressions.md
+ms.openlocfilehash: 1bc1fb625c7627abe63db2b69071df1ef1b7d11c
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469736"

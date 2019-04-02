@@ -1,0 +1,36 @@
+items:
+- name: Универсальные шаблоны
+  href: index.md
+  items:
+  - name: Введение в универсальные шаблоны
+    href: introduction-to-generics.md
+  - name: Преимущества универсальных шаблонов
+    href: benefits-of-generics.md
+  - name: Параметры универсального типа
+    href: generic-type-parameters.md
+  - name: Ограничения параметров типа
+    href: constraints-on-type-parameters.md
+  - name: Универсальные классы
+    href: generic-classes.md
+  - name: Универсальные интерфейсы
+    href: generic-interfaces.md
+  - name: Универсальные методы
+    href: generic-methods.md
+  - name: Универсальные методы и массивы
+    href: generics-and-arrays.md
+  - name: Универсальные делегаты
+    href: generic-delegates.md
+  - name: Различия между шаблонами языка C++ и универсальными шаблонами языка C#
+    href: differences-between-cpp-templates-and-csharp-generics.md
+  - name: Универсальные типы во время выполнения
+    href: generics-in-the-run-time.md
+  - name: Универсальные типы и отражение
+    href: generics-and-reflection.md
+  - name: Универсальные шаблоны и атрибуты
+    href: generics-and-attributes.md
+ms.openlocfilehash: daccd9dc4b0c808750866aacad6dacffc1282f6e
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58470000"

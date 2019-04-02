@@ -32,6 +32,7 @@ ms.assetid: bc45a3de-ea36-46e6-a106-309a413d7804
  Содержит документацию о том, как получить доступ к файловой системе с помощью объекта `My.Computer.FileSystem`.  
   
 ## <a name="see-also"></a>См. также
+
 - [Возможности и элементы языка Visual Basic](../../../visual-basic/programming-guide/language-features/index.md)
 - [Основные понятия программирования](../../../visual-basic/programming-guide/concepts/index.md)
 - [Коллекции](../../../visual-basic/programming-guide/concepts/collections.md)

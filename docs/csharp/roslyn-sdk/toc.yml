@@ -1,0 +1,48 @@
+items:
+- name: Пакет SDK для платформы компилятора .NET (API-интерфейсы Roslyn)
+  href: index.md
+  items:
+  - name: Сведения о модели SDK для .NET Compiler Platform
+    href: compiler-api-model.md
+  - name: Работа с синтаксисом
+    href: work-with-syntax.md
+  - name: Работа с семантикой
+    href: work-with-semantics.md
+  - name: Использование рабочей области
+    href: work-with-workspace.md
+  - name: Изучение кода с помощью визуализатора синтаксиса
+    href: syntax-visualizer.md
+  - name: Краткие руководства
+    items:
+    - name: Анализ синтаксиса
+      href: get-started/syntax-analysis.md
+    - name: Семантический анализ
+      href: get-started/semantic-analysis.md
+    - name: Синтаксическое преобразование
+      href: get-started/syntax-transformation.md
+  - name: Учебники
+    items:
+    - name: Создание средства для анализа и исправления кода
+      href: tutorials/how-to-write-csharp-analyzer-code-fix.md
+    - name: Как приступить к написанию пользовательского средства для анализа исправления кода
+  - name: Учебники
+    items:
+    - name: Создание первого анализатора
+    - name: Создание первого исправления кода
+    - name: Развертывание анализатора как VSIX
+    - name: Развертывание анализатора как пакета NuGet
+- name: Примеры
+  items:
+  - name: Пакеты Async
+  - name: Классификатор консоли
+  - name: Преобразование в автосвойство
+  - name: Форматирование решения
+  - name: Реализация уведомления об изменении свойства
+  - name: Make const
+  - name: Практические руководства
+ms.openlocfilehash: cd4a028bc393f99ef3da5277430276b1094682a8
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58470325"

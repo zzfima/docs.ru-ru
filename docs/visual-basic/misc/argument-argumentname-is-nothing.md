@@ -1,5 +1,5 @@
 ---
-title: Аргумент "<argumentname>" имеет значение Nothing
+title: Аргумент '<argumentname>' имеет значение Nothing
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_InvalidNullValue1
@@ -11,7 +11,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58036252"
 ---
-# <a name="argument-argumentname-is-nothing"></a>Аргумент "\<имя_аргумента >" имеет значение Nothing
+# <a name="argument-argumentname-is-nothing"></a>Аргумент '\<имя_аргумента >' имеет значение Nothing
 Выражение содержит аргумент null.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  

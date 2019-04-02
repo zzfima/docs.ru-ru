@@ -1,5 +1,5 @@
 ---
-title: Метод "<methodname>«не имеет параметра с именем»<parametername>"
+title: Метод '<methodname>«не имеет параметра с именем»<parametername>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_InvalidNamedArg2
@@ -11,7 +11,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58043776"
 ---
-# <a name="method-methodname-has-no-parameter-named-parametername"></a>Метод "\<имя_метода >" не имеет параметра "\<имя_параметра >"
+# <a name="method-methodname-has-no-parameter-named-parametername"></a>Метод '\<имя_метода >' не имеет параметра '\<имя_параметра >'
 Указанный именованный аргумент не соответствует ни одному из аргументов целевого метода.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  

@@ -1,0 +1,79 @@
+items:
+- name: Безопасность
+  href: index.md
+  items:
+  - name: Основные понятия безопасности
+    href: key-security-concepts.md
+  - name: Безопасность на основе ролей
+    href: role-based-security.md
+    items:
+    - name: Объекты Principal и Identity
+      href: principal-and-identity-objects.md
+    - name: Практическое руководство. Создание объекта WindowsPrincipal
+      href: how-to-create-a-windowsprincipal-object.md
+    - name: Практическое руководство. Создание объектов GenericPrincipal и GenericIdentity
+      href: how-to-create-genericprincipal-and-genericidentity-objects.md
+    - name: Замена объекта Principal
+      href: replacing-a-principal-object.md
+    - name: Олицетворение и возвращение
+      href: impersonating-and-reverting.md
+  - name: Модель криптографии
+    href: cryptography-model.md
+    items:
+    - name: службы шифрования
+      href: cryptographic-services.md
+    - name: Создание ключей для шифрования и расшифровки
+      href: generating-keys-for-encryption-and-decryption.md
+    - name: Практическое руководство. Хранение асимметричных ключей в контейнере ключей
+      href: how-to-store-asymmetric-keys-in-a-key-container.md
+    - name: Шифрование данных
+      href: encrypting-data.md
+    - name: Расшифровка данных
+      href: decrypting-data.md
+    - name: Криптографические подписи
+      href: cryptographic-signatures.md
+    - name: Обеспечение целостности данных с помощью хэш-кодов
+      href: ensuring-data-integrity-with-hash-codes.md
+    - name: Создание криптографической схемы
+      href: creating-a-cryptographic-scheme.md
+    - name: Практическое руководство. Шифрование XML-элементов с помощью симметричного ключа
+      href: how-to-encrypt-xml-elements-with-symmetric-keys.md
+    - name: Практическое руководство. Расшифровка XML-элементов с помощью симметричных ключей
+      href: how-to-decrypt-xml-elements-with-symmetric-keys.md
+    - name: Практическое руководство. Шифрование XML-элементов с помощью асимметричных ключей
+      href: how-to-encrypt-xml-elements-with-asymmetric-keys.md
+    - name: Практическое руководство. Расшифровка XML-элементов с помощью асимметричных ключей
+      href: how-to-decrypt-xml-elements-with-asymmetric-keys.md
+    - name: Практическое руководство. Шифрование XML-элементов с помощью сертификатов X.509
+      href: how-to-encrypt-xml-elements-with-x-509-certificates.md
+    - name: Практическое руководство. Дешифровка XML-элементов с помощью сертификатов X.509
+      href: how-to-decrypt-xml-elements-with-x-509-certificates.md
+    - name: Практическое руководство. Подписание XML-документов с помощью цифровых подписей
+      href: how-to-sign-xml-documents-with-digital-signatures.md
+    - name: Практическое руководство. Проверка цифровых подписей XML-документов
+      href: how-to-verify-the-digital-signatures-of-xml-documents.md
+    - name: Практическое руководство. Использование защиты данных
+      href: how-to-use-data-protection.md
+    - name: Практическое руководство. Доступ к устройствам аппаратного шифрования
+      href: how-to-access-hardware-encryption-devices.md
+    - name: Пошаговое руководство. Создание криптографического приложения
+      href: walkthrough-creating-a-cryptographic-application.md
+  - name: Правила написания безопасного кода
+    href: secure-coding-guidelines.md
+    items:
+    - name: Обеспечение безопасности данных
+      href: securing-state-data.md
+    - name: Безопасность и ввод данных пользователем
+      href: security-and-user-input.md
+    - name: Безопасность и конфликты
+      href: security-and-race-conditions.md
+    - name: Безопасность и создание кода "на лету"
+      href: security-and-on-the-fly-code-generation.md
+    - name: Уязвимости в учете времени при симметричной расшифровке в режиме CBC с использованием заполнения
+      href: vulnerabilities-cbc-mode.md
+ms.openlocfilehash: bf0a409f88486c4fb5ca476ab5f96be6e1aa823d
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58470589"

@@ -4,12 +4,12 @@ description: Сведения о рабочем процессе для разр
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 92dd63fa155ea6e49ddb1eee9c201d5d9dc0418e
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: a8016b2b55313cb6e1d84bfb2c50a62347858de9
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679532"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464363"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Рабочий процесс разработки для приложений Docker
 
@@ -64,10 +64,10 @@ ms.locfileid: "57679532"
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
 - **Начало работы с Docker CE для Windows** \
-  [*https://docs.docker.com/docker-for-windows/*](https://docs.docker.com/docker-for-windows/)
+  [https://docs.docker.com/docker-for-windows/](https://docs.docker.com/docker-for-windows/)
 
 - **Visual Studio 2017** \
-  [*https://visualstudio.microsoft.com/downloads/*](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
+  [https://visualstudio.microsoft.com/downloads/](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
 
 ![2. Напишите файлы Dockerfile](./media/image4.png)
 
@@ -119,16 +119,16 @@ ENTRYPOINT ["dotnet", " MySingleContainerWebApp.dll "]
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
 - **Создание образов Docker для приложений .NET Core** \
-  [*https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images*](../../../core/docker/building-net-docker-images.md)
+  [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](../../../core/docker/building-net-docker-images.md)
 
 - **Создание собственного образа**. В официальной документации Docker.\
-  [*https://docs.docker.com/engine/tutorials/dockerimages/*](https://docs.docker.com/engine/tutorials/dockerimages/)
+  [https://docs.docker.com/engine/tutorials/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/)
 
 - **Следите за образами контейнеров .NET** \
-  *<https://devblogs.microsoft.com/dotnet/staying-up-to-date-with-net-container-images/>*
+  <https://devblogs.microsoft.com/dotnet/staying-up-to-date-with-net-container-images/>
 
 - **Using .NET and Docker Together — DockerCon 2018 Update** \ (Совместное использование .NET и Docker — новости с DockerCon 2018)
-  *<https://devblogs.microsoft.com/dotnet/using-net-and-docker-together-dockercon-2018-update/>*
+  <https://devblogs.microsoft.com/dotnet/using-net-and-docker-together-dockercon-2018-update/>
 
 ### <a name="using-multi-arch-image-repositories"></a>Использование мультиархитектурных репозиториев
 
@@ -290,10 +290,10 @@ RUN dotnet restore
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
 - **Мультиархитектурные образы .NET Core**.\
-  [*https://github.com/dotnet/announcements/issues/14*](https://github.com/dotnet/announcements/issues/14)
+  [https://github.com/dotnet/announcements/issues/14](https://github.com/dotnet/announcements/issues/14)
 
 - **Создание базового образа**. Официальная документация Docker.\
-  [*https://docs.docker.com/engine/userguide/eng-image/baseimages/*](https://docs.docker.com/engine/userguide/eng-image/baseimages/)
+  [https://docs.docker.com/engine/userguide/eng-image/baseimages/](https://docs.docker.com/engine/userguide/eng-image/baseimages/)
 
 ![3. Создайте образы, определенные в файлах Dockerfile](./media/image7.png)
 
@@ -485,7 +485,7 @@ services:
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
 - **Развертывание контейнера ASP.NET на удаленном узле Docker** \
-  [*https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker*](https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker)
+  [https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker](https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker)
 
 ### <a name="a-note-about-testing-and-deploying-with-orchestrators"></a>Примечание о тестировании и развертывании с использованием оркестраторов
 
@@ -522,10 +522,10 @@ services:
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
 - **Отладка приложений в локальном контейнере Docker** \
-  [*https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh*](https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh)
+  [https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh](https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh)
 
 - **Стив Ласкер (Steve Lasker). Сборка, отладка, развертывание приложений ASP.NET Core с помощью Docker.** Видео. \
-  [*https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115*](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115)
+  [https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115)
 
 ## <a name="simplified-workflow-when-developing-containers-with-visual-studio"></a>Упрощенный рабочий процесс при разработке контейнеров в Visual Studio
 
@@ -540,7 +540,7 @@ services:
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
 - **Стив Ласкер (Steve Lasker). Разработка для Docker на .NET в Visual Studio 2017** \
-  [*https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111*](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111)
+  [https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111)
 
 ## <a name="using-powershell-commands-in-a-dockerfile-to-set-up-windows-containers"></a>Использование команд PowerShell в DockerFile для настройки контейнеров Windows 
 
@@ -562,7 +562,7 @@ RUN powershell add-windowsfeature web-asp-net45
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
 - **aspnet-docker/Dockerfile.** Примеры команд PowerShell, которые можно выполнять в файлах Dockerfile для включения компонентов Windows.\
-  [*https://github.com/Microsoft/aspnet-docker/blob/master/4.7.1-windowsservercore-ltsc2016/runtime/Dockerfile*](https://github.com/Microsoft/aspnet-docker/blob/master/4.7.1-windowsservercore-ltsc2016/runtime/Dockerfile)
+  [https://github.com/Microsoft/aspnet-docker/blob/master/4.7.1-windowsservercore-ltsc2016/runtime/Dockerfile](https://github.com/Microsoft/aspnet-docker/blob/master/4.7.1-windowsservercore-ltsc2016/runtime/Dockerfile)
 
 >[!div class="step-by-step"]
 >[Назад](index.md)

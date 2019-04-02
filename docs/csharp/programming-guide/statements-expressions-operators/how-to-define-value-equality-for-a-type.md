@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Руководство по программированию на C#. Определение равенства значений для типа
+title: Практическое руководство. Руководство по программированию на C#. Определение равенства значений для типа
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: fef242d491fca667d66e24a8cd6715e6f6d08483
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 6ee44cb58033e0e235222fb3f74302f84092dbcb
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203114"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545446"
 ---
-# <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Как выполнить Руководство по программированию на C#. Определение равенства значений для типа
+# <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Практическое руководство. Руководство по программированию на C#. Определение равенства значений для типа
 При определении класса или структуры необходимо решить, имеет ли смысл создавать пользовательское определение равенства значений (или эквивалентности) для этого типа. Обычно правила определения равенства реализуются, если объекты этого типа будут добавляться в коллекции или если они в первую очередь предназначены для хранения набора полей или свойств. В основу определения равенства значений можно положить сравнение всех полей и свойств в типе или только их части. Но в любом случае (как для классов, так и для структур) реализация должна соответствовать следующим пяти гарантиям равенства.  
   
 1.  `x.Equals(x)` возвращает `true`. Это называется свойством рефлексивности.  
@@ -37,7 +37,7 @@ ms.locfileid: "57203114"
   
 2.  Реализуйте интерфейс <xref:System.IEquatable%601?displayProperty=nameWithType>, предоставив метод `Equals` для конкретного типа. Именно на этом этапе происходит фактическое сравнение значений. Например, функцию равенства можно определить путем сравнения только одного из двух полей в типе. Не вызывайте исключения из `Equals`. Только для классов: этот метод должен проверять только те поля, которые объявлены в классе. Он должен вызывать метод `base.Equals` для проверки полей в базовом классе. (Не делайте этого, если тип наследуется напрямую от <xref:System.Object>, поскольку реализация <xref:System.Object> для <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> выполняет проверку равенства ссылок.)  
   
-3.  Необязательно, но рекомендуется: перегрузите операторы [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) и [!=](../../../csharp/language-reference/operators/not-equal-operator.md).  
+3.  Необязательно, но рекомендуется: перегрузите операторы [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) и [!=](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-).  
   
 4.  Переопределите <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType> таким образом, чтобы два объекта с равными значениями создавали одинаковый хэш-код.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "57203114"
   
  Для структур реализация по умолчанию <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> (представляет собой переопределенную версию в <xref:System.ValueType?displayProperty=nameWithType>) выполняет проверку равенства значений посредством отражения, сравнивая значения каждого поля в типе. Когда разработчик переопределяет виртуальный метод `Equals` в структуре, его задача состоит в том, чтобы найти более эффективный способ проверки равенства значений и, если это возможно, реализовать сравнение только на основании части полей или свойств структуры.  
   
- Операторы [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) и [!=](../../../csharp/language-reference/operators/not-equal-operator.md) нельзя применять к структурам, если только они не были явным образом перегружены для конкретной структуры.  
+ Операторы [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) и [!=](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) нельзя применять к структурам, если только они не были явным образом перегружены для конкретной структуры.  
   
 ## <a name="see-also"></a>См. также
 

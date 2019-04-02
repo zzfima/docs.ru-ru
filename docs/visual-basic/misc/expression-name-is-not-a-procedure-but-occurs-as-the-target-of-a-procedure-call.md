@@ -1,5 +1,5 @@
 ---
-title: Выражение "<name>" не является процедурой, но используется как целевой объект вызова процедуры
+title: Выражение '<name>' не является процедурой, но используется как целевой объект вызова процедуры
 ms.date: 07/20/2015
 f1_keywords:
 - vbrExpressionNotProcedure
@@ -11,7 +11,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58026521"
 ---
-# <a name="expression-name-is-not-a-procedure-but-occurs-as-the-target-of-a-procedure-call"></a>Выражение "\<имя >" не является процедурой, но используется как целевой объект вызова процедуры
+# <a name="expression-name-is-not-a-procedure-but-occurs-as-the-target-of-a-procedure-call"></a>Выражение '\<имя >' не является процедурой, но используется как целевой объект вызова процедуры
 Выполнен вызов процедуры для выражения, которое не является процедурой.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  

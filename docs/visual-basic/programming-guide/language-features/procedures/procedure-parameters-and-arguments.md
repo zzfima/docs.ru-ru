@@ -18,12 +18,12 @@ helpviewer_keywords:
 - argument lists [Visual Basic]
 - procedures [Visual Basic], parameter lists
 ms.assetid: ff275aff-aa13-40df-bd4c-63486db8c1e9
-ms.openlocfilehash: f7291d809c754249c155eb9382f3fcd8a63c20c7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4b62e4b752074bb8d1a660e51ab230a87ff21db4
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972565"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654241"
 ---
 # <a name="procedure-parameters-and-arguments-visual-basic"></a>Параметры и аргументы процедуры (Visual Basic)
 В большинстве случаев процедура должна некоторые сведения об условиях ее возникновения, в которых она была вызвана. Процедура, выполняющая повторяющихся или общих задач использует различные сведения для каждого вызова. Эта информация состоит из переменных, констант и выражений, которые передаются в процедуру при ее вызове.  
@@ -36,8 +36,7 @@ ms.locfileid: "56972565"
   
  На следующем рисунке показан код вызова процедуры `safeSquareRoot` из двух различных местах. Первый вызов передает значение переменной `x` (4.0) в параметре `number`и возвращаемое значение в `root` (2.0) присваивается переменной `y`. Второй вызов передает значение литерала 9.0 для `number`и присваивает возвращаемое значение (3.0) переменной `z`.  
   
- ![Схема графика передачи аргумента в параметр](./media/parametersargue.gif "ParametersArgue")  
-Передача аргумента в параметр  
+ ![Схема, показывающая передача аргумента в параметр](./media/procedure-parameters-and-arguments/pass-argument-parameter.gif)  
   
  Дополнительные сведения см. в разделе [различия между параметрами и аргументами](./differences-between-parameters-and-arguments.md).  
   

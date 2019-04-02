@@ -1,5 +1,5 @@
 ---
-title: Найти элемент по умолчанию для типа "<typename>"
+title: Найти элемент по умолчанию для типа '<typename>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbrMissingMember_NoDefaultMemberFound1
@@ -11,7 +11,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58022446"
 ---
-# <a name="no-default-member-found-for-type-typename"></a>Найти элемент по умолчанию для типа "\<typename >"
+# <a name="no-default-member-found-for-type-typename"></a>Найти элемент по умолчанию для типа '\<typename >'
 Предпринята попытка вызова `Get` или `Set` индекса позднего связывания.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  

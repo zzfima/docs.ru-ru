@@ -2,12 +2,12 @@
 title: Выражения запросов
 description: Дополнительные сведения о поддержке выражения запроса LINQ в F# языка программирования.
 ms.date: 05/16/2016
-ms.openlocfilehash: 8fd3e2d4cfbbe890fe3b04b2676eb1d5bbc087a6
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 1a6450bdcec4240fac58f6c27af2298dfd7f45a2
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463232"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654826"
 ---
 # <a name="query-expressions"></a>Выражения запросов
 
@@ -60,7 +60,7 @@ query1
 
 В этой таблице предполагается, что базу данных в следующей форме:
 
-![Пример схемы базы данных](../media/StudentCourseDB.png)
+![Схема, показывающая пример базы данных.](./media/query-expressions/student-course-database.png)
 
 Код в приведенных далее таблицах также предполагается, что следующий код подключения базы данных. Проекты следует добавить ссылки на сборки System.Data, System.Data.Linq и FSharp.Data.TypeProviders. Код, который создает эту базу данных приведен в конце этого раздела.
 
