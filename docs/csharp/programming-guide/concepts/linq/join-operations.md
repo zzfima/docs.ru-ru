@@ -2,12 +2,12 @@
 title: Операции соединения (C#)
 ms.date: 07/20/2015
 ms.assetid: 5105e0da-1267-4c00-837a-f0e9602279b8
-ms.openlocfilehash: d8753ef0563a665767204c1ebc0af4e4a23b4455
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db42874becaf9760b7060d7f306cc20f950f143a
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537950"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411464"
 ---
 # <a name="join-operations-c"></a>Операции соединения (C#)
 *Соединение* двух источников данных — это связь объектов в одном источнике данных с объектами, которые имеют общий атрибут в другом источнике данных.  
@@ -18,7 +18,7 @@ ms.locfileid: "54537950"
   
  На следующем рисунке показано концептуальное представление из двух наборов и элементов, входящих в эти наборы, которые включены либо во внутреннее соединение, либо в левое внешнее соединение.  
   
- ![Два перекрывающихся кольца, отображающие внешнее и внутреннее соединение.](../../../../csharp/programming-guide/concepts/linq/media/joincircles.png "JoinCircles")  
+ ![Два перекрывающихся кольца, отображающие внешнее&#47;внутреннее соединение.](./media/join-operations/join-method-overlapping-circles.png)  
   
 ## <a name="methods"></a>Методы  
   

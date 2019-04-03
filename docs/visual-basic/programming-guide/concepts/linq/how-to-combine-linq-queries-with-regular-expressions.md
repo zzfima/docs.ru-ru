@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Объединение запросов LINQ с помощью регулярных выражений (Visual Basic)
+title: Практическое руководство. Объединение запросов LINQ с помощью регулярных выражений (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 3da1bd10-b0d8-4d5b-a637-966891c13592
-ms.openlocfilehash: 35d82b562211a9dd7fa035fe878bcdee769b8a85
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: da693b682e9b44970f167c030f6803f8dc6d2d36
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652479"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820377"
 ---
-# <a name="how-to-combine-linq-queries-with-regular-expressions-visual-basic"></a>Как выполнить Объединение запросов LINQ с помощью регулярных выражений (Visual Basic)
+# <a name="how-to-combine-linq-queries-with-regular-expressions-visual-basic"></a>Практическое руководство. Объединение запросов LINQ с помощью регулярных выражений (Visual Basic)
 В этом примере показано, как использовать класс <xref:System.Text.RegularExpressions.Regex> при создании регулярного выражения для более сложных сопоставлений в текстовых строках. Запрос LINQ упрощает фильтрацию именно тех файлов, которые требуется найти с помощью регулярного выражения, и формирование результатов.  
   
 ## <a name="example"></a>Пример  
@@ -85,5 +85,6 @@ End Class
  Создайте проект, предназначенный для .NET Framework 3.5 или более поздней версии, со ссылкой на библиотеку System.Core.dll и директивой `Imports` для пространства имен System.Linq.  
   
 ## <a name="see-also"></a>См. также
+
 - [LINQ и строки (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
 - [LINQ и каталоги файлов (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

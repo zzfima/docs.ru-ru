@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Построение примеров LINQ to XML (Visual Basic)
+title: Практическое руководство. Построение примеров LINQ to XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 565bca7a-ac8b-497f-8d8d-3323b3d7799e
-ms.openlocfilehash: 6188ecb72abac7dd9af83d420c9feed1c2fef5e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c4c1f04e83eda88eb3d954a71ad5f14c309cda79
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705775"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827254"
 ---
-# <a name="how-to-build-linq-to-xml-examples-visual-basic"></a>Как выполнить Построение примеров LINQ to XML (Visual Basic)
+# <a name="how-to-build-linq-to-xml-examples-visual-basic"></a>Практическое руководство. Построение примеров LINQ to XML (Visual Basic)
 В разных фрагментах кода и примерах, приведенных в этой документации, используются классы и типы из различных пространств имен. При компиляции кода Visual Basic необходимо указывать соответствующие инструкции `Imports`.  
   
 ## <a name="example"></a>Пример  
@@ -35,4 +35,5 @@ Imports System.IO.Packaging
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Обзор LINQ to XML программирования (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

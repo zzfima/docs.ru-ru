@@ -5,12 +5,12 @@ helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 - strings [Visual Basic], masked edit
 ms.assetid: 2a048fb0-7053-487d-b2c5-ffa5e22ed6f9
-ms.openlocfilehash: 58c0caa9d1df49ec53273e5b0f456cf89fc64c42
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e0165fb8d573878ae19378b2656d89627680b804
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683694"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826751"
 ---
 # <a name="using-regular-expressions-with-the-maskedtextbox-control-in-visual-basic"></a>Использование регулярных выражений в элементе управления MaskedTextBox в Visual Basic
 В этом примере показано, как преобразовать простой регулярных выражений для работы с <xref:System.Windows.Forms.MaskedTextBox> элемента управления.  
@@ -20,7 +20,7 @@ ms.locfileid: "54683694"
   
  <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> Свойство <xref:System.Windows.Forms.MaskedTextBox> элемент управления указывает маски ввода для использования. Маска должна быть строкой, состоящей из одного или нескольких элементов маски из следующей таблицы.  
   
-|Элемент маски|Описание:|Элемент регулярного выражения|  
+|Элемент маски|Описание|Элемент регулярного выражения|  
 |---------------------|-----------------|--------------------------------|  
 |0|Любой цифре от 0 до 9. Требуется объект.|\\d|  
 |9|Цифра или пробел. Необязательный.|[\d]?|  
@@ -56,6 +56,7 @@ ms.locfileid: "54683694"
 |`$\d{6}.00`|`$999,999.00`|Значение валюты в диапазоне от 0 до 999999. Валюты, разделителя и десятичные символы будут заменяться во время выполнения их их эквиваленты для данного языка и региональных параметров.|  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>
 - <xref:System.Windows.Forms.MaskedTextBox>
 - [Проверка строк в Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)

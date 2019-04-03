@@ -4,17 +4,17 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
-ms.openlocfilehash: 11ea31ae245d34525ea33d5d2a53a72f1c415b16
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 645d19219481d22ade90f44aaecb62471eb915d5
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981456"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817207"
 ---
 # <a name="string-functions-visual-basic"></a>Строковые функции (Visual Basic)
 Ниже перечислены функции, предоставляемые Visual Basic для поиска и работы со строками.  
   
-|Метод .NET framework|Описание:|  
+|Метод .NET framework|Описание|  
 |---------------------------|-----------------|  
 |<xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>|Возвращает `Integer` значение, представляющее код знака, соответствующий знаку.|  
 |<xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A>|Возвращает символ, связанный с указанным кодом знака.|  
@@ -82,6 +82,7 @@ ms.locfileid: "56981456"
  [!code-vb[VbVbalrStrings#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#27)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Ключевые слова](../../../visual-basic/language-reference/keywords/index.md)
 - [Члены библиотеки времени выполнения Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)
 - [Сводка по работе со строками](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [Visual Basic], Visual Basic
 - strings [Visual Basic], regular expressions
 ms.assetid: 5674418d-f00d-4f72-9f98-d15897793350
-ms.openlocfilehash: 7262fded93b02c011484919f0504bb7225d8d2af
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 9d2d3c82f5512bc1e37e3b05086fbd364ee12298
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965999"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820897"
 ---
 # <a name="string-basics-in-visual-basic"></a>Основы работы со строками в Visual Basic
 Тип данных `String` представляет последовательность символов (каждый из которых, в свою очередь, представляет экземпляр типа данных `Char`). В этом разделе представлены основные понятия строк в Visual Basic.  
@@ -72,6 +72,7 @@ World]]></xml>.Value
  В отличие от других встроенных типов данных `String` — это ссылочный тип. Если переменная ссылочного типа передается в качестве аргумента функции или подпрограмме, вместо фактического значения строки передается ссылка на адрес в памяти, где хранятся данные. Поэтому в предыдущем примере имя переменной остается таким же, но оно указывает на другой экземпляр класса `String`, который содержит новое значение.  
   
 ## <a name="see-also"></a>См. также
+
 - [Знакомство со строками в Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
 - [Тип данных String](../../../../visual-basic/language-reference/data-types/string-data-type.md)
 - [Тип данных Char](../../../../visual-basic/language-reference/data-types/char-data-type.md)

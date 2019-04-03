@@ -2,12 +2,12 @@
 title: Пользовательский перехватчик сообщений
 ms.date: 03/30/2017
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-ms.openlocfilehash: 3b24535c67c1d16da63ec3b282d456e65ff8dd95
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 789b3a2003ab96a9658eab7c092067e6110a46cd
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733276"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824784"
 ---
 # <a name="custom-message-interceptor"></a>Пользовательский перехватчик сообщений
 Данный образец демонстрирует использование модели расширяемости канала. В частности, показано, как реализовать пользовательский элемент привязки, который создает фабрики и прослушиватели каналов для перехвата всех входящих и исходящих сообщений в определенной точке стека времени выполнения. В состав образца входят клиент и сервер, которые демонстрируют использование этих пользовательских фабрик.  
@@ -69,7 +69,7 @@ public abstract class InterceptingElement : BindingElementExtensionElement { ...
  Для интеграции с системой политики `InterceptingBindingElement` реализует расширение IPolicyExportExtension, чтобы сообщить об участии в создании политики. Чтобы поддержать импорт политики на созданном клиенте, пользователь может зарегистрировать производный класс `InterceptingBindingElementImporter` и переопределить `CreateMessageInterceptor`(), чтобы создать принадлежащий им класс `ChannelMessageInterceptor` с разрешенной политикой.  
   
 ## <a name="example-droppable-message-inspector"></a>Пример Инспектор сообщений  
- Включенный в пример образец реализации `ChannelMessageInspector` отбрасывает сообщения.  
+ Включенный в пример образец реализации `ChannelMessageInspector` удаляет сообщения.  
   
 ```  
 class DroppingServerElement : InterceptingElement  
@@ -161,4 +161,3 @@ Dangerous wind detected! Reported speed (70) is greater than 64 kph.
   
 5.  Первым запустите файл Service.exe, затем Client.exe и наблюдайте результат в обоих окнах консоли.  
   
-## <a name="see-also"></a>См. также

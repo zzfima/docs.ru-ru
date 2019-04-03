@@ -7,12 +7,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], structure
 - Visual Basic code, program structure
 ms.assetid: ad0c6531-d762-4c77-a700-de16b07b6119
-ms.openlocfilehash: 64ac6da99bf304639dfc0de5e24d6d6bdd3e9795
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 5817d4d37610c87bb7e4ade407421ddce7a3a862
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746527"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828125"
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Структура программы Visual Basic
 Программы на Visual Basic — это результат из стандартных блоков. Объект *решение* состоит из одного или нескольких проектов. Объект *проекта* в свою очередь может содержать одну или несколько сборок. Каждый *сборки* компилируется из одного или нескольких исходных файлов. Объект *исходный файл* предоставляет определение и реализацию классов, структур, модулей и интерфейсов, которые в конечном счете содержит весь код.  
@@ -93,6 +93,7 @@ ms.locfileid: "56746527"
  Наиболее распространенный вид этой процедуры является `Sub Main()`. Дополнительные сведения см. в разделе [процедура Main в Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Процедура Main в Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md)
 - [Соглашения об именах Visual Basic](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
 - [Ограничения в Visual Basic](../../../visual-basic/programming-guide/program-structure/limitations.md)

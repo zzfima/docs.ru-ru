@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID28
 ms.assetid: bfcd792b-ac29-4158-81fc-ea0c13f4ffa2
-ms.openlocfilehash: 2f91763888069b6dca90da03995dc1b6812fd426
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25905e65e74b11d167d3ce2ad258599fb958eb88
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655495"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814605"
 ---
 # <a name="out-of-stack-space-visual-basic"></a>Отсутствует место в стеке (Visual Basic)
 Стек — это рабочая область памяти, который увеличивается и уменьшается динамически с помощью требований выполняемой программы. Предел был превышен.  
@@ -29,4 +29,5 @@ ms.locfileid: "54655495"
 6.  Убедитесь, что вы не приводит к «Каскад событий» путем активации события, вызывающего процедуру обработки события уже в стеке. Каскад событий аналогичен без признака завершения рекурсивный вызов процедуры, но это менее очевидных, так как вызов выполняется по Visual Basic, а не явным вызовом в коде. Используйте `Calls` диалоговое окно, чтобы узнать, какие процедуры активны в стеке.  
   
 ## <a name="see-also"></a>См. также
+
 - [Окно памяти](/visualstudio/debugger/memory-windows)

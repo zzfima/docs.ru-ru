@@ -2,12 +2,12 @@
 title: Практическое руководство. Группировать файлы по расширению (LINQ) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 904dc6d7-7162-4655-a7f4-5785d669bc5a
-ms.openlocfilehash: 0e705e83f1aff6146347be5430fb446da2efd843
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: e40101e7de01d403c5bc55a0d4e68f776ddfc0c1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201798"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829282"
 ---
 # <a name="how-to-group-files-by-extension-linq-visual-basic"></a>Практическое руководство. Группировать файлы по расширению (LINQ) (Visual Basic)
 В этом примере показано, как можно использовать LINQ для выполнения расширенного группирования и сортировки списков файлов или папок. Кроме того, здесь показывается, как разбить на страницы выходные данные в окне консоли с помощью методов <xref:System.Linq.Enumerable.Skip%2A> и <xref:System.Linq.Enumerable.Take%2A>.  
@@ -97,5 +97,6 @@ End Module
  Создайте проект, предназначенный для .NET Framework версии 3.5 или более поздней версии, со ссылкой на библиотеку System.Core.dll и `Imports` оператор для пространства имен System.Linq.  
   
 ## <a name="see-also"></a>См. также
+
 - [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
 - [LINQ и каталоги файлов (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

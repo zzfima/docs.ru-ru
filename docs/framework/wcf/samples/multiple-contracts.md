@@ -2,12 +2,12 @@
 title: Несколько контрактов
 ms.date: 03/30/2017
 ms.assetid: 2bef319b-fe9c-4d49-ac6c-dfb23eb35099
-ms.openlocfilehash: e942c6d4a20ae3578d946edb39a7a3d4b0ea8f27
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5e52c83d69c15ca5c407240a8971248205fef832
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523172"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818343"
 ---
 # <a name="multiple-contracts"></a>Несколько контрактов
 В образце нескольких контрактов показано, как реализовать для службы более одного контракта и как настроить конечные точки для взаимодействия с каждым из реализованных контрактов. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md). Служба была изменена, чтобы в ней было определено два контракта - контракт `ICalculator` и контракт `ICalculatorSession`.  
@@ -63,4 +63,3 @@ ms.locfileid: "54523172"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\MultipleContracts`  
   
-## <a name="see-also"></a>См. также

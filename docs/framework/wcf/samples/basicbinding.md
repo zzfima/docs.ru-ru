@@ -2,12 +2,12 @@
 title: BasicBinding
 ms.date: 03/30/2017
 ms.assetid: 86fbeb87-4d89-4b61-9577-867e0ac12945
-ms.openlocfilehash: 15fdf3efb953810a5f4b2f9fe544cb3bc7114c4e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6a929c3bff9f6b2602a78775cdd5020220dc1f9b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696520"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58815944"
 ---
 # <a name="basicbinding"></a>BasicBinding
 В следующем примере кода показано использование привязки `basicHttpBinding`, которая обеспечивает взаимодействие по HTTP-протоколу и максимальные возможности взаимодействия с веб-службами первого и второго поколений.  
@@ -94,4 +94,3 @@ Press <ENTER> to terminate client.
   
 4.  Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-## <a name="see-also"></a>См. также

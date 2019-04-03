@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - XML literals [Visual Basic], XML 1.0 specification
 ms.assetid: 46f046e5-293c-41a3-b893-4e5f6e32e78a
-ms.openlocfilehash: 5f40eb8c3fd1a90a285dfb660a48819d3d38c4f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4cc64bc5469b86a35a9dc45e09fa8fc9260fdcad
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560572"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832428"
 ---
 # <a name="xml-literals-and-the-xml-10-specification-visual-basic"></a>XML-литералы и спецификация XML 1.0 (Visual Basic)
 Синтаксис XML-литералов в Visual Basic поддерживает большую часть спецификации языка (XML) 1.0. Дополнительные сведения о спецификации XML 1.0, см. в разделе [языка (XML) 1.0](https://www.w3.org/TR/xml) на веб-узле W3C.  
@@ -29,6 +29,7 @@ ms.locfileid: "54560572"
 -   Синтаксис внедренного выражения, разрешенных в документе, литералы элементов не является допустимым XML.  
   
 ## <a name="see-also"></a>См. также
+
 - [Создание XML в Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
 - [XML-литерал документа](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)
 - [XML-литерал элемента](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)

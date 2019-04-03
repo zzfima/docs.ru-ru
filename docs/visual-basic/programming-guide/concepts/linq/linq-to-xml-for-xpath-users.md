@@ -2,12 +2,12 @@
 title: LINQ to XML для пользователей XPath (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 0e64911c-a7cc-4c20-b927-ca99078b5656
-ms.openlocfilehash: 598acfa41d9644a07a553a2f6e8948bbf2fe3b77
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 13c23eec1261700b15bea7f92f6c50e9231e900a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066272"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824251"
 ---
 # <a name="linq-to-xml-for-xpath-users-visual-basic"></a>LINQ to XML для пользователей XPath (Visual Basic)
 
@@ -15,9 +15,9 @@ ms.locfileid: "55066272"
   
  Во всех примерах используются функции XPath, поддерживаемые технологией [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], доступ к которым предоставляется с помощью методов расширения в <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>. В этих примерах происходит выполнение и выражения XPath, и выражения [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Затем в каждом примере сравниваются результаты обоих запросов для проверки того, что выражение XPath является функционально эквивалентным запросу [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Так как оба типа запросов возвращают узлы из одного XML-дерева, сравнение результатов запросов выполняется с помощью ссылочного идентификатора.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
   
-|Раздел|Описание:|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Сравнительные характеристики XPath и LINQ to XML](../../../../visual-basic/programming-guide/concepts/linq/comparison-of-xpath-and-linq-to-xml.md)|Содержит общие сведения о подобиях и различиях между XPath и [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
 |[Практическое руководство. Поиск дочернего элемента (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-a-child-element-xpath-linq-to-xml.md)|Сравнивает ось дочернего элемента XPath с предусмотренным в [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] методом <xref:System.Xml.Linq.XContainer.Element%2A>.<br /><br /> Связанным выражением XPath является `"DeliveryNotes"`.|  
@@ -38,6 +38,7 @@ ms.locfileid: "55066272"
 |[Практическое руководство. Найти ближайший предшествующий одноуровневый элемент (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml.md)|Сравнивает способы нахождения ближайшего предшествующего одноуровневого элемента узла с помощью XPath и [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> Связанное выражение XPath:`"preceding-sibling::*[1]"`|  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Xml.XPath?displayProperty=nameWithType>
 - [Выполнение запросов деревьям XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)
 - [Обработка XML-данных с использованием модели данных XPath](../../../../standard/data/xml/process-xml-data-using-the-xpath-data-model.md)

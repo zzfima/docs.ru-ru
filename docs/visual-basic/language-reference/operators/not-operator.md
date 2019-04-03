@@ -14,12 +14,12 @@ helpviewer_keywords:
 - logical negation
 - operators [Visual Basic], negation
 ms.assetid: 8f2ea83c-d2ed-480a-a474-3042a1cad9b5
-ms.openlocfilehash: db88b61518a52a70553c037fdd95f9a135dcb268
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4e54fdca9123ad5595eb9a8c5e2ac5bc303a8f6a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981222"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824217"
 ---
 # <a name="not-operator-visual-basic"></a>Оператор Not (Visual Basic)
 Выполняет логическое отрицание `Boolean` выражения или побитовое отрицание в числовом выражении.  
@@ -76,6 +76,7 @@ result = Not expression
  В предыдущем примере получался результаты – 11, – 9 и – 7 соответственно.  
   
 ## <a name="see-also"></a>См. также
+
 - [Логические (побитовые) операторы (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
 - [Порядок применения операторов в Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [Список операторов, сгруппированных по функциональному назначению](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)

@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Сортировка массива в Visual Basic
+title: Практическое руководство. Сортировка массива в Visual Basic
 ms.date: 07/20/2015
 f1_keywords:
 - Array.Sort
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - arrays [Visual Basic], sorting
 - examples [Visual Basic], arrays
 ms.assetid: 9289aeaa-9626-4698-94a7-1d1fd3702b87
-ms.openlocfilehash: 0b04bfbedf9d7266d1b2e190fa85b8a64cf6efbf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3f4dbd6dce0957de3451b1f29c3a67ccd6791045
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558440"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838083"
 ---
-# <a name="how-to-sort-an-array-in-visual-basic"></a>Как выполнить Сортировка массива в Visual Basic
+# <a name="how-to-sort-an-array-in-visual-basic"></a>Практическое руководство. Сортировка массива в Visual Basic
 В этом примере объявляется массив `String` объектов с именем `zooAnimals`, заполняет его и сортировка по алфавиту.  
   
 ## <a name="example"></a>Пример  
@@ -44,6 +44,7 @@ End Sub
 -   Один или несколько элементов массива не реализуют <xref:System.IComparable> интерфейс (<xref:System.InvalidOperationException> класса)  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Array.Sort%2A?displayProperty=nameWithType>
 - [Массивы](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [Устранение неполадок, связанных с массивами](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)

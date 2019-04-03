@@ -2,12 +2,12 @@
 title: Отмена асинхронных задач после определенного периода времени (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a48045a3-6a99-42af-b824-af340f0b9a5d
-ms.openlocfilehash: a01ab79a2895bd9c5a8ae4782db06eb9dd5664a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b5634165493ff1aa5e07f5240a3db15741d57a1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580555"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831557"
 ---
 # <a name="cancel-async-tasks-after-a-period-of-time-visual-basic"></a>Отмена асинхронных задач после определенного периода времени (Visual Basic)
 Если не нужно дожидаться, пока завершится выполнение асинхронной операции, ее можно отменить по истечении определенного периода времени с помощью метода <xref:System.Threading.CancellationTokenSource.CancelAfter%2A?displayProperty=nameWithType>. Этот метод планирует отмену всех связанных задач, не завершенных в течение времени, установленного выражением `CancelAfter`.  
@@ -18,7 +18,7 @@ ms.locfileid: "54580555"
 >  Для выполнения примеров необходимо, чтобы на компьютере были установлены Visual Studio версии 2012 и выше и .NET Framework версии 4.5 и выше.  
   
 ## <a name="downloading-the-example"></a>Загрузка примера  
- Вы можете скачать полный проект Windows Presentation Foundation (WPF) из [пример асинхронности: Настройка приложения тонкую](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) и затем выполните следующие действия.  
+ Скачать полный проект Windows Presentation Foundation (WPF) можно со страницы [Пример асинхронности. Тонкая настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea). Затем выполните следующие шаги.  
   
 1.  Распакуйте загруженный файл, а затем запустите Visual Studio.  
   
@@ -88,7 +88,7 @@ Downloads canceled.
   
  Обратите внимание на то, что необходимо добавить ссылку для <xref:System.Net.Http>.  
   
- Можно загрузить проект со страницы [пример асинхронности: По настройке приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
+ Вы можете скачать проект из статьи [Пример асинхронности. Тонкая настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
   
 ```vb  
 ' Add an Imports directive and a reference for System.Net.Http.  
@@ -190,6 +190,7 @@ End Class
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Асинхронное программирование с использованием ключевых слов Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
 - [Пошаговое руководство: Доступ к Интернету с использованием Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Cancel an Async Task or a List of Tasks (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) (Отмена асинхронной задачи или списка задач в Visual Basic)

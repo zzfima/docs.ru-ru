@@ -2,8 +2,14 @@
 title: LINQ в Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'what''s new [Visual Basic]'
+- what's new [Visual Basic]
 ms.assetid: ddba5545-ff6e-46c3-8967-5c4280db5aca
+ms.openlocfilehash: 286e6266ef8f11a7a09a9e9fe898276a6734a96d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824862"
 ---
 # <a name="linq-in-visual-basic"></a>LINQ в Visual Basic
 Этот раздел содержит обзоры, примеры и общие сведения, которые помогут вам освоить и использовать Visual Basic и [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)].  
@@ -40,6 +46,7 @@ ms.assetid: ddba5545-ff6e-46c3-8967-5c4280db5aca
  Предлагает пример, в котором результаты запроса LINQ возвращаются с определенным типом, а не как анонимный тип.  
   
 ## <a name="see-also"></a>См. также
+
 - [Встроенный язык запросов LINQ](../../../../visual-basic/programming-guide/concepts/linq/index.md)
 - [Общие сведения о LINQ to XML в Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)
 - [Общие сведения о LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset-overview.md)

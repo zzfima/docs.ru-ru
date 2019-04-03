@@ -7,12 +7,12 @@ helpviewer_keywords:
 - examples [Visual Basic], strings
 - arrays [Visual Basic], converting to strings
 ms.assetid: d0dc8317-9ab3-4324-99f7-3f5788c0e72a
-ms.openlocfilehash: cd091d743b04ef9d9709bde2b5a1205f3d7ae292
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f0676548bea2d4037f66fb15498c175b2d110d8b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979517"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826748"
 ---
 # <a name="how-to-convert-an-array-of-bytes-into-a-string-in-visual-basic"></a>Практическое руководство. Преобразовать массив байтов в строку в Visual Basic
 В этом разделе показано, как преобразовать байты из массива байтов в строку.  
@@ -39,6 +39,7 @@ ms.locfileid: "56979517"
 -   <xref:System.Text.Encoding.UTF8%2A?displayProperty=nameWithType>: Получает кодировку для формата UTF-8.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Text.Encoding?displayProperty=nameWithType>
 - <xref:System.Text.Encoding.GetString%2A>
 - [Практическое руководство. Преобразование строки в массив байтов в Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-strings-into-an-array-of-bytes.md)

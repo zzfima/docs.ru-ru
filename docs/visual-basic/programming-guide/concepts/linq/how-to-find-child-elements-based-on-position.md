@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Поиск дочерних элементов по положению (XPath-LINQ to XML) (Visual Basic)
+title: Практическое руководство. Поиск дочерних элементов по положению (XPath-LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 6831e1db-5e97-444f-a7a1-d0a87104b005
-ms.openlocfilehash: 023ad921a5ba03adb306cd6ed93e38ad92406c20
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 57b9f3d7986bd85a65716c833165e7b073414ef0
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626070"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831609"
 ---
-# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-visual-basic"></a>Как выполнить Поиск дочерних элементов по положению (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-visual-basic"></a>Практическое руководство. Поиск дочерних элементов по положению (XPath-LINQ to XML) (Visual Basic)
 Иногда требуется найти элементы на основании их позиции. Может понадобиться найти второй элемент или найти третий элемент через пятый.  
   
  Выражение XPath:  
@@ -21,7 +21,7 @@ ms.locfileid: "54626070"
 ## <a name="example"></a>Пример  
  В данном примере производится поиск второго элемента через четвертый элемент `Test`. Результатом является коллекция элементов.  
   
- В этом примере используется следующий XML-документ: [Пример XML-файла: Конфигурация тестирования (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).  
+ В этом примере используется следующий XML-документ: [Пример XML-файла. Конфигурация тестирования (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).  
   
 ```vb  
 Dim testCfg As XElement = XElement.Load("TestConfig.xml")  
@@ -79,4 +79,5 @@ Results are identical
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [LINQ to XML для пользователей XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

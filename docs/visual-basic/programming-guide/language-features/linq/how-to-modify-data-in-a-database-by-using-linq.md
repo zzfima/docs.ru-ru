@@ -1,5 +1,5 @@
 ---
-title: Как выполнить  Изменение данных в базе данных с помощью LINQ (Visual Basic)
+title: Практическое руководство. Изменение данных в базе данных с помощью LINQ (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inserting rows [LINQ to SQL]
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], data changes in database
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: cf52635f-0c1b-46c3-aff1-bdf181cf19b1
-ms.openlocfilehash: 88597e5cfa1db46e147b829c8ffc634697cecc7e
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: c92a94cd6223aad8e4ea3da86a8dd37bd71aad2c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739492"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821001"
 ---
-# <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>Как выполнить  Изменение данных в базе данных с помощью LINQ (Visual Basic)
+# <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>Практическое руководство. Изменение данных в базе данных с помощью LINQ (Visual Basic)
 Запросы Language-Integrated Query (LINQ) упрощают доступ к данным базы данных и измените значения в базе данных.  
   
  В примере показан способ создания нового приложения, которое извлекает и обновляет сведения в базе данных SQL Server.  
@@ -161,6 +161,7 @@ ms.locfileid: "55739492"
 7.  Нажмите клавишу F5 для запуска проекта. Нажмите кнопку **добавить** для добавления новой записи. Нажмите кнопку **обновления** изменение новой записи. Нажмите кнопку **удалить** для удаления новой записи.  
   
 ## <a name="see-also"></a>См. также
+
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Запросы](../../../../visual-basic/language-reference/queries/index.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)

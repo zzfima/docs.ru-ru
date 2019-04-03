@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ', '
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
-ms.openlocfilehash: a396bede9e0004c9f0681e3399af95f31592a0b0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9f61de9bf528690e6057ec445ea7f1b77b3be0b9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361412"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828476"
 ---
 # <a name="flow-document-overview"></a>Общие сведения о документах нефиксированного формата
 Документы нефиксированного формата предназначены для более удобного просмотра и чтения. Вместо того чтобы использовать какой-либо определенный макет, документы нефиксированного формата динамически корректируют и перемещают содержимое с учетом переменных времени выполнения, таких как размер окна, разрешение устройства и дополнительные пользовательские настройки. Кроме того, в документах нефиксированного формата доступны расширенные возможности, такие как разбивка на страницы и столбцы. В этом разделе представлены общие сведения о документах нефиксированного формата и способах их создания.  
@@ -128,9 +128,9 @@ ms.locfileid: "57361412"
   
  [!code-xaml[SpanSnippets#_BlockUIXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml#_blockuixaml)]  
   
- На следующем рисунке показана отрисовка этого примера.  
+ На следующем рисунке показана отрисовка этого примера:  
   
- ![Снимок экрана: Объект UIElement, внедренный в содержимое нефиксированного формата](./media/blockuicontainer.png "BlockUIContainer")  
+ ![Снимок экрана: UIElement вставленный в поток содержимого.](./media/flow-document-overview/embedded-blockuicontainer.png)  
   
  **List**  
   

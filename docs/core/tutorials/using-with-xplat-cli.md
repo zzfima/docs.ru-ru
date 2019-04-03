@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 09/10/2018
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: 664ff07bad596ae38b4e31a00c7af0579d8245b8
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: 92ca5149ad5f0e4a50c809a316123fbf77d4152d
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788314"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545368"
 ---
 # <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Начало работы с .NET Core в Windows, Linux и Mac OS с помощью командной строки
 
@@ -119,7 +119,8 @@ dotnet run
 
 ## <a name="working-with-multiple-files"></a>Работа с несколькими файлами
 
-Отдельные файлы хороши для простых одиночных программ, но при создании более сложных приложений вам, вероятно, придется использовать несколько исходных файлов в проекте. Давайте возьмем за основу предыдущий пример Фибоначчи и кэшируем некоторые значения Фибоначчи, а также добавим несколько рекурсивных функций.
+Отдельные файлы хороши для простых одиночных программ, но при создании более сложных приложений, возможно, в проекте будет несколько исходных файлов.
+Используем в качестве основы предыдущий пример, реализовав в нем кэширование значений Фибоначчи и рекурсию.
 
 1. Добавьте в каталог *Hello* новый файл *FibonacciGenerator.cs* со следующим кодом:
 

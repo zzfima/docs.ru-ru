@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [Visual Basic], searching
 - examples [Visual Basic], strings
 ms.assetid: ae4c79e0-08ea-489f-bdb2-5eb6d355f284
-ms.openlocfilehash: c150299efe07809d0d33edf882771f552c3e5b63
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b690aa78a2cf07b0db5bdd28d7d71ed4a79fbf61
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56982015"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823302"
 ---
 # <a name="how-to-search-within-a-string-visual-basic"></a>Практическое руководство. Поиск в строке (Visual Basic)
 В этом примере вызывается <xref:System.String.IndexOf%2A> метод <xref:System.String> объекта для отображения индекса первого вхождения подстроки.  
@@ -34,6 +34,7 @@ ms.locfileid: "56982015"
  Для лучшей защиты от ошибок может потребоваться заключить строку поиска в `Try` блока [попробуйте... CATCH... Оператор Finally](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md) конструкции.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.String.IndexOf%2A>
 - [Оператор Try...Catch...Finally](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
 - [Знакомство со строками в Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)

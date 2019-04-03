@@ -5,12 +5,12 @@ helpviewer_keywords:
 - AddressOf operator [Visual Basic]
 - delegates [Visual Basic], passing procedures
 ms.assetid: 5adbba15-5a1d-413f-ab3e-3ff6cc0a4669
-ms.openlocfilehash: e9e6165414db00e7d7182e204d86d23debfbf4f6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c2305cd18cfaaa67355dfb342f22e39d37ae0e79
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967742"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818479"
 ---
 # <a name="how-to-pass-procedures-to-another-procedure-in-visual-basic"></a>Практическое руководство. Передача процедур другой процедуре в Visual Basic
 В этом примере показано, как использование делегатов для передачи процедур другой процедуре.  
@@ -46,6 +46,7 @@ ms.locfileid: "56967742"
      При `Test` является именем, то сначала он отображает результат `AddNumbers` на `5` и `3`, который равен 8. Затем результат `SubtractNumbers` на `9` и `3` отображается, который равен 6.  
   
 ## <a name="see-also"></a>См. также
+
 - [Делегаты](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
 - [Оператор AddressOf](../../../../visual-basic/language-reference/operators/addressof-operator.md)
 - [Оператор Delegate](../../../../visual-basic/language-reference/statements/delegate-statement.md)

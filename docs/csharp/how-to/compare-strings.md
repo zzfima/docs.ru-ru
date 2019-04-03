@@ -1,16 +1,16 @@
 ---
-title: Как выполнить Сравнение строк (руководство по C#)
+title: Практическое руководство. Сравнение строк (руководство по C#)
 description: Сведения о том, как сравнивать и упорядочивать строковые значения с учетом или без учета регистра и порядка для определенного языка.
 ms.date: 10/03/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: 479e6d9250c546943da3ddd837f2f03a5c4e7b1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bce234ca3a86f057ec35e1c53d22169ee29b7b94
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563994"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634236"
 ---
 # <a name="how-to-compare-strings-in-c"></a>Сравнение строк в C\#
 

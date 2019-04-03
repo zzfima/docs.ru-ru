@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
-ms.openlocfilehash: c7510147e2abdcfbb71cf79412a9125724776685
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f11b5a184b72df68e302094dee762ec6876a397c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977556"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829334"
 ---
 # <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>Практическое руководство. Объявление и вызов свойства по умолчанию в Visual Basic
 Объект *свойство по умолчанию* — это свойство класса или структуры, которое ваш код может получить доступ без указания его. Если вызывающий код задает класс или структуру, но не свойство и контекст разрешает доступ к свойству, Visual Basic разрешает доступ для этого класса или структуры свойство по умолчанию, если он существует.  
@@ -82,6 +82,7 @@ ms.locfileid: "56977556"
  Из-за эти недостатки можно не определять свойства по умолчанию. Для удобства чтения кода следует также учитывать всегда относятся ко всем свойствам явным образом, даже свойства по умолчанию.  
   
 ## <a name="see-also"></a>См. также
+
 - [Процедуры свойств](./property-procedures.md)
 - [Параметры и аргументы процедуры](./procedure-parameters-and-arguments.md)
 - [Оператор Property](../../../../visual-basic/language-reference/statements/property-statement.md)

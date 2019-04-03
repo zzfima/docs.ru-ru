@@ -20,12 +20,12 @@ helpviewer_keywords:
 - abstract classes [Visual Basic], inheritance
 - overriding, Overrides keyword
 ms.assetid: dfc8deba-f5b3-4d1d-a937-7cb826446fc5
-ms.openlocfilehash: 3d772fb81eb13b9454f44ff8ae4256bdb4144caa
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5e4b8511145e758bf3d6328141be0e526965dccf
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970302"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826578"
 ---
 # <a name="inheritance-basics-visual-basic"></a>Основы наследования (Visual Basic)
 `Inherits` Инструкция используется для объявления новый класс с именем *производный класс*, основываясь на существующий класс, известный как *базового класса*. Производные классы наследуют и могут расширять свойства, методы, события, поля и константы, определенные в базовом классе. В следующем разделе описаны некоторые правила наследования и модификаторов, которые можно использовать для изменения способа классы наследуют или наследования:  
@@ -143,5 +143,6 @@ End Class
  Несмотря на то что `derivedClass` переопределяет `testMethod`, `MyClass` ключевое слово в `useMyClass` аннулирует переопределение и компилятор вызов базового класса версию `testMethod`.  
   
 ## <a name="see-also"></a>См. также
+
 - [Оператор Inherits](../../../../visual-basic/language-reference/statements/inherits-statement.md)
 - [Me, My, MyBase и MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

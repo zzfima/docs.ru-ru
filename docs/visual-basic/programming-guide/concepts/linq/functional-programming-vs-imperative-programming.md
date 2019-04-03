@@ -2,12 +2,12 @@
 title: Сравнение функционального и Императивного программирования (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 6a1f3b57-00e6-447d-9906-74c7c4d5d85c
-ms.openlocfilehash: 762889717d2b20d5a06848ebaa41f3e066a8c061
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dec9fd4b59d96c0548e49276a27103114a7b3e8b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579814"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827343"
 ---
 # <a name="functional-programming-vs-imperative-programming-visual-basic"></a>Сравнение функционального и Императивного программирования (Visual Basic)
 В этом разделе сравнивается и противопоставляется функциональное программирование с традиционным императивным (процедурным) программированием.  
@@ -51,6 +51,7 @@ ms.locfileid: "54579814"
  К счастью Visual Basic не требует резкого перехода на функциональное программирование, поскольку он поддерживает как императивный, так и функциональный подход. Разработчик может сам выбирать нужный подход в зависимости от конкретного сценария. В действительности в программах часто сочетаются оба стиля.  
   
 ## <a name="see-also"></a>См. также
+
 - [Введение в чистые функциональные преобразования (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
 - [Преобразования XSLT](../../../../standard/data/xml/xslt-transformations.md)
 - [Рефакторинг в чистые функции (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

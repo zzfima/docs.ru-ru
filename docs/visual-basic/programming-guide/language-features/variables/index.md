@@ -2,9 +2,15 @@
 title: Переменные в Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'variables [Visual Basic]'
-  - 'values [Visual Basic], storing'
+- variables [Visual Basic]
+- values [Visual Basic], storing
 ms.assetid: 4cfaa06d-4ae3-4307-897b-cf599dc24caa
+ms.openlocfilehash: 9a39c53ea2d57bca379297897d6d4d1b9f7a1a9f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840385"
 ---
 # <a name="variables-in-visual-basic"></a>Переменные в Visual Basic
 Часто приходится хранить значения при выполнении вычислений с помощью Visual Basic. Например, может потребоваться вычислить несколько значений, сравнить их и (в зависимости от результата сравнения) выполнить с ними различные операции. Чтобы сравнить значения, их необходимо сохранить.  
@@ -28,6 +34,7 @@ ms.assetid: 4cfaa06d-4ae3-4307-897b-cf599dc24caa
  Как и переменная, *свойство* соответствует значению, к которому можно получить доступ. Но оно является более сложным, чем переменная. Свойство использует блоки кода, определяющие способ задания и получения его значения. Подробнее см. в разделе [Различия между свойствами и переменными в Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Объявление переменных](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [Объектные переменные](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Устранение неполадок, связанных с переменными](../../../../visual-basic/programming-guide/language-features/variables/troubleshooting-variables.md)

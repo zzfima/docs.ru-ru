@@ -1,21 +1,21 @@
 ---
-title: Как выполнить Загрузить XML из файла (Visual Basic)
+title: Практическое руководство. Загрузить XML из файла (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: e2d337ad-8ac8-4671-b694-30e5ca1413b7
-ms.openlocfilehash: 9ca19868629c89c10a8aca8f88860115a9efe7bc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b4f1f9abfa33b76e702b51221715da80c3f66421
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494669"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814968"
 ---
-# <a name="how-to-load-xml-from-a-file-visual-basic"></a>Как выполнить Загрузить XML из файла (Visual Basic)
+# <a name="how-to-load-xml-from-a-file-visual-basic"></a>Практическое руководство. Загрузить XML из файла (Visual Basic)
 В этом разделе показана загрузка XML из URI с помощью метода <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>.  
   
 ## <a name="example"></a>Пример  
  В следующем примере показана загрузка XML-документа из файла. В следующем примере загружается файл books.xml и происходит вывод XML-дерева на консоль.  
   
- В этом примере используется следующий XML-документ: [Пример XML-файла: Книги (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
+ В этом примере используется следующий XML-документ: [Пример XML-файла. Книги (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
   
 ```vb  
 Dim booksFromFile As XElement = XElement.Load("books.xml")  
@@ -49,4 +49,5 @@ Console.WriteLine(booksFromFile)
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Синтаксический анализ XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

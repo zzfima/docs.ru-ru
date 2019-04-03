@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Работа со словарями с помощью LINQ to XML (Visual Basic)
+title: Практическое руководство. Работа со словарями с помощью LINQ to XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 6cb3f969-1986-414a-b850-87418712edea
-ms.openlocfilehash: 9f08430aeb92b9c6e0b7b08481027fb3b5b77cad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: def00fcd356472825ebc4b9f5c306cf3547991e1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572348"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820771"
 ---
-# <a name="how-to-work-with-dictionaries-using-linq-to-xml-visual-basic"></a>Как выполнить Работа со словарями с помощью LINQ to XML (Visual Basic)
+# <a name="how-to-work-with-dictionaries-using-linq-to-xml-visual-basic"></a>Практическое руководство. Работа со словарями с помощью LINQ to XML (Visual Basic)
 Часто бывает удобно преобразовать структуры данных в XML, а затем преобразовать XML в другие структуры данных. В этом разделе показана конкретная реализация этого общего подхода на примере преобразования <xref:System.Collections.Generic.Dictionary%602> в XML и обратно.  
   
 ## <a name="example"></a>Пример  
@@ -71,4 +71,5 @@ Child4:Value4
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Проекции и преобразования (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

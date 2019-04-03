@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC41999
 ms.assetid: ae48c738-dff8-4c0f-8931-bbb70b2c8b03
-ms.openlocfilehash: f875206b15ee048311e43624e197e78413de522e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7b02659d96b08c592b25ddf3ef1f99114c3ee269
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279621"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831765"
 ---
 # <a name="implicit-conversion-from-typename1-to-typename2-in-copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument"></a>Неявное преобразование из "\<Имя_типа1 >" для "\<имя_типа2 >" при копировании значения параметра «ByRef» "\<имя_параметра >" обратно в соответствующий аргумент.
 Процедура вызывается с [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) аргумента отличается от соответствующего параметра типа.  
@@ -32,6 +32,7 @@ ms.locfileid: "55279621"
 -   Если необходимо вызвать процедуру с аргументом, тип которого отличается от типа параметра, но не требуется возвращать значение в аргумент вызова, то определите параметр как [ByVal](../../../visual-basic/language-reference/modifiers/byval.md) , а не `ByRef`.  
   
 ## <a name="see-also"></a>См. также
+
 - [Процедуры](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [Параметры и аргументы процедуры](../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)
 - [Передача аргументов по значению и по ссылке](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

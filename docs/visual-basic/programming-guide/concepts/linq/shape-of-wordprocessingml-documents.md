@@ -2,12 +2,12 @@
 title: Форма документов WordprocessingML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2dfb446b-5a07-4c00-9ab3-a74ba734ff3a
-ms.openlocfilehash: 635f8a2f97f1d8568230e17f9998fa87d6a7c02c
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 265da66329128e610c491c3ff50cec1bca434f6d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738855"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831817"
 ---
 # <a name="shape-of-wordprocessingml-documents-visual-basic"></a>Форма документов WordprocessingML (Visual Basic)
 Этот раздел позволяет ознакомиться с формой XML документов WordprocessingML.  
@@ -95,4 +95,5 @@ End Module
  [Office 2003 страница загрузки ссылочных XML-схем](https://go.microsoft.com/fwlink/?LinkId=98095)  
   
 ## <a name="see-also"></a>См. также
+
 - [Учебник. Управление содержимым в документе WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

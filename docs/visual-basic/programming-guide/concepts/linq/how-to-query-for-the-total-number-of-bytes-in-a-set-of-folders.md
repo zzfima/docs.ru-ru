@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Запрос общего числа байтов в наборе папок (LINQ) (Visual Basic)
+title: Практическое руководство. Запрос общего числа байтов в наборе папок (LINQ) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: bfe85ed2-44dc-4ef1-aac7-241622b80a69
-ms.openlocfilehash: 5eedd2ed0d8756f400f1ccfa1b1d71f699a42116
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9aa098ddca2e3ad300913b207c9db5a4976eded7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506606"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831674"
 ---
-# <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-visual-basic"></a>Как выполнить Запрос общего числа байтов в наборе папок (LINQ) (Visual Basic)
+# <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-visual-basic"></a>Практическое руководство. Запрос общего числа байтов в наборе папок (LINQ) (Visual Basic)
 В этом примере показано, как получить общее число байтов, используемое всеми файлами в указанной папке и всех ее вложенных папках.  
   
 ## <a name="example"></a>Пример  
@@ -75,5 +75,6 @@ End Module
  Создайте проект, предназначенный для .NET Framework версии 3.5 или более поздней версии, со ссылкой на библиотеку System.Core.dll и `Imports` оператор для пространства имен System.Linq.  
   
 ## <a name="see-also"></a>См. также
+
 - [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
 - [LINQ и каталоги файлов (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

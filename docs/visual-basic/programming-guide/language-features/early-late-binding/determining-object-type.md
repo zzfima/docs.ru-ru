@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TypeName function
 - objects [Visual Basic], type determining
 ms.assetid: d95e7ad1-cd63-41d6-9a28-d7a1380d49c1
-ms.openlocfilehash: becbbef008e8a474db198748d45f260fcb90c758
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 625ddb8fc153708a80e8cf475f48d595efbe4df2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966779"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842633"
 ---
 # <a name="determining-object-type-visual-basic"></a>Определение типа объекта (Visual Basic)
 Универсальные объектные переменные (то есть переменные необходимо обозначить как `Object`) может содержать объекты любого класса. При использовании переменных типа `Object`, может потребоваться предпринять различные действия на основе класса объекта; например, некоторые объекты могут не поддерживать определенное свойство или метод. Visual Basic предоставляет два средства определения типа объекта, хранящегося в переменной объекта: `TypeName` функции и `TypeOf...Is` оператор.  
@@ -45,6 +45,7 @@ ms.locfileid: "56966779"
      [!code-vb[VbVbalrOOP#95](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#95)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:Microsoft.VisualBasic.Information.TypeName%2A>
 - [Вызов свойства или метода с помощью строкового имени](../../../../visual-basic/programming-guide/language-features/early-late-binding/calling-a-property-or-method-using-a-string-name.md)
 - [Тип данных Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)

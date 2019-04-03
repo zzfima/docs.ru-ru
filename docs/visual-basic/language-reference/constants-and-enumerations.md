@@ -6,12 +6,12 @@ helpviewer_keywords:
 - constants [Visual Basic]
 - constants [Visual Basic], list of
 ms.assetid: 309c0ad5-83e4-4f96-99ea-83cd95107417
-ms.openlocfilehash: 33327a8d5e7ce7676ffda6245f3e4f9cccc8b1fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a9c01269e12c2d84be4f30c236c439012a88153
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573313"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839595"
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>Константы и перечисления (Visual Basic)
 Visual Basic предоставляет ряд предопределенных констант и перечислений для разработчиков. Константы хранят значения, которые остаются постоянными в ходе выполнения приложения. Перечисления — это удобный способ работать с наборами связанных констант и связывать постоянные значения с именами.  
@@ -49,7 +49,7 @@ Visual Basic предоставляет ряд предопределенных 
 ## <a name="enumerations"></a>Перечисления  
  В следующей таблице перечислены и описаны перечисления, предоставляемые Visual Basic.  
   
-|Перечисление|Описание:|  
+|Перечисление|Описание|  
 |---|---|  
 |<xref:Microsoft.VisualBasic.AppWinStyle>|Указывает стиль окна для использования вызванной программы при вызове <xref:Microsoft.VisualBasic.Interaction.Shell%2A> функции.|  
 |<xref:Microsoft.VisualBasic.AudioPlayMode>|Указывает, как воспроизводить звуки при вызове методов воспроизведения.|  
@@ -78,6 +78,7 @@ Visual Basic предоставляет ряд предопределенных 
 |<xref:Microsoft.VisualBasic.VbStrConv>|Указывает, преобразование какого типа следует выполнить при вызове функции <xref:Microsoft.VisualBasic.Strings.StrConv%2A>.|  
   
 ## <a name="see-also"></a>См. также
+
 - [Справочник по языку Visual Basic](../../visual-basic/language-reference/index.md)
 - [Visual Basic](../../visual-basic/index.md)
 - [Общие сведения о константах](../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)

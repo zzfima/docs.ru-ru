@@ -9,12 +9,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], declaration errors
 - arrays [Visual Basic], troubleshooting
 ms.assetid: f4e971c7-c0a4-4ed7-a77a-8d71039f266f
-ms.openlocfilehash: 81817af230298528a766aa6494899538c35da7bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b051d22fe3d331626f2e181c008043e576b7526
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707626"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833377"
 ---
 # <a name="troubleshooting-arrays-visual-basic"></a>Устранение неполадок, связанных с массивами (Visual Basic)
 Этой странице перечислены некоторые распространенные проблемы, которые могут возникнуть при работе с массивами.  
@@ -58,5 +58,6 @@ ms.locfileid: "54707626"
  При определении границ многомерного массива, будьте внимательны, как указать измерения. `dimension` Параметры <xref:System.Array.GetLowerBound%2A> и <xref:System.Array.GetUpperBound%2A> методов начинаются с нуля, при `Rank` параметры Visual Basic <xref:Microsoft.VisualBasic.Information.LBound%2A> и <xref:Microsoft.VisualBasic.Information.UBound%2A> функции начинаются с 1.  
   
 ## <a name="see-also"></a>См. также
+
 - [Массивы](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [Практическое руководство. Инициализация переменной массива в Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)

@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Объявление структуры (Visual Basic)
+title: Практическое руководство. Объявление структуры (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declarations [Visual Basic], structures
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - statements [Visual Basic], structure
 - structures [Visual Basic], declaring
 ms.assetid: d5e98381-eb81-47d4-af83-48cc534a2572
-ms.openlocfilehash: cee2768d0e7475d2df123491e2b506bf5c08785f
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 7fc4aed4d405729b64a2f7ba772cdd794df40f2a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066120"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825101"
 ---
-# <a name="how-to-declare-a-structure-visual-basic"></a>Как выполнить Объявление структуры (Visual Basic)
+# <a name="how-to-declare-a-structure-visual-basic"></a>Практическое руководство. Объявление структуры (Visual Basic)
 Начать объявление структуры [оператор Structure](../../../../visual-basic/language-reference/statements/structure-statement.md), и завершается с `End Structure` инструкции. Между этими двумя операторами должен быть объявлен по крайней мере *элемент*. Элементы могут быть любого типа данных, но по крайней мере один должен быть не являющаяся общей переменная или непользовательским событий.  
   
  Вы не можете инициализировать любого из элементов структуры в объявлении структуры. Если объявить переменную типа структуры, присваиваются значения в элементы, доступ к ним через переменную.  
@@ -56,6 +56,7 @@ ms.locfileid: "55066120"
      Кроме переменных `Sub` процедуры и события, можно также определить константы, `Function` процедуры и свойства в структуре. Можно указать не более одного свойства как *свойство по умолчанию*, предоставляющего по крайней мере один аргумент. Можно обработать событие с [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) `Sub` процедуры. Дополнительные сведения см. в разделе [Как Объявление и вызов свойства по умолчанию в Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Простые типы данных](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [Составные типы данных](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)

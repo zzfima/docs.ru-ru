@@ -9,12 +9,12 @@ helpviewer_keywords:
 - decision structures [Visual Basic]
 - conditional statements [Visual Basic], decision structures
 ms.assetid: 2e2e0895-4483-442a-b17c-26aead751ec2
-ms.openlocfilehash: 4aabb1eef717b06222696980d4cbce7a781fb567
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 20b60fb425278dacb56ee5f888967554a1f76aeb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735251"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825382"
 ---
 # <a name="decision-structures-visual-basic"></a>Структуры решений (Visual Basic)
 Visual Basic позволяет проверять условия и выполнять различные операции в зависимости от результата этого теста. Можно проверить условие true или false, для различных значений выражения, или для различных исключений, сформированных при выполнении последовательности инструкций.  
@@ -47,6 +47,7 @@ Visual Basic позволяет проверять условия и выпол�
 >  Для многих управляющих структур при щелчке ключевого слова, все ключевые слова в структуре, выделяются. Например, при нажатии кнопки `If` в `If...Then...Else` конструкции, все экземпляры `If`, `Then`, `ElseIf`, `Else`, и `End If` выделяются при построении. Чтобы перейти к следующему или предыдущему выделенный ключевое слово, нажмите клавиши CTRL + SHIFT + СТРЕЛКА ВНИЗ или CTRL + SHIFT + Стрелка вверх.  
   
 ## <a name="see-also"></a>См. также
+
 - [Поток управления](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
 - [Циклические структуры](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
 - [Другие структуры управления](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)

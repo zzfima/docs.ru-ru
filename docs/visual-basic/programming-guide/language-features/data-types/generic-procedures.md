@@ -12,12 +12,12 @@ helpviewer_keywords:
 - generics [Visual Basic], procedures
 - generic procedures [Visual Basic], type inference
 ms.assetid: 95577b28-137f-4d5c-a149-919c828600e5
-ms.openlocfilehash: e6b7d6a560f2f374c17e011479d6e2e458f9c1ed
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4aed16ce9eb59da54156a0cd5f1594819788521b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976529"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818921"
 ---
 # <a name="generic-procedures-in-visual-basic"></a>Generic Procedures in Visual Basic
 Объект *универсальной процедуры*, называемой *универсальный метод*, — это процедура, определенная с помощью по крайней мере один тип параметра. Это позволяет настроить типы данных к его требованиям при каждом вызове процедуры вызывающему коду.  
@@ -65,6 +65,7 @@ End Sub
  Предыдущие вызовы `MsgBox` отображения «0», «1» и «-1"соответственно.  
   
 ## <a name="see-also"></a>См. также
+
 - [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [Практическое руководство. Определение класса, реализующего одинаковую функциональность для разных типов данных](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)
 - [Практическое руководство. Использование универсального класса](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)

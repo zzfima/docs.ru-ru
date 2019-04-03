@@ -1,21 +1,21 @@
 ---
-title: Как выполнить Управление типом проекции (Visual Basic)
+title: Практическое руководство. Управление типом проекции (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a0171276-0b46-4817-aee5-a8d5191b12fe
-ms.openlocfilehash: e892e6328576a9727a13a4c1acd951d44ce4daa8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd09914a75a8d4b20ddf9ff452f046bf7671152f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628881"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831409"
 ---
-# <a name="how-to-control-the-type-of-a-projection-visual-basic"></a>Как выполнить Управление типом проекции (Visual Basic)
+# <a name="how-to-control-the-type-of-a-projection-visual-basic"></a>Практическое руководство. Управление типом проекции (Visual Basic)
 Проекция - это процесс, включающий выбор одного набора данных, его фильтрацию, изменение его формы и даже изменение его типа. Почти все выражения запросов выполняют операции проекции. Результатом вычисления почти всех выражений, представленных в этом разделе, должен быть элемент <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Xml.Linq.XElement>, но пользователь может управлять типом проекции для создания коллекций других типов. В настоящем разделе показано, как это делается.  
   
 ## <a name="example"></a>Пример  
  В следующем примере определяется новый тип - `Customer`. Затем выражение запроса создает новые экземпляры `Customer` в предложении `Select`. В результате тип выражения запроса определяется как <xref:System.Collections.Generic.IEnumerable%601> `Customer`.  
   
- В этом примере используется следующий XML-документ: [Пример XML-файла: Клиенты и заказы (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ В этом примере используется следующий XML-документ: [Пример XML-файла. Заказчики и заказы (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
 ```vb  
 Public Class Customer  
@@ -87,5 +87,6 @@ LETSS:Let's Stop N Shop:Jaime Yorres
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Linq.Enumerable.Select%2A>
 - [Проекции и преобразования (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

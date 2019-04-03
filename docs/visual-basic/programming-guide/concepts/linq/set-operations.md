@@ -2,12 +2,12 @@
 title: Операции с множествами (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2b06e822-e030-438f-9db7-ee402bd3a706
-ms.openlocfilehash: 7b8dcaaa82ac5a30c35222417245153e55a522cc
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 59ab09607462c762758e6a246ec218a92e01f5de
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409254"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825787"
 ---
 # <a name="set-operations-visual-basic"></a>Операции с множествами (Visual Basic)
 Операции над множествами в LINQ — это операции запросов, результирующие наборы которых основываются на наличии или отсутствии эквивалентных элементов в одной или другой коллекции (или наборе).  
@@ -49,6 +49,7 @@ ms.locfileid: "58409254"
  [!code-vb[CsLINQSetOps#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQSetOps/VB/setops.vb#1)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Linq>
 - [Общие сведения о стандартных операторах запроса (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Предложение Distinct](../../../../visual-basic/language-reference/queries/distinct-clause.md)

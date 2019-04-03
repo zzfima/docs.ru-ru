@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - arguments [Visual Basic], modifiable
 ms.assetid: 87b2df69-e1f7-4657-9caf-b3f48d693428
-ms.openlocfilehash: 06f3009d984f7a303a0ee6e8d529a3ff60900fbc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a880ae8c13eebd5d9d325468098e058f58d3fa71
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498691"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826669"
 ---
 # <a name="differences-between-modifiable-and-nonmodifiable-arguments-visual-basic"></a>Различия между аргументами Modifiable и Nonmodifiable (Visual Basic)
 При вызове процедуры, обычно передается один или несколько аргументов к нему. Каждый аргумент соответствует базовому элементу программирования. Базовые элементы и сами аргументы может быть либо изменяемыми либо неизменяемыми.  
@@ -38,6 +38,7 @@ ms.locfileid: "54498691"
  Вызванная процедура может изменить свою локальную копию неизменяемого аргумента, но это изменение не влияет на базовый элемент в вызывающем коде.  
   
 ## <a name="see-also"></a>См. также
+
 - [Процедуры](./index.md)
 - [Параметры и аргументы процедуры](./procedure-parameters-and-arguments.md)
 - [Практическое руководство. Передача аргументов в процедуру](./how-to-pass-arguments-to-a-procedure.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - images [Windows Forms], rotating
 - images [Windows Forms], skewing
 ms.assetid: a3bf97eb-63ed-425a-ba07-dcc65efb567c
-ms.openlocfilehash: 3e539f41667edb505269fe420396c79b68f34e8f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: dda03c9c1e1390ca6a5250471f047d3747e989e2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711503"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839916"
 ---
 # <a name="how-to-rotate-reflect-and-skew-images"></a>Практическое руководство. Поворот, отражение и наклон изображений
 Поворот, отражение и наклон образ, указав конечные точки для верхнего левого, правого верхнего и левого нижнего углов исходного изображения. Три конечные точки определяют аффинное преобразование, которое сопоставляет исходное прямоугольное изображение в параллелограмм.  
@@ -30,15 +30,15 @@ ms.locfileid: "57711503"
   
  Ниже показан исходный образ и образ в параллелограмм. Исходное изображение были неравномерным, отражаются, (повернутый) и перевода. Ось x вдоль верхней границы исходного изображения сопоставляется строку, которая выполняется через (200, 20) и (110, 100). Ось y — вдоль левого края исходного изображения сопоставляется строку, которая выполняется через (200, 20) и (250, 30).  
   
- ![Полосы](./media/stripes1.gif "Stripes1")  
+ ![Исходный образ и образ в параллелограмм.](./media/how-to-rotate-reflect-and-skew-images/reflected-skewed-rotated-illustration.gif)  
   
- Ниже показано, как преобразование, примененное к фотографии.  
+ На следующем рисунке показано, как преобразование, примененное к фотографии:  
   
- ![Преобразовать Climber](./media/transformedclimber.png "TransformedClimber")  
+ ![Рисунок climber и изображения в параллелограмм.](./media/how-to-rotate-reflect-and-skew-images/reflected-skewed-rotated-photo.png)  
   
- Ниже показано, как преобразование, примененное к метафайл.  
+ На следующем рисунке показано такое же преобразование, примененное к метафайлу:  
   
- ![Преобразовать метафайла](./media/transformedmetafile.png "TransformedMetafile")  
+ ![Иллюстрация фигур и текста и, в параллелограмм.](./media/how-to-rotate-reflect-and-skew-images/reflected-skewed-rotated-metafile.png)  
   
  В следующем примере создается изображения, показанные на первом рисунке.  
   

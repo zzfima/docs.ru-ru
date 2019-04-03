@@ -1,5 +1,5 @@
 ---
-title: События не могут быть объявлены с делегирующим типом, у которого есть тип возвращаемого значения
+title: События не могут быть объявлены с делегирующим типом, у которого есть возвращаемый тип
 ms.date: 07/20/2015
 f1_keywords:
 - bc31084
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC31084
 ms.assetid: 6111c5ca-d30b-490a-812e-dd422e221c7d
-ms.openlocfilehash: 0a0d7390c473b34c9a0610d1fe7e8732167645de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fbdd85cfc1852afb2e174ac8b94fd63f9d07b796
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642494"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823215"
 ---
-# <a name="events-cannot-be-declared-with-a-delegate-type-that-has-a-return-type"></a>События не могут быть объявлены с делегирующим типом, у которого есть тип возвращаемого значения
+# <a name="events-cannot-be-declared-with-a-delegate-type-that-has-a-return-type"></a>События не могут быть объявлены с делегирующим типом, у которого есть возвращаемый тип
 Для процедуры функции указан делегат.  
   
  **Идентификатор ошибки:** BC31084  
@@ -24,4 +24,5 @@ ms.locfileid: "54642494"
 -   Укажите делегат для `Sub` процедуры.  
   
 ## <a name="see-also"></a>См. также
+
 - [События](../../../visual-basic/programming-guide/language-features/events/index.md)

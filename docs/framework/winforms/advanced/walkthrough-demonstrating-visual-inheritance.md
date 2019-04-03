@@ -11,12 +11,12 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-ms.openlocfilehash: aa4d18c0e3bbc2613502c7232771c57acc7f0dc8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: fa6da3248f315ad1916e6a7fdc6b0b24ca9e98a3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721454"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816321"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>Пошаговое руководство. Демонстрация визуального наследования
 Визуальное наследование позволяет просматривать элементы управления в базовой форме и добавлять новые элементы управления. В этом пошаговом руководстве рассматривается создание базовой формы и ее компиляция  в библиотеку классов. После этого данная библиотека классов импортируется в другой проект и создается новая форма, которая наследуется от базовой формы. В этом пошаговом руководстве описаны следующие процедуры.  
@@ -140,7 +140,7 @@ ms.locfileid: "57721454"
   
 5.  Откройте производную форму (**Form2**) в конструкторе, дважды щелкнув его, если он еще не открыт.  
   
-     В конструкторе производные кнопки имеют символ (![VisualBasicInheritanceSymbol screenshot](./media/vbinheritanceglyph.gif "vbInheritanceGlyph")) в верхнем углу, указывающее, они унаследованы.  
+     В конструкторе производные кнопки имеют символ)![Снимок экрана наследования символа Visual Basic.](./media/walkthrough-demonstrating-visual-inheritance/visual-basic-inheritance-glyph.gif)) в верхнем углу, указывающее, они унаследованы.  
   
 6.  Выберите **Say Hello** кнопку и понаблюдайте за маркеры изменения размера. Так как данная кнопка защищена, то наследники могут ее перемещать, изменять размер, название и вносить другие изменения.  
   

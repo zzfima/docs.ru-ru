@@ -10,12 +10,12 @@ helpviewer_keywords:
 - structures [Visual Basic], nested control
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
-ms.openlocfilehash: 13e2c5c8d818a09ec5e77ec47fe8a2c83b675d82
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: c016722332dafa3d3be91a1e9e98cc0ce9a49717
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409800"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835197"
 ---
 # <a name="nested-control-structures-visual-basic"></a>Вложенные структуры управления (Visual Basic)
 Можно разместить операторы управления внутри других операторов управления, например `If...Then...Else` блок `For...Next` цикла. Операторы управления внутрь другого оператора управления называется *вложенных*.  
@@ -72,6 +72,7 @@ Next ctl
  Компилятор Visual Basic обнаруживает такие перекрывающиеся структуры управления и сигнализирует об ошибке времени компиляции.  
   
 ## <a name="see-also"></a>См. также
+
 - [Поток управления](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
 - [Структуры решений](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
 - [Циклические структуры](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)

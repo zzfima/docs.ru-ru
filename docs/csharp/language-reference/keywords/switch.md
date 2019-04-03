@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 371b6e232e9d97df3ce34d69bcb10155c1242e1e
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
+ms.openlocfilehash: 73524fd54aeffc86fe0c451ec4418308da764682
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084723"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463258"
 ---
 # <a name="switch-c-reference"></a>switch (справочник по C#)
 
@@ -59,7 +59,7 @@ ms.locfileid: "54084723"
 
 [!code-csharp[switch#2](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]
 
-Выполняет только раздел switch в операторе switch. C# не позволяет продолжить выполнение следующего раздела switch после выполнения предыдущего раздела. Поэтому, например, следующий код вызовет ошибку компиляции CS0163: "Управление не может передаваться вниз от одной метки case к другой (<case label>)".
+Выполняет только раздел switch в операторе switch. C# не позволяет продолжить выполнение следующего раздела switch после выполнения предыдущего раздела. Поэтому, например, следующий код вызовет ошибку компиляции CS0163: "Управление не может передаваться вниз от одной метки case (\<метка case>) к другой".
 
 ```csharp
 switch (caseSwitch)

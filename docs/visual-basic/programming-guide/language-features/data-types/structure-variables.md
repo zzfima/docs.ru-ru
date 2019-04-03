@@ -7,12 +7,12 @@ helpviewer_keywords:
 - variables [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: 156872f8-aabc-4454-8e2d-f2253c3c13c9
-ms.openlocfilehash: f9cc6d0165b0eda8358d250c37910b1362473ab1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a6e542e297a17f44d929235530ae6058cf13a36
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640606"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816334"
 ---
 # <a name="structure-variables-visual-basic"></a>Переменные структуры (Visual Basic)
 После создания структуры, можно объявить переменные уровня модуля и процедуры для определенного типа. Например можно создать структуру, которая записывает сведения о системе компьютера. В следующем примере это показано.  
@@ -53,6 +53,7 @@ yourSystem = mySystem
  Если элемент структуры является ссылочным типом, такие как `String`, `Object`, или массив, указатель на данные, копируется. В предыдущем примере если `systemInfo` бы были включены в объектной переменной, а затем копируется указатель из предыдущего примера `mySystem` для `yourSystem`, и изменение данных объекта через одну структуру будет действовать при обращении к через другую структуру.  
   
 ## <a name="see-also"></a>См. также
+
 - [Типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Простые типы данных](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [Составные типы данных](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)

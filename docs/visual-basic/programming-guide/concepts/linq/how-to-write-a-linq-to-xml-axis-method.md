@@ -1,21 +1,21 @@
 ---
-title: Как выполнить Запись LINQ to XML метода оси (Visual Basic)
+title: Практическое руководство. Запись LINQ to XML метода оси (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b676f025-a24c-4076-8713-aa809b2b8ce0
-ms.openlocfilehash: 5d1fdaa9a5c3cb47bedd6d8f6e98b59f844d9ef5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f10ee90076a71aa44f480639d3bc460ea59044ea
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655482"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824173"
 ---
-# <a name="how-to-write-a-linq-to-xml-axis-method-visual-basic"></a>Как выполнить Запись LINQ to XML метода оси (Visual Basic)
+# <a name="how-to-write-a-linq-to-xml-axis-method-visual-basic"></a>Практическое руководство. Запись LINQ to XML метода оси (Visual Basic)
 Можно написать свои собственные методы оси для получения коллекций из XML-дерева. Один из лучших способов выполнения этого состоит в написании метода расширения, возвращающего коллекцию элементов или атрибутов. Метод расширения можно написать для возврата указанных поднаборов элементов или атрибутов с учетом требований приложения.  
   
 ## <a name="example"></a>Пример  
  В следующем примере используются два метода расширения. Первый метод расширения, `GetXPath`, действует применительно к <xref:System.Xml.Linq.XObject> и возвращает выражение XPath, которое после его вычисления возвращает узел или атрибут. Второй метод расширения, `Find`, применяется к <xref:System.Xml.Linq.XElement>. Он возвращает коллекцию объектов <xref:System.Xml.Linq.XAttribute> и <xref:System.Xml.Linq.XElement>, содержащих некоторый указанный текст.  
   
- В этом примере используется следующий XML-документ: [Пример XML-файла: Несколько заказов на покупку (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ В этом примере используется следующий XML-документ: [Пример XML-файла. Несколько заказов на покупку (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```vb  
 Imports System.Runtime.CompilerServices  
@@ -216,4 +216,5 @@ End Module
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Дополнительные способы создания запросов (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

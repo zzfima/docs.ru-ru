@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For...Next statements
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
-ms.openlocfilehash: bcadcdfb2cb15bc6012ebe1964a4fc4379ba649d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5d47d57b75005d5c13dbf8633981dfb2d57d3e90
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370310"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826331"
 ---
 # <a name="fornext-statement-visual-basic"></a>Оператор For... Next (Visual Basic)
 Повторяет блок операторов указанное число раз.  
@@ -47,7 +47,7 @@ Next [ counter ]
   
 ## <a name="parts"></a>Части  
   
-|Отделение|Описание:|  
+|Отделение|Описание|  
 |----------|-----------------|  
 |`counter`|Требуется в `For` инструкции. Числовой переменной. Переменная управления циклом for. Дополнительные сведения см. в разделе [встречный аргумент](#BKMK_Counter) далее в этом разделе.|  
 |`datatype`|Необязательный параметр. Тип данных `counter`. Дополнительные сведения см. в разделе [встречный аргумент](#BKMK_Counter) далее в этом разделе.|  
@@ -173,6 +173,7 @@ Next [ counter ]
  [!code-vb[VbVbalrStatements#117](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#117)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Collections.Generic.List%601>
 - [Циклические структуры](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
 - [Оператор While...End While](../../../visual-basic/language-reference/statements/while-end-while-statement.md)

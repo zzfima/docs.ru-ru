@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30996
 ms.assetid: 6e183fe0-8888-43ed-a062-01571079455f
-ms.openlocfilehash: 1fa66a3c50b5c1eadd4c63b92c57ab60e1a11076
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 77cfeb57bc313ded2d2c4d5a0c59041c5c19f515
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595998"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826084"
 ---
 # <a name="initializer-expected"></a>Ожидается инициализатор
 Предпринята попытка объявить экземпляр класса с помощью инициализатора объектов, в котором список инициализации пуст, как показано в следующем примере.  
@@ -32,5 +32,6 @@ ms.locfileid: "54595998"
 1.  Инициализация по крайней мере одно поле или свойство в инициализаторе или не использовать инициализатор объекта.  
   
 ## <a name="see-also"></a>См. также
+
 - [Инициализаторы объектов. Именованные и анонимные типы](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 - [Практическое руководство. Объявление объекта с помощью инициализатора объектов](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)

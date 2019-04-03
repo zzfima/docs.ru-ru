@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Object data type [Visual Basic], data types
 - data types [Visual Basic], choosing
 ms.assetid: 64c71a12-9057-4dbf-baca-7379c4aada69
-ms.openlocfilehash: 7e32bf158b91c23c32028eb6877bd0089a9019b2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4808d87322d5b21b70ec38e2eb31b2b204938745
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655053"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821769"
 ---
 # <a name="miscellaneous-data-types-visual-basic"></a>Прочие типы данных (Visual Basic)
 Visual Basic предоставляет несколько типов данных, не предназначенных для чисел или знаков. Вместо этого они работают с специализированном например Да/нет значений, значений даты и времени и адресов объектов.  
@@ -31,6 +31,7 @@ Visual Basic предоставляет несколько типов данны
  Преимущество `Object` имеет тип данных, что его можно использовать для хранения данных любого типа данных. Недостатком является то, что с вас взиматься дополнительные операции, которые занимает больше времени выполнения и снижение производительности приложения. Если вы используете `Object` переменных для типов значений, то это вызовет *упаковки-преобразования* и *распаковки*. Если вы используете для ссылочных типов, то это вызовет *позднее связывание*.  
   
 ## <a name="see-also"></a>См. также
+
 - [Знаки типов](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
 - [Простые типы данных](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [Числовые типы данных](../../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)

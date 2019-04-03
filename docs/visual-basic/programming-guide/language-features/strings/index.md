@@ -2,9 +2,15 @@
 title: Строки в Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'Visual Basic code, strings'
-  - 'strings [Visual Basic], Visual Basic'
+- Visual Basic code, strings
+- strings [Visual Basic], Visual Basic
 ms.assetid: 7e4c777c-ad69-46e2-8b9e-9be4033b1c96
+ms.openlocfilehash: 856927baa06019f7827bf9751352069f0fc37829
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821079"
 ---
 # <a name="strings-in-visual-basic"></a>Строки в Visual Basic
 В этом разделе описываются основные принципы использования строк в Visual Basic.  
@@ -29,4 +35,5 @@ ms.assetid: 7e4c777c-ad69-46e2-8b9e-9be4033b1c96
  Показывает, как шифровать и расшифровывать строки с помощью алгоритма Triple DES в версии поставщика служб шифрования.  
   
 ## <a name="see-also"></a>См. также
+
 - [Возможности и элементы языка Visual Basic](../../../../visual-basic/programming-guide/language-features/index.md)

@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Управление областью действия переменной (Visual Basic)
+title: Практическое руководство. Управление областью действия переменной (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], scope
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 - visibility [Visual Basic], variables
 ms.assetid: 44b7f62a-cb5c-4d50-bce9-60ae68f87072
-ms.openlocfilehash: 656bfa6fa9b3445d91cd8ac39b83bccf3e44758e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef7957a991718112fe01c4fa3a85f29b9226abd3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521417"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818727"
 ---
-# <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>Как выполнить Управление областью действия переменной (Visual Basic)
+# <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>Практическое руководство. Управление областью действия переменной (Visual Basic)
 Как правило, переменная находится в *область*, или доступна для ссылки на протяжении всего региона, в котором она объявлена. В некоторых случаях переменная элемента *уровень доступа* может влиять на ее область действия.  
   
  Для получения дополнительной информации см. [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md).  
@@ -87,6 +87,7 @@ Public strMsg As String
  Более узкой областью действия переменной, тем меньше вероятность того, что вредоносный код может использовать неправильной его использовать.  
   
 ## <a name="see-also"></a>См. также
+
 - [Область, в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
 - [Время существования в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
 - [Уровни доступа в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)

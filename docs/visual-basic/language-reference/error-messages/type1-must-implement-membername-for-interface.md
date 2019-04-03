@@ -1,5 +1,5 @@
 ---
-title: Тип <type1><typename> должен реализовать <membername> для интерфейса <interfacename>
+title: <type1>"<typename>«должен реализовывать»<membername>«для интерфейса»<interfacename>"
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30154
@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30154
 ms.assetid: 259afdfa-3608-4760-adcb-88ec0da5020d
-ms.openlocfilehash: de7dd9026e08495941a89be0db11ad4c68d2a748
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 485680a2984a29037b2836fcba13cf1aa1e2e699
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55264236"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822756"
 ---
 # <a name="type1typename-must-implement-membername-for-interface-interfacename"></a>\<тип1 > "\<typename >" должен реализовывать "\<имя_члена >" для интерфейса "\<имя_интерфейса >"
 "\<typename >" должен реализовывать "\<имя_члена >" для интерфейса "\<имя_интерфейса >". Реализация свойства должен иметь совпадающие «ReadOnly» или «WriteOnly» спецификаторы.  
@@ -36,5 +36,6 @@ ms.locfileid: "55264236"
 4.  При реализации свойства объявить `Get` и `Set` процедуры, соответствующим образом.  
   
 ## <a name="see-also"></a>См. также
+
 - [Оператор Implements](../../../visual-basic/language-reference/statements/implements-statement.md)
 - [Интерфейсы](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

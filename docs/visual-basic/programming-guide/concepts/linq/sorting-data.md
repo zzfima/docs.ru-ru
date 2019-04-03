@@ -2,25 +2,25 @@
 title: Сортировка данных (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 6f81065c-0c89-4bf3-a6d8-442273f8810e
-ms.openlocfilehash: 5875b15dbdec69aca653b8f6cca4dd07fc9af343
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: ad39aca6a53221f077a6b8313262d508744ff5ea
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58126257"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819090"
 ---
 # <a name="sorting-data-visual-basic"></a>Сортировка данных (Visual Basic)
 Операция сортировки упорядочивает элементы последовательности на основе одного или нескольких атрибутов. Первый критерий сортировки выполняет первичную сортировку элементов. Указав второй критерий поиска, можно сортировать элементы внутри каждой группы первичной сортировки.  
   
  На следующем рисунке показаны результаты операции сортировки в алфавитном порядке в последовательности символов.  
   
- ![Рисунок, показывающий операции сортировки в алфавитном порядке.](./media/sorting-data/alphabetical-sort-operation.png)  
+ ![Рисунок с операциями сортировки в алфавитном порядке.](./media/sorting-data/alphabetical-sort-operation.png)  
   
  Далее перечислены методы стандартных операторов запроса, которые выполняют сортировку данных.  
   
 ## <a name="methods"></a>Методы  
   
-|Имя метода|Описание:|Синтаксис выражений запросов Visual Basic|Дополнительные сведения|  
+|Имя метода|Описание|Синтаксис выражений запросов Visual Basic|Дополнительные сведения|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
 |OrderBy|Сортировка значений в возрастающем порядке.|`Order By`|<xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderBy%2A?displayProperty=nameWithType>|  
 |OrderByDescending|Сортировка значений в убывающем порядке.|`Order By … Descending`|<xref:System.Linq.Enumerable.OrderByDescending%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderByDescending%2A?displayProperty=nameWithType>|  
@@ -143,6 +143,7 @@ MsgBox(sb.ToString())
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Linq>
 - [Общие сведения о стандартных операторах запроса (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Предложение Order By](../../../../visual-basic/language-reference/queries/order-by-clause.md)

@@ -5,24 +5,24 @@ helpviewer_keywords:
 - shadowing, vs. overriding
 - overriding, vs. shadowing
 ms.assetid: 2d014a0b-7630-407d-8f4e-24bd87987923
-ms.openlocfilehash: d60d668c97019418b30b89147e86f7beea1c31f7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b935184f0e4d0378bfea69811aa4e6c068a9776f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640692"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827930"
 ---
 # <a name="differences-between-shadowing-and-overriding-visual-basic"></a>Различия между сокрытием и переопределением (Visual Basic)
 При определении класса, который наследует от базового класса, иногда требуется переопределить один или несколько элементов базового класса в производном классе. Сокрытие и переопределение доступны для этой цели.  
   
-## <a name="comparison"></a>Оператор  
+## <a name="comparison"></a>Сравнение  
  Сокрытие и переопределение используются при производный класс наследует от базового класса, и оба переопределить один элемент, объявленный с другим. Но существуют значительные различия между ними.  
   
  В следующей таблице сравниваются, затенения и переопределения.  
   
 ||||  
 |---|---|---|  
-|Для сравнения|Затенение|Переопределение|  
+|Для сравнения|Удаленное управление|Переопределение|  
 |Цель|Обеспечивает защиту от последующего изменения базового класса, который представляет член, которые вы уже определили в производном классе|Достижение полиморфизма за счет определения другой процедуры или свойства с той же последовательностью вызова реализации<sup>1</sup>|  
 |Переопределяемый элемент|Объявленный элемент любого типа|Только процедура (`Function`, `Sub`, или `Operator`) или свойство|  
 |Переопределенный элемент|Объявленный элемент любого типа|Только процедура или свойство с такой же последовательностью вызова<sup>1</sup>|  
@@ -52,6 +52,7 @@ ms.locfileid: "54640692"
 -   Требуется свобода изменения типа элемента или последовательность вызова.  
   
 ## <a name="see-also"></a>См. также
+
 - [Ссылки на объявленные элементы](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Сокрытие в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [Практическое руководство. Сокрытие переменной с тем же именем, что и ваша переменная](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)

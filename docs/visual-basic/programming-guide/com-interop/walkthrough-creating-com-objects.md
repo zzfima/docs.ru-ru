@@ -8,12 +8,12 @@ helpviewer_keywords:
 - object creation [Visual Basic], COM objects
 - COM objects, walkthroughs
 ms.assetid: 7b07a463-bc72-4392-9ba0-9dfcb697a44f
-ms.openlocfilehash: 6b079db3ccc07494bdfdf7dba49c27fe14dca4e5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5fc0105cffb5606f9382aca7b55d6544d04f9fe7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973942"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838161"
 ---
 # <a name="walkthrough-creating-com-objects-with-visual-basic"></a>Пошаговое руководство. Создание объектов COM с помощью Visual Basic
 При создании новых приложений или компонентов, лучше всего создать сборок платформы .NET Framework. Тем не менее Visual Basic также позволяет легко предоставить доступ к компоненту .NET Framework для модели COM. Это позволяет создавать новые компоненты для более ранних пакетов приложений, требующих COM-компонентов. В этом пошаговом руководстве демонстрируется использование Visual Basic для предоставления [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] объектов в виде COM-объектов, как с и без шаблона COM-класса.  
@@ -91,6 +91,7 @@ ms.locfileid: "56973942"
     >  COM-объекты, созданные с помощью Visual Basic не может использоваться другими приложениями Visual Basic, поскольку они не являются настоящими COM-объектами. Попытка добавить ссылку на такие объекты COM, возникнет ошибка. Дополнительные сведения см. в разделе [COM-взаимодействие в приложениях .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:Microsoft.VisualBasic.ComClassAttribute>
 - [COM-взаимодействие](../../../visual-basic/programming-guide/com-interop/index.md)
 - [Пошаговое руководство: Реализация наследования с использованием COM-объектов](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)

@@ -2,6 +2,12 @@
 title: Деревья выражений (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 8bbbb02d-7ffc-476b-8c25-118d82bf5d46
+ms.openlocfilehash: c1e576439956a735962978d37430949ed6bc39d8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832504"
 ---
 # <a name="expression-trees-visual-basic"></a>Деревья выражений (Visual Basic)
 Деревья выражений представляют код в виде древовидной структуры, где каждый узел является выражением, например, вызовом метода или двоичной операцией, такой как `x < y`.  
@@ -136,6 +142,7 @@ Console.WriteLine(expr.Compile()(4))
  Дополнительные сведения см. в разделе [Как Выполнение деревьев выражений (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Linq.Expressions>
 - [Практическое руководство. Выполнение деревьев выражений (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
 - [Практическое руководство. Изменение деревьев выражений (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)

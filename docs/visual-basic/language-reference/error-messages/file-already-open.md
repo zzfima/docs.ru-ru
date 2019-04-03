@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID55
 ms.assetid: d674a0fb-ef16-4cc2-9da7-709a8a07dbea
-ms.openlocfilehash: cda72e03eb5c2469b8106957a0c50fbfa5314549
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e565dbd6352a8f76290f3f58d62e2e14a18ef45f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567039"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823510"
 ---
 # <a name="file-already-open"></a>Файл уже открыт
 Иногда файл должен быть закрыт перед другим `FileOpen` или другую операцию. Некоторые из возможных причин этой ошибки:  
@@ -23,4 +23,5 @@ ms.locfileid: "54567039"
 1.  Закройте файл перед выполнением инструкции.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:Microsoft.VisualBasic.FileSystem.FileOpen%2A>

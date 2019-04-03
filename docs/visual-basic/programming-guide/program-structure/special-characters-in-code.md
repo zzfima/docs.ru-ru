@@ -30,12 +30,12 @@ helpviewer_keywords:
 - exclamation point operator (!)
 - Visual Basic code, special characters
 ms.assetid: 310dce0c-45b5-4e0d-83e9-32df258d2a3e
-ms.openlocfilehash: 17b5fcc2be2730abfd7ee0090f9f34053e81c5f8
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 65fcd10521742e287c7934080b3352a06668df7a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971901"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835561"
 ---
 # <a name="special-characters-in-code-visual-basic"></a>Специальные символы в коде (Visual Basic)
 Иногда необходимо использовать специальные символы в коде, то есть символы, которые не являются буквой или цифрой. Знаки препинания и специальные символы в кодировке Visual Basic имеют различные применения, от организации текста программы до определения задач, выполняемых компилятором или скомпилированной программой. Эти знаки не определяют операции, подлежащие выполнению.  
@@ -88,5 +88,6 @@ ms.locfileid: "56971901"
  `!` Символ используется в качестве `Single` символ типа.  
   
 ## <a name="see-also"></a>См. также
+
 - [Соглашения о структуре программы и коде](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
 - [Знаки типов](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)

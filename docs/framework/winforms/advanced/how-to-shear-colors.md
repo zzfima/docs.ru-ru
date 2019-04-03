@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Сместить цвета
+title: Практическое руководство. Сдвиг цветов
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - colors [Windows Forms], transforming with color matrices
 - colors [Windows Forms], shearing
 ms.assetid: 0a424171-5b8b-45c4-afef-e9720a6c3e22
-ms.openlocfilehash: eff468e5761038723e16eddf84bdcf8849ac30d1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: bb5f9043ea5bdd25e984d73d3640c80f599714e6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720229"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826396"
 ---
-# <a name="how-to-shear-colors"></a>Практическое руководство. Сместить цвета
+# <a name="how-to-shear-colors"></a>Практическое руководство. Сдвиг цветов
 Пропорциональное изменение увеличивает или уменьшает компонент цвета, обратно пропорционально значению другого компонента цвета. Например рассмотрим преобразования, где красный компонент увеличивается на половину значения синего компонента. При таком преобразовании цвет (0,2, 0,5, 1) станет (0,7, 0,5, 1). Новое значение красного компонента — 0,2 + (1/2)(1) = 0,7.  
   
 ## <a name="example"></a>Пример  
  В следующем примере создается <xref:System.Drawing.Image> объекта из файла ColorBars4.bmp. Затем код применяет наклон преобразование, описанное в предыдущем абзаце для каждого пикселя в изображении.  
   
- Ниже показан исходное изображение в левой части и преобразованное изображение справа.  
+ Ниже показан исходное изображение в левой части и преобразованное изображение справа: 
   
- ![Сдвиг цветов](./media/colortrans6.png "colortrans6")  
+ ![Две клетки с цветной полосы side-by-side иллюстрирующая исходного изображения, а преобразованное изображение.](./media/how-to-shear-colors/original-image-sheared-image.png)  
   
  Ниже перечислены эти векторы четырех полос до и после преобразования.  
   

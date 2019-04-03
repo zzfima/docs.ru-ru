@@ -2,12 +2,12 @@
 title: Общие сведения о стандартных операторах (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 302bd39e-2ec1-495b-94bf-37d370d6f05f
-ms.openlocfilehash: 1e665a9408deb5d5788301b1b24f39a4fd79fbc3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9bfdf2163be52d9016a800d65006bbc4fbf560a3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526500"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841476"
 ---
 # <a name="standard-query-operators-overview-visual-basic"></a>Общие сведения о стандартных операторах (Visual Basic)
 *Стандартные операторы запросов* — это методы, формирующие шаблон LINQ. Большинство этих методов работают с последовательностями. В данном контексте последовательность — это объект, тип которого реализует интерфейс <xref:System.Collections.Generic.IEnumerable%601> или <xref:System.Linq.IQueryable%601>. Функциональные возможности стандартных операторов запросов включают фильтрацию, проекцию, статистическую обработку, сортировку и многие другие.  
@@ -101,6 +101,7 @@ MsgBox(output.ToString())
  [Операции агрегирования (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/aggregation-operations.md)  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Linq.Enumerable>
 - <xref:System.Linq.Queryable>
 - [Знакомство с LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)

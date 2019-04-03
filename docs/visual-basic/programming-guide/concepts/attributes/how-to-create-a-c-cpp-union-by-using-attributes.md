@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Создание объединения C / C++ с помощью атрибутов (Visual Basic)
+title: Практическое руководство. Создание объединения C / C++ с помощью атрибутов (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9352a7e4-c0da-4d07-aa14-55ed43736fcb
-ms.openlocfilehash: e37aac03db7a24e6519acb4eb843b46b8c60b4f2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c3ebf248f5d2f20e2fff25fb8326a294b51d153
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663288"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829308"
 ---
-# <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a>Как выполнить Создание объединения C/C++ с помощью атрибутов (Visual Basic)
+# <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a>Практическое руководство. Создание объединения C/C++ с помощью атрибутов (Visual Basic)
 С помощью атрибутов можно настраивать расположение структур в памяти. Например, можно создать так называемое объединение в C/C++ с помощью атрибутов `StructLayout(LayoutKind.Explicit)` и `FieldOffset`.  
   
 ## <a name="example"></a>Пример  
@@ -67,6 +67,7 @@ Structure TestExplicit
  Два целочисленных поля `i1` и `i2` используют те же адреса памяти, что и `lg`. Такое управление расположением структуры полезно при использовании вызова неуправляемого кода.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Reflection>
 - <xref:System.Attribute>
 - [Руководство по программированию на Visual Basic](../../../../visual-basic/programming-guide/index.md)

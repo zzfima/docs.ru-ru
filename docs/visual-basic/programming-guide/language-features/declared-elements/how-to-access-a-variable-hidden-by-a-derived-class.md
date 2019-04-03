@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Доступ к переменной, скрытой производным классом (Visual Basic)
+title: Практическое руководство. Доступ к переменной, скрытой производным классом (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - qualification [Visual Basic], of element names
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - declared elements [Visual Basic], referencing
 - variables [Visual Basic], accessing hidden
 ms.assetid: ae21a8ac-9cd4-4fba-a3ec-ecc4321ef93c
-ms.openlocfilehash: e840c83d7969eeb0322034f0f274fb19ca2b8e7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a97a51d4570d87eaa873fb3152ad810f528dff46
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622849"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832181"
 ---
-# <a name="how-to-access-a-variable-hidden-by-a-derived-class-visual-basic"></a>Как выполнить Доступ к переменной, скрытой производным классом (Visual Basic)
+# <a name="how-to-access-a-variable-hidden-by-a-derived-class-visual-basic"></a>Практическое руководство. Доступ к переменной, скрытой производным классом (Visual Basic)
 Когда код в производном классе получает доступ к переменной, компилятор обычно разрешает ссылку на ближайшую доступную версию, то есть доступный минимальное количество производных действий обратно из доступа к классу. Если переменная определена в производном классе, код обычно обращается к этому определению.  
   
  Если переменная производного класса скрывает переменную в базовом классе, он скрывает версии базового класса. Тем не менее, можно получить доступ к переменной базового класса путем определения ее с `MyBase` ключевое слово.  
@@ -50,6 +50,7 @@ ms.locfileid: "54622849"
  Чтобы уменьшить риск ссылки на неправильную версию затененной переменной, можно полностью определить все ссылки на переменную тенью. Затенение представляет несколько версий переменной с тем же именем. Если оператор кода ссылается на имя переменной, версии, к которому компилятор разрешает ссылку зависит от факторов, таких как расположение оператор кода, а также наличие уточняющей строки. Это может увеличить риск ссылки на неправильную версию переменной.  
   
 ## <a name="see-also"></a>См. также
+
 - [Ссылки на объявленные элементы](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Сокрытие в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [Различия между затемнением и переопределением](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)

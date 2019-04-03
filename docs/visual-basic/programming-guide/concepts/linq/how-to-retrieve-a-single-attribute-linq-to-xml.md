@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Извлечение одного атрибута (LINQ to XML) (Visual Basic)
+title: Практическое руководство. Извлечение одного атрибута (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 11b938d7-c011-4048-900e-8b9183c41c94
-ms.openlocfilehash: 73f5a252bd207edaa14aead42a6f122c3320423e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f56bdf86e4b63bc952c1d139aac9ee619b5a5f6c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704685"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837147"
 ---
-# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-visual-basic"></a>Как выполнить Извлечение одного атрибута (LINQ to XML) (Visual Basic)
+# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-visual-basic"></a>Практическое руководство. Извлечение одного атрибута (LINQ to XML) (Visual Basic)
 В этом разделе приведены объяснения способа получения одного атрибута элемента при условии, что название атрибута известно. Это полезно для составления выражений запросов, при которых требуется найти элемент с определенным атрибутом.  
   
  Метод <xref:System.Xml.Linq.XElement.Attribute%2A> класса <xref:System.Xml.Linq.XElement> возвращает значение <xref:System.Xml.Linq.XAttribute> с указанным именем.  
@@ -93,4 +93,5 @@ work
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Оси LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

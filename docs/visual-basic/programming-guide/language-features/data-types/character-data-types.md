@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Char data type [Visual Basic], character data types
 - data types [Visual Basic], choosing
 ms.assetid: 902479ef-1679-47fc-9911-0c1c5008226c
-ms.openlocfilehash: 5ede86cca1bddb15cab6518e17405837bda008f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 14085172a8f9f9d60af0495a36dd4ba7592213fa
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536897"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840982"
 ---
 # <a name="character-data-types-visual-basic"></a>Символьные типы данных (Visual Basic)
 Visual Basic предоставляет *символьные типы данных* для работы с символами печати и отображения. Оба они работают с символами Юникода, `Char` содержит один символ, тогда как `String` содержит неопределенное число символов.  
@@ -40,6 +40,7 @@ Visual Basic предоставляет *символьные типы данн�
  Дополнительные сведения см. в разделе [строковый тип данных](../../../../visual-basic/language-reference/data-types/string-data-type.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Простые типы данных](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [Составные типы данных](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
 - [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)

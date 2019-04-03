@@ -2,12 +2,12 @@
 title: Фрагментирование канала
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
-ms.openlocfilehash: 4adbd558aff9e1689b1e14521c43f1cad281dbc6
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 0733a1ce914be98f6bad9b8f58ca8e4384ac74fa
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411503"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834768"
 ---
 # <a name="chunking-channel"></a>Фрагментирование канала
 При отправке больших сообщений с помощью Windows Communication Foundation (WCF), часто желательно ограничить объем памяти, используемой для буферизации этих сообщений. Одним из возможных решений является потоковая передача тела сообщения (предполагая, что основной объем данных содержится в теле сообщения). Однако для некоторых протоколов требуется буферизация всего сообщения. Например, при надежном обмене сообщениями и необходимости обеспечения безопасности. Другим возможным решением является разделение большого сообщения на маленькие, называемые фрагментами, и отправка этих фрагментов поочередно с последующим восстановлением большого сообщения на получающей стороне. Приложение может выполнить фрагментацию и дефрагментацию самостоятельно или воспользоваться пользовательским каналом. В примере канала фрагментации показано, как можно использовать пользовательский протокол или многоуровневый канал для фрагментации и дефрагментации сообщений произвольного большого размера.  
@@ -199,11 +199,7 @@ as the ChunkingStart message.
 ```  
   
 ## <a name="chunking-channel-architecture"></a>Архитектура канала фрагментации  
- Канал фрагментации является каналом `IDuplexSessionChannel`, следующим стандартной архитектуре каналов на высоком уровне. 
-  `ChunkingBindingElement` может выполнить построение `ChunkingChannelFactory` и `ChunkingChannelListener`. 
-  `ChunkingChannelFactory` создает экземпляры `ChunkingChannel` при соответствующем запросе. 
-  `ChunkingChannelListener` создает экземпляры `ChunkingChannel`, когда принимается новый внутренний канал. 
-  `ChunkingChannel` отвечает за отправку и получение сообщений.  
+ Канал фрагментации является каналом `IDuplexSessionChannel`, следующим стандартной архитектуре каналов на высоком уровне. `ChunkingBindingElement` может выполнить построение `ChunkingChannelFactory` и `ChunkingChannelListener`. `ChunkingChannelFactory` создает экземпляры `ChunkingChannel` при соответствующем запросе. `ChunkingChannelListener` создает экземпляры `ChunkingChannel`, когда принимается новый внутренний канал. `ChunkingChannel` отвечает за отправку и получение сообщений.  
   
  На следующем более низком уровне `ChunkingChannel` основывается на нескольких компонентах для реализации протокола фрагментации. На отправляющей стороне канал использует пользовательский <xref:System.Xml.XmlDictionaryWriter>, называемый `ChunkingWriter`, который непосредственно выполняет фрагментацию. `ChunkingWriter` непосредственно использует внутренний канал для отправки фрагментов данных. Использование пользовательского средства записи `XmlDictionaryWriter` позволяет отправлять фрагменты одновременно с записью большого тела исходного сообщения. Это означает, что все исходное сообщение не буферизуется.  
   
@@ -284,16 +280,14 @@ interface ITestService
  Для `ChunkingChannel` не требуется специальное поведение при возникновении ошибки в канале, поэтому `OnFaulted` не переопределяется.  
   
 ## <a name="implementing-channel-factory"></a>Реализация фабрики каналов  
- 
-  `ChunkingChannelFactory` отвечает за создание экземпляров каналов `ChunkingDuplexSessionChannel` и выполнение каскадных переходов состояний в фабрику внутренних каналов.  
+ `ChunkingChannelFactory` отвечает за создание экземпляров каналов `ChunkingDuplexSessionChannel` и выполнение каскадных переходов состояний в фабрику внутренних каналов.  
   
  `OnCreateChannel` использует фабрику внутренних каналов для создания внутреннего канала `IDuplexSessionChannel`. Затем метод создает новый `ChunkingDuplexSessionChannel`, передавая ему этот внутренний канал вместе со списком действий фрагментируемых сообщений и максимальным количеством фрагментов, буферизуемых при получении. Список фрагментируемых сообщений и максимальное количество буферизуемых фрагментов - это два параметра, передаваемые `ChunkingChannelFactory` в его конструкторе. В разделе об `ChunkingBindingElement` описывается, откуда возникают эти значения.  
   
  Методы `OnOpen`, `OnClose`, `OnAbort` и их асинхронные эквиваленты вызывают соответствующий метод перехода между состояниями в фабрике внутренних каналов.  
   
 ## <a name="implementing-channel-listener"></a>Реализация прослушивателя каналов  
- 
-  `ChunkingChannelListener` является оболочкой прослушивателя внутренних каналов. Его основной функцией, помимо делегирования вызовов в прослушиватель внутренних каналов, является создание новой программы-оболочки `ChunkingDuplexSessionChannels` для каналов, принимаемых из прослушивателя внутренних каналов. Это выполняется в методах `OnAcceptChannel` и `OnEndAcceptChannel`. Созданная `ChunkingDuplexSessionChannel` передается во внутренний канал вместе с другими ранее описанными параметрами.  
+ `ChunkingChannelListener` является оболочкой прослушивателя внутренних каналов. Его основной функцией, помимо делегирования вызовов в прослушиватель внутренних каналов, является создание новой программы-оболочки `ChunkingDuplexSessionChannels` для каналов, принимаемых из прослушивателя внутренних каналов. Это выполняется в методах `OnAcceptChannel` и `OnEndAcceptChannel`. Созданная `ChunkingDuplexSessionChannel` передается во внутренний канал вместе с другими ранее описанными параметрами.  
   
 ## <a name="implementing-binding-element-and-binding"></a>Реализация элемента привязки и привязки  
  Элемент `ChunkingBindingElement` отвечает за создание фабрики `ChunkingChannelFactory` и прослушивателя `ChunkingChannelListener`. `ChunkingBindingElement` Проверяет, является ли T в `CanBuildChannelFactory` \<T > и `CanBuildChannelListener` \<T > имеет тип `IDuplexSessionChannel` (единственный канал, поддерживаемый каналом фрагментации) и поддерживают ли другие элементы привязки в привязке это Тип канала.  
@@ -309,8 +303,7 @@ interface ITestService
 ### <a name="determining-which-messages-to-chunk"></a>Какие сообщения следует фрагментировать  
  Канал фрагментации фрагментирует только сообщения, определенные посредством атрибута `ChunkingBehavior`. Класс `ChunkingBehavior` реализует метод `IOperationBehavior` и реализуется с помощью вызова метода `AddBindingParameter`. В этом методе `ChunkingBehavior` проверяет значение свойства `AppliesTo` (`InMessage`, `OutMessage` или обоих), чтобы определить, какие сообщения следует фрагментировать. Затем он возвращает действие для каждого сообщения (из коллекции сообщений в `OperationDescription`) и добавляет их в коллекцию строк, содержащуюся в экземпляре `ChunkingBindingParameter`. Затем он добавляет этот параметр `ChunkingBindingParameter` в предоставленную коллекцию `BindingParameterCollection`.  
   
- 
-  `BindingParameterCollection` передается внутри `BindingContext` каждому элементу привязки в привязке при построении этим элементом привязки фабрики каналов или прослушивателя каналов. `ChunkingBindingElement`В реализации `BuildChannelFactory<T>` и `BuildChannelListener<T>` извлекают этот `ChunkingBindingParameter` из `BindingContext’`s `BindingParameterCollection`. Коллекция действий, содержащихся в параметре `ChunkingBindingParameter`, затем передается в фабрику `ChunkingChannelFactory` или прослушиватель `ChunkingChannelListener`, которые, в свою очередь, передают ее в канал `ChunkingDuplexSessionChannel`.  
+ `BindingParameterCollection` передается внутри `BindingContext` каждому элементу привязки в привязке при построении этим элементом привязки фабрики каналов или прослушивателя каналов. `ChunkingBindingElement`В реализации `BuildChannelFactory<T>` и `BuildChannelListener<T>` извлекают этот `ChunkingBindingParameter` из `BindingContext’`s `BindingParameterCollection`. Коллекция действий, содержащихся в параметре `ChunkingBindingParameter`, затем передается в фабрику `ChunkingChannelFactory` или прослушиватель `ChunkingChannelListener`, которые, в свою очередь, передают ее в канал `ChunkingDuplexSessionChannel`.  
   
 ## <a name="running-the-sample"></a>Запуск примера  
   
@@ -385,4 +378,3 @@ Service started, press enter to exit
  > Sent chunk 10 of message 5b226ad5-c088-4988-b737-6a565e0563dd  
 ```  
   
-## <a name="see-also"></a>См. также

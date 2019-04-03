@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /define compiler option [Visual Basic]
 - define compiler option [Visual Basic]
 ms.assetid: f735c57d-1cf9-4f2f-a26f-0de630fd4077
-ms.openlocfilehash: c21223cc353b7a4614511aa97340c6bc5d61e70e
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: d0a483e7a3c9e9863db39e89d655cf172c1e8c81
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200662"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834313"
 ---
 # <a name="-define-visual-basic"></a>-Определение (Visual Basic)
 Задает константы условной компиляции.  
@@ -32,7 +32,7 @@ ms.locfileid: "57200662"
 |Термин|Определение|  
 |---|---|  
 |`symbol`|Обязательный. Определяемый символ.|  
-|`value`|Необязательно. Значение, которому назначается `symbol`. Если `value` представляет собой строку, оно должно быть заключено в обратная косая черта и кавычка (\\«) кавычки. Если значение не задано, считается, что используется значение True.|  
+|`value`|Необязательный параметр. Значение, которому назначается `symbol`. Если `value` представляет собой строку, оно должно быть заключено в обратная косая черта и кавычка (\\«) кавычки. Если значение не задано, считается, что используется значение True.|  
   
 ## <a name="remarks"></a>Примечания  
  `-define` Параметр действует аналогично использованию `#Const` директивы препроцессора в файле исходного кода, за исключением этой константы, определенные с помощью `-define` являются общими и применяются ко всем файлам в проекте.  
@@ -53,6 +53,7 @@ ms.locfileid: "57200662"
  [!code-vb[VbVbalrCompiler#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/Class1.vb#45)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Компилятор Visual Basic с интерфейсом командной строки](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Директивы #If...Then...#Else](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
 - [Директива #Const](../../../visual-basic/language-reference/directives/const-directive.md)

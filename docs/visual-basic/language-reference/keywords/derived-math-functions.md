@@ -21,12 +21,12 @@ helpviewer_keywords:
 - degrees
 - arccosine function
 ms.assetid: 63e449d8-9444-44fb-8db1-6d9cf346e2aa
-ms.openlocfilehash: 1273871faf65afdd1a894c03f13a2c93507c1b13
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d0606c52d1d50fcc2fd8eea3ad2851c95b18a69
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505865"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836588"
 ---
 # <a name="derived-math-functions-visual-basic"></a>Производные математические функции (Visual Basic)
 В следующей таблице показаны невстроенной математические функции, которые могут быть получены из встроенных математических функций из <xref:System.Math?displayProperty=nameWithType> объекта. Доступ к встроенных математических функций, добавив `Imports System.Math` в проект или файл.  
@@ -55,4 +55,5 @@ ms.locfileid: "54505865"
 |Обратный гиперболический котангенс (Acoth(x)))|Журнал ((x + 1) / (x – 1)) / 2|  
   
 ## <a name="see-also"></a>См. также
+
 - [Математические функции](../../../visual-basic/language-reference/functions/math-functions.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - arbitrary content classes [WPF], content model
 - ContentControl class [WPF], displaying content
 ms.assetid: 214da5ef-547a-4cf8-9b07-4aa8a0e52cdd
-ms.openlocfilehash: bd9dc7a441987b2089f0f21c81311a628ae3cdfa
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6cbb13fdcba2cf014c4c31a5dc5b21fe2721b214
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373101"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816919"
 ---
 # <a name="wpf-content-model"></a>Модель содержимого WPF
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] — это презентационная платформа, которая предоставляет множество элементов и типов, схожих с элементами управления, основное предназначение которых — отображение различных типов содержимого. Чтобы определить, какой элемент управления использовать или от какого элемента управления выполнять наследование, вы должны понимать, какие виды объектов лучше всего может отображать конкретный элемент управления.  
@@ -38,9 +38,9 @@ ms.locfileid: "57373101"
 |<xref:System.Windows.Controls.ItemsControl>|Коллекция произвольных объектов.|  
 |<xref:System.Windows.Controls.HeaderedItemsControl>|Заголовок и коллекция элементов, являющиеся произвольными объектами.|  
   
- Элементы управления, производные от этих классов, могут содержать тот же тип содержимого и обрабатывать содержимое аналогичным образом. На рисунке ниже показаны элементы управления из каждой модели содержимого, содержащие изображение и некоторый текст.  
+ Элементы управления, производные от этих классов, могут содержать тот же тип содержимого и обрабатывать содержимое аналогичным образом. На следующем рисунке показан один элемент управления из каждой модели содержимого, который содержит изображение и некоторый текст:  
   
- ![Button, GroupBox, Listbox, TreeViewItem](./media/controlcontentmodelimagetextinto.PNG "ControlContentModelImageTextInto")  
+ ![Снимок экрана, показывающий четыре различных элементов управления, один из каждой модели содержимого.](./media/wpf-content-model/control-content-model-image-text.png)  
   
 ### <a name="controls-that-contain-a-single-arbitrary-object"></a>Элементы управления, содержащие один произвольный объект  
  <xref:System.Windows.Controls.ContentControl> Класса содержит один элемент произвольного содержимого. Его свойство содержимого — <xref:System.Windows.Controls.ContentControl.Content%2A>. Следующие элементы управления наследуют <xref:System.Windows.Controls.ContentControl> и используют его модель содержимого:  
@@ -85,10 +85,9 @@ ms.locfileid: "57373101"
   
 -   <xref:System.Windows.Window>  
   
- На следующем рисунке показано четыре кнопки, <xref:System.Windows.Controls.ContentControl.Content%2A> присваивается строка <xref:System.DateTime> объекта, <xref:System.Windows.Shapes.Rectangle>и <xref:System.Windows.Controls.Panel> , содержащий <xref:System.Windows.Shapes.Ellipse> и <xref:System.Windows.Controls.TextBlock>.  
+ На следующем рисунке показано четыре кнопки, <xref:System.Windows.Controls.ContentControl.Content%2A> присваивается строка <xref:System.DateTime> объекта, <xref:System.Windows.Shapes.Rectangle>и <xref:System.Windows.Controls.Panel> , содержащий <xref:System.Windows.Shapes.Ellipse> и <xref:System.Windows.Controls.TextBlock>:  
   
- ![Четыре кнопки](./media/controlcontentmodelbuttons.PNG "ControlContentModelButtons")  
-Четыре кнопки с различными типами содержимого  
+ ![Снимок экрана, показаны четыре кнопки с различными типами содержимого.](./media/wpf-content-model/control-content-model-buttons.png)  
   
  Например, как задать <xref:System.Windows.Controls.ContentControl.Content%2A> свойство, см. в разделе <xref:System.Windows.Controls.ContentControl>.  
   
@@ -105,8 +104,7 @@ ms.locfileid: "57373101"
   
  На следующем рисунке показаны два <xref:System.Windows.Controls.TabItem> объектов. Первый <xref:System.Windows.Controls.TabItem> имеет <xref:System.Windows.UIElement> объектов как <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> и <xref:System.Windows.Controls.ContentControl.Content%2A>. <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> Присваивается <xref:System.Windows.Controls.StackPanel> , содержащий <xref:System.Windows.Shapes.Ellipse> и <xref:System.Windows.Controls.TextBlock>. <xref:System.Windows.Controls.ContentControl.Content%2A> Присваивается <xref:System.Windows.Controls.StackPanel> , содержащий <xref:System.Windows.Controls.TextBlock> и <xref:System.Windows.Controls.Label>. Второй <xref:System.Windows.Controls.TabItem> имеет строку в <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> и <xref:System.Windows.Controls.TextBlock> в <xref:System.Windows.Controls.ContentControl.Content%2A>.  
   
- ![TabControl](./media/controlcontentmodelteabitem.PNG "ControlContentModelTeabItem")  
-Элемент управления TabControl, который использует различные типы в свойстве Header  
+ ![TabControl, который использует различные типы в свойстве Header.](./media/wpf-content-model/control-content-model-tab.png)  
   
  Пример создания <xref:System.Windows.Controls.TabItem> объектов, см. в разделе <xref:System.Windows.Controls.HeaderedContentControl>.  
   
@@ -147,8 +145,7 @@ ms.locfileid: "57373101"
   
 -   Объект <xref:System.Windows.Controls.Panel> , содержащий <xref:System.Windows.Shapes.Ellipse> и <xref:System.Windows.Controls.TextBlock>.  
   
- ![ListBox с четырьмя типами содержимого](./media/controlcontentmodellistbox2.PNG "ControlContentModelListBox2")  
-Элемент управления ListBox, содержащий несколько типов объектов  
+ ![Снимок экрана с ListBox с четырьмя типами содержимого.](./media/wpf-content-model/control-content-model-listbox.png)  
   
 ### <a name="controls-that-contain-a-header-and-a-collection-of-arbitrary-objects"></a>Элементы управления, содержащие заголовок и коллекцию произвольных объектов  
  <xref:System.Windows.Controls.HeaderedItemsControl> Класс наследует от <xref:System.Windows.Controls.ItemsControl> и может содержать несколько элементов, таких как строки, объекты, или другие элементы и заголовок. Он наследует <xref:System.Windows.Controls.ItemsControl> свойства, содержимого <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>, и <xref:System.Windows.Controls.ItemsControl.Items%2A>, и он определяет <xref:System.Windows.Controls.HeaderedItemsControl.Header%2A> свойство, которое может быть произвольный объект.  

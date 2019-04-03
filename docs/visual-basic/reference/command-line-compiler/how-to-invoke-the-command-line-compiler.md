@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Вызов компилятора командной строки (Visual Basic)
+title: Практическое руководство. Вызов компилятора командной строки (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - Visual Basic compiler, starting
 - command line [Visual Basic], arguments
 ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
-ms.openlocfilehash: dd5fadb9c9f248b5fb4f289bb2d24f1b085a79a8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 78bf5b1f19db3a4f39e263cfd71283f0f7718631
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503733"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817192"
 ---
-# <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>Как выполнить Вызов компилятора командной строки (Visual Basic)
+# <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>Практическое руководство. Вызов компилятора командной строки (Visual Basic)
 Можно вызвать компилятор командной строки, введя имя соответствующего исполняемого файла в командной строке, также называется командной строки MS-DOS. При компиляции из командной строки Windows по умолчанию, необходимо ввести полный путь к исполняемому файлу. Чтобы переопределить это поведение по умолчанию, можно использовать командную строку разработчика для Visual Studio, или изменить переменную среды PATH. Оба позволяют компилировать из любого каталога, просто введя его имя.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
@@ -58,5 +58,6 @@ ms.locfileid: "54503733"
      Например, если вы сохранили исходный код в каталог с именем `SourceFiles`, нужно будет открыть командную строку и введите `cd SourceFiles` для изменения в этот каталог. Если каталог, содержащий исходный файл с именем `Source.vb`, скомпилировать его, введя `vbc.exe Source.vb`.  
   
 ## <a name="see-also"></a>См. также
+
 - [Компилятор Visual Basic с интерфейсом командной строки](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Условная компиляция](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

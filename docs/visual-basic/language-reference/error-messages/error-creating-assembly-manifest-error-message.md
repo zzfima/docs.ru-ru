@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30140
 ms.assetid: 1beb5aa0-7b79-4c85-946b-5c2d0a41d1d2
-ms.openlocfilehash: 86c1fabe1116e5b5d7e81022777f861f6d57e3e6
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: f9d7867157b65d746809d9b2f50797285d7fcd9c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758369"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831971"
 ---
 # <a name="error-creating-assembly-manifest-error-message"></a>Ошибка при создании манифеста сборки: \<сообщение об ошибке >
 Компилятор Visual Basic вызывает компоновщик сборок (Al.exe, который также называется Alink) для создания сборки с манифестом. Компоновщик сообщил об ошибке на этапе предварительного выпуска процедуры создания сборки.  
@@ -28,6 +28,7 @@ ms.locfileid: "55758369"
 2.  Если ошибка не устранена, соберите сведения об условиях ее возникновения и уведомите службу технической поддержки Майкрософт.  
   
 ## <a name="see-also"></a>См. также
+
 - [Практическое руководство. Подписание сборки строгим именем](../../../framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)
 - [Страница "Подписывание" в конструкторе проектов](/visualstudio/ide/reference/signing-page-project-designer)
 - [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)

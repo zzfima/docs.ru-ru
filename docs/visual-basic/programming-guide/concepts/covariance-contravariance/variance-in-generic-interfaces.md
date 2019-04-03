@@ -2,12 +2,12 @@
 title: Вариативность в универсальных интерфейсах (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: cf4096d0-4bb3-45a9-9a6b-f01e29a60333
-ms.openlocfilehash: d39f1b125875f9a9f41ccb6b25a3a88fe577adba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50a1aeb5c17a0f193b9e90ca2167ef298f7ed237
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618637"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828112"
 ---
 # <a name="variance-in-generic-interfaces-visual-basic"></a>Вариативность в универсальных интерфейсах (Visual Basic)
 В платформе .NET Framework 4 появилась поддержка вариативности для нескольких существующих универсальных интерфейсов. Поддержка вариативности позволяет выполнять неявное преобразование классов, реализующих эти интерфейсы. Сейчас вариативными являются следующие интерфейсы.  
@@ -92,6 +92,7 @@ Dim listObjects As IEnumerable(Of Object) = New List(Of String)
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Использование вариативности в интерфейсах для универсальных коллекций (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)
 - [Создание вариативных универсальных интерфейсов (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)
 - [Универсальные интерфейсы](../../../../standard/generics/interfaces.md)

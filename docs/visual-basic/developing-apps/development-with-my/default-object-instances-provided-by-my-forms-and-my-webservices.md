@@ -7,12 +7,12 @@ helpviewer_keywords:
 - rapid application development (RAD), My.Forms
 - rapid application development (RAD), My.WebServices
 ms.assetid: de930027-9108-4f0c-b97c-5e7db4d6ef79
-ms.openlocfilehash: 5a81cde63de258f0996c3ddbc99e0102d58d79b8
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ca31e1c40c77bf7f42d246019d81f4ffaed646e8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973916"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839370"
 ---
 # <a name="default-object-instances-provided-by-myforms-and-mywebservices-visual-basic"></a>Экземпляры объектов, которые My.Forms и My.WebServices предоставляют по умолчанию (Visual Basic)
 [My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md) и [My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md) объекты предоставляют доступ к формам, источникам данных и веб-служб XML, используемой приложением. Это делается путем предоставления коллекций *по умолчанию экземпляры* каждого из этих объектов.  
@@ -27,6 +27,7 @@ ms.locfileid: "56973916"
  `My.Forms` Объект возвращает коллекцию экземпляров по умолчанию для каждого `Form` класс, который существует в проекте. Аналогичным образом `My.WebServices` предоставляет экземпляр по умолчанию прокси-класса для каждой веб-службы, что вы создали ссылку в приложении.  
   
 ## <a name="see-also"></a>См. также
+
 - [Объект My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md)
 - [Объект My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md)
 - [Зависимость My от типа проекта](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)

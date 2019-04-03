@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Async [Visual Basic]
 - Async keyword [Visual Basic]
 ms.assetid: 1be8b4b5-9689-41b5-bd33-b906bfd53bc5
-ms.openlocfilehash: 654c397918f564bbba9ce91ebd8135b14dd7abb1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ad6d671a45cee7d534347d23963bb5035ecc8dac
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561456"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834595"
 ---
 # <a name="async-visual-basic"></a>Async (Visual Basic)
 `Async` Модификатор указывает, что метод или [лямбда-выражение](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) она изменяет является асинхронным. Такие методы называются *асинхронные методы*.  
@@ -104,6 +104,7 @@ End Function
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>
 - [Оператор Await](../../../visual-basic/language-reference/operators/await-operator.md)
 - [Асинхронное программирование с использованием ключевых слов Async и Await](../../../visual-basic/programming-guide/concepts/async/index.md)

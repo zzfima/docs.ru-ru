@@ -5,12 +5,12 @@ helpviewer_keywords:
 - see XML tag
 - <see> XML tag
 ms.assetid: 7e18f60b-ef4a-4678-a797-5eb918635ca9
-ms.openlocfilehash: c26e818276eb4654fec77230372a0ae090952961
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 828e55e0ddb0382c16c60ae3d9e5958c18e42c10
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57474856"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821341"
 ---
 # <a name="see-visual-basic"></a>\<см. в разделе > (Visual Basic)
 Указывает ссылку на другой член.  
@@ -36,4 +36,5 @@ ms.locfileid: "57474856"
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   
 ## <a name="see-also"></a>См. также
+
 - [XML-теги для комментариев](../../../visual-basic/language-reference/xmldoc/index.md)

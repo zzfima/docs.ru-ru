@@ -25,12 +25,12 @@ helpviewer_keywords:
 - restrictions [Visual Basic], overloading procedures
 - procedures [Visual Basic], parameter lists
 ms.assetid: a2001248-10d0-42c5-b0ce-eeedc987319f
-ms.openlocfilehash: 8dfee8a8678fb00fcded4b7da57c3b200ef64d69
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f14cc28960af28530bda9a78c1309dea10c18b8f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979545"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58815600"
 ---
 # <a name="considerations-in-overloading-procedures-visual-basic"></a>Вопросы, связанные с перегрузкой процедур (Visual Basic)
 При перегрузке процедур необходимо использовать другой *подпись* для каждой из перегруженных версий. Обычно это означает, что каждая версия необходимо указать другим списком параметров. Дополнительные сведения см. в разделе «Разных подпись» в [перегрузка процедур](./procedure-overloading.md).  
@@ -122,6 +122,7 @@ ms.locfileid: "56979545"
 -   Компилятор не может сообщить об ошибке, если вызывающий код передает тип данных, процедура не поддерживает.  
   
 ## <a name="see-also"></a>См. также
+
 - [Процедуры](./index.md)
 - [Параметры и аргументы процедуры](./procedure-parameters-and-arguments.md)
 - [Рекомендации по устранению неполадок](./troubleshooting-procedures.md)

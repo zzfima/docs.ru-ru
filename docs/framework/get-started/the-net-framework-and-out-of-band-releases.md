@@ -4,12 +4,12 @@ ms.date: 10/10/2018
 ms.assetid: 721f10fa-3189-4124-a00d-56ddabd889b3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f29d6d5e3942296905088eb250d09f3a5ace1fa4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3c70382b0d74e830610d1cd7746fd14244b829a0
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708357"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654566"
 ---
 # <a name="the-net-framework-and-out-of-band-releases"></a>.NET Framework и внештатные выпуски
 
@@ -44,7 +44,7 @@ ms.locfileid: "57708357"
 
 4.  В области справа используйте окно **Поиск**, чтобы найти нужный пакет. Некоторые пакеты Microsoft обозначены логотипом Microsoft .NET Framework; для всех из них корпорация Microsoft указана в качестве издателя.
 
- ![Диспетчер пакетов NuGet](../../../docs/framework/get-started/media/clrnugetdialog.png "clrNugetDialog")
+ ![Снимок экрана с диспетчером пакетов NuGet.](./media/the-net-framework-and-out-of-band-releases/nuget-package-manager-dialog.png)
 
  Как упоминалось ранее, при развертывании приложения, использующего внештатный пакет, вместе с пакетом приложения поставляются внештатные сборки.
 

@@ -1,21 +1,21 @@
 ---
-title: Как выполнить Извлечение коллекции элементов (LINQ to XML) (Visual Basic)
+title: Практическое руководство. Извлечение коллекции элементов (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2269f9de-8fb9-4666-b8a1-a4e754fa6a81
-ms.openlocfilehash: b5602e327128dd886b31d2863e089480f97b3aad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 53572ac3c80e012b95527d32da28c8685cd8cfd3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642770"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833645"
 ---
-# <a name="how-to-retrieve-a-collection-of-elements-linq-to-xml-visual-basic"></a>Как выполнить Извлечение коллекции элементов (LINQ to XML) (Visual Basic)
+# <a name="how-to-retrieve-a-collection-of-elements-linq-to-xml-visual-basic"></a>Практическое руководство. Извлечение коллекции элементов (LINQ to XML) (Visual Basic)
 В этом разделе показан метод <xref:System.Xml.Linq.XContainer.Elements%2A>. Этот метод получает коллекцию дочерних элементов того или иного элемента.  
   
 ## <a name="example"></a>Пример  
  В этом примере выполняется итерация по дочерним элементам элемента `purchaseOrder`.  
   
- В этом примере используется следующий XML-документ: [Пример XML-файла: Типичный заказ на покупку (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
+ В этом примере используется следующий XML-документ: [Пример XML-файла. Типичный заказ на покупку (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
   
 ```vb  
 Dim po As XElement = XElement.Load("PurchaseOrder.xml")  
@@ -38,4 +38,5 @@ Name: Items
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Оси LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

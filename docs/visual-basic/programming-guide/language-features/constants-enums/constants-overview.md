@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constants [Visual Basic]
 ms.assetid: 29016fe8-78b3-4dc8-90b8-1cfec2fa8ac9
-ms.openlocfilehash: 34f3dee4edba58375c5c84b579e39a8a29ebc1bb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2939110de77718baf32e2a0d8f1aa52dba997cf3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737693"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841304"
 ---
 # <a name="constants-overview-visual-basic"></a>Общие сведения о константах (Visual Basic)
 Константа — это понятное имя, заменяющее числа или строки, которые не изменяются. Константы хранят значения, которые, как и предполагает название, остаются неизменными во время выполнения приложения. Можно значительно улучшить читаемость кода и упрощения обслуживания с помощью константы. Их использовать в коде, который содержит значения, и это зависит от числа, которые трудно запомнить или осмыслить.  
@@ -45,5 +45,6 @@ ms.locfileid: "54737693"
 |[Оператор Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|Описывает `Option Strict` инструкции и его использование.|  
   
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения о перечислениях](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
 - [Практическое руководство. Инициализация переменной массива в Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42105
 ms.assetid: b6929bf4-a365-4a70-8dc9-6b0fc09e1468
-ms.openlocfilehash: 9782bb49a3327c6a8bd9938eca7cb3e899818784
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: badcfea4f24ba3858071e02ba47b8f77ab557f88
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55281064"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824836"
 ---
 # <a name="function-procedurename-doesnt-return-a-value-on-all-code-paths"></a>Функция "\<имя_процедуры >" не возвращает значение на всех путях кода
 Функция "\<имя_процедуры >" не возвращает значение на всех путях кода. Возможно, отсутствует оператор «Return»?  
@@ -40,6 +40,7 @@ ms.locfileid: "55281064"
      Проще гарантировать, что каждое возвращение из процедуры возвращает значение, если всегда использовать `Return` инструкции. После этого, последней инструкцией перед `End Function` должно быть `Return` инструкции.  
   
 ## <a name="see-also"></a>См. также
+
 - [Процедуры функций](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)
 - [Оператор Function](../../../visual-basic/language-reference/statements/function-statement.md)
 - [Страница "Компиляция" в конструкторе проектов (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)

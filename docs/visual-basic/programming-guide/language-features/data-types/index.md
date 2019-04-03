@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, data types
 - data types [Visual Basic], improving speed with
 ms.assetid: 5e1b9aaf-c7ca-4b29-9b22-0e82ed8e85e2
-ms.openlocfilehash: cf16fc1d9b5713be43a041c92dbd1228f3995d55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 192ced1da400372f877cb54aaa29d60fcd0bbcad
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694455"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829204"
 ---
 # <a name="data-types-in-visual-basic"></a>Типы данных в Visual Basic
 *Тип данных* программного элемента определяет данные, которые он может содержать, а также способ их хранения. Типы данных применяются ко всем значениям, которые могут храниться в памяти компьютера или участвовать в вычислении выражения. Все переменные, литералы, константы, перечисления, свойства, параметры и аргументы процедуры, а также возвращаемые значения процедуры относятся к определенному типу данных.  
@@ -35,6 +35,7 @@ ms.locfileid: "54694455"
  См. список [типов данных](../../../../visual-basic/language-reference/data-types/index.md) Visual Basic  
   
 ## <a name="see-also"></a>См. также
+
 - [Знаки типов](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
 - [Простые типы данных](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [Составные типы данных](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)

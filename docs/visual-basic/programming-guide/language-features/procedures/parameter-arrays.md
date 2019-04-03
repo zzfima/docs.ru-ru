@@ -10,12 +10,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], indefinite number of argument values
 - arrays [Visual Basic], parameter arrays
 ms.assetid: c43edfae-9114-4096-9ebc-8c5c957a1067
-ms.openlocfilehash: e059f471f78262320f1968c12192de710876aef4
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 8ea4c77056701b8f61c1ed5a53cf20d98ae913bc
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966584"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834170"
 ---
 # <a name="parameter-arrays-visual-basic"></a>Массивы параметров (Visual Basic)
 Как правило не может вызвать процедуру с большим числом аргументов, чем ее объявлении. Если неопределенное число аргументов, можно объявить *массив параметров*, что позволяет процедуре принять массив значений для параметра. У вас не нужно знать число элементов в массиве параметров, при определении процедуры. Размер массива определяется отдельно при каждом вызове процедуры.  
@@ -57,6 +57,7 @@ ms.locfileid: "56966584"
  [!code-vb[VbVbcnProcedures#49](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#49)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:Microsoft.VisualBasic.Information.UBound%2A>
 - [Процедуры](./index.md)
 - [Параметры и аргументы процедуры](./procedure-parameters-and-arguments.md)

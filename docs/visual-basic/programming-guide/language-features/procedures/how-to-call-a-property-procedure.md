@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties [Visual Basic], property procedures
 - procedure calls [Visual Basic], property procedures
 ms.assetid: 96bc4d74-d9c3-4b7a-954d-58ac8553cd94
-ms.openlocfilehash: 6a7c55433001af5c5695044f41f866c1df8c3651
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7b85239f80b4bfa87d1dbb1e3207e63d0cef7eeb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977868"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827215"
 ---
 # <a name="how-to-call-a-property-procedure-visual-basic"></a>Практическое руководство. Вызов процедуры свойства (Visual Basic)
 Вызов процедуры свойства хранить значение в свойстве или его значение было получено. Доступ к свойству так же, можно получить доступ к переменной.  
@@ -53,6 +53,7 @@ ms.locfileid: "56977868"
  Значение, созданное в правой части оператора присваивания хранится в свойстве.  
   
 ## <a name="see-also"></a>См. также
+
 - [Процедуры свойств](./property-procedures.md)
 - [Параметры и аргументы процедуры](./procedure-parameters-and-arguments.md)
 - [Оператор Property](../../../../visual-basic/language-reference/statements/property-statement.md)

@@ -2,12 +2,12 @@
 title: Одностороннее взаимодействие
 ms.date: 03/30/2017
 ms.assetid: 74e3e03d-cd15-4191-a6a5-1efa2dcb9e73
-ms.openlocfilehash: 7e21a1cd16c025aae0f38b6a516b3c487f7b908f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e4b8a805fdbe4f330496233d5234abc0169b8c6e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529034"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826695"
 ---
 # <a name="one-way"></a>Одностороннее взаимодействие
 В этом образце демонстрируется контакт службы с односторонними операциями службы. Клиент не ожидает завершения операций службы, как это происходит в случае двусторонних операций службы. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) и использует `wsHttpBinding` привязки. В данном образце служба представляет собой резидентное консольное приложение, позволяющее наблюдать за тем, как служба получает и обрабатывает запросы. Клиент также является консольным приложением.  
@@ -106,4 +106,3 @@ Processing Divide(22,7) - result: 3.14285714285714
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Oneway`  
   
-## <a name="see-also"></a>См. также

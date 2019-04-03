@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Добавление настраиваемых методов для запросов LINQ (Visual Basic)
+title: Практическое руководство. Добавление настраиваемых методов для запросов LINQ (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 099b2e2a-83cd-45c6-aa4d-01b398b5faaf
-ms.openlocfilehash: e45dfc6b516f1e5f5e9f7f667bbbfd5768330ffa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a58ced83a01e41be707f2483cabe9c8e867e2c1a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645591"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829178"
 ---
-# <a name="how-to-add-custom-methods-for-linq-queries-visual-basic"></a>Как выполнить Добавление настраиваемых методов для запросов LINQ (Visual Basic)
+# <a name="how-to-add-custom-methods-for-linq-queries-visual-basic"></a>Практическое руководство. Добавление настраиваемых методов для запросов LINQ (Visual Basic)
 Вы можете расширить набор методов, которые можно использовать для запросов LINQ, путем добавления методов расширения в интерфейс <xref:System.Collections.Generic.IEnumerable%601>. Например, помимо стандартных операций вычисления среднего или максимального значения, можно создать настраиваемый метод агрегирования для вычисления одного значения на основе последовательности значений. Также можно создать метод, который работает как настраиваемый фильтр или особое преобразование данных для последовательности значений и возвращает новую последовательность. Примерами таких методов являются <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Skip%2A> и <xref:System.Linq.Enumerable.Reverse%2A>.  
   
  При расширении интерфейса <xref:System.Collections.Generic.IEnumerable%601> настраиваемые методы можно применять к любой перечислимой коллекции. Дополнительные сведения см. в разделе [Методы расширения](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md).  
@@ -198,5 +198,6 @@ Next
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Collections.Generic.IEnumerable%601>
 - [Методы расширения](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)

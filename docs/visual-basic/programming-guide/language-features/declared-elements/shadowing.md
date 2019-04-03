@@ -18,12 +18,12 @@ helpviewer_keywords:
 - objects [Visual Basic], names
 - names [Visual Basic], shadowing
 ms.assetid: 54bb4c25-12c4-4181-b4a0-93546053964e
-ms.openlocfilehash: 15c7112f7e318542859162655c78e19558178e5a
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 9ad992a53618fa2f410e0b0fb23886c30136384f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411009"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839396"
 ---
 # <a name="shadowing-in-visual-basic"></a>Сокрытие в Visual Basic
 Если два программных элемента имеют одинаковые имена, один из них может скрыть, или *тени*, другой. В таком случае затененный элемент недоступен для обращения. Вместо этого когда код использует имя элемента, компилятор Visual Basic разрешает его скрывающий элемент.  
@@ -138,6 +138,7 @@ End Class
  В приведенном выше примере переменная `basObj` объявляется в качестве базового класса. Назначение `dervCls` объекта он реализует расширяющее преобразование и, соответственно, допустимо. Тем не менее, базовый класс недоступен скрывающий версии переменной `z` в производном классе, поэтому компилятор разрешает `basObj.z` к исходному значению базового класса.  
   
 ## <a name="see-also"></a>См. также
+
 - [Ссылки на объявленные элементы](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Область, в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
 - [Расширяющие и сужающие преобразования](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

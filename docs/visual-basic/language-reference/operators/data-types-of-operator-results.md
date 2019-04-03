@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data types [Visual Basic], ranges
 - operators [Visual Basic], result data types
 ms.assetid: 9d524533-e1a1-4aa8-b1b8-622068173d06
-ms.openlocfilehash: 90e3c8b61bd920ab06090f3f889d6cc61c354294
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45dcc80ee791da1c2731ba32f0ebd34564faf806
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650487"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814987"
 ---
 # <a name="data-types-of-operator-results-visual-basic"></a>Типы данных результатов оператора (Visual Basic)
 Visual Basic определяет тип данных результата операции на основе типов данных операндов. В некоторых случаях это может быть типом данных с диапазоном больше, чем один из операндов.  
@@ -176,6 +176,7 @@ Visual Basic определяет тип данных результата оп�
  `Like` Оператор определен только для сопоставления шаблонов `String` операндов. Visual Basic пытается преобразовать каждый операнд при необходимости `String` перед выполнением операции. Тип данных результата — всегда `Boolean`.  
   
 ## <a name="see-also"></a>См. также
+
 - [Типы данных](../../../visual-basic/language-reference/data-types/index.md)
 - [Операторы и выражения](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
 - [Арифметические операторы в Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

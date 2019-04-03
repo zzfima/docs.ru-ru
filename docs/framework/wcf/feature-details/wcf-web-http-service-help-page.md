@@ -2,21 +2,21 @@
 title: Страница справки веб-службы HTTP WCF
 ms.date: 03/30/2017
 ms.assetid: 63c7c695-44b6-4f31-bb9c-00f2763f525e
-ms.openlocfilehash: f803d2046684bc1aa148e78b6325f26a8ec5c427
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 60fd909d6e7d3ba0e0c0254024ef7eb40263b59e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121211"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826838"
 ---
 # <a name="wcf-web-http-service-help-page"></a>Страница справки веб-службы HTTP WCF
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] предоставляет автоматическую справочную страницу для службы WCF WEB HTTP. На этой странице справки приводится описание каждой операции, форматов запроса и ответа, а также схем. По умолчанию эта функциональная возможность отключена. Когда пользователь переходит к службе WCF WEB HTTP и добавляет «/ Help» в конце URL-адрес, например `http://localhost:8000/Customers/Help`, страницы справки, как отображается следующая информация.  
   
- ![Страница справки WCF REST](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagemain.gif "WCFRESTHELPPAGEMAIN")  
+ ![Откройте браузер со страницей справки WCF REST.](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page.gif)  
   
  Затем пользователь может щелкнуть любой метод из представленных на странице справки. Откроется страница, содержащая подробные сведения о методе, включая форматы сообщений и примеры ответов. На следующем рисунке представлен пример справочной страницы для метода.  
   
- ![Сведения о странице справки WCF REST](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagedetail2.gif "WCFRESTHELPPAGEDETAIL2")  
+ ![Откройте браузер с подробностями страница справки WCF REST для метода GetCustomers.](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page-detail.gif)  
   
 ## <a name="using-the-wcf-web-http-help-page"></a>Использование справочной страницы службы WCF Web HTTP  
  На справочной странице службы WCF WEB HTTP дано краткое описание для каждой из представленных операций при условии, что оно было определено в <xref:System.ComponentModel.DescriptionAttribute>. Этот атрибут принимает строку, которая содержит краткое описание операции, для которой он применен. Например, в следующем коде показано, как задать краткое описание с помощью <xref:System.ComponentModel.DescriptionAttribute>.  

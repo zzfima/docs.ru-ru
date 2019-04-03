@@ -2,12 +2,12 @@
 title: Проверяющий элемент управления для сертификатов X.509
 ms.date: 03/30/2017
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
-ms.openlocfilehash: a94653c02b642138e5e20a0452c42f0926e25ea7
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: c1572e874b2575bb777accb15ac5e6182c598253
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56305991"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838213"
 ---
 # <a name="x509-certificate-validator"></a>Проверяющий элемент управления для сертификатов X.509
 В этом образце показано, как реализовать пользовательский проверяющий элемент управления для сертификатов X.509. Это бывает полезным в случаях, когда ни один из встроенных режимов проверки сертификатов X.509 не соответствует требованиям приложения. В этом образце показана служба, содержащая пользовательский проверяющий элемент управления, который принимает самостоятельно выданные сертификаты. Клиент использует такие сертификаты для проверки подлинности службы.
@@ -355,5 +355,3 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
   
 > [!NOTE]
 >  Этот скрипт не удаляет сертификаты службы на клиенте при запуске образца на нескольких компьютерах. При запуске примеров Windows Communication Foundation (WCF), которые используют сертификаты на компьютерах, обязательно удалите сертификаты службы, которые были установлены в хранилище CurrentUser - trustedpeople. Чтобы сделать это, используйте следующую команду: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Например: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
-
-## <a name="see-also"></a>См. также

@@ -2,6 +2,12 @@
 title: Общие сведения об атрибутах (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 1449f69b-c063-41de-8d89-f0bbdcf96ac6
+ms.openlocfilehash: bb012b49c76963306d723d7732b4c7054bf13ebb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827696"
 ---
 # <a name="attributes-overview-visual-basic"></a>Общие сведения об атрибутах (Visual Basic)
 Атрибуты предоставляют мощное средство для связывания метаданных или декларативной информации с кодом (сборки, типы, методы, свойства и т. д.). Связав атрибут связан с сущностью программы, вы можете проверять этот атрибут во время выполнения, используя технику *отражения*. Дополнительные сведения см. в статье [Отражение (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md).  
@@ -137,6 +143,7 @@ Module: CLSCompliant(True)>
 -   [Caller Information (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md) (Сведения о вызывающем (Visual Basic))  
   
 ## <a name="see-also"></a>См. также
+
 - [Руководство по программированию на Visual Basic](../../../../visual-basic/programming-guide/index.md)
 - [Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md) (Отражение (Visual Basic))
 - [Атрибуты](../../../../standard/attributes/index.md)

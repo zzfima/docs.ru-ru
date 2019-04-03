@@ -8,12 +8,12 @@ helpviewer_keywords:
 - VBC40059
 - BC40059
 ms.assetid: 520e39cb-8ab6-46f5-aa00-08afd51b4b7c
-ms.openlocfilehash: 058aa4891d05147756290affd60ea5fb260c33ef
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c0b4f56e3d1613486dd1198976557831ce657e1b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55262956"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837550"
 ---
 # <a name="a-reference-was-created-to-embedded-interop-assembly-assembly1-because-of-an-indirect-reference-to-that-assembly-from-assembly-assembly2"></a>Была создана ссылка на внедренную сборку взаимодействия "\<сборка1 >" из-за наличия неявной ссылки на эту сборку из сборки "\<сборка2 >"
 Была создана ссылка на внедренную сборку взаимодействия "\<сборка1>" из-за косвенной ссылки на эту сборку из сборки "\<сборка2>". Рекомендуется изменить свойство "Внедрить типы взаимодействия" в одной из сборок.  
@@ -32,5 +32,6 @@ ms.locfileid: "55262956"
 -   Чтобы устранить это предупреждение, можно присвоить свойству `Embed Interop Types` сборки сборка1 значение `False`. В этом случае сведения о типе взаимодействия предоставляется основной сборки взаимодействия (PIA).  
   
 ## <a name="see-also"></a>См. также
+
 - [/link (Visual Basic)](../../../visual-basic/reference/command-line-compiler/link.md)
 - [Взаимодействие с неуправляемым кодом](../../../framework/interop/index.md)

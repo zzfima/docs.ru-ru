@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Запрос файлов с указанными атрибутами или именем (Visual Basic)
+title: Практическое руководство. Запрос файлов с указанными атрибутами или именем (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b26026a3-3f43-448f-a582-259997af6be0
-ms.openlocfilehash: 5ad3ec0c18d142e8db3eddce8902b023ff00ca4d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c6875a0e4b8224010b20ca17ab6318387490aca
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733159"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821872"
 ---
-# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a>Как выполнить Запрос файлов с указанными атрибутами или именем (Visual Basic)
+# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a>Практическое руководство. Запрос файлов с указанными атрибутами или именем (Visual Basic)
 В этом примере показано, как обнаружить все файлы с указанным расширением (например, TXT) в заданном дереве каталогов. Кроме того, он показывает, как обнаружить самый новый или самый старый файл в дереве, используя время создания.  
   
 ## <a name="example"></a>Пример  
@@ -64,5 +64,6 @@ End Module
  Создайте проект, предназначенный для .NET Framework версии 3.5 или более поздней версии, со ссылкой на библиотеку System.Core.dll и `Imports` оператор для пространства имен System.Linq.  
   
 ## <a name="see-also"></a>См. также
+
 - [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
 - [LINQ и каталоги файлов (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

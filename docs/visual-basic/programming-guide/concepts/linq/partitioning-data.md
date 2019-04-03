@@ -2,19 +2,19 @@
 title: Секционирование данных (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 69c59379-b66e-422c-b324-5b5c07760ef7
-ms.openlocfilehash: 06db2ac3e556e647fed576a7fa0c89b881b748c9
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 2da63a1f6b73c8592d6036a90fa374a0d4385f4c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202149"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839578"
 ---
 # <a name="partitioning-data-visual-basic"></a>Секционирование данных (Visual Basic)
 Секционированием в LINQ называют операцию разделения входной последовательности на два раздела без изменения порядка элементов, а затем возвращения одного из разделов.  
   
  На следующем рисунке показаны результаты трех различных операций секционирования в последовательности символов. Первая операция возвращает первые три элемента в последовательности. Вторая операция пропускает первые три элемента и возвращает остальные элементы. Третья операция пропускает первые два элемента в последовательности и возвращает три следующих элемента.  
   
- ![Операции секционирования LINQ](../../../../csharp/programming-guide/concepts/linq/media/linq_partition.png "LINQ_Partition")  
+ ![Рисунок, показывающий три операции секционирования LINQ.](./media/partitioning-data/linq-partitioning-operations.png)  
   
  Далее перечислены методы стандартных операторов запроса, которые секционируют последовательности.  
   
@@ -50,6 +50,7 @@ ms.locfileid: "57202149"
  [!code-vb[CsLINQPartitioning#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQPartitioning/VB/Partitioning.vb#4)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Linq>
 - [Общие сведения о стандартных операторах запроса (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Предложение Skip](../../../../visual-basic/language-reference/queries/skip-clause.md)

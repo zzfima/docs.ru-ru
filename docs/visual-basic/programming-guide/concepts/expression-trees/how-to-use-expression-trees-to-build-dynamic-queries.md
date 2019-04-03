@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Использование деревьев выражений для построения динамических запросов (Visual Basic)
+title: Практическое руководство. Использование деревьев выражений для построения динамических запросов (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 16278787-7532-4b65-98b2-7a412406c4ee
-ms.openlocfilehash: dd1e5fff21ef68683d0b721e84c4690d8e440d60
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2f91d95f888ab98902cc300afb61c41b62e64050
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645470"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827683"
 ---
-# <a name="how-to-use-expression-trees-to-build-dynamic-queries-visual-basic"></a>Как выполнить Использование деревьев выражений для построения динамических запросов (Visual Basic)
+# <a name="how-to-use-expression-trees-to-build-dynamic-queries-visual-basic"></a>Практическое руководство. Использование деревьев выражений для построения динамических запросов (Visual Basic)
 В LINQ деревья выражений используются для представления структурированных запросов к источникам данных, которые реализуют интерфейс <xref:System.Linq.IQueryable%601>. Например, поставщик LINQ реализует интерфейс <xref:System.Linq.IQueryable%601> для выполнения запросов к реляционным хранилищам данных. Компилятор Visual Basic компилирует запросы к источникам данных в код, который строит дерево выражения во время выполнения. Поставщик запросов может переходить по структуре данных дерева выражения и преобразовать ее в язык запросов, соответствующий источнику данных.  
   
  Деревья выражений также используются в LINQ для представления лямбда-выражений, которые присваиваются переменным типа <xref:System.Linq.Expressions.Expression%601>.  
@@ -110,5 +110,6 @@ Next
 -   Скопируйте код из примера и вставьте его в `Main` `Sub` процедуры.  
   
 ## <a name="see-also"></a>См. также
+
 - [Expression Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md) (Деревья выражений (Visual Basic))
 - [Практическое руководство. Выполнение деревьев выражений (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)

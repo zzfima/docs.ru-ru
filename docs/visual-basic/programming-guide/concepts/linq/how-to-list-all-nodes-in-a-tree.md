@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Перечисление всех узлов в дереве (Visual Basic)
+title: Практическое руководство. Перечисление всех узлов в дереве (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: e19289c4-26d1-435b-b0db-fb8bc856b753
-ms.openlocfilehash: bc186a392e6c785a4dc7465a05075df31ba95779
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6576beaaed00905ce7a09f338251934ea375cb7e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509250"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824849"
 ---
-# <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a>Как выполнить Перечисление всех узлов в дереве (Visual Basic)
+# <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a>Практическое руководство. Перечисление всех узлов в дереве (Visual Basic)
 Иногда нужно вывести список всех узлов дерева. Это полезно, если требуется узнать, как метод или свойство повлияли на дерево. Одним из подходов для вывода списка всех узлов в текстовом формате является создание выражения XPath, которое точно определяет каждый конкретный узел дерева.  
   
  Не слишком удобно выполнять выражения XPath с помощью [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Выражения XPath имеют более низкую производительность, чем запросы [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], к тому же запросы [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] являются более мощными. Однако для определения узлов в XML-дереве выражения XPath подходят хорошо.  
@@ -264,4 +264,5 @@ End Module
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Дополнительные способы создания запросов (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

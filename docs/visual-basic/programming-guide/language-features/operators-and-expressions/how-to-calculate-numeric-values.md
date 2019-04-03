@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Visual Basic code, expressions
 - numeric expressions
 ms.assetid: ba6bf43d-bd96-49b8-b1de-4a7797551372
-ms.openlocfilehash: 036985a7b60afedc1e8ef0854c619ea8515e5ffe
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 33184d9be275f5e777ffd79c6dd4e3182d865de7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974306"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825759"
 ---
 # <a name="how-to-calculate-numeric-values-visual-basic"></a>Практическое руководство. Вычисление числовых значений (Visual Basic)
 Вы можете вычислить числовые значения с помощью числовых выражений. Объект *числовое выражение* является выражение, которое содержит литералы, константы и переменные, представляющие числовых значений и операторов, работать с этими значениями.  
@@ -63,6 +63,7 @@ ms.locfileid: "56974306"
      Дополнительные сведения см. в разделе [порядок применения операторов в Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Операторы и выражения](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
 - [Сравнения значений](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)
 - [Операторы](../../../../visual-basic/language-reference/statements/index.md)

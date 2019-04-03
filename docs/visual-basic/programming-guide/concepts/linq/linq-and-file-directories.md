@@ -2,12 +2,12 @@
 title: LINQ и каталоги файлов (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 159fd5c3-3926-4071-ae78-d8e423287eb7
-ms.openlocfilehash: bd6889c087f9347c2c056ed10356ae2a55565a4f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 56967a82bf63d8421d34af48dcc6384ded85e2ad
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566870"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825122"
 ---
 # <a name="linq-and-file-directories-visual-basic"></a>LINQ и каталоги файлов (Visual Basic)
 Многие операции файловой системы по существу являются запросами и, следовательно, соответствуют принципам LINQ.  
@@ -41,4 +41,5 @@ ms.locfileid: "54566870"
  Существуют некоторые сложности, связанные с созданием источника данных, который точно представляет содержимое файловой системы и корректно обрабатывает исключения. В примерах этого раздела создается моментальный снимок коллекции объектов <xref:System.IO.FileInfo>, представляющих все файлы в указанной корневой папке и всех ее подпапках. Фактическое состояние каждого объекта <xref:System.IO.FileInfo> может измениться в период между началом и окончанием выполнения запроса. Например, можно создать список объектов <xref:System.IO.FileInfo> для использования в качестве источника данных. При попытке доступа к свойству `Length` в запросе объект <xref:System.IO.FileInfo> попытается получить доступ к файловой системе для обновления значения `Length`. Если файл больше не существует, вы получите исключение <xref:System.IO.FileNotFoundException> в запросе, даже если не запрашиваете файловую систему напрямую. Некоторые запросы в этом разделе используют отдельный метод, который использует эти конкретные исключения в определенных случаях. Другой возможностью является поддержка источника данных, обновляемого динамически с помощью <xref:System.IO.FileSystemWatcher>.  
   
 ## <a name="see-also"></a>См. также
+
 - [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)

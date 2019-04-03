@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Хранение нескольких значений в переменной (Visual Basic)
+title: Практическое руководство. Хранение нескольких значений в переменной (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - classes [Visual Basic], composite data types
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - arrays [Visual Basic], compilation errors
 - types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
-ms.openlocfilehash: c6cd9c61c332fc98e99334143b50e395f4eabf47
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f22888075184e0359daec1056af09132eaf772a5
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671503"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825161"
 ---
-# <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>Как выполнить Хранение нескольких значений в переменной (Visual Basic)
+# <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>Практическое руководство. Хранение нескольких значений в переменной (Visual Basic)
 Переменная содержит более одного значения, если при ее объявлении необходимо иметь *составной тип данных*.  
   
  [Составные типы данных](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md) содержать структуры, массивы и классы. Переменная составные типы данных могут содержать как простые типы данных и других составных типов. Классы и структуры могут содержать код, а также данные.  
@@ -42,6 +42,7 @@ ms.locfileid: "54671503"
 5.  Выполните `As` ключевое слово с именем соответствующего составного типа.  
   
 ## <a name="see-also"></a>См. также
+
 - [Типы данных](../../../../visual-basic/language-reference/data-types/index.md)
 - [Знаки типов](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
 - [Составные типы данных](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)

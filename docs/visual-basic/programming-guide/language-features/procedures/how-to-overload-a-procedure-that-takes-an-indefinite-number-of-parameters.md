@@ -10,12 +10,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: c7042de2-2422-4039-94e8-ac298896af69
-ms.openlocfilehash: 262812f5e18bb9c46ea5ec573adab914f19eef43
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: bae420e88a74fbe3f7e8ad3592133fdcaf191029
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979486"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839002"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>Практическое руководство. Перегрузка процедуры, принимающей неопределенное число параметров (Visual Basic)
 Если процедура имеет [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) параметр, не может определить перегруженную версию, принимающую одномерный массив для массива параметров. Дополнительные сведения см. в разделе «Неявные перегрузки для параметра ParamArray» в [вопросы, связанные с перегрузкой процедур](./considerations-in-overloading-procedures.md).  
@@ -54,6 +54,7 @@ ms.locfileid: "56979486"
  Каждый раз, когда вы имеете дело с массив, который может быть неограниченно большим, есть риск переполнения некоторой внутренней емкости приложения. Если вы принимаете массив параметров, следует проверить длину массива, переданного ему вызывающий код и предпринять соответствующие действия, если она слишком велика для приложения.  
   
 ## <a name="see-also"></a>См. также
+
 - [Процедуры](./index.md)
 - [Параметры и аргументы процедуры](./procedure-parameters-and-arguments.md)
 - [Необязательные параметры](./optional-parameters.md)

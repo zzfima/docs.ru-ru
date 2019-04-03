@@ -15,17 +15,17 @@ helpviewer_keywords:
 - scope [Visual Basic], Visual Basic
 - procedure scope [Visual Basic]
 ms.assetid: 208106fe-79c9-4eec-93c6-55f08548895f
-ms.openlocfilehash: 38dd9d6d40780c25f06a35cf1ffbe4743b7da4a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6139af65958cefe43578f436204fa6836a71de0b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537252"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823549"
 ---
 # <a name="scope-in-visual-basic"></a>Область видимости в Visual Basic
 *Область* объявленного элемента представляет собой весь код, который могут ссылаться на нее без уточнения его имени или обеспечение его доступности через [оператор Imports (пространство имен .NET и тип)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Элемент может иметь область на одном из следующих уровней:  
   
-|Уровень|Описание:|  
+|Уровень|Описание|  
 |-----------|-----------------|  
 |Область действия блока|Доступно только в коде блока, в котором она объявлена|  
 |Область действия процедуры|Доступен в коде в рамках процедуры, в котором она объявлена.|  
@@ -135,6 +135,7 @@ Public strMsg As String
  Как правило, при объявлении любая переменная или константа, он является хорошим стилем программирования вносить Добивайтесь максимального сужения области (области видимости блока является узкая). Это помогает освободить ресурсы памяти и сводит к минимуму вероятность коде недопустимой переменной. Аналогичным образом, следует объявить переменную [статический](../../../../visual-basic/language-reference/modifiers/static.md) только когда это необходимо сохранить ее значение между вызовами процедур.  
   
 ## <a name="see-also"></a>См. также
+
 - [Характеристики объявленных элементов](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
 - [Практическое руководство. Управление областью действия переменной](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)
 - [Время существования в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)

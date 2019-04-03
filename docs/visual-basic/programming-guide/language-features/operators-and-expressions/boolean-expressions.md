@@ -14,12 +14,12 @@ helpviewer_keywords:
 - operators [Visual Basic], Boolean
 - Visual Basic code, expressions
 ms.assetid: d3d90406-55c8-4404-8143-50fd7f0d0d1a
-ms.openlocfilehash: 065df7d6217dd6f817dee1d11dd0fd4a68b6323c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ce9146791935a488108d110134e9273507b0da6f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965544"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825538"
 ---
 # <a name="boolean-expressions-visual-basic"></a>Логические выражения (Visual Basic)
 Объект *логическое выражение* представляет собой выражение, результатом которого является значение из [логический тип данных](../../../../visual-basic/language-reference/data-types/boolean-data-type.md): `True` или `False`. `Boolean` выражения могут принимать различные формы. Самым простым является прямое сравнение значения `Boolean` переменной `Boolean` литерал, как показано в следующем примере.  
@@ -67,6 +67,7 @@ ms.locfileid: "56965544"
  Круглые скобки используются для управления порядком вычисления логических выражений. Сначала оценить выражения, заключенные в круглые скобки. Для нескольких уровней вложения приоритет предоставляется наиболее глубоко вложенных выражений. Внутри скобок процесс оценки переходит в соответствии с правилами приоритета операторов. Дополнительные сведения см. в разделе [порядок применения операторов в Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Логические и побитовые операторы в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
 - [Сравнения значений](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)
 - [Операторы](../../../../visual-basic/programming-guide/language-features/statements.md)

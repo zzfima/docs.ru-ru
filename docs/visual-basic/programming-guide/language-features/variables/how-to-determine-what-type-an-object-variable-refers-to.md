@@ -1,19 +1,19 @@
 ---
-title: Как выполнить Определить, какой тип, переменная объекта ссылается на (Visual Basic)
+title: Практическое руководство. Определить, какой тип, переменная объекта ссылается на (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - TypeOf operator [Visual Basic], determining object variable type
 - variables [Visual Basic], object
 - object variables [Visual Basic], determining type
 ms.assetid: 6f6a138d-58a4-40d1-9f4e-0a3c598eaf81
-ms.openlocfilehash: 149af116f2b848082367b33d826bace8345cee05
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc6f54719d4f30be00b7b85f0ab18c4cb02b0d7c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54571182"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816412"
 ---
-# <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a>Как выполнить Определить, какой тип, переменная объекта ссылается на (Visual Basic)
+# <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a>Практическое руководство. Определить, какой тип, переменная объекта ссылается на (Visual Basic)
 Объектная переменная содержит указатель на данные, которые хранятся в другом месте. Тип данных можно изменить во время выполнения. В любой момент, можно использовать <xref:System.Type.GetTypeCode%2A> метод для определения текущего типа времени выполнения или [оператор TypeOf](../../../../visual-basic/language-reference/operators/typeof-operator.md) чтобы определить текущий тип времени выполнения совместим с указанным типом.  
   
 ### <a name="to-determine-the-exact-type-an-object-variable-currently-refers-to"></a>Для определения точного типа переменной объекта в данный момент ссылается на  
@@ -53,6 +53,7 @@ ms.locfileid: "54571182"
  Обратите внимание на то, что указанный тип не может быть переменной или выражением. Оно должно быть имя определенного типа, например класс, структура или интерфейс. Сюда входят встроенные типы, такие как `Integer` и `String`.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Object.GetType%2A>
 - <xref:System.Type?displayProperty=nameWithType>
 - <xref:System.Type.GetTypeCode%2A>

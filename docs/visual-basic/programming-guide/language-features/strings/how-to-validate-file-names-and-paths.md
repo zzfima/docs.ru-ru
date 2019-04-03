@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Boolean values [Visual Basic]
 - paths [Visual Basic], validating
 ms.assetid: f673462d-57b7-4120-b13a-6a7592f7ab2c
-ms.openlocfilehash: d29553071d68319d754406b3104da6e096f908fd
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c8e01a0f5a3f99fdbc424d6cd7d224367c7bad08
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975528"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835808"
 ---
 # <a name="how-to-validate-file-names-and-paths-in-visual-basic"></a>Практическое руководство. Проверка имен файлов и путей в Visual Basic
 Этот пример возвращает `Boolean` значение, указывающее, представляет ли строка имя файла или путь. Проверка, если имя содержит символы, которые не допускаются в файловой системе.  
@@ -23,5 +23,6 @@ ms.locfileid: "56975528"
  В этом примере не проверяет, если имя неправильно поместил запятой или каталогов без имени, или если длина имени превышает максимальную длину, определенную системой. Он также не проверяет имеет ли приложение разрешение на доступ к ресурсу файловой системы с указанным именем.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.IO.Path.GetInvalidPathChars%2A>
 - [Проверка строк в Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)

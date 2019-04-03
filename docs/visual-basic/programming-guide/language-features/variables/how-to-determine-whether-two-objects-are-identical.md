@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [Visual Basic], comparing
 - object variables [Visual Basic], determining identity
 ms.assetid: 7829f817-0d1f-4749-a707-de0b95e0cf5c
-ms.openlocfilehash: f1fdc5f69b8552ee10131c7408673457fffe16ae
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 2b2c43811cbb3a06ed1e8c092ca42e50a4d037c0
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976854"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816087"
 ---
 # <a name="how-to-determine-whether-two-objects-are-identical-visual-basic"></a>Практическое руководство. Определить, являются ли два объекта идентичны (Visual Basic)
 В Visual Basic две ссылки на переменные, считаются идентичными, если их указатели совпадают, то есть, если обе переменные указывают на один и тот же экземпляр класса в памяти. Например, в приложении Windows Forms, может потребоваться сделать сравнение с целью определения ли текущий экземпляр (`Me`) совпадает со значением конкретного экземпляра, такие как `Form2`.  
@@ -51,6 +51,7 @@ ms.locfileid: "56976854"
  `objA identical to objC? True`  
   
 ## <a name="see-also"></a>См. также
+
 - [Тип данных Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [Объектные переменные](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Значения объектных переменных](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)

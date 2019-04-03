@@ -2,12 +2,12 @@
 title: Практическое руководство. Создание неподписанных дружественных сборок (Visual Basic)
 ms.date: 03/14/2018
 ms.assetid: 5735eb79-9729-4c46-ac1f-537ada3acaa7
-ms.openlocfilehash: f5e475f3a0fdc9350e43b89db16724ef0f544071
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 814c2584ea9e1e14c3af003a0515166f53b6d913
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369569"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819389"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-visual-basic"></a>Практическое руководство. Создание неподписанных дружественных сборок (Visual Basic)
 В этом примере показано использование дружественных сборок с неподписанными сборками.  
@@ -85,6 +85,7 @@ ms.locfileid: "57369569"
  Между атрибутом <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> и классом <xref:System.Security.Permissions.StrongNameIdentityPermission> существует определенное сходство. Основное отличие заключается в том, что для выполнения <xref:System.Security.Permissions.StrongNameIdentityPermission> в определенном разделе кода могут потребоваться разрешения системы безопасности, тогда как атрибут <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> определяет видимость членов и типов `Friend`.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [Сборки в .NET](../../../../standard/assembly/index.md)
 - [Дружественные сборки](../../../../standard/assembly/friend-assemblies.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - limits, Visual Basic code
 - Visual Basic code, limitations
 ms.assetid: cf1646b7-5d24-48c6-9616-bda8a4849d91
-ms.openlocfilehash: 0f356b52304110299ed0af9bbccd5d03893f31a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 10f67c02d25ec275d1c3e98197d51c25aa250c19
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596362"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824914"
 ---
 # <a name="visual-basic-limitations"></a>Ограничения в Visual Basic
 Более ранних версиях Visual Basic накладывались ограничения в коде, такое как длина имени переменной, количество переменных в модуле и размер модуля. В Visual Basic .NET эти ограничения были ослаблены, предоставляя большую свободу в написании и упорядочении кода.  
@@ -33,5 +33,6 @@ ms.locfileid: "54596362"
 -   **Длина строки в среде.** Есть более 32 768 символов для любой строки среды, используется в качестве аргумента командной строки. Это ограничение на всех платформах.  
   
 ## <a name="see-also"></a>См. также
+
 - [Соглашения о структуре программы и коде](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
 - [Соглашения об именах Visual Basic](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)

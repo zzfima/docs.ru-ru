@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Отладка пустых наборов результатов запроса (Visual Basic)
+title: Практическое руководство. Отладка пустых наборов результатов запроса (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b242c90a-d2b8-4309-8a1e-e4e70736c727
-ms.openlocfilehash: 72233981e6e9a309c3f328041736f3fce71746cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80e505be03a26f80bbba9d3673732505b27e9598
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715456"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822800"
 ---
-# <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>Как выполнить Отладка пустых наборов результатов запроса (Visual Basic)
+# <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>Практическое руководство. Отладка пустых наборов результатов запроса (Visual Basic)
 Одной из наиболее типичных проблем при запросах к XML-деревьям является то, что, если XML-дерево содержит пространство имен по умолчанию, разработчик иногда пишет запрос так, как если бы XML-код не располагался в пространстве имен.  
   
  Первый набор примеров в данном разделе показывает типичный способ загрузки XML в пространстве имен по умолчанию и неправильного запроса к нему.  
@@ -90,4 +90,5 @@ End of result set
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Базовые запросы (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

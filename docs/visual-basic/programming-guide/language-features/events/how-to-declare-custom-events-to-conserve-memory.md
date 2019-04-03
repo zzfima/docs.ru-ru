@@ -6,12 +6,12 @@ helpviewer_keywords:
 - events [Visual Basic], custom
 - custom events [Visual Basic]
 ms.assetid: 87ebee87-260c-462f-979c-407874debd19
-ms.openlocfilehash: 3bd58a09d016d818c4cc88c1d2527e81a95411e6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: e4132f51f4dd85ad964042d05f7c5bc0a2e6e3cd
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967130"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826630"
 ---
 # <a name="how-to-declare-custom-events-to-conserve-memory-visual-basic"></a>Практическое руководство. Объявление пользовательских событий для экономии памяти (Visual Basic)
 Существует несколько случаев, когда важно, что приложение усложнять использования памяти. Пользовательские события позволяют приложению использовать память только для событий, которые он обрабатывает.  
@@ -28,6 +28,7 @@ ms.locfileid: "56967130"
  [!code-vb[VbVbalrEvents#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#22)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ComponentModel.EventHandlerList>
 - [События](../../../../visual-basic/programming-guide/language-features/events/index.md)
 - [Практическое руководство. Объявление пользовательских событий для предотвращения блокировки](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)

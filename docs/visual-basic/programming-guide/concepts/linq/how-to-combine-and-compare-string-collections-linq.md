@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Объединение и сравнение коллекций строк (LINQ) (Visual Basic)
+title: Практическое руководство. Объединение и сравнение коллекций строк (LINQ) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
-ms.openlocfilehash: 9948cdb4aa40ca12f7dd058fe12ffcd6462cdaae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: efd8ebdcc12c2941753b6811028d73655167c2f9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732665"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828970"
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>Как выполнить Объединение и сравнение коллекций строк (LINQ) (Visual Basic)
+# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>Практическое руководство. Объединение и сравнение коллекций строк (LINQ) (Visual Basic)
 В этом примере показано объединение файлов, содержащих строки текста, и последующая сортировка результатов. В частности, показано выполнение простого сцепления, объединения и пересечения в двух наборах строк текста.  
   
 ### <a name="to-set-up-the-project-and-the-text-files"></a>Настройка проекта и текстовых файлов  
@@ -166,5 +166,6 @@ End Class
  Создайте проект, предназначенный для .NET Framework 3.5 или более поздней версии, со ссылкой на библиотеку System.Core.dll и директивой `Imports` для пространства имен System.Linq.  
   
 ## <a name="see-also"></a>См. также
+
 - [LINQ и строки (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
 - [LINQ и каталоги файлов (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

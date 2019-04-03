@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31102
 ms.assetid: 6f7b31b7-3656-4ae1-8851-90f5f4c6950a
-ms.openlocfilehash: 1539eb1652d93402c349c65f77a3edc65b3beb57
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 3bc50d6762998ca5d8f445d84c8b698c9f46436f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55277567"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834469"
 ---
 # <a name="set-accessor-of-property-propertyname-is-not-accessible"></a>Метод доступа свойства «set» "\<имя_свойства >" не доступен
 Оператор пытается сохранить значение свойства, если он не имеет доступа к свойству `Set` процедуры.  
@@ -34,5 +34,6 @@ ms.locfileid: "55277567"
 -   Если у вас нет контроля исходного кода, определяющего свойство или необходимо ограничить `Set` больше, чем у самого свойства, попробуйте переместить оператор, который задает значение свойства в область кода, имеющего более удобный доступ к процедуре уровень доступа свойство.  
   
 ## <a name="see-also"></a>См. также
+
 - [Процедуры свойств](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)
 - [Практическое руководство. Объявление свойства со смешанным уровнем доступа](../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-a-property-with-mixed-access-levels.md)

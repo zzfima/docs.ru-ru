@@ -2,12 +2,12 @@
 title: Общие сведения о классе XElement (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 52331fcd-6023-4d19-b423-7b24f2d86ded
-ms.openlocfilehash: fe2a91d2b286061453e41870d68c04424417c6ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7fbe1cc484ea3482bc455c161783bd7a4513d0bd
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628821"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830713"
 ---
 # <a name="xelement-class-overview-visual-basic"></a>Общие сведения о классе XElement (Visual Basic)
 Класс <xref:System.Xml.Linq.XElement> - это один из фундаментальных классов в [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Он обозначает элемент XML. Этот класс можно использовать для создания элементов, изменения содержимого элемента, добавления, изменения или удаления дочерних элементов, добавления к элементам атрибутов или сериализации содержимого элемента в текстовой форме. Можно также настроить взаимодействие с другими классами в <xref:System.Xml?displayProperty=nameWithType>, например <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter> и <xref:System.Xml.Xsl.XslCompiledTransform>.  
@@ -22,7 +22,7 @@ ms.locfileid: "54628821"
   
 -   Можно выполнить синтаксический анализ XML из нескольких источников, в том числе из <xref:System.IO.TextReader>, текстовых файлов или веб-адреса (URL-адреса). Дополнительные сведения см. в разделе [синтаксический анализ XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md).  
   
--   Для распределения контента по дереву можно использовать <xref:System.Xml.XmlReader>. Для получения дополнительной информации см. <xref:System.Xml.Linq.XNode.ReadFrom%2A>.  
+-   Для распределения контента по дереву можно использовать <xref:System.Xml.XmlReader>. Дополнительные сведения см. в разделе <xref:System.Xml.Linq.XNode.ReadFrom%2A>.  
   
 -   Если установлен модуль, позволяющий заносить содержимое в средство <xref:System.Xml.XmlWriter>, то можно использовать метод <xref:System.Xml.Linq.XContainer.CreateWriter%2A>, чтобы создать модуль записи, передать его этому модулю, после чего использовать контент, записанный в систему <xref:System.Xml.XmlWriter>, чтобы заполнить XML-дерево.  
   
@@ -99,4 +99,5 @@ Console.WriteLine(xmlTree)
  Дополнительные сведения см. в разделе [изменение деревьев XML (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Обзор LINQ to XML программирования (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

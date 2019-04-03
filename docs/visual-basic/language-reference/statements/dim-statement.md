@@ -29,12 +29,12 @@ helpviewer_keywords:
 - Dim statement [Visual Basic], syntax
 - variables [Visual Basic], member and local
 ms.assetid: fae3eca1-f0b2-4400-994b-7aa58a848448
-ms.openlocfilehash: 7bee6bffcfe0660d1661cd2c8e2ddf0528e98620
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: cab1cc07d23a44e57bdb0962a323b014308cb1e5
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360268"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836562"
 ---
 # <a name="dim-statement-visual-basic"></a>Оператор Dim (Visual Basic)
 Объявляет и выделяет область хранения для одной или нескольких переменных.  
@@ -100,7 +100,7 @@ Dim [ WithEvents ] variablelist
   
      `variablename [ ( [ boundslist ] ) ] [ As [ New ] datatype [ With`{`[ .propertyname = propinitializer [ , ... ] ] } ] ] [ = initializer ]`  
   
-    |Отделение|Описание:|  
+    |Отделение|Описание|  
     |---|---|  
     |`variablename`|Обязательный. Имя переменной. См. раздел [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
     |`boundslist`|Необязательный параметр. Список границ для каждого измерения массива.|  
@@ -252,7 +252,7 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 |Указан тип данных?|Указан инициализатор?|Пример|Результат|  
 |---|---|---|---|  
 |Нет|Нет|`Dim qty`|Если [Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md) — off (по умолчанию), переменной присваивается `Nothing`.<br /><br /> Если параметр `Option Strict` включен, возникает ошибка времени при компиляции.|  
-|Нет|Да|`Dim qty = 5`|Если [Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md) включен (по умолчанию), переменная получает тип данных инициализатора. См. в разделе [вывод локального типа](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> Если параметры `Option Infer` и `Option Strict` отключены, переменная получает тип данных `Object`.<br /><br /> Если параметр `Option Infer` отключен, а параметр `Option Strict` включен, при компиляции возникает ошибка.|  
+|Нет|Да|`Dim qty = 5`|Если [Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md) включен (по умолчанию), переменная получает тип данных инициализатора. См. в разделе [вывод локального типа](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> Если параметры `Option Infer` и `Option Strict` отключены, переменная получает тип данных `Object`.<br /><br /> Если параметр `Option Infer` отключен, а параметр `Option Strict` включен, возникает ошибка времени компиляции.|  
 |Да|Нет|`Dim qty As Integer`|Переменная инициализируется со значением по умолчанию для типа данных. См. в таблице ниже в данном разделе.|  
 |Да|Да|`Dim qty  As Integer = 5`|Если тип данных инициализатора нельзя преобразовать в указанный тип данных, возникает ошибка времени компиляции.|  
   
@@ -314,6 +314,7 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
  [!code-vb[VbVbalrStatements#145](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#145)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Оператор Const](../../../visual-basic/language-reference/statements/const-statement.md)
 - [Оператор reDim](../../../visual-basic/language-reference/statements/redim-statement.md)
 - [Оператор Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md)

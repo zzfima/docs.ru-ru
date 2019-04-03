@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31194
 ms.assetid: 03d50c31-addd-4c90-9c53-725b84f9782e
-ms.openlocfilehash: eb30d63e83452e75f353c44a9d0445c7dbb1013a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c8480c6fab2bff931950ebc21d0a8affe3c41c66
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55287512"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827150"
 ---
 # <a name="value-of-type-type1-cannot-be-converted-to-type2"></a>Невозможно преобразовать значение типа  в 
 Значение типа «тип1» не может быть преобразован в «тип2». Можно использовать свойство «Value», чтобы получить строковое значение первого элемента "\<Родительскийэлемент >".  
@@ -26,6 +26,7 @@ ms.locfileid: "55287512"
 -   Используйте свойство `Value` XML-литерала для ссылки на его значение как на `String`. Используйте функцию `CType` , другую функцию преобразования типа или класс <xref:System.Convert> для приведения значения к указанному типу.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Convert>
 - [Функции преобразования типов](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [XML-литералы](../../../visual-basic/language-reference/xml-literals/index.md)

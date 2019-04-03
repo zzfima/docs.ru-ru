@@ -2,19 +2,19 @@
 title: Сведения о вызывающем объекте (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 15d556eb-4d0c-4497-98a3-7f60abb7d6a1
-ms.openlocfilehash: b3d7c999137b1e62de573470b8327bf070f2b1a9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 004cb003b6cf980f902d7625694e3d2fbfa5ee42
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375549"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826058"
 ---
 # <a name="caller-information-visual-basic"></a>Сведения о вызывающем объекте (Visual Basic)
 С помощью информационных атрибутов вызывающего объекта можно получить сведения о вызывающем объекте метода. Можно получить путь к файлу исходного кода, номер строки в исходном коде и имя вызывающего объекта. Эти сведения полезны для трассировки, отладки и создания средств диагностики.  
   
  Для получения этих сведений используются атрибуты, которые применяются к необязательным параметрам, каждый из которых имеет значение по умолчанию. В следующей таблице перечислены информационные атрибуты вызывающего объекта, которые определены в пространстве имен <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>:  
   
-|Атрибут|Описание:|Тип|  
+|Атрибут|Описание|Тип|  
 |---|---|---|  
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|Полный путь исходного файла, содержащего вызывающий объект. Это путь к файлу во время компиляции.|`String`|  
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Номер строки в исходном файле, в которой вызывается метод.|`Integer`|  
@@ -75,6 +75,7 @@ End Sub
 |Нет содержащего члена (например, уровень сборки или атрибуты, примененные к типам)|Значение необязательного параметра по умолчанию.|  
   
 ## <a name="see-also"></a>См. также
+
 - [Атрибуты (Visual Basic)](../../../visual-basic/language-reference/attributes.md)
 - [Common Attributes (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md) (Распространенные атрибуты (Visual Basic))
 - [Необязательные параметры](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)

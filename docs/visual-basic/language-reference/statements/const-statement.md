@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Const statement [Visual Basic]
 ms.assetid: 495b318d-b7c5-4198-94f8-0790a541b07a
-ms.openlocfilehash: eb99213287cda5ce7f9c3afe2998efb02ec68a03
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 089c2dca99373f379e1eff319cf8c41242e5f135
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979077"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835314"
 ---
 # <a name="const-statement-visual-basic"></a>Оператор Const (Visual Basic)
 Объявляет и определяет одну или несколько констант.  
@@ -42,7 +42,7 @@ Const constantlist
   
  `constantname` `[ As` `datatype` `] =` `initializer`  
   
-|Отделение|Описание:|  
+|Отделение|Описание|  
 |----------|-----------------|  
 |`constantname`|Обязательный. Имя константы. См. раздел [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
 |`datatype`|Обязателен, если `Option Strict` является `On`. Тип данных константы.|  
@@ -100,6 +100,7 @@ Const constantlist
  В предыдущем примере используется <xref:System.Type.ToString%2A> метод <xref:System.Type> объект, возвращаемый [оператор GetType](../../../visual-basic/language-reference/operators/gettype-operator.md), так как <xref:System.Type> невозможно преобразовать в `String` с помощью `CStr`.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:Microsoft.VisualBasic.Strings.Asc%2A>
 - <xref:Microsoft.VisualBasic.Strings.AscW%2A>
 - [Оператор Enum](../../../visual-basic/language-reference/statements/enum-statement.md)

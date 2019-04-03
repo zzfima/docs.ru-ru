@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Поиск одного потомка с помощью метода потомков (Visual Basic)
+title: Практическое руководство. Поиск одного потомка с помощью метода потомков (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 0c03468c-efc8-4140-98f3-fb67acd9e8e1
-ms.openlocfilehash: 24bad2bc6ac121cd2be16933161a38a6a6fcb1e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a2574422f95ed4d2b82c33ee999b233d95ea398
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552454"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826461"
 ---
-# <a name="how-to-find-a-single-descendant-using-the-descendants-method-visual-basic"></a>Как выполнить Поиск одного потомка с помощью метода потомков (Visual Basic)
+# <a name="how-to-find-a-single-descendant-using-the-descendants-method-visual-basic"></a>Практическое руководство. Поиск одного потомка с помощью метода потомков (Visual Basic)
 Метод оси <xref:System.Xml.Linq.XContainer.Descendants%2A> можно использовать для быстрого написания кода с целью поиска одного уникально именованного элемента. Этот способ особенно полезен, если нужно найти конкретного потомка с заданным именем. Можно написать собственный код для перехода к нужному элементу, но часто быстрей и легче написать такой код с помощью оси <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
   
 ## <a name="example"></a>Пример  
@@ -81,4 +81,5 @@ GC3 Value
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Базовые запросы (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

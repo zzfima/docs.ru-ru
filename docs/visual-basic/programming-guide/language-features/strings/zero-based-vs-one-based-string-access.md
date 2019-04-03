@@ -1,17 +1,17 @@
 ---
-title: Отсчитываемый от нуля vs. Доступ от единицы строки в Visual Basic
+title: 'Что лучше: отсчет строк с нуля или Доступ от единицы строки в Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], indexing
 ms.assetid: 0ed39f35-d68e-421d-ae14-460a5c0373b8
-ms.openlocfilehash: d4b2f73f8955b103e70e240e714e2b31d6198438
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a6ceb10d4a3cb9463551d8c85375ddbbb607ffdc
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535543"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830335"
 ---
-# <a name="zero-based-vs-one-based-string-access-in-visual-basic"></a>Отсчитываемый от нуля vs. Доступ от единицы строки в Visual Basic
+# <a name="zero-based-vs-one-based-string-access-in-visual-basic"></a>Что лучше: отсчет строк с нуля или Доступ от единицы строки в Visual Basic
 В этом разделе сравнивается как Visual Basic и [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] предоставляют доступ к символам в строке. [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Всегда обеспечивает (с нуля) доступ к символам в строке, тогда как Visual Basic предоставляет доступ, отсчитываемый от нуля и от единицы, в зависимости от функции.  
   
 ## <a name="one-based"></a>От единицы  
@@ -21,6 +21,7 @@ ms.locfileid: "54535543"
  Пример функции Visual Basic (с нуля), рассмотрите возможность `Split` функции. Она разбивает строку и возвращает массив, содержащий подстроки. [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.String.Split%2A?displayProperty=nameWithType> Метод также разбивает строку и возвращает массив, содержащий подстроки. Так как `Split` функции и <xref:System.String.Split%2A> метод возвращает [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] массивы, они должны быть отсчитываемый от нуля.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:Microsoft.VisualBasic.Strings.Mid%2A>
 - <xref:Microsoft.VisualBasic.Strings.Split%2A>
 - <xref:System.String.Substring%2A>

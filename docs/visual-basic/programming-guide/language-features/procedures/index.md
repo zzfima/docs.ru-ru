@@ -2,12 +2,18 @@
 title: Процедуры в Visual Basic
 ms.date: 04/28/2017
 helpviewer_keywords:
-  - 'procedures [Visual Basic], structured code'
-  - 'Visual Basic code, procedures'
-  - 'procedures [Visual Basic], types of'
-  - 'structured code [Visual Basic], procedures'
-  - procedures
+- procedures [Visual Basic], structured code
+- Visual Basic code, procedures
+- procedures [Visual Basic], types of
+- structured code [Visual Basic], procedures
+- procedures
 ms.assetid: 9effbcf0-80a0-4d1a-98f4-2c6920592766
+ms.openlocfilehash: dfd366cd823931962af878de59225ea183fff7c0
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814930"
 ---
 # <a name="procedures-in-visual-basic"></a>Процедуры в Visual Basic
 Объект *процедуры* представляет собой блок операторов Visual Basic, заключенным в операторе объявления (`Function`, `Sub`, `Operator`, `Get`, `Set`) и соответствующий `End` объявления. Все исполняемые операторы в Visual Basic должны находиться в пределах некоторой процедуры.  
@@ -56,6 +62,7 @@ ms.assetid: 9effbcf0-80a0-4d1a-98f4-2c6920592766
 -   После разработки процедур для использования в одной программе их можно использовать в других программах без изменений или с небольшими изменениями. Это помогает избежать дублирования кода.  
   
 ## <a name="see-also"></a>См. также
+
 - [Практическое руководство. Создание процедуры](./how-to-create-a-procedure.md)
 - [Подпрограммы](./sub-procedures.md)
 - [Процедуры функций](./function-procedures.md)

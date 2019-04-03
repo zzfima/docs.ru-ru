@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Набор толщины и выравнивания пера
+title: Практическое руководство. Задание толщины и выравнивания пера
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - pens [Windows Forms], setting width
 - pens [Windows Forms], setting alignment
 ms.assetid: a202af36-4d31-4401-a126-b232f51db581
-ms.openlocfilehash: e82f406b4fdca93df7a811eea5506846d56fda28
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b01482c059906d76ad9e506b593d580431f0ec09
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703053"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828203"
 ---
-# <a name="how-to-set-pen-width-and-alignment"></a>Практическое руководство. Набор толщины и выравнивания пера
+# <a name="how-to-set-pen-width-and-alignment"></a>Практическое руководство. Задание толщины и выравнивания пера
 При создании <xref:System.Drawing.Pen>, указать толщину пера в качестве одного из аргументов конструктора. Можно также изменить ширину пера <xref:System.Drawing.Pen.Width%2A> свойство <xref:System.Drawing.Pen> класса.  
   
  Теоретической линии имеет ширину 0. При рисовании линии, одну точку, пиксели центрируются по теоретической линии. Если нарисовать линию, является более чем одному пикселю, пиксели либо центрируются по теоретической линии появятся или к одной стороне от теоретической линии. Можно задать свойство выравнивания из <xref:System.Drawing.Pen> чтобы определить положение точек, рисуемых при помощи этого пера по отношению к теоретической линии.  
@@ -28,7 +28,7 @@ ms.locfileid: "57703053"
   
 -   Установите для параметра <xref:System.Drawing.Pen.Alignment%2A> свойства <xref:System.Drawing.Drawing2D.PenAlignment.Center> (по умолчанию) будет что рисование зеленым пером пикселей по теоретической линии. Ниже показан итоговый строки.  
   
-     ![Перья](./media/pens1a.gif "pens1A")  
+     ![Черный тонкой линии зеленым цветом.](./media/how-to-set-pen-width-and-alignment/green-pixels-centered-line.gif)  
   
      В следующем примере рисуется прямоугольник дважды: один раз черным пером толщиной в 1 и один раз с помощью зеленого пера шириной 10.  
   
@@ -39,9 +39,9 @@ ms.locfileid: "57703053"
   
 -   Установите для параметра <xref:System.Drawing.Pen.Alignment%2A> свойства <xref:System.Drawing.Drawing2D.PenAlignment.Center> будет что рисование зеленым пером пикселей по границ прямоугольника.  
   
-     На следующем рисунке показан полученный прямоугольник.  
+     На следующем рисунке показан полученный прямоугольник.
   
-     ![Перья](./media/pens2.gif "pens2")  
+     ![Прямоугольник, нарисованных при помощи черный тонких линий, выделенная зеленым цветом.](./media/how-to-set-pen-width-and-alignment/green-pixels-centered-rectangle.gif)  
   
      [!code-csharp[System.Drawing.UsingAPen#42](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#42)]
      [!code-vb[System.Drawing.UsingAPen#42](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#42)]  
@@ -53,9 +53,9 @@ ms.locfileid: "57703053"
      [!code-csharp[System.Drawing.UsingAPen#43](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#43)]
      [!code-vb[System.Drawing.UsingAPen#43](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#43)]  
   
-     Теперь пикселов в ширину зеленая линия отображаются внутри прямоугольника, как показано на следующем рисунке.  
+     Теперь пикселов в ширину зеленая линия отображаются внутри прямоугольника, как показано на следующем рисунке:
   
-     ![Перья](./media/pens3.gif "pens3")  
+     ![Прямоугольник, нарисованных при помощи черных линий, связывающих жирной зеленой линией внутри.](./media/how-to-set-pen-width-and-alignment/green-pixels-inside-rectangle.gif)  
   
 ## <a name="see-also"></a>См. также
 - [Рисование линий и фигур с помощью пера](using-a-pen-to-draw-lines-and-shapes.md)

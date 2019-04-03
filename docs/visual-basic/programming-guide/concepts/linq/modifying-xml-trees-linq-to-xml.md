@@ -2,12 +2,12 @@
 title: Изменение деревьев XML (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 4ae511a5-4fc9-4178-9c8e-761357deae3f
-ms.openlocfilehash: b34324b993a9c65aad6c2b7c92b33bf4ce9037cb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4673902880822e6e4ed0bc144aedc2428faa5b69
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725650"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814891"
 ---
 # <a name="modifying-xml-trees-linq-to-xml-visual-basic"></a>Изменение деревьев XML (LINQ to XML) (Visual Basic)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] служит для хранения XML-дерева в памяти. После загрузки или синтаксического анализа XML-дерева из источника [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] позволяет изменить это дерево, после чего его можно сериализовать, сохранив, например, в файл или отправив на удаленный сервер.  
@@ -28,4 +28,5 @@ ms.locfileid: "54725650"
 |[Практическое руководство. Изменить пространство имен для всего дерева XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-change-the-namespace-for-an-entire-xml-tree.md)|Показывается, как переместить XML-дерево из одного пространства имен в другое.|  
   
 ## <a name="see-also"></a>См. также
+
 - [Руководство по программированию (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

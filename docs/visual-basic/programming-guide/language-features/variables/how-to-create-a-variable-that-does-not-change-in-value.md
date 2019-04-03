@@ -1,18 +1,18 @@
 ---
-title: Как выполнить Создание переменной, которая не изменяет значение (Visual Basic)
+title: Практическое руководство. Создание переменной, которая не изменяет значение (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], read-only
 - variables [Visual Basic], constant value
 ms.assetid: 86b59266-25df-4635-ae15-9b59c411d036
-ms.openlocfilehash: 626b46123e3047b391cd67d3e85c25c5432b2a69
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 57792db826caa996e163bc0a51b01a6bbd6a4858
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640203"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823328"
 ---
-# <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a>Как выполнить Создание переменной, которая не изменяет значение (Visual Basic)
+# <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a>Практическое руководство. Создание переменной, которая не изменяет значение (Visual Basic)
 Понятие переменной, которая не изменяет его значение может показаться противоречивым. Но существуют ситуации, когда константа не представляется возможным, и полезно иметь переменную с фиксированным значением. В этом случае можно определить переменную-член с [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) ключевое слово.  
   
  Нельзя использовать [оператор Const](../../../../visual-basic/language-reference/statements/const-statement.md) объявить переменную и присвоить значение константы в следующих случаях:  
@@ -44,5 +44,6 @@ ms.locfileid: "54640203"
      Если вы не знаете значение во время компиляции, или не удается вычислить во время компиляции в одной инструкции, вы по-прежнему можно назначить во время выполнения в конструкторе. Чтобы сделать это, необходимо объявить `ReadOnly` переменных на уровне класса или структуры. В конструкторе для этого класса или структуры вычисления фиксированное значение переменной и назначьте его переменной перед возвратом из конструктора.  
   
 ## <a name="see-also"></a>См. также
+
 - [WriteOnly](../../../../visual-basic/language-reference/modifiers/writeonly.md)
 - [Оператор Const](../../../../visual-basic/language-reference/statements/const-statement.md)

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic Application Model, extending
 ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
-ms.openlocfilehash: 64c175216cf21b7947462cf79e4b88ab6fcd6d86
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: aceb63d3cb9af75fa4eb32ed5bca5d65825704e8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245652"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834716"
 ---
 # <a name="extending-the-visual-basic-application-model"></a>Расширение модели приложения Visual Basic
 Можно добавить функциональность в модель приложения путем переопределения `Overridable` членами <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> класса. Этот метод позволяет настроить поведение модели приложения и добавить вызовы собственных методов, как приложение запускается и завершает работу.  
@@ -19,13 +19,13 @@ ms.locfileid: "39245652"
   
  На следующем рисунке показан последовательность вызовов модели приложения в обычных приложениях Windows Forms Visual Basic. Последовательность начинается, когда `Sub Main` вызовы процедур <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> метод.  
   
- ![Модель приложения Visual Basic &#45; &#45; запуска](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_modelrun.gif "VB_ModelRun")  
+ ![Схема, показывающая последовательность вызова модели приложения.](./media/extending-the-visual-basic-application-model/application-model-call-sequence.gif)  
   
  Модель приложения Visual Basic также предоставляет <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> и <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> события. На следующем рисунке показаны механизм для создания этих событий.  
   
- ![Модель приложения Visual Basic &#45; &#45; Далее экземпляра](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_modelnext.gif "VB_ModelNext")  
+ ![Схема, показывающая метод OnStartupNextInstance StartupNextInstance события.](./media/extending-the-visual-basic-application-model/raise-startupnextinstance-event.gif)  
   
- ![Необработанное исключение модели приложения Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_unhandex.gif "VB_UnhandEx")  
+ ![Схема, показывающая метод OnUnhandledException, генерирующий данное событие UnhandledException.](./media/extending-the-visual-basic-application-model/raise-unhandledexception-event.gif)  
   
 ## <a name="overriding-the-base-methods"></a>Переопределении базовых методов  
  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> Метод определяет порядок, в котором `Application` выполнения методов. По умолчанию `Sub Main` вызывает процедуру для приложения Windows Forms <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> метод.  
@@ -90,13 +90,14 @@ ms.locfileid: "39245652"
 |<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SaveMySettingsOnExit%2A>|Если приложение автоматически сохраняет изменения пользовательских параметров приложения при выходе приложения.|**Сохранять My.Settings при завершении работы** "флажок"|  
 |<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShutdownStyle%2A>|Что вызывает завершение работы, например когда закрывается начальная форма или при закрытии последней формы приложения.|**Режим завершения работы** списка|  
   
-## <a name="see-also"></a>См. также  
- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup>  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance>  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown>  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>  
- [Обзор модели приложения в Visual Basic](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
- [Страница "Приложение" в конструкторе проектов (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
+## <a name="see-also"></a>См. также
+
+- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup>
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance>
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown>
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>
+- [Обзор модели приложения в Visual Basic](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)
+- [Страница "Приложение" в конструкторе проектов (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)

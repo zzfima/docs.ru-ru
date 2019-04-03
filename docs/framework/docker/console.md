@@ -4,12 +4,12 @@ description: Узнайте, как запускать существующее 
 author: spboyer
 ms.date: 09/28/2016
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: 31da5c4fc8f057709b2abcab49657c2c0992d3e5
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 481f62b21e223a13e06fe0cb68e4276968992aca
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58126088"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58633846"
 ---
 # <a name="running-console-applications-in-windows-containers"></a>Запуск консольных приложений в контейнерах Windows
 
@@ -55,7 +55,9 @@ ms.locfileid: "58126088"
 ## <a name="building-the-application"></a>Построение приложения
 Обычно консольные приложения распространяются с помощью установщика, через FTP или в рамках развертывания через общую папку. При развертывании в контейнер необходимо скомпилировать ресурсы и поместить их в промежуточное расположение, которое можно будет использовать при создании образа Docker.
 
-В скрипте *build.ps1* приложение компилируется с помощью [MSBuild](/visualstudio/msbuild/msbuild), чем завершается этап сборки ресурсов. Для окончательного включения нужных ресурсов в MSBuild передаются некоторые параметры. Имя файла компилируемого проекта или решения, расположение выходных данных и, наконец, конфигурация (окончательная или отладочная).
+Ниже приведен пример приложения: [ConsoleRandomAnswerGenerator](https://github.com/dotnet/samples/tree/master/framework/docker/ConsoleRandomAnswerGenerator)
+
+В скрипте *build.ps1*<sup>[[источник]](https://github.com/dotnet/samples/blob/master/framework/docker/ConsoleRandomAnswerGenerator/ConsoleRandomAnswerGenerator/build.ps1)</sup> приложение компилируется с помощью [MSBuild](/visualstudio/msbuild/msbuild), чем завершается этап создания ресурсов. Для окончательного включения нужных ресурсов в MSBuild передаются некоторые параметры. Имя файла компилируемого проекта или решения, расположение выходных данных и, наконец, конфигурация (окончательная или отладочная).
 
 В вызове `Invoke-MSBuild` `OutputPath` имеет значение **publish**, а `Configuration` — значение **Release**. 
 

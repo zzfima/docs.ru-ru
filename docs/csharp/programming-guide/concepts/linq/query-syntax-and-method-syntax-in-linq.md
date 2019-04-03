@@ -5,12 +5,12 @@ helpviewer_keywords:
 - LINQ [C#], query syntax vs. method syntax
 - queries [LINQ in C#], syntax comparisons
 ms.assetid: eedd6dd9-fec2-428c-9581-5b8783810ded
-ms.openlocfilehash: 6333094230e09220ab5ccf462e20ae3423d42eb6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1d6bd14a88f22bfa961ee28f0014b1f89ccb28b5
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978660"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654046"
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>Синтаксис запросов и синтаксис методов в LINQ (C#)
 Большинство запросов в вводной документации к LINQ ([!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]) написано с использованием декларативного синтаксиса запросов LINQ. Однако синтаксис запроса должен быть преобразован в вызовы методов для среды CLR .NET, когда код компилируется. Эти вызовы метода вызывают стандартные операторы запросов, которые имеют такие имена, как `Where`, `Select`, `GroupBy`, `Join`, `Max` и `Average`. Вместо синтаксиса запросов для их вызова можно использовать синтаксис методов.  
@@ -26,7 +26,7 @@ ms.locfileid: "56978660"
   
  Чтобы разобраться в запросе, основанном на методе, изучим его более подробно. Обратите внимание на то, что в правой части выражения предложение `where` теперь выражается как метод экземпляра в объекта `numbers`, который, как вы, наверное, помните, имеет тип `IEnumerable<int>`. Если вы знакомы с универсальным интерфейсом <xref:System.Collections.Generic.IEnumerable%601>, то знаете, что в нем отсутствует метод `Where`. При этом, вызвав список завершения IntelliSense в Visual Studio IDE, вы увидите не только метод `Where`, но и многие другие методы, такие как `Select`, `SelectMany`, `Join` и `Orderby`. Все это — стандартные операторы запросов.  
   
- ![Стандартные операторы запросов в Intellisense](../../../../csharp/programming-guide/concepts/linq/media/standardqueryops.png "StandardQueryOps")  
+ ![Снимок экрана, показывающий все стандартные операторы запросов в Intellisense.](./media/query-syntax-and-method-syntax-in-linq/standard-query-operators.png)  
   
  Может показаться, что класс <xref:System.Collections.Generic.IEnumerable%601> был переопределен и включает дополнительные методы, однако это не так. Стандартные операторы запросов реализуются как новый тип метода, который называется *методы расширения*. Эти методы "расширяют" существующий тип и могут вызываться так, как если бы они являлись методами экземпляра для этого типа. Стандартные операторы запроса расширяют <xref:System.Collections.Generic.IEnumerable%601>, и поэтому вы можете написать `numbers.Where(...)`.  
   

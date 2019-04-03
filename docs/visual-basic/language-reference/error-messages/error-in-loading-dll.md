@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID48
 ms.assetid: 4226cd1f-028c-477d-88a5-cb57f7e0cdc8
-ms.openlocfilehash: 76a0a443fd9f8a6dec5ead24bc75c97d89d6c36b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c3f88a5a3c37c89d23055aa413957b2add38ed67
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518466"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816906"
 ---
 # <a name="error-in-loading-dll-visual-basic"></a>Ошибка при загрузке библиотеки DLL (Visual Basic)
 Это библиотека динамической компоновки (DLL) — это библиотека, указанный в `Lib` предложении `Declare` инструкции. Среди возможных причин этой ошибки:  
@@ -33,4 +33,5 @@ ms.locfileid: "54518466"
 -   Если DLL или DLL, на которую указывает ссылка не находится в каталоге, указанном в пути, переместите библиотеку DLL в каталог, на который указывает ссылка.  
   
 ## <a name="see-also"></a>См. также
+
 - [Оператор Declare](../../../visual-basic/language-reference/statements/declare-statement.md)

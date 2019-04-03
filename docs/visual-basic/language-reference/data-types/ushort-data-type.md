@@ -16,12 +16,12 @@ helpviewer_keywords:
 - UShort data type
 - US literal type characters [Visual Basic]
 ms.assetid: 138db892-665d-4ba8-9cae-d8d91c4a8f39
-ms.openlocfilehash: 4b21624ea31fd0e11e598bab435b9f3c6f6d9b9c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8845a6bde4e1a701b5420029788259724cd0f8d9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512844"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829958"
 ---
 # <a name="ushort-data-type-visual-basic"></a>Тип данных UShort (Visual Basic)
 
@@ -75,6 +75,7 @@ Dim number = &H_5826us
 -   **Тип Framework.** В .NET Framework данный тип соответствует структуре <xref:System.UInt16?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.UInt16>
 - [Типы данных](../../../visual-basic/language-reference/data-types/index.md)
 - [Функции преобразования типов](../../../visual-basic/language-reference/functions/type-conversion-functions.md)

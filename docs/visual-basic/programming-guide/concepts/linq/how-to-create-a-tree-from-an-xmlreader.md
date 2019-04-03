@@ -1,19 +1,19 @@
 ---
-title: Как выполнить Создание дерева из XmlReader (Visual Basic)
+title: Практическое руководство. Создание дерева из XmlReader (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 6de683d8-177d-402b-b0de-d0539f1ce5d8
-ms.openlocfilehash: 49769fea96f1ed09420f4646a21f75093ef35fce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d0826112821394ac6a81ba03e7803187aaec2796
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502183"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836471"
 ---
-# <a name="how-to-create-a-tree-from-an-xmlreader-visual-basic"></a>Как выполнить Создание дерева из XmlReader (Visual Basic)
+# <a name="how-to-create-a-tree-from-an-xmlreader-visual-basic"></a>Практическое руководство. Создание дерева из XmlReader (Visual Basic)
 В этом разделе рассказывается, как создать XML-дерево непосредственно из <xref:System.Xml.XmlReader>. Чтобы создать <xref:System.Xml.Linq.XElement> на основе <xref:System.Xml.XmlReader>, необходимо указать для модуля <xref:System.Xml.XmlReader> узел элемента. Модуль <xref:System.Xml.XmlReader> пропускает комментарии и инструкции по обработке, но если для <xref:System.Xml.XmlReader> будет указан текстовый узел, то выдается ошибка. Чтобы избежать подобных ошибок, всегда задавайте для <xref:System.Xml.XmlReader> элемент, прежде чем приступать к созданию XML-дерева на основе <xref:System.Xml.XmlReader>.  
   
 ## <a name="example"></a>Пример  
- В этом примере используется следующий XML-документ: [Пример XML-файла: Книги (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
+ В этом примере используется следующий XML-документ: [Пример XML-файла. Книги (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
   
  Следующий код создает объект `T:System.Xml.XmlReader`, а затем читает узлы, пока не найдет узел первого элемента. Затем он загружает объект <xref:System.Xml.Linq.XElement>.  
   
@@ -53,4 +53,5 @@ Console.WriteLine(e)
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Синтаксический анализ XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

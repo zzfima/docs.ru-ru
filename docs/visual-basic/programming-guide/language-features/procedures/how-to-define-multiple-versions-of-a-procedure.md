@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure overloading [Visual Basic], multiple versions
 ms.assetid: 71ccdd66-1b00-4b66-bee4-6926c0d696f4
-ms.openlocfilehash: baaaca13755b9fdc11308ff3e4df39835dbe466e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c31c9ad05af04aec5dc41790aea530c62611f500
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980780"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841177"
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>Практическое руководство. Определение различных версий процедуры (Visual Basic)
 Можно определить процедуру в нескольких версиях, *перегрузка* его с помощью тем же именем, но другим списком параметров для каждой версии. Перегрузка предназначена для определения несколько взаимосвязанных версий процедуры без необходимости различать их по имени.  
@@ -43,6 +43,7 @@ ms.locfileid: "56980780"
  Убедитесь, что каждый перегруженные версии имеет то же имя процедуры, но другим списком параметров.  
   
 ## <a name="see-also"></a>См. также
+
 - [Процедуры](./index.md)
 - [Параметры и аргументы процедуры](./procedure-parameters-and-arguments.md)
 - [Рекомендации по устранению неполадок](./troubleshooting-procedures.md)

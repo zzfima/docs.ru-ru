@@ -1,15 +1,15 @@
 ---
-title: 'Пользовательский кодировщик сообщений: Кодировщик пользовательских текстовых сообщений'
+title: 'Пользовательский кодировщик сообщений: пользовательский кодировщик текста'
 ms.date: 03/30/2017
 ms.assetid: 68ff5c74-3d33-4b44-bcae-e1d2f5dea0de
-ms.openlocfilehash: c5b45ed10475bdfd88998db0ead9afff1f0a0f2d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 54cba7eb5ff743d4fddc37a824e05a376880d6d9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725510"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832324"
 ---
-# <a name="custom-message-encoder-custom-text-encoder"></a>Пользовательский кодировщик сообщений: Кодировщик пользовательских текстовых сообщений
+# <a name="custom-message-encoder-custom-text-encoder"></a>Пользовательский кодировщик сообщений: пользовательский кодировщик текста
 В этом примере показано, как реализовать пользовательский кодировщик текстовых сообщений с помощью Windows Communication Foundation (WCF).  
   
 > [!WARNING]
@@ -213,7 +213,7 @@ CustomBinding binding = new CustomBinding(bindingElements);
  В этом образце конфигурация клиента настраивается вручную. Для создания конфигурации клиента нельзя использовать средство Svcutil.exe, так как элемент `CustomTextMessageBindingElement` не экспортирует утверждение политики для описания своего поведения. Обычно необходимо реализовать интерфейс <xref:System.ServiceModel.Description.IPolicyExportExtension> в пользовательском элементе привязки для экспорта пользовательского утверждения политики, которое описывает поведение или возможности, реализуемые элементом привязки. Пример экспорта утверждения политика для пользовательского элемента привязки, см. в разделе [транспорта: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) образца.  
   
 ## <a name="message-encoding-binding-configuration-handler"></a>Обработчик конфигурации привязки кодировщика сообщений  
- В предыдущем разделе показано, как использовать пользовательский кодировщик текстовых сообщений программно. `CustomTextMessageEncodingBindingSection` реализует обработчик конфигурации, позволяющий задать использование пользовательского кодировщика текстовых сообщений в файле конфигурации. Класс `CustomTextMessageEncodingBindingSection` является производным от класса <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> . Свойство `BindingElementType` информирует систему конфигурации о типе элемента конфигурации, который следует создать для этого раздела.  
+ В предыдущем разделе показано, как использовать пользовательский кодировщик текстовых сообщений программно. `CustomTextMessageEncodingBindingSection` реализует обработчик конфигурации, позволяющий задать использование пользовательского кодировщика текстовых сообщений в файле конфигурации. Класс `CustomTextMessageEncodingBindingSection` является производным от класса <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> . Свойство `BindingElementType` информирует систему конфигурации о типе элемента привязки, который следует создать для этого раздела.  
   
  Все параметры, определенные элементом `CustomTextMessageBindingElement`, представляются в виде свойств в разделе `CustomTextMessageEncodingBindingSection`. Атрибут <xref:System.Configuration.ConfigurationPropertyAttribute> помогает при сопоставлении атрибутов элемента конфигурации со свойствами и при задании значений по умолчанию, если атрибут не задан. После того как значения из конфигурации загружены и применены к свойствам нужного типа, вызывается метод <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A>, который преобразует свойства в конкретный экземпляр элемента привязки.  
   
@@ -237,4 +237,3 @@ Microsoft.ServiceModel.Samples.CustomTextMessageEncodingBindingSection,
 </extensions>  
 ```  
   
-## <a name="see-also"></a>См. также

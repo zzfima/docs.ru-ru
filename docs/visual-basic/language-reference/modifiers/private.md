@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Private keyword [Visual Basic]
 - Private keyword [Visual Basic], syntax
 ms.assetid: aba74a2e-5824-4613-bf63-b9ec7787f4e6
-ms.openlocfilehash: 9a1dcf159f007f1587030057885122c036b99aac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d6e28e5e87c3a88e4db3fc81177894683dbb0908
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537222"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819481"
 ---
 # <a name="private-visual-basic"></a>Private (Visual Basic)
 Указывает, что один или несколько объявленных программных элементов доступны только из их объявление контекста, в том числе и из всех вложенных типов.  
@@ -60,11 +60,12 @@ ms.locfileid: "54537222"
  [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 ## <a name="see-also"></a>См. также
+
 - [Public](../../../visual-basic/language-reference/modifiers/public.md)
 - [Protected](../../../visual-basic/language-reference/modifiers/protected.md)
 - [Friend](../../../visual-basic/language-reference/modifiers/friend.md)
 - [Private Protected](./private-protected.md)
-- [Protected Friend](./protected-friend.md)[Access levels в Visual Basic    ](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Protected Friend](./protected-friend.md)[Access levels в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Процедуры](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [Структуры](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Объекты и классы](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
