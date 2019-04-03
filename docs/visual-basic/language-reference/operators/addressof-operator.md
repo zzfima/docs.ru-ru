@@ -8,43 +8,44 @@ helpviewer_keywords:
 - AddressOf operator [Visual Basic]
 - addresses, passing to API procedures
 ms.assetid: 8105a59d-60d8-4ab5-b221-5899cdfacbf4
-ms.openlocfilehash: b68d93009d2d297f8b8867fb8e79b26173a45095
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 9d8515b6d5b0caf3552ed05a7e0cd4a271efaf54
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56964673"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830348"
 ---
-# <a name="addressof-operator-visual-basic"></a><span data-ttu-id="b66d7-102">Оператор AddressOf (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b66d7-102">AddressOf Operator (Visual Basic)</span></span>
-<span data-ttu-id="b66d7-103">Создает экземпляр делегата процедуры, который ссылается на конкретную процедуру.</span><span class="sxs-lookup"><span data-stu-id="b66d7-103">Creates a procedure delegate instance that references the specific procedure.</span></span>  
+# <a name="addressof-operator-visual-basic"></a><span data-ttu-id="2ebf0-102">Оператор AddressOf (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2ebf0-102">AddressOf Operator (Visual Basic)</span></span>
+<span data-ttu-id="2ebf0-103">Создает экземпляр делегата процедуры, который ссылается на конкретную процедуру.</span><span class="sxs-lookup"><span data-stu-id="2ebf0-103">Creates a procedure delegate instance that references the specific procedure.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b66d7-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b66d7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2ebf0-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="2ebf0-104">Syntax</span></span>  
   
 ```  
 AddressOf procedurename  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="b66d7-105">Части</span><span class="sxs-lookup"><span data-stu-id="b66d7-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="2ebf0-105">Части</span><span class="sxs-lookup"><span data-stu-id="2ebf0-105">Parts</span></span>  
  `procedurename`  
- <span data-ttu-id="b66d7-106">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="b66d7-106">Required.</span></span> <span data-ttu-id="b66d7-107">Указывает процедуру, на которые ссылается созданный делегат процедуры.</span><span class="sxs-lookup"><span data-stu-id="b66d7-107">Specifies the procedure to be referenced by the newly created procedure delegate.</span></span>  
+ <span data-ttu-id="2ebf0-106">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="2ebf0-106">Required.</span></span> <span data-ttu-id="2ebf0-107">Указывает процедуру, на которые ссылается созданный делегат процедуры.</span><span class="sxs-lookup"><span data-stu-id="2ebf0-107">Specifies the procedure to be referenced by the newly created procedure delegate.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b66d7-108">Примечания</span><span class="sxs-lookup"><span data-stu-id="b66d7-108">Remarks</span></span>  
- <span data-ttu-id="b66d7-109">`AddressOf` Оператор создает делегат функции, который указывает на функцию, указанную аргументом `procedurename`.</span><span class="sxs-lookup"><span data-stu-id="b66d7-109">The `AddressOf` operator creates a function delegate that points to the function specified by `procedurename`.</span></span> <span data-ttu-id="b66d7-110">Если указанная процедура является методом экземпляра, то делегат функции ссылается на экземпляр и метод.</span><span class="sxs-lookup"><span data-stu-id="b66d7-110">When the specified procedure is an instance method then the function delegate refers to both the instance and the method.</span></span> <span data-ttu-id="b66d7-111">Затем при вызове делегата функция вызывает указанный метод указанного экземпляра.</span><span class="sxs-lookup"><span data-stu-id="b66d7-111">Then, when the function delegate is invoked the specified method of the specified instance is called.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2ebf0-108">Примечания</span><span class="sxs-lookup"><span data-stu-id="2ebf0-108">Remarks</span></span>  
+ <span data-ttu-id="2ebf0-109">`AddressOf` Оператор создает делегат функции, который указывает на функцию, указанную аргументом `procedurename`.</span><span class="sxs-lookup"><span data-stu-id="2ebf0-109">The `AddressOf` operator creates a function delegate that points to the function specified by `procedurename`.</span></span> <span data-ttu-id="2ebf0-110">Если указанная процедура является методом экземпляра, то делегат функции ссылается на экземпляр и метод.</span><span class="sxs-lookup"><span data-stu-id="2ebf0-110">When the specified procedure is an instance method then the function delegate refers to both the instance and the method.</span></span> <span data-ttu-id="2ebf0-111">Затем при вызове делегата функция вызывает указанный метод указанного экземпляра.</span><span class="sxs-lookup"><span data-stu-id="2ebf0-111">Then, when the function delegate is invoked the specified method of the specified instance is called.</span></span>  
   
- <span data-ttu-id="b66d7-112">`AddressOf` Оператор может использоваться в качестве операнда конструктора делегата, или он может использоваться в контексте, в котором тип делегата может определяться компилятором.</span><span class="sxs-lookup"><span data-stu-id="b66d7-112">The `AddressOf` operator can be used as the operand of a delegate constructor or it can be used in a context in which the type of the delegate can be determined by the compiler.</span></span>  
+ <span data-ttu-id="2ebf0-112">`AddressOf` Оператор может использоваться в качестве операнда конструктора делегата, или он может использоваться в контексте, в котором тип делегата может определяться компилятором.</span><span class="sxs-lookup"><span data-stu-id="2ebf0-112">The `AddressOf` operator can be used as the operand of a delegate constructor or it can be used in a context in which the type of the delegate can be determined by the compiler.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b66d7-113">Пример</span><span class="sxs-lookup"><span data-stu-id="b66d7-113">Example</span></span>  
- <span data-ttu-id="b66d7-114">В этом примере используется `AddressOf` оператор, чтобы назначить делегата для обработки `Click` события кнопки.</span><span class="sxs-lookup"><span data-stu-id="b66d7-114">This example uses the `AddressOf` operator to designate a delegate to handle the `Click` event of a button.</span></span>  
+## <a name="example"></a><span data-ttu-id="2ebf0-113">Пример</span><span class="sxs-lookup"><span data-stu-id="2ebf0-113">Example</span></span>  
+ <span data-ttu-id="2ebf0-114">В этом примере используется `AddressOf` оператор, чтобы назначить делегата для обработки `Click` события кнопки.</span><span class="sxs-lookup"><span data-stu-id="2ebf0-114">This example uses the `AddressOf` operator to designate a delegate to handle the `Click` event of a button.</span></span>  
   
  [!code-vb[VbVbalrDelegates#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#8)]  
   
-## <a name="example"></a><span data-ttu-id="b66d7-115">Пример</span><span class="sxs-lookup"><span data-stu-id="b66d7-115">Example</span></span>  
- <span data-ttu-id="b66d7-116">В следующем примере используется `AddressOf` оператор, чтобы назначить функцию запуска для потока.</span><span class="sxs-lookup"><span data-stu-id="b66d7-116">The following example uses the `AddressOf` operator to designate the startup function for a thread.</span></span>  
+## <a name="example"></a><span data-ttu-id="2ebf0-115">Пример</span><span class="sxs-lookup"><span data-stu-id="2ebf0-115">Example</span></span>  
+ <span data-ttu-id="2ebf0-116">В следующем примере используется `AddressOf` оператор, чтобы назначить функцию запуска для потока.</span><span class="sxs-lookup"><span data-stu-id="2ebf0-116">The following example uses the `AddressOf` operator to designate the startup function for a thread.</span></span>  
   
  [!code-vb[VbVbalrDelegates#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#9)]  
   
-## <a name="see-also"></a><span data-ttu-id="b66d7-117">См. также</span><span class="sxs-lookup"><span data-stu-id="b66d7-117">See also</span></span>
-- [<span data-ttu-id="b66d7-118">Оператор Declare</span><span class="sxs-lookup"><span data-stu-id="b66d7-118">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)
-- [<span data-ttu-id="b66d7-119">Оператор Function</span><span class="sxs-lookup"><span data-stu-id="b66d7-119">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)
-- [<span data-ttu-id="b66d7-120">Оператор Sub</span><span class="sxs-lookup"><span data-stu-id="b66d7-120">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [<span data-ttu-id="b66d7-121">Делегаты</span><span class="sxs-lookup"><span data-stu-id="b66d7-121">Delegates</span></span>](../../../visual-basic/programming-guide/language-features/delegates/index.md)
+## <a name="see-also"></a><span data-ttu-id="2ebf0-117">См. также</span><span class="sxs-lookup"><span data-stu-id="2ebf0-117">See also</span></span>
+
+- [<span data-ttu-id="2ebf0-118">Оператор Declare</span><span class="sxs-lookup"><span data-stu-id="2ebf0-118">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [<span data-ttu-id="2ebf0-119">Оператор Function</span><span class="sxs-lookup"><span data-stu-id="2ebf0-119">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)
+- [<span data-ttu-id="2ebf0-120">Оператор Sub</span><span class="sxs-lookup"><span data-stu-id="2ebf0-120">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [<span data-ttu-id="2ebf0-121">Делегаты</span><span class="sxs-lookup"><span data-stu-id="2ebf0-121">Delegates</span></span>](../../../visual-basic/programming-guide/language-features/delegates/index.md)

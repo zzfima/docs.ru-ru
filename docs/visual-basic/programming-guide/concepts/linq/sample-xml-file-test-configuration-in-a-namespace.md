@@ -1,18 +1,18 @@
 ---
-title: 'Образец XML-файла: Конфигурация теста в пространстве имен3'
+title: 'Пример XML-файла: Конфигурация теста в пространстве имен3'
 ms.date: 07/20/2015
 ms.assetid: aff02614-30ee-45e1-bc0f-d64b193d20b8
-ms.openlocfilehash: 642bc270bc502a4119b31decb0e432ec6951e610
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aef70e1ff7a7d61a1730588cc9e2ad26e6b67007
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609659"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821331"
 ---
-# <a name="sample-xml-file-test-configuration-in-a-namespace"></a><span data-ttu-id="ed349-102">Образец XML-файла: тестовая конфигурация в пространстве имен</span><span class="sxs-lookup"><span data-stu-id="ed349-102">Sample XML File: Test Configuration in a Namespace</span></span>
-<span data-ttu-id="ed349-103">Следующий XML-файл используется в различных примерах в документации [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ed349-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="ed349-104">Это тестовый файл конфигурации.</span><span class="sxs-lookup"><span data-stu-id="ed349-104">This is a test configuration file.</span></span> <span data-ttu-id="ed349-105">XML располагается в пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="ed349-105">The XML is in a namespace.</span></span>  
+# <a name="sample-xml-file-test-configuration-in-a-namespace"></a><span data-ttu-id="fcb62-102">Пример XML-файла: конфигурация тестирования в пространстве имен</span><span class="sxs-lookup"><span data-stu-id="fcb62-102">Sample XML File: Test Configuration in a Namespace</span></span>
+<span data-ttu-id="fcb62-103">Следующий XML-файл используется в различных примерах в документации [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="fcb62-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="fcb62-104">Это тестовый файл конфигурации.</span><span class="sxs-lookup"><span data-stu-id="fcb62-104">This is a test configuration file.</span></span> <span data-ttu-id="fcb62-105">XML располагается в пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="fcb62-105">The XML is in a namespace.</span></span>  
   
-## <a name="testconfiginnamespacexml"></a><span data-ttu-id="ed349-106">TestConfigInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="ed349-106">TestConfigInNamespace.xml</span></span>  
+## <a name="testconfiginnamespacexml"></a><span data-ttu-id="fcb62-106">TestConfigInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="fcb62-106">TestConfigInNamespace.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -56,5 +56,6 @@ ms.locfileid: "54609659"
 </Tests>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="ed349-107">См. также</span><span class="sxs-lookup"><span data-stu-id="ed349-107">See also</span></span>
-- [<span data-ttu-id="ed349-108">Примеры XML-документов (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="ed349-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="fcb62-107">См. также</span><span class="sxs-lookup"><span data-stu-id="fcb62-107">See also</span></span>
+
+- [<span data-ttu-id="fcb62-108">Примеры XML-документов (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="fcb62-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
