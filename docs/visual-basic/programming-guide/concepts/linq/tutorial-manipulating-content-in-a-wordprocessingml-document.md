@@ -2,12 +2,12 @@
 title: Учебник. Управление содержимым в документе WordprocessingML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f8028ba8-2dd1-4425-930c-8cc23176ebbc
-ms.openlocfilehash: e36e76f03476bf0504590dfcae1c7dd8fa203312
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b0a400a19dbe863490e5b2e34ec367e61a413a2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556276"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834963"
 ---
 # <a name="tutorial-manipulating-content-in-a-wordprocessingml-document-visual-basic"></a>Учебник. Управление содержимым в документе WordprocessingML (Visual Basic)
 В этом учебнике рассказывается, как применять функциональное преобразование и LINQ to XML для обработки XML-документов. Примеры Visual Basic запрашивается и обрабатывается информация в документах Office Open XML WordprocessingML, сохраненных программой Microsoft Word.  
@@ -30,5 +30,6 @@ ms.locfileid: "54556276"
 |[Сведения о Office Open XML-документов WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)|Приводит некоторые подробные сведения о документах Office Open XML WordprocessingML.|  
   
 ## <a name="see-also"></a>См. также
+
 - [Чистые функциональные преобразования XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)
 - [Введение в чистые функциональные преобразования (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)

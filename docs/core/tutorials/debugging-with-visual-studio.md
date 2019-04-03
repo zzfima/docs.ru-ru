@@ -3,12 +3,12 @@ title: Отладка приложения .NET Core Hello World в Visual Studi
 description: Узнайте, как выполнить отладку приложения Hello World, написанного на C# или Visual Basic, в Visual Studio 2017.
 ms.date: 12/15/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: b08744e784ffdde6682a6271888ae55d3fbd242b
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 268a0d47b63b8d6baa25305296395d7d8a86729e
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170669"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463427"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio-2017"></a>Отладка приложения .NET Core Hello World на C# или Visual с помощью Visual Studio 2017
 
@@ -39,7 +39,7 @@ ms.locfileid: "53170669"
 
 1. Выполнение программы остановится, когда будет достигнута точка останова, то есть перед выполнением метода `Console.WriteLine`. В окне **Видимые** отображаются значения всех переменных, которые используются рядом с текущей строкой. В окне **Локальные** (которое можно открыть, выбрав вкладку **Локальные**) отображаются значения переменных, которые определены в текущем выполняемом методе.
 
-   ![Окно приложения Visual Studio](./media/debugging-with-visual-studio/break.png)
+   ![Снимок экрана с точкой останова в Visual Studio.](./media/debugging-with-visual-studio/breakpoint-console-window.png)
 
 1. Вы можете изменить значения переменных и посмотреть, как это повлияет на работу программы. Если **окно интерпретации** не отображается, откройте его, выбрав пункт меню **Отладка** > **Окна** > **Интерпретация**. **Окно интерпретации** позволяет взаимодействовать с приложением, которое вы отлаживаете.
 

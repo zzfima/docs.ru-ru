@@ -7,12 +7,12 @@ helpviewer_keywords:
 - descendent axis property [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: aabfa258-4112-4e7e-bab9-403f96072ef7
-ms.openlocfilehash: 1edbbc052bbf319d91f1f944451312e7d67594ca
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: bfbf849bd296f639f03580346e4a9c52ce000abd
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973864"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832220"
 ---
 # <a name="how-to-access-xml-descendant-elements-visual-basic"></a>Практическое руководство. Элементам-потомкам XML доступа (Visual Basic)
 В этом примере показано, как использовать свойства дочерней оси для доступа ко всем элементам XML с указанным именем, содержащиеся в XML-элемента. В частности, он использует `Value` свойство, чтобы получить значение первого элемента в коллекции, `name` возвращает свойство дочерней оси. `name` Descendant axis-свойство возвращает все элементы с именем `name` , содержащихся в `contacts` объекта. В этом примере также используется `phone` descendant axis-свойство для доступа к всех наследников с именем `phone` , содержащихся в `contacts` объекта.  
@@ -26,6 +26,7 @@ ms.locfileid: "56973864"
 -   ссылка на пространство имен <xref:System.Xml.Linq>.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Xml.Linq.XContainer.Descendants%2A?displayProperty=nameWithType>
 - [Свойство дочерней оси XML](../../../../visual-basic/language-reference/xml-axis/xml-descendant-axis-property.md)
 - [Свойство значения XML](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic], Event statements
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
-ms.openlocfilehash: 13b1d18592379d7a08e68e84ffba62f1cc977caa
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 2f600f3ed37f38ddd7d86300231e0c447f458aa6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966077"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831895"
 ---
 # <a name="event-statement"></a>Оператор Event
 Объявляет пользовательское событие.  
@@ -56,7 +56,7 @@ End Event
   
 ## <a name="parts"></a>Части  
   
-|Отделение|Описание:|  
+|Отделение|Описание|  
 |---|---|  
 |`attrlist`|Необязательный параметр. Список атрибутов, применимых к этому событию. Несколько атрибутов разделяются запятыми. Необходимо заключить [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md) в угловые скобки (»`<`«и»`>`«).|  
 |`accessmodifier`|Необязательный параметр. Указывает, какой код может получать доступ к событию. Ниже указаны доступные значения.<br /><br /> -   [Открытый](../../../visual-basic/language-reference/modifiers/public.md)— любой код, который можно получить доступ к элементу, который объявляет он доступен.<br />-   [Защищенные](../../../visual-basic/language-reference/modifiers/protected.md)— только код внутри его класса или производного класса можно получить доступ к его.<br />-   [Дружественные](../../../visual-basic/language-reference/modifiers/friend.md)— только код в той же сборке может получить доступ к его.<br />-   [Закрытый](../../../visual-basic/language-reference/modifiers/private.md)— доступ к нему только код в объявляющем его элементе.<br /> -   [Protected Friend](../../language-reference/modifiers/protected-friend.md)-только доступ к нему код в классе события, производном классе или той же сборки. <br />- [Частный защищенный](../../language-reference/modifiers/private-protected.md)-только доступ к нему код в классе события или производного класса в той же сборке.|  
@@ -89,8 +89,7 @@ End Event
   
  Для обработки события его необходимо связать с подпрограммой обработчика событий с помощью оператора `Handles` или `AddHandler`. Подписи подпрограммы и события должны совпадать. Для обработки общего события необходимо использовать оператор `AddHandler`.  
   
- 
-  `Event` можно использовать только на уровне модуля. Это означает, что *контекст объявления* события должен быть класс, структура, модуль или интерфейс, и не может быть исходный файл, пространство имен, процедуры или блока. Дополнительные сведения см. в разделе [Контексты объявления и уровни доступа по умолчанию](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ `Event` можно использовать только на уровне модуля. Это означает, что *контекст объявления* события должен быть класс, структура, модуль или интерфейс, и не может быть исходный файл, пространство имен, процедуры или блока. Дополнительные сведения см. в разделе [Контексты объявления и уровни доступа по умолчанию](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
  В большинстве случаев для объявления события можно использовать первый пример синтаксиса в разделе "Синтаксис" этой статьи. Однако в некоторых сценариях требуется контролировать поведение события более детально. Последний пример синтаксиса в разделе "Синтаксис" этой статьи, в котором используется ключевое слово `Custom`, обеспечивает такие возможности, позволяя определять настраиваемые события. В настраиваемом событии можно точно указать, что происходит, когда код добавляет или удаляет обработчик события для события или когда код вызывает событие. Примеры см. в разделах [Практическое руководство. Объявление пользовательских событий для экономии памяти](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md) и [как: Объявление пользовательских событий для предотвращения блокировки](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md).  
   
@@ -119,6 +118,7 @@ End Event
 >  Способ обработки событий методом `My.Application.DoEvents` отличается от обработки событий формой. Чтобы разрешить форме обрабатывать события напрямую, можно использовать многопоточность. Дополнительные сведения см. в разделе [управляемых потоков](../../../standard/threading/index.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Оператор RaiseEvent](../../../visual-basic/language-reference/statements/raiseevent-statement.md)
 - [Оператор Implements](../../../visual-basic/language-reference/statements/implements-statement.md)
 - [События](../../../visual-basic/programming-guide/language-features/events/index.md)

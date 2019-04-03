@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Private access modifier
 - declared elements [Visual Basic], access level
 ms.assetid: 6e06c1ab-fd78-47f0-83a8-1152780b5e1a
-ms.openlocfilehash: 1278119ca82678267aa782f2518ab26b50966730
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: d8f2f16d2fb15f2e840f13f177d3fea83fda315e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203630"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843106"
 ---
 # <a name="access-levels-in-visual-basic"></a>Уровни доступа в Visual Basic
 *Уровень доступа* объявленного элемента указывает объем возможность доступа к нему, то есть какой код имеет разрешение на его чтение и запись в него. Это определяется не только как объявления элемента, но также от уровня доступа контейнера элемента. Код, который не может получить доступ к элемент не может получить доступ к любой из содержащихся в нем элементов, даже если они объявлены как `Public`. Например `Public` переменных в `Private` внутри класса, который содержит структуру, но не из структуры может быть организован и за пределами этого класса.  
@@ -67,8 +67,7 @@ Protected Friend stringForProjectAndHeirs As String
 Private numberForMeOnly As Integer  
 ```  
   
- 
-  `Private` можно использовать только на уровне модуля. Это означает, что можно объявить закрытый элемент внутри модуля, класса или структуры, но не на уровне исходного файла или пространства имен, в интерфейсе или в процедуре.  
+ `Private` можно использовать только на уровне модуля. Это означает, что можно объявить закрытый элемент внутри модуля, класса или структуры, но не на уровне исходного файла или пространства имен, в интерфейсе или в процедуре.  
   
  На уровне модуля `Dim` оператор без любые ключевые слова уровня доступа эквивалентен `Private` объявления. Тем не менее, может потребоваться использовать `Private` ключевое слово, чтобы облегчить чтение и понимание кода.  
 
@@ -116,6 +115,7 @@ Private Protected internalValue As Integer
 |`Private Protected`|Код в класс, объявляющий закрытый защищенный элемент, или код в производном классе, в той же сборке, что и класс bas.|интерфейсов,<br /><br /> Классы<br /><br /> Структуры<br /><br /> Процедуры<br /><br /> Свойства<br /><br /> Переменные-члены<br /><br /> Константы<br /><br /> Перечисления<br /><br /> События<br /><br /> Во внешних объявлениях<br /><br /> Делегаты|Класс|
   
 ## <a name="see-also"></a>См. также
+
 - [Оператор Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)
 - [Статические](../../../../visual-basic/language-reference/modifiers/static.md)
 - [Имена объявленных элементов](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)

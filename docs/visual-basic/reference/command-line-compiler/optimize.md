@@ -1,5 +1,5 @@
 ---
-title: -Оптимизация
+title: -optimize
 ms.date: 07/20/2015
 helpviewer_keywords:
 - optimize compiler option [Visual Basic]
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - optimization [Visual Basic], enabling
 - -optimize compiler option [Visual Basic]
 ms.assetid: fcba4a97-3622-4b87-a891-0f77deab4998
-ms.openlocfilehash: ddb12eb473ce53e60835acb8f1076655f78fafd1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb84e0a7038e7ff8cb399ac7222b6ac1661b5bc1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574382"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842165"
 ---
-# <a name="-optimize"></a>-Оптимизация
+# <a name="-optimize"></a>-optimize
 Включает или отключает оптимизацию компилятора.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -48,6 +48,7 @@ vbc t2.vb -optimize
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Компилятор Visual Basic с интерфейсом командной строки](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-debug (Visual Basic)](../../../visual-basic/reference/command-line-compiler/debug.md)
 - [Примеры командных строк компиляции](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

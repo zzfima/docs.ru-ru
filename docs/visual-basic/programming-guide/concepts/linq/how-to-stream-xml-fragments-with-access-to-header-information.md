@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Stream XML-фрагментов с доступом к сведениям заголовка (Visual Basic)
+title: Практическое руководство. Stream XML-фрагментов с доступом к сведениям заголовка (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: effd10df-87c4-4d7a-8a9a-1434d829dca5
-ms.openlocfilehash: 26d1d2166aaf8eaa62ba3ef7b3ffa9ab104574e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c11a64eb28e8952636ab877479852bd883fc7eba
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657328"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829477"
 ---
-# <a name="how-to-stream-xml-fragments-with-access-to-header-information-visual-basic"></a>Как выполнить Stream XML-фрагментов с доступом к сведениям заголовка (Visual Basic)
+# <a name="how-to-stream-xml-fragments-with-access-to-header-information-visual-basic"></a>Практическое руководство. Stream XML-фрагментов с доступом к сведениям заголовка (Visual Basic)
 Иногда приходится считывать достаточно большие XML-файлы и разрабатывать приложения таким образом, чтобы объем памяти, используемой этим приложением, был прогнозируемым. Если попытаться заполнить XML-дерево большим XML-файлом, используемый объем памяти будет пропорционален размеру файла, то есть излишним. Поэтому следует вместо этого использовать потоки.  
   
  Одна из возможностей состоит в том, чтобы разработать приложение с использованием метода <xref:System.Xml.XmlReader>. При этом для запроса XML-дерева можно использовать метод [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. В этом случае можно написать собственный пользовательский метод оси. Дополнительные сведения см. в разделе [Как Запись метода оси XML (Visual Basic) LINQ](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md).  
@@ -231,4 +231,5 @@ End Class
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Расширенные программированию LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

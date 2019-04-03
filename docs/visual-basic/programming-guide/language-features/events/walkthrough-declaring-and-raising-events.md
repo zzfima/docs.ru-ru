@@ -9,12 +9,12 @@ helpviewer_keywords:
 - events [Visual Basic], raising
 - raising events [Visual Basic], walkthroughs
 ms.assetid: 8ffb3be8-097d-4d3c-b71e-04555ebda2a2
-ms.openlocfilehash: 04f3cab43f7f7f7fc73e0b209b1bacee136513b5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 0f48c90232c00f53007e7d2f8f08e2107406ecad
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975398"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841008"
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>Пошаговое руководство. Объявление и вызов событий (Visual Basic)
 В этом пошаговом руководстве демонстрируется объявление и вызов событий для класса с именем `Widget`. После выполнения действий, может потребоваться чтение сопутствующего раздела [Пошаговое руководство: Обработка событий](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md), который показывает, как использовать события из `Widget` объекты, содержащие сведения о состоянии в приложении.  
@@ -74,6 +74,7 @@ ms.locfileid: "56975398"
  Теперь, когда `Widget` класс может создавать события, можно переместить в следующих пошаговых руководствах. [Пошаговое руководство: Обработка событий](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md) демонстрирует использование `WithEvents` для связывания обработчика событий с `PercentDone` событий.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:Microsoft.VisualBasic.DateAndTime.Timer%2A>
 - <xref:Microsoft.VisualBasic.DateAndTime.Now%2A>
 - [Пошаговое руководство: Обработка событий](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)

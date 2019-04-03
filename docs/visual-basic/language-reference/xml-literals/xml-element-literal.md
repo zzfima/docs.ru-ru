@@ -8,12 +8,12 @@ helpviewer_keywords:
 - element literal [Visual Basic]
 - XML literals [Visual Basic], element
 ms.assetid: 95039642-7893-48b7-b23f-45a6c55d8f67
-ms.openlocfilehash: 71e6cf3e6169434ea0a28f8691cf82f6c8e8a030
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7bd47d2461ba86dfbd1d5ff5993382914116f9ba
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979938"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842256"
 ---
 # <a name="xml-element-literal-visual-basic"></a>Литеральное представление XML-элемента (Visual Basic)
 
@@ -39,7 +39,7 @@ ms.locfileid: "56979938"
   
     -   Литеральный текст для имени элемента формы `[ePrefix:]eName`, где:  
   
-        |Отделение|Описание:|  
+        |Отделение|Описание|  
         |---|---|  
         |`ePrefix`|Необязательный параметр. Префикс пространства имен XML для элемента. Должно быть глобальным пространством имен XML, который определен с помощью `Imports` инструкции в файле или на уровне проекта или локальное пространство имен XML, который определен в этом элементе или родительском элементе.|  
         |`eName`|Обязательный. Имя элемента. Одно из следующих имеет следующий формат:<br /><br /> -Литеральный текст. См. в разделе [имена объявленных элементов и атрибутов](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).<br />-Внедренные выражения вида `<%= eNameExp %>`. Тип `eNameExp` должно быть `String` или типом, который неявно преобразуется к типу <xref:System.Xml.Linq.XName>.|  
@@ -56,7 +56,7 @@ ms.locfileid: "56979938"
   
     -   Назначение формы атрибутов `[aPrefix:]aName=aValue`, где:  
   
-        |Отделение|Описание:|  
+        |Отделение|Описание|  
         |---|---|  
         |`aPrefix`|Необязательный параметр. Префикс пространства имен XML для атрибута. Должно быть глобальным пространством имен XML, который определен с помощью `Imports` инструкции или локальное пространство имен XML, который определен в этом элементе или родительском элементе.|  
         |`aName`|Обязательный. Имя атрибута. Одно из следующих имеет следующий формат:<br /><br /> -Литеральный текст. См. в разделе [имена объявленных элементов и атрибутов](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).<br />-Внедренные выражения вида `<%= aNameExp %>`. Тип `aNameExp` должно быть `String` или типом, который неявно преобразуется к типу <xref:System.Xml.Linq.XName>.|  
@@ -160,6 +160,7 @@ ms.locfileid: "56979938"
  Обратите внимание на то, что компилятор преобразует префикса глобального пространства имен XML в определении префикса пространства имен XML. \<Ns:middle > элемент переопределяет префикс пространства имен XML для \<ns:inner1 > элемента. Тем не менее \<ns:inner2 > элемент использует пространство имен, определенное `Imports` инструкции.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Xml.Linq.XElement>
 - [Имена объявленных элементов и атрибутов XML](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
 - [XML-литерал комментария](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)

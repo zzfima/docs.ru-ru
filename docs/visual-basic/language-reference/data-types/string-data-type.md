@@ -18,12 +18,12 @@ helpviewer_keywords:
 - String literals [Visual Basic]
 - identifier type characters [Visual Basic], $
 ms.assetid: 15ac03f5-cabd-42cc-a754-1df3893c25d9
-ms.openlocfilehash: d841eaab8b09c9a2c126c40a1f846876f3e88601
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e87dc6527b4351467b1155439ee8266157c16ff
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54598819"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842295"
 ---
 # <a name="string-data-type-visual-basic"></a>Тип данных String (Visual Basic)
 Содержит последовательности точек неподписанный код 16-разрядное (2-байтовое) этого диапазона, в диапазоне от 0 до 65535. Каждый *кодовую точку*, или код символа, представляющего отдельный символ Юникода. Строки могут содержать от 0 до двух миллиардов (2 ^ 31) символов Юникода.  
@@ -79,6 +79,7 @@ S = Microsoft.VisualBasic.Left(S, 4)
 -   **Тип Framework.** Соответствующий тип в .NET Framework — <xref:System.String?displayProperty=nameWithType> класса.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.String?displayProperty=nameWithType>
 - [Типы данных](../../../visual-basic/language-reference/data-types/index.md)
 - [Тип данных Char](../../../visual-basic/language-reference/data-types/char-data-type.md)

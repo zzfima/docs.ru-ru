@@ -2,12 +2,12 @@
 title: Практическое руководство. Создание подписанных дружественных сборок (Visual Basic)
 ms.date: 03/14/2018
 ms.assetid: f2afd83d-b044-484b-a56d-56d0a8a40647
-ms.openlocfilehash: 20d1bb571d9cd354ea3f3dba560743da00c8bf22
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 28cbd0c538441978464033df896d69f80a8396a6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359020"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836744"
 ---
 # <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>Практическое руководство. Создание подписанных дружественных сборок (Visual Basic)
 В этом примере демонстрируется использование дружественных сборок со сборками, имеющими строгие имена. Обе сборки должны иметь строгое имя. Хотя обе сборки в этом примере используют одинаковые ключи, вы можете использовать для двух сборок разные ключи.  
@@ -85,6 +85,7 @@ ms.locfileid: "57359020"
  Между атрибутом <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> и классом <xref:System.Security.Permissions.StrongNameIdentityPermission> существует определенное сходство. Основное отличие заключается в том, что для выполнения <xref:System.Security.Permissions.StrongNameIdentityPermission> в определенном разделе кода могут потребоваться разрешения системы безопасности, тогда как атрибут <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> определяет видимость членов и типов `Friend`.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [Сборки в .NET](../../../../standard/assembly/index.md)
 - [Дружественные сборки](../../../../standard/assembly/friend-assemblies.md)

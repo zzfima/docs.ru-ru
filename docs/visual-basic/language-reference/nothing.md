@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Nothing keyword [Visual Basic]
 - Nothing keyword [Visual Basic], syntax
 ms.assetid: 06176e2d-bbf7-4a37-afaa-a86ad21ee99f
-ms.openlocfilehash: b8dfc166681dbadf1d2f4ba5a985011f5427f50a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 97c651dbcc657fbab0706c9a959bd0031c0fe343
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981430"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826097"
 ---
 # <a name="nothing-visual-basic"></a>Nothing (Visual Basic)
 Представляет значение по умолчанию любого типа данных. Для ссылочных типов, значение по умолчанию — `null` ссылки. Для типов значений значение по умолчанию зависит от того, является ли тип значения допускает значения NULL.  
@@ -51,6 +51,7 @@ ms.locfileid: "56981430"
  `Nothing` отличается от <xref:System.DBNull> объект, который представляет неинициализированный вариант или несуществующий столбец базы данных.  
   
 ## <a name="see-also"></a>См. также
+
 - [Оператор Dim](../../visual-basic/language-reference/statements/dim-statement.md)
 - [Время существования: Способ создания и уничтожения объектов](../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
 - [Время существования в Visual Basic](../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)

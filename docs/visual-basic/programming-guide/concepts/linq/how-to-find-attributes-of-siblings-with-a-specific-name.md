@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Найти атрибуты одноуровневых узлов с определенным именем (XPath-LINQ to XML) (Visual Basic)
+title: Практическое руководство. Найти атрибуты одноуровневых узлов с определенным именем (XPath-LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 83b3ddca-830a-4b71-9756-9e4bdf907302
-ms.openlocfilehash: ce97cbc4b8b1105e8431016a9c296c158cf0091c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 07fb5647950c450d08ab3235ac8cb396eff15305
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596193"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839058"
 ---
-# <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-visual-basic"></a>Как выполнить Найти атрибуты одноуровневых узлов с определенным именем (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-visual-basic"></a>Практическое руководство. Найти атрибуты одноуровневых узлов с определенным именем (XPath-LINQ to XML) (Visual Basic)
 В этом разделе показано, как найти все атрибуты одноуровневых элементов контекстного узла. В коллекции возвращаются только атрибуты с заданным именем.  
   
  Выражение XPath:  
@@ -19,7 +19,7 @@ ms.locfileid: "54596193"
 ## <a name="example"></a>Пример  
  В этом примере вначале происходит поиск элемента `Book`, затем всех одноуровневых элементов с именем `Book`, а после этого всех атрибутов с именем `id`. Результатом становится коллекция атрибутов.  
   
- В этом примере используется следующий XML-документ: [Пример XML-файла: Книги (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
+ В этом примере используется следующий XML-документ: [Пример XML-файла. Книги (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
   
 ```vb  
 Dim books as XDocument = XDocument.Load("Books.xml")  
@@ -55,4 +55,5 @@ id="bk102"
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [LINQ to XML для пользователей XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

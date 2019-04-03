@@ -2,12 +2,12 @@
 title: Операции над множествами (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c589367-ef8f-4161-9050-642c47e6bf63
-ms.openlocfilehash: 169f7608409fcc0205a1f8edc69ee7a0b7785a51
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 9e507bbaa39bf040a8ce1564630fb5fbb8c0dbe4
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675515"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58408916"
 ---
 # <a name="set-operations-c"></a>Операции над множествами (C#)
 Операции над множествами в LINQ — это операции запросов, результирующие наборы которых основываются на наличии или отсутствии эквивалентных элементов в одной или другой коллекции (или наборе).  
@@ -28,7 +28,7 @@ ms.locfileid: "57675515"
 ### <a name="distinct"></a>Distinct  
  На следующем рисунке показано поведение метода <xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType> применительно к последовательности символов. Возвращаемая последовательность содержит уникальные элементы из входной последовательности.  
   
- ![График, демонстрирующий поведение Distinct&#40;&#41;.](../../../../csharp/programming-guide/concepts/linq/media/distinct.png "Distinct")  
+ ![График, демонстрирующий поведение Distinct&#40;&#41;.](./media/set-operations/distinct-method-behavior.png)  
   
 ### <a name="except"></a>Исключения  
  На следующем рисунке показано поведение <xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType>. Возвращаемая последовательность содержит только те элементы из первой входной последовательности, которых нет во второй.  
@@ -38,13 +38,12 @@ ms.locfileid: "57675515"
 ### <a name="intersect"></a>Пересечение  
  На следующем рисунке показано поведение <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType>. Возвращаемая последовательность содержит элементы, общие для обеих входных последовательностей.  
   
- ![График, отображающий пересечение двух последовательностей.](../../../../csharp/programming-guide/concepts/linq/media/intersect.png "Intersect")  
-  
+ ![График, отображающий пересечение двух последовательностей.](./media/set-operations/intersection-two-sequences.png)  
+ 
 ### <a name="union"></a>Объединение  
  На следующем рисунке показана операция объединения двух последовательностей символов. Возвращаемая последовательность содержит уникальные элементы из обеих входных последовательностей.  
   
- ![График, показывающий объединение двух последовательностей.](../../../../csharp/programming-guide/concepts/linq/media/union.png "Union")  
-  
+ ![График, показывающий объединение двух последовательностей.](./media/set-operations/union-operation-two-sequences.png)  
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Linq>

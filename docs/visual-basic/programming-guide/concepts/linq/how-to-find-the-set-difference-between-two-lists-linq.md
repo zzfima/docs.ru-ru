@@ -1,20 +1,20 @@
 ---
-title: Как выполнить Нахождение разности множеств между двумя списками (LINQ) (Visual Basic)
+title: Практическое руководство. Нахождение разности множеств между двумя списками (LINQ) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b5b25474-10a8-4df6-aab5-75621bb6b68e
-ms.openlocfilehash: e1c012dbe252c494c5f77e61b56deccbb07490fc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2d87a2bd882adb6eca144288ace72b0e7c464907
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579723"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829503"
 ---
-# <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a>Как выполнить Нахождение разности множеств между двумя списками (LINQ) (Visual Basic)
+# <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a>Практическое руководство. Нахождение разности множеств между двумя списками (LINQ) (Visual Basic)
 В этом примере показано, как использовать LINQ для сравнения двух списков строк и вывода тех строк, которые содержатся в файле names1.txt, но не в файле names2.txt.  
   
 ### <a name="to-create-the-data-files"></a>Создание файлов данных  
   
-1.  Скопируйте файлы names1.txt и names2.txt в папку решения, как показано в [как: Объединение и сравнение коллекций строк (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).  
+1.  Скопируйте файлы names1.txt и names2.txt в папку решения, как показано в разделе [Практическое руководство. Объединение и сравнение коллекций строк (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).  
   
 ## <a name="example"></a>Пример  
   
@@ -57,4 +57,5 @@ End Class
  Создайте проект, предназначенный для .NET Framework 3.5 или более поздней версии, со ссылкой на библиотеку System.Core.dll и директивой `Imports` для пространства имен System.Linq.  
   
 ## <a name="see-also"></a>См. также
+
 - [LINQ и строки (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

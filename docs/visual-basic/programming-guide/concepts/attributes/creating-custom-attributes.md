@@ -2,12 +2,12 @@
 title: Создание настраиваемых атрибутов (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5c9ef584-6c7c-496b-92a9-6e42f8d9ca28
-ms.openlocfilehash: 4bc60e20d163c6aec231152940f548fcb58442f2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 90e8e9b9a3fa8e0b488f41d035b017d6113213b5
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526357"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814358"
 ---
 # <a name="creating-custom-attributes-visual-basic"></a>Создание настраиваемых атрибутов (Visual Basic)
 Собственные настраиваемые атрибуты можно создать, определив класс атрибута, то есть класс, прямо или косвенно наследующий от <xref:System.Attribute>, который упрощает задание определений атрибутов в метаданных. Предположим, что требуется пометить тип тегом с именем программиста, который его разработал. Вы можете определить класс настраиваемых атрибутов `Author`:  
@@ -63,6 +63,7 @@ End Class
 >  Если класс атрибутов содержит свойство, это свойство должно быть доступно для чтения и записи.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Reflection>
 - [Руководство по программированию на Visual Basic](../../../../visual-basic/programming-guide/index.md)
 - [Написание настраиваемых атрибутов](../../../../standard/attributes/writing-custom-attributes.md)

@@ -2,12 +2,12 @@
 title: Основные понятия и терминология (функциональное преобразование) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 24fd244d-ebae-4721-8858-89bb544aea0b
-ms.openlocfilehash: e98e24bb60dd2a5b6e84195120429fac0b8832e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c6308185b39651095482dca434ce25d717bd5e6b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651868"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820806"
 ---
 # <a name="concepts-and-terminology-functional-transformation-visual-basic"></a>Основные понятия и терминология (функциональное преобразование) (Visual Basic)
 В данном разделе вводятся основные понятия и терминология чисто функциональных преобразований. Подход с использованием функциональных преобразований для преобразования данных порождает код, который обычно быстрее для программирования, более выразительный и легче для отладки и сопровождения, чем порожденный с использованием традиционного императивного программирования.  
@@ -72,5 +72,6 @@ ms.locfileid: "54651868"
  Эти языковые возможности будут использованы в образцах кода на протяжении данного раздела.  
   
 ## <a name="see-also"></a>См. также
+
 - [Введение в чистые функциональные преобразования (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
 - [Сравнение функционального и Императивного программирования (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

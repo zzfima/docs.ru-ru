@@ -11,12 +11,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], Sub
 - syntax [Visual Basic], Sub procedures
 ms.assetid: 6a0a4958-ed0a-4d3d-8d31-0772c82bda58
-ms.openlocfilehash: 646d7d217891dc8ea5b78f7ce30fce19fab08316
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b70594e002bbf08f0890586e78df901ccb26c7ce
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977582"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843114"
 ---
 # <a name="sub-procedures-visual-basic"></a>Подпрограммы (Visual Basic)
 Объект `Sub` процедура — это последовательность операторов Visual Basic, заключенным `Sub` и `End Sub` инструкций. `Sub` Процедура выполняет задачи и возвращает управление вызывающему коду, но не возвращает значение вызывающему коду.  
@@ -73,6 +73,7 @@ ms.locfileid: "56977582"
  [!code-vb[VbVbcnProcedures#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#3)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Процедуры](./index.md)
 - [Процедуры функций](./function-procedures.md)
 - [Процедуры свойств](./property-procedures.md)

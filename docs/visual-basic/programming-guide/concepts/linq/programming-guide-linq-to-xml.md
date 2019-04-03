@@ -2,12 +2,12 @@
 title: Руководство по программированию (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f1f942bf-3404-4354-b4c5-4fe35e37a02b
-ms.openlocfilehash: 04e98c6aaa038bea03dd118521311adf40e3e2be
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 608ed431009c033de39cc38748bcbf173cf47cd4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54675110"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837717"
 ---
 # <a name="programming-guide-linq-to-xml-visual-basic"></a>Руководство по программированию (LINQ to XML) (Visual Basic)
 Этот раздел содержит теоретические и практические сведения о программировании при помощи [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -21,7 +21,7 @@ ms.locfileid: "54675110"
   
 ## <a name="in-this-section"></a>В этом разделе  
   
-|Раздел|Описание:|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Обзор LINQ to XML программирования (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)|Приводит общие сведения о классах [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], а также дает подробные сведения о трех самых важных классах: <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XAttribute> и <xref:System.Xml.Linq.XDocument>.|  
 |[Создание деревьев XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)|Приводит общие представления и основанные на задачах сведения о создании XML-деревьев. Можно создавать XML-деревья при помощи функциональной конструкции либо путем синтаксического анализа текста XML из строки или файла. Для распределения содержимого по XML-дереву можно использовать <xref:System.Xml.XmlReader>.|  
@@ -35,5 +35,6 @@ ms.locfileid: "54675110"
 |[Примеры XML-документов (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)|Содержит образцы XML-документов, которые используются во многих примерах, приведенных в этой документации.|  
   
 ## <a name="see-also"></a>См. также
+
 - [Начало работы (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)
 - [LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)

@@ -1,19 +1,19 @@
 ---
-title: Пошаговое руководство. Создание приложения специальных возможностей на базе Windows
+title: Пошаговое руководство. Создание приложения Windows с поддержкой специальных возможностей
 ms.date: 03/30/2017
 helpviewer_keywords:
 - accessibility [Windows Forms], Windows applications
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: b27203f46c1d89577825e40541d9789d3b9e17de
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 19ff49cfa465cce479a4fd5264c565cbb305c84f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708279"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823471"
 ---
-# <a name="walkthrough-creating-an-accessible-windows-based-application"></a>Пошаговое руководство. Создание приложения специальных возможностей на базе Windows
+# <a name="walkthrough-creating-an-accessible-windows-based-application"></a>Пошаговое руководство. Создание приложения Windows с поддержкой специальных возможностей
 Создание приложений со специальными возможностями необходимо по деловым соображениям. Во многих странах для продаваемого программного обеспечения существуют правительственные требования в отношении специальных возможностей. Логотип "Сертифицировано для Windows" предполагает соответствие продукта требованиям в отношении специальных возможностей. По предварительным оценкам, только в США 30 миллионов пользователей нуждаются в программном обеспечении со специальными возможностями. Многие из них являются потенциальными клиентами.  
   
  В этом пошаговом руководстве рассматриваются пять требований в отношении специальных возможностей, выполнение которых необходимо для использования эмблемы "Сертифицировано для Windows". Согласно этим требованиям в приложении со специальными возможностями обеспечиваются:  
@@ -55,9 +55,9 @@ ms.locfileid: "57708279"
   
 -   Убедитесь в том, что любой элемент управления Label, относящийся к элементу TextBox, непосредственно предшествует элементу TextBox в последовательности табуляции.  
   
--   С помощью символа & добавьте клавишу доступа в значение свойства <xref:System.Windows.Forms.Control.Text%2A> любого элемента управления, к которому пользователю может потребоваться перейти.  
+-   Добавьте клавишу доступа, с помощью символа «&», в <xref:System.Windows.Forms.Control.Text%2A> свойства любого элемента управления, пользователь может потребоваться перейти.  
   
--   С помощью символа & добавьте клавишу доступа в значение свойства <xref:System.Windows.Forms.Control.Text%2A> метки, находящейся перед элементом управления, к которому пользователю может потребоваться перейти. Задайте для свойства <xref:System.Windows.Forms.Label.UseMnemonic%2A> метки значение `true`, чтобы при нажатии клавиши доступа фокус переводился на следующий элемент управления в последовательности табуляции.  
+-   Добавьте клавишу доступа, с помощью символа «&», в <xref:System.Windows.Forms.Control.Text%2A> метки, которая предшествует элементу управления, который пользователь может потребоваться перейти. Задайте для свойства <xref:System.Windows.Forms.Label.UseMnemonic%2A> метки значение `true`, чтобы при нажатии клавиши доступа фокус переводился на следующий элемент управления в последовательности табуляции.  
   
 -   Добавьте клавиши доступа для всех элементов меню.  
   
@@ -65,80 +65,82 @@ ms.locfileid: "57708279"
   
 -   Добавьте в форму элементы управления и задайте их свойства, как описано ниже. Модель размещения элементов управления в форме см. на рисунке после таблицы.  
   
-    |Объект|Свойство.|Значение|  
+    |Object|Свойство.|Значение|  
     |------------|--------------|-----------|  
     |Form1|AccessibleDescription|Форма заказа|  
     ||AccessibleName|Форма заказа|  
     ||Размер шрифта|10|  
-    ||Text|Форма заказа пиццы|  
-    |PictureBox|Имя|logo|  
+    ||Текста|Форма заказа пиццы|  
+    |PictureBox|name|logo|  
     ||AccessibleDescription|Порция пиццы|  
     ||AccessibleName|Логотип компании|  
     ||Изображение|Любой значок или растровое изображение|  
-    |Метка|Имя|companyLabel|  
-    ||Text|Вкусная пицца|  
+    |Метка|name|companyLabel|  
+    ||Текста|Вкусная пицца|  
     ||TabIndex|1|  
     ||AccessibleDescription|Название компании|  
     ||AccessibleName|Название компании|  
     ||Backcolor|Синий|  
     ||Forecolor|Желтый|  
     ||Font size|18|  
-    |Метка|Имя|customerLabel|  
-    ||Text|&Имя|  
+    |Метка|name|customerLabel|  
+    ||Текста|&Имя|  
     ||TabIndex|2|  
     ||AccessibleDescription|Подпись имени заказчика|  
     ||AccessibleName|Подпись имени заказчика|  
     ||UseMnemonic|True|  
-    |TextBox|Имя|customerName|  
-    ||Text|(нет)|  
+    |TextBox|name|customerName|  
+    ||Текста|(нет)|  
     ||TabIndex|3|  
     ||AccessibleDescription|Имя заказчика|  
     ||AccessibleName|Имя заказчика|  
-    |GroupBox|Имя|sizeOptions|  
+    |GroupBox|name|sizeOptions|  
     ||AccessibleDescription|Размеры порции пиццы|  
     ||AccessibleName|Размеры порции пиццы|  
-    ||Text|Размер пиццы|  
+    ||Текста|Размер пиццы|  
     ||TabIndex|4|  
-    |RadioButton|Имя|smallPizza|  
-    ||Text|&Маленькая 300 р.|  
+    |RadioButton|name|smallPizza|  
+    ||Текста|&Маленькая 300 р.|  
     ||Установлен|True|  
     ||TabIndex|0|  
     ||AccessibleDescription|Маленькая пицца|  
     ||AccessibleName|Маленькая пицца|  
-    |RadioButton|Имя|largePizza|  
-    ||Text|&Большая 500 р.|  
+    |RadioButton|name|largePizza|  
+    ||Текста|&Большая 500 р.|  
     ||TabIndex|1|  
     ||AccessibleDescription|Большая пицца|  
     ||AccessibleName|Большая пицца|  
-    |Метка|Имя|toppingsLabel|  
-    ||Text|&Начинки (40 р. за каждую)|  
+    |Метка|name|toppingsLabel|  
+    ||Текста|&Начинки (40 р. за каждую)|  
     ||TabIndex|5|  
     ||AccessibleDescription|Метка начинки|  
     ||AccessibleName|Метка начинки|  
     ||UseMnemonic|True|  
-    |CheckedListBox|Имя|toppings|  
+    |CheckedListBox|name|toppings|  
     ||TabIndex|6|  
     ||AccessibleDescription|Выбор начинок|  
     ||AccessibleName|Выбор начинок|  
     ||Элементы|Пепперони, колбаса, грибы|  
-    |Кнопка|Имя|порядок|  
-    ||Text|&Порядок|  
+    |Кнопка|name|порядок|  
+    ||Текста|&Порядок|  
     ||TabIndex|7|  
     ||AccessibleDescription|Сумма заказа|  
     ||AccessibleName|Сумма заказа|  
-    |Кнопка|Имя|cancel|  
-    ||Text|О&тмена|  
+    |Кнопка|name|cancel|  
+    ||Текста|О&тмена|  
     ||TabIndex|8|  
     ||AccessibleDescription|Отмена заказа|  
     ||AccessibleName|Отмена заказа|  
-    |MainMenu|Имя|theMainMenu|  
-    |MenuItem|Имя|fileCommands|  
-    ||Text|&Файл|  
-    |MenuItem|Имя|exitApp|  
-    ||Text|Вы&ход|  
-  
-     ![Форма заказа пиццы](./media/vbpizzaorderform.gif "vbPizzaOrderForm")  
-Форма будет иметь вид, аналогичный представленному ниже.  
+    |MainMenu|name|theMainMenu|  
+    |MenuItem|name|fileCommands|  
+    ||Текста|&Файл|  
+    |MenuItem|name|exitApp|  
+    ||Текста|Вы&ход|
+    
+      Форма будет выглядеть примерно как на следующем изображении:
+    
+      ![Форма заказа пиццы имя текстового поля и размер и начинки выделением.](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)  
+
   
 ## <a name="supporting-high-contrast-mode"></a>Поддержка режима высокой контрастности  
  Режим высокой контрастности представляет собой тип системной настройки Windows, при которой удобство чтения текста повышается за счет более контрастных цветов и размеров шрифта, подходящих для пользователей с нарушениями зрения. <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> Свойство позволяет определить, установлен ли режим высокой контрастности.  

@@ -23,12 +23,12 @@ helpviewer_keywords:
 - module-level constants and variables
 - Object data type [Visual Basic], declaring constants
 ms.assetid: f901b4fa-481f-4621-822e-427060577ad1
-ms.openlocfilehash: 26a987543cdd80e7e3075dd4d0a04de69b51e465
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 95bfa3da5499c518dad0c235b539784fee2bb522
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56964939"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843413"
 ---
 # <a name="how-to-declare-a-constant-visual-basic"></a>Практическое руководство. Объявление константы (Visual Basic)
 Использовании `Const` инструкцию, чтобы объявление константы и присвойте ему значение. Объявляя константу, понятное имя назначается значение. После объявления константа не может изменить или присвоить новое значение.  
@@ -66,6 +66,7 @@ ms.locfileid: "56964939"
     ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Оператор Const](../../../../visual-basic/language-reference/statements/const-statement.md)
 - [Типы данных констант и литералов](constant-and-literal-data-types.md)
 - [Общие сведения о константах](constants-overview.md)

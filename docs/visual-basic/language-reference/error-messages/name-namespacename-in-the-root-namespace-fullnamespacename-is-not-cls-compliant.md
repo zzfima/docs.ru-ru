@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40039
 ms.assetid: c5bd5914-ae71-416a-8bed-f76f644f78be
-ms.openlocfilehash: c5afdcc98b7acb1927c9b0735a69fbe64c3d8e60
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 84706719d151ea8df478f88610df34842f6f8702
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268721"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841541"
 ---
 # <a name="name-namespacename-in-the-root-namespace-fullnamespacename-is-not-cls-compliant"></a>Имя \<Имя_пространства_имен > в корневом пространстве имен \<fullnamespacename > не является CLS-совместимым
 Сборка помечена как `<CLSCompliant(True)>`, но элемент корневое пространство имен начинается с символа подчеркивания (`_`).  
@@ -34,10 +34,10 @@ ms.locfileid: "55268721"
 -   Если вам требуется, что имя пространства имен остаются неизменными, то удалите <xref:System.CLSCompliantAttribute> из сборки или пометьте его как `<CLSCompliant(False)>`.  
   
 ## <a name="see-also"></a>См. также
+
 - [Оператор Namespace](../../../visual-basic/language-reference/statements/namespace-statement.md)
 - [Пространства имен в Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)
 - [/rootnamespace](../../../visual-basic/reference/command-line-compiler/rootnamespace.md)
 - [Страница "Приложение" в конструкторе проектов (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
 - [Имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [Соглашения об именах Visual Basic](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
-

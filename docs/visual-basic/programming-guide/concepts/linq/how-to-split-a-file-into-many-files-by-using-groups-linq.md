@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Разделение файла на несколько файлов с помощью групп (LINQ) (Visual Basic)
+title: Практическое руководство. Разделение файла на несколько файлов с помощью групп (LINQ) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5e8b2a2b-0b1d-4933-8a2b-03e91dfaf77f
-ms.openlocfilehash: 806a1f6c5674e670402d3d612f169582df5e0155
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aa96fb4042d9469fb6ffc5b0dc14a01e492f39a2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616983"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828554"
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>Как выполнить Разделение файла на несколько файлов с помощью групп (LINQ) (Visual Basic)
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>Практическое руководство. Разделение файла на несколько файлов с помощью групп (LINQ) (Visual Basic)
 В этом примере показан один из способов объединения содержимого двух файлов и последующего создания набора новых файлов, данные в котором будут организованы иначе.  
   
 ### <a name="to-create-the-data-files"></a>Создание файлов данных  
@@ -29,7 +29,7 @@ ms.locfileid: "54616983"
     Garcia, Debra  
     ```  
   
-2.  Скопируйте эти имена в текстовый файл с именем names2.txt и сохраните его в папку проекта: Обратите внимание, что в этих двух файлах имеются общие имена.  
+2.  Скопируйте эти имена в текстовый файл с именем names2.txt и сохраните его в папке проекта: Обратите внимание, что в этих двух файлах имеются общие имена.  
   
     ```  
     Liu, Jinghao  
@@ -119,5 +119,6 @@ End Class
  Создайте проект, предназначенный для .NET Framework 3.5 или более поздней версии, со ссылкой на библиотеку System.Core.dll и директивой `Imports` для пространства имен System.Linq.  
   
 ## <a name="see-also"></a>См. также
+
 - [LINQ и строки (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
 - [LINQ и каталоги файлов (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

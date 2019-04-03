@@ -5,12 +5,12 @@ helpviewer_keywords:
 - troubleshooting [Visual Basic], variables
 - variables [Visual Basic], troubleshooting
 ms.assetid: 928a2dc8-e565-4ae4-8ba3-80cc0cb50090
-ms.openlocfilehash: b03dcba7675793070c54bdadaf6ec418f8896b7d
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 55d0fdcdbed4f994e50e83e5a25baf83c3ad79cc
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965714"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831128"
 ---
 # <a name="troubleshooting-variables-in-visual-basic"></a>Устранение неполадок, связанных с переменными, в Visual Basic
 Этой странице перечислены некоторые распространенные проблемы, которые могут возникнуть при работе с переменными в Visual Basic.  
@@ -48,6 +48,7 @@ ms.locfileid: "56965714"
  Избегайте использования переменных с одинаковыми именами, но разными областями действия. При работе с другими сборками или проектами избегайте использования любых имен, определенных в их внешних компонентах, насколько это возможно. При наличии нескольких переменных с одним и тем же именем необходимо уточнить каждую ссылку на такую переменную. Для получения дополнительной информации см. [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Переменные](../../../../visual-basic/programming-guide/language-features/variables/index.md)
 - [Объявление переменных](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [Объектные переменные](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)

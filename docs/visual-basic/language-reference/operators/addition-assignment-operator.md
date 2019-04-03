@@ -10,12 +10,12 @@ helpviewer_keywords:
 - += operator [Visual Basic], appending strings
 - compound assignment statements [Visual Basic]
 ms.assetid: d3e959f4-85d4-4e47-87c4-77b62335a5b3
-ms.openlocfilehash: 7fdf5cd422cf2a4081372bc14e74ed7463393520
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4b8f36397d0f52866ebe9fa188d6b163364aeffc
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979857"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839025"
 ---
 # <a name="-operator-visual-basic"></a>Оператор += (Visual Basic)
 Добавляет значение числового выражения к значению числовой переменной или свойства и присваивает результат переменной или свойству. Можно также использовать для объединения `String` выражение `String` переменная или свойство и назначает полученное значение переменной или свойству.  
@@ -58,6 +58,7 @@ variableorproperty += expression
  Значение `num1` 13, а значение `str1` становится «103».  
   
 ## <a name="see-also"></a>См. также
+
 - [Оператор +](../../../visual-basic/language-reference/operators/addition-operator.md)
 - [Операторы присваивания](../../../visual-basic/language-reference/operators/assignment-operators.md)
 - [Арифметические операторы](../../../visual-basic/language-reference/operators/arithmetic-operators.md)

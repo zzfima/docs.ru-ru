@@ -14,12 +14,12 @@ helpviewer_keywords:
 - variables [Visual Basic], and properties
 - properties [Visual Basic], and variables
 ms.assetid: 7a03a8be-5381-431f-bd7c-16e887e4e07b
-ms.openlocfilehash: f2388f091278d398b5e8f3b82f147ab69937f2aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de4800e23519c2cc1c8b2b219287b9fa018b9bbf
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689527"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842906"
 ---
 # <a name="differences-between-properties-and-variables-in-visual-basic"></a>Различия между свойствами и переменными в Visual Basic
 Переменные и свойства представляют значения, которые доступны. Тем не менее существуют различия в хранении и реализации.  
@@ -45,6 +45,7 @@ ms.locfileid: "54689527"
  <sup>1</sup> в отличие от переменной, значение свойства может не соответствовать непосредственно к одному элементу хранилища. Хранилище может быть разбито на части для удобства или безопасности, или значение может храниться в зашифрованном виде. В этих случаях `Get` процедуры будет собирать фрагменты или расшифровать хранимое значение и `Set` процедуры будет шифровать новое значение или разбить его на составные части хранилища. Значение свойства может быть временным, например, время дня, в этом случае `Get` процедуры будет вычислять его на лету при каждом обращении к свойству.  
   
 ## <a name="see-also"></a>См. также
+
 - [Процедуры свойств](./property-procedures.md)
 - [Параметры и аргументы процедуры](./procedure-parameters-and-arguments.md)
 - [Оператор Property](../../../../visual-basic/language-reference/statements/property-statement.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - New constraint
 - New keyword [Visual Basic]
 ms.assetid: d7d566d7-fe0e-4336-91f7-641a542de4d0
-ms.openlocfilehash: dda23ef3ff49bd32474f39f5ae1807e57bdc2a62
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 630b0c48def77449f426b287a26f95af7cfb930e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980468"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837737"
 ---
 # <a name="new-operator-visual-basic"></a>Оператор New (Visual Basic)
 Представляет `New` предложение, чтобы создать новый экземпляр объекта, задает для параметра типа ограничение конструктора, либо определяет `Sub` процедуры как конструктор класса.  
@@ -48,6 +48,7 @@ ms.locfileid: "56980468"
  [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.OutOfMemoryException>
 - [Ключевые слова](../../../visual-basic/language-reference/keywords/index.md)
 - [Список типов](../../../visual-basic/language-reference/statements/type-list.md)

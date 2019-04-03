@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Key [Visual Basic]
 - Key keyword [Visual Basic]
 ms.assetid: 7697a928-7d14-4430-a72a-c9e96e8d6c11
-ms.openlocfilehash: 0f4778b69963c7b0df14308b3cb6312555647b92
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: e13a773f0b585a5c8803a77c7aaad441d90dfe75
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967780"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842308"
 ---
 # <a name="key-visual-basic"></a>Key (Visual Basic)
 `Key` Ключевое слово позволяет задать поведение для свойств анонимных типов. Только свойства, указанные как ключевые свойства, участвуют в проверке равенства между экземплярами анонимного типа, или вычисления значений хэш-кода. Невозможно изменить значения свойств ключа.  
@@ -54,6 +54,7 @@ ms.locfileid: "56967780"
  [!code-vb[VbVbalrAnonymousTypes#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#28)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Определение анонимного типа](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)
 - [Практическое руководство. Выведение имен свойств и типов в объявлениях анонимных типов](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
 - [Анонимные типы](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)

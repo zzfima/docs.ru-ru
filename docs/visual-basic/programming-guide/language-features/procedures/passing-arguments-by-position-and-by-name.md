@@ -22,12 +22,12 @@ helpviewer_keywords:
 - argument passing [Visual Basic], by position
 - arguments [Visual Basic], listing by name
 ms.assetid: 1ad7358f-1da9-48da-a95b-f3c7ed41eff3
-ms.openlocfilehash: 78c5303461ecf25a1487e072f4f6be25bde98dca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b872eda97d1e349ad781b12810e4b166d6e46fe1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587467"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837316"
 ---
 # <a name="passing-arguments-by-position-and-by-name-visual-basic"></a>Передача аргументов по позиции и по имени (Visual Basic)
 При вызове `Sub` или `Function` процедуру, вы можете передавать аргументы *по позиции* — в порядке, в котором они появляются в определении процедуры, или их можно передать *по имени*, без учета.  
@@ -95,6 +95,7 @@ ms.locfileid: "54587467"
 Невозможно передать массив параметров по имени. Это потому, что при вызове процедуры, вы предоставляете неопределенное число разделенных запятыми аргументов для массива параметров, а компилятор не может связать более одного аргумента с одним именем.  
   
 ## <a name="see-also"></a>См. также
+
 - [Процедуры](./index.md)
 - [Параметры и аргументы процедуры](./procedure-parameters-and-arguments.md)
 - [Практическое руководство. Передача аргументов в процедуру](./how-to-pass-arguments-to-a-procedure.md)

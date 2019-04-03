@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - components [Visual Basic]
 ms.assetid: ee6a4156-73f7-4e9b-8e01-c74c4798b65c
-ms.openlocfilehash: 7a0b513e5045db609550133e20c20ef65f17844c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ca336e2ffa3831167088d92bfca017ce2226d8a9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54551925"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828086"
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>Создание и использование компонентов в Visual Basic
 *Компонент* — это класс, который реализует интерфейс <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> или прямо либо косвенно наследуется из класса, реализующего <xref:System.ComponentModel.IComponent>. Компонент [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] является объектом, допускающим повторное использование, который может взаимодействовать с другими объектами и обеспечивает контроль над внешними ресурсами и поддержку во время разработки.  
@@ -63,5 +63,5 @@ ms.locfileid: "54551925"
  Способы решения распространенных проблем.  
   
 ## <a name="see-also"></a>См. также
-- [Практическое руководство. Поддержка разработки доступа в Windows Forms](../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)
 
+- [Практическое руководство. Поддержка разработки доступа в Windows Forms](../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)

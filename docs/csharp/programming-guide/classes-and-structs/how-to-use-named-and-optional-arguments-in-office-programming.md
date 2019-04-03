@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Руководство по программированию на C#. Использование именованных и необязательных аргументов в программировании для Office
+title: Практическое руководство. Руководство по программированию на C#. Использование именованных и необязательных аргументов в программировании для Office
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - optional arguments [C#], Office programming
 - named arguments [C#], Office programming
 ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
-ms.openlocfilehash: af5f2d13365a93e758962daea2b08ea3ae089aeb
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: aecac583e509d2a08fae55d911a26134330c74c7
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966805"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412205"
 ---
-# <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Как выполнить Руководство по программированию на C#. Использование именованных и необязательных аргументов в программировании для Office
+# <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Практическое руководство. Руководство по программированию на C#. Использование именованных и необязательных аргументов в программировании для Office
 Появившиеся в [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] именованные и необязательные аргументы повышают удобство, гибкость и удобочитаемость программирования на C#. Кроме того, эти функции значительно упрощают доступ к COM-интерфейсам, таким как интерфейсы API автоматизации Microsoft Office.  
   
  В следующем примере у метода [ConvertToTable](<xref:Microsoft.Office.Interop.Word.Range.ConvertToTable%2A>) имеется шестнадцать параметров, представляющих характеристики таблицы, например число столбцов и строк, форматирование, границы и цвета. Все шестнадцать параметров являются необязательными, поскольку в большинстве случаев не требуется задавать конкретные значения для всех этих параметров. Однако без именованных и необязательных аргументов приходилось указывать значение или значение-заполнитель для каждого из параметров. Именованные и необязательные параметры позволяют задавать значения только для тех параметров, которые требуются в конкретном проекте.  
@@ -79,8 +79,7 @@ ms.locfileid: "56966805"
   
 1.  Метод `ConvertToTable` служит для преобразования текста в таблицу. У метода имеется шестнадцать необязательных параметров. IntelliSense заключает необязательные параметры в квадратные скобки, как показано на следующем рисунке.  
   
-     ![Список параметров для метода ConvertToTable](../../../csharp/programming-guide/classes-and-structs/media/convert_tableparameters.png "Convert_TableParameters")  
-Параметры ConvertToTable  
+     ![Список параметров для метода ConvertToTable](./media/how-to-use-named-and-optional-arguments-in-office-programming/convert-table-parameters.png)  
   
      Именованные и необязательные аргументы позволяют задавать значения только для тех параметров, которые требуется изменить. Добавьте в конец метода `DisplayInWord` следующий код, чтобы создать простую таблицу. Аргумент указывает, что запятые в текстовой строке в `range` разделяют ячейки таблицы.  
   

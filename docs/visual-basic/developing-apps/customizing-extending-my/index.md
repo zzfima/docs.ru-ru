@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: 06ca80b9-1192-4eb5-8537-8ef5edfb9be0
-ms.openlocfilehash: 18c249348fe0daafc24dc939fe796f513128139e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 89a9a988bab62cb77e3e5a5075fa01bdbb11f4c0
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746790"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820949"
 ---
 # <a name="customizing-projects-and-extending-my-with-visual-basic"></a>Настройка проектов и расширение объекта My в Visual Basic
 Шаблоны проектов для предоставления дополнительных `My` объектов. Это упрощает для других разработчиков, поиск и использование ваших объектов.  
@@ -46,4 +46,5 @@ ms.locfileid: "54746790"
  Описывает `My` объект, который предоставляет свойства, методы и события, связанные с текущего приложения.  
   
 ## <a name="see-also"></a>См. также
+
 - [Разработка приложений в Visual Basic](../../../visual-basic/developing-apps/index.md)

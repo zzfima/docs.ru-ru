@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Сокрытие наследуемой переменной (Visual Basic)
+title: Практическое руководство. Сокрытие наследуемой переменной (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - qualification [Visual Basic], of element names
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - declared elements [Visual Basic], about declared elements
 - variables [Visual Basic], hiding inherited
 ms.assetid: 765728d9-7351-4a30-999d-b5f34f024412
-ms.openlocfilehash: 6cf45b12bebc254a0d96516ab262d7aae3d70746
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b052b44043deba85c8b142a2bf1a684c1159809
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691259"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842516"
 ---
-# <a name="how-to-hide-an-inherited-variable-visual-basic"></a>Как выполнить Сокрытие наследуемой переменной (Visual Basic)
+# <a name="how-to-hide-an-inherited-variable-visual-basic"></a>Практическое руководство. Сокрытие наследуемой переменной (Visual Basic)
 Производный класс наследует все определения базового класса. Если вы хотите определить переменную с тем же именем, что элемент базового класса, можно скрыть, или *тени*, этот элемент базового класса при определении переменной в производном классе. После этого код в производном классе получает доступ к переменной, если явно не обходится скрывающий механизм.  
   
  Другой причиной может потребоваться сокрытие наследуемой переменной является защита версии базового класса. Базовый класс может претерпеть изменения, изменяющей элемента, к которому вы наследуете. В этом случае `Shadows` модификатор заставляет ссылки из производного класса разрешаться в переменную, а не в элемент базового класса.  
@@ -56,6 +56,7 @@ ms.locfileid: "54691259"
  Затенение представляет несколько версий переменной с тем же именем. Если оператор кода ссылается на имя переменной, версии, к которому компилятор разрешает ссылку зависит от факторов, таких как расположение оператор кода, а также наличие уточняющей строки. Это может увеличить риск ссылки на неправильную версию затененной переменной. Можно снизить этот риск путем полного все ссылки на переменную тенью.  
   
 ## <a name="see-also"></a>См. также
+
 - [Ссылки на объявленные элементы](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Сокрытие в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [Различия между затемнением и переопределением](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)

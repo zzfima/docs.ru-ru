@@ -9,12 +9,12 @@ helpviewer_keywords:
 - structures [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: a221e74a-ffcf-4bdc-a0f6-a088a9bf26cc
-ms.openlocfilehash: 78c1d529053a10fc208ee5499b759623c227cb25
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3635729705520518d4c950f8a79da7d1249285bf
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681820"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841619"
 ---
 # <a name="structures-and-classes-visual-basic"></a>Структуры и классы (Visual Basic)
 Visual Basic унифицирован синтаксис структур и классов, в результате чего обе эти сущности поддерживают большинство тех же функций. Тем не менее существуют важные различия между структуры и классы.  
@@ -87,6 +87,7 @@ Visual Basic унифицирован синтаксис структур и к�
 -   **Проверки на равенство.** Равенство двух структур должны выполняться с помощью теста поэлементно. Две объектные переменные можно сравнивать с помощью <xref:System.Object.Equals%2A> метод. <xref:System.Object.Equals%2A> Определяет, указывают ли две переменные на один экземпляр.  
   
 ## <a name="see-also"></a>См. также
+
 - [Типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Составные типы данных](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
 - [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

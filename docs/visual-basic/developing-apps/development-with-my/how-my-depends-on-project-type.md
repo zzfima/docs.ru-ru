@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - _MYTYPE
 ms.assetid: c188b38e-bd9d-4121-9983-41ea6a94d28e
-ms.openlocfilehash: 49efaa6470b6fea062be0663d8b1c48b9284bd99
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 743160889c4f24a9edb2d0f9799662a74c5061fb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671997"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842087"
 ---
 # <a name="how-my-depends-on-project-type-visual-basic"></a>Зависимость My от типа проекта (Visual Basic)
 `My` предоставляет только те объекты, необходимые для конкретного типа проекта. Например `My.Forms` объекта, доступные в приложении Windows Forms, но не доступен в консольном приложении. В этом разделе описывается, что `My` объекты доступны в различных типов проектов.  
@@ -56,6 +56,7 @@ ms.locfileid: "54671997"
  <sup>7</sup> веб-версии `My.User`. Этот объект связан с удостоверением пользователя текущего HTTP-запроса приложения.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>
 - <xref:Microsoft.VisualBasic.Devices.Computer>
 - <xref:Microsoft.VisualBasic.Logging.Log>

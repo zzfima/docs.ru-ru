@@ -3,12 +3,12 @@ title: Создание первого веб-приложения ASP.NET с п
 ms.date: 03/30/2017
 ms.assetid: 3ee8ee7f-caba-4267-9343-e313fae2876d
 author: BrucePerlerMS
-ms.openlocfilehash: 67489b2bb93719d8182159fbc91703399d5e8bc7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2fd5b36ffe26632240955307eb522cecdf4f1e73
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588968"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838135"
 ---
 # <a name="building-my-first-claims-aware-aspnet-web-application"></a>Создание первого веб-приложения ASP.NET с поддержкой утверждений
 ## <a name="applies-to"></a>Применение  
@@ -19,7 +19,7 @@ ms.locfileid: "54588968"
   
  В этом разделе представлен сценарий создания веб-приложений ASP.NET с учетом утверждений при помощи WIF. Обычно существует три участника сценария для приложения с учетом утверждений: само приложение, пользователь и служба маркеров безопасности (STS). Данный сценарий представлен на иллюстрации ниже:  
   
- ![Базовое веб-приложение WIF](../../../docs/framework/security/media/wifbasicwebapp.gif "WIFBasicWebApp")  
+ ![Схема, показывающая компоненты WIF базовое веб-приложение.](./media/building-my-first-claims-aware-aspnet-web-app/windows-identity-foundation-basic-web-application.gif)  
   
 1.  Приложение, поддерживающее утверждения, использует WIF для идентификации запросов, не прошедших аутентификацию, и для перенаправления этих запросов в STS.  
   

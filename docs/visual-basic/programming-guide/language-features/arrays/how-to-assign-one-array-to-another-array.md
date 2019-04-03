@@ -1,19 +1,19 @@
 ---
-title: Как выполнить Присвоение одного массива другому (Visual Basic)
+title: Практическое руководство. Присвоение одного массива другому (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - covariance, arrays
 - arrays [Visual Basic], assigning
 - arrays [Visual Basic], covariance
 ms.assetid: 1ae89ea5-f292-4282-bcfc-e9b06b37fbd5
-ms.openlocfilehash: f2617d270caf5ed4ade68934486fee6afb6c413f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 834dad07ec1f4116aca72a184ccffc664d0a42ed
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572725"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835288"
 ---
-# <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>Как выполнить Присвоение одного массива другому (Visual Basic)
+# <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>Практическое руководство. Присвоение одного массива другому (Visual Basic)
 Поскольку массивы являются объектами, их можно использовать в инструкциях присваивания, как и другие типы объектов. Переменную массива содержит указатель на данные, содержащие элементы массива и ранг и длина информацию и присваивания копирует только этот указатель.  
   
 ### <a name="to-assign-one-array-to-another-array"></a>Чтобы присвоение одного массива другому  
@@ -43,6 +43,7 @@ ms.locfileid: "54572725"
  Компилятор выдает ошибку, если приведенные выше правила нарушены, например если типы данных несовместимы или ранги не равны. Вы можете добавить в код, чтобы убедиться в том, что массивы совместимы, прежде чем назначение обработки ошибок. Можно также использовать [оператор TryCast](../../../../visual-basic/language-reference/operators/trycast-operator.md) ключевое слово, если вы хотите избежать возникновения исключения.  
   
 ## <a name="see-also"></a>См. также
+
 - [Массивы](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [Устранение неполадок, связанных с массивами](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
 - [Оператор Enum](../../../../visual-basic/language-reference/statements/enum-statement.md)

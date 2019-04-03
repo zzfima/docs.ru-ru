@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Вычисление значений столбцов в текстовом CSV-файле (LINQ) (Visual Basic)
+title: Практическое руководство. Вычисление значений столбцов в текстовом CSV-файле (LINQ) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 88b2b9f3-c82e-41f3-b1b4-26ede5973a02
-ms.openlocfilehash: c99696472deaa79842e3270d05b63cd591754d8e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1249b5555c9ef7074410682ad9b26e5b003aea9c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671906"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829003"
 ---
-# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>Как выполнить Вычисление значений столбцов в текстовом CSV-файле (LINQ) (Visual Basic)
+# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>Практическое руководство. Вычисление значений столбцов в текстовом CSV-файле (LINQ) (Visual Basic)
 В этом примере демонстрируется выполнение статистических вычислений, таких как сумма, среднее, минимальное и максимальное для столбцов в CSV-файле. Приведенные в примере принципы могут применяться к другим типам структурированного текста.  
   
 ### <a name="to-create-the-source-file"></a>Создание исходного файла  
@@ -146,5 +146,6 @@ End Class
  Создайте проект, предназначенный для .NET Framework 3.5 или более поздней версии, со ссылкой на библиотеку System.Core.dll и директивой `Imports` для пространства имен System.Linq.  
   
 ## <a name="see-also"></a>См. также
+
 - [LINQ и строки (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
 - [LINQ и каталоги файлов (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

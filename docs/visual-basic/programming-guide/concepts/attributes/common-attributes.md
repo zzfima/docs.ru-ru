@@ -2,12 +2,12 @@
 title: Общие атрибуты (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
-ms.openlocfilehash: 9c9e8ba886697b9306a89caed4944fd2752db835
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e001c9a637d2e5e34e77158704e4ad81d6973a50
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375406"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834551"
 ---
 # <a name="common-attributes-visual-basic"></a>Общие атрибуты (Visual Basic)
 В этом разделе описаны атрибуты, которые чаще всего используются в программах Visual Basic.  
@@ -214,7 +214,7 @@ End Class
   
  Для получения этих сведений используются атрибуты, которые применяются к необязательным параметрам. Каждый необязательный параметр задает значение по умолчанию. В следующей таблице перечислены информационные атрибуты вызывающего объекта, которые определены в пространстве имен <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>:  
   
-|Атрибут|Описание:|Тип|  
+|Атрибут|Описание|Тип|  
 |---|---|---|  
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|Полный путь исходного файла, содержащего вызывающий объект. Это путь во время компиляции.|`String`|  
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Номер строки в исходном файле, из которого вызывается метод.|`Integer`|  
@@ -255,6 +255,7 @@ End Structure
  Используйте `VBFixedArrayAttribute` Чтобы объявить массивы фиксированного размера. Например, Visual Basic строки массивы имеют переменную длину по умолчанию. Этот атрибут полезен при сериализации или запись данных в файлы.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Reflection>
 - <xref:System.Attribute>
 - [Руководство по программированию на Visual Basic](../../../../visual-basic/programming-guide/index.md)

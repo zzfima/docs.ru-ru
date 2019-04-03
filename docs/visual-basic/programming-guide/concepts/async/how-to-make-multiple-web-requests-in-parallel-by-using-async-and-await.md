@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Параллельное выполнение нескольких веб-запросов с использованием Async и Await (Visual Basic)
+title: Практическое руководство. Параллельное выполнение нескольких веб-запросов с использованием Async и Await (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a894b99b-7cfd-4a38-adfb-20d24f986730
-ms.openlocfilehash: 526ef4c14649c1840b8c310af45de9b5095909de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3d5a41cab961f2ec054085b02a0047b69b488a1d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495956"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843154"
 ---
-# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>Как выполнить Параллельное выполнение нескольких веб-запросов с использованием Async и Await (Visual Basic)
+# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>Практическое руководство. Параллельное выполнение нескольких веб-запросов с использованием Async и Await (Visual Basic)
 В асинхронном методе задачи запускаются в момент создания. [Await](../../../../visual-basic/language-reference/operators/await-operator.md) оператор применяется к задаче в точке в методе, где обработка не может продолжаться до завершения задачи. Часто задачи ожидаются в момент создания, как показано в следующем примере.  
   
 ```vb  
@@ -38,13 +38,13 @@ Dim result = Await myTask
 > [!NOTE]
 >  Для выполнения этого проекта необходимо, чтобы на компьютере были установлены Visual Studio 2012 или более поздняя версия и .NET Framework 4.5 или более поздняя версия.  
   
- Еще один пример, в котором запускается несколько задач одновременно, см. в разделе [как: Расширение Async пошагового руководства с использованием метода Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).  
+ Другой пример, в котором одновременно запускается несколько задач, см. в разделе [Практическое руководство. Расширение Async пошагового руководства с использованием метода Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).  
   
  Код для этого примера можно скачать на странице [Примеры кода от разработчиков](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e).  
   
 ### <a name="to-set-up-the-project"></a>Настройка проекта  
   
-1.  Чтобы настроить приложение WPF, выполните следующие действия. Вы найдете подробные инструкции для этих шагов в [Пошаговое руководство: Доступ к Интернету с использованием Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
+1.  Чтобы настроить приложение WPF, выполните следующие действия. Подробные инструкции для выполнения этих действий можно найти в разделе [Пошаговое руководство. Доступ к Интернету с использованием Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
     -   Создайте приложение WPF, которое содержит текстовое поле и кнопку. Назовите кнопку `startButton`, а текстовое поле — `resultsTextBox`.  
   
@@ -204,6 +204,7 @@ End Class
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Пошаговое руководство: Доступ к Интернету с использованием Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Асинхронное программирование с использованием ключевых слов Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
 - [Практическое руководство. Расширение Async пошагового руководства с использованием метода Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)

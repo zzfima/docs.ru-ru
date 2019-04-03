@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My namespace [Visual Basic], customizing
 - My namespace
 ms.assetid: 4e8279c2-ed5b-4681-8903-8a6671874000
-ms.openlocfilehash: caa9c2cadb9194161756f89b5acb16da0a955485
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 74be338cd6f704174d89032fb7f9e859215c2bc3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543725"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843543"
 ---
 # <a name="customizing-which-objects-are-available-in-my-visual-basic"></a>Настройка доступа к объектам через My (Visual Basic)
 В этом разделе описывается, как можно выбирать, какие `My` объекты включены, задав проекта `_MYTYPE` константы условной компиляции. Интегрированная среда разработки (IDE) Visual Studio сохраняет `_MYTYPE` константа условной компиляции для проекта в соответствии с типом проекта.  
@@ -70,6 +70,7 @@ ms.locfileid: "54543725"
 |`_MYTYPE`|Позволяет `My.Log`, `My.Request`, и `My.Response`, если константа является «Web».|  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>
 - <xref:Microsoft.VisualBasic.Devices.Computer>
 - <xref:Microsoft.VisualBasic.Logging.Log>

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Handles keyword [Visual Basic]
 ms.assetid: 1b051c0e-f499-42f6-acb5-6f4f27824b40
-ms.openlocfilehash: 3be28ee718675b1f6bebfaff03baaf561a6fff43
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 50a449ea8a5131c878cf703f44695cd2e2304444
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974072"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842581"
 ---
 # <a name="handles-clause-visual-basic"></a>Предложение Handles (Visual Basic)
 Заявляет, что процедура обрабатывает указанное событие.  
@@ -50,12 +50,12 @@ proceduredeclaration Handles eventlist
  [!code-vb[VbVbalrEvents#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/class3.vb#41)]  
   
 ## <a name="example"></a>Пример  
- Следующий пример эквивалентен предыдущему примеру: 
-  `eventlist` в предложении `Handles` содержит события для обеих кнопок.  
+ Следующий пример эквивалентен предыдущему примеру: `eventlist` в предложении `Handles` содержит события для обеих кнопок.  
   
  [!code-vb[VbVbalrEvents#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/class3.vb#42)]  
   
 ## <a name="see-also"></a>См. также
+
 - [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)
 - [Оператор AddHandler](../../../visual-basic/language-reference/statements/addhandler-statement.md)
 - [Оператор RemoveHandler](../../../visual-basic/language-reference/statements/removehandler-statement.md)

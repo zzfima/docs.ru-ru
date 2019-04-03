@@ -9,12 +9,12 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: 54203dfa-c24b-463f-9942-d5153e89e762
-ms.openlocfilehash: fe5c314fe4e39c8a06803037da29b51148188e14
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: cf7bfdd09c7f3429f9c730a7aec34b24af3f2e9f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974644"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829230"
 ---
 # <a name="how-to-define-a-conversion-operator-visual-basic"></a>Практическое руководство. Определить оператор преобразования (Visual Basic)
 Если вы определили, класса или структуры, можно определить оператор преобразования типа между типом класса или структуры и другой тип данных (таких как `Integer`, `Double`, или `String`).  
@@ -33,6 +33,7 @@ ms.locfileid: "56974644"
  [!code-vb[VbVbcnProcedures#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#28)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Процедуры операторов](./operator-procedures.md)
 - [Практическое руководство. Определение оператора](./how-to-define-an-operator.md)
 - [Практическое руководство. Вызов процедуры оператора](./how-to-call-an-operator-procedure.md)

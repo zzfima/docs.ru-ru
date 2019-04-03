@@ -2,12 +2,12 @@
 title: Устойчивый контекст экземпляра
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: ec01f83e25eb003e194424bbfa247011701dc1bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9981c4293f651bce3a0abaa3e0243d0d656ff257
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527499"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841455"
 ---
 # <a name="durable-instance-context"></a>Устойчивый контекст экземпляра
 В этом примере показано, как настроить среду выполнения Windows Communication Foundation (WCF) для включения устойчивых контекстов экземпляров. В качестве резервного хранилища в этом примере используется SQL Server 2005, а именно SQL Server 2005 Express. Этот сервер также предоставляет возможность доступа к пользовательским механизмам хранения.  
@@ -460,4 +460,3 @@ Press ENTER to shut down client
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Durable`  
   
-## <a name="see-also"></a>См. также

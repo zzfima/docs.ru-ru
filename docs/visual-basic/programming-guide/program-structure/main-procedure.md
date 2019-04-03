@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Main method [Visual Basic]
 - main function
 ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
-ms.openlocfilehash: b84bf20acaaa912e47102973b0484d635f1aa244
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 641edd2d0e0dde5f509c8fa77ccf65358fa76a31
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679426"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833677"
 ---
 # <a name="main-procedure-in-visual-basic"></a>Процедура Main в Visual Basic
 Каждое приложение Visual Basic должен содержать процедура с именем `Main`. Эта процедура служит начальной точкой программы и осуществляющей общее управление для вашего приложения. Платформа .NET Framework вызывает ваш `Main` процедуру при загрузке приложения и все готово для передачи управления. Если вы создаете приложение Windows Forms, необходимо написать `Main` процедуры для приложений, работающих на собственные.  
@@ -109,6 +109,7 @@ ms.locfileid: "54679426"
     ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>
 - <xref:System.Array.Length%2A>
 - <xref:Microsoft.VisualBasic.Information.UBound%2A>

@@ -2,19 +2,19 @@
 title: Расширенные программированию LINQ to XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 36018532-a55c-4538-8a27-98f475ea3415
-ms.openlocfilehash: 1aae385db8f989aa142f588bb459486b805074e5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f30f8f1c6dcdbabc1f32f4f7e216ce65a50396c6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668383"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835327"
 ---
 # <a name="advanced-linq-to-xml-programming-visual-basic"></a>Расширенные программированию LINQ to XML (Visual Basic)
 В этом разделе представлены сведения, которыми могут воспользоваться только опытные разработчики в определенных сценариях [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
 ## <a name="in-this-section"></a>В этом разделе  
   
-|Раздел|Описание:|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Примечания LINQ to XML](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-annotations.md)|Описывает способ добавления заметок к узлам и атрибутам [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
 |[События LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-events.md)|Описывает способ записи обработчиков событий для событий, происходящих во время изменения XML-дерева.|  
@@ -29,4 +29,5 @@ ms.locfileid: "54668383"
 |[Привязка данных WPF с помощью LINQ to XML](/visualstudio/designers/wpf-data-binding-with-linq-to-xml)|Описывает способ использования LINQ to XML в виде источника данных для привязки данных в приложениях Windows Presentation Foundation.|  
   
 ## <a name="see-also"></a>См. также
+
 - [Руководство по программированию (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

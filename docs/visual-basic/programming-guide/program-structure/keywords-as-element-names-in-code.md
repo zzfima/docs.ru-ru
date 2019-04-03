@@ -7,12 +7,12 @@ helpviewer_keywords:
 - name conflicts [Visual Basic]
 - element names [Visual Basic], in code
 ms.assetid: 2e4e8e02-23f7-49b9-a1c8-2b0402b6b525
-ms.openlocfilehash: 053149334118d69e5e85bdbd0f9a45e855e3d4dd
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c247ada67f6554362f287cf252dd49856c4995da
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980104"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841151"
 ---
 # <a name="keywords-as-element-names-in-code-visual-basic"></a>Ключевые слова как имена элементов в коде (Visual Basic)
 Любым элементам программы, такие как переменная, класс или член — может иметь имя, совпадающее с именем служебное слово. Например, можно создать переменную с именем `Loop`. Тем не менее для ссылки на переменную, который имеет то же имя, что ограниченных `Loop` ключевое слово — необходимо поставили полной строки или заключите его в квадратные скобки (`[ ]`), как показано в следующем примере.  
@@ -31,6 +31,7 @@ ms.locfileid: "56980104"
 >  Программы также могут содержаться имена элементов, предоставляемых в других сборках. Если эти имена конфликтуют с ограниченным доступом ключевые слова, квадратные скобки вокруг них приводит к Visual Basic, чтобы интерпретировать их как определенные вами элементы.  
   
 ## <a name="see-also"></a>См. также
+
 - [Соглашения об именах Visual Basic](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
 - [Соглашения о структуре программы и коде](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
 - [Ключевые слова](../../../visual-basic/language-reference/keywords/index.md)

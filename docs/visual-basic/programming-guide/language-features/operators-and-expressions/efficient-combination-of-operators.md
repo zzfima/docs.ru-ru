@@ -13,12 +13,12 @@ helpviewer_keywords:
 - parentheses [Visual Basic], complex expressions
 - numeric expressions
 ms.assetid: bd22340e-b5be-458b-8772-3916c02309a4
-ms.openlocfilehash: daaf75256b3449209b4e3c030cc6b54692c6a172
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8f5dd6c56b3e4576b9d798e0e5e10b2996f558dc
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620437"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841271"
 ---
 # <a name="efficient-combination-of-operators-visual-basic"></a>Эффективное сочетание операторов (Visual Basic)
 Сложные выражения могут содержать большое количество различных операторов. Это показано в следующем примере.  
@@ -46,6 +46,7 @@ ms.locfileid: "54620437"
  В приведенном выше примере `z + 2` сначала вычисляется, то другие выражения в скобках. Возведение в степень, который обычно имеет более высокий приоритет, чем сложение или умножение, вычисляется последним в этом примере, поскольку другие выражения заключены в круглые скобки.  
   
 ## <a name="see-also"></a>См. также
+
 - [Арифметические операторы в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
 - [Операторы сравнения в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
 - [Логические и побитовые операторы в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

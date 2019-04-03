@@ -2,12 +2,12 @@
 title: Практическое руководство. Поиск связанных элементов (XPath-LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 6b0ef058-d704-48a5-98cd-33f00d088af9
-ms.openlocfilehash: be7dc6d28c6f176108e33a5c783863fdfc5aed81
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 58137a1bca93c0281424ba457569631a4b513a55
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57845951"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843777"
 ---
 # <a name="how-to-find-related-elements-xpath-linq-to-xml-visual-basic"></a>Практическое руководство. Поиск связанных элементов (XPath-LINQ to XML) (Visual Basic)
 В этом разделе показано, как возвращать элемент, выбирая атрибут, обращение к которому осуществляется с помощью значения другого элемента.  
@@ -19,7 +19,7 @@ ms.locfileid: "57845951"
 ## <a name="example"></a>Пример  
  В этом примере обнаруживается 12-й элемент `Order`, а затем определяется клиент, сделавший этот заказ.  
   
- Обратите внимание на то, что индексирование в списках .NET начинается с «ноль» на основе. Индексирование в коллекции узлов в предикате XPath начинается с единицы. Данное различие находит отражение в следующем примере.  
+ Обратите внимание, что индексирование в списках .NET начинается с нуля. Индексирование в коллекции узлов в предикате XPath начинается с единицы. Данное различие находит отражение в следующем примере.  
   
  В этом примере используется следующий XML-документ: [Пример XML-файла. Заказчики и заказы (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
@@ -74,4 +74,5 @@ Results are identical
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [LINQ to XML для пользователей XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

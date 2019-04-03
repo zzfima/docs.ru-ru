@@ -9,12 +9,12 @@ helpviewer_keywords:
 - properties [Visual Basic], auto-implemented
 - auto-implemented properties [Visual Basic]
 ms.assetid: 5c669f0b-cf95-4b4e-ae84-9cc55212ca87
-ms.openlocfilehash: 56ea9bac1326ebab7ef44fb5541c05be8bc855e7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: aa045dd5454819a37ad81c76d97fd3e61e7d0420
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967208"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841291"
 ---
 # <a name="auto-implemented-properties-visual-basic"></a>Автоматически реализуемые свойства (Visual Basic)
 *Автоматически реализуемые свойства* позволяют быстро задать свойство класса без необходимости написания кода для `Get` и `Set` свойство. При написании кода для автоматически реализуемого свойства компилятор Visual Basic автоматически создает закрытое поле для хранения переменной свойства, в дополнение к созданию связанных процедур `Get` и `Set`.  
@@ -94,6 +94,7 @@ End Class
  Если вам требуется преобразовать автоматически реализуемое свойство в расширенное свойство, которое содержит процедуру `Get` или `Set`, редактор кода Visual Basic может автоматически создать процедуры `Get` и `Set` и оператор `End Property` для свойства. Код создается в том случае, если поместить курсор на пустую строку после `Property` инструкции, введите значение `G` (для `Get`) или `S` (для `Set`) и нажмите клавишу ВВОД. Редактор кода Visual Basic автоматически создает процедуру `Get` или `Set` для свойств только для чтения и только для записи при нажатии клавиши ВВОД после оператора `Property`.  
   
 ## <a name="see-also"></a>См. также
+
 - [Практическое руководство. Объявление и вызов свойства по умолчанию в Visual Basic](./how-to-declare-and-call-a-default-property.md)
 - [Практическое руководство. Объявление свойства со смешанным уровнем доступа](./how-to-declare-a-property-with-mixed-access-levels.md)
 - [Оператор Property](../../../../visual-basic/language-reference/statements/property-statement.md)

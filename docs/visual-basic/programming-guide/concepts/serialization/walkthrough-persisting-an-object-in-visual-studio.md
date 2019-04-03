@@ -2,12 +2,12 @@
 title: Сохранение объекта в Visual Studio (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
-ms.openlocfilehash: 002c5470765b33d038ab0fd463fcc6ccfdf6f109
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 312545827702c2d01c50f2a92ace5a3b61494a33
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690440"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841585"
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>Пошаговое руководство. Сохранение объекта в Visual Studio (Visual Basic)
 Несмотря на то, что во время разработки свойствам объекта можно задать значения по умолчанию, любые значения, введенные во время выполнения, будут потеряны при уничтожении объекта. С помощью сериализации можно сохранить данные объекта между экземплярами, что позволит сохранять значения и извлекать их при следующем создании экземпляра объекта.  
@@ -216,5 +216,6 @@ ms.locfileid: "54690440"
  Теперь можно снова собрать и запустить приложение. Первоначально в текстовых полях отображаются значения по умолчанию. Попробуйте изменить их и ввести имя в четвертое текстовое поле. Закройте приложение, а затем снова запустите его. Обратите внимание, что теперь в текстовых полях отображаются новые значения.  
   
 ## <a name="see-also"></a>См. также
+
 - [Сериализация (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)
 - [Руководство по программированию на Visual Basic](../../../../visual-basic/programming-guide/index.md)

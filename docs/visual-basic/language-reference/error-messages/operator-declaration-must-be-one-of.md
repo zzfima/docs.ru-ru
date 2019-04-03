@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC33000
 ms.assetid: 15c5d8eb-3a8c-4141-8f41-33151afabf97
-ms.openlocfilehash: 7acec56be60f88147bac1ba4179ad0234ea1c6e1
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: dac8613d79e3262e4d1fd6ad1599fd01182e329b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270060"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819376"
 ---
 # <a name="operator-declaration-must-be-one-of----amp-like-mod-and-or-xor-not--"></a>Объявлении оператора должен быть одним из: +,-, *,\,/, ^, &amp;, например, Mod и, Or, Xor, не, \< \<, >>...
 Можно объявить только оператор, который подходит для перегрузки. В следующей таблице перечислены операторы, которые можно объявить.  
@@ -34,6 +34,7 @@ ms.locfileid: "55270060"
 2.  Если требуется возможность перегрузки оператора, который нельзя перегрузить непосредственно, создайте процедуру `Function` , которая принимает соответствующие параметры и возвращает соответствующее значение.  
   
 ## <a name="see-also"></a>См. также
+
 - [Оператор Statement](../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Процедуры операторов](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)
 - [Практическое руководство. Определение оператора](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)

@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Запрос к метаданным сборки при помощи отражения (LINQ) (Visual Basic)
+title: Практическое руководство. Запрос к метаданным сборки при помощи отражения (LINQ) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 53caa336-ab83-4181-b0f6-5c87c5f9e4ee
-ms.openlocfilehash: 7966b85172af48c7762027877a03b12dd6e2b62d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b5b74e27d4cfeb4360d9c743d16c16dc82134038
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55255163"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831739"
 ---
-# <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-visual-basic"></a>Как выполнить Запрос к метаданным сборки при помощи отражения (LINQ) (Visual Basic)
+# <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-visual-basic"></a>Практическое руководство. Запрос к метаданным сборки при помощи отражения (LINQ) (Visual Basic)
 В следующем примере показано использование LINQ с отражением для извлечения определенных метаданных о методах, соответствующих условиям поиска. В этом примере запрос будет искать имена всех методов в сборке, которые возвращают перечислимые типы, такие как массивы.  
   
 ## <a name="example"></a>Пример  
@@ -52,4 +52,5 @@ End Module
  Создайте проект, предназначенный для .NET Framework 3.5 или более поздней версии, со ссылкой на библиотеку System.Core.dll и директивой `Imports` для пространства имен System.Linq.  
   
 ## <a name="see-also"></a>См. также
+
 - [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)

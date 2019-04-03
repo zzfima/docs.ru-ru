@@ -1,21 +1,21 @@
 ---
-title: Как выполнить Сортировка элементов по множеству ключей (Visual Basic)
+title: Практическое руководство. Сортировка элементов по множеству ключей (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 0c4c1462-3047-4766-b9e2-7e0e9cc7f421
-ms.openlocfilehash: ff5d3260efc5ba3630cb785bd265061c9a8e05da
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d423505a5b47189b9de556675d4b71f428a6bdc6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506476"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828619"
 ---
-# <a name="how-to-sort-elements-on-multiple-keys-visual-basic"></a>Как выполнить Сортировка элементов по множеству ключей (Visual Basic)
+# <a name="how-to-sort-elements-on-multiple-keys-visual-basic"></a>Практическое руководство. Сортировка элементов по множеству ключей (Visual Basic)
 В этом разделе показана сортировка элементов по нескольким ключам.  
   
 ## <a name="example"></a>Пример  
  В этом примере результаты упорядочиваются вначале по почтовому коду доставки, а затем по дате заказа.  
   
- В этом примере используется следующий XML-документ: [Пример XML-файла: Клиенты и заказы (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ В этом примере используется следующий XML-документ: [Пример XML-файла. Заказчики и заказы (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
 ```vb  
 Dim co As XElement = XElement.Load("CustomersOrders.xml")  
@@ -64,7 +64,7 @@ CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997
 ## <a name="example"></a>Пример  
  Следующий пример демонстрирует тот же запрос XML, что и в пространстве имен. Дополнительные сведения см. в разделе [работа с пространствами имен XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   
- В этом примере используется следующий XML-документ: [Пример XML-файла: Клиенты и заказы в пространстве имен](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md).  
+ В этом примере используется следующий XML-документ: [Пример XML-файла. Заказчики и заказы в пространстве имен](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md).  
   
 ```vb  
 Imports <xmlns='http://www.adventure-works.com'>  
@@ -117,4 +117,5 @@ CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Базовые запросы (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

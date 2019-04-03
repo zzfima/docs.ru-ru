@@ -2,9 +2,15 @@
 title: Запросы (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'queries [Visual Basic]'
-  - 'LINQ, queries'
+- queries [Visual Basic]
+- LINQ, queries
 ms.assetid: 8edc717c-4a24-4cbc-9c16-11f479c935db
+ms.openlocfilehash: 1ea49b16f70c0af87bbd3a8978fb10fe08d5ce6b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836900"
 ---
 # <a name="queries-visual-basic"></a>Запросы (Visual Basic)
 Visual Basic позволяет вам создавать [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] выражения в коде.  
@@ -53,5 +59,6 @@ Visual Basic позволяет вам создавать [!INCLUDE[vbteclinqext
  Описывает `Where` предложение, которое определяет условие фильтрации для запроса.  
   
 ## <a name="see-also"></a>См. также
+
 - [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)

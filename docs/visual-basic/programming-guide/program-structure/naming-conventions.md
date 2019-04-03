@@ -10,12 +10,12 @@ helpviewer_keywords:
 - names [Visual Basic], naming conventions
 - naming conventions [Visual Basic], classes
 ms.assetid: 164949a4-2a7c-4736-9d82-9c3078e2e56c
-ms.openlocfilehash: ebb9d21e32993f2eb035993d32dc3de7d97b49f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 46f59403feced4baafef4662065cb7daedbeaa7b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672140"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837082"
 ---
 # <a name="visual-basic-naming-conventions"></a>Соглашения об именах Visual Basic
 При вводе имени элемента в приложении Visual Basic, первый символ имени должны быть буквы или символа подчеркивания. Обратите внимание, что имена, начинающиеся с символа подчеркивания, не совместимы с [независимость от языка и независимые от языка компоненты](../../../standard/language-independence-and-language-independent-components.md) (CLS).  
@@ -41,6 +41,7 @@ ms.locfileid: "54672140"
 -   Старайтесь не использовать имена во внутренней области, совпадающие с именами во внешней области. Ошибки могут привести к при обращении к неправильной переменной. Если возникает конфликт между переменной и ключевого слова с тем же именем, необходимо указать ключевое слово, перед которой стоят соответствующей библиотеки типов. Например, если у вас есть переменная с именем `Date`, можно использовать встроенный `Date` функции только путем вызова <xref:System.DateTime.Date%2A?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>См. также
+
 - [Ключевые слова как имена элементов в коде](../../../visual-basic/programming-guide/program-structure/keywords-as-element-names-in-code.md)
 - [Me, My, MyBase и MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
 - [Имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)

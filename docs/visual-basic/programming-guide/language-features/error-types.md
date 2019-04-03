@@ -10,12 +10,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], types of errors
 - syntax errors [Visual Basic], Visual Basic
 ms.assetid: 3048aabf-8c97-4e13-9150-853769cb5f6f
-ms.openlocfilehash: dc7cba394f623ae94a0d9ca8285fc12af8f0dacf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 07db963ac3cf9d1c0d17c420480189d362cdaf2c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600340"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831570"
 ---
 # <a name="error-types-visual-basic"></a>Типы ошибок (Visual Basic)
 В Visual Basic, ошибок (также называется *исключения*) делятся на три категории: синтаксические ошибки, ошибки времени выполнения и логических ошибок.  
@@ -33,5 +33,6 @@ ms.locfileid: "54600340"
  *Логические ошибки* являются те, которые проявляются, когда приложение уже используется. Они являются большинства часто нежелательные или непредвиденные результаты, в ответ на действия пользователя. Например, ошибочное нажатие клавиши или другое внешнее воздействие может вызвать приложения работают в пределах ожидаемых параметров или полностью. Логические ошибки чаще всего это самый сложный тип, чтобы устранить проблему, так как он не всегда ясно их происхождение.  
   
 ## <a name="see-also"></a>См. также
+
 - [Оператор Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
 - [Основы отладки](/visualstudio/debugger/debugger-basics)

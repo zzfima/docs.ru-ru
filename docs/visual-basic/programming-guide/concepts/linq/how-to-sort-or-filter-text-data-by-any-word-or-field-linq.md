@@ -1,20 +1,20 @@
 ---
-title: Как выполнить Сортировка или фильтрация текстовых данных по любому слову или полю (LINQ) (Visual Basic)
+title: Практическое руководство. Сортировка или фильтрация текстовых данных по любому слову или полю (LINQ) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9df137fe-335b-46e0-aecf-ea8a9eddd4e3
-ms.openlocfilehash: 565e4497e362e82528aea850dc86d20c9983259b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6a5277e26b74ccf54af0cdc5f671516fcc7badb8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632807"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832207"
 ---
-# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-visual-basic"></a>Как выполнить Сортировка или фильтрация текстовых данных по любому слову или полю (LINQ) (Visual Basic)
+# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-visual-basic"></a>Практическое руководство. Сортировка или фильтрация текстовых данных по любому слову или полю (LINQ) (Visual Basic)
 В следующем примере демонстрируется сортировка строк структурированного текста, таких как значения, разделенные запятыми, по любому полю в строке. Поле можно указывать в среде выполнения динамически. Допустим, поля в файле scores.csv содержат идентификационные номера учащихся и баллы, которые они набрали в результате четырех тестов.  
   
 ### <a name="to-create-a-file-that-contains-data"></a>Создание файла с данными  
   
-1.  Скопируйте данные файла scores.csv из раздела [как: Объединение содержимого из разных форматов файлов (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) и сохраните его в папку решения.  
+1.  Скопируйте данные из файла scores.csv (см. раздел [Практическое руководство. Объединение содержимого из разных форматов файлов (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) и сохраните его в папку решения.  
   
 ## <a name="example"></a>Пример  
   
@@ -75,4 +75,5 @@ End Class
  Создайте проект, предназначенный для .NET Framework 3.5 или более поздней версии, со ссылкой на библиотеку System.Core.dll и директивой `Imports` для пространства имен System.Linq.  
   
 ## <a name="see-also"></a>См. также
+
 - [LINQ и строки (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

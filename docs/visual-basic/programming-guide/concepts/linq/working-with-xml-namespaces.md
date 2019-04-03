@@ -2,19 +2,19 @@
 title: Работа с пространствами имен XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 428bf4b0-e348-4ffd-986b-d905d5a0e7fa
-ms.openlocfilehash: e103920187ecbbfb14a1723556d1fae0265a88d0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b2b9db9ed547858eb5358d5e3c871c6a84d22ae6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607911"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828905"
 ---
 # <a name="working-with-xml-namespaces-visual-basic"></a>Работа с пространствами имен XML (Visual Basic)
 Темы в этом разделе описывают, как [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] поддерживает пространства имен.  
   
 ## <a name="in-this-section"></a>В этом разделе  
   
-|Раздел|Описание:|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Обзор пространств имен (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)|Этот раздел знакомит с пространствами имен, классом <xref:System.Xml.Linq.XName> и классом <xref:System.Xml.Linq.XNamespace>.|  
 |[Практическое руководство. Создание документа с пространствами имен (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-document-with-namespaces.md)|Показывает, как создавать документы с пространствами имен.|  
@@ -24,4 +24,5 @@ ms.locfileid: "54607911"
 |[Практическое руководство. Создание запросов к XML в пространствах имен (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-queries-on-xml-in-namespaces.md)|Показано, как указывать пространства имен XML в Visual Basic LINQ для запросов XML.|  
   
 ## <a name="see-also"></a>См. также
+
 - [Руководство по программированию (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

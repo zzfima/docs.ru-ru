@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Удаление ресурса системы (Visual Basic)
+title: Практическое руководство. Удаление ресурса системы (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Using statement [Visual Basic], disposing of system resources
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Using statement [Visual Basic], Using...End Using
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
-ms.openlocfilehash: 798650bbefc0c5b2ac097b87ab44a2b380117939
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2a399b92c66c8a88d10d661ff41aef58a82bbc2a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523224"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829919"
 ---
-# <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Как выполнить Удаление ресурса системы (Visual Basic)
+# <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Практическое руководство. Удаление ресурса системы (Visual Basic)
 Можно использовать `Using` блок, чтобы гарантировать, что система удаляет ресурс, когда код выходит из блока. Это полезно, если вы используете системный ресурс, которые используют большой объем памяти или других компонентов также требуется использовать.  
   
 ### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>Для удаления подключения к базе данных после завершения вашего кода с ним  
@@ -45,6 +45,7 @@ ms.locfileid: "54523224"
      Этот же прием можно использовать на системный ресурс, такие как дескриптор файла или оболочки COM. Использовании `Using` заблокировать, если вы хотите чтобы оставить ресурс доступным для других компонентов, после закрытия `Using` блока.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Data.SqlClient.SqlConnection>
 - [Поток управления](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
 - [Структуры решений](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)

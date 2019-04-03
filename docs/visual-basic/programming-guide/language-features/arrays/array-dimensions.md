@@ -9,12 +9,12 @@ helpviewer_keywords:
 - rectangular arrays
 - ranking, arrays
 ms.assetid: 385e911b-18c1-4e98-9924-c6d279101dd9
-ms.openlocfilehash: 47b90a6c513a5808dc0669d2d861de5e16406a34
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: 0b4e7c9e253f94e1e28700c8669d28799ab69d91
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634171"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836939"
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Array Dimensions in Visual Basic
 Объект *измерения* — это направление, в котором можно изменять спецификацию элементов массива. Массив, содержащий суммы продаж за каждый день месяца, имеет одно измерение (день месяца). Массив, содержащий суммы по отделу продаж за каждый день месяца, имеет два измерения (номер отдела и день месяца). Число измерений массива называется его *ранг*.  
@@ -87,5 +87,6 @@ Dim salesAmounts(4, 11, 30) As Double
 >  Можно создать массив без использования `Dim` инструкции или `New` предложение. Например, можно вызвать <xref:System.Array.CreateInstance%2A> метод или другой компонент массив можно передать код создается таким образом. Такой массив может иметь нижнюю границу, отличное от 0. Всегда можно протестировать для нижней границы измерения с помощью <xref:System.Array.GetLowerBound%2A> метод или `LBound` функции.  
   
 ## <a name="see-also"></a>См. также
+
 - [Массивы](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [Устранение неполадок, связанных с массивами](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)

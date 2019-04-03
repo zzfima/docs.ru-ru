@@ -2,12 +2,12 @@
 title: Свойство навигации — ADO.NET
 ms.date: 03/30/2017
 ms.assetid: d0bf1a6a-1d84-484c-b7c3-b410fd8dc0b1
-ms.openlocfilehash: 6729b22dbc012d5ccfabd64cd83b710833fe1b9d
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.openlocfilehash: b57ecf9329aa9ea8afc07507613c9e3961bfd0a9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857948"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836603"
 ---
 # <a name="navigation-property"></a>Свойство навигации
 
@@ -29,7 +29,7 @@ ms.locfileid: "54857948"
 
 На приведенной ниже схеме показана концептуальная модель с тремя типами сущностей: `Book`, `Publisher` и `Author`. Свойства навигации, `Publisher` и `Authors`, определены относительно типа сущности «Book». Свойство навигации `Books` определено как относительно типа сущности «Publisher», так и относительно типа сущности `Author`.
 
-![Модель со свойствами навигации](/media/modelwithnavprops.gif "ModelWithNavProps")
+ ![Схема, показывающая концептуальная модель с тремя типами сущностей.](./media/navigation-property/conceptual-model-entity-types-associations.gif)  
 
 [ADO.NET Entity Framework](./ef/index.md) использует доменный язык (DSL), называемый языком определения концептуальной схемы ([CSDL](./ef/language-reference/csdl-specification.md)) для определения концептуальных моделей. Ниже на языке CSDL определяется тип сущности `Book`, который ранее приводился в схеме.
 
