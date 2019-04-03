@@ -4,12 +4,12 @@ description: Как указать композицию микрослужб д�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: bde29f1c67e7c6636932f063f35bc500a27abcef
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: df185950d8155d61b60c9b54e3a8751ec3980408
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712361"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463531"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Определение многоконтейнерного приложения с помощью docker-compose.yml
 
@@ -422,11 +422,11 @@ ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP=10.121.122.92
 
 #### <a name="additional-resources"></a>Дополнительные ресурсы
 
-- **Общие сведения о Docker Compose** <br/>
-    [*https://docs.docker.com/compose/overview/*](https://docs.docker.com/compose/overview/)
+- **Общие сведения о Docker Compose** \
+    [https://docs.docker.com/compose/overview/](https://docs.docker.com/compose/overview/)
 
-- **Несколько файлов Compose** <br/>
-    [*https://docs.docker.com/compose/extends/\#multiple-compose-files*](https://docs.docker.com/compose/extends/#multiple-compose-files)
+- **Несколько файлов Compose** \
+    [https://docs.docker.com/compose/extends/\#multiple-compose-files](https://docs.docker.com/compose/extends/#multiple-compose-files)
 
 ### <a name="building-optimized-aspnet-core-docker-images"></a>Создание оптимизированных образов Docker ASP.NET Core
 
@@ -464,11 +464,11 @@ ENTRYPOINT ["dotnet", "run"]
 
 #### <a name="additional-resources"></a>Дополнительные ресурсы
 
-- **Создание оптимизированных образов Docker в ASP.NET Core** <br/>
-    [*https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/*](https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/)
+- **Создание оптимизированных образов Docker в ASP.NET Core** \
+    [https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/](https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/)
 
-- **Создание образов Docker для приложений .NET Core** <br/>
-    [*https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images*](../../../core/docker/building-net-docker-images.md)
+- **Создание образов Docker для приложений .NET Core** \
+    [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](../../../core/docker/building-net-docker-images.md)
 
 > [!div class="step-by-step"]
 > [Назад](data-driven-crud-microservice.md)

@@ -4,12 +4,12 @@ description: Архитектура микрослужб .NET для конте�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 8ddc966710f6a9a949983726fd93505fbc88391f
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: afd3148f77dc4222a077f7ce020260ee889e92cb
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675034"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466144"
 ---
 # <a name="subscribing-to-events"></a>Подписка на события
 
@@ -324,68 +324,68 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
-- **Ветвление eShopOnContainers с использованием NServiceBus (Particular Software)** <br/>
-    [*https://go.particular.net/eShopOnContainers*](https://go.particular.net/eShopOnContainers)
+- **Ветвление eShopOnContainers с использованием NServiceBus (Particular Software)** \
+    [https://go.particular.net/eShopOnContainers](https://go.particular.net/eShopOnContainers)
 
-- **Обмен сообщениями на основе событий** <br/>
-    [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
+- **Обмен сообщениями на основе событий** \
+    [http://soapatterns.org/design\_patterns/event\_driven\_messaging](http://soapatterns.org/design_patterns/event_driven_messaging)
 
-- **Джимми Богард (Jimmy Bogard). Рефакторинг для обеспечения отказоустойчивости: оценка взаимозависимости** <br/>
-    [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
+- **Джимми Богард (Jimmy Bogard). Рефакторинг для обеспечения отказоустойчивости: оценка взаимозависимости** \
+    [https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
-- **Канал публикации и подписки** <br/>
-    [*https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
+- **Канал публикации и подписки** \
+    [https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
-- **Взаимодействие между ограниченными контекстами** <br/>
+- **Взаимодействие между ограниченными контекстами** \
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)>
 
-- **Итоговая согласованность** <br/>
-    [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
+- **Итоговая согласованность** \
+    [https://en.wikipedia.org/wiki/Eventual\_consistency](https://en.wikipedia.org/wiki/Eventual_consistency)
 
-- **Филип Браун (Philip Brown). Стратегии интеграции ограниченных контекстов** <br/>
-    [*https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/*](https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/)
+- **Филип Браун (Philip Brown). Стратегии интеграции ограниченных контекстов** \
+    [https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/](https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/)
 
-- **Крис Ричардсон (Chris Richardson). Разработка транзакционных микрослужб с помощью агрегатов, порождения событий и CQRS. Часть 2** <br/>
-    [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson)
+- **Крис Ричардсон (Chris Richardson). Разработка транзакционных микрослужб с помощью агрегатов, порождения событий и CQRS. Часть 2** \
+    [https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson)
 
-- **Крис Ричардсон (Chris Richardson). Шаблон порождения событий** <br/>
-    [*https://microservices.io/patterns/data/event-sourcing.html*](https://microservices.io/patterns/data/event-sourcing.html)
+- **Крис Ричардсон (Chris Richardson). Шаблон порождения событий** \
+    [https://microservices.io/patterns/data/event-sourcing.html](https://microservices.io/patterns/data/event-sourcing.html)
 
-- **Знакомство с порождением событий** <br/>
+- **Знакомство с порождением событий** \
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591559(v=pandp.10)>
 
-- **База данных хранилища событий**. Официальный сайт <br/>
-    [*https://geteventstore.com/*](https://geteventstore.com/)
+- **База данных хранилища событий**. Официальный сайт \
+    [https://geteventstore.com/](https://geteventstore.com/)
 
-- **Патрик Номменсен (Patrick Nommensen). Управление данными на основе событий для микрослужб** <br/>
-    *<https://dzone.com/articles/event-driven-data-management-for-microservices-1> *
+- **Патрик Номменсен (Patrick Nommensen). Управление данными на основе событий для микрослужб** \
+    <https://dzone.com/articles/event-driven-data-management-for-microservices-1>
 
-- **Теорема CAP** <br/>
-    [*https://en.wikipedia.org/wiki/CAP\_theorem*](https://en.wikipedia.org/wiki/CAP_theorem)
+- **Теорема CAP** \
+    [https://en.wikipedia.org/wiki/CAP\_theorem](https://en.wikipedia.org/wiki/CAP_theorem)
 
-- **Что такое теорема CAP?** <br/>
-    [*https://www.quora.com/What-Is-CAP-Theorem-1*](https://www.quora.com/What-Is-CAP-Theorem-1)
+- **Что такое теорема CAP?** \
+    [https://www.quora.com/What-Is-CAP-Theorem-1](https://www.quora.com/What-Is-CAP-Theorem-1)
 
-- **Основные сведения о согласованности данных** <br/>
+- **Основные сведения о согласованности данных** \
     <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
-- **Рик Сейлинг (Rick Saling). Теорема CAP: почему в случае с облачными средами и Интернетом все иначе** <br/>
-    [*https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/*](https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/)
+- **Рик Сейлинг (Rick Saling). Теорема CAP: почему в случае с облачными средами и Интернетом все иначе** \
+    [https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/](https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/)
 
-- **Эрик Брюер (Eric Brewer). CAP двенадцать лет спустя: Как изменились "правила"** <br/>
-    [*https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed*](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed)
+- **Эрик Брюер (Eric Brewer). CAP двенадцать лет спустя: Как изменились "правила"** \
+    [https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed)
 
-- **Служебная шина Azure. Обмен сообщениями через брокер: обнаружение повторений**  <br/>
-    [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
+- **Служебная шина Azure. Обмен сообщениями через брокер: обнаружение повторений**  \
+    [https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
-- **Руководство по обеспечению надежности** (документация RabbitMQ)* <br/>
-    [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html#consumer)
+- **Руководство по обеспечению надежности** (документация RabbitMQ) \
+    [https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html#consumer)
 
-- **Служебная шина Azure. Обмен сообщениями через брокер: обнаружение повторений** <br/>
-    [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
+- **Служебная шина Azure. Обмен сообщениями через брокер: обнаружение повторений** \
+    [https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
-- **Руководство по обеспечению надежности** (документация RabbitMQ) <br/>
-    [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html%23consumer)
+- **Руководство по обеспечению надежности** (документация RabbitMQ) \
+    [https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html%23consumer)
 
 > [!div class="step-by-step"]
 > [Назад](rabbitmq-event-bus-development-test-environment.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c9716193c3429d5dd3aff1734415105713d2538
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: fe1d35f091eb98ca0080a73283d7e158e2ae26eb
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221294"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409449"
 ---
 # <a name="default-marshaling-behavior"></a>Поведение маршалинга по умолчанию
 Маршалинг взаимодействия работает по правилам, которые определяют поведение данных, связанных с параметрами метода, при их передаче между управляемой и неуправляемой памятью. Эти встроенные правила определяют такие операции маршалинга, как преобразования типов данных, возможность изменения вызываемым объектом переданных ему данных и возврата этих изменений вызывающему объекту, а также обстоятельства, при которых упаковщик обеспечивает оптимизацию производительности.  
@@ -33,7 +33,7 @@ ms.locfileid: "56221294"
   
 ### <a name="unmanaged-signature"></a>Неуправляемая сигнатура  
   
-```  
+```cpp  
 BSTR MethodOne (BSTR b) {  
      return b;  
 }  
@@ -101,7 +101,7 @@ void m5([MarshalAs(UnmanagedType.FunctionPtr)] ref Delegate d);
   
 ### <a name="type-library-representation"></a>Представление библиотеки типов  
   
-```  
+```cpp  
 importlib("mscorlib.tlb");  
 interface DelegateTest : IDispatch {  
 [id(…)] HRESULT m1([in] _Delegate* d);  
@@ -164,13 +164,13 @@ internal class DelegateTest {
 ## <a name="default-marshaling-for-value-types"></a>Маршалинг по умолчанию для типов значений  
  Большинство типов значений, такие как целые числа и числа с плавающей запятой, являются [непреобразуемыми](blittable-and-non-blittable-types.md) и не требуют маршалинга. [Преобразуемые](blittable-and-non-blittable-types.md) типы представлены в управляемой и неуправляемой памяти по-разному и требуют маршалинга. Другие типы требуют явного форматирования при пересечении границы взаимодействия.  
   
- В этом разделе представлены следующие сведения о форматированных типах значений:  
+ В этом разделе представлены сведения о следующих форматированных типах значений:  
   
--   [Типы значений, используемые в вызове неуправляемого кода](#cpcondefaultmarshalingforvaluetypesanchor2)  
+-   [Типы значений, используемые в вызове неуправляемого кода](#value-types-used-in-platform-invoke)  
   
--   [Типы значений, используемые в COM-взаимодействии](#cpcondefaultmarshalingforvaluetypesanchor3)  
+-   [Типы значений, используемые в COM-взаимодействии](#value-types-used-in-com-interop)  
   
- Кроме описания форматированных типов, в этом разделе определяются [системные типы значений](#cpcondefaultmarshalingforvaluetypesanchor1), имеющие нестандартное поведение маршалинга.  
+ Кроме описания форматированных типов, в этом разделе определяются [системные типы значений](#system-value-types), имеющие нестандартное поведение маршалинга.  
   
  Форматированный тип — это сложный тип, который содержит информацию, явным образом определяющую размещение его членов в памяти. Сведения о размещении членов предоставляются с помощью атрибута <xref:System.Runtime.InteropServices.StructLayoutAttribute>. Размещение может принимать одно из указанных ниже значений перечисления <xref:System.Runtime.InteropServices.LayoutKind>.  
   
@@ -186,7 +186,6 @@ internal class DelegateTest {
   
      Указывает, что члены располагаются в соответствии с атрибутом <xref:System.Runtime.InteropServices.FieldOffsetAttribute>, предоставляемым с каждым полем.  
   
-<a name="cpcondefaultmarshalingforvaluetypesanchor2"></a>   
 ### <a name="value-types-used-in-platform-invoke"></a>Типы значений, используемые в вызове неуправляемого кода  
  В примере ниже типы `Point` и `Rect` предоставляют сведения о размещении членов с помощью атрибута **StructLayoutAttribute**.  
   
@@ -221,27 +220,28 @@ public struct Rect {
 }  
 ```  
   
- При маршалинге в неуправляемый код эти форматированные типы маршалируются как структуры стиля C. Это обеспечивает простой способ вызова неуправляемого интерфейса API с аргументами в виде структур. Например, структуры `POINT` и `RECT` могут передаваться в функцию **PtInRect** API Microsoft Win32 следующим образом:  
+ При маршалинге в неуправляемый код эти форматированные типы маршалируются как структуры стиля C. Это обеспечивает простой способ вызова неуправляемого интерфейса API с аргументами в виде структур. Например, структуры `POINT` и `RECT` могут передаваться в функцию **PtInRect** Microsoft Windows API следующим образом:  
   
-```  
+```cpp  
 BOOL PtInRect(const RECT *lprc, POINT pt);  
 ```  
   
  Вы можете передать структуры с помощью следующего определения вызова неуправляемого кода:  
   
-```vb  
-Class Win32API      
-   Declare Auto Function PtInRect Lib "User32.dll" _  
-    (ByRef r As Rect, p As Point) As Boolean  
-End Class  
-```  
+```vb
+Friend Class WindowsAPI
+    Friend Shared Declare Auto Function PtInRect Lib "User32.dll" (
+        ByRef r As Rect, p As Point) As Boolean
+End Class
+```
   
-```csharp  
-class Win32API {  
-   [DllImport("User32.dll")]  
-   public static extern Bool PtInRect(ref Rect r, Point p);  
-}  
-```  
+```csharp
+internal static class WindowsAPI
+{
+   [DllImport("User32.dll")]
+   internal static extern bool PtInRect(ref Rect r, Point p);
+}
+```
   
  Тип значения `Rect` должен передаваться по ссылке, потому что неуправляемый интерфейс API ожидает, что в функцию будет передан указатель на `RECT`. Тип значения `Point` передается по значению, так как неуправляемый интерфейс API ожидает, что `POINT` будет передан в стек. Это небольшое различие очень важно. Ссылки передаются в неуправляемый код как указатели. Значения передаются в неуправляемый код в стеке.  
   
@@ -253,7 +253,7 @@ class Win32API {
 > [!NOTE]
 >  Если ссылочный тип содержит члены преобразуемого типа, преобразование должно выполняться дважды: первый раз — при передаче аргумента неуправляемой стороне, а второй раз — при возврате из вызова. В связи с появлением дополнительных издержек параметры In/Out необходимо применять к аргументу в явном виде, если вызывающий объект должен учитывать изменения, внесенные вызываемым объектом.  
   
- В примере ниже класс `SystemTime` имеет последовательное размещение членов и может быть передан в функцию **GetSystemTime** API Win32.  
+ В примере ниже класс `SystemTime` имеет последовательное размещение членов и может быть передан в функцию **GetSystemTime** API Windows.  
   
 ```vb  
 <StructLayout(LayoutKind.Sequential)> Public Class SystemTime  
@@ -284,25 +284,26 @@ End Class
   
  Функция **GetSystemTime** определяется следующим образом:  
   
-```  
+```cpp  
 void GetSystemTime(SYSTEMTIME* SystemTime);  
 ```  
   
  Эквивалентное определение вызова неуправляемого кода **GetSystemTime** выглядит следующим образом:  
   
-```vb  
-Public Class Win32  
-   Declare Auto Sub GetSystemTime Lib "Kernel32.dll" (ByVal sysTime _  
-   As SystemTime)  
-End Class  
-```  
+```vb
+Friend Class WindowsAPI
+    Friend Shared Declare Auto Sub GetSystemTime Lib "Kernel32.dll" (
+        ByVal sysTime As SystemTime)
+End Class
+```
   
-```csharp  
-class Win32API {  
-   [DllImport("Kernel32.dll", CharSet=CharSet.Auto)]  
-   public static extern void GetSystemTime(SystemTime st);  
-}  
-```  
+```csharp
+internal static class WindowsAPI
+{
+   [DllImport("Kernel32.dll", CharSet = CharSet.Auto)]
+   internal static extern void GetSystemTime(SystemTime st);
+}
+```
   
  Обратите внимание на то, что аргумент `SystemTime` не типизирован как ссылочный аргумент, потому что `SystemTime` — это класс, а не тип значения. В отличие от типов значений, классы всегда передаются по ссылке.  
   
@@ -329,13 +330,12 @@ public class Point {
 }  
 ```  
   
-<a name="cpcondefaultmarshalingforvaluetypesanchor3"></a>   
 ### <a name="value-types-used-in-com-interop"></a>Типы значений, используемые во COM-взаимодействии  
  Форматированные типы могут также передаваться в вызовы метода COM-взаимодействия. Фактически при экспорте в библиотеку типов типы значений автоматически преобразуются в структуры. Как показано в примере ниже, тип значения `Point` становится определением типа (typedef) с именем `Point`. Все ссылки на тип значения `Point` в любом другом месте библиотеки типов заменяются на определение типа typedef `Point`.  
   
  **Представление библиотеки типов**  
   
-```  
+```cpp  
 typedef struct tagPoint {  
    int x;  
    int y;  
@@ -353,7 +353,6 @@ interface _Graphics {
 > [!NOTE]
 >  Структуры, для которых значение перечисления <xref:System.Runtime.InteropServices.LayoutKind> установлено равным **Explicit**, не могут использоваться в COM-взаимодействии, так как экспортированная библиотека типов не может представлять явное размещение.  
   
-<a name="cpcondefaultmarshalingforvaluetypesanchor1"></a>   
 ### <a name="system-value-types"></a>Системные типы значений  
  Пространство имен <xref:System> содержит несколько типов значений, представляющих собой упакованную форму простых типов среды выполнения. Например, структура типов значений <xref:System.Int32?displayProperty=nameWithType> представляет собой упакованную форму **ELEMENT_TYPE_I4**. Вместо маршалинга этих типов в качестве структур, как в случае с другими форматированными типами, их следует маршалировать так же, как и соответствующие простые типы. Соответственно, **System.Int32** маршалируется как **ELEMENT_TYPE_I4**, а не как структура, содержащая один член типа **long**. В таблице ниже приведен список типов значений в пространстве имен **System**, являющихся упакованными представлениями простых типов.  
   
@@ -388,7 +387,7 @@ interface _Graphics {
   
 #### <a name="type-library-representation"></a>Представление библиотеки типов  
   
-```  
+```cpp  
 typedef double DATE;  
 typedef DWORD OLE_COLOR;  
   
@@ -430,7 +429,7 @@ public interface IValueTypes {
   
 #### <a name="type-library-representation"></a>Представление библиотеки типов  
   
-```  
+```cpp  
 […]  
 interface IValueTypes : IDispatch {  
    HRESULT M1([in] DATE d);  

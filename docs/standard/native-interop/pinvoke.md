@@ -4,12 +4,12 @@ description: Сведения о вызове собственных функц�
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 51026eab92ae4fd47ccdd78321be21bdbb5ecf49
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4836096e12f6c3d317daa5da91566ab472053ede
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981261"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409241"
 ---
 # <a name="platform-invoke-pinvoke"></a>Вызов неуправляемого кода (P/Invoke)
 
@@ -241,6 +241,6 @@ namespace PInvokeSamples {
 
 ## <a name="more-resources"></a>Дополнительные ресурсы
 
-*   [Вики-сайт PInvoke.net](https://www.pinvoke.net/) — это отличный ресурс с информацией о распространенных API Win32 и способах их вызова.
+*   [Вики-сайт PInvoke.net](https://www.pinvoke.net/) — это отличный ресурс с информацией о распространенных API Windows и способах их вызова.
 *   [Сведения о P/Invoke на сайте MSDN](/cpp/dotnet/native-and-dotnet-interoperability)
 *   [Документация Mono по P/Invoke](https://www.mono-project.com/docs/advanced/pinvoke/)

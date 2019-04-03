@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 500335af-f9b5-413b-968a-e6d9a824478c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9aebc284e845eff229fff5bd41792e0c990a1092
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db10dda3cbb328cd143afa48e300588ccc7667a6
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691366"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463076"
 ---
 # <a name="xslt-transformations-with-the-xsltransform-class"></a>XSLT-преобразования с помощью класса XslTransform
 
@@ -24,8 +24,7 @@ ms.locfileid: "54691366"
 
 ## <a name="overview"></a>Обзор
 
-![Архитектура преобразования XSLT](media/xslttransformationswithxsltransformclass.gif "xsltTransformationsWithXslTransformClass")  
-Архитектура преобразования
+![Схема, показывающая архитектуру преобразования XSLT.](./media/xslt-transformations-with-the-xsltransform-class/xslt-transformation-architecture.gif) 
 
 В рекомендациях XSLT используется язык XPath для выбора частей XML-документа, XPath - язык запросов, используемый для навигации по узлам дерева документов. Как показано на схеме, реализация языка XPath платформы [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] используется для выбора частей XML-документа, сохраненных в нескольких классах, таких как <xref:System.Xml.XmlDocument>, <xref:System.Xml.XmlDataDocument> и <xref:System.Xml.XPath.XPathDocument>. <xref:System.Xml.XPath.XPathDocument> - оптимизированное хранилище данных XSLT, которое при использовании с классом <xref:System.Xml.Xsl.XslTransform> обеспечивает хорошую производительность преобразований XSLT.
 

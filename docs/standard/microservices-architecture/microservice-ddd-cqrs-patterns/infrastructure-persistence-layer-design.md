@@ -4,12 +4,12 @@ description: Архитектура микрослужб .NET для конте�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 983e38cc9979ef14e8227e738e9da15b014e050d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c173d0049558ec0a752bc2aead9de9692ea28cf9
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147740"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463063"
 ---
 # <a name="design-the-infrastructure-persistence-layer"></a>Проектирование уровня сохраняемости инфраструктуры
 
@@ -35,7 +35,7 @@ ms.locfileid: "53147740"
 
 Важно еще раз подчеркнуть, что следует определять только один репозиторий для одного корня агрегации, как показано на рис. 7-17. Чтобы корень агрегации поддерживал транзакционную согласованность между всеми объектами в агрегате, не следует создавать репозиторий для каждой таблицы в базе данных.
 
-![Связи между уровнями домена и инфраструктуры: агрегат Buyer зависит от интерфейса IBuyerRepository, а агрегат Order — от интерфейса IOrderRepository. Эти интерфейсы реализуются на уровне инфраструктуры соответствующими репозиториями, которые зависят от UnitOfWork, которая реализуется там же и обращается к таблицам на уровне данных.](./media/image18.png)
+![Связи между уровнями домена и инфраструктуры: агрегат Buyer зависит от интерфейса IBuyerRepository, а агрегат Order — от интерфейса IOrderRepository. Эти интерфейсы реализуются на уровне инфраструктуры соответствующими репозиториями, зависимыми от UnitOfWork, которая реализуется там же и обращается к таблицам на уровне данных.](./media/image18.png)
 
 **Рис. 7-17**. Связь между репозиториями, агрегатами и таблицами базы данных
 
@@ -111,24 +111,24 @@ public interface IRepository<T> where T : IAggregateRoot
 ### <a name="repository-pattern"></a>Шаблон репозитория
 
 - **Шаблон репозитория** \
-  [*https://deviq.com/repository-pattern/*](https://deviq.com/repository-pattern/)
+  [https://deviq.com/repository-pattern/](https://deviq.com/repository-pattern/)
 
 - **Эдвард Хиятт и Роб Ми (Edward Hieatt и Rob Mee). Шаблон репозитория.** \
-  [*https://martinfowler.com/eaaCatalog/repository.html*](https://martinfowler.com/eaaCatalog/repository.html)
+  [https://martinfowler.com/eaaCatalog/repository.html](https://martinfowler.com/eaaCatalog/repository.html)
 
 - **Шаблон репозитория** \
-  [*https://docs.microsoft.com/previous-versions/msp-n-p/ff649690(v=pandp.10)*](https://docs.microsoft.com/previous-versions/msp-n-p/ff649690(v=pandp.10))
+  [https://docs.microsoft.com/previous-versions/msp-n-p/ff649690(v=pandp.10)](https://docs.microsoft.com/previous-versions/msp-n-p/ff649690(v=pandp.10))
 
-- **Эрик Эванс (Eric Evans). Предметно-ориентированное проектирование (DDD). Структуризация сложных программных систем.** (Книга; включает в себя обсуждение шаблона репозитория) \
-  [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+- **Эрик Эванс (Eric Evans). Domain-Driven Design: Tackling Complexity in the Heart of Software**. (Книга; включает в себя обсуждение шаблона репозитория) \
+  [https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 ### <a name="unit-of-work-pattern"></a>Шаблон единицы работы
 
 - **Мартин Фоулер (Martin Fowler). Шаблон единицы работы.** \
-  [*https://martinfowler.com/eaaCatalog/unitOfWork.html*](https://martinfowler.com/eaaCatalog/unitOfWork.html)
+  [https://martinfowler.com/eaaCatalog/unitOfWork.html](https://martinfowler.com/eaaCatalog/unitOfWork.html)
 
 - **Реализация шаблонов репозитория и единиц работы в приложении ASP.NET MVC** \
-  [*https://docs.microsoft.com/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application*](https://docs.microsoft.com/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
+  [https://docs.microsoft.com/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application](https://docs.microsoft.com/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
 
 >[!div class="step-by-step"]
 >[Назад](domain-events-design-implementation.md)

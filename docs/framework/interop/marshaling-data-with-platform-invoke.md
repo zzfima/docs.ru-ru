@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: dc5c76cf-7b12-406f-b79c-d1a023ec245d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 396dc1dec60a6a984f9ddd0b8a8753b7293a5ab9
-ms.sourcegitcommit: 77854e8704b9689b73103d691db34d71c2bf1dad
+ms.openlocfilehash: 3cb310dc6d786c3c7711f4c194c6623324c777dd
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58307867"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412400"
 ---
 # <a name="marshaling-data-with-platform-invoke"></a>Маршалинг данных при вызове неуправляемого кода
 
@@ -25,37 +25,37 @@ ms.locfileid: "58307867"
 
 - Замените неуправляемые типы данных на управляемые.
 
-Чтобы создать эквивалентный управляемый прототип путем применения атрибута с необязательными полями и замены неуправляемых типов данных на управляемые, можно использовать документацию, предоставляемую с неуправляемой функцией. Инструкции по применению атрибута **DllImportAttribute** см. в разделе [Использование неуправляемых функций DLL](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md).
+Чтобы создать эквивалентный управляемый прототип путем применения атрибута с необязательными полями и замены неуправляемых типов данных на управляемые, можно использовать документацию, предоставляемую с неуправляемой функцией. Инструкции по применению <xref:System.Runtime.InteropServices.DllImportAttribute> см. в разделе [Использование неуправляемых функций DLL](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md).
 
 В этом разделе содержатся примеры, демонстрирующие способы создания прототипов управляемых функций для передачи аргументов и получения значений от функций, экспортируемых из неуправляемых библиотек. В примерах также демонстрируется использование атрибута <xref:System.Runtime.InteropServices.MarshalAsAttribute> и класса <xref:System.Runtime.InteropServices.Marshal> для явного маршалинга данных.
 
 ## <a name="platform-invoke-data-types"></a>Типы данных в вызове неуправляемого кода
 
-Ниже перечислены типы данных, используемые в функциях Win32 API (перечислены в файле Wtypes.h) и в функциях в стиле C. Многие неуправляемые библиотеки содержат функции, передающие эти типы данных в качестве параметров и возвращаемых значений. В третьем столбце представлены соответствующие встроенные типы значений .NET Framework или классы, используемые в управляемом коде. В некоторых случаях типы, перечисленные в таблице, можно заменить на типы того же размера.
+Ниже перечислены типы данных, используемые в API Windows и в функциях в стиле C. Многие неуправляемые библиотеки содержат функции, передающие эти типы данных в качестве параметров и возвращаемых значений. В третьем столбце представлены соответствующие встроенные типы значений .NET Framework или классы, используемые в управляемом коде. В некоторых случаях типы, перечисленные в таблице, можно заменить на типы того же размера.
 
-|Неуправляемый тип в Wtypes.h|Неуправляемый тип языка C|Имя управляемого типа|Описание|
+|Неуправляемый тип в API Windows|Неуправляемый тип языка C|Управляемый тип|Описание|
 |--------------------------------|-------------------------------|------------------------|-----------------|
-|**VOID**|**void**|<xref:System.Void?displayProperty=nameWithType>|Применяется к функции, которая не возвращает значение.|
-|**HANDLE**|**void \***|<xref:System.IntPtr?displayProperty=nameWithType> или <xref:System.UIntPtr?displayProperty=nameWithType>|32 бита в 32-разрядных операционных системах Windows, 64 бита в 64-разрядных операционных системах Windows.|
-|**BYTE**|**unsigned char**|<xref:System.Byte?displayProperty=nameWithType>|8 бит|
-|**SHORT**|**short**|<xref:System.Int16?displayProperty=nameWithType>|16 бит|
-|**WORD**|**unsigned short**|<xref:System.UInt16?displayProperty=nameWithType>|16 бит|
-|**INT**|**int**|<xref:System.Int32?displayProperty=nameWithType>|32 бита|
-|**UINT**|**unsigned int**|<xref:System.UInt32?displayProperty=nameWithType>|32 бита|
-|**LONG**|**long**|<xref:System.Int32?displayProperty=nameWithType>|32 бита|
-|**BOOL**|**long**|<xref:System.Boolean?displayProperty=nameWithType> или <xref:System.Int32?displayProperty=nameWithType>|32 бита|
-|**DWORD**|**unsigned long**|<xref:System.UInt32?displayProperty=nameWithType>|32 бита|
-|**ULONG**|**unsigned long**|<xref:System.UInt32?displayProperty=nameWithType>|32 бита|
-|**CHAR**|**char**|<xref:System.Char?displayProperty=nameWithType>|В кодировке ANSI.|
-|**WCHAR**|**wchar_t**|<xref:System.Char?displayProperty=nameWithType>|В кодировке Юникод.|
-|**LPSTR**|**char &ast;**|<xref:System.String?displayProperty=nameWithType> или <xref:System.Text.StringBuilder?displayProperty=nameWithType>|В кодировке ANSI.|
-|**LPCSTR**|**const char &ast;**|<xref:System.String?displayProperty=nameWithType> или <xref:System.Text.StringBuilder?displayProperty=nameWithType>|В кодировке ANSI.|
-|**LPWSTR**|**wchar_t &ast;**|<xref:System.String?displayProperty=nameWithType> или <xref:System.Text.StringBuilder?displayProperty=nameWithType>|В кодировке Юникод.|
-|**LPCWSTR**|**const wchar_t &ast;**|<xref:System.String?displayProperty=nameWithType> или <xref:System.Text.StringBuilder?displayProperty=nameWithType>|В кодировке Юникод.|
-|**FLOAT**|**float**|<xref:System.Single?displayProperty=nameWithType>|32 бита|
-|**DOUBLE**|**double**|<xref:System.Double?displayProperty=nameWithType>|64 бита|
+|`VOID`|`void`|<xref:System.Void?displayProperty=nameWithType>|Применяется к функции, которая не возвращает значение.|
+|`HANDLE`|`void *`|<xref:System.IntPtr?displayProperty=nameWithType> или <xref:System.UIntPtr?displayProperty=nameWithType>|32 бита в 32-разрядных операционных системах Windows, 64 бита в 64-разрядных операционных системах Windows.|
+|`BYTE`|`unsigned char`|<xref:System.Byte?displayProperty=nameWithType>|8 бит|
+|`SHORT`|`short`|<xref:System.Int16?displayProperty=nameWithType>|16 бит|
+|`WORD`|`unsigned short`|<xref:System.UInt16?displayProperty=nameWithType>|16 бит|
+|`INT`|`int`|<xref:System.Int32?displayProperty=nameWithType>|32 бита|
+|`UINT`|`unsigned int`|<xref:System.UInt32?displayProperty=nameWithType>|32 бита|
+|`LONG`|`long`|<xref:System.Int32?displayProperty=nameWithType>|32 бита|
+|`BOOL`|`long`|<xref:System.Boolean?displayProperty=nameWithType> или <xref:System.Int32?displayProperty=nameWithType>|32 бита|
+|`DWORD`|`unsigned long`|<xref:System.UInt32?displayProperty=nameWithType>|32 бита|
+|`ULONG`|`unsigned long`|<xref:System.UInt32?displayProperty=nameWithType>|32 бита|
+|`CHAR`|`char`|<xref:System.Char?displayProperty=nameWithType>|В кодировке ANSI.|
+|`WCHAR`|`wchar_t`|<xref:System.Char?displayProperty=nameWithType>|В кодировке Юникод.|
+|`LPSTR`|`char *`|<xref:System.String?displayProperty=nameWithType> или <xref:System.Text.StringBuilder?displayProperty=nameWithType>|В кодировке ANSI.|
+|`LPCSTR`|`const char *`|<xref:System.String?displayProperty=nameWithType> или <xref:System.Text.StringBuilder?displayProperty=nameWithType>|В кодировке ANSI.|
+|`LPWSTR`|`wchar_t *`|<xref:System.String?displayProperty=nameWithType> или <xref:System.Text.StringBuilder?displayProperty=nameWithType>|В кодировке Юникод.|
+|`LPCWSTR`|`const wchar_t *`|<xref:System.String?displayProperty=nameWithType> или <xref:System.Text.StringBuilder?displayProperty=nameWithType>|В кодировке Юникод.|
+|`FLOAT`|`float`|<xref:System.Single?displayProperty=nameWithType>|32 бита|
+|`DOUBLE`|`double`|<xref:System.Double?displayProperty=nameWithType>|64 бита|
 
-Соответствующие типы в [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], C# и C++ см. в разделе [Общие сведения о библиотеке классов .NET Framework](../../../docs/standard/class-library-overview.md).
+Соответствующие типы в Visual Basic, C# и C++ см. в разделе [Общие сведения о библиотеке классов .NET Framework](../../standard/class-library-overview.md#system-namespace).
 
 ## <a name="pinvokelibdll"></a>PinvokeLib.dll
 

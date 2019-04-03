@@ -3,12 +3,12 @@ title: Глоссарий по машинному обучению — ML.NET
 description: Глоссарий содержит подборку важных терминов по машинному обучению, которые будут полезны при создании пользовательских моделей с помощью ML.NET.
 ms.custom: seodec18
 ms.date: 03/05/2019
-ms.openlocfilehash: 52f4aa7300edbbdabcc37d7710654dab455d27b0
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: cc236aaa99fd8a7b05af666a5b96f657d8bd3ad4
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57498904"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410242"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Глоссарий важных терминов по машинному обучению
 
@@ -115,7 +115,7 @@ ms.locfileid: "57498904"
 
 ## <a name="training"></a>Обучение
 
-Процесс поиска [модели](#model) для заданного набора данных для обучения. Для линейной модели это процесс поиска весовых коэффициентов. Для дерева он включает поиск точек разбиения.
+Процесс поиска [модели](#model) для заданного набора данных для обучения. Для линейной модели это процесс поиска весовых коэффициентов. Для дерева он включает определение точек разбиения.
 
 ## <a name="transform"></a>Transform
 

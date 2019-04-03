@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9baea3ce-27b3-4b4f-af98-9ad0f9467e6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: df65f54a9a7408a22f8b558f99ab42d6c37ae55b
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: aeba97a5caef8fc705a3b04496ce1fd17085ec5d
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221073"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409319"
 ---
 # <a name="default-marshaling-for-strings"></a>Маршалинг по умолчанию для строк
 Классы <xref:System.String?displayProperty=nameWithType> и <xref:System.Text.StringBuilder?displayProperty=nameWithType> ведут себя при маршалинге одинаково.  
@@ -220,7 +220,7 @@ struct StringInfoT {
   
  Решением является передача в качестве аргумента буфера <xref:System.Text.StringBuilder> вместо строки. Буфер `StringBuilder` может быть разыменован и изменен вызываемым объектом при условии, что он не превышает емкость `StringBuilder`. Его также можно инициализировать с фиксированной длиной. Например, если вы инициализируете буфер `StringBuilder` емкостью `N`, упаковщик предоставляет буфер размером (`N`+1) символов. Дополнительный символ объясняется тем, что неуправляемая строка заканчивается символом null, а буфер `StringBuilder` нет.  
   
- Например, функция `GetWindowText` интерфейса Microsoft Win32 API (определенная в Windows.h) является буфером символов фиксированной длины, который должен быть передан в неуправляемый код для обработки. `LpString` указывает на выделенный вызывающим объектом буфер размером `nMaxCount`. Предполагается, что вызывающий объект выделяет буфер и задает аргумент `nMaxCount` равным размеру выделяемого буфера. В приведенном ниже коде показано объявление функции `GetWindowText`, определенное в файле Windows.h.  
+ Например, функция `GetWindowText` интерфейса Microsoft Windows API (определенная в Windows.h) является буфером символов фиксированной длины, который должен быть передан в неуправляемый код для обработки. `LpString` указывает на выделенный вызывающим объектом буфер размером `nMaxCount`. Предполагается, что вызывающий объект выделяет буфер и задает аргумент `nMaxCount` равным размеру выделяемого буфера. В приведенном ниже коде показано объявление функции `GetWindowText`, определенное в файле Windows.h.  
   
 ```  
 int GetWindowText(  

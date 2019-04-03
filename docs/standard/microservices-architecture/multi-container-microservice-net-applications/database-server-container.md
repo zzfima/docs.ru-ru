@@ -4,12 +4,12 @@ description: Архитектура микрослужб .NET для упако�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 347e6d36b7e838082f47d39c5ae67c219ec11d45
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2adc58339012095c9dc58d633a9b3815cf7aba3f
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127723"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463349"
 ---
 # <a name="using-a-database-server-running-as-a-container"></a>Использование сервера баз данных, работающего в качестве контейнера
 
@@ -47,11 +47,11 @@ ms.locfileid: "53127723"
 
 #### <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Запуск образа SQL Server Docker в Linux, Mac или Windows** <br/>
-    [*https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker*](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker)
+- **Запуск образа SQL Server Docker в Linux, Mac или Windows** \
+    [https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker)
 
--   **Подключения и запросы к SQL Server на Linux с помощью sqlcmd** <br/>
-    [*https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd*](https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd)
+- **Подключения и запросы к SQL Server на Linux с помощью sqlcmd** \
+    [https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd](https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd)
 
 ### <a name="seeding-with-test-data-on-web-application-startup"></a>Заполнение тестовыми данными при запуске веб-приложения
 

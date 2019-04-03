@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6ad93144dcb56d60f9aa688400918218ef8171df
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: c65634a1046b193d500e505d945784504285f93a
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219572"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412335"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Создание прототипов в управляемом коде
 В этом разделе описывается доступ к неуправляемым функциям и представлено несколько полей атрибутов, которые уточняют определение метода в управляемом коде. Примеры, демонстрирующие создание объявлений на основе .NET, которые используются с вызовом неуправляемого кода, см. в разделе [Маршалинг данных при вызове неуправляемого кода](marshaling-data-with-platform-invoke.md).  
@@ -32,47 +32,60 @@ ms.locfileid: "56219572"
  Чтобы обратиться к неуправляемой функции DLL из управляемого кода, нужно знать ее имя и имя библиотеки DLL, которая ее экспортирует. Имея эту информацию, можно приступать к написанию управляемого определения для неуправляемой функции, реализованной в библиотеке DLL. Кроме того, можно настроить способ, которым вызов неуправляемого кода создает функцию и маршалирует данные в функцию и обратно.  
   
 > [!NOTE]
->  Функции Win32 API, которые распределяют строку, позволяют освободить строку с помощью такого метода, как `LocalFree`. Вызов неуправляемого кода обрабатывает эти параметры иначе. Для вызовов неуправляемого кода следует использовать параметр типа `IntPtr`, а не `String`. Чтобы вручную преобразовать тип в строку и вручную освободить его, можно использовать методы, предоставленные классом <xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType>.  
+>  Функции API Windows, которые распределяют строку и позволяют освободить строку с помощью такого метода, как `LocalFree`. Вызов неуправляемого кода обрабатывает эти параметры иначе. Для вызовов неуправляемого кода следует использовать параметр типа `IntPtr`, а не `String`. Чтобы вручную преобразовать тип в строку и вручную освободить его, можно использовать методы, предоставленные классом <xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType>.  
   
 ## <a name="declaration-basics"></a>Основы объявления  
  Как показано в примерах ниже, управляемые определения неуправляемых функций зависят от используемого языка. Более полные примеры кода представлены в разделе [Примеры вызовов неуправляемого кода](platform-invoke-examples.md).  
   
-```vb  
-Imports System.Runtime.InteropServices  
-Public Class Win32  
-    Declare Auto Function MessageBox Lib "user32.dll" _  
-       (ByVal hWnd As Integer, _  
-        ByVal txt As String, ByVal caption As String, _  
-        ByVal Typ As Integer) As IntPtr  
-End Class  
-```  
+```vb
+Imports System
+
+Friend Class WindowsAPI
+    Friend Shared Declare Auto Function MessageBox Lib "user32.dll" (
+        ByVal hWnd As IntPtr,
+        ByVal lpText As String,
+        ByVal lpCaption As String,
+        ByVal uType As UInteger) As Integer
+End Class
+```
   
  Для применения полей <xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping>, <xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention>, <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>, <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>, <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError> или <xref:System.Runtime.InteropServices.DllImportAttribute.ThrowOnUnmappableChar> к объявлению [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] необходимо использовать атрибут <xref:System.Runtime.InteropServices.DllImportAttribute> вместо оператора `Declare`.  
   
-```vb  
-Imports System.Runtime.InteropServices  
-Public Class Win32  
-   <DllImport ("user32.dll", CharSet := CharSet.Auto)> _  
-   Public Shared Function MessageBox (ByVal hWnd As Integer, _  
-        ByVal txt As String, ByVal caption As String, _  
-        ByVal Typ As Integer) As IntPtr  
-   End Function  
-End Class  
-```  
+```vb
+Imports System
+Imports System.Runtime.InteropServices
+
+Friend Class WindowsAPI
+    <DllImport("user32.dll", CharSet:=CharSet.Auto)>
+    Friend Shared Function MessageBox(
+        ByVal hWnd As IntPtr,
+        ByVal lpText As String,
+        ByVal lpCaption As String,
+        ByVal uType As UInteger) As Integer
+    End Function
+End Class
+```
   
-```csharp  
-using System.Runtime.InteropServices;  
-[DllImport("user32.dll")]  
-    public static extern IntPtr MessageBox(int hWnd, String text,   
-                                       String caption, uint type);  
-```  
+```csharp
+using System;
+using System.Runtime.InteropServices;
+
+internal static class WindowsAPI
+{
+    [DllImport("user32.dll")]
+    internal static extern int MessageBox(
+        IntPtr hWnd, string lpText, string lpCaption, uint uType);
+}
+```
   
-```cpp  
-using namespace System::Runtime::InteropServices;  
-[DllImport("user32.dll")]  
-    extern "C" IntPtr MessageBox(int hWnd, String* pText,  
-    String* pCaption unsigned int uType);  
-```  
+```cpp
+using namespace System;
+using namespace System::Runtime::InteropServices;
+
+[DllImport("user32.dll")]
+extern "C" int MessageBox(
+    IntPtr hWnd, String* lpText, String* lpCaption, unsigned int uType);
+```
   
 ## <a name="adjusting-the-definition"></a>Настройка определения  
  Поля атрибутов, заданные явно или неявно, определяют выполнение управляемого кода. Вызов неуправляемого кода выполняется в соответствии с набором значений по умолчанию различных полей, хранящихся в сборке как метаданные. Это поведение по умолчанию можно изменить, настроив значения одного или нескольких полей. Во многих случаях для установки значения используется <xref:System.Runtime.InteropServices.DllImportAttribute>.  

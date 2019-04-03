@@ -19,8 +19,7 @@ ms.lasthandoff: 03/09/2019
 ms.locfileid: "57708409"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Поддержка приложений для Магазина Windows и среды выполнения Windows в .NET Framework
-
-  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] поддерживает несколько способов разработки программного обеспечения для [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Эти способы можно разделить на три категории.
+[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] поддерживает несколько способов разработки программного обеспечения для [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Эти способы можно разделить на три категории.
 
 -   Разработка [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] приложений с помощью элементов управления XAML, как описано в разделе [приложений стратегии для Windows Store, с помощью C# или Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10)), [как tos (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/br229566(v=win.10)), и [Обзор приложений .NET для Windows Store ](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)).
 

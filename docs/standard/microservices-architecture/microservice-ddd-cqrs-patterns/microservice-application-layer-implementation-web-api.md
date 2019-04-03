@@ -4,12 +4,12 @@ description: Архитектура микрослужб .NET для конте�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 39aa2b9b97e9f683521193ad8e647c73bb4dd140
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 72ed265284db9d112a0b1e3b966d206dd7f3d1cc
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353092"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464896"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Реализация прикладного уровня для микрослужб с помощью веб-API
 
@@ -112,10 +112,10 @@ public void ConfigureServices(IServiceCollection services)
 #### <a name="additional-resources"></a>Дополнительные ресурсы
 
 - **Мэтью Кинг (Matthew King). Регистрация служб в Scrutor** \
-  [*https://www.mking.net/blog/registering-services-with-scrutor*](https://www.mking.net/blog/registering-services-with-scrutor)
+  [https://www.mking.net/blog/registering-services-with-scrutor](https://www.mking.net/blog/registering-services-with-scrutor)
 
 - **Кристиан Хелланг (Kristian Hellang). Scrutor.** Репозиторий GitHub. \
-  [*https://github.com/khellang/Scrutor*](https://github.com/khellang/Scrutor)
+  [https://github.com/khellang/Scrutor](https://github.com/khellang/Scrutor)
 
 #### <a name="use-autofac-as-an-ioc-container"></a>Использование Autofac в качестве контейнера IoC
 
@@ -167,13 +167,13 @@ Autofac также может [сканировать сборки и регис
 #### <a name="additional-resources"></a>Дополнительные ресурсы
 
 - **Общие сведения о внедрении зависимостей в ASP.NET Core** \
-  [*https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection*](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection)
+  [https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection)
 
 - **Autofac.** Официальная документация. \
-  [*http://docs.autofac.org/en/latest/*](http://docs.autofac.org/en/latest/)
+  [http://docs.autofac.org/en/latest/](http://docs.autofac.org/en/latest/)
 
 - **Сравнение времени существования службы контейнеров IoC ASP.NET Core с областями действия экземпляра контейнера IoC Autofac. Сезар де ла Торре (Cesar de la Torre).** \
-  [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/)
+  [https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/](https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/)
 
 ## <a name="implement-the-command-and-command-handler-patterns"></a>Реализация шаблонов команд и обработчиков команд
 
@@ -397,19 +397,19 @@ public class CreateOrderCommandHandler
 #### <a name="additional-resources"></a>Дополнительные ресурсы
 
 - **Марк Симанн (Mark Seemann). Граничный слой приложения не является объектно-ориентированным** \
-  [*https://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/*](https://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/)
+  [https://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/](https://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/)
 
 - **Команды и события** \
-  [*http://cqrs.nu/Faq/commands-and-events*](http://cqrs.nu/Faq/commands-and-events)
+  [http://cqrs.nu/Faq/commands-and-events](http://cqrs.nu/Faq/commands-and-events)
 
 - **Что делает обработчик команд?** \
-  [*http://cqrs.nu/Faq/command-handlers*](http://cqrs.nu/Faq/command-handlers)
+  [http://cqrs.nu/Faq/command-handlers](http://cqrs.nu/Faq/command-handlers)
 
 - **Джимми Богард (Jimmy Bogard). Шаблоны команд домена — обработчики** \
-  [*https://jimmybogard.com/domain-command-patterns-handlers/*](https://jimmybogard.com/domain-command-patterns-handlers/)
+  [https://jimmybogard.com/domain-command-patterns-handlers/](https://jimmybogard.com/domain-command-patterns-handlers/)
 
 - **Джимми Богард (Jimmy Bogard). Шаблоны команд домена — проверка** \
-  [*https://jimmybogard.com/domain-command-patterns-validation/*](https://jimmybogard.com/domain-command-patterns-validation/)
+  [https://jimmybogard.com/domain-command-patterns-validation/](https://jimmybogard.com/domain-command-patterns-validation/)
 
 ## <a name="the-command-process-pipeline-how-to-trigger-a-command-handler"></a>Конвейер обработки команд: активация обработчика команд
 
@@ -797,43 +797,43 @@ public class CreateOrderCommandValidator : AbstractValidator<CreateOrderCommand>
 ##### <a name="the-mediator-pattern"></a>Шаблон медиатора
 
 - **Шаблон медиатора** \
-  [*https://en.wikipedia.org/wiki/Mediator\_pattern*](https://en.wikipedia.org/wiki/Mediator_pattern)
+  [https://en.wikipedia.org/wiki/Mediator\_pattern](https://en.wikipedia.org/wiki/Mediator_pattern)
 
 ##### <a name="the-decorator-pattern"></a>Шаблон декоратора
 
 - **Шаблон декоратора** \
-  [*https://en.wikipedia.org/wiki/Decorator\_pattern*](https://en.wikipedia.org/wiki/Decorator_pattern)
+  [https://en.wikipedia.org/wiki/Decorator\_pattern](https://en.wikipedia.org/wiki/Decorator_pattern)
 
 ##### <a name="mediatr-jimmy-bogard"></a>MediatR (Джимми Богард (Jimmy Bogard))
 
 - **MediatR.** Репозиторий GitHub. \
-  [*https://github.com/jbogard/MediatR*](https://github.com/jbogard/MediatR)
+  [https://github.com/jbogard/MediatR](https://github.com/jbogard/MediatR)
 
 - **CQRS с MediatR и AutoMapper** \
-  [*https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/*](https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/)
+  [https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/](https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/)
 
 - **Сажаем контроллеры на диету: запросы POST и команды**. \
-  [*https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/*](https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/)
+  [https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/](https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/)
 
 - **Обеспечение сквозной функциональности с помощью конвейера медиатора** \
-  [*https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/*](https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/)
+  [https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/](https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/)
 
 - **CQRS и REST: идеальная пара** \
-  [*https://lostechies.com/jimmybogard/2016/06/01/cqrs-and-rest-the-perfect-match/*](https://lostechies.com/jimmybogard/2016/06/01/cqrs-and-rest-the-perfect-match/)
+  [https://lostechies.com/jimmybogard/2016/06/01/cqrs-and-rest-the-perfect-match/](https://lostechies.com/jimmybogard/2016/06/01/cqrs-and-rest-the-perfect-match/)
 
 - **Примеры конвейера MediatR** \
-  [*https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/*](https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/)
+  [https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/](https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/)
 
 - **Средства тестирования вертикальных срезов для MediatR и ASP.NET Core** \
-  [*https://lostechies.com/jimmybogard/2016/10/24/vertical-slice-test-fixtures-for-mediatr-and-asp-net-core/*](https://lostechies.com/jimmybogard/2016/10/24/vertical-slice-test-fixtures-for-mediatr-and-asp-net-core/)
+  [https://lostechies.com/jimmybogard/2016/10/24/vertical-slice-test-fixtures-for-mediatr-and-asp-net-core/](https://lostechies.com/jimmybogard/2016/10/24/vertical-slice-test-fixtures-for-mediatr-and-asp-net-core/)
 
 - **Объявление о выпуске расширений MediatR для внедрения зависимостей Майкрософт** \
-  [*https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/*](https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/)
+  [https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/](https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/)
 
 ##### <a name="fluent-validation"></a>Плавная проверка
 
 - **Джереми Скиннер (Jeremy Skinner). FluentValidation.** Репозиторий GitHub. \
-  [*https://github.com/JeremySkinner/FluentValidation*](https://github.com/JeremySkinner/FluentValidation)
+  [https://github.com/JeremySkinner/FluentValidation](https://github.com/JeremySkinner/FluentValidation)
 
 > [!div class="step-by-step"]
 > [Назад](microservice-application-layer-web-api-design.md)
