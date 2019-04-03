@@ -2,23 +2,25 @@
 title: <message> из <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: 6ebf0240-d7be-4493-b0fe-f00fd5989d77
-ms.openlocfilehash: 306bc56820cdbcba17cce9fc50d426260eb0e0d4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c623b7daf1e91c9c1800b9653525cd51b1087506
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360671"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890570"
 ---
 # <a name="message-of-netmsmqbinding"></a>\<сообщение > из \<netMsmqBinding >
 
 Определяет параметры безопасности сообщений SOAP для данной привязки `netMsmqBinding`.
 
-\<system.ServiceModel>\
-\<привязки > \
-\<netMsmqBinding > \
-\<Привязка > \
-\<Безопасность > \
-\<сообщение >
+```xml
+<system.ServiceModel>
+  <bindings>
+    <netMsmqBinding>
+      <binding>
+        <security>
+          <message>
+```
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -50,7 +52,7 @@ ms.locfileid: "57360671"
 
 ### <a name="parent-elements"></a>Родительские элементы
 
-|Элемент|Описание:|
+|Элемент|Описание|
 |-------------|-----------------|
 |[\<Безопасность >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netmsmqbinding.md)|Определяет параметры безопасности для привязки.|
 

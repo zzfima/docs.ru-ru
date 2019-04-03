@@ -2,12 +2,12 @@
 title: Сведения о вызывающем объекте
 description: Описывает, как использовать информационные атрибуты аргумента вызывающего объекта, чтобы получить сведения о вызывающем объекте из метода.
 ms.date: 04/25/2017
-ms.openlocfilehash: 9c6b2a92a15e12d016a153b401f166c8fd1efe93
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: fd9ce204193ae7402a2e8cf3440cb831ac446af0
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613821"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890310"
 ---
 # <a name="caller-information"></a>Сведения о вызывающем объекте
 
@@ -15,7 +15,7 @@ ms.locfileid: "53613821"
 
 Для получения этих сведений используются атрибуты, которые применяются к необязательным параметрам, каждый из которых имеет значение по умолчанию. В следующей таблице перечислены информационные атрибуты вызывающего объекта, которые определены в [System.Runtime.CompilerServices](/dotnet/api/system.runtime.compilerservices) пространство имен:
 
-|Атрибут|Описание:|Тип|
+|Атрибут|Описание|Тип|
 |---------|-----------|----|
 |[CallerFilePath](/dotnet/api/system.runtime.compilerservices.callerfilepathattribute)|Полный путь исходного файла, содержащего вызывающий объект. Это путь к файлу во время компиляции.|`String`
 |[CallerLineNumber](/dotnet/api/system.runtime.compilerservices.callerlinenumberattribute)|Номер строки в исходном файле, в которой вызывается метод.|`Integer`|
@@ -30,9 +30,9 @@ open System.Diagnostics
 open System.Runtime.CompilerServices
 
 type Tracer() =
-    member __.DoTrace(msg: string,
+    member __.DoTrace(message: string,
                       [<CallerMemberName>] ?memberName: string,
-                      [<CallerFilePath>] ?path: string
+                      [<CallerFilePath>] ?path: string,
                       [<CallerLineNumber>] ?line: int) =
         Trace.WriteLine(sprintf "Message: %s" message)
         match (memberName, path, line) with

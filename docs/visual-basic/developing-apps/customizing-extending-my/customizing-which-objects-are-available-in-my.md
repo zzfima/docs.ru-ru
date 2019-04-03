@@ -5,18 +5,20 @@ helpviewer_keywords:
 - My namespace [Visual Basic], customizing
 - My namespace
 ms.assetid: 4e8279c2-ed5b-4681-8903-8a6671874000
-ms.openlocfilehash: 74be338cd6f704174d89032fb7f9e859215c2bc3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: HT
+ms.openlocfilehash: c0b47521c6a62071466ae4193cd8553bdfb3dcde
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843543"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890375"
 ---
 # <a name="customizing-which-objects-are-available-in-my-visual-basic"></a>Настройка доступа к объектам через My (Visual Basic)
+
 В этом разделе описывается, как можно выбирать, какие `My` объекты включены, задав проекта `_MYTYPE` константы условной компиляции. Интегрированная среда разработки (IDE) Visual Studio сохраняет `_MYTYPE` константа условной компиляции для проекта в соответствии с типом проекта.  
   
-## <a name="predefined-mytype-values"></a>Предопределенные значения _MYTYPE  
- Необходимо использовать `/define` параметр компилятора, чтобы задать `_MYTYPE` константы условной компиляции. При указании значения для `_MYTYPE` константы, необходимо заключить строковое значение в обратная косая черта и кавычка (\\«) последовательности. Например можно использовать:  
+## <a name="predefined-mytype-values"></a>Предопределенные \_MYTYPE значения  
+
+Необходимо использовать `/define` параметр компилятора, чтобы задать `_MYTYPE` константы условной компиляции. При указании значения для `_MYTYPE` константы, необходимо заключить строковое значение в обратная косая черта и кавычка (\\«) последовательности. Например можно использовать:  
   
 ```  
 /define:_MYTYPE=\"WindowsForms\"  
@@ -24,7 +26,7 @@ ms.locfileid: "58843543"
   
  В этой таблице показано, что `_MYTYPE` имеет значение константы условной компиляции для нескольких типов проектов.  
   
-|Тип проекта|Значение _MYTYPE|  
+|Тип проекта|\_Значение MYTYPE|  
 |------------------|--------------------|  
 |Библиотека классов|«Windows»|  
 |Консольное приложение|«Консоль»|  
@@ -37,12 +39,13 @@ ms.locfileid: "58843543"
 |Empty|«Empty»|  
   
 > [!NOTE]
->  Все строки условной компиляции при сравнении учитывается регистр, независимо от способа `Option Compare` инструкции set.  
+> Все строки условной компиляции при сравнении учитывается регистр, независимо от способа `Option Compare` инструкции set.  
   
-## <a name="dependent-my-compilation-constants"></a>Зависимые константы компиляции _MY  
- `_MYTYPE` Константы условной компиляции, в свою очередь, управляет значениями из многих других `_MY` константы компиляции:  
+## <a name="dependent-my-compilation-constants"></a>Зависимые \_МОЕЙ константы компиляции  
+
+`_MYTYPE` Константы условной компиляции, в свою очередь, управляет значениями из многих других `_MY` константы компиляции:  
   
-|_MYTYPE|_MYAPPLICATIONTYPE|_MYCOMPUTERTYPE|_MYFORMS|_MYUSERTYPE|_MYWEBSERVICES|  
+|\_MYTYPE|\_MYAPPLICATIONTYPE|\_MYCOMPUTERTYPE|\_MYFORMS|\_MYUSERTYPE|\_MYWEBSERVICES|  
 |--------------|-------------------------|----------------------|---------------|------------------|---------------------|  
 |«Консоль»|«Консоль»|«Windows»|Не определено|«Windows»|true|  
 |«Custom»|Не определено|Не определено|Не определено|Не определено|Не определено|  
@@ -56,7 +59,7 @@ ms.locfileid: "58843543"
  По умолчанию сопоставляется неопределенный константы условной компиляции `FALSE`. Можно указать значения для неопределенных констант при компиляции проекта, чтобы переопределить поведение по умолчанию.  
   
 > [!NOTE]
->  Когда `_MYTYPE` устанавливается на «Пользовательский», проект содержит `My` пространства имен, но он не содержит объектов. Однако можно присвоить `_MYTYPE` для «Empty» запрещает компилятору добавление `My` пространства имен и ее объектов.  
+> Когда `_MYTYPE` устанавливается на «Пользовательский», проект содержит `My` пространства имен, но он не содержит объектов. Однако можно присвоить `_MYTYPE` для «Empty» запрещает компилятору добавление `My` пространства имен и ее объектов.  
   
  Эта таблица описывает последствия предопределенных значений `_MY` константы компиляции.  
   
@@ -77,7 +80,7 @@ ms.locfileid: "58843543"
 - <xref:Microsoft.VisualBasic.ApplicationServices.User>
 - [Зависимость My от типа проекта](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)
 - [Условная компиляция](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
-- [/ define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)
+- [/define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)
 - [Объект My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md)
 - [Объект My.Request](../../../visual-basic/language-reference/objects/my-request-object.md)
 - [Объект My.Response](../../../visual-basic/language-reference/objects/my-response-object.md)

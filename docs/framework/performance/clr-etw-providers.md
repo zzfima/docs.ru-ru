@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8fd1a4d41e65ea4d39f1cfee33aa5e166eec71ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0911132a705f3de89d771324cbb63e8db31bdfdb
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628556"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890518"
 ---
 # <a name="clr-etw-providers"></a>Поставщики ETW среды CLR
 В общеязыковой среде выполнения (CLR) представлены два поставщика: поставщик среды выполнения и поставщик очистки.  
@@ -84,7 +84,7 @@ ms.locfileid: "54628556"
 4.  Объединение профилей в один файл журнала:  
   
     ```  
-    xperf -merge -d clr1.etl clr2.etl merged.etl  
+    xperf -merge clr1.etl clr2.etl merged.etl  
     ```  
   
      В объединенном ETL-файле будут содержаться события из сеансов поставщиков среды выполнения и очистки.  

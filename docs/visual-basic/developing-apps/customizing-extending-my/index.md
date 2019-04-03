@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: 06ca80b9-1192-4eb5-8537-8ef5edfb9be0
-ms.openlocfilehash: 89a9a988bab62cb77e3e5a5075fa01bdbb11f4c0
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: HT
+ms.openlocfilehash: d7fca92f541ffeca7a6e8267260d3b665271e90a
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58820949"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890401"
 ---
 # <a name="customizing-projects-and-extending-my-with-visual-basic"></a>Настройка проектов и расширение объекта My в Visual Basic
 Шаблоны проектов для предоставления дополнительных `My` объектов. Это упрощает для других разработчиков, поиск и использование ваших объектов.  
@@ -27,7 +27,7 @@ ms.locfileid: "58820949"
  Описываются способы указания собственных расширений для модели приложения путем переопределения членами <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> класса.  
   
  [Настройка доступа к объектам через My](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)  
- Описывается, как указать, какие `My` объекты включены, задав константы условной компиляции проекта _MYTYPE.  
+ Описывается, как указать, какие `My` объекты включены, задав проекта \_MYTYPE константы условной компиляции.  
   
 ## <a name="related-sections"></a>Связанные разделы  
  [Разработка с использованием My](../../../visual-basic/developing-apps/development-with-my/index.md)  
