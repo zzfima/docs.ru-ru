@@ -1,19 +1,19 @@
 ---
-title: Как выполнить Поиск потомков с определенным именем элемента (Visual Basic)
+title: Практическое руководство. Поиск потомков с определенным именем элемента (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 78915518-0d25-4051-ab55-929779989510
-ms.openlocfilehash: 4311eb0a4062c01b2c8e1c19355c5284298e39dd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c7dadec961420988a7f4cc1d6be72d7cdba5c047
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557164"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816843"
 ---
-# <a name="how-to-find-descendants-with-a-specific-element-name-visual-basic"></a><span data-ttu-id="52085-102">Как выполнить Поиск потомков с определенным именем элемента (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="52085-102">How to: Find Descendants with a Specific Element Name (Visual Basic)</span></span>
-<span data-ttu-id="52085-103">Иногда возникает необходимость найти всех потомков с определенным именем.</span><span class="sxs-lookup"><span data-stu-id="52085-103">Sometimes you want to find all descendants with a particular name.</span></span> <span data-ttu-id="52085-104">В таких случаях можно написать код для просмотра всех потомков, но проще использовать ось <xref:System.Xml.Linq.XContainer.Descendants%2A>.</span><span class="sxs-lookup"><span data-stu-id="52085-104">You could write code to iterate through all of the descendants, but it is easier to use the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis.</span></span>  
+# <a name="how-to-find-descendants-with-a-specific-element-name-visual-basic"></a><span data-ttu-id="5ec0b-102">Практическое руководство. Поиск потомков с определенным именем элемента (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5ec0b-102">How to: Find Descendants with a Specific Element Name (Visual Basic)</span></span>
+<span data-ttu-id="5ec0b-103">Иногда возникает необходимость найти всех потомков с определенным именем.</span><span class="sxs-lookup"><span data-stu-id="5ec0b-103">Sometimes you want to find all descendants with a particular name.</span></span> <span data-ttu-id="5ec0b-104">В таких случаях можно написать код для просмотра всех потомков, но проще использовать ось <xref:System.Xml.Linq.XContainer.Descendants%2A>.</span><span class="sxs-lookup"><span data-stu-id="5ec0b-104">You could write code to iterate through all of the descendants, but it is easier to use the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="52085-105">Пример</span><span class="sxs-lookup"><span data-stu-id="52085-105">Example</span></span>  
- <span data-ttu-id="52085-106">В следующем примере показано, как находить потомков на основе имени элемента.</span><span class="sxs-lookup"><span data-stu-id="52085-106">The following example shows how to find descendants based on the element name.</span></span>  
+## <a name="example"></a><span data-ttu-id="5ec0b-105">Пример</span><span class="sxs-lookup"><span data-stu-id="5ec0b-105">Example</span></span>  
+ <span data-ttu-id="5ec0b-106">В следующем примере показано, как находить потомков на основе имени элемента.</span><span class="sxs-lookup"><span data-stu-id="5ec0b-106">The following example shows how to find descendants based on the element name.</span></span>  
   
 ```vb  
 Dim root As XElement = _  
@@ -47,14 +47,14 @@ Dim str As String = textSegs.Aggregate( _
 Console.WriteLine(str)  
 ```  
   
- <span data-ttu-id="52085-107">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="52085-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="5ec0b-107">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="5ec0b-107">This code produces the following output:</span></span>  
   
 ```  
 Some text that is broken up into multiple segments.  
 ```  
   
-## <a name="example"></a><span data-ttu-id="52085-108">Пример</span><span class="sxs-lookup"><span data-stu-id="52085-108">Example</span></span>  
- <span data-ttu-id="52085-109">Следующий пример демонстрирует тот же запрос XML, что и в пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="52085-109">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="52085-110">Дополнительные сведения см. в разделе [работа с пространствами имен XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span><span class="sxs-lookup"><span data-stu-id="52085-110">For more information, see [Working with XML Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="5ec0b-108">Пример</span><span class="sxs-lookup"><span data-stu-id="5ec0b-108">Example</span></span>  
+ <span data-ttu-id="5ec0b-109">Следующий пример демонстрирует тот же запрос XML, что и в пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="5ec0b-109">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="5ec0b-110">Дополнительные сведения см. в разделе [работа с пространствами имен XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span><span class="sxs-lookup"><span data-stu-id="5ec0b-110">For more information, see [Working with XML Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -94,12 +94,13 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="52085-111">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="52085-111">This code produces the following output:</span></span>  
+ <span data-ttu-id="5ec0b-111">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="5ec0b-111">This code produces the following output:</span></span>  
   
 ```  
 Some text that is broken up into multiple segments.  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="52085-112">См. также</span><span class="sxs-lookup"><span data-stu-id="52085-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5ec0b-112">См. также</span><span class="sxs-lookup"><span data-stu-id="5ec0b-112">See also</span></span>
+
 - <xref:System.Xml.Linq.XContainer.Descendants%2A>
-- [<span data-ttu-id="52085-113">Базовые запросы (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="52085-113">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [<span data-ttu-id="5ec0b-113">Базовые запросы (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5ec0b-113">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

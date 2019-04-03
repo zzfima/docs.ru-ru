@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC30685
 ms.assetid: 756add7a-23d5-4b4f-a48d-8297d6459c73
-ms.openlocfilehash: 1548c9894d476cc4b92d6581362d309e7b4d00d4
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 4415608bcfca63b43b3d9ebf17ce622ccd418775
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55265001"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820861"
 ---
-# <a name="membername-is-ambiguous-across-the-inherited-interfaces-interfacename1-and-interfacename2"></a><span data-ttu-id="a41a8-102">"\<имя_члена >" является неоднозначным в наследуемых интерфейсах\<имя_интерфейса1 > "и"\<имя_интерфейса2 > "</span><span class="sxs-lookup"><span data-stu-id="a41a8-102">'\<membername>' is ambiguous across the inherited interfaces '\<interfacename1>' and '\<interfacename2>'</span></span>
-<span data-ttu-id="a41a8-103">Этот интерфейс наследует два или несколько членов с таким именем несколько интерфейсов.</span><span class="sxs-lookup"><span data-stu-id="a41a8-103">The interface inherits two or more members with the same name from multiple interfaces.</span></span>  
+# <a name="membername-is-ambiguous-across-the-inherited-interfaces-interfacename1-and-interfacename2"></a><span data-ttu-id="16970-102">"\<имя_члена >" является неоднозначным в наследуемых интерфейсах\<имя_интерфейса1 > "и"\<имя_интерфейса2 > "</span><span class="sxs-lookup"><span data-stu-id="16970-102">'\<membername>' is ambiguous across the inherited interfaces '\<interfacename1>' and '\<interfacename2>'</span></span>
+<span data-ttu-id="16970-103">Этот интерфейс наследует два или несколько членов с таким именем несколько интерфейсов.</span><span class="sxs-lookup"><span data-stu-id="16970-103">The interface inherits two or more members with the same name from multiple interfaces.</span></span>  
   
- <span data-ttu-id="a41a8-104">**Идентификатор ошибки:** BC30685</span><span class="sxs-lookup"><span data-stu-id="a41a8-104">**Error ID:** BC30685</span></span>  
+ <span data-ttu-id="16970-104">**Идентификатор ошибки:** BC30685</span><span class="sxs-lookup"><span data-stu-id="16970-104">**Error ID:** BC30685</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="a41a8-105">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="a41a8-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="16970-105">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="16970-105">To correct this error</span></span>  
   
--   <span data-ttu-id="a41a8-106">Приведение значения к базовому интерфейсу, который вы хотите использовать; Например:</span><span class="sxs-lookup"><span data-stu-id="a41a8-106">Cast the value to the base interface that you want to use; for example:</span></span>  
+-   <span data-ttu-id="16970-106">Приведение значения к базовому интерфейсу, который вы хотите использовать; Например:</span><span class="sxs-lookup"><span data-stu-id="16970-106">Cast the value to the base interface that you want to use; for example:</span></span>  
   
     ```  
     Interface Left  
@@ -46,5 +46,6 @@ ms.locfileid: "55265001"
     End Module  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="a41a8-107">См. также</span><span class="sxs-lookup"><span data-stu-id="a41a8-107">See also</span></span>
-- [<span data-ttu-id="a41a8-108">Интерфейсы</span><span class="sxs-lookup"><span data-stu-id="a41a8-108">Interfaces</span></span>](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a><span data-ttu-id="16970-107">См. также</span><span class="sxs-lookup"><span data-stu-id="16970-107">See also</span></span>
+
+- [<span data-ttu-id="16970-108">Интерфейсы</span><span class="sxs-lookup"><span data-stu-id="16970-108">Interfaces</span></span>](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

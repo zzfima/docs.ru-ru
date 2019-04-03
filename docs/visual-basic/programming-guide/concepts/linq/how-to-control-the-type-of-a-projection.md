@@ -1,21 +1,21 @@
 ---
-title: Как выполнить Управление типом проекции (Visual Basic)
+title: Практическое руководство. Управление типом проекции (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a0171276-0b46-4817-aee5-a8d5191b12fe
-ms.openlocfilehash: e892e6328576a9727a13a4c1acd951d44ce4daa8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd09914a75a8d4b20ddf9ff452f046bf7671152f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628881"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831409"
 ---
-# <a name="how-to-control-the-type-of-a-projection-visual-basic"></a><span data-ttu-id="0bbce-102">Как выполнить Управление типом проекции (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0bbce-102">How to: Control the Type of a Projection (Visual Basic)</span></span>
-<span data-ttu-id="0bbce-103">Проекция - это процесс, включающий выбор одного набора данных, его фильтрацию, изменение его формы и даже изменение его типа.</span><span class="sxs-lookup"><span data-stu-id="0bbce-103">Projection is the process of taking one set of data, filtering it, changing its shape, and even changing its type.</span></span> <span data-ttu-id="0bbce-104">Почти все выражения запросов выполняют операции проекции.</span><span class="sxs-lookup"><span data-stu-id="0bbce-104">Most query expressions perform projections.</span></span> <span data-ttu-id="0bbce-105">Результатом вычисления почти всех выражений, представленных в этом разделе, должен быть элемент <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Xml.Linq.XElement>, но пользователь может управлять типом проекции для создания коллекций других типов.</span><span class="sxs-lookup"><span data-stu-id="0bbce-105">Most of the query expressions shown in this section evaluate to <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement>, but you can control the type of the projection to create collections of other types.</span></span> <span data-ttu-id="0bbce-106">В настоящем разделе показано, как это делается.</span><span class="sxs-lookup"><span data-stu-id="0bbce-106">This topic shows how to do this.</span></span>  
+# <a name="how-to-control-the-type-of-a-projection-visual-basic"></a><span data-ttu-id="cff5e-102">Практическое руководство. Управление типом проекции (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cff5e-102">How to: Control the Type of a Projection (Visual Basic)</span></span>
+<span data-ttu-id="cff5e-103">Проекция - это процесс, включающий выбор одного набора данных, его фильтрацию, изменение его формы и даже изменение его типа.</span><span class="sxs-lookup"><span data-stu-id="cff5e-103">Projection is the process of taking one set of data, filtering it, changing its shape, and even changing its type.</span></span> <span data-ttu-id="cff5e-104">Почти все выражения запросов выполняют операции проекции.</span><span class="sxs-lookup"><span data-stu-id="cff5e-104">Most query expressions perform projections.</span></span> <span data-ttu-id="cff5e-105">Результатом вычисления почти всех выражений, представленных в этом разделе, должен быть элемент <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Xml.Linq.XElement>, но пользователь может управлять типом проекции для создания коллекций других типов.</span><span class="sxs-lookup"><span data-stu-id="cff5e-105">Most of the query expressions shown in this section evaluate to <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement>, but you can control the type of the projection to create collections of other types.</span></span> <span data-ttu-id="cff5e-106">В настоящем разделе показано, как это делается.</span><span class="sxs-lookup"><span data-stu-id="cff5e-106">This topic shows how to do this.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="0bbce-107">Пример</span><span class="sxs-lookup"><span data-stu-id="0bbce-107">Example</span></span>  
- <span data-ttu-id="0bbce-108">В следующем примере определяется новый тип - `Customer`.</span><span class="sxs-lookup"><span data-stu-id="0bbce-108">The following example defines a new type, `Customer`.</span></span> <span data-ttu-id="0bbce-109">Затем выражение запроса создает новые экземпляры `Customer` в предложении `Select`.</span><span class="sxs-lookup"><span data-stu-id="0bbce-109">The query expression then instantiates new `Customer` objects in the `Select` clause.</span></span> <span data-ttu-id="0bbce-110">В результате тип выражения запроса определяется как <xref:System.Collections.Generic.IEnumerable%601> `Customer`.</span><span class="sxs-lookup"><span data-stu-id="0bbce-110">This causes the type of the query expression to be <xref:System.Collections.Generic.IEnumerable%601> of `Customer`.</span></span>  
+## <a name="example"></a><span data-ttu-id="cff5e-107">Пример</span><span class="sxs-lookup"><span data-stu-id="cff5e-107">Example</span></span>  
+ <span data-ttu-id="cff5e-108">В следующем примере определяется новый тип - `Customer`.</span><span class="sxs-lookup"><span data-stu-id="cff5e-108">The following example defines a new type, `Customer`.</span></span> <span data-ttu-id="cff5e-109">Затем выражение запроса создает новые экземпляры `Customer` в предложении `Select`.</span><span class="sxs-lookup"><span data-stu-id="cff5e-109">The query expression then instantiates new `Customer` objects in the `Select` clause.</span></span> <span data-ttu-id="cff5e-110">В результате тип выражения запроса определяется как <xref:System.Collections.Generic.IEnumerable%601> `Customer`.</span><span class="sxs-lookup"><span data-stu-id="cff5e-110">This causes the type of the query expression to be <xref:System.Collections.Generic.IEnumerable%601> of `Customer`.</span></span>  
   
- <span data-ttu-id="0bbce-111">В этом примере используется следующий XML-документ: [Пример XML-файла: Клиенты и заказы (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="0bbce-111">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="cff5e-111">В этом примере используется следующий XML-документ: [Пример XML-файла. Заказчики и заказы (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="cff5e-111">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span></span>  
   
 ```vb  
 Public Class Customer  
@@ -77,7 +77,7 @@ Sub Main()
 End Sub  
 ```  
   
- <span data-ttu-id="0bbce-112">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="0bbce-112">This code produces the following output:</span></span>  
+ <span data-ttu-id="cff5e-112">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="cff5e-112">This code produces the following output:</span></span>  
   
 ```  
 GREAL:Great Lakes Food Market:Howard Snyder  
@@ -86,6 +86,7 @@ LAZYK:Lazy K Kountry Store:John Steel
 LETSS:Let's Stop N Shop:Jaime Yorres  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="0bbce-113">См. также</span><span class="sxs-lookup"><span data-stu-id="0bbce-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cff5e-113">См. также</span><span class="sxs-lookup"><span data-stu-id="cff5e-113">See also</span></span>
+
 - <xref:System.Linq.Enumerable.Select%2A>
-- [<span data-ttu-id="0bbce-114">Проекции и преобразования (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0bbce-114">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [<span data-ttu-id="cff5e-114">Проекции и преобразования (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cff5e-114">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

@@ -1,23 +1,23 @@
 ---
-title: Как выполнить Поиск элементов-потомков (XPath-LINQ to XML) (Visual Basic)
+title: Практическое руководство. Поиск элементов-потомков (XPath-LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: e7e2dc9e-bda9-420d-a5b1-4fabf1cca46b
-ms.openlocfilehash: ea92a224ee5cc976b9bd93f8ac8792a67d360fae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 09f12dca7b6278327394126ffb0950682d285f88
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54578683"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833403"
 ---
-# <a name="how-to-find-descendant-elements-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="7b673-102">Как выполнить Поиск элементов-потомков (XPath-LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7b673-102">How to: Find Descendant Elements (XPath-LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="7b673-103">В этом разделе рассказывается, как возвращать элементы-потомки с определенным именем.</span><span class="sxs-lookup"><span data-stu-id="7b673-103">This topic shows how to get the descendant elements with a particular name.</span></span>  
+# <a name="how-to-find-descendant-elements-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="fcb74-102">Практическое руководство. Поиск элементов-потомков (XPath-LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fcb74-102">How to: Find Descendant Elements (XPath-LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="fcb74-103">В этом разделе рассказывается, как возвращать элементы-потомки с определенным именем.</span><span class="sxs-lookup"><span data-stu-id="fcb74-103">This topic shows how to get the descendant elements with a particular name.</span></span>  
   
- <span data-ttu-id="7b673-104">Выражение XPath - `//Name`.</span><span class="sxs-lookup"><span data-stu-id="7b673-104">The XPath expression is `//Name`.</span></span>  
+ <span data-ttu-id="fcb74-104">Выражение XPath - `//Name`.</span><span class="sxs-lookup"><span data-stu-id="fcb74-104">The XPath expression is `//Name`.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="7b673-105">Пример</span><span class="sxs-lookup"><span data-stu-id="7b673-105">Example</span></span>  
- <span data-ttu-id="7b673-106">В этом примере обнаруживаются все потомки с именем `Name`.</span><span class="sxs-lookup"><span data-stu-id="7b673-106">This example finds all descendants named `Name`.</span></span>  
+## <a name="example"></a><span data-ttu-id="fcb74-105">Пример</span><span class="sxs-lookup"><span data-stu-id="fcb74-105">Example</span></span>  
+ <span data-ttu-id="fcb74-106">В этом примере обнаруживаются все потомки с именем `Name`.</span><span class="sxs-lookup"><span data-stu-id="fcb74-106">This example finds all descendants named `Name`.</span></span>  
   
- <span data-ttu-id="7b673-107">В этом примере используется следующий XML-документ: [Пример XML-файла: Несколько заказов на покупку (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="7b673-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="fcb74-107">В этом примере используется следующий XML-документ: [Пример XML-файла. Несколько заказов на покупку (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="fcb74-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
   
 ```vb  
       Dim po As XDocument = XDocument.Load("PurchaseOrders.xml")  
@@ -39,7 +39,7 @@ For Each el As XElement In list1
 Next  
 ```  
   
- <span data-ttu-id="7b673-108">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="7b673-108">This example produces the following output:</span></span>  
+ <span data-ttu-id="fcb74-108">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="fcb74-108">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -51,5 +51,6 @@ Results are identical
 <Name>Jessica Arnold</Name>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="7b673-109">См. также</span><span class="sxs-lookup"><span data-stu-id="7b673-109">See also</span></span>
-- [<span data-ttu-id="7b673-110">LINQ to XML для пользователей XPath (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7b673-110">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a><span data-ttu-id="fcb74-109">См. также</span><span class="sxs-lookup"><span data-stu-id="fcb74-109">See also</span></span>
+
+- [<span data-ttu-id="fcb74-110">LINQ to XML для пользователей XPath (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fcb74-110">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
