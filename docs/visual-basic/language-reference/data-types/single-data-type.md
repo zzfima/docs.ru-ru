@@ -20,12 +20,12 @@ helpviewer_keywords:
 - zeros, trailing
 - numbers [Visual Basic], floating point
 ms.assetid: 224a2795-4cd5-496c-8f7a-a4f05a06d45d
-ms.openlocfilehash: cd94411629f18557f677a6d1f65bfc0dede43e83
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b90fdb562f9d65858ac477321a18067cc6e621a2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534521"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833336"
 ---
 # <a name="single-data-type-visual-basic"></a>Тип данных Single (Visual Basic)
 Содержит числа со знаком IEEE 32 бита (4-байтовое) одиночной точности с плавающей запятой в диапазоне от - 3, 4028235E + 38 до - 1, 401298E-45 для отрицательных значений и от 1, 401298E-45 до 3, 4028235E + 38 для положительных значений. Числа одинарной точности хранят приближенное значение вещественного числа.  
@@ -48,6 +48,7 @@ ms.locfileid: "54534521"
 -   **Тип Framework.** В .NET Framework данный тип соответствует структуре <xref:System.Single?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Single?displayProperty=nameWithType>
 - [Типы данных](../../../visual-basic/language-reference/data-types/index.md)
 - [Тип данных Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)

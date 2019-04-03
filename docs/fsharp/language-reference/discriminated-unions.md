@@ -2,12 +2,12 @@
 title: Размеченные объединения
 description: Сведения об использовании F# размеченные объединения.
 ms.date: 05/16/2016
-ms.openlocfilehash: 1bb6dc06fb727f85eb5500719b175fc29090450b
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 9d3f423d068df1c43791919b0d71ca82304ae85e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611871"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821430"
 ---
 # <a name="discriminated-unions"></a>Размеченные объединения
 
@@ -156,7 +156,7 @@ Area of rectangle that has height 5.000000 and width 10.000000 is 50.000000
 
 В приведенном выше коде `resultSumTree` имеет значение 10. Ниже показана структура дерева для `myTree`.
 
-![Структура дерева myTree](../media/TreeStructureDiagram.png)
+![Схема, показывающая структура дерева myTree.](../media/discriminated-unions/tree-structure-mytree.png)
 
 Размеченные объединения хорошо работают, если узлы дерева являются разнородными. В следующем коде, тип `Expression` представляет дерево абстрактного синтаксиса выражения в простом языке программирования, поддерживающем сложение и умножение чисел и переменных. Некоторые из вариантов объединения не являются рекурсивными и представляют либо числа (`Number`) или переменные (`Variable`). Другие варианты являются рекурсивными и представляют операции (`Add` и `Multiply`), в которых операнды также являются выражениями. `Evaluate` Функции используется выражение match для рекурсивной обработки дерева синтаксиса.
 

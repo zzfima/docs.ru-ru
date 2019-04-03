@@ -2,8 +2,14 @@
 title: Объекты (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'objects [Visual Basic]'
+- objects [Visual Basic]
 ms.assetid: 651c73e4-dca8-402b-9c6b-e3902b3a3f4b
+ms.openlocfilehash: 161edd2cb3afeb6ba8b10455a1c3a2c43b90dac1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821655"
 ---
 # <a name="objects-visual-basic"></a>Объекты (Visual Basic)
 В этом разделе приводятся ссылки на другие разделы, содержащие описание объектов времени выполнения Visual Basic и таблицы процедур, свойств и событий их элементов.  
@@ -40,5 +46,6 @@ ms.assetid: 651c73e4-dca8-402b-9c6b-e3902b3a3f4b
 |<xref:Microsoft.VisualBasic.FileIO.TextFieldParser>|Предоставляет методы и свойства для анализа структурированных текстовых файлов.|  
   
 ## <a name="see-also"></a>См. также
+
 - [Справочник по языку Visual Basic](../../../visual-basic/language-reference/index.md)
 - [Visual Basic](../../../visual-basic/index.md)

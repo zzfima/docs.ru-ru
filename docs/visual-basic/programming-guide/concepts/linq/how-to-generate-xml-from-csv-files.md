@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Создание XML из CSV-файлы (Visual Basic)
+title: Практическое руководство. Создание XML из CSV-файлы (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: fe4dbc87-7b0d-40bf-88c3-5d706ee89a4d
-ms.openlocfilehash: 5facb31c33c777a5d7ed083dbfda5bd18a67e6a8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 056cb1545ac296f0b0861155c5ec5c08b19dd5b8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706684"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835410"
 ---
-# <a name="how-to-generate-xml-from-csv-files-visual-basic"></a>Как выполнить Создание XML из CSV-файлы (Visual Basic)
+# <a name="how-to-generate-xml-from-csv-files-visual-basic"></a>Практическое руководство. Создание XML из CSV-файлы (Visual Basic)
 В этом примере показано, как [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] и [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] используются для создания XML-документа из файла с разделителями-запятыми (.csv).  
   
 ## <a name="example"></a>Пример  
@@ -108,4 +108,5 @@ Console.WriteLine(cust)
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Проекции и преобразования (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

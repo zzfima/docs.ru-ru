@@ -2,17 +2,17 @@
 title: LINQ и строки (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 75ddb201-d97a-4f98-8cdf-4ad51714529a
-ms.openlocfilehash: 0ffff11243b96d46cfd9424502ec43ed2319136d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7e0ebe64494182191dafa033ecbc38bad17180be
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569996"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818960"
 ---
 # <a name="linq-and-strings-visual-basic"></a>LINQ и строки (Visual Basic)
 LINQ можно использовать для запроса и преобразования строк и коллекций строк. При этом лучше всего его потенциал раскрывается при работе с частично структурированными данными в текстовых файлах. Запросы LINQ можно комбинировать с традиционными строковыми функциями и регулярными выражениями. Например, используя метод <xref:System.String.Split%2A> или <xref:System.Text.RegularExpressions.Regex.Split%2A>, можно создать массив строк, который затем можно запрашивать или изменять с помощью LINQ. Метод <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> можно использовать в предложении `where` запроса LINQ. Также LINQ можно использовать для запроса или изменения результатов <xref:System.Text.RegularExpressions.MatchCollection>, возвращаемых регулярным выражением.  
   
- Методы, описанные в этом разделе, позволяют преобразовать частично структурированные текстовые данные в XML. Дополнительные сведения см. в разделе [Как Создание XML из CSV-файлы](how-to-generate-xml-from-csv-files.md).  
+ Методы, описанные в этом разделе, позволяют преобразовать частично структурированные текстовые данные в XML. Дополнительные сведения см. в разделе [Как Создание XML из CSV-файлов (C#)](how-to-generate-xml-from-csv-files.md).  
   
  Примеры в этом разделе делятся на две категории:  
   
@@ -60,5 +60,6 @@ LINQ можно использовать для запроса и преобра
  Показывает, как выполнять математические расчеты на основе текстовых данных в CSV-файлах.  
   
 ## <a name="see-also"></a>См. также
+
 - [Синтаксис LINQ (Visual Basic)](index.md)
-- [Практическое руководство. Создание XML из CSV-файлы](how-to-generate-xml-from-csv-files.md)
+- [Практическое руководство. Создание XML из CSV-файлов](how-to-generate-xml-from-csv-files.md)

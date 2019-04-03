@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32124
 ms.assetid: 55aa8b2a-9ce3-4620-a710-2f9b0feb6143
-ms.openlocfilehash: 7a1411daf446cbf06cd57b4e002c2c3cd77166af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9b0293472f5eda74c2bf8fb215e15ae5cf8d8b98
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507165"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813903"
 ---
 # <a name="generic-parameters-used-as-optional-parameter-types-must-be-class-constrained"></a>Универсальные параметры, используемые как типы необязательных параметров, должны быть ограничены классом
 Процедура объявлена с необязательным параметром, который использует параметр типа, который не должен быть ссылочным типом.  
@@ -28,6 +28,7 @@ ms.locfileid: "54507165"
 -   Ограничить параметр типа для приема только ссылочным типом или не используйте его для необязательного параметра.  
   
 ## <a name="see-also"></a>См. также
+
 - [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [Список типов](../../../visual-basic/language-reference/statements/type-list.md)
 - [Оператор Class](../../../visual-basic/language-reference/statements/class-statement.md)

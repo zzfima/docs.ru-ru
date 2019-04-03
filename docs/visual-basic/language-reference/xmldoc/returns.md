@@ -5,12 +5,12 @@ helpviewer_keywords:
 - returns XML tag
 - <returns> XML tag
 ms.assetid: a03a6469-d907-425d-882f-083187950e7e
-ms.openlocfilehash: 670064084d3297a54b2860da3fe3acab00fa3ed8
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5a0ff0da7cf26a1cea75a5b2e4678593d9b72f54
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57469187"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827169"
 ---
 # <a name="returns-visual-basic"></a>\<Возвращает > (Visual Basic)
 Указывает возвращаемое значение свойства или функции.  
@@ -36,4 +36,5 @@ ms.locfileid: "57469187"
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   
 ## <a name="see-also"></a>См. также
+
 - [XML-теги для комментариев](../../../visual-basic/language-reference/xmldoc/index.md)

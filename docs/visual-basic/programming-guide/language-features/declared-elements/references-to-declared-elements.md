@@ -6,12 +6,12 @@ helpviewer_keywords:
 - references [Visual Basic], declared elements
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
-ms.openlocfilehash: 16f4fb28ab030ccebed2a8d1b93a3a6c29d075c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5aea43c2dab4eb44ab40449ee6e970a28fdc4abb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54501260"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821456"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>Ссылки на объявленные элементы (Visual Basic)
 Когда код ссылается на объявленный элемент, компилятор Visual Basic совпадает с именем в ссылке соответствующий объявлению. Если более чем один элемент объявлен с тем же именем, вы можете контролировать, какие из этих элементов — на них ссылается *удовлетворяющим требованиям* его имя.  
@@ -190,10 +190,11 @@ Dim xDoc As xD.XmlDocument
   
  Неоднозначность имен можно избежать, предоставляя уникальные имена всех элементов. Затем можно создать ссылку к любому элементу без уточнения его именем пространства имен, модуля или класса. Вы также снизить вероятность случайной ссылки на неправильный элемент.  
   
-## <a name="shadowing"></a>Затенение  
+## <a name="shadowing"></a>Удаленное управление  
  Если два программных элемента имеют одинаковые имена, один из них может скрыть, или *тени*, другой. Скрытый элемент недоступен для обращения. Вместо этого когда код использует затененного имени элемента, компилятор Visual Basic разрешает его скрывающий элемент. Более подробное описание с примерами, см. в разделе [сокрытие в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Имена объявленных элементов](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [Характеристики объявленных элементов](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
 - [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)

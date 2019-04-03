@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Извлечение значений элемента (LINQ to XML) (Visual Basic)
+title: Практическое руководство. Извлечение значений элемента (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 76b9b2a5-b3ba-49da-ba74-82100e1bd21c
-ms.openlocfilehash: 710b5d3e9c636c832d52206921f21c8141cf4319
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 490e98134497836e0751e48949d4dceda41bcbf3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671529"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814085"
 ---
-# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-visual-basic"></a>Как выполнить Извлечение значений элемента (LINQ to XML) (Visual Basic)
+# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-visual-basic"></a>Практическое руководство. Извлечение значений элемента (LINQ to XML) (Visual Basic)
 В этом разделе показано получение значений элементов. Это можно сделать двумя основными способами. Первый способ состоит в приведении <xref:System.Xml.Linq.XElement> или <xref:System.Xml.Linq.XAttribute> к желаемому типу. Оператор явного преобразования, который преобразует содержимое элемента или атрибута в указанный тип и присваивает полученное значение указанной переменной. Иначе можно использовать свойство <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> или <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType>.  
   
  При использовании Visual Basic лучшим подходом является использование свойства <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType>.  
@@ -150,4 +150,5 @@ v4:element does not exist
  Как правило, использование приведения для получения содержимого элементов и атрибутов позволяет создавать более простой код.  
   
 ## <a name="see-also"></a>См. также
+
 - [Оси LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

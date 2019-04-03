@@ -1,19 +1,19 @@
 ---
-title: Как выполнить Написание метода расширения (Visual Basic)
+title: Практическое руководство. Написание метода расширения (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - extending data types [Visual Basic]
 - writing extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: fb2739cc-958d-4ef4-a38b-214a74c93413
-ms.openlocfilehash: 019104956b21e527c0498c286d85da27abdc5695
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d6f8b85945bd400d1f4b54a50260d72c750add8b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576075"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819122"
 ---
-# <a name="how-to-write-an-extension-method-visual-basic"></a>Как выполнить Написание метода расширения (Visual Basic)
+# <a name="how-to-write-an-extension-method-visual-basic"></a>Практическое руководство. Написание метода расширения (Visual Basic)
 Методы расширения позволяют добавлять методы к существующему классу. Метод расширения может вызываться, как если бы это был экземпляр этого класса.  
   
 ### <a name="to-define-an-extension-method"></a>Для определения метода расширения  
@@ -82,6 +82,7 @@ End Module
  `Hello!!!!`  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Runtime.CompilerServices.ExtensionAttribute>
 - [Методы расширения](./extension-methods.md)
 - [Оператор Module](../../../../visual-basic/language-reference/statements/module-statement.md)

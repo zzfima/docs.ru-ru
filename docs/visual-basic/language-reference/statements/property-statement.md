@@ -11,12 +11,12 @@ helpviewer_keywords:
 - property procedures [Visual Basic], Property statements
 - Property keyword [Visual Basic]
 ms.assetid: 3155edaf-8ebd-45c6-9cef-11d5d2dc8d38
-ms.openlocfilehash: 0b8bec965e5a149466863cde7a2646128469cbd0
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7b2d388cbcd1995178adf4102520ecaa1c9b1889
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972174"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814194"
 ---
 # <a name="property-statement"></a>Property Statement
 Объявляет имя свойства и процедуры свойства, используемые для хранения и извлечения значения свойства.  
@@ -132,7 +132,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
      `interface.definedname`  
   
-    |Отделение|Описание:|  
+    |Отделение|Описание|  
     |---|---|  
     |`interface`|Обязательный. Имя интерфейса, реализуемого этим свойством, содержащей, класс или структура.|  
     |`definedname`|Обязательный. Имя, по которому это свойство определено в `interface`.|  
@@ -208,6 +208,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
  [!code-vb[VbVbalrStatements#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#51)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Автоматически реализуемые свойства](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)
 - [Объекты и классы](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
 - [Оператор Get](../../../visual-basic/language-reference/statements/get-statement.md)

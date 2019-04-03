@@ -2,12 +2,12 @@
 title: Программирование с узлами (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: d8422a9b-dd37-44a3-8aac-2237ed9561e0
-ms.openlocfilehash: 1cd9792905c1816094d9bbd12e0648c5a4d7c4f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ed7f460b441a5973c33841f1f53ce4679b627071
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527410"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817114"
 ---
 # <a name="programming-with-nodes-visual-basic"></a>Программирование с узлами (Visual Basic)
 Разработчикам [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], которым требуется написать такие программы, как XML-редактор, система преобразования или модуль формирования отчетов, часто приходится писать программы, которые работают на более высоком уровне гранулярности по сравнению с элементами и атрибутами. Им часто приходится работать на уровне узлов, обрабатывая текстовые узлы, инструкции по обработке и комментарии. В этом разделе приводятся некоторые сведения о программировании на уровне узлов.  
@@ -172,4 +172,5 @@ Console.WriteLine(doc.Nodes().Count())
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Расширенные программированию LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

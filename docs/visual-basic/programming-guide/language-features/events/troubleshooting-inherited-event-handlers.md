@@ -8,12 +8,12 @@ helpviewer_keywords:
 - event handling, troubleshooting
 - event handlers, troubleshooting
 ms.assetid: e1c8759f-5370-4308-8476-8c48b73509bf
-ms.openlocfilehash: 91bded2f1249bfcbeeca28419ee9bcec819babf6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 704ca667a6d14ade7be0192e872f5e40791cb864
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965428"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830192"
 ---
 # <a name="troubleshooting-inherited-event-handlers-in-visual-basic"></a>Устранение неполадок, связанных с унаследованными обработчиками событий, в Visual Basic
 В этом разделе перечислены распространенные проблемы, связанные с обработчиками событий в наследуемых компонентах.  
@@ -29,4 +29,5 @@ ms.locfileid: "56965428"
 -   Если нет унаследованный метод `Handles` ключевое слово, убедитесь, что ваш код не содержит лишних [оператор AddHandler](../../../../visual-basic/language-reference/statements/addhandler-statement.md) или все дополнительные методы, которые обрабатывают то же событие.  
   
 ## <a name="see-also"></a>См. также
+
 - [События](../../../../visual-basic/programming-guide/language-features/events/index.md)

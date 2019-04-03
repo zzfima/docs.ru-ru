@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /refonly compiler option [Visual Basic]
 - -refonly compiler option [Visual Basic]
 - refonly compiler option [Visual Basic]
-ms.openlocfilehash: 047b8b148e616c8ad94f55844f8bc4063a9e5cd1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4093e98738cf6e41cd450229d82e3672fe9687ec
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54528931"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819467"
 ---
 # <a name="-refonly-visual-basic"></a>-refonly (Visual Basic)
 
@@ -37,6 +37,7 @@ Visual Basic поддерживает `-refout` переключения, нач
 Параметры `-refonly` и [`-refout`](refout-compiler-option.md) являются взаимоисключающими.
 
 ## <a name="see-also"></a>См. также
+
 - [/refout](refout-compiler-option.md)
 - [Компилятор Visual Basic с интерфейсом командной строки](index.md)
 - [Примеры командных строк компиляции](sample-compilation-command-lines.md)

@@ -2,12 +2,12 @@
 title: Синтаксис выражений запроса для стандартных операторов запросов (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: eb978d86-d3b5-497b-95ce-a054bea8f510
-ms.openlocfilehash: 49a0b9d70022ee655d87b34a3bb044e1f60b308d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bdbca93d5898e363ccf62b13231163573e2ba972
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549682"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832519"
 ---
 # <a name="query-expression-syntax-for-standard-query-operators-visual-basic"></a>Синтаксис выражений запроса для стандартных операторов запросов (Visual Basic)
 Некоторые из наиболее часто используемых стандартных операторов запросов имеют представление синтаксис ключевого слова языка Visual Basic, который позволяет вызывать как часть их *выражение запроса*. Выражение запроса является более удобочитаемой формой задания запроса, чем его *основанный на методах* эквивалент. Предложения выражений запросов преобразуются в вызовы методов запросов во время компиляции.  
@@ -43,6 +43,7 @@ ms.locfileid: "54549682"
 |<xref:System.Linq.Enumerable.Where%2A>|`Where`<br /><br /> (Дополнительные сведения см. в разделе [предложение Where](../../../../visual-basic/language-reference/queries/where-clause.md).)|  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Linq.Enumerable>
 - <xref:System.Linq.Queryable>
 - [Общие сведения о стандартных операторах запроса (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)

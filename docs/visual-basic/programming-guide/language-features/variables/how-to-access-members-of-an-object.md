@@ -1,18 +1,18 @@
 ---
-title: Как выполнить Доступ к членам объекта (Visual Basic)
+title: Практическое руководство. Доступ к членам объекта (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - members [Visual Basic], accessing
 - object variables [Visual Basic], accessing members
 ms.assetid: a0072514-6a79-4dd6-8d03-ca8c13e61ddc
-ms.openlocfilehash: 5e91f1b99a17f4bbdc65a77ab26050ee57e96ac4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b7e600a23ed326fe3e914957b4e698bc34c6135
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724847"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819659"
 ---
-# <a name="how-to-access-members-of-an-object-visual-basic"></a>Как выполнить Доступ к членам объекта (Visual Basic)
+# <a name="how-to-access-members-of-an-object-visual-basic"></a>Практическое руководство. Доступ к членам объекта (Visual Basic)
 При наличии объектную переменную, которая ссылается на объект, часто требуется для работы с членами этого объекта, например методы, свойства, поля и события. Например, когда вы создадите новый <xref:System.Windows.Forms.Form> объекта, может потребоваться задать его <xref:System.Windows.Forms.Control.Text%2A> свойства или вызов его <xref:System.Windows.Forms.Control.Focus%2A> метод.  
   
 ## <a name="accessing-members"></a>Доступ к членам  
@@ -71,6 +71,7 @@ ms.locfileid: "54724847"
      Чтобы иметь возможность доступа к членам любого объекта, можно присвоить переменной объекта, необходимо задать `Option Strict Off`. При этом компилятор не может гарантировать, что данный элемент предоставляется с помощью объекта, можно присвоить переменной. Если объект не предоставляет членом попытки обращения к, <xref:System.MemberAccessException> возникает исключение.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Object>
 - <xref:System.Windows.Forms.Form>
 - <xref:System.MemberAccessException>

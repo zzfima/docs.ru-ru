@@ -5,12 +5,12 @@ helpviewer_keywords:
 - statements [Visual Basic], control flow
 - control structures [Visual Basic]
 ms.assetid: 24b811f7-98ba-40ec-8dd3-4d528cfa4574
-ms.openlocfilehash: a383d0c95de5286cce722c05bd8888d5acffb173
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c42070ce2ea866e59e1b2e190f7c05e1ee7cc922
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590004"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819324"
 ---
 # <a name="other-control-structures-visual-basic"></a>Другие структуры управления (Visual Basic)
 Visual Basic предоставляет структур управления, которые помогут вам удаления ресурсов, или уменьшите количество раз, вам необходимо будет повторить ссылку на объект.  
@@ -22,6 +22,7 @@ Visual Basic предоставляет структур управления, �
  `With...End With` Позволяет указать ссылку на объект один раз и затем выполнить ряд инструкций, которые обращаются к его члены. Это можно упростить код и повысить производительность, поскольку Visual Basic не восстанавливает ссылку для каждого оператора, который обращается к ней. Дополнительные сведения см. в разделе [с... Завершить с помощью инструкции](../../../../visual-basic/language-reference/statements/with-end-with-statement.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Поток управления](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
 - [Структуры решений](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
 - [Циклические структуры](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)

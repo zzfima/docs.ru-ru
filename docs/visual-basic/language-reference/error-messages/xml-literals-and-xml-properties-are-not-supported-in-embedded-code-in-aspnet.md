@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31200
 ms.assetid: 053e8cba-8584-45cc-9fa0-43d122779772
-ms.openlocfilehash: 7bec146f0100971d78eed69412ce27889e7a6263
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 79be695478983055ae1f016cf841d733d3f4c430
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597168"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813929"
 ---
 # <a name="xml-literals-and-xml-properties-are-not-supported-in-embedded-code-within-aspnet"></a>XML литералы и XML свойства не поддерживаются во встроенном в ASP.NET коде
 Литералы XML и свойства XML не поддерживаются во встроенном в ASP.NET коде. Чтобы использовать функции XML, переместите код для кода.  
@@ -26,6 +26,7 @@ ms.locfileid: "54597168"
 -   Переместите код, который содержит XML-литерала или свойства оси XML в файл фонового кода ASP.NET.  
   
 ## <a name="see-also"></a>См. также
+
 - [XML-литералы](../../../visual-basic/language-reference/xml-literals/index.md)
 - [Свойства оси XML](../../../visual-basic/language-reference/xml-axis/index.md)
 - [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], about strings
 ms.assetid: c1b0f6b4-9717-426b-a3db-957e57a60764
-ms.openlocfilehash: 63a2020fe89d0e0d101ce2eda20506a446e102f3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4da64b1cb25fe1a681e5790aad6abc3a478b229a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640385"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822236"
 ---
 # <a name="introduction-to-strings-in-visual-basic"></a>Знакомство со строками в Visual Basic
 В этом разделе описываются основные принципы использования строк в Visual Basic.  
@@ -25,4 +25,5 @@ ms.locfileid: "54640385"
  Описывает, как Visual Basic использует язык и региональные параметры для выполнения преобразования строк и сравнения.  
   
 ## <a name="see-also"></a>См. также
+
 - [Строки](../../../../visual-basic/programming-guide/language-features/strings/index.md)

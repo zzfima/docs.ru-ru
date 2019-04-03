@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - DirectCast keyword [Visual Basic]
 ms.assetid: 63e5a1d0-4d9e-4732-bf8f-e90c0c8784b8
-ms.openlocfilehash: 03e632bad538f65d010dfaa12f7eb5da15c11091
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 628ce4f06b91d0f514f71dea3aad8ea0fee6dccf
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979831"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821508"
 ---
 # <a name="directcast-operator-visual-basic"></a>Оператор DirectCast (Visual Basic)
 Вводит операцию преобразования типа, на основе наследования или реализации.  
@@ -42,6 +42,7 @@ ms.locfileid: "56979831"
  В предыдущем примере, тип времени выполнения `q` является `Double`. `CType` завершается успешно, поскольку `Double` может быть преобразован в `Integer`. Тем не менее первый `DirectCast` завершается ошибкой во время выполнения, так как тип времени выполнения `Double` не имеет отношения наследования с `Integer`, несмотря на то, что существует преобразование. Второй `DirectCast` завершается успешно, поскольку преобразование из типа <xref:System.Windows.Forms.Form> ввода <xref:System.Windows.Forms.Control>, из которого <xref:System.Windows.Forms.Form> наследует.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Convert.ChangeType%2A?displayProperty=nameWithType>
 - [Расширяющие и сужающие преобразования](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [Явные и неявные преобразования](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)

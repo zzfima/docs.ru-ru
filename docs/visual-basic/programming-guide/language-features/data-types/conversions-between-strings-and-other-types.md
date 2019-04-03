@@ -9,12 +9,12 @@ helpviewer_keywords:
 - type conversion [Visual Basic], string
 - regional options
 ms.assetid: c3a99596-f09a-44a5-81dd-1b89a094f1df
-ms.openlocfilehash: 292ec8c76695427ab00110d83502f7d16c6504b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1e42fca7800a76cab10fd60058e34d31ae8b8830
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719746"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821665"
 ---
 # <a name="conversions-between-strings-and-other-types-visual-basic"></a>Преобразование значений между строковыми и другими типами (Visual Basic)
 Можно преобразовать числовые, `Boolean`, или значение для даты и времени `String`. Также можно преобразовать в обратном направлении — из строкового значения в числовой, `Boolean`, или `Date` — интерпретацией содержимое строки как допустимое значение целевого типа данных. Если это невозможно, возникает ошибка времени выполнения.  
@@ -41,6 +41,7 @@ Str = "The total count is " & count
  Когда Visual Basic строка преобразуется в числовое значение, он использует **региональные параметры** , заданные в Windows **панели управления** для интерпретации разрядов разделитель, десятичного разделителя и символ валюты. Это означает, что преобразование может быть выполнена успешно при выполнении одного параметра, но не другого. Например `"$14.20"` приемлемо для языкового стандарта Английский (США), но не в любой французского языка.  
   
 ## <a name="see-also"></a>См. также
+
 - [Преобразование типов в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Расширяющие и сужающие преобразования](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [Явные и неявные преобразования](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)

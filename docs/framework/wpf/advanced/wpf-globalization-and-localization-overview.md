@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: 279fe008c8624ff2209f5e08c3c9f9713ad201cd
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: c97ae4f277395a75fb7522ffb74061001c10e07d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412036"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819584"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>Общие сведения о глобализации и локализации WPF
 
@@ -94,9 +94,9 @@ ms.locfileid: "58412036"
   
  На приведенном ниже рисунке показан типичный рабочий процесс локализации на основе BAML-формы XAML. Эта диаграмма предполагает, что разработчик создает приложение на английском языке. Разработчик создает и глобализует приложение WPF. В файле проекта разработчик задает `<UICulture>en-US</UICulture>` , чтобы на сборки, от основного языка сборка получает созданный вспомогательной. resources.dll, содержащий все локализуемые ресурсы. Кроме того, можно сохранить исходный язык в основной сборке, так как интерфейсы API локализации WPF поддерживают извлечение из основной сборки. По завершении процесса сборки XAML компилируется в BAML. Независимый от языка и региональных параметров файл MyDialog.exe.resources.dll поставляется англоязычному пользователю.  
   
- ![Рабочий процесс локализации](./media/localizationworkflow.png "LocalizationWorkflow")  
+ ![Схема, показывающая рабочий процесс локализации.](./media/wpf-globalization-and-localization-overview/localization-workflow.png)  
   
- ![Нелокализованный рабочий процесс](./media/localizationworkflow2.png "LocalizationWorkflow2")  
+ ![Схема, показывающая нелокализованный рабочий процесс.](./media/wpf-globalization-and-localization-overview/unlocalized-workflow.png)  
   
 ## <a name="examples-of-wpf-localization"></a>Примеры локализации WPF
 
@@ -108,11 +108,11 @@ ms.locfileid: "58412036"
   
  **Английский.**  
   
- ![Диалоговое окно "Выполнить"](./media/rundialogenglish.PNG "RunDialogEnglish")  
+ ![Снимок экрана, показывающий в диалоговом окне запуска на английском языке.](./media/wpf-globalization-and-localization-overview/run-dialog-box-english.png)  
   
  **Немецкий.**  
   
- ![Немецкий вариант диалогового окна ''Выполнить''](./media/rundialoggerman.PNG "RunDialogGerman")  
+ ![Снимок экрана: диалоговое окно запуска немецкий.](./media/wpf-globalization-and-localization-overview/run-dialog-box-german.png)  
   
  **Разработка глобального диалогового окна "Выполнить"**  
   
@@ -226,13 +226,13 @@ ms.locfileid: "58412036"
   
  **Английский.**  
   
- ![Английская страница](./media/englishhomepage.jpg "EnglishHomepage")  
+ ![Снимок экрана домашней страницы, на английском языке.](./media/wpf-globalization-and-localization-overview/english-home-page-sample.jpg)  
   
  **Арабский:**  
   
- ![Арабская страница](./media/arabichomepage.jpg "ArabicHomepage")  
+ ![Снимок экрана, показывающий Арабская страница home.](./media/wpf-globalization-and-localization-overview/arabic-home-page-sample.jpg)  
   
-### <a name="designing-a-global-microsoft-homepage"></a>Проектирование глобальной домашней страницы Майкрософт  
+### <a name="designing-a-global-microsoft-home-page"></a>Разработка Microsoft глобальной домашней страницы  
  Этот макет веб-сайта Майкрософт для Саудовской Аравии показывает функциональные возможности глобализации, предоставляемые для языков с порядком чтения справа налево (RightToLeft). Языки, такие как иврит и арабский имеют порядок чтения справа налево, поэтому макет [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] необходимо часто надо компоновать совершенно иначе, нежели было бы на языках слева направо, например в английском языке. Локализация с языка с направлением письма слева направо на язык с направлением письма справа налево или наоборот может быть достаточно сложной. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] разработан так, чтобы значительно упростить подобные локализации.  
   
  **FlowDirection**  
@@ -247,11 +247,11 @@ ms.locfileid: "58412036"
   
  **FlowDirection="LeftToRight"**  
   
- ![Направление текста слева направо](./media/lefttoright.PNG "LeftToRight")  
+ ![Снимок экрана градиента потока слева направо.](./media/wpf-globalization-and-localization-overview/gradient-flow-left-right.png)  
   
  **FlowDirection="RightToLeft"**  
   
- ![Направление текста справа налево](./media/righttoleft.PNG "RightToLeft")  
+ ![Снимок экрана градиента потока справа налево.](./media/wpf-globalization-and-localization-overview/gradient-flow-right-left.png)  
   
  **Избегайте использования фиксированных размеров для панелей и элементов управления**  
   

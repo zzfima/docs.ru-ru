@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31535
 ms.assetid: 6540c1d0-bb19-4051-a579-2e4f9094585e
-ms.openlocfilehash: 796c16e912283d86496a4ccbd3b675ac1433f02d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0966cea26c5dde8f116081c7a6411b4275e50f40
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356407"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817049"
 ---
 # <a name="friend-assembly-reference-reference-is-invalid"></a>Ссылка на дружественную сборку \<ссылку > является недопустимым
 Ссылка на дружественную сборку \<ссылку > является недопустимым. Для сборок, подписанных строгим именем, в объявлении InternalsVisibleTo должен быть указан открытый ключ.  
@@ -26,7 +26,6 @@ ms.locfileid: "57356407"
 1.  Определите открытый ключ для строгое имя дружественной сборки. Поместить открытый ключ как часть имени сборки, передаваемый в <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> конструктор атрибута с помощью `PublicKey` атрибута.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Reflection.AssemblyName>
 - [Дружественные сборки](../../../standard/assembly/friend-assemblies.md)
-
-

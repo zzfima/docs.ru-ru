@@ -2,12 +2,12 @@
 title: Обращение к атрибутам с помощью отражения (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c56e41da-5433-464f-a7bf-2a722e78bc9f
-ms.openlocfilehash: caf48372f165f3689503d47472a5fa28d2299193
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e5cbce8529cc7554a8edacb2d83dabb73a495eec
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625121"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827657"
 ---
 # <a name="accessing-attributes-by-using-reflection-visual-basic"></a>Обращение к атрибутам с помощью отражения (Visual Basic)
 Возможность определения настраиваемых атрибутов и их помещения в собственный исходный код не будет настолько значимой без наличия способа извлечения этих сведений и работы с ними. Отражение позволяет извлекать сведения, определенные с настраиваемыми атрибутами. Основным методом выступает `GetCustomAttributes`, который возвращает массив объектов, являющихся эквивалентами времени выполнения атрибутов исходного кода. Для этого метода существует несколько перегруженных версий. Дополнительные сведения см. в разделе <xref:System.Attribute>.  
@@ -100,6 +100,7 @@ End Class
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Reflection>
 - <xref:System.Attribute>
 - [Руководство по программированию на Visual Basic](../../../../visual-basic/programming-guide/index.md)

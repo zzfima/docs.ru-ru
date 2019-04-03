@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting procedures
 - procedures [Visual Basic], about procedures
 ms.assetid: 525721e8-2e02-4f75-b5d8-6b893462cf2b
-ms.openlocfilehash: e29e4a3b216657b398407701530ad9bfe975dbf6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 492a7474a38a7e41b7e3b3f59dfa118c30256ea4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972005"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830140"
 ---
 # <a name="troubleshooting-procedures-visual-basic"></a>Устранение неполадок в процедурах (Visual Basic)
 Этой странице перечислены некоторые распространенные проблемы, которые могут возникнуть при работе с процедурами.  
@@ -124,6 +124,7 @@ ms.locfileid: "56972005"
  Если две перегрузки процедуры имеют идентичные подписи, за исключением того, что последний параметр объявляется [необязательно](../../../../visual-basic/language-reference/modifiers/optional.md) в одном и [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) в другой, компилятор разрешает вызов процедуры в соответствии с наиболее точное соответствие. Для получения дополнительной информации см. [Overload Resolution](./overload-resolution.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Процедуры](./index.md)
 - [Подпрограммы](./sub-procedures.md)
 - [Процедуры функций](./function-procedures.md)

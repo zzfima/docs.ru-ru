@@ -6,12 +6,12 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], creating XML
 - XML literals [Visual Basic], creating
 ms.assetid: 8ae29ec5-e5fb-4137-9df5-60a288df7045
-ms.openlocfilehash: a9131e62ad0a4f55a88c15a8e0efa9189026eca3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d847f589bc47f8ab3d6691666bbd879e795db0c6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615485"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813045"
 ---
 # <a name="creating-xml-in-visual-basic"></a>Создание XML в Visual Basic
 Visual Basic позволяет использовать *XML-литералов* непосредственно в коде. Синтаксис XML представляет [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] объектов, который напоминает синтаксис XML 1.0. Это облегчает программное создание элементов, документов и фрагментов XML, так как ваш код имеет такую же структуру, как последний XML.  
@@ -29,4 +29,5 @@ Visual Basic позволяет использовать *XML-литералов
 |[Имена объявленных элементов и атрибутов XML](../../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)|Описывает правила именования элементов и атрибутов XML.|  
   
 ## <a name="see-also"></a>См. также
+
 - [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)

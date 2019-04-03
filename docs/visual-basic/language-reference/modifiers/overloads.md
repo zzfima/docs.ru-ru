@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Shadows keyword [Visual Basic]
 - signature, hiding by
 ms.assetid: 0c6820b8-25b2-4664-bc59-5ca93c99c042
-ms.openlocfilehash: b20dbf20c580d08553ae22f6a62ee33a7354db74
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d68846938aba809a7a3a6f7d27f185bb90a39cb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624922"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819337"
 ---
 # <a name="overloads-visual-basic"></a>Overloads (Visual Basic)
 Указывает, что свойство или процедура повторно определяет одно или несколько существующих свойств или процедур с таким же именем.  
@@ -74,6 +74,7 @@ ms.locfileid: "54624922"
  [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 ## <a name="see-also"></a>См. также
+
 - [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
 - [Перегрузка процедур](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)
 - [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)

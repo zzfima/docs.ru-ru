@@ -21,12 +21,12 @@ helpviewer_keywords:
 - OrElse operator [Visual Basic]
 - logical operators [Visual Basic], unary
 ms.assetid: ca474e13-567d-4b1d-a18b-301433705e57
-ms.openlocfilehash: 94d43b7bea48d85e612b5c995e20e286f14b024a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ac47b6d7fa4861d18646a23f442caccc4062852f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976503"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819311"
 ---
 # <a name="logical-and-bitwise-operators-in-visual-basic"></a>Логические и побитовые операторы в Visual Basic
 Логические операторы сравнения `Boolean` выражения и возвращают `Boolean` результат. `And`, `Or`, `AndAlso`, `OrElse`, И `Xor` операторы *двоичных* так, как они принимают два операнда, тогда как `Not` оператор *унарный* так как он принимает один операнд. Некоторые из этих операторов можно также выполнять побитовые логические операции над целыми значениями.  
@@ -96,6 +96,7 @@ ms.locfileid: "56976503"
 >  Побитовые операции могут выполняться только над целыми типами. Значения с плавающей запятой должны преобразовываться в целочисленные типы, прежде чем будет продолжена побитовой операции.  
   
 ## <a name="see-also"></a>См. также
+
 - [Логические (побитовые) операторы (Visual Basic)](../../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
 - [Логические выражения](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)
 - [Арифметические операторы в Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

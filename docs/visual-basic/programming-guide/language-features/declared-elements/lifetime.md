@@ -10,12 +10,12 @@ helpviewer_keywords:
 - lifetime [Visual Basic], Visual Basic
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
-ms.openlocfilehash: 15fb6895836de95d37081c44973f455622da178e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7a8730834c5241ddb1271d689cdda8942741f15f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976048"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824927"
 ---
 # <a name="lifetime-in-visual-basic"></a>Время существования в Visual Basic
 *Время существования* объявленного элемента — это период времени, во время которого он доступен для использования. Переменные являются только элементы, которые имеют время существования. Для этой цели компилятор обрабатывает параметры процедуры, и функция возвращает как особые случаи переменных. Время существования переменной представляет период времени, в течение которого он может содержать значение. Его значение может меняться в течение времени существования, но он всегда содержит некоторое значение.  
@@ -72,6 +72,7 @@ ms.locfileid: "56976048"
  В предыдущем примере, можно создать одинаковое время существования путем объявления `applesSold` на уровне модуля. При изменении области видимости переменной таким образом, тем не менее, процедура больше не будет иметь монопольный доступ к нему. Поскольку другие процедуры удалось получить доступ к `applesSold` и измените его значение, промежуточных итогов могут быть ненадежными, и код может быть более сложным в обслуживании.  
   
 ## <a name="see-also"></a>См. также
+
 - [Общие](../../../../visual-basic/language-reference/modifiers/shared.md)
 - [Nothing](../../../../visual-basic/language-reference/nothing.md)
 - [Имена объявленных элементов](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)

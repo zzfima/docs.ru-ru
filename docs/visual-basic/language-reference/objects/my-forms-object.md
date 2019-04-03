@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Forms object
 ms.assetid: f6bff4e6-6769-4294-956b-037aa6106d2a
-ms.openlocfilehash: 3ee93814a4f06c39099c50617a10b8974c6f1555
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4998097b910a504461a34af3cc159ddb1c74cc62
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974007"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832558"
 ---
 # <a name="myforms-object"></a>Объект My.Forms
 Предоставляет свойства для доступа к экземпляру каждой формы Windows, объявленные в текущем проекте.  
@@ -67,6 +67,7 @@ ms.locfileid: "56974007"
 |Веб-сайт|Нет|  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>
 - <xref:System.Windows.Forms.Form>
 - <xref:System.Windows.Forms.Form.Close%2A>

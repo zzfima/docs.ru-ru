@@ -19,12 +19,12 @@ helpviewer_keywords:
 - zeros, trailing
 - Double data type
 ms.assetid: 0c5670f7-fcb1-453a-bef1-374730cd38fd
-ms.openlocfilehash: 456383dd2f38e96a8ff18472ff44c65ba7b4a341
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 701d10a334757a96ffd634204c1e1d5eb5418ce6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626489"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824667"
 ---
 # <a name="double-data-type-visual-basic"></a>Тип данных Double (Visual Basic)
 Содержит знаком IEEE 64-разрядные (8-байтные) числа двойной точности с плавающей запятой числа, в диапазоне от - 1, 79769313486231570E + 308 до - 4, 94065645841246544E-324 для отрицательных значений и от 4.94065645841246544E-324 до 1, 79769313486231570E + 308 положительные значения. Числа двойной точности хранят приближенное значение вещественного числа.  
@@ -56,6 +56,7 @@ ms.locfileid: "54626489"
 -   **Тип Framework.** В .NET Framework данный тип соответствует структуре <xref:System.Double?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Double?displayProperty=nameWithType>
 - [Типы данных](../../../visual-basic/language-reference/data-types/index.md)
 - [Тип данных Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)

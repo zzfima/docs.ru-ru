@@ -8,12 +8,12 @@ helpviewer_keywords:
 - AddressOf operator [Visual Basic]
 - addresses, passing to API procedures
 ms.assetid: 8105a59d-60d8-4ab5-b221-5899cdfacbf4
-ms.openlocfilehash: b68d93009d2d297f8b8867fb8e79b26173a45095
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 9d8515b6d5b0caf3552ed05a7e0cd4a271efaf54
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56964673"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830348"
 ---
 # <a name="addressof-operator-visual-basic"></a>Оператор AddressOf (Visual Basic)
 Создает экземпляр делегата процедуры, который ссылается на конкретную процедуру.  
@@ -44,6 +44,7 @@ AddressOf procedurename
  [!code-vb[VbVbalrDelegates#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#9)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Оператор Declare](../../../visual-basic/language-reference/statements/declare-statement.md)
 - [Оператор Function](../../../visual-basic/language-reference/statements/function-statement.md)
 - [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)

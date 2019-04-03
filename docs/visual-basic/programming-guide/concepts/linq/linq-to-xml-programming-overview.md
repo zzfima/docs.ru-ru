@@ -2,12 +2,12 @@
 title: Обзор LINQ to XML программирования (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a7c07d0a-1fae-4610-ae51-56dd7075cc14
-ms.openlocfilehash: ba13482df74f3e371f4b79899464cb31144ae0cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 741a9bff54f856d7283cae8c748047d24c0377a0
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693348"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827020"
 ---
 # <a name="linq-to-xml-programming-overview-visual-basic"></a>Обзор LINQ to XML программирования (Visual Basic)
 В этих подразделах содержится обзор высокого уровня о классах [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], а также подробные сведения о трех наиболее важных классах.  
@@ -24,4 +24,5 @@ ms.locfileid: "54693348"
 |[Практическое руководство. Построение примеров LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-build-linq-to-xml-examples.md)|Содержит `Imports` инструкции, необходимые для создания примеров LINQ to XML.|  
   
 ## <a name="see-also"></a>См. также
+
 - [Руководство по программированию (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

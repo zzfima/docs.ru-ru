@@ -11,12 +11,12 @@ helpviewer_keywords:
 - variables [Visual Basic], enumeration
 - constants [Visual Basic], enumerated
 ms.assetid: a45e51f1-65ff-48e1-bf32-79130f137377
-ms.openlocfilehash: 662dc63b69a8229693471909a50b0c4f336b5637
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: fa97a374d4570e014222bf44844271b3394453da
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965700"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830075"
 ---
 # <a name="enum-statement-visual-basic"></a>Оператор Enum (Visual Basic)
 Объявляет перечисление и определяет значения его членов.  
@@ -72,7 +72,7 @@ End Enum
   
      Каждый `member` имеет следующие синтаксис и составляющие: `[<attribute list>] member name [ = initializer ]`  
   
-    |Отделение|Описание:|  
+    |Отделение|Описание|  
     |---|---|  
     |`membername`|Обязательный. Имя данного элемента.|  
     |`initializer`|Необязательный параметр. Выражение, вычисляемое во время компиляции и назначены этому члену.|  
@@ -172,6 +172,7 @@ End Enum
  [!code-vb[VbEnumsTask#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#51)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Enum>
 - <xref:Microsoft.VisualBasic.Strings.AscW%2A>
 - [Оператор Const](../../../visual-basic/language-reference/statements/const-statement.md)

@@ -1,17 +1,17 @@
 ---
-title: Как выполнить Преобразование объекта к другому типу в Visual Basic
+title: Практическое руководство. Преобразование объекта к другому типу в Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic], converting
 ms.assetid: 60cb5fc7-7ba4-4ab5-9c24-480fa12ddcdc
-ms.openlocfilehash: 81ac65ad34ad6afdfb89a750fef39b121aabd644
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1e515c0f4ce8e787754c61a9b53d247fa93c49f2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611349"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814384"
 ---
-# <a name="how-to-convert-an-object-to-another-type-in-visual-basic"></a>Как выполнить Преобразование объекта к другому типу в Visual Basic
+# <a name="how-to-convert-an-object-to-another-type-in-visual-basic"></a>Практическое руководство. Преобразование объекта к другому типу в Visual Basic
 Преобразования `Object` переменных в другой тип данных с помощью ключевого слова преобразования, например [функция CType](../../../../visual-basic/language-reference/functions/ctype-function.md).  
   
 ## <a name="example"></a>Пример  
@@ -34,6 +34,7 @@ End Sub
 -   ссылка на пространство имен <xref:System?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Object>
 - [Преобразование типов в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Расширяющие и сужающие преобразования](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

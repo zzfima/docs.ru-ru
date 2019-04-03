@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual Basic, code hiding
 - Visual Basic code, collapsing and hiding
 ms.assetid: b770e8f5-e07d-491a-ab4b-a977980f9ba2
-ms.openlocfilehash: bbce0e4a2427843ed9d9d51b25684db8c54ba69a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: bf2a7188456097ac227039e4d902a14eb182664c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980130"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822305"
 ---
 # <a name="how-to-collapse-and-hide-sections-of-code-visual-basic"></a>Практическое руководство. Сворачивание и скрытие частей кода (Visual Basic)
 `#Region` Директива позволяет сворачивать и скрывать разделы кода в файлах Visual Basic. `#Region` Директива позволяет указать блок кода, который можно разворачивать и сворачивать при использовании в редакторе кода Visual Studio. Возможность выборочно скрыть код делает файлы стала более управляемой и более удобными для чтения. Дополнительные сведения см. в разделе [Структура](/visualstudio/ide/outlining).  
@@ -30,6 +30,7 @@ ms.locfileid: "56980130"
     >  Скрытие кода не препятствует его компиляции и не влияет на `#If...#End If` инструкций.  
   
 ## <a name="see-also"></a>См. также
+
 - [Условная компиляция](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
 - [Директива #Region](../../../visual-basic/language-reference/directives/region-directive.md)
 - [Директивы #If...Then...#Else](../../../visual-basic/language-reference/directives/if-then-else-directives.md)

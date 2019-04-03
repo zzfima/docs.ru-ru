@@ -8,12 +8,12 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], embedded expressions
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: bf2eb779-b751-4b7c-854f-9f2161482352
-ms.openlocfilehash: feb0168c216b23ff02ca9350f868e091fefca689
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4c96665994a7e56bc70f72b66d5922f5a6472a13
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965791"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827579"
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a>Встроенные выражения в XML (Visual Basic)
 Внедренные выражения позволяют создавать XML-литералов, которые содержат выражения, которые вычисляются во время выполнения. Для внедренного выражения используется синтаксис `<%=` `expression` `%>`, которая используется, и как синтаксис, используемый в [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].  
@@ -81,6 +81,7 @@ ms.locfileid: "56965791"
 >  При объявлении префикса пространства имен XML с помощью `xmlns` атрибут пространства имен, значение атрибута должно быть строковой константы. Таким образом, с помощью `xmlns` атрибут аналогична использованию `Imports` инструкцию для объявления пространства имен XML. Нельзя использовать внедренное выражение для указания значения пространства имен XML.  
   
 ## <a name="see-also"></a>См. также
+
 - [Создание XML в Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
 - [XML-литерал документа](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)
 - [XML-литерал элемента](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)

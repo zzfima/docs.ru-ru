@@ -2,19 +2,19 @@
 title: Базовые запросы (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: aec6ef60-f6f4-4548-b3db-cf6c94bb0008
-ms.openlocfilehash: c0f1d34360b0336109cb2ba9471274e061deffca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9f4a0508fddd5140ff2cc8f82f9c613a66b2d7ca
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650815"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821404"
 ---
 # <a name="basic-queries-linq-to-xml-visual-basic"></a>Базовые запросы (LINQ to XML) (Visual Basic)
 В этом разделе показаны примеры основных запросов [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
 ## <a name="in-this-section"></a>В этом разделе  
   
-|Раздел|Описание:|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Практическое руководство. Поиск элементов с определенным атрибутом (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-attribute.md)|Показывает, каким образом находится конкретный элемент с определенным атрибутом и значением.|  
 |[Практическое руководство. Поиск элементов с определенным дочерним элементом (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-child-element.md)|Показывает, каким образом находится конкретный элемент с его дочерним элементом с определенным значением.|  
@@ -31,4 +31,5 @@ ms.locfileid: "54650815"
 |[Практическое руководство. Отладка пустых наборов результатов запроса (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-debug-empty-query-results-sets.md)|Показывает нужный метод устранения неполадки при устранении ошибок в XML, которые находятся в пространстве имен по умолчанию.|  
   
 ## <a name="see-also"></a>См. также
+
 - [Выполнение запросов деревьям XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)

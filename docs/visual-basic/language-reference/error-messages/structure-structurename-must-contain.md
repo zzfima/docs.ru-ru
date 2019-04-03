@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30941
 ms.assetid: 7054cc1e-bac3-4c3d-82f3-35772bd8dd3b
-ms.openlocfilehash: a8a85f4f089de9be6f2ecadac05256b30d3014b0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 598aef3943a53ee6eb97064819c9128de1839f52
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267460"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813942"
 ---
 # <a name="structure-structurename-must-contain-at-least-one-instance-member-variable-or-at-least-one-instance-event-declaration-not-marked-custom"></a>Структура "\<имя_структуры >" должен содержать по крайней мере один экземпляр переменной члена или объявление по крайней мере один экземпляр события, не помечен как «Custom»
 Определение структуры не включает все совместно переменные или обычные события.  
@@ -26,6 +26,7 @@ ms.locfileid: "55267460"
 -   Определите по крайней мере одну переменную или событие, которое не является `Shared`. Если вы определяете только одно событие, он должен быть являющуюся, а также не совместно.  
   
 ## <a name="see-also"></a>См. также
+
 - [Структуры](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Практическое руководство. Объявление структуры](../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
 - [Оператор Structure](../../../visual-basic/language-reference/statements/structure-statement.md)

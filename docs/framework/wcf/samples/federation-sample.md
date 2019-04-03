@@ -2,12 +2,12 @@
 title: Пример федерации
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-ms.openlocfilehash: 8b884c416960b15da988bde2cc770895857cb06f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e9f0c47a1bafe715a40d150a77543ca71a249920
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625579"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816607"
 ---
 # <a name="federation-sample"></a>Пример федерации
 В данном примере демонстрируется федеративная безопасность.  
@@ -117,4 +117,3 @@ ms.locfileid: "54625579"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Federation`  
   
-## <a name="see-also"></a>См. также

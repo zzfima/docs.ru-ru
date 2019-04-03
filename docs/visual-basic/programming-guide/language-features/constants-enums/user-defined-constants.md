@@ -9,12 +9,12 @@ helpviewer_keywords:
 - constants [Visual Basic], user-defined
 - circular references between constants [Visual Basic]
 ms.assetid: a1206d5c-c45e-4ac2-970a-4a0be6a05fdd
-ms.openlocfilehash: e519fcaf90c6f18e75d5c409cbe7067d5db36429
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f0196457235ad77df545a367573f62b43209269d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975944"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813916"
 ---
 # <a name="user-defined-constants-visual-basic"></a>Константы, определенные пользователем (Visual Basic)
 Константа — это понятное имя, заменяющее числа или строки, которые не изменяются. Как можно понять из их названия, константы хранят значения, которые остаются постоянными в ходе выполнения приложения. Вы можете использовать константы, определенные элементы управления или компонентов, которыми вы работаете, или создать свой собственный. Константы, созданных вами самостоятельно называются *пользовательские*.  
@@ -56,6 +56,7 @@ ms.locfileid: "56975944"
  При возникновении цикла, Visual Basic создает ошибку компилятора.  
   
 ## <a name="see-also"></a>См. также
+
 - [Оператор Const](../../../../visual-basic/language-reference/statements/const-statement.md)
 - [Типы данных констант и литералов](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)
 - [Константы и перечисления](../../../../visual-basic/programming-guide/language-features/constants-enums/index.md)

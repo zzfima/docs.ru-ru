@@ -1,19 +1,19 @@
 ---
-title: Как выполнить Определение связи между двумя объектами (Visual Basic)
+title: Практическое руководство. Определение связи между двумя объектами (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inheritance [Visual Basic], Visual Basic objects
 - objects [Visual Basic], inheritance
 - object variables [Visual Basic], determining relation
 ms.assetid: da002e3f-6616-4bad-a229-f842d06652bb
-ms.openlocfilehash: 62c0280e3773d2e3ff15bc164d9e0e6cacb7bd4d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c4ff7c8e616c9126eae11a23e001c219dcbc0907
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544592"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819207"
 ---
-# <a name="how-to-determine-whether-two-objects-are-related-visual-basic"></a>Как выполнить Определение связи между двумя объектами (Visual Basic)
+# <a name="how-to-determine-whether-two-objects-are-related-visual-basic"></a>Практическое руководство. Определение связи между двумя объектами (Visual Basic)
 Вы можете сравнить два объекта для определения связи между классами, из которых они создаются. <xref:System.Type.IsInstanceOfType%2A> Метод <xref:System.Type?displayProperty=nameWithType> возвращает `True` Если класс наследует от текущего класса или если текущий тип является интерфейсом, поддерживаемым указанного класса.  
   
 ### <a name="to-determine-if-one-object-inherits-from-another-objects-class-or-interface"></a>Чтобы определить, если один объект наследует от класса или интерфейса другого объекта  
@@ -48,6 +48,7 @@ End Class
  Заметьте, переменные два объекта в вызове <xref:System.Type.IsInstanceOfType%2A>. Предполагаемый базовый тип используется для создания <xref:System.Type?displayProperty=nameWithType> класс и предполагаемый производный тип передается в качестве аргумента <xref:System.Type.IsInstanceOfType%2A> метод.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Object.GetType%2A>
 - <xref:System.Type?displayProperty=nameWithType>
 - <xref:System.Type.IsInstanceOfType%2A>
