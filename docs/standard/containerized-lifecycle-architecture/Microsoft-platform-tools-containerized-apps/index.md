@@ -4,6 +4,12 @@ description: Ознакомьтесь с предложениями корпор
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
+ms.openlocfilehash: 811ebd46c97b53176bf8bb9e47a366575e273efb
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680204"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a><span data-ttu-id="cec15-103">Общие сведения о платформе и средствах Майкрософт для контейнерных приложений</span><span class="sxs-lookup"><span data-stu-id="cec15-103">Introduction to the Microsoft platform and tools for containerized apps</span></span>
 

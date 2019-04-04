@@ -2,9 +2,15 @@
 title: Разработка приложений
 ms.date: 01/26/2018
 helpviewer_keywords:
-  - 'WPF [WPF], about application development'
-  - 'application development [WPF], about'
+- WPF [WPF], about application development
+- application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
+ms.openlocfilehash: 979a5324fe9cb6c3469660e061d5df7f312ef2c4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365139"
 ---
 # <a name="application-development"></a><span data-ttu-id="32aca-102">Разработка приложений</span><span class="sxs-lookup"><span data-stu-id="32aca-102">Application Development</span></span>
 <a name="introduction"></a> <span data-ttu-id="32aca-103">Windows Presentation Foundation (WPF) — это платформа представления, которую можно использовать для разработки приложений следующих типов:</span><span class="sxs-lookup"><span data-stu-id="32aca-103">Windows Presentation Foundation (WPF) is a presentation framework that can be used to develop the following types of applications:</span></span>  

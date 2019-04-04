@@ -1,10 +1,16 @@
 ---
 title: Учебники по .NET Core
-description: "Руководства по .NET\_Core научат вас создавать приложения и библиотеки на Mac, Linux и в Windows."
+description: Руководства по .NET Core научат вас создавать приложения и библиотеки на Mac, Linux и в Windows.
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
 ms.custom: seodec18
+ms.openlocfilehash: 794aa91e11f8d7386d3fe98f692e245e8af95eaa
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788301"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a><span data-ttu-id="e619d-103">См. дополнительные сведения о средствах пакета SDK для .NET Core и .NET Core</span><span class="sxs-lookup"><span data-stu-id="e619d-103">Learn .NET Core and the .NET Core SDK tools by exploring these Tutorials</span></span>
 

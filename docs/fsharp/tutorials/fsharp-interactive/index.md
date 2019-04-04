@@ -1,7 +1,13 @@
 ---
-title: 'Справочник по F# Interactive (fsi.exe)'
-description: 'Узнайте, как F# Interactive (fsi.exe) используется для запуска F# кода в интерактивном режиме в консоли или для выполнения F# сценариев.'
+title: Справочник по F# Interactive (fsi.exe)
+description: Узнайте, как F# Interactive (fsi.exe) используется для запуска F# кода в интерактивном режиме в консоли или для выполнения F# сценариев.
 ms.date: 05/16/2016
+ms.openlocfilehash: dde65a4fa4bd41895716344fc67823366c73c5d4
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979883"
 ---
 # <a name="interactive-programming-with-f"></a><span data-ttu-id="7d054-103">Интерактивное программирование с помощью F\#</span><span class="sxs-lookup"><span data-stu-id="7d054-103">Interactive Programming with F\#</span></span>
 

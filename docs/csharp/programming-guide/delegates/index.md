@@ -1,11 +1,17 @@
 ---
-title: 'Руководство по программированию на C#. Делегаты'
+title: Руководство по программированию на C#. Делегаты
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'C# language, delegates'
-  - 'delegates [C#]'
+- C# language, delegates
+- delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
+ms.openlocfilehash: 8dca99f5b6cd315b31bbefb9515cde5065601730
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203513"
 ---
 # <a name="delegates-c-programming-guide"></a><span data-ttu-id="5f269-102">Делегаты (Руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="5f269-102">Delegates (C# Programming Guide)</span></span>
 <span data-ttu-id="5f269-103">[Делегат](../../../csharp/language-reference/keywords/delegate.md) — это тип, который представляет ссылки на методы с определенным списком параметров и типом возвращаемого значения.</span><span class="sxs-lookup"><span data-stu-id="5f269-103">A [delegate](../../../csharp/language-reference/keywords/delegate.md) is a type that represents references to methods with a particular parameter list and return type.</span></span> <span data-ttu-id="5f269-104">При создании экземпляра делегата этот экземпляр можно связать с любым методом с совместимой сигнатурой и типом возвращаемого значения.</span><span class="sxs-lookup"><span data-stu-id="5f269-104">When you instantiate a delegate, you can associate its instance with any method with a compatible signature and return type.</span></span> <span data-ttu-id="5f269-105">Метод можно вызвать (активировать) с помощью экземпляра делегата.</span><span class="sxs-lookup"><span data-stu-id="5f269-105">You can invoke (or call) the method through the delegate instance.</span></span>  

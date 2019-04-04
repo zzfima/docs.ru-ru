@@ -1,13 +1,19 @@
 ---
-title: 'Справочник по C#'
+title: Справочник по C#
 ms.date: 02/14/2017
 helpviewer_keywords:
-  - 'Visual C#, language reference'
-  - 'language reference [C#]'
-  - 'Programmer''s Reference for C#'
-  - 'C# language, reference'
-  - 'reference, C# language'
+- Visual C#, language reference
+- language reference [C#]
+- Programmer's Reference for C#
+- C# language, reference
+- reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
+ms.openlocfilehash: 6862ae72b235653d4576915605f14c9e4de92bce
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845422"
 ---
 # <a name="c-reference"></a><span data-ttu-id="50447-102">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="50447-102">C# Reference</span></span>
 <span data-ttu-id="50447-103">Этот раздел содержит подробные справочные сведения о ключевых словах, операторах, специальных символах, директивах препроцессора, параметрах компилятора и ошибках и предупреждениях компилятора в среде C#.</span><span class="sxs-lookup"><span data-stu-id="50447-103">This section provides reference material about C# keywords, operators, special characters, preprocessor directives, compiler options, and compiler errors and warnings.</span></span>  

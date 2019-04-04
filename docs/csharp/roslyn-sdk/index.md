@@ -1,10 +1,15 @@
 ---
 title: Пакет SDK для платформы компилятора .NET (API-интерфейсы Roslyn)
-description: "Узнайте, как использовать пакет SDK для .NET Compiler Platform (другое название\_— API-интерфейсы Roslyn), чтобы анализировать код .NET, находить ошибки и исправлять их."
+description: Узнайте, как использовать пакет SDK для .NET Compiler Platform (другое название — API-интерфейсы Roslyn), чтобы анализировать код .NET, находить ошибки и исправлять их.
 ms.date: 10/10/2017
 ms.custom: mvc
+ms.openlocfilehash: ea733d4c5c54c18e510a028f3a724f89490db9dd
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185848"
 ---
-
 # <a name="the-net-compiler-platform-sdk"></a><span data-ttu-id="6d803-103">Пакет SDK для .NET Compiler Platform</span><span class="sxs-lookup"><span data-stu-id="6d803-103">The .NET Compiler Platform SDK</span></span>
 
 <span data-ttu-id="6d803-104">Компиляторы создают детализированную модель кода приложения по мере проверки синтаксиса и семантики этого кода.</span><span class="sxs-lookup"><span data-stu-id="6d803-104">Compilers build a detailed model of application code as they validate the syntax and semantics of that code.</span></span> <span data-ttu-id="6d803-105">Они используют эту модель для сборки на выходе исполняемых файлов из исходного кода.</span><span class="sxs-lookup"><span data-stu-id="6d803-105">They use this model to build the executable output from the source code.</span></span> <span data-ttu-id="6d803-106">Пакет SDK для .NET Compiler Platform предоставляет доступ к этой модели.</span><span class="sxs-lookup"><span data-stu-id="6d803-106">The .NET Compiler Platform SDK provides access to this model.</span></span> <span data-ttu-id="6d803-107">Мы все шире используем возможности интегрированной среды разработки (IDE), такие как IntelliSense, рефакторинг, интеллектуальное переименование, функции "Найти все ссылки" и "Перейти к определению", чтобы повысить производительность.</span><span class="sxs-lookup"><span data-stu-id="6d803-107">Increasingly, we rely on integrated development environment (IDE) features such as IntelliSense, refactoring, intelligent rename, "Find all references," and "Go to definition" to increase our productivity.</span></span> <span data-ttu-id="6d803-108">Мы применяем средства анализа кода, чтобы улучшить его качество, и генераторы кода, чтобы упростить разработку приложений.</span><span class="sxs-lookup"><span data-stu-id="6d803-108">We rely on code analysis tools to improve our code quality, and code generators to aid in application construction.</span></span> <span data-ttu-id="6d803-109">Эти средства становятся все более интеллектуальными, и им требуется доступ ко все большему числу моделей, которые создаются исключительно компиляторами при обработке кода приложения.</span><span class="sxs-lookup"><span data-stu-id="6d803-109">As these tools get smarter, they need access to more and more of the model that only compilers create as they process application code.</span></span> <span data-ttu-id="6d803-110">Это основное назначение API-интерфейсов Roslyn: открывать "черные ящики", чтобы средства и пользователи могли обмениваться данными, используя массу сведений о коде, доступных в компиляторе.</span><span class="sxs-lookup"><span data-stu-id="6d803-110">This is the core mission of the Roslyn APIs: opening up the black boxes and allowing tools and end users to share in the wealth of information compilers have about our code.</span></span>

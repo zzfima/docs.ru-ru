@@ -1,9 +1,14 @@
 ---
-title: 'Статьи с практическими руководствами (руководств по языку C#)'
+title: Статьи с практическими руководствами (руководств по языку C#)
 description: Коллекция советов и кратких конкретных примеров кода
 ms.date: 12/20/2017
+ms.openlocfilehash: cc78b8ffffc4f40629f213921fab6145751a7c57
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202344"
 ---
-
 # <a name="how-to-c"></a><span data-ttu-id="3394a-103">Практическое руководство (C#)</span><span class="sxs-lookup"><span data-stu-id="3394a-103">How to (C#)</span></span>
 
 <span data-ttu-id="3394a-104">В практическом руководстве по языку C# в разделе с инструкциями содержатся ответы на часто задаваемые вопросы.</span><span class="sxs-lookup"><span data-stu-id="3394a-104">In the How to section of the C# Guide you can find quick answers to common questions.</span></span> <span data-ttu-id="3394a-105">В некоторых случаях статьи могут быть указаны в нескольких разделах.</span><span class="sxs-lookup"><span data-stu-id="3394a-105">In some cases, articles may be listed in multiple sections.</span></span> <span data-ttu-id="3394a-106">Мы хотели упростить их обнаружение при использовании нескольких вариантов поиска.</span><span class="sxs-lookup"><span data-stu-id="3394a-106">We wanted to make them easy to find for multiple search paths.</span></span> 

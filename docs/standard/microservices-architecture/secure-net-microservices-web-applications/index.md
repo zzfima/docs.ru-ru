@@ -1,9 +1,15 @@
 ---
 title: Обеспечение безопасности веб-приложений и микрослужб .NET
-description: "Безопасность микрослужб и веб-приложений .NET\_— узнайте о способах проверки подлинности в веб-приложениях ASP.NET\_Core."
+description: Безопасность микрослужб и веб-приложений .NET — узнайте о способах проверки подлинности в веб-приложениях ASP.NET Core.
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
+ms.openlocfilehash: 3e2598f58bf2fb34a7ad7c107066d34e0e7c3408
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464818"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a><span data-ttu-id="161b2-103">Обеспечение безопасности микрослужб и веб-приложений .NET</span><span class="sxs-lookup"><span data-stu-id="161b2-103">Make secure .NET Microservices and Web Applications</span></span>
 

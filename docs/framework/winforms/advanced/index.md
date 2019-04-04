@@ -2,9 +2,15 @@
 title: Усовершенствование приложений Windows Forms
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'Windows Forms, enhancing'
-  - 'Windows Forms, adding features'
+- Windows Forms, enhancing
+- Windows Forms, adding features
 ms.assetid: 733d1219-d6ad-4256-a55b-9eccf47f5a06
+ms.openlocfilehash: 82847add5b35fe767d42ee88d7754f789174e434
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713557"
 ---
 # <a name="enhancing-windows-forms-applications"></a><span data-ttu-id="e16e2-102">Усовершенствование приложений Windows Forms</span><span class="sxs-lookup"><span data-stu-id="e16e2-102">Enhancing Windows Forms Applications</span></span>
 <span data-ttu-id="e16e2-103">Windows Forms содержит много возможностей, которые можно использовать для улучшения приложений Windows в целях удовлетворения конкретных потребностей пользователей.</span><span class="sxs-lookup"><span data-stu-id="e16e2-103">Windows Forms contains many features that you can use to enhance your Windows-based applications to meet the specific needs of your users.</span></span> <span data-ttu-id="e16e2-104">В перечисленных ниже разделах описываются эти возможности и способы их использования.</span><span class="sxs-lookup"><span data-stu-id="e16e2-104">The following topics describe these features and how to use them.</span></span>  

@@ -2,9 +2,15 @@
 title: Разработка приложений в Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'Visual Basic, developing applications'
-  - 'applications [Visual Basic]'
+- Visual Basic, developing applications
+- applications [Visual Basic]
 ms.assetid: 1e1c0c81-6d95-4167-a98b-44b1efb6d25f
+ms.openlocfilehash: a8f3b530c6205572ccf6944af1620cb54486b306
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354483"
 ---
 # <a name="developing-applications-with-visual-basic"></a><span data-ttu-id="77dcd-102">Разработка приложений в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="77dcd-102">Developing Applications with Visual Basic</span></span>
 <span data-ttu-id="77dcd-103">В этом разделе приведена основная документация по языку Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="77dcd-103">This section covers conceptual documentation for the Visual Basic language.</span></span>  

@@ -2,10 +2,16 @@
 title: Службы XAML
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'XAML [XAML Services], System.Xaml concepts'
-  - 'XAML Services in WPF [XAML Services]'
-  - 'System.Xaml [XAML Services], conceptual documentation'
+- XAML [XAML Services], System.Xaml concepts
+- XAML Services in WPF [XAML Services]
+- System.Xaml [XAML Services], conceptual documentation
 ms.assetid: 0e11f386-808c-4eae-9ba6-029ad7ba2211
+ms.openlocfilehash: 37fdd96c0666bc6ecda0f46daa5ca6271a8666ab
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58048156"
 ---
 # <a name="xaml-services"></a><span data-ttu-id="ca434-102">Службы XAML</span><span class="sxs-lookup"><span data-stu-id="ca434-102">XAML Services</span></span>
 <span data-ttu-id="ca434-103">В этом разделе описываются возможности набора технологий, известный как .NET Framework XAML служб.</span><span class="sxs-lookup"><span data-stu-id="ca434-103">This topic describes the capabilities of a technology set known as .NET Framework XAML Services.</span></span> <span data-ttu-id="ca434-104">Большинство служб и интерфейсов API, описанных находятся в сборке System.Xaml, который является сборкой, обусловленные появлением [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] набор сборок .NET core.</span><span class="sxs-lookup"><span data-stu-id="ca434-104">The majority of the services and APIs described are located in the assembly System.Xaml, which is an assembly introduced with the [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] set of .NET core assemblies.</span></span> <span data-ttu-id="ca434-105">Службы включают в себя средства чтения и записи, классы схемы и поддержка схемы, фабрики, классов, встроенную поддержку для языка XAML и другие возможности языка XAML с атрибутами.</span><span class="sxs-lookup"><span data-stu-id="ca434-105">Services include readers and writers, schema classes and schema support, factories, attributing of classes, XAML language intrinsic support, and other XAML language features.</span></span>  

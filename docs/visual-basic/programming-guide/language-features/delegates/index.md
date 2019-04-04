@@ -2,11 +2,16 @@
 title: Делегаты (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'delegates [Visual Basic]'
-  - 'Visual Basic code, delegates'
+- delegates [Visual Basic]
+- Visual Basic code, delegates
 ms.assetid: 410b60dc-5e60-4ec0-bfae-426755a2ee28
+ms.openlocfilehash: b3f333f1714a66a8ff462000385af92cf343a19e
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674033"
 ---
-
 # <a name="delegates-visual-basic"></a><span data-ttu-id="a074d-102">Делегаты (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a074d-102">Delegates (Visual Basic)</span></span>
 
 <span data-ttu-id="a074d-103">Делегаты являются объектами, которые ссылаются на методы.</span><span class="sxs-lookup"><span data-stu-id="a074d-103">Delegates are objects that refer to methods.</span></span> <span data-ttu-id="a074d-104">Иногда их описывают как *типобезопасные указатели функций*, поскольку они похожи на указатели функций, используемые в других языках программирования.</span><span class="sxs-lookup"><span data-stu-id="a074d-104">They are sometimes described as *type-safe function pointers* because they are similar to function pointers used in other programming languages.</span></span> <span data-ttu-id="a074d-105">Но в отличие от указателей функций делегаты Visual Basic являются ссылочными типами и основаны на классе <xref:System.Delegate?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="a074d-105">But unlike function pointers, Visual Basic delegates are a reference type based on the class <xref:System.Delegate?displayProperty=nameWithType>.</span></span> <span data-ttu-id="a074d-106">Делегаты могут ссылаться на оба вида общих методов — на методы, которые могут вызываться без определенного экземпляра класса, и на методы экземпляра.</span><span class="sxs-lookup"><span data-stu-id="a074d-106">Delegates can reference both shared methods — methods that can be called without a specific instance of a class — and instance methods.</span></span>

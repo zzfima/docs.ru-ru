@@ -1,9 +1,15 @@
 ---
 title: Процесс разработки для приложений на основе Docker
-description: 'Общий обзор возможностей для разработки приложений Docker. Использование Visual Studio для Windows, Visual Studio для Mac и Visual Studio Code для поддержки нескольких платформ (Windows, Mac и Linux).'
+description: Общий обзор возможностей для разработки приложений Docker. Использование Visual Studio для Windows, Visual Studio для Mac и Visual Studio Code для поддержки нескольких платформ (Windows, Mac и Linux).
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/27/2018
+ms.openlocfilehash: 219a562459be7fb1114dfdd9f139c938d1282c5c
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465039"
 ---
 # <a name="development-process-for-docker-based-applications"></a><span data-ttu-id="ffb7b-104">Процесс разработки для приложений на основе Docker</span><span class="sxs-lookup"><span data-stu-id="ffb7b-104">Development Process for Docker-Based Applications</span></span>
 

@@ -1,11 +1,16 @@
 ---
 title: Примеры и руководства .NET
-description: 'Сведения о примерах и руководствах для .NET Core, ASP.NET Core и языке C#, которые помогут вам изучить платформу .NET.'
+description: Сведения о примерах и руководствах для .NET Core, ASP.NET Core и языке C#, которые помогут вам изучить платформу .NET.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
+ms.openlocfilehash: 682c60ca4a0e801ec8e138a88124b86b88f39615
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "57558952"
 ---
-
 # <a name="net-samples-and-tutorials"></a><span data-ttu-id="8f730-103">Примеры и руководства .NET</span><span class="sxs-lookup"><span data-stu-id="8f730-103">.NET samples and tutorials</span></span>
 
 <span data-ttu-id="8f730-104">Документация по .NET содержит набор примеров и руководств, которые помогают изучить .NET.</span><span class="sxs-lookup"><span data-stu-id="8f730-104">The .NET documentation contains a set of samples and tutorials that teach you about .NET.</span></span> <span data-ttu-id="8f730-105">Из этой статьи вы узнаете, как находить, просматривать и скачивать примеры и руководства для .NET Core, ASP.NET Core и C#.</span><span class="sxs-lookup"><span data-stu-id="8f730-105">This topic describes how to find, view, and download .NET Core, ASP.NET Core, and C# samples and tutorials.</span></span> <span data-ttu-id="8f730-106">Ресурсы, посвященные языку программирования F#, доступны на [сайте F# Foundation](https://fsharp.org/learn.html).</span><span class="sxs-lookup"><span data-stu-id="8f730-106">Find resources to learn the F# programming language on the [F# Foundation's site](https://fsharp.org/learn.html).</span></span> <span data-ttu-id="8f730-107">Если вы хотите изучать язык C# в интерактивном редакторе кода, ознакомьтесь с этим [интерактивным руководством](https://www.microsoft.com/net/learn/in-browser-tutorial/1), а затем переходите к [следующему](../csharp/tutorials/intro-to-csharp/index.md).</span><span class="sxs-lookup"><span data-stu-id="8f730-107">If you're interested in exploring C# using an online code editor, start with [this interactive tutorial](https://www.microsoft.com/net/learn/in-browser-tutorial/1) and continue with [C# interactive tutorial](../csharp/tutorials/intro-to-csharp/index.md).</span></span> <span data-ttu-id="8f730-108">Инструкции по просмотру и скачиванию примеров кода см. в разделе [Просмотр и скачивание примеров](#viewing-and-downloading-samples).</span><span class="sxs-lookup"><span data-stu-id="8f730-108">For instructions on how to view and download sample code, see the [Viewing and downloading samples](#viewing-and-downloading-samples) section.</span></span>

@@ -1,10 +1,15 @@
 ---
 title: Руководство по ML.NET. Использование .NET в машинном обучении
-description: 'Узнайте, как выполнять конкретные задачи, которые помогут вам в создании специализированных решений на базе искусственного интеллекта и машинного обучения и интеграции их в свои .NET-приложения.'
+description: Узнайте, как выполнять конкретные задачи, которые помогут вам в создании специализированных решений на базе искусственного интеллекта и машинного обучения и интеграции их в свои .NET-приложения.
 ms.custom: seodec18
 ms.date: 03/01/2019
+ms.openlocfilehash: 9e5bd146d636b46dcf3835c670207b647e7743c6
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673058"
 ---
-
 # <a name="net-machine-learning-how-to-guides---mlnet"></a><span data-ttu-id="17339-103">Руководство по ML.NET. Использование .NET в машинном обучении</span><span class="sxs-lookup"><span data-stu-id="17339-103">.NET Machine learning how-to guides - ML.NET</span></span>
 
 <span data-ttu-id="17339-104">В практическом руководстве по ML.NET в разделе с инструкциями содержатся ответы на часто задаваемые вопросы.</span><span class="sxs-lookup"><span data-stu-id="17339-104">In the How to section of the ML.NET Guide, you can find quick answers to common questions.</span></span> <span data-ttu-id="17339-105">В некоторых случаях для облегчения поиска статьи могут быть указаны в нескольких разделах.</span><span class="sxs-lookup"><span data-stu-id="17339-105">In some cases, articles may be listed in multiple sections to make them easy to find.</span></span>

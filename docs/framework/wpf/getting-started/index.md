@@ -2,10 +2,16 @@
 title: Приступая к работе (WPF)
 ms.date: 01/26/2018
 helpviewer_keywords:
-  - 'getting started [WPF]'
-  - 'introduction [WPF]'
-  - 'WPF [WPF], getting started'
+- getting started [WPF]
+- introduction [WPF]
+- WPF [WPF], getting started
 ms.assetid: 04f91da8-708c-46c7-8172-f1695ec847cd
+ms.openlocfilehash: 0717536912802461e6d03e240b22d3e05d535f86
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371145"
 ---
 # <a name="getting-started-wpf"></a><span data-ttu-id="1f16d-102">Приступая к работе (WPF)</span><span class="sxs-lookup"><span data-stu-id="1f16d-102">Getting Started (WPF)</span></span>
 <span data-ttu-id="1f16d-103">Windows Presentation Foundation (WPF) — это платформа пользовательского интерфейса для создания клиентских приложений для настольных систем.</span><span class="sxs-lookup"><span data-stu-id="1f16d-103">Windows Presentation Foundation (WPF) is a UI framework that creates desktop client applications.</span></span> <span data-ttu-id="1f16d-104">Платформа разработки WPF поддерживает широкий набор компонентов для разработки приложений, включая модель приложения, ресурсы, элементы управления, графику, макет, привязки данных, документы и безопасность.</span><span class="sxs-lookup"><span data-stu-id="1f16d-104">The WPF development platform supports a broad set of application development features, including an application model, resources, controls, graphics, layout, data binding, documents, and security.</span></span> <span data-ttu-id="1f16d-105">Она является частью платформы .NET Framework, и если ранее вы создавали приложения в .NET Framework с помощью ASP.NET или Windows Forms, то должны быть знакомы с принципами программирования.</span><span class="sxs-lookup"><span data-stu-id="1f16d-105">It is a subset of the .NET Framework, so if you have previously built applications with the .NET Framework using ASP.NET or Windows Forms, the programming experience should be familiar.</span></span> <span data-ttu-id="1f16d-106">WPF использует расширяемый язык разметки для приложений (XAML), чтобы предоставить декларативную модель для программирования приложений.</span><span class="sxs-lookup"><span data-stu-id="1f16d-106">WPF uses the Extensible Application Markup Language (XAML) to provide a declarative model for application programming.</span></span> <span data-ttu-id="1f16d-107">В этот раздел включены темы, содержащие вводные сведения и помогающие начать работу с WPF.</span><span class="sxs-lookup"><span data-stu-id="1f16d-107">This section has topics that introduce and help you get started with WPF.</span></span>  

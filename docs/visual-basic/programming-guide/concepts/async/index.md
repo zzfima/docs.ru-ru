@@ -2,6 +2,12 @@
 title: Асинхронное программирование с использованием ключевых слов Async и Await (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: bd7e462b-583b-4395-9c36-45aa9e61072c
+ms.openlocfilehash: 0a00327d5c9c0a017deeb8ab46ae1eef680228ce
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125529"
 ---
 # <a name="asynchronous-programming-with-async-and-await-visual-basic"></a><span data-ttu-id="62652-102">Асинхронное программирование с использованием ключевых слов Async и Await (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="62652-102">Asynchronous Programming with Async and Await (Visual Basic)</span></span>
 <span data-ttu-id="62652-103">Асинхронное программирование позволяет избежать появления узких мест производительности и увеличить общую скорость реагирования приложения.</span><span class="sxs-lookup"><span data-stu-id="62652-103">You can avoid performance bottlenecks and enhance the overall responsiveness of your application by using asynchronous programming.</span></span> <span data-ttu-id="62652-104">Однако традиционные методы создания асинхронных приложений могут оказаться сложными, как в плане написания кода, так и в плане отладки и обслуживания.</span><span class="sxs-lookup"><span data-stu-id="62652-104">However, traditional techniques for writing asynchronous applications can be complicated, making them difficult to write, debug, and maintain.</span></span>  

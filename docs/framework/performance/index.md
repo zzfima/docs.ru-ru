@@ -2,11 +2,17 @@
 title: Производительность .NET Framework
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'performance [.NET Framework]'
-  - 'reliability [.NET Framework]'
+- performance [.NET Framework]
+- reliability [.NET Framework]
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
 author: mairaw
 ms.author: mairaw
+ms.openlocfilehash: a575f6c067d22ddf35a238c36f66fe8e91f6be0c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361282"
 ---
 # <a name="net-framework-performance"></a><span data-ttu-id="bbaa5-102">Производительность .NET Framework</span><span class="sxs-lookup"><span data-stu-id="bbaa5-102">.NET Framework Performance</span></span>
 <span data-ttu-id="bbaa5-103">Если вы хотите создавать приложения, отличающиеся высокой производительностью, вам следует закладывать эту производительность при планировании и проектировании наравне с другими возможностями приложения.</span><span class="sxs-lookup"><span data-stu-id="bbaa5-103">If you want to create apps with great performance, you should design and plan for performance just as you would design any other feature of your app.</span></span> <span data-ttu-id="bbaa5-104">Вы можете использовать средства, предоставляемые корпорацией Майкрософт, для измерения уровня производительности приложения и внесения усовершенствований в использование памяти, пропускную способность кода и скорость реагирования.</span><span class="sxs-lookup"><span data-stu-id="bbaa5-104">You can use the tools provided by Microsoft to measure your app's performance, and, if needed, make improvements to memory use, code throughput, and responsiveness.</span></span> <span data-ttu-id="bbaa5-105">В этом разделе перечислены средства анализа производительности, предоставляемые корпорацией Майкрософт, и приведены ссылки на другие разделы, описывающие аспекты производительности для разных областей разработки.</span><span class="sxs-lookup"><span data-stu-id="bbaa5-105">This topic lists the performance analysis tools that Microsoft provides, and provides links to other topics that cover performance for specific areas of app development.</span></span>  
