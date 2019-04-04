@@ -3,15 +3,21 @@ title: Коллекции и структуры данных
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-  - grouping data in collections
-  - 'objects [.NET Framework], grouping in collections'
-  - 'Array class, grouping data in collections'
-  - 'threading [.NET Framework], safety'
-  - Collections classes
-  - 'collections [.NET Framework]'
+- grouping data in collections
+- objects [.NET Framework], grouping in collections
+- Array class, grouping data in collections
+- threading [.NET Framework], safety
+- Collections classes
+- collections [.NET Framework]
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
 author: mairaw
 ms.author: mairaw
+ms.openlocfilehash: bed202d927cc026b903cb006220620210893056e
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836154"
 ---
 # <a name="collections-and-data-structures"></a>Коллекции и структуры данных
 Связанные данные могут обрабатываться более эффективно, если они объединены в коллекцию. Вы можете использовать класс <xref:System.Array?displayProperty=nameWithType> или классы в пространствах имен <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent> и System.Collections.Immutable, чтобы добавлять, удалять и изменять отдельные элементы или диапазон элементов в коллекции.  

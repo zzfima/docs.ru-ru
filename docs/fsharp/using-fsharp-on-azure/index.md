@@ -1,10 +1,15 @@
 ---
-title: 'Использование языка F# в Azure'
-description: 'Руководство по использованию служб Azure с помощьюF#'
+title: Использование языка F# в Azure
+description: Руководство по использованию служб Azure с помощьюF#
 author: sylvanc
 ms.date: 09/22/2016
+ms.openlocfilehash: 8243c021b8bc3ea9b067b278a5d9c6e3619232b7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371057"
 ---
-
 # <a name="using-f-on-azure"></a>Использование языка F# в Azure
 
 F# — это великолепный язык для облачного программирования, который часто используется для создания веб-приложений, облачных служб, размещаемых в облаке микрослужб, а также для масштабируемой обработки данных.

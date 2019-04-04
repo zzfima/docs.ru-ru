@@ -4,6 +4,12 @@ description: Архитектура микрослужб .NET для упако�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
+ms.openlocfilehash: 8f2297121429acad4222f72ac4fea54e8469b215
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464675"
 ---
 # <a name="tackle-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns"></a>Использование микрослужб с шаблонами DDD и CQRS для решения сложных бизнес-задач
 

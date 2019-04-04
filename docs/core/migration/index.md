@@ -3,6 +3,12 @@ title: Перенос .NET Core из project.json
 description: Сведения о переносе старого проекта .NET Core с использованием project.json
 ms.date: 07/19/2017
 ms.custom: seodec18
+ms.openlocfilehash: f48728e647b57a8c5796bdc2119f72b58a49d80f
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675918"
 ---
 # <a name="migrating-net-core-projects-from-projectjson"></a>Перенос проектов .NET Core из project.json
 

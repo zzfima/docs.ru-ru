@@ -1,18 +1,24 @@
 ---
-title: "Ресурсы в приложениях\_.NET"
+title: Ресурсы в приложениях .NET
 ms.date: 07/25/2018
 helpviewer_keywords:
-  - 'deploying applications [.NET Framework], resources'
-  - 'deploying applications [.NET Core], resources'
-  - application resources
-  - resource files
-  - satellite assemblies
-  - localization
-  - packaging application resources
-  - localizing resources
+- deploying applications [.NET Framework], resources
+- deploying applications [.NET Core], resources
+- application resources
+- resource files
+- satellite assemblies
+- localization
+- packaging application resources
+- localizing resources
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
 author: rpetrusha
 ms.author: ronpet
+ms.openlocfilehash: 889158aebb70de20b4e64044b5fa61dc3494ed73
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203367"
 ---
 # <a name="resources-in-net-apps"></a>Ресурсы в приложениях .NET
 Практически любое высококачественное приложение должно использовать ресурсы. Ресурс представляет собой любые неисполняемые данные, которые логически развертываются вместе с приложением. Ресурсы могут отображаться в приложении в виде сообщений об ошибках либо как часть интерфейса пользователя. Ресурсы могут содержать данные различных видов, включая символьные строки, изображения и объекты. (Для записи сохраняемых объектов в файл ресурсов объекты должны быть сериализуемыми.) Благодаря хранению данных в файле ресурсов сами данные можно изменять без перекомпиляции всего приложения. Это также позволяет хранить данные в одном месте и исключает необходимость в использовании жестко закодированных данных, которые хранятся в нескольких местах.  

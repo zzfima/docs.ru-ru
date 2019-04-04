@@ -5,6 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
 author: mairaw
 ms.author: mairaw
+ms.openlocfilehash: 1edd267ed388f630cc332caa278d5c47a40d77d5
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835126"
 ---
 # <a name="xml-documents-and-data"></a>XML-документы и данные
 Платформа .NET Framework имеет всеобъемлющий и интегрированный набор классов, с помощью которых можно легко создавать приложения, использующие XML. Классы из следующих пространств имен поддерживают синтаксический анализ и запись XML-кода, изменение XML-данных в памяти, проверку данных и преобразование XSLT.  

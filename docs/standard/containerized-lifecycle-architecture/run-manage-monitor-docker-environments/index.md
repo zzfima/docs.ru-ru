@@ -1,11 +1,16 @@
 ---
-title: 'Запуск, мониторинг рабочих сред Docker и управление ими'
+title: Запуск, мониторинг рабочих сред Docker и управление ими
 description: Жизненный цикл контейнерного приложения Docker на основе платформы и средств Майкрософт
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
+ms.openlocfilehash: 7c470a2d24b8807bdda10e1816bc5a430a5c63f1
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56834944"
 ---
-
 # <a name="run-manage-and-monitor-docker-production-environments"></a>Запуск, мониторинг рабочих сред Docker и управление ими
 
 Концепция. Корпоративные приложения должны выполняться на высокий уровень доступности и масштабируемости; ИТ-операции должны иметь возможность управлять и отслеживать среды и сами приложения.

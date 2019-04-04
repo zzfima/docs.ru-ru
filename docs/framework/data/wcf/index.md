@@ -2,11 +2,16 @@
 title: Службы WCF Data Services 4.5
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - Astoria
-  - 'WCF Data Services, getting started'
+- Astoria
+- WCF Data Services, getting started
 ms.assetid: 73d2bec3-7c92-4110-b905-11bb0462357a
+ms.openlocfilehash: 6910bfbc94f69292bb8c2a52bf3ebef8fcfb3a8a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500243"
 ---
-
 # <a name="wcf-data-services-45"></a>Службы WCF Data Services 4.5
 
 Службы WCF Data Services (прежнее название «Службы данных ADO.NET») — это компонент платформы .NET Framework, которая позволяет создавать службы, использующие [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] для предоставления и получения данных через Интернет или интрасеть с помощью семантики [ передачи репрезентативного состояния (REST)](https://go.microsoft.com/fwlink/?LinkId=113919). OData предоставляет доступ к данным в виде ресурсов, которые адресуются по URI. Доступ и изменение данных производится с помощью таких стандартных команд HTTP, как GET, PUT, POST и DELETE. OData использует правила сущность связь [модели EDM](../../../../docs/framework/data/adonet/entity-data-model.md) для предоставления ресурсов в виде наборов сущностей, связанных ассоциациями.

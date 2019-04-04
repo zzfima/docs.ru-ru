@@ -1,11 +1,16 @@
 ---
-title: "WMI и счетчики производительности (справочник по неуправляемым\_API)"
-description: "Сводные данные по неуправляемому API-интерфейсу .NET\_Framework для WMI и счетчиков производительности."
+title: WMI и счетчики производительности (справочник по неуправляемым API)
+description: Сводные данные по неуправляемому API-интерфейсу .NET Framework для WMI и счетчиков производительности.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 11/06/2017
+ms.openlocfilehash: bbf22496098f848cc7c55652198d792c6f631c15
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377460"
 ---
-
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a>Инструментарий управления Windows (WMI) и счетчики производительности (справочник по неуправляемым API)
 
 Неуправляемый API-интерфейс .NET Framework для WMI и счетчиков производительности состоит из набора функций, которые создают оболочки для вызовов [собственного API инструментария управления Windows](/windows/desktop/WmiSdk/com-api-for-wmi). Он позволяет разрабатывать средства и библиотеки для мониторинга и контроля удаленных компьютерных систем.

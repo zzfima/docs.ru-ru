@@ -1,12 +1,17 @@
 ---
 title: Анализаторы на основе Roslyn в .NET
-description: 'Сведения об анализаторах на основе Roslyn, которые находят проблемы и предлагают способы их решения.'
+description: Сведения об анализаторах на основе Roslyn, которые находят проблемы и предлагают способы их решения.
 author: billwagner
 ms.author: wiwagn
 ms.date: 01/24/2018
 ms.technology: dotnet-standard
+ms.openlocfilehash: 436cfb3904f0891f8c18bb5890563a13d65e2d1c
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634249"
 ---
-
 # <a name="the-roslyn-based-analyzers"></a>Анализаторы на основе Roslyn
 
 Анализаторы на основе Roslyn используют пакет SDK .NET Compiler (API Roslyn) для анализа исходного кода проекта, поиска проблем и их решения. Разные анализаторы ищут разные классы проблем, начиная от действий, которые могут привести к ошибкам, и заканчивая проблемам с безопасностью, связанных с совместимостью API.

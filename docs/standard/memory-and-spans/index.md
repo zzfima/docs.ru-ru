@@ -3,14 +3,19 @@ title: Память и диапазоны
 ms.date: 10/03/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
-  - Memory<T>
-  - Span<T>
-  - buffers"
-  - pipeline processing
+- Memory<T>
+- Span<T>
+- buffers"
+- pipeline processing
 author: rpetrusha
 ms.author: ronpet
+ms.openlocfilehash: 1a61f56eca242db65bd555553132450c3f8af7f6
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680153"
 ---
-
 # <a name="memory--and-span-related-types"></a>Типы, связанные с памятью и диапазонами
 
 Начиная с .NET Core 2.1, .NET включает ряд взаимосвязанных типов, представляющих непрерывную область строго типизированной произвольной памяти. Сюда входит следующее.

@@ -1,17 +1,17 @@
 ---
-title: Рабочий процесс внутреннего цикла разработки для приложений Docker
+title: Рабочий процесс внутреннего цикла разработки для приложений Docker
 description: Дополнительные сведения «внутреннем цикле» рабочего процесса для разработки приложений Docker.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 1ed0feeec682f5a79bc38db6a101b751ea4dbc3a
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 36fcf5769376375854c2a2631e26e8b136df0de6
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676672"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920913"
 ---
-# <a name="inner-loop-development-workflow-for-docker-apps"></a>Рабочий процесс внутреннего цикла разработки для приложений Docker
+# <a name="inner-loop-development-workflow-for-docker-apps"></a>Рабочий процесс внутреннего цикла разработки для приложений Docker
 
 Перед запуском рабочего процесса внешний цикл, охватывающие весь DevOps цикл, все начинает на компьютере каждого разработчика, кодирования самого приложения, с помощью предпочитаемых языков или платформ и его локальному тестированию (рис. 4-21). Однако в любом случае, вам придется важный момент общее, независимо от того, какой язык, framework или платформ. В этом конкретного рабочего процесса вы всегда разработке и тестировании контейнеров Docker, а на локальном компьютере.
 
@@ -105,7 +105,7 @@ ms.locfileid: "57676672"
 
 **Рис. 4-24**. Файлы docker, добавленные с помощью **файлы Docker, добавьте к команде рабочей области**
 
-При добавлении файла DockerFile, указать, какой базовый образ Docker, вы будете использовать (например, использование `FROM microsoft/aspnetcore`). Обычно вы создадите пользовательский образ на основе базового образа, которую можно получить из любой официального репозитория в [реестра Docker Hub](https://hub.docker.com/) (таких как [изображение для .NET Core](https://hub.docker.com/r/microsoft/dotnet/) или [для Node.js](https://hub.docker.com/_/node/)).
+При добавлении файла DockerFile, указать, какой базовый образ Docker, вы будете использовать (например, использование `FROM mcr.microsoft.com/dotnet/core/aspnet`). Обычно вы создадите пользовательский образ на основе базового образа, которую можно получить из любой официального репозитория в [реестра Docker Hub](https://hub.docker.com/) (таких как [изображение для .NET Core](https://hub.docker.com/_/microsoft-dotnet-core/) или [для Node.js](https://hub.docker.com/_/node/)).
 
 ***Использовать существующий официальный образ Docker***
 
@@ -115,7 +115,7 @@ ms.locfileid: "57676672"
 
 ```Dockerfile
 # Base Docker image to use  
-FROM microsoft/dotnet:2.1-aspnetcore-runtime
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.1
   
 # Set the Working Directory and files to be copied to the image  
 ARG source  
@@ -129,7 +129,7 @@ EXPOSE 80
 ENTRYPOINT ["dotnet", "MyCustomMicroservice.dll"]
 ```
 
-В этом случае образ основан на версии 2.1 официального образа ASP.NET Core Docker (мультиархитектурного для Linux и Windows), согласно строке `FROM microsoft/dotnet:2.1-aspnetcore-runtime`. (Дополнительные сведения об этом см. в разделе [образ Docker ASP.NET Core](https://hub.docker.com/r/microsoft/aspnetcore/) страницы и [образ Docker .NET Core](https://hub.docker.com/r/microsoft/dotnet/) страницы).
+В этом случае образ основан на версии 2.1 официального образа ASP.NET Core Docker (мультиархитектурного для Linux и Windows), согласно строке `FROM mcr.microsoft.com/dotnet/core/aspnet:2.1`. (Дополнительные сведения об этом см. в разделе [образ Docker ASP.NET Core](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) страницы и [образ Docker .NET Core](https://hub.docker.com/_/microsoft-dotnet-core/) страницы).
 
 В DockerFile можно также указать Docker прослушивать TCP-порт, который будет использоваться во время выполнения (например, порт 80).
 
@@ -143,9 +143,9 @@ ENTRYPOINT ["dotnet", "MyCustomMicroservice.dll"]
 
 **Использование мультиархитектурных репозиториев**
 
-Имя одного образа в репозиторий может содержать варианты платформ, например образ Linux и образ Windows. Эта функция позволяет поставщиков, таких как Microsoft (creators базового образа) создать один репозиторий для охвата нескольких платформ (то есть, Linux и Windows). Например [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) репозитория в реестре центра Docker обеспечивает поддержку для Linux и Windows Nano Server, используя то же имя образа.
+Имя одного образа в репозиторий может содержать варианты платформ, например образ Linux и образ Windows. Эта функция позволяет поставщиков, таких как Microsoft (creators базового образа) создать один репозиторий для охвата нескольких платформ (то есть, Linux и Windows). Например [dotnet/core/aspnet](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) репозитория в реестре центра Docker обеспечивает поддержку для Linux и Windows Nano Server, используя то же имя образа.
 
-Извлечение [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) образа с узла Windows извлекает вариант Windows, тогда как извлекать имя образа из узла Linux извлекает вариант для Linux.
+Извлечение [dotnet/core/aspnet](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) образа с узла Windows извлекает вариант Windows, тогда как извлекать имя образа из узла Linux извлекает вариант для Linux.
 
 ***Создание базового образа с нуля***
 
@@ -216,7 +216,7 @@ services:
 
 Если приложение имеет только один контейнер, необходимо просто запустите его, развернув ее к узлу Docker (виртуальной Машине или физическом сервере). Тем не менее, если приложение состоит из нескольких служб, необходимо *комбинирование ее*, слишком. Давайте посмотрим, различные варианты.
 
-***Вариант а Запустите единственного контейнера или службы***
+***Вариант А. Запустите единственного контейнера или службы***
 
 Образ Docker можно запустить с помощью команды docker run, как показано ниже:
 
@@ -226,7 +226,7 @@ docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
 
 Для данного конкретного развертывания мы будем перенаправление запросов, отправленный на порт 80 с внутренним портом 5000. Теперь приложение прослушивает внешний порт 80 на уровне узла.
 
-***Вариант б Составление и выполнение приложения-контейнера с несколькими***
+***Вариант Б. Составление и выполнение приложения-контейнера с несколькими***
 
 В большинстве корпоративных сценариев приложение Docker будет состоять из нескольких служб. В этих случаях можно запустить `docker-compose up` команду (рис. 4-27), которая будет использовать файл docker-compose.yml, который вы создали ранее. Данная команда развертывает составное приложение со всеми связанные с ним контейнеры.
 

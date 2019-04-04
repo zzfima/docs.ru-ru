@@ -2,6 +2,12 @@
 title: Сериализация (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 67379a76-5465-4af8-a781-0b0b25a62d9a
+ms.openlocfilehash: 947b38e8166ba05d871aafbaba5766aa9dab21f4
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409709"
 ---
 # <a name="serialization-visual-basic"></a>Сериализация (Visual Basic)
 Сериализация — это процесс преобразования объекта в поток байтов для сохранения или передачи в память, в базу данных или в файл. Эта операция предназначена для того, чтобы сохранить состояния объекта для последующего воссоздания при необходимости. Обратный процесс называется десериализацией.  

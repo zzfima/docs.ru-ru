@@ -4,8 +4,13 @@ description: Контейнерные жизненный цикл приложе
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
+ms.openlocfilehash: a2fa1dddd68a54b7aab2ac44bf6109626689b36b
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56663929"
 ---
-
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Рабочий процесс DevOps для приложения Docker с использованием средств Майкрософт
 
 *Microsoft Visual Studio, службам DevOps в Azure, Team Foundation Server и Application Insights формируют комплексную экосистему для разработки и ИТ-операций, которые предоставляют командам средства для управления проектами и быстрого создания, тестирования и развертывания Контейнерные приложения.*

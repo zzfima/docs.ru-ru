@@ -1,10 +1,15 @@
 ---
-title: "Обзор языка\_C#\_— руководство по\_C#"
-description: 'Вы еще не знакомы с C#? Изучите основы этого языка.'
+title: Обзор языка C# — руководство по C#
+description: Вы еще не знакомы с C#? Изучите основы этого языка.
 ms.date: 08/10/2016
 ms.assetid: ebc727cd-8112-42e7-b59c-3c2873ad661c
+ms.openlocfilehash: 4a59d08cc60b94308fce06efc46f683779ff1468
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57843433"
 ---
-
 # <a name="a-tour-of-the-c-language"></a>Краткий обзор языка C#
 
 C# (произносится как "си шарп") — простой, современный объектно-ориентированный и типобезопасный язык программирования. C# относится к широко известному семейству языков C, и покажется хорошо знакомым любому, кто работал с C, C++, Java или JavaScript.

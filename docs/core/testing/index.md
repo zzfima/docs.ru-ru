@@ -5,8 +5,13 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
+ms.openlocfilehash: 73667843452bbcab52a8cd4aa7906beecc095677
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185510"
 ---
-
 # <a name="unit-testing-in-net-core-and-net-standard"></a>Модульное тестирование в .NET Core и .NET Standard
 
 .NET Core позволяет легко создавать модульные тесты. В этой статье рассматриваются модульные тесты и то, чем они отличаются от других типов тестов. В связанных ресурсах в нижней части страницы содержится информация о том, как добавить тестовый проект в решение. После настройки тестового проекта вы сможете запустить модульные тесты в командной строке или Visual Studio.

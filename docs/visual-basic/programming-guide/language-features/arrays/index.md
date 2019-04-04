@@ -2,13 +2,18 @@
 title: Массивы в Visual Basic
 ms.date: 12/06/2017
 f1_keywords:
-  - vb.Array
+- vb.Array
 helpviewer_keywords:
-  - 'arrays [Visual Basic]'
-  - 'Visual Basic, arrays'
+- arrays [Visual Basic]
+- Visual Basic, arrays
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
+ms.openlocfilehash: 6b131d073e10f99feaf770fe5fd3c393551fa5a3
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675969"
 ---
-
 # <a name="arrays-in-visual-basic"></a>Массивы в Visual Basic
 
 Массив — это набор значений, которые называются *элементы*, которая логически связаны друг с другом. Например массив может содержать число учеников в каждом классе школы; Каждый элемент массива представляет число учеников в одном классе. Аналогичным образом массив может состоять из оценок учащихся для класса; Каждый элемент массива является один уровень.

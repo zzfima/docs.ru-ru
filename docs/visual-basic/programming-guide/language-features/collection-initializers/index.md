@@ -2,12 +2,17 @@
 title: Инициализаторы коллекций (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
-  - vb.CollectionInitializer
+- vb.CollectionInitializer
 helpviewer_keywords:
-  - 'collection initializers [Visual Basic]'
+- collection initializers [Visual Basic]
 ms.assetid: a9290329-77b0-4fdf-ae75-8fc17287f469
+ms.openlocfilehash: 538efc11e477a4e90b7bca286da4ed56105d7ecb
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675465"
 ---
-
 # <a name="collection-initializers-visual-basic"></a>Инициализаторы коллекций (Visual Basic)
 
 *Инициализаторы набора* предлагают сокращенный синтаксис для создания коллекций и заполнения их начальным набором значений. Инициализаторы набора полезны при создании коллекции из набора известных значений и ее последующей проверки. Это может быть список команд меню или категорий, исходный набор числовых значений, статический список строк, например названий дней или месяцев либо географических расположений (список штатов), и многое другое.

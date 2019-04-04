@@ -1,11 +1,16 @@
 ---
 title: Примеры и руководства .NET
-description: 'Сведения о примерах и руководствах для .NET Core, ASP.NET Core и языке C#, которые помогут вам изучить платформу .NET.'
+description: Сведения о примерах и руководствах для .NET Core, ASP.NET Core и языке C#, которые помогут вам изучить платформу .NET.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
+ms.openlocfilehash: 682c60ca4a0e801ec8e138a88124b86b88f39615
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "57558952"
 ---
-
 # <a name="net-samples-and-tutorials"></a>Примеры и руководства .NET
 
 Документация по .NET содержит набор примеров и руководств, которые помогают изучить .NET. Из этой статьи вы узнаете, как находить, просматривать и скачивать примеры и руководства для .NET Core, ASP.NET Core и C#. Ресурсы, посвященные языку программирования F#, доступны на [сайте F# Foundation](https://fsharp.org/learn.html). Если вы хотите изучать язык C# в интерактивном редакторе кода, ознакомьтесь с этим [интерактивным руководством](https://www.microsoft.com/net/learn/in-browser-tutorial/1), а затем переходите к [следующему](../csharp/tutorials/intro-to-csharp/index.md). Инструкции по просмотру и скачиванию примеров кода см. в разделе [Просмотр и скачивание примеров](#viewing-and-downloading-samples).

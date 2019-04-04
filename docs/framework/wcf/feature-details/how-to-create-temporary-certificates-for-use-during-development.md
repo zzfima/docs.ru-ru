@@ -1,18 +1,18 @@
 ---
-title: Как выполнить  Создание временных сертификатов для использования во время разработки
+title: Практическое руководство. Создание временных сертификатов для использования во время разработки
 ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: 609b142c5dd1cac92acf0f1c0a62d17a9b5c957e
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: d45f18b0b8fe4e0cc9667091e166c80691faa2d4
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738634"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58921329"
 ---
-# <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Как выполнить  Создание временных сертификатов для использования во время разработки
+# <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Практическое руководство. Создание временных сертификатов для использования во время разработки
 
 При разработке безопасной службы или клиента с помощью Windows Communication Foundation (WCF), часто бывает необходимо предоставить сертификат X.509 для использования в качестве учетных данных. Обычно этот сертификат является частью цепи сертификатов, корневой центр которых находится в хранилище «Доверенные корневые центры сертификации» на компьютере. Наличие цепи сертификатов позволяет ограничить набор сертификатов, корневой центр которых, как правило, принадлежит организации или подразделению. Для эмуляции этого во время разработки можно создать два сертификата, чтобы выполнить требования безопасности. Первый сертификат является самозаверяющим и помещается в хранилище «Доверенные корневые центры сертификации». Второй сертификат создается из первого и помещается как в хранилище «Личное» на локальном компьютере, так и в хранилище «Личное» текущего пользователя. Здесь описаны шаги по созданию этих двух сертификатов с помощью Powershell [New-SelfSignedCertificate)](/powershell/module/pkiclient/new-selfsignedcertificate) командлета.
 
@@ -78,7 +78,7 @@ PS Export-Certificate -Cert $testCertPath -FilePath testcert.crt
 
 ### <a name="to-specify-a-certificate-as-the-client-credential-type"></a>Задание сертификата как типа учетных данных клиента
 
-- В файле конфигурации для службы используйте следующий XML, чтобы настроить режим безопасности сообщения и задать тип учетных данных клиента для сертификата.
+1. В файле конфигурации для службы используйте следующий XML, чтобы настроить режим безопасности сообщения и задать тип учетных данных клиента для сертификата.
 
     ```xml
     <bindings>
@@ -92,19 +92,19 @@ PS Export-Certificate -Cert $testCertPath -FilePath testcert.crt
     </bindings>
     ```
 
-В файле конфигурации для клиента используйте следующий XML, чтобы указать, что сертификат найден в хранилище и можно найти путем поиска в поле SubjectName для значения «CohoWinery».
+2. В файле конфигурации для клиента используйте следующий XML, чтобы указать, что сертификат найден в хранилище и можно найти путем поиска в поле SubjectName для значения «CohoWinery».
 
-```xml
-<behaviors>
-  <endpointBehaviors>
-    <behavior name="CertForClient">
-      <clientCredentials>
-        <clientCertificate findValue="CohoWinery" x509FindType="FindBySubjectName" />
-       </clientCredentials>
-     </behavior>
-   </endpointBehaviors>
-</behaviors>
-```
+    ```xml
+    <behaviors>
+      <endpointBehaviors>
+        <behavior name="CertForClient">
+          <clientCredentials>
+            <clientCertificate findValue="CohoWinery" x509FindType="FindBySubjectName" />
+          </clientCredentials>
+        </behavior>
+      </endpointBehaviors>
+    </behaviors>
+    ```
 
 Дополнительные сведения об использовании сертификатов в WCF см. в разделе [Working with Certificates](working-with-certificates.md).
 
@@ -115,5 +115,5 @@ PS Export-Certificate -Cert $testCertPath -FilePath testcert.crt
 ## <a name="see-also"></a>См. также
 
 - [Работа с сертификатами](working-with-certificates.md)
-- [Практическое руководство. Просмотр сертификатов с помощью оснастки MMC](how-to-view-certificates-with-the-mmc-snap-in.md)
+- [Практическое руководство. Просмотр сертификатов с помощью оснастки консоли MMC](how-to-view-certificates-with-the-mmc-snap-in.md)
 - [Защита служб и клиентов](securing-services-and-clients.md)

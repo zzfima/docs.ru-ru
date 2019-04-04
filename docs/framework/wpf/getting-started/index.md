@@ -2,10 +2,16 @@
 title: Приступая к работе (WPF)
 ms.date: 01/26/2018
 helpviewer_keywords:
-  - 'getting started [WPF]'
-  - 'introduction [WPF]'
-  - 'WPF [WPF], getting started'
+- getting started [WPF]
+- introduction [WPF]
+- WPF [WPF], getting started
 ms.assetid: 04f91da8-708c-46c7-8172-f1695ec847cd
+ms.openlocfilehash: 0717536912802461e6d03e240b22d3e05d535f86
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371145"
 ---
 # <a name="getting-started-wpf"></a>Приступая к работе (WPF)
 Windows Presentation Foundation (WPF) — это платформа пользовательского интерфейса для создания клиентских приложений для настольных систем. Платформа разработки WPF поддерживает широкий набор компонентов для разработки приложений, включая модель приложения, ресурсы, элементы управления, графику, макет, привязки данных, документы и безопасность. Она является частью платформы .NET Framework, и если ранее вы создавали приложения в .NET Framework с помощью ASP.NET или Windows Forms, то должны быть знакомы с принципами программирования. WPF использует расширяемый язык разметки для приложений (XAML), чтобы предоставить декларативную модель для программирования приложений. В этот раздел включены темы, содержащие вводные сведения и помогающие начать работу с WPF.  

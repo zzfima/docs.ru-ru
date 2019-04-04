@@ -1,8 +1,14 @@
 ---
-title: 'Руководство по языку F#'
-description: 'В этом руководстве представлен обзор различных материалов обучения для F#, это функциональный язык программирования, который работает в среде .NET.'
+title: Руководство по языку F#
+description: В этом руководстве представлен обзор различных материалов обучения для F#, это функциональный язык программирования, который работает в среде .NET.
 author: cartermp
 ms.date: 08/03/2018
+ms.openlocfilehash: 7bba949a7567173f5f3918a6ed32aabad26fb362
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977010"
 ---
 # <a name="f-guide"></a>Руководство по языку F#
 

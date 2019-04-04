@@ -4,8 +4,13 @@ description: Этот документ является полным руков�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
+ms.openlocfilehash: 27212045d9870c9f2fc15509d76f3e9b07d8657f
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675839"
 ---
-
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>Разработка современных веб-приложений с помощью ASP.NET Core и Azure
 
 ![Изображение обложки руководства по архитектуре современных веб-приложений.](./media/index/web-application-guide-cover-image.png)

@@ -1,14 +1,20 @@
 ---
-title: 'Руководство по программированию на C#'
+title: Руководство по программированию на C#
 ms.date: 05/02/2017
 f1_keywords:
-  - cs.langref
+- cs.langref
 helpviewer_keywords:
-  - 'reference tables [C#]'
-  - 'C# language, programming guide'
-  - 'Visual C#, programming concepts'
-  - 'C# language, concepts'
+- reference tables [C#]
+- C# language, programming guide
+- Visual C#, programming concepts
+- C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
+ms.openlocfilehash: 701086c76d4e7b811ca67a9dd2112e69a45ba254
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745879"
 ---
 # <a name="c-programming-guide"></a>Руководство по программированию на C#
 Этот раздел содержит подробные сведения о ключевых функциях языка C# и возможностях, которые платформа .NET Framework предоставляет для C#.  
