@@ -4,12 +4,12 @@ description: .NET Core — это модульная высокопроизв�
 author: richlander
 ms.date: 08/01/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: 62019c5414857ed5eee99a6a60f5b0b183fe25e8
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 79a0c09074159160dd01b0c7970612f7058cc3fc
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030286"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920627"
 ---
 # <a name="net-core-guide"></a>Руководство по .NET Core
 
@@ -21,7 +21,7 @@ ms.locfileid: "54030286"
 
 ## <a name="download-net-core-22"></a>Скачать .NET Core 2.2
 
-Скачайте [пакет SDK для .NET Core 2.2](https://www.microsoft.com/net/download), чтобы опробовать .NET Core на компьютере под управлением Windows, macOS или Linux. Если вы предпочитаете использовать контейнеры Docker, посетите страницу [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/).
+Скачайте [пакет SDK для .NET Core 2.2](https://www.microsoft.com/net/download), чтобы опробовать .NET Core на компьютере под управлением Windows, macOS или Linux. Если вы предпочитаете использовать контейнеры Docker, перейдите на страницу [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/).
 
 Если вам нужна другая версия .NET Core, все версии доступны на [странице скачиваемых файлов .NET Core](https://www.microsoft.com/net/download/archives).
 

@@ -1,7 +1,13 @@
 ---
-title: 'Учебники по C#'
-description: "Эти руководства расскажут о возможностях языка\_C# и научат вас создавать на нем программы."
+title: Учебники по C#
+description: Эти руководства расскажут о возможностях языка C# и научат вас создавать на нем программы.
 ms.date: 10/25/2018
+ms.openlocfilehash: 54c05f2fcc80d21b10cbb6a2baee37014aa62d07
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920491"
 ---
 # <a name="c-tutorials"></a>Учебники по C#
 
@@ -11,33 +17,29 @@ ms.date: 10/25/2018
 
 В первых занятиях с помощью небольших фрагментов кода объясняются основные понятия языка C#. Вы изучите основы синтаксиса C# и научитесь работать с такими типами данных, как строки, числа и логические значения. Вся серия интерактивна, и уже через считанные минуты вы будете писать и запускать собственный код. Для первых занятий не требуются какие-либо знания в области программировании или опыт работы с языком C#.
 
-## <a name="hello-worldintro-to-csharphello-worldyml"></a>[Hello world](intro-to-csharp/hello-world.yml)
+## [<a name="hello-world"></a>Здравствуй, мир](intro-to-csharp/hello-world.yml)
 
 В руководстве [Hello World](intro-to-csharp/hello-world.yml) вы создадите самую простую программу на C#. Вы ознакомитесь с типом `string` и способами работы с текстом.
 
-## <a name="numbers-in-cintro-to-csharpnumbers-in-csharpyml"></a>[Числа в C#](intro-to-csharp/numbers-in-csharp.yml)
+## [<a name="numbers-in-c"></a>Числа в C#](intro-to-csharp/numbers-in-csharp.yml)
 
 Из руководства [Числа в C#](intro-to-csharp/numbers-in-csharp.yml) вы узнаете, как на компьютере хранятся числа и как выполнять вычисления с разными числовыми типами. Вы ознакомитесь с основами округления и научитесь выполнять математические вычисления с помощью C#. Это руководство можно изучить, [используя локальный компьютер](intro-to-csharp/numbers-in-csharp-local.md).
 
 В этом руководстве предполагается, что вы уже прошли занятие [Hello World](intro-to-csharp/hello-world.yml).
 
-## <a name="branches-and-loopsintro-to-csharpbranches-and-loopsyml"></a>[Ветви и циклы](intro-to-csharp/branches-and-loops.yml)
+## [<a name="branches-and-loops"></a>Ветви и циклы](intro-to-csharp/branches-and-loops.yml)
 
 В руководстве [Ветви и циклы](intro-to-csharp/branches-and-loops.yml) представлены общие принципы организации ветвления кода в зависимости от значений, хранящихся в переменных. Вы узнаете, что такое поток управления, являющийся основой принятия решений и выбора различных действий в программах. Это руководство можно изучить, [используя локальный компьютер](intro-to-csharp/branches-and-loops-local.md).
 
 В этом руководстве предполагается, что вы уже прошли занятия [Hello World](intro-to-csharp/hello-world.yml) и [Числа в C#](intro-to-csharp/numbers-in-csharp.yml).
 
-## <a name="string-interpolationintro-to-csharpinterpolated-stringsyml"></a>[Интерполяция строк](intro-to-csharp/interpolated-strings.yml)
-
-В руководстве [Интерполяция строк](intro-to-csharp/interpolated-strings.yml) демонстрируется, как вставлять значения в строки. Вы узнаете, как создать интерполированную строку с внедренными выражениями C# и как управлять текстовым представлением результатов выражений в итоговой строке. Это руководство можно изучить, [используя локальный компьютер](intro-to-csharp/interpolated-strings-local.md).
-
-## <a name="list-collectionintro-to-csharplist-collectionyml"></a>[Коллекция списков](intro-to-csharp/list-collection.yml)
+## [<a name="list-collection"></a>Коллекция списков](intro-to-csharp/list-collection.yml)
 
 Занятие [Коллекция списков](intro-to-csharp/list-collection.yml) содержит обзор типа "Коллекция списков", в котором хранятся последовательности данных. Вы узнаете, как добавлять и удалять элементы, выполнять их поиск и сортировать списки. Вы ознакомитесь с различными типами списков. Это руководство можно изучить, [используя локальный компьютер](intro-to-csharp/arrays-and-collections.md).
 
 В этом руководстве предполагается, что вы уже прошли перечисленные выше занятия.
 
-## <a name="introduction-to-c----work-locallyintro-to-csharplocal-environmentmd"></a>[Знакомство с C#: работа в локальной среде](intro-to-csharp/local-environment.md)
+## [<a name="introduction-to-c----work-locally"></a>Знакомство с C#: работа в локальной среде](intro-to-csharp/local-environment.md)
 
 Все ознакомительные руководства, в которых используется пример приложения "Hello World", можно проходить в локальной среде разработки. В конце каждого руководства вам предлагается на выбор возможность пройти следующее занятие в браузере или на локальном компьютере. Чтобы настроить среду и продолжить изучение следующего руководства на компьютере, можно воспользоваться соответствующими ссылками.
 
@@ -58,3 +60,6 @@ ms.date: 10/25/2018
 * [Inheritance in C# and .NET](inheritance.md) (Наследование в C# и .NET). Демонстрирует наследование в C#, в том числе использование наследования для определения базовых классов, абстрактных базовых классов и производных классов.
 * [Working with LINQ](working-with-linq.md) (Работа с LINQ). Демонстрирует множество функций LINQ и элементы языка, которые их поддерживают.
 * [Использование атрибутов](attributes.md). Описывает создание и использование атрибутов в C#.
+* В руководстве [Интерполяция строк](exploration/interpolated-strings.yml) демонстрируется, как вставлять значения в строки. Вы узнаете, как создать интерполированную строку с внедренными выражениями C# и как управлять текстовым представлением результатов выражений в итоговой строке. Это руководство можно изучить, [используя локальный компьютер](exploration/interpolated-strings-local.md).
+
+

@@ -1,11 +1,16 @@
 ---
 title: Управление версиями среды выполнения пакета SDK для .NET Core
-description: 'В этой статье описано, как осуществляется управление версиями среды выполнения и пакета SDK для .NET Core.'
+description: В этой статье описано, как осуществляется управление версиями среды выполнения и пакета SDK для .NET Core.
 author: bleroy
 ms.date: 07/26/2018
 ms.custom: seodec18
+ms.openlocfilehash: e060eac3a63ff869a2fe51fae0166b75329fcb49
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58921290"
 ---
-
 # <a name="overview-of-how-net-core-is-versioned"></a>Общие сведения об управлении версиями в .NET Core
 
 Под термином .NET Core понимается среда выполнения .NET Core и пакет SDK для .NET Core, который содержит средства, необходимые вам для разработки приложений. Пакеты SDK для .NET Core предназначены для работы с любыми предыдущими версиями среды выполнения .NET Core. В этой статье приводятся сведения о нумерации версий среды выполнения и пакетов SDK. Описание номеров версий .NET Standard можно найти в статье с вводными сведениями о [.NET Standard](../../standard/net-standard.md#net-implementation-support).
@@ -87,7 +92,7 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 .NET Standard состоит из базовой сборки .NET. Существует множество реализаций, соответствующих конкретным платформам. Базовая сборка содержит определение API-интерфейсов .NET, которые являются частью определенной версии .NET Standard. Каждая реализация выполняет контракт .NET Standard на конкретной платформе. Дополнительные сведения о .NET Standard см. в статье о [.NET Standard](../../standard/net-standard.md) руководства по .NET.
 
-Базовая сборка .NET Standard использует схему управления версиями `MAJOR.MINOR`. Уровень `PATCH` бесполезен для .NET Standard, так как он предоставляет только спецификацию API (без реализации), а по определению любое изменение в API соответствует изменению набора возможностей и, таким образом, новой версии `MINOR`.
+Базовая сборка .NET Standard использует схему управления версиями `MAJOR.MINOR`. `PATCH` Этот уровень бесполезен для .NET Standard, так как он предоставляет только спецификацию API (без реализации), а любое изменение в API по определению соответствует изменению набора возможностей и, таким образом, новой версии `MINOR`.
 
 Реализации на каждой платформе обычно обновляются в составе выпуска под эту платформу и потому незаметны для программистов, использующих на ней .NET Standard.
 
@@ -101,8 +106,8 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 ## <a name="see-also"></a>См. также
 
-- [Целевые платформы](../../standard/frameworks.md)
-- [Упаковка дистрибутивов .NET Core](../build/distribution-packaging.md)
-- [Справочные материалы по жизненному циклу поддержки .NET Core](https://www.microsoft.com/net/core/support)
+- [Требуемые версии .NET Framework](../../standard/frameworks.md)
+- [Упаковка дистрибутивов .NET Core](../build/distribution-packaging.md)
+- [Справочные материалы по жизненному циклу поддержки .NET Core](https://www.microsoft.com/net/core/support)
 - [Привязка версий .NET Core 2+](https://github.com/dotnet/designs/issues/3)
-- [Образы Docker для .NET Core](https://hub.docker.com/r/microsoft/dotnet/)
+- [Образы Docker для .NET Core](https://hub.docker.com/_/microsoft-dotnet-core/)
