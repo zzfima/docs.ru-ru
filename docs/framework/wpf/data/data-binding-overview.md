@@ -10,15 +10,15 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: 9e55714db55168c95f744665165e333d7f2ca730
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: 318473c146f5822259a3131192ce33b9d28a5461
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634561"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055356"
 ---
 # <a name="data-binding-overview"></a>Общие сведения о привязке данных
-Привязка данных [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет приложениям простой и последовательный способ представления данных и взаимодействия с ними. Можно связывать элементы с данными из различных источников данных в виде объектов [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] и [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. <xref:System.Windows.Controls.ContentControl>например <xref:System.Windows.Controls.Button> и <xref:System.Windows.Controls.ItemsControl>, например <xref:System.Windows.Controls.ListBox> и <xref:System.Windows.Controls.ListView> у встроенной возможностью включения гибких стилей для отдельных элементов данных и коллекций элементов данных. Представления сортировки, фильтрации и группировки могут быть организованы поверх данных.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Привязка данных обеспечивает простой и последовательный способ представления и взаимодействия с данными приложениях. Можно связывать элементы с данными из различных источников данных в виде объектов [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] и [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. <xref:System.Windows.Controls.ContentControl>например <xref:System.Windows.Controls.Button> и <xref:System.Windows.Controls.ItemsControl>, например <xref:System.Windows.Controls.ListBox> и <xref:System.Windows.Controls.ListView> у встроенной возможностью включения гибких стилей для отдельных элементов данных и коллекций элементов данных. Представления сортировки, фильтрации и группировки могут быть организованы поверх данных.  
   
  Функции привязки данных в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] имеют несколько преимуществ перед традиционными моделями, включая широкий диапазон свойств, которые внутренне поддерживают привязку данных, гибкое представление данных [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] и четкое разделение бизнес-логики и [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
   
@@ -69,7 +69,7 @@ ms.locfileid: "58634561"
   
 -   Целевое свойство должно быть свойством зависимостей. Большинство <xref:System.Windows.UIElement> свойств являются свойствами зависимостей, и большинство свойств зависимостей, за исключением доступных только для чтения, по умолчанию поддерживает привязку данных. (Только <xref:System.Windows.DependencyObject> типы могут определять свойства зависимостей и все <xref:System.Windows.UIElement>являются производными от <xref:System.Windows.DependencyObject>.)  
   
--   Несмотря на то что это не указано на рисунке, следует отметить, что источник привязки не обязан быть пользовательским объектом [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]. Привязка данных [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] поддерживает данные в виде объектов [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] и [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]. Представлены некоторые, возможно, источнике привязки <xref:System.Windows.UIElement>, любой объект списка [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] объекта, связанного с [!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] данных или веб-службы или XmlNode, содержащий ваш [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] данных. Дополнительные сведения см. в разделе [Общие сведения об источниках привязки](binding-sources-overview.md).  
+-   Несмотря на то что это не указано на рисунке, следует отметить, что источник привязки не обязан быть пользовательским объектом [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Привязка данных поддерживает данные в виде [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] объектов и [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]. Представлены некоторые, возможно, источнике привязки <xref:System.Windows.UIElement>, любой объект списка [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] объекта, связанного с [!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] данных или веб-службы или XmlNode, содержащий ваш [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] данных. Дополнительные сведения см. в разделе [Общие сведения об источниках привязки](binding-sources-overview.md).  
   
  В процессе чтения других разделов [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] важно помнить, что при связывании цель привязки *привязывается к* источнику привязки. Например, при отображении некоторых базовых [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] данные в <xref:System.Windows.Controls.ListBox> с использованием привязки данных, выполняется привязка к <xref:System.Windows.Controls.ListBox> для [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] данных.  
   
@@ -175,9 +175,9 @@ ms.locfileid: "58634561"
   
  Объект <xref:System.Windows.Data.BindingExpression> объекта можно получить с помощью возвращаемого значения метода <xref:System.Windows.Data.BindingOperations.GetBindingExpression%2A> в объекте с привязкой к данным. В следующих разделах описываются некоторые примеры использования <xref:System.Windows.Data.BindingExpression> класса:  
   
--   [Практическое руководство. Получение объекта привязки из свойства целевого объекта привязки](how-to-get-the-binding-object-from-a-bound-target-property.md)  
+-   [Получение объекта привязки из свойства целевого объекта привязки](how-to-get-the-binding-object-from-a-bound-target-property.md)  
   
--   [Практическое руководство. Управление обновлением источника из поля TextBox](how-to-control-when-the-textbox-text-updates-the-source.md)  
+-   [Управление обновлением источника из поля TextBox](how-to-control-when-the-textbox-text-updates-the-source.md)  
   
 <a name="data_conversion"></a>   
 ## <a name="data-conversion"></a>Преобразование данных  
@@ -431,9 +431,9 @@ ms.locfileid: "58634561"
   
 ## <a name="see-also"></a>См. также
 - <xref:System.Windows.Controls.DataErrorValidationRule>
-- [Новые возможности в WPF версии 4.5](../getting-started/whats-new.md)
+- [Новые возможности WPF версии 4.5](../getting-started/whats-new.md)
 - [Привязка к результатам запроса LINQ](how-to-bind-to-the-results-of-a-linq-query.md)
 - [Привязка данных](../advanced/optimizing-performance-data-binding.md)
 - [Пример привязки данных](https://go.microsoft.com/fwlink/?LinkID=163703)
-- [Разделы практического руководства](data-binding-how-to-topics.md)
+- [Практические руководства](data-binding-how-to-topics.md)
 - [Привязка к источнику данных ADO.NET](how-to-bind-to-an-ado-net-data-source.md)

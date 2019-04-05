@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Duplex Service Contract
 ms.assetid: bc5de6b6-1a63-42a3-919a-67d21bae24e0
-ms.openlocfilehash: 246c5f489f4cc0076303de8383506898fe053ae5
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 1135cf211c3a858f495cd1424d3a28f3a6c37f7e
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843157"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59054966"
 ---
 # <a name="duplex"></a>Дуплекс
 Этот образец демонстрирует, как определить и реализовать дуплексный контракт. Дуплексная связь имеет место, когда клиент устанавливает сеанс со службой и предоставляет службе канал, по которому служба может отправлять сообщения обратно клиенту. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md). Дуплексный контракт определяется в виде пары интерфейсов - основной интерфейс от клиента к службе и интерфейс обратного вызова от службы к клиенту. В этом образце интерфейс `ICalculatorDuplex` позволяет клиенту выполнять математические операции, вычисляя результат в ходе сеанса. Служба возвращает результаты в интерфейсе `ICalculatorDuplexCallback`. Для дуплексного контракта требуется сеанс, поскольку необходимо установить контекст для корреляции набора сообщений, передаваемых между клиентом и службой.  
@@ -61,14 +61,14 @@ public class CalculatorService : ICalculatorDuplex
   
     public void Clear()  
     {  
-        Callback.Equation(equation + " = " + result.ToString());  
+        Callback.Equation($"{equation} = {result}");  
         equation = result.ToString();  
     }  
   
     public void AddTo(double n)  
     {  
         result += n;  
-        equation += " + " + n.ToString();  
+        equation += $" + {n}";  
         Callback.Result(result);  
     }  
     

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b683784489cd68b66b4f9660f0df5e63b676a91c
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: a0113ef84c2b3e42f6d14d25747f7fdbb836a212
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921355"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055317"
 ---
 # <a name="working-with-calendars"></a>Работа с календарями
 
@@ -163,7 +163,7 @@ ms.locfileid: "58921355"
 | <xref:System.Globalization.ThaiBuddhistCalendar>      | <xref:System.Globalization.ThaiBuddhistCalendar.ThaiBuddhistEra>  |
 | <xref:System.Globalization.UmAlQuraCalendar>          | <xref:System.Globalization.UmAlQuraCalendar.UmAlQuraEra>          |
 
-Имя, соответствующее номеру конкретной эры, которое можно получить, передав номер эры методу <xref:System.Globalization.DateTimeFormatInfo.GetEraName%2A?displayProperty=nameWithType> или <xref:System.Globalization.DateTimeFormatInfo.GetAbbreviatedEraName%2A?displayProperty=nameWithType>. В следующем примере эти методы вызываются для получения информации о поддержке эр в классе <xref:System.Globalization.GregorianCalendar>.
+Имя, соответствующее номеру конкретной эры, которое можно получить, передав номер эры методу <xref:System.Globalization.DateTimeFormatInfo.GetEraName%2A?displayProperty=nameWithType> или <xref:System.Globalization.DateTimeFormatInfo.GetAbbreviatedEraName%2A?displayProperty=nameWithType>. В следующем примере эти методы вызываются для получения информации о поддержке эр в классе <xref:System.Globalization.GregorianCalendar>. Он отображает дату григорианского календаря, который соответствует 1 января 1 второго года текущей эры, а также дата григорианского календаря, соответствующее 1 января 1 второго года каждой эре, поддерживаемой японского календаря.
 
 [!code-csharp[Conceptual.Calendars#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/instantiatewithera1.cs)]
 [!code-vb[Conceptual.Calendars#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/instantiatewithera1.vb)]
@@ -172,7 +172,7 @@ ms.locfileid: "58921355"
 
 ### <a name="instantiating-a-date-with-an-era"></a>Создание даты с указанием эры
 
-Для двух <xref:System.Globalization.Calendar> классов, поддерживающих несколько эр, дата, состоящая из определенный год, месяц и день месяца значения могут быть неоднозначными. Например, все эр, поддерживаемых <xref:System.Globalization.JapaneseCalendar> годы, номер которого равен 1. Обычно если эра не указана, методы даты и времени и календаря предполагают, что значения относятся к текущей эре. Это справедливо для <xref:System.DateTime.%23ctor%2A> и <xref:System.DateTimeOffset.%23ctor%2A> конструкторов, содержащих параметры типа <xref:System.Globalization.Calendar>, а также [JapaneseCalendar.ToDateTime](xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)) и [JapaneseLunisolarCalendar.ToDateTime ](xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)) методы. В следующем примере создается дату, которая представляет 1 января 1 второго года неуказанных эры. Как видно в результатах показано в примере Дата интерпретируется как второй год эры Хэйсэй, во время выполнения в этом примере текущей эры. Эра, 平成, предшествует году, в строку, возвращаемую <xref:System.DateTime.ToString(System.String,System.IFormatProvider)?displayProperty=nameWithType> метод и соответствует 1 января 1990 года по григорианскому календарю. (Диапазон эры Хэйсэй — из 1989 к 2019 г. по григорианскому календарю).
+Для двух <xref:System.Globalization.Calendar> классов, поддерживающих несколько эр, дата, состоящая из определенный год, месяц и день месяца значения могут быть неоднозначными. Например, все эр, поддерживаемых <xref:System.Globalization.JapaneseCalendar> годы, номер которого равен 1. Обычно если эра не указана, методы даты и времени и календаря предполагают, что значения относятся к текущей эре. Это справедливо для <xref:System.DateTime.%23ctor%2A> и <xref:System.DateTimeOffset.%23ctor%2A> конструкторов, содержащих параметры типа <xref:System.Globalization.Calendar>, а также [JapaneseCalendar.ToDateTime](xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)) и [JapaneseLunisolarCalendar.ToDateTime ](xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)) методы. В следующем примере создается дату, которая представляет 1 января 1 второго года неуказанных эры. Если при текущей эры эру Reiwa выполнения приведенного примера, дата интерпретируется как второй год Reiwa эры. Эра, 令和, предшествует году, в строку, возвращаемую <xref:System.DateTime.ToString(System.String,System.IFormatProvider)?displayProperty=nameWithType> метод и соответствует 1 января 2020 г., по григорианскому календарю. (Эра Reiwa начинается 2019 года по григорианскому календарю).
 
 [!code-csharp[A date in the current era](~/samples/snippets/standard/datetime/calendars/current-era/cs/program.cs)]
 [!code-vb[A date in the current era](~/samples/snippets/standard/datetime/calendars/current-era/vb/program.vb)]

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - graphics features [WPF]
 - transition effects [WPF]
 ms.assetid: 1817d9dc-3d6c-46cb-afc8-63b0bae35e37
-ms.openlocfilehash: cc97fda98badfc27e8b92a0dde6d5e419575ac6c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 87ae55c454a72797569de4cd944984ba18c3b2ca
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379566"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055070"
 ---
 # <a name="graphics-and-multimedia"></a>Графика и мультимедиа
 <a name="introduction"></a>
@@ -53,7 +53,7 @@ ms.locfileid: "57379566"
  WPF включает поддержку двумерной графики высокого качества. Возможности включают кисти, геометрические объекты, изображения, фигуры и преобразования. Дополнительные сведения см. в разделе [Графика](graphics.md). Отрисовка графических элементов основана на <xref:System.Windows.Media.Visual> класса. Структура визуальных объектов на экране описывается визуальным деревом. Дополнительные сведения см. в разделе [Общие сведения об отрисовке графики в WPF](wpf-graphics-rendering-overview.md).  
   
 ### <a name="2-d-shapes"></a>Двумерные фигуры  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] предоставляет библиотеку стандартных векторных фигур [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)], таких как прямоугольники и эллипсы, показанные на рисунке ниже.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] предоставляет библиотеку часто используемые, векторных [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] фигур, таких как прямоугольники и эллипсы, которые показаны на следующем рисунке.  
   
  ![Эллипсы и прямоугольники](./media/wpfintrofigure4.PNG "WPFIntroFigure4")  
   
@@ -101,7 +101,7 @@ End Class
  Более подробную информацию см. в разделе [Общие сведения о классе Geometry](geometry-overview.md). Вводный пример в разделе [Примеры геометрических объектов](https://go.microsoft.com/fwlink/?LinkID=159989).  
   
 ### <a name="2-d-effects"></a>Двумерные эффекты  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] предоставляет библиотеку классов [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)], которые можно использовать для создания различных эффектов. Возможности отрисовки в [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] для [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] позволяют рисовать элементы [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], имеющие градиентные заливки, растровые изображения, рисунки и видео, а также управлять ими с помощью вращения, масштабирования и наклона. На следующем рисунке приведен пример многих эффектов, которых можно добиться с помощью кисти [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] предоставляет библиотеку [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] классы, которые можно использовать для создания различных эффектов. Возможности отрисовки в [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] для [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] позволяют рисовать элементы [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], имеющие градиентные заливки, растровые изображения, рисунки и видео, а также управлять ими с помощью вращения, масштабирования и наклона. На следующем рисунке приведен пример многих эффектов, которых можно добиться с помощью кисти [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
   
  ![Иллюстрации различных кистей](./media/wpfintrofigure6.PNG "WPFIntroFigure6")  
   
@@ -109,7 +109,7 @@ End Class
   
 <a name="rendering"></a>   
 ## <a name="3-d-rendering"></a>Трехмерная отрисовка  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] предоставляет набор возможностей отрисовки [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)], которые интегрируются с поддержкой графики [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] для создания более интересного макета, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] и визуализации данных. С одной стороны, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] позволяет отрисовывать изображения [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] на поверхностях фигур [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)], что показано на рисунке ниже.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] предоставляет набор [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] возможности отрисовки, которые интегрируются с [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] поддержки графики в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] в порядке для создания более интересного макета, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]и визуализации данных. С одной стороны, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] позволяет отрисовывать изображения [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] на поверхностях фигур [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)], что показано на рисунке ниже.  
   
  ![Снимок экрана примера Visual3D](./media/wpfintrofigure13.png "WPFIntroFigure13")  
   
@@ -130,7 +130,7 @@ End Class
 ### <a name="images"></a>Изображений  
  Изображения, которые включают значки, фоновые рисунки и даже части анимаций, являются одним из основных элементов большинства приложений. Так как с изображениями приходится работать часто, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] предоставляет возможность работать с ними различными способами. На следующем рисунке показан один из таких способов.  
   
- ![Пример стилизации (снимок экрана)](../controls/./media/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")  
+ ![Снимок экрана стилей](../controls/./media/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")  
   
  Более подробную информацию см. в разделе [Общие сведения об обработке изображений](imaging-overview.md).  
   
@@ -152,7 +152,7 @@ End Class
 - [Двумерная графика и изображения](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [Обзор фигур и базовых средств рисования в приложении WPF](shapes-and-basic-drawing-in-wpf-overview.md)
 - [Общие сведения о закраске сплошным цветом и градиентом](painting-with-solid-colors-and-gradients-overview.md)
-- [Заполнение с использованием изображений, рисунков и визуальных элементов](painting-with-images-drawings-and-visuals.md)
-- [Анимации и практические руководства](animation-and-timing-how-to-topics.md)
+- [Рисование с помощью объектов Image, Drawing и Visual](painting-with-images-drawings-and-visuals.md)
+- [Разделы руководства по анимации и таймерам](animation-and-timing-how-to-topics.md)
 - [Обзор трехмерной графики](3-d-graphics-overview.md)
 - [Общие сведения о мультимедиа](multimedia-overview.md)

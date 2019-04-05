@@ -15,15 +15,15 @@ helpviewer_keywords:
 - styles [WPF], triggers
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
-ms.openlocfilehash: 580eb2c7efd00382f7fff24984f0ce6f6d8fa027
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bc77d6e32588f48d3a4e0dd841b98b8bc65ea4f5
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370726"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055330"
 ---
 # <a name="styling-and-templating"></a>Стилизация и использование шаблонов
-Стилизация и использование шаблонов [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] относятся к набору возможностей (стили, шаблоны, триггеры и раскадровки), которые позволяют разработчикам и дизайнерам создавать визуально привлекательные эффекты, а также создавать согласованный внешний вид своих продуктов. Несмотря на то что разработчики и дизайнеры могут создавать внешний вид отдельно для каждого приложения, надежная модель стилизации и использования шаблонов необходима для поддержки и совместного использования внешнего вида как внутри одного приложения, так и в ряде приложений. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет такую модель.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Стилизация и использование шаблонов относятся к набору возможностей (стили, шаблоны, триггеры и раскадровки), которые позволяют разработчикам и дизайнерам создавать визуально привлекательные эффекты и создавать согласованный внешний вид своего продукта. Несмотря на то что разработчики и дизайнеры могут создавать внешний вид отдельно для каждого приложения, надежная модель стилизации и использования шаблонов необходима для поддержки и совместного использования внешнего вида как внутри одного приложения, так и в ряде приложений. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет такую модель.  
   
  Еще одной возможностью модели стилизации [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] является разделение представления и логики. Это означает, что дизайнеры могут создавать внешний вид приложения только с помощью [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] в то же самое время, когда разработчики работают над логикой программы, используя языки C# или Visual Basic.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "57370726"
   
  [!code-xaml[StylingIntroSample_snippet#TextBlocks](~/samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSample_snippet/CSharp/Window1.xaml#textblocks)]  
   
- ![Пример стилизации (снимок экрана)](./media/stylingintro-textblocksbefore.PNG "StylingIntro_TextBlocksBefore")  
+ ![Снимок экрана стилей](./media/stylingintro-textblocksbefore.PNG "StylingIntro_TextBlocksBefore")  
   
  Можно изменить внешний вид по умолчанию, задав свойства, такие как <xref:System.Windows.Controls.Control.FontSize%2A> и <xref:System.Windows.Controls.Control.FontFamily%2A>, на каждом <xref:System.Windows.Controls.TextBlock> напрямую. Тем не менее если вы хотите, чтобы ваши <xref:System.Windows.Controls.TextBlock> элементов совместно использовать некоторые свойства, можно создать <xref:System.Windows.Style> в `Resources` части вашей [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] файл, как показано ниже:  
   
@@ -57,7 +57,7 @@ ms.locfileid: "57370726"
   
  Теперь <xref:System.Windows.Controls.TextBlock> элементов будет выглядеть следующим образом:  
   
- ![Пример стилизации (снимок экрана)](./media/stylingintro-textblocksbasestyle.PNG "StylingIntro_TextBlocksBaseStyle")  
+ ![Снимок экрана стилей](./media/stylingintro-textblocksbasestyle.PNG "StylingIntro_TextBlocksBaseStyle")  
   
 ### <a name="extending-styles"></a>Расширение стилей  
  Возможно, вам необходимо два <xref:System.Windows.Controls.TextBlock> элементы, чтобы совместно использовать некоторые свойства, такие как <xref:System.Windows.Controls.Control.FontFamily%2A> и выровнять по центру <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, и при этом текст «Мои рисунки» обладал некоторыми дополнительными свойствами. Это можно сделать, создав новый стиль на основе первого стиля, как показано ниже:  
@@ -165,7 +165,7 @@ ms.locfileid: "57370726"
   
  На следующем рисунке указатель мыши указывает на третий элемент:  
   
- ![Пример стилизации (снимок экрана)](./media/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")  
+ ![Снимок экрана стилей](./media/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")  
   
 ### <a name="multitriggers-datatriggers-and-multidatatriggers"></a>Объекты MultiTrigger, DataTrigger и MultiDataTrigger  
  В дополнение к <xref:System.Windows.Trigger> и <xref:System.Windows.EventTrigger>, существуют другие типы триггеров. <xref:System.Windows.MultiTrigger> позволяет задавать значения свойств на основе нескольких условий. Использовании <xref:System.Windows.DataTrigger> и <xref:System.Windows.MultiDataTrigger> Если это свойство условия имеет привязкой к данным.  
@@ -198,5 +198,5 @@ ms.locfileid: "57370726"
   
 ## <a name="see-also"></a>См. также
 - [URI типа "pack" в WPF](../app-development/pack-uris-in-wpf.md)
-- [Практическое руководство. Найти, созданного шаблоном ControlTemplate](how-to-find-controltemplate-generated-elements.md)
+- [Практическое руководство. Поиск элемента, созданного шаблоном ControlTemplate](how-to-find-controltemplate-generated-elements.md)
 - [Поиск элементов, созданных с использованием шаблона DataTemplate](../data/how-to-find-datatemplate-generated-elements.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], ToolTip
 - popups [WPF]
 ms.assetid: a3cb42d6-6ce3-4aa0-a557-2cc5b142f1e4
-ms.openlocfilehash: 8f471b26daa89bc513b36eaed5336aa6262cb26d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9fbb2fa4d403f59619792271eb3b8046cfa23949
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367574"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59054992"
 ---
 # <a name="tooltip"></a>ToolTip
 Подсказка — это небольшое всплывающее окно, которое отображается, когда пользователь задерживает указатель мыши над элементом, например, на <xref:System.Windows.Controls.Button>.  
@@ -26,7 +26,7 @@ ms.locfileid: "57367574"
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения о всплывающих подсказках](tooltip-overview.md)  
-  [Разделы практического руководства](tooltip-how-to-topics.md)  
+  [Практические руководства](tooltip-how-to-topics.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Controls.ToolTip>  
@@ -35,4 +35,4 @@ ms.locfileid: "57367574"
   
 ## <a name="related-sections"></a>Связанные разделы  
  [Общие сведения о контекстном меню](popup-overview.md)  
-  [Разделы практического руководства](popup-how-to-topics.md)
+  [Практические руководства](popup-how-to-topics.md)

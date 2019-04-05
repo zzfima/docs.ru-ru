@@ -9,18 +9,18 @@ helpviewer_keywords:
 - data binding [WPF], timing of source updates
 - timing of source updates [WPF]
 ms.assetid: ffb7b96a-351d-4c68-81e7-054033781c64
-ms.openlocfilehash: 702f06a37aa98e3a84858a590655e8a4311cfa48
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 28c1e0e23247cfaf48343bf10bb79c4862623fb6
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362140"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055135"
 ---
 # <a name="how-to-control-when-the-textbox-text-updates-the-source"></a>Практическое руководство. Управление обновлением источника из поля TextBox
 В этом разделе описывается использование <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> свойство, чтобы управлять временем обновлений источника привязки. В этом разделе используются <xref:System.Windows.Controls.TextBox> элемента управления в качестве примера.  
   
 ## <a name="example"></a>Пример  
- Языковой элемент <xref:System.Windows.Controls.TextBox>.<xref:System.Windows.Controls.TextBox.Text%2A> свойство имеет значение по умолчанию <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> значение <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>. Это означает, что если приложение имеет <xref:System.Windows.Controls.TextBox> с привязкой к данным <xref:System.Windows.Controls.TextBox>.<xref:System.Windows.Controls.TextBox.Text%2A> свойство, введенный текст в <xref:System.Windows.Controls.TextBox> обновляет источник до <xref:System.Windows.Controls.TextBox> теряет фокус (например, при нажатии кнопки с <xref:System.Windows.Controls.TextBox>).  
+ <xref:System.Windows.Controls.TextBox>.<xref:System.Windows.Controls.TextBox.Text%2A> свойство имеет значение по умолчанию <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> значение <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>. Это означает, что если приложение имеет <xref:System.Windows.Controls.TextBox> с привязкой к данным <xref:System.Windows.Controls.TextBox>.<xref:System.Windows.Controls.TextBox.Text%2A> свойство, введенный текст в <xref:System.Windows.Controls.TextBox> обновляет источник до <xref:System.Windows.Controls.TextBox> теряет фокус (например, при нажатии кнопки с <xref:System.Windows.Controls.TextBox>).  
   
  Источник обновляться по мере ввода, задайте <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> привязки <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>. В следующем примере, выделенные строки кода показывают, что `Text` свойствах обоих <xref:System.Windows.Controls.TextBox> и <xref:System.Windows.Controls.TextBlock> привязаны к тому же свойству источника. <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> Свойство <xref:System.Windows.Controls.TextBox> привязки имеет значение <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>.  
   
@@ -28,7 +28,7 @@ ms.locfileid: "57362140"
   
  В результате <xref:System.Windows.Controls.TextBlock> отображается тот же текст (поскольку источник изменяется), который пользователь вводит текст в <xref:System.Windows.Controls.TextBox>, как показано на следующем снимке экрана примера:  
   
- ![Снимок экрана примера простой привязки данных ](./media/databindingsimplebindingsample2.png "DataBindingSimpleBindingSample2")  
+ ![Снимок экрана примера привязки простых данных](./media/databindingsimplebindingsample2.png "DataBindingSimpleBindingSample2")  
   
  Если у вас есть диалоговое окно или редактируемая пользователем форма и требуется отложить обновление источника, пока пользователь не завершит редактирование поля и нажимает кнопку «ОК», можно задать <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> значение привязки в <xref:System.Windows.Data.UpdateSourceTrigger.Explicit>, как показано в следующем примере:  
   
@@ -46,4 +46,4 @@ ms.locfileid: "57362140"
 >  <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> Свойство относится к обновлению источника и поэтому подходит только для <xref:System.Windows.Data.BindingMode.TwoWay> или <xref:System.Windows.Data.BindingMode.OneWayToSource> привязки. Для <xref:System.Windows.Data.BindingMode.TwoWay> и <xref:System.Windows.Data.BindingMode.OneWayToSource> привязки для работы, исходный объект должен предоставить уведомление об изменениях свойств. Можно изучить примеры, приведенные в этом разделе, для получения дополнительной информации. Кроме того, см. раздел [Реализация уведомления об изменении свойства](how-to-implement-property-change-notification.md).  
   
 ## <a name="see-also"></a>См. также
-- [Разделы практического руководства](data-binding-how-to-topics.md)
+- [Практические руководства](data-binding-how-to-topics.md)

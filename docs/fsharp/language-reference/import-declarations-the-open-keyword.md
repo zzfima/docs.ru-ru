@@ -1,13 +1,13 @@
 ---
 title: 'Объявления импорта: Ключевое слово open'
 description: Дополнительные сведения о F# импорта, объявления и как указать модуль или пространство имен, элементы которого можно ссылаться без использования полного имени.
-ms.date: 05/16/2016
-ms.openlocfilehash: 261ffdfdea2860db72b052b2ffeb5c7e5d652c24
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 04/04/2019
+ms.openlocfilehash: ad64190c3243c57a185f3b864270fca80590f079
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610324"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055005"
 ---
 # <a name="import-declarations-the-open-keyword"></a>Объявления импорта: `open` Ключевое слово
 
@@ -50,7 +50,7 @@ printfn "%A" empty
 
 Некоторые пространства имен настолько часто используются в F# кода, что они открываются автоматически, без необходимости объявления явный Импорт. В следующей таблице показаны пространства имен, открываемые по умолчанию.
 
-|Пространство имен|Описание:|
+|Пространство имен|Описание|
 |---------|-----------|
 |`Microsoft.FSharp.Core`|Содержит основные F# введите определения для встроенных типов, таких как `int` и `float`.|
 |`Microsoft.FSharp.Core.Operators`|Содержит основные арифметические операции, такие как `+` и `*`.|
@@ -68,6 +68,6 @@ printfn "%A" empty
 
 ## <a name="see-also"></a>См. также
 
-- [# Справочник по языку](index.md)
+- [Справочник по языку F#](index.md)
 - [Пространства имен](namespaces.md)
 - [Модули](modules.md)

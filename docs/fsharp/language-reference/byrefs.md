@@ -2,12 +2,12 @@
 title: Byrefs
 description: Дополнительные сведения о byref и типов, схожих с byref в F#, которые используются для программирования низкого уровня.
 ms.date: 09/02/2018
-ms.openlocfilehash: d8d8b2f0c9965a06e823e9be4e8d1b34201cc471
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c0bad26672fbb9eb315eee1c3e275183ddeb9297
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976555"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055369"
 ---
 # <a name="byrefs"></a>Byrefs
 
@@ -56,9 +56,10 @@ open System
 
 let f (dt: inref<DateTime>) =
     printfn "Now: %s" (dt.ToString())
-
-let dt = DateTime.Now
-f &dt // Pass a pointer to 'dt'
+    
+let usage =
+    let dt = DateTime.Now
+    f &dt // Pass a pointer to 'dt'
 ```
 
 Для записи указателя с помощью `outref<'T>` или `byref<'T>`, кроме того, необходимо получить указатель на значение `mutable`.
@@ -84,7 +85,7 @@ f &dt
 Рассмотрим следующий код.
 
 ```fsharp
-let f (x: inref<SomeStruct>) = s.SomeField
+let f (x: inref<SomeStruct>) = x.SomeField
 ```
 
 Семантически это означает следующее:
@@ -111,19 +112,19 @@ let f (x: inref<SomeStruct>) = s.SomeField
 
 |Конструкция C#|F#Выводит|
 |------------|---------|
-|`ref` Возвращаемое значение|`outref<'T>`|
-|`ref readonly` Возвращаемое значение|`inref<'T>`|
-|`in ref` Параметр|`inref<'T>`|
-|`out ref` Параметр|`outref<'T>`|
+|`ref` возвращаемое значение|`outref<'T>`|
+|`ref readonly` возвращаемое значение|`inref<'T>`|
+|`in ref` параметр|`inref<'T>`|
+|`out ref` параметр|`outref<'T>`|
 
 В следующей таблице показано, что F# выдает:
 
 |F#Конструкция|Выпущенный конструкция|
 |------------|-----------------|
-|`inref<'T>` Аргумент|`[In]` аргумент атрибута|
-|`inref<'T>` вернуть|`modreq` значение атрибута|
+|`inref<'T>` аргумент|`[In]` аргумент атрибута|
+|`inref<'T>` return|`modreq` значение атрибута|
 |`inref<'T>` в абстрактный слот или реализации|`modreq` на аргумента или возвращаемого|
-|`outref<'T>` Аргумент|`[Out]` аргумент атрибута|
+|`outref<'T>` аргумент|`[Out]` аргумент атрибута|
 
 ### <a name="type-inference-and-overloading-rules"></a>Вывод типа и правила перегрузки
 

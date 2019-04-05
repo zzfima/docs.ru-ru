@@ -10,12 +10,12 @@ helpviewer_keywords:
 - templates [WPF], data
 - data templates [WPF]
 ms.assetid: 0f4d9f8c-0230-4013-bd7b-e8e7fed01b4a
-ms.openlocfilehash: 9287656349f2a10619bfe76a36ee7855d3861cba
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 58d723ccf86e4195674c132f9fb1b76f689f57b2
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376108"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055343"
 ---
 # <a name="data-templating-overview"></a>Общие сведения о шаблонах данных
 Модель шаблонов данных WPF предоставляет большую гибкость при определении представления данных. Элементы управления WPF имеют встроенные функции для поддержки настройки представления данных. В этом разделе сначала демонстрируется определение <xref:System.Windows.DataTemplate> , а затем предоставляются другие возможности шаблонов данных, такие как выбор шаблона на основе пользовательской логики и поддержка отображения иерархических данных.  
@@ -41,7 +41,7 @@ ms.locfileid: "57376108"
 ### <a name="without-a-datatemplate"></a>Без шаблона данных DataTemplate  
  Без <xref:System.Windows.DataTemplate>наш <xref:System.Windows.Controls.ListBox> в данный момент выглядит следующим образом:  
   
- ![Снимок экрана примера шаблона данных](./media/datatemplatingintro-fig1.png "DataTemplatingIntro_fig1")  
+ ![Снимок экрана шаблонов данных](./media/datatemplatingintro-fig1.png "DataTemplatingIntro_fig1")  
   
  Что происходит: без конкретных инструкций <xref:System.Windows.Controls.ListBox> по умолчанию вызывает `ToString` при попытке отображения объектов в коллекции. Таким образом Если `Task` переопределяет метод `ToString` метод, то <xref:System.Windows.Controls.ListBox> отображает строковое представление каждого исходного объекта в базовой коллекции.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "57376108"
   
  Затем <xref:System.Windows.Controls.ListBox> выглядит следующим образом:  
   
- ![Снимок экрана примера шаблона данных](./media/datatemplatingintro-fig2.png "DataTemplatingIntro_fig2")  
+ ![Снимок экрана шаблонов данных](./media/datatemplatingintro-fig2.png "DataTemplatingIntro_fig2")  
   
  Тем не менее это характеризуется ограниченностью и негибкостью. Кроме того, если выполняется привязка к данным[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)], невозможно переопределить `ToString`.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "57376108"
   
  Теперь наши <xref:System.Windows.Controls.ListBox> выглядит следующим образом:  
   
- ![Снимок экрана примера шаблона данных](./media/datatemplatingintro-fig3.png "DataTemplatingIntro_fig3")  
+ ![Снимок экрана шаблонов данных](./media/datatemplatingintro-fig3.png "DataTemplatingIntro_fig3")  
   
 <a name="defining_datatemplate_as_a_resource"></a>   
 ### <a name="creating-the-datatemplate-as-a-resource"></a>Создание шаблона DataTemplate как ресурса  
@@ -103,7 +103,7 @@ ms.locfileid: "57376108"
   
  На следующем снимке экрана показан <xref:System.Windows.Controls.ListBox> с этим измененным <xref:System.Windows.DataTemplate>:  
   
- ![Снимок экрана примера шаблона данных](./media/datatemplatingintro-fig4.png "DataTemplatingIntro_fig4")  
+ ![Снимок экрана шаблонов данных](./media/datatemplatingintro-fig4.png "DataTemplatingIntro_fig4")  
   
  Можно установить <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> для <xref:System.Windows.HorizontalAlignment.Stretch> на <xref:System.Windows.Controls.ListBox> чтобы убедиться, что ширина элементов занимает все пространство:  
   
@@ -111,7 +111,7 @@ ms.locfileid: "57376108"
   
  С помощью <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> свойство значение <xref:System.Windows.HorizontalAlignment.Stretch>, <xref:System.Windows.Controls.ListBox> теперь выглядит следующим образом:  
   
- ![Снимок экрана примера шаблона данных](./media/datatemplatingintro-fig5.png "DataTemplatingIntro_fig5")  
+ ![Снимок экрана шаблонов данных](./media/datatemplatingintro-fig5.png "DataTemplatingIntro_fig5")  
   
 <a name="DataTrigger_to_Apply_Property_Values"></a>   
 ### <a name="use-datatriggers-to-apply-property-values"></a>Использование триггеров данных для применения значений свойств  
@@ -125,7 +125,7 @@ ms.locfileid: "57376108"
   
  Наше приложение теперь выглядит следующим образом. Домашние задачи отображаются с желтой границей, а офисные — с синей границей:  
   
- ![Снимок экрана примера шаблона данных](./media/datatemplatingintro-fig6.png "DataTemplatingIntro_fig6")  
+ ![Снимок экрана шаблонов данных](./media/datatemplatingintro-fig6.png "DataTemplatingIntro_fig6")  
   
  В этом примере <xref:System.Windows.DataTrigger> использует <xref:System.Windows.Setter> для задания значения свойства. Классы триггера также имеют <xref:System.Windows.TriggerBase.EnterActions%2A> и <xref:System.Windows.TriggerBase.ExitActions%2A> свойства, позволяющие запускать ряд действий, например анимацию. Кроме того, имеется также <xref:System.Windows.MultiDataTrigger> , позволяющий применять изменения на основе значений нескольких свойств с привязкой к данным.  
   
@@ -165,7 +165,7 @@ ms.locfileid: "57376108"
   
  С помощью выбора шаблона на месте <xref:System.Windows.Controls.ListBox> теперь выглядит следующим образом:  
   
- ![Снимок экрана примера шаблона данных](./media/datatemplatingintro-fig7.png "DataTemplatingIntro_fig7")  
+ ![Снимок экрана шаблонов данных](./media/datatemplatingintro-fig7.png "DataTemplatingIntro_fig7")  
 
 Это заключительный шаг нашего обсуждения данного примера. Полный пример см. в разделе [Вводная часть примера стилизации и использования шаблонов](https://github.com/Microsoft/WPF-Samples/tree/master/Data%20Binding/DataTemplatingIntro).
 
