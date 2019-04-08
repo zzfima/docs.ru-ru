@@ -1,0 +1,181 @@
+### YamlMime:Tutorial
+title: <span data-ttu-id="e8e5e-101">Создание форматированных строк с помощью интерполяции</span><span class="sxs-lookup"><span data-stu-id="e8e5e-101">Use string interpolation to construct formatted strings</span></span>
+metadata:
+  title: Интерполяция строк. Интерактивное руководство по C#
+  description: В этом руководстве вы воспользуетесь браузером для интерактивного ознакомления с функцией интерполяции строк в C#. Вы напишете код C# и сможете просмотреть результаты его компиляции и выполнения непосредственно в браузере.
+  audience: Developer
+  ms.custom: mvc
+  ms.date: 08/24/2018
+  level: Beginner
+  displayType: two-column
+  interactive: csharp
+  ms.openlocfilehash: 5490176d91a6ed900471e33af6adce1fa3e62d8f
+  ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 04/04/2019
+  ms.locfileid: "58921392"
+items:
+- durationInMinutes: 2
+  content: >
+    <span data-ttu-id="e8e5e-105">В этом руководстве описывается, как с помощью [интерполяции строк](../../language-reference/tokens/interpolated.md) вставить значения в одну строку.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-105">This tutorial teaches you how to use [string interpolation](../../language-reference/tokens/interpolated.md) to insert values into a single string.</span></span> <span data-ttu-id="e8e5e-106">Вы также узнаете, как управлять форматированием текста результирующей строки.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-106">You also learn how to control text formatting of the result string.</span></span> <span data-ttu-id="e8e5e-107">Вы напишете и выполните код C# в браузере и сразу же сможете просмотреть результаты.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-107">You use your browser to write and run C# code and can immediately see the results.</span></span>
+- title: <span data-ttu-id="e8e5e-108">Создание интерполированной строки</span><span class="sxs-lookup"><span data-stu-id="e8e5e-108">Create an interpolated string</span></span>
+  durationInMinutes: 2
+  content: >
+    <span data-ttu-id="e8e5e-109">Запустите приведенный ниже код в интерактивном окне.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-109">Run the following code in the interactive window.</span></span> <span data-ttu-id="e8e5e-110">Для этого введите следующий код в интерактивном окне (замените `<name>` своим именем) и нажмите кнопку **Выполнить**:</span><span class="sxs-lookup"><span data-stu-id="e8e5e-110">To do that, type the code in the interactive window (replace `<name>` with your name) and select **Run**:</span></span>
+
+
+    ```csharp
+
+    var name = "<name>";
+
+    Console.WriteLine($"Hello, {name}. It's a pleasure to meet you!");
+
+    ```
+
+
+    <span data-ttu-id="e8e5e-111">При запуске кода в окне **Вывод** отображается строка, которая содержит ваше имя в приветствии.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-111">When you run the code, **Output** displays a string that includes your name in the greeting.</span></span> <span data-ttu-id="e8e5e-112">Строковым аргументом в вызове метода <xref:System.Console.WriteLine%2A> является *интерполированная строка*.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-112">The string argument of the <xref:System.Console.WriteLine%2A> method call is an *interpolated string*.</span></span> <span data-ttu-id="e8e5e-113">Это похоже на шаблон, позволяющий создать одну строку (называемую *результирующей строкой*) из строки, содержащей внедренный код.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-113">It's a kind of template that lets you construct a single string (called the *result string*) from a string that includes embedded code.</span></span> <span data-ttu-id="e8e5e-114">Интерполированные строки особенно удобны при вставке значений в строку или сцеплении (объединении) нескольких строк.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-114">Interpolated strings are particularly useful for inserting values into a string or concatenating (joining together) several strings.</span></span>
+
+
+    <span data-ttu-id="e8e5e-115">Приведенный выше пример содержит два элемента, обязательные для каждой интерполированной строки:</span><span class="sxs-lookup"><span data-stu-id="e8e5e-115">The example above contains the two elements that every interpolated string must have:</span></span>
+
+
+    - <span data-ttu-id="e8e5e-116">Строковый литерал, который начинается с символа `$`, стоящего до открывающей кавычки.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-116">A string literal that begins with the `$` character before its opening quotation mark character.</span></span> <span data-ttu-id="e8e5e-117">Между символом `$` и знаком кавычки не должно быть пробелов.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-117">There can't be any spaces between the `$` symbol and the quotation mark character.</span></span> <span data-ttu-id="e8e5e-118">(Если вы хотите узнать, что будет при наличии пробела, вставьте его после символа `$` в интерактивном окне и выполните обновленный код.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-118">(If you'd like to see what happens if you include one, insert a space after the `$` character in the interactive window and run the updated code.</span></span> <span data-ttu-id="e8e5e-119">Компилятор C# выдает сообщение "Непредвиденный знак "$"".)</span><span class="sxs-lookup"><span data-stu-id="e8e5e-119">The C# compiler complains, "Unexpected character '$'".)</span></span>
+
+
+    - <span data-ttu-id="e8e5e-120">Одно или несколько *интерполированных выражений*.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-120">One or more *interpolated expressions*.</span></span> <span data-ttu-id="e8e5e-121">Интерполированное выражение обозначено открывающей и закрывающей фигурной скобкой (`{` и `}`).</span><span class="sxs-lookup"><span data-stu-id="e8e5e-121">An interpolated expression is indicated by an opening and closing brace (`{` and `}`).</span></span> <span data-ttu-id="e8e5e-122">Вы можете указать внутри фигурных скобок любое выражение C#, возвращающее значение (включая `null`).</span><span class="sxs-lookup"><span data-stu-id="e8e5e-122">You can put any C# expression that returns a value (including `null`) inside the braces.</span></span>
+
+
+    <span data-ttu-id="e8e5e-123">Давайте рассмотрим еще несколько примеров интерполяции строк с другими типами данных.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-123">Let's try a few more string interpolation examples with some other data types.</span></span>
+
+
+    > [!NOTE]
+
+    > <span data-ttu-id="e8e5e-124">Этот онлайн-интерфейс для написания кода находится на этапе предварительной версии.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-124">This online coding experience is in preview mode.</span></span> <span data-ttu-id="e8e5e-125">При возникновении проблем сообщите о них на странице [репозитория dotnet/try](https://github.com/dotnet/try/issues).</span><span class="sxs-lookup"><span data-stu-id="e8e5e-125">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+- title: <span data-ttu-id="e8e5e-126">Включение разных типов данных</span><span class="sxs-lookup"><span data-stu-id="e8e5e-126">Include different data types</span></span>
+  durationInMinutes: 5
+  content: >
+    <span data-ttu-id="e8e5e-127">В предыдущем шаге вы использовали интерполяцию строк для вставки одной строки внутрь другой.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-127">In the previous step, you used string interpolation to insert one string inside of another.</span></span> <span data-ttu-id="e8e5e-128">Однако интерполированное выражение может относиться к любому типу данных.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-128">The result of an interpolated expression can be of any data type, though.</span></span> <span data-ttu-id="e8e5e-129">Давайте включим в интерполированную строку значения разных типов данных.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-129">Let's include values of various data types in an interpolated string.</span></span>
+
+
+    <span data-ttu-id="e8e5e-130">В приведенном ниже примере сначала мы определим тип данных для [класса](../../programming-guide/classes-and-structs/classes.md) `Vegetable`, обладающего [свойством](../../properties.md) `Name` и [методом](../../methods.md) `ToString`. Этот метод [переопределяет](../../language-reference/keywords/override.md) поведение метода <xref:System.Object.ToString?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-130">In the following example, we first define a [class](../../programming-guide/classes-and-structs/classes.md) data type `Vegetable` that has a `Name` [property](../../properties.md) and a `ToString` [method](../../methods.md), which [overrides](../../language-reference/keywords/override.md) the behavior of the <xref:System.Object.ToString?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="e8e5e-131">[Модификатор доступа ](../../language-reference/keywords/public.md)`public` делает этот метод доступным любому клиентскому коду и позволяет получить строковое представление экземпляра `Vegetable`.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-131">The [`public` access modifier](../../language-reference/keywords/public.md) makes that method available to any client code to get the string representation of a `Vegetable` instance.</span></span> <span data-ttu-id="e8e5e-132">В примере метод `Vegetable.ToString` возвращает значение свойства `Name`, которое инициализируется в [конструкторе](../../programming-guide/classes-and-structs/constructors.md) `Vegetable`: `Vegetable(string name) => Name = name;`.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-132">In the example the `Vegetable.ToString` method returns the value of the `Name` property that is initialized at the `Vegetable` [constructor](../../programming-guide/classes-and-structs/constructors.md): `Vegetable(string name) => Name = name;`.</span></span> <span data-ttu-id="e8e5e-133">Затем создайте экземпляр класса `Vegetable` с именем `item`, воспользовавшись [ключевым словом`new`](../../language-reference/keywords/new-operator.md) и указав параметр имени для конструктора `Vegetable`.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-133">Then we create an instance of the `Vegetable` class named `item` by using the [`new` keyword](../../language-reference/keywords/new-operator.md) and providing a name for the constructor `Vegetable`.</span></span> <span data-ttu-id="e8e5e-134">Наконец, этот экземпляр включается в интерполированную строку, которая также содержит значение <xref:System.DateTime>, значение <xref:System.Decimal> и значение [перечисления](../../programming-guide/enumeration-types.md) `Unit`.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-134">Finally, we include that instance into an interpolated string that also contains a <xref:System.DateTime> value, a <xref:System.Decimal> value, and a `Unit` [enumeration](../../programming-guide/enumeration-types.md) value.</span></span> <span data-ttu-id="e8e5e-135">Запустите приведенный ниже код в интерактивном окне.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-135">Run the following code in the interactive window:</span></span>
+
+
+    ```csharp
+
+    public class Vegetable
+
+    {
+       public Vegetable(string name) => Name = name;
+
+       public string Name { get; }
+
+       public override string ToString() => Name;
+    }
+
+
+    public enum Unit { item, kilogram, gram, dozen };
+
+
+    var item = new Vegetable("eggplant");
+
+    var date = DateTime.Now;
+
+    var price = 1.99m;
+
+    var unit = Unit.item;
+
+    Console.WriteLine($"On {date}, the price of {item} was {price} per {unit}.");
+
+    ```
+
+
+    <span data-ttu-id="e8e5e-136">Обратите внимание на то, что интерполированное выражение `item` в интерполированной строке разрешается в текст "eggplant" в результирующей строке.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-136">Note that the interpolated expression `item` in the interpolated string resolves to the text "eggplant" in the result string.</span></span> <span data-ttu-id="e8e5e-137">Связано это с тем, что если результат выражения не имеет строковый тип, он разрешается в строку описанным ниже образом.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-137">That's because, when the type of the expression result is not a string, the result is resolved to a string in the following way:</span></span>
+
+
+    - <span data-ttu-id="e8e5e-138">Если результатом вычисления интерполированного выражения является `null`, используется пустая строка ("" или <xref:System.String.Empty?displayProperty=nameWithType>).</span><span class="sxs-lookup"><span data-stu-id="e8e5e-138">If the interpolated expression evaluates to `null`, an empty string ("", or <xref:System.String.Empty?displayProperty=nameWithType>) is used.</span></span>
+
+
+    - <span data-ttu-id="e8e5e-139">Если результатом вычисления интерполированного выражения не является `null`, обычно вызывается метод `ToString` результирующего типа.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-139">If the interpolated expression doesn't evaluate to `null`, typically the `ToString` method of the result type is called.</span></span> <span data-ttu-id="e8e5e-140">Чтобы проверить это, можно изменить реализацию метода `Vegetable.ToString`.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-140">You can test this by updating the implementation of the `Vegetable.ToString` method.</span></span> <span data-ttu-id="e8e5e-141">Возможно, вам вообще не потребуется реализовывать метод `ToString`, так как его реализация в той или иной форме присутствует в каждом типе.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-141">You might not even need to implement the `ToString` method since every type has some implementation of this method.</span></span> <span data-ttu-id="e8e5e-142">Это можно проверить, закомментировав определение метода `Vegetable.ToString` в примере, для чего перед ним нужно поставить символ комментария (`//`).</span><span class="sxs-lookup"><span data-stu-id="e8e5e-142">To test this, comment out the definition of the `Vegetable.ToString` method in the example (to do that, put a comment symbol, `//`, in front of it).</span></span> <span data-ttu-id="e8e5e-143">В выходных данных строка "eggplant" заменяется полным именем типа (пространство имен, определенное REPL, вместе с именем типа), что является стандартным поведением метода <xref:System.Object.ToString?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-143">In the output, the string "eggplant" is replaced by the fully qualified type name (the namespace defined by the C# REPL along with the type name), which is the default behavior of the <xref:System.Object.ToString?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="e8e5e-144">По умолчанию метод `ToString` возвращает для значения перечисления строковое представление значения.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-144">The default behavior of the `ToString` method for an enumeration value is to return the string representation of the value.</span></span>
+
+
+    <span data-ttu-id="e8e5e-145">В выходных данных этого примера дата является слишком точной (цена на баклажаны не меняется каждую секунду), а в значении цены не указана единица валюты.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-145">In the output from this example, the date is too precise (the price of eggplant doesn't change every second), and the price value doesn't indicate a unit of currency.</span></span> <span data-ttu-id="e8e5e-146">В следующем шаге вы узнаете, как устранить эти проблемы, управляя форматом строковых представлений результатов выражений.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-146">In the next step, you'll learn how to fix those issues by controlling the format of string representations of the expression results.</span></span>
+
+
+    > [!NOTE]
+
+    > <span data-ttu-id="e8e5e-147">Этот онлайн-интерфейс для написания кода находится на этапе предварительной версии.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-147">This online coding experience is in preview mode.</span></span> <span data-ttu-id="e8e5e-148">При возникновении проблем сообщите о них на странице [репозитория dotnet/try](https://github.com/dotnet/try/issues).</span><span class="sxs-lookup"><span data-stu-id="e8e5e-148">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+- title: <span data-ttu-id="e8e5e-149">Управление форматированием интерполированных выражений</span><span class="sxs-lookup"><span data-stu-id="e8e5e-149">Control the formatting of interpolated expressions</span></span>
+  durationInMinutes: 5
+  content: >
+    <span data-ttu-id="e8e5e-150">В предыдущем шаге мы вставили две неправильно отформатированные строки в результирующую строку.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-150">In the previous step, two poorly formatted strings were inserted into the result string.</span></span> <span data-ttu-id="e8e5e-151">Первая была значением даты и времени, при этом допустимой была только дата.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-151">One was a date and time value for which only the date was appropriate.</span></span> <span data-ttu-id="e8e5e-152">Вторая была ценой, в которой отсутствовала единица валюты.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-152">The second was a price that didn't indicate its unit of currency.</span></span> <span data-ttu-id="e8e5e-153">Обе эти проблемы легко решить.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-153">Both issues are easy to address.</span></span> <span data-ttu-id="e8e5e-154">Интерполяция строк позволяет указывать *строки формата*, управляющие форматированием определенных типов.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-154">String interpolation lets you specify *format strings* that control the formatting of particular types.</span></span> <span data-ttu-id="e8e5e-155">Измените вызов `Console.WriteLine` из предыдущего примера, включив в него строки формата для выражений даты и цены, как показано в следующей строке:</span><span class="sxs-lookup"><span data-stu-id="e8e5e-155">Modify the call to `Console.WriteLine` from the previous example to include the format strings for the date and price expressions as shown in the following line:</span></span>
+
+
+    ```csharp
+
+    Console.WriteLine($"On {date:d}, the price of {item} was {price:C2} per {unit}.");
+
+    ```
+
+
+    <span data-ttu-id="e8e5e-156">Задайте строку формата, указав ее после интерполированного выражения через точку с запятой.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-156">You specify a format string by following the interpolated expression with a colon (":") and the format string.</span></span> <span data-ttu-id="e8e5e-157">"d" — это [стандартная строка формата для даты и времени](../../../standard/base-types/standard-date-and-time-format-strings.md#the-short-date-d-format-specifier), представляющая краткий формат.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-157">"d" is a [standard date and time format string](../../../standard/base-types/standard-date-and-time-format-strings.md#the-short-date-d-format-specifier) that represents the short date format.</span></span> <span data-ttu-id="e8e5e-158">"C2" — это [стандартная строка числового формата](../../../standard/base-types/standard-numeric-format-strings.md#the-currency-c-format-specifier), представляющая число в виде денежной единицы с точностью два знака после запятой.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-158">"C2" is a [standard numeric format string](../../../standard/base-types/standard-numeric-format-strings.md#the-currency-c-format-specifier) that represents a number as a currency value with two digits after the decimal point.</span></span>
+
+
+    <span data-ttu-id="e8e5e-159">Некоторые типы в библиотеках .NET поддерживают предопределенный набор строк формата.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-159">A number of types in the .NET libraries support a predefined set of format strings.</span></span> <span data-ttu-id="e8e5e-160">К ним относятся все числовые типы, а также типы даты и времени.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-160">These include all the numeric types and the date and time types.</span></span> <span data-ttu-id="e8e5e-161">Полный список типов, поддерживающих строки формата, см. в разделе [Строки формата и типы библиотек классов .NET](../../../standard/base-types/formatting-types.md#stringRef) статьи [Типы форматирования в .NET](../../../standard/base-types/formatting-types.md).</span><span class="sxs-lookup"><span data-stu-id="e8e5e-161">For a complete list of types that support format strings, see [Format Strings and .NET Class Library Types](../../../standard/base-types/formatting-types.md#stringRef) in the [Formatting Types in .NET](../../../standard/base-types/formatting-types.md) article.</span></span>
+
+
+    <span data-ttu-id="e8e5e-162">Попробуйте изменить строки формата в примере, чтобы узнать, как они влияют на форматирование даты и времени, а также числового значения.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-162">Try modifying the format strings in the example to see how they affect the formatting of the date and time and the numeric value.</span></span> <span data-ttu-id="e8e5e-163">Измените "d" в `{date:d}` на "t" (чтобы отобразить краткий формат времени), "y" (чтобы отобразить год и месяц) и "yyyy" (чтобы отобразить год в виде четырехзначного числа).</span><span class="sxs-lookup"><span data-stu-id="e8e5e-163">Change the "d" in `{date:d}` to "t" (to display the short time format), "y" (to display the year and month), and "yyyy" (to display the year as a four-digit number).</span></span> <span data-ttu-id="e8e5e-164">Измените "C2" в `{price:C2}` на "e" (для экспоненциального представления) и "F3" (чтобы получить числовое значение с тремя знаками после запятой).</span><span class="sxs-lookup"><span data-stu-id="e8e5e-164">Change the "C2" in `{price:C2}` to "e" (for exponential notation) and "F3" (for a numeric value with three digits after the decimal point).</span></span>
+
+
+    <span data-ttu-id="e8e5e-165">Кроме форматирования, вы можете управлять шириной поля и выравниванием для форматированных строк, включаемых в результирующую строку.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-165">In addition to controlling formatting, you can also control the field width and alignment of the formatted strings that are included in the result string.</span></span> <span data-ttu-id="e8e5e-166">В следующем шаге вы научитесь это делать.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-166">In the next step, you'll learn how to do this.</span></span>
+
+
+    > [!NOTE]
+
+    > <span data-ttu-id="e8e5e-167">Этот онлайн-интерфейс для написания кода находится на этапе предварительной версии.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-167">This online coding experience is in preview mode.</span></span> <span data-ttu-id="e8e5e-168">При возникновении проблем сообщите о них на странице [репозитория dotnet/try](https://github.com/dotnet/try/issues).</span><span class="sxs-lookup"><span data-stu-id="e8e5e-168">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+- title: <span data-ttu-id="e8e5e-169">Управление шириной поля и выравниванием для интерполированных выражений</span><span class="sxs-lookup"><span data-stu-id="e8e5e-169">Control the field width and alignment of interpolated expressions</span></span>
+  durationInMinutes: 6
+  content: >
+    <span data-ttu-id="e8e5e-170">Как правило, когда результат интерполированного выражения форматируется как строка, эта строка включается в результирующую без начальных или конечных пробелов.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-170">Ordinarily, when the result of an interpolated expression is formatted to string, that string is included in a result string without leading or trailing spaces.</span></span> <span data-ttu-id="e8e5e-171">Особенно когда вы работаете с набором данных, возможность управления шириной поля и выравниванием помогает получить более понятные выходные данные.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-171">Particularly when you work with a set of data, being able to control a field width and text alignment helps to produce a more readable output.</span></span> <span data-ttu-id="e8e5e-172">Это можно продемонстрировать на приведенном ниже примере кода.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-172">To see this, run the following code:</span></span>
+
+
+    ```csharp
+      var inventory = new Dictionary<string, int>()
+      {
+          ["hammer, ball pein"] = 18,
+          ["hammer, cross pein"] = 5,
+          ["screwdriver, Phillips #2"] = 14
+      };
+
+      Console.WriteLine($"Inventory on {DateTime.Now:d}");
+      Console.WriteLine(" ");
+      Console.WriteLine($"|{"Item",-25}|{"Quantity",10}|");
+      foreach (var item in inventory)
+         Console.WriteLine($"|{item.Key,-25}|{item.Value,10}|");
+    ```
+
+
+    <span data-ttu-id="e8e5e-173">Имена элементов выровнены по левому краю, а их количества — по правому.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-173">The item names are left-aligned, and their quantities are right-aligned.</span></span> <span data-ttu-id="e8e5e-174">Вы можете указать выравнивание, добавив запятую (",") после интерполированного выражения и назначив *минимальную* ширину поля.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-174">You specify the alignment by adding a comma (",") after an interpolated expression and designating the *minimum* field width.</span></span> <span data-ttu-id="e8e5e-175">Если указанное значение является положительным числом, то поле выравнивается по правому краю.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-175">If the specified value is a positive number, the field is right-aligned.</span></span> <span data-ttu-id="e8e5e-176">Если оно является отрицательным числом, то поле выравнивается по левому краю.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-176">If it is a negative number, the field is left-aligned.</span></span>
+
+
+    <span data-ttu-id="e8e5e-177">Попробуйте удалить знаки "минус" из кода `{"Item",-25}` и `{item.Key,-25}`, а затем снова выполните пример.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-177">Try removing the negative signs from the `{"Item",-25}` and `{item.Key,-25}` code and run the example again.</span></span> <span data-ttu-id="e8e5e-178">На этот раз имена элементов выровнены по правому краю.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-178">This time, the item names are right-aligned.</span></span>
+
+
+    <span data-ttu-id="e8e5e-179">Вы можете совмещать описатель выравнивания и строку формата в одном интерполированном выражении.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-179">You can combine an alignment specifier and a format string for a single interpolated expression.</span></span> <span data-ttu-id="e8e5e-180">Для этого сначала укажите выравнивание, а затем через двоеточие строку формата.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-180">To do that, specify the alignment first, followed by a colon and the format string.</span></span> <span data-ttu-id="e8e5e-181">Попробуйте выполнить приведенный ниже код, который выводит три отформатированные строки с заданной шириной поля.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-181">Try the following code that displays three formatted strings with defined field widths:</span></span>
+
+
+    ```csharp
+
+    Console.WriteLine($"[{DateTime.Now,-20:d}] Hour [{DateTime.Now,-10:HH}] [{1063.342,15:N2}] feet");
+
+    ```
+
+
+    > [!NOTE]
+
+    > <span data-ttu-id="e8e5e-182">Этот онлайн-интерфейс для написания кода находится на этапе предварительной версии.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-182">This online coding experience is in preview mode.</span></span> <span data-ttu-id="e8e5e-183">При возникновении проблем сообщите о них на странице [репозитория dotnet/try](https://github.com/dotnet/try/issues).</span><span class="sxs-lookup"><span data-stu-id="e8e5e-183">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+- content: >-
+    <span data-ttu-id="e8e5e-184">Вы завершили работу с интерактивным руководством по интерполяции строк.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-184">You've completed the string interpolation interactive tutorial.</span></span> <span data-ttu-id="e8e5e-185">Вы можете выбрать ссылку **Коллекции в C#** ниже, чтобы запустить следующее интерактивное руководство, либо посетить [сайт .NET](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial), чтобы скачать пакет SDK для .NET Core, создать проект на своем компьютере и продолжить написание кода.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-185">You can click the **Collections in C#** link below to start the next interactive tutorial, or you can visit the [.NET site](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) to download the .NET Core SDK, create a project on your machine, and keep coding.</span></span> <span data-ttu-id="e8e5e-186">На шаге "Продолжение обучения" вы вернетесь к этим учебникам.</span><span class="sxs-lookup"><span data-stu-id="e8e5e-186">The "Keep Learning" step brings you back to these tutorials.</span></span>
+
+
+    <span data-ttu-id="e8e5e-187">Дополнительные сведения см. в разделе [Интерполяция строк](../../language-reference/tokens/interpolated.md).</span><span class="sxs-lookup"><span data-stu-id="e8e5e-187">For more information, see [String interpolation](../../language-reference/tokens/interpolated.md).</span></span>
