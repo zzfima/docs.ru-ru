@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Изменение пользовательских параметров в Visual Basic
+title: Практическое руководство. Изменение пользовательских параметров в Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - user settings [Visual Basic], changing in Visual Basic
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - My.Settings object [Visual Basic], changing user settings
 - examples [Visual Basic], changing user settings
 ms.assetid: 41250181-c594-4854-9988-8183b9eb03cf
-ms.openlocfilehash: 4e93dbf453b831bb28707250466ea928bfe9a716
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 05c95026d061918b38cf301209afefa9498e33bf
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976386"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820975"
 ---
-# <a name="how-to-change-user-settings-in-visual-basic"></a>Как выполнить Изменение пользовательских параметров в Visual Basic
+# <a name="how-to-change-user-settings-in-visual-basic"></a>Практическое руководство. Изменение пользовательских параметров в Visual Basic
 Пользовательские параметры можно изменять, присваивая новое значение свойству объекта параметров `My.Settings`.  
   
  Объект `My.Settings` представляет каждый параметр в виде свойства. Имя свойства совпадает с именем параметра, а тип свойства совпадает с типом параметра. **Область** параметра определяет, доступно ли свойство только для чтения. Свойство для параметра с областью **Приложение** доступно только для чтения, а свойство для параметра с областью **Пользователь** доступно для чтения или записи. Дополнительные сведения см. в разделе [Объект My.Settings](../../../../visual-basic/language-reference/objects/my-settings-object.md).  
@@ -32,6 +32,7 @@ ms.locfileid: "56976386"
  Приложение сохраняет пользовательские параметры при завершении работы. Чтобы сохранить параметры немедленно, вызовите метод `My.Settings.Save`. Дополнительные сведения см. в разделе [Как Сохранение пользовательских параметров в Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Объект My.Settings](../../../../visual-basic/language-reference/objects/my-settings-object.md)
 - [Практическое руководство. Чтение параметров приложения в Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)
 - [Практическое руководство. Сохранение пользовательских параметров в Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)

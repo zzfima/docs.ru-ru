@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 7d60578ac2913037e1cdeda329f06f9a4986574d
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58760695"
+---
 ### <a name="rsacngverifyhash-now-returns-false-for-any-verification-failure"></a>RSACng.VerifyHash теперь возвращает значение False при любом сбое проверки
 
 |   |   |

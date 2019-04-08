@@ -1,19 +1,19 @@
 ---
-title: Как выполнить Получение строк из последовательных портов в Visual Basic
+title: Практическое руководство. Получение строк из последовательных портов в Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - serial ports, retrieving strings
 - strings [Visual Basic], retrieving from serial ports
 - My.Resources object
 ms.assetid: 8371ce2c-e1c7-476b-a86d-9afc2614b6b7
-ms.openlocfilehash: 9c5fc0e9ddd42543d2f1e0b92c818b22909d50d7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1a7aa88cfb90f347caed24bec0b5123dafb4c533
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971667"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822847"
 ---
-# <a name="how-to-receive-strings-from-serial-ports-in-visual-basic"></a>Как выполнить Получение строк из последовательных портов в Visual Basic
+# <a name="how-to-receive-strings-from-serial-ports-in-visual-basic"></a>Практическое руководство. Получение строк из последовательных портов в Visual Basic
 В этом разделе описывается, как использовать `My.Computer.Ports` для получения строк из последовательных портов компьютера в Visual Basic.  
   
 ### <a name="to-receive-strings-from-the-serial-port"></a>Получение строк из последовательного порта  
@@ -64,6 +64,7 @@ ms.locfileid: "56971667"
  В этом примере блок `Try...Catch...Finally` позволяет сделать так, чтобы приложение закрыло порт и перехватило все исключения времени ожидания. Дополнительные сведения см. в разделе [Оператор Try...Catch...Finally](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:Microsoft.VisualBasic.Devices.Ports>
 - <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>
 - [Практическое руководство. Дозвон при помощи модема, подключенного к последовательному порту компьютера](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)

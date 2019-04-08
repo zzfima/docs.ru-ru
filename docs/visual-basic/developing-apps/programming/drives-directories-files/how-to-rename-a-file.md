@@ -1,18 +1,18 @@
 ---
-title: Как выполнить Переименование файла в Visual Basic
+title: Практическое руководство. Переименование файла в Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - I/O [Visual Basic], renaming files
 - files [Visual Basic], renaming
 ms.assetid: 0ea7e0c8-2cb2-4bf5-a00d-7b6e3c08a3bc
-ms.openlocfilehash: 0fac312c4c20f57e93dc88d0d6bb6b13932f7682
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b86797018e1471590fd4c89848921e696afbc819
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966987"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814159"
 ---
-# <a name="how-to-rename-a-file-in-visual-basic"></a>Как выполнить Переименование файла в Visual Basic
+# <a name="how-to-rename-a-file-in-visual-basic"></a>Практическое руководство. Переименование файла в Visual Basic
 Метод `RenameFile` объекта `My.Computer.FileSystem` можно использовать, чтобы переименовать файл, указав текущее расположение, имя файла и новое имя файла. Этот метод нельзя использовать для перемещения файла. Для перемещения и переименования файла используется метод `MoveFile`.  
   
 ### <a name="to-rename-a-file"></a>Переименование файла  
@@ -47,6 +47,7 @@ ms.locfileid: "56966987"
 -   У пользователя отсутствует необходимое разрешение (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.RenameFile%2A>
 - [Практическое руководство. Перемещение файла](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-move-a-file.md)
 - [Создание, удаление и перемещение файлов и каталогов](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)

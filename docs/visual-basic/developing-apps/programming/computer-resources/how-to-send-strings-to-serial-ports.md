@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Отправка строк в последовательный порт в Visual Basic
+title: Практическое руководство. Отправка строк в последовательный порт в Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - ports, sending strings to
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - My.Computer.Ports object
 - serial ports, sending strings to
 ms.assetid: 6ebf46cd-b2d0-4b2c-9a1f-be177b22ad52
-ms.openlocfilehash: ca799f4aa1b1c535e6955eda1bcb9740b5b2de3c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: e1f0c9d5ba428f5379f8025c0e733cdbeb5204e0
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971706"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822861"
 ---
-# <a name="how-to-send-strings-to-serial-ports-in-visual-basic"></a>Как выполнить Отправка строк в последовательный порт в Visual Basic
+# <a name="how-to-send-strings-to-serial-ports-in-visual-basic"></a>Практическое руководство. Отправка строк в последовательный порт в Visual Basic
 В этом разделе описывается, как использовать `My.Computer.Ports` для отправки строк в последовательные порты компьютера в Visual Basic.  
   
 ## <a name="example"></a>Пример  
@@ -38,6 +38,7 @@ ms.locfileid: "56971706"
  В этом примере блок `Using` позволяет сделать так, чтобы приложение закрыло порт, даже если он создает исключение. Дополнительные сведения см. в разделе [Оператор using](../../../../visual-basic/language-reference/statements/using-statement.md).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:Microsoft.VisualBasic.Devices.Ports>
 - <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>
 - [Практическое руководство. Дозвон при помощи модема, подключенного к последовательному порту компьютера](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)

@@ -3,16 +3,16 @@ title: Интерполяция строк в C#
 description: Узнайте, как включить форматированные результаты выражения в строку результатов в C# с интерполяцией строк.
 author: pkulikov
 ms.date: 05/09/2018
-ms.openlocfilehash: 5a637937de2f3cff7f5425f47c223a56efa8d0c2
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5a66ba9215579a459b543a24ece338ffbbfd9aea
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976061"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920718"
 ---
 # <a name="string-interpolation-in-c"></a>Интерполяция строк на C\#
 
-В этом руководстве описано, как использовать [интерполяцию строк](../language-reference/tokens/interpolated.md) для форматирования и включения результатов выражения в строку результатов. В примерах предполагается, что вам знакомы основные принципы C# и форматирования типов .NET. Если вы не знакомы с интерполяцией строк или форматированием типов .NET, сначала ознакомьтесь с [интерактивным учебником по интерполяции строк](../tutorials/intro-to-csharp/interpolated-strings.yml). Дополнительные сведения о форматировании типов в .NET см. в разделе [Типы форматирования в .NET](../../standard/base-types/formatting-types.md).
+В этом руководстве описано, как использовать [интерполяцию строк](../language-reference/tokens/interpolated.md) для форматирования и включения результатов выражения в строку результатов. В примерах предполагается, что вам знакомы основные принципы C# и форматирования типов .NET. Если вы не знакомы с интерполяцией строк или форматированием типов .NET, сначала ознакомьтесь с [интерактивным учебником по интерполяции строк](exploration/interpolated-strings.yml). Дополнительные сведения о форматировании типов в .NET см. в разделе [Типы форматирования в .NET](../../standard/base-types/formatting-types.md).
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 

@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 72acd0029d0189de1c724856572957f111b9d18f
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58760395"
+---
 ## <a name="installation-instructions"></a>Инструкции по установке 
 
 Найти **SDK-пакет .NET Compiler Platform** в **Visual Studio Installer** можно двумя способами:

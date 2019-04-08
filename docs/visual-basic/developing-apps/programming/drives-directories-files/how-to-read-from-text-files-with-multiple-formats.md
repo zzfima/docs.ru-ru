@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Чтение текстовых файлов различных форматов в Visual Basic
+title: Практическое руководство. Чтение текстовых файлов различных форматов в Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - TextFieldParser object, reading from a file
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - I/O [Visual Basic], reading text files
 - text files [Visual Basic], reading
 ms.assetid: 8d185eb2-79ca-42cd-95a7-d3ff44a5a0f8
-ms.openlocfilehash: 589b5f94358cf9ce58e47a8a0eaec187aface98d
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d6326bb44d6a84c455c972fcbd191dc957844b74
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56964751"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830101"
 ---
-# <a name="how-to-read-from-text-files-with-multiple-formats-in-visual-basic"></a>Как выполнить Чтение текстовых файлов различных форматов в Visual Basic
+# <a name="how-to-read-from-text-files-with-multiple-formats-in-visual-basic"></a>Практическое руководство. Чтение текстовых файлов различных форматов в Visual Basic
 Объект <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> позволяет легко и эффективно анализировать структурированные текстовые файлы, например файлы журналов. Обработать файл, имеющий содержимое в нескольких форматах, можно с помощью метода `PeekChars`, который позволяет определять формат каждой анализируемой строки на протяжении всего файла.  
   
 ### <a name="to-parse-a-text-file-with-multiple-formats"></a>Анализ текстового файла с содержимым в нескольких форматах  
@@ -69,6 +69,7 @@ ms.locfileid: "56964751"
 -   У пользователя нет необходимых разрешений для доступа к файлу (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.PeekChars%2A>
 - <xref:Microsoft.VisualBasic.FileIO.MalformedLineException>

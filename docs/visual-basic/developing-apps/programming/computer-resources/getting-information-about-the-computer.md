@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.Info object [Visual Basic], tasks
 ms.assetid: 13c145bc-5c85-4fea-a5dd-2ca8681a0252
-ms.openlocfilehash: 508ab8a1cc302e58baa869fc30cea322e01235e3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 00e6acd7cdbb41d8d763ae2a948bf9c108d54d59
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743638"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823458"
 ---
 # <a name="getting-information-about-the-computer-visual-basic"></a>Получение сведений о компьютере (Visual Basic)
 Объект `My.Computer.Info` содержит свойства, которые можно использовать для получения сведений о памяти компьютера, загруженных сборках, имени и операционной системе.  
@@ -26,4 +26,5 @@ ms.locfileid: "54743638"
 |Определение установленных интерфейсов `UICulture` на компьютере, на котором выполняется приложение.|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.InstalledUICulture%2A>|  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:Microsoft.VisualBasic.Devices.ServerComputer.Info%2A>

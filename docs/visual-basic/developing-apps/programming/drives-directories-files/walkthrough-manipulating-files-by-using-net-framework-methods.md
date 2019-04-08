@@ -15,12 +15,12 @@ helpviewer_keywords:
 - text files [Visual Basic], reading
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
-ms.openlocfilehash: 56d753c9bb4e3585049eb98929774ac810d8ed40
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 2361a42ececbe12b5f61833e5a40607c8215a65d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978180"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821066"
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>Пошаговое руководство. Управление файлами с помощью методов .NET Framework (Visual Basic)
 В этом пошаговом руководстве демонстрируются открытие и чтение файла с помощью класса <xref:System.IO.StreamReader>, проверка доступа к файлу, поиск строки в файле, считанном с помощью экземпляра класса <xref:System.IO.StreamReader>, и запись в файл с помощью класса <xref:System.IO.StreamWriter>.  
@@ -148,6 +148,7 @@ ms.locfileid: "56978180"
  Чтобы протестировать код, нажмите клавишу F5 для компиляции приложения. Щелкните **Показать записи**, выберите запись и нажмите кнопку **Посмотреть**. Выбранная запись появится в элементе `DisplayEntry`<xref:System.Windows.Forms.TextBox>. Нажмите кнопку **Изменить запись**. Выбранная запись появится в элементе `Entry`<xref:System.Windows.Forms.TextBox>. Измените запись в `Entry`<xref:System.Windows.Forms.TextBox> и щелкните действие **Сохранить изменения**. Откройте `MyDiary.txt` файл, чтобы убедиться, что изменения внесены. Теперь выберите запись и нажмите кнопку **Удалить запись**. Когда <xref:System.Windows.Forms.MessageBox> запросит подтверждение, нажмите кнопку **ОК**. Закройте приложение и откройте файл `MyDiary.txt` для подтверждения удаления.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.IO.StreamReader>
 - <xref:System.IO.StreamWriter>
 - [Пошаговые руководства](../../../../visual-basic/walkthroughs.md)

@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 2bb40294685c987de84138ee889e6b88f7184bb0
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "50746735"
+---
 ### <a name="chained-popups-with-staysopenfalse"></a>Связанные всплывающие окна с StaysOpen=False
 
 |   |   |

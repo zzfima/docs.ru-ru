@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 38c50244b1cee41bd95c232ac5d1691c59c55488
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58760934"
+---
 ### <a name="wpf-focusvisual-for-radiobutton-and-checkbox-now-displays-correctly-when-the-controls-have-no-content"></a>FocusVisual WPF для RadioButton и CheckBox теперь отображается корректно, если эти элементы управления не включают содержимое
 
 |   |   |

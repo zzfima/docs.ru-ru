@@ -13,12 +13,12 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 97c8580b5573348e58acb85b7368eb23927cde17
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
+ms.openlocfilehash: 64728182fe0b758f8da668d19761305e2001f1a5
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307179"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920900"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ — интерполяция строк (справочник по C#)
 
@@ -60,7 +60,7 @@ ms.locfileid: "54307179"
 
 [!code-csharp-interactive[example with ternary conditional operator](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#3)]
 
-В буквальных интерполированных строках используется символ `$`, за которым следует символ `@`. Дополнительные сведения о буквальных строках см. в разделах о [строках](../keywords/string.md) и [буквальном идентификаторе](verbatim.md).
+В интерполированных строках verbatim используется символ `$`, за которым следует символ `@`. Дополнительные сведения о строках Verbatim см. в разделе о [строках](../keywords/string.md) и [идентификаторе verbatim](verbatim.md).
 
 > [!NOTE]
 > В буквальной интерполированной строке токен `$` должен находиться перед токеном `@`.
@@ -87,7 +87,7 @@ ms.locfileid: "54307179"
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
-Если вы не знакомы с интерполяцией строк, ознакомьтесь с интерактивным руководством [по интерполяции строк в C#](../../tutorials/intro-to-csharp/interpolated-strings.yml). Руководство [по интерполяции строк в C#](../../tutorials/string-interpolation.md) можно также изучить, используя локальный компьютер.
+Если вы не знакомы с интерполяцией строк, ознакомьтесь с интерактивным руководством [по интерполяции строк в C#](../../tutorials/exploration/interpolated-strings.yml). Руководство [по интерполяции строк в C#](../../tutorials/string-interpolation.md) можно также изучить, используя локальный компьютер.
 
 ## <a name="see-also"></a>См. также
 

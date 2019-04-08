@@ -1,18 +1,18 @@
 ---
-title: Как выполнить Поиск подкаталогов по шаблону в Visual Basic
+title: Практическое руководство. Поиск подкаталогов по шаблону в Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - pattern matching
 - folders, finding
 ms.assetid: c9265fd1-7483-4150-8b7f-ff642caa939d
-ms.openlocfilehash: df5376155d20ec4809962a26c92167eee6568dc1
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 705fa6e40d0e6d18826966e3f10cfd31d9e7a6ff
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972850"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823406"
 ---
-# <a name="how-to-find-subdirectories-with-a-specific-pattern-in-visual-basic"></a>Как выполнить Поиск подкаталогов по шаблону в Visual Basic
+# <a name="how-to-find-subdirectories-with-a-specific-pattern-in-visual-basic"></a>Практическое руководство. Поиск подкаталогов по шаблону в Visual Basic
 Метод <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A> возвращает доступную только для чтения коллекцию строк, представляющих имена путей к подкаталогам каталога. Для указания определенного шаблона можно использовать параметр `wildCards` . Если требуется включить в поиск содержимое подкаталогов, присвойте параметру `searchType` значение `SearchOption.SearchAllSubDirectories`.  
   
  Если каталоги, соответствующие указанному шаблону, не найдены, возвращается пустая коллекция.  
@@ -45,5 +45,6 @@ ms.locfileid: "56972850"
 -   У пользователя отсутствуют необходимые разрешения (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A>
 - [Практическое руководство. Поиск файлов по конкретному шаблону](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md)

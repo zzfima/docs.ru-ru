@@ -1,19 +1,19 @@
 ---
-title: Как выполнить Поиск файлов по конкретному шаблону в Visual Basic
+title: Практическое руководство. Поиск файлов по конкретному шаблону в Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], finding
 - pattern matching
 - patterns, matching
 ms.assetid: 25e3b71d-b844-4293-9e4e-f06c5836b5cc
-ms.openlocfilehash: 879f7a2335e3c4c31b0a7ddd3d303486d8b95a22
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: e4d40c4ad3a694b3f7e830604edf94d90cb4c395
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970471"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825330"
 ---
-# <a name="how-to-find-files-with-a-specific-pattern-in-visual-basic"></a>Как выполнить Поиск файлов по конкретному шаблону в Visual Basic
+# <a name="how-to-find-files-with-a-specific-pattern-in-visual-basic"></a>Практическое руководство. Поиск файлов по конкретному шаблону в Visual Basic
 Метод <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> возвращает доступную только для чтения коллекцию строк, представляющих имена путей для файлов. Для указания определенного шаблона можно использовать параметр `wildCards` . Если требуется включить подкаталоги в поиск, присвойте параметру `searchType` значение `SearchOption.SearchAllSubDirectories`.  
   
  Если файлы, соответствующие указанному шаблону, не найдены, возвращается пустая коллекция.  
@@ -47,6 +47,7 @@ ms.locfileid: "56970471"
 -   У пользователя отсутствуют необходимые разрешения (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A>
 - [Практическое руководство. Поиск подкаталогов по заданному шаблону](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)
 - [Устранение неполадок. Чтение из текстовых файлов и запись в такие файлы](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)

@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Чтение из двоичного файла в Visual Basic
+title: Практическое руководство. Чтение из двоичного файла в Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - binary files [Visual Basic], reading from
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - ReadAllBytes method [Visual Basic], reading from binary files
 - My.Computer.FileSystem object, reading from binary files
 ms.assetid: d2b1269e-24b6-42e0-9414-ae708db282d8
-ms.openlocfilehash: e9b30d119a404396e2bf37aa445a420f7823c57b
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 88c9952818f6cb94db7b2da7ad44aa0da0eb43d2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980390"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825057"
 ---
-# <a name="how-to-read-from-binary-files-in-visual-basic"></a>Как выполнить Чтение из двоичного файла в Visual Basic
+# <a name="how-to-read-from-binary-files-in-visual-basic"></a>Практическое руководство. Чтение из двоичного файла в Visual Basic
 Объект `My.Computer.FileSystem` предоставляет метод `ReadAllBytes` для чтения данных из двоичных файлов.  
   
 ### <a name="to-read-from-a-binary-file"></a>Чтение данных из двоичного файла  
@@ -51,6 +51,7 @@ ms.locfileid: "56980390"
  Следует проверять все входные данные перед использованием их в приложении. Содержимое файла может отличаться от ожидаемого, поэтому может не удаться прочесть файл с помощью методов чтения.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllBytes%2A>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A>
 - [Чтение из файлов](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)

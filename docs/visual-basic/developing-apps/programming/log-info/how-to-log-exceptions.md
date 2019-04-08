@@ -1,18 +1,18 @@
 ---
-title: Как выполнить Запись в журнал сведений об исключениях в Visual Basic
+title: Практическое руководство. Запись в журнал сведений об исключениях в Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exceptions, logging
 - exceptions, tracking
 ms.assetid: a26c60e2-ae39-444a-aebb-33eccadc0eeb
-ms.openlocfilehash: 10d1d25f830ff563cf70369e7b9d4c66f639c121
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: bdbe9b1d05acdc0f67f0264ed1583dff922e527b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969795"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832662"
 ---
-# <a name="how-to-log-exceptions-in-visual-basic"></a>Как выполнить Запись в журнал сведений об исключениях в Visual Basic
+# <a name="how-to-log-exceptions-in-visual-basic"></a>Практическое руководство. Запись в журнал сведений об исключениях в Visual Basic
 Объекты `My.Application.Log` и `My.Log` можно использовать для записи в журнал сведений об исключениях, возникающих в приложении. Эти примеры демонстрируют применение метода `My.Application.Log.WriteException` для регистрации явно перехваченных исключений и исключений, которые не обрабатываются.  
   
  Для записи сведений в журнал используйте метод `My.Application.Log.WriteEntry`. Дополнительные сведения см. в разделе <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>.  
@@ -66,6 +66,7 @@ ms.locfileid: "56969795"
      [!code-vb[VbVbalrMyApplicationLog#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/MyEventsFake.vb#5)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>

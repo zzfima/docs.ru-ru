@@ -1,18 +1,18 @@
 ---
-title: Как выполнить Создание файла в Visual Basic
+title: Практическое руководство. Создание файла в Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - text files [Visual Basic], creating
 - files [Visual Basic], creating
 ms.assetid: 0253bb6d-5519-4a50-b882-b93ef5cca0d9
-ms.openlocfilehash: 397db70cc8f5977bd861e9e6d6df2f0c8f884db2
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: a05e73a2096c82c9299e4483bbaf69e560fc2e45
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967021"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839422"
 ---
-# <a name="how-to-create-a-file-in-visual-basic"></a>Как выполнить Создание файла в Visual Basic
+# <a name="how-to-create-a-file-in-visual-basic"></a>Практическое руководство. Создание файла в Visual Basic
 В этом примере создается пустой текстовый файл по указанному пути с использованием метода <xref:System.IO.File.Create%2A> класса <xref:System.IO.File>.  
   
 ## <a name="example"></a>Пример  
@@ -46,6 +46,7 @@ ms.locfileid: "56967021"
  Исключение <xref:System.UnauthorizedAccessException> возникает, если пользователь не имеет разрешения на создание файла.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.IO>
 - <xref:System.IO.File.Create%2A>
 - [Использование библиотек из частично доверенного кода](../../../../framework/misc/using-libraries-from-partially-trusted-code.md)
