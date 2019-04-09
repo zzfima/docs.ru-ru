@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8a85936eb12d0b6123469a63a14a3ae58cb1bb5b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a19762cbec91871d7af617957896e4ee34944fba
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484489"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132720"
 ---
-# <a name="setassemblyfile-method"></a><span data-ttu-id="69532-102">Метод SetAssemblyFile</span><span class="sxs-lookup"><span data-stu-id="69532-102">SetAssemblyFile Method</span></span>
-<span data-ttu-id="69532-103">Назначает имя сборки для сборки.</span><span class="sxs-lookup"><span data-stu-id="69532-103">Assigns the name of the assembly to be built.</span></span> <span data-ttu-id="69532-104">Не для использования при создании несвязанных модулей.</span><span class="sxs-lookup"><span data-stu-id="69532-104">Not for use when producing unbound modules.</span></span>  
+# <a name="setassemblyfile-method"></a><span data-ttu-id="6048f-102">Метод SetAssemblyFile</span><span class="sxs-lookup"><span data-stu-id="6048f-102">SetAssemblyFile Method</span></span>
+<span data-ttu-id="6048f-103">Назначает имя сборки для сборки.</span><span class="sxs-lookup"><span data-stu-id="6048f-103">Assigns the name of the assembly to be built.</span></span> <span data-ttu-id="6048f-104">Не для использования при создании несвязанных модулей.</span><span class="sxs-lookup"><span data-stu-id="6048f-104">Not for use when producing unbound modules.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="69532-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="69532-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6048f-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="6048f-105">Syntax</span></span>  
   
 ```  
 HRESULT SetAssemblyFile(  
@@ -37,26 +37,27 @@ HRESULT SetAssemblyFile(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="69532-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="69532-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6048f-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="6048f-106">Parameters</span></span>  
  `pszFilename`  
- <span data-ttu-id="69532-107">Полное имя файла манифеста.</span><span class="sxs-lookup"><span data-stu-id="69532-107">Fully qualified name of the manifest file.</span></span>  
+ <span data-ttu-id="6048f-107">Полное имя файла манифеста.</span><span class="sxs-lookup"><span data-stu-id="6048f-107">Fully qualified name of the manifest file.</span></span>  
   
  `pEmitter`  
- <span data-ttu-id="69532-108">Указатель на [IMetaDataEmit-интерфейс](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) интерфейс.</span><span class="sxs-lookup"><span data-stu-id="69532-108">Pointer to [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) interface.</span></span>  
+ <span data-ttu-id="6048f-108">Указатель на [IMetaDataEmit-интерфейс](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) интерфейс.</span><span class="sxs-lookup"><span data-stu-id="6048f-108">Pointer to [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) interface.</span></span>  
   
  `afFlags`  
- <span data-ttu-id="69532-109">Флаги, как определено в [перечисление AssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md).</span><span class="sxs-lookup"><span data-stu-id="69532-109">Flags as defined in [AssemblyFlags Enumeration](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md).</span></span>  
+ <span data-ttu-id="6048f-109">Флаги, как определено в [перечисление AssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md).</span><span class="sxs-lookup"><span data-stu-id="6048f-109">Flags as defined in [AssemblyFlags Enumeration](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md).</span></span>  
   
  `pAssemblyID`  
- <span data-ttu-id="69532-110">Указатель на идентификатор итоговой сборки.</span><span class="sxs-lookup"><span data-stu-id="69532-110">Pointer to ID of resulting assembly.</span></span>  
+ <span data-ttu-id="6048f-110">Указатель на идентификатор итоговой сборки.</span><span class="sxs-lookup"><span data-stu-id="6048f-110">Pointer to ID of resulting assembly.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="69532-111">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="69532-111">Return Value</span></span>  
- <span data-ttu-id="69532-112">Возвращает S_OK, если метод выполнен успешно.</span><span class="sxs-lookup"><span data-stu-id="69532-112">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="6048f-111">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="6048f-111">Return Value</span></span>  
+ <span data-ttu-id="6048f-112">Возвращает S_OK, если метод выполнен успешно.</span><span class="sxs-lookup"><span data-stu-id="6048f-112">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="69532-113">Требования</span><span class="sxs-lookup"><span data-stu-id="69532-113">Requirements</span></span>  
- <span data-ttu-id="69532-114">Требуется alink.h.</span><span class="sxs-lookup"><span data-stu-id="69532-114">Requires alink.h.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6048f-113">Требования</span><span class="sxs-lookup"><span data-stu-id="6048f-113">Requirements</span></span>  
+ <span data-ttu-id="6048f-114">Требуется alink.h.</span><span class="sxs-lookup"><span data-stu-id="6048f-114">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="69532-115">См. также</span><span class="sxs-lookup"><span data-stu-id="69532-115">See also</span></span>
-- [<span data-ttu-id="69532-116">Интерфейс IALink</span><span class="sxs-lookup"><span data-stu-id="69532-116">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="69532-117">Интерфейс IALink2</span><span class="sxs-lookup"><span data-stu-id="69532-117">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="69532-118">API ALink</span><span class="sxs-lookup"><span data-stu-id="69532-118">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a><span data-ttu-id="6048f-115">См. также</span><span class="sxs-lookup"><span data-stu-id="6048f-115">See also</span></span>
+
+- [<span data-ttu-id="6048f-116">Интерфейс IALink</span><span class="sxs-lookup"><span data-stu-id="6048f-116">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [<span data-ttu-id="6048f-117">Интерфейс IALink2</span><span class="sxs-lookup"><span data-stu-id="6048f-117">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [<span data-ttu-id="6048f-118">API ALink</span><span class="sxs-lookup"><span data-stu-id="6048f-118">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

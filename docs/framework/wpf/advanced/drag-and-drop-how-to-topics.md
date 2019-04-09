@@ -6,23 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - drag-and-drop [WPF], how-to topics
 ms.assetid: 559c0804-c62a-4640-b6b9-cbd2aa9fb99c
-ms.openlocfilehash: dd7bccdd28f433893a988f95c5e1d804f6e138de
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 87c1425e6eaf03b900e07cfd9fc489ef01b1607a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358812"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100175"
 ---
-# <a name="drag-and-drop-how-to-topics"></a><span data-ttu-id="8ae2b-102">Разделы Руководства по операциям перетаскивания</span><span class="sxs-lookup"><span data-stu-id="8ae2b-102">Drag and Drop How-to Topics</span></span>
-<span data-ttu-id="8ae2b-103">Следующие примеры демонстрируют способы выполнения типичных задач с помощью [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] framework перетаскивания и вставки.</span><span class="sxs-lookup"><span data-stu-id="8ae2b-103">The following examples demonstrate how to accomplish common tasks using the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] drag-and-drop framework.</span></span>  
+# <a name="drag-and-drop-how-to-topics"></a><span data-ttu-id="c406b-102">Разделы Руководства по операциям перетаскивания</span><span class="sxs-lookup"><span data-stu-id="c406b-102">Drag and Drop How-to Topics</span></span>
+<span data-ttu-id="c406b-103">Следующие примеры демонстрируют способы выполнения типичных задач с помощью [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] framework перетаскивания и вставки.</span><span class="sxs-lookup"><span data-stu-id="c406b-103">The following examples demonstrate how to accomplish common tasks using the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] drag-and-drop framework.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="8ae2b-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="8ae2b-104">In This Section</span></span>  
- [<span data-ttu-id="8ae2b-105">Открытие файла, перемещенного перетаскиванием в элемент управления RichTextBox</span><span class="sxs-lookup"><span data-stu-id="8ae2b-105">Open a File That is Dropped on a RichTextBox Control</span></span>](how-to-open-a-file-that-is-dropped-on-a-richtextbox-control.md)  
- [<span data-ttu-id="8ae2b-106">Создание объекта данных</span><span class="sxs-lookup"><span data-stu-id="8ae2b-106">Create a Data Object</span></span>](how-to-create-a-data-object.md)  
- [<span data-ttu-id="8ae2b-107">Определение присутствия формата данных в объекте данных</span><span class="sxs-lookup"><span data-stu-id="8ae2b-107">Determine if a Data Format is Present in a Data Object</span></span>](how-to-determine-if-a-data-format-is-present-in-a-data-object.md)  
- [<span data-ttu-id="8ae2b-108">Перечисление форматов данных в объекте данных</span><span class="sxs-lookup"><span data-stu-id="8ae2b-108">List the Data Formats in a Data Object</span></span>](how-to-list-the-data-formats-in-a-data-object.md)  
- [<span data-ttu-id="8ae2b-109">Извлечение данных в определенном формате данных</span><span class="sxs-lookup"><span data-stu-id="8ae2b-109">Retrieve Data in a Particular Data Format</span></span>](how-to-retrieve-data-in-a-particular-data-format.md)  
- [<span data-ttu-id="8ae2b-110">Хранение данных в нескольких форматах в объекте данных</span><span class="sxs-lookup"><span data-stu-id="8ae2b-110">Store Multiple Data Formats in a Data Object</span></span>](how-to-store-multiple-data-formats-in-a-data-object.md)  
+## <a name="in-this-section"></a><span data-ttu-id="c406b-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="c406b-104">In This Section</span></span>  
+ [<span data-ttu-id="c406b-105">Открытие файла, перемещенного перетаскиванием в элемент управления RichTextBox</span><span class="sxs-lookup"><span data-stu-id="c406b-105">Open a File That is Dropped on a RichTextBox Control</span></span>](how-to-open-a-file-that-is-dropped-on-a-richtextbox-control.md)  
+ [<span data-ttu-id="c406b-106">Создание объекта данных</span><span class="sxs-lookup"><span data-stu-id="c406b-106">Create a Data Object</span></span>](how-to-create-a-data-object.md)  
+ [<span data-ttu-id="c406b-107">Определение присутствия формата данных в объекте данных</span><span class="sxs-lookup"><span data-stu-id="c406b-107">Determine if a Data Format is Present in a Data Object</span></span>](how-to-determine-if-a-data-format-is-present-in-a-data-object.md)  
+ [<span data-ttu-id="c406b-108">Перечисление форматов данных в объекте данных</span><span class="sxs-lookup"><span data-stu-id="c406b-108">List the Data Formats in a Data Object</span></span>](how-to-list-the-data-formats-in-a-data-object.md)  
+ [<span data-ttu-id="c406b-109">Извлечение данных в определенном формате данных</span><span class="sxs-lookup"><span data-stu-id="c406b-109">Retrieve Data in a Particular Data Format</span></span>](how-to-retrieve-data-in-a-particular-data-format.md)  
+ [<span data-ttu-id="c406b-110">Хранение данных в нескольких форматах в объекте данных</span><span class="sxs-lookup"><span data-stu-id="c406b-110">Store Multiple Data Formats in a Data Object</span></span>](how-to-store-multiple-data-formats-in-a-data-object.md)  
   
-## <a name="see-also"></a><span data-ttu-id="8ae2b-111">См. также</span><span class="sxs-lookup"><span data-stu-id="8ae2b-111">See also</span></span>
-- [<span data-ttu-id="8ae2b-112">Общие сведения о перетаскивании</span><span class="sxs-lookup"><span data-stu-id="8ae2b-112">Drag and Drop Overview</span></span>](drag-and-drop-overview.md)
+## <a name="see-also"></a><span data-ttu-id="c406b-111">См. также</span><span class="sxs-lookup"><span data-stu-id="c406b-111">See also</span></span>
+
+- [<span data-ttu-id="c406b-112">Общие сведения о перетаскивании</span><span class="sxs-lookup"><span data-stu-id="c406b-112">Drag and Drop Overview</span></span>](drag-and-drop-overview.md)

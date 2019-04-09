@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Индивидуальное в элементе управления ComboBox
+title: Практическое руководство. Индивидуальное форматирование строк, отображаемых в элементе управления ComboBox
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -10,17 +10,17 @@ helpviewer_keywords:
 - ComboBox control [Windows Forms], examples [C#]
 - ComboBox control [Windows Forms], drawing custom text
 ms.assetid: ce39b9ea-e626-49fe-bd5a-f567f6d157df
-ms.openlocfilehash: b55a6b66416aa79427035abdfbc19d1b0e21d94e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 9155893b3d47707e0e55ee33e30d7998654f9e93
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707798"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085614"
 ---
-# <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a><span data-ttu-id="9a1a3-102">Практическое руководство. Индивидуальное в элементе управления ComboBox</span><span class="sxs-lookup"><span data-stu-id="9a1a3-102">How to: Create Variable Sized Text in a ComboBox Control</span></span>
-<span data-ttu-id="9a1a3-103">В этом примере показано пользовательское рисование текста в <xref:System.Windows.Forms.ComboBox> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="9a1a3-103">This example demonstrates custom drawing of text in a <xref:System.Windows.Forms.ComboBox> control.</span></span> <span data-ttu-id="9a1a3-104">Если элемент удовлетворяет определенным критериям, он попадает более крупным шрифтом и красным.</span><span class="sxs-lookup"><span data-stu-id="9a1a3-104">When an item meets a certain criteria, it is drawn in a larger font and turned red.</span></span>  
+# <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a><span data-ttu-id="cb54e-102">Практическое руководство. Индивидуальное форматирование строк, отображаемых в элементе управления ComboBox</span><span class="sxs-lookup"><span data-stu-id="cb54e-102">How to: Create Variable Sized Text in a ComboBox Control</span></span>
+<span data-ttu-id="cb54e-103">В этом примере показано пользовательское рисование текста в <xref:System.Windows.Forms.ComboBox> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="cb54e-103">This example demonstrates custom drawing of text in a <xref:System.Windows.Forms.ComboBox> control.</span></span> <span data-ttu-id="cb54e-104">Если элемент удовлетворяет определенным критериям, он попадает более крупным шрифтом и красным.</span><span class="sxs-lookup"><span data-stu-id="cb54e-104">When an item meets a certain criteria, it is drawn in a larger font and turned red.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9a1a3-105">Пример</span><span class="sxs-lookup"><span data-stu-id="9a1a3-105">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="cb54e-105">Пример</span><span class="sxs-lookup"><span data-stu-id="cb54e-105">Example</span></span>  
   
 ```vb  
 Private Sub ComboBox1_MeasureItem(ByVal sender As Object, ByVal e As _  
@@ -55,22 +55,23 @@ e.Bounds.X, e.Bounds.Y)
 End Sub  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="9a1a3-106">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="9a1a3-106">Compiling the Code</span></span>  
- <span data-ttu-id="9a1a3-107">Для этого примера требуются:</span><span class="sxs-lookup"><span data-stu-id="9a1a3-107">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="cb54e-106">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="cb54e-106">Compiling the Code</span></span>  
+ <span data-ttu-id="cb54e-107">Для этого примера требуются:</span><span class="sxs-lookup"><span data-stu-id="cb54e-107">This example requires:</span></span>  
   
--   <span data-ttu-id="9a1a3-108">Форма Windows.</span><span class="sxs-lookup"><span data-stu-id="9a1a3-108">A Windows form.</span></span>  
+-   <span data-ttu-id="cb54e-108">Форма Windows.</span><span class="sxs-lookup"><span data-stu-id="cb54e-108">A Windows form.</span></span>  
   
--   <span data-ttu-id="9a1a3-109">Объект <xref:System.Windows.Forms.ComboBox> управления с именем `ListBox1` с тремя элементами в <xref:System.Windows.Forms.ComboBox.Items%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="9a1a3-109">A <xref:System.Windows.Forms.ComboBox> control named `ListBox1` with three items in the <xref:System.Windows.Forms.ComboBox.Items%2A> property.</span></span> <span data-ttu-id="9a1a3-110">В этом примере имена трех элементов `"One", Two", and Three"`.</span><span class="sxs-lookup"><span data-stu-id="9a1a3-110">In this example, the three items are named `"One", Two", and Three"`.</span></span> <span data-ttu-id="9a1a3-111"><xref:System.Windows.Forms.ComboBox.DrawMode%2A> Свойство `ComboBox1` должно быть присвоено <xref:System.Windows.Forms.DrawMode.OwnerDrawVariable>.</span><span class="sxs-lookup"><span data-stu-id="9a1a3-111">The <xref:System.Windows.Forms.ComboBox.DrawMode%2A> property of `ComboBox1` must be set to <xref:System.Windows.Forms.DrawMode.OwnerDrawVariable>.</span></span>  
+-   <span data-ttu-id="cb54e-109">Объект <xref:System.Windows.Forms.ComboBox> управления с именем `ListBox1` с тремя элементами в <xref:System.Windows.Forms.ComboBox.Items%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="cb54e-109">A <xref:System.Windows.Forms.ComboBox> control named `ListBox1` with three items in the <xref:System.Windows.Forms.ComboBox.Items%2A> property.</span></span> <span data-ttu-id="cb54e-110">В этом примере имена трех элементов `"One", Two", and Three"`.</span><span class="sxs-lookup"><span data-stu-id="cb54e-110">In this example, the three items are named `"One", Two", and Three"`.</span></span> <span data-ttu-id="cb54e-111"><xref:System.Windows.Forms.ComboBox.DrawMode%2A> Свойство `ComboBox1` должно быть присвоено <xref:System.Windows.Forms.DrawMode.OwnerDrawVariable>.</span><span class="sxs-lookup"><span data-stu-id="cb54e-111">The <xref:System.Windows.Forms.ComboBox.DrawMode%2A> property of `ComboBox1` must be set to <xref:System.Windows.Forms.DrawMode.OwnerDrawVariable>.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="9a1a3-112">Эта методика применяется также к <xref:System.Windows.Forms.ListBox> элемента управления, можно заменить <xref:System.Windows.Forms.ListBox> для <xref:System.Windows.Forms.ComboBox>.</span><span class="sxs-lookup"><span data-stu-id="9a1a3-112">This technique is also applicable to the <xref:System.Windows.Forms.ListBox> control — you can substitute a <xref:System.Windows.Forms.ListBox> for the <xref:System.Windows.Forms.ComboBox>.</span></span>  
+    >  <span data-ttu-id="cb54e-112">Эта методика применяется также к <xref:System.Windows.Forms.ListBox> элемента управления, можно заменить <xref:System.Windows.Forms.ListBox> для <xref:System.Windows.Forms.ComboBox>.</span><span class="sxs-lookup"><span data-stu-id="cb54e-112">This technique is also applicable to the <xref:System.Windows.Forms.ListBox> control — you can substitute a <xref:System.Windows.Forms.ListBox> for the <xref:System.Windows.Forms.ComboBox>.</span></span>  
   
--   <span data-ttu-id="9a1a3-113">Ссылки на пространства имен <xref:System.Windows.Forms?displayProperty=nameWithType> и <xref:System.Drawing?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="9a1a3-113">References to the <xref:System.Windows.Forms?displayProperty=nameWithType> and <xref:System.Drawing?displayProperty=nameWithType> namespaces.</span></span>  
+-   <span data-ttu-id="cb54e-113">Ссылки на пространства имен <xref:System.Windows.Forms?displayProperty=nameWithType> и <xref:System.Drawing?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="cb54e-113">References to the <xref:System.Windows.Forms?displayProperty=nameWithType> and <xref:System.Drawing?displayProperty=nameWithType> namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9a1a3-114">См. также</span><span class="sxs-lookup"><span data-stu-id="9a1a3-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cb54e-114">См. также</span><span class="sxs-lookup"><span data-stu-id="cb54e-114">See also</span></span>
+
 - <xref:System.Windows.Forms.ComboBox.DrawItem>
 - <xref:System.Windows.Forms.DrawItemEventArgs>
 - <xref:System.Windows.Forms.ComboBox.MeasureItem>
-- [<span data-ttu-id="9a1a3-115">Элементы управления со встроенной поддержкой рисования владельцем</span><span class="sxs-lookup"><span data-stu-id="9a1a3-115">Controls with Built-In Owner-Drawing Support</span></span>](controls-with-built-in-owner-drawing-support.md)
-- [<span data-ttu-id="9a1a3-116">Элемент управления ListBox</span><span class="sxs-lookup"><span data-stu-id="9a1a3-116">ListBox Control</span></span>](listbox-control-windows-forms.md)
-- [<span data-ttu-id="9a1a3-117">Элемент управления ComboBox</span><span class="sxs-lookup"><span data-stu-id="9a1a3-117">ComboBox Control</span></span>](combobox-control-windows-forms.md)
+- [<span data-ttu-id="cb54e-115">Элементы управления Windows Forms со встроенной поддержки рисования владельцем</span><span class="sxs-lookup"><span data-stu-id="cb54e-115">Controls with Built-In Owner-Drawing Support</span></span>](controls-with-built-in-owner-drawing-support.md)
+- [<span data-ttu-id="cb54e-116">Элемент управления ListBox</span><span class="sxs-lookup"><span data-stu-id="cb54e-116">ListBox Control</span></span>](listbox-control-windows-forms.md)
+- [<span data-ttu-id="cb54e-117">Элемент управления ComboBox</span><span class="sxs-lookup"><span data-stu-id="cb54e-117">ComboBox Control</span></span>](combobox-control-windows-forms.md)

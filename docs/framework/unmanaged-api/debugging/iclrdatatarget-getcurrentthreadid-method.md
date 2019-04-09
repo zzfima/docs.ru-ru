@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc4ba4f87cd53e12baa0a7cf8b853db0e948201f
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 9687f6139d67a2387091367c2c72167e03be4eee
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57500399"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080661"
 ---
-# <a name="iclrdatatargetgetcurrentthreadid-method"></a><span data-ttu-id="27045-102">Метод ICLRDataTarget::GetCurrentThreadID</span><span class="sxs-lookup"><span data-stu-id="27045-102">ICLRDataTarget::GetCurrentThreadID Method</span></span>
-<span data-ttu-id="27045-103">Получает идентификатор операционной системы для текущего потока.</span><span class="sxs-lookup"><span data-stu-id="27045-103">Gets the operating system identifier for the current thread.</span></span>  
+# <a name="iclrdatatargetgetcurrentthreadid-method"></a><span data-ttu-id="30e36-102">Метод ICLRDataTarget::GetCurrentThreadID</span><span class="sxs-lookup"><span data-stu-id="30e36-102">ICLRDataTarget::GetCurrentThreadID Method</span></span>
+<span data-ttu-id="30e36-103">Получает идентификатор операционной системы для текущего потока.</span><span class="sxs-lookup"><span data-stu-id="30e36-103">Gets the operating system identifier for the current thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="27045-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="27045-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="30e36-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="30e36-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCurrentThreadID (  
@@ -35,21 +35,22 @@ HRESULT GetCurrentThreadID (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="27045-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="27045-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="30e36-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="30e36-105">Parameters</span></span>  
  `threadID`  
- <span data-ttu-id="27045-106">[out] Указатель на идентификатор операционной системы, текущего потока для целевого процесса.</span><span class="sxs-lookup"><span data-stu-id="27045-106">[out] A pointer to the operating system identifier of the current thread for the target process.</span></span>  
+ <span data-ttu-id="30e36-106">[out] Указатель на идентификатор операционной системы, текущего потока для целевого процесса.</span><span class="sxs-lookup"><span data-stu-id="30e36-106">[out] A pointer to the operating system identifier of the current thread for the target process.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="27045-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="27045-107">Remarks</span></span>  
- <span data-ttu-id="27045-108">Если нет текущего потока для целевого процесса, `GetCurrentThreadID` может произойти сбой метода.</span><span class="sxs-lookup"><span data-stu-id="27045-108">If there is no current thread for the target process, the `GetCurrentThreadID` method may fail.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="30e36-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="30e36-107">Remarks</span></span>  
+ <span data-ttu-id="30e36-108">Если нет текущего потока для целевого процесса, `GetCurrentThreadID` может произойти сбой метода.</span><span class="sxs-lookup"><span data-stu-id="30e36-108">If there is no current thread for the target process, the `GetCurrentThreadID` method may fail.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="27045-109">Требования</span><span class="sxs-lookup"><span data-stu-id="27045-109">Requirements</span></span>  
- <span data-ttu-id="27045-110">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="27045-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="30e36-109">Требования</span><span class="sxs-lookup"><span data-stu-id="30e36-109">Requirements</span></span>  
+ <span data-ttu-id="30e36-110">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="30e36-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="27045-111">**Заголовок.** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="27045-111">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="30e36-111">**Заголовок.** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="30e36-111">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="27045-112">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="27045-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="30e36-112">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="30e36-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="27045-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="27045-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="30e36-113">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="30e36-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="27045-114">См. также</span><span class="sxs-lookup"><span data-stu-id="27045-114">See also</span></span>
-- [<span data-ttu-id="27045-115">Интерфейс ICLRDataTarget</span><span class="sxs-lookup"><span data-stu-id="27045-115">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+## <a name="see-also"></a><span data-ttu-id="30e36-114">См. также</span><span class="sxs-lookup"><span data-stu-id="30e36-114">See also</span></span>
+
+- [<span data-ttu-id="30e36-115">Интерфейс ICLRDataTarget</span><span class="sxs-lookup"><span data-stu-id="30e36-115">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

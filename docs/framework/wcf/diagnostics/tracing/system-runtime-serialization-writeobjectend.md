@@ -2,20 +2,21 @@
 title: System.Runtime.Serialization.WriteObjectEnd
 ms.date: 03/30/2017
 ms.assetid: 586d2b65-d8eb-4186-9400-40ae4e163161
-ms.openlocfilehash: e44f26aed5d0e52580b678dae185196c34186607
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80f13b4bff6897292c4f245a9243a77fffa2c749
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595166"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127261"
 ---
-# <a name="systemruntimeserializationwriteobjectend"></a><span data-ttu-id="5fc99-102">System.Runtime.Serialization.WriteObjectEnd</span><span class="sxs-lookup"><span data-stu-id="5fc99-102">System.Runtime.Serialization.WriteObjectEnd</span></span>
-<span data-ttu-id="5fc99-103">System.Runtime.Serialization.WriteObjectEnd</span><span class="sxs-lookup"><span data-stu-id="5fc99-103">System.Runtime.Serialization.WriteObjectEnd</span></span>  
+# <a name="systemruntimeserializationwriteobjectend"></a><span data-ttu-id="79094-102">System.Runtime.Serialization.WriteObjectEnd</span><span class="sxs-lookup"><span data-stu-id="79094-102">System.Runtime.Serialization.WriteObjectEnd</span></span>
+<span data-ttu-id="79094-103">System.Runtime.Serialization.WriteObjectEnd</span><span class="sxs-lookup"><span data-stu-id="79094-103">System.Runtime.Serialization.WriteObjectEnd</span></span>  
   
-## <a name="description"></a><span data-ttu-id="5fc99-104">Описание:</span><span class="sxs-lookup"><span data-stu-id="5fc99-104">Description</span></span>  
- <span data-ttu-id="5fc99-105">Завершен метод WriteObject.</span><span class="sxs-lookup"><span data-stu-id="5fc99-105">Finished WriteObject.</span></span>  
+## <a name="description"></a><span data-ttu-id="79094-104">Описание</span><span class="sxs-lookup"><span data-stu-id="79094-104">Description</span></span>  
+ <span data-ttu-id="79094-105">Завершен метод WriteObject.</span><span class="sxs-lookup"><span data-stu-id="79094-105">Finished WriteObject.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5fc99-106">См. также</span><span class="sxs-lookup"><span data-stu-id="5fc99-106">See also</span></span>
-- [<span data-ttu-id="5fc99-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="5fc99-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="5fc99-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="5fc99-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="5fc99-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="5fc99-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="79094-106">См. также</span><span class="sxs-lookup"><span data-stu-id="79094-106">See also</span></span>
+
+- [<span data-ttu-id="79094-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="79094-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="79094-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="79094-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="79094-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="79094-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
