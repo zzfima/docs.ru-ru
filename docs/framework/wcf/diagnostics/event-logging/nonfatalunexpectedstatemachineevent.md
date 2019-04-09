@@ -2,12 +2,12 @@
 title: NonFatalUnexpectedStateMachineEvent
 ms.date: 03/30/2017
 ms.assetid: bfa37c10-cf1b-4325-b756-6ef200606510
-ms.openlocfilehash: 33fd42a348c43cb07f9c6c4bea796c478cd6043d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 30a8fc53eb31f9d02a597f6d57c7abee30c41e47
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646910"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186541"
 ---
 # <a name="nonfatalunexpectedstatemachineevent"></a>NonFatalUnexpectedStateMachineEvent
 ИД: 148  
@@ -16,9 +16,10 @@ ms.locfileid: "54646910"
   
  Категория: TransactionBridge  
   
-## <a name="description"></a>Описание:  
+## <a name="description"></a>Описание  
  Это событие указывает, что конечный автомат попытался обработать непредвиденное событие. Событие не считается неустранимым. В событии указаны идентификатор транзакции, конечный автомат, текущее состояние, журнал, имя события, сведения о событии, имя процесса и ИД процесса.  
   
 ## <a name="see-also"></a>См. также
+
 - [Ведение журнала событий](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
 - [Общие справочные сведения о событиях](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

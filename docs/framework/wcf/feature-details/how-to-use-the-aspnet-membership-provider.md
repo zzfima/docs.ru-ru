@@ -1,20 +1,20 @@
 ---
-title: Как выполнить Использование поставщика членства ASP.NET
+title: Практическое руководство. Использование поставщика членства ASP.NET
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF and ASP.NET
 - WCF, authorization
 - WCF, security
 ms.assetid: 322c56e0-938f-4f19-a981-7b6530045b90
-ms.openlocfilehash: 4653a4b4ae90f391eac559210deb611e2a83d0f2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: df86f87bfc2456d77e3c1ee209cb8b4c61f53b21
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634510"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140612"
 ---
-# <a name="how-to-use-the-aspnet-membership-provider"></a>Как выполнить Использование поставщика членства ASP.NET
-Поставщик членства в среде [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] - это возможность, которая позволяет разработчикам [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] создавать веб-узлы с возможностью создания пользователями уникальных комбинаций имени пользователя и пароля. Эта функция позволяет любому пользователю создавать на узле учетную запись и при входе получать монопольный доступ к узлу и его службам. В этом заключается отличие от безопасности Windows, по условиям которой пользователи обязаны создавать ученые записи в домене Windows. Вместо этого любой пользователь, который предоставляет свои учетные данные (сочетание имени пользователя и пароля), может использовать узел и его службы.  
+# <a name="how-to-use-the-aspnet-membership-provider"></a>Практическое руководство. Использование поставщика членства ASP.NET
+Поставщик членства в среде [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] - это функция, которая позволяет разработчикам [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] создавать веб-узлы с возможностью создания пользователями уникальных комбинаций имени пользователя и пароля. Эта функция позволяет любому пользователю создавать на узле учетную запись и при входе получать монопольный доступ к узлу и его службам. В этом заключается отличие от безопасности Windows, по условиям которой пользователи обязаны создавать ученые записи в домене Windows. Вместо этого любой пользователь, который предоставляет свои учетные данные (сочетание имени пользователя и пароля), может использовать узел и его службы.  
   
  Образец приложения, см. в разделе [поставщик членства и ролей](../../../../docs/framework/wcf/samples/membership-and-role-provider.md). Дополнительные сведения об использовании [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] функции поставщика ролей см. в разделе [как: Использование поставщика ролей ASP.NET со службой](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md).  
   
@@ -155,5 +155,6 @@ ms.locfileid: "54634510"
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Практическое руководство. Использование поставщика ролей ASP.NET со службой](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)
 - [Поставщик членства и ролей](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)

@@ -1,5 +1,5 @@
 ---
-title: Пошаговое руководство. Выполнение операции в фоновом режиме
+title: Пошаговое руководство. Фоновое выполнение операции
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 1b9a4e0a-f134-48ff-a1be-c461446a31ba
-ms.openlocfilehash: 0ba4ca2589a61a9331308a816da6ddb5276adbc9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: cb06aa6bfa960a493090b67c8baa4d7b3b46756a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703664"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149088"
 ---
-# <a name="walkthrough-running-an-operation-in-the-background"></a>Пошаговое руководство. Выполнение операции в фоновом режиме
+# <a name="walkthrough-running-an-operation-in-the-background"></a>Пошаговое руководство. Фоновое выполнение операции
 Если какая-либо операция будет выполняться в течение долгого времени и при этом требуется не допустить задержек в работе пользовательского интерфейса, можно использовать класс <xref:System.ComponentModel.BackgroundWorker> для выполнения операции в другом потоке.  
   
  Полный код, используемый в этом примере, см. в разделе [как: Фоновое выполнение операции](how-to-run-an-operation-in-the-background.md).  
@@ -101,6 +101,7 @@ ms.locfileid: "57703664"
 -   Реализуйте класс, поддерживающий асинхронную модель для компонентов. Дополнительные сведения см. в разделе [реализации асинхронной модели на основе событий](../../../standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ComponentModel.BackgroundWorker>
 - <xref:System.ComponentModel.DoWorkEventArgs>
 - [Практическое руководство. Реализация формы, в которой выполняется фоновая операция](how-to-implement-a-form-that-uses-a-background-operation.md)

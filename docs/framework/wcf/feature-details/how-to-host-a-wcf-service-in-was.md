@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Размещение службы WCF в WAS
+title: Практическое руководство. Размещение службы WCF в WAS
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-ms.openlocfilehash: 9094cf04ed1bc9fabe8d9df11b876007f322679a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 9c60248342c9cfa0e1b70d86df47a478dd34a60f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651179"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195453"
 ---
-# <a name="how-to-host-a-wcf-service-in-was"></a>Как выполнить Размещение службы WCF в WAS
+# <a name="how-to-host-a-wcf-service-in-was"></a>Практическое руководство. Размещение службы WCF в WAS
 В этой статье описаны основные шаги, необходимые для создания служб активации процесса Windows (WAS) размещенной службы Windows Communication Foundation (WCF). WAS является службой активации нового процесса, представляющей собой обобщение возможностей Internet Information Services (IIS), которые работают с транспортными протоколами, отличными от HTTP. WCF использует интерфейс адаптера прослушивателя для передачи запросов на активацию, полученных через протоколы отличные от HTTP, поддерживаемые WCF, таких как TCP, именованные каналы и очередь сообщений.  
   
  Данный параметр размещения требует правильно установленных и настроенных компонентов активации WAS, но не требует написания кода размещения как части приложения. Дополнительные сведения об установке и настройке WAS см. в разделе [как: Установка и настройка компонентов активации WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).  
@@ -99,5 +99,6 @@ ms.locfileid: "54651179"
 6.  Скомпилируйте и запустите клиент.  
   
 ## <a name="see-also"></a>См. также
+
 - [Активация TCP](../../../../docs/framework/wcf/samples/tcp-activation.md)
-- [Функции размещения Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)
+- [Возможности размещения Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)

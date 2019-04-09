@@ -6,12 +6,12 @@ helpviewer_keywords:
 - security [WCF]
 - Windows Communication Foundation, security
 ms.assetid: 7ea87fcb-dcfb-4a4a-8b03-6b954575d45b
-ms.openlocfilehash: 9827d14a1e64b6111c6c3c9cf53a49170f1a9077
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 58bec40f197dd1f2b104607a65c3ad456b95f69d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592826"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118200"
 ---
 # <a name="windows-communication-foundation-security"></a>Безопасность Windows Communication Foundation
 В этом разделе описываются средства безопасности Windows Communication Foundation (WCF) и способы их использования для защиты сообщений.  
@@ -28,7 +28,7 @@ ms.locfileid: "54592826"
  [Типовые сценарии безопасности](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
  Описание сценариев и топологий, которые можно настроить с помощью WCF.  
   
- [Поведения безопасности](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
+ [Поведение безопасности](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
  Общие сведения о поведении WCF, которые оказывают влияние на безопасность, например на настройки учетных данных.  
   
  [Привязки и безопасность](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
@@ -37,7 +37,7 @@ ms.locfileid: "54592826"
  [Защита служб и клиентов](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  Описывает способ защиты сообщений с помощью средств безопасности WCF.  
   
- [Authentication](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
+ [Проверка подлинности](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
  Примеры типичных задач, связанных с проверкой подлинности.  
   
  [Авторизация](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
@@ -61,13 +61,14 @@ ms.locfileid: "54592826"
  <xref:System.ServiceModel.Security>  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Подробные сведения о возможностях WCF](../../../../docs/framework/wcf/feature-details/index.md)  
+ [Подробные сведения о возможностях WCF](../../../../docs/framework/wcf/feature-details/index.md)  
   
- [Базовое программирование для WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [Базовое программирование WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)  
   
- [Руководство по началу работы](../../../../docs/framework/wcf/getting-started-tutorial.md)  
+ [Учебник по началу работы](../../../../docs/framework/wcf/getting-started-tutorial.md)  
   
- [Концептуальный обзор](../../../../docs/framework/wcf/conceptual-overview.md)  
+ [Общие сведения об основных понятиях](../../../../docs/framework/wcf/conceptual-overview.md)  
   
 ## <a name="see-also"></a>См. также
+
 - [Настройка приложения](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)

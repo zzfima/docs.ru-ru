@@ -2,12 +2,12 @@
 title: Образец обнаружения с помощью областей
 ms.date: 03/30/2017
 ms.assetid: 6a37a754-6b8c-4ebe-bdf2-d4f0520271d5
-ms.openlocfilehash: ba49021022c33c1490f3dbaafc5bba1352ecf55c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 553a7adbe2d6daf29d4acf76990503df09c3bff1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814298"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122711"
 ---
 # <a name="discovery-with-scopes-sample"></a>Образец обнаружения с помощью областей
 В образце описывается использование областей для категоризации конечных точек, доступных для обнаружения, а также способы использования <xref:System.ServiceModel.Discovery.DiscoveryClient> для выполнения асинхронного поиска конечных точек. В службе этот образец показывает, как настраивать обнаружение всех конечных точек, добавляя поведение обнаружения конечных точек и используя его для добавления области к конечной точке, а также управляя возможностью обнаружения конечных точек. В клиенте образец описывает способы создания клиентами <xref:System.ServiceModel.Discovery.DiscoveryClient> и настройки параметров поиска для включения областей в <xref:System.ServiceModel.Discovery.FindCriteria>. В этом образце также описываются способы ограничений клиентами ответов путем добавления критериев завершения.  
@@ -20,7 +20,7 @@ ms.locfileid: "58814298"
   
 #### <a name="to-use-this-sample"></a>Использование этого образца  
   
-1.  В этом образце используются конечные точки HTTP, и для работы этого образца необходимо добавить соответствующие списки управления доступом по URL-адресу. См. в разделе [Настройка HTTP и HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) подробные сведения. Нужные списки управления доступом будут добавлены после выполнения следующей команды с повышенными привилегиями. Если команда не работает, следует указать домен и имя пользователя в следующих аргументах: `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`.  
+1.  В этом образце используются конечные точки HTTP, и для работы этого образца необходимо добавить соответствующие списки управления доступом по URL-адресу. См. в разделе [Настройка HTTP и HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) подробные сведения. Нужные списки управления доступом будут добавлены после выполнения следующей команды с повышенными привилегиями. Вы можете указать домен и имя пользователя в следующих аргументах, если команда не работает как есть: `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
 2.  Постройте решение.  
   
@@ -36,4 +36,3 @@ ms.locfileid: "58814298"
 >  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryWithScopes`  
-  

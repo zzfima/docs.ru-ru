@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2da0b3b7a8a7ae46050345aaf5fcfa65fa349ae5
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 1746527a2667676dfeab89e72874204460bcd33c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57477989"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126676"
 ---
 # <a name="iclrgcmanagercollect-method"></a>Метод ICLRGCManager::Collect
 Принудительная сборка мусора для заданного поколения.  
@@ -63,7 +63,8 @@ HRESULT Collect (
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
-- [Автоматическое управление памятью](../../../../docs/standard/automatic-memory-management.md)
+
+- [Automatic Memory Management](../../../../docs/standard/automatic-memory-management.md)
 - [Сборка мусора](../../../../docs/standard/garbage-collection/index.md)
 - [Интерфейс ICLRControl](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
 - [Интерфейс ICLRGCManager](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md)

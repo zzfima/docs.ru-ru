@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 57c614e5-18a9-4e87-bfd5-d0fe3396a192
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 647b1807957b611b9ba75ee90a7ac2257246d14c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c304606a27552e604bf40953f49a30a794026281
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261585"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150752"
 ---
 # <a name="namespace-element-net-native"></a>\<Пространство имен > элемент (машинный код .NET)
 Применяет политику отражения среды выполнения ко всем типам в указанном пространстве имен.  
@@ -35,9 +35,9 @@ ms.locfileid: "55261585"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Тип атрибута|Описание:|  
+|Атрибут|Тип атрибута|Описание|  
 |---------------|--------------------|-----------------|  
-|`Name`|Общие правила|Обязательный атрибут. Указывает имя пространства имен.|  
+|`Name`|Общие|Обязательный атрибут. Указывает имя пространства имен.|  
 |`Activate`|Отражение|Необязательный атрибут. Управляет доступом среды выполнения к конструкторам для включения активации экземпляров.|  
 |`Browse`|Отражение|Необязательный атрибут. Управляет запросами для получения сведений об элементах программы, но не включает доступ среды выполнения.|  
 |`Dynamic`|Отражение|Необязательный атрибут. Управляет доступом среды выполнения ко всем членам типа, включая конструкторы, методы, поля, свойства и события, чтобы включить динамическое программирование.|  
@@ -51,7 +51,7 @@ ms.locfileid: "55261585"
   
 ## <a name="name-attribute"></a>Name - атрибут  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |*namespace_name*|Имя пространства имен. Если элемент \<Namespace> является дочерним элементом для элемента [\<Application>](../../../docs/framework/net-native/application-element-net-native.md), [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) или [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md), *namespace_name* должно быть полным именем пространства имен. Если элемент \<Namespace> является дочерним элементом другого элемента \<Namespace>, то *namespace_name* должно быть относительным именем пространства имен.|  
   
@@ -66,16 +66,16 @@ ms.locfileid: "55261585"
 |Элемент|Описание|  
 |-------------|-----------------|  
 |`<Namespace>`|Применяет политику отражения среды выполнения для всех типов в родительском пространстве имен.|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Применяет политику отражения к типу.|  
-|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Применяет политику отражения к сконструированному универсальному типу.|  
+|[\<Тип >](../../../docs/framework/net-native/type-element-net-native.md)|Применяет политику отражения к типу.|  
+|[\<TypeInstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Применяет политику отражения к сконструированному универсальному типу.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
-|[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|Служит в качестве контейнера для типов и членов типов приложения, метаданные которого доступны для отражения во время выполнения. Элемент [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) может иметь ноль, один или более элементов [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md).|  
-|[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|Применяет политику отражения среды выполнения ко всем типам в указанной сборке.|  
-|[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|Определяет сборку, содержащую типы и члены типов, метаданные которой доступны для отражения во время выполнения. Элемент [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) может иметь ноль или один элемент [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md).|  
+|[\<Приложения >](../../../docs/framework/net-native/application-element-net-native.md)|Служит в качестве контейнера для типов и членов типов приложения, метаданные которого доступны для отражения во время выполнения. Элемент [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) может иметь ноль, один или более элементов [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md).|  
+|[\<Сборка >](../../../docs/framework/net-native/assembly-element-net-native.md)|Применяет политику отражения среды выполнения ко всем типам в указанной сборке.|  
+|[\<Библиотека >](../../../docs/framework/net-native/library-element-net-native.md)|Определяет сборку, содержащую типы и члены типов, метаданные которой доступны для отражения во время выполнения. Элемент [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) может иметь ноль или один элемент [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md).|  
 |`<Namespace>`|Применяет политику отражения для всех типов в родительском пространстве имен.|  
   
 ## <a name="remarks"></a>Примечания  
@@ -84,6 +84,7 @@ ms.locfileid: "55261585"
  Если это дочерний элемент элемента [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md), то элемент `<Namespace>` переопределяет политику отражения среды выполнения, определенную элементом [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Параметры политики директив среды выполнения](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
-- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Ссылка на файл конфигурации директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Элементы директив среды выполнения](../../../docs/framework/net-native/runtime-directive-elements.md)

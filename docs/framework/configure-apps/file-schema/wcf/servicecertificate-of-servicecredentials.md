@@ -2,12 +2,12 @@
 title: <serviceCertificate> из <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: 597ae6d5-4938-4950-9f5e-b2280e816182
-ms.openlocfilehash: bd2d59218ce40639ac04aa7c5cc157fe37eb9937
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 086b700b94198aa36e61289178ebbed75d33da98
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373807"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173567"
 ---
 # <a name="servicecertificate-of-servicecredentials"></a>\<serviceCertificate > элемента \<serviceCredentials >
 Задает сертификат X.509, который будет использоваться для проверки подлинности службы при подключении к клиентам с использованием режима безопасности сообщений.  
@@ -45,7 +45,7 @@ ms.locfileid: "57373807"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<serviceCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|Задает учетные данные, используемые при проверке подлинности службы, а также параметры, относящиеся к проверке учетных данных клиента.|  
   
@@ -55,9 +55,10 @@ ms.locfileid: "57373807"
  Дополнительные сведения об использовании элемента см. в разделе [как: Укажите значения учетных данных клиента](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.Configuration.X509RecipientCertificateServiceElement>
 - <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.ServiceCertificate%2A>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential>
 - <xref:System.ServiceModel.Description.ServiceCredentials.ServiceCertificate%2A>
-- [Практическое руководство. Укажите значения учетных данных клиента](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
-- [Поведения безопасности](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+- [Практическое руководство. Задание значений учетных данных клиента](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
+- [Поведение безопасности](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)

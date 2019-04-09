@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
-ms.openlocfilehash: fb8d2161800b336cd7f605dda79f28dbb5b91848
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
-ms.translationtype: MT
+ms.openlocfilehash: 42c87f7b427af775784f8bf1c49ecabde2572823
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333473"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135789"
 ---
 # <a name="securing-clients"></a>Обеспечение безопасности клиентов
 В Windows Communication Foundation (WCF), требования безопасности для клиентов определяются службой. Это означает, что служба указывает используемый режим безопасности и определяет, должен ли клиент предоставить учетные данные. Таким образом, процесс обеспечения безопасности клиента прост: используйте метаданные, полученные от службы (если она опубликована), и создайте клиент. Метаданные указывают, как настроить клиент. Если служба требует, чтобы клиент предоставлял учетные данные, необходимо получить учетные данные, удовлетворяющие требованиям. В этом разделе подробно описан данный процесс. Дополнительные сведения о создании безопасной службы см. в разделе [Защита служб](../../../docs/framework/wcf/securing-services.md).  
@@ -78,7 +78,7 @@ ms.locfileid: "56333473"
 #### <a name="setting-a-clientcredentials-value-in-code"></a>Параметр \<clientCredentials > значения в коде  
  Чтобы задать [ \<clientCredentials >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) значение в коде, вы должны получить доступ к <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> свойство <xref:System.ServiceModel.ClientBase%601> класса. Это свойство возвращает объект <xref:System.ServiceModel.Description.ClientCredentials>, обеспечивающий доступ к различным типам учетных данных, как показано в приведенной ниже таблице.  
   
-|Свойство ClientCredential|Описание:|Примечания|  
+|Свойство ClientCredential|Описание|Примечания|  
 |-------------------------------|-----------------|-----------|  
 |<xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A>|Возвращает <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>|Представляет сертификат X.509, предоставляемый клиентом для проверки своей подлинности в службе.|  
 |<xref:System.ServiceModel.Description.ClientCredentials.HttpDigest%2A>|Возвращает <xref:System.ServiceModel.Security.HttpDigestClientCredential>|Представляет учетные данные дайджест-проверки подлинности HTTP. Эти учетные данные представляют собой хэш имени пользователя и пароля.|  
@@ -129,7 +129,7 @@ ms.locfileid: "56333473"
  Дополнительные сведения о настройке учетных данных клиента, см. в разделе [как: Укажите значения учетных данных клиента](../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
 > [!NOTE]
->  Значение `ClientCredentialType` игнорируется, если для параметра `SecurityMode` задано значение `"TransportWithMessageCredential",` как показано в следующем примере конфигурации.  
+>  `ClientCredentialType` игнорируется, если `SecurityMode` присваивается `"TransportWithMessageCredential",` как показано в следующем образце конфигурации.  
   
 ```xml  
 <wsHttpBinding>  
@@ -145,15 +145,16 @@ ms.locfileid: "56333473"
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>
 - <xref:System.ServiceModel.ClientBase%601>
 - <xref:System.ServiceModel.Description.ClientCredentials>
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>
 - [\<привязки >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)
-- [Редактор конфигурации (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)
+- [Средство редактирования конфигурации (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)
 - [Защита служб](../../../docs/framework/wcf/securing-services.md)
-- [Обращение к службам с помощью клиента WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
-- [Практическое руководство. Укажите значения учетных данных клиента](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
-- [Служебная программа для метаданных ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [Обращение к службам с использованием клиента WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
+- [Практическое руководство. Задание значений учетных данных клиента](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
+- [Служебное средство ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
 - [Практическое руководство. Указание типа учетных данных клиента](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)

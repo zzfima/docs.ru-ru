@@ -1,18 +1,18 @@
 ---
-title: Практическое руководство. Выравнивание элементов управления по границам формы во время разработки
+title: Практическое руководство. Выравнивание элементов управления по границам формы во время выполнения
 ms.date: 03/30/2017
 helpviewer_keywords:
 - custom controls [Windows Forms], docking using designer
 - Dock property [Windows Forms], aligning controls (using designer)
 ms.assetid: 51f08998-5e3b-4330-be58-a4edd0eb60f4
-ms.openlocfilehash: b81cb839664499d69710d81b7b0c8a479966d569
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 8f74a6b56e99e016bfb27bbe1b271f6c71af8f87
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724951"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140899"
 ---
-# <a name="how-to-align-a-control-to-the-edges-of-forms-at-design-time"></a>Практическое руководство. Выравнивание элементов управления по границам формы во время разработки
+# <a name="how-to-align-a-control-to-the-edges-of-forms-at-design-time"></a>Практическое руководство. Выравнивание элементов управления по границам формы во время выполнения
 Чтобы выровнять по границе формы, задав элемент управления <xref:System.Windows.Forms.Control.Dock%2A>. Это свойство определяет, в каком месте формы будет размещаться элемент управления. Свойство <xref:System.Windows.Forms.Control.Dock%2A> может принимать указанные ниже значения.  
   
 |Параметр|Влияние на элемент управления|  
@@ -42,13 +42,14 @@ ms.locfileid: "57724951"
 4.  Элемент управления будет зафиксировано в отношении, определенном с помощью параметра.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType>
 - [Практическое руководство. Выравнивание элементов управления по границам формы](how-to-align-a-control-to-the-edges-of-forms.md)
-- [Пошаговое руководство: Упорядочение элементов управления в формах Windows Forms, с помощью линий привязки](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью линий привязки](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [Практическое руководство. Привязка элементов управления в формах Windows Forms](how-to-anchor-controls-on-windows-forms.md)
 - [Практическое руководство. Привязка и закрепление дочерних элементов управления в элементе управления TableLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
 - [Практическое руководство. Привязка и закрепление дочерних элементов управления в элементе управления FlowLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
-- [Пошаговое руководство: Упорядочение элементов управления в Windows Forms, с помощью элемента управления TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [Пошаговое руководство: Упорядочение элементов управления в Windows Forms, с помощью элемента FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью элемента TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью элемента FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
 - [Создание элементов управления Windows Forms во время разработки](developing-windows-forms-controls-at-design-time.md)

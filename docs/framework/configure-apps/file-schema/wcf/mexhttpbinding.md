@@ -2,12 +2,12 @@
 title: <mexHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: e50b2e1f-9668-41a5-8077-dee7abff9f0f
-ms.openlocfilehash: 9d37a4918101b18c3002f2dcb926b9a03e0057a2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 1aa9512c3d0d52f8cc3c7bd7b82bcfd37c418ce7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266342"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151246"
 ---
 # <a name="mexhttpbinding"></a>\<mexHttpBinding>
 Задает параметры для привязки, используемой для обмена сообщениями WS-MetadataExchange (WS-MEX) по протоколу HTTP.  
@@ -47,7 +47,7 @@ ms.locfileid: "55266342"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<привязки >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Этот элемент содержит коллекцию стандартных и пользовательских привязок.|  
   
@@ -55,9 +55,10 @@ ms.locfileid: "55266342"
  Эта привязка по существу является привязкой `WSHttpBinding` с отключенной безопасностью. Она поддерживает большинство запросов метаданных.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.Description.MetadataExchangeBindings.CreateMexHttpBinding%2A>
 - <xref:System.ServiceModel.Configuration.MexHttpBindingElement>
-- [Практическое руководство. Публикация метаданных для службы с помощью файла конфигурации](../../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [Практическое руководство. Публикация метаданных для службы с использованием файла конфигурации](../../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
 - [Публикация и получение метаданных через пользовательскую привязку](../../../../../docs/framework/wcf/extending/publishing-and-retrieving-metadata-over-a-custom-binding.md)
 - [Метаданные](../../../../../docs/framework/wcf/feature-details/metadata.md)
 - [Привязки](../../../../../docs/framework/wcf/bindings.md)

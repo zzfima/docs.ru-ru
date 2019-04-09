@@ -9,12 +9,12 @@ helpviewer_keywords:
 - best practices [Windows Forms], dataGridView control
 - DataGridView control [Windows Forms], scaling
 ms.assetid: 8321a8a6-6340-4fd1-b475-fa090b905aaf
-ms.openlocfilehash: 895dd132c070157355c28a935e43240f2750159e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 76ac31e9082216d0024160c51a7495855eee5601
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57706421"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142148"
 ---
 # <a name="best-practices-for-scaling-the-windows-forms-datagridview-control"></a>Масштабирование элемента управления DataGridView в Windows Forms
 <xref:System.Windows.Forms.DataGridView> Управления предназначен для обеспечения максимальной масштабируемости. Если требуется для отображения больших объемов данных, необходимо следовать рекомендациям, приведенным в этом разделе, чтобы избежать использования большого объема памяти или замедления работы пользовательский интерфейс (UI). В этом разделе обсуждаются следующие вопросы:  
@@ -136,6 +136,7 @@ ms.locfileid: "57706421"
 -   Не вызывайте `Sort(IComparer)` перегрузки <xref:System.Windows.Forms.DataGridView.Sort%2A> метод. Сортировка с использованием пользовательского модуля сравнения вызывает всех строк.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.DataGridView>
 - [Оптимизация производительности элемента управления DataGridView в Windows Forms](performance-tuning-in-the-windows-forms-datagridview-control.md)
 - [Виртуальный режим элемента управления DataGridView в Windows Forms](virtual-mode-in-the-windows-forms-datagridview-control.md)

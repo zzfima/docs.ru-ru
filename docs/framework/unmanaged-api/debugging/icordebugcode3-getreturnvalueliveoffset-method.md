@@ -19,12 +19,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4f1f4734b6cb5b214b219742a6cac1c50220b96e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 03ee275336d3ae71f63d82add694fe1308efbe8b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492859"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125941"
 ---
 # <a name="icordebugcode3getreturnvalueliveoffset-method"></a>Метод ICorDebugCode3::GetReturnValueLiveOffset
 Для указанного смещения на промежуточном Языке получает смещения в машинном коде, где должны размещаться точку останова, чтобы отладчик мог получить возвращаемое значение из функции.  
@@ -61,7 +61,7 @@ HRESULT GetReturnValueLiveOffset(
   
  Функция возвращает `HRESULT` значений, приведенных в следующей таблице.  
   
-|Значение`HRESULT` |Описание:|  
+|`HRESULT` value|Описание|  
 |---------------------|-----------------|  
 |`S_OK`|Выполнено.|  
 |`CORDBG_E_INVALID_OPCODE`|Заданное смещение сайта IL не является инструкцией вызова, или функция возвращает `void`.|  
@@ -79,5 +79,6 @@ HRESULT GetReturnValueLiveOffset(
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Метод GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)
 - [Интерфейс ICorDebugCode3](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)

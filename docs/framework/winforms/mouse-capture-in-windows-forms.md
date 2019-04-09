@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - mouse [Windows Forms], capture
 ms.assetid: 8911d4b0-a4f8-4f93-8246-371aebd27d0c
-ms.openlocfilehash: afb58df99ea30f5e7e6ab5b9156af195d273c44d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 30432c6978f60cc9ad47d5df5dafc7aa45229f3b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712712"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151649"
 ---
 # <a name="mouse-capture-in-windows-forms"></a>Захват мыши в Windows Forms
 *Захват мыши* называется элемент управления вводом все мыши. Если мышь захвачена элементом управления, он получает ввод от мыши ли указатель мыши находится в границах.  
@@ -22,4 +22,5 @@ ms.locfileid: "57712712"
  Только окна на передний план можно захватить мышь. Если фоновое окно пытается захватить мышь, получит сообщения о событиях мыши, возникающие, когда указатель мыши находится в видимой части окна. Кроме того даже если мышь захвачена окна на передний план, пользователь может по-прежнему щелкнуть другое окно выводило на передний план. При захвате мыши сочетаний клавиш не работают.  
   
 ## <a name="see-also"></a>См. также
+
 - [Ввод данных мышью в приложении Windows Forms](mouse-input-in-a-windows-forms-application.md)

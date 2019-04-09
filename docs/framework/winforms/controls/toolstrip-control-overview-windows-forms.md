@@ -9,12 +9,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - what's new [Windows Forms], toolbars
 ms.assetid: 81d067ed-297c-4dad-90de-1bcac15336ec
-ms.openlocfilehash: c701ed6ff155ca507f827874a955b2361a3b2359
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3e532b040d3c7859220b7f73958b63e7208b988c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719390"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144577"
 ---
 # <a name="toolstrip-control-overview-windows-forms"></a>Общие сведения об элементе управления ToolStrip (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ToolStrip> управления и связанные с ним классы предоставляют общую инфраструктуру для объединения элементов пользовательского интерфейса в панели инструментов, строк состояния и меню. <xref:System.Windows.Forms.ToolStrip> элементы управления предлагают широкие возможности разработки, включающий встроенной активации и редактирования, пользовательский макет и нависания, который является возможность совместного использования горизонтального или вертикального пространства панели инструментов.  
@@ -62,7 +62,7 @@ Windows Forms <xref:System.Windows.Forms.ToolStrip> управления и св
   
 ### <a name="important-toolstrip-companion-classes"></a>Важные сопутствующие ToolStrip классы  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.MenuStrip>|Заменяет и расширяет его функциональные возможности <xref:System.Windows.Forms.MainMenu> класса.|  
 |<xref:System.Windows.Forms.StatusStrip>|Заменяет и расширяет его функциональные возможности <xref:System.Windows.Forms.StatusBar> класса.|  
@@ -80,6 +80,7 @@ Windows Forms <xref:System.Windows.Forms.ToolStrip> управления и св
  Дополнительные сведения см. в разделе [ToolStrip, технологии, положенные](toolstrip-technology-summary.md) и [архитектура элемента управления ToolStrip](toolstrip-control-architecture.md).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ContextMenuStrip>

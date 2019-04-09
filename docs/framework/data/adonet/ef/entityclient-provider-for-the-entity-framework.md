@@ -2,12 +2,12 @@
 title: Поставщик EntityClient для Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 8c5db787-78e6-4a34-8dc1-188bca0aca5e
-ms.openlocfilehash: ac14840145fb3faca0f6243037c8b27be31f5c7f
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: b8de4e36351a93858104a99045c5aeecce9d2997
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583983"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169680"
 ---
 # <a name="entityclient-provider-for-the-entity-framework"></a>Поставщик EntityClient для Entity Framework
 Поставщик EntityClient - это поставщик данных, используемый приложениями платформы Entity Framework для доступа к данным, описанным в концептуальной модели. Сведения о концептуальной модели, см. в разделе [моделирования и сопоставления](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md). В EntityClient для доступа к источнику данных используются другие поставщики данных .NET Framework. Например, в EntityClient используется поставщик данных .NET Framework для SQL Server (SqlClient) при доступе к базе данных SQL Server. Сведения о поставщике SqlClient см. в разделе [SqlClient для Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md). Поставщик EntityClient реализован в пространстве имен <xref:System.Data.EntityClient>.  
@@ -42,11 +42,11 @@ cmd.CommandText = @"SELECT VALUE p
  Для обновления данных, доступных через концептуальную модель, см. в разделе [как: Управление транзакциями в Entity Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738523(v=vs.100)).  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Практическое руководство. Построить строку соединения EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)  
+ [Практическое руководство. Сборка строки соединения EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)  
   
- [Практическое руководство. Выполнение запроса, возвращающего результаты PrimitiveType](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)  
+ [Практическое руководство. Выполнение запроса, возвращающего типы-примитивы](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)  
   
- [Практическое руководство. Выполнение запроса, возвращающего результаты StructuralType](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)  
+ [Практическое руководство. Выполнение запроса, возвращающего результаты типа StructuralType](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)  
   
  [Практическое руководство. Выполнение запроса, возвращающего результаты RefType](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-reftype-results.md)  
   
@@ -54,15 +54,16 @@ cmd.CommandText = @"SELECT VALUE p
   
  [Практическое руководство. Выполнение запроса, возвращающего вложенные коллекции](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-nested-collections.md)  
   
- [Практическое руководство. Выполнение параметризованного запроса Entity SQL с использованием EntityCommand](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-entity-sql-query-using-entitycommand.md)  
+ [Практическое руководство. Выполнение SQL-запроса к параметрическому объекту с использованием EntityCommand](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-entity-sql-query-using-entitycommand.md)  
   
- [Практическое руководство. Выполнить параметризированную хранимую процедуру с использованием EntityCommand](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-stored-procedure-using-entitycommand.md)  
+ [Практическое руководство. Выполнение параметризованной хранимой процедуры с использованием EntityCommand](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-stored-procedure-using-entitycommand.md)  
   
- [Практическое руководство. Выполнить полиморфный запрос](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-polymorphic-query.md)  
+ [Практическое руководство. Выполнение полиморфного запроса](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-polymorphic-query.md)  
   
  [Практическое руководство. Переход по отношениям с помощью оператора Navigate](../../../../../docs/framework/data/adonet/ef/how-to-navigate-relationships-with-the-navigate-operator.md)  
   
 ## <a name="see-also"></a>См. также
+
 - [Управление подключениями и транзакциями](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))
 - [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)
 - [Справочник по языку](../../../../../docs/framework/data/adonet/ef/language-reference/index.md)

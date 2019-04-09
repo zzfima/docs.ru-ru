@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], about data grids
 - DataGridView control [Windows Forms], scenarios
 ms.assetid: 09a5fd05-3447-47ec-a4ec-6082a2b7f0dd
-ms.openlocfilehash: 882b210a19f1ec5515bd7f37ccc55343f84767bc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 52c448f21be056e6166334785943356039baf3ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721321"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175296"
 ---
 # <a name="datagridview-control-scenarios-windows-forms"></a>Сценарии использования элементов управления DataGridView (Windows Forms)
 С помощью <xref:System.Windows.Forms.DataGridView> элемента управления, можно отобразить табличных данных из различных источников данных. В простых случаях вы можете вручную заполнять <xref:System.Windows.Forms.DataGridView> и манипулировать данными напрямую через элемент управления. Как правило, но будет хранить данные в внешнего источника данных и привязка элемента управления с помощью <xref:System.Windows.Forms.BindingSource> компонента.  
@@ -87,5 +87,6 @@ ms.locfileid: "57721321"
 -   Можно реализовать собственные классы ячеек и столбцов для размещения элементов управления, не поддерживаемые встроенными типами столбцов. Дополнительные сведения см. в разделе [Как Ведущие элементы управления в формах Windows Forms ячеек элемента управления DataGridView](how-to-host-controls-in-windows-forms-datagridview-cells.md).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.DataGridView>
 - [Общие сведения об элементе управления DataGridView](datagridview-control-overview-windows-forms.md)

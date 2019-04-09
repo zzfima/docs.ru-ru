@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3af512f3-87d9-4005-9e2f-abb1060ff43f
-ms.openlocfilehash: 97cae018f8cdf19da390b9586334f7c8b7f1c239
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 7f8cca02e673339e892c16e0de99e20accdfd404
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903819"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142348"
 ---
 # <a name="establishing-the-connection"></a>Установка подключения
 Для создания соединения с Microsoft SQL Server используется объект <xref:System.Data.SqlClient.SqlConnection> поставщика данных .NET Framework для SQL Server. Для соединения с источником данных OLE DB используется объект <xref:System.Data.OleDb.OleDbConnection> поставщика данных .NET Framework для OLE DB. Для соединения с источником данных используется объект <xref:System.Data.Odbc.OdbcConnection> поставщика данных .NET Framework для ODBC. Для соединения с источником данных Oracle используется объект <xref:System.Data.OracleClient.OracleConnection> поставщика данных .NET Framework для Oracle. Для безопасного хранения и извлечения строки подключения, см. в разделе [Защита сведений о соединении](../../../../docs/framework/data/adonet/protecting-connection-information.md).  
@@ -21,7 +21,7 @@ ms.locfileid: "55903819"
  Также можно использовать методы `Close` или `Dispose` объекта соединения для используемого поставщика. Соединения, которые явно не закрыты, нельзя добавить или вернуть в пул. Например, соединение, которое вышло за пределы области, но явно закрыто не было, будет возвращено в пул соединений только в том случае, если был достигнут максимальный размер этого пула, а соединение еще действует. Дополнительные сведения см. в разделе [OLE DB, ODBC и Oracle организация пулов соединений](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md).  
   
 > [!NOTE]
->  Не вызывайте `Close` или `Dispose` на **подключения**, **DataReader**, или любого другого управляемого объекта в `Finalize` метод класса. В методе завершения следует только освобождать неуправляемые ресурсы, которыми ваш класс непосредственно владеет. Если класс не владеет какими-либо неуправляемыми ресурсами, не включайте в его определение метод `Finalize`. Дополнительные сведения см. в разделе [мусора](../../../../docs/standard/garbage-collection/index.md).  
+>  Не вызывайте `Close` или `Dispose` на **подключения**, **DataReader**, или любого другого управляемого объекта в `Finalize` метод класса. В методе завершения следует освобождать только неуправляемые ресурсы, которыми ваш класс непосредственно владеет. Если класс не владеет какими-либо неуправляемыми ресурсами, не включайте в его определение метод `Finalize`. Дополнительные сведения см. в разделе [Сборка мусора](../../../../docs/standard/garbage-collection/index.md).  
   
 > [!NOTE]
 >  События входа в систему и выхода из системы не вызываются на сервере при выборке подключения из пула подключений и при возврате его в пул подключений, поскольку при возврате в пул подключений подключение фактически не закрывается. Дополнительные сведения см. в разделе [Пулы подключений SQL Server (ADO.NET)](../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
@@ -143,7 +143,8 @@ nwindConn.Open();
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Подключение к источнику данных](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
 - [Строки подключения](../../../../docs/framework/data/adonet/connection-strings.md)
-- [Организация пулов соединений OLE DB, ODBC и Oracle](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [OLE DB, ODBC и объединение подключений в пул в Oracle](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

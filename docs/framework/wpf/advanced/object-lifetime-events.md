@@ -24,25 +24,23 @@ helpviewer_keywords:
 - startup events [WPF]
 - lifetime events of objects [WPF]
 ms.assetid: face6fc7-465b-4502-bfe5-e88d2e729a78
-ms.openlocfilehash: b5f38492fff9aa87094542b174becc54ee324a78
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8ecc3f716061dfd08ac95652d1a9d8e06e26d949
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371493"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175797"
 ---
 # <a name="object-lifetime-events"></a>События времени жизни объекта
 В этом разделе описываются определенные события [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], обозначающие этапы создания, использования и удаления времени жизни объекта.  
-  
 
-  
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Предварительные требования  
  Предполагается, что вы имеете представление о свойствах зависимостей с точки зрения потребителя существующих свойств зависимостей в классах [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] и ознакомились с разделом [Общие сведения о свойствах зависимостей](dependency-properties-overview.md). Чтобы выполнить примеры в этом разделе, следует также иметь представление о [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] (см. раздел [Обзор XAML (WPF)](xaml-overview-wpf.md)) и знать, как создаются приложения [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
 <a name="intro"></a>   
 ## <a name="object-lifetime-events"></a>События времени жизни объекта  
- Все объекты в управляемым кодом Microsoft .NET Framework выполните аналогичный набор этапов жизни, создания, использования и удаления. Многие объекты также имеют этап завершения, который возникает как часть этапа удаления. Объекты [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], особенно визуальные объекты, которые [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] определяет как элементы, также имеют набор общих этапов жизни объекта. Модель приложений и модель программирования [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляют эти этапы как последовательность событий. В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] существует четыре основных типа объектов, связанных с событиями времени жизни: элементы в целом, элементы окна, узлы навигации и объекты приложения. Узлы окон и навигации также входят в более крупные группы визуальных объектов (элементов). В этом разделе описываются события времени жизни, которые являются общими для всех элементов, а затем даются общие сведения о конкретных событиях, которые относятся к определениям приложений, узлам окон или навигации.  
+ Все объекты в управляемым кодом Microsoft .NET Framework выполните аналогичный набор этапов жизни, создания, использования и удаления. Многие объекты также имеют этап завершения, который возникает как часть этапа удаления. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] объекты, дополнительные, особенно визуальные объекты, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] определяет как элементы, также имеют набор общих этапов жизни объекта. Модель приложений и модель программирования [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляют эти этапы как последовательность событий. В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] существует четыре основных типа объектов, связанных с событиями времени жизни: элементы в целом, элементы окна, узлы навигации и объекты приложения. Узлы окон и навигации также входят в более крупные группы визуальных объектов (элементов). В этом разделе описываются события времени жизни, которые являются общими для всех элементов, а затем даются общие сведения о конкретных событиях, которые относятся к определениям приложений, узлам окон или навигации.  
   
 <a name="common_events"></a>   
 ## <a name="common-lifetime-events-for-elements"></a>Общие события времени жизни для элементов  
@@ -75,5 +73,6 @@ ms.locfileid: "57371493"
 -   <xref:System.Windows.Controls.Page>, <xref:System.Windows.Navigation.NavigationWindow>, и <xref:System.Windows.Controls.Frame>: [Общие сведения о переходах](../app-development/navigation-overview.md).  
   
 ## <a name="see-also"></a>См. также
-- [Приоритет значения свойства зависимостей](dependency-property-value-precedence.md)
+
+- [Приоритет значения свойств зависимостей](dependency-property-value-precedence.md)
 - [Общие сведения о перенаправленных событиях](routed-events-overview.md)

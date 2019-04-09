@@ -2,12 +2,12 @@
 title: Возможности безопасности при использовании пользовательских привязок
 ms.date: 03/30/2017
 ms.assetid: a2425679-484a-4e6c-9c98-7da7304f1516
-ms.openlocfilehash: 51359dd555db44891b4c8fe7bca9b62cab5f8d29
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25d203fa706eeb0d0ccf1eaf4367ffa5bd7b83aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708523"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157278"
 ---
 # <a name="security-capabilities-with-custom-bindings"></a>Возможности безопасности при использовании пользовательских привязок
 Основные задачи обеспечения безопасности можно выполнить, используя одну из предоставляемых системой привязок. Однако при необходимости в дополнительных элементах управления можно создать пользовательскую привязку с помощью элемента <xref:System.ServiceModel.Channels.SecurityBindingElement>, следуя объяснениям в этом разделе. Дополнительные сведения о пользовательских привязках см. в разделе [пользовательских привязок](../../../../docs/framework/wcf/extending/custom-bindings.md).  
@@ -22,19 +22,19 @@ ms.locfileid: "54708523"
  [Практическое руководство. Создание SecurityBindingElement для заданного режима проверки подлинности](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)  
  Описывается, как создать элемент безопасности для заданного режима проверки подлинности.  
   
- [Практическое руководство. Отключения безопасных сеансов в WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
+ [Практическое руководство. Порядок отключения безопасных сеансов в WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
  Описывается, как отключить безопасные сеансы при создании службы федерации.  
   
  [Практическое руководство. Включение обнаружения повтора сообщений](../../../../docs/framework/wcf/feature-details/how-to-enable-message-replay-detection.md)  
  Описывается, как определить, когда будет осуществлена атака воспроизведения.  
   
- [Практическое руководство. Создание вспомогательных учетных данных](../../../../docs/framework/wcf/feature-details/how-to-create-a-supporting-credential.md)  
+ [Практическое руководство. Создание подтверждающих учетных данных](../../../../docs/framework/wcf/feature-details/how-to-create-a-supporting-credential.md)  
  Описывается, как предоставить службе подтверждающие учетные данные при необходимости.  
   
  [Практическое руководство. Настройка подтверждения сигнатуры](../../../../docs/framework/wcf/feature-details/how-to-set-up-a-signature-confirmation.md)  
  Содержит описание шагов, которые необходимо предпринять для подтверждения подписей при использовании цифровых подписей сообщений.  
   
- [Практическое руководство. Установка разницы в показаниях часов Max](../../../../docs/framework/wcf/feature-details/how-to-set-a-max-clock-skew.md)  
+ [Практическое руководство. Установка максимальной разницы в показаниях часов](../../../../docs/framework/wcf/feature-details/how-to-set-a-max-clock-skew.md)  
  Описывается, как настроить максимально допустимую разницу во времени между службой и клиентом.  
   
  [Практическое руководство. Выключение шифрования цифровых сигнатур](../../../../docs/framework/wcf/feature-details/how-to-disable-encryption-of-digital-signatures.md)  
@@ -51,6 +51,7 @@ ms.locfileid: "54708523"
  [Защита служб и клиентов](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
   
 ## <a name="see-also"></a>См. также
+
 - [Привязки и безопасность](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
 - [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Привязки, предоставляемые системой](../../../../docs/framework/wcf/system-provided-bindings.md)

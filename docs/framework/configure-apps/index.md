@@ -24,12 +24,12 @@ helpviewer_keywords:
 - configuration files [.NET Framework], machine
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
-ms.openlocfilehash: 184be04c963116906c1dc2c0a5803814402ea8e0
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 97dadfa8b7d32d4f0f981e50d6eb90ca74ecdaa3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826438"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147112"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Настройка приложений с использованием файлов конфигурации
 Среда .NET Framework предоставляет разработчикам и администраторам возможность управления и гибкой настройки способа выполнения приложений с помощью файлов конфигурации. Файлы конфигурации имеют формат XML, и при необходимости их можно изменять. Администратор может контролировать, к каким из защищенных ресурсов может осуществлять доступ приложение, какие оно будет использовать версии сборок и где расположены удаленные объекты и приложения. Разработчики могут задавать параметры в файлах конфигурации, устраняя необходимость в перекомпиляции приложения при каждом изменении той или иной установки. В этом разделе рассказывается, какие параметры могут быть настроены и для чего может потребоваться настройка приложения.  
@@ -120,6 +120,7 @@ ms.locfileid: "55826438"
  Описывается иерархия схемы для запуска, среды выполнения, сети и других типов параметров конфигурации.  
   
 ## <a name="see-also"></a>См. также
+
 - [Схема файла конфигурации](../../../docs/framework/configure-apps/file-schema/index.md)
 - [Указание расположения сборки](../../../docs/framework/configure-apps/specify-assembly-location.md)
 - [Перенаправление версий сборки](../../../docs/framework/configure-apps/redirect-assembly-versions.md)

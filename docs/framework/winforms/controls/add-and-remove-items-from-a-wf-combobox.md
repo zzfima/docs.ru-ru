@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Добавление и удаление элементов Windows Forms ComboBox, ListBox или элементе управления CheckedListBox
+title: Практическое руководство. Добавление и удаление элементов, отображаемых в элементах управления ComboBox, ListBox и CheckedListBox в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], removing items
 - CheckedListBox control [Windows Forms], adding and removing items
 ms.assetid: 7224c8d2-4118-443e-ae1e-d7c17d1e69ee
-ms.openlocfilehash: 1430975a48fb0755c6b08d6d5c183d8f29434f55
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 13f1e18753ad5b49a9cc530cf340579087908b4e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710450"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188888"
 ---
-# <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Практическое руководство. Добавление и удаление элементов Windows Forms ComboBox, ListBox или элементе управления CheckedListBox
+# <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Практическое руководство. Добавление и удаление элементов, отображаемых в элементах управления ComboBox, ListBox и CheckedListBox в Windows Forms
 Элементы добавляются в поле со списком Windows Forms, поле со списком или проверить поле со списком в различными способами, в том случае, поскольку эти элементы управления могут быть привязаны к различным источникам данных. Однако в этом разделе показан простейший способ и привязка к данным не требуется. Элементы, отображаемые обычно представляют собой строки; Тем не менее можно использовать любой объект. Текст, отображаемый в элементе управления является значение, возвращенное объекта `ToString` метод.  
   
 ### <a name="to-add-items"></a>Добавление элементов  
@@ -137,9 +137,10 @@ ms.locfileid: "57710450"
     ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
 - <xref:System.Windows.Forms.CheckedListBox>
-- [Практическое руководство. Сортировка содержимого элемента Windows Forms ComboBox, ListBox или элементе управления CheckedListBox](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
+- [Практическое руководство. Сортировка содержимого элемента управления ComboBox, ListBox или CheckedListBox в Windows Forms](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
 - [Применение элемента управления ComboBox вместо элемента управления ListBox в Windows Forms](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)
 - [Создание списка для выбора элементов в Windows Forms](windows-forms-controls-used-to-list-options.md)

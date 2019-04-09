@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 2d835b055eba6ca66b64555b44cbde64134e743f
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
-ms.translationtype: MT
+ms.openlocfilehash: 1d1d0ad559442ecfc595dfb8cdee112a22a77479
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442299"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168136"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>Примеры устранения неполадок WCF
 В этом разделе приведено несколько известных проблем, с которыми столкнулись пользователи при разработке клиентов и служб WCF. Если проблема, с которой столкнулись вы, отсутствует в этом списке, рекомендуется настроить трассировку для данной службы. При этом будет создан файл трассировки, который можно просмотреть с помощью средства просмотра файлов трассировки и получить подробные сведения об исключениях, которые могут возникать в службе. Дополнительные сведения о настройке трассировки см. в разделе: [Настройка трассировки](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). Дополнительные сведения о средстве просмотра файлов трассировки см. в разделе: [Службы программа Trace Viewer (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
@@ -33,7 +33,7 @@ ms.locfileid: "56442299"
   
 8.  [В службе используется сертификат X.509, при этом получается исключение System.Security.Cryptography.CryptographicException. В чем причина?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q77)  
   
-9. [В имени первого параметра операции прописные буквы были заменены на строчные, и теперь клиент выдает исключение. В чем причина?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q88)  
+9. [В имени первого параметра операции прописные буквы были заменены на строчные, и теперь в клиенте выдается исключение. В чем причина?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q88)  
   
 10. [При использовании одного из средств трассировки получено исключение EndpointNotFoundException. В чем причина?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q99)  
   
@@ -166,7 +166,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q88"></a>   
 ## <a name="i-changed-the-first-parameter-of-an-operation-from-uppercase-to-lowercase-now-my-client-throws-an-exception-whats-happening"></a>В имени первого параметра операции прописные буквы были заменены на строчные, и теперь в клиенте выдается исключение. В чем причина?  
- Значения имен параметров в сигнатуры операции являются частью контракта и чувствительны к регистру. Используйте атрибут <xref:System.ServiceModel.MessageParameterAttribute?displayProperty=nameWithType>, чтобы различать имя локального параметра и метаданные, описывающие операцию для клиентских приложений.  
+ Значения имен параметров в сигнатуры операции являются частью контракта и чувствительны к регистру. Используйте атрибут <xref:System.ServiceModel.MessageParameterAttribute?displayProperty=nameWithType> , чтобы различать имя локального параметра и метаданные, описывающие операцию для клиентских приложений.  
   
 <a name="BKMK_q99"></a>   
 ## <a name="im-using-one-of-my-tracing-tools-and-i-get-an-endpointnotfoundexception-whats-happening"></a>При использовании одного из средств трассировки получено исключение EndpointNotFoundException. В чем причина?  
@@ -250,4 +250,5 @@ public string Echo(string input)
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Отладка ошибок проверки подлинности Windows](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)

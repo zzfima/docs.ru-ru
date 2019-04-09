@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b38526cd-a62a-48cb-822a-e91dfa68e02d
-ms.openlocfilehash: e362a71f902739663961099cf2f43dff90b4743c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5eb81fd2a64f06f1252f71e251e58df568e7407c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711464"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120683"
 ---
 # <a name="obtaining-a-single-value-from-a-database"></a>Получение одного значения из базы данных
 Может возникнуть необходимость вернуть сведения из базы данных, которые представляют собой одиночное значение, а не форму таблицы или поток данных. Например, может потребоваться вернуть результат агрегатной функции, например COUNT (\*), SUM(Price) или AVG(Quantity). **Команда** предоставляет возможность возвращать одиночные значения при помощи **ExecuteScalar** метод. **ExecuteScalar** возвращает метод, как скалярное значение, значение первого столбца первой строки результирующего набора.  
@@ -21,7 +21,8 @@ ms.locfileid: "54711464"
  [!code-vb[DataWorks SqlCommand.ExecuteScalar#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlCommand.ExecuteScalar/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Команды и параметры](../../../../docs/framework/data/adonet/commands-and-parameters.md)
 - [Выполнение команды](../../../../docs/framework/data/adonet/executing-a-command.md)
 - [DbConnection, DbCommand и DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

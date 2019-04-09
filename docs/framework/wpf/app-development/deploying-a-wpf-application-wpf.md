@@ -5,26 +5,25 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: f0d01dffe0f8dad2b1e9af75d6642c68be3ee0f2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 35515d37756c46d7d38ca272d76da3126fde385f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379098"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132364"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Развертывание приложений WPF
 После построения приложения Windows Presentation Foundation (WPF), они должны быть развернуты. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] и .NET Framework поддерживают несколько технологий развертывания. Технология развертывания, используемая для развертывания приложения [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], зависит от типа приложения. Этот раздел содержит краткое описание каждой из технологий развертывания и их использования в сочетании с требованиями к развертыванию для каждого типа приложения [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
-  
-   
+
 <a name="Deployment_Technologies"></a>   
 ## <a name="deployment-technologies"></a>Технологии развертывания  
  [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] и .NET Framework включают несколько технологий развертывания, включая:  
   
 -   развертывание с помощью XCopy;  
   
--   развертывание с помощью [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)];  
+-   [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] развертывание.  
   
--   развертывание с помощью [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)].  
+-   [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] развертывание.  
   
 <a name="XCopy_Deployment"></a>   
 ### <a name="xcopy-deployment"></a>Развертывание с помощью XCopy  
@@ -40,15 +39,15 @@ ms.locfileid: "57379098"
   
 <a name="Windows_Installer"></a>   
 ### <a name="windows-installer"></a>Установщик Windows  
- [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] позволяет упаковывать приложения как самодостаточные исполняемые файлы, которые можно легко распространять на клиентах и запускать. Кроме того, [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] устанавливается вместе с [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] и поддерживает интеграцию с рабочим столом, меню "Пуск" и компонентом панели управления "Программы".  
+ [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] позволяет упаковывать как самодостаточные исполняемые файлы, которые легко распространять на клиентах и запускать приложения. Кроме того, [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] устанавливается вместе с [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] и поддерживает интеграцию с рабочим столом, меню "Пуск" и компонентом панели управления "Программы".  
   
- [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] упрощает установку и удаление приложений, однако не предоставляет средства, обеспечивающие обновление приложений до последней версии.  
+ [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] упрощает установку и удаление приложений, но он не предоставляет средства, обеспечивающие обновление приложений до последней версии.  
   
  Дополнительные сведения об установщике Windows см. в разделе [развертывание с помощью установщика Windows](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).
   
 <a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>развертывание ClickOnce  
- [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] позволяет выполнять веб-развертывание приложений, не являющихся веб-приложениями. Приложения публикуются на веб-серверах или файловых серверах и развертываются с них. Развертывание [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] поддерживает не весь набор клиентских возможностей приложений, установленных с помощью [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]. Поддерживаются следующие возможности:  
+ [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] позволяет веб-развертывание приложений, веб-приложений. Приложения публикуются на веб-серверах или файловых серверах и развертываются с них. Развертывание [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] поддерживает не весь набор клиентских возможностей приложений, установленных с помощью [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]. Поддерживаются следующие возможности:  
   
 -   интеграция в меню "Пуск" и элемент панели управления "Программы";  
   
@@ -88,7 +87,7 @@ ms.locfileid: "57379098"
   
 <a name="Deploying_XAML_Browser_Applications"></a>   
 ### <a name="deploying-xaml-browser-applications"></a>Развертывание приложений браузера XAML  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] — это компилируемые приложения, для которых требуется развертывание следующих трех файлов:  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] — Это скомпилированные приложения, требующие следующие три файла должны быть развернуты:  
   
 -   *ApplicationName*.exe: Исполняемый файл приложения сборки.  
   
@@ -101,7 +100,7 @@ ms.locfileid: "57379098"
   
  Эти файлы создаются при сборке [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. Дополнительные сведения см. в разделе [Как Создание нового проекта приложения браузера WPF](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100)). Подобно страницам [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], содержащим только разметку, [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] обычно публикуются на веб-сервере и просматриваются с помощью браузера [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)].  
   
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] можно развертывать на клиентских компьютерах с помощью любых технологий развертывания. Однако рекомендуется использовать технологию [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)], так как она имеет следующие возможности:  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] можно развернуть для клиентов с помощью любого из методов развертывания. Однако рекомендуется использовать технологию [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)], так как она имеет следующие возможности:  
   
 1.  автоматическое обновление при публикации новой версии;  
   
@@ -124,5 +123,6 @@ ms.locfileid: "57379098"
  Дополнительные сведения см. в разделе [Развертывание .NET Framework и приложений](../../deployment/index.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Построение приложения WPF](building-a-wpf-application-wpf.md)
 - [Безопасность](../security-wpf.md)

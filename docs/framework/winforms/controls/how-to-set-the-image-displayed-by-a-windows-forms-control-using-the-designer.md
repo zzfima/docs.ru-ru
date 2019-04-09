@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Задайте изображения, отображаемого элементом управления, с помощью конструктора форм Windows
+title: Практическое руководство. Установка изображения, отображаемого элементом управления Windows Forms, с помощью конструктора
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Button control [Windows Forms], images
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 - setting images [Windows Forms], Windows Forms controls
 ms.assetid: ae80d07a-e469-4251-90ca-df71f5852454
-ms.openlocfilehash: 265fc88fb2bb9aef0696ea0d7e707ae07084df1d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 2e0837e4a3058db7f1086d6a8ed53136ec86c7ac
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702261"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153495"
 ---
-# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a>Практическое руководство. Задайте изображения, отображаемого элементом управления, с помощью конструктора форм Windows
+# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a>Практическое руководство. Установка изображения, отображаемого элементом управления Windows Forms, с помощью конструктора
 Несколько элементов управления Windows Forms можно отображать изображения. Изображение может быть значок, поясняющий назначение элемента управления, такие как значок диска на кнопку, обозначающая **Сохранить** команды. Кроме того значок может быть фоновое изображение для предоставления необходимого внешнего вида элемента управления.  
   
 > [!NOTE]
@@ -33,6 +33,7 @@ ms.locfileid: "57702261"
 2.  Выберите изображение, которое вы хотите отобразить.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Drawing.Image.FromFile%2A>
 - <xref:System.Drawing.Image>
 - <xref:System.Windows.Forms.Control.BackgroundImage%2A>

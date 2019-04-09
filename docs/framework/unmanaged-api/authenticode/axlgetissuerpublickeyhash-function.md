@@ -10,12 +10,12 @@ api_type:
 ms.assetid: fb626b41-b888-4625-84c3-2c02b5e3866f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 252a3153a49867faf67051be01eeb141fa3ab681
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 448712561f1531a055ac141db9825581525c779c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57490350"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106708"
 ---
 # <a name="axlgetissuerpublickeyhash-function"></a>Функция _AxlGetIssuerPublicKeyHash
 Получает хэш SHA-1 открытого ключа, связанного с закрытым ключом, который используется для подписания указанного сертификата.  
@@ -37,7 +37,8 @@ HRESULT _AxlGetIssuerPublicKeyHash (
  [из] Указатель на WCHAR * для получения шестнадцатеричного кодированного маркера открытого ключа.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `S_OK`, если функция выполняется успешно. В противном случае — `S_FALSE`.  
+ `S_OK` Если функция выполнилась успешно; в противном случае `S_FALSE`.  
   
 ## <a name="see-also"></a>См. также
+
 - [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)

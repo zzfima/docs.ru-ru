@@ -8,12 +8,12 @@ helpviewer_keywords:
 - performance [WPF], caching an element
 - UIElement [WPF], caching
 ms.assetid: 4739c1fc-60ba-4c46-aba6-f6c1a2688f19
-ms.openlocfilehash: b5e39541fdf031b19e9e74483c0de94295e788d7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 118e8b0cca52c44788c9d5b291d710f765e7af2a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375237"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153378"
 ---
 # <a name="how-to-improve-rendering-performance-by-caching-an-element"></a>Практическое руководство. Повышение производительности отрисовки за счет кэширования элемента
 Используйте <xref:System.Windows.Media.BitmapCache> класс повышать производительность отрисовки сложных <xref:System.Windows.UIElement>. Для кэширования элемента, создайте новый экземпляр класса <xref:System.Windows.Media.BitmapCache> класса и его назначение этого элемента <xref:System.Windows.UIElement.CacheMode%2A> свойство. Вы можете повторно использовать <xref:System.Windows.Media.BitmapCache> эффективно в <xref:System.Windows.Media.BitmapCacheBrush>.  
@@ -24,6 +24,7 @@ ms.locfileid: "57375237"
  [!code-xaml[System.Windows.Media.BitmapCache#_BitmapCacheXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/system.windows.media.bitmapcache/cs/window1.xaml#_bitmapcachexaml)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Media.BitmapCache>
 - <xref:System.Windows.Media.BitmapCacheBrush>
 - <xref:System.Windows.UIElement.CacheMode%2A>

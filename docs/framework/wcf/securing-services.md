@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF security
 - WCF, security
 ms.assetid: f0ecc6f7-f4b5-42a4-9cb1-b02e28e26620
-ms.openlocfilehash: 6e5ede5141d2edb24a688bf700c22870c8886906
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 65d4f2858c2be4c2a6872f96ef3739bb16253d74
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524888"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157681"
 ---
 # <a name="securing-services"></a>Защита служб
 Безопасность службы Windows Communication Foundation (WCF) состоит из двух основных требований: безопасность передачи и авторизации. (Третье требование, аудит событий безопасности, описанной в [аудит](../../../docs/framework/wcf/feature-details/auditing-security-events.md).) Вкратце, для обеспечения безопасности передачи должна быть выполнена проверка подлинности (проверка идентификации как службы, так и клиента) и обеспечены конфиденциальность (шифрование сообщений) и целостность (цифровая подпись для обнаружения подделки). Авторизация - это управление доступом к ресурсам, например разрешение чтение файла только привилегированным пользователям. С помощью функций WCF, два основных требования легко реализуются.  
@@ -99,6 +99,7 @@ ms.locfileid: "54524888"
  Свойство `ProtectionLevel` встречается в нескольких классах атрибутов (например, в классах <xref:System.ServiceModel.ServiceContractAttribute> и <xref:System.ServiceModel.OperationContractAttribute> ). Уровень защиты - это значение, которое определяет для сообщений (или частей сообщений), поддерживающих службу, подписываются ли они, подписываются и шифруются или отправляются без подписи и шифровки. Дополнительные сведения о свойстве см. в разделе [уровень защиты понимание](../../../docs/framework/wcf/understanding-protection-level.md)и примеры программирования см. в разделе [как: Установка свойства ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md). Дополнительные сведения о проектировании контракта службы с `ProtectionLevel` в контексте, см. в разделе [Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel>
 - <xref:System.ServiceModel.Description.ServiceCredentials>
 - <xref:System.ServiceModel.ServiceContractAttribute>
@@ -106,13 +107,13 @@ ms.locfileid: "54524888"
 - [Идентификация и проверка подлинности службы](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
 - [Основные сведения об уровне защиты](../../../docs/framework/wcf/understanding-protection-level.md)
 - [Делегирование и олицетворение](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)
-- [Разработка контрактов службы](../../../docs/framework/wcf/designing-service-contracts.md)
+- [Создание контрактов служб](../../../docs/framework/wcf/designing-service-contracts.md)
 - [Безопасность](../../../docs/framework/wcf/feature-details/security.md)
 - [Общие сведения о безопасности](../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Практическое руководство. Установка свойства ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
-- [Практическое руководство. Защита службы с помощью учетных данных Windows](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
-- [Практическое руководство. Настройка режима безопасности](../../../docs/framework/wcf/how-to-set-the-security-mode.md)
+- [Практическое руководство. Защита службы с использованием учетных данных Windows](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
+- [Практическое руководство. Задание режима безопасности](../../../docs/framework/wcf/how-to-set-the-security-mode.md)
 - [Практическое руководство. Указание типа учетных данных клиента](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)
 - [Практическое руководство. Ограничение доступа с использованием класса PrincipalPermissionAttribute](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
-- [Практическое руководство. Олицетворение клиента в службе](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
+- [Практическое руководство. Олицетворение клиента в рамках службы](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
 - [Практическое руководство. Анализ контекста безопасности](../../../docs/framework/wcf/how-to-examine-the-security-context.md)

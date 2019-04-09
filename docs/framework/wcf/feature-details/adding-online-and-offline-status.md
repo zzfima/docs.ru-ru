@@ -2,12 +2,12 @@
 title: Добавление подключенного и отключенного состояния
 ms.date: 03/30/2017
 ms.assetid: 05e5f51d-81b6-4c17-b364-9dda447a5fce
-ms.openlocfilehash: 6a04648e4251774538d298b35d1d655e09e03495
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 15a963d4de0dcf1d7f0162b0a3266e17d4073ecd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591914"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147697"
 ---
 # <a name="adding-online-and-offline-status"></a>Добавление подключенного и отключенного состояния
 Во многих случаях для приложения важно контролировать конкретные сведения о состоянии подключения по одноранговому каналу. Эти сведения можно получить, вызвав метод `GetProperty` в реализации интерфейса <xref:System.ServiceModel.IOnlineStatus>. Объект с реализацией этого интерфейса может контролировать состояние подключения или регистрировать обработчики событий, например `OnOnline` и `OnOffline`, и немедленно реагировать при возникновении изменений в состоянии подключения к сети.  
@@ -18,4 +18,5 @@ ms.locfileid: "54591914"
 >  Перед отправкой любых сообщений обработчик событий подключения к сети должен убедиться, что узел открыт.  
   
 ## <a name="see-also"></a>См. также
+
 - [Создание приложения одноранговых каналов](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

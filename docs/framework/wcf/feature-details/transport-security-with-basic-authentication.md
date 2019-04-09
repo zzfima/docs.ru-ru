@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b54f491d-196b-4279-876c-76b83ec0442c
-ms.openlocfilehash: 33f69f749934e724ee187aee2e3544f232a1b45d
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 3efe8b8716a264848d07ecc37d4e11d07a8ba0a0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463934"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172501"
 ---
 # <a name="transport-security-with-basic-authentication"></a>Безопасность транспорта с обычной проверкой подлинности
 На следующем рисунке службы Windows Communication Foundation (WCF) и клиента. Серверу требуется действительный сертификат X.509, который можно использовать для протокола SSL, а клиенты должны доверять сертификату сервера. Кроме того, у веб-службы уже имеется сертификат SSL, который можно использовать. Дополнительные сведения о включении обычной проверки подлинности на Internet Information Services (IIS), см. в разделе [ https://go.microsoft.com/fwlink/?LinkId=83822 ](https://go.microsoft.com/fwlink/?LinkId=83822).  
@@ -40,7 +40,7 @@ ms.locfileid: "58463934"
  [!code-csharp[C_SecurityScenarios#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#1)]
  [!code-vb[C_SecurityScenarios#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#1)]  
   
-## <a name="configuration"></a>Конфигурация  
+## <a name="configuration"></a>Параметр Configuration  
  Следующий код служит для настройки службы на использование обычной проверки подлинности с безопасностью на уровне транспорта.  
   
 ```xml  
@@ -80,7 +80,7 @@ ms.locfileid: "58463934"
  [!code-csharp[C_SecurityScenarios#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#2)]
  [!code-vb[C_SecurityScenarios#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#2)]  
   
-### <a name="configuration"></a>Конфигурация  
+### <a name="configuration"></a>Параметр Configuration  
  В следующем примере кода показана конфигурация клиента.  
   
 > [!NOTE]
@@ -111,10 +111,11 @@ ms.locfileid: "58463934"
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>
 - <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>
 - [Работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Практическое руководство. Настройка порта с помощью SSL-сертификата](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+- [Практическое руководство. Настройка порта с использованием SSL-сертификата](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
 - [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [\<clientCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)
 - [Модель безопасности для Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

@@ -2,12 +2,12 @@
 title: Обработка ошибок в действии блок-схемы с помощью TryCatch
 ms.date: 03/30/2017
 ms.assetid: 50922964-bfe0-4ba8-9422-0e7220d514fd
-ms.openlocfilehash: 3f45d4a60de3201a3100fba3af6cc15484a1fbf0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: e515248594088f9888c3488d83d8079ce5d13089
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708838"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119812"
 ---
 # <a name="fault-handling-in-a-flowchart-activity-using-trycatch"></a>Обработка ошибок в действии блок-схемы с помощью TryCatch
 В этом образце показано использование действия <xref:System.Activities.Statements.TryCatch> в рамках действия сложного потока управления.
@@ -47,5 +47,6 @@ ms.locfileid: "57708838"
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\FlowChartWithFaultHandling`  
   
 ## <a name="see-also"></a>См. также
-- [Рабочие процессы с блок-схемой](../flowchart-workflows.md)
+
+- [Рабочие процессы блок-схемы](../flowchart-workflows.md)
 - [Исключения](../exceptions.md)

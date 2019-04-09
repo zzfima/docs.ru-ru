@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: d9bf6bd6b142fadbf8326c96f7220c9b74fbc1d0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 3b7fa5d22283f6f69e1f13ecd32e34a6700f32c4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693614"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115704"
 ---
 # <a name="working-with-certificates"></a>Работа с сертификатами
 Для программирования безопасности Windows Communication Foundation (WCF) обычно используются цифровые сертификаты X.509, с помощью которых выполняется проверка подлинности клиентов и серверов, шифрование и создание цифровой подписи для сообщений. В этом разделе содержится краткое описание возможностей для работы с цифровыми сертификатами X.509 и порядка использования этих возможностей в WCF. Кроме того, этот раздел включает ссылки на другие разделы с более подробным объяснением основных понятий и порядка выполнения общих задач с использованием WCF и сертификатов.  
@@ -65,7 +65,7 @@ ms.locfileid: "54693614"
 ### <a name="disabling-chain-trust"></a>Отключение механизма проверки цепочки доверия  
  При создании новой службы пользователь может использовать сертификат, который был выдан центром сертификации, отличным от доверенного, или сертификат издателя может отсутствовать в хранилище «Доверенные корневые центры сертификации». Предусмотрена возможность временного отключения механизма, проверяющего цепочку сертификатов для заданного сертификата; эта возможность должна использоваться только в процессе разработки. Чтобы отключить данный механизм, задайте для свойства `CertificateValidationMode` значение `PeerTrust` или `PeerOrChainTrust`. Эти режимы определяют, что сертификат может быть либо самостоятельно выданным (доверие одноранговой группы), либо являться частью цепочки доверия. Указанное свойство можно задать для любого из следующих классов.  
   
-|Класс|Свойство.|  
+|Класс|Свойство|  
 |-----------|--------------|  
 |<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>|<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|  
 |<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>|<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|  
@@ -74,7 +74,7 @@ ms.locfileid: "54693614"
   
  Свойство также можно задать с использованием конфигурации. Для задания режима проверки используются следующие элементы.  
   
--   [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
+-   [\<Проверка подлинности >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
   
 -   [\<peerAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)  
   
@@ -171,6 +171,7 @@ ms.locfileid: "54693614"
  В первом выпуске WCF сопоставление выполняется без обращения к политике домена. Поэтому более старые приложения, которые работали при использовании первого выпуска, могут не работать, если включено сопоставление и сертификат X.509 не удовлетворяет требованиям политики домена.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.Channels>
 - <xref:System.ServiceModel.Security>
 - <xref:System.ServiceModel>

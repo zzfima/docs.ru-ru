@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: a84dd9a3-d6cf-4824-989a-ecbbf443eeb4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c276df65497a0d8cafea80959b8193790c19ebba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4e5b4cb4a04a79a748f4ea2292bac67a88a6e9f8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667353"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59131291"
 ---
 # <a name="invalidmemberdeclaration-mda"></a>Помощник по отладке управляемого кода invalidMemberDeclaration
 Помощник по отладке (MDA) управляемого кода `invalidMemberDeclaration` активируется для сообщения об ошибке, которая возникает при определении способа маршалинга параметров члена, вызываемого из COM.  
   
-## <a name="symptoms"></a>Признаки  
+## <a name="symptoms"></a>Симптомы  
  Значение HRESULT, свидетельствующее об ошибке, возвращается в COM без вызова управляемого метода.  
   
 ## <a name="cause"></a>Причина  
@@ -35,7 +35,7 @@ ms.locfileid: "54667353"
 ## <a name="output"></a>Вывод  
  Информационное сообщение с именем члена, именем типа и сообщением об ошибке.  
   
-## <a name="configuration"></a>Конфигурация  
+## <a name="configuration"></a>Параметр Configuration  
   
 ```xml  
 <mdaConfig>  
@@ -46,6 +46,7 @@ ms.locfileid: "54667353"
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Диагностика ошибок посредством помощников по отладке управляемого кода](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Диагностика ошибок посредством управляемых помощников по отладке](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
 - [Маршалинг взаимодействия](../../../docs/framework/interop/interop-marshaling.md)

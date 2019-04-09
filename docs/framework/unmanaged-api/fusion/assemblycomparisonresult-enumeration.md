@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b844a660da6a1e8d96ed7f5833435b413219e29
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 03b8ecc996e14263510e2d0a658cec020696c263
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645630"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141704"
 ---
 # <a name="assemblycomparisonresult-enumeration"></a>Перечисление AssemblyComparisonResult
 Эквивалентность двух идентификаторов сборок, указывает, что определяется [CompareAssemblyIdentity](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md) функции.  
@@ -47,7 +47,7 @@ typedef enum _tagAssemblyComparisonResult {
   
 ## <a name="members"></a>Участники  
   
-|Имя члена|Описание:|  
+|Имя члена|Описание|  
 |-----------------|-----------------|  
 |`ACR_EquivalentFullMatch`|Указывает, что все поля сборки в соответствие сравнения.|  
 |`ACR_EquivalentFXUnified`|Указывает, что сборки эквивалентны на основе общих унификации версию (CLR) среды выполнения языка для номеров версии сборок в .NET Framework версии 2.0.|  
@@ -72,5 +72,6 @@ typedef enum _tagAssemblyComparisonResult {
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Функция CompareAssemblyIdentity](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md)
 - [Перечисления Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)

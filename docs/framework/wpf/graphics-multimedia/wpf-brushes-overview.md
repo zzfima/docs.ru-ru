@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
-ms.openlocfilehash: 12671c62a887f863bfb423cf67d7a25eed4118b2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 14e3d095d50f41e5b20a79d76c464bcf28c99327
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362608"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132214"
 ---
 # <a name="wpf-brushes-overview"></a>Общие сведения о кистях WPF
 Все элементы, видимые на экране отображается, так как они нарисованы кистью. Например кисть используется для описания фона кнопки, основного цвета текста и заливки фигуры. В этом разделе понятия рисования с помощью [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] кисти и приводятся примеры. Кисти позволяют заполнять объекты [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] различными изображениями, начиная с просто сплошного цвета и заканчивая сложными наборами шаблонов и изображений.  
@@ -161,13 +161,14 @@ ms.locfileid: "57362608"
  Дополнительные сведения о том, почему <xref:System.Windows.Media.VisualBrush> объектов не может быть зафиксировано, см. в разделе <xref:System.Windows.Media.VisualBrush> страница "тип".  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Brushes>
 - [Общие сведения о закраске сплошным цветом и градиентом](painting-with-solid-colors-and-gradients-overview.md)
-- [Заполнение с использованием изображений, рисунков и визуальных элементов](painting-with-images-drawings-and-visuals.md)
+- [Рисование с помощью объектов Image, Drawing и Visual](painting-with-images-drawings-and-visuals.md)
 - [Общие сведения об объектах класса Freezable](../advanced/freezable-objects-overview.md)
 - [Пример использования кистей](https://go.microsoft.com/fwlink/?LinkID=159973)
 - [Пример использования кистей](https://go.microsoft.com/fwlink/?LinkID=160005)
 - [Пример использования VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049)
-- [Разделы практического руководства](brushes-how-to-topics.md)
+- [Практические руководства](brushes-how-to-topics.md)
 - [Дополнительные рекомендации по повышению производительности](../advanced/optimizing-performance-other-recommendations.md)

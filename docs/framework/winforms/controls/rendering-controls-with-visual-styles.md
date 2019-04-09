@@ -10,12 +10,12 @@ helpviewer_keywords:
 - user controls [Windows Forms], painting
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a5b178ba-610e-46c4-a6c0-509c0886a744
-ms.openlocfilehash: caef9590e57503171ab295f6e99b62d860bc0a81
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b0b301bca33842dfb68de9143b665bed73f17b74
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708058"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146774"
 ---
 # <a name="rendering-controls-with-visual-styles"></a>Отрисовка элементов управления с применением визуальных стилей
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] обеспечивает поддержку для отрисовки элементов управления и других элементов пользовательского интерфейса Windows с использованием стилей оформления в операционных системах, поддерживающих их. В этом разделе описано несколько уровней поддержки в [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для отрисовки элементов управления и других элементов пользовательского интерфейса с учетом текущего стиля оформления операционной системы.  
@@ -54,9 +54,9 @@ ms.locfileid: "57708058"
 ## <a name="visual-style-element-and-rendering-classes"></a>Элемент стиля оформления и классы отрисовки  
  Пространство имен <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> содержит классы, которые можно использовать для рисования любого элемента управления или элемента пользовательского интерфейса, поддерживаемого стилями оформления, и получения сведений о нем. К поддерживаемым элементам управления относятся общие элементы управления с классом отрисовки в пространстве имен <xref:System.Windows.Forms?displayProperty=nameWithType> (см. предыдущий раздел), а также другие элементы управления, такие как элементы управления "Вкладка" и элементы управления "Главная панель". В число других поддерживаемых элементов пользовательского интерфейса входят части меню **Пуск** , панели инструментов и неклиентской области окон.  
   
- Главными классами пространства имен <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> являются <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> и <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>. <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> — это класс платформы для идентификации любого элемента управления или элемента пользовательского интерфейса, поддерживаемого стилями оформления. В дополнение к самому <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> пространство имен <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> содержит много вложенных классов <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> со свойствами `static` , которые возвращают <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> для каждого состояния элемента управления, части элемента управления или другого элемента пользовательского интерфейса, поддерживаемого стилями оформления.  
+ Главными классами пространства имен <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> являются <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> и <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>. <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> — Это класс платформы для идентификации любого элемента управления или элемента пользовательского интерфейса поддерживаемого стилями оформления. В дополнение к самому <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> пространство имен <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> содержит много вложенных классов <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> со свойствами `static` , которые возвращают <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> для каждого состояния элемента управления, части элемента управления или другого элемента пользовательского интерфейса, поддерживаемого стилями оформления.  
   
- <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> предоставляет методы для рисования каждого <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> , определяемого текущим стилем оформления операционной системы, и получения сведений о нем. Сведения, которые можно получить об элементе, включают его размер по умолчанию, тип фона и определения цвета. <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> использует программу-оболочку для функций API стилей оформления (UxTheme) из части оболочки Windows пакета SDK платформы Windows. Дополнительные сведения см. в разделе [включения визуальных стилей](/windows/desktop/controls/cookbook-overview).  
+ <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> Предоставляет методы для рисования и получения сведений о каждом <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> определением текущего визуального стиля операционной системы. Сведения, которые можно получить об элементе, включают его размер по умолчанию, тип фона и определения цвета. <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> Создает оболочку для функции стилей оформления (UxTheme) API из части оболочки Windows Windows Platform SDK. Дополнительные сведения см. в разделе [включения визуальных стилей](/windows/desktop/controls/cookbook-overview).  
   
  Дополнительные сведения об использовании <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> и <xref:System.Windows.Forms.VisualStyles.VisualStyleElement>, см. в разделе [как: Элемент визуального стиля отрисовки](how-to-render-a-visual-style-element.md).  
   
@@ -79,4 +79,5 @@ ms.locfileid: "57708058"
 >  Если вы хотите использовать <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> для отрисовки элемента управления или элемента пользовательского интерфейса, когда пользователь включает стили оформления или переключается между ними, это нужно сделать при обработке события <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> вместо <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging> . Если вы используете класс <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> при обработке <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging>, возникнет исключение.  
   
 ## <a name="see-also"></a>См. также
+
 - [Рисование и отрисовка пользовательского элемента управления](custom-control-painting-and-rendering.md)

@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Создание службы, возвращающей произвольные данные с использованием модели программирования WCF Web HTTP
+title: Практическое руководство. Как создать службу, возвращающую произвольные данные, с использованием модели программирования WCF Web HTTP
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-ms.openlocfilehash: 187db6d3c19373270b25000029f51aa70a81afd5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: f5735f4d596e17afc32b1419e9f41fd8a56af410
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576399"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157487"
 ---
-# <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Как выполнить Создание службы, возвращающей произвольные данные с использованием модели программирования WCF Web HTTP
+# <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Практическое руководство. Как создать службу, возвращающую произвольные данные, с использованием модели программирования WCF Web HTTP
 Иногда разработчики должны полностью управлять тем, как данные возвращаются из операции службы. Это происходит, когда операция службы должна возвращать данные в формате, не поддерживаемом платформой WCF. В этом разделе рассматривается использование модели программирования HTTP WCF WEB для создания такой службы. В этой службе имеется одна операция, которая возвращает поток.  
   
 ### <a name="to-implement-the-service-contract"></a>Реализация контракта службы  
@@ -176,4 +176,5 @@ namespace RawImageService
 -   При компиляции образец кода обращается к файлам System.ServiceModel.dll и System.ServiceModel.Web.dll.  
   
 ## <a name="see-also"></a>См. также
+
 - [Модель веб-программирования HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3c362b41d842fb9d35cc7ae9293e2e305b2af281
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 1fba06360a0c31e0a7fa3e61de9793bad14650fa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57500438"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127508"
 ---
 # <a name="ivalidatorvalidate-method"></a>Метод IValidator::Validate
 Проверяет указанный переносимого исполняемого (PE) или файл Microsoft промежуточного языка MSIL.  
@@ -75,6 +75,3 @@ HRESULT Validate (
  **Библиотека:** Включена как ресурс в MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
-  
-## <a name="see-also"></a>См. также
-

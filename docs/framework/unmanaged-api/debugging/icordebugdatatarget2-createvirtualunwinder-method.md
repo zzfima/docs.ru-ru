@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 354c8b4c-7d23-45c6-a7d7-3be4c2a5b772
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 387dc484b3ada63d62ddc27318e735dfc4ea93b6
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 0c8befed8bc810344b2a3344212a6a4a854300e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492274"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164662"
 ---
 # <a name="icordebugdatatarget2createvirtualunwinder-method"></a>Метод ICorDebugDataTarget2::CreateVirtualUnwinder
 Создает новый элемент очистки стека, запускающий операцию очистки, начиная с исходного контекста (который не обязательно является концом потока).  
@@ -43,7 +43,7 @@ HRESULT CreateVirtualUnwinder(
  [выходной] Указатель на адрес объекта интерфейса ICorDebugVirtualUnwinder.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `S_OK` в случае успешного выполнения. Любое другое значение `HRESULT` указывает на ошибку. Любое ошибочное `HRESULT` , полученное процессом mscordbi считается неустранимым и приводит к [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) методам возвращать `CORDBG_E_DATA_TARGET_ERROR`.  
+ `S_OK` При успешном выполнении. Любое другое значение `HRESULT` указывает на ошибку. Любое ошибочное `HRESULT` , полученное процессом mscordbi считается неустранимым и приводит к [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) методам возвращать `CORDBG_E_DATA_TARGET_ERROR`.  
   
 ## <a name="remarks"></a>Примечания  
   
@@ -60,5 +60,6 @@ HRESULT CreateVirtualUnwinder(
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс ICorDebugDataTarget2](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget2-interface.md)
 - [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

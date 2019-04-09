@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: 0da32b50-ccd9-463a-844c-7fe803d3bf44
-ms.openlocfilehash: 0529f112192fa64746d8c6dc7a49433b33bafbf5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9f13f9d95c40b964c5eb416c590a5d603d714bac
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527722"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133788"
 ---
 # <a name="schema-import-and-export"></a>Импорт и экспорт схемы
 Windows Communication Foundation (WCF) включает новый модуль сериализации, <xref:System.Runtime.Serialization.DataContractSerializer>. Объект `DataContractSerializer` осуществляет преобразование объектов [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] в формат XML и обратно. Помимо собственно сериализатора WCF включает в себя связанную схему импорта и экспорта механизмы схемы. *Схемы* представляет собой формальное, точное и обрабатываемое компьютером описание формата XML, которые создаются сериализатором или с доступом к десериализатор. WCF использует язык определения схемы World Wide Web Consortium (W3C) XML (XSD) в качестве представления схемы, который поддерживает взаимодействие с различных платформ сторонних.  
@@ -51,7 +51,7 @@ Windows Communication Foundation (WCF) включает новый модуль 
   
  [!code-xml[c_SchemaImportExport#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#9)]  
   
- Дополнительные сведения см. в разделе [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). Если схема не соответствует правилам контракта данных, следует использовать другой механизм сериализации. Например, класс <xref:System.Xml.Serialization.XmlSerializer> использует собственный механизм импорта схемы. Кроме того, имеется специальный режим импорта, где список поддерживаемых элементов схемы развертывается. Дополнительные сведения см. в разделе о создании <xref:System.Xml.Serialization.IXmlSerializable> типы в [Импорт схемы для создания классов](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md).  
+ Дополнительные сведения см. в разделе [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). Если схема не соответствует правилам контракта данных, следует использовать другой механизм сериализации. Например, класс <xref:System.Xml.Serialization.XmlSerializer> использует собственный механизм импорта схемы. Кроме того, имеется специальный режим импорта, где список поддерживаемых элементов схемы расширяется. Дополнительные сведения см. в разделе о создании <xref:System.Xml.Serialization.IXmlSerializable> типы в [Импорт схемы для создания классов](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md).  
   
  Класс `XsdDataContractExporter` поддерживает все типы [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], которые можно сериализовать с помощью класса `DataContractSerializer`. Дополнительные сведения см. в разделе [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md). Обратите внимание, что схема, созданная с помощью класса `XsdDataContractExporter`, обычно содержит допустимые данные, которые могут использоваться классом `XsdDataContractImporter` (если только для изменения схемы не используется класс <xref:System.Xml.Serialization.XmlSchemaProviderAttribute>).  
   
@@ -60,6 +60,7 @@ Windows Communication Foundation (WCF) включает новый модуль 
  Дополнительные сведения об использовании <xref:System.Runtime.Serialization.XsdDataContractExporter>, см. в разделе [Экспорт схем из классов](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.XsdDataContractImporter>
 - <xref:System.Runtime.Serialization.XsdDataContractExporter>

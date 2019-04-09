@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
-ms.openlocfilehash: 9cad6c798856fb77023bb52c528b9294f5f6d0bc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 30dd3a54092c5b30cdd8dfd2917b6ea57edd7086
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656184"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153625"
 ---
 # <a name="local-transactions"></a>Локальные транзакции
 В [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] транзакции используются для связи нескольких задач, чтобы они выполнялись как одно целое. Например, пусть приложение выполняет две задачи. Во-первых, оно заносит в таблицу сведения о заказе. Во-вторых, обновляет таблицу, содержащую список товаров на складе, списывая заказанные элементы. При сбое любой задачи, затем оба обновления откатываются.  
@@ -48,7 +48,8 @@ ms.locfileid: "54656184"
  [!code-vb[DataWorks SqlTransaction.Local#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlTransaction.Local/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Транзакции и параллельность](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
 - [Распределенные транзакции](../../../../docs/framework/data/adonet/distributed-transactions.md)
 - [Интеграция System.Transactions с SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

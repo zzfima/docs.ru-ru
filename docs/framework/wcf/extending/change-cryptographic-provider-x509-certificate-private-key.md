@@ -1,5 +1,5 @@
 ---
-title: Как выполнить  Изменение поставщика служб шифрования для закрытого ключа сертификата X.509
+title: Практическое руководство. Изменение поставщика служб шифрования для закрытого ключа сертификата X.509
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - cryptographic provider [WCF], changing
 - cryptographic provider [WCF]
 ms.assetid: b4254406-272e-4774-bd61-27e39bbb6c12
-ms.openlocfilehash: 4e11dd90d1cc57f3f2f559c22e1548b8fbcedaea
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
-ms.translationtype: MT
+ms.openlocfilehash: 90e26154b4a0a006a4cbb114ec5ddd74a33fc762
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261916"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115197"
 ---
-# <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificates-private-key"></a>Как выполнить  Изменение поставщика служб шифрования для закрытого ключа сертификата X.509
+# <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificates-private-key"></a>Практическое руководство. Изменение поставщика служб шифрования для закрытого ключа сертификата X.509
 В этом разделе показано, как изменить поставщика служб шифрования, используемый для предоставления закрытый ключ сертификата X.509 и как интегрировать поставщика в инфраструктуру безопасности Windows Communication Foundation (WCF). Дополнительные сведения об использовании сертификатов см. в разделе [работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
  Платформа безопасности WCF предоставляет способ введения новые типы маркеров безопасности, как описано в разделе [как: Создание пользовательского маркера](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md). Пользовательский маркер также можно использовать для замены существующих типов маркеров, предоставляемых системой.  
@@ -37,11 +37,11 @@ ms.locfileid: "56261916"
   
 4.  Переопределите метод <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetAsymmetricAlgorithm%2A> . Этот метод вызывается платформой безопасности WCF для получения экземпляра <xref:System.Security.Cryptography.AsymmetricAlgorithm> класс, представляющий поставщика служб шифрования для закрытого или открытого ключа или сертификата, в зависимости от параметров, передается в метод.  
   
-5.  Необязательный параметр. Переопределите метод <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetHashAlgorithmForSignature%2A>. Переопределите этот метод, если требуется иная реализация класса <xref:System.Security.Cryptography.HashAlgorithm>.  
+5.  Необязательный параметр. Переопределите метод <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetHashAlgorithmForSignature%2A> . Переопределите этот метод, если требуется иная реализация класса <xref:System.Security.Cryptography.HashAlgorithm>.  
   
-6.  Переопределите метод <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetSignatureFormatter%2A>. Этот метод возвращает экземпляр класса <xref:System.Security.Cryptography.AsymmetricSignatureFormatter>, связанного с закрытым ключом сертификата.  
+6.  Переопределите метод <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetSignatureFormatter%2A> . Этот метод возвращает экземпляр класса <xref:System.Security.Cryptography.AsymmetricSignatureFormatter>, связанного с закрытым ключом сертификата.  
   
-7.  Переопределите метод <xref:System.IdentityModel.Tokens.SecurityKey.IsSupportedAlgorithm%2A>. Этот метод используется, чтобы указать, поддерживается ли конкретный алгоритм шифрования данной реализацией ключа безопасности.  
+7.  Переопределите метод <xref:System.IdentityModel.Tokens.SecurityKey.IsSupportedAlgorithm%2A> . Этот метод используется, чтобы указать, поддерживается ли конкретный алгоритм шифрования данной реализацией ключа безопасности.  
   
      [!code-csharp[c_CustomX509Token#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customx509token/cs/source.cs#1)]
      [!code-vb[c_CustomX509Token#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#1)]  
@@ -77,13 +77,14 @@ ms.locfileid: "56261916"
      [!code-vb[c_CustomX509Token#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#7)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.IdentityModel.Tokens.X509AsymmetricSecurityKey>
 - <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey>
 - <xref:System.IdentityModel.Tokens.SecurityKey>
 - <xref:System.Security.Cryptography.AsymmetricAlgorithm>
 - <xref:System.Security.Cryptography.HashAlgorithm>
 - <xref:System.Security.Cryptography.AsymmetricSignatureFormatter>
-- [Пошаговое руководство: Создание пользовательских клиента и учетные данные службы](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
-- [Практическое руководство. Создать структуру проверки подлинности маркеров безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
-- [Практическое руководство. Создание поставщика маркеров безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
-- [Практическое руководство. Создание пользовательского маркера](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)
+- [Пошаговое руководство. Создание пользовательских учетных данных для клиента и службы](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
+- [Практическое руководство. Создание пользовательской структуры проверки подлинности маркера безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
+- [Практическое руководство. Создание поставщика пользовательских маркеров безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
+- [Практическое руководство. Создание пользовательского токена](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)

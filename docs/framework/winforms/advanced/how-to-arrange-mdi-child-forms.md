@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Упорядочение дочерних форм MDI
+title: Практическое руководство. Упорядочение дочерних MDI-форм
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - child forms [Windows Forms], arranging
 - MDI [Windows Forms], arranging child forms
 ms.assetid: a0786378-3206-4ccc-898e-7d3b38cc5089
-ms.openlocfilehash: 3d67da6330cdceaf975c62b474c1580b853a2676
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 60cba801446d043fa8c0b36d97628e9b0f8df11d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711906"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160112"
 ---
-# <a name="how-to-arrange-mdi-child-forms"></a>Практическое руководство. Упорядочение дочерних форм MDI
+# <a name="how-to-arrange-mdi-child-forms"></a>Практическое руководство. Упорядочение дочерних MDI-форм
 Во многих случаях приложения будут иметь команды меню для таких действий как «Мозаика», «Каскад» и «Упорядочить», которые позволяют управлять компоновкой открытых дочерних MDI-форм. Для изменения порядка дочерних форм в родительской MDI-форме можно использовать метод <xref:System.Windows.Forms.Form.LayoutMdi%2A> с одним из значений перечисления <xref:System.Windows.Forms.MdiLayout>.  
   
  Значения перечисления <xref:System.Windows.Forms.MdiLayout> позволяют отображать дочерние формы в виде каскада, мозаично по вертикали или горизонтали, либо в виде значков форм, расположенных в нижней части MDI-формы. Эти значения имеют тот же эффект, что команды Windows **каскадом**, **отображать окна рядом**, **отображать окна стопкой**, и **отображает рабочий стол** , соответственно.  
@@ -48,8 +48,9 @@ ms.locfileid: "57711906"
     ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Приложения с интерфейсом MDI](multiple-document-interface-mdi-applications.md)
 - [Практическое руководство. Создание родительских MDI-форм](how-to-create-mdi-parent-forms.md)
-- [Практическое руководство. Создание дочерних MDI-форм](how-to-create-mdi-child-forms.md)
-- [Практическое руководство. Определить активную дочернюю форму MDI](how-to-determine-the-active-mdi-child.md)
-- [Практическое руководство. Отправки данных в активную дочернюю форму MDI](how-to-send-data-to-the-active-mdi-child.md)
+- [Практическое руководство. Создание дочерних форм MDI](how-to-create-mdi-child-forms.md)
+- [Практическое руководство. Определение активной дочерней MDI-формы](how-to-determine-the-active-mdi-child.md)
+- [Практическое руководство. Отправка данных в активную дочернюю MDI-форму](how-to-send-data-to-the-active-mdi-child.md)

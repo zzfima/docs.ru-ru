@@ -2,12 +2,12 @@
 title: Образец интеграции с SystemWebRouting
 ms.date: 03/30/2017
 ms.assetid: f1c94802-95c4-49e4-b1e2-ee9dd126ff93
-ms.openlocfilehash: 1724fee816ddd210ffba73159596529bd4bc803e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 244a7b7b73217086864b16945bc1521a3383aeac
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548264"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147814"
 ---
 # <a name="systemwebrouting-integration-sample"></a>Образец интеграции с SystemWebRouting
 Этот образец показывает интеграцию уровня размещения с классами в пространстве имен <xref:System.Web.Routing>. Классы в пространстве имен <xref:System.Web.Routing> позволяют приложению использовать URL-адреса, которые не соответствуют непосредственно физическому ресурсу. С помощью веб-маршрутизации разработчик может создавать виртуальные адреса протокола HTTP, затем отображаются на набор служб WCF. Это может быть полезно, когда службу WCF необходимо разместить без обязательного выделения физического файла или ресурса или к службам необходимо получать доступ по URL-адресам, не содержащим файлов, например HTML или ASPX. Этот образец показывает использование класса <xref:System.Web.Routing.RouteTable> для создания виртуальных URI-адресов, связанных с выполняющимися службами, которые определены в файле global.asax. 
@@ -84,4 +84,5 @@ ms.locfileid: "54548264"
 >  Необходимо обновить версию пула приложений по умолчанию [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] если он задан до версии 2.  
   
 ## <a name="see-also"></a>См. также
-- [Образцы размещения AppFabric и сохраняемости](https://go.microsoft.com/fwlink/?LinkId=193961)
+
+- [Образцы размещения и сохраняемости AppFabric](https://go.microsoft.com/fwlink/?LinkId=193961)

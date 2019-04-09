@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF], data transfer
 ms.assetid: 7c5a26c8-89c9-4bcb-a4bc-7131e6d01f0c
-ms.openlocfilehash: a9066054c82fdb2e25dace0b7611df4cbbf4ec93
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: a3ac0f321a20624deea1fe382d04a8d4e1b6c510
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617269"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135204"
 ---
 # <a name="specifying-data-transfer-in-service-contracts"></a>Задание передачи данных в контрактах служб
 Windows Communication Foundation (WCF) может рассматриваться как инфраструктуру обмена сообщениями. Операции служб могут получать сообщения, обрабатывать их и отправлять. Сообщения описываются с помощью контрактов операций. Например, рассмотрим следующий контракт:  
@@ -432,7 +432,7 @@ End Class
 ## <a name="specifying-the-use-and-style"></a>Указание назначения и стиля  
  Для описания служб с помощью языка WSDL наиболее часто используются следующие две службы: Document и RPC (удаленный вызов процедуры). В стиле Document тело сообщения полностью описывается с помощью схемы, а в языке WSDL различные части тела сообщения описываются ссылками на элементы в этой схеме. В стиле RPC код WSDL ссылается на тип схемы для каждой части сообщения, а не элемент. В некоторых случаях необходимо выбрать один из этих типов вручную. Для этого можно применить атрибут <xref:System.ServiceModel.DataContractFormatAttribute> и задать свойство `Style` (когда используется <xref:System.Runtime.Serialization.DataContractSerializer>) или задать `Style` атрибуту <xref:System.ServiceModel.XmlSerializerFormatAttribute> (когда используется <xref:System.Xml.Serialization.XmlSerializer>).  
   
- Кроме того, <xref:System.Xml.Serialization.XmlSerializer> поддерживает две формы сериализованного XML: `Literal` и `Encoded`. `Literal` - наиболее распространенная форма, а также единственная форма, которую поддерживает <xref:System.Runtime.Serialization.DataContractSerializer>. `Encoded` - это форма из прежних версий, описанная в разделе 5 спецификации протокола SOAP. Не рекомендуется для использования в новых службах. Чтобы перейти в режим `Encoded`, задайте свойству `Use` атрибута <xref:System.ServiceModel.XmlSerializerFormatAttribute> значение `Encoded`.  
+ Кроме того, <xref:System.Xml.Serialization.XmlSerializer> поддерживает две формы сериализованного XML: `Literal` и `Encoded`. `Literal` — Это наиболее распространенная форма, а также единственная форма <xref:System.Runtime.Serialization.DataContractSerializer> поддерживает. `Encoded` описанная в разделе 5 спецификации SOAP форма из прежних версий и не рекомендуется для новых служб. Чтобы перейти в режим `Encoded`, задайте свойству `Use` атрибута <xref:System.ServiceModel.XmlSerializerFormatAttribute> значение `Encoded`.  
   
  В большинстве случаев лучше не изменять параметры по умолчанию для свойств `Style` и `Use`.  
   
@@ -440,7 +440,7 @@ End Class
  Сериализацию данных можно настраивать различными способами.  
   
 ### <a name="changing-server-serialization-settings"></a>Изменение параметров сериализации для сервера  
- Если используется сериализатор по умолчанию <xref:System.Runtime.Serialization.DataContractSerializer>, можно управлять некоторыми аспектами процесса сериализации в службе путем применения к ней атрибута <xref:System.ServiceModel.ServiceBehaviorAttribute>. В частности, с помощью свойства `MaxItemsInObjectGraph` можно задать максимальную квоту на количество объектов, десериализуемых с помощью <xref:System.Runtime.Serialization.DataContractSerializer>. Можно использовать свойство `IgnoreExtensionDataObject` для отключения возможности полной совместимости управления версиями. Дополнительные сведения о квотах см. в разделе [Вопросы безопасности для данных](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md). Дополнительные сведения о полной совместимости версий см. в разделе [контракты данных обладает прямой совместимостью](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+ Если используется сериализатор по умолчанию <xref:System.Runtime.Serialization.DataContractSerializer>, можно управлять некоторыми аспектами процесса сериализации в службе путем применения к ней атрибута <xref:System.ServiceModel.ServiceBehaviorAttribute>. В частности, с помощью свойства `MaxItemsInObjectGraph` можно задать максимальную квоту на количество объектов, десериализуемых с помощью <xref:System.Runtime.Serialization.DataContractSerializer>. Можно использовать свойство `IgnoreExtensionDataObject` для отключения функции полной совместимости управления версиями. Дополнительные сведения о квотах см. в разделе [Вопросы безопасности для данных](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md). Дополнительные сведения о полной совместимости версий см. в разделе [контракты данных обладает прямой совместимостью](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
 ```csharp  
 [ServiceBehavior(MaxItemsInObjectGraph=100000)]  
@@ -575,6 +575,7 @@ Dim serviceHost As ServiceHost = New ServiceHost(GetType(IDataService))
  Дополнительные сведения о более сложные методы сериализации, см. в разделе [сериализации и десериализации](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Использование класса XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)
 - [Практическое руководство. Включение потоковой передачи](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
 - [Практическое руководство. Создание базового контракта данных для класса или структуры](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)

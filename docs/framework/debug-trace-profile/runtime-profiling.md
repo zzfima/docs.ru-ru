@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 17530537e6d74b247aaf8708efed28ef169f9d57
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 036744362c414fe51c919b59c693d447c92a87c9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491250"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141392"
 ---
 # <a name="runtime-profiling"></a>Профилирование среды выполнения
 Профилирование представляет собой метод сбора данных по производительности в любом сценарии разработки или развертывания. Это раздел представляет интерес для разработчиков и системных администраторов, которые хотят получить сведения о производительности приложения.  
@@ -42,7 +42,7 @@ ms.locfileid: "54491250"
   
 6.  В списке **Экземпляры выбранного объекта** выберите пункт **\<Все экземпляры**, чтобы указать, что необходимо выполнять глобальное наблюдение за счетчиком производительности для среды CLR (то есть на уровне системы).  
   
-     - или -  
+     -или-  
   
      В списке **Экземпляры выбранного объекта** щелкните имя приложения, чтобы отслеживать счетчик производительности для него.  
   
@@ -67,4 +67,5 @@ ms.locfileid: "54491250"
 |<xref:System.Diagnostics.PerformanceCounterType?displayProperty=nameWithType>|Задает формулу для вычисления метода `NextValue` для `PerformanceCounter`.|  
   
 ## <a name="see-also"></a>См. также
+
 - [Счетчики производительности](../../../docs/framework/debug-trace-profile/performance-counters.md)

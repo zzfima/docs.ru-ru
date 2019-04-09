@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStrip control [Windows Forms], architecture
 ms.assetid: 71df2d18-862e-4701-9ff9-c1fe606f94f2
-ms.openlocfilehash: bede247ca9e1c2c20ffc8fef9fd4fab89aa78453
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
-ms.translationtype: MT
+ms.openlocfilehash: 1032b282801db485253da18536b448e8d3b65ae7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654774"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186671"
 ---
 # <a name="toolstrip-control-architecture"></a>Архитектура элемента управления ToolStrip
 <xref:System.Windows.Forms.ToolStrip> И <xref:System.Windows.Forms.ToolStripItem> классы предоставляют гибкую, расширяемую систему для отображения элементов панели инструментов, состояния и меню. Все эти классы содержатся в <xref:System.Windows.Forms> пространство имен и они обычно именуются с префиксом «ToolStrip» (такие как <xref:System.Windows.Forms.ToolStripOverflow>) или с суффиксом «Лента» (такие как <xref:System.Windows.Forms.MenuStrip>).  
@@ -197,7 +197,7 @@ ms.locfileid: "58654774"
 ##### <a name="stack-layouts"></a>Размещение в стопку  
  Размещение в стопку — это расположение элементов рядом друг с другом на обоих концах <xref:System.Windows.Forms.ToolStrip>. Ниже перечислены макеты стека.  
   
--   Значение по умолчанию — <xref:System.Windows.Forms.ToolStripLayoutStyle.StackWithOverflow>. Этот параметр задан, то <xref:System.Windows.Forms.ToolStrip> к изменению макета автоматически в соответствии с <xref:System.Windows.Forms.ToolStrip.Orientation%2A> свойства для обработки скриптов перетаскивания и закрепления.  
+-   <xref:System.Windows.Forms.ToolStripLayoutStyle.StackWithOverflow> значение по умолчанию. Этот параметр задан, то <xref:System.Windows.Forms.ToolStrip> к изменению макета автоматически в соответствии с <xref:System.Windows.Forms.ToolStrip.Orientation%2A> свойства для обработки скриптов перетаскивания и закрепления.  
   
 -   <xref:System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow> Выполняет визуализацию <xref:System.Windows.Forms.ToolStrip> элементы рядом друг с другом по вертикали.  
   
@@ -316,7 +316,7 @@ ms.locfileid: "58654774"
  <xref:System.Windows.Forms.ToolStripMenuItem> — <xref:System.Windows.Forms.ToolStripDropDownItem> , работающее с <xref:System.Windows.Forms.ToolStripDropDownMenu> и <xref:System.Windows.Forms.ContextMenuStrip> для обработки специальных выделение, макета и расположения столбцов для меню.  
   
 ### <a name="toolstripdropdownbutton"></a>ToolStripDropDownButton  
- <xref:System.Windows.Forms.ToolStripDropDownButton> как выглядит <xref:System.Windows.Forms.ToolStripButton>, но он показывает раскрывающейся области, когда пользователь щелкает его. Скрыть или отобразить стрелку раскрывающегося списка, задав <xref:System.Windows.Forms.ToolStripDropDownButton.ShowDropDownArrow%2A> свойство. <xref:System.Windows.Forms.ToolStripDropDownButton> узлы <xref:System.Windows.Forms.ToolStripOverflowButton> , отображающий элементы, которые вызывают переполнение <xref:System.Windows.Forms.ToolStrip>.  
+ <xref:System.Windows.Forms.ToolStripDropDownButton> как выглядит <xref:System.Windows.Forms.ToolStripButton>, но он показывает раскрывающейся области, когда пользователь щелкает его. Скрыть или отобразить стрелку раскрывающегося списка, задав <xref:System.Windows.Forms.ToolStripDropDownButton.ShowDropDownArrow%2A> свойство. <xref:System.Windows.Forms.ToolStripDropDownButton> Узлы <xref:System.Windows.Forms.ToolStripOverflowButton> , отображающий элементы, которые вызывают переполнение <xref:System.Windows.Forms.ToolStrip>.  
   
 ### <a name="toolstripsplitbutton"></a>ToolStripSplitButton  
  <xref:System.Windows.Forms.ToolStripSplitButton> объединяет кнопку и кнопку раскрывающегося списка функциональные возможности.  
@@ -377,10 +377,11 @@ ms.locfileid: "58654774"
 -   <xref:System.Windows.Forms.ToolStripPanel> Предоставляет место для перемещения и расположения <xref:System.Windows.Forms.ToolStrip> элементов управления. Если это необходимо, можно использовать только одну панель и <xref:System.Windows.Forms.ToolStripPanel> хорошо работает в сценариях MDI.  
   
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения об элементе управления ToolStrip](toolstrip-control-overview-windows-forms.md)
 - [Технологии, положенные в основу работы элемента управления ToolStrip](toolstrip-technology-summary.md)
 - [Элемент управления ToolStrip](toolstrip-control-windows-forms.md)
 - [Элемент управления MenuStrip](menustrip-control-windows-forms.md)
 - [Элемент управления StatusStrip](statusstrip-control.md)
 - [Элемент управления ContextMenuStrip](contextmenustrip-control.md)
-- [Элемент управления BindingNavigator](bindingnavigator-control-windows-forms.md)
+- [BindingNavigator — элемент управления](bindingnavigator-control-windows-forms.md)

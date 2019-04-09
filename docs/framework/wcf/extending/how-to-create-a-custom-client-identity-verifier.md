@@ -1,18 +1,18 @@
 ---
-title: Практическое руководство. Создание средства проверки идентификации настраиваемого клиента
+title: Практическое руководство. Создание пользовательского средства проверки идентификации клиентов
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f2d34e43-fa8b-46d2-91cf-d2960e13e16b
-ms.openlocfilehash: 19be92acb16ffb5e98eb39ba36a406d66e58d97b
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: c7aede448fa0a759035380c533f2a9457a534bd1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464025"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165832"
 ---
-# <a name="how-to-create-a-custom-client-identity-verifier"></a>Практическое руководство. Создание средства проверки идентификации настраиваемого клиента
+# <a name="how-to-create-a-custom-client-identity-verifier"></a>Практическое руководство. Создание пользовательского средства проверки идентификации клиентов
 *Удостоверений* функция Windows Communication Foundation (WCF) позволяет клиенту заранее указывать Ожидаемое удостоверение службы. Всякий раз, когда сервер доказывает свою подлинность клиенту, удостоверение проверяется на соответствие ожидаемому удостоверению. (Описание удостоверения и как это работает, см. в разделе [службы идентификации и проверки подлинности](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).)  
   
  При необходимости процедуру проверки можно настроить, используя пользовательское средство проверки удостоверения. Например, можно выполнять дополнительные процедуры проверки удостоверения службы. В данном примере пользовательское средство проверки удостоверения проверяет дополнительные утверждения в сертификате X.509, возвращенном от сервера. Образец приложения, см. в разделе [образец идентификации службы](../../../../docs/framework/wcf/samples/service-identity-sample.md).  
@@ -82,6 +82,7 @@ ms.locfileid: "58464025"
  [!code-vb[c_HowToSetCustomClientIdentity#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtosetcustomclientidentity/vb/source.vb#6)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
 - <xref:System.ServiceModel.EndpointIdentity>
 - <xref:System.ServiceModel.Security.IdentityVerifier>

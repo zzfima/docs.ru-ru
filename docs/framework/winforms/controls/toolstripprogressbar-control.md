@@ -7,18 +7,18 @@ helpviewer_keywords:
 - toolbars [Windows Forms], progress bars
 - progress controls [Windows Forms]
 ms.assetid: cb3eb0a8-60b1-483e-a03f-93b0b1351dae
-ms.openlocfilehash: 3b56d31cab84a43a488499748710355671980ad0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 03f078da96a48ed0f53697661cb2add1d6c01901
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711889"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158968"
 ---
 # <a name="toolstripprogressbar-control"></a>Элемент управления ToolStripProgressBar
 <xref:System.Windows.Forms.ToolStripProgressBar> Объединяет <xref:System.Windows.Forms.ToolStrip> функции отрисовки и нависания с его обычные функциональные возможности отслеживания процесса.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Элемент управления ToolStripProgressBar](toolstripprogressbar-control-overview.md)  
+ [Общие сведения об элементе управления ToolStripProgressBar](toolstripprogressbar-control-overview.md)  
  Содержит разделы с описанием назначения и основных понятий элемента управления <xref:System.Windows.Forms.ToolStripProgressBar> Windows Forms.  
   
 ## <a name="reference"></a>Ссылка  
@@ -29,4 +29,5 @@ ms.locfileid: "57711889"
  Справочная документация по элементу управления <xref:System.Windows.Forms.ToolStripProgressBar>.  
   
 ## <a name="see-also"></a>См. также
-- [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)
+
+- [Элементы управления для использования в формах Windows Forms](controls-to-use-on-windows-forms.md)

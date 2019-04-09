@@ -12,12 +12,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], large data sets
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 74eb5276-5ab8-4ce0-8005-dae751d85f7c
-ms.openlocfilehash: 7bbf8a87f2f72a23199ce4d18cc50fbccd9b6af2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 7509e2f5035cb05c20af379f9f6a141177d540d4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716547"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127053"
 ---
 # <a name="walkthrough-implementing-virtual-mode-in-the-windows-forms-datagridview-control"></a>Пошаговое руководство. Реализация виртуального режима для элемента управления DataGridView в Windows Forms
 Если вы хотите отобразить очень большому количеству табличные данные в <xref:System.Windows.Forms.DataGridView> элемента управления, можно задать <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> свойства `true` и явно управлять взаимодействием элемента управления с хранилищем данных. Это позволяет оптимизировать производительность элемента управления в этой ситуации.  
@@ -126,6 +126,7 @@ ms.locfileid: "57716547"
  Дополнительные сведения о кэшировании значений из внешней базы данных, см. в разделе [как: Реализация виртуального режима с JIT в загрузкой данных в Windows Forms элемента управления DataGridView](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>
 - <xref:System.Windows.Forms.DataGridView.CellValueNeeded>
@@ -138,4 +139,4 @@ ms.locfileid: "57716547"
 - [Оптимизация производительности элемента управления DataGridView в Windows Forms](performance-tuning-in-the-windows-forms-datagridview-control.md)
 - [Масштабирование элемента управления DataGridView в Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
 - [Реализация виртуального режима с JIT-загрузкой данных для элемента управления DataGridView в Windows Forms](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)
-- [Практическое руководство. Реализация виртуального режима в элементе управления DataGridView Windows Forms](how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md)
+- [Практическое руководство. Реализация виртуального режима для элемента управления DataGridView в Windows Forms](how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md)

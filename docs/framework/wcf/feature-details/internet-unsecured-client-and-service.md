@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
-ms.openlocfilehash: 480242d519fee6ddabac3b39ff21f8e1b76827f0
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: ca6b028ef20095d6faeb125151772eedf1500fa0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410671"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133761"
 ---
 # <a name="internet-unsecured-client-and-service"></a>Незащищенные интернет-клиент и служба
 Ниже показан пример public, незащищенных клиента Windows Communication Foundation (WCF) и службы:  
@@ -110,6 +110,7 @@ ms.locfileid: "58410671"
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Типовые сценарии безопасности](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
 - [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Модель безопасности для Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

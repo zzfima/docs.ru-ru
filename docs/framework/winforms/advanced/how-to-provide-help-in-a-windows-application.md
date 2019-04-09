@@ -8,12 +8,12 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - forms [Windows Forms], providing Help
 ms.assetid: 7c4e5cec-2bd2-4f0b-8d75-c2b88929bd61
-ms.openlocfilehash: bb05842eb7cd30611c68f685ea3dae9200d87d35
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 5cda0517e8653e89aabde3a9c0459a2dbae61616
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724938"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129484"
 ---
 # <a name="how-to-provide-help-in-a-windows-application"></a>Практическое руководство. Предоставление справки в приложении Windows
 Можно использовать для включения <xref:System.Windows.Forms.HelpProvider> компонента для присоединения разделов справки в файле справки для определенных элементов управления в формах Windows Forms. Файл справки может быть в формате HTML, HTMLHelp 1.x или следующих версий.  
@@ -37,7 +37,7 @@ ms.locfileid: "57724938"
   
      Этот параметр определяет способ, которым свойство **HelpKeyword** передается в справочную систему. В следующей таблице показаны возможные настройки и их описания.  
   
-    |Имя элемента|Описание:|  
+    |Имя элемента|Описание|  
     |-----------------|-----------------|  
     |AssociateIndex|Указывает, что индекс для данного раздела выполняется в заданном URL-адресе.|  
     |Find|Указывает, что отображается страница поиска заданного URL-адреса.|  
@@ -56,7 +56,8 @@ ms.locfileid: "57724938"
  Можно также использовать <xref:System.Windows.Forms.HelpProvider> компонент для отображения всплывающей справки, даже если он настроен для отображения файлов справки для элементов управления Windows Forms. Дополнительные сведения см. в разделе [Как Отображение всплывающей справки](how-to-display-pop-up-help.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Практическое руководство. Отображение всплывающей справки](how-to-display-pop-up-help.md)
-- [Отображение справки по элементам управления с помощью подсказок](control-help-using-tooltips.md)
+- [Отображение справки по элементам управления с помощью всплывающих подсказок](control-help-using-tooltips.md)
 - [Интеграция справки пользователя в формы Windows Forms](integrating-user-help-in-windows-forms.md)
 - [Windows Forms](../index.md)

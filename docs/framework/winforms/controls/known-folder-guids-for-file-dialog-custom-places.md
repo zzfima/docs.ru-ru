@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Custom Places [Windows Forms], Known Folder GUIDs
 - Windows Vista Known Folder GUIDs [Windows Forms], Custom Places
 ms.assetid: d8d8b544-8b4d-4da5-ba3a-b05e93244778
-ms.openlocfilehash: 0ffd0b78e37b663b197620694d9459cd4e0129d9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0f06ca2251ae1bf9bd5e199562eff116614e7117
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703456"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140235"
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>Известные GUID папок для пользовательских размещений, отображаемых в диалоговом окне открытия или сохранения файла
 Использовании <xref:System.Guid> для указания [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] известную папку при добавлении папок в <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> коллекции. Известные GUID папок не учитывается регистр и определены в файле KnownFolders.h в [!INCLUDE[winSDK](../../../../includes/winsdk-md.md)].  
@@ -287,5 +287,6 @@ ms.locfileid: "57703456"
  F38BF404-1D43-42F2-9305-67DE0B28FC23  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.FileDialogCustomPlace>
-- [Практическое руководство. Добавление пользовательских размещений в диалоговое окно файла](how-to-add-a-custom-place-to-a-file-dialog-box.md)
+- [Как выполнить: Добавление пользовательского размещения в диалоговое окно сохранения или открытия файла](how-to-add-a-custom-place-to-a-file-dialog-box.md)

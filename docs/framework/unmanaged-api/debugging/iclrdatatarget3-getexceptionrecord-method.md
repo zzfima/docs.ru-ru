@@ -14,12 +14,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ca53995daec372c75aa8c0beb305a6c36f1e6e07
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 7966cfb6e775bee567221eef2a5d99b90399f322
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57489783"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140846"
 ---
 # <a name="iclrdatatarget3getexceptionrecord-method"></a>Метод ICLRDataTarget3::GetExceptionRecord
 Вызывается службами доступа к данным среды CLR для извлечения записи исключения, связанной с целевым процессом. Например, для целевого объекта дампа, это будет эквивалентно записи исключения, переданной через `ExceptionParam` аргумент [MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) функции в Windows отладка библиотеки справки (DbgHelp).  
@@ -68,6 +68,7 @@ HRESULT GetExceptionRecord(
  **Версии платформы .NET Framework:** [!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс ICLRDataTarget3](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-interface.md)
 - [Метод GetExceptionContextRecord](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptioncontextrecord-method.md)
 - [Метод GetExceptionThreadID](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptionthreadid-method.md)

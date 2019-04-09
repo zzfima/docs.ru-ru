@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Создание службы, принимающей произвольные данные с использованием модели программирования WCF REST
+title: Практическое руководство. Как создать службу, принимающую произвольные данные, с использованием модели программирования WCF REST
 ms.date: 03/30/2017
 ms.assetid: e566c15a-b600-4e4a-be3a-4af43e767dae
-ms.openlocfilehash: 8728afbe5ebfe31d619b311f521eb1012a0dc323
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: c03450c66cf8de14d6c638550a510a91593c45b6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667002"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144083"
 ---
-# <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>Как выполнить Создание службы, принимающей произвольные данные с использованием модели программирования WCF REST
+# <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>Практическое руководство. Как создать службу, принимающую произвольные данные, с использованием модели программирования WCF REST
 Иногда разработчики должны полностью управлять тем, как данные возвращаются из операции службы. Это происходит, когда операция службы должна возвращать данные в формате, не поддерживаемых byWCF. В этом разделе рассматривается использование модели программирования WCF REST для создания службы, получающей произвольные данные.  
   
 ### <a name="to-implement-the-service-contract"></a>Реализация контракта службы  
@@ -194,6 +194,7 @@ namespace ReceiveRawData
 -   При компиляции этого кода задайте ссылки на файлы System.ServiceModel.dll и System.ServiceModel.Web.dll.  
   
 ## <a name="see-also"></a>См. также
+
 - [UriTemplate и UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)
 - [Модель веб-программирования HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
-- [Общие сведения о модели веб-программирования HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+- [Общие сведения о модели программирования WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)

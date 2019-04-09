@@ -2,12 +2,12 @@
 title: Доступ к службам WCF из клиентского приложения Магазина Windows
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: 484fad33614ca2b9507ed88aadfc1a41bb216c28
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
-ms.translationtype: MT
+ms.openlocfilehash: 6617a8cd207b68505396db7fdb4c9d08fd759d06
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261119"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167652"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>Доступ к службам WCF из клиентского приложения Магазина Windows
 В Windows 8 появился новый тип приложения - приложения Магазина Windows. Эти приложения предназначены для работы с сенсорным экраном. .NET Framework 4.5 позволяет приложениям Магазина Windows вызывать службы WCF.  
@@ -175,9 +175,10 @@ void async SomeMethod()
  Обратите внимание на использование ключевого слова async при асинхронном вызове, а также ключевого слова await при вызове асинхронного метода.  
   
 ## <a name="see-also"></a>См. также
-- [WCF в блоге о приложениях Windows Store](https://blogs.msdn.com/b/piyushjo/archive/2011/09/22/wcf-in-win8-metro-styled-apps-absolutely-supported.aspx)
-- [Клиенты Windows Store WCF и безопасность](https://blogs.msdn.com/b/piyushjo/archive/2011/10/11/calling-a-wcf-service-from-a-metro-application-adding-security.aspx)
-- [Приложения Windows Store и Межкомпьютерные вызовы](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
-- [Вызов службы WCF, развернутой в Azure из приложения Windows Store](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
+
+- [WCF в блоге о приложениях для Магазина Windows](https://blogs.msdn.com/b/piyushjo/archive/2011/09/22/wcf-in-win8-metro-styled-apps-absolutely-supported.aspx)
+- [Клиенты магазина Windows WCF и безопасность](https://blogs.msdn.com/b/piyushjo/archive/2011/10/11/calling-a-wcf-service-from-a-metro-application-adding-security.aspx)
+- [Приложения для магазина Windows и межкомпьютерные вызовы](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
+- [Вызов службы WCF, развернутой в Azure из приложения для магазина Windows](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
 - [Программирование безопасности WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
 - [Привязки](../../../../docs/framework/wcf/bindings.md)

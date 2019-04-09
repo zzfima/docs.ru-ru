@@ -2,18 +2,18 @@
 title: WCF и международные доменные имена
 ms.date: 03/30/2017
 ms.assetid: c8a3e10a-8bc2-4a78-8d86-a562ba6e65fa
-ms.openlocfilehash: 83c6f3c2afec0f2b6b8fccca4bd8252e9ab35400
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: c166f497117314dd8cea3b04b9b1072203374c52
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54571591"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112610"
 ---
 # <a name="wcf-and-internationalized-domain-names"></a>WCF и международные доменные имена
 Добавлена поддержка служб WCF с интернационализированными именами домена (IDN). Интернационализированное имя домена представляет собой имя домена, содержащее символы, не входящие в набор символов ASCII. Данная поддержка включает в себя как возможность размещения службы WCF с именем IDN, так и возможность диалога клиента WCF с веб-службой с именем IDN.  
   
 ## <a name="systemuri-and-idn"></a>System.Uri и IDN  
- У объекта класса <xref:System.Uri> есть два свойства: <xref:System.Uri.Host%2A> и <xref:System.Uri.DnsSafeHost%2A>. Эти свойства содержат значения Unicode или Punycode в зависимости от параметров конфигурации IDN.  
+ <xref:System.Uri> имеет два свойства <xref:System.Uri.Host%2A> и <xref:System.Uri.DnsSafeHost%2A>. Эти свойства содержат значения Unicode или Punycode в зависимости от параметров конфигурации IDN.  
   
  IDN активируется в файле конфигурации приложения с помощью следующего кода XML  
   
@@ -42,4 +42,5 @@ ms.locfileid: "54571591"
 >  При добавлении в applicationHost.exe.config символов Юникода сохраните файл в кодировке UTF-8.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Uri?displayProperty=nameWithType>

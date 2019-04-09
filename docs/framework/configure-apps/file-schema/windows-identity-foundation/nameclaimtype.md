@@ -3,12 +3,12 @@ title: <nameClaimType>
 ms.date: 03/30/2017
 ms.assetid: 17514d95-f0f5-4789-8e28-346640dc227c
 author: BrucePerlerMS
-ms.openlocfilehash: aab76949d9c31ac003b8afd519c2ad66529cbf26
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5202e162a7eb5fc4e36d6a6c0a2c18af48872a69
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254870"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130329"
 ---
 # <a name="nameclaimtype"></a>\<nameClaimType >
 Задает тип утверждения, указывающее <xref:System.Security.Principal.IIdentity.Name%2A> свойство. Тип утверждения используется для поиска <xref:System.Security.Claims.Claim> в коллекцию <xref:System.Security.Claims.ClaimsIdentity> объектов, возвращенных <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> метод данного обработчика токенов. Задайте значение соответствующее утверждение имени <xref:System.Security.Principal.IIdentity> созданные из этого обработчика токенов.  
@@ -51,7 +51,7 @@ ms.locfileid: "55254870"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<samlSecurityTokenRequirement>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/samlsecuritytokenrequirement.md)|Предоставляет конфигурацию для <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> класса <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> класс или класс, производный от любого из этих классов.|  
   
@@ -69,4 +69,5 @@ ms.locfileid: "55254870"
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.NameClaimType%2A>

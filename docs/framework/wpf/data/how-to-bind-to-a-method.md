@@ -6,12 +6,12 @@ helpviewer_keywords:
 - binding [WPF], to methods
 - methods [WPF], binding to
 ms.assetid: 5f55e71e-2182-42a0-88d1-700cc1427a7a
-ms.openlocfilehash: 8ccba42c3e16fdda73c087afde99e9864dc4ab0e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6cdad46fd6d9ef3bc4ce1a13fedb6ff1d639d93e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351935"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59123244"
 ---
 # <a name="how-to-bind-to-a-method"></a>Практическое руководство. Создание привязки к методу
 В следующем примере показано, как для привязки к методу с помощью <xref:System.Windows.Data.ObjectDataProvider>.  
@@ -32,5 +32,6 @@ ms.locfileid: "57351935"
  `InvalidationCharacterRule` Является <xref:System.Windows.Controls.ValidationRule> , проверяет наличие недопустимых символов. Шаблон ошибки по умолчанию, который представляет собой красную границу вокруг <xref:System.Windows.Controls.TextBox>, появляется для уведомления пользователей, если входное значение не является значением double.  
   
 ## <a name="see-also"></a>См. также
-- [Разделы практического руководства](data-binding-how-to-topics.md)
+
+- [Практические руководства](data-binding-how-to-topics.md)
 - [Привязка к перечислению](how-to-bind-to-an-enumeration.md)

@@ -2,12 +2,12 @@
 title: Отслеживание SQL
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-ms.openlocfilehash: e2cb86a92e075d9117f2fe208f2044d4bc30dac9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 6d3974cbf181734f2a3cab0fbc7d8f32c16699bf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710021"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146345"
 ---
 # <a name="sql-tracking"></a>Отслеживание SQL
 Этот образец показывает, как создать настраиваемый участник отслеживания SQL, который вносит записи отслеживания в базу данных SQL. Windows Workflow Foundation (WF) предоставляет отслеживание для обеспечения видимости выполнения экземпляра рабочего процесса рабочего процесса. Среда выполнения отслеживания выдает записи отслеживания рабочего процесса в ходе его выполнения. Дополнительные сведения об отслеживании рабочего процесса см. в разделе [отслеживание и трассировка рабочих процессов](../workflow-tracking-and-tracing.md).
@@ -60,4 +60,5 @@ ms.locfileid: "57710021"
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\SqlTracking`  
   
 ## <a name="see-also"></a>См. также
+
 - [Образцы наблюдения за AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

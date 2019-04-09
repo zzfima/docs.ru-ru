@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ComponentResourceKey markup extension [WPF]
 - XAML [WPF], ComponentResourceKey markup extension
 ms.assetid: d6bcdbe6-61b3-40a7-b381-4e02185b5a85
-ms.openlocfilehash: 89459223108c0190a485b25193e44d379a1e1c19
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5f72d6c3273cfda4276383cfe72f90196e5d4340
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379033"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169758"
 ---
 # <a name="componentresourcekey-markup-extension"></a>Расширение разметки ComponentResourceKey
 Определяет и ссылается на ключи для ресурсов, загруженные из внешних блоков. Это позволяет при поиске ресурса для указания типа целевого объекта сборки, вместо явного словаря ресурса в сборке или в классе.  
@@ -75,8 +75,9 @@ ms.locfileid: "57379033"
  `ComponentResourceKey` является расширением разметки. Расширения разметки обычно реализуются, если требуется заменить значения атрибутов на нелитеральные значения или имена обработчиков и если требуется больше, чем простая настройка преобразователей типов на работу с определенными типами или свойствами. Все расширения разметки в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] используют символы "{" и "}" в синтаксисе их атрибутов, который является соглашением, по которому обработчик [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] распознает, что расширение разметки должно обработать атрибут. Дополнительные сведения см. в разделе [Расширения разметки и XAML WPF](markup-extensions-and-wpf-xaml.md).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.ComponentResourceKey>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Общие сведения о разработке элементов управления](../controls/control-authoring-overview.md)
-- [Общие сведения о языке XAML (WPF)](xaml-overview-wpf.md)
+- [Обзор XAML (WPF)](xaml-overview-wpf.md)
 - [Расширения разметки и XAML WPF](markup-extensions-and-wpf-xaml.md)

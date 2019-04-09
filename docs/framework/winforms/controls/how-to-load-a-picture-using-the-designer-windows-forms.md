@@ -8,12 +8,12 @@ helpviewer_keywords:
 - forms [Windows Forms], displaying images
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 4dc7b973-afb1-4276-8322-20825af96655
-ms.openlocfilehash: febe1fc616bd1405e699c03fa673814a45976769
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 5aa8ff1efa045d52382cc5c24a0cae1f0f1bb510
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723079"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127144"
 ---
 # <a name="how-to-load-a-picture-using-the-designer-windows-forms"></a>Практическое руководство. Загрузка изображения с помощью конструктора (Windows Forms)
 С помощью Windows Forms <xref:System.Windows.Forms.PictureBox> элемента управления, можно загружать и отображать изображение в форме во время разработки, установив <xref:System.Windows.Forms.PictureBox.Image%2A> свойство допустимого рисунка. В следующей таблице показаны допустимые типы файлов.  
@@ -44,6 +44,7 @@ ms.locfileid: "57723079"
 1.  На **свойства** выберите <xref:System.Windows.Forms.PictureBox.Image%2A> свойство и щелкните правой кнопкой мыши небольшой эскиза, который отображается слева от имени объекта образа. Выберите **сбросить**.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.PictureBox>
 - [Общие сведения об элементе управления PictureBox](picturebox-control-overview-windows-forms.md)
 - [Практическое руководство. Изменение размера или размещения изображения во время выполнения](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)

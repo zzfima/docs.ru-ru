@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fc5d09ac12919b8c68b9fe4bf9f7dc0009b2d4b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4f5307ce00160bb4151a7559daac4724367c6497
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705473"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157789"
 ---
 # <a name="inotifysink2-interface"></a>Интерфейс INotifySink2
 Объявляет методы для уведомления приемника.  
@@ -39,6 +39,7 @@ ms.locfileid: "54705473"
  **Заголовок.** ProtocolNotify2.idl  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс INotifyConnection2](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
 - [Интерфейс INotifySource2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
 - [Интерфейсы хранилища символов диагностики](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

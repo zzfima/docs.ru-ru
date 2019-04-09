@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bb61dbcee1851ebe70c1dc0138e14aaa7a08d901
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 3dbfca942d61cd5667293d11f358f06bd000fa2e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57468693"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118005"
 ---
 # <a name="imetadatadispenserexgetcorsystemdirectory-method"></a>Метод IMetaDataDispenserEx::GetCORSystemDirectory
 Получает каталог, содержащий текущий среда CLR (CLR). Этот метод поддерживается только для использования вне процесса отладки. Если вызывается из другого компонента, он возвращает E_NOTIMPL.  
@@ -57,5 +57,6 @@ HRESULT GetCORSystemDirectory (
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
 - [Интерфейс IMetaDataDispenser](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)

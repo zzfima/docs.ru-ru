@@ -15,12 +15,12 @@ helpviewer_keywords:
 - GDI+, cloning images
 - GDI+, positioning images
 ms.assetid: 09f0c07a-19c0-43b4-90a2-862a10545ce8
-ms.openlocfilehash: 9682c7be5956680556defd698cb97e8f4b1a7f50
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b5f98e7bdef9ff8ed0a4cd0e040cb92a31f30503
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724674"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188452"
 ---
 # <a name="drawing-positioning-and-cloning-images-in-gdi"></a>Отрисовка, позиционирование и клонирование изображений в GDI+
 Можно использовать <xref:System.Drawing.Bitmap> класс для загрузки и отображения растровых изображений и может использовать <xref:System.Drawing.Imaging.Metafile> класс для загрузки и отображения векторных изображений. <xref:System.Drawing.Bitmap> И <xref:System.Drawing.Imaging.Metafile> классы наследуют от <xref:System.Drawing.Image> класса. Чтобы отобразить векторного изображения, вам потребуется экземпляр <xref:System.Drawing.Graphics> класс и <xref:System.Drawing.Imaging.Metafile>. Чтобы отобразить растровое изображение, требуется экземпляр <xref:System.Drawing.Graphics> класс и <xref:System.Drawing.Bitmap>. Экземпляр <xref:System.Drawing.Graphics> класс предоставляет <xref:System.Drawing.Graphics.DrawImage%2A> метод, который получает <xref:System.Drawing.Imaging.Metafile> или <xref:System.Drawing.Bitmap> в качестве аргумента.  
@@ -52,6 +52,7 @@ ms.locfileid: "57724674"
  ![Обрезка](./media/aboutgdip03-art05.gif "AboutGdip03_Art05")  
   
 ## <a name="see-also"></a>См. также
-- [Изображения, точечные рисунки и метафайлы](images-bitmaps-and-metafiles.md)
-- [Практическое руководство. Создание объектов Graphics для рисования](how-to-create-graphics-objects-for-drawing.md)
-- [Работа с растровыми и векторными изображениями, значками и метафайлами](working-with-images-bitmaps-icons-and-metafiles.md)
+
+- [Работа с растровыми и векторными изображениями с использованием классов Image, Bitmap и Metafile](images-bitmaps-and-metafiles.md)
+- [Практическое руководство. Создание графических объектов для рисования](how-to-create-graphics-objects-for-drawing.md)
+- [Работа с растровыми и векторными изображениями](working-with-images-bitmaps-icons-and-metafiles.md)

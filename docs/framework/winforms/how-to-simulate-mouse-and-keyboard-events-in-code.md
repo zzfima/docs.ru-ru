@@ -12,12 +12,12 @@ helpviewer_keywords:
 - mouse clicks [Windows Forms], simulating
 - mouse [Windows Forms], event simulation
 ms.assetid: 6abcb67e-3766-4af2-9590-bf5dabd17e41
-ms.openlocfilehash: bb51cd5ac3c4961381ceff89054d79dc52531627
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: aa0139c4b51bf33f9156eeb9dab6b9b6093524d8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713765"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59123452"
 ---
 # <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>Практическое руководство. Имитация событий мыши и клавиатуры в коде
 В Windows Forms предоставляется несколько возможностей для программной имитации ввода данных с помощью мыши и клавиатуры. В этом разделе приведен обзор этих возможностей.  
@@ -27,7 +27,7 @@ ms.locfileid: "57713765"
   
 #### <a name="to-programmatically-click-the-right-mouse-button"></a>Чтобы нажать правую кнопку мыши программными средствами, выполните указанные ниже действия.  
   
-1.  Создайте объект <xref:System.Windows.Forms.MouseEventArgs> и установите для его свойства <xref:System.Windows.Forms.MouseEventArgs.Button%2A> значение <xref:System.Windows.Forms.MouseButtons.Right?displayProperty=nameWithType>.  
+1.  Создайте объект <xref:System.Windows.Forms.MouseEventArgs> и установите для его свойства <xref:System.Windows.Forms.MouseEventArgs.Button%2A> значение <xref:System.Windows.Forms.MouseButtons.Right?displayProperty=nameWithType> .  
   
 2.  Вызовите метод <xref:System.Windows.Forms.Control.OnMouseClick%2A> с этим объектом <xref:System.Windows.Forms.MouseEventArgs> в качестве аргумента.  
   
@@ -90,4 +90,5 @@ ms.locfileid: "57713765"
  Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  
   
 ## <a name="see-also"></a>См. также
+
 - [Ввод данных пользователем в Windows Forms](user-input-in-windows-forms.md)

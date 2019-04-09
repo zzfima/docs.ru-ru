@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
-ms.openlocfilehash: cec371c414d6945386816703232abbc642633070
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce92705d22edfc832e894dd2feaafcd11088bf26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661846"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120670"
 ---
 # <a name="oracle-and-adonet"></a>Oracle и ADO.NET
 > [!NOTE]
@@ -43,7 +43,7 @@ csc /r:System.Data.OracleClient.dll
  [BFILE в Oracle](../../../../docs/framework/data/adonet/oracle-bfiles.md)  
  Описывает класс <xref:System.Data.OracleClient.OracleBFile>, который используется для работы с типом данных Oracle BFILE.  
   
- [Большие объекты (LOB) в Oracle](../../../../docs/framework/data/adonet/oracle-lobs.md)  
+ [Большие двоичные объекты (LOB) Oracle](../../../../docs/framework/data/adonet/oracle-lobs.md)  
  Описывает класс <xref:System.Data.OracleClient.OracleLob>, который используется для работы с типом данных Oracle LOB.  
   
  [REF CURSOR в Oracle](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
@@ -72,11 +72,12 @@ csc /r:System.Data.OracleClient.dll
  Описывает работу с данными в ADO.NET.  
   
  [SQL Server и ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
- Описывает процесс работы со специальными возможностями и возможностями SQL Server.  
+ Описывает процесс работы со специальными возможностями и функциями SQL Server.  
   
  [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
  Описывает универсальные классы, позволяющие создавать независимый от поставщика код в [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
   
 ## <a name="see-also"></a>См. также
+
 - [ADO.NET](../../../../docs/framework/data/adonet/index.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

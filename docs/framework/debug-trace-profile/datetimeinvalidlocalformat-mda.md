@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c4a942bb-2651-4b65-8718-809f892a0659
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 78d9d769deefedef0c72b847c86e7b9fc175288c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 380334dbe9b91ea369de6cbe58686a9a74254c2c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732678"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148230"
 ---
 # <a name="datetimeinvalidlocalformat-mda"></a>dateTimeInvalidLocalFormat MDA
 Помощник по отладке управляемого кода `dateTimeInvalidLocalFormat` активируется в том случае, если экземпляр <xref:System.DateTime>, который хранится в формате времени UTC, форматируется с использованием формата, предназначенного только для локальных экземпляров <xref:System.DateTime>. Этот помощник не активируется в том случае, если экземпляры <xref:System.DateTime> не заданы или заданы по умолчанию.  
@@ -56,7 +56,7 @@ Serialize(myDateTime.ToString("o"));
 ## <a name="output"></a>Вывод  
  В результате его активации не возвращаются какие-либо конкретные выходные данные. Тем не менее с помощью стека вызовов можно определить расположение вызова <xref:System.DateTime.ToString%2A>, который стал причиной активации этого помощника.  
   
-## <a name="configuration"></a>Конфигурация  
+## <a name="configuration"></a>Параметр Configuration  
   
 ```xml  
 <mdaConfig>  
@@ -87,5 +87,6 @@ String serialized = XmlConvert.ToString(myDateTime,
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Globalization.DateTimeFormatInfo>
-- [Диагностика ошибок посредством помощников по отладке управляемого кода](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Диагностика ошибок посредством управляемых помощников по отладке](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

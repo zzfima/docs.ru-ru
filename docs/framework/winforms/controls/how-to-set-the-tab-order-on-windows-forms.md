@@ -10,12 +10,12 @@ helpviewer_keywords:
 - controls [Windows Forms], setting tab order
 - Windows Forms, setting tab order
 ms.assetid: 71fa8e76-0472-414b-ad3c-0f90166e0ad7
-ms.openlocfilehash: 3f566dfb5dbc118c5a6be7f874b5b4857756075a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: cd86757d43d7d57dc7777422086a7b7a96b6611e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705887"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162128"
 ---
 # <a name="how-to-set-the-tab-order-on-windows-forms"></a>Практическое руководство. Установка последовательности переходов в формах Windows Forms
 Последовательность табуляции заключается в порядке, в котором пользователь перемещает фокус от одного элемента управления в другую, нажав клавишу TAB. Каждая форма имеет свои собственные последовательности табуляции. По умолчанию последовательности табуляции совпадает в порядке создания элементов управления. Последовательности табуляции нумерация начинается с нуля.  
@@ -55,7 +55,8 @@ ms.locfileid: "57705887"
     >  Группы переключателей есть одна позиция табуляции во время выполнения. Выбранную кнопку (то есть кнопка с его <xref:System.Windows.Forms.RadioButton.Checked%2A> свойству присвоено `true`) имеет его <xref:System.Windows.Forms.Control.TabStop%2A> свойству автоматически присваивается `true`, тогда как другие кнопки имеют свои <xref:System.Windows.Forms.Control.TabStop%2A> свойству присвоено `false`. Дополнительные сведения о группировании <xref:System.Windows.Forms.RadioButton> элементов управления, см. в разделе [группирования Windows Forms элементов управления RadioButton как набор](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Элементы управления Windows Forms](index.md)
-- [Упорядочение элементов управления в формах Windows Forms](arranging-controls-on-windows-forms.md)
-- [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)
+- [Расположение элементов управления в формах Windows Forms](arranging-controls-on-windows-forms.md)
+- [Элементы управления для использования в формах Windows Forms](controls-to-use-on-windows-forms.md)
 - [Функциональная классификация элементов управления Windows Forms](windows-forms-controls-by-function.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 18cf59553468e2408f3898d8233bd05d453db17b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 313dbd11f1d033f0e15de651b9c130cc98c217e9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471970"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192831"
 ---
 # <a name="imetadataimportenumfields-method"></a>Метод IMetaDataImport::EnumFields
 Перечисляет токены FieldDef для типа, на который ссылается указанный токен TypeDef.  
@@ -57,7 +57,7 @@ HRESULT EnumFields (
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
-|HRESULT|Описание:|  
+|HRESULT|Описание|  
 |-------------|-----------------|  
 |`S_OK`|`EnumFields` успешно возвращен.|  
 |`S_FALSE`|Нет полей для перечисления. В этом случае `pcTokens` равно нулю.|  
@@ -72,5 +72,6 @@ HRESULT EnumFields (
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

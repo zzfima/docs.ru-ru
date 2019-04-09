@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5f29111fd68d9a47cd90687cc6aa2743968e727d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 442584cffe4b4ae44702892587e261d41abf4e8a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484606"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150427"
 ---
 # <a name="isymencunmanagedmethodgetsourceextentindocument-method"></a>Метод ISymENCUnmanagedMethod::GetSourceExtentInDocument
 Получает наименьшую начальную строку и наибольшую конечную строку метода в определенном документе.  
@@ -53,4 +53,5 @@ HRESULT GetSourceExtentInDocument(
  **Заголовок.** CorSym.idl CorSym.h  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс ISymENCUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

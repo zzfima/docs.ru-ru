@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Data Item control type
 - control types, Data Item
 ms.assetid: 181708fd-2595-4c43-9abd-75811627d64c
-ms.openlocfilehash: ebc5f9a5b50766b9a49a9772469f8ae731f3aa4c
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 6263d7777becc1042cf477503c7f68af29fa7f4c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679402"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125215"
 ---
 # <a name="ui-automation-support-for-the-dataitem-control-type"></a>Поддержка автоматизации пользовательского интерфейса для элемента управления типа DataItem
 > [!NOTE]
@@ -27,7 +27,7 @@ ms.locfileid: "57679402"
 ## <a name="required-ui-automation-tree-structure"></a>Требуемая древовидная структура модели автоматизации пользовательского интерфейса  
  В следующей таблице описывается представление элемента управления и представление содержимого дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , относящиеся к элементам управления DataItem, и показывается, что может содержаться в каждом представлении. Дополнительные сведения о дереве [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] см. в разделе [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).  
   
-|Дерево[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] — представление элемента управления|Дерево[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] — представление содержимого|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Дерево - представление элемента управления|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Дерево - представление содержимого|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
 |DataItem<br /><br /> -Зависит от (0 или больше; могут быть структурированы в иерархии)|DataItem<br /><br /> -Зависит от (0 или больше; могут быть структурированы в иерархии)|  
   
@@ -37,7 +37,7 @@ ms.locfileid: "57679402"
 ## <a name="required-ui-automation-properties"></a>Требуемые свойства модели автоматизации пользовательского интерфейса  
  В следующей таблице перечислены свойства, значение или определение которых в первую очередь относится к элементам управления DataItem. Дополнительные сведения о свойствах [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] см. в разделе [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
   
-|Свойство.|Значение|Примечания|  
+|Свойство|Значение|Примечания|  
 |--------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|См. примечания.|Значение этого свойства должно быть уникальным среди всех элементов управления в приложении.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|См. примечания.|Внешний прямоугольник, содержащий весь элемент управления.|  
@@ -76,21 +76,21 @@ ms.locfileid: "57679402"
 ## <a name="required-ui-automation-events"></a>Необходимые события модели автоматизации пользовательского интерфейса  
  В следующей таблице перечислены события [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , которые должны поддерживаться всеми элементами управления DataItem. Дополнительные сведения о событиях см. в разделе [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
   
-|Событие[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] |Поддержка|Примечания|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] событие|Поддержка|Примечания|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Обязательный|Нет|  
-|Событие изменения свойства<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> |Обязательно|Нет|  
-|Событие изменения свойства<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> |Обязательно|Нет|  
-|Событие изменения свойства<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> |Обязательно|Нет|  
-|Событие изменения свойства<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> |Обязательно|Нет|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> событие изменения свойства.|Обязательно|Нет|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> событие изменения свойства.|Обязательно|Нет|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> событие изменения свойства.|Обязательно|Нет|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> событие изменения свойства.|Обязательно|Нет|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Обязательно|Нет|  
 |<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|Зависит от обстоятельств|Нет|  
-|Событие изменения свойства<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> |Зависит от обстоятельств|Нет|  
+|<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> событие изменения свойства.|Зависит от обстоятельств|Нет|  
 |<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent>|Обязательно|Нет|  
 |<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent>|Обязательно|Нет|  
 |<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>|Обязательно|Нет|  
-|Событие изменения свойства<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> |Зависит от обстоятельств|Нет|  
-|Событие изменения свойства<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> |Зависит от обстоятельств|Нет|  
+|<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> событие изменения свойства.|Зависит от обстоятельств|Нет|  
+|<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> событие изменения свойства.|Зависит от обстоятельств|Нет|  
   
 <a name="Data_Item_Control_Type_Example"></a>   
 ## <a name="dataitem-control-type-example"></a>Пример элемента управления DataItem  
@@ -100,13 +100,14 @@ ms.locfileid: "57679402"
   
  Представление элемента управления и представление содержимого дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , относящиеся к элементу управления DataItem, показаны ниже. Шаблоны элементов управления для каждого элемента автоматизации отображаются в круглых скобках. Группа "Contoso" также является частью сетки элемента управления ведущего приложения Data Grid.  
   
-|Дерево[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] — представление элемента управления|Дерево[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] — представление содержимого|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Дерево - представление элемента управления|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Дерево - представление содержимого|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
 |-Группу «Contoso» (таблицы, сетка)<br />-DataItem «учетные записи Receivable.doc» (TableItem, GridItem, SelectionItem, вызов)<br />-Image «Accounts Receivable.doc»<br />-Edit «Name» (TableItem GridItem, значение «Accounts Receivable.doc»)<br />-Edit, «Дата изменения» (TableItem GridItem, значение «8/25/2006 3:29 PM»)<br />-Edit «Размер» (GridItem и TableItem, значение «11.0 КБ)<br />-DataItem «учетные записи Payable.doc» (TableItem, GridItem, SelectionItem, вызов)<br />-   ...|-Группу «Contoso» (таблицы, сетка)<br />-DataItem «учетные записи Receivable.doc» (TableItem, GridItem, SelectionItem, вызов)<br />-Image «Accounts Receivable.doc»<br />-Edit «Name» (TableItem GridItem, значение «Accounts Receivable.doc»)<br />-Edit, «Дата изменения» (TableItem GridItem, значение «8/25/2006 3:29 PM»)<br />-Edit «Размер» (GridItem и TableItem, значение «11.0 КБ)<br />-DataItem «учетные записи Payable.doc» (TableItem, GridItem, SelectionItem, вызов)<br />-   …|  
   
  Если сетка представляет список выбираемых элементов, соответствующие элементы пользовательского интерфейса могут быть представлены типом элемента управления ListItem, а не DataItem. В предыдущем примере элементы DataItem (Accounts Receivable.doc и Accounts Payable.doc) в в элементе Group (Contoso) можно улучшить, представив их как элементы управления типа ListItem, поскольку этот тип уже поддерживает шаблон элемента управления SelectionItem.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Automation.ControlType.DataItem>
 - [Общие сведения о типах элементов управления автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
 - [Общие сведения о модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/ui-automation-overview.md)

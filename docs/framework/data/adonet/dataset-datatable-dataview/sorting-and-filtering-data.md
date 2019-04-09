@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fdd9c753-39df-48cd-9822-2781afe76200
-ms.openlocfilehash: 8733a9552787f7286ae76c77091b9833804478d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8d8bd85f65adfde5f239e1e2dd79d65517b745a8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661221"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166248"
 ---
 # <a name="sorting-and-filtering-data"></a>Сортировка и фильтрация данных
 <xref:System.Data.DataView> предоставляет несколько способов сортировки и фильтрации данных в <xref:System.Data.DataTable>.  
@@ -30,13 +30,13 @@ ms.locfileid: "54661221"
     |Параметры DataViewRowState|Описание|  
     |------------------------------|-----------------|  
     |**CurrentRows**|**Текущей** из всех **Unchanged**, **Added**, и **Modified** строк. Это значение по умолчанию.|  
-    |**Добавлен**|**Текущей** из всех **Added** строк.|  
-    |**Удален**|**Исходного** из всех **Deleted** строк.|  
+    |**Added**|**Текущей** из всех **Added** строк.|  
+    |**Deleted**|**Исходного** из всех **Deleted** строк.|  
     |**ModifiedCurrent**|**Текущей** из всех **Modified** строк.|  
     |**ModifiedOriginal**|**Исходного** из всех **Modified** строк.|  
-    |**None**|Нет строк.|  
+    |**Нет**|Нет строк.|  
     |**OriginalRows**|**Исходного** из всех **Unchanged**, **Modified**, и **Deleted** строк.|  
-    |**без изменений**|**Текущей** из всех **Unchanged** строк.|  
+    |**Unchanged**|**Текущей** из всех **Unchanged** строк.|  
   
  Дополнительные сведения о состояниях и версиях строк см. в разделе [строки состояния и версии строк](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
   
@@ -57,9 +57,10 @@ DataView prodView = new DataView(prodDS.Tables["Products"],
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Data.DataViewRowState>
 - <xref:System.Data.DataColumn.Expression%2A?displayProperty=nameWithType>
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataView>
 - [Объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: beb48835039f142ea1d9e18871f77ada1b6f4f3e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0109b25b1cdc42204fc4873577e495641c4ec4fd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706317"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59131460"
 ---
 # <a name="isymunmanagedscope2-interface"></a>Интерфейс ISymUnmanagedScope2
 Представляет лексическую область внутри метода. Этот интерфейс расширяет [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) интерфейс с методами, которые получают сведения о константы, определенные в области действия.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание:|  
+|Метод|Описание|  
 |------------|-----------------|  
 |[Метод GetConstantCount](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-getconstantcount-method.md)|Получает число констант, определенных в этой области.|  
 |[Метод GetConstants](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-getconstants-method.md)|Возвращает локальные константы, определенные в этой области.|  
@@ -37,5 +37,6 @@ ms.locfileid: "54706317"
  **Заголовок.** CorSym.idl CorSym.h  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейсы хранилища символов диагностики](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
 - [Интерфейс ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)

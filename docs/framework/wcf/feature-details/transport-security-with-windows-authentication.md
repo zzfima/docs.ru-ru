@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
-ms.openlocfilehash: 96fce3cb56cf328e0fbb589113e3ac24519de557
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: d199acf6b32275503127adc65fb2463e993a6a44
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125451"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148087"
 ---
 # <a name="transport-security-with-windows-authentication"></a>Безопасность транспорта с проверкой подлинности Windows
 В следующем сценарии показаны клиент Windows Communication Foundation (WCF) и служба, защищенные механизмом безопасности Windows. Дополнительные сведения о программировании см. в разделе [как: Защита службы с учетными данными Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).  
@@ -78,7 +78,7 @@ ms.locfileid: "58125451"
   
 -   Создайте автономный клиент, используя код (и код клиента).  
   
--   Создайте клиент, который не определяет никаких адресов конечных точек. Вместо этого используйте конструктор клиента, который принимает в качестве аргумента имя конфигурации. Например:  
+-   Создайте клиент, который не определяет никаких адресов конечных точек. Вместо этого используйте конструктор клиента, который принимает в качестве аргумента имя конфигурации. Пример:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
@@ -118,6 +118,7 @@ ms.locfileid: "58125451"
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Практическое руководство. Защита службы с помощью учетных данных Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
+- [Практическое руководство. Защита службы с использованием учетных данных Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
 - [Модель безопасности для Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

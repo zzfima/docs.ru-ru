@@ -2,12 +2,12 @@
 title: INTERSECT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 93c6fe33-f341-4b52-911e-adf503891951
-ms.openlocfilehash: 2fe7a9610863efab9fd332c40f7a644cd5c07e35
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 4d2111425dc3222f86fdb46109442c8b365e841b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595959"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128470"
 ---
 # <a name="intersect-entity-sql"></a>INTERSECT (Entity SQL)
 Возвращает коллекцию различных значений, возвращаемых выражениями запроса, указанных как слева, так и справа от операнда INTERSECT. Все выражения должны иметь тот же тип, что и аргумент `expression`, или принадлежать к базовому или производному типу для типа этого аргумента.  
@@ -38,4 +38,5 @@ expression INTERSECT expression
  [!code-csharp[DP EntityServices Concepts 2#INTERSECT](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#intersect)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Справочник по Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c4577410-602e-44e5-9dab-fea7c55bcdfe
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c3cccb94268264217a1e6a1b5def71c6c433b820
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1a68aac2a92a0569e288da858e4a4e4695fd5eaa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614787"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193919"
 ---
 # <a name="invalidcercall-mda"></a>Помощник по отладке управляемого кода invalidCERCall
 Помощник по отладке управляемого кода (MDA) `invalidCERCall` активируется при осуществляемом в графе области ограниченного исполнения (CER) вызове метода, не имеющего контракта надежности или имеющего чрезвычайно слабый контракт. Слабый контракт представляет собой контракт, который объявляет, что максимальное повреждение состояния имеет большую область, чем экземпляр, переданный в вызов, то есть <xref:System.AppDomain> или состояние процесса может быть повреждено или его результат не всегда является детерминированно вычисляемым при вызове в рамках CER.  
@@ -44,7 +44,7 @@ ms.locfileid: "54614787"
   
  `Method 'MethodWithCer', while executing within a constrained execution region, makes a call at IL offset 0x000C to 'MethodWithWeakContract', which does not have a sufficiently strong reliability contract and might cause non-deterministic results.`  
   
-## <a name="configuration"></a>Конфигурация  
+## <a name="configuration"></a>Параметр Configuration  
   
 ```xml  
 <mdaConfig>  
@@ -55,6 +55,7 @@ ms.locfileid: "54614787"
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>
 - <xref:System.Runtime.ConstrainedExecution>
-- [Диагностика ошибок посредством помощников по отладке управляемого кода](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Диагностика ошибок посредством управляемых помощников по отладке](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

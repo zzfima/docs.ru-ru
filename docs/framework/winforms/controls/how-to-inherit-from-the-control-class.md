@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Наследовать от класса Control
+title: Практическое руководство. Наследование класса Control
 ms.date: 03/30/2017
 helpviewer_keywords:
 - inheritance [Windows Forms], Windows Forms custom controls
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - custom controls [Windows Forms], creating
 ms.assetid: 46ba0df3-5cf7-443c-a3b4-a72660172476
-ms.openlocfilehash: cf1b3c7d7d530710c4c7e0fbd137667c3598500a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: b173f322018921ef1c0fec6aa785ae6c9d9e6957
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702975"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141990"
 ---
-# <a name="how-to-inherit-from-the-control-class"></a>Практическое руководство. Наследовать от класса Control
+# <a name="how-to-inherit-from-the-control-class"></a>Практическое руководство. Наследование класса Control
 Если вы хотите создать полностью пользовательский элемент управления для использования в Windows Forms, следует наследовать <xref:System.Windows.Forms.Control> класса. При наследовании <xref:System.Windows.Forms.Control> класса необходимо, чтобы выполнить более тщательного планирования и реализации также предоставляет широкий выбор вариантов. При наследовании от <xref:System.Windows.Forms.Control>, наследуются простейшие функции, обеспечивающие работоспособность элементов управления. Стандартные функции <xref:System.Windows.Forms.Control> класс обрабатывает входные данные с клавиатуры и мыши, определяют границы и размер элемента управления, обрабатывают окна и обеспечивают обработку сообщений и безопасность. Они не включают оформление (в данном случае отрисовку графического интерфейса элемента управления) или конкретные функции взаимодействия с пользователем. Все эти аспекты необходимо прописывать в пользовательском коде.  
   
 > [!NOTE]
@@ -44,9 +44,10 @@ ms.locfileid: "57702975"
 8.  Сохраните и проверьте элемент управления.  
   
 ## <a name="see-also"></a>См. также
-- [Разновидности пользовательских элементов управления](varieties-of-custom-controls.md)
+
+- [Создание собственных элементов управления](varieties-of-custom-controls.md)
 - [Практическое руководство. Наследование класса UserControl](how-to-inherit-from-the-usercontrol-class.md)
-- [Практическое руководство. Наследование Windows существующих элементов управления формы](how-to-inherit-from-existing-windows-forms-controls.md)
-- [Практическое руководство. Автор элементы управления для форм Windows Forms](how-to-author-controls-for-windows-forms.md)
+- [Практическое руководство. Наследование существующих элементов управления Windows Forms](how-to-inherit-from-existing-windows-forms-controls.md)
+- [Практическое руководство. Создание элементов управления для форм Windows Forms](how-to-author-controls-for-windows-forms.md)
 - [Устранение неполадок, связанных с унаследованными обработчиками событий, в Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
 - [Создание элементов управления Windows Forms во время разработки](developing-windows-forms-controls-at-design-time.md)

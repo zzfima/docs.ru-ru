@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: 2648296d01f0e237847fc16535b01dbd8e9c5b62
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 946e0f5ee90235498b8089732ae526ab6f35665c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377303"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157876"
 ---
 # <a name="panels-overview"></a>Общие сведения о панелях
 <xref:System.Windows.Controls.Panel> элементы являются компонентами, которые управляют отображением элементов — их размер и измерения, их положение и расположение их дочернего содержимого. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Предоставляет ряд предопределенных <xref:System.Windows.Controls.Panel> элементы, а также возможность создания пользовательских <xref:System.Windows.Controls.Panel> элементов.  
@@ -62,7 +62,7 @@ ms.locfileid: "57377303"
   
  Каждый элемент панели имеет собственные специальные возможности, представленные в следующей таблице.  
   
-|Имя элемента|Панель пользовательского интерфейса?|Описание:|  
+|Имя элемента|Панель пользовательского интерфейса?|Описание|  
 |------------------|---------------|-----------------|  
 |<xref:System.Windows.Controls.Canvas>|Да|Определяет область, внутри которой можно явным образом разместить дочерние элементы с помощью координатах по отношению к <xref:System.Windows.Controls.Canvas> области.|  
 |<xref:System.Windows.Controls.DockPanel>|Да|Определяет область, в которой можно горизонтально либо вертикально упорядочивать дочерние элементы относительно друг друга.|  
@@ -81,7 +81,7 @@ ms.locfileid: "57377303"
   
  Каждый производный <xref:System.Windows.Controls.Panel> элемент рассматривает ограничения размеров по-разному. Основные сведения о том, как <xref:System.Windows.Controls.Panel> обрабатывает ограничения в горизонтальном или вертикальном направлении, может сделать макет более предсказуемой.  
   
-|**Имя панели**|**Размеры по оси x**|**Размеры по оси y**|  
+|**Имя панели**|**Оси x**|**Измерение y**|  
 |--------------------|----------------------|----------------------|  
 |<xref:System.Windows.Controls.Canvas>|Ограничено содержимым|Ограничено содержимым|  
 |<xref:System.Windows.Controls.DockPanel>|Ограничено|Ограничено|  
@@ -242,7 +242,7 @@ ms.locfileid: "57377303"
   
 <a name="Panels_global_localization"></a>   
 ## <a name="localizationglobalization-support"></a>Поддержка локализации и глобализации  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] поддерживает ряд возможностей для создания локализуемого [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] поддерживает ряд функций, которые помогают в создании локализуемого [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
   
  Все элементы панели изначально поддерживают <xref:System.Windows.FrameworkElement.FlowDirection%2A> свойство, которое может использоваться для динамического содержимого на основе параметров языкового стандарта или языка пользователя. Дополнительные сведения см. в разделе <xref:System.Windows.FrameworkElement.FlowDirection%2A>.  
   
@@ -253,12 +253,13 @@ ms.locfileid: "57377303"
  Дополнительные сведения о создании приложений [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] с локализуемыми [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)] см. в разделе [Обзор использования автоматической разметки](../advanced/use-automatic-layout-overview.md).  
   
 ## <a name="see-also"></a>См. также
-- [Пошаговое руководство: My first WPF desktop application](../getting-started/walkthrough-my-first-wpf-desktop-application.md) (Пошаговое руководство. Создание классического приложения WPF)
+
+- [Пошаговое руководство. Создание классического приложения WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
 - [Пример коллекции макетов WPF](https://go.microsoft.com/fwlink/?LinkID=160054)
 - [Макет](../advanced/layout.md)
 - [Пример коллекции элементов управления WPF](https://go.microsoft.com/fwlink/?LinkID=160053)
 - [Общие сведения о свойствах Alignment, Margin, Padding](../advanced/alignment-margins-and-padding-overview.md)
 - [Создание пользовательского содержимого пример](https://go.microsoft.com/fwlink/?LinkID=159979)
-- [Общие сведения о присоединенных свойствах](../advanced/attached-properties-overview.md)
+- [Общие сведения о вложенных свойствах зависимостей](../advanced/attached-properties-overview.md)
 - [Обзор использования автоматической разметки](../advanced/use-automatic-layout-overview.md)
 - [Разметка и разработка](../advanced/optimizing-performance-layout-and-design.md)

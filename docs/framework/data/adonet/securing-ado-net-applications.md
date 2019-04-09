@@ -2,12 +2,12 @@
 title: Защита приложений ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
-ms.openlocfilehash: 7429393df980757e5fea326489d84cec8b6c131a
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 32d3de15242aaf9cfacd9371289a5a0a675f884b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092245"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149387"
 ---
 # <a name="securing-adonet-applications"></a>Защита приложений ADO.NET
 При написании безопасного приложения ADO.NET следует не просто избегать обычных проблем кодирования, таких как отсутствие проверки входных данных пользователя. В приложении, в котором выполняется обращение к данным, много потенциально уязвимых мест, которые атакующий может использовать для получения конфиденциальных данных, манипулирования ими или их уничтожения. Поэтому важно понимать все аспекты безопасности, от моделирования угроз на этапе проектирования приложения до развертывания и текущего обслуживания.  
@@ -52,5 +52,6 @@ ms.locfileid: "56092245"
  Предоставляет ссылки на внешние ресурсы, доступные в Интернете и в печатной форме.  
   
 ## <a name="see-also"></a>См. также
+
 - [ADO.NET](../../../../docs/framework/data/adonet/index.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

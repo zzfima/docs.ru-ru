@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Импорт метаданных в конечные точки службы
+title: Практическое руководство. Импорт метаданных в конечные точки службы
 ms.date: 03/30/2017
 ms.assetid: b69dbe20-92a1-4911-89d8-ffbc3dad4663
-ms.openlocfilehash: 5a6375f0a0b0f657401a1ac2254be942d4e618aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 05106295448c4682f07dd17295574ecdc39bf903
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548681"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126871"
 ---
-# <a name="how-to-import-metadata-into-service-endpoints"></a>Как выполнить Импорт метаданных в конечные точки службы
+# <a name="how-to-import-metadata-into-service-endpoints"></a>Практическое руководство. Импорт метаданных в конечные точки службы
 В этом разделе объясняется, как импортировать метаданные в коллекцию конечных точек службы и использовать службы, определенные в [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md). Кроме того, в этом разделе демонстрируется создание клиентского приложения, импортирующего метаданные из службы, а затем вызывающего в службе метод `Add`.  
   
 ### <a name="to-import-metadata-into-service-endpoints"></a>Импорт метаданных в конечные точки службы  
@@ -38,5 +38,6 @@ ms.locfileid: "54548681"
      [!code-csharp[UE_ImportMetadata#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/ue_importmetadata/cs/client.cs#4)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Метаданные](../../../../docs/framework/wcf/feature-details/metadata.md)
 - [Начало работы](../../../../docs/framework/wcf/samples/getting-started-sample.md)

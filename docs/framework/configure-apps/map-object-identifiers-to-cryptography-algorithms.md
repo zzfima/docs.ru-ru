@@ -8,12 +8,12 @@ helpviewer_keywords:
 - mapping object identifiers
 - cryptography, mapping object identifiers
 ms.assetid: c9673f81-bf9e-47fd-bc6f-6bc1c1c4c15e
-ms.openlocfilehash: 000d5d94b19907dfed40ac03f3172b9b8449c6f2
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: e035ff04a70a441f7f64bbc230ba6d8036fb2ace
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083459"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130615"
 ---
 # <a name="mapping-object-identifiers-to-cryptography-algorithms"></a>Отображение идентификаторов объектов на криптографические алгоритмы
 Цифровые подписи убедитесь, что данные не подделаны отправки из одной программы в другую. Обычно цифровая подпись вычисляется путем применения математической функции к хэш данных должны быть подписаны. При форматировании хэш-значение подписываемых, некоторые алгоритмы цифровой подписи добавляют операция форматирования идентификатор объекта (OID) ASN.1. OID идентифицирует алгоритм, который использовался для вычисления хэша. Алгоритмы можно сопоставить с идентификаторами объектов расширения криптографического механизма для использования пользовательских алгоритмов. Приведенный ниже показано, как сопоставления идентификатора объекта новый хэш-алгоритма.  
@@ -41,5 +41,6 @@ ms.locfileid: "55083459"
  [ \<OidEntry > элемент](../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md) содержит два атрибута. **OID** атрибут — номер идентификатора объекта. **Имя** атрибута является значение **имя** из атрибута [ \<nameEntry > элемент](../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md). Прежде чем идентификатор объекта можно сопоставить с простым именем необходимо сопоставление имени алгоритма к классу.  
   
 ## <a name="see-also"></a>См. также
+
 - [Настройка криптографических классов](../../../docs/framework/configure-apps/configure-cryptography-classes.md)
-- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+- [службы шифрования](../../../docs/standard/security/cryptographic-services.md)

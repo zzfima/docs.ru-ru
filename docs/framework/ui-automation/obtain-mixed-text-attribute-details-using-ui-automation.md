@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d0e4c005-abd1-42bb-92a4-5faf87097311
-ms.openlocfilehash: 01131da94c7484cd2bd0141fdafc67c21cd55f39
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: f52ff1b669f821d102a65888189d9bbf2c000da8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675761"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158487"
 ---
 # <a name="obtain-mixed-text-attribute-details-using-ui-automation"></a>Получение сведений об атрибутах смешанного текста с помощью модели автоматизации пользовательского интерфейса
 > [!NOTE]
@@ -27,9 +27,10 @@ ms.locfileid: "57675761"
  Шаблон элемента управления <xref:System.Windows.Automation.TextPattern> в сочетании с классом <xref:System.Windows.Automation.Text.TextPatternRange> поддерживает базовые текстовые атрибуты, свойства и методы. Для функциональности элемента управления, не поддерживаемой <xref:System.Windows.Automation.TextPattern> или <xref:System.Windows.Automation.Text.TextPatternRange>, класс <xref:System.Windows.Automation.AutomationElement> предоставляет клиенту автоматизации пользовательского интерфейса методы для доступа к соответствующей собственной объектной модели.  
   
 ## <a name="see-also"></a>См. также
-- [Общие сведения об объекте TextPattern модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)
+
+- [Общие сведения о TextPattern модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)
 - [Добавление содержимого в текстовое поле с помощью модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)
 - [Поиск и выделение текста с помощью модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)
 - [Общие сведения о шаблонах элементов управления модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
 - [Шаблоны элементов управления модели автоматизации пользовательского интерфейса для клиентов](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [Получение атрибутов текста с помощью модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/obtain-text-attributes-using-ui-automation.md)
+- [Получение атрибутов текста с помощью UI Automation](../../../docs/framework/ui-automation/obtain-text-attributes-using-ui-automation.md)

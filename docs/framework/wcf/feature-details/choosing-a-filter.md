@@ -2,12 +2,12 @@
 title: Выбор фильтра
 ms.date: 03/30/2017
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
-ms.openlocfilehash: f634363a3f8b69b38fd4d313c42de4d742d94acc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 76875cd56f74bd555133253beda97b30ee3fa90a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514197"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174035"
 ---
 # <a name="choosing-a-filter"></a>Выбор фильтра
 При настройке службы маршрутизации важно выбрать правильные фильтры сообщений и настроить их таким образом, чтобы полученное сообщение всегда определялось одним из них. Если выбранные фильтры допускают избыточные совпадения или неверно настроены, то сообщения будут маршрутизироваться неправильно. Если фильтры слишком строги, то это может привести к тому, что для некоторых сообщений не окажется ни одного допустимого маршрута.  
@@ -136,5 +136,6 @@ XPathMessageFilter xpath1=new XPathMessageFilter("//ns:element");
  Дополнительные сведения о разработке запросов XPath, см. в разделе [синтаксис XPath](https://go.microsoft.com/fwlink/?LinkId=164592).  
   
 ## <a name="see-also"></a>См. также
+
 - [Фильтры сообщений](../../../../docs/framework/wcf/feature-details/message-filters.md)
-- [Практическое руководство. Использование фильтров](../../../../docs/framework/wcf/feature-details/how-to-use-filters.md)
+- [Как выполнить: Использование фильтров](../../../../docs/framework/wcf/feature-details/how-to-use-filters.md)

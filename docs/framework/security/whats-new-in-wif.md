@@ -3,12 +3,12 @@ title: Новые возможности Windows Identity Foundation 4.5
 ms.date: 03/30/2017
 ms.assetid: 3b381f04-593b-471f-bd33-0362be1aade5
 author: BrucePerlerMS
-ms.openlocfilehash: 9009f3bd6e782aefdeca0f071dc70d6247c3987b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 07e1aee85e22f6dd5257cdd49e8af99b423cb17f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360234"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195531"
 ---
 # <a name="whats-new-in-windows-identity-foundation-45"></a>Новые возможности Windows Identity Foundation 4.5
 Первая версия Windows Identity Foundation (WIF) поставлялась в виде отдельного загружаемого файла и называлась WIF 3.5, поскольку она вышла одновременно с .NET 3.5 с пактом обновления 1 (SP1). Начиная с версии .NET 4.5 WIF является частью .NET framework. Прямая доступность классов WIF на этой платформе обеспечивает гораздо более глубокую интеграцию удостоверения на базе утверждений с платформой .NET, благодаря которой использовать утверждения становится проще. Приложения, написанные для WIF 3.5, должны быть изменены для использования новой модели. Дополнительные сведения см. в разделе [Рекомендации по миграции приложения, созданного с использованием WIF 3.5, в WIF 4.5](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md).  
@@ -57,7 +57,8 @@ ms.locfileid: "57360234"
      При использовании **средства Identity and Access Tool для Visual Studio 2012** (см. выше раздел **Изменения Visual Studio**) это средство добавляет элемент `<serviceCredentials>` с атрибутом `useIdentityConfiguration` с автоматически заданным файлом конфигурации. Кроме того, оно добавляет соответствующий элемент [\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md), который содержит параметры конфигурации WIF, и добавляет привязку и другие параметры, необходимые для передачи проверки подлинности соответствующей службе STS.  
   
 ## <a name="see-also"></a>См. также
-- [Руководства по миграции приложения, созданного с использованием WIF 3.5, в WIF 4.5](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)
+
+- [Рекомендации по миграции приложения, созданного с использованием WIF 3.5, в WIF 4.5](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)
 - [Сопоставление пространств имен между WIF 3.5 и WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)
 - [Справочник по API WIF](../../../docs/framework/security/wif-api-reference.md)
 - [Справочник по конфигурации WIF](../../../docs/framework/security/wif-configuration-reference.md)

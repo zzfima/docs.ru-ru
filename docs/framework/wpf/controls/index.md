@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - controls [WPF], about WPF controls
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
-ms.openlocfilehash: f4aeb3dd60186a4060f7825257c7adb274fc8b24
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5abafe1edfdbac1966a98d5eef28265e6504c868
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363154"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154418"
 ---
 # <a name="controls"></a>Элементы управления
 <a name="introduction"></a>
@@ -95,16 +95,16 @@ ms.locfileid: "57363154"
   
 -   <xref:System.Windows.Controls.HeaderedItemsControl>— Некоторые примеры классов, которые наследуют от этого класса: <xref:System.Windows.Controls.MenuItem>, <xref:System.Windows.Controls.TreeViewItem>, и <xref:System.Windows.Controls.ToolBar>.  
 
-  
  Дополнительные сведения об этих базовых классах см. в разделе [модель содержимого WPF](wpf-content-model.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Стилизация и использование шаблонов](styling-and-templating.md)
 - [Категории элементов управления](controls-by-category.md)
 - [Библиотека элементов управления](control-library.md)
 - [Общие сведения о шаблонах данных](../data/data-templating-overview.md)
 - [Общие сведения о привязке данных](../data/data-binding-overview.md)
-- [Ввод](../advanced/input-wpf.md)
+- [Входные данные](../advanced/input-wpf.md)
 - [Включение команды](../advanced/how-to-enable-a-command.md)
-- [Пошаговые руководства: Создание пользовательской анимированной кнопки](walkthroughs-create-a-custom-animated-button.md)
+- [Пошаговые руководства. Создание пользовательской анимированной кнопки](walkthroughs-create-a-custom-animated-button.md)
 - [Настройка элементов управления](control-customization.md)

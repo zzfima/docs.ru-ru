@@ -2,12 +2,12 @@
 title: набор сущностей
 ms.date: 03/30/2017
 ms.assetid: 59ec6ab0-88e5-4d25-b112-7a4eccbe61f0
-ms.openlocfilehash: d75002d4a5ac55538f76e6bace0fc16095a9ef74
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 7fcaa2cb9bac02271940a712d4d044df25d7d4cf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412192"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126624"
 ---
 # <a name="entity-set"></a>набор сущностей
 *Набор сущностей* — это логический контейнер для экземпляров [тип сущности](../../../../docs/framework/data/adonet/entity-type.md) и экземпляров любого типа, производного от этого типа сущности. (Сведения о производных типов, см. в разделе [модели EDM: Наследование](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md).) Связь между типом сущности и набором сущностей аналогична связи между строкой и таблицей в реляционной базе данных: Как и строка тип сущности описывает структуру данных, и, как и таблица, набор сущностей содержит экземпляры данной структуры. Набор сущностей не является конструктом моделирования данных; он не описывает структуру данных. Вместо этого набор сущностей обеспечивает конструкт для среды размещения или хранения (например, для среды CLR или базы данных сервера SQL), позволяя группировать экземпляры типа сущности так, чтобы они были сопоставлены хранилищу данных.  
@@ -45,5 +45,6 @@ ms.locfileid: "58412192"
  [!code-xml[EDM_Example_Model#MESTExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books2.edmx#mestexample)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Основные понятия модели EDM](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [Сущностная модель данных](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [EDM (модель данных с использованием сущностей)](../../../../docs/framework/data/adonet/entity-data-model.md)

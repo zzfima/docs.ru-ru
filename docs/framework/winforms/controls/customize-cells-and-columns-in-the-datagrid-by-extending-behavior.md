@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Настройка ячеек и столбцов в элементе управления DataGridView Windows Forms, расширяя их поведение и внешний вид
+title: Практическое руководство. Дополнительные возможности управления внешним видом и поведением ячеек и столбцов элемента управления DataGridView в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - columns [Windows Forms], customizing in DataGridView control
 - cells [Windows Forms], customizing in DataGridView control
 ms.assetid: 9b7dc7b6-5ce6-4566-9949-902f74f17a81
-ms.openlocfilehash: 7ea684fd0a3f23005e70594bf1870851a3708a8c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: c68327bb0fb747cdf38d61e944401db9f3af22a8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721272"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130693"
 ---
-# <a name="how-to-customize-cells-and-columns-in-the-windows-forms-datagridview-control-by-extending-their-behavior-and-appearance"></a>Практическое руководство. Настройка ячеек и столбцов в элементе управления DataGridView Windows Forms, расширяя их поведение и внешний вид
-Внешний вид и поведение элемента управления <xref:System.Windows.Forms.DataGridView> можно настроить несколькими способами с помощью свойств, событий и классов-компаньонов. В ряде случаев к ячейкам могут предъявляться требования, когда этих функций будет недостаточно. Вы можете создать пользовательский класс <xref:System.Windows.Forms.DataGridViewCell> для расширения функциональных возможностей.  
+# <a name="how-to-customize-cells-and-columns-in-the-windows-forms-datagridview-control-by-extending-their-behavior-and-appearance"></a>Практическое руководство. Дополнительные возможности управления внешним видом и поведением ячеек и столбцов элемента управления DataGridView в Windows Forms
+Внешний вид и поведение элемента управления <xref:System.Windows.Forms.DataGridView> можно настроить несколькими способами с помощью свойств, событий и классов-компаньонов. В ряде случаев к ячейкам могут предъявляться требования, когда этих возможностей будет недостаточно. Вы можете создать пользовательский класс <xref:System.Windows.Forms.DataGridViewCell> для расширения функциональных возможностей.  
   
  Пользовательский класс <xref:System.Windows.Forms.DataGridViewCell> создается как производный от базового класса <xref:System.Windows.Forms.DataGridViewCell> или одного из его производных классов. Хотя любой тип ячейки можно отобразить в любом типе столбца, как правило, потребуется также создать пользовательский класс <xref:System.Windows.Forms.DataGridViewColumn>, специально предназначенный для отображения пользовательского типа ячейки. Классы столбцов являются производными от <xref:System.Windows.Forms.DataGridViewColumn> или от одного из его производных типов.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "57721272"
  Так как подобная настройка ячеек требует, чтобы строки не были общими, она не подходит для использования с большими наборами данных. Дополнительные сведения о совместном использовании строк см. в разделе [масштабирование элемента управления DataGridView в Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
   
 > [!NOTE]
->  При наследовании от класса <xref:System.Windows.Forms.DataGridViewCell> или <xref:System.Windows.Forms.DataGridViewColumn> и добавлении новых свойств к производному классу необходимо переопределить метод `Clone`, чтобы скопировать новые свойства во время операций копирования. Кроме того, необходимо вызвать метод `Clone` базового класса, чтобы свойства базового класса копировались в новую ячейку или столбец.  
+>  При наследовании от класса <xref:System.Windows.Forms.DataGridViewCell> или <xref:System.Windows.Forms.DataGridViewColumn> и добавлении новых свойств к производному классу необходимо переопределить метод `Clone`, чтобы скопировать новые свойства во время операций копирования. Кроме того, необходимо вызвать метод `Clone` базового класса, чтобы свойства базового класса скопировались в новую ячейку или столбец.  
   
 ### <a name="to-customize-cells-and-columns-in-the-datagridview-control"></a>Настройка ячеек и столбцов в элементе управления DataGridView  
   
@@ -71,6 +71,7 @@ ms.locfileid: "57721272"
  Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCell>
 - <xref:System.Windows.Forms.DataGridViewColumn>

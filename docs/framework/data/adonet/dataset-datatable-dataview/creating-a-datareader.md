@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49d4422a-7464-4ab8-8ec7-90185fde3ecf
-ms.openlocfilehash: d3c20fa4394b09e9ceec332d430ed638166bed8e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8932f393af58f2014f643c5b6ebd6dc7a127b7eb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491667"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122009"
 ---
 # <a name="creating-a-datareader"></a>Создание объекта DataReader
 Классы <xref:System.Data.DataTable> и <xref:System.Data.DataSet> имеют метод <xref:System.Data.DataTable.CreateDataReader%2A>, возвращающий содержимое объекта <xref:System.Data.DataTable> или содержимое объекта <xref:System.Data.DataSet> коллекции <xref:System.Data.DataSet.Tables%2A> в виде одного или нескольких доступных для чтения результирующих наборов с последовательным доступом.  
@@ -31,7 +31,8 @@ ms.locfileid: "54491667"
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Data.DataTable.CreateDataReader%2A>
 - <xref:System.Data.DataSet.CreateDataReader%2A>
 - [Объекты DataTableReader](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatablereaders.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c4b63d30c9662ce75df491e6e1329d2b955df2ba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c90df6a8b6f25a93835981b1593a4b3d123cd168
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645981"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116380"
 ---
 # <a name="imanagedobject-interface"></a>Интерфейс IManagedObject
 Предоставляет методы для управления управляемого объекта.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание:|  
+|Метод|Описание|  
 |------------|-----------------|  
 |[Метод GetObjectIdentity](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-getobjectidentity-method.md)|Получает идентификатор данного управляемого объекта.|  
 |[Метод GetSerializedBuffer](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-getserializedbuffer-method.md)|Возвращает строковое представление этого управляемого объекта.|  
@@ -43,4 +43,5 @@ ms.locfileid: "54645981"
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейсы размещения](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

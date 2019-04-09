@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6f9eb28ea1a60991d047494336035aaf239b9edd
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: b4f16db1d35f8a0de1c755566e27b07bf9067dfe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57478600"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129198"
 ---
 # <a name="ihostthreadpoolmanagergetavailablethreads-method"></a>Метод IHostThreadPoolManager::GetAvailableThreads
 Получает количество потоков в пуле потоков, который в настоящий момент не обрабатывает рабочие элементы.  
@@ -64,6 +64,7 @@ HRESULT GetAvailableThreads (
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Threading.ThreadPool.GetAvailableThreads%2A>
 - <xref:System.Threading.ThreadPool>
 - [Интерфейс IHostThreadPoolManager](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)

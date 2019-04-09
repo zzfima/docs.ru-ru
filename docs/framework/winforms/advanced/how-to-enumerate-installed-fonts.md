@@ -8,12 +8,12 @@ helpviewer_keywords:
 - fonts [Windows Forms], enumerating installed
 - examples [Windows Forms], fonts
 ms.assetid: 26d74ef5-0f39-4eeb-8d20-00e66e014abe
-ms.openlocfilehash: e56f06d6f7a762a1ef1ff85fa30751ea64f9f14b
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 92f27399cce9e03a4679c8a34fbdafcf28c32252
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58653747"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155016"
 ---
 # <a name="how-to-enumerate-installed-fonts"></a>Практическое руководство. Перебор установленных шрифтов
 <xref:System.Drawing.Text.InstalledFontCollection> Класс наследует от <xref:System.Drawing.Text.FontCollection> абстрактного базового класса. Можно использовать <xref:System.Drawing.Text.InstalledFontCollection> объект для перечисления шрифтов, установленных на компьютере. <xref:System.Drawing.Text.FontCollection.Families%2A> Свойство <xref:System.Drawing.Text.InstalledFontCollection> объект представляет собой массив <xref:System.Drawing.FontFamily> объектов.  
@@ -32,4 +32,5 @@ ms.locfileid: "58653747"
  Предыдущий пример предназначен для работы с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs> `e`, который является параметром <xref:System.Windows.Forms.PaintEventHandler>. Кроме того, следует импортировать <xref:System.Drawing.Text> пространства имен.  
   
 ## <a name="see-also"></a>См. также
-- [Работами со шрифтами и текстом](using-fonts-and-text.md)
+
+- [Шрифты и текст](using-fonts-and-text.md)

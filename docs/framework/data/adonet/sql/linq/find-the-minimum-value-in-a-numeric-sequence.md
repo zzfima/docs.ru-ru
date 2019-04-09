@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 78203093-f242-4572-9b31-9495b10926aa
-ms.openlocfilehash: f92558798267760eb6cfd1bfc6365451cdcc1c62
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 84002609c550cc2de76f9948bf77f9fd88261f64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530002"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136725"
 ---
 # <a name="find-the-minimum-value-in-a-numeric-sequence"></a>Нахождение минимального значения в числовой последовательности
 Для возвращения минимального значения из последовательности числовых значений используется оператор <xref:System.Linq.Enumerable.Min%2A>.  
@@ -72,5 +72,6 @@ ms.locfileid: "54530002"
  `Konbu`  
   
 ## <a name="see-also"></a>См. также
+
 - [Статистические запросы](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)
 - [Загрузка примеров баз данных](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)

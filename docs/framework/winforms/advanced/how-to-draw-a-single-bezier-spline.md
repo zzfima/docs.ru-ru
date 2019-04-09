@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Bezier splines [Windows Forms], drawing
 - drawing [Windows Forms], Bezier splines
 ms.assetid: f4f3fe30-f0a6-4743-ac91-11310cebea9f
-ms.openlocfilehash: 0731595dc25b1afb4b3dbcc7eedbfb92ef32d267
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: ebb53e7df979a553ed4a44deba34345c9ecac772
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58126283"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171682"
 ---
 # <a name="how-to-draw-a-single-b233zier-spline"></a>Практическое руководство. Рисование единый B&#233;сплайна Безье
 Сплайн Безье определяется четырех точек: начальной точки, две контрольные точки и конечной точки.  
@@ -29,9 +29,10 @@ ms.locfileid: "58126283"
  [!code-vb[System.Drawing.ConstructingDrawingCurves#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/VB/Class1.vb#31)]  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Предыдущий пример предназначен для работы с Windows Forms, и для него необходим объект <xref:System.Windows.Forms.PaintEventArgs> `e`, передаваемый в качестве параметра обработчику событий <xref:System.Windows.Forms.Control.Paint>.  
+ Предыдущий пример предназначен для работы с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs> `e`, который является параметром <xref:System.Windows.Forms.Control.Paint> обработчик событий.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Drawing.Graphics.DrawBezier%2A>
 - [Сплайны Безье в GDI+](bezier-splines-in-gdi.md)
 - [Практическое руководство. Рисование последовательности сплайнов Безье](how-to-draw-a-sequence-of-bezier-splines.md)

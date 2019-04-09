@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ThemeDictionary markup extension [WPF]
 - XAML [WPF], ThemeDictionary markup extension
 ms.assetid: aa75e10b-13dd-4989-972d-51bab63a05e2
-ms.openlocfilehash: 0bc4b2a11927bd2551dc322c5a856ade9a85c8b7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ad2248c791fadc5363d90ff496d5e040f6036ab3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364805"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132097"
 ---
 # <a name="themedictionary-markup-extension"></a>Расширение разметки ThemeDictionary
 Предоставляет для разработчиков пользовательских элементов управления или приложений, которые объединяют элементы управления сторонних производителей, способ загрузки определенных темой словарей ресурсов для использования в стилизации элемента управления.  
@@ -49,9 +49,9 @@ ms.locfileid: "57364805"
   
  Синтаксис атрибутов является наиболее распространенным синтаксисом, используемым с этим расширением разметки. Строковая лексема, указываемая после строки идентификатора `ThemeDictionary`, присваивается в качестве значения <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> соответствующего класса расширения <xref:System.Windows.ThemeDictionaryExtension>.  
   
- `ThemeDictionary` также можно использовать в синтаксисе элемента объекта. В этом случае укажите значение параметра <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> свойство является обязательным.  
+ `ThemeDictionary` может также использоваться в синтаксисе элемента объекта. В этом случае укажите значение параметра <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> свойство является обязательным.  
   
- Излишним может оказаться и использование `ThemeDictionary` в атрибуте, в котором свойство <xref:System.Windows.Markup.StaticExtension.Member%2A> определено как пара "свойство=значение".  
+ `ThemeDictionary` Можно также использовать в использовании атрибут verbose, который указывает <xref:System.Windows.Markup.StaticExtension.Member%2A> как свойство = значение пары:  
   
 ```xml  
 <object property="{ThemeDictionary AssemblyName=assemblyUri}" .../>  
@@ -64,7 +64,8 @@ ms.locfileid: "57364805"
  `ThemeDictionary` является расширением разметки. Расширения разметки обычно реализуются, если требуется заменить значения атрибутов на нелитеральные значения или имена обработчиков и если требуется больше, чем простая настройка преобразователей типов на работу с определенными типами или свойствами. Все расширения разметки в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] используют символы "{" и "}" в синтаксисе их атрибутов, который является соглашением, по которому обработчик [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] распознает, что расширение разметки должно обработать атрибут. Дополнительные сведения см. в разделе [Расширения разметки и XAML WPF](markup-extensions-and-wpf-xaml.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Стилизация и использование шаблонов](../controls/styling-and-templating.md)
-- [Общие сведения о языке XAML (WPF)](xaml-overview-wpf.md)
+- [Обзор XAML (WPF)](xaml-overview-wpf.md)
 - [Расширения разметки и XAML WPF](markup-extensions-and-wpf-xaml.md)
-- [Файлы ресурсов, содержимого и данных WPF-приложения](../app-development/wpf-application-resource-content-and-data-files.md)
+- [Ресурсы, Содержимое и Файлы данных WPF-приложения](../app-development/wpf-application-resource-content-and-data-files.md)

@@ -8,18 +8,16 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: 4b02a5ef1fb28e83ecdfc257dd81d9a890b77121
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 616c74ccd787d9acdcb2a3bbe281c2f43bb49c2e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375354"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135542"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Настройки реестра графической отрисовки
 В этом разделе содержится обзор параметров графической отрисовки [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] в реестре, которые влияют на приложения [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
-  
 
-  
 <a name="overview"></a>   
 ## <a name="when-to-use-graphics-rendering-registry-settings"></a>Когда следует использовать настройки реестра для графической отрисовки  
  Эти параметры реестра предоставляются для устранения неполадок, отладки и поддержки продукта. Поскольку изменения в реестре влияют на все приложения [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], ваше приложение никогда не должно изменять эти разделы реестра автоматически или во время установки.  
@@ -30,9 +28,9 @@ ms.locfileid: "57375354"
   
 <a name="registry_settings"></a>   
 ## <a name="registry-settings"></a>Параметры реестра  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] включает четыре параметра реестра для управления функциями отрисовки [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет четыре параметра реестра для управления [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] отрисовки:  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |-------------|-----------------|  
 |**Отключить аппаратное ускорение**|Указывает, следует ли включить аппаратное ускорение.|  
 |**Максимальное значение мультисэмплинга**|Определяет степень мультисэмплинга для сглаживания содержимого [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)].|  
@@ -98,5 +96,6 @@ ms.locfileid: "57375354"
  Параметр **использовать средство программной прорисовки** принимает значение типа DWORD. Значение 0 указывает, что средство программной прорисовки не используется. Любое другое ненулевое значение приводит к тому, что [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] будет использовать средство программной прорисовки.  
   
 ## <a name="see-also"></a>См. также
+
 - [Уровни графической отрисовки](../advanced/graphics-rendering-tiers.md)
 - [Общие сведения об отрисовке графики в WPF](wpf-graphics-rendering-overview.md)

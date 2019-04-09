@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 777d0fa9217b647b9ee9bd952addaa83b5f825fc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 6bc2d5c45ef6f8626e51f9f760ec299db19627d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374119"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171578"
 ---
 # <a name="how-to-localize-an-application"></a>Практическое руководство. Локализация приложения
 В этом учебнике рассматривается создание локализованного приложения с помощью средства LocBaml.  
@@ -118,7 +118,7 @@ ms.locfileid: "57374119"
   
 2.  Чтобы выполнить анализ файла вспомогательной сборки и сохранить результат в виде CSV-файла, используйте следующую команду:  
   
-     **LocBaml.exe /parse HelloApp.resources.dll /out:Hello.csv**  
+     **/Parse LocBaml.exe HelloApp.resources.dll /out:Hello.csv**  
   
     > [!NOTE]
     >  Если входной файл HelloApp.resources.dll не находится в том же каталоге, что и LocBaml.exe, переместите один из файлов таким образом, чтобы оба файла были в одном каталоге.  
@@ -151,9 +151,9 @@ ms.locfileid: "57374119"
   
    |Имя BAML|Ключ ресурса|Категория|Удобочитаемость|Изменяемость|Комментарии|Значение|  
    |---------------|------------------|--------------|-----------------|-------------------|--------------|-----------|
-   |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|Пропустить|FALSE|FALSE||#Text1;#Text2|
-   |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|Нет|TRUE|TRUE||Hello World|
-   |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|Нет|TRUE|TRUE||Goodbye World|
+   |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|Пропустить|false|false||#Text1;#Text2|
+   |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|Нет|true|true||Hello World|
+   |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|Нет|true|true||Goodbye World|
   
    Обратите внимание, что все значения для **комментарии** поля не содержат значений; Если поле не имеет значения, оно пустое. Также Обратите внимание, что элемент в первой строке ни читаемым, ни изменяемым и имеет «Ignore» как его **категории** значение, все это указывает, что значение не локализуемое.  
   
@@ -180,7 +180,7 @@ ms.locfileid: "57374119"
   
 4.  Для перевода на другой язык используйте язык, на который вы переводите. В следующем примере показано, как переводить на канадский французский.  
   
-     **LocBaml.exe /generate HelloApp.resources.dll /trans:Hellofr-CA.csv /out:c:\ /cul:fr-CA**  
+     **LocBaml.exe / создать HelloApp.resources.dll /trans:Hellofr-CA.csv /out:c: \ /cul:fr-ЦС**  
   
 5.  В той же основной сборке приложения создайте новую папку для выбранного языка и региональных параметров, в которой будет размещена новая вспомогательная сборка. Для канадского французского папку можно назвать fr-CA.  
   
@@ -210,5 +210,6 @@ ms.locfileid: "57374119"
  Теперь у вас есть базовое представление о том, как использовать средство LocBaml.  Вы можете создать файл, содержащий ИД пользователей. С помощью средства LocBaml вы можете анализировать файл для извлечения локализуемого содержимого и после перевода этого содержимого можете создать файл .resources.dll, объединяющий переведенное содержимое. В этом разделе не рассматриваются все возможные детали, но теперь у вас есть знания, необходимые для использования LocBaml для локализации приложений.  
   
 ## <a name="see-also"></a>См. также
+
 - [Глобализация для WPF](globalization-for-wpf.md)
 - [Обзор использования автоматической разметки](use-automatic-layout-overview.md)

@@ -2,12 +2,12 @@
 title: <add> из <filters>
 ms.date: 03/30/2017
 ms.assetid: e3bf437c-dd99-49f3-9792-9a8721e6eaad
-ms.openlocfilehash: 1340b70cf4656b764370a14955a2f4d6f6209fe4
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 399fc4e22a9253469a5494af61dac862e33814a3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466027"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128704"
 ---
 # <a name="add-of-filters"></a>\<Добавить > из \<фильтры >
 Фильтр XPath, задающий тип сообщений для записи в журнал.  
@@ -42,7 +42,7 @@ ms.locfileid: "58466027"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<Фильтры>](../../../../../docs/framework/configure-apps/file-schema/wcf/filters.md)|Содержит коллекцию фильтров XPath, используемых для контроля типов регистрируемых сообщений.|  
+|[\<Фильтры >](../../../../../docs/framework/configure-apps/file-schema/wcf/filters.md)|Содержит коллекцию фильтров XPath, используемых для контроля типов регистрируемых сообщений.|  
   
 ## <a name="remarks"></a>Примечания  
  Фильтры применяются только на транспортном уровне, когда параметр `logMessagesAtTransportLevel` имеет значение `true`. Фильтры не влияют на ведение журнала сообщений уровня службы и неправильно сформированных сообщений.  
@@ -71,6 +71,7 @@ ms.locfileid: "58466027"
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.Configuration.DiagnosticSection>
 - <xref:System.ServiceModel.Diagnostics>
 - <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>

@@ -9,18 +9,16 @@ helpviewer_keywords:
 - ', '
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
-ms.openlocfilehash: 9f61de9bf528690e6057ec445ea7f1b77b3be0b9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 14402bde39ec90d8ef17ed5ee07f9eefb8151939
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828476"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139611"
 ---
 # <a name="flow-document-overview"></a>Общие сведения о документах нефиксированного формата
 Документы нефиксированного формата предназначены для более удобного просмотра и чтения. Вместо того чтобы использовать какой-либо определенный макет, документы нефиксированного формата динамически корректируют и перемещают содержимое с учетом переменных времени выполнения, таких как размер окна, разрешение устройства и дополнительные пользовательские настройки. Кроме того, в документах нефиксированного формата доступны расширенные возможности, такие как разбивка на страницы и столбцы. В этом разделе представлены общие сведения о документах нефиксированного формата и способах их создания.  
-  
 
-  
 <a name="what_is_a_flow_document"></a>   
 ## <a name="what-is-a-flow-document"></a>Что такое документ нефиксированного формата  
  Документ нефиксированного формата предназначен для "переформатирования содержимого" в зависимости от размера окна, разрешения устройства и других переменных среды. Кроме того, документы нефиксированного формата имеют несколько встроенных возможностей, включая поиск, режимы просмотра, оптимизирующие читаемость, и возможность менять размер и внешний вид шрифта. Документы нефиксированного формата следует использовать, если удобство чтения является основным приоритетом. Напротив, документы фиксированного формата предназначены для статического представления. Документы фиксированного формата полезны в тех случаях, когда важна точная передача содержимого источника. См. в разделе [документы в WPF](documents-in-wpf.md) Дополнительные сведения о разных типах документов.  
@@ -98,7 +96,7 @@ ms.locfileid: "58828476"
  Ниже кратко описан каждый класс этих категорий.  
   
 ### <a name="block-derived-classes"></a>Классы, производные от блока  
- **Paragraph**  
+ **Абзац**  
   
  <xref:System.Windows.Documents.Paragraph> обычно используется для группировки содержимого в абзац. Самый простой и распространенный способ использования класса Paragraph — составление текстового абзаца.  
   
@@ -132,7 +130,7 @@ ms.locfileid: "58828476"
   
  ![Снимок экрана: UIElement вставленный в поток содержимого.](./media/flow-document-overview/embedded-blockuicontainer.png)  
   
- **List**  
+ **Список**  
   
  <xref:System.Windows.Documents.List> используется для создания маркированного или нумерованного списка. Задайте <xref:System.Windows.Documents.List.MarkerStyle%2A> свойства <xref:System.Windows.TextMarkerStyle> значение перечисления, чтобы определить стиль списка. В приведенном ниже примере показано, как создать простой список.  
   
@@ -156,7 +154,7 @@ ms.locfileid: "58828476"
   
  **Примечание.**  Начиная с версии [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)], <xref:System.Windows.Documents.Run.Text%2A> свойство <xref:System.Windows.Documents.Run> объект является свойством зависимостей. Можно привязать <xref:System.Windows.Documents.Run.Text%2A> свойства к данным источника, такое как <xref:System.Windows.Controls.TextBlock>. <xref:System.Windows.Documents.Run.Text%2A> Свойство полностью поддерживает одностороннюю привязку. <xref:System.Windows.Documents.Run.Text%2A> Свойство также поддерживает двухстороннюю привязку, за исключением <xref:System.Windows.Controls.RichTextBox>. Пример см. в разделе <xref:System.Windows.Documents.Run.Text%2A?displayProperty=nameWithType>.  
   
- **Span**  
+ **диапазон**  
   
  <xref:System.Windows.Documents.Span> Группирует другие встроенные элементы содержимого. Никакая обязательная отрисовка не применяется к содержимому в рамках <xref:System.Windows.Documents.Span> элемент. Тем не менее, элементы, наследующие от <xref:System.Windows.Documents.Span> включая <xref:System.Windows.Documents.Hyperlink>, <xref:System.Windows.Documents.Bold>, <xref:System.Windows.Documents.Italic> и <xref:System.Windows.Documents.Underline> применить форматирование к тексту.  
   
@@ -196,7 +194,7 @@ ms.locfileid: "58828476"
   
  <xref:System.Windows.Documents.Figure> и <xref:System.Windows.Documents.Floater> отличаются несколькими способами и используются для разных сценариев.  
   
- **Figure:**  
+ **Рисунок.**  
   
 -   Можно разместить: Можно задать его горизонтальных и вертикальных якорей можно закрепить элемент относительно страницы, содержимого, столбца или абзаца. Можно также использовать его <xref:System.Windows.Documents.Figure.HorizontalOffset%2A> и <xref:System.Windows.Documents.Figure.VerticalOffset%2A> свойства, чтобы задать произвольные смещения.  
   
@@ -204,7 +202,7 @@ ms.locfileid: "58828476"
   
 -   Не разбивать на страницы: Если содержимое внутри <xref:System.Windows.Documents.Figure> не помещается <xref:System.Windows.Documents.Figure>, он будет обрабатывать в соответствии с любым содержимым, и остальное содержимое теряется  
   
- **Floater:**  
+ **Плавающий объект:**  
   
 -   Невозможно указать местоположение, отрисовывается в любом доступном пространстве. Невозможно задать смещение или прикрепить <xref:System.Windows.Documents.Floater>.  
   
@@ -349,9 +347,10 @@ ms.locfileid: "58828476"
  См. в разделе [оформление в WPF](typography-in-wpf.md) Дополнительные сведения об оформлении.  
   
 ## <a name="see-also"></a>См. также
-- [Text](optimizing-performance-text.md)
+
+- [Текста](optimizing-performance-text.md)
 - [Оформление в WPF](typography-in-wpf.md)
-- [Разделы практического руководства](flow-content-elements-how-to-topics.md)
+- [Практические руководства](flow-content-elements-how-to-topics.md)
 - [Общие сведения о модели содержимого TextElement](textelement-content-model-overview.md)
 - [Общие сведения о RichTextBox](../controls/richtextbox-overview.md)
 - [Документы в WPF](documents-in-wpf.md)

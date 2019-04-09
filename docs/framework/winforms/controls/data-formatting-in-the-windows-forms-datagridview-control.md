@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data [Windows Forms], formatting in grids
 - data grids [Windows Forms], formatting data
 ms.assetid: 07bf558d-3748-42ba-8ba0-37fdef924081
-ms.openlocfilehash: 60fc567a700bdfc8cfe088f4d31a68fd5de9aa29
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b5c055bdd12a4bede6e77233726c697de424a055
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722052"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158650"
 ---
 # <a name="data-formatting-in-the-windows-forms-datagridview-control"></a>Форматирование данных в элементе управления DataGridView в Windows Forms
 <xref:System.Windows.Forms.DataGridView> Управления обеспечивает автоматическое преобразование между значениями ячеек и типы данных, которые отображаются в родительских столбцах. Столбцах текстовых полей, например, отображения строковых представлений значений перечисления, число, даты и времени и введенный пользователем строковые значения преобразуются в типы, необходимые для хранилища данных.  
@@ -32,9 +32,10 @@ ms.locfileid: "57722052"
  Если анализ указанные пользователем значения по умолчанию не удовлетворяет вашим потребностям, можно обрабатывать <xref:System.Windows.Forms.DataGridView.CellParsing> событие <xref:System.Windows.Forms.DataGridView> элемента управления для предоставления пользовательского анализа.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>
 - [Отображение данных с помощью элемента управления DataGridView в Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
 - [Стили ячеек элемента управления DataGridView в Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)
-- [Практическое руководство. Форматирование данных в Windows Forms элемента управления DataGridView](how-to-format-data-in-the-windows-forms-datagridview-control.md)
-- [Практическое руководство. Настройка форматирования данных в элементе управления DataGridView Windows Forms](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)
+- [Практическое руководство. Форматирование данных элемента управления DataGridView в Windows Forms](how-to-format-data-in-the-windows-forms-datagridview-control.md)
+- [Практическое руководство. Настройка форматирования данных элемента управления DataGridView в Windows Forms](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)

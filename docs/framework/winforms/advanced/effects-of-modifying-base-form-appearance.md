@@ -8,12 +8,12 @@ helpviewer_keywords:
 - base forms
 - inheritance [Windows Forms], forms
 ms.assetid: 1c3f2b29-a05c-4c6f-aa1a-4e66b94f343a
-ms.openlocfilehash: a253fef2bc7220d13c0ca373a38a5bf2f5842415
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 6c87b3d29a1c55b2a7517da78a1951d94676dd68
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715559"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164493"
 ---
 # <a name="effects-of-modifying-a-base-forms-appearance"></a>Влияние изменения внешнего вида базовой формы
 В процессе разработки приложения часто может потребоваться изменить внешний вид базовой формы, от которой наследуются другие формы проекта (или других проектов).  
@@ -26,6 +26,7 @@ ms.locfileid: "57715559"
  Изменения, внесенные в базовую форму во время выполнения, не влияют на наследуемые формы, экземпляры которых уже созданы.  
   
 ## <a name="see-also"></a>См. также
-- [base](~/docs/csharp/language-reference/keywords/base.md)
+
+- [базовые](~/docs/csharp/language-reference/keywords/base.md)
 - [Практическое руководство. Наследование форм Windows Forms](how-to-inherit-windows-forms.md)
 - [Визуальное наследование в Windows Forms](windows-forms-visual-inheritance.md)

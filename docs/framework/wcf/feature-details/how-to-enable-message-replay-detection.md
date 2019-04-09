@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Включение обнаружения повтора сообщений
+title: Практическое руководство. Включение обнаружения повтора сообщений
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - WCF, custom bindings
 - WCF, security
 ms.assetid: 8b847e91-69a3-49e1-9e5f-0c455e50d804
-ms.openlocfilehash: 8a5f693b98d1437ccf0c8a373fcb11aa96ee6191
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 3fe43e3f815e0f918e22a1ec0fd485079afadde8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653584"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156030"
 ---
-# <a name="how-to-enable-message-replay-detection"></a>Как выполнить Включение обнаружения повтора сообщений
+# <a name="how-to-enable-message-replay-detection"></a>Практическое руководство. Включение обнаружения повтора сообщений
 Атака воспроизведения заключается в том, что злоумышленник копирует поток сообщений между двумя сторонами и воспроизводит его для одной или нескольких сторон. Если не приняты ответные меры, атакованные компьютеры обрабатывают этот поток как надлежащие сообщения, что приводит к ряду негативных последствий, таких как повторные заказы одного элемента.  
   
  Дополнительные сведения об обнаружении воспроизведения сообщений см. в разделе [обнаружение воспроизведения сообщений](https://go.microsoft.com/fwlink/?LinkId=88536).  
@@ -90,7 +90,7 @@ ms.locfileid: "54653584"
   
 -   <xref:System.ServiceModel.BasicHttpBinding>.  
   
--   Привязка <xref:System.ServiceModel.WSHttpBinding>, в которой свойство <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> имеет значение `false`.  
+-   <xref:System.ServiceModel.WSHttpBinding> с помощью <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> свойство значение `false`.  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
   
@@ -103,6 +103,7 @@ ms.locfileid: "54653584"
 -   <xref:System.ServiceModel.Channels>  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>
 - <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
 - [Безопасные диалоги и безопасные сеансы](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md)

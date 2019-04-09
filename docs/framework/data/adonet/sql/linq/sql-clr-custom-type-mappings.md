@@ -2,12 +2,12 @@
 title: Настраиваемые сопоставления типов SQL-CLR
 ms.date: 03/30/2017
 ms.assetid: d916c7fb-4b56-4214-acbe-5e23365047b2
-ms.openlocfilehash: 36763be3cd4845fbbd027b448098d0dafb9e448a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bc92d54cad6a977268ef3f000c684d5f195a933d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622520"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140417"
 ---
 # <a name="sql-clr-custom-type-mappings"></a>Настраиваемые сопоставления типов SQL-CLR
 Сопоставление типов SQL Server и среды CLR автоматически указывается при использовании средства командной строки SQLMetal и реляционного конструктора объектов.  
@@ -32,5 +32,6 @@ ms.locfileid: "54622520"
  При изменении базы данных потребуется обновлять DBML-файл, чтобы он отражал эти изменения. Один из способов реализации этого состоит в автоматическом создании нового DBML-файла и последующем повторном выполнении настройки сопоставления типов. Альтернативный способ заключается в сравнении различий между новым файлом DBML и настроенным файлом DBML и последующем обновлении вручную настроенного DBML-файла, чтобы он отражал изменения базы данных.  
   
 ## <a name="see-also"></a>См. также
+
 - [Сопоставление типов SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
 - [Создание кода в LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)

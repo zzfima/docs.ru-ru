@@ -1,18 +1,18 @@
 ---
-title: Как выполнить получать информацию в режиме только для чтения
+title: Практическое руководство. Как получать информацию в режиме только для чтения
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fb09e298-0b53-47e5-97fb-ab318bcd4fad
-ms.openlocfilehash: 8b83a77adb02cc2bcc01b274867143887114bb1f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 131562e9ee0fbfde8c94f580bcb6d452918f42ee
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669553"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148984"
 ---
-# <a name="how-to-retrieve-information-as-read-only"></a>Как выполнить получать информацию в режиме только для чтения
+# <a name="how-to-retrieve-information-as-read-only"></a>Практическое руководство. Как получать информацию в режиме только для чтения
 Если не планируется изменять данные, можно повысить производительность запросов за счет поиска результатов, предназначенных только для чтения.  
   
  Чтобы реализовать обработку запросов только для чтения, установите для свойства <xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A> значение `false`.  
@@ -27,6 +27,7 @@ ms.locfileid: "54669553"
  [!code-vb[DLinqQuerying#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQuerying/vb/Module1.vb#2)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Основные принципы запросов](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
 - [Запрос к базе данных](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)
 - [Отложенная и немедленная загрузка](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md)

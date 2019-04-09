@@ -1,18 +1,18 @@
 ---
-title: Как выполнить  Вызов функций базы данных
+title: Практическое руководство. Вызов функций базы данных
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 79038efa-15bf-464a-83e2-35fe145252ce
-ms.openlocfilehash: 5b3af3b74f79d436f39ca0515661b69d66d2d191
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 5990e9f4c08eafeae6bed18d3d8af0617b84ff54
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825580"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147931"
 ---
-# <a name="how-to-call-database-functions"></a>Как выполнить  Вызов функций базы данных
+# <a name="how-to-call-database-functions"></a>Практическое руководство. Вызов функций базы данных
 Класс <xref:System.Data.Objects.SqlClient.SqlFunctions> содержит методы среды CLR, предоставляющие доступ к функциям SQL Server для использования в запросах LINQ to Entities. При использовании методов <xref:System.Data.Objects.SqlClient.SqlFunctions> в запросах LINQ to Entities в базе данных выполняются соответствующие функции базы данных.  
   
 > [!NOTE]
@@ -34,5 +34,6 @@ ms.locfileid: "55825580"
  [!code-vb[DP L2E CanonicalAndStoreFunctions#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e canonicalandstorefunctions/vb/module1.vb#4)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Вызов функций в запросах LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)
 - [Запросы в LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

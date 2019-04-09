@@ -1,5 +1,5 @@
 ---
-title: Как выполнить  Создание поставщика маркеров безопасности
+title: Практическое руководство. Создание поставщика пользовательских маркеров безопасности
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], providing credentials
 ms.assetid: db8cb478-aa43-478b-bf97-c6489ad7c7fd
-ms.openlocfilehash: 1a81f6eac5648406f50d9600b030828551b21c56
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
-ms.translationtype: MT
+ms.openlocfilehash: dd9b53b50f76ec80232a5fb8624e2b1701f9760d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261353"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140170"
 ---
-# <a name="how-to-create-a-custom-security-token-provider"></a>Как выполнить  Создание поставщика маркеров безопасности
+# <a name="how-to-create-a-custom-security-token-provider"></a>Практическое руководство. Создание поставщика пользовательских маркеров безопасности
 В этом разделе показано, как создавать новые типы маркеров с помощью поставщика пользовательских маркеров безопасности и как интегрировать поставщик с диспетчером пользовательских маркеров безопасности.  
   
 > [!NOTE]
@@ -53,9 +53,10 @@ ms.locfileid: "56261353"
  [!code-vb[c_CustomTokenProvider#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenprovider/vb/source.vb#0)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.IdentityModel.Selectors.SecurityTokenProvider>
 - <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>
 - <xref:System.IdentityModel.Selectors.SecurityTokenManager>
 - <xref:System.IdentityModel.Tokens.X509SecurityToken>
-- [Пошаговое руководство: Создание пользовательских клиента и учетные данные службы](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
-- [Практическое руководство. Создать структуру проверки подлинности маркеров безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
+- [Пошаговое руководство. Создание пользовательских учетных данных для клиента и службы](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
+- [Практическое руководство. Создание пользовательской структуры проверки подлинности маркера безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)

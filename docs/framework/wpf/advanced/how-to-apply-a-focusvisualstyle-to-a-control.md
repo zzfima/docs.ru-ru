@@ -5,12 +5,12 @@ helpviewer_keywords:
 - properties [WPF], FocusVisualStyle
 - FocusVisualStyle property [WPF]
 ms.assetid: 363de99e-8ecc-438c-ac4a-f9147432ebd6
-ms.openlocfilehash: c4b379d3c57b6d0ae29952c23a35d7cc2cdf7f96
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 53d4984946143c15c4a2b71095529fb5ee7de4b1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366605"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133553"
 ---
 # <a name="how-to-apply-a-focusvisualstyle-to-a-control"></a>Практическое руководство. Применение стиля визуального отображения фокуса к элементу управления
 В этом примере показано, как создать визуальный стиль фокуса в ресурсах и применить стиль к элементу управления с помощью <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> свойство.  
@@ -27,6 +27,7 @@ ms.locfileid: "57366605"
  Фокус, визуальные стили должен последовательно использоваться между тем и пользовательский Интерфейс, вместо того чтобы использовать его для каждого элемента, способному получать фокус. Дополнительные сведения см. в разделе [Стилизация фокуса в элементах управления и FocusVisualStyle](styling-for-focus-in-controls-and-focusvisualstyle.md).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>
 - [Стилизация и использование шаблонов](../controls/styling-and-templating.md)
 - [Стилизация фокуса в элементах управления и FocusVisualStyle](styling-for-focus-in-controls-and-focusvisualstyle.md)

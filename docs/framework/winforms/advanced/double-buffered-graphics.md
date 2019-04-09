@@ -7,12 +7,12 @@ helpviewer_keywords:
 - flicker [Windows Forms], reducing with double buffering
 - examples [Windows Forms], double-buffered graphics
 ms.assetid: 4f6fef99-0972-436e-9d73-0167e4033f71
-ms.openlocfilehash: 71463d7db6ae18a3dd21d6a467f3963d836fc086
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 20ec03e6b84110f7ea00c134dc18b23f233c5f58
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707707"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59103445"
 ---
 # <a name="double-buffered-graphics"></a>Двойная буферизация графики
 Мерцание является распространенной проблемой при программировании графики. Графические операции, требующие нескольких сложных операций рисования, могут вызвать мерцание отображаемых изображений или иным образом нарушить их восприятие. Чтобы устранить эти проблемы, .NET Framework предоставляет доступ к двойной буферизации.  
@@ -33,10 +33,11 @@ ms.locfileid: "57707707"
  Дополнительные сведения об использовании <xref:System.Drawing.BufferedGraphics> , представлена в разделе [отрисовке буферизированной графики вручную](how-to-manually-render-buffered-graphics.md). Дополнительные сведения об отрисовке графики см. в разделе [Объекты Graphics и Drawing в Windows Forms](graphics-and-drawing-in-windows-forms.md).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Drawing.BufferedGraphics>
 - <xref:System.Drawing.BufferedGraphicsContext>
 - <xref:System.Drawing.BufferedGraphicsManager>
-- [Практическое руководство. Визуализация буферизированной графики вручную](how-to-manually-render-buffered-graphics.md)
-- [Практическое руководство. Уменьшить мерцания изображения посредством двойной буферизации для форм и элементов управления](how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)
-- [Практическое руководство. Управление буферизацией графики](how-to-manually-manage-buffered-graphics.md)
+- [Практическое руководство. Отрисовка буферизированной графики вручную](how-to-manually-render-buffered-graphics.md)
+- [Практическое руководство. Уменьшение эффекта дрожания изображения посредством двойной буферизации для форм и элементов управления](how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)
+- [Практическое руководство. Управление буферизацией графики вручную](how-to-manually-manage-buffered-graphics.md)
 - [Объекты Graphics и Drawing в Windows Forms](graphics-and-drawing-in-windows-forms.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eb893f06a5e905b981a408887f1c6bf5718ea79a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: ab1282109d7241c2599f8ca029fc79e4a3135209
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57498566"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170997"
 ---
 # <a name="isymunmanagedconstantgetsignature-method"></a>Метод ISymUnmanagedConstant::GetSignature
 Получает сигнатуру константы.  
@@ -54,6 +54,7 @@ HRESULT GetSignature(
  **Заголовок.** CorSym.idl CorSym.h  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс ISymUnmanagedConstant](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-interface.md)
 - [Метод GetName](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getname-method.md)
 - [Метод GetValue](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getvalue-method.md)

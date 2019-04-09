@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e60f542f-6271-495b-a9e4-48553481c2a3
-ms.openlocfilehash: 1b13d1e3e210964331a710512876bd1f8503069e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: beb5d2db898df1c98662d53190ac1432acc746e7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648080"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141457"
 ---
 # <a name="performing-catalog-operations"></a>Выполнение операций каталога
 Чтобы выполнить команду изменения базы данных или каталога, такие как инструкция CREATE TABLE или CREATE PROCEDURE, создайте **команда** с помощью соответствующих инструкций SQL и **подключения** объекта. Выполните команду с **ExecuteNonQuery** метод **команда** объекта.  
@@ -46,6 +46,7 @@ command.ExecuteNonQuery();
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Использование команд для изменения данных](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)
 - [Команды и параметры](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

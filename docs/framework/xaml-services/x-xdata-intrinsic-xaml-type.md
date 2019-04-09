@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XData in XAML [XAML Services]
 - x:XData XAML directive element [XAML Services]
 ms.assetid: 7ce209c2-621b-4977-b643-565f7e663534
-ms.openlocfilehash: 68468c3c10fd884cf5fb92160e3cde41dbf7d529
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: c8044bc341ded6ef7b03bbdf701e724654460d54
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58030264"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125163"
 ---
 # <a name="xxdata-intrinsic-xaml-type"></a>Встроенный тип XAML x:XData
 Обеспечивает размещение острова данных XML в пределах рабочей XAML. XML-элементы в `x:XData` не следует обрабатывать процессорами XAML, как если бы они были частью пространства имен XAML по умолчанию действующего или любое другое пространство имен XAML. `x:XData` может содержать произвольное XML правильного формата.  
@@ -50,6 +50,7 @@ ms.locfileid: "58030264"
  С технической точки зрения `x:XData` можно использовать в качестве содержимого любого свойства типа <xref:System.Xml.Serialization.IXmlSerializable>. Тем не менее <xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=nameWithType> представляет собой реализацию только заметной.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Data.XmlDataProvider>
 - [Общие сведения о привязке данных](../wpf/data/data-binding-overview.md)
 - [Привязка расширения разметки](../wpf/advanced/binding-markup-extension.md)

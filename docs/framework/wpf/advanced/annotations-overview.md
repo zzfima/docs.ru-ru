@@ -9,19 +9,18 @@ helpviewer_keywords:
 - documents [WPF], annotations
 - sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
-ms.openlocfilehash: a0c6260eee10487034655b5e4abbfa1f1a7bce71
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: faf2e9bbe23acfd46ee98e1f0fca01b7563ede73
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355185"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122451"
 ---
 # <a name="annotations-overview"></a>Общие сведения о заметках
 Добавление заметок или примечаний на печатные документы — это настолько обыденное действие, что мы воспринимаем его как должное. Такие примечания или комментарии являются "заметками", которые мы добавляем в документ для пометки информации или выделения интересующих элементов, к которым будем обращаться в дальнейшем. Хотя написание заметок на печатных документах является простым и обыденным, возможность добавлять личные примечания в электронные документы, как правило, очень ограниченна, если вообще доступна.  
   
  В этом разделе рассматриваются распространенные типы заметок, в частности записки и выделения и показано, как [!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)] облегчает использование этих типов заметок в приложениях с помощью документов Windows Presentation Foundation (WPF) элементы управления для просмотра.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] включить элементы управления для просмотра документа, поддерживающие заметки <xref:System.Windows.Controls.FlowDocumentReader> и <xref:System.Windows.Controls.FlowDocumentScrollViewer>, а также, как элементы управления, производного от <xref:System.Windows.Controls.Primitives.DocumentViewerBase> например <xref:System.Windows.Controls.DocumentViewer> и <xref:System.Windows.Controls.FlowDocumentPageViewer>.  
-  
-  
+
 <a name="caf1_type_stickynotes"></a>   
 ## <a name="sticky-notes"></a>Записки  
  Обычная записка содержит информацию, написанную на маленьком листке цветной бумаги, который затем "приклеивается" к документу. Цифровые записки предоставляют аналогичные функциональные возможности для электронных документов, однако обеспечивают дополнительную гибкость благодаря включению многих других типов содержимого, например печатного текста, рукописных заметок (например, рукописного ввода [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)]) или веб-ссылок.  
@@ -65,6 +64,7 @@ ms.locfileid: "57355185"
  Другой пример сценария касается приложений, позволяющих производить обмен заметками и записками между читателями документа по электронной почте. Эта функция позволяет таким приложениям направлять пользователя на страницу, содержащую заметку для обмена.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Controls.Primitives.DocumentViewerBase>
 - <xref:System.Windows.Controls.DocumentViewer>
 - <xref:System.Windows.Controls.FlowDocumentPageViewer>
@@ -72,7 +72,7 @@ ms.locfileid: "57355185"
 - <xref:System.Windows.Controls.FlowDocumentReader>
 - <xref:System.Windows.Annotations.IAnchorInfo>
 - [Схема примечаний](annotations-schema.md)
-- [Общие сведения об элементе ContextMenu](../controls/contextmenu-overview.md)
+- [Общие сведения о ContextMenu](../controls/contextmenu-overview.md)
 - [Общие сведения о системе команд](commanding-overview.md)
 - [Общие сведения о документах нефиксированного формата](flow-document-overview.md)
 - [Практическое руководство. Добавление команды в объект MenuItem](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms741839(v=vs.90))

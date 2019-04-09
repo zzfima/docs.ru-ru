@@ -2,12 +2,12 @@
 title: Маршрутизация по телу сообщения
 ms.date: 03/30/2017
 ms.assetid: 07a6fc3b-c360-42e0-b663-3d0f22cf4502
-ms.openlocfilehash: fe201161ebed66b8444c23229a6907be329d3641
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 3f6be962db2d07bef3a7adc714e9f4e72d621d37
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835132"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172320"
 ---
 # <a name="route-by-body"></a>Маршрутизация по телу сообщения
 В этом образце показано, как реализовать службу, которая принимает объекты сообщений с действием SOAP. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) , реализующем службу калькулятора. Служба реализует одну операцию `Calculate`, которая принимает параметр запроса <xref:System.ServiceModel.Channels.Message> и возвращает ответ <xref:System.ServiceModel.Channels.Message>.  
@@ -35,7 +35,7 @@ ms.locfileid: "58835132"
     }  
 ```  
   
- Чтобы при таком контракте можно было распределять сообщения между операциями, службе требуется пользовательское поведение диспетчеризации `DispatchByBodyBehavior`. Это поведение отправки инициализирует `DispatchByBodyElementOperationSelector` пользовательский селектор операций с таблицей имен операций, обозначенных с помощью значений QName соответствующих элементов оболочек. Операция `DispatchByBodyElementOperationSelector` проверяет начальный тег первого дочернего элемента Body и выбирает операцию, используя упомянутую ранее таблицу.  
+ Чтобы при таком контракте можно было распределять сообщения между операциями, службе требуется пользовательское поведение диспетчеризации `DispatchByBodyBehavior`. Это поведение отправки инициализирует `DispatchByBodyElementOperationSelector` пользовательский селектор операций с таблицей имен операций, обозначенных с помощью значений QName соответствующих элементов оболочек. `DispatchByBodyElementOperationSelector` проверяет начальный тег первого дочернего элемента Body и выбирает операцию, используя упомянутую ранее таблицу.  
   
  Клиент использует прокси-сервера, автоматически создается из кода WSDL, экспортированного службой с помощью [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
@@ -72,4 +72,3 @@ Press <ENTER> to terminate client.
 >  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Interop\RouteByBody`  
-  

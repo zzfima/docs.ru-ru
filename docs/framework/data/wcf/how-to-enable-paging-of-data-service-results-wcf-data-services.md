@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Включить разбиение на страницы результатов службы данных (службы данных WCF)
+title: Практическое руководство. Включить разбиение на страницы результатов службы данных (службы данных WCF)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - paging output [WCF Data Services]
 ms.assetid: 9a316cbd-9612-4482-a541-a10bc78b2635
-ms.openlocfilehash: be5bd41494c27724a360b785b8706b618447e7de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 77dbeba89b352fa470ab0523a830db9175a1a21a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523459"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122906"
 ---
-# <a name="how-to-enable-paging-of-data-service-results-wcf-data-services"></a>Как выполнить Включить разбиение на страницы результатов службы данных (службы данных WCF)
-Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] позволяют ограничить количество сущностей, возвращаемых запросом службы данных. Пределы разбиения на страницы определены в методе, который вызывается при инициализации службы, и могут устанавливаться отдельно для каждого набора сущностей.  
+# <a name="how-to-enable-paging-of-data-service-results-wcf-data-services"></a>Практическое руководство. Включить разбиение на страницы результатов службы данных (службы данных WCF)
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] позволяет ограничить количество сущностей, возвращаемых запросом службы данных. Пределы разбиения на страницы определены в методе, который вызывается при инициализации службы, и могут устанавливаться отдельно для каждого набора сущностей.  
   
  Если включена подкачка страниц, то последняя запись в канале содержит ссылку на следующую страницу данных. Дополнительные сведения см. в разделе [Настройка службы данных](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md).  
   
@@ -29,5 +29,6 @@ ms.locfileid: "54523459"
      [!code-vb[Astoria Northwind Service#DataServiceConfigPaging](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind.svc.vb#dataserviceconfigpaging)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Загрузка отложенного содержимого](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)
-- [Практическое руководство. Загрузка разбитых на страницы результатов](../../../../docs/framework/data/wcf/how-to-load-paged-results-wcf-data-services.md)
+- [Практическое руководство. Загрузка результатов, разбитых на страницы](../../../../docs/framework/data/wcf/how-to-load-paged-results-wcf-data-services.md)

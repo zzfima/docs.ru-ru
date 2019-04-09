@@ -8,12 +8,12 @@ helpviewer_keywords:
 - rendering support with Visual objects [WPF]
 - visual layer [WPF]
 ms.assetid: ac550423-60a3-43e6-a0bc-d65ef026e0cb
-ms.openlocfilehash: 0328b5da837fa11a6c2b7dba9ae761a1e88729bb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f41f9cf2b6deb30f5f1960cfab6e898f7032901e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376937"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142692"
 ---
 # <a name="visual-layer-programming-how-to-topics"></a>Практические руководства, посвященные программированию уровня визуализации
 В подразделах этого раздела демонстрируется использование на визуальном уровне для проверки нажатия и низкоуровневой композиции.  
@@ -27,6 +27,7 @@ ms.locfileid: "57376937"
  [Визуализация каждого кадра с помощью CompositionTarget](how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.Media.VisualTreeHelper>
 - <xref:System.Windows.Media.DrawingVisual>

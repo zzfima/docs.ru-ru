@@ -11,12 +11,12 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], about TextBox controls
 - text boxes [Windows Forms], adding
 ms.assetid: d1a9c7f5-fa53-480a-a75c-158f8649ea2f
-ms.openlocfilehash: 716195238e99938c8c416466fc84c2eff0bc7ba9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a91b67df1071c79707bb20a68efb4d5e6f083ae0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709814"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162141"
 ---
 # <a name="textbox-control-overview-windows-forms"></a>Общие сведения об элементе управления TextBox (Windows Forms)
 Текстовые поля форм Windows Forms используются для получения входных данных от пользователя или для отображения текста. <xref:System.Windows.Forms.TextBox> Управления обычно используется для ввода и редактирования текста, несмотря на то, что его можно также сделать доступным только для чтения. Текстовые поля можно отобразить несколько строк, переноса текста по размеру элемента управления и добавлять основные элементы форматирования. <xref:System.Windows.Forms.TextBox> Элемент управления предоставляет в одном формате, введенные в элементе управления или отображать текст. Чтобы отобразить несколько типов форматированного текста, используйте <xref:System.Windows.Forms.RichTextBox> элемента управления. Дополнительные сведения см. в разделе [Обзор элемента управления RichTextBox](richtextbox-control-overview-windows-forms.md).  
@@ -50,11 +50,12 @@ private:
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.TextBox>
-- [Практическое руководство. Управление положением курсора в элементе управления Windows Forms TextBox](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [Практическое руководство. Создание текстового поля пароля с помощью элемента управления TextBox в Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
-- [Практическое руководство. Создать только для чтения текстовое поле](how-to-create-a-read-only-text-box-windows-forms.md)
+- [Практическое руководство. Управление положением курсора в элементе управления TextBox в Windows Forms](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [Практическое руководство. Создание текстового поля для ввода пароля с помощью элемента управления TextBox в Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [Практическое руководство. Создание текстового поля только для чтения](how-to-create-a-read-only-text-box-windows-forms.md)
 - [Практическое руководство. Добавление кавычек в строку](how-to-put-quotation-marks-in-a-string-windows-forms.md)
-- [Практическое руководство. Выделите текст в элементе управления Windows Forms TextBox](how-to-select-text-in-the-windows-forms-textbox-control.md)
-- [Практическое руководство. Просмотр нескольких строк в элементе управления Windows Forms TextBox](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [Практическое руководство. Выделение текста в элементе управления TextBox в Windows Forms](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [Практическое руководство. Многострочные элементы управления TextBox в Windows Forms](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
 - [Элемент управления TextBox](textbox-control-windows-forms.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], parenting to forms
 - Windows Forms, parenting ToolStrip controls
 ms.assetid: a1c94a7f-6fc5-4e4c-84cf-ff11dc573d33
-ms.openlocfilehash: 96fe863cee296ec292bf7010494af587d43fd8b3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 100e744e6e49fbf214488e9bbb796b5b6fb9591a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708422"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142367"
 ---
 # <a name="how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form"></a>Практическое руководство. Перемещение элемента ToolStrip из контейнера ToolStripContainer в форму
 Используйте следующую процедуру для перемещения <xref:System.Windows.Forms.ToolStrip> из <xref:System.Windows.Forms.ToolStripContainer> на форму.  
@@ -31,6 +31,7 @@ ms.locfileid: "57708422"
 5.  Задайте <xref:System.Windows.Forms.ToolStrip.Dock%2A> свойство <xref:System.Windows.Forms.ToolStrip> для **верхней**.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStripContainer>
 - [Общие сведения об элементе управления ToolStrip](toolstrip-control-overview-windows-forms.md)

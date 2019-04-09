@@ -9,12 +9,12 @@ helpviewer_keywords:
 - animation [WPF], properties [WPF], methods for
 - properties [WPF], methods for animating
 ms.assetid: 74f61413-f8c0-4e75-bf04-951886426c8b
-ms.openlocfilehash: b03c450b84a376de5c5c7d3582c01a31bc417a11
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 5ec401aea139a868b3633afce4c74558aafcaa1e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366781"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165442"
 ---
 # <a name="property-animation-techniques-overview"></a>Общие сведения о методах анимации свойств
 В этом разделе описываются различные подходы к анимации свойств: раскадровки, локальные анимации, часы и покадровая анимация.  
@@ -59,7 +59,7 @@ ms.locfileid: "57366781"
 |<xref:System.Windows.Media.Animation.BeginStoryboard> и <xref:System.Windows.EventTrigger>|Да|Да|Да|Да|[Анимация свойства с помощью раскадровки](how-to-animate-a-property-by-using-a-storyboard.md)|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> и свойство <xref:System.Windows.Trigger>|Нет|Да|Да|Да|[Запуск анимации при изменении значения свойства](how-to-trigger-an-animation-when-a-property-value-changes.md)|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> и <xref:System.Windows.DataTrigger>|Нет|Да|Да|Да|[Практическое руководство. Запуск анимации при изменении данных](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa970679(v=vs.90))|  
-|Метод <xref:System.Windows.Media.Animation.Storyboard.Begin%2A>|Да|Нет|Нет|Нет|[Анимация свойства с помощью раскадровки](how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.Storyboard.Begin%2A> метод|Да|Нет|Нет|Нет|[Анимация свойства с помощью раскадровки](how-to-animate-a-property-by-using-a-storyboard.md)|  
   
  Дополнительные сведения о <xref:System.Windows.Media.Animation.Storyboard> объектов, см. в разделе [Общие сведения о раскадровках](storyboards-overview.md).  
   
@@ -122,7 +122,8 @@ ms.locfileid: "57366781"
  Дополнительные сведения см. в разделе <xref:System.Windows.Media.CompositionTarget.Rendering> страницы.  
   
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения об эффектах анимации](animation-overview.md)
-- [Общие сведения о раскадровке](storyboards-overview.md)
+- [Общие сведения о Storyboard](storyboards-overview.md)
 - [Общие сведения об анимации и системе управления временем](animation-and-timing-system-overview.md)
 - [Общие сведения о свойствах зависимости](../advanced/dependency-properties-overview.md)

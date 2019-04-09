@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2cda3230c652efeffa4a599849ba13dca1e5039b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: ad96224daf79b17d3902217af061173580f1478a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57472295"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122282"
 ---
 # <a name="icorprofilercallback4survivingreferences2-method"></a>Метод ICorProfilerCallback4::SurvivingReferences2
 Предоставляет информацию о структуре объектов в куче в результате сборки мусора без сжатия. Этот метод вызывается в том случае, если профилировщик реализует [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) интерфейс. Этот обратный вызов заменяет [ICorProfilerCallback2::SurvivingReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-survivingreferences-method.md) метод, так как он может объектах, длина которых превышает нельзя выразить типа ULong.  
@@ -79,6 +79,7 @@ HRESULT SurvivingReferences2(
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [Интерфейс ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
 - [Интерфейс ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)

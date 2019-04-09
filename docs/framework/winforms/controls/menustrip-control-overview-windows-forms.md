@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], about MenuStrip control
 - menus [Windows Forms], creating
 ms.assetid: f45516e5-bf01-4468-b851-d45f4c33c055
-ms.openlocfilehash: 41688dce0e645b643d7a10a5cf330f1f3a5f9cc8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7cd761697a09205294727043efc6cf73816803ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653714"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144356"
 ---
 # <a name="menustrip-control-overview-windows-forms"></a>Общие сведения об элементе управления MenuStrip (Windows Forms)
 Меню предоставлять функциональные возможности для пользователей, команд, сгруппированные по общей теме.  
@@ -34,7 +34,7 @@ ms.locfileid: "54653714"
   
  В следующей таблице показаны некоторые особенно важно свойства <xref:System.Windows.Forms.MenuStrip> и связанные классы.  
   
-|Свойство.|Описание|  
+|Свойство|Описание|  
 |--------------|-----------------|  
 |<xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A>|Возвращает или задает <xref:System.Windows.Forms.ToolStripMenuItem> , используемый для отображения списка дочерних форм интерфейса MDI.|  
 |<xref:System.Windows.Forms.ToolStripItem.MergeAction%2A?displayProperty=nameWithType>|Возвращает или задает способ слияния дочерних меню с родительскими меню в приложениях MDI.|  
@@ -47,7 +47,7 @@ ms.locfileid: "54653714"
   
  В следующей таблице показаны важные <xref:System.Windows.Forms.MenuStrip> сопутствующих классов.  
   
-|Класс|Описание:|  
+|Класс|Описание|  
 |-----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStripMenuItem>|Представляет отдельные пункты, отображаемые на <xref:System.Windows.Forms.MenuStrip> или <xref:System.Windows.Forms.ContextMenuStrip>.|  
 |<xref:System.Windows.Forms.ContextMenuStrip>|Представляет контекстное меню.|  
@@ -55,6 +55,7 @@ ms.locfileid: "54653714"
 |<xref:System.Windows.Forms.ToolStripDropDownItem>|Предоставляет базовую функциональность для элементов управления, производных от <xref:System.Windows.Forms.ToolStripItem> , отображения элементов раскрывающегося списка при нажатии.|  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ContextMenuStrip>

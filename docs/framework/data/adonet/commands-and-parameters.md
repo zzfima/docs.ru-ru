@@ -2,12 +2,12 @@
 title: Команды и параметры
 ms.date: 03/30/2017
 ms.assetid: b623f810-d871-49a5-b0f5-078cc3c34db6
-ms.openlocfilehash: 0f90e45a9679e76a38621f6e3ae19de0e7591098
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a769e8cbd5138e78136df018abe058ac6c568951
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612801"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198131"
 ---
 # <a name="commands-and-parameters"></a>Команды и параметры
 После установки соединения с источником данных при помощи объекта <xref:System.Data.Common.DbCommand> можно выполнять команды и возвращать результаты из источника данных. Команду можно создать с помощью одного из используемых конструкторов команд для поставщика данных .NET Framework. Конструкторы могут принимать необязательные аргументы, например инструкцию SQL для выполнения в источнике данных, объект <xref:System.Data.Common.DbConnection> или объект <xref:System.Data.Common.DbTransaction>. Эти объекты также можно настроить как свойства команды. При помощи метода <xref:System.Data.Common.DbConnection.CreateCommand%2A> объекта `DbConnection` также можно создать команду для конкретного соединения. Инструкцию SQL, выполняемую командой, можно настроить с помощью свойства <xref:System.Data.Common.DbCommand.CommandText%2A>.  
@@ -31,7 +31,8 @@ ms.locfileid: "54612801"
  Описывается использование поставщика данных для выполнения хранимых процедур или инструкций языка описания данных DDL.  
   
 ## <a name="see-also"></a>См. также
+
 - [Объекты DataAdapter и DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [Наборы данных, таблицы данных и объекты DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [Подключение к источнику данных](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

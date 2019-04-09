@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Forms, accessibility properties of controls
 - accessibility [Windows Forms], Windows Forms control properties
 ms.assetid: ad3567a6-313b-4708-9e15-f487a831f049
-ms.openlocfilehash: eee7499373809538355227633ab9a1a66aedb9ed
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b3f10fe472e449d39385facdbc716cba9b3f7382
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716404"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183785"
 ---
 # <a name="properties-on-windows-forms-controls-that-support-accessibility-guidelines"></a>Свойства элементов управления Windows Forms, в которых соблюдены правила доступности
 Элементы управления на стандартной панели инструментов для форм Windows Forms поддерживают многие из специальных возможностей, включая демонстрацию фокус клавиатуры и элементов экрана.  
@@ -31,4 +31,5 @@ ms.locfileid: "57716404"
 |BackgroundImage|Оставьте это свойство пустым, чтобы сделать текст более читаемым.|  
   
 ## <a name="see-also"></a>См. также
-- [Пошаговое руководство: Создание приложения специальных возможностей на базе Windows](walkthrough-creating-an-accessible-windows-based-application.md)
+
+- [Пошаговое руководство. Создание приложения Windows с поддержкой специальных возможностей](walkthrough-creating-an-accessible-windows-based-application.md)

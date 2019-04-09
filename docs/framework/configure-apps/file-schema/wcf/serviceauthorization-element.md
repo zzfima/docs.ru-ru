@@ -1,13 +1,13 @@
 ---
-title: <serviceAuthorization> - элемент
+title: <serviceAuthorization> элемент
 ms.date: 03/30/2017
 ms.assetid: 18cddad5-ddcb-4839-a0ac-1d6f6ab783ca
-ms.openlocfilehash: c967993c3a3f7276cd3a9076741de202e1f4c343
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7099c5eca9cf28624153a705e4e16136628214a2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257855"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157350"
 ---
 # <a name="serviceauthorization-element"></a>\<serviceAuthorization > элемент
 Задает параметры авторизации доступа к операциям службы.  
@@ -51,7 +51,7 @@ ms.locfileid: "55257855"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<поведение >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Содержит коллекцию параметров для поведения службы.|  
   
@@ -96,9 +96,10 @@ ms.locfileid: "55257855"
  Подробный пример использования этого элемента конфигурации, см. в разделе [авторизации доступа к операциям службы](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md) и [политики авторизации](../../../../../docs/framework/wcf/samples/authorization-policy.md).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.Configuration.ServiceAuthorizationElement>
 - <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>
-- [Поведения безопасности](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+- [Поведение безопасности](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
 - [Авторизация доступа к операциям службы](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)
 - [Практическое руководство. Создание пользовательского диспетчера авторизации для службы](../../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
 - [Практическое руководство. Ограничение доступа с использованием класса PrincipalPermissionAttribute](../../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)

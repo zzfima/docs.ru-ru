@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OpenFileDialog component [Windows Forms], about OpenFileDialog
 - Open File dialog box [Windows Forms], displaying in Windows Forms
 ms.assetid: cd717300-46b6-4f82-8207-b218fa7fa407
-ms.openlocfilehash: ad2fea74f0f3110ab2868064c588a7611d4261e3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ec275a5923d332d23205c79442fa23bc6e402e3f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702910"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147346"
 ---
 # <a name="openfiledialog-component-overview-windows-forms"></a>Общие сведения о компоненте OpenFileDialog (Windows Forms)
 Компонент Windows Forms <xref:System.Windows.Forms.OpenFileDialog> является стандартным диалоговым окном. Он аналогичен **открыть файл** диалоговое окно, предоставляемые операционной системой Windows. Он наследуется от класса <xref:System.Windows.Forms.CommonDialog>.  
@@ -25,5 +25,6 @@ ms.locfileid: "57702910"
  При добавлении в форму, <xref:System.Windows.Forms.OpenFileDialog> компонент появится в области в нижней части конструктора Windows Forms.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.OpenFileDialog>
 - [Компонент OpenFileDialog](openfiledialog-component-windows-forms.md)

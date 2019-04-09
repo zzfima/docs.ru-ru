@@ -2,12 +2,12 @@
 title: Ожидаемые исключения
 ms.date: 03/30/2017
 ms.assetid: 299a6987-ae6b-43c6-987f-12b034b583ae
-ms.openlocfilehash: 16b7a4029c9225984d71e5252605376d2d4b6d53
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: ea48a9c7393e809b4267f4e089998fa0e73b49fc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58832038"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163626"
 ---
 # <a name="expected-exceptions"></a>Ожидаемые исключения
 В этом образце показано, как перехватывать ожидаемые исключения при использовании типизированного клиента. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) , реализующем службу калькулятора. В этом образце клиентом является консольное приложение (EXE), а служба размещается в службах IIS.  
@@ -79,4 +79,3 @@ Got System.TimeoutException
 >  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\ExpectedExceptions`  
-  

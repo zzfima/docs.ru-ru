@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b19e5ce88ea34188b2757d2a0c313341fbf1e7e6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c29656a4787c674886505a3be2508470460dfc10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604266"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136530"
 ---
 # <a name="isymunmanagedmethod-interface"></a>Интерфейс ISymUnmanagedMethod
 Представляет метод, в хранилище символов. Этот интерфейс предоставляет доступ к только связанные с symbol атрибуты метода, вместо атрибутов, связанных с типом.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание:|  
+|Метод|Описание|  
 |------------|-----------------|  
 |[Метод GetNamespace](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-getnamespace-method.md)|Получает пространство имен, в котором определен этот метод.|  
 |[Метод GetOffset](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-getoffset-method.md)|Возвращает смещение в этом методе, соответствующее данной позиции в документе.|  
@@ -45,4 +45,5 @@ ms.locfileid: "54604266"
  **Заголовок.** CorSym.idl CorSym.h  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейсы хранилища символов диагностики](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

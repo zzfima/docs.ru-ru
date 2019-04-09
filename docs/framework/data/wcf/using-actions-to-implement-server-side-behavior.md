@@ -2,12 +2,12 @@
 title: Использование действий для реализации поведения на стороне сервера
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-ms.openlocfilehash: fdff4f87e0c22baeb92ee844e0dae1fa9bef8302
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
-ms.translationtype: MT
+ms.openlocfilehash: c21208b53745d0bf30d64ff827c1fb5e78a97cb4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092128"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144122"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>Использование действий для реализации поведения на стороне сервера
 
@@ -17,7 +17,7 @@ ms.locfileid: "56092128"
  Для реализации действия службы, необходимо реализовать <xref:System.IServiceProvider>, [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)), и [интерфейса IDataServiceInvokable](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859893(v=vs.103)) интерфейсов. <xref:System.IServiceProvider> позволяет службам данных WCF получить вашу реализацию [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)). [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) позволяет службам данных WCF для создания, поиска, описания и вызывать действия службы. [Интерфейса IDataServiceInvokable](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859893(v=vs.103)) позволяет вызывать код, который реализует поведение действий службы и получить результаты, если таковые имеются. Помните, что службы данных WCF являются службами с предварительным вызовом, то есть новый экземпляр службы создается при каждом вызове службы.  Удостоверьтесь в том, что при создании службы выполняется только необходимая работа.  
   
 ### <a name="iserviceprovider"></a>IServiceProvider  
- Интерфейс <xref:System.IServiceProvider> содержит метод <xref:System.IServiceProvider.GetService%2A>. Службы данных WCF вызывают этот метод для получения числа поставщиков служб, включая поставщиков служб метаданных и поставщиков действий служб данных. При запросе поставщика действий службы данных, возвращают вашей [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) реализации.  
+ <xref:System.IServiceProvider> содержит метод с именем <xref:System.IServiceProvider.GetService%2A>. Службы данных WCF вызывают этот метод для получения числа поставщиков служб, включая поставщиков служб метаданных и поставщиков действий служб данных. При запросе поставщика действий службы данных, возвращают вашей [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) реализации.  
   
 ### <a name="idataserviceactionprovider"></a>IDataServiceActionProvider  
  [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) содержит методы, которые позволяют получить сведения о доступных действиях. При реализации [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) увеличивается метаданных для вашей службы, которая определяется вашей реализацией интерфейса [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) с действиями и обработки их отправки соответствующим образом.  
@@ -81,7 +81,8 @@ context.Execute(new Uri("http://MyServer/MoviesService.svc/Movies(1)/Rate"), "PO
  В приведенном выше фрагменте кода класс `MoviesModel` был сформирован с помощью Visual Studio для добавления ссылки на службу данных WCF.  
   
 ## <a name="see-also"></a>См. также
-- [Службы данных WCF 4.5](../../../../docs/framework/data/wcf/index.md)
+
+- [Службы WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)
 - [Определение служб данных WCF](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
 - [Разработка и развертывание служб WCF Data Services](../../../../docs/framework/data/wcf/developing-and-deploying-wcf-data-services.md)
 - [Специализированные поставщики служб данных](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)

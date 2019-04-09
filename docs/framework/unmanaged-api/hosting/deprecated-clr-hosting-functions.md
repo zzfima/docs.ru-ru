@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 91fbbb35-e543-4814-b806-371cebae8c5a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 576b60293ed53448f3829fdcc9f89ad8508599af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aa84ca0defd173563817673aad183a8b64226d41
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580907"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135815"
 ---
 # <a name="deprecated-clr-hosting-functions"></a>Устаревшие функции размещения CLR
 В этом разделе описываются неуправляемые глобальные статистические функции, используемые в более ранних версиях API размещения.  
@@ -159,4 +159,5 @@ ms.locfileid: "54580907"
  Проверяет образы управляемого модуля и уведомляет загрузчик операционной системы, после они были загружены.  
   
 ## <a name="see-also"></a>См. также
+
 - [Глобальные статические функции размещения платформы .NET Framework 4](../../../../docs/framework/unmanaged-api/hosting/net-framework-4-hosting-global-static-functions.md)

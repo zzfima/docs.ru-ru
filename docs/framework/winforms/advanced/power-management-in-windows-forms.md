@@ -8,12 +8,12 @@ helpviewer_keywords:
 - battery states
 - power states
 ms.assetid: ad04a801-5682-4d88-92c5-26eb9cdb209a
-ms.openlocfilehash: 77d2096239ec70f98ebfc299f1eda75ad4490be9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 6bb9b4f30a88ece93b17ff2510087b220d538738
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712426"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154678"
 ---
 # <a name="power-management-in-windows-forms"></a>Управление питанием в Windows Forms
 Приложения Windows Forms можно воспользоваться преимуществами функций управления питанием в операционной системе Windows. Приложения можно отслеживать состояние питания компьютера и предпринимать действия при изменении состояния. Например если приложение выполняется на портативном компьютере, может потребоваться отключить некоторые функции в приложении, когда заряд батареи падает ниже определенного уровня.  
@@ -33,6 +33,7 @@ ms.locfileid: "57712426"
  [!code-vb[PowerMode#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/powermode/vb/form1.vb#2)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:Microsoft.Win32.SystemEvents.PowerModeChanged>
 - <xref:System.Windows.Forms.SystemInformation.PowerStatus%2A>
 - <xref:System.Windows.Forms.Application.SetSuspendState%2A>

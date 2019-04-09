@@ -1,18 +1,18 @@
 ---
-title: Как выполнить сопоставить связи базы данных
+title: Практическое руководство. Как сопоставлять связи баз данных
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 538def39-8399-46fb-b02d-60ede4e050af
-ms.openlocfilehash: 907ed58e9828921585135f2319d0db9559b606d3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 40e376f2c2584490273ec27b78fe5315cbb0315e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556393"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152884"
 ---
-# <a name="how-to-map-database-relationships"></a>Как выполнить сопоставить связи базы данных
+# <a name="how-to-map-database-relationships"></a>Практическое руководство. Как сопоставлять связи баз данных
 Отношения данных, которые всегда останутся неизменными, можно закодировать в виде ссылок в классе сущностей. В учебной базе данных Northwind, всегда существует связь между заказчиками и их заказами, т.к. обычно заказчики размещают заказы.  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Определяет <xref:System.Data.Linq.Mapping.AssociationAttribute> атрибута с помощью которого представляются такие отношения. Этот атрибут используется совместно с типами <xref:System.Data.Linq.EntitySet%601> и <xref:System.Data.Linq.EntityRef%601> для представления в базе данных связи по внешнему ключу. Дополнительные сведения см. в разделе атрибут Association [сопоставление, основанное на атрибутах](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
@@ -28,7 +28,7 @@ ms.locfileid: "54556393"
   
 -   Многие ко многим. В связях многие ко многим, первичный ключ связанной таблицы (также называется *соединения* таблицы) часто формируется составлением внешних ключей из двух других таблиц.  
   
-     Например, рассмотрим `Employee` - `Project` отношение многие ко многим, сформированное с помощью связанной таблицы `EmployeeProject`. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] требует, чтобы такая связь моделировалась по трем классам: `Employee`, `Project` и `EmployeeProject`. В этом случае изменение отношения между `Employee` и `Project` может потребовать обновления первичного ключа `EmployeeProject`. Однако данная ситуация наилучшим образом моделируется для удаления существующего `EmployeeProject` и создания нового `EmployeeProject`.  
+     Например, рассмотрим `Employee` - `Project` отношение многие ко многим, сформированное с помощью связанной таблицы `EmployeeProject`. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] требует, чтобы такая связь моделировалась по трем классам: `Employee`, `Project`, и `EmployeeProject`. В этом случае изменение отношения между `Employee` и `Project` может потребовать обновления первичного ключа `EmployeeProject`. Однако данная ситуация наилучшим образом моделируется для удаления существующего `EmployeeProject` и создания нового `EmployeeProject`.  
   
     > [!NOTE]
     >  Отношения в реляционных базах данных обычно моделируются в виде значений внешнего ключа, ссылающихся на первичные ключи в других таблицах. Для перемещения между ними следует явно связать две таблицы с помощью реляционной *соединения* операции.  
@@ -54,5 +54,6 @@ ms.locfileid: "54556393"
  [!code-vb[DLinqCustomize#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCustomize/vb/Module1.vb#5)]  
   
 ## <a name="see-also"></a>См. также
-- [Практическое руководство. Настройка классов сущностей с помощью редактора кода](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+
+- [Практическое руководство. Как настроить классы сущностей с помощью редактора кода](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
 - [Модель объектов LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)

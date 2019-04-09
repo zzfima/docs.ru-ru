@@ -9,12 +9,12 @@ helpviewer_keywords:
 - lines [Windows Forms], texture
 - drawing lines [Windows Forms], texture
 ms.assetid: dc9118cc-f3c2-42e5-8173-f46d41d18fd5
-ms.openlocfilehash: 82fc553e2a2fc9d1e8161c0f0dfef9190668e48c
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: c0f90c298f48aeb96893bb09241faddc08d8a49d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58653760"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186911"
 ---
 # <a name="how-to-draw-a-line-filled-with-a-texture"></a>Практическое руководство. Рисование линии с текстурным заполнением
 Вместо рисования линии сплошным цветом, можно рисовать линии с текстурным заполнением. Для рисования линий и кривых с текстурой, создание <xref:System.Drawing.TextureBrush> и передать, <xref:System.Drawing.TextureBrush> объект <xref:System.Drawing.Pen.%23ctor%2A> конструктор. Растровое изображение, связанное с кистью текстуры используется для мозаичного плоскостью (незаметно), и когда перо рисует линий или кривых, пиксели мозаичную текстуру пера, становятся видимыми.  
@@ -33,5 +33,6 @@ ms.locfileid: "58653760"
  Создайте форму Windows и обработки формы <xref:System.Windows.Forms.Control.Paint> событий. Вставьте приведенный выше код в <xref:System.Windows.Forms.Control.Paint> обработчик событий. Замените `Texture.jpg` с изображением в вашей системе.  
   
 ## <a name="see-also"></a>См. также
+
 - [Рисование линий и фигур с помощью пера](using-a-pen-to-draw-lines-and-shapes.md)
 - [Объекты Graphics и Drawing в Windows Forms](graphics-and-drawing-in-windows-forms.md)

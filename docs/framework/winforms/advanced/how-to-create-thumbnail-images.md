@@ -8,12 +8,12 @@ helpviewer_keywords:
 - thumbnail images [Windows Forms], creating
 - images [Windows Forms], creating thumbnails
 ms.assetid: e956242a-1e5b-4217-a3cf-5f3fb45d00ba
-ms.openlocfilehash: 3ed1fb6a9a7fc8e7ded6ae0e124ca7dcbf0f3c98
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 79b6258e7e6d7f16cc7a1e32a0c99dfe0eaeaa0c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716963"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144018"
 ---
 # <a name="how-to-create-thumbnail-images"></a>Практическое руководство. Создание эскизов изображений
 Эскиз — это компактная версия образа. Можно создать изображение эскиза путем вызова <xref:System.Drawing.Image.GetThumbnailImage%2A> метод <xref:System.Drawing.Image> объекта.  
@@ -32,7 +32,7 @@ ms.locfileid: "57716963"
  [!code-vb[System.Drawing.WorkingWithImages#71](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#71)]  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Предыдущий пример предназначен для работы с Windows Forms, и для него необходим объект <xref:System.Windows.Forms.PaintEventArgs> `e`, передаваемый в качестве параметра обработчику событий <xref:System.Windows.Forms.Control.Paint>. Чтобы запустить пример, выполните следующие действия.  
+ Предыдущий пример предназначен для работы с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs> `e`, который является параметром <xref:System.Windows.Forms.Control.Paint> обработчик событий. Чтобы запустить пример, выполните следующие действия.  
   
 1.  Создайте новое приложение Windows Forms.  
   
@@ -51,5 +51,6 @@ ms.locfileid: "57716963"
      В форме появится эскиз 100 на 100.  
   
 ## <a name="see-also"></a>См. также
-- [Изображения, точечные рисунки и метафайлы](images-bitmaps-and-metafiles.md)
-- [Работа с растровыми и векторными изображениями, значками и метафайлами](working-with-images-bitmaps-icons-and-metafiles.md)
+
+- [Работа с растровыми и векторными изображениями с использованием классов Image, Bitmap и Metafile](images-bitmaps-and-metafiles.md)
+- [Работа с растровыми и векторными изображениями](working-with-images-bitmaps-icons-and-metafiles.md)

@@ -2,12 +2,12 @@
 title: Стандартная последовательность действий при использовании LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 9a88bd51-bd74-48f7-a9b1-f650e8d55a3e
-ms.openlocfilehash: 32e81d08010f67b8eac19777a40826b18c440f83
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a7c6257bc27728d101d64d07ffedb1e38bc994eb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548015"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132851"
 ---
 # <a name="typical-steps-for-using-linq-to-sql"></a>Стандартная последовательность действий при использовании LINQ to SQL
 Чтобы реализовать приложение [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], выполните действия, описанные в этом разделе. Обратите внимание, что многие их этих действий являются необязательными. В большинстве случаев можно использовать объектную модель в состоянии, установленном по умолчанию.  
@@ -20,7 +20,7 @@ ms.locfileid: "54548015"
 ### <a name="1-select-a-tool-to-create-the-model"></a>1. Выбор средства для создания модели.  
  Для создания модели предусмотрено три средства.  
   
--   Конструктор [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]  
+-   Классу [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]  
   
      Этот конструктор предоставляет многофункциональный пользовательский интерфейс для создания объектной модели из существующей базы данных. Это средство входит в состав Visual Studio IDE и лучше всего подходит для баз данных небольшого или среднего размера.  
   
@@ -82,6 +82,7 @@ ms.locfileid: "54548015"
  Дополнительные сведения см. в разделе [поддержка отладки](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Начало работы](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)
 - [Создание модели объектов](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
 - [Хранимые процедуры](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)

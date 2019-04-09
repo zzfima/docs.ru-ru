@@ -2,12 +2,12 @@
 title: Указание отношений между элементами без вложенности
 ms.date: 03/30/2017
 ms.assetid: e31325da-7691-4d33-acf4-99fccca67006
-ms.openlocfilehash: e33a445d4ef969c73ab9756c5aa5116fae67ea66
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4b7b216e58f36302db29c4b4b5176339521b0f17
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54739184"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157821"
 ---
 # <a name="specify-relations-between-elements-with-no-nesting"></a>Указание отношений между элементами без вложенности
 Если элементы не вложены, какие-либо неявные связи не создаются. Однако, можно явно указать отношений между элементами, которые не являются вложенными, используя **msdata: Relationship** заметки.  
@@ -65,6 +65,7 @@ Nested: False
 ```  
   
 ## <a name="see-also"></a>См. также
-- [Создание отношений DataSet из схемы XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
-- [Сопоставление ограничений схемы XML (XSD) с ограничениями DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+
+- [Создание отношений наборов данных из схемы XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
+- [Сопоставление ограничений XML-схемы (XSD) с ограничениями набора данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

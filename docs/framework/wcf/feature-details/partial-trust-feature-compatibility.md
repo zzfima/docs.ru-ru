@@ -2,12 +2,12 @@
 title: Совместимость возможностей частичного доверия
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-ms.openlocfilehash: 5a09d4d1ce9f9ec328c74e7f2714f1c3f702670a
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: b0d9b7bd8bd5f33ca344ea5674d08507ced209f5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333510"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124570"
 ---
 # <a name="partial-trust-feature-compatibility"></a>Совместимость возможностей частичного доверия
 Windows Communication Foundation (WCF) поддерживает ограниченный набор функциональности при работе в среде с частичным доверием. Дополнительные сведения о различных функциях, поддерживаемых при работе с частичным доверием, которые разработаны на базе определенного набора сценариев, см. в разделе [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) .  
@@ -28,7 +28,7 @@ Windows Communication Foundation (WCF) поддерживает ограниче
   
 -   При использовании атрибута `[ServiceKnownType]` указанный метод должен иметь тип `public`;  
   
--   Классы`[MessageContract]` и их члены могут иметь тип `public`. Если класс `[MessageContract]` определен в сборке приложения, он может иметь тип `internal` и его члены будут также `internal` .  
+-   `[MessageContract]` классы и их члены могут быть `public`. Если класс `[MessageContract]` определен в сборке приложения, он может иметь тип `internal` и его члены будут также `internal` .  
   
 ## <a name="system-provided-bindings"></a>Привязки, предоставляемые системой  
  Типы <xref:System.ServiceModel.BasicHttpBinding> и <xref:System.ServiceModel.WebHttpBinding> полностью поддерживаются в среде с частичным доверием. Тип <xref:System.ServiceModel.WSHttpBinding> поддерживается только для режима безопасности транспорта.  
@@ -119,7 +119,7 @@ Windows Communication Foundation (WCF) поддерживает ограниче
   
 -   <xref:System.Runtime.Serialization>  
   
--   <xref:System.IdentityModel.Claims>, <xref:System.IdentityModel.Policy>, <xref:System.IdentityModel.Selectors>и <xref:System.IdentityModel.Tokens>.  
+-   <xref:System.IdentityModel.Claims>, <xref:System.IdentityModel.Policy>, <xref:System.IdentityModel.Selectors>, и <xref:System.IdentityModel.Tokens>.  
   
  Следующие источники трассировки не поддерживаются:  
   
@@ -160,6 +160,7 @@ Windows Communication Foundation (WCF) поддерживает ограниче
  Лучший способ обнаружить недоступный фрагмент информации или действия при выполнении в среде с частичным доверием - попытка обращения к ресурсу или выполнение действия внутри блока `try` с последующим перехватом ( `catch` ) сбоя. Во избежание переполнения файлов трассировки дублирующимися ошибками, WCF отключает трассировку ресурсов и действий после первого сбоя безопасности. Существует одна трассировка исключения для каждой неудачной попытки доступа к ресурсам, которая создается при первой попытке доступа к ресурсам или при первой попытке выполнения действия.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
 - <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>
 - <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>

@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Определение значка для кнопки панели инструментов
+title: Практическое руководство. Определение значка для кнопки элемента управления ToolBar
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: 84db98b4-8566-49ce-b2c8-1fd66a5eb3a0
-ms.openlocfilehash: fb4a492b081cd9f9e3ccc1d47a4120c705058dd0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 0d4a17528ca3eb81f93419491766e370be551b1e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712751"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153131"
 ---
-# <a name="how-to-define-an-icon-for-a-toolbar-button"></a>Практическое руководство. Определение значка для кнопки панели инструментов
+# <a name="how-to-define-an-icon-for-a-toolbar-button"></a>Практическое руководство. Определение значка для кнопки элемента управления ToolBar
 > [!NOTE]
 >  Элемент управления <xref:System.Windows.Forms.ToolStrip> заменяет элемент управления <xref:System.Windows.Forms.ToolBar> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.ToolBar> можно сохранить для обратной совместимости и использования в будущем.  
   
@@ -116,7 +116,8 @@ ms.locfileid: "57712751"
     ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.ToolBar>
-- [Практическое руководство. Триггер событий меню для кнопок панели инструментов](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [Практическое руководство. Генерирование событий меню для кнопок элемента управления Toolbar](how-to-trigger-menu-events-for-toolbar-buttons.md)
 - [Элемент управления ToolBar](toolbar-control-windows-forms.md)
 - [Компонент ImageList](imagelist-component-windows-forms.md)

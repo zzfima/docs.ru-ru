@@ -2,12 +2,12 @@
 title: <behaviorExtensions>
 ms.date: 03/30/2017
 ms.assetid: 59f2791a-c78f-40d7-aa80-0d9cd10135d9
-ms.openlocfilehash: b3554db2ee037eceb43126968a02e826b65928a0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 81ce9bb0e55fe4570f8a21187d9df80ea22393fe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55285931"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191423"
 ---
 # <a name="behaviorextensions"></a>\<behaviorExtensions>
 Расширения поведений позволяют пользователям создавать пользовательские элементы поведений. Эти элементы могут использоваться вместе со стандартными элементами поведений Windows Communication Foundation (WCF). В разделе `behaviorExtensions` определяется элемент, который может использоваться в конфигурации. Далее приведен пример типичного расширения поведения.  
@@ -52,5 +52,6 @@ ms.locfileid: "55285931"
  Дополнительные сведения см. в разделе [Обнаружение сборок в среде выполнения](https://go.microsoft.com/fwlink/?LinkId=95336) и <xref:System.AppDomain.TypeResolve>.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>
 - [Настройка и расширение среды выполнения с помощью поведений](../../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)

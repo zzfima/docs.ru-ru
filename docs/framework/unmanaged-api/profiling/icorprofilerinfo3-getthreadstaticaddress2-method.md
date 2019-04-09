@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 49139f5b1f65bc2e258362d9b47f4e0d44cc6894
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: f62dadf4f21022f8f425596cf5957891ed39effe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57481525"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189187"
 ---
 # <a name="icorprofilerinfo3getthreadstaticaddress2-method"></a>Метод ICorProfilerInfo3::GetThreadStaticAddress2
 Возвращает адрес указанного поля статического потока, которое находится в области действия заданного потока и домена приложения.  
@@ -75,6 +75,7 @@ HRESULT GetThreadStaticAddress2(
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс ICorProfilerInfo3](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [Интерфейсы профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Профилирующие интерфейсы](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
 - [Профилирование](../../../../docs/framework/unmanaged-api/profiling/index.md)

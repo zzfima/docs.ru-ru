@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aa8589b3f27ba97d32e77dbfecb190edc69dbc18
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 75bd7da67cbac958f0b34c8295454a719962c7ed
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677335"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201732"
 ---
 # <a name="epolicyaction-enumeration"></a>Перечисление EPolicyAction
 Описывает действия политики, основное приложение может задать для операций, описанных [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) и сбоев, описанных [EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md).  
@@ -45,7 +45,7 @@ typedef enum {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |`eAbortThread`|Указывает, что среда CLR (CLR) следует прервать поток корректно. Корректное прерывание включает пытается запустить все `finally` блокирует любой `catch` , связанных с прерывания потоков и методы завершения.|  
 |`eDisableRuntime`|Указывает, что среда CLR следует перейти в отключенное состояние. Дальнейшая управляемый код может выполняться в соответствующий процесс, а потоки блокируются из входа в среду CLR.|  
@@ -71,6 +71,7 @@ typedef enum {
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Перечисление EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)
 - [Интерфейс ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)
 - [Интерфейс IHostPolicyManager](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)

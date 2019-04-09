@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Переход между данными в Windows Forms
+title: Практическое руководство. Навигация по набору данных, отображаемых в форме Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - CurrencyManager class [Windows Forms], navigating Windows Forms data
 - data [Windows Forms], navigating
 ms.assetid: 97360f7b-b181-4084-966a-4c62518f735b
-ms.openlocfilehash: 920f6d6206a8f33a912d8a7d1b46a3047ed874bc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: fb5747ec3c6b640821e4875d86273467eeb922df
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725341"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154600"
 ---
-# <a name="how-to-navigate-data-in-windows-forms"></a>Практическое руководство. Переход между данными в Windows Forms
+# <a name="how-to-navigate-data-in-windows-forms"></a>Практическое руководство. Навигация по набору данных, отображаемых в форме Windows Forms
 Самый простой способ перемещения по записям в источнике данных в приложении Windows, является привязка <xref:System.Windows.Forms.BindingSource> компонент источника данных, а затем привязать элементы управления к <xref:System.Windows.Forms.BindingSource>. Затем можно использовать встроенные методы навигации на <xref:System.Windows.Forms.BindingSource> таких <xref:System.Windows.Forms.BindingSource.MoveNext%2A>, <xref:System.Windows.Forms.BindingSource.MoveLast%2A>, <xref:System.Windows.Forms.BindingSource.MovePrevious%2A> и <xref:System.Windows.Forms.BindingSource.MoveFirst%2A>. С помощью этих методов настроит <xref:System.Windows.Forms.BindingSource.Position%2A> и <xref:System.Windows.Forms.BindingSource.Current%2A> свойства <xref:System.Windows.Forms.BindingSource> соответствующим образом. Можно также найти элемент и задать его в качестве текущего элемента, задав <xref:System.Windows.Forms.BindingSource.Position%2A> свойство.  
   
 ### <a name="to-increment-the-position-in-a-data-source"></a>Увеличение позиции в источнике данных  
@@ -51,7 +51,8 @@ ms.locfileid: "57725341"
      [!code-vb[System.Windows.Forms.NavigatingData#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#2)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Источники данных, поддерживаемые Windows Forms](data-sources-supported-by-windows-forms.md)
-- [Уведомления об изменениях в привязке данных Windows Forms](change-notification-in-windows-forms-data-binding.md)
-- [Привязка данных и Windows Forms](data-binding-and-windows-forms.md)
+- [Получение уведомления об изменении данных, связанных с элементом управления, в Windows Forms](change-notification-in-windows-forms-data-binding.md)
+- [Связывание данных и Windows Forms](data-binding-and-windows-forms.md)
 - [Привязка данных Windows Forms](windows-forms-data-binding.md)

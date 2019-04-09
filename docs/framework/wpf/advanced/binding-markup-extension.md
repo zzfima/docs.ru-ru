@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Binding markup extensions [WPF]
 - XAML [WPF], Binding markup extension
 ms.assetid: 83d6e2a4-1b0c-4fc8-bd96-b5e98800ab63
-ms.openlocfilehash: 960bc953345e3f6ed632b7a136b626978c8a9bce
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3455c7ccdedb432fc05c7dc9e80f0f7509f4fa0c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379189"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170317"
 ---
 # <a name="binding-markup-extension"></a>Привязка расширения разметки
 Откладывает значение свойства значением привязкой к данным, создавая объект промежуточного выражения и интерпретируя контекст данных, который применяется к элементу и его привязке во время выполнения.  
@@ -123,7 +123,8 @@ ms.locfileid: "57379189"
  `Binding` является расширением нетипичное разметки тем, что <xref:System.Windows.Data.Binding> класс, реализующий функциональные возможности расширения для реализации XAML в WPF также реализует несколько методов и свойств, которые не связаны с XAML. Другие элементы призваны сделать <xref:System.Windows.Data.Binding> более гибким, автономное класс, который можно решить многие сценарии привязки данных в дополнение к работает как расширение разметки XAML.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Data.Binding>
 - [Общие сведения о привязке данных](../data/data-binding-overview.md)
-- [Общие сведения о языке XAML (WPF)](xaml-overview-wpf.md)
+- [Обзор XAML (WPF)](xaml-overview-wpf.md)
 - [Расширения разметки и XAML WPF](markup-extensions-and-wpf-xaml.md)

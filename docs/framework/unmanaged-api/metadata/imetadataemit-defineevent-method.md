@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 26fd4c89838912e4e07c1d9a8b84aa22f54adeff
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 48055103b49b4c61bb7561f2d4aa6c8daae07ae2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57501634"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128913"
 ---
 # <a name="imetadataemitdefineevent-method"></a>Метод IMetaDataEmit::DefineEvent
 Создает определение события с заданной подписью метаданных и получает маркер для определения событий.  
@@ -81,5 +81,6 @@ HRESULT DefineEvent (
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -3,12 +3,12 @@ title: WIF и веб-фермы
 ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
-ms.openlocfilehash: 85fbebcd210e7df17212d39b8e3aca9bf76bfb67
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2f95213390187648c9f58b9b2bf2d5e3f49fb860
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543059"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135360"
 ---
 # <a name="wif-and-web-farms"></a>WIF и веб-фермы
 Если вы используете Windows Identity Foundation (WIF) для защиты ресурсов приложения проверяющей стороны, развернутого в веб-ферме, необходимо выполнить определенные действия, чтобы платформа WIF могла обрабатывать токены от экземпляров этого приложения, работающих на разных компьютерах в ферме. Обработка включает в себя проверку подписей токенов сеансов, шифрование и расшифровку токенов сеансов, их кэширование, а также обнаружение повторно используемых маркеров безопасности.  
@@ -88,7 +88,7 @@ public interface ISessionSecurityTokenCacheService
 }  
 ```  
   
- В приведенном ниже коде показана реализация службы кэширования WCF. В этом примере используется кэш токенов сеансов в памяти, реализуемый по умолчанию платформой WIF. В качестве альтернативы можно использовать устойчивый кэш на основе базы данных. `ISessionSecurityTokenCacheService` определяет приведенный выше интерфейс. В этом примере для краткости показаны не все методы, требуемые для реализации интерфейса.  
+ В приведенном ниже коде показана реализация службы кэширования WCF. В этом примере используется кэш токенов сеансов в памяти, реализуемый по умолчанию платформой WIF. В качестве альтернативы можно использовать устойчивый кэш на основе базы данных. `ISessionSecurityTokenCacheService` Определяет интерфейс, показанный выше. В этом примере для краткости показаны не все методы, требуемые для реализации интерфейса.  
   
 ```  
 using System;  
@@ -251,6 +251,7 @@ namespace CacheLibrary
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>
 - <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>
 - <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>

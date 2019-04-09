@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: da3e4ff3-2e67-4668-9720-fa776c97407e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 92528a2cf2227520327b9be2dca70be4c238ff61
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a9ea2e274bbcd17bcc129de46c753f091501d4c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564686"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184292"
 ---
 # <a name="opengenericcercall-mda"></a>openGenericCERCall MDA
 Помощник по отладке управляемого кода `openGenericCERCall` активируется, чтобы предупредить о том, что граф области ограниченного выполнения (CER) с переменными универсального типа в корневом методе обрабатывается во время JIT-компиляции или генерации образа в машинном коде и при этом как минимум одна из переменных универсального типа представляет собой тип ссылки на объект.  
@@ -51,7 +51,7 @@ ms.locfileid: "54564686"
   
  `declaringType name="OpenGenericCERCall"`  
   
-## <a name="configuration"></a>Конфигурация  
+## <a name="configuration"></a>Параметр Configuration  
   
 ```xml  
 <mdaConfig>  
@@ -107,6 +107,7 @@ class Program
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>
 - <xref:System.Runtime.ConstrainedExecution>
-- [Диагностика ошибок посредством помощников по отладке управляемого кода](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Диагностика ошибок посредством управляемых помощников по отладке](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

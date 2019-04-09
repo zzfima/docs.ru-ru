@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Определение значка для кнопки панели инструментов, с помощью конструктора
+title: Практическое руководство. Определение значка для кнопки на панели инструментов с помощью конструктора
 ms.date: 03/30/2017
 helpviewer_keywords:
 - toolbars [Windows Forms], adding icons to buttons
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: d848f38e-67f2-49d4-8e88-01c845c06c02
-ms.openlocfilehash: 2099738d5b666aa305d678c962c0b203d3ab67b2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 6657a9bbb850a24ae47be11854d6affd2a02f9b7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717743"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118278"
 ---
-# <a name="how-to-define-an-icon-for-a-toolbar-button-using-the-designer"></a>Практическое руководство. Определение значка для кнопки панели инструментов, с помощью конструктора
+# <a name="how-to-define-an-icon-for-a-toolbar-button-using-the-designer"></a>Практическое руководство. Определение значка для кнопки на панели инструментов с помощью конструктора
 > [!NOTE]
 >  Элемент управления <xref:System.Windows.Forms.ToolStrip> заменяет элемент управления <xref:System.Windows.Forms.ToolBar> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.ToolBar> можно сохранить для обратной совместимости и использования в будущем.  
   
@@ -42,7 +42,8 @@ ms.locfileid: "57717743"
 6.  В **свойства** окно, которое появляется на правой стороне панели **редактора коллекции**, задайте <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> свойства каждой кнопки панели инструментов, одно из значений в списке, который извлекается из образов, добавленных к <xref:System.Windows.Forms.ImageList> компонента.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.ToolBar>
-- [Практическое руководство. Триггер событий меню для кнопок панели инструментов](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [Практическое руководство. Генерирование событий меню для кнопок элемента управления Toolbar](how-to-trigger-menu-events-for-toolbar-buttons.md)
 - [Элемент управления ToolBar](toolbar-control-windows-forms.md)
 - [Компонент ImageList](imagelist-component-windows-forms.md)

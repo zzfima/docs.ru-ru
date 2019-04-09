@@ -29,18 +29,16 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: ecea2575503ad8fe4ff8a190a417bae75a7b31f7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 98ca530da28591fec23a5036b421d02b393e83b5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367964"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149309"
 ---
 # <a name="xaml-syntax-in-detail"></a>Подробное описание синтаксиса XAML
 В этом разделе определяются термины, которые используются для описания элементов синтаксиса XAML. Эти термины часто используются в оставшейся части этой документации, в документации по WPF, в частности, так и для других платформ, использующих XAML или основные понятия XAML, включаемые поддержки языка XAML на уровне System.Xaml. Этот раздел расширяет базовую терминологию, представленную в разделе [Обзор XAML (WPF)](xaml-overview-wpf.md).  
-  
 
-  
 <a name="the_xaml_language_specification"></a>   
 ## <a name="the-xaml-language-specification"></a>В спецификации языка XAML  
  Синтаксическая терминология XAML, заданные здесь также определяется или на которые существуют ссылки в спецификации языка XAML. XAML — это язык на основе XML и ниже или расширяет структурным правилам XML. Некоторые термины общий или основан на терминологии, используемой при описании языка XML или объектную модель документа XML.  
@@ -316,8 +314,9 @@ ms.locfileid: "57367964"
  Но так же, как *typeName*. *имя пользователя* формы для атрибутов, *Имя_базового_типа*. *имя пользователя* находится в плохом стиле в разметке, и ее следует избегать.  
   
 ## <a name="see-also"></a>См. также
-- [Общие сведения о языке XAML (WPF)](xaml-overview-wpf.md)
-- [Пространства имен XAML (x:) Возможности языка](../../xaml-services/xaml-namespace-x-language-features.md)
+
+- [Обзор XAML (WPF)](xaml-overview-wpf.md)
+- [Пространство имен XAML (x:) Возможности языка](../../xaml-services/xaml-namespace-x-language-features.md)
 - [Расширения XAML WPF](wpf-xaml-extensions.md)
 - [Общие сведения о свойствах зависимости](dependency-properties-overview.md)
 - [TypeConverters и XAML](typeconverters-and-xaml.md)

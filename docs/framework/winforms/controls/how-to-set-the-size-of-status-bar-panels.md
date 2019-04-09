@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Задать размер панели строки состояния
+title: Практическое руководство. Определение размера панелей строки состояния
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - status bars [Windows Forms], setting panel size
 - panels [Windows Forms], setting size in status bars
 ms.assetid: a01bee43-d9eb-4954-84e6-45a93532d08d
-ms.openlocfilehash: 5b78463ca273f089f036166f5339977be435ccc9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: c6c9d6570e9b5c2f6d4eee0262c3d90e29e4b493
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711945"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59131065"
 ---
-# <a name="how-to-set-the-size-of-status-bar-panels"></a>Практическое руководство. Задать размер панели строки состояния
+# <a name="how-to-set-the-size-of-status-bar-panels"></a>Практическое руководство. Определение размера панелей строки состояния
 > [!NOTE]
 >  Элемент управления <xref:System.Windows.Forms.ToolStripStatusLabel> заменяет элемент управления <xref:System.Windows.Forms.StatusBar> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.StatusBar> можно сохранить для обратной совместимости и использования в будущем.  
   
@@ -66,8 +66,9 @@ ms.locfileid: "57711945"
     ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [Пошаговое руководство: Обновление строки состояния во время выполнения](walkthrough-updating-status-bar-information-at-run-time.md)
-- [Практическое руководство. Определить, какая из панелей в элемент управления Windows Forms StatusBar была нажата](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [Пошаговое руководство. Обновление строки состояния во время выполнения](walkthrough-updating-status-bar-information-at-run-time.md)
+- [Практическое руководство. Идентификация панели элемента управления StatusBar, которую щелкнул пользователь, в Windows Forms](determine-which-panel-wf-statusbar-control-was-clicked.md)
 - [Общие сведения об элементе управления StatusBar](statusbar-control-overview-windows-forms.md)

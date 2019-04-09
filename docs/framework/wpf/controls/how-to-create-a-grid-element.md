@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Grid control [WPF], creating [WPF], grid instance
 ms.assetid: b2f07626-9df8-43b8-8d36-492f3cb42837
-ms.openlocfilehash: 5aa0e5b617d952fd5df1f80ae0ff146a6899aa32
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ebb9369da73bd595338e5b6ef42bda639bde6ed4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379514"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134541"
 ---
 # <a name="how-to-create-a-grid-element"></a>Практическое руководство. Создание элемента сетки
 ## <a name="example"></a>Пример  
@@ -26,5 +26,6 @@ ms.locfileid: "57379514"
 
   ![Снимок экрана показан пользовательский интерфейс WPF, который содержит сетку разбить на три столбца.  Есть заголовок "2018 г. продукты поставляются» охват всех столбцов в верхней строке и содержит три столбца с показателями продаж для определенного квартала.  В нижней строке имеется текст, охватывающая два столбца с сообщением "Общее количество единиц: 300,000'](././media/how-to-create-a-grid-element/how-to-create-a-grid-element.png)
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Controls.Grid>
 - [Общие сведения о панелях](panels-overview.md)

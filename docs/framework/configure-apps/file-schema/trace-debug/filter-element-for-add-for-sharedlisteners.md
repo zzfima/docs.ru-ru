@@ -1,5 +1,5 @@
 ---
-title: Элемент <filter> для <add> для <sharedListeners>
+title: <filter> Элемент для <add> для <sharedListeners>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners/add/filter
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - filters, trace listeners
 - trace listeners, filters
 ms.assetid: 7d4e7faa-2e4e-4379-ac76-f6cd7f2f8fac
-ms.openlocfilehash: 739acedcc83cd207a7ef4c10c220d27695dd713d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 2bef729f179b41509d3c0381b26e38e364dbf86b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55269306"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120748"
 ---
 # <a name="filter-element-for-add-for-sharedlisteners"></a>\<Фильтр > элемент для \<Добавить > для \<sharedListeners >
 Добавляет фильтр к прослушивателю в коллекции `sharedListeners`.  
@@ -38,7 +38,7 @@ ms.locfileid: "55269306"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание:|  
+|Атрибут|Описание|  
 |---------------|-----------------|  
 |**type**|Обязательный атрибут.<br /><br /> Указывает тип фильтра. Можно использовать только полное имя типа (в формате <xref:System.Type.FullName%2A?displayProperty=nameWithType> свойство), или можно использовать имя полное имя типа, включая сведения о сборке (в формате <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> свойство). Сведения о создании полное имя типа, см. в разделе [Указание полных имен типов](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
 |**initializeData**|Необязательный атрибут.<br /><br /> Строка, передаваемая в конструктор для заданного класса.|  
@@ -48,7 +48,7 @@ ms.locfileid: "55269306"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`system.diagnostics`|Задает прослушиватели трассировки, собирающие, хранящие и маршрутизирующие сообщения, а также уровень, на котором установлен ключ трассировки.|  
@@ -86,6 +86,7 @@ ms.locfileid: "55269306"
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Diagnostics.TraceFilter>
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.TraceSource>

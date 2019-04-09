@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Profile binding
 ms.assetid: 22d85b19-0135-4141-9179-a0e9c343ad73
-ms.openlocfilehash: 4e2a985fdca6c03a2df1f8657d8d809d77e83b19
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 4e79d294f91bcb21a01b1abd86737dbe48b9dc71
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814228"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157187"
 ---
 # <a name="wshttpbinding"></a>WSHttpBinding
 В этом примере показано, как реализовать типовую службу и типовой клиент с помощью Windows Communication Foundation (WCF). Этот образец содержит консольную программу клиента (client.exe) и библиотеку службы, размещаемую в службах IIS. Служба реализует контракт, определяющий шаблон взаимодействия "запрос-ответ". Контракт определяется интерфейсом `ICalculator`, который предоставляет математические операции (сложение, вычитание, умножение и деление). Клиент осуществляет синхронные вызовы заданной математической операции, а служба отправляет в ответ результат. Действия клиента отображаются в окне консоли.  
@@ -90,4 +90,3 @@ Press <ENTER> to terminate client.
 3.  Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 4.  Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
-  

@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Настройка учетных данных службы федерации
+title: Практическое руководство. Настройка учетных данных службы федерации
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 149ab165-0ef3-490a-83a9-4322a07bd98a
-ms.openlocfilehash: 983504993a1252e4345c3c50130a25e25e99446d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 43347e3afdf55277ee8969954626d02192a10ec5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509286"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112571"
 ---
-# <a name="how-to-configure-credentials-on-a-federation-service"></a>Как выполнить Настройка учетных данных службы федерации
+# <a name="how-to-configure-credentials-on-a-federation-service"></a>Практическое руководство. Настройка учетных данных службы федерации
 В Windows Communication Foundation (WCF), создания федеративной службы состоит из следующих основных процедур:  
   
 1.  Настройка <xref:System.ServiceModel.WSFederationHttpBinding> или аналогичной пользовательской привязки. Дополнительные сведения о создании соответствующей привязки см. в разделе [как: Создание WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md).  
@@ -72,10 +72,11 @@ ms.locfileid: "54509286"
  Например, установка свойства <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> равным <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerTrust> приведет к тому, что будет проверяться подлинность всех выданных маркеров, сертификаты которых принадлежат к хранилищу сертификатов `TrustedPeople`. В этом случае задайте для свойства <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.TrustedStoreLocation%2A> значение <xref:System.Security.Cryptography.X509Certificates.StoreLocation.CurrentUser> или <xref:System.Security.Cryptography.X509Certificates.StoreLocation.LocalMachine>. Можно выбрать и другие режимы, в том числе режим <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>. Если выбран режим `Custom`, необходимо присвоить экземпляр класса <xref:System.IdentityModel.Selectors.X509CertificateValidator> свойству <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CustomCertificateValidator%2A>. Пользовательский проверяющий элемент управления может проверять сертификаты, используя любые условия. Дополнительные сведения см. в разделе [Как Создание службы, использующей пользовательское средство проверки сертификатов](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Федерация](../../../../docs/framework/wcf/feature-details/federation.md)
 - [Федерация и доверие](../../../../docs/framework/wcf/feature-details/federation-and-trust.md)
 - [Пример федерации](../../../../docs/framework/wcf/samples/federation-sample.md)
-- [Практическое руководство. Отключения безопасных сеансов в WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
+- [Практическое руководство. Порядок отключения безопасных сеансов в WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
 - [Практическое руководство. Создание WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
 - [Практическое руководство. Создание федеративного клиента](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
 - [Работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

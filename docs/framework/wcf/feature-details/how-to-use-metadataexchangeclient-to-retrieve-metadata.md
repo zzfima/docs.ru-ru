@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Использование MetadataExchangeClient для получения метаданных
+title: Практическое руководство. Использование MetadataExchangeClient для получения метаданных
 ms.date: 03/30/2017
 ms.assetid: 0754e9dc-13c5-45c2-81b5-f3da466e5a87
-ms.openlocfilehash: 8f99fcf8a355001908c31c383201da8db78c6d24
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ec4177e71c7d46dc5c908f01a051dc5a0df6baa4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708770"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168627"
 ---
-# <a name="how-to-use-metadataexchangeclient-to-retrieve-metadata"></a>Как выполнить Использование MetadataExchangeClient для получения метаданных
+# <a name="how-to-use-metadataexchangeclient-to-retrieve-metadata"></a>Практическое руководство. Использование MetadataExchangeClient для получения метаданных
 Используйте класс <xref:System.ServiceModel.Description.MetadataExchangeClient> для загрузки метаданных по протоколу WS-MetadataExchange (MEX). Извлеченные файлы метаданных возвращаются в виде объекта <xref:System.ServiceModel.Description.MetadataSet>. Возвращенный объект <xref:System.ServiceModel.Description.MetadataSet> содержит коллекцию объектов <xref:System.ServiceModel.Description.MetadataSection>, каждый из которых содержит конкретный диалект метаданных и идентификатор. Возвращенные метаданные можно записать в файлы или (если метаданные содержат документы WSDL) импортировать с помощью <xref:System.ServiceModel.Description.WsdlImporter>.  
   
  Конструкторы <xref:System.ServiceModel.Description.MetadataExchangeClient>, получающие адрес, используют привязку в статическом классе <xref:System.ServiceModel.Description.MetadataExchangeBindings>, который соответствует схеме универсального кода ресурса (URI) этого адреса. В качестве альтернативы можно использовать конструктор <xref:System.ServiceModel.Description.MetadataExchangeClient>, позволяющий явно задать используемую привязку. Заданная привязка применяется для распознавания всех ссылок на метаданные.  
@@ -36,6 +36,7 @@ ms.locfileid: "54708770"
  Чтобы скомпилировать этот пример кода, необходимо сделать ссылку на сборку System.ServiceModel.dll и импортировать пространство имен <xref:System.ServiceModel.Description>.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.Description.MetadataResolver>
 - <xref:System.ServiceModel.Description.MetadataExchangeClient>
 - <xref:System.ServiceModel.Description.WsdlImporter>

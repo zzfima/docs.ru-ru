@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8ab913aa-f400-4406-9436-f45bc6e54fbe
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 27f0d35dbe459ce53e6e10905a0a86a3f2bd3762
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 85a1a017197826717280f53995ed98f26f1d80bb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702630"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132669"
 ---
 # <a name="trace-switches"></a>Переключатели трассировки
 Переключатели трассировки позволяют включать, отключать и фильтровать выходные данные трассировки. Они являются объектами, которые существуют в коде и могут настраиваться извне с помощью файла конфигурации. В .NET Framework существует три типа переключателей трассировки: класс <xref:System.Diagnostics.BooleanSwitch> , класс <xref:System.Diagnostics.TraceSwitch> и класс <xref:System.Diagnostics.SourceSwitch> . Класс <xref:System.Diagnostics.BooleanSwitch> действует как переключатель, включая или отключая различные операторы трассировки. Классы <xref:System.Diagnostics.TraceSwitch> и <xref:System.Diagnostics.SourceSwitch> позволяют включать переключатель трассировки для определенного уровня трассировки, чтобы отображались сообщения <xref:System.Diagnostics.Trace> или <xref:System.Diagnostics.TraceSource> , заданные для данного уровня и всех уровней ниже него. Если этот переключатель отключить, то сообщения трассировки не будут отображаться. Все эти классы являются производными от абстрактного (**MustInherit**) класса **Switch**, как и следует переключателям, разработанным пользователями.  
@@ -84,6 +84,7 @@ MessageBox.Show(myTraceSwitch.TraceVerbose.ToString());
  Помимо предоставления **BooleanSwitch** и **TraceSwitch**вы можете определить свои собственные переключатели путем наследования от класса **Switch** и переопределения методов базового класса настраиваемыми методами. Дополнительные сведения о создании определенных разработчиками переключателей см. в описании класса <xref:System.Diagnostics.Switch> в справочнике по .NET Framework.  
   
 ## <a name="see-also"></a>См. также
+
 - [Прослушиватели трассировки](../../../docs/framework/debug-trace-profile/trace-listeners.md)
 - [Практическое руководство. Добавление операторов трассировки в код приложения](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
-- [Трассировка и инструментирование приложений](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [Трассировка и оборудование приложений](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

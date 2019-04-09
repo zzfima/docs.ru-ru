@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Заливка фигуры текстурой с изображением
+title: Практическое руководство. Заливка фигуры текстурой, созданной на основе изображения
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], using texture
 - shapes [Windows Forms], filling with images
 ms.assetid: 508da5a6-2433-4d2b-9680-eaeae4e96e3b
-ms.openlocfilehash: 89ebad6773b076514f5a745db653e0e0a18d4b48
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 099bc9f5359f19439f308f28a6766d470956daea
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708448"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177324"
 ---
-# <a name="how-to-fill-a-shape-with-an-image-texture"></a>Практическое руководство. Заливка фигуры текстурой с изображением
+# <a name="how-to-fill-a-shape-with-an-image-texture"></a>Практическое руководство. Заливка фигуры текстурой, созданной на основе изображения
 Можно заполнить замкнутой фигуры текстурой, созданной с помощью <xref:System.Drawing.Image> класс и <xref:System.Drawing.TextureBrush> класса.  
   
 ## <a name="example"></a>Пример  
@@ -31,7 +31,8 @@ ms.locfileid: "57708448"
  [!code-vb[System.Drawing.UsingABrush#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#21)]  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Предыдущий пример предназначен для работы с Windows Forms, и для него необходим объект <xref:System.Windows.Forms.PaintEventArgs> `e`, передаваемый в качестве параметра обработчику событий <xref:System.Windows.Forms.Control.Paint>.  
+ Предыдущий пример предназначен для работы с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs> `e`, который является параметром <xref:System.Windows.Forms.Control.Paint> обработчик событий.  
   
 ## <a name="see-also"></a>См. также
+
 - [Использование кисти для заливки фигур](using-a-brush-to-fill-shapes.md)

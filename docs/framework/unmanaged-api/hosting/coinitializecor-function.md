@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 556d26ac7e4fb8847f132d19bd2e749aff345abf
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: 8642c165c29f9ca63535a0efbb9dbb58d4660a49
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57211849"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160398"
 ---
 # <a name="coinitializecor-function"></a>Функция CoInitializeCor
-`CoInitializeCor` устарел.  
+`CoInitializeCor` является устаревшим.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,4 +42,5 @@ STDAPI CoInitializeCor (
  **Заголовок.** Cor.h  
   
 ## <a name="see-also"></a>См. также
+
 - [Глобальные статические функции метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

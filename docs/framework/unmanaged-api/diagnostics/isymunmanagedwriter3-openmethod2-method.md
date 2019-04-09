@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 14a8acc2e3babd376cb9754d35ce8fc5eaa1fd7c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a3dcb1327ad50761a8268e8adc7b1e976cae0b3a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492326"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200302"
 ---
 # <a name="isymunmanagedwriter3openmethod2-method"></a>Метод ISymUnmanagedWriter3::OpenMethod2
 Открывает метод и предоставляет его фактическое смещение раздела в образе.  
@@ -53,5 +53,6 @@ HRESULT OpenMethod2(
  **Заголовок.** CorSym.idl CorSym.h  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс ISymUnmanagedWriter3](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)
 - [Метод OpenMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)

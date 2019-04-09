@@ -2,12 +2,12 @@
 title: Message Encoding
 ms.date: 03/30/2017
 ms.assetid: f30ee941-aca9-4c67-82a5-421568496f07
-ms.openlocfilehash: d797b810af5df5fc1acf31e0ab6338689da9f55c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7fb0d4a994eaf1497841691eb76261329a48599d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734017"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168757"
 ---
 # <a name="message-encoding"></a>Message Encoding
 Кодирование - это процесс преобразования набора символов Юникода в последовательность байтов. Декодирование представляет собой обратный процесс. Windows Communication Foundation (WCF) включает в себя три типа кодирования для сообщений SOAP: Текст, двоичное кодирование и механизм оптимизации передачи сообщений (MTOM).  
@@ -19,6 +19,7 @@ ms.locfileid: "54734017"
  В разделе конфигурации `textMessageEncoding` указывается кодировщик текста, используемый для создания текстовых сообщений в сети. Сообщения, созданные этим кодировщиком, подходят для взаимодействия на базе +WS-*. Веб-служба или клиент веб-службы в общем могут понимать XML в текстовом виде. Однако передача больших блоков двоичных данных в виде текста является наименее эффективным методом для кодировки сообщений XML.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
 - [Привязки](../../../../../docs/framework/wcf/bindings.md)

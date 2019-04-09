@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Управление FlowDocument через свойство блоков
+title: Практическое руководство. Управление FlowDocument с помощью свойства Blocks
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - 'documents [WPF], manipulating FlowDocuments through Blocks property [WPF], , '
 - ', '
 ms.assetid: cbb7291e-3f1b-433e-9e16-f4d93ced14e8
-ms.openlocfilehash: c8098df74bb8472648dae2ca04de7a18f062c9e3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c307d85bf24e2d8a20226856181e0758758d40c0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365936"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130888"
 ---
-# <a name="how-to-manipulate-a-flowdocument-through-the-blocks-property"></a>Практическое руководство. Управление FlowDocument через свойство блоков
+# <a name="how-to-manipulate-a-flowdocument-through-the-blocks-property"></a>Практическое руководство. Управление FlowDocument с помощью свойства Blocks
 Эти примеры демонстрируют некоторые из наиболее распространенных операций, которые могут быть выполнены на <xref:System.Windows.Documents.FlowDocument> через <xref:System.Windows.Documents.FlowDocument.Blocks%2A> свойство.  
   
 ## <a name="example"></a>Пример  
@@ -49,6 +49,7 @@ ms.locfileid: "57365936"
  [!code-vb[FlowDocumentSnippets#_FlowDocumentBlocksClear](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumentblocksclear)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Управление группами строк таблицы пользователя с помощью свойства RowGroups](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
 - [Управление столбцами таблицы с помощью свойства Columns](how-to-manipulate-table-columns-through-the-columns-property.md)
 - [Управление группами строк таблицы пользователя с помощью свойства RowGroups](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)

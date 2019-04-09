@@ -6,12 +6,12 @@ helpviewer_keywords:
 - x:FieldModifier attribute [XAML Services]
 - XAML [XAML Services], x:FieldModifier attribute
 ms.assetid: ed427cd4-2f35-4d24-bd2f-0fa7b71ec248
-ms.openlocfilehash: 27ff9d027f5ff5155543097b7f0f0c2839387fe5
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: c20564bcf8a25b1b59887fbefe6419671e0d6c03
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58042453"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144551"
 ---
 # <a name="xfieldmodifier-directive"></a>Директива x:FieldModifier
 Изменяет поведение компиляции XAML таким образом, чтобы поля для ссылки на именованные объекты определяются с помощью <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> доступа вместо <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> поведение по умолчанию.  
@@ -51,6 +51,7 @@ ms.locfileid: "58042453"
  По умолчанию разделяемый класс для корневого элемента является открытым; Тем не менее, вы может сделать его закрытым, с помощью [директива x: ClassModifier](x-classmodifier-directive.md). [Директива x: ClassModifier](x-classmodifier-directive.md) также влияет на уровень доступа для экземпляра класса корневого элемента. Вы можете поместить оба `x:Name` и `x:FieldModifier` на корневой элемент, но это только создается копия открытого поля корневого элемента, а значение true, корневой элемент класса уровень доступа по-прежнему управляет [директива x: ClassModifier](x-classmodifier-directive.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Код XAML и пользовательские классы для WPF](../wpf/advanced/xaml-and-custom-classes-for-wpf.md)
 - [Код программной части и XAML в WPF](../wpf/advanced/code-behind-and-xaml-in-wpf.md)
 - [Директива x:Name](x-name-directive.md)

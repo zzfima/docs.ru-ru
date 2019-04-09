@@ -8,18 +8,16 @@ helpviewer_keywords:
 - ToolTip control [WPF], about ToolTip control
 - controls [WPF], ToolTip
 ms.assetid: f06c1603-e9cb-4809-8a62-234607fc52f7
-ms.openlocfilehash: 745ac23d65248302940eed6db3b8b19748dfc00d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 08b30d8be83ef9d814d17c5d4ec0c95a26bacdad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376329"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170109"
 ---
 # <a name="tooltip-overview"></a>Общие сведения о всплывающих подсказках
 Подсказка — это небольшое всплывающее окно, которое отображается, когда пользователь задерживает указатель мыши над элементом, например, на <xref:System.Windows.Controls.Button>. В этом разделе рассказывается о всплывающих подсказках и о том, как создавать и настраивать их содержимое.  
-  
- 
-  
+
 <a name="what_is_a_tooltip"></a>   
 ## <a name="what-is-a-tooltip"></a>Что такое всплывающая подсказка?  
  Когда пользователь наводит указатель мыши на элемент, для которого имеется всплывающая подсказка, окно с содержимым этой подсказки (например, текстом, описывающим функции этого элемента управления) отображается в течение заданного периода времени. Когда пользователь перемещает указатель мыши за пределы элемента управления, это окно исчезает, так как теперь фокус не направлен на содержимое подсказки.  
@@ -76,8 +74,9 @@ ms.locfileid: "57376329"
  [!code-xaml[ToolTipService#ToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Controls.ToolTipService>
 - <xref:System.Windows.Controls.ToolTip>
 - <xref:System.Windows.Controls.ToolTipEventArgs>
 - <xref:System.Windows.Controls.ToolTipEventHandler>
-- [Разделы практического руководства](tooltip-how-to-topics.md)
+- [Практические руководства](tooltip-how-to-topics.md)

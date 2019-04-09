@@ -2,12 +2,12 @@
 title: <security> из <webHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 727cf3d2-6f56-48ad-a59f-ba423edb9c83
-ms.openlocfilehash: 7f714ffb89d5ff990239bd1a02ffaeead4ad7d91
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b6375a64ea157df01f903901e0414a2989287aee
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360784"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132302"
 ---
 # <a name="security-of-webhttpbinding"></a>\<Безопасность > из \<webHttpBinding >
 Задает требования к безопасности для конечной точки, настроенной с [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
@@ -50,12 +50,12 @@ ms.locfileid: "57360784"
 |Значение|Описание|  
 |-----------|-----------------|  
 |Нет|Режим безопасности отключен.|  
-|Transport|Безопасность обеспечивается с помощью протокола HTTPS. Необходимо настроить службу с использованием сертификата SSL. Сообщение полностью защищено с помощью HTTPS, а проверка подлинности службы выполняется клиентом с помощью SSL-сертификата службы. Проверка подлинности клиента контролируется посредством `ClientCredentialType` атрибут [ \<транспорта >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-webhttpbinding.md).|  
+|Transport|Безопасность обеспечивается с помощью протокола HTTPS. Необходимо настроить службу с использованием SSL-сертификата. Сообщение полностью защищено с помощью HTTPS, а проверка подлинности службы выполняется клиентом с помощью SSL-сертификата службы. Проверка подлинности клиента контролируется посредством `ClientCredentialType` атрибут [ \<транспорта >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-webhttpbinding.md).|  
 |TransportCredentialOnly|Данный режим не обеспечивает целостности и конфиденциальности сообщений. Он обеспечивает проверку подлинности клиента на основе HTTP. Этот режим следует использовать с осторожностью. Он должен использоваться в средах, где безопасность транспорта обеспечивается другими средствами (например, IPSec), а только проверку подлинности клиента с помощью инфраструктуры WCF.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<Транспорт >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-webhttpbinding.md)|Определяет параметры безопасности транспорта. Этот элемент соответствует типу <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>.|  
   
@@ -63,9 +63,10 @@ ms.locfileid: "57360784"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<webHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|Элемент привязки, который используется для настройки конечных точек для Windows Communication Foundation (WCF) веб-служб, которые отвечают на запросы HTTP вместо сообщений SOAP.|  
+|[\<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|Элемент привязки, который используется для настройки конечных точек для Windows Communication Foundation (WCF) веб-служб, которые отвечают на запросы HTTP вместо сообщений SOAP.|  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.Configuration.WebHttpBindingElement>
 - <xref:System.ServiceModel.Configuration.WSHttpSecurityElement>
 - <xref:System.ServiceModel.WebHttpBinding.Security%2A>

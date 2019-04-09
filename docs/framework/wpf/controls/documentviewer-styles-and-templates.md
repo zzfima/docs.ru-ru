@@ -9,12 +9,12 @@ helpviewer_keywords:
 - parts [WPF], DocumentViewer
 - styles [WPF], DocumentViewer
 ms.assetid: 6bd4ff8f-ea6a-4084-ac58-e7a67446ce1c
-ms.openlocfilehash: b120359e63c2916e82b79b2f7b7f1aa5426be99c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4e91a640b36e4793567c9e728fd71ec8ce596743
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369647"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158422"
 ---
 # <a name="documentviewer-styles-and-templates"></a>Стили и шаблоны элемента DocumentViewer
 В этом разделе описываются стили и шаблоны для <xref:System.Windows.Controls.DocumentViewer> элемента управления. Вы можете изменить значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> предоставить уникальный внешний вид элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
@@ -30,7 +30,7 @@ ms.locfileid: "57369647"
 ## <a name="documentviewer-states"></a>Состояния DocumentViewer  
  В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.DocumentViewer> элемента управления.  
   
-|Имя VisualState|Имя VisualStateGroup|Описание:|  
+|Имя VisualState|Имя VisualStateGroup|Описание|  
 |-|-|-|  
 |Valid|ValidationStates|Элемент управления использует <xref:System.Windows.Controls.Validation> класс и <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> присоединенное свойство `false`.|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Присоединенное свойство `true` имеет элемент управления имеет фокус.|  
@@ -48,9 +48,10 @@ ms.locfileid: "57369647"
  Полный пример см. в разделе [Пример задания стиля с помощью ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
-- [Стили и шаблоны элемента управления](control-styles-and-templates.md)
+- [Стили и шаблоны элемента Control](control-styles-and-templates.md)
 - [Настройка элементов управления](control-customization.md)
 - [Стилизация и использование шаблонов](styling-and-templating.md)
 - [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

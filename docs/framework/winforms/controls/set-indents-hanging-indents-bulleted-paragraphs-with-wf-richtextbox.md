@@ -13,12 +13,12 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], setting indents and bullets
 - text boxes [Windows Forms], bullets
 ms.assetid: abfb40e6-5642-4691-8ec1-9d9ae91688dc
-ms.openlocfilehash: b2173769634ddc4b7b42c822c3f60212eb8d8886
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 4cb9b351b5ed1ab9cd05be0763d967000791fb46
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713037"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140651"
 ---
 # <a name="how-to-set-indents-hanging-indents-and-bulleted-paragraphs-with-the-windows-forms-richtextbox-control"></a>Практическое руководство. Задание отступов, выступов и маркеров абзацев с помощью элемента управления RichTextBox в Windows Forms
 Windows Forms <xref:System.Windows.Forms.RichTextBox> элемент управления имеет разнообразные варианты форматирования отображаемого в нем текста. Можно форматировать выделенные абзацы в виде маркированных списков, задав <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> свойство. Можно также использовать <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>, <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>, и <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> свойства, чтобы задать отступ абзацев относительно левой и правой границ элемента управления и левого края остальных строк текста.  
@@ -69,6 +69,7 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> элемент управ�
     >  Все эти свойства влияют на все абзацы, содержащие выделенный текст, а также на текст, который будет вводиться после текущей позиции курсора. Например, когда пользователь выделяет слово в абзаце и затем изменяет параметры отступа, новые параметры будут применяться ко всему абзацу, который содержит это слово, а также ко всем абзацам, которые будут введены после выделенного абзаца. Сведения о программном выборе текста см. в разделе <xref:System.Windows.Forms.TextBoxBase.Select%2A>.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.RichTextBox>
 - [Элемент управления RichTextBox](richtextbox-control-windows-forms.md)
-- [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)
+- [Элементы управления для использования в формах Windows Forms](controls-to-use-on-windows-forms.md)

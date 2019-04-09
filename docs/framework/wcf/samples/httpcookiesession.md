@@ -2,12 +2,12 @@
 title: HttpCookieSession
 ms.date: 03/30/2017
 ms.assetid: 101cb624-8303-448a-a3af-933247c1e109
-ms.openlocfilehash: ab6efa726b9a7eaf8106ff8752cdc4ecdfb0112f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 001f509e08780ec2d9776bcd6aed109ca0ff36a5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816724"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113754"
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
 В этом образце показано, как построить пользовательский канал протокола, который использует для управления сеансами протокол HTTP. Этот канал обеспечивает взаимодействие между службами Windows Communication Foundation (WCF) и клиентами ASMX или между клиентами и службами ASMX WCF.  
@@ -169,4 +169,3 @@ Press <ENTER> to terminate client.
 3.  Чтобы построить решение, следуйте инструкциям в [сборка образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 4.  Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
-  

@@ -2,12 +2,12 @@
 title: <issuedTokenParameters>
 ms.date: 03/30/2017
 ms.assetid: 120b3f37-7331-4816-b712-d6aab39655a4
-ms.openlocfilehash: 6b40bd6edd27f4c3b4b530387417311e1f93a921
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 6bdf56e3d2084dec8d44e1c4d3f0c1e50b711b92
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55283599"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153144"
 ---
 # <a name="issuedtokenparameters"></a>\<issuedTokenParameters>
 Задает параметры маркера безопасности, выданного в федеративном сценарии безопасности.  
@@ -58,8 +58,8 @@ ms.locfileid: "55283599"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<additionalRequestParameters >](../../../../../docs/framework/configure-apps/file-schema/wcf/additionalrequestparameters-element.md)|Коллекция элементов конфигурации, задающих дополнительные параметры запросов.|  
-|[\<claimTypeRequirements >](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|Задает коллекцию обязательных типов утверждений.<br /><br /> В федеративном сценарии службы предъявляют требования к входящим учетным данным. Например, входящие учетные данные должны обладать определенным набором типов утверждений. Каждый элемент в этой коллекции задает типы обязательных и необязательных утверждений, которые могут появляться в федеративных учетных данных.|  
+|[\<additionalRequestParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/additionalrequestparameters-element.md)|Коллекция элементов конфигурации, задающих дополнительные параметры запросов.|  
+|[\<claimTypeRequirements>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|Задает коллекцию обязательных типов утверждений.<br /><br /> В федеративном сценарии службы предъявляют требования к входящим учетным данным. Например, входящие учетные данные должны обладать определенным набором типов утверждений. Каждый элемент в этой коллекции задает типы обязательных и необязательных утверждений, которые могут появляться в федеративных учетных данных.|  
 |[\<issuer>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer-of-issuedtokenparameters.md)|Элемент конфигурации, задающий конечную точку, выдавшую текущий маркер.|  
 |[\<issuerMetadata>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata-of-issuedtokenparameters.md)|Элемент конфигурации, задающий адрес конечной точки метаданных поставщика маркера.|  
   
@@ -67,10 +67,11 @@ ms.locfileid: "55283599"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<secureConversationBootstrap >](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|Задает значения по умолчанию, используемые для инициализации службы безопасного обмена данными.|  
+|[\<secureConversationBootstrap>](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|Задает значения по умолчанию, используемые для инициализации службы безопасного обмена данными.|  
 |[\<Безопасность >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Задает параметры безопасности для пользовательской привязки.|  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters>
 - <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>
 - <xref:System.ServiceModel.Configuration.SecurityElementBase.IssuedTokenParameters%2A>

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 343e8dda-70b2-409d-9334-ce9a880c3cea
-ms.openlocfilehash: 3384eb98c8e58563f879b55054077ef801c0ebc7
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: da583ed207a8c4fc9e061d517895ca0f2fea2f5e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827972"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168822"
 ---
 # <a name="query-expression-syntax-examples-join-operators"></a>Примеры синтаксиса выражений запросов. Операторы соединения
 Соединение - важная операция в запросах, которые обращаются к источникам данных без доступных для навигации взаимосвязей, например к таблицам реляционной базы данных. Соединение двух источников данных представляет собой взаимосвязь объектов одного источника данных с объектами, использующими общий атрибут в другом источнике данных. Дополнительные сведения см. в разделе [Общие сведения о стандартных операторах запроса](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120)).  
@@ -45,4 +45,5 @@ ms.locfileid: "55827972"
  [!code-vb[DP L2E Examples#Join](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#join)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Запросы в LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

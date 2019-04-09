@@ -9,12 +9,12 @@ helpviewer_keywords:
 - gradients [Windows Forms], creating path
 - graphics paths [Windows Forms], creating gradient
 ms.assetid: 1948e834-e104-481c-b71d-d8aa9e4d106e
-ms.openlocfilehash: cbbffa7b9250c5e489a95f687ea58eaf2a08d1bf
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 31a8c68f382f81da2acac363bba6c8822e535770
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58126231"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186099"
 ---
 # <a name="how-to-create-a-path-gradient"></a>Практическое руководство. Создание градиента вдоль контура
 <xref:System.Drawing.Drawing2D.PathGradientBrush> Класс позволяет настраивать то, как вы постепенно изменение цвета заливки фигуры. Например можно указать один цвет для центра контура, а другой — для границы пути. Можно также определить отдельные цвета для каждой из нескольких точек на границе пути.  
@@ -111,4 +111,5 @@ ms.locfileid: "58126231"
  Предыдущий пример предназначен для работы с Windows Forms, и они требуют <xref:System.Windows.Forms.PaintEventArgs> `e`, который является параметром <xref:System.Windows.Forms.Control.Paint> обработчик событий.  
   
 ## <a name="see-also"></a>См. также
+
 - [Заливка фигур с помощью градиентной кисти](using-a-gradient-brush-to-fill-shapes.md)

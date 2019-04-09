@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e35c7f9e-648b-4fcc-9361-d365c3e42c9a
-ms.openlocfilehash: 3bd4cbeffcf320d6415b3a3d4aa907280d71a598
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3038e35947cd8f97266d374a367a77380df440dd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725185"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158877"
 ---
 # <a name="modifying-data-with-a-dbdataadapter"></a>Изменение данных с помощью DbDataAdapter
 Метод <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> объекта <xref:System.Data.Common.DbProviderFactory> предоставляет объект <xref:System.Data.Common.DbDataAdapter>, являющийся строго типизированным по отношению к базовому поставщику данных, который был задан во время создания фабрики. После этого объект <xref:System.Data.Common.DbCommandBuilder> можно использовать для создания команд вставки, обновления и удаления данных из объекта <xref:System.Data.DataSet> в источнике данных.  
@@ -43,7 +43,8 @@ ms.locfileid: "54725185"
 >  Полный отказ от использования параметров, зависящих от поставщика, путем применения объединения строк для непосредственного создания инструкций SQL не рекомендуется по соображениям безопасности. Если вместо параметров используется объединение строк, то приложение становится уязвимым к атакам по принципу внедрения кода SQL.  
   
 ## <a name="see-also"></a>См. также
+
 - [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
 - [Получение класса DbProviderFactory](../../../../docs/framework/data/adonet/obtaining-a-dbproviderfactory.md)
 - [DbConnection, DbCommand и DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

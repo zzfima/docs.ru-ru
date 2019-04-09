@@ -9,12 +9,12 @@ helpviewer_keywords:
 - drawing [Windows Forms], polygons
 - GDI+, polygons
 ms.assetid: a72213d2-d69a-4c2b-a75c-be7b20390c13
-ms.openlocfilehash: cffbee5f73b9fe92e2f1f3c7eff2f2336d9123a5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2b1e3d387e4d056d9187c54dcef560544206c370
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710086"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132630"
 ---
 # <a name="polygons-in-gdi"></a>Многоугольники в GDI+
 Многоугольник — замкнутой фигуры с тремя или более прямые стороны. Например треугольник — это многоугольник с трех сторон, прямоугольник — это многоугольник с четырех сторон и пятиугольник — это многоугольник с пятью сторонами. На следующем рисунке несколько многоугольников.  
@@ -32,7 +32,8 @@ ms.locfileid: "57710086"
  ![Многоугольник](./media/aboutgdip02-art08.gif "Aboutgdip02_art08")  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
-- [Линии, кривые и фигуры](lines-curves-and-shapes.md)
+- [Прямые и кривые линии и фигуры](lines-curves-and-shapes.md)
 - [Практическое руководство. Создание пера](how-to-create-a-pen.md)

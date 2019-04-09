@@ -2,12 +2,12 @@
 title: Вопросы безопасности при использовании метаданных
 ms.date: 03/30/2017
 ms.assetid: e78ef8ab-4f63-4656-ab93-b1deab2666d5
-ms.openlocfilehash: 2e1ad9f3c7d2a77ec6237bf1fc12c0d1a67181ad
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 0dc060475f868923e8c7e4c87ef43ef5912c7ac5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411917"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172969"
 ---
 # <a name="security-considerations-with-metadata"></a>Вопросы безопасности при использовании метаданных
 При использовании функций метаданных в Windows Communication Foundation (WCF), следует рассмотрите влияние на безопасность из публикации, извлечения и использования метаданных службы.  
@@ -39,5 +39,6 @@ ms.locfileid: "58411917"
  Файл конфигурации приложения службы может определять, каким образом будут публиковаться метаданные и будут ли они публиковаться в принципе. Рекомендуется защищать файлы конфигурации приложений с помощью списков управления доступом, чтобы злоумышленники не могли изменить параметры в этих файлах.  
   
 ## <a name="see-also"></a>См. также
+
 - [Практическое руководство. Защита конечных точек метаданных](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)
 - [Безопасность](../../../../docs/framework/wcf/feature-details/security.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bfe06c1300a22757b363236454f4f494dab1978a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 6c6d298c84b801b87832c56026b05f647cb5a9dd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57486801"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135184"
 ---
 # <a name="getresolutionscope-method"></a>Метод GetResolutionScope
 Извлекает область заданного типа.  
@@ -57,6 +57,7 @@ HRESULT GetResolutionScope(
  Требуется alink.h.  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [Интерфейс IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)

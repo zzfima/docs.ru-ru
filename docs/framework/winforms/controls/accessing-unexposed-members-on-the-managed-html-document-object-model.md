@@ -8,12 +8,12 @@ helpviewer_keywords:
 - unexposed members
 - managed HTML DOM [Windows Forms], accessing unexposed members
 ms.assetid: 762295bd-2355-4aa7-b43c-5bff997a33e6
-ms.openlocfilehash: 844e03891cce41566300409ad1bec67c875718a7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 20341a44eb8a43a9d130e0b76d23b513738c6782
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704519"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129510"
 ---
 # <a name="accessing-unexposed-members-on-the-managed-html-document-object-model"></a>Доступ к членам управляемой объектной модели документов HTML, доступ к которым не предоставляется явно
 Управляемые объектной модели (DOM) HTML документа содержит класс с именем <xref:System.Windows.Forms.HtmlElement> , предоставляющая свойства, методы и события, общие для всех элементов HTML. Иногда тем не менее, необходимо будет получить доступ к членам, которые управляемый интерфейс не предоставляется напрямую. В этом разделе рассматриваются два способа получения доступа к членам, не предоставленным явно, включая [!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)] и функции VBScript, определенные внутри веб-страницы.  
@@ -72,4 +72,5 @@ ms.locfileid: "57704519"
  Можно вызвать любую функцию скрипта, определяются в HTML-страницы с использованием <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A> метод. Если в метод скрипта возвращает HTML-элемент, можно использовать приведение преобразовать этот возвращаемый результат <xref:System.Windows.Forms.HtmlElement>. Дополнительные сведения и пример кода, см. в разделе <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>.  
   
 ## <a name="see-also"></a>См. также
+
 - [Использование управляемой объектной модели HTML-документов](using-the-managed-html-document-object-model.md)

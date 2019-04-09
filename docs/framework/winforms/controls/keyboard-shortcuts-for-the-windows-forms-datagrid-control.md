@@ -5,12 +5,12 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], DataGrid control
 - DataGrid control [Windows Forms], navigation keys
 ms.assetid: a01780f9-20d5-4f5f-808f-c790c9a007a5
-ms.openlocfilehash: c04340cf2d2c8e318ea7348c978ef943563c24da
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 58e65ee9d95329c3583515b99db47b87b3749c8f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711776"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145981"
 ---
 # <a name="keyboard-shortcuts-for-the-windows-forms-datagrid-control"></a>Сочетания клавиш для элемента управления DataGrid в Windows Forms
 > [!NOTE]
@@ -51,5 +51,6 @@ ms.locfileid: "57711776"
 |Введите <xref:System.DBNull.Value?displayProperty=nameWithType> значение в ячейке в режиме редактирования.|CTRL+0|  
   
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения об элементе управления DataGrid](datagrid-control-overview-windows-forms.md)
 - [Элемент управления DataGrid](datagrid-control-windows-forms.md)

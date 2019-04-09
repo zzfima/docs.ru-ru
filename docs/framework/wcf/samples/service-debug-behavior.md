@@ -2,12 +2,12 @@
 title: Поведение отладки службы
 ms.date: 03/30/2017
 ms.assetid: 9d8fd3fb-dc39-427a-8235-336a7e7162ba
-ms.openlocfilehash: 4eac577775074abf8c5f35c73dfa3286a75c2744
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: d97ff2d2290d58c0217add306718329a282abbff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835780"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192215"
 ---
 # <a name="service-debug-behavior"></a>Поведение отладки службы
 В этом образце показано, как могут настраиваться параметры поведения отладки службы. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md), который реализует `ICalculator` контракт службы. Этот образец явно определяет поведение отладки службы в файле конфигурации. Это также можно выполнить императивно в коде.  
@@ -58,4 +58,3 @@ ms.locfileid: "58835780"
 >  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\ServiceDebug`  
-  

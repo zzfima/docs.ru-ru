@@ -8,15 +8,15 @@ helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 - composite controls [WPF], hosting in WPF
 ms.assetid: 96fcd78d-1c77-4206-8928-3a0579476ef4
-ms.openlocfilehash: 50d85b74b523c8985bd0d3d407097a4f42cfeb60
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
-ms.translationtype: MT
+ms.openlocfilehash: f9e0477b2c186ea9b23886f460caf965a5db0244
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654228"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174360"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-composite-control-in-wpf"></a>Пошаговое руководство. Размещение составного элемента управления Windows Forms в приложении WPF
-Служба [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет среду с широкими возможностями для создания приложений. Тем не менее, если имеются существенные преимущества в [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] код, он может быть более эффективным для повторного использования по крайней мере часть этого кода в вашей [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения, а не переписывание кода с нуля. Наиболее распространенный сценарий — при наличии существующих элементов управления Windows Forms. В некоторых случаях, возможно, у вас даже нет доступа к исходному коду для этих элементов управления. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет простую процедуру размещения таких элементов управления в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения. Например, можно использовать [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] для большей части операций программирования при размещении специализированных <xref:System.Windows.Forms.DataGridView> элементов управления.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет среду с широкими возможностями для создания приложений. Тем не менее, если имеются существенные преимущества в [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] код, он может быть более эффективным для повторного использования по крайней мере часть этого кода в вашей [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения, а не переписывание кода с нуля. Наиболее распространенный сценарий — при наличии существующих элементов управления Windows Forms. В некоторых случаях, возможно, у вас даже нет доступа к исходному коду для этих элементов управления. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет простую процедуру размещения таких элементов управления в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения. Например, можно использовать [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] для большей части операций программирования при размещении специализированных <xref:System.Windows.Forms.DataGridView> элементов управления.  
   
  В этом пошаговом руководстве пошагово продемонстрирует приложения, на котором размещена составного элемента управления Windows Forms для поддержки ввода данных в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения. Составной элемент управления упакован в библиотеку DLL. Эта общая процедура может быть расширена для более сложных приложений и элементов управления. В этом пошаговом руководстве должна быть почти идентично повторяет свойства и функциональные возможности для [Пошаговое руководство: Размещение составного элемента управления WPF в Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md). Основным отличием является то, что сценарий размещения выполняется в обратном порядке.  
   
@@ -239,8 +239,9 @@ using MyControls;
  Выполните сборку и запуск приложения. Добавьте какой-нибудь текст в составной элемент управления Windows Forms и нажмите кнопку **ОК**. Текст отображается в метках. Щелкайте различные переключатели, чтобы увидеть соответствующий эффект в элементе управления.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Проектирование XAML в Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [Пошаговое руководство: Размещение элемента управления Windows Forms в WPF](walkthrough-hosting-a-windows-forms-control-in-wpf.md)
-- [Пошаговое руководство: Размещение составного элемента управления WPF в Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [Пошаговое руководство. Размещение элементов управления Windows Forms в WPF](walkthrough-hosting-a-windows-forms-control-in-wpf.md)
+- [Пошаговое руководство. Размещение составного элемента управления WPF в форме Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

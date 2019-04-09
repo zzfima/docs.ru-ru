@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column types
 - data grids [Windows Forms], columns
 ms.assetid: f0a0a9f1-8757-4bfd-891f-d7d12870dbed
-ms.openlocfilehash: 8fd3ad0da369702c2a5e27c0b8b9a39a71c372ac
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a33cf4cd865921c04ef10c7fccf3a67c3d22de73
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724574"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115678"
 ---
 # <a name="column-types-in-the-windows-forms-datagridview-control"></a>Типы столбцов элемента управления DataGridView в Windows Forms
 <xref:System.Windows.Forms.DataGridView> Элемент управления использует несколько типов столбцов для отображения данных и позволяют пользователям изменять или добавлять данные.  
@@ -81,6 +81,7 @@ ms.locfileid: "57724574"
  <xref:System.Windows.Forms.DataGridViewLinkColumn> Класс предоставляет несколько свойств для изменения внешнего вида ссылок до, во время и после их щелкнули.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn>
 - <xref:System.Windows.Forms.DataGridViewButtonColumn>
@@ -90,6 +91,6 @@ ms.locfileid: "57724574"
 - <xref:System.Windows.Forms.DataGridViewTextBoxColumn>
 - <xref:System.Windows.Forms.DataGridViewLinkColumn>
 - [Элемент управления DataGridView](datagridview-control-windows-forms.md)
-- [Практическое руководство. Отображение изображений в ячейках элемента управления DataGridView в Windows Forms](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)
-- [Практическое руководство. Работа со столбцами изображений в элементе управления DataGridView Windows Forms](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)
+- [Практическое руководство. Вывод изображений в ячейках элемента управления DataGridView в Windows Forms](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)
+- [Практическое руководство. Работа со столбцами изображений в элементе управления DataGridView в Windows Forms](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)
 - [Настройка элементов управления DataGridView в Windows Forms](customizing-the-windows-forms-datagridview-control.md)

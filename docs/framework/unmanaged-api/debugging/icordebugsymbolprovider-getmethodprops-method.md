@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 8f836b80-b7a5-460b-bf76-5f0e45652aea
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9dacfd6538dbf42a757a0e3534978238421644ae
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 784fcb10e9c0c3c6ff50c25d47bb4fb3fd5762ba
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57490441"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161113"
 ---
 # <a name="icordebugsymbolprovidergetmethodprops-method"></a>Метод ICorDebugSymbolProvider::GetMethodProps
 Возвращает сведения о свойствах метода, такие как токен метаданных метода и сведения о его универсальных параметрах, для указанного относительного виртуального адреса (RVA) в этом методе.  
@@ -50,7 +50,7 @@ HRESULT GetMethodProps(
  Чтобы получить требуемый размер метода `signature` массива, задайте `cbSignature` аргумент 0 и `signature` для **null**. После возврата метода параметр `pcbSignature` будет содержать число байт, требуемое для массива `signature`.  
   
 > [!NOTE]
->  Этот метод доступен только в .NET Native.  
+>  Этот метод доступен только в машинном коде .NET.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -62,6 +62,7 @@ HRESULT GetMethodProps(
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Метод GetTypeProps](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-gettypeprops-method.md)
 - [Интерфейс ICorDebugSymbolProvider](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
 - [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

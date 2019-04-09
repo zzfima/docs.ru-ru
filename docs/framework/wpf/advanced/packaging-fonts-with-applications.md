@@ -10,21 +10,19 @@ helpviewer_keywords:
 - typography [WPF], packaging fonts with applications
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
-ms.openlocfilehash: e66841fe72281bf0562b2ce50925a5c3a6bb9b54
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: fb91d4b413db512021b90f0d4ba3049fe7333601
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378882"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59123802"
 ---
 # <a name="packaging-fonts-with-applications"></a>Упаковка шрифтов с приложениями
 Этот раздел содержит общие сведения об упаковке шрифтов с вашей [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] приложения.  
   
 > [!NOTE]
 >  Как и с большинством типов программного обеспечения, файлы шрифтов предоставляются по лицензии, а не продаются. Лицензии, регулирующие использование шрифтов, отличаются в зависимости от производителя, но в целом большинство лицензий, в том числе охватывающие шрифты, [!INCLUDE[TLA#tla_ms#initcap](../../../../includes/tlasharptla-mssharpinitcap-md.md)] с приложениями и [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], не допускают шрифтов, внедренных в приложениях или в противном случае распространение. Ответственность разработчика состоит в том, чтобы гарантировать наличие требуемых лицензионных прав на любой шрифт, встраиваемый в приложение или распространяемый иными путями.  
-  
 
-  
 <a name="introduction_to_packaging_fonts"></a>   
 ## <a name="introduction-to-packaging-fonts"></a>Общие сведения об упаковке шрифтов  
  Можно легко упаковать шрифты в качестве ресурсов в вашей [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения для отображения текста пользовательского интерфейса и других типов текста на основе содержимого. Шрифты могут быть отдельными от файлов сборки приложения или включенными в них. Можно также создать библиотеку шрифтов только для ресурсов, на которую может ссылаться приложение.  
@@ -173,9 +171,10 @@ ms.locfileid: "57378882"
 -   Если обнаруживается неправильная ссылка, приложение прибегает к использованию доступного шрифта.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Documents.Typography>
 - <xref:System.Windows.Media.FontFamily>
 - [Microsoft Typography: Ссылки, новости и контакты](https://docs.microsoft.com/typography/)
 - [Спецификация OpenType](https://www.microsoft.com/typography/otspec/)
 - [Возможности шрифта OpenType](opentype-font-features.md)
-- [Пакет образцов шрифтов OpenType](sample-opentype-font-pack.md)
+- [Образец пакета шрифтов OpenType](sample-opentype-font-pack.md)

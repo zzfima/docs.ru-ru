@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 52b2c46fbcbf89bdcf1100f41e0ba7553d1f0b0a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 70828b8d4ebcc17fa178a53806ef7f55f7ba33e1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635056"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147320"
 ---
 # <a name="isymunmanageddocumentwriter-interface"></a>Интерфейс ISymUnmanagedDocumentWriter
 Предоставляет методы для записи в документ, на который ссылается хранилище символов.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание:|  
+|Метод|Описание|  
 |------------|-----------------|  
 |[Метод SetCheckSum](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setchecksum-method.md)|Задает сведения о контрольной сумме.|  
 |[Метод SetSource](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setsource-method.md)|Устанавливает внедренный источник документа, который выполняется запись.|  
@@ -37,4 +37,5 @@ ms.locfileid: "54635056"
  **Заголовок.** CorSym.idl CorSym.h  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейсы хранилища символов диагностики](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

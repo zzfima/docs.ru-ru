@@ -5,12 +5,12 @@ helpviewer_keywords:
 - scaling [WPF], elements
 - graphics [WPF], scaling elements
 ms.assetid: 18158d94-bbe7-4f6a-814e-84d27fa748bf
-ms.openlocfilehash: 6decc10c954b51d64c6045c01f1264df35429862
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 607b3a11085f746503c1b82552f1740b49d9ef5d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358617"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59131707"
 ---
 # <a name="how-to-scale-an-element"></a>Практическое руководство. Масштабирование элемента
 В этом примере показано, как использовать <xref:System.Windows.Media.ScaleTransform> для масштабирования элемента.  
@@ -38,7 +38,8 @@ ms.locfileid: "57358617"
  Полный пример см. в разделе [Примеры двумерных преобразований](https://go.microsoft.com/fwlink/?LinkID=158252).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.ScaleTransform>
 - [Общие сведения о классах Transform](transforms-overview.md)
-- [Разделы практического руководства](transformations-how-to-topics.md)
+- [Практические руководства](transformations-how-to-topics.md)

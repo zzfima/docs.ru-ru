@@ -14,12 +14,12 @@ helpviewer_keywords:
 - tables [Windows Forms], formatting in DataGrid control
 - formatting [Windows Forms]
 ms.assetid: a50fcc3b-8abf-47ec-9029-7f268af4ddb1
-ms.openlocfilehash: 696fdc09d285e0a04148e82b0cece6108b7d5a45
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: a07fde63463d209e0006de9be677636f19fd93a8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705913"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147905"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control"></a>Практическое руководство. Форматирование элемента управления DataGrid в Windows Forms
 > [!NOTE]
@@ -35,7 +35,7 @@ ms.locfileid: "57705913"
   
 1.  Задайте следующие свойства соответствующим образом:  
   
-    |Свойство.|Описание|  
+    |Свойство|Описание|  
     |--------------|-----------------|  
     |<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>|<xref:System.Windows.Forms.DataGrid.BackColor%2A> Свойство определяет цвет четных строк сетки. При задании <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> цвет, все остальные строки свойству цветом (строки 1, 3, 5 и т. д.).|  
     |<xref:System.Windows.Forms.DataGrid.BackColor%2A>|Цвет фона четных строк сетки (строки 0, 2, 4, 6 и т. д.).|  
@@ -154,6 +154,7 @@ ms.locfileid: "57705913"
     ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.GridTableStylesCollection>
 - <xref:System.Windows.Forms.GridColumnStylesCollection>
 - <xref:System.Windows.Forms.DataGrid>

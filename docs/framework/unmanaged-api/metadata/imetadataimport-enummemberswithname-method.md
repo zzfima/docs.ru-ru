@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 961c1e0468ab99baca387b7d6ada4733629b7ffa
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: c2509945d2799b81e036888d146a51cee87fda09
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492235"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169849"
 ---
 # <a name="imetadataimportenummemberswithname-method"></a>Метод IMetaDataImport::EnumMembersWithName
 Перечисляет токены MemberDef, представляющие члены указанного типа с заданным именем.  
@@ -64,7 +64,7 @@ HRESULT EnumMembersWithName (
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
-|HRESULT|Описание:|  
+|HRESULT|Описание|  
 |-------------|-----------------|  
 |`S_OK`|`EnumTypeDefs` успешно возвращен.|  
 |`S_FALSE`|Существуют маркеры MemberDef для перечисления отсутствуют. В этом случае `pcTokens` равно нулю.|  
@@ -79,5 +79,6 @@ HRESULT EnumMembersWithName (
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

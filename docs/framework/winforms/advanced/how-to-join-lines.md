@@ -14,12 +14,12 @@ helpviewer_keywords:
 - lines [Windows Forms], joining
 - graphics [Windows Forms], joining lines
 ms.assetid: 9fc480c2-3c75-4fd1-8ab5-296a99e820e2
-ms.openlocfilehash: a43cfb8a51435aa0c5c3f7aae673d38d3f7792ab
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 445d7f12f57137c6b06a074eeaf0574eb027a723
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410879"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174919"
 ---
 # <a name="how-to-join-lines"></a>Практическое руководство. Соединение линий
 Соединение линий — это общая область, сформированное две строки, в которых заканчивается достигают или перекрываться. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] предоставляет три стиля соединения линий: фацетное соединение, рельеф и округления. Стиль соединения линий — это свойство <xref:System.Drawing.Pen> класса. При указании стиль соединения линий для <xref:System.Drawing.Pen> объекта, что стиль будет применяться для всех соединенных линий в любом <xref:System.Drawing.Drawing2D.GraphicsPath> объекта, отображаются с помощью этого пера.  
@@ -38,4 +38,5 @@ ms.locfileid: "58410879"
  Предыдущий пример предназначен для работы с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs> `e`, который является параметром <xref:System.Windows.Forms.Control.Paint> обработчик событий.  
   
 ## <a name="see-also"></a>См. также
+
 - [Рисование линий и фигур с помощью пера](using-a-pen-to-draw-lines-and-shapes.md)

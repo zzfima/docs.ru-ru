@@ -2,18 +2,18 @@
 title: Составление вложенных запросов Entity SQL
 ms.date: 03/30/2017
 ms.assetid: 685d4cd3-2c1f-419f-bb46-c9d97a351eeb
-ms.openlocfilehash: b5fc39a25b5b8592117348b150da9d82454a1562
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 4d6892e96cfbc9c5ba9d389aa03588c5133c7943
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827322"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137986"
 ---
 # <a name="composing-nested-entity-sql-queries"></a>Составление вложенных запросов Entity SQL
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] - это богатый функциональный язык. Строительный блок [!INCLUDE[esql](../../../../../../includes/esql-md.md)] — это выражение. В отличие от обычного языка SQL [!INCLUDE[esql](../../../../../../includes/esql-md.md)] не ограничивается табличного результирующего набора: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] поддерживает создание сложных выражений, которые могут присутствовать литералы, параметры или вложенные выражения. Значение в выражении может быть параметризованным или состоящих из другого выражения.  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] — это богатый функциональный язык. Строительный блок [!INCLUDE[esql](../../../../../../includes/esql-md.md)] — это выражение. В отличие от обычного языка SQL [!INCLUDE[esql](../../../../../../includes/esql-md.md)] не ограничивается табличного результирующего набора: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] поддерживает создание сложных выражений, которые могут присутствовать литералы, параметры или вложенные выражения. Значение в выражении может быть параметризованным или состоящих из другого выражения.  
   
 ## <a name="nested-expressions"></a>Вложенные выражения  
- Вложенное выражение можно разместить в любом месте, где допустим тип возвращаемого им значения. Например:  
+ Вложенное выражение можно разместить в любом месте, где допустим тип возвращаемого им значения. Пример:  
   
 ```  
 -- Returns a hierarchical collection of three elements at top-level.   
@@ -25,7 +25,7 @@ ROW(@x, {@x}, {@x, 4, 5}, {@x, 7, 8, 9})
 {{{@x}}};  
 ```  
   
- Вложенный запрос можно разместить в предложении проекции. Например:  
+ Вложенный запрос можно разместить в предложении проекции. Пример:  
   
 ```  
 -- Returns a collection of rows where each row contains an Address entity.  
@@ -46,7 +46,7 @@ UNION ALL
 FROM … );  
 ```  
   
- В следующем примере показывается, как правильно вкладывать выражения [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [Практическое руководство. Порядок объединения двух запросов](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896299(v=vs.100)).  
+ В следующем примере показывается, как правильно вкладывать выражения [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [Как Порядок объединения двух запросов](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896299(v=vs.100)).  
   
 ## <a name="nested-queries-in-projection"></a>Вложенные запросы в проекции  
  Вложенные запросы в предложении проекции могут быть переведены в запросы декартового произведения на сервере. На некоторых внутренних серверах, в том числе на серверах SLQ Server, это может привести к чрезмерному разрастанию таблицы TempDB, что может отрицательно сказаться на производительности.  
@@ -76,4 +76,5 @@ SELECT C2.FirstName, C2.LastName
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения об Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

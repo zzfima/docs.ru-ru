@@ -6,29 +6,27 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: 857175c65c62d8abad07a93baf72aa3709e5cb6b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 72ef84cb53c6eff1fc2fb9459b40e780869243a1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375640"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145929"
 ---
 # <a name="binding-sources-overview"></a>Общие сведения об источниках привязки
 В привязке данных объект источника привязки (источник) ссылается на объект, из которого вы получаете данные. В этом разделе рассматриваются типы объектов, которые можно использовать в качестве источника привязки.  
-  
-  
-  
+
 <a name="binding_sources"></a>   
 ## <a name="binding-source-types"></a>Типы источников привязки  
- Привязка данных [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] поддерживает указанные далее типы источников привязки.  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Привязка данных поддерживает следующие типы источников привязки:  
   
 |Источник привязки|Описание|  
 |--------------------|-----------------|  
-|Объекты [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)].|Можно осуществить привязку к открытым свойствам, подсвойствам, а также индексаторам любого объекта [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]. Обработчик привязки использует отражение [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] для получения значений свойств. Кроме того, объекты, реализующие <xref:System.ComponentModel.ICustomTypeDescriptor> или имеют зарегистрированные <xref:System.ComponentModel.TypeDescriptionProvider> также работают с обработчиком привязки.<br /><br /> Дополнительные сведения о том, как реализовать класс, который можно использовать в качестве источника привязки, см. в разделе [Использование класса в качестве источника привязки](#classes).|  
+|[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] объекты|Можно осуществить привязку к открытым свойствам, подсвойствам, а также индексаторам любого объекта [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]. Обработчик привязки использует отражение [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] для получения значений свойств. Кроме того, объекты, реализующие <xref:System.ComponentModel.ICustomTypeDescriptor> или имеют зарегистрированные <xref:System.ComponentModel.TypeDescriptionProvider> также работают с обработчиком привязки.<br /><br /> Дополнительные сведения о том, как реализовать класс, который можно использовать в качестве источника привязки, см. в разделе [Использование класса в качестве источника привязки](#classes).|  
 |динамические объекты|Можно привязать к доступным свойствам и индексаторам объекта, который реализует <xref:System.Dynamic.IDynamicMetaObjectProvider> интерфейс. Если можно обратиться к члену кода, к нему можно выполнить привязку. Например, если динамический объект позволяет получить доступ к члену в коде с помощью `someObjet.AProperty`, к нему можно выполнить привязку, задав в качестве пути привязки `AProperty`.|  
-|Объекты [!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)].|Можно привязать к [!INCLUDE[TLA2#tla_adonet](../../../../includes/tla2sharptla-adonet-md.md)] объекты, такие как <xref:System.Data.DataTable>. [!INCLUDE[TLA2#tla_adonet](../../../../includes/tla2sharptla-adonet-md.md)] <xref:System.Data.DataView> Реализует <xref:System.ComponentModel.IBindingList> интерфейс, который предоставляет уведомления об изменениях, которые прослушивает механизм привязки.|  
-|Объекты [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)].|Можно привязать к и запустить `XPath` запрашивает на <xref:System.Xml.XmlNode>, <xref:System.Xml.XmlDocument>, или <xref:System.Xml.XmlElement>. Удобный способ доступа к [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] данных, который является источником привязки в разметке, можно выполнить <xref:System.Windows.Data.XmlDataProvider> объекта. Дополнительные сведения см. в разделе [Привязка к XML-данным с помощью XMLDataProvider и запросов XPath](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).<br /><br /> Также можно привязать к <xref:System.Xml.Linq.XElement> или <xref:System.Xml.Linq.XDocument>, или выполнить привязку к результатам запросов, выполняемых для объектов этих типов с помощью LINQ to XML. Для использования LINQ to XML для доступа к данным XML, который является источником привязки в разметке удобно использовать <xref:System.Windows.Data.ObjectDataProvider> объекта. Дополнительные сведения см. в разделе [Привязка к XDocument, XElement или LINQ для результатов запросов XML](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md).|  
-|Объекты <xref:System.Windows.DependencyObject>.|Можно привязать к свойствам зависимости любого <xref:System.Windows.DependencyObject>. Пример см. в разделе [Как привязать свойства двух элементов управления](how-to-bind-the-properties-of-two-controls.md).|  
+|[!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] объекты|Можно привязать к [!INCLUDE[TLA2#tla_adonet](../../../../includes/tla2sharptla-adonet-md.md)] объекты, такие как <xref:System.Data.DataTable>. [!INCLUDE[TLA2#tla_adonet](../../../../includes/tla2sharptla-adonet-md.md)] <xref:System.Data.DataView> Реализует <xref:System.ComponentModel.IBindingList> интерфейс, который предоставляет уведомления об изменениях, которые прослушивает механизм привязки.|  
+|[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] объекты|Можно привязать к и запустить `XPath` запрашивает на <xref:System.Xml.XmlNode>, <xref:System.Xml.XmlDocument>, или <xref:System.Xml.XmlElement>. Удобный способ доступа к [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] данных, который является источником привязки в разметке, можно выполнить <xref:System.Windows.Data.XmlDataProvider> объекта. Дополнительные сведения см. в разделе [Привязка к XML-данным с помощью XMLDataProvider и запросов XPath](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).<br /><br /> Также можно привязать к <xref:System.Xml.Linq.XElement> или <xref:System.Xml.Linq.XDocument>, или выполнить привязку к результатам запросов, выполняемых для объектов этих типов с помощью LINQ to XML. Для использования LINQ to XML для доступа к данным XML, который является источником привязки в разметке удобно использовать <xref:System.Windows.Data.ObjectDataProvider> объекта. Дополнительные сведения см. в разделе [Привязка к XDocument, XElement или LINQ для результатов запросов XML](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md).|  
+|<xref:System.Windows.DependencyObject> объекты|Можно привязать к свойствам зависимости любого <xref:System.Windows.DependencyObject>. Пример см. в разделе [Как привязать свойства двух элементов управления](how-to-bind-the-properties-of-two-controls.md).|  
   
 <a name="classes"></a>   
 ## <a name="implementing-a-class-for-the-binding-source"></a>Использование класса в качестве источника привязки  
@@ -95,10 +93,11 @@ ms.locfileid: "57375640"
  Дополнительные сведения о безопасности частичного доверия см. в разделе [Безопасность частичного доверия в WPF](../wpf-partial-trust-security.md).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Data.ObjectDataProvider>
 - <xref:System.Windows.Data.XmlDataProvider>
 - [Указание источника привязки](how-to-specify-the-binding-source.md)
 - [Общие сведения о привязке данных](data-binding-overview.md)
-- [Разделы практического руководства](data-binding-how-to-topics.md)
+- [Практические руководства](data-binding-how-to-topics.md)
 - [Общие сведения о привязке данных WPF с помощью LINQ to XML](/visualstudio/designers/wpf-data-binding-with-linq-to-xml-overview)
 - [Привязка данных](../advanced/optimizing-performance-data-binding.md)

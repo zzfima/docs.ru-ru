@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fbdb17bcd502b75da0a73d9a36cf36d6564320bc
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 2d59450540b680d6004c47fd646769e38c806024
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975489"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161269"
 ---
 # <a name="icordebugnativeframe-interface"></a>Интерфейс ICorDebugNativeFrame
 
@@ -29,7 +29,7 @@ ms.locfileid: "56975489"
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание:|  
+|Метод|Описание|  
 |------------|-----------------|  
 |[Метод CanSetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-cansetip-method.md)|Получает значение, указывающее, является ли он безопасным задать указатель инструкций в указанное расположение смещения в машинном коде.|  
 |[Метод GetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-getip-method.md)|Получает смещение кадра стека в машинный код.|  
@@ -56,4 +56,5 @@ ms.locfileid: "56975489"
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

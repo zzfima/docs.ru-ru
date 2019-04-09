@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 39b2ef5f98529cf9fa4dac9d78763e2cad7251a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7a94673b4be4d15edaaf54c22f90723216c8bc10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724964"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141301"
 ---
 # <a name="icorthreadpoolcorregisterwaitforsingleobject-method"></a>Метод ICorThreadpool::CorRegisterWaitForSingleObject
 Этот метод поддерживает инфраструктуру .NET Framework и не предназначен для использования непосредственно из программного кода.  
@@ -51,4 +51,5 @@ HRESULT CorRegisterWaitForSingleObject (
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс ICorThreadpool](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-interface.md)

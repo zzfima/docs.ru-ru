@@ -1,5 +1,5 @@
 ---
-title: Элемент <mscorlib> для параметров криптографии
+title: <mscorlib> Элемент для параметров криптографии
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#mscorlib
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - mscorlib element
 - <mscorlib> element
 ms.assetid: d549668f-31f1-4b92-8021-a9135c09ca3c
-ms.openlocfilehash: 84eb12916c2d1ec2d35830fae2c6ce07f1c7c664
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ec328bc4c63bd4754c6f975ac03e610718304245
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55259645"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165156"
 ---
 # <a name="mscorlib-element-for-cryptography-settings"></a>\<mscorlib > элемент для параметров криптографии
 Содержит [ \<cryptographySettings > элемент](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md).  
@@ -36,13 +36,13 @@ ms.locfileid: "55259645"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |`cryptographySettings`|Содержит параметры шифрования.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
   
@@ -69,9 +69,10 @@ ms.locfileid: "55259645"
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A>
 - <xref:System.Security.Cryptography>
 - [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Схема параметров шифрования](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
+- [Схема параметров криптографии](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [службы шифрования](../../../../../docs/standard/security/cryptographic-services.md)
 - [Настройка криптографических классов](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

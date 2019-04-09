@@ -9,12 +9,12 @@ helpviewer_keywords:
 - COM [WCF]
 - WCF, COM integration
 ms.assetid: c98bda3e-6779-419e-8e6d-9aa94053026d
-ms.openlocfilehash: 8fa802ce20bfde3579258a5d34bc5d7f68aaaea3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 51626da6e97e346f43cfe606a5164024580a2ac7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657406"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155328"
 ---
 # <a name="integrating-with-com-applications"></a>Интеграция с приложениями COM
 Службы Windows Communication Foundation (WCF) можно интегрировать непосредственно в существующий код с помощью моникера службы WCF. Моникер служб можно использовать в широком наборе сред разработки на базе модели COM, например в Office VBA, Visual Basic 6.0 и Visual C++ 6.0.  
@@ -42,4 +42,5 @@ ms.locfileid: "54657406"
  <xref:System.ServiceModel>  
   
 ## <a name="see-also"></a>См. также
+
 - [Интеграция с приложениями COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)

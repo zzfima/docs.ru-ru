@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Получение выделенных ячеек, строк и столбцов в элементе управления DataGridView Windows Forms
+title: Практическое руководство. Получение информации о выделенных пользователем ячейках, строках и столбцах элемента управления DataGridView в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], getting selection
 - getting selection [Windows Forms], DataGridView control [Windows Forms]
 ms.assetid: d93c4b5b-498e-49bc-982a-2229d61778e4
-ms.openlocfilehash: ad6e704b64e3f25f456b98691dfe12c13f8440a2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: cd3e88b5b01b67f677fbe203a0db9c4de7fe67ff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713310"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160554"
 ---
-# <a name="how-to-get-the-selected-cells-rows-and-columns-in-the-windows-forms-datagridview-control"></a>Практическое руководство. Получение выделенных ячеек, строк и столбцов в элементе управления DataGridView Windows Forms
+# <a name="how-to-get-the-selected-cells-rows-and-columns-in-the-windows-forms-datagridview-control"></a>Практическое руководство. Получение информации о выделенных пользователем ячейках, строках и столбцах элемента управления DataGridView в Windows Forms
 Можно получить выделенных ячеек, строк или столбцов из <xref:System.Windows.Forms.DataGridView> элемента управления с помощью соответствующих свойств: <xref:System.Windows.Forms.DataGridView.SelectedCells%2A>, <xref:System.Windows.Forms.DataGridView.SelectedRows%2A>, и <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A>. В следующих процедурах будет получить выделенных ячеек и отображать их индексы строки и столбца в <xref:System.Windows.Forms.MessageBox>.  
   
 ### <a name="to-get-the-selected-cells-in-a-datagridview-control"></a>Для получения выделенных ячеек в элементе управления DataGridView  
@@ -56,6 +56,7 @@ ms.locfileid: "57713310"
  Коллекций, описанных в этом разделе не осуществляют эффективно, когда выбраны большое количество ячеек, строк или столбцов. Дополнительные сведения об использовании этих коллекций с большими объемами данных, см. в разделе [масштабирование элемента управления DataGridView в Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.SelectionMode%2A>
 - <xref:System.Windows.Forms.DataGridView.AreAllCellsSelected%2A>

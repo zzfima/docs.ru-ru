@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4fd5ed2c-b03a-4054-a3ed-3ddb380d7d9d
-ms.openlocfilehash: bfa163e11415a0e389f9d1ce0b0b847097328223
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 84bd5f48c993dc5b15104b70081f739a1bec2e5c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904627"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152481"
 ---
 # <a name="method-based-query-syntax-examples-join-linq-to-dataset"></a>Примеры синтаксиса запросов на основе методов. Соединение (LINQ to DataSet)
 Соединение - важная операция в запросах, которые обращаются к источникам данных без доступных для навигации взаимосвязей, например к таблицам реляционной базы данных. Соединение двух источников данных представляет собой взаимосвязь объектов одного источника данных с объектами, использующими общий атрибут в другом источнике данных. Дополнительные сведения см. в разделе [Общие сведения о стандартных операторах запроса (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) или [Обзор операторов стандартных запросов (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
@@ -43,9 +43,10 @@ ms.locfileid: "55904627"
  [!code-vb[DP LINQ to DataSet Examples#JoinWithGroupedResults_MQ](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#joinwithgroupedresults_mq)]  
   
 ## <a name="see-also"></a>См. также
-- [Загрузка данных в DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
+
+- [Загрузка данных в набор данных](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
 - [Примеры LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
 - [Общие сведения о стандартных операторах запроса (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Общие сведения о стандартных операторах запроса (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Общие сведения о стандартных операторах (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Образцы соединений](https://go.microsoft.com/fwlink/?LinkId=187357)
 - [Образцы наборов данных](https://go.microsoft.com/fwlink/?LinkId=187358)

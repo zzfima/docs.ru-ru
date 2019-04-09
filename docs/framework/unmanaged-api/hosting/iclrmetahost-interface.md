@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b52b12df9953dbafaeebfe223313288de0e559b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a1b189b79a02f04b7f795ff2524441f12b053cec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584052"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143953"
 ---
 # <a name="iclrmetahost-interface"></a>Интерфейс ICLRMetaHost
 Предоставляет методы, которые возвращают определенную версию общеязыковой среды выполнения (CLR) в зависимости от номера версии, перечислены все установленные среды CLR, все среды выполнения, которые загружены в указанного процесса, версию среды CLR, используемый для компиляции сборки, выхода из процесса с помощью чистая среда завершение работы и устаревшие API привязки запроса.  
@@ -57,5 +57,6 @@ HRESULT hr = CLRCreateInstance(CLSID_CLRMetaHost,
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейсы размещения](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
 - [Размещение](../../../../docs/framework/unmanaged-api/hosting/index.md)

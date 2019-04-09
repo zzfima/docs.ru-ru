@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Условная компиляция с Trace и Debug
+title: Практическое руководство. Условная компиляция с использованием атрибутов Trace и Debug
 ms.date: 03/30/2017
 helpviewer_keywords:
 - trace compiler options
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1738d73cf99c8b5a8131bd5e018a799c3a7780c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 76e442536e4c863031072adfb4d8716ca7a19aff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523562"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158662"
 ---
-# <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Как выполнить Условная компиляция с Trace и Debug
+# <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Практическое руководство. Условная компиляция с использованием атрибутов Trace и Debug
 При отладке приложения во время разработки выходные данные трассировки и отладки отображаются в окне «Вывод» Visual Studio. Однако чтобы включить возможности трассировки в развернутом приложении, необходимо скомпилировать инструментированные приложения с включенной директивой компилятора **TRACE**. Это позволяет компилировать код трассировки в выпускаемой версии приложения. Если не включить директиву **TRACE**, весь код трассировки игнорируется во время компиляции и не включается в исполняемый код, который будет развернут.  
   
  Методы трассировки и отладки имеют связанные условные атрибуты. Например, если условный атрибут трассировки имеет значение **true**, все операторы трассировки включаются в сборку (компилированные файлы .exe или .dll); если условный атрибут **Trace** имеет значение **false**, операторы трассировки не включаются.  
@@ -96,7 +96,8 @@ ms.locfileid: "54523562"
 >  Когда все готово для компиляции, можно выбрать команду **Построить** из меню **Сборка** или использовать метод командной строки (но без ввода **d:**), чтобы определить символы условной компиляции.  
   
 ## <a name="see-also"></a>См. также
-- [Трассировка и инструментирование приложений](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+
+- [Трассировка и оборудование приложений](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
 - [Практическое руководство. Создание, инициализация и настройка переключателей трассировки](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
 - [Переключатели трассировки](../../../docs/framework/debug-trace-profile/trace-switches.md)
 - [Прослушиватели трассировки](../../../docs/framework/debug-trace-profile/trace-listeners.md)

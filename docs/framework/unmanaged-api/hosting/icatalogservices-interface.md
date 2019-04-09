@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e90f2b7b81bbf6401313209170ea65186c38d4e8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 07356dcf81df41a1dd419c3b68829dcbfec5a073
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711045"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147255"
 ---
 # <a name="icatalogservices-interface"></a>Интерфейс ICatalogServices
 Предоставляет методы для создания каталога служб.  
@@ -36,4 +36,5 @@ ms.locfileid: "54711045"
 |[Метод NotAutodone](../../../../docs/framework/unmanaged-api/hosting/icatalogservices-notautodone-method.md)|Зарезервировано только для внутреннего использования.|  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейсы размещения](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

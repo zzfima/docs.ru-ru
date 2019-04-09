@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a9b4e9149fa50a951f2a56c83412e42fe86b9563
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 3571e2698b980b12b89a5b689efb868a34a3ef71
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57501205"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167665"
 ---
 # <a name="clrcreateinstance-function"></a>Функция CLRCreateInstance
 Предоставляет один из трех интерфейсов: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), или [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).  
@@ -53,7 +53,7 @@ HRESULT CLRCreateInstance(
 |HRESULT|Описание|  
 |-------------|-----------------|  
 |S_OK|Метод завершился успешно.|  
-|E_POINTER|Параметр `ppInterface` имеет значение null.|  
+|E_POINTER|`ppInterface` имеет значение null.|  
   
 ## <a name="remarks"></a>Примечания  
  В следующей таблице показаны поддерживаемые сочетания для `clsid` и `riid`.  
@@ -92,4 +92,5 @@ hr = CLRCreateInstance (CLSID_CLRDebugging, IID_ICLRDebugging,
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Размещение](../../../../docs/framework/unmanaged-api/hosting/index.md)

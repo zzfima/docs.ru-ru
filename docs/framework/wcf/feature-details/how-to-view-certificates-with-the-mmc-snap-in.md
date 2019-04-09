@@ -4,12 +4,12 @@ ms.date: 02/25/2019
 helpviewer_keywords:
 - certificates [WCF], viewing with the MMC snap-in
 ms.assetid: 2b8782aa-ebb4-4ee7-974b-90299e356dc5
-ms.openlocfilehash: 6ec86ffca9ae84a9c3276a3dd6de676919dcd2e0
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 69f79b64250ff46524e7b4720d13351774875a3f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200290"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167509"
 ---
 # <a name="how-to-view-certificates-with-the-mmc-snap-in"></a>Практическое руководство. Просмотр сертификатов с помощью оснастки MMC
 При создании безопасного клиента или службы, можно использовать [сертификат](working-with-certificates.md) как учетные данные. Например, тип учетных данных является сертификат X.509, который вы создадите с <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType> метод. 
@@ -22,7 +22,6 @@ ms.locfileid: "57200290"
 
 - Учетная запись службы: Хранилище является локальной для определенной службы на устройстве.
 
-  
 ## <a name="view-certificates-in-the-mmc-snap-in"></a>Просмотр сертификатов в оснастке MMC 
 
 Ниже показано, как просмотреть хранилища на локальном устройстве, чтобы найти соответствующий сертификат: 
@@ -57,7 +56,6 @@ ms.locfileid: "57200290"
 8. Чтобы просмотреть сертификаты в оснастке MMC, выберите **корень консоли** в левой панели раскройте **сертификаты (локальный компьютер)**.
 
     Появится список каталогов для каждого типа сертификата. Из каталога каждого сертификата можно просматривать, экспортировать, импортировать и удалите свои сертификаты.
-  
 
 ## <a name="view-certificates-with-the-certificate-manager-tool"></a>Просмотр сертификатов с помощью средство диспетчера сертификатов
 
@@ -79,8 +77,8 @@ ms.locfileid: "57200290"
   
 2. Чтобы просмотреть сертификаты, в разделе **Сертификаты — текущий пользователь** в области слева разверните каталог для типа сертификата, вы хотите просмотреть.
 
-  
 ## <a name="see-also"></a>См. также
+
 - [Работа с сертификатами](working-with-certificates.md)
 - [Практическое руководство. Создание временных сертификатов для использования во время разработки](how-to-create-temporary-certificates-for-use-during-development.md)
 - [Практическое руководство. Извлечение отпечатка сертификата](how-to-retrieve-the-thumbprint-of-a-certificate.md)

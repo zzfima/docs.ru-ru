@@ -2,12 +2,12 @@
 title: Microsoft.Transactions.TransactionBridge.VolatileOutcomeTimeout
 ms.date: 03/30/2017
 ms.assetid: 2dbe34c5-57c7-4b64-9257-63021911d03c
-ms.openlocfilehash: fac3682a955ed0caf21fdb1dea48672bf3bdea77
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 22992b4dfad4b4867adda0fcbbd8ecc5eb67d87e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704580"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160152"
 ---
 # <a name="microsofttransactionstransactionbridgevolatileoutcometimeout"></a>Microsoft.Transactions.TransactionBridge.VolatileOutcomeTimeout
 Истекло время ожидания службой протокола WS-AT ответа на результативное сообщение от неустойчивого участника. При возвращении участника результат транзакции будет поставлен под сомнение.  
@@ -19,6 +19,7 @@ ms.locfileid: "54704580"
  Убедитесь, что все неустойчивые участники имеют возможность ответить в течение заданного времени. Период времени по умолчанию - 180 секунд.  Если этого недостаточно, увеличьте значение политики таймера `VolatileOutcomeDelay` для протокола WS-AT.  
   
 ## <a name="see-also"></a>См. также
+
 - [Трассировка](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [Использование трассировки для устранения неполадок приложения](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
 - [Администрирование и диагностика](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -2,12 +2,12 @@
 title: Microsoft.Transactions.TransactionBridge.EnlistTransactionFailure
 ms.date: 03/30/2017
 ms.assetid: 1b9f5139-e122-4716-9ef7-2f38e1813993
-ms.openlocfilehash: 4f51777ae690178b83d353f72e63a6f2958b1592
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 93c96d94aaeddeb7e7b04ea80645b8de95b0343e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674587"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143329"
 ---
 # <a name="microsofttransactionstransactionbridgeenlisttransactionfailure"></a>Microsoft.Transactions.TransactionBridge.EnlistTransactionFailure
 Службе протокола WS-AT не удалось включить в список транзакцию, используя предоставленный контекст координации.  
@@ -19,6 +19,7 @@ ms.locfileid: "54674587"
  Проверьте строку состояния в сообщении трассировки и определите, имеются ли элементы, с которыми можно произвести какие-либо действия.  
   
 ## <a name="see-also"></a>См. также
+
 - [Трассировка](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [Использование трассировки для устранения неполадок приложения](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
 - [Администрирование и диагностика](../../../../../docs/framework/wcf/diagnostics/index.md)

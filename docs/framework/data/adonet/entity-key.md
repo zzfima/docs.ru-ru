@@ -2,12 +2,12 @@
 title: ключ сущности
 ms.date: 03/30/2017
 ms.assetid: 0d447a6d-fa7a-4db0-8e7a-fd45e385fca0
-ms.openlocfilehash: 0c3a809884fc7b7c1f188af9881f784527fa87ba
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 1484a73450d5a435f795f18f122c7fe8494cf197
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58408968"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140118"
 ---
 # <a name="entity-key"></a>ключ сущности
 *Ключ сущности* — [свойство](../../../../docs/framework/data/adonet/property.md) или набор свойств [тип сущности](../../../../docs/framework/data/adonet/entity-type.md) , которые используются для определения удостоверения. Свойства, составляющие ключ сущности, выбираются во время разработки. Значения свойств ключа сущности должны уникально определять экземпляр типа сущности внутри [набор сущностей](../../../../docs/framework/data/adonet/entity-set.md) во время выполнения. Свойства, составляющие ключ сущности, должны гарантировать уникальность экземпляра набора сущностей.  
@@ -40,5 +40,6 @@ ms.locfileid: "58408968"
  Использование в качестве ключа сущности параметров `Name` и `Address` является неплохим выбором, поскольку маловероятно, что у двух авторов с одинаковыми именами будет один и тот же адрес. Однако такой выбор ключа сущности не гарантирует уникальность ключей сущности в наборе сущностей. В данном случае рекомендуется добавить свойство, такое как `AuthorId`, которое может быть использовано для уникальной идентификации автора.  
   
 ## <a name="see-also"></a>См. также
+
 - [Основные понятия модели EDM](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [Сущностная модель данных](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [EDM (модель данных с использованием сущностей)](../../../../docs/framework/data/adonet/entity-data-model.md)

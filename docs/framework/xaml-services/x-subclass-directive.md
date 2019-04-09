@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Subclass attribute
 - Subclass attribute in XAML [XAML Services]
 ms.assetid: 99f66072-8107-4362-ab99-8171dc83b469
-ms.openlocfilehash: c348d8fa2bd66a9abbb64c9363bb4dae0933ba34
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 850fe8acf9e47149bd385e78b30e04ba77d7a8b2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58047998"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140794"
 ---
 # <a name="xsubclass-directive"></a>Директива x:Subclass
 Изменяет поведение компиляции разметки XAML при `x:Class` также предоставляется. Вместо создания разделяемый класс, основанный на `x:Class`, предоставленный `x:Class` создается как промежуточный класс, и затем предоставленный производный класс может основываться на `x:Class`.  
@@ -57,5 +57,6 @@ ms.locfileid: "58047998"
  При определении обоих `x:Class` и `x:Subclass`, необходимо использовать любую реализацию для класса, на который ссылается `x:Class`. Необходимо присвоить ему имя с помощью `x:Class` таким образом, чтобы у компилятора есть некоторые рекомендации для класса, который он создает промежуточные файлы, (компилятор не выбирает имя по умолчанию в данном случае). Можно предоставить `x:Class` реализации класса; Однако это не типичный сценарий использования обоих `x:Class` и `x:Subclass`.  
   
 ## <a name="see-also"></a>См. также
+
 - [Директива x:Class](x-class-directive.md)
 - [Код XAML и пользовательские классы для WPF](../wpf/advanced/xaml-and-custom-classes-for-wpf.md)

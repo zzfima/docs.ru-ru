@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ListView [WPF], styles and templates
 - templates [WPF], ListView
 ms.assetid: d2387356-2171-4785-822a-7247e024b4ee
-ms.openlocfilehash: 1171140da352f0f5eb93832a3b6b3557e34d6904
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 813e7425b944ce9a7480cc45ab7d1f61cc0dc6d1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362881"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188790"
 ---
 # <a name="listview-styles-and-templates"></a>Стили и шаблоны элемента ListView
 В этом разделе описываются стили и шаблоны для <xref:System.Windows.Controls.ListView> элемента управления. Вы можете изменить значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> предоставить уникальный внешний вид элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
@@ -27,7 +27,7 @@ ms.locfileid: "57362881"
 ## <a name="listview-states"></a>Состояния ListView  
  В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.ListView> элемента управления.  
   
-|Имя VisualState|Имя VisualStateGroup|Описание:|  
+|Имя VisualState|Имя VisualStateGroup|Описание|  
 |-|-|-|  
 |Valid|ValidationStates|Элемент управления использует <xref:System.Windows.Controls.Validation> класс и <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> присоединенное свойство `false`.|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Присоединенное свойство `true` имеет элемент управления имеет фокус.|  
@@ -39,7 +39,7 @@ ms.locfileid: "57362881"
 ## <a name="listviewitem-states"></a>ListViewItem состояний  
  В следующей таблице перечислены состояния для <xref:System.Windows.Controls.ListViewItem> элемента управления.  
   
-|Имя VisualState|Имя VisualStateGroup|Описание:|  
+|Имя VisualState|Имя VisualStateGroup|Описание|  
 |-|-|-|  
 |Норм.|CommonStates|Состояние по умолчанию.|  
 |Отключено|CommonStates|Элемент управления отключен.|  
@@ -65,9 +65,10 @@ ms.locfileid: "57362881"
  Полный пример см. в разделе [Пример задания стиля с помощью ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
-- [Стили и шаблоны элемента управления](control-styles-and-templates.md)
+- [Стили и шаблоны элемента Control](control-styles-and-templates.md)
 - [Настройка элементов управления](control-customization.md)
 - [Стилизация и использование шаблонов](styling-and-templating.md)
 - [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

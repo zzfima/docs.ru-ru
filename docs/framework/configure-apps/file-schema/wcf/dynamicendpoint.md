@@ -2,12 +2,12 @@
 title: <dynamicEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 929f223d-176d-4205-9505-234ddb6dbff4
-ms.openlocfilehash: 786a70e8c686497e91492938a4d0796db4f6dd91
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e1a53869faa1997d2e79c3d2869a15001ee29626
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55269800"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187750"
 ---
 # <a name="dynamicendpoint"></a>\<dynamicEndpoint >
 Этот элемент конфигурации определяет стандартную конечную точку, содержащую сведения, позволяющие приложению работать в качестве клиентской программы, которая может найти адрес конечной точки динамически во время выполнения.  
@@ -56,10 +56,11 @@ ms.locfileid: "55269800"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Коллекция стандартных конечных точек, одно или несколько свойств которых (адрес, привязка, контракт) являются фиксированными.|  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.Discovery.DynamicEndpoint>
 - <xref:System.ServiceModel.Discovery.Configuration.DynamicEndpointElement>

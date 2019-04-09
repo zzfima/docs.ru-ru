@@ -15,12 +15,12 @@ helpviewer_keywords:
 - form inheritance
 - Windows Forms, inheritance
 ms.assetid: 3381a5e4-e1a3-44e2-a765-a0b758937b85
-ms.openlocfilehash: 277d2bdebc1d3b85efb70510b8acd34ed3a91087
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 612d323305c2dbd4698c6d687fb19ec36983bde4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710801"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143914"
 ---
 # <a name="how-to-use-the-modifiers-and-generatemember-properties"></a>Практическое руководство. Использование свойств Modifiers и GenerateMember
 При размещении компонента в форму Windows, в среде разработки предоставляются два свойства: `GenerateMember` и `Modifiers`. `GenerateMember` Свойство указывает, когда конструктор Windows Forms создает переменную-член для компонента. `Modifiers` Свойство — это модификатор доступа, назначенный этой переменной члена. Если значение `GenerateMember` свойство `false`, значение `Modifiers` не оказывает никакого влияния.  
@@ -60,7 +60,8 @@ ms.locfileid: "57710801"
 >  По умолчанию назначается в конструкторе Windows Forms `private` (`Friend` в Visual Basic) модификатор контейнерные элементы управления, такие как <xref:System.Windows.Forms.Panel>. Если с основным <xref:System.Windows.Forms.UserControl> или <xref:System.Windows.Forms.Form> имеет контейнерного элемента управления, он не принимает новые дочерние объекты в наследуемых элементов управления и форм. Решение заключается в изменить модификатор элемента управления базового контейнера для `protected` или `public`.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.Button>
 - [Визуальное наследование в Windows Forms](windows-forms-visual-inheritance.md)
-- [Пошаговое руководство: Демонстрация визуального наследования](walkthrough-demonstrating-visual-inheritance.md)
+- [Пошаговое руководство. Демонстрация визуального наследования](walkthrough-demonstrating-visual-inheritance.md)
 - [Практическое руководство. Наследование форм Windows Forms](how-to-inherit-windows-forms.md)

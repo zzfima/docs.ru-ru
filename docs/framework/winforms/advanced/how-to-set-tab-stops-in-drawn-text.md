@@ -8,12 +8,12 @@ helpviewer_keywords:
 - text [Windows Forms], drawing with tab stops
 - tabs [Windows Forms], drawn text
 ms.assetid: 64878f98-39ba-4303-b63f-0859ab682eeb
-ms.openlocfilehash: 76431d34504b40a299200693735a0a989127d683
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 68dbebfc4fab773fe749f9443d0c61883099d2ab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58832311"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197494"
 ---
 # <a name="how-to-set-tab-stops-in-drawn-text"></a>Практическое руководство. Установка позиций табуляции для выводимого текста
 Позиции табуляции для текста можно задать путем вызова <xref:System.Drawing.StringFormat.SetTabStops%2A> метод <xref:System.Drawing.StringFormat> объекта и неудачами, <xref:System.Drawing.StringFormat> объект <xref:System.Drawing.Graphics.DrawString%2A> метод <xref:System.Drawing.Graphics> класса.  
@@ -38,5 +38,6 @@ ms.locfileid: "58832311"
 -   Предыдущий пример предназначен для работы с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs> `e`, который является параметром <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>См. также
-- [Работами со шрифтами и текстом](using-fonts-and-text.md)
+
+- [Шрифты и текст](using-fonts-and-text.md)
 - [Практическое руководство. Рисование текста с использованием GDI](how-to-draw-text-with-gdi.md)

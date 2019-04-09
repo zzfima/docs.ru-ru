@@ -2,12 +2,12 @@
 title: Использование средств разработки WCF
 ms.date: 03/30/2017
 ms.assetid: 054adb87-c244-4d5a-83d1-0b2b44bd454b
-ms.openlocfilehash: e9a398ac6914582d299658e3e45d17ea5468917d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1ffa3be4a6b8976ab978ea995e8b2c1faaacf0ae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712094"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144642"
 ---
 # <a name="using-the-wcf-development-tools"></a>Использование средств разработки WCF
 В этом разделе описываются средства разработки Visual Studio, которые могут помочь в разработке служб WCF.  
@@ -15,19 +15,19 @@ ms.locfileid: "54712094"
  Можно использовать шаблоны Visual Studio как основу для быстрого создания собственной службы, а затем использовать для отладки и тестирования службы WCF Service Auto Host и тестового клиента WCF. Оба этих инструмента обеспечивают быстрый и удобный цикл отладки и тестирования и исключают необходимость фиксации модели размещения на ранней стадии.  
   
 ## <a name="the-wcf-developer-tools"></a>Инструменты разработчика WCF  
- [Шаблоны WCF в Visual Studio](../../../docs/framework/wcf/wcf-vs-templates.md)  
+ [Шаблоны WCF в Visual Studio](../../../docs/framework/wcf/wcf-vs-templates.md)  
   
  Предопределенных шаблонов проектов и элементов Visual Studio в Visual Studio можно использовать для быстрого создания служб WCF и окружающих приложений.  
   
- [Узел службы WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)  
+ [Узел службы WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)  
   
  WCF Service Auto Host (WcfSvcHost.exe) позволяет запустить отладчик Visual Studio (F5) для автоматического размещения и проверки службы, реализованный. Затем можно проверить службу, используя клиент тестирования WCF (wcfTestClient.exe) или своего собственного клиента для поиска и устранения потенциальных ошибок.  
   
- [Тестовый клиент WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)  
+ [Тестовый клиент WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)  
   
  Тестовый клиент WCF (WcfTestClient.exe) это средство графического интерфейса пользователя, которое позволяет вводить параметры произвольных типов, отправлять их в службу и представление, которое отправляет ответ службы. Он предоставляет удобный способ тестирования в сочетании с WCF Service Auto Host служб.  
   
- [Формирование классов типов данных из XML](../../../docs/framework/wcf/generating-data-type-classes-from-xml.md)  
+ [Формирование классов типов данных из XML](../../../docs/framework/wcf/generating-data-type-classes-from-xml.md)  
   
  Данные XML, сохраненные в буфере обмена, можно вставить в кодовую страницу. Классы, определенные в данных, будут преобразованы в типы кода.  
   
@@ -43,6 +43,7 @@ netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>
  Дополнительные сведения о Netsh.exe см. в разделе [способы использования средства Netsh.exe и переключателей командной строки](https://go.microsoft.com/fwlink/?LinkId=97877).  
   
 ## <a name="see-also"></a>См. также
-- [Шаблоны WCF в Visual Studio](../../../docs/framework/wcf/wcf-vs-templates.md)
-- [Узел службы WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
-- [Тестовый клиент WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)
+
+- [Шаблоны WCF в Visual Studio](../../../docs/framework/wcf/wcf-vs-templates.md)
+- [Узел службы WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
+- [Тестовый клиент WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

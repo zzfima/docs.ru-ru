@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - behaviors [WCF], system-provided client
 ms.assetid: d16d3405-be70-4edb-8f62-b5f614ddeca5
-ms.openlocfilehash: 2f6879f5e46e62db29e482444d55680d39dd8ccc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f750978eaa617a5505bb27a1535797320a76b0d4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587181"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164376"
 ---
 # <a name="specifying-client-run-time-behavior"></a>Задание поведения клиента во время выполнения
 Клиенты Windows Communication Foundation (WCF), такие как службы Windows Communication Foundation (WCF), можно настроить для изменения поведения времени выполнения в соответствии с клиентским приложением. Для задания поведения среды выполнения клиента существует три атрибута. Объекты обратного вызова дуплексного клиента могут использовать атрибуты <xref:System.ServiceModel.CallbackBehaviorAttribute> и <xref:System.ServiceModel.Description.CallbackDebugBehavior> для изменения своего поведения в среде выполнения. Атрибут <xref:System.ServiceModel.Description.ClientViaBehavior> можно использовать для разделения логического назначения и непосредственного назначения сети. Более того, типы обратного вызова дуплексного клиента могут использовать некоторые поведения на стороне службы. Дополнительные сведения см. в разделе [указание поведения службы во время выполнения](../../../docs/framework/wcf/specifying-service-run-time-behavior.md).  
@@ -44,4 +44,5 @@ ms.locfileid: "54587181"
  Для задания универсального кода ресурса (URI), для которого должен быть создан транспортный канал, можно использовать поведение <xref:System.ServiceModel.Description.ClientViaBehavior>. Используйте это поведение, если непосредственное назначение сети не является предназначенным средством обработки сообщения. Благодаря этому возможны диалоги с несколькими участками передачи, если точно не известно, знает ли вызывающее приложение конечную точку назначения, или заголовок назначения `Via` не является адресом.  
   
 ## <a name="see-also"></a>См. также
+
 - [Указание поведения службы во время выполнения](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)

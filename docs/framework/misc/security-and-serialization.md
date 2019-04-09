@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b921bc94-bd3a-4c91-9ede-2c8d4f78ea9a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 996231ae035e6518aaceac0ba75b3de3b52a0a22
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e4deadc175bd4cc3635a6c8d8d8b80100b5a9938
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640177"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151792"
 ---
 # <a name="security-and-serialization"></a>Безопасность и сериализация
 Поскольку сериализация может разрешить другому коду просматривать или изменять данные экземпляра объекта, которые могут быть недоступны другим способом, требуется специальное разрешение кода, выполняющего сериализацию: <xref:System.Security.Permissions.SecurityPermission> с указанным флагом <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> . При политике безопасности по умолчанию такое разрешение не предоставляется коду, загруженному из Интернета или интрасети, и дается только коду на локальном компьютере.  
@@ -48,4 +48,5 @@ ms.locfileid: "54640177"
 -   Специальный конструктор, используемый для сериализации, также должен выполнять тщательную проверку входных данных и должен быть либо защищенным, либо закрытым, чтобы предотвратить несанкционированное использование вредоносным кодом. Следует обеспечить те же проверки безопасности и разрешения, необходимые для получения экземпляра подобного класса любыми другими методами, например путем явного создания класса или его неявного создания через какую-либо фабрику.  
   
 ## <a name="see-also"></a>См. также
+
 - [Правила написания безопасного кода](../../../docs/standard/security/secure-coding-guidelines.md)

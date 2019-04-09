@@ -2,12 +2,12 @@
 title: <tracking> для WCF
 ms.date: 03/30/2017
 ms.assetid: 70cfaf24-a91c-4e56-ac47-d2ed87a963b3
-ms.openlocfilehash: ddaf6f7871b4d10961b615f74d1ed49dd76d379a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 4aac9f28de746e2a75a079cbaf774f01f4a08fca
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268253"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135828"
 ---
 # <a name="tracking-of-wcf"></a>\<Отслеживание > из WCF
 Представляет раздел конфигурации для определения настроек отслеживания для службы рабочего процесса.  
@@ -98,5 +98,6 @@ ms.locfileid: "55268253"
  Отслеживание позволяет исследовать выполнение рабочего процесса. Инфраструктура отслеживания рабочего процесса инструментирует процесс таким образом, что выдаются записи, отражающие ключевые события выполнения. Например, записи отслеживания создаются при запуске и завершении экземпляра рабочего процесса. Отслеживание также позволяет извлекать важные бизнес-данные, связанные с переменными рабочего процесса. Например, если рабочий процесс представляет собой систему обработки заказов, то вместе с записью отслеживания можно извлечь идентификатор заказа. В общем, функции отслеживания WF обеспечивают диагностику и анализ исполнения рабочих задач.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection?displayProperty=nameWithType>
 - [Отслеживание и трассировка рабочих процессов](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)

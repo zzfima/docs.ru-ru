@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ca392dda-16e3-45c7-8d87-12d8d4ee0578
-ms.openlocfilehash: 195c698404f4411c01561ae12b31762de5ce1101
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 663356ec3dc39aa3eb7e858f028fc9a8f7d27db6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093740"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132746"
 ---
 # <a name="query-expression-syntax-examples-element-operators-linq-to-dataset"></a>Примеры синтаксиса выражений запросов. Операторы работы с элементами (LINQ to DataSet)
 Примеры в этом разделе демонстрируют, как использовать методы <xref:System.Linq.Enumerable.First%2A> и <xref:System.Linq.Enumerable.ElementAt%2A>, чтобы получить элементы <xref:System.Data.DataRow> из объекта <xref:System.Data.DataSet> с использованием синтаксиса выражений запросов.  
@@ -43,7 +43,8 @@ ms.locfileid: "56093740"
  [!code-vb[DP LINQ to DataSet Examples#FirstSimple](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#firstsimple)]  
   
 ## <a name="see-also"></a>См. также
-- [Загрузка данных в DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
+
+- [Загрузка данных в набор данных](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
 - [Примеры LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
 - [Общие сведения о стандартных операторах запроса (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Общие сведения о стандартных операторах запроса (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Общие сведения о стандартных операторах (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)

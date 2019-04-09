@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: f80d89d66253df310395cdfa3139e8765da24edb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8702091c185ba3d4956d3bd5d13ca191c12fce82
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584916"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162885"
 ---
 # <a name="configuring-tracing"></a>Настройка трассировки
 В этом разделе описывается, как включить трассировку, настроить создание трассировки источниками трассировки и задать уровни трассировки, задать распространение и трассировку действий для поддержки сквозной корреляции трассировки, а также настроить доступ прослушивателей трассировки к трассировкам.  
@@ -181,6 +181,7 @@ ms.locfileid: "54584916"
  Атрибут `propagateActivity` нельзя использовать для пользовательских источников трассировок. Для распространения идентификатора действия пользовательского кода необходимо убедиться, что ServiceModel `ActivityTracing` не задано, тогда как ServiceModel `propagateActivity` имеет значение `true`.  
   
 ## <a name="see-also"></a>См. также
+
 - [Трассировка](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [Администрирование и диагностика](../../../../../docs/framework/wcf/diagnostics/index.md)
 - [Практическое руководство. Создание и инициализация прослушивателей трассировки](https://go.microsoft.com/fwlink/?LinkId=94648)

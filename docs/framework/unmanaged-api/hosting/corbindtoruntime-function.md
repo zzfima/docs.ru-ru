@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7e15b1ab33dd6ab5e9cd9887000c0f91e0bd4a9a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
-ms.translationtype: MT
+ms.openlocfilehash: 8b9b17c1457a920aa3e05f5fd839e6ffdc0c6fee
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496655"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144369"
 ---
 # <a name="corbindtoruntime-function"></a>Функция CorBindToRuntime
 Позволяет неуправляемым основным приложениям загружать в процесс общеязыковой среды выполнения (CLR).  
@@ -96,6 +96,7 @@ HRESULT CorBindToRuntime (
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Функция CorBindToCurrentRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md)
 - [Функция CorBindToRuntimeByCfg](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)
 - [Функция CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)

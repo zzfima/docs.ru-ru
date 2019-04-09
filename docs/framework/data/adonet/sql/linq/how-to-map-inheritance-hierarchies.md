@@ -1,18 +1,18 @@
 ---
-title: Как выполнить сопоставить иерархии наследования
+title: Практическое руководство. Как сопоставить иерархии наследования
 ms.date: 03/30/2017
 ms.assetid: b27c779b-9355-4dc7-b95f-7dfd504b6e48
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: ad945cfe476441a92e8af9527b08e66f3e6e52c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: f75c7fe701c4a2fab1f993517828b38e5a26e2bd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734030"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138090"
 ---
-# <a name="how-to-map-inheritance-hierarchies"></a>Как выполнить сопоставить иерархии наследования
+# <a name="how-to-map-inheritance-hierarchies"></a>Практическое руководство. Как сопоставить иерархии наследования
 Чтобы реализовать сопоставление наследования в [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)], в корневом классе иерархии наследования необходимо указать атрибуты и свойства атрибутов, как описано в следующих шагах. С помощью Visual Studio разработчики могут использовать [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] сопоставить иерархии наследования. См. практическое руководство по [ настроить наследование с использованием реляционного конструктора объектов](/visualstudio/data-tools/how-to-configure-inheritance-by-using-the-o-r-designer).  
   
 > [!NOTE]
@@ -51,5 +51,6 @@ ms.locfileid: "54734030"
  [!code-vb[DLinqCustomize#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCustomize/vb/Module1.vb#4)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Поддержка наследования](../../../../../../docs/framework/data/adonet/sql/linq/inheritance-support.md)
-- [Практическое руководство. Настройка классов сущностей с помощью редактора кода](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [Практическое руководство. Как настроить классы сущностей с помощью редактора кода](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)

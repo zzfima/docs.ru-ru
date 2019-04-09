@@ -13,12 +13,12 @@ helpviewer_keywords:
 - WindowsFormsHost keyboard and messages [WPF]
 - modeless dialog boxes [WPF]
 ms.assetid: 0eb6f137-f088-4c5e-9e37-f96afd28f235
-ms.openlocfilehash: 50097ef86fb6bc5341d7ea16ccee441b89823401
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: f9fb5a0d2a23d2ad23aa3886ce25edb999b50678
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352429"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160983"
 ---
 # <a name="windows-forms-and-wpf-interoperability-input-architecture"></a>Windows Forms и архитектура ввода взаимодействия WPF
 Взаимодействия между [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] должна иметь обработки ввода сочетания обеих технологий. В этом разделе описывается, как реализовать эти технологии, клавиатуры и обработки сообщений с целью обеспечить корректное взаимодействие в гибридных приложениях.  
@@ -129,10 +129,11 @@ ms.locfileid: "57352429"
  Сообщения отправляются только к <xref:System.Windows.Forms.Integration.ElementHost> элементов управления в активной форме.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A>
 - <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A>
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Пошаговое руководство: Размещение Windows Forms составного элемента управления в WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [Пошаговое руководство: Размещение составного элемента управления WPF в Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [Пошаговое руководство. Размещение составного элемента управления Windows Forms в приложении WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [Пошаговое руководство. Размещение составного элемента управления WPF в форме Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
 - [Взаимодействие WPF и Win32](wpf-and-win32-interoperation.md)

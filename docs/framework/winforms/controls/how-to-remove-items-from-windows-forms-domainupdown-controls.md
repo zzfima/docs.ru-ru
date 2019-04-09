@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Удаление элементов из элемента управления DomainUpDown Windows Forms
+title: Практическое руководство. Удаление элементов из элемента управления DomainUpDown в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - DomainUpDown control [Windows Forms], removing items from
 - spin button control [Windows Forms], removing items
 ms.assetid: e70f5cbc-b497-41a9-975a-344c00e56ed2
-ms.openlocfilehash: 58c93f478414d24c2fdda0f9662936a8b520e381
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0c07365f5be2e419b4049a466949fed2d884d897
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708968"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59131408"
 ---
-# <a name="how-to-remove-items-from-windows-forms-domainupdown-controls"></a>Практическое руководство. Удаление элементов из элемента управления DomainUpDown Windows Forms
+# <a name="how-to-remove-items-from-windows-forms-domainupdown-controls"></a>Практическое руководство. Удаление элементов из элемента управления DomainUpDown в Windows Forms
 Можно удалить элементы из Windows Forms <xref:System.Windows.Forms.DomainUpDown> элемента управления, используя <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> или <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> метод <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection> класса. <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> Метод удаляет определенный элемент, пока <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> метод удаляет элемент по его позиции.  
   
 ### <a name="to-remove-an-item"></a>Удаление элемента  
@@ -35,7 +35,7 @@ ms.locfileid: "57708968"
     domainUpDown1->Items->Remove("noodles");  
     ```  
   
-     - или -  
+     -или-  
   
 -   Используйте <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> метод для удаления элемента по его позиции.  
   
@@ -55,6 +55,7 @@ ms.locfileid: "57708968"
     ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.DomainUpDown>
 - <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A?displayProperty=nameWithType>

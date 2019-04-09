@@ -1,18 +1,18 @@
 ---
-title: Практическое руководство. Блокировать элементы управления в формы Windows Forms
+title: Практическое руководство. Прикрепление элементов управления в формах Windows Forms
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms controls, locking
 - controls [Windows Forms], locking
 ms.assetid: 94efe0d2-c14e-4d14-b903-63ea9b07e290
-ms.openlocfilehash: cff3b0a3ba547c15e7b1c896bde49931a6a3c742
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: ac02e825218f14f8479e67a79da0c86e1c9ffe11
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702650"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117927"
 ---
-# <a name="how-to-lock-controls-to-windows-forms"></a>Практическое руководство. Блокировать элементы управления в формы Windows Forms
+# <a name="how-to-lock-controls-to-windows-forms"></a>Практическое руководство. Прикрепление элементов управления в формах Windows Forms
 При разработке пользовательского интерфейса (UI) приложения Windows, можно блокировать элементы управления, если они размещены правильно, чтобы случайно не перемещать или изменять их размер, при задании других свойств.  
   
  Кроме того можно блокировать и разблокировать все элементы управления в форме, что полезно для форм с большим количеством элементов управления, или вы можете разблокировать отдельные элементы управления. После размещения всех элементов управления нужное место на форме, закрепить их все во избежание случайного перемещения.  
@@ -47,8 +47,9 @@ ms.locfileid: "57702650"
 1.  В **свойства** окно, нажмите кнопку **Locked** свойство и выберите `false`. (Дважды щелкните имя переключает значения этого свойства.)  
   
 ## <a name="see-also"></a>См. также
+
 - [Элементы управления Windows Forms](index.md)
-- [Упорядочение элементов управления в формах Windows Forms](arranging-controls-on-windows-forms.md)
+- [Расположение элементов управления в формах Windows Forms](arranging-controls-on-windows-forms.md)
 - [Создание меток и назначение сочетаний клавиш для элементов управления Windows Forms](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)
+- [Элементы управления для использования в формах Windows Forms](controls-to-use-on-windows-forms.md)
 - [Функциональная классификация элементов управления Windows Forms](windows-forms-controls-by-function.md)

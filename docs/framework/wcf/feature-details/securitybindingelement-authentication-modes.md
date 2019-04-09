@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 12300bf4-c730-4405-9f65-d286f68b5a43
-ms.openlocfilehash: b09b50d2db277d6aec325fb9305890f8e5be581c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 9c8b2cb0417db6481ce0171d85b225ef3a784c1b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658904"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119760"
 ---
 # <a name="securitybindingelement-authentication-modes"></a>Режимы проверки подлинности SecurityBindingElement
 Windows Communication Foundation (WCF) предоставляет несколько режимов, по которым клиенты и службы проверяют подлинность друг друга. Для этих режимов проверки подлинности можно создать привязки безопасности с помощью статических методов класса <xref:System.ServiceModel.Channels.SecurityBindingElement> или с помощью конфигурации. В этом разделе кратко описано 18 режимов проверки подлинности.  
@@ -78,7 +78,7 @@ Windows Communication Foundation (WCF) предоставляет несколь
  В этом режиме проверка подлинности клиента на стороне службы осуществляется с использованием билета Kerberos. Этот же билет обеспечивает проверку подлинности сервера. Элементом привязки безопасности является элемент `SymmetricSecurityBindingElement`, возвращаемый методом <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A>. Можно также задать для атрибута `authenticationMode` значение `Kerberos`.  
   
 > [!NOTE]
->  Для использования этого режима проверки подлинности учетная запись службы должна быть связана с именем участника-службы (SPN). Для этого запустите службу от имени учетной записи NETWORK SERVICE или LOCAL SYSTEM. Для создания для учетной записи службы имени участника-службы также можно воспользоваться средством SetSpn.exe. В любом случае клиент должен использовать правильное имя участника службы в [ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) элемент, или с помощью <xref:System.ServiceModel.EndpointAddress> конструктор. Дополнительные сведения см. в разделе [службы идентификации и проверки подлинности](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+>  Для использования этого режима проверки подлинности учетная запись службы должна быть связана с именем субъекта-службы (SPN). Для этого запустите службу от имени учетной записи NETWORK SERVICE или LOCAL SYSTEM. Для создания для учетной записи службы имени участника-службы также можно воспользоваться средством SetSpn.exe. В любом случае клиент должен использовать правильное имя участника службы в [ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) элемент, или с помощью <xref:System.ServiceModel.EndpointAddress> конструктор. Дополнительные сведения см. в разделе [службы идентификации и проверки подлинности](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 > [!NOTE]
 >  При использовании режима проверки подлинности `Kerberos` уровни олицетворения <xref:System.Security.Principal.TokenImpersonationLevel.Anonymous> и <xref:System.Security.Principal.TokenImpersonationLevel.Delegation> не поддерживаются.  
@@ -121,5 +121,6 @@ Windows Communication Foundation (WCF) предоставляет несколь
  В этом режиме проверка подлинности клиента осуществляется с использованием маркера имени пользователя, который доступен на уровне SOAP в качестве подписанного вспомогательного маркера, т. е. маркера, который подписан подписью сообщения. Служба проходит проверку подлинности с использованием сертификата X.509 на транспортном уровне. Элементом привязки безопасности является элемент `TransportSecurityBindingElement`, возвращаемый методом <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateUserNameOverTransportBindingElement%2A>. Можно также задать для атрибута `authenticationMode` значение `UserNameOverTransport`.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.Channels.SecurityBindingElement>
 - [Практическое руководство. Создание SecurityBindingElement для заданного режима проверки подлинности](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)

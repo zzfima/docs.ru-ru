@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Выполнение запросов в пакете (службы данных WCF)
+title: Практическое руководство. Выполнение запросов в пакете (службы данных WCF)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, batch requests
 ms.assetid: 3b4db7df-bd33-43a1-8ea4-63a18e131f97
-ms.openlocfilehash: 3a11a96c197cd6905d8e80fac5c869a9c5c374e3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a917659092890c95dfd65ede358d9c4b5a0e62cb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611908"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117914"
 ---
-# <a name="how-to-execute-queries-in-a-batch-wcf-data-services"></a>Как выполнить Выполнение запросов в пакете (службы данных WCF)
+# <a name="how-to-execute-queries-in-a-batch-wcf-data-services"></a>Практическое руководство. Выполнение запросов в пакете (службы данных WCF)
 С помощью [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] клиентской библиотеки, чтобы выполнить несколько запросов к службе данных в одном пакете. Дополнительные сведения см. в разделе [пакетной обработки операций](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md).  
   
  Пример в этом разделе использует образец службы данных Northwind и автоматически сформированные клиентские классы службы данных. Эта служба и клиентские классы данных создаются при завершении [краткое руководство по службам данных WCF](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
@@ -26,4 +26,5 @@ ms.locfileid: "54611908"
  [!code-vb[Astoria Northwind Client#BatchQuery](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#batchquery)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Библиотека клиентов служб данных WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

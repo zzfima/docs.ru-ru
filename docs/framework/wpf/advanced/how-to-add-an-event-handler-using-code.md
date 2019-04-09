@@ -8,12 +8,12 @@ helpviewer_keywords:
 - event handlers [WPF], adding
 - XAML [WPF], adding event handlers
 ms.assetid: 269c61e0-6bd9-4291-9bed-1c5ee66da486
-ms.openlocfilehash: 05eaae0f5b893f42d421717ac73373d4c79004c4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 10f8e0899e61d5d54589c910bdcbcd92d8ee947c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352195"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129367"
 ---
 # <a name="how-to-add-an-event-handler-using-code"></a>Практическое руководство. Добавление обработчика событий с помощью кода
 В этом примере показано, как добавить обработчик событий к элементу с помощью кода.  
@@ -38,5 +38,6 @@ ms.locfileid: "57352195"
 >  Добавление обработчика событий в изначально разобранную [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] страницы намного проще. В элементе объекта, где вы хотите добавить обработчик событий добавьте атрибут, который совпадает с именем события, которое необходимо обработать. Затем укажите значение этого атрибута в качестве имени метода обработчика событий, определенные в файле кода программной [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] страницы. Дополнительные сведения см. в разделе [Обзор XAML (WPF)](xaml-overview-wpf.md) или [Routed Events Overview](routed-events-overview.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения о перенаправленных событиях](routed-events-overview.md)
-- [Разделы практического руководства](events-how-to-topics.md)
+- [Практические руководства](events-how-to-topics.md)

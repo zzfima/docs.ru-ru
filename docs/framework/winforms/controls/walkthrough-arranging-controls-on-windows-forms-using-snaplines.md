@@ -1,5 +1,5 @@
 ---
-title: Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms, с помощью линий привязки
+title: Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью линий привязки
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], arranging with snaplines
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-ms.openlocfilehash: f898a15fd2157c625767d53d8b53c5469fb9a957
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 4d352ee5c431ba43bbe338a9caf7bd0716e91834
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703599"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139793"
 ---
-# <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms, с помощью линий привязки
+# <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью линий привязки
 Точное расположение элементов управления на форме является важным для многих приложений. В конструкторе Windows Forms предоставляет множество средств форматирования, для выполнения этой задачи. Одним из наиболее важных является <xref:System.Windows.Forms.Design.Behavior.SnapLine> функции.  
   
  Линии привязки точно показывают, как выровнять элементы управления с другими элементами управления. Они также показывают рекомендуемое расстояние между элементами управления в соответствии с рекомендациями по пользовательскому интерфейсу Windows. Дополнительные сведения см. в разделе [пользовательского интерфейса и разработки](https://go.microsoft.com/FWLink/?LinkId=83878).  
@@ -240,8 +240,9 @@ ms.locfileid: "57703599"
  Сведения о разработке пользовательского интерфейса Windows, см. в разделе книги *взаимодействие с пользователем Microsoft Windows, официальные рекомендации для разработчиков пользовательских интерфейсов и конструкторы* Редмонд, штат Вашингтон: Microsoft Press, 1999. (USBN: 0-7356-0566-1).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.Design.Behavior.SnapLine>
-- [Пошаговое руководство: Упорядочение элементов управления в Windows Forms, с помощью элемента FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [Пошаговое руководство: Упорядочение элементов управления в Windows Forms, с помощью элемента управления TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [Пошаговое руководство: Создание структуры Windows Forms элементов управления с помощью свойств Padding, Margins и свойство AutoSize](windows-forms-controls-padding-autosize.md)
-- [Упорядочение элементов управления в формах Windows Forms](arranging-controls-on-windows-forms.md)
+- [Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью элемента FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью элемента TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [Пошаговое руководство. Создание структуры элементов управления Windows Forms с помощью свойств Padding, Margins и AutoSize](windows-forms-controls-padding-autosize.md)
+- [Расположение элементов управления в формах Windows Forms](arranging-controls-on-windows-forms.md)

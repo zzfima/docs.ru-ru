@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ink [WPF], custom-rendering
 - classes [WPF], InkCanvas
 ms.assetid: 65c978a7-0ee0-454f-ac7f-b1bd2efecac5
-ms.openlocfilehash: ce4c2bd48e819541d942c795307df36629ec05b9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: fead6e28949726bef46fe2be46e976fb47c3e9a3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362634"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125662"
 ---
 # <a name="custom-rendering-ink"></a>Пользовательская отрисовка рукописных данных
 <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> Свойство штриха позволяет задавать внешний вид штриха, включая его размер, цвет и форму, но могут возникнуть ситуации, которые вы хотите настроить внешний вид что <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> разрешить. Может потребоваться настроить отображение рукописного фрагмента с эффектом аэрографа, масляной живописи и т. д. Windows Presentation Foundation (WPF) позволяет настроить отрисовку рукописных фрагментов путем реализации пользовательского <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> и <xref:System.Windows.Ink.Stroke> объекта.  
@@ -92,4 +92,5 @@ ms.locfileid: "57362634"
  Можно настроить отображение рукописного фрагмента путем наследования своих собственных <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, <xref:System.Windows.Ink.Stroke>, и <xref:System.Windows.Controls.InkCanvas> классы. Вместе эти классы гарантируют согласованность внешнего вида штриха в момент, когда пользователь рисует штрих, и после его сбора.  
   
 ## <a name="see-also"></a>См. также
-- [Дополнительная обработка рукописных фрагментов](advanced-ink-handling.md)
+
+- [Дополнительная обработка рукописных данных](advanced-ink-handling.md)

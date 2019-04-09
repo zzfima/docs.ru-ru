@@ -1,19 +1,19 @@
 ---
-title: Практическое руководство. Отображение полос прокрутки в Windows Forms элемента управления RichTextBox
+title: Практическое руководство. Отображение полос прокрутки в элементе управления RichTextBox в Windows Forms
 ms.date: 03/30/2017
 helpviewer_keywords:
 - text boxes [Windows Forms], displaying scroll bars
 - scroll bars [Windows Forms], displaying in controls
 - RichTextBox control [Windows Forms], displaying scroll bars
 ms.assetid: cdeb42e1-86e8-410c-ba46-18aec264ef5f
-ms.openlocfilehash: 119cf736dfa7b8b8fce57b7e8fcb24dd09f01ce0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 52c33239524e76bc26b9b2375578aa46bff51bf6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716495"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142562"
 ---
-# <a name="how-to-display-scroll-bars-in-the-windows-forms-richtextbox-control"></a>Практическое руководство. Отображение полос прокрутки в Windows Forms элемента управления RichTextBox
+# <a name="how-to-display-scroll-bars-in-the-windows-forms-richtextbox-control"></a>Практическое руководство. Отображение полос прокрутки в элементе управления RichTextBox в Windows Forms
 По умолчанию в Windows Forms <xref:System.Windows.Forms.RichTextBox> элемент управления отображает горизонтальные и вертикальные полосы прокрутки при необходимости. Существует семь возможных значений для <xref:System.Windows.Forms.RichTextBox.ScrollBars%2A> свойство <xref:System.Windows.Forms.RichTextBox> элемента управления, которые описаны в следующей таблице.  
   
 ### <a name="to-display-scroll-bars-in-a-richtextbox-control"></a>Для отображения полос прокрутки в элементе управления RichTextBox  
@@ -40,7 +40,8 @@ ms.locfileid: "57716495"
     |`true` (по умолчанию)|Текст в элементе управления автоматически изменяется в соответствии с шириной элемента управления. Горизонтальная полоса прокрутки не появится. Это значение используется в том случае, если вы выбрали вертикальных полос прокрутки или нет "," выше, для отображения один или несколько абзацев.|  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.RichTextBoxScrollBars>
 - <xref:System.Windows.Forms.RichTextBox>
 - [Элемент управления RichTextBox](richtextbox-control-windows-forms.md)
-- [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)
+- [Элементы управления для использования в формах Windows Forms](controls-to-use-on-windows-forms.md)

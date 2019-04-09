@@ -1,23 +1,23 @@
 ---
-title: Как выполнить настроить неактивное поведение с помощью WorkflowServiceHost
+title: Практическое руководство. Как настроить неактивное поведение с помощью WorkflowServiceHost
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1bb93652-d687-46ff-bff6-69ecdcf97437
-ms.openlocfilehash: dff9145954084d0f299edc1e3f2f6c0d7ea1a80e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: d3fc95e7e92d3fc7c149790d4af00a464ab427f7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727395"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164025"
 ---
-# <a name="how-to-configure-idle-behavior-with-workflowservicehost"></a>Как выполнить настроить неактивное поведение с помощью WorkflowServiceHost
-Рабочие процессы переходят в режим бездействия, когда обнаруживают закладку, выполнение которой должно быть возобновлено по внешнему сигналу, например когда экземпляр рабочего процесса ожидает доставки сообщения с помощью действия <xref:System.ServiceModel.Activities.Receive> . Поведение<xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> позволяет задать время между переходом экземпляра службы в неактивное состояние и его сохранением или выгрузкой. Содержит два свойства, которые позволяют задавать значения для этих периодов времени. Атрибут<xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A> определяет период времени между переходом экземпляра службы Workflow Service в состояние бездействия и сохранением экземпляра службы Workflow Service. Свойство<xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> определяет период времени между переходом экземпляра службы Workflow Service в состояние бездействия и моментом выгрузки экземпляра рабочего процесса, где выгрузка означает сохранение экземпляра в хранилище экземпляров с удалением из памяти. В этом разделе описана настройка <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> в файле конфигурации.  
+# <a name="how-to-configure-idle-behavior-with-workflowservicehost"></a>Практическое руководство. Как настроить неактивное поведение с помощью WorkflowServiceHost
+Рабочие процессы переходят в режим бездействия, когда обнаруживают закладку, выполнение которой должно быть возобновлено по внешнему сигналу, например когда экземпляр рабочего процесса ожидает доставки сообщения с помощью действия <xref:System.ServiceModel.Activities.Receive> . <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> Это поведение, которое позволяет указать время между переходом экземпляра службы в состояние бездействия и сохранением или выгрузкой экземпляра. Содержит два свойства, которые позволяют задавать значения для этих периодов времени. <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A> Указывает интервал времени между переходом экземпляра службы рабочего процесса в состояние бездействия и сохранением экземпляра службы рабочего процесса. <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> Указывает период времени между когда экземпляру службы рабочего процесса переходит в состояние бездействия и при выгрузке экземпляра службы рабочего процесса, где выгрузка означает сохранение экземпляра в хранилище экземпляров и удаление его из памяти. В этом разделе описана настройка <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> в файле конфигурации.  
   
 ### <a name="to-configure-workflowidlebehavior"></a>Настройка WorkflowIdleBehavior  
   
-1.  Добавьте элемент <`workflowIdle`> в элемент <`behavior`> в элементе <`serviceBehaviors`>, как показано в следующем примере.  
+1.  Добавьте <`workflowIdle`> элемента <`behavior`> элемента <`serviceBehaviors`> элемента, как показано в следующем примере.  
   
     ```xml  
     <behaviors>  
@@ -42,6 +42,7 @@ ms.locfileid: "54727395"
      [!code-vb[Wf_SvcHost_Idle_persist#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/wf_svchost_idle_persist/vb/source.vb#1)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Расширяемость узла службы рабочих процессов](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)
 - [Упрощенная конфигурация](../../../../docs/framework/wcf/simplified-configuration.md)
-- [Службы рабочих процессов](../../../../docs/framework/wcf/feature-details/workflow-services.md)
+- [Службы рабочего процесса](../../../../docs/framework/wcf/feature-details/workflow-services.md)

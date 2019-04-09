@@ -7,12 +7,12 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], about RichTextBox control
 - text boxes [Windows Forms], about text boxes
 ms.assetid: 95081194-3dd4-4b84-9545-dd373e491eca
-ms.openlocfilehash: ded2c9bb0e5b3320de700ce6126710314ed9e4f2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0827c1919597e9eb85bfa41721676008b76564d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720253"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201602"
 ---
 # <a name="richtextbox-control-overview-windows-forms"></a>Общие сведения об элементе управления RichTextBox (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.RichTextBox> элемент управления используется для отображения, ввода и обработки текста с форматированием. <xref:System.Windows.Forms.RichTextBox> Управления следит за недопущением <xref:System.Windows.Forms.TextBox> делает элемент управления, но может также отображать шрифты, цвета и ссылки; загрузить текст и встроенные изображения из файла; и находить указанные символы. <xref:System.Windows.Forms.RichTextBox> Управления обычно используется для работы с текстом и отображения функций, как для текстовых редакторов, таких как Microsoft Word. Как <xref:System.Windows.Forms.TextBox> управления <xref:System.Windows.Forms.RichTextBox> элемент управления может отображать полосы прокрутки; но в отличие от <xref:System.Windows.Forms.TextBox> элемента управления, его значение по умолчанию является отображение горизонтальных и вертикальных полос прокрутки, при необходимости, и он имеет дополнительные параметры полосы прокрутки.  
@@ -25,6 +25,7 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> элемент управ�
  Можно отменять и повторять большую часть операций редактирования в <xref:System.Windows.Forms.RichTextBox> элемента управления, используя <xref:System.Windows.Forms.TextBoxBase.Undo%2A> и <xref:System.Windows.Forms.RichTextBox.Redo%2A> методы. <xref:System.Windows.Forms.RichTextBox.CanRedo%2A> Метод позволяет определить, можно ли повторно применить последнюю операцию пользователем в элемент управления.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.RichTextBox>
 - [Элемент управления RichTextBox](richtextbox-control-windows-forms.md)
 - [Общие сведения об элементе управления TextBox](textbox-control-overview-windows-forms.md)

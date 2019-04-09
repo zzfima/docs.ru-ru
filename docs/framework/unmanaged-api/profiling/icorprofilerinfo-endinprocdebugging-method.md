@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f86c680a10a3dcb1009b4f0cedd777ab9da5ac1f
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: bcae66fd30c29a0a3c9bd0b5ffc2047efdf3788d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57501751"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138220"
 ---
 # <a name="icorprofilerinfoendinprocdebugging-method"></a>Метод ICorProfilerInfo::EndInprocDebugging
 Завершает сеанс отладки в процессе. Этот метод является устаревшим в .NET Framework версии 2.0.  
@@ -53,4 +53,5 @@ HRESULT EndInprocDebugging(
  **Версии платформы .NET framework:** 1.0  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

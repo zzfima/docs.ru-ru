@@ -8,12 +8,12 @@ helpviewer_keywords:
 - images [Windows Forms], changing encoder parameters
 - JPEG images [Windows Forms], setting quality level
 ms.assetid: 4b9a74e3-9504-43c1-9f28-ace651d0772e
-ms.openlocfilehash: 678e89eaa240cbe3a396c1ee3d6c18e7ceca17ee
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: de9dce1b3c15070fda268c430ce5da641efef6f4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722299"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130680"
 ---
 # <a name="how-to-set-jpeg-compression-level"></a>Практическое руководство. Установка уровня сжатия JPEG
 Вам может потребоваться изменить параметры изображения при сохранении на диск, чтобы уменьшить размер файла или повысить качество изображения. Качество изображения в формате JPEG можно настроить, изменив уровень сжатия. Чтобы указать уровень сжатия при сохранении изображения в формате JPEG, необходимо создать <xref:System.Drawing.Imaging.EncoderParameters> объект и передать его в <xref:System.Drawing.Image.Save%2A> метод <xref:System.Drawing.Image> класса. Инициализировать <xref:System.Drawing.Imaging.EncoderParameters> объекта, чтобы он включал массив, который состоит из одной <xref:System.Drawing.Imaging.EncoderParameter>. При создании <xref:System.Drawing.Imaging.EncoderParameter>, укажите <xref:System.Drawing.Imaging.Encoder.Quality> кодировщик и нужный уровень сжатия.  
@@ -130,6 +130,7 @@ End Function
 -   файл изображения с именем `TestPhoto.jpg`, расположенный в папке **C:\\**.  
   
 ## <a name="see-also"></a>См. также
+
 - [Практическое руководство. Определение параметров, поддерживаемых кодировщиком](how-to-determine-the-parameters-supported-by-an-encoder.md)
-- [Типы растровых изображений](types-of-bitmaps.md)
+- [Типы точечных рисунков](types-of-bitmaps.md)
 - [Применение кодировщиков и декодеров изображений в управляемом GDI+](using-image-encoders-and-decoders-in-managed-gdi.md)

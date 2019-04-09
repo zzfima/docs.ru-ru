@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
-ms.openlocfilehash: fccfa5b0ef531ac8ecc869d7a248bb4f43a55d2c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d05e071b97c9a1f3043949a6619a187dd418f9b7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375250"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120982"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>Реализация неявной транзакции с использованием области транзакции
 Класс <xref:System.Transactions.TransactionScope> предоставляет простой способ пометки блока кода как участвующего в транзакции без необходимости взаимодействия с самой транзакцией. Область транзакции может автоматически выбирать внешнюю транзакцию и управлять ей. В целях обеспечения простоты использования и эффективности при разработке транзакционного приложения рекомендуется использовать класс <xref:System.Transactions.TransactionScope>.  
@@ -121,11 +121,11 @@ using(TransactionScope scope1 = new TransactionScope())
 }  
 ```  
   
- В примере показан блок кода без внешней транзакции, создающий новую область (`scope1`) со значением <xref:System.Transactions.TransactionScopeOption.Required>. Область `scope1` является корневой, поскольку она создает новую транзакцию (транзакцию A) и делает ее внешней транзакцией. Затем `Scope1` создает три дополнительных объекта с разными значениями <xref:System.Transactions.TransactionScopeOption>. Например, объект `scope2` создается со значением <xref:System.Transactions.TransactionScopeOption.Required>; поскольку существует внешняя транзакция, этот объект присоединяется к первой транзакции, созданной объектом `scope1`. Обратите внимание, что `scope3` является корневой областью новой транзакции, а `scope4` не имеет внешней транзакции.  
+ В примере показан блок кода без внешней транзакции, создающий новую область (`scope1`) со значением <xref:System.Transactions.TransactionScopeOption.Required>. Область `scope1` является корневой, поскольку она создает новую транзакцию (транзакцию A) и делает ее внешней транзакцией. `Scope1` затем создает три дополнительных объекта с разными <xref:System.Transactions.TransactionScopeOption> значение. Например, объект `scope2` создается со значением <xref:System.Transactions.TransactionScopeOption.Required>; поскольку существует внешняя транзакция, этот объект присоединяется к первой транзакции, созданной объектом `scope1`. Обратите внимание, что `scope3` является корневой областью новой транзакции, а `scope4` не имеет внешней транзакции.  
   
  Несмотря на то что значение по умолчанию <xref:System.Transactions.TransactionScopeOption> является наиболее часто используемым значением перечисления <xref:System.Transactions.TransactionScopeOption.Required>, каждое из остальных значений имеет свое уникальное назначение.  
   
- Значение <xref:System.Transactions.TransactionScopeOption.Suppress> полезно использовать, если требуется сохранить операции, выполняемые разделом кода, и не прерывать внешнюю транзакцию в случае сбоя этих операций (например, если требуется выполнить операции аудита или ведения журнала либо опубликовать события для подписчиков независимо от результата завершения внешней транзакции [фиксация или откат]). Это значение позволяет использовать раздел кода, не относящийся к транзакции, внутри области транзакции, как показано в следующем примере.  
+ <xref:System.Transactions.TransactionScopeOption.Suppress> полезно, когда требуется сохранить операции, выполняемые в разделе кода и не хотите прерывать внешнюю транзакцию в случае сбоя операции. (например, если требуется выполнить операции аудита или ведения журнала либо опубликовать события для подписчиков независимо от результата завершения внешней транзакции [фиксация или откат]). Это значение позволяет использовать раздел кода, не относящийся к транзакции, внутри области транзакции, как показано в следующем примере.  
   
 ```csharp  
 using(TransactionScope scope1 = new TransactionScope())  
@@ -169,5 +169,6 @@ using(TransactionScope scope1 = new TransactionScope())
  Чтобы задать способ взаимодействия с транзакциями COM+ при создании нового экземпляра <xref:System.Transactions.TransactionScope>, можно использовать перечисление <xref:System.Transactions.EnterpriseServicesInteropOption> в одном из конструкторов. Дополнительные сведения об этом см. в разделе [взаимодействие с транзакциями COM + Enterprise Services и](../../../../docs/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Transactions.Transaction.Clone%2A>
 - <xref:System.Transactions.TransactionScope>

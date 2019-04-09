@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 557b15fe2bd04a3362532f190a88ee2ad52ed366
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e6a95a636623f0b4ea75706039194572ecf1bbe0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57499840"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136205"
 ---
 # <a name="iclrassemblyreferencelistisassemblyreferenceinlist-method"></a>Метод ICLRAssemblyReferenceList::IsAssemblyReferenceInList
 Получает значение, указывающее, ссылается ли заданный указатель на сборку в списке.  
@@ -57,6 +57,7 @@ HRESULT IsAssemblyReferenceInList (
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс ICLRAssemblyIdentityManager](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
 - [Интерфейс ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
 - [Интерфейс IHostAssemblyManager](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)

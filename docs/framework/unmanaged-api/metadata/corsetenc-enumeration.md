@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bf1be8d5c709f3d6e5991e4d33dde2e923291a95
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1fd903cb4a9ce664b7a1c958a3fef0c639d6845d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569418"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122321"
 ---
 # <a name="corsetenc-enumeration"></a>Перечисление CorSetENC
 Содержит значения, используемые для оказания влияния на поведение во время создания метаданных.  
@@ -46,7 +46,7 @@ typedef enum CorSetENC {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |`MDSetENCOn`|Является устаревшей.|  
 |`MDSetENCOff`|Является устаревшей.|  
@@ -65,4 +65,5 @@ typedef enum CorSetENC {
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

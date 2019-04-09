@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 16c4e03667d4af3ab5cc8b653d77f15eaef25843
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c2fecc7160cb41e31bf88f1a461265ad8fdce166
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691831"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170395"
 ---
 # <a name="cordebugmappingresult-enumeration"></a>Перечисление CorDebugMappingResult
 Предоставляет сведения о том, как было получено значение указателя инструкций.  
@@ -41,7 +41,7 @@ typedef enum CorDebugMappingResult {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |`MAPPING_PROLOG`|Машинный код находится в прологе, поэтому значение IP-адреса равно 0.|  
 |`MAPPING_EPILOG`|Машинный код находится в эпилоге, поэтому значение IP-адреса — адрес последней инструкции метода.|  
@@ -63,4 +63,5 @@ typedef enum CorDebugMappingResult {
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Перечисления отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

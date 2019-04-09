@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Управление элементами потокового содержимого через свойство Blocks
+title: Практическое руководство. Управление элементами потокового содержимого с помощью свойства Blocks
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - properties [WPF], Blocks [WPF], manipulating flow content elements
 - Blocks property [WPF], manipulating flow content elements
 ms.assetid: aeda4ece-b979-4818-a093-ef938e908751
-ms.openlocfilehash: a988f47b6b147b0db285af1928a4260c5deba542
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e0e1e1333a54946f3bdf474e353de0301eb42447
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365858"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150141"
 ---
-# <a name="how-to-manipulate-flow-content-elements-through-the-blocks-property"></a>Практическое руководство. Управление элементами потокового содержимого через свойство Blocks
+# <a name="how-to-manipulate-flow-content-elements-through-the-blocks-property"></a>Практическое руководство. Управление элементами потокового содержимого с помощью свойства Blocks
 Эти примеры демонстрируют некоторые из наиболее распространенных операций, которые могут выполняться над элементами потокового содержимого через **блоки** свойство. Это свойство используется для добавления и удаления элементов из <xref:System.Windows.Documents.BlockCollection>. Элементы содержимого на поток, эта функция **блоки** свойства включают:  
   
 -   <xref:System.Windows.Documents.Figure>  
@@ -63,6 +63,7 @@ ms.locfileid: "57365858"
  [!code-vb[FlowDocumentSnippets#_SectionBlocksClear](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_sectionblocksclear)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Documents.BlockCollection>
 - <xref:System.Windows.Documents.InlineCollection>
 - <xref:System.Windows.Documents.ListItemCollection>

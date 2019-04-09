@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, client library
 ms.assetid: 962a49d1-cc11-4b96-bc7d-071dd6607d6c
-ms.openlocfilehash: b6dfa95755cc98d30725cecb8669ae4df3aca012
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a9f74f025af6dfc5737ea9f4971f68c5ad913e8b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555210"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133605"
 ---
 # <a name="batching-operations-wcf-data-services"></a>Пакетные операции (службы данных WCF)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Поддерживают пакетную обработку запросов к [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-службу на основе. Дополнительные сведения см. в разделе [OData: Пакетная обработка](https://go.microsoft.com/fwlink/?LinkId=186075). В [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], каждая операция, использующая <xref:System.Data.Services.Client.DataServiceContext>, такие как выполнение запроса или сохранения изменений, порождает отдельный запрос, отправляемый службе данных. Для создания логической области видимости для набора операций можно явно определить пакеты операций. Это гарантирует, что все операции в пакете отправляются в службу данных в одном HTTP-запросе, позволяет серверу обработать их единым блоком и сокращает количество циклов обработки в службу данных.  
@@ -25,4 +25,5 @@ ms.locfileid: "54555210"
  Можно также сохранить пакет изменений асинхронно. Дополнительные сведения см. в разделе [асинхронных операций](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Библиотека клиентов служб данных WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

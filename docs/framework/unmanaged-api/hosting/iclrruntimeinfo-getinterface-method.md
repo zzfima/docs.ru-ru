@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 81f27489d554b59101f1eb181ea64f6b68da979c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2f229e421cc69f2ff45110233c4c6c36d7a1fc4c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57491910"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152754"
 ---
 # <a name="iclrruntimeinfogetinterface-method"></a>Метод ICLRRuntimeInfo::GetInterface
 Загружает среду CLR в текущий процесс и возвращает среды выполнения, указатели на интерфейс, такие как [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md), [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md), и [IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md).  
@@ -54,7 +54,7 @@ HRESULT GetInterface(
 |HRESULT|Описание|  
 |-------------|-----------------|  
 |S_OK|Метод завершился успешно.|  
-|E_POINTER|Параметр `ppUnk` имеет значение null.|  
+|E_POINTER|`ppUnk` имеет значение null.|  
 |E_OUTOFMEMORY|Недостаточно памяти для обработки запроса.|  
 |CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND|Другие среды выполнения уже была привязана к устаревшая политика активации 2 версии среды CLR.|  
   
@@ -84,6 +84,7 @@ HRESULT GetInterface(
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
 - [Интерфейсы размещения](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
 - [Размещение](../../../../docs/framework/unmanaged-api/hosting/index.md)

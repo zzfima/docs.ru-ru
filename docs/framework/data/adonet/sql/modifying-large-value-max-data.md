@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-ms.openlocfilehash: c77d688afa19caf1d54adf93b9fb6cf8b1c4701d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 417afd5f614aee8db0aeec2377973ad894e04384
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493902"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119305"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>Изменение данных больших объемов (max) в ADO.NET
 Типы данных LOB - это типы данных, размер которых превышает максимальный размер строки в 8 килобайт (КБ). В SQL Server для типов данных `max`, `varchar` и `nvarchar` имеется описатель `varbinary`, позволяющий хранить значения размером до 2^32 байт. Столбцы таблицы и переменные языка Transact-SQL могут задавать типы данных `varchar(max)`, `nvarchar(max)` или `varbinary(max)`. В ADO.NET типы данных `max` можно выбрать с помощью объекта `DataReader`, а также их можно задавать в качестве значений входных и выходных параметров без какой-либо специальной обработки. Данные больших типов данных `varchar` можно получать и обновлять добавочно.  
@@ -21,7 +21,7 @@ ms.locfileid: "54493902"
   
  **Электронная документация по SQL Server**  
   
-1.  [Использование типов данных больших значений](https://go.microsoft.com/fwlink/?LinkId=120498)  
+1.  [Использование типов данных большого размера](https://go.microsoft.com/fwlink/?LinkId=120498)  
   
 ## <a name="large-value-type-restrictions"></a>Ограничения для типов данных большого размера  
  Следующие ограничения, не существующие для более мелких типов данных, применяются к типам данных `max`.  
@@ -33,7 +33,7 @@ ms.locfileid: "54493902"
 -   Большие столбцы типа `varchar` нельзя использовать в качестве ключевых столбцов секционирования.  
   
 ## <a name="working-with-large-value-types-in-transact-sql"></a>Работа с типами большого размера на языке Transact-SQL  
- Функция `OPENROWSET` языка Transact-SQL является единовременным методом соединения и доступа к удаленным данным. Включает все сведения о соединении, необходимые для доступа к удаленным данным источника данных OLE DB. Из предложения FROM запроса на `OPENROWSET` можно ссылаться как на имя таблицы. Она также может быть использована в качестве целевой таблицы в инструкциях INSERT, UPDATE или DELETE. Это зависит от возможностей поставщика OLE DB.  
+ Функция `OPENROWSET` языка Transact-SQL является единовременным методом соединения и доступа к удаленным данным. Включает все сведения о соединении, необходимые для доступа к удаленным данным источника данных OLE DB. `OPENROWSET` можно ссылаться в предложении FROM запроса, как если бы оно было имя таблицы. Она также может быть использована в качестве целевой таблицы в инструкциях INSERT, UPDATE или DELETE. Это зависит от возможностей поставщика OLE DB.  
   
  В функции `OPENROWSET` включен поставщик набора строк `BULK`, позволяющий считывать данные непосредственно из файла без загрузки данных в целевую таблицу. Это позволяет использовать `OPENROWSET` в простой инструкции INSERT SELECT.  
   
@@ -68,9 +68,9 @@ FROM OPENROWSET
 |If|Следующее действие|  
 |--------|----------|  
 |Выражение устанавливается в значение NULL.|`@Length` игнорируется, а значение в *column_name* усекается по указанному индексу `@Offset`.|  
-|`@Offset` равно NULL|Операция обновления добавляет выражение в конец существующего *column_name* значение и `@Length` учитывается.|  
-|Аргумент `@Offset` больше, чем длина поля column_name.|SQL Server возвращает ошибку.|  
-|`@Length` равно NULL|Операция обновления удаляет все данные, со значения `@Offset` до конца значения `column_name`.|  
+|`@Offset` имеет значение NULL|Операция обновления добавляет выражение в конец существующего *column_name* значение и `@Length` учитывается.|  
+|`@Offset` больше, чем длина значения column_name|SQL Server возвращает ошибку.|  
+|`@Length` имеет значение NULL|Операция обновления удаляет все данные, со значения `@Offset` до конца значения `column_name`.|  
   
 > [!NOTE]
 >  Ни `@Offset`, ни `@Length` не могут быть отрицательными числами.  
@@ -250,7 +250,8 @@ WHERE   DocumentID=@DocumentID
  [!code-vb[DataWorks LargeValueType.Param#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks LargeValueType.Param/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Двоичные данные и данные большого объема SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
 - [Сопоставления типов данных SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
 - [Операции данных SQL Server Data в ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

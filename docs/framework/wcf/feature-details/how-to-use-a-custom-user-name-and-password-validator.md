@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Использовать настраиваемое имя пользователя и пароль проверяющий элемент управления
+title: Практическое руководство. Использование пользовательского проверяющего элемента управления для имени пользователя и пароля
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - WCF, username and password
 ms.assetid: 8e08b74b-fa44-4018-b63d-0d0805f85e3f
-ms.openlocfilehash: 619d3e80a8206ae3ceef2d7ff822dc3bfa8f65be
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 0c5f5783f4f302b7a33c6d960049d68ed18dac91
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700537"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160255"
 ---
-# <a name="how-to-use-a-custom-user-name-and-password-validator"></a>Как выполнить Использовать настраиваемое имя пользователя и пароль проверяющий элемент управления
+# <a name="how-to-use-a-custom-user-name-and-password-validator"></a>Практическое руководство. Использование пользовательского проверяющего элемента управления для имени пользователя и пароля
 По умолчанию Если имя пользователя и пароль используется для проверки подлинности, Windows Communication Foundation (WCF) использует Windows для проверки имени пользователя и пароля. Тем не менее, WCF позволяет пользовательского имени и пароля схем проверки подлинности, также известный как *проверяющие элементы управления*. Чтобы внедрить пользовательский проверяющий элемент управления для проверки подлинности имени пользователя и пароля, необходимо создать класс, унаследованный от класса <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>, и настроить его.  
   
  Образец приложения, см. в разделе [проверяющего элемента управления пароля имя пользователя](../../../../docs/framework/wcf/samples/user-name-password-validator.md).  
@@ -118,6 +118,7 @@ ms.locfileid: "54700537"
 [!code-vb[C_CustomUsernameAndPasswordValidator#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customusernameandpasswordvalidator/vb/service.vb#2)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>
 - [Практическое руководство. Использование поставщика членства ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)
-- [Authentication](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)
+- [Проверка подлинности](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)

@@ -1,18 +1,18 @@
 ---
-title: Практическое руководство. Обмен сообщениями с конечными точками WCF в очереди
+title: Практическое руководство. Обмен сообщениями в очереди с конечными точками WCF
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 938e7825-f63a-4c3d-b603-63772fabfdb3
-ms.openlocfilehash: ea052a2dd843205a8108ea48f17ea84577817215
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: 98cb62c0d3f82a90ee96797a34600473dbe4dc11
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411035"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179170"
 ---
-# <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>Практическое руководство. Обмен сообщениями с конечными точками WCF в очереди
+# <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>Практическое руководство. Обмен сообщениями в очереди с конечными точками WCF
 Очереди обеспечивают надежный обмен сообщениями может произойти между клиентом и службой Windows Communication Foundation (WCF), что, даже если служба доступна не во время обмена данными. Следующие процедуры показывают, как для обеспечения устойчивого взаимодействия между клиентом и службой за счет использования стандартной поставленной в очередь привязки при реализации службы WCF.  
   
  В этом разделе описываются способы использования <xref:System.ServiceModel.NetMsmqBinding> для взаимодействия с использованием очередей между клиентом WCF и службы WCF.  
@@ -42,9 +42,7 @@ ms.locfileid: "58411035"
      [!code-vb[S_Msmq_Transacted#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/hostapp.vb#4)]  
   
 5.  Определите класс <xref:System.ServiceModel.Description.ServiceEndpoint> в конфигурации, которая задает адрес службы и использует стандартную привязку <xref:System.ServiceModel.NetMsmqBinding>. Дополнительные сведения об использовании конфигурации WCF см. в разделе [служб WCF, Настройка](../configuring-services.md).  
-  
-  
-  
+
 6.  Создайте узел для службы `OrderProcessing` с использованием <xref:System.ServiceModel.ServiceHost>, считывающий и обрабатывающий сообщения из очереди. Откройте узел службы для обеспечения доступности службы. Выведите для пользователя сообщение о том, что нужно нажать любую клавишу для завершения службы. Вызовите метод `ReadLine`, чтобы включить ожидания нажатия клавиши, а затем закройте службу.  
   
      [!code-csharp[S_Msmq_Transacted#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/hostapp.cs#6)]
@@ -59,9 +57,7 @@ ms.locfileid: "58411035"
     ```  
   
 2.  Определите объект <xref:System.ServiceModel.Description.ServiceEndpoint> в конфигурации, которая указывает адрес и использует стандартную привязку <xref:System.ServiceModel.NetMsmqBinding>, как показано в следующем примере.  
-  
-  
-  
+
 3.  Создайте область транзакции для записи в транзакционную очередь, вызов `SubmitPurchaseOrder` операции и закрыть клиент WCF, как показано в следующем примере.  
   
      [!code-csharp[S_Msmq_Transacted#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/client.cs#8)]
@@ -75,19 +71,16 @@ ms.locfileid: "58411035"
   
  [!code-csharp[S_Msmq_Transacted#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/hostapp.cs#10)]
  [!code-vb[S_Msmq_Transacted#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/hostapp.vb#10)]  
-  
-  
-  
+
  [!code-csharp[S_Msmq_Transacted#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/client.cs#12)]
  [!code-vb[S_Msmq_Transacted#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/client.vb#12)]  
-  
-  
-  
+
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.NetMsmqBinding>
 - [Привязка MSMQ с поддержкой транзакций](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)
 - [Очереди в WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
-- [Практическое руководство. Обмен сообщениями с конечными точками WCF и приложений с очередями сообщений](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
+- [Практическое руководство. Обмен сообщениями с конечными точками WCF и приложениями очереди сообщений](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
 - [Отправка сообщений из приложения Windows Communication Foundation в приложение MSMQ](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)
 - [Установка системы очередей сообщений (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)
 - [Передача сообщений из приложения MSMQ в приложение Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)

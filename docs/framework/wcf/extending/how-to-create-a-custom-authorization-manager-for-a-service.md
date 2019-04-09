@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, extending
 - OperationRequirement class
 ms.assetid: 6214afde-44c1-4bf5-ba07-5ad6493620ea
-ms.openlocfilehash: 571c1d66bcf1ea62972eb1be3fd694964581db38
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: 6a168902b79bd27345c9d9e2371947cc9d64233c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465143"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156498"
 ---
 # <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>Практическое руководство. Создание пользовательского диспетчера авторизации для службы
 Инфраструктура модели удостоверения в Windows Communication Foundation (WCF) поддерживает модель расширяемый авторизации на основе утверждений. Утверждения извлекаются из маркеров, дополнительно обрабатываемых пользовательской политикой авторизации, и затем помещаются в контекст <xref:System.IdentityModel.Policy.AuthorizationContext>. Диспетчер авторизации проверяет утверждения в контексте <xref:System.IdentityModel.Policy.AuthorizationContext> для принятия решений об авторизации.  
@@ -118,5 +118,6 @@ ms.locfileid: "58465143"
  [!code-vb[c_CustomAuthMgr#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthmgr/vb/c_customauthmgr.vb#2)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
 - [Политика авторизации](../../../../docs/framework/wcf/samples/authorization-policy.md)

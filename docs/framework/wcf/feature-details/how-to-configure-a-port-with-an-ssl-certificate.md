@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Настройка порта с помощью SSL-сертификата
+title: Практическое руководство. Настройка порта с использованием SSL-сертификата
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: 3aa32e54643ffb8e2e4e40f730ab3f5c084b8cd9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 533c329bed7b1cb9b07805032c839d3f5ff10634
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521725"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139819"
 ---
-# <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Как выполнить Настройка порта с помощью SSL-сертификата
+# <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Практическое руководство. Настройка порта с использованием SSL-сертификата
 При создании резидентной службы Windows Communication Foundation (WCF) с <xref:System.ServiceModel.WSHttpBinding> класса, использующим безопасность транспорта, необходимо также настроить порт с сертификатом X.509. При создании нерезидентной службы можно разместить ее в службах IIS. Дополнительные сведения см. в разделе [безопасности транспорта HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  Выбор средства для настройки порта зависит от операционной системы компьютера.  
@@ -105,7 +105,7 @@ ms.locfileid: "54521725"
   
 ### <a name="to-delete-an-ssl-certificate-from-a-port-number"></a>Удаление SSL-сертификата из номера порта  
   
-1.  Для просмотра портов и отпечатков всех привязок на компьютере следует использовать средство HttpCfg.exe или Netsh.exe. Для вывода информации на диск используйте символ перенаправления ">", как показано в следующем примере.  
+1.  Для просмотра портов и отпечатков всех привязок на компьютере следует использовать средство HttpCfg.exe или Netsh.exe. Для вывода информации на диск, используйте символ перенаправления «>», как показано в следующем примере.  
   
     ```  
     httpcfg query ssl>myMachinePorts.txt  
@@ -130,4 +130,5 @@ ms.locfileid: "54521725"
  [!code-vb[c_WsHttpService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wshttpservice/vb/source.vb#3)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Безопасность транспорта HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Оптимизация производительности: Ресурсы приложения'
+title: 'Оптимизация производительности: Ресурсы приложений'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application resources [WPF], performance
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - brushes [WPF], performance
 - sharing brushes without copying [WPF]
 ms.assetid: 62b88488-c08e-4804-b7de-a1c34fbe929c
-ms.openlocfilehash: 921a67a24464ff5ac782045ae022f7766f32d579
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 362d0f0fd3282365e5e05dcd43c49a9fd2ddc9a7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352403"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139429"
 ---
-# <a name="optimizing-performance-application-resources"></a>Оптимизация производительности: Ресурсы приложения
+# <a name="optimizing-performance-application-resources"></a>Оптимизация производительности: Ресурсы приложений
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] позволяет совместно использовать ресурсы приложения таким образом, можно поддерживать согласованный вид или поведение с помощью элементов одинакового типа. Этот раздел содержит несколько рекомендаций в этой области, которые могут помочь повысить производительность приложений.  
   
  Дополнительные сведения о ресурсах см. в разделе [Ресурсы XAML](xaml-resources.md).  
@@ -43,12 +43,13 @@ ms.locfileid: "57352403"
  [!code-xaml[Performance#PerformanceSnippet8](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/DynamicResource.xaml#performancesnippet8)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Улучшение производительности приложений WPF](optimizing-wpf-application-performance.md)
 - [Планирование производительности приложения](planning-for-application-performance.md)
 - [Использование преимуществ оборудования](optimizing-performance-taking-advantage-of-hardware.md)
 - [Разметка и разработка](optimizing-performance-layout-and-design.md)
 - [Двумерная графика и изображения](optimizing-performance-2d-graphics-and-imaging.md)
 - [Поведение объекта](optimizing-performance-object-behavior.md)
-- [Text](optimizing-performance-text.md)
+- [Текста](optimizing-performance-text.md)
 - [Привязка данных](optimizing-performance-data-binding.md)
 - [Дополнительные рекомендации по повышению производительности](optimizing-performance-other-recommendations.md)

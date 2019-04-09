@@ -2,12 +2,12 @@
 title: Методы System.TimeSpan
 ms.date: 03/30/2017
 ms.assetid: 9333fee8-1454-4374-855b-8c14c002f48f
-ms.openlocfilehash: a3f3c82f9f8db4b72588f165ed4d897b974eb076
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd693a64550293d6894e1d2abc3f651a53fc17fc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539913"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126949"
 ---
 # <a name="systemtimespan-methods"></a>Методы System.TimeSpan
 Поддержка элементов типа <xref:System.TimeSpan?displayProperty=nameWithType> в значительной степени зависит от используемых версий платформы .NET Framework и сервера Microsoft SQL Server.  
@@ -37,6 +37,7 @@ ms.locfileid: "54539913"
  Хотя тип CLR <xref:System.TimeSpan?displayProperty=nameWithType> поддерживает сложение и вычитание, тип SQL `TIME` их не поддерживает. Поэтому запросы LINQ to SQL будут вызывать ошибки при попытке выполнить сложение или вычитание, когда они сопоставлены с типом SQL `TIME`. Можно найти дополнительные сведения о работе с типами даты и времени SQL в [сопоставления типов SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Основные принципы запросов](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
 - [Создание модели объектов](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
 - [Сопоставление типов SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)

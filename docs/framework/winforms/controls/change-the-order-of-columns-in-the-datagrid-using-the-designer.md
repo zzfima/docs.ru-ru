@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Изменить порядок столбцов в элементе управления DataGridView формы Windows с помощью конструктора
+title: Практическое руководство. Изменение порядка столбцов элемента управления DataGridView в формах Windows Forms с помощью конструктора
 ms.date: 03/30/2017
 helpviewer_keywords:
 - columns [Windows Forms], order of
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - Windows Forms, columns
 - data [Windows Forms], displaying
 ms.assetid: 7fe52a98-75d6-448c-97a5-65ca2c568c1a
-ms.openlocfilehash: 58a92b4f5f604bba0da4b5a42ff25b0122b6f01e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 131ef2a04caa17aa268c0e8d229a1070061c4373
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702949"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175309"
 ---
-# <a name="how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>Практическое руководство. Изменить порядок столбцов в элементе управления DataGridView формы Windows с помощью конструктора
+# <a name="how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>Практическое руководство. Изменение порядка столбцов элемента управления DataGridView в формах Windows Forms с помощью конструктора
 При привязке форм Windows <xref:System.Windows.Forms.DataGridView> элемента управления к источнику данных, порядок отображения автоматически создаваемые столбцы, зависит от источника данных. Если вас не устраивает, можно изменить порядок столбцов, с помощью конструктора. Можно также добавить несвязанных столбцов в элемент управления и изменить порядок их отображения. Сведения о том, как изменение порядка столбцов программным образом см. в разделе [как: Изменение порядка столбцов элемента управления DataGridView в Windows Forms](how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md).  
   
  Следующая процедура требуется **приложения Windows** проекта с формой, содержащей <xref:System.Windows.Forms.DataGridView> элемента управления. Сведения о настройке такого проекта см. в разделе [как: Создайте проект приложения Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project) и [как: Добавление элементов управления в Windows Forms](how-to-add-controls-to-windows-forms.md).  
@@ -31,7 +31,8 @@ ms.locfileid: "57702949"
 3.  Щелкните стрелку вверх или стрелку справа от раскрывающегося списка **выбранных столбцов** списка до выбранного столбца в нужное место.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.DataGridView>
-- [Практическое руководство. Добавлять и удалять столбцы в элементе управления DataGridView формы Windows с помощью конструктора](add-and-remove-columns-in-the-datagrid-using-the-designer.md)
-- [Практическое руководство. Создание проекта приложения Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project).
-- [Практическое руководство. Добавление элементов управления Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [Практическое руководство. Добавление и удаление столбцов элемента управления DataGridView в формах Windows Forms с помощью конструктора](add-and-remove-columns-in-the-datagrid-using-the-designer.md)
+- [Практическое руководство. Создайте проект приложения Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
+- [Практическое руководство. Добавление элементов управления в формы Windows Forms](how-to-add-controls-to-windows-forms.md)

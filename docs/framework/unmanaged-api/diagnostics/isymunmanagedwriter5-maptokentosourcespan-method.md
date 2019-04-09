@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: d0fbbf61-71c6-4fb1-8c9f-d619ca5d7d68
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf061de3e75550e33ba67c1d624279b1673c5382
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 08c219dd033b39fc07159875b184cdf70e3aa3ed
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57465340"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181523"
 ---
 # <a name="isymunmanagedwriter5maptokentosourcespan-method"></a>Метод ISymUnmanagedWriter5::MapTokenToSourceSpan
 Maps маркер заданных метаданных для заданной строки исходного диапазона в указанный исходный файл.  
@@ -24,7 +24,7 @@ HRESULT MapTokenToSourceSpan(    [in] mdToken token,    [in] ISymUnmanagedDocume
   
 ## <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |`token`||  
 |`document`||  
@@ -40,4 +40,5 @@ HRESULT MapTokenToSourceSpan(    [in] mdToken token,    [in] ISymUnmanagedDocume
  **Заголовок.** CorSym.idl CorSym.h  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс ISymUnmanagedWriter5](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-interface.md)

@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Миграция с поддержкой AJAX веб-служб ASP.NET в WCF
+title: Практическое руководство. Миграция веб-служб ASP.NET с поддержкой AJAX на платформу WCF
 ms.date: 03/30/2017
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
-ms.openlocfilehash: 3c7052a67e756ae0c3fa1692c3ed746419384de4
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: dfbb32a751623fb1e3753cfd8bbbaf5910d571b2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410944"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143004"
 ---
-# <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Практическое руководство. Миграция с поддержкой AJAX веб-служб ASP.NET в WCF
+# <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Практическое руководство. Миграция веб-служб ASP.NET с поддержкой AJAX на платформу WCF
 В этом разделе описаны процедуры по переносу базовой службы ASP.NET AJAX для службы с поддержкой AJAX Windows Communication Foundation (WCF). В этом примере показано создание функционально эквивалентны WCF версию службы ASP.NET AJAX. Две службы затем используется рядом друг с другом или службы WCF можно использовать для замены службы ASP.NET AJAX.
 
  Перенос существующего ASP.NET AJAX вызовы между службами WCF AJAX предоставляет следующие преимущества:
@@ -193,7 +193,7 @@ d.Add("two", 2);
 
  Этот словарь состоит из объектов JSON, как показано в следующем списке:
 
--   [{"Key":"one","Value":1},{"Key":"two","Value":2}] - <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>
+-   [{«Key»: «One», «Value»: 1}, {«Key»: «Two», «Value»: 2}] с <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>
 
 -   {«one»: 1, «two»: 2} с ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer>
 
@@ -208,9 +208,10 @@ d.Add("two", 2);
 |Сериализация закрытых членов типов [Serializable]|Сериализуются|Не сериализуются|
 |Сериализация открытых свойств типов <xref:System.Runtime.Serialization.ISerializable>|Не сериализуются|Сериализуются|
 |Расширения JSON|Удовлетворяет спецификации JSON, которая требует заключать имена членов объектов в кавычки ({"a":"hello"}).|Поддерживает имена членов объектов без кавычек ({a:"hello"}).|
-|Время в формате UTC (<xref:System.DateTime>)|Не поддерживает формат "\\/Date(123456789U)\\/» или"\\/Date\\(\d+ (U&#124;(\\+\\-[\d{4}]))?\\) \\\\/)".|Поддерживает формат "\\/Date(123456789U)\\/» и"\\/Date\\(\d+ (U&#124;(\\+\\-[\d{4}]))?\\) \\ \\/)» как значения даты и времени.|
+|<xref:System.DateTime> Всеобщего скоординированного времени (UTC)|Не поддерживает формат "\\/Date(123456789U)\\/» или"\\/Date\\(\d+ (U&#124;(\\+\\-[\d{4}]))?\\) \\\\/)".|Поддерживает формат "\\/Date(123456789U)\\/» и"\\/Date\\(\d+ (U&#124;(\\+\\-[\d{4}]))?\\) \\ \\/)» как значения даты и времени.|
 |Представление словарей|Массив KeyValuePair\<K, V >, обрабатывает типы ключей, которые не являются строками.|Фактические объекты JSON, но обрабатывает только ключи строковых типов|
 |Escape-символы|Всегда с escape-символом прямой косой черты (/); нельзя использовать недопустимые символы JSON без escape-символа, например "\n"|Значения DateTime с escape-символом прямой косой черты (/)|
 
 ## <a name="see-also"></a>См. также
+
 - [Практическое руководство. Использование конфигурации для добавления конечной точки ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)

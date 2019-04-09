@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 40494916-c25a-4cb8-8f7c-fcb8d378464e
-ms.openlocfilehash: 4081558f9ea6a1bc258ab4cbebe6c2f72ee2c60c
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: c3ed424aff3cd485a78d26a7f27bc5b1eac66448
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903385"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119747"
 ---
 # <a name="executing-a-command"></a>Выполнение команды
 Каждый поставщик данных .NET Framework, включенный в состав .NET Framework, имеет собственный объект команды, наследуемый от <xref:System.Data.Common.DbCommand>. Поставщик данных .NET Framework для OLE DB содержит объект <xref:System.Data.OleDb.OleDbCommand>, поставщик данных .NET Framework для SQL Server - объект <xref:System.Data.SqlClient.SqlCommand>, поставщик данных .NET Framework для ODBC - объект <xref:System.Data.Odbc.OdbcCommand>, а поставщик данных .NET Framework для Oracle - объект <xref:System.Data.OracleClient.OracleCommand>. Каждый из этих объектов предоставляет методы выполнения команд с учетом типа команды и требуемого возвращаемого значения, как описано в следующей таблице.  
@@ -40,6 +40,7 @@ ms.locfileid: "55903385"
  Поставщик данных .NET Framework для SQL Server добавляет счетчики производительности, позволяя обнаруживать периодически возникающие проблемы, связанные со сбоями команд. Дополнительные сведения см. в разделе [счетчики производительности](../../../../docs/framework/data/adonet/performance-counters.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Команды и параметры](../../../../docs/framework/data/adonet/commands-and-parameters.md)
 - [Объекты DataAdapter и DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [Общие сведения об ADO.NET](ado-net-overview.md)
+- [Общие сведения о ADO.NET](ado-net-overview.md)

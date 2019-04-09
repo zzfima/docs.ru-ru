@@ -5,18 +5,16 @@ helpviewer_keywords:
 - controls [WPF], TextBox
 - TextBox control [WPF], about TextBox control
 ms.assetid: 1ba6dc5b-11a7-4247-9213-36c6729ee35f
-ms.openlocfilehash: 5ddd6600493cd127f8024f23594c628476cac19e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 577a12a0c04e5e3bfbfecb2c45263b684f0ffc17
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361074"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162650"
 ---
 # <a name="textbox-overview"></a>Общие сведения о TextBox
 <xref:System.Windows.Controls.TextBox> Класс позволяет отобразить или отредактировать неформатированный текст. Обычно используются <xref:System.Windows.Controls.TextBox> редактирование неформатированного текста в форме. Например, форма запроса имени пользователя, номера телефона и т.д может использовать <xref:System.Windows.Controls.TextBox> элементы управления для ввода текста. В данном разделе представлены <xref:System.Windows.Controls.TextBox> класса и приводятся примеры его использования в оба [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] и C#.  
-  
- 
-  
+
 <a name="textbox_or_richtextbox"></a>   
 ## <a name="textbox-or-richtextbox"></a>TextBox или RichTextBox?  
  Оба <xref:System.Windows.Controls.TextBox> и <xref:System.Windows.Controls.RichTextBox> позволяют пользователям вводить текст, но эти два элемента управления используются для разных сценариев. Объект <xref:System.Windows.Controls.TextBox> требует меньше системных ресурсов то <xref:System.Windows.Controls.RichTextBox> , это идеальный вариант, если необходимо изменить только обычный текст (т. е. для использования в форме). Объект <xref:System.Windows.Controls.RichTextBox> подходит лучше, когда это необходимо для пользователю необходимо отредактировать форматированный текст, изображения, таблицы или другие поддерживаемые содержимого. Например, редактирование документа, статьи или блога, для которых требуется форматирование, изображений, и т.д., лучше всего выполнять с помощью <xref:System.Windows.Controls.RichTextBox>. В следующей таблице перечислены основные возможности <xref:System.Windows.Controls.TextBox> и <xref:System.Windows.Controls.TextBox>.  
@@ -68,5 +66,6 @@ ms.locfileid: "57361074"
  Обычно <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> событие должно использоваться, чтобы определить, когда текст в <xref:System.Windows.Controls.TextBox> или <xref:System.Windows.Controls.RichTextBox> изменяется, а не <xref:System.Windows.UIElement.KeyDown> как можно ожидать. Пример см. в разделе [Определение изменения текста в TextBox](how-to-detect-when-text-in-a-textbox-has-changed.md).  
   
 ## <a name="see-also"></a>См. также
-- [Разделы практического руководства](textbox-how-to-topics.md)
+
+- [Практические руководства](textbox-how-to-topics.md)
 - [Общие сведения о RichTextBox](richtextbox-overview.md)

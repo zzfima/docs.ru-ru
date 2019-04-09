@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 82b58780472443874f2dae93c2d8568006db2e8a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5c6ef901f43cd6568f17657ed8e58bc2cc2cc0a1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978570"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186060"
 ---
 # <a name="icordebugappdomain2-interface"></a>Интерфейс ICorDebugAppDomain2
 
@@ -29,7 +29,7 @@ ms.locfileid: "56978570"
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание:|  
+|Метод|Описание|  
 |------------|-----------------|  
 |[Метод GetArrayOrPointerType](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain2-getarrayorpointertype-method.md)|Получает массив указанного типа, указатель или ссылка на указанный тип.|  
 |[Метод GetFunctionPointerType](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain2-getfunctionpointertype-method.md)|Получает указатель на функцию с заданной подписью.|  
@@ -49,4 +49,5 @@ ms.locfileid: "56978570"
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

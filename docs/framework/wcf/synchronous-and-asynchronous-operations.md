@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: a35f4543543aa9023fd43de1757975c7ada87da9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 3db7d6b072c7803d96deb17b33a06af3d55aca12
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529126"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148958"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Синхронные и асинхронные операции
 В этом разделе описывается реализация и вызов асинхронных операций службы.  
@@ -172,7 +172,7 @@ await simpleServiceClient.SampleMethodTaskAsync("hello, world");
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async /tcv:Version35  
 ```  
   
- В такой конфигурации служебная программа Svcutil.exe создает класс клиента WCF с инфраструктурой событий, которая позволяет вызывающему приложению реализовать и присвоить обработчик событий, который получает ответ и выполняет соответствующие действия. Полный пример см. в разделе [как: Асинхронный вызов операций службы](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
+ В такой конфигурации служебная программа Svcutil.exe создает класс клиента WCF с инфраструктурой событий, которая позволяет вызывающему приложению реализовать и присвоить обработчик событий, который получает ответ и выполняет соответствующие действия. Полный пример см. в подразделе [Практическое руководство. Асинхронный вызов операций службы](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
   
  Однако асинхронная модель на основе событий доступна только в [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)]. Кроме того, она не поддерживается даже в [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)], если канал WCF создается для клиента с помощью <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>. Для асинхронного вызова операций в объектах клиентского канала WCF необходимо использовать объекты <xref:System.IAsyncResult?displayProperty=nameWithType>. Чтобы воспользоваться этим подходом, укажите параметр командной строки **/async** в [служебном средстве ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), как показано в следующем примере.  
   
@@ -182,7 +182,7 @@ svcutil http://localhost:8000/servicemodelsamples/service/mex /async
   
  В результате будет создан контракт службы, в котором каждая операция моделируется в виде метода `<Begin>`, где свойство <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> имеет значение `true`, и соответствующего метода `<End>`. Полный пример использования <xref:System.ServiceModel.ChannelFactory%601>, см. в разделе [как: Вызов операций асинхронно с использованием фабрики каналов](../../../docs/framework/wcf/feature-details/how-to-call-operations-asynchronously-using-a-channel-factory.md).  
   
- В любом случае приложения могут вызывать операцию асинхронно, даже если служба реализована синхронно, так же, как приложение может использовать один и тот же шаблон для асинхронного вызова и вызова локального синхронного метода. Реализация операции не имеет значения для клиента; когда приходит ответное сообщение, его содержимое передается асинхронному методу клиента <`End`>, и клиент извлекает информацию.  
+ В любом случае приложения могут вызывать операцию асинхронно, даже если служба реализована синхронно, так же, как приложение может использовать один и тот же шаблон для асинхронного вызова и вызова локального синхронного метода. Реализация операции не имеет значения для клиента; Когда приходит ответное сообщение, его содержимое передается асинхронному клиента <`End`> метод и клиент извлекает информацию.  
   
 ### <a name="one-way-message-exchange-patterns"></a>Шаблоны одностороннего обмена сообщениями  
  Можно создать асинхронный шаблон обмена сообщениями, в котором односторонние операции (операции, у которых свойство <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> имеет значение `true` и нет согласованного ответа) могут отправляться в любом направлении клиентом или службой независимо от противоположной стороны. (При этом используется шаблон дуплексного обмена сообщениями с односторонними сообщениями.) В этом случае контракт службы задает механизм одностороннего обмена сообщениями, который может реализовываться или не реализовываться в виде асинхронных вызовов на каждой из сторон по мере необходимости. Обычно, если контракт определяет односторонний обмен сообщениями, реализации бывают преимущественно асинхронными, поскольку после отправки сообщения приложение не дожидается ответа и продолжает выполнять другие операции.  
@@ -193,5 +193,6 @@ svcutil http://localhost:8000/servicemodelsamples/service/mex /async
  Если требуется получать объект сообщения как свойство `Result`, чтобы возвращаемые значения были свойствами этого объекта, следует использовать параметр командной строки **/messageContract**. При этом формируется сигнатура, которая возвращает ответное сообщение как свойство `Result` объекта <xref:System.EventArgs>. Все внутренние возвращаемые значения тогда будут свойствами объекта ответного сообщения.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>
 - <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A>

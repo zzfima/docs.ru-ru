@@ -1,5 +1,5 @@
 ---
-title: Элемент <requestCaching> (параметры сети)
+title: <requestCaching> (Сетевые параметры)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#requestCaching
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - requestCaching element
 - <requestCaching> element
 ms.assetid: 9962a2fe-cbda-41a6-9377-571811eaea84
-ms.openlocfilehash: d78325438ba158c0c1d0e322d0b02d0a0a2a57f0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: af290e4b9258a08425a15e297ff538502edea916
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55277710"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164857"
 ---
 # <a name="requestcaching-element-network-settings"></a>\<requestCaching > (сетевые параметры)
 Определяет механизм кэширования для сетевых запросов.  
@@ -40,7 +40,7 @@ ms.locfileid: "55277710"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание:|  
+|Атрибут|Описание|  
 |---------------|-----------------|  
 |`isPrivateCache`|Указывает, обеспечивает ли кэш изоляцию сведений различных пользователей. Значение по умолчанию — `true`. Это значение должно быть `false` для приложений среднего уровня.|  
 |`disableAllCaching`|Указывает, что кэширование отключено для всех веб-откликов и не может быть переопределен программным способом.|  
@@ -69,9 +69,9 @@ ms.locfileid: "55277710"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
-|[System.NET](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Содержит параметры сети, определяющие способ подключения .NET Framework к Интернету.|  
+|[system.net](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Содержит параметры сети, определяющие способ подключения .NET Framework к Интернету.|  
   
 ## <a name="example"></a>Пример  
  В следующем примере показано, как отключить кэширование всех.  
@@ -87,5 +87,6 @@ ms.locfileid: "55277710"
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Net.Cache?displayProperty=nameWithType>
 - [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

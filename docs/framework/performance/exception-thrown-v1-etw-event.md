@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0d3da389-6b7b-40f6-a877-fac546d6019c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 07932a12916138dd7cbee2576e4fc747898b8063
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd322d25d91bb277a4c817594c968c28a6d61d68
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610855"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136140"
 ---
 # <a name="exception-thrownv1-etw-event"></a>Событие ExceptionThrown_V1 (трассировка событий Windows)
 Это событие захватывает информацию о вызванных исключениях.  
@@ -31,7 +31,7 @@ ms.locfileid: "54610855"
   
  В таблице ниже представлены данные события.  
   
-|Имя поля|Тип данных|Описание:|  
+|Имя поля|Тип данных|Описание|  
 |----------------|---------------|-----------------|  
 |Тип исключения|win:UnicodeString|Тип исключения, например `System.NullReferenceException`.|  
 |Сообщение об исключении|win:UnicodeString|Фактическое сообщение об исключении.|  
@@ -41,4 +41,5 @@ ms.locfileid: "54610855"
 |ClrInstanceID|win:UInt16|Уникальный идентификатор экземпляра CLR или CoreCLR.|  
   
 ## <a name="see-also"></a>См. также
+
 - [События трассировки событий Windows в среде CLR](../../../docs/framework/performance/clr-etw-events.md)

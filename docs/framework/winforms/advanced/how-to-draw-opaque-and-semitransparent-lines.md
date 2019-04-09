@@ -10,12 +10,12 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing alpha blended
 - alpha blending [Windows Forms], drawing lines
 ms.assetid: 8f2508af-f495-4223-b5cc-646cbbb520eb
-ms.openlocfilehash: 210916bbaf437d8f71b07e8107eb0cdc0989ea42
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 7408722dc13e83828cfca3f0615a2730e3c53461
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465624"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188270"
 ---
 # <a name="how-to-draw-opaque-and-semitransparent-lines"></a>Практическое руководство. Рисование непрозрачных и полупрозрачных линий
 При рисовании линии необходимо передать методу <xref:System.Drawing.Graphics.DrawLine%2A> класса <xref:System.Drawing.Graphics> объект <xref:System.Drawing.Pen>. Одним из параметров конструктора <xref:System.Drawing.Pen.%23ctor%2A> является объект <xref:System.Drawing.Color>. Чтобы нарисовать непрозрачную линию, установите альфа-компонент цвета равным 255. Чтобы нарисовать полупрозрачную линию, установите значение альфа-компонента в диапазоне от 1 до 254.  
@@ -33,9 +33,10 @@ ms.locfileid: "58465624"
  ![Рисунок, показывающий непрозрачных и полупрозрачных выходных данных](./media/how-to-draw-opaque-and-semitransparent-lines/opaque-semitransparent-lines.png)  
 
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Предыдущий пример предназначен для работы с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs> `e`, который является параметром обработчика события <xref:System.Windows.Forms.Control.Paint>.  
+ Предыдущий пример предназначен для работы с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs>`e`, который является параметром <xref:System.Windows.Forms.Control.Paint> обработчик событий.  
   
 ## <a name="see-also"></a>См. также
+
 - [Альфа-смешение цвета для линий и заливок](alpha-blending-lines-and-fills.md)
 - [Практическое руководство. Установка степени прозрачности фона элемента управления](../controls/how-to-give-your-control-a-transparent-background.md)
 - [Практическое руководство. Рисование непрозрачными и полупрозрачными кистями](how-to-draw-with-opaque-and-semitransparent-brushes.md)

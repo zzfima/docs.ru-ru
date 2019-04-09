@@ -2,12 +2,12 @@
 title: Конфигурация клиента
 ms.date: 03/30/2017
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
-ms.openlocfilehash: 1cd7a066622c7d317b1a9c62658531521082c964
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: b9975c6caeedc94bf4a7773e71a95eb0d8c7aed2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261808"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144694"
 ---
 # <a name="client-configuration"></a>Конфигурация клиента
 Конфигурация клиента Windows Communication Foundation (WCF) можно использовать для указания адреса, привязки, поведения и контракта, «ABC» свойства конечной точки клиента, которые используются клиентами для подключения к конечным точкам службы. [ \<Клиента >](../../configure-apps/file-schema/wcf/client.md) элемент имеет [ \<конечной точки >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) элемент, атрибуты которого используются для настройки основополагающих свойств конечной точки. Эти атрибуты описаны в [Настройка конечных точек](#configuring-endpoints) раздел.  
@@ -94,5 +94,6 @@ ms.locfileid: "56261808"
  [ \<Метаданных >](../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md) элемент используется для задания параметров, используемых для регистрации метаданных расширений импорта. Дополнительные сведения о расширении системы метаданных см. в разделе [расширении системы метаданных](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md).  
   
 ## <a name="see-also"></a>См. также
-- [Конечные точки: Адреса, привязки и контракты](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
-- [Настройка поведения клиентов](../../../../docs/framework/wcf/configuring-client-behaviors.md)
+
+- [Конечные точки: адреса, привязки и контракты](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [Настройка поведений клиентов](../../../../docs/framework/wcf/configuring-client-behaviors.md)

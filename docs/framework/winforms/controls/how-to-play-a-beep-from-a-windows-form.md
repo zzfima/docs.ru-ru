@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Воспроизведение звукового сигнала в Windows Forms
+title: Практическое руководство. Воспроизведение сигнала в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - forms [Windows Forms], sounds
 - examples [Windows Forms], sounds
 ms.assetid: 7ea5cded-4888-4f35-8f28-5cab1a55c973
-ms.openlocfilehash: d04bf4bd45aa6ba5dfe231d5f69c2b2a13765373
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0aa01f600873dd8853e1c33d5443448835e11455
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710437"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146228"
 ---
-# <a name="how-to-play-a-beep-from-a-windows-form"></a>Практическое руководство. Воспроизведение звукового сигнала в Windows Forms
+# <a name="how-to-play-a-beep-from-a-windows-form"></a>Практическое руководство. Воспроизведение сигнала в Windows Forms
 В этом примере воспроизводится звуковой сигнал во время выполнения.  
   
 ## <a name="example"></a>Пример  
@@ -43,6 +43,7 @@ public void onePing()
  Для C#, в этом примере требуется ссылка на <xref:System.Media?displayProperty=nameWithType> пространства имен.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:Microsoft.VisualBasic.Interaction.Beep%2A>
 - <xref:System.Media.SoundPlayer>
 - [Практическое руководство. Воспроизведение системных звуков в Windows Forms](how-to-play-a-system-sound-from-a-windows-form.md)

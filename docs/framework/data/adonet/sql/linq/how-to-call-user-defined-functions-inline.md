@@ -1,18 +1,18 @@
 ---
-title: Как выполнить вызывать встроенные определяемые пользователем функции
+title: Практическое руководство. Как вызывать встроенные определяемые пользователем функции
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f80d4327-b6a5-4aa8-a743-e95d09a2a02e
-ms.openlocfilehash: 76a41ded52ac29b4a8b597188171333a888be5cd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ed8071352902b8f97445cbfa5ff0ebe8fead9bb9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692773"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163713"
 ---
-# <a name="how-to-call-user-defined-functions-inline"></a>Как выполнить вызывать встроенные определяемые пользователем функции
+# <a name="how-to-call-user-defined-functions-inline"></a>Практическое руководство. Как вызывать встроенные определяемые пользователем функции
 Пользовательские функции можно вызывать из строки кода, однако функции, включенные в запрос, выполнение которого отложено, выполняются только одновременно с запросом. Дополнительные сведения см. в разделе [Введение в запросы LINQ (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
   
  Если та же функция вызывается за пределами запроса, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] создает простой запрос из выражения вызова метода. Ниже показан синтаксис SQL (параметр `@p0` привязан к передаваемой константе).  
@@ -21,7 +21,7 @@ ms.locfileid: "54692773"
 SELECT dbo.ReverseCustName(@p0)  
 ```  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] создает следующий код:  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] создает следующее:  
   
  [!code-csharp[DLinqUDFS#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqUDFS/cs/Program.cs#4)]
  [!code-vb[DLinqUDFS#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqUDFS/vb/Module1.vb#4)]  
@@ -39,4 +39,5 @@ FROM [Customers] AS [t0]
 ```  
   
 ## <a name="see-also"></a>См. также
-- [Определяемые пользователем функции](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)
+
+- [Пользовательские функции](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)

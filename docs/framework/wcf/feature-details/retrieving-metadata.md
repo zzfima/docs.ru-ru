@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - metadata [WCF], retrieving
 ms.assetid: 18d8ba4c-af0f-4827-a50b-4202d767bacc
-ms.openlocfilehash: 72a9b8445a83af3cbda15c5f4580a1c1df859339
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bb415d88c2bae75cb16aa137bdf867eb463afa63
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533238"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152403"
 ---
 # <a name="retrieving-metadata"></a>Извлечение метаданных
 Извлечение метаданных - это процесс запроса и извлечения метаданных из конечной точки метаданных, например конечной точки метаданных WS-MetadataExchange (MEX) или конечной точки метаданных HTTP/GET.  
@@ -33,4 +33,5 @@ ms.locfileid: "54533238"
  Использование класса <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> для загрузки файлов метаданных в объект <xref:System.ServiceModel.Description.MetadataSet?displayProperty=nameWithType>, содержащий объекты <xref:System.ServiceModel.Description.MetadataSection?displayProperty=nameWithType>, для записи в файлы или для других целей.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.Description.MetadataExchangeClient>

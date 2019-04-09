@@ -2,12 +2,12 @@
 title: Образец безопасности при обнаружении
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: c77bedbea3d9002b24556d240d5b788fe6c53d67
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: b0999b51d5e371c4167bf4712781b3a229119fd0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58815204"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160768"
 ---
 # <a name="discovery-security-sample"></a>Образец безопасности при обнаружении
 В спецификации Discovery не требуется защищенность конечных точек, участвующих в процессе обнаружения. Включение функций безопасности для сообщений обнаружения обеспечивает защиту от атак различного типа (изменение сообщений, отказ в обслуживании, воспроизведение, подделка пакетов). В этом образце реализованы пользовательские каналы, которые вычисляют и проверяют сигнатуры сообщений в компактном формате (описан в разделе 8.2 спецификации WS-Discovery). Образец поддерживает [спецификацию Discovery 2005](https://go.microsoft.com/fwlink/?LinkId=177912) и [версии 1.1](https://go.microsoft.com/fwlink/?LinkId=179677).  
@@ -74,4 +74,3 @@ ms.locfileid: "58815204"
 >  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DiscoveryScenario`  
-  

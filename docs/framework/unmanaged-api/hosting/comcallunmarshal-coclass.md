@@ -1,5 +1,5 @@
 ---
-title: Кокласс ComCallUnmarshal
+title: Компонентный класс ComCallUnmarshal
 ms.date: 03/30/2017
 api_name:
 - ComCallUnmarshal Coclass
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5a404448c45a37d50794ceae9a9bf8ff6af08eeb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2f17a88a90905006432ae8c5dc040277124c947b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574577"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166885"
 ---
-# <a name="comcallunmarshal-coclass"></a>Кокласс ComCallUnmarshal
+# <a name="comcallunmarshal-coclass"></a>Компонентный класс ComCallUnmarshal
 Предоставляет интерфейсы для управления маршалингом указателей интерфейса.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -50,4 +50,5 @@ coclass ComCallUnmarshal {
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Размещение коклассов](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)

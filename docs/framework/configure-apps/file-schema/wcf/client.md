@@ -5,12 +5,12 @@ f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.ServiceModel/client
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#client
 ms.assetid: bf0f7031-76c8-4e7e-a6c6-9ad9119134be
-ms.openlocfilehash: 93365c109f015b2ec72b5216dcb8c46258d022e2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 2e0352efdd5b709984338fe4484b120bddb7d545
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55280908"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164363"
 ---
 # <a name="client"></a>\<Клиент >
 Элемент `client` определяет список конечных точек, к которым может подключаться клиент.  
@@ -41,7 +41,7 @@ ms.locfileid: "55280908"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<Конечная точка >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md)|Содержит коллекцию элементов конечных точек, указывающую конечные точки, к которым может подключиться данный клиент.|  
+|[\<endpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md)|Содержит коллекцию элементов конечных точек, указывающую конечные точки, к которым может подключиться данный клиент.|  
 |[\<метаданные >](../../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md)|Содержит параметры обработки метаданных.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
@@ -73,6 +73,7 @@ ms.locfileid: "55280908"
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.Configuration.ClientSection>
 - <xref:System.ServiceModel.Configuration.MetadataElement>
 - [Конфигурация клиента WCF](../../../../../docs/framework/wcf/feature-details/client-configuration.md)

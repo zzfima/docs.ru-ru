@@ -7,12 +7,12 @@ helpviewer_keywords:
 - x:Uid attribute [XAML Services]
 - Uid attribute [XAML Services]
 ms.assetid: 81defade-483b-4a89-b76d-9b25bba34010
-ms.openlocfilehash: 6e946c63227a06b2032ce27e61899c1b8f05ec9f
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: c8f0580c987b87193b5b6a38559043e50fc7cb89
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58042974"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152520"
 ---
 # <a name="xuid-directive"></a>Директива x:Uid
 Предоставляет уникальный идентификатор для элементов разметки. Во многих случаях этот уникальный идентификатор используется процесс локализации XAML и инструменты.  
@@ -42,6 +42,7 @@ ms.locfileid: "58042974"
  Дополнительные сведения о роли `x:Uid` в процесс локализации WPF и форма BAML кода XAML, см. в разделе [Глобализация для WPF](../wpf/advanced/globalization-for-wpf.md) или <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>
 - <xref:Microsoft.Build.Tasks.Windows.UidManager>
 - [Глобализация для WPF](../wpf/advanced/globalization-for-wpf.md)

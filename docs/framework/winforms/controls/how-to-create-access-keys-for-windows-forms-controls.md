@@ -20,12 +20,12 @@ helpviewer_keywords:
 - access keys [Windows Forms], Windows Forms
 - ALT key
 ms.assetid: 4faa0991-28ec-4eca-91db-51dc2cd6a7ac
-ms.openlocfilehash: 5713bc9fa02e6122cc42348160dbe9315e023bc4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: fefd322afb938453ec1ea23e8ff6de9f9ae2a851
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708006"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141639"
 ---
 # <a name="how-to-create-access-keys-for-windows-forms-controls"></a>Практическое руководство. Определение клавиш доступа для элементов управления Windows Forms
 *Ключ доступа* , подчеркивается в тексте элемента меню, пункт меню или метка элемента управления, такого как кнопка. С помощью ключа доступа пользователь может «щелкните» кнопки с помощью клавиши ALT и клавишу с буквой. Например, если кнопка запускает процесс печати формы и поэтому его `Text` свойство имеет значение «Print», добавив амперсанд перед буквой «P» приводит к буква «P» будет подчеркнут в тексте кнопки во время выполнения. Пользователь может выполнять команда, связанная с кнопкой, нажав клавиши ALT + P. Не может иметь ключ доступа для элемента управления, который не может получить фокус.  
@@ -53,7 +53,8 @@ ms.locfileid: "57708006"
     >  Чтобы включить знак амперсанда в захвате без создания ключа доступа, добавьте два амперсанда (& &). Один знак амперсанда отображается в заголовке, и никакие символы не будут подчеркнуты.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.Button>
-- [Практическое руководство. Ответ на нажатие кнопки Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)
-- [Практическое руководство. Задать текст, отображаемый элементом управления форм Windows](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Практическое руководство. Обработка события нажатия кнопки в Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)
+- [Практическое руководство. Определение текста, отображаемого элементом управления Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
 - [Создание меток и назначение сочетаний клавиш для элементов управления Windows Forms](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

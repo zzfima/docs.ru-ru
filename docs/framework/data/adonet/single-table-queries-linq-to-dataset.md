@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b74bcf8-3f87-449f-bff7-6bcb0d69d212
-ms.openlocfilehash: 3bde9a5f718dcc7bdf31f84369546d530dca38d9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 00b0773ba66ad8e0acfdccb37964030a9cacff52
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637264"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187646"
 ---
 # <a name="single-table-queries-linq-to-dataset"></a>Запросы к одной таблице (LINQ to DataSet)
 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] запросы работают с источниками данных, которые реализуют <xref:System.Collections.Generic.IEnumerable%601> интерфейс или <xref:System.Linq.IQueryable%601> интерфейс. <xref:System.Data.DataTable> Класс не реализует никакого интерфейса, поэтому необходимо вызвать <xref:System.Data.DataTableExtensions.AsEnumerable%2A> метод, если вы хотите использовать <xref:System.Data.DataTable> в качестве источника `From` предложении [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] запроса.  
@@ -26,11 +26,12 @@ ms.locfileid: "54637264"
   
  Затем цикл `foreach` проходит по перечислимому объекту, возвращенному оператором `Select`, и выдает результаты запроса. Так как этот запрос имеет тип <xref:System.Linq.Enumerable>, который реализует интерфейс <xref:System.Collections.Generic.IEnumerable%601>, результат запроса откладывается до тех пор, пока переменная запроса проходит по циклу `foreach`. Отложенный результат запроса позволяет запросам храниться в виде значений, которые могут вычисляться несколько раз, каждый раз давая потенциально различные результаты.  
   
- Метод <xref:System.Data.DataRowExtensions.Field%2A> обеспечивает доступ к значениям столбцов <xref:System.Data.DataRow> и <xref:System.Data.DataRowExtensions.SetField%2A> (что не показано в предыдущем примере) и устанавливает значения столбцов в <xref:System.Data.DataRow>. Оба метода, <xref:System.Data.DataRowExtensions.Field%2A> и <xref:System.Data.DataRowExtensions.SetField%2A>, обрабатывают типы, допускающие значения NULL, поэтому нет необходимости явно проводить проверку на значения NULL. Оба метода являются универсальными методами, что означает, что нет необходимости приводить возвращаемый тип. В <xref:System.Data.DataRow> нужно использовать предопределенный метод доступа к столбцам (например, `o["OrderDate"]`), однако в этом случае приведение возвращаемого объекта к соответствующему типу обязательно.  Если столбец допускает значение NULL, необходимо проверить его на значение NULL, используя метод <xref:System.Data.DataRow.IsNull%2A>. Дополнительные сведения см. в разделе [методы универсального Field и SetField](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md).  
+ Метод <xref:System.Data.DataRowExtensions.Field%2A> обеспечивает доступ к значениям столбцов <xref:System.Data.DataRow> и <xref:System.Data.DataRowExtensions.SetField%2A> (что не показано в предыдущем примере) и устанавливает значения столбцов в <xref:System.Data.DataRow>. Оба метода, <xref:System.Data.DataRowExtensions.Field%2A> и <xref:System.Data.DataRowExtensions.SetField%2A>, обрабатывают типы, допускающие значения NULL, поэтому нет необходимости явно проводить проверку на значения NULL. Оба метода являются универсальными методами, что означает, что нет необходимости приводить тип возвращаемого значения. В <xref:System.Data.DataRow> нужно использовать предопределенный метод доступа к столбцам (например, `o["OrderDate"]`), однако в этом случае приведение возвращаемого объекта к соответствующему типу обязательно.  Если столбец допускает значение NULL, необходимо проверить его на значение NULL, используя метод <xref:System.Data.DataRow.IsNull%2A>. Дополнительные сведения см. в разделе [методы универсального Field и SetField](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md).  
   
  Обратите внимание, что тип данных, определяемый в универсальном параметре `T` методов <xref:System.Data.DataRowExtensions.Field%2A> и <xref:System.Data.DataRowExtensions.SetField%2A>, должен соответствовать типу базового значения, иначе сформируется исключение <xref:System.InvalidCastException>. Указанное имя столбца должно совпадать с именем столбца в <xref:System.Data.DataSet>, иначе это вызовет исключение <xref:System.ArgumentException>. В обоих случаях исключении возникает при перечислении данных во время выполнения в момент выполнения запроса.  
   
 ## <a name="see-also"></a>См. также
+
 - [Запросы между таблицами](../../../../docs/framework/data/adonet/cross-table-queries-linq-to-dataset.md)
-- [Запрос к типизированным объектам DataSet](../../../../docs/framework/data/adonet/querying-typed-datasets.md)
+- [Запросы к типизированным наборам данных](../../../../docs/framework/data/adonet/querying-typed-datasets.md)
 - [Универсальные методы Field и SetField](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)

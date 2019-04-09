@@ -2,12 +2,12 @@
 title: <add> из <baseAddressPrefixFilter>
 ms.date: 03/30/2017
 ms.assetid: b226bede-8459-4de9-b2ac-3d39604ce2bc
-ms.openlocfilehash: 9179abfb26229a845d9618afe30b088252c9c2db
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: a58a29e44fff3d653d04da271e3b240f2969611f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267663"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143901"
 ---
 # <a name="add-of-baseaddressprefixfilter"></a>\<Добавить > из \<baseAddressPrefixFilter >
 Представляет элемент конфигурации, в котором указывается сквозной фильтр, который предоставляет механизм для выбора необходимых привязок служб Internet Information Services (IIS), при размещении приложения Windows Communication Foundation (WCF) в службах IIS.  
@@ -41,7 +41,7 @@ ms.locfileid: "55267663"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<baseAddressPrefixFilters>](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)|Коллекция элементов конфигурации, которые задают проходные фильтры, которые предоставляют механизм выбора необходимых привязок служб IIS при размещении приложения Windows Communication Foundation (WCF) в службах IIS.|  
   
@@ -80,6 +80,7 @@ http://test2.fabrikam.com/Service.svc
 >  Фильтр не поддерживает какие-либо подстановочные знаки. Кроме того, среди базовых адресов, предоставляемых IIS, могут присутствовать адреса, привязанные к другим схемам, не представленным в списке `baseAddressPrefixFilters`. Эти адреса не фильтруются.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.Configuration.BaseAddressPrefixFilterElement>
 - <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
 - <xref:System.ServiceModel.ServiceHostingEnvironment>

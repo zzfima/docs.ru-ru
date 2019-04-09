@@ -2,12 +2,12 @@
 title: BFILE в Oracle
 ms.date: 03/30/2017
 ms.assetid: 341bbf84-4734-4d44-8723-ccedee954e21
-ms.openlocfilehash: 825cb9eb4bdb54509c8ca3c20db4dade8b3ece73
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 07a7f28e08ed43672e94151cd9de88301069e1ec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677242"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142393"
 ---
 # <a name="oracle-bfiles"></a>BFILE в Oracle
 Поставщик данных .NET Framework для Oracle содержит класс <xref:System.Data.OracleClient.OracleBFile>, который используется для работы с типом данных Oracle <xref:System.Data.OracleClient.OracleType.BFile>.  
@@ -87,5 +87,6 @@ public class Sample
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Oracle и ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

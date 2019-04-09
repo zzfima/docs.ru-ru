@@ -1,18 +1,18 @@
 ---
-title: Как выполнить  Управление созданием экземпляров служб
+title: Практическое руководство. Управление созданием экземпляров служб
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e0b12b34-8004-443a-a46d-83a5c00f2601
-ms.openlocfilehash: 06324b30d2fbd68a12619375024b9f86019adbb1
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
-ms.translationtype: MT
+ms.openlocfilehash: 1c1a08c702ab1bdc4579cb05359db1681e7203b9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56260978"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135022"
 ---
-# <a name="how-to-control-service-instancing"></a>Как выполнить  Управление созданием экземпляров служб
+# <a name="how-to-control-service-instancing"></a>Практическое руководство. Управление созданием экземпляров служб
 Установка режима экземпляра службы позволяет определить, когда будет создаваться объект <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> (и связанный с ним определяемый пользователем объект службы). Возможные режимы см. в перечислении <xref:System.ServiceModel.InstanceContextMode>. Дополнительные сведения о поведениях см. в разделе [настройку и расширение среды выполнения с помощью поведений](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md). Рабочие примеры см. в разделе [поведения](../../../../docs/framework/wcf/samples/behaviors.md).  
   
 ### <a name="to-control-the-service-instance-lifetime-using-code"></a>Управление временем существования экземпляра службы с помощью кода  
@@ -31,6 +31,7 @@ ms.locfileid: "56260978"
  [!code-vb[c_ControlServiceInstancing#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_controlserviceinstancing/vb/source.vb#2)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.ServiceBehaviorAttribute>
 - <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>
 - <xref:System.ServiceModel.InstanceContextMode>

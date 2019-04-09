@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 54333cbf-bb43-4314-a7d4-6dc1dd1c44b3
-ms.openlocfilehash: d0a22a4ec4ed508a06e385d954a8ed5b9e9ff6a9
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 25883b7be10c68e527e4e04182b7162574b994d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825593"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149634"
 ---
 # <a name="generating-strongly-typed-datasets"></a>Создание строго типизированных наборов данных
 При наличии схемы XML, соответствующей стандарту языка XSD, можно создать объект <xref:System.Data.DataSet> со строгой типизацией с помощью инструмента XSD.exe, предоставляемого [!INCLUDE[winsdklong](../../../../../includes/winsdklong-md.md)].  
@@ -95,8 +95,9 @@ foreach(CustomerDataSet.CustomersRow customerRow in customers.Customers)
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataSet>
 - [Типизированные наборы данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)
 - [Наборы данных, таблицы данных и объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

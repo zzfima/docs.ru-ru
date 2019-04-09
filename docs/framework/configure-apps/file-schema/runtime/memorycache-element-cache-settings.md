@@ -1,17 +1,17 @@
 ---
-title: Элемент <memoryCache> (параметры кэша)
+title: <memoryCache> Элемент (параметры кэша)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <memoryCache> element
 - caching [.NET Framework], configuration
 - memoryCache element
 ms.assetid: 182a622f-f7cf-472d-9d0b-451d2fd94525
-ms.openlocfilehash: 25e87aa9fa4e56c5042eb25c41f6cfe1b65aea24
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: dbb46e7cf2580635add9d3100c8177c99cbae6bd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266381"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126819"
 ---
 # <a name="memorycache-element-cache-settings"></a>\<memoryCache > (параметры кэша)
 Определяет элемент, используемый для настройки кэша, который основан на классе <xref:System.Runtime.Caching.MemoryCache> . Класс <xref:System.Runtime.Caching.Configuration.MemoryCacheElement> определяет элемент [memoryCache](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md) , который можно использовать для настройки кэша. В одном приложении может использоваться несколько экземпляров класса <xref:System.Runtime.Caching.MemoryCache> . Каждый элемент `memoryCache` в файле конфигурации может содержать параметры для именованного экземпляра <xref:System.Runtime.Caching.MemoryCache> .  
@@ -31,14 +31,14 @@ ms.locfileid: "55266381"
 ```  
   
 ## <a name="type"></a>Тип  
- Класс<xref:System.Runtime.Caching.MemoryCache> .  
+ <xref:System.Runtime.Caching.MemoryCache> .  
   
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание:|  
+|Атрибут|Описание|  
 |---------------|-----------------|  
 |`CacheMemoryLimitMegabytes`|Максимальный объем памяти в мегабайтах, который может занимать экземпляр объекта <xref:System.Runtime.Caching.MemoryCache> . Значение по умолчанию — 0. Это означает, что эвристика автомасштабирования класса <xref:System.Runtime.Caching.MemoryCache> используется по умолчанию.|  
 |`Name`|Имя конфигурации кэша.|  
@@ -53,7 +53,7 @@ ms.locfileid: "55266381"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<system.runtime.caching>](../../../../../docs/framework/configure-apps/file-schema/runtime/system-runtime-caching-element-cache-settings.md)|Содержит типы, которые позволяют реализовать кэширование выводимых данных в приложениях, встроенных в [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)].|  
   
@@ -91,6 +91,7 @@ ms.locfileid: "55266381"
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Runtime.Caching.MemoryCache>
 - [\<System.Runtime.Caching > (параметры кэша)](../../../../../docs/framework/configure-apps/file-schema/runtime/system-runtime-caching-element-cache-settings.md)
 - [\<namedCaches > (параметры кэша)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)

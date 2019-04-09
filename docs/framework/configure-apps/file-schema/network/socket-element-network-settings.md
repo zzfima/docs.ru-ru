@@ -1,5 +1,5 @@
 ---
-title: Элемент <socket> (параметры сети)
+title: <socket> (Сетевые параметры)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/socket
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <socket> element
 - socket element
 ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
-ms.openlocfilehash: 3f599d6ada288db861f69fc64e6b84ee326b5830
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 82bfe3b6e3107ff787716657dbf0b31dcadde911
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55256902"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160164"
 ---
 # <a name="socket-element-network-settings"></a>\<сокет > (сетевые параметры)
 Указывает, используют ли операции сокета порты завершения.  
@@ -38,7 +38,7 @@ ms.locfileid: "55256902"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|**Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))|**Описание**|  
+|**Атрибут**|**Описание**|  
 |-------------------|---------------------|  
 |`alwaysUseCompletionPortsForAccept`|Указывает, всегда ли сокет использует порты завершения для вызовы метода приема. Значение по умолчанию — `false`.|  
 |`alwaysUseCompletionPortsForConnect`|Указывает, всегда ли сокет использует порты завершения для вызовов метода Connect. Значение по умолчанию — `false`.|  
@@ -51,7 +51,7 @@ ms.locfileid: "55256902"
   
 |**Элемент**|**Описание**|  
 |-----------------|---------------------|  
-|[Параметры](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Настраивает основные параметры сети для пространства имен <xref:System.Net>.|  
+|[параметры](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Настраивает основные параметры сети для пространства имен <xref:System.Net>.|  
   
 ## <a name="remarks"></a>Примечания  
  Атрибуты `alwaysUseCompletionPortsForAccept` и `alwaysUseCompletionPortsForConnect` используются для задания поведения по умолчанию в отношении использования портов завершения классами в пространстве имен <xref:System.Net.Sockets?displayProperty=nameWithType>. Порты завершения рекомендуется использовать для высокопроизводительных серверных приложений.  
@@ -104,6 +104,7 @@ ms.locfileid: "55256902"
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Net?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.SocketElement?displayProperty=nameWithType>
 - <xref:System.Net.Sockets?displayProperty=nameWithType>
