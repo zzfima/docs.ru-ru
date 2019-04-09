@@ -16,26 +16,27 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 21ee3c073358cc6101634815747615415705395c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 509d75e1e94a82e6a91cd235ab079603c267c70f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54500555"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113338"
 ---
-# <a name="inotifysource2-interface"></a><span data-ttu-id="1fbd1-102">Интерфейс INotifySource2</span><span class="sxs-lookup"><span data-stu-id="1fbd1-102">INotifySource2 Interface</span></span>
-<span data-ttu-id="1fbd1-103">Объявляет метод для установки фильтров оповещения.</span><span class="sxs-lookup"><span data-stu-id="1fbd1-103">Declares a method for setting notification filters.</span></span>  
+# <a name="inotifysource2-interface"></a><span data-ttu-id="7c3f8-102">Интерфейс INotifySource2</span><span class="sxs-lookup"><span data-stu-id="7c3f8-102">INotifySource2 Interface</span></span>
+<span data-ttu-id="7c3f8-103">Объявляет метод для установки фильтров оповещения.</span><span class="sxs-lookup"><span data-stu-id="7c3f8-103">Declares a method for setting notification filters.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="1fbd1-104">Методы</span><span class="sxs-lookup"><span data-stu-id="1fbd1-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="7c3f8-104">Методы</span><span class="sxs-lookup"><span data-stu-id="7c3f8-104">Methods</span></span>  
   
-|<span data-ttu-id="1fbd1-105">Метод</span><span class="sxs-lookup"><span data-stu-id="1fbd1-105">Method</span></span>|<span data-ttu-id="1fbd1-106">Описание:</span><span class="sxs-lookup"><span data-stu-id="1fbd1-106">Description</span></span>|  
+|<span data-ttu-id="7c3f8-105">Метод</span><span class="sxs-lookup"><span data-stu-id="7c3f8-105">Method</span></span>|<span data-ttu-id="7c3f8-106">Описание</span><span class="sxs-lookup"><span data-stu-id="7c3f8-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="1fbd1-107">Метод SetNotifyFilter</span><span class="sxs-lookup"><span data-stu-id="1fbd1-107">SetNotifyFilter Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md)|<span data-ttu-id="1fbd1-108">Назначает фильтр уведомлений для использования с этим источником.</span><span class="sxs-lookup"><span data-stu-id="1fbd1-108">Assigns a notification filter for use with this source.</span></span>|  
+|[<span data-ttu-id="7c3f8-107">Метод SetNotifyFilter</span><span class="sxs-lookup"><span data-stu-id="7c3f8-107">SetNotifyFilter Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md)|<span data-ttu-id="7c3f8-108">Назначает фильтр уведомлений для использования с этим источником.</span><span class="sxs-lookup"><span data-stu-id="7c3f8-108">Assigns a notification filter for use with this source.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="1fbd1-109">Требования</span><span class="sxs-lookup"><span data-stu-id="1fbd1-109">Requirements</span></span>  
- <span data-ttu-id="1fbd1-110">**Заголовок.** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="1fbd1-110">**Header:** ProtocolNotify2.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7c3f8-109">Требования</span><span class="sxs-lookup"><span data-stu-id="7c3f8-109">Requirements</span></span>  
+ <span data-ttu-id="7c3f8-110">**Заголовок.** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="7c3f8-110">**Header:** ProtocolNotify2.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1fbd1-111">См. также</span><span class="sxs-lookup"><span data-stu-id="1fbd1-111">See also</span></span>
-- [<span data-ttu-id="1fbd1-112">Интерфейс INotifyConnection2</span><span class="sxs-lookup"><span data-stu-id="1fbd1-112">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
-- [<span data-ttu-id="1fbd1-113">Интерфейс INotifySink2</span><span class="sxs-lookup"><span data-stu-id="1fbd1-113">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
-- [<span data-ttu-id="1fbd1-114">Интерфейсы хранилища символов диагностики</span><span class="sxs-lookup"><span data-stu-id="1fbd1-114">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="7c3f8-111">См. также</span><span class="sxs-lookup"><span data-stu-id="7c3f8-111">See also</span></span>
+
+- [<span data-ttu-id="7c3f8-112">Интерфейс INotifyConnection2</span><span class="sxs-lookup"><span data-stu-id="7c3f8-112">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+- [<span data-ttu-id="7c3f8-113">Интерфейс INotifySink2</span><span class="sxs-lookup"><span data-stu-id="7c3f8-113">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [<span data-ttu-id="7c3f8-114">Интерфейсы хранилища символов диагностики</span><span class="sxs-lookup"><span data-stu-id="7c3f8-114">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 07df1564cc769e466f9ac2cc274f98093ea8e9ca
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e264f2361c739536d15fbf31d366db74e107bac2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57472048"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085107"
 ---
-# <a name="icordebugthread3getactiveinternalframes-method"></a><span data-ttu-id="498f2-102">Метод ICorDebugThread3::GetActiveInternalFrames</span><span class="sxs-lookup"><span data-stu-id="498f2-102">ICorDebugThread3::GetActiveInternalFrames Method</span></span>
-<span data-ttu-id="498f2-103">Возвращает массив из внутренних кадрах ([ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) объектов) в стеке.</span><span class="sxs-lookup"><span data-stu-id="498f2-103">Returns an array of internal frames ([ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) objects) on the stack.</span></span>  
+# <a name="icordebugthread3getactiveinternalframes-method"></a><span data-ttu-id="a78d8-102">Метод ICorDebugThread3::GetActiveInternalFrames</span><span class="sxs-lookup"><span data-stu-id="a78d8-102">ICorDebugThread3::GetActiveInternalFrames Method</span></span>
+<span data-ttu-id="a78d8-103">Возвращает массив из внутренних кадрах ([ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) объектов) в стеке.</span><span class="sxs-lookup"><span data-stu-id="a78d8-103">Returns an array of internal frames ([ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) objects) on the stack.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="498f2-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="498f2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a78d8-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a78d8-104">Syntax</span></span>  
   
 ```  
 HRESULT GetActiveInternalFrames  
@@ -39,45 +39,46 @@ HRESULT GetActiveInternalFrames
       );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="498f2-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="498f2-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a78d8-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="a78d8-105">Parameters</span></span>  
  `cInternalFrames`  
- <span data-ttu-id="498f2-106">[in] Количество внутренних кадрах, ожидаемая в `ppInternalFrames`.</span><span class="sxs-lookup"><span data-stu-id="498f2-106">[in] The number of internal frames expected in `ppInternalFrames`.</span></span>  
+ <span data-ttu-id="a78d8-106">[in] Количество внутренних кадрах, ожидаемая в `ppInternalFrames`.</span><span class="sxs-lookup"><span data-stu-id="a78d8-106">[in] The number of internal frames expected in `ppInternalFrames`.</span></span>  
   
  `pcInternalFrames`  
- <span data-ttu-id="498f2-107">[out] Указатель на `ULONG32` , содержащий количество внутренних кадров в стеке.</span><span class="sxs-lookup"><span data-stu-id="498f2-107">[out] A pointer to a `ULONG32` that contains the number of internal frames on the stack.</span></span>  
+ <span data-ttu-id="a78d8-107">[out] Указатель на `ULONG32` , содержащий количество внутренних кадров в стеке.</span><span class="sxs-lookup"><span data-stu-id="a78d8-107">[out] A pointer to a `ULONG32` that contains the number of internal frames on the stack.</span></span>  
   
  `ppInternalFrames`  
- <span data-ttu-id="498f2-108">[in, out] Указатель на адрес массив внутренней фреймы в стеке.</span><span class="sxs-lookup"><span data-stu-id="498f2-108">[in, out] A pointer to the address of an array of internal frames on the stack.</span></span>  
+ <span data-ttu-id="a78d8-108">[in, out] Указатель на адрес массив внутренней фреймы в стеке.</span><span class="sxs-lookup"><span data-stu-id="a78d8-108">[in, out] A pointer to the address of an array of internal frames on the stack.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="498f2-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="498f2-109">Return Value</span></span>  
- <span data-ttu-id="498f2-110">Этот метод возвращает следующие конкретные результаты HRESULT, а также ошибки HRESULT, которые указывают на сбой метода.</span><span class="sxs-lookup"><span data-stu-id="498f2-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="a78d8-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="a78d8-109">Return Value</span></span>  
+ <span data-ttu-id="a78d8-110">Этот метод возвращает следующие конкретные результаты HRESULT, а также ошибки HRESULT, которые указывают на сбой метода.</span><span class="sxs-lookup"><span data-stu-id="a78d8-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="498f2-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="498f2-111">HRESULT</span></span>|<span data-ttu-id="498f2-112">Описание</span><span class="sxs-lookup"><span data-stu-id="498f2-112">Description</span></span>|  
+|<span data-ttu-id="a78d8-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="a78d8-111">HRESULT</span></span>|<span data-ttu-id="a78d8-112">Описание</span><span class="sxs-lookup"><span data-stu-id="a78d8-112">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="498f2-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="498f2-113">S_OK</span></span>|<span data-ttu-id="498f2-114">[ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) объект был успешно создан.</span><span class="sxs-lookup"><span data-stu-id="498f2-114">The [ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) object was successfully created.</span></span>|  
-|<span data-ttu-id="498f2-115">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="498f2-115">E_INVALIDARG</span></span>|<span data-ttu-id="498f2-116">`cInternalFrames` не равно нулю и `ppInternalFrames` — `null`, или `pcInternalFrames` является `null`.</span><span class="sxs-lookup"><span data-stu-id="498f2-116">`cInternalFrames` is not zero and `ppInternalFrames` is `null`, or `pcInternalFrames` is `null`.</span></span>|  
-|<span data-ttu-id="498f2-117">HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)</span><span class="sxs-lookup"><span data-stu-id="498f2-117">HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)</span></span>|<span data-ttu-id="498f2-118">`ppInternalFrames` меньше количество внутренних кадрах.</span><span class="sxs-lookup"><span data-stu-id="498f2-118">`ppInternalFrames` is smaller than the count of internal frames.</span></span>|  
+|<span data-ttu-id="a78d8-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="a78d8-113">S_OK</span></span>|<span data-ttu-id="a78d8-114">[ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) объект был успешно создан.</span><span class="sxs-lookup"><span data-stu-id="a78d8-114">The [ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) object was successfully created.</span></span>|  
+|<span data-ttu-id="a78d8-115">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="a78d8-115">E_INVALIDARG</span></span>|`cInternalFrames` <span data-ttu-id="a78d8-116">не равно нулю и `ppInternalFrames` — `null`, или `pcInternalFrames` является `null`.</span><span class="sxs-lookup"><span data-stu-id="a78d8-116">is not zero and `ppInternalFrames` is `null`, or `pcInternalFrames` is `null`.</span></span>|  
+|<span data-ttu-id="a78d8-117">HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)</span><span class="sxs-lookup"><span data-stu-id="a78d8-117">HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)</span></span>|`ppInternalFrames` <span data-ttu-id="a78d8-118">меньше количество внутренних кадрах.</span><span class="sxs-lookup"><span data-stu-id="a78d8-118">is smaller than the count of internal frames.</span></span>|  
   
-## <a name="exceptions"></a><span data-ttu-id="498f2-119">Исключения</span><span class="sxs-lookup"><span data-stu-id="498f2-119">Exceptions</span></span>  
+## <a name="exceptions"></a><span data-ttu-id="a78d8-119">Исключения</span><span class="sxs-lookup"><span data-stu-id="a78d8-119">Exceptions</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="498f2-120">Примечания</span><span class="sxs-lookup"><span data-stu-id="498f2-120">Remarks</span></span>  
- <span data-ttu-id="498f2-121">Внутренние кадры — это структуры данных, помещается в стек средой выполнения для хранения временных данных.</span><span class="sxs-lookup"><span data-stu-id="498f2-121">Internal frames are data structures pushed onto the stack by the runtime to store temporary data.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a78d8-120">Примечания</span><span class="sxs-lookup"><span data-stu-id="a78d8-120">Remarks</span></span>  
+ <span data-ttu-id="a78d8-121">Внутренние кадры — это структуры данных, помещается в стек средой выполнения для хранения временных данных.</span><span class="sxs-lookup"><span data-stu-id="a78d8-121">Internal frames are data structures pushed onto the stack by the runtime to store temporary data.</span></span>  
   
- <span data-ttu-id="498f2-122">При первом вызове `GetActiveInternalFrames`, следует задать `cInternalFrames` параметр 0 (ноль) и `ppInternalFrames` параметр значение null.</span><span class="sxs-lookup"><span data-stu-id="498f2-122">When you first call `GetActiveInternalFrames`, you should set the `cInternalFrames` parameter to 0 (zero), and the `ppInternalFrames` parameter to null.</span></span> <span data-ttu-id="498f2-123">Когда `GetActiveInternalFrames` сначала возвращает `pcInternalFrames` содержит количество внутренних фреймы в стеке.</span><span class="sxs-lookup"><span data-stu-id="498f2-123">When `GetActiveInternalFrames` first returns, `pcInternalFrames` contains the count of the internal frames on the stack.</span></span>  
+ <span data-ttu-id="a78d8-122">При первом вызове `GetActiveInternalFrames`, следует задать `cInternalFrames` параметр 0 (ноль) и `ppInternalFrames` параметр значение null.</span><span class="sxs-lookup"><span data-stu-id="a78d8-122">When you first call `GetActiveInternalFrames`, you should set the `cInternalFrames` parameter to 0 (zero), and the `ppInternalFrames` parameter to null.</span></span> <span data-ttu-id="a78d8-123">Когда `GetActiveInternalFrames` сначала возвращает `pcInternalFrames` содержит количество внутренних фреймы в стеке.</span><span class="sxs-lookup"><span data-stu-id="a78d8-123">When `GetActiveInternalFrames` first returns, `pcInternalFrames` contains the count of the internal frames on the stack.</span></span>  
   
- <span data-ttu-id="498f2-124">`GetActiveInternalFrames` необходимо также вызвать второй раз.</span><span class="sxs-lookup"><span data-stu-id="498f2-124">`GetActiveInternalFrames` should then be called a second time.</span></span> <span data-ttu-id="498f2-125">Необходимо передать правильное значение (`pcInternalFrames`) в `cInternalFrames` параметра, и задание указателя на массив подходящего размера в `ppInternalFrames`.</span><span class="sxs-lookup"><span data-stu-id="498f2-125">You should pass the proper count (`pcInternalFrames`) in the `cInternalFrames` parameter, and specify a pointer to an appropriately sized array in `ppInternalFrames`.</span></span>  
+ `GetActiveInternalFrames` <span data-ttu-id="a78d8-124">необходимо также вызвать второй раз.</span><span class="sxs-lookup"><span data-stu-id="a78d8-124">should then be called a second time.</span></span> <span data-ttu-id="a78d8-125">Необходимо передать правильное значение (`pcInternalFrames`) в `cInternalFrames` параметра, и задание указателя на массив подходящего размера в `ppInternalFrames`.</span><span class="sxs-lookup"><span data-stu-id="a78d8-125">You should pass the proper count (`pcInternalFrames`) in the `cInternalFrames` parameter, and specify a pointer to an appropriately sized array in `ppInternalFrames`.</span></span>  
   
- <span data-ttu-id="498f2-126">Используйте [ICorDebugStackWalk::GetFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md) метод, чтобы вернуть фактические кадры стека.</span><span class="sxs-lookup"><span data-stu-id="498f2-126">Use the [ICorDebugStackWalk::GetFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md) method to return actual stack frames.</span></span>  
+ <span data-ttu-id="a78d8-126">Используйте [ICorDebugStackWalk::GetFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md) метод, чтобы вернуть фактические кадры стека.</span><span class="sxs-lookup"><span data-stu-id="a78d8-126">Use the [ICorDebugStackWalk::GetFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md) method to return actual stack frames.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="498f2-127">Требования</span><span class="sxs-lookup"><span data-stu-id="498f2-127">Requirements</span></span>  
- <span data-ttu-id="498f2-128">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="498f2-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a78d8-127">Требования</span><span class="sxs-lookup"><span data-stu-id="a78d8-127">Requirements</span></span>  
+ <span data-ttu-id="a78d8-128">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a78d8-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="498f2-129">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="498f2-129">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="a78d8-129">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a78d8-129">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="498f2-130">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="498f2-130">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a78d8-130">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a78d8-130">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="498f2-131">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="498f2-131">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ **<span data-ttu-id="a78d8-131">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="a78d8-131">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="498f2-132">См. также</span><span class="sxs-lookup"><span data-stu-id="498f2-132">See also</span></span>
-- [<span data-ttu-id="498f2-133">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="498f2-133">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="498f2-134">Отладка</span><span class="sxs-lookup"><span data-stu-id="498f2-134">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="a78d8-132">См. также</span><span class="sxs-lookup"><span data-stu-id="a78d8-132">See also</span></span>
+
+- [<span data-ttu-id="a78d8-133">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="a78d8-133">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="a78d8-134">Отладка</span><span class="sxs-lookup"><span data-stu-id="a78d8-134">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

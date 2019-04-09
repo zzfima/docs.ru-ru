@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: ef6f2662-323b-4534-aa82-6d1afb7b9309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45b1ef75227932449b68366345ded33a2cd96490
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 1297c84acadf0a53b418b06afe806237d374ee25
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479679"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073901"
 ---
-# <a name="iclrruntimeinfoisstarted-method"></a><span data-ttu-id="7977d-102">Метод ICLRRuntimeInfo::IsStarted</span><span class="sxs-lookup"><span data-stu-id="7977d-102">ICLRRuntimeInfo::IsStarted Method</span></span>
-<span data-ttu-id="7977d-103">Указывает, был ли запущен среды выполнения (то есть ли [метод ICLRRuntimeHost::Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) был вызван и успешно).</span><span class="sxs-lookup"><span data-stu-id="7977d-103">Indicates whether the runtime has been started (that is, whether the [ICLRRuntimeHost::Start method](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) has been called and has succeeded).</span></span>  
+# <a name="iclrruntimeinfoisstarted-method"></a><span data-ttu-id="f8acf-102">Метод ICLRRuntimeInfo::IsStarted</span><span class="sxs-lookup"><span data-stu-id="f8acf-102">ICLRRuntimeInfo::IsStarted Method</span></span>
+<span data-ttu-id="f8acf-103">Указывает, был ли запущен среды выполнения (то есть ли [метод ICLRRuntimeHost::Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) был вызван и успешно).</span><span class="sxs-lookup"><span data-stu-id="f8acf-103">Indicates whether the runtime has been started (that is, whether the [ICLRRuntimeHost::Start method](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) has been called and has succeeded).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7977d-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="7977d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f8acf-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f8acf-104">Syntax</span></span>  
   
 ```  
 HRESULT IsStarted(  
@@ -33,34 +33,35 @@ HRESULT IsStarted(
         [out] DWORD    *pdwStartupFlags);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7977d-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="7977d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f8acf-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="f8acf-105">Parameters</span></span>  
  `pbStarted`  
- <span data-ttu-id="7977d-106">[out] `true` Если эта среда выполнения работы, в противном случае — `false`.</span><span class="sxs-lookup"><span data-stu-id="7977d-106">[out] `true` if this runtime is started; otherwise, `false`.</span></span>  
+ <span data-ttu-id="f8acf-106">[out] `true` Если эта среда выполнения работы, в противном случае — `false`.</span><span class="sxs-lookup"><span data-stu-id="f8acf-106">[out] `true` if this runtime is started; otherwise, `false`.</span></span>  
   
  `pdwStartupFlags`  
- <span data-ttu-id="7977d-107">[out] Возвращает флаги, которые использовались для запуска среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="7977d-107">[out] Returns the flags that were used to start the runtime.</span></span>  
+ <span data-ttu-id="f8acf-107">[out] Возвращает флаги, которые использовались для запуска среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="f8acf-107">[out] Returns the flags that were used to start the runtime.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="7977d-108">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="7977d-108">Return Value</span></span>  
- <span data-ttu-id="7977d-109">Этот метод возвращает следующие конкретные результаты HRESULT, а также ошибки HRESULT, которые указывают на сбой метода.</span><span class="sxs-lookup"><span data-stu-id="7977d-109">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f8acf-108">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="f8acf-108">Return Value</span></span>  
+ <span data-ttu-id="f8acf-109">Этот метод возвращает следующие конкретные результаты HRESULT, а также ошибки HRESULT, которые указывают на сбой метода.</span><span class="sxs-lookup"><span data-stu-id="f8acf-109">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="7977d-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="7977d-110">HRESULT</span></span>|<span data-ttu-id="7977d-111">Описание</span><span class="sxs-lookup"><span data-stu-id="7977d-111">Description</span></span>|  
+|<span data-ttu-id="f8acf-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="f8acf-110">HRESULT</span></span>|<span data-ttu-id="f8acf-111">Описание</span><span class="sxs-lookup"><span data-stu-id="f8acf-111">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="7977d-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="7977d-112">S_OK</span></span>|<span data-ttu-id="7977d-113">Метод завершился успешно.</span><span class="sxs-lookup"><span data-stu-id="7977d-113">The method completed successfully.</span></span>|  
-|<span data-ttu-id="7977d-114">E_NOTIMPL</span><span class="sxs-lookup"><span data-stu-id="7977d-114">E_NOTIMPL</span></span>|<span data-ttu-id="7977d-115">Более ранняя, чем версия среды CLR, версию среды выполнения (CLR) CLR [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7977d-115">The common language runtime (CLR) version is earlier than the CLR version in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>|  
+|<span data-ttu-id="f8acf-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="f8acf-112">S_OK</span></span>|<span data-ttu-id="f8acf-113">Метод завершился успешно.</span><span class="sxs-lookup"><span data-stu-id="f8acf-113">The method completed successfully.</span></span>|  
+|<span data-ttu-id="f8acf-114">E_NOTIMPL</span><span class="sxs-lookup"><span data-stu-id="f8acf-114">E_NOTIMPL</span></span>|<span data-ttu-id="f8acf-115">Более ранняя, чем версия среды CLR, версию среды выполнения (CLR) CLR [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f8acf-115">The common language runtime (CLR) version is earlier than the CLR version in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="7977d-116">Примечания</span><span class="sxs-lookup"><span data-stu-id="7977d-116">Remarks</span></span>  
- <span data-ttu-id="7977d-117">Этот метод не работает с CLR версии более ранней, чем версия среды CLR, [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7977d-117">This method does not work with CLR versions earlier than the CLR version in the [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f8acf-116">Примечания</span><span class="sxs-lookup"><span data-stu-id="f8acf-116">Remarks</span></span>  
+ <span data-ttu-id="f8acf-117">Этот метод не работает с CLR версии более ранней, чем версия среды CLR, [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f8acf-117">This method does not work with CLR versions earlier than the CLR version in the [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7977d-118">Требования</span><span class="sxs-lookup"><span data-stu-id="7977d-118">Requirements</span></span>  
- <span data-ttu-id="7977d-119">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7977d-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f8acf-118">Требования</span><span class="sxs-lookup"><span data-stu-id="f8acf-118">Requirements</span></span>  
+ <span data-ttu-id="f8acf-119">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f8acf-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7977d-120">**Заголовок.** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="7977d-120">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="f8acf-120">**Заголовок.** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="f8acf-120">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="7977d-121">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="7977d-121">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="f8acf-121">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="f8acf-121">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="7977d-122">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7977d-122">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ **<span data-ttu-id="f8acf-122">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="f8acf-122">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="7977d-123">См. также</span><span class="sxs-lookup"><span data-stu-id="7977d-123">See also</span></span>
-- [<span data-ttu-id="7977d-124">Интерфейс ICLRRuntimeInfo</span><span class="sxs-lookup"><span data-stu-id="7977d-124">ICLRRuntimeInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
-- [<span data-ttu-id="7977d-125">Интерфейсы размещения</span><span class="sxs-lookup"><span data-stu-id="7977d-125">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [<span data-ttu-id="7977d-126">Размещение</span><span class="sxs-lookup"><span data-stu-id="7977d-126">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a><span data-ttu-id="f8acf-123">См. также</span><span class="sxs-lookup"><span data-stu-id="f8acf-123">See also</span></span>
+
+- [<span data-ttu-id="f8acf-124">Интерфейс ICLRRuntimeInfo</span><span class="sxs-lookup"><span data-stu-id="f8acf-124">ICLRRuntimeInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
+- [<span data-ttu-id="f8acf-125">Интерфейсы размещения</span><span class="sxs-lookup"><span data-stu-id="f8acf-125">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="f8acf-126">Размещение</span><span class="sxs-lookup"><span data-stu-id="f8acf-126">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)

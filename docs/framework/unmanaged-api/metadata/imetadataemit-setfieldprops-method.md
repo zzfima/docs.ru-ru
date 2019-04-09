@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ace278e0031d3e673418f50356f173c473a4832d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 94ba607669b4b1ca68294470cf1cc4fb27464d28
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57494328"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097659"
 ---
-# <a name="imetadataemitsetfieldprops-method"></a><span data-ttu-id="3ec42-102">Метод IMetaDataEmit::SetFieldProps</span><span class="sxs-lookup"><span data-stu-id="3ec42-102">IMetaDataEmit::SetFieldProps Method</span></span>
-<span data-ttu-id="3ec42-103">Задает или обновляет значение по умолчанию для поля, который ссылается токен указанного поля.</span><span class="sxs-lookup"><span data-stu-id="3ec42-103">Sets or updates the default value for the field referenced by the specified field token.</span></span>  
+# <a name="imetadataemitsetfieldprops-method"></a><span data-ttu-id="b2f51-102">Метод IMetaDataEmit::SetFieldProps</span><span class="sxs-lookup"><span data-stu-id="b2f51-102">IMetaDataEmit::SetFieldProps Method</span></span>
+<span data-ttu-id="b2f51-103">Задает или обновляет значение по умолчанию для поля, который ссылается токен указанного поля.</span><span class="sxs-lookup"><span data-stu-id="b2f51-103">Sets or updates the default value for the field referenced by the specified field token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3ec42-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="3ec42-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b2f51-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b2f51-104">Syntax</span></span>  
   
 ```  
 HRESULT SetFieldProps (  
@@ -39,31 +39,32 @@ HRESULT SetFieldProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3ec42-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="3ec42-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b2f51-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="b2f51-105">Parameters</span></span>  
  `fd`  
- <span data-ttu-id="3ec42-106">[in] Маркер целевого поля.</span><span class="sxs-lookup"><span data-stu-id="3ec42-106">[in] The token for the target field.</span></span>  
+ <span data-ttu-id="b2f51-106">[in] Маркер целевого поля.</span><span class="sxs-lookup"><span data-stu-id="b2f51-106">[in] The token for the target field.</span></span>  
   
  `dwFieldFlags`  
- <span data-ttu-id="3ec42-107">[in] Атрибуты поля.</span><span class="sxs-lookup"><span data-stu-id="3ec42-107">[in] Field attributes.</span></span> <span data-ttu-id="3ec42-108">Это битовая маска `CorFieldAttr` значения.</span><span class="sxs-lookup"><span data-stu-id="3ec42-108">This is a bitmask of `CorFieldAttr` values.</span></span>  
+ <span data-ttu-id="b2f51-107">[in] Атрибуты поля.</span><span class="sxs-lookup"><span data-stu-id="b2f51-107">[in] Field attributes.</span></span> <span data-ttu-id="b2f51-108">Это битовая маска `CorFieldAttr` значения.</span><span class="sxs-lookup"><span data-stu-id="b2f51-108">This is a bitmask of `CorFieldAttr` values.</span></span>  
   
  `dwCPlusTypeFlag`  
- <span data-ttu-id="3ec42-109">[in] `ELEMENT_TYPE_` *\** Для постоянного значения.</span><span class="sxs-lookup"><span data-stu-id="3ec42-109">[in] The `ELEMENT_TYPE_`*\** for the constant value.</span></span> <span data-ttu-id="3ec42-110">Это `CorElementType` значение.</span><span class="sxs-lookup"><span data-stu-id="3ec42-110">This is a `CorElementType` value.</span></span> <span data-ttu-id="3ec42-111">Если не определяется константой, это значение равно `ELEMENT_TYPE_END`.</span><span class="sxs-lookup"><span data-stu-id="3ec42-111">If a constant is not being defined, set this value to `ELEMENT_TYPE_END`.</span></span>  
+ <span data-ttu-id="b2f51-109">[in] `ELEMENT_TYPE_` *\** Для постоянного значения.</span><span class="sxs-lookup"><span data-stu-id="b2f51-109">[in] The `ELEMENT_TYPE_`*\** for the constant value.</span></span> <span data-ttu-id="b2f51-110">Это `CorElementType` значение.</span><span class="sxs-lookup"><span data-stu-id="b2f51-110">This is a `CorElementType` value.</span></span> <span data-ttu-id="b2f51-111">Если не определяется константой, это значение равно `ELEMENT_TYPE_END`.</span><span class="sxs-lookup"><span data-stu-id="b2f51-111">If a constant is not being defined, set this value to `ELEMENT_TYPE_END`.</span></span>  
   
  `pValue`  
- <span data-ttu-id="3ec42-112">[in] Постоянное значение для поля.</span><span class="sxs-lookup"><span data-stu-id="3ec42-112">[in] The constant value for the field.</span></span>  
+ <span data-ttu-id="b2f51-112">[in] Постоянное значение для поля.</span><span class="sxs-lookup"><span data-stu-id="b2f51-112">[in] The constant value for the field.</span></span>  
   
  `cchValue`  
- <span data-ttu-id="3ec42-113">[in] Размер в символы Юникода из `pValue`.</span><span class="sxs-lookup"><span data-stu-id="3ec42-113">[in] The size, in Unicode characters, of `pValue`.</span></span>  
+ <span data-ttu-id="b2f51-113">[in] Размер в символы Юникода из `pValue`.</span><span class="sxs-lookup"><span data-stu-id="b2f51-113">[in] The size, in Unicode characters, of `pValue`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3ec42-114">Требования</span><span class="sxs-lookup"><span data-stu-id="3ec42-114">Requirements</span></span>  
- <span data-ttu-id="3ec42-115">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3ec42-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b2f51-114">Требования</span><span class="sxs-lookup"><span data-stu-id="b2f51-114">Requirements</span></span>  
+ <span data-ttu-id="b2f51-115">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b2f51-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3ec42-116">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="3ec42-116">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="b2f51-116">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="b2f51-116">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="3ec42-117">**Библиотека:** Используется как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="3ec42-117">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="b2f51-117">**Библиотека:** Используется как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="b2f51-117">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="3ec42-118">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3ec42-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="b2f51-118">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="b2f51-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="3ec42-119">См. также</span><span class="sxs-lookup"><span data-stu-id="3ec42-119">See also</span></span>
-- [<span data-ttu-id="3ec42-120">Интерфейс IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="3ec42-120">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="3ec42-121">Интерфейс IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="3ec42-121">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="b2f51-119">См. также</span><span class="sxs-lookup"><span data-stu-id="b2f51-119">See also</span></span>
+
+- [<span data-ttu-id="b2f51-120">Интерфейс IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="b2f51-120">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="b2f51-121">Интерфейс IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="b2f51-121">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

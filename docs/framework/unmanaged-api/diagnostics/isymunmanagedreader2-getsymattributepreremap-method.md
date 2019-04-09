@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 258d6967d1586974a4258e7906fd71db6c461b07
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 543a8015e944333942b619060059273577902a74
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482188"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110296"
 ---
-# <a name="isymunmanagedreader2getsymattributepreremap-method"></a><span data-ttu-id="ce7b9-102">Метод ISymUnmanagedReader2::GetSymAttributePreRemap</span><span class="sxs-lookup"><span data-stu-id="ce7b9-102">ISymUnmanagedReader2::GetSymAttributePreRemap Method</span></span>
-<span data-ttu-id="ce7b9-103">Получает настраиваемый атрибут, в зависимости от его имени.</span><span class="sxs-lookup"><span data-stu-id="ce7b9-103">Gets a custom attribute based upon its name.</span></span> <span data-ttu-id="ce7b9-104">В отличие от настраиваемых атрибутов метаданных эти атрибуты хранятся в хранилище символов.</span><span class="sxs-lookup"><span data-stu-id="ce7b9-104">Unlike metadata custom attributes, these attributes are held in the symbol store.</span></span>  
+# <a name="isymunmanagedreader2getsymattributepreremap-method"></a><span data-ttu-id="a6128-102">Метод ISymUnmanagedReader2::GetSymAttributePreRemap</span><span class="sxs-lookup"><span data-stu-id="a6128-102">ISymUnmanagedReader2::GetSymAttributePreRemap Method</span></span>
+<span data-ttu-id="a6128-103">Получает настраиваемый атрибут, в зависимости от его имени.</span><span class="sxs-lookup"><span data-stu-id="a6128-103">Gets a custom attribute based upon its name.</span></span> <span data-ttu-id="a6128-104">В отличие от настраиваемых атрибутов метаданных эти атрибуты хранятся в хранилище символов.</span><span class="sxs-lookup"><span data-stu-id="a6128-104">Unlike metadata custom attributes, these attributes are held in the symbol store.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ce7b9-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="ce7b9-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a6128-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a6128-105">Syntax</span></span>  
   
 ```  
 HRESULT GetSymAttributePreRemap(  
@@ -39,27 +39,28 @@ HRESULT GetSymAttributePreRemap(
         length_is(*pcBuffer)] BYTE buffer[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ce7b9-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="ce7b9-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a6128-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="a6128-106">Parameters</span></span>  
  `parent`  
- <span data-ttu-id="ce7b9-107">[in] Токен метаданных родительского элемента.</span><span class="sxs-lookup"><span data-stu-id="ce7b9-107">[in] The metadata token of the parent.</span></span>  
+ <span data-ttu-id="a6128-107">[in] Токен метаданных родительского элемента.</span><span class="sxs-lookup"><span data-stu-id="a6128-107">[in] The metadata token of the parent.</span></span>  
   
  `name`  
- <span data-ttu-id="ce7b9-108">[in] Указатель на `WCHAR` , содержащее имя.</span><span class="sxs-lookup"><span data-stu-id="ce7b9-108">[in] A pointer to a `WCHAR` that contains the name.</span></span>  
+ <span data-ttu-id="a6128-108">[in] Указатель на `WCHAR` , содержащее имя.</span><span class="sxs-lookup"><span data-stu-id="a6128-108">[in] A pointer to a `WCHAR` that contains the name.</span></span>  
   
  `cBuffer`  
- <span data-ttu-id="ce7b9-109">[in] Объект `ULONG32` указывает размер `buffer` массива.</span><span class="sxs-lookup"><span data-stu-id="ce7b9-109">[in] A `ULONG32` that indicates the size of the `buffer` array.</span></span>  
+ <span data-ttu-id="a6128-109">[in] Объект `ULONG32` указывает размер `buffer` массива.</span><span class="sxs-lookup"><span data-stu-id="a6128-109">[in] A `ULONG32` that indicates the size of the `buffer` array.</span></span>  
   
  `pcBuffer`  
- <span data-ttu-id="ce7b9-110">[out] Указатель на `ULONG32` , получающий размер буфера должен содержать атрибут байты.</span><span class="sxs-lookup"><span data-stu-id="ce7b9-110">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the attribute bytes.</span></span>  
+ <span data-ttu-id="a6128-110">[out] Указатель на `ULONG32` , получающий размер буфера должен содержать атрибут байты.</span><span class="sxs-lookup"><span data-stu-id="a6128-110">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the attribute bytes.</span></span>  
   
  `buffer`  
- <span data-ttu-id="ce7b9-111">[out] Указатель на буфер, куда помещаются байты атрибута.</span><span class="sxs-lookup"><span data-stu-id="ce7b9-111">[out] A pointer to the buffer that receives the attribute bytes.</span></span>  
+ <span data-ttu-id="a6128-111">[out] Указатель на буфер, куда помещаются байты атрибута.</span><span class="sxs-lookup"><span data-stu-id="a6128-111">[out] A pointer to the buffer that receives the attribute bytes.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="ce7b9-112">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="ce7b9-112">Return Value</span></span>  
- <span data-ttu-id="ce7b9-113">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="ce7b9-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="a6128-112">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="a6128-112">Return Value</span></span>  
+ <span data-ttu-id="a6128-113">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="a6128-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ce7b9-114">Требования</span><span class="sxs-lookup"><span data-stu-id="ce7b9-114">Requirements</span></span>  
- <span data-ttu-id="ce7b9-115">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="ce7b9-115">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a6128-114">Требования</span><span class="sxs-lookup"><span data-stu-id="a6128-114">Requirements</span></span>  
+ <span data-ttu-id="a6128-115">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="a6128-115">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ce7b9-116">См. также</span><span class="sxs-lookup"><span data-stu-id="ce7b9-116">See also</span></span>
-- [<span data-ttu-id="ce7b9-117">Интерфейс ISymUnmanagedReader2</span><span class="sxs-lookup"><span data-stu-id="ce7b9-117">ISymUnmanagedReader2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="a6128-116">См. также</span><span class="sxs-lookup"><span data-stu-id="a6128-116">See also</span></span>
+
+- [<span data-ttu-id="a6128-117">Интерфейс ISymUnmanagedReader2</span><span class="sxs-lookup"><span data-stu-id="a6128-117">ISymUnmanagedReader2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)

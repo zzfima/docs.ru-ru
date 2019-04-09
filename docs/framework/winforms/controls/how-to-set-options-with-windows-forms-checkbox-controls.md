@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Настройка параметров с помощью элементов управления Windows Forms CheckBox
+title: Практическое руководство. Задание параметров с помощью элементов управления CheckBox в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,21 +12,21 @@ helpviewer_keywords:
 - check boxes [Windows Forms], using to set options
 - CheckBox control [Windows Forms], using to set options
 ms.assetid: 2ac70498-7e3e-4e07-8901-ccabaeb5fd3e
-ms.openlocfilehash: 3eb68d76d936f13e78d13629455c6ac7fb537b40
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 926e89272e9ebedb0668b26b96b1614e85e637ea
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714792"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095923"
 ---
-# <a name="how-to-set-options-with-windows-forms-checkbox-controls"></a><span data-ttu-id="2ab95-102">Практическое руководство. Настройка параметров с помощью элементов управления Windows Forms CheckBox</span><span class="sxs-lookup"><span data-stu-id="2ab95-102">How to: Set Options with Windows Forms CheckBox Controls</span></span>
-<span data-ttu-id="2ab95-103">Windows Forms <xref:System.Windows.Forms.CheckBox> элемент управления используется для предоставления пользователям True/False или Да/нет параметров.</span><span class="sxs-lookup"><span data-stu-id="2ab95-103">A Windows Forms <xref:System.Windows.Forms.CheckBox> control is used to give users True/False or Yes/No options.</span></span> <span data-ttu-id="2ab95-104">Элемент управления отображает флажок, когда он выбран.</span><span class="sxs-lookup"><span data-stu-id="2ab95-104">The control displays a check mark when it is selected.</span></span>  
+# <a name="how-to-set-options-with-windows-forms-checkbox-controls"></a><span data-ttu-id="f4da9-102">Практическое руководство. Задание параметров с помощью элементов управления CheckBox в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="f4da9-102">How to: Set Options with Windows Forms CheckBox Controls</span></span>
+<span data-ttu-id="f4da9-103">Windows Forms <xref:System.Windows.Forms.CheckBox> элемент управления используется для предоставления пользователям True/False или Да/нет параметров.</span><span class="sxs-lookup"><span data-stu-id="f4da9-103">A Windows Forms <xref:System.Windows.Forms.CheckBox> control is used to give users True/False or Yes/No options.</span></span> <span data-ttu-id="f4da9-104">Элемент управления отображает флажок, когда он выбран.</span><span class="sxs-lookup"><span data-stu-id="f4da9-104">The control displays a check mark when it is selected.</span></span>  
   
-### <a name="to-set-options-with-checkbox-controls"></a><span data-ttu-id="2ab95-105">Настройка параметров с помощью элементов управления CheckBox</span><span class="sxs-lookup"><span data-stu-id="2ab95-105">To set options with CheckBox controls</span></span>  
+### <a name="to-set-options-with-checkbox-controls"></a><span data-ttu-id="f4da9-105">Настройка параметров с помощью элементов управления CheckBox</span><span class="sxs-lookup"><span data-stu-id="f4da9-105">To set options with CheckBox controls</span></span>  
   
-1.  <span data-ttu-id="2ab95-106">Проверьте значение <xref:System.Windows.Forms.CheckBox.Checked%2A> свойства для определения его состояния и использовать его для задания параметра.</span><span class="sxs-lookup"><span data-stu-id="2ab95-106">Examine the value of the <xref:System.Windows.Forms.CheckBox.Checked%2A> property to determine its state, and use that value to set an option.</span></span>  
+1.  <span data-ttu-id="f4da9-106">Проверьте значение <xref:System.Windows.Forms.CheckBox.Checked%2A> свойства для определения его состояния и использовать его для задания параметра.</span><span class="sxs-lookup"><span data-stu-id="f4da9-106">Examine the value of the <xref:System.Windows.Forms.CheckBox.Checked%2A> property to determine its state, and use that value to set an option.</span></span>  
   
-     <span data-ttu-id="2ab95-107">В примере кода ниже, когда <xref:System.Windows.Forms.CheckBox> элемента управления <xref:System.Windows.Forms.CheckBox.CheckedChanged> события формы <xref:System.Windows.Forms.Control.AllowDrop%2A> свойству `false` Если флажок установлен.</span><span class="sxs-lookup"><span data-stu-id="2ab95-107">In the code sample below, when the <xref:System.Windows.Forms.CheckBox> control's <xref:System.Windows.Forms.CheckBox.CheckedChanged> event is raised, the form's <xref:System.Windows.Forms.Control.AllowDrop%2A> property is set to `false` if the check box is checked.</span></span> <span data-ttu-id="2ab95-108">Это полезно в ситуациях, где вы хотите ограничить взаимодействие с пользователем.</span><span class="sxs-lookup"><span data-stu-id="2ab95-108">This is useful for situations where you want to restrict user interaction.</span></span>  
+     <span data-ttu-id="f4da9-107">В примере кода ниже, когда <xref:System.Windows.Forms.CheckBox> элемента управления <xref:System.Windows.Forms.CheckBox.CheckedChanged> события формы <xref:System.Windows.Forms.Control.AllowDrop%2A> свойству `false` Если флажок установлен.</span><span class="sxs-lookup"><span data-stu-id="f4da9-107">In the code sample below, when the <xref:System.Windows.Forms.CheckBox> control's <xref:System.Windows.Forms.CheckBox.CheckedChanged> event is raised, the form's <xref:System.Windows.Forms.Control.AllowDrop%2A> property is set to `false` if the check box is checked.</span></span> <span data-ttu-id="f4da9-108">Это полезно в ситуациях, где вы хотите ограничить взаимодействие с пользователем.</span><span class="sxs-lookup"><span data-stu-id="f4da9-108">This is useful for situations where you want to restrict user interaction.</span></span>  
   
     ```vb  
     Private Sub CheckBox1_CheckedChanged(ByVal sender As System.Object, _  
@@ -65,8 +65,9 @@ ms.locfileid: "57714792"
        }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="2ab95-109">См. также</span><span class="sxs-lookup"><span data-stu-id="2ab95-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f4da9-109">См. также</span><span class="sxs-lookup"><span data-stu-id="f4da9-109">See also</span></span>
+
 - <xref:System.Windows.Forms.CheckBox>
-- [<span data-ttu-id="2ab95-110">Общие сведения об элементе управления CheckBox</span><span class="sxs-lookup"><span data-stu-id="2ab95-110">CheckBox Control Overview</span></span>](checkbox-control-overview-windows-forms.md)
-- [<span data-ttu-id="2ab95-111">Практическое руководство. Обработка события в Windows Forms щелчка элемента управления CheckBox</span><span class="sxs-lookup"><span data-stu-id="2ab95-111">How to: Respond to Windows Forms CheckBox Clicks</span></span>](how-to-respond-to-windows-forms-checkbox-clicks.md)
-- [<span data-ttu-id="2ab95-112">Элемент управления CheckBox</span><span class="sxs-lookup"><span data-stu-id="2ab95-112">CheckBox Control</span></span>](checkbox-control-windows-forms.md)
+- [<span data-ttu-id="f4da9-110">Общие сведения об элементе управления CheckBox</span><span class="sxs-lookup"><span data-stu-id="f4da9-110">CheckBox Control Overview</span></span>](checkbox-control-overview-windows-forms.md)
+- [<span data-ttu-id="f4da9-111">Практическое руководство. Обработка события щелчка элемента управления CheckBox в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="f4da9-111">How to: Respond to Windows Forms CheckBox Clicks</span></span>](how-to-respond-to-windows-forms-checkbox-clicks.md)
+- [<span data-ttu-id="f4da9-112">Элемент управления CheckBox</span><span class="sxs-lookup"><span data-stu-id="f4da9-112">CheckBox Control</span></span>](checkbox-control-windows-forms.md)

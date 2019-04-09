@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8491f80c1b4340756c00b5540520bd76f0f583a0
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 06dd3b028f4f43ca8681c80a5caa4716104068dd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487010"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080895"
 ---
-# <a name="functiontailcall2-function"></a><span data-ttu-id="edeec-102">Функция FunctionTailcall2</span><span class="sxs-lookup"><span data-stu-id="edeec-102">FunctionTailcall2 Function</span></span>
-<span data-ttu-id="edeec-103">Уведомляет профилировщик, что текущей выполняемой функции собирается выполнить вызов с префиксом tail в другую функцию и предоставляет сведения о кадре стека.</span><span class="sxs-lookup"><span data-stu-id="edeec-103">Notifies the profiler that the currently executing function is about to perform a tail call to another function and provides information about the stack frame.</span></span>  
+# <a name="functiontailcall2-function"></a><span data-ttu-id="f04d2-102">Функция FunctionTailcall2</span><span class="sxs-lookup"><span data-stu-id="f04d2-102">FunctionTailcall2 Function</span></span>
+<span data-ttu-id="f04d2-103">Уведомляет профилировщик, что текущей выполняемой функции собирается выполнить вызов с префиксом tail в другую функцию и предоставляет сведения о кадре стека.</span><span class="sxs-lookup"><span data-stu-id="f04d2-103">Notifies the profiler that the currently executing function is about to perform a tail call to another function and provides information about the stack frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="edeec-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="edeec-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f04d2-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f04d2-104">Syntax</span></span>  
   
 ```  
 void __stdcall FunctionTailcall2 (  
@@ -36,46 +36,47 @@ void __stdcall FunctionTailcall2 (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="edeec-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="edeec-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f04d2-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="f04d2-105">Parameters</span></span>  
  `funcId`  
- <span data-ttu-id="edeec-106">[in] Идентификатор текущей выполняемой функции, который собираетесь сделать с префиксом tail.</span><span class="sxs-lookup"><span data-stu-id="edeec-106">[in] The identifier of the currently executing function that is about to make a tail call.</span></span>  
+ <span data-ttu-id="f04d2-106">[in] Идентификатор текущей выполняемой функции, который собираетесь сделать с префиксом tail.</span><span class="sxs-lookup"><span data-stu-id="f04d2-106">[in] The identifier of the currently executing function that is about to make a tail call.</span></span>  
   
  `clientData`  
- <span data-ttu-id="edeec-107">[in] Функция пересопоставленный идентификатора, который ранее указано профилировщик с помощью [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md), текущей выполняемой функции, которая является внесем в него с префиксом tail.</span><span class="sxs-lookup"><span data-stu-id="edeec-107">[in] The remapped function identifier, which the profiler previously specified via [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md), of the currently executing function that is about to make a tail call.</span></span>  
+ <span data-ttu-id="f04d2-107">[in] Функция пересопоставленный идентификатора, который ранее указано профилировщик с помощью [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md), текущей выполняемой функции, которая является внесем в него с префиксом tail.</span><span class="sxs-lookup"><span data-stu-id="f04d2-107">[in] The remapped function identifier, which the profiler previously specified via [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md), of the currently executing function that is about to make a tail call.</span></span>  
   
  `func`  
- <span data-ttu-id="edeec-108">[in] Объект `COR_PRF_FRAME_INFO` значение, которое указывает на сведения о кадре стека.</span><span class="sxs-lookup"><span data-stu-id="edeec-108">[in] A `COR_PRF_FRAME_INFO` value that points to information about the stack frame.</span></span>  
+ <span data-ttu-id="f04d2-108">[in] Объект `COR_PRF_FRAME_INFO` значение, которое указывает на сведения о кадре стека.</span><span class="sxs-lookup"><span data-stu-id="f04d2-108">[in] A `COR_PRF_FRAME_INFO` value that points to information about the stack frame.</span></span>  
   
- <span data-ttu-id="edeec-109">Профилировщик должен интерпретировать его как непрозрачный дескриптор, который может быть передан в модуль выполнения в [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="edeec-109">The profiler should treat this as an opaque handle that can be passed back to the execution engine in the [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) method.</span></span>  
+ <span data-ttu-id="f04d2-109">Профилировщик должен интерпретировать его как непрозрачный дескриптор, который может быть передан в модуль выполнения в [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="f04d2-109">The profiler should treat this as an opaque handle that can be passed back to the execution engine in the [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) method.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="edeec-110">Примечания</span><span class="sxs-lookup"><span data-stu-id="edeec-110">Remarks</span></span>  
- <span data-ttu-id="edeec-111">Целевая функция вызова с префиксом tail будет использовать текущий кадр стека и возвращает непосредственно вызывающему объекту функции, внесенные с префиксом tail.</span><span class="sxs-lookup"><span data-stu-id="edeec-111">The target function of the tail call will use the current stack frame, and will return directly to the caller of the function that made the tail call.</span></span> <span data-ttu-id="edeec-112">Это означает, что [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) обратного вызова не выдается для функции, которая является целевым объектом вызова с префиксом tail.</span><span class="sxs-lookup"><span data-stu-id="edeec-112">This means that a [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) callback will not be issued for a function that is the target of a tail call.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f04d2-110">Примечания</span><span class="sxs-lookup"><span data-stu-id="f04d2-110">Remarks</span></span>  
+ <span data-ttu-id="f04d2-111">Целевая функция вызова с префиксом tail будет использовать текущий кадр стека и возвращает непосредственно вызывающему объекту функции, внесенные с префиксом tail.</span><span class="sxs-lookup"><span data-stu-id="f04d2-111">The target function of the tail call will use the current stack frame, and will return directly to the caller of the function that made the tail call.</span></span> <span data-ttu-id="f04d2-112">Это означает, что [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) обратного вызова не выдается для функции, которая является целевым объектом вызова с префиксом tail.</span><span class="sxs-lookup"><span data-stu-id="f04d2-112">This means that a [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) callback will not be issued for a function that is the target of a tail call.</span></span>  
   
- <span data-ttu-id="edeec-113">Значение `func` недопустимый параметр после `FunctionTailcall2` функция возвращает, так как значение, могут быть изменены или удалены.</span><span class="sxs-lookup"><span data-stu-id="edeec-113">The value of the `func` parameter is not valid after the `FunctionTailcall2` function returns because the value may change or be destroyed.</span></span>  
+ <span data-ttu-id="f04d2-113">Значение `func` недопустимый параметр после `FunctionTailcall2` функция возвращает, так как значение, могут быть изменены или удалены.</span><span class="sxs-lookup"><span data-stu-id="f04d2-113">The value of the `func` parameter is not valid after the `FunctionTailcall2` function returns because the value may change or be destroyed.</span></span>  
   
- <span data-ttu-id="edeec-114">`FunctionTailcall2` Функция является обратным вызовом; это необходимо реализовать.</span><span class="sxs-lookup"><span data-stu-id="edeec-114">The `FunctionTailcall2` function is a callback; you must implement it.</span></span> <span data-ttu-id="edeec-115">В реализации должен использоваться `__declspec`(`naked`) атрибут класса хранения.</span><span class="sxs-lookup"><span data-stu-id="edeec-115">The implementation must use the `__declspec`(`naked`) storage-class attribute.</span></span>  
+ <span data-ttu-id="f04d2-114">`FunctionTailcall2` Функция является обратным вызовом; это необходимо реализовать.</span><span class="sxs-lookup"><span data-stu-id="f04d2-114">The `FunctionTailcall2` function is a callback; you must implement it.</span></span> <span data-ttu-id="f04d2-115">В реализации должен использоваться `__declspec`(`naked`) атрибут класса хранения.</span><span class="sxs-lookup"><span data-stu-id="f04d2-115">The implementation must use the `__declspec`(`naked`) storage-class attribute.</span></span>  
   
- <span data-ttu-id="edeec-116">Ядро выполнения не сохраняет значения регистров перед вызовом этой функции.</span><span class="sxs-lookup"><span data-stu-id="edeec-116">The execution engine does not save any registers before calling this function.</span></span>  
+ <span data-ttu-id="f04d2-116">Ядро выполнения не сохраняет значения регистров перед вызовом этой функции.</span><span class="sxs-lookup"><span data-stu-id="f04d2-116">The execution engine does not save any registers before calling this function.</span></span>  
   
--   <span data-ttu-id="edeec-117">При входе необходимо сохранить все регистры, которые вы используете, включая те, в единицах с плавающей запятой (FPU).</span><span class="sxs-lookup"><span data-stu-id="edeec-117">On entry, you must save all registers that you use, including those in the floating-point unit (FPU).</span></span>  
+-   <span data-ttu-id="f04d2-117">При входе необходимо сохранить все регистры, которые вы используете, включая те, в единицах с плавающей запятой (FPU).</span><span class="sxs-lookup"><span data-stu-id="f04d2-117">On entry, you must save all registers that you use, including those in the floating-point unit (FPU).</span></span>  
   
--   <span data-ttu-id="edeec-118">При выходе необходимо восстановить стек путем выталкивания из всех параметров, которые были отправлены вызывающим кодом.</span><span class="sxs-lookup"><span data-stu-id="edeec-118">On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.</span></span>  
+-   <span data-ttu-id="f04d2-118">При выходе необходимо восстановить стек путем выталкивания из всех параметров, которые были отправлены вызывающим кодом.</span><span class="sxs-lookup"><span data-stu-id="f04d2-118">On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.</span></span>  
   
- <span data-ttu-id="edeec-119">Реализация `FunctionTailcall2` не должен блокироваться, поскольку это приведет к задержке сборки мусора.</span><span class="sxs-lookup"><span data-stu-id="edeec-119">The implementation of `FunctionTailcall2` should not block because it will delay garbage collection.</span></span> <span data-ttu-id="edeec-120">Реализация не должны сбор мусора, так как стек может находиться в состоянии коллекции с поддержкой сборки мусора.</span><span class="sxs-lookup"><span data-stu-id="edeec-120">The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state.</span></span> <span data-ttu-id="edeec-121">При попытке сбора мусора, среда выполнения будет блокироваться до `FunctionTailcall2` возвращает.</span><span class="sxs-lookup"><span data-stu-id="edeec-121">If a garbage collection is attempted, the runtime will block until `FunctionTailcall2` returns.</span></span>  
+ <span data-ttu-id="f04d2-119">Реализация `FunctionTailcall2` не должен блокироваться, поскольку это приведет к задержке сборки мусора.</span><span class="sxs-lookup"><span data-stu-id="f04d2-119">The implementation of `FunctionTailcall2` should not block because it will delay garbage collection.</span></span> <span data-ttu-id="f04d2-120">Реализация не должны сбор мусора, так как стек может находиться в состоянии коллекции с поддержкой сборки мусора.</span><span class="sxs-lookup"><span data-stu-id="f04d2-120">The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state.</span></span> <span data-ttu-id="f04d2-121">При попытке сбора мусора, среда выполнения будет блокироваться до `FunctionTailcall2` возвращает.</span><span class="sxs-lookup"><span data-stu-id="f04d2-121">If a garbage collection is attempted, the runtime will block until `FunctionTailcall2` returns.</span></span>  
   
- <span data-ttu-id="edeec-122">Кроме того `FunctionTailcall2` функция не должна вызывать управляемый код или каким-либо образом вызывать управляемое распределение памяти.</span><span class="sxs-lookup"><span data-stu-id="edeec-122">Also, the `FunctionTailcall2` function must not call into managed code or in any way cause a managed memory allocation.</span></span>  
+ <span data-ttu-id="f04d2-122">Кроме того `FunctionTailcall2` функция не должна вызывать управляемый код или каким-либо образом вызывать управляемое распределение памяти.</span><span class="sxs-lookup"><span data-stu-id="f04d2-122">Also, the `FunctionTailcall2` function must not call into managed code or in any way cause a managed memory allocation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="edeec-123">Требования</span><span class="sxs-lookup"><span data-stu-id="edeec-123">Requirements</span></span>  
- <span data-ttu-id="edeec-124">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="edeec-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f04d2-123">Требования</span><span class="sxs-lookup"><span data-stu-id="f04d2-123">Requirements</span></span>  
+ <span data-ttu-id="f04d2-124">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f04d2-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="edeec-125">**Заголовок.** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="edeec-125">**Header:** CorProf.idl</span></span>  
+ <span data-ttu-id="f04d2-125">**Заголовок.** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="f04d2-125">**Header:** CorProf.idl</span></span>  
   
- <span data-ttu-id="edeec-126">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="edeec-126">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f04d2-126">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f04d2-126">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="edeec-127">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="edeec-127">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="f04d2-127">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="f04d2-127">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="edeec-128">См. также</span><span class="sxs-lookup"><span data-stu-id="edeec-128">See also</span></span>
-- [<span data-ttu-id="edeec-129">Функция FunctionEnter2</span><span class="sxs-lookup"><span data-stu-id="edeec-129">FunctionEnter2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
-- [<span data-ttu-id="edeec-130">Функция FunctionLeave2</span><span class="sxs-lookup"><span data-stu-id="edeec-130">FunctionLeave2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
-- [<span data-ttu-id="edeec-131">Метод SetEnterLeaveFunctionHooks2</span><span class="sxs-lookup"><span data-stu-id="edeec-131">SetEnterLeaveFunctionHooks2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
-- [<span data-ttu-id="edeec-132">Глобальные статические функции профилирования</span><span class="sxs-lookup"><span data-stu-id="edeec-132">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+## <a name="see-also"></a><span data-ttu-id="f04d2-128">См. также</span><span class="sxs-lookup"><span data-stu-id="f04d2-128">See also</span></span>
+
+- [<span data-ttu-id="f04d2-129">Функция FunctionEnter2</span><span class="sxs-lookup"><span data-stu-id="f04d2-129">FunctionEnter2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
+- [<span data-ttu-id="f04d2-130">Функция FunctionLeave2</span><span class="sxs-lookup"><span data-stu-id="f04d2-130">FunctionLeave2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
+- [<span data-ttu-id="f04d2-131">Метод SetEnterLeaveFunctionHooks2</span><span class="sxs-lookup"><span data-stu-id="f04d2-131">SetEnterLeaveFunctionHooks2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [<span data-ttu-id="f04d2-132">Глобальные статические функции профилирования</span><span class="sxs-lookup"><span data-stu-id="f04d2-132">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)

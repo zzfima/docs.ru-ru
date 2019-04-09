@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2b6c29861faa469f03ca5f2d3cb18e95b3e78f52
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 25d5e412dc52e4ce26995ff88454b33ccea64c89
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57489908"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110101"
 ---
-# <a name="imetadataassemblyemitsetassemblyrefprops-method"></a><span data-ttu-id="7faa0-102">Метод IMetaDataAssemblyEmit::SetAssemblyRefProps</span><span class="sxs-lookup"><span data-stu-id="7faa0-102">IMetaDataAssemblyEmit::SetAssemblyRefProps Method</span></span>
-<span data-ttu-id="7faa0-103">Изменяет указанную структуру метаданных `AssemblyRef`.</span><span class="sxs-lookup"><span data-stu-id="7faa0-103">Modifies the specified `AssemblyRef` metadata structure.</span></span>  
+# <a name="imetadataassemblyemitsetassemblyrefprops-method"></a><span data-ttu-id="3f3d1-102">Метод IMetaDataAssemblyEmit::SetAssemblyRefProps</span><span class="sxs-lookup"><span data-stu-id="3f3d1-102">IMetaDataAssemblyEmit::SetAssemblyRefProps Method</span></span>
+<span data-ttu-id="3f3d1-103">Изменяет указанную структуру метаданных `AssemblyRef`.</span><span class="sxs-lookup"><span data-stu-id="3f3d1-103">Modifies the specified `AssemblyRef` metadata structure.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7faa0-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="7faa0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3f3d1-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="3f3d1-104">Syntax</span></span>  
   
 ```  
 HRESULT SetAssemblyRefProps (  
@@ -42,42 +42,43 @@ HRESULT SetAssemblyRefProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7faa0-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="7faa0-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3f3d1-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="3f3d1-105">Parameters</span></span>  
  `ar`  
- <span data-ttu-id="7faa0-106">[in] Токен метаданных, указывающее `AssemblyRef` изменение структуры метаданных.</span><span class="sxs-lookup"><span data-stu-id="7faa0-106">[in] The metadata token that specifies the `AssemblyRef` metadata structure to be modified.</span></span>  
+ <span data-ttu-id="3f3d1-106">[in] Токен метаданных, указывающее `AssemblyRef` изменение структуры метаданных.</span><span class="sxs-lookup"><span data-stu-id="3f3d1-106">[in] The metadata token that specifies the `AssemblyRef` metadata structure to be modified.</span></span>  
   
  `pbPublicKeyOrToken`  
- <span data-ttu-id="7faa0-107">[in] Открытый ключ издателя по ссылке сборки.</span><span class="sxs-lookup"><span data-stu-id="7faa0-107">[in] The public key of the publisher of the referenced assembly.</span></span>  
+ <span data-ttu-id="3f3d1-107">[in] Открытый ключ издателя по ссылке сборки.</span><span class="sxs-lookup"><span data-stu-id="3f3d1-107">[in] The public key of the publisher of the referenced assembly.</span></span>  
   
  `cbPublicKeyOrToken`  
- <span data-ttu-id="7faa0-108">[in] Размер в байтах `pbPublicKeyOrToken`.</span><span class="sxs-lookup"><span data-stu-id="7faa0-108">[in] The size in bytes of `pbPublicKeyOrToken`.</span></span>  
+ <span data-ttu-id="3f3d1-108">[in] Размер в байтах `pbPublicKeyOrToken`.</span><span class="sxs-lookup"><span data-stu-id="3f3d1-108">[in] The size in bytes of `pbPublicKeyOrToken`.</span></span>  
   
  `szName`  
- <span data-ttu-id="7faa0-109">[in] Понятное текстовое имя сборки.</span><span class="sxs-lookup"><span data-stu-id="7faa0-109">[in] The human-readable text name of the assembly.</span></span>  
+ <span data-ttu-id="3f3d1-109">[in] Понятное текстовое имя сборки.</span><span class="sxs-lookup"><span data-stu-id="3f3d1-109">[in] The human-readable text name of the assembly.</span></span>  
   
  `pMetaData`  
- <span data-ttu-id="7faa0-110">[in] Указатель на экземпляр ASSEMBLYMETADATA, содержащий сведения о версии, платформы и языковой стандарт для сборки.</span><span class="sxs-lookup"><span data-stu-id="7faa0-110">[in] A pointer to an ASSEMBLYMETADATA instance that contains the version, platform, and locale information for the assembly.</span></span>  
+ <span data-ttu-id="3f3d1-110">[in] Указатель на экземпляр ASSEMBLYMETADATA, содержащий сведения о версии, платформы и языковой стандарт для сборки.</span><span class="sxs-lookup"><span data-stu-id="3f3d1-110">[in] A pointer to an ASSEMBLYMETADATA instance that contains the version, platform, and locale information for the assembly.</span></span>  
   
  `pbHashValue`  
- <span data-ttu-id="7faa0-111">[in] Указатель на данные хэша, связанные со сборкой.</span><span class="sxs-lookup"><span data-stu-id="7faa0-111">[in] A pointer to the hash data associated with the assembly.</span></span>  
+ <span data-ttu-id="3f3d1-111">[in] Указатель на данные хэша, связанные со сборкой.</span><span class="sxs-lookup"><span data-stu-id="3f3d1-111">[in] A pointer to the hash data associated with the assembly.</span></span>  
   
  `cbHashValue`  
- <span data-ttu-id="7faa0-112">[in] Размер в байтах `pbHashValue`.</span><span class="sxs-lookup"><span data-stu-id="7faa0-112">[in] The size in bytes of `pbHashValue`.</span></span>  
+ <span data-ttu-id="3f3d1-112">[in] Размер в байтах `pbHashValue`.</span><span class="sxs-lookup"><span data-stu-id="3f3d1-112">[in] The size in bytes of `pbHashValue`.</span></span>  
   
  `dwAssemblyRefFlags`  
- <span data-ttu-id="7faa0-113">[in] Побитовое сочетание [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) значения, задающие атрибуты сборки, на которую указывает ссылка.</span><span class="sxs-lookup"><span data-stu-id="7faa0-113">[in] A bitwise combination of [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) values that specify attributes of the referenced assembly.</span></span>  
+ <span data-ttu-id="3f3d1-113">[in] Побитовое сочетание [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) значения, задающие атрибуты сборки, на которую указывает ссылка.</span><span class="sxs-lookup"><span data-stu-id="3f3d1-113">[in] A bitwise combination of [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) values that specify attributes of the referenced assembly.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="7faa0-114">Примечания</span><span class="sxs-lookup"><span data-stu-id="7faa0-114">Remarks</span></span>  
- <span data-ttu-id="7faa0-115">Чтобы создать `AssemblyRef` структура метаданных, используйте [IMetaDataAssemblyEmit::DefineAssemblyRef](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="7faa0-115">To create an `AssemblyRef` metadata structure, use the [IMetaDataAssemblyEmit::DefineAssemblyRef](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3f3d1-114">Примечания</span><span class="sxs-lookup"><span data-stu-id="3f3d1-114">Remarks</span></span>  
+ <span data-ttu-id="3f3d1-115">Чтобы создать `AssemblyRef` структура метаданных, используйте [IMetaDataAssemblyEmit::DefineAssemblyRef](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="3f3d1-115">To create an `AssemblyRef` metadata structure, use the [IMetaDataAssemblyEmit::DefineAssemblyRef](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7faa0-116">Требования</span><span class="sxs-lookup"><span data-stu-id="7faa0-116">Requirements</span></span>  
- <span data-ttu-id="7faa0-117">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7faa0-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3f3d1-116">Требования</span><span class="sxs-lookup"><span data-stu-id="3f3d1-116">Requirements</span></span>  
+ <span data-ttu-id="3f3d1-117">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3f3d1-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7faa0-118">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="7faa0-118">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="3f3d1-118">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="3f3d1-118">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="7faa0-119">**Библиотека:** Используется как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="7faa0-119">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="3f3d1-119">**Библиотека:** Используется как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="3f3d1-119">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="7faa0-120">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7faa0-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="3f3d1-120">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="3f3d1-120">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="7faa0-121">См. также</span><span class="sxs-lookup"><span data-stu-id="7faa0-121">See also</span></span>
-- [<span data-ttu-id="7faa0-122">Интерфейс IMetaDataAssemblyEmit</span><span class="sxs-lookup"><span data-stu-id="7faa0-122">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a><span data-ttu-id="3f3d1-121">См. также</span><span class="sxs-lookup"><span data-stu-id="3f3d1-121">See also</span></span>
+
+- [<span data-ttu-id="3f3d1-122">Интерфейс IMetaDataAssemblyEmit</span><span class="sxs-lookup"><span data-stu-id="3f3d1-122">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

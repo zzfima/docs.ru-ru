@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 100bb73356379d2f251513bbbed0cf1e90752ff5
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: ea1c1f998febccbc80fb10cef5a8dfd229e1987e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57494380"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095950"
 ---
-# <a name="ihosttaskmanagergetstackguarantee-method"></a><span data-ttu-id="09b37-102">Метод IHostTaskManager::GetStackGuarantee</span><span class="sxs-lookup"><span data-stu-id="09b37-102">IHostTaskManager::GetStackGuarantee Method</span></span>
-<span data-ttu-id="09b37-103">Возвращает объем пространства стека, которое гарантированно будут доступны после завершения операций в стеке, но перед закрытием процесса.</span><span class="sxs-lookup"><span data-stu-id="09b37-103">Gets the amount of stack space that is guaranteed to be available after a stack operation completes, but before the closing of a process.</span></span>  
+# <a name="ihosttaskmanagergetstackguarantee-method"></a><span data-ttu-id="a916c-102">Метод IHostTaskManager::GetStackGuarantee</span><span class="sxs-lookup"><span data-stu-id="a916c-102">IHostTaskManager::GetStackGuarantee Method</span></span>
+<span data-ttu-id="a916c-103">Возвращает объем пространства стека, которое гарантированно будут доступны после завершения операций в стеке, но перед закрытием процесса.</span><span class="sxs-lookup"><span data-stu-id="a916c-103">Gets the amount of stack space that is guaranteed to be available after a stack operation completes, but before the closing of a process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="09b37-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="09b37-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a916c-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a916c-104">Syntax</span></span>  
   
 ```  
 HRESULT GetStackGuarantee(  
@@ -35,18 +35,19 @@ HRESULT GetStackGuarantee(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="09b37-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="09b37-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a916c-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="a916c-105">Parameters</span></span>  
  `pGuarantee`  
- <span data-ttu-id="09b37-106">[out] Указатель на число байтов, которые доступны.</span><span class="sxs-lookup"><span data-stu-id="09b37-106">[out] A pointer to the number of bytes that are available.</span></span>  
+ <span data-ttu-id="a916c-106">[out] Указатель на число байтов, которые доступны.</span><span class="sxs-lookup"><span data-stu-id="a916c-106">[out] A pointer to the number of bytes that are available.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="09b37-107">Требования</span><span class="sxs-lookup"><span data-stu-id="09b37-107">Requirements</span></span>  
- <span data-ttu-id="09b37-108">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="09b37-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a916c-107">Требования</span><span class="sxs-lookup"><span data-stu-id="a916c-107">Requirements</span></span>  
+ <span data-ttu-id="a916c-108">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a916c-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="09b37-109">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="09b37-109">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="a916c-109">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="a916c-109">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="09b37-110">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="09b37-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="a916c-110">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="a916c-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="09b37-111">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="09b37-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="a916c-111">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="a916c-111">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="09b37-112">См. также</span><span class="sxs-lookup"><span data-stu-id="09b37-112">See also</span></span>
-- [<span data-ttu-id="09b37-113">Интерфейс IHostTaskManager</span><span class="sxs-lookup"><span data-stu-id="09b37-113">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="a916c-112">См. также</span><span class="sxs-lookup"><span data-stu-id="a916c-112">See also</span></span>
+
+- [<span data-ttu-id="a916c-113">Интерфейс IHostTaskManager</span><span class="sxs-lookup"><span data-stu-id="a916c-113">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)

@@ -17,15 +17,16 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cfe71abfa97a3773c8ff50c0f908d48681ebdc8c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 20ab65be32e6730ef828347c28eeed25d9033777
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680352"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093102"
 ---
-# <a name="icordebugeditandcontinuesnapshotsetilmap-method"></a><span data-ttu-id="9a27e-102">Метод ICorDebugEditAndContinueSnapshot::SetILMap</span><span class="sxs-lookup"><span data-stu-id="9a27e-102">ICorDebugEditAndContinueSnapshot::SetILMap Method</span></span>
-<span data-ttu-id="9a27e-103">`SetILMap` устарел.</span><span class="sxs-lookup"><span data-stu-id="9a27e-103">`SetILMap` is obsolete.</span></span> <span data-ttu-id="9a27e-104">Этот метод не вызывается.</span><span class="sxs-lookup"><span data-stu-id="9a27e-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinuesnapshotsetilmap-method"></a><span data-ttu-id="22eda-102">Метод ICorDebugEditAndContinueSnapshot::SetILMap</span><span class="sxs-lookup"><span data-stu-id="22eda-102">ICorDebugEditAndContinueSnapshot::SetILMap Method</span></span>
+`SetILMap` <span data-ttu-id="22eda-103">является устаревшим.</span><span class="sxs-lookup"><span data-stu-id="22eda-103">is obsolete.</span></span> <span data-ttu-id="22eda-104">Этот метод не вызывается.</span><span class="sxs-lookup"><span data-stu-id="22eda-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9a27e-105">См. также</span><span class="sxs-lookup"><span data-stu-id="9a27e-105">See also</span></span>
-- [<span data-ttu-id="9a27e-106">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="9a27e-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="22eda-105">См. также</span><span class="sxs-lookup"><span data-stu-id="22eda-105">See also</span></span>
+
+- [<span data-ttu-id="22eda-106">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="22eda-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
