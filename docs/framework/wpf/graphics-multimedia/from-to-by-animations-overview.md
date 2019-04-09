@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], From/to/by
 - From/to/by animation
 ms.assetid: 516fce0a-e7f8-49b8-b018-53b3d409a8a3
-ms.openlocfilehash: 40a37542d6151d05910bc033657d85c6a9f5483b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9708a4d06e8a2aa65fb4d3bb959f4699237a2bc6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362764"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209155"
 ---
 # <a name="fromtoby-animations-overview"></a>Общие сведения об анимациях From/To/By
 В этом разделе описываются способы использования анимаций From/To/By для свойств зависимостей. Анимация From/To/By создает переход между двумя целевыми значениями.  
@@ -36,11 +36,11 @@ ms.locfileid: "57362764"
   
  Классы анимации From/To/By принадлежат к <xref:System.Windows.Media.Animation> пространства имен и используется следующее соглашение об именовании:  
   
- *\<Тип>* `Animation`  
+ *\<Тип >* `Animation`  
   
  Где *\<Type>* — тип значения, которое выполняет анимацию класса.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет следующие классы анимации From/To/By.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет следующие From/To/By классы анимации.  
   
 |Тип свойства|Соответствующий класс анимации From/To/By|  
 |-------------------|------------------------------------------------|  
@@ -141,11 +141,12 @@ ms.locfileid: "57362764"
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] также позволяет создавать собственные настраиваемые типы анимации. Дополнительные сведения см. в разделе [Общие сведения о настраиваемых анимации](custom-animations-overview.md).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Media.Animation.Timeline>
 - <xref:System.Windows.Media.Animation.Storyboard>
 - [Общие сведения об эффектах анимации](animation-overview.md)
-- [Общие сведения о раскадровке](storyboards-overview.md)
+- [Общие сведения о Storyboard](storyboards-overview.md)
 - [Общие сведения об анимации по ключевым кадрам](key-frame-animations-overview.md)
-- [Общие сведения об анимации с использованием пути](path-animations-overview.md)
+- [Общие сведения об анимация с использованием пути](path-animations-overview.md)
 - [Общие сведения о пользовательской анимации](custom-animations-overview.md)
-- [Пример целевых значений анимации From, To и By](https://go.microsoft.com/fwlink/?LinkID=159988)
+- [FROM, To и пример целевых значений анимации](https://go.microsoft.com/fwlink/?LinkID=159988)

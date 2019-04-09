@@ -2,12 +2,12 @@
 title: Поддержка SqlClient LocalDB
 ms.date: 03/30/2017
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
-ms.openlocfilehash: 102dbdcc79234525a45e9059092ccaad63fa3353
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 416945964af7fda5ed5aaab2f5aae1bbc8928556
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527618"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204761"
 ---
 # <a name="sqlclient-support-for-localdb"></a>Поддержка SqlClient LocalDB
 Начиная с SQL Server с рабочим названием Denali, облегченная версия SQL Server, называемая LocalDB, будут доступны. В этом разделе описывается, как установить подключение к базе данных LocalDB.  
@@ -29,7 +29,7 @@ ms.locfileid: "54527618"
     server=(localdb)\\myInstance  
     ```  
   
- Указание`User Instance=True` недопустимо, если производится соединение с базой данных LocalDB.  
+ `User Instance=True` не допускается при подключении к базе данных LocalDB.  
   
  Базу данных LocalDB можно скачать из [пакета дополнительных компонентов Microsoft SQL Server 2012](https://www.microsoft.com/download/en/details.aspx?id=29065). Если вы будете использовать sqlcmd.exe для изменения данных в экземпляре LocalDB, вам потребуется sqlcmd из SQL Server 2012, который также можно получить из пакета дополнительных компонентов SQL Server 2012.  
   
@@ -59,5 +59,6 @@ ms.locfileid: "54527618"
 -   С помощью ключевого слова строки подключения `AttachDBFilename` укажите MDF-файл.  
   
 ## <a name="see-also"></a>См. также
+
 - [Возможности SQL Server и ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

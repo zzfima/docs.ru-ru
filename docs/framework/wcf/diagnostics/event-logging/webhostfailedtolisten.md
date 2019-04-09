@@ -2,12 +2,12 @@
 title: WebHostFailedToListen
 ms.date: 03/30/2017
 ms.assetid: 328468a6-6388-425a-a122-49306e303d19
-ms.openlocfilehash: 30f4a6fa3018faf00b73d08495dc767443e734bb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2aa1f27431cf62bcf643f822e47a3e7f7768ac3d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730676"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193737"
 ---
 # <a name="webhostfailedtolisten"></a>WebHostFailedToListen
 ИД: 112  
@@ -16,9 +16,10 @@ ms.locfileid: "54730676"
   
  Категория: ServiceModel  
   
-## <a name="description"></a>Описание:  
+## <a name="description"></a>Описание  
  Это событие указывает, что произошла ошибка при ожидании передачи данных по определенному URL-адресу. Данный рабочий процесс завершен. В событии указаны исключение, имя процесса и идентификатор процесса.  
   
 ## <a name="see-also"></a>См. также
+
 - [Ведение журнала событий](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
 - [Общие справочные сведения о событиях](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 510ef77f217cdd6e3441e3d6684d431fc31307fd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0625dc72d44485dbb69b42cba5387085d1862bb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698925"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210429"
 ---
 # <a name="stacktracesimplecontext-structure"></a>Структура StackTrace_SimpleContext
 Обеспечивает простой контекст, который может использоваться вместо полной структуры `CONTEXT`.  
@@ -40,7 +40,7 @@ struct StackTrace_SimpleContext
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |`StackOffset`|Указатель стека или указатель стека ввод (ESP) на x86 платформ.|  
 |`FrameOffset`|Смещение кадра или регистр EBP на x86 платформ.|  
@@ -57,5 +57,6 @@ struct StackTrace_SimpleContext
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Структуры отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
 - [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)

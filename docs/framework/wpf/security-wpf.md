@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 84f7e0f1174a048d650741075344de3158c2994e
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
-ms.translationtype: MT
+ms.openlocfilehash: 01b1b30ceca316ecebacfaf23f458f71f1953d04
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654319"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193672"
 ---
 # <a name="security-wpf"></a>Безопасность (WPF)
 <a name="introduction"></a> При разработке Windows Presentation Foundation (WPF) автономных приложений и приложений, размещенных в веб-браузере, необходимо учитывать модель безопасности. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Автономные приложения выполняются с неограниченными разрешениями ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** набор разрешений), если развертываются с помощью установщика Windows (MSI), XCopy или [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]. Развертывание автономных приложений WPF с частичным доверием с помощью ClickOnce не поддерживается. Тем не менее, полным доверием ведущего приложения можно создать с частичным доверием <xref:System.AppDomain> с помощью модели надстроек платформы .NET Framework. Дополнительные сведения см. в разделе [Общие сведения о надстройках WPF](./app-development/wpf-add-ins-overview.md).  
@@ -62,7 +62,7 @@ ms.locfileid: "58654319"
 |Ресурс|Файлы, добавленные в проект с типом сборки **ресурсов**.|`pack://application:,,,/MyResourceFile.xaml`|  
 |Content|Файлы, добавленные в проект с типом сборки **содержимого**.|`pack://application:,,,/MyContentFile.xaml`|  
 |Исходный веб-сайт|Файлы, добавленные в проект с типом сборки **None**.|`pack://siteoforigin:,,,/MySiteOfOriginFile.xaml`|  
-|Код приложения|Ресурсы XAML, имеющие скомпилированный код программной части.<br /><br /> - или -<br /><br /> Файлы XAML, которые добавляются в проект с типом сборки **страницы**.|`pack://application:,,,/MyResourceFile` `.xaml`|  
+|Код приложения|Ресурсы XAML, имеющие скомпилированный код программной части.<br /><br /> -или-<br /><br /> Файлы XAML, которые добавляются в проект с типом сборки **страницы**.|`pack://application:,,,/MyResourceFile` `.xaml`|  
   
 > [!NOTE]
 >  Дополнительные сведения о файлах данных приложения и пакет [!INCLUDE[TLA2#tla_uri#plural](../../../includes/tla2sharptla-urisharpplural-md.md)], см. в разделе [ресурса приложения WPF, содержимое и файлы данных](./app-development/wpf-application-resource-content-and-data-files.md).  
@@ -272,10 +272,11 @@ ms.locfileid: "58654319"
 |[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]|[Безопасность частичного доверия в WPF](wpf-partial-trust-security.md)|  
   
 ## <a name="see-also"></a>См. также
+
 - [Безопасность частичного доверия в WPF](wpf-partial-trust-security.md)
-- [Стратегия безопасности WPF — безопасность платформы](wpf-security-strategy-platform-security.md)
+- [Стратегия безопасности WPF — безопасность платформы](wpf-security-strategy-platform-security.md)
 - [Стратегия безопасности WPF — проектирование безопасности](wpf-security-strategy-security-engineering.md)
 - [Шаблоны и рекомендации по обеспечению безопасности приложений](https://go.microsoft.com/fwlink/?LinkId=117426)
 - [Управление доступом для кода](../misc/code-access-security.md)
 - [Развертывание и безопасность технологии ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)
-- [Общие сведения о языке XAML (WPF)](./advanced/xaml-overview-wpf.md)
+- [Обзор XAML (WPF)](./advanced/xaml-overview-wpf.md)

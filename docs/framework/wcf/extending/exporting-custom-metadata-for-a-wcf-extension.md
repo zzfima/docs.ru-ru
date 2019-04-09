@@ -2,12 +2,12 @@
 title: Экспорт пользовательских метаданных для расширения WCF
 ms.date: 03/30/2017
 ms.assetid: 53c93882-f8ba-4192-965b-787b5e3f09c0
-ms.openlocfilehash: fa6a2751f8ef3326febc7fa6bed85e10603701c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 5107e4d079a51ee94d59aa872c8a4c74f229ea8a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616060"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201251"
 ---
 # <a name="exporting-custom-metadata-for-a-wcf-extension"></a>Экспорт пользовательских метаданных для расширения WCF
 В Windows Communication Foundation (WCF), экспорта метаданных — это процесс описания конечных точек службы и проецирования их в параллельное, стандартизованное представление, клиенты могут использовать, чтобы понять, как использовать службу. Пользовательские метаданные состоят из элементов XML, которые не могут быть экспортированы с помощью средств экспорта метаданных, предоставляемых системой. Обычно сюда входят пользовательские элементы WSDL для определенных пользователем поведений, элементов привязки и утверждений политики о возможностях и требованиях привязок и контрактов.  
@@ -42,6 +42,7 @@ ms.locfileid: "54616060"
  Дополнительные сведения см. в разделе [Как Экспорт утверждений пользовательской политики](../../../../docs/framework/wcf/extending/how-to-export-custom-policy-assertions.md).  
   
 ## <a name="see-also"></a>См. также
-- [Практическое руководство. Экспорт пользовательского языка WSDL](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
-- [Практическое руководство. Экспорт утверждений пользовательской политики](../../../../docs/framework/wcf/extending/how-to-export-custom-policy-assertions.md)
+
+- [Практическое руководство. Экспорт пользовательской информации WSDL](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
+- [Практическое руководство. Экспорт проверочных утверждений пользовательской политики](../../../../docs/framework/wcf/extending/how-to-export-custom-policy-assertions.md)
 - [Импорт пользовательских метаданных для расширения WCF](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md)

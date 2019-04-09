@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 956de98fca1caec0ac1b94afc7251f9741246f94
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a8a979e86dbe52577d0b58089015338e4a87750d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57494783"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193880"
 ---
 # <a name="icorruntimehostmapfile-method"></a>Метод ICorRuntimeHost::MapFile
 Сопоставляет указанный файл в память. Этот метод устарел.  
@@ -53,4 +53,5 @@ HRESULT MapFile(
  **Версии платформы .NET framework:** 1.0, 1.1  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

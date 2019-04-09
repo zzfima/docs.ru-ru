@@ -6,25 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - documents [WPF], features for
 ms.assetid: 7bf37ccb-5d09-4eae-9661-929582aeb259
-ms.openlocfilehash: 6dba276e88f4c3dd475e3d79de43a9fca7a35206
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4dbe2e8257bfc92f354d032d7bb6e2ba7a693075
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54546979"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206945"
 ---
 # <a name="documents"></a>Документы
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет универсальный набор компонентов, позволяющий разработчикам создавать приложения с расширенными свойствами документов и улучшенным интерфейсом чтения. В дополнение к расширенным возможностям и качеству [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет также службы упрощенного управления упаковкой, защитой и хранением документов.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет универсальный набор компонентов, позволяющих разработчикам создавать приложения с расширенными свойствами документов и улучшенным интерфейсом чтения. В дополнение к расширенным возможностям и качеству [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет также службы упрощенного управления упаковкой, защитой и хранением документов.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Документы в WPF](documents-in-wpf.md)  
  [Сериализация и хранение документов](document-serialization-and-storage.md)  
  [Заметки](annotations.md)  
  [Содержимое нефиксированного формата](flow-content.md)  
- [Типографская разметка](typography.md)  
+ [Оформление](typography.md)  
  [Печать и управление печатью](printing-and-print-system-management.md)  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Controls.DocumentViewer>
 - <xref:System.Windows.Documents.FlowDocument>
 - <xref:System.Windows.Xps>

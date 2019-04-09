@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - handling faults [WCF]
 ms.assetid: a9696563-d404-4905-942d-1e0834c26dea
-ms.openlocfilehash: e0a81915d35bc382cb4f51ec6d26a429c8a759c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c64bdb0cf60fff2dad49c3ffc48629c53abecad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594932"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210676"
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>Задание и обработка сбоев в контрактах и службах
 Приложения Windows Communication Foundation (WCF) обрабатывают ошибки, сопоставляя объекты управляемых исключений с ошибок SOAP и объекты сбоя SOAP с объектами управляемых исключений. В подразделах этого раздела описывается, как разрабатывать контракты, чтобы представлять ошибки в виде пользовательских ошибок SOAP, как возвращать эти ошибки в реализации службы, и как клиенты могут перехватывать такие ошибки.  
@@ -56,6 +56,7 @@ ms.locfileid: "54594932"
  При десериализации контракта сбоя службы WCF прежде всего пытаются сопоставить имя контракта сбоя в сообщении протокола SOAP с типом контракта сбоя. Если точное соответствие не обнаружено, просматривается список доступных контрактов сбоя в алфавитном порядке для нахождения совместимого типа. Если совместимые типы имеют два контракта сбоя (например, один является подклассом другого), при десериализации сбоя может быть использован неправильный тип. Это происходит только в случае, если в контракте сбоя не указано имя, пространство имен и действие. Во избежание данной проблемы всегда полностью определяйте контракты сбоя, указывая атрибуты имени, пространства имен и действия. Кроме того, если определено несколько родственных контрактов сбоя, производных от общего базового класса, обязательно помечайте все новые элементы атрибутом `[DataMember(IsRequired=true)]`. Дополнительные сведения об использовании атрибута `IsRequired` см. в разделе <xref:System.Runtime.Serialization.DataMemberAttribute>. В этом случае базовый класс не будет считаться совместимым типом, а сбой будет десериализован в правильный производный тип.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.FaultException>
 - <xref:System.ServiceModel.FaultContractAttribute>
 - <xref:System.ServiceModel.FaultException>
@@ -68,4 +69,4 @@ ms.locfileid: "54594932"
 - <xref:System.ServiceModel.FaultException.Reason%2A>
 - <xref:System.ServiceModel.FaultCode.SubCode%2A>
 - <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>
-- [Определение и указание сбоев](../../../docs/framework/wcf/defining-and-specifying-faults.md)
+- [Определение и задание сбоев](../../../docs/framework/wcf/defining-and-specifying-faults.md)

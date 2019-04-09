@@ -2,12 +2,12 @@
 title: Пользовательские модули форматирования сообщений
 ms.date: 03/30/2017
 ms.assetid: c07435f3-5214-4791-8961-2c2b61306d71
-ms.openlocfilehash: e1633bdd3959ba812251ef1b78bcd0e83b2060c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af1596c65fc87a68bc3dc2ab5ab2d82133e0fed4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612785"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196246"
 ---
 # <a name="custom-message-formatters"></a>Пользовательские модули форматирования сообщений
 Содержимое сообщения зачастую представлено в XML-виде, который обычно является неудобным форматом для приложений. Приложения управляют объектами, получая и устанавливая их свойства. Windows Communication Foundation (WCF) использует *контракт данных* для преобразования <xref:System.ServiceModel.Channels.Message> объект в объект, легко обрабатываемый приложением. Эти действия называются сериализацией и десериализацией. Обратите внимание, что данные термины также используются для описания сериализации и десериализации, выполненной транспортным слоем, в формат сообщений для передачи по линиям связи, что является несвязанным процессом.  
@@ -33,6 +33,7 @@ ms.locfileid: "54612785"
  Чтобы вставить пользовательский модуль форматирования в службу, назначьте объект <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> свойству <xref:System.ServiceModel.Dispatcher.DispatchOperation.Formatter%2A> с помощью поведения операции. Сведения о поведениях см. в разделе [настройку и расширение среды выполнения с помощью поведений](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter>
 - <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>
 - [Настройка и расширение среды выполнения с помощью поведений](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)

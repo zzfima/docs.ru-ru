@@ -2,12 +2,12 @@
 title: Состояния объектов и отслеживание изменений
 ms.date: 03/30/2017
 ms.assetid: 7a808b00-9c3c-479a-aa94-717280fefd71
-ms.openlocfilehash: 89e9f44a6cd3579a5ef9cc2078609ca26e0d2ae5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 63b04d3a4b6e48594e9664833a6e539d62bbab0e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683314"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191159"
 ---
 # <a name="object-states-and-change-tracking"></a>Состояния объектов и отслеживание изменений
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] объекты всегда участвовать в некоторых *состояние*. Например, когда [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] создает объект, объект находится в состоянии `Unchanged`. Объект, создаваемый пользователем неизвестен <xref:System.Data.Linq.DataContext> и находится в `Untracked` состояние. После успешного выполнения <xref:System.Data.Linq.DataContext.SubmitChanges%2A> все объекты, известные [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], находятся в состоянии `Unchanged`. (Единственное исключение представляют объекты, успешно удаленные из базы данных, находящиеся в состоянии `Deleted` и не используемые в экземпляре <xref:System.Data.Linq.DataContext>.)  
@@ -15,7 +15,7 @@ ms.locfileid: "54683314"
 ## <a name="object-states"></a>Состояния объектов  
  В следующей таблице представлены возможные состояния объектов [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
-|Состояние|Описание|  
+|Регион|Описание|  
 |-----------|-----------------|  
 |`Untracked`|Объект, не отслеживаемый [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Далее представлено несколько примеров.<br /><br /> — Объект не запрошенный с помощью текущего <xref:System.Data.Linq.DataContext> (например, вновь созданного объекта).<br />-Объект, созданный с помощью десериализации<br />— Объект запрошенный с помощью другого <xref:System.Data.Linq.DataContext>.|  
 |`Unchanged`|Объект, извлеченный с использованием текущего <xref:System.Data.Linq.DataContext> и не измененный после создания.|  
@@ -63,5 +63,6 @@ ms.locfileid: "54683314"
  При обновлении необходимой ссылки и соответствующего внешнего ключа следует обеспечить их непротиворечивость. Если на момент вызова <xref:System.InvalidOperationException> эти объекты не синхронизированы, создается исключение <xref:System.Data.Linq.DataContext.SubmitChanges%2A>. Несмотря на то, что изменения значения внешнего ключа достаточны для воздействия на обновление базовой строки, необходимо изменить ссылку, чтобы сохранить подключение графа объекта и обеспечить двунаправленную согласованность связей.  
   
 ## <a name="see-also"></a>См. также
+
 - [Основные сведения](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
 - [Операции вставки, обновления и удаления](../../../../../../docs/framework/data/adonet/sql/linq/insert-update-and-delete-operations.md)

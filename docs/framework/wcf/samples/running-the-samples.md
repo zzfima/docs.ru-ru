@@ -2,12 +2,12 @@
 title: Выполнение примеров Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-ms.openlocfilehash: aec7d7f9ce0a6db5d20bce47ab313f4248e86c88
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
-ms.translationtype: MT
+ms.openlocfilehash: 32925caccee08c27e023d7ffae992e38cb496868
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304678"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209220"
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>Выполнение примеров Windows Communication Foundation
 Примеры Windows Communication Foundation (WCF) может выполняться в одном или нескольких компьютерах конфигурации. После передачи примеры готовы к выполнению на одном компьютере. При выполнении на нескольких компьютерах необходимо изменить параметры файла конфигурации примера. В следующих процедурах объясняется, как выполнить пример на одном компьютере или на нескольких компьютерах. Обратите внимание, что шаги, выполняемые для служб, размещенных в службах IIS, и шаги для резидентных примеров, отличаются. Большинство примеров размещаются в службах IIS; чтобы определить, как размещается пример, см. сведения в файле Readme.  
@@ -80,5 +80,6 @@ ms.locfileid: "56304678"
 -   Если служба размещается в службах IIS в целях безопасности, удалите определение виртуального каталога и разрешения, предоставленные на шагах установки, по завершении работы с примерами.  
   
 ## <a name="see-also"></a>См. также
+
 - [Построение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md)
 - [Советы по устранению неполадок для образцов WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))

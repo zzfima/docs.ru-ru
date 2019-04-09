@@ -1,18 +1,18 @@
 ---
-title: Как выполнить Настройка пользовательских WS-Metadata Exchange привязки
+title: Практическое руководство. Настройка пользовательской привязки для обмена WS-Metadata
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-Metadata Exchange [WCF]
 - WS-Metadata Exchange [WCF], configuring a custom binding
 ms.assetid: cdba4d73-da64-4805-bc56-9822becfd1e4
-ms.openlocfilehash: 4328306a6b67d2eac498ec48d1769bdf4bd5f81e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ab659e7e586b28f5c06b9b6ba12b313f318c6542
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642468"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210507"
 ---
-# <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>Как выполнить Настройка пользовательских WS-Metadata Exchange привязки
+# <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>Практическое руководство. Настройка пользовательской привязки для обмена WS-Metadata
 В этом разделе объясняется, как настроить пользовательскую привязку обмена WS-Metadata. Windows Communication Foundation (WCF) включает в себя четыре привязки метаданных, определенные системой, но вы можете публиковать метаданные с помощью любой привязки, которые нужно. В этой теме рассказывается, как опубликовать метаданные с помощью `wsHttpBinding`. Эта привязка позволяет предоставлять метаданные безопасным способом. Код в этой статье основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
   
 ### <a name="using-a-configuration-file"></a>Использование файла конфигурации  
@@ -114,6 +114,7 @@ ms.locfileid: "54642468"
     ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Поведение публикации метаданных](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)
 - [Извлечение метаданных](../../../../docs/framework/wcf/samples/retrieve-metadata.md)
 - [Метаданные](../../../../docs/framework/wcf/feature-details/metadata.md)

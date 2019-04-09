@@ -2,12 +2,12 @@
 title: <transport> из <netPeerTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: c44d86d2-1160-44d7-9c7a-297b12eccc7f
-ms.openlocfilehash: f5feca232265cbcad7feff78c0c66e3606c8567e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 157637615abafbd5913e4d90b702bb0224d5f121
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270396"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204878"
 ---
 # <a name="transport-of-netpeertcpbinding"></a>\<Транспорт > из \<netPeerTcpBinding >
 Указывает параметры безопасности уровня транспорта при использовании [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).  
@@ -38,7 +38,7 @@ ms.locfileid: "55270396"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|credentialType|Необязательно. Задает тип учетных данных, используемых для проверки сообщений, отправляемых с помощью однорангового транспорта. Это атрибут типа <xref:System.ServiceModel.PeerTransportCredentialType>.|  
+|credentialType|Необязательный параметр. Задает тип учетных данных, используемых для проверки сообщений, отправляемых с помощью однорангового транспорта. Это атрибут типа <xref:System.ServiceModel.PeerTransportCredentialType>.|  
   
 ## <a name="credentialtype-attribute"></a>Атрибут credentialType  
   
@@ -57,6 +57,7 @@ ms.locfileid: "55270396"
 |[\<Безопасность >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netpeerbinding.md)|Определяет параметры безопасности для [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).|  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>
 - <xref:System.ServiceModel.PeerSecuritySettings.Transport%2A>
 - <xref:System.ServiceModel.Configuration.PeerSecurityElement.Transport%2A>

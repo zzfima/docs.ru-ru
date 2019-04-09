@@ -1,19 +1,19 @@
 ---
-title: 'Конечные точки: Адреса, привязки и контракты'
+title: 'Конечные точки: адреса, привязки и контракты'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - endpoints [WCF]
 - Windows Communication Foundation [WCF], endpoints
 - WCF [WCF], endpoints
 ms.assetid: 9ddc46ee-1883-4291-9926-28848c57e858
-ms.openlocfilehash: a10d9ac5718bf6b88a3a00902f90045c705f8431
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e78e7cf0c5acde53d7ee23294fd52134414e860
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721793"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207530"
 ---
-# <a name="endpoints-addresses-bindings-and-contracts"></a>Конечные точки: Адреса, привязки и контракты
+# <a name="endpoints-addresses-bindings-and-contracts"></a>Конечные точки: адреса, привязки и контракты
 Весь обмен данными со службой Windows Communication Foundation (WCF) осуществляется через *конечные точки* службы. Конечные точки предоставляют клиентам доступ к функциональным возможностям службы WCF.  
   
  Каждая конечная точка состоит из четырех свойств:  
@@ -78,15 +78,16 @@ ms.locfileid: "54721793"
  [Контракты](../../../../docs/framework/wcf/feature-details/contracts.md)  
  Описывается, как контакты определяют методы службы.  
   
- [Практическое руководство. Создать конечную точку службы в конфигурации](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
+ [Практическое руководство. Создание конечной точки службы в конфигурации](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
  Описывается, как создать конечную точку службы в конфигурации.  
   
- [Практическое руководство. Создать конечную точку службы в коде](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
+ [Практическое руководство. Создание конечной точки службы в коде](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
  Описывается, как создать конечную точку службы в коде.  
   
- [Практическое руководство. Использовать Svcutil.exe для проверки скомпилированного кода службы](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)  
+ [Практическое руководство. Использование программы Svcutil.exe для проверки скомпилированного кода службы](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)  
  Описывает, как для обнаружения ошибок в реализациях службы и конфигурациях, не размещая службу при помощи [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Настройка служб](../../../../docs/framework/wcf/configuring-services.md)
 - [Расширение привязок](../../../../docs/framework/wcf/extending/extending-bindings.md)

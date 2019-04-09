@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 307d2809-208b-4cf8-b6a9-5d16f15fc16c
-ms.openlocfilehash: 39b1e9945a1cf6cd847fbe82c0b29e50f23bf785
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 18c391e97baa170b78dcfe0165fb38b6c6d739f4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714153"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210559"
 ---
 # <a name="adding-existing-constraints-to-a-dataset"></a>Добавление существующих ограничений к набору данных
 **Заполнения** метод **DataAdapter** заполняет <xref:System.Data.DataSet> только со столбцами таблицы и строки из источника данных; Однако обычно устанавливают ограничения источником данных, **заполнения** метод не добавляет эти данные схемы к **набора данных** по умолчанию. Для заполнения **набора данных** сведениями о существующие ограничения первичного ключа из источника данных, можно вызвать метод **FillSchema** метод **DataAdapter**, или задать **MissingSchemaAction** свойство **DataAdapter** для **AddWithKey** перед вызовом **заполнения**. Это позволит гарантировать, что первичный ключ ограничения в **набора данных** отражаются в источнике данных. Ограничение внешнего ключа сведения не включается и нужно создавать явно, как показано в [ограничения таблиц данных](../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md).  
@@ -61,7 +61,8 @@ custAdapter.Fill(custDataSet, "Customers");
 >  Если **FillSchema** метод **OleDbDataAdapter** объекта вызывается для команды, которая возвращает несколько результирующих наборов, возвращаются только сведения о схеме из первого результирующего набора. Если данные схемы возвращаются для нескольких результирующих наборов с помощью **OleDbDataAdapter**, рекомендуется указывать **MissingSchemaAction** из **AddWithKey** и получить сведения о схеме, при вызове **заполнения** метод.  
   
 ## <a name="see-also"></a>См. также
+
 - [Объекты DataAdapter и DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [Наборы данных, таблицы данных и объекты DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [Извлечение и изменение данных в ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

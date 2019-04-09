@@ -10,17 +10,16 @@ helpviewer_keywords:
 - padding [WPF]
 - aligning [WPF]
 ms.assetid: 9c6a2009-9b86-4e40-8605-0a2664dc3973
-ms.openlocfilehash: eef28a178f11ea23ac23183c9ec7eb06b7f18a29
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 58af8848a6b8a5e4ded453831f5a7ef985548492
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355415"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209168"
 ---
 # <a name="alignment-margins-and-padding-overview"></a>Общие сведения о свойствах Alignment, Margin, Padding
 <xref:System.Windows.FrameworkElement> Класс предоставляет несколько свойств, которые используются для точного размещения дочерних элементов. В этом разделе рассмотрены четыре наиболее важных свойства: <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, <xref:System.Windows.Controls.Border.Padding%2A>, и <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>. Очень важно иметь представление о результатах применения этих свойств, поскольку они обеспечивают основу для управления положением элементов в приложениях [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
-  
-  
+
 <a name="wcpsdk_layout_amp_introduction"></a>   
 ## <a name="introduction-to-element-positioning"></a>Введение в позиционирование элементов  
  Существуют разные способы позиционирования элементов с помощью [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Однако идеальный макет достигается не просто выбором справа <xref:System.Windows.Controls.Panel> элемент. Точное управление размещением требует понимания <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, <xref:System.Windows.Controls.Border.Padding%2A>, и <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> свойства.  
@@ -51,12 +50,12 @@ ms.locfileid: "57355415"
 ### <a name="horizontalalignment-property"></a>Свойство HorizontalAlignment  
  <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> Свойство объявляет характеристики горизонтального выравнивания для применения к дочерним элементам. Ниже показаны все возможные значения <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> свойство.  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |<xref:System.Windows.HorizontalAlignment.Left>|Дочерние элементы выравниваются по левому краю выделенного пространства макета родительского элемента.|  
 |<xref:System.Windows.HorizontalAlignment.Center>|Дочерние элементы выравниваются по центру выделенного пространства макета родительского элемента.|  
 |<xref:System.Windows.HorizontalAlignment.Right>|Дочерние элементы выравниваются по правому краю выделенного пространства макета родительского элемента.|  
-|<xref:System.Windows.HorizontalAlignment.Stretch> (По умолчанию)|Дочерние элементы растягиваются для заполнения выделенного пространства макета родительского элемента. Явные <xref:System.Windows.FrameworkElement.Width%2A> и <xref:System.Windows.FrameworkElement.Height%2A> значения имеют приоритет.|  
+|<xref:System.Windows.HorizontalAlignment.Stretch> (Значение по умолчанию)|Дочерние элементы растягиваются для заполнения выделенного пространства макета родительского элемента. Явные <xref:System.Windows.FrameworkElement.Width%2A> и <xref:System.Windows.FrameworkElement.Height%2A> значения имеют приоритет.|  
   
  В следующем примере показано, как применить <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> свойства <xref:System.Windows.Controls.Button> элементов. Показаны все значения атрибутов, чтобы проиллюстрировать различные режимы отрисовки.  
   
@@ -71,12 +70,12 @@ ms.locfileid: "57355415"
 ### <a name="verticalalignment-property"></a>Свойство VerticalAlignment  
  <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> Свойство описывает характеристики вертикального выравнивания, чтобы применить к дочерним элементам. В следующей таблице показаны все возможные значения для <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> свойство.  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |<xref:System.Windows.VerticalAlignment.Top>|Дочерние элементы выравниваются по верхнему краю выделенного пространства макета родительского элемента.|  
 |<xref:System.Windows.VerticalAlignment.Center>|Дочерние элементы выравниваются по центру выделенного пространства макета родительского элемента.|  
 |<xref:System.Windows.VerticalAlignment.Bottom>|Дочерние элементы выравниваются по нижнему краю выделенного пространства макета родительского элемента.|  
-|<xref:System.Windows.VerticalAlignment.Stretch> (По умолчанию)|Дочерние элементы растягиваются для заполнения выделенного пространства макета родительского элемента. Явные <xref:System.Windows.FrameworkElement.Width%2A> и <xref:System.Windows.FrameworkElement.Height%2A> значения имеют приоритет.|  
+|<xref:System.Windows.VerticalAlignment.Stretch> (Значение по умолчанию)|Дочерние элементы растягиваются для заполнения выделенного пространства макета родительского элемента. Явные <xref:System.Windows.FrameworkElement.Width%2A> и <xref:System.Windows.FrameworkElement.Height%2A> значения имеют приоритет.|  
   
  В следующем примере показано, как применить <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> свойства <xref:System.Windows.Controls.Button> элементов. Показаны все значения атрибутов, чтобы проиллюстрировать различные режимы отрисовки. Для данного примера <xref:System.Windows.Controls.Grid> с видимым линиями сетки используется в качестве родительского для лучшей иллюстрации поведения каждого значения свойства.  
   
@@ -142,6 +141,7 @@ ms.locfileid: "57355415"
  Доступны дополнительные ресурсы, в которых макет [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] рассматривается более подробно. [Общие сведения о панелях](../controls/panels-overview.md) разделе содержатся более подробные сведения о различных <xref:System.Windows.Controls.Panel> элементов. Раздел [Пошаговое руководство: Создание первого классического приложения WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md) рассмотрены дополнительные методики, использующие элементы макета для размещения компонентов и привязки их действий к источникам данных.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.FrameworkElement>
 - <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>
 - <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>

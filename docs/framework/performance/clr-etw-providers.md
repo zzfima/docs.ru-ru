@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0911132a705f3de89d771324cbb63e8db31bdfdb
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
-ms.translationtype: MT
+ms.openlocfilehash: 2d7757b50eedb25247b11fced3d4f9567691c380
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58890518"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188608"
 ---
 # <a name="clr-etw-providers"></a>Поставщики ETW среды CLR
 В общеязыковой среде выполнения (CLR) представлены два поставщика: поставщик среды выполнения и поставщик очистки.  
@@ -92,4 +92,5 @@ ms.locfileid: "58890518"
  Если пользователь запрашивает остановку профилирования, средство может выполнять шаги 2 и 3 (запуск сеанса очистки и завершение профилирования) вместо немедленного отключения профилирования. Кроме того, это средство может выполнить шаг 4.  
   
 ## <a name="see-also"></a>См. также
+
 - [События в среде CLR (трассировка событий Windows)](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

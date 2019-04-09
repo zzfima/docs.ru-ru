@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data binding [WPF], PriorityBinding class
 ms.assetid: d63b65ab-b3e9-4322-9aa8-1450f8d89532
-ms.openlocfilehash: cf21041a7f3d5b75803378cf05768ee6f1008fdd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: aaf2caff1e2684e08c7eb65125536f1070203d70
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354600"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207569"
 ---
 # <a name="how-to-implement-prioritybinding"></a>Практическое руководство. Реализация PriorityBinding
 <xref:System.Windows.Data.PriorityBinding> в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] работает путем указания списка привязок. Список привязок упорядочен от наиболее важных к наименее важным. Если привязка наивысшего приоритета возвращает значение успешно при его обработке то нет необходимости обрабатывать другие привязки в списке. Возможно, что привязка наивысшего приоритета занимает много времени для оценки, будет использоваться самым высоким приоритетом, которое возвращает значение успешно, пока не будет успешно возвращает значение привязки более высокий приоритет.  
@@ -45,6 +45,7 @@ ms.locfileid: "57354600"
  См. в разделе <xref:System.Windows.Data.PriorityBinding> сведения о того, что считается успешной возвращаемое значение из привязки.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Data.Binding.IsAsync%2A?displayProperty=nameWithType>
 - [Общие сведения о привязке данных](data-binding-overview.md)
-- [Разделы практического руководства](data-binding-how-to-topics.md)
+- [Практические руководства](data-binding-how-to-topics.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - keyboards [Windows Forms], keyboard input
 - Windows Forms, keyboard input
 ms.assetid: 9a29433c-a180-49bb-b74c-d187786584c8
-ms.openlocfilehash: a7965c1dcf36e956abd7930b8ff0154b13173b76
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 4335798395a3b73dbcb2546a6fadac3d8efedb64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718029"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204748"
 ---
 # <a name="how-keyboard-input-works"></a>Принцип работы ввод с клавиатуры
 Ввод с клавиатуры обрабатывается в Windows Forms посредством вызова событий клавиатуры в ответ на сообщения Windows. В большинстве приложений Windows Forms для обработки ввода с клавиатуры используются только события клавиатуры. Тем не менее, чтобы реализовать более сложные сценарии ввода с клавиатуры, например перехват клавиш до того, как они достигнут элемента управления, необходимо понимать, как работают сообщения клавиатуры. В этом разделе описываются типы данных ключа, распознаваемых приложением Windows Forms, и приводятся общие сведения о маршрутизацией сообщений клавиатуры. Сведения о событиях клавиатуры см. в разделе [Использование событий клавиатуры](using-keyboard-events.md).  
@@ -63,12 +63,13 @@ ms.locfileid: "57718029"
 |Задача|Метод|  
 |----------|------------|  
 |Перехват клавиши навигации и создание <xref:System.Windows.Forms.Control.KeyDown> событий. Например, в текстовом поле необходимо обработать клавиши TAB и Return.|Переопределите метод <xref:System.Windows.Forms.Control.IsInputKey%2A>. **Примечание.**  Кроме того, можно обработать <xref:System.Windows.Forms.Control.PreviewKeyDown> событий и набор <xref:System.Windows.Forms.PreviewKeyDownEventArgs.IsInputKey%2A> из <xref:System.Windows.Forms.PreviewKeyDownEventArgs> для `true` для ключ или ключи, которые вы хотите.|  
-|Выполнение специальной обработки ввода или навигации в элементе управления. Например, необходимо использовать клавиши со стрелками в элементе управления "Список", чтобы изменить выбранный элемент.|Переопределите метод <xref:System.Windows.Forms.Control.ProcessDialogKey%2A>.|  
+|Выполнение специальной обработки ввода или навигации в элементе управления. Например, необходимо использовать клавиши со стрелками в элементе управления "Список", чтобы изменить выбранный элемент.|Переопределение <xref:System.Windows.Forms.Control.ProcessDialogKey%2A>|  
 |Перехват клавиши навигации и создание <xref:System.Windows.Forms.Control.KeyPress> событий. Например, в элементе управления регулятора требуется выполнение нескольких нажатий клавиши со стрелкой для ускорения перехода между элементами.|Переопределите метод <xref:System.Windows.Forms.Control.IsInputChar%2A>.|  
-|Выполнение специальной обработки ввода или навигации во время <xref:System.Windows.Forms.Control.KeyPress> событий. Например, в элементе управления "Список" при удержании нажатой клавиши "r" следует переходить между элементами, которые начинаются с буквы "r".|Переопределите метод <xref:System.Windows.Forms.Control.ProcessDialogChar%2A>.|  
+|Выполнение специальной обработки ввода или навигации во время <xref:System.Windows.Forms.Control.KeyPress> событий. Например, в элементе управления "Список" при удержании нажатой клавиши "r" следует переходить между элементами, которые начинаются с буквы "r".|Переопределение <xref:System.Windows.Forms.Control.ProcessDialogChar%2A>|  
 |Выполнение обработки пользовательских назначенных клавиш. Например, необходимо обрабатывать назначенные клавиши на кнопках, нарисованных владельцем, содержащихся на панели инструментов.|Переопределите метод <xref:System.Windows.Forms.Control.ProcessMnemonic%2A>.|  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.Keys>
 - <xref:System.Windows.Forms.Control.WndProc%2A>
 - <xref:System.Windows.Forms.Control.PreProcessMessage%2A>

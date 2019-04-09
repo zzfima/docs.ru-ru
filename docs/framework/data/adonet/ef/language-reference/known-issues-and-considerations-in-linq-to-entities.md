@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
-ms.openlocfilehash: ca67a01d8f1bc76773a7794169e93d026fe222d7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3945d4fc92bea2c4212da0507618203603ae8aba
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717970"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191332"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>LINQ to Entities: рекомендации и известные проблемы
 Этот раздел содержит сведения об известных проблемах, относящихся к запросам [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)].  
@@ -19,15 +19,15 @@ ms.locfileid: "54717970"
   
 -   [Потеря данных об упорядочении](#OrderingInfoLost)  
   
--   [Целые числа без знака не поддерживается](#UnsignedIntsUnsupported)  
+-   [Целые числа без знака не поддерживаются](#UnsignedIntsUnsupported)  
   
--   [Ошибки преобразования типов](#TypeConversionErrors)  
+-   [Ошибки преобразования типа](#TypeConversionErrors)  
   
 -   [Обращение к нескалярным переменным не поддерживается](#RefNonScalarClosures)  
   
--   [Вложенные запросы может произойти сбой с SQL Server 2000](#NestedQueriesSQL2000)  
+-   [Вложенные запросы могут не работать с SQL Server 2000](#NestedQueriesSQL2000)  
   
--   [Проецирование анонимного типа](#ProjectToAnonymousType)  
+-   [Проектирование анонимного типа](#ProjectToAnonymousType)  
   
 <a name="LINQQueriesThatAreNotCached"></a>   
 ## <a name="linq-queries-that-cannot-be-cached"></a>Запросы LINQ, которые нельзя кэшировать  
@@ -80,4 +80,5 @@ ms.locfileid: "54717970"
  [!code-vb[DP L2E Conceptual Examples#ProjToAnonType2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#projtoanontype2)]  
   
 ## <a name="see-also"></a>См. также
+
 - [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)

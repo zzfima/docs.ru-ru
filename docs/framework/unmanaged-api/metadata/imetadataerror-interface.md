@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fe2f683ae46d1ee6205f97536976a358e86fc53d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 37f1f6055ec8fa68fe804780d2893d20c978e6bd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720383"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188634"
 ---
 # <a name="imetadataerror-interface"></a>Интерфейс IMetaDataError
 Предоставляет механизм обратного вызова для сообщений об ошибках во время слияния метаданных.  
@@ -31,7 +31,7 @@ ms.locfileid: "54720383"
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание:|  
+|Метод|Описание|  
 |------------|-----------------|  
 |[Метод OnError](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-onerror-method.md)|Предоставляет уведомление об ошибках, возникающих во время слияния метаданных.|  
   
@@ -45,4 +45,5 @@ ms.locfileid: "54720383"
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейсы метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

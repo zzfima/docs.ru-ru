@@ -2,12 +2,12 @@
 title: Поддержка транзакций
 ms.date: 03/30/2017
 ms.assetid: 8cceb26e-8d36-4365-8967-58e2e89e0187
-ms.openlocfilehash: f53a6081102991c73543b4cd76365f7e2c0faf89
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 519ddab069cf3c4ca1ccfa7b203769b8102db844
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517205"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196168"
 ---
 # <a name="transaction-support"></a>Поддержка транзакций
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] поддерживает три различные модели транзакций. Далее представлен список этих моделей в порядке выполненных проверок.  
@@ -24,5 +24,6 @@ ms.locfileid: "54517205"
  При вызове <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] проверяет, является ли вызов в рамках <xref:System.Transactions.Transaction> или, если `Transaction` свойство (`IDbTransaction`) имеет значение запускаемая пользователем локальная транзакция. Если транзакции не [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] запускает локальную транзакцию (`IDbTransaction`) и использовать ее для выполнения сгенерированных команд SQL. После успешного завершения всех команд SQL [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] фиксирует локальную транзакцию и возвращается.  
   
 ## <a name="see-also"></a>См. также
+
 - [Основные сведения](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [Практическое руководство. Объединить в пакеты отправку данных с помощью транзакций](../../../../../../docs/framework/data/adonet/sql/linq/how-to-bracket-data-submissions-by-using-transactions.md)
+- [Практическое руководство. Как объединить в пакеты отправку данных с помощью транзакций](../../../../../../docs/framework/data/adonet/sql/linq/how-to-bracket-data-submissions-by-using-transactions.md)

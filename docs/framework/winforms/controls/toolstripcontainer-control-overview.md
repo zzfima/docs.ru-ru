@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], built-in rafting
 - ToolStripContainer control [Windows Forms], about ToolStripContainer control
 ms.assetid: c7d63bff-64e2-4a63-bd89-d31bc96dacb8
-ms.openlocfilehash: 1f8d8bf8edd7968ed2d2a5c4ddd654dccf318f71
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c279316c2a372a1498707b27ec8658813306304b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654052"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191267"
 ---
 # <a name="toolstripcontainer-control-overview"></a>Общие сведения об элементе управления ToolStripContainer
 Объект <xref:System.Windows.Forms.ToolStripContainer> содержит панели на левой, правой, верхней и нижней сторонах для размещения и нависания <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, и <xref:System.Windows.Forms.StatusStrip> элементов управления. Несколько элементов управления <xref:System.Windows.Forms.ToolStrip> располагаются по вертикали, если поместить их в левый или правый контейнер <xref:System.Windows.Forms.ToolStripContainer>. Они располагаются по горизонтали, если поместить их в верхний или нижний контейнер <xref:System.Windows.Forms.ToolStripContainer>. Для размещения традиционных элементов управления в форме может использоваться центральная панель <xref:System.Windows.Forms.ToolStripContentPanel> из контейнера <xref:System.Windows.Forms.ToolStripContainer>.  
@@ -21,7 +21,7 @@ ms.locfileid: "54654052"
   
 ### <a name="important-toolstripcontainer-members"></a>ToolStripContainer важные члены  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStripContainer.BottomToolStripPanel%2A>|Получает нижнюю панель <xref:System.Windows.Forms.ToolStripContainer>.|  
 |<xref:System.Windows.Forms.ToolStripContainer.BottomToolStripPanelVisible%2A>|Возвращает или задает значение, указывающее, является ли нижняя панель <xref:System.Windows.Forms.ToolStripContainer> является видимым.|  
@@ -33,5 +33,6 @@ ms.locfileid: "54654052"
 |<xref:System.Windows.Forms.ToolStripContainer.TopToolStripPanelVisible%2A>|Возвращает или задает значение, указывающее, является ли верхняя панель <xref:System.Windows.Forms.ToolStripContainer> является видимым.|  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.ToolStripContainer>
 - <xref:System.Windows.Forms.ToolStripContentPanel>

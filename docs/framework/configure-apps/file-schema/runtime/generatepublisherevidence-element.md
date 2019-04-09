@@ -1,5 +1,5 @@
 ---
-title: Элемент <generatePublisherEvidence>
+title: <generatePublisherEvidence> Элемент
 ms.date: 03/30/2017
 helpviewer_keywords:
 - generatePublisherEvidence element
@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 7d208f50-e8d5-4a42-bc1a-1cf3590706a8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f029131f5b10cc487021ee15e72552a26c0b04e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 09a12f062b2fe3ad6e5ac90f0d268bbbeab44876
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55275851"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198924"
 ---
 # <a name="generatepublisherevidence-element"></a>\<generatePublisherEvidence > элемент
 Указывает, является ли среда выполнения создает <xref:System.Security.Policy.Publisher> свидетельство для Управление доступом для кода (CAS).  
@@ -49,7 +49,7 @@ ms.locfileid: "55275851"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`runtime`|Содержит сведения о параметрах инициализации среды выполнения.|  
@@ -79,5 +79,6 @@ ms.locfileid: "55275851"
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - context menus [Windows Forms], for Windows Forms
 - shortcut menus [Windows Forms], ContextMenu component
 ms.assetid: 9b93ccbc-c0fe-44a2-968e-faac25971831
-ms.openlocfilehash: 240a85ed4c68a7f22bee8b884a416ff1dc68b66c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: cc5d5af4ef49abb7f5f89a99d5cc799eb96a5c61
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724535"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207959"
 ---
 # <a name="contextmenu-component-windows-forms"></a>Компонент ContextMenu (Windows Forms)
 > [!NOTE]
@@ -35,9 +35,10 @@ ms.locfileid: "57724535"
  Содержит справочные сведения о классе <xref:System.Windows.Forms.ContextMenu> и его членах.  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)  
+ [Элементы управления для использования в формах Windows Forms](controls-to-use-on-windows-forms.md)  
  Полный список элементов управления Windows Forms со ссылками на информацию об их применении.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ContextMenuStrip>

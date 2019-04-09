@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fbb4aa43757df86037d9c883e76ee38cef5eeb86
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 456dd8aedf11b1b27ee4926988fc615ebb7a76d8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57494432"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209935"
 ---
 # <a name="icorprofilerinfogetinprocinspectioninterface-method"></a>Метод ICorProfilerInfo::GetInprocInspectionInterface
 Возвращает объект, который можно запросить для интерфейса «ICorDebugProcess». Этот метод является устаревшим в .NET Framework версии 2.0.  
@@ -48,7 +48,8 @@ HRESULT GetInprocInspectionInterface(
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** 1,0  
+ **Версии платформы .NET framework:** 1.0  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

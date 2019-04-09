@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MaskedTextBox control [Windows Forms]
 ms.assetid: 779b3a12-cd74-4e58-b46e-04983bda5b2c
-ms.openlocfilehash: 53bb8d0e301f83c25ab292b1cb6324dd5f21f100
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 14591b313b0ba4fc2a0a30a45c693147f00050b5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702364"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207549"
 ---
 # <a name="how-to-set-the-input-mask"></a>Практическое руководство. Определение маски ввода
 Элементе скрытого текстового поля является элементом поля расширенный текст, который поддерживает декларативный синтаксис для принятия или отклонения введенных пользователем данных. Установив свойство маски, можно указать допустимых входных данных без написания настраиваемую логику проверки в приложении. Дополнительные сведения см. в разделе "Примечания" <xref:System.Windows.Forms.MaskedTextBox> класса.  
@@ -64,4 +64,5 @@ ms.locfileid: "57702364"
      Маска вводится в **маска** свойство в **свойства** окна.  
   
 ## <a name="see-also"></a>См. также
-- [Пошаговое руководство: Работа с элементом управления MaskedTextBox](walkthrough-working-with-the-maskedtextbox-control.md)
+
+- [Пошаговое руководство. Работа с элементом управления MaskedTextBox](walkthrough-working-with-the-maskedtextbox-control.md)

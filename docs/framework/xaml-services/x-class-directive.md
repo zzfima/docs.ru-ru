@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Class attribute
 - x:Class attribute [XAML Services]
 ms.assetid: bc4a3d8e-76e2-423e-a5d1-159a023e82ec
-ms.openlocfilehash: 8acc1ac099a71fbf624049b119ebe908f27cbb55
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 5f7b072e90e92070dd7fda2f0ad44814009268b9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58031231"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199457"
 ---
 # <a name="xclass-directive"></a>Директива x:Class
 Настраивает компиляции разметки XAML для объединения разделяемых классов разметки и кода. Разделяемый класс кода определяется в отдельном файле кода в [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)] языка, тогда как разделяемый класс разметки обычно создается путем создания кода во время компиляции XAML.  
@@ -61,6 +61,7 @@ ms.locfileid: "58031231"
  `x:Class` для Silverlight описывается отдельно. Дополнительные сведения см. в разделе [пространства имен XAML (x:) Возможности языка (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081).  
   
 ## <a name="see-also"></a>См. также
+
 - [Директива x:Subclass](x-subclass-directive.md)
 - [Код XAML и пользовательские классы для WPF](../wpf/advanced/xaml-and-custom-classes-for-wpf.md)
 - [Директива x:ClassModifier](x-classmodifier-directive.md)
