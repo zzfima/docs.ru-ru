@@ -9,12 +9,12 @@ helpviewer_keywords:
 - syntax [WPF], Storyboard
 - timelines [WPF]
 ms.assetid: 1a698c3c-30f1-4b30-ae56-57e8a39811bd
-ms.openlocfilehash: 53d31d00729485e99b76305c45eeeb3659a41b7e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6b178ac6b93205afebb1bea45f1b7e94826cb670
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362946"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124843"
 ---
 # <a name="storyboards-overview"></a>Общие сведения о Storyboard
 В этом разделе показано, как использовать <xref:System.Windows.Media.Animation.Storyboard> объектов для создания и применения анимаций. Он описывает, как интерактивно манипулировать <xref:System.Windows.Media.Animation.Storyboard> объектов и описывает синтаксис косвенного выбора свойств.  
@@ -64,7 +64,7 @@ ms.locfileid: "57362946"
 |<xref:System.Windows.Media.Animation.BeginStoryboard> и <xref:System.Windows.EventTrigger>|Да|Да|Да|Да|[Анимация свойства с помощью раскадровки](how-to-animate-a-property-by-using-a-storyboard.md)|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> и свойство <xref:System.Windows.Trigger>|Нет|Да|Да|Да|[Запуск анимации при изменении значения свойства](how-to-trigger-an-animation-when-a-property-value-changes.md)|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> и <xref:System.Windows.DataTrigger>|Нет|Да|Да|Да|[Практическое руководство. Запуск анимации при изменении данных](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa970679(v=vs.90))|  
-|Метод <xref:System.Windows.Media.Animation.Storyboard.Begin%2A>|Да|Нет|Нет|Нет|[Анимация свойства с помощью раскадровки](how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.Storyboard.Begin%2A> метод|Да|Нет|Нет|Нет|[Анимация свойства с помощью раскадровки](how-to-animate-a-property-by-using-a-storyboard.md)|  
   
  В следующем примере используется <xref:System.Windows.Media.Animation.Storyboard> для анимации <xref:System.Windows.FrameworkElement.Width%2A> из <xref:System.Windows.Shapes.Rectangle> элемент и <xref:System.Windows.Media.SolidColorBrush.Color%2A> из <xref:System.Windows.Media.SolidColorBrush> используется для рисования <xref:System.Windows.Shapes.Rectangle>.  
   
@@ -276,7 +276,7 @@ ms.locfileid: "57362946"
   
 -   Нельзя указать <xref:System.Windows.EventTrigger.SourceName%2A> для <xref:System.Windows.EventTrigger> или <xref:System.Windows.Trigger>.  
   
--   Нельзя использовать динамический ресурс ссылки или выражения привязки данных для задания <xref:System.Windows.Media.Animation.Storyboard> или значений свойств анимации. Это потому, что весь код внутри <xref:System.Windows.Style> должен быть поточно ориентированными, и система управления должна <xref:System.Windows.Freezable.Freeze%2A> <xref:System.Windows.Media.Animation.Storyboard> объектов, чтобы сделать их потокобезопасными. Объект <xref:System.Windows.Media.Animation.Storyboard> нельзя зафиксировать, если его или ее дочерние временные шкалы содержат динамические ресурсы ссылки или выражения привязки данных. Дополнительные сведения о фиксации и других <xref:System.Windows.Freezable> функции, см. в разделе [Freezable Общие сведения об объектах](../advanced/freezable-objects-overview.md).  
+-   Нельзя использовать динамический ресурс ссылки или выражения привязки данных для задания <xref:System.Windows.Media.Animation.Storyboard> или значений свойств анимации. Это потому, что весь код внутри <xref:System.Windows.Style> должен быть поточно ориентированными, и система управления должна <xref:System.Windows.Freezable.Freeze%2A><xref:System.Windows.Media.Animation.Storyboard> объектов, чтобы сделать их потокобезопасными. Объект <xref:System.Windows.Media.Animation.Storyboard> нельзя зафиксировать, если его или ее дочерние временные шкалы содержат динамические ресурсы ссылки или выражения привязки данных. Дополнительные сведения о фиксации и других <xref:System.Windows.Freezable> функции, см. в разделе [Freezable Общие сведения об объектах](../advanced/freezable-objects-overview.md).  
   
 -   В [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], нельзя объявлять обработчики событий для <xref:System.Windows.Media.Animation.Storyboard> или событий анимации.  
   
@@ -290,7 +290,7 @@ ms.locfileid: "57362946"
   
 -   <xref:System.Windows.EventTrigger.SourceName%2A> Для <xref:System.Windows.EventTrigger> или <xref:System.Windows.Trigger> могут ссылаться только на дочерние объекты <xref:System.Windows.Controls.ControlTemplate>.  
   
--   Нельзя использовать динамический ресурс ссылки или выражения привязки данных для задания <xref:System.Windows.Media.Animation.Storyboard> или значений свойств анимации. Это потому, что весь код внутри <xref:System.Windows.Controls.ControlTemplate> должен быть поточно ориентированными, и система управления должна <xref:System.Windows.Freezable.Freeze%2A> <xref:System.Windows.Media.Animation.Storyboard> объектов, чтобы сделать их потокобезопасными. Объект <xref:System.Windows.Media.Animation.Storyboard> нельзя зафиксировать, если его или ее дочерние временные шкалы содержат динамические ресурсы ссылки или выражения привязки данных. Дополнительные сведения о фиксации и других <xref:System.Windows.Freezable> функции, см. в разделе [Freezable Общие сведения об объектах](../advanced/freezable-objects-overview.md).  
+-   Нельзя использовать динамический ресурс ссылки или выражения привязки данных для задания <xref:System.Windows.Media.Animation.Storyboard> или значений свойств анимации. Это потому, что весь код внутри <xref:System.Windows.Controls.ControlTemplate> должен быть поточно ориентированными, и система управления должна <xref:System.Windows.Freezable.Freeze%2A><xref:System.Windows.Media.Animation.Storyboard> объектов, чтобы сделать их потокобезопасными. Объект <xref:System.Windows.Media.Animation.Storyboard> нельзя зафиксировать, если его или ее дочерние временные шкалы содержат динамические ресурсы ссылки или выражения привязки данных. Дополнительные сведения о фиксации и других <xref:System.Windows.Freezable> функции, см. в разделе [Freezable Общие сведения об объектах](../advanced/freezable-objects-overview.md).  
   
 -   В [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], нельзя объявлять обработчики событий для <xref:System.Windows.Media.Animation.Storyboard> или событий анимации.  
   
@@ -303,6 +303,7 @@ ms.locfileid: "57362946"
  Анимации с помощью свойства <xref:System.Windows.Trigger> объекты ведут себя в сложнее, чем <xref:System.Windows.EventTrigger> анимации или анимации к использованию <xref:System.Windows.Media.Animation.Storyboard> методы.  Они «переходной» с анимацией определены другими <xref:System.Windows.Trigger> объектов, но compose с <xref:System.Windows.EventTrigger> и анимациями, запускаемыми.  
   
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения об эффектах анимации](animation-overview.md)
 - [Общие сведения о методах анимации свойств](property-animation-techniques-overview.md)
 - [Общие сведения об объектах класса Freezable](../advanced/freezable-objects-overview.md)

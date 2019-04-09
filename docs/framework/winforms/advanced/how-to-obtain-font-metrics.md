@@ -8,12 +8,12 @@ helpviewer_keywords:
 - fonts [Windows Forms], obtaining metrics
 - font metrics [Windows Forms], obtaining
 ms.assetid: ff7c0616-67f7-4fa2-84ee-b8d642f2b09b
-ms.openlocfilehash: c1701b07958509e663f0ac651471e82a60120618
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 24cada3962339cae0608bbe01e070a0b8e256e73
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723378"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119058"
 ---
 # <a name="how-to-obtain-font-metrics"></a>Практическое руководство. Получение метрик шрифтов
 <xref:System.Drawing.FontFamily> Класс предоставляет следующие методы для получения различных метрик для определенного семейства/style сочетания:  
@@ -53,8 +53,9 @@ ms.locfileid: "57723378"
  [!code-vb[System.Drawing.FontsAndText#71](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#71)]  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Предыдущий пример кода предназначен для работы с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs> `e`, который является параметром <xref:System.Windows.Forms.PaintEventHandler>.  
+ Предыдущий пример предназначен для работы с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs> `e`, который является параметром <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>См. также
+
 - [Объекты Graphics и Drawing в Windows Forms](graphics-and-drawing-in-windows-forms.md)
-- [Работами со шрифтами и текстом](using-fonts-and-text.md)
+- [Шрифты и текст](using-fonts-and-text.md)

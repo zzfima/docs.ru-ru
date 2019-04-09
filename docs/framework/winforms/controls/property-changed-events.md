@@ -8,12 +8,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], property changes (using code)
 - properties [Windows Forms], changes
 ms.assetid: 268039ec-5aaa-4d76-b902-acccb036c850
-ms.openlocfilehash: 0ff5b3874d9de169f4a9f1040d601173af352c06
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: cabfd9e799288a332a0b2f96140f5f1cc328508b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703235"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105773"
 ---
 # <a name="property-changed-events"></a>События изменения свойств
 Если требуется, чтобы элемент управления для отправки уведомлений, когда свойство с именем *PropertyName* изменения, определите событие с именем *PropertyName* `Changed` и метод с именем `On` *PropertyName* `Changed` , генерирующий данное событие. Соглашение об именовании в Windows Forms — добавить слово *Changed* к имени свойства. Связанный тип делегата события для события изменения свойств является <xref:System.EventHandler>, и типом данных события является <xref:System.EventArgs>. Базовый класс <xref:System.Windows.Forms.Control> определяет много событий изменения свойств, таких как <xref:System.Windows.Forms.Control.BackColorChanged>, <xref:System.Windows.Forms.Control.BackgroundImageChanged>, <xref:System.Windows.Forms.Control.FontChanged>, <xref:System.Windows.Forms.Control.LocationChanged>и другие. Общие сведения о событиях, см. в разделе [события](../../../standard/events/index.md) и [события элементов управления Windows Forms](events-in-windows-forms-controls.md).  
@@ -26,6 +26,7 @@ ms.locfileid: "57703235"
  [!code-vb[System.Windows.Forms.FlashTrackBar#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#2)]  
   
 ## <a name="see-also"></a>См. также
+
 - [События](../../../standard/events/index.md)
 - [События элементов управления Windows Forms](events-in-windows-forms-controls.md)
 - [Свойства элементов управления Windows Forms](properties-in-windows-forms-controls.md)

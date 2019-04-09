@@ -2,20 +2,21 @@
 title: System.ServiceModel.PortSharing.WasWebHostAPIFailed
 ms.date: 03/30/2017
 ms.assetid: 31a3ed07-16dc-4aa2-8cd7-6974ef75432b
-ms.openlocfilehash: 7d975c2ae789110192e06e499f8ac6ec75cbb581
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9d8b4a92106378bd22beac329f6e52814544c3ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552779"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116142"
 ---
 # <a name="systemservicemodelportsharingwaswebhostapifailed"></a>System.ServiceModel.PortSharing.WasWebHostAPIFailed
 System.ServiceModel.PortSharing.WasWebHostAPIFailed  
   
-## <a name="description"></a>Описание:  
+## <a name="description"></a>Описание  
  Не удалось осуществить вызов API указанной службы активации Windows (WAS), см. указанный код ошибки.  
   
 ## <a name="see-also"></a>См. также
+
 - [Трассировка](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [Использование трассировки для устранения неполадок приложения](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
 - [Администрирование и диагностика](../../../../../docs/framework/wcf/diagnostics/index.md)

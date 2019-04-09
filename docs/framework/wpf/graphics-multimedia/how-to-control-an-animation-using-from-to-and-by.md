@@ -7,12 +7,12 @@ helpviewer_keywords:
 - animation [WPF], basic animation
 - From/to/by animation
 ms.assetid: 59afba57-6fc1-44c8-987e-8a5f4142adad
-ms.openlocfilehash: 35973a2a3dea233468f91c6bd24851be088b84e0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 56522ee5bd4391e43c261558b2fa622234c9ea3b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373846"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073276"
 ---
 # <a name="how-to-control-an-animation-using-from-to-and-by"></a>Практическое руководство. Управление анимацией с помощью From, To и By
 «From/To/By» или «простая анимация» создает переход между двумя целевыми значениями (см. в разделе [Общие сведения об анимации](animation-overview.md) введение в различные виды анимации). Чтобы задать целевые значения для простой анимации, используйте его <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>, <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>, и <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> свойства.  В следующей таблице перечислены как <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>, <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>, и <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> свойства могут быть использованы вместе или отдельно, чтобы определить целевой объект анимации значения.  
@@ -38,6 +38,7 @@ ms.locfileid: "57373846"
  [!code-xaml[BasicAnimations_snippet#AnimationTargetValuesWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/BasicAnimations_snippet/CS/AnimationTargetValuesExample.xaml#animationtargetvalueswholepage)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения об эффектах анимации](animation-overview.md)
 - [Общие сведения об анимации по ключевым кадрам](key-frame-animations-overview.md)
-- [Пример целевых значений анимации From, To и By](https://go.microsoft.com/fwlink/?LinkID=159988)
+- [FROM, To и пример целевых значений анимации](https://go.microsoft.com/fwlink/?LinkID=159988)

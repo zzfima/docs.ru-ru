@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [XAML Services], System.Xaml and WPF
 - System.Xaml [XAML Services], types migrated from WPF
 ms.assetid: d79dabf5-a2ec-4e8d-a37a-67c4ba8a2b91
-ms.openlocfilehash: 4fc9d1b2666db05fc4fb902cf8db03d9d876001b
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: dcfad1c2b2f95783e2b348a3a1111501f958143f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58031469"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116484"
 ---
 # <a name="types-migrated-from-wpf-to-systemxaml"></a>Типы, перенесенные из WPF в System.Xaml
 В [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] и [!INCLUDE[net_v30_long](../../../includes/net-v30-long-md.md)], оба [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] и Windows Workflow Foundation содержат реализацию языка XAML. Многие из открытых типов, которые обеспечивают расширение для реализации XAML в WPF, существовали в сборках WindowsBase PresentationCore и PresentationFramework. Аналогично открытые типы, которые обеспечивают расширение для Windows Workflow Foundation XAML существовал в сборке System.Workflow.ComponentModel. В [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]некоторые типы, связанные с XAML, перенесены в сборку System.Xaml. Общая реализация служб языка XAML в .NET Framework поддерживает многие сценарии расширения XAML, которые первоначально определялись реализацией XAML конкретной платформы, а теперь в целом поддерживаются в [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] . В этом разделе перечислены перенесенные типы и обсуждаются вопросы, относящиеся к миграции.  
@@ -41,7 +41,7 @@ ms.locfileid: "58031469"
   
 <a name="markupextension_supporting_service_classes"></a>   
 ## <a name="markupextension-supporting-service-classes"></a>Вспомогательные классы службы MarkupExtension  
- [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] и [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] для WPF предоставляли ряд служб, доступных для реализаций <xref:System.Windows.Markup.MarkupExtension> и <xref:System.ComponentModel.TypeConverter> , для поддержки использования типа или свойства в XAML. Вот эти службы.  
+ [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] и [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] для WPF предоставляли ряд служб, которые были доступны для <xref:System.Windows.Markup.MarkupExtension> разработчиков и <xref:System.ComponentModel.TypeConverter> реализации для поддержки использования типа или свойства в XAML. Вот эти службы.  
   
 -   <xref:System.Windows.Markup.IProvideValueTarget>  
   
@@ -50,7 +50,7 @@ ms.locfileid: "58031469"
 -   <xref:System.Windows.Markup.IXamlTypeResolver>  
   
 > [!NOTE]
->  Другая служба из [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] , связанная с расширениями разметки, — это интерфейс <xref:System.Windows.Markup.IReceiveMarkupExtension> . Расширение<xref:System.Windows.Markup.IReceiveMarkupExtension> не было перенесено, и теперь оно помечено как `[Obsolete]` для [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. Сценарии, в которых ранее использовался <xref:System.Windows.Markup.IReceiveMarkupExtension> , следует применять обратные вызовы <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute> с атрибутами. <xref:System.Windows.Markup.AcceptedMarkupExtensionExpressionTypeAttribute> также помечен как `[Obsolete]`.  
+>  Другая служба из [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] , связанная с расширениями разметки, — это интерфейс <xref:System.Windows.Markup.IReceiveMarkupExtension> . <xref:System.Windows.Markup.IReceiveMarkupExtension> не был перенесен и помечен `[Obsolete]` для [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. Сценарии, в которых ранее использовался <xref:System.Windows.Markup.IReceiveMarkupExtension> , следует применять обратные вызовы <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute> с атрибутами. <xref:System.Windows.Markup.AcceptedMarkupExtensionExpressionTypeAttribute> также помечен как `[Obsolete]`.  
   
 <a name="xaml_language_features"></a>   
 ## <a name="xaml-language-features"></a>Возможности языка XAML  
@@ -69,7 +69,7 @@ ms.locfileid: "58031469"
   
 <a name="valueserializer_and_supporting_classes"></a>   
 ## <a name="valueserializer-and-supporting-classes"></a>ValueSerializer и классы поддержки  
- Класс <xref:System.Windows.Markup.ValueSerializer> поддерживает преобразование типов в строку, в частности для сериализации XAML, для которой может потребоваться несколько режимов или узлов в выходных данных. В [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] и [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]класс <xref:System.Windows.Markup.ValueSerializer> для WPF находился в сборке WindowsBase. В [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]класс <xref:System.Windows.Markup.ValueSerializer> находится в System.Xaml и предназначен для любого сценария расширения XAML, а не только для сценариев на основе WPF. <xref:System.Windows.Markup.IValueSerializerContext> (поддерживающая служба) и <xref:System.Windows.Markup.DateTimeValueSerializer> (конкретный подкласс) также перенесены в сборку System.Xaml.  
+ Класс <xref:System.Windows.Markup.ValueSerializer> поддерживает преобразование типов в строку, в частности для сериализации XAML, для которой может потребоваться несколько режимов или узлов в выходных данных. В [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] и [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]класс <xref:System.Windows.Markup.ValueSerializer> для WPF находился в сборке WindowsBase. В [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]класс <xref:System.Windows.Markup.ValueSerializer> находится в System.Xaml и предназначен для любого сценария расширения XAML, а не только для сценариев на основе WPF. <xref:System.Windows.Markup.IValueSerializerContext> (поддерживающая служба) и <xref:System.Windows.Markup.DateTimeValueSerializer> (конкретный подкласс) также перенесены в System.Xaml.  
   
 <a name="xamlrelated_attributes"></a>   
 ## <a name="xaml-related-attributes"></a>Атрибуты, связанные с XAML  
@@ -109,7 +109,7 @@ ms.locfileid: "58031469"
 ## <a name="miscellaneous-classes"></a>Различные классы  
  Интерфейс <xref:System.Windows.Markup.IComponentConnector> существовал в WindowsBase в [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] и [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)], но существует и в System.Xaml в [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. <xref:System.Windows.Markup.IComponentConnector> в основном предназначен для поддержки инструментария и компиляторов разметки XAML.  
   
- Интерфейс <xref:System.Windows.Markup.INameScope> существовал в WindowsBase в [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] и [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)], но существует и в System.Xaml в [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. <xref:System.Windows.Markup.INameScope> определяет базовые операции для пространства имен XAML.  
+ Интерфейс <xref:System.Windows.Markup.INameScope> существовал в WindowsBase в [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] и [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)], но существует и в System.Xaml в [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. <xref:System.Windows.Markup.INameScope> Определяет базовые операции для пространства имен XAML.  
   
 <a name="xamlrelated_classes_with_shared_names_that_exist_in_wpf_and_systemxaml"></a>   
 ## <a name="xaml-related-classes-with-shared-names-that-exist-in-wpf-and-systemxaml"></a>Классы с общими именами, связанные с XAML, которые существуют в WPF и System.Xaml  
@@ -126,4 +126,5 @@ ms.locfileid: "58031469"
  Если вы указываете ссылки на сборки WPF и System.Xaml и используете операторы `include` для пространств имен <xref:System.Windows.Markup> и <xref:System.Xaml> , вам может понадобиться полностью определить вызовы этих API, чтобы однозначно разрешить эти типы.  
   
 ## <a name="see-also"></a>См. также
+
 - [Службы XAML](index.md)

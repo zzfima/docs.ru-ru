@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b5e86461973d24e9bd61df9ce27da5a614a49aa3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 7be1bd2934fbb2e09a39c3042fa9ae314e89d629
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471021"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083768"
 ---
 # <a name="iceegenallocatemethodbuffer-method"></a>Метод ICeeGen::AllocateMethodBuffer
 Создает буфер заданного размера для метода и возвращает относительный виртуальный адрес метода.  
@@ -59,4 +59,5 @@ HRESULT AllocateMethodBuffer (
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

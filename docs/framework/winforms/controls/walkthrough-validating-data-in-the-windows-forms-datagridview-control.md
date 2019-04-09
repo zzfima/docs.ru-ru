@@ -1,5 +1,5 @@
 ---
-title: Пошаговое руководство. Проверка данных в элементе управления DataGridView Windows Forms
+title: Пошаговое руководство. Проверка данных в элементе управления DataGridView в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - data validation [Windows Forms], Windows Forms
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: a4f1d015-2969-430c-8ea2-b612d179c290
-ms.openlocfilehash: 6bb46a9bc54652d781d3421051b7d6e09fc91772
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: a9572bf469f539fdf52f414b2e0b6aa10f7ea288
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710034"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127352"
 ---
-# <a name="walkthrough-validating-data-in-the-windows-forms-datagridview-control"></a>Пошаговое руководство. Проверка данных в элементе управления DataGridView Windows Forms
+# <a name="walkthrough-validating-data-in-the-windows-forms-datagridview-control"></a>Пошаговое руководство. Проверка данных в элементе управления DataGridView в Windows Forms
 При отображении функциональных возможностей ввода данных для пользователей, часто нужно проверить данные, введенные в форму. <xref:System.Windows.Forms.DataGridView> Класс предоставляет удобный способ для выполнения проверки, прежде чем данные передаются в хранилище данных. Можно проверять данные, обрабатывая <xref:System.Windows.Forms.DataGridView.CellValidating> событие, которое вызывается <xref:System.Windows.Forms.DataGridView> при изменении текущей ячейки.  
   
  В этом пошаговом руководстве, вы получите строки из `Customers` таблицы в базе данных Northwind и отобразить их в <xref:System.Windows.Forms.DataGridView> элемента управления. При редактировании ячейки в `CompanyName` столбца и пытается оставьте ячейку, <xref:System.Windows.Forms.DataGridView.CellValidating> обработчик событий проверяет новая строка названия компании, чтобы убедиться, что это не пуста; Если новое значение является пустой строкой, <xref:System.Windows.Forms.DataGridView> предотвратит курсору из ячейки до введения непустой строкой.  
@@ -89,9 +89,10 @@ ms.locfileid: "57710034"
 -   Настройка внешнего вида ячеек. Дополнительные сведения см. в разделе [Как Настройка внешнего вида ячеек элемента управления DataGridView в Windows Forms](customize-the-appearance-of-cells-in-the-datagrid.md) и [как: Настройка шрифтов и цветов в элементе управления DataGridView Windows Forms](how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
 - [Ввод данных с помощью элемента управления DataGridView в Windows Forms](data-entry-in-the-windows-forms-datagridview-control.md)
-- [Практическое руководство. Проверка данных в элементе управления DataGridView Windows Forms](how-to-validate-data-in-the-windows-forms-datagridview-control.md)
-- [Пошаговое руководство: Обработка ошибок, возникающих во время ввода данных в элементе управления DataGridView Windows Forms](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)
+- [Практическое руководство. Проверка данных в элементе управления DataGridView в Windows Forms](how-to-validate-data-in-the-windows-forms-datagridview-control.md)
+- [Пошаговое руководство. Обработка ошибок, связанных с вводом данных с помощью элемента управления DataGridView, в Windows Forms](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)
 - [Защита сведений о подключении](../../data/adonet/protecting-connection-information.md)

@@ -2,12 +2,12 @@
 title: 'Конечная точка: Количество сбоев вызовов в секунду'
 ms.date: 03/30/2017
 ms.assetid: 9840fc0a-0e4d-4638-96fd-40e3ab9e4667
-ms.openlocfilehash: 3b5c881c4ce7772e197bfc1a5603636b0975143c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f425d95868a9ba5bc3c2f2291db2bc414b1918e2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517660"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122230"
 ---
 # <a name="endpoint-calls-faulted-per-second"></a>Конечная точка: Количество сбоев вызовов в секунду
 Имя счетчика: Количество сбоев вызовов в секунду.  
@@ -22,4 +22,5 @@ ms.locfileid: "54517660"
  В приложениях Windows Communication Foundation (WCF) методы службы передают сведения об ошибке обработки с помощью сообщения об ошибках SOAP. Сообщения об ошибках SOAP - это типы сообщений, которые включаются в метаданные, связанные с операцией службы, и таким образом создают контракт ошибок, который клиенты могут использовать для повышения надежности и интерактивности своей работы. Поскольку сообщения об ошибках SOAP передаются клиентам в формате XML, они поддерживают возможность взаимодействия.  
   
 ## <a name="see-also"></a>См. также
-- [Указание и обработка сбоев в контрактах и службах](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+
+- [Задание и обработка сбоев в контрактах и службах](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

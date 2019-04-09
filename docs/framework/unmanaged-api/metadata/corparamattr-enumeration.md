@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7d07c6de47038d5c52d76ad8ca8e0a5684551d59
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 97f62b082db11a5f0bb930e33cb47acef76e7a04
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491471"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092062"
 ---
 # <a name="corparamattr-enumeration"></a>Перечисление CorParamAttr
 Содержит значения, описывающие метаданные параметра метода.  
@@ -46,7 +46,7 @@ typedef enum CorParamAttr {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |`pdIn`|Указывает, что этот параметр передается в вызов метода.|  
 |`pdOut`|Указывает, что этот параметр передается методом возвращаемого значения.|  
@@ -64,4 +64,5 @@ typedef enum CorParamAttr {
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

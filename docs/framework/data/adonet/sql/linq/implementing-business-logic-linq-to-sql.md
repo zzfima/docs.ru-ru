@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c4577590-7b12-42e1-84a6-95aa2562727e
-ms.openlocfilehash: 9ea8960b74cd44734eb68a07c6959727bf1ac797
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 3dcc6f763acfff076bb03076a17e3a8f8916267c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093974"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097256"
 ---
 # <a name="implementing-business-logic-linq-to-sql"></a>Реализация бизнес-логики (LINQ to SQL)
 Термин "бизнес-логика" в данном разделе относится к любым пользовательским правилам или проверкам, которые применяются к данным перед их вставкой, обновлением или удалением в базе данных. Бизнес-логику также иногда называют терминами "бизнес-правила" или "логика домена". В многоуровневых приложениях бизнес-логика реализуется в виде логического уровня, и ее можно изменять независимо от уровня представления данных или уровня доступа к данным. Бизнес-логика может вызываться уровнем доступа к данным перед обновлением, вставкой или удалением данных в базе данных или после выполнения этих операций.  
@@ -179,11 +179,12 @@ partial class Customer
   
  [Практическое руководство. Добавление проверки в классы сущностей](/visualstudio/data-tools/how-to-add-validation-to-entity-classes)  
   
- [Пошаговое руководство: Настройка операций вставки, обновления и удаления в классах сущностей](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes)  
+ [Пошаговое руководство. Настройка операций вставки, обновления и удаления в классах сущностей](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes)  
   
- [Пошаговое руководство: Добавление проверки в классы сущностей](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb629301(v=vs.120))  
+ [Пошаговое руководство. Добавление проверки в классы сущностей](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb629301(v=vs.120))  
   
 ## <a name="see-also"></a>См. также
+
 - [Разделяемые классы и методы](../../../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)
 - [Разделяемые методы](~/docs/visual-basic/programming-guide/language-features/procedures/partial-methods.md)
 - [Средства LINQ to SQL в Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)

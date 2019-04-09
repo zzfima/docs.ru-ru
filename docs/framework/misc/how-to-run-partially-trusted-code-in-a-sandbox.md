@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Выполнение частично доверенного кода в изолированной среде
+title: Практическое руководство. Выполнение частично доверенного кода в изолированной среде
 ms.date: 03/30/2017
 helpviewer_keywords:
 - partially trusted code
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b33750e5792dcc83e261bc9bb8d1c5dbe35808aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 74a897c1fca51c92e8290f6362d947730349344c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627230"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104862"
 ---
-# <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Как выполнить Выполнение частично доверенного кода в изолированной среде
+# <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Практическое руководство. Выполнение частично доверенного кода в изолированной среде
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  Изолирование в песочнице — это способ запуска кода в ограниченной среде безопасности, ограничивающей разрешения доступа, предоставленные коду. Например, если имеется управляемая библиотека, полученная из источника с неполным доверием, не следует запускать ее как полностью доверенную. Вместо этого следует поместить код в "песочницу", которая ограничивает разрешения кода, которые необходимы ему по вашему мнению (например, <xref:System.Security.Permissions.SecurityPermissionFlag.Execution>).  
@@ -40,7 +40,7 @@ AppDomain.CreateDomain( string friendlyName,
   
  Параметры перегрузки метода <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29> задают имя домена <xref:System.AppDomain>, свидетельство для домена <xref:System.AppDomain>, объект <xref:System.AppDomainSetup>, определяющий базовую папку приложения для песочницы, используемый набор разрешений и строгие имена для полностью доверенных сборок.  
   
- По соображениям безопасности базовая папка приложения, указанная в параметре `info`, не должна совпадать с базовой папкой основного приложения.  
+ По соображениям безопасности базовая папка приложения, указанная в параметре `info`, не должна совпадать с базовой папкой ведущего приложения.  
   
  В качестве значения параметра `grantSet` можно задать либо явным образом созданный набор разрешений, либо стандартный набор разрешений, созданный методом <xref:System.Security.SecurityManager.GetStandardSandbox%2A>.  
   
@@ -63,7 +63,7 @@ AppDomain.CreateDomain( string friendlyName,
     PermissionSet internetPS = SecurityManager.GetStandardSandbox(ev);  
     ```  
   
-     Метод <xref:System.Security.SecurityManager.GetStandardSandbox%2A> возвращает набор разрешений `Internet` или `LocalIntranet` в зависимости от зоны в свидетельстве. Метод <xref:System.Security.SecurityManager.GetStandardSandbox%2A> также создает разрешения идентификации для некоторых объектов свидетельства, переданных по ссылке.  
+     Метод <xref:System.Security.SecurityManager.GetStandardSandbox%2A> возвращает набор разрешений `Internet` или `LocalIntranet` в зависимости от зоны в свидетельстве. <xref:System.Security.SecurityManager.GetStandardSandbox%2A> также создает разрешения идентификации для некоторых объектов свидетельства, переданных по ссылке.  
   
 2.  Подпишите сборку, которая содержит размещающий класс (в этом примере это класс `Sandboxer`), вызывающий ненадежный код. Добавьте объект <xref:System.Security.Policy.StrongName>, используемый для подписания сборки, в массив <xref:System.Security.Policy.StrongName> в параметре `fullTrustAssemblies` вызова метода <xref:System.AppDomain.CreateDomain%2A>. Чтобы разрешить выполнение кода с частичным доверием или предложить службы приложению с частичным доверием, нужно запустить размещающий класс как полностью доверенный. Ниже показано, как читается строгое имя <xref:System.Security.Policy.StrongName> сборки.  
   
@@ -73,7 +73,7 @@ AppDomain.CreateDomain( string friendlyName,
   
      Сборки .NET Framework, такие как mscorlib и System.dll, не обязательно добавлять в список полностью доверенных сборок, так как они загружаются как полностью доверенные из глобального кэша сборок.  
   
-3.  Инициализируйте параметр <xref:System.AppDomainSetup> метода <xref:System.AppDomain.CreateDomain%2A>. С помощью этого параметра можно управлять многими настройками нового домена <xref:System.AppDomain>. Свойство <xref:System.AppDomainSetup.ApplicationBase%2A> является важной настройкой и должно отличаться от свойства <xref:System.AppDomainSetup.ApplicationBase%2A> домена <xref:System.AppDomain> основного приложения. Если значения <xref:System.AppDomainSetup.ApplicationBase%2A> совпадают, частично доверенное приложение может заставить основное приложение загрузить (как полностью доверенное) определяемое им исключение, тем самым создав угрозу безопасности. Это еще одна причина, по которой не рекомендуется выполнять перехват исключения. Чтобы снизить риск злоумышленного использования, необходимо задать для основного и изолированного приложений разные базовые папки.  
+3.  Инициализируйте параметр <xref:System.AppDomainSetup> метода <xref:System.AppDomain.CreateDomain%2A>. С помощью этого параметра можно управлять многими настройками нового домена <xref:System.AppDomain>. Свойство <xref:System.AppDomainSetup.ApplicationBase%2A> является важной настройкой и должно отличаться от свойства <xref:System.AppDomainSetup.ApplicationBase%2A> домена <xref:System.AppDomain> основного приложения. Если значения <xref:System.AppDomainSetup.ApplicationBase%2A> совпадают, частично доверенное приложение может заставить ведущее приложение загрузить (как полностью доверенное) определяемое им исключение, тем самым создав угрозу безопасности. Это еще одна причина, по которой не рекомендуется выполнять перехват исключения. Чтобы снизить риск злоумышленного использования, необходимо задать для основного и изолированного приложений разные базовые папки.  
   
     ```csharp
     AppDomainSetup adSetup = new AppDomainSetup();  
@@ -90,7 +90,7 @@ AppDomain.CreateDomain( string friendlyName,
         params StrongName[] fullTrustAssemblies)  
     ```  
   
-     Дополнительная информация:  
+     Дополнительные сведения:  
   
     -   Это единственная перегрузка метода <xref:System.AppDomain.CreateDomain%2A>, принимающая в качестве параметра набор разрешений <xref:System.Security.PermissionSet>, то есть единственная перегрузка, позволяющая загружать приложение в режиме частичного доверия.  
   
@@ -274,4 +274,5 @@ class Sandboxer : MarshalByRefObject
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Правила написания безопасного кода](../../../docs/standard/security/secure-coding-guidelines.md)

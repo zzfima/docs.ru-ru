@@ -1,5 +1,5 @@
 ---
-title: Пошаговое руководство. Назначение содержимого WPF в формах Windows Forms во время разработки
+title: Пошаговое руководство. Назначение содержимого WPF для формы Windows Forms во время разработки
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF content [Windows Forms], assigning at design time
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - Windows Forms, content assignments
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: b3e9ef93-7e0f-4a2f-8f1e-3437609a1eb7
-ms.openlocfilehash: 364cfe521a1e141bdfcfb3cfc47170714d010a87
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 781eaaabb7306018366450c013c227fe5a1fef78
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707928"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108684"
 ---
-# <a name="walkthrough-assigning-wpf-content-on-windows-forms-at-design-time"></a>Пошаговое руководство. Назначение содержимого WPF в формах Windows Forms во время разработки
+# <a name="walkthrough-assigning-wpf-content-on-windows-forms-at-design-time"></a>Пошаговое руководство. Назначение содержимого WPF для формы Windows Forms во время разработки
 В этом пошаговом руководстве показано, как выбрать типы элементов управления Windows Presentation Foundation (WPF), которые будут отображаться в форме. Можно выбрать любые типы элементов управления WPF, включенные в проект.
 
- В этом пошаговом руководстве выполняются следующие задачи.
+ В руководстве выполняются следующие задачи:
 
 -   Создание проекта.
 
@@ -97,6 +97,7 @@ ms.locfileid: "57707928"
 9. В элементе управления `elementHost2` теперь будет размещен экземпляр типа `UserControl1`.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Миграция и взаимодействие систем](../../wpf/advanced/migration-and-interoperability.md)

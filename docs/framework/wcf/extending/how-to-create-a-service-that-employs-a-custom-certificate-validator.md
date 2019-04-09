@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Создание службы, использующей пользовательское средство проверки сертификатов
+title: Практическое руководство. Создание службы, использующей пользовательский проверяющий элемент управления для сертификатов
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: bb0190ff-0738-4e54-8d22-c97d343708bf
-ms.openlocfilehash: c4e9be8cb24745cd9651d4ee649a9a37520aa58d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 7c2eb820a7e087d99ebd2c463db6e10595f7c1da
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569327"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119630"
 ---
-# <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a>Как выполнить Создание службы, использующей пользовательское средство проверки сертификатов
+# <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a>Практическое руководство. Создание службы, использующей пользовательский проверяющий элемент управления для сертификатов
 В данном разделе показано, как реализовать пользовательский проверяющий элемент управления для сертификата и как настроить учетные данные клиента или службы, чтобы заменить логику проверки сертификата по умолчанию пользовательским проверяющим элементом управления для сертификата.  
   
  Сертификат X.509, используемый для проверки подлинности клиента или службы, Windows Communication Foundation (WCF) по умолчанию использует хранилище сертификатов Windows и Crypto API для проверки сертификата и убедитесь, что он является доверенным. Иногда встроенных функциональных возможностей проверки сертификатов недостаточно, их необходимо изменить. WCF предоставляет простой способ изменения логики проверки, позволяя пользователям добавлять свои элементы проверки сертификата. Если указано пользовательское средство проверки сертификатов, WCF не использует встроенной логики проверки сертификатов, но вместо этого использует пользовательский проверяющий элемент управления.  
@@ -130,4 +130,5 @@ ms.locfileid: "54569327"
  [!code-vb[c_CustomCertificateValidator#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcertificatevalidator/vb/source.vb#3)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.IdentityModel.Selectors.X509CertificateValidator>

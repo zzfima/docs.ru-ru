@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 29efe5e5-897b-46c2-a35f-e599a273acc8
-ms.openlocfilehash: 078102da95222d45bec82269edf1eb8e40866408
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1a02520ab7d1196b8071bda752ae30896958f372
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713143"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105421"
 ---
 # <a name="implementing-an-explicit-transaction-using-committabletransaction"></a>Реализация явной транзакции с помощью класса CommittableTransaction
 Класс <xref:System.Transactions.CommittableTransaction> позволяет приложениям использовать транзакцию явным образом вместо неявного использования с помощью класса <xref:System.Transactions.TransactionScope>. Он полезен при создании приложений, которым требуется использовать одну и ту же транзакцию в нескольких вызовах функций или нескольких вызовах потоков. В отличие от класса <xref:System.Transactions.TransactionScope> для фиксации или прерывания транзакции модуль записи приложения должен специально вызывать методы <xref:System.Transactions.CommittableTransaction.Commit%2A> и <xref:System.Transactions.Transaction.Rollback%2A>.  
@@ -86,5 +86,6 @@ void OnCommitted(IAsyncResult asyncResult)
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Реализация неявной транзакции с использованием области транзакции](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md)
 - [Обработка транзакций](../../../../docs/framework/data/transactions/index.md)

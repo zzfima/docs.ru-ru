@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Управление положением курсора в элементе управления Windows Forms TextBox
+title: Практическое руководство. Управление положением курсора в элементе управления TextBox в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - insertion points [Windows Forms], TextBox controls
 - text boxes [Windows Forms], controlling insertion point
 ms.assetid: 5bee7d34-5121-429e-ab1f-d8ff67bc74c1
-ms.openlocfilehash: cb3e7e7a44391ec7ee34ad0659f4185bd2304d26
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 1fa6e8a3642086f81d0a62502d801ec6ade9b3d1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714896"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110720"
 ---
-# <a name="how-to-control-the-insertion-point-in-a-windows-forms-textbox-control"></a>Практическое руководство. Управление положением курсора в элементе управления Windows Forms TextBox
+# <a name="how-to-control-the-insertion-point-in-a-windows-forms-textbox-control"></a>Практическое руководство. Управление положением курсора в элементе управления TextBox в Windows Forms
 Когда форм Windows <xref:System.Windows.Forms.TextBox> управления впервые получает фокус, по умолчанию курсор в текстовое поле находится слева от текста. Пользователь может перемещать курсор с помощью мыши или клавиатуры. Если текстовое поле теряет и затем восстанавливает фокус, курсор будет везде, где пользователь последний раз поместил его.  
   
  В некоторых случаях такое поведение может быть всегда удобен для пользователя. В текстовом редакторе приложение, пользователь может ожидать новые символы, который будет отображаться после любой существующий текст. В приложение для ввода данных пользователь может ожидать новые символы для замены существующих записей. <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> И <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> свойства позволяют изменить поведение в соответствии с вашими задачами.  
@@ -62,11 +62,12 @@ ms.locfileid: "57714896"
 -   Задайте <xref:System.Windows.Forms.TextBox> элемента управления <xref:System.Windows.Forms.Control.TabIndex%2A> свойства `0`.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.TextBox>
 - [Общие сведения об элементе управления TextBox](textbox-control-overview-windows-forms.md)
-- [Практическое руководство. Создание текстового поля пароля с помощью элемента управления TextBox в Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
-- [Практическое руководство. Создать только для чтения текстовое поле](how-to-create-a-read-only-text-box-windows-forms.md)
+- [Практическое руководство. Создание текстового поля для ввода пароля с помощью элемента управления TextBox в Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [Практическое руководство. Создание текстового поля только для чтения](how-to-create-a-read-only-text-box-windows-forms.md)
 - [Практическое руководство. Добавление кавычек в строку](how-to-put-quotation-marks-in-a-string-windows-forms.md)
-- [Практическое руководство. Выделите текст в элементе управления Windows Forms TextBox](how-to-select-text-in-the-windows-forms-textbox-control.md)
-- [Практическое руководство. Просмотр нескольких строк в элементе управления Windows Forms TextBox](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [Практическое руководство. Выделение текста в элементе управления TextBox в Windows Forms](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [Практическое руководство. Многострочные элементы управления TextBox в Windows Forms](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
 - [Элемент управления TextBox](textbox-control-windows-forms.md)

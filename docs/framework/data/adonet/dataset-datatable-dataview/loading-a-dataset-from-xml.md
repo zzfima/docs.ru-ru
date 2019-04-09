@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49c083b7-a5ed-41cf-aabc-5aaba96f00e6
-ms.openlocfilehash: 8dea23bac122f1f135b4695995d79191d5cd5f04
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 0c53e3a15bcbe61db7da1edb31ecd3fd562603f5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827608"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099902"
 ---
 # <a name="loading-a-dataset-from-xml"></a>Загрузка набора данных из XML
 Содержимое объекта <xref:System.Data.DataSet> технологии ADO.NET может быть создано на основе XML-потока или XML-документа. Кроме того, использование .NET Framework обеспечивает большую гибкость при выборе сведений, загружаемых из XML, а также способа создания схемы или реляционной структуры <xref:System.Data.DataSet>.  
@@ -19,14 +19,14 @@ ms.locfileid: "55827608"
   
  В следующей таблице описаны параметры для **XmlReadMode** аргумент.  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |------------|-----------------|  
-|**Auto**|Это значение по умолчанию. Анализирует XML и выбирает наиболее подходящий параметр в следующем порядке.<br /><br /> — Если допустимость XML-DiffGram, **DiffGram** используется.<br />Если <xref:System.Data.DataSet> содержит схему или XML-документ содержит встроенную схему, **ReadSchema** используется.<br />Если <xref:System.Data.DataSet> содержит схему и XML не содержит встроенную схему, **InferSchema** используется.<br /><br /> Если известен формат считанного XML-кода, для достижения оптимальной производительности рекомендуется установить явно **XmlReadMode**, а не принимать **автоматически** по умолчанию.|  
+|**Авто**|Это значение по умолчанию. Анализирует XML и выбирает наиболее подходящий параметр в следующем порядке.<br /><br /> — Если допустимость XML-DiffGram, **DiffGram** используется.<br />Если <xref:System.Data.DataSet> содержит схему или XML-документ содержит встроенную схему, **ReadSchema** используется.<br />Если <xref:System.Data.DataSet> содержит схему и XML не содержит встроенную схему, **InferSchema** используется.<br /><br /> Если известен формат считанного XML-кода, для достижения оптимальной производительности рекомендуется установить явно **XmlReadMode**, а не принимать **автоматически** по умолчанию.|  
 |**ReadSchema**|Считывает любую встроенную схему и загружает данные и схему.<br /><br /> Если набор данных <xref:System.Data.DataSet> уже содержит схему, новые таблицы добавляются из встроенной схемы в существующую в наборе данных <xref:System.Data.DataSet>. Если любая таблица встроенной схемы уже существует в наборе данных <xref:System.Data.DataSet>, возникает исключение. Вы не сможете изменить схему существующей таблицы с помощью **XmlReadMode.ReadSchema**.<br /><br /> Если набор данных <xref:System.Data.DataSet> не содержит схему, а также отсутствует встроенная схема, то данные не считываются.<br /><br /> Встроенная схема может быть определена с помощью схемы на языке XSD. Дополнительные сведения о записи встроенной схемы в виде схемы XML, см. в разделе [наследование реляционной структуры DataSet из схемы XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md).|  
 |**IgnoreSchema**|Не учитывает любую встроенную схему и загружает данные в существующую схему <xref:System.Data.DataSet>. Любые данные, не совпадающие с существующей схемой, удаляются. Если схема не существует в наборе данных <xref:System.Data.DataSet>, данные не загружаются.<br /><br /> Если данные являются DiffGram, **IgnoreSchema** имеет ту же функциональность, что **DiffGram** *.*|  
 |**InferSchema**|Не учитывает любую встроенную схему и формирует по одной схеме в расчете на каждую структуру XML-данных, а затем загружает данные.<br /><br /> Если набор данных <xref:System.Data.DataSet> уже содержит схему, текущая схема расширяется путем добавления столбцов в существующие таблицы. Дополнительные таблицы не будут добавлены, если отсутствуют существующие таблицы. Если уже существует формируемая таблица с другим пространством имен или любой из формируемых столбцов конфликтует с существующими столбцами, то возникает исключение.<br /><br /> Дополнительные сведения о том, как **ReadXmlSchema** выводит схему из XML-документа, см. в разделе [определение реляционной структуры DataSet из XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md).|  
 |**DiffGram**|Считывает данные DiffGram и добавляет их в текущую схему. **DiffGram** производится слияние новых строк с существующими строками, в которых совпадают уникальные идентифицирующие значения. См. подраздел «Слияние данных из XML» в конце данного раздела. Дополнительные сведения о DiffGram см. в разделе [дельт](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).|  
-|**Фрагмент**|Продолжает считывание нескольких XML-фрагментов до достижения конца потока. Фрагменты, совпадающие со схемой <xref:System.Data.DataSet>, добавляются в соответствующие таблицы. Фрагменты, не совпадающие со схемой <xref:System.Data.DataSet>, удаляются.|  
+|**Fragment**|Продолжает считывание нескольких XML-фрагментов до достижения конца потока. Фрагменты, совпадающие со схемой <xref:System.Data.DataSet>, добавляются в соответствующие таблицы. Фрагменты, не совпадающие со схемой <xref:System.Data.DataSet>, удаляются.|  
   
 > [!NOTE]
 >  Если передать **XmlReader** для **ReadXml** то является позиционированной частью пути в XML-документа, **ReadXml** производит считывание до следующего узла элемента и рассматривает его в качестве корня элемент, до конца узла элемента только чтение. Это неприменимо, если указать **XmlReadMode.Fragment**.  
@@ -116,11 +116,12 @@ foreach (DataTable dataTable in dataSet.Tables)
  Если набор данных <xref:System.Data.DataSet> уже содержит данные, новые данные из XML-кода добавляются к данным, находящимся в наборе данных <xref:System.Data.DataSet>. **ReadXml** не переносит слиянием из XML в <xref:System.Data.DataSet> все строки с совпадающими первичными ключами. Чтобы перезаписать существующие сведения о строке новыми данными из XML, используйте **ReadXml** для создания нового <xref:System.Data.DataSet>, а затем <xref:System.Data.DataSet.Merge%2A> новый <xref:System.Data.DataSet> с существующими <xref:System.Data.DataSet>. Обратите внимание, что при загрузке данных DiffGram с использованием метода **ReadXML** с **XmlReadMode** из **DiffGram** происходит слияние строк, имеющих один и тот же уникальный идентификатор.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Data.DataSet.Merge%2A?displayProperty=nameWithType>
 - [Использование XML в наборах данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
 - [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)
-- [Наследование реляционной структуры DataSet от схемы XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)
-- [Определение реляционной структуры DataSet из XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
-- [Загрузка сведений о схеме DataSet из XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)
+- [Наследование реляционной структуры набора данных от схемы XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)
+- [Определение реляционной структуры набора данных из XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
+- [Загрузка сведений о схеме набора данных из XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)
 - [Наборы данных, таблицы данных и объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

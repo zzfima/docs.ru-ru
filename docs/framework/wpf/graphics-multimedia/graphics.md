@@ -7,12 +7,12 @@ helpviewer_keywords:
 - visual effects [WPF]
 - graphics [WPF], effects
 ms.assetid: 3bfc652e-91b7-4697-a4f4-83ff0e98327e
-ms.openlocfilehash: 20051b176be4372643855441ee5f6c3b62a27780
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c59d19c925d99ac8f5dd07da84295ee002c956de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361165"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102353"
 ---
 # <a name="graphics"></a>Графика
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] обеспечивает интегрированную поддержку мультимедиа, векторную графику, анимацию и композицию содержимого, что упрощает разработчикам создание интересных пользовательских интерфейсов и содержимого.  
@@ -21,14 +21,15 @@ ms.locfileid: "57361165"
  [Эффекты для точечных рисунков](bitmap-effects.md)  
  [Кисти](brushes.md)  
  [Объекты рисования](drawings.md)  
- [Геометрические объекты](geometries.md)  
- [Изображения](images.md)  
- [Фигуры](shapes.md)  
+ [Геометрия](geometries.md)  
+ [Изображений](images.md)  
+ [Фигур](shapes.md)  
  [Преобразования](transformations.md)  
  [Настройки реестра графической отрисовки](graphics-rendering-registry-settings.md)  
- [Разделы практического руководства](graphics-how-to-topics.md)  
+ [Практические руководства](graphics-how-to-topics.md)  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Shapes.Shape>
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.Imaging.BitmapImage>

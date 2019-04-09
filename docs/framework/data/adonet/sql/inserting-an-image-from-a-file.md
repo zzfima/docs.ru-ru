@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 35900aa2-5615-4174-8212-ba184c6b82fb
-ms.openlocfilehash: 8df63cb425f8e113a73fee1b0a6bd61683ed27ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f2bc67b4130633fba3a6e42e2b6925fc09f835c3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54578852"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116234"
 ---
 # <a name="inserting-an-image-from-a-file"></a>Вставка изображения из файла
 Большой двоичный объект (BLOB) можно записывать в базу данных в виде двоичных или символьных данных в зависимости от типа поля источника данных. BLOB - это общий термин для типов данных `text`, `ntext` и `image`, используемых, как правило, для хранения документов и изображений.  
@@ -131,8 +131,9 @@ public static byte[] GetPhoto(string filePath)
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Использование команд для изменения данных](../../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)
 - [Извлечение двоичных данных](../../../../../docs/framework/data/adonet/retrieving-binary-data.md)
 - [Двоичные данные и данные большого объема SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
 - [Сопоставления типов данных SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

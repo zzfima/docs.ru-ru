@@ -2,12 +2,12 @@
 title: Сценарии безопасности приложений в SQL Server
 ms.date: 03/30/2017
 ms.assetid: 0164f3a4-406e-4693-bec3-03c8e18b46d7
-ms.openlocfilehash: 42afe27c11eadff935e162128b3d5f18c1cba8a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 96c9f48cbf2e2ade2ff1688573a83fd86d613f2c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54687457"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130166"
 ---
 # <a name="application-security-scenarios-in-sql-server"></a>Сценарии безопасности приложений в SQL Server
 Не существует одного правильного способа создания безопасного клиентского приложения SQL Server. Каждое приложение уникально своими требованиями, средой развертывания и количеством пользователей. Приложение, довольно хорошо защищенное при начальном развертывании, с течением времени может стать менее защищенным. Невозможно точно предсказать, какие угрозы могут возникнуть в будущем.  
@@ -26,7 +26,7 @@ ms.locfileid: "54687457"
 ### <a name="probing-and-intelligent-observation"></a>Зондирование и интеллектуальное наблюдение  
  Атака зондирования может использовать сообщения об ошибках, формируемые приложением, для поиска уязвимости системы безопасности. Для предотвращения возврата конечному пользователю сведений об ошибках SQL Server следует реализовать обработку ошибок в любом процедурном коде.  
   
-### <a name="authentication"></a>Аутентификация  
+### <a name="authentication"></a>Проверка подлинности  
  Если строка соединения, основанная на именах входа SQL Server, конструируется во время выполнения, может возникнуть атака путем внедрения кода в строку соединения. Если строка соединения не проверяется на допустимые пары ключевых слов, атакующая сторона может вставить дополнительные символы и, возможно, получить доступ к конфиденциальным данным или другим ресурсам на сервере. По возможности используйте проверку подлинности Windows. Если необходимо использовать имена входа SQL Server, используйте <xref:System.Data.SqlClient.SqlConnectionStringBuilder> для создания и проверки строк соединения во время выполнения.  
   
 ### <a name="passwords"></a>Пароли  
@@ -51,13 +51,14 @@ ms.locfileid: "54687457"
  Описывает, как реализовать разрешения уровня строки для ограничения доступа к данным.  
   
  [Создание ролей приложений в SQL Server](../../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md)  
- Описывает возможности и возможности ролей приложения.  
+ Описывает возможности и функции ролей приложения.  
   
  [Организация межбазового доступа в SQL Server](../../../../../docs/framework/data/adonet/sql/enabling-cross-database-access-in-sql-server.md)  
  Описывает, как включить перекрестный доступ между базами данных, не ухудшая безопасность.  
   
 ## <a name="see-also"></a>См. также
+
 - [Безопасность SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)
 - [Общие сведения о безопасности SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
 - [Защита приложений ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

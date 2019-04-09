@@ -2,12 +2,12 @@
 title: Безопасные клиентские приложения
 ms.date: 03/30/2017
 ms.assetid: 6239592e-fa7d-4dea-9f00-d296d0048b01
-ms.openlocfilehash: c8efdf4c4baceb22ee60bdcf333ad1fec9ebd2d0
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 0c14089247e916b91cb385c7d715cce54acee57c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092713"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119618"
 ---
 # <a name="secure-client-applications"></a>Безопасные клиентские приложения
 Обычно приложения состоят из многих частей, которые необходимо защищать от уязвимостей, которые могут привести к потере данных или иным образом нарушить безопасность системы. Создавая защищенные пользовательские интерфейсы, можно предотвратить многие проблемы за счет блокирования организаторов атак до того, как они получат доступ к данным или системным ресурсам.  
@@ -36,7 +36,7 @@ ms.locfileid: "56092713"
  [Безопасность Windows Forms](../../../../docs/framework/winforms/windows-forms-security.md)  
  Рассказывается, как защищать приложения Windows Forms. Здесь также приводятся ссылки на связанные разделы.  
   
- [Windows Forms and Unmanaged Applications](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
+ [Windows Forms и неуправляемые приложения](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
  Описывает, как взаимодействовать с неуправляемыми приложениями в приложении Windows Forms.  
   
  [Развертывание ClickOnce для форм Windows Forms](../../winforms/clickonce-deployment-for-windows-forms.md)  
@@ -49,25 +49,26 @@ ms.locfileid: "56092713"
   
  Дополнительные сведения см. в следующих ресурсах.  
   
-|Ресурс|Описание:|  
+|Ресурс|Описание|  
 |--------------|-----------------|  
 |[Обеспечение безопасности веб-сайтов ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100))|Обсуждается, как защищать приложения ASP.NET.|  
-|[Защита веб-служб XML, созданных с помощью ASP.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w67h0dw7(v=vs.100))|Обсуждается, как обеспечивать безопасность веб-службы ASP.NET.|  
+|[Безопасность веб-служб XML, создаваемых с помощью ASP.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w67h0dw7(v=vs.100))|Обсуждается, как обеспечивать безопасность веб-службы ASP.NET.|  
 |[Общие сведения об использовании скрипта](https://docs.microsoft.com/previous-versions/aspnet/w1sw53ds(v=vs.100))|Обсуждается, как защищаться от атак эксплойта скриптов, которые пытаются вставить вредоносные символы в веб-страницу.|  
 |[Базовые методики безопасности для веб-приложений](https://docs.microsoft.com/previous-versions/aspnet/zdh19h94(v=vs.100))|Общие сведения о безопасности и ссылки на дополнительные разделы.|  
   
 ## <a name="remoting"></a>Удаленное взаимодействие  
  Система удаленного взаимодействия .NET позволяет создавать широко приложения с высокой степенью распределенности независимо от того, находятся компоненты приложения на одном компьютере или разбросаны по всему миру. Она дает возможность разрабатывать клиентские приложения, которые используют объекты в других процессах на том же компьютере или на любом другом компьютере, доступном по сети. Возможности по удаленному взаимодействию платформы .NET можно также применять для обмена данными с другими доменами приложений в рамках одного процесса.  
   
-|Ресурс|Описание:|  
+|Ресурс|Описание|  
 |--------------|-----------------|  
 |[Конфигурация удаленных приложений](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b8tysty8(v=vs.100))|Обсуждается, как настраивать удаленно взаимодействующие приложения, чтобы избежать обычных проблем.|  
 |[Безопасность удаленного взаимодействия](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/9hwst9th(v=vs.100))|Описывает проверку подлинности и шифрование, а также другие разделы безопасности, имеющие отношение к удаленному взаимодействию.|  
-|[Безопасность и вопросы удаленного взаимодействия](../../../../docs/framework/misc/security-and-remoting-considerations.md)|Описывает вопросы безопасности в отношении защищенных объектов и пересечения доменов приложений.|  
+|[Вопросы безопасности при удаленном взаимодействии](../../../../docs/framework/misc/security-and-remoting-considerations.md)|Описывает вопросы безопасности в отношении защищенных объектов и пересечения доменов приложений.|  
   
 ## <a name="see-also"></a>См. также
+
 - [Защита приложений ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Рекомендации по стратегиям доступа к данным](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))
 - [Защита приложений](/visualstudio/ide/securing-applications)
 - [Защита сведений о подключении](../../../../docs/framework/data/adonet/protecting-connection-information.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

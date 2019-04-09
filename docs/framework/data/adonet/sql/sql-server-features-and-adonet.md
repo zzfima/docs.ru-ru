@@ -2,12 +2,12 @@
 title: Возможности SQL Server и ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 2839529b-a79b-4450-be5d-07a98dbc7a0f
-ms.openlocfilehash: 9e6f9d0404108428375aa859fa3f0b0939da6a24
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: b07f5e1e62744e4301acd64034481cf391100af8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705379"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107527"
 ---
 # <a name="sql-server-features-and-adonet"></a>Возможности SQL Server и ADO.NET
 В подразделах данного раздела рассматриваются возможности SQL Server, предназначенные для разработки приложений баз данных с использованием ADO.NET.  
@@ -25,7 +25,7 @@ ms.locfileid: "54705379"
  [Статистика поставщика для SQL Server](../../../../../docs/framework/data/adonet/sql/provider-statistics-for-sql-server.md)  
  Описывается получение статистики SQL Server во время выполнения.  
   
- [Пользовательские экземпляры SQL Server Express](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)  
+ [Пользовательские экземпляры SQL Server, экспресс-выпуск](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)  
  Описывается поддержка пользовательских экземпляров SQL Server Express.  
   
  [Зеркальное отображение баз данных в SQL Server](../../../../../docs/framework/data/adonet/sql/database-mirroring-in-sql-server.md)  
@@ -43,12 +43,13 @@ ms.locfileid: "54705379"
  [Поддержка SqlClient для высокого уровня доступности, аварийного восстановления](../../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)  
  Описывается поддержка SqlClient для высокой доступности, групп аварийного восстановления доступности (AlwaysOn).  
   
- [Поддержка SqlClient для LocalDB](../../../../../docs/framework/data/adonet/sql/sqlclient-support-for-localdb.md)  
+ [Поддержка SqlClient LocalDB](../../../../../docs/framework/data/adonet/sql/sqlclient-support-for-localdb.md)  
  Описывается поддержка SqlClient для баз данных LocalDB.  
   
 ## <a name="see-also"></a>См. также
+
 - [Операции данных SQL Server Data в ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
 - [Извлечение и изменение данных в ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)
 - [SQL Server и ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

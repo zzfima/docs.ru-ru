@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Forms, data binding
 - Windows Forms, adding change notification for data binding
 ms.assetid: b5b10f90-0585-41d9-a377-409835262a92
-ms.openlocfilehash: cea6cab76a12d6dbfdc741b426b67859e0e5141e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 559cdee1cce84df1c4b838e249d11ba235a0c636
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713428"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097581"
 ---
 # <a name="change-notification-in-windows-forms-data-binding"></a>Получение уведомления об изменении данных, связанных с элементом управления, в Windows Forms
 Одним из наиболее важных понятий привязки данных Windows Forms является *уведомления об изменениях*. Чтобы обеспечить источник данных и связанные элементы управления всегда самые последние данные, необходимо добавить уведомление об изменении для привязки данных. В частности необходимо убедиться, что элементы управления с привязкой уведомляются об изменения, внесенные в источнике данных и источнике уведомляется об изменениях, внесенных в свойства привязанного элемента управления.  
@@ -33,9 +33,10 @@ ms.locfileid: "57713428"
  Наконец, на стороне элементов управления можно предоставить *PropertyName*событие Changed для каждого свойства, предназначенный для привязки к данным. Изменения свойств элемента управления, затем распространяются привязанного источника данных. Дополнительные сведения см. в разделе [Как Применение шаблона PropertyNameChanged](how-to-apply-the-propertynamechanged-pattern.md)  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.ComponentModel.INotifyPropertyChanged>
 - <xref:System.ComponentModel.BindingList%601>
 - [Привязка данных Windows Forms](windows-forms-data-binding.md)
 - [Источники данных, поддерживаемые Windows Forms](data-sources-supported-by-windows-forms.md)
-- [Привязка данных и Windows Forms](data-binding-and-windows-forms.md)
+- [Связывание данных и Windows Forms](data-binding-and-windows-forms.md)

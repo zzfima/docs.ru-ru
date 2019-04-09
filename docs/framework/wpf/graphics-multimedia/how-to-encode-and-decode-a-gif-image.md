@@ -13,12 +13,12 @@ helpviewer_keywords:
 - GIF decoding [WPF]
 - GIF encoding [WPF]
 ms.assetid: 9cdd9ec7-71eb-444b-b9e3-991958461163
-ms.openlocfilehash: 245cc2db2c3cd0187c17bc992343eb8ab30da2ea
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 35bd08f0d5e4d2ee9b8731706c9f1d770d67f633
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353417"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124745"
 ---
 # <a name="how-to-encode-and-decode-a-gif-image"></a>Практическое руководство. Кодирование и декодирование изображения в формате GIF
 Следующие примеры показывают, как декодировать и кодировать [!INCLUDE[TLA#tla_gif](../../../../includes/tlasharptla-gif-md.md)] изображений, используя заданный <xref:System.Windows.Media.Imaging.GifBitmapDecoder> и <xref:System.Windows.Media.Imaging.GifBitmapEncoder> объектов.  
@@ -38,4 +38,5 @@ ms.locfileid: "57353417"
  [!code-vb[GifBitmapDecoderEncoder#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GifBitmapDecoderEncoder/VB/GifEncoderDecoder.vb#4)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения об обработке изображений](imaging-overview.md)

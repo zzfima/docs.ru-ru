@@ -8,12 +8,12 @@ helpviewer_keywords:
 - printing XPS files programmatically [WPF]
 - XPS files [WPF], printing programmatically
 ms.assetid: 0b1c0a3f-b19e-43d6-bcc9-eb3ec4e555ad
-ms.openlocfilehash: c00a12000dd10ba32bd550186377547b3ef72d25
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: f113516fd96b88ea04b5ee155f808200dd2c893d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372728"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59114300"
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>Практическое руководство. Печать XPS-файлов программным способом
 Можно использовать перегрузку <xref:System.Printing.PrintQueue.AddJob%2A> способ печати [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] файлы, не открывая <xref:System.Windows.Controls.PrintDialog> или, в принципе, все [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] вообще.  
@@ -59,6 +59,7 @@ ms.locfileid: "57372728"
  **Примечание** для простоты в примере выше используется наличие \*.xps расширения в качестве проверки того, что файл [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]. При этом файлы [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] не обязательно должны иметь такое расширение. [isXPS.exe (isXPS Conformance Tool)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100)) является одним из способов проверки файла на соответствие [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)].  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Printing.PrintQueue>
 - <xref:System.Printing.PrintQueue.AddJob%2A>
 - <xref:System.Threading.ApartmentState>

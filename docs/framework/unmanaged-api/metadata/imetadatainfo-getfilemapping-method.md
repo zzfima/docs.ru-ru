@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b45d78548f2b1a7e17f61c5228cd68f228fe4980
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 4c6a9473a698e4635c8b5cc9fb58963334dfd65e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57478878"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081797"
 ---
 # <a name="imetadatainfogetfilemapping-method"></a>Метод IMetaDataInfo::GetFileMapping
 Получает область памяти, сопоставленного файла и тип сопоставления.  
@@ -49,7 +49,7 @@ HRESULT GetFileMapping (
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
-|HRESULT|Описание:|  
+|HRESULT|Описание|  
 |-------------|-----------------|  
 |`S_OK`|Все выходные данные заполняются.|  
 |`E_INVALIDARG`|Значение NULL был передан в качестве значения аргумента.|  
@@ -74,5 +74,6 @@ HRESULT GetFileMapping (
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс IMetaDataInfo](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-interface.md)
 - [Перечисление CorFileMapping](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md)

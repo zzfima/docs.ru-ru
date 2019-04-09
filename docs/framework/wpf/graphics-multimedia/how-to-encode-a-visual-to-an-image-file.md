@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Кодирование визуального объекта в файл изображения
+title: Практическое руководство. Кодирование визуального элемента в файл изображения
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - encoding image formats [WPF]
 - visuals [WPF], encoding to an image file
 ms.assetid: 2036385b-ea47-4d54-8027-5797f52c8149
-ms.openlocfilehash: 2d5da0bde243128bc0d7aa29bf865ca9bfbd1d9a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 872c19af0cfcf4fc980643c37e9a6028457c03b3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356002"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096788"
 ---
-# <a name="how-to-encode-a-visual-to-an-image-file"></a>Практическое руководство. Кодирование визуального объекта в файл изображения
+# <a name="how-to-encode-a-visual-to-an-image-file"></a>Практическое руководство. Кодирование визуального элемента в файл изображения
 В этом примере показаны способы кодирования <xref:System.Windows.Media.Visual> объекта в файл изображения с помощью <xref:System.Windows.Media.Imaging.RenderTargetBitmap> и <xref:System.Windows.Media.Imaging.PngBitmapEncoder>.  
   
 ## <a name="example"></a>Пример  
@@ -28,6 +28,7 @@ ms.locfileid: "57356002"
  Объект <xref:System.Windows.Media.Imaging.PngBitmapEncoder> использовался в этом примере, но содержит производного <xref:System.Windows.Media.Imaging.BitmapEncoder> объекты можно было бы для создания файла образа.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Media.DrawingContext>
 - [Общие сведения об обработке изображений](imaging-overview.md)
 - [Обзор объектов Drawing](drawing-objects-overview.md)

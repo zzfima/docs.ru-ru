@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: a3355d78-2a88-4109-8521-830d7cae260a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ccc8cd22c3175a2b6456f71d9dc773ce85848949
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ae15e6d61267feb0388170ee27dcd939035329b0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55275070"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121697"
 ---
 # <a name="methodinstantiation-element-net-native"></a>\<MethodInstantiation > элемент (машинный код .NET)
 Применяет политику отражения среды выполнения к сконструированному универсальному методу.  
@@ -29,9 +29,9 @@ ms.locfileid: "55275070"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Тип атрибута|Описание:|  
+|Атрибут|Тип атрибута|Описание|  
 |---------------|--------------------|-----------------|  
-|`Name`|Общие правила|Обязательный атрибут. Задает имя метода.|  
+|`Name`|Общие|Обязательный атрибут. Задает имя метода.|  
 |`Signature`|Общие|Необязательный атрибут. Определяет именованные параметры метода. Несколько именованных параметров разделяются запятыми. Атрибут `Signature` позволяет различать перегруженные методы.|  
 |`Arguments`|Общие|Обязательный атрибут. Задает аргументы универсального типа. При наличии нескольких аргументов, они разделяются запятыми.|  
 |`Browse`|Отражение|Необязательный атрибут. Определяет запрос для получения сведений о методе или перечисляет методы, но не включает динамический вызов во время выполнения.|  
@@ -45,19 +45,19 @@ ms.locfileid: "55275070"
   
 ## <a name="signature-attribute"></a>Сигнатура атрибута  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |*method_signature*|Определяет именованные параметры метода. При наличии нескольких параметров, они разделяются запятыми.|  
   
 ## <a name="arguments-attribute"></a>Атрибут аргументов  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |*method_arguments*|Задает аргументы универсального типа. При наличии нескольких аргументов, они разделяются запятыми. Каждый аргумент должен содержать полное имя типа.|  
   
 ## <a name="all-other-attributes"></a>Все остальные атрибуты  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |*policy_setting*|Параметр, применяемый к этому типу политики для метода. Допустимые значения: `Auto`, `Excluded`, `Included` и `Required`. Дополнительные сведения см. в разделе [Параметры политики директив среды выполнения](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
   
@@ -66,16 +66,17 @@ ms.locfileid: "55275070"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Применяет политику отражения к типу и всем его членам.|  
-|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Применяет политику отражения к сконструированному универсальному типу и всем его членам.|  
+|[\<Тип >](../../../docs/framework/net-native/type-element-net-native.md)|Применяет политику отражения к типу и всем его членам.|  
+|[\<TypeInstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Применяет политику отражения к сконструированному универсальному типу и всем его членам.|  
   
 ## <a name="remarks"></a>Примечания  
  Элемент `<MethodInstantiation>`  переопределяет политику отражения среды выполнения его соответствующего открытого универсального метода.  
   
 ## <a name="see-also"></a>См. также
-- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+
+- [Ссылка на файл конфигурации директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Элементы директив среды выполнения](../../../docs/framework/net-native/runtime-directive-elements.md)
 - [Параметры политики директив среды выполнения](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
-- [Элемент \<Method>](../../../docs/framework/net-native/method-element-net-native.md)
+- [\<Метод > элемент](../../../docs/framework/net-native/method-element-net-native.md)

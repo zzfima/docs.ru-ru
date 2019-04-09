@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Работа со столбцами изображений в элементе управления DataGridView Windows Forms
+title: Практическое руководство. Работа со столбцами изображений в элементе управления DataGridView в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - image columns [Windows Forms], Windows Forms
 - DataGridView control [Windows Forms], image columns
 ms.assetid: 8a37aa75-3c6e-4893-91d0-7a5f34bfe287
-ms.openlocfilehash: 7bb0a74355f9ca81279a2c43f689ddf4d7540e90
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 09af70cd00b4fc88b5cd76f7de920905c5b3a956
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721844"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101833"
 ---
-# <a name="how-to-work-with-image-columns-in-the-windows-forms-datagridview-control"></a>Практическое руководство. Работа со столбцами изображений в элементе управления DataGridView Windows Forms
+# <a name="how-to-work-with-image-columns-in-the-windows-forms-datagridview-control"></a>Практическое руководство. Работа со столбцами изображений в элементе управления DataGridView в Windows Forms
 В примере кода ниже показано, как использовать столбцы изображений <xref:System.Windows.Forms.DataGridView> в интерактивном пользовательском интерфейсе. В примере также демонстрируются возможности изменения размера и расположения изображения с помощью <xref:System.Windows.Forms.DataGridViewImageColumn>.  
   
 ## <a name="example"></a>Пример  
@@ -33,7 +33,8 @@ ms.locfileid: "57721844"
  Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewImageColumn>
-- [Программирование с использованием ячеек, строк и столбцов в элементе управления DataGridView в Windows Forms](programming-with-cells-rows-and-columns-in-the-datagrid.md)
-- [Практическое руководство. Отображение изображений в ячейках элемента управления DataGridView в Windows Forms](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)
+- [Программирование с использование ячеек, строк и столбцов в элементе управления DataGridView в Windows Forms](programming-with-cells-rows-and-columns-in-the-datagrid.md)
+- [Практическое руководство. Вывод изображений в ячейках элемента управления DataGridView в Windows Forms](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)

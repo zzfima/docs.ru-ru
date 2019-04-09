@@ -8,12 +8,12 @@ helpviewer_keywords:
 - lines [WPF], connected (see polylines)
 - drawing [WPF], polylines
 ms.assetid: 65db8935-d047-4295-87c4-b427ff3ad293
-ms.openlocfilehash: 35981f6d5a47ea5d5e024efe714b52103938eddf
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4f55ecc206be0ef4947923047e796c36131c70ec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378188"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59114850"
 ---
 # <a name="how-to-draw-a-polyline-by-using-the-polyline-element"></a>Практическое руководство. Рисование ломаной с помощью элемента Polyline
 В этом примере показано, как рисование ломаной, которая представляет собой последовательность соединенных линий, с помощью <xref:System.Windows.Shapes.Polyline> элемент.  
@@ -35,6 +35,7 @@ ms.locfileid: "57378188"
  Этот пример является частью большего примера; Полный пример см. в разделе [пример элементов-фигур](https://go.microsoft.com/fwlink/?LinkID=160037).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Shapes.Polyline>
 - <xref:System.Windows.Shapes.Polygon>
 - <xref:System.Windows.Shapes.Shape>

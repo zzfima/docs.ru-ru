@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - metadata [WCF], exporting and importing
 ms.assetid: 614a75bb-e0b0-4c95-b6d8-02cb5e5ddb38
-ms.openlocfilehash: f99b8626ca4a89bf94e44652e8277f8b2c147fe3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 39b964584cde42e6569da35f8653042f6d7432cb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706382"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091945"
 ---
 # <a name="exporting-and-importing-metadata"></a>Экспорт и импорт метаданных
 В Windows Communication Foundation (WCF), экспорт метаданных — это процесс описания конечных точек службы и проецирования их в параллельное, стандартизованное представление, клиенты могут использовать, чтобы понять, как использовать службу. Импорт метаданных службы - это процесс создания экземпляров <xref:System.ServiceModel.Description.ServiceEndpoint> или частей из метаданных службы.  
@@ -57,7 +57,7 @@ ms.locfileid: "54706382"
  [ServiceDescription и справочная информация о WSDL](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)  
  Описание сопоставления объектов описания и языка WSDL.  
   
- [Практическое руководство. Использование Svcutil.exe для экспорта метаданных из скомпилированного кода службы](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
+ [Практическое руководство. Использование программы Svcutil.exe для экспорта метаданных из скомпилированного кода службы](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
  Описание использования средства Svcutil.exe для экспорта метаданных служб, контрактов и типов данных в скомпилированных сборках.  
   
  [Справочник по схеме контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
@@ -69,5 +69,6 @@ ms.locfileid: "54706382"
  <xref:System.ServiceModel.Description.WsdlImporter>  
   
 ## <a name="see-also"></a>См. также
+
 - [Экспорт пользовательских метаданных для расширения WCF](../../../../docs/framework/wcf/extending/exporting-custom-metadata-for-a-wcf-extension.md)
 - [Импорт пользовательских метаданных для расширения WCF](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md)

@@ -1,18 +1,18 @@
 ---
-title: Как выполнить хранить и повторно использовать запросы
+title: Практическое руководство. Как хранить и повторно использовать запросы
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: a012bd79-1809-45e3-adea-0229532396cc
-ms.openlocfilehash: a913839ab8e6048b18270061a75ca632e2797fb8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1aac20c3f9c421d353938a83b9e321d35abd244e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630776"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084198"
 ---
-# <a name="how-to-store-and-reuse-queries"></a>Как выполнить хранить и повторно использовать запросы
+# <a name="how-to-store-and-reuse-queries"></a>Практическое руководство. Как хранить и повторно использовать запросы
 При наличии приложения, которое неоднократно выполняет схожие по структуре запросы, можно существенно увеличить производительность, если скомпилировать запрос один раз и затем выполнить его несколько раз с различными параметрами. Например, приложению может потребоваться получение всех клиентов из определенного города; название города указывается пользователем в форме во время выполнения. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] поддерживает использование *скомпилированных запросов* для этой цели.  
   
 > [!NOTE]
@@ -34,6 +34,7 @@ ms.locfileid: "54630776"
  [!code-vb[DLinqQuerying#8](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQuerying/vb/Module1.vb#8)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Data.Linq.CompiledQuery>
 - [Основные принципы запросов](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
 - [Запрос к базе данных](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)

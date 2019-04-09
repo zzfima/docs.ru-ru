@@ -8,12 +8,12 @@ helpviewer_keywords:
 - applications [WPF], focus
 - focus in applications [WPF]
 ms.assetid: 0230c4eb-0c8a-462b-ac4b-ae3e511659f4
-ms.openlocfilehash: 5853c48ad77131d33cd0ab767c4a58ba56aaa39f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 72b866d714e6a77020bdb74843c3aaa0ba0c3278
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369920"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073888"
 ---
 # <a name="focus-overview"></a>Общие сведения о фокусе
 Существует два основных понятия, относящихся к фокусу в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]: фокус клавиатуры и логический фокус.  Фокус клавиатуры ссылается на элемент, получающий ввод с клавиатуры, а логический фокус ссылается на элемент в области фокуса, имеющий фокус.  Эти понятия подробно освещаются в этом обзоре.  Важно понимать разницу между этими понятиями, чтобы создавать сложные приложения с несколькими областями, в которых можно получить фокус.  
@@ -21,9 +21,7 @@ ms.locfileid: "57369920"
  Основные классы, участвующие в управлении фокусом являются <xref:System.Windows.Input.Keyboard> класс, <xref:System.Windows.Input.FocusManager> класс и базовых элементов классы, такие как <xref:System.Windows.UIElement> и <xref:System.Windows.ContentElement>.  Дополнительные сведения о базовых элементах см. в разделе [Общие сведения о базовых элементах](base-elements-overview.md).  
   
  <xref:System.Windows.Input.Keyboard> Класс занимается в основном с фокусом клавиатуры и <xref:System.Windows.Input.FocusManager> занимается в основном с логическим фокусом, однако это не является абсолютным.  Элемент, имеющий фокус клавиатуры, также будет иметь логический фокус, но элемент, имеющий логический фокус, не обязательно будет иметь фокус клавиатуры.  Это видно при использовании <xref:System.Windows.Input.Keyboard> классу задать элемент, имеющий фокус клавиатуры, он также устанавливает логический фокус на элемент.  
-  
 
-  
 <a name="Keyboard_Focus"></a>   
 ## <a name="keyboard-focus"></a>Фокус клавиатуры  
  Фокус клавиатуры относится к элементу, получающему ввод с клавиатуры.  На всем рабочем столе может быть только один элемент, в котором находится фокус клавиатуры.  В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], будет иметь элемент, имеющий фокус клавиатуры <xref:System.Windows.IInputElement.IsKeyboardFocused%2A> присвоено `true`.  Статическое свойство <xref:System.Windows.Input.Keyboard.FocusedElement%2A> на <xref:System.Windows.Input.Keyboard> класс получает элемент, который в данный момент имеет фокус клавиатуры.  
@@ -118,6 +116,7 @@ ms.locfileid: "57369920"
  События, связанные с логическим фокусом: <xref:System.Windows.UIElement.GotFocus> и <xref:System.Windows.UIElement.LostFocus>.  Эти события определяются в <xref:System.Windows.Input.FocusManager> как Прикрепленные события, но <xref:System.Windows.Input.FocusManager> не предоставляет оболочки событий среды CLR.  <xref:System.Windows.UIElement> и <xref:System.Windows.ContentElement> предоставляют эти события более удобным.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Input.FocusManager>
 - <xref:System.Windows.UIElement>
 - <xref:System.Windows.ContentElement>

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - brushes [WPF], creating reflections
 - reflections [WPF], creating
 ms.assetid: 4f017e16-ab80-43c7-98df-03b6bddbb203
-ms.openlocfilehash: 8d29b29d349e9a5ee76ace72837d67e791c25d51
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 61b597cd36fcf0d60f215d9b5403f3b42b21dec4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353573"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105265"
 ---
 # <a name="how-to-create-a-reflection"></a>Практическое руководство. Создание отражения
 В этом примере показано, как использовать <xref:System.Windows.Media.VisualBrush> для создания отражения. Так как <xref:System.Windows.Media.VisualBrush> можно отображать существующие визуальные, эту возможность можно использовать для создания интересных визуальных эффектов, например отражения и увеличения.  
@@ -32,5 +32,6 @@ ms.locfileid: "57353573"
  Полный образец, который включает примеры, демонстрирующие увеличение частей экрана и создание отражений, см. в разделе [пример VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Media.VisualBrush>
-- [Заполнение с использованием изображений, рисунков и визуальных элементов](painting-with-images-drawings-and-visuals.md)
+- [Рисование с помощью объектов Image, Drawing и Visual](painting-with-images-drawings-and-visuals.md)

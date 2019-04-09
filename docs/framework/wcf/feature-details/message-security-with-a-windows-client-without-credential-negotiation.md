@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
-ms.openlocfilehash: 2e5671832fa1025c424c746b8c27162d3935fddd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 6b4414d56e22646e057e6b1999e15722244deda4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525170"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075176"
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>Безопасность сообщений с использованием клиента Windows без согласования учетных данных
 В следующем сценарии показаны клиент Windows Communication Foundation (WCF) и служба, защищенные протоколом Kerberos.  
@@ -55,7 +55,7 @@ ms.locfileid: "54525170"
  [!code-csharp[C_SecurityScenarios#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#12)]
  [!code-vb[C_SecurityScenarios#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#12)]  
   
-### <a name="configuration"></a>Конфигурация  
+### <a name="configuration"></a>Параметр Configuration  
  Вместо кода можно использовать следующую конфигурацию.  
   
 ```xml  
@@ -92,12 +92,12 @@ ms.locfileid: "54525170"
 </configuration>  
 ```  
   
-## <a name="client"></a>Клиент  
+## <a name="client"></a>"Клиент";  
  Предполагается, что представленные ниже код и конфигурация выполняются независимо. Выполните одно из следующих действий.  
   
 -   Создайте автономный клиент, используя код (и код клиента).  
   
--   Создайте клиент, который не определяет никаких адресов конечных точек. Вместо этого используйте конструктор клиента, который принимает в качестве аргумента имя конфигурации. Например:  
+-   Создайте клиент, который не определяет никаких адресов конечных точек. Вместо этого используйте конструктор клиента, который принимает в качестве аргумента имя конфигурации. Пример:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
@@ -113,7 +113,7 @@ ms.locfileid: "54525170"
  [!code-csharp[C_SecurityScenarios#19](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#19)]
  [!code-vb[C_SecurityScenarios#19](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#19)]  
   
-### <a name="configuration"></a>Конфигурация  
+### <a name="configuration"></a>Параметр Configuration  
  Следующий код служит для настройки клиента. Обратите внимание, что [ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) должно быть присвоено соответствовать SPN службы, установленному для учетной записи службы в домене Active Directory.  
   
 ```xml  
@@ -147,6 +147,7 @@ ms.locfileid: "54525170"
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Идентификация и проверка подлинности службы](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
 - [Модель безопасности для Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

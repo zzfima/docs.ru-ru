@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - metadata [WCF], overview
 ms.assetid: 1d37645e-086d-4d68-a358-f3c5b6e8205e
-ms.openlocfilehash: 38a0eec31c4a0910048a0ed674e997d685747862
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f9c903dd520f1aa85fc0577264288ecbc8c62a7f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664204"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111479"
 ---
 # <a name="metadata-architecture-overview"></a>Общие сведения об архитектуре метаданных
 Windows Communication Foundation (WCF) предоставляет широкие возможности инфраструктуру для экспорта, публикации, извлечения и импорта метаданных служб. Службы WCF используют метаданные для описания порядка взаимодействия с конечными точками службы, таким образом, чтобы средства, такие как Svcutil.exe, могли автоматически создавать клиентский код для доступа к службе.  
@@ -53,7 +53,7 @@ Windows Communication Foundation (WCF) предоставляет широкие
 > [!CAUTION]
 > Если добавить конечную точку MEX в файл конфигурации приложения, а затем добавить <xref:System.ServiceModel.Description.ServiceMetadataBehavior> в узел службы в коде, будет вызвано следующее исключение.  
 >
-> System.InvalidOperationException: Не удалось найти имя контракта «IMetadataExchange» в списке контрактов, реализованных службой Service1. Добавьте ServiceMetadataBehavior в файл конфигурации или непосредственно в ServiceHost, чтобы обеспечить поддержку этого контракта.  
+> "System.InvalidOperationException: Не удалось найти имя контракта «IMetadataExchange» в списке контрактов, реализованных службой Service1. Добавьте ServiceMetadataBehavior в файл конфигурации или непосредственно в ServiceHost, чтобы обеспечить поддержку этого контракта.  
 >
 > В качестве решения этой проблемы можно добавить <xref:System.ServiceModel.Description.ServiceMetadataBehavior> в файл конфигурации или добавить в код конечную точку и <xref:System.ServiceModel.Description.ServiceMetadataBehavior>.  
 >
@@ -88,6 +88,7 @@ Windows Communication Foundation (WCF) предоставляет широкие
  Можно динамически обновлять привязку, используемую для создания канала к конечной точке службы, если привязка к конечной точке изменяется, или если необходимо создать канал к конечной точке, которая использует тот же контракт, но имеет другую привязку. С помощью статического класса <xref:System.ServiceModel.Description.MetadataResolver> можно во время выполнения извлекать и импортировать метаданные для конечных точек службы, реализующих заданный контракт. После этого импортированные объекты <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType> можно использовать для создания клиента или производства каналов для выбранной конечной точки.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.Description>
 - [Форматы метаданных](../../../../docs/framework/wcf/feature-details/metadata-formats.md)
 - [Экспорт и импорт метаданных](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)

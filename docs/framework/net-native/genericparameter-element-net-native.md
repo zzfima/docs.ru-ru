@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: cbd49732-3615-49a5-a900-f96947cdc3e6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: db9876727244d528ec3b7f1c3c9875bb5ca645b5
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 40fef845a55412e5731ec08bd1e038d6b311694c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257776"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111661"
 ---
 # <a name="genericparameter-element-net-native"></a>\<GenericParameter > элемент (машинный код .NET)
 Применяет политику к параметру типа универсального типа или метода.  
@@ -35,9 +35,9 @@ ms.locfileid: "55257776"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Тип атрибута|Описание:|  
+|Атрибут|Тип атрибута|Описание|  
 |---------------|--------------------|-----------------|  
-|`Name`|Общие правила|Обязательный атрибут. Имя универсального параметра. Например, для универсального делегата <xref:System.Func%603>, значение атрибута `Name` равно «TResult» для применения политики среды выполнения к возвращаемому значению делегата.|  
+|`Name`|Общие|Обязательный атрибут. Имя универсального параметра. Например, для универсального делегата <xref:System.Func%603>, значение атрибута `Name` равно «TResult» для применения политики среды выполнения к возвращаемому значению делегата.|  
 |`Activate`|Отражение|Необязательный атрибут. Управляет доступом среды выполнения к конструкторам для включения активации экземпляров.|  
 |`Browse`|Отражение|Необязательный атрибут. Управляет запросами для получения сведений об элементах программы, но не включает доступ среды выполнения.|  
 |`Dynamic`|Отражение|Необязательный атрибут. Управляет доступом среды выполнения ко всем членам типа, включая конструкторы, методы, поля, свойства и события, чтобы включить динамическое программирование.|  
@@ -57,7 +57,7 @@ ms.locfileid: "55257776"
   
 ## <a name="all-other-attributes"></a>Все остальные атрибуты  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |*policy_setting*|Параметр, применяемый для этого типа политики. Допустимые значения: `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` и `Required All`. Дополнительные сведения см. в разделе [Параметры политики директив среды выполнения](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
   
@@ -68,8 +68,8 @@ ms.locfileid: "55257776"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|Применяет политику отражения среды выполнения к конструктору или методу.|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Применяет политику отражения среды выполнения для конкретного типа, например, класса или структуры.|  
+|[\<Метод >](../../../docs/framework/net-native/method-element-net-native.md)|Применяет политику отражения среды выполнения к конструктору или методу.|  
+|[\<Тип >](../../../docs/framework/net-native/type-element-net-native.md)|Применяет политику отражения среды выполнения для конкретного типа, например, класса или структуры.|  
   
 ## <a name="remarks"></a>Примечания  
  Элемент `<GenericParameter>` является дочерним для элемента [\<Method>](../../../docs/framework/net-native/method-element-net-native.md) или [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) и используется для применения политики к определенному параметру универсального типа, который задается его именем в сигнатуре универсального типа или метода.  
@@ -87,8 +87,9 @@ ms.locfileid: "55257776"
 ```  
   
 ## <a name="see-also"></a>См. также
-- [Элемент \<Method>](../../../docs/framework/net-native/method-element-net-native.md)
+
+- [\<Метод > элемент](../../../docs/framework/net-native/method-element-net-native.md)
 - [\<Тип > элемент](../../../docs/framework/net-native/type-element-net-native.md)
-- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Ссылка на файл конфигурации директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Параметры политики директив среды выполнения](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
 - [Элементы директив среды выполнения](../../../docs/framework/net-native/runtime-directive-elements.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Expander control [WPF], creating
 - controls [WPF], ScrollViewer
 ms.assetid: 2ad124d2-2406-4157-aaf2-64e067298f01
-ms.openlocfilehash: 9e7c023ec371dd6695ffba3368502e5b593c4608
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ef0bc5d344f7d465de9209708430d3e61d40d4f7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369543"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59114654"
 ---
 # <a name="how-to-create-an-expander-with-a-scrollviewer"></a>Практическое руководство. Создание расширителя с элементом ScrollViewer
 В этом примере показано, как создать <xref:System.Windows.Controls.Expander> элемент управления, который содержит сложное содержимое, например изображение и текст. Пример также помещает содержимое <xref:System.Windows.Controls.Expander> в <xref:System.Windows.Controls.ScrollViewer> элемента управления.  
@@ -27,6 +27,7 @@ ms.locfileid: "57369543"
  [!code-csharp[ExpanderRichContent#CreateExpanderCode](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml.cs#createexpandercode)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Controls.Expander>
-- [Общие сведения о расширителе](expander-overview.md)
-- [Разделы практического руководства](expander-how-to-topics.md)
+- [Общие сведения об элементе управления Expander](expander-overview.md)
+- [Практические руководства](expander-how-to-topics.md)

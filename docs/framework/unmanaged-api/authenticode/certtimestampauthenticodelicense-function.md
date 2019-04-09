@@ -10,12 +10,12 @@ api_type:
 ms.assetid: d468325a-21c5-43ce-8567-84e342b22308
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c7b336d1372bdbe0d6dbdcf79d94e14c30ad2ebe
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5ac7cf92fb9c57491ff45e664513c0e82f22db9f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57497344"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111726"
 ---
 # <a name="certtimestampauthenticodelicense-function"></a>Функция CertTimestampAuthenticodeLicense
 Отметки времени для лицензии Authenticode XrML.  
@@ -44,7 +44,8 @@ HRESULT CertTimestampAuthenticodeLicense (
  Подпись с отметкой времени фактически представляет собой сообщение PKCS #7 SignedData, содержимое которого является двоичной формой SignatureValue из подписи лицензии. По сути, она действует как подпись, подтверждающая лицензию.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `S_OK`, если функция выполняется успешно. В противном случае возвращается код ошибки.  
+ `S_OK` Если функция выполняется успешно. В противном случае возвращается код ошибки.  
   
 ## <a name="see-also"></a>См. также
+
 - [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)

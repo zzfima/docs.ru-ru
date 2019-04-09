@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Message Contract
 ms.assetid: 5a200b78-1a46-4104-b7fb-da6dbab33893
-ms.openlocfilehash: c65004189c43e4838c9131f61aaa09a41191b702
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 219e96555a7b9a6ae82b3cea8bd112ddf6e27602
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58817296"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116458"
 ---
 # <a name="default-message-contract"></a>Контракт сообщения по умолчанию
 Образец контракта сообщения по умолчанию демонстрирует службу, в которой пользовательское сообщение, определенное пользователем, передается в операции службы и из операций службы. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) , реализующем интерфейс калькулятора в виде типизированной службы. Вместо отдельных операций службы для сложения, вычитания, умножения и деления, использованных в [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md), в этом образце передается пользовательское сообщение, содержащее операнды и оператор и возвращает результат арифметических вычислений.  
@@ -184,4 +184,3 @@ Press <ENTER> to terminate client.
 >  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Default`  
-  

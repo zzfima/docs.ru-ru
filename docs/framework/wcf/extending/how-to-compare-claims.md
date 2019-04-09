@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Сравнение утверждений
+title: Практическое руководство. Сравнение утверждений
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - claims [WCF], comparing
 - claims [WCF]
 ms.assetid: 0c4ec84d-53df-408f-8953-9bc437f56c28
-ms.openlocfilehash: b375251e1ff083a527249da51dfe12ae9165dd55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: c6230d7618b7885d72ddfebc67157bb48ff9cb38
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720253"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122022"
 ---
-# <a name="how-to-compare-claims"></a>Как выполнить Сравнение утверждений
+# <a name="how-to-compare-claims"></a>Практическое руководство. Сравнение утверждений
 Инфраструктура модели удостоверения в Windows Communication Foundation (WCF) используется для выполнения проверки авторизации. По существу общей задачей является сравнение утверждений в контексте авторизации с утверждениями, необходимыми для выполнения затребованного действия или доступа к затребованному ресурсу. В этом разделе описывается сравнение утверждений, включая встроенные и пользовательские типы утверждений. Дополнительные сведения об инфраструктуре модели удостоверения см. в разделе [управление утверждениями и авторизацией с моделью идентификации](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  
   
  При сравнении утверждений сравниваются три элемента одного утверждения (тип, право и ресурс) с аналогичными элементами другого утверждения, чтобы определить, одинаковы ли они. См. следующий пример.  
@@ -71,5 +71,6 @@ ms.locfileid: "54720253"
  [!code-vb[c_CustomClaimComparison#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#0)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Управление утверждениями и авторизацией с помощью модели удостоверения](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
 - [Практическое руководство. Создание пользовательского утверждения](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)

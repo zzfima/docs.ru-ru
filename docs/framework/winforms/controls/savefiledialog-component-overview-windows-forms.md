@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Save File dialog box [Windows Forms], displaying
 - SaveFileDialog component [Windows Forms], about SaveFileDialog
 ms.assetid: be7a625f-46fd-4d06-9985-b613dcbf9bd2
-ms.openlocfilehash: 93bf0f63e18ee3a384aa062c80faa991b68a6abe
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b06c4d510cefdc7558944995594fd209b6121cb1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721506"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59103050"
 ---
 # <a name="savefiledialog-component-overview-windows-forms"></a>Общие сведения о компоненте SaveFileDialog (Windows Forms)
 Компонент Windows Forms <xref:System.Windows.Forms.SaveFileDialog> является стандартным диалоговым окном. Это так же, как стандартный **сохранить файл** диалоговое окно, используемое с Windows. Он наследуется от класса <xref:System.Windows.Forms.CommonDialog>.  
@@ -25,5 +25,6 @@ ms.locfileid: "57721506"
  При добавлении в форму, <xref:System.Windows.Forms.SaveFileDialog> компонент появится в области в нижней части конструктора Windows Forms.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.SaveFileDialog>
 - [Компонент SaveFileDialog](savefiledialog-component-windows-forms.md)

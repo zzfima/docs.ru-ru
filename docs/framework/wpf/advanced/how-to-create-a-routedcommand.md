@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - RoutedCommand class [WPF], creating
 ms.assetid: aaf6979f-69ab-406f-979f-5766daa85fa0
-ms.openlocfilehash: 4119a762bd0db63108d08a9db9367e367adb6b58
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d433658a3039c262d2f682eff09df646d978018c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372091"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109048"
 ---
 # <a name="how-to-create-a-routedcommand"></a>Практическое руководство. Создание маршрутизируемой команды RoutedCommand
 В этом примере показано, как можно создавать пользовательские <xref:System.Windows.Input.RoutedCommand> и способ реализации пользовательской команды путем создания <xref:System.Windows.Input.ExecutedRoutedEventHandler> и <xref:System.Windows.Input.CanExecuteRoutedEventHandler> и присоединения их <xref:System.Windows.Input.CommandBinding>.  Дополнительные сведения о системе команд см. в разделе [сведения о системе команд](commanding-overview.md).  
@@ -48,5 +48,6 @@ ms.locfileid: "57372091"
  При нажатии кнопки, <xref:System.Windows.Input.RoutedCommand.Execute%2A> метод пользовательского <xref:System.Windows.Input.RoutedCommand> вызывается.  <xref:System.Windows.Input.RoutedCommand> Вызывает <xref:System.Windows.Input.CommandManager.PreviewExecuted> и <xref:System.Windows.Input.CommandManager.Executed> перенаправленных событий.  Эти события проходят по дереву элементов, ищете <xref:System.Windows.Input.CommandBinding> для этой конкретной команды.  Если <xref:System.Windows.Input.CommandBinding> найден, <xref:System.Windows.Input.ExecutedRoutedEventHandler> связанные с <xref:System.Windows.Input.CommandBinding> вызывается.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Input.RoutedCommand>
 - [Общие сведения о системе команд](commanding-overview.md)

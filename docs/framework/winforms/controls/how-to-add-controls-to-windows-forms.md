@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Добавление элементов управления Windows Forms
+title: Практическое руководство. Добавление элементов управления в формы Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 31820775d4f7fb981599e806aa5e27655039e6ac
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 72b5931a79284a93a4e0fdf3cb2cc3b03157f5f7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720778"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106487"
 ---
-# <a name="how-to-add-controls-to-windows-forms"></a>Практическое руководство. Добавление элементов управления Windows Forms
+# <a name="how-to-add-controls-to-windows-forms"></a>Практическое руководство. Добавление элементов управления в формы Windows Forms
 Большинство форм разрабатываются путем добавления элементов управления в область формы для определения пользовательского интерфейса (UI). Объект *управления* — это компонент на форме, использующийся для отображения сведений или принимают пользовательский ввод. Дополнительные сведения об элементах управления см. в разделе [элементов управления Windows Forms](index.md).  
   
 > [!NOTE]
@@ -90,8 +90,9 @@ ms.locfileid: "57720778"
     >  Создание ссылки на вредоносный элемент `UserControl` может поставить локальный компьютер под угрозу атаки по сети. Это может произойти только в том случае, если злоумышленник создаст небезопасный пользовательский элемент управления, а затем вы по ошибке добавите его в проект.  
   
 ## <a name="see-also"></a>См. также
+
 - [Элементы управления Windows Forms](index.md)
-- [Упорядочение элементов управления в формах Windows Forms](arranging-controls-on-windows-forms.md)
+- [Расположение элементов управления в формах Windows Forms](arranging-controls-on-windows-forms.md)
 - [Практическое руководство. Изменение размера элементов управления в формах Windows Forms](how-to-resize-controls-on-windows-forms.md)
-- [Практическое руководство. Задать текст, отображаемый элементом управления форм Windows](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)
+- [Практическое руководство. Определение текста, отображаемого элементом управления Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Элементы управления для использования в формах Windows Forms](controls-to-use-on-windows-forms.md)

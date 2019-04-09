@@ -2,12 +2,12 @@
 title: Написание безопасного динамического кода SQL в SQL Server
 ms.date: 03/30/2017
 ms.assetid: df5512b0-c249-40d2-82f9-f9a2ce6665bc
-ms.openlocfilehash: 446a9f6a49b376f04d1c82d45463d567d89116d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 236fd925740d37c2cccabfcebfb7fcb46361489d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745614"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107358"
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>Написание безопасного динамического кода SQL в SQL Server
 Внедрение кода SQL - это процесс, посредством которого пользователь-злоумышленник вводит инструкции языка Transact-SQL вместо допустимых входных данных. Если входные данные передаются непосредственно на сервер без проверки, и если в приложении не приняты меры против выполнения внедренного кода, то появляется возможность осуществлять злонамеренные действия для повреждения или уничтожения данных.  
@@ -53,7 +53,7 @@ ms.locfileid: "54745614"
 ### <a name="execute-as"></a>EXECUTE AS  
  Предложение EXECUTE AS заменяет разрешения вызывающего объекта разрешениями пользователя, указанного в предложении EXECUTE AS. Вложенные хранимые процедуры или триггеры выполняются в контексте безопасности пользователя-посредника. Это может привести к нарушению работы приложений, которые основаны на использовании средств безопасности уровня строки или требуют аудита. Некоторые функции, возвращающие идентификатор пользователя, возвращают данные о пользователе, указанном в предложении EXECUTE AS, а не данные первоначального вызывающего объекта. Контекст выполнения переходит к вызывающему объекту только после выполнения процедуры или при выполнении инструкции REVERT.  
   
-### <a name="certificate-signing"></a>Подписание сертификата  
+### <a name="certificate-signing"></a>Подпись сертификата  
  При выполнении хранимой процедуры, подписанной с помощью сертификата, разрешения, предоставленные пользователю сертификата, объединяются с разрешениями вызывающего объекта. Контекст выполнения остается тем же; пользователь сертификата не олицетворяет вызывающий объект. Для подписания хранимых процедур необходимо выполнить несколько действий. После каждого изменения процедуры должно быть проведено ее повторное подписание.  
   
 ### <a name="cross-database-access"></a>Доступ к объектам в нескольких базах данных  
@@ -62,15 +62,16 @@ ms.locfileid: "54745614"
 ## <a name="external-resources"></a>Внешние ресурсы  
  Дополнительные сведения см. в следующих ресурсах.  
   
-|Ресурс|Описание:|  
+|Ресурс|Описание|  
 |--------------|-----------------|  
 |[Хранимые процедуры](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) и [Внедрение кода SQL](/sql/relational-databases/security/sql-injection) в электронной документации на SQL Server|Разделы описывают, как создавать хранимые процедуры и как работает внедрение кода SQL.|  
   
 ## <a name="see-also"></a>См. также
+
 - [Защита приложений ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Общие сведения о безопасности SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
 - [Сценарии безопасности приложений в SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
 - [Управление разрешениями с использованием хранимых процедур в SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)
 - [Подписывание хранимых процедур в SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)
 - [Настройка разрешений с олицетворением в SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

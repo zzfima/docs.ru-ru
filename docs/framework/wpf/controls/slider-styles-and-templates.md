@@ -9,12 +9,12 @@ helpviewer_keywords:
 - templates [WPF], Slider
 - ControlTemplate [WPF], Slider
 ms.assetid: d89aa97b-075a-4752-9c41-9679df65c491
-ms.openlocfilehash: 8ec1f436ac0134ccdb19e63592c4181951814cb1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 385a69ad2bd17ae4c51437245915109aad446bdf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375679"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59103198"
 ---
 # <a name="slider-styles-and-templates"></a>Стили и шаблоны элемента Slider
 В этом разделе описываются стили и шаблоны для <xref:System.Windows.Controls.Slider> элемента управления. Вы можете изменить значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> предоставить уникальный внешний вид элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
@@ -22,7 +22,7 @@ ms.locfileid: "57375679"
 ## <a name="slider-parts"></a>Ползунок частей  
  В следующей таблице перечислены именованные части <xref:System.Windows.Controls.Slider> элемента управления.  
   
-|Отделение|Тип|Описание:|  
+|Отделение|Тип|Описание|  
 |-|-|-|  
 |PART_Track|<xref:System.Windows.Controls.Primitives.Track>|Контейнер для элемента, который указывает положение <xref:System.Windows.Controls.Slider>.|  
 |PART_SelectionRange|<xref:System.Windows.FrameworkElement>|Элемент, отображаемый диапазон выбора вдоль <xref:System.Windows.Controls.Slider>.  Диапазон выбора отображается только если <xref:System.Windows.Controls.Slider.IsSelectionRangeEnabled%2A> свойство `true`.|  
@@ -53,9 +53,10 @@ ms.locfileid: "57375679"
  Полный пример см. в разделе [Пример задания стиля с помощью ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
-- [Стили и шаблоны элемента управления](control-styles-and-templates.md)
+- [Стили и шаблоны элемента Control](control-styles-and-templates.md)
 - [Настройка элементов управления](control-customization.md)
 - [Стилизация и использование шаблонов](styling-and-templating.md)
 - [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

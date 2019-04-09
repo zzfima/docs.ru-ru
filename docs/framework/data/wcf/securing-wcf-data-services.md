@@ -8,12 +8,12 @@ helpviewer_keywords:
 - securing application [WCF Data Services]
 - WCF Data Services, security
 ms.assetid: 99fc2baa-a040-4549-bc4d-f683d60298af
-ms.openlocfilehash: bc5fe149050ad0a4784d90d370dfcd3f99663b38
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: 1e134d877c45af00e2a2fb7e7ef0882ffd7ddc48
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920887"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119123"
 ---
 # <a name="securing-wcf-data-services"></a>Защита служб WCF Data Services
 В этом разделе рассматриваются вопросы безопасности, связанные с разработкой, развертыванием и службами WCF Data Services и приложения, доступ, которые поддерживают Open Data Protocol (OData). Кроме того, необходимо следовать рекомендации по созданию безопасных приложений .NET Framework.  
@@ -111,5 +111,6 @@ context.Credentials = _
 -   Рекомендуется, чтобы клиентские приложения всегда проверяли вводимые пользователем данные, а также все данные, принимаемые от недоверенных служб.  
   
 ## <a name="see-also"></a>См. также
+
 - [Определение служб данных WCF](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
 - [Библиотека клиентов служб данных WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

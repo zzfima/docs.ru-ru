@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f435fc71c3b1eb610b57b60a71819a0f835d4189
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: cf74da6eb0e7ce0215023a9a58d6b88c57c4fe8b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466444"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097342"
 ---
 # <a name="icorruntimehostgetconfiguration-method"></a>Метод ICorRuntimeHost::GetConfiguration
 Возвращает объект, который позволяет основному приложению задавать конфигурацию обратного вызова для общеязыковой среды выполнения (CLR).  
@@ -52,4 +52,5 @@ HRESULT GetConfiguration(
  **Версии платформы .NET framework:** 1.0, 1.1  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

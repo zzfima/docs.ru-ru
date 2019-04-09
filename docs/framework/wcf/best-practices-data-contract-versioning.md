@@ -1,5 +1,5 @@
 ---
-title: 'Советы и рекомендации: Управление версиями контракта данных'
+title: Рекомендации. Управление версиями контракта данных
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-ms.openlocfilehash: 544ecc3827a698f92ec29855f1e000fce1907386
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: 9f92e731132eb564b893e3d34ccd322fbcd66ea7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409475"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119006"
 ---
-# <a name="best-practices-data-contract-versioning"></a>Советы и рекомендации: Управление версиями контракта данных
+# <a name="best-practices-data-contract-versioning"></a>Рекомендации. Управление версиями контракта данных
 В данном разделе приводятся рекомендации по созданию контрактов данных, которые можно легко развить со временем. Дополнительные сведения о контрактах данных см. в разделах [Using Data Contracts](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
 ## <a name="note-on-schema-validation"></a>Замечания по проверке схемы  
@@ -91,6 +91,7 @@ ms.locfileid: "58409475"
  В особых обстоятельствах некоторые правила, указанные в данном разделе, можно проигнорировать. Убедитесь, что полностью понимаете принципы работы механизмов сериализации, десериализации и схемы перед тем, как уклониться от выполнения правил.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>

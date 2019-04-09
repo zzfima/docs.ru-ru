@@ -2,15 +2,15 @@
 title: Загрузка примеров баз данных (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: eb42a7af-d410-4b7f-b4a8-13c72ce6fd09
-ms.openlocfilehash: f0fc3e8d447f82c89b3b558d95b45120db0a876d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: a022380bf266997c82de43e103e7d56348447cfc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573348"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104914"
 ---
 # <a name="downloading-sample-databases-linq-to-dataset"></a>Загрузка примеров баз данных (LINQ to DataSet)
-Примеры и пошаговые руководства в [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] документации используется образец базы данных AdventureWorks. Этот продукт можно бесплатно загрузить с веб-сайта загрузки Майкрософт. Образцы и пошаговые руководства в документации по [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] используют в качестве хранилища данных SQL Server. Вместо SQL Server можно использовать SQL Server Express Edition, который доступен для бесплатной загрузки.  
+Примеры и пошаговые руководства в [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] документации используется образец базы данных AdventureWorks. Этот продукт можно бесплатно загрузить с веб-узла корпорации Майкрософт. Образцы и пошаговые руководства в документации по [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] используют в качестве хранилища данных SQL Server. Вместо SQL Server можно использовать SQL Server Express Edition, который доступен для бесплатной загрузки.  
   
 ## <a name="downloading-and-installing-the-adventureworks-database"></a>Загрузка и установка базы данных AdventureWorks  
   
@@ -24,7 +24,7 @@ ms.locfileid: "54573348"
   
 4.  Если установлена предыдущая версия AdventureWorks, ее необходимо удалить перед запуском AdventureWorks.msi.  
   
-#### <a name="to-remove-a-previous-download-of-an-adventureworks-sample-database"></a>Удаление предыдущей версии образца базы данных AdventureWorks   
+#### <a name="to-remove-a-previous-download-of-an-adventureworks-sample-database"></a>Удаление предыдущей версии образца базы данных AdventureWorks  
   
 1.  Удалите базу данных AdventureWorks или AdventureWorksDW.  
   
@@ -74,4 +74,5 @@ ms.locfileid: "54573348"
 3.  Следуйте указаниям по установке, содержащимся на веб-узле.  
   
 ## <a name="see-also"></a>См. также
+
 - [Начало работы](../../../../docs/framework/data/adonet/getting-started-linq-to-dataset.md)

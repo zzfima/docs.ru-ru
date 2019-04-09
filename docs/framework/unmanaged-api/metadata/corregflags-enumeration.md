@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 52b59a4e52d3e0cda7353ec1b39c5307bd7b218e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb6b303fa7569712c854e8dc4e7513d8608e2519
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532270"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104966"
 ---
 # <a name="corregflags-enumeration"></a>Перечисление CorRegFlags
 Предоставляет значения флагов, используемые для регистрации при установке модуля или составного образа.  
@@ -39,7 +39,7 @@ typedef enum
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |`regNoCopy`|Указывает, что файлы не должны копироваться в назначение.|  
 |`regConfig`|Указывает, что модуль или составной конфигурации.|  
@@ -55,4 +55,5 @@ typedef enum
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

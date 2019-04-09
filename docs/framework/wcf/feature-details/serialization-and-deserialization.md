@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-ms.openlocfilehash: 7ddad36c05d9972b9fc613403b68b7c793b6701d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d9afa49525f03c06f94b1b7b704fb3d9caa9e19d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707582"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101820"
 ---
 # <a name="serialization-and-deserialization"></a>Сериализация и десериализация
 Windows Communication Foundation (WCF) включает новый модуль сериализации, <xref:System.Runtime.Serialization.DataContractSerializer>. Сериализатор <xref:System.Runtime.Serialization.DataContractSerializer> преобразует объекты [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] в формат XML и обратно. В данном разделе объясняется, как работает сериализатор.  
@@ -261,6 +261,7 @@ Windows Communication Foundation (WCF) включает новый модуль 
  Обратите также внимание, что сериализатор `NetDataContractSerializer` не выдает полное имя типа и сборки [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для каждого узла в графе объекта. Он выводит эту информацию, только если она неоднозначна. Таким образом, вывод данных осуществляется на уровне корневого объекта и для любых полиморфных случаев.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.NetDataContractSerializer>
 - <xref:System.Runtime.Serialization.XmlObjectSerializer>

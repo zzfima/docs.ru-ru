@@ -8,12 +8,12 @@ helpviewer_keywords:
 - calendar controls [Windows Forms], Windows Forms
 - MonthCalendar control [Windows Forms], setting the first day of the week
 ms.assetid: 788c5325-b721-44ec-95bf-9b680ba0f6a2
-ms.openlocfilehash: a081c4e6d8210a6bb65fa14b31d12d4295931d53
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8928a78735392920d893661c70554bd35eba2886
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718887"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106240"
 ---
 # <a name="monthcalendar-control-overview-windows-forms"></a>Общие сведения об элементе управления MonthCalendar (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.MonthCalendar> управления предоставляет интуитивно понятный графический интерфейс для пользователей, для просмотра и задания сведений о дате. Отображает календарь: сетку, содержащую пронумерованные дни месяца, разбитые на столбцы по дням недели, с помощью выбранного диапазона дат. С помощью кнопок со стрелками с обеих сторон от заголовка месяца можно выбрать другой месяц. В отличие от аналогичного <xref:System.Windows.Forms.DateTimePicker> элемента управления, можно выбрать несколько дат с этим элементом управления. Дополнительные сведения о <xref:System.Windows.Forms.DateTimePicker> управления, см. в разделе [элемента управления DateTimePicker](datetimepicker-control-windows-forms.md).  
@@ -26,5 +26,6 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> управления п�
  Ключевое свойство <xref:System.Windows.Forms.MonthCalendar> элемент управления является <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A>, диапазон дат в элементе управления. <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> Значение не может превышать максимальное число дней, которые могут быть выбраны, установите в <xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A> свойство. Первой и последней даты, пользователь может выбрать определяются <xref:System.Windows.Forms.MonthCalendar.MaxDate%2A> и <xref:System.Windows.Forms.MonthCalendar.MinDate%2A> свойства.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.MonthCalendar>
 - [Элемент управления MonthCalendar](monthcalendar-control-windows-forms.md)

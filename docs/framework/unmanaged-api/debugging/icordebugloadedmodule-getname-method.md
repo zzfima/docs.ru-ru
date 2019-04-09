@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 88c304d5-edaa-4c0e-a8e1-144e8a76877e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f8b3b25c5e6e80b45ffc97e116c8649078f00861
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 9bf09c01d24315c3f239911326f1844a0b2cc101
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57478717"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111271"
 ---
 # <a name="icordebugloadedmodulegetname-method"></a>Метод ICorDebugLoadedModule::GetName
 Получает имя загруженного модуля.  
@@ -38,7 +38,7 @@ HRESULT GetName(
 ## <a name="remarks"></a>Примечания  
   
 > [!NOTE]
->  Этот метод доступен только в .NET Native.  
+>  Этот метод доступен только в машинном коде .NET.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -50,5 +50,6 @@ HRESULT GetName(
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс ICorDebugLoadedModule](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-interface.md)
 - [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

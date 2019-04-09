@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 15226e6efc468974c32c11adec48a35764bc8446
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bf62000fd4ec5c8f3dea3fa7d560b3f9ead33fa7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612259"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113923"
 ---
 # <a name="cornativetype-enumeration"></a>Перечисление CorNativeType
 Содержит значения, описывающие собственные неуправляемые типы.  
@@ -89,7 +89,7 @@ typedef enum CorNativeType {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |`NATIVE_TYPE_END`|Является устаревшей.|  
 |`NATIVE_TYPE_VOID`|Является устаревшей.|  
@@ -147,5 +147,6 @@ typedef enum CorNativeType {
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Runtime.InteropServices.UnmanagedType>
 - [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 3a5f38d1-ebc8-44de-aaeb-2929f6e6b48f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 11ae76a31480cf63a70738c6e416381fdfddbb78
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 854b58a1f57008326874b5e5ee60cc9e6297960b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271165"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085913"
 ---
 # <a name="netfx45cultureawarecomparergethashcodelongstrings-element"></a>\<NetFx45_CultureAwareComparerGetHashCode_LongStrings > элемент
 Определяет, использует ли среда выполнения постоянный объем памяти для вычисления хэш-кодов методом <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> .  
   
  \<configuration>  
 \<Среда выполнения >  
-<NetFx45_CultureAwareComparerGetHashCode_LongStrings>  
+< NetFx45_CultureAwareComparerGetHashCode_LongStrings >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -50,7 +50,7 @@ ms.locfileid: "55271165"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`runtime`|Содержит сведения о параметрах инициализации среды выполнения.|  
@@ -62,6 +62,7 @@ ms.locfileid: "55271165"
 >  В `<NetFx45_CultureAwareComparerGetHashCode_LongStrings>` и более поздних версиях элемент [!INCLUDE[win8](../../../../../includes/win8-md.md)] не используется.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>
 - [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - splines [Windows Forms], Bezier
 - GDI+, Bezier splines
 ms.assetid: 5774ce1e-87d4-4bc7-88c4-4862052781b8
-ms.openlocfilehash: 7648f7f9da72abea4bfc87603eea290614294eff
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ff4e9eb18610b70c88e057d3d44020321bbb9f4f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707265"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107332"
 ---
 # <a name="b233zier-splines-in-gdi"></a>B&#233;Безье сплайны в GDI +
 Сплайн Безье — кривой, определяемый четырьмя точками: двумя конечными точками (p1 и p2) и двумя контрольными точками (c1 и c2). Кривая начинается с p1 и заканчивается в точке p2. Кривая проходит через контрольные точки, но контрольные точки действуют как магниты, который извлекает кривой определенные инструкции и влияние на способ изгиба кривой. Ниже показан кривую Безье, а также его конечные точки и точки управления.  
@@ -38,9 +38,10 @@ ms.locfileid: "57707265"
  ![Пути](./media/aboutgdip02-art13.gif "Aboutgdip02_art13")  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
-- [Линии, кривые и фигуры](lines-curves-and-shapes.md)
+- [Прямые и кривые линии и фигуры](lines-curves-and-shapes.md)
 - [Построение и рисование кривых](constructing-and-drawing-curves.md)
-- [Практическое руководство. Создание объектов Graphics для рисования](how-to-create-graphics-objects-for-drawing.md)
+- [Практическое руководство. Создание графических объектов для рисования](how-to-create-graphics-objects-for-drawing.md)
 - [Практическое руководство. Создание пера](how-to-create-a-pen.md)

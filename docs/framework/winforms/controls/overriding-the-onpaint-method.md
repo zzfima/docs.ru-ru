@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Paint event [Windows Forms], handling in Windows Forms custom control
 - OnPaint method [Windows Forms], overriding in Windows Forms custom controls
 ms.assetid: e9ca2723-0107-4540-bb21-4f5ffb4a9906
-ms.openlocfilehash: 93afd0d463ed3f52ec6425c9de19a6c147860ed9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: baf4e6cb3b2a40b1b792ae12e78cb9f878a738ff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713248"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124310"
 ---
 # <a name="overriding-the-onpaint-method"></a>Переопределение метода OnPaint
 Основные шаги для переопределения любого события, определенные в [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] идентичны и обобщены в следующем списке.  
@@ -87,6 +87,7 @@ public class PaintEventArgs : EventArgs {
  Элемент управления вызывает его <xref:System.Windows.Forms.Control.OnPaint%2A> метод всякий раз, когда ему необходимо изменить его визуального отображения. Этот метод в свою очередь вызывает <xref:System.Windows.Forms.Control.Paint> событий.  
   
 ## <a name="see-also"></a>См. также
+
 - [События](../../../standard/events/index.md)
 - [Отрисовка элементов управления Windows Forms](rendering-a-windows-forms-control.md)
 - [Определение событий](defining-an-event-in-windows-forms-controls.md)

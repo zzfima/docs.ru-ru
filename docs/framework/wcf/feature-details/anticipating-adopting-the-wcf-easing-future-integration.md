@@ -1,15 +1,15 @@
 ---
-title: 'Планирование перехода на платформу Windows Communication Foundation: Упрощение будущей интеграции'
+title: 'Планирование перехода на платформу Windows Communication Foundation: упрощение будущей интеграции'
 ms.date: 03/30/2017
 ms.assetid: 3028bba8-6355-4ee0-9ecd-c56e614cb474
-ms.openlocfilehash: c20011c6cf7a31d8c45769b6995bb6754088bba6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 2f733f9cc33846913539fee4afdd95efa9224058
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731287"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124804"
 ---
-# <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-integration"></a>Планирование перехода на платформу Windows Communication Foundation: Упрощение будущей интеграции
+# <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-integration"></a>Планирование перехода на платформу Windows Communication Foundation: упрощение будущей интеграции
 Если вы используете ASP.NET уже сегодня и ожидается в будущем с помощью WCF, этот раздел содержит рекомендации, чтобы убедиться, что новый веб-служб ASP.NET будет работать хорошо вместе с приложениями WCF.  
   
 ## <a name="general-recommendations"></a>Основные рекомендации  
@@ -44,4 +44,5 @@ public interface IEcho
  Избегайте использования параметров проверки подлинности, предусмотренных в службах IIS. Клиенты WCF не поддерживают их. Если службу необходимо защитить, используйте параметры, предоставляемые WCF, так как эти параметры обеспечивают больше возможностей и основаны на стандартных протоколах.  
   
 ## <a name="see-also"></a>См. также
-- [Планирование перехода на платформу Windows Communication Foundation: Упрощение будущей миграции](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)
+
+- [Планирование перехода на платформу Windows Communication Foundation: упрощение будущей миграции](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)

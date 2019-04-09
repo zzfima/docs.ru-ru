@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
-ms.openlocfilehash: 461ff195ab4f147f98c7bc2ac83f5e8f12edc4c0
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: f4458639aa2c78e7c78bdae66fa2b20d5546743c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093272"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102548"
 ---
 # <a name="queries-in-linq-to-dataset"></a>Запросы в LINQ to DataSet
-Запрос представляет собой выражение, извлекающее данные из источника данных. Запросы обычно выражаются на специализированном языке запросов, например SQL для реляционных баз данных и XQuery для XML. Поэтому разработчикам приходится учить новый язык запросов для каждого типа источника данных и формата данных, для которых выполняется запрос. [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] реализует более простую и согласованную модель работы с данными для различных типов источников данных и различных форматов данных. В запросе [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] работа всегда происходит с программными объектами.  
+Запрос представляет собой выражение, извлекающее данные из источника данных. Запросы обычно выражаются на специализированном языке запросов, например SQL для реляционных баз данных и XQuery для XML. Поэтому разработчикам приходится учить новый язык запросов для каждого типа источника данных и формата данных, для которых выполняется запрос. [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] предлагает простую и согласованную модель для работы с данными для различных типов источников и форматов данных. В запросе [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] работа всегда происходит с программными объектами.  
   
  Операция запроса [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] состоит из трех действий: получение одного или нескольких источников данных, создание запроса и выполнение запроса.  
   
@@ -60,6 +60,7 @@ ms.locfileid: "56093272"
  [!code-vb[DP LINQ to DataSet Examples#ToArray2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#toarray2)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Руководство по программированию](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)
 - [Запросы к DataSet](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)
 - [Приступая к работе с LINQ в C#](~/docs/csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

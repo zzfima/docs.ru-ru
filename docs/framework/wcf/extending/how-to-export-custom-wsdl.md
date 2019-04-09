@@ -1,22 +1,22 @@
 ---
-title: Как выполнить Экспорт пользовательского языка WSDL
+title: Практическое руководство. Экспорт пользовательской информации WSDL
 ms.date: 03/30/2017
 ms.assetid: 5c1e4b58-b76b-472b-9635-2f80d42a0734
-ms.openlocfilehash: 86c6be86febb21f3c676d28357b29db5dcca07db
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 16f34a71882587bbd9782d7a9ea807faa72e8238
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645149"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080764"
 ---
-# <a name="how-to-export-custom-wsdl"></a>Как выполнить Экспорт пользовательского языка WSDL
+# <a name="how-to-export-custom-wsdl"></a>Практическое руководство. Экспорт пользовательской информации WSDL
 В этом разделе рассматривается, как экспортировать пользовательскую информацию WSDL. Для этого будет определен новый атрибут кода с названием `WsdlDocumentationAttribute`, добавляющий пользовательскую информацию в WSDL, создаваемый службой.  
   
 ### <a name="to-export-custom-wsdl-information"></a>Экспорт пользовательской информации WSDL  
   
 1.  Реализовать интерфейс <xref:System.ServiceModel.Description.IWsdlExportExtension>. Этот интерфейс может быть реализован на основе класса, реализующего любой из следующих интерфейсов: <xref:System.ServiceModel.Description.IOperationBehavior>, <xref:System.ServiceModel.Description.IContractBehavior> или <xref:System.ServiceModel.Description.IEndpointBehavior>. Он может также быть реализован на основе класса, производного от класса <xref:System.ServiceModel.Channels.BindingElement>. В этом примере интерфейс <xref:System.ServiceModel.Description.IWsdlExportExtension> реализуется на классе атрибутов, реализующем интерфейс <xref:System.ServiceModel.Description.IContractBehavior>.  
   
-2.  Интерфейс <xref:System.ServiceModel.Description.IWsdlExportExtension> определяет два метода <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlEndpointConversionContext%29> и <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29>. Эти методы позволяют изменять или добавлять (или и изменять, и добавлять) дополнительную информацию в контекст <xref:System.ServiceModel.Description.WsdlContractConversionContext>. В этом примере в методе <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> извлекается коллекция объектов <xref:System.ServiceModel.Description.OperationDescription>, а затем эта коллекция просматривается для проверки наличия атрибута `WsdlDocumentationAttribute`. Если он найден, извлекается текст, связанный с этим атрибутом, создается сводный элемент, который добавляется в элемент `DocumentationElement` операции.  
+2.  <xref:System.ServiceModel.Description.IWsdlExportExtension> Определяет два метода <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlEndpointConversionContext%29> и <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29>. Эти методы позволяют изменять или добавлять (или и изменять, и добавлять) дополнительную информацию в контекст <xref:System.ServiceModel.Description.WsdlContractConversionContext>. В этом примере в методе <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> извлекается коллекция объектов <xref:System.ServiceModel.Description.OperationDescription>, а затем эта коллекция просматривается для проверки наличия атрибута `WsdlDocumentationAttribute`. Если он найден, извлекается текст, связанный с этим атрибутом, создается сводный элемент, который добавляется в элемент `DocumentationElement` операции.  
   
     ```  
             public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext context)  
@@ -196,4 +196,5 @@ return lines;
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Метаданные](../../../../docs/framework/wcf/feature-details/metadata.md)
