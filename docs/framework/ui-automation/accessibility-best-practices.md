@@ -5,12 +5,12 @@ helpviewer_keywords:
 - best practices for accessibility
 - accessibility, best practices for
 ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
-ms.openlocfilehash: e320d47562ea5018a20a82ab555ec7f2db018c40
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: a20ecb8fb8d2ea4efdd244c3460dc9c07e22b538
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676139"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074239"
 ---
 # <a name="accessibility-best-practices"></a>Рекомендации по специальным возможностям
 > [!NOTE]
@@ -24,7 +24,7 @@ ms.locfileid: "57676139"
   
 <a name="Enable_Programmatic_Access_to_all_UI_Elements_and_Text"></a>   
 ### <a name="enable-programmatic-access-to-all-ui-elements-and-text"></a>Включение программного доступа ко всем элементам и тексту пользовательского интерфейса  
- Элементы[!INCLUDE[TLA#tla_ui#initcap](../../../includes/tlasharptla-uisharpinitcap-md.md)] должны включать программный доступ. Если [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] — это стандартный элемент управления [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)], то поддержка программного доступа уже включена в этот элемент управления. Если это пользовательский элемент управления, т. е. элемент управления, являющийся подклассом стандартного элемента управления или элемента управления Control, то вы должны проверить в реализации <xref:System.Windows.Automation.Peers.AutomationPeer> области, которые, возможно, необходимо изменить.  
+ [!INCLUDE[TLA#tla_ui#initcap](../../../includes/tlasharptla-uisharpinitcap-md.md)] элементы должны включать программный доступ. Если [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] — это стандартный элемент управления [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] , то поддержка программного доступа уже включена в этот элемент управления. Если это пользовательский элемент управления, т. е. элемент управления, являющийся подклассом стандартного элемента управления или элемента управления Control, то вы должны проверить в реализации <xref:System.Windows.Automation.Peers.AutomationPeer> области, которые, возможно, необходимо изменить.  
   
  Следование этой рекомендации позволяет поставщикам [!INCLUDE[TLA2#tla_at](../../../includes/tla2sharptla-at-md.md)] идентифицировать элементы [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]вашего продукта и управлять ими.  
   
@@ -131,6 +131,7 @@ ms.locfileid: "57676139"
  Аппаратно-независимые вызовы обеспечивают функциональное равенство клавиатуры и мыши, в то же время предоставляя [!INCLUDE[TLA2#tla_at](../../../includes/tla2sharptla-at-md.md)] с необходимыми сведениями о [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)].  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Automation.Peers>
 - [Пользовательского элемента управления NumericUpDown с темой и пример Поддержка автоматизации пользовательского интерфейса](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771573(v=vs.90))
 - [Рекомендации по проектированию пользовательского интерфейса клавиатуры](https://docs.microsoft.com/previous-versions/windows/desktop/dnacc/guidelines-for-keyboard-user-interface-design)

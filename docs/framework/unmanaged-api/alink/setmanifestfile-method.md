@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f22927b388a62ee6025c987bb107b2dfd51da0e3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 8307960166cfc668a577431d688c439f0f794be2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57489003"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072432"
 ---
 # <a name="setmanifestfile-method"></a>Метод SetManifestFile
 Позволяет задать или сбросить файл манифеста, компоновщик использует при создании сборки.  
@@ -49,6 +49,7 @@ HRESULT SetManifestFile(
  Требуется aLink.h  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс IALink3](../../../../docs/framework/unmanaged-api/alink/ialink3-interface.md)
 - [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
 - [Интерфейс IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)

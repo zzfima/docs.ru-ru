@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Нарисовать вертикальный текст в форме Windows
+title: Практическое руководство. Рисование текста по вертикали в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - text [Windows Forms], drawing
 - text [Windows Forms], vertical text
 ms.assetid: 717a6131-00f6-4373-b574-9894e8317799
-ms.openlocfilehash: c605e7443a9d496901f55171228ad9a485dbff71
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: eb00928205a318b068d49ea3f6f71c398f77bbcd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724504"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072497"
 ---
-# <a name="how-to-draw-vertical-text-on-a-windows-form"></a>Практическое руководство. Нарисовать вертикальный текст в форме Windows
+# <a name="how-to-draw-vertical-text-on-a-windows-form"></a>Практическое руководство. Рисование текста по вертикали в Windows Forms
 В следующем примере кода показано, как нарисовать вертикальный текст в форме с помощью <xref:System.Drawing.Graphics.DrawString%2A> метод <xref:System.Drawing.Graphics>.  
   
 ## <a name="example"></a>Пример  
@@ -38,9 +38,10 @@ ms.locfileid: "57724504"
 -   Шрифт Arial не установлен.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Drawing.Graphics.DrawString%2A>
 - <xref:System.Drawing.StringFormat.FormatFlags%2A>
 - <xref:System.Drawing.StringFormatFlags>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
 - [Приступая к программированию графики](getting-started-with-graphics-programming.md)
-- [Работами со шрифтами и текстом](using-fonts-and-text.md)
+- [Шрифты и текст](using-fonts-and-text.md)

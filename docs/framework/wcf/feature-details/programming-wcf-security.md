@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-ms.openlocfilehash: 2b49031b0001ddba01a888806206360c1cbdbacb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 41157d12f1133878e133895ed0f803bc7018af51
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699471"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087811"
 ---
 # <a name="programming-wcf-security"></a>Программирование безопасности WCF
 В этом разделе описаны основные задачи программирования, используемый для создания безопасного приложения Windows Communication Foundation (WCF). В этом разделе рассматриваются только проверки подлинности, конфиденциальность и целостность, которые в совокупности называются *безопасность передачи*. В этом разделе не рассматривается авторизация (Управление доступом к ресурсам и службам); сведения об авторизации см. в разделе [авторизации](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
@@ -102,5 +102,6 @@ ms.locfileid: "54699471"
  [!code-vb[c_TcpClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_tcpclient/vb/source.vb#1)]  
   
 ## <a name="see-also"></a>См. также
-- [Базовое программирование для WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)
+
+- [Базовое программирование WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)
 - [Типовые сценарии безопасности](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)

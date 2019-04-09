@@ -7,12 +7,12 @@ helpviewer_keywords:
 - animation [WPF], paths
 - path animations [WPF]
 ms.assetid: e9b71017-bac4-40d7-858b-326939442cb1
-ms.openlocfilehash: 6004dad448b965d51be6543478cbd059fb7f4d87
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 714303569111f30d4cc03ab0ab7cb2acec4276c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373482"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072510"
 ---
 # <a name="path-animation-how-to-topics"></a>Практические руководства, посвященные анимации пути
 В подразделах этого раздела демонстрируется анимация объекта вдоль пути.  
@@ -31,6 +31,7 @@ ms.locfileid: "57373482"
  <xref:System.Windows.Media.Animation.Storyboard>  
   
 ## <a name="see-also"></a>См. также
+
 - [Графика и мультимедиа](index.md)
 - [Общие сведения об эффектах анимации](animation-overview.md)
 - [Общие сведения об анимации по ключевым кадрам](key-frame-animations-overview.md)
