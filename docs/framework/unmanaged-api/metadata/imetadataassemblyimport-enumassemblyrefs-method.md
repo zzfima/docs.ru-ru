@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ba85ec920777189940a05864d19e4c24a65b4564
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 91e253669b9f51e7c1d600ba11f13a9ce67fb58a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57499495"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072484"
 ---
-# <a name="imetadataassemblyimportenumassemblyrefs-method"></a><span data-ttu-id="5ee93-102">Метод IMetaDataAssemblyImport::EnumAssemblyRefs</span><span class="sxs-lookup"><span data-stu-id="5ee93-102">IMetaDataAssemblyImport::EnumAssemblyRefs Method</span></span>
-<span data-ttu-id="5ee93-103">Перечисляет `mdAssemblyRef` экземпляров, определенных в манифесте сборки.</span><span class="sxs-lookup"><span data-stu-id="5ee93-103">Enumerates the `mdAssemblyRef` instances that are defined in the assembly manifest.</span></span>  
+# <a name="imetadataassemblyimportenumassemblyrefs-method"></a><span data-ttu-id="83453-102">Метод IMetaDataAssemblyImport::EnumAssemblyRefs</span><span class="sxs-lookup"><span data-stu-id="83453-102">IMetaDataAssemblyImport::EnumAssemblyRefs Method</span></span>
+<span data-ttu-id="83453-103">Перечисляет `mdAssemblyRef` экземпляров, определенных в манифесте сборки.</span><span class="sxs-lookup"><span data-stu-id="83453-103">Enumerates the `mdAssemblyRef` instances that are defined in the assembly manifest.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5ee93-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="5ee93-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="83453-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="83453-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumAssemblyRefs (  
@@ -38,34 +38,35 @@ HRESULT EnumAssemblyRefs (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5ee93-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="5ee93-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="83453-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="83453-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="5ee93-106">[in, out] Указатель на перечислитель.</span><span class="sxs-lookup"><span data-stu-id="5ee93-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="5ee93-107">Это должно быть значение null значение, если `EnumAssemblyRefs` метод вызывается в первый раз.</span><span class="sxs-lookup"><span data-stu-id="5ee93-107">This must be a null value when the `EnumAssemblyRefs` method is called for the first time.</span></span>  
+ <span data-ttu-id="83453-106">[in, out] Указатель на перечислитель.</span><span class="sxs-lookup"><span data-stu-id="83453-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="83453-107">Это должно быть значение null значение, если `EnumAssemblyRefs` метод вызывается в первый раз.</span><span class="sxs-lookup"><span data-stu-id="83453-107">This must be a null value when the `EnumAssemblyRefs` method is called for the first time.</span></span>  
   
  `rAssemblyRefs`  
- <span data-ttu-id="5ee93-108">[out] Перечисление `mdAssemblyRef` токены метаданных.</span><span class="sxs-lookup"><span data-stu-id="5ee93-108">[out] The enumeration of `mdAssemblyRef` metadata tokens.</span></span>  
+ <span data-ttu-id="83453-108">[out] Перечисление `mdAssemblyRef` токены метаданных.</span><span class="sxs-lookup"><span data-stu-id="83453-108">[out] The enumeration of `mdAssemblyRef` metadata tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="5ee93-109">[in] Максимальное количество маркеров, которые могут быть помещены в `rAssemblyRefs` массива.</span><span class="sxs-lookup"><span data-stu-id="5ee93-109">[in] The maximum number of tokens that can be placed in the `rAssemblyRefs` array.</span></span>  
+ <span data-ttu-id="83453-109">[in] Максимальное количество маркеров, которые могут быть помещены в `rAssemblyRefs` массива.</span><span class="sxs-lookup"><span data-stu-id="83453-109">[in] The maximum number of tokens that can be placed in the `rAssemblyRefs` array.</span></span>  
   
  `pcTokens`  
- <span data-ttu-id="5ee93-110">[out] Число маркеров непосредственно в `rAssemblyRefs`.</span><span class="sxs-lookup"><span data-stu-id="5ee93-110">[out] The number of tokens actually placed in `rAssemblyRefs`.</span></span>  
+ <span data-ttu-id="83453-110">[out] Число маркеров непосредственно в `rAssemblyRefs`.</span><span class="sxs-lookup"><span data-stu-id="83453-110">[out] The number of tokens actually placed in `rAssemblyRefs`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="5ee93-111">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="5ee93-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="83453-111">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="83453-111">Return Value</span></span>  
   
-|<span data-ttu-id="5ee93-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="5ee93-112">HRESULT</span></span>|<span data-ttu-id="5ee93-113">Описание</span><span class="sxs-lookup"><span data-stu-id="5ee93-113">Description</span></span>|  
+|<span data-ttu-id="83453-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="83453-112">HRESULT</span></span>|<span data-ttu-id="83453-113">Описание</span><span class="sxs-lookup"><span data-stu-id="83453-113">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="5ee93-114">`EnumAssemblyRefs` успешно возвращен.</span><span class="sxs-lookup"><span data-stu-id="5ee93-114">`EnumAssemblyRefs` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="5ee93-115">Существуют маркеры для перечисления отсутствуют.</span><span class="sxs-lookup"><span data-stu-id="5ee93-115">There are no tokens to enumerate.</span></span> <span data-ttu-id="5ee93-116">В этом случае `pcTokens` присваивается нулевое значение.</span><span class="sxs-lookup"><span data-stu-id="5ee93-116">In this case, `pcTokens` is set to zero.</span></span>|  
+|`S_OK`|`EnumAssemblyRefs` <span data-ttu-id="83453-114">успешно возвращен.</span><span class="sxs-lookup"><span data-stu-id="83453-114">returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="83453-115">Существуют маркеры для перечисления отсутствуют.</span><span class="sxs-lookup"><span data-stu-id="83453-115">There are no tokens to enumerate.</span></span> <span data-ttu-id="83453-116">В этом случае `pcTokens` присваивается нулевое значение.</span><span class="sxs-lookup"><span data-stu-id="83453-116">In this case, `pcTokens` is set to zero.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="5ee93-117">Требования</span><span class="sxs-lookup"><span data-stu-id="5ee93-117">Requirements</span></span>  
- <span data-ttu-id="5ee93-118">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5ee93-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="83453-117">Требования</span><span class="sxs-lookup"><span data-stu-id="83453-117">Requirements</span></span>  
+ <span data-ttu-id="83453-118">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="83453-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5ee93-119">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="5ee93-119">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="83453-119">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="83453-119">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="5ee93-120">**Библиотека:** Используется как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="5ee93-120">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="83453-120">**Библиотека:** Используется как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="83453-120">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="5ee93-121">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5ee93-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="83453-121">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="83453-121">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="5ee93-122">См. также</span><span class="sxs-lookup"><span data-stu-id="5ee93-122">See also</span></span>
-- [<span data-ttu-id="5ee93-123">Интерфейс IMetaDataAssemblyImport</span><span class="sxs-lookup"><span data-stu-id="5ee93-123">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a><span data-ttu-id="83453-122">См. также</span><span class="sxs-lookup"><span data-stu-id="83453-122">See also</span></span>
+
+- [<span data-ttu-id="83453-123">Интерфейс IMetaDataAssemblyImport</span><span class="sxs-lookup"><span data-stu-id="83453-123">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

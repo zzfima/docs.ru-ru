@@ -17,15 +17,16 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ba1133d44218406948ab0fd6e0b82ae404d0931
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5dafaef05305a8f4ab4a196690d98486be96d51e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576841"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082143"
 ---
-# <a name="icordebugeditandcontinuesnapshotcopymetadata-method"></a><span data-ttu-id="bbfe4-102">Метод ICorDebugEditAndContinueSnapshot::CopyMetaData</span><span class="sxs-lookup"><span data-stu-id="bbfe4-102">ICorDebugEditAndContinueSnapshot::CopyMetaData Method</span></span>
-<span data-ttu-id="bbfe4-103">`CopyMetaData` устарел.</span><span class="sxs-lookup"><span data-stu-id="bbfe4-103">`CopyMetaData` is obsolete.</span></span> <span data-ttu-id="bbfe4-104">Этот метод не вызывается.</span><span class="sxs-lookup"><span data-stu-id="bbfe4-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinuesnapshotcopymetadata-method"></a><span data-ttu-id="acb48-102">Метод ICorDebugEditAndContinueSnapshot::CopyMetaData</span><span class="sxs-lookup"><span data-stu-id="acb48-102">ICorDebugEditAndContinueSnapshot::CopyMetaData Method</span></span>
+`CopyMetaData` <span data-ttu-id="acb48-103">является устаревшим.</span><span class="sxs-lookup"><span data-stu-id="acb48-103">is obsolete.</span></span> <span data-ttu-id="acb48-104">Этот метод не вызывается.</span><span class="sxs-lookup"><span data-stu-id="acb48-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bbfe4-105">См. также</span><span class="sxs-lookup"><span data-stu-id="bbfe4-105">See also</span></span>
-- [<span data-ttu-id="bbfe4-106">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="bbfe4-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="acb48-105">См. также</span><span class="sxs-lookup"><span data-stu-id="acb48-105">See also</span></span>
+
+- [<span data-ttu-id="acb48-106">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="acb48-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
