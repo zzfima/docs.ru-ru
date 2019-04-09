@@ -7,26 +7,27 @@ helpviewer_keywords:
 - controls [WPF], Image
 - Image control [WPF]
 ms.assetid: 5707e860-ee4a-4c9f-b123-80c64996af19
-ms.openlocfilehash: 9a57b4a656ca5119ac6717579f49950437588328
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4da98f5caa0cbf4714d16f66a18c67844bf5c201
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357564"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184864"
 ---
-# <a name="image"></a><span data-ttu-id="268f7-102">Изображение</span><span class="sxs-lookup"><span data-stu-id="268f7-102">Image</span></span>
-<span data-ttu-id="268f7-103"><xref:System.Windows.Controls.Image> Элемент используется для отображения растровых изображений в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] приложений.</span><span class="sxs-lookup"><span data-stu-id="268f7-103">The <xref:System.Windows.Controls.Image> element is used to display bitmap images in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications.</span></span>  
+# <a name="image"></a><span data-ttu-id="8235a-102">Изображение</span><span class="sxs-lookup"><span data-stu-id="8235a-102">Image</span></span>
+<span data-ttu-id="8235a-103"><xref:System.Windows.Controls.Image> Элемент используется для отображения растровых изображений в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] приложений.</span><span class="sxs-lookup"><span data-stu-id="8235a-103">The <xref:System.Windows.Controls.Image> element is used to display bitmap images in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="268f7-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="268f7-104">In This Section</span></span>  
- [<span data-ttu-id="268f7-105">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="268f7-105">How-to Topics</span></span>](image-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="8235a-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="8235a-104">In This Section</span></span>  
+ [<span data-ttu-id="8235a-105">Практические руководства</span><span class="sxs-lookup"><span data-stu-id="8235a-105">How-to Topics</span></span>](image-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="268f7-106">Ссылка</span><span class="sxs-lookup"><span data-stu-id="268f7-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="8235a-106">Ссылка</span><span class="sxs-lookup"><span data-stu-id="8235a-106">Reference</span></span>  
  <xref:System.Windows.Controls.Image>  
   
  <xref:System.Windows.Media.Imaging.BitmapImage>  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a><span data-ttu-id="268f7-107">См. также</span><span class="sxs-lookup"><span data-stu-id="268f7-107">See also</span></span>
-- [<span data-ttu-id="268f7-108">Общие сведения об обработке изображений</span><span class="sxs-lookup"><span data-stu-id="268f7-108">Imaging Overview</span></span>](../graphics-multimedia/imaging-overview.md)
-- [<span data-ttu-id="268f7-109">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="268f7-109">How-to Topics</span></span>](../graphics-multimedia/imaging-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="8235a-107">См. также</span><span class="sxs-lookup"><span data-stu-id="8235a-107">See also</span></span>
+
+- [<span data-ttu-id="8235a-108">Общие сведения об обработке изображений</span><span class="sxs-lookup"><span data-stu-id="8235a-108">Imaging Overview</span></span>](../graphics-multimedia/imaging-overview.md)
+- [<span data-ttu-id="8235a-109">Практические руководства</span><span class="sxs-lookup"><span data-stu-id="8235a-109">How-to Topics</span></span>](../graphics-multimedia/imaging-how-to-topics.md)

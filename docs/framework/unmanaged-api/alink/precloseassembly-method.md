@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e1aeffbd5d5b22bea87dd7a49a3268822ce84d38
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: aab42e939651d75b1933962d72ba8bec1090f52d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57481188"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184513"
 ---
-# <a name="precloseassembly-method"></a><span data-ttu-id="269eb-102">Метод PreCloseAssembly</span><span class="sxs-lookup"><span data-stu-id="269eb-102">PreCloseAssembly Method</span></span>
-<span data-ttu-id="269eb-103">Закрывает файл сборки.</span><span class="sxs-lookup"><span data-stu-id="269eb-103">Closes the assembly file.</span></span> <span data-ttu-id="269eb-104">Этот метод следует вызывайте после закрытия всех файлов, но до закрытия файла сборки.</span><span class="sxs-lookup"><span data-stu-id="269eb-104">Call this method after closing all other files, but before closing the assembly file.</span></span> <span data-ttu-id="269eb-105">Не вызывайте этот метод для несвязанных модулей.</span><span class="sxs-lookup"><span data-stu-id="269eb-105">Do not call this method for unbound modules.</span></span>  
+# <a name="precloseassembly-method"></a><span data-ttu-id="71098-102">Метод PreCloseAssembly</span><span class="sxs-lookup"><span data-stu-id="71098-102">PreCloseAssembly Method</span></span>
+<span data-ttu-id="71098-103">Закрывает файл сборки.</span><span class="sxs-lookup"><span data-stu-id="71098-103">Closes the assembly file.</span></span> <span data-ttu-id="71098-104">Этот метод следует вызывайте после закрытия всех файлов, но до закрытия файла сборки.</span><span class="sxs-lookup"><span data-stu-id="71098-104">Call this method after closing all other files, but before closing the assembly file.</span></span> <span data-ttu-id="71098-105">Не вызывайте этот метод для несвязанных модулей.</span><span class="sxs-lookup"><span data-stu-id="71098-105">Do not call this method for unbound modules.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="269eb-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="269eb-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="71098-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="71098-106">Syntax</span></span>  
   
 ```  
 HRESULT PreCloseAssembly(  
@@ -34,17 +34,18 @@ HRESULT PreCloseAssembly(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="269eb-107">Параметры</span><span class="sxs-lookup"><span data-stu-id="269eb-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="71098-107">Параметры</span><span class="sxs-lookup"><span data-stu-id="71098-107">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="269eb-108">Идентификатор сборки.</span><span class="sxs-lookup"><span data-stu-id="269eb-108">ID of the assembly.</span></span>  
+ <span data-ttu-id="71098-108">Идентификатор сборки.</span><span class="sxs-lookup"><span data-stu-id="71098-108">ID of the assembly.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="269eb-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="269eb-109">Return Value</span></span>  
- <span data-ttu-id="269eb-110">Возвращает S_OK, если метод выполнен успешно.</span><span class="sxs-lookup"><span data-stu-id="269eb-110">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="71098-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="71098-109">Return Value</span></span>  
+ <span data-ttu-id="71098-110">Возвращает S_OK, если метод выполнен успешно.</span><span class="sxs-lookup"><span data-stu-id="71098-110">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="269eb-111">Требования</span><span class="sxs-lookup"><span data-stu-id="269eb-111">Requirements</span></span>  
- <span data-ttu-id="269eb-112">Требуется alink.h.</span><span class="sxs-lookup"><span data-stu-id="269eb-112">Requires alink.h.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="71098-111">Требования</span><span class="sxs-lookup"><span data-stu-id="71098-111">Requirements</span></span>  
+ <span data-ttu-id="71098-112">Требуется alink.h.</span><span class="sxs-lookup"><span data-stu-id="71098-112">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="269eb-113">См. также</span><span class="sxs-lookup"><span data-stu-id="269eb-113">See also</span></span>
-- [<span data-ttu-id="269eb-114">Интерфейс IALink</span><span class="sxs-lookup"><span data-stu-id="269eb-114">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="269eb-115">Интерфейс IALink2</span><span class="sxs-lookup"><span data-stu-id="269eb-115">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="269eb-116">API ALink</span><span class="sxs-lookup"><span data-stu-id="269eb-116">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a><span data-ttu-id="71098-113">См. также</span><span class="sxs-lookup"><span data-stu-id="71098-113">See also</span></span>
+
+- [<span data-ttu-id="71098-114">Интерфейс IALink</span><span class="sxs-lookup"><span data-stu-id="71098-114">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [<span data-ttu-id="71098-115">Интерфейс IALink2</span><span class="sxs-lookup"><span data-stu-id="71098-115">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [<span data-ttu-id="71098-116">API ALink</span><span class="sxs-lookup"><span data-stu-id="71098-116">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

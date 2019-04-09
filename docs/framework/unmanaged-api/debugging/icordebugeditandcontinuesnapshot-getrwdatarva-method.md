@@ -17,15 +17,16 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e84f2a5d8d57847ae7b4a8b06ce9fd296443ceba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 31ad3032b50298e08f349049adab8aa18a09f12e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563578"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156381"
 ---
-# <a name="icordebugeditandcontinuesnapshotgetrwdatarva-method"></a><span data-ttu-id="a6a51-102">Метод ICorDebugEditAndContinueSnapshot::GetRwDataRVA</span><span class="sxs-lookup"><span data-stu-id="a6a51-102">ICorDebugEditAndContinueSnapshot::GetRwDataRVA Method</span></span>
-<span data-ttu-id="a6a51-103">`GetRwDataRVA` устарел.</span><span class="sxs-lookup"><span data-stu-id="a6a51-103">`GetRwDataRVA` is obsolete.</span></span> <span data-ttu-id="a6a51-104">Этот метод не вызывается.</span><span class="sxs-lookup"><span data-stu-id="a6a51-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinuesnapshotgetrwdatarva-method"></a><span data-ttu-id="f2ea2-102">Метод ICorDebugEditAndContinueSnapshot::GetRwDataRVA</span><span class="sxs-lookup"><span data-stu-id="f2ea2-102">ICorDebugEditAndContinueSnapshot::GetRwDataRVA Method</span></span>
+`GetRwDataRVA` <span data-ttu-id="f2ea2-103">является устаревшим.</span><span class="sxs-lookup"><span data-stu-id="f2ea2-103">is obsolete.</span></span> <span data-ttu-id="f2ea2-104">Этот метод не вызывается.</span><span class="sxs-lookup"><span data-stu-id="f2ea2-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a6a51-105">См. также</span><span class="sxs-lookup"><span data-stu-id="a6a51-105">See also</span></span>
-- [<span data-ttu-id="a6a51-106">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="a6a51-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="f2ea2-105">См. также</span><span class="sxs-lookup"><span data-stu-id="f2ea2-105">See also</span></span>
+
+- [<span data-ttu-id="f2ea2-106">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="f2ea2-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe8be6a7c18fff54825f981672f0f640bb60c35c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 315d6dd522f3c6be2d36b1eb411d9f471350df60
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482214"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182927"
 ---
-# <a name="cordebuggctype-enumeration"></a><span data-ttu-id="c32e2-102">Перечисление CorDebugGCType</span><span class="sxs-lookup"><span data-stu-id="c32e2-102">CorDebugGCType Enumeration</span></span>
-<span data-ttu-id="c32e2-103">Указывает, где выполняется сборщик мусора: на рабочей станции или на сервере.</span><span class="sxs-lookup"><span data-stu-id="c32e2-103">Indicates whether the garbage collector is running on a workstation or a server.</span></span>  
+# <a name="cordebuggctype-enumeration"></a><span data-ttu-id="f61c8-102">Перечисление CorDebugGCType</span><span class="sxs-lookup"><span data-stu-id="f61c8-102">CorDebugGCType Enumeration</span></span>
+<span data-ttu-id="f61c8-103">Указывает, где выполняется сборщик мусора: на рабочей станции или на сервере.</span><span class="sxs-lookup"><span data-stu-id="f61c8-103">Indicates whether the garbage collector is running on a workstation or a server.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c32e2-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="c32e2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f61c8-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f61c8-104">Syntax</span></span>  
   
 ```  
 typedef enum CorDebugGCType {  
@@ -35,25 +35,26 @@ typedef enum CorDebugGCType {
 } CorDebugGCType;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c32e2-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="c32e2-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f61c8-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="f61c8-105">Parameters</span></span>  
   
-## <a name="members"></a><span data-ttu-id="c32e2-106">Участники</span><span class="sxs-lookup"><span data-stu-id="c32e2-106">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="f61c8-106">Участники</span><span class="sxs-lookup"><span data-stu-id="f61c8-106">Members</span></span>  
   
-|<span data-ttu-id="c32e2-107">Имя члена</span><span class="sxs-lookup"><span data-stu-id="c32e2-107">Member name</span></span>|<span data-ttu-id="c32e2-108">Описание:</span><span class="sxs-lookup"><span data-stu-id="c32e2-108">Description</span></span>|  
+|<span data-ttu-id="f61c8-107">Имя члена</span><span class="sxs-lookup"><span data-stu-id="f61c8-107">Member name</span></span>|<span data-ttu-id="f61c8-108">Описание</span><span class="sxs-lookup"><span data-stu-id="f61c8-108">Description</span></span>|  
 |-----------------|-----------------|  
-|`CorDebugWorkstationGC`|<span data-ttu-id="c32e2-109">Сборщик мусора работает на рабочей станции.</span><span class="sxs-lookup"><span data-stu-id="c32e2-109">The garbage collector is running on a workstation.</span></span>|  
-|`CorDebugServerGC`|<span data-ttu-id="c32e2-110">Сборщик мусора работает на сервере.</span><span class="sxs-lookup"><span data-stu-id="c32e2-110">The garbage collector is running on a server.</span></span>|  
+|`CorDebugWorkstationGC`|<span data-ttu-id="f61c8-109">Сборщик мусора работает на рабочей станции.</span><span class="sxs-lookup"><span data-stu-id="f61c8-109">The garbage collector is running on a workstation.</span></span>|  
+|`CorDebugServerGC`|<span data-ttu-id="f61c8-110">Сборщик мусора работает на сервере.</span><span class="sxs-lookup"><span data-stu-id="f61c8-110">The garbage collector is running on a server.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="c32e2-111">Примечания</span><span class="sxs-lookup"><span data-stu-id="c32e2-111">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f61c8-111">Примечания</span><span class="sxs-lookup"><span data-stu-id="f61c8-111">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c32e2-112">Требования</span><span class="sxs-lookup"><span data-stu-id="c32e2-112">Requirements</span></span>  
- <span data-ttu-id="c32e2-113">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c32e2-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f61c8-112">Требования</span><span class="sxs-lookup"><span data-stu-id="f61c8-112">Requirements</span></span>  
+ <span data-ttu-id="f61c8-113">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f61c8-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c32e2-114">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c32e2-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="f61c8-114">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f61c8-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="c32e2-115">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c32e2-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f61c8-115">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f61c8-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c32e2-116">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c32e2-116">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ **<span data-ttu-id="f61c8-116">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="f61c8-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="c32e2-117">См. также</span><span class="sxs-lookup"><span data-stu-id="c32e2-117">See also</span></span>
-- [<span data-ttu-id="c32e2-118">Перечисления отладки</span><span class="sxs-lookup"><span data-stu-id="c32e2-118">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="f61c8-117">См. также</span><span class="sxs-lookup"><span data-stu-id="f61c8-117">See also</span></span>
+
+- [<span data-ttu-id="f61c8-118">Перечисления отладки</span><span class="sxs-lookup"><span data-stu-id="f61c8-118">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

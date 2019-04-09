@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cbb290314328023c95d0028dd90687b1a6926ff5
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 519fa1b2c2866a6906d833251e18d86b7b43d525
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57501075"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153729"
 ---
-# <a name="isymunmanagedreadersymbolsearchinfogetsymbolsearchinfo-method"></a><span data-ttu-id="0a9c8-102">Метод ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfo</span><span class="sxs-lookup"><span data-stu-id="0a9c8-102">ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfo Method</span></span>
-<span data-ttu-id="0a9c8-103">Возвращает сведения о поиске символа.</span><span class="sxs-lookup"><span data-stu-id="0a9c8-103">Gets symbol search information.</span></span>  
+# <a name="isymunmanagedreadersymbolsearchinfogetsymbolsearchinfo-method"></a><span data-ttu-id="18293-102">Метод ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfo</span><span class="sxs-lookup"><span data-stu-id="18293-102">ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfo Method</span></span>
+<span data-ttu-id="18293-103">Возвращает сведения о поиске символа.</span><span class="sxs-lookup"><span data-stu-id="18293-103">Gets symbol search information.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0a9c8-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="0a9c8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="18293-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="18293-104">Syntax</span></span>  
   
 ```  
 HRESULT GetSymbolSearchInfo(  
@@ -37,21 +37,22 @@ HRESULT GetSymbolSearchInfo(
         ISymUnmanagedSymbolSearchInfo **rgpSearchInfo);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0a9c8-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="0a9c8-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="18293-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="18293-105">Parameters</span></span>  
  `cSearchInfo`  
- <span data-ttu-id="0a9c8-106">[in] Объект `ULONG32` указывает размер `rgpSearchInfo`.</span><span class="sxs-lookup"><span data-stu-id="0a9c8-106">[in] A `ULONG32` that indicates the size of `rgpSearchInfo`.</span></span>  
+ <span data-ttu-id="18293-106">[in] Объект `ULONG32` указывает размер `rgpSearchInfo`.</span><span class="sxs-lookup"><span data-stu-id="18293-106">[in] A `ULONG32` that indicates the size of `rgpSearchInfo`.</span></span>  
   
  `pcSearchInfo`  
- <span data-ttu-id="0a9c8-107">[out] Указатель на `ULONG32` , принимает размер буфера, требуемого для хранения сведений для поиска.</span><span class="sxs-lookup"><span data-stu-id="0a9c8-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the search information.</span></span>  
+ <span data-ttu-id="18293-107">[out] Указатель на `ULONG32` , принимает размер буфера, требуемого для хранения сведений для поиска.</span><span class="sxs-lookup"><span data-stu-id="18293-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the search information.</span></span>  
   
  `rgpSearchInfo`  
- <span data-ttu-id="0a9c8-108">[out] Указатель, который имеет значение равное возвращаемому [ISymUnmanagedSymbolSearchInfo](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md) интерфейс.</span><span class="sxs-lookup"><span data-stu-id="0a9c8-108">[out] A pointer that is set to the returned [ISymUnmanagedSymbolSearchInfo](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md) interface.</span></span>  
+ <span data-ttu-id="18293-108">[out] Указатель, который имеет значение равное возвращаемому [ISymUnmanagedSymbolSearchInfo](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md) интерфейс.</span><span class="sxs-lookup"><span data-stu-id="18293-108">[out] A pointer that is set to the returned [ISymUnmanagedSymbolSearchInfo](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md) interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="0a9c8-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="0a9c8-109">Return Value</span></span>  
- <span data-ttu-id="0a9c8-110">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="0a9c8-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="18293-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="18293-109">Return Value</span></span>  
+ <span data-ttu-id="18293-110">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="18293-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0a9c8-111">Требования</span><span class="sxs-lookup"><span data-stu-id="0a9c8-111">Requirements</span></span>  
- <span data-ttu-id="0a9c8-112">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="0a9c8-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="18293-111">Требования</span><span class="sxs-lookup"><span data-stu-id="18293-111">Requirements</span></span>  
+ <span data-ttu-id="18293-112">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="18293-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0a9c8-113">См. также</span><span class="sxs-lookup"><span data-stu-id="0a9c8-113">See also</span></span>
-- [<span data-ttu-id="0a9c8-114">Интерфейс ISymUnmanagedReaderSymbolSearchInfo</span><span class="sxs-lookup"><span data-stu-id="0a9c8-114">ISymUnmanagedReaderSymbolSearchInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-interface.md)
+## <a name="see-also"></a><span data-ttu-id="18293-113">См. также</span><span class="sxs-lookup"><span data-stu-id="18293-113">See also</span></span>
+
+- [<span data-ttu-id="18293-114">Интерфейс ISymUnmanagedReaderSymbolSearchInfo</span><span class="sxs-lookup"><span data-stu-id="18293-114">ISymUnmanagedReaderSymbolSearchInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-interface.md)

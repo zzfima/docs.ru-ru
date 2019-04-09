@@ -17,15 +17,16 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 79c159f218a3d842e532bffdac79066ffe5df820
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ab2a1c0c3f280f115a408adc81a46196eb5a804c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538470"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152585"
 ---
-# <a name="icordebugeditandcontinueerrorinfogettoken-method"></a><span data-ttu-id="07e6a-102">Метод ICorDebugEditAndContinueErrorInfo::GetToken</span><span class="sxs-lookup"><span data-stu-id="07e6a-102">ICorDebugEditAndContinueErrorInfo::GetToken Method</span></span>
-<span data-ttu-id="07e6a-103">`GetToken` устарел.</span><span class="sxs-lookup"><span data-stu-id="07e6a-103">`GetToken` is obsolete.</span></span> <span data-ttu-id="07e6a-104">Этот метод не вызывается.</span><span class="sxs-lookup"><span data-stu-id="07e6a-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinueerrorinfogettoken-method"></a><span data-ttu-id="ad582-102">Метод ICorDebugEditAndContinueErrorInfo::GetToken</span><span class="sxs-lookup"><span data-stu-id="ad582-102">ICorDebugEditAndContinueErrorInfo::GetToken Method</span></span>
+`GetToken` <span data-ttu-id="ad582-103">является устаревшим.</span><span class="sxs-lookup"><span data-stu-id="ad582-103">is obsolete.</span></span> <span data-ttu-id="ad582-104">Этот метод не вызывается.</span><span class="sxs-lookup"><span data-stu-id="ad582-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="07e6a-105">См. также</span><span class="sxs-lookup"><span data-stu-id="07e6a-105">See also</span></span>
-- [<span data-ttu-id="07e6a-106">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="07e6a-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="ad582-105">См. также</span><span class="sxs-lookup"><span data-stu-id="ad582-105">See also</span></span>
+
+- [<span data-ttu-id="ad582-106">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="ad582-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

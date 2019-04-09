@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 31b302977950b3daeab6ac2be117c7f8db51eb2e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 408e72eeaa1dac83c45488d186425f30c6043280
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654767"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155627"
 ---
-# <a name="cordebugexceptionunwindcallbacktype-enumeration"></a><span data-ttu-id="74043-102">Перечисление CorDebugExceptionUnwindCallbackType</span><span class="sxs-lookup"><span data-stu-id="74043-102">CorDebugExceptionUnwindCallbackType Enumeration</span></span>
-<span data-ttu-id="74043-103">Указывает событие, о котором сообщает обратный вызов во время фазы перемотки.</span><span class="sxs-lookup"><span data-stu-id="74043-103">Indicates the event that is being signaled by the callback during the unwind phase.</span></span>  
+# <a name="cordebugexceptionunwindcallbacktype-enumeration"></a><span data-ttu-id="b24fd-102">Перечисление CorDebugExceptionUnwindCallbackType</span><span class="sxs-lookup"><span data-stu-id="b24fd-102">CorDebugExceptionUnwindCallbackType Enumeration</span></span>
+<span data-ttu-id="b24fd-103">Указывает событие, о котором сообщает обратный вызов во время фазы перемотки.</span><span class="sxs-lookup"><span data-stu-id="b24fd-103">Indicates the event that is being signaled by the callback during the unwind phase.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="74043-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="74043-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b24fd-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b24fd-104">Syntax</span></span>  
   
 ```  
 typedef enum CorDebugExceptionUnwindCallbackType {  
@@ -35,21 +35,22 @@ typedef enum CorDebugExceptionUnwindCallbackType {
 } CorDebugExceptionUnwindCallbackType;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="74043-105">Участники</span><span class="sxs-lookup"><span data-stu-id="74043-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="b24fd-105">Участники</span><span class="sxs-lookup"><span data-stu-id="b24fd-105">Members</span></span>  
   
-|<span data-ttu-id="74043-106">Член</span><span class="sxs-lookup"><span data-stu-id="74043-106">Member</span></span>|<span data-ttu-id="74043-107">Описание:</span><span class="sxs-lookup"><span data-stu-id="74043-107">Description</span></span>|  
+|<span data-ttu-id="b24fd-106">Член</span><span class="sxs-lookup"><span data-stu-id="b24fd-106">Member</span></span>|<span data-ttu-id="b24fd-107">Описание</span><span class="sxs-lookup"><span data-stu-id="b24fd-107">Description</span></span>|  
 |------------|-----------------|  
-|`DEBUG_EXCEPTION_UNWIND_BEGIN`|<span data-ttu-id="74043-108">Начало процесса очистки.</span><span class="sxs-lookup"><span data-stu-id="74043-108">The beginning of the unwind process.</span></span>|  
-|`DEBUG_EXCEPTION_INTERCEPTED`|<span data-ttu-id="74043-109">Было перехвачено исключение.</span><span class="sxs-lookup"><span data-stu-id="74043-109">The exception was intercepted.</span></span>|  
+|`DEBUG_EXCEPTION_UNWIND_BEGIN`|<span data-ttu-id="b24fd-108">Начало процесса очистки.</span><span class="sxs-lookup"><span data-stu-id="b24fd-108">The beginning of the unwind process.</span></span>|  
+|`DEBUG_EXCEPTION_INTERCEPTED`|<span data-ttu-id="b24fd-109">Было перехвачено исключение.</span><span class="sxs-lookup"><span data-stu-id="b24fd-109">The exception was intercepted.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="74043-110">Требования</span><span class="sxs-lookup"><span data-stu-id="74043-110">Requirements</span></span>  
- <span data-ttu-id="74043-111">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="74043-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b24fd-110">Требования</span><span class="sxs-lookup"><span data-stu-id="b24fd-110">Requirements</span></span>  
+ <span data-ttu-id="b24fd-111">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b24fd-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="74043-112">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="74043-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="b24fd-112">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b24fd-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="74043-113">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="74043-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b24fd-113">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b24fd-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="74043-114">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="74043-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="b24fd-114">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="b24fd-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="74043-115">См. также</span><span class="sxs-lookup"><span data-stu-id="74043-115">See also</span></span>
-- [<span data-ttu-id="74043-116">Перечисления отладки</span><span class="sxs-lookup"><span data-stu-id="74043-116">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="b24fd-115">См. также</span><span class="sxs-lookup"><span data-stu-id="b24fd-115">See also</span></span>
+
+- [<span data-ttu-id="b24fd-116">Перечисления отладки</span><span class="sxs-lookup"><span data-stu-id="b24fd-116">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

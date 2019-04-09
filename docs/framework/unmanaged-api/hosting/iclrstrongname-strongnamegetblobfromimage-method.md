@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 498dd5f8242b4db29d2bb292e01001f9240e6fc3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 7fa83f55a03ebfff9ae88217b01c86272bf0de93
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57481005"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178975"
 ---
-# <a name="iclrstrongnamestrongnamegetblobfromimage-method"></a><span data-ttu-id="7308c-102">Метод ICLRStrongName::StrongNameGetBlobFromImage</span><span class="sxs-lookup"><span data-stu-id="7308c-102">ICLRStrongName::StrongNameGetBlobFromImage Method</span></span>
-<span data-ttu-id="7308c-103">Получает двоичное представление образа сборки по указанному адресу памяти.</span><span class="sxs-lookup"><span data-stu-id="7308c-103">Gets a binary representation of the assembly image at the specified memory address.</span></span>  
+# <a name="iclrstrongnamestrongnamegetblobfromimage-method"></a><span data-ttu-id="ed611-102">Метод ICLRStrongName::StrongNameGetBlobFromImage</span><span class="sxs-lookup"><span data-stu-id="ed611-102">ICLRStrongName::StrongNameGetBlobFromImage Method</span></span>
+<span data-ttu-id="ed611-103">Получает двоичное представление образа сборки по указанному адресу памяти.</span><span class="sxs-lookup"><span data-stu-id="ed611-103">Gets a binary representation of the assembly image at the specified memory address.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7308c-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="7308c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ed611-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="ed611-104">Syntax</span></span>  
   
 ```  
 HRESULT StrongNameGetBlobFromImage (  
@@ -38,31 +38,32 @@ HRESULT StrongNameGetBlobFromImage (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7308c-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="7308c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ed611-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="ed611-105">Parameters</span></span>  
  `pbBase`  
- <span data-ttu-id="7308c-106">[in] Адрес памяти, сопоставленной сборки манифеста.</span><span class="sxs-lookup"><span data-stu-id="7308c-106">[in] The memory address of the mapped assembly manifest.</span></span>  
+ <span data-ttu-id="ed611-106">[in] Адрес памяти, сопоставленной сборки манифеста.</span><span class="sxs-lookup"><span data-stu-id="ed611-106">[in] The memory address of the mapped assembly manifest.</span></span>  
   
  `dwLength`  
- <span data-ttu-id="7308c-107">[in] Размер в байтах, изображения в `pbBase`.</span><span class="sxs-lookup"><span data-stu-id="7308c-107">[in] The size, in bytes, of the image at `pbBase`.</span></span>  
+ <span data-ttu-id="ed611-107">[in] Размер в байтах, изображения в `pbBase`.</span><span class="sxs-lookup"><span data-stu-id="ed611-107">[in] The size, in bytes, of the image at `pbBase`.</span></span>  
   
  `pbBlob`  
- <span data-ttu-id="7308c-108">[in] Буфер, содержащий двоичное представление изображения.</span><span class="sxs-lookup"><span data-stu-id="7308c-108">[in] A buffer to contain the binary representation of the image.</span></span>  
+ <span data-ttu-id="ed611-108">[in] Буфер, содержащий двоичное представление изображения.</span><span class="sxs-lookup"><span data-stu-id="ed611-108">[in] A buffer to contain the binary representation of the image.</span></span>  
   
  `pcbBlob`  
- <span data-ttu-id="7308c-109">[in, out] Максимальный размер в байтах, запрошенную `pbBlob`.</span><span class="sxs-lookup"><span data-stu-id="7308c-109">[in, out] The requested maximum size, in bytes, of `pbBlob`.</span></span> <span data-ttu-id="7308c-110">По возвращении фактический размер в байтах из `pbBlob`.</span><span class="sxs-lookup"><span data-stu-id="7308c-110">Upon return, the actual size, in bytes, of `pbBlob`.</span></span>  
+ <span data-ttu-id="ed611-109">[in, out] Максимальный размер в байтах, запрошенную `pbBlob`.</span><span class="sxs-lookup"><span data-stu-id="ed611-109">[in, out] The requested maximum size, in bytes, of `pbBlob`.</span></span> <span data-ttu-id="ed611-110">По возвращении фактический размер в байтах из `pbBlob`.</span><span class="sxs-lookup"><span data-stu-id="ed611-110">Upon return, the actual size, in bytes, of `pbBlob`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="7308c-111">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="7308c-111">Return Value</span></span>  
- <span data-ttu-id="7308c-112">`S_OK` Если метод успешно завершена; в противном случае — значение HRESULT, указывающее на сбой (см. в разделе [часто встречающихся значений HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) список).</span><span class="sxs-lookup"><span data-stu-id="7308c-112">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="ed611-111">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="ed611-111">Return Value</span></span>  
+ `S_OK` <span data-ttu-id="ed611-112">Если метод успешно завершена; в противном случае — значение HRESULT, указывающее на сбой (см. в разделе [часто встречающихся значений HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) список).</span><span class="sxs-lookup"><span data-stu-id="ed611-112">if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7308c-113">Требования</span><span class="sxs-lookup"><span data-stu-id="7308c-113">Requirements</span></span>  
- <span data-ttu-id="7308c-114">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7308c-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ed611-113">Требования</span><span class="sxs-lookup"><span data-stu-id="ed611-113">Requirements</span></span>  
+ <span data-ttu-id="ed611-114">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ed611-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7308c-115">**Заголовок.** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="7308c-115">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="ed611-115">**Заголовок.** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="ed611-115">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="7308c-116">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="7308c-116">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="ed611-116">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="ed611-116">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="7308c-117">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7308c-117">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ **<span data-ttu-id="ed611-117">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="ed611-117">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="7308c-118">См. также</span><span class="sxs-lookup"><span data-stu-id="7308c-118">See also</span></span>
-- [<span data-ttu-id="7308c-119">Метод StrongNameGetBlob</span><span class="sxs-lookup"><span data-stu-id="7308c-119">StrongNameGetBlob Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md)
-- [<span data-ttu-id="7308c-120">Интерфейс ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="7308c-120">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="ed611-118">См. также</span><span class="sxs-lookup"><span data-stu-id="ed611-118">See also</span></span>
+
+- [<span data-ttu-id="ed611-119">Метод StrongNameGetBlob</span><span class="sxs-lookup"><span data-stu-id="ed611-119">StrongNameGetBlob Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md)
+- [<span data-ttu-id="ed611-120">Интерфейс ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="ed611-120">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

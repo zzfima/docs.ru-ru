@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Захват данных пользователем в PrintDialog во время выполнения
+title: Практическое руководство. Перенаправление данных, введенных пользователем в PrintDialog во время выполнения
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - print options
 - run time [Windows Forms], changing print options
 ms.assetid: 438501d8-9a70-4fb3-aae6-e46579aba0c6
-ms.openlocfilehash: 69a3632ddb4d68f5a916f5ffca020630abe1bd68
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: c1b0a7e66a4c2050ea5b92a55a39ea46a7b762c9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707340"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176726"
 ---
-# <a name="how-to-capture-user-input-from-a-printdialog-at-run-time"></a><span data-ttu-id="512f4-102">Практическое руководство. Захват данных пользователем в PrintDialog во время выполнения</span><span class="sxs-lookup"><span data-stu-id="512f4-102">How to: Capture User Input from a PrintDialog at Run Time</span></span>
-<span data-ttu-id="512f4-103">Хотя можно задать параметры, относящиеся к печати во время разработки, иногда требуется изменить эти параметры во время выполнения, скорее всего, из-за выборов, сделанных пользователем.</span><span class="sxs-lookup"><span data-stu-id="512f4-103">While you can set options related to printing at design time, you will sometimes want to change these options at run time, most likely because of choices made by the user.</span></span> <span data-ttu-id="512f4-104">Ввод данных для печати документа с помощью <xref:System.Windows.Forms.PrintDialog> и <xref:System.Drawing.Printing.PrintDocument> компонентов.</span><span class="sxs-lookup"><span data-stu-id="512f4-104">You can capture user input for printing a document using the <xref:System.Windows.Forms.PrintDialog> and the <xref:System.Drawing.Printing.PrintDocument> components.</span></span>  
+# <a name="how-to-capture-user-input-from-a-printdialog-at-run-time"></a><span data-ttu-id="f2c84-102">Практическое руководство. Перенаправление данных, введенных пользователем в PrintDialog во время выполнения</span><span class="sxs-lookup"><span data-stu-id="f2c84-102">How to: Capture User Input from a PrintDialog at Run Time</span></span>
+<span data-ttu-id="f2c84-103">Хотя можно задать параметры, относящиеся к печати во время разработки, иногда требуется изменить эти параметры во время выполнения, скорее всего, из-за выборов, сделанных пользователем.</span><span class="sxs-lookup"><span data-stu-id="f2c84-103">While you can set options related to printing at design time, you will sometimes want to change these options at run time, most likely because of choices made by the user.</span></span> <span data-ttu-id="f2c84-104">Ввод данных для печати документа с помощью <xref:System.Windows.Forms.PrintDialog> и <xref:System.Drawing.Printing.PrintDocument> компонентов.</span><span class="sxs-lookup"><span data-stu-id="f2c84-104">You can capture user input for printing a document using the <xref:System.Windows.Forms.PrintDialog> and the <xref:System.Drawing.Printing.PrintDocument> components.</span></span>  
   
-### <a name="to-change-print-options-programmatically"></a><span data-ttu-id="512f4-105">Чтобы изменить параметры печати программными средствами</span><span class="sxs-lookup"><span data-stu-id="512f4-105">To change print options programmatically</span></span>  
+### <a name="to-change-print-options-programmatically"></a><span data-ttu-id="f2c84-105">Чтобы изменить параметры печати программными средствами</span><span class="sxs-lookup"><span data-stu-id="f2c84-105">To change print options programmatically</span></span>  
   
-1.  <span data-ttu-id="512f4-106">Добавить <xref:System.Windows.Forms.PrintDialog> и <xref:System.Drawing.Printing.PrintDocument> форму компонента.</span><span class="sxs-lookup"><span data-stu-id="512f4-106">Add a <xref:System.Windows.Forms.PrintDialog> and a <xref:System.Drawing.Printing.PrintDocument> component to your form.</span></span>  
+1.  <span data-ttu-id="f2c84-106">Добавить <xref:System.Windows.Forms.PrintDialog> и <xref:System.Drawing.Printing.PrintDocument> форму компонента.</span><span class="sxs-lookup"><span data-stu-id="f2c84-106">Add a <xref:System.Windows.Forms.PrintDialog> and a <xref:System.Drawing.Printing.PrintDocument> component to your form.</span></span>  
   
-2.  <span data-ttu-id="512f4-107">Задайте <xref:System.Windows.Forms.PrintDialog.Document%2A> свойство <xref:System.Windows.Forms.PrintDialog> для <xref:System.Drawing.Printing.PrintDocument> добавления в форму.</span><span class="sxs-lookup"><span data-stu-id="512f4-107">Set the <xref:System.Windows.Forms.PrintDialog.Document%2A> property of the <xref:System.Windows.Forms.PrintDialog> to the <xref:System.Drawing.Printing.PrintDocument> added to the form.</span></span>  
+2.  <span data-ttu-id="f2c84-107">Задайте <xref:System.Windows.Forms.PrintDialog.Document%2A> свойство <xref:System.Windows.Forms.PrintDialog> для <xref:System.Drawing.Printing.PrintDocument> добавления в форму.</span><span class="sxs-lookup"><span data-stu-id="f2c84-107">Set the <xref:System.Windows.Forms.PrintDialog.Document%2A> property of the <xref:System.Windows.Forms.PrintDialog> to the <xref:System.Drawing.Printing.PrintDocument> added to the form.</span></span>  
   
     ```vb  
     PrintDialog1.Document = PrintDocument1  
@@ -39,7 +39,7 @@ ms.locfileid: "57707340"
     printDialog1->Document = PrintDocument1;  
     ```  
   
-3.  <span data-ttu-id="512f4-108">Отображение <xref:System.Windows.Forms.PrintDialog> компонент с помощью <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="512f4-108">Display the <xref:System.Windows.Forms.PrintDialog> component by using the <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> method.</span></span>  
+3.  <span data-ttu-id="f2c84-108">Отображение <xref:System.Windows.Forms.PrintDialog> компонент с помощью <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="f2c84-108">Display the <xref:System.Windows.Forms.PrintDialog> component by using the <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> method.</span></span>  
   
     ```vb  
     PrintDialog1.ShowDialog()  
@@ -53,8 +53,9 @@ ms.locfileid: "57707340"
     printDialog1->ShowDialog();  
     ```  
   
-4.  <span data-ttu-id="512f4-109">Пользователя вариантами печати из диалогового окна будут скопированы в <xref:System.Drawing.Printing.PrinterSettings> свойство <xref:System.Drawing.Printing.PrintDocument> компонента.</span><span class="sxs-lookup"><span data-stu-id="512f4-109">The user's printing choices from the dialog will be copied to the <xref:System.Drawing.Printing.PrinterSettings> property of the <xref:System.Drawing.Printing.PrintDocument> component.</span></span>  
+4.  <span data-ttu-id="f2c84-109">Пользователя вариантами печати из диалогового окна будут скопированы в <xref:System.Drawing.Printing.PrinterSettings> свойство <xref:System.Drawing.Printing.PrintDocument> компонента.</span><span class="sxs-lookup"><span data-stu-id="f2c84-109">The user's printing choices from the dialog will be copied to the <xref:System.Drawing.Printing.PrinterSettings> property of the <xref:System.Drawing.Printing.PrintDocument> component.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="512f4-110">См. также</span><span class="sxs-lookup"><span data-stu-id="512f4-110">See also</span></span>
-- [<span data-ttu-id="512f4-111">Практическое руководство. Печать многостраничных текстовых файлов в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="512f4-111">How to: Print a Multi-Page Text File in Windows Forms</span></span>](how-to-print-a-multi-page-text-file-in-windows-forms.md)
-- [<span data-ttu-id="512f4-112">Поддержка печати в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="512f4-112">Windows Forms Print Support</span></span>](windows-forms-print-support.md)
+## <a name="see-also"></a><span data-ttu-id="f2c84-110">См. также</span><span class="sxs-lookup"><span data-stu-id="f2c84-110">See also</span></span>
+
+- [<span data-ttu-id="f2c84-111">Практическое руководство. Печать многостраничных текстовых файлов в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="f2c84-111">How to: Print a Multi-Page Text File in Windows Forms</span></span>](how-to-print-a-multi-page-text-file-in-windows-forms.md)
+- [<span data-ttu-id="f2c84-112">Поддержка печати в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="f2c84-112">Windows Forms Print Support</span></span>](windows-forms-print-support.md)

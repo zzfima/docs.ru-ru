@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0e6f76750f82655922f00c9d9fa71e87ab3c05df
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 808c48bb0c516c51f39a8424acf49869b1bc9208
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487139"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165234"
 ---
-# <a name="imetadataimportgettyperefprops-method"></a><span data-ttu-id="9a1cc-102">Метод IMetaDataImport::GetTypeRefProps</span><span class="sxs-lookup"><span data-stu-id="9a1cc-102">IMetaDataImport::GetTypeRefProps Method</span></span>
-<span data-ttu-id="9a1cc-103">Возвращает метаданные, связанные с <xref:System.Type> ссылается указанный токен TypeRef.</span><span class="sxs-lookup"><span data-stu-id="9a1cc-103">Gets the metadata associated with the <xref:System.Type> referenced by the specified TypeRef token.</span></span>  
+# <a name="imetadataimportgettyperefprops-method"></a><span data-ttu-id="3842e-102">Метод IMetaDataImport::GetTypeRefProps</span><span class="sxs-lookup"><span data-stu-id="3842e-102">IMetaDataImport::GetTypeRefProps Method</span></span>
+<span data-ttu-id="3842e-103">Возвращает метаданные, связанные с <xref:System.Type> ссылается указанный токен TypeRef.</span><span class="sxs-lookup"><span data-stu-id="3842e-103">Gets the metadata associated with the <xref:System.Type> referenced by the specified TypeRef token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9a1cc-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="9a1cc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3842e-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="3842e-104">Syntax</span></span>  
   
 ```  
 HRESULT GetTypeRefProps (  
@@ -39,31 +39,32 @@ HRESULT GetTypeRefProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9a1cc-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="9a1cc-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3842e-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="3842e-105">Parameters</span></span>  
  `tr`  
- <span data-ttu-id="9a1cc-106">[in] Токен TypeRef, который представляет метаданные для возвращаемого типа.</span><span class="sxs-lookup"><span data-stu-id="9a1cc-106">[in] The TypeRef token that represents the type to return metadata for.</span></span>  
+ <span data-ttu-id="3842e-106">[in] Токен TypeRef, который представляет метаданные для возвращаемого типа.</span><span class="sxs-lookup"><span data-stu-id="3842e-106">[in] The TypeRef token that represents the type to return metadata for.</span></span>  
   
  `ptkResolutionScope`  
- <span data-ttu-id="9a1cc-107">[out] Указатель на область, в котором имеется ссылка.</span><span class="sxs-lookup"><span data-stu-id="9a1cc-107">[out] A pointer to the scope in which the reference is made.</span></span> <span data-ttu-id="9a1cc-108">Это значение является маркером AssemblyRef или ModuleRef, представляющий.</span><span class="sxs-lookup"><span data-stu-id="9a1cc-108">This value is an AssemblyRef or ModuleRef token.</span></span>  
+ <span data-ttu-id="3842e-107">[out] Указатель на область, в котором имеется ссылка.</span><span class="sxs-lookup"><span data-stu-id="3842e-107">[out] A pointer to the scope in which the reference is made.</span></span> <span data-ttu-id="3842e-108">Это значение является маркером AssemblyRef или ModuleRef, представляющий.</span><span class="sxs-lookup"><span data-stu-id="3842e-108">This value is an AssemblyRef or ModuleRef token.</span></span>  
   
  `szName`  
- <span data-ttu-id="9a1cc-109">[out] Буфер, содержащий имя типа.</span><span class="sxs-lookup"><span data-stu-id="9a1cc-109">[out] A buffer containing the type name.</span></span>  
+ <span data-ttu-id="3842e-109">[out] Буфер, содержащий имя типа.</span><span class="sxs-lookup"><span data-stu-id="3842e-109">[out] A buffer containing the type name.</span></span>  
   
  `cchName`  
- <span data-ttu-id="9a1cc-110">[in] Запрошенный размер в расширенных символах `szName`.</span><span class="sxs-lookup"><span data-stu-id="9a1cc-110">[in] The requested size in wide characters of `szName`.</span></span>  
+ <span data-ttu-id="3842e-110">[in] Запрошенный размер в расширенных символах `szName`.</span><span class="sxs-lookup"><span data-stu-id="3842e-110">[in] The requested size in wide characters of `szName`.</span></span>  
   
  `pchName`  
- <span data-ttu-id="9a1cc-111">[out] Возвращаемый размер в расширенных символах `szName`.</span><span class="sxs-lookup"><span data-stu-id="9a1cc-111">[out] The returned size in wide characters of `szName`.</span></span>  
+ <span data-ttu-id="3842e-111">[out] Возвращаемый размер в расширенных символах `szName`.</span><span class="sxs-lookup"><span data-stu-id="3842e-111">[out] The returned size in wide characters of `szName`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9a1cc-112">Требования</span><span class="sxs-lookup"><span data-stu-id="9a1cc-112">Requirements</span></span>  
- <span data-ttu-id="9a1cc-113">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9a1cc-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3842e-112">Требования</span><span class="sxs-lookup"><span data-stu-id="3842e-112">Requirements</span></span>  
+ <span data-ttu-id="3842e-113">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3842e-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9a1cc-114">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="9a1cc-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="3842e-114">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="3842e-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="9a1cc-115">**Библиотека:** Включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="9a1cc-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="3842e-115">**Библиотека:** Включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="3842e-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="9a1cc-116">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9a1cc-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="3842e-116">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="3842e-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="9a1cc-117">См. также</span><span class="sxs-lookup"><span data-stu-id="9a1cc-117">See also</span></span>
-- [<span data-ttu-id="9a1cc-118">Интерфейс IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="9a1cc-118">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="9a1cc-119">Интерфейс IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="9a1cc-119">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="3842e-117">См. также</span><span class="sxs-lookup"><span data-stu-id="3842e-117">See also</span></span>
+
+- [<span data-ttu-id="3842e-118">Интерфейс IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="3842e-118">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="3842e-119">Интерфейс IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="3842e-119">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

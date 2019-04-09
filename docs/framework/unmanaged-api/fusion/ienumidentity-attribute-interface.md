@@ -16,32 +16,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ae940946c56cbc858690cccce61597d0016e40c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d725228f2a7359d415673fdcb90d0cabae1a40be
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54571812"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175530"
 ---
-# <a name="ienumidentityattribute-interface"></a><span data-ttu-id="73933-102">Интерфейс IEnumIDENTITY_ATTRIBUTE</span><span class="sxs-lookup"><span data-stu-id="73933-102">IEnumIDENTITY_ATTRIBUTE Interface</span></span>
-<span data-ttu-id="73933-103">Служит в качестве перечислителя для атрибутов объекта кода в текущей области.</span><span class="sxs-lookup"><span data-stu-id="73933-103">Serves as an enumerator for the attributes of the code object in the current scope.</span></span>  
+# <a name="ienumidentityattribute-interface"></a><span data-ttu-id="dd65d-102">Интерфейс IEnumIDENTITY_ATTRIBUTE</span><span class="sxs-lookup"><span data-stu-id="dd65d-102">IEnumIDENTITY_ATTRIBUTE Interface</span></span>
+<span data-ttu-id="dd65d-103">Служит в качестве перечислителя для атрибутов объекта кода в текущей области.</span><span class="sxs-lookup"><span data-stu-id="dd65d-103">Serves as an enumerator for the attributes of the code object in the current scope.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="73933-104">Методы</span><span class="sxs-lookup"><span data-stu-id="73933-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="dd65d-104">Методы</span><span class="sxs-lookup"><span data-stu-id="dd65d-104">Methods</span></span>  
   
-|<span data-ttu-id="73933-105">Метод</span><span class="sxs-lookup"><span data-stu-id="73933-105">Method</span></span>|<span data-ttu-id="73933-106">Описание:</span><span class="sxs-lookup"><span data-stu-id="73933-106">Description</span></span>|  
+|<span data-ttu-id="dd65d-105">Метод</span><span class="sxs-lookup"><span data-stu-id="dd65d-105">Method</span></span>|<span data-ttu-id="dd65d-106">Описание</span><span class="sxs-lookup"><span data-stu-id="dd65d-106">Description</span></span>|  
 |------------|-----------------|  
-|`IEnumIDENTITY_ATTRIBUTE::Clone`|<span data-ttu-id="73933-107">Получает указатель интерфейса на новый `IEnumIDENTITY_ATTRIBUTE` , содержащий те же члены, что это `IEnumIDENTITY_ATTRIBUTE`.</span><span class="sxs-lookup"><span data-stu-id="73933-107">Gets an interface pointer to a new `IEnumIDENTITY_ATTRIBUTE` that contains the same members as this `IEnumIDENTITY_ATTRIBUTE`.</span></span>|  
-|`IEnumIDENTITY_ATTRIBUTE::CurrentIntoBuffer`|<span data-ttu-id="73933-108">Записывает данные, содержащиеся в элементах этого `IEnumIDENTITY_ATTRIBUTE` для указанного буфера данных.</span><span class="sxs-lookup"><span data-stu-id="73933-108">Writes the data contained in the elements of this `IEnumIDENTITY_ATTRIBUTE` to the specified data buffer.</span></span>|  
-|`IEnumIDENTITY_ATTRIBUTE::Next`|<span data-ttu-id="73933-109">Возвращает заданное число атрибутов, начиная с текущей позиции.</span><span class="sxs-lookup"><span data-stu-id="73933-109">Gets the specified number of attributes, starting at the current position.</span></span>|  
-|`IEnumIDENTITY_ATTRIBUTE::Reset`|<span data-ttu-id="73933-110">Перемещает указатель инструкций в начале `IEnumIDENTITY_ATTRIBUTE`.</span><span class="sxs-lookup"><span data-stu-id="73933-110">Moves the instruction pointer to the beginning of this `IEnumIDENTITY_ATTRIBUTE`.</span></span>|  
-|`IEnumIDENTITY_ATTRIBUTE::Skip`|<span data-ttu-id="73933-111">Перемещает указатель инструкций вперед на указанное число элементов, начиная с текущей позиции.</span><span class="sxs-lookup"><span data-stu-id="73933-111">Moves the instruction pointer forward by the specified number of elements, starting at the current position.</span></span>|  
+|`IEnumIDENTITY_ATTRIBUTE::Clone`|<span data-ttu-id="dd65d-107">Получает указатель интерфейса на новый `IEnumIDENTITY_ATTRIBUTE` , содержащий те же члены, что это `IEnumIDENTITY_ATTRIBUTE`.</span><span class="sxs-lookup"><span data-stu-id="dd65d-107">Gets an interface pointer to a new `IEnumIDENTITY_ATTRIBUTE` that contains the same members as this `IEnumIDENTITY_ATTRIBUTE`.</span></span>|  
+|`IEnumIDENTITY_ATTRIBUTE::CurrentIntoBuffer`|<span data-ttu-id="dd65d-108">Записывает данные, содержащиеся в элементах этого `IEnumIDENTITY_ATTRIBUTE` для указанного буфера данных.</span><span class="sxs-lookup"><span data-stu-id="dd65d-108">Writes the data contained in the elements of this `IEnumIDENTITY_ATTRIBUTE` to the specified data buffer.</span></span>|  
+|`IEnumIDENTITY_ATTRIBUTE::Next`|<span data-ttu-id="dd65d-109">Возвращает заданное число атрибутов, начиная с текущей позиции.</span><span class="sxs-lookup"><span data-stu-id="dd65d-109">Gets the specified number of attributes, starting at the current position.</span></span>|  
+|`IEnumIDENTITY_ATTRIBUTE::Reset`|<span data-ttu-id="dd65d-110">Перемещает указатель инструкций в начале `IEnumIDENTITY_ATTRIBUTE`.</span><span class="sxs-lookup"><span data-stu-id="dd65d-110">Moves the instruction pointer to the beginning of this `IEnumIDENTITY_ATTRIBUTE`.</span></span>|  
+|`IEnumIDENTITY_ATTRIBUTE::Skip`|<span data-ttu-id="dd65d-111">Перемещает указатель инструкций вперед на указанное число элементов, начиная с текущей позиции.</span><span class="sxs-lookup"><span data-stu-id="dd65d-111">Moves the instruction pointer forward by the specified number of elements, starting at the current position.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="73933-112">Требования</span><span class="sxs-lookup"><span data-stu-id="73933-112">Requirements</span></span>  
- <span data-ttu-id="73933-113">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="73933-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dd65d-112">Требования</span><span class="sxs-lookup"><span data-stu-id="dd65d-112">Requirements</span></span>  
+ <span data-ttu-id="dd65d-113">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="dd65d-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="73933-114">**Заголовок.** Isolation.h</span><span class="sxs-lookup"><span data-stu-id="73933-114">**Header:** Isolation.h</span></span>  
+ <span data-ttu-id="dd65d-114">**Заголовок.** Isolation.h</span><span class="sxs-lookup"><span data-stu-id="dd65d-114">**Header:** Isolation.h</span></span>  
   
- <span data-ttu-id="73933-115">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="73933-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="dd65d-115">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="dd65d-115">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="73933-116">См. также</span><span class="sxs-lookup"><span data-stu-id="73933-116">See also</span></span>
-- [<span data-ttu-id="73933-117">Интерфейсы Fusion</span><span class="sxs-lookup"><span data-stu-id="73933-117">Fusion Interfaces</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="dd65d-116">См. также</span><span class="sxs-lookup"><span data-stu-id="dd65d-116">See also</span></span>
+
+- [<span data-ttu-id="dd65d-117">Fusion-интерфейсы</span><span class="sxs-lookup"><span data-stu-id="dd65d-117">Fusion Interfaces</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)

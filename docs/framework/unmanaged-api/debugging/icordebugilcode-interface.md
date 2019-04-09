@@ -12,33 +12,34 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b13968e999fb737c954fc41ed2ec220e7894b73b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 279a87039c4cbc12c7ec5f734928c851185280f0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634097"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175725"
 ---
-# <a name="icordebugilcode-interface"></a><span data-ttu-id="a2c2f-102">Интерфейс ICorDebugILCode</span><span class="sxs-lookup"><span data-stu-id="a2c2f-102">ICorDebugILCode Interface</span></span>
-<span data-ttu-id="a2c2f-103">[Поддерживается в .NET Framework 4.5.2 и более поздних версиях.]</span><span class="sxs-lookup"><span data-stu-id="a2c2f-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
+# <a name="icordebugilcode-interface"></a><span data-ttu-id="05a43-102">Интерфейс ICorDebugILCode</span><span class="sxs-lookup"><span data-stu-id="05a43-102">ICorDebugILCode Interface</span></span>
+<span data-ttu-id="05a43-103">[Поддерживается в .NET Framework 4.5.2 и более поздних версиях.]</span><span class="sxs-lookup"><span data-stu-id="05a43-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
   
- <span data-ttu-id="a2c2f-104">Представляет сегмент кода промежуточного языка.</span><span class="sxs-lookup"><span data-stu-id="a2c2f-104">Represents a segment of intermediate language (IL) code.</span></span>  
+ <span data-ttu-id="05a43-104">Представляет сегмент кода промежуточного языка.</span><span class="sxs-lookup"><span data-stu-id="05a43-104">Represents a segment of intermediate language (IL) code.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="a2c2f-105">Методы</span><span class="sxs-lookup"><span data-stu-id="a2c2f-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="05a43-105">Методы</span><span class="sxs-lookup"><span data-stu-id="05a43-105">Methods</span></span>  
   
-|<span data-ttu-id="a2c2f-106">Метод</span><span class="sxs-lookup"><span data-stu-id="a2c2f-106">Method</span></span>|<span data-ttu-id="a2c2f-107">Описание:</span><span class="sxs-lookup"><span data-stu-id="a2c2f-107">Description</span></span>|  
+|<span data-ttu-id="05a43-106">Метод</span><span class="sxs-lookup"><span data-stu-id="05a43-106">Method</span></span>|<span data-ttu-id="05a43-107">Описание</span><span class="sxs-lookup"><span data-stu-id="05a43-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="a2c2f-108">Метод GetEHClauses</span><span class="sxs-lookup"><span data-stu-id="a2c2f-108">GetEHClauses Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)|<span data-ttu-id="a2c2f-109">Возвращает указатель на список предложений обработки исключений, определенных для этого промежуточного языка.</span><span class="sxs-lookup"><span data-stu-id="a2c2f-109">Returns a pointer to a list of exception handling (EH) clauses that are defined for this IL.</span></span>|  
+|[<span data-ttu-id="05a43-108">Метод GetEHClauses</span><span class="sxs-lookup"><span data-stu-id="05a43-108">GetEHClauses Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)|<span data-ttu-id="05a43-109">Возвращает указатель на список предложений обработки исключений, определенных для этого промежуточного языка.</span><span class="sxs-lookup"><span data-stu-id="05a43-109">Returns a pointer to a list of exception handling (EH) clauses that are defined for this IL.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="a2c2f-110">Требования</span><span class="sxs-lookup"><span data-stu-id="a2c2f-110">Requirements</span></span>  
- <span data-ttu-id="a2c2f-111">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a2c2f-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="05a43-110">Требования</span><span class="sxs-lookup"><span data-stu-id="05a43-110">Requirements</span></span>  
+ <span data-ttu-id="05a43-111">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="05a43-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a2c2f-112">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a2c2f-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="05a43-112">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="05a43-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="a2c2f-113">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a2c2f-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="05a43-113">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="05a43-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a2c2f-114">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a2c2f-114">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
+ **<span data-ttu-id="05a43-114">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="05a43-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="a2c2f-115">См. также</span><span class="sxs-lookup"><span data-stu-id="a2c2f-115">See also</span></span>
-- [<span data-ttu-id="a2c2f-116">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="a2c2f-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="a2c2f-117">Отладка</span><span class="sxs-lookup"><span data-stu-id="a2c2f-117">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="05a43-115">См. также</span><span class="sxs-lookup"><span data-stu-id="05a43-115">See also</span></span>
+
+- [<span data-ttu-id="05a43-116">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="05a43-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="05a43-117">Отладка</span><span class="sxs-lookup"><span data-stu-id="05a43-117">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
