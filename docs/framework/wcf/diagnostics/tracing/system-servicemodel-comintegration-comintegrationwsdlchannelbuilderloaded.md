@@ -2,20 +2,21 @@
 title: System.ServiceModel.ComIntegration.ComIntegrationWsdlChannelBuilderLoaded
 ms.date: 03/30/2017
 ms.assetid: b816e27e-e902-4009-bd61-325d68195f28
-ms.openlocfilehash: d1f88442491961d0b88e72e7ffb0d688148d43bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb47d69b3a3f39cd64fed9893d01c91e2cd8b53b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493148"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072468"
 ---
-# <a name="systemservicemodelcomintegrationcomintegrationwsdlchannelbuilderloaded"></a><span data-ttu-id="54704-102">System.ServiceModel.ComIntegration.ComIntegrationWsdlChannelBuilderLoaded</span><span class="sxs-lookup"><span data-stu-id="54704-102">System.ServiceModel.ComIntegration.ComIntegrationWsdlChannelBuilderLoaded</span></span>
-<span data-ttu-id="54704-103">System.ServiceModel.ComIntegration.ComIntegrationWsdlChannelBuilderLoaded</span><span class="sxs-lookup"><span data-stu-id="54704-103">System.ServiceModel.ComIntegration.ComIntegrationWsdlChannelBuilderLoaded</span></span>  
+# <a name="systemservicemodelcomintegrationcomintegrationwsdlchannelbuilderloaded"></a><span data-ttu-id="72bee-102">System.ServiceModel.ComIntegration.ComIntegrationWsdlChannelBuilderLoaded</span><span class="sxs-lookup"><span data-stu-id="72bee-102">System.ServiceModel.ComIntegration.ComIntegrationWsdlChannelBuilderLoaded</span></span>
+<span data-ttu-id="72bee-103">System.ServiceModel.ComIntegration.ComIntegrationWsdlChannelBuilderLoaded</span><span class="sxs-lookup"><span data-stu-id="72bee-103">System.ServiceModel.ComIntegration.ComIntegrationWsdlChannelBuilderLoaded</span></span>  
   
-## <a name="description"></a><span data-ttu-id="54704-104">Описание</span><span class="sxs-lookup"><span data-stu-id="54704-104">Description</span></span>  
- <span data-ttu-id="54704-105">ComPlus: Загружается конструктор каналов WSDL.</span><span class="sxs-lookup"><span data-stu-id="54704-105">ComPlus: The WSDL channel builder is loaded.</span></span>  
+## <a name="description"></a><span data-ttu-id="72bee-104">Описание</span><span class="sxs-lookup"><span data-stu-id="72bee-104">Description</span></span>  
+ <span data-ttu-id="72bee-105">ComPlus: Загружается конструктор каналов WSDL.</span><span class="sxs-lookup"><span data-stu-id="72bee-105">ComPlus: The WSDL channel builder is loaded.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="54704-106">См. также</span><span class="sxs-lookup"><span data-stu-id="54704-106">See also</span></span>
-- [<span data-ttu-id="54704-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="54704-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="54704-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="54704-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="54704-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="54704-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="72bee-106">См. также</span><span class="sxs-lookup"><span data-stu-id="72bee-106">See also</span></span>
+
+- [<span data-ttu-id="72bee-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="72bee-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="72bee-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="72bee-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="72bee-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="72bee-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

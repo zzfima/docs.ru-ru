@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a8ecb529534f4ed1a1d12d9613ebd46f8b99fdb8
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 362cbe9ff19e74bafc73fde857d231185179efbe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487515"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079556"
 ---
-# <a name="imetadataimportgettypespecfromtoken-method"></a><span data-ttu-id="05189-102">Метод IMetaDataImport::GetTypeSpecFromToken</span><span class="sxs-lookup"><span data-stu-id="05189-102">IMetaDataImport::GetTypeSpecFromToken Method</span></span>
-<span data-ttu-id="05189-103">Возвращает двоичную подпись метаданных для спецификации типа, представленного указанным токеном.</span><span class="sxs-lookup"><span data-stu-id="05189-103">Gets the binary metadata signature of the type specification represented by the specified token.</span></span>  
+# <a name="imetadataimportgettypespecfromtoken-method"></a><span data-ttu-id="0dd88-102">Метод IMetaDataImport::GetTypeSpecFromToken</span><span class="sxs-lookup"><span data-stu-id="0dd88-102">IMetaDataImport::GetTypeSpecFromToken Method</span></span>
+<span data-ttu-id="0dd88-103">Возвращает двоичную подпись метаданных для спецификации типа, представленного указанным токеном.</span><span class="sxs-lookup"><span data-stu-id="0dd88-103">Gets the binary metadata signature of the type specification represented by the specified token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="05189-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="05189-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0dd88-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="0dd88-104">Syntax</span></span>  
   
 ```  
 HRESULT GetTypeSpecFromToken (   
@@ -37,28 +37,29 @@ HRESULT GetTypeSpecFromToken (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="05189-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="05189-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0dd88-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="0dd88-105">Parameters</span></span>  
  `typespec`  
- <span data-ttu-id="05189-106">[in] Токен TypeSpec, связанного с подписью, запрошенных метаданных.</span><span class="sxs-lookup"><span data-stu-id="05189-106">[in] The TypeSpec token associated with the requested metadata signature.</span></span>  
+ <span data-ttu-id="0dd88-106">[in] Токен TypeSpec, связанного с подписью, запрошенных метаданных.</span><span class="sxs-lookup"><span data-stu-id="0dd88-106">[in] The TypeSpec token associated with the requested metadata signature.</span></span>  
   
  `ppvSig`  
- <span data-ttu-id="05189-107">[out] Указатель на двоичную подпись метаданных.</span><span class="sxs-lookup"><span data-stu-id="05189-107">[out] A pointer to the binary metadata signature.</span></span>  
+ <span data-ttu-id="0dd88-107">[out] Указатель на двоичную подпись метаданных.</span><span class="sxs-lookup"><span data-stu-id="0dd88-107">[out] A pointer to the binary metadata signature.</span></span>  
   
  `pcbSig`  
- <span data-ttu-id="05189-108">[out] Размер в байтах, подписи метаданных.</span><span class="sxs-lookup"><span data-stu-id="05189-108">[out] The size, in bytes, of the metadata signature.</span></span>  
+ <span data-ttu-id="0dd88-108">[out] Размер в байтах, подписи метаданных.</span><span class="sxs-lookup"><span data-stu-id="0dd88-108">[out] The size, in bytes, of the metadata signature.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="05189-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="05189-109">Return Value</span></span>  
- <span data-ttu-id="05189-110">Значение HRESULT, указывающее успешное или неуспешное.</span><span class="sxs-lookup"><span data-stu-id="05189-110">An HRESULT that indicates success or failure.</span></span> <span data-ttu-id="05189-111">Сбои можно протестировать с помощью макроса FAILED.</span><span class="sxs-lookup"><span data-stu-id="05189-111">Failures can be tested with the FAILED macro.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="0dd88-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="0dd88-109">Return Value</span></span>  
+ <span data-ttu-id="0dd88-110">Значение HRESULT, указывающее успешное или неуспешное.</span><span class="sxs-lookup"><span data-stu-id="0dd88-110">An HRESULT that indicates success or failure.</span></span> <span data-ttu-id="0dd88-111">Сбои можно протестировать с помощью макроса FAILED.</span><span class="sxs-lookup"><span data-stu-id="0dd88-111">Failures can be tested with the FAILED macro.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="05189-112">Требования</span><span class="sxs-lookup"><span data-stu-id="05189-112">Requirements</span></span>  
- <span data-ttu-id="05189-113">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="05189-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0dd88-112">Требования</span><span class="sxs-lookup"><span data-stu-id="0dd88-112">Requirements</span></span>  
+ <span data-ttu-id="0dd88-113">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0dd88-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="05189-114">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="05189-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="0dd88-114">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="0dd88-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="05189-115">**Библиотека:** Включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="05189-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="0dd88-115">**Библиотека:** Включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="0dd88-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="05189-116">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="05189-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="0dd88-116">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="0dd88-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="05189-117">См. также</span><span class="sxs-lookup"><span data-stu-id="05189-117">See also</span></span>
-- [<span data-ttu-id="05189-118">Интерфейс IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="05189-118">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="05189-119">Интерфейс IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="05189-119">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="0dd88-117">См. также</span><span class="sxs-lookup"><span data-stu-id="0dd88-117">See also</span></span>
+
+- [<span data-ttu-id="0dd88-118">Интерфейс IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="0dd88-118">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="0dd88-119">Интерфейс IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="0dd88-119">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
