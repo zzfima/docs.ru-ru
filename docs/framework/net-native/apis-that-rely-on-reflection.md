@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26a198db13e5855d9473cf7780dade9ce95e9298
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e7ec1280f3b7ba25367fac21d5160046915636a5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610851"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076865"
 ---
 # <a name="apis-that-rely-on-reflection"></a>API-интерфейсы, основанные на отражении
 В некоторых случаях использование отражения в коде не очевидно, и цепочка инструментов [!INCLUDE[net_native](../../../includes/net-native-md.md)] не сохраняет метаданные, необходимые во время выполнения. В этом разделе рассматриваются некоторые общие интерфейсы API или распространенные шаблоны программирования, которые не считаются частью API-интерфейса отражения, однако используют отражение для успешного выполнения. При их использовании в исходном коде можно добавить сведения о них в файл директив среды выполнения (. rd.xml), чтобы вызовы этих интерфейсов API не создавали исключений [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) или других исключений во время выполнения.  
@@ -51,9 +51,9 @@ App1.AppClass`1<System.Int32>.
   
  Для успешного выполнения этого кода необходимо несколько элементов метаданных:  
   
--   Метаданные `Browse` для типа, метод которого необходимо вызвать.  
+-   `Browse` метаданные для типа, метод которого необходимо вызвать.  
   
--   Метаданные `Browse` для метода, который требуется вызвать.  Если это открытый метод, добавление открытых метаданных `Browse` для содержащего типа включает и сам метод.  
+-   `Browse` метаданные для метода необходимо вызвать.  Если это открытый метод, добавление открытых метаданных `Browse` для содержащего типа включает и сам метод.  
   
 -   Динамические метаданные для метода, который необходимо вызвать, для того, чтобы делегат вызова отражения не удалялся цепочкой инструментов [!INCLUDE[net_native](../../../includes/net-native-md.md)]. В случае отсутствия динамических метаданных для метода создается следующее исключение <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType>, когда вызывается метод:  
   
@@ -86,12 +86,13 @@ App1.Class1[]
 Unfortunately, no further information is available.  
 ```  
   
- метаданные `Browse` для типа массива требуются для динамического создания его экземпляра.  Следующая директива среды выполнения позволяет создать динамический экземпляр `Class1[]`.  
+ `Browse` метаданные для типа массива, необходим для динамического создания его экземпляра.  Следующая директива среды выполнения позволяет создать динамический экземпляр `Class1[]`.  
   
 ```xml  
 <Type Name="App1.Class1[]" Browse="Required Public" />  
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Начало работы](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Ссылка на файл конфигурации директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
