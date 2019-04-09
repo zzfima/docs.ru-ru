@@ -8,27 +8,28 @@ helpviewer_keywords:
 - rendering support with Visual objects [WPF]
 - visual layer [WPF]
 ms.assetid: ac550423-60a3-43e6-a0bc-d65ef026e0cb
-ms.openlocfilehash: 0328b5da837fa11a6c2b7dba9ae761a1e88729bb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f41f9cf2b6deb30f5f1960cfab6e898f7032901e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376937"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142692"
 ---
-# <a name="visual-layer-programming-how-to-topics"></a><span data-ttu-id="c809d-102">Практические руководства, посвященные программированию уровня визуализации</span><span class="sxs-lookup"><span data-stu-id="c809d-102">Visual Layer Programming How-to Topics</span></span>
-<span data-ttu-id="c809d-103">В подразделах этого раздела демонстрируется использование на визуальном уровне для проверки нажатия и низкоуровневой композиции.</span><span class="sxs-lookup"><span data-stu-id="c809d-103">The topics in this section demonstrate how to use the visual layer for hit-testing and low-level composition.</span></span>  
+# <a name="visual-layer-programming-how-to-topics"></a><span data-ttu-id="0e354-102">Практические руководства, посвященные программированию уровня визуализации</span><span class="sxs-lookup"><span data-stu-id="0e354-102">Visual Layer Programming How-to Topics</span></span>
+<span data-ttu-id="0e354-103">В подразделах этого раздела демонстрируется использование на визуальном уровне для проверки нажатия и низкоуровневой композиции.</span><span class="sxs-lookup"><span data-stu-id="0e354-103">The topics in this section demonstrate how to use the visual layer for hit-testing and low-level composition.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="c809d-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="c809d-104">In This Section</span></span>  
- [<span data-ttu-id="c809d-105">Получение смещения визуального объекта</span><span class="sxs-lookup"><span data-stu-id="c809d-105">Get the Offset of a Visual</span></span>](how-to-get-the-offset-of-a-visual.md)  
- [<span data-ttu-id="c809d-106">Перечисление содержимого изображения визуального элемента</span><span class="sxs-lookup"><span data-stu-id="c809d-106">Enumerate Drawing Content of a Visual</span></span>](how-to-enumerate-drawing-content-of-a-visual.md)  
- [<span data-ttu-id="c809d-107">Проверка попадания геометрического объекта в визуальный объект</span><span class="sxs-lookup"><span data-stu-id="c809d-107">Hit Test Geometry in a Visual</span></span>](how-to-hit-test-geometry-in-a-visual.md)  
- [<span data-ttu-id="c809d-108">Проверка нажатия с использованием геометрии в качестве параметра</span><span class="sxs-lookup"><span data-stu-id="c809d-108">Hit Test Using Geometry as a Parameter</span></span>](how-to-hit-test-using-geometry-as-a-parameter.md)  
- [<span data-ttu-id="c809d-109">Проверка попадания с использованием контейнера узла Win32</span><span class="sxs-lookup"><span data-stu-id="c809d-109">Hit Test Using a Win32 Host Container</span></span>](how-to-hit-test-using-a-win32-host-container.md)  
- [<span data-ttu-id="c809d-110">Визуализация каждого кадра с помощью CompositionTarget</span><span class="sxs-lookup"><span data-stu-id="c809d-110">Render on a Per Frame Interval Using CompositionTarget</span></span>](how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
+## <a name="in-this-section"></a><span data-ttu-id="0e354-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="0e354-104">In This Section</span></span>  
+ [<span data-ttu-id="0e354-105">Получение смещения визуального объекта</span><span class="sxs-lookup"><span data-stu-id="0e354-105">Get the Offset of a Visual</span></span>](how-to-get-the-offset-of-a-visual.md)  
+ [<span data-ttu-id="0e354-106">Перечисление содержимого изображения визуального элемента</span><span class="sxs-lookup"><span data-stu-id="0e354-106">Enumerate Drawing Content of a Visual</span></span>](how-to-enumerate-drawing-content-of-a-visual.md)  
+ [<span data-ttu-id="0e354-107">Проверка попадания геометрического объекта в визуальный объект</span><span class="sxs-lookup"><span data-stu-id="0e354-107">Hit Test Geometry in a Visual</span></span>](how-to-hit-test-geometry-in-a-visual.md)  
+ [<span data-ttu-id="0e354-108">Проверка нажатия с использованием геометрии в качестве параметра</span><span class="sxs-lookup"><span data-stu-id="0e354-108">Hit Test Using Geometry as a Parameter</span></span>](how-to-hit-test-using-geometry-as-a-parameter.md)  
+ [<span data-ttu-id="0e354-109">Проверка попадания с использованием контейнера узла Win32</span><span class="sxs-lookup"><span data-stu-id="0e354-109">Hit Test Using a Win32 Host Container</span></span>](how-to-hit-test-using-a-win32-host-container.md)  
+ [<span data-ttu-id="0e354-110">Визуализация каждого кадра с помощью CompositionTarget</span><span class="sxs-lookup"><span data-stu-id="0e354-110">Render on a Per Frame Interval Using CompositionTarget</span></span>](how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
   
-## <a name="see-also"></a><span data-ttu-id="c809d-111">См. также</span><span class="sxs-lookup"><span data-stu-id="c809d-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0e354-111">См. также</span><span class="sxs-lookup"><span data-stu-id="0e354-111">See also</span></span>
+
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.Media.VisualTreeHelper>
 - <xref:System.Windows.Media.DrawingVisual>
-- [<span data-ttu-id="c809d-112">Общие сведения об отрисовке графики в WPF</span><span class="sxs-lookup"><span data-stu-id="c809d-112">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
-- [<span data-ttu-id="c809d-113">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="c809d-113">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="0e354-112">Общие сведения об отрисовке графики в WPF</span><span class="sxs-lookup"><span data-stu-id="0e354-112">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="0e354-113">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="0e354-113">Graphics and Multimedia</span></span>](index.md)

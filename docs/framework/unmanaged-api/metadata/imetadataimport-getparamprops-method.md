@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ed9bae4fde96f0878e40ed73b81cc8776571ada5
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 05ac8efed8c0a905d2cfad433348a99fe578eeae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57468062"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153183"
 ---
-# <a name="imetadataimportgetparamprops-method"></a><span data-ttu-id="12d86-102">Метод IMetaDataImport::GetParamProps</span><span class="sxs-lookup"><span data-stu-id="12d86-102">IMetaDataImport::GetParamProps Method</span></span>
-<span data-ttu-id="12d86-103">Возвращает значения метаданных для параметра, на который ссылается указанный токен ParamDef.</span><span class="sxs-lookup"><span data-stu-id="12d86-103">Gets metadata values for the parameter referenced by the specified ParamDef token.</span></span>  
+# <a name="imetadataimportgetparamprops-method"></a><span data-ttu-id="17135-102">Метод IMetaDataImport::GetParamProps</span><span class="sxs-lookup"><span data-stu-id="17135-102">IMetaDataImport::GetParamProps Method</span></span>
+<span data-ttu-id="17135-103">Возвращает значения метаданных для параметра, на который ссылается указанный токен ParamDef.</span><span class="sxs-lookup"><span data-stu-id="17135-103">Gets metadata values for the parameter referenced by the specified ParamDef token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="12d86-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="12d86-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="17135-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="17135-104">Syntax</span></span>  
   
 ```  
 HRESULT GetParamProps (  
@@ -44,50 +44,51 @@ HRESULT GetParamProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="12d86-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="12d86-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="17135-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="17135-105">Parameters</span></span>  
  `tk`  
- <span data-ttu-id="12d86-106">[in] Токен ParamDef, который представляет метаданные для возвращаемого параметра.</span><span class="sxs-lookup"><span data-stu-id="12d86-106">[in] A ParamDef token that represents the parameter to return metadata for.</span></span>  
+ <span data-ttu-id="17135-106">[in] Токен ParamDef, который представляет метаданные для возвращаемого параметра.</span><span class="sxs-lookup"><span data-stu-id="17135-106">[in] A ParamDef token that represents the parameter to return metadata for.</span></span>  
   
  `pmd`  
- <span data-ttu-id="12d86-107">[out] Указатель на токен MethodDef, предоставляющий метод, который принимает параметр.</span><span class="sxs-lookup"><span data-stu-id="12d86-107">[out] A pointer to a MethodDef token representing the method that takes the parameter.</span></span>  
+ <span data-ttu-id="17135-107">[out] Указатель на токен MethodDef, предоставляющий метод, который принимает параметр.</span><span class="sxs-lookup"><span data-stu-id="17135-107">[out] A pointer to a MethodDef token representing the method that takes the parameter.</span></span>  
   
  `pulSequence`  
- <span data-ttu-id="12d86-108">[out] Порядковая позиция параметра в списке аргументов метода.</span><span class="sxs-lookup"><span data-stu-id="12d86-108">[out] The ordinal position of the parameter in the method argument list.</span></span>  
+ <span data-ttu-id="17135-108">[out] Порядковая позиция параметра в списке аргументов метода.</span><span class="sxs-lookup"><span data-stu-id="17135-108">[out] The ordinal position of the parameter in the method argument list.</span></span>  
   
  `szName`  
- <span data-ttu-id="12d86-109">[out] Буфер для хранения имени параметра.</span><span class="sxs-lookup"><span data-stu-id="12d86-109">[out] A buffer to hold the name of the parameter.</span></span>  
+ <span data-ttu-id="17135-109">[out] Буфер для хранения имени параметра.</span><span class="sxs-lookup"><span data-stu-id="17135-109">[out] A buffer to hold the name of the parameter.</span></span>  
   
  `cchName`  
- <span data-ttu-id="12d86-110">[in] Запрошенный размер в расширенных символах `szName`.</span><span class="sxs-lookup"><span data-stu-id="12d86-110">[in] The requested size in wide characters of `szName`.</span></span>  
+ <span data-ttu-id="17135-110">[in] Запрошенный размер в расширенных символах `szName`.</span><span class="sxs-lookup"><span data-stu-id="17135-110">[in] The requested size in wide characters of `szName`.</span></span>  
   
  `pchName`  
- <span data-ttu-id="12d86-111">[out] Возвращаемый размер в расширенных символах `szName`.</span><span class="sxs-lookup"><span data-stu-id="12d86-111">[out] The returned size in wide characters of `szName`.</span></span>  
+ <span data-ttu-id="17135-111">[out] Возвращаемый размер в расширенных символах `szName`.</span><span class="sxs-lookup"><span data-stu-id="17135-111">[out] The returned size in wide characters of `szName`.</span></span>  
   
  `pdwAttr`  
- <span data-ttu-id="12d86-112">[out] Указатель на любой атрибут флаги, связанные с параметром.</span><span class="sxs-lookup"><span data-stu-id="12d86-112">[out] A pointer to any attribute flags associated with the parameter.</span></span> <span data-ttu-id="12d86-113">Это битовая маска `CorParamAttr` значения.</span><span class="sxs-lookup"><span data-stu-id="12d86-113">This is a bitmask of `CorParamAttr` values.</span></span>  
+ <span data-ttu-id="17135-112">[out] Указатель на любой атрибут флаги, связанные с параметром.</span><span class="sxs-lookup"><span data-stu-id="17135-112">[out] A pointer to any attribute flags associated with the parameter.</span></span> <span data-ttu-id="17135-113">Это битовая маска `CorParamAttr` значения.</span><span class="sxs-lookup"><span data-stu-id="17135-113">This is a bitmask of `CorParamAttr` values.</span></span>  
   
  `pdwCPlusTypeFlag`  
- <span data-ttu-id="12d86-114">[out] Указатель на значение типа, указывающее флаг, параметр <xref:System.ValueType>.</span><span class="sxs-lookup"><span data-stu-id="12d86-114">[out] A pointer to a flag specifying that the parameter is a <xref:System.ValueType>.</span></span>  
+ <span data-ttu-id="17135-114">[out] Указатель на значение типа, указывающее флаг, параметр <xref:System.ValueType>.</span><span class="sxs-lookup"><span data-stu-id="17135-114">[out] A pointer to a flag specifying that the parameter is a <xref:System.ValueType>.</span></span>  
   
  `ppValue`  
- <span data-ttu-id="12d86-115">[out] Указатель на строковую константу, возвращаемых параметром.</span><span class="sxs-lookup"><span data-stu-id="12d86-115">[out] A pointer to a constant string returned by the parameter.</span></span>  
+ <span data-ttu-id="17135-115">[out] Указатель на строковую константу, возвращаемых параметром.</span><span class="sxs-lookup"><span data-stu-id="17135-115">[out] A pointer to a constant string returned by the parameter.</span></span>  
   
  `pcchValue`  
- <span data-ttu-id="12d86-116">[out] Размер `ppValue` в расширенные символы, или нуль, если `ppValue` не содержит строку.</span><span class="sxs-lookup"><span data-stu-id="12d86-116">[out] The size of `ppValue` in wide characters, or zero if `ppValue` does not hold a string.</span></span>  
+ <span data-ttu-id="17135-116">[out] Размер `ppValue` в расширенные символы, или нуль, если `ppValue` не содержит строку.</span><span class="sxs-lookup"><span data-stu-id="17135-116">[out] The size of `ppValue` in wide characters, or zero if `ppValue` does not hold a string.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="12d86-117">Примечания</span><span class="sxs-lookup"><span data-stu-id="12d86-117">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="17135-117">Примечания</span><span class="sxs-lookup"><span data-stu-id="17135-117">Remarks</span></span>
 
-<span data-ttu-id="12d86-118">Последовательность значений элементов в `pulSequence` начинаются с 1 для параметров.</span><span class="sxs-lookup"><span data-stu-id="12d86-118">The sequence values in `pulSequence` begin with 1 for parameters.</span></span> <span data-ttu-id="12d86-119">Возвращаемое значение имеет порядковый номер 0.</span><span class="sxs-lookup"><span data-stu-id="12d86-119">A return value has a sequence number of 0.</span></span>
+<span data-ttu-id="17135-118">Последовательность значений элементов в `pulSequence` начинаются с 1 для параметров.</span><span class="sxs-lookup"><span data-stu-id="17135-118">The sequence values in `pulSequence` begin with 1 for parameters.</span></span> <span data-ttu-id="17135-119">Возвращаемое значение имеет порядковый номер 0.</span><span class="sxs-lookup"><span data-stu-id="17135-119">A return value has a sequence number of 0.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="12d86-120">Требования</span><span class="sxs-lookup"><span data-stu-id="12d86-120">Requirements</span></span>  
- <span data-ttu-id="12d86-121">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="12d86-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="17135-120">Требования</span><span class="sxs-lookup"><span data-stu-id="17135-120">Requirements</span></span>  
+ <span data-ttu-id="17135-121">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="17135-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="12d86-122">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="12d86-122">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="17135-122">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="17135-122">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="12d86-123">**Библиотека:** Включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="12d86-123">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="17135-123">**Библиотека:** Включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="17135-123">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="12d86-124">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="12d86-124">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="17135-124">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="17135-124">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="12d86-125">См. также</span><span class="sxs-lookup"><span data-stu-id="12d86-125">See also</span></span>
-- [<span data-ttu-id="12d86-126">Интерфейс IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="12d86-126">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="12d86-127">Интерфейс IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="12d86-127">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="17135-125">См. также</span><span class="sxs-lookup"><span data-stu-id="17135-125">See also</span></span>
+
+- [<span data-ttu-id="17135-126">Интерфейс IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="17135-126">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="17135-127">Интерфейс IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="17135-127">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

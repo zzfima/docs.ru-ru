@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5f29111fd68d9a47cd90687cc6aa2743968e727d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 442584cffe4b4ae44702892587e261d41abf4e8a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484606"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150427"
 ---
-# <a name="isymencunmanagedmethodgetsourceextentindocument-method"></a><span data-ttu-id="a6b37-102">Метод ISymENCUnmanagedMethod::GetSourceExtentInDocument</span><span class="sxs-lookup"><span data-stu-id="a6b37-102">ISymENCUnmanagedMethod::GetSourceExtentInDocument Method</span></span>
-<span data-ttu-id="a6b37-103">Получает наименьшую начальную строку и наибольшую конечную строку метода в определенном документе.</span><span class="sxs-lookup"><span data-stu-id="a6b37-103">Gets the smallest start line and largest end line for the method in a specific document.</span></span>  
+# <a name="isymencunmanagedmethodgetsourceextentindocument-method"></a><span data-ttu-id="ab225-102">Метод ISymENCUnmanagedMethod::GetSourceExtentInDocument</span><span class="sxs-lookup"><span data-stu-id="ab225-102">ISymENCUnmanagedMethod::GetSourceExtentInDocument Method</span></span>
+<span data-ttu-id="ab225-103">Получает наименьшую начальную строку и наибольшую конечную строку метода в определенном документе.</span><span class="sxs-lookup"><span data-stu-id="ab225-103">Gets the smallest start line and largest end line for the method in a specific document.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a6b37-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a6b37-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ab225-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="ab225-104">Syntax</span></span>  
   
 ```  
 HRESULT GetSourceExtentInDocument(  
@@ -36,21 +36,22 @@ HRESULT GetSourceExtentInDocument(
     [out] ULONG32* pendLine);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a6b37-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="a6b37-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ab225-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="ab225-105">Parameters</span></span>  
  `document`  
- <span data-ttu-id="a6b37-106">[in] Указатель на документ.</span><span class="sxs-lookup"><span data-stu-id="a6b37-106">[in] A pointer to the document.</span></span>  
+ <span data-ttu-id="ab225-106">[in] Указатель на документ.</span><span class="sxs-lookup"><span data-stu-id="ab225-106">[in] A pointer to the document.</span></span>  
   
  `pstartLine`  
- <span data-ttu-id="a6b37-107">[out] Указатель на `ULONG32` , получающий начальной строки.</span><span class="sxs-lookup"><span data-stu-id="a6b37-107">[out] A pointer to a `ULONG32` that receives the start line.</span></span>  
+ <span data-ttu-id="ab225-107">[out] Указатель на `ULONG32` , получающий начальной строки.</span><span class="sxs-lookup"><span data-stu-id="ab225-107">[out] A pointer to a `ULONG32` that receives the start line.</span></span>  
   
  `pendLine`  
- <span data-ttu-id="a6b37-108">[out] Указатель на `ULONG32` , получающий конечную строку.</span><span class="sxs-lookup"><span data-stu-id="a6b37-108">[out] A pointer to a `ULONG32` that receives the end line.</span></span>  
+ <span data-ttu-id="ab225-108">[out] Указатель на `ULONG32` , получающий конечную строку.</span><span class="sxs-lookup"><span data-stu-id="ab225-108">[out] A pointer to a `ULONG32` that receives the end line.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a6b37-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="a6b37-109">Return Value</span></span>  
- <span data-ttu-id="a6b37-110">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="a6b37-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="ab225-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="ab225-109">Return Value</span></span>  
+ <span data-ttu-id="ab225-110">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="ab225-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a6b37-111">Требования</span><span class="sxs-lookup"><span data-stu-id="a6b37-111">Requirements</span></span>  
- <span data-ttu-id="a6b37-112">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="a6b37-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ab225-111">Требования</span><span class="sxs-lookup"><span data-stu-id="ab225-111">Requirements</span></span>  
+ <span data-ttu-id="ab225-112">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="ab225-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a6b37-113">См. также</span><span class="sxs-lookup"><span data-stu-id="a6b37-113">See also</span></span>
-- [<span data-ttu-id="a6b37-114">Интерфейс ISymENCUnmanagedMethod</span><span class="sxs-lookup"><span data-stu-id="a6b37-114">ISymENCUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+## <a name="see-also"></a><span data-ttu-id="ab225-113">См. также</span><span class="sxs-lookup"><span data-stu-id="ab225-113">See also</span></span>
+
+- [<span data-ttu-id="ab225-114">Интерфейс ISymENCUnmanagedMethod</span><span class="sxs-lookup"><span data-stu-id="ab225-114">ISymENCUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

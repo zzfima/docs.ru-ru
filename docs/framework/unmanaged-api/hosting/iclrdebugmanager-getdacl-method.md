@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0b9a47bce48a3b692e6f4cc6355fd7aa42e2e908
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d73e11dad2413958b6c92d3ae90ba4834e8824d3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57502492"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166560"
 ---
-# <a name="iclrdebugmanagergetdacl-method"></a><span data-ttu-id="9662d-102">Метод ICLRDebugManager::GetDacl</span><span class="sxs-lookup"><span data-stu-id="9662d-102">ICLRDebugManager::GetDacl Method</span></span>
-<span data-ttu-id="9662d-103">Этот метод не реализован.</span><span class="sxs-lookup"><span data-stu-id="9662d-103">This method is not implemented.</span></span>  
+# <a name="iclrdebugmanagergetdacl-method"></a><span data-ttu-id="94575-102">Метод ICLRDebugManager::GetDacl</span><span class="sxs-lookup"><span data-stu-id="94575-102">ICLRDebugManager::GetDacl Method</span></span>
+<span data-ttu-id="94575-103">Этот метод не реализован.</span><span class="sxs-lookup"><span data-stu-id="94575-103">This method is not implemented.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9662d-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="9662d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="94575-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="94575-104">Syntax</span></span>  
   
 ```  
 HRESULT GetDacl (  
@@ -35,27 +35,28 @@ HRESULT GetDacl (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9662d-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="9662d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="94575-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="94575-105">Parameters</span></span>  
  `ppacl`  
- <span data-ttu-id="9662d-106">[out] Указатель интерфейса списка управления доступом (ACL).</span><span class="sxs-lookup"><span data-stu-id="9662d-106">[out] An interface pointer to the Access Control List (ACL).</span></span>  
+ <span data-ttu-id="94575-106">[out] Указатель интерфейса списка управления доступом (ACL).</span><span class="sxs-lookup"><span data-stu-id="94575-106">[out] An interface pointer to the Access Control List (ACL).</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="9662d-107">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="9662d-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="94575-107">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="94575-107">Return Value</span></span>  
   
-|<span data-ttu-id="9662d-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="9662d-108">HRESULT</span></span>|<span data-ttu-id="9662d-109">Описание:</span><span class="sxs-lookup"><span data-stu-id="9662d-109">Description</span></span>|  
+|<span data-ttu-id="94575-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="94575-108">HRESULT</span></span>|<span data-ttu-id="94575-109">Описание</span><span class="sxs-lookup"><span data-stu-id="94575-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="9662d-110">E_NOTIMPL</span><span class="sxs-lookup"><span data-stu-id="9662d-110">E_NOTIMPL</span></span>|<span data-ttu-id="9662d-111">Метод не реализован.</span><span class="sxs-lookup"><span data-stu-id="9662d-111">The method is not implemented.</span></span>|  
+|<span data-ttu-id="94575-110">E_NOTIMPL</span><span class="sxs-lookup"><span data-stu-id="94575-110">E_NOTIMPL</span></span>|<span data-ttu-id="94575-111">Метод не реализован.</span><span class="sxs-lookup"><span data-stu-id="94575-111">The method is not implemented.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="9662d-112">Требования</span><span class="sxs-lookup"><span data-stu-id="9662d-112">Requirements</span></span>  
- <span data-ttu-id="9662d-113">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9662d-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="94575-112">Требования</span><span class="sxs-lookup"><span data-stu-id="94575-112">Requirements</span></span>  
+ <span data-ttu-id="94575-113">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="94575-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9662d-114">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="9662d-114">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="94575-114">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="94575-114">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="9662d-115">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="9662d-115">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="94575-115">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="94575-115">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="9662d-116">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9662d-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="94575-116">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="94575-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="9662d-117">См. также</span><span class="sxs-lookup"><span data-stu-id="9662d-117">See also</span></span>
-- [<span data-ttu-id="9662d-118">Интерфейс ICLRControl</span><span class="sxs-lookup"><span data-stu-id="9662d-118">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
-- [<span data-ttu-id="9662d-119">Интерфейс ICLRDebugManager</span><span class="sxs-lookup"><span data-stu-id="9662d-119">ICLRDebugManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)
-- [<span data-ttu-id="9662d-120">Метод SetDacl</span><span class="sxs-lookup"><span data-stu-id="9662d-120">SetDacl Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setdacl-method.md)
-- [<span data-ttu-id="9662d-121">Интерфейс IHostControl</span><span class="sxs-lookup"><span data-stu-id="9662d-121">IHostControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)
+## <a name="see-also"></a><span data-ttu-id="94575-117">См. также</span><span class="sxs-lookup"><span data-stu-id="94575-117">See also</span></span>
+
+- [<span data-ttu-id="94575-118">Интерфейс ICLRControl</span><span class="sxs-lookup"><span data-stu-id="94575-118">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
+- [<span data-ttu-id="94575-119">Интерфейс ICLRDebugManager</span><span class="sxs-lookup"><span data-stu-id="94575-119">ICLRDebugManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)
+- [<span data-ttu-id="94575-120">Метод SetDacl</span><span class="sxs-lookup"><span data-stu-id="94575-120">SetDacl Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setdacl-method.md)
+- [<span data-ttu-id="94575-121">Интерфейс IHostControl</span><span class="sxs-lookup"><span data-stu-id="94575-121">IHostControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)

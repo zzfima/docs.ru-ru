@@ -2,20 +2,21 @@
 title: System.ServiceModel.Channels.HttpChannelRequestAborted
 ms.date: 03/30/2017
 ms.assetid: d47a2e78-f0ce-4125-893a-5f438016216c
-ms.openlocfilehash: 25561820f93660ba941334df4daee59722af3b2d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b298b5416700ced4160ebc5795959b4ea288a48b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686235"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133436"
 ---
-# <a name="systemservicemodelchannelshttpchannelrequestaborted"></a><span data-ttu-id="da0af-102">System.ServiceModel.Channels.HttpChannelRequestAborted</span><span class="sxs-lookup"><span data-stu-id="da0af-102">System.ServiceModel.Channels.HttpChannelRequestAborted</span></span>
-<span data-ttu-id="da0af-103">Сбой отправки сообщения запроса через HTTP.</span><span class="sxs-lookup"><span data-stu-id="da0af-103">Failed to send a request message over HTTP.</span></span>  
+# <a name="systemservicemodelchannelshttpchannelrequestaborted"></a><span data-ttu-id="1f041-102">System.ServiceModel.Channels.HttpChannelRequestAborted</span><span class="sxs-lookup"><span data-stu-id="1f041-102">System.ServiceModel.Channels.HttpChannelRequestAborted</span></span>
+<span data-ttu-id="1f041-103">Сбой отправки сообщения запроса через HTTP.</span><span class="sxs-lookup"><span data-stu-id="1f041-103">Failed to send a request message over HTTP.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="da0af-104">Описание</span><span class="sxs-lookup"><span data-stu-id="da0af-104">Description</span></span>  
- <span data-ttu-id="da0af-105">Данная трассировка уровня предупреждений показывает, что отправка запроса по каналу HTTP была прервана.</span><span class="sxs-lookup"><span data-stu-id="da0af-105">This warning level trace indicates that an HTTP channel request was aborted.</span></span> <span data-ttu-id="da0af-106">В дополнительных сведениях этой трассировки содержится причина прерывания или сообщение, переданное методу Abort.</span><span class="sxs-lookup"><span data-stu-id="da0af-106">Additional information in this trace will reveal the reason or the message passed to the Abort method.</span></span>  
+## <a name="description"></a><span data-ttu-id="1f041-104">Описание</span><span class="sxs-lookup"><span data-stu-id="1f041-104">Description</span></span>  
+ <span data-ttu-id="1f041-105">Данная трассировка уровня предупреждений показывает, что отправка запроса по каналу HTTP была прервана.</span><span class="sxs-lookup"><span data-stu-id="1f041-105">This warning level trace indicates that an HTTP channel request was aborted.</span></span> <span data-ttu-id="1f041-106">В дополнительных сведениях этой трассировки содержится причина прерывания или сообщение, переданное методу Abort.</span><span class="sxs-lookup"><span data-stu-id="1f041-106">Additional information in this trace will reveal the reason or the message passed to the Abort method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="da0af-107">См. также</span><span class="sxs-lookup"><span data-stu-id="da0af-107">See also</span></span>
-- [<span data-ttu-id="da0af-108">Трассировка</span><span class="sxs-lookup"><span data-stu-id="da0af-108">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="da0af-109">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="da0af-109">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="da0af-110">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="da0af-110">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="1f041-107">См. также</span><span class="sxs-lookup"><span data-stu-id="1f041-107">See also</span></span>
+
+- [<span data-ttu-id="1f041-108">Трассировка</span><span class="sxs-lookup"><span data-stu-id="1f041-108">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="1f041-109">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="1f041-109">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="1f041-110">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="1f041-110">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

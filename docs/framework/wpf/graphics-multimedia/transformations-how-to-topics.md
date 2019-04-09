@@ -9,29 +9,30 @@ helpviewer_keywords:
 - Transforms [WPF], how-to topics
 - transformations [WPF], how-to topics
 ms.assetid: ff71384e-8811-420f-8cc8-0a3332e0397f
-ms.openlocfilehash: 0a6fb777502db021b7b4d5f9403f4cd1d6d7f85a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6e630b76e05803ffc4ac3c69c403d1ea2741b112
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361360"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140872"
 ---
-# <a name="transformations-how-to-topics"></a><span data-ttu-id="36bb3-102">Разделы руководства, посвященные преобразованиям</span><span class="sxs-lookup"><span data-stu-id="36bb3-102">Transformations How-to Topics</span></span>
-<span data-ttu-id="36bb3-103">В подразделах этого раздела описывается, как будут применяться различные преобразования к объектам.</span><span class="sxs-lookup"><span data-stu-id="36bb3-103">The topics in this section describe how to apply different transformations to objects.</span></span>  
+# <a name="transformations-how-to-topics"></a><span data-ttu-id="2fc4b-102">Разделы руководства, посвященные преобразованиям</span><span class="sxs-lookup"><span data-stu-id="2fc4b-102">Transformations How-to Topics</span></span>
+<span data-ttu-id="2fc4b-103">В подразделах этого раздела описывается, как будут применяться различные преобразования к объектам.</span><span class="sxs-lookup"><span data-stu-id="2fc4b-103">The topics in this section describe how to apply different transformations to objects.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="36bb3-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="36bb3-104">In This Section</span></span>  
- [<span data-ttu-id="36bb3-105">Применение преобразования к элементу при возникновении события</span><span class="sxs-lookup"><span data-stu-id="36bb3-105">Apply a Transform to an Element When an Event Occurs</span></span>](how-to-apply-a-transform-to-an-element-when-an-event-occurs.md)  
- [<span data-ttu-id="36bb3-106">Применение нескольких преобразований к объекту</span><span class="sxs-lookup"><span data-stu-id="36bb3-106">Apply Multiple Transforms to an Object</span></span>](how-to-apply-multiple-transforms-to-an-object.md)  
- [<span data-ttu-id="36bb3-107">Создание элемента Spin</span><span class="sxs-lookup"><span data-stu-id="36bb3-107">Make an Element Spin in Place</span></span>](how-to-make-an-element-spin-in-place.md)  
- [<span data-ttu-id="36bb3-108">Вращение объекта</span><span class="sxs-lookup"><span data-stu-id="36bb3-108">Rotate an Object</span></span>](how-to-rotate-an-object.md)  
- [<span data-ttu-id="36bb3-109">Масштабирование элемента</span><span class="sxs-lookup"><span data-stu-id="36bb3-109">Scale an Element</span></span>](how-to-scale-an-element.md)  
- [<span data-ttu-id="36bb3-110">Наклон элемента</span><span class="sxs-lookup"><span data-stu-id="36bb3-110">Skew an Element</span></span>](how-to-skew-an-element.md)  
- [<span data-ttu-id="36bb3-111">Определение источника преобразования с помощью относительных значений</span><span class="sxs-lookup"><span data-stu-id="36bb3-111">Specify the Origin of a Transform by Using Relative Values</span></span>](how-to-specify-the-origin-of-a-transform-by-using-relative-values.md)  
- [<span data-ttu-id="36bb3-112">Перемещение элемента</span><span class="sxs-lookup"><span data-stu-id="36bb3-112">Translate an Element</span></span>](how-to-translate-an-element.md)  
- [<span data-ttu-id="36bb3-113">Использование MatrixTransform для создания пользовательских преобразований</span><span class="sxs-lookup"><span data-stu-id="36bb3-113">Use a MatrixTransform to Create Custom Transforms</span></span>](how-to-use-a-matrixtransform-to-create-custom-transforms.md)  
+## <a name="in-this-section"></a><span data-ttu-id="2fc4b-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="2fc4b-104">In This Section</span></span>  
+ [<span data-ttu-id="2fc4b-105">Применение преобразования к элементу при возникновении события</span><span class="sxs-lookup"><span data-stu-id="2fc4b-105">Apply a Transform to an Element When an Event Occurs</span></span>](how-to-apply-a-transform-to-an-element-when-an-event-occurs.md)  
+ [<span data-ttu-id="2fc4b-106">Применение нескольких преобразований к объекту</span><span class="sxs-lookup"><span data-stu-id="2fc4b-106">Apply Multiple Transforms to an Object</span></span>](how-to-apply-multiple-transforms-to-an-object.md)  
+ [<span data-ttu-id="2fc4b-107">Создание элемента Spin</span><span class="sxs-lookup"><span data-stu-id="2fc4b-107">Make an Element Spin in Place</span></span>](how-to-make-an-element-spin-in-place.md)  
+ [<span data-ttu-id="2fc4b-108">Вращение объекта</span><span class="sxs-lookup"><span data-stu-id="2fc4b-108">Rotate an Object</span></span>](how-to-rotate-an-object.md)  
+ [<span data-ttu-id="2fc4b-109">Масштабирование элемента</span><span class="sxs-lookup"><span data-stu-id="2fc4b-109">Scale an Element</span></span>](how-to-scale-an-element.md)  
+ [<span data-ttu-id="2fc4b-110">Наклон элемента</span><span class="sxs-lookup"><span data-stu-id="2fc4b-110">Skew an Element</span></span>](how-to-skew-an-element.md)  
+ [<span data-ttu-id="2fc4b-111">Определение источника преобразования с помощью относительных значений</span><span class="sxs-lookup"><span data-stu-id="2fc4b-111">Specify the Origin of a Transform by Using Relative Values</span></span>](how-to-specify-the-origin-of-a-transform-by-using-relative-values.md)  
+ [<span data-ttu-id="2fc4b-112">Перемещение элемента</span><span class="sxs-lookup"><span data-stu-id="2fc4b-112">Translate an Element</span></span>](how-to-translate-an-element.md)  
+ [<span data-ttu-id="2fc4b-113">Использование MatrixTransform для создания пользовательских преобразований</span><span class="sxs-lookup"><span data-stu-id="2fc4b-113">Use a MatrixTransform to Create Custom Transforms</span></span>](how-to-use-a-matrixtransform-to-create-custom-transforms.md)  
   
-## <a name="see-also"></a><span data-ttu-id="36bb3-114">См. также</span><span class="sxs-lookup"><span data-stu-id="36bb3-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2fc4b-114">См. также</span><span class="sxs-lookup"><span data-stu-id="2fc4b-114">See also</span></span>
+
 - <xref:System.Windows.Media.Transform>
-- [<span data-ttu-id="36bb3-115">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="36bb3-115">Graphics and Multimedia</span></span>](index.md)
-- [<span data-ttu-id="36bb3-116">Общие сведения об отрисовке графики в WPF</span><span class="sxs-lookup"><span data-stu-id="36bb3-116">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
-- [<span data-ttu-id="36bb3-117">Макет</span><span class="sxs-lookup"><span data-stu-id="36bb3-117">Layout</span></span>](../advanced/layout.md)
+- [<span data-ttu-id="2fc4b-115">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="2fc4b-115">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="2fc4b-116">Общие сведения об отрисовке графики в WPF</span><span class="sxs-lookup"><span data-stu-id="2fc4b-116">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="2fc4b-117">Макет</span><span class="sxs-lookup"><span data-stu-id="2fc4b-117">Layout</span></span>](../advanced/layout.md)

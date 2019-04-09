@@ -2,20 +2,21 @@
 title: System.ServiceModel.Security.SecuritySessionDemuxFailure
 ms.date: 03/30/2017
 ms.assetid: 74b89d9a-22be-4799-b9fb-e3dfa5426dec
-ms.openlocfilehash: a59df31fc64e2eba0c2d1967459591dbc0e0593b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a32ee2a1b0066907f95fac5f0e5d722ab965782e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568027"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136478"
 ---
-# <a name="systemservicemodelsecuritysecuritysessiondemuxfailure"></a><span data-ttu-id="2b200-102">System.ServiceModel.Security.SecuritySessionDemuxFailure</span><span class="sxs-lookup"><span data-stu-id="2b200-102">System.ServiceModel.Security.SecuritySessionDemuxFailure</span></span>
-<span data-ttu-id="2b200-103">System.ServiceModel.Security.SecuritySessionDemuxFailure</span><span class="sxs-lookup"><span data-stu-id="2b200-103">System.ServiceModel.Security.SecuritySessionDemuxFailure</span></span>  
+# <a name="systemservicemodelsecuritysecuritysessiondemuxfailure"></a><span data-ttu-id="2f55f-102">System.ServiceModel.Security.SecuritySessionDemuxFailure</span><span class="sxs-lookup"><span data-stu-id="2f55f-102">System.ServiceModel.Security.SecuritySessionDemuxFailure</span></span>
+<span data-ttu-id="2f55f-103">System.ServiceModel.Security.SecuritySessionDemuxFailure</span><span class="sxs-lookup"><span data-stu-id="2f55f-103">System.ServiceModel.Security.SecuritySessionDemuxFailure</span></span>  
   
-## <a name="description"></a><span data-ttu-id="2b200-104">Описание</span><span class="sxs-lookup"><span data-stu-id="2b200-104">Description</span></span>  
- <span data-ttu-id="2b200-105">Входящее сообщение не является частью существующего сеанса безопасности.</span><span class="sxs-lookup"><span data-stu-id="2b200-105">The incoming message is not part of an existing security session.</span></span>  
+## <a name="description"></a><span data-ttu-id="2f55f-104">Описание</span><span class="sxs-lookup"><span data-stu-id="2f55f-104">Description</span></span>  
+ <span data-ttu-id="2f55f-105">Входящее сообщение не является частью существующего сеанса безопасности.</span><span class="sxs-lookup"><span data-stu-id="2f55f-105">The incoming message is not part of an existing security session.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2b200-106">См. также</span><span class="sxs-lookup"><span data-stu-id="2b200-106">See also</span></span>
-- [<span data-ttu-id="2b200-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="2b200-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="2b200-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="2b200-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="2b200-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="2b200-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="2f55f-106">См. также</span><span class="sxs-lookup"><span data-stu-id="2f55f-106">See also</span></span>
+
+- [<span data-ttu-id="2f55f-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="2f55f-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="2f55f-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="2f55f-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="2f55f-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="2f55f-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

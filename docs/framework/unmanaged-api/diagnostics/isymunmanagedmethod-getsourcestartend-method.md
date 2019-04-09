@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0d9a02ea338dd2c1366256434eacda51327b7d5f
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d32e3ac0ff3179a9bb32f82e5ca33fd89c4ec410
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479471"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151194"
 ---
-# <a name="isymunmanagedmethodgetsourcestartend-method"></a><span data-ttu-id="30122-102">Метод ISymUnmanagedMethod::GetSourceStartEnd</span><span class="sxs-lookup"><span data-stu-id="30122-102">ISymUnmanagedMethod::GetSourceStartEnd Method</span></span>
-<span data-ttu-id="30122-103">Получает начальное и конечное положение документа для источника этого метода.</span><span class="sxs-lookup"><span data-stu-id="30122-103">Gets the start and end document positions for the source of this method.</span></span> <span data-ttu-id="30122-104">Массив отсчитывается от начала, а вторая позиция массива является конечным.</span><span class="sxs-lookup"><span data-stu-id="30122-104">The first array position is the start, and the second array position is the end.</span></span>  
+# <a name="isymunmanagedmethodgetsourcestartend-method"></a><span data-ttu-id="02805-102">Метод ISymUnmanagedMethod::GetSourceStartEnd</span><span class="sxs-lookup"><span data-stu-id="02805-102">ISymUnmanagedMethod::GetSourceStartEnd Method</span></span>
+<span data-ttu-id="02805-103">Получает начальное и конечное положение документа для источника этого метода.</span><span class="sxs-lookup"><span data-stu-id="02805-103">Gets the start and end document positions for the source of this method.</span></span> <span data-ttu-id="02805-104">Массив отсчитывается от начала, а вторая позиция массива является конечным.</span><span class="sxs-lookup"><span data-stu-id="02805-104">The first array position is the start, and the second array position is the end.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="30122-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="30122-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="02805-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="02805-105">Syntax</span></span>  
   
 ```  
 HRESULT GetSourceStartEnd(  
@@ -37,24 +37,25 @@ HRESULT GetSourceStartEnd(
     [out] BOOL                   *pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="30122-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="30122-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="02805-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="02805-106">Parameters</span></span>  
  `docs`  
- <span data-ttu-id="30122-107">[in] Начальный и конечный исходные документы.</span><span class="sxs-lookup"><span data-stu-id="30122-107">[in] The starting and ending source documents.</span></span>  
+ <span data-ttu-id="02805-107">[in] Начальный и конечный исходные документы.</span><span class="sxs-lookup"><span data-stu-id="02805-107">[in] The starting and ending source documents.</span></span>  
   
  `lines`  
- <span data-ttu-id="30122-108">[in] Начальная и конечная строки соответствующих исходных документов.</span><span class="sxs-lookup"><span data-stu-id="30122-108">[in] The starting and ending lines in the corresponding source documents.</span></span>  
+ <span data-ttu-id="02805-108">[in] Начальная и конечная строки соответствующих исходных документов.</span><span class="sxs-lookup"><span data-stu-id="02805-108">[in] The starting and ending lines in the corresponding source documents.</span></span>  
   
  `columns`  
- <span data-ttu-id="30122-109">[in] Начальный и конечный столбцы соответствующих исходных документов.</span><span class="sxs-lookup"><span data-stu-id="30122-109">[in] The starting and ending columns in the corresponding source documents.</span></span>  
+ <span data-ttu-id="02805-109">[in] Начальный и конечный столбцы соответствующих исходных документов.</span><span class="sxs-lookup"><span data-stu-id="02805-109">[in] The starting and ending columns in the corresponding source documents.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="30122-110">[out] `true` будто positions, определен; в противном случае — `false`.</span><span class="sxs-lookup"><span data-stu-id="30122-110">[out] `true` if positions were defined; otherwise, `false`.</span></span>  
+ <span data-ttu-id="02805-110">[out] `true` будто positions, определен; в противном случае — `false`.</span><span class="sxs-lookup"><span data-stu-id="02805-110">[out] `true` if positions were defined; otherwise, `false`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="30122-111">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="30122-111">Return Value</span></span>  
- <span data-ttu-id="30122-112">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="30122-112">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="02805-111">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="02805-111">Return Value</span></span>  
+ <span data-ttu-id="02805-112">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="02805-112">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="30122-113">Требования</span><span class="sxs-lookup"><span data-stu-id="30122-113">Requirements</span></span>  
- <span data-ttu-id="30122-114">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="30122-114">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="02805-113">Требования</span><span class="sxs-lookup"><span data-stu-id="02805-113">Requirements</span></span>  
+ <span data-ttu-id="02805-114">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="02805-114">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="30122-115">См. также</span><span class="sxs-lookup"><span data-stu-id="30122-115">See also</span></span>
-- [<span data-ttu-id="30122-116">Интерфейс ISymUnmanagedMethod</span><span class="sxs-lookup"><span data-stu-id="30122-116">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+## <a name="see-also"></a><span data-ttu-id="02805-115">См. также</span><span class="sxs-lookup"><span data-stu-id="02805-115">See also</span></span>
+
+- [<span data-ttu-id="02805-116">Интерфейс ISymUnmanagedMethod</span><span class="sxs-lookup"><span data-stu-id="02805-116">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

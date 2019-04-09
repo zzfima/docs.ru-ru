@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b85739f0f9b6771b204f0e0297ab025cd112a12
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 73645265821d5854776e412f8eb0f33b36db00d1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57476717"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130498"
 ---
-# <a name="iclrdatatargetgetpointersize-method"></a><span data-ttu-id="22c71-102">Метод ICLRDataTarget::GetPointerSize</span><span class="sxs-lookup"><span data-stu-id="22c71-102">ICLRDataTarget::GetPointerSize Method</span></span>
-<span data-ttu-id="22c71-103">Возвращает размер в байтах, типа указателя, использующего целевой процесс.</span><span class="sxs-lookup"><span data-stu-id="22c71-103">Gets the size, in bytes, of the pointer type that the target process uses.</span></span> <span data-ttu-id="22c71-104">Этот метод вызывается службами доступа к данным среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="22c71-104">This method is called by the common language runtime data access services.</span></span>  
+# <a name="iclrdatatargetgetpointersize-method"></a><span data-ttu-id="7d5f5-102">Метод ICLRDataTarget::GetPointerSize</span><span class="sxs-lookup"><span data-stu-id="7d5f5-102">ICLRDataTarget::GetPointerSize Method</span></span>
+<span data-ttu-id="7d5f5-103">Возвращает размер в байтах, типа указателя, использующего целевой процесс.</span><span class="sxs-lookup"><span data-stu-id="7d5f5-103">Gets the size, in bytes, of the pointer type that the target process uses.</span></span> <span data-ttu-id="7d5f5-104">Этот метод вызывается службами доступа к данным среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="7d5f5-104">This method is called by the common language runtime data access services.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="22c71-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="22c71-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7d5f5-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="7d5f5-105">Syntax</span></span>  
   
 ```  
 HRESULT GetPointerSize (  
@@ -35,21 +35,22 @@ HRESULT GetPointerSize (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="22c71-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="22c71-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7d5f5-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="7d5f5-106">Parameters</span></span>  
  `pointerSize`  
- <span data-ttu-id="22c71-107">[out] Указатель на целочисленное значение, указывающее размер в байтах для указателя на целевом процессе.</span><span class="sxs-lookup"><span data-stu-id="22c71-107">[out] A pointer to an integer value that specifies the size, in bytes, of a pointer on the target process.</span></span>  
+ <span data-ttu-id="7d5f5-107">[out] Указатель на целочисленное значение, указывающее размер в байтах для указателя на целевом процессе.</span><span class="sxs-lookup"><span data-stu-id="7d5f5-107">[out] A pointer to an integer value that specifies the size, in bytes, of a pointer on the target process.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="22c71-108">Примечания</span><span class="sxs-lookup"><span data-stu-id="22c71-108">Remarks</span></span>  
- <span data-ttu-id="22c71-109">Этот метод реализуется модулем записи отладчика.</span><span class="sxs-lookup"><span data-stu-id="22c71-109">This method is implemented by the writer of the debugging application.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7d5f5-108">Примечания</span><span class="sxs-lookup"><span data-stu-id="7d5f5-108">Remarks</span></span>  
+ <span data-ttu-id="7d5f5-109">Этот метод реализуется модулем записи отладчика.</span><span class="sxs-lookup"><span data-stu-id="7d5f5-109">This method is implemented by the writer of the debugging application.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="22c71-110">Требования</span><span class="sxs-lookup"><span data-stu-id="22c71-110">Requirements</span></span>  
- <span data-ttu-id="22c71-111">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="22c71-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7d5f5-110">Требования</span><span class="sxs-lookup"><span data-stu-id="7d5f5-110">Requirements</span></span>  
+ <span data-ttu-id="7d5f5-111">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7d5f5-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="22c71-112">**Заголовок.** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="22c71-112">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="7d5f5-112">**Заголовок.** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="7d5f5-112">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="22c71-113">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="22c71-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="7d5f5-113">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7d5f5-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="22c71-114">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="22c71-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="7d5f5-114">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="7d5f5-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="22c71-115">См. также</span><span class="sxs-lookup"><span data-stu-id="22c71-115">See also</span></span>
-- [<span data-ttu-id="22c71-116">Интерфейс ICLRDataTarget</span><span class="sxs-lookup"><span data-stu-id="22c71-116">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+## <a name="see-also"></a><span data-ttu-id="7d5f5-115">См. также</span><span class="sxs-lookup"><span data-stu-id="7d5f5-115">See also</span></span>
+
+- [<span data-ttu-id="7d5f5-116">Интерфейс ICLRDataTarget</span><span class="sxs-lookup"><span data-stu-id="7d5f5-116">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Отображение веб-страницы из элемента управления LinkLabel Windows Forms (Visual Basic)
+title: Практическое руководство. Отображение веб-страницы из элемента управления LinkLabel в Windows Forms (Visual Basic)
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - Windows Forms, linking to Web pages
 - LinkLabel control [Windows Forms], examples
 ms.assetid: 477a7398-5971-4de3-b24c-f49f32bdb28a
-ms.openlocfilehash: 7e80dba9cd43385be016506ac2a7e887a68dedf2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1be9ff06e749d14b46946e899c6ffb6c3a950d65
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705237"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170031"
 ---
-# <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a><span data-ttu-id="40dc0-102">Практическое руководство. Отображение веб-страницы из элемента управления LinkLabel Windows Forms (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="40dc0-102">How to: Display a Web Page from a Windows Forms LinkLabel Control (Visual Basic)</span></span>
-<span data-ttu-id="40dc0-103">Этот пример отображает веб-страницы в браузере по умолчанию, когда пользователь щелкает форм Windows <xref:System.Windows.Forms.LinkLabel> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="40dc0-103">This example displays a Web page in the default browser when a user clicks a Windows Forms <xref:System.Windows.Forms.LinkLabel> control.</span></span>  
+# <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a><span data-ttu-id="0f3ef-102">Практическое руководство. Отображение веб-страницы из элемента управления LinkLabel в Windows Forms (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0f3ef-102">How to: Display a Web Page from a Windows Forms LinkLabel Control (Visual Basic)</span></span>
+<span data-ttu-id="0f3ef-103">Этот пример отображает веб-страницы в браузере по умолчанию, когда пользователь щелкает форм Windows <xref:System.Windows.Forms.LinkLabel> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="0f3ef-103">This example displays a Web page in the default browser when a user clicks a Windows Forms <xref:System.Windows.Forms.LinkLabel> control.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="40dc0-104">Пример</span><span class="sxs-lookup"><span data-stu-id="40dc0-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="0f3ef-104">Пример</span><span class="sxs-lookup"><span data-stu-id="0f3ef-104">Example</span></span>  
   
 ```vb  
 Private Sub Form1_Load(ByVal sender As System.Object, ByVal e _  
@@ -37,18 +37,19 @@ LinkLabel1.LinkClicked
 End Sub  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="40dc0-105">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="40dc0-105">Compiling the Code</span></span>  
- <span data-ttu-id="40dc0-106">Для этого примера требуются:</span><span class="sxs-lookup"><span data-stu-id="40dc0-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="0f3ef-105">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="0f3ef-105">Compiling the Code</span></span>  
+ <span data-ttu-id="0f3ef-106">Для этого примера требуются:</span><span class="sxs-lookup"><span data-stu-id="0f3ef-106">This example requires:</span></span>  
   
--   <span data-ttu-id="40dc0-107">Форму Windows с именем `Form1`.</span><span class="sxs-lookup"><span data-stu-id="40dc0-107">A Windows Form named `Form1`.</span></span>  
+-   <span data-ttu-id="0f3ef-107">Форму Windows с именем `Form1`.</span><span class="sxs-lookup"><span data-stu-id="0f3ef-107">A Windows Form named `Form1`.</span></span>  
   
--   <span data-ttu-id="40dc0-108">элемент управления <xref:System.Windows.Forms.LinkLabel> с именем `LinkLabel1`;</span><span class="sxs-lookup"><span data-stu-id="40dc0-108">A <xref:System.Windows.Forms.LinkLabel> control named `LinkLabel1`.</span></span>  
+-   <span data-ttu-id="0f3ef-108">элемент управления <xref:System.Windows.Forms.LinkLabel> с именем `LinkLabel1`;</span><span class="sxs-lookup"><span data-stu-id="0f3ef-108">A <xref:System.Windows.Forms.LinkLabel> control named `LinkLabel1`.</span></span>  
   
--   <span data-ttu-id="40dc0-109">Активное подключение к Интернету.</span><span class="sxs-lookup"><span data-stu-id="40dc0-109">An active Internet connection.</span></span>  
+-   <span data-ttu-id="0f3ef-109">Активное подключение к Интернету.</span><span class="sxs-lookup"><span data-stu-id="0f3ef-109">An active Internet connection.</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="40dc0-110">Безопасность платформы .NET Framework</span><span class="sxs-lookup"><span data-stu-id="40dc0-110">.NET Framework Security</span></span>  
- <span data-ttu-id="40dc0-111">Вызов <xref:System.Diagnostics.Process.Start%2A> метод требует полного доверия.</span><span class="sxs-lookup"><span data-stu-id="40dc0-111">The call to the <xref:System.Diagnostics.Process.Start%2A> method requires full trust.</span></span> <span data-ttu-id="40dc0-112">Дополнительные сведения см. в разделе <xref:System.Security.SecurityException>.</span><span class="sxs-lookup"><span data-stu-id="40dc0-112">For more information, see <xref:System.Security.SecurityException>.</span></span>  
+## <a name="net-framework-security"></a><span data-ttu-id="0f3ef-110">Безопасность платформы .NET Framework</span><span class="sxs-lookup"><span data-stu-id="0f3ef-110">.NET Framework Security</span></span>  
+ <span data-ttu-id="0f3ef-111">Вызов <xref:System.Diagnostics.Process.Start%2A> метод требует полного доверия.</span><span class="sxs-lookup"><span data-stu-id="0f3ef-111">The call to the <xref:System.Diagnostics.Process.Start%2A> method requires full trust.</span></span> <span data-ttu-id="0f3ef-112">Дополнительные сведения см. в разделе <xref:System.Security.SecurityException>.</span><span class="sxs-lookup"><span data-stu-id="0f3ef-112">For more information, see <xref:System.Security.SecurityException>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="40dc0-113">См. также</span><span class="sxs-lookup"><span data-stu-id="40dc0-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0f3ef-113">См. также</span><span class="sxs-lookup"><span data-stu-id="0f3ef-113">See also</span></span>
+
 - <xref:System.Windows.Forms.LinkLabel>
-- [<span data-ttu-id="40dc0-114">Элемент управления LinkLabel</span><span class="sxs-lookup"><span data-stu-id="40dc0-114">LinkLabel Control</span></span>](linklabel-control-windows-forms.md)
+- [<span data-ttu-id="0f3ef-114">Элемент управления LinkLabel</span><span class="sxs-lookup"><span data-stu-id="0f3ef-114">LinkLabel Control</span></span>](linklabel-control-windows-forms.md)

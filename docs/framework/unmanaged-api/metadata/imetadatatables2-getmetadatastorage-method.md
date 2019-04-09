@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1c177a315a76009b7ac82055cba2d0b23821333b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: f12243571262ad7511795c48721617932fc6b30b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57494887"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161412"
 ---
-# <a name="imetadatatables2getmetadatastorage-method"></a><span data-ttu-id="d65e0-102">Метод IMetaDataTables2::GetMetaDataStorage</span><span class="sxs-lookup"><span data-stu-id="d65e0-102">IMetaDataTables2::GetMetaDataStorage Method</span></span>
-<span data-ttu-id="d65e0-103">Получает размер и содержимое метаданных, хранящихся в указанном разделе.</span><span class="sxs-lookup"><span data-stu-id="d65e0-103">Gets the size and contents of the metadata stored in the specified section.</span></span>  
+# <a name="imetadatatables2getmetadatastorage-method"></a><span data-ttu-id="79391-102">Метод IMetaDataTables2::GetMetaDataStorage</span><span class="sxs-lookup"><span data-stu-id="79391-102">IMetaDataTables2::GetMetaDataStorage Method</span></span>
+<span data-ttu-id="79391-103">Получает размер и содержимое метаданных, хранящихся в указанном разделе.</span><span class="sxs-lookup"><span data-stu-id="79391-103">Gets the size and contents of the metadata stored in the specified section.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d65e0-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d65e0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="79391-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="79391-104">Syntax</span></span>  
   
 ```  
 HRESULT GetMetaDataStorage (  
@@ -36,22 +36,23 @@ HRESULT GetMetaDataStorage (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d65e0-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="d65e0-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="79391-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="79391-105">Parameters</span></span>  
  `ppvMd`  
- <span data-ttu-id="d65e0-106">[in, out] Указатель на раздел метаданных.</span><span class="sxs-lookup"><span data-stu-id="d65e0-106">[in, out] A pointer to a metadata section.</span></span>  
+ <span data-ttu-id="79391-106">[in, out] Указатель на раздел метаданных.</span><span class="sxs-lookup"><span data-stu-id="79391-106">[in, out] A pointer to a metadata section.</span></span>  
   
  `pcbMd`  
- <span data-ttu-id="d65e0-107">[out] Размер потока метаданных.</span><span class="sxs-lookup"><span data-stu-id="d65e0-107">[out] The size of the metadata stream.</span></span>  
+ <span data-ttu-id="79391-107">[out] Размер потока метаданных.</span><span class="sxs-lookup"><span data-stu-id="79391-107">[out] The size of the metadata stream.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d65e0-108">Требования</span><span class="sxs-lookup"><span data-stu-id="d65e0-108">Requirements</span></span>  
- <span data-ttu-id="d65e0-109">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d65e0-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="79391-108">Требования</span><span class="sxs-lookup"><span data-stu-id="79391-108">Requirements</span></span>  
+ <span data-ttu-id="79391-109">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="79391-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d65e0-110">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="d65e0-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="79391-110">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="79391-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="d65e0-111">**Библиотека:** Используется как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="d65e0-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="79391-111">**Библиотека:** Используется как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="79391-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="d65e0-112">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d65e0-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="79391-112">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="79391-112">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="d65e0-113">См. также</span><span class="sxs-lookup"><span data-stu-id="d65e0-113">See also</span></span>
-- [<span data-ttu-id="d65e0-114">Интерфейс IMetaDataTables2</span><span class="sxs-lookup"><span data-stu-id="d65e0-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
-- [<span data-ttu-id="d65e0-115">Интерфейс IMetaDataTables</span><span class="sxs-lookup"><span data-stu-id="d65e0-115">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+## <a name="see-also"></a><span data-ttu-id="79391-113">См. также</span><span class="sxs-lookup"><span data-stu-id="79391-113">See also</span></span>
+
+- [<span data-ttu-id="79391-114">Интерфейс IMetaDataTables2</span><span class="sxs-lookup"><span data-stu-id="79391-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [<span data-ttu-id="79391-115">Интерфейс IMetaDataTables</span><span class="sxs-lookup"><span data-stu-id="79391-115">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)

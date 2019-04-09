@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d2d7f9b459e5a46793d44728a9fea269ca47887
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5cd6b74ce2871cfafc0dc2260be3f758f6a28704
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492391"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168692"
 ---
-# <a name="imetadataimportfindtypedefbyname-method"></a><span data-ttu-id="0a029-102">Метод IMetaDataImport::FindTypeDefByName</span><span class="sxs-lookup"><span data-stu-id="0a029-102">IMetaDataImport::FindTypeDefByName Method</span></span>
-<span data-ttu-id="0a029-103">Возвращает указатель на метаданных TypeDef токен для <xref:System.Type> с указанным именем.</span><span class="sxs-lookup"><span data-stu-id="0a029-103">Gets a pointer to the TypeDef metadata token for the <xref:System.Type> with the specified name.</span></span>  
+# <a name="imetadataimportfindtypedefbyname-method"></a><span data-ttu-id="80a38-102">Метод IMetaDataImport::FindTypeDefByName</span><span class="sxs-lookup"><span data-stu-id="80a38-102">IMetaDataImport::FindTypeDefByName Method</span></span>
+<span data-ttu-id="80a38-103">Возвращает указатель на метаданных TypeDef токен для <xref:System.Type> с указанным именем.</span><span class="sxs-lookup"><span data-stu-id="80a38-103">Gets a pointer to the TypeDef metadata token for the <xref:System.Type> with the specified name.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0a029-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="0a029-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="80a38-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="80a38-104">Syntax</span></span>  
   
 ```  
 HRESULT FindTypeDefByName  
@@ -37,25 +37,26 @@ HRESULT FindTypeDefByName
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0a029-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="0a029-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="80a38-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="80a38-105">Parameters</span></span>  
  `szTypeDef`  
- <span data-ttu-id="0a029-106">[in] Имя типа, для которого необходимо получить токен TypeDef.</span><span class="sxs-lookup"><span data-stu-id="0a029-106">[in] The name of the type for which to get the TypeDef token.</span></span>  
+ <span data-ttu-id="80a38-106">[in] Имя типа, для которого необходимо получить токен TypeDef.</span><span class="sxs-lookup"><span data-stu-id="80a38-106">[in] The name of the type for which to get the TypeDef token.</span></span>  
   
  `tkEnclosingClass`  
- <span data-ttu-id="0a029-107">[in] Определение типа или TypeRef токен, представляющий включающего класса.</span><span class="sxs-lookup"><span data-stu-id="0a029-107">[in] A TypeDef or TypeRef token representing the enclosing class.</span></span> <span data-ttu-id="0a029-108">Если искомый тип не является вложенным классом, это значение равно NULL.</span><span class="sxs-lookup"><span data-stu-id="0a029-108">If the type to find is not a nested class, set this value to NULL.</span></span>  
+ <span data-ttu-id="80a38-107">[in] Определение типа или TypeRef токен, представляющий включающего класса.</span><span class="sxs-lookup"><span data-stu-id="80a38-107">[in] A TypeDef or TypeRef token representing the enclosing class.</span></span> <span data-ttu-id="80a38-108">Если искомый тип не является вложенным классом, это значение равно NULL.</span><span class="sxs-lookup"><span data-stu-id="80a38-108">If the type to find is not a nested class, set this value to NULL.</span></span>  
   
  `ptd`  
- <span data-ttu-id="0a029-109">[out] Указатель на соответствующий токен TypeDef.</span><span class="sxs-lookup"><span data-stu-id="0a029-109">[out] A pointer to the matching TypeDef token.</span></span>  
+ <span data-ttu-id="80a38-109">[out] Указатель на соответствующий токен TypeDef.</span><span class="sxs-lookup"><span data-stu-id="80a38-109">[out] A pointer to the matching TypeDef token.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0a029-110">Требования</span><span class="sxs-lookup"><span data-stu-id="0a029-110">Requirements</span></span>  
- <span data-ttu-id="0a029-111">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0a029-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="80a38-110">Требования</span><span class="sxs-lookup"><span data-stu-id="80a38-110">Requirements</span></span>  
+ <span data-ttu-id="80a38-111">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="80a38-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0a029-112">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="0a029-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="80a38-112">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="80a38-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="0a029-113">**Библиотека:** Включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="0a029-113">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="80a38-113">**Библиотека:** Включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="80a38-113">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="0a029-114">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0a029-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="80a38-114">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="80a38-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="0a029-115">См. также</span><span class="sxs-lookup"><span data-stu-id="0a029-115">See also</span></span>
-- [<span data-ttu-id="0a029-116">Интерфейс IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="0a029-116">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="0a029-117">Интерфейс IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="0a029-117">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="80a38-115">См. также</span><span class="sxs-lookup"><span data-stu-id="80a38-115">See also</span></span>
+
+- [<span data-ttu-id="80a38-116">Интерфейс IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="80a38-116">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="80a38-117">Интерфейс IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="80a38-117">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

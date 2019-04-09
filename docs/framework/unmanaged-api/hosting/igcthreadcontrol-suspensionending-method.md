@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ffee1550c64f1ce7c438580ce78a497aeeb99f3a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 90b0cba50129bc728089e41ece5a30697cfc3bc5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57468771"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144421"
 ---
-# <a name="igcthreadcontrolsuspensionending-method"></a><span data-ttu-id="94699-102">Метод IGCThreadControl::SuspensionEnding</span><span class="sxs-lookup"><span data-stu-id="94699-102">IGCThreadControl::SuspensionEnding Method</span></span>
-<span data-ttu-id="94699-103">Уведомляет основное приложение, что среда выполнения возобновляет выполнение после сбора мусора или по другим причинам.</span><span class="sxs-lookup"><span data-stu-id="94699-103">Notifies the host that the runtime is resuming threads after a garbage collection or other suspension.</span></span>  
+# <a name="igcthreadcontrolsuspensionending-method"></a><span data-ttu-id="3b348-102">Метод IGCThreadControl::SuspensionEnding</span><span class="sxs-lookup"><span data-stu-id="3b348-102">IGCThreadControl::SuspensionEnding Method</span></span>
+<span data-ttu-id="3b348-103">Уведомляет основное приложение, что среда выполнения возобновляет выполнение после сбора мусора или по другим причинам.</span><span class="sxs-lookup"><span data-stu-id="3b348-103">Notifies the host that the runtime is resuming threads after a garbage collection or other suspension.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="94699-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="94699-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3b348-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="3b348-104">Syntax</span></span>  
   
 ```  
 HRESULT SuspensionEnding (  
@@ -35,21 +35,22 @@ HRESULT SuspensionEnding (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="94699-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="94699-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3b348-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="3b348-105">Parameters</span></span>  
  `Generation`  
- <span data-ttu-id="94699-106">[in] Поколение, для которого был выполнен сбор мусора.</span><span class="sxs-lookup"><span data-stu-id="94699-106">[in] The generation on which a garbage collection has been performed.</span></span>  
+ <span data-ttu-id="3b348-106">[in] Поколение, для которого был выполнен сбор мусора.</span><span class="sxs-lookup"><span data-stu-id="3b348-106">[in] The generation on which a garbage collection has been performed.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="94699-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="94699-107">Remarks</span></span>  
- <span data-ttu-id="94699-108">Не повторного планирования во время обсуждения `SuspensionEnding` обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="94699-108">Do not reschedule any threads during the `SuspensionEnding` callback.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3b348-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="3b348-107">Remarks</span></span>  
+ <span data-ttu-id="3b348-108">Не повторного планирования во время обсуждения `SuspensionEnding` обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="3b348-108">Do not reschedule any threads during the `SuspensionEnding` callback.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="94699-109">Требования</span><span class="sxs-lookup"><span data-stu-id="94699-109">Requirements</span></span>  
- <span data-ttu-id="94699-110">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="94699-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3b348-109">Требования</span><span class="sxs-lookup"><span data-stu-id="3b348-109">Requirements</span></span>  
+ <span data-ttu-id="3b348-110">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3b348-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="94699-111">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="94699-111">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="3b348-111">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="3b348-111">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="94699-112">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="94699-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="3b348-112">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="3b348-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="94699-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="94699-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="3b348-113">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="3b348-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="94699-114">См. также</span><span class="sxs-lookup"><span data-stu-id="94699-114">See also</span></span>
-- [<span data-ttu-id="94699-115">Интерфейс IGCThreadControl</span><span class="sxs-lookup"><span data-stu-id="94699-115">IGCThreadControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md)
+## <a name="see-also"></a><span data-ttu-id="3b348-114">См. также</span><span class="sxs-lookup"><span data-stu-id="3b348-114">See also</span></span>
+
+- [<span data-ttu-id="3b348-115">Интерфейс IGCThreadControl</span><span class="sxs-lookup"><span data-stu-id="3b348-115">IGCThreadControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md)
