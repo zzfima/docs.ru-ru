@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 428c68b6-a7b4-44be-b280-75905f46612c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 230a5e3e3231ad6675d214d370f74eb37405c89c
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 32e74a76b6b1bedee4efc5715d0710c8efce2455
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56305653"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120761"
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>Строгое именование (справочник по управляемым API)
 API строгого именования позволяет клиенту администрировать подписание сборок строгим именем.  
@@ -107,5 +107,6 @@ API строгого именования позволяет клиенту а�
  Представляет открытый ключ из пары открытого и закрытого ключей в двоичном формате.  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
 - [Справочник по неуправляемым API](../../../../docs/framework/unmanaged-api/index.md)
