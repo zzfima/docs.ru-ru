@@ -2,12 +2,12 @@
 title: Предотвращение атак воспроизведения, когда служба WCF размещена на веб-ферме
 ms.date: 03/30/2017
 ms.assetid: 1c2ed695-7a31-4257-92bd-9e9731b886a5
-ms.openlocfilehash: b0e52624ef4483672abd8cd0995dbc2e58f95ca1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e27a85d42268df107b26d3bd24af15a639bb1836
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684870"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072927"
 ---
 # <a name="preventing-replay-attacks-when-a-wcf-service-is-hosted-in-a-web-farm"></a>Предотвращение атак воспроизведения, когда служба WCF размещена на веб-ферме
 При использовании безопасности сообщений служба WCF предотвращает атаки путем воспроизведения NONCE из входящего сообщения и проверки внутренней`InMemoryNonceCache` на наличие созданного NONCE. Если он есть, то сообщение удаляется как повторное. Когда служба WCF размещается в веб-ферме, свойство `InMemoryNonceCache` не разделяется всеми узлами веб-фермы и служба уязвима для атак с повторением пакетов.  Для устранения подобной угрозы данный сценарий WCF 4.5 предоставляет точку расширяемости, которая позволяет реализовать собственный кэш NONCE. Это осуществляется наследованием класса от абстрактного класса <xref:System.ServiceModel.Security.NonceCache>.  
@@ -16,5 +16,6 @@ ms.locfileid: "54684870"
  Чтобы реализовать собственный кэш общего NONCE, унаследуйте класс от <xref:System.ServiceModel.Security.NonceCache> и переопределите метод <xref:System.ServiceModel.Security.NonceCache.CheckNonce%2A> и <xref:System.ServiceModel.Security.NonceCache.TryAddNonce%2A>. <xref:System.ServiceModel.Security.NonceCache.CheckNonce%2A> будет проверять, существует ли указанный NONCE в кэше. <xref:System.ServiceModel.Security.NonceCache.TryAddNonce%2A> будет пытаться добавить NONCE в кэш. После реализации класса создается его экземпляр, который назначается объекту <xref:System.ServiceModel.Channels.LocalClientSecuritySettings.NonceCache%2A> для обнаружения повторных сообщений на стороне клиента и назначается объекту <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.NonceCache%2A> для обнаружения подобных атак на стороне сервера. Для этой возможности нет стандартной конфигурации параметров.  
   
 ## <a name="see-also"></a>См. также
+
 - [Безопасность сообщений](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
 - [SymmetricSecurityBindingElement](../../../../docs/framework/wcf/diagnostics/wmi/symmetricsecuritybindingelement.md)

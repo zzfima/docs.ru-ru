@@ -5,20 +5,19 @@ helpviewer_keywords:
 - typography [WPF], ClearType technology
 - ClearType [WPF], technology
 ms.assetid: 7e2392e0-75dc-463d-a716-908772782431
-ms.openlocfilehash: d5aee9eccad7075ca9f05e08a02ba008bab9a7e7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0127ee4112c4b42a7a55b9233217ea1e02604042
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355159"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085198"
 ---
 # <a name="cleartype-overview"></a>Общие сведения о технологии ClearType
 В этой статье дается обзор технологии [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)], доступной в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
-  
-  
+
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>Общие сведения о технологии  
- [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] — это программная технология, разработанная [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] для улучшения удобочитаемости текста на современных ЖК-мониторах (жидкокристаллических дисплеях), например экранах ноутбуков, карманных ПК и плоскопанельных мониторах.  [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] работает путем обращения к отдельным элементам вертикальных цветных полос в каждом пикселе ЖК-экрана. До представления технологии [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] минимальным уровнем детализации изображения на компьютере был один пиксель, однако благодаря [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] на ЖК-экране могут отображаться детали текста вплоть до доли ширины пикселя. Дополнительное разрешение повышает четкость мелких деталей отображаемого текста, значительно облегчая его длительное чтение.  
+ [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] — это программная технология, разработанная компанией [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] для улучшения удобочитаемости текста на современных ЖК-мониторах (жидкокристаллических дисплеях), например экранах ноутбуков, карманных ПК и плоскопанельных мониторах.  [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] работает путем обращения к отдельным вертикальным элементам цветных полос в каждом пикселе ЖК-экрана. До представления технологии [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] минимальным уровнем детализации изображения на компьютере был один пиксель, однако благодаря [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] на ЖК-экране могут отображаться детали текста вплоть до доли ширины пикселя. Дополнительное разрешение повышает четкость мелких деталей отображаемого текста, значительно облегчая его длительное чтение.  
   
  Технология [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], доступная в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], — это новое поколение [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], которое включает несколько преимуществ по сравнению с версией [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)].  
   
@@ -45,7 +44,7 @@ ms.locfileid: "57355159"
  ![Текст с неровными краями у мелких изгибов](./media/wcpsdk-mmgraphics-text-cleartype-overview-03.png "wcpsdk_mmgraphics_text_cleartype_overview_03")  
 Текст с неровными краями у мелких изгибов  
   
- [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] обеспечивает сглаживание по оси Y, позволяющее сгладить неровные края. Это особенно важно для повышения удобочитаемости восточно-азиатских языков, в которых иероглифы имеют почти равное количество горизонтальных и вертикальных мелких изгибов.  
+ [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] обеспечивает сглаживание по оси y уровень сгладить неровные края. Это особенно важно для повышения удобочитаемости восточно-азиатских языков, в которых иероглифы имеют почти равное количество горизонтальных и вертикальных мелких изгибов.  
   
  В следующем примере к тексту применено сглаживание по оси Y. В этом случае заметны гладкие изгибы верхней и нижней частей буквы.  
   
@@ -54,9 +53,9 @@ ms.locfileid: "57355159"
   
 <a name="hardware_acceleration"></a>   
 ## <a name="hardware-acceleration"></a>Аппаратное ускорение  
- [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] может использовать преимущества аппаратного ускорения для повышения производительности и снижения нагрузки на ЦП и системную память. Используя построители текстуры и память видеокарты, [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] обеспечивает быструю визуализацию текста, особенно при использовании анимации.  
+ [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] использовать преимущества аппаратного ускорения для повышения производительности и снижения нагрузки и системных требований к памяти ЦП. Используя построители текстуры и память видеокарты, [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] обеспечивает быструю визуализацию текста, особенно при использовании анимации.  
   
- [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] не изменяет параметры [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] на уровне системы. Отключение [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] в [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] задает [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] для сглаживания режим "оттенки серого". Кроме того, [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] не изменяет параметры [средства настройки ClearType, PowerToy](https://www.microsoft.com/typography/ClearTypePowerToy.mspx).  
+ [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] не изменяет общесистемные [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] параметры. Отключение [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] в [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] задает [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] для сглаживания режим "оттенки серого". Кроме того, [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] не изменяет параметры [средства настройки ClearType, PowerToy](https://www.microsoft.com/typography/ClearTypePowerToy.mspx).  
   
  Одно из архитектурных решений [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предполагает наличие независимого от разрешения макета, который обеспечивает более эффективную поддержку мониторов с высоким разрешением, получающих все большее распространение. Вследствие этого [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] не поддерживает отрисовку сглаженного текста или точечных рисунков в некоторых восточно-азиатских шрифтах, поскольку они являются зависимыми от разрешения.  
   
@@ -64,7 +63,8 @@ ms.locfileid: "57355159"
 ## <a name="further-information"></a>Дополнительные сведения  
  [Сведения о технологии ClearType](https://www.microsoft.com/typography/ClearTypeInfo.mspx)  
   
- [Средство настройки ClearType, PowerToy](https://www.microsoft.com/typography/ClearTypePowerToy.mspx)  
+ [Настройки ClearType PowerToy](https://www.microsoft.com/typography/ClearTypePowerToy.mspx)  
   
 ## <a name="see-also"></a>См. также
+
 - [Параметры реестра ClearType](cleartype-registry-settings.md)

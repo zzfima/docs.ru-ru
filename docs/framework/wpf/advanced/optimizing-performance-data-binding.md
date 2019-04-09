@@ -5,20 +5,18 @@ helpviewer_keywords:
 - binding data [WPF], performance
 - data binding [WPF], performance
 ms.assetid: 1506a35d-c009-43db-9f1e-4e230ad5be73
-ms.openlocfilehash: dfc58036bc39879009b31d29dc41247a914bcd59
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ac7ca815bedf180c8a680840f585d08f7018d6ab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352026"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087837"
 ---
 # <a name="optimizing-performance-data-binding"></a>Оптимизация производительности: Привязка данных
-Привязка данных [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет приложениям простой и последовательный способ представления данных и взаимодействия с ними. Можно связывать элементы с данными из различных источников данных в виде объектов [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] и [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)].  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Привязка данных обеспечивает простой и последовательный способ представления и взаимодействия с данными приложениях. Можно связывать элементы с данными из различных источников данных в виде объектов [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] и [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)].  
   
  В этом разделе даются рекомендации по повышению производительности привязки данных.  
-  
 
-  
 <a name="HowDataBindingReferencesAreResolved"></a>   
 ## <a name="how-data-binding-references-are-resolved"></a>Как разрешаются ссылки для привязки данных  
  Прежде чем обсуждать вопросы производительности привязки данных, стоит изучить, как механизм привязки данных [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] разрешает ссылки на объекты для привязки.  
@@ -71,9 +69,10 @@ ms.locfileid: "57352026"
   
 <a name="Do_not_Convert_CLR_objects_to_Xml_Just_For_Data_Binding"></a>   
 ## <a name="do-not-convert-clr-objects-to-xml-just-for-data-binding"></a>Не преобразовывайте объекты среды CLR в XML только для привязки данных.  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] позволяет привязать данные к содержимому [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]; однако привязка данных к содержимому [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] выполняется медленнее, чем привязка данных к объектам [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]. Не преобразуйте данные объекта [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] в XML, если единственной целью этого является привязка данных.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] позволяет привязать данные к [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] содержимого; Однако привязка данных к [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] содержимого выполняется медленнее, чем привязка данных к [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] объектов. Не преобразуйте данные объекта [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] в XML, если единственной целью этого является привязка данных.  
   
 ## <a name="see-also"></a>См. также
+
 - [Улучшение производительности приложений WPF](optimizing-wpf-application-performance.md)
 - [Планирование производительности приложения](planning-for-application-performance.md)
 - [Использование преимуществ оборудования](optimizing-performance-taking-advantage-of-hardware.md)
@@ -81,7 +80,7 @@ ms.locfileid: "57352026"
 - [Двумерная графика и изображения](optimizing-performance-2d-graphics-and-imaging.md)
 - [Поведение объекта](optimizing-performance-object-behavior.md)
 - [Ресурсы приложений](optimizing-performance-application-resources.md)
-- [Text](optimizing-performance-text.md)
+- [Текста](optimizing-performance-text.md)
 - [Дополнительные рекомендации по повышению производительности](optimizing-performance-other-recommendations.md)
 - [Общие сведения о привязке данных](../data/data-binding-overview.md)
-- [Пошаговое руководство: Кэширование данных приложения WPF](walkthrough-caching-application-data-in-a-wpf-application.md)
+- [Пошаговое руководство. Кэширование данных приложения WPF](walkthrough-caching-application-data-in-a-wpf-application.md)

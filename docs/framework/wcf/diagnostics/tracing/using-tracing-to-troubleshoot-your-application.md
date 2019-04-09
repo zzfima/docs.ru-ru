@@ -2,12 +2,12 @@
 title: Использование трассировки для устранения неполадок приложения
 ms.date: 03/30/2017
 ms.assetid: 7676b9bb-cbd1-41fd-9a93-cc615af6e2d0
-ms.openlocfilehash: 6aa4c91014987d0d671e1fb3727cceeafa5bdd6c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a173596b5b4bfbc97a1d013251d654d8073a5c10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562873"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072757"
 ---
 # <a name="using-tracing-to-troubleshoot-your-application"></a>Использование трассировки для устранения неполадок приложения
 Содержит разделы, посвященные использованию трассировки для устранения неполадок приложений.  
@@ -32,6 +32,7 @@ ms.locfileid: "54562873"
  Описание способа программной выдачи трассировок в пользовательском коде, что позволяет заранее создавать данные инструментирования для их последующего использования в диагностических целях совместно с трассировками WCF.  
   
 ## <a name="see-also"></a>См. также
-- [Средство просмотра трассировки служб (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+
+- [Программа Service Trace Viewer (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
 - [Трассировка](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [Сквозная трассировка](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)

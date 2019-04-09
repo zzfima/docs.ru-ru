@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c6237951b7fab013a32a7e717215cacdbe1125b1
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: bab625b8415183b9cf90c35cba140c4d28095805
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57493710"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076878"
 ---
 # <a name="imetadataimportenummethods-method"></a>Метод IMetaDataImport::EnumMethods
 Перечисляет токены MethodDef, представляющие методы указанного типа.  
@@ -57,7 +57,7 @@ HRESULT EnumMethods (
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
-|HRESULT|Описание:|  
+|HRESULT|Описание|  
 |-------------|-----------------|  
 |`S_OK`|`EnumMethods` успешно возвращен.|  
 |`S_FALSE`|Существуют маркеры MethodDef для перечисления отсутствуют. В этом случае `pcTokens` равно нулю.|  
@@ -72,5 +72,6 @@ HRESULT EnumMethods (
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

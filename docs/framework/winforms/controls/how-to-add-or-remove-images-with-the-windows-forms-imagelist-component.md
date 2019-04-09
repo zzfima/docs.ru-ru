@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Добавление или удаление изображений с помощью компонента ImageList в Windows Forms
+title: Практическое руководство. Добавление и удаление изображений, выводимых с помощью компонента ImageList, в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - images [Windows Forms], adding to ImageList component
 - images [Windows Forms], displaying with controls
 ms.assetid: c5eacc56-f769-4e2e-bfb7-f756620913db
-ms.openlocfilehash: 81c85186d2f15917a6aa1067814a0119edf3f460
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 286b56cddc18589b936a7f053a12ed44c81a32b6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705172"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072978"
 ---
-# <a name="how-to-add-or-remove-images-with-the-windows-forms-imagelist-component"></a>Практическое руководство. Добавление или удаление изображений с помощью компонента ImageList в Windows Forms
+# <a name="how-to-add-or-remove-images-with-the-windows-forms-imagelist-component"></a>Практическое руководство. Добавление и удаление изображений, выводимых с помощью компонента ImageList, в Windows Forms
 Windows Forms <xref:System.Windows.Forms.ImageList> компонента обычно заполняется с изображениями, прежде чем он будет связан с элементом управления. Тем не менее вы можете добавлять и удалять образы после связывания списка изображений с элементом управления.  
   
 > [!NOTE]
@@ -142,6 +142,7 @@ imageList1.Images.RemoveByKey("myPhoto");
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Компонент ImageList](imagelist-component-windows-forms.md)
 - [Общие сведения о компоненте ImageList](imagelist-component-overview-windows-forms.md)
-- [Изображения, точечные рисунки и метафайлы](../advanced/images-bitmaps-and-metafiles.md)
+- [Работа с растровыми и векторными изображениями с использованием классов Image, Bitmap и Metafile](../advanced/images-bitmaps-and-metafiles.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - spelling checker [WPF]
 - checking spelling [WPF]
 ms.assetid: 6f953d2b-67e8-4012-84ce-53c0e958da47
-ms.openlocfilehash: 633ffe38503df743df355a8b476e7b254fcafffa
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7381bafc349506d89058581e9ed62a4348a72865
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370683"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076852"
 ---
 # <a name="how-to-enable-spell-checking-in-a-text-editing-control"></a>Практическое руководство. Включение проверки орфографии в элементе управления редактирования текста
 В следующем примере демонстрируется включение проверки орфографии в режиме реального времени <xref:System.Windows.Controls.TextBox> с помощью <xref:System.Windows.Controls.SpellCheck.IsEnabled%2A> свойство <xref:System.Windows.Controls.SpellCheck> класса.  
@@ -28,6 +28,7 @@ ms.locfileid: "57370683"
  [!code-vb[TextBoxMiscSnippets_procedural_snip#SpellCheckCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBoxMiscSnippets_procedural_snip/visualbasic/spellcheckexample.vb#spellcheckcodeexamplewholepage)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Использование проверки орфографии с помощью контекстного меню](how-to-use-spell-checking-with-a-context-menu.md)
 - [Общие сведения о TextBox](textbox-overview.md)
 - [Общие сведения о RichTextBox](richtextbox-overview.md)

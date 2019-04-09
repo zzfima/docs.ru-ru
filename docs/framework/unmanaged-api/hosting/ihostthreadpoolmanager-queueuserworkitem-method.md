@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03185f3f554c5454b23b0c72c42d68714488e6be
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 1c548ae7f8d605ff84da2046d057e436c8e95721
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57501712"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082118"
 ---
 # <a name="ihostthreadpoolmanagerqueueuserworkitem-method"></a>Метод IHostThreadPoolManager::QueueUserWorkItem
 Помещает в очередь для выполнения функции и указывает объект, содержащий данные, используемые этой функцией. Функция выполняется, когда поток не станет доступным.  
@@ -71,6 +71,7 @@ HRESULT QueueUserWorkItem (
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>
 - <xref:System.Threading.ThreadPool>
 - [Интерфейс IHostThreadPoolManager](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)

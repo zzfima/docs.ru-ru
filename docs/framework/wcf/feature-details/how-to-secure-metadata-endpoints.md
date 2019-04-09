@@ -1,18 +1,18 @@
 ---
-title: Как выполнить Защита конечных точек метаданных
+title: Практическое руководство. Защита конечных точек метаданных
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9f71b6ae-737c-4382-8d89-0a7b1c7e182b
-ms.openlocfilehash: e7ba87a0e2a0a9dd0a4cd984dd88b4850a24040e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: be4bf9b3601e33d90306401abe1dce73f77d09e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590686"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076579"
 ---
-# <a name="how-to-secure-metadata-endpoints"></a>Как выполнить Защита конечных точек метаданных
+# <a name="how-to-secure-metadata-endpoints"></a>Практическое руководство. Защита конечных точек метаданных
 Метаданные для службы могут содержать конфиденциальные сведения о приложении, которые могут быть использованы злоумышленником. Потребителям службы может также потребоваться безопасный механизм получения метаданных о службе. Поэтому необходимо время от времени публиковать метаданные с помощью защищенной конечной точки.  
   
  Конечные точки метаданных обычно обеспечивается с помощью стандартных механизмов безопасности определены в Windows Communication Foundation (WCF) для защиты конечных точек приложений. (Дополнительные сведения см. в разделе [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md).)  
@@ -93,10 +93,11 @@ ms.locfileid: "54590686"
 -   <xref:System.ServiceModel.Description?displayProperty=nameWithType>  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior>
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>
-- [Практическое руководство. Настройка порта с помощью SSL-сертификата](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+- [Практическое руководство. Настройка порта с использованием SSL-сертификата](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
 - [Работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Вопросы безопасности при использовании метаданных](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
 - [Защита служб и клиентов](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

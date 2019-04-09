@@ -6,18 +6,18 @@ helpviewer_keywords:
 - grid rows [WPF], resizing
 - GridSplitter control [WPF], resizing grid rows
 ms.assetid: 2413a9f2-1d81-46ed-95cb-95ec8233eea2
-ms.openlocfilehash: b05bda6cd33d3cdd0dda6288f30821d290c60cfc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6760a7a691af4f666294556cae3bc95a4299730a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370050"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074278"
 ---
 # <a name="how-to-resize-rows-with-a-gridsplitter"></a>Практическое руководство. Изменение размера строк с помощью разделителя GridSplitter
 В этом примере показано, как использовать горизонтальный <xref:System.Windows.Controls.GridSplitter> для перераспределения пространства между двумя строками в <xref:System.Windows.Controls.Grid> без изменения размеров <xref:System.Windows.Controls.Grid>.  
   
 ## <a name="example"></a>Пример  
- **Создание GridSplitter, который накладывается на границы строки**  
+ **Создание GridSplitter, который накладывается границы строки**  
   
  Чтобы указать <xref:System.Windows.Controls.GridSplitter> , изменяет размеры соседних строк в <xref:System.Windows.Controls.Grid>, задайте <xref:System.Windows.Controls.Grid.Row%2A> вложенного свойства зависимостей для одной из строк, которые вы хотите изменить. Если ваш <xref:System.Windows.Controls.Grid> имеет более чем один столбец, задайте <xref:System.Windows.Controls.Grid.ColumnSpan%2A> вложенное свойство, чтобы указать число столбцов. Затем установите <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> для <xref:System.Windows.VerticalAlignment.Top> или <xref:System.Windows.VerticalAlignment.Bottom> (указываемое выравнивание зависит от какой из двух строк вы хотите изменить). Наконец, установите <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> свойства <xref:System.Windows.HorizontalAlignment.Stretch>.  
   
@@ -37,5 +37,6 @@ ms.locfileid: "57370050"
 [!code-xaml[GridSplitterRowColumn#GridSplitterEntireRowPart2](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirerowpart2)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Controls.GridSplitter>
-- [Разделы практического руководства](gridsplitter-how-to-topics.md)
+- [Практические руководства](gridsplitter-how-to-topics.md)

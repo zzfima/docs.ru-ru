@@ -2,12 +2,12 @@
 title: GROUP BY (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: cf4f4972-4724-4945-ba44-943a08549139
-ms.openlocfilehash: 4dffc88866721bde0d4e846fa805bb60c6855b5b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 581a18b75d6028089e96b97dc5adeb2d3986c088
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740571"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081922"
 ---
 # <a name="group-by-entity-sql"></a>GROUP BY (Entity SQL)
 Определяет группы, в которые должны быть помещены объекты, возвращаемые выражением запроса ([SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)).  
@@ -20,7 +20,7 @@ ms.locfileid: "54740571"
   
 ## <a name="arguments"></a>Аргументы  
  `aliasedExpression`  
- Любое допустимое выражение запроса, в котором выполняется группирование. Аргумент`expression` может быть свойством или нестатистическим выражением, ссылающимся на свойство, которое возвращается предложением FROM. Каждое выражение в предложении GROUP BY должно иметь тип, который может быть проверен на равенство. Такими типами обычно являются скалярные примитивы - числа, строки и даты. Операция GROUP BY не может быть выполнена по коллекциям.  
+ Любое допустимое выражение запроса, в котором выполняется группирование. `expression` может быть свойством или нестатистическим выражением, которое ссылается на свойство, которое возвращается предложением FROM. Каждое выражение в предложении GROUP BY должно иметь тип, который может быть проверен на равенство. Такими типами обычно являются скалярные примитивы - числа, строки и даты. Операция GROUP BY не может быть выполнена по коллекциям.  
   
 ## <a name="remarks"></a>Примечания  
  Если в предложении SELECT включены агрегатные функции \<список выбора >, GROUP BY вычисляет сводное значение для каждой группы. Если задано предложение GROUP BY, то каждое имя свойства во всех нестатистических выражениях в списке выбора должно быть включено в список GROUP BY либо выражение GROUP BY должно точно соответствовать выражению списка выбора.  
@@ -69,5 +69,6 @@ GROUP BY 1   -- BAD, a constant is not allowed
  [!code-csharp[DP EntityServices Concepts 2#GROUPBY](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#groupby)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Справочник по Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [Выражения запросов](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)

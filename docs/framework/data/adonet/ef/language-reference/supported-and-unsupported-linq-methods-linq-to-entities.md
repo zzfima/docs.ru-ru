@@ -2,12 +2,12 @@
 title: Поддерживаемые и неподдерживаемые методы LINQ (LINQ to Entities)
 ms.date: 03/30/2017
 ms.assetid: 7f3ffa5f-f819-4730-bcdb-09b23de3b6d0
-ms.openlocfilehash: e805eba7cc14b322b4d3dafe9036691b51ecec02
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 74b3973f931fa6f0d1f5b380833b8d5e5566563b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904276"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077079"
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>Поддерживаемые и неподдерживаемые методы LINQ (LINQ to Entities)
 В данном разделе приводятся сведения о стандартных операторах запросов LINQ, поддерживаемых или неподдерживаемых в запросах [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]. У многих стандартных операторов запросов LINQ существуют перегруженные версии, принимающие целочисленный аргумент. Отсчитываемый от нуля индекс в последовательности, которой выполняется операция, соответствующий целочисленному аргументу <xref:System.Collections.Generic.IEqualityComparer%601>, или <xref:System.Collections.Generic.IComparer%601>. Если не указано обратное, эти перегруженные версии стандартных операторов LINQ не поддерживаются и при попытке их использования будет вызвано исключение.  
@@ -150,7 +150,7 @@ ms.locfileid: "55904276"
 |Метод|Поддержка|Сигнатура функции Visual Basic|Сигнатура метода C#|  
 |------------|-------------|-------------------------------------|--------------------------|  
 |<xref:System.Linq.Queryable.Cast%2A>|Поддерживается для типов-примитивов модели EDM|`Function Cast(Of TResult) ( _ source As IQueryable _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> Cast<TResult>( this IQueryable source )`|  
-|<xref:System.Linq.Queryable.OfType%2A>|Поддерживается для объекта <xref:System.Data.Metadata.Edm.EntityType>|`Function OfType(Of TResult) ( _ source As IQueryable _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> OfType<TResult>( this IQueryable source )`|  
+|<xref:System.Linq.Queryable.OfType%2A>|Поддерживается для <xref:System.Data.Metadata.Edm.EntityType>|`Function OfType(Of TResult) ( _ source As IQueryable _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> OfType<TResult>( this IQueryable source )`|  
   
 ## <a name="paging-methods"></a>Методы постраничного просмотра  
  В запросах [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] не поддерживается целый ряд методов постраничного просмотра LINQ. Дополнительные сведения см. в разделе [стандартных операторов запросов в запросах LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). В следующей таблице перечисляются поддерживаемые и неподдерживаемые методы постраничного просмотра.  
@@ -179,4 +179,5 @@ ms.locfileid: "55904276"
 |<xref:System.Linq.Queryable.TakeWhile%2A>|Не поддерживается|`Function TakeWhile(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Integer, Boolean)) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> TakeWhile<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, int, bool>> predicate )`|  
   
 ## <a name="see-also"></a>См. также
-- [Стандартные операторы запроса в запросах LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)
+
+- [Стандартные операторы в запросах LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)
