@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6a4bb4072c574edeac1c531978fac75595c252e0
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 17ba15553d2e7dcd2090870eaab54b4c680631f1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57481603"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163089"
 ---
-# <a name="icordebugcontrollerenumeratethreads-method"></a><span data-ttu-id="6ffe0-102">Метод ICorDebugController::EnumerateThreads</span><span class="sxs-lookup"><span data-stu-id="6ffe0-102">ICorDebugController::EnumerateThreads Method</span></span>
-<span data-ttu-id="6ffe0-103">Возвращает перечислитель для активных управляемых потоков в процессе.</span><span class="sxs-lookup"><span data-stu-id="6ffe0-103">Gets an enumerator for the active managed threads in the process.</span></span>  
+# <a name="icordebugcontrollerenumeratethreads-method"></a><span data-ttu-id="a7d46-102">Метод ICorDebugController::EnumerateThreads</span><span class="sxs-lookup"><span data-stu-id="a7d46-102">ICorDebugController::EnumerateThreads Method</span></span>
+<span data-ttu-id="a7d46-103">Возвращает перечислитель для активных управляемых потоков в процессе.</span><span class="sxs-lookup"><span data-stu-id="a7d46-103">Gets an enumerator for the active managed threads in the process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6ffe0-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="6ffe0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a7d46-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a7d46-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumerateThreads (  
@@ -35,21 +35,20 @@ HRESULT EnumerateThreads (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6ffe0-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="6ffe0-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a7d46-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="a7d46-105">Parameters</span></span>  
  `ppThreads`  
- <span data-ttu-id="6ffe0-106">[out] Указатель на адрес объекта «ICorDebugThreadEnum», который представляет перечислитель для всех управляемых потоков, которые активны в процессе.</span><span class="sxs-lookup"><span data-stu-id="6ffe0-106">[out] A pointer to the address of an "ICorDebugThreadEnum" object that represents an enumerator for all managed threads that are active in the process.</span></span>  
+ <span data-ttu-id="a7d46-106">[out] Указатель на адрес объекта «ICorDebugThreadEnum», который представляет перечислитель для всех управляемых потоков, которые активны в процессе.</span><span class="sxs-lookup"><span data-stu-id="a7d46-106">[out] A pointer to the address of an "ICorDebugThreadEnum" object that represents an enumerator for all managed threads that are active in the process.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="6ffe0-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="6ffe0-107">Remarks</span></span>  
- <span data-ttu-id="6ffe0-108">Поток считается активным после [ICorDebugManagedCallback::CreateThread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md) было отправлено обратного вызова и перед [ICorDebugManagedCallback::ExitThread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitthread-method.md) было отправлено обратного вызова .</span><span class="sxs-lookup"><span data-stu-id="6ffe0-108">A thread is considered active after the [ICorDebugManagedCallback::CreateThread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md) callback has been dispatched and before the [ICorDebugManagedCallback::ExitThread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitthread-method.md) callback has been dispatched.</span></span> <span data-ttu-id="6ffe0-109">Управляемый поток может не обязательно управляемые фреймы в стеке.</span><span class="sxs-lookup"><span data-stu-id="6ffe0-109">A managed thread may not necessarily have any managed frames on its stack.</span></span> <span data-ttu-id="6ffe0-110">Потоки могут быть перечислены до [ICorDebugManagedCallback::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="6ffe0-110">Threads can be enumerated even before the [ICorDebugManagedCallback::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) callback.</span></span> <span data-ttu-id="6ffe0-111">Перечисление естественным образом будет пустым.</span><span class="sxs-lookup"><span data-stu-id="6ffe0-111">The enumeration will naturally be empty.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a7d46-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="a7d46-107">Remarks</span></span>  
+ <span data-ttu-id="a7d46-108">Поток считается активным после [ICorDebugManagedCallback::CreateThread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md) было отправлено обратного вызова и перед [ICorDebugManagedCallback::ExitThread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitthread-method.md) было отправлено обратного вызова .</span><span class="sxs-lookup"><span data-stu-id="a7d46-108">A thread is considered active after the [ICorDebugManagedCallback::CreateThread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md) callback has been dispatched and before the [ICorDebugManagedCallback::ExitThread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitthread-method.md) callback has been dispatched.</span></span> <span data-ttu-id="a7d46-109">Управляемый поток может не обязательно управляемые фреймы в стеке.</span><span class="sxs-lookup"><span data-stu-id="a7d46-109">A managed thread may not necessarily have any managed frames on its stack.</span></span> <span data-ttu-id="a7d46-110">Потоки могут быть перечислены до [ICorDebugManagedCallback::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) обратного вызова.</span><span class="sxs-lookup"><span data-stu-id="a7d46-110">Threads can be enumerated even before the [ICorDebugManagedCallback::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) callback.</span></span> <span data-ttu-id="a7d46-111">Перечисление естественным образом будет пустым.</span><span class="sxs-lookup"><span data-stu-id="a7d46-111">The enumeration will naturally be empty.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6ffe0-112">Требования</span><span class="sxs-lookup"><span data-stu-id="6ffe0-112">Requirements</span></span>  
- <span data-ttu-id="6ffe0-113">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6ffe0-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a7d46-112">Требования</span><span class="sxs-lookup"><span data-stu-id="a7d46-112">Requirements</span></span>  
+ <span data-ttu-id="a7d46-113">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a7d46-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6ffe0-114">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6ffe0-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="a7d46-114">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a7d46-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="6ffe0-115">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6ffe0-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a7d46-115">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a7d46-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6ffe0-116">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6ffe0-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="a7d46-116">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="a7d46-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="6ffe0-117">См. также</span><span class="sxs-lookup"><span data-stu-id="6ffe0-117">See also</span></span>
-
+## <a name="see-also"></a><span data-ttu-id="a7d46-117">См. также</span><span class="sxs-lookup"><span data-stu-id="a7d46-117">See also</span></span>

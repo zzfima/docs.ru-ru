@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a5543313a8d7a5589e115d609923aa0e75d3e275
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 143b11f0a99081b7d49bfbb68b635d92cf1e9ba3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484970"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163882"
 ---
-# <a name="imetadataimportresetenum-method"></a><span data-ttu-id="6dbb4-102">Метод IMetaDataImport::ResetEnum</span><span class="sxs-lookup"><span data-stu-id="6dbb4-102">IMetaDataImport::ResetEnum Method</span></span>
-<span data-ttu-id="6dbb4-103">Возвращает заданный перечислитель в указанную позицию.</span><span class="sxs-lookup"><span data-stu-id="6dbb4-103">Resets the specified enumerator to the specified position.</span></span>  
+# <a name="imetadataimportresetenum-method"></a><span data-ttu-id="673ea-102">Метод IMetaDataImport::ResetEnum</span><span class="sxs-lookup"><span data-stu-id="673ea-102">IMetaDataImport::ResetEnum Method</span></span>
+<span data-ttu-id="673ea-103">Возвращает заданный перечислитель в указанную позицию.</span><span class="sxs-lookup"><span data-stu-id="673ea-103">Resets the specified enumerator to the specified position.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6dbb4-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="6dbb4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="673ea-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="673ea-104">Syntax</span></span>  
   
 ```  
 HRESULT ResetEnum (  
@@ -36,22 +36,23 @@ HRESULT ResetEnum (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6dbb4-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="6dbb4-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="673ea-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="673ea-105">Parameters</span></span>  
  `hEnum`  
- <span data-ttu-id="6dbb4-106">[in] Перечислитель для сброса.</span><span class="sxs-lookup"><span data-stu-id="6dbb4-106">[in] The enumerator to reset.</span></span>  
+ <span data-ttu-id="673ea-106">[in] Перечислитель для сброса.</span><span class="sxs-lookup"><span data-stu-id="673ea-106">[in] The enumerator to reset.</span></span>  
   
  `ulPos`  
- <span data-ttu-id="6dbb4-107">[in] Новое положение, по которому следует вставить перечислитель.</span><span class="sxs-lookup"><span data-stu-id="6dbb4-107">[in] The new position at which to place the enumerator.</span></span>  
+ <span data-ttu-id="673ea-107">[in] Новое положение, по которому следует вставить перечислитель.</span><span class="sxs-lookup"><span data-stu-id="673ea-107">[in] The new position at which to place the enumerator.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6dbb4-108">Требования</span><span class="sxs-lookup"><span data-stu-id="6dbb4-108">Requirements</span></span>  
- <span data-ttu-id="6dbb4-109">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6dbb4-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="673ea-108">Требования</span><span class="sxs-lookup"><span data-stu-id="673ea-108">Requirements</span></span>  
+ <span data-ttu-id="673ea-109">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="673ea-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6dbb4-110">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="6dbb4-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="673ea-110">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="673ea-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="6dbb4-111">**Библиотека:** Включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="6dbb4-111">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="673ea-111">**Библиотека:** Включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="673ea-111">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="6dbb4-112">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6dbb4-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="673ea-112">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="673ea-112">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="6dbb4-113">См. также</span><span class="sxs-lookup"><span data-stu-id="6dbb4-113">See also</span></span>
-- [<span data-ttu-id="6dbb4-114">Интерфейс IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="6dbb4-114">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="6dbb4-115">Интерфейс IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="6dbb4-115">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="673ea-113">См. также</span><span class="sxs-lookup"><span data-stu-id="673ea-113">See also</span></span>
+
+- [<span data-ttu-id="673ea-114">Интерфейс IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="673ea-114">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="673ea-115">Интерфейс IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="673ea-115">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

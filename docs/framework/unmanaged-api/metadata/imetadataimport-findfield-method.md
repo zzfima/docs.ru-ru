@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4a6f2e428366d2fe96313879ef1256d7b86ddd29
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 88cd08b4290739808079bc8ecb713a5c5ea96584
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57490415"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172566"
 ---
-# <a name="imetadataimportfindfield-method"></a><span data-ttu-id="26211-102">Метод IMetaDataImport::FindField</span><span class="sxs-lookup"><span data-stu-id="26211-102">IMetaDataImport::FindField Method</span></span>
-<span data-ttu-id="26211-103">Возвращает указатель на FieldDef токен для поля, которое заключено заданным <xref:System.Type> , с указанной сигнатурой имени и метаданных.</span><span class="sxs-lookup"><span data-stu-id="26211-103">Gets a pointer to the FieldDef token for the field that is enclosed by the specified <xref:System.Type> and that has the specified name and metadata signature.</span></span>  
+# <a name="imetadataimportfindfield-method"></a><span data-ttu-id="0144e-102">Метод IMetaDataImport::FindField</span><span class="sxs-lookup"><span data-stu-id="0144e-102">IMetaDataImport::FindField Method</span></span>
+<span data-ttu-id="0144e-103">Возвращает указатель на FieldDef токен для поля, которое заключено заданным <xref:System.Type> , с указанной сигнатурой имени и метаданных.</span><span class="sxs-lookup"><span data-stu-id="0144e-103">Gets a pointer to the FieldDef token for the field that is enclosed by the specified <xref:System.Type> and that has the specified name and metadata signature.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="26211-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="26211-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0144e-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="0144e-104">Syntax</span></span>  
   
 ```  
 HRESULT FindField (  
@@ -39,38 +39,39 @@ HRESULT FindField (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="26211-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="26211-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0144e-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="0144e-105">Parameters</span></span>  
  `td`  
- <span data-ttu-id="26211-106">[in] Токен TypeDef для класса или интерфейса, который содержит поле для поиска.</span><span class="sxs-lookup"><span data-stu-id="26211-106">[in] The TypeDef token for the class or interface that encloses the field to search for.</span></span> <span data-ttu-id="26211-107">Если это значение равно `mdTokenNil`, поиск выполняется для глобальной переменной.</span><span class="sxs-lookup"><span data-stu-id="26211-107">If this value is `mdTokenNil`, the lookup is done for a global variable.</span></span>  
+ <span data-ttu-id="0144e-106">[in] Токен TypeDef для класса или интерфейса, который содержит поле для поиска.</span><span class="sxs-lookup"><span data-stu-id="0144e-106">[in] The TypeDef token for the class or interface that encloses the field to search for.</span></span> <span data-ttu-id="0144e-107">Если это значение равно `mdTokenNil`, поиск выполняется для глобальной переменной.</span><span class="sxs-lookup"><span data-stu-id="0144e-107">If this value is `mdTokenNil`, the lookup is done for a global variable.</span></span>  
   
  `szName`  
- <span data-ttu-id="26211-108">[in] Имя поля для поиска.</span><span class="sxs-lookup"><span data-stu-id="26211-108">[in] The name of the field to search for.</span></span>  
+ <span data-ttu-id="0144e-108">[in] Имя поля для поиска.</span><span class="sxs-lookup"><span data-stu-id="0144e-108">[in] The name of the field to search for.</span></span>  
   
  `pvSigBlob`  
- <span data-ttu-id="26211-109">[in] Указатель на двоичную подпись метаданных поля.</span><span class="sxs-lookup"><span data-stu-id="26211-109">[in] A pointer to the binary metadata signature of the field.</span></span>  
+ <span data-ttu-id="0144e-109">[in] Указатель на двоичную подпись метаданных поля.</span><span class="sxs-lookup"><span data-stu-id="0144e-109">[in] A pointer to the binary metadata signature of the field.</span></span>  
   
  `cbSigBlob`  
- <span data-ttu-id="26211-110">[in] Размер в байтах `pvSigBlob`.</span><span class="sxs-lookup"><span data-stu-id="26211-110">[in] The size in bytes of `pvSigBlob`.</span></span>  
+ <span data-ttu-id="0144e-110">[in] Размер в байтах `pvSigBlob`.</span><span class="sxs-lookup"><span data-stu-id="0144e-110">[in] The size in bytes of `pvSigBlob`.</span></span>  
   
  `pmb`  
- <span data-ttu-id="26211-111">[out] Указатель на соответствующий токен FieldDef.</span><span class="sxs-lookup"><span data-stu-id="26211-111">[out] A pointer to the matching FieldDef token.</span></span>  
+ <span data-ttu-id="0144e-111">[out] Указатель на соответствующий токен FieldDef.</span><span class="sxs-lookup"><span data-stu-id="0144e-111">[out] A pointer to the matching FieldDef token.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="26211-112">Примечания</span><span class="sxs-lookup"><span data-stu-id="26211-112">Remarks</span></span>  
- <span data-ttu-id="26211-113">Укажите поле, используя его во включающий класс или интерфейс (`td`), его имя (`szName`) и при необходимости его подпись (`pvSigBlob`).</span><span class="sxs-lookup"><span data-stu-id="26211-113">You specify the field using its enclosing class or interface (`td`), its name (`szName`), and optionally its signature (`pvSigBlob`).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0144e-112">Примечания</span><span class="sxs-lookup"><span data-stu-id="0144e-112">Remarks</span></span>  
+ <span data-ttu-id="0144e-113">Укажите поле, используя его во включающий класс или интерфейс (`td`), его имя (`szName`) и при необходимости его подпись (`pvSigBlob`).</span><span class="sxs-lookup"><span data-stu-id="0144e-113">You specify the field using its enclosing class or interface (`td`), its name (`szName`), and optionally its signature (`pvSigBlob`).</span></span>  
   
- <span data-ttu-id="26211-114">Подпись передается `FindField` необходимо создавать в текущей области, поскольку подписи привязаны к определенной области.</span><span class="sxs-lookup"><span data-stu-id="26211-114">The signature passed to `FindField` must have been generated in the current scope, because signatures are bound to a particular scope.</span></span> <span data-ttu-id="26211-115">Подписи можно внедрить токен, который определяет включающего класса или типа значения.</span><span class="sxs-lookup"><span data-stu-id="26211-115">A signature can embed a token that identifies the enclosing class or value type.</span></span> <span data-ttu-id="26211-116">(Маркер — это индекс в локальной таблице TypeDef).</span><span class="sxs-lookup"><span data-stu-id="26211-116">(The token is an index into the local TypeDef table).</span></span> <span data-ttu-id="26211-117">Не удается построить выполнения вне контекста текущей области и использовать ее в качестве входных данных для `FindField`.</span><span class="sxs-lookup"><span data-stu-id="26211-117">You cannot build a run-time signature outside the context of the current scope and use that signature as input to `FindField`.</span></span>  
+ <span data-ttu-id="0144e-114">Подпись передается `FindField` необходимо создавать в текущей области, поскольку подписи привязаны к определенной области.</span><span class="sxs-lookup"><span data-stu-id="0144e-114">The signature passed to `FindField` must have been generated in the current scope, because signatures are bound to a particular scope.</span></span> <span data-ttu-id="0144e-115">Подписи можно внедрить токен, который определяет включающего класса или типа значения.</span><span class="sxs-lookup"><span data-stu-id="0144e-115">A signature can embed a token that identifies the enclosing class or value type.</span></span> <span data-ttu-id="0144e-116">(Маркер — это индекс в локальной таблице TypeDef).</span><span class="sxs-lookup"><span data-stu-id="0144e-116">(The token is an index into the local TypeDef table).</span></span> <span data-ttu-id="0144e-117">Не удается построить выполнения вне контекста текущей области и использовать ее в качестве входных данных для `FindField`.</span><span class="sxs-lookup"><span data-stu-id="0144e-117">You cannot build a run-time signature outside the context of the current scope and use that signature as input to `FindField`.</span></span>  
   
- <span data-ttu-id="26211-118">`FindField` находит только те поля, которые были определены непосредственно в классе или интерфейсе; не удается найти унаследованные поля.</span><span class="sxs-lookup"><span data-stu-id="26211-118">`FindField` finds only fields that were defined directly in the class or interface; it does not find inherited fields.</span></span>  
+ `FindField` <span data-ttu-id="0144e-118">находит только те поля, которые были определены непосредственно в классе или интерфейсе; не удается найти унаследованные поля.</span><span class="sxs-lookup"><span data-stu-id="0144e-118">finds only fields that were defined directly in the class or interface; it does not find inherited fields.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="26211-119">Требования</span><span class="sxs-lookup"><span data-stu-id="26211-119">Requirements</span></span>  
- <span data-ttu-id="26211-120">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="26211-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0144e-119">Требования</span><span class="sxs-lookup"><span data-stu-id="0144e-119">Requirements</span></span>  
+ <span data-ttu-id="0144e-120">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0144e-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="26211-121">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="26211-121">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="0144e-121">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="0144e-121">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="26211-122">**Библиотека:** Включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="26211-122">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="0144e-122">**Библиотека:** Включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="0144e-122">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="26211-123">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="26211-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="0144e-123">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="0144e-123">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="26211-124">См. также</span><span class="sxs-lookup"><span data-stu-id="26211-124">See also</span></span>
-- [<span data-ttu-id="26211-125">Интерфейс IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="26211-125">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="26211-126">Интерфейс IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="26211-126">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="0144e-124">См. также</span><span class="sxs-lookup"><span data-stu-id="0144e-124">See also</span></span>
+
+- [<span data-ttu-id="0144e-125">Интерфейс IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="0144e-125">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="0144e-126">Интерфейс IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="0144e-126">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 73ab94765e1b76cb8521a0d546d6bc61384aad5f
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 290647f0e0dcaeae53362762ed7f8e0c2f05a82c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57480745"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189954"
 ---
-# <a name="icordebugvariablehomegetregister-method"></a><span data-ttu-id="45a41-102">Метод ICorDebugVariableHome::GetRegister</span><span class="sxs-lookup"><span data-stu-id="45a41-102">ICorDebugVariableHome::GetRegister Method</span></span>
-<span data-ttu-id="45a41-103">Получает регистр, который содержит переменную с типом расположения `VLT_REGISTER`и базовым регистром для переменной с типом расположения `VLT_REGISTER_RELATIVE`.</span><span class="sxs-lookup"><span data-stu-id="45a41-103">Gets the register that contains a variable with a location type of `VLT_REGISTER`, and the base register for a variable with a location type of `VLT_REGISTER_RELATIVE`.</span></span>  
+# <a name="icordebugvariablehomegetregister-method"></a><span data-ttu-id="e5c89-102">Метод ICorDebugVariableHome::GetRegister</span><span class="sxs-lookup"><span data-stu-id="e5c89-102">ICorDebugVariableHome::GetRegister Method</span></span>
+<span data-ttu-id="e5c89-103">Получает регистр, который содержит переменную с типом расположения `VLT_REGISTER`и базовым регистром для переменной с типом расположения `VLT_REGISTER_RELATIVE`.</span><span class="sxs-lookup"><span data-stu-id="e5c89-103">Gets the register that contains a variable with a location type of `VLT_REGISTER`, and the base register for a variable with a location type of `VLT_REGISTER_RELATIVE`.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="45a41-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="45a41-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e5c89-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="e5c89-104">Syntax</span></span>  
   
 ```  
 HRESULT GetRegister(  
@@ -35,27 +35,28 @@ HRESULT GetRegister(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="45a41-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="45a41-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e5c89-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="e5c89-105">Parameters</span></span>  
  `pRegister`  
- <span data-ttu-id="45a41-106">[out] CorDebugRegister значение перечисления, указывающее регистра для переменной с типом расположения `VLT_REGISTER`и базовым регистром для переменной с типом расположения `VLT_REGISTER_RELATIVE`.</span><span class="sxs-lookup"><span data-stu-id="45a41-106">[out] A CorDebugRegister enumeration value  that indicates the register for a variable with a location type of `VLT_REGISTER`, and the base register for a variable with a location type of `VLT_REGISTER_RELATIVE`.</span></span>  
+ <span data-ttu-id="e5c89-106">[out] CorDebugRegister значение перечисления, указывающее регистра для переменной с типом расположения `VLT_REGISTER`и базовым регистром для переменной с типом расположения `VLT_REGISTER_RELATIVE`.</span><span class="sxs-lookup"><span data-stu-id="e5c89-106">[out] A CorDebugRegister enumeration value  that indicates the register for a variable with a location type of `VLT_REGISTER`, and the base register for a variable with a location type of `VLT_REGISTER_RELATIVE`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="45a41-107">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="45a41-107">Return Value</span></span>  
- <span data-ttu-id="45a41-108">Метод возвращает следующие значения:</span><span class="sxs-lookup"><span data-stu-id="45a41-108">The method returns the following values:</span></span>  
+## <a name="return-value"></a><span data-ttu-id="e5c89-107">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="e5c89-107">Return Value</span></span>  
+ <span data-ttu-id="e5c89-108">Метод возвращает следующие значения:</span><span class="sxs-lookup"><span data-stu-id="e5c89-108">The method returns the following values:</span></span>  
   
-|<span data-ttu-id="45a41-109">Значение</span><span class="sxs-lookup"><span data-stu-id="45a41-109">Value</span></span>|<span data-ttu-id="45a41-110">Описание:</span><span class="sxs-lookup"><span data-stu-id="45a41-110">Description</span></span>|  
+|<span data-ttu-id="e5c89-109">Значение</span><span class="sxs-lookup"><span data-stu-id="e5c89-109">Value</span></span>|<span data-ttu-id="e5c89-110">Описание</span><span class="sxs-lookup"><span data-stu-id="e5c89-110">Description</span></span>|  
 |-----------|-----------------|  
-|`S_OK`|<span data-ttu-id="45a41-111">Переменная находится в регистре, обозначается `pRegister` аргумент.</span><span class="sxs-lookup"><span data-stu-id="45a41-111">The variable is in the register indicated by the `pRegister` argument.</span></span>|  
-|`E_FAIL`|<span data-ttu-id="45a41-112">Переменная не в регистр или в папку, зависящий от регистра.</span><span class="sxs-lookup"><span data-stu-id="45a41-112">The variable is not in a register or a register-relative location.</span></span>|  
+|`S_OK`|<span data-ttu-id="e5c89-111">Переменная находится в регистре, обозначается `pRegister` аргумент.</span><span class="sxs-lookup"><span data-stu-id="e5c89-111">The variable is in the register indicated by the `pRegister` argument.</span></span>|  
+|`E_FAIL`|<span data-ttu-id="e5c89-112">Переменная не в регистр или в папку, зависящий от регистра.</span><span class="sxs-lookup"><span data-stu-id="e5c89-112">The variable is not in a register or a register-relative location.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="45a41-113">Требования</span><span class="sxs-lookup"><span data-stu-id="45a41-113">Requirements</span></span>  
- <span data-ttu-id="45a41-114">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="45a41-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e5c89-113">Требования</span><span class="sxs-lookup"><span data-stu-id="e5c89-113">Requirements</span></span>  
+ <span data-ttu-id="e5c89-114">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e5c89-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="45a41-115">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="45a41-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e5c89-115">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e5c89-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="45a41-116">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="45a41-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e5c89-116">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e5c89-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="45a41-117">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="45a41-117">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
+ **<span data-ttu-id="e5c89-117">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="e5c89-117">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="45a41-118">См. также</span><span class="sxs-lookup"><span data-stu-id="45a41-118">See also</span></span>
-- [<span data-ttu-id="45a41-119">Перечисление VariableLocationType</span><span class="sxs-lookup"><span data-stu-id="45a41-119">VariableLocationType Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md)
-- [<span data-ttu-id="45a41-120">Интерфейс ICorDebugVariableHome</span><span class="sxs-lookup"><span data-stu-id="45a41-120">ICorDebugVariableHome Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+## <a name="see-also"></a><span data-ttu-id="e5c89-118">См. также</span><span class="sxs-lookup"><span data-stu-id="e5c89-118">See also</span></span>
+
+- [<span data-ttu-id="e5c89-119">Перечисление VariableLocationType</span><span class="sxs-lookup"><span data-stu-id="e5c89-119">VariableLocationType Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md)
+- [<span data-ttu-id="e5c89-120">Интерфейс ICorDebugVariableHome</span><span class="sxs-lookup"><span data-stu-id="e5c89-120">ICorDebugVariableHome Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 012cd9fdf23206f57662c854692ba53f403b727f
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: ce6df232f3793b8b61d9fa7c18c9c90ca9fa3900
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471606"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184721"
 ---
-# <a name="imetadataemit2definemethodspec-method"></a><span data-ttu-id="f399e-102">Метод IMetaDataEmit2::DefineMethodSpec</span><span class="sxs-lookup"><span data-stu-id="f399e-102">IMetaDataEmit2::DefineMethodSpec Method</span></span>
-<span data-ttu-id="f399e-103">Создает экземпляр универсального метода и возвращает маркер для определения.</span><span class="sxs-lookup"><span data-stu-id="f399e-103">Creates a generic instance of a method, and gets a token to the definition.</span></span>  
+# <a name="imetadataemit2definemethodspec-method"></a><span data-ttu-id="25e36-102">Метод IMetaDataEmit2::DefineMethodSpec</span><span class="sxs-lookup"><span data-stu-id="25e36-102">IMetaDataEmit2::DefineMethodSpec Method</span></span>
+<span data-ttu-id="25e36-103">Создает экземпляр универсального метода и возвращает маркер для определения.</span><span class="sxs-lookup"><span data-stu-id="25e36-103">Creates a generic instance of a method, and gets a token to the definition.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f399e-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f399e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="25e36-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="25e36-104">Syntax</span></span>  
   
 ```  
 HRESULT DefineMethodSpec (  
@@ -38,28 +38,29 @@ HRESULT DefineMethodSpec (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f399e-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="f399e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="25e36-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="25e36-105">Parameters</span></span>  
  `tkParent`  
- <span data-ttu-id="f399e-106">[in] Токен, для которого необходимо создать экземпляр универсального метода.</span><span class="sxs-lookup"><span data-stu-id="f399e-106">[in] A token for the method of which to create the generic instance.</span></span> <span data-ttu-id="f399e-107">Токен должен иметь тип `mdMethodDef` или `mdMemberRef`.</span><span class="sxs-lookup"><span data-stu-id="f399e-107">The token must be of type `mdMethodDef` or `mdMemberRef`.</span></span>  
+ <span data-ttu-id="25e36-106">[in] Токен, для которого необходимо создать экземпляр универсального метода.</span><span class="sxs-lookup"><span data-stu-id="25e36-106">[in] A token for the method of which to create the generic instance.</span></span> <span data-ttu-id="25e36-107">Токен должен иметь тип `mdMethodDef` или `mdMemberRef`.</span><span class="sxs-lookup"><span data-stu-id="25e36-107">The token must be of type `mdMethodDef` or `mdMemberRef`.</span></span>  
   
  `pvSigBlob`  
- <span data-ttu-id="f399e-108">[in] Указатель на двоичную подпись COM + метода.</span><span class="sxs-lookup"><span data-stu-id="f399e-108">[in] A pointer to the binary COM+ signature of the method.</span></span>  
+ <span data-ttu-id="25e36-108">[in] Указатель на двоичную подпись COM + метода.</span><span class="sxs-lookup"><span data-stu-id="25e36-108">[in] A pointer to the binary COM+ signature of the method.</span></span>  
   
  `cbSibBlob`  
- <span data-ttu-id="f399e-109">[in] Размер в байтах из `pvSigBlob`.</span><span class="sxs-lookup"><span data-stu-id="f399e-109">[in] The size, in bytes, of `pvSigBlob`.</span></span>  
+ <span data-ttu-id="25e36-109">[in] Размер в байтах из `pvSigBlob`.</span><span class="sxs-lookup"><span data-stu-id="25e36-109">[in] The size, in bytes, of `pvSigBlob`.</span></span>  
   
  `pmi`  
- <span data-ttu-id="f399e-110">[out] Маркер для определения сигнатуры метаданных метода.</span><span class="sxs-lookup"><span data-stu-id="f399e-110">[out] A token to the metadata signature definition of the method.</span></span>  
+ <span data-ttu-id="25e36-110">[out] Маркер для определения сигнатуры метаданных метода.</span><span class="sxs-lookup"><span data-stu-id="25e36-110">[out] A token to the metadata signature definition of the method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f399e-111">Требования</span><span class="sxs-lookup"><span data-stu-id="f399e-111">Requirements</span></span>  
- <span data-ttu-id="f399e-112">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f399e-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="25e36-111">Требования</span><span class="sxs-lookup"><span data-stu-id="25e36-111">Requirements</span></span>  
+ <span data-ttu-id="25e36-112">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="25e36-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f399e-113">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="f399e-113">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="25e36-113">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="25e36-113">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="f399e-114">**Библиотека:** Используется как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="f399e-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="25e36-114">**Библиотека:** Используется как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="25e36-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="f399e-115">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f399e-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="25e36-115">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="25e36-115">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="f399e-116">См. также</span><span class="sxs-lookup"><span data-stu-id="f399e-116">See also</span></span>
-- [<span data-ttu-id="f399e-117">Интерфейс IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="f399e-117">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [<span data-ttu-id="f399e-118">Интерфейс IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="f399e-118">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+## <a name="see-also"></a><span data-ttu-id="25e36-116">См. также</span><span class="sxs-lookup"><span data-stu-id="25e36-116">See also</span></span>
+
+- [<span data-ttu-id="25e36-117">Интерфейс IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="25e36-117">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="25e36-118">Интерфейс IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="25e36-118">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
