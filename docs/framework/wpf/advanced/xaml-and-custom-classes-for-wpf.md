@@ -6,18 +6,16 @@ helpviewer_keywords:
 - XAML [WPF], custom classes
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
-ms.openlocfilehash: a1de1ee80d1f88b0c0a7adfb75b96353b6861d97
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e71946ec06eb1b4c75f30084dfdb863d8e3b093e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371896"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122360"
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>Код XAML и пользовательские классы для WPF
 Реализация языка XAML в платформах [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] поддерживает возможность определения пользовательского класса или структуры на любом языке [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] и последующего доступа к этому классу с помощью разметки XAML. В одном файле разметки можно использовать сочетание определенных в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] типов и пользовательских типов, обычно сопоставляя пользовательские типы с префиксом пространства имен XAML. В этом разделе обсуждаются требования, которым должен соответствовать пользовательский класс, чтобы его можно было использовать в качестве элемента XAML.  
-  
- 
-  
+
 <a name="Custom_Classes_in_Applications_vs__in_Assemblies"></a>   
 ## <a name="custom-classes-in-applications-or-assemblies"></a>Пользовательские классы в приложениях или сборках  
  Пользовательские классы, используемые в XAML, можно определить двумя способами: в коде программной части или другом коде, который создает основное приложение [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], или как класс в отдельной сборке, например как исполняемый файл или библиотеку DLL, используемые в качестве библиотеки классов. Каждый из этих подходов имеет определенные преимущества и недостатки.  
@@ -113,7 +111,8 @@ ms.locfileid: "57371896"
  В некоторых сценариях (например, если вы являетесь автором элемента управления) следует убедиться в том, что любое представление объекта, которое может быть создано в XAML, также может быть сериализовано обратно в эквивалентную разметку XAML. Требования к сериализации не описываются в этом разделе. См. разделы [Общие сведения о разработке элементов управления](../controls/control-authoring-overview.md) и [Дерево элементов и сериализация](element-tree-and-serialization.md).  
   
 ## <a name="see-also"></a>См. также
-- [Общие сведения о языке XAML (WPF)](xaml-overview-wpf.md)
+
+- [Обзор XAML (WPF)](xaml-overview-wpf.md)
 - [Пользовательские свойства зависимостей](custom-dependency-properties.md)
 - [Общие сведения о разработке элементов управления](../controls/control-authoring-overview.md)
 - [Общие сведения о базовых элементах](base-elements-overview.md)

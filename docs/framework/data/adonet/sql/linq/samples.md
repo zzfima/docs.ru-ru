@@ -2,12 +2,12 @@
 title: Примеры
 ms.date: 03/30/2017
 ms.assetid: 3fcc0c4a-b952-4cfe-9e09-0c0cf874ba2c
-ms.openlocfilehash: 840aeaee70df02dc07033490db5bd081de5500cf
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: d06fe74280b713130142d6d7a881c97849598ce4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092011"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107179"
 ---
 # <a name="samples"></a>Примеры
 Этот раздел содержит ссылки на решения Visual Basic и C#, которые содержат [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] пример кода.  
@@ -28,5 +28,6 @@ ms.locfileid: "56092011"
 -   Изучите Технический документ с подробным описанием [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] технологии, проиллюстрированные примерами кода Visual Basic и C#. Дополнительные сведения см. в разделе [LINQ to SQL: запросы запросы LINQ .NET для реляционных данных](https://go.microsoft.com/fwlink/?LinkId=93205).  
   
 ## <a name="see-also"></a>См. также
+
 - [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)
-- [Пошаговые руководства LINQ to SQL](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bb386295(v=vs.90))
+- [LINQ to SQL пошаговые руководства](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bb386295(v=vs.90))

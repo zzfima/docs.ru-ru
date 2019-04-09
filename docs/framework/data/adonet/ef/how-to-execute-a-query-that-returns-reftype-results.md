@@ -1,18 +1,18 @@
 ---
-title: Как выполнить  Выполнение запроса, возвращающего результаты RefType
+title: Практическое руководство. Выполнение запроса, возвращающего результаты RefType
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7dbbfbcd-93f5-4546-9dbf-e5fa290b69fa
-ms.openlocfilehash: 3005465b3c6b974dc06c4a40abf22ee2bbed47aa
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
-ms.translationtype: MT
+ms.openlocfilehash: 7a8f08717743971c0378d9130d4fcea0621dae97
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825762"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209700"
 ---
-# <a name="how-to-execute-a-query-that-returns-reftype-results"></a>Как выполнить  Выполнение запроса, возвращающего результаты RefType
+# <a name="how-to-execute-a-query-that-returns-reftype-results"></a>Практическое руководство. Выполнение запроса, возвращающего результаты RefType
 В этом подразделе показано выполнение команды для концептуальной модели с помощью объекта <xref:System.Data.EntityClient.EntityCommand>, а также получение результатов <xref:System.Data.Metadata.Edm.RefType> с помощью <xref:System.Data.EntityClient.EntityDataReader>.  
   
 ### <a name="to-run-the-code-in-this-example"></a>Выполнение кода в этом примере  
@@ -37,5 +37,6 @@ ms.locfileid: "55825762"
  [!code-vb[DP EntityServices Concepts#eSQLRefTypes](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#esqlreftypes)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Справочник по Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [Поставщик EntityClient для Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)

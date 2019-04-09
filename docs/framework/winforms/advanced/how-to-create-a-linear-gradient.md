@@ -10,12 +10,12 @@ helpviewer_keywords:
 - colors [Windows Forms], creating linear gradients
 - gradients
 ms.assetid: 6c88e1cc-1217-4399-ac12-cb37592b9f01
-ms.openlocfilehash: e47707d040cd7bf67008fab33ac482706963ce39
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 540b6d422be5d5c0898f019592a755258145d14d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725250"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125025"
 ---
 # <a name="how-to-create-a-linear-gradient"></a>Практическое руководство. Создание линейного градиента
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] поддерживает горизонтальные, вертикальные и диагональные линейные градиенты. По умолчанию цвет в линейном градиенте меняется равномерно. Тем не менее можно настроить линейный градиент, таким образом, чтобы цвет меняется образом неоднородной.  
@@ -78,5 +78,6 @@ ms.locfileid: "57725250"
      [!code-vb[System.Drawing.UsingaGradientBrush#23](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#23)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Заливка фигур с помощью градиентной кисти](using-a-gradient-brush-to-fill-shapes.md)
 - [Объекты Graphics и Drawing в Windows Forms](graphics-and-drawing-in-windows-forms.md)

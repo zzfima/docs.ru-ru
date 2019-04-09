@@ -10,12 +10,12 @@ helpviewer_keywords:
 - x:Code XAML directive element [XAML Services]
 - XAML [XAML Services], x:Code directive element
 ms.assetid: 87986b13-1a2e-4830-ae36-15f9dc5629e8
-ms.openlocfilehash: 8d0dbc03bb5eaedd89d5a6ce97d625a51507e820
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 7bb78b05be7b3edc4471bc276010eabd92a07a14
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58050597"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145240"
 ---
 # <a name="xcode-intrinsic-xaml-type"></a>Встроенный тип XAML x:Code
 Позволяет помещать код в рабочем XAML. Такой код может компилироваться либо с любой реализации обработчика XAML, которая компилирует XAML или влево в рабочей среде XAML для использования более поздней версии, например для интерпретации во время выполнения.  
@@ -49,6 +49,7 @@ ms.locfileid: "58050597"
 -   Ссылки на сущности кода за пределами пространства имен CLR разделяемого класса должен иметь полное имя. Члены объявленные переопределения, чтобы переопределяемые члены разделяемого класса, необходимо указать с помощью ключевого слова переопределения для конкретного языка. Если члены, объявленные в `x:Code` область конфликтуют с членами разделяемого класса, могут быть созданы из XAML, таким образом, что компилятор сообщает конфликт, файл XAML не удается скомпилировать или загрузить.  
   
 ## <a name="see-also"></a>См. также
+
 - [Директива x:Class](x-class-directive.md)
 - [Код программной части и XAML в WPF](../wpf/advanced/code-behind-and-xaml-in-wpf.md)
-- [Общие сведения о языке XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [Обзор XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)

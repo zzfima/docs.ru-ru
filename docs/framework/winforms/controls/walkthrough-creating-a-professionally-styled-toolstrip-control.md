@@ -10,12 +10,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], walkthroughs
 - ToolStrip control [Windows Forms], creating professionally styled controls
 ms.assetid: b52339ae-f1d3-494e-996e-eb455614098a
-ms.openlocfilehash: 64624508a50eb6e28337baa1a3600298e2c83fd7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 22ec7b85973d606d329fe1c58f8cef7036fc1a8f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710749"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115795"
 ---
 # <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>Пошаговое руководство. Создание профессионально оформленного элемента управления ToolStrip
 Можно предоставить приложения <xref:System.Windows.Forms.ToolStrip> управляет профессиональный вид и поведение, написав собственный класс, производный от <xref:System.Windows.Forms.ToolStripProfessionalRenderer> типа.  
@@ -62,7 +62,7 @@ ms.locfileid: "57710749"
   
 2.  В **свойства** окне <xref:System.Windows.Forms.ToolStrip> свойства элемента управления согласно следующей таблице.  
   
-    |Свойство.|Значение|  
+    |Свойство|Значение|  
     |--------------|-----------|  
     |name|`stackStrip`|  
     |CanOverflow|`false`|  
@@ -77,7 +77,7 @@ ms.locfileid: "57710749"
   
 4.  В **свойства** окне <xref:System.Windows.Forms.ToolStripButton> свойства элемента управления согласно следующей таблице.  
   
-    |Свойство.|Значение|  
+    |Свойство|Значение|  
     |--------------|-----------|  
     |name|`mailStackButton`|  
     |CheckOnClick|true|  
@@ -88,7 +88,7 @@ ms.locfileid: "57710749"
     |ImageTransparentColor|`238, 238, 238`|  
     |Поля|`0, 0, 0, 0`|  
     |Заполнение|`3, 3, 3, 3`|  
-    |Текста|**Mail**|  
+    |Текста|**Почта**|  
     |TextAlign|<xref:System.Drawing.ContentAlignment.MiddleLeft>|  
   
 5.  Повторите шаг 7 для три раза <xref:System.Windows.Forms.ToolStripButton> элементов управления.  
@@ -185,8 +185,9 @@ ms.locfileid: "57710749"
 -   Создайте форму многодокументного интерфейса (MDI) закрепленный <xref:System.Windows.Forms.ToolStrip> элементов управления. Дополнительные сведения см. в разделе [Как Создание формы MDI путем слияния меню и элементов управления ToolStrip](how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.StatusStrip>
 - [Элемент управления ToolStrip](toolstrip-control-windows-forms.md)
-- [Практическое руководство. Обеспечивают стандартные пункты меню в форму](how-to-provide-standard-menu-items-to-a-form.md)
+- [Практическое руководство. Связывание с формой стандартных элементов меню](how-to-provide-standard-menu-items-to-a-form.md)

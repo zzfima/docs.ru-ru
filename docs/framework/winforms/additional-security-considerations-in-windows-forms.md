@@ -7,15 +7,15 @@ helpviewer_keywords:
 - security [Windows Forms], calling APIs
 - Clipboard [Windows Forms], securing access
 ms.assetid: 15abda8b-0527-47c7-aedb-77ab595f2bf1
-ms.openlocfilehash: 6ab7b4d8fe8366a214d70cd73e7e33cafcc584f8
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: a101b5838b843f0130d16aab6eb199c7a54ca6b9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409397"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139533"
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Дополнительные вопросы безопасности в формах Windows Forms
-Приложение может работать по-разному в среде с частичным доверием и на локальном компьютере из-за параметров безопасности [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] ограничивает доступ, помимо прочего, к таким важным локальным ресурсам, как файловая система, сеть и неуправляемые API. Параметры безопасности влияют на возможность вызова Microsoft Windows API или другие API, которые не могут быть проверены системой безопасности. Безопасность также влияет на другие аспекты приложения, включая доступ к файлам и данным, и вывод на печать. Дополнительные сведения о доступе к файлам и данным в среде с частичным доверием см. в разделе [Более безопасный доступ к файлам и данным в Windows Forms](more-secure-file-and-data-access-in-windows-forms.md). Дополнительные сведения о выводе на печать в среде с частичным доверием см. в разделе [Более безопасная печать в Windows Forms](more-secure-printing-in-windows-forms.md).  
+[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] параметры безопасности может привести к вашему приложению работать по-разному в среде с частичным доверием на локальном компьютере. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] ограничивает доступ, помимо прочего, к таким важным локальным ресурсам, как файловая система, сеть и неуправляемые API. Параметры безопасности влияют на возможность вызова Microsoft Windows API или другие API, которые не могут быть проверены системой безопасности. Безопасность также влияет на другие аспекты приложения, включая доступ к файлам и данным, и вывод на печать. Дополнительные сведения о доступе к файлам и данным в среде с частичным доверием см. в разделе [Более безопасный доступ к файлам и данным в Windows Forms](more-secure-file-and-data-access-in-windows-forms.md). Дополнительные сведения о выводе на печать в среде с частичным доверием см. в разделе [Более безопасная печать в Windows Forms](more-secure-printing-in-windows-forms.md).  
   
  В следующих разделах рассматриваются способы работы с буфером обмена, окнами и вызов Windows API из приложений, работающих в среде с частичным доверием.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "58409397"
 |<xref:System.Windows.Forms.Control>|— Получение <xref:System.Windows.Forms.Control.Parent%2A> свойство.<br />— Задание значения для свойства `Region`.<br />— Вызов <xref:System.Windows.Forms.Control.FindForm%2A> , <xref:System.Windows.Forms.Control.Focus%2A>, <xref:System.Windows.Forms.Control.FromChildHandle%2A> и <xref:System.Windows.Forms.Control.FromHandle%2A>, <xref:System.Windows.Forms.Control.PreProcessMessage%2A>, <xref:System.Windows.Forms.Control.ReflectMessage%2A>, или <xref:System.Windows.Forms.Control.SetTopLevel%2A> метод.<br />— Вызов <xref:System.Windows.Forms.Control.GetChildAtPoint%2A> метод, если возвращенный элемент управления не является дочерним элементом вызывающего элемента управления.<br />— Изменение фокуса элемента управления в контейнерном элементе управления.|  
 |<xref:System.Windows.Forms.Cursor>|— Задание значения для свойства <xref:System.Windows.Forms.Cursor.Clip%2A>.<br />— Вызов <xref:System.Windows.Forms.Control.Hide%2A> метод.|  
 |<xref:System.Windows.Forms.DataGrid>|— Вызов <xref:System.Windows.Forms.ContainerControl.ProcessTabKey%2A> метод.|  
-|<xref:System.Windows.Forms.Form>|— Получение <xref:System.Windows.Forms.Form.ActiveForm%2A> или <xref:System.Windows.Forms.Form.MdiParent%2A> свойство.<br />— Задание <xref:System.Windows.Forms.Form.ControlBox%2A>, <xref:System.Windows.Forms.Form.ShowInTaskbar%2A>, или <xref:System.Windows.Forms.Form.TopMost%2A> свойство.<br />— Задание <xref:System.Windows.Forms.Form.Opacity%2A> свойство ниже 50%.<br />— Задание <xref:System.Windows.Forms.Form.WindowState%2A> свойства <xref:System.Windows.Forms.FormWindowState.Minimized> программным способом.<br />— Вызов <xref:System.Windows.Forms.Form.Activate%2A> метод.<br />— Использование <xref:System.Windows.Forms.FormBorderStyle.None>, <xref:System.Windows.Forms.FormBorderStyle.FixedToolWindow>, и <xref:System.Windows.Forms.FormBorderStyle.SizableToolWindow> <xref:System.Windows.Forms.FormBorderStyle> значений перечисления.|  
+|<xref:System.Windows.Forms.Form>|— Получение <xref:System.Windows.Forms.Form.ActiveForm%2A> или <xref:System.Windows.Forms.Form.MdiParent%2A> свойство.<br />— Задание <xref:System.Windows.Forms.Form.ControlBox%2A>, <xref:System.Windows.Forms.Form.ShowInTaskbar%2A>, или <xref:System.Windows.Forms.Form.TopMost%2A> свойство.<br />— Задание <xref:System.Windows.Forms.Form.Opacity%2A> свойство ниже 50%.<br />— Задание <xref:System.Windows.Forms.Form.WindowState%2A> свойства <xref:System.Windows.Forms.FormWindowState.Minimized> программным способом.<br />— Вызов <xref:System.Windows.Forms.Form.Activate%2A> метод.<br />— Использование <xref:System.Windows.Forms.FormBorderStyle.None>, <xref:System.Windows.Forms.FormBorderStyle.FixedToolWindow>, и <xref:System.Windows.Forms.FormBorderStyle.SizableToolWindow><xref:System.Windows.Forms.FormBorderStyle> значений перечисления.|  
 |<xref:System.Windows.Forms.NotifyIcon>|— Использование <xref:System.Windows.Forms.NotifyIcon> компонент полностью запрещено.|  
   
  <xref:System.Security.Permissions.UIPermissionWindow.SafeSubWindows> Ограничивает действия, перечисленные в следующей таблице, кроме ограничений, налагаемых по <xref:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows> значение.  
@@ -89,6 +89,7 @@ ms.locfileid: "58409397"
  Благодаря разрешению на вызов неуправляемого кода приложение может выполнять практически любые действия. Следовательно, разрешение на вызов неуправляемого кода должно предоставляться только приложениям из доверенного источника. Кроме того, в зависимости от приложения, часть функциональных возможностей приложения, вызывающих неуправляемый код, может быть необязательной или использоваться только в среде с полным доверием. Дополнительные сведения об опасных разрешениях см. в разделе [Опасные разрешения и администрирование политик](../misc/dangerous-permissions-and-policy-administration.md). Дополнительные сведения о повышении уровня разрешений см. в разделе [Общее администрирование политик безопасности](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ed5htz45(v=vs.100)).  
   
 ## <a name="see-also"></a>См. также
+
 - [Более безопасный доступ к файлам и данным в Windows Forms](more-secure-file-and-data-access-in-windows-forms.md)
 - [Более безопасная печать в Windows Forms](more-secure-printing-in-windows-forms.md)
 - [Общие сведения о безопасности в Windows Forms](security-in-windows-forms-overview.md)

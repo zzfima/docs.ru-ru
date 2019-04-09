@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data objects [WPF], creating
 - drag-and-drop [WPF], creating data objects
 ms.assetid: 022fa142-717d-4fea-a53c-3b52e9d91aff
-ms.openlocfilehash: f7bdfbf3dba0c700513348195c1d031d4c2c8b65
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: deae8751518d9322e8d924a1b1fcbc20e25b35ed
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370596"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121796"
 ---
 # <a name="how-to-create-a-data-object"></a>Практическое руководство. Создание объекта данных
 Ниже приведены примеры различных способов создания объекта данных, с помощью конструкторов, предоставляемые <xref:System.Windows.DataObject> класса.  
@@ -28,7 +28,7 @@ ms.locfileid: "57370596"
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_Simple](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_createdataobject_simple)]
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_Simple](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_createdataobject_simple)]  
   
-### <a name="description"></a>Описание:  
+### <a name="description"></a>Описание  
  В следующем примере кода — это сокращенный вариант приведенного выше кода.  
   
 ### <a name="code"></a>Код  
@@ -44,7 +44,7 @@ ms.locfileid: "57370596"
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_TypeString](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_createdataobject_typestring)]
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_TypeString](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_createdataobject_typestring)]  
   
-### <a name="description"></a>Описание:  
+### <a name="description"></a>Описание  
  В следующем примере кода — это сокращенный вариант приведенного выше кода.  
   
 ### <a name="code"></a>Код  
@@ -60,7 +60,7 @@ ms.locfileid: "57370596"
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_Type](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_createdataobject_type)]
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_Type](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_createdataobject_type)]  
   
-### <a name="description"></a>Описание:  
+### <a name="description"></a>Описание  
  В следующем примере кода — это сокращенный вариант приведенного выше кода.  
   
 ### <a name="code"></a>Код  
@@ -69,7 +69,7 @@ ms.locfileid: "57370596"
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание:  
+### <a name="description"></a>Описание  
  В следующем примере кода создается новый объект данных и использует один из перегруженных конструкторов (<xref:System.Windows.DataObject.%23ctor%28System.String%2CSystem.Object%2CSystem.Boolean%29>) для инициализации объекта данных со строкой и заданного формата данных.  В этом случае формат данных задается строкой. <xref:System.Windows.DataFormats> класс предоставляет набор предопределенных типов строк. Этот перегруженный конструктор позволяет вызывающему объекту указать, разрешено ли автоматическое преобразование.  
   
 ### <a name="code"></a>Код  
@@ -84,4 +84,5 @@ ms.locfileid: "57370596"
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_AutoConvert_Condensed](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_createdataobject_autoconvert_condensed)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.IDataObject>

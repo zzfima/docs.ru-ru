@@ -9,12 +9,12 @@ helpviewer_keywords:
 - drawing [Windows Forms], cardinal splines
 - graphics [Windows Forms], cardinal splines
 ms.assetid: a4a41e80-4461-4b47-b6bd-2c5e68881994
-ms.openlocfilehash: 0f5c7a8555130e884b641648d1ffc9865f44dc1e
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 2f03177bf97936a2ca9558972d4d82fa3e07463c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464701"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204956"
 ---
 # <a name="how-to-draw-cardinal-splines"></a>Практическое руководство. Рисование фундаментальных сплайнов
 Фундаментальный сплайн представляет кривую, проходящую через заданные точки. Чтобы нарисовать фундаментальный сплайн, создайте <xref:System.Drawing.Graphics> и передать адрес массив точек для <xref:System.Drawing.Graphics.DrawCurve%2A> метод.  
@@ -50,5 +50,6 @@ ms.locfileid: "58464701"
  Предыдущий пример предназначен для работы с Windows Forms, и они требуют <xref:System.Windows.Forms.PaintEventArgs> `e`, который является параметром <xref:System.Windows.Forms.Control.Paint> обработчик событий.  
   
 ## <a name="see-also"></a>См. также
-- [Линии, кривые и фигуры](lines-curves-and-shapes.md)
+
+- [Прямые и кривые линии и фигуры](lines-curves-and-shapes.md)
 - [Построение и рисование кривых](constructing-and-drawing-curves.md)

@@ -2,12 +2,12 @@
 title: Анализ исходного кода LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: cba3eef8-e108-4478-b588-ad59580e133e
-ms.openlocfilehash: 4b1d2d2c54ae99a65f60c96b6330e3f94db6beb5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 1110e64d16a6c2790939cc695ecd67e37ec109e4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696858"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203292"
 ---
 # <a name="analyzing-linq-to-sql-source-code"></a>Анализ исходного кода LINQ to SQL
 С помощью описанных ниже действий можно создать исходный код [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] из учебной базы данных "Northwind". Чтобы лучше понять, как сопоставлены различные элементы, можно сравнить элементы модели объектов с элементами базы данных.  
@@ -24,5 +24,6 @@ ms.locfileid: "54696858"
     -   `sqlmetal /code:northwind.cs /language:csharp "c:\northwnd.mdf" /sprocs /functions /pluralize`  
   
 ## <a name="see-also"></a>См. также
-- [Ссылки](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+
+- [Ссылка](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
 - [Основные сведения](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

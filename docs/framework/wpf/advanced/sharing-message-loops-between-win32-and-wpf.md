@@ -7,12 +7,12 @@ helpviewer_keywords:
 - sharing message loops [WPF]
 - interoperability [WPF], Win32
 ms.assetid: 39ee888c-e5ec-41c8-b11f-7b851a554442
-ms.openlocfilehash: 2de3c2eba534618f6bd6dee0b2c23758f9e15f3f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 74055ec3facb7db9145c4c0e969d57da24eccbc8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378223"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115080"
 ---
 # <a name="sharing-message-loops-between-win32-and-wpf"></a>Совместное использование циклов обработки сообщений между Win32 и WPF
 В этом разделе описывается, как реализовать цикл обработки сообщений для взаимодействия с [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], либо с помощью существующих сообщений раскрытия цикл в <xref:System.Windows.Threading.Dispatcher> или создав цикл обработки отдельных сообщений на [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] сторона кода взаимодействия.  
@@ -62,8 +62,9 @@ ms.locfileid: "57378223"
  Это сообщение в приемник ввода от клавиатуры не могут отправляться на HWND, обработчики для данного сообщения, добавленные с помощью <xref:System.Windows.Interop.HwndSource.AddHook%2A> метод. Сообщение может быть обработано на уровне загрузки сообщений напрямую и не отправлено `DispatchMessage` функции.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Interop.ComponentDispatcher>
 - <xref:System.Windows.Interop.IKeyboardInputSink>
 - [Взаимодействие WPF и Win32](wpf-and-win32-interoperation.md)
-- [Потоковая модель](threading-model.md)
+- [Модель потоков](threading-model.md)
 - [Общие сведения о входных данных](input-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: Элемент < system.web > (веб-параметры)
+title: Элемент <system.web> (веб-параметры)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Web.config configuration file [ASP.NET]
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ASP.NET configuration system
 - configuration files [ASP.NET]
 ms.assetid: 24c4cf4f-ad32-42b2-b040-8e4549e2855e
-ms.openlocfilehash: a8d0905dc64ae3e3c4977639ccf881a677de73a9
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 50566422c5e28585e93171c991144cf12a6866eb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55272816"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59131954"
 ---
 # <a name="systemweb-element-web-settings"></a>\<System.Web > элемент (веб-параметры)
 Содержит сведения об управлении поведению процессов, используемые уровнем размещения ASP.NET.  
@@ -36,13 +36,13 @@ ms.locfileid: "55272816"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<applicationPool>](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)|Задает параметры конфигурации для пулов приложений IIS в файле aspnet.config.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Указывает корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] .|  
   
@@ -73,4 +73,5 @@ ms.locfileid: "55272816"
 |Может быть пустым||  
   
 ## <a name="see-also"></a>См. также
-- [Элемент \<applicationPool> (веб-параметры)](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)
+
+- [\<пул приложений > элемент (веб-параметры)](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)

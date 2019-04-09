@@ -2,12 +2,12 @@
 title: Пошаговое руководство. Применение только хранимых процедур (C#)
 ms.date: 03/30/2017
 ms.assetid: ecde4bf2-fa4d-4252-b5e4-96a46b9e097d
-ms.openlocfilehash: 5234b4a2743effa4282fb8c211c42511c6432dfa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 8f3bc061f626f6c29ca62131fc1cb0fc2dea9249
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650841"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098173"
 ---
 # <a name="walkthrough-using-only-stored-procedures-c"></a>Пошаговое руководство. Применение только хранимых процедур (C#)
 В данном пошаговом руководстве представлен основной полный сценарий [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] для получения доступа к данным, выполняя только хранимые процедуры. Этот метод часто используется администраторами баз данных для ограничения способов получения доступа к хранилищам данных.  
@@ -188,5 +188,6 @@ ms.locfileid: "54650841"
  Этот проект можно улучшить, выполнив некоторые изменения. Например, можно создать поле со списком доступных хранимых процедур и разрешить пользователю выбирать процедуру для выполнения. Можно также записывать выходные данных отчетов в текстовый файл.  
   
 ## <a name="see-also"></a>См. также
+
 - [Обучение с использованием пошаговых руководств](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
 - [Хранимые процедуры](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)

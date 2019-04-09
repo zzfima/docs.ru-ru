@@ -13,12 +13,12 @@ helpviewer_keywords:
 - sounds [Windows Forms], playing
 - examples [Windows Forms], sounds
 ms.assetid: afb206ff-4824-4804-a8d4-185bf5ad8e7c
-ms.openlocfilehash: b2ac6c4f2e3334a9b4c5ff4d2a6e31b6b9bf3673
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d85d8cd40ff2b32cb3f2a79cf9a8221964f186c0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711242"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153235"
 ---
 # <a name="how-to-play-a-system-sound-from-a-windows-form"></a>Практическое руководство. Воспроизведение системных звуков в Windows Forms
 В следующем примере кода воспроизводится системный звук `Exclamation` во время выполнения. Дополнительные сведения о системных звуках см. в разделе <xref:System.Media.SystemSounds>.  
@@ -44,7 +44,8 @@ public void playExclamation()
 -   ссылка на пространство имен <xref:System.Media?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Media.SoundPlayer>
 - <xref:System.Media.SystemSounds>
-- [Практическое руководство. Воспроизведение звукового сигнала в Windows Forms](how-to-play-a-beep-from-a-windows-form.md)
+- [Практическое руководство. Воспроизведение сигнала в Windows Forms](how-to-play-a-beep-from-a-windows-form.md)
 - [Практическое руководство. Воспроизведение звука в Windows Forms](how-to-play-a-sound-from-a-windows-form.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Button controls [WPF], creating
 ms.assetid: 607a193c-4098-4dd8-8dc0-51256cec2020
-ms.openlocfilehash: fe9f35a6f83c5a839823d94c4d3c55e01b192fb1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5be928ac75ad727feabcde07ac0c6dc76ed130e6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352039"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120727"
 ---
 # <a name="how-to-create-a-button-that-has-an-image"></a>Практическое руководство. Создание кнопки, содержащей изображение
 В этом примере показано, как включить изображение в <xref:System.Windows.Controls.Button>.  
@@ -28,5 +28,6 @@ ms.locfileid: "57352039"
  [!code-vb[BtnColor#6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BtnColor/VisualBasic/Pane1.xaml.vb#6)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Элементы управления](index.md)
 - [Библиотека элементов управления](control-library.md)

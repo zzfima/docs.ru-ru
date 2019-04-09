@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fad069a15cb4079dac2b4ee65ca3d9669a53cac0
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 452104939acf5de7bb151cba00d65fb6631c98d5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479266"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124089"
 ---
 # <a name="getversionfromprocess-function"></a>Функция GetVersionFromProcess
 Получает номер версии общей языковой среды выполнения (CLR), связанный с указанным дескриптором процесса.  
@@ -59,7 +59,7 @@ HRESULT GetVersionFromProcess (
 |Код возврата|Описание|  
 |-----------------|-----------------|  
 |S_OK|Метод завершился успешно.|  
-|E_INVALIDARG|`pVersion` имеет значение null и `cchBuffer` не равно null, или наоборот.<br /><br /> - или -<br /><br /> `hProcess` не является допустимым дескриптором к процессу.<br /><br /> - или -<br /><br /> Среда CLR не загружается.|  
+|E_INVALIDARG|`pVersion` имеет значение null и `cchBuffer` не равно null, или наоборот.<br /><br /> -или-<br /><br /> `hProcess` не является допустимым дескриптором к процессу.<br /><br /> -или-<br /><br /> Среда CLR не загружается.|  
 |ERROR_INSUFFICIENT_BUFFER|`cchBuffer` равно null или меньше, чем длина строки версии.|  
 |E_NOTIMPL|Этот метод не доступен в операционной системе Microsoft Windows 95, Microsoft Windows 98 или Microsoft Windows Millennium Edition.|  
   
@@ -73,6 +73,7 @@ HRESULT GetVersionFromProcess (
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Функция GetRequestedRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)
 - [Функция GetRequestedRuntimeVersion](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)
 - [Устаревшие функции размещения CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

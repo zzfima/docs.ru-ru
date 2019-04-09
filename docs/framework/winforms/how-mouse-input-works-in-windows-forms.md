@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Forms, mouse input
 - mouse [Windows Forms], input
 ms.assetid: 48fc5240-75a6-44bf-9fce-6aa21b49705a
-ms.openlocfilehash: 7817b6a414f313cd2891fe0e124e230643b06e07
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c9193ffa9ef34f1e43a92feec230fa2282264147
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725332"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203019"
 ---
 # <a name="how-mouse-input-works-in-windows-forms"></a>Осуществление ввода мышью в Windows Forms
 Получение и обработка ввода с мыши является важной частью каждое приложение Windows. Можно обработать события мыши для выполнения действий в приложении, или использовать сведения о расположении мыши для проверки нажатия или других действий. Кроме того можно изменить способ, элементы управления в приложении обрабатывать ввод от мыши. В этом разделе описываются события мыши в подробности, а также как получать и изменять параметры системы для мыши. Дополнительные сведения о данных, передаваемых с помощью мыши вызываются события и порядок, в котором события щелчка мыши, см. в разделе [события мыши в Windows Forms](mouse-events-in-windows-forms.md).  
@@ -38,7 +38,7 @@ ms.locfileid: "57725332"
 ## <a name="changing-mouse-input-and-detecting-system-settings"></a>Изменение ввода мыши и определение системных параметров  
  Можно определить и изменить способ, элемент управления обрабатывает ввод от мыши путем создания производного элемента управления и использования <xref:System.Windows.Forms.Control.GetStyle%2A> и <xref:System.Windows.Forms.Control.SetStyle%2A> методы. <xref:System.Windows.Forms.Control.SetStyle%2A> Метод принимает побитовое сочетание <xref:System.Windows.Forms.ControlStyles> значения, чтобы определить, будет ли элемент управления иметь стандартный щелкните или дважды щелкните поведение, или если элемент управления будет обрабатывать обработку. Кроме того <xref:System.Windows.Forms.SystemInformation> класс включает свойства, которые описывают возможности мыши и укажите, как мышь взаимодействует с операционной системой. В следующей таблице перечислены эти свойства.  
   
-|Свойство.|Описание:|  
+|Свойство|Описание|  
 |--------------|-----------------|  
 |<xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A>|Получает размеры в пикселях, области, в котором пользователь должен щелкнуть дважды, чтобы операционная система обработала два щелчка как двойной щелчок.|  
 |<xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A>|Получает максимальное число миллисекунд, которое может пройти между первым и вторым щелчком, чтобы операционная система обработала действия мыши как двойной щелчок.|  
@@ -53,6 +53,7 @@ ms.locfileid: "57725332"
 |<xref:System.Windows.Forms.SystemInformation.MouseWheelScrollLines%2A>|Возвращает число строк, прокручиваемых при вращении колесика мыши.|  
   
 ## <a name="see-also"></a>См. также
+
 - [Ввод данных мышью в приложении Windows Forms](mouse-input-in-a-windows-forms-application.md)
 - [Захват мыши в Windows Forms](mouse-capture-in-windows-forms.md)
 - [Указатели мыши в Windows Forms](mouse-pointers-in-windows-forms.md)

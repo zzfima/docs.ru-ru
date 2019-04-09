@@ -7,17 +7,16 @@ helpviewer_keywords:
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-ms.openlocfilehash: 22ac109c06659741c673681ad9bfcf3e1dcc5b2e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 03ac9c59495d5eb95851df98f85eadc3d1a329ba
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367945"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117764"
 ---
 # <a name="dependency-property-value-precedence"></a>Приоритет значения свойств зависимостей
 <a name="introduction"></a> В этом разделе рассказывается, как работа системы свойств [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] может повлиять на значение свойства зависимости, и описывается приоритет применения аспектов системы свойств к действительному значению свойства.  
-    
-  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Предварительные требования  
  Предполагается, что вы имеете представление о свойствах зависимости с точки зрения потребителя существующих свойств зависимостей в классах [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и ознакомились с разделом [Общие сведения о свойствах зависимости](dependency-properties-overview.md). Чтобы выполнить примеры в этом разделе, следует также иметь представление о [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] и написании приложений [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -60,7 +59,7 @@ ms.locfileid: "57367945"
   
 8.  **Методы задания стилей.** Значения из <xref:System.Windows.Setter> в стилях со страницы или приложения.  
   
-9. **Стиль (тема) по умолчанию.** Подробные сведения о применении этих стилей и связи стилей тем с шаблонами в стилях тем см. в теме [Стили (темы) по умолчанию](#themestyles) далее в этом разделе. В стиле по умолчанию применяется следующий порядок приоритета:  
+9. **Стиль по умолчанию (тема).** Подробные сведения о применении этих стилей и связи стилей тем с шаблонами в стилях тем см. в теме [Стили (темы) по умолчанию](#themestyles) далее в этом разделе. В стиле по умолчанию применяется следующий порядок приоритета:  
   
     1.  Активные триггеры в тематическом стиле.  
   
@@ -127,6 +126,7 @@ ms.locfileid: "57367945"
  <xref:System.Windows.DependencyObject.ClearValue%2A> Метод предоставляет соответствующие средства для очистки любого применяемого локально значения из свойства зависимости, которое задается в элементе. Однако, при вызове <xref:System.Windows.DependencyObject.ClearValue%2A> не гарантирует, что новое действительное значение по умолчанию, заданное в метаданных во время регистрации свойства. Все остальные участники в приоритете значений будут по-прежнему активны. Только локально заданное значение удаляется из последовательности приоритетов. Например, если вы вызываете <xref:System.Windows.DependencyObject.ClearValue%2A> по свойству, где этот также задано тематическим стилем, а затем тематическое значение будет применено как новое значение, а не по умолчанию на основе метаданных. Если вы хотите извлечь все элементы значения свойства из процесса и значение по умолчанию зарегистрированные метаданные, можно получить значение по умолчанию точно, путем запроса метаданных свойства зависимостей, а затем можно использовать локально значение по умолчанию свойство с вызовом <xref:System.Windows.DependencyObject.SetValue%2A>.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.DependencyObject>
 - <xref:System.Windows.DependencyProperty>
 - [Общие сведения о свойствах зависимости](dependency-properties-overview.md)

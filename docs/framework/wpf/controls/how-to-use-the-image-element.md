@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Image control [WPF]
 - rendering images [WPF]
 ms.assetid: 5b92e74b-1b56-4756-ac64-d5e9e08d9854
-ms.openlocfilehash: ec3ca16915038ebbb68df24bfd071168c346663d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 967159894e25721bdf380f851712e91d76088f87
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372470"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59205307"
 ---
 # <a name="how-to-use-the-image-element"></a>Практическое руководство. Использование элемента изображения
 В этом примере показано, как добавлять изображения в приложении с помощью <xref:System.Windows.Controls.Image> элемент.  
@@ -42,4 +42,5 @@ ms.locfileid: "57372470"
  [!code-vb[ImageElementExample_snip#ImageSimpleExampleInlineCode1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/ImageSimpleExample.xaml.vb#imagesimpleexampleinlinecode1)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения об обработке изображений](../graphics-multimedia/imaging-overview.md)

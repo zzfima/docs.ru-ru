@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
-ms.openlocfilehash: 12eafa006e65527a70245c4332a34eb55f7d8af0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 94f1284e864bc63c321e004ac4a20843b191711d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525265"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136959"
 ---
 # <a name="security-overview"></a>Общие сведения о безопасности
 Windows Communication Foundation (WCF) — это SOAP на базе сообщений Распределенная платформа программирования, а защита сообщений между клиентами и службами — важно для защиты данных. WCF предоставляет универсальный и гибкую платформу для безопасного обмена сообщениями на основе существующей инфраструктуры безопасности и общепризнанных стандартов безопасности для сообщений SOAP.  
@@ -98,12 +98,13 @@ Windows Communication Foundation (WCF) — это SOAP на базе сообщ�
  *Аудит* является ведение журнала событий безопасности в журнале событий Windows. Можно регистрировать такие связанные с безопасностью события, как положительные и отрицательные результаты проверки подлинности. Дополнительные сведения см. в разделе [аудит](../../../../docs/framework/wcf/feature-details/auditing-security-events.md). Сведения о программировании см. в разделе [как: Аудит событий безопасности](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
 - [Защита служб](../../../../docs/framework/wcf/securing-services.md)
 - [Типовые сценарии безопасности](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
 - [Привязки и безопасность](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
 - [Защита служб и клиентов](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Authentication](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)
+- [Проверка подлинности](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)
 - [Авторизация](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
 - [Федерация и выданные маркеры](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
 - [Аудит](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)

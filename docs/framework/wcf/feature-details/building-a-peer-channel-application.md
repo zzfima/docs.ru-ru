@@ -2,12 +2,12 @@
 title: Создание приложения одноранговых каналов
 ms.date: 03/30/2017
 ms.assetid: a69a1b8f-8e15-45c5-87b8-bdb71e1c7ab8
-ms.openlocfilehash: 3d330145e0a5de9e94ed5c2ec110291881012073
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b6f856eed1aa011bd21bcf01172e9322df70925b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718823"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108541"
 ---
 # <a name="building-a-peer-channel-application"></a>Создание приложения одноранговых каналов
 В следующих разделах представлено руководство по разработке приложений одноранговых каналов.  
@@ -26,4 +26,5 @@ ms.locfileid: "54718823"
  Рассматривается безопасность на основе транспорта и сообщений, а также рекомендации по обеспечению безопасности приложений одноранговых каналов.  
   
 ## <a name="see-also"></a>См. также
+
 - [Основные понятия одноранговых каналов](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)

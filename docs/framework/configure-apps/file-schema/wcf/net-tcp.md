@@ -2,12 +2,12 @@
 title: <net.tcp>
 ms.date: 03/30/2017
 ms.assetid: 8bc2f2be-11c1-4bab-9018-1d21ae568d94
-ms.openlocfilehash: 692c4cf6688bfc2f9b99f065f4b16711f7f08063
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 589bae5d1f91e0424eb19cee62fe758aa7846191
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412049"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166521"
 ---
 # <a name="nettcp"></a>\<net.tcp>
 Задает параметры конфигурации для службы общего доступа к портам Net.Tcp, которая позволяет нескольким процессам совместно использовать один и тот же порт протокола TCP.  
@@ -74,6 +74,7 @@ ms.locfileid: "58412049"
  Дополнительные сведения о совместное использование порта, см. в разделе [совместного использования портов Net.TCP](../../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md). Чтобы понять, как настроить службы совместного использования портов, см. в разделе [Настройка службы совместного использования портов Net.TCP](../../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.Activation.Configuration.NetTcpSection>
 - [Совместное использование портов Net.TCP](../../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)
 - [Настройка службы совместного использования портов Net.TCP](../../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)

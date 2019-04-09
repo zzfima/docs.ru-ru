@@ -4,17 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 2c997092-72c6-4767-bc84-74267f4eee72
-ms.openlocfilehash: a7ed16690172f2720424807325150ea3db5d5caa
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0cd69a4d2d6087c1ebf93bb5931511f32a4c9c5f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372834"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110062"
 ---
 # <a name="base-elements-overview"></a>Общие сведения о базовых элементах
 Большое количество классов в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] являются производными от четырех классов, которые обычно называются в документации по [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] базовыми классами элементов. Эти классы являются <xref:System.Windows.UIElement>, <xref:System.Windows.FrameworkElement>, <xref:System.Windows.ContentElement>, и <xref:System.Windows.FrameworkContentElement>. <xref:System.Windows.DependencyObject> Класс также имеет отношение, так как это общий базовый класс обоих <xref:System.Windows.UIElement> и <xref:System.Windows.ContentElement>  
- 
-  
+
 <a name="base_apis"></a>   
 ## <a name="base-element-apis-in-wpf-classes"></a>Интерфейсы API базовых элементов в классах WPF  
  Оба <xref:System.Windows.UIElement> и <xref:System.Windows.ContentElement> являются производными от <xref:System.Windows.DependencyObject>, через несколько различных путей. Разбиение на этом уровне имеет дело с тем, как <xref:System.Windows.UIElement> или <xref:System.Windows.ContentElement> используются в пользовательском интерфейсе и какой целью они применяются в приложении. <xref:System.Windows.UIElement> также имеет <xref:System.Windows.Media.Visual> в своей иерархии класс — это класс, который предоставляет низкоуровневые графические основной поддержки [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. <xref:System.Windows.Media.Visual> предоставляет платформу для отображения, определяя независимые прямоугольные области экрана. На практике <xref:System.Windows.UIElement> для элементов, поддерживающих модель больших объектов, для отрисовки и макетов в областях, которые можно описать как прямоугольные области экрана, и где модель содержимого намеренно более открыта, чтобы разрешить разные сочетания элементов. <xref:System.Windows.ContentElement> является производным от <xref:System.Windows.Media.Visual>; его модель <xref:System.Windows.ContentElement> потреблял бы что-то еще, скажем, для чтения или просмотра, который затем будет интерпретировать элементы и создавать полный <xref:System.Windows.Media.Visual> для [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] для использования. Определенные <xref:System.Windows.UIElement> классы предназначены для размещения содержимого: они обеспечивают размещение и отображение для одного или нескольких <xref:System.Windows.ContentElement> классы (<xref:System.Windows.Controls.DocumentViewer> является примером такого класса). <xref:System.Windows.ContentElement> используется как базовый класс для элементов с меньшими объектными моделями и текста, сведения или содержимого документов, которые могут размещаться в <xref:System.Windows.UIElement>.  
@@ -98,6 +97,7 @@ ms.locfileid: "57372834"
  <xref:System.Windows.Controls.Control> является предполагаемым базовым классом для типа объекта, который называется элемент управления или компонент, в зависимости от технологии. Как правило, классы элементов управления [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] — это классы, которые либо непосредственно представляют элемент управления пользовательского интерфейса, либо близко участвуют в его композиции. Основные функциональные возможности, <xref:System.Windows.Controls.Control> включает является шаблон элемента управления.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Controls.Control>
 - [Общие сведения о свойствах зависимости](dependency-properties-overview.md)
 - [Общие сведения о разработке элементов управления](../controls/control-authoring-overview.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, getting started
 ms.assetid: c832fa5b-cf86-4690-be5a-a226c0e49530
-ms.openlocfilehash: e8270fc181779950222b21fd196a1a1a6226e2b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c4d3ec4ac0dcd02bc7f7a1d28ba383708d1e3f86
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597248"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142458"
 ---
 # <a name="getting-started-with-wcf-data-services"></a>Начало работы со службами данных WCF
 В подразделах этого раздела помогут вам быстро ознакомиться [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] и способы использования [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] для предоставления и получения [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-каналов путем разъяснения базовых технологий. Этот раздел включает как концептуальное содержимое и [быстрого запуска](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) руководства.  
@@ -41,4 +41,5 @@ ms.locfileid: "54597248"
  [Начало работы](../../../../docs/framework/data/adonet/ef/getting-started.md)  
   
 ## <a name="see-also"></a>См. также
+
 - [OData SDK](https://go.microsoft.com/fwlink/?LinkID=185248)

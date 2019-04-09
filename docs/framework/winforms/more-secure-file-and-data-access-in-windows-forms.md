@@ -13,12 +13,12 @@ helpviewer_keywords:
 - file access [Windows Forms]
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-ms.openlocfilehash: 60a9ffa8061f5bc576aa919aa742f1c5e6b07124
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 557c3296310a7eb3922a6c18b7b3de19ffac953c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724549"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115769"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Более безопасный доступ к файлам и данным в Windows Forms
 В [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] для защиты ресурсов и данных используются разрешения. То, какие данные может считывать или записывать приложение, зависит от предоставленных ему разрешений. Когда приложение работает в среде с частичным доверием, то доступ к данным может быть запрещен или может быть необходимо изменить способ доступа к данным.  
@@ -49,7 +49,7 @@ ms.locfileid: "57724549"
   
  Разрешение на вывод файлового диалогового окна не дает приложению полный доступ ко всем членам классов <xref:System.Windows.Forms.FileDialog>, <xref:System.Windows.Forms.OpenFileDialog> и <xref:System.Windows.Forms.SaveFileDialog>. Точные разрешения, необходимые для вызова каждого метода, представлены в справочном разделе по этому методу в документации по библиотеке классов [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
- В примере кода ниже метод <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> используется для открытия указанного пользователем файла в элементе управления <xref:System.Windows.Forms.RichTextBox>. Для этого требуется разрешение <xref:System.Security.Permissions.FileDialogPermission> и связанное с ним значение перечисления <xref:System.Security.Permissions.FileDialogPermissionAttribute.Open%2A>. В примере показано, как обрабатывать исключение <xref:System.Security.SecurityException> для определения того, нужно ли отключить функцию сохранения. В этом примере требуется, чтобы форма <xref:System.Windows.Forms.Form> содержала элемент управления <xref:System.Windows.Forms.Button> с именем `ButtonOpen` и элемент управления <xref:System.Windows.Forms.RichTextBox> с именем `RtfBoxMain`.  
+ В примере кода ниже метод <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> используется для открытия указанного пользователем файла в элементе управления <xref:System.Windows.Forms.RichTextBox>. Для этого требуется разрешение <xref:System.Security.Permissions.FileDialogPermission> и связанное с ним значение перечисления <xref:System.Security.Permissions.FileDialogPermissionAttribute.Open%2A>. В примере показано, как обрабатывать исключение <xref:System.Security.SecurityException> для определения того, нужно ли отключить возможность сохранения. В этом примере требуется, чтобы форма <xref:System.Windows.Forms.Form> содержала элемент управления <xref:System.Windows.Forms.Button> с именем `ButtonOpen` и элемент управления <xref:System.Windows.Forms.RichTextBox> с именем `RtfBoxMain`.  
   
 > [!NOTE]
 >  Программная логика для возможности сохранения в примере не представлена.  
@@ -133,7 +133,7 @@ private void ButtonOpen_Click(object sender, System.EventArgs e)
 ```  
   
 > [!NOTE]
->  В Visual C# убедитесь, что код для включения обработчика событий добавлен. Следующий код показывает, как с помощью кода из предыдущего примера включить обработчик событий: `this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`  
+>  В Visual C# убедитесь, что код для включения обработчика событий добавлен. С помощью кода из предыдущего примера, ниже показано, как включить обработчик событий.`this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`  
   
 ### <a name="other-files"></a>Другие файлы  
  Иногда необходимо считывать или записывать файлы, которые не указываются пользователем, например если требуется сохранить параметры приложения. В зонах локальной интрасети и Интернета приложение не имеет разрешения сохранять данные в локальном файле. Тем не менее приложение может сохранять данные в изолированном хранилище. Изолированное хранилище — это абстрактная секция данных (а не конкретное хранилище), содержащая один или несколько изолированных файлов хранения, называемых хранилищами, которые содержат сведения о действительных папках размещения данных. Разрешения на доступ к файлам, такие как <xref:System.Security.Permissions.FileIOPermission>, не обязательны; вместо этого класс <xref:System.Security.Permissions.IsolatedStoragePermission> управляет разрешениями для изолированного хранилища. По умолчанию приложения, запущенные в зонах локальной интрасети и Интернета, могут хранить данные с помощью изолированного хранилища. Однако такие параметры, как дисковая квота, могут меняться. Дополнительные сведения об изолированном хранилище см. в разделе [изолированное хранилище](../../standard/io/isolated-storage.md).  
@@ -354,11 +354,12 @@ public void Write()
  Если невозможно получить доступ к базе данных напрямую, так как требуется, чтобы приложение работало в среде с частичным доверием, можно использовать веб-службу как альтернативное средство доступа к данным. Веб-служба — это программа, доступ к которой можно получить программными средствами по сети. С помощью веб-служб приложения могут совместно использовать данные из различных зон групп кода. По умолчанию приложения в зонах локальной интрасети и Интернета получают право на доступ к исходным сайтам, что позволяет им вызывать веб-службы, размещенные на том же сервере. Дополнительные сведения см. в разделе [веб-служб в AJAX для ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/bb398785(v=vs.100)) или [Windows Communication Foundation](../wcf/index.md).  
   
 ## <a name="registry-access"></a>Доступ к реестру  
- Класс <xref:System.Security.Permissions.RegistryPermission> управляет доступом к реестру операционной системы. По умолчанию доступ к реестру могут получить только приложения, которые работают локально.  Разрешение <xref:System.Security.Permissions.RegistryPermission> предоставляет приложению право всего лишь попытаться получить доступ к реестру, но не гарантирует, что доступ будет успешно получен, потому что операционная система принудительно обеспечивает безопасность реестра.  
+ Класс <xref:System.Security.Permissions.RegistryPermission> управляет доступом к реестру операционной системы. По умолчанию доступ к реестру могут получить только приложения, которые работают локально.  <xref:System.Security.Permissions.RegistryPermission> предоставляет приложению право на доступ к реестру; попробуйте он не гарантирует, что доступ будет успешным, поскольку операционная система по-прежнему обеспечивает безопасность реестра.  
   
  Так как в среде с частичным доверием доступ к реестру получить невозможно, могут потребоваться другие способы хранения данных. Для хранения параметров приложения используйте вместо реестра изолированное хранилище. Изолированное сохранение можно использовать также для хранения файлов, относящихся к приложению. Можно хранить общие сведения приложения о сервере или исходном сайте, так как по умолчанию приложение имеет право на доступ к исходному сайту.  
   
 ## <a name="see-also"></a>См. также
+
 - [Более безопасная печать в Windows Forms](more-secure-printing-in-windows-forms.md)
 - [Дополнительные вопросы безопасности в формах Windows Forms](additional-security-considerations-in-windows-forms.md)
 - [Общие сведения о безопасности в Windows Forms](security-in-windows-forms-overview.md)

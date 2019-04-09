@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 26ada5af-175c-4576-931a-9f07fa1723e9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 663ceda1c0621e1152e795db79c3953be0090d5d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 88f23c2e03966bffccc9153e18e1b54e6847987d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681798"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127612"
 ---
 # <a name="bindingfailure-mda"></a>bindingFailure MDA
 Помощник по отладке управляемого кода (MDA) `bindingFailure` запускается в случае сбоя при загрузке сборки.  
@@ -48,7 +48,7 @@ ms.locfileid: "54681798"
   
 -   Устраните выявленные ранее причины. Возможны следующие варианты решения проблемы:  
   
-    -   Установите запрошенную сборку в глобальный кэш сборок и вызовите метод <xref:System.Reflection.Assembly.Load%2A> для загрузки сборки по удостоверению.  
+    -   Установите запрошенную сборку в глобальный кэш сборок и вызовите <xref:System.Reflection.Assembly.Load%2A> метод для загрузки сборки по удостоверению.  
   
     -   Скопируйте запрошенную сборку в каталог приложения и вызовите метод <xref:System.Reflection.Assembly.Load%2A> для загрузки сборки по удостоверению.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "54681798"
   
  Если среде CLR недоступны соответствующие данные, отображаемое имя и запрошенный путь могут быть пустыми. Если сбоем завершается вызов метода <xref:System.Reflection.Assembly.Load%2A>, чаще всего среде выполнения не удается определить отображаемое имя сборки.  
   
-## <a name="configuration"></a>Конфигурация  
+## <a name="configuration"></a>Параметр Configuration  
   
 ```xml  
 <mdaConfig>  
@@ -99,4 +99,5 @@ namespace ConsoleApplication1
 ```  
   
 ## <a name="see-also"></a>См. также
-- [Диагностика ошибок посредством помощников по отладке управляемого кода](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+
+- [Диагностика ошибок посредством управляемых помощников по отладке](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
-ms.openlocfilehash: 45a904eb9e38b13fc3502264f4659bfd25465630
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: 8080451d64f74629451c6ca66fb27d93c9f29ed8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410424"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209506"
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>Использование привязок для настройки служб и клиентов
 Привязки - это объекты, которые указывают подробные сведения о связи, требуемые для подключения к конечной точке. В частности, привязки содержат информацию о конфигурации, используемую для создания среды выполнения клиента или службы путем определения подробной информации о транспорте, форматах подключения (кодировка сообщения) и протоколах, используемых для соответствующей конечной точки или канала клиента. Чтобы создать работоспособную службу Windows Communication Foundation (WCF), каждая конечная точка службы требует привязки. В настоящем разделе описывается, что такое привязки, как они определяются и как для конечной точки указывается конкретная привязка.  
@@ -57,8 +57,9 @@ ms.locfileid: "58410424"
 -   [Учебник. Создание клиента Windows Communication Foundation](../../../docs/framework/wcf/how-to-create-a-wcf-client.md) приведен пример создания клиента с помощью конфигурации.  
   
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения о создании конечных точек](../../../docs/framework/wcf/endpoint-creation-overview.md)
-- [Практическое руководство. Указание привязки службы в конфигурации](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
-- [Практическое руководство. Указание привязки службы в коде](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)
+- [Практическое руководство. Задание привязки службы в конфигурации](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
+- [Практическое руководство. Задание привязки службы в коде](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)
 - [Практическое руководство. Указание привязки клиента в конфигурации](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)
-- [Практическое руководство. Указание привязки клиента в коде](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-code.md)
+- [Практическое руководство. Задание привязки клиента в коде](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-code.md)

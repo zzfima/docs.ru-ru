@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: ef5ba300-6d7c-455e-a7bd-d0cc6d211ad4
-ms.openlocfilehash: 12a23970b059e338df05a2f0b58ca67ad6fae6d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e36f9124ec9979dac69b596c6d87491581ae9ec6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582569"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159527"
 ---
 # <a name="reflection-provider-wcf-data-services"></a>Поставщик отражений (службы данных WCF)
-Помимо предоставления данных из модели данных через Entity Framework, службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] поддерживают предоставление данных, не определенных строго в модели на основе сущностей. Поставщик отражения предоставляет данные в классах, возвращаемые типы которых реализуют интерфейс <xref:System.Linq.IQueryable%601>. Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] используют отражение для определения модели данных для таких классов и поддерживают преобразование запросов к таким ресурсам на основе адресов в интегрированные в язык запросы (LINQ) к предоставляемым типам <xref:System.Linq.IQueryable%601>.  
+Помимо предоставления данных из модели данных через Entity Framework, службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] поддерживают предоставление данных, не определенных строго в модели на основе сущностей. Поставщик отражения предоставляет данные в классах, типы возвращаемого значения которых реализуют интерфейс <xref:System.Linq.IQueryable%601>. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] использует отражение для определения модели данных для этих классов и поддерживают преобразование запросов к ресурсам на основе адресов языка в интегрированные в запросы (LINQ) — запросы к предоставляемым на основе <xref:System.Linq.IQueryable%601> типов.  
   
 > [!NOTE]
 >  Метод <xref:System.Linq.Queryable.AsQueryable%2A> позволяет получить интерфейс <xref:System.Linq.IQueryable%601> любого класса, реализующего интерфейс <xref:System.Collections.Generic.IEnumerable%601>. Это позволяет использовать большинство типов универсальных коллекций в качестве источника данных для службы данных.  
@@ -95,4 +95,5 @@ ms.locfileid: "54582569"
  Поскольку Entity Framework изначально поддерживается по умолчанию, это рекомендованный поставщик данных для работы с реляционными данными в службах [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Однако для работы с запросами LINQ к классам SQL можно использовать и поставщик отражения. <xref:System.Data.Linq.Table%601> Результирующие наборы, возвращаемые методами <xref:System.Data.Linq.DataContext> формируемые LINQ для реализации реляционный конструктор объектов SQL (реляционный конструктор объектов) <xref:System.Linq.IQueryable%601> интерфейс. Это позволяет поставщику отражения получать доступ к таким методам и возвращать данные сущностей с сервера SQL Server при помощи сформированных классов LINQ to SQL. Однако, поскольку запрос LINQ to SQL не реализует интерфейс <xref:System.Data.Services.IUpdatable>, необходимо добавить разделяемый класс, расширяющий имеющийся разделяемый класс <xref:System.Data.Linq.DataContext> и определяющий реализацию интерфейса <xref:System.Data.Services.IUpdatable>. Дополнительные сведения см. в разделе [Как Создание службы данных с использованием LINQ к источнику данных SQL](../../../../docs/framework/data/wcf/create-a-data-service-using-linq-to-sql-wcf.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Поставщики служб данных](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)

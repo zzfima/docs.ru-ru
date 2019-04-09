@@ -1,18 +1,18 @@
 ---
-title: Как выполнить Создание одностороннего контракта
+title: Практическое руководство. Создание одностороннего контракта
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 85084cd9-31cc-4e95-b667-42ef01336622
-ms.openlocfilehash: f7636d7013c236e0c51e5326a84ae47f2f98e283
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: a4996dc963c572e2aeb14b9b366af33b8f23d480
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693627"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208661"
 ---
-# <a name="how-to-create-a-one-way-contract"></a>Как выполнить Создание одностороннего контракта
+# <a name="how-to-create-a-one-way-contract"></a>Практическое руководство. Создание одностороннего контракта
 В этом разделе приведены основные этапы создания методов, использующих односторонние контракты. Такие методы вызывают операции над службой Windows Communication Foundation (WCF) из клиента, но не ожидать ответа. Контракты этого типа можно использовать, к примеру, для публикации уведомлений для большого количества подписчиков. Также можно использовать односторонние контракты при создании дуплексного (двустороннего) контракта, что позволяет клиентам и серверам взаимодействовать независимо (клиент может инициировать вызовы сервера, а сервер - вызовы клиента). В частности, это позволяет серверу выполнять односторонние вызовы клиента, которые клиент может воспринимать как события. Подробные сведения об указании односторонних методов см. в описаниях свойства <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> и класса <xref:System.ServiceModel.OperationContractAttribute>.  
   
  Дополнительные сведения о создании клиентского приложения для дуплексного контракта см. в разделе [как: Доступ к службам с односторонним контрактом и контрактом типа запрос ответ](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md). Работающий пример см. в разделе [односторонней](../../../../docs/framework/wcf/samples/one-way.md) образца.  
@@ -32,9 +32,10 @@ ms.locfileid: "54693627"
  [!code-vb[S_Service_Session#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_service_session/vb/service.vb#1)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.ServiceContractAttribute>
 - <xref:System.ServiceModel.OperationContractAttribute>
 - [Проектирование и реализация служб](../../../../docs/framework/wcf/designing-and-implementing-services.md)
-- [Практическое руководство. Определите контракт службы](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
-- [Session](../../../../docs/framework/wcf/samples/session.md)
-- [Практическое руководство. Создание дуплексного контракта](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+- [Практическое руководство. Определение контракта службы](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
+- [Сеанс](../../../../docs/framework/wcf/samples/session.md)
+- [Практическое руководство. Создание двухстороннего контракта](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)

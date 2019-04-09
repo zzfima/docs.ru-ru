@@ -1,15 +1,15 @@
 ---
-title: 'Внутри CustomPeerResolverService: Регистрация клиентов'
+title: 'Подробная информация о CustomPeerResolverService: регистрация клиентов'
 ms.date: 03/30/2017
 ms.assetid: 40236953-a916-4236-84a6-928859e1331a
-ms.openlocfilehash: 90d40eb11dbfebf4a19ba4c42e0fd4b45a2b1e7a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b3b5e22ad29f465d82e3d925f7168745fc5d04a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541785"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095793"
 ---
-# <a name="inside-the-custompeerresolverservice-client-registrations"></a>Внутри CustomPeerResolverService: Регистрация клиентов
+# <a name="inside-the-custompeerresolverservice-client-registrations"></a>Подробная информация о CustomPeerResolverService: регистрация клиентов
 Каждый узел в сетке публикует информацию о своей конечной точке в службе распознавателя с помощью функции `Register`. Служба распознавателя хранит эту информацию в виде регистрационной записи. Эта запись содержит уникальный идентификатор (RegistrationID) и информацию о конечной точке (PeerNodeAddress) для узла.  
   
 ## <a name="stale-records-and-expiration-time"></a>Устаревшие записи и срок действия  
@@ -34,4 +34,5 @@ ms.locfileid: "54541785"
  Когда узел регистрируется в службе распознавателя, он получает объект <xref:System.ServiceModel.PeerResolvers.RegisterResponseInfo> от службы. Этот объект имеет свойство `RegistrationLifetime`, в котором содержится информация о времени, оставшемся до истечения срока действия регистрации и удаления узла службой распознавателя. Если, например, срок действия регистрации `RegistrationLifetime` составляет 2 минуты, узел должен вызвать функцию `Refresh` в течение не более 2 минут, чтобы запись не перешла в разряд устаревших и не была удалена. Когда служба распознавателя получает запрос `Refresh`, она ищет запись и сбрасывает срок действия. Функция Refresh возвращает объект <xref:System.ServiceModel.PeerResolvers.RefreshResponseInfo> со свойством `RegistrationLifetime`.  
   
 ## <a name="see-also"></a>См. также
+
 - [Одноранговые распознаватели](../../../../docs/framework/wcf/feature-details/peer-resolvers.md)

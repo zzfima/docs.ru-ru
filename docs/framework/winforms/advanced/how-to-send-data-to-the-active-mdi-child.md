@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Отправки данных в активную дочернюю форму MDI
+title: Практическое руководство. Отправка данных в активную дочернюю MDI-форму
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], pasting
 - Clipboard [Windows Forms], getting data from
 ms.assetid: 1047d2fe-1235-46db-aad9-563aea1d743b
-ms.openlocfilehash: a89956595ff98e8cda717c90a3f96c95abc8118a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 0ffe87d55f7325f77bd33bdbf5d5fbab9f321f93
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707408"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203331"
 ---
-# <a name="how-to-send-data-to-the-active-mdi-child"></a>Практическое руководство. Отправки данных в активную дочернюю форму MDI
+# <a name="how-to-send-data-to-the-active-mdi-child"></a>Практическое руководство. Отправка данных в активную дочернюю MDI-форму
 Часто в контексте [приложений многодокументного интерфейса (MDI)](multiple-document-interface-mdi-applications.md), вам потребуется для отправки данных в активное дочернее окно, например когда пользователь вставляет данные из буфера обмена в приложении MDI.  
   
 > [!NOTE]
@@ -92,8 +92,9 @@ ms.locfileid: "57707408"
     ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Приложения с интерфейсом MDI](multiple-document-interface-mdi-applications.md)
 - [Практическое руководство. Создание родительских MDI-форм](how-to-create-mdi-parent-forms.md)
-- [Практическое руководство. Создание дочерних MDI-форм](how-to-create-mdi-child-forms.md)
-- [Практическое руководство. Определить активную дочернюю форму MDI](how-to-determine-the-active-mdi-child.md)
-- [Практическое руководство. Упорядочение дочерних форм MDI](how-to-arrange-mdi-child-forms.md)
+- [Практическое руководство. Создание дочерних форм MDI](how-to-create-mdi-child-forms.md)
+- [Практическое руководство. Определение активной дочерней MDI-формы](how-to-determine-the-active-mdi-child.md)
+- [Практическое руководство. Упорядочение дочерних MDI-форм](how-to-arrange-mdi-child-forms.md)

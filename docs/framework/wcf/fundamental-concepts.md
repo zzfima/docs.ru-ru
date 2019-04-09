@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: b28f9c0575d1031c2f542ffa0de4ac5b848d3da1
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: f0802365ed07bdb57111d1b28e8d7ddfd800d41b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56305549"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122308"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Основные понятия Windows Communication Foundation
 В этом документе показано высокоуровневое представление архитектуры Windows Communication Foundation (WCF). В нем приводится объяснение ключевых понятий и их взаимосвязь. Инструкции по созданию простейшей версии службы WCF и клиента, см. в разделе [Приступая к работе](../../../docs/framework/wcf/getting-started-tutorial.md). Научиться программированию WCF, см. в разделе [базовое Программирование WCF](../../../docs/framework/wcf/basic-wcf-programming.md).  
@@ -114,7 +114,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  Служба, которая выполняется в приложении-процессе, созданном разработчиком. Разработчик контролирует время существования службы, набор свойств службы, открывает службу (при этом служба переходит в режим ожидания данных) и закрывает службу.  
   
  ведущий процесс  
- Приложение, предназначенное для размещения служб. В число таких приложений входят службы IIS, службы активации Windows (WAS) и службы Windows. В этих сценариях основное приложение контролирует время существования службы. Например, с помощью IIS можно создать виртуальный каталог, содержащий сборку службы и файл конфигурации. При получении сообщения IIS запускает службу и контролирует время ее существования.  
+ Приложение, предназначенное для размещения служб. В число таких приложений входят службы IIS, службы активации Windows (WAS) и службы Windows. В этих сценариях ведущее приложение контролирует время существования службы. Например, с помощью IIS можно создать виртуальный каталог, содержащий сборку службы и файл конфигурации. При получении сообщения IIS запускает службу и контролирует время ее существования.  
   
  создание экземпляров  
  Со службой связана модель создания экземпляров. Существуют три модели создания экземпляров: «один экземпляр», в которой один объект CLR обслуживает всех клиентов, «по вызовам», в которой для обработки каждого вызова, поступившего от клиента, создается новый объект CLR, и «по сеансам», в которой создается набор объектов CLR, по одному на каждый отдельный сеанс. Выбор модели создания экземпляров зависит от требований к приложению и ожидаемого режима использования службы.  
@@ -153,5 +153,6 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  Сокращение для обозначения растущего набора спецификаций веб-служб (WS), таких как WS-Security, WS-ReliableMessaging и т. д., реализованных в WCF.  
   
 ## <a name="see-also"></a>См. также
-- [Что такое Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
-- [Архитектура Windows Communication Foundation](../../../docs/framework/wcf/architecture.md)
+
+- [Что такое Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
+- [Архитектура Windows Communication Foundation](../../../docs/framework/wcf/architecture.md)

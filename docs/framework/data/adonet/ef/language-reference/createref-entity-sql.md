@@ -2,12 +2,12 @@
 title: CREATEREF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 489828cf-a335-4449-9360-b0d92eec5481
-ms.openlocfilehash: bdf1c34f8a050764e8f8766da25076a7c1c361ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 7003805429df36fec82e5d57811ed38af6323379
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505085"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095611"
 ---
 # <a name="createref-entity-sql"></a>CREATEREF (Entity SQL)
 Формирует ссылки на сущность в наборе сущностей.  
@@ -26,7 +26,7 @@ CreateRef(entityset_identifier, row_typed_expression)
  Выражение типа строки таблицы, соответствующее свойствам ключа типа сущности.  
   
 ## <a name="remarks"></a>Примечания  
- Выражение`row_typed_expression` должно быть структурно эквивалентно типу ключа для данной сущности. Это значит, что оно должно иметь такое же число и типы полей, расположенные в том же порядке, как и ключи сущности.  
+ `row_typed_expression` должно быть структурно эквивалентно типу ключа для сущности. Это значит, что оно должно иметь такое же число и типы полей, расположенные в том же порядке, как и ключи сущности.  
   
  В приведенном далее примере Orders и BadOrders являются наборами сущностей типа Order, и предполагается, что идентификатор Id является единственным свойством ключа для типа Order. Этот пример иллюстрирует, как можно сформировать ссылку на сущность в наборе сущностей BadOrders. Отметим, что ссылка может быть висячей.  Это значит, что в действительности ссылка может не указывать на конкретную сущность. В этом случае оператор `DEREF` для этой ссылки возвратит значение null.  
   
@@ -45,6 +45,7 @@ from LOB.Orders as o
  [!code-csharp[DP EntityServices Concepts 2#CREATEREF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#createref)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Справочник по Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [DEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md)
 - [KEY](../../../../../../docs/framework/data/adonet/ef/language-reference/key-entity-sql.md)

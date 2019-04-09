@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Static markup extension in XAML [XAML Services]
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
-ms.openlocfilehash: 0956bb6daa60f947c1cd410ce4728da7d1bb707d
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.openlocfilehash: eb0c34f259220a0326238b27ab43efd3078b0bcc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58037692"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207088"
 ---
 # <a name="xstatic-markup-extension"></a>Расширение разметки x:Static
 Ссылается на любой сущности кода статический по значению, определенному в [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]— надлежащим способом. Статическое свойство, которое указывается может использоваться для предоставления значения свойства в XAML.  
@@ -83,5 +83,6 @@ ms.locfileid: "58037692"
  Дополнительные сведения о том, как использовать префиксы и пространства имен XAML для WPF см. в разделе [пространства имен XAML и сопоставление пространств имен для WPF XAML](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Расширение разметки x:Type](x-type-markup-extension.md)
 - [Типы, перенесенные из WPF в System.Xaml](types-migrated-from-wpf-to-system-xaml.md)

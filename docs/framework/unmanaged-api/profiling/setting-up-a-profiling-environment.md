@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d329b811e0c1377cb2d7555b3e7e30b52071eca8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bfa11083fad7a3ccc6a208f5f0e4b68e9e1bc18c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682032"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098186"
 ---
 # <a name="setting-up-a-profiling-environment"></a>Установка профилирующей среды
 > [!NOTE]
@@ -96,4 +96,5 @@ pInfo->SetEventMask(COR_PRF_MONITOR_ENTERLEAVE | COR_PRF_MONITOR_GC)
  Этот метод также приводит к профилированию каждого процесса CLR. Профилировщик должен добавить логику в его [ICorProfilerCallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) обратного вызова, чтобы определить, является ли текущий процесс. Если это не так, профилировщик может завершить обратный вызов с ошибкой без выполнения инициализации.  
   
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения о профилировании](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)

@@ -11,23 +11,21 @@ helpviewer_keywords:
 - object performance considerations [WPF]
 - Freezable objects [WPF], performance
 ms.assetid: 73aa2f47-1d73-439a-be1f-78dc4ba2b5bd
-ms.openlocfilehash: 5548292480f07fa192985800931f9d0262f2b791
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 49318059435c5f5669510f7cf3fb7c93a4bc05e1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352689"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137440"
 ---
 # <a name="optimizing-performance-object-behavior"></a>Оптимизация производительности: Поведение объекта
 Понимание внутреннего поведения объектов [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] поможет найти оптимальное сочетание функциональных возможностей и производительности.  
-  
 
-  
 <a name="Not_Removing_Event_Handlers"></a>   
 ## <a name="not-removing-event-handlers-on-objects-may-keep-objects-alive"></a>Не удаление обработчиков событий для объектов может поддерживать объекты в активном состоянии  
  Делегат, который объект передает в свое событие, фактически является ссылкой на этот объект. Таким образом, обработчики событий могут поддерживать объекты в активном состоянии дольше, чем планировалось. При выполнении очистки объекта, зарегистрированного для прослушивания события объекта, необходимо удалить этот делегат перед освобождением объекта. Сохранение ненужных объектов в активном состоянии увеличивает потребление памяти. Это особенно важно в тех случаях, когда объект является корневым элементом логического дерева или визуального дерева.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет шаблон прослушивателя слабых событий, который может быть полезен в ситуациях, когда трудно отслеживать отношения между источником и прослушивателем во время существования объекта. Некоторые существующие события [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] используют этот шаблон. При реализации объектов с пользовательскими событиями этот шаблон может вам пригодиться. Дополнительные сведения см. в разделе [Шаблоны слабых событий](weak-event-patterns.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет шаблон прослушивателя слабых событий для событий, которые могут быть полезны в ситуациях, когда трудно отслеживать отношения между источником и прослушивателем во время существования объекта. Некоторые существующие события [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] используют этот шаблон. При реализации объектов с пользовательскими событиями этот шаблон может вам пригодиться. Дополнительные сведения см. в разделе [Шаблоны слабых событий](weak-event-patterns.md).  
   
  Существует несколько инструментов, таких как профилировщик CLR и Working Set Viewer, которые могут предоставлять сведения об использовании памяти указанным процессом. Профилировщик CLR включает ряд очень полезных представлений профиля выделения, включая гистограмму выделенных типов, диаграммы выделения и вызова, временную шкалу, показывающую сборку мусора разных поколений и итоговое состояние управляемой кучи после этих сборок, а также дерево вызовов, показывающее распределения по методам и загрузки сборок. Дополнительные сведения см. в разделе [Центр разработчиков .NET Framework](https://go.microsoft.com/fwlink/?LinkId=117435).  
   
@@ -67,7 +65,7 @@ ms.locfileid: "57352689"
   
  Замораживание <xref:System.Windows.Freezable> позволяет повысить его производительность, поскольку он больше не требуется тратить ресурсы на уведомления об изменениях. В следующей таблице показан размер простого объекта <xref:System.Windows.Media.SolidColorBrush> при его <xref:System.Windows.Freezable.IsFrozen%2A> свойству `true`, если он недопустим по сравнению с. Это предполагает применение одной кисти к <xref:System.Windows.Shapes.Shape.Fill%2A> свойство десяти <xref:System.Windows.Shapes.Rectangle> объектов.  
   
-|**Состояние**|**Size**|  
+|**Регион**|**Размер**|  
 |---------------|--------------|  
 |FROZEN <xref:System.Windows.Media.SolidColorBrush>|212 байт|  
 |Нефиксированный <xref:System.Windows.Media.SolidColorBrush>|972 байта|  
@@ -111,12 +109,13 @@ ms.locfileid: "57352689"
 |<xref:System.Windows.Controls.VirtualizingStackPanel>|46|  
   
 ## <a name="see-also"></a>См. также
+
 - [Улучшение производительности приложений WPF](optimizing-wpf-application-performance.md)
 - [Планирование производительности приложения](planning-for-application-performance.md)
 - [Использование преимуществ оборудования](optimizing-performance-taking-advantage-of-hardware.md)
 - [Разметка и разработка](optimizing-performance-layout-and-design.md)
 - [Двумерная графика и изображения](optimizing-performance-2d-graphics-and-imaging.md)
 - [Ресурсы приложений](optimizing-performance-application-resources.md)
-- [Text](optimizing-performance-text.md)
+- [Текста](optimizing-performance-text.md)
 - [Привязка данных](optimizing-performance-data-binding.md)
 - [Дополнительные рекомендации по повышению производительности](optimizing-performance-other-recommendations.md)

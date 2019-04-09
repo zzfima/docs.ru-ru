@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6e40f08a3dae6f17617e97e07a23b9d7eb611083
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8bae2d134c412023d0f126453b5285662d994c78
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558635"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207764"
 ---
 # <a name="clrruntimehost-coclass"></a>Кокласс CLRRuntimeHost
 Предоставляет интерфейсы для выполнения управляемого кода средой выполнения.  
@@ -37,7 +37,7 @@ coclass CLRRuntimeHost {
   
 ## <a name="interfaces"></a>интерфейсов,  
   
-|Интерфейс|Описание:|  
+|Интерфейс|Описание|  
 |---------------|-----------------|  
 |[Интерфейс ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)|Предоставляет методы для управления выполнением приложений средой выполнения.|  
 |[Интерфейс ICLRValidator](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)|Предоставляет методы для проверки переносимого исполняемого образа и подробные отчеты об ошибках проверки.|  
@@ -52,4 +52,5 @@ coclass CLRRuntimeHost {
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Размещение коклассов](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)

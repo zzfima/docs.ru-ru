@@ -1,5 +1,5 @@
 ---
-title: Элемент <filter> для <add> для <listeners> для <trace>
+title: <filter> Элемент для <add> для <listeners> для <trace>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/add/filter
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - filter element for <add> for <listeners> for <trace>
 - <filter> element for <add> for <listeners> for <trace>
 ms.assetid: eb9c18f5-dfa8-47c5-b91b-e4b93e76e1cc
-ms.openlocfilehash: f364590a419c3f31af49ea2c3dd6fa5901bf0272
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5961125e1b8d0d0f5711f8b942b68ba71d61888f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55283183"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143433"
 ---
 # <a name="filter-element-for-add-for-listeners-for-trace"></a>\<Фильтр > элемент для \<Добавить > для \<прослушиватели > для \<трассировки >
 Добавляет фильтр к прослушивателю в `Listeners` коллекции трассировки.  
@@ -48,7 +48,7 @@ ms.locfileid: "55283183"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`system.diagnostics`|Задает прослушиватели трассировки, собирающие, хранящие и маршрутизирующие сообщения, а также уровень, на котором установлен ключ трассировки.|  
@@ -82,6 +82,7 @@ ms.locfileid: "55283183"
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.TraceListener.Filter%2A?displayProperty=nameWithType>

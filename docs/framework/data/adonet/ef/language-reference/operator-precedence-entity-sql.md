@@ -2,12 +2,12 @@
 title: Приоритет операторов (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: e92e4ca5-2889-4266-9625-47f0eb01a948
-ms.openlocfilehash: c68ac6d89426896b708ac74de1268f8ea8f193c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 722ebe5f0ec530f8c7f86e9f9901451b060903f0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506842"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159137"
 ---
 # <a name="operator-precedence-entity-sql"></a>Приоритет операторов (Entity SQL)
 Когда [!INCLUDE[esql](../../../../../../includes/esql-md.md)] запроса содержит несколько операторов, порядок применения операторов определяет последовательность, в которой выполняются операции. Порядок выполнения может существенно повлиять на результат выполнения запроса.  
@@ -30,4 +30,5 @@ ms.locfileid: "54506842"
  Чтобы переопределить порядок вычисления операторов в выражении, следует использовать скобки. Вначале все выражение внутри скобок вычисляется до получения одного значения, которое затем может быть использовано любым оператором за пределами скобок. Например `x+y*z` умножает `y` по `z` , а затем добавляет `x`, но `(x+y)*z` добавляет `x` для `y` и умножает результат на `z`.  
   
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения об Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

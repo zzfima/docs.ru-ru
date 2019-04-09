@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d12555fb53a6c1b21f161402da77860adcf0a4b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: fc6cd8d2d0ab4648ad20392ef0968907917677e9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57478912"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209494"
 ---
 # <a name="icorruntimehostswitchinlogicalthreadstate-method"></a>Метод ICorRuntimeHost::SwitchInLogicalThreadState
 Этот метод поддерживает инфраструктуру .NET Framework и не предназначен для использования непосредственно из программного кода.  
@@ -49,4 +49,5 @@ HRESULT SwitchInLogicalThreadState(
  **Версии платформы .NET framework:** 1.0, 1.1  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

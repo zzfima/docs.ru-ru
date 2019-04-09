@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Извлечение значка, связанного с файлом в Windows Forms
+title: Практическое руководство. Извлечение связанного с файлом значка в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - file name extension icons [Windows Forms], displaying in a ListView
 - extracting icons associated with a file type [Windows Forms]
 ms.assetid: 88e2ad8b-c34f-415a-84f2-dad756b5c928
-ms.openlocfilehash: 5cbce48643d21418d580a6db44f86b00cf50fb9d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d754dc5e8a57b3c4e2e5439bb2524a22d44813c6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714194"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112558"
 ---
-# <a name="how-to-extract-the-icon-associated-with-a-file-in-windows-forms"></a>Практическое руководство. Извлечение значка, связанного с файлом в Windows Forms
+# <a name="how-to-extract-the-icon-associated-with-a-file-in-windows-forms"></a>Практическое руководство. Извлечение связанного с файлом значка в Windows Forms
 Большое количество файлов с внедренными значки, которые обеспечивают визуальное представление сопоставленного типа файлов. Например документы Microsoft Word содержит значок, который определяет их как документы Word. При отображении файлов в список элементов управления, или таблицы, можно отобразить значок, представляющий тип файла рядом с именами файлов. Вы можете сделать это с помощью <xref:System.Drawing.Icon.ExtractAssociatedIcon%2A> метод.  
   
 ## <a name="example"></a>Пример  
@@ -33,5 +33,6 @@ ms.locfileid: "57714194"
      Необходимо убедиться, что форма импортирует <xref:System.IO> пространства имен.  
   
 ## <a name="see-also"></a>См. также
-- [Изображения, точечные рисунки и метафайлы](images-bitmaps-and-metafiles.md)
+
+- [Работа с растровыми и векторными изображениями с использованием классов Image, Bitmap и Metafile](images-bitmaps-and-metafiles.md)
 - [Элемент управления ListView](../controls/listview-control-windows-forms.md)

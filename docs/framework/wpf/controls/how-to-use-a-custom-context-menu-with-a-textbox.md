@@ -10,12 +10,12 @@ helpviewer_keywords:
 - custom context menus [WPF]
 - TextBox control [WPF], custom content menus
 ms.assetid: 842d3cd5-6fa0-4be4-8d90-6c7466213b1c
-ms.openlocfilehash: 805f5205a91f9b3da0c48c987f1f49f1d81892b7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b0507c6fa37f0f51f9e12ebe5f908c39c25b50d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358604"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129420"
 ---
 # <a name="how-to-use-a-custom-context-menu-with-a-textbox"></a>Практическое руководство. Использование пользовательского контекстного меню с элементом TextBox
 В этом примере показано, как определить и реализовать простое пользовательское контекстное меню для <xref:System.Windows.Controls.TextBox>.  
@@ -36,6 +36,7 @@ ms.locfileid: "57358604"
  [!code-vb[TextBox_ContextMenu#_TextBox_ContextMenu](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBox_ContextMenu/VisualBasic/Window1.xaml.vb#_textbox_contextmenu)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Использование проверки орфографии с помощью контекстного меню](how-to-use-spell-checking-with-a-context-menu.md)
 - [Общие сведения о TextBox](textbox-overview.md)
 - [Общие сведения о RichTextBox](richtextbox-overview.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8ef293daea1a768c26adf05d14107a42889226e0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2138dd32cf39db7b7c8989ba5827178d1a1e46c7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491289"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117239"
 ---
 # <a name="cormethodimpl-enumeration"></a>Перечисление CorMethodImpl
 Содержит значения, описывающие возможности реализации метода.  
@@ -56,7 +56,7 @@ typedef enum CorMethodImpl {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |`miCodeTypeMask`|Флаги, описывающие тип кода.|  
 |`miIL`|Указывает, что метод реализуется на промежуточном языке Майкрософт (MSIL).|  
@@ -83,4 +83,5 @@ typedef enum CorMethodImpl {
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

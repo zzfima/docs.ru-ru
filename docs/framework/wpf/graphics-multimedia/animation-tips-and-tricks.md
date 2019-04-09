@@ -14,12 +14,12 @@ helpviewer_keywords:
 - performance troubleshooting [WPF], animation
 - animations [WPF], use of system resources
 ms.assetid: e467796b-d5d4-45a6-a108-8c5d7ff69a0f
-ms.openlocfilehash: e8b2a6b5386ec33ad8aa5281d808bb7089149764
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 1337dac083ad9d52a4cfd99bddee80baebf474de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362439"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202148"
 ---
 # <a name="animation-tips-and-tricks"></a>Советы и рекомендации по анимации
 При работе с анимацией в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], существует ряд советов и приемов, которые анимациям работают лучше и сэкономить разочарований.  
@@ -75,10 +75,10 @@ ms.locfileid: "57362439"
   
 2.  Вторая раскадровка вступает в силу и анимируется от текущей позиции, которая теперь имеет значение 0, до 500.  
   
- **Но этого не происходит.** Прямоугольник не прыгает обратно; он продолжает перемещаться вправо. Это происходит потому, что вторая анимация использует текущее значение первой анимации в качестве своего начального значения и анимируется от этого значения до 500. Когда вторая анимация заменяет первый, так как <xref:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace> <xref:System.Windows.Media.Animation.HandoffBehavior> используется, <xref:System.Windows.Media.Animation.FillBehavior> первой анимации не имеет значения.  
+ **Но это не происходит.** Прямоугольник не прыгает обратно; он продолжает перемещаться вправо. Это происходит потому, что вторая анимация использует текущее значение первой анимации в качестве своего начального значения и анимируется от этого значения до 500. Когда вторая анимация заменяет первый, так как <xref:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace><xref:System.Windows.Media.Animation.HandoffBehavior> используется, <xref:System.Windows.Media.Animation.FillBehavior> первой анимации не имеет значения.  
   
 #### <a name="fillbehavior-and-the-completed-event"></a>FillBehavior и завершенное событие  
- В следующем примере показывается другой сценарий, в котором <xref:System.Windows.Media.Animation.FillBehavior.Stop> <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> не дает эффекта. Опять же, в примере используется раскадровка для анимации <xref:System.Windows.Media.TranslateTransform.X%2A> свойство <xref:System.Windows.Media.TranslateTransform> от 0 до 350. Тем не менее, это время в примере регистрируется для <xref:System.Windows.Media.Animation.Timeline.Completed> событий.  
+ В следующем примере показывается другой сценарий, в котором <xref:System.Windows.Media.Animation.FillBehavior.Stop><xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> не дает эффекта. Опять же, в примере используется раскадровка для анимации <xref:System.Windows.Media.TranslateTransform.X%2A> свойство <xref:System.Windows.Media.TranslateTransform> от 0 до 350. Тем не менее, это время в примере регистрируется для <xref:System.Windows.Media.Animation.Timeline.Completed> событий.  
   
  [!code-xaml[AnimationTipsAndTricksSample_snip#FillBehaviorTipStoryboardCButton](~/samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml#fillbehaviortipstoryboardcbutton)]  
   
@@ -116,7 +116,7 @@ ms.locfileid: "57362439"
  Дополнительные сведения о различных способах анимации свойств см. в разделе [Общие сведения о методах анимации свойств](property-animation-techniques-overview.md).  
   
 ### <a name="using-the-compose-handoffbehavior-consumes-system-resources"></a>Использование составного HandoffBehavior потребляет системные ресурсы  
- При применении <xref:System.Windows.Media.Animation.Storyboard>, <xref:System.Windows.Media.Animation.AnimationTimeline>, или <xref:System.Windows.Media.Animation.AnimationClock> к свойству с помощью <xref:System.Windows.Media.Animation.HandoffBehavior.Compose> <xref:System.Windows.Media.Animation.HandoffBehavior>любые <xref:System.Windows.Media.Animation.Clock> ранее связанную с ним объекты по-прежнему потребляют ресурсы системы; система управления временем не будет Удаляет эти часы автоматически.  
+ При применении <xref:System.Windows.Media.Animation.Storyboard>, <xref:System.Windows.Media.Animation.AnimationTimeline>, или <xref:System.Windows.Media.Animation.AnimationClock> к свойству с помощью <xref:System.Windows.Media.Animation.HandoffBehavior.Compose><xref:System.Windows.Media.Animation.HandoffBehavior>любые <xref:System.Windows.Media.Animation.Clock> ранее связанную с ним объекты по-прежнему потребляют ресурсы системы; система управления временем не удаляет эти часы автоматически.  
   
  Чтобы избежать проблем с производительностью при применении большого количества часов через <xref:System.Windows.Media.Animation.HandoffBehavior.Compose>, следует удалять составные часы из анимируемого свойства после их завершения. Есть несколько способов удаления часов.  
   
@@ -129,4 +129,5 @@ ms.locfileid: "57362439"
  Дополнительные сведения об объектах часов см. в разделе [анимации и общие сведения о характере системы](animation-and-timing-system-overview.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения об эффектах анимации](animation-overview.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - design considerations [WPF]
 - layout pass [WPF]
 ms.assetid: 005f4cda-a849-448b-916b-38d14d9a96fe
-ms.openlocfilehash: e62b439926465aa1a61abd39c7c942acf26732c4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8a76dd5de9f374d77345eeab3d259624546fed7c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367951"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107072"
 ---
 # <a name="optimizing-performance-layout-and-design"></a>Оптимизация производительности: Разметка и разработка
 Разработка приложения [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] может повлиять на его производительность в результате создания ненужных служебных данных при вычислении макета и проверки ссылок на объекты. Конструирование объектов, особенно во время выполнения, может повлиять на характеристики производительности приложения.  
@@ -57,7 +57,7 @@ ms.locfileid: "57367951"
 ### <a name="build-your-tree-top-down"></a>Построение дерева сверху вниз  
  При добавлении или удалении узла из логического дерева свойство аннулирования вызывается на родительском узле и всех дочерних узлах. В результате всегда требуется следовать шаблону структуры сверху вниз, во избежание ненужных аннулирований на узлах, которые уже были проверены. В следующей таблице показаны разница в скорости выполнения между построением дерева сверху вниз или снизу вверх, где в дереве 150 уровней с одним <xref:System.Windows.Controls.TextBlock> и <xref:System.Windows.Controls.DockPanel> на каждом уровне.  
   
-|**Действие**|**Построение дерева (мс)**|**Отображение — включает построение дерева (мс)**|  
+|**Действие**|**Построение дерева (мс)**|**Отрисовки — включает построение дерева (мс)**|  
 |----------------|---------------------------------|-------------------------------------------------|  
 |Снизу вверх|366|454|  
 |Сверху вниз|11|96|  
@@ -70,13 +70,14 @@ ms.locfileid: "57367951"
  Дополнительные сведения о логическом дереве см. в разделе [Деревья в WPF](trees-in-wpf.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Улучшение производительности приложений WPF](optimizing-wpf-application-performance.md)
 - [Планирование производительности приложения](planning-for-application-performance.md)
 - [Использование преимуществ оборудования](optimizing-performance-taking-advantage-of-hardware.md)
 - [Двумерная графика и изображения](optimizing-performance-2d-graphics-and-imaging.md)
 - [Поведение объекта](optimizing-performance-object-behavior.md)
 - [Ресурсы приложений](optimizing-performance-application-resources.md)
-- [Text](optimizing-performance-text.md)
+- [Текста](optimizing-performance-text.md)
 - [Привязка данных](optimizing-performance-data-binding.md)
 - [Дополнительные рекомендации по повышению производительности](optimizing-performance-other-recommendations.md)
 - [Макет](layout.md)

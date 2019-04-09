@@ -1,18 +1,18 @@
 ---
-title: Как выполнить отобразить сформированный код SQL
+title: Практическое руководство. Как отобразить сформированный код SQL
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 626492c0-5ee3-4675-88e8-8c40379510b6
-ms.openlocfilehash: 9c293757b642f0a945097c4ea4299d97cadddbcc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8a69b3ae83d7f701428b3183f2b80e0d44a06537
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725692"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59103627"
 ---
-# <a name="how-to-display-generated-sql"></a>Как выполнить отобразить сформированный код SQL
+# <a name="how-to-display-generated-sql"></a>Практическое руководство. Как отобразить сформированный код SQL
 Для просмотра кода SQL, созданного для запросов, и изменения обработки используется свойство <xref:System.Data.Linq.DataContext.Log%2A>. Такой подход может оказаться полезным для получения основных сведений о функциях [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] и для отладки конкретных проблем.  
   
 ## <a name="example"></a>Пример  
@@ -43,4 +43,5 @@ SEVES
  [!code-vb[DLinqDebuggingSupport#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqDebuggingSupport/vb/Module1.vb#1)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Поддержка отладки](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)

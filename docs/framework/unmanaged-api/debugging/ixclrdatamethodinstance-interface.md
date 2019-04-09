@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 03be79e6300afa6d25a005b0a21b8c2bf15d27be
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: f62cbdc4b3e73f0c27492f7ed20b35378654d399
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202279"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152962"
 ---
 # <a name="ixclrdatamethodinstance-interface"></a>Интерфейс IXCLRDataMethodInstance
 
@@ -30,11 +30,10 @@ ms.locfileid: "57202279"
 
 ## <a name="methods"></a>Методы
 
-| Метод                                                                                                                  | Описание:                                 |
+| Метод                                                                                                                  | Описание                                 |
 | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- |
 | [GetILAddressMap](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethodinstance-getiladdressmap-method.md) | Возвращает IL для сведений о сопоставлении адрес. |
 | [GetRepresentativeEntryAddress](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethodinstance-getrepresentativeentryaddress-method.md) | Получает наиболее характерные адрес точки входа для компиляция в собственном коде все возможные точки входа для метода. |
-
 
 ## <a name="remarks"></a>Примечания
 

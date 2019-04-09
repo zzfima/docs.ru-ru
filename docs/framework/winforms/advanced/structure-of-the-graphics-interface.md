@@ -5,12 +5,12 @@ helpviewer_keywords:
 - GDI+, using managed interface
 - graphics [Windows Forms], class structure
 ms.assetid: 010a1e46-656b-40a1-8d5d-87aa05ee1243
-ms.openlocfilehash: 33be9d4d4e5a1aca933bb84e948b2200cd96b152
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 9dfffe8ea3f76d89823dfe2ef6bd0e4f3accf8f1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708123"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106786"
 ---
 # <a name="structure-of-the-graphics-interface"></a>Структура интерфейса Graphics
 Интерфейс управляемых классов для [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] содержит около 60 классов, 50 перечислений и 8 структур. <xref:System.Drawing.Graphics> Класс является основой [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] функциональные возможности; это класс, который фактически рисует линий, кривых, фигур, изображений и текста.  
@@ -23,6 +23,7 @@ ms.locfileid: "57708123"
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] определяет несколько перечислений, которые являются коллекциями связанных констант. Например <xref:System.Drawing.Drawing2D.LineJoin> перечисление содержит элементы <xref:System.Drawing.Drawing2D.LineJoin.Bevel>, <xref:System.Drawing.Drawing2D.LineJoin.Miter>, и <xref:System.Drawing.Drawing2D.LineJoin.Round>, которые определяют стили, которые могут использоваться для соединения двух строк.  
   
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения о графике](graphics-overview-windows-forms.md)
 - [Управляемый код GDI+](about-gdi-managed-code.md)
 - [Использование управляемых графических классов](using-managed-graphics-classes.md)

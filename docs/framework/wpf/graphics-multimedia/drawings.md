@@ -13,21 +13,22 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 6ab1fe6b-3eed-4432-a248-b487e7234e5b
-ms.openlocfilehash: 32efbd44579622fddba95d162261633a1af6d277
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 975fafebe255d5ff4848fde2c0b0ff08b68d4f7b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364584"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206412"
 ---
 # <a name="drawings"></a>Объекты рисования
 <xref:System.Windows.Media.Drawing> объекты используются для эффективного рисования фигур, изображений и текста. Рисунки, используемые при рисовании с помощью <xref:System.Windows.Media.DrawingBrush> или программирования с помощью <xref:System.Windows.Media.Visual> объектов.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Обзор объектов Drawing](drawing-objects-overview.md)  
-  [Разделы практического руководства](drawings-how-to-topics.md)  
+  [Практические руководства](drawings-how-to-topics.md)  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Media.Drawing>
 - [Двумерная графика и изображения](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [Общие сведения об отрисовке графики в WPF](wpf-graphics-rendering-overview.md)

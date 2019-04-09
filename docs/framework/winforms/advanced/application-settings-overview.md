@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dynamic properties
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
-ms.openlocfilehash: eac8c932e9f661933f943a507485a170dc6b6132
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b603e81a342652a6639f54a78fb998cda5fdc35a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713072"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203630"
 ---
 # <a name="application-settings-overview"></a>Общие сведения о параметрах приложений
 В этом разделе описывается создание и хранение параметров приложения и пользователей.  
@@ -48,13 +48,14 @@ ms.locfileid: "57713072"
  Вы можете также использовать класс <xref:System.Windows.Forms.Binding> для программной привязки параметров к свойствам в формах и элементах управления.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.SettingsProvider>
 - <xref:System.Configuration.LocalFileSettingsProvider>
 - <xref:System.Configuration.IPersistComponentSettings>
 - [Практическое руководство. Проверка параметров приложения](how-to-validate-application-settings.md)
 - [Управление параметрами приложения (.NET)](/visualstudio/ide/managing-application-settings-dotnet)
-- [Практическое руководство. Считывание параметров во время выполнения с помощьюC#](how-to-read-settings-at-run-time-with-csharp.md)
+- [Как выполнить: Считывание параметров во время выполнения с помощью C#](how-to-read-settings-at-run-time-with-csharp.md)
 - [Использование параметров приложения и параметров пользователя](using-application-settings-and-user-settings.md)
 - [Архитектура параметров приложения](application-settings-architecture.md)
-- [Application Settings for Custom Controls](application-settings-for-custom-controls.md)
+- [Параметры приложения для пользовательских элементов управления](application-settings-for-custom-controls.md)

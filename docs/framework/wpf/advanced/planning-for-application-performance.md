@@ -5,12 +5,12 @@ helpviewer_keywords:
 - applications [WPF], optimizing
 - WPF application [WPF], optimizing
 ms.assetid: c91bd0c5-a193-46ff-9da1-eb7a3a76a3b3
-ms.openlocfilehash: fda5330ff75c1744f3ed9d4394e51b5efb737071
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 70dda68112d47d3e5a0609a5df7696920477c698
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374431"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210208"
 ---
 # <a name="planning-for-application-performance"></a>Планирование производительности приложения
 Успех достижения целей производительности зависит от того, насколько хорошо при разработке стратегии производительности. Планирование является первым этапом разработки любого продукта. В этом разделе описывается несколько очень простых правил для разработки стратегии высокой производительности.  
@@ -33,12 +33,13 @@ ms.locfileid: "57374431"
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] элементы управления являются по своей природе расширяемой, позволяя выполнять настройки их внешнего вида в широком диапазоне без изменения поведения элементов управления. Используя преимущества стилей, шаблонов данных и шаблонов элементов управления, можно создавать и последовательно развивать настраиваемый [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] , адаптирующийся к требований к производительности.  
   
 ## <a name="see-also"></a>См. также
+
 - [Улучшение производительности приложений WPF](optimizing-wpf-application-performance.md)
 - [Использование преимуществ оборудования](optimizing-performance-taking-advantage-of-hardware.md)
 - [Разметка и разработка](optimizing-performance-layout-and-design.md)
 - [Двумерная графика и изображения](optimizing-performance-2d-graphics-and-imaging.md)
 - [Поведение объекта](optimizing-performance-object-behavior.md)
 - [Ресурсы приложений](optimizing-performance-application-resources.md)
-- [Text](optimizing-performance-text.md)
+- [Текста](optimizing-performance-text.md)
 - [Привязка данных](optimizing-performance-data-binding.md)
 - [Дополнительные рекомендации по повышению производительности](optimizing-performance-other-recommendations.md)

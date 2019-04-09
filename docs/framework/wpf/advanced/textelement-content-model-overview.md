@@ -9,17 +9,16 @@ helpviewer_keywords:
 - TextElement content model [WPF]
 - flow content elements [WPF], TextElement content model
 ms.assetid: d0a7791c-b090-438c-812f-b9d009d83ee9
-ms.openlocfilehash: 935d86195acaca94b0115a8cdcf7289c23613f7f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: ecb9441bc63eae41cfbbadf3bf81b0e5392bd0cb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369764"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125124"
 ---
 # <a name="textelement-content-model-overview"></a>Общие сведения о модели содержимого TextElement
 В этом обзоре модель содержимого описываются поддерживаемом содержимом для <xref:System.Windows.Documents.TextElement>. <xref:System.Windows.Documents.Paragraph> Класс — это разновидность <xref:System.Windows.Documents.TextElement>. Модель содержимого описывает объекты/элементы, которые могут содержаться в других объектах. В этом обзоре представлена модель содержимого для объектов, производных от <xref:System.Windows.Documents.TextElement>. Дополнительные сведения см. в разделе [Общие сведения о документе нефиксированного](flow-document-overview.md).  
-  
-  
+
 <a name="text_element_classes"></a>   
 ## <a name="content-model-diagram"></a>Схема модели содержимого  
  На следующей схеме представлена модель содержимого для классов, производных от <xref:System.Windows.Documents.TextElement> а также других отличных `TextElement` классов, соответствующих этой модели.  
@@ -58,9 +57,9 @@ ms.locfileid: "57369764"
 ## <a name="working-with-textelement-content-programmatically"></a>Работа с содержимым TextElement с помощью программных средств  
  Содержание <xref:System.Windows.Documents.TextElement> состоит, коллекций и поэтому программное управление содержимое <xref:System.Windows.Documents.TextElement> объектов выполняется с использованием этих коллекций. Существуют три различные коллекции, используемые <xref:System.Windows.Documents.TextElement> -производные классы:  
   
--   <xref:System.Windows.Documents.InlineCollection>: Представляет коллекцию элементов <xref:System.Windows.Documents.Inline>. <xref:System.Windows.Documents.InlineCollection> определяет допустимое дочернее содержимое элементов <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Span> и <xref:System.Windows.Controls.TextBlock>.  
+-   <xref:System.Windows.Documents.InlineCollection>: Представляет коллекцию элементов <xref:System.Windows.Documents.Inline>. <xref:System.Windows.Documents.InlineCollection> Определяет допустимое дочернее содержимое элементов <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Span>, и <xref:System.Windows.Controls.TextBlock> элементов.  
   
--   <xref:System.Windows.Documents.BlockCollection>: Представляет коллекцию элементов <xref:System.Windows.Documents.Block>. <xref:System.Windows.Documents.BlockCollection> определяет допустимое дочернее содержимое элементов <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.ListItem>, <xref:System.Windows.Documents.TableCell>, <xref:System.Windows.Documents.Floater> и <xref:System.Windows.Documents.Figure>.  
+-   <xref:System.Windows.Documents.BlockCollection>: Представляет коллекцию элементов <xref:System.Windows.Documents.Block>. <xref:System.Windows.Documents.BlockCollection> Определяет допустимое дочернее содержимое элементов <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.ListItem>, <xref:System.Windows.Documents.TableCell>, <xref:System.Windows.Documents.Floater>, и <xref:System.Windows.Documents.Figure> элементов.  
   
 -   <xref:System.Windows.Documents.ListItemCollection>: Элемент содержимого потока, который представляет определенный элемент содержимого в виде упорядоченного или неупорядоченного <xref:System.Windows.Documents.List>.  
   
@@ -102,6 +101,7 @@ ms.locfileid: "57369764"
  См. в разделе [модель содержимого WPF](../controls/wpf-content-model.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Управление FlowDocument с помощью свойства Blocks](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)
 - [Управление элементами потокового содержимого с помощью свойства Blocks](how-to-manipulate-flow-content-elements-through-the-blocks-property.md)
 - [Управление FlowDocument с помощью свойства Blocks](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-ms.openlocfilehash: bbd70631a365c8687ad9b7ed89639e9041e4366e
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
-ms.translationtype: MT
+ms.openlocfilehash: 9930b0081ef67ed006e399e3e5b44e88a47933c1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57845670"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147554"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>Включение нескольких активных результирующих наборов
 Режим MARS - это новая возможность, которая в SQL Server используется для выполнения нескольких пакетов по одному соединению. Если для работы с SQL Server включен режим MARS, каждый используемый объект команды добавляет сеанс к соединению.  
@@ -52,7 +52,7 @@ string connectionString = "Data Source=MSSQL1;" +
 ```  
   
 ## <a name="special-considerations-when-using-mars"></a>Особые рассуждения об использовании режима MARS  
- В общем случае необходимости изменять существующие приложения для использования соединений с режимом MARS быть не должно. Однако если требуется использовать функцию режима MARS в приложениях, следует ознакомиться со следующими рассуждениями и понять их.  
+ В общем случае необходимости изменять существующие приложения для использования соединений с режимом MARS быть не должно. Однако если требуется использовать возможность режима MARS в приложениях, следует ознакомиться со следующими рассуждениями и понять их.  
   
 ### <a name="statement-interleaving"></a>Чередование инструкций  
  На сервере операции режима MARS выполняются синхронно. Разрешается чередование инструкций SELECT и BULK INSERT. Однако инструкции на языке DML и языке DDL выполняются атомарным образом. Попытка выполнения любых инструкций во время выполнения атомарного пакета блокируется. Параллельное выполнение на сервере не является функцией режима MARS.  
@@ -112,5 +112,6 @@ string connectionString = "Data Source=MSSQL1;" +
  Приложение может проверить, поддерживается ли режим MARS, считав значение `SqlConnection.ServerVersion`. Основным номером должно быть 9 для SQL Server 2005 и 10 для SQL Server 2008.  
   
 ## <a name="see-also"></a>См. также
+
 - [Несколько активных результирующих наборов (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

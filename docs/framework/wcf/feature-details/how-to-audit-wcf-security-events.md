@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Аудит событий безопасности Windows Communication Foundation
+title: Практическое руководство. Аудит событий безопасности Windows Communication Foundation
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], auditing events
 ms.assetid: e71e9587-3336-46a2-9a9e-d72a1743ecec
-ms.openlocfilehash: f3d4ed8ea9a3c0f45185cd0f631cd983b0e364c5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 0dd025b8b7adc97420699eb2f5099ab1ee75b820
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566831"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125766"
 ---
-# <a name="how-to-audit-windows-communication-foundation-security-events"></a>Как выполнить Аудит событий безопасности Windows Communication Foundation
+# <a name="how-to-audit-windows-communication-foundation-security-events"></a>Практическое руководство. Аудит событий безопасности Windows Communication Foundation
 Windows Communication Foundation (WCF) позволяет регистрировать события безопасности в журнале событий Windows, который можно просмотреть с помощью средства просмотра событий Windows. В этом разделе описано, как настроить приложение, чтобы события безопасности регистрировались в журнале. Дополнительные сведения об аудите WCF см. в разделе [аудит](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
 ### <a name="to-audit-security-events-in-code"></a>Аудит событий безопасности в коде  
@@ -88,6 +88,7 @@ Windows Communication Foundation (WCF) позволяет регистриров
  Если <xref:System.ServiceModel.AuditLogLocation> свойству <xref:System.ServiceModel.AuditLogLocation.Security> и **аудит доступа к объектам** не задано в **Локальная политика безопасности**, события аудита не записываются в журнал безопасности. Обратите внимание, что ошибка не возвращается, а события аудита не регистрируются в журнале безопасности.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.AuditLogLocation%2A>
 - <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>
 - <xref:System.ServiceModel.AuditLogLocation>

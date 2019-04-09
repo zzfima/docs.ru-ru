@@ -2,12 +2,12 @@
 title: Практическое руководство. Как разместить службу рабочего процесса с помощью Windows Server App Fabric
 ms.date: 03/30/2017
 ms.assetid: 83b62cce-5fc2-4c6d-b27c-5742ba3bac73
-ms.openlocfilehash: 96842f103618b9c83f74c8ad0b758f7a425d8939
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
-ms.translationtype: MT
+ms.openlocfilehash: d762863b70191662f4eb145388a48484c944e1e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055148"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202265"
 ---
 # <a name="how-to-host-a-workflow-service-with-windows-server-app-fabric"></a>Практическое руководство. Как разместить службу рабочего процесса с помощью Windows Server App Fabric
 Размещение служб рабочих процессов в фабрике приложений аналогично их размещению в виртуальном каталоге служб IIS/WAS. Разница состоит лишь в предоставлении фабрикой приложений средств для развертывания, наблюдения и управления службами рабочих процессов. В этом разделе используется служба рабочего процесса, созданная в [создания длительные службы рабочего процесса](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md). Указанный раздел содержит пошаговые инструкции по созданию службы рабочих процессов. В этом разделе объясняется, как разместить службу рабочих процессов с помощью фабрики приложений. Дополнительные сведения о Windows Server App Fabric, см. в разделе [Windows Server App Fabric документации](https://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409). Перед выполнением описанных далее шагов убедитесь, что фабрика приложений Windows Server уже установлена.  Для этого откройте диспетчер служб IIS (inetmgr.exe), щелкните имя сервера в **подключений** просмотра щелкните узлы и нажмите кнопку **веб-сайт по умолчанию**. В правой части экрана вы увидите раздел **App Fabric**. Если вы не видите этот раздел (он находится на верхней правой панели), значит фабрика приложений не установлена. Дополнительные сведения об установке Windows Server App Fabric см. в разделе [Установка Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=193136).  
@@ -91,6 +91,7 @@ ms.locfileid: "59055148"
      Дополнительные сведения о Windows Server App Fabric возможности и способы их использования см. в разделе [функции размещения Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=193143&clcid=0x409)  
   
 ## <a name="see-also"></a>См. также
+
 - [Создание службы долго выполняющегося рабочего процесса](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)
 - [Возможности размещения Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=193143)
 - [Установка Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=193136)

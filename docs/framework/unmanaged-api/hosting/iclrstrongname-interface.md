@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3254b449c06ad54bca438905ec1c413338f87e69
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: abe967195694dd61b4af18fb4eebbc3caad2ef4f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737011"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59205866"
 ---
 # <a name="iclrstrongname-interface"></a>Интерфейс ICLRStrongName
 Предоставляет базовые глобальные статические функции для подписи сборок со строгими именами. Все `ICLRStrongName` методы возвращают стандартный COM HRESULT.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание:|  
+|Метод|Описание|  
 |------------|-----------------|  
 |[Метод GetHashFromAssemblyFile](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md)|Получает хэш указанного файла сборки с помощью указанного хэш-алгоритма.|  
 |[Метод GetHashFromAssemblyFileW](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md)|Получает хэш файла сборки, указанного строкой Юникода, с помощью указанного хэш-алгоритма.|  
@@ -69,5 +69,6 @@ ms.locfileid: "54737011"
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейсы размещения](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
 - [Размещение](../../../../docs/framework/unmanaged-api/hosting/index.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: 92c86980f3276054dbcd41c1cd796e2bc2c0df23
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 144d2b6732ea319ba920317601eff2ebd7b58322
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261366"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132578"
 ---
 # <a name="configuring-services-using-configuration-files"></a>Настройка служб с использованием файлов конфигурации
 Настройка службы Windows Communication Foundation (WCF) с помощью файла конфигурации обеспечивает гибкость предоставления конечной точки и данные поведение службы точке развертывания, а не во время разработки. В этой теме представлено описание основных доступных методов.  
@@ -91,7 +91,7 @@ ms.locfileid: "56261366"
   
 -   `contract`. Задает интерфейс, определяющий контракт. Это интерфейс, реализованный в типе CLR, который задан атрибутом `name` элемента `service` .  
   
--   [\<Конечная точка >](../configure-apps/file-schema/wcf/endpoint-element.md)  
+-   [\<endpoint>](../configure-apps/file-schema/wcf/endpoint-element.md)  
   
 ### <a name="the-bindings-element"></a>\<Привязки > элемент  
  Элемент `bindings` содержит спецификации для всех привязок, которые могут использоваться любой конечной точкой, заданной в любой службе.  
@@ -111,7 +111,7 @@ ms.locfileid: "56261366"
  [\<варианты поведения >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
   
 ### <a name="the-behavior-element"></a>\<Поведение > элемент  
- Каждый элемент `behavior` определяется атрибутом `name` и обеспечивает либо предоставленное системой поведение (например <`throttling`>), либо пользовательское поведение. Если имя не задано, то элемент behavior будет соответствовать поведению по умолчанию для службы или конечной точки.  
+ Каждый `behavior` элемент определяется `name` атрибут и предоставляет предоставленное системой поведение, например <`throttling`>, либо пользовательское поведение. Если имя не задано, то элемент behavior будет соответствовать поведению по умолчанию для службы или конечной точки.  
   
  [\<поведение >](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)  
   
@@ -263,6 +263,7 @@ ms.locfileid: "56261366"
  Если коллекция дочерних поведений содержит поведение, которое уже определено в коллекции родительских поведений, то дочернее поведение переопределяет родительское. Таким образом, если коллекция родительских поведений бы `<serviceMetadata httpGetEnabled="False" />` , а коллекция дочерних поведений `<serviceMetadata httpGetEnabled="True" />`, то дочернее поведение переопределит в коллекции поведений родительское поведение и параметр httpGetEnabled примет значение «true».  
   
 ## <a name="see-also"></a>См. также
+
 - [Упрощенная конфигурация](../../../docs/framework/wcf/simplified-configuration.md)
 - [Настройка служб WCF](configuring-services.md)
 - [\<службы >](../../../docs/framework/configure-apps/file-schema/wcf/service.md)

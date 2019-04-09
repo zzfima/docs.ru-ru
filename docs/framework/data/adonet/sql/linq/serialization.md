@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a15ae411-8dc2-4ca3-84d2-01c9d5f1972a
-ms.openlocfilehash: 56ebe888b816972f8d72873e4fca9f5204e6c772
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: b6778522b5757c0ece899f7465d3ab500038fc49
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58408929"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202564"
 ---
 # <a name="serialization"></a>Сериализация
 В этом разделе описывается [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] возможности сериализации. В приведенных ниже подразделах приводятся сведения о добавлении сериализации в процессе создания кода во время разработки, а также о поведении классов [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] при сериализации во время выполнения.  
@@ -73,6 +73,7 @@ ms.locfileid: "58408929"
  [!code-vb[DLinqSerialization#7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/northwind-ser.vb#7)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Основные сведения](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
 - [SqlMetal.exe (средство создания кода)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)
-- [Практическое руководство. Обеспечение сериализуемости сущностей](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)
+- [Практическое руководство. Как обеспечить сериализации сущностей](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)

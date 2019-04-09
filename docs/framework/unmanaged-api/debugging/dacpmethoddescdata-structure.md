@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: e9037fc035693e079e2471ad37263108656b8c01
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 567dc3942f79b6bfd29338b9103083aa64e66451
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828640"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203201"
 ---
 # <a name="dacpmethoddescdata-structure"></a>Структура DacpMethodDescData
 
@@ -54,7 +54,7 @@ struct DacpMethodDescData
 
 ## <a name="members"></a>Участники
 
-| Член                       | Описание:                                                                                     |
+| Член                       | Описание                                                                                     |
 | ---------------------------- | ----------------------------------------------------------------------------------------------- |
 | `bHasNativeCode`             | Указывает, имеет ли среда выполнения машинного кода, доступных для данного экземпляра метода. |
 | `bIsDynamic`                 | Указывает, если метод создается динамически во время создания облегченного кода.           |
@@ -73,7 +73,6 @@ struct DacpMethodDescData
 | `rejitDataRequested`         | Rejit сведения для запрошенного собственного адреса.                                             |
 | `cJittedRejitVersions`       | Количество раз, когда метод был rejitted через инструментарий.                           |
 
-
 ## <a name="remarks"></a>Примечания
 
 Эта структура находится внутри среды выполнения и не предоставляется через любой заголовков или библиотек. Чтобы использовать его, определите структуру, как указано выше.
@@ -85,6 +84,7 @@ struct DacpMethodDescData
 **Версии платформы .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>См. также
+
 - [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
 - [Структуры отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
 - [Общие типы данных](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)

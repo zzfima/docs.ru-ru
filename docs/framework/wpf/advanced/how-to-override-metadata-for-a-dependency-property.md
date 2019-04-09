@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dependency properties [WPF], overriding metadata for
 - overriding metadata for dependency properties [WPF]
 ms.assetid: f90f026e-60d8-428a-933d-edf0dba4441f
-ms.openlocfilehash: 5d2d692984bef34569b2c4bb80c3fb072e4c3f79
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7f20708722660aa4f86462efd50939935f840613
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365884"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209441"
 ---
 # <a name="how-to-override-metadata-for-a-dependency-property"></a>Практическое руководство. Переопределение метаданных для свойств зависимостей
 В этом примере показано, как переопределить метаданные свойства зависимостей по умолчанию, которое поступает из наследуемого класса, путем вызова <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> с указанием конкретного типа метаданных.  
@@ -32,7 +32,8 @@ ms.locfileid: "57365884"
 [!code-vb[PropertySystemEsoterics#MyAdvancedStateControl](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/sdksamplelibrary/class1.vb#myadvancedstatecontrol)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.DependencyProperty>
 - [Общие сведения о свойствах зависимости](dependency-properties-overview.md)
 - [Пользовательские свойства зависимостей](custom-dependency-properties.md)
-- [Разделы практического руководства](properties-how-to-topics.md)
+- [Практические руководства](properties-how-to-topics.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - documents [WPF], manipulating row groups through RowGroups property
 - properties [WPF], RowGroups [WPF], manipulating row groups
 ms.assetid: ea61440f-08ae-44ed-b314-5716aaaae3ed
-ms.openlocfilehash: e456aab0d36ae611f3bfe4974aa3603efff27379
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: edc5fbe552a04387fc3f152cb53444605d142624
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351974"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209974"
 ---
 # <a name="how-to-manipulate-a-tables-row-groups-through-the-rowgroups-property"></a>Практическое руководство. Управление группами строк таблицы пользователя с помощью свойства RowGroups
 В этом примере показаны некоторые из наиболее распространенных операций, которые могут выполняться над группами строк таблицы пользователя с помощью <xref:System.Windows.Documents.Table.RowGroups%2A> свойство.  
@@ -84,6 +84,7 @@ ms.locfileid: "57351974"
  [!code-vb[TableSnippets2#_Table_RowGroups_Clear](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_clear)]  
   
 ## <a name="see-also"></a>См. также
-- [Практическое руководство. Управление элементами потокового содержимого через свойство Inlines](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
+
+- [Практическое руководство. Управление элементами потокового содержимого с помощью свойства Inlines](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
 - [Управление FlowDocument с помощью свойства Blocks](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)
 - [Управление столбцами таблицы с помощью свойства Columns](how-to-manipulate-table-columns-through-the-columns-property.md)

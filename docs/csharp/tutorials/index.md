@@ -2,12 +2,12 @@
 title: Учебники по C#
 description: Эти руководства расскажут о возможностях языка C# и научат вас создавать на нем программы.
 ms.date: 10/25/2018
-ms.openlocfilehash: 54c05f2fcc80d21b10cbb6a2baee37014aa62d07
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: a82bd8e5ff28e0e006025de96f7da66505c0aff7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920491"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214446"
 ---
 # <a name="c-tutorials"></a>Учебники по C#
 
@@ -61,5 +61,3 @@ ms.locfileid: "58920491"
 * [Working with LINQ](working-with-linq.md) (Работа с LINQ). Демонстрирует множество функций LINQ и элементы языка, которые их поддерживают.
 * [Использование атрибутов](attributes.md). Описывает создание и использование атрибутов в C#.
 * В руководстве [Интерполяция строк](exploration/interpolated-strings.yml) демонстрируется, как вставлять значения в строки. Вы узнаете, как создать интерполированную строку с внедренными выражениями C# и как управлять текстовым представлением результатов выражений в итоговой строке. Это руководство можно изучить, [используя локальный компьютер](exploration/interpolated-strings-local.md).
-
-

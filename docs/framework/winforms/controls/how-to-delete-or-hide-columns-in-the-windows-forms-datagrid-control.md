@@ -12,12 +12,12 @@ helpviewer_keywords:
 - columns [Windows Forms], deleting in data grids
 - DataGrid control [Windows Forms], hiding columns
 ms.assetid: bcd0dd96-6687-4c48-b0e1-d5287b93ac91
-ms.openlocfilehash: 42a697992d4c6c75fe5958a7a17d6df8a7b4f6e4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: e6e8a4a5908d890d34ab6de952917cd97be2b433
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724531"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120150"
 ---
 # <a name="how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control"></a>Практическое руководство. Удаление или скрытие столбцов элемента управления DataGrid в Windows Forms
 > [!NOTE]
@@ -125,5 +125,6 @@ ms.locfileid: "57724531"
     ```  
   
 ## <a name="see-also"></a>См. также
-- [Практическое руководство. Изменение данных, отображаемых в элементе управления DataGrid Windows Forms во время выполнения](change-displayed-data-at-run-time-wf-datagrid-control.md)
-- [Практическое руководство. Добавление таблиц и столбцов элемента управления DataGrid в Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+
+- [Практическое руководство. Изменение данных, отображаемых во время выполнения, в элементе управления DataGrid в Windows Forms](change-displayed-data-at-run-time-wf-datagrid-control.md)
+- [Практическое руководство. Добавление таблиц и столбцов в элемент управления DataGrid в Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)

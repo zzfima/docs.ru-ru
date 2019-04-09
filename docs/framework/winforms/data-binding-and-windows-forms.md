@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: 419aac5e-819b-4aad-88b0-73a2f8c0bd27
-ms.openlocfilehash: 3c96275f3e5db24446b030ec007f23e9035242c8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3d420e5cb4d9e7f2ad6f8136b8dd33f5901326d2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703690"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095494"
 ---
 # <a name="data-binding-and-windows-forms"></a>Связывание данных и Windows Forms
 В Windows Forms можно выполнить привязку не только к традиционным источникам данных, но и к практически к любой структуре, содержащий данные. Можно выполнить привязку к массиву значений, который рассчитывается во время выполнения, считывается из файла или является производным от значений других элементов управления.  
@@ -54,6 +54,7 @@ ms.locfileid: "57703690"
 |Таблица подстановки|Другим распространенным сценарием представления данных и работы с ними является использование таблицы подстановок. Являясь частью крупной структуры представления данных, элемент управления <xref:System.Windows.Forms.ComboBox> применяется для отображения данных и управления ими. Смысл заключается в том, что данные, отображаемые в элементе управления <xref:System.Windows.Forms.ComboBox>, отличаются от данных, которые записываются в базу данных. Например, если есть элемент управления <xref:System.Windows.Forms.ComboBox>, отображающий позиции товара в продуктовом магазине, возможно, вы захотите увидеть названия товаров (хлеб, молоко, яйца). Однако чтобы упростить получение сведений из базы данных и нормализовать базу данных, вы, вероятно, сохраните данные по конкретным позициям для определенного заказа виде кодов (501, 603 и т. д.). Таким образом, между понятным именем товара из продуктового магазина в элементе управления <xref:System.Windows.Forms.ComboBox> в форме и соответствующим кодом товара, указанным в заказе, присутствует неявная связь. В этом заключается сущность таблицы подстановок. Дополнительные сведения см. в разделе [Как Создание таблицы подстановок с помощью компонента BindingSource в Windows Forms](./controls/how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component.md).|  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.Binding>
 - [Привязка данных Windows Forms](windows-forms-data-binding.md)
 - [Практическое руководство. Привязка элемента управления DataGrid в Windows Forms к источнику данных](./controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)

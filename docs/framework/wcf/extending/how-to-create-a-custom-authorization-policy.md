@@ -1,18 +1,18 @@
 ---
-title: Как выполнить Создание пользовательской политики авторизации
+title: Практическое руководство. Создание пользовательской политики авторизации
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 05b0549b-882d-4660-b6f0-5678543e5475
-ms.openlocfilehash: ba5d8d02d0c8d5993e1b072298aadcaa5fe0fe35
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 78cc77a5491e50d718a53efff1c6f99acf23cf27
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705908"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115392"
 ---
-# <a name="how-to-create-a-custom-authorization-policy"></a>Как выполнить Создание пользовательской политики авторизации
+# <a name="how-to-create-a-custom-authorization-policy"></a>Практическое руководство. Создание пользовательской политики авторизации
 Инфраструктура модели удостоверения в Windows Communication Foundation (WCF) поддерживает модель авторизации на основе утверждений. Утверждения извлекаются из маркеров, дополнительно обрабатываемых пользовательской политикой авторизации, и затем помещаются в контекст <xref:System.IdentityModel.Policy.AuthorizationContext>, который позже может проверяться для принятия решений по авторизации. Пользовательская политика может использоваться для преобразования утверждений из входящих маркеров в утверждения, ожидаемые приложением. В этом случае на уровне приложения можно изолируется от сведений различных утверждений, обслуживаемых токенов различных типов, которые поддерживает WCF. В данном разделе показываются реализация пользовательской политики авторизации и добавление этой политики в коллекцию политик, используемых службой.  
   
 ### <a name="to-implement-a-custom-authorization-policy"></a>Реализация пользовательской политики авторизации  
@@ -76,6 +76,7 @@ ms.locfileid: "54705908"
  [!code-vb[c_CustomAuthPol#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthpol/vb/source.vb#5)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
 - [Практическое руководство. Сравнение утверждений](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
 - [Практическое руководство. Создание пользовательского диспетчера авторизации для службы](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)

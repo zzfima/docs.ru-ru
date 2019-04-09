@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Отображение сбоку вкладок с помощью TabControl
+title: Практическое руководство. Отображение расположенных сбоку вкладок с помощью TabControl
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - tabs [Windows Forms], displaying side-aligned tabs
 - TabControl control [Windows Forms], displaying side-aligned tabs
 ms.assetid: 110d5abd-3ae3-4ded-95bf-778aaac798a0
-ms.openlocfilehash: 8715cb1a1f0d5795afc4003afcecdb3fb89912c3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: ce0c7d48f053094d0026348fea8221ea80ccca59
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705194"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142900"
 ---
-# <a name="how-to-display-side-aligned-tabs-with-tabcontrol"></a>Практическое руководство. Отображение сбоку вкладок с помощью TabControl
+# <a name="how-to-display-side-aligned-tabs-with-tabcontrol"></a>Практическое руководство. Отображение расположенных сбоку вкладок с помощью TabControl
 Свойство <xref:System.Windows.Forms.TabControl.Alignment%2A> элемента <xref:System.Windows.Forms.TabControl> поддерживает вертикальное отображение вкладок (вдоль левой или правой границы элемента управления), в отличие от горизонтального отображения (поперек верхней или нижней области элемента управления). Вертикальное отображение по умолчанию бывает неудобным для пользователя, так как свойство <xref:System.Windows.Forms.TabPage.Text%2A> объекта <xref:System.Windows.Forms.TabPage> не отображается на вкладке при включении стилей оформления. Также не предусмотрена возможность прямого управления направлением текста на вкладке. Для улучшения взаимодействия с пользователем можно использовать рисование владельцем на <xref:System.Windows.Forms.TabControl>.  
   
- Ниже описан порядок визуализации вкладок с выравниванием по правому краю, в которых текст располагается слева направо, с помощью функции "рисование владельцем".  
+ Ниже описан порядок визуализации вкладок с выравниванием по правому краю, в которых текст располагается слева направо, с помощью возможности "рисование владельцем".  
   
 ### <a name="to-display-right-aligned-tabs"></a>Отображение вкладок с выравниванием по правому краю  
   
 1.  Добавьте элемент <xref:System.Windows.Forms.TabControl> в форму.  
   
-2.  Задайте свойству <xref:System.Windows.Forms.TabControl.Alignment%2A> значение <xref:System.Windows.Forms.TabAlignment.Right>.  
+2.  Задайте для свойства <xref:System.Windows.Forms.TabControl.Alignment%2A> значение <xref:System.Windows.Forms.TabAlignment.Right>.  
   
 3.  Присвойте свойству <xref:System.Windows.Forms.TabControl.SizeMode%2A> значение <xref:System.Windows.Forms.TabSizeMode.Fixed> так, чтобы все вкладки имели одинаковую ширину.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "57705194"
   
      Для получения оптимальных результатов в примере кода ниже свойство <xref:System.Drawing.Size.Width%2A> имеет значение 25, а <xref:System.Drawing.Size.Height%2A> — значение 100.  
   
-5.  Задайте свойству <xref:System.Windows.Forms.TabControl.DrawMode%2A> значение <xref:System.Windows.Forms.TabDrawMode.OwnerDrawFixed>.  
+5.  Задайте для свойства <xref:System.Windows.Forms.TabControl.DrawMode%2A> значение <xref:System.Windows.Forms.TabDrawMode.OwnerDrawFixed>.  
   
 6.  Определите обработчик для события <xref:System.Windows.Forms.TabControl.DrawItem> элемента <xref:System.Windows.Forms.TabControl>, выводящий текст слева направо.  
   
@@ -41,4 +41,5 @@ ms.locfileid: "57705194"
      [!code-vb[TabControl.RightAlignedTabs#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TabControl.RightAlignedTabs/VB/Form1.vb#1)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Элемент управления TabControl](tabcontrol-control-windows-forms.md)

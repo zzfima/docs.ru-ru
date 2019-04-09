@@ -15,12 +15,12 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-ms.openlocfilehash: 145e14f4a6e11209e46e8761f8a0551c1400a605
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b648d62c9128f0864d60ace1ca56700f594b78c5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711308"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124622"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Источники данных, поддерживаемые Windows Forms
 В большинстве случаев привязки данных используется в приложениях для использования данных, хранящихся в базах данных. Привязки данных Windows Forms, предоставляет доступ к данным из баз данных, а также данные в других структурах, таких как массивы и коллекции, до тех пор, пока определенные минимальные требования будут соблюдены.  
@@ -58,6 +58,7 @@ ms.locfileid: "57711308"
 -   <xref:System.Data.DataViewManager>. Объект <xref:System.Data.DataViewManager> — это настраиваемое представление для всего <xref:System.Data.DataSet>, аналогично <xref:System.Data.DataView>, но с отношениями, которые включены. С помощью <xref:System.Data.DataViewManager.DataViewSettings%2A> коллекции, можно задать фильтры по умолчанию и параметры сортировки для всех представлений, <xref:System.Data.DataViewManager> имеет для данной таблицы.  
   
 ## <a name="see-also"></a>См. также
-- [Уведомления об изменениях в привязке данных Windows Forms](change-notification-in-windows-forms-data-binding.md)
-- [Привязка данных и Windows Forms](data-binding-and-windows-forms.md)
+
+- [Получение уведомления об изменении данных, связанных с элементом управления, в Windows Forms](change-notification-in-windows-forms-data-binding.md)
+- [Связывание данных и Windows Forms](data-binding-and-windows-forms.md)
 - [Привязка данных Windows Forms](windows-forms-data-binding.md)

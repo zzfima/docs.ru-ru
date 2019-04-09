@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Доступ к объектной модели управляемого HTML-документ
+title: Практическое руководство. Доступ к управляемой объектной модели HTML-документов
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - HTML DOM [Windows Forms], accessing
 - managed HTML DOM [Windows Forms], accessing
 ms.assetid: 40fa5cd5-1ed8-42f6-a93f-9ac01608bbeb
-ms.openlocfilehash: f2e2593b161a0dc072f0ecaa872bfa9ab83ac24c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 591d1f4d0b1ebe63b06a30cd01e18addc580d393
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715949"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59205021"
 ---
-# <a name="how-to-access-the-managed-html-document-object-model"></a>Практическое руководство. Доступ к объектной модели управляемого HTML-документ
+# <a name="how-to-access-the-managed-html-document-object-model"></a>Практическое руководство. Доступ к управляемой объектной модели HTML-документов
 Получить доступ к управляемой объектной модели HTML-документа (DOM) можно из двух типов приложений.  
   
 -   Приложение Windows Forms (.EXE), в котором размещен управляемый элемент управления <xref:System.Windows.Forms.WebBrowser>. Эти две технологии дополняют друг друга: элемент управления <xref:System.Windows.Forms.WebBrowser> отображает страницу пользователю, а HTML DOM представляет логическую структуру документа.  
@@ -46,4 +46,5 @@ ms.locfileid: "57715949"
 1.  Для получения доступа к управляемому HTML DOM приложение или <xref:System.Windows.Forms.UserControl> потребуют полного доверия. Если приложение Windows Forms развертывается с помощью [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], можно запросить полное доверие, используя повышение уровня разрешения или развертывание доверенных приложений (см. раздел [Защита приложений ClickOnce](/visualstudio/deployment/securing-clickonce-applications)).  
   
 ## <a name="see-also"></a>См. также
+
 - [Использование управляемой объектной модели HTML-документов](using-the-managed-html-document-object-model.md)

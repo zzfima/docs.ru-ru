@@ -5,12 +5,12 @@ helpviewer_keywords:
 - timing behaviors [WPF]
 - behaviors [WPF], timing
 ms.assetid: 5b714d46-bd46-48b8-b467-b4be89ba3091
-ms.openlocfilehash: f7c1aa81a5d3c283fdea06dd812f879f096c2ee2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c3403a8602cc874e993bd649851b77d7bf652cce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355523"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129601"
 ---
 # <a name="timing-behaviors-overview"></a>Общие сведения о характере поведения во времени
 В этом разделе описан характер поведения анимаций и других <xref:System.Windows.Media.Animation.Timeline> объектов.  
@@ -25,7 +25,7 @@ ms.locfileid: "57355523"
   
  Классы, которые унаследованы от класса временной шкалы, предоставляют дополнительные функции, такие как анимация и воспроизведение мультимедиа. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет следующие <xref:System.Windows.Media.Animation.Timeline> типов.  
   
-|Тип временной шкалы|Описание:|  
+|Тип временной шкалы|Описание|  
 |-------------------|-----------------|  
 |<xref:System.Windows.Media.Animation.AnimationTimeline>|Абстрактный базовый класс для <xref:System.Windows.Media.Animation.Timeline> объекты, которые формируют выходные значения для анимации свойств.|  
 |<xref:System.Windows.Media.MediaTimeline>|Формирует выходные данные из файла мультимедиа.|  
@@ -42,7 +42,7 @@ ms.locfileid: "57355523"
 |----------|-----------------|----------------|-|-|-|  
 |Простая длительность|Длительность, необходимая для одной итерации временной шкалы вперед.|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>||||  
 |Одно повторение|Время, необходимое для временной шкалы для воспроизведения вперед, после и, если <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> свойство имеет значение true, обратная однократного воспроизведения.|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>, <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>||||  
-|Период активности|Время, необходимое для временной шкалы для выполнения всех повторений, определяемое его <xref:System.Windows.Media.Animation.RepeatBehavior> свойство.|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>, <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>, <xref:System.Windows.Media.Animation.RepeatBehavior>||||  
+|Период активности|Время, необходимое для временной шкалы для выполнения всех повторений, определяемое его <xref:System.Windows.Media.Animation.RepeatBehavior> свойство.|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>значение <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>значение <xref:System.Windows.Media.Animation.RepeatBehavior>||||  
   
 <a name="duration"></a>   
 ### <a name="the-duration-property"></a>Свойство Duration  
@@ -123,8 +123,9 @@ ms.locfileid: "57355523"
 -   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> — Указывает процент <xref:System.Windows.Media.Animation.Timeline.Duration%2A> временной шкалы, затраченный на замедление. Пример см. в статье [Практическое руководство. Ускорение или замедление анимации](how-to-accelerate-or-decelerate-an-animation.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения об эффектах анимации](animation-overview.md)
 - [Общие сведения об анимации и системе управления временем](animation-and-timing-system-overview.md)
 - [Общие сведения о временных событиях](timing-events-overview.md)
-- [Разделы практического руководства](animation-and-timing-how-to-topics.md)
-- [Пример поведения анимации с учетом времени](https://go.microsoft.com/fwlink/?LinkID=159970)
+- [Практические руководства](animation-and-timing-how-to-topics.md)
+- [Пример поведения анимации времени](https://go.microsoft.com/fwlink/?LinkID=159970)

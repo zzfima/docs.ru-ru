@@ -8,12 +8,12 @@ helpviewer_keywords:
 - invoking print dialogs [WPF]
 - print dialogs [WPF], invoking
 ms.assetid: e3a2c84c-74fe-45a4-8501-5813f9dbfed2
-ms.openlocfilehash: 038e259810111d2d648c72a9f43afabe11a07f29
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 2ced508eb83e2955fdcd1ad87fb6415e2052446f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358435"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206048"
 ---
 # <a name="how-to-invoke-a-print-dialog"></a>Практическое руководство. Вызов диалогового окна печати
 Чтобы обеспечить возможность печати из приложения, вы можете создать и открыть <xref:System.Windows.Controls.PrintDialog> объекта.  
@@ -32,7 +32,8 @@ ms.locfileid: "57358435"
  Строго говоря, можно использовать <xref:System.Windows.Controls.PrintDialog.PrintDocument%2A> метода, не открывая диалоговое окно. В этом смысле элемент управления может использоваться как невидимого компонента печати. Но из соображений производительности было бы лучше использовать <xref:System.Printing.PrintQueue.AddJob%2A> метода или один из многих <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> и <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> методы <xref:System.Windows.Xps.XpsDocumentWriter>. Дополнительные сведения об этом см. в разделе [печатать файлы XPS программным способом](how-to-programmatically-print-xps-files.md) и.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Controls.PrintDialog>
 - [Документы в WPF](documents-in-wpf.md)
 - [Общие сведения о печати](printing-overview.md)
-- [Средство записи документов Microsoft XPS](https://go.microsoft.com/fwlink/?LinkId=147319)
+- [Средство записи XPS-документов (Майкрософт)](https://go.microsoft.com/fwlink/?LinkId=147319)

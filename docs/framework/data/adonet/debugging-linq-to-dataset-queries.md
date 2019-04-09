@@ -2,12 +2,12 @@
 title: Отладка запросов в LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: f4c54015-8ce2-4c5c-8d18-7038144cc66d
-ms.openlocfilehash: 636d42566275f042f82f939e160c7fec5f180e96
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 0e015cc6042a21bf6d35915c3e19bfeb9b0dbb2a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825515"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133338"
 ---
 # <a name="debugging-linq-to-dataset-queries"></a>Отладка запросов в LINQ to DataSet
 
@@ -28,5 +28,6 @@ Visual Studio поддерживает отладку [!INCLUDE[linq_dataset](..
  В Visual Basic в Visual Studio, вы можно изменить и продолжить использовать на не -[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] кода, даже в методе, содержащем [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] запроса. Можно добавить или удалить код перед [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] инструкции, даже если изменения затронут количество строк [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] запроса. Отладки для Visual Basic не[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] код остается прежним, как было до [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] был введен. Невозможно изменить, добавить или удалить [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] запрос, тем не менее, если вы не Остановите отладку, чтобы применить изменения.  
   
 ## <a name="see-also"></a>См. также
+
 - [Отладка управляемого кода](/visualstudio/debugger/debugging-managed-code)
 - [Руководство по программированию](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)

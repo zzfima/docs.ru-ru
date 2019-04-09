@@ -7,19 +7,19 @@ dev_langs:
 helpviewer_keywords:
 - configuration [WCF], interoperable services
 ms.assetid: 91b70a21-8f5c-4679-808c-2ed5fa6b2013
-ms.openlocfilehash: fea0a756a39a3325cc41003a784e0159595ae2fa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b9cacee9a69695b0001b94b74648d5154b8a52b4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664256"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59123920"
 ---
 # <a name="creating-ws-i-basic-profile-11-interoperable-services"></a>Создание служб, поддерживающих взаимодействие с базовым профилем WS-I 1.1
 Для настройки конечной точки службы WCF с [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] клиентами веб-службы:  
   
 -   использовать в качестве типа привязки для конечной точки службы тип <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>;  
   
--   не использовать возможности обратного вызова и сеансового контракта и не управлять поведением транзакций на конечной точке службы.  
+-   не использовать функции обратного вызова и сеансового контракта и не управлять поведением транзакций на конечной точке службы.  
   
  В привязке можно дополнительно включить поддержку протокола HTTPS и проверку подлинности клиента на транспортном уровне.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "54664256"
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание:  
+### <a name="description"></a>Описание  
  В следующем примере кода показано, как добавить конечную точку WCF, которая совместима с [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] клиентами веб-службы в коде и, кроме того, в файле конфигурации.  
   
 ### <a name="code"></a>Код  
@@ -42,4 +42,5 @@ ms.locfileid: "54664256"
  [!code-xml[C_HowTo-WCFServiceAndASMXClient#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/common/app.config#1)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Взаимодействие с веб-службами ASP.NET](../../../docs/framework/wcf/feature-details/interop-with-aspnet-web-services.md)

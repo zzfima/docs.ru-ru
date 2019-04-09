@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 55c545e5-dcd5-4323-a5b9-3825c2157462
-ms.openlocfilehash: 088dc9507f073553f8a857bd11ecd016f0d94244
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a12fa587d5df0ed95dd0f15ccfbe2ef886185b9e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730884"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207484"
 ---
 # <a name="updating-data-in-a-data-source"></a>Обновление данных в источнике данных
 Инструкции SQL, изменяющие данные (например, INSERT, UPDATE, или DELETE), не возвращают строки. Аналогичным образом, многие хранимые процедуры выполняют некоторое действие, но не возвращают строки. Чтобы выполнить команды, которые не возвращают строки, создать **команда** объект с соответствующей командой SQL и **подключения**, включающий любую требуемую **параметры**. Выполните команду с **ExecuteNonQuery** метод **команда** объекта.  
@@ -92,7 +92,8 @@ Int32 rowCount = (Int32) command.Parameters["@RowCount"].Value;
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Использование команд для изменения данных](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)
 - [Обновление источников данных с объектами DataAdapter](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
 - [Команды и параметры](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - menu items [Windows Forms], disabling
 - menus [Windows Forms], disabling items
 ms.assetid: 985e311e-7d67-4205-b5a3-d045b68a4a03
-ms.openlocfilehash: a185fe4421b5b5d7846c7d8cacbfc1cae5f805eb
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 38a366003a856adaf0840d0d8911263bc40dfe23
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704446"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151415"
 ---
 # <a name="how-to-disable-toolstripmenuitems-using-the-designer"></a>Практическое руководство. Отключение объектов ToolStripMenuItem с помощью конструктора
 Можно ограничить или расширить набор команд, которые может выполнять пользователь, включение и отключение элементов меню в ответ на действия пользователя. Пункты меню включены по умолчанию, когда они создаются, но его можно настроить через <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> свойство. Можно изменить значение этого свойства во время разработки в **свойства** окна или программным способом, задав его в код. Дополнительные сведения см. в разделе [Как Отключение объектов ToolStripMenuItem](how-to-disable-toolstripmenuitems.md).  
@@ -28,6 +28,7 @@ ms.locfileid: "57704446"
     >  При отключении элемента меню первый или верхнего уровня в меню отключаются все пункты меню, содержащихся в меню. Аналогичным образом отключение элемента меню, который имеет вложенное отключает элементы вложенного меню. Если все команды конкретного меню недоступны для пользователя, он считается хорошим стилем программирования, как скрыть и отключить всего меню, как это представляет собой интерфейс пользователя. Как следует скрыть и отключить меню, как скрытие не запрещает доступ к командам меню с помощью сочетаний клавиш. Задайте <xref:System.Windows.Forms.ToolStripItem.Visible%2A> свойство пункта меню верхнего уровня к `false` скрыть меню целиком.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
 - [Практическое руководство. Скрытие объектов ToolStripMenuItem](how-to-hide-toolstripmenuitems.md)

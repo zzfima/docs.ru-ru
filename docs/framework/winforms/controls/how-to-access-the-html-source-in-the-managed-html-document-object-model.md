@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Доступ к исходному коду HTML с объектной модели управляемого HTML-документ
+title: Практическое руководство. Доступ к исходному коду HTML с использованием управляемой объектной модели документов HTML
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - managed HTML DOM
 - HTML [Windows Forms], accessing in Windows Forms
 ms.assetid: 53db79fa-8a5e-448e-88c2-f54ace3860b6
-ms.openlocfilehash: b9122e2c5bebdde2e04507973ccfeb924d0ad23e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 98341270ffdb7788aa5c2713682d7d836bde220e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723651"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203266"
 ---
-# <a name="how-to-access-the-html-source-in-the-managed-html-document-object-model"></a>Практическое руководство. Доступ к исходному коду HTML с объектной модели управляемого HTML-документ
+# <a name="how-to-access-the-html-source-in-the-managed-html-document-object-model"></a>Практическое руководство. Доступ к исходному коду HTML с использованием управляемой объектной модели документов HTML
 Свойства <xref:System.Windows.Forms.WebBrowser.DocumentStream%2A> и <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> в элементе управления <xref:System.Windows.Forms.WebBrowser> возвращают HTML текущего документа в том виде, в котором он существовал при первом отображении. Если вы измените страницу, используя вызовы таких методов и свойств, как <xref:System.Windows.Forms.HtmlElement.AppendChild%2A> и <xref:System.Windows.Forms.HtmlElement.InnerHtml%2A>, то при вызове <xref:System.Windows.Forms.WebBrowser.DocumentStream%2A> и <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> эти изменения отображаться на будут. Чтобы получить актуальный HTML-источник DOM, необходимо вызвать свойство <xref:System.Windows.Forms.HtmlElement.OuterHtml%2A> по элементу HTML.  
   
  В следующей процедуре показано, как получить динамический источник и отобразить его в отдельном контекстном меню.  
@@ -46,5 +46,6 @@ ms.locfileid: "57723651"
  Всегда тестируйте значение <xref:System.Windows.Forms.WebBrowser.Document%2A>, прежде чем пытаться его извлечь. Если текущая страница не закончила загружаться, значит, <xref:System.Windows.Forms.WebBrowser.Document%2A> либо один или несколько дочерних объектов еще не инициализированы.  
   
 ## <a name="see-also"></a>См. также
+
 - [Использование управляемой объектной модели HTML-документов](using-the-managed-html-document-object-model.md)
 - [Общие сведения об элементе управления WebBrowser](webbrowser-control-overview.md)

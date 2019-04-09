@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 5f050181-8fdd-4a4e-9d16-f84c22a88a97
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed019dc4f1e6b99c9fa1d001c94af45802336ba6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 06e07c41d398c0792094b4481a38c69b2ba73004
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715520"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208284"
 ---
 # <a name="runtime-exceptions-in-net-native-apps"></a>Исключения среды выполнения в собственных приложениях .NET
 Очень важно выполнять тестирование сборок выпуска приложения универсальной платформы Windows на их целевых платформах, поскольку конфигурации отладки и выпуска совершенно различны. По умолчанию конфигурация отладки использует для компиляции приложения среду выполнения .NET Core, но конфигурация выпуска использует для компиляции приложения в машинный код среду выполнения .NET Native.  
@@ -60,5 +60,6 @@ Additional information: Value does not fall within the expected range.
  Чтобы получить полный стек, запустите отладочную сборку.  
   
 ## <a name="see-also"></a>См. также
-- [Отладка универсальных приложений .NET Native Windows](https://devblogs.microsoft.com/devops/debugging-net-native-windows-universal-apps/)
+
+- [Отладка универсальных приложений Windows .NET в .NET Native](https://devblogs.microsoft.com/devops/debugging-net-native-windows-universal-apps/)
 - [Начало работы](../../../docs/framework/net-native/getting-started-with-net-native.md)

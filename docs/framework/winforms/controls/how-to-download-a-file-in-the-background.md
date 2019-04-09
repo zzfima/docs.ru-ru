@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Загрузите файл в фоновом режиме
+title: Практическое руководство. Фоновая загрузка файла
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 9b7bc5ae-051c-4904-9720-18f6667388bd
-ms.openlocfilehash: 57a904c5d54b0c3f68efaf017a3405786600ace7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: af5a607b4800635d096e83b55a5bd5a912c8538d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715819"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128782"
 ---
-# <a name="how-to-download-a-file-in-the-background"></a>Практическое руководство. Загрузите файл в фоновом режиме
+# <a name="how-to-download-a-file-in-the-background"></a>Практическое руководство. Фоновая загрузка файла
 Загрузка файла — это обычная задача, и было бы разумным запускать эту потенциально длительную операцию в отдельном потоке. С помощью компонента <xref:System.ComponentModel.BackgroundWorker> и небольшого фрагмента кода эта задача легко решается.  
   
 ## <a name="example"></a>Пример  
@@ -43,7 +43,7 @@ ms.locfileid: "57715819"
   
  Если нужно, чтобы приложение лишь реагировало на события и не выполняло никакой работы в основном потоке в ожидании, пока не завершится выполнение фонового потока, просто завершите работу обработчика.  
   
- Если нужно продолжить выполнение работы в основном потоке, воспользуйтесь свойством <xref:System.ComponentModel.BackgroundWorker.IsBusy%2A>, чтобы определить, по-прежнему ли выполняется поток <xref:System.ComponentModel.BackgroundWorker>. В примере индикатор выполнения обновляется в процессе скачивания. Для сохранения отклика пользовательского интерфейса обязательно вызовите метод <xref:System.Windows.Forms.Application.DoEvents%2A?displayProperty=nameWithType>.  
+ Если нужно продолжить выполнение работы в основном потоке, воспользуйтесь свойством <xref:System.ComponentModel.BackgroundWorker.IsBusy%2A>, чтобы определить, по-прежнему ли выполняется поток <xref:System.ComponentModel.BackgroundWorker>. В примере индикатор выполнения обновляется в процессе загрузки. Для сохранения отклика пользовательского интерфейса обязательно вызовите метод <xref:System.Windows.Forms.Application.DoEvents%2A?displayProperty=nameWithType>.  
   
  [!code-csharp[System.ComponentModel.BackgroundWorker.IsBusy#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.IsBusy/CS/Form1.cs#2)]
  [!code-vb[System.ComponentModel.BackgroundWorker.IsBusy#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.IsBusy/VB/Form1.vb#2)]  
@@ -66,6 +66,7 @@ ms.locfileid: "57715819"
  Перед попыткой обращения к свойству <xref:System.ComponentModel.RunWorkerCompletedEventArgs.Result%2A?displayProperty=nameWithType> или любому другому объекту, который может быть изменен обработчиком событий <xref:System.ComponentModel.BackgroundWorker.DoWork>, всегда проверяйте свойство <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A?displayProperty=nameWithType> в обработчике событий <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ComponentModel.BackgroundWorker>
 - [Практическое руководство. Фоновое выполнение операции](how-to-run-an-operation-in-the-background.md)
 - [Практическое руководство. Реализация формы, в которой выполняется фоновая операция](how-to-implement-a-form-that-uses-a-background-operation.md)

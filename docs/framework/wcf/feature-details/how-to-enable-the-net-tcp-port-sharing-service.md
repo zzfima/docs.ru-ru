@@ -1,18 +1,18 @@
 ---
-title: Как выполнить Включение службы совместного использования портов Net.TCP
+title: Практическое руководство. Включение службы совместного использования портов Net.TCP
 ms.date: 03/30/2017
 helpviewer_keywords:
 - port sharing [WCF]
 - activation services [WCF]
 ms.assetid: c9175af4-c27c-4765-bf45-b8f7528a7282
-ms.openlocfilehash: 490c0d8c4c95eeb2b1cd9b43134720c9e44467ac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 77d1d983da87b37c6267cc38a16db446782797f1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619601"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130654"
 ---
-# <a name="how-to-enable-the-nettcp-port-sharing-service"></a>Как выполнить Включение службы совместного использования портов Net.TCP
+# <a name="how-to-enable-the-nettcp-port-sharing-service"></a>Практическое руководство. Включение службы совместного использования портов Net.TCP
 Windows Communication Foundation (WCF) использует службу Windows, именуемую служба совместного использования портов Net.TCP для облегчения совместного использования портов TCP в нескольких процессах. Эта служба устанавливается как часть WCF, но служба не включена по умолчанию в качестве меры безопасности и поэтому необходимо включить вручную перед первым использованием. В настоящем разделе описывается настройка службы совместного использования портов Net.TCP с помощью оснастки консоли управления (MMC).  
   
  После включения службы совместного использования портов Net.TCP и запустить его вручную, см. в разделе [как: Настройка службы WCF на совместное использование портов](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md) сведения о том, как настроить службу для использования этой службы.  
@@ -34,5 +34,6 @@ Windows Communication Foundation (WCF) использует службу Windows
 ## <a name="example"></a>Пример  
   
 ## <a name="see-also"></a>См. также
+
 - [Совместное использование портов Net.TCP](../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)
 - [Настройка службы совместного использования портов Net.TCP](../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)

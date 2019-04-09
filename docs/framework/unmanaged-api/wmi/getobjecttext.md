@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e3a7d606f64dfe1a1abfd3da930fd00957da90a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d34cb399ac0e8780c442eeb2e95cebfd0a22ca02
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583595"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208323"
 ---
-# <a name="getobjecttext-function"></a>GetObjectText function
+# <a name="getobjecttext-function"></a>Функция GetObjectText
 Возвращает текстовое отображение объекта в синтаксисе формата управляемых объектов (MOF).
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -57,7 +57,7 @@ HRESULT GetObjectText (
 
 Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файл заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание:  |
+|Константа  |Значение  |Описание  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Произошел общий сбой. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Параметр не является допустимым. |
@@ -85,4 +85,5 @@ HRESULT GetObjectText (
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>См. также
-- [WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)
+
+- [WMI и счетчики производительности (справочник по неуправляемым API)](index.md)

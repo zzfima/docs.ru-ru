@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data binding [WPF], navigating through objects in data CollectionView
 - navigating through objects in data CollectionView [WPF]
 ms.assetid: fcd37590-bce1-4ac9-8b74-3b96c7458b8a
-ms.openlocfilehash: 9272a2f635a62abdac2746f2c8cce515812706f6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 1507ab4db0c91b670d8bca754f6fd67d887c7041
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355783"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138182"
 ---
 # <a name="how-to-navigate-through-the-objects-in-a-data-collectionview"></a>Практическое руководство. Перемещение по объектам в Data CollectionView
 Представления позволяют просматривать по-разному в зависимости от сортировки, фильтрации и группировки же коллекцию данных. Представления также предоставляют понятием текущего указателя записи и включить перемещение указателя. В этом примере показано, как получить текущий объект, а также перемещение по объектам в коллекции данных с помощью функциональных возможностей, предоставляемых в <xref:System.Windows.Data.CollectionView> класса.  
@@ -30,8 +30,9 @@ ms.locfileid: "57355783"
  [!code-vb[CollectionView#OnButton](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CollectionView/VisualBasic/Page1.xaml.vb#onbutton)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения о привязке данных](data-binding-overview.md)
 - [Сортировка данных в представлении](how-to-sort-data-in-a-view.md)
 - [Фильтрация данных в представлении](how-to-filter-data-in-a-view.md)
 - [Сортировка и группировка данных с помощью представления в XAML](how-to-sort-and-group-data-using-a-view-in-xaml.md)
-- [Разделы практического руководства](data-binding-how-to-topics.md)
+- [Практические руководства](data-binding-how-to-topics.md)

@@ -1,5 +1,5 @@
 ---
-title: Элемент <etwEnable>
+title: <etwEnable> Элемент
 ms.date: 03/30/2017
 helpviewer_keywords:
 - etwEnable element
@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 29dde982-6d8b-4099-8867-ad0d7733f6dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd6d6d9e192fdf43ba9436cda54920bdeba9ab64
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 6ba411114bfb853e06c83adb42713d43f1452d9c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279179"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135074"
 ---
 # <a name="etwenable-element"></a>\<etwEnable > элемент
 Указывает, следует ли включить трассировку событий Windows для событий среды CLR.  
@@ -48,7 +48,7 @@ ms.locfileid: "55279179"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`runtime`|Содержит сведения о привязке сборок и сборке мусора.|  
@@ -71,6 +71,7 @@ ms.locfileid: "55279179"
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Контроль ведения журнала .NET Framework](../../../../../docs/framework/performance/controlling-logging.md)

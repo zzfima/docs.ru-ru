@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Добавление операторов трассировки в код приложения
+title: Практическое руководство. Добавление операторов трассировки в код приложения
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8a347919617e495ace19ca12eebc9b9a77f613ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 1f45259623d4a481e635ac1b54ecb9a17497ab5e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684382"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204098"
 ---
-# <a name="how-to-add-trace-statements-to-application-code"></a>Как выполнить Добавление операторов трассировки в код приложения
+# <a name="how-to-add-trace-statements-to-application-code"></a>Практическое руководство. Добавление операторов трассировки в код приложения
 Методы, наиболее часто используемые для отслеживания приведены методы для записи выходных данных в прослушиватели. **Запись**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert**, и **ошибкой**. Эти методы можно разделить на две категории: **Запись**, **WriteLine**, и **ошибкой** выдают выходные данные безусловно, тогда как **WriteIf**, **WriteLineIf**и  **Assert** тестируют условие Boolean и выполняют или не запись в зависимости от значения условия. **WriteIf** и **WriteLineIf** выдают выходные данные, если условие равно `true`, а **Assert** выдает выходные данные, если условие равно `false`.  
   
  При разработке своей стратегии трассировки и отладки следует подумать о способе представления вывода. При наличии нескольких операторов **Write**, заполненных несвязанными данными, получается сложный для чтения журнал. С другой стороны, при использовании метода **WriteLine** для размещения связанных операторов на разных строках может быть сложно понять, какие сведения связаны друг с другом. Как правило, при использовании нескольких операторов **Write** имеет смысл объединить информацию из разных источников для создания единого информационного сообщения и использовать оператор **WriteLine** для создания единого полного сообщения.  
@@ -85,11 +85,12 @@ ms.locfileid: "54684382"
     >  Оператор **Assert** можно использовать и для отладки, и для трассировки. В этом примере стек вызовов выводится в любой прослушиватель в коллекции **Listeners**. Дополнительные сведения см. в разделах [Утверждения в управляемом коде](/visualstudio/debugger/assertions-in-managed-code) и <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Diagnostics.Debug.WriteIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Debug.WriteLineIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Trace.WriteIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Trace.WriteLineIf%2A?displayProperty=nameWithType>
-- [Трассировка и инструментирование приложений](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [Трассировка и оборудование приложений](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
 - [Практическое руководство. Создание, инициализация и настройка переключателей трассировки](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
 - [Переключатели трассировки](../../../docs/framework/debug-trace-profile/trace-switches.md)
 - [Прослушиватели трассировки](../../../docs/framework/debug-trace-profile/trace-listeners.md)

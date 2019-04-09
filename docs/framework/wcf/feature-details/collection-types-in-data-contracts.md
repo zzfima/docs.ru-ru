@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-ms.openlocfilehash: c0e65a6286ef4756bba305d41dce6ef2a85401dd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e7c7dd72c733036031fcf28d0dd2c1bc023d6552
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516139"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106747"
 ---
 # <a name="collection-types-in-data-contracts"></a>Типы коллекций в контрактах данных
 Под *коллекцией* понимается список элементов определенного типа. В [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]такие списки могут быть представлены с помощью массивов или других типов (универсальный список, универсальные <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>или <xref:System.Collections.ArrayList>). Например, в коллекции может содержаться список адресов конкретного клиента. Такие коллекции называются *коллекциями списков*, независимо от их фактического типа.  
@@ -273,7 +273,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 |---------------------|----------------------------------------------|-------------|----------------------|  
 |Неуниверсальный или закрытый универсальный (любое количество параметров)|неуниверсальный|`MyType : IList`<br /><br /> или<br /><br /> `MyType<T> : IList`<br /><br /> где T= `int`|Закрытый универсальный тип `Object` (например, `IList<object>`)|  
 |Неуниверсальный или закрытый универсальный (любое количество параметров, которое не обязательно совпадает с типом коллекции)|Закрытый универсальный тип|`MyType : IList<string>`<br /><br /> или<br /><br /> `MyType<T> : IList<string>` где T=`int`|Закрытый универсальный тип (например, `IList<string>`)|  
-|Закрытый универсальный тип с любым количеством параметров|Открытый универсальный тип с использованием одного из параметров типа|`MyType<T,U,V> : IList<U>`<br /><br /> где T=`int`, U=`string`, V=`bool`|Закрытый универсальный тип (например, `IList<string>`)|  
+|Закрытый универсальный тип с любым количеством параметров|Открытый универсальный тип с использованием одного из параметров типа|`MyType<T,U,V> : IList<U>`<br /><br /> где T =`int`, U =`string`, V =`bool`|Закрытый универсальный тип (например, `IList<string>`)|  
 |Открытый универсальный тип с одним параметром|Открытый универсальный тип с использованием параметра типа|`MyType<T> : IList<T>`, T является открытым|Открытый универсальный тип (например, `IList<T>`)|  
   
  Если тип реализует несколько интерфейсов коллекции списка, применяются следующие ограничения.  
@@ -287,9 +287,9 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 |Ссылочный тип|Интерфейс, реализованный ссылочным типом|Пример|Тип обрабатывается как|  
 |---------------------|----------------------------------------------|-------------|---------------------|  
 |Неуниверсальный или закрытый универсальный (любое количество параметров)|<xref:System.Collections.IDictionary>|`MyType : IDictionary`<br /><br /> или<br /><br /> `MyType<T> : IDictionary` где T=`int`|Закрытый универсальный тип `IDictionary<object,object>`|  
-|Закрытый универсальный тип (любое количество параметров)|<xref:System.Collections.Generic.IDictionary%602>, закрытый|`MyType<T> : IDictionary<string, bool>` где T=`int`|Закрытый универсальный тип (например, `IDIctionary<string,bool>`)|  
-|Закрытый универсальный тип (любое количество параметров)|Универсальный <xref:System.Collections.Generic.IDictionary%602>, ключ или значение закрыто, другой (ключ или значение) открыт и использует один из параметров типа.|`MyType<T,U,V> : IDictionary<string,V>` , где T=`int`, U=`float`, V=`bool`<br /><br /> или<br /><br /> `MyType<Z> : IDictionary<Z,bool>` , где Z=`string`|Закрытый универсальный тип (например, `IDictionary<string,bool>`)|  
-|Закрытый универсальный тип (любое количество параметров)|Универсальный <xref:System.Collections.Generic.IDictionary%602>, ключ и значение открыты, и оба используют один из параметров типа|`MyType<T,U,V> : IDictionary<V,U>` где T=`int`, U=`bool`, V=`string`|Закрытый универсальный тип (например, `IDictionary<string,bool>`)|  
+|Закрытый универсальный тип (любое количество параметров)|<xref:System.Collections.Generic.IDictionary%602>, закрыто|`MyType<T> : IDictionary<string, bool>` где T=`int`|Закрытый универсальный тип (например, `IDIctionary<string,bool>`)|  
+|Закрытый универсальный тип (любое количество параметров)|Универсальный <xref:System.Collections.Generic.IDictionary%602>, ключ или значение закрыто, другой (ключ или значение) открыт и использует один из параметров типа.|`MyType<T,U,V> : IDictionary<string,V>` где T =`int`, U =`float`, V =`bool`<br /><br /> или<br /><br /> `MyType<Z> : IDictionary<Z,bool>` где Z=`string`|Закрытый универсальный тип (например, `IDictionary<string,bool>`)|  
+|Закрытый универсальный тип (любое количество параметров)|Универсальный <xref:System.Collections.Generic.IDictionary%602>, ключ и значение открыты, и оба используют один из параметров типа|`MyType<T,U,V> : IDictionary<V,U>` где T =`int`, U =`bool`, V =`string`|Закрытый универсальный тип (например, `IDictionary<string,bool>`)|  
 |Открытый универсальный тип (два параметра)|Универсальный <xref:System.Collections.Generic.IDictionary%602>, открытый, использует оба типа универсальных параметров в порядке их появления|`MyType<K,V> : IDictionary<K,V>`, K и V, оба открыты|Открытый универсальный тип (например, `IDictionary<K,V>`)|  
   
  Если тип реализует и интерфейс <xref:System.Collections.IDictionary> , и универсальный интерфейс <xref:System.Collections.Generic.IDictionary%602>, рассматривается только универсальный <xref:System.Collections.Generic.IDictionary%602> .  
@@ -321,13 +321,13 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
 |Реализованные в коллекции элементы|Методы, вызываемые при сериализации|Методы, вызываемые при десериализации|  
 |--------------------------------|-----------------------------------------|-------------------------------------------|  
-|Универсальный тип <xref:System.Collections.Generic.IDictionary%602>|`get_Keys`, `get_Values`|Универсальное добавление|  
+|Универсальный <xref:System.Collections.Generic.IDictionary%602>|`get_Keys`, `get_Values`|Универсальное добавление|  
 |<xref:System.Collections.IDictionary>|`get_Keys`, `get_Values`|`Add`|  
-|Универсальный тип <xref:System.Collections.Generic.IList%601>|Универсальный индексатор <xref:System.Collections.Generic.IList%601>|Универсальное добавление|  
-|Универсальный тип <xref:System.Collections.Generic.ICollection%601>|Перечислитель|Универсальное добавление|  
-|<xref:System.Collections.IList>|Индексатор<xref:System.Collections.IList> |`Add`|  
-|Универсальный тип <xref:System.Collections.Generic.IEnumerable%601>|`GetEnumerator`|Нестатический метод с названием `Add` , принимающий один параметр соответствующего типа (тип универсального параметра или один из его базовых типов). Такой метод должен быть предусмотрен для обработки коллекции сериализатором во время сериализации и десериализации.|  
-|<xref:System.Collections.IEnumerable> (и, следовательно, унаследованный от него <xref:System.Collections.ICollection>)|`GetEnumerator`|Нестатический метод с названием `Add` , принимающий один параметр типа `Object`. Такой метод должен быть предусмотрен для обработки коллекции сериализатором во время сериализации и десериализации.|  
+|Универсальный <xref:System.Collections.Generic.IList%601>|Универсальный индексатор <xref:System.Collections.Generic.IList%601>|Универсальное добавление|  
+|Универсальный <xref:System.Collections.Generic.ICollection%601>|Перечислитель|Универсальное добавление|  
+|<xref:System.Collections.IList>|<xref:System.Collections.IList> Индексатор|`Add`|  
+|Универсальный <xref:System.Collections.Generic.IEnumerable%601>|`GetEnumerator`|Нестатический метод с названием `Add` , принимающий один параметр соответствующего типа (тип универсального параметра или один из его базовых типов). Такой метод должен быть предусмотрен для обработки коллекции сериализатором во время сериализации и десериализации.|  
+|<xref:System.Collections.IEnumerable> (и, следовательно, <xref:System.Collections.ICollection>, производный от него)|`GetEnumerator`|Нестатический метод с названием `Add` , принимающий один параметр типа `Object`. Такой метод должен быть предусмотрен для обработки коллекции сериализатором во время сериализации и десериализации.|  
   
  В предыдущей таблице приведен список интерфейсов коллекции, упорядоченный по убыванию приоритета. Это означает, что, например, если тип реализует интерфейс <xref:System.Collections.IList> и универсальный интерфейс <xref:System.Collections.Generic.IEnumerable%601>, коллекция сериализуется и десериализуется согласно правилам интерфейса <xref:System.Collections.IList> :  
   
@@ -396,4 +396,5 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
  Когда сериализатор работает в режиме сохранения ссылок на объект, сохранение ссылок на объект также распространяется на коллекции. В частности, идентичность объекта сохраняется и во всей коллекции, и в отдельных элементах, содержащихся в коллекциях. В словарях удостоверение объекта сохраняется как в объектах пары ключ-значение, так и в отдельных объектах ключа и значения.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Runtime.Serialization.CollectionDataContractAttribute>

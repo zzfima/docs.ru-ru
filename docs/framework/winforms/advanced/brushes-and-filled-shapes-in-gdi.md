@@ -13,12 +13,12 @@ helpviewer_keywords:
 - gradient brushes
 - brushes [Windows Forms], gradient
 ms.assetid: e863e2a7-0294-4130-99b6-f1ea3201e7cd
-ms.openlocfilehash: fc6d6857e912ba14fca382eb49373655004534d5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 683b5966f993ac3a69c8bf7c1233b6df3d65e19a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720947"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115314"
 ---
 # <a name="brushes-and-filled-shapes-in-gdi"></a>Кисти и закрашенные фигуры в GDI+
 Замкнутые фигуры, например прямоугольник или эллипс, состоит из структуры и внутренней частью. Контур рисуется с помощью пера и внутренняя область заполняется с помощью кисти. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] предоставляет несколько классов кисти для заливки фигур, закрытых: <xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>, <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>, и <xref:System.Drawing.Drawing2D.PathGradientBrush>. Все эти классы наследуют <xref:System.Drawing.Brush> класса. Ниже показан прямоугольник заполняется сплошной кистью и эллипс, заполненный кистей штриховки.  
@@ -77,10 +77,11 @@ ms.locfileid: "57720947"
  ![Заполнить форму](./media/aboutgdip02-art23.gif "AboutGdip02_Art23")  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Drawing.SolidBrush?displayProperty=nameWithType>
 - <xref:System.Drawing.Drawing2D.HatchBrush?displayProperty=nameWithType>
 - <xref:System.Drawing.TextureBrush?displayProperty=nameWithType>
 - <xref:System.Drawing.Drawing2D.LinearGradientBrush?displayProperty=nameWithType>
-- [Линии, кривые и фигуры](lines-curves-and-shapes.md)
-- [Практическое руководство. Нарисовать закрашенный прямоугольник в форме Windows](how-to-draw-a-filled-rectangle-on-a-windows-form.md)
+- [Прямые и кривые линии и фигуры](lines-curves-and-shapes.md)
+- [Практическое руководство. Рисование заполненного прямоугольника в Windows Forms](how-to-draw-a-filled-rectangle-on-a-windows-form.md)
 - [Практическое руководство. Рисование заполненного эллипса в Windows Forms](how-to-draw-a-filled-ellipse-on-a-windows-form.md)

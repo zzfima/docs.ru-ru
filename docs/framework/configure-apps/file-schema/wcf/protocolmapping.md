@@ -2,17 +2,17 @@
 title: <protocolMapping>
 ms.date: 03/30/2017
 ms.assetid: 5076644b-1f33-4f26-9488-87de9fcda04c
-ms.openlocfilehash: 6ec17457c8742fdf17208c6588e0ab70ece7c42a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e26044340bda84fe38b7e286edf833affa94b86c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268680"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118220"
 ---
 # <a name="protocolmapping"></a>\<protocolMapping >
 Представляет раздел конфигурации для определения набора сопоставлений протоколов по умолчанию между схемами транспортных протоколов (например, http, net.tcp, net.pipe, и т.д.) и привязками WCF. При создании конечных точек по умолчанию во время выполнения, Windows Communication Foundation (WCF) просматривает заданные сопоставления и решает, какую привязку необходимо использовать для определенного базового адреса.  
   
-[**\<system.serviceModel >**](system-servicemodel.md)  
+[**\<system.serviceModel>**](system-servicemodel.md)  
 &nbsp;&nbsp;**\<protocolMapping >**  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -35,11 +35,11 @@ ms.locfileid: "55268680"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<Фильтры>](filters-of-routing.md)|Содержит сопоставление протокола по умолчанию между схемой транспортного протокола (например, http, net.tcp, net.pipe, и т.д.) и привязкой WCF.|  
+|[\<Фильтры >](filters-of-routing.md)|Содержит сопоставление протокола по умолчанию между схемой транспортного протокола (например, http, net.tcp, net.pipe, и т.д.) и привязкой WCF.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<system.serviceModel>](system-servicemodel.md)|Корневой элемент всех элементов конфигурации WCF.|  
   
@@ -60,5 +60,6 @@ ms.locfileid: "55268680"
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.Configuration.ProtocolMappingSection?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Configuration.ProtocolMappingElement?displayProperty=nameWithType>

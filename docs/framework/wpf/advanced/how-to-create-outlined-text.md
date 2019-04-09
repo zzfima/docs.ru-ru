@@ -11,12 +11,12 @@ helpviewer_keywords:
 - linear gradient brush [WPF]
 - typography [WPF], outline effects
 ms.assetid: 4aa3cf6e-1953-4f26-8230-7c1409e5f28d
-ms.openlocfilehash: 5de1068401dac61c5de5b86604da9417e18a94ae
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 237bdc097cd2a3fbfff6dd79bce401c2d091e211
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125945"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162232"
 ---
 # <a name="how-to-create-outlined-text"></a>Практическое руководство. Создание контурного текста
 В большинстве случаев при добавлении декоративных элементов в текстовые строки в вашей [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] приложения, вы используете текст в виде коллекции дискретных символов или глифов. Например, можно создать кисть линейного градиента и применить его к <xref:System.Windows.Controls.Control.Foreground%2A> свойство <xref:System.Windows.Controls.TextBox> объекта. При отображении или измените текстовое поле, кисти линейного градиента применяется автоматически в текущий набор символов в текстовой строке.  
@@ -55,4 +55,5 @@ ms.locfileid: "58125945"
   Источник объекта пример настраиваемого пользовательского элемента управления, см. в разделе [OutlineTextControl.cs для C# ](https://github.com/dotnet/samples/blob/master/snippets/csharp/VS_Snippets_Wpf/OutlineTextControlViewer/CSharp/OutlineTextControl.cs) и [OutlineTextControl.vb для Visual Basic](https://github.com/dotnet/samples/blob/master/snippets/visualbasic/VS_Snippets_Wpf/OutlineTextControlViewer/visualbasic/outlinetextcontrol.vb). 
   
 ## <a name="see-also"></a>См. также
+
 - [Рисование форматированного текста](drawing-formatted-text.md)

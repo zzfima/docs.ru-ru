@@ -1,13 +1,13 @@
 ---
-title: <add> элемента <scopedCertificates>
+title: <add> из <scopedCertificates> элемент
 ms.date: 03/30/2017
 ms.assetid: e21c1ef8-d6d6-4bca-ac5a-6fbf4bd77412
-ms.openlocfilehash: 34dc51c27a5e16b1a8411112fb9afdfe617ed582
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 06a624d0146745581dfe907d044d1f7d3b857902
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55262326"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119682"
 ---
 # <a name="add-of-scopedcertificates-element"></a>\<Добавить > из \<scopedCertificates > элемент
 Добавляет сертификат X.509 в коллекцию сертификатов в области действия.  
@@ -48,7 +48,7 @@ ms.locfileid: "55262326"
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|Строковое|Значение зависит от поля (заданного атрибутом x509FindType), поиск которого выполняется. Например, при поиске отпечатка значение должно быть строкой шестнадцатеричных чисел.|  
+|String|Значение зависит от поля (заданного атрибутом x509FindType), поиск которого выполняется. Например, при поиске отпечатка значение должно быть строкой шестнадцатеричных чисел.|  
   
 ## <a name="x509findtype-attribute"></a>Атрибут x509FindType  
   
@@ -108,6 +108,7 @@ ms.locfileid: "55262326"
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.Configuration.X509RecipientCertificateClientElement.ScopedCertificates%2A>
 - <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElementCollection>
 - <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElement>
@@ -115,5 +116,5 @@ ms.locfileid: "55262326"
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A>
 - [Практическое руководство. Создание федеративного клиента](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
 - [Работа с сертификатами](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Защита клиентов](../../../../../docs/framework/wcf/securing-clients.md)
+- [Обеспечение безопасности клиентов](../../../../../docs/framework/wcf/securing-clients.md)
 - [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

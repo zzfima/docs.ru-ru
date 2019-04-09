@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1f2ea9d0e20cb67cc36d0b5883e483ce98941b2f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 766b17bae0c58d9872ff9c118f330ebc3220257e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743222"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59123491"
 ---
 # <a name="ienumreferenceidentity-interface"></a>Интерфейс IEnumReferenceIdentity
 Служит в качестве перечислителя для коллекции `IReferenceIdentity` объектов.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание:|  
+|Метод|Описание|  
 |------------|-----------------|  
 |`IEnumReferenceIdentity::Clone`|Получает указатель интерфейса на новый `IEnumReferenceIdentity` , содержащий те же члены, что это `IEnumReferenceIdentity`.|  
 |`IEnumReferenceIdentity::Next`|Возвращает заданное число `IReferenceIdentity` объектов, начиная с текущей позиции.|  
@@ -43,5 +43,6 @@ ms.locfileid: "54743222"
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
-- [Интерфейсы Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+
+- [Fusion-интерфейсы](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
 - [Интерфейс IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)

@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 974b99da085a5cb969ab37cddb0f2f2c62010d14
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: a2850add9acb2f7c5297ac6956e349c9277be291
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828689"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122802"
 ---
 # <a name="dacprejitdata-structure"></a>Структура DacpReJitData
 
@@ -49,12 +49,11 @@ struct MSLAYOUT DacpReJitData
 
 ## <a name="members"></a>Участники
 
-| Член           | Описание:                                                                                      |
+| Член           | Описание                                                                                      |
 | ---------------- | ------------------------------------------------------------------------------------------------ |
 | `rejitID`        | Номер редакции ReJit для метода.                                                          |
 | `flags`          | Флаг, указывающий текущее состояние метода инструментарий ReJit для данной версии. |
 | `NativeCodeAddr` | Базовый адрес rejitted реализацию метода.                                         |
-
 
 ## <a name="remarks"></a>Примечания
 
@@ -67,5 +66,6 @@ struct MSLAYOUT DacpReJitData
 **Версии платформы .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>См. также
+
 - [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)
 - [Структуры отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)

@@ -2,12 +2,12 @@
 title: Установка системы очередей сообщений (MSMQ)
 ms.date: 03/30/2017
 ms.assetid: 7ddcd497-3e04-427e-bc04-3610ad98b01e
-ms.openlocfilehash: 2aae92ba6e373af2d8bc9cff0b4c9d317ba10136
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 2edd293d8616c2e3c140f909728d87437d20b34c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588029"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101501"
 ---
 # <a name="installing-message-queuing-msmq"></a>Установка системы очередей сообщений (MSMQ)
 В процедурах ниже показана методика установки очереди сообщений 4.0 и очереди сообщений 3.0.  
@@ -63,4 +63,5 @@ ms.locfileid: "54588029"
 6.  При появлении запроса на перезагрузку компьютера нажмите кнопку **ОК** для завершения установки.  
   
 ## <a name="see-also"></a>См. также
-- [Инструкции по настройке](../../../../docs/framework/wcf/samples/set-up-instructions.md)
+
+- [Инструкции по установке](../../../../docs/framework/wcf/samples/set-up-instructions.md)

@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Заливка фигуры штриховая
+title: Практическое руководство. Штриховая заливка фигуры
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - shapes [Windows Forms], filling with patterns
 - brushes [Windows Forms], using hatch brushes
 ms.assetid: 9c8300ff-187b-404f-af1f-ebd499f5b16f
-ms.openlocfilehash: 885f0d22e83767bda3ef76c54f0857dd2a148344
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f5399c4151b335090f4b93be041375b8c2781afa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719719"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118122"
 ---
-# <a name="how-to-fill-a-shape-with-a-hatch-pattern"></a>Практическое руководство. Заливка фигуры штриховая
+# <a name="how-to-fill-a-shape-with-a-hatch-pattern"></a>Практическое руководство. Штриховая заливка фигуры
 Шаблон штриховки осуществляется из двух цветов: один для фона и один для строк, которые образуют узор на фоне. Для заполнения замкнутой фигуры, штриховая, использовать <xref:System.Drawing.Drawing2D.HatchBrush> объекта. Следующий пример демонстрирует Штриховая заливка эллипса:  
   
 ## <a name="example"></a>Пример  
@@ -42,7 +42,8 @@ ms.locfileid: "57719719"
  [!code-vb[System.Drawing.UsingABrush#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#41)]  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Предыдущий пример предназначен для работы с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs> `e`, который является параметром обработчика события <xref:System.Windows.Forms.Control.Paint>.  
+ Предыдущий пример предназначен для работы с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs>`e`, который является параметром <xref:System.Windows.Forms.Control.Paint> обработчик событий.  
   
 ## <a name="see-also"></a>См. также
+
 - [Использование кисти для заливки фигур](using-a-brush-to-fill-shapes.md)

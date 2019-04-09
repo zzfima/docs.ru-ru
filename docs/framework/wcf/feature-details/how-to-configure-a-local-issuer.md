@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Настройка локального издателя
+title: Практическое руководство. Настройка локального издателя
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 15263371-514e-4ea6-90fb-14b4939154cd
-ms.openlocfilehash: 3fb4577e6a79bc6b42cb0ef6f24648d1b016214f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: cb4a2bcc6f62fac5d0dde82ab32ed6e04e8a9b7c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713256"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095559"
 ---
-# <a name="how-to-configure-a-local-issuer"></a>Как выполнить Настройка локального издателя
+# <a name="how-to-configure-a-local-issuer"></a>Практическое руководство. Настройка локального издателя
 В этом разделе описано, как настроить клиент на использование локального издателя для выданных маркеров.  
   
  Часто при взаимодействии клиента с федеративной службой служба указывает адрес службы маркеров безопасности, выдающей маркеры, которые клиент будет использовать, чтобы федеративная служба могла проверить его подлинность. В некоторых случаях клиент может настроить для использования *локального издателя*.  
@@ -27,7 +27,7 @@ ms.locfileid: "54713256"
   
 ### <a name="to-configure-the-local-issuer-in-code"></a>Настройка локального издателя в коде  
   
-1.  Создайте переменную типа <xref:System.ServiceModel.Security.IssuedTokenClientCredential>.  
+1.  Создайте переменную типа <xref:System.ServiceModel.Security.IssuedTokenClientCredential>  
   
 2.  Присвойте переменной экземпляр, возвращаемый свойством <xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A> класса `ClientCredentials`. Этот экземпляр возвращается свойством <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> клиента (унаследованным от <xref:System.ServiceModel.ClientBase%601>) или свойством <xref:System.ServiceModel.ChannelFactory.Credentials%2A> класса <xref:System.ServiceModel.ChannelFactory>:  
   
@@ -75,6 +75,7 @@ ms.locfileid: "54713256"
  Обратите внимание, что если для данной привязки указаны адрес издателя и привязка, локальный издатель не применяется в конечных точках, использующих эту привязку. Клиенты, которые предполагают всегда использовать локальный издатель, должны убедиться, что они не используют такую привязку или что привязка изменена таким образом, что адрес издателя имеет значение `null`.  
   
 ## <a name="see-also"></a>См. также
+
 - [Практическое руководство. Настройка учетных данных службы федерации](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
 - [Практическое руководство. Создание федеративного клиента](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
 - [Практическое руководство. Создание WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)

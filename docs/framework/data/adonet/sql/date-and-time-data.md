@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-ms.openlocfilehash: 34d49416bb7d0da60624a1f60e4dbd01a1dff9cd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: a4bbed1f115ef5cfb6b7b63156f2d84b071cf224
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584549"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127118"
 ---
 # <a name="date-and-time-data"></a>Данные даты и времени
 В SQL Server 2008 появились указанные ниже новые типы данных для обработки сведений о дате и времени. Новые типы данных включают отдельные типы для даты и времени, а также расширенные типы данных, обладающие большим диапазоном, большей точностью и учитывающие часовые пояса. Начиная с .NET Framework 3.5 с пакетом обновления 1 (SP1), поставщик данных .NET Framework для SQL Server (<xref:System.Data.SqlClient>) полностью поддерживает все новые возможности ядра СУБД SQL Server 2008. Для использования новых возможностей с SqlClient необходимо установить .NET Framework 3.5 с пакетом обновления 1 (SP1) или более поздней версии.  
@@ -76,7 +76,7 @@ ms.locfileid: "54584549"
   
 |Тип данных SQL Server|Тип платформы .NET Framework|System.Data.SqlDbType|System.Data.DbType|  
 |--------------------------|-------------------------|---------------------------|------------------------|  
-|date|System.DateTime|дата.|дата.|  
+|date|System.DateTime|Дата|Дата|  
 |время|System.TimeSpan|Время|Время|  
 |datetime2|System.DateTime|DateTime2|DateTime2|  
 |datetimeoffset|System.DateTimeOffset|DateTimeOffset|DateTimeOffset|  
@@ -99,7 +99,7 @@ ms.locfileid: "54584549"
 >  Значения времени, меньшие нуля или большие либо равные 24 часам, приводят к вызову исключения <xref:System.ArgumentException>.  
   
 ### <a name="creating-parameters"></a>Создание параметров  
- Объект <xref:System.Data.SqlClient.SqlParameter> можно создать с помощью конструктора либо путем добавления этого объекта в коллекцию <xref:System.Data.SqlClient.SqlCommand><xref:System.Data.SqlClient.SqlCommand.Parameters%2A> путем вызова метода `Add` класса <xref:System.Data.SqlClient.SqlParameterCollection>. Метод `Add` принимает в качестве входных данных либо аргументы конструктора, либо существующий объект параметра.  
+ Можно создать <xref:System.Data.SqlClient.SqlParameter> объект при помощи конструктора или путем добавления его в <xref:System.Data.SqlClient.SqlCommand><xref:System.Data.SqlClient.SqlCommand.Parameters%2A> коллекцию, вызвав `Add` метод <xref:System.Data.SqlClient.SqlParameterCollection>. Метод `Add` принимает в качестве входных данных либо аргументы конструктора, либо существующий объект параметра.  
   
  В следующих подразделах данного раздела приведены примеры указания параметров даты и времени. Дополнительные примеры по работе с параметрами см. в разделе [Настройка параметров и типы данных параметров](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md) и [параметры DataAdapter](../../../../../docs/framework/data/adonet/dataadapter-parameters.md).  
   
@@ -235,12 +235,13 @@ command.Parameters.AddWithValue( _
   
 |Раздел|Описание|  
 |-----------|-----------------|  
-|[Данные даты и времени типы и функции (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98360)|Приводятся общие сведения обо всех типах данных и функциях даты и времени в языке Transact-SQL.|  
+|[Типы данных и функции даты и времени (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98360)|Приводятся общие сведения обо всех типах данных и функциях даты и времени в языке Transact-SQL.|  
 |[Использование данных даты и времени](https://go.microsoft.com/fwlink/?LinkId=98361)|Приводятся сведения о типах данных даты и времени, функциях для работы с этими типами данных и примеры их использования.|  
 |[Типы данных (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98362)|Описываются системные типы данных в SQL Server 2008.|  
   
 ## <a name="see-also"></a>См. также
+
 - [Сопоставления типов данных SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
 - [Настройка параметров и типы данных параметров](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
 - [Типы данных SQL Server и ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

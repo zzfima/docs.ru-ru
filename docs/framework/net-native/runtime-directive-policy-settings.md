@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: cb52b1ef-47fd-4609-b69d-0586c818ac9e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fc5eddbf21e6e530279e2c85420e539e5d51a7f9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9015ec35c2a3d13b986eb9524e4f2984d909eb21
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642572"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098238"
 ---
 # <a name="runtime-directive-policy-settings"></a>Параметры политики директив среды выполнения
 > [!NOTE]
@@ -24,100 +24,100 @@ ms.locfileid: "54642572"
   
 -   Типы политики отражения определяют, какие метаданные доступны во время выполнения для отражения:  
   
-    -   `Activate` управляет доступом среды выполнения к конструкторам для включения активации экземпляров.  
+    -   `Activate` Управляет доступом среды выполнения к конструкторам для включения активации экземпляров.  
   
     -   `Browse` управляет запросами информации о программных элементах.  
   
-    -   `Dynamic` управляет доступом среды выполнения ко всем типам и членам для включения динамического программирования.  
+    -   `Dynamic` Управляет доступом среды выполнения ко всем типам и членам для включения динамического программирования.  
   
      В следующей таблице перечислены типы политики отражения, а также программные элементы, с которыми они могут использоваться.  
   
     |Элемент|Активировать|Обзор|Динамический|  
     |-------------|--------------|------------|-------------|  
-    |[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|✓|✓|✓|  
-    |[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|  
-    |[\<AttributeImplies>](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|✓|✓|✓|  
-    |[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)||✓|✓|  
-    |[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)||✓|✓|  
-    |[\<GenericParameter>](../../../docs/framework/net-native/genericparameter-element-net-native.md)|✓|✓|✓|  
-    |[\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)|✓|✓|✓|  
-    |[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)||✓|✓|  
-    |[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)||✓|✓|  
-    |[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|  
+    |[\<Приложения >](../../../docs/framework/net-native/application-element-net-native.md)|✓|✓|✓|  
+    |[\<Сборка >](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|  
+    |[\<AttributeImplies >](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|✓|✓|✓|  
+    |[\<Событие >](../../../docs/framework/net-native/event-element-net-native.md)||✓|✓|  
+    |[\<Поле >](../../../docs/framework/net-native/field-element-net-native.md)||✓|✓|  
+    |[\<GenericParameter >](../../../docs/framework/net-native/genericparameter-element-net-native.md)|✓|✓|✓|  
+    |[\<ImpliesType >](../../../docs/framework/net-native/impliestype-element-net-native.md)|✓|✓|✓|  
+    |[\<Метод >](../../../docs/framework/net-native/method-element-net-native.md)||✓|✓|  
+    |[\<MethodInstantiation >](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)||✓|✓|  
+    |[\<Пространство имен >](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|  
     |[\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md)|✓|✓|✓|  
-    |[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)||✓|✓|  
-    |[\<Subtypes>](../../../docs/framework/net-native/subtypes-element-net-native.md)|✓|✓|✓|  
-    |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|  
-    |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|✓|✓|✓|  
-    |[\<TypeParameter>](../../../docs/framework/net-native/typeparameter-element-net-native.md)|✓|✓|✓|  
+    |[\<Свойство >](../../../docs/framework/net-native/property-element-net-native.md)||✓|✓|  
+    |[\<Подтипы >](../../../docs/framework/net-native/subtypes-element-net-native.md)|✓|✓|✓|  
+    |[\<Тип >](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|  
+    |[\<TypeInstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|✓|✓|✓|  
+    |[\<TypeParameter >](../../../docs/framework/net-native/typeparameter-element-net-native.md)|✓|✓|✓|  
   
 -   Типы политики сериализации определяют, какие метаданные доступны во время выполнения для сериализации и десериализации:  
   
-    -   `Serialize` управляет доступом среды выполнения к конструкторам, полям и свойствам, позволяющим сериализовать и десериализовать экземпляры типа с помощью таких библиотек сторонних поставщиков, как сериализатор Newtonsoft JSON.  
+    -   `Serialize` Управляет доступом среды выполнения к конструкторам, поля и свойства, чтобы включить экземпляры типов, который сериализуется с помощью сторонних библиотек, таких как сериализатор Newtonsoft JSON.  
   
-    -   `DataContractSerializer` управляет доступом среды выполнения к конструкторам, полям и свойствам, чтобы включить сериализацию экземпляров типов с помощью класса <xref:System.Runtime.Serialization.DataContractSerializer>.  
+    -   `DataContractSerializer` Управляет доступом среды выполнения к конструкторам, поля и свойства, чтобы включить экземпляры типов, который сериализуется с помощью <xref:System.Runtime.Serialization.DataContractSerializer> класса.  
   
-    -   `DataContractJsonSerializer` управляет доступом среды выполнения к конструкторам, полям и свойствам, чтобы включить сериализацию экземпляров типов с помощью класса <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.  
+    -   `DataContractJsonSerializer` Управляет доступом среды выполнения к конструкторам, поля и свойства, чтобы включить экземпляры типов, который сериализуется с помощью <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> класса.  
   
-    -   `XmlSerializer` управляет доступом среды выполнения к конструкторам, полям и свойствам, чтобы включить сериализацию экземпляров типов с помощью класса <xref:System.Xml.Serialization.XmlSerializer>.  
+    -   `XmlSerializer` Управляет доступом среды выполнения к конструкторам, поля и свойства, чтобы включить экземпляры типов, который сериализуется с помощью <xref:System.Xml.Serialization.XmlSerializer> класса.  
   
      В следующей таблице перечислены типы политики сериализации, а также программные элементы, с которыми они могут использоваться.  
   
     |Элемент|Сериализация|DataContractSerializer|DataContractJsonSerializer|XmlSerializer|  
     |-------------|---------------|----------------------------|--------------------------------|-------------------|  
-    |[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|✓|✓|✓|✓|  
-    |[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|✓|  
-    |[\<AttributeImplies>](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|✓|✓|✓|✓|  
-    |[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)|||||  
-    |[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)|✓||||  
-    |[\<GenericParameter>](../../../docs/framework/net-native/genericparameter-element-net-native.md)|✓|✓|✓|✓|  
-    |[\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)|✓|✓|✓|✓|  
-    |[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|||||  
-    |[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|||||  
-    |[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|✓|  
+    |[\<Приложения >](../../../docs/framework/net-native/application-element-net-native.md)|✓|✓|✓|✓|  
+    |[\<Сборка >](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|✓|  
+    |[\<AttributeImplies >](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|✓|✓|✓|✓|  
+    |[\<Событие >](../../../docs/framework/net-native/event-element-net-native.md)|||||  
+    |[\<Поле >](../../../docs/framework/net-native/field-element-net-native.md)|✓||||  
+    |[\<GenericParameter >](../../../docs/framework/net-native/genericparameter-element-net-native.md)|✓|✓|✓|✓|  
+    |[\<ImpliesType >](../../../docs/framework/net-native/impliestype-element-net-native.md)|✓|✓|✓|✓|  
+    |[\<Метод >](../../../docs/framework/net-native/method-element-net-native.md)|||||  
+    |[\<MethodInstantiation >](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|||||  
+    |[\<Пространство имен >](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|✓|  
     |[\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md)|✓|✓|✓|✓|  
-    |[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)|✓||||  
-    |[\<Subtypes>](../../../docs/framework/net-native/subtypes-element-net-native.md)|✓|✓|✓|✓|  
-    |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|✓|  
-    |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|✓|✓|✓|✓|  
-    |[\<TypeParameter>](../../../docs/framework/net-native/typeparameter-element-net-native.md)|✓|✓|✓|✓|  
+    |[\<Свойство >](../../../docs/framework/net-native/property-element-net-native.md)|✓||||  
+    |[\<Подтипы >](../../../docs/framework/net-native/subtypes-element-net-native.md)|✓|✓|✓|✓|  
+    |[\<Тип >](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|✓|  
+    |[\<TypeInstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|✓|✓|✓|✓|  
+    |[\<TypeParameter >](../../../docs/framework/net-native/typeparameter-element-net-native.md)|✓|✓|✓|✓|  
   
 -   Типы политики взаимодействия определяют, какие метаданные доступны во время выполнения для передачи ссылочных типов, типов значений и указателей функций в COM и среду выполнения Windows:  
   
-    -   `MarshalObject` управляет внутренним маршалингом в COM и среду выполнения Windows для ссылочных типов.  
+    -   `MarshalObject` Управляет внутренним маршалингом в COM и среду выполнения Windows для ссылочных типов.  
   
-    -   `MarshalDelegate` управляет внутренним маршалингом типов делегатов в качестве указателей функций.  
+    -   `MarshalDelegate` Управляет внутренним маршалингом типов делегатов как указателей на функции.  
   
-    -   `MarshalStructure` управляет внутренним маршалингом в COM и среду выполнения Windows для типов значений.  
+    -   `MarshalStructure` Управляет внутренним маршалингом в COM и среду выполнения Windows для типов значений.  
   
      В следующей таблице перечислены типы политики взаимодействия, а также программные элементы, с которыми они могут использоваться.  
   
     |Элемент|MarshalObject|MarshalDelegate|MarshalStructure|  
     |-------------|-------------------|---------------------|----------------------|  
-    |[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|✓|✓|✓|  
-    |[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|  
-    |[\<AttributeImplies>](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|✓|✓|✓|  
-    |[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)||||  
-    |[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)||||  
-    |[\<GenericParameter>](../../../docs/framework/net-native/genericparameter-element-net-native.md)|✓|✓|✓|  
-    |[\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)|✓|✓|✓|  
-    |[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)||||  
-    |[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)||||  
-    |[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|  
+    |[\<Приложения >](../../../docs/framework/net-native/application-element-net-native.md)|✓|✓|✓|  
+    |[\<Сборка >](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|  
+    |[\<AttributeImplies >](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|✓|✓|✓|  
+    |[\<Событие >](../../../docs/framework/net-native/event-element-net-native.md)||||  
+    |[\<Поле >](../../../docs/framework/net-native/field-element-net-native.md)||||  
+    |[\<GenericParameter >](../../../docs/framework/net-native/genericparameter-element-net-native.md)|✓|✓|✓|  
+    |[\<ImpliesType >](../../../docs/framework/net-native/impliestype-element-net-native.md)|✓|✓|✓|  
+    |[\<Метод >](../../../docs/framework/net-native/method-element-net-native.md)||||  
+    |[\<MethodInstantiation >](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)||||  
+    |[\<Пространство имен >](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|  
     |[\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md)|✓|✓|✓|  
-    |[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)||||  
-    |[\<Subtypes>](../../../docs/framework/net-native/subtypes-element-net-native.md)|✓|✓|✓|  
-    |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|  
-    |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|✓|✓|✓|  
-    |[\<TypeParameter>](../../../docs/framework/net-native/typeparameter-element-net-native.md)|✓|✓|✓|  
+    |[\<Свойство >](../../../docs/framework/net-native/property-element-net-native.md)||||  
+    |[\<Подтипы >](../../../docs/framework/net-native/subtypes-element-net-native.md)|✓|✓|✓|  
+    |[\<Тип >](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|  
+    |[\<TypeInstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|✓|✓|✓|  
+    |[\<TypeParameter >](../../../docs/framework/net-native/typeparameter-element-net-native.md)|✓|✓|✓|  
   
 ## <a name="policy-settings"></a>Параметры политики  
  Каждый типу политики может быть задано одно из значений, перечисленных в следующей таблице. Обратите внимание, что элементы, представляющие члены типов поддерживают иной набор параметров политики, чем другие элементы.  
   
-|Параметр политики|Описание|Элементы `Assembly`, `Namespace`, `Type` и `TypeInstantiation`|Элементы `Event`, `Field`, `Method`, `MethodInstantiation` и `Property`|  
+|Параметр политики|Описание|`Assembly`, `Namespace`, `Type`, и `TypeInstantiation` элементы|`Event`, `Field`, `Method`, `MethodInstantiation`, и `Property` элементы|  
 |--------------------|-----------------|-----------------------------------------------------------------------|--------------------------------------------------------------------------------|  
 |`All`|Включает политику для всех типов и членов, которые цепочка инструментов машинного кода .NET не удаляет.|✓||  
-|`Auto`|Задает использование политики по умолчанию для типа политики для данного программного элемента. Это аналогично пропуску политики для этого типа политики. `Auto` обычно используется для указания того, что политика наследуется от родительского элемента.|✓|✓|  
+|`Auto`|Задает использование политики по умолчанию для типа политики для данного программного элемента. Это аналогично пропуску политики для этого типа политики. `Auto` обычно используется для указания, что политика наследуется от родительского элемента.|✓|✓|  
 |`Excluded`|Указывает, что политика отключена для определенного программного элемента. Например, директива среды выполнения:<br /><br /> `<Type Name="BusinessClasses.Person" Browse="Excluded" Dynamic="Excluded" />`<br /><br /> Указывает, что метаданные для класса `BusinessClasses.Person` недоступны либо для обзора, либо для создания динамического экземпляра и изменения объектов `Person`.|✓|✓|  
 |`Included`|Включает политику, если доступны метаданные для родительского типа.||✓|  
 |`Public`|Включает политику для открытых типов или членов, если только цепочка инструментов не определяет, что тип или член является необязательным и поэтому удаляет его. Этот параметр отличается от `Required Public`, который гарантирует, что метаданные для открытых типов и членов всегда доступны, даже если цепочка инструментов определяет, что они не нужны.|✓||  
@@ -128,5 +128,6 @@ ms.locfileid: "54642572"
 |`Required All`|Требует, чтобы цепочка инструментов сохранила все типы и члены, независимо то того, используются они или нет, и включает политику для них.|✓||  
   
 ## <a name="see-also"></a>См. также
-- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+
+- [Ссылка на файл конфигурации директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Элементы директив среды выполнения](../../../docs/framework/net-native/runtime-directive-elements.md)

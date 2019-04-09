@@ -6,12 +6,12 @@ helpviewer_keywords:
 - split windows [Windows Forms], horizontal
 - windows [Windows Forms], splitting horizontally
 ms.assetid: 3872a176-891f-4c70-9779-b2ce85b0b102
-ms.openlocfilehash: 06d20a34b01cac71e234e98cea1ede7361cac6a3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: bf36718600ac1e77be91c4c6eb87ceb44fd5a15f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721922"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111388"
 ---
 # <a name="how-to-split-a-window-horizontally-using-the-designer"></a>Практическое руководство. Разделение окна по горизонтали с помощью конструктора
 В этом примере происходит разделитель <xref:System.Windows.Forms.SplitContainer> элемента управления по горизонтали.  
@@ -24,5 +24,6 @@ ms.locfileid: "57721922"
 1.  В **свойства** окне <xref:System.Windows.Forms.SplitContainer.Orientation%2A> свойство <xref:System.Windows.Forms.SplitContainer> управления <xref:System.Windows.Forms.Orientation.Horizontal>.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.SplitContainer>
 - [Элемент управления SplitContainer](splitcontainer-control-windows-forms.md)

@@ -2,12 +2,12 @@
 title: '@ServiceHost'
 ms.date: 03/30/2017
 ms.assetid: 96ba6967-00f2-422f-9aa7-15de4d33ebf3
-ms.openlocfilehash: 3d59fac08ee59ab5ede943de5109805ff1633d48
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3102ae8d8c28be43883eeaff6c4f829b355384a7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623941"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111401"
 ---
 # <a name="servicehost"></a>\@ServiceHost
 Связывает фабрику, используемую для создания узла службы, с размещаемой службой и другими элементами программирования, необходимыми для доступа или компиляции кода размещения, представленного в SVC-файле.  
@@ -67,4 +67,5 @@ Factory="WebScriptServiceHostFactory"
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Пользовательский узел службы](../../../../../docs/framework/wcf/samples/custom-service-host.md)

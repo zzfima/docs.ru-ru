@@ -10,12 +10,12 @@ helpviewer_keywords:
 - x:ClassModifier attribute [XAML Services]
 - ClassModifier attribute in XAML [XAML Services]
 ms.assetid: ef30ab78-d334-4668-917d-c9f66c3b6aea
-ms.openlocfilehash: cc9e866f859192e1fa13ead24dc44a7b9d286877
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: fdbc69634e86992e71cfccdc080829b6b45f963c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58026779"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100938"
 ---
 # <a name="xclassmodifier-directive"></a>Директива x:ClassModifier
 Изменяет поведение компиляции XAML при `x:Class` также предоставляется. В частности, вместо того чтобы создавать частичной `class` с `Public` обращаться к уровню (по умолчанию), предоставленный `x:Class` создается с `NotPublic` уровень доступа. Это поведение влияет на уровень доступа для класса в созданных сборок.  
@@ -54,6 +54,7 @@ ms.locfileid: "58026779"
  Уровень доступа, как объявлено в `x:ClassModifier` интерпретируется по-прежнему с определенными платформами и их возможности. WPF включает возможности для загрузки и создания экземпляров типов где `x:ClassModifier` является `internal`, если этот класс ссылается ресурс WPF с помощью пакета URI-ссылка. В результате этот случай и другие пользователи, как и реализацией других платформ, не следует полагаться исключительно на `x:ClassModifier` блокировать создание экземпляра все возможные попытки.  
   
 ## <a name="see-also"></a>См. также
+
 - [Директива x:Class](x-class-directive.md)
 - [Код программной части и XAML в WPF](../wpf/advanced/code-behind-and-xaml-in-wpf.md)
 - [Директива x:FieldModifier](x-fieldmodifier-directive.md)

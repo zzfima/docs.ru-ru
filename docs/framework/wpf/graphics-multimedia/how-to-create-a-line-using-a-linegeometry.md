@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Создание линии с помощью LineGeometry
+title: Практическое руководство. Создание линии с помощью объекта LineGeometry
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - graphics [WPF], lines
 ms.assetid: 41231b22-1f74-4c26-a8e7-a55b29f8f6bd
-ms.openlocfilehash: 6d5d0b413f940a2c7f70e05135ff070c1fe5ba21
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f8c334a54f78aec7af91064a447fd18f23dcfbdc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374665"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59123062"
 ---
-# <a name="how-to-create-a-line-using-a-linegeometry"></a>Практическое руководство. Создание линии с помощью LineGeometry
+# <a name="how-to-create-a-line-using-a-linegeometry"></a>Практическое руководство. Создание линии с помощью объекта LineGeometry
 В этом примере показано, как использовать <xref:System.Windows.Media.LineGeometry> класс, который описывает строку. Объект <xref:System.Windows.Media.LineGeometry> определяется его начальную и конечную точки.  
   
 ## <a name="example"></a>Пример  
@@ -31,6 +31,7 @@ ms.locfileid: "57374665"
  Другие простые геометрические классы включают <xref:System.Windows.Media.LineGeometry> и <xref:System.Windows.Media.EllipseGeometry>. Эти геометрические объекты, а также более сложные, могут также создаваться с использованием <xref:System.Windows.Media.PathGeometry> или <xref:System.Windows.Media.StreamGeometry>. Дополнительные сведения см. в разделе [Общие сведения о геометрии](geometry-overview.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения о классе Geometry](geometry-overview.md)
 - [Создание составной фигуры](how-to-create-a-composite-shape.md)
 - [Создание фигуры с помощью объекта PathGeometry](how-to-create-a-shape-by-using-a-pathgeometry.md)

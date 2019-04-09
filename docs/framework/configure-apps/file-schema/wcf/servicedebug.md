@@ -2,12 +2,12 @@
 title: <serviceDebug>
 ms.date: 03/30/2017
 ms.assetid: 6d7ea986-f232-49fe-842c-f934d9966889
-ms.openlocfilehash: 1ab7058d8667344197e8bc1ddc59cc7200f22270
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7b7526dbcbd1948d3d8a27d146efd0462fefaca5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268565"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142848"
 ---
 # <a name="servicedebug"></a>\<serviceDebug >
 Указывает возможности отладки и справки для службы Windows Communication Foundation (WCF).  
@@ -54,7 +54,7 @@ ms.locfileid: "55268565"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<поведение >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Указывает элемент поведения.|  
   
@@ -71,8 +71,9 @@ ms.locfileid: "55268565"
  Необязательные атрибуты `httpHelpPageBinding` и `httpHelpPageBinding` позволяют выполнить настройку привязок, которые используются для доступа к веб-странице службы. Если они не заданы, для доступа к странице справки службы применяются привязки по умолчанию (`HttpTransportBindingElement` для HTTP и `HttpsTransportBindingElement` для HTTPS). Обратите внимание, что эти атрибуты нельзя использовать вместе со встроенными привязками WCF. Только привязки с внутренними элементами привязки, поддерживающие xref:System.ServiceModel.Channels.IReplyChannel > будет поддерживаться. Кроме этого, свойство <xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType> привязки должно иметь значение <xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.Configuration.ServiceDebugElement>
 - <xref:System.ServiceModel.Description.ServiceDebugBehavior>
-- [Указание и обработка сбоев в контрактах и службах](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [Задание и обработка сбоев в контрактах и службах](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
 - [Обработка исключений и сбоев](../../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)
 - [Поведение отладки службы](../../../../../docs/framework/wcf/samples/service-debug-behavior.md)

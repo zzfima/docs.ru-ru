@@ -2,12 +2,12 @@
 title: WSDL и политика
 ms.date: 03/30/2017
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
-ms.openlocfilehash: 1e6b315c1830602e72b4b498cd38eed8428bc5ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: caaa54f04bbb10ed3b3dd65b53ace633b88f9126
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741435"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151909"
 ---
 # <a name="wsdl-and-policy"></a>WSDL и политика
 В этом разделе рассматриваются Windows Communication Foundation (WCF) WSDL 1.1, WS-Policy и WS-PolicyAttachment детали реализации, а также дополнительные утверждения WS-Policy и расширения WSDL 1.1, представленные WCF.  
@@ -73,6 +73,7 @@ ms.locfileid: "54741435"
 |mssp:RequireClientCertificate|Вложенный|Этот необязательный элемент задает требование о том, что сертификат клиента должен предоставляться как часть протокола TLSNEGO. Если это утверждение присутствует, сертификат клиента должен быть предоставлен. Если это утверждение отсутствует, сертификат клиента предоставляться не должен. Это утверждение не должно использоваться за пределами mssp:SslContextToken.|  
   
 ## <a name="see-also"></a>См. также
+
 - [Пользовательская публикация WSDL](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)
-- [Практическое руководство. Экспорт пользовательского языка WSDL](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
-- [Практическое руководство. Импорт пользовательского языка WSDL](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+- [Практическое руководство. Экспорт пользовательской информации WSDL](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
+- [Практическое руководство. Импорт пользовательской информации WSDL](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)

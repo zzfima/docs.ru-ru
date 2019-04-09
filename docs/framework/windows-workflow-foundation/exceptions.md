@@ -2,12 +2,12 @@
 title: Исключения
 ms.date: 03/30/2017
 ms.assetid: 065205cc-52dd-4f30-9578-b17d8d113136
-ms.openlocfilehash: 94a0a2430ffe7db47152517c742aed1c18a39e64
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 64a8338133c265ee1b4c7acbd9b4d168318b66a5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717275"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145994"
 ---
 # <a name="exceptions"></a>Исключения
 Рабочие процессы могут использовать действие <xref:System.Activities.Statements.TryCatch> для обработки исключений, возникающих в ходе выполнения рабочего процесса. Эти исключения обрабатываются либо вызываются повторно при помощи действия <xref:System.Activities.Statements.Rethrow>. Действия в разделе <xref:System.Activities.Statements.TryCatch.Finally%2A> выполняются при завершении либо раздела <xref:System.Activities.Statements.TryCatch.Try%2A>, либо раздела <xref:System.Activities.Statements.TryCatch.Catches%2A>. Рабочие процессы, размещаемые <xref:System.Activities.WorkflowApplication> экземпляр может также использовать <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> обработчик событий для обработки исключений, которые не обрабатываются <xref:System.Activities.Statements.TryCatch> действия.  
@@ -51,6 +51,7 @@ ms.locfileid: "57717275"
  Отличие между обработкой исключений и компенсацией заключается в том, что обработка исключений имеет место во время выполнения действия. Компенсация имеет место после успешного завершения действия. Обработка исключений предоставляет возможность выполнить очистку после того, как действие вызывает исключение, в то время как компенсация обеспечивает механизм, с помощью которого можно отменить успешно завершенную работу ранее завершенного действия. Дополнительные сведения см. в разделе [компенсации](compensation.md).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Activities.Statements.TryCatch>
 - <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>
 - <xref:System.Activities.Statements.CompensableActivity>

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], types
 - controls [Windows Forms], creating
 ms.assetid: 5235fe9d-c36a-4c08-ae76-6cb90b50085e
-ms.openlocfilehash: b488997558d81c05307411d8b7fbf5b59100f9ea
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 5dc734997917af7ec4a20a6c12ae04825507c7ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717713"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098459"
 ---
 # <a name="control-type-recommendations"></a>Рекомендации относительно типов элементов управления
 Платформа .NET Framework предоставляет возможности разработки и реализации новых элементов управления. Помимо обычных пользовательских элементов, теперь можно создавать нестандартные элементы управления с собственным оформлением, а также расширять функциональный диапазон существующих элементов управления путем наследования. Выбор типа создаваемого элемента управления может быть затруднителен. В этом разделе описываются различия между типами элементов управления, которые можно наследовать, а также даются рекомендации касательно того, как выбрать тип для конкретного проекта.  
@@ -45,40 +45,41 @@ ms.locfileid: "57717713"
   
 -   — если требуется реализовать пользовательские функциональные возможности, которые недоступны в стандартных элементах управления.  
   
--   [Практическое руководство. Отображение элемента управления в Выбор элементов панели элементов-диалоговое окно](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
+-   [Практическое руководство. Отображение элемента управления в диалоговом окне выбора элементов панели элементов](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
   
--   [Пошаговое руководство: Сериализация коллекций стандартных типов с использованием атрибута DesignerSerializationVisibilityAttribute](serializing-collections-designerserializationvisibilityattribute.md)  
+-   [Пошаговое руководство. Сериализация коллекций стандартных типов с использованием атрибута DesignerSerializationVisibilityAttribute](serializing-collections-designerserializationvisibilityattribute.md)  
   
--   [Пошаговое руководство: Наследование элементов управления Windows Forms с помощью VisualC#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
+-   [Пошаговое руководство. Наследование элементов управления Windows Forms с помощью Visual C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
   
 -   [Практическое руководство. Предоставление точечного рисунка панели элементов для элемента управления](how-to-provide-a-toolbox-bitmap-for-a-control.md)  
   
--   [Практическое руководство. Наследование Windows существующих элементов управления формы](how-to-inherit-from-existing-windows-forms-controls.md)  
+-   [Практическое руководство. Наследование существующих элементов управления Windows Forms](how-to-inherit-from-existing-windows-forms-controls.md)  
   
--   [Пошаговое руководство: Отладка пользовательских элементов управления Windows Forms во время разработки](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
+-   [Пошаговое руководство. Отладка пользовательских элементов управления Windows Forms во время разработки](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
   
--   [Практическое руководство. Наследовать от класса Control](how-to-inherit-from-the-control-class.md)  
+-   [Практическое руководство. Наследование класса Control](how-to-inherit-from-the-control-class.md)  
   
--   [Практическое руководство. Тестирование во время выполнения поведения элемента UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
+-   [Практическое руководство. Тестирование поведения элемента UserControl во время выполнения](how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
   
--   [Практическое руководство. Выравнивание элементов управления по границам формы во время разработки](how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)  
+-   [Практическое руководство. Выравнивание элементов управления по границам формы во время выполнения](how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)  
   
 -   [Практическое руководство. Наследование класса UserControl](how-to-inherit-from-the-usercontrol-class.md)  
   
--   [Практическое руководство. Автор элементы управления для форм Windows Forms](how-to-author-controls-for-windows-forms.md)  
+-   [Практическое руководство. Создание элементов управления для форм Windows Forms](how-to-author-controls-for-windows-forms.md)  
   
 -   [Практическое руководство. Создание составных элементов управления](how-to-author-composite-controls.md)  
   
--   [Пошаговое руководство: Создание составного элемента управления с помощью Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)  
+-   [Пошаговое руководство. Создание составного элемента управления с помощью Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)  
   
--   [Пошаговое руководство: Создание составного элемента управления с помощью VisualC#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
+-   [Пошаговое руководство. Создание составного элемента управления с помощью C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
   
--   [Пошаговое руководство: Наследование элементов управления Windows Forms с помощью Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
+-   [Пошаговое руководство. Наследование элементов управления Windows Forms с помощью Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
   
--   [Пошаговое руководство: Создание элемента управления Windows Forms, используются преимущества функций Visual Studio во время разработки](creating-a-wf-control-design-time-features.md)  
+-   [Пошаговое руководство. Создание элемента управления Windows Forms, в котором используются преимущества функций Visual Studio, применяемых во время разработки](creating-a-wf-control-design-time-features.md)  
   
 -   [Практическое руководство. Создание элемента управления Windows Forms, используются преимущества функций времени разработки](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))  
   
 ## <a name="see-also"></a>См. также
-- [Практическое руководство. Разработка элемента управления простого Windows Forms](how-to-develop-a-simple-windows-forms-control.md)
-- [Разновидности пользовательских элементов управления](varieties-of-custom-controls.md)
+
+- [Практическое руководство. Разработка простого элемента управления форм Windows Forms](how-to-develop-a-simple-windows-forms-control.md)
+- [Создание собственных элементов управления](varieties-of-custom-controls.md)

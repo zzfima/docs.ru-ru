@@ -9,12 +9,12 @@ helpviewer_keywords:
 - clearing bindings [WPF]
 - data binding [WPF], clearing bindings
 ms.assetid: 73962a93-32a9-4bcd-9240-bcfbb239093a
-ms.openlocfilehash: 8bffc34864a2bf929bcbed09f16eac282e1ba2a5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8140928d44555e399ddf4ebd73407a251ad3cffe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360239"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101423"
 ---
 # <a name="how-to-clear-bindings"></a>Практическое руководство. Очистка привязок
 В этом примере показано, как удалять привязки к объекту.  
@@ -30,6 +30,7 @@ ms.locfileid: "57360239"
  Чтобы удалить привязки из всех возможных свойств объекта, используйте <xref:System.Windows.Data.BindingOperations.ClearAllBindings%2A>.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Data.BindingOperations>
 - [Общие сведения о привязке данных](data-binding-overview.md)
-- [Разделы практического руководства](data-binding-how-to-topics.md)
+- [Практические руководства](data-binding-how-to-topics.md)

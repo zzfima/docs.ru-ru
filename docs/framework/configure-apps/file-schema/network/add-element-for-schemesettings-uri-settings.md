@@ -1,13 +1,13 @@
 ---
-title: Элемент <add> для schemeSettings (Параметры URI)
+title: <add> Элемент для schemeSettings (параметры Uri)
 ms.date: 03/30/2017
 ms.assetid: 594a7b3b-af23-4cfa-b616-0b2dddb1a705
-ms.openlocfilehash: 672d279f35db64bec7f5b26bd1930d7048c406f1
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e7606a1185d406384a926ca4dcb7c42586461574
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279592"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139936"
 ---
 # <a name="add-element-for-schemesettings-uri-settings"></a>\<Добавить > элемент для schemeSettings (параметры Uri)
 Добавляет параметр схемы для имени схемы.  
@@ -37,7 +37,7 @@ ms.locfileid: "55279592"
   
 ## <a name="attribute-name-attribute"></a>{Атрибут name} Атрибут  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |genericUriParserOptions|Параметры средства синтаксического анализа для этой схемы. Поддерживается только значение genericUriParserOptions = «DontUnescapePathDotsAndSlashes».|  
   
@@ -46,9 +46,9 @@ ms.locfileid: "55279592"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
-|[Элемент \<schemeSettings> (параметры URI)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Определяет, как <xref:System.Uri> анализируется для определенных схем.|  
+|[\<schemeSettings > (параметры Uri)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Определяет, как <xref:System.Uri> анализируется для определенных схем.|  
   
 ## <a name="remarks"></a>Примечания  
  По умолчанию <xref:System.Uri?displayProperty=nameWithType> знаком процента Отмена переходов класс разделители пути до выполнения сжатия пути. Это было реализовано в качестве механизма защиты от атак, следующим образом:  
@@ -82,6 +82,7 @@ ms.locfileid: "55279592"
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>
 - <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>
 - <xref:System.Configuration.UriSection?displayProperty=nameWithType>

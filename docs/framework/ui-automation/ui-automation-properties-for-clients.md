@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties, UI Automation clients
 - UI Automation, client properties
 ms.assetid: 255905af-0b17-485c-93d4-8a2db2a6524b
-ms.openlocfilehash: 0bfd07788bd8d2ebf028865478b0db6fb86c2f46
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: a75b502dc02f0541b9debb6cd1ae23ba10eed8b1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677296"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116367"
 ---
 # <a name="ui-automation-properties-for-clients"></a>Свойства автоматизации пользовательского интерфейса для клиентов
 > [!NOTE]
@@ -25,7 +25,7 @@ ms.locfileid: "57677296"
   
  Шаблоны элементов управления также обладают свойствами. Свойства шаблонов элементов управления относятся к конкретному шаблону. Например, <xref:System.Windows.Automation.ScrollPattern> имеет свойства, которые позволяют клиентскому приложению обнаружить, является ли окно горизонтально или вертикально прокручиваемым, а также размеры текущего представления и позиции прокрутки. Шаблоны элементов управления предоставляют все свои свойства через структуру; например <xref:System.Windows.Automation.ScrollPattern.ScrollPatternInformation>.  
   
- Свойства[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] предназначены только для чтения. Чтобы задать свойства элемента управления, вы должны использовать методы соответствующего шаблона элемента управления. Например, используйте метод <xref:System.Windows.Automation.ScrollPattern.Scroll%2A> для изменения значений позиции прокручиваемого окна.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] свойства доступны только для чтения. Чтобы задать свойства элемента управления, вы должны использовать методы соответствующего шаблона элемента управления. Например, используйте метод <xref:System.Windows.Automation.ScrollPattern.Scroll%2A> для изменения значений позиции прокручиваемого окна.  
   
  Для повышения производительности значения свойств и шаблоны элементов управления могут кэшироваться при получении объектов <xref:System.Windows.Automation.AutomationElement> . Дополнительные сведения см. в разделе [кэширование в клиентах автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md).  
   
@@ -104,6 +104,7 @@ ms.locfileid: "57677296"
 |<xref:System.Windows.Automation.AutomationElement.RootElement%2A>|(Статическое свойство) Корневой <xref:System.Windows.Automation.AutomationElement>, имеющий фокус ввода.|  
   
 ## <a name="see-also"></a>См. также
+
 - [Кэширование в клиентах автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)
 - [Реализация поставщика автоматизации пользовательского интерфейса на стороне сервера](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
 - [Подписка на события модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)

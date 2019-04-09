@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: fba62a55-36bd-401e-bcd2-5be8e2d34891
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 918b4f8c42b21878fa7eae5c79ae1171ef3e6b29
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 487f3d7b31e0b7bd09dbaff7b823678118f68092
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54739450"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118239"
 ---
 # <a name="ialink2-interface"></a>Интерфейс IALink2
 Дополняет [интерфейс IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md) путем объявления методов, которые выполняются на более новые интерфейсы метаданных, например [интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md). Кроме того IALink2 объявляет методы, предоставляющие дополнительную гибкость использования над интерфейсами IALink.  
@@ -42,6 +42,7 @@ ms.locfileid: "54739450"
  [Метод SetPEKind](../../../../docs/framework/unmanaged-api/alink/setpekind-method.md)  
   
 ## <a name="see-also"></a>См. также
+
 - [API ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
 - [Интерфейс IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [Al.exe (компоновщик сборок)](../../../../docs/framework/tools/al-exe-assembly-linker.md)

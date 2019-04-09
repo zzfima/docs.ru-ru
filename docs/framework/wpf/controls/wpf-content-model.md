@@ -11,25 +11,23 @@ helpviewer_keywords:
 - arbitrary content classes [WPF], content model
 - ContentControl class [WPF], displaying content
 ms.assetid: 214da5ef-547a-4cf8-9b07-4aa8a0e52cdd
-ms.openlocfilehash: 6cbb13fdcba2cf014c4c31a5dc5b21fe2721b214
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4f866e0366a7781c287b3ebae7b668c2b296a5cc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816919"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134612"
 ---
 # <a name="wpf-content-model"></a>Модель содержимого WPF
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] — это презентационная платформа, которая предоставляет множество элементов и типов, схожих с элементами управления, основное предназначение которых — отображение различных типов содержимого. Чтобы определить, какой элемент управления использовать или от какого элемента управления выполнять наследование, вы должны понимать, какие виды объектов лучше всего может отображать конкретный элемент управления.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] — это презентационная платформа, которая предоставляет множество элементов и типов, схожих с элементами управления основной целью которого является отображение различных типов содержимого. Чтобы определить, какой элемент управления использовать или от какого элемента управления выполнять наследование, вы должны понимать, какие виды объектов лучше всего может отображать конкретный элемент управления.  
   
  В этом разделе приводятся обобщенные сведения о модели содержимого для элементов управления [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и типов, схожих с элементами управления. Модель содержимого описывает, какое содержимое может использоваться в элементе управления. Также в этом разделе перечисляются свойства содержимого для каждой модели содержимого. Свойство содержимого — это свойство, которое используется для хранения содержимого объекта.  
-  
- 
-  
+
 <a name="classes_that_contain_arbitrary_content"></a>   
 ## <a name="classes-that-contain-arbitrary-content"></a>Классы с произвольным содержимым  
  Некоторые элементы управления могут содержать объекты любого типа, например строку, <xref:System.DateTime> объекта, или <xref:System.Windows.UIElement> являющийся контейнером для дополнительных элементов. Например <xref:System.Windows.Controls.Button> может содержать изображение и некоторый текст; или <xref:System.Windows.Controls.CheckBox> может содержать значение <xref:System.DateTime.Now%2A?displayProperty=nameWithType>.  
   
- В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] имеется четыре класса, которые могут иметь произвольное содержимое. В следующей таблице перечислены классы, которые наследуют от <xref:System.Windows.Controls.Control>.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] имеется четыре класса, которые могут содержать произвольное содержимое. В следующей таблице перечислены классы, которые наследуют от <xref:System.Windows.Controls.Control>.  
   
 |Класс с произвольным содержимым|Content|  
 |-------------------------------------------|-------------|  
@@ -250,4 +248,5 @@ ms.locfileid: "58816919"
  <xref:System.Windows.Documents.TextElement> и связанные с ним классы позволяют вам форматировать текст. <xref:System.Windows.Documents.TextElement> объекты содержат и форматируют текст в <xref:System.Windows.Controls.TextBlock> и <xref:System.Windows.Documents.FlowDocument> объектов. Два основных типа <xref:System.Windows.Documents.TextElement> объекты являются <xref:System.Windows.Documents.Block> элементов и <xref:System.Windows.Documents.Inline> элементов. Объект <xref:System.Windows.Documents.Block> представляет блок текста, например, абзац или список. <xref:System.Windows.Documents.Inline> Элемент представляет собой часть текста в блоке. Многие <xref:System.Windows.Documents.Inline> классы задают форматирование текста, к которому они применяются. Каждый <xref:System.Windows.Documents.TextElement> имеет собственную модель содержимого. Подробнее см. в разделе [Общие сведения о модели содержимого TextElement](../advanced/textelement-content-model-overview.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Дополнительно](../advanced/index.md)

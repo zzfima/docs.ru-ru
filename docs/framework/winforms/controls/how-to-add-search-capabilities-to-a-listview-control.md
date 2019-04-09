@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Добавление возможностей поиска в элемент управления ListView
+title: Практическое руководство. Добавление в элемент управления ListView возможностей поиска
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding search capabilities
 - searching [Windows Forms], adding search capabilities to ListView control
 ms.assetid: 557782d9-b705-4bab-b496-9938afddac82
-ms.openlocfilehash: c25349d4ab981d422ade93944f709c3068a7aba9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: c1c59c3d4bb5d0d35103371575ebdd49d3559bbe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722388"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108554"
 ---
-# <a name="how-to-add-search-capabilities-to-a-listview-control"></a>Практическое руководство. Добавление возможностей поиска в элемент управления ListView
+# <a name="how-to-add-search-capabilities-to-a-listview-control"></a>Практическое руководство. Добавление в элемент управления ListView возможностей поиска
 Иногда при работе с большой список элементов в <xref:System.Windows.Forms.ListView> элемента управления, необходимо предоставить пользователям возможности поиска. <xref:System.Windows.Forms.ListView> Управления обеспечивает такую функцию двумя разными способами: совпадений текста и поиск расположения.  
   
  <xref:System.Windows.Forms.ListView.FindItemWithText%2A> Метод позволяет выполнять поиск текста на <xref:System.Windows.Forms.ListView> в представлении списка или подробных сведений, учитывая строку поиска и необязательного начального и конечного индекса. Напротив <xref:System.Windows.Forms.ListView.FindNearestItem%2A> метод позволяет находить элементы в <xref:System.Windows.Forms.ListView> в представлении значок или элемент, определенный набор координат x и y и направление для поиска.  
@@ -48,6 +48,7 @@ ms.locfileid: "57722388"
  [!code-vb[System.Windows.Forms.ListViewFindItems#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewFindItems/VB/form1.vb#2)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListView.FindItemWithText%2A>
 - <xref:System.Windows.Forms.ListView.FindNearestItem%2A>

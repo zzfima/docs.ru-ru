@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, user input
 ms.assetid: 9d61fa96-70f7-4754-885a-49a4a6316bdb
-ms.openlocfilehash: 351c1e42bb775331cbe0e2005b6bea284716de75
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0eb39f0ecd8fcd12918b38bd77fed2ff32cac1d8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711932"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124154"
 ---
 # <a name="user-input-in-a-windows-forms-application"></a>Ввод данных пользователем в приложении Windows Forms
 В Windows Forms ввод данных пользователем отправляется к приложениям в форме сообщений Windows. Серии переопределяемых методов обработки таких сообщений в приложения, формы и управлять уровнем. Когда эти методы получают сообщения клавиатуры и мыши, они вызывают события, которые могут обрабатываться для получения сведения о мыши или клавиатуры входных данных. Во многих случаях приложения Windows Forms смогут обработать все входные данные пользователя путем обработки этих событий. В других случаях приложение может потребоваться переопределить один из методов, которые обрабатывают сообщения для перехвата определенного сообщения, прежде чем их получения приложением, формы или элемента управления.  
@@ -31,6 +31,7 @@ ms.locfileid: "57711932"
  Сообщения клавиатуры и мыши также обрабатываются дополнительный набор переопределяемых методов, характерные для этих типов сообщений. Дополнительные сведения см. в разделе [принцип работы ввода с клавиатуры](how-keyboard-input-works.md) и [принцип работы мыши ввода в Windows Forms](how-mouse-input-works-in-windows-forms.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Ввод данных пользователем в Windows Forms](user-input-in-windows-forms.md)
 - [Ввод с клавиатуры в приложении Windows Forms](keyboard-input-in-a-windows-forms-application.md)
 - [Ввод данных мышью в приложении Windows Forms](mouse-input-in-a-windows-forms-application.md)

@@ -10,12 +10,12 @@ api_type:
 ms.assetid: d60f19fe-7bec-47ba-b60e-ba9ce66abf8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 640940cea30b489683972debdd14b592d565ef4b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 49476a4417e5431842f8e2ba0371c53c5c9f03e9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57469695"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207829"
 ---
 # <a name="axlrsakeyvaluetopublickeytoken-function"></a>\_Функция AxlRSAKeyValueToPublicKeyToken
 
@@ -42,7 +42,8 @@ HRESULT _AxlRSAKeyValueToPublicKeyToken (
  [из] Указатель на WCHAR * для получения шестнадцатеричного кодированного маркера открытого ключа.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `S_OK`, если функция выполняется успешно. В противном случае возвращается код ошибки.  
+ `S_OK` Если функция выполняется успешно. В противном случае возвращается код ошибки.  
   
 ## <a name="see-also"></a>См. также
+
 - [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)

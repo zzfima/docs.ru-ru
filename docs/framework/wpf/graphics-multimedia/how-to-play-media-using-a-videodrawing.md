@@ -1,18 +1,18 @@
 ---
-title: Практическое руководство. Воспроизведение мультимедиа с помощью VideoDrawing
+title: Практическое руководство. Воспроизведение мультимедиа с помощью объекта VideoDrawing
 ms.date: 03/30/2017
 helpviewer_keywords:
 - playback of media [WPF]
 - classes [WPF], MediaPlayer
 ms.assetid: 165d47ed-22ce-4ded-aa6a-aa9b7467de87
-ms.openlocfilehash: 2397662c79af208f2528f6eedcd5995cfac9526c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 186c9ae8167dafd09f029418c1d23f81f7a9e906
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363102"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203617"
 ---
-# <a name="how-to-play-media-using-a-videodrawing"></a>Практическое руководство. Воспроизведение мультимедиа с помощью VideoDrawing
+# <a name="how-to-play-media-using-a-videodrawing"></a>Практическое руководство. Воспроизведение мультимедиа с помощью объекта VideoDrawing
 Для воспроизведения аудио-или видео, используйте <xref:System.Windows.Media.VideoDrawing> и <xref:System.Windows.Media.MediaPlayer>. Есть два способа загрузки и воспроизведения мультимедиа. Первый заключается в использовании <xref:System.Windows.Media.MediaPlayer> и <xref:System.Windows.Media.VideoDrawing> , а второй способ состоит в создании собственных <xref:System.Windows.Media.MediaTimeline> для использования с <xref:System.Windows.Media.MediaPlayer> и <xref:System.Windows.Media.VideoDrawing>.  
   
 > [!NOTE]
@@ -33,5 +33,6 @@ ms.locfileid: "57363102"
  Обратите внимание, что при использовании <xref:System.Windows.Media.MediaTimeline>, интерактивный <xref:System.Windows.Media.Animation.ClockController> возвращаемые <xref:System.Windows.Media.Animation.Clock.Controller%2A> свойство <xref:System.Windows.Media.MediaClock> для управления воспроизведением мультимедиа, а не интерактивные методы <xref:System.Windows.Media.MediaPlayer>.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Media.VideoDrawing>
 - [Обзор объектов Drawing](drawing-objects-overview.md)

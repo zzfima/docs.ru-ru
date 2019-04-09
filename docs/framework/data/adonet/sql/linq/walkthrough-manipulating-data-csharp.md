@@ -2,12 +2,12 @@
 title: Пошаговое руководство. Обработка данных (C#)
 ms.date: 03/30/2017
 ms.assetid: 24adfbe0-0ad6-449f-997d-8808e0770d2e
-ms.openlocfilehash: a4346479337820f33cc908c0fd191ee7258a3db6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 2a4b9fc5bf9afcace373a3f09b246e2bffd49e3d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637311"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143290"
 ---
 # <a name="walkthrough-manipulating-data-c"></a>Пошаговое руководство. Обработка данных (C#)
 В данном руководстве представлен основной и полный сценарий [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] по добавлению, изменению и удалению данных в базе данных. Для добавления клиента, изменения его имени и удаления заказа следует использовать копию учебной базы данных Northwind.  
@@ -162,4 +162,5 @@ ms.locfileid: "54637311"
 >  После добавления нового клиента путем отправки изменений это решение нельзя повторно выполнить в исходном виде. Для повторного выполнения решения измените имя клиента и значение идентификатора добавляемого клиента.  
   
 ## <a name="see-also"></a>См. также
+
 - [Обучение с использованием пошаговых руководств](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

@@ -1,17 +1,17 @@
 ---
-title: Как выполнить Использование моникера службы Windows Communication Foundation без регистрации
+title: Практическое руководство. Использование моникера службы Windows Communication Foundation без регистрации
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], service monikers without registration
 ms.assetid: ee3cf5c0-24f0-4ae7-81da-73a60de4a1a8
-ms.openlocfilehash: 3ce388da75711ab1378ce59575c067cf828089e8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: be4798663d0b39301ec496df45a4a7a5bf9c88e5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615284"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203981"
 ---
-# <a name="how-to-use-the-windows-communication-foundation-service-moniker-without-registration"></a>Как выполнить Использование моникера службы Windows Communication Foundation без регистрации
+# <a name="how-to-use-the-windows-communication-foundation-service-moniker-without-registration"></a>Практическое руководство. Использование моникера службы Windows Communication Foundation без регистрации
 Для подключения и взаимодействия со службой Windows Communication Foundation (WCF), клиентское приложение WCF необходимо иметь сведения о адрес службы, конфигурация привязки и контракта службы.  
   
  Моникер службы WCF обычно получает требуемый контракт посредством предварительной регистрации требуемых типов атрибутов, но может возникнуть ситуация, где это нецелесообразно. Вместо регистрации моникер может получать определение контракта в виде документа на языке WSDL - путем использования параметра `wsdl` или с помощью обмена метаданными (MEX), путем использования параметра `mexAddress`.  
@@ -58,4 +58,5 @@ binding=WSHttpBinding_IAffiliate, bindingNamespace=http://tempuri.org/
 >  Если моникер сформирован неправильно или служба недоступна, при вызове метода `GetObject` будет возвращена ошибка "Синтаксическая ошибка". При получении этой ошибки убедитесь, что используется правильный моникер, а служба доступна.  
   
 ## <a name="see-also"></a>См. также
+
 - [Практическое руководство. Регистрация и настройка моникера службы](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)

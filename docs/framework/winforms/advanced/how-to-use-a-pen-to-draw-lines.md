@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. С помощью пера для рисования линий
+title: Практическое руководство. Рисование линий с помощью пера
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing
 - pens [Windows Forms], drawing lines
 ms.assetid: 0828c331-a438-4bdd-a4d6-3ef1e59e8795
-ms.openlocfilehash: 3af91611eef4b97dc3461ad8cd7e36c7aa10a16f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8b4eb7684e15ffd5b0b528771490ba66f3b7bb45
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713375"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156524"
 ---
-# <a name="how-to-use-a-pen-to-draw-lines"></a>Практическое руководство. С помощью пера для рисования линий
+# <a name="how-to-use-a-pen-to-draw-lines"></a>Практическое руководство. Рисование линий с помощью пера
 Чтобы рисовать линии, вам потребуется <xref:System.Drawing.Graphics> объекта и <xref:System.Drawing.Pen> объекта. <xref:System.Drawing.Graphics> Предоставляет <xref:System.Drawing.Graphics.DrawLine%2A> метод и <xref:System.Drawing.Pen> объект сохраняет функции, строки, таких как цвет и ширину.  
   
 ## <a name="example"></a>Пример  
@@ -25,9 +25,10 @@ ms.locfileid: "57713375"
  [!code-vb[System.Drawing.UsingAPen#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Предыдущий пример предназначен для работы с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs> `e`, который является параметром обработчика события <xref:System.Windows.Forms.Control.Paint>.  
+ Предыдущий пример предназначен для работы с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs>`e`, который является параметром <xref:System.Windows.Forms.Control.Paint> обработчик событий.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Drawing.Pen>
 - [Рисование линий и фигур с помощью пера](using-a-pen-to-draw-lines-and-shapes.md)
 - [Перья, линии и прямоугольники в GDI+](pens-lines-and-rectangles-in-gdi.md)

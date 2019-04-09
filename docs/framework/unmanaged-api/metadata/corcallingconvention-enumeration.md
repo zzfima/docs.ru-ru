@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4c27669c8473bd52d3b82a14d570340ac38d1e07
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 44a4b5903cec2249eb1e176381fe3d8e600dd5e6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523250"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145877"
 ---
 # <a name="corcallingconvention-enumeration"></a>Перечисление CorCallingConvention
 Содержит значения, описывающие типы соглашений о вызовах, выполняемых в управляемом коде.  
@@ -76,4 +76,5 @@ typedef enum CorCallingConvention
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

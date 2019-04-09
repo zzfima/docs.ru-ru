@@ -15,12 +15,12 @@ helpviewer_keywords:
 - styles [WPF], triggers
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
-ms.openlocfilehash: bc77d6e32588f48d3a4e0dd841b98b8bc65ea4f5
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.openlocfilehash: 3fae4993a13b02ad998668f644a80ba7c07196fa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055330"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132303"
 ---
 # <a name="styling-and-templating"></a>Стилизация и использование шаблонов
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Стилизация и использование шаблонов относятся к набору возможностей (стили, шаблоны, триггеры и раскадровки), которые позволяют разработчикам и дизайнерам создавать визуально привлекательные эффекты и создавать согласованный внешний вид своего продукта. Несмотря на то что разработчики и дизайнеры могут создавать внешний вид отдельно для каждого приложения, надежная модель стилизации и использования шаблонов необходима для поддержки и совместного использования внешнего вида как внутри одного приложения, так и в ряде приложений. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет такую модель.  
@@ -197,6 +197,7 @@ ms.locfileid: "59055330"
  Если вы создаете тему для пользовательского элемента управления, ознакомьтесь с разделом "Внешняя библиотека элементов управления" в материале [Общие сведения о разработке элементов управления](control-authoring-overview.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [URI типа "pack" в WPF](../app-development/pack-uris-in-wpf.md)
 - [Практическое руководство. Поиск элемента, созданного шаблоном ControlTemplate](how-to-find-controltemplate-generated-elements.md)
 - [Поиск элементов, созданных с использованием шаблона DataTemplate](../data/how-to-find-datatemplate-generated-elements.md)

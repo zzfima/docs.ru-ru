@@ -2,12 +2,12 @@
 title: Допускающие значения null структурированные типы (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ae006fa9-997e-45bb-8a04-a7f62026171e
-ms.openlocfilehash: c4b0584283e179be2661e518d5bb350b536b058f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 632b092e1d0d99a2a40cc3cd4b323e234de6232b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731768"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127859"
 ---
 # <a name="nullable-structured-types-entity-sql"></a>Допускающие значения null структурированные типы (Entity SQL)
 Экземпляр `null` структурированного типа - несуществующий экземпляр. Это отличается от существующего экземпляра, все свойства которого имеют значения `null`.  
@@ -15,7 +15,7 @@ ms.locfileid: "54731768"
  В этом разделе описаны структурированные типы, допускающие значение NULL, с указанием, какие типы допускают значение NULL и какие последовательности программного кода формируют экземпляры `null` структурированных типов, допускающих значение NULL.  
   
 ## <a name="kinds-of-nullable-structured-types"></a>Разновидности структурированных типов, допускающих значение NULL  
- Существует три разновидности структурированных типов, допускающих значение NULL:  
+ Существует три разновидности типов структуры, допускающие значение NULL.  
   
 -   Типы строк.  
   
@@ -89,4 +89,5 @@ ms.locfileid: "54731768"
     ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения об Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

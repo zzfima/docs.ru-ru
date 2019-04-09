@@ -2,12 +2,12 @@
 title: Сопоставление типов SQL-CLR
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-ms.openlocfilehash: 5c8c6456d108975ec927e28ac80c8dcca1567b46
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a2c70f5243dc3506a26824c83beb3ff454482f10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617347"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152494"
 ---
 # <a name="sql-clr-type-mapping"></a>Сопоставление типов SQL-CLR
 В LINQ to SQL модель данных реляционной базы данных сопоставляется с моделью объектов, выраженной на выбранном языке программирования. При выполнении приложения LINQ to SQL преобразует запросы LINQ модели объектов в код SQL и направляет их в базу данных для выполнения. Когда база данных возвращает результаты, LINQ to SQL преобразует их обратно в объекты, с которыми можно работать на языке программирования.  
@@ -18,9 +18,9 @@ ms.locfileid: "54617347"
   
 -   [Сопоставление типов по умолчанию](#DefaultTypeMapping)  
   
--   [Таблица поведения во время выполнения сопоставления типов](#BehaviorMatrix)  
+-   [Таблица правил сопоставления типов во время выполнения](#BehaviorMatrix)  
   
--   [Различия в поведении между CLR и выполнения SQL](#BehaviorDiffs)  
+-   [Различия при выполнении в среде CLR и на SQL Server](#BehaviorDiffs)  
   
 -   [Сопоставление перечислений](#EnumMapping)  
   
@@ -104,7 +104,7 @@ ms.locfileid: "54617347"
   
  В следующей таблице показано сопоставление типов по умолчанию, используемое методом <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> для определения типов столбцов SQL, которые должны создаваться в соответствии с типами CLR, определенными в модели объектов или во внешнем файле сопоставления.  
   
-|Тип CLR|Тип SQL Server, по умолчанию используемый методом <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
+|Тип CLR|По умолчанию используется тип SQL Server <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Boolean?displayProperty=nameWithType>|`BIT`|  
 |<xref:System.Byte?displayProperty=nameWithType>|`TINYINT`|  
@@ -142,12 +142,12 @@ ms.locfileid: "54617347"
   
  В следующей таблице показано сопоставление типов по умолчанию, используемое методом <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> для определения типов столбцов SQL, которые должны создаваться в соответствии с типами CLR, определенными в модели объектов или во внешнем файле сопоставления.  
   
-|Тип CLR|Тип SQL Server, по умолчанию используемый методом <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
+|Тип CLR|По умолчанию используется тип SQL Server <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Char?displayProperty=nameWithType>|`NCHAR(1)`|  
 |<xref:System.String?displayProperty=nameWithType>|`NVARCHAR(4000)`|  
 |<xref:System.Char?displayProperty=nameWithType>[]|`NVARCHAR(4000)`|  
-|Пользовательский тип, реализующий методы `Parse()` и `ToString()`|`NVARCHAR(MAX)`|  
+|Пользовательский тип, реализующий `Parse()` и `ToString()`|`NVARCHAR(MAX)`|  
   
  Можно выбрать множество других текстовых сопоставлений и сопоставлений XML, но некоторые из них могут вызвать исключения переполнения или потери данных в процессе преобразования данных в базу или из базы данных. Дополнительные сведения см. в разделе [тип сопоставления поведение таблица во время выполнения](#BehaviorMatrix).  
   
@@ -185,7 +185,7 @@ ms.locfileid: "54617347"
   
  В следующей таблице показано сопоставление типов по умолчанию, используемое методом <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> для определения типов столбцов SQL, которые должны создаваться в соответствии с типами CLR, определенными в модели объектов или во внешнем файле сопоставления.  
   
-|Тип CLR|Тип SQL Server, по умолчанию используемый методом <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
+|Тип CLR|По умолчанию используется тип SQL Server <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.DateTime?displayProperty=nameWithType>|`DATETIME`|  
 |<xref:System.DateTimeOffset?displayProperty=nameWithType>|`DATETIMEOFFSET`|  
@@ -199,7 +199,7 @@ ms.locfileid: "54617347"
 ### <a name="systemdatetime"></a>System.Datetime  
  Диапазон и точность типа CLR <xref:System.DateTime?displayProperty=nameWithType> превышают диапазон и точность типа SQL Server `DATETIME`, с которым по умолчанию выполняется сопоставление в методе <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>. Чтобы избежать исключений, связанных с датами вне диапазона `DATETIME`, используйте тип `DATETIME2`, который доступен, начиная с версии Microsoft SQL Server 2008. `DATETIME2` можно сопоставить диапазон и точность типа CLR <xref:System.DateTime?displayProperty=nameWithType>.  
   
- В датах SQL Server не учитывается часовой пояс (<xref:System.TimeZone>), который имеет широкую поддержку в среде CLR. Значения <xref:System.TimeZone> сохраняются в базе данных без изменений и без преобразования <xref:System.TimeZone>, независимо от исходных данных <xref:System.DateTimeKind>. Когда значения <xref:System.DateTime> получаются из базы данных, они загружаются в <xref:System.DateTime> без изменений, а <xref:System.DateTimeKind> получает значение <xref:System.DateTimeKind.Unspecified>. Дополнительные сведения о поддерживаемых <xref:System.DateTime?displayProperty=nameWithType> методы, см. в разделе [методы System.DateTime](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md).  
+ В датах SQL Server не учитывается часовой пояс (<xref:System.TimeZone>), который имеет широкую поддержку в среде CLR. <xref:System.TimeZone> значения сохраняются в базу данных без <xref:System.TimeZone> преобразования, независимо от исходных <xref:System.DateTimeKind> сведения. Когда значения <xref:System.DateTime> получаются из базы данных, они загружаются в <xref:System.DateTime> без изменений, а <xref:System.DateTimeKind> получает значение <xref:System.DateTimeKind.Unspecified>. Дополнительные сведения о поддерживаемых <xref:System.DateTime?displayProperty=nameWithType> методы, см. в разделе [методы System.DateTime](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md).  
   
 ### <a name="systemtimespan"></a>System.TimeSpan  
  Microsoft SQL Server 2008 и платформа .NET Framework 3.5 с пакетом обновления 1 (SP1) позволяют сопоставлять тип CLR <xref:System.TimeSpan?displayProperty=nameWithType> с типом SQL Server `TIME`. Однако между типом CLR <xref:System.TimeSpan?displayProperty=nameWithType> и типом SQL Server `TIME` существует большая разница в поддерживаемом диапазоне. Сопоставление значений (меньше 0 или больше 23:59:59.9999999 часов) с типом SQL `TIME` вызовет исключение переполнения. Дополнительные сведения см. в разделе [методы System.TimeSpan](../../../../../../docs/framework/data/adonet/sql/linq/system-timespan-methods.md).  
@@ -221,7 +221,7 @@ ms.locfileid: "54617347"
   
  В следующей таблице показано сопоставление типов по умолчанию, используемое методом <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> для определения типов столбцов SQL, которые должны создаваться в соответствии с типами CLR, определенными в модели объектов или во внешнем файле сопоставления.  
   
-|Тип CLR|Тип SQL Server, по умолчанию используемый методом <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
+|Тип CLR|По умолчанию используется тип SQL Server <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|`VARBINARY(MAX)`|  
 |<xref:System.Byte?displayProperty=nameWithType>|`VARBINARY(MAX)`|  
@@ -249,7 +249,7 @@ ms.locfileid: "54617347"
   
  В следующей таблице показано сопоставление типов по умолчанию, используемое методом <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> для определения типов столбцов SQL, которые должны создаваться в соответствии с типами CLR, определенными в модели объектов или во внешнем файле сопоставления.  
   
-|Тип CLR|Тип SQL Server, по умолчанию используемый методом <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
+|Тип CLR|По умолчанию используется тип SQL Server <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Guid?displayProperty=nameWithType>|`UNIQUEIDENTIFIER`|  
 |<xref:System.Object?displayProperty=nameWithType>|`SQL_VARIANT`|  
@@ -257,6 +257,7 @@ ms.locfileid: "54617347"
  LINQ to SQL не поддерживает для этих типов никаких других сопоставлений.  Дополнительные сведения см. в разделе [тип сопоставления поведение таблица во время выполнения](#BehaviorMatrix).  
   
 ## <a name="see-also"></a>См. также
+
 - [Сопоставление, основанное на атрибутах](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
 - [Внешнее сопоставление](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
 - [Типы данных и функции](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
