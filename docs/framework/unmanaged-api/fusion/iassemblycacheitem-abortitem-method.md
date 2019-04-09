@@ -17,28 +17,29 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b39728865e3c6fc676673a634cf16710f37652ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 59d785178f5c97dcd8e3911a2e51b4cc12f6a70f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618244"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120843"
 ---
-# <a name="iassemblycacheitemabortitem-method"></a><span data-ttu-id="4b1d7-102">Метод IAssemblyCacheItem::AbortItem</span><span class="sxs-lookup"><span data-stu-id="4b1d7-102">IAssemblyCacheItem::AbortItem Method</span></span>
-<span data-ttu-id="4b1d7-103">Позволяет сборку в глобальный кэш сборок для выполнения операции очистки, перед выпуском.</span><span class="sxs-lookup"><span data-stu-id="4b1d7-103">Allows the assembly in the global assembly cache to perform cleanup operations before it is released.</span></span>  
+# <a name="iassemblycacheitemabortitem-method"></a><span data-ttu-id="ec801-102">Метод IAssemblyCacheItem::AbortItem</span><span class="sxs-lookup"><span data-stu-id="ec801-102">IAssemblyCacheItem::AbortItem Method</span></span>
+<span data-ttu-id="ec801-103">Позволяет сборку в глобальный кэш сборок для выполнения операции очистки, перед выпуском.</span><span class="sxs-lookup"><span data-stu-id="ec801-103">Allows the assembly in the global assembly cache to perform cleanup operations before it is released.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4b1d7-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="4b1d7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ec801-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="ec801-104">Syntax</span></span>  
   
 ```  
 HRESULT AbortItem ();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="4b1d7-105">Требования</span><span class="sxs-lookup"><span data-stu-id="4b1d7-105">Requirements</span></span>  
- <span data-ttu-id="4b1d7-106">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4b1d7-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ec801-105">Требования</span><span class="sxs-lookup"><span data-stu-id="ec801-105">Requirements</span></span>  
+ <span data-ttu-id="ec801-106">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ec801-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4b1d7-107">**Заголовок.** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="4b1d7-107">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="ec801-107">**Заголовок.** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="ec801-107">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="4b1d7-108">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4b1d7-108">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="ec801-108">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="ec801-108">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="4b1d7-109">См. также</span><span class="sxs-lookup"><span data-stu-id="4b1d7-109">See also</span></span>
-- [<span data-ttu-id="4b1d7-110">Интерфейс IAssemblyCacheItem</span><span class="sxs-lookup"><span data-stu-id="4b1d7-110">IAssemblyCacheItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)
+## <a name="see-also"></a><span data-ttu-id="ec801-109">См. также</span><span class="sxs-lookup"><span data-stu-id="ec801-109">See also</span></span>
+
+- [<span data-ttu-id="ec801-110">Интерфейс IAssemblyCacheItem</span><span class="sxs-lookup"><span data-stu-id="ec801-110">IAssemblyCacheItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)

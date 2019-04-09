@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2b627a09db595cfbeb38aa605259eb42bdb77cc0
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: b9ffd9ab9ddb95945744ecf210d0ae1d9d9812ec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57477066"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125831"
 ---
-# <a name="imetadatatablesgetnumtables-method"></a><span data-ttu-id="ff045-102">Метод IMetaDataTables::GetNumTables</span><span class="sxs-lookup"><span data-stu-id="ff045-102">IMetaDataTables::GetNumTables Method</span></span>
-<span data-ttu-id="ff045-103">Получает количество таблиц в области текущего `IMetaDataTables` экземпляра.</span><span class="sxs-lookup"><span data-stu-id="ff045-103">Gets the number of tables in the scope of the current `IMetaDataTables` instance.</span></span>  
+# <a name="imetadatatablesgetnumtables-method"></a><span data-ttu-id="80cb9-102">Метод IMetaDataTables::GetNumTables</span><span class="sxs-lookup"><span data-stu-id="80cb9-102">IMetaDataTables::GetNumTables Method</span></span>
+<span data-ttu-id="80cb9-103">Получает количество таблиц в области текущего `IMetaDataTables` экземпляра.</span><span class="sxs-lookup"><span data-stu-id="80cb9-103">Gets the number of tables in the scope of the current `IMetaDataTables` instance.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ff045-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="ff045-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="80cb9-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="80cb9-104">Syntax</span></span>  
   
 ```  
 HRESULT GetNumTables (  
@@ -35,19 +35,20 @@ HRESULT GetNumTables (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ff045-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="ff045-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="80cb9-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="80cb9-105">Parameters</span></span>  
  `pcTables`  
- <span data-ttu-id="ff045-106">[out] Указатель на количество таблиц в области текущего экземпляра.</span><span class="sxs-lookup"><span data-stu-id="ff045-106">[out] A pointer to the number of tables in the current instance scope.</span></span>  
+ <span data-ttu-id="80cb9-106">[out] Указатель на количество таблиц в области текущего экземпляра.</span><span class="sxs-lookup"><span data-stu-id="80cb9-106">[out] A pointer to the number of tables in the current instance scope.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ff045-107">Требования</span><span class="sxs-lookup"><span data-stu-id="ff045-107">Requirements</span></span>  
- <span data-ttu-id="ff045-108">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ff045-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="80cb9-107">Требования</span><span class="sxs-lookup"><span data-stu-id="80cb9-107">Requirements</span></span>  
+ <span data-ttu-id="80cb9-108">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="80cb9-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ff045-109">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="ff045-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="80cb9-109">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="80cb9-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="ff045-110">**Библиотека:** Используется как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="ff045-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="80cb9-110">**Библиотека:** Используется как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="80cb9-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="ff045-111">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ff045-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="80cb9-111">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="80cb9-111">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="ff045-112">См. также</span><span class="sxs-lookup"><span data-stu-id="ff045-112">See also</span></span>
-- [<span data-ttu-id="ff045-113">Интерфейс IMetaDataTables</span><span class="sxs-lookup"><span data-stu-id="ff045-113">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [<span data-ttu-id="ff045-114">Интерфейс IMetaDataTables2</span><span class="sxs-lookup"><span data-stu-id="ff045-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="80cb9-112">См. также</span><span class="sxs-lookup"><span data-stu-id="80cb9-112">See also</span></span>
+
+- [<span data-ttu-id="80cb9-113">Интерфейс IMetaDataTables</span><span class="sxs-lookup"><span data-stu-id="80cb9-113">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="80cb9-114">Интерфейс IMetaDataTables2</span><span class="sxs-lookup"><span data-stu-id="80cb9-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0c5e1cc3b47c6752017db19f7981a3810d19aca4
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: b5015dc42497d269cdc2de944f14454558be6c07
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492144"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142991"
 ---
-# <a name="imetadataimportcountenum-method"></a><span data-ttu-id="f8fb7-102">Метод IMetaDataImport::CountEnum</span><span class="sxs-lookup"><span data-stu-id="f8fb7-102">IMetaDataImport::CountEnum Method</span></span>
-<span data-ttu-id="f8fb7-103">Получает число элементов в перечислении, которое было получено с помощью указанного перечислителя.</span><span class="sxs-lookup"><span data-stu-id="f8fb7-103">Gets the number of elements in the enumeration that was retrieved by the specified enumerator.</span></span>  
+# <a name="imetadataimportcountenum-method"></a><span data-ttu-id="af8f1-102">Метод IMetaDataImport::CountEnum</span><span class="sxs-lookup"><span data-stu-id="af8f1-102">IMetaDataImport::CountEnum Method</span></span>
+<span data-ttu-id="af8f1-103">Получает число элементов в перечислении, которое было получено с помощью указанного перечислителя.</span><span class="sxs-lookup"><span data-stu-id="af8f1-103">Gets the number of elements in the enumeration that was retrieved by the specified enumerator.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f8fb7-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f8fb7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="af8f1-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="af8f1-104">Syntax</span></span>  
   
 ```  
 HRESULT CountEnum (  
@@ -36,25 +36,26 @@ HRESULT CountEnum (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f8fb7-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="f8fb7-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="af8f1-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="af8f1-105">Parameters</span></span>  
  `hEnum`  
- <span data-ttu-id="f8fb7-106">[in] Дескриптор для перечислителя.</span><span class="sxs-lookup"><span data-stu-id="f8fb7-106">[in] The handle for the enumerator.</span></span>  
+ <span data-ttu-id="af8f1-106">[in] Дескриптор для перечислителя.</span><span class="sxs-lookup"><span data-stu-id="af8f1-106">[in] The handle for the enumerator.</span></span>  
   
  `pulCount`  
- <span data-ttu-id="f8fb7-107">[out] Число элементов, перечисленных.</span><span class="sxs-lookup"><span data-stu-id="f8fb7-107">[out] The number of elements enumerated.</span></span>  
+ <span data-ttu-id="af8f1-107">[out] Число элементов, перечисленных.</span><span class="sxs-lookup"><span data-stu-id="af8f1-107">[out] The number of elements enumerated.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f8fb7-108">Примечания</span><span class="sxs-lookup"><span data-stu-id="f8fb7-108">Remarks</span></span>  
- <span data-ttu-id="f8fb7-109">Дескриптор, указанный по `hEnum` получается из предыдущего `Enum` *имя* вызов (например, [IMetaDataImport::EnumTypeDefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)).</span><span class="sxs-lookup"><span data-stu-id="f8fb7-109">The handle specified by `hEnum` is obtained from a previous `Enum`*Name* call (for example, [IMetaDataImport::EnumTypeDefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="af8f1-108">Примечания</span><span class="sxs-lookup"><span data-stu-id="af8f1-108">Remarks</span></span>  
+ <span data-ttu-id="af8f1-109">Дескриптор, указанный по `hEnum` получается из предыдущего `Enum` *имя* вызов (например, [IMetaDataImport::EnumTypeDefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)).</span><span class="sxs-lookup"><span data-stu-id="af8f1-109">The handle specified by `hEnum` is obtained from a previous `Enum`*Name* call (for example, [IMetaDataImport::EnumTypeDefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f8fb7-110">Требования</span><span class="sxs-lookup"><span data-stu-id="f8fb7-110">Requirements</span></span>  
- <span data-ttu-id="f8fb7-111">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f8fb7-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="af8f1-110">Требования</span><span class="sxs-lookup"><span data-stu-id="af8f1-110">Requirements</span></span>  
+ <span data-ttu-id="af8f1-111">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="af8f1-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f8fb7-112">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="f8fb7-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="af8f1-112">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="af8f1-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="f8fb7-113">**Библиотека:** Включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="f8fb7-113">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="af8f1-113">**Библиотека:** Включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="af8f1-113">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="f8fb7-114">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f8fb7-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="af8f1-114">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="af8f1-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="f8fb7-115">См. также</span><span class="sxs-lookup"><span data-stu-id="f8fb7-115">See also</span></span>
-- [<span data-ttu-id="f8fb7-116">Интерфейс IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="f8fb7-116">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="f8fb7-117">Интерфейс IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="f8fb7-117">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="af8f1-115">См. также</span><span class="sxs-lookup"><span data-stu-id="af8f1-115">See also</span></span>
+
+- [<span data-ttu-id="af8f1-116">Интерфейс IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="af8f1-116">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="af8f1-117">Интерфейс IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="af8f1-117">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

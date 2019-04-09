@@ -17,33 +17,34 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1389d313cccf95f50e2ee7d99faf37d43b9ec3bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7e8a916116eb92fa1e71fc115fd468938fd92fb1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623824"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101462"
 ---
-# <a name="icorprofilermoduleenumreset-method"></a><span data-ttu-id="d5f66-102">Метод ICorProfilerModuleEnum::Reset</span><span class="sxs-lookup"><span data-stu-id="d5f66-102">ICorProfilerModuleEnum::Reset Method</span></span>
-<span data-ttu-id="d5f66-103">Перемещает курсор этот перечислитель в начальную позицию последовательности.</span><span class="sxs-lookup"><span data-stu-id="d5f66-103">Moves this enumerator's cursor to the starting position of the sequence.</span></span>  
+# <a name="icorprofilermoduleenumreset-method"></a><span data-ttu-id="8000a-102">Метод ICorProfilerModuleEnum::Reset</span><span class="sxs-lookup"><span data-stu-id="8000a-102">ICorProfilerModuleEnum::Reset Method</span></span>
+<span data-ttu-id="8000a-103">Перемещает курсор этот перечислитель в начальную позицию последовательности.</span><span class="sxs-lookup"><span data-stu-id="8000a-103">Moves this enumerator's cursor to the starting position of the sequence.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d5f66-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d5f66-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8000a-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="8000a-104">Syntax</span></span>  
   
 ```  
 HRESULT Reset();  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="d5f66-105">Примечания</span><span class="sxs-lookup"><span data-stu-id="d5f66-105">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8000a-105">Примечания</span><span class="sxs-lookup"><span data-stu-id="8000a-105">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d5f66-106">Требования</span><span class="sxs-lookup"><span data-stu-id="d5f66-106">Requirements</span></span>  
- <span data-ttu-id="d5f66-107">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d5f66-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8000a-106">Требования</span><span class="sxs-lookup"><span data-stu-id="8000a-106">Requirements</span></span>  
+ <span data-ttu-id="8000a-107">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8000a-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d5f66-108">**Заголовок.** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="d5f66-108">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="8000a-108">**Заголовок.** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="8000a-108">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="d5f66-109">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d5f66-109">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8000a-109">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8000a-109">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d5f66-110">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d5f66-110">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ **<span data-ttu-id="8000a-110">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="8000a-110">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="d5f66-111">См. также</span><span class="sxs-lookup"><span data-stu-id="d5f66-111">See also</span></span>
-- [<span data-ttu-id="d5f66-112">Интерфейс ICorProfilerModuleEnum</span><span class="sxs-lookup"><span data-stu-id="d5f66-112">ICorProfilerModuleEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md)
-- [<span data-ttu-id="d5f66-113">Интерфейсы профилирования</span><span class="sxs-lookup"><span data-stu-id="d5f66-113">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="8000a-111">См. также</span><span class="sxs-lookup"><span data-stu-id="8000a-111">See also</span></span>
+
+- [<span data-ttu-id="8000a-112">Интерфейс ICorProfilerModuleEnum</span><span class="sxs-lookup"><span data-stu-id="8000a-112">ICorProfilerModuleEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md)
+- [<span data-ttu-id="8000a-113">Профилирующие интерфейсы</span><span class="sxs-lookup"><span data-stu-id="8000a-113">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

@@ -17,38 +17,39 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1944b84863cea1cfdc464489640a6f78d476537d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: c1c1c9a15e9f56765710ffb2015a29b4206b3bd4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482526"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152611"
 ---
-# <a name="icorprofilercallbackfunctionunloadstarted-method"></a><span data-ttu-id="f483a-102">Метод ICorProfilerCallback::FunctionUnloadStarted</span><span class="sxs-lookup"><span data-stu-id="f483a-102">ICorProfilerCallback::FunctionUnloadStarted Method</span></span>
-<span data-ttu-id="f483a-103">Уведомляет профилировщик о том, что среда начала выгрузку функции.</span><span class="sxs-lookup"><span data-stu-id="f483a-103">Notifies the profiler that the runtime has started to unload a function.</span></span>  
+# <a name="icorprofilercallbackfunctionunloadstarted-method"></a><span data-ttu-id="c1830-102">Метод ICorProfilerCallback::FunctionUnloadStarted</span><span class="sxs-lookup"><span data-stu-id="c1830-102">ICorProfilerCallback::FunctionUnloadStarted Method</span></span>
+<span data-ttu-id="c1830-103">Уведомляет профилировщик о том, что среда начала выгрузку функции.</span><span class="sxs-lookup"><span data-stu-id="c1830-103">Notifies the profiler that the runtime has started to unload a function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f483a-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f483a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c1830-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="c1830-104">Syntax</span></span>  
   
 ```  
 HRESULT FunctionUnloadStarted(  
     [in] FunctionID functionId);   
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f483a-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="f483a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c1830-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="c1830-105">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="f483a-106">[in] Идентификатор функции, которая вызывается при выгрузке.</span><span class="sxs-lookup"><span data-stu-id="f483a-106">[in] The ID of the function that is being unloaded.</span></span>  
+ <span data-ttu-id="c1830-106">[in] Идентификатор функции, которая вызывается при выгрузке.</span><span class="sxs-lookup"><span data-stu-id="c1830-106">[in] The ID of the function that is being unloaded.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f483a-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="f483a-107">Remarks</span></span>  
- <span data-ttu-id="f483a-108">Значение `functionId` параметр больше не является допустимым, после этого метод возвращает вызывающему объекту.</span><span class="sxs-lookup"><span data-stu-id="f483a-108">The value of the `functionId` parameter is no longer valid after this method returns to the caller.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c1830-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="c1830-107">Remarks</span></span>  
+ <span data-ttu-id="c1830-108">Значение `functionId` параметр больше не является допустимым, после этого метод возвращает вызывающему объекту.</span><span class="sxs-lookup"><span data-stu-id="c1830-108">The value of the `functionId` parameter is no longer valid after this method returns to the caller.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f483a-109">Требования</span><span class="sxs-lookup"><span data-stu-id="f483a-109">Requirements</span></span>  
- <span data-ttu-id="f483a-110">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f483a-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c1830-109">Требования</span><span class="sxs-lookup"><span data-stu-id="c1830-109">Requirements</span></span>  
+ <span data-ttu-id="c1830-110">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c1830-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f483a-111">**Заголовок.** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="f483a-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="c1830-111">**Заголовок.** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="c1830-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="f483a-112">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f483a-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c1830-112">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c1830-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f483a-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f483a-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="c1830-113">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="c1830-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="f483a-114">См. также</span><span class="sxs-lookup"><span data-stu-id="f483a-114">See also</span></span>
-- [<span data-ttu-id="f483a-115">Интерфейс ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="f483a-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="c1830-114">См. также</span><span class="sxs-lookup"><span data-stu-id="c1830-114">See also</span></span>
+
+- [<span data-ttu-id="c1830-115">Интерфейс ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="c1830-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

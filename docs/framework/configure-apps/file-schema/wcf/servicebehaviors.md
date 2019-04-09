@@ -2,18 +2,19 @@
 title: <serviceBehaviors>
 ms.date: 03/30/2017
 ms.assetid: 5aed9062-cc36-4b72-b9dd-a3018b8ffafc
-ms.openlocfilehash: 9c60998bed65bd6c949ffb4338f402e328e631ef
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ca5b4126840edda4c443d30c161ae086c58d666a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271620"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141379"
 ---
-# <a name="servicebehaviors"></a><span data-ttu-id="15e89-101">\<serviceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="15e89-101">\<serviceBehaviors></span></span>
-<span data-ttu-id="15e89-102">В данном разделе конфигурации представлены все поведения, определенные для конкретной службы.</span><span class="sxs-lookup"><span data-stu-id="15e89-102">This configuration section represents all the behaviors defined for a specific service.</span></span>  
+# <a name="servicebehaviors"></a><span data-ttu-id="574b9-101">\<serviceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="574b9-101">\<serviceBehaviors></span></span>
+<span data-ttu-id="574b9-102">В данном разделе конфигурации представлены все поведения, определенные для конкретной службы.</span><span class="sxs-lookup"><span data-stu-id="574b9-102">This configuration section represents all the behaviors defined for a specific service.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="15e89-103">См. также</span><span class="sxs-lookup"><span data-stu-id="15e89-103">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="574b9-103">См. также</span><span class="sxs-lookup"><span data-stu-id="574b9-103">See also</span></span>
+
 - <xref:System.ServiceModel.Configuration.ServiceBehaviorElementCollection>
 - <xref:System.ServiceModel.Configuration.ServiceBehaviorElement>
-- [<span data-ttu-id="15e89-104">\<поведение ></span><span class="sxs-lookup"><span data-stu-id="15e89-104">\<behavior></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)
-- [<span data-ttu-id="15e89-105">Указание поведения службы во время выполнения</span><span class="sxs-lookup"><span data-stu-id="15e89-105">Specifying Service Run-Time Behavior</span></span>](../../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)
+- [<span data-ttu-id="574b9-104">\<поведение ></span><span class="sxs-lookup"><span data-stu-id="574b9-104">\<behavior></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)
+- [<span data-ttu-id="574b9-105">Указание поведения службы во время выполнения</span><span class="sxs-lookup"><span data-stu-id="574b9-105">Specifying Service Run-Time Behavior</span></span>](../../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)

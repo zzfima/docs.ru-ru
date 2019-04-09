@@ -1,28 +1,29 @@
 ---
-title: Как выполнить получить сведения о конфликтах элементов
+title: Практическое руководство. Как получить сведения о конфликтах элементов
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7dd6829e-79a5-4480-9023-9e588cb0bf2e
-ms.openlocfilehash: 478781e6c8ee31ebf6f5edd0e243a81d9e0524f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fae1513e7a7ead98318d907b220b7510758c9ffe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669566"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115093"
 ---
-# <a name="how-to-retrieve-member-conflict-information"></a><span data-ttu-id="2c46f-102">Как выполнить получить сведения о конфликтах элементов</span><span class="sxs-lookup"><span data-stu-id="2c46f-102">How to: Retrieve Member Conflict Information</span></span>
-<span data-ttu-id="2c46f-103">Класс <xref:System.Data.Linq.MemberChangeConflict> можно использовать для получения сведений об отдельных членах конфликта.</span><span class="sxs-lookup"><span data-stu-id="2c46f-103">You can use the <xref:System.Data.Linq.MemberChangeConflict> class to retrieve information about individual members in conflict.</span></span> <span data-ttu-id="2c46f-104">В этом же контексте можно предусмотреть пользовательскую обработку конфликта для любого члена.</span><span class="sxs-lookup"><span data-stu-id="2c46f-104">In this same context you can provide for custom handling of the conflict for any member.</span></span> <span data-ttu-id="2c46f-105">Дополнительные сведения см. в разделе [оптимистичный параллелизм: Общие сведения о](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).</span><span class="sxs-lookup"><span data-stu-id="2c46f-105">For more information, see [Optimistic Concurrency: Overview](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).</span></span>  
+# <a name="how-to-retrieve-member-conflict-information"></a><span data-ttu-id="975c0-102">Практическое руководство. Как получить сведения о конфликтах элементов</span><span class="sxs-lookup"><span data-stu-id="975c0-102">How to: Retrieve Member Conflict Information</span></span>
+<span data-ttu-id="975c0-103">Класс <xref:System.Data.Linq.MemberChangeConflict> можно использовать для получения сведений об отдельных членах конфликта.</span><span class="sxs-lookup"><span data-stu-id="975c0-103">You can use the <xref:System.Data.Linq.MemberChangeConflict> class to retrieve information about individual members in conflict.</span></span> <span data-ttu-id="975c0-104">В этом же контексте можно предусмотреть пользовательскую обработку конфликта для любого члена.</span><span class="sxs-lookup"><span data-stu-id="975c0-104">In this same context you can provide for custom handling of the conflict for any member.</span></span> <span data-ttu-id="975c0-105">Дополнительные сведения см. в разделе [оптимистичный параллелизм: Общие сведения о](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).</span><span class="sxs-lookup"><span data-stu-id="975c0-105">For more information, see [Optimistic Concurrency: Overview](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2c46f-106">Пример</span><span class="sxs-lookup"><span data-stu-id="2c46f-106">Example</span></span>  
- <span data-ttu-id="2c46f-107">Следующий код выполняет итерацию объектов <xref:System.Data.Linq.ObjectChangeConflict>.</span><span class="sxs-lookup"><span data-stu-id="2c46f-107">The following code iterates through the <xref:System.Data.Linq.ObjectChangeConflict> objects.</span></span> <span data-ttu-id="2c46f-108">Итерация выполняется для каждого объекта <xref:System.Data.Linq.MemberChangeConflict>.</span><span class="sxs-lookup"><span data-stu-id="2c46f-108">For each object, it then iterates through the <xref:System.Data.Linq.MemberChangeConflict> objects.</span></span>  
+## <a name="example"></a><span data-ttu-id="975c0-106">Пример</span><span class="sxs-lookup"><span data-stu-id="975c0-106">Example</span></span>  
+ <span data-ttu-id="975c0-107">Следующий код выполняет итерацию объектов <xref:System.Data.Linq.ObjectChangeConflict>.</span><span class="sxs-lookup"><span data-stu-id="975c0-107">The following code iterates through the <xref:System.Data.Linq.ObjectChangeConflict> objects.</span></span> <span data-ttu-id="975c0-108">Итерация выполняется для каждого объекта <xref:System.Data.Linq.MemberChangeConflict>.</span><span class="sxs-lookup"><span data-stu-id="975c0-108">For each object, it then iterates through the <xref:System.Data.Linq.MemberChangeConflict> objects.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="2c46f-109">Для предоставления сведений <xref:System.Reflection> добавьте пространство имен <xref:System.Data.Linq.MemberChangeConflict.Member%2A>.</span><span class="sxs-lookup"><span data-stu-id="2c46f-109">Include <xref:System.Reflection> in order to provide <xref:System.Data.Linq.MemberChangeConflict.Member%2A> information.</span></span>  
+>  <span data-ttu-id="975c0-109">Для предоставления сведений <xref:System.Reflection> добавьте пространство имен <xref:System.Data.Linq.MemberChangeConflict.Member%2A>.</span><span class="sxs-lookup"><span data-stu-id="975c0-109">Include <xref:System.Reflection> in order to provide <xref:System.Data.Linq.MemberChangeConflict.Member%2A> information.</span></span>  
   
  [!code-csharp[System.Data.Linq.MemberChangeConflict#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/system.data.linq.memberchangeconflict/cs/program.cs#1)]
  [!code-vb[System.Data.Linq.MemberChangeConflict#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.memberchangeconflict/vb/module1.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="2c46f-110">См. также</span><span class="sxs-lookup"><span data-stu-id="2c46f-110">See also</span></span>
-- [<span data-ttu-id="2c46f-111">Практическое руководство. Управление конфликтами изменений</span><span class="sxs-lookup"><span data-stu-id="2c46f-111">How to: Manage Change Conflicts</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+## <a name="see-also"></a><span data-ttu-id="975c0-110">См. также</span><span class="sxs-lookup"><span data-stu-id="975c0-110">See also</span></span>
+
+- [<span data-ttu-id="975c0-111">Практическое руководство. Как управлять конфликтами изменений</span><span class="sxs-lookup"><span data-stu-id="975c0-111">How to: Manage Change Conflicts</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)

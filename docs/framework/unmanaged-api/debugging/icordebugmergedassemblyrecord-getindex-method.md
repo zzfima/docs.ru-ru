@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: 98701444-b9bc-4978-9548-89ac3394147d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 77947da5bbda39700b687ecf91eb367eee28ca6b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: b8ba470325098125aee8ef7de01fa6aa70596d42
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57494588"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202603"
 ---
-# <a name="icordebugmergedassemblyrecordgetindex-method"></a><span data-ttu-id="24ef9-102">Метод ICorDebugMergedAssemblyRecord::GetIndex</span><span class="sxs-lookup"><span data-stu-id="24ef9-102">ICorDebugMergedAssemblyRecord::GetIndex Method</span></span>
-<span data-ttu-id="24ef9-103">Возвращает индекс префикса сборки.</span><span class="sxs-lookup"><span data-stu-id="24ef9-103">Gets the assembly's prefix index.</span></span>  
+# <a name="icordebugmergedassemblyrecordgetindex-method"></a><span data-ttu-id="fa4a0-102">Метод ICorDebugMergedAssemblyRecord::GetIndex</span><span class="sxs-lookup"><span data-stu-id="fa4a0-102">ICorDebugMergedAssemblyRecord::GetIndex Method</span></span>
+<span data-ttu-id="fa4a0-103">Возвращает индекс префикса сборки.</span><span class="sxs-lookup"><span data-stu-id="fa4a0-103">Gets the assembly's prefix index.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="24ef9-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="24ef9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fa4a0-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="fa4a0-104">Syntax</span></span>  
   
 ```  
 HRESULT GetIndex(  
@@ -22,25 +22,26 @@ HRESULT GetIndex(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="24ef9-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="24ef9-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="fa4a0-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="fa4a0-105">Parameters</span></span>  
  `pIndex`  
- <span data-ttu-id="24ef9-106">[out] Указатель на индекс префикса.</span><span class="sxs-lookup"><span data-stu-id="24ef9-106">[out] A pointer to the prefix index.</span></span>  
+ <span data-ttu-id="fa4a0-106">[out] Указатель на индекс префикса.</span><span class="sxs-lookup"><span data-stu-id="fa4a0-106">[out] A pointer to the prefix index.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="24ef9-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="24ef9-107">Remarks</span></span>  
- <span data-ttu-id="24ef9-108">Индекс префикса используется для предотвращения конфликтов имен в типе объединенных метаданных.</span><span class="sxs-lookup"><span data-stu-id="24ef9-108">The prefix index is used to prevent name collisions in the merged metadata type names.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="fa4a0-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="fa4a0-107">Remarks</span></span>  
+ <span data-ttu-id="fa4a0-108">Индекс префикса используется для предотвращения конфликтов имен в типе объединенных метаданных.</span><span class="sxs-lookup"><span data-stu-id="fa4a0-108">The prefix index is used to prevent name collisions in the merged metadata type names.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="24ef9-109">Этот метод доступен только в .NET Native.</span><span class="sxs-lookup"><span data-stu-id="24ef9-109">This method is available with .NET Native only.</span></span>  
+>  <span data-ttu-id="fa4a0-109">Этот метод доступен только в машинном коде .NET.</span><span class="sxs-lookup"><span data-stu-id="fa4a0-109">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="24ef9-110">Требования</span><span class="sxs-lookup"><span data-stu-id="24ef9-110">Requirements</span></span>  
- <span data-ttu-id="24ef9-111">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="24ef9-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fa4a0-110">Требования</span><span class="sxs-lookup"><span data-stu-id="fa4a0-110">Requirements</span></span>  
+ <span data-ttu-id="fa4a0-111">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fa4a0-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="24ef9-112">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="24ef9-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="fa4a0-112">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="fa4a0-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="24ef9-113">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="24ef9-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="fa4a0-113">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fa4a0-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="24ef9-114">**Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="24ef9-114">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ **<span data-ttu-id="fa4a0-114">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="fa4a0-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="24ef9-115">См. также</span><span class="sxs-lookup"><span data-stu-id="24ef9-115">See also</span></span>
-- [<span data-ttu-id="24ef9-116">Интерфейс ICorDebugMergedAssemblyRecord</span><span class="sxs-lookup"><span data-stu-id="24ef9-116">ICorDebugMergedAssemblyRecord Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-interface.md)
-- [<span data-ttu-id="24ef9-117">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="24ef9-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="fa4a0-115">См. также</span><span class="sxs-lookup"><span data-stu-id="fa4a0-115">See also</span></span>
+
+- [<span data-ttu-id="fa4a0-116">Интерфейс ICorDebugMergedAssemblyRecord</span><span class="sxs-lookup"><span data-stu-id="fa4a0-116">ICorDebugMergedAssemblyRecord Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-interface.md)
+- [<span data-ttu-id="fa4a0-117">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="fa4a0-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
