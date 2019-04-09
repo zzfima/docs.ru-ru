@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f988f95c28e6d2248882fb033b8d8c4d3c629229
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8f0a9b9c149c86b4d9121275aa858dfdc0cdbac7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744197"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195167"
 ---
 # <a name="assemblymetadata-structure"></a>Структура ASSEMBLYMETADATA
 Содержит сведения о сборке, на которую указывает ссылка, включая ее версию и уровень поддержки языковых стандартов, процессоры и операционные системы.  
@@ -45,7 +45,7 @@ typedef struct {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |`usMajorVersion`|Основной номер версии сборки, на которую указывает ссылка. Это значение не может быть нулевым. Если все биты `usMajorVersion` задаются, основной номер версии не указан.|  
 |`usMinorVersion`|Дополнительный номер версии сборки, на которую указывает ссылка. Это значение не может быть нулевым. Если все биты `usMinorVersion` задаются, дополнительный номер версии не указан.|  
@@ -68,6 +68,7 @@ typedef struct {
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Структуры метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
 - [Интерфейс IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
 - [Структура OSINFO](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md)

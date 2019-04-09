@@ -3,12 +3,12 @@ title: Создание первого веб-приложения ASP.NET с п
 ms.date: 03/30/2017
 ms.assetid: 3ee8ee7f-caba-4267-9343-e313fae2876d
 author: BrucePerlerMS
-ms.openlocfilehash: 2fd5b36ffe26632240955307eb522cecdf4f1e73
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: b6be3d84a292e5f14e1cdc70a181e8fd2c065a68
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58838135"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151376"
 ---
 # <a name="building-my-first-claims-aware-aspnet-web-application"></a>Создание первого веб-приложения ASP.NET с поддержкой утверждений
 ## <a name="applies-to"></a>Применение  
@@ -41,11 +41,12 @@ ms.locfileid: "58838135"
   
  Чтобы создать первое приложение ASP.NET, поддерживающее утверждения, с помощью WIF, выполните инструкции, представленные в одном из нижеперечисленных разделов:  
   
--   [Практическое руководство. Создание веб-приложения ASP.NET MVC, поддерживающего утверждения, с помощью WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
+-   [Как выполнить: создание веб-приложения ASP.NET MVC, поддерживающего утверждения, с использованием WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
   
--   [Практическое руководство. Создание приложения с поддержкой утверждений ASP.NET Web Forms, с помощью WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
+-   [Как выполнить: создание приложения ASP.NET Web Forms, поддерживающего утверждения, с использованием WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
   
--   [Практическое руководство. Создание приложения ASP.NET, поддерживающего утверждения, с использованием проверки подлинности на основе форм](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
+-   [Как выполнить: создание приложения ASP.NET, поддерживающего утверждения, с использованием аутентификации на основе форм](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
   
 ## <a name="see-also"></a>См. также
+
 - [Приступая к работе с WIF](../../../docs/framework/security/getting-started-with-wif.md)

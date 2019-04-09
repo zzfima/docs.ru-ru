@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], iterating through nodes
 - tree nodes in TreeView control [Windows Forms], iterating through
 ms.assetid: 427f8928-ebcf-4beb-887f-695b905d5134
-ms.openlocfilehash: 306c1f684f1f4c2deb057f7d81c93856ee6189e7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: e8e5ef299ca7b5555a02e86e4422ca9f5b8a584f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715406"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199717"
 ---
 # <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a>Практическое руководство. Перебор узлов элемента управления TreeView в Windows Forms
 Иногда полезно изучить каждый узел в формах Windows <xref:System.Windows.Forms.TreeView> управления для выполнения определенных расчетов со значениями узлов. Выполнить эту операции можно с помощью рекурсивной процедуры (рекурсивного метода в C# и C++), которая перебирает каждый узел в каждой коллекции дерева.  
@@ -124,5 +124,6 @@ ms.locfileid: "57715406"
     ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Элемент управления TreeView](treeview-control-windows-forms.md)
 - [Рекурсивные процедуры](~/docs/visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)

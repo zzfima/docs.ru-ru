@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-ms.openlocfilehash: 25ca96104ef8a63a7c6988f6dfba309e9aa44a9b
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 3decf955748b156b8eff4b5286a70e67d8ac14ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738933"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195154"
 ---
 # <a name="configuring-http-and-https"></a>Настройка HTTP и HTTPS
 Службы и клиенты WCF могут взаимодействовать по протоколам HTTP и HTTPS. Параметры HTTP/HTTPS задаются с помощью служб IIS или посредством использования средства командной строки. Когда служба WCF размещается в службах IIS, параметры HTTP или HTTPS можно задать в службах IIS (с помощью средства inetmgr.exe). Если служба WCF является резидентной, параметры HTTP или HTTPS задаются с помощью средства командной строки.  
@@ -91,5 +91,6 @@ netsh http add iplisten ipaddress=0.0.0.0:8000
  Службы IIS не поддерживают совместное использование портов в [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. Если служба IIS запущена и пытается использовать пространство имен с помощью порта службы WCF, службы WCF не запускается. Службы IIS и WCF, как по умолчанию используют порт 80. Изменить назначение порта для одной из служб, либо использовать список прослушивания IP-адрес для назначения службы WCF к сетевому адаптеру, не используемому службами IIS. Службы IIS 6.0 и более поздних версий были переработаны для использования API HTTP-сервера.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.WSDualHttpBinding>
-- [Практическое руководство. Настройка порта с помощью SSL-сертификата](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+- [Практическое руководство. Настройка порта с использованием SSL-сертификата](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)

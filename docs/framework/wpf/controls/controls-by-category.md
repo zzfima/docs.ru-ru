@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-ms.openlocfilehash: cf9a06c4604ee71e3e98de22c6729cc4a874e741
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 26488b76608aa46b56285581e7368bf24f8b1be7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375575"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127846"
 ---
 # <a name="controls-by-category"></a>Категории элементов управления
 Элементы управления Windows Presentation Foundation (WPF) могут быть логически сгруппированы в несколько категорий. Эти категории можно использовать для выбора соответствующего элемента управления для сценария, что поможет увидеть, какие элементы управления имеют схожие шаблоны использования или функциональные возможности.  
@@ -162,7 +162,7 @@ ms.locfileid: "57375575"
 -   <xref:System.Windows.Controls.PasswordBox>  
   
 ## <a name="media"></a>Мультимедиа  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] включает интегрированную поддержку для размещения как аудио- и видеоконтента, так и [кодеков] для большинства популярных форматов изображений.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] включает встроенную поддержку для размещения содержимому аудио и видео, а также [кодеков] для большинства популярных форматов изображений.  
   
 -   <xref:System.Windows.Controls.Image>  
   
@@ -178,4 +178,5 @@ ms.locfileid: "57375575"
 -   <xref:System.Windows.Controls.InkPresenter>  
   
 ## <a name="see-also"></a>См. также
+
 - [Библиотека элементов управления](control-library.md)

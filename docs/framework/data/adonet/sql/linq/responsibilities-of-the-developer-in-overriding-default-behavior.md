@@ -2,12 +2,12 @@
 title: Ответственность разработчика при переопределении поведения по умолчанию
 ms.date: 03/30/2017
 ms.assetid: c6909ddd-e053-46a8-980c-0e12a9797be1
-ms.openlocfilehash: 4773d4d5cf8192dfa1f8bfad6b5846c03ab1d2c7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 12ea526d71946cdc7ab821f5e38948fcbb57d158
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555626"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184773"
 ---
 # <a name="responsibilities-of-the-developer-in-overriding-default-behavior"></a>Ответственность разработчика при переопределении поведения по умолчанию
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] не выполняет следующие требования, но поведение не определено, если эти требования не соблюдены.  
@@ -27,4 +27,5 @@ ms.locfileid: "54555626"
 -   Наконец, ожидается, что метод переопределения выполняет объявленную операцию. Семантика операций [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], таких как безотложная загрузка, отложенная загрузка и <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, требует, чтобы переопределения предоставляли объявленные службы. Например, переопределение загрузки, которое лишь возвращает пустую коллекцию без проверки содержимого в базе данных, скорее всего, приведет к несогласованности данных.  
   
 ## <a name="see-also"></a>См. также
+
 - [Настройка операций вставки, обновления и удаления](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)

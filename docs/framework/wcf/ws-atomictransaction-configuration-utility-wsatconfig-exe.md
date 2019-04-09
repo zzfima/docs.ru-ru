@@ -2,12 +2,12 @@
 title: Программа конфигурации WS-AtomicTransaction (wsatConfig.exe)
 ms.date: 03/30/2017
 ms.assetid: 1c56cf98-3963-46d5-a4e1-482deae58c58
-ms.openlocfilehash: b4c2bb2d9c81b6ab3afc783d1188de7664e01566
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 30e5a22e54bf977143b2ae94e678ad5106ec9ed6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741422"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191826"
 ---
 # <a name="ws-atomictransaction-configuration-utility-wsatconfigexe"></a>Программа конфигурации WS-AtomicTransaction (wsatConfig.exe)
 Программа настройки WS-AtomicTransaction используется для настройки основных параметров поддержки WS-AtomicTransaction.  
@@ -32,7 +32,7 @@ wsatConfig [Options]
 > [!NOTE]
 >  При задании SSL-сертификата для выбранного порта выполняется перезапись исходного SSL-сертификата (если он существует), связанного с этим портом.  
   
-|Параметры|Описание:|  
+|Параметры|Описание|  
 |-------------|-----------------|  
 |-учетных записей:\<учетной записи >|Позволяет указать список разделенных запятыми учетных записей, которые могут участвовать в WS-AtomicTransaction. Проверка допустимости этих учетных записей не выполняется.|  
 |-accountsCerts:\<thumb>&#124;"Issuer\SubjectName",>|Позволяет указать список разделенных запятыми сертификатов, которые могут участвовать в WS-AtomicTransaction. Сертификаты указываются отпечатком или парой Issuer\SubjectName. В качестве пустого имени субъекта используйте {EMPTY}.|  
@@ -50,5 +50,6 @@ wsatConfig [Options]
 |-Виртуальный_сервер:\<Виртуальный_сервер >|Позволяет указать имя кластера ресурсов DTC.|  
   
 ## <a name="see-also"></a>См. также
+
 - [Использование WS-AtomicTransaction](../../../docs/framework/wcf/feature-details/using-ws-atomictransaction.md)
 - [Настройка поддержки транзакций WS-Atomic](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)

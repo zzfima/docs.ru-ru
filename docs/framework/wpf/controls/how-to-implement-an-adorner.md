@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - adorners [WPF], implementing
 ms.assetid: 56ae32b6-0599-455c-b52f-2ff97e6f1ec2
-ms.openlocfilehash: 53a25396ba5d8a5c78e850e636b7c882c03d5152
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: da318fee42b4628351217774de2a2225cfb21ee1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362647"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120813"
 ---
 # <a name="how-to-implement-an-adorner"></a>Практическое руководство. Реализация декоративного элемента
 В этом примере показана реализация минимальной декоративного элемента.  
@@ -22,7 +22,7 @@ ms.locfileid: "57362647"
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание:  
+### <a name="description"></a>Описание  
  Пользовательский декоративный элемент создается путем реализации класс, наследующий от абстрактного <xref:System.Windows.Documents.Adorner> класса.  В примере декоративный элемент просто украшает углы <xref:System.Windows.UIElement> кругами путем переопределения <xref:System.Windows.UIElement.OnRender%2A> метод.  
   
 ### <a name="code"></a>Код  
@@ -30,4 +30,5 @@ ms.locfileid: "57362647"
  [!code-vb[Adorners_SimpleCircleAdorner#_SimpleCircleAdornerBody](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/VisualBasic/Window1.xaml.vb#_simplecircleadornerbody)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения о декоративных элементах](adorners-overview.md)

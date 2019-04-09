@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], about ActiveX controls
 - Windows Forms, interop
 ms.assetid: 0a26d99d-8135-4895-8760-c9a2b5f67f14
-ms.openlocfilehash: cb7df844458be083adefa16421a7088bd1e74893
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 63631378911a9ba95713e68fb19d8d08176c7562
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717938"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195648"
 ---
 # <a name="windows-forms-and-unmanaged-applications-overview"></a>Общие сведения о Windows Forms и неуправляемых приложениях
 Приложения и элементы управления Windows Forms могут взаимодействовать с неуправляемыми приложениями, но с некоторыми оговорками. В следующих разделах описываются сценарии и конфигурации, которые поддерживаются и не поддерживаются элементами управления и приложениями Windows Forms.  
@@ -47,7 +47,7 @@ ms.locfileid: "57717938"
  Цикл обработки сообщений приложения является внутренним циклом программы, который получает сообщения из очереди сообщений потока, преобразует их и отправляет приложению для обработки. Архитектура цикла обработки сообщений для формы Windows Forms отличается от архитектуры, используемой в более ранних приложениях, таких как приложения Visual Basic 6.0 и приложения MFC. Сообщения окна, которые отправляются в цикл обработки сообщений, могут обрабатываться не так, как ожидает форма Windows Forms. Таким образом, может наблюдаться неожиданное поведение. Могут не работать некоторые сочетания клавиш и некоторые действия мыши, а также могут не возникать некоторые события.  
   
 ## <a name="resolving-interoperability-issues"></a>Устранение проблем взаимодействия  
- Эти проблемы можно устранить путем отображения формы в цикле обработки сообщений [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], который создается с помощью метода <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType>.  
+ Эти проблемы можно устранить путем отображения формы в цикле обработки сообщений [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , который создается с помощью метода <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> .  
   
  Чтобы исправить работу формы Windows Forms из клиентского приложения COM, необходимо запустить его в цикле обработки сообщений Windows Forms. Для этого воспользуйтесь одним из перечисленных ниже подходов.  
   
@@ -56,13 +56,14 @@ ms.locfileid: "57717938"
 -   Запускайте каждую форму Windows Forms в новом потоке. Дополнительные сведения см. в разделе [Как Поддержка COM-взаимодействия путем отображения каждой формы Windows Forms в отдельном потоке](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md).  
   
 ## <a name="see-also"></a>См. также
-- [Windows Forms and Unmanaged Applications](windows-forms-and-unmanaged-applications.md)
+
+- [Windows Forms и неуправляемые приложения](windows-forms-and-unmanaged-applications.md)
 - [COM-взаимодействие](../../../visual-basic/programming-guide/com-interop/index.md)
 - [COM-взаимодействие в приложениях .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
 - [Примеры COM-взаимодействия](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/cxcz83xf(v=vs.90))
-- [Aximp.exe (программа импорта элементов ActiveX форм Windows Forms)](../../tools/aximp-exe-windows-forms-activex-control-importer.md)
-- [Предоставление компонентов .NET Framework клиентам COM](../../interop/exposing-dotnet-components-to-com.md)
+- [Aximp.exe (программа импорта элементов ActiveX форм Windows)](../../tools/aximp-exe-windows-forms-activex-control-importer.md)
+- [Предоставление COM-клиентам доступа к компонентам .NET Framework](../../interop/exposing-dotnet-components-to-com.md)
 - [Упаковка сборки для модели COM](../../interop/packaging-an-assembly-for-com.md)
 - [Регистрация сборок в COM](../../interop/registering-assemblies-with-com.md)
-- [Практическое руководство. Поддержка COM-взаимодействия путем отображения формы Windows Forms с помощью метода ShowDialog](com-interop-by-displaying-a-windows-form-shadow.md)
+- [Практическое руководство. Обеспечение поддержки COM-взаимодействия путем отображения формы Windows Forms с помощью метода ShowDialog](com-interop-by-displaying-a-windows-form-shadow.md)
 - [Практическое руководство. Поддержка COM-взаимодействия путем отображения каждой формы Windows Forms в отдельном потоке](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)

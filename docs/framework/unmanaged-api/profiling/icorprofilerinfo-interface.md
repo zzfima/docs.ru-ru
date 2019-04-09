@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 936bcd59cd21a4fb4c101febcefd26f3b1fdafa1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b979b5f4ee849b96cd29b6c8e2e6a8932e88c182
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665582"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201719"
 ---
 # <a name="icorprofilerinfo-interface"></a>Интерфейс ICorProfilerInfo
 Предоставляет методы для использования профилировщиками кода для взаимодействия с общеязыковой среды выполнения (CLR) для управления отслеживанием событий и запроса информации.  
@@ -31,7 +31,7 @@ ms.locfileid: "54665582"
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание:|  
+|Метод|Описание|  
 |------------|-----------------|  
 |[Метод BeginInprocDebugging](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-begininprocdebugging-method.md)|Инициализирует внутрипроцессную поддержку отладки. Этот метод является устаревшим в .NET Framework версии 2.0.|  
 |[Метод EndInprocDebugging](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-endinprocdebugging-method.md)|Завершает сеанс отладки в процессе. Этот метод является устаревшим в .NET Framework версии 2.0.|  
@@ -84,5 +84,6 @@ ms.locfileid: "54665582"
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
-- [Интерфейсы профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+
+- [Профилирующие интерфейсы](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
 - [Интерфейс ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

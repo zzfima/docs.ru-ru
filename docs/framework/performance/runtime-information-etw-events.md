@@ -7,26 +7,26 @@ helpviewer_keywords:
 ms.assetid: 68b4edbc-7f3b-45f6-ab75-4fd066d6af9a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cb213ef4a335cf6784c2889cd9cf0214a1411da2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af27ddaa69d34976929f40055bc2cc668f877e87
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735718"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117408"
 ---
 # <a name="runtime-information-etw-events"></a>События сведений времени выполнения (трассировка событий Windows)
 Эти события трассировки событий Windows регистрируют информацию о среде выполнения, включая SKU, номер версии, способ активизации среды выполнения, параметры командной строки при ее запуске, GUID (если применимо) и другие релевантные данные. Если в процессе выполняется одновременно несколько сред выполнения, в этих событиях предоставляются сведения (ClrInstanceID), которые позволяют однозначно определить нужную среду.  
   
  В таблице ниже представлены два события со сведениями о среде выполнения. Эти события могут вызываться с любым ключевым словом или маской. (Дополнительные сведения см. в разделе [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)  
   
-|событие|Идентификатор события|Поставщик|Описание:|  
+|событие|Идентификатор события|Поставщик|Описание|  
 |-----------|--------------|--------------|-----------------|  
 |`RuntimeInformationEvent`|187|CLRRuntime|Вызывается при загрузке среды выполнения.|  
 |`RuntimeInformationDCStart`|187|CLRRundown|Перечисляет загруженные среды выполнения.|  
   
  В таблице ниже представлены данные события.  
   
-|Имя поля|Тип данных|Описание:|  
+|Имя поля|Тип данных|Описание|  
 |----------------|---------------|-----------------|  
 |ClrInstanceID|win:UInt16|Уникальный идентификатор экземпляра CLR или CoreCLR.|  
 |Sku|win:UInt16|1 — Desktop CLR.<br /><br /> 2 — CoreCLR.|  
@@ -45,4 +45,5 @@ ms.locfileid: "54735718"
 |RuntimeDLLPath|win:UnicodeString|Путь к DLL-файлу среды CLR, который был загружен в процесс.|  
   
 ## <a name="see-also"></a>См. также
+
 - [События трассировки событий Windows в среде CLR](../../../docs/framework/performance/clr-etw-events.md)

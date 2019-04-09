@@ -2,12 +2,12 @@
 title: Инспекторы сообщений
 ms.date: 03/30/2017
 ms.assetid: 9bd1f305-ad03-4dd7-971f-fa1014b97c9b
-ms.openlocfilehash: 248e74e039c0ebb0b1580ec2cb4f19d713d95c51
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: e8afbc1fc85dab18d6fbd5e8d49b10847a7d230f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58830153"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199808"
 ---
 # <a name="message-inspectors"></a>Инспекторы сообщений
 В этом образце демонстрируется, как реализовать и настроить инспекторы сообщений клиента и службы.  
@@ -41,7 +41,7 @@ public class SchemaValidationMessageInspector : IClientMessageInspector, IDispat
   
  Любой инспектор сообщений службы (диспетчера) должен реализовывать два метода <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector>: <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> и <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%28System.ServiceModel.Channels.Message%40%2CSystem.Object%29>.  
   
- Метод <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> вызывается диспетчером при получении сообщения, обработке сообщения стеком каналов и назначении сообщения службе, но перед его десериализацией и отправкой операции. Если входящее сообщение было зашифровано, оно поступает в инспектор сообщений в расшифрованном виде. Метод получает сообщение `request`, переданное в качестве ссылочного параметра, который позволяет проверить, изменить или заменить сообщение при необходимости. Возвращаемое значение может быть любым объектом и используется как объект состояния корреляции, передаваемый методу <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A> при возврате службой ответа на текущее сообщение. В этом образце метод <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> делегирует проверку сообщения закрытому локальному методу `ValidateMessageBody` и не возвращает объект состояния корреляции. Этот метод гарантирует, что службе не будут передаваться недопустимые сообщения.  
+ <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> вызывается диспетчером при сообщение было получено, обрабатываются стеком каналов и службе назначено, но перед его десериализацией и отправкой операции. Если входящее сообщение было зашифровано, оно поступает в инспектор сообщений в расшифрованном виде. Метод получает сообщение `request`, переданное в качестве ссылочного параметра, который позволяет проверить, изменить или заменить сообщение при необходимости. Возвращаемое значение может быть любым объектом и используется как объект состояния корреляции, передаваемый методу <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A> при возврате службой ответа на текущее сообщение. В этом образце метод <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> делегирует проверку сообщения закрытому локальному методу `ValidateMessageBody` и не возвращает объект состояния корреляции. Этот метод гарантирует, что службе не будут передаваться недопустимые сообщения.  
   
 ```  
 object IDispatchMessageInspector.AfterReceiveRequest(ref System.ServiceModel.Channels.Message request, System.ServiceModel.IClientChannel channel, System.ServiceModel.InstanceContext instanceContext)  
@@ -56,7 +56,7 @@ object IDispatchMessageInspector.AfterReceiveRequest(ref System.ServiceModel.Cha
 }  
 ```  
   
- Метод <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%28System.ServiceModel.Channels.Message%40%2CSystem.Object%29> вызывается, когда ответ готов для отправки клиенту или, в случае односторонних сообщений, после обработки входящего сообщения. Это позволяет симметрично вызывать необходимые расширения независимо от шаблона обмена сообщениями. Как и в случае метода <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>, сообщение передается в качестве ссылочного параметра и может быть проверено, изменено или заменено. Проверка сообщения, выполняемая в этом образце, повторно делегируется методу `ValidMessageBody`, но в данном случае процедура обработки ошибок проверки немного отличается.  
+ <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%28System.ServiceModel.Channels.Message%40%2CSystem.Object%29> вызывается всякий раз, когда ответ готов для отправки обратно клиенту, или в случае односторонних сообщений, после обработки входящего сообщения. Это позволяет симметрично вызывать необходимые расширения независимо от шаблона обмена сообщениями. Как и в случае метода <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>, сообщение передается в качестве ссылочного параметра и может быть проверено, изменено или заменено. Проверка сообщения, выполняемая в этом образце, повторно делегируется методу `ValidMessageBody`, но в данном случае процедура обработки ошибок проверки немного отличается.  
   
  При возникновении ошибки проверки метод `ValidateMessageBody` вызывает исключения, унаследованные от <xref:System.ServiceModel.FaultException>. В случае метода <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> эти исключения могут размещаться в инфраструктуре модели служб, где они автоматически преобразуются в ошибки SOAP и передаются клиенту. В случае метода <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A> исключения <xref:System.ServiceModel.FaultException> не следует размещать в инфраструктуре, поскольку преобразование исключений ошибок, вызванных службой, происходит перед вызовом инспектора сообщений. Поэтому следующая реализация перехватывает известное исключение `ReplyValidationFault` и заменяет ответное сообщение явным сообщением об ошибке. Этот метод гарантирует, что реализацией службы не будут возвращаться недопустимые сообщения.  
   
@@ -82,7 +82,7 @@ void IDispatchMessageInspector.BeforeSendReply(ref System.ServiceModel.Channels.
   
  Инспектор сообщений клиента очень похож на инспектор сообщений службы. На основе <xref:System.ServiceModel.Dispatcher.IClientMessageInspector> необходимо реализовать два метода: <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.AfterReceiveReply%2A> и <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.BeforeSendRequest%2A>.  
   
- Метод <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.BeforeSendRequest%2A> вызывается при создании сообщения клиентским приложением или модулем форматирования операций. Как и в случае инспекторов сообщений диспетчера, сообщение может быть просто проверено или полностью заменено. В этом образце инспектор выполняет делегирование тому же локальному вспомогательному методу `ValidateMessageBody`, который используется для инспекторов сообщений диспетчера.  
+ <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.BeforeSendRequest%2A> вызывается, когда сообщение состояли из клиентским приложением или модулем форматирования операций. Как и в случае инспекторов сообщений диспетчера, сообщение может быть просто проверено или полностью заменено. В этом образце инспектор выполняет делегирование тому же локальному вспомогательному методу `ValidateMessageBody`, который используется для инспекторов сообщений диспетчера.  
   
  Различие в поведении между проверкой клиента и службы (как указано в конструкторе) заключается в том, что проверка клиента вызывает локальные исключения, которые размещаются в пользовательском коде, поскольку они возникают локально и не по причине сбоя службы. Как правило, инспекторы диспетчера службы выдают сообщения об ошибках, а инспекторы клиента - исключения.  
   
@@ -412,4 +412,3 @@ catch (Exception e)
 >  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageInspectors`  
-  

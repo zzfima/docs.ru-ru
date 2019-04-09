@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - classes [WPF], SystemParameters
 ms.assetid: 02e7a5de-94eb-4953-b91c-52e6c872ad5b
-ms.openlocfilehash: a05e2d08c989da70dd7763ad2df238aac03fded4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 344fb54b48bcbf188b36a29d8205c21deff713c4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375159"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199860"
 ---
 # <a name="how-to-use-systemparameters"></a>Практическое руководство. Использование SystemParameters
 В этом примере показано, как получить доступ и использовать свойства <xref:System.Windows.SystemParameters> для изменения стиля или настроек кнопки.  
@@ -32,8 +32,9 @@ ms.locfileid: "57375159"
  [!code-vb[SystemRes_snip#ParameterResourcesCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SystemRes_snip/VisualBasic/Pane1.xaml.vb#parameterresourcescode)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.SystemParameters>
 - [Заливка области с помощью системной кисти](../graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
 - [Использование SystemFonts](how-to-use-systemfonts.md)
 - [Использование разделов системных параметров](how-to-use-system-parameters-keys.md)
-- [Разделы практического руководства](resources-how-to-topics.md)
+- [Практические руководства](resources-how-to-topics.md)

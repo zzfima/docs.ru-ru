@@ -7,12 +7,12 @@ helpviewer_keywords:
 - xml:space attribute [XAML Services]
 - white-space processing [XAML Services]
 ms.assetid: 5e1814f0-5b30-43d5-8c88-dede335a89d7
-ms.openlocfilehash: 20a25b36857a7116f3599e3fbbbe4b438540f782
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: d15bab1ad9234959048fa7b7c3fa2bbbeca5fe6e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58037049"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193321"
 ---
 # <a name="xmlspace-handling-in-xaml"></a>Обработка xml:space в языке XAML
 `xml:space` Атрибут является атрибутом, определенные в XML, который объявляет поведение обработки значительных пробелов внутри элемента объекта. Это поведение относится к все содержимое (внутренний текст), содержащихся в элементе где `xml:space` объявляется, а также позволяет сфокусироваться на дочерние элементы.  
@@ -41,5 +41,6 @@ ms.locfileid: "58037049"
  Подробное обсуждение обработки пробелов в XAML, см. в разделе [-обработки пробелов в XAML](whitespace-processing-in-xaml.md).  
   
 ## <a name="see-also"></a>См. также
-- [Обработки пробелов в XAML](whitespace-processing-in-xaml.md)
-- [Общие сведения о языке XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+
+- [Обработка пробелов в XAML](whitespace-processing-in-xaml.md)
+- [Обзор XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)

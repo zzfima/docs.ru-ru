@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DataGrid [WPF], customizing the appearance of
 - DataGrid columns [WPF], using
 ms.assetid: bf89ea63-79b6-422b-bc9f-0485ad803216
-ms.openlocfilehash: 86721592f632d6d77dbfa6bc4eac3c2872628b0d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: dda712d58a4ff956de074ecd416402ba0aece5f4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368142"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197156"
 ---
 # <a name="datagrid"></a>DataGrid
 <xref:System.Windows.Controls.DataGrid> Элемент управления позволяет отображать и редактировать данные из множества различных источников, таких как базы данных SQL, LINQ-запрос или любой другой источник привязки данных. Дополнительные сведения см. в разделе [Общие сведения об источниках привязки](../data/binding-sources-overview.md).  
@@ -47,16 +47,17 @@ ms.locfileid: "57368142"
   
 ## <a name="related-topics"></a>См. также  
   
-|Заголовок|Описание:|  
+|Заголовок|Описание|  
 |-----------|-----------------|  
-|[Пошаговое руководство: Отобразить данные из базы данных SQL Server в элементе управления DataGrid](walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|Описывается, как настроить новый проект WPF, добавьте элемент Entity Framework, в качестве источника указывается и отображения данных в <xref:System.Windows.Controls.DataGrid>.|  
+|[Пошаговое руководство. Отображение данных из базы данных SQL Server в элементе управления DataGrid](walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|Описывается, как настроить новый проект WPF, добавьте элемент Entity Framework, в качестве источника указывается и отображения данных в <xref:System.Windows.Controls.DataGrid>.|  
 |[Практическое руководство. Добавление сведений о строках в элемент управления DataGrid](how-to-add-row-details-to-a-datagrid-control.md)|Описывает способы создания сведений о строках для <xref:System.Windows.Controls.DataGrid>.|  
 |[Практическое руководство. Реализация проверки с помощью элемента управления DataGrid](how-to-implement-validation-with-the-datagrid-control.md)|Содержит описание способов проверки значений в <xref:System.Windows.Controls.DataGrid> ячеек и строк и отображения результатов проверки.|  
 |[Поведение мыши и клавиатуры по умолчанию в элементе управления DataGrid](default-keyboard-and-mouse-behavior-in-the-datagrid-control.md)|Описывает способы взаимодействия с <xref:System.Windows.Controls.DataGrid> элемента управления с помощью клавиатуры и мыши.|  
-|[Практическое руководство. Группирования, сортировки и фильтрации данных в элементе управления DataGrid](how-to-group-sort-and-filter-data-in-the-datagrid-control.md)|Описывается, как просматривать данные в <xref:System.Windows.Controls.DataGrid> по-разному, группирования, сортировки и фильтрации данных.|  
+|[Практическое руководство. Группировка, сортировка и фильтрация данных в элементе управления DataGrid](how-to-group-sort-and-filter-data-in-the-datagrid-control.md)|Описывается, как просматривать данные в <xref:System.Windows.Controls.DataGrid> по-разному, группирования, сортировки и фильтрации данных.|  
 |[Параметры изменения размеров элемента управления DataGrid](sizing-options-in-the-datagrid-control.md)|Описывает управление абсолютными и автоматического изменения размера в <xref:System.Windows.Controls.DataGrid>.|  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Controls.DataGrid>
 - [Стилизация и использование шаблонов](styling-and-templating.md)
 - [Общие сведения о привязке данных](../data/data-binding-overview.md)

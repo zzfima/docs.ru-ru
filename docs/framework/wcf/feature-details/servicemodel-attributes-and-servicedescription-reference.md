@@ -2,12 +2,12 @@
 title: Атрибуты ServiceModel и справочная информация ServiceDescription
 ms.date: 03/30/2017
 ms.assetid: 4ab86b17-eab9-4846-a881-0099f9a7cc64
-ms.openlocfilehash: 3b1b10f34e300d77943a93d180b5be9e4a3366c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 022731d7d6e60d36c5f4a595edc90aaff0586a79
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726631"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195349"
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>Атрибуты ServiceModel и справочная информация ServiceDescription
 *Дерево описания* — это иерархия типов (начиная с <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> класс), которые вместе описывают каждый аспект службы. Windows Communication Foundation (WCF) использует дерево описания для построения допустимой среды выполнения службы, чтобы опубликовать Web Services Description Language (WSDL), язык определения схемы XML (XSD) и утверждений политики (метаданные) о службе, которые клиенты могут использовать для подключиться и использовать службу и для создания различных кода и конфигурации файла представлений значений дерева описания.  
@@ -31,9 +31,9 @@ ms.locfileid: "54726631"
   
 |Свойство ServiceContractAttribute|Изменяемое значение дерева описания|  
 |---------------------------------------|-------------------------------------|  
-|CallbackContract|<xref:System.ServiceModel.Description.ContractDescription.CallbackContractType%2A>, <xref:System.ServiceModel.Description.MessageDescription>, добавленные к <xref:System.ServiceModel.Description.OperationDescription.Messages%2A> всех операций.|  
+|CallbackContract|<xref:System.ServiceModel.Description.ContractDescription.CallbackContractType%2A>, <xref:System.ServiceModel.Description.MessageDescription> добавлен ко всем операциям <xref:System.ServiceModel.Description.OperationDescription.Messages%2A>.|  
 |ConfigurationName|<xref:System.ServiceModel.Description.ContractDescription.ConfigurationName%2A>|  
-|ProtectionLevel|<xref:System.ServiceModel.Description.ContractDescription.ProtectionLevel%2A> и, возможно, дочерние уровни защиты. Дополнительные сведения об иерархии уровней защиты см. в разделе [уровень защиты понимание](../../../../docs/framework/wcf/understanding-protection-level.md).|  
+|ProtectionLevel|<xref:System.ServiceModel.Description.ContractDescription.ProtectionLevel%2A> и возможно дочерние уровни защиты. Дополнительные сведения об иерархии уровней защиты см. в разделе [уровень защиты понимание](../../../../docs/framework/wcf/understanding-protection-level.md).|  
 |SessionMode|<xref:System.ServiceModel.Description.ContractDescription.SessionMode%2A>|  
   
 |Значение ServiceKnownTypesAttribute|Изменяемое значение дерева описания|  
@@ -43,17 +43,17 @@ ms.locfileid: "54726631"
 |Значение OperationContractAttribute|Изменяемое значение дерева описания|  
 |--------------------------------------|-------------------------------------|  
 |Действие|<xref:System.ServiceModel.Description.MessageDescription.Action%2A> для исходящего или входящего сообщения, в зависимости от контракта/контракта обратного вызова.|  
-|AsyncPattern|Если имеет значение "True", <xref:System.ServiceModel.Description.OperationDescription.BeginMethod%2A> и <xref:System.ServiceModel.Description.OperationDescription.EndMethod%2A>|  
-|IsOneWay|Сопоставляется одному описанию <xref:System.ServiceModel.Description.MessageDescription> в <xref:System.ServiceModel.Description.OperationDescription.Messages%2A>|  
+|AsyncPattern|Если значение равно true, <xref:System.ServiceModel.Description.OperationDescription.BeginMethod%2A> и <xref:System.ServiceModel.Description.OperationDescription.EndMethod%2A>|  
+|IsOneWay|Сопоставляется одному <xref:System.ServiceModel.Description.MessageDescription> в <xref:System.ServiceModel.Description.OperationDescription.Messages%2A>|  
 |IsInitiating|<xref:System.ServiceModel.Description.OperationDescription.IsInitiating%2A>|  
 |IsTerminating|<xref:System.ServiceModel.Description.OperationDescription.IsTerminating%2A>|  
 |name|<xref:System.ServiceModel.Description.OperationDescription.Name%2A>|  
-|ProtectionLevel|<xref:System.ServiceModel.Description.OperationDescription.ProtectionLevel%2A> и, возможно, дочерние уровни защиты. Дополнительные сведения об иерархии уровней защиты см. в разделе [уровень защиты понимание](../../../../docs/framework/wcf/understanding-protection-level.md).|  
+|ProtectionLevel|<xref:System.ServiceModel.Description.OperationDescription.ProtectionLevel%2A> и возможно дочерние уровни защиты. Дополнительные сведения об иерархии уровней защиты см. в разделе [уровень защиты понимание](../../../../docs/framework/wcf/understanding-protection-level.md).|  
 |ReplyAction|<xref:System.ServiceModel.Description.MessageDescription.Action%2A> для исходящего или входящего сообщения, в зависимости от контракта/контракта обратного вызова.|  
   
 |Значение FaultContractAttribute|Изменяемое значение дерева описания|  
 |----------------------------------|-------------------------------------|  
-|Действие|<xref:System.ServiceModel.Description.FaultDescription.Action%2A>, в зависимости от контракта/контракта обратного вызова.|  
+|Действие|<xref:System.ServiceModel.Description.FaultDescription.Action%2A> в зависимости от контракта/контракта обратного вызова.|  
 |DetailType|<xref:System.ServiceModel.Description.FaultDescription.DetailType%2A>|  
 |name|<xref:System.ServiceModel.Description.FaultDescription.Name%2A>|  
 |Пространство имен|<xref:System.ServiceModel.Description.FaultDescription.Namespace%2A>|  
@@ -114,4 +114,5 @@ ms.locfileid: "54726631"
  Дополнительные сведения о том, как преобразования значений дерева описания в метаданные, см. в разделе [ServiceDescription и справочная WSDL](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [ServiceDescription и справочная информация о WSDL](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)

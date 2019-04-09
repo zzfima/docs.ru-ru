@@ -6,12 +6,12 @@ helpviewer_keywords:
 - key frames [WPF], about key-frame animations
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
-ms.openlocfilehash: a4606b73835087a406d989960d7a6e24ad218769
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: caad7d5694139729ebe89e686ea70a981a0a94d2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362985"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191592"
 ---
 # <a name="key-frame-animations-overview"></a>Общие сведения об анимации по ключевым кадрам
 В этом разделе рассказывается об анимации по ключевым кадрам. Методика анимации по ключевым кадрам позволяет использовать более двух целевых значений и контролировать применяемый метод интерполяции.  
@@ -46,7 +46,7 @@ ms.locfileid: "57362985"
   
  Классы анимации по ключевым кадрам принадлежат к <xref:System.Windows.Media.Animation> пространства имен и соответствовать следующее соглашение об именовании:  
   
- *\<Тип>* `AnimationUsingKeyFrames`  
+ *\<Тип >* `AnimationUsingKeyFrames`  
   
  Где *\<Type>* — тип значения, которое выполняет анимацию класса.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "57362985"
 ## <a name="target-values-key-frames-and-key-times"></a>Целевые значения (ключевые кадры) и временная шкала  
  Для анимации различных типов свойств существуют различные типы анимации по ключевым кадрам и, соответственно, различные типы объектов ключевых кадров — по одному для каждого типа анимированного значения и поддерживаемого метода интерполяции. Типы ключевых кадров удовлетворяют требованиям следующего соглашения об именах.  
   
- *\<InterpolationMethod>\<Type>* `KeyFrame`  
+ *\<InterpolationMethod >\<тип >* `KeyFrame`  
   
  Где *\<InterpolationMethod>* — метод интерполяции, используемый при анимации по ключевым кадрам, а *\<Type>* — тип значения, анимируемый классом. Метод анимации по ключевым кадрам, поддерживающий все три метода интерполяции, будет включать в себя три типа ключевых кадров, которые можно использовать. Например, можно использовать три типа ключевых кадров с <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>: <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame>, <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame>, и <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame>. (Методы интерполяции подробно описаны в следующем разделе.)  
   
@@ -284,12 +284,13 @@ ms.locfileid: "57362985"
 8.  Сортировка ключевых кадров в порядке расчетного времени (первичный ключ) и в порядке объявления (вторичный ключ), т. е., использование строгой сортировки в зависимости от полных кадров <xref:System.Windows.Media.Animation.KeyTime> значения.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Media.Animation.KeyTime>
 - <xref:System.Windows.Media.Animation.KeySpline>
 - <xref:System.Windows.Media.Animation.Timeline>
 - [Пример анимации ключевого сплайна](https://go.microsoft.com/fwlink/?LinkID=160011)
 - [Пример анимации по ключевым кадрам](https://go.microsoft.com/fwlink/?LinkID=160012)
 - [Общие сведения об эффектах анимации](animation-overview.md)
-- [Общие сведения о раскадровке](storyboards-overview.md)
+- [Общие сведения о Storyboard](storyboards-overview.md)
 - [Практические руководства, посвященные анимации по ключевым кадрам](key-frame-animation-how-to-topics.md)
 - [Общие сведения о характере поведения во времени](timing-behaviors-overview.md)

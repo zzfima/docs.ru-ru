@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 73ab94765e1b76cb8521a0d546d6bc61384aad5f
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 290647f0e0dcaeae53362762ed7f8e0c2f05a82c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57480745"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189954"
 ---
 # <a name="icordebugvariablehomegetregister-method"></a>Метод ICorDebugVariableHome::GetRegister
 Получает регистр, который содержит переменную с типом расположения `VLT_REGISTER`и базовым регистром для переменной с типом расположения `VLT_REGISTER_RELATIVE`.  
@@ -42,7 +42,7 @@ HRESULT GetRegister(
 ## <a name="return-value"></a>Возвращаемое значение  
  Метод возвращает следующие значения:  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |`S_OK`|Переменная находится в регистре, обозначается `pRegister` аргумент.|  
 |`E_FAIL`|Переменная не в регистр или в папку, зависящий от регистра.|  
@@ -57,5 +57,6 @@ HRESULT GetRegister(
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Перечисление VariableLocationType](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md)
 - [Интерфейс ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)

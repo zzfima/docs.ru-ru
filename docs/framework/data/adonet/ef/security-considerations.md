@@ -2,12 +2,12 @@
 title: Вопросы безопасности (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 114da13e9939131f4799dc8a3565167f516eb697
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 1e3c1f74c1bf30da47fb38b6799bff11090cf31a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904130"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161371"
 ---
 # <a name="security-considerations-entity-framework"></a>Вопросы безопасности (Entity Framework)
 В этом разделе приводятся сведения по безопасности, связанные с разработкой, развертыванием и запуском приложений [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Необходимо также следовать инструкциям по созданию безопасных приложений [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]. Дополнительные сведения см. в разделе [Общие сведения о безопасности](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -65,13 +65,13 @@ ms.locfileid: "55904130"
 #### <a name="run-applications-with-the-minimum-permissions"></a>Запуск приложения с минимально возможными разрешениями  
  Если разрешена эксплуатация управляемого приложения с полным набором разрешений, то [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] не ограничивает доступ этого приложения к компьютеру. Это может стать предпосылкой появления в приложении потенциально уязвимого места, что представляет угрозу для всей системы. Чтобы использовать средства управления доступом к коду и другие механизмы безопасности в [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)], следует запускать приложения с использованием частичного уровня доверия и с минимальным набором разрешений, необходимым для выполнения всех задач приложения. Ниже приведены минимальные разрешения, необходимые для работы приложения [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
   
--   <xref:System.Security.Permissions.FileIOPermission>. Разрешение <xref:System.Security.Permissions.FileIOPermissionAccess.Write> на открытие заданных файлов метаданных или разрешение <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery> на поиск в каталоге файлов метаданных.  
+-   <xref:System.Security.Permissions.FileIOPermission>: <xref:System.Security.Permissions.FileIOPermissionAccess.Write> Открытие заданных файлов метаданных или <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery> на поиск в каталоге файлов метаданных.  
   
--   <xref:System.Security.Permissions.ReflectionPermission>. Разрешение <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> на поддержку запросов LINQ to Entities.  
+-   <xref:System.Security.Permissions.ReflectionPermission>: <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> для поддержки LINQ для запросов сущностей.  
   
--   <xref:System.Transactions.DistributedTransactionPermission>. Разрешение <xref:System.Security.Permissions.PermissionState.Unrestricted> на участие в транзакции <xref:System.Transactions><xref:System.Transactions.Transaction>.  
+-   <xref:System.Transactions.DistributedTransactionPermission>: <xref:System.Security.Permissions.PermissionState.Unrestricted> прикрепления их к <xref:System.Transactions><xref:System.Transactions.Transaction>.  
   
--   <xref:System.Security.Permissions.SecurityPermission>. Разрешение <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> на сериализацию исключений с помощью интерфейса <xref:System.Runtime.Serialization.ISerializable>.  
+-   <xref:System.Security.Permissions.SecurityPermission>: <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> на сериализацию исключений с помощью <xref:System.Runtime.Serialization.ISerializable> интерфейс.  
   
 -   Разрешение на открытие подключения к базе данных и выполнения команд в базе данных, таких как <xref:System.Data.SqlClient.SqlClientPermission> для базы данных SQL Server.  
   
@@ -94,13 +94,13 @@ ms.locfileid: "55904130"
 #### <a name="prevent-sql-injection-attacks"></a>Предотвращение атак путем внедрения кода SQL  
  Приложения часто получают внешние входные данные (от пользователя или другого внешнего агента) и выполняют действия над этими входными данными. Любые входные данные, прямо или косвенно полученные от пользователя или внешнего агента, могут иметь содержимое, в котором используется синтаксис целевого языка для выполнения несанкционированных действий. Если целевым языком является один из диалектов языка SQL, например [!INCLUDE[tsql](../../../../../includes/tsql-md.md)], такие действия называются атакой путем внедрения кода SQL. Злонамеренный пользователь может внедрить данные непосредственно в запрос и удалить таблицу базы данных, вызвать отказ в обслуживании или другим образом изменить характер выполняемой операции.  
   
--   Атаки путем внедрения кода [!INCLUDE[esql](../../../../../includes/esql-md.md)]:  
+-   [!INCLUDE[esql](../../../../../includes/esql-md.md)] атаки путем внедрения кода:  
   
      Атаки путем внедрения кода SQL осуществляются на языке [!INCLUDE[esql](../../../../../includes/esql-md.md)] путем предоставления вредоносных входных значений в составе предикатов запросов и имен параметров. Для предотвращения атак путем внедрения кода SQL ни в коем случае нельзя объединять входные данные пользователя с текстом команд [!INCLUDE[esql](../../../../../includes/esql-md.md)].  
   
-     Запросы [!INCLUDE[esql](../../../../../includes/esql-md.md)] принимают параметры во всех случаях, где допускаются литералы. Необходимо использовать параметризованные запросы, а не внедрять литералы, полученные от внешних агентов, непосредственно в запрос. Также можно использовать [методы построителя запросов](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896238(v=vs.100)) для безопасного создания Entity SQL.  
+     [!INCLUDE[esql](../../../../../includes/esql-md.md)] запросы принимают параметры везде где допускаются литералы. Необходимо использовать параметризованные запросы, а не внедрять литералы, полученные от внешних агентов, непосредственно в запрос. Также можно использовать [методы построителя запросов](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896238(v=vs.100)) для безопасного создания Entity SQL.  
   
--   Атаки путем внедрения кода [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]:  
+-   [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] атаки путем внедрения кода:  
   
      Хотя в [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] допустима композиция запросов, она выполняется через API объектной модели. В отличие от запросов [!INCLUDE[esql](../../../../../includes/esql-md.md)] запросы [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] не строятся с помощью манипулирования строками или объединения строк, поэтому не подвержены обычным атакам путем внедрения кода SQL.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "55904130"
     public IQueryable<Customer> GetCustomer(int customerId)  
     ```  
   
-     Объект-получатель этого запроса может вызвать метод `.Include("Orders")`, возвращающий `IQueryable<Customer>`, по которому можно извлечь данные, доступ к которым через этот запрос не планировался. Этого можно избежать, если изменить возвращаемый тип метода на <xref:System.Collections.Generic.IEnumerable%601> и вызвать метод (например, `.ToList()`) для материализации результатов.  
+     Объект-получатель этого запроса может вызвать метод `.Include("Orders")`, возвращающий `IQueryable<Customer>`, по которому можно извлечь данные, доступ к которым через этот запрос не планировался. Этого можно избежать, если изменить тип возвращаемого значения метода на <xref:System.Collections.Generic.IEnumerable%601> и вызвать метод (например, `.ToList()`) для материализации результатов.  
   
 -   Поскольку запросы <xref:System.Linq.IQueryable%601> выполняются при переборе результатов, объект-получатель запроса, обеспечивающего доступ к типу <xref:System.Linq.IQueryable%601>, может обработать возникшие исключения. Исключения могут содержать информацию, не предназначенную объекту-получателю.  
   
@@ -150,18 +150,19 @@ ms.locfileid: "55904130"
  Безусловно, значения, в которые преобразуются оператор задания корневого каталога (`~`) и строка подстановки `DataDirectory`, должны оставаться неизменными во время выполнения приложения, но [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] не налагает ограничения на изменение узлом этих значений.  
   
 #### <a name="verify-the-path-length-before-deployment"></a>Проверить длину пути перед развертыванием.  
- Перед развертыванием приложения [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] необходимо убедиться, что значения оператора задания корневого каталога (~) и строки подстановки `DataDirectory` не превышают ограничений, налагаемых операционной системой на длину пути. Поставщики данных [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] не гарантируют того, что длина пути останется в допустимых пределах.  
+ Перед развертыванием приложения [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] необходимо убедиться, что значения оператора задания корневого каталога (~) и строки подстановки `DataDirectory` не превышают ограничений, налагаемых операционной системой на длину пути. [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Поставщики данных не гарантируют того, что длина пути останется в допустимых пределах.  
   
 ## <a name="security-considerations-for-adonet-metadata"></a>Вопросы безопасности применительно к метаданным ADO.NET  
  При формировании и работе с файлами модели и сопоставления применимы следующие рекомендации по безопасности.  
   
 #### <a name="do-not-expose-sensitive-information-through-logging"></a>Не следует представлять доступ к конфиденциальным сведениям с помощью средств ведения журнала  
- Служебные компоненты метаданных [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] не записывают в журнал конфиденциальные сведения. Если имеются результаты, которые не удается возвратить из-за ограничений доступа, то системы управления базами данных и файловые системы должны возвращать нулевой результат, а не активизировать исключение, которое может содержать конфиденциальные данные.  
+ [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Служебные компоненты метаданных не регистрировать конфиденциальные сведения. Если имеются результаты, которые не удается возвратить из-за ограничений доступа, то системы управления базами данных и файловые системы должны возвращать нулевой результат, а не активизировать исключение, которое может содержать конфиденциальные данные.  
   
 #### <a name="do-not-accept-metadataworkspace-objects-from-untrusted-sources"></a>Не следует принимать объекты MetadataWorkspace из ненадежных источников  
  Приложения не должны принимать экземпляры объектов класса <xref:System.Data.Metadata.Edm.MetadataWorkspace> из ненадежных источников. Вместо этого необходимо явно создать и заполнить рабочую область из такого источника.  
   
 ## <a name="see-also"></a>См. также
+
 - [Защита приложений ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Требования к развертыванию](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)
 - [Вопросы миграции](../../../../../docs/framework/data/adonet/ef/migration-considerations.md)

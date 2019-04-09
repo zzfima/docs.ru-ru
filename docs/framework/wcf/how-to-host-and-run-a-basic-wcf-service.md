@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF services [WCF]
 - WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
-ms.openlocfilehash: 38fd9b89e2719be8ce4d33b1b50f68171d587369
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: ad9536b1f27ba3945bf76d0474de4825033a1e8b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410099"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197910"
 ---
 # <a name="tutorial-host-and-run-a-basic-windows-communication-foundation-service"></a>Учебник. Размещение и запуск базовой службы Windows Communication Foundation
 
@@ -30,7 +30,6 @@ ms.locfileid: "58410099"
 > - Добавьте код для размещения службы WCF.
 > - Обновите файл конфигурации.
 > - Запуск службы WCF и для проверки выполняется.
-
 
 ## <a name="create-and-configure-a-console-app-project-for-hosting-the-service"></a>Создание и настройка проекта консольного приложения для размещения службы
 
@@ -176,7 +175,6 @@ ms.locfileid: "58410099"
     
     Сведения о том, как работает этот код, см. в разделе [службы размещения действия программы](#service-hosting-program-steps).
 
-
 2. Обновите свойства проекта:
 
    1. В **обозревателе решений** выберите **GettingStartedHost** папку, а затем выберите **свойства** в контекстном меню.
@@ -189,7 +187,6 @@ ms.locfileid: "58410099"
 
    3. Из **файл** меню, выберите **сохранить все**.
 
-
 ## <a name="verify-the-service-is-working"></a>Убедитесь, что служба работает
 
 1. Выполните сборку решения, а затем запустите **GettingStartedHost** консоли приложению из Visual Studio. 
@@ -200,7 +197,6 @@ ms.locfileid: "58410099"
    
    > [!NOTE]
    > Подобные службы требуют необходимое разрешение на регистрацию HTTP-адресов на компьютере для прослушивания. Учетные записи с уровнем доступа администратора имеют данное разрешение, а остальным учетным записям должно быть предоставлено разрешение на использование пространства имен HTTP. Дополнительные сведения о настройке резервирования пространств имен см. в разделе [Настройка протоколов HTTP и HTTPS](feature-details/configuring-http-and-https.md). 
-
 
 ## <a name="service-hosting-program-steps"></a>Службы размещения действия программы
 
@@ -223,7 +219,6 @@ ms.locfileid: "58410099"
 > При добавлении библиотеки службы WCF, Visual Studio размещает ее автоматически при отладке путем запуска узла службы. Во избежание конфликтов можно запретить Visual Studio, на котором размещается в библиотеке служб WCF. 
 > 1. Выберите **GettingStartedLib** в проекте **обозревателе решений** и выберите **свойства** в контекстном меню.
 > 2. Выберите **параметры WCF** и снимите флажок **запуск узла службы WCF при отладке другого проекта в одном решении**.
-
 
 ## <a name="next-steps"></a>Следующие шаги
 

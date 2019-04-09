@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: efd4ee8d-6edd-47ec-88e4-4a4759bd2384
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aad8673051b22db1df6d525094394dd2a43285ca
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 32fbdd222e34f642d29255e6c594076b6d2a91e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711282"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188842"
 ---
 # <a name="printpreviewdialog-control-overview-windows-forms"></a>Обзор управления PrintPreviewDialog (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.PrintPreviewDialog> элемент управления является стандартным диалоговым окном, используемый для отображения как [PrintDocument](printdocument-component-windows-forms.md) будет выглядеть при печати. Используется в качестве простого решения вместо настройки собственного диалогового приложения на базе Windows. Элемент управления содержит кнопки для печати, увеличения масштаба, отображения одной или нескольких страниц и закрытия диалогового окна.  
@@ -52,6 +52,7 @@ Windows Forms <xref:System.Windows.Forms.PrintPreviewDialog> элемент уп
 Если вы используете <xref:System.Drawing.Printing.PrintDocument.QueryPageSettings> событие, чтобы изменить параметры принтера, производительность <xref:System.Windows.Forms.PrintPreviewDialog> управления не улучшит, даже если задан параметр конфигурации оптимизации.  
 
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.PrintPreviewDialog>
 - [Общие сведения об элементе управления PrintPreviewControl](printpreviewcontrol-control-overview-windows-forms.md)
 - [Элемент управления PrintPreviewDialog](printpreviewdialog-control-windows-forms.md)

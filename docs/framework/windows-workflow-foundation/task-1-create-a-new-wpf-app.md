@@ -1,15 +1,15 @@
 ---
-title: Упражнение 1. Создание нового приложения Windows Presentation Foundation.
+title: Задача 1. Создание нового приложения Windows Presentation Foundation
 ms.date: 03/30/2017
 ms.assetid: 270eaeba-9492-4532-af9f-403ce5c9935b
-ms.openlocfilehash: 533b4a1030ab5f47eb96ca62dc2805eae7933b9b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: dae523714862ed36d36e65b51be62acff9b17f51
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711902"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193405"
 ---
-# <a name="task-1-create-a-new-windows-presentation-foundation-application"></a>Упражнение 1. Создание нового приложения Windows Presentation Foundation.
+# <a name="task-1-create-a-new-windows-presentation-foundation-application"></a>Задача 1. Создание нового приложения Windows Presentation Foundation
 В этой задаче будет создать пустое приложение Windows Presentation Foundation (WPF), используя шаблон WPF Application Visual Studio и добавьте ссылки на соответствующие [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] сборки рабочих процессов.  
   
 ### <a name="to-create-the-wpf-application-project"></a>Создание проекта приложения WPF  
@@ -43,5 +43,6 @@ ms.locfileid: "57711902"
 11. См. в разделе [задача 2: Размещение конструктора рабочих процессов](task-2-host-the-workflow-designer.md) Дополнительные сведения о размещении визуальной разработки конструктора рабочих процессов.  
   
 ## <a name="see-also"></a>См. также
-- [Отдельное размещение конструктора рабочих процессов](rehosting-the-workflow-designer.md)
+
+- [Повторное размещение конструктора рабочих процессов](rehosting-the-workflow-designer.md)
 - [Задача 2. Размещение конструктора рабочих процессов](task-2-host-the-workflow-designer.md)

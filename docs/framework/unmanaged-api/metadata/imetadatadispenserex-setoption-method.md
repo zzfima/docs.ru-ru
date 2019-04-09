@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f9e9d7a66f37759e6f62ddae2c5af989cee57e3b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 9869efee18549c3d0c8b9ee9ca27cf31c1ccf452
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57470654"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197117"
 ---
 # <a name="imetadatadispenserexsetoption-method"></a>Метод IMetaDataDispenserEx::SetOption
 Задает указанному параметру заданное значение для текущей области метаданных. Параметр определяет, как обрабатываются вызовы к текущей области метаданных.  
@@ -46,7 +46,7 @@ HRESULT SetOption (
 ## <a name="remarks"></a>Примечания  
  В следующей таблице перечислены доступные идентификаторы GUID, `optionId` может указывать параметр и его соответствующий допустимых значений для `pValue` параметра.  
   
-|GUID|Описание|`pValue` Параметр|  
+|Идентификатор GUID|Описание|`pValue` Параметр|  
 |----------|-----------------|------------------------|  
 |MetaDataCheckDuplicatesFor|Определяет, какие элементы проверяются на наличие дубликатов. Каждый раз при вызове [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) метод, который создает новый элемент, вы можете задавать способ проверить, существует ли уже элемент в текущей области. Например, можно проверить существование `mdMethodDef` элементов; в этом случае при вызове [IMetaDataEmit::DefineMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md), он проверит, что метод уже существует в текущей области. Эта проверка используется ключ, который однозначно определяет данный метод: родительский тип, имя и подпись.|Должен быть разновидностью UI4 и должен содержать сочетание значений [CorCheckDuplicatesFor](../../../../docs/framework/unmanaged-api/metadata/corcheckduplicatesfor-enumeration.md) перечисления.|  
 |MetaDataRefToDefCheck|Определяет, какие товары преобразуются в определения. По умолчанию подсистема метаданных будет оптимизировать код путем преобразования к его определению ссылочного элемента, если указанный элемент определен в текущей области.|Должен быть разновидностью UI4 и должен содержать сочетание значений [CorRefToDefCheck](../../../../docs/framework/unmanaged-api/metadata/correftodefcheck-enumeration.md) перечисления.|  
@@ -72,5 +72,6 @@ HRESULT SetOption (
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
 - [Интерфейс IMetaDataDispenser](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)

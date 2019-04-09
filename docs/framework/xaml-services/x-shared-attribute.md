@@ -6,12 +6,12 @@ helpviewer_keywords:
 - x:Shared attribute [XAML Services]
 - Shared attribute in XAML [XAML Services]
 ms.assetid: c8cff434-2785-405f-9f95-16deb34c9e64
-ms.openlocfilehash: 42de341d59e3e70103db765faf3160b5fe3250d3
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: da35f209b632bdf9e4ab2298239a505df69d6048
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58039403"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125747"
 ---
 # <a name="xshared-attribute"></a>Атрибут x:Shared
 Если задано значение `false`, изменяет поведение извлечения ресурсов WPF, чтобы запросы с атрибутами ресурсов создают новый экземпляр для каждого запроса, а не один и тот же экземпляр для всех запросов.  
@@ -50,6 +50,7 @@ ms.locfileid: "58039403"
 -   <xref:System.Windows.ResourceDictionary> , Содержащий элементы не должны быть вложены в другой <xref:System.Windows.ResourceDictionary>. Например, нельзя использовать `x:Shared` для элементов в <xref:System.Windows.ResourceDictionary> , находится в пределах <xref:System.Windows.Style> , уже <xref:System.Windows.ResourceDictionary> элемента.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.ResourceDictionary>
 - [Ресурсы XAML](../wpf/advanced/xaml-resources.md)
 - [Базовые элементы](../wpf/advanced/base-elements.md)

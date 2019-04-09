@@ -2,12 +2,12 @@
 title: Общие сведения о ADO.NET
 ms.date: 03/30/2017
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
-ms.openlocfilehash: 6769370396fc263f237a2884435630a2930b882b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ec3b5f4dd08a39f96ed28e6666fd4b00bced903
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714390"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170069"
 ---
 # <a name="adonet-overview"></a>Общие сведения о ADO.NET
 ADO.NET предоставляет согласованный доступ к таким источникам данных, как SQL Server и XML, а также к источникам данных, предоставляемым при помощи OLE DB и ODBC. Пользовательские приложения, использующие общие данные, могут использовать ADO.NET для соединения с этими источниками данных и для получения, обработки и обновления имеющихся в них данных.  
@@ -35,7 +35,7 @@ ADO.NET предоставляет согласованный доступ к т
  [Поставщики данных .NET Framework](../../../../docs/framework/data/adonet/data-providers.md)  
  Предоставляет общие сведения о конструкции поставщика данных .NET Framework и поставщиков данных .NET Framework, включенных при помощи ADO.NET.  
   
- [DataSets в ADO.NET](../../../../docs/framework/data/adonet/ado-net-datasets.md)  
+ [Наборы данных ADO.NET](../../../../docs/framework/data/adonet/ado-net-datasets.md)  
  Предоставляет общие сведения о конструкции и компонентах `DataSet`.  
   
  [Одновременное выполнение в ADO.NET](../../../../docs/framework/data/adonet/side-by-side-execution.md)  
@@ -58,6 +58,7 @@ ADO.NET предоставляет согласованный доступ к т
  Описывает, как выполнять соединение с источником данных, получать и изменять данные. К этому относятся `DataReaders` и `DataAdapters`.  
   
 ## <a name="see-also"></a>См. также
+
 - [ADO.NET](../../../../docs/framework/data/adonet/index.md)
 - [Доступ к данным в Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

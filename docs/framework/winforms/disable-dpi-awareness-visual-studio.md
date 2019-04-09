@@ -1,21 +1,24 @@
 ---
 title: Отключение поддержки определения DPI в Visual Studio
-description: Обсуждает ограничения конструктор Windows Forms на HDPI-мониторах, а также как запустить Visual Studio как процесс не поддерживают DPI.
-ms.date: 03/19/2019
+description: Описывает ограничения части конструктора Windows Forms на HDPI-мониторах и запуска Visual Studio в качестве процесса не поддерживают DPI.
+ms.date: 04/05/2019
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 73f2371c40facf8902958cce020a6f02047615ba
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.custom: seoapril2019
+ms.openlocfilehash: e52debea382033417afe0bd47f899af1666192bc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58633872"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181388"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Отключение поддержки определения DPI в Visual Studio
 
 Visual Studio является точек на дюйм (DPI) приложения, что означает отображение шкалы автоматически. Если приложение указано, что он не поддерживает определение DPI, операционная система масштабируется приложение в качестве растрового изображения. Это поведение также называется виртуализации точек на ДЮЙМ. Приложение по-прежнему считает, что он выполняется на 100% масштабирования или 96 точек на дюйм.
+
+В этой статье рассматриваются ограничения части конструктора Windows Forms на HDPI-мониторах и ее запуске Visual Studio как процесс не поддерживают DPI.
 
 ## <a name="windows-forms-designer-on-hdpi-monitors"></a>Конструктор Windows Forms на HDPI-мониторах
 
@@ -32,11 +35,15 @@ Visual Studio является точек на дюйм (DPI) приложени
 > [!NOTE]
 > Эта информационная панель была введена в Visual Studio 2017 версии 15.8.
 
-Если вы не работают в конструкторе, не требуется для настройки макета формы можно игнорировать информационные панели и продолжить работу в редакторе кода или в других типах конструкторов. (Вы также можете [отключение уведомлений](#disable-notifications) , чтобы информационные панели не отображаются.) Только **конструктор Windows Forms** снижается. Если вам нужно работать в **конструктор Windows Forms**, следующий раздел поможет вам [решить проблему](#to-resolve-the-problem).
+Если вы не работают в конструкторе, не требуется для настройки макета формы можно игнорировать информационные панели и продолжить работу в редакторе кода или в других типах конструкторов. (Вы также можете [отключение уведомлений](#disable-notifications) , чтобы информационные панели не отображаются.) Только **конструктор Windows Forms** снижается. Если вам нужно работать в **конструктор Windows Forms**, следующий раздел поможет вам [решить проблему](#to-resolve-the-display-problem).
 
-## <a name="to-resolve-the-problem"></a>Чтобы устранить эту проблему
+## <a name="to-resolve-the-display-problem"></a>Для устранения проблемы отображения
 
-Существует три варианта для устранения проблемы отображения.
+Существует три способа решения проблемы отображения:
+
+1. [Перезапустите Visual Studio как процесс не поддерживают DPI](#restart-visual-studio-as-a-dpi-unaware-process)
+2. [Добавьте параметр реестра](#add-a-registry-entry)
+3. [Настройте дисплей масштабирование параметр до 100%](#set-your-display-scaling-setting-to-100)
 
 ### <a name="restart-visual-studio-as-a-dpi-unaware-process"></a>Перезапустите Visual Studio как процесс не поддерживают DPI
 

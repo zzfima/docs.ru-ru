@@ -9,12 +9,12 @@ helpviewer_keywords:
 - GDI+, cardinal splines
 - cardinal splines
 ms.assetid: 09b3797a-6294-422d-9adf-a5a0a7695c0c
-ms.openlocfilehash: 6cc57698c8e43aefff0e0a63b0384417483d3b48
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 4588f6f606f0f479aeae1d143f23175ec4be32a5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705289"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200419"
 ---
 # <a name="cardinal-splines-in-gdi"></a>Фундаментальные сплайны в GDI+
 Фундаментальный сплайн — это последовательность отдельных кривых, объединенных в одну большую кривую. Сплайн, определяется массив точек и параметром натяжение. Фундаментальный сплайн проходящую через все точки в массиве. Существуют не острые углы и внезапные изменения tightness кривой. Ниже показан набор точек и фундаментальный сплайн, проходящий через все точки в наборе.  
@@ -36,5 +36,6 @@ ms.locfileid: "57705289"
  [!code-vb[LinesCurvesAndShapes#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#31)]  
   
 ## <a name="see-also"></a>См. также
-- [Линии, кривые и фигуры](lines-curves-and-shapes.md)
+
+- [Прямые и кривые линии и фигуры](lines-curves-and-shapes.md)
 - [Построение и рисование кривых](constructing-and-drawing-curves.md)

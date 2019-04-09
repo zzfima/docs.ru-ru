@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 357182d6157b63f1bccf47cb43f0c78dec5875cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0dc76a2732bf9c1e4f3a26fa2d045bfbcd837ec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625944"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181094"
 ---
 # <a name="qualifiersetget-function"></a>Функция QualifierSet_Get
 Получает указанный именованный квалификатор.  
@@ -65,7 +65,7 @@ HRESULT QualifierSet_Get (
 
 Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файл заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание:  |
+|Константа  |Значение  |Описание  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Параметр не является допустимым. |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | Заданного квалификатора не существует. |
@@ -83,4 +83,5 @@ HRESULT QualifierSet_Get (
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>См. также
-- [WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)
+
+- [WMI и счетчики производительности (справочник по неуправляемым API)](index.md)

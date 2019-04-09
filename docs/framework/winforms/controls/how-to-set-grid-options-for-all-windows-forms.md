@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - Windows Forms Designer
 ms.assetid: 36967466-1dfd-4fae-a7f1-7bf2cbc94048
-ms.openlocfilehash: 9995542385ed32b6e6f522d049113279a711dba4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 8dec7451aaa84b5ec0f3f5d6210afa82924500fe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715400"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199827"
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>Практическое руководство. Установка параметров сетки для всех форм Windows Forms
 Освоив работу в среде разработки Visual Studio, можно задать настройки для всех форм и проектов, которыми вы работаете в конструкторе Windows Forms.  
@@ -30,13 +30,14 @@ ms.locfileid: "57715400"
      В области справа в разделе **параметры макета** заголовок, можно задать значение по умолчанию параметры сетки для всех новых форм, создании. Эти параметры включают размер сетки, наличие привязки элементов управления к нему и является ли оно включено по умолчанию. Кроме того, можно выбрать между **SnapToGrid** и **линии привязки** режима макета. Дополнительные сведения о линии привязки, см. в разделе [Пошаговое руководство: Упорядочение элементов управления в Windows Forms с помощью линий привязки](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
   
 ## <a name="see-also"></a>См. также
-- [Пошаговое руководство: Упорядочение элементов управления в формах Windows Forms, с помощью линий привязки](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [Страница "Общие", конструктор Windows Forms, диалоговое окно "Параметры](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
+
+- [Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью линий привязки](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Без ограничений, конструктор Windows Forms, диалоговое окно параметров](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
 - [Элементы управления Windows Forms](index.md)
-- [Практическое руководство. Добавление элементов управления Windows Forms](how-to-add-controls-to-windows-forms.md)
-- [Упорядочение элементов управления в формах Windows Forms](arranging-controls-on-windows-forms.md)
+- [Практическое руководство. Добавление элементов управления в формы Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [Расположение элементов управления в формах Windows Forms](arranging-controls-on-windows-forms.md)
 - [Практическое руководство. Установка последовательности переходов в формах Windows Forms](how-to-set-the-tab-order-on-windows-forms.md)
-- [Практическое руководство. Задать текст, отображаемый элементом управления форм Windows](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Практическое руководство. Определение текста, отображаемого элементом управления Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
 - [Размещение элементов управления в формах Windows Forms](putting-controls-on-windows-forms.md)
-- [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)
+- [Элементы управления для использования в формах Windows Forms](controls-to-use-on-windows-forms.md)
 - [Функциональная классификация элементов управления Windows Forms](windows-forms-controls-by-function.md)

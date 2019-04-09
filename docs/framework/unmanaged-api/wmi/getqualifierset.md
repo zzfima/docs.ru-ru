@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0b35a901586a4e0951b9915330f974dc48e931c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 75bf52fbf9552dc464d9c646f0a2b1bc01cf89c0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632183"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193100"
 ---
 # <a name="getqualifierset-function"></a>Функция GetQualifierSet
 Получает набор квалификатор для экземпляра или определения класса.
@@ -47,13 +47,13 @@ HRESULT GetQualifierSet (
 [in] Указатель на [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) экземпляра.
 
 `ppQualSet`  
-[out] Получает указатель интерфейса, обеспечивающий доступ к квалификаторы объекта класса. Параметр `ppQualSet` не может иметь значение `null`. Если возникает ошибка, не возвращается новый объект и указатель остается без изменений. 
+[out] Получает указатель интерфейса, обеспечивающий доступ к квалификаторы объекта класса. `ppQualSet` Не может быть `null`. Если возникает ошибка, не возвращается новый объект и указатель остается без изменений. 
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файл заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание:  |
+|Константа  |Значение  |Описание  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Произошел общий сбой. |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | Указанный метод не существует. |
@@ -75,4 +75,5 @@ HRESULT GetQualifierSet (
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>См. также
-- [WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)
+
+- [WMI и счетчики производительности (справочник по неуправляемым API)](index.md)

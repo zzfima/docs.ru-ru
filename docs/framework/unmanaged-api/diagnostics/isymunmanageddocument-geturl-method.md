@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3b4e501629198c9bac627979547a5603d3e7866a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 15b42bb72975fad4c1830a961f83d9e3065d055b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57467133"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187464"
 ---
 # <a name="isymunmanageddocumentgeturl-method"></a>Метод ISymUnmanagedDocument::GetURL
 Возвращает универсальный код ресурса URL-адрес для этого документа.  
@@ -50,4 +50,5 @@ HRESULT GetURL(
  Значение S_OK, если метод выполнен успешно; в противном случае — код ошибки.  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс ISymUnmanagedDocument](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

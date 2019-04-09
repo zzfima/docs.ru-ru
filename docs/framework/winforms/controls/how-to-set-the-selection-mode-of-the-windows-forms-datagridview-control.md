@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Определение режима выделения из элемента управления DataGridView в Windows Forms
+title: Практическое руководство. Определение режима выделения для элемента управления DataGridView в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], selection mode
 - data grids [Windows Forms], selection mode
 ms.assetid: 2f241643-7f82-4583-8757-03494f63b465
-ms.openlocfilehash: 7529251e19989708bcb4a116cdb5edee64a417d3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2e430dfb170943178f6db27c0bd2c1ef0f972882
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718159"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200562"
 ---
-# <a name="how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control"></a>Практическое руководство. Определение режима выделения из элемента управления DataGridView в Windows Forms
+# <a name="how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control"></a>Практическое руководство. Определение режима выделения для элемента управления DataGridView в Windows Forms
 В следующем примере кода показано, как настроить <xref:System.Windows.Forms.DataGridView> элемент управления, щелкнув в любом месте в пределах строки автоматически выбирает всю строку, и поэтому можно выбрать только одну строку за раз.  
   
 ## <a name="example"></a>Пример  
@@ -31,6 +31,7 @@ ms.locfileid: "57718159"
 -   ссылки на сборки <xref:System?displayProperty=nameWithType> и <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.MultiSelect%2A>
 - <xref:System.Windows.Forms.DataGridView.SelectionMode%2A>

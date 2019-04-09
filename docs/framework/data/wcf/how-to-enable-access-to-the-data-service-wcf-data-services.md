@@ -1,5 +1,5 @@
 ---
-title: Как выполнить  Включение доступа к службе данных (службы данных WCF)
+title: Практическое руководство. Включение доступа к службе данных (службы данных WCF)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 3d830bcd-32b4-4f26-9287-d58a071452c6
-ms.openlocfilehash: d1ce582096de63f60c7f2c99925fa39710bedfb3
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 44f3709cf0a1485c772940e7460d3436a52aa3eb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091946"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163661"
 ---
-# <a name="how-to-enable-access-to-the-data-service-wcf-data-services"></a>Как выполнить  Включение доступа к службе данных (службы данных WCF)
+# <a name="how-to-enable-access-to-the-data-service-wcf-data-services"></a>Практическое руководство. Включение доступа к службе данных (службы данных WCF)
 В службах [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] требуется явно предоставлять доступ к ресурсам, предоставляемым службой данных. Это значит, что после создания новой службы данных все равно требуется явно предоставлять доступ к отдельным ресурсам в виде набора сущностей. В этом разделе показано, как включить чтения и задает доступ на запись к пяти сущности в службе данных Northwind, которая создается при завершении [быстрого запуска](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md). Поскольку перечисление <xref:System.Data.Services.EntitySetRights> определяется с помощью <xref:System.FlagsAttribute>, для указания нескольких разрешений для одного набора сущностей или операции можно использовать логический оператор OR.  
   
 > [!NOTE]
@@ -30,5 +30,6 @@ ms.locfileid: "56091946"
      Это обеспечивает клиентам доступ для чтения и записи к наборам сущностей `Orders` и `Order_Details` и доступ только для чтения к наборам сущностей `Customers`.  
   
 ## <a name="see-also"></a>См. также
-- [Практическое руководство. Разработке службы данных WCF, выполняющегося на сервере IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)
+
+- [Практическое руководство. Разработка службы данных WCF Data Service, работающей на IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)
 - [Настройка службы данных](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)

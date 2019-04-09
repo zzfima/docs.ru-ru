@@ -2,12 +2,12 @@
 title: (Остаток от деления) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 243ddc4f-3c4e-41e1-a3ef-4ed39e36248b
-ms.openlocfilehash: 543c35c56955fb0a9909fced23357444bc78197a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: b08689b6f5b17950738c557e02f995fa85aeb35e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732600"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160489"
 ---
 # <a name="modulo-entity-sql"></a>(Остаток от деления) (Entity SQL)
 Возвращает остаток от деления значения одного выражения на другое.  
@@ -20,10 +20,10 @@ dividend % divisor
   
 ## <a name="arguments"></a>Аргументы  
  `dividend`  
- Делимое числовое выражение. `dividend` - любое допустимое выражение с любым числовым типом данных.  
+ Делимое числовое выражение. `dividend` — любое допустимое выражение любого из числовых типов данных.  
   
  `divisor`  
- Числовое выражение, на которое делится делимое. `divisor` - любое допустимое выражение с любым числовым типом данных.  
+ Числовое выражение, на которое делится делимое. `divisor` — любое допустимое выражение любого из числовых типов данных.  
   
 ## <a name="result-types"></a>Типы результата  
  Edm.Int32  
@@ -38,4 +38,5 @@ dividend % divisor
  [!code-csharp[DP EntityServices Concepts 2#MODULO](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#modulo)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Справочник по Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

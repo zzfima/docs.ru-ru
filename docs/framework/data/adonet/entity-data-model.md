@@ -2,12 +2,12 @@
 title: EDM (модель данных с использованием сущностей)
 ms.date: 03/30/2017
 ms.assetid: 2dda3d5b-4582-4ba0-a91d-fcd7a1498137
-ms.openlocfilehash: f6f3d02a27ce9df152753b7aeec9ceb251bca532
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 8e96890d97f652295a3fdb67c48ec37710280eec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904830"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197923"
 ---
 # <a name="entity-data-model"></a>EDM (модель данных с использованием сущностей)
 Модель EDM - это набор основных понятий, которые описывают структуру данных независимо от формы хранения. Модель EDM заимствует свойства модели «сущность-связь», описанной Питером Ченом в 1976 г., более того, она строится на модели «сущность-связь» и расширяет возможности ее традиционного использования.  
@@ -16,16 +16,16 @@ ms.locfileid: "55904830"
   
  `conceptual model` - это специфическое представление структуры данных в виде сущностей и связей, которое обычно определяется на доменном языке DSL, реализующем основные понятия модели EDM. [Язык определения концептуальной схемы (CSDL)](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md) является примером такого доменного языка. Сущности и связи, описанные в концептуальной модели, можно представить в виде абстракций объектов и ассоциаций в приложении. Это позволяет разработчикам сфокусировать внимание на концептуальной модели, не думая о схеме хранения, и писать эффективный и поддерживаемый код. Одновременно разработчики схем хранения могут сфокусировать внимание на эффективности доступа к данным, хранения и масштабируемости.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  В подразделах этого раздела описываются основные понятия модели EDM. Любой специфический язык домена (DSL), реализующий модель EDM, должен включать основные понятия, описанные в данном разделе. Обратите внимание, что [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) использует язык CSDL для определения концептуальных моделей. Для получения дополнительной информации см. [CSDL Specification](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md).  
   
  [Основные понятия модели EDM](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
   
- [Модель EDM. Пространства имен](../../../../docs/framework/data/adonet/entity-data-model-namespaces.md)  
+ [EDM (модель данных с использованием сущностей): Пространства имен](../../../../docs/framework/data/adonet/entity-data-model-namespaces.md)  
   
- [Модель EDM. Типы-примитивы](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)  
+ [EDM (модель данных с использованием сущностей): примитивные типы данных](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)  
   
- [Модель EDM. Наследование](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md)  
+ [EDM (модель данных с использованием сущностей): Наследование](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md)  
   
  [конечная точка ассоциации](../../../../docs/framework/data/adonet/association-end.md)  
   
@@ -39,11 +39,11 @@ ms.locfileid: "55904830"
   
  [сложный тип](../../../../docs/framework/data/adonet/complex-type.md)  
   
- [контейнер сущности](../../../../docs/framework/data/adonet/entity-container.md)  
+ [контейнер сущностей](../../../../docs/framework/data/adonet/entity-container.md)  
   
  [ключ сущности](../../../../docs/framework/data/adonet/entity-key.md)  
   
- [набор сущности](../../../../docs/framework/data/adonet/entity-set.md)  
+ [набор сущностей](../../../../docs/framework/data/adonet/entity-set.md)  
   
  [тип сущности](../../../../docs/framework/data/adonet/entity-type.md)  
   
@@ -53,15 +53,16 @@ ms.locfileid: "55904830"
   
  [объявляемая моделью функция](../../../../docs/framework/data/adonet/model-declared-function.md)  
   
- [определяемая моделью функция](../../../../docs/framework/data/adonet/model-defined-function.md)  
+ [функция определенной модели](../../../../docs/framework/data/adonet/model-defined-function.md)  
   
  [свойство навигации](../../../../docs/framework/data/adonet/navigation-property.md)  
   
- [свойство](../../../../docs/framework/data/adonet/property.md)  
+ [свойство;](../../../../docs/framework/data/adonet/property.md)  
   
  [ограничение ссылочной целостности](../../../../docs/framework/data/adonet/referential-integrity-constraint.md)  
   
 ## <a name="see-also"></a>См. также
-- [Средства модели EDM ADO.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
-- [Обзор файла .edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
+
+- [Средства работы с моделью EDM ADO.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
+- [Общие сведения о EDMX-файлах](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [Спецификация CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)

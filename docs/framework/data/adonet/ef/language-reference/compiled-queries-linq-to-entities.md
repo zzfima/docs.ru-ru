@@ -1,23 +1,23 @@
 ---
-title: Скомпилированные запросы (LINQ to Entities)
+title: Компилированные запросы (LINQ to Entities)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8025ba1d-29c7-4407-841b-d5a3bed40b7a
-ms.openlocfilehash: d261418136cfc799e7891da02b2bd8174cf8340a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f3ba6bfd0f83270bc6b9e980fe92f6630c90ad49
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582103"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193074"
 ---
-# <a name="compiled-queries--linq-to-entities"></a>Скомпилированные запросы (LINQ to Entities)
+# <a name="compiled-queries--linq-to-entities"></a>Компилированные запросы (LINQ to Entities)
 Если приложение многократно выполняет похожие по структуре запросы на платформе Entity Framework, во многих случаях можно повысить производительность, скомпилировав запрос один раз, а затем выполняя его несколько раз с разными параметрами. Например, приложению может понадобиться получить всех клиентов из определенного города; имя города указывается пользователем во время выполнения с помощью формы. Для этих целей технология LINQ to Entities поддерживает использование скомпилированных запросов.  
   
  Начиная с версии 4.5 платформы .NET Framework, запросы LINQ кэшируются автоматически. Тем не менее можно использовать скомпилированные запросы LINQ для снижения затрат при последующем выполнении, и скомпилированные запросы могут быть более эффективными, чем запросы LINQ, которые автоматически сохраняются в кэше. Обратите внимание, что запросы LINQ to Entities, которые применяют оператор `Enumerable.Contains` к коллекции в памяти, автоматически не кэшируются. Также в скомпилированных запросах LINQ не допускаются коллекции в памяти с параметрами.  
   
- Класс <xref:System.Data.Objects.CompiledQuery> обеспечивает компиляцию и кэширование запросов для повторного использования. Концептуально данный класс содержит метод <xref:System.Data.Objects.CompiledQuery> `Compile` с несколькими перегрузками. Вызовите метод `Compile`, чтобы создать новый делегат, для представления скомпилированного запроса. Метод `Compile`, которому предоставляют контекст <xref:System.Data.Objects.ObjectContext> и значения параметров, возвращает делегата, который формирует определенный результат (например, экземпляр <xref:System.Linq.IQueryable%601>). Компиляция запроса выполняется только один раз во время первого выполнения. Параметры слияния, которые заданы для запроса во время компиляции, далее не могут быть изменены. После компиляции запроса ему можно передавать только параметры примитивного типа, но нельзя заменять части запроса, которые изменят созданный код SQL. Дополнительные сведения см. в разделе [параметры объединения Entity Framework и компилированные запросы](https://go.microsoft.com/fwlink/?LinkId=199591)  
+ Класс <xref:System.Data.Objects.CompiledQuery> обеспечивает компиляцию и кэширование запросов для повторного использования. Концептуально данный класс содержит метод <xref:System.Data.Objects.CompiledQuery>`Compile` с несколькими перегрузками. Вызовите метод `Compile`, чтобы создать новый делегат, для представления скомпилированного запроса. Метод `Compile`, которому предоставляют контекст <xref:System.Data.Objects.ObjectContext> и значения параметров, возвращает делегата, который формирует определенный результат (например, экземпляр <xref:System.Linq.IQueryable%601>). Компиляция запроса выполняется только один раз во время первого выполнения. Параметры слияния, которые заданы для запроса во время компиляции, далее не могут быть изменены. После компиляции запроса ему можно передавать только параметры примитивного типа, но нельзя заменять части запроса, которые изменят созданный код SQL. Дополнительные сведения см. в разделе [параметры объединения Entity Framework и компилированные запросы](https://go.microsoft.com/fwlink/?LinkId=199591)  
   
  [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] Выражение запроса, <xref:System.Data.Objects.CompiledQuery> `Compile` компилирует метод представляется одним из универсальных `Func` делегаты, такие как <xref:System.Func%605>. Выражение запроса может инкапсулировать не более одного параметра `ObjectContext`, одного возвращаемого параметра и 16 параметров запроса. Если нужно больше 16 параметров запроса, то можно создать структуру, свойства которой будут соответствовать параметрам запроса. После задания свойств ими можно будет воспользоваться в выражении запроса из структуры.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "54582103"
  [!code-vb[DP L2E Conceptual Examples#CompiledQuery5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery5)]  
   
 ## <a name="example"></a>Пример  
- В следующем примере компилируется и вызывается запрос, принимающий входной параметр типа <xref:System.DateTime> и возвращающий последовательность заказов с датой после 8 марта 2004 г. Этот запрос возвращает сведения о заказе в виде последовательности анонимных типов. Анонимные типы выводятся компилятором, поэтому параметры типа нельзя указать в методе <xref:System.Data.Objects.CompiledQuery> `Compile` и тип определяется в самом запросе.  
+ В следующем примере компилируется и вызывается запрос, принимающий входной параметр типа <xref:System.DateTime> и возвращающий последовательность заказов с датой после 8 марта 2004 г. Этот запрос возвращает сведения о заказе в виде последовательности анонимных типов. Анонимные типы выводятся компилятором, поэтому параметры типа нельзя указать в методе <xref:System.Data.Objects.CompiledQuery>`Compile` и тип определяется в самом запросе.  
   
  [!code-csharp[DP L2E Conceptual Examples#CompiledQuery6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery6)]
  [!code-vb[DP L2E Conceptual Examples#CompiledQuery6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery6)]  
@@ -69,6 +69,7 @@ ms.locfileid: "54582103"
  [!code-vb[DP L2E Conceptual Examples#MyParamsStruct](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#myparamsstruct)]  
   
 ## <a name="see-also"></a>См. также
+
 - [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)
 - [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
-- [Параметры слияния Entity Framework и компилированные запросы](https://go.microsoft.com/fwlink/?LinkId=199591)
+- [Параметры объединения Entity Framework и компилированные запросы](https://go.microsoft.com/fwlink/?LinkId=199591)

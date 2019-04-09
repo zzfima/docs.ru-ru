@@ -1,18 +1,18 @@
 ---
-title: 'Как выполнить: Создание новых параметров во время разработки'
+title: 'Как выполнить: Создание нового параметра во время разработки'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application settings [Windows Forms], design time
 - application settings [Windows Forms], creating
 ms.assetid: c5d60a66-6507-462f-a81f-e3bc0a804e16
-ms.openlocfilehash: 54f64de8cdd47b7fd451d266cca3b7577e9e1d78
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 03a96298af68579bb2e67299688928dee0f517de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702780"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198586"
 ---
-# <a name="how-to-create-a-new-setting-at-design-time"></a>Как выполнить: Создание новых параметров во время разработки
+# <a name="how-to-create-a-new-setting-at-design-time"></a>Как выполнить: Создание нового параметра во время разработки
 Можно создать новый параметр во время разработки с помощью конструктора параметров. Этот конструктор имеет табличный интерфейс, который позволяет создавать новые параметры и указать свойства для этих параметров. Необходимо указать имя, значение, тип и область для новых параметров. Создав параметр, он доступен в коде.  
   
 ### <a name="to-create-a-new-setting-at-design-time-in-c"></a>Чтобы создать новый параметр во время разработки на языке C\#
@@ -32,6 +32,7 @@ ms.locfileid: "57702780"
 3.  В конструкторе параметров задайте имя, значение, тип и область действия параметра. Каждая строка представляет один параметр.  
   
 ## <a name="see-also"></a>См. также
+
 - [Использование параметров приложения и параметров пользователя](using-application-settings-and-user-settings.md)
 - [Общие сведения о параметрах приложений](application-settings-overview.md)
-- [Практическое руководство. Изменить значение существующего параметра во время разработки](how-to-change-the-value-of-an-existing-setting-at-design-time.md)
+- [Как выполнить: Изменение значения существующего параметра во время разработки](how-to-change-the-value-of-an-existing-setting-at-design-time.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-ms.openlocfilehash: 34f1c761a127fe00612259a79dae47d1c9d5512f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c5f1ab0b6fa56e4836a950ca3f2bbad19cfbff2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534424"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121983"
 ---
 # <a name="using-message-contracts"></a>Использование контрактов сообщений
 Обычно при создании приложений Windows Communication Foundation (WCF), разработчики особое внимание структур данных и вопросам сериализации и не обязательно вынужденными обращаться с этой структурой сообщений, в которых передаются данные. Для таких приложений создание контрактов данных для параметров или возвращаемых значений представляет собой достаточно простую задачу. (Дополнительные сведения см. в разделе [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
@@ -105,7 +105,7 @@ public class BankingTransaction
  Атрибут <xref:System.ServiceModel.MessageContractAttribute> позволяет указать атрибуты WrapperName и WrapperNamespace, от которых зависит имя элемента-оболочки в тексте сообщения SOAP. По умолчанию имя типа контракта сообщения используется для оболочки и пространства имен, в котором определен контракт сообщения. `http://tempuri.org/` используется в качестве пространства имен по умолчанию.  
   
 > [!NOTE]
->  Атрибуты <xref:System.Runtime.Serialization.KnownTypeAttribute> в контрактах сообщений не учитываются. Если атрибут <xref:System.Runtime.Serialization.KnownTypeAttribute> необходим, поместите его в операцию, в которой используется данный контракт сообщения.  
+>  <xref:System.Runtime.Serialization.KnownTypeAttribute> атрибуты учитываются в контрактах сообщений. Если атрибут <xref:System.Runtime.Serialization.KnownTypeAttribute> необходим, поместите его в операцию, в которой используется данный контракт сообщения.  
   
 ## <a name="controlling-header-and-body-part-names-and-namespaces"></a>Управление именами и пространствами имен заголовков и разделов тела  
  В SOAP-представлении контракта сообщения каждый заголовок и раздел тела сообщения сопоставляется с XML-элементом, имеющим имя и пространство имен.  
@@ -215,7 +215,7 @@ public class BankingDepositLog
   
  Это можно сделать, задав свойство <xref:System.ServiceModel.MessageContractMemberAttribute.ProtectionLevel%2A?displayProperty=nameWithType> атрибутов <xref:System.ServiceModel.MessageHeaderAttribute> и <xref:System.ServiceModel.MessageBodyMemberAttribute>. Это свойство является перечислением типа <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType> и может принимать значения <xref:System.Net.Security.ProtectionLevel.None> (без шифрования или подписи), <xref:System.Net.Security.ProtectionLevel.Sign> (только цифровая подпись) или <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> (и шифрование, и цифровая подпись). Значение по умолчанию — <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>.  
   
- Чтобы эти возможности безопасности работали, необходимо надлежащим образом настроить привязку и расширения функциональности. При использовании этих функций безопасности без надлежащей настройки (например, при попытке подписать сообщение без предоставления учетных данных) во время проверки будет вызвано исключение.  
+ Чтобы эти возможности безопасности работали, необходимо надлежащим образом настроить привязку и расширения функциональности. При использовании этих возможностей безопасности без надлежащей настройки (например, при попытке подписать сообщение без предоставления учетных данных) во время проверки будет вызвано исключение.  
   
  Для заголовков сообщений уровень защиты определяется отдельно для каждого заголовка.  
   
@@ -236,7 +236,7 @@ public class PatientRecord
 }  
 ```  
   
- В этом примере заголовок `recordID` не защищается, заголовок `patientName`					`signed`, а заголовок `SSN` шифруется и подписывается. Как минимум к одному разделу тела - `medicalHistory` - применено свойство <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>; следовательно, все тело сообщения шифруется и подписывается, хотя для разделов комментариев и диагноза заданы более низкие уровни защиты.  
+ В этом примере заголовок `recordID` не защищается, заголовок `patientName``signed`, а заголовок `SSN` шифруется и подписывается. Как минимум к одному разделу тела - `medicalHistory` - применено свойство <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>; следовательно, все тело сообщения шифруется и подписывается, хотя для разделов комментариев и диагноза заданы более низкие уровни защиты.  
   
 ## <a name="soap-action"></a>Свойство Action протокола SOAP  
  В протоколе SOAP и связанных с ним стандартах веб-служб определено свойство с именем `Action`, которое может присутствовать для каждого оправляемого SOAP-сообщения. Значение этого свойства определяется свойствами <xref:System.ServiceModel.OperationContractAttribute.Action%2A?displayProperty=nameWithType> и <xref:System.ServiceModel.OperationContractAttribute.ReplyAction%2A?displayProperty=nameWithType> операции.  
@@ -448,5 +448,6 @@ public class OperationDetails
  Если требуется получать объект сообщения как свойство `Result`, чтобы возвращаемые значения были свойствами этого объекта, используйте параметр команды `/messageContract`. При этом формируется сигнатура, которая возвращает ответное сообщение как свойство `Result` объекта <xref:System.EventArgs>. Все внутренние возвращаемые значения тогда будут свойствами объекта ответного сообщения.  
   
 ## <a name="see-also"></a>См. также
+
 - [Использование контрактов данных](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
 - [Проектирование и реализация служб](../../../../docs/framework/wcf/designing-and-implementing-services.md)

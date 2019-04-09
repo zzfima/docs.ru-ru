@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Указание типа учетных данных клиента
+title: Практическое руководство. Указание типа учетных данных клиента
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - security credentials, adding to SOAP messages
 - WCF, security
 ms.assetid: 10f51bee-5f92-4c1a-9126-fa5418535d8f
-ms.openlocfilehash: 9fe999c4ee27d4a78bfad185fa3bcc065d74708a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 1138f0fe955782c71076d5c15c236d1d4ebbec01
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643384"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185059"
 ---
-# <a name="how-to-specify-the-client-credential-type"></a>Как выполнить Указание типа учетных данных клиента
+# <a name="how-to-specify-the-client-credential-type"></a>Практическое руководство. Указание типа учетных данных клиента
 После установки режима безопасности (на уровне транспорта или сообщений) можно установить тип учетных данных клиента. Это свойство определяет тип учетных данных, которые клиент должен предоставить службе для проверки подлинности. Дополнительные сведения о задании режима безопасности (обязательный шаг перед настройкой типа учетных данных клиента), см. в разделе [как: Настройка режима безопасности](../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
   
 ### <a name="to-set-the-client-credential-type-in-code"></a>Установка типа учетных данных клиента в коде  
@@ -58,5 +58,6 @@ ms.locfileid: "54643384"
     ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Защита служб](../../../docs/framework/wcf/securing-services.md)
-- [Практическое руководство. Настройка режима безопасности](../../../docs/framework/wcf/how-to-set-the-security-mode.md)
+- [Практическое руководство. Задание режима безопасности](../../../docs/framework/wcf/how-to-set-the-security-mode.md)

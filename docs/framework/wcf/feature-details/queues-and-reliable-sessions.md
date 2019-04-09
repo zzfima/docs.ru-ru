@@ -2,12 +2,12 @@
 title: Очереди и надежные сеансы
 ms.date: 03/30/2017
 ms.assetid: 7e794d03-141c-45ed-b6b1-6c0e104c1464
-ms.openlocfilehash: 2f79e1eac469dc1d9d775cbca0f06046f10dfb20
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1fb7d7db36aa51c63789b6daf0ac3689c87ace5c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642913"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196831"
 ---
 # <a name="queues-and-reliable-sessions"></a>Очереди и надежные сеансы
 Очереди и надежные сеансы перечислены возможности Windows Communication Foundation (WCF), которые реализуют надежный обмен сообщениями. В подразделах, содержащихся в этом разделе рассматриваются возможности надежного обмена сообщениями WCF.  
@@ -39,6 +39,7 @@ ms.locfileid: "54642913"
  Разделение в сочетании с надежностью передачи сообщений между очередями обеспечивает надежную передачу данных между слабо связанными приложениями. В отличие от технологии надежных сеансов, не требуется, чтобы источник и назначение выполнялись одновременно. Таким образом, однозначно возможны сценарии, в которых запросы фактически используются как механизм контроля нагрузки при несоответствии интенсивности создания сообщений источником и их потребления назначением. Дополнительные сведения об очередях см. в разделе [очереди в WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Очереди в WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
 - [Очереди в WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
 - [Надежные сеансы](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)

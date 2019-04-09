@@ -2,17 +2,17 @@
 title: Система типов (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 818a505b-a196-41dd-aaac-2ccd5f7a2f1a
-ms.openlocfilehash: a2748407703b90c60d3082b0e6c0b6aa2d3fb365
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 0afeffd3ad180d6cc6175010140754e279988b38
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904681"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134567"
 ---
 # <a name="type-system-entity-sql"></a>Система типов (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] поддерживает несколько типов:  
   
--   Типы-примитивы (простые типы), такие как `Int32` и `String.`  
+-   Примитив (простое) типы, такие как `Int32` и `String.`  
   
 -   Номинальные типы, которые определяются в схеме, например <xref:System.Data.Metadata.Edm.EntityType>, <xref:System.Data.Metadata.Edm.ComplexType> и <xref:System.Data.Metadata.Edm.RelationshipType>.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "55904681"
 ## <a name="references"></a>Ссылки  
  Ссылка - это логический указатель на отдельную сущность в определенном наборе сущностей.  
   
- Язык [!INCLUDE[esql](../../../../../../includes/esql-md.md)] поддерживает следующие операторы для конструирования, деконструирования и перехода по ссылкам.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] поддерживает следующие операторы для конструирования, деконструирования и перехода по ссылкам:  
   
 -   [REF](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md)  
   
@@ -49,6 +49,7 @@ from (select ref(o) as r from LOB.Orders as o) as o2
  Если ссылка имеет значение NULL или цель ссылки не существует, результатом становится NULL.  
   
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения об Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
 - [Справочник по Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [CAST](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md)

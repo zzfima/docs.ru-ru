@@ -1,17 +1,17 @@
 ---
-title: Практическое руководство. Проверка подлинности с помощью имени пользователя и пароля
+title: Практическое руководство. Проверка подлинности с использованием имени и пароля пользователя
 ms.date: 03/30/2017
 helpviewer_keywords:
 - authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
-ms.openlocfilehash: f6939659249ea40e97f340771017d0587ec6a08f
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: 08703209fd465f87e9dbc5e81a6ed90a4056324c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412270"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174139"
 ---
-# <a name="how-to-authenticate-with-a-user-name-and-password"></a>Практическое руководство. Проверка подлинности с помощью имени пользователя и пароля
+# <a name="how-to-authenticate-with-a-user-name-and-password"></a>Практическое руководство. Проверка подлинности с использованием имени и пароля пользователя
 
 В этом разделе показано, как включить службу Windows Communication Foundation (WCF) для проверки подлинности клиента с помощью имени пользователя домена Windows и пароль. Предполагается, что это рабочая резидентная служба WCF. Пример создания основных резидентной службы WCF см [Приступая к работе](../../../../docs/framework/wcf/getting-started-tutorial.md). В этом разделе предполагается, что служба настраивается в коде. Если вы хотите см. в разделе Пример настройки похожей службы с помощью файла конфигурации см. в разделе [имя пользователя для безопасности сообщений](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
   
@@ -83,6 +83,7 @@ ms.locfileid: "58412270"
     ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.WSHttpBinding>
 - <xref:System.ServiceModel.WSHttpSecurity>
 - <xref:System.ServiceModel.SecurityMode>
@@ -93,4 +94,4 @@ ms.locfileid: "58412270"
 - <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A>
 - [Безопасность транспорта с обычной проверкой подлинности](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)
 - [Защита распределенных приложений](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)
-- [\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)
+- [\<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)

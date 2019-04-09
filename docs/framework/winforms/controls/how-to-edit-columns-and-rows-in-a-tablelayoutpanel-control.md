@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms], editing
 - rows [Windows Forms], editing
 ms.assetid: c367ed43-40dc-49eb-9e0f-ba70e83dfec0
-ms.openlocfilehash: 40129deed1f43480b7bde59ef8a67f4561af5d38
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: eb194052ecd78d585f251789730a1f9855c509d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724691"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201966"
 ---
 # <a name="how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control"></a>Практическое руководство. Изменение столбцов и строк в элементе управления TableLayoutPanel
 Можно использовать редактор коллекции для <xref:System.Windows.Forms.TableLayoutPanel> элементом управления, называемым **стили столбцов и строк** диалоговое окно для редактирования строк и столбцов элементов управления.  
@@ -44,5 +44,6 @@ ms.locfileid: "57724691"
 8.  Чтобы удалить строки или столбца, щелкните **удалить** кнопку, чтобы удалить выбранный элемент в **член** списка.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.SizeType>
 - [Элемент управления TableLayoutPanel](tablelayoutpanel-control-windows-forms.md)

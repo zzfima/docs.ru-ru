@@ -2,12 +2,12 @@
 title: ISOF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5b2b0d34-d0a7-4bcd-baf2-58aa8456d00b
-ms.openlocfilehash: 87d69f58fc0c45eacb4ee63997129347f7f2a857
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 097d6e7d452ee62a2c8934d2c5fcfdddbeaffc73
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827413"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195752"
 ---
 # <a name="isof-entity-sql"></a>ISOF (Entity SQL)
 Определяет, относится ли тип выражения к указанному типу или одному из его подтипов.  
@@ -32,7 +32,7 @@ expression IS [ NOT ] OF ( [ ONLY ] type )
  Тип, по которому проверяется выражение `expression`. Для типа должно быть указано пространство имен.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение `true`, если выражение `expression` относится к типу T, который является либо базовым типом, либо производным типом от типа `type`. Значение null, если выражение `expression` во время выполнения имеет значение null. В противном случае - значение `false`.  
+ `true` Если `expression` является типа T, который является либо базовым типом, либо производным типом класса `type`; значение null, если `expression` null во время выполнения; в противном случае — значение `false`.  
   
 ## <a name="remarks"></a>Примечания  
  Выражения `expression IS NOT OF (type)` и `expression IS NOT OF (ONLY type)` являются синтаксическими эквивалентами `NOT (expression IS OF (type))` и `NOT (expression IS OF (ONLY type))`, соответственно.  
@@ -57,4 +57,5 @@ expression IS [ NOT ] OF ( [ ONLY ] type )
  [!code-csharp[DP EntityServices Concepts 2#TREAT_ISOF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#treat_isof)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Справочник по Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

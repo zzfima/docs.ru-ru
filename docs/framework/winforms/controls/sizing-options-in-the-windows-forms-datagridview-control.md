@@ -9,17 +9,17 @@ helpviewer_keywords:
 - data grids [Windows Forms], row sizing
 - data grids [Windows Forms], sizing options
 ms.assetid: a5620a9c-0d06-41e3-8934-c25ddb16c9e6
-ms.openlocfilehash: a236289939b9355e961ce1bfc9a7e0ff5349a95a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2f76bbca3d4b6e642c0eec2129c4a2abee752655
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717912"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197845"
 ---
 # <a name="sizing-options-in-the-windows-forms-datagridview-control"></a>Изменение размеров управления DataGridView в Windows Forms
 <xref:System.Windows.Forms.DataGridView> размер во многих случаях можно изменить строк, столбцов и заголовков. В следующей таблице показаны эти случаи.  
   
-|вхождения|Описание:|  
+|вхождения|Описание|  
 |----------------|-----------------|  
 |Изменение размера пользователем|Пользователи могут изменять размеры, перетащив или дважды щелкнув строки, столбца или заголовок разделителей.|  
 |Изменение размеров элемента управления|В режиме заполнения столбцов изменение ширины столбцов при изменении ширины элемента управления; Например, когда элемент управления подключено к ее родительской формы и пользователем размера формы.|  
@@ -128,6 +128,7 @@ ms.locfileid: "57717912"
  Перечисления, используемые свойствами изменения размеров и методы имеют одинаковые значения для изменения размеров на основе содержимого. Эти значения можно ограничить ячейки, которые используются для вычисления желаемые размеры. Для всех перечислений изменения размеров значения с именами, которые ссылаются на отображаемых ячеек ограничивают вычисления ячейками в отображаемых строках. За исключением строк способ позволяет избежать снижения производительности при работе с большим числом строк. Также можно ограничить вычисления значения в ячейках заголовка или ячейки.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A?displayProperty=nameWithType>

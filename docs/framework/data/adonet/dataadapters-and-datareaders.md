@@ -2,12 +2,12 @@
 title: Объекты DataAdapter и DataReader
 ms.date: 03/30/2017
 ms.assetid: cc952ca2-ec19-46ab-9189-15174b52cb74
-ms.openlocfilehash: f4588187aad910d0b50b0c804e6de20a477b567b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af1d44b1e320557ab7906ce65dbeb5415b5c09dd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583513"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189694"
 ---
 # <a name="dataadapters-and-datareaders"></a>Объекты DataAdapter и DataReader
 Можно использовать ADO.NET **DataReader** для получения только для чтения однопроходный поток данных из базы данных. Результаты возвращаются после выполнения запроса и хранятся в сетевом буфере на клиенте, пока не запрошены с помощью **чтения** метод **DataReader**. С помощью **DataReader** позволяет увеличить производительность приложения как путем получения данных, как только он доступен, так и (по умолчанию) хранится только одна строка в памяти, уменьшая нагрузку на системные ресурсы одновременно.  
@@ -29,7 +29,7 @@ ms.locfileid: "54583513"
  [Добавление существующих ограничений к набору данных](../../../../docs/framework/data/adonet/adding-existing-constraints-to-a-dataset.md)  
  Показывает, как добавить существующие ограничения к `DataSet`.  
   
- [Сопоставления DataAdapter, DataTable и DataColumn](../../../../docs/framework/data/adonet/dataadapter-datatable-and-datacolumn-mappings.md)  
+ [Сопоставления DataAdapter DataTable и DataColumn](../../../../docs/framework/data/adonet/dataadapter-datatable-and-datacolumn-mappings.md)  
  Описывает, как задать `DataTableMappings` и `ColumnMappings` для `DataAdapter`.  
   
  [Разбивка на страницы результатов запроса](../../../../docs/framework/data/adonet/paging-through-a-query-result.md)  
@@ -41,12 +41,13 @@ ms.locfileid: "54583513"
  [Обработка событий DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)  
  Описывает события `DataAdapter` и способы их использования.  
   
- [Выполнение пакетных операций с использованием объектов DataAdapter](../../../../docs/framework/data/adonet/performing-batch-operations-using-dataadapters.md)  
+ [Выполнение пакетных операций с использованием объектов DataAdapters](../../../../docs/framework/data/adonet/performing-batch-operations-using-dataadapters.md)  
  Показывает, как повысить производительность приложения путем уменьшения количества циклов обмена данными с SQL Server в ходе применения обновлений из `DataSet`.  
   
 ## <a name="see-also"></a>См. также
+
 - [Подключение к источнику данных](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
 - [Команды и параметры](../../../../docs/framework/data/adonet/commands-and-parameters.md)
 - [Транзакции и параллельность](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
 - [Наборы данных, таблицы данных и объекты DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

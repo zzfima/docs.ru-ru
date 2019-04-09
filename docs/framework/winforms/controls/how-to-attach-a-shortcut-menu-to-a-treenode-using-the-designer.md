@@ -1,18 +1,18 @@
 ---
-title: Практическое руководство. Подключение контекстного меню к элементу управления TreeNode с помощью конструктора
+title: Практическое руководство. Прикрепление контекстного меню к элементу управления TreeNode с помощью конструктора
 ms.date: 03/30/2017
 helpviewer_keywords:
 - shortcut menus [Windows Forms], attaching to TreeNodes
 - TreeNode [Windows Forms], attaching a shortcut menu using Designer
 ms.assetid: 8e45e184-1313-4f8f-90ff-2cd5789b2268
-ms.openlocfilehash: aa161af65b7e8e1f3636398cd02139b5623eb154
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 1cc90ed9a103c41dbf85e39a43d307b1c0422603
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721987"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191452"
 ---
-# <a name="how-to-attach-a-shortcut-menu-to-a-treenode-using-the-designer"></a>Практическое руководство. Подключение контекстного меню к элементу управления TreeNode с помощью конструктора
+# <a name="how-to-attach-a-shortcut-menu-to-a-treenode-using-the-designer"></a>Практическое руководство. Прикрепление контекстного меню к элементу управления TreeNode с помощью конструктора
 Windows Forms <xref:System.Windows.Forms.TreeView> элемент управления отображает иерархию узлов аналогично к файлам и папкам, отображаемым в области слева компонента Windows Explorer в операционных системах Windows. Установив <xref:System.Windows.Forms.Control.ContextMenuStrip%2A> свойство, можно предоставить контекстно-зависимые операции для пользователя при их правой кнопкой мыши <xref:System.Windows.Forms.TreeView> элемента управления. Связав <xref:System.Windows.Forms.ContextMenuStrip> компонента с отдельными <xref:System.Windows.Forms.TreeNode> элементы, можно добавить пользовательский уровень функциональности контекстное меню для вашей <xref:System.Windows.Forms.TreeView> элементов управления.  
   
 > [!NOTE]
@@ -31,6 +31,7 @@ Windows Forms <xref:System.Windows.Forms.TreeView> элемент управле
      Кроме того, необходимо написать код для обработки <xref:System.Windows.Forms.ToolStripItem.Click> события для этих пунктов меню.  
   
 ## <a name="see-also"></a>См. также
+
 - [Элемент управления TreeView](treeview-control-windows-forms.md)
 - [Общие сведения об элементе управления TreeView](treeview-control-overview-windows-forms.md)
 - [Элемент управления ContextMenuStrip](contextmenustrip-control.md)

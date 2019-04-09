@@ -2,12 +2,12 @@
 title: Защита сведений о подключении
 ms.date: 03/30/2017
 ms.assetid: 1471f580-bcd4-4046-bdaf-d2541ecda2f4
-ms.openlocfilehash: 4c8992abc30690be8e9ef9c208b0a0bd3ddf6116
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: ccb039a79c76c31b905783b81710571d8c5ab82b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091959"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184448"
 ---
 # <a name="protecting-connection-information"></a>Защита сведений о подключении
 Защита доступа к источникам данным - одна из важнейших целей защиты приложения. Строка соединения представляет собой потенциальную уязвимость, если она не защищена. Сохранение сведений о соединении в виде простого текста или сохранение их в памяти представляет угрозу безопасности всей системы. Строки соединения, внедренные в исходный код можно считать с помощью [Ildasm.exe (дизассемблер IL)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) для просмотра промежуточного языка Майкрософт (MSIL) в скомпилированной сборке.  
@@ -40,7 +40,8 @@ ms.locfileid: "56091959"
  Строки соединения можно сохранить в файлах конфигурации, что исключает необходимость внедрять их в код приложения. Файлы конфигурации представляют собой стандартные XML-файлы, для которых в платформе .NET Framework определен типовой набор элементов. Строки подключения в файлах конфигурации обычно хранятся в  **\<connectionStrings >** элемент в **app.config** для приложения Windows, или  **Web.config** файл для приложения ASP.NET. Дополнительные сведения об основах хранения, извлечения и шифрования строк подключения в файлах конфигурации, см. в разделе [строки подключения и файлы конфигурации](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Защита приложений ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Шифрование данных конфигурации с помощью защищенной конфигурации](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100))
 - [Безопасность в .NET](../../../standard/security/index.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -2,17 +2,17 @@
 title: Кэширование плана запроса (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 90b0c685-5ef2-461b-98b4-c3c0a2b253c7
-ms.openlocfilehash: 75c097d66ae23d32465b5a717ae627d35cdc003f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9f042d46d9a601c1091e36f8d81ce8f933140b20
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671139"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178182"
 ---
 # <a name="query-plan-caching-entity-sql"></a>Кэширование плана запроса (Entity SQL)
 При каждой попытке выполнения запроса конвейер запросов обращается в кэш планов запросов, чтобы определить, что конкретный запрос уже скомпилирован и доступен. Если это так, то кэшированный план используется повторно вместо построения нового плана. Если совпадение в кэше планов запросов не обнаружено, запрос компилируется и кэшируется. Запрос идентифицируется его текстом [!INCLUDE[esql](../../../../../../includes/esql-md.md)] и коллекцией параметров (имен и типов). Все текстовые сравнения выполняются с учетом регистра.  
   
-## <a name="configuration"></a>Конфигурация  
+## <a name="configuration"></a>Параметр Configuration  
  Кэширование планов запросов можно настроить с помощью <xref:System.Data.EntityClient.EntityCommand>.  
   
  Чтобы включить или выключить кэширование планов запросов с помощью свойства <xref:System.Data.EntityClient.EntityCommand.EnablePlanCaching%2A?displayProperty=nameWithType>, назначьте этому свойству значение `true` или `false`. Отключение кэширования планов для отдельных динамических запросов, которые вряд ли будут использованы повторно, повышает производительность.  
@@ -36,7 +36,7 @@ ms.locfileid: "54671139"
   
 -   Текст запроса должен быть постоянным шаблоном, предпочтительно постоянной строкой или ресурсом.  
   
--   Экземпляр <xref:System.Data.EntityClient.EntityParameter> или <xref:System.Data.Objects.ObjectParameter> должен быть использован всегда, когда нужно передать введенное пользователем значение.  
+-   <xref:System.Data.EntityClient.EntityParameter> или <xref:System.Data.Objects.ObjectParameter> следует использовать везде, где должен быть передан введенное пользователем значение.  
   
  Необходимо избегать следующих шаблонов запросов, которые напрасно занимают слоты в кэше планов запросов.  
   
@@ -49,4 +49,5 @@ ms.locfileid: "54671139"
 -   Изменение текста внутри комментариев.  
   
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения об Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

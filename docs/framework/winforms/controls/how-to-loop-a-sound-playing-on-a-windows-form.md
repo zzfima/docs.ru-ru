@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Цикл звуков в Windows Forms
+title: Практическое руководство. Циклическое воспроизведение звука в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - sounds [Windows Forms], looping
 - playing sounds [Windows Forms], looping
 ms.assetid: ea95dd46-10a3-46c0-8263-4b205f00df7f
-ms.openlocfilehash: 43fcc472960cc3f2432d3872160d9ace4c617836
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a74acbbbcb5646a35de54a6000a0feae30f145a5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719277"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188517"
 ---
-# <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>Практическое руководство. Цикл звуков в Windows Forms
+# <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>Практическое руководство. Циклическое воспроизведение звука в Windows Forms
 В следующем примере кода выполняется повторяющееся воспроизведение звука. Когда этот код запускается в обработчике события `stopPlayingButton_Click`, воспроизведение звука останавливается. Если звук не воспроизводится, то ничего не происходит.  
   
 ## <a name="example"></a>Пример  
@@ -54,6 +54,7 @@ ms.locfileid: "57719277"
  По имени файла не всегда можно с уверенностью судить о его содержимом. Например, файл с именем Form1.vb может вовсе не быть исходным файлом Visual Basic. Следует проверять все входные данные перед использованием их в приложении.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Media.SoundPlayer.PlayLooping%2A>
 - [Практическое руководство. Воспроизведение звука в Windows Forms](how-to-play-a-sound-from-a-windows-form.md)
 - [Общие сведения о классе SoundPlayer](soundplayer-class-overview.md)

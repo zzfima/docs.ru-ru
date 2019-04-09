@@ -5,12 +5,12 @@ helpviewer_keywords:
 - clients [WCF], running
 - WCF clients [WCF], running
 ms.assetid: a67884cc-1c4b-416b-8c96-5c954099f19f
-ms.openlocfilehash: 0f7f622221e6612ecdb0ea04084d81e923218a5c
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: a16a0ccabfd0f9fbe69db1ea88d4613185f3c1da
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634067"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174373"
 ---
 # <a name="tutorial-create-a-windows-communication-foundation-client"></a>Учебник. Создание клиента Windows Communication Foundation
 
@@ -30,7 +30,6 @@ ms.locfileid: "58634067"
 > [!div class="checklist"]
 > - Создание и настройка проекта консольного приложения для клиента WCF.
 > - Добавьте ссылку на службу в службу WCF, чтобы создать файлы класса и конфигурации прокси-сервера.
-
 
 ## <a name="create-a-windows-communication-foundation-client"></a>Создание клиента Windows Communication Foundation
 
@@ -67,7 +66,6 @@ ms.locfileid: "58634067"
    3. Выберите **CalculatorService** чтобы развернуть ее и отобразить контрактов службы, реализованном в службе. Оставьте значение по умолчанию **пространства имен** и выберите **ОК**.
 
       Visual Studio добавляет новый элемент в разделе **подключенных служб** папку в **GettingStartedClient** проекта. 
-
 
 ### <a name="servicemodel-metadata-utility-tool"></a>Средство ServiceModel Metadata Utility
 
@@ -129,5 +127,3 @@ svcutil.exe /language:vb /out:generatedProxy.vb /config:app.config http://localh
 
 > [!div class="nextstepaction"]
 > [Учебник. Использование клиента WCF](how-to-use-a-wcf-client.md)
-
-
