@@ -16,24 +16,24 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 46576552db6e3c9aa06646b260e74cb4b7890d9d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 93507ac72b79210dc3a267fea39a6a7b2874916a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559233"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188575"
 ---
-# <a name="iclrmetahostpolicy-interface"></a><span data-ttu-id="7f068-102">Интерфейс ICLRMetaHostPolicy</span><span class="sxs-lookup"><span data-stu-id="7f068-102">ICLRMetaHostPolicy Interface</span></span>
-<span data-ttu-id="7f068-103">Предоставляет [GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) метод, который возвращает указатель на общий интерфейс языка среды CLR на основе критериев политики, управляемой сборки, версии и файла конфигурации.</span><span class="sxs-lookup"><span data-stu-id="7f068-103">Provides the [GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) method, which returns a pointer to a common language runtime (CLR) interface based on a policy criteria, managed assembly, version and configuration file.</span></span>  
+# <a name="iclrmetahostpolicy-interface"></a><span data-ttu-id="8ec04-102">Интерфейс ICLRMetaHostPolicy</span><span class="sxs-lookup"><span data-stu-id="8ec04-102">ICLRMetaHostPolicy Interface</span></span>
+<span data-ttu-id="8ec04-103">Предоставляет [GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) метод, который возвращает указатель на общий интерфейс языка среды CLR на основе критериев политики, управляемой сборки, версии и файла конфигурации.</span><span class="sxs-lookup"><span data-stu-id="8ec04-103">Provides the [GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) method, which returns a pointer to a common language runtime (CLR) interface based on a policy criteria, managed assembly, version and configuration file.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="7f068-104">Методы</span><span class="sxs-lookup"><span data-stu-id="7f068-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="8ec04-104">Методы</span><span class="sxs-lookup"><span data-stu-id="8ec04-104">Methods</span></span>  
   
-|<span data-ttu-id="7f068-105">Метод</span><span class="sxs-lookup"><span data-stu-id="7f068-105">Method</span></span>|<span data-ttu-id="7f068-106">Описание:</span><span class="sxs-lookup"><span data-stu-id="7f068-106">Description</span></span>|  
+|<span data-ttu-id="8ec04-105">Метод</span><span class="sxs-lookup"><span data-stu-id="8ec04-105">Method</span></span>|<span data-ttu-id="8ec04-106">Описание</span><span class="sxs-lookup"><span data-stu-id="8ec04-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="7f068-107">Метод GetRequestedRuntime</span><span class="sxs-lookup"><span data-stu-id="7f068-107">GetRequestedRuntime Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md)|<span data-ttu-id="7f068-108">Предоставляет основной интерфейс среды CLR на основе критериев политики, управляемой сборки, версии и файла конфигурации.</span><span class="sxs-lookup"><span data-stu-id="7f068-108">Provides a preferred CLR interface based on a policy criteria, managed assembly, version, and configuration file.</span></span>|  
+|[<span data-ttu-id="8ec04-107">Метод GetRequestedRuntime</span><span class="sxs-lookup"><span data-stu-id="8ec04-107">GetRequestedRuntime Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md)|<span data-ttu-id="8ec04-108">Предоставляет основной интерфейс среды CLR на основе критериев политики, управляемой сборки, версии и файла конфигурации.</span><span class="sxs-lookup"><span data-stu-id="8ec04-108">Provides a preferred CLR interface based on a policy criteria, managed assembly, version, and configuration file.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="7f068-109">Примечания</span><span class="sxs-lookup"><span data-stu-id="7f068-109">Remarks</span></span>  
- <span data-ttu-id="7f068-110">Ссылка на этот интерфейс можно получить, вызвав [CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md) работать так, как показано в следующем коде:</span><span class="sxs-lookup"><span data-stu-id="7f068-110">You can get a reference to this interface by calling the [CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md) function as shown in the following code:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8ec04-109">Примечания</span><span class="sxs-lookup"><span data-stu-id="8ec04-109">Remarks</span></span>  
+ <span data-ttu-id="8ec04-110">Ссылка на этот интерфейс можно получить, вызвав [CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md) работать так, как показано в следующем коде:</span><span class="sxs-lookup"><span data-stu-id="8ec04-110">You can get a reference to this interface by calling the [CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md) function as shown in the following code:</span></span>  
   
 ```  
 ICLRMetaHostPolicy *pMetaHostPolicy = NULL;  
@@ -42,20 +42,21 @@ HRESULT hr = CLRCreateInstance(CLSID_CLRMetaHostPolicy,
 ```  
   
 > [!NOTE]
->  <span data-ttu-id="7f068-111">Этот интерфейс не были фактически загрузить или активировать среды CLR, а просто возвращает предпочтительную версию среды CLR на основе доступных версий, установленных или загруженных.</span><span class="sxs-lookup"><span data-stu-id="7f068-111">This interface does not actually load or activate the CLR, but simply returns the preferred CLR version based on the available versions that are installed or loaded.</span></span>  
+>  <span data-ttu-id="8ec04-111">Этот интерфейс не были фактически загрузить или активировать среды CLR, а просто возвращает предпочтительную версию среды CLR на основе доступных версий, установленных или загруженных.</span><span class="sxs-lookup"><span data-stu-id="8ec04-111">This interface does not actually load or activate the CLR, but simply returns the preferred CLR version based on the available versions that are installed or loaded.</span></span>  
   
- <span data-ttu-id="7f068-112">[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] Интерфейс API размещения консолидирует политики, благодаря чему узлы с конкретными потребностями может использовать основные функциональные возможности без возникновения непреднамеренных издержек.</span><span class="sxs-lookup"><span data-stu-id="7f068-112">The [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] hosting API consolidates policies so that hosts with specific needs may use basic functionality without incurring unintended penalties.</span></span> <span data-ttu-id="7f068-113">Например многие из экспортов библиотек MSCorEE.dll привязывается к определенной среде CLR, несмотря на то, что метод может логически не требовать его.</span><span class="sxs-lookup"><span data-stu-id="7f068-113">For example, many of the MSCorEE.dll exports will bind to a specific CLR, although a method might not logically require it.</span></span> <span data-ttu-id="7f068-114">[METAHOST_POLICY_FLAGS](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md) перечисление предоставляет политики привязки, которые являются общими для большинства узлов.</span><span class="sxs-lookup"><span data-stu-id="7f068-114">The [METAHOST_POLICY_FLAGS](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md) enumeration provides binding policies that are common to the majority of hosts.</span></span>  
+ <span data-ttu-id="8ec04-112">[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] Интерфейс API размещения консолидирует политики, благодаря чему узлы с конкретными потребностями может использовать основные функциональные возможности без возникновения непреднамеренных издержек.</span><span class="sxs-lookup"><span data-stu-id="8ec04-112">The [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] hosting API consolidates policies so that hosts with specific needs may use basic functionality without incurring unintended penalties.</span></span> <span data-ttu-id="8ec04-113">Например многие из экспортов библиотек MSCorEE.dll привязывается к определенной среде CLR, несмотря на то, что метод может логически не требовать его.</span><span class="sxs-lookup"><span data-stu-id="8ec04-113">For example, many of the MSCorEE.dll exports will bind to a specific CLR, although a method might not logically require it.</span></span> <span data-ttu-id="8ec04-114">[METAHOST_POLICY_FLAGS](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md) перечисление предоставляет политики привязки, которые являются общими для большинства узлов.</span><span class="sxs-lookup"><span data-stu-id="8ec04-114">The [METAHOST_POLICY_FLAGS](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md) enumeration provides binding policies that are common to the majority of hosts.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7f068-115">Требования</span><span class="sxs-lookup"><span data-stu-id="7f068-115">Requirements</span></span>  
- <span data-ttu-id="7f068-116">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7f068-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8ec04-115">Требования</span><span class="sxs-lookup"><span data-stu-id="8ec04-115">Requirements</span></span>  
+ <span data-ttu-id="8ec04-116">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8ec04-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7f068-117">**Заголовок.** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="7f068-117">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="8ec04-117">**Заголовок.** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="8ec04-117">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="7f068-118">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="7f068-118">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="8ec04-118">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="8ec04-118">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="7f068-119">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7f068-119">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ **<span data-ttu-id="8ec04-119">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="8ec04-119">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="7f068-120">См. также</span><span class="sxs-lookup"><span data-stu-id="7f068-120">See also</span></span>
-- [<span data-ttu-id="7f068-121">Интерфейсы размещения CLR, добавленные в версиях .NET Framework 4 и 4.5</span><span class="sxs-lookup"><span data-stu-id="7f068-121">CLR Hosting Interfaces Added in the .NET Framework 4 and 4.5</span></span>](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)
-- [<span data-ttu-id="7f068-122">Интерфейсы размещения</span><span class="sxs-lookup"><span data-stu-id="7f068-122">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [<span data-ttu-id="7f068-123">Размещение</span><span class="sxs-lookup"><span data-stu-id="7f068-123">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a><span data-ttu-id="8ec04-120">См. также</span><span class="sxs-lookup"><span data-stu-id="8ec04-120">See also</span></span>
+
+- [<span data-ttu-id="8ec04-121">Интерфейсы размещения CLR, добавленные в версиях .NET Framework 4 и 4.5</span><span class="sxs-lookup"><span data-stu-id="8ec04-121">CLR Hosting Interfaces Added in the .NET Framework 4 and 4.5</span></span>](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)
+- [<span data-ttu-id="8ec04-122">Интерфейсы размещения</span><span class="sxs-lookup"><span data-stu-id="8ec04-122">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="8ec04-123">Размещение</span><span class="sxs-lookup"><span data-stu-id="8ec04-123">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)

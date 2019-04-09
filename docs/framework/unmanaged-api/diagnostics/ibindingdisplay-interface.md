@@ -16,31 +16,32 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3e5f36e10fffebe89b805cee3cb57e88afd4df35
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af0b38e955ac10592dc5cd0d0e18b0cff08834af
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745321"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202005"
 ---
-# <a name="ibindingdisplay-interface"></a><span data-ttu-id="838ba-102">Интерфейс IBindingDisplay</span><span class="sxs-lookup"><span data-stu-id="838ba-102">IBindingDisplay Interface</span></span>
-<span data-ttu-id="838ba-103">Предоставляет методы, которые отображают текущие привязки сведения о выполняющемся приложении.</span><span class="sxs-lookup"><span data-stu-id="838ba-103">Provides methods that display current binding information about the running application.</span></span>  
+# <a name="ibindingdisplay-interface"></a><span data-ttu-id="821f9-102">Интерфейс IBindingDisplay</span><span class="sxs-lookup"><span data-stu-id="821f9-102">IBindingDisplay Interface</span></span>
+<span data-ttu-id="821f9-103">Предоставляет методы, которые отображают текущие привязки сведения о выполняющемся приложении.</span><span class="sxs-lookup"><span data-stu-id="821f9-103">Provides methods that display current binding information about the running application.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="838ba-104">Методы</span><span class="sxs-lookup"><span data-stu-id="838ba-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="821f9-104">Методы</span><span class="sxs-lookup"><span data-stu-id="821f9-104">Methods</span></span>  
   
-|<span data-ttu-id="838ba-105">Метод</span><span class="sxs-lookup"><span data-stu-id="838ba-105">Method</span></span>|<span data-ttu-id="838ba-106">Описание:</span><span class="sxs-lookup"><span data-stu-id="838ba-106">Description</span></span>|  
+|<span data-ttu-id="821f9-105">Метод</span><span class="sxs-lookup"><span data-stu-id="821f9-105">Method</span></span>|<span data-ttu-id="821f9-106">Описание</span><span class="sxs-lookup"><span data-stu-id="821f9-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="838ba-107">Метод GetCurrentDisplay</span><span class="sxs-lookup"><span data-stu-id="838ba-107">GetCurrentDisplay Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-getcurrentdisplay-method.md)|<span data-ttu-id="838ba-108">Возвращает данные для отображения текущей привязки.</span><span class="sxs-lookup"><span data-stu-id="838ba-108">Returns the current binding display information.</span></span>|  
-|[<span data-ttu-id="838ba-109">Метод InitializeForProcess</span><span class="sxs-lookup"><span data-stu-id="838ba-109">InitializeForProcess Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md)|<span data-ttu-id="838ba-110">Инициализирует `IBindingDisplay` объекта.</span><span class="sxs-lookup"><span data-stu-id="838ba-110">Initializes the `IBindingDisplay` object.</span></span>|  
+|[<span data-ttu-id="821f9-107">Метод GetCurrentDisplay</span><span class="sxs-lookup"><span data-stu-id="821f9-107">GetCurrentDisplay Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-getcurrentdisplay-method.md)|<span data-ttu-id="821f9-108">Возвращает данные для отображения текущей привязки.</span><span class="sxs-lookup"><span data-stu-id="821f9-108">Returns the current binding display information.</span></span>|  
+|[<span data-ttu-id="821f9-109">Метод InitializeForProcess</span><span class="sxs-lookup"><span data-stu-id="821f9-109">InitializeForProcess Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md)|<span data-ttu-id="821f9-110">Инициализирует `IBindingDisplay` объекта.</span><span class="sxs-lookup"><span data-stu-id="821f9-110">Initializes the `IBindingDisplay` object.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="838ba-111">Требования</span><span class="sxs-lookup"><span data-stu-id="838ba-111">Requirements</span></span>  
- <span data-ttu-id="838ba-112">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="838ba-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="821f9-111">Требования</span><span class="sxs-lookup"><span data-stu-id="821f9-111">Requirements</span></span>  
+ <span data-ttu-id="821f9-112">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="821f9-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="838ba-113">**Заголовок.** BindingDisplay.h</span><span class="sxs-lookup"><span data-stu-id="838ba-113">**Header:** BindingDisplay.h</span></span>  
+ <span data-ttu-id="821f9-113">**Заголовок.** BindingDisplay.h</span><span class="sxs-lookup"><span data-stu-id="821f9-113">**Header:** BindingDisplay.h</span></span>  
   
- <span data-ttu-id="838ba-114">**Библиотека:** BindingDisplay.idl</span><span class="sxs-lookup"><span data-stu-id="838ba-114">**Library:** BindingDisplay.idl</span></span>  
+ <span data-ttu-id="821f9-114">**Библиотека:** BindingDisplay.idl</span><span class="sxs-lookup"><span data-stu-id="821f9-114">**Library:** BindingDisplay.idl</span></span>  
   
- <span data-ttu-id="838ba-115">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="838ba-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="821f9-115">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="821f9-115">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="838ba-116">См. также</span><span class="sxs-lookup"><span data-stu-id="838ba-116">See also</span></span>
-- [<span data-ttu-id="838ba-117">Интерфейсы хранилища символов диагностики</span><span class="sxs-lookup"><span data-stu-id="838ba-117">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="821f9-116">См. также</span><span class="sxs-lookup"><span data-stu-id="821f9-116">See also</span></span>
+
+- [<span data-ttu-id="821f9-117">Интерфейсы хранилища символов диагностики</span><span class="sxs-lookup"><span data-stu-id="821f9-117">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

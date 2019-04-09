@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cf9cc16ba2702e814f27adb009a5e9b63acc97e3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 78f2405bba9172b775b01e5417860c3f3d2dd4a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57500201"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206932"
 ---
-# <a name="imetadataemitdeletefieldmarshal-method"></a><span data-ttu-id="eff04-102">Метод IMetaDataEmit::DeleteFieldMarshal</span><span class="sxs-lookup"><span data-stu-id="eff04-102">IMetaDataEmit::DeleteFieldMarshal Method</span></span>
-<span data-ttu-id="eff04-103">Уничтожает PInvoke, маршалинг подпись метаданных для объекта, который ссылается указанный токен.</span><span class="sxs-lookup"><span data-stu-id="eff04-103">Destroys the PInvoke marshaling metadata signature for the object referenced by the specified token.</span></span>  
+# <a name="imetadataemitdeletefieldmarshal-method"></a><span data-ttu-id="6bbaf-102">Метод IMetaDataEmit::DeleteFieldMarshal</span><span class="sxs-lookup"><span data-stu-id="6bbaf-102">IMetaDataEmit::DeleteFieldMarshal Method</span></span>
+<span data-ttu-id="6bbaf-103">Уничтожает PInvoke, маршалинг подпись метаданных для объекта, который ссылается указанный токен.</span><span class="sxs-lookup"><span data-stu-id="6bbaf-103">Destroys the PInvoke marshaling metadata signature for the object referenced by the specified token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="eff04-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="eff04-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6bbaf-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="6bbaf-104">Syntax</span></span>  
   
 ```  
 HRESULT DeleteFieldMarshal (  
@@ -35,19 +35,20 @@ HRESULT DeleteFieldMarshal (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="eff04-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="eff04-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6bbaf-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="6bbaf-105">Parameters</span></span>  
  `tk`  
- <span data-ttu-id="eff04-106">[in] `mdFieldDef` Или `mdParamDef` токен, представляющий поля или параметра, для которого необходимо удалить маршалинга подпись метаданных.</span><span class="sxs-lookup"><span data-stu-id="eff04-106">[in] An `mdFieldDef` or `mdParamDef` token that represents the field or parameter for which to delete the marshaling metadata signature.</span></span>  
+ <span data-ttu-id="6bbaf-106">[in] `mdFieldDef` Или `mdParamDef` токен, представляющий поля или параметра, для которого необходимо удалить маршалинга подпись метаданных.</span><span class="sxs-lookup"><span data-stu-id="6bbaf-106">[in] An `mdFieldDef` or `mdParamDef` token that represents the field or parameter for which to delete the marshaling metadata signature.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="eff04-107">Требования</span><span class="sxs-lookup"><span data-stu-id="eff04-107">Requirements</span></span>  
- <span data-ttu-id="eff04-108">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="eff04-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6bbaf-107">Требования</span><span class="sxs-lookup"><span data-stu-id="6bbaf-107">Requirements</span></span>  
+ <span data-ttu-id="6bbaf-108">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6bbaf-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="eff04-109">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="eff04-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="6bbaf-109">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="6bbaf-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="eff04-110">**Библиотека:** Используется как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="eff04-110">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="6bbaf-110">**Библиотека:** Используется как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="6bbaf-110">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="eff04-111">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="eff04-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="6bbaf-111">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="6bbaf-111">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="eff04-112">См. также</span><span class="sxs-lookup"><span data-stu-id="eff04-112">See also</span></span>
-- [<span data-ttu-id="eff04-113">Интерфейс IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="eff04-113">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="eff04-114">Интерфейс IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="eff04-114">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="6bbaf-112">См. также</span><span class="sxs-lookup"><span data-stu-id="6bbaf-112">See also</span></span>
+
+- [<span data-ttu-id="6bbaf-113">Интерфейс IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="6bbaf-113">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="6bbaf-114">Интерфейс IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="6bbaf-114">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
