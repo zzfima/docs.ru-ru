@@ -1,5 +1,5 @@
 ---
-title: Элемент <UseRandomizedStringHashAlgorithm>
+title: <UseRandomizedStringHashAlgorithm> Элемент
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c08125d6-56cc-4b23-b482-813ff85dc630
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3545938d8f9a59c8f3c6d03e5e67bb5f545a4981
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 2a51b9fb485da605effbad0e81b8baf5e05e382a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260597"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087798"
 ---
 # <a name="userandomizedstringhashalgorithm-element"></a>\<UseRandomizedStringHashAlgorithm > элемент
 Определяет, вычисляет ли среда CLR хэш-коды для строк на основе доменов приложения.  
@@ -42,7 +42,7 @@ ms.locfileid: "55260597"
   
 ## <a name="enabled-attribute"></a>Атрибут enabled  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |`0`|Среда CLR не вычисляет хэш-коды для строк для каждого домена приложения; для вычисления хэш-кодов строк используется один алгоритм. Это значение по умолчанию.|  
 |`1`|Среда CLR вычисляет хэш-коды для строк на основе доменов приложения. Одинаковых строк в различных доменах приложений и в различных процессах будут иметь разные хэш-коды.|  
@@ -52,7 +52,7 @@ ms.locfileid: "55260597"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`runtime`|Содержит сведения о параметрах инициализации среды выполнения.|  
@@ -96,6 +96,7 @@ String 'This is a string.' in domain 'NewDomain': 75CC8236
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>
 - <xref:System.String.GetHashCode%2A?displayProperty=nameWithType>
 - <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>

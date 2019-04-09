@@ -6,19 +6,19 @@ helpviewer_keywords:
 - interoperability [WDF]
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
-ms.openlocfilehash: 6329f25b8ead128c32ae0c7aca1f0bceaac8474c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 9cf5d1c2e08f18c08273d6c7b34446a3827743b3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712400"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079362"
 ---
 # <a name="walkthrough-styling-wpf-content"></a>Пошаговое руководство. Применение стилей к содержимому WPF
 В этом пошаговом руководстве показано, как применить стили к элементу управления Windows Presentation Foundation (WPF), размещенному на форме Windows Forms.
 
  В руководстве выполняются следующие задачи:
 
--   создание проекта;
+-   Создание проекта.
 
 -   создание элемента управления WPF;
 
@@ -45,7 +45,7 @@ ms.locfileid: "57712400"
 ## <a name="creating-the-wpf-control-types"></a>Создание типов элементов управления WPF  
  После добавления в проект типа элемента управления WPF можно разместить его в элементе управления <xref:System.Windows.Forms.Integration.ElementHost>.  
   
-#### <a name="to-create-wpf-control-types"></a>Создание типов элемента управления WPF  
+#### <a name="to-create-wpf-control-types"></a>Создание типов элементов управления WPF  
   
 1.  Добавьте в решение новый проект WPF <xref:System.Windows.Controls.UserControl>. Используйте имя по умолчанию для этого типа элемента управления (`UserControl1.xaml`). Дополнительные сведения см. в разделе [Пошаговое руководство: Создание нового содержимого WPF в формах Windows Forms во время разработки](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).  
   
@@ -72,7 +72,7 @@ ms.locfileid: "57712400"
   
 3.  В панели смарт-тега для `elementHost1`, нажмите кнопку **редактировать содержимое** из раскрывающегося списка.  
   
-     `UserControl1` откроется в [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].  
+     `UserControl1` Открывает в [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].  
   
 4.  В представлении XAML вставьте следующий код XAML после открывающего тега `<UserControl>` .  
   
@@ -150,10 +150,11 @@ ms.locfileid: "57712400"
 5.  Нажмите кнопки OK и Отмена и просмотрите  различия.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Миграция и взаимодействие систем](../../wpf/advanced/migration-and-interoperability.md)
 - [Использование элементов управления WPF](using-wpf-controls.md)
 - [Проектирование XAML в Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [Общие сведения о языке XAML (WPF)](../../wpf/advanced/xaml-overview-wpf.md)
+- [Обзор XAML (WPF)](../../wpf/advanced/xaml-overview-wpf.md)
 - [Стилизация и использование шаблонов](../../wpf/controls/styling-and-templating.md)

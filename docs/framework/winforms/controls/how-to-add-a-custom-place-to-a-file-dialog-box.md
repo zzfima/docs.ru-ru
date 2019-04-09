@@ -1,5 +1,5 @@
 ---
-title: 'Как выполнить: Добавление пользовательских размещений в диалоговое окно файла'
+title: 'Как выполнить: Добавление пользовательского размещения в диалоговое окно сохранения или открытия файла'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - adding Custom Place to dialog box
 - CustomPlaces collection
 ms.assetid: 63f6469b-59cd-40f6-9e61-8b5831856780
-ms.openlocfilehash: d9c1373a16f7d62c2933e01e513478fc6c9866d2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 79836dd260cb13912ccba43cfb4a0a3e0ad195fd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721883"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087694"
 ---
-# <a name="how-to-add-a-custom-place-to-a-file-dialog-box"></a>Как выполнить: Добавление пользовательских размещений в диалоговое окно файла
+# <a name="how-to-add-a-custom-place-to-a-file-dialog-box"></a>Как выполнить: Добавление пользовательского размещения в диалоговое окно сохранения или открытия файла
 Диалоговые окна сохранения или открытия файла по умолчанию в [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] содержат область в левой части окна под названием **Избранные ссылки**. Это область пользовательских размещений. <xref:System.Windows.Forms.OpenFileDialog> И <xref:System.Windows.Forms.SaveFileDialog> классы позволяют добавлять папки <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> коллекции.  
   
 > [!NOTE]
@@ -37,6 +37,7 @@ ms.locfileid: "57721883"
     ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.FileDialog>
 - <xref:System.Windows.Forms.FileDialogCustomPlacesCollection.Add%2A?displayProperty=nameWithType>
-- [GUID известных папок для пользовательских размещений, отображаемых в диалоговом окне открытия или сохранения файла](known-folder-guids-for-file-dialog-custom-places.md)
+- [Известные GUID папок для пользовательских размещений, отображаемых в диалоговом окне открытия или сохранения файла](known-folder-guids-for-file-dialog-custom-places.md)

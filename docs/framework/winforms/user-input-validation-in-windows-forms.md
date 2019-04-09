@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user input [Windows Forms], validating in Windows Forms
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
-ms.openlocfilehash: fb804e6596de14d93ec6f0405480b60c03c7cbf9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c8a40706df4274728b438cff2539173a0e94b767
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711321"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076683"
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Проверка введенных пользователем данных в Windows Forms
 Когда пользователи вводят данные в приложение, может потребоваться убедитесь, что данные действителен, прежде чем приложение использует их. Вам может потребоваться, что некоторые текстовые поля не быть нулевой длины, что были отформатированы как номер телефона или другой тип данных, или что строка содержит небезопасных знаков, которые могут использоваться для нарушения безопасности базы данных. Windows Forms предоставляет несколько способов для проверки входных данных в приложении.  
@@ -91,6 +91,7 @@ ms.locfileid: "57711321"
 >  Если принудительно форму, чтобы закрыть таким образом, теряются все данные в элементы управления формы, который уже не был сохранен. Кроме того модальные формы не проверяют содержимое элементов управления при их закрытии. Проверку элемента управления по-прежнему можно использовать для блокировки фокус на элементе управления, но у вас нет причин беспокоиться о поведение, связанное с закрытием формы.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.Control.Validating?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>
 - <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType>

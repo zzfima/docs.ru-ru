@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Получение метаданных через - MEX привязку, не
+title: Практическое руководство. Получение метаданных через привязку, не использующую MEX
 ms.date: 03/30/2017
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-ms.openlocfilehash: ac0a7d979e6b86933c4acd88b1a2fa11ba5bc991
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 04acde96d7e712d8c6bc64988775a37fc79aaeab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689559"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074161"
 ---
-# <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>Как выполнить Получение метаданных через - MEX привязку, не
+# <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>Практическое руководство. Получение метаданных через привязку, не использующую MEX
 В этом разделе описывается получение метаданных из конечной точки MEX через привязку, не использующую MEX. Код в этом примере основан на [конечной точки метаданных Secure Custom](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) образца.  
   
 ### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a>Получение метаданных через привязку, не использующую MEX  
@@ -124,4 +124,5 @@ ms.locfileid: "54689559"
 5.  На данном этапе имеется коллекция конечных точек службы. Дополнительные сведения об импорте метаданных см. в разделе [как: Импорт метаданных в конечные точки службы](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Метаданные](../../../../docs/framework/wcf/feature-details/metadata.md)

@@ -2,12 +2,12 @@
 title: Разрешение перегрузки функций (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 9c648054-3808-4a69-9d3e-98e6a4f9c5ca
-ms.openlocfilehash: 9b8e2a4f26c0101141292b768ee5870db78c90b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: e7e80704da9657dccfbfea548df074a95327cdc1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625179"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082046"
 ---
 # <a name="function-overload-resolution-entity-sql"></a>Разрешение перегрузки функций (Entity SQL)
 В данном разделе описывается, каким образом разрешаются функции [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
@@ -31,6 +31,7 @@ ms.locfileid: "54625179"
  Что касается определяемых пользователем функций, то приоритет имеет определение для встроенной функции запроса, даже если существует функция, определенная в модели, с сигнатурой, которая больше подходит для пользовательской функции.  
   
 ## <a name="see-also"></a>См. также
+
 - [Справочник по Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [Общие сведения об Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
 - [Функции](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md)

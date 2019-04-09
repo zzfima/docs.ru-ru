@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Определение связей сущностей (службы данных WCF)
+title: Практическое руководство. Определение связей сущностей (службы данных WCF)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, changing data
 ms.assetid: cc255524-1534-4fae-b83c-250933d5a72b
-ms.openlocfilehash: 6baf873e08bb65e97d9fdc9b0d0d500bf7a77836
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 242b0985bb8abc80359148b0c224ffbc40f8f11f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538368"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072900"
 ---
-# <a name="how-to-define-entity-relationships-wcf-data-services"></a>Как выполнить Определение связей сущностей (службы данных WCF)
+# <a name="how-to-define-entity-relationships-wcf-data-services"></a>Практическое руководство. Определение связей сущностей (службы данных WCF)
 После добавления новой сущности в службах [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] связи между нею и связанными сущностями не определяются автоматически. Пользователь может создать и изменить связи между экземплярами сущностей и отразить эти изменения в службе данных с помощью клиентской библиотеки. Дополнительные сведения см. в разделе [обновление службы данных](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  
   
  Пример в этом разделе использует образец службы данных Northwind и автоматически сформированные клиентские классы службы данных. Эта служба и клиентские классы данных создаются при завершении [краткое руководство по службам данных WCF](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
@@ -32,5 +32,6 @@ ms.locfileid: "54538368"
  [!code-vb[Astoria Northwind Client#AddOrderDetailToOrder](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#addorderdetailtoorder)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Библиотека клиентов служб данных WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
 - [Практическое руководство. Добавление, изменение и удаление сущностей](../../../../docs/framework/data/wcf/how-to-add-modify-and-delete-entities-wcf-data-services.md)

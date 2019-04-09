@@ -8,12 +8,12 @@ helpviewer_keywords:
 - image codecs [Windows Forms], listing
 - image decoders [Windows Forms], listing
 ms.assetid: 11417191-8c95-40ca-8024-779e61706fb6
-ms.openlocfilehash: c40bb79dde4a9baf8b84f3cda5fdabc6e30ad0b5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c92b8010def2f77f859ee0bd9cdb1ed51dd15f27
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717535"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079420"
 ---
 # <a name="how-to-list-installed-decoders"></a>Практическое руководство. Получение списка установленных декодеров
 Может потребоваться списке декодеров на компьютере, чтобы определить, является ли ваше приложение может считывать определенного файла формата изображений. <xref:System.Drawing.Imaging.ImageCodecInfo> Класс предоставляет <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageDecoders%2A> статические методы, чтобы определить, какой образ декодеров доступны. <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageDecoders%2A> Возвращает массив <xref:System.Drawing.Imaging.ImageCodecInfo> объектов.  
@@ -32,5 +32,6 @@ ms.locfileid: "57717535"
 -   Объект <xref:System.Windows.Forms.PaintEventArgs>, который является параметром <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>См. также
+
 - [Практическое руководство. Получение списка установленных кодировщиков](how-to-list-installed-encoders.md)
 - [Применение кодировщиков и декодеров изображений в управляемом GDI+](using-image-encoders-and-decoders-in-managed-gdi.md)

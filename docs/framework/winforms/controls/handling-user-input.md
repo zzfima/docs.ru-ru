@@ -9,12 +9,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], keyboard events using code
 - custom controls [Windows Forms], mouse events using code
 ms.assetid: d9b12787-86f6-4022-8e0f-e12d312c4af2
-ms.openlocfilehash: a1129e3778763a4e2cd06759c5a5ad7656244934
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3ebe82fc18deba52fafe76da7ff85fb247446e46
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720984"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074959"
 ---
 # <a name="handling-user-input"></a>Обработка введенных пользователем данных
 В этом разделе описываются основные события клавиатуры и мыши, предоставляемые <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. При обработке события разработчики элементов управления должны переопределить защищенный `On` метод *EventName*, а не подключить делегат к событию. Сведения о событиях см. в разделе [Инициирование событий из компонента](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/sh2e3k5z(v=vs.120)).  
@@ -64,6 +64,7 @@ ms.locfileid: "57720984"
  Полный исходный код для `FlashTrackBar` пример, см. в разделе [как: Создание элемента управления Windows Forms, показывающего прогресс](how-to-create-a-windows-forms-control-that-shows-progress.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [События элементов управления Windows Forms](events-in-windows-forms-controls.md)
 - [Определение событий](defining-an-event-in-windows-forms-controls.md)
 - [События](../../../standard/events/index.md)

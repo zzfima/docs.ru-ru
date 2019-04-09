@@ -5,12 +5,12 @@ helpviewer_keywords:
 - timing system [WPF]
 - animation [WPF]
 ms.assetid: 172cd5a8-a333-4c81-9456-fafccc19f382
-ms.openlocfilehash: 36a71213b2c96d2ea1aa7597216f420f47493f43
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f64431e7804ba6e068a3d05f512c6ead089d7712
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360515"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079322"
 ---
 # <a name="animation-and-timing-system-overview"></a>Общие сведения об анимации и системе управления временем
 В этом разделе описывается, как система управления временем использует анимацию, <xref:System.Windows.Media.Animation.Timeline>, и <xref:System.Windows.Media.Animation.Clock> классы для анимации свойств.  
@@ -83,6 +83,7 @@ ClockGroup
  При анимации свойства, <xref:System.Windows.Media.Animation.AnimationClock> задает свойства *текущей* значение. Получение значения свойства посредством метода доступа CLR или <xref:System.Windows.DependencyObject.GetValue%2A> метод возвращает выходные данные <xref:System.Windows.Media.Animation.AnimationClock> при <xref:System.Windows.Media.Animation.AnimationClock> — <xref:System.Windows.Media.Animation.ClockState.Active> или <xref:System.Windows.Media.Animation.ClockState.Filling>. Базовое значение этого свойства можно получить с помощью <xref:System.Windows.Media.Animation.IAnimatable.GetAnimationBaseValue%2A> метод.  
   
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения об эффектах анимации](animation-overview.md)
 - [Общие сведения о временных событиях](timing-events-overview.md)
 - [Общие сведения о характере поведения во времени](timing-behaviors-overview.md)

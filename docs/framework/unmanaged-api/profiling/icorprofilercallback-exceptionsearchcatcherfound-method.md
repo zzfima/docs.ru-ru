@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a4dc6b66aff34bae869737591040e5fc1e552834
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e41378b314b91f42fca9d1039d3011b5eaafe502
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57499671"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074304"
 ---
 # <a name="icorprofilercallbackexceptionsearchcatcherfound-method"></a>Метод ICorProfilerCallback::ExceptionSearchCatcherFound
 Уведомляет профилировщик, что этап поиска обработки исключений был обнаружен обработчик для исключения.  
@@ -48,4 +48,5 @@ RESULT ExceptionSearchCatcherFound(
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

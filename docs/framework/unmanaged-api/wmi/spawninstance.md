@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74eb098ee68f57477c8b9115db2bce60919f0b12
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8056ef18089f56f1f9b6717d505fa3d058957541
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580217"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074421"
 ---
 # <a name="spawninstance-function"></a>Функция SpawnInstance
 Создает экземпляр класса.    
@@ -60,7 +60,7 @@ HRESULT SpawnInstance (
 |---------|---------|---------|
 | `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr` не является допустимым определением класса и не может создавать новые экземпляры. Он не полон, либо он не был зарегистрирован с помощью службы управления Windows, вызвав [PutClassWmi](putclasswmi.md). |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Недостаточно памяти для завершения операции. |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Свойство `ppNewClass` имеет значение `null`. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass` — `null`. |
 | `WBEM_S_NO_ERROR` | 0 | Вызов функции был успешным.  |
   
 ## <a name="remarks"></a>Примечания
@@ -68,9 +68,6 @@ HRESULT SpawnInstance (
 Эта функция создает оболочку для вызова [IWbemClassObject::SpawnInstance](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-spawninstance) метод.
 
 `ptr` Определение класса приобретаются у управления Windows. (Обратите внимание, что порождает экземпляра из экземпляра поддерживается, но возвращаемый экземпляр является пустым.) Затем можно использовать это определение класса для создания новых экземпляров. Вызов [PutInstanceWmi](putinstancewmi.md) функции является обязательным, если вы собираетесь записать экземпляр для управления Windows.
-
-
-
 
 Новый объект, возвращаемый в `ppNewClass` автоматически становится подкласс текущего объекта. Не удается переопределить это поведение. Нет никакой другой метод, по которой можно создавать подклассы (производные классы).
 
@@ -82,4 +79,5 @@ HRESULT SpawnInstance (
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>См. также
-- [WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)
+
+- [WMI и счетчики производительности (справочник по неуправляемым API)](index.md)

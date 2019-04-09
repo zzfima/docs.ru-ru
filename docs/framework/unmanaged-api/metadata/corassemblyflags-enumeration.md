@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f99fb7a693c47b257abe9c0b783856179fc9f0eb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eca4b66a3f7c1a96bb06827dde477f34cb904ba3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582384"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072718"
 ---
 # <a name="corassemblyflags-enumeration"></a>Перечисление CorAssemblyFlags
 Содержит значения, которые описывают метаданные, применяемые к компиляции сборки.  
@@ -57,7 +57,7 @@ typedef enum CorAssemblyFlags {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |`afPublicKey`|Указывает, что ссылки на сборку содержит полный, не хэшированный открытый ключ.|  
 |`afPA_None`|Указывает, что архитектура процессора не определен.|  
@@ -86,4 +86,5 @@ typedef enum CorAssemblyFlags {
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

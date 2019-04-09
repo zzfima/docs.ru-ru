@@ -1,18 +1,18 @@
 ---
-title: Как выполнить динамически создать базу данных
+title: Практическое руководство. Как динамически создать базу данных
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fb7f23c4-4572-4c38-9898-a287807d070c
-ms.openlocfilehash: a73efb334fddc7e0bbfbaca53f0d5026105dd22c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ab5e2867ce85fcc82e1114696c129aae878bbee6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597038"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072393"
 ---
-# <a name="how-to-dynamically-create-a-database"></a>Как выполнить динамически создать базу данных
+# <a name="how-to-dynamically-create-a-database"></a>Практическое руководство. Как динамически создать базу данных
 В LINQ to SQL модель объектов сопоставляется с реляционной базой данных. Сопоставление обеспечивается применением для описания структуры реляционной базы данных сопоставления на основе атрибутов или внешнего файла сопоставления. В обоих случаях имеется достаточно сведений о реляционной базе данных, позволяющих создать новый экземпляр базы данных с помощью метода <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>.  
   
  Метод <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> создает реплику базы данных с той степенью подробности, которую позволяет обеспечить информация, закодированная в модели объектов. Файлы сопоставления и атрибуты из модели объектов могут включать не все сведения относительно структуры существующей базы. Сведения сопоставления не представляют содержимого определяемых пользователем функций, хранимых процедур, триггеров и проверочных ограничений. Для большинства баз данных такого поведения достаточно.  
@@ -23,7 +23,7 @@ ms.locfileid: "54597038"
   
 -   Построение клиентского приложения, которому требуется локальная база данных для сохранения своего автономного состояния.  
   
- Можно также вызвать с SQL Server метод <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>, указав имя MDF-файла или каталога, в зависимости от строки соединения. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] использует строку соединения исходя из создаваемой базы данных и сервера, на котором она должна быть создана.  
+ Можно также вызвать с SQL Server метод <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>, указав имя MDF-файла или каталога, в зависимости от строки соединения. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] использует строку соединения для определения создаваемой базы данных и сервера, на котором она должна создаваться.  
   
 > [!NOTE]
 >  При любой возможности применяйте встроенную безопасность Windows для соединения с базой данных, чтобы не требовались пароли в строке соединения.  
@@ -49,6 +49,7 @@ ms.locfileid: "54597038"
  [!code-vb[DLinqSubmittingChanges#7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSubmittingChanges/vb/Module1.vb#7)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Сопоставление, основанное на атрибутах](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
 - [Внешнее сопоставление](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
 - [Сопоставление типов SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)

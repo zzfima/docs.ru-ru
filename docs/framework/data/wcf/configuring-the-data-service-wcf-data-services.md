@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
-ms.openlocfilehash: 5b7e078b2eb76191ba572a7d141b29f71d7d8a96
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 4b63695992b3af28043a46c62b426ff176505048
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092557"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074330"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>Настройка службы данных (службы данных WCF)
 С помощью [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], можно создавать службы данных, которые предоставляют [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] веб-каналов. В этих каналах могут находиться данные из различных источников данных. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] использует поставщики данных для представления данных в виде [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-канала. В число таких поставщиков входят [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], поставщик отражения, а также набор пользовательских интерфейсов поставщиков служб данных. Реализация поставщика определяет модель данных для службы. Дополнительные сведения см. в разделе [поставщики служб данных](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).  
@@ -84,5 +84,6 @@ ms.locfileid: "56092557"
  Дополнительные сведения см. в разделе [управление версиями службы данных](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Определение служб данных WCF](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
-- [Размещение служб данных](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)
+- [Размещение службы данных](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)

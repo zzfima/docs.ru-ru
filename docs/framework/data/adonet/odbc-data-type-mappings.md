@@ -2,27 +2,27 @@
 title: Сопоставления типов данных ODBC
 ms.date: 03/30/2017
 ms.assetid: 43c35d32-831d-480f-a150-78f7e869d17f
-ms.openlocfilehash: f57ba69a03837805f168cf33a9b8060633a6330f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8165ab933352394e29cbe93a9e8ba64267f8ae60
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724230"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074070"
 ---
 # <a name="odbc-data-type-mappings"></a>Сопоставления типов данных ODBC
 В приведенной ниже таблице показаны выводимые типы [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для типов данных поставщика данных .NET Framework для ODBC (<xref:System.Data.Odbc>). Приведены также типизированные методы доступа для <xref:System.Data.Odbc.OdbcDataReader>.  
   
-|Тип ODBC|Тип [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]|Типизированный метод доступа [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]|  
+|Тип ODBC|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] type|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] типизированный метод доступа|  
 |---------------|----------------------------------------------------------------------|--------------------------------------------------------------------------------|  
 |SQL_BIGINT|Int64|GetInt64()|  
 |SQL_BINARY|Byte[]|GetBytes()|  
 |SQL_BIT|Boolean|GetBoolean()|  
-|SQL_CHAR|Строковое<br /><br /> Char[]|GetString()<br /><br /> GetChars()|  
+|SQL_CHAR|String<br /><br /> Char[]|GetString()<br /><br /> GetChars()|  
 |SQL_DECIMAL|Десятичное число|GetDecimal()|  
 |SQL_DOUBLE|Double|GetDouble()|  
 |SQL_GUID|Guid|GetGuid()|  
 |SQL_INTEGER|Int32|GetInt32()|  
-|SQL_LONG_VARCHAR|Строковое<br /><br /> Char[]|GetString()<br /><br /> GetChars()|  
+|SQL_LONG_VARCHAR|String<br /><br /> Char[]|GetString()<br /><br /> GetChars()|  
 |SQL_LONGVARBINARY|Byte[]|GetBytes()|  
 |SQL_NUMERIC|Десятичное число|GetDecimal()|  
 |SQL_REAL|Single|GetFloat()|  
@@ -31,10 +31,11 @@ ms.locfileid: "54724230"
 |SQL_TYPE_TIMES|DateTime|GetDateTime()|  
 |SQL_TYPE_TIMESTAMP|DateTime|GetDateTime()|  
 |SQL_VARBINARY|Byte[]|GetBytes()|  
-|SQL_WCHAR|Строковое<br /><br /> Char[]|GetString()<br /><br /> GetChars()|  
-|SQL_WLONGVARCHAR|Строковое<br /><br /> Char[]|GetString()<br /><br /> GetChars()|  
-|SQL_WVARCHAR|Строковое<br /><br /> Char[]|GetString()<br /><br /> GetChars()|  
+|SQL_WCHAR|String<br /><br /> Char[]|GetString()<br /><br /> GetChars()|  
+|SQL_WLONGVARCHAR|String<br /><br /> Char[]|GetString()<br /><br /> GetChars()|  
+|SQL_WVARCHAR|String<br /><br /> Char[]|GetString()<br /><br /> GetChars()|  
   
 ## <a name="see-also"></a>См. также
+
 - [Извлечение и изменение данных в ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
