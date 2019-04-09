@@ -1,18 +1,18 @@
 ---
-title: Практическое руководство. Создать рабочий процесс блок-схема
+title: Практическое руководство. Создание рабочего процесса c блок-схемой
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
-ms.openlocfilehash: e4a4714c1d93280cb86e2887505fc2b0b79484d7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 1da81ae47fa9f74b6037b6fcec4dbac5350c4481
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718362"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080245"
 ---
-# <a name="how-to-create-a-flowchart-workflow"></a>Практическое руководство. Создать рабочий процесс блок-схема
+# <a name="how-to-create-a-flowchart-workflow"></a>Практическое руководство. Создание рабочего процесса c блок-схемой
 Рабочие процессы могут создаваться как из встроенных, так и из пользовательских действий. В этом разделе действия по созданию рабочего процесса, который использует как встроенные действия, например <xref:System.Activities.Statements.Flowchart> действия и пользовательские действия из предыдущего [как: Создание действия](how-to-create-an-activity.md) раздела. Рабочий процесс моделирует игру по угадыванию числа.  
   
 > [!NOTE]
@@ -151,10 +151,11 @@ ms.locfileid: "57718362"
      Для указания о том, как запустить рабочий процесс, см. следующий раздел, [как: Запуск рабочего процесса](how-to-run-a-workflow.md). Если вы уже выполнили [как: Запуск рабочего процесса](how-to-run-a-workflow.md) шаг с другим стилем рабочего процесса и планируете запустить его с помощью рабочего процесса блок-схема, начиная с этого шага, сразу перейти к [построение и запуск приложения](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) раздел [как: Запуск рабочего процесса](how-to-run-a-workflow.md).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Activities.Statements.Flowchart>
 - <xref:System.Activities.Statements.FlowDecision>
-- [Программирование в Windows Workflow Foundation](programming.md)
+- [Программирование в Windows Workflow Foundation](programming.md)
 - [Разработка рабочих процессов](designing-workflows.md)
-- [Руководство по началу работы](getting-started-tutorial.md)
+- [Учебник по началу работы](getting-started-tutorial.md)
 - [Практическое руководство. Создание действия](how-to-create-an-activity.md)
 - [Практическое руководство. Запуск рабочего процесса](how-to-run-a-workflow.md)

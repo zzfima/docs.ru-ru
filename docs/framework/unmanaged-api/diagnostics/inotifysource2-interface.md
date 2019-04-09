@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 21ee3c073358cc6101634815747615415705395c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 509d75e1e94a82e6a91cd235ab079603c267c70f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54500555"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113338"
 ---
 # <a name="inotifysource2-interface"></a>Интерфейс INotifySource2
 Объявляет метод для установки фильтров оповещения.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание:|  
+|Метод|Описание|  
 |------------|-----------------|  
 |[Метод SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md)|Назначает фильтр уведомлений для использования с этим источником.|  
   
@@ -36,6 +36,7 @@ ms.locfileid: "54500555"
  **Заголовок.** ProtocolNotify2.idl  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс INotifyConnection2](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
 - [Интерфейс INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
 - [Интерфейсы хранилища символов диагностики](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - context menus [Windows Forms], examples
 - examples [Windows Forms], context menus
 ms.assetid: 426d1eaf-7fb8-4b0b-8a33-5e8721786ea4
-ms.openlocfilehash: 8b63182bdb37e47a71bee2d22500263cd4889ac9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: e02a187edc1392f15fe98354bb2e5c43843e430c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725068"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094467"
 ---
 # <a name="how-to-add-and-remove-menu-items-with-the-windows-forms-contextmenu-component"></a>Практическое руководство. Добавление и удаление элементов меню с помощью компонента ContextMenu в Windows Forms
 Объясняется, как добавлять и удалять элементы контекстного меню в Windows Forms.  
@@ -58,7 +58,7 @@ ms.locfileid: "57725068"
     contextMenu1->MenuItems->Remove(mnuItemNew);  
     ```  
   
-     - или -  
+     -или-  
   
 2.  Используйте `Clear` метод `MenuItems` коллекцию <xref:System.Windows.Forms.ContextMenu> компонента для удаления всех элементов в меню.  
   
@@ -75,6 +75,7 @@ ms.locfileid: "57725068"
     ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.ContextMenu>
 - [Компонент ContextMenu](contextmenu-component-windows-forms.md)
 - [Общие сведения об элементе управления ContextMenu](contextmenu-component-overview-windows-forms.md)

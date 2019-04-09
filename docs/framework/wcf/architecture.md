@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF [WCF], architecture
 - architecture [WCF]
 ms.assetid: a3bcb0a1-56ea-4ba6-9736-d260d90dade5
-ms.openlocfilehash: f152ac48c2897259d07222fafd33d17d5287a870
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0e4f9af0ff84a8d560b332d227b1ba9ae18bd4b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745391"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099707"
 ---
 # <a name="windows-communication-foundation-architecture"></a>Архитектура Windows Communication Foundation
 Приведенный ниже рисунок иллюстрирует основные уровни архитектуры Windows Communication Foundation (WCF).  
@@ -46,5 +46,6 @@ ms.locfileid: "54745391"
  Службы также могут представлять *размещенных*, или выполняться в исполняемом управляется внешним агентом, например IIS или службе активации Windows (WAS). БЫЛА приложений WCF позволяет автоматически проходить активацию при развертывании на компьютере с ОС. Службы также могут быть вручную запущены как исполняемые файлы (EXE-файлы). Их также можно автоматически запускать в виде служб Windows. Компоненты COM + могут размещаться как службы WCF.  
   
 ## <a name="see-also"></a>См. также
-- [Что такое Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
-- [Основные понятия Windows Communication Foundation](../../../docs/framework/wcf/fundamental-concepts.md)
+
+- [Что такое Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
+- [Основные понятия Windows Communication Foundation](../../../docs/framework/wcf/fundamental-concepts.md)

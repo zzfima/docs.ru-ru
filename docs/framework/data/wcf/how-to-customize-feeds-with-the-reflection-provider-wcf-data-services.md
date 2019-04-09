@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Настройка каналов с поставщиком отражения (службы данных WCF)
+title: Практическое руководство. Настройка каналов с поставщиком отражения (службы данных WCF)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - WCF Data Services, customizing feeds
 ms.assetid: 00c23dcf-9bb8-459a-a012-6c4d9bcad7e9
-ms.openlocfilehash: fe6e65a0030ca016f280e6b2c1106b4aa302d26e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4f7f17e13dce81dfbaecc266b314e6695716f21c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637707"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086836"
 ---
-# <a name="how-to-customize-feeds-with-the-reflection-provider-wcf-data-services"></a>Как выполнить Настройка каналов с поставщиком отражения (службы данных WCF)
-Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] позволяют настроить сериализацию Atom в ответе службы данных так, чтобы свойства сущности сопоставлялись с неиспользуемыми элементами, определенными в протоколе AtomPub. Этот раздел показывает, как настроить атрибуты сопоставления типов сущностей в модели данных, определенной с помощью поставщика отражения. Дополнительные сведения см. в разделе [настройки веб-канала](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md).  
+# <a name="how-to-customize-feeds-with-the-reflection-provider-wcf-data-services"></a>Практическое руководство. Настройка каналов с поставщиком отражения (службы данных WCF)
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] можно настроить сериализацию Atom в ответе службы данных так, чтобы свойства сущности сопоставлялись с неиспользуемыми элементами, определенными в протоколе AtomPub. Этот раздел показывает, как настроить атрибуты сопоставления типов сущностей в модели данных, определенной с помощью поставщика отражения. Дополнительные сведения см. в разделе [настройки веб-канала](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md).  
   
  Определения модели данных в этом примере в разделе [как: Создание службы данных с помощью поставщика отражения](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)  
   
@@ -32,4 +32,5 @@ ms.locfileid: "54637707"
  [!code-xml[Astoria Custom Feeds#IQueryableFeedResultInline](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/iqueryablefeedresultinline.xml#iqueryablefeedresultinline)]  
   
 ## <a name="see-also"></a>См. также
-- [Поставщик отражений](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)
+
+- [Поставщик отражения](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)

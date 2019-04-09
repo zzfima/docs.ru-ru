@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
-ms.openlocfilehash: 115960c076e8bf1692bcd4bd158407e719608740
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: d8a1a12a4d8ab5e6f4b0fe6ad6c2a3759aa65aa9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825736"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085133"
 ---
 # <a name="annotating-typed-datasets"></a>Создание примечаний к типизированным наборам данных
 Заметки дают возможность изменять имена элементов в типизированных <xref:System.Data.DataSet> без изменения базовой схемы. Изменение имен элементов в базовой схеме вызовет типизированного **набора данных** ссылаться на объекты, которые не существуют в источнике данных, а также потеряют ссылки на объекты, которые существуют в источнике данных.  
@@ -43,7 +43,7 @@ ms.locfileid: "55825736"
   
  В следующей таблице показаны доступные для использования заметки.  
   
-|Комментарий|Описание:|  
+|Комментарий|Описание|  
 |----------------|-----------------|  
 |**typedName**|Имя объекта.|  
 |**typedPlural**|Имя коллекции объектов.|  
@@ -53,7 +53,7 @@ ms.locfileid: "55825736"
   
  Ниже приведены значения, которые могут быть указаны для **nullValue** заметки.  
   
-|Значение nullValue|Описание:|  
+|Значение nullValue|Описание|  
 |---------------------|-----------------|  
 |*Заменяющее значение*|Задает возвращаемое значение. Возвращаемое значение должно соответствовать типу элемента. Например, чтобы для целочисленных полей вместо null возвращался 0, используйте `nullValue="0"`.|  
 |**_throw**|Создание исключения. Это значение по умолчанию.|  
@@ -62,14 +62,14 @@ ms.locfileid: "55825736"
   
  В следующей таблице показаны значения по умолчанию для объектов в типизированном **набора данных** и доступные заметки.  
   
-|Объект/Метод/Событие|По умолчанию|Комментарий|  
+|Объект/Метод/Событие|Значение по умолчанию|Комментарий|  
 |---------------------------|-------------|----------------|  
 |**DataTable**|TableNameDataTable|typedPlural|  
 |**DataTable** методы|NewTableNameRow<br /><br /> AddTableNameRow<br /><br /> DeleteTableNameRow|typedName|  
 |**DataRowCollection**|TableName|typedPlural|  
 |**DataRow**|TableNameRow|typedName|  
 |**DataColumn**|DataTable.ColumnNameColumn<br /><br /> DataRow.ColumnName|typedName|  
-|**Property**|PropertyName|typedName|  
+|**Свойство**|PropertyName|typedName|  
 |**Дочерние** метода доступа|GetChildTableNameRows|typedChildren|  
 |**Родительский** метода доступа|TableNameRow|typedParent|  
 |**Набор данных** события|TableNameRowChangeEvent<br /><br /> TableNameRowChangeEventHandler|typedName|  
@@ -223,8 +223,9 @@ protected static void OnCustomerChanged(object sender, CustomerDataSet.CustomerC
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataSet>
 - [Типизированные наборы данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)
 - [Наборы данных, таблицы данных и объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,15 +1,15 @@
 ---
-title: Как выполнить проверить DBML-файлы и внешние файлы сопоставлений
+title: Практическое руководство. Как проверять DBML-файлы и внешние файлы сопоставлений
 ms.date: 03/30/2017
 ms.assetid: d9ea37f5-0a9e-4401-8fc3-1e6fd44c49f9
-ms.openlocfilehash: 42cba5b9b686f5f94d4ebf8f889461e1bab009b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: b01bcf98bba185b7a4b1802f470a585371980177
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692734"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078737"
 ---
-# <a name="how-to-validate-dbml-and-external-mapping-files"></a>Как выполнить проверить DBML-файлы и внешние файлы сопоставлений
+# <a name="how-to-validate-dbml-and-external-mapping-files"></a>Практическое руководство. Как проверять DBML-файлы и внешние файлы сопоставлений
 После внесения изменений во внешние файлы сопоставлений и DBML-файлы их необходимо проверить на соответствие определениям схемы. В этом разделе предоставляет пользователям Visual Studio, сделав для реализации процесса проверки.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
@@ -71,4 +71,5 @@ ms.locfileid: "54692734"
 7.  В **имя файла** окне Создать имя файла с расширением XSD.  
   
 ## <a name="see-also"></a>См. также
-- [Ссылки](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+
+- [Ссылка](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a07442d990694099c9402989b41c937360842316
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dbb39eb768069a737f3f89c771bf02fd6bc0c3b4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569879"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102405"
 ---
 # <a name="corprfmonitor-enumeration"></a>Перечисление COR_PRF_MONITOR
 Содержит значения, используемые для указания поведения, возможностей или событий, на которые желает подписаться профилировщик.  
@@ -122,7 +122,7 @@ typedef enum {
 <a name="Callback"></a>   
 ### <a name="callback-flags"></a>Флаги обратного вызова  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |`COR_PRF_MONITOR_ALL`|Активирует все события обратного вызова.|  
 |`COR_PRF_MONITOR_APPDOMAIN_LOADS`|Элементы управления `AppDomainCreation*` и `AppDomainShutdown*` обратные вызовы в [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) интерфейс.|  
@@ -194,6 +194,7 @@ typedef enum {
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Перечисления профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
 - [Метод GetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-geteventmask-method.md)
 - [Метод SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)

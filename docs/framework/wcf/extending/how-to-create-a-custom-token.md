@@ -1,5 +1,5 @@
 ---
-title: Как выполнить  Создание пользовательского маркера
+title: Практическое руководство. Создание пользовательского токена
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - WSSecurityTokenSerializer class
 - SecurityToken class
 ms.assetid: 6d892973-1558-4115-a9e1-696777776125
-ms.openlocfilehash: 3367a75fc0532e3eaa312400221c662bb35146bf
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
-ms.translationtype: MT
+ms.openlocfilehash: 4f2f2d3a1d4263dfc068193f832369b0d82e69fc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261171"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095663"
 ---
-# <a name="how-to-create-a-custom-token"></a>Как выполнить  Создание пользовательского маркера
+# <a name="how-to-create-a-custom-token"></a>Практическое руководство. Создание пользовательского токена
 В этом разделе показано, как создать пользовательский маркер безопасности с помощью класса <xref:System.IdentityModel.Tokens.SecurityToken> и интегрировать его с поставщиком пользовательских маркеров безопасности и структурой проверки подлинности. Полный пример кода см. в разделе [пользовательских маркеров](../../../../docs/framework/wcf/samples/custom-token.md) образца.  
   
  Объект *маркер безопасности* является по сути элементом XML, который используется платформой безопасности Windows Communication Foundation (WCF) для представления утверждений об отправителе в сообщении SOAP. Безопасность WCF предоставляет различные маркеры для режимов проверки подлинности, предоставляемых системой. Примером является маркер безопасности X.509, представленный классом <xref:System.IdentityModel.Tokens.X509SecurityToken>, или маркер безопасности Username, представленный классом <xref:System.IdentityModel.Tokens.UserNameSecurityToken>.  
@@ -149,6 +149,7 @@ ms.locfileid: "56261171"
  В этом разделе показаны различные фрагменты кода, необходимые для реализации и использования пользовательского токена. Чтобы просмотреть полный пример того, как взаимодействуют все эти элементы кода, см. в разделе [пользовательского маркера](../../../../docs/framework/wcf/samples/custom-token.md).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.IdentityModel.Tokens.SecurityToken>
 - <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters>
 - <xref:System.ServiceModel.Security.WSSecurityTokenSerializer>
@@ -160,6 +161,6 @@ ms.locfileid: "56261171"
 - <xref:System.ServiceModel.Description.ClientCredentials>
 - <xref:System.ServiceModel.Description.ServiceCredentials>
 - <xref:System.ServiceModel.Channels.SecurityBindingElement>
-- [Пошаговое руководство: Создание пользовательских клиента и учетные данные службы](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
-- [Практическое руководство. Создать структуру проверки подлинности маркеров безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
-- [Практическое руководство. Создание поставщика маркеров безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
+- [Пошаговое руководство. Создание пользовательских учетных данных для клиента и службы](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
+- [Практическое руководство. Создание пользовательской структуры проверки подлинности маркера безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
+- [Практическое руководство. Создание поставщика пользовательских маркеров безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)

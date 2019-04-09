@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1929e854-23a0-4bb1-94be-e8aa3b609e32
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 281582b04aabd8a18af8bf17091979385d009ee8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ae24cdcb97e30da0bd4aec6569ef3dcda11488c6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536546"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078946"
 ---
 # <a name="dangerous-permissions-and-policy-administration"></a>Опасные разрешения и администрирование политик
 Некоторые из защищенных операций, для которых .NET Framework предоставляет разрешения, потенциально могут позволить обойти систему безопасности. Эти небезопасные разрешения должны предоставляться только надежному коду и только в случае необходимости. Обычно невозможно защититься от вредоносного кода, который получил эти разрешения.  
@@ -39,4 +39,5 @@ ms.locfileid: "54536546"
 |<xref:System.MemberAccessException>|Можно использовать закрытые члены для нарушения правил доступа.|  
   
 ## <a name="see-also"></a>См. также
+
 - [Правила написания безопасного кода](../../../docs/standard/security/secure-coding-guidelines.md)

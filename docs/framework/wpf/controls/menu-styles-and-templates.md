@@ -9,12 +9,12 @@ helpviewer_keywords:
 - templates [WPF], Menu
 - parts [WPF], Menu
 ms.assetid: b89da183-9b87-42c6-ac53-731a42c7b09e
-ms.openlocfilehash: d5b170bff841369e48d082f018577ee8f6f09f39
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6818be4ac92dbdd7de0c6c6fa65109e21eadc2f5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355627"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094207"
 ---
 # <a name="menu-styles-and-templates"></a>Стили и шаблоны элемента Menu
 В этом разделе описываются стили и шаблоны для <xref:System.Windows.Controls.Menu> элемента управления. Вы можете изменить значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> предоставить уникальный внешний вид элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
@@ -36,7 +36,7 @@ ms.locfileid: "57355627"
 ## <a name="menuitem-parts"></a>MenuItem частей  
  В следующей таблице перечислены именованные части <xref:System.Windows.Controls.Menu> элемента управления.  
   
-|Отделение|Тип|Описание:|  
+|Отделение|Тип|Описание|  
 |-|-|-|  
 |PART_Popup|<xref:System.Windows.Controls.Primitives.Popup>|Область для подменю.|  
   
@@ -45,7 +45,7 @@ ms.locfileid: "57355627"
 ## <a name="menuitem-states"></a>Состояниями MenuItem  
  В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.MenuItem> элемента управления.  
   
-|Имя VisualState|Имя VisualStateGroup|Описание:|  
+|Имя VisualState|Имя VisualStateGroup|Описание|  
 |-|-|-|  
 |Valid|ValidationStates|Элемент управления использует <xref:System.Windows.Controls.Validation> класс и <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> присоединенное свойство `false`.|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Присоединенное свойство `true` имеет элемент управления имеет фокус.|  
@@ -71,9 +71,10 @@ ms.locfileid: "57355627"
  Полный пример см. в разделе [Пример задания стиля с помощью ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
-- [Стили и шаблоны элемента управления](control-styles-and-templates.md)
+- [Стили и шаблоны элемента Control](control-styles-and-templates.md)
 - [Настройка элементов управления](control-customization.md)
 - [Стилизация и использование шаблонов](styling-and-templating.md)
 - [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

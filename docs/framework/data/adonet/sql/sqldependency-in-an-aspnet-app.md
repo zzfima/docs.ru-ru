@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ff226ce3-f6b5-47a1-8d22-dc78b67e07f5
-ms.openlocfilehash: 42eb0a417659776b2cd2fffa9d2fd62e58a4a176
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
-ms.translationtype: MT
+ms.openlocfilehash: c49d28f42dec311d4a0c35a7115b00d989411358
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091998"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073719"
 ---
 # <a name="sqldependency-in-an-aspnet-application"></a>SqlDependency в приложении ASP.NET
 В примере этого раздела показано, как косвенно использовать <xref:System.Data.SqlClient.SqlDependency>, используя объект ASP.NET <xref:System.Web.Caching.SqlCacheDependency>. Объект <xref:System.Web.Caching.SqlCacheDependency> использует <xref:System.Data.SqlClient.SqlDependency> для прослушивания уведомлений и правильного обновления кэша.  
@@ -58,5 +58,6 @@ ms.locfileid: "56091998"
  Теперь обновите данные в базе данных с помощью команды Transact-SQL UPDATE, после чего обновите страницу. Отображаемое время теперь указывает, что кэш был обновлен новыми данными из базы данных. Отметим, что хотя кэш обновлен, время, отображаемое на странице, не изменяется, пока не возникнет событие запроса к серверу.  
   
 ## <a name="see-also"></a>См. также
+
 - [Уведомления запросов в SQL Server](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

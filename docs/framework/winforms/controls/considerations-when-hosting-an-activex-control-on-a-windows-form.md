@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, hosting ActiveX controls
 - ActiveX controls [Windows Forms], adding
 ms.assetid: 2509302d-a74e-484f-9890-2acdbfa67a68
-ms.openlocfilehash: 354c524924794cd240a230e325a4f0eee58cdc50
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: babae31a3be9775d07ca84c54e1177d297cab5cf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705211"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108762"
 ---
 # <a name="considerations-when-hosting-an-activex-control-on-a-windows-form"></a>Вопросы размещения элемента управления ActiveX в форме Windows Forms
 Несмотря на то что формы Windows Forms оптимизированы для размещения элементов управления Windows Forms, в формах также можно использовать элементы управления ActiveX. При планировании приложения, использующего элементы управления ActiveX, необходимо учитывать следующие факторы:  
@@ -29,6 +29,7 @@ ms.locfileid: "57705211"
     >  Если имя члена элемента управления ActiveX совпадает с именем, определенные в [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], а затем программа импорта элементов управления ActiveX добавит префикс к имени члена **Ctl** при создании <xref:System.Windows.Forms.AxHost> производного класса. Например, если элемент управления ActiveX содержит член с именем **Layout**, в производном от AxHost классе он будет переименован в **CtlLayout**, так как в [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] задано событие **Layout**.  
   
 ## <a name="see-also"></a>См. также
+
 - [Практическое руководство. Добавление элементов управления ActiveX в формы Windows Forms](how-to-add-activex-controls-to-windows-forms.md)
 - [Управление доступом для кода](../../misc/code-access-security.md)
 - [Сравнение элементов управления и программируемых объектов в разных языках и библиотеках](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))

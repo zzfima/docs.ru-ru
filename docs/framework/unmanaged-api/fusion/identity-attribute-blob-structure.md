@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eb2c560f8f906f20de752e5dfad995e2082caaea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: cda9f6c71361d3865b40669c7ba09f2c2fb0c253
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654676"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102990"
 ---
 # <a name="identityattributeblob-structure"></a>Структура IDENTITY_ATTRIBUTE_BLOB
 Содержит сведения об отдельном атрибуте в сборке и состоит из трех `DWORD`s. Каждый `DWORD` — это смещение в буфер символов, полученных при `CurrentIntoBuffer` метод [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md) интерфейса  
@@ -40,7 +40,7 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |`ofsNamespace`|Первое смещение в буфере символов. Это смещение не соблюдается, пространство имен атрибута, но ряд символов null. Таким образом он не используется.|  
 |`ofsName`|Второй смещение в буфере символов. Это расположение отмечает начало имени атрибута.|  
@@ -243,6 +243,7 @@ Exit:
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)
 - [Интерфейс IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)
 - [Структура IDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)

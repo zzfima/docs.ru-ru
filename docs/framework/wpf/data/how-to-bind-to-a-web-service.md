@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Web service binding [WPF]
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
-ms.openlocfilehash: b2ef0cce293913fc7bd9d59baa91bd875823cbe2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 66e91190e68d9610dd95d677edb276e117ec6abb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353937"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098584"
 ---
 # <a name="how-to-bind-to-a-web-service"></a>Практическое руководство. Привязка к веб-службе
 В этом примере показано, как выполнить привязку для объектов, возвращенных вызовов метода веб-службы.  
@@ -46,6 +46,7 @@ ms.locfileid: "57353937"
  Сведения о структуре **getContentResponse**, см. в разделе [документации службы содержимого](https://services.msdn.microsoft.com/ContentServices/ContentService.asmx).  
   
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения о привязке данных](data-binding-overview.md)
 - [Общие сведения об источниках привязки](binding-sources-overview.md)
 - [Обеспечение доступности данных для привязки в XAML](how-to-make-data-available-for-binding-in-xaml.md)

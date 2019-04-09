@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e518834e018f0532f769c984befe7378a93b3f53
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 60d1c49e8762d00e3e154c598c2542c4a76b9b28
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57491286"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107501"
 ---
 # <a name="createdebugginginterfacefromversion-function"></a>Функция CreateDebuggingInterfaceFromVersion
 Создает [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) объекта на основе указанной версии данных.  
@@ -52,7 +52,7 @@ HRESULT CreateDebuggingInterfaceFromVersion (
 ## <a name="return-value"></a>Возвращаемое значение  
  Этот метод возвращает стандартные коды ошибок COM, как определено в файле WinError.h, а также следующие значения.  
   
-|Код возврата|Описание:|  
+|Код возврата|Описание|  
 |-----------------|-----------------|  
 |S_OK|Метод завершился успешно.|  
 |E_INVALIDARG|`szDebuggeeVersion` или `ppCordb` имеет значение null, или версии Неверная строка.|  
@@ -70,4 +70,5 @@ HRESULT CreateDebuggingInterfaceFromVersion (
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Устаревшие функции размещения CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

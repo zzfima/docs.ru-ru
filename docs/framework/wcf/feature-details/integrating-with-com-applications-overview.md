@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], integration overview
 ms.assetid: 02c5697f-6e2e-47d6-b715-f3a28aebfbd5
-ms.openlocfilehash: bd031b0f7464da2f1e251abfa1fe314ee2fa763d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 182e5f41498d8f5e3fcbc4b84aa7e86b67ce3ccc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710235"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087629"
 ---
 # <a name="integrating-with-com-applications-overview"></a>Общие сведения об интеграции с приложениями COM
 Windows Communication Foundation (WCF) предоставляет разработчику управляемого кода среду с широкими возможностями для создания подключаемых приложений. Тем не менее если вы существенно потратились в неуправляемом коде на основе COM и переносить не требуется, можно интегрировать веб-служб WCF непосредственно в существующий код с помощью моникера службы WCF. Моникер служб можно использовать в широком наборе сред разработки на базе модели COM, например в Office VBA, Visual Basic 6.0 и Visual C++ 6.0.  
@@ -30,7 +30,7 @@ Windows Communication Foundation (WCF) предоставляет разрабо
 ## <a name="parameters-supported-by-the-service-moniker"></a>Параметры, поддерживаемые моникером служб  
  В следующей таблице представлены параметры, поддерживаемые моникером служб.  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |`address`|URL-адрес службы.|  
 |`binding`|Имя раздела привязки из конфигурации приложения.|  
@@ -66,4 +66,5 @@ Windows Communication Foundation (WCF) предоставляет разрабо
 >  `</configuration>`  
   
 ## <a name="see-also"></a>См. также
+
 - [Практическое руководство. Регистрация и настройка моникера службы](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)

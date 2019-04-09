@@ -1,5 +1,5 @@
 ---
-title: Элемент <dependentAssembly>
+title: <dependentAssembly> Элемент
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b1ee9c3c19c0a3e86b6761f95ccab0292b5e15c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ac83a0b27a965721dabe1bdf2e05afbdc9b9c961
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55273953"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083664"
 ---
 # <a name="dependentassembly-element"></a>\<dependentAssembly > элемент
 Инкапсулирует политику привязки и расположение каждой сборки. Используйте один `dependentAssembly` элемент для каждой сборки.  
@@ -81,6 +81,7 @@ ms.locfileid: "55273953"
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Перенаправление версий сборки](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Привязка данных к элементу управления MaskedTextBox
+title: Практическое руководство. Связывание данных с элементом управления MaskedTextBox
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - data binding [Windows Forms], MaskedTextBox control [Windows Forms]
 - MaskedTextBox control [Windows Forms], binding data
 ms.assetid: 34b29f07-e8df-48d4-b08b-53fcca524708
-ms.openlocfilehash: b03eff45b8494253918ae4462c29f50568c81569
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 0350d6e690d54d6176ede3b858f75829326b7556
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717470"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090606"
 ---
-# <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>Практическое руководство. Привязка данных к элементу управления MaskedTextBox
+# <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>Практическое руководство. Связывание данных с элементом управления MaskedTextBox
 Вы можете привязывать данные к <xref:System.Windows.Forms.MaskedTextBox> управления так же, как и любым другим элементом управления Windows Forms. Тем не менее если формат данных в базе данных не соответствует формату, ожидаемому определения маски, необходимо будет изменять формат данных. Ниже описано, как это сделать с помощью <xref:System.Windows.Forms.Binding.Format> и <xref:System.Windows.Forms.Binding.Parse> события <xref:System.Windows.Forms.Binding> класс для отображения отдельных телефонный номер и телефон расширение поля базы данных, одного изменяемого поля.  
   
  Следующая процедура требует наличия доступа к базе данных SQL Server с установленным образец базы данных "Борей".  
@@ -250,4 +250,5 @@ ms.locfileid: "57717470"
 -   Скомпилируйте приложение.  
   
 ## <a name="see-also"></a>См. также
-- [Пошаговое руководство: Работа с элементом управления MaskedTextBox](walkthrough-working-with-the-maskedtextbox-control.md)
+
+- [Пошаговое руководство. Работа с элементом управления MaskedTextBox](walkthrough-working-with-the-maskedtextbox-control.md)

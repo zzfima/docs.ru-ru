@@ -12,12 +12,12 @@ helpviewer_keywords:
 - controls [WPF], appearance specified by state
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
-ms.openlocfilehash: 5d4b16721dd8cabc5d662538274dcb82ab734cca
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b52a63a0531d71c784ef12f29049754f4a9efddb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375107"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098966"
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate
 <a name="introduction"></a> Объект <xref:System.Windows.Controls.ControlTemplate> указывает визуальную структуру и визуальное поведение элемента управления. Можно настроить внешний вид элемента управления, предоставляя ему новый <xref:System.Windows.Controls.ControlTemplate>. При создании <xref:System.Windows.Controls.ControlTemplate>, заменяется внешний вид существующего элемента управления без изменения его функциональных возможностей. Например, можно сделать кнопки в приложении круглыми вместо установленных по умолчанию квадратных, но кнопка по-прежнему будет вызывать <xref:System.Windows.Controls.Primitives.ButtonBase.Click> событий.  
@@ -31,8 +31,7 @@ ms.locfileid: "57375107"
   
  ![Кнопка с красной границей. ](./media/ndp-buttonmouseover.png "NDP_ButtonMouseOver")  
 Кнопка, использующая пользовательский шаблон элемента управления, когда на ней находится указатель мыши  
-  
-  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Предварительные требования  
  В этом разделе предполагается, что пользователь понимает процесс создания и использования элементов управления и стилей, который рассматривался в разделе [Элементы управления](index.md). Основные понятия, описанные в этом разделе применяются к элементам, которые наследуют <xref:System.Windows.Controls.Control> класса, за исключением <xref:System.Windows.Controls.UserControl>. Невозможно применить <xref:System.Windows.Controls.ControlTemplate> для <xref:System.Windows.Controls.UserControl>.  
@@ -92,7 +91,7 @@ ms.locfileid: "57375107"
   
  В следующей таблице перечислены визуальные свойства, наследуемые элементом управления от <xref:System.Windows.Controls.Control> класса. В таблице также указывается, использует ли шаблон элемента управления по умолчанию значение наследуемого свойства или оно должно быть привязано к шаблону.  
   
-|Свойство.|Способ использования|  
+|Свойство|Способ использования|  
 |--------------|------------------|  
 |<xref:System.Windows.Controls.Control.Background%2A>|Привязка к шаблону|  
 |<xref:System.Windows.Controls.Control.BorderThickness%2A>|Привязка к шаблону|  
@@ -257,9 +256,10 @@ ms.locfileid: "57375107"
   
 <a name="complete_example"></a>   
 ## <a name="complete-example"></a>Полный пример  
- В следующем примере показан полный <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.ControlTemplate> , рассматривается в этом разделе.  
+ В следующем примере показан полный <xref:System.Windows.Controls.Button><xref:System.Windows.Controls.ControlTemplate> , рассматривается в этом разделе.  
   
  [!code-xaml[VSMButtonTemplate#3](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#3)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Стилизация и использование шаблонов](styling-and-templating.md)

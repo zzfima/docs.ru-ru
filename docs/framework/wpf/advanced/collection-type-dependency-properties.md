@@ -10,18 +10,16 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - collection-type properties [WPF]
 ms.assetid: 99f96a42-3ab7-4f64-a16b-2e10d654e97c
-ms.openlocfilehash: a2a664f0672f4585649cebad6e62635125db0983
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9ce0b70bfdd70b47857167ff14e62ed2bbda569d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354899"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077463"
 ---
 # <a name="collection-type-dependency-properties"></a>Свойства зависимостей типа коллекция
 Этот раздел содержит рекомендации и примеры шаблонов для реализации свойства зависимостей, где типом свойства является коллекция.  
-  
- 
-  
+
 <a name="implementing"></a>   
 ## <a name="implementing-a-collection-type-dependency-property"></a>Реализация свойства зависимостей типа "коллекция"  
  Для свойства зависимостей в общем шаблон реализации, которому необходимо следовать, является определение [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] обертки свойства, где это свойство является <xref:System.Windows.DependencyProperty> идентификатор, а не полем или другой конструкцией. При реализации свойства типа "коллекция" вы следуете этому же шаблону. Тем не менее, свойство типа "коллекция" некоторым образом усложняет шаблон всякий раз, когда тип, содержащийся в коллекции является <xref:System.Windows.DependencyObject> или <xref:System.Windows.Freezable> производного класса.  
@@ -57,9 +55,10 @@ ms.locfileid: "57354899"
  Чтобы включить привязку подсвойств в коллекции объектов зависимостей, создайте свойство коллекции типа <xref:System.Windows.FreezableCollection%601>, с ограничением типа для этой коллекции к любому <xref:System.Windows.DependencyObject> производного класса.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.FreezableCollection%601>
 - [Код XAML и пользовательские классы для WPF](xaml-and-custom-classes-for-wpf.md)
 - [Общие сведения о привязке данных](../data/data-binding-overview.md)
 - [Общие сведения о свойствах зависимости](dependency-properties-overview.md)
 - [Пользовательские свойства зависимостей](custom-dependency-properties.md)
-- [Метаданные свойства зависимостей](dependency-property-metadata.md)
+- [Метаданные свойства зависимости](dependency-property-metadata.md)

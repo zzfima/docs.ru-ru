@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Проверка нажатия с помощью основного контейнера Win32
+title: Практическое руководство. Проверка попадания с использованием контейнера узла Win32
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - visual objects [WPF], hit tests on
 - Win32 host containers [WPF], hit tests using
 ms.assetid: 9491f7f3-d8ba-4573-a888-2f064d1349dc
-ms.openlocfilehash: 19526c064efefd80c17fdb4f544b65fcda872bf7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ac5cae5bcd94dc8bf80ff95b8971914e1fa5ba2c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360762"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081467"
 ---
-# <a name="how-to-hit-test-using-a-win32-host-container"></a>Практическое руководство. Проверка нажатия с помощью основного контейнера Win32
+# <a name="how-to-hit-test-using-a-win32-host-container"></a>Практическое руководство. Проверка попадания с использованием контейнера узла Win32
 Можно создать визуальные объекты в пределах [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] окно путем предоставления контейнера окна для визуальных объектов. Чтобы обрабатывать события для содержащихся визуальных объектов, выполняется обработка сообщений, переданных в цикл фильтрации сообщений контейнера окна. Ссылаться на [руководства: По размещению визуальных объектов в приложении Win32](tutorial-hosting-visual-objects-in-a-win32-application.md) Дополнительные сведения о способах размещения визуальных объектов в [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] окна.  
   
 ## <a name="example"></a>Пример  
@@ -35,6 +35,7 @@ ms.locfileid: "57360762"
  Полный пример проверки попадания объектов с помощью контейнера Win32 см. в разделе [проверка нажатия с помощью примера взаимодействия Win32](https://go.microsoft.com/fwlink/?LinkID=159995).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Interop.HwndSource>
-- [Проверка нажатия на визуальном уровне](hit-testing-in-the-visual-layer.md)
-- [Учебник. По размещению визуальных объектов в приложении Win32](tutorial-hosting-visual-objects-in-a-win32-application.md)
+- [Проверка попадания на визуальном уровне](hit-testing-in-the-visual-layer.md)
+- [Учебник. Размещение визуальных объектов в приложении Win32](tutorial-hosting-visual-objects-in-a-win32-application.md)

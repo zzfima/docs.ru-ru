@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 63e6ec271634a52abe7c640bbbabdaedebd2a31d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: f4b4ac1a37c2b3506216499ed0c9f8194949b768
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471905"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081896"
 ---
 # <a name="getrequestedruntimeversionforclsid-function"></a>Функция GetRequestedRuntimeVersionForCLSID
 Получает соответствующий информация среды CLR (CLR) версии для класса с указанным `CLSID`.  
@@ -78,4 +78,5 @@ HRESULT GetRequestedRuntimeVersionForCLSID (
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Устаревшие функции размещения CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

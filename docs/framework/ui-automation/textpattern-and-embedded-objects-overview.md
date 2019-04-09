@@ -7,12 +7,12 @@ helpviewer_keywords:
 - accessing embedded objects
 - embedded objects, UI Automation
 ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
-ms.openlocfilehash: 03316ae7ecc6dab6d9f3d4856f396e4a05fd3293
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: MT
+ms.openlocfilehash: 136073b3ef1c5463ff078efd7c173b7446f0ca48
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679428"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077924"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>Общие сведения об объектах TextPattern и Embedded
 > [!NOTE]
@@ -75,7 +75,7 @@ ms.locfileid: "57679428"
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|Возвращает строку `The URL https://www.microsoft.com is embedded in text`.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|Возвращает внутренний <xref:System.Windows.Automation.AutomationElement> , который охватывает диапазон текста. В этом случае это <xref:System.Windows.Automation.AutomationElement> , представляющий поставщик текста.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|Возвращает <xref:System.Windows.Automation.AutomationElement> , представляющий элемент управления гиперссылки.|  
-|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> , где <xref:System.Windows.Automation.AutomationElement> — это объект, возвращаемый предыдущим методом `GetChildren` .|Возвращает диапазон, представляющий "https://www.microsoft.com«.|  
+|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> где <xref:System.Windows.Automation.AutomationElement> — это объект, возвращаемый предыдущим `GetChildren` метод.|Возвращает диапазон, представляющий "https://www.microsoft.com«.|  
   
  **Пример 2. Текстовый диапазон, частично охватывающий внедренную текстовую гиперссылку**  
   
@@ -87,7 +87,7 @@ ms.locfileid: "57679428"
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|Возвращает внутренний <xref:System.Windows.Automation.AutomationElement> , который охватывает диапазон текста. В этом случае это элемент управления гиперссылки.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|Возвращает, `null` так как диапазон текста не охватывает всю строку URL-адреса.|  
   
-**Пример 3 - текстовый диапазон, частично охватывающий содержимое контейнера текста. Контейнер текста содержит внедренную текстовую гиперссылку, которая не является частью текстового диапазона.**  
+**Пример 3. Текстовый диапазон, частично охватывающий содержимое контейнера текста. Контейнер текста содержит внедренную текстовую гиперссылку, которая не является частью текстового диапазона.**  
   
 `{The URL} [https://www.microsoft.com](https://www.microsoft.com) is embedded in text.`
   
@@ -108,9 +108,9 @@ ms.locfileid: "57679428"
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|Возвращает строку "внедрено в текст". Любой замещающий текст, связанный с изображением, не может быть включен в текстовый поток.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|Возвращает внутренний <xref:System.Windows.Automation.AutomationElement> , который охватывает диапазон текста. В этом случае это <xref:System.Windows.Automation.AutomationElement> , представляющий поставщик текста.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|Возвращает <xref:System.Windows.Automation.AutomationElement> , представляющий элемент управления изображения.|  
-|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> , где <xref:System.Windows.Automation.AutomationElement> — это объект, возвращаемый предыдущим методом <xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A> .|Возвращает вырожденный диапазон, представляющий "![Пример внедренного изображения](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample")«.|  
+|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> где <xref:System.Windows.Automation.AutomationElement> — это объект, возвращаемый предыдущим <xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A> метод.|Возвращает вырожденный диапазон, представляющий "![Пример внедренного изображения](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample")«.|  
   
- **Пример 2 - текстовый диапазон, частично охватывающий содержимое контейнера текста. Контейнер текста содержит внедренное изображение, которое не является частью текстового диапазона.**  
+ **Пример 2. Текстовый диапазон, частично охватывающий содержимое контейнера текста. Контейнер текста содержит внедренное изображение, которое не является частью текстового диапазона.**  
   
  {Изображение} ![Пример внедренного изображения](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample") внедряется в текст.  
   
@@ -136,24 +136,25 @@ ms.locfileid: "57679428"
 |Вызываемый метод|Результат|  
 |-------------------|------------|  
 |<xref:System.Windows.Automation.GridPattern.GetItem%2A> с параметрами (0,0)|Возвращает <xref:System.Windows.Automation.AutomationElement> , представляющий содержимое ячейки таблицы. В этом случае элемент — это текстовый элемент управления.|  
-|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> , где <xref:System.Windows.Automation.AutomationElement> — это объект, возвращаемый предыдущим методом `GetItem` .|Возвращает диапазон, охватывающий изображение ![Пример внедренного изображения](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample").|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> для объекта, возвращаемого предыдущим методом `RangeFromChild` .|Возвращает <xref:System.Windows.Automation.AutomationElement> , представляющий ячейку таблицы. В этом случае элемент — это текстовый элемент управления, поддерживающий TableItemPattern.|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> для объекта, возвращаемого предыдущим методом `GetEnclosingElement` .|Возвращает <xref:System.Windows.Automation.AutomationElement> , представляющий таблицу.|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> для объекта, возвращаемого предыдущим методом `GetEnclosingElement` .|Возвращает <xref:System.Windows.Automation.AutomationElement> , представляющий поставщик текста.|  
+|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> где <xref:System.Windows.Automation.AutomationElement> — это объект, возвращаемый предыдущим `GetItem` метод.|Возвращает диапазон, охватывающий изображение ![Пример внедренного изображения](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample").|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> для объекта, возвращаемого предыдущим `RangeFromChild` метод.|Возвращает <xref:System.Windows.Automation.AutomationElement> , представляющий ячейку таблицы. В этом случае элемент — это текстовый элемент управления, поддерживающий TableItemPattern.|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> для объекта, возвращаемого предыдущим `GetEnclosingElement` метод.|Возвращает <xref:System.Windows.Automation.AutomationElement> , представляющий таблицу.|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> для объекта, возвращаемого предыдущим `GetEnclosingElement` метод.|Возвращает <xref:System.Windows.Automation.AutomationElement> , представляющий поставщик текста.|  
   
  **Пример 2. Получение текстового содержимого ячейки.**  
   
 |Вызываемый метод|Результат|  
 |-------------------|------------|  
 |<xref:System.Windows.Automation.GridPattern.GetItem%2A> с параметрами (1,1).|Возвращает <xref:System.Windows.Automation.AutomationElement> , представляющий содержимое ячейки таблицы. В этом случае элемент — это текстовый элемент управления.|  
-|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> , где <xref:System.Windows.Automation.AutomationElement> — это объект, возвращаемый предыдущим методом `GetItem` .|Возвращает "Y".|  
+|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> где <xref:System.Windows.Automation.AutomationElement> — это объект, возвращаемый предыдущим `GetItem` метод.|Возвращает "Y".|  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Automation.TextPattern>
 - <xref:System.Windows.Automation.Text.TextPatternRange>
 - <xref:System.Windows.Automation.Provider.ITextProvider>
 - <xref:System.Windows.Automation.Provider.ITextRangeProvider>
-- [Доступ ко внедренным объектам с помощью модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)
-- [Представление содержимого таблицы с помощью модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)
-- [Проход по тексту с помощью модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/traverse-text-using-ui-automation.md)
+- [Доступ ко внедренным объектам с помощью автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)
+- [Представление содержимого таблицы с помощью автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)
+- [Проход по тексту при помощи модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/traverse-text-using-ui-automation.md)
 - [TextPattern поиска и выбора](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FindText)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WCF], extending
 ms.assetid: a015a040-9fdf-4147-9ea9-f83b570be1d4
-ms.openlocfilehash: 698d65d951ed7adad5aa32e874befb15a3b24d12
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 95dacf3ef975be1ddd56db747936cca35db50625
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261431"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099642"
 ---
 # <a name="extending-security"></a>Расширение безопасности
 Чтобы адаптировать новые типы утверждений и пользовательские маркеры, можно расширить инфраструктуру безопасности Windows Communication Foundation (WCF). Это подробно описывается в следующих подразделах.  
@@ -28,7 +28,7 @@ ms.locfileid: "56261431"
  [Переопределение идентификатора службы для проверки подлинности](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md)  
  Описывается, как переопределить идентификацию службы для проверки подлинности.  
   
- [Практическое руководство. Создание средства проверки идентификации настраиваемого клиента](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)  
+ [Практическое руководство. Создание пользовательского средства проверки идентификации клиентов](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)  
  Демонстрирует, как проверить идентификацию пользовательской конечной точки.  
   
  [Практическое руководство. Использование отдельных сертификатов X.509 для подписывания и шифрования](../../../../docs/framework/wcf/extending/how-to-use-separate-x-509-certificates-for-signing-and-encryption.md)  
@@ -53,7 +53,8 @@ ms.locfileid: "56261431"
 ## <a name="related-sections"></a>Связанные разделы  
  [Безопасность](../../../../docs/framework/wcf/feature-details/security.md)  
   
- [Базовое программирование для WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [Базовое программирование WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)  
   
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)

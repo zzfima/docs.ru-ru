@@ -9,18 +9,16 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - message loops [WPF]
 ms.assetid: f440c23f-fa5d-4d5a-852f-ba61150e6405
-ms.openlocfilehash: dbc70f58fddfad6e7e7271802b8b01d2b52ab25a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 707e77ac69878c1c7fb8e975c1f90ad657228d1a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370102"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079679"
 ---
 # <a name="troubleshooting-hybrid-applications"></a>Устранение неполадок смешанных приложений
 <a name="introduction"></a> В этом разделе перечислены некоторые общие проблемы, которые могут возникать при создании смешанных приложений, одновременно использующих технологии [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].  
-  
 
-  
 <a name="overlapping_controls"></a>   
 ## <a name="overlapping-controls"></a>Перекрывающиеся элементы управления  
  Элементы управления могут не перекрываться должным образом. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] использует отдельный HWND для каждого элемента управления. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] использует один HWND для всего содержимого на странице. Это отличие в реализации вызывает неожиданные перекрывающиеся поведения.  
@@ -88,7 +86,7 @@ ms.locfileid: "57370102"
   
 <a name="enabling_visual_styles"></a>   
 ## <a name="enabling-visual-styles"></a>Включение стилей оформления  
- Визуальные стили [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] в элементе управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] могут быть недоступны. <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> Метод вызывается в шаблоне для [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] приложения. Несмотря на то что этот метод не вызывается по умолчанию, если вы используете [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] для создания проекта, вы получите визуальные стили [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] для элементов управления, если доступен Comctl32.dll версии 6.0. Необходимо вызвать <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> метод перед созданием дескрипторов в потоке. Дополнительные сведения см. в разделе [Как Включение визуальных стилей в гибридном приложении](how-to-enable-visual-styles-in-a-hybrid-application.md).  
+ [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] визуальные стили на [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] не может быть включено управление. <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> Метод вызывается в шаблоне для [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] приложения. Несмотря на то что этот метод не вызывается по умолчанию, если вы используете [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] для создания проекта, вы получите визуальные стили [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] для элементов управления, если доступен Comctl32.dll версии 6.0. Необходимо вызвать <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> метод перед созданием дескрипторов в потоке. Дополнительные сведения см. в разделе [Как Включение визуальных стилей в гибридном приложении](how-to-enable-visual-styles-in-a-hybrid-application.md).  
   
 <a name="licensed_controls"></a>   
 ## <a name="licensed-controls"></a>Лицензированные элементы управления  
@@ -115,6 +113,7 @@ ms.locfileid: "57370102"
  Размещенные элементы управления WPF в <xref:System.Windows.Forms.Integration.ElementHost> в настоящее время не поддерживают <xref:System.Windows.Forms.Control.ImeMode%2A> свойство. Изменения в <xref:System.Windows.Forms.Control.ImeMode%2A> будет игнорироваться размещенными элементами управления.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Взаимодействие в конструкторе WPF](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628658(v=vs.100))
@@ -122,5 +121,5 @@ ms.locfileid: "57370102"
 - [Практическое руководство. Включение визуальных стилей в гибридном приложении](how-to-enable-visual-styles-in-a-hybrid-application.md)
 - [Вопросы, связанные с макетом элемента WindowsFormsHost](layout-considerations-for-the-windowsformshost-element.md)
 - [Сопоставление свойств Windows Forms и WPF](windows-forms-and-wpf-property-mapping.md)
-- [Ошибки во время разработки в конструкторе Windows Forms](../../winforms/controls/design-time-errors-in-the-windows-forms-designer.md)
+- [Ошибки во время разработки в конструкторе Windows Forms Designer](../../winforms/controls/design-time-errors-in-the-windows-forms-designer.md)
 - [Миграция и взаимодействие систем](migration-and-interoperability.md)

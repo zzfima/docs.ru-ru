@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Добавление элементов управления DomainUpDown Windows Forms программными средствами
+title: Практическое руководство. Добавление элементов в элемент управления DomainUpDown в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - spin button control [Windows Forms], adding items
 - DomainUpDown control [Windows Forms], adding items to
 ms.assetid: fd31d314-33eb-4181-90f8-d32ed0c4e072
-ms.openlocfilehash: 06c2c83ddfba67aaff775065cc2aa4515978bf81
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 32f58dc8b8b96a3d8660550d8ce7696839587ddc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722715"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080674"
 ---
-# <a name="how-to-add-items-to-windows-forms-domainupdown-controls-programmatically"></a>Практическое руководство. Добавление элементов управления DomainUpDown Windows Forms программными средствами
+# <a name="how-to-add-items-to-windows-forms-domainupdown-controls-programmatically"></a>Практическое руководство. Добавление элементов в элемент управления DomainUpDown в Windows Forms
 Можно добавить элементы Windows Forms <xref:System.Windows.Forms.DomainUpDown> элемента управления в коде. Вызовите <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A> или <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A> метод <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection> класса для добавления элементов к элементу управления <xref:System.Windows.Forms.DomainUpDown.Items%2A> свойство. <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A> Метод добавляет элемент в конец коллекции, хотя <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A> метод добавляет элемент в указанной позиции.  
   
 ### <a name="to-add-a-new-item"></a>Чтобы добавить новый элемент  
@@ -35,7 +35,7 @@ ms.locfileid: "57722715"
     domainUpDown1->Items->Add("noodles");  
     ```  
   
-     - или -  
+     -или-  
   
 2.  Используйте <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A> метод для вставки элемента в списке в указанной позиции.  
   
@@ -55,6 +55,7 @@ ms.locfileid: "57722715"
     ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.DomainUpDown>
 - <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A?displayProperty=nameWithType>
 - <xref:System.Collections.ArrayList.Insert%2A?displayProperty=nameWithType>

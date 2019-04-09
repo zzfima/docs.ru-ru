@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b69aa42fc2ebb9f59cbf699d83b521704805ea5f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bae19ec18c54eccc7aa54d2d3a006f36ba8ab762
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519753"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110881"
 ---
 # <a name="assemblyinfo-structure"></a>Структура ASSEMBLY_INFO
 Содержит сведения о сборке, зарегистрированный в глобальном кэше сборок.  
@@ -40,7 +40,7 @@ typedef struct _ASSEMBLY_INFO {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |`cbAssemblyInfo`|Размер в байтах, структуры. Это поле зарезервировано для будущего расширения.|  
 |`dwAssemblyFlags`|Флаги, указывающие сведения об установке о сборке. Поддерживаются следующие значения:<br /><br /> -ASSEMBLYINFO_FLAG_INSTALLED значение, которое указывает, что сборка устанавливается. Текущая версия .NET Framework всегда задает `dwAssemblyFlags` этому значению.<br />-ASSEMBLYINFO_FLAG_PAYLOADRESIDENT значение, которое указывает, что сборка является резидентного полезных данных. Текущая версия .NET Framework никогда не задает `dwAssemblyFlags` этому значению.|  
@@ -56,5 +56,6 @@ typedef struct _ASSEMBLY_INFO {
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Структуры Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
-- [Глобальный кэш сборок](../../../../docs/framework/app-domains/gac.md)
+- [глобальный кэш сборок](../../../../docs/framework/app-domains/gac.md)

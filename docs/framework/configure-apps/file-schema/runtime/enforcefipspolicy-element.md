@@ -1,5 +1,5 @@
 ---
-title: Элемент <enforceFIPSPolicy>
+title: <enforceFIPSPolicy> Элемент
 ms.date: 03/30/2017
 helpviewer_keywords:
 - enforceFIPSPolicy element
@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c35509c4-35cf-43c0-bb47-75e4208aa24e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a4e5ba5ac1a5a3c08c351531efc84291925ba4b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b1aa958e15449949a1b7ca740198fff71295b2ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267473"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59114837"
 ---
 # <a name="enforcefipspolicy-element"></a>\<enforceFIPSPolicy > элемент
 Указывает, нужно ли принудительно обеспечивать соблюдение требования конфигурации компьютера о том, что криптографические алгоритмы должны соответствовать стандартам FIPS.  
@@ -40,7 +40,7 @@ ms.locfileid: "55267473"
   
 ## <a name="enabled-attribute"></a>Атрибут enabled  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |`true`|Если компьютер настроен требовать соответствовала стандарту FIPS алгоритмы шифрования, это требование применяется принудительно. Если класс реализует алгоритм, который не соответствует стандарту FIPS, конструкторы или `Create` методы для этого класса исключения, когда они запускаются на этом компьютере. Это значение по умолчанию.|  
 |`false`|Алгоритмы шифрования, которые используются приложением не требуется соответствие стандарту FIPS, независимо от конфигурации компьютера.|  
@@ -50,7 +50,7 @@ ms.locfileid: "55267473"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`runtime`|Содержит сведения о привязке сборок и сборке мусора.|  
@@ -72,6 +72,7 @@ ms.locfileid: "55267473"
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Модель криптографии](../../../../../docs/standard/security/cryptography-model.md)

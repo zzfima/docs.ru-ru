@@ -1,18 +1,18 @@
 ---
-title: Практическое руководство. Создание элемента управления простой привязкой в форме Windows
+title: Практическое руководство. Создание элемента управления с простой привязкой в форме Windows Forms
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: f481b85c07a107b10d88d47c4873b555191bac7f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 85b19c43441650789eed6b92a771d2f2433c6a10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708344"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094084"
 ---
-# <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Практическое руководство. Создание элемента управления простой привязкой в форме Windows
+# <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Практическое руководство. Создание элемента управления с простой привязкой в форме Windows Forms
 С помощью *простая привязка*, одному элементу данных, таких как значение столбца из таблицы набора данных, можно отобразить в элементе управления. Вы можете простую привязку любого свойства элемента управления к значению данных.  
   
 > [!NOTE]
@@ -46,6 +46,7 @@ ms.locfileid: "57708344"
     >  Так как элементы управления с простой привязкой отображают только один элемент данных, очень характерно для включения логика перемещения в форму Windows с помощью элементов управления с простой привязкой.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.Binding>
 - [Привязка данных Windows Forms](windows-forms-data-binding.md)
-- [Привязка данных и Windows Forms](data-binding-and-windows-forms.md)
+- [Связывание данных и Windows Forms](data-binding-and-windows-forms.md)

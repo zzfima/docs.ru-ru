@@ -6,12 +6,12 @@ helpviewer_keywords:
 - masks [WPF], opacity
 - opacity [WPF], masks
 ms.assetid: 22367fab-5f59-4583-abfd-db2bf86eaef7
-ms.openlocfilehash: 7b6afebbf6ac2dda0f8eb9932630da9a273f972e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 84525e58487ce9b0bc26f77ff8dbced734bc90a9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376810"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080089"
 ---
 # <a name="opacity-masks-overview"></a>Общие сведения о масках непрозрачности
 Маски непрозрачности позволяют делать части элемента или визуального элемента прозрачными или частично прозрачными. Для создания маски непрозрачности, применить <xref:System.Windows.Media.Brush> для <xref:System.Windows.UIElement.OpacityMask%2A> свойства элемента или <xref:System.Windows.Media.Visual>.  Кисть сопоставляется с элементом или визуальным элементом, а значение непрозрачности каждого пикселя кисти используется для определения результирующей непрозрачности каждого соответствующего пикселя элемента или визуального элемента.  
@@ -73,9 +73,9 @@ ms.locfileid: "57376810"
   
 <a name="argbsyntax"></a>   
 ### <a name="specifying-color-opacity-in-xaml"></a>Задание непрозрачности цвета в XAML  
- В [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] можно использовать шестнадцатеричный формат [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] для указания непрозрачности отдельных цветов. В шестнадцатеричном формате [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] используется следующий синтаксис.  
+ В [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] можно использовать шестнадцатеричный формат [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] для указания непрозрачности отдельных цветов. [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] шестнадцатеричное представление использует следующий синтаксис:  
   
- `#` **aa** *rrggbb*  
+ `#` **AA** *вида rrggbb*  
   
  Здесь *aa* — двузначное шестнадцатеричное значение, используемое для указания непрозрачности цвета. *rr*, *gg* и *bb* — двузначные шестнадцатеричные значения, используемые для указания насыщенности красного, зеленого и синего цветов. Шестнадцатеричная цифра может принимать значения от 0 до F (сначала цифры от 0 до 9, затем буквы от A до F). Наименьшее значение — 0, наибольшее — F. Альфа-значение 00 задает полностью прозрачный цвет, а альфа-значение FF — полностью непрозрачный цвет.  В следующем примере используется шестнадцатеричный формат [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] для задания двух цветов. Первый — полностью непрозрачный, второй — полностью прозрачный.  
   
@@ -116,5 +116,6 @@ ms.locfileid: "57376810"
  [!code-xaml[OpacityMasksSnippet#TiledDrawingasOpacityMask](~/samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/DrawingBrushExample.xaml#tileddrawingasopacitymask)]  
   
 ## <a name="see-also"></a>См. также
-- [Заполнение с использованием изображений, рисунков и визуальных элементов](painting-with-images-drawings-and-visuals.md)
+
+- [Рисование с помощью объектов Image, Drawing и Visual](painting-with-images-drawings-and-visuals.md)
 - [Общие сведения о закраске сплошным цветом и градиентом](painting-with-solid-colors-and-gradients-overview.md)

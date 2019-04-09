@@ -13,12 +13,12 @@ helpviewer_keywords:
 - datasets [Windows Forms], displaying in DataGridView control
 - DataGridView control [Windows Forms]
 ms.assetid: dbee73f2-bba6-4874-9389-cd21d44309be
-ms.openlocfilehash: 52ff12df7de7dc43c9cea2f36d3780fd0dd6ae3e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 86e96045b7de580b7cefd0262369ce860d00e234
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722338"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124323"
 ---
 # <a name="datagridview-control-windows-forms"></a>элемент управления DataGridView (Windows Forms)
 Элемент управления `DataGridView` предоставляет мощный и гибкий способ отображения данных в табличном формате. Элемент управления `DataGridView` можно использовать для отображения представлений небольшого объема данных только для чтения, либо можно масштабировать его для отображения редактируемого представления очень больших наборов данных.  
@@ -58,7 +58,7 @@ ms.locfileid: "57722338"
  [Выделение данных и операции с буфером обмена в элементе управления DataGridView в Windows Forms](selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)  
  Разделы, описывающие возможности выбора ячеек, строк и столбцов в элементе управления.  
   
- [Программирование с использованием ячеек, строк и столбцов в элементе управления DataGridView в Windows Forms](programming-with-cells-rows-and-columns-in-the-datagrid.md)  
+ [Программирование с использование ячеек, строк и столбцов в элементе управления DataGridView в Windows Forms](programming-with-cells-rows-and-columns-in-the-datagrid.md)  
  Разделы, описывающие программирование объектов ячеек, строк и столбцов.  
   
  [Настройка элементов управления DataGridView в Windows Forms](customizing-the-windows-forms-datagridview-control.md)  
@@ -83,4 +83,5 @@ ms.locfileid: "57722338"
  Содержит справочную документацию по компоненту <xref:System.Windows.Forms.BindingSource>. Элемент управления <xref:System.Windows.Forms.DataGridView> и компонент <xref:System.Windows.Forms.BindingSource> предназначены для совместной работы.  
   
 ## <a name="see-also"></a>См. также
-- [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)
+
+- [Элементы управления для использования в формах Windows Forms](controls-to-use-on-windows-forms.md)

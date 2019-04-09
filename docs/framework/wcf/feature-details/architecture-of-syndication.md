@@ -2,12 +2,12 @@
 title: Архитектура синдикации
 ms.date: 03/30/2017
 ms.assetid: ed4ca86e-e3d8-4acb-87aa-1921fbc353be
-ms.openlocfilehash: b07fc03fd11c794d804b6bcd1813010965365e43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4083f7f7ef3fc986e9a7c430b8ed8cfe451c9d86
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623447"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075916"
 ---
 # <a name="architecture-of-syndication"></a>Архитектура синдикации
 API синдикации предназначен для обеспечения независимой от формата модели программирования, которая позволяет передавать сводное содержимое по каналам связи в различных форматах. Абстрактная модель данных состоит из следующих классов:  
@@ -78,6 +78,7 @@ API синдикации предназначен для обеспечения 
 -   Ключевой особенностью протоколов синдикации является их расширяемость. Оба протокола, Atom 1.0 и RSS 2.0, позволяют добавлять в веб-каналы атрибуты и элементы, не определенные в спецификациях. Модель программирования синдикации WCF предоставляет два способа работы с пользовательскими атрибутами и расширениями: наследование новый класс и слабо типизированный доступ. Дополнительные сведения см. в разделе [расширяемости синдикации](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения о синдикации WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)
 - [Сопоставление объектной модели синдикации WCF моделям Atom и RSS](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md)
 - [Модель веб-программирования HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9d5f0bb07498203d3db57ac3948efddce4f050a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1baeac5db41aa64380d694ebab5419229d8adb4c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533719"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088214"
 ---
 # <a name="iclrtask-interface"></a>Интерфейс ICLRTask
 Предоставляет методы, позволяющие основному приложению отправлять запросы общеязыковой среды выполнения (CLR), или для предоставления уведомления в среду CLR о соответствующей задаче.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание:|  
+|Метод|Описание|  
 |------------|-----------------|  
 |[Метод Abort](../../../../docs/framework/unmanaged-api/hosting/iclrtask-abort-method.md)|Запрашивает прерывание задачи среды CLR, текущий `ICLRTask` представленное экземпляром.|  
 |[Метод ExitTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-exittask-method.md)|Уведомляет среды CLR, которая задачу, связанную с текущим `ICLRTask` экземпляра завершается и пытается корректно завершить работу задачи.|  
@@ -57,6 +57,7 @@ ms.locfileid: "54533719"
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс ICLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
 - [Интерфейс IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
 - [Интерфейс IHostTaskManager](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)

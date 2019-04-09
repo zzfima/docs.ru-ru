@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d48c3d701b0369ab00150625c26d94f4111b2d9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3be6f2b9454ed2f74d2cc6792cd9aaa2c25215db
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607216"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104615"
 ---
 # <a name="mdainfo-structure"></a>Структура MDAInfo
 Предоставляет сведения о `Event_MDAFired` событие, которое инициирует создание помощник по отладке управляемого (кода MDA).  
@@ -63,5 +63,6 @@ typedef struct _MDAInfo {
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Структуры размещения](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
-- [Диагностика ошибок посредством помощников по отладке управляемого кода](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Диагностика ошибок посредством управляемых помощников по отладке](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

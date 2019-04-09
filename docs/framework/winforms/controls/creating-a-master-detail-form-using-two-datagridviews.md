@@ -10,14 +10,14 @@ helpviewer_keywords:
 - master-details lists [Windows Forms], displaying on Windows Forms
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: c5fa29e8-47f7-4691-829b-0e697a691f36
-ms.openlocfilehash: 80ec480b5d45a338c1f15796ae82015d6da24fc9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 66807287dcaffae4bd310040312e0f56e8fda5d0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705536"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078881"
 ---
-# <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>Пошаговое руководство. Создание формы «основной/подробности» с помощью двух элементов управления DataGridView Windows Forms
+# <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>Пошаговое руководство. Создание главного и подчиненного представлений данных с использованием двух элементов управления DataGridView в Windows Forms
 Один из наиболее распространенных сценариев использования <xref:System.Windows.Forms.DataGridView> элемент управления является *"основной/подробности"* формы, в котором отображается отношение "родители потомки" между двумя таблицами базы данных. Выбор строк в главной таблице приводит детализации таблицы с помощью соответствующих дочерних данных.  
   
  Реализация формы «основной/подробности» легко реализовать с помощью взаимодействие между <xref:System.Windows.Forms.DataGridView> управления и <xref:System.Windows.Forms.BindingSource> компонента. В этом пошаговом руководстве вы создадите формы, с использованием двух <xref:System.Windows.Forms.DataGridView> элементов управления и два <xref:System.Windows.Forms.BindingSource> компонентов. В форме будут показаны два связанных таблиц в базе данных "Борей" SQL Server: `Customers` и `Orders`. Когда вы закончите, будет иметь форму, которая показывает всех клиентов в базе данных в базу данных master <xref:System.Windows.Forms.DataGridView> и все заказы для выбранного клиента подробно <xref:System.Windows.Forms.DataGridView>.  
@@ -76,8 +76,9 @@ ms.locfileid: "57705536"
 -   Настройка внешнего вида ячеек. Дополнительные сведения см. в разделе [Как Настройка внешнего вида ячеек элемента управления DataGridView в Windows Forms](customize-the-appearance-of-cells-in-the-datagrid.md) и [как: Установка стилей ячейки по умолчанию для управления DataGridView в Windows Forms](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
 - [Отображение данных с помощью элемента управления DataGridView в Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Практическое руководство. Создание формы «основной/подробности» с помощью двух элементов управления DataGridView Windows Forms](create-a-master-detail-form-using-two-datagridviews.md)
+- [Практическое руководство. Создание главного и подчиненного представлений данных с использованием двух элементов управления DataGridView в Windows Forms](create-a-master-detail-form-using-two-datagridviews.md)
 - [Защита сведений о подключении](../../data/adonet/protecting-connection-information.md)

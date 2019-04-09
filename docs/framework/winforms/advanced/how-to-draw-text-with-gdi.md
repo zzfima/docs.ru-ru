@@ -10,12 +10,12 @@ helpviewer_keywords:
 - drawing [Windows Forms], text
 - Windows Forms, drawing text with GDI
 ms.assetid: 2a19fe5d-2ace-451c-94db-01cb1118ef7b
-ms.openlocfilehash: 644e180e2f15592db2112a5cd6f5b0130c6abea8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d4bf72998c798040451b814a7f0287bca65f5300
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722337"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073329"
 ---
 # <a name="how-to-draw-text-with-gdi"></a>Практическое руководство. Рисование текста с использованием GDI
 С помощью <xref:System.Windows.Forms.TextRenderer.DrawText%2A> метод в <xref:System.Windows.Forms.TextRenderer> класс, вы может обращаться к [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] функциональные возможности для рисования текста в форме или элементе управления. [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] отрисовка текста обычно обеспечивает более высокую производительность и более точно текста, чем измерение [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
@@ -34,11 +34,12 @@ ms.locfileid: "57722337"
  Дополнительные сведения о получении <xref:System.Drawing.Graphics>, см. в разделе [как: Создание объектов Graphics для рисования](how-to-create-graphics-objects-for-drawing.md). Дополнительные сведения о построении <xref:System.Drawing.Font>, см. в разделе [как: Шрифты и их семейств](how-to-construct-font-families-and-fonts.md).  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Предыдущий пример кода предназначен для работы с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs> `e`, который является параметром <xref:System.Windows.Forms.PaintEventHandler>.  
+ Предыдущий пример кода предназначен для работы с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs>`e`, который является параметром <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.TextRenderer>
 - <xref:System.Drawing.Font>
 - <xref:System.Drawing.Color>
 - <xref:System.Drawing.Color>
-- [Работами со шрифтами и текстом](using-fonts-and-text.md)
+- [Шрифты и текст](using-fonts-and-text.md)

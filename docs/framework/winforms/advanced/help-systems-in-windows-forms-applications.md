@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help [Windows Forms], Windows Forms
 - HelpProvider component [Windows Forms], providing Help in Windows applications
 ms.assetid: 2a96a278-432c-41fc-9e3c-5bfedf5e1267
-ms.openlocfilehash: 22c07490d0d3b54be96f32d67c9b4aee70306c1d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1a02271d59a59f0a6e06a652a34922ba5dcdf1f3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718325"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087278"
 ---
 # <a name="help-systems-in-windows-forms-applications"></a>Справочные системы в приложениях Windows Forms
 Один из наиболее важных преимуществ, как разработчик приложений, можно предоставить пользователям является исчерпывающая справочная система. Это, где они будет включить, когда они становятся путать или затруднений. Справочную систему в приложении Windows легко выполняется с помощью [компонент HelpProvider](../controls/helpprovider-component-windows-forms.md).  
@@ -24,6 +24,7 @@ ms.locfileid: "57718325"
  Можно создать файлы HTML Help 1.x с HTML Help Workshop. Дополнительные сведения о HTML-справки см. в разделе «HTML Help Workshop» или в других разделах «HTML Help» в библиотеке MSDN.  
   
 ## <a name="see-also"></a>См. также
+
 - [Интеграция справки пользователя в формы Windows Forms](integrating-user-help-in-windows-forms.md)
 - [Компонент HelpProvider](../controls/helpprovider-component-windows-forms.md)
 - [Компонент ToolTip](../controls/tooltip-component-windows-forms.md)

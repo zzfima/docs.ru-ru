@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Использование Svcutil.exe для экспорта метаданных из скомпилированного кода службы
+title: Практическое руководство. Использование программы Svcutil.exe для экспорта метаданных из скомпилированного кода службы
 ms.date: 03/30/2017
 ms.assetid: 95d0aed3-16a2-4398-89bb-39418eeb7355
-ms.openlocfilehash: 6af43b076f7c508fd17cac367caeed30065b0c4c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: cb1cb03a078eeb273c69cc3c49b3ef2173c0a49c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648115"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084937"
 ---
-# <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>Как выполнить Использование Svcutil.exe для экспорта метаданных из скомпилированного кода службы
+# <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>Практическое руководство. Использование программы Svcutil.exe для экспорта метаданных из скомпилированного кода службы
 При помощи Svcutil.exe можно экспортировать метаданные для служб, контрактов и типов данных в скомпилированных сборках, как показано далее.  
   
 -   Для экспорта метаданных всех скомпилированных контрактов службы для набора сборок при помощи Svcutil.exe необходимо указать сборки как входные параметры. Это поведение установлено по умолчанию.  
@@ -163,5 +163,6 @@ public class MyService : IPersonFinder
 ```  
   
 ## <a name="see-also"></a>См. также
-- [Служебная программа для метаданных ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+
+- [Служебное средство ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
 - [Экспорт и импорт метаданных](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)

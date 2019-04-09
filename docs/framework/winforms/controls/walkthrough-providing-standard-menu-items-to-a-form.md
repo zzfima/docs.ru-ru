@@ -1,5 +1,5 @@
 ---
-title: Пошаговое руководство. Создание стандартных пунктов меню для формы
+title: Пошаговое руководство. Связывание стандартных элементов меню с формой
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - StatusStrip control [Windows Forms]
 - ToolStrip control [Windows Forms]
 ms.assetid: dac37d98-589e-4d6d-9673-6437e8943122
-ms.openlocfilehash: 846660fda37797e9d53d8f1d5a8a4f812d33e8df
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: f9e54ecd49fc3bd295f236292715393358bab0b7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711763"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094883"
 ---
-# <a name="walkthrough-providing-standard-menu-items-to-a-form"></a>Пошаговое руководство. Создание стандартных пунктов меню для формы
+# <a name="walkthrough-providing-standard-menu-items-to-a-form"></a>Пошаговое руководство. Связывание стандартных элементов меню с формой
 С помощью элемента управления <xref:System.Windows.Forms.MenuStrip> можно создавать стандартные меню для форм.  
   
  В этом пошаговом руководстве демонстрируется использование <xref:System.Windows.Forms.MenuStrip> элементу управления создавать стандартные меню. Также форма изменяется при выборе пользователем пункта меню. В этом пошаговом руководстве показаны следующие задачи:  
@@ -120,6 +120,7 @@ ms.locfileid: "57711763"
 -   Предоставить вашей <xref:System.Windows.Forms.ToolStrip> управляет профессиональный вид. Дополнительные сведения см. в разделе [Как Назначение средства визуализации компоненту ToolStrip для приложения](how-to-set-the-toolstrip-renderer-for-an-application.md).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.StatusStrip>

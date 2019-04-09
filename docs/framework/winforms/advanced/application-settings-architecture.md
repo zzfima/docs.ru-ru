@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: dd527234b90e94b5883d15b336f5e5abc9709880
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: f686fa00662ad29323c1883c45ed0e790b133f2c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710684"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099785"
 ---
 # <a name="application-settings-architecture"></a>Архитектура параметров приложения
 В этом разделе описываются принципы работы архитектуры параметров приложения и рассматриваются дополнительные возможности архитектуры, такие как сгруппированные параметры и ключи параметров.  
@@ -147,10 +147,11 @@ ms.locfileid: "57710684"
  Поставщик должен поддерживать все атрибуты, определенные в параметры <xref:System.Configuration?displayProperty=nameWithType> пространства имен, хотя необходимо по меньшей мере поддерживать <xref:System.Configuration.ApplicationScopedSettingAttribute> и <xref:System.Configuration.UserScopedSettingAttribute>и также должен поддерживать <xref:System.Configuration.DefaultSettingValueAttribute>. Для тех атрибутов, которые он не поддерживает, поставщик должен завершаться ошибкой без уведомления. Он не должен создавать исключение. Если класс параметров использует Недопустимое сочетание атрибутов, тем не менее, такие как применение <xref:System.Configuration.ApplicationScopedSettingAttribute> и <xref:System.Configuration.UserScopedSettingAttribute> тот же параметр — ваш поставщик должен исключение и прервать операцию.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.SettingsProvider>
 - <xref:System.Configuration.LocalFileSettingsProvider>
 - [Общие сведения о параметрах приложений](application-settings-overview.md)
-- [Application Settings for Custom Controls](application-settings-for-custom-controls.md)
+- [Параметры приложения для пользовательских элементов управления](application-settings-for-custom-controls.md)
 - [ClickOnce и параметры приложения](/visualstudio/deployment/clickonce-and-application-settings)
 - [Схема параметров приложения](../../configure-apps/file-schema/application-settings-schema.md)

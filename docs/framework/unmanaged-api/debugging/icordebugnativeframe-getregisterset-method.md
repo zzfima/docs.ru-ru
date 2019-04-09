@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18db366bde4211afa0f65052affa0ab9639df122
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 03a4f7ecc227679e6b0afa29b20de1aefeae3b76
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57498930"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077931"
 ---
 # <a name="icordebugnativeframegetregisterset-method"></a>Метод ICorDebugNativeFrame::GetRegisterSet
 Получает набор регистров для этого кадра стека.  
@@ -49,4 +49,3 @@ HRESULT GetRegisterSet (
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
-

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data serialization [WCF]
 - data transfer [WCF]
 ms.assetid: 0f03c635-f3e7-4c5c-9463-3cb0135e221e
-ms.openlocfilehash: 5192030fa2eda45431dd8a3765603d3081b93fa3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1eefd82a149d0bc215ca441e92c7d737a744b1e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595322"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088409"
 ---
 # <a name="data-transfer-and-serialization"></a>Передача данных и сериализация
 В распределенных системах для выполнения каких-либо задач клиенты и службы обмениваются данными. Как разработчик службы или клиента необходимо понимать как Windows Communication Foundation (WCF) обрабатывает и сериализации данных для создания приложений, которые эффективны и простые в обслуживании.  
@@ -61,5 +61,6 @@ ms.locfileid: "54595322"
  [Расширение кодировщиков и сериализаторов](../../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md)  
   
 ## <a name="see-also"></a>См. также
-- [Советы и рекомендации: Управление версиями контракта данных](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
-- [Управление версиями служб](../../../../docs/framework/wcf/service-versioning.md)
+
+- [Рекомендации. Управление версиями контракта данных](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
+- [Управление версиями службы](../../../../docs/framework/wcf/service-versioning.md)

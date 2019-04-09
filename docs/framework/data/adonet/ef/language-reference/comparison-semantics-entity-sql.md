@@ -2,12 +2,12 @@
 title: Семантика сравнения (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: b36ce28a-2fe4-4236-b782-e5f7c054deae
-ms.openlocfilehash: 371999df0fb3177ecc90f9b1fa43d457a51bfd7a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6b4c4177ebd6c45e00a1ac7774e40a43e0c14a74
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492498"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083339"
 ---
 # <a name="comparison-semantics-entity-sql"></a>Семантика сравнения (Entity SQL)
 Выполнение любого следующего оператора [!INCLUDE[esql](../../../../../../includes/esql-md.md)] подразумевает сравнение типов экземпляров.  
@@ -66,7 +66,7 @@ ms.locfileid: "54492498"
 ## <a name="supported-combinations"></a>Поддерживаемые сочетания  
  В следующей таблице приводятся все поддерживаемые сочетания операторов сравнения для каждого типа.  
   
-|**Type**|**=**<br /><br /> **\!=**|**GROUP BY**<br /><br /> **DISTINCT**|**UNION**<br /><br /> **INTERSECT**<br /><br /> **EXCEPT**<br /><br /> **SET**<br /><br /> **OVERLAPS**|**IN**|**<   <=**<br /><br /> **>   >=**|**ORDER BY**|**ИМЕЕТ ЗНАЧЕНИЕ NULL**<br /><br /> **НЕ РАВНО NULL**|  
+|**Тип**|**=**<br /><br /> **!=**|**GROUP BY**<br /><br /> **DISTINCT**|**UNION**<br /><br /> **INTERSECT**<br /><br /> **EXCEPT**<br /><br /> **SET**<br /><br /> **OVERLAPS**|**IN**|**<   <=**<br /><br /> **>   >=**|**ORDER BY**|**IS NULL**<br /><br /> **IS NOT NULL**|  
 |-|-|-|-|-|-|-|-|  
 |Тип сущности|Ref<sup>1</sup>|Все свойства<sup>2</sup>|Все свойства<sup>2</sup>|Все свойства<sup>2</sup>|Исключение<sup>3</sup>|Исключение<sup>3</sup>|Ref<sup>1</sup>|  
 |Сложный тип|Исключение<sup>3</sup>|Исключение<sup>3</sup>|Исключение<sup>3</sup>|Исключение<sup>3</sup>|Исключение<sup>3</sup>|Исключение<sup>3</sup>|Исключение<sup>3</sup>|  
@@ -103,4 +103,5 @@ WHERE p1 != REF(p2)
  <sup>5</sup>сравниваются все отдельные элементы ссылок (включая имя набора сущностей и все ключевые свойства типа сущности).  
   
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения об Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Задайте изображения, отображаемого элементом управления форм Windows
+title: Практическое руководство. Задание изображения, отображаемого элементом управления Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - images [Windows Forms], Windows Forms controls
 - examples [Windows Forms], controls
 ms.assetid: 9445af8f-4f62-48b0-a3f6-068058964b9f
-ms.openlocfilehash: 93bc7970ce7c287273f8bd7ff50b07c6658e2a08
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 031ddcb3b852e75353fed7420735350e79f23df3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54644928"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085094"
 ---
-# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a>Как выполнить Задайте изображения, отображаемого элементом управления форм Windows
+# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a>Практическое руководство. Задание изображения, отображаемого элементом управления Windows Forms
 Несколько элементов управления Windows Forms можно отображать изображения. Эти образы могут использоваться значки, объяснение назначения элемента управления, такие как значок дискеты на кнопку, обозначающая **Сохранить** команды. Кроме того значок может быть фоновые изображения, чтобы предоставить элемент управления, внешний вид и поведение.  
   
 ### <a name="to-set-the-image-displayed-by-a-control"></a>Чтобы задать изображение, отображаемое элементом управления  
@@ -57,6 +57,7 @@ ms.locfileid: "54644928"
     ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Drawing.Image.FromFile%2A>
 - <xref:System.Drawing.Image>
 - <xref:System.Windows.Forms.Control.BackgroundImage%2A>

@@ -2,12 +2,12 @@
 title: Повышение управляемости обработки ошибок и формирования сообщений об ошибках
 ms.date: 03/30/2017
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
-ms.openlocfilehash: 8a6064d5ebc8f80eb5fe3cba309c0eb1c71ee020
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 520a939c5527fa341a6c3a609297c69ec05dd7ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814345"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094116"
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>Повышение управляемости обработки ошибок и формирования сообщений об ошибках
 В этом примере показано, как расширить управление обработкой ошибок и ошибок на службу Windows Communication Foundation (WCF) с помощью <xref:System.ServiceModel.Dispatcher.IErrorHandler> интерфейс. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) некоторые дополнительный код, добавленный в службу для обработки ошибок. Клиент вызывает несколько ошибок. Служба перехватывает эти ошибки и регистрирует их в файле.  
@@ -19,7 +19,7 @@ ms.locfileid: "58814345"
   
  В этом образце тип `CalculatorErrorHandler` реализует интерфейс <xref:System.ServiceModel.Dispatcher.IErrorHandler>. В поле  
   
- <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A> обработчик `CalculatorErrorHandler` записывает ошибку в текстовый файл Error.txt в папке c:\logs. Обратите внимание, что этот образец регистрирует ошибку в журнале и не подавляет ее, чтобы о ней можно было уведомить клиент.  
+ <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A> метод, `CalculatorErrorHandler` делает запись в журнал ошибки в текстовый файл Error.txt в c:\logs. Обратите внимание, что этот образец регистрирует ошибку в журнале и не подавляет ее, чтобы о ней можно было уведомить клиент.  
   
 ```  
 public class CalculatorErrorHandler : IErrorHandler  
@@ -157,4 +157,3 @@ Fault: Reason = Invalid Argument: The argument must be greater than zero.
 >  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\ErrorHandling`  
-  

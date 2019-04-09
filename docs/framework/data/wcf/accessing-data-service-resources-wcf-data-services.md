@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 - WCF Data Services, accessing data
 ms.assetid: 9665ff5b-3e3a-495d-bf83-d531d5d060ed
-ms.openlocfilehash: 9589656c00573f7b3bba07aee1f89902a34d61ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d4b0af7f20cbf932773df3ae226729a0a6c2500
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740844"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085874"
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>Доступ к ресурсам служб данных (службы данных WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] поддерживает [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] для предоставления данных в виде канала с ресурсами, которые можно обращаться по URI. Эти ресурсы представлены в рамках соглашений о связях сущностей из [модели EDM](../../../../docs/framework/data/adonet/entity-data-model.md). Сущности в этой модели представляют операционные единицы данных, которые являются типами данных в домене приложений, такими как клиенты, заказы, элементы и продукты. Это позволяет обращаться к данным сущности и изменять их с использованием семантики REST, в частности стандартных команд HTTP, таких как GET, PUT, POST и DELETE.  
@@ -97,4 +97,5 @@ http://services.odata.org/Northwind/Northwind.svc/Orders(10643)/$links/Shipper
  URI [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] ресурсов позволяет адресовать данные сущности, предоставляемые службой. При вводе URI в поле адреса веб-браузера, [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] возвращается веб-канала представление запрошенного ресурса. Дополнительные сведения см. в разделе [краткое руководство по службам данных WCF](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md). Несмотря на то, что веб-браузер может быть полезно для тестирования, что ресурса службы данных возвращает ожидаемые данные, службы данных, которые также можно создать, обновление и удаление данных обычно осуществляется с помощью кода приложения или языков скриптов на веб-страницы. Дополнительные сведения см. в разделе [использование службы данных в клиентском приложении](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md).  
   
 ## <a name="see-also"></a>См. также
-- [Веб-сайт протокола Open Data Protocol](https://go.microsoft.com/fwlink/?LinkID=182204)
+
+- [Веб-узел протокола Open Data Protocol](https://go.microsoft.com/fwlink/?LinkID=182204)

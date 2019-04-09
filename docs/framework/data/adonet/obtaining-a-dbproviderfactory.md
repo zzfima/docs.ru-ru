@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a16e4a4d-6a5b-45db-8635-19570e4572ae
-ms.openlocfilehash: 1099d8ec8e9d516b2269232857c695f9ff04d99c
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: c84229dc1c32217099eb7ed8b90accc04cc66148
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904592"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097412"
 ---
 # <a name="obtaining-a-dbproviderfactory"></a>Получение класса DbProviderFactory
 Процесс получения <xref:System.Data.Common.DbProviderFactory> состоит из передачи сведений о поставщике данных классу <xref:System.Data.Common.DbProviderFactories>. На основе этих сведений метод <xref:System.Data.Common.DbProviderFactories.GetFactory%2A> создает строго типизированную фабрику поставщика. Например, чтобы создать фабрику <xref:System.Data.SqlClient.SqlClientFactory>, можно передать методу `GetFactory` строку с именем поставщика, указанным в формате «System.Data.SqlClient». Другая перегрузка метода `GetFactory` принимает <xref:System.Data.DataRow>. После создания фабрики поставщика можно использовать ее методы для создания дополнительных объектов. К методам фабрики `SqlClientFactory` относятся <xref:System.Data.SqlClient.SqlClientFactory.CreateConnection%2A>, <xref:System.Data.SqlClient.SqlClientFactory.CreateCommand%2A> и <xref:System.Data.SqlClient.SqlClientFactory.CreateDataAdapter%2A>.  
@@ -41,7 +41,7 @@ ms.locfileid: "55904592"
   
 |Порядковый номер столбца|Имя столбца|Пример результата|Описание|  
 |--------------------|-----------------|--------------------|-----------------|  
-|0|**Name**|Поставщик данных SqlClient|Понятное имя поставщика данных.|  
+|0|**name**|Поставщик данных SqlClient|Понятное имя поставщика данных.|  
 |1|**Описание**|Поставщик данных .NET Framework для SqlServer|Понятное описание поставщика данных.|  
 |2|**InvariantName**|System.Data.SqlClient|Имя, которое можно использовать программно, чтобы ссылаться на поставщик данных.|  
 |3|**AssemblyQualifiedName**|System.Data.SqlClient.SqlClientFactory, System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Полное имя фабричного класса, которое содержит достаточно данных для создания экземпляров объектов.|  
@@ -96,7 +96,8 @@ ms.locfileid: "55904592"
  [!code-vb[DataWorks DbProviderFactories.GetFactory#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DbProviderFactories.GetFactory/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>См. также
+
 - [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
 - [Строки подключения](../../../../docs/framework/data/adonet/connection-strings.md)
 - [Использование классов конфигурации](https://docs.microsoft.com/previous-versions/aspnet/ms228063(v=vs.100))
-- [Общие сведения об ADO.NET](ado-net-overview.md)
+- [Общие сведения о ADO.NET](ado-net-overview.md)

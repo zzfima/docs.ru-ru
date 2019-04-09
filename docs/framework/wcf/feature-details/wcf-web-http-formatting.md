@@ -2,12 +2,12 @@
 title: WCF Web HTTP форматирование
 ms.date: 03/30/2017
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
-ms.openlocfilehash: e3db2be1a4f40bc0ae85c3d42faca20cef5308d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 37f0506822ca03aed3755ad42f9bf7ecdc962da7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698743"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094454"
 ---
 # <a name="wcf-web-http-formatting"></a>WCF Web HTTP форматирование
 Модель веб-программирования HTTP WCF позволяет динамически определять лучший формат возвращаемого ответа операции службы. Поддерживается два метода для определения формата: автоматический и явный.  
@@ -164,9 +164,10 @@ public class Service : IService
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.UriTemplate>
 - <xref:System.UriTemplateMatch>
 - [Модель веб-программирования HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
 - [UriTemplate и UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)
-- [Общие сведения о модели веб-программирования HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
-- [Объектная модель веб-программирования HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
+- [Общие сведения о модели программирования WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+- [Объектная модель программирования WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)

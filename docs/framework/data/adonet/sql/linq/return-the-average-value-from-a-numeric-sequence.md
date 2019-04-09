@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ee3b8673-a2e7-4b2d-9b5c-4972ff9e665d
-ms.openlocfilehash: 38b1b3ba2bd2116621de820855bb4e4b2cd12915
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eea1439337b29fee51c422238425491fc2345211
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519175"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095091"
 ---
 # <a name="return-the-average-value-from-a-numeric-sequence"></a>Возврат среднего значения из числовой последовательности
 Оператор <xref:System.Linq.Enumerable.Average%2A> вычисляет среднее последовательности числовых значений.  
@@ -37,7 +37,7 @@ ms.locfileid: "54519175"
 ## <a name="example"></a>Пример  
  В следующем примере используется оператор `Average` для поиска тех продуктов `Products`, цена единицы товара для которых выше среднего значения цены единицы товара для содержащей их категории. Затем выполняется отображение групп результатов.  
   
- Обратите внимание, что в этом примере требуется использовать ключевое слово `var` языка C#, поскольку тип возвращаемых данных является анонимным.  
+ Обратите внимание, что в этом примере требуется использовать ключевое слово `var` языка C#, поскольку тип возвращаемого значения является анонимным.  
   
  [!code-csharp[DLinqQueryExamples#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#3)]
  [!code-vb[DLinqQueryExamples#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#3)]  
@@ -115,4 +115,5 @@ ms.locfileid: "54519175"
  `Gravad lax`  
   
 ## <a name="see-also"></a>См. также
+
 - [Статистические запросы](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)

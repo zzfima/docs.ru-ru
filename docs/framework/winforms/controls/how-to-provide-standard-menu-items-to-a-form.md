@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Обеспечивают стандартные пункты меню в форму
+title: Практическое руководство. Связывание с формой стандартных элементов меню
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - menu items [Windows Forms], standard
 - ToolStrip control [Windows Forms]
 ms.assetid: 75db9126-e70c-4e81-921d-b83c0a4a9f50
-ms.openlocfilehash: 3cf53a6934190cd0e7cd7e18bc57fb5fbfb57a86
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: bb101c57cfb453e0419357741c5cf42dc29221b9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713869"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086719"
 ---
-# <a name="how-to-provide-standard-menu-items-to-a-form"></a>Практическое руководство. Обеспечивают стандартные пункты меню в форму
+# <a name="how-to-provide-standard-menu-items-to-a-form"></a>Практическое руководство. Связывание с формой стандартных элементов меню
 С помощью элемента управления <xref:System.Windows.Forms.MenuStrip> можно создавать стандартные меню для форм.  
   
  Имеется широкая поддержка этой возможности в Visual Studio.  
@@ -37,6 +37,7 @@ ms.locfileid: "57713869"
  Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.StatusStrip>

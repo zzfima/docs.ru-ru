@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XAML [WPF], DynamicResource markup extension
 - DynamicResource markup extensions [WPF]
 ms.assetid: 7324f243-03af-4c2b-b0db-26ac6cdfcbe4
-ms.openlocfilehash: a7b754ce3fb77314539e6391376b188fe9b15859
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d07816718ebee2507f1888cffb70e6f8037bb996
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369777"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091412"
 ---
 # <a name="dynamicresource-markup-extension"></a>Расширение разметки DynamicResource
 Предоставляет значение для любого [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] свойства атрибута, отложенной до был ссылкой на определенный ресурс. Поведение подстановки для этого ресурса является аналогом во время выполнения.  
@@ -60,7 +60,7 @@ ms.locfileid: "57369777"
   
  `DynamicResource` может использоваться в синтаксисе элемента объекта. В этом случае укажите значение параметра <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> свойство является обязательным.  
   
- Излишним может оказаться и использование `DynamicResource` в атрибуте, в котором свойство <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> определено как пара "свойство=значение".  
+ `DynamicResource` Можно также использовать в использовании атрибут verbose, который указывает <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> как свойство = значение пары:  
   
 ```xml  
 <object property="{DynamicResource ResourceKey=key}" .../>  
@@ -73,10 +73,11 @@ ms.locfileid: "57369777"
  `DynamicResource` является расширением разметки. Расширения разметки обычно реализуются, если требуется заменить значения атрибутов на нелитеральные значения или имена обработчиков и если требуется больше, чем простая настройка преобразователей типов на работу с определенными типами или свойствами. Все расширения разметки в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] используют символы "{" и "}" в синтаксисе их атрибутов, который является соглашением, по которому обработчик [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] распознает, что расширение разметки должно обработать атрибут. Дополнительные сведения см. в разделе [Расширения разметки и XAML WPF](markup-extensions-and-wpf-xaml.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Ресурсы XAML](xaml-resources.md)
 - [Ресурсы и код](resources-and-code.md)
 - [Директива x:Key](../../xaml-services/x-key-directive.md)
-- [Общие сведения о языке XAML (WPF)](xaml-overview-wpf.md)
+- [Обзор XAML (WPF)](xaml-overview-wpf.md)
 - [Расширения разметки и XAML WPF](markup-extensions-and-wpf-xaml.md)
 - [Расширение разметки StaticResource](staticresource-markup-extension.md)
 - [Расширения разметки и XAML WPF](markup-extensions-and-wpf-xaml.md)

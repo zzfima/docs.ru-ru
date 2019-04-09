@@ -17,12 +17,12 @@ helpviewer_keywords:
 - examples [Windows Forms], GDI+
 - lines [Windows Forms], dashed
 ms.assetid: 30b25aae-e3eb-4479-bdb8-187cf651fc84
-ms.openlocfilehash: 91f41fb4acf5ec174bd76498a70aed3dcda076f9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 84752773c0b56d9684dc31620d463d4ddccf9dad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705748"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078230"
 ---
 # <a name="pens-lines-and-rectangles-in-gdi"></a>Перья, линии и прямоугольники в GDI+
 Чтобы нарисовать линии с [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] необходимо создать <xref:System.Drawing.Graphics> объекта и <xref:System.Drawing.Pen> объекта. <xref:System.Drawing.Graphics> Объект предоставляет методы, которые фактически выполняют рисование, и <xref:System.Drawing.Pen> объект сохраняет атрибуты, такие как цвет, ширину и стиль.  
@@ -68,9 +68,10 @@ ms.locfileid: "57705748"
  Объект <xref:System.Drawing.Rectangle> содержит методы и свойства для обработки и сбора сведений о прямоугольника. Например <xref:System.Drawing.Rectangle.Inflate%2A> и <xref:System.Drawing.Rectangle.Offset%2A> методы изменять размер и положение прямоугольника. <xref:System.Drawing.Rectangle.IntersectsWith%2A> Метод указывает, является ли прямоугольник пересекается с другим указанным прямоугольником и <xref:System.Drawing.Rectangle.Contains%2A> метод указывает, является ли заданная точка находится внутри прямоугольника.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
 - <xref:System.Drawing.Rectangle?displayProperty=nameWithType>
 - [Практическое руководство. Создание пера](how-to-create-a-pen.md)
-- [Практическое руководство. Нарисовать линию в форме Windows](how-to-draw-a-line-on-a-windows-form.md)
-- [Практическое руководство. Рисование контурной фигуры](how-to-draw-an-outlined-shape.md)
+- [Практическое руководство. Рисований линий в Windows Forms](how-to-draw-a-line-on-a-windows-form.md)
+- [Практическое руководство. Рисование линии или контурной фигуры](how-to-draw-an-outlined-shape.md)

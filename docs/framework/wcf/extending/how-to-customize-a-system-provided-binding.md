@@ -1,18 +1,18 @@
 ---
-title: Как выполнить Настройка привязки, предоставляемой системой
+title: Практическое руководство. Изменение привязки, предоставляемой системой
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f8b97862-e8bb-470d-8b96-07733c21fe26
-ms.openlocfilehash: 7447830de81471c6d9e5b7812ec7a0ad1dbd2ccf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: cee570bdc9d7bf6debfc4ec226e91f3fd79a01dd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704710"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095156"
 ---
-# <a name="how-to-customize-a-system-provided-binding"></a>Как выполнить Настройка привязки, предоставляемой системой
+# <a name="how-to-customize-a-system-provided-binding"></a>Практическое руководство. Изменение привязки, предоставляемой системой
 Windows Communication Foundation (WCF) включает в себя несколько предоставляемых системой привязок, которые дают возможность настроить некоторые свойства базовых элементов привязки, но не все свойства. В данном разделе показано, как задать свойства в элементах привязки, чтобы создать пользовательскую привязку.  
   
  Дополнительные сведения о том, как напрямую создать и настроить элементы привязки без использования предоставляемых системой привязок см. в разделе [пользовательские привязки](../../../../docs/framework/wcf/extending/custom-bindings.md).  
@@ -51,6 +51,7 @@ Windows Communication Foundation (WCF) включает в себя нескол
      [!code-vb[C_HowTo_ChangeStandardBinding#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_changestandardbinding/vb/program.vb#3)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
 - <xref:System.ServiceModel.BasicHttpBinding>
 - <xref:System.ServiceModel.Channels.CustomBinding>

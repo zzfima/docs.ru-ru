@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 46072718a7dafc0a00294757d5ccce6242a11e23
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 734857428c205b6d806a4279213afb1193f914c8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57468368"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086173"
 ---
 # <a name="isymunmanagedwritersetmethodsourcerange-method"></a>Метод ISymUnmanagedWriter::SetMethodSourceRange
 Указывает истинные начало и конец метода в исходном файле. Используйте этот метод для задания длины метода независимо от точек следования, имеющихся в методе.  
@@ -65,4 +65,5 @@ HRESULT SetMethodSourceRange(
  **Заголовок.** CorSym.idl CorSym.h  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DataGrid [WPF], validation
 - validation [WPF], DataGrid
 ms.assetid: ec6078a8-1e42-4648-b414-f4348e81bda1
-ms.openlocfilehash: e3be25fecc58ba41dbb5b2e904eddcb9c2b3c98a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: aead8cbd500262a4cba535fd023dd9701d50257a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371090"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086812"
 ---
 # <a name="how-to-implement-validation-with-the-datagrid-control"></a>Практическое руководство. Реализация проверки с помощью элемента управления DataGrid
 <xref:System.Windows.Controls.DataGrid> Элемент управления позволяет выполнять проверку на уровне строк и ячеек. Когда пользователь обновляет значение проверки на уровне ячейки проверяются отдельные свойства объекта привязки данных. Когда пользователь вносит изменения в строку проверки на уровне строк проверяются целые объекты данных. Также можно реализовать визуальную реакцию на ошибки проверки или использовать визуальную обратную связь по умолчанию, <xref:System.Windows.Controls.DataGrid> предоставляет элемент управления.  
@@ -91,6 +91,7 @@ ms.locfileid: "57371090"
  [!code-xaml[DataGrid_Validation#FullXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml#fullxaml)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Controls.DataGrid>
 - [DataGrid](datagrid.md)
 - [Привязка данных](../data/data-binding-wpf.md)

@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Настройка поведения (службы данных WCF) привязки данных
+title: Практическое руководство. Настройка поведения (службы данных WCF) привязки данных
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - WCF Data Services, data binding
 ms.assetid: 40476b89-8941-4771-8d21-2fe430c85a9d
-ms.openlocfilehash: 159326886c69a308891dbd4318aa1ac81eab9448
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e00f46dfd9b2d1446f2c2a1ba1fdd2e5b0405c1b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621751"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111013"
 ---
-# <a name="how-to-customize-data-binding-behaviors-wcf-data-services"></a>Как выполнить Настройка поведения (службы данных WCF) привязки данных
+# <a name="how-to-customize-data-binding-behaviors-wcf-data-services"></a>Практическое руководство. Настройка поведения (службы данных WCF) привязки данных
 Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] позволяют добавлять специализированную логику, которая вызывается коллекцией <xref:System.Data.Services.Client.DataServiceCollection%601> при добавлении или удалении объекта из коллекции привязок или при изменении значения свойства. Специализированная логика представляется методами, называемое <xref:System.Func%602> делегатов, возвращающих значение `false` при поведение по умолчанию по-прежнему будет выполняться при завершении пользовательского метода и `true` при дальнейшей обработки из событие должно быть остановлено.  
   
  Примеры в этом разделе добавляют специализированные методы для обоих параметров `entityChanged` и `entityCollectionChanged` коллекции <xref:System.Data.Services.Client.DataServiceCollection%601>. Примеры в этом разделе используют образец службы данных Northwind и автоматически сформированные клиентские классы службы данных. Эта служба и клиентские классы данных создаются при завершении [краткое руководство по службам данных WCF](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
@@ -33,4 +33,5 @@ ms.locfileid: "54621751"
  [!code-xaml[Astoria Northwind Client#WpfDataBindingCustomXaml](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderscustom.xaml#wpfdatabindingcustomxaml)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Библиотека клиентов служб данных WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

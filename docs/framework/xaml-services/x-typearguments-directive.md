@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TypeArguments attribute in XAML [XAML Services]
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
-ms.openlocfilehash: 0d3edf6c7a16fc206832d8d6deff9d4ac2f69ba3
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 1d1b10b4da1263843bdce5447f0716569c7700e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58043269"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085809"
 ---
 # <a name="xtypearguments-directive"></a>Директива x:TypeArguments
 Передает аргументы типов ограничений универсального в конструктор универсального типа.  
@@ -82,6 +82,7 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
  В WPF и при нацеливании на [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], можно использовать возможности XAML 2009 вместе с `x:TypeArguments` , но только для свободного XAML (XAML, который не является компилированной разметкой). Скомпилированный с разметкой XAML и форма BAML кода XAML в настоящее время не поддерживают ключевые слова и компоненты XAML 2009. Если вы необходимости компиляции разметки XAML, нужно следовать ограничениям, указанным в разделе «XAML 2006 и универсального XAML способы использования WPF».  
   
 ## <a name="see-also"></a>См. также
+
 - [Директива x:Class](x-class-directive.md)
 - [Расширение разметки x:Type](x-type-markup-extension.md)
 - [Встроенные типы для общих примитивов языка XAML](built-in-types-for-common-xaml-language-primitives.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - colors [Windows Forms], transforming with color matrices
 - colors [Windows Forms], shearing
 ms.assetid: 0a424171-5b8b-45c4-afef-e9720a6c3e22
-ms.openlocfilehash: bb5f9043ea5bdd25e984d73d3640c80f599714e6
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: bf645cf88c4905cd5cf47c2a6c7af088fa428c8a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58826396"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076254"
 ---
 # <a name="how-to-shear-colors"></a>Практическое руководство. Сдвиг цветов
 Пропорциональное изменение увеличивает или уменьшает компонент цвета, обратно пропорционально значению другого компонента цвета. Например рассмотрим преобразования, где красный компонент увеличивается на половину значения синего компонента. При таком преобразовании цвет (0,2, 0,5, 1) станет (0,7, 0,5, 1). Новое значение красного компонента — 0,2 + (1/2)(1) = 0,7.  
@@ -38,10 +38,11 @@ ms.locfileid: "58826396"
  [!code-vb[System.Drawing.Misc3#9](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Misc3/VB/Form1.vb#9)]  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Предыдущий пример предназначен для работы с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs> `e`, который является параметром обработчика события <xref:System.Windows.Forms.Control.Paint>. Замените `ColorBars.bmp` в вашей системе путь и имя образа.  
+ Предыдущий пример предназначен для работы с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs>`e`, который является параметром <xref:System.Windows.Forms.Control.Paint> обработчик событий. Замените `ColorBars.bmp` в вашей системе путь и имя образа.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Drawing.Imaging.ColorMatrix>
 - <xref:System.Drawing.Imaging.ImageAttributes>
 - [Объекты Graphics и Drawing в Windows Forms](graphics-and-drawing-in-windows-forms.md)
-- [перекрашивание изображений](recoloring-images.md)
+- [Перекрашивание изображений](recoloring-images.md)

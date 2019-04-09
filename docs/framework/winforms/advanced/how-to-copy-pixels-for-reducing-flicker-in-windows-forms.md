@@ -13,12 +13,12 @@ helpviewer_keywords:
 - flicker
 - bit-block transfer
 ms.assetid: 33b76910-13a3-4521-be98-5c097341ae3b
-ms.openlocfilehash: d03a9b79dc2c0ec61bbafe2ff09b5aba7fffc57b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e3d1c2b681e98dc7c45467683924dd4022eb377e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719251"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094038"
 ---
 # <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>Практическое руководство. Копирование пикселов для уменьшения эффекта дрожания изображения в Windows Forms
 При анимации простой график, могут появиться мерцание или другие нежелательные визуальные эффекты. Чтобы ограничить эту проблему рекомендуется использовать процесс «bitblt» на рисунок. BitBlt является «битов перемещение» данных о цвете из исходного прямоугольника из пикселей в конечный прямоугольник пикселей.  
@@ -63,6 +63,7 @@ private void Form1_Paint(System.Object sender,
  Приведенный выше код выполняется в форме <xref:System.Windows.Forms.Control.Paint> обработчик событий, чтобы изображение остается при перерисовке формы. Таким образом, не следует вызывать методы, связанные с графики в <xref:System.Windows.Forms.Form.Load> обработчик событий, так как не будет перерисовываться будет Если скрыта другой формой или изменении размера формы.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Drawing.CopyPixelOperation>
 - <xref:System.Drawing.Graphics.FillRectangle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Control.OnPaint%2A?displayProperty=nameWithType>

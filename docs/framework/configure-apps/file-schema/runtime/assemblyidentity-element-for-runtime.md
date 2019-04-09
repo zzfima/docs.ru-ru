@@ -1,5 +1,5 @@
 ---
-title: Элемент <assemblyIdentity> для <runtime>
+title: <assemblyIdentity> Элемент для <runtime>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly/assemblyIdentity
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - container tags, <assemblyIdentity> element
 - assemblyIdentity element
 ms.assetid: cea4d187-6398-4da4-af09-c1abc6a349c1
-ms.openlocfilehash: 6f05f1f395156e149e73c1081e486b5285c2b599
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: d5766b76f18dce441cb260887a753dcf64642a6f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55277502"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098706"
 ---
 # <a name="assemblyidentity-element-for-runtime"></a>\<assemblyIdentity > элемент для \<среды выполнения >
 Содержит идентификационные сведения о сборке.  
@@ -48,7 +48,7 @@ culture="assembly culture"/>
   
 ## <a name="processorarchitecture-attribute"></a>processorArchitecture атрибут  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |`amd64`|AMD x86 64 только для архитектуры.|  
 |`ia64`|Только архитектуру Intel Itanium.|  
@@ -60,7 +60,7 @@ culture="assembly culture"/>
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |`assemblyBinding`|Содержит сведения о перенаправлении версии сборки и о расположениях сборок.|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
@@ -120,6 +120,7 @@ culture="assembly culture"/>
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Перенаправление версий сборки](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

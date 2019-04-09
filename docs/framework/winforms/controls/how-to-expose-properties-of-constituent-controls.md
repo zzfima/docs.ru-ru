@@ -10,12 +10,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], exposing properties
 - constituent controls
 ms.assetid: 5c1ec98b-aa48-4823-986e-4712551cfdf1
-ms.openlocfilehash: 75ee93b7a601b4fc1480dca708d78740664c9a85
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 750caa1f45f870e63a5b7ccbe0c309e6fb0b3178
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704540"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106357"
 ---
 # <a name="how-to-expose-properties-of-constituent-controls"></a>Практическое руководство. Обеспечение доступа к свойствам составных элементов управления
 Элементы управления, составляющих составной элемент управления, называются *составные элементы управления*. Эти элементы управления обычно объявляются частных и таким образом, не может использоваться разработчиком. Если вы хотите сделать доступными свойства этих элементов управления для последующих пользователей, их необходимо предоставить пользователю. Свойство составного элемента управления предоставляется путем создания свойства в пользовательский элемент управления и использования `get` и `set` методы доступа этого свойства для внесения изменений в закрытое свойство составляющего элемента управления.  
@@ -58,6 +58,7 @@ public Color ButtonColor
 3.  В `set` раздел свойства, написать код, который передает значение свойства, предоставленному свойству составляющего элемента управления.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.UserControl>
 - [Свойства элементов управления Windows Forms](properties-in-windows-forms-controls.md)
-- [Разновидности пользовательских элементов управления](varieties-of-custom-controls.md)
+- [Создание собственных элементов управления](varieties-of-custom-controls.md)

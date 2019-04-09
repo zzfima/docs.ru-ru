@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 0c034608-a1ac-4007-8287-b1382eaa8bf2
-ms.openlocfilehash: 8ca003257f9e16075262a715aec4941d9aa4073b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 90fb844931c3af54367d0e7c14a766636cdcc71a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564637"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096053"
 ---
 # <a name="understanding-protection-level"></a>Основные сведения об уровне защиты
 Свойство `ProtectionLevel` обнаруживается во многих классах, например в классах <xref:System.ServiceModel.ServiceContractAttribute> и <xref:System.ServiceModel.OperationContractAttribute>. Это свойство определяет, как защищается часть сообщения (или все сообщение). В этом разделе объясняется, компонент Windows Communication Foundation (WCF) и принципах ее работы.  
@@ -24,7 +24,7 @@ ms.locfileid: "54564637"
 >  Уровни защиты можно задавать только в коде, а не в конфигурации.  
   
 ## <a name="basics"></a>Основные сведения  
- Ниже приведены основные сведения о возможности уровня защиты.  
+ Ниже приведены основные сведения о функции уровня защиты.  
   
 -   Для любой части сообщения существуют три базовых уровня защиты. Для свойства (где бы оно ни появлялось) задается одно из значений перечисления <xref:System.Net.Security.ProtectionLevel>. Эти значения указаны ниже в порядке возрастания уровня защиты.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "54564637"
  Чтобы запрограммировать `ProtectionLevel` в любом месте иерархии, задайте для этого свойства соответствующее значение при применении атрибута. Примеры см. в разделах [Практическое руководство. Установка свойства ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md).  
   
 > [!NOTE]
->  Чтобы задать данное свойство в контрактах сбоев и сообщений, необходимо понимать работу этих возможностей. Дополнительные сведения см. в разделе [Как Установка свойства ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md) и [использование контрактов сообщений](../../../docs/framework/wcf/feature-details/using-message-contracts.md).  
+>  Чтобы задать данное свойство в контрактах сбоев и сообщений, необходимо понимать работу этих функций. Дополнительные сведения см. в разделе [Как Установка свойства ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md) и [использование контрактов сообщений](../../../docs/framework/wcf/feature-details/using-message-contracts.md).  
   
 ## <a name="ws-addressing-dependency"></a>Зависимость от WS-Addressing  
  В большинстве случаев использование [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для создания клиента обеспечивает идентичность контрактов клиента и службы. Однако одинаковые на первый взгляд контракты могут приводить к вызову клиентом исключения. Это происходит всякий раз, когда привязка не поддерживает спецификацию WS-Addressing и в контракте определено несколько уровней защиты. Например, это происходит при использовании класса <xref:System.ServiceModel.BasicHttpBinding>, не поддерживающего данную спецификацию, или при создании пользовательской привязки, которая не поддерживает WS-Addressing. Чтобы в одном контракте разрешить разные уровни защиты, функция `ProtectionLevel` полагается на спецификацию WS-Addressing. Если привязка не поддерживает спецификацию WS-Addressing, для всех уровней задается один и тот же уровень защиты. В качестве фактического уровня защиты для всех областей в контракте задается уровень самой мощной защиты, используемый в контракте.  
@@ -95,6 +95,7 @@ ms.locfileid: "54564637"
  Когда клиент вызывает метод `Price`, при получении ответа от службы он вызывает исключение. Причина этого в том, что клиент не задает `ProtectionLevel` в `ServiceContractAttribute` и, следовательно, использует значение по умолчанию (<xref:System.Net.Security.ProtectionLevel.EncryptAndSign>) для всех методов, включая метод `Price`. Однако служба возвращает значение, используя уровень <xref:System.Net.Security.ProtectionLevel.Sign>, поскольку контракт службы определяет единственный метод, в качестве уровня защиты которого задано значение <xref:System.Net.Security.ProtectionLevel.Sign>. В этом случае при проверке ответа от службы клиент вызовет ошибку.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.ServiceContractAttribute>
 - <xref:System.ServiceModel.OperationContractAttribute>
 - <xref:System.ServiceModel.FaultContractAttribute>
@@ -104,5 +105,5 @@ ms.locfileid: "54564637"
 - <xref:System.Net.Security.ProtectionLevel>
 - [Защита служб](../../../docs/framework/wcf/securing-services.md)
 - [Практическое руководство. Установка свойства ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
-- [Указание и обработка сбоев в контрактах и службах](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [Задание и обработка сбоев в контрактах и службах](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
 - [Использование контрактов сообщений](../../../docs/framework/wcf/feature-details/using-message-contracts.md)

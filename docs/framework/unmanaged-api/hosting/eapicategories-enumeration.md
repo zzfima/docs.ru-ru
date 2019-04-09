@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 50aa116fc1f5377254a8a6a128d0240c57cb52b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3debd3f13d78841188dd8c900f51c0110e1d4c67
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597571"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086459"
 ---
 # <a name="eapicategories-enumeration"></a>Перечисление EApiCategories
 Описывает категории возможностей, которые узел может блокировать при выполнении в частично доверенным кодом.  
@@ -46,7 +46,7 @@ typedef enum {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |`eAll`|Указывает, что все управляемые классы и члены, которые покрыты другие `EApiCategories` поля будет блокироваться в частично доверенным кодом.|  
 |`eExternalProcessMgmt`|Указывает, что управляемые классы и члены, позволяющие создания, обработки и деструкция внешних процессов заблокирован для выполнения в частично доверенным кодом.|  
@@ -75,5 +75,6 @@ typedef enum {
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс ICLRHostProtectionManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-interface.md)
 - [Размещение перечислений](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

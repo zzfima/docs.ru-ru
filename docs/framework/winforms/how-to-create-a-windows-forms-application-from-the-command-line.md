@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5dc5c3425672dd71359edf61c5f8625d96ad09ce
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 34c1843873e2f6a9a4ad78ed860a0115e0f02e7b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716950"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102431"
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Практическое руководство. Создание приложения Windows Forms из командной строки
 В процедурах ниже описаны основные шаги, которые необходимо выполнить для создания и запуска приложения Windows Forms из командной строки. Visual Studio предлагает расширенную поддержку этих процедур.  Также см. в разделе [Пошаговое руководство: Размещение Windows Forms элемента управления в WPF](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).  
@@ -65,7 +65,7 @@ ms.locfileid: "57716950"
   
     -   Если вы используете Visual Basic, введите: `vbc form1.vb`  
   
-3.  В командной строке введите следующую команду: `Form1.exe`  
+3.  В командной строке введите следующее: `Form1.exe`  
   
 ## <a name="adding-a-control-and-handling-an-event"></a>Добавление элемента управления и обработка события  
  В предыдущей процедуре продемонстрировано, как создать простейшую форму Windows Forms, скомпилировать и запустить ее. В следующей процедуре будет показано, как создать и добавить в форму элемент управления и как обрабатывать событие для него. Дополнительные сведения об элементах управления, можно добавить в формы Windows Forms, см. в разделе [элементов управления Windows Forms](./controls/index.md).  
@@ -114,6 +114,7 @@ ms.locfileid: "57716950"
 -   Для компиляции кода следуйте инструкциям из предыдущей процедуры, описывающим, как скомпилировать и запустить приложение.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.Form>
 - <xref:System.Windows.Forms.Control>
 - [Изменение внешнего вида Windows Forms](changing-the-appearance-of-windows-forms.md)

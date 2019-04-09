@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd1a622faa095836a3d5c22c7a18084482074c2c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 392254efcd099aca60e58b3cc0bc61ca85aa2c66
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653220"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099954"
 ---
 # <a name="variablelocationtype-enumeration"></a>Перечисление VariableLocationType
 Указывает тип собственного расположение переменной.  
@@ -39,7 +39,7 @@ typedef enum VariableLocationType
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |`VLT_REGISTER`|Переменная находится в регистре.|  
 |`VLT_REGISTER_RELATIVE`|Переменная находится в расположении памяти зависящий от регистра.|  
@@ -58,4 +58,5 @@ typedef enum VariableLocationType
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Перечисления отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

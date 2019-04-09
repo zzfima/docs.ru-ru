@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Установка свойства ProtectionLevel
+title: Практическое руководство. Установка свойства ProtectionLevel
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 3d4e8f80-0f9e-4a26-9899-beb6584e78df
-ms.openlocfilehash: 13e07d06ed795bc50822d95cdd1ab44c6c336d2c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ce9fc8549218db5a1446026421f1a7ba1e5a23aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586860"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089852"
 ---
-# <a name="how-to-set-the-protectionlevel-property"></a>Как выполнить Установка свойства ProtectionLevel
+# <a name="how-to-set-the-protectionlevel-property"></a>Практическое руководство. Установка свойства ProtectionLevel
 Уровень защиты можно задать, применив соответствующий атрибут и задав свойство. Защиту на уровне службы можно задать таким образом, чтобы она влияла на все части каждого сообщения, можно также задать защиту на более детализированных уровнях - от методов до частей сообщения. Дополнительные сведения о `ProtectionLevel` свойство, см. в разделе [уровень защиты понимание](../../../docs/framework/wcf/understanding-protection-level.md).  
   
 > [!NOTE]
@@ -89,6 +89,7 @@ ms.locfileid: "54586860"
  [!code-vb[C_ProtectionLevel#0](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#0)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.ServiceContractAttribute>
 - <xref:System.ServiceModel.OperationContractAttribute>
 - <xref:System.ServiceModel.FaultContractAttribute>

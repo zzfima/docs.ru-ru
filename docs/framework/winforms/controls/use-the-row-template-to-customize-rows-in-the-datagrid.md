@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Применение шаблонов строк для настройки отображения строк в элементе управления DataGridView Windows Forms
+title: Практическое руководство. Применение шаблонов строк для настройки отображения строк элемента управления DataGridView в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - data grids [Windows Forms], customizing rows
 - DataGridView control [Windows Forms], customizing rows
 ms.assetid: 6db61607-7e57-4a84-8d63-9d6a7ed7f9ff
-ms.openlocfilehash: 3cd1e9af32cb47f5d81abfc92423ea30e2e599cf
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: cb3a826262a49a8653e3a344bd126d434f2522dd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707577"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073064"
 ---
-# <a name="how-to-use-the-row-template-to-customize-rows-in-the-windows-forms-datagridview-control"></a>Практическое руководство. Применение шаблонов строк для настройки отображения строк в элементе управления DataGridView Windows Forms
+# <a name="how-to-use-the-row-template-to-customize-rows-in-the-windows-forms-datagridview-control"></a>Практическое руководство. Применение шаблонов строк для настройки отображения строк элемента управления DataGridView в Windows Forms
 <xref:System.Windows.Forms.DataGridView> Элемент управления использует шаблон строки в качестве основы для всех строк, которые он добавляет в элемент управления путем привязки данных или при вызове <xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A?displayProperty=nameWithType> метода без указания существующей строки для использования.  
   
  Шаблон строк обеспечивает больший контроль над внешний вид и поведение строк, чем <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A> предоставляет свойство. С помощью шаблонов строк, можно задать любой <xref:System.Windows.Forms.DataGridViewRow> свойств, включая <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A>.  
@@ -42,6 +42,7 @@ ms.locfileid: "57707577"
 -   ссылки на сборки <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType> и <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>
 - <xref:System.Windows.Forms.DataGridViewRow>

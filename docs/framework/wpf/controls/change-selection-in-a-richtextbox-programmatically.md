@@ -8,12 +8,12 @@ helpviewer_keywords:
 - changing selections in a text box [WPF]
 - changing selections in a RichTextBox [WPF]
 ms.assetid: f1213205-1ad7-4cd2-b115-460173cc5aa3
-ms.openlocfilehash: a85dc4baa8a59d25f577996c541a422bbe2af24e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b8acfe7cde1fe5dae96cd6324f75c5b146be9ec9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367080"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096230"
 ---
 # <a name="change-selection-in-a-richtextbox-programmatically"></a>Изменение выделения в RichTextBox программными средствами
 В этом примере показано, как программно изменить текущее выделение в <xref:System.Windows.Controls.RichTextBox>. Этот параметр аналогичен так, как если бы пользователь выделил содержимое с помощью пользовательского интерфейса.  
@@ -30,5 +30,6 @@ ms.locfileid: "57367080"
  [!code-vb[RichTextBoxMiscSnippets_snip#ChangeSelectionProgrammaticalyCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/VisualBasic/ChangeSelectionProgrammaticaly.xaml.vb#changeselectionprogrammaticalycodeexamplewholepage)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения о RichTextBox](richtextbox-overview.md)
 - [Общие сведения о TextBox](textbox-overview.md)

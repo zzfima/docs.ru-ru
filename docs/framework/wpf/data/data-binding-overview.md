@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: 318473c146f5822259a3131192ce33b9d28a5461
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
-ms.translationtype: MT
+ms.openlocfilehash: a11118f0fad98d7c719951b97d7ad2b431e7af6d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055356"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081272"
 ---
 # <a name="data-binding-overview"></a>Общие сведения о привязке данных
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Привязка данных обеспечивает простой и последовательный способ представления и взаимодействия с данными приложениях. Можно связывать элементы с данными из различных источников данных в виде объектов [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] и [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. <xref:System.Windows.Controls.ContentControl>например <xref:System.Windows.Controls.Button> и <xref:System.Windows.Controls.ItemsControl>, например <xref:System.Windows.Controls.ListBox> и <xref:System.Windows.Controls.ListView> у встроенной возможностью включения гибких стилей для отдельных элементов данных и коллекций элементов данных. Представления сортировки, фильтрации и группировки могут быть организованы поверх данных.  
@@ -23,8 +23,7 @@ ms.locfileid: "59055356"
  Функции привязки данных в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] имеют несколько преимуществ перед традиционными моделями, включая широкий диапазон свойств, которые внутренне поддерживают привязку данных, гибкое представление данных [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] и четкое разделение бизнес-логики и [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
   
  В этом разделе сначала будут рассмотрены основные для понятия [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] привязки данных, а затем — использование <xref:System.Windows.Data.Binding> класс и других возможностей привязки данных.  
-  
-  
+
 <a name="what_is_data_binding"></a>   
 ## <a name="what-is-data-binding"></a>Понятие привязки данных  
  Привязка данных — это процесс установки соединения между [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] приложения и бизнес-логикой. Если для привязки заданы правильные настройки, а изменения значений данных сопровождаются правильными уведомлениями, привязанные к данным элементы автоматически отражают изменения. Привязка данных может также означать, что, если внешнее представление данных в элементе изменяется, то базовые данные могут автоматически обновляться для отражения изменений. Например, если пользователь изменяет значение в <xref:System.Windows.Controls.TextBox> элемент, базовое значение данных автоматически обновляется в соответствии с изменениями.  
@@ -232,8 +231,7 @@ ms.locfileid: "59055356"
 <a name="collection_views"></a>   
 ### <a name="collection-views"></a>Представления коллекций  
  Один раз в <xref:System.Windows.Controls.ItemsControl> привязан к коллекции данных, может потребоваться сортировка, фильтрация и группировать данные. Чтобы сделать это, используйте представления коллекций, которые являются классами, реализующими <xref:System.ComponentModel.ICollectionView> интерфейс.  
-  
-  
+
 #### <a name="what-are-collection-views"></a>Понятие о представлениях коллекций  
  Представление коллекции — это слой, расположенный в верхней части связанной исходной коллекции, с помощью которого можно перемещаться по исходной коллекции и просматривать ее содержимое на основе запросов сортировки, фильтрации и группировки, не изменяя саму коллекцию. В представлении коллекции также поддерживается указатель на текущий элемент коллекции. Если в исходной коллекции реализован <xref:System.Collections.Specialized.INotifyCollectionChanged> интерфейс, изменения, инициированные <xref:System.Collections.Specialized.INotifyCollectionChanged.CollectionChanged> событие, передаются представлениям.  
   
@@ -430,6 +428,7 @@ ms.locfileid: "59055356"
  Можно задать присоединенное свойство <xref:System.Diagnostics.PresentationTraceSources.TraceLevel%2A?displayProperty=nameWithType> связанные с привязкой объекта для получения сведений о состоянии конкретной привязки.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Controls.DataErrorValidationRule>
 - [Новые возможности WPF версии 4.5](../getting-started/whats-new.md)
 - [Привязка к результатам запроса LINQ](how-to-bind-to-the-results-of-a-linq-query.md)

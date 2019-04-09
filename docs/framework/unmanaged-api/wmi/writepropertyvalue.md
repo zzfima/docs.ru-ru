@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5a2588023309867694f344041f62be53cab9c37
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a98103367f497b18f9b8fbd61a37abf9816b8356
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590124"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107943"
 ---
 # <a name="writepropertyvalue-function"></a>Функция WritePropertyValue
 Записывает указанное число байт в свойство, заданное маркером свойства.
@@ -61,7 +61,7 @@ HRESULT WritePropertyValue (
 
 Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файл заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание:  |
+|Константа  |Значение  |Описание  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Параметр не является допустимым. |
 |`WBEM_E_TYPE_MISMATCH` | 0x80041005 | Несоответствие типов. |
@@ -83,4 +83,5 @@ HRESULT WritePropertyValue (
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>См. также
-- [WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)
+
+- [WMI и счетчики производительности (справочник по неуправляемым API)](index.md)

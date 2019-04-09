@@ -2,12 +2,12 @@
 title: Пример слабо типизированных расширений
 ms.date: 03/30/2017
 ms.assetid: 56ce265b-8163-4b85-98e7-7692a12c4357
-ms.openlocfilehash: 19d39e4a70022304262c5872636d3ea03a3b861b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: f22d5b2c1c7680b750d8bd26da10588e0ca9f585
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668487"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086797"
 ---
 # <a name="loosely-typed-extensions-sample"></a>Пример слабо типизированных расширений
 Объектная модель синдикации обеспечивает широкую поддержку работы с данными расширения - информацией, присутствующей в XML-представлении канала синдикации, но не предоставляемой в явном виде такими классами, как <xref:System.ServiceModel.Syndication.SyndicationFeed> и <xref:System.ServiceModel.Syndication.SyndicationItem>. Этот пример иллюстрирует основные приемы работы с данными расширения.  
@@ -56,13 +56,13 @@ w.w3.org/2001/XMLSchema" xmlns="">
   
 -   Атрибут `myAttribute` элемента `<feed>`.  
   
--   Элемент `<simpleString>`.  
+-   `<simpleString>` элемент.  
   
--   Элемент `<DataContractExtension>`.  
+-   `<DataContractExtension>` элемент.  
   
--   Элемент `<XmlSerializerExtension>`.  
+-   `<XmlSerializerExtension>` элемент.  
   
--   Элемент `<xElementExtension>`.  
+-   `<xElementExtension>` элемент.  
   
 ## <a name="writing-extension-data"></a>Запись данных расширений  
  Расширения атрибутов создаются путем добавления записей в коллекцию <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A>, как показано в следующем образце кода.  
@@ -156,5 +156,6 @@ foreach (SyndicationElementExtension extension in feed2.ElementExtensions.Where<
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Syndication\LooselyTypedExtensions`  
   
 ## <a name="see-also"></a>См. также
+
 - [Строго типизированные расширения](../../../../docs/framework/wcf/samples/strongly-typed-extensions-sample.md)
 - [Синдикация WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)

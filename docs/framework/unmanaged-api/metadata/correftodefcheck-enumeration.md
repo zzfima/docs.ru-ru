@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a54b20ecf34ecf1824420fcbb3d45fba64017b76
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 82abeb0ce3db075d794787bb1fcd5bc18321bef2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657198"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093895"
 ---
 # <a name="correftodefcheck-enumeration"></a>Перечисление CorRefToDefCheck
 Задает флаги для элемента управления, на который ссылаются элементы, преобразуемые в их определения для оптимизации кода.  
@@ -40,7 +40,7 @@ typedef enum CorRefToDefCheck {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |`MDRefToDefDefault`|Указывает, что тип ссылки и ссылки на член должно быть преобразовано в определения. Это значение по умолчанию (`MDTypeRefToDef` &#124; `MDMemberRefToDef`).|  
 |`MDRefToDefAll`|Указывает, что все элементы, на которые имеются ссылки, должны преобразовываться к определениям.|  
@@ -56,4 +56,5 @@ typedef enum CorRefToDefCheck {
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

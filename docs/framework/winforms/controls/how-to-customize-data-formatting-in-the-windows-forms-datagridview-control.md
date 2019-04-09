@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Настройка форматирования данных в элементе управления DataGridView Windows Forms
+title: Практическое руководство. Настройка форматирования данных элемента управления DataGridView в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], substituting cell values for display
 - data grids [Windows Forms], formatting data
 ms.assetid: a6e72c70-ce18-425f-828d-d57be6f96ab6
-ms.openlocfilehash: 4a7e74afa985d36281994078bd0ea464f084cfa9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 5ce43054130db88792acab852b1e886285ff34d7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714909"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116055"
 ---
-# <a name="how-to-customize-data-formatting-in-the-windows-forms-datagridview-control"></a>Практическое руководство. Настройка форматирования данных в элементе управления DataGridView Windows Forms
+# <a name="how-to-customize-data-formatting-in-the-windows-forms-datagridview-control"></a>Практическое руководство. Настройка форматирования данных элемента управления DataGridView в Windows Forms
 В следующем примере кода показано, как реализовать обработчик для события <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType>, которое изменяет способ отображения ячеек в зависимости от их столбцов и значений.  
   
  Ячейки в столбце `Balance`, которые содержат отрицательные числа, имеют красный фон. Также можно отформатировать эти ячейки в денежном формате для отображения отрицательных значений в круглых скобках. Дополнительные сведения см. в разделе [Как Форматирование данных в Windows Forms элемента управления DataGridView](how-to-format-data-in-the-windows-forms-datagridview-control.md).  
@@ -37,19 +37,20 @@ ms.locfileid: "57714909"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
   
--   Ссылки на сборки System, System.Drawing и System.Windows.Forms.  
+-   ссылки на сборки System, System.Drawing и System.Windows.Forms.  
   
--   Изображения <xref:System.Drawing.Bitmap> с именами `highPri.bmp`, `mediumPri.bmp` и `lowPri.bmp` находятся в том же каталоге, что и исполняемый файл.  
+-   <xref:System.Drawing.Bitmap> изображения с именем `highPri.bmp`, `mediumPri.bmp`, и `lowPri.bmp` находящихся в том же каталоге, что и исполняемый файл.  
   
  Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewBand.DefaultCellStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>
 - <xref:System.Drawing.Bitmap>
 - [Отображение данных с помощью элемента управления DataGridView в Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Практическое руководство. Форматирование данных в Windows Forms элемента управления DataGridView](how-to-format-data-in-the-windows-forms-datagridview-control.md)
+- [Практическое руководство. Форматирование данных элемента управления DataGridView в Windows Forms](how-to-format-data-in-the-windows-forms-datagridview-control.md)
 - [Стили ячеек элемента управления DataGridView в Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)
 - [Форматирование данных в элементе управления DataGridView в Windows Forms](data-formatting-in-the-windows-forms-datagridview-control.md)

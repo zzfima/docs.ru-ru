@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Создание, инициализация и настройка переключателей трассировки
+title: Практическое руководство. Создание, инициализация и настройка переключателей трассировки
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c42d7d13c630a0aef8a6ca65bd391fb232b48bfb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: d7b8551c8b82ca880d989a1b58411f9555a9feb4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54739619"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079140"
 ---
-# <a name="how-to-create-initialize-and-configure-trace-switches"></a>Как выполнить Создание, инициализация и настройка переключателей трассировки
+# <a name="how-to-create-initialize-and-configure-trace-switches"></a>Практическое руководство. Создание, инициализация и настройка переключателей трассировки
 Переключатели трассировки позволяют включать, отключать и фильтровать выходные данные трассировки.  
   
 <a name="create"></a>   
@@ -126,7 +126,8 @@ ms.locfileid: "54739619"
     ```  
   
 ## <a name="see-also"></a>См. также
-- [Трассировка и инструментирование приложений](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+
+- [Трассировка и оборудование приложений](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
 - [Практическое руководство. Добавление операторов трассировки в код приложения](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 - [Переключатели трассировки](../../../docs/framework/debug-trace-profile/trace-switches.md)
 - [Схема параметров трассировки и отладки](../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

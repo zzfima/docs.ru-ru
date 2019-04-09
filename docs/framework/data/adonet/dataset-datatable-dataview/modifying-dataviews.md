@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 697a3991-b660-4a5a-8a54-1a2304ff158e
-ms.openlocfilehash: f892a371ed23a810f71ef5a51393de4145478c10
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6e340b9b72735598650d2eefa6e19ab40fffc2e4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573248"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111557"
 ---
 # <a name="modifying-dataviews"></a>Изменение объектов DataView
 Объект <xref:System.Data.DataView> можно использовать, чтобы добавлять, удалять или изменять строки данных в базовой таблице. Возможность использования **DataView** для изменения данных в базовой таблице задается с помощью одного из трех логических свойств объекта **DataView**. А именно: <xref:System.Data.DataView.AllowNew%2A>, <xref:System.Data.DataView.AllowEdit%2A> и <xref:System.Data.DataView.AllowDelete%2A>. Они задаются **true** по умолчанию.  
@@ -52,8 +52,9 @@ newDRV.EndEdit();
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataView>
 - <xref:System.Data.DataRowView>
 - [Объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6c6d3b50cb3589dcd98c53e1abf0ce2be144d8f9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: df9cc0cc86237b1ec439a4ec4fa6a75429c416d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57501998"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111180"
 ---
 # <a name="corvalidateimage-function"></a>Функция _CorValidateImage
 Проверяет образы управляемого модуля и уведомляет загрузчик операционной системы, после они были загружены.  
@@ -45,7 +45,7 @@ STDAPI _CorValidateImage (
 ## <a name="return-value"></a>Возвращаемое значение  
  Эта функция возвращает стандартные значения `E_INVALIDARG`, `E_OUTOFMEMORY`, `E_UNEXPECTED`, и `E_FAIL`, а также следующие значения.  
   
-|Возвращаемое значение|Описание:|  
+|Возвращаемое значение|Описание|  
 |------------------|-----------------|  
 |`STATUS_INVALID_IMAGE_FORMAT`|Недопустимый образ. Это значение имеет HRESULT 0xC000007BL.|  
 |`STATUS_SUCCESS`|Образ является допустимым. Это значение имеет HRESULT 0x00000000L.|  
@@ -83,4 +83,5 @@ STDAPI _CorValidateImage (
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Глобальные статические функции метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

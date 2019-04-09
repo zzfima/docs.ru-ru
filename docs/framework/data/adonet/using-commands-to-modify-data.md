@@ -2,12 +2,12 @@
 title: Использование команд для изменения данных
 ms.date: 03/30/2017
 ms.assetid: f4160389-b9ff-4b74-b655-437c76dcd586
-ms.openlocfilehash: cec079d16c6dc3d98cee9bf17b4201654e9ba10a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f2e3d162bfbdcb79cfecefa4ddc8e6a0dc46ee3c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509273"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102457"
 ---
 # <a name="using-commands-to-modify-data"></a>Использование команд для изменения данных
 Используя поставщик данных .NET Framework, можно выполнять хранимые процедуры или инструкции языка описания данных DDL (например, CREATE TABLE и ALTER COLUMN) для выполнения операций со схемой в базе данных или в каталоге. Эти команды не возвращают строки, как запрос, поэтому **команда** предоставляет **ExecuteNonQuery** для их обработки.  
@@ -24,6 +24,7 @@ ms.locfileid: "54509273"
  Описывает выполнение команд, которые изменяют схему базы данных.  
   
 ## <a name="see-also"></a>См. также
+
 - [Извлечение и изменение данных в ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [Команды и параметры](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

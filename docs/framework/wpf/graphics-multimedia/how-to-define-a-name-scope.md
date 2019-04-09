@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Storyboards [WPF], animating in procedural code
 - animation [WPF], Storyboards [WPF], in procedural code
 ms.assetid: 4f361925-6a08-40dc-8231-a61111c6b28b
-ms.openlocfilehash: 6afb59550d774109c62c283905495c76b0834b3d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a03f477dd31909e8cb9dde9cd29da6f38d665758
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370375"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086823"
 ---
 # <a name="how-to-define-a-name-scope"></a>Практическое руководство. Определение пространства имен
 Для анимации с <xref:System.Windows.Media.Animation.Storyboard> в коде, необходимо создать <xref:System.Windows.NameScope> и регистрировать имена целевых объектов с элементом, который является владельцем этого пространства имен. В следующем примере <xref:System.Windows.NameScope> создается для `myMainPanel`. Две кнопки `button1` и `button2`, добавляются в панели, а также их имена, которые зарегистрированы. Нескольких анимаций и <xref:System.Windows.Media.Animation.Storyboard> создаются. Раскадровки <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> метод используется для запуска анимаций.  
@@ -26,5 +26,6 @@ ms.locfileid: "57370375"
  [!code-vb[StoryboardBeginAnimation_procedural_snip#NameScopeExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StoryboardBeginAnimation_procedural_snip/visualbasic/scopeexample.vb#namescopeexample)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Анимация свойства с помощью раскадровки](how-to-animate-a-property-by-using-a-storyboard.md)
 - [Общие сведения об эффектах анимации](animation-overview.md)

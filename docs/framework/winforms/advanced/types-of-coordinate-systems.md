@@ -15,12 +15,12 @@ helpviewer_keywords:
 - coordinate systems
 - transformations [Windows Forms], world
 ms.assetid: c61ff50a-eb1d-4e6c-83cd-f7e9764cfa9f
-ms.openlocfilehash: 42e8b5626cf30010f154e7c978708042c4e3369a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 765df4bcd3cef83e624ad8b11676696b95f7d035
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715866"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089306"
 ---
 # <a name="types-of-coordinate-systems"></a>Типы систем координат
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] использует три координатных пространства: world, страницы и устройства. Мировые координаты — это координаты, используемые для моделирования определенного графического мира и которые можно передать методу в .NET Framework. Страничные координаты система координат, используемая области рисования, например формы или элемента управления. Координаты устройства — это координаты, используемые физического устройства, на котором производится рисование, будь то экран или лист бумаги. При выполнении вызова `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`, точки, которые передаются <xref:System.Drawing.Graphics.DrawLine%2A> метод —`(0, 0)` и `(160, 80)`— находятся в мировом пространстве координат. Прежде чем [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] можно нарисовать линию на экране, координаты пройти через последовательность преобразований. Одно из преобразований, вызывается мировое преобразование, конвертирующее мировые координаты в координаты страницы и еще одно преобразование, страничное преобразование преобразует координаты в координаты устройства.  
@@ -95,5 +95,6 @@ ms.locfileid: "57715866"
 |Устройство|(192, 48) к (384, 144)|  
   
 ## <a name="see-also"></a>См. также
+
 - [Системы координат и преобразования](coordinate-systems-and-transformations.md)
 - [Матричное представление преобразований](matrix-representation-of-transformations.md)

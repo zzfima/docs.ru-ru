@@ -2,12 +2,12 @@
 title: тип сущности
 ms.date: 03/30/2017
 ms.assetid: a6dee9ab-9e4a-48f2-a169-3f79cc15821c
-ms.openlocfilehash: cb542a1750a6b45dd2fca4d32501719470d9a78a
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 026b0aef7cf2de8fe222721191afa459859701ee
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410892"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108268"
 ---
 # <a name="entity-type"></a>тип сущности
 *Тип сущности* — это фундаментальный блок построения для описания структуры данных Entity Data Model (EDM). В концептуальной модели тип сущности представляет структуру основных концептуальных элементов верхнего уровня, таких как клиенты или заказы. Тип сущности - это шаблон для экземпляров типов сущностей. Каждый шаблон содержит следующие сведения.  
@@ -36,6 +36,7 @@ ms.locfileid: "58410892"
  [!code-xml[EDM_Example_Model#EntityExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entityexample)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Основные понятия модели EDM](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [Сущностная модель данных](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [EDM (модель данных с использованием сущностей)](../../../../docs/framework/data/adonet/entity-data-model.md)
 - [facet](../../../../docs/framework/data/adonet/facet.md)

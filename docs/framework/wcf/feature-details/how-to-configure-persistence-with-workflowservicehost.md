@@ -1,20 +1,20 @@
 ---
-title: Как выполнить настроить сохраняемость с помощью WorkflowServiceHost
+title: Практическое руководство. Как настроить сохраняемость с помощью WorkflowServiceHost
 ms.date: 03/30/2017
 ms.assetid: e31cd4df-13a3-4a9a-9be8-5243e0055356
-ms.openlocfilehash: 2b340a46d10ef517d46a6e85fdb2f8e332cd0b46
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 8485cfdfb3a8f62f04fc488ad28df86e609e17ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530328"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086667"
 ---
-# <a name="how-to-configure-persistence-with-workflowservicehost"></a>Как выполнить настроить сохраняемость с помощью WorkflowServiceHost
-В данном разделе описывается способ настройки возможности хранилища экземпляров рабочих процессов SQL для включения сохраняемости рабочих процессов, размещенных в <xref:System.ServiceModel.Activities.WorkflowServiceHost>, с помощью файла конфигурации. Перед использованием возможности хранилища экземпляров рабочих процессов SQL необходимо создать базу данных SQL, которая используется для хранения экземпляров рабочих процессов. Дополнительные сведения см. в разделе [Как Включить сохраняемость SQL для рабочих процессов и служб рабочих процессов](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md).  
+# <a name="how-to-configure-persistence-with-workflowservicehost"></a>Практическое руководство. Как настроить сохраняемость с помощью WorkflowServiceHost
+В данном разделе описывается способ настройки функции хранилища экземпляров рабочих процессов SQL для включения сохраняемости рабочих процессов, размещенных в <xref:System.ServiceModel.Activities.WorkflowServiceHost>, с помощью файла конфигурации. Перед использованием возможности хранилища экземпляров рабочих процессов SQL необходимо создать базу данных SQL, которая используется для хранения экземпляров рабочих процессов. Дополнительные сведения см. в разделе [Как Включить сохраняемость SQL для рабочих процессов и служб рабочих процессов](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md).  
   
 ### <a name="to-configure-the-sql-workflow-instance-store-in-configuration"></a>Настройка хранилища экземпляров рабочих процессов SQL в конфигурации  
   
-1.  Свойства хранилища экземпляров рабочих процессов SQL можно настроить с помощью объекта <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior> - поведения службы, позволяющего менять параметры с помощью конфигурации XML. В следующем примере конфигурации показано, как настроить хранилище экземпляров рабочих процессов SQL с помощью элемента поведения <`sqlWorkflowInstanceStore`> в файле конфигурации.  
+1.  Свойства хранилища экземпляров рабочих процессов SQL можно настроить с помощью объекта <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior> - поведения службы, позволяющего менять параметры с помощью конфигурации XML. В следующем примере конфигурации показано, как настроить хранилище экземпляров рабочих процессов SQL с помощью <`sqlWorkflowInstanceStore`> элемент поведения в файле конфигурации.  
   
     ```xml  
     <serviceBehaviors>  
@@ -60,6 +60,7 @@ ms.locfileid: "54530328"
      Пример того, как настроить сохраняемость программным способом см. в разделе [как: Включение сохраняемости для рабочих процессов и служб рабочих процессов](../../../../docs/framework/windows-workflow-foundation/how-to-enable-persistence-for-workflows-and-workflow-services.md).  
   
 ## <a name="see-also"></a>См. также
-- [Службы рабочих процессов](../../../../docs/framework/wcf/feature-details/workflow-services.md)
-- [Сохраняемость рабочих процессов](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md)
-- [Сохраняемость фабрики приложений Windows Server](https://go.microsoft.com/fwlink/?LinkId=193121)
+
+- [Службы рабочего процесса](../../../../docs/framework/wcf/feature-details/workflow-services.md)
+- [Сохраняемость рабочего процесса](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md)
+- [Сохраняемость Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=193121)

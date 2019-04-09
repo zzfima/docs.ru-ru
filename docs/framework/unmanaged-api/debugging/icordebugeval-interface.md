@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 16beff67b4ef918afeb07ce4734fb8d2945e93c8
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 745917af176de47999737c87833c23df9c75ea7b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977205"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080869"
 ---
 # <a name="icordebugeval-interface"></a>Интерфейс ICorDebugEval
 
@@ -64,7 +64,5 @@ ms.locfileid: "56977205"
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
-
-
 
 - [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - media [WPF], controlling playback with Storyboards
 - playback of media [WPF], controlling with Storyboards
 ms.assetid: 6128ca77-b826-4e36-b968-6f237157c543
-ms.openlocfilehash: 51d567101ee49095e27e9d440016a81cd49fa876
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ae785e11b1da0f2c408b24021ad46ab071419378
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369114"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100318"
 ---
 # <a name="how-to-control-a-mediaelement-by-using-a-storyboard"></a>Практическое руководство. Управление элементом MediaElement с помощью раскадровки
 В этом примере показано, как управлять <xref:System.Windows.Controls.MediaElement> с помощью <xref:System.Windows.Media.MediaTimeline> в <xref:System.Windows.Media.Animation.Storyboard>.  
@@ -36,12 +36,13 @@ ms.locfileid: "57369114"
  [!code-vb[MediaGallery_snip#CodeBehindMediaTimelineExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MediaGallery_snip/VB/MediaTimelineExample.xaml.vb#codebehindmediatimelineexamplewholepage)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Controls.MediaElement>
 - <xref:System.Windows.Media.MediaTimeline>
 - <xref:System.Windows.Media.Animation.Storyboard>
 - [Управление элементом MediaElement (воспроизведение, пауза, остановка, громкость и скорость)](how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md)
-- [Общие сведения о раскадровке](storyboards-overview.md)
+- [Общие сведения о Storyboard](storyboards-overview.md)
 - [Общие сведения об анимации по ключевым кадрам](key-frame-animations-overview.md)
 - [Общие сведения об эффектах анимации](animation-overview.md)
-- [Разделы практического руководства](audio-and-video-how-to-topics.md)
+- [Практические руководства](audio-and-video-how-to-topics.md)
 - [Графика и мультимедиа](index.md)

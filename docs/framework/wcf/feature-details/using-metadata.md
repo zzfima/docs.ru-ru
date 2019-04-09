@@ -2,12 +2,12 @@
 title: Использование метаданных
 ms.date: 03/30/2017
 ms.assetid: 05cf53a1-b92d-4d8e-a87e-79f6e51c4a8d
-ms.openlocfilehash: 4a32ef95e656ab183528e05e89b3e00d9cc18876
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 78005f68512e62c667b59c3cec5841a37723b973
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609451"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082715"
 ---
 # <a name="using-metadata"></a>Использование метаданных
 Метаданные службы содержат читаемое компьютером описание службы. Они содержат описание конечных точек, привязок, контрактов, операций и сообщений службы. Метаданными службы можно пользоваться для множества целей, включая автоматическое создание клиента для использования службы, реализацию описания службы и динамическое обновление привязки для клиента.  
@@ -23,4 +23,5 @@ ms.locfileid: "54609451"
  Показано, как получить метаданные с помощью Svcutil.exe и создания клиента Windows Communication Foundation (WCF).  
   
 ## <a name="see-also"></a>См. также
+
 - [Метаданные](../../../../docs/framework/wcf/feature-details/metadata.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9fec1d1effbf900974327247078b65f60fef7e21
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 23fb9c58f2eac904b63294434654f3caf1ba9f41
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466431"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107969"
 ---
 # <a name="icorprofilerinfogetfunctionfromip-method"></a>Метод ICorProfilerInfo::GetFunctionFromIP
 Сопоставляет указатель инструкции управляемого кода на `FunctionID`.  
@@ -52,4 +52,5 @@ HRESULT GetFunctionFromIP(
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

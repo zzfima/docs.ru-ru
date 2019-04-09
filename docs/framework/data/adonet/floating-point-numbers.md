@@ -2,12 +2,12 @@
 title: Числа с плавающей запятой
 ms.date: 03/30/2017
 ms.assetid: 73c218c6-1c44-4402-a167-4f6262629a91
-ms.openlocfilehash: a30252d7d25b3c3e09dd5e59f364d94aa40dd272
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: aae7bd2ea6b5ba7bc9c69b99c93b62ba7a413d59
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903975"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102522"
 ---
 # <a name="floating-point-numbers"></a>Числа с плавающей запятой
 В этом разделе описаны некоторые из проблем, с которыми разработчики часто встречаются при работе с числами с плавающей запятой в [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. Эти проблемы вызваны способом, которым эти числа хранятся в компьютерах, и не характерны для определенных поставщиков, например <xref:System.Data.SqlClient> или <xref:System.Data.OracleClient>.  
@@ -19,5 +19,6 @@ ms.locfileid: "55903975"
  Чтобы обойти проблемы со сравнением на равенство, рассмотрите использование кодирования приложения, чтобы отклонения в наименее значительных разрядах не учитывались. Например, вместо сравнения двух чисел - вычитать одно из другого. Если разница лежит в пределах допустимого поля округлений, то приложение рассматривает числа как одинаковые.  
   
 ## <a name="see-also"></a>См. также
+
 - [Почему может уменьшиться точность чисел с плавающей запятой](/cpp/build/reference/why-floating-point-numbers-may-lose-precision)
-- [Общие сведения об ADO.NET](ado-net-overview.md)
+- [Общие сведения о ADO.NET](ado-net-overview.md)

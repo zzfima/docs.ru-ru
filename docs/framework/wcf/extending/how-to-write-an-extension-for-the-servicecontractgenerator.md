@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Создание расширения для ServiceContractGenerator
+title: Практическое руководство. Разработка расширения для ServiceContractGenerator
 ms.date: 03/30/2017
 ms.assetid: 876ca823-bd16-4bdf-9e0f-02092df90e51
-ms.openlocfilehash: cd0566f358b313ea96f1c9b2d5fd7fc447f4d2ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 104f65f76429701dbf02c1c7a5d737e50b080394
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54629712"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111596"
 ---
-# <a name="how-to-write-an-extension-for-the-servicecontractgenerator"></a>Как выполнить Создание расширения для ServiceContractGenerator
+# <a name="how-to-write-an-extension-for-the-servicecontractgenerator"></a>Практическое руководство. Разработка расширения для ServiceContractGenerator
 В этом разделе описывается, как разработать расширение для <xref:System.ServiceModel.Description.ServiceContractGenerator>. Это можно сделать путем реализации интерфейса <xref:System.ServiceModel.Description.IOperationContractGenerationExtension> для поведения операции или интерфейса <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> для поведения контракта. Здесь показана реализация интерфейса <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> для поведения контракта.  
   
  <xref:System.ServiceModel.Description.ServiceContractGenerator> создает контракты службы, типы клиента и конфигурации клиента из экземпляров <xref:System.ServiceModel.Description.ServiceEndpoint>, <xref:System.ServiceModel.Description.ContractDescription> и <xref:System.ServiceModel.Channels.Binding>. Как правило, экземпляры <xref:System.ServiceModel.Description.ServiceEndpoint>, <xref:System.ServiceModel.Description.ContractDescription> и <xref:System.ServiceModel.Channels.Binding> импортируются из метаданных службы, а затем используются для создания кода для вызова службы. В данном примере реализация <xref:System.ServiceModel.Description.IWsdlImportExtension> используется для обработки заметок WSDL, а затем для добавления расширений создания кода в импортированные контракты для создания комментариев к сгенерированному коду.  
@@ -96,8 +96,9 @@ ms.locfileid: "54629712"
        throw new Exception("There were errors during code compilation.");  
     ```  
   
-7.  Метод <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> автоматически вызывается для каждого поведения контракта, реализующего расширение <xref:System.ServiceModel.Description.IServiceContractGenerationExtension>. Затем этот метод может изменить передаваемый контекст <xref:System.ServiceModel.Description.ServiceContractGenerationContext>. В данном примере добавлены комментарии.  
+7.  <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> вызывается автоматически для каждого поведения контракта, реализующего <xref:System.ServiceModel.Description.IServiceContractGenerationExtension>. Затем этот метод может изменить передаваемый контекст <xref:System.ServiceModel.Description.ServiceContractGenerationContext>. В данном примере добавлены комментарии.  
   
 ## <a name="see-also"></a>См. также
+
 - [Метаданные](../../../../docs/framework/wcf/feature-details/metadata.md)
-- [Практическое руководство. Импорт пользовательского языка WSDL](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+- [Практическое руководство. Импорт пользовательской информации WSDL](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)

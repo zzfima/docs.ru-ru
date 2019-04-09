@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Разработка элемента управления простого Windows Forms
+title: Практическое руководство. Разработка простого элемента управления форм Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating simple controls using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 86cbe435-45b7-4cb4-9b5a-47418369758d
-ms.openlocfilehash: 398ba4961f9f803ea12e4ddda16fee65ac99d1d8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 845e550d0e784568723acbe098fabb2a555ce9b5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723287"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089375"
 ---
-# <a name="how-to-develop-a-simple-windows-forms-control"></a>Практическое руководство. Разработка элемента управления простого Windows Forms
+# <a name="how-to-develop-a-simple-windows-forms-control"></a>Практическое руководство. Разработка простого элемента управления форм Windows Forms
 В этом разделе рассматриваются основные этапы создания пользовательского элемента управления Windows Forms. Простой элемент управления, разработанный в этом пошаговом руководстве, позволяет изменять выравнивание его <xref:System.Windows.Forms.Control.Text%2A> значение изменяемого свойства. Он не вызывает и не обрабатывает события.  
   
 ### <a name="to-create-a-simple-custom-control"></a>Создание простого пользовательского элемента управления  
@@ -103,5 +103,6 @@ ms.locfileid: "57723287"
  [!code-vb[System.Windows.Forms.FirstControl#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/SimpleForm.vb#10)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Свойства элементов управления Windows Forms](properties-in-windows-forms-controls.md)
 - [События элементов управления Windows Forms](events-in-windows-forms-controls.md)

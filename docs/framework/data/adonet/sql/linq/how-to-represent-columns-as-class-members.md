@@ -1,18 +1,18 @@
 ---
-title: Как выполнить представить столбцы в виде членов класса
+title: Практическое руководство. Как представить столбцы в виде членов класса
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7ab28021-4d15-4d9c-bf2e-6ccc0daa7d1a
-ms.openlocfilehash: 7a772de27583f35b18a4fa5854e61768443e5ba5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 74966dd1661faa43df334987b2e3b0e84eff3446
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652567"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074005"
 ---
-# <a name="how-to-represent-columns-as-class-members"></a>Как выполнить представить столбцы в виде членов класса
+# <a name="how-to-represent-columns-as-class-members"></a>Практическое руководство. Как представить столбцы в виде членов класса
 Используйте [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute> атрибут для связи поля или свойства со столбцом базы данных.  
   
 ### <a name="to-map-a-field-or-property-to-a-database-column"></a>Сопоставление поля или свойства со столбцом база данных  
@@ -28,5 +28,6 @@ ms.locfileid: "54652567"
  Если можно определить имя, указывать свойство <xref:System.Data.Linq.Mapping.DataAttribute.Name%2A> нет необходимости. Если имя не указано, оно будет считаться совпадающим с именем свойства или поля.  
   
 ## <a name="see-also"></a>См. также
+
 - [Модель объектов LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
-- [Практическое руководство. Настройка классов сущностей с помощью редактора кода](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [Практическое руководство. Как настроить классы сущностей с помощью редактора кода](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)

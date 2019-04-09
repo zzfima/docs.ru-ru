@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Отображение элементов с использованием визуального стиля
+title: Практическое руководство. Отображение элементов с использованием визуальных стилей
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - professional appearance [Windows Forms], applying to elements of Windows Forms applications
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a207781b-1baa-4ce9-b788-1e951bd4b5df
-ms.openlocfilehash: 33c73bf8faa9dfafe5f4889875887dc3aef5985c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 44218ee1f3879a3f9ac5a1e1b049c28a5463820e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714116"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099837"
 ---
-# <a name="how-to-render-a-visual-style-element"></a>Практическое руководство. Отображение элементов с использованием визуального стиля
+# <a name="how-to-render-a-visual-style-element"></a>Практическое руководство. Отображение элементов с использованием визуальных стилей
 <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> Пространство имен предоставляет <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> элементы пользовательского интерфейса, поддерживаемого стилями оформления интерфейса объекты, представляющие пользователя Windows. В этом разделе демонстрируется использование <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> класс для подготовки к просмотру <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> , представляющий **Выход** и **завершение работы** кнопок, меню «Пуск».  
   
 ### <a name="to-render-a-visual-style-element"></a>Для подготовки к просмотру элемента визуального стиля  
@@ -44,4 +44,5 @@ ms.locfileid: "57714116"
 -   Ссылки на <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, и <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> пространства имен.  
   
 ## <a name="see-also"></a>См. также
+
 - [Отрисовка элементов управления с применением визуальных стилей](rendering-controls-with-visual-styles.md)

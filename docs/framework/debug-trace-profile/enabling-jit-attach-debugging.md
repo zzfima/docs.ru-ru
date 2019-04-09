@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f91fc5f7-de5a-4f23-b6ac-f450e63c662e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4630e6d02b0137021765f954ab0dae19f2f6199
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: f1696f9054d44a5f80a1f67cc38e315a8627d295
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093987"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078788"
 ---
 # <a name="enabling-jit-attach-debugging"></a>Включение отладки с JIT-присоединением (трассировка событий Windows)
 Отладка с JIT-присоединением предусматривает присоединение отладчика к процессу при возникновении ошибок. Также этот процесс может запускаться посредством определенных методов или функций.  
@@ -21,20 +21,21 @@ ms.locfileid: "56093987"
   
 -   Необработанные исключения (в машинном и управляемом коде).  
   
--   Метод <xref:System.Environment.FailFast%2A?displayProperty=nameWithType> или функция [RaiseFailFastException](https://go.microsoft.com/fwlink/?LinkId=182107) (семейство ОС Windows 7).  
+-   <xref:System.Environment.FailFast%2A?displayProperty=nameWithType> метод или [RaiseFailFastException](https://go.microsoft.com/fwlink/?LinkId=182107) функция (семейство Windows 7).  
   
 -   Неустранимые ошибки времени выполнения.  
   
  Отладка с JIT-присоединением также запускается посредством вызова следующих методов и функций:  
   
--   Метод <xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType>.  
+-   <xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType> метод.  
   
--   Метод <xref:System.Diagnostics.Debugger.Break%2A?displayProperty=nameWithType>.  
+-   <xref:System.Diagnostics.Debugger.Break%2A?displayProperty=nameWithType> метод.  
   
 -   Функция [DebugBreak](https://go.microsoft.com/fwlink/?LinkId=182106) (Win32).  
   
  В версиях платформы .NET Framework до [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] были представлены отдельные разделы реестра, определяющие поведение отладчиков машинного и управляемого кода. Начиная с [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], элемент управления, объединяются в одном разделе реестра: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Current Version\AeDebug. Значения этого раздела определяют, будет ли вызываться отладчик, а также будет ли в случае его вызова отображаться диалоговое окно для взаимодействия с пользователем. Сведения о настройке раздела реестра, см. в разделе [Настройка автоматической отладки](https://go.microsoft.com/fwlink/?LinkId=181767).  
   
 ## <a name="see-also"></a>См. также
+
 - [Отладка, трассировка и профилирование](../../../docs/framework/debug-trace-profile/index.md)
 - [Упрощение отладки образов](../../../docs/framework/debug-trace-profile/making-an-image-easier-to-debug.md)

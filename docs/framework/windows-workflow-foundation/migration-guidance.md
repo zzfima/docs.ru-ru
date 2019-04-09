@@ -2,15 +2,15 @@
 title: Руководство по миграции
 ms.date: 03/30/2017
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
-ms.openlocfilehash: 405ed0dcbd730f08b84ad0b40008c4d77b02e26f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a36108e8c711b9e5d5253b19a9122373fc513855
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719680"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083170"
 ---
 # <a name="migration-guidance"></a>Руководство по миграции
-В [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], корпорация Майкрософт выпускает второй основной номер версии Windows Workflow Foundation (WF). [!INCLUDE[wf1](../../../includes/wf1-md.md)] была выпущена в составе [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] (она включала типы в пространствах имен System.Workflow.*, которые теперь называются WF3) и улучшена в [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. WF3 также является частью [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], но он сосуществует с новой технологией рабочего процесса (типы в System.Activities.\* пространства имен; Далее именуется WF4). При принятии решения об использовании WF4 важно помнить, что управление временем осуществляет пользователь.  
+В [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], корпорация Майкрософт выпускает второй основной номер версии Windows Workflow Foundation (WF). [!INCLUDE[wf1](../../../includes/wf1-md.md)] было выпущено в [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] (это включала типы в пространствах имен System.workflow.*, которые; теперь называются WF3) и усовершенствована в [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. WF3 также является частью [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], но он сосуществует с новой технологией рабочего процесса (типы в System.Activities.\* пространства имен; Далее именуется WF4). При принятии решения об использовании WF4 важно помнить, что управление временем осуществляет пользователь.  
   
 -   WF3 представляет собой полностью поддерживаемую часть [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)].  
   
@@ -23,13 +23,13 @@ ms.locfileid: "57719680"
 ## <a name="wf-migration-whitepapers-and-cookbooks"></a>Техническая документация и рецепты по миграции WF.  
  [Общие сведения о миграции WF](https://go.microsoft.com/fwlink/?LinkId=153873) раздел содержит общие сведения о связи между WF3 и WF4 и стратегиями миграции. В сопутствующих разделах описываются следующие темы.  
   
- [Общие сведения о миграции WF](https://go.microsoft.com/fwlink/?LinkId=153873)  
+ [Общие сведения о миграции в WF](https://go.microsoft.com/fwlink/?LinkId=153873)  
  Описывает связи между WF3 и WF4, а также новые возможности пользователей технологии рабочих процессов в .NET 4.  
   
  [Миграция WF: Рекомендации по разработке WF3](https://go.microsoft.com/fwlink/?LinkId=153852)  
  Описывается разработка артефактов WF3 с учетом возможностей упрощения миграции на WF4.  
   
- [Руководство по WF: правила](https://go.microsoft.com/fwlink/?LinkId=153854)  
+ [Руководство по WF: Правила](https://go.microsoft.com/fwlink/?LinkId=153854)  
  Описывает методы внедрения технологий, основанных на правилах, в решения [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)].  
   
  [Руководство по WF: Конечный автомат](https://go.microsoft.com/fwlink/?LinkId=153855)  
@@ -52,8 +52,9 @@ ms.locfileid: "57719680"
  [Рецепты миграции WF: Отслеживание рабочих процессов](https://go.microsoft.com/fwlink/?LinkId=275562)  
  Предоставляет рекомендации по перепроектированию кода отслеживания и конфигурации WF3 при помощи эквивалентного кода отслеживания и конфигурации для WF4.  
   
- [Руководство по WF: Службы рабочих процессов](https://go.microsoft.com/fwlink/?LinkId=275564)  
+ [Руководство по WF: Службы рабочего процесса](https://go.microsoft.com/fwlink/?LinkId=275564)  
  Предоставляет построенные на примерах пошаговые инструкции по перепроектированию часто используемых рабочих процессов, которые реализуют веб-службы Windows Communication Foundation (WCF) (называемые службами рабочих процессов), созданные в WF3, для использования средств WF4.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Activities.Statements.Interop>

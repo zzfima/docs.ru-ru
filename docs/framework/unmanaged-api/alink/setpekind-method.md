@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e568050a5cc94da865d656adc8a775024dab836c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: dec04fa267c61798a3340e9d1e18150b812e9eaf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57500048"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092660"
 ---
 # <a name="setpekind-method"></a>Метод SetPEKind
 Определяет переносимый исполняемый тип, независимый от компьютера или конкретного компьютера.  
@@ -57,6 +57,7 @@ HRESULT SetPEKind(
  Требуется alink.h.  
   
 ## <a name="see-also"></a>См. также
+
 - [Метод GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md)
 - [Интерфейс IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [Интерфейс IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)

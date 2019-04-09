@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Перехват сообщений службы данных (службы данных WCF)
+title: Практическое руководство. Перехват сообщений службы данных (службы данных WCF)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - query interceptors [WCF Data Services]
 ms.assetid: 24b9df1b-b54b-4795-a033-edf333675de6
-ms.openlocfilehash: b5fdbaa25f55caf3de2f0591b7258d4a7dcb1b7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 56e4a3f95c7449ae5693172728c9d777113679bf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586401"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101304"
 ---
-# <a name="how-to-intercept-data-service-messages-wcf-data-services"></a>Как выполнить Перехват сообщений службы данных (службы данных WCF)
+# <a name="how-to-intercept-data-service-messages-wcf-data-services"></a>Практическое руководство. Перехват сообщений службы данных (службы данных WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] позволяет приложению перехватывать сообщения запросов, что дает возможность добавить в операцию специализированную логику. Для перехвата сообщений используются методы со специальными атрибутами в службе данных. Дополнительные сведения см. в разделе [перехватчики](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md).  
   
  В примере этого раздела используется образец службы данных Northwind. Эта служба создается после завершения [краткое руководство по службам данных WCF](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
@@ -56,5 +56,6 @@ ms.locfileid: "54586401"
  [!code-vb[Astoria Northwind Service#ChangeInterceptor](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#changeinterceptor)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Практическое руководство. Определение операции службы](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)
 - [Определение служб данных WCF](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)

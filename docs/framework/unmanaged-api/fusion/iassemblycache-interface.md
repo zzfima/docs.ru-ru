@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 157cc9f5f520f376c0c055ab49b116bc7961f421
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9fc5f3a3d5bc5699a596bcc648a7153190c130f0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54641074"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075642"
 ---
 # <a name="iassemblycache-interface"></a>Интерфейс IAssemblyCache
 Представляет глобальный кэш сборок для использования технологией fusion.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание:|  
+|Метод|Описание|  
 |------------|-----------------|  
 |[Метод CreateAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-createassemblycacheitem-method.md)|Получает ссылку на новый [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md).|  
 |[Метод CreateAssemblyScavenger](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-createassemblyscavenger-method.md)|Зарезервировано для внутреннего использования технологией fusion.|  
@@ -44,5 +44,6 @@ ms.locfileid: "54641074"
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
-- [Интерфейсы Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [Глобальный кэш сборок](../../../../docs/framework/app-domains/gac.md)
+
+- [Fusion-интерфейсы](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [глобальный кэш сборок](../../../../docs/framework/app-domains/gac.md)

@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Определение прямоугольника с помощью RectangleGeometry
+title: Практическое руководство. Определение прямоугольника с помощью объекта RectangleGeometry
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - graphics [WPF], rectangles
 - rectangles [WPF], creating with RectangleGeometry class
 ms.assetid: e40b8a8e-54b8-416b-a9f2-be6dca9fdf0b
-ms.openlocfilehash: bd42aca2541d67469173f63655ada18a12eb692c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 146ca7017ee38ad5c1065e59662ac441e7bfbfe2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352507"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075800"
 ---
-# <a name="how-to-define-a-rectangle-using-a-rectanglegeometry"></a>Практическое руководство. Определение прямоугольника с помощью RectangleGeometry
+# <a name="how-to-define-a-rectangle-using-a-rectanglegeometry"></a>Практическое руководство. Определение прямоугольника с помощью объекта RectangleGeometry
 В этом примере описывается использование <xref:System.Windows.Media.RectangleGeometry> класс, который описывает прямоугольник.  
   
 ## <a name="example"></a>Пример  
@@ -34,6 +34,7 @@ RectangleGeometry
  Другие простые геометрические классы включают <xref:System.Windows.Media.LineGeometry> и <xref:System.Windows.Media.EllipseGeometry>. Эти геометрические объекты, а также более сложные, могут также создаваться с использованием <xref:System.Windows.Media.PathGeometry> или <xref:System.Windows.Media.StreamGeometry>.  
   
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения о классе Geometry](geometry-overview.md)
 - [Создание составной фигуры](how-to-create-a-composite-shape.md)
 - [Создание фигуры с помощью объекта PathGeometry](how-to-create-a-shape-by-using-a-pathgeometry.md)

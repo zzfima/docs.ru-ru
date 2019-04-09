@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fa93af15-28af-4b5e-846b-897308410edb
-ms.openlocfilehash: 31421b1e6ece783f52021c1af22b819f8aacea66
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 48aa6044f39be93f144b6c4af5137b131dda0b30
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903430"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085822"
 ---
 # <a name="method-based-query-syntax-examples-set-operators-linq-to-dataset"></a>Примеры синтаксиса запросов на основе методов. Операторы задания значений (LINQ to DataSet)
 Примеры в этом разделе демонстрируют, как использовать <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Intersect%2A>, и <xref:System.Linq.Enumerable.Union%2A> операторы для выполнения операций сравнения на основе значений в наборах строк данных.[ Загрузка данных в набор данных](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md) см. в разделе [сравнение объектов DataRow](../../../../docs/framework/data/adonet/comparing-datarows-linq-to-dataset.md) Дополнительные сведения о <xref:System.Data.DataRowComparer>.  
@@ -34,7 +34,7 @@ ms.locfileid: "55903430"
  [!code-csharp[DP LINQ to DataSet Examples#DistinctRows](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#distinctrows)]
  [!code-vb[DP LINQ to DataSet Examples#DistinctRows](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#distinctrows)]  
   
-## <a name="except"></a>Except  
+## <a name="except"></a>Исключения  
   
 ### <a name="example"></a>Пример  
  В этом примере метод <xref:System.Linq.Enumerable.Except%2A> используется, чтобы вернуть контакты, которые есть в первой таблице, но отсутствуют во второй.  
@@ -59,7 +59,8 @@ ms.locfileid: "55903430"
  [!code-vb[DP LINQ to DataSet Examples#Union2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#union2)]  
   
 ## <a name="see-also"></a>См. также
-- [Загрузка данных в DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
+
+- [Загрузка данных в набор данных](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
 - [Примеры LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
 - [Общие сведения о стандартных операторах запроса (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Общие сведения о стандартных операторах запроса (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Общие сведения о стандартных операторах (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)

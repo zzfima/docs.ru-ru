@@ -8,12 +8,12 @@ helpviewer_keywords:
 - finding DataTemplate elements [WPF]
 - DataTemplate [WPF]
 ms.assetid: bfcd564e-5e9e-451e-8641-a9b5c3cfac90
-ms.openlocfilehash: 4317d22a786caa6a191002ff411fe54436f3dbcc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: de5a4937feabdb4486d9dcf9d5e5bfddd2356690
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362218"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089190"
 ---
 # <a name="how-to-find-datatemplate-generated-elements"></a>Практическое руководство. Поиск элементов, созданных с использованием шаблона DataTemplate
 В этом примере показано, как для поиска элементов, создаваемых <xref:System.Windows.DataTemplate>.  
@@ -38,9 +38,10 @@ ms.locfileid: "57362218"
  [!code-vb[FindGeneratedItems#FVC](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FindGeneratedItems/VisualBasic/Window1.xaml.vb#fvc)]  
   
 ## <a name="see-also"></a>См. также
-- [Практическое руководство. Найти, созданного шаблоном ControlTemplate](../controls/how-to-find-controltemplate-generated-elements.md)
+
+- [Практическое руководство. Поиск элемента, созданного шаблоном ControlTemplate](../controls/how-to-find-controltemplate-generated-elements.md)
 - [Общие сведения о привязке данных](data-binding-overview.md)
-- [Разделы практического руководства](data-binding-how-to-topics.md)
+- [Практические руководства](data-binding-how-to-topics.md)
 - [Стилизация и использование шаблонов](../controls/styling-and-templating.md)
 - [Области видимости имен XAML в WPF](../advanced/wpf-xaml-namescopes.md)
 - [Деревья в WPF](../advanced/trees-in-wpf.md)

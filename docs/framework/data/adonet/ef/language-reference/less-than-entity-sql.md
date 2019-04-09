@@ -1,13 +1,13 @@
 ---
-title: < (меньше) (Entity SQL)
+title: < (Меньше) (язык Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 1fc2a039-3ad6-4b3c-b41d-09932e803f86
-ms.openlocfilehash: a7762696405bbd9aa4637b4e3d91414ad38723e1
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: MT
+ms.openlocfilehash: 0373dc2d066252d76cd3d4408790404ca70ab701
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55284782"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105174"
 ---
 # <a name="-less-than-entity-sql"></a>\< (меньше) (Entity SQL)
 Сравнивает два выражения, чтобы определить, является ли значение левого выражения меньшим, чем значение правого выражения.  
@@ -23,7 +23,7 @@ expression < expression
  Любое допустимое выражение. Оба выражения должны иметь типы данных, допускающих неявное преобразование.  
   
 ## <a name="result-types"></a>Типы результата  
- `true` , если значение левого выражения меньше, чем правого; в противном случае - `false`.  
+ `true` Если левое выражение значение меньше правого выражения; в противном случае `false`.  
   
 ## <a name="example"></a>Пример  
  В следующем запросе Entity SQL оператор < используется для сравнения двух выражений, чтобы определить, является ли значение левого выражения меньшим, чем правого. Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.  
@@ -35,4 +35,5 @@ expression < expression
  [!code-csharp[DP EntityServices Concepts 2#LESS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#less)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Справочник по Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

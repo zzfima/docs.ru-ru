@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-ms.openlocfilehash: 6ef3ff671175182bdd3b1eab2b17ec0298ff15e1
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
-ms.translationtype: MT
+ms.openlocfilehash: 433efade37d9aa07f99a212b631a571dfbc766dd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442728"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095871"
 ---
 # <a name="using-sessions"></a>Использование сеансов
 В приложениях Windows Communication Foundation (WCF) *сеанса* объединяет группу сообщений в диалоге. Сеансы WCF отличаются от объектов сеансов, имеющихся в [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] приложений, поддерживают другие поведения, а также управляются разными способами. В этом разделе описаны возможности, обеспечиваемые сеансами в WCF, приложений и их использование.  
@@ -32,11 +32,11 @@ ms.locfileid: "56442728"
   
  Если вы знакомы с <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> в класс [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] приложения и функциональные возможности она предоставляет, можно отметить следующие различия между его сеансами и сеансами WCF:  
   
--   Сеансы[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] всегда инициируются сервером.  
+-   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] сеансы будут всегда инициированного сервером.  
   
--   Сеансы[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] явным образом неупорядочены.  
+-   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] сеансы явным образом неупорядочены.  
   
--   Сеансы[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] обеспечивают общий механизм хранения данных для запросов.  
+-   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] сеансы обеспечивают общий механизм хранения данных для запросов.  
   
  В этом разделе описываются следующие функции и операции:  
   
@@ -108,14 +108,14 @@ ms.locfileid: "56442728"
 > [!NOTE]
 >  Поведение по умолчанию имеет сходство с локальными конструкторами и деструкторами, но это не более чем сходство. Все операции службы WCF может быть инициирующей или завершающей или оба одновременно. Кроме того, в случае по умолчанию инициирующие операции можно вызывать сколько угодно раз и в любом порядке. После того как сеанс установлен и связан с экземпляром, дополнительные сеансы могут быть созданы только в случае осуществления явным образом управления временем существования экземпляра службы (путем обработки объекта <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> ). И наконец, состояние связывается с сеансом, а не с объектом службы.  
   
- Например `ICalculatorSession` контракта, используемого в предыдущем примере требуется, что клиент WCF объект первый вызов `Clear` операцию до выполнения любой другой операции и что сеанс с этим объектом клиента WCF завершался при вызове `Equals` операции. В следующем примере кода приведен контракт, обеспечивающий выполнение этих требований. Для инициации сеанса сначала необходимо вызвать операцию`Clear` , а завершится сеанс при вызове операции `Equals` .  
+ Например `ICalculatorSession` контракта, используемого в предыдущем примере требуется, что клиент WCF объект первый вызов `Clear` операцию до выполнения любой другой операции и что сеанс с этим объектом клиента WCF завершался при вызове `Equals` операции. В следующем примере кода приведен контракт, обеспечивающий выполнение этих требований. `Clear` Сначала необходимо вызвать для инициации сеанса, а завершится сеанс при `Equals` вызывается.  
   
  [!code-csharp[SCA.IsInitiatingIsTerminating#1](../../../samples/snippets/csharp/VS_Snippets_CFX/sca.isinitiatingisterminating/cs/service.cs#1)]
  [!code-vb[SCA.IsInitiatingIsTerminating#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/sca.isinitiatingisterminating/vb/service.vb#1)]  
   
  Службы не начинают сеансы с клиентами. В клиентских приложениях WCF существует прямая связь между временем существования канала на основе сеансов и время существования самого сеанса. Таким образом, клиенты создают новые сеансы путем создания новых каналов, основанных на сеансах, и прерывают существующие сеансы путем правильного закрытия этих каналов. Клиент начинает сеанс с конечной точкой службы путем вызова одной из следующих операций:  
   
--   <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> для канала, возвращенного при вызове <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>.  
+-   <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> для канала, возвращенного вызовом <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>.  
   
 -   <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> в объекте клиента WCF, создаваемые [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
@@ -123,7 +123,7 @@ ms.locfileid: "56442728"
   
  Обычно клиент завершает сеанс с конечной точкой службы путем вызова одной из следующих операций:  
   
--   <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> для канала, возвращенного при вызове <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>.  
+-   <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> для канала, возвращенного вызовом <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>.  
   
 -   <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType> в объекте клиента WCF, созданный средством Svcutil.exe.  
   
@@ -146,5 +146,6 @@ ms.locfileid: "56442728"
 >  Свойство MaxConcurrentSessions в данном случае ни на что не влияет, поскольку имеется всего один сеанс.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.OperationContractAttribute.IsInitiating%2A>
 - <xref:System.ServiceModel.OperationContractAttribute.IsTerminating%2A>

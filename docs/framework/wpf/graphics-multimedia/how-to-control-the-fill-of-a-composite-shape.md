@@ -7,12 +7,12 @@ helpviewer_keywords:
 - graphics [WPF], composite shapes
 - fill [WPF], controlling
 ms.assetid: c1c94575-9eca-48a5-a49a-2ec65259f229
-ms.openlocfilehash: 0b2e71e7db403857aa1a3b0dddcfe907150f9528
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9b3ab1f7b81c296aa1ee766136b6c95b82cab105
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357291"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084054"
 ---
 # <a name="how-to-control-the-fill-of-a-composite-shape"></a>Практическое руководство. Управление заливкой составных фигур
 <xref:System.Windows.Media.GeometryGroup.FillRule%2A> Свойство <xref:System.Windows.Media.GeometryGroup> или <xref:System.Windows.Media.PathGeometry>, указывает «правило», которое Составная фигура использует для определения, является ли заданная точка частью геометрии. Существует два возможных значения для <xref:System.Windows.Media.FillRule>: <xref:System.Windows.Media.FillRule.EvenOdd> и <xref:System.Windows.Media.FillRule.Nonzero>. Следующие разделы описывают использование этих двух правил.  
@@ -62,5 +62,6 @@ ms.locfileid: "57357291"
 ## <a name="example"></a>Пример  
   
 ## <a name="see-also"></a>См. также
+
 - [Создание составной фигуры](how-to-create-a-composite-shape.md)
 - [Общие сведения о классе Geometry](geometry-overview.md)

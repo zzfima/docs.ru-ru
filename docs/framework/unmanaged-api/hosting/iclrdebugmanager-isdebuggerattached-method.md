@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 404d60bf0dfb8de1d7effae01b22b15e8931757c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 1d6c071b3ac68cb38fc85aff65fff49a71ea4275
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57473946"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095391"
 ---
 # <a name="iclrdebugmanagerisdebuggerattached-method"></a>Метод ICLRDebugManager::IsDebuggerAttached
 Получает значение, показывающее, присоединен ли отладчик к процессу.  
@@ -63,6 +63,7 @@ HRESULT IsDebuggerAttached (
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс ICLRControl](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
 - [Интерфейс ICLRDebugManager](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)
 - [Интерфейс IHostControl](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)

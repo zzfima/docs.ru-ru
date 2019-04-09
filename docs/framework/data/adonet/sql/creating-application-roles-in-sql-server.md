@@ -2,12 +2,12 @@
 title: Создание ролей приложений в SQL Server
 ms.date: 03/30/2017
 ms.assetid: 27442435-dfb2-4062-8c59-e2960833a638
-ms.openlocfilehash: 4d3ee759a11417d5f4d36a295f20c7f7886d30d9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f836fd239eca30d0a1f4a667cddc844446d1d951
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638136"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100381"
 ---
 # <a name="creating-application-roles-in-sql-server"></a>Создание ролей приложений в SQL Server
 Роли приложения предоставляют возможность назначать разрешения приложению, а не ролям базы данных или пользователям. Пользователи могут соединиться с базой данных, активировать роль приложения и воспользоваться разрешениями, предоставленными приложению. Разрешения, предоставленные роли приложения, действуют в течение всего соединения.  
@@ -16,7 +16,7 @@ ms.locfileid: "54638136"
 >  Роли приложения активируются, когда клиентское приложение передает имя роли приложения и пароль в строке соединения. В двухуровневом приложении безопасность при этом снижается, поскольку пароль должен храниться на клиентском компьютере. В трехуровневом приложении пароль можно хранить так, чтобы он не был доступен пользователям приложения.  
   
 ## <a name="application-role-features"></a>Функции ролей приложения  
- Роли приложения имеют следующие функции.  
+ Роли приложения имеют следующие возможности.  
   
 -   В отличие от ролей базы данных роли приложения не содержат элементов.  
   
@@ -54,12 +54,13 @@ ms.locfileid: "54638136"
 ## <a name="external-resources"></a>Внешние ресурсы  
  Дополнительные сведения см. в следующих ресурсах.  
   
-|Ресурс|Описание:|  
+|Ресурс|Описание|  
 |--------------|-----------------|  
-|[Роли приложений](/sql/relational-databases/security/authentication-access/application-roles)|Описывает процесс создания и использования ролей приложения в SQL Server 2008.|  
+|[Роли приложения](/sql/relational-databases/security/authentication-access/application-roles)|Описывает процесс создания и использования ролей приложения в SQL Server 2008.|  
   
 ## <a name="see-also"></a>См. также
+
 - [Защита приложений ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Общие сведения о безопасности SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
 - [Сценарии безопасности приложений в SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

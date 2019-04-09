@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - proxy extensions [WCF]
 ms.assetid: 1328c61c-06e5-455f-9ebd-ceefb59d3867
-ms.openlocfilehash: 46f5b4b1a2721a07decb045cd3734ce6edaa0762
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 99b4dd5e4acfce8bea4d3c2cae3a53152585675d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522041"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074759"
 ---
 # <a name="extending-clients"></a>Расширение клиентов
 В вызывающем приложении уровень модели службы отвечает за преобразование вызовов методов в коде приложения в исходящие сообщения, передачу их по соответствующим каналам, преобразование результатов обратно в возвращаемые значения и выходные параметры в коде приложения, а также за возврат результатов вызывающем объекту. Расширения модели службы изменяют или реализуют поведение и возможности выполнения или взаимодействия, в том числе возможности клиента или диспетчера, пользовательские поведения, перехват сообщений и параметров, а также другие возможности расширяемости.  
@@ -115,7 +115,8 @@ ms.locfileid: "54522041"
  Примеры, демонстрирующие перехват клиентом WCF, см. в разделе [как: Проверка или изменение параметров](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.Dispatcher.ClientRuntime>
 - <xref:System.ServiceModel.Dispatcher.ClientOperation>
-- [Практическое руководство. Проверка или изменение сообщений на стороне клиента](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md)
+- [Практическое руководство. Проверка или изменение сообщений на клиенте](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md)
 - [Практическое руководство. Проверка или изменение параметров](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)

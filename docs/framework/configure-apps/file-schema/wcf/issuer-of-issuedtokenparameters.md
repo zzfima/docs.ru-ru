@@ -2,12 +2,12 @@
 title: <issuer> из <issuedTokenParameters>
 ms.date: 03/30/2017
 ms.assetid: d6a95f32-d58c-40fc-8658-dd92564d3c90
-ms.openlocfilehash: 411fd1addb41822043d72de1edffee9f8733bc08
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 690ab14ea33ba9bef29788b2eb35f86ed945ce2b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55256645"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113546"
 ---
 # <a name="issuer-of-issuedtokenparameters"></a>\<издатель > из \<issuedTokenParameters >
 Задает службу маркеров безопасности, выдающую маркеры безопасности.  
@@ -33,22 +33,23 @@ ms.locfileid: "55256645"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|address|Обязательная строка. URL-адрес для службы маркеров безопасности.|  
+|адрес|Обязательная строка. URL-адрес для службы маркеров безопасности.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
-|[\<заголовки >](../../../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)|Коллекция заголовков адресов для конечных точек, которые может создать конструктор.|  
+|[\<headers>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)|Коллекция заголовков адресов для конечных точек, которые может создать конструктор.|  
 |[\<удостоверение >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|При использовании выданного маркера задает параметры, позволяющие клиенту проверить подлинность сервера.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<issuedTokenParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|Определяет текущий выданный маркер.|  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.AdditionalRequestParameters%2A>
 - <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement.AdditionalRequestParameters%2A>
 - <xref:System.ServiceModel.Channels.CustomBinding>

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3657ef40fce3d9d29e0cf6c27e8eb527be0f150e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 7d7fe8f36c7a5dbe6e715402fd7253092b64e68e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57489024"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078971"
 ---
 # <a name="isymunmanagedwritersetscoperange-method"></a>Метод ISymUnmanagedWriter::SetScopeRange
 Определяет диапазон смещений для заданной лексической области видимости. Область становится новой текущей областью и помещается в стек области. Области должны образовывать иерархию. Одноуровневые элементы, не разрешено перекрывать.  
@@ -56,4 +56,5 @@ HRESULT OpenScope(
  **Заголовок.** CorSym.idl CorSym.h  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

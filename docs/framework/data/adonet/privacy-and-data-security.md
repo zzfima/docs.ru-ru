@@ -2,12 +2,12 @@
 title: Конфиденциальность и безопасность данных
 ms.date: 03/30/2017
 ms.assetid: 46fa5839-adf7-4c7c-bce3-71e941fa7de9
-ms.openlocfilehash: ed408cedbd686efd29472f6f7d19ec03390164f9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3852e6034ff78b362bd67a05bd828d3033731a85
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662144"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081857"
 ---
 # <a name="privacy-and-data-security"></a>Конфиденциальность и безопасность данных
 Защита и управление конфиденциальными данными в приложении ADO.NET зависит от базовых продуктов и технологий, используемых для их создания. ADO.NET не предоставляет напрямую службы безопасности или шифрования данных.  
@@ -28,6 +28,7 @@ ms.locfileid: "54662144"
  Класс <xref:System.Security.SecureString> предоставляет методы шифрования текста в памяти с помощью API-интерфейса защиты данных (DPAPI). Когда строка больше не нужна, она удаляется из памяти. Метода `ToString` для быстрого считывания содержимого <xref:System.Security.SecureString> не существует. Можно инициализировать новый экземпляр `SecureString`, не задавая значений, или передать ему указатель на массив объектов <xref:System.Char>. Для работы со строкой можно использовать различные методы этого класса. Дополнительные сведения, скачайте [образец приложения SecureString](https://go.microsoft.com/fwlink/?LinkId=120418), который показывает, как использовать `SecureString` класса из.  
   
 ## <a name="see-also"></a>См. также
+
 - [Защита приложений ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Безопасность SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

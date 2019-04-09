@@ -2,12 +2,12 @@
 title: Пример совместного использования портов Net.TCP
 ms.date: 03/30/2017
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
-ms.openlocfilehash: 2ff63de62ad11ab89721cbf87f1edaca8c54a027
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: f70069754d712f6f3d70eb3ac3ffb4cc645c3f83
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58830179"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079621"
 ---
 # <a name="nettcp-port-sharing-sample"></a>Пример совместного использования портов Net.TCP
 Протокол TCP/IP использует 16-разрядное число, называемое номером порта, чтобы различать подключения к разным сетевым приложениям, выполняющимся на одном компьютере. Если приложение ожидает передачи данных через порт, то весь трафик TCP через этот порт перенаправляется данному приложению. Другие приложения не могут одновременно ожидать передачи данных через тот же порт.  
@@ -138,4 +138,3 @@ Press <ENTER> to terminate client.
 4.  Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 5.  Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md). Конкретные сведения о выполнении этого образца описаны в разделе "Выполнение образца".  
-  

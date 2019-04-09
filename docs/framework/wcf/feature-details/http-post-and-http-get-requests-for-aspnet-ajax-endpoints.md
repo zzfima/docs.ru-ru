@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Выбор между HTTP POST и HTTP GET запросами для конечных точек ASP.NET AJAX
+title: Практическое руководство. Выбор между запросами HTTP POST и HTTP GET для конечных точек ASP.NET AJAX
 ms.date: 03/30/2017
 ms.assetid: b47de82a-4c92-4af6-bceb-a5cb8bb8ede9
-ms.openlocfilehash: 8de65bbf8cd9e0eab3861504946967ad319cd824
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 33763a77d1ab1c82af9b9e1fb9c42d72392f8798
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718810"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091282"
 ---
-# <a name="how-to-choose-between-http-post-and-http-get-requests-for-aspnet-ajax-endpoints"></a>Как выполнить Выбор между HTTP POST и HTTP GET запросами для конечных точек ASP.NET AJAX
+# <a name="how-to-choose-between-http-post-and-http-get-requests-for-aspnet-ajax-endpoints"></a>Практическое руководство. Выбор между запросами HTTP POST и HTTP GET для конечных точек ASP.NET AJAX
 
 Windows Communication Foundation (WCF) позволяет создавать службы, которая предоставляет конечную точку с поддержкой ASP.NET AJAX, которая может вызываться из JavaScript на веб-сайта клиента. Основные процедуры создания таких служб рассматривается в [как: Использование конфигурации для добавления конечной точки ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) и [как: Добавление конечной точки ASP.NET AJAX без использования конфигурации](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md).  
   
@@ -91,5 +91,6 @@ Windows Communication Foundation (WCF) позволяет создавать с�
 2. Службы с операциями GET можно использовать так же, как и любые другие службы ASP.NET AJAX, т. е. введя URL-адрес службы в коллекцию скриптов средства управления диспетчера скриптов ASP.NET AJAX. Например, см. в разделе [базовой службы AJAX](../../../../docs/framework/wcf/samples/basic-ajax-service.md).
   
 ## <a name="see-also"></a>См. также
+
 - [Создание служб WCF для ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)
-- [Практическое руководство. Миграция с поддержкой AJAX веб-служб ASP.NET в WCF](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)
+- [Практическое руководство. Миграция веб-служб ASP.NET с поддержкой AJAX на платформу WCF](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)

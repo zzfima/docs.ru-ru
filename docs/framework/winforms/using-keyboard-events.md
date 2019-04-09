@@ -9,12 +9,12 @@ helpviewer_keywords:
 - keyboard events
 - events [Windows Forms], keyboard
 ms.assetid: d3f3e14b-a459-4ee6-9875-8957e34f8ee9
-ms.openlocfilehash: 6afa68295c0119cd77b91185abcf2fb9cb407590
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 9aefe6be17e5d72c86c2c47bf0d373d0a081ca76
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719342"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59114274"
 ---
 # <a name="using-keyboard-events"></a>Использование событий клавиатуры
 В большинстве программ Windows Forms для обработки ввода с клавиатуры используются события клавиатуры. В этом разделе содержится обзор событий клавиатуры, включая сведения об использовании каждого события и данные, которые предоставляются для каждого события.  Также см. в разделе [Обзор обработчиков событий (Windows Forms)](event-handlers-overview-windows-forms.md) и [Общие сведения о событиях (Windows Forms)](events-overview-windows-forms.md).  
@@ -39,6 +39,7 @@ ms.locfileid: "57719342"
 |<xref:System.Windows.Forms.Control.KeyUp>|Это событие возникает, когда пользователь отпускает физическую клавишу.|Обработчик <xref:System.Windows.Forms.Control.KeyUp> получает:<br /><br /> <ul><li>Параметр <xref:System.Windows.Forms.KeyEventArgs>,<br /><br /> <ul><li>который предоставляет свойство <xref:System.Windows.Forms.KeyEventArgs.KeyCode%2A> (указывающее на физическую клавишу клавиатуры).</li><li>Свойство <xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> (SHIFT, CTRL или ALT).</li><li>Свойство <xref:System.Globalization.SortKey.KeyData%2A> (которое объединяет код клавиши и модификатор).</li></ul></li></ul>|  
   
 ## <a name="see-also"></a>См. также
+
 - [Ввод с клавиатуры в приложении Windows Forms](keyboard-input-in-a-windows-forms-application.md)
-- [Принцип работы ввода с клавиатуры](how-keyboard-input-works.md)
+- [Принцип работы ввод с клавиатуры](how-keyboard-input-works.md)
 - [Ввод данных мышью в приложении Windows Forms](mouse-input-in-a-windows-forms-application.md)

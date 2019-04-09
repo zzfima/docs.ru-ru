@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: 2f5d9e7c-ae51-4155-a435-54347aa1f091
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4ff7286eb104f36ceb5e1d9b30f4a265fb068d3e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2399f72b6efcdf69d8ff4bb3bce541073063c750
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564673"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096593"
 ---
 # <a name="marshalcleanuperror-mda"></a>marshalCleanupError MDA
 Помощник отладки управляемого кода (MDA) `marshalCleanupError` активируется, когда при попытке очистить временные структуры и память, используемые для маршалинга типов данных между границами машинного и управляемого кода, в среде CLR возникает ошибка.  
   
-## <a name="symptoms"></a>Признаки  
+## <a name="symptoms"></a>Симптомы  
  При переходах между машинным и управляемым кодом возникает утечка памяти, не восстанавливается состояние среды, например культура потока, либо возникают ошибки при очистке <xref:System.Runtime.InteropServices.SafeHandle>.  
   
 ## <a name="cause"></a>Причина  
@@ -37,7 +37,7 @@ ms.locfileid: "54564673"
 ## <a name="output"></a>Вывод  
  Сообщение с указанием операции, завершившейся со сбоем во время очистки.  
   
-## <a name="configuration"></a>Конфигурация  
+## <a name="configuration"></a>Параметр Configuration  
   
 ```xml  
 <mdaConfig>  
@@ -48,6 +48,7 @@ ms.locfileid: "54564673"
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Диагностика ошибок посредством помощников по отладке управляемого кода](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Диагностика ошибок посредством управляемых помощников по отладке](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
 - [Маршалинг взаимодействия](../../../docs/framework/interop/interop-marshaling.md)

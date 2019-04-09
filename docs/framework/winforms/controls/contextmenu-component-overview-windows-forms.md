@@ -8,12 +8,12 @@ helpviewer_keywords:
 - context menus [Windows Forms], ContextMenu component
 - shortcut menus [Windows Forms], ContextMenu component
 ms.assetid: 49d6398f-d3c4-4679-84fa-1de07b68b05e
-ms.openlocfilehash: 7da0522dae00608ead356484a31d219a67ec4ba9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2acbcc9197a630a993471c22e572a4f3ed682c64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545677"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090567"
 ---
 # <a name="contextmenu-component-overview-windows-forms"></a>Общие сведения о компоненте ContextMenu (Windows Forms)
 > [!IMPORTANT]
@@ -27,6 +27,7 @@ ms.locfileid: "54545677"
  Ключевое свойство <xref:System.Windows.Forms.ContextMenu> компонент является <xref:System.Windows.Forms.Menu.MenuItems%2A> свойство. Можно добавить элементы меню, создание программным путем <xref:System.Windows.Forms.MenuItem> объектов и добавления их в <xref:System.Windows.Forms.Menu.MenuItemCollection> контекстного меню. Так как элементы в контекстном меню, обычно являются производными от других меню, наиболее часто добавляются элементы в контекстное меню, скопировав их.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.ContextMenu>
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ContextMenuStrip>

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - coordinate systems
 - graphics [Windows Forms], vector graphics
 ms.assetid: 0195df81-66be-452d-bb53-5a582ebfdc09
-ms.openlocfilehash: a78030dd53f526e7d4403f4696ea54e881b60022
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d424254839db6c403bafe779f475c0e344918a5e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720414"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087967"
 ---
 # <a name="vector-graphics-overview"></a>Общие сведения о векторной графике
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Рисует линии, прямоугольники и других фигур в системе координат. Можно выбрать из различных систем координат, но система координат по умолчанию имеет начало координат в левом верхнем углу ось x вправо, а ось y направлена вниз. Единицы измерения в системе координат по умолчанию является пиксель.  
@@ -57,7 +57,8 @@ ms.locfileid: "57720414"
  [!code-vb[LinesCurvesAndShapes#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#11)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
-- [Линии, кривые и фигуры](lines-curves-and-shapes.md)
-- [Практическое руководство. Создание объектов Graphics для рисования](how-to-create-graphics-objects-for-drawing.md)
+- [Прямые и кривые линии и фигуры](lines-curves-and-shapes.md)
+- [Практическое руководство. Создание графических объектов для рисования](how-to-create-graphics-objects-for-drawing.md)

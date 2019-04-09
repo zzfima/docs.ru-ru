@@ -1,5 +1,5 @@
 ---
-title: Элемент <publisherPolicy>
+title: <publisherPolicy> Элемент
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/publisherPolicy
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4613407e-d0a8-4ef2-9f81-a6acb9fdc7d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: be87c91b798256f3913779bdbe36f3548066018b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 29932eb27bcd13876ea6982982e67341edb8e0de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55253942"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076293"
 ---
 # <a name="publisherpolicy-element"></a>\<publisherPolicy > элемент
 Указывает, применяет ли среда выполнения политику издателя.  
@@ -39,13 +39,13 @@ ms.locfileid: "55253942"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание:|  
+|Атрибут|Описание|  
 |---------------|-----------------|  
 |`apply`|Указывает, следует ли применять политики издателя.|  
   
 ## <a name="apply-attribute"></a>Применение атрибута  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |`yes`|Политика издателя применяется. Этот параметр используется по умолчанию.|  
 |`no`|Политика издателя не применяется.|  
@@ -86,6 +86,7 @@ ms.locfileid: "55253942"
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Обнаружение сборок в среде выполнения](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

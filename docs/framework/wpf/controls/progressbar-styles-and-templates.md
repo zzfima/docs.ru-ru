@@ -9,12 +9,12 @@ helpviewer_keywords:
 - templates [WPF], ProgressBar
 - states [WPF], ProgressBar
 ms.assetid: 935aa600-16e6-4947-a905-37a189a583dd
-ms.openlocfilehash: 7041a5497355a806894b0a0e0363fffde134aadb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f948cf2b4f4cd2a4cb73b0cd5fc754240c850b83
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377255"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099421"
 ---
 # <a name="progressbar-styles-and-templates"></a>Стили и шаблоны элемента ProgressBar
 В этом разделе описываются стили и шаблоны для <xref:System.Windows.Controls.ProgressBar> элемента управления. Вы можете изменить значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> предоставить уникальный внешний вид элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
@@ -22,7 +22,7 @@ ms.locfileid: "57377255"
 ## <a name="progressbar-parts"></a>Части элемента управления ProgressBar  
  В следующей таблице перечислены именованные части <xref:System.Windows.Controls.ProgressBar> элемента управления.  
   
-|Отделение|Тип|Описание:|  
+|Отделение|Тип|Описание|  
 |-|-|-|  
 |PART_Indicator|<xref:System.Windows.FrameworkElement>|Объект, который показывает ход выполнения.|  
 |PART_Track|<xref:System.Windows.FrameworkElement>|Объект, определяющий путь индикатора хода выполнения.|  
@@ -31,7 +31,7 @@ ms.locfileid: "57377255"
 ## <a name="progressbar-states"></a>Состояния элемента управления ProgressBar  
  В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.ProgressBar> элемента управления.  
   
-|Имя VisualState|Имя VisualStateGroup|Описание:|  
+|Имя VisualState|Имя VisualStateGroup|Описание|  
 |----------------------|---------------------------|-----------------|  
 |Определенный|CommonStates|<xref:System.Windows.Controls.ProgressBar> сообщает о ходе выполнения на основе <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> свойство.|  
 |Неопределенное|CommonStates|<xref:System.Windows.Controls.ProgressBar> показывает общий ход выполнения с повторяющийся шаблон.|  
@@ -51,9 +51,10 @@ ms.locfileid: "57377255"
  Полный пример см. в разделе [Пример задания стиля с помощью ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
-- [Стили и шаблоны элемента управления](control-styles-and-templates.md)
+- [Стили и шаблоны элемента Control](control-styles-and-templates.md)
 - [Настройка элементов управления](control-customization.md)
 - [Стилизация и использование шаблонов](styling-and-templating.md)
 - [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

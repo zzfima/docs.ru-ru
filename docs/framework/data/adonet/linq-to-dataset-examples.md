@@ -2,12 +2,12 @@
 title: Примеры LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: dfd91658-8d8a-45a4-a356-e327e809f21d
-ms.openlocfilehash: ae43111a5b56e1edf3e1b4089902a8ca1d822d0d
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 07ad4a993187c91babb74fae9d05f17b66c2098b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903801"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091698"
 ---
 # <a name="linq-to-dataset-examples"></a>Примеры LINQ to DataSet
 Этот раздел содержит LINQ примеры наборов данных, использующие стандартные операторы запросов. <xref:System.Data.DataSet> Используется в этих примерах заполняется с помощью `FillDataSet` метод, который указан в параметре [загрузка данных в DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md). Дополнительные сведения см. в разделе [Общие сведения о стандартных операторах запроса (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) или [Обзор операторов стандартных запросов (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
@@ -26,7 +26,7 @@ ms.locfileid: "55903801"
   
 -   [Операторы элементов](../../../../docs/framework/data/adonet/query-expression-syntax-examples-element-operators.md)  
   
--   [Операторы статистических выражений](../../../../docs/framework/data/adonet/query-expression-syntax-examples-aggregate-operators.md)  
+-   [Статистические операторы](../../../../docs/framework/data/adonet/query-expression-syntax-examples-aggregate-operators.md)  
   
 -   [Операторы соединения](../../../../docs/framework/data/adonet/query-expression-syntax-examples-join-operators.md)  
   
@@ -39,13 +39,13 @@ ms.locfileid: "55903801"
   
 -   [Упорядочение](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-ordering-linq-to-dataset.md)  
   
--   [Операторы задания](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-set-operators.md)  
+-   [Операторы набора](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-set-operators.md)  
   
 -   [Операторы преобразования](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-conversion-operators.md)  
   
 -   [Операторы элементов](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-element-operators.md)  
   
--   [Операторы статистических выражений](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-aggregate-operators.md)  
+-   [Статистические операторы](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-aggregate-operators.md)  
   
 -   [Join](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-join-linq-to-dataset.md)  
   
@@ -53,5 +53,6 @@ ms.locfileid: "55903801"
  Содержит примеры, в которых показано, как использовать метод <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> и класс <xref:System.Data.DataRowComparer>.  
   
 ## <a name="see-also"></a>См. также
+
 - [Руководство по программированию](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)
-- [Загрузка данных в DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
+- [Загрузка данных в набор данных](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)

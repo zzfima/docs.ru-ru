@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ScrollBar control [Windows Forms], about ScrollBar control
 - scroll bars [Windows Forms], about scroll bars
 ms.assetid: 8b307679-1cae-41d8-99aa-3d1efd207cd6
-ms.openlocfilehash: cba28acf7e8594cd8eef88436ddde86efacada36
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d4a7912a5781fc583357affa728f7d81059b5cf9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714103"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097321"
 ---
 # <a name="hscrollbar-and-vscrollbar-controls-overview-windows-forms"></a>Общие сведения об элементах управления HScrollBar и VScrollBar (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ScrollBar> элементы управления используются для обеспечения удобного просмотра длинных списков элементов или большого объема информации с либо горизонтальной или вертикальной прокрутки окна приложения либо элемента управления. Полосы прокрутки — это распространенный элемент интерфейса Windows, поэтому <xref:System.Windows.Forms.ScrollBar> управления часто используется с элементами управления, которые не являются производными от <xref:System.Windows.Forms.ScrollableControl> класса. Аналогично, многие разработчики решили внедрить <xref:System.Windows.Forms.ScrollBar> управления собственных пользовательских элементов управления.  
@@ -36,6 +36,7 @@ Windows Forms <xref:System.Windows.Forms.ScrollBar> элементы управ�
  Когда пользователь нажимает одну стрелки стрелками или нажимает одну из кнопок полосы прокрутки, <xref:System.Windows.Forms.ScrollBar.Value%2A> изменения свойств в соответствии с значением <xref:System.Windows.Forms.ScrollBar.SmallChange%2A> свойство.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.HScrollBar>
 - <xref:System.Windows.Forms.VScrollBar>
-- [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)
+- [Элементы управления для использования в формах Windows Forms](controls-to-use-on-windows-forms.md)

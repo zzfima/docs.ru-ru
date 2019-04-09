@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Назначение средства визуализации компоненту ToolStrip для приложения
+title: Практическое руководство. Задание средства визуализации компонента ToolStrip для приложения
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms]
 - toolbars [Windows Forms], customizing
 ms.assetid: 46acef3e-9844-4ae8-9a2e-3006fe99cadf
-ms.openlocfilehash: 8f3d2f2ed290c61c898a9f6159f213a8f68731ee
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 857d5ea3771b098d4edcbd7b24f1e6feaf3ec2cb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707291"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083080"
 ---
-# <a name="how-to-set-the-toolstrip-renderer-for-an-application"></a>Практическое руководство. Назначение средства визуализации компоненту ToolStrip для приложения
+# <a name="how-to-set-the-toolstrip-renderer-for-an-application"></a>Практическое руководство. Задание средства визуализации компонента ToolStrip для приложения
 Настройка внешнего вида элементов управления <xref:System.Windows.Forms.ToolStrip> может производиться отдельно для каждого из них или для всех элементов управления <xref:System.Windows.Forms.ToolStrip>, используемых в приложении.  
   
 ## <a name="example"></a>Пример  
@@ -45,6 +45,7 @@ ms.locfileid: "57707291"
  Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.ToolStripManager>
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>

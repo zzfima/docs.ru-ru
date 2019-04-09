@@ -10,12 +10,12 @@ helpviewer_keywords:
 - NotifyIcon component [Windows Forms], associating shortcut menus
 - shortcut menus [Windows Forms], for background processes
 ms.assetid: d68f3926-08d3-4f7d-949f-1981b29cf188
-ms.openlocfilehash: e9e50aee63ec36ac005daabed27c3ac3c42a4dc9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 702a848631ce45c0efcb8eadfdf64074b454ac7d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720388"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097994"
 ---
 # <a name="how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component"></a>Практическое руководство. Связывание контекстного меню с компонентом NotifyIcon в Windows Forms
 > [!NOTE]
@@ -127,8 +127,9 @@ contextMenu1 = gcnew System::Windows::Forms::ContextMenu();
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.NotifyIcon>
 - <xref:System.Windows.Forms.NotifyIcon.Icon%2A>
-- [Практическое руководство. Добавление значков приложения на панели задач с помощью компонента NotifyIcon в Windows Forms](app-icons-to-the-taskbar-with-wf-notifyicon.md)
+- [Практическое руководство. Добавление значков приложения на панель задач с помощью компонента NotifyIcon в Windows Forms](app-icons-to-the-taskbar-with-wf-notifyicon.md)
 - [Компонент NotifyIcon](notifyicon-component-windows-forms.md)
 - [Общие сведения о компоненте управления NotifyIcon](notifyicon-component-overview-windows-forms.md)

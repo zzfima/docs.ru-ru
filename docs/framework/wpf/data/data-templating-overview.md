@@ -10,12 +10,12 @@ helpviewer_keywords:
 - templates [WPF], data
 - data templates [WPF]
 ms.assetid: 0f4d9f8c-0230-4013-bd7b-e8e7fed01b4a
-ms.openlocfilehash: 58d723ccf86e4195674c132f9fb1b76f689f57b2
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.openlocfilehash: 98fff9ba84f386e93549fa94fe84f7b2b0fff5fd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055343"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097555"
 ---
 # <a name="data-templating-overview"></a>Общие сведения о шаблонах данных
 Модель шаблонов данных WPF предоставляет большую гибкость при определении представления данных. Элементы управления WPF имеют встроенные функции для поддержки настройки представления данных. В этом разделе сначала демонстрируется определение <xref:System.Windows.DataTemplate> , а затем предоставляются другие возможности шаблонов данных, такие как выбор шаблона на основе пользовательской логики и поддержка отображения иерархических данных.  
@@ -194,6 +194,7 @@ ms.locfileid: "59055343"
  ![Снимок экрана примера HierarchicalDataTemplate](./media/databinding-hierarchicaldatatemplate.png "DataBinding_HierarchicalDataTemplate")  
   
 ## <a name="see-also"></a>См. также
+
 - [Привязка данных](../advanced/optimizing-performance-data-binding.md)
 - [Поиск элементов, созданных с использованием шаблона DataTemplate](how-to-find-datatemplate-generated-elements.md)
 - [Стилизация и использование шаблонов](../controls/styling-and-templating.md)

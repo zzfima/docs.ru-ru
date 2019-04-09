@@ -6,12 +6,12 @@ helpviewer_keywords:
 - programming concepts [Windows Forms], Windows Forms controls
 - controls [Windows Forms], creating
 ms.assetid: 6277bb81-90f7-4c5b-9f4b-b02bb42dd316
-ms.openlocfilehash: 6a7009ead6ceba58c17579835d03254f259f8e51
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 21b8b08e56e8b4d48fb738b86247d3f04dc4150b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723075"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086446"
 ---
 # <a name="windows-forms-control-development-basics"></a>Основы разработки элементов управления форм Windows Forms
 Элемент управления Windows Forms — это класс, производный прямо или косвенно от <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. Ниже перечислены распространенные сценарии для разработки элементов управления Windows Forms.  
@@ -31,7 +31,8 @@ ms.locfileid: "57723075"
  Базовый класс для элементов управления Windows Forms, <xref:System.Windows.Forms.Control>, предоставляет базовую инфраструктуру, необходимую для визуального отображения в клиентские приложения на базе Windows. <xref:System.Windows.Forms.Control> предоставляет дескриптор окна, обрабатывает маршрутизацию сообщений и предоставляет интерфейс событий события клавиатуры и мыши, а также множество других пользователей. Он предоставляет дополнительный макет и имеет свойства, связанные с визуальным отображением, такие как <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>и многие другие. Кроме того он обеспечивает безопасность, работа с потоками поддержки и взаимодействия с элементами управления ActiveX. Поскольку существенная часть инфраструктуры предоставляется базовым классом, разрабатывать собственные элементы управления Windows Forms довольно просто.  
   
 ## <a name="see-also"></a>См. также
-- [Практическое руководство. Разработка элемента управления простого Windows Forms](how-to-develop-a-simple-windows-forms-control.md)
+
+- [Практическое руководство. Разработка простого элемента управления форм Windows Forms](how-to-develop-a-simple-windows-forms-control.md)
 - [Разработка составного элемента Windows Forms](developing-a-composite-windows-forms-control.md)
-- [Практическое руководство. Создание элемента управления Windows Forms, показывающего прогресс](how-to-create-a-windows-forms-control-that-shows-progress.md)
-- [Разновидности пользовательских элементов управления](varieties-of-custom-controls.md)
+- [Практическое руководство. Создание элемента управления, показывающего прогресс в форме Windows Forms](how-to-create-a-windows-forms-control-that-shows-progress.md)
+- [Создание собственных элементов управления](varieties-of-custom-controls.md)

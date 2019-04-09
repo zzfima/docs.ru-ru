@@ -7,12 +7,12 @@ helpviewer_keywords:
 - templates [WPF], inline
 - inline styles [WPF]
 ms.assetid: 69a1a3f9-acb5-4e2c-9c43-2e376c055ac4
-ms.openlocfilehash: 6225e1abd2b6bb8c3598b08bb2a717340c435e77
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b566e157e2d4a9e9be21a678541bf5d5341a898c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373391"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091438"
 ---
 # <a name="inline-styles-and-templates"></a>Встроенные стили и шаблоны
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет <xref:System.Windows.Style> объекты и объекты шаблона (<xref:System.Windows.FrameworkTemplate> подклассы) как способ определения внешнего вида элемента в ресурсах, так что они могут использоваться несколько раз. По этой причине атрибуты в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] , которые принимают типы <xref:System.Windows.Style> и <xref:System.Windows.FrameworkTemplate> почти всегда ссылки на ресурсы в существующие стили и шаблоны, а не определения новых.  
@@ -20,15 +20,15 @@ ms.locfileid: "57373391"
 ## <a name="limitations-of-inline-styles-and-templates"></a>Ограничения встроенные стили и шаблоны  
  В [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], свойства стиля и шаблона с технической точки зрения можно задать одним из двух способов. Можно использовать синтаксис атрибутов для ссылки на стиль, который был определен в ресурсе, например `<` *объект*`Style="{StaticResource`*myResourceKey*`}" .../>`. Или можно использовать синтаксис элемента свойства для определения встроенный стиль, например:  
   
- `<` *объект* `>`  
+ `<` *object* `>`  
   
- `<` *объект* `.Style>`  
+ `<` *object* `.Style>`  
   
  `<` `Style`  `.../>`  
   
- `</` *объект* `.Style>`  
+ `</` *object* `.Style>`  
   
- `</` *объект* `>`  
+ `</` *object* `>`  
   
  Использование атрибута является гораздо более распространенным. Стиль, определенный встроенным образом и не определенный в ресурсах, обязательно распространяется только на содержащий элемент и не может повторно использоваться так же легко, так как он не имеет ключа ресурса. В общем более универсален и полезен стиль, определенный ресурсом и соответствующим общим [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] программирования модели принцип разделения программной логики в коде, от проектирования в разметке.  
   
@@ -37,4 +37,5 @@ ms.locfileid: "57373391"
  Других синтаксисов, включаемые расширения разметки, которые возвращают объект возможны также стили и шаблоны. Два таких расширения, имеющие возможные сценарии включают в себя [TemplateBinding](templatebinding-markup-extension.md) и <xref:System.Windows.Data.Binding>.  
   
 ## <a name="see-also"></a>См. также
+
 - [Стилизация и использование шаблонов](../controls/styling-and-templating.md)

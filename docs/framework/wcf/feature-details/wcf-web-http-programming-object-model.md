@@ -2,12 +2,12 @@
 title: Объектная модель программирования WCF Web HTTP
 ms.date: 03/30/2017
 ms.assetid: ed96b5fc-ca2c-4b0d-bdba-d06b77c3cb2a
-ms.openlocfilehash: e15f616aa7ef9502176c5d508f8d8882e2a5bd47
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f1772220ed5f425ec603fd8927f4617446d106eb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54739369"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096014"
 ---
 # <a name="wcf-web-http-programming-object-model"></a>Объектная модель программирования WCF Web HTTP
 Модель программирования HTTP WCF WEB позволяет разработчикам предоставлять веб-службы Windows Communication Foundation (WCF) службам через базовые HTTP-запросы, не требуя использования SOAP. WCF модель программирования WEB HTTP построена на основе существующей модели расширяемости WCF. Она определяет следующие классы.  
@@ -28,7 +28,7 @@ ms.locfileid: "54739369"
   
 -   <xref:System.ServiceModel.Description.WebHttpBehavior>  
   
- **Служебные классы и точек расширения:**  
+ **Точки расширяемости классов Utility:**  
   
 -   <xref:System.UriTemplate>  
   
@@ -74,7 +74,7 @@ ms.locfileid: "54739369"
  Класс <xref:System.UriTemplateTable> представляет собой ассоциативный набор объектов <xref:System.UriTemplate>, привязанных к объекту, выбранному разработчиком. Он позволяет сопоставлять потенциальные универсальные идентификаторы ресурсов (URI) с содержащимися в наборе шаблонами и извлекать данные, связанные с шаблонами, для которых обнаружено соответствие. <xref:System.UriTemplateTable> используется внутренне классом модели программирования HTTP WCF WEB для сопоставления отдельных URI или их групп с операциями службы.  
   
 ## <a name="webservicehost"></a>WebServiceHost  
- <xref:System.ServiceModel.Web.WebServiceHost> расширяет <xref:System.ServiceModel.ServiceHost>, чтобы было проще размещать веб-службы, не использующие протокол SOAP. Если объект <xref:System.ServiceModel.Web.WebServiceHost> не обнаруживает конечные точки в описании службы, он автоматически создает конечную точку по умолчанию по базовому адресу службы. При создании конечной точки HTTP по умолчанию <xref:System.ServiceModel.Web.WebServiceHost> также отключает страницу справки HTTP и функцию GET языка WSDL, чтобы конечная точка метаданных не мешала конечной точке HTTP по умолчанию. <xref:System.ServiceModel.Web.WebServiceHost> также гарантирует, что все конечные точки, использующие <xref:System.ServiceModel.WebHttpBinding>, имеют требуемое вложение <xref:System.ServiceModel.Description.WebHttpBehavior>. Наконец <xref:System.ServiceModel.Web.WebServiceHost> автоматически настраивает привязку конечной точки для работы со связанными параметрами безопасности IIS при использовании в защищенном виртуальном каталоге.  
+ <xref:System.ServiceModel.Web.WebServiceHost> расширяет <xref:System.ServiceModel.ServiceHost> для упрощения размещения веб-службы без SOAP. Если объект <xref:System.ServiceModel.Web.WebServiceHost> не обнаруживает конечные точки в описании службы, он автоматически создает конечную точку по умолчанию по базовому адресу службы. При создании конечной точки HTTP по умолчанию <xref:System.ServiceModel.Web.WebServiceHost> также отключает страницу справки HTTP и функцию GET языка WSDL, чтобы конечная точка метаданных не мешала конечной точке HTTP по умолчанию. <xref:System.ServiceModel.Web.WebServiceHost> также гарантирует, что все конечные точки, использующие <xref:System.ServiceModel.WebHttpBinding> того необходимые <xref:System.ServiceModel.Description.WebHttpBehavior> подключен. Наконец <xref:System.ServiceModel.Web.WebServiceHost> автоматически настраивает привязку конечной точки для работы со связанными параметрами безопасности IIS при использовании в защищенном виртуальном каталоге.  
   
 ## <a name="webservicehostfactory"></a>WebServiceHostFactory  
  Класс <xref:System.ServiceModel.Activation.WebServiceHostFactory> служит для динамического создания объектов <xref:System.ServiceModel.Web.WebServiceHost>, когда служба размещается в службах IIS или в службе активации Windows (WAS). В отличие от служб с резидентным размещением, когда экземпляры <xref:System.ServiceModel.Web.WebServiceHost> создаются размещающим приложением, службы, размещенные в IIS или WAS, используют для создания объектов <xref:System.ServiceModel.Web.WebServiceHost> этот класс. Метод <xref:System.ServiceModel.Activation.WebServiceHostFactory.CreateServiceHost%28System.Type%2CSystem.Uri%5B%5D%29> вызывается при получении входящего запроса к службе.  
@@ -83,7 +83,7 @@ ms.locfileid: "54739369"
  Класс <xref:System.ServiceModel.Description.WebHttpBehavior> предоставляет необходимые модули форматирования, селекторы операций и другие объекты, необходимые для поддержки веб-служб на уровне модели службы. Все это реализуется в форме поведения конечной точки (используется совместно с <xref:System.ServiceModel.WebHttpBinding>) и позволяет задавать модули форматирования и селекторы для каждой конкретной точки, в результате чего одна реализация службы может быть представлена конечными точками SOAP и POX одновременно.  
   
 ### <a name="extending-webhttpbehavior"></a>Расширение WebHttpBehavior  
- Класс <xref:System.ServiceModel.Description.WebHttpBehavior> можно расширить с помощью нескольких виртуальных методов: <xref:System.ServiceModel.Description.WebHttpBehavior.GetOperationSelector%28System.ServiceModel.Description.ServiceEndpoint%29>, <xref:System.ServiceModel.Description.WebHttpBehavior.GetReplyClientFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>, <xref:System.ServiceModel.Description.WebHttpBehavior.GetRequestClientFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>, <xref:System.ServiceModel.Description.WebHttpBehavior.GetReplyDispatchFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29> и <xref:System.ServiceModel.Description.WebHttpBehavior.GetRequestDispatchFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>. Разработчики могут создать производный класс для <xref:System.ServiceModel.Description.WebHttpBehavior> и переопределить эти методы, чтобы изменить поведение по умолчанию.  
+ <xref:System.ServiceModel.Description.WebHttpBehavior> расширяется с помощью нескольких виртуальных методов: <xref:System.ServiceModel.Description.WebHttpBehavior.GetOperationSelector%28System.ServiceModel.Description.ServiceEndpoint%29>, <xref:System.ServiceModel.Description.WebHttpBehavior.GetReplyClientFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>, <xref:System.ServiceModel.Description.WebHttpBehavior.GetRequestClientFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>, <xref:System.ServiceModel.Description.WebHttpBehavior.GetReplyDispatchFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>, и <xref:System.ServiceModel.Description.WebHttpBehavior.GetRequestDispatchFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>. Разработчики могут создать производный класс для <xref:System.ServiceModel.Description.WebHttpBehavior> и переопределить эти методы, чтобы изменить поведение по умолчанию.  
   
  <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> - пример расширения <xref:System.ServiceModel.Description.WebHttpBehavior>. <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> позволяет конечным точкам Windows Communication Foundation (WCF) получать HTTP-запросы от клиента ASP.NET AJAX на основе веб-обозревателя. [Служба AJAX с помощью HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md) является примером использования этой точки расширяемости.  
   
@@ -100,9 +100,10 @@ ms.locfileid: "54739369"
  Поскольку модель программирования HTTP WCF WEB не поддерживает WS-* протоколы, единственным способом защиты веб-службы, построенных на основе модели программирования WCF WEB HTTP является предоставление доступа к ней с помощью протокола SSL. Дополнительные сведения о настройке SSL с [!INCLUDE[iisver](../../../../includes/iisver-md.md)] см. в разделе [реализация SSL-сертификата в IIS](https://go.microsoft.com/fwlink/?LinkId=131613)  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.WebHttpBinding>
 - <xref:System.ServiceModel.Web.WebGetAttribute>
 - <xref:System.ServiceModel.Web.WebInvokeAttribute>
 - <xref:System.ServiceModel.Description.WebHttpBehavior>
 - <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector>
-- [Общие сведения о модели веб-программирования HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+- [Общие сведения о модели программирования WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)

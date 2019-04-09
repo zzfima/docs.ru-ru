@@ -2,12 +2,12 @@
 title: Сведения о производительности (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
-ms.openlocfilehash: 4b6d3d4dbf801a7b0cc378482ad4d0d29a915be3
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
-ms.translationtype: MT
+ms.openlocfilehash: d0ee92b96a22b0ecb59ee76fb2f2e9d64442ce22
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904799"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087954"
 ---
 # <a name="performance-considerations-entity-framework"></a>Сведения о производительности (Entity Framework)
 В этом подразделе описаны характеристики производительности платформы ADO.NET Entity Framework, а также приведены соображения по повышению производительности приложений платформы Entity Framework.  
@@ -147,11 +147,12 @@ ms.locfileid: "55904799"
 ## <a name="performance-data"></a>Данные производительности  
  Некоторые данные производительности для платформы Entity Framework опубликованы в приведенных ниже сообщениях на [блога группы разработчиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=91905):  
   
--   [Обзор производительности платформы ADO.NET Entity Framework — часть 1](https://go.microsoft.com/fwlink/?LinkId=123907)  
+-   [Exploring the Performance of the ADO.NET Entity Framework - Part 1](https://go.microsoft.com/fwlink/?LinkId=123907)  
   
--   [Обзор производительности платформы ADO.NET Entity Framework — часть 2](https://go.microsoft.com/fwlink/?LinkId=123909)  
+-   [Exploring the Performance of the ADO.NET Entity Framework - Part 2](https://go.microsoft.com/fwlink/?LinkId=123909)  
   
--   [Сравнение производительности платформы ADO.NET Entity Framework](https://go.microsoft.com/fwlink/?LinkID=123913)  
+-   [ADO.NET Entity Framework Performance Comparison](https://go.microsoft.com/fwlink/?LinkID=123913)  
   
 ## <a name="see-also"></a>См. также
+
 - [Вопросы разработки и развертывания](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)

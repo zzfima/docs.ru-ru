@@ -1,18 +1,18 @@
 ---
-title: Как выполнить Публикация метаданных для службы в коде
+title: Практическое руководство. Публикация метаданных для службы с использованием кода
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 51407e6d-4d87-42d5-be7c-9887b8652006
-ms.openlocfilehash: ad09f49b933edfc4df107a02e124eaaa5ddd3d73
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 5c17f5c399335a2c7cbcc6f4474982de591dd453
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608538"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098007"
 ---
-# <a name="how-to-publish-metadata-for-a-service-using-code"></a>Как выполнить Публикация метаданных для службы в коде
+# <a name="how-to-publish-metadata-for-a-service-using-code"></a>Практическое руководство. Публикация метаданных для службы с использованием кода
 Это один из двух практических руководств, в которых рассматривается публикация метаданных для службы Windows Communication Foundation (WCF). Существуют два способа указать, как служба должна публиковать метаданные: с помощью файла конфигурации и с помощью кода. В этом разделе показано, как публиковать метаданные для службы с помощью кода.  
   
 > [!CAUTION]
@@ -43,7 +43,7 @@ ms.locfileid: "54608538"
      [!code-csharp[htPublishMetadataCode#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#4)]
      [!code-vb[htPublishMetadataCode#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#4)]  
   
-4.  Задайте свойству <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> значение `true.`  
+4.  Задать <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> свойства `true.`  
   
      [!code-csharp[htPublishMetadataCode#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#5)]
      [!code-vb[htPublishMetadataCode#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#5)]  
@@ -87,8 +87,9 @@ ms.locfileid: "54608538"
  [!code-vb[htPublishMetadataCode#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#11)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Практическое руководство. Размещение службы WCF в управляемом приложении](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
 - [Резидентное размещение](../../../../docs/framework/wcf/samples/self-host.md)
 - [Общие сведения об архитектуре метаданных](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
 - [Использование метаданных](../../../../docs/framework/wcf/feature-details/using-metadata.md)
-- [Практическое руководство. Публикация метаданных для службы с помощью файла конфигурации](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [Практическое руководство. Публикация метаданных для службы с использованием файла конфигурации](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)

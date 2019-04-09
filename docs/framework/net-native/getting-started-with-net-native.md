@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 576c7c10b5ce36092dae7ab9cd7d973568168260
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
-ms.translationtype: MT
+ms.openlocfilehash: 1ff4db5216cf984af764176fef636bb586f97c2a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220956"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081493"
 ---
 # <a name="getting-started-with-net-native"></a>Начало работы с машинным кодом .NET
 При разработке нового приложения для Windows 10 или при миграции существующего приложения Магазина Windows можно использовать один и тот же набор процедур. Чтобы создать приложение [!INCLUDE[net_native](../../../includes/net-native-md.md)] , выполните следующие действия:  
@@ -59,9 +59,9 @@ ms.locfileid: "56220956"
  **Методы, основанные на отражении**  
  В некоторых случаях использование отражения в коде не очевидно. Некоторые общие интерфейсы API или шаблоны программирования не считаются частью API-интерфейса отражения, но используют отражение для успешного выполнения. К ним относятся следующие методы создания экземпляров типов и методы создания методов:  
   
--   метод <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType>;  
+-   метод <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> ;  
   
--   методы <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> и <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType>  
+-   методы <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> и <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType>   
   
 -   метод <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> ;  
   
@@ -106,17 +106,18 @@ ms.locfileid: "56220956"
   
  Конкретные примеры обработки исключений и других проблем, возникающих при тестировании приложения, см. в:  
   
--   [Пример: Обработка исключений при привязке данных](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
+-   [Пример Обработка исключений при привязке данных](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
   
--   [Пример: Устранение неполадок динамического программирования](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)  
+-   [Пример Устранение неполадок динамического программирования](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)  
   
 -   [Исключения среды выполнения в собственных приложениях .NET](../../../docs/framework/net-native/runtime-exceptions-in-net-native-apps.md)  
   
 ## <a name="see-also"></a>См. также
-- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Установка .NET и конфигурация](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
-- [.NET Native и компиляция](../../../docs/framework/net-native/net-native-and-compilation.md)
-- [Отражение и .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)
+
+- [Ссылка на файл конфигурации директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Установка и конфигурация машинного кода .NET](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
+- [Машинный код .NET и компиляция](../../../docs/framework/net-native/net-native-and-compilation.md)
+- [Отражение и машинный код .NET](../../../docs/framework/net-native/reflection-and-net-native.md)
 - [API-интерфейсы, основанные на отражении](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)
 - [Сериализация и метаданные](../../../docs/framework/net-native/serialization-and-metadata.md)
-- [Миграция приложения для Магазина Windows в .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)
+- [Миграция приложения для магазина Windows в машинный код .NET](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)

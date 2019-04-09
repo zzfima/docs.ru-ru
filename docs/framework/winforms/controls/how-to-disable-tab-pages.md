@@ -9,12 +9,12 @@ helpviewer_keywords:
 - tab pages [Windows Forms], hiding in forms
 - TabControl control [Windows Forms], disabling pages
 ms.assetid: adcc6618-8a34-4ee1-bbe3-47e732de6a59
-ms.openlocfilehash: a2a0f4084529b1dd2618c1cd6171ee45b8f569d3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: ace713a635b5d9c4b73f85cd3d378c0f1ff3dba1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705003"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107579"
 ---
 # <a name="how-to-disable-tab-pages"></a>Практическое руководство. Блокировка доступа ко вкладкам
 В некоторых случаях требуется ограничить доступ к данным, которые можно использовать в приложении Windows Forms. Примером этого могут быть, когда у вас есть данные, отображаемые на страницах вкладок элемента управления вкладки; Администраторы могут иметь сведения на странице вкладки, который требуется запретить гостей или пользователей более низкого уровня.  
@@ -102,7 +102,8 @@ ms.locfileid: "57705003"
     ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения об элементе управления TabControl](tabcontrol-control-overview-windows-forms.md)
 - [Практическое руководство. Добавление элемента управления на вкладку](how-to-add-a-control-to-a-tab-page.md)
-- [Практическое руководство. Добавление и удаление вкладок с помощью Windows Forms TabControl](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+- [Практическое руководство. Добавление и удаление вкладок с помощью элемента управления TabControl в Windows Forms](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
 - [Практическое руководство. Изменение внешнего вида элемента управления TabControl в Windows Forms](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

@@ -2,12 +2,12 @@
 title: Подписывание хранимых процедур в SQL Server
 ms.date: 01/05/2018
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
-ms.openlocfilehash: da7b21d725d301006288245c940e4367c3ce8568
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 1caf3de06a03d4eab97e68ac1ecdc00dacdd5dc8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606826"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094623"
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>Подписывание хранимых процедур в SQL Server
  Цифровая сигнатура представляет собой хэш-код данных, зашифрованную при помощи закрытого ключа лица, ставящего свою сигнатуру. Закрытый ключ обеспечивает уникальность цифровой сигнатуры его владельцу. Можно подписывать хранимые процедуры, функции (за исключением встроенных функций с табличным), триггеры и сборки.  
@@ -55,6 +55,7 @@ ms.locfileid: "54606826"
 |[Подписывание хранимых процедур с помощью сертификата](/sql/relational-databases/tutorial-signing-stored-procedures-with-a-certificate) в электронной документации по SQL Server|Предоставляет учебник для подписания хранимой процедуры с помощью сертификата.|  
   
 ## <a name="see-also"></a>См. также
+
 - [Защита приложений ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Общие сведения о безопасности SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
 - [Сценарии безопасности приложений в SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
@@ -62,4 +63,4 @@ ms.locfileid: "54606826"
 - [Написание безопасного динамического кода SQL в SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)
 - [Настройка разрешений с олицетворением в SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)
 - [Изменение данных с помощью хранимых процедур](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

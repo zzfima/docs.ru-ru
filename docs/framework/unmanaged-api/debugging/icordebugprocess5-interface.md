@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a105ca8838820b62e81dae4c0149734339bed7a8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b5904083be66d4bd6dc69729bebc28db8a800e77
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620218"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089242"
 ---
 # <a name="icordebugprocess5-interface"></a>Интерфейс ICorDebugProcess5
 Расширяет интерфейс ICorDebugProcess для поддержки доступа к управляемой куче, для предоставления сведений о сборке мусора управляемых объектов, и чтобы определить, является ли отладчик загружает изображения из кэша образов в машинном коде локального приложения.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание:|  
+|Метод|Описание|  
 |------------|-----------------|  
 |[Метод EnableNGenPolicy](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enablengenpolicy-method.md)|Задает значение, определяющее, каким образом приложение загружает образы в машинном коде во время работы под контролем управляемого отладчика.|  
 |[Метод EnumerateGCReferences](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md)|Получает перечислитель для всех объектов, которые должны быть удалены сборщиком мусора в процессе.|  
@@ -59,5 +59,6 @@ ms.locfileid: "54620218"
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)

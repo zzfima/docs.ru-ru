@@ -5,12 +5,12 @@ helpviewer_keywords:
 - drag and drop [Windows Forms], Windows Forms
 - Windows Forms, drag and drop
 ms.assetid: 65cd2c03-8782-474e-b958-cbe43eeb902c
-ms.openlocfilehash: 9c8580f61bcb311ca6b2e1cc2a11b4d4a4dbe79c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 437b632706b27cd487d60c2ad23db3f9a3c96c09
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719420"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108021"
 ---
 # <a name="drag-and-drop-functionality-in-windows-forms"></a>Функциональная возможность перетаскивания в Windows Forms
 Windows Forms включает набор методов, событий и классов, реализующих режим перетаскивания. В этом разделе приводится обзор поддержки перетаскивания в Windows Forms.  Также см. в разделе [и-операции перетаскивания и поддержка буфера обмена](./advanced/drag-and-drop-operations-and-clipboard-support.md).  
@@ -24,7 +24,7 @@ Windows Forms включает набор методов, событий и кл
 ### <a name="events-on-the-current-target"></a>События в текущем целевом объекте  
  В приведенной ниже таблице перечислены события, возникающие в текущем целевом объекте операции перетаскивания.  
   
-|Событие мыши|Описание:|  
+|Событие мыши|Описание|  
 |-----------------|-----------------|  
 |<xref:System.Windows.Forms.Control.DragEnter>|Это событие происходит при перетаскивании объекта внутрь границ элемента управления. Обработчик этого события принимает аргумент типа <xref:System.Windows.Forms.DragEventArgs>.|  
 |<xref:System.Windows.Forms.Control.DragOver>|Это событие происходит при перетаскивании объекта, пока указатель мыши находится в пределах границ элемента управления. Обработчик этого события принимает аргумент типа <xref:System.Windows.Forms.DragEventArgs>.|  
@@ -44,4 +44,5 @@ Windows Forms включает набор методов, событий и кл
  В классе <xref:System.Windows.Forms.QueryContinueDragEventArgs> содержится текущее состояние кнопок мыши и клавиш-модификаторов, значение, указывающее, была ли нажата клавиша ESC, и значение <xref:System.Windows.Forms.DragAction>, с помощью которого можно указать, следует ли продолжать операцию перетаскивания.  
   
 ## <a name="see-also"></a>См. также
+
 - [Ввод данных мышью в приложении Windows Forms](mouse-input-in-a-windows-forms-application.md)

@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Отображение изображений в ячейках элемента управления DataGridView в Windows Forms
+title: Практическое руководство. Вывод изображений в ячейках элемента управления DataGridView в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], displaying images
 - data grids [Windows Forms], displaying images in cells
 ms.assetid: 53b13d31-1b56-476d-9ab4-18bfac138a22
-ms.openlocfilehash: 280f274a0957f098add7fbf2e3b919c33c4c5233
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 90aaff419ecc2c890a8b3802f3aaf12092febb73
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704414"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083001"
 ---
-# <a name="how-to-display-images-in-cells-of-the-windows-forms-datagridview-control"></a>Практическое руководство. Отображение изображений в ячейках элемента управления DataGridView в Windows Forms
+# <a name="how-to-display-images-in-cells-of-the-windows-forms-datagridview-control"></a>Практическое руководство. Вывод изображений в ячейках элемента управления DataGridView в Windows Forms
 Рисунок или изображение — одно из значений, которые можно отобразить в строку данных. Часто эти графики принимать форму фотографию сотрудника или логотип компании.  
   
  Применение рисунков очень просто при отображении данных в пределах <xref:System.Windows.Forms.DataGridView> элемента управления. <xref:System.Windows.Forms.DataGridView> В собственном коде обработки любого формата изображений, поддерживаемых элементом управления <xref:System.Drawing.Image> класса, а также OLE рисунка формат, используемый в некоторых базах данных.  
@@ -40,6 +40,7 @@ ms.locfileid: "57704414"
 -   ссылки на сборки <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType> и <xref:System.Drawing?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.DataGridView>
 - [Базовые характеристики столбцов, строк и ячеек элемента управления DataGridView в Windows Forms](basic-column-row-and-cell-features-wf-datagridview-control.md)
-- [Практическое руководство. Настройка форматирования данных в элементе управления DataGridView Windows Forms](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)
+- [Практическое руководство. Настройка форматирования данных элемента управления DataGridView в Windows Forms](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)

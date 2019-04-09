@@ -8,12 +8,12 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: d9ce3040-3e21-4e2d-80ae-b430982b2db8
-ms.openlocfilehash: 86184fa92917c53d95da21732a7c52cdd08079ee
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 133190426229a10ed6f637293326c229e808bfdb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702845"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084028"
 ---
 # <a name="how-to-add-buttons-to-a-toolbar-control-using-the-designer"></a>Практическое руководство. Добавление кнопок в элемент управления ToolBar с помощью конструктора
 > [!NOTE]
@@ -36,7 +36,7 @@ ms.locfileid: "57702845"
   
 4.  Настройте свойства отдельных кнопок в **свойства** окно, которое появляется в области в правой части редактора. В следующей таблице показаны некоторые важные свойства.  
   
-    |Свойство.|Описание:|  
+    |Свойство|Описание|  
     |--------------|-----------------|  
     |<xref:System.Windows.Forms.ToolBarButton.DropDownMenu%2A>|Задает меню, отображаемое кнопкой с раскрывающимся списком. Кнопки панели инструментов <xref:System.Windows.Forms.ToolBarButton.Style%2A> свойству должно быть присвоено <xref:System.Windows.Forms.ToolBarButtonStyle.DropDownButton>. Это свойство принимает экземпляр <xref:System.Windows.Forms.ContextMenu> класс как ссылка.|  
     |<xref:System.Windows.Forms.ToolBarButton.PartialPush%2A>|Задает, является ли кнопка-переключатель в нейтральном положении. Кнопки панели инструментов <xref:System.Windows.Forms.ToolBarButton.Style%2A> свойству должно быть присвоено <xref:System.Windows.Forms.ToolBarButtonStyle.ToggleButton>.|  
@@ -48,8 +48,9 @@ ms.locfileid: "57702845"
 5.  Нажмите кнопку **ОК** чтобы закрыть диалоговое окно и создать панели, вы указали.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.ToolBar>
-- [Практическое руководство. Определение значка для кнопки панели инструментов](how-to-define-an-icon-for-a-toolbar-button.md)
-- [Практическое руководство. Триггер событий меню для кнопок панели инструментов](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [Практическое руководство. Определение значка для кнопки элемента управления ToolBar](how-to-define-an-icon-for-a-toolbar-button.md)
+- [Практическое руководство. Генерирование событий меню для кнопок элемента управления Toolbar](how-to-trigger-menu-events-for-toolbar-buttons.md)
 - [Общие сведения об элементе управления ToolBar](toolbar-control-overview-windows-forms.md)
 - [Элемент управления ToolBar](toolbar-control-windows-forms.md)

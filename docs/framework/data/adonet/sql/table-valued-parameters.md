@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: 130b5338b14bc7c1f36feb620d549295867ef64e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d1d52e048ee54ce967215ad134d5bcff2983103e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527774"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113624"
 ---
 # <a name="table-valued-parameters"></a>Возвращающие табличное значение параметры
 Возвращающие табличное значение параметры обеспечивают легкий способ упаковки строк данных из клиентского приложения в SQL Server, не требуя многочисленных циклов приема-передачи или специальной логики на стороне сервера для обработки данных. Возвращающие табличное значение параметры можно использовать для инкапсуляции строк данных в клиентском приложении и отправки данных на сервер с помощью одной параметризированной команды. Входящие строки данных сохраняются в табличной переменной, с которой затем можно работать, используя язык [!INCLUDE[tsql](../../../../../includes/tsql-md.md)].  
@@ -22,7 +22,7 @@ ms.locfileid: "54527774"
   
  Дополнительные сведения о возвращающих табличное значение параметрах см. в приведенных ниже ресурсах.  
   
-|Ресурс|Описание:|  
+|Ресурс|Описание|  
 |--------------|-----------------|  
 |[Возвращающие табличные значения параметров (ядро СУБД)](https://go.microsoft.com/fwlink/?LinkId=98363) в электронной документации по SQL Server|Описывается создание и использование возвращающих табличное значение параметров.|  
 |[Определяемые пользователем табличные типы](https://go.microsoft.com/fwlink/?LinkId=98364) в электронной документации по SQL Server|Описывается использование определяемых пользователем табличных типов, предназначенных для объявления возвращающих табличное значение параметров.|  
@@ -273,8 +273,9 @@ insertCommand.ExecuteNonQuery()
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Настройка параметров и типы данных параметров](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
 - [Команды и параметры](../../../../../docs/framework/data/adonet/commands-and-parameters.md)
 - [Параметры DataAdapter](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)
 - [Операции данных SQL Server Data в ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,13 +1,13 @@
 ---
-title: Элемент <schemeSettings> (параметры URI)
+title: <schemeSettings> (Параметры Uri)
 ms.date: 03/30/2017
 ms.assetid: 0ae45c6e-8c4c-4c0d-8b9f-a93824648890
-ms.openlocfilehash: 06cb07b1620a603f0c0cf67a9236be143c2ec4a2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 8dc505d8a9de4e8939372af61b23652551c36530
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260204"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094239"
 ---
 # <a name="schemesettings-element-uri-settings"></a>\<schemeSettings > (параметры Uri)
 Определяет, как <xref:System.Uri> анализируется для определенных схем.  
@@ -34,14 +34,14 @@ ms.locfileid: "55260204"
 |**Элемент**|**Описание**|  
 |-----------------|---------------------|  
 |[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-schemesettings-uri-settings.md)|Добавляет параметр схемы для имени схемы.|  
-|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-schemesettings-uri-settings.md)|Удаляет все существующие параметры схемы.|  
+|[очистить](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-schemesettings-uri-settings.md)|Удаляет все существующие параметры схемы.|  
 |[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-schemesettings-uri-settings.md)|Удаляет параметр схемы для имени схемы.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |**Элемент**|**Описание**|  
 |-----------------|---------------------|  
-|[URI](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|Содержит параметры, определяющие, каким образом платформа .NET Framework обрабатывает веб-адреса, выраженные с использованием универсальных кодов ресурсов (URI).|  
+|[uri](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|Содержит параметры, определяющие, каким образом платформа .NET Framework обрабатывает веб-адреса, выраженные с использованием универсальных кодов ресурсов (URI).|  
   
 ## <a name="remarks"></a>Примечания  
  По умолчанию <xref:System.Uri?displayProperty=nameWithType> знаком процента Отмена переходов класс разделители пути до выполнения сжатия пути. Это было реализовано в качестве механизма защиты от атак, следующим образом:  
@@ -84,6 +84,7 @@ ms.locfileid: "55260204"
 |Может быть пустым||  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>
 - <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>
 - <xref:System.Configuration.UriSection?displayProperty=nameWithType>

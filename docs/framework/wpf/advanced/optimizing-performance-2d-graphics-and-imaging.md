@@ -1,5 +1,5 @@
 ---
-title: 'Оптимизация производительности: двумерная графика и изображения'
+title: 'Оптимизация производительности: Двумерная графика и изображения'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,24 +12,23 @@ helpviewer_keywords:
 - 2-D graphics [WPF]
 - images [WPF], optimizing performance
 ms.assetid: e335601e-28c8-4d64-ba27-778fffd55f72
-ms.openlocfilehash: 6ec03775f42e7f7a60d182eba134f9e1f7ba8466
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4fca9231872a268470c9bcfa73e7a0c0a26d300c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371402"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074993"
 ---
-# <a name="optimizing-performance-2d-graphics-and-imaging"></a>Оптимизация производительности: двумерная графика и изображения
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет широкий спектр функциональных возможностей двумерной графики и изображений, которые можно оптимизировать для требований приложения. Этот раздел содержит сведения об оптимизации производительности в этих областях.  
-  
-  
+# <a name="optimizing-performance-2d-graphics-and-imaging"></a>Оптимизация производительности: Двумерная графика и изображения
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет широкий спектр двумерная графика и возможность обработки изображений, которые можно оптимизировать для требований приложения. Этот раздел содержит сведения об оптимизации производительности в этих областях.  
+
 <a name="Drawing_and_Shapes"></a>   
 ## <a name="drawing-and-shapes"></a>Рисование и фигуры  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет оба <xref:System.Windows.Media.Drawing> и <xref:System.Windows.Shapes.Shape> объектов для представления графического контента. Тем не менее <xref:System.Windows.Media.Drawing> объекты являются более простыми конструкциями, чем <xref:System.Windows.Shapes.Shape> объектов и обеспечивают лучшие показатели производительности.  
   
  Объект <xref:System.Windows.Shapes.Shape> позволяет нарисовать графическую фигуру на экране. Так как они являются производными от <xref:System.Windows.FrameworkElement> класс, <xref:System.Windows.Shapes.Shape> объекты могут использоваться внутри панелей и большинства элементов управления.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет несколько уровней доступа к службам для работы с графикой и службам рендеринга. На верхнем уровне <xref:System.Windows.Shapes.Shape> объекты просты в использовании и предоставляют множество полезных функций, таких как макет и обработка событий. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет ряд готовых к использованию объектов Shape. Все объекты фигур наследуются от <xref:System.Windows.Shapes.Shape> класса. Доступные объекты фигур включают <xref:System.Windows.Shapes.Ellipse>, <xref:System.Windows.Shapes.Line>, <xref:System.Windows.Shapes.Path>, <xref:System.Windows.Shapes.Polygon>, <xref:System.Windows.Shapes.Polyline>, и <xref:System.Windows.Shapes.Rectangle>.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет несколько уровней доступа к графикой и службам рендеринга. На верхнем уровне <xref:System.Windows.Shapes.Shape> объекты просты в использовании и предоставляют множество полезных функций, таких как макет и обработка событий. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет ряд готовых к использованию фигуры. Все объекты фигур наследуются от <xref:System.Windows.Shapes.Shape> класса. Доступные объекты фигур включают <xref:System.Windows.Shapes.Ellipse>, <xref:System.Windows.Shapes.Line>, <xref:System.Windows.Shapes.Path>, <xref:System.Windows.Shapes.Polygon>, <xref:System.Windows.Shapes.Polyline>, и <xref:System.Windows.Shapes.Rectangle>.  
   
  <xref:System.Windows.Media.Drawing> объекты, с другой стороны, не являющихся производными от <xref:System.Windows.FrameworkElement> класса и предоставляют упрощенную реализацию отрисовки фигур, изображений и текста.  
   
@@ -67,7 +66,7 @@ ms.locfileid: "57371402"
   
 <a name="Images"></a>   
 ## <a name="images"></a>Изображений  
- Обработка изображений в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] значительно улучшилась по сравнению с возможностями обработки изображений в предыдущих версиях [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. Возможности обработки изображений, например вывод растрового изображения или использование изображения в общем элементе управления, в основном управлялись интерфейсом графических устройств (GDI) Microsoft Windows или Microsoft Windows GDI и программным интерфейсом (API). Эти API обеспечивали базовые функции обработки изображений, но в них отсутствовали такие возможности, как поддержка расширяемости кодеков и изображений высокого качества. API обработки изображений WPF был переработан для преодоления недостатков GDI и GDI+ и теперь предоставляет новый набор API для отображения и использования изображений в приложениях.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Создание образов значительно улучшилась по сравнению с возможностями обработки изображений в предыдущих версиях [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. Возможности обработки изображений, например вывод растрового изображения или использование изображения в общем элементе управления, в основном управлялись интерфейсом графических устройств (GDI) Microsoft Windows или Microsoft Windows GDI и программным интерфейсом (API). Эти API обеспечивали базовые функции обработки изображений, но в них отсутствовали такие возможности, как поддержка расширяемости кодеков и изображений высокого качества. API обработки изображений WPF был переработан для преодоления недостатков GDI и GDI+ и теперь предоставляет новый набор API для отображения и использования изображений в приложениях.  
   
  При использовании изображений учитывайте следующие рекомендации, позволяющие повысить производительность.  
   
@@ -100,13 +99,14 @@ ms.locfileid: "57371402"
  [!code-vb[RenderOptions#RenderOptionsSnippet3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RenderOptions/visualbasic/window1.xaml.vb#renderoptionssnippet3)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Улучшение производительности приложений WPF](optimizing-wpf-application-performance.md)
 - [Планирование производительности приложения](planning-for-application-performance.md)
 - [Использование преимуществ оборудования](optimizing-performance-taking-advantage-of-hardware.md)
 - [Разметка и разработка](optimizing-performance-layout-and-design.md)
 - [Поведение объекта](optimizing-performance-object-behavior.md)
 - [Ресурсы приложений](optimizing-performance-application-resources.md)
-- [Text](optimizing-performance-text.md)
+- [Текста](optimizing-performance-text.md)
 - [Привязка данных](optimizing-performance-data-binding.md)
 - [Дополнительные рекомендации по повышению производительности](optimizing-performance-other-recommendations.md)
 - [Советы и рекомендации по анимации](../graphics-multimedia/animation-tips-and-tricks.md)

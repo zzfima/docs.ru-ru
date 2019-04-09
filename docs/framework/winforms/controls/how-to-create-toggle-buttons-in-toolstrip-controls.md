@@ -9,12 +9,12 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolStrip control [Windows Forms], creating toggle buttons
 ms.assetid: d9c197df-4c65-43f2-beee-b68b52b2befc
-ms.openlocfilehash: a059726ea410e88121a0b755295c3c492c11962a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e688e9a220e6c82caa2d107589b5ca9a1e59e72b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705523"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091256"
 ---
 # <a name="how-to-create-toggle-buttons-in-toolstrip-controls"></a>Практическое руководство. Создание переключателей в элементах управления ToolStrip
 Когда пользователь щелкает кнопку-переключатель, он отображается углубленным и остается таковым, пока пользователь не щелкнет кнопку еще раз.  
@@ -36,5 +36,6 @@ ms.locfileid: "57705523"
     ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.ToolStripButton>
 - [Общие сведения об элементе управления ToolStrip](toolstrip-control-overview-windows-forms.md)

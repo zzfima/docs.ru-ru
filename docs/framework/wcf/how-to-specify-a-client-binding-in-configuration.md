@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Указание привязки клиента в конфигурации
+title: Практическое руководство. Указание привязки клиента в конфигурации
 ms.date: 03/30/2017
 ms.assetid: 4a7c79aa-50ee-4991-891e-adc0599323a7
-ms.openlocfilehash: 2441b307961079c28e114b4fed69c252ff42e0d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 81e9b4b5949d3a89749911a30ad199c4f0da300f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606391"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091568"
 ---
-# <a name="how-to-specify-a-client-binding-in-configuration"></a>Как выполнить Указание привязки клиента в конфигурации
+# <a name="how-to-specify-a-client-binding-in-configuration"></a>Практическое руководство. Указание привязки клиента в конфигурации
 В этом примере создается клиентское консольное приложение, предназначенное для использования службы калькулятора, и привязка этого клиента задается декларативно в конфигурации. Клиент обращается к службе `CalculatorService`, которая реализует интерфейс `ICalculator`; как служба, так и клиент используют класс <xref:System.ServiceModel.BasicHttpBinding>.  
   
  В приведенной процедуре предполагается, что служба калькулятора работает. Сведения о том, как создать службу, см. в разделе [как: Указание привязки службы в конфигурации](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md). Он также использует [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) что Windows Communication Foundation (WCF) предоставляет для автоматического создания компонентов клиента. Инструмент создает код и конфигурацию клиента для доступа к службе.  
@@ -51,4 +51,5 @@ ms.locfileid: "54606391"
 6.  Скомпилируйте и запустите клиент.  
   
 ## <a name="see-also"></a>См. также
+
 - [Использование привязок для настройки служб и клиентов](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

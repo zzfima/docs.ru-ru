@@ -12,18 +12,16 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 859e586d6cb0b334a7ad766de5d3aabb0e1864ac
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 36cfcaca5ae49c87916f6d7c769c878c4321247f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365845"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091620"
 ---
 # <a name="wpf-add-ins-overview"></a>Общие сведения о надстройках WPF
 <a name="Introduction"></a> .NET Framework включает модель надстроек, разработчики могут использовать для создания приложений, поддерживающих расширяемость надстроек. Эта модель позволяет создавать надстройки, которые интегрируются с функциональностью приложения и расширяют ее. В некоторых сценариях приложения также должны отображать пользовательские интерфейсы, которые предоставляются надстройками. В этом разделе показано, как WPF расширяет модель надстроек платформы .NET Framework для поддержки таких сценариев, архитектуры, его преимущества и ограничения.  
-  
 
-  
 <a name="Requirements"></a>   
 ## <a name="prerequisites"></a>Предварительные требования  
  Знание модели надстроек платформы .NET Framework является обязательным. Дополнительные сведения см. в разделе [Надстройки и расширяемость](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).  
@@ -167,7 +165,7 @@ ms.locfileid: "57365845"
  Эти задачи подробно описаны в следующих подразделах.  
   
 ### <a name="configuring-the-pipeline-and-add-in-for-clickonce-deployment"></a>Настройка конвейера и надстройки для развертывания ClickOnce  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] загружается в безопасную папку в [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] кэше развертывания и запускается из нее. Для размещения надстройки в [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] конвейер и сборка надстройки также должны быть загружены в безопасную папку. Для этого нужно настроить манифест приложения для включения и конвейера и сборки надстройки для загрузки. Проще всего это сделать в [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)], хотя сборка конвейера и надстройки должна находиться в корневой папке проекта [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], чтобы [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] мог обнаружить сборочные узлы конвейера.  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] скачиваются и запускать из безопасную папку в [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] кэше развертывания. Для размещения надстройки в [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] конвейер и сборка надстройки также должны быть загружены в безопасную папку. Для этого нужно настроить манифест приложения для включения и конвейера и сборки надстройки для загрузки. Проще всего это сделать в [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)], хотя сборка конвейера и надстройки должна находиться в корневой папке проекта [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], чтобы [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] мог обнаружить сборочные узлы конвейера.  
   
  Следовательно, первый шаг — создать сборку конвейера и надстройки в корне проекта [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], настроив выходные данные построения для каждого проекта сборки конвейера и сборки надстройки. В следующей таблице показаны выходные пути построения для проектов сборки конвейера и проекта сборки надстройки, которые находятся в том же решении и корневой папке, что и проект ведущего приложения [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)].  
   
@@ -283,9 +281,10 @@ ms.locfileid: "57365845"
  По умолчанию при использовании нескольких доменов приложений различные сборки .NET Framework, необходимые для каждого приложения все загружаются в домен приложения. В результате время, необходимое для создания новых доменов приложений и запуска приложений в них, может повлиять на производительность. Тем не менее платформа .NET Framework предоставляет способ сократить время запуска, предписывая приложения для совместного использования сборок в доменах приложений, если они уже загружены. Это делается с помощью <xref:System.LoaderOptimizationAttribute> атрибут, который должен применяться к методу точки входа (`Main`). В данном случае необходимо использовать только код для реализации определения приложения (см. [Общие сведения об управлении приложением](application-management-overview.md)).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.LoaderOptimizationAttribute>
 - [Надстройки и расширения среды](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [Домены приложений](../../app-domains/application-domains.md)
-- [Обзор удаленного взаимодействия .NET framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
+- [Общие сведения о средствах удаленного взаимодействия платформы .NET Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
 - [Обеспечение поддержки удаленного взаимодействия объектами](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
-- [Разделы практического руководства](how-to-topics.md)
+- [Практические руководства](how-to-topics.md)

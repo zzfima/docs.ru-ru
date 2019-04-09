@@ -5,19 +5,19 @@ helpviewer_keywords:
 - selection [Windows Forms], modes in DataGridView control
 - DataGridView control [Windows Forms], selection mode
 ms.assetid: a3ebfd3d-0525-479d-9d96-d9e017289b36
-ms.openlocfilehash: 931df04bbe6b8448030e26cd2cc2c904865ac0d3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 79e13e65938252015e43b59a962d40f20963a5df
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717306"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097282"
 ---
 # <a name="selection-modes-in-the-windows-forms-datagridview-control"></a>Режимы выделения содержимого элемента управления DataGridView в Windows Forms
 Иногда требуется приложению выполнять действия в зависимости от выбора пользователя в пределах <xref:System.Windows.Forms.DataGridView> элемента управления. В зависимости от действий может потребоваться ограничить типы выделения, которые возможны. Например предположим, что приложение можно распечатать отчет для текущей выбранной записи. В этом случае может потребоваться настроить <xref:System.Windows.Forms.DataGridView> элемент управления, щелкнув в любом месте в пределах строки выбирает всей строки, и таким образом можно выбрать только одну строку за раз.  
   
  Можно указать, разрешено, установив выбранные элементы <xref:System.Windows.Forms.DataGridView.SelectionMode%2A?displayProperty=nameWithType> задается одно из следующих <xref:System.Windows.Forms.DataGridViewSelectionMode> значений перечисления.  
   
-|Значение DataGridViewSelectionMode|Описание:|  
+|Значение DataGridViewSelectionMode|Описание|  
 |-------------------------------------|-----------------|  
 |<xref:System.Windows.Forms.DataGridViewSelectionMode.CellSelect>|При щелчке ячейки выделяется. Заголовки строк и столбцов не может использоваться для выбора.|  
 |<xref:System.Windows.Forms.DataGridViewSelectionMode.ColumnHeaderSelect>|При щелчке ячейки выделяется. При щелчке заголовка столбца выбирает весь столбец. Заголовки столбцов не может использоваться для сортировки.|  
@@ -45,9 +45,10 @@ ms.locfileid: "57717306"
 >  Пример кода, демонстрирующий программное использование выделенных ячеек можно найти в <xref:System.Windows.Forms.DataGridView> Общие сведения о классе.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.MultiSelect%2A>
 - <xref:System.Windows.Forms.DataGridView.SelectionMode%2A>
 - <xref:System.Windows.Forms.DataGridViewSelectionMode>
 - [Выделение данных и операции с буфером обмена в элементе управления DataGridView в Windows Forms](selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)
-- [Практическое руководство. Определение режима выделения из элемента управления DataGridView в Windows Forms](how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)
+- [Практическое руководство. Определение режима выделения для элемента управления DataGridView в Windows Forms](how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)

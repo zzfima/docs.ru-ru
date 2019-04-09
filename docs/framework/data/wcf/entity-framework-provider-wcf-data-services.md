@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: 650b5eb6-c71d-4dc1-8b64-b6beaf752114
-ms.openlocfilehash: 94a708ca33aa94c7a0143d195803d17d49be4bdb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a09c81b2d0f052884e8e54c899653a6f0e038aff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569119"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086251"
 ---
 # <a name="entity-framework-provider-wcf-data-services"></a>Поставщик Entity Framework (службы данных WCF)
 Как и [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], платформа ADO.NET Entity Framework основана на модели EDM, которая представляет собой разновидность модели связей сущностей. Платформа Entity Framework преобразует операции собственной реализации модели EDM, который называется *концептуальной модели*, в эквивалентные операции в источнике данных. Это превращает Entity Framework в идеальный поставщик для служб данных на основе реляционных данных. Любая база данных, на которой имеется поставщик данных, поддерживающий Entity Framework, может использоваться совместно со службами [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Список источников данных, которые поддерживают платформы Entity Framework, см. в разделе [сторонние поставщики для Entity Framework](https://go.microsoft.com/fwlink/?LinkId=143699).  
@@ -21,6 +21,7 @@ ms.locfileid: "54569119"
  Дополнительные сведения о платформе Entity Framework, см. в разделе [Обзор Entity Framework](../../../../docs/framework/data/adonet/ef/overview.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Поставщики служб данных](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
-- [Поставщик отражений](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)
-- [Сущностная модель данных](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [Поставщик отражения](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)
+- [EDM (модель данных с использованием сущностей)](../../../../docs/framework/data/adonet/entity-data-model.md)

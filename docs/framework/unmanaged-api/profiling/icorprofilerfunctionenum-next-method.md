@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1411207c6374456cd9a5c70ad922622f141fd58d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 62e70a2fe421651aac9a4921ca885c53c864c4f7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492547"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101807"
 ---
 # <a name="icorprofilerfunctionenumnext-method"></a>Метод ICorProfilerFunctionEnum::Next
 Возвращает заданное число смежных функций из последовательной коллекции функций начиная с текущей позиции перечислителя в последовательности.  
@@ -51,7 +51,7 @@ HRESULT Next([in]  ULONG      celt,
   
 |HRESULT|Описание|  
 |-------------|-----------------|  
-|S_OK|Возвращенные элементы `celt`.|  
+|S_OK|`celt` возвращенные элементы.|  
 |S_FALSE|Было возвращено элементов менее, чем `celt`, что указывает, что перечисление завершено.|  
   
 ## <a name="requirements"></a>Требования  
@@ -64,5 +64,6 @@ HRESULT Next([in]  ULONG      celt,
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс ICorProfilerFunctionEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)
-- [Интерфейсы профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Профилирующие интерфейсы](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

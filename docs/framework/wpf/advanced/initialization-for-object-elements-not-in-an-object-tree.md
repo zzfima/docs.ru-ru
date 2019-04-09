@@ -10,18 +10,16 @@ helpviewer_keywords:
 - elements [WPF], initializing
 - initializing elements [WPF]
 ms.assetid: 7b8dfc9b-46ac-4ce8-b7bb-035734d688b7
-ms.openlocfilehash: f1d31a5916f0c2a1763d8f24076ae7c1000a8296
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6f3c8611b83977431038573eb1c5c880acbefdc4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376380"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108970"
 ---
 # <a name="initialization-for-object-elements-not-in-an-object-tree"></a>Инициализация для элементов типа Object вне дерева объектов
 За некоторые аспекты инициализации [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] отвечают процессы, которые обычно предполагают, что элемент подключен либо к логическому, либо к визуальному дереву. В этом разделе описываются действия, необходимые для инициализации элемента, который не подключен ни к одному из деревьев.  
-  
- 
-  
+
 ## <a name="elements-and-the-logical-tree"></a>Элементы и логическое дерево  
  При создании экземпляра класса [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] в коде следует иметь в виду, что несколько аспектов инициализации объекта для класса [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] преднамеренно не являются частью кода, выполняющегося при вызове конструктора класса. Большая часть визуального представления элемента управления, особенно для класса элемента управления, не определяется конструктором. Вместо этого визуальное представление определяется шаблоном элемента управления. Шаблон может быть получен из различных источников, но наиболее часто он берется из стилей темы. Шаблоны фактически выполняют позднее связывание. Необходимый шаблон не присоединяется к элементу управления до тех пор, пока элемент управления не будет подготовлен для макета. А элемент управления не готов для макета до тех пор, пока он не будет присоединен к логическому дереву, которое подключается к отрисовываемой поверхности в корневом элементе. Именно элемент корневого уровня инициирует отрисовку всех дочерних элементов, как определено в логическом дереве.  
   
@@ -43,6 +41,7 @@ ms.locfileid: "57376380"
  [!code-vb[InitializeElements#Main](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InitializeElements/VisualBasic/initializeelements.vb#main)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Деревья в WPF](trees-in-wpf.md)
 - [Общие сведения об отрисовке графики в WPF](../graphics-multimedia/wpf-graphics-rendering-overview.md)
-- [Общие сведения о языке XAML (WPF)](xaml-overview-wpf.md)
+- [Обзор XAML (WPF)](xaml-overview-wpf.md)

@@ -2,13 +2,19 @@
 title: Администрирование и диагностика
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'Windows Communication Foundation, diagnostics'
-  - 'Windows Communication Foundation, administration'
-  - 'diagnostics [WCF]'
-  - 'WCF, diagnostics'
-  - 'administration [WCF]'
-  - 'WCF, administration'
+- Windows Communication Foundation, diagnostics
+- Windows Communication Foundation, administration
+- diagnostics [WCF]
+- WCF, diagnostics
+- administration [WCF]
+- WCF, administration
 ms.assetid: 34c81c08-0e0f-4fbc-9ae8-91948640ee43
+ms.openlocfilehash: 351d133215343e07e849ad1045eba601dd8cce56
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092284"
 ---
 # <a name="administration-and-diagnostics"></a>Администрирование и диагностика
 Windows Communication Foundation (WCF) предоставляет широкий набор функций, которые помогут вам отслеживать разные этапы жизненного цикла приложения. Например, можно использовать конфигурацию для настройки служб и клиентов при развертывании. WCF включает в себя большой набор счетчиков производительности с помощью которых можно измерять производительность приложения. WCF также предоставляет данные проверки службы во время выполнения через поставщика WCF инструментария управления Windows (WMI). Когда в приложении происходит ошибка или оно начинает функционировать неверно, журнал событий позволяет понять, серьезны ли причины нарушения. Также можно использовать журнал сообщений и функцию трассировки сообщений для того, чтобы понять, какие события происходят в приложении на всех этапах его работы. Эти функции помогают разработчикам и ИТ-специалистам для устранения неполадок приложения WCF, когда он работает правильно.  
@@ -34,15 +40,16 @@ Windows Communication Foundation (WCF) предоставляет широкий
  WCF также предоставляет несколько графического пользовательского интерфейса и средства командной строки для упрощения создания, развертывания и управления приложениями WCF. Дополнительные сведения см. в разделе [средства Windows Communication Foundation](../../../../docs/framework/wcf/tools.md). Например, можно использовать [средство редактирования конфигурации (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) создавать и изменять параметры конфигурации WCF, с помощью мастера, вместо непосредственного редактирования XML. Можно также использовать [программа Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) для просмотра, группировки и фильтрации сообщений трассировки для диагностики, устранения и проверки неисправностей служб WCF.  
   
 ## <a name="see-also"></a>См. также
+
 - [Настройка приложения](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)
 - [Развертывание служб](../../../../docs/framework/wcf/diagnostics/deploying-services.md)
 - [Справочник по исключениям](../../../../docs/framework/wcf/diagnostics/exceptions-reference/index.md)
 - [Ведение журнала событий](../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
 - [Ведение журналов сообщений](../../../../docs/framework/wcf/diagnostics/message-logging.md)
-- [Редактор конфигурации (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)
-- [Средство просмотра трассировки служб (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [Средство редактирования конфигурации (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)
+- [Программа Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
 - [Средство регистрации ServiceModel](../../../../docs/framework/wcf/diagnostics/servicemodel-registration-tool.md)
 - [Трассировка](../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Использование инструментария управления Windows для диагностики](../../../../docs/framework/wcf/diagnostics/wmi/index.md)
+- [Использование Windows Management Instrumentation для диагностики](../../../../docs/framework/wcf/diagnostics/wmi/index.md)
 - [Счетчики производительности](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md)
 - [Средства Windows Communication Foundation](../../../../docs/framework/wcf/tools.md)

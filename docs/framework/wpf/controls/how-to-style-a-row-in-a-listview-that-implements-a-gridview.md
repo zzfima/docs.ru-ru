@@ -1,20 +1,20 @@
 ---
-title: Практическое руководство. Задание стиля строки в ListView, который реализует GridView
+title: Практическое руководство. Стиль строки в элементе ListView, реализующем GridView
 ms.date: 03/30/2017
 helpviewer_keywords:
 - GridView controls [WPF], styling rows
 - styling rows in ListViews implementing GridViews [WPF]
 - ListView controls [WPF], styling rows with GridViews
 ms.assetid: 2e406ba2-70a0-4e62-841f-0934859de76e
-ms.openlocfilehash: 0c8806c399959fdc1466e0839ba469881718092b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9af8d10c7db2d3bbe8b9443402cbb1cfeaa7edb3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361633"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091464"
 ---
-# <a name="how-to-style-a-row-in-a-listview-that-implements-a-gridview"></a>Практическое руководство. Задание стиля строки в ListView, который реализует GridView
-В этом примере показано, как изменить стиль строки в <xref:System.Windows.Controls.ListView> управления, который реализует <xref:System.Windows.Controls.GridView> <xref:System.Windows.Controls.ListView.View%2A> режим.  
+# <a name="how-to-style-a-row-in-a-listview-that-implements-a-gridview"></a>Практическое руководство. Стиль строки в элементе ListView, реализующем GridView
+В этом примере показано, как изменить стиль строки в <xref:System.Windows.Controls.ListView> управления, который реализует <xref:System.Windows.Controls.GridView><xref:System.Windows.Controls.ListView.View%2A> режим.  
   
 ## <a name="example"></a>Пример  
  Задать стиль строки в <xref:System.Windows.Controls.ListView> управления <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> на <xref:System.Windows.Controls.ListView> элемента управления. Задать стиль для своих элементов, которые отображаются в виде <xref:System.Windows.Controls.ListViewItem> объектов. <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> Ссылки <xref:System.Windows.Controls.ControlTemplate> объекты, которые используются для отображения содержимого строки.  
@@ -34,8 +34,9 @@ ms.locfileid: "57361633"
  [!code-xaml[ListViewItemStyleSnippet#GridView](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewItemStyleSnippet/CS/Window1.xaml#gridview)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
-- [Разделы практического руководства](listview-how-to-topics.md)
+- [Практические руководства](listview-how-to-topics.md)
 - [Общие сведения об элементе управления ListView](listview-overview.md)
 - [Стилизация и использование шаблонов](styling-and-templating.md)

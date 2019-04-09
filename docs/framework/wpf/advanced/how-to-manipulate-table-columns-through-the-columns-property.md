@@ -10,12 +10,12 @@ helpviewer_keywords:
 - tables [WPF], manipulating columns
 - Columns property [WPF]
 ms.assetid: 3f8884f4-7e1f-456b-be06-fbd3cf469bf3
-ms.openlocfilehash: e7b2c1923f7262417f44cb5ac2ea057ef6c83690
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d379d1a98bff614ff9e16cdd340bb69644988743
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358513"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078425"
 ---
 # <a name="how-to-manipulate-a-tables-columns-through-the-columns-property"></a>Практическое руководство. Управление столбцами таблицы с помощью свойства Columns
 В этом примере показаны некоторые из наиболее распространенных операций, которые могут выполняться над столбцами таблицы с помощью <xref:System.Windows.Documents.Table.Columns%2A> свойство.  
@@ -66,6 +66,7 @@ ms.locfileid: "57358513"
  [!code-vb[TableSnippets2#_Table_Columns_Clear](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_columns_clear)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения о таблицах](table-overview.md)
 - [Определение таблицы с помощью XAML](how-to-define-a-table-with-xaml.md)
 - [Создание таблицы программным способом](how-to-build-a-table-programmatically.md)

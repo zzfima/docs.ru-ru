@@ -2,12 +2,12 @@
 title: <message> из <wsHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 621abbde-590b-454d-90ac-68dc3c69c720
-ms.openlocfilehash: 88149fd1df7679a51cc9cad449d020f29c1709eb
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 4d9b46b6c148f9280f6504b9bccdf644ab451c00
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260857"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102678"
 ---
 # <a name="message-of-wshttpbinding"></a>\<сообщение > из \<wsHttpBinding >
 Определяет параметры безопасности уровня сообщений для [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
@@ -39,30 +39,30 @@ ms.locfileid: "55260857"
 |Атрибут|Описание|  
 |---------------|-----------------|  
 |algorithmSuite|Задает алгоритмы шифрования сообщений и ключей. Алгоритмы и размеры ключей определяются классом <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>. Эти алгоритмы соответствуют алгоритмам, заданным в спецификации языка политики безопасности (WS-SecurityPolicy).<br /><br /> Значение по умолчанию — `Basic256`.|  
-|clientCredentialType|Необязательно. Задает тип учетных данных, используемых при проверке подлинности клиента с помощью режима безопасности `Message` или `TransportWithMessageCredentials`. См. значения перечисления ниже. Значение по умолчанию — `Windows`.<br /><br /> Это атрибут типа <xref:System.ServiceModel.MessageCredentialType>.|  
+|clientCredentialType|Необязательный параметр. Задает тип учетных данных, используемых при проверке подлинности клиента с помощью режима безопасности `Message` или `TransportWithMessageCredentials`. См. значения перечисления ниже. Значение по умолчанию — `Windows`.<br /><br /> Это атрибут типа <xref:System.ServiceModel.MessageCredentialType>.|  
 |establishSecurityContext|Логическое значение, которое указывает, будет ли защищенный канал устанавливать защищенный сеанс. Защищенный сеанс перед тем, как обмениваться сообщениями приложения, устанавливает маркер контекста безопасности (SCT). После установки этого маркера защищенный канал предлагает вышестоящим каналам интерфейс <xref:System.ServiceModel.Channels.ISession>. Дополнительные сведения об использовании защищенных сеансов см. в разделе [как: Создание сеанса безопасности](../../../../../docs/framework/wcf/feature-details/how-to-create-a-secure-session.md).<br /><br /> Значение по умолчанию — `true`.|  
-|negotiateServiceCredential|Необязательно. Логическое значение, которое указывает, предоставляются ли учетные данные службы клиенту по внештатному каналу, или же клиент получает их от службы в процессе согласования. Подобное согласование происходит перед обычным обменом сообщениями.<br /><br /> Если `clientCredentialType` атрибут имеет значение None, Username или Certificate, установка для данного атрибута `false` подразумевает, что сертификат службы доступен в клиенте по внештатному каналу и что клиент должен указать сертификат службы (с помощью [ \<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) в [ \<serviceCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) поведение службы. Данный режим совместим со стеками SOAP, которые реализуют WS-Trust и WS-SecureConversation.<br /><br /> Если атрибут `ClientCredentialType` имеет значение `Windows`, то установка для данного атрибута значения `false` задает проверку подлинности на основе Kerberos. Это означает, что клиент и служба должны относиться к одному домену Kerberos. Данный режим совместим со стеками SOAP, которые реализуют профиль маркера Kerberos (в соответствии с определением в OASIS WSS TC), а также WS-Trust и WS-SecureConversation.<br /><br /> Когда данный атрибут равен `true`, то происходит согласование .NET SOAP, при котором обмен SPNego производится при помощи сообщений SOAP.<br /><br /> Значение по умолчанию — `true`.|  
+|negotiateServiceCredential|Необязательный параметр. Логическое значение, которое указывает, предоставляются ли учетные данные службы клиенту по внештатному каналу, или же клиент получает их от службы в процессе согласования. Подобное согласование происходит перед обычным обменом сообщениями.<br /><br /> Если `clientCredentialType` атрибут имеет значение None, Username или Certificate, установка для данного атрибута `false` подразумевает, что сертификат службы доступен в клиенте по внештатному каналу и что клиент должен указать сертификат службы (с помощью [ \<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) в [ \<serviceCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) поведение службы. Данный режим совместим со стеками SOAP, которые реализуют WS-Trust и WS-SecureConversation.<br /><br /> Если атрибут `ClientCredentialType` имеет значение `Windows`, то установка для данного атрибута значения `false` задает проверку подлинности на основе Kerberos. Это означает, что клиент и служба должны относиться к одному домену Kerberos. Данный режим совместим со стеками SOAP, которые реализуют профиль маркера Kerberos (в соответствии с определением в OASIS WSS TC), а также WS-Trust и WS-SecureConversation.<br /><br /> Когда данный атрибут равен `true`, то происходит согласование .NET SOAP, при котором обмен SPNego производится при помощи сообщений SOAP.<br /><br /> Значение по умолчанию — `true`.|  
   
 ## <a name="algorithmsuite-attribute"></a>Атрибут algorithmSuite  
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|Basic128|Используется шифрование Basic128, Sha1 для хэша и Rsa-oaep-mgf1p для шифрования ключа.|  
-|Basic192|Используется шифрование Basic192, Sha1 для хэша и Rsa-oaep-mgf1p для шифрования ключа.|  
-|Basic256|Используется шифрование Basic256, Sha1 для хэша и Rsa-oaep-mgf1p для шифрования ключа.|  
-|Basic256Rsa15|Используется Basic256 для шифрования сообщения, Sha1 для хэша и Rsa15 для шифрования ключа.|  
-|Basic192Rsa15|Используется Basic192 для шифрования сообщения, Sha1 для хэша и Rsa15 для шифрования ключа.|  
-|TripleDes|Используется шифрование TripleDes, Sha1 для хэша и Rsa-oaep-mgf1p для шифрования ключа.|  
-|Basic128Rsa15|Используется Basic128 для шифрования сообщения, Sha1 для хэша и Rsa15 для шифрования ключа.|  
-|TripleDesRsa15|Используется TripleDes для шифрования сообщения, Sha1 для хэша и Rsa15 для шифрования ключа.|  
-|Basic128Sha256|Используется Basic256 для шифрования сообщения, Sha256 для хэша и Rsa-oaep-mgf1p для шифрования ключа.|  
-|Basic192Sha256|Используется Basic192 для шифрования сообщения, Sha256 для хэша и Rsa-oaep-mgf1p для шифрования ключа.|  
-|Basic256Sha256|Используется Basic256 для шифрования сообщения, Sha256 для хэша и Rsa-oaep-mgf1p для шифрования ключа.|  
-|TripleDesSha256|Используется TripleDes для шифрования сообщения, Sha256 для хэша и Rsa-oaep-mgf1p для шифрования ключа.|  
-|Basic128Sha256Rsa15|Используется Basic128 для шифрования сообщения, Sha256 для хэша и Rsa15 для шифрования ключа.|  
-|Basic192Sha256Rsa15|Используется Basic192 для шифрования сообщения, Sha256 для хэша и Rsa15 для шифрования ключа.|  
-|Basic256Sha256Rsa15|Используется Basic256 для шифрования сообщения, Sha256 для хэша и Rsa15 для шифрования ключа.|  
-|TripleDesSha256Rsa15|Используется TripleDes для шифрования сообщения, Sha256 для хэша и Rsa15 для шифрования ключа.|  
+|Basic128|Используется шифрование Basic128, Sha1 для хэш-кода и Rsa-oaep-mgf1p для шифрования ключа.|  
+|Basic192|Используется шифрование Basic192, Sha1 для хэш-кода и Rsa-oaep-mgf1p для шифрования ключа.|  
+|Basic256|Используется шифрование Basic256, Sha1 для хэш-кода и Rsa-oaep-mgf1p для шифрования ключа.|  
+|Basic256Rsa15|Используется Basic256 для шифрования сообщения, Sha1 для хэш-кода и Rsa15 для шифрования ключа.|  
+|Basic192Rsa15|Используется Basic192 для шифрования сообщения, Sha1 для хэш-кода и Rsa15 для шифрования ключа.|  
+|TripleDes|Используется шифрование TripleDes, Sha1 для хэш-кода и Rsa-oaep-mgf1p для шифрования ключа.|  
+|Basic128Rsa15|Используется Basic128 для шифрования сообщения, Sha1 для хэш-кода и Rsa15 для шифрования ключа.|  
+|TripleDesRsa15|Используется TripleDes для шифрования сообщения, Sha1 для хэш-кода и Rsa15 для шифрования ключа.|  
+|Basic128Sha256|Используется Basic256 для шифрования сообщения, Sha256 для хэш-кода и Rsa-oaep-mgf1p для шифрования ключа.|  
+|Basic192Sha256|Используется Basic192 для шифрования сообщения, Sha256 для хэш-кода и Rsa-oaep-mgf1p для шифрования ключа.|  
+|Basic256Sha256|Используется Basic256 для шифрования сообщения, Sha256 для хэш-кода и Rsa-oaep-mgf1p для шифрования ключа.|  
+|TripleDesSha256|Используется TripleDes для шифрования сообщения, Sha256 для хэш-кода и Rsa-oaep-mgf1p для шифрования ключа.|  
+|Basic128Sha256Rsa15|Используется Basic128 для шифрования сообщения, Sha256 для хэш-кода и Rsa15 для шифрования ключа.|  
+|Basic192Sha256Rsa15|Используется Basic192 для шифрования сообщения, Sha256 для хэш-кода и Rsa15 для шифрования ключа.|  
+|Basic256Sha256Rsa15|Используется Basic256 для шифрования сообщения, Sha256 для хэш-кода и Rsa15 для шифрования ключа.|  
+|TripleDesSha256Rsa15|Используется TripleDes для шифрования сообщения, Sha256 для хэш-кода и Rsa15 для шифрования ключа.|  
   
 ## <a name="clientcredentialtype-attribute"></a>Атрибут clientCredentialType  
   
@@ -84,6 +84,7 @@ ms.locfileid: "55260857"
 |[\<Безопасность >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)|Определяет параметры безопасности для [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).|  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.NonDualMessageSecurityOverHttp>
 - <xref:System.ServiceModel.Configuration.WSHttpSecurityElement.Message%2A>
 - <xref:System.ServiceModel.WSHttpSecurity.Message%2A>

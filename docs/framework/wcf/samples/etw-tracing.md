@@ -2,12 +2,12 @@
 title: Трассировка ETW
 ms.date: 03/30/2017
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
-ms.openlocfilehash: 2329ebc8b98b0d34b5acc7861a7e691a31e3ba15
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 964c8fbe04f61ebf7a68e1bf36f9efdaab841e7a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700294"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105434"
 ---
 # <a name="etw-tracing"></a>Трассировка ETW
 В этом примере показано, как реализовать сквозную трассировку (E2E) с помощью трассировки событий для Windows (трассировка событий Windows) и `ETWTraceListener`, предоставляемого с этим примером. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) и включает трассировку событий Windows.  
@@ -107,4 +107,5 @@ Logman stop Wcf
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\AnalyticTrace`  
   
 ## <a name="see-also"></a>См. также
+
 - [Образцы наблюдения за AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

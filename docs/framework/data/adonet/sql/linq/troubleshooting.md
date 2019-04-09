@@ -2,12 +2,12 @@
 title: Устранение неполадок
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-ms.openlocfilehash: 62cc7a0567b9eb82c24c329a7ae8fb3e52f0f0c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 27b7eef345dd8ec6c4f5e319818b6b002717f049
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586414"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105486"
 ---
 # <a name="troubleshooting"></a>Устранение неполадок
 В данном материале представлен ряд проблем, которые могут возникнуть в приложениях [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], и даны рекомендации, как их избежать или, по крайней мере, снизить их негативное влияние.  
@@ -15,7 +15,7 @@ ms.locfileid: "54586414"
  Дополнительные проблемы рассматриваются в [вопросы и ответы](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md).  
   
 ## <a name="unsupported-standard-query-operators"></a>Неподдерживаемые стандартные операторы запросов  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] не поддерживает никакие методы стандартных операторов запросов (например, <xref:System.Linq.Enumerable.ElementAt%2A>). В результате компилируемых проектов могут по-прежнему возникать ошибки во время выполнения. Дополнительные сведения см. в разделе [преобразование стандартного оператора запросов](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md).  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] поддерживает не все методы стандартных операторов запросов (например, <xref:System.Linq.Enumerable.ElementAt%2A>). В результате компилируемых проектов могут по-прежнему возникать ошибки во время выполнения. Дополнительные сведения см. в разделе [преобразование стандартного оператора запросов](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md).  
   
 ## <a name="memory-issues"></a>Проблемы с использованием памяти  
  Если запрос включает в себя коллекцию в памяти и [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601>, запрос может быть выполнен в памяти, в зависимости от порядка, в котором указаны две коллекции. Если запрос следует выполнить в памяти, извлекать данные из таблицы базы данных нет необходимости.  
@@ -26,7 +26,7 @@ ms.locfileid: "54586414"
  Чтобы указать имя входного файла, добавьте имя в командную строку в качестве входного файла. Включение имени файла в строку подключения (параметром **/conn** ) не поддерживается. Дополнительные сведения см. в разделе [SQLMetal.exe (средство создания кода)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   
 ## <a name="class-library-projects"></a>Проекты библиотеки классов  
- [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] создает строку подключения в файле `app.config` проекта. Файл `app.config` не используется в проектах библиотек классов. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] использует строку соединения, заданную в файлах, созданных во время разработки. Изменение значения в `app.config` не приводит к изменениям базы данных, к которой подключается приложение.  
+ [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] создает строку подключения в файле `app.config` проекта. Файл `app.config` не используется в проектах библиотек классов. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] использует строку подключения, предоставленную в файлах во время разработки. Изменение значения в `app.config` не приводит к изменениям базы данных, к которой подключается приложение.  
   
 ## <a name="cascade-delete"></a>Каскадное удаление  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] не поддерживает или не распознает операции каскадного удаления. Если требуется удалить строку в таблице, имеющей ограничения, необходимо выполнить любое из следующих действий.  
@@ -60,7 +60,7 @@ ms.locfileid: "54586414"
  Это требование не относится к [!INCLUDE[sqprsqlong](../../../../../../includes/sqprsqlong-md.md)].  
   
 ## <a name="groupby-invalidoperationexception"></a>GroupBy InvalidOperationException  
- Данное исключение возникает, если в запросе <xref:System.Linq.Enumerable.GroupBy%2A>, выполняющем группировку по выражению `boolean`, например `group x by (Phone==@phone)`, столбец имеет значение NULL. Поскольку выражение имеет тип `boolean`, ключ определяется как `boolean`, а не как `nullable` `boolean`. Если в результате преобразованного сравнения выводится значение NULL, предпринимается попытка назначить `nullable` `boolean` для `boolean` и вызывается исключение.  
+ Данное исключение возникает, если в запросе <xref:System.Linq.Enumerable.GroupBy%2A>, выполняющем группировку по выражению `boolean`, например `group x by (Phone==@phone)`, столбец имеет значение NULL. Поскольку выражение является `boolean`, ключ определяется как `boolean`, а не `nullable` `boolean`. При результате преобразованного сравнения выводится значение null, будет предпринята попытка назначить `nullable` `boolean` для `boolean`, и возникает исключение.  
   
  Чтобы избежать такой ситуации (предполагается, что значения NULL оцениваются как ложные), воспользуйтесь следующим способом.  
   
@@ -70,5 +70,6 @@ ms.locfileid: "54586414"
  Созданный метод `OnCreated()` вызывается при каждом вызове конструктора объектов, включая моменты, когда [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] вызывает его для копирования исходных значений. При реализации метода `OnCreated()` в собственном разделяемом классе данное поведение следует принять во внимание.  
   
 ## <a name="see-also"></a>См. также
+
 - [Поддержка отладки](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
-- [Часто задаваемые вопросы](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)
+- [Вопросы и ответы](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF]
 ms.assetid: 8e89cbb9-ac84-4f0d-85ef-0eb6be0022fd
-ms.openlocfilehash: 37639bfc71918dd92a2334f4076dc2b4d6ff9698
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68ea866b736350b8a393d1f4788e4b08754e5ab4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583198"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102743"
 ---
 # <a name="designing-service-contracts"></a>Создание контрактов служб
 Этот раздел описывает, что такое контракты служб, как они определяются, какие операции доступны (также описаны последствия обмена сообщениями, на которых они основаны), какие типы данных используются; кроме того, он содержит ответы на другие вопросы, которые помогут при разработке операций, удовлетворяющих требованиям вашего сценария.  
@@ -264,18 +264,19 @@ End Interface
   
  Другой пример - использование типов <xref:System.IO.Stream> в операциях. Так как параметр <xref:System.IO.Stream> включает в себя тело сообщения целиком, если входные или выходные данные (то есть параметр `ref`, параметр `out` или возвращаемое значение) принадлежат типу <xref:System.IO.Stream>, это должны быть единственные входные и выходные данные, заданные для операции. Кроме того, параметр или тип возвращаемого значения должны являться объектами <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message?displayProperty=nameWithType> или <xref:System.Xml.Serialization.IXmlSerializable?displayProperty=nameWithType>. Дополнительные сведения о потоках см. в разделе [большие наборы данных и потоковая передача](../../../docs/framework/wcf/feature-details/large-data-and-streaming.md).  
   
-##### <a name="names-namespaces-and-obfuscation"></a>Имена, пространства имен и обфускация  
+##### <a name="names-namespaces-and-obfuscation"></a>Имена, пространства имен и запутывание  
  Имена и пространства имен типов .NET в определениях контрактов и операций важны при преобразовании контрактов в WSDL и при создании и отправке сообщений контрактов. Поэтому рекомендуется явно задавать имена и пространства имен контракта службы с помощью свойств `Name` и `Namespace` всех поддерживающих атрибутов контракта, например <xref:System.ServiceModel.ServiceContractAttribute>, <xref:System.ServiceModel.OperationContractAttribute>, <xref:System.Runtime.Serialization.DataContractAttribute>, <xref:System.Runtime.Serialization.DataMemberAttribute> и других атрибутов контракта.  
   
  Одним из следствий этого является то, что если имена и пространства имен не заданы явно, применение обфускации IL для сборки изменяет имена типов и пространства имен контракта, что приводит к измененному коду WSDL и обмену сообщениями, который обычно завершается ошибкой. Если вы не задаете явно имена и пространства имен контракта, но планируете использовать обфускацию, используйте атрибуты <xref:System.Reflection.ObfuscationAttribute> и <xref:System.Reflection.ObfuscateAssemblyAttribute>, чтобы предотвратить изменение имен и пространств имен контракта.  
   
 ## <a name="see-also"></a>См. также
-- [Практическое руководство. Создание контракта типа запрос ответ](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)
+
+- [Практическое руководство. Создание контракта типа "запрос — ответ"](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)
 - [Практическое руководство. Создание одностороннего контракта](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md)
-- [Практическое руководство. Создание дуплексного контракта](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+- [Практическое руководство. Создание двухстороннего контракта](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
 - [Задание передачи данных в контрактах служб](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
-- [Указание и обработка сбоев в контрактах и службах](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [Задание и обработка сбоев в контрактах и службах](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
 - [Использование сеансов](../../../docs/framework/wcf/using-sessions.md)
 - [Синхронные и асинхронные операции](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)
-- [Reliable Services](../../../docs/framework/wcf/reliable-services.md)
+- [Надежные службы](../../../docs/framework/wcf/reliable-services.md)
 - [Службы и транзакции](../../../docs/framework/wcf/services-and-transactions.md)

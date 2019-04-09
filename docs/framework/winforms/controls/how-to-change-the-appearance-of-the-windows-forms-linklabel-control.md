@@ -12,12 +12,12 @@ helpviewer_keywords:
 - examples [Windows Forms], LinkLabel control
 - LinkLabel control [Windows Forms], examples
 ms.assetid: fdc5854f-5162-4457-8cbe-1042feb2d132
-ms.openlocfilehash: 451faf04e3a51e7dbcb992feb3f38025894be631
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: be2f6e8e10d9f9b23b4f57fa696f1fb88c4726c0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717730"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105031"
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-linklabel-control"></a>Практическое руководство. Изменение внешнего вида элемента управления LinkLabel в Windows Forms
 Можно изменить текст, отображаемый элементом <xref:System.Windows.Forms.LinkLabel> управления для различных целей. Например это распространенная практика, чтобы уведомить пользователя, что текст можно щелкнуть мышью текст, появляющийся определенным цветом и подчеркиванием. Пользователь щелкает этот текст, цвет меняется на другой цвет. Чтобы контролировать это поведение, можно задать пять различных свойств: <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>, <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>, <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>, и <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> свойства.  
@@ -122,10 +122,11 @@ ms.locfileid: "57717730"
     ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>
 - <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>
 - <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>
 - <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>
 - [Общие сведения об элементе управления LinkLabel](linklabel-control-overview-windows-forms.md)
-- [Практическое руководство. Ссылка на объект или веб-страницей с помощью элемента управления LinkLabel в Windows Forms](link-to-an-object-or-web-page-with-wf-linklabel-control.md)
+- [Практическое руководство. Создание связи с объектом или веб-страницей с помощью элемента управления LinkLabel в Windows Forms](link-to-an-object-or-web-page-with-wf-linklabel-control.md)
 - [Элемент управления LinkLabel](linklabel-control-windows-forms.md)

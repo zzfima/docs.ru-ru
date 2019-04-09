@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d7b85a30a5abd9186f039aa21cbe7790325e4f2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: da30e75bf4a58e66bb0dd8210368b162cf14c3f7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545651"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091269"
 ---
 # <a name="ihosttaskmanager-interface"></a>Интерфейс IHostTaskManager
 Предоставляет методы, позволяющие общеязыковой среды выполнения (CLR), для работы с задачами через узел вместо использования функции потоков или волокон стандартной операционной системе.  
@@ -62,6 +62,7 @@ ms.locfileid: "54545651"
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
 - [Интерфейс ICLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
 - [Интерфейс IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)

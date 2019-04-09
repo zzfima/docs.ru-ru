@@ -1,13 +1,13 @@
 ---
-title: <localServiceSettings> - элемент
+title: <localServiceSettings> элемент
 ms.date: 03/30/2017
 ms.assetid: 0658549c-3f65-46dd-8c5c-9895441ed734
-ms.openlocfilehash: 7d0b96badd1ee0abd3b1765dc777bdb73918a1fa
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e987d14edde3af6aca2ceb392976abe3b6460c9c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55288838"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102639"
 ---
 # <a name="localservicesettings-element"></a>\<localServiceSettings > элемент
 Задает параметры безопасности локальной службы для этой привязки.  
@@ -69,24 +69,25 @@ ms.locfileid: "55288838"
 |Элемент|Описание|  
 |-------------|-----------------|  
 |[\<Безопасность >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Задает параметры безопасности для пользовательской привязки.|  
-|[\<secureConversationBootstrap >](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|Задает значения по умолчанию, используемые для инициализации службы безопасного обмена данными.|  
+|[\<secureConversationBootstrap>](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|Задает значения по умолчанию, используемые для инициализации службы безопасного обмена данными.|  
   
 ## <a name="remarks"></a>Примечания  
  Данные настройки являются локальными, поскольку они не публикуются как часть политики безопасности службы и не влияют на привязку клиента.  
   
  Описанные ниже атрибуты элемента `localServiceSecuritySettings` могут способствовать снижению риска атак типа «отказ в обслуживании».  
   
--   `maxCachedCookies` управляет максимальным числом ограниченных по времени маркеров SecurityContextTokens, кэшируемых сервером после согласования протокола SPNEGO или SSL.  
+-   `maxCachedCookies`: определяет максимальное количество ограниченных по времени маркеров SecurityContextTokens, кэшируемых сервером после согласования протокола SPNEGO или SSL.  
   
--   `issuedCookieLifetime` управляет временем существования маркеров SecurityContextTokens, выпускаемых сервером после согласования протокола SPNEGO или SSL. Сервер кэширует маркеры SecurityContextTokens на данный период времени.  
+-   `issuedCookieLifetime`: управляет временем существования маркеров SecurityContextTokens, которые выпускают сервером после согласования протокола SPNEGO или SSL. Сервер кэширует маркеры SecurityContextTokens на данный период времени.  
   
--   `maxPendingSessions` управляет максимальным числом безопасных диалогов, установленных на сервере, но для которых ни одно сообщение приложения не было обработано. Данная квота препятствует установлению клиентами безопасных диалогов в службе; таким образом, служба должна отслеживать состояние каждого из клиентов, но не использовать их.  
+-   `maxPendingSessions`: определяет максимальное количество защищенных диалогов, установленных на сервере, но для которого сообщения приложения не будут обработаны. Данная квота препятствует установлению клиентами безопасных диалогов в службе; таким образом, служба должна отслеживать состояние каждого из клиентов, но не использовать их.  
   
--   `inactivityTimeout` управляет максимальным сроком, в течение которого служба поддерживает безопасный диалог, не получая сообщений приложения в этой связи. Данная квота препятствует установлению клиентами безопасных диалогов в службе; таким образом, служба должна отслеживать состояние каждого из клиентов, но не использовать их.  
+-   `inactivityTimeout`: определяет максимальное время, служба поддерживает безопасный диалог, не получая сообщений приложения в его. Данная квота препятствует установлению клиентами безопасных диалогов в службе; таким образом, служба должна отслеживать состояние каждого из клиентов, но не использовать их.  
   
  В процессе сеанса безопасного диалога следует учесть, что атрибуты `inactivityTimeout` и `receiveTimeout` в привязке влияют на тайм-аут сеанса. Наименьшая из этих величин определяет момент, когда истекает время ожидания.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>
 - <xref:System.ServiceModel.Configuration.SecurityElementBase.LocalServiceSettings%2A>
 - <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A>

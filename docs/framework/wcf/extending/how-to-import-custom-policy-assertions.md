@@ -1,18 +1,18 @@
 ---
-title: Как выполнить Импорт утверждений пользовательской политики
+title: Практическое руководство. Импорт проверочных утверждений пользовательской политики
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1f41d787-accb-4a10-bfc6-a807671d1581
-ms.openlocfilehash: ff727922aeee7aeaea801dabd842f913ce75c220
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: e27c6ed6508544180d8659717b700e604b0f3d3c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674785"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073628"
 ---
-# <a name="how-to-import-custom-policy-assertions"></a>Как выполнить Импорт утверждений пользовательской политики
+# <a name="how-to-import-custom-policy-assertions"></a>Практическое руководство. Импорт проверочных утверждений пользовательской политики
 В утверждениях политики описываются возможности и требования конечной точки службы.  Клиентские приложения могут использовать утверждения политики в метаданных службы для настройки привязки клиента или для настройки контракта службы для конечной точки службы.  
   
  Утверждения настраиваемой политики импортируются путем реализации интерфейса <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> и передачи этого объекта системе метаданных или путем регистрации типа реализации в файле конфигурации приложения.  Реализации интерфейса <xref:System.ServiceModel.Description.IPolicyImportExtension> должны предоставлять конструктор по умолчанию.  
@@ -64,6 +64,7 @@ ms.locfileid: "54674785"
 1.  Добавьте импортер в свойство <xref:System.ServiceModel.Description.MetadataImporter.PolicyImportExtensions%2A?displayProperty=nameWithType> (например, если используется класс <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>), прежде чем импортировать метаданные.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>

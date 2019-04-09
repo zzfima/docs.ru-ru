@@ -2,12 +2,12 @@
 title: Синтаксис строки подключения
 ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-ms.openlocfilehash: f6cbfc9676c2c373ab833ac556cf04bb0ba15096
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c5ed5000f075fb637915dc40e122a9337176e36
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524550"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084975"
 ---
 # <a name="connection-string-syntax"></a>Синтаксис строки подключения
 Каждый поставщик данных платформы .NET Framework имеет объект `Connection`, наследующий из <xref:System.Data.Common.DbConnection>, а также из свойства <xref:System.Data.Common.DbConnection.ConnectionString%2A>, зависящего от поставщика. Конкретный синтаксис строки подключения для каждого поставщика приведен в его свойстве `ConnectionString`. В следующей таблице представлен список четырех поставщиков данных, поставляемых в составе платформы .NET Framework.  
@@ -43,7 +43,7 @@ ms.locfileid: "54524550"
 |`OracleClient`|`Integrated Security=yes;`|  
   
 > [!NOTE]
->  Значение `Integrated Security=true` вызывает исключение при работе с поставщиком `OleDb`.  
+>  `Integrated Security=true` Возникло исключение при использовании с `OleDb` поставщика.  
   
 ## <a name="sqlclient-connection-strings"></a>Строки подключения SqlClient  
 Синтаксис для строки подключения <xref:System.Data.SqlClient.SqlConnection> документирован в свойстве <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType>. Свойство <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> используется для возврата или задания строки подключения для базы данных SQL Server. Если необходимо подключиться к более ранней версии SQL Server, следует использовать поставщик данных .NET Framework для OleDb (<xref:System.Data.OleDb>). Наиболее распространенные ключевые слова строк соединения также соответствуют свойствам <xref:System.Data.SqlClient.SqlConnectionStringBuilder>.  
@@ -88,7 +88,7 @@ Data Source=MySqlServer\MSSQL1;"
  `Type System Version` Ключевое слово в <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> указывает клиентское представление типов SQL Server. Дополнительные сведения о ключевом слове <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> см. в разделе `Type System Version`.  
   
 ## <a name="connecting-and-attaching-to-sql-server-express-user-instances"></a>Подключение и присоединение к пользовательским экземплярам SQL Server Express  
- Пользовательские экземпляры являются одной из функций SQL Server Express. Они дают пользователям под учетной записью с минимальными правами возможность присоединить и запустить базу данных SQL Server без прав администратора. Пользовательский экземпляр выполняется с учетными данными пользователя Windows, а не службы.  
+ Пользовательские экземпляры являются одной из возможностей SQL Server Express. Они дают пользователям под учетной записью с минимальными правами возможность присоединить и запустить базу данных SQL Server без прав администратора. Пользовательский экземпляр выполняется с учетными данными пользователя Windows, а не службы.  
   
  Дополнительные сведения о работе с пользовательскими экземплярами см. в разделе [Express пользовательские экземпляры SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md).  
   
@@ -141,7 +141,7 @@ Provider=Microsoft.Jet.OLEDB.4.0;Data Source=d:\Northwind.mdb;Jet OLEDB:System D
 >  Это можно указать сведения о соединении для **OleDbConnection** в файле универсальной Data Link (UDL); тем не менее вам следует избегать. UDL-файлы не подвергаются шифрованию, и строки соединения хранятся в них в виде простого текста. Так как UDL-файл представляет собой внешний файловый ресурс для приложения, его нельзя защитить средствами .NET Framework. UDL-файлы не поддерживаются для **SqlClient**.  
   
 ### <a name="using-datadirectory-to-connect-to-accessjet"></a>Соединение с Access/Jet с помощью строки замены DataDirectory  
- Строка замены `DataDirectory` поддерживается не только клиентом `SqlClient`. Ее можно также использовать с поставщиками данных .NET для <xref:System.Data.OleDb> и <xref:System.Data.Odbc>. В следующем образце строки <xref:System.Data.OleDb.OleDbConnection> приведен синтаксис для подключения к базе данных Northwind.mdb, расположенной в папке приложения app_data. В этой папке также хранится системная база данных (System.mdw).  
+ `DataDirectory` не является уникальной для `SqlClient`. Ее можно также использовать с поставщиками данных .NET для <xref:System.Data.OleDb> и <xref:System.Data.Odbc>. В следующем образце строки <xref:System.Data.OleDb.OleDbConnection> приведен синтаксис для подключения к базе данных Northwind.mdb, расположенной в папке приложения app_data. В этой папке также хранится системная база данных (System.mdw).  
   
 ```  
 "Provider=Microsoft.Jet.OLEDB.4.0;  
@@ -195,6 +195,7 @@ Data Source=Oracle9i;User ID=*****;Password=*****;
  Дополнительные сведения о синтаксисе строки подключения ODBC см. в разделе <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A>.  
   
 ## <a name="see-also"></a>См. также
+
 - [Строки подключения](../../../../docs/framework/data/adonet/connection-strings.md)
 - [Подключение к источнику данных](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

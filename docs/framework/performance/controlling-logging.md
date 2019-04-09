@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0f8e189dce2e5141f7a0743b37ed892540f3bb46
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: d3846e9e00158efbd4828053411b604dafc56e27
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656977"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091334"
 ---
 # <a name="controlling-net-framework-logging"></a>Контроль ведения журнала .NET Framework
 Трассировку событий для Windows (ETW) можно использовать для записи событий среды CLR. Для создания и просмотра трассировки можно использовать следующие инструменты.  
@@ -53,9 +53,9 @@ Provider                                 GUID
   
     -   Параметр `-p` задает GUID поставщика.  
   
-    -   `0x1CCBD` задает категории создаваемых событий.  
+    -   `0x1CCBD` — Указывает категории событий, которые могут возникнуть.  
   
-    -   `0x5` задает уровень регистрации (в данном случае подробный (5)).  
+    -   `0x5` Задает уровень ведения журнала (в данном случае подробный (5)).  
   
     -   Параметр `-ets` указывает программе Logman отправлять команды сеансам трассировки событий.  
   
@@ -109,5 +109,6 @@ Provider                                 GUID
      Эта команда XPerf помещает события в дамп в виде файла с разделителями-запятыми (CSV-файл), который впоследствии можно просмотреть. Поскольку у разных событий поля разные, этот CSV-файл содержит несколько строк заголовков, расположенных перед данными. Первое поле каждой строки является типом события с указанием заголовка, который должен использоваться для определения остальных полей.  
   
 ## <a name="see-also"></a>См. также
+
 - [Windows Performance Toolkit](/windows-hardware/test/wpt/)
 - [События в среде CLR (трассировка событий Windows)](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

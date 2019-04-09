@@ -2,12 +2,12 @@
 title: Пользовательский поставщик маркеров
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: 471e172589e578691d41690b0af7eff20e3234c9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 72c8b4e74607a1ed7f616959a6445f21b595a956
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58817218"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59103263"
 ---
 # <a name="durable-issued-token-provider"></a>Пользовательский поставщик маркеров
 Этот пример демонстрирует, как реализовать пользовательский поставщик маркеров, выдаваемых клиенту.  
@@ -253,4 +253,3 @@ ms.locfileid: "58817218"
 >  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Security\DurableIssuedTokenProvider`  
-  

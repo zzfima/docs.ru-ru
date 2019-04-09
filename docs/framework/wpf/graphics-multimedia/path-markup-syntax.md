@@ -7,12 +7,12 @@ helpviewer_keywords:
 - graphics [WPF], PathGeometry class
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
-ms.openlocfilehash: 65a86b82af9269d1af7198b8106ad478e88f3691
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 32eefba26b5e04370599e4c97767b6662cfd1c13
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379163"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082494"
 ---
 # <a name="path-markup-syntax"></a>Синтаксис разметки пути
 Путями, рассматриваются в [фигур и базовых средств рисования в WPF Обзор](shapes-and-basic-drawing-in-wpf-overview.md) и [Общие сведения о геометрии](geometry-overview.md), однако в этом разделе подробно описываются сложной и мощной мини-язык, который можно использовать для указания пути более [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -57,7 +57,7 @@ ms.locfileid: "57379163"
   
 |Термин|Описание|  
 |----------|-----------------|  
-|*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> Указывает, является ли <xref:System.Windows.Media.StreamGeometry> использует <xref:System.Windows.Media.FillRule.EvenOdd> или <xref:System.Windows.Media.FillRule.Nonzero> <xref:System.Windows.Media.PathGeometry.FillRule%2A>.<br /><br /> -   `F0` Указывает <xref:System.Windows.Media.FillRule.EvenOdd> правило заполнения.<br />-   `F1` Указывает <xref:System.Windows.Media.FillRule.Nonzero> правило заполнения.<br /><br /> Если опустить эту команду, во вложенном пути используется поведение по умолчанию, которое является <xref:System.Windows.Media.FillRule.EvenOdd>. Если эта команда используется, ее необходимо размещать вначале.|  
+|*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> Указывает, является ли <xref:System.Windows.Media.StreamGeometry> использует <xref:System.Windows.Media.FillRule.EvenOdd> или <xref:System.Windows.Media.FillRule.Nonzero><xref:System.Windows.Media.PathGeometry.FillRule%2A>.<br /><br /> -   `F0` Указывает <xref:System.Windows.Media.FillRule.EvenOdd> правило заполнения.<br />-   `F1` Указывает <xref:System.Windows.Media.FillRule.Nonzero> правило заполнения.<br /><br /> Если опустить эту команду, во вложенном пути используется поведение по умолчанию, которое является <xref:System.Windows.Media.FillRule.EvenOdd>. Если эта команда используется, ее необходимо размещать вначале.|  
 |*figureDescription*|Фигура, состоящая из команды перемещения, команд рисования и необязательной команды закрытия.<br /><br /> `moveCommand` `drawCommands`  `[` `closeCommand` `]`|  
 |*moveCommand*|Команда перемещения, которая указывает начальную точку фигуры. См. в разделе [команда перемещения](#themovecommand) раздел.|  
 |*drawCommands*|Одна или несколько команд рисования, описывающих содержимое фигуры. См. в разделе [команда рисования](#drawcommands) раздел.|  
@@ -71,7 +71,7 @@ ms.locfileid: "57379163"
 |------------|  
 |`M` *startPoint*<br /><br /> -или-<br /><br /> `m` *startPoint*|  
   
-|Термин|Описание:|  
+|Термин|Описание|  
 |----------|-----------------|  
 |*startPoint*|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Начальная точка новой фигуры.|  
   
@@ -88,63 +88,61 @@ ms.locfileid: "57379163"
   
 |Синтаксис|  
 |------------|  
-|`L` *endPoint*<br /><br /> -или-<br /><br /> `l` *endPoint*|  
+|`L` *Конечная точка*<br /><br /> -или-<br /><br /> `l` *Конечная точка*|  
   
 |Термин|Описание|  
 |----------|-----------------|  
-|*endPoint*|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Конечная точка строки.|  
+|*Конечная точка*|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Конечная точка строки.|  
 
 Верхнерегистровая `L` указывает, что `endPoint` значение является абсолютным; строчных букв `l` указывает, что `endPoint` — это смещение к предыдущей точке, или (0,0), если он не существует.
 
 ### <a name="horizontal-line-command"></a>Команда рисования горизонтальной линии  
- Создает горизонтальную линию между текущей точкой и заданной координатой X. `H 90` — пример допустимой команды рисования горизонтальной линии.
+ Создает горизонтальную линию между текущей точкой и заданной координатой X. `H 90` приведен пример допустимой команды горизонтальной линии.
 
-  
 |Синтаксис|  
 |------------|  
 |`H`  *x*<br /><br /> -или-<br /><br /> `h`  *x*|  
   
-|Термин|Описание:|  
+|Термин|Описание|  
 |----------|-----------------|  
 |*x*|<xref:System.Double?displayProperty=nameWithType><br /><br /> Координата X конечной точки линии.|  
   
 Верхнерегистровая `H` указывает, что `x` значение является абсолютным; строчных букв `h` указывает, что `x` — это смещение к предыдущей точке, или (0,0), если он не существует.
   
 ### <a name="vertical-line-command"></a>Команда рисования вертикальной линии  
- Создает вертикальную линию между текущей точкой и заданной координатой Y. `v 90` — пример допустимой команды рисования вертикальной линии.
+ Создает вертикальную линию между текущей точкой и заданной координатой Y. `v 90` приведен пример допустимой команды вертикальной линии.
 
-  
 |Синтаксис|  
 |------------|  
 |`V`  *y*<br /><br /> -или-<br /><br /> `v`  *y*|  
   
-|Термин|Описание:|  
+|Термин|Описание|  
 |----------|-----------------|  
 |*y*|<xref:System.Double?displayProperty=nameWithType><br /><br /> Координата Y конечной точки линии.|  
 
 Верхнерегистровая `V` указывает, что `y` значение является абсолютным; строчных букв `v` указывает, что `y` — это смещение к предыдущей точке, или (0,0), если он не существует.  
     
 ### <a name="cubic-bezier-curve-command"></a>Команда рисования кривой Безье третьего порядка  
- Создает кривую Безье третьего порядка между текущей точкой и заданной конечной точкой с помощью двух заданных контрольных точек (`controlPoint`1 и `controlPoint`2). `C 100,200 200,400 300,200` — пример допустимой команды рисования кривой линии.  
+ Создает кривую Безье третьего порядка между текущей точкой и заданной конечной точкой с помощью двух заданных контрольных точек (`controlPoint`1 и `controlPoint`2). `C 100,200 200,400 300,200` приведен пример команды допустимым кривой.  
   
 |Синтаксис|  
 |------------|  
 |`C` `controlPoint`1`controlPoint`2`endPoint`<br /><br /> -или-<br /><br /> `c` `controlPoint`1`controlPoint`2`endPoint`|  
   
-|Термин|Описание:|  
+|Термин|Описание|  
 |----------|-----------------|  
 |`controlPoint`1|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Первая контрольная точка кривой, которая определяет начальную касательную к кривой.|  
 |`controlPoint`2|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Вторая контрольная точка кривой, которая определяет конечную касательную к кривой.|  
 |`endPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Точка для рисования кривой.|  
   
 ### <a name="quadratic-bezier-curve-command"></a>Команда рисования кривой Безье второго порядка  
- Создает кривую Безье второго порядка между текущей точкой и заданной конечной точкой с использованием заданной контрольной точки (`controlPoint`). `q 100,200 300,200` — пример допустимой команды рисования кривой Безье второго порядка.  
+ Создает кривую Безье второго порядка между текущей точкой и заданной конечной точкой с использованием заданной контрольной точки (`controlPoint`). `q 100,200 300,200` приведен пример допустимой команды кривой Безье второго порядка.  
   
 |Синтаксис|  
 |------------|  
 |`Q` `controlPoint` `endPoint`<br /><br /> -или-<br /><br /> `q` `controlPoint` `endPoint`|  
   
-|Термин|Описание:|  
+|Термин|Описание|  
 |----------|-----------------|  
 |`controlPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Контрольная точка кривой, которая определяет начальную и конечную касательные к кривой.|  
 |`endPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Точка для рисования кривой.|  
@@ -168,7 +166,7 @@ ms.locfileid: "57379163"
 |------------|  
 |`T` `controlPoint` `endPoint`<br /><br /> -или-<br /><br /> `t` `controlPoint` `endPoint`|  
   
-|Термин|Описание:|  
+|Термин|Описание|  
 |----------|-----------------|  
 |`controlPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Контрольная точка кривой, которая определяет начальную касательную к кривой.|  
 |`endPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Точка для рисования кривой.|  
@@ -180,7 +178,7 @@ ms.locfileid: "57379163"
 |------------|  
 |`A` `size` `rotationAngle` `isLargeArcFlag` `sweepDirectionFlag` `endPoint`<br /><br /> -или-<br /><br /> `a` `size` `rotationAngle` `isLargeArcFlag` `sweepDirectionFlag` `endPoint`|  
   
-|Термин|Описание:|  
+|Термин|Описание|  
 |----------|-----------------|  
 |`size`|<xref:System.Windows.Size?displayProperty=nameWithType><br /><br /> Радиусы арки X и Y.|  
 |`rotationAngle`|<xref:System.Double?displayProperty=nameWithType><br /><br /> Поворот эллипса в градусах.|  
@@ -204,7 +202,7 @@ ms.locfileid: "57379163"
 |------------|  
 |`x` `,` `y`<br /><br /> -или-<br /><br /> `x` `y`|  
   
-|Термин|Описание:|  
+|Термин|Описание|  
 |----------|-----------------|  
 |`x`|<xref:System.Double?displayProperty=nameWithType><br /><br /> Координата X точки.|  
 |`y`|<xref:System.Double?displayProperty=nameWithType><br /><br /> Координата Y точки.|  
@@ -225,10 +223,11 @@ ms.locfileid: "57379163"
  Можно также использовать экспоненциальное представление чисел. Например `+1.e17` является допустимым значением.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Shapes.Path>
 - <xref:System.Windows.Media.StreamGeometry>
 - <xref:System.Windows.Media.PathGeometry>
 - <xref:System.Windows.Media.PathFigureCollection>
 - [Обзор фигур и базовых средств рисования в приложении WPF](shapes-and-basic-drawing-in-wpf-overview.md)
 - [Общие сведения о классе Geometry](geometry-overview.md)
-- [Разделы практического руководства](geometries-how-to-topics.md)
+- [Практические руководства](geometries-how-to-topics.md)

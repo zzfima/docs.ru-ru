@@ -6,12 +6,12 @@ helpviewer_keywords:
 - image sources [WPF], drawings
 - drawings [WPF], as image sources
 ms.assetid: dcf71c7b-9e86-4b8e-8e39-0d0ce0389ef4
-ms.openlocfilehash: 07659463a3fec9b962f7b4bb255ed065d544d954
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d4b91a6495e1c54400d5fbfe43b6311d908565a7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351740"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097864"
 ---
 # <a name="how-to-use-a-drawing-as-an-image-source"></a>Практическое руководство. Использование рисунка в качестве источника изображения
 В этом примере показано, как использовать <xref:System.Windows.Media.Drawing> как <xref:System.Windows.Controls.Image.Source%2A> для <xref:System.Windows.Controls.Image> элемента управления. Для отображения <xref:System.Windows.Media.Drawing> с <xref:System.Windows.Controls.Image> управления, используйте <xref:System.Windows.Media.DrawingImage> как <xref:System.Windows.Controls.Image> элемента управления <xref:System.Windows.Controls.Image.Source%2A> и задайте <xref:System.Windows.Media.DrawingImage> объекта <xref:System.Windows.Media.DrawingImage.Drawing%2A?displayProperty=nameWithType> свойства в документе, вы хотите отобразить.  
@@ -26,8 +26,9 @@ ms.locfileid: "57351740"
  [!code-xaml[DrawingMiscSnippets_snip#DrawingImageExampleWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/DrawingImageExample.xaml#drawingimageexamplewholepage)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Freezable.Freeze%2A>
 - [Рисование изображения с помощью объекта ImageDrawing](how-to-draw-an-image-using-imagedrawing.md)
 - [Обзор объектов Drawing](drawing-objects-overview.md)
 - [Общие сведения об объектах класса Freezable](../advanced/freezable-objects-overview.md)
-- [Атрибут PresentationOptions: Freeze](../advanced/presentationoptions-freeze-attribute.md)
+- [Атрибут PresentationOptions:Freeze](../advanced/presentationoptions-freeze-attribute.md)

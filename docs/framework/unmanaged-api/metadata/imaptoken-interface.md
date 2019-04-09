@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 579f925498f6ded83c5e90137d04020e610599b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a50f8b13979426b8ea04f1952216afe5de337386
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716717"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111674"
 ---
 # <a name="imaptoken-interface"></a>Интерфейс IMapToken
 Предоставляет возможности сопоставления между сборками.  
@@ -31,7 +31,7 @@ ms.locfileid: "54716717"
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание:|  
+|Метод|Описание|  
 |------------|-----------------|  
 |[Метод Map](../../../../docs/framework/unmanaged-api/metadata/imaptoken-map-method.md)|Сопоставляет связь между двумя сборками, используя подписи метаданных.|  
   
@@ -45,4 +45,5 @@ ms.locfileid: "54716717"
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейсы метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

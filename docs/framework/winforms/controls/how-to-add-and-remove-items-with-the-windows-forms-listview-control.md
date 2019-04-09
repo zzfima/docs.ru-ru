@@ -9,12 +9,12 @@ helpviewer_keywords:
 - list views [Windows Forms], adding list items
 - ListView control [Windows Forms], adding list items
 ms.assetid: 1b35a80a-edd8-495f-a807-a28c4aae52c6
-ms.openlocfilehash: cfa6690db464f432c9082278627a03cd43df6834
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: ef0275b3cbc79f22b4fa573f41e4cbdbc3d58990
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717249"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104654"
 ---
 # <a name="how-to-add-and-remove-items-with-the-windows-forms-listview-control"></a>Практическое руководство. Добавление и удаление элементов с помощью элемента управления ListView в Windows Forms
 Процесс добавления элемента в формы Windows <xref:System.Windows.Forms.ListView> элемент управления состоит в первую очередь определение элемента и назначение ему свойств. Добавление или удаление элементов списка можно сделать в любое время.  
@@ -34,6 +34,7 @@ ms.locfileid: "57717249"
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#12)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.ListView>
 - [Элемент управления ListView](listview-control-windows-forms.md)
 - [Общие сведения об элементе управления ListView](listview-control-overview-windows-forms.md)

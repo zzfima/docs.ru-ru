@@ -8,12 +8,12 @@ helpviewer_keywords:
 - transformations [Windows Forms], for scaling colors
 - colors [Windows Forms], scaling
 ms.assetid: df23c887-7fd6-4b15-ad94-e30b5bd4b849
-ms.openlocfilehash: 9255dd4adba19bfef1332e5e3dfa463ee96f43f0
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 9c8f2392137d04f56096120cec64b60c42c47419
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58653994"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107990"
 ---
 # <a name="using-transformations-to-scale-colors"></a>Масштабирование цветов с применением преобразований
 Преобразование масштабирования умножает одно или несколько из четырех компонентов цвета по номеру. В следующей таблице приведены элементы матрицы цветов, представляющих масштабирования.  
@@ -64,7 +64,8 @@ ms.locfileid: "58653994"
 |(1, 0, 1, 1)|(0.75, 0, 0.5, 1)|  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Drawing.Imaging.ColorMatrix>
 - <xref:System.Drawing.Imaging.ImageAttributes>
 - [Объекты Graphics и Drawing в Windows Forms](graphics-and-drawing-in-windows-forms.md)
-- [перекрашивание изображений](recoloring-images.md)
+- [Перекрашивание изображений](recoloring-images.md)

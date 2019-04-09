@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Рисование текста в указанном расположении
+title: Практическое руководство. Рисование текста в указанной позиции
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - drawing text [Windows Forms], specified locations [Windows Forms]
 - Windows Forms, drawing text at a specified location
 ms.assetid: 60816423-1c38-465e-980d-2c2b64d74086
-ms.openlocfilehash: 8327043f9afdec7e2d84e564801342d7d7cbef9d
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: 3f54da182e6cc1489eadba6fa1d3cef683c3ba51
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412244"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075516"
 ---
-# <a name="how-to-draw-text-at-a-specified-location"></a>Практическое руководство. Рисование текста в указанном расположении
+# <a name="how-to-draw-text-at-a-specified-location"></a>Практическое руководство. Рисование текста в указанной позиции
 При выполнении пользовательского рисования можно рисовать текст в одной строке по горизонтали, начиная с указанной точки. Таким образом можно рисовать текст с помощью <xref:System.Drawing.Graphics.DrawString%2A> перегруженным методом <xref:System.Drawing.Graphics> класс, принимающий <xref:System.Drawing.Point> или <xref:System.Drawing.PointF> параметра. <xref:System.Drawing.Graphics.DrawString%2A> Также требует <xref:System.Drawing.Brush> и <xref:System.Drawing.Font>  
   
  Можно также использовать <xref:System.Windows.Forms.TextRenderer.DrawText%2A> перегруженным методом <xref:System.Windows.Forms.TextRenderer> , принимающий <xref:System.Drawing.Point>. <xref:System.Windows.Forms.TextRenderer.DrawText%2A> также требуется <xref:System.Drawing.Color> и <xref:System.Drawing.Font>.  
@@ -46,7 +46,8 @@ ms.locfileid: "58412244"
 -   <xref:System.Windows.Forms.PaintEventArgs>  `e`, который является параметром <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>См. также
+
 - [Практическое руководство. Рисование текста с использованием GDI](how-to-draw-text-with-gdi.md)
-- [Работами со шрифтами и текстом](using-fonts-and-text.md)
-- [Практическое руководство. Шрифты и их семейств](how-to-construct-font-families-and-fonts.md)
+- [Шрифты и текст](using-fonts-and-text.md)
+- [Практическое руководство. Разработка шрифтов и их семейств](how-to-construct-font-families-and-fonts.md)
 - [Практическое руководство. Многострочный вывод текста в прямоугольнике](how-to-draw-wrapped-text-in-a-rectangle.md)

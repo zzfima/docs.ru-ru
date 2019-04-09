@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 65dbbeb76c1f31044fddf6df69c4daf63617c079
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: de0fe4a51fbb49e80377b6b434bf3b72ddb90f02
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57480394"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081627"
 ---
 # <a name="imetadataimportenumtyperefs-method"></a>Метод IMetaDataImport::EnumTypeRefs
 Перечисляет токены TypeRef, определенные в текущей области метаданных.  
@@ -53,7 +53,7 @@ HRESULT EnumTypeRefs (
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
-|HRESULT|Описание:|  
+|HRESULT|Описание|  
 |-------------|-----------------|  
 |`S_OK`|`EnumTypeRefs` успешно возвращен.|  
 |`S_FALSE`|Существуют маркеры для перечисления отсутствуют. В этом случае `pcTypeRefs` равно нулю.|  
@@ -71,5 +71,6 @@ HRESULT EnumTypeRefs (
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

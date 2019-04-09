@@ -2,12 +2,12 @@
 title: Модуль форматирования и селектор операции
 ms.date: 03/30/2017
 ms.assetid: 1c27e9fe-11f8-4377-8140-828207b98a0e
-ms.openlocfilehash: b4cc135983a741f4ae024a2917871f344e8a111c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 3843feacca0da6118ecc9d0f54a2cb088865caaa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58836237"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100409"
 ---
 # <a name="operation-formatter-and-operation-selector"></a>Модуль форматирования и селектор операции
 В этом примере показано, как точки расширяемости Windows Communication Foundation (WCF) можно разрешить передачу данных сообщений в формате, отличном от WCF ожидает. По умолчанию модули форматирования WCF ожидать, что параметры методов будут включаться в `soap:body` элемент. В этом образце показано, как реализовать пользовательский модуль форматирования операций, который анализирует параметры из строки HTTP-запроса GET и вызывает методы с использованием этих данных.  
@@ -16,11 +16,11 @@ ms.locfileid: "58836237"
   
  Для этого в образце имеются следующие элементы.  
   
--   Класс `QueryStringFormatter`, который реализует интерфейсы <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> и <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> для клиента и сервера соответственно и обрабатывает данные в строке запроса.  
+-   `QueryStringFormatter`, который реализует <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> и <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> для клиента и сервера соответственно и обрабатывает данные в строке запроса.  
   
--   Класс `UriOperationSelector`, который реализует интерфейс <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> на сервере для выполнения диспетчеризации операций в зависимости от имени операции в запросе GET.  
+-   `UriOperationSelector`, который реализует <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> на сервере для выполнения диспетчеризации операций на основе имени операции в запросе GET.  
   
--   Поведение конечной точки `EnableHttpGetRequestsBehavior` (и соответствующая конфигурация), которое добавляет в среду выполнения селектор нужной операции.  
+-   `EnableHttpGetRequestsBehavior` Конечная точка поведение (и соответствующая конфигурация), который добавляет среда выполнения селектор нужной операции.  
   
 -   Показано, как включить в среду выполнения новый модуль форматирования операций.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "58836237"
   
 -   В этом образце класс <xref:System.ComponentModel.TypeConverter> используется для преобразования параметров в сообщении запроса в строки и обратно. Если объект для определенного типа <xref:System.ComponentModel.TypeConverter> недоступен, модуль форматирования в этом образце создает исключение.  
   
--   В методе `IClientMessageFormatter.SerializeRequest` на стороне клиента модуль форматирования создает код URI для соответствующего адреса назначения и добавляет имя операции в качестве суффикса. Это имя используется для перенаправления на соответствующую операцию на сервере. После этого массив объектов параметров сериализуется в строку запроса кода URI с использованием имен и значений параметров, преобразованных классом <xref:System.ComponentModel.TypeConverter>. Свойства <xref:System.ServiceModel.Channels.MessageHeaders.To%2A> и <xref:System.ServiceModel.Channels.MessageProperties.Via%2A> задаются данному URI. Значение <xref:System.ServiceModel.Channels.MessageProperties> доступно через свойство <xref:System.ServiceModel.Channels.Message.Properties%2A>.  
+-   В методе `IClientMessageFormatter.SerializeRequest` на стороне клиента модуль форматирования создает код URI для соответствующего адреса назначения и добавляет имя операции в качестве суффикса. Это имя используется для перенаправления на соответствующую операцию на сервере. После этого массив объектов параметров сериализуется в строку запроса кода URI с использованием имен и значений параметров, преобразованных классом <xref:System.ComponentModel.TypeConverter>. Свойства <xref:System.ServiceModel.Channels.MessageHeaders.To%2A> и <xref:System.ServiceModel.Channels.MessageProperties.Via%2A> задаются данному URI. <xref:System.ServiceModel.Channels.MessageProperties> осуществляется через <xref:System.ServiceModel.Channels.Message.Properties%2A> свойство.  
   
 -   В методе `IDispatchMessageFormatter.DeserializeRequest` на сервере модуль форматирования извлекает код URI `Via` в свойствах сообщения входящего запроса. Модуль форматирования преобразует пары "имя-значение" в строке запроса URI в имена и значения параметров и подставляет эти имена и значения параметров в массив передаваемых методу параметров. Обратите внимание, что диспетчеризация по операциям уже произошла, поэтому в данном методе суффикс имени операции игнорируется.  
   
@@ -177,4 +177,3 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
 2.  Чтобы построить решение, следуйте инструкциям в [сборка образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 3.  Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
-  

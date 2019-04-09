@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Изменение границ формы Windows Forms
+title: Практическое руководство. Изменение границ в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - Windows Forms, changing the borders
 ms.assetid: b3d5fa56-80c6-4b10-b505-f9672307ed55
-ms.openlocfilehash: f188e14b304970840bfc35a592a445f68f9d7af7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d2e5dd761b2422f6d7e92e7bb97dbdf425b8fedf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713911"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080115"
 ---
-# <a name="how-to-change-the-borders-of-windows-forms"></a>Практическое руководство. Изменение границ формы Windows Forms
+# <a name="how-to-change-the-borders-of-windows-forms"></a>Практическое руководство. Изменение границ в Windows Forms
 При определении внешнего вида и поведения формы Windows Forms можно выбрать из нескольких стилей границы. Изменив <xref:System.Windows.Forms.Form.FormBorderStyle%2A> свойство, можно управлять поведением изменения размеров формы. Кроме того, параметр <xref:System.Windows.Forms.Form.FormBorderStyle%2A> влияет на способ отображения строки заголовка и кнопок, которые на нем могут отображаться. Дополнительные сведения см. в разделе <xref:System.Windows.Forms.FormBorderStyle>.  
   
  В Visual Studio предусмотрена расширенная поддержка данной задачи.  
@@ -44,6 +44,7 @@ ms.locfileid: "57713911"
      Кроме того Если выбран стиль границы для формы, которая предоставляет необязательный **свернуть** и **развернуть** кнопок, можно указать, хотите ли вы один или оба эти кнопки для его функционирования. Эти кнопки полезны в тех случаях, когда требуется точно управлять взаимодействием с пользователем. **Свернуть** и **развернуть** кнопки включены по умолчанию, и их функции изменяются с помощью **свойства** окна.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.FormBorderStyle>
 - <xref:System.Windows.Forms.FormBorderStyle.FixedDialog>
 - [Приступая к работе с Windows Forms](getting-started-with-windows-forms.md)

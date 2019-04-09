@@ -12,12 +12,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], large data sets
 - virtual mode [Windows Forms], just-in-time data loading
 ms.assetid: c2a052b9-423c-4ff7-91dc-d8c7c79345f6
-ms.openlocfilehash: 44c985cef035e33e88ba246584efcb30fe0e9b97
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 641db19cc6493a20c9f9a34622f466e3623c32ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705562"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088656"
 ---
 # <a name="implementing-virtual-mode-with-just-in-time-data-loading-in-the-windows-forms-datagridview-control"></a>Реализация виртуального режима с JIT-загрузкой данных для элемента управления DataGridView в Windows Forms
 Одна из причин для реализации виртуальный режим в <xref:System.Windows.Forms.DataGridView> элемент управления является получение данных только по мере необходимости. Это называется *загрузка данных just-in-time*.  
@@ -71,10 +71,11 @@ ms.locfileid: "57705562"
  Для повышения быстродействия приложения, можно увеличить объем данных, хранящихся локально. Для сокращения времени запуска, однако следует загружать слишком много данных изначально. Может потребоваться изменить `Cache` класса, чтобы увеличить число страниц данных, оно может хранить. С помощью нескольких страниц данных повышает эффективность прокрутки, но вам потребуется определить оптимальное количество строк на странице данных, в зависимости от доступной пропускной способности и задержки сервера. С помощью страницы меньшего размера сервер будет осуществляться чаще, но займет меньше времени для возврата запрошенных данных. Если задержки более критичны, чем пропускная способность, можно использовать страниц данных большего размера.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>
 - [Оптимизация производительности элемента управления DataGridView в Windows Forms](performance-tuning-in-the-windows-forms-datagridview-control.md)
 - [Масштабирование элемента управления DataGridView в Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
 - [Виртуальный режим элемента управления DataGridView в Windows Forms](virtual-mode-in-the-windows-forms-datagridview-control.md)
-- [Пошаговое руководство: Реализация виртуального режима для элемента управления DataGridView в Windows Forms](implementing-virtual-mode-wf-datagridview-control.md)
-- [Практическое руководство. Реализация виртуального режима с JIT в загрузкой данных в элементе управления DataGridView Windows Forms](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)
+- [Пошаговое руководство. Реализация виртуального режима для элемента управления DataGridView в Windows Forms](implementing-virtual-mode-wf-datagridview-control.md)
+- [Практическое руководство. Реализация виртуального режима с JIT-загрузкой данных для элемента управления DataGridView в Windows Forms](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)

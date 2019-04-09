@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b3b29be2bab2d1b4cea5dcec89e31d4720be769
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5cb9aa09447acf28f1ed10ba409ce936cdb4f84a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576880"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085042"
 ---
 # <a name="icordebugcode3-interface"></a>Интерфейс ICorDebugCode3
 Предоставляет метод, который расширяет «ICorDebugCode» и «ICorDebugCode2» для предоставления сведений об управляемом возвращаемом значении.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание:|  
+|Метод|Описание|  
 |------------|-----------------|  
 |[Метод GetReturnValueLiveOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)|Для указанного смещения на промежуточном Языке получает смещения в машинном коде, где должны размещаться точку останова, чтобы отладчик мог получить возвращаемое значение из функции.|  
   
@@ -47,8 +47,6 @@ ms.locfileid: "54576880"
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
-
-
 
 - [Интерфейс ICorDebugILFrame3](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-interface.md)
 - [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

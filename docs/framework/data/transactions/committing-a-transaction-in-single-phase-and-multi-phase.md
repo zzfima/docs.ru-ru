@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 694ea153-e4db-41ae-96ac-9ac66dcb69a9
-ms.openlocfilehash: e90a2f9c5681ffddb2a3ca0312bdd2f3f4078328
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cbe00fb792ab5f2a7586a958ddbe5bdf004656dc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589523"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089566"
 ---
 # <a name="committing-a-transaction-in-single-phase-and-multi-phase"></a>Однофазная и многофазная фиксация транзакции
 Каждым используемым в транзакции ресурсом управляет диспетчер ресурсов, действия которого координируются диспетчером транзакций. [Ресурсы прикрепление в транзакции, в качестве участников](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md) разделе рассматривается, как можно прикрепить ресурс (или несколько ресурсов) в транзакции. В этом разделе также описывается порядок координации процесса фиксации транзакции между зачисленными ресурсами.  
@@ -110,5 +110,6 @@ public void InDoubt (Enlistment enlistment)
  Протокол однофазной фиксации наиболее эффективен при использовании во время выполнения, поскольку все изменения производятся без какой-либо явной координации. Дополнительные сведения об этом протоколе см. в разделе [оптимизация производительности с помощью однофазной фиксации и повышаемого однофазного уведомления](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Оптимизация производительности с помощью механизмов уведомления об однофазной фиксации и повышаемого однофазного присоединения](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)
 - [Зачисление ресурсов в транзакцию в качестве участников](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)

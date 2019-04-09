@@ -2,12 +2,12 @@
 title: facet
 ms.date: 03/30/2017
 ms.assetid: 91c4e6aa-3e54-4b6c-a38a-abf27808cc85
-ms.openlocfilehash: 9994aff7337dd842e1d70c22ea288d2fda5648d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9353b143a328e0fb183b7870332462a0a2c91b10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648236"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094506"
 ---
 # <a name="facet"></a>facet
 Объект *аспекта* используется для добавления сведений в определение свойства примитивного типа. Объект [свойство](../../../../docs/framework/data/adonet/property.md) определение содержит сведения о типе свойства, но часто необходим более подробно. Например, тип сущности в концептуальной модели может иметь свойство типа `String`, значение которого не может быть равно NULL. Аспекты позволяют задавать такой уровень сведений.  
@@ -35,5 +35,6 @@ ms.locfileid: "54648236"
  [!code-xml[EDM_Example_Model#EntityExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entityexample)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Основные понятия модели EDM](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [Сущностная модель данных](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [EDM (модель данных с использованием сущностей)](../../../../docs/framework/data/adonet/entity-data-model.md)

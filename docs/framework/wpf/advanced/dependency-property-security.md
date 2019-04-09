@@ -10,17 +10,16 @@ helpviewer_keywords:
 - dependency properties [WPF], access
 - security [WPF], dependency properties
 ms.assetid: d10150ec-90c5-4571-8d35-84bafa2429a4
-ms.openlocfilehash: d51f8f5fd704b0c95b8e6f841b9b0ff8567899cb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 85806ee9fb01cd2ca07697230c46a8847fdf8c6a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364818"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077476"
 ---
 # <a name="dependency-property-security"></a>Безопасность свойства зависимости
 Свойства зависимости, как правило, считаются открытыми. Суть системы свойств [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] такова, что дать гарантии безопасности о значении свойства зависимости невозможно.  
-  
-  
+
 <a name="AccessSecurity"></a>   
 ## <a name="access-and-security-of-wrappers-and-dependency-properties"></a>Доступ к программам-оболочкам и свойствам зависимости и их безопасность  
  Как правило, свойства зависимости реализуются вместе со свойствами [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] программы-оболочки, которые упрощают получение или настройку свойства от экземпляра. Но программы-оболочки — на самом деле, лишь удобные способы реализации базового <xref:System.Windows.DependencyObject.GetValue%2A> и <xref:System.Windows.DependencyObject.SetValue%2A> статические вызовы, которые используются при взаимодействии со свойствами зависимости. Другими словами, свойства предоставляются как свойства [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)], поддерживаемые свойством зависимости, а не закрытым полем. Механизмы безопасности, применяемые к программам-оболочкам, не поддерживают параллели между поведением системы свойств и доступом базового свойства зависимости. Помещение требования безопасности на оболочку помешает только использованию удобного метода, но не блокирует вызовы <xref:System.Windows.DependencyObject.GetValue%2A> или <xref:System.Windows.DependencyObject.SetValue%2A>. Аналогично: размещение защищенного или закрытого уровня доступа в программе-разработчике не обеспечивает эффективную защиту.  
@@ -40,4 +39,5 @@ ms.locfileid: "57364818"
  Применение требований <xref:System.Windows.DependencyProperty.ValidateValueCallback%2A> и ожидается сбой проверки при сбое требования для предотвращения задаваемое свойство не является достаточно безопасным механизмом. Реализацию недействительности заданного значения регламентирует <xref:System.Windows.DependencyProperty.ValidateValueCallback%2A> может подавляться вредоносные вызывающие объекты, если эти вызывающие объекты работают внутри домена приложения.  
   
 ## <a name="see-also"></a>См. также
+
 - [Пользовательские свойства зависимостей](custom-dependency-properties.md)

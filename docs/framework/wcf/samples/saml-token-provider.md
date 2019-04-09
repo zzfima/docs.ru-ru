@@ -2,12 +2,12 @@
 title: Поставщик маркеров SAML
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-ms.openlocfilehash: 43a6d96716cedc6a732c350bb43ac6d34bebf969
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 386e8f81d35d820809ee51355dfb0274be2278cc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842243"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084229"
 ---
 # <a name="saml-token-provider"></a>Поставщик маркеров SAML
 В этом образце демонстрируется, как реализовать пользовательский поставщик маркеров SAML клиента. Поставщик маркеров в Windows Communication Foundation (WCF) используется для передачи учетных данных в инфраструктуру безопасности. Поставщик токенов осуществляет общую проверку цели и выдает соответствующие учетные данные, чтобы инфраструктура безопасности смогла обеспечить защиту сообщения. WCF поставляется с поставщиком токенов учетных данных по умолчанию. WCF поставляется с [!INCLUDE[infocard](../../../../includes/infocard-md.md)] поставщик маркеров. Пользовательские поставщики маркеров полезны в следующих случаях:
@@ -398,4 +398,3 @@ ms.locfileid: "58842243"
 #### <a name="to-clean-up-after-the-sample"></a>Очистка после образца  
   
 1.  После завершения работы примера запустите в папке примеров файл Cleanup.bat.  
-  

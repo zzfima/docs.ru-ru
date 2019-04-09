@@ -2,12 +2,12 @@
 title: Безопасность SQL Server
 ms.date: 03/30/2017
 ms.assetid: 9053724d-a1fb-4f0f-b9dc-7f6dd893e8ff
-ms.openlocfilehash: 33ec28536115f8571bfda47266ed3b5cad1442bb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4aa4feadb6305f8a0ea6f99c2add780d6fca95cd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650591"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080775"
 ---
 # <a name="sql-server-security"></a>Безопасность SQL Server
 SQL Server предоставляет много функций для создания безопасных приложений баз данных.  
@@ -29,7 +29,7 @@ SQL Server предоставляет много функций для созд�
  [Сценарии безопасности приложений в SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
  Подразделы с описанием различных сценариев обеспечения безопасности для приложений ADO.NET и SQL Server.  
   
- [Безопасность SQL Server Express](../../../../../docs/framework/data/adonet/sql/sql-server-express-security.md)  
+ [Безопасность SQL Server, экспресс-выпуск](../../../../../docs/framework/data/adonet/sql/sql-server-express-security.md)  
  Описывает вопросы безопасности для SQL Server Express.  
   
 ## <a name="related-sections"></a>Связанные разделы  
@@ -40,5 +40,6 @@ SQL Server предоставляет много функций для созд�
 Вопросы безопасности, которые следует учитывать перед установкой SQL Server.
 
 ## <a name="see-also"></a>См. также
+
 - [Защита приложений ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [SQL Server и ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)

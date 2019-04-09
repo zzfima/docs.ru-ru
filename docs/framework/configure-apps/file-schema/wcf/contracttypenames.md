@@ -2,12 +2,12 @@
 title: <contractTypeNames>
 ms.date: 03/30/2017
 ms.assetid: 5ec5efc6-87f8-4160-9be0-dcd2e01df3df
-ms.openlocfilehash: d8f2b600b700a19cf587a6c8c4cc3f0e851edbd9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b1cec9272a1de029ab72ea4d5f36c74630e5b93a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375975"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089501"
 ---
 # <a name="contracttypenames"></a>\<contractTypeNames>
 Раздел конфигурации, в котором указан список имен типов контрактов. Это имена контрактов искомых служб, а также критерии, обычно используемые при поиске служб. Если указано несколько имен контрактов, будет получен ответ только от конечных точек службы, совпадающих со ВСЕМИ контрактами. Обратите внимание на то, что в Windows Communication Foundation (WCF), конечной точки поддерживает только один контракт.  
@@ -50,17 +50,18 @@ ms.locfileid: "57375975"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/contracttypenames.md)|Имя типа контракта - это свойство, относящееся к набору критериев, обычно используемых для поиска службы.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<findCriteria >](../../../../../docs/framework/configure-apps/file-schema/wcf/findcriteria.md)|Элемент конфигурации, который предоставляет набор критериев, используемых клиентским приложением для поиска службы обнаружения. Критерии могут быть сгруппированы в критерии поиска (с указанием какие службы вы ищете) и (в том, как долго должен длиться поиск данных) критерии прекращения поиска.|  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.Discovery.FindCriteria>
 - <xref:System.ServiceModel.Discovery.Configuration.FindCriteriaElement>
 - <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElementCollection>

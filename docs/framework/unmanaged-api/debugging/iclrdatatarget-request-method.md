@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bafc8be92da72cbb98f7cd47ec6632a3fbb76656
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e9005dd8fde0d7258bd1dd48b561e4925e87733b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487223"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102699"
 ---
 # <a name="iclrdatatargetrequest-method"></a>Метод ICLRDataTarget::Request
 Вызывается службами доступа к данным среды выполнения (CLR) для запроса операции, как определено в реализации.  
@@ -72,4 +72,5 @@ HRESULT Request (
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

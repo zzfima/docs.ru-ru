@@ -2,12 +2,12 @@
 title: Операторы последовательности
 ms.date: 03/30/2017
 ms.assetid: 4d332d32-3806-4451-b7af-25af269194ae
-ms.openlocfilehash: b4a6e01eeb70015899cbbbfe8ecd748bd9936b2c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 62cb654922af9df65b0ec9abb67bdc33fda09339
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666167"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113689"
 ---
 # <a name="sequence-operators"></a>Операторы последовательности
 В целом, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] не поддерживает операторы последовательности, имеющие одно или несколько следующих свойств.  
@@ -43,7 +43,8 @@ ms.locfileid: "54666167"
 |<xref:System.Linq.Enumerable.SequenceEqual%2A?displayProperty=nameWithType>|  
   
 ## <a name="differences-from-net"></a>Отличия от платформы .NET  
- Все поддерживаемые операторы последовательности правильно работают в среде (CLR), за исключением `Average`. `Average` возвращает значение, тип которого совпадает с усредняемым типом, тогда как в CLR оператор `Average` всегда возвращает тип <xref:System.Double> или <xref:System.Decimal>. Если исходный аргумент явно приведен к типу double / decimal или селектор приводится к типу double / decimal, в конечном коде SQL также будет присутствовать подобное преобразование и будет получен ожидаемый результат.  
+ Все поддерживаемые операторы последовательности правильно работают в среде (CLR), за исключением `Average`. `Average` Возвращает значение того же типа в качестве типа среднее значение, тогда как в среде CLR `Average` всегда возвращает один <xref:System.Double> или <xref:System.Decimal>. Если исходный аргумент явно приведен к типу double / decimal или селектор приводится к типу double / decimal, в конечном коде SQL также будет присутствовать подобное преобразование и будет получен ожидаемый результат.  
   
 ## <a name="see-also"></a>См. также
+
 - [Типы данных и функции](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

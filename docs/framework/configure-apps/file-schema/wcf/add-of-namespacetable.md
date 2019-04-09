@@ -2,12 +2,12 @@
 title: <add> из <namespaceTable>
 ms.date: 03/30/2017
 ms.assetid: cf7b5b75-63bd-49a6-abac-4bfdab377e36
-ms.openlocfilehash: 0e463ffa87e67bc5f100f9acf38ace6450b0ce40
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7e65b66170465a8b3bb60754feebb7730b959d9d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268708"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089722"
 ---
 # <a name="add-of-namespacetable"></a>\<Добавить > из \<namespaceTable >
 Представляет элемент конфигурации, содержащий пространство имен, используемое в качестве префикса сопоставления, которое затем можно использовать в фильтрах XPath для маршрутизации.  
@@ -48,7 +48,8 @@ ms.locfileid: "55268708"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<namespaceTable >](../../../../../docs/framework/configure-apps/file-schema/wcf/namespacetable.md)|Представляет секцию конфигурации для определения набора элементов, содержащих пространство имен для использования в качестве префиксов сопоставлений, которые в дальнейшем могут быть использованы в фильтрах XPath для маршрутизации.|  
+|[\<namespaceTable>](../../../../../docs/framework/configure-apps/file-schema/wcf/namespacetable.md)|Представляет секцию конфигурации для определения набора элементов, содержащих пространство имен для использования в качестве префиксов сопоставлений, которые в дальнейшем могут быть использованы в фильтрах XPath для маршрутизации.|  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.Routing.Configuration.NamespaceElement?displayProperty=nameWithType>

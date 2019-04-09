@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
-ms.openlocfilehash: 0d74e94aed00d480459aec3c63d961c82af42ef1
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 4fe21bb5b91143dff4d0a9f24bbc39be5e529985
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443012"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097535"
 ---
 # <a name="specifying-an-endpoint-address"></a>Задание адреса конечной точки
 Весь обмен данными со службой Windows Communication Foundation (WCF) происходит через ее конечные точки. Каждая конечная точка службы <xref:System.ServiceModel.Description.ServiceEndpoint> содержит адрес <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, привязку <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A> и контракт <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. В контракте задается, какие операции доступны. Привязка определяет, как осуществлять взаимодействие со службой, а адрес показывает, где можно найти службу. Каждая конечная точка должна иметь уникальный адрес. Адрес конечной точки представляется классом <xref:System.ServiceModel.EndpointAddress>, содержащим универсальный код ресурса (URI), который, в свою очередь, обозначает адрес службы, <xref:System.ServiceModel.EndpointAddress.Identity%2A>, представляющий удостоверение безопасности службы и коллекцию необязательных заголовков <xref:System.ServiceModel.EndpointAddress.Headers%2A>. Необязательные заголовки содержат более подробную информацию для идентификации конечной точки и взаимодействия с ней. Например, в заголовках может содержаться информация о том, как следует обрабатывать входящее сообщение, куда конечная точка должна отправить ответное сообщение или какой экземпляр службы необходимо использовать для обработки входящего сообщения от конкретного пользователя, если доступно несколько экземпляров.  
@@ -56,9 +56,7 @@ ms.locfileid: "56443012"
   
 ## <a name="endpoint-address-in-metadata"></a>Адрес конечной точки в метаданных  
  Адрес конечной точки представляется на языке описания веб-служб (WSDL) в виде элемента ссылки на конечную точку EPR WS-Addressing `EndpointReference` в элементе `wsdl:port` соответствующей конечной точки. Ссылка на конечную точку (EPR) содержит адрес конечной точки и любые свойства адреса. Обратите внимание, что EPR в элементе `wsdl:port` заменяет `soap:Address`, как показано в следующем примере.  
-  
-  
-  
+
 ## <a name="defining-endpoint-addresses-in-code"></a>Определение адреса конечной точки в коде  
  Адрес конечной точки можно создать в коде с помощью класса <xref:System.ServiceModel.EndpointAddress>. URI, заданный для адреса конечной точки, может представлять собой полный путь или путь относительно базового адреса службы. В следующем фрагменте кода показано создание экземпляра класса <xref:System.ServiceModel.EndpointAddress> и его добавление в экземпляр <xref:System.ServiceModel.ServiceHost>, в котором размещается служба.  
   
@@ -83,6 +81,7 @@ ms.locfileid: "56443012"
  Если конечные точки предоставляются явно, то конечные точки по умолчанию можно добавить, вызвав метод <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> класса <xref:System.ServiceModel.ServiceHost> перед вызовом <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>. Дополнительные сведения о конечных точках по умолчанию, привязках и режимах работы см. в разделах [Упрощенная конфигурация](../../../docs/framework/wcf/simplified-configuration.md) и [Упрощенная конфигурация служб WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.EndpointAddress>
 - [Идентификация и проверка подлинности службы](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
 - [Общие сведения о создании конечных точек](../../../docs/framework/wcf/endpoint-creation-overview.md)

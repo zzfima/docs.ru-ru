@@ -8,18 +8,16 @@ helpviewer_keywords:
 - hit testing functionality [WPF]
 - visual layer [WPF], hit testing functionality
 ms.assetid: b1a64b61-14be-4d75-b89a-5c67bebb2c7b
-ms.openlocfilehash: c8846c673e36fe64dd13c7acb600b93dedac5f3e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0cb8d0656765e5bc2c2a54ef5f282a67d8579f20
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355081"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082182"
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>Проверка попадания на визуальном уровне
 В этом разделе приведены общие сведения о функции проверки попадания, предоставляемой на визуальном уровне. Поддержка проверки попадания позволяет определить, попадает ли геометрический объект или точка в отображаемое содержимое <xref:System.Windows.Media.Visual>, что позволяет реализовать определенное поведение пользовательского интерфейса, например выделение прямоугольником для выбора нескольких объектов.  
-  
- 
-  
+
 <a name="hit_testing_scenarios"></a>   
 ## <a name="hit-testing-scenarios"></a>Сценарии проверки попадания  
  <xref:System.Windows.UIElement> Класс предоставляет <xref:System.Windows.UIElement.InputHitTest%2A> метод, который позволяет проверить попадание для элемента с использованием заданного значения координат. Во многих случаях <xref:System.Windows.UIElement.InputHitTest%2A> метод предоставляет нужные функции для реализации проверки попадания элементов. Однако существует несколько сценариев, в которых может потребоваться реализация проверки попадания на визуальном уровне.  
@@ -139,6 +137,7 @@ Z-порядок для визуального дерева
  [!code-vb[HitTestingOverview#108](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#108)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>
 - <xref:System.Windows.Media.HitTestResult>
 - <xref:System.Windows.Media.HitTestResultCallback>

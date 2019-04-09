@@ -6,12 +6,12 @@ helpviewer_keywords:
 - converting [WPF], shape to button
 - Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
-ms.openlocfilehash: cd143b55190ce398cc33e57a832ae85aabc36c41
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: f969e13ba50c2aadd170bdb28716213056d62cad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352702"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100123"
 ---
 # <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>Пошаговое руководство. Создание кнопки с помощью Microsoft Expression Blend
 В этом пошаговом руководстве пошагово продемонстрирует процесс создания [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] настраиваемая кнопка, с помощью Microsoft Expression Blend.  
@@ -248,6 +248,7 @@ ms.locfileid: "57352702"
 -   Создание градиентов, добавление BitmapEffects, использование преобразований и набор основных свойств объектов.  
   
 ## <a name="see-also"></a>См. также
+
 - [Создание кнопки с помощью XAML](walkthrough-create-a-button-by-using-xaml.md)
 - [Стилизация и использование шаблонов](styling-and-templating.md)
 - [Общие сведения об эффектах анимации](../graphics-multimedia/animation-overview.md)

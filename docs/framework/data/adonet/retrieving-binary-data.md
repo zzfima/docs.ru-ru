@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 56c5a9e3-31f1-482f-bce0-ff1c41a658d0
-ms.openlocfilehash: 7b0cfb9273603850d2451245b81f1bb651f16d56
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 068b84e8704b54e6aea148ec5fc5bf9f0c4cb958
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56094065"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085978"
 ---
 # <a name="retrieving-binary-data"></a>Извлечение двоичных данных
 По умолчанию **DataReader** загружает входящие данные как строка, как только вся строка данных доступен. Однако для больших двоичных объектов (BLOB) требуется другая процедура, поскольку они могут содержать гигабайты данных, которые невозможно уместить в одной строке. **Command.ExecuteReader** метод имеет перегрузку, которая будет принимать <xref:System.Data.CommandBehavior> аргумент для изменения поведения по умолчанию **DataReader**. Вы можете передать <xref:System.Data.CommandBehavior.SequentialAccess> для **ExecuteReader** метод для изменения поведения по умолчанию **DataReader** таким образом, чтобы вместо загрузки строк данных, он будет загружать данные последовательно мере их получения. Это идеально подходит для загрузки больших двоичных объектов или других больших структур данных. Отметим, что этот характер действий может зависеть от источника данных. Например, при возвращении большого двоичного объекта из Microsoft Access он загружается в память целиком, а не последовательно по мере поступления.  
@@ -154,5 +154,6 @@ connection.Close();
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Двоичные данные и данные большого объема SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

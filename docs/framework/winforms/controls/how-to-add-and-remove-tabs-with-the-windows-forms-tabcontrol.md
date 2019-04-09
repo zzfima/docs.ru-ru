@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Добавление и удаление вкладок с помощью Windows Forms TabControl
+title: Практическое руководство. Добавление и удаление вкладок с помощью элемента управления TabControl в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - tabs [Windows Forms], adding to pages
 - tab pages
 ms.assetid: 66d4dfca-41e8-44e3-9c80-fb7ac4cb1619
-ms.openlocfilehash: 4420f598f1243e6c834ecd82bb6ea7071cc95402
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 723e05803b1f7d2bc56476248987085dbe5e23f0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707954"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101605"
 ---
-# <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol"></a>Практическое руководство. Добавление и удаление вкладок с помощью Windows Forms TabControl
+# <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol"></a>Практическое руководство. Добавление и удаление вкладок с помощью элемента управления TabControl в Windows Forms
 По умолчанию <xref:System.Windows.Forms.TabControl> управления содержит два <xref:System.Windows.Forms.TabPage> элементов управления. Получить доступ к этим вкладкам через <xref:System.Windows.Forms.TabControl.TabPages%2A> свойство.  
   
 ### <a name="to-add-a-tab-programmatically"></a>Чтобы добавить вкладку программными средствами  
@@ -49,7 +49,7 @@ ms.locfileid: "57707954"
   
 -   Чтобы удалить выбранных вкладок, используйте <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> метод <xref:System.Windows.Forms.TabControl.TabPages%2A> свойство.  
   
-     - или -  
+     -или-  
   
 -   Чтобы удалить все вкладки, используйте <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> метод <xref:System.Windows.Forms.TabControl.TabPages%2A> свойство.  
   
@@ -75,6 +75,7 @@ ms.locfileid: "57707954"
     ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения об элементе управления TabControl](tabcontrol-control-overview-windows-forms.md)
 - [Практическое руководство. Добавление элемента управления на вкладку](how-to-add-a-control-to-a-tab-page.md)
 - [Практическое руководство. Блокировка доступа ко вкладкам](how-to-disable-tab-pages.md)

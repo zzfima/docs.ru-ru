@@ -19,12 +19,12 @@ helpviewer_keywords:
 - data sources [Windows Forms], binding to DataGridView control
 - DataGridView control [Windows Forms], data binding
 ms.assetid: 0a45c661-89dc-4390-9cc6-c47eee501488
-ms.openlocfilehash: d7ff88f877f73382f69874c58392c3374a83c019
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 095c89fd305b1eeb73e2919760abe48e848c6aa0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57706004"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112883"
 ---
 # <a name="datagridview-control-overview-windows-forms"></a>Общие сведения об элементе управления DataGridView (Windows Forms)
 > [!NOTE]
@@ -79,6 +79,7 @@ ms.locfileid: "57706004"
  Разделы, описывающие, как эффективно использовать элемент управления, чтобы избежать снижения производительности при работе с большими объемами данных.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
 - [Элемент управления DataGridView](datagridview-control-windows-forms.md)

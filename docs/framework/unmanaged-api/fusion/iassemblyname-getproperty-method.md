@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 93a85f2fd0f2095ce22bd69a3251d7950fcdb529
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 9af0773c2ef066c103f823e4d28c0fd6e9eadc24
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57464598"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086563"
 ---
 # <a name="iassemblynamegetproperty-method"></a>Метод IAssemblyName::GetProperty
 Возвращает указатель на свойство, заданное с помощью идентификатора указанного свойства.  
@@ -55,4 +55,5 @@ HRESULT GetProperty (
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)

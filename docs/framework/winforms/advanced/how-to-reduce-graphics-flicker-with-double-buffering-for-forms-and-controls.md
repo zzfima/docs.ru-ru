@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Уменьшить мерцания изображения посредством двойной буферизации для форм и элементов управления
+title: Практическое руководство. Уменьшение эффекта дрожания изображения посредством двойной буферизации для форм и элементов управления
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - flicker [Windows Forms], reducing in Windows Forms
 - graphics [Windows Forms], reducing double-buffered flicker
 ms.assetid: 91083d3a-653f-4f15-a467-0f37b2aa39d6
-ms.openlocfilehash: 95f8bdd9c30533b35782971459bad887e145adfe
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ef05b72b33d3f28d1811389dfae65554a1567d43
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713371"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096957"
 ---
-# <a name="how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls"></a>Практическое руководство. Уменьшить мерцания изображения посредством двойной буферизации для форм и элементов управления
+# <a name="how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls"></a>Практическое руководство. Уменьшение эффекта дрожания изображения посредством двойной буферизации для форм и элементов управления
 Двойная буферизация использует буфер памяти для решения проблем мерцания, связанных с несколькими операциями рисования. Если двойная буферизация включена, все операции рисования сначала обрабатываются в буфере памяти вместо области рисования на экране. После завершения всех операций рисования буфер памяти копируется непосредственно в связанную с ним область рисования. Поскольку на экране выполняется лишь одна графическая операция, исключается мерцание со сложными операциями рисования. Для большинства приложений по умолчанию двойной буферизации [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] обеспечит лучшие результаты. Стандартные элементы управления Windows Forms являются двойной буферизации по умолчанию. Вы можете включить двойную буферизацию в формах и элементах управления двумя способами. Можно либо установить <xref:System.Windows.Forms.Control.DoubleBuffered%2A> свойства `true`, либо путем вызова <xref:System.Windows.Forms.Control.SetStyle%2A> метод, чтобы задать <xref:System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer> флаг `true`. Оба метода включает двойной буферизации по умолчанию для формы или элемента управления и обеспечения отрисовки графики без мерцания. Вызов <xref:System.Windows.Forms.Control.SetStyle%2A> рекомендуется только для пользовательских элементов управления, для которых вы написали весь код отрисовки.  
   
  Для более сложных сценариях буферизации, например при анимации или сложном управлении памятью можно реализовать свою собственную логику для двойной буферизации. Дополнительные сведения см. в разделе [Как Управление буферизацией графики](how-to-manually-manage-buffered-graphics.md).  
@@ -35,6 +35,7 @@ ms.locfileid: "57713371"
      [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#32](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#32)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.Control.DoubleBuffered%2A>
 - <xref:System.Windows.Forms.Control.SetStyle%2A>
 - [Двойная буферизация графики](double-buffered-graphics.md)

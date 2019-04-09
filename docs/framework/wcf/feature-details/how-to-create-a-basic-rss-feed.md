@@ -1,18 +1,18 @@
 ---
-title: Как выполнить Создание базового RSS-канала
+title: Практическое руководство. Создание базового RSS-канала
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 431879b8-a5f8-4947-ad1e-4768c726aca8
-ms.openlocfilehash: 1de8d252be4740ad2a23ce1074d772364529eecf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 7b1ff72295332be072d7c664a546ed6e4d998ac8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695573"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073836"
 ---
-# <a name="how-to-create-a-basic-rss-feed"></a>Как выполнить Создание базового RSS-канала
+# <a name="how-to-create-a-basic-rss-feed"></a>Практическое руководство. Создание базового RSS-канала
 Windows Communication Foundation (WCF) позволяет создавать службы, которая предоставляет веб-канала синдикации. В данном разделе рассматривается процесс создания службы синдикации, предоставляющей веб-канал синдикации RSS.  
   
 ### <a name="to-create-a-basic-syndication-service"></a>Создание базовой службы синдикации  
@@ -95,5 +95,6 @@ Windows Communication Foundation (WCF) позволяет создавать с�
  При компиляции приведенного выше кода задайте ссылки на файлы System.ServiceModel.dll и System.ServiceModel.Web.dll.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.WebHttpBinding>
 - <xref:System.ServiceModel.Web.WebGetAttribute>

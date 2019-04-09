@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d1d7247f-a3b7-460b-b342-5c1a2365aa1a
-ms.openlocfilehash: c78f608225d64a428b768fbc8d03f71a393d980d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ae20dbe557c3cf56a273556c24578056843e9af6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516971"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096996"
 ---
 # <a name="deferred-versus-immediate-loading"></a>Отложенная и немедленная загрузка
 При запросе объекта фактически извлекается только запрошенный объект. *Связанные* объекты не извлекаются автоматически одновременно. (Дополнительные сведения см. в разделе [выполнение запросов в связях](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md).) Пользователь не может определить, что связанные объекты еще не загружены, поскольку попытка получить к ним доступ приводит к выполнению запроса, который их извлекает.  
@@ -34,4 +34,5 @@ ms.locfileid: "54516971"
 -   Метод <xref:System.Data.Linq.DataLoadOptions.AssociateWith%2A> для фильтрации объектов, извлеченных для определенной связи.  
   
 ## <a name="see-also"></a>См. также
+
 - [Основные принципы запросов](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)

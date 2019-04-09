@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - ICommandSource interfaces [WPF], implementing
 ms.assetid: 7452dd39-6e11-44bf-806a-31d87f3772ac
-ms.openlocfilehash: 42395d2916d58b2119cfe41ca154f258c3b0ec58
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 218a17f221598ac29213bd28a0f04adb16bc933b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361464"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107371"
 ---
 # <a name="how-to-implement-icommandsource"></a>Практическое руководство. Реализация ICommandSource
 В этом примере показано, как создать источник команды, реализовав <xref:System.Windows.Input.ICommandSource>.  Источник команды — это объект, который знает, как для вызова команды.  <xref:System.Windows.Input.ICommandSource> Интерфейс предоставляет три члена: <xref:System.Windows.Input.ICommandSource.Command%2A>, <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>, и <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>.  <xref:System.Windows.Input.ICommandSource.Command%2A> — Это команда, которая будет вызываться. <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> — Это тип пользовательских данных, который передается из источника команды методу, который обрабатывает команду. <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> — Это объект, для которого выполняется команда.  
@@ -59,6 +59,7 @@ ms.locfileid: "57361464"
  [!code-vb[ImplementICommandSource#ImplementICommandExecute](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandexecute)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Input.ICommandSource>
 - <xref:System.Windows.Input.ICommand>
 - <xref:System.Windows.Input.RoutedCommand>

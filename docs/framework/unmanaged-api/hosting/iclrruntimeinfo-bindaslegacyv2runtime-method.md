@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6c85888e9d29e7b3ae6ad76d1e534e08a4603ed2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 647c87b6f42b01922a385d502d72410af3140cd2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499029"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095351"
 ---
 # <a name="iclrruntimeinfobindaslegacyv2runtime-method"></a>Метод ICLRRuntimeInfo::BindAsLegacyV2Runtime
 Привязывает текущую среду выполнения для всех устаревших распространенных языка среды выполнения (CLR) версии 2 активации решения на основе политик.  
@@ -54,7 +54,8 @@ HRESULT BindAsLegacyV2Runtime ();
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
 - [Интерфейсы размещения](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
 - [Размещение](../../../../docs/framework/unmanaged-api/hosting/index.md)
-- [Элемент \<startup>](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)
+- [\<Startup > элемент](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)

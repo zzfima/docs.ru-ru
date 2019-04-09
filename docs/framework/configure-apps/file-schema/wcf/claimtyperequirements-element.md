@@ -1,13 +1,13 @@
 ---
-title: <claimTypeRequirements> - элемент
+title: <claimTypeRequirements> элемент
 ms.date: 03/30/2017
 ms.assetid: a26efe73-4bad-4731-8cad-27f00d54354b
-ms.openlocfilehash: 95cc1adf7ab37475e8d3eeb01750531a7f8ab249
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 236ae880fff24f7ccbf5d6c9c03c0208d446688f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279634"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085848"
 ---
 # <a name="claimtyperequirements-element"></a>\<claimTypeRequirements > элемент
 Задает коллекцию обязательных типов утверждений.  
@@ -17,6 +17,7 @@ ms.locfileid: "55279634"
  Требование типа утверждения состоит из универсального кода ресурса (URI) типа утверждения, запрашиваемого в выданном маркере, и логического параметра, который определяет, является ли обязательным этот тип утверждения в выданном маркере.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.ClaimTypeRequirements%2A>
 - <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement.ClaimTypeRequirements%2A>
 - <xref:System.ServiceModel.Configuration.ClaimTypeElementCollection>

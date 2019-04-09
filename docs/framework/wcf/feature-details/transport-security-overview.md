@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-ms.openlocfilehash: 3eb18a3e48c185d59879e86801a7df5e6080d7a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04526e8aea09b412de4d3a94f17938b02ad6527b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529165"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105278"
 ---
 # <a name="transport-security-overview"></a>Общие сведения о безопасности транспорта
 Механизмы обеспечения безопасности транспорта в Windows Communication Foundation (WCF) зависят от привязки и используемого транспорта. Например, при использовании класса <xref:System.ServiceModel.WSHttpBinding> транспортом является протокол HTTP и в качестве основного механизма защиты транспорта применяется протокол SSL через HTTP, обычно называемый HTTPS. В этом разделе рассматриваются основные транспорта механизмы безопасности, используемые в привязках, предоставляемых системой WCF.  
@@ -19,7 +19,7 @@ ms.locfileid: "54529165"
 >  При использовании безопасности SSL с .NET Framework 3.5 и более поздних версиях клиент WCF использует промежуточные сертификаты в своем хранилище сертификатов, и промежуточные сертификаты, полученные в процессе согласования SSL для проверки цепочки сертификатов для службы сертификат. Платформа .NET Framework 3.0 использует только промежуточные сертификаты, установленные в локальном хранилище сертификатов.  
   
 > [!WARNING]
->  При использовании системы безопасности транспорта свойство <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> не применяется. Чтобы избежать этого, присвойте свойству <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A?displayProperty=nameWithType> для <xref:System.ServiceModel.Description.PrincipalPermissionMode.None?displayProperty=nameWithType>. <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> - это поведение службы, которое можно задать в описании службы.  
+>  При использовании системы безопасности транспорта свойство <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> не применяется. Чтобы избежать этого, присвойте свойству <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A?displayProperty=nameWithType> для <xref:System.ServiceModel.Description.PrincipalPermissionMode.None?displayProperty=nameWithType>. <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> Это поведение службы, которое можно задать в описании службы.  
   
 ## <a name="basichttpbinding"></a>BasicHttpBinding  
  По умолчанию класс <xref:System.ServiceModel.BasicHttpBinding> не обеспечивает безопасность. Эта привязка предназначена для взаимодействия с поставщиками веб-служб, которые не реализуют средства обеспечения безопасности. Однако режим безопасности можно включить, присвоив свойству <xref:System.ServiceModel.BasicHttpSecurity.Mode%2A> любое значение, кроме <xref:System.ServiceModel.BasicHttpSecurityMode.None>. Чтобы включить режим безопасности транспорта, присвойте этому свойству значение <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>.  
@@ -115,10 +115,11 @@ ms.locfileid: "54529165"
  При использовании безопасности транспорта эта привязка использует протокол SSL по HTTP, известный как HTTPS-протокол с выданным токеном (<xref:System.ServiceModel.WSFederationHttpSecurityMode.TransportWithMessageCredential>). Дополнительные сведения о федеративных приложениях см. в разделе [Федерация и выданные маркеры](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
   
 ## <a name="netpeertcpbinding"></a>NetPeerTcpBinding  
- Класс <xref:System.ServiceModel.NetPeerTcpBinding> представляет защищенный транспорт, предназначенный для эффективного взаимодействия с использованием функции одноранговой сети. Как указано в имени класса и привязки, применяется протокол TCP. Если для режима безопасности задано значение Transport, данная привязка реализует протокол TLS по TCP. Дополнительные сведения о функции peer-to-peer см. в разделе [сети Peer-to-Peer](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
+ Класс <xref:System.ServiceModel.NetPeerTcpBinding> представляет защищенный транспорт, предназначенный для эффективного взаимодействия с использованием возможности одноранговой сети. Как указано в имени класса и привязки, применяется протокол TCP. Если для режима безопасности задано значение Transport, данная привязка реализует протокол TLS по TCP. Дополнительные сведения о функции peer-to-peer см. в разделе [сети Peer-to-Peer](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
   
 ## <a name="msmqintegrationbinding-and-netmsmqbinding"></a>MsmqIntegrationBinding и NetMsmqBinding  
  Подробное обсуждение транспорта безопасности с очередью сообщений (ранее называемой MSMQ), см. в разделе [защита безопасность транспорта с помощью сообщений](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Программирование безопасности WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)

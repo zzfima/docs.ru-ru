@@ -5,12 +5,12 @@ helpviewer_keywords:
 - NT Service
 - NT Service Host Sample [Windows Communication Foundation]
 ms.assetid: 1b2f45c5-2bed-4979-b0ee-8f9efcfec028
-ms.openlocfilehash: f07bdacddfbaa35b17821d2a8a0191fef86e38f9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 2ee7abb2fa709c6d49b049d69882b2fd6b7f3a0c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579398"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088331"
 ---
 # <a name="windows-service-host"></a>Узел службы Windows
 В этом примере демонстрируется службы Windows Communication Foundation (WCF), размещенной в управляемой службе Windows. Службы Windows управляются с помощью оснастки «службы» в **панели управления** и могут быть настроены для автоматического запуска после перезагрузки системы. Этот образец состоит из клиентской программы и программы службы Windows. Служба реализуется как программа EXE и содержит свой собственный код размещения. В других средах размещения, таких как служба активации Windows (WAS) или IIS, писать код размещения необязательно.
@@ -64,4 +64,5 @@ ms.locfileid: "54579398"
 4.  Чтобы запустить образец в конфигурации с одной или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ## <a name="see-also"></a>См. также
-- [Образцы размещения AppFabric и сохраняемости](https://go.microsoft.com/fwlink/?LinkId=193961)
+
+- [Образцы размещения и сохраняемости AppFabric](https://go.microsoft.com/fwlink/?LinkId=193961)

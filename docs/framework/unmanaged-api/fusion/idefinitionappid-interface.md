@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4e8bb31967a6ad515761e6cd03657f2c834debe5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5bd705ef549de3a8018efe731ef8735ef7b6b915
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545560"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083183"
 ---
 # <a name="idefinitionappid-interface"></a>Интерфейс IDefinitionAppId
 Представляет уникальный идентификатор для кода, который определяет приложение в текущей области.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание:|  
+|Метод|Описание|  
 |------------|-----------------|  
 |`IDefinitionAppId::get_Codebase`|Возвращает форматированную строку, представляющее код в этом `IDefinitionAppId` объекта.|  
 |`IDefinitionAppId::put_Codebase`|Задает код это `IDefinitionAppId` строковое значение в объект в указанном формате.|  
@@ -45,4 +45,5 @@ ms.locfileid: "54545560"
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
-- [Интерфейсы Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+
+- [Fusion-интерфейсы](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)

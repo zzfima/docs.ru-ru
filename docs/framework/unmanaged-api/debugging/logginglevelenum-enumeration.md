@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e72654dc62020e05f18c4d7d4d528617a0cd0c9f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2fe8e1355382273a681e927897f4a8ff5814b8de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54675286"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086511"
 ---
 # <a name="logginglevelenum-enumeration"></a>Перечисление LoggingLevelEnum
 Указывает уровень важности описательного сообщения, записанного в журнале событий при регистрации события управляемым потоком.  
@@ -48,7 +48,7 @@ typedef enum LoggingLevelEnum {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |`LTraceLevel0`|Сообщение является уровень трассировки 0.|  
 |`LTraceLevel1`|Сообщение является уровень трассировки 1.|  
@@ -77,5 +77,6 @@ typedef enum LoggingLevelEnum {
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Diagnostics.EventLog>
 - [Перечисления отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

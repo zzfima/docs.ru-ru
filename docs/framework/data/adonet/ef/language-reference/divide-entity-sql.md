@@ -2,12 +2,12 @@
 title: '- (Деление) (Язык entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: ef48c368-f3ed-4275-8ada-4e9649781262
-ms.openlocfilehash: 42fc5e2a9f9f159a8a60973dbed6540b3188fba6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ca63835a3be23137a1a40d6d6597083ae2128ac7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745239"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094896"
 ---
 # <a name="-divide-entity-sql"></a>/ (деление) (Entity SQL)
 Делит одно число на другое.  
@@ -20,10 +20,10 @@ dividend / divisor
   
 ## <a name="arguments"></a>Аргументы  
  `dividend`  
- Делимое числовое выражение. `dividend` - любое допустимое выражение с любым числовым типом данных.  
+ Делимое числовое выражение. `dividend` — любое допустимое выражение любого из числовых типов данных.  
   
  `divisor`  
- Числовое выражение, на которое делится делимое. `divisor` - любое допустимое выражение с любым числовым типом данных.  
+ Числовое выражение, на которое делится делимое. `divisor` — любое допустимое выражение любого из числовых типов данных.  
   
 ## <a name="result-types"></a>Типы результата  
  Тип данных, который является результатом неявного повышения типов обоих аргументов. Дополнительные сведения о неявном повышении уровня типов, см. в разделе [система типов](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md).  
@@ -38,4 +38,5 @@ dividend / divisor
  [!code-csharp[DP EntityServices Concepts 2#DIVIDE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#divide)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Справочник по Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

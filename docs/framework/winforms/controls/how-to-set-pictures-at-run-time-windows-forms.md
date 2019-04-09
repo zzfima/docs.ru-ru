@@ -13,12 +13,12 @@ helpviewer_keywords:
 - images [Windows Forms], adding with PictureBox control [Windows Forms]
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 18ca41d0-68a5-4660-985e-a6c1fbc01d76
-ms.openlocfilehash: 5afb4fe3ebef705cd0671312aacb6f9ad8219621
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8ed3ba9050a9117a53b5f4f1cccd26381f55ab32
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711236"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073602"
 ---
 # <a name="how-to-set-pictures-at-run-time-windows-forms"></a>Практическое руководство. Установка изображений во время выполнения (Windows Forms)
 Можно программно установить изображения, отображаемого в формах Windows <xref:System.Windows.Forms.PictureBox> элемента управления.  
@@ -98,6 +98,7 @@ ms.locfileid: "57711236"
      Этот код удалит изображение, даже если рисунок был загружен в элемент управления во время разработки.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.PictureBox>
 - <xref:System.Drawing.Image.FromFile%2A?displayProperty=nameWithType>
 - [Общие сведения об элементе управления PictureBox](picturebox-control-overview-windows-forms.md)

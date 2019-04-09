@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Ограничение доступа с использованием класса PrincipalPermissionAttribute
+title: Практическое руководство. Ограничение доступа с использованием класса PrincipalPermissionAttribute
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - WCF, authorization
 - WCF, security
 ms.assetid: 5162f5c4-8781-4cc4-9425-bb7620eaeaf4
-ms.openlocfilehash: 4704a310e49246bdc8fff54abe6841f2e8482ed5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 2bbdcc8e5a55f9d2cdbb80bf83443f0ad8850452
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590578"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105291"
 ---
-# <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>Как выполнить Ограничение доступа с использованием класса PrincipalPermissionAttribute
+# <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>Практическое руководство. Ограничение доступа с использованием класса PrincipalPermissionAttribute
 Управление доступом к ресурсам компьютера Windows-домена - это базовая задача обеспечения безопасности. Например, только определенные пользователи должны иметь возможность просматривать конфиденциальные данные, такие как платежные ведомости. В этом разделе рассматривается, как ограничить доступ к методу, потребовав, чтобы пользователь принадлежал к заранее заданной группе. Работающий пример см. в разделе [авторизации доступа к операциям службы](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md).  
   
  Эта задача состоит из двух отдельных процедур. Первая создает группу и заносит в нее пользователей. Вторая применяет класс <xref:System.Security.Permissions.PrincipalPermissionAttribute>, чтобы задать группу.  
@@ -85,6 +85,7 @@ ms.locfileid: "54590578"
      [!code-vb[c_PrincipalPermissionAttribute#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_principalpermissionattribute/vb/source.vb#3)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
 - <xref:System.Security.Permissions.SecurityAction.Demand>

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR attributes for custom types [XAML Services]
 ms.assetid: 5dfb299a-b6e2-41b8-8694-e6ac987547f1
-ms.openlocfilehash: 80127bae06a90dccd204b0f2a4baef10732ade76
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: ace1b40b25bd12ff7092459e468a90f382434bf4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58039460"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086215"
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>Относящиеся к XAML атрибуты среды CLR для пользовательских типов и библиотек
 В этом разделе описаны наиболее распространенные атрибуты среды выполнения (CLR) языка, определенных службами XAML платформы .NET Framework. Здесь также описываются другие атрибуты CLR, которые определены в .NET Framework, которые используются связанные с XAML для приложения к сборкам и типам. Присвоение атрибутов сборки, типы или члены этих атрибутов CLR предоставляет о системе типов XAML, связанные с типами. Информация предоставляется потребителю XAML, использующий служб XAML .NET Framework для обработки в потоке узлов XAML напрямую или через выделенные средства чтения XAML и записи XAML.  
@@ -66,7 +66,7 @@ ms.locfileid: "58039460"
 ### <a name="dependsonattribute"></a>DependsOnAttribute  
  **Справочная документация по:**  <xref:System.Windows.Markup.DependsOnAttribute>  
   
- **Область применения:** Свойство.  
+ **Область применения:** Свойство  
   
  **Аргументы:** Строка, указывающая имя члена другого типа с атрибутом.  
   
@@ -269,5 +269,6 @@ ms.locfileid: "58039460"
 >  Службы XAML .NET framework также определяет атрибут связанные с XAML <xref:System.Windows.Markup.RootNamespaceAttribute>. Этот атрибут является атрибутом уровня сборки для поддержки системы проекта, и он не неважен для пользовательских типов XAML.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Attribute>
 - [Определение пользовательских типов для использования со службами XAML .NET Framework](defining-custom-types-for-use-with-net-framework-xaml-services.md)

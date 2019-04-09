@@ -1,5 +1,5 @@
 ---
-title: Элемент <trace>
+title: <trace> Элемент
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - trace element
 - trace listener, <trace> element
 ms.assetid: 7931c942-63c1-47c3-a045-9d9de3cacdbf
-ms.openlocfilehash: d930e1fe9a9a4012e363bbbffe83e1ea7cc1c595
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5faf352dce2a459a999b3cf54209f6bd9793bde0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257802"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073797"
 ---
 # <a name="trace-element"></a>\<трассировки > элемент
 Содержит прослушиватели, которые собирают, хранят и маршрутизируют сообщения трассировки.  
@@ -45,14 +45,14 @@ ms.locfileid: "55257802"
   
 ## <a name="autoflush-attribute"></a>AutoFlush атрибут  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |`false`|Не очищает автоматически выходного буфера. Это значение по умолчанию.|  
 |`true`|Автоматически очищает выходной буфер.|  
   
 ## <a name="usegloballock-attribute"></a>useGlobalLock атрибут  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |`false`|Не использовать глобальную блокировку, если прослушиватель является потокобезопасным; в противном случае использует глобальную блокировку.|  
 |`true`|Использует глобальную блокировку, независимо от того, является ли прослушиватель потокобезопасным. Это значение по умолчанию.|  
@@ -61,11 +61,11 @@ ms.locfileid: "55257802"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<listeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-trace.md)|Указывает прослушиватель, который собирает, хранилищ и направляет сообщения.|  
+|[\<прослушиватели >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-trace.md)|Указывает прослушиватель, который собирает, хранилищ и направляет сообщения.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`system.diagnostics`|Задает прослушиватели трассировки, собирающие, хранящие и маршрутизирующие сообщения, а также уровень, на котором установлен ключ трассировки.|  
@@ -86,6 +86,7 @@ ms.locfileid: "55257802"
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.DefaultTraceListener>
 - <xref:System.Diagnostics.TextWriterTraceListener>

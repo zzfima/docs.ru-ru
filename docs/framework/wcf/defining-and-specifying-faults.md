@@ -8,12 +8,12 @@ helpviewer_keywords:
 - handling faults [WCF], specifying
 - handling faults [WCF], defining
 ms.assetid: c00c84f1-962d-46a7-b07f-ebc4f80fbfc1
-ms.openlocfilehash: e2217cdac8edcab2f4b9e28484fb0758a149b72c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 337d0a60543aa4ebf42bb2ca0c147607a2548301
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590595"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079335"
 ---
 # <a name="defining-and-specifying-faults"></a>Определение и задание сбоев
 Ошибки SOAP передают сведения об ошибке от службы клиенту и, в дуплексном случае, от клиента службе совместимым способом. В этом разделе описано, как и когда можно определить содержимое пользовательских ошибок и задать операции, которые могут возвратить это содержимое. Дополнительные сведения о том, как служба или дуплексный клиент могут отправлять такие ошибки и как это приложение клиента или службы обрабатывает эти ошибки, см. в разделе [Sending and Receiving Faults](../../../docs/framework/wcf/sending-and-receiving-faults.md). Обзор обработки ошибок в приложениях Windows Communication Foundation (WCF), см. в разделе [задание и обработка сбоев в контрактах и службах](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
@@ -88,10 +88,11 @@ End Class
  Существуют некоторые ограничения доступа к службам, создающим ошибки. WCF поддерживает только ошибки с типами сведений, в схеме и совместимыми с контрактами данных. Например как упоминалось выше, WCF не поддерживает ошибки, использующие в типах сведений атрибуты XML, а также ошибки с более чем один элемент верхнего уровня в области сведений.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.FaultContractAttribute>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
-- [Указание и обработка сбоев в контрактах и службах](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [Задание и обработка сбоев в контрактах и службах](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
 - [Сбои при отправке и получении](../../../docs/framework/wcf/sending-and-receiving-faults.md)
 - [Практическое руководство. Объявление сбоев в контрактах служб](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md)
 - [Основные сведения об уровне защиты](../../../docs/framework/wcf/understanding-protection-level.md)

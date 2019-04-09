@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: 4546ce2a08fc2ac20717bbaa55d4688b43d34b47
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: b456549daefa0fdf67524b0b039a091652cf41ff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093818"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111154"
 ---
 # <a name="sql-server-express-user-instances"></a>Пользовательские экземпляры SQL Server, экспресс-выпуск
 Выпуск Microsoft SQL Server Express Edition (SQL Server Express) поддерживает пользовательский экземпляр, который доступен только при использовании поставщика данных .NET Framework для SQL Server (`SqlClient`). Пользовательским экземпляром является отдельный экземпляр компонента SQL Server Express Database Engine, который формируется родительским экземпляром. Пользовательские экземпляры позволяют пользователям, не являющимся администраторами на их локальных компьютерах, присоединяться и подключаться к базам данных SQL Server Express. Каждый экземпляр выполняется в контексте безопасности отдельного пользователя, один экземпляр на одного пользователя.  
@@ -37,17 +37,17 @@ sp_configure 'user instances enabled','0'
  Для пользовательских экземпляров поддерживается только сетевой протокол локальных именованных каналов. Пользовательский экземпляр не может быть запущен на удаленном экземпляре SQL Server, и имена входа SQL Server не разрешаются.  
   
 ## <a name="connecting-to-a-user-instance"></a>Соединение с пользовательским экземпляром  
- `User Instance` И `AttachDBFilename` <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> ключевые слова поддерживают <xref:System.Data.SqlClient.SqlConnection> для подключения к пользовательскому экземпляру. Пользовательские экземпляры также поддерживаются свойствами <xref:System.Data.SqlClient.SqlConnectionStringBuilder>`UserInstance` и `AttachDBFilename`.  
+ `User Instance` И `AttachDBFilename`<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> ключевые слова поддерживают <xref:System.Data.SqlClient.SqlConnection> для подключения к пользовательскому экземпляру. Пользовательские экземпляры также поддерживаются <xref:System.Data.SqlClient.SqlConnectionStringBuilder>`UserInstance` и `AttachDBFilename` свойства.  
   
  Следует отметить следующее относительно образца строки соединения, показанного далее.  
   
 -   Ключевое слово `Data Source` ссылается на родительский экземпляр SQL Server Express, который формирует пользовательский экземпляр. Экземпляром по умолчанию является .\sqlexpress.  
   
--   Параметру `Integrated Security` задается значение `true`. Чтобы подключиться к пользовательскому экземпляру, требуется проверка подлинности Windows; имена входа SQL Server не поддерживаются.  
+-   `Integrated Security` имеет значение `true`. Чтобы подключиться к пользовательскому экземпляру, требуется проверка подлинности Windows; имена входа SQL Server не поддерживаются.  
   
 -   Для `User Instance` установлено значение `true`, которое вызывает экземпляр пользователя. (По умолчанию используется `false`.)  
   
--   Ключевое слово строки соединения `AttachDbFileName` служит для прикрепления первичного файла базы данных (MDF), который должен включать полный путь имени. Ключевое слово `AttachDbFileName` также соответствует ключам «расширенные свойства» и «исходное имя файла» в строке соединения <xref:System.Data.SqlClient.SqlConnection>.  
+-   Ключевое слово строки соединения `AttachDbFileName` служит для прикрепления первичного файла базы данных (MDF), который должен включать полный путь имени. `AttachDbFileName` также соответствует ключам «initial file name» в пределах и «extended properties» <xref:System.Data.SqlClient.SqlConnection> строку подключения.  
   
 -   Строка подстановки `|DataDirectory|`, заключенная в символы конвейера, ссылается на каталог данных приложения, открывающего соединение, и предоставляет относительный путь, указывающий местоположение баз данных MDF и LDF, а также файлы журналов. Если нужно найти эти файлы, необходимо предоставить полный путь к файлам.  
   
@@ -58,10 +58,10 @@ Initial Catalog=InstanceDB;
 ```  
   
 > [!NOTE]
->  Свойства <xref:System.Data.SqlClient.SqlConnectionStringBuilder><xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> и <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> также можно использовать для создания строки подключения во время выполнения.  
+>  Можно также использовать <xref:System.Data.SqlClient.SqlConnectionStringBuilder><xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> и <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> свойства для создания строки подключения во время выполнения.  
   
 ### <a name="using-the-124datadirectory124-substitution-string"></a>С помощью &#124;DataDirectory&#124; строка подстановки  
- Свойство `AttachDbFileName` в ADO.NET 2.0 было расширено, в нем появилась строка подстановки `|DataDirectory|` (заключается в символы прямой черты). `DataDirectory` в сочетании со свойством `AttachDbFileName` позволяет указать относительный путь к файлу данных, тем самым позволяя разработчикам создавать строки соединения без указания полного пути к источнику данных.  
+ `AttachDbFileName` было расширено в ADO.NET 2.0 с введением `|DataDirectory|` (заключаемой в символы конвейера) строка подстановки. `DataDirectory` используется в сочетании с `AttachDbFileName` позволяет указывать относительный путь в файл данных, позволяя разработчикам создавать строки соединения, основанных на относительный путь к источнику данных, не обязательно указывать полный путь.  
   
  Физическое расположение, на которое указывает `DataDirectory`, зависит от типа приложения. В этом примере нужный файл Northwind.mdf находится в папке приложения \app_data.  
   
@@ -77,7 +77,7 @@ Initial Catalog=Northwind;
  Если в строке соединения содержится неправильно сформированная строка подстановки, то будет вызвано исключение <xref:System.ArgumentException>.  
   
 > [!NOTE]
->  <xref:System.Data.SqlClient> преобразует строки подстановки в полные пути файловой системы локального компьютера. Поэтому удалите неподдерживаемые пути удаленного сервера, HTTP и UNC. Исключение вызывается при открытии соединения, если сервер не расположен на локальном компьютере.  
+>  <xref:System.Data.SqlClient> Преобразует строки подстановки в полные пути файловой системы локального компьютера. Поэтому удалите неподдерживаемые пути удаленного сервера, HTTP и UNC. Исключение вызывается при открытии соединения, если сервер не расположен на локальном компьютере.  
   
  Если <xref:System.Data.SqlClient.SqlConnection> открыто, оно перенаправляется от экземпляра по умолчанию SQL Server Express на инициированный экземпляр времени исполнения, выполняющийся под учетной записью вызывающего.  
   
@@ -151,7 +151,8 @@ private static void OpenSqlConnection()
 -   Специальное размещение ASP.NET с использованием проверки подлинности Windows. Один экземпляр SQL Server Express может быть размещен в интрасети. Приложение подключается с использованием учетной записи ASPNET Windows, а не при помощи олицетворения. Пользовательские экземпляры не должны использоваться для сценариев сторонних производителей или общего размещения, где все приложения используют общий пользовательский экземпляр и больше не остаются изолированными друг от друга.  
   
 ## <a name="see-also"></a>См. также
+
 - [SQL Server и ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
 - [Строки подключения](../../../../../docs/framework/data/adonet/connection-strings.md)
 - [Подключение к источнику данных](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

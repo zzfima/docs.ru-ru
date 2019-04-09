@@ -1,5 +1,5 @@
 ---
-title: Кокласс TypeNameFactory
+title: Компонентный класс TypeNameFactory
 ms.date: 03/30/2017
 api_name:
 - TypeNameFactory Coclass
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: abdfdd4393609bb7821cfc44c0e46574d8724cfb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a915ed72350f278a5df01191e69c95a4917f1230
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730068"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094168"
 ---
-# <a name="typenamefactory-coclass"></a>Кокласс TypeNameFactory
+# <a name="typenamefactory-coclass"></a>Компонентный класс TypeNameFactory
 Предоставляет интерфейс для управления деконструкцией имени типа.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -50,4 +50,5 @@ coclass TypeNameFactory {
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Размещение коклассов](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)

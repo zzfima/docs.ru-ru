@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ef6f2662-323b-4534-aa82-6d1afb7b9309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45b1ef75227932449b68366345ded33a2cd96490
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 1297c84acadf0a53b418b06afe806237d374ee25
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479679"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073901"
 ---
 # <a name="iclrruntimeinfoisstarted-method"></a>Метод ICLRRuntimeInfo::IsStarted
 Указывает, был ли запущен среды выполнения (то есть ли [метод ICLRRuntimeHost::Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) был вызван и успешно).  
@@ -61,6 +61,7 @@ HRESULT IsStarted(
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
 - [Интерфейсы размещения](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
 - [Размещение](../../../../docs/framework/unmanaged-api/hosting/index.md)

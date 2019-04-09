@@ -2,12 +2,12 @@
 title: ограничение ссылочной целостности
 ms.date: 03/30/2017
 ms.assetid: 3d3ba44b-4302-40d8-a7a9-62932e0395e5
-ms.openlocfilehash: 7d3304393ef4e97887d9b8afec94ed265e38eaf0
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: a8ef035872317c6eaea0401164e7fa8c95f5f7ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679116"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073979"
 ---
 # <a name="referential-integrity-constraint"></a>ограничение ссылочной целостности
 Объект *ограничение ссылочной целостности* в Entity Data Model (EDM) аналогичен ограничения ссылочной целостности в реляционной базе данных. Таким же образом, столбец или столбцы из таблицы базы данных можно ссылаться на первичный ключ другой таблицы [свойство](../../../../docs/framework/data/adonet/property.md) (или свойства) из [тип сущности](../../../../docs/framework/data/adonet/entity-type.md) могут ссылаться на [ключ сущности ](../../../../docs/framework/data/adonet/entity-key.md) другого типа сущности. Тип сущности, на который приведена ссылка называется *основного конца* ограничения. Тип сущности, который ссылается на основном конечном элементе называется *зависимого конца* ограничения.  
@@ -34,5 +34,6 @@ ms.locfileid: "57679116"
  [!code-xml[EDM_Example_Model#RefConstraint](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books4.edmx#refconstraint)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Основные понятия модели EDM](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [Сущностная модель данных](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [EDM (модель данных с использованием сущностей)](../../../../docs/framework/data/adonet/entity-data-model.md)

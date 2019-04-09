@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], hiding menu items in designer
 - menu items [Windows Forms], hiding
 ms.assetid: 8f1b057e-3d8a-4f11-88df-935f7b29a836
-ms.openlocfilehash: 2af9f31360f667662d4d640b5e449ff6ee8ce381
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: ddfbcbe78cdf8e5b0d126e82189589edef2be58a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721545"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085692"
 ---
 # <a name="how-to-hide-toolstripmenuitems-using-the-designer"></a>Практическое руководство. Скрытие объектов ToolStripMenuItem с помощью конструктора
 Скрытие пунктов меню — это способ управления пользовательским интерфейсом (UI) приложения и ограничить команды пользователя. Часто требуется скрыть меню целиком, когда все элементы меню на нем будут недоступны. Это меньше отвлекаться для пользователя. Кроме того можно скрыть и отключить меню или пункта меню, как скрытие не запрещает пользователю доступ к команде меню с помощью сочетания клавиш. Дополнительные сведения об отключении пунктов меню см. в разделе [как: Отключение объектов ToolStripMenuItem с помощью конструктора](how-to-disable-toolstripmenuitems-using-the-designer.md).  
@@ -35,6 +35,7 @@ ms.locfileid: "57721545"
      Если скрыть пункт подменю, он остается видимым в форме во время разработки, то можно легко выделить для дальнейшей работы. Он будет скрыт во время выполнения.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.ToolStripItem.Visible%2A>
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A>

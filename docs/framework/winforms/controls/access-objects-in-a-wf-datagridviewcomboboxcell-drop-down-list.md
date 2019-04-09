@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Доступ к объектам в Windows Forms элемента управления DataGridViewComboBoxCell с раскрывающимся списком
+title: Практическое руководство. Доступ к объектам в раскрывающемся списке элемента управления DataGridViewComboBoxCell в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], in DataGridView control
 - combo boxes [Windows Forms], accessing objects in DataGridViewComboBoxCell drop-down lists
 ms.assetid: bcbe794a-d1fa-47f8-b5a3-5f085b32097d
-ms.openlocfilehash: 8a4731e081b31f74b4f17c2796b56cdf6b95e3e2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 221774895fa5867ad6ec870f7e293c9366e442f3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705731"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080791"
 ---
-# <a name="how-to-access-objects-in-a-windows-forms-datagridviewcomboboxcell-drop-down-list"></a>Практическое руководство. Доступ к объектам в Windows Forms элемента управления DataGridViewComboBoxCell с раскрывающимся списком
+# <a name="how-to-access-objects-in-a-windows-forms-datagridviewcomboboxcell-drop-down-list"></a>Практическое руководство. Доступ к объектам в раскрывающемся списке элемента управления DataGridViewComboBoxCell в Windows Forms
 Как и <xref:System.Windows.Forms.ComboBox> управления <xref:System.Windows.Forms.DataGridViewComboBoxColumn> и <xref:System.Windows.Forms.DataGridViewComboBoxCell> типов позволяют добавлять произвольные объекты в свой список раскрывающегося списка. С помощью этой функции может представлять сложных состояний в раскрывающемся списке без необходимости хранения соответствующих объектов в отдельной коллекции.  
   
  В отличие от <xref:System.Windows.Forms.ComboBox> управления <xref:System.Windows.Forms.DataGridView> типы не имеют <xref:System.Windows.Forms.ComboBox.SelectedItem%2A> свойство для извлечения текущего выбранного объекта. Вместо этого необходимо задать <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A?displayProperty=nameWithType> или <xref:System.Windows.Forms.DataGridViewComboBoxCell.ValueMember%2A?displayProperty=nameWithType> присваивается имя свойства бизнес-объекта. Когда пользователь делает выбор, указанное свойство бизнес-объект задает ячейку <xref:System.Windows.Forms.DataGridViewCell.Value%2A> свойство.  
@@ -69,6 +69,7 @@ ms.locfileid: "57705731"
 -   ссылки на сборки System и System.Windows.Forms;  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewComboBoxColumn>
 - <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A?displayProperty=nameWithType>

@@ -1,5 +1,5 @@
 ---
-title: Элемент < system.codedom >
+title: Элемент <system.codedom>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.codedom
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - system.codedom element
 - <system.codedom> element
 ms.assetid: 672a68f7-e69f-4479-ac30-e980085ec4fe
-ms.openlocfilehash: e2c65044b99e2d5fda7025f24d1d4c4082ded4ec
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0f47255bb4073007a847e4a8b85ccfd34100582b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268227"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101618"
 ---
 # <a name="systemcodedom-element"></a>\<System.CodeDom > элемент
 Задает параметры конфигурации компилятора для доступных поставщиков языков.  
@@ -38,13 +38,13 @@ ms.locfileid: "55268227"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
-|[\<compilers>](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|Контейнер для элементов конфигурации компилятора; содержит ноль элементов [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) или несколько.|  
+|[\<компиляторы >](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|Контейнер для элементов конфигурации компилятора; содержит ноль элементов [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) или несколько.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
   
@@ -88,8 +88,9 @@ ms.locfileid: "55268227"
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.CodeDom.Compiler.CompilerInfo>
 - <xref:System.CodeDom.Compiler.CodeDomProvider>
 - [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Схема параметров компилятора и поставщика языков](../../../../../docs/framework/configure-apps/file-schema/compiler/index.md)
-- [Элемент \<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)
+- [Схема параметров поставщиков языков и компиляторов](../../../../../docs/framework/configure-apps/file-schema/compiler/index.md)
+- [\<Компилятор > элемент](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)

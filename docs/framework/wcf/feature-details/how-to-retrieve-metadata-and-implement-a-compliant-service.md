@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Извлечение данных и реализация совместимой службы
+title: Практическое руководство. Извлечение данных и реализация совместимой службы
 ms.date: 03/30/2017
 ms.assetid: f6f3a2b9-c8aa-4b0b-832c-ec2927bf1163
-ms.openlocfilehash: a043672ad564341209bc179f9d1596c228fe19cd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 2ddc50e2851217002c825163761855d649b56db1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608499"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095975"
 ---
-# <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>Как выполнить Извлечение данных и реализация совместимой службы
+# <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>Практическое руководство. Извлечение данных и реализация совместимой службы
 Часто разработку и реализацию служб выполняют разные люди. В средах, в которых приложения с возможностью взаимодействия имеют большое значение, контракты можно разработать или описать на языке WSDL, и разработчик должен реализовать службу, соответствующую предоставляемому контракту. Можно также перенести существующую службу в Windows Communication Foundation (WCF), но сохранить формат подключения. Кроме того, дуплексные контракты требуют, чтобы вызывающие стороны также реализовывали контракт обратного вызова.  
   
  В этих случаях необходимо использовать [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) (или эквивалентное средство) для создания интерфейса контракта службы в управляемый язык, который можно реализовать для выполнения требований контракт. Обычно [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) используется для получения контракт службы, который используется с фабрику каналов или типа клиента WCF, а также с помощью файла конфигурации клиента, который устанавливает правильную привязку и адрес. Чтобы использовать созданный файл конфигурации, следует изменить его на файл конфигурации службы. Также может возникнуть необходимость в изменении контракта службы.  
@@ -60,4 +60,5 @@ ms.locfileid: "54608499"
 [!code-xml[ClientProxyCodeSample#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/clientproxycodesample/cs/hostapplication.exe.config#20)]    
   
 ## <a name="see-also"></a>См. также
-- [Служебная программа для метаданных ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+
+- [Служебное средство ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

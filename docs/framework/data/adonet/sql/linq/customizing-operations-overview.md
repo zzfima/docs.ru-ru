@@ -2,12 +2,12 @@
 title: 'Настройка операций: Обзор'
 ms.date: 03/30/2017
 ms.assetid: a3546296-1443-4b88-aa6e-d41011041ba7
-ms.openlocfilehash: 4f13bed76ad2814d669f487b57ae9acbdc08eb74
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29fb75271b7bc324d462078e94e4a28534986fba
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735465"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075981"
 ---
 # <a name="customizing-operations-overview"></a>Настройка операций: Обзор
 По умолчанию [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] создает динамический код SQL для операций вставки, обновления и удаления на основе сопоставления. Однако на практике часто приходится добавлять собственную бизнес-логику для обеспечения безопасности, выполнения проверок и т. д.  
@@ -24,4 +24,5 @@ ms.locfileid: "54735465"
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] поддерживает использование хранимых процедур и определяемых пользователем функций. Хранимые процедуры часто используются для настройки операций. Дополнительные сведения см. в разделе [Хранимые процедуры](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Настройка операций вставки, обновления и удаления](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)

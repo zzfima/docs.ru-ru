@@ -6,19 +6,19 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], DataGridView control compared
 - DataGridView control [Windows Forms], DataGrid control compared
 ms.assetid: d412c786-140e-4210-8a56-a68467530a55
-ms.openlocfilehash: b7d97431bfdbdafd5e87bfbfb9c5badd9ba273ea
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 6802ef375d8d15826725e68f5065317192523178
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720492"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095676"
 ---
 # <a name="differences-between-the-windows-forms-datagridview-and-datagrid-controls"></a>Различия элементов управления DataGridView и DataGrid в Windows Forms
 <xref:System.Windows.Forms.DataGridView> Элемент управления является элемент управления, который заменяет <xref:System.Windows.Forms.DataGrid> элемента управления. <xref:System.Windows.Forms.DataGridView> Элемент управления предоставляет множество основных и дополнительных компонентов, отсутствующих в <xref:System.Windows.Forms.DataGrid> элемента управления. Кроме того, архитектура <xref:System.Windows.Forms.DataGridView> управления значительно упрощает для расширения и настройки, чем <xref:System.Windows.Forms.DataGrid> элемента управления.  
   
  В следующей таблице описаны некоторые из основных функций, доступных в <xref:System.Windows.Forms.DataGridView> элемент управления, который отсутствует <xref:System.Windows.Forms.DataGrid> элемента управления.  
   
-|Функция управления DataGridView|Описание:|  
+|Функция управления DataGridView|Описание|  
 |----------------------------------|-----------------|  
 |Несколько типов столбцов|<xref:System.Windows.Forms.DataGridView> Управления предоставляет большее количество встроенных типов столбцов, чем <xref:System.Windows.Forms.DataGrid> элемента управления. Типы столбцов соответствуют потребностям наиболее распространенных сценариев, но могут оказаться проще расширить или заменить чем типов столбцов в <xref:System.Windows.Forms.DataGrid> элемента управления. Дополнительные сведения см. в разделе [типы столбцов элемента управления DataGridView в Windows Forms](column-types-in-the-windows-forms-datagridview-control.md).|  
 |Различные способы отображения данных|<xref:System.Windows.Forms.DataGrid> , Элемент управления имеет ограничение в отображении данных из внешнего источника данных. <xref:System.Windows.Forms.DataGridView> Элемент управления, тем не менее, может отображать данные, хранящиеся в элементе управления, данные из привязанного источника данных или данных связанных и несвязанных друг с другом. Вы также можете реализовать виртуальный режим в <xref:System.Windows.Forms.DataGridView> управления для управления данными. Дополнительные сведения см. в разделе [режимы отображения данных в элементе управления DataGridView Windows Forms](data-display-modes-in-the-windows-forms-datagridview-control.md).|  
@@ -33,6 +33,7 @@ ms.locfileid: "57720492"
  Так как <xref:System.Windows.Forms.DataGridView> элемент управления имеет совершенно новой архитектуры, нет пути несложный процесс преобразования, которое позволит вам использовать <xref:System.Windows.Forms.DataGrid> изменений при помощи <xref:System.Windows.Forms.DataGridView> элемента управления. Многие <xref:System.Windows.Forms.DataGrid> настройки являются ненужными <xref:System.Windows.Forms.DataGridView> управления, однако из-за встроенных функциях, доступных в новый элемент управления. Если вы создали пользовательские типы столбцов для <xref:System.Windows.Forms.DataGrid> элемент управления, который вы хотите использовать с <xref:System.Windows.Forms.DataGridView> элемента управления, необходимо реализовать снова с помощью новой архитектуры. Дополнительные сведения см. в разделе [Настройка элемента управления DataGridView в Windows Forms](customizing-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGrid>
 - <xref:System.Windows.Forms.BindingSource>

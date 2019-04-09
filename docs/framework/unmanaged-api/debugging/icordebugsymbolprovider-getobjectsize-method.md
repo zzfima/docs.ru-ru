@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 3c564396-ac64-4ef3-b4f6-df96f1d46fc7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 10374f76edb9446093b89d064570ce05193129b3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: cbcdb5541fdd49944f462321dc24131a32a42391
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57498332"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107293"
 ---
 # <a name="icordebugsymbolprovidergetobjectsize-method"></a>Метод ICorDebugSymbolProvider::GetObjectSize
 Возвращает размер объекта для объекта на основе его сигнатуры TypeSpec.  
@@ -37,7 +37,7 @@ HRESULT GetObjectSize(
 ## <a name="remarks"></a>Примечания  
   
 > [!NOTE]
->  Этот метод доступен только в .NET Native.  
+>  Этот метод доступен только в машинном коде .NET.  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
@@ -49,5 +49,6 @@ HRESULT GetObjectSize(
  **Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс ICorDebugSymbolProvider](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
 - [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

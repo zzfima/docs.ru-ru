@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Добавление загрузки, сохранения и кнопки "Отмена" для Windows Forms элемента управления BindingNavigator
+title: Практическое руководство. Добавление кнопок загрузки, сохранения и отмены в элемент управления BindingNavigator в формах Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - controls [Windows Forms], manipulating
 - BindingNavigator control [Windows Forms], adding buttons
 ms.assetid: faa33042-186e-4bb2-8798-17ceb987ec62
-ms.openlocfilehash: d86ded0b93d876eac4b97938678cafbb22c3ac8a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 52d4fc32836a5d20bd99d8ebfd3119c761376e30
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722442"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098719"
 ---
-# <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>Практическое руководство. Добавление загрузки, сохранения и кнопки "Отмена" для Windows Forms элемента управления BindingNavigator
+# <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>Практическое руководство. Добавление кнопок загрузки, сохранения и отмены в элемент управления BindingNavigator в формах Windows Forms
 <xref:System.Windows.Forms.BindingNavigator> Элемент управления является специализированным <xref:System.Windows.Forms.ToolStrip> элемент управления, который предназначен для навигации и управление элементами управления в форме, привязанных к данным.  
   
  Так как это <xref:System.Windows.Forms.ToolStrip> управления <xref:System.Windows.Forms.BindingNavigator> компонента можно легко изменить для включения дополнительных или альтернативных команд для пользователя.  
@@ -110,8 +110,9 @@ ms.locfileid: "57722442"
     >  <xref:System.Windows.Forms.BindingSource.CancelEdit%2A> Метод ограничивается строки данных. Сохраните все изменения, внесенные во время просмотра этой отдельной записи до перехода к следующей записи.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.BindingNavigator>
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.ToolStrip>
-- [Элемент управления BindingNavigator](bindingnavigator-control-windows-forms.md)
+- [BindingNavigator — элемент управления](bindingnavigator-control-windows-forms.md)
 - [Общие сведения о компоненте BindingSource](bindingsource-component-overview.md)

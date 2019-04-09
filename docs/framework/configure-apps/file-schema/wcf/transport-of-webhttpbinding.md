@@ -2,12 +2,12 @@
 title: <transport> из <webHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: f150fb19-7de1-44af-81f4-86cad881cd05
-ms.openlocfilehash: d2c7ee3512ddeefae6e5551a58b3bab76742ed30
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8dcd51cd248dbba3ccf60295cb1712167684328e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363434"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116286"
 ---
 # <a name="transport-of-webhttpbinding"></a>\<Транспорт > из \<webHttpBinding >
 Определяет параметры безопасности уровня транспорта для конечной точки службы, настроенной для получения запросов HTTP.  
@@ -80,11 +80,12 @@ ms.locfileid: "57363434"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<Безопасность >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-webhttpbinding.md)|Представляет возможности безопасности [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) элемент.|  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.HttpTransportSecurity>
 - <xref:System.ServiceModel.Configuration.WebHttpSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.WebHttpSecurity.Transport%2A>

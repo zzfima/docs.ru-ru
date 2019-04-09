@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9796dd234611fd6bbdf2b949b8a0ed66527aaba9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c86a4fd2788c8ea2df5d9e54c5c221afd179704
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521261"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091425"
 ---
 # <a name="assemblyflags-enumeration"></a>Перечисление AssemblyFlags
 Содержит значения, описывающие возможности времени выполнения сборки.  
@@ -40,7 +40,7 @@ typedef enum {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |`afImplicitExportedTypes`|Указывает, что экспортированный тип определения являются неявными внутри файлов, составляющих сборку. В .NET Framework версий 1.0 и 1.1 это значение всегда считается задать.|  
 |`afImplicitResources`|Указывает, что определения ресурсов являются неявными внутри файлов, составляющих сборку. В .NET Framework 1.0 и 1.1 это значение всегда считается задать.|  
@@ -61,5 +61,6 @@ typedef enum {
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
 - [Интерфейс IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

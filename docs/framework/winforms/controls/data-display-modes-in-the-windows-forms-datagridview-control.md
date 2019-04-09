@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], display modes
 - DataGridView control [Windows Forms], display modes
 ms.assetid: 9755a030-3f3f-4705-a661-ba5a48a81875
-ms.openlocfilehash: 86eda82cad778978711520bc2951a7a35d133753
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 673780909f6d66168548893e99d79bbfec70a0e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703084"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079699"
 ---
 # <a name="data-display-modes-in-the-windows-forms-datagridview-control"></a>Режимы отображения данных в элементе управления DataGridView в Windows Forms
 <xref:System.Windows.Forms.DataGridView> Элемент управления может отображать данные в трех различных режимах: привязанного, не связанного с данными и виртуальных. Выберите наиболее подходящий режим, в зависимости от ваших требований.  
@@ -42,6 +42,7 @@ ms.locfileid: "57703084"
  Дополнительные сведения о виртуальном режиме, см. в разделе [виртуальный режим в элементе управления DataGridView Windows Forms](virtual-mode-in-the-windows-forms-datagridview-control.md). Пример, показывающий, как использовать события в виртуальном режиме, см. в разделе [Пошаговое руководство: Реализация виртуального режима в Windows Forms элемента управления DataGridView](implementing-virtual-mode-wf-datagridview-control.md).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A?displayProperty=nameWithType>
@@ -49,7 +50,7 @@ ms.locfileid: "57703084"
 - <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A?displayProperty=nameWithType>
 - [Отображение данных с помощью элемента управления DataGridView в Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
 - [Типы столбцов элемента управления DataGridView в Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)
-- [Пошаговое руководство: Создание не связанного с данными Windows Forms элемента управления DataGridView](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)
-- [Практическое руководство. Привязка данных к элементу управления DataGridView Windows Forms](how-to-bind-data-to-the-windows-forms-datagridview-control.md)
+- [Пошаговое руководство. Создание не связанного с данными элемента управления DataGridView в Windows Forms](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)
+- [Практическое руководство. Привязка данных к элементу управления DataGridView в Windows Forms](how-to-bind-data-to-the-windows-forms-datagridview-control.md)
 - [Виртуальный режим элемента управления DataGridView в Windows Forms](virtual-mode-in-the-windows-forms-datagridview-control.md)
-- [Пошаговое руководство: Реализация виртуального режима для элемента управления DataGridView в Windows Forms](implementing-virtual-mode-wf-datagridview-control.md)
+- [Пошаговое руководство. Реализация виртуального режима для элемента управления DataGridView в Windows Forms](implementing-virtual-mode-wf-datagridview-control.md)

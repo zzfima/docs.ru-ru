@@ -14,12 +14,12 @@ helpviewer_keywords:
 - color palettes [Windows Forms], showing in ColorDialog component
 - colors [Windows Forms], showing palettes
 ms.assetid: ee050f61-dbc8-4436-ba22-51360981ab48
-ms.openlocfilehash: 35f6f81c2b13234b23b3b2295e45caf5f16abd9e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: fcaf5da9958cf66fb63bd753dc94cba9c10f62f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708331"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096040"
 ---
 # <a name="how-to-show-a-color-palette-with-the-colordialog-component"></a>Практическое руководство. Отображение цветовой палитры с помощью компонента ColorDialog
 [ColorDialog](colordialog-component-windows-forms.md) компонент отображает палитру цветов и возвращает свойство, содержащее цвет, выбранном пользователем.  
@@ -77,5 +77,6 @@ ms.locfileid: "57708331"
     ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.ColorDialog>
 - [Компонент ColorDialog](colordialog-component-windows-forms.md)

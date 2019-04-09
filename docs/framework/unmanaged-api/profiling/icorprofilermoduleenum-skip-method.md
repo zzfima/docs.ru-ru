@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9472013dcbbeef51753980348652b74c34172ce5
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 397e8afcc176bcd9733e83dc6425fe49f385931e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57499216"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078206"
 ---
 # <a name="icorprofilermoduleenumskip-method"></a>Метод ICorProfilerModuleEnum::Skip
 Перемещает курсор перечислителя из текущей позиции, пропуская указанное число элементов.  
@@ -58,5 +58,6 @@ HRESULT Skip([in] ULONG celt);
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс ICorProfilerModuleEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md)
-- [Интерфейсы профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Профилирующие интерфейсы](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

@@ -2,12 +2,12 @@
 title: <resolver>
 ms.date: 03/30/2017
 ms.assetid: 0c00200c-f135-4e5c-a024-76b72bcbc021
-ms.openlocfilehash: f3d4b049afe55fb9fb80cbad56c49e8ec13e60db
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 39dcb868bd3ff25451509616e1dac7d41f94cfa1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758746"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075883"
 ---
 # <a name="resolver"></a>\<resolver>
 Указывает распознаватель одноранговых узлов, используемый для распознавания идентификатора сетки с IP-адресами в набор адресов одноранговых узлов, которые представляют несколько узлов, входящих в сетку.  
@@ -40,7 +40,7 @@ ms.locfileid: "55758746"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<заголовки >](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|Задает параметры службы пользовательского распознавателя одноранговых узлов.|  
+|[\<headers>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|Задает параметры службы пользовательского распознавателя одноранговых узлов.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -52,6 +52,7 @@ ms.locfileid: "55758746"
  Распознаватель одноранговых узлов представляет собой службу обнаружения, используемую одноранговыми каналами для поиска одноранговых узлов, участвующих в сетке с IP-адресами. Он также используется для «регистрации» узла в сетке с IP-адресами; с помощью такого механизма одноранговый узел становится известным и доступным из сетки с IP-адресами. Дополнительные сведения о распознавателях одноранговых узлов см. в разделе [распознавателей одноранговых узлов](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.PeerResolver>
 - <xref:System.ServiceModel.PeerResolvers.PeerResolverSettings>
 - <xref:System.ServiceModel.NetPeerTcpBinding.Resolver%2A>

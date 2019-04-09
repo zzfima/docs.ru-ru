@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Закрепление столбцов в элементе управления DataGridView формы Windows с помощью конструктора
+title: Практическое руководство. Замораживание столбцов элемента управления DataGridView в формах Windows Forms с помощью конструктора
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, columns
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column freezing
 - data [Windows Forms], displaying
 ms.assetid: 87412dd2-478f-4751-af87-dafc591fc215
-ms.openlocfilehash: e3581390a56e2dfd19ed0d760a618993ec124bfb
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 437e49a1f8e5a154f1a54fc7a266579cb5f0122c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716855"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100006"
 ---
-# <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>Практическое руководство. Закрепление столбцов в элементе управления DataGridView формы Windows с помощью конструктора
+# <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>Практическое руководство. Замораживание столбцов элемента управления DataGridView в формах Windows Forms с помощью конструктора
 При просмотре пользователями данных, отображаемых в элементе управления Windows Forms <xref:System.Windows.Forms.DataGridView>, им порой требуется часто обращаться к одному столбцу или набору столбцов. Например при просмотре таблицы сведений о пользователе, содержащей много столбцов, это полезно для отображения имени клиента постоянно при прокручивании остальных столбцов за пределы видимой области.  
   
  Для этого необходимо закрепить столбцы в элементе управления. При закреплении столбца все столбцы слева от него (или справа для языков с направлением письма справа налево) также закрепляются. Закрепленные столбцы остаются на месте в то время, как остальные столбцы можно прокручивать. Если разрешено переупорядочивание столбцов, закрепленные столбцы рассматриваются как группа, отличная от группы незакрепленных столбцов. Пользователи могут переставлять местами столбцы в каждой из групп, но не могут перемещать столбцы из одной группы в другую.  
@@ -36,10 +36,11 @@ ms.locfileid: "57716855"
     >  Можно также закрепить заголовок столбца при его добавлении, выбрав **операций ввода-вывода** поле **добавить столбец** диалоговое окно.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A?displayProperty=nameWithType>
-- [Практическое руководство. Добавлять и удалять столбцы в элементе управления DataGridView формы Windows с помощью конструктора](add-and-remove-columns-in-the-datagrid-using-the-designer.md)
-- [Практическое руководство. Разрешение изменения порядка столбцов в элементе управления DataGridView формы Windows с помощью конструктора](enable-column-reordering-in-the-datagrid-using-the-designer.md)
+- [Практическое руководство. Добавление и удаление столбцов элемента управления DataGridView в формах Windows Forms с помощью конструктора](add-and-remove-columns-in-the-datagrid-using-the-designer.md)
+- [Практическое руководство. Разрешение изменения порядка столбцов элемента управления DataGridView в формах Windows Forms с помощью конструктора](enable-column-reordering-in-the-datagrid-using-the-designer.md)
 - [Практическое руководство. Отображение текста справа налево в формах Windows Forms для глобализации](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7d3337xw(v=vs.100))
-- [Практическое руководство. Создание проекта приложения Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project).
-- [Практическое руководство. Добавление элементов управления Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [Практическое руководство. Создайте проект приложения Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
+- [Практическое руководство. Добавление элементов управления в формы Windows Forms](how-to-add-controls-to-windows-forms.md)

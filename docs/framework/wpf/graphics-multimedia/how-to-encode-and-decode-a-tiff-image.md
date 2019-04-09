@@ -13,12 +13,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - TIFF decoding [WPF]
 ms.assetid: 1dfe3209-fc73-40e6-ad1c-71c1c58b3364
-ms.openlocfilehash: e89f39dedcc210aaa6917b4b964d1944673047b5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0b2b638d3aa81e48a1378794435d59da1b323aa2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356680"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107436"
 ---
 # <a name="how-to-encode-and-decode-a-tiff-image"></a>Практическое руководство. Кодирование и декодирование изображения в формате TIFF
 Следующие примеры показывают, как декодировать и кодировать [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)] изображений, используя заданный <xref:System.Windows.Media.Imaging.TiffBitmapDecoder> и <xref:System.Windows.Media.Imaging.TiffBitmapEncoder> объектов.  
@@ -38,4 +38,5 @@ ms.locfileid: "57356680"
  [!code-vb[TiffBitmapDecoderEncoder#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TiffBitmapDecoderEncoder/VB/TiffEncoderDecoder.vb#4)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения об обработке изображений](imaging-overview.md)

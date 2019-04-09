@@ -20,12 +20,12 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], file format
 - Exchangeable Image File
 ms.assetid: 6be085a2-2c13-47c8-b80a-c18b32777d8d
-ms.openlocfilehash: a78c84e82ac8507ad40cf3a9fdb44d58858a38d2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f41585ba8816e0b1894a9f01163191848ae391e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713219"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089175"
 ---
 # <a name="types-of-bitmaps"></a>Типы точечных рисунков
 Битовая карта представляет собой массив битов, задающих цвет каждого пикселя в прямоугольный массив точек. Количество битов, задающих цвет одного пикселя определяет число цветов, которые могут быть назначены пикселя. Например, если каждый пиксел представляется 4 бита, затем произвольной точки можно задать один из 16 различных цветов (2 ^ 4 = 16). Ниже приведены несколько примеров число цветов, которые могут быть назначены пикселя, представляемого заданное число бит.  
@@ -86,8 +86,9 @@ ms.locfileid: "57713219"
  TIFF — это гибкий и расширяемый формат, поддерживаемый для разнообразных платформ и приложений для обработки изображений. TIFF-файлы можно хранить изображения с произвольное число бит на пиксель и использовать различные алгоритмы сжатия. Несколько образов могут храниться в одной, нескольких страниц TIFF-файл. Сведения, связанные с изображением (модель сканера, главного компьютера, тип сжатия, ориентация, примеры на пиксел и т. д.) можно хранить в файле и упорядочены с помощью тегов. Формат TIFF может быть расширена, при необходимости путем добавления новых тегов и утверждения.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Drawing.Image?displayProperty=nameWithType>
 - <xref:System.Drawing.Bitmap?displayProperty=nameWithType>
 - <xref:System.Drawing.Imaging.PixelFormat?displayProperty=nameWithType>
-- [Изображения, точечные рисунки и метафайлы](images-bitmaps-and-metafiles.md)
-- [Работа с растровыми и векторными изображениями, значками и метафайлами](working-with-images-bitmaps-icons-and-metafiles.md)
+- [Работа с растровыми и векторными изображениями с использованием классов Image, Bitmap и Metafile](images-bitmaps-and-metafiles.md)
+- [Работа с растровыми и векторными изображениями](working-with-images-bitmaps-icons-and-metafiles.md)

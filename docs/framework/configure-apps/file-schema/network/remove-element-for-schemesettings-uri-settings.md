@@ -1,13 +1,13 @@
 ---
-title: Элемент <remove> для schemeSettings (Параметры URI)
+title: <remove> Элемент для schemeSettings (параметры Uri)
 ms.date: 03/30/2017
 ms.assetid: 4095ba51-de20-4f87-b562-018abe422c91
-ms.openlocfilehash: fd137c86d7373947f57364c13eb3875cba46b269
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: f29ee86deaa150324b40f4fac12ead152553e50d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55262648"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104979"
 ---
 # <a name="remove-element-for-schemesettings-uri-settings"></a>\<Удалить > элемент для schemeSettings (параметры Uri)
 Удаляет параметр схемы для имени схемы.  
@@ -39,9 +39,9 @@ ms.locfileid: "55262648"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
-|[Элемент \<schemeSettings> (параметры URI)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Определяет, как <xref:System.Uri> анализируется для определенных схем.|  
+|[\<schemeSettings > (параметры Uri)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Определяет, как <xref:System.Uri> анализируется для определенных схем.|  
   
 ## <a name="remarks"></a>Примечания  
  По умолчанию <xref:System.Uri?displayProperty=nameWithType> знаком процента Отмена переходов класс разделители пути до выполнения сжатия пути. Это было реализовано в качестве механизма защиты от атак, следующим образом:  
@@ -75,6 +75,7 @@ ms.locfileid: "55262648"
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>
 - <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>
 - <xref:System.Configuration.UriSection?displayProperty=nameWithType>

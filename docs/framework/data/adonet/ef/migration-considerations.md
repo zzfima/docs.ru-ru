@@ -2,12 +2,12 @@
 title: Вопросы миграции (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: d783bc79585740710e663d26ecd4110f64882b44
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
-ms.translationtype: MT
+ms.openlocfilehash: 359e373476398bb26f06eb86eb13296ab05d2705
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903906"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089891"
 ---
 # <a name="migration-considerations-entity-framework"></a>Вопросы миграции (Entity Framework)
 Платформа [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework предоставляет существующим приложениям ряд преимуществ. Наиболее важным из них является возможность использования концептуальной модели для отделения структур данных, используемых приложением, от схемы в источнике данных. Это позволяет в дальнейшем значительно упростить внесение изменений в модель хранения или сам источник данных, устранив необходимость внесения соответствующих изменений в приложение. Дополнительные сведения о преимуществах использования [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], см. в разделе [Обзор Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md) и [модели EDM](../../../../../docs/framework/data/adonet/entity-data-model.md).  
@@ -79,7 +79,7 @@ ms.locfileid: "55903906"
   
   Дополнительные сведения см. в разделе [привязка объектов к элементам управления](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738469(v=vs.100)).  
   
-- Элементы управления источником данных [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)].  
+- [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] элементы управления источником данных.  
 
   [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Включает элемент управления источником данных, разработанная для упрощения привязки данных в [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] веб-приложений. Дополнительные сведения см. в разделе [Обзор элемента управления EntityDataSource веб-сервера](https://docs.microsoft.com/previous-versions/aspnet/cc488502(v=vs.100)).  
   
@@ -103,5 +103,6 @@ ms.locfileid: "55903906"
   [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] Веб-приложений часто необходимо поддерживать состояние веб-страницы или сеанса пользователя. Объекты в <xref:System.Data.Objects.ObjectContext> экземпляр хранятся в состоянии просмотра на клиенте или в состоянии сеанса на сервере и позднее извлекаются и повторно присоединить к новому контексту объекта. Дополнительные сведения см. в разделе [присоединение и отсоединение объектов](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896271(v=vs.100)).  
   
 ## <a name="see-also"></a>См. также
+
 - [Требования к развертыванию](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)
 - [Терминология платформы Entity Framework](../../../../../docs/framework/data/adonet/ef/terminology.md)
