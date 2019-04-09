@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 662a47f75f2eef75b39ee877ea4645311cae6210
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: ea63627bc1e689c93634c8fe8b9048b271758573
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484879"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156121"
 ---
 # <a name="icorruntimehostcreatedomain-method"></a>Метод ICorRuntimeHost::CreateDomain
 Создает домен приложения. Вызывающий объект получает указатель интерфейса типа <xref:System._AppDomain> для экземпляра типа <xref:System.AppDomain?displayProperty=nameWithType>.  
@@ -66,6 +66,7 @@ HRESULT CreateDomain (
  **Версии платформы .NET framework:** 1.0, 1.1  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>
 - [Интерфейс ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

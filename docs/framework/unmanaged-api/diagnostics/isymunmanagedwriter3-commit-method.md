@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 38d9c3eeb5cdb8b15ef5306a641910f2f4bcc9cf
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f531b96211a1dd6072d62937b9f93fc17f105d4d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372351"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149049"
 ---
 # <a name="isymunmanagedwriter3commit-method"></a>Метод ISymUnmanagedWriter3::Commit
 Фиксирует изменения, записанных в поток.  
@@ -40,4 +40,5 @@ HRESULT Commit();
  **Заголовок.** CorSym.idl CorSym.h  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс ISymUnmanagedWriter3](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)

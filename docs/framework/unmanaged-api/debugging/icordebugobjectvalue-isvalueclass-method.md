@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 12ba95eca2a103cffa07247a6ce474263e42e5ad
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 71e32211e6ab16fb5e4e2c624dbad3af5fd6b09f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487529"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132027"
 ---
 # <a name="icordebugobjectvalueisvalueclass-method"></a>Метод ICorDebugObjectValue::IsValueClass
 Получает значение, указывающее, является ли значение этого объекта является типом значения.  
@@ -49,5 +49,3 @@ HRESULT IsValueClass (
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
-
-

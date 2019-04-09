@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Реагирование на изменения схемы шрифтов в приложении Windows Forms
+title: Практическое руководство. Реагирование на изменения схемы шрифтов в приложениях Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - Windows Forms, font scheme changes
 ms.assetid: 4db27702-22e7-43bf-a07d-9a004549853c
-ms.openlocfilehash: 4c34a65ed8ddabfb99451e055048502cb7617e4f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 85770687ecfad690a251eafec9051c4c20f45dd2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715975"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182108"
 ---
-# <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>Практическое руководство. Реагирование на изменения схемы шрифтов в приложении Windows Forms
+# <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>Практическое руководство. Реагирование на изменения схемы шрифтов в приложениях Windows Forms
 В операционных системах Windows пользователь может изменить параметры шрифта во всей системе, чтобы проверить шрифт по умолчанию отображаются, больше или меньше. Изменение этих параметров шрифта важно для пользователей с нарушениями зрения и требуют более длинный тип для чтения текста на экране компьютера. Вы можете настроить приложение Windows Forms реагировать на эти изменения путем увеличения или уменьшения размера формы и все содержащиеся в нем текст при каждом изменении шрифтовой схемы. Если требуется, чтобы формы в соответствии с изменениями в размерах шрифта динамически, можно добавить код в форму.  
   
  Как правило, шрифт по умолчанию, используемые в Windows Forms используется шрифт, возвращенный <xref:Microsoft.Win32> вызов пространства имен `GetStockObject(DEFAULT_GUI_FONT)`. Шрифт, возвращаемый при вызове этого метода изменяется только при изменении разрешения экрана. Как показано в следующей процедуре, ваш код должен изменить шрифт по умолчанию для <xref:System.Drawing.SystemFonts.IconTitleFont%2A> реагировать на изменения размера шрифта.  
@@ -65,5 +65,6 @@ ms.locfileid: "57715975"
  Конструктор в этом примере код содержит вызов `InitializeComponent`, который определяется при создании нового проекта Windows Forms в Visual Studio. Удалите эту строку кода, при создании приложения в командной строке.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>
 - [Автоматическое масштабирование в Windows Forms](automatic-scaling-in-windows-forms.md)

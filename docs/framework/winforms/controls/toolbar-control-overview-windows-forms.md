@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], about toolbars
 - ToolBar control [Windows Forms], about ToolBar controls
 ms.assetid: d426b203-0216-4dbe-b834-1641e50a9c29
-ms.openlocfilehash: 249c5854b83a62878ecef0350e08ba4b00523aff
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 7b39c8e3dca88e968b43ba5ff14794e2e77247d1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708851"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174815"
 ---
 # <a name="toolbar-control-overview-windows-forms"></a>Общие сведения об элементе управления ToolBar (Windows Forms)
 > [!NOTE]
@@ -31,8 +31,9 @@ ms.locfileid: "57708851"
  <xref:System.Windows.Forms.ToolBar> Элемент управления позволяет создавать панели инструментов, добавив <xref:System.Windows.Forms.Button> объектов <xref:System.Windows.Forms.ToolBar.Buttons%2A> коллекции. Можно использовать редактор коллекции для добавления кнопок <xref:System.Windows.Forms.ToolBar> элемента управления, каждый из которых <xref:System.Windows.Forms.Button> объекта должен быть текст или изображение назначена, несмотря на то, что можно назначить обе. Изображение предоставляется связанным компонентом [ImageList](imagelist-component-windows-forms.md). Во время выполнения, можно добавить или удалить кнопки из <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection> с помощью <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Add%2A> и <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Remove%2A> методы. Для программирования кнопок <xref:System.Windows.Forms.ToolBar>, добавьте код для <xref:System.Windows.Forms.ToolBar.ButtonClick> события <xref:System.Windows.Forms.ToolBar>, с использованием <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> свойство <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> класс, чтобы определить, какая кнопка была нажата.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.ToolBar>
 - [Элемент управления ToolBar](toolbar-control-windows-forms.md)
 - [Практическое руководство. Добавление кнопок в элемент управления ToolBar](how-to-add-buttons-to-a-toolbar-control.md)
-- [Практическое руководство. Определение значка для кнопки панели инструментов](how-to-define-an-icon-for-a-toolbar-button.md)
-- [Практическое руководство. Триггер событий меню для кнопок панели инструментов](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [Практическое руководство. Определение значка для кнопки элемента управления ToolBar](how-to-define-an-icon-for-a-toolbar-button.md)
+- [Практическое руководство. Генерирование событий меню для кнопок элемента управления Toolbar](how-to-trigger-menu-events-for-toolbar-buttons.md)

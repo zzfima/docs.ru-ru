@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation caching in clients
 - caching, UI Automation clients
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
-ms.openlocfilehash: 003928d718579948a9baf188d02a7847edb676e1
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 4c403fa6f0de34e970eb0c74df13d807e92f8a05
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676867"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175829"
 ---
 # <a name="caching-in-ui-automation-clients"></a>Кэширование в клиентах автоматизации пользовательского интерфейса
 > [!NOTE]
@@ -70,7 +70,7 @@ ms.locfileid: "57676867"
   
  Если запрошенное свойство отсутствует в кэше, возникает исключение.  
   
- <xref:System.Windows.Automation.AutomationElement.Cached%2A>, например <xref:System.Windows.Automation.AutomationElement.Current%2A>, предоставляет отдельные свойства как члены структуры. Однако вам не требуется извлекать эту структуру; с отдельными свойствами можно работать напрямую. Например, свойство <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A> можно получить из `element.Cached.Name`, где `element` — <xref:System.Windows.Automation.AutomationElement>.  
+ <xref:System.Windows.Automation.AutomationElement.Cached%2A>, такие как <xref:System.Windows.Automation.AutomationElement.Current%2A>, предоставляет отдельные свойства как члены структуры. Однако вам не требуется извлекать эту структуру; с отдельными свойствами можно работать напрямую. Например, свойство <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A> можно получить из `element.Cached.Name`, где `element` — <xref:System.Windows.Automation.AutomationElement>.  
   
 <a name="Retrieving_Cached_Control_Patterns"></a>   
 ## <a name="retrieving-cached-control-patterns"></a>Получение кэшированных шаблонов элементов управления  
@@ -102,6 +102,7 @@ ms.locfileid: "57676867"
  Обновление кэша не изменяет свойства существующих ссылок <xref:System.Windows.Automation.AutomationElement> .  
   
 ## <a name="see-also"></a>См. также
+
 - [События модели автоматизации пользовательского интерфейса для клиентов](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)
 - [Использование кэширования в модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
 - [Пример FetchTimer](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771456(v=vs.90))

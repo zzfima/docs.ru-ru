@@ -2,15 +2,15 @@
 title: Методы System.Convert
 ms.date: 03/30/2017
 ms.assetid: 3ca6c5b6-ea5d-4ab0-b675-f082135b342c
-ms.openlocfilehash: c3b8c7105578c57547b79bc95b633bcc6449a0ae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d98d159c24e1a47723aeb07a9654fe22b1d9464
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591725"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198222"
 ---
 # <a name="systemconvert-methods"></a>Методы System.Convert
-Ниже перечислены методы [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], не поддерживаемые технологией <xref:System.Convert>.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] не поддерживает следующие <xref:System.Convert> методы.  
   
 -   Версии с параметром <xref:System.IFormatProvider>.  
   
@@ -26,9 +26,9 @@ ms.locfileid: "54591725"
   
 -   Следующие методы:  
   
-    -   `public static <Type2> To<Type2>(<Type1> value);`, где  
+    -   `public static <Type2> To<Type2>(<Type1> value);` где  
   
-         `Type1` и `Type2` имеют тип `sbyte`, `uint`, `ulong` или `ushort`.  
+         `Type1` и `Type2` имеют тип `sbyte`, `uint`, `ulong`, или `ushort`.  
   
     -   C#:  
   
@@ -49,4 +49,5 @@ ms.locfileid: "54591725"
     -   <xref:System.Convert.ChangeType%2A>  
   
 ## <a name="see-also"></a>См. также
+
 - [Типы данных и функции](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

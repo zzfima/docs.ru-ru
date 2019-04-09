@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3eb57295b72dade0bb396b3caa724b21722b26db
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ae31506d4ba34bf262f49bc2321c6cfcd30f1b60
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743508"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197325"
 ---
 # <a name="icordebugremotetarget-interface"></a>Интерфейс ICorDebugRemoteTarget
 Предоставляет методы, позволяющие разработчикам отлаживать приложения на основе Silverlight в среде CLR (CLR).  
@@ -60,6 +60,7 @@ interface ICorDebugRemoteTarget  : IUnknown
  **Версии платформы .NET framework:** 3.5 с пакетом обновления 1 (SP1)  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс ICorDebugRemote](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
 - [Интерфейс ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
 - [Интерфейсы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

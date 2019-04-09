@@ -2,12 +2,12 @@
 title: Сопоставление ключевых ограничений XML-схемы (XSD) с ограничениями набора данных
 ms.date: 03/30/2017
 ms.assetid: 22664196-f270-4ebc-a169-70e16a83dfa1
-ms.openlocfilehash: a68c43e9ab0a47c6a38bc794bac7d3ceb71391f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 46a980f06198c6f06bb13824c65cfb5309eec154
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677632"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189921"
 ---
 # <a name="map-key-xml-schema-xsd-constraints-to-dataset-constraints"></a>Сопоставление ключевых ограничений XML-схемы (XSD) с ограничениями набора данных
 В схеме, можно задать ограничение ключа в элементе или атрибуте с помощью **ключ** элемент. Элемент или атрибут, в котором указывается ограничение ключа, должен иметь уникальные значения во всех экземплярах схемы, не равные NULL.  
@@ -16,10 +16,10 @@ ms.locfileid: "54677632"
   
  В следующей таблице описываются **msdata** атрибуты, которые можно указать в **ключ** элемент.  
   
-|Имя атрибута|Описание:|  
+|Имя атрибута|Описание|  
 |--------------------|-----------------|  
-|**msdata: ConstraintName**|Если этот атрибут указан, его значение используется в качестве имени ограничения. В противном случае **имя** атрибут содержит значение имени ограничения.|  
-|**msdata: PrimaryKey**|Если `PrimaryKey="true"` присутствует, **IsPrimaryKey** ограничение свойству **true**, делая его первичный ключ. **AllowDBNull** столбца задано значение **false**, поскольку первичные ключи не могут иметь значения null.|  
+|**msdata:ConstraintName**|Если этот атрибут указан, его значение используется в качестве имени ограничения. В противном случае **имя** атрибут содержит значение имени ограничения.|  
+|**msdata:PrimaryKey**|Если `PrimaryKey="true"` присутствует, **IsPrimaryKey** ограничение свойству **true**, делая его первичный ключ. **AllowDBNull** столбца задано значение **false**, поскольку первичные ключи не могут иметь значения null.|  
   
  При преобразовании схемы, в котором указывается ограничение ключа, процесс сопоставления создает ограничение уникальности для таблицы с **AllowDBNull** свойство столбца, значение **false** для каждого столбца в ограничение. **IsPrimaryKey** ограничения уникальности также задано значение **false** пока не задана `msdata:PrimaryKey="true"` на **ключ** элемент. Это равнозначно ограничению уникальности в схеме, где `PrimaryKey="true"`.  
   
@@ -79,6 +79,7 @@ TableName: customers
  Значение **ConstraintName** свойство **UniqueConstraint** в **набора данных** значение **msdata: ConstraintName** атрибут, указанный в **ключ** элемента в схеме.  
   
 ## <a name="see-also"></a>См. также
-- [Сопоставление ограничений схемы XML (XSD) с ограничениями DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
-- [Создание отношений DataSet из схемы XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+
+- [Сопоставление ограничений XML-схемы (XSD) с ограничениями набора данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
+- [Создание отношений наборов данных из схемы XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

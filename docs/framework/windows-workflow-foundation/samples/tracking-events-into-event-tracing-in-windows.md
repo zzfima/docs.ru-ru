@@ -2,12 +2,12 @@
 title: Отслеживание событий в системе трассировки событий Windows
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: ceb981f4fac70155f740ac482bf9d49a51ed7970
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 6384c74aa245db490d04fa95f37bd860dfb9bad9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592865"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166534"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Отслеживание событий в системе трассировки событий Windows
 В этом примере показано, как включить Windows Workflow Foundation (WF) в службе рабочего процесса отслеживание и создания событий отслеживания, для отслеживания событий для Windows (ETW). Для создания записей отслеживания рабочих процессов в ETW в этом образце используется участник отслеживания трассировки событий Windows (<xref:System.Activities.Tracking.EtwTrackingParticipant>).
@@ -20,7 +20,7 @@ ms.locfileid: "54592865"
 |Компонент|Описание|
 |---------------|-----------------|
 |Среда выполнения отслеживания|Предоставляет инфраструктуру для передачи записей отслеживания.|
-|Участники отслеживания|Открывает записи отслеживания. [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] поставляется с участником отслеживания, который записывает записи отслеживания в виде событий средства трассировки событий для Windows (ETW).|
+|Участники отслеживания|Открывает записи отслеживания. [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] поставляется с участником отслеживания, который записывает записи отслеживания в виде трассировки событий для Windows (ETW).|
 |Профиль отслеживания|Механизм фильтрации, который позволяет участнику отслеживания подписаться на подмножество записей отслеживания, передаваемых из экземпляра рабочего процесса.|
 
  Следующая таблица содержит подробные сведения о записях отслеживания, создаваемых средой выполнения рабочего процесса.
@@ -150,4 +150,5 @@ ms.locfileid: "54592865"
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\EtwTracking`  
   
 ## <a name="see-also"></a>См. также
+
 - [Образцы наблюдения за AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

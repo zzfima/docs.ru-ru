@@ -2,12 +2,12 @@
 title: Миграция веб-служб WSE 3.0 на платформу WCF
 ms.date: 03/30/2017
 ms.assetid: 7bc5fff7-a2b2-4dbc-86cc-ecf73653dcdc
-ms.openlocfilehash: 30b9d1fa3c8b2123b3a71465f9ccebf722740d0d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a691e8f63e34f60f26d1a96a975dbe062bd59c96
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668257"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180613"
 ---
 # <a name="migrating-wse-30-web-services-to-wcf"></a>Миграция веб-служб WSE 3.0 на платформу WCF
 Преимущества переноса WSE веб-служб 3.0 для Windows Communication Foundation (WCF) относятся повышение производительности и поддержка дополнительных транспортов, дополнительных сценариев безопасности и WS-* спецификации. Веб-службы, которая переносится с WSE 3.0 на платформу WCF можно добиться повышения производительности 200% до 400%. Дополнительные сведения о транспортах, поддерживаемых WCF, см. в разделе [выбор транспорта](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). Список сценариев, поддерживаемых WCF, см. в разделе [типовые сценарии безопасности](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md). Список спецификаций, поддерживаемых WCF, см. в разделе [руководство по взаимодействию протоколов служб Web](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md).  
@@ -123,6 +123,7 @@ ms.locfileid: "54668257"
  Эквивалентом пользовательского транспорта WSE 3.0 в WCF является расширение канала. Дополнительные сведения о создании расширения канала см. в разделе [расширение уровня каналов](../../../../docs/framework/wcf/extending/extending-the-channel-layer.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Базовый жизненный цикл программирования](../../../../docs/framework/wcf/basic-programming-lifecycle.md)
 - [Пользовательские привязки](../../../../docs/framework/wcf/extending/custom-bindings.md)
 - [Практическое руководство. Создание пользовательской привязки с использованием элемента SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)

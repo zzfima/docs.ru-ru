@@ -6,12 +6,12 @@ helpviewer_keywords:
 - animation [WPF], 3-D translations [WPF], with quaternions
 - 3-D translations [WPF], animating [WPF], with quaternions
 ms.assetid: adca9cb1-066b-4de8-abbb-6b4007579ee7
-ms.openlocfilehash: 079358ec12da803c8aa497bce1c272fa51f1c3b5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d994ac2ae67fd366f27f123d5bd15f14d5ac7abe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368575"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183226"
 ---
 # <a name="how-to-animate-a-3-d-rotation-using-quaternions"></a>Практическое руководство. Анимация трехмерного вращения с помощью кватернионов
 В этом примере демонстрируется анимация поворота трехмерного объекта с помощью кватернионов.  
@@ -30,6 +30,7 @@ ms.locfileid: "57368575"
  [!code-xaml[Animation3DGallery_snip#QuaternionAnimationExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/QuaternionAnimationExample.xaml#quaternionanimationexamplewholepage)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения об эффектах анимации](animation-overview.md)
 - [Создание трехмерной сцены](how-to-create-a-3-d-scene.md)
 - [Обзор трехмерной графики](3-d-graphics-overview.md)

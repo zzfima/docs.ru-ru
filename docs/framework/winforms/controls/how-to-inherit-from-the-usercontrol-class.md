@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user controls [Windows Forms], creating
 - composite controls [Windows Forms], creating
 ms.assetid: 67713625-e2e4-4f6a-bce7-0855ee5043d9
-ms.openlocfilehash: b761c6eefcf7c951a19b77966b87b13b1fc0456e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 1b5d69bda08b94ae00ce022d0d323ad4561ff6b9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712036"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174802"
 ---
 # <a name="how-to-inherit-from-the-usercontrol-class"></a>Практическое руководство. Наследование класса UserControl
 Чтобы объединить функциональные возможности одного или нескольких элементов управления Windows Forms с пользовательским кодом, можно создать *пользовательский элемент управления*. В пользовательских элементах управления объединяются быстрая разработка, стандартные функции элементов управления Windows Forms и универсальность пользовательских методов и свойств. При создании пользовательских элементов управления используется визуальный конструктор, в котором можно размещать стандартные элементы управления Windows Forms. Все эти элементы управления сохраняют все унаследованные функции, а также внешний вид и поведение (оформление) стандартных элементов управления. Однако после того, как эти элементы управления будут встроены в пользовательский элемент управления, получить к ним доступ через код станет невозможно. Пользовательский элемент управления имеет собственное оформление и обрабатывает все основные функции, связанные с элементами управления.  
@@ -35,9 +35,10 @@ ms.locfileid: "57712036"
 5.  Нажмите клавишу F5, чтобы собрать проект и запустить элемент управления в **тестовом контейнере элементов управления**. Дополнительные сведения см. в разделе [Как Тестирование во время выполнения поведения элемента UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
   
 ## <a name="see-also"></a>См. также
-- [Разновидности пользовательских элементов управления](varieties-of-custom-controls.md)
-- [Практическое руководство. Наследовать от класса Control](how-to-inherit-from-the-control-class.md)
-- [Практическое руководство. Наследование Windows существующих элементов управления формы](how-to-inherit-from-existing-windows-forms-controls.md)
-- [Практическое руководство. Автор элементы управления для форм Windows Forms](how-to-author-controls-for-windows-forms.md)
+
+- [Создание собственных элементов управления](varieties-of-custom-controls.md)
+- [Практическое руководство. Наследование класса Control](how-to-inherit-from-the-control-class.md)
+- [Практическое руководство. Наследование существующих элементов управления Windows Forms](how-to-inherit-from-existing-windows-forms-controls.md)
+- [Практическое руководство. Создание элементов управления для форм Windows Forms](how-to-author-controls-for-windows-forms.md)
 - [Устранение неполадок, связанных с унаследованными обработчиками событий, в Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
-- [Практическое руководство. Тестирование во время выполнения поведения элемента UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+- [Практическое руководство. Тестирование поведения элемента UserControl во время выполнения](how-to-test-the-run-time-behavior-of-a-usercontrol.md)

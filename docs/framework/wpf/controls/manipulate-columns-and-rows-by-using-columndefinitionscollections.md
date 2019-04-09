@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Grid control [WPF], ColumnDefinitionCollection class
 - Grid control [WPF], RowDefinitionCollection class
 ms.assetid: bfc7160a-45f2-4e17-9961-df414dfb13c5
-ms.openlocfilehash: c3308f99b8d959b7513c5657d568a18959302aba
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f316cced076223edba1d39c9cfb21b9a504b9eee
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360566"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147736"
 ---
 # <a name="how-to-manipulate-columns-and-rows-by-using-columndefinitionscollections-and-rowdefinitionscollections"></a>Практическое руководство. Управление столбцами и строками с помощью коллекций ColumnDefinitionsCollections и RowDefinitionsCollections
 В этом примере показано, как использовать методы в <xref:System.Windows.Controls.ColumnDefinitionCollection> и <xref:System.Windows.Controls.RowDefinitionCollection> классы для выполнения действий, таких как добавление, удаление или подсчет строк или столбцов содержимого. Например, вы можете <xref:System.Windows.Controls.ColumnDefinitionCollection.Add%2A>, <xref:System.Windows.Controls.ColumnDefinitionCollection.Clear%2A>, или <xref:System.Windows.Controls.ColumnDefinitionCollection.Count%2A> элементы, которые включены в <xref:System.Windows.Controls.ColumnDefinition> или <xref:System.Windows.Controls.RowDefinition>.  
@@ -30,6 +30,7 @@ ms.locfileid: "57360566"
  [!code-vb[ColumnDefinitionsGrid#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ColumnDefinitionsGrid/VisualBasic/Window1.xaml.vb#2)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Controls.Grid>
 - <xref:System.Windows.Controls.ColumnDefinitionCollection>
 - <xref:System.Windows.Controls.RowDefinitionCollection>

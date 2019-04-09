@@ -6,12 +6,12 @@ helpviewer_keywords:
 - status bars
 - ToolStrip control [Windows Forms], ToolStripStatusLabel
 ms.assetid: 099bc74a-a29f-4f15-af0d-7c517ef50c7e
-ms.openlocfilehash: 809590ff19619b3693466d4f6a0567ff1e5ab38a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: abda20e9add4691fd3ced2a4cf688dc25cca7530
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722669"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194114"
 ---
 # <a name="toolstripstatuslabel-control"></a>Элемент управления ToolStripStatusLabel
 <xref:System.Windows.Forms.ToolStripStatusLabel> Предоставляет область отображения в <xref:System.Windows.Forms.StatusStrip> для текста и изображений.  
@@ -31,4 +31,5 @@ ms.locfileid: "57722669"
  Справочная документация по элементу управления <xref:System.Windows.Forms.ToolStripProgressBar>.  
   
 ## <a name="see-also"></a>См. также
-- [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)
+
+- [Элементы управления для использования в формах Windows Forms](controls-to-use-on-windows-forms.md)

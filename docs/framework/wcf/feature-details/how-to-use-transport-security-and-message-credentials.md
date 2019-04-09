@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Использование средств защиты транспорта и учетных данных сообщения
+title: Практическое руководство. Использование средств обеспечения безопасности транспорта и учетных данных сообщения
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - TransportWithMessageCredentials
 ms.assetid: 6cc35346-c37a-4859-b82b-946c0ba6e68f
-ms.openlocfilehash: 7af670210b39da93e9f3efb37a0bfddce84ed2a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ea57012f9c09394824b7dbf919930c22fc17bd3d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731872"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186819"
 ---
-# <a name="how-to-use-transport-security-and-message-credentials"></a>Как выполнить Использование средств защиты транспорта и учетных данных сообщения
+# <a name="how-to-use-transport-security-and-message-credentials"></a>Практическое руководство. Использование средств обеспечения безопасности транспорта и учетных данных сообщения
 Защита службы с помощью учетных данных транспорта и сообщений использует лучшие возможности режимов безопасности транспорта и сообщений в Windows Communication Foundation (WCF). В общих словах, TLS обеспечивает целостность и конфиденциальность, а MLS предоставляет различные учетные данные, которые невозможно использовать в строгих механизмах обеспечения безопасности транспорта. В этом разделе приведены основные этапы реализации транспорта с учетными данными сообщения с помощью привязок <xref:System.ServiceModel.WSHttpBinding> и <xref:System.ServiceModel.NetTcpBinding>. Дополнительные сведения о задании режима безопасности см. в разделе [как: Настройка режима безопасности](../../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
   
  При задании режима безопасности`TransportWithMessageCredential` транспорт определяет фактический механизм, обеспечивающий безопасность на транспортном уровне. В случае HTTP таким механизмом является SSL по HTTP (HTTPS); в случае TCP таким механизмом является SSL по TCP или Windows.  
@@ -161,6 +161,7 @@ ms.locfileid: "54731872"
     ```  
   
 ## <a name="see-also"></a>См. также
-- [Практическое руководство. Настройка режима безопасности](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)
+
+- [Практическое руководство. Задание режима безопасности](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)
 - [Защита служб](../../../../docs/framework/wcf/securing-services.md)
 - [Защита служб и клиентов](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

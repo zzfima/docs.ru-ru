@@ -7,18 +7,16 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 0ffbde0d-701d-45a3-a6fa-dd71f4d9772e
-ms.openlocfilehash: e5a044166023069cdb6e1091339044cd7f964825
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 72f05621c96f1b6938b67d19f862a8d28b6df352
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377356"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171896"
 ---
 # <a name="wpf-and-win32-interoperation"></a>Взаимодействие WPF и Win32
-В этом разделе приводится общее описание метода обеспечения взаимодействия [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и кода [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]. Служба [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет среду с широкими возможностями для создания приложений. Однако если имеется сложный код [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], возможно, более эффективным будет повторное использование части этого кода.  
-  
+В этом разделе приводится общее описание метода обеспечения взаимодействия [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и кода [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет среду с широкими возможностями для создания приложений. Однако если имеется сложный код [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], возможно, более эффективным будет повторное использование части этого кода.  
 
-  
 <a name="basics"></a>   
 ## <a name="wpf-and-win32-interoperation-basics"></a>Основы взаимодействия WPF и Win32  
  Существуют два основных метода взаимодействия между [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и кодом [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)].  
@@ -31,7 +29,7 @@ ms.locfileid: "57377356"
   
 <a name="projects"></a>   
 ## <a name="wpf-interoperation-projects"></a>Проекты взаимодействия WPF  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] являются управляемым кодом, но большинство существующих программ [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] создаются в виде неуправляемого кода [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)].  Невозможно вызвать [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] из подлинной неуправляемой программы. Однако используя параметр `/clr` с компилятором [!INCLUDE[TLA#tla_visualcpp](../../../../includes/tlasharptla-visualcpp-md.md)], можно создать смешанную управляемую-неуправляемую программу, где могут равномерно смешиваться управляемые и неуправляемые вызовы [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)].  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] are managed code, but most existing [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sявляются управляемым кодом, но большинство существующих [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] программы создаются в виде неуправляемого [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)].enНевозможно вызвать [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] из подлинной неуправляемой программы.nОднако используя параметр `/clr` с компилятором [!INCLUDE[TLA#tla_visualcpp](../../../../includes/tlasharptla-visualcpp-md.md)], можно создать смешанную управляемую-неуправляемую программу, где могут равномерно смешиваться управляемые и неуправляемые вызовы [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)].  
   
  Существует одна сложность на уровне проекта, которая заключается в том, что нельзя скомпилировать файлы [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] в проект [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)].  Имеется несколько методов разделения проектов для решения данной проблемы.  
   
@@ -64,7 +62,7 @@ ms.locfileid: "57377356"
   
 2.  Реализуйте приложение [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] с помощью [!INCLUDE[TLA2#tla_cppcli](../../../../includes/tla2sharptla-cppcli-md.md)]. При запуске существующего неуправляемого приложения [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)], как правило, можно разрешить ему вызывать управляемый код путем изменения параметров проекта с целью включения флага компилятора `/clr` (полное описание объектов, необходимых для поддержки компиляции `/clr`, в этом разделе не приводится).  
   
-3.  Установите в качестве потоковой модели однопотоковое подразделение (STA). Эта потоковая модель используется [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+3.  Установите в качестве потоковой модели однопотоковое подразделение (STA). [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Эта потоковая модель используется.  
   
 4.  Обработайте уведомления WM_CREATE в процедуре окна.  
   
@@ -157,8 +155,9 @@ ms.locfileid: "57377356"
  Интерфейсы обеспечивают поддержку только для событий перехода между областями [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]. Внутри области [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] поведение перехода полностью контролируется логикой перехода, реализованной в [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)], если таковая имеется.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Interop.HwndHost>
 - <xref:System.Windows.Interop.HwndSource>
 - <xref:System.Windows.Interop>
-- [Пошаговое руководство: Размещение элемента управления Win32 в WPF](walkthrough-hosting-a-win32-control-in-wpf.md)
-- [Пошаговое руководство: Размещение содержимого WPF в Win32](walkthrough-hosting-wpf-content-in-win32.md)
+- [Пошаговое руководство. Размещение элемента управления Win32 в WPF](walkthrough-hosting-a-win32-control-in-wpf.md)
+- [Пошаговое руководство. Размещение содержимого WPF в Win32](walkthrough-hosting-wpf-content-in-win32.md)

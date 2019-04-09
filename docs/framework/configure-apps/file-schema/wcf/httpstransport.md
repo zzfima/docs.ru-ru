@@ -2,12 +2,12 @@
 title: <httpsTransport>
 ms.date: 03/30/2017
 ms.assetid: f6ed4bc0-7e38-4348-9259-30bf61eb9435
-ms.openlocfilehash: dc95b1a31d582f255740152a235b9ca5e67cf5c6
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: c7e4dc540458bbfb69318d2f14cfa9776f444c55
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411321"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172826"
 ---
 # <a name="httpstransport"></a>\<httpsTransport>
 Задает транспорт HTTP для передачи сообщений протокола SOAP для пользовательской привязки.  
@@ -74,12 +74,13 @@ ms.locfileid: "58411321"
  Элемент `httpsTransport` является отправной точкой для создания пользовательской привязки, реализующей протокол транспорта HTTPS. HTTPS является основным транспортом, используемым для защиты взаимодействия. HTTPS поддерживается с Windows Communication Foundation (WCF) для взаимодействия с другими веб-службы стеков.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.Configuration.HttpsTransportElement>
 - <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>
 - <xref:System.ServiceModel.Channels.TransportBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - [Транспорты](../../../../../docs/framework/wcf/feature-details/transports.md)
-- [Выбор транспорта](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [Выбор транспортов](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
 - [Привязки](../../../../../docs/framework/wcf/bindings.md)
 - [Расширение привязок](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [Пользовательские привязки](../../../../../docs/framework/wcf/extending/custom-bindings.md)

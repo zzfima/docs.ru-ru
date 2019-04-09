@@ -1,5 +1,5 @@
 ---
-title: Элемент <relativeBindForResources>
+title: <relativeBindForResources> Элемент
 ms.date: 03/30/2017
 helpviewer_keywords:
 - RelativeBindForResources element
@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 846ffa47-7257-4ce3-8cac-7ff627e0e34f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51129f9bb3a278d32a5da723dcc339f5e918c0f4
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c98914f57c24dc51625564e266157731ff173337
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55289813"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157383"
 ---
 # <a name="relativebindforresources-element"></a>\<relativeBindForResources > элемент
 Оптимизирует поиск вспомогательных сборок.  
@@ -39,7 +39,7 @@ ms.locfileid: "55289813"
   
 ## <a name="enabled-attribute"></a>Атрибут enabled  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |`false`|Среда выполнения не Оптимизируйте поиск вспомогательных сборок. Это значение по умолчанию.|  
 |`true`|Среда выполнения оптимизирует поиск вспомогательных сборок.|  
@@ -49,7 +49,7 @@ ms.locfileid: "55289813"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`runtime`|Содержит сведения о параметрах инициализации среды выполнения.|  
@@ -72,6 +72,7 @@ ms.locfileid: "55289813"
 -   Не вызывалось <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> событий.  
   
 ## <a name="see-also"></a>См. также
+
 - [Упаковка и развертывание ресурсов](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
 - [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)

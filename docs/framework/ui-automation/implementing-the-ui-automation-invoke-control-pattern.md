@@ -6,12 +6,12 @@ helpviewer_keywords:
 - control patterns, Invoke
 - Invoke control pattern
 ms.assetid: e5b1e239-49f8-468e-bfec-1fba02ec9ac4
-ms.openlocfilehash: 55e75e5835aa60a51b9186f31913347ad04dccdd
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 5c9d94aca6b9b53c505fa7419406a0d2fc4a0ae7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674956"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134788"
 ---
 # <a name="implementing-the-ui-automation-invoke-control-pattern"></a>Реализация шаблона элемента управления модели автоматизации пользовательского интерфейса Invoke
 > [!NOTE]
@@ -29,7 +29,7 @@ ms.locfileid: "57674956"
   
 -   Обычно для вызова элемента управления нужно щелкнуть, дважды щелкнуть, нажать клавишу ВВОД, нажать стандартное сочетание клавиш или нажать некоторое другую другое сочетание клавиш.  
   
--   <xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent> вызывается в элементе управления, который был активирован (в ответ на выполнение элементом управления связанного действия). Если это возможно, событие должно вызываться после завершения действия элементом управления и его возврата без блокировки. Событие Invoked должно вызываться перед обслуживанием запроса Invoke в следующих случаях:  
+-   <xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent> вызывается для элемента управления, который был активирован (как ответ на выполнение элементом управления связанного действия). Если это возможно, событие должно вызываться после завершения действия элементом управления и его возврата без блокировки. Событие Invoked должно вызываться перед обслуживанием запроса Invoke в следующих случаях:  
   
     -   невозможно или нецелесообразно ожидать завершения действия;  
   
@@ -48,7 +48,7 @@ ms.locfileid: "57674956"
   
 -   Элемент может исчезнуть из дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] сразу после вызова. В результате запрос информации из элемента, предоставленного обратным вызовом события, может завершиться неудачно. В качестве обходного решения рекомендуется выполнять предварительное кэширование информации.  
   
--   Элементы управления могут реализовывать множество шаблонов элементов управления. Например, элемент управления Fill Color (выбор цвета заливки) в панели инструментов [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] реализует шаблоны элементов управления <xref:System.Windows.Automation.InvokePattern> и <xref:System.Windows.Automation.ExpandCollapsePattern> . <xref:System.Windows.Automation.ExpandCollapsePattern> предоставляет меню, а <xref:System.Windows.Automation.InvokePattern> заполняет активный выделенный фрагмент выбранным цветом.  
+-   Элементы управления могут реализовывать множество шаблонов элементов управления. Например, элемент управления Fill Color (выбор цвета заливки) в панели инструментов [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] реализует шаблоны элементов управления <xref:System.Windows.Automation.InvokePattern> и <xref:System.Windows.Automation.ExpandCollapsePattern> . <xref:System.Windows.Automation.ExpandCollapsePattern> предоставляет меню и <xref:System.Windows.Automation.InvokePattern> заполняет активный выделенный фрагмент выбранным цветом.  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>   
 ## <a name="required-members-for-iinvokeprovider"></a>Обязательные члены для IInvokeProvider  
@@ -67,8 +67,9 @@ ms.locfileid: "57674956"
 |<xref:System.Windows.Automation.ElementNotEnabledException>|Если элемент управления не включен.|  
   
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения о шаблонах элементов управления модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [Поддержка шаблонов элементов управления в поставщике автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
+- [Поддержка шаблонов элементов управления в поставщике модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
 - [Шаблоны элементов управления модели автоматизации пользовательского интерфейса для клиентов](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
 - [Вызов элемента управления с помощью модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)
 - [Общие сведения о дереве модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)

@@ -7,18 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - best practices [WCF], security
 ms.assetid: 3639de41-1fa7-4875-a1d7-f393e4c8bd69
-ms.openlocfilehash: 1c615e2bdff0f361bef305157f635c86782c6039
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f0305807e76ca27e1979aa23bf0797c505fee566
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531971"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166131"
 ---
 # <a name="best-practices-for-security-in-wcf"></a>Рекомендации по безопасности при использовании WCF
 В следующих разделах приводятся рекомендации по созданию надежных приложений с помощью Windows Communication Foundation (WCF). Дополнительные сведения о безопасности см. в разделах [Вопросы безопасности](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [Вопросы безопасности для данных](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md) и [Вопросы безопасности при использовании метаданных](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).  
   
 ## <a name="identify-services-performing-windows-authentication-with-spns"></a>Идентифицируйте службы, проходящие проверку подлинности Windows, с помощью различных SPN.  
- Службы могут идентифицироваться с помощью имен участника-пользователя (UPN) или имен участника-службы (SPN). Службы, выполняемые от имени учетных записей компьютера (например, сетевые службы), имеют идентификатор SPN, который совпадает с идентификатором компьютера, на котором они выполняются. Службы, выполняемые от имени учетных записей пользователя, имеют идентификатор UPN, совпадающий с идентификатором пользователя, от имени которого они выполняются, при этом средство `setspn` может использоваться для назначения SPN учетной записи пользователя. Настройка службы, делающая возможной идентификацию службы через SPN, и настройка подключающихся к службе клиентов на использование этого SPN, затрудняют определенные атаки. Это правило действует для привязок, использующих согласование Kerberos или SSPI.  Несмотря на это, клиенты должны указывать SPN в случае, если SSPI возвращается к NTLM.  
+ Службы могут идентифицироваться с помощью имен участника-пользователя (UPN) или имен субъекта-службы (SPN). Службы, выполняемые от имени учетных записей компьютера (например, сетевые службы), имеют идентификатор SPN, который совпадает с идентификатором компьютера, на котором они выполняются. Службы, выполняемые от имени учетных записей пользователя, имеют идентификатор UPN, совпадающий с идентификатором пользователя, от имени которого они выполняются, при этом средство `setspn` может использоваться для назначения SPN учетной записи пользователя. Настройка службы, делающая возможной идентификацию службы через SPN, и настройка подключающихся к службе клиентов на использование этого SPN, затрудняют определенные атаки. Это правило действует для привязок, использующих согласование Kerberos или SSPI.  Несмотря на это, клиенты должны указывать SPN в случае, если SSPI возвращается к NTLM.  
   
 ## <a name="verify-service-identities-in-wsdl"></a>Проверяйте удостоверения службы в WSDL  
  WS-SecurityPolicy позволяет службам публиковать информацию о своих удостоверениях в метаданных. Когда идентификационные данные извлекаются через `svcutil` или с помощью других методов, таких как <xref:System.ServiceModel.Description.WsdlImporter>, эти данные преобразуются в параметры удостоверения для адресов конечных точек служб WCF. Клиенты, которые не подтверждают правильность и допустимость данных удостоверений службы, эффективно выполняют обход проверки подлинности службы. Вредоносная служба может использовать такие клиенты для перенаправления учетных данных и реализации других атак типа "злоумышленник в середине", изменяя заявленное в WSDL удостоверение.  
@@ -39,7 +39,7 @@ ms.locfileid: "54531971"
  [!code-vb[c_SecurityBestPractices#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securitybestpractices/vb/source.vb#1)]  
   
 ## <a name="impersonate-only-as-needed"></a>Используйте олицетворение только при необходимости  
- Метод <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> класса <xref:System.Security.Principal.WindowsIdentity> позволяет осуществлять строгий контроль над использованием олицетворения. В этом заключается отличие от использования свойства <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> <xref:System.ServiceModel.OperationBehaviorAttribute>, которое позволяет использовать олицетворение в рамках всей операции. По возможности контролируйте область применения олицетворения с помощью более точного метода <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A>.  
+ Метод <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> класса <xref:System.Security.Principal.WindowsIdentity> позволяет осуществлять строгий контроль над использованием олицетворения. В этом заключается отличие от использования свойства <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A><xref:System.ServiceModel.OperationBehaviorAttribute>, которое позволяет использовать олицетворение в рамках всей операции. По возможности контролируйте область применения олицетворения с помощью более точного метода <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A>.  
   
 ## <a name="obtain-metadata-from-trusted-sources"></a>Получайте метаданные из надежных источников  
  Убедитесь в надежности источника метаданных и в том, что метаданные не были злонамеренно искажены. Метаданные, полученные по протоколу HTTP, передаются открытым текстом и могут быть подделаны. Если в службе используются свойства <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> и <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>, для загрузки данных по протоколу HTTPS используйте URL-адрес, предоставленный разработчиком службы.  
@@ -57,6 +57,7 @@ ms.locfileid: "54531971"
  При создании пользовательской привязки следует задать параметру <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> значение `true`. В противном случае, если параметр <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> имеет значение `false`, а клиент использует асимметричный маркер на основе ключа, например, сертификат Х509, сообщение не будет подписано.  
   
 ## <a name="see-also"></a>См. также
+
 - [Вопросы безопасности](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
 - [Вопросы безопасности для данных](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)
 - [Вопросы безопасности при использовании метаданных](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)

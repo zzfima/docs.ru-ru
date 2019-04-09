@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b14333235882efb6da1ce011c109c67a1d149bf3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 33213aced635549dd439cf679d89367a71baa7c7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584523"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168809"
 ---
 # <a name="isymunmanageddocument-interface"></a>Интерфейс ISymUnmanagedDocument
 Представляет документ, на который ссылается хранилище символов. Документ определяется локатора универсальный код ресурса (URL-адрес) и GUID типа документа. Можно найти документ независимо от того, как они хранятся с помощью URL-адрес и идентификатор GUID типа документа. Можно сохранить в хранилище символов источник документа и получить его через этот интерфейс.  
@@ -42,4 +42,5 @@ ms.locfileid: "54584523"
 |[Метод HasEmbeddedSource](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-hasembeddedsource-method.md)|Возвращает `true` , содержит ли документ источника, внедренный в символы отладки; в противном случае возвращает `false`.|  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейсы хранилища символов диагностики](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

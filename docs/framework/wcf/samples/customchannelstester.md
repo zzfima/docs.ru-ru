@@ -2,12 +2,12 @@
 title: CustomChannelsTester
 ms.date: 03/30/2017
 ms.assetid: ee1fa307-98b1-4647-8860-2e9217ba6082
-ms.openlocfilehash: 372e4128667a0ab1288372ce0ec077b3a4ee2ec6
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: c91632c1967645b4319bca14be66fb0052ad741f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842074"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192838"
 ---
 # <a name="customchannelstester"></a>CustomChannelsTester
 `CustomChannelsTester` - это средство, позволяющее проверять реализации пользовательских каналов на соответствие набору предопределенных контрактов службы. Можно выбрать набор контрактов службы и передать его средству с помощью XML-файла. Затем средство создает службу и клиента, использующих реализации пользовательского канала во время обмена сообщениями.  
@@ -30,7 +30,7 @@ ms.locfileid: "58842074"
   
      `/dll` является обязательным, если «привязка» не является предоставляемой системой привязки, предоставляемые Windows Communication Foundation (WCF).  
   
-     Параметр `/testspec` является необязательным.  
+     `/testspec` является необязательным.  
   
      В результате создаются сервер и клиенты на основе спецификаций теста и привязки.  
   
@@ -68,4 +68,3 @@ ms.locfileid: "58842074"
     </TestDetails>  
     </TestSpec>  
     ```  
-  

@@ -2,12 +2,12 @@
 title: Выбор шаблона обмена сообщениями
 ms.date: 03/30/2017
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
-ms.openlocfilehash: 927324e0f707284e31baefa261d4d90b147e4e24
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 98788fb89fc68dc1220d9bf8d9ad89df5ca69e6e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594763"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157794"
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>Выбор шаблона обмена сообщениями
 Является первым шагом в создании пользовательского транспорта необходимо решить, какие *шаблоны обмена сообщениями* (или MEP) требуются для разрабатываемого канала. В этом разделе описаны возможные варианты и различные требования. Это первая задача в списке задач разработки канала, описанные в [каналы развивающихся](../../../../docs/framework/wcf/extending/developing-channels.md).  
@@ -93,4 +93,5 @@ ms.locfileid: "54594763"
 -   При вызове метода <xref:System.ServiceModel.ICommunicationObject.Abort%2A> для канала необходимо сразу же завершить сеанс без выполнения операций ввода-вывода. С другой стороны, это может означать, что ничего делать не требуется, или что нужно разорвать сетевое подключение или высвободить какие-либо другие ресурсы.  
   
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения о модели каналов](../../../../docs/framework/wcf/extending/channel-model-overview.md)

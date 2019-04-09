@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, learn more
 ms.assetid: e63a9baf-699c-42e2-b11f-fba57bcc14df
-ms.openlocfilehash: f6f0e51319da8c2edcb914170aa14837229163c1
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: d3562122ab578f5f622d439c17d86cdb64a1e573
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093675"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172124"
 ---
 # <a name="wcf-data-services-resources"></a>Ресурсы служб данных WCF
-Вводные разделы по службам [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] можно найти в следующих местах. Во многих из них также есть ссылки на связанные разделы, содержащие более подробные сведения.  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Вводные разделы можно найти в следующих местах. Во многих из них также есть ссылки на связанные разделы, содержащие более подробные сведения.  
   
  [Обзор](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)  
  Содержит общие сведения о функциях и возможностях, доступных в службах [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
@@ -23,13 +23,13 @@ ms.locfileid: "56093675"
  [Сценарии приложения](../../../../docs/framework/data/wcf/application-scenarios-wcf-data-services.md)  
  Описывает подход на основе задач для создания [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] и приложений, обращающихся к [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] веб-каналов.  
   
- [Глоссарий .NET](../../../standard/glossary.md)  
+ [Глоссарий по .NET](../../../standard/glossary.md)  
  Содержит термины, используемые в [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] и [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] документации.  
   
 ## <a name="external-resources"></a>Внешние ресурсы  
  Следующие внешние ресурсы предоставляют дополнительные сведения и поддержку для создания [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] приложений, предоставления и использования [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-каналов.  
   
- [Форум по WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=150512)  
+ [Форум по службам WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=150512)  
  Поддержка при программировании данных для разработчиков служб [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
   
  [Блог группы служб WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=150511)  
@@ -44,13 +44,13 @@ ms.locfileid: "56093675"
  [Блог OData](https://go.microsoft.com/fwlink/?LinkId=185868)  
  Блог, содержащий дискуссии о [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] программирования.  
   
- [Центр разработчиков хранилищ и доступа к данным](https://go.microsoft.com/fwlink/?LinkId=91903)  
+ [Центр разработчиков систем доступа к данным и их хранения](https://go.microsoft.com/fwlink/?LinkId=91903)  
  Центральный узел, где можно найти сведения и ресурсы для работы с данными.  
   
- [Платформа данных инструкции? Видеоролики: Серии службами данных WCF](https://go.microsoft.com/fwlink/?LinkId=124600)  
+ [Платформа данных. Руководства. Видеоролики: Серии службами данных WCF](https://go.microsoft.com/fwlink/?LinkId=124600)  
  Содержит набор видеороликов, демонстрирующих сборку и обращение к службам данных.  
   
- [Обзор: Службы данных WCF](https://go.microsoft.com/fwlink/?LinkID=131074)  
+ [Общие сведения: Службы данных WCF](https://go.microsoft.com/fwlink/?LinkID=131074)  
  Технический документ, предоставляющий более высокоуровневые сведения о преимуществах служб [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
   
  [Использование служб Microsoft WCF Data Services](https://go.microsoft.com/fwlink/?LinkID=131075)  
@@ -60,4 +60,5 @@ ms.locfileid: "56093675"
  Описывает основы модели реляционных сущностей, реализованной в службах [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Написанная в 1976 году, эта книга является одной из наиболее часто цитируемых в области компьютеров.  
   
 ## <a name="see-also"></a>См. также
+
 - [Начало работы](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: 0bd7875f1e819497ea3a4d846a2876084a54ab80
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 72207861850875f08786401aacf7b911b2a5b1f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379111"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173034"
 ---
 # <a name="application-startup-time"></a>Время запуска приложения
 Время, необходимое для запуска WPF-приложения, может сильно варьироваться. В этом разделе описаны различные способы, позволяющие сократить воспринимаемое и фактическое время запуска приложений Windows Presentation Foundation (WPF).  
@@ -65,7 +65,7 @@ ms.locfileid: "57379111"
  Одновременное присутствие модулей Ngen и JIT может вызвать противоположный эффект. Это связано с тем, что при этом требуется загрузка mscorjit.dll, а когда JIT-компилятор работает с вашим кодом и считывает метаданные сборок, происходит обращение к многим страницам в образах Ngen.  
   
 ### <a name="ngen-and-clickonce"></a>NGen и ClickOnce  
- Время загрузки вашего приложения может также зависеть от выбранного способа его развертывания. Развертывание приложений [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] не поддерживает Ngen. Если вы решите использовать Ngen.exe для своего приложения, выберите другой механизм развертывания, например установщик Windows.  
+ Время загрузки вашего приложения может также зависеть от выбранного способа его развертывания. [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] развертывание приложений не поддерживает Ngen. Если вы решите использовать Ngen.exe для своего приложения, выберите другой механизм развертывания, например установщик Windows.  
   
  См. дополнительные сведения о [файле Ngen.exe (генераторе образов в машинном коде)](../../tools/ngen-exe-native-image-generator.md).  
   
@@ -123,10 +123,11 @@ ms.locfileid: "57379111"
  Вместо использования XAML для задания <xref:System.Windows.FrameworkElement.DataContext%2A> декларативно для главного окна, рассмотрите возможность установки его в обработчике <xref:System.Windows.Application.OnActivated%2A> метод.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.SplashScreen>
 - <xref:System.AppDomain>
 - <xref:System.Resources.NeutralResourcesLanguageAttribute>
 - <xref:System.Resources.ResourceManager>
 - [Добавление в WPF-приложение экрана-заставки](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)
 - [Ngen.exe (генератор образов в машинном коде)](../../tools/ngen-exe-native-image-generator.md)
-- [\<Элемент generatePublisherEvidence>](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md)
+- [\<generatePublisherEvidence > элемент](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md)

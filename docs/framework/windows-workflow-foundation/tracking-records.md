@@ -2,12 +2,12 @@
 title: Записи отслеживания
 ms.date: 03/30/2017
 ms.assetid: 51adbda3-bd8b-4892-a8ea-d343186472d2
-ms.openlocfilehash: 753541814497b62cf05f0c22cc4e08c0d127e91b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: f8b79cad7161e780f336a9c5902e69d9826b23d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676111"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163921"
 ---
 # <a name="tracking-records"></a>Записи отслеживания
 Среда выполнения рабочего процесса инструментирована для создания записей отслеживания выполнения экземпляра рабочего процесса.  
@@ -50,16 +50,17 @@ ms.locfileid: "54676111"
   
  Например, простое действие <xref:System.Activities.Statements.Sequence> может содержать операцию <xref:System.Activities.Statements.WriteLine> с записями отслеживания, выдаваемыми в следующем порядке.  
   
-1.  <xref:System.Activities.Tracking.WorkflowInstanceRecord> сообщает о запуске рабочего процесса.  
+1.  <xref:System.Activities.Tracking.WorkflowInstanceRecord> Указывает, что рабочий процесс запускается.  
   
-2.  <xref:System.Activities.Tracking.ActivityScheduledRecord> сообщает, что запланировано действие. В данном случае этим действием является <xref:System.Activities.Statements.Sequence>.  
+2.  <xref:System.Activities.Tracking.ActivityScheduledRecord> Указывает, что действия был запланирован. В данном случае этим действием является <xref:System.Activities.Statements.Sequence>.  
   
-3.  <xref:System.Activities.Tracking.ActivityScheduledRecord> представляет действие <xref:System.Activities.Statements.WriteLine>.  
+3.  <xref:System.Activities.Tracking.ActivityScheduledRecord> Представляет <xref:System.Activities.Statements.WriteLine> действия.  
   
 4.  Присутствуют две записи <xref:System.Activities.Tracking.ActivityStateRecord>, представляющие завершение двух действий.  
   
-5.  <xref:System.Activities.Tracking.WorkflowInstanceRecord> сообщает о завершении рабочего процесса.  
+5.  <xref:System.Activities.Tracking.WorkflowInstanceRecord> Указывает, что рабочий процесс завершается.  
   
 ## <a name="see-also"></a>См. также
+
 - [Мониторинг Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201273)
 - [Мониторинг приложений с помощью фабрики приложения](https://go.microsoft.com/fwlink/?LinkId=201275)

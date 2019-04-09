@@ -1,18 +1,18 @@
 ---
-title: Как выполнить Создание базового канала Atom
+title: Практическое руководство. Создание базового канала Atom
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6e0cacc1-9b11-4665-adb7-577a62626fd6
-ms.openlocfilehash: 1229257cc8c15ea67bd4fdf3ff6ffa959a6bfe02
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 2d254d0c87bb9e0a2ce10b8cba0233680b24f4be
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582504"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181562"
 ---
-# <a name="how-to-create-a-basic-atom-feed"></a>Как выполнить Создание базового канала Atom
+# <a name="how-to-create-a-basic-atom-feed"></a>Практическое руководство. Создание базового канала Atom
 Windows Communication Foundation (WCF) позволяет создавать службы, которая предоставляет веб-канала синдикации. В этом разделе рассматривается процесс создания службы синдикации, предоставляющей веб-канал синдикации Atom.  
   
 ### <a name="to-create-a-basic-syndication-service"></a>Создание базовой службы синдикации  
@@ -97,5 +97,6 @@ Windows Communication Foundation (WCF) позволяет создавать с�
  При компиляции приведенного выше кода задайте ссылки на файлы System.ServiceModel.dll и System.ServiceModel.Web.dll.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.WebHttpBinding>
 - <xref:System.ServiceModel.Web.WebGetAttribute>

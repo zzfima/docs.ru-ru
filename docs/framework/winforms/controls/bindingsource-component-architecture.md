@@ -7,12 +7,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], about BindingSource component
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 7bc69c90-8a11-48b1-9336-3adab5b41591
-ms.openlocfilehash: 9348d44697b2c617481b55242faa83ab517e6226
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 81559444b6e3da2861e48bdc637ae01d246c0758
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707824"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165351"
 ---
 # <a name="bindingsource-component-architecture"></a>Архитектура компонента BindingSource
 С помощью <xref:System.Windows.Forms.BindingSource> компонент, глобально, все элементы управления Windows Forms можно привязать к источникам данных.  
@@ -78,22 +78,22 @@ ms.locfileid: "57707824"
   
  <xref:System.Windows.Forms.BindingSource> Инкапсулирует компонент <xref:System.Windows.Forms.CurrencyManager> функциональные возможности и предоставляет стандартные <xref:System.Windows.Forms.CurrencyManager> свойства и события. Ниже перечислены некоторые из элементов, связанных с управлением валюты.  
   
- Свойство <xref:System.Windows.Forms.ICurrencyManagerProvider.CurrencyManager%2A>  
+ <xref:System.Windows.Forms.ICurrencyManagerProvider.CurrencyManager%2A> свойство;  
  Получает диспетчер денежных единиц, сопоставленный <xref:System.Windows.Forms.BindingSource>.  
   
- Метод <xref:System.Windows.Forms.ICurrencyManagerProvider.GetRelatedCurrencyManager%2A>  
+ <xref:System.Windows.Forms.ICurrencyManagerProvider.GetRelatedCurrencyManager%2A> метод  
  Если существует другой <xref:System.Windows.Forms.BindingSource> привязан к указанному элементу данных, Получает диспетчер денежных единиц.  
   
- Свойство <xref:System.Windows.Forms.BindingSource.Current%2A>  
+ <xref:System.Windows.Forms.BindingSource.Current%2A> свойство;  
  Возвращает текущий элемент источника данных.  
   
- Свойство <xref:System.Windows.Forms.BindingSource.Position%2A>  
+ <xref:System.Windows.Forms.BindingSource.Position%2A> свойство;  
  Возвращает или задает текущую позицию в базовом списке.  
   
- Метод <xref:System.Windows.Forms.BindingSource.EndEdit%2A>  
+ <xref:System.Windows.Forms.BindingSource.EndEdit%2A> метод  
  Применяет ожидающие изменения к базовому источнику данных.  
   
- Метод <xref:System.Windows.Forms.BindingSource.CancelEdit%2A>  
+ <xref:System.Windows.Forms.BindingSource.CancelEdit%2A> метод  
  Отменяет текущую операцию редактирования.  
   
 ### <a name="data-source-as-a-list"></a>Источник данных в виде списка  
@@ -119,8 +119,8 @@ ms.locfileid: "57707824"
   
 |Член|Описание|  
 |------------|-----------------|  
-|Свойство <xref:System.Windows.Forms.BindingSource.List%2A>|Получает список, полученный в результате вычисления <xref:System.Windows.Forms.BindingSource.DataSource%2A> или <xref:System.Windows.Forms.BindingSource.DataMember%2A> свойства.|  
-|Метод <xref:System.Windows.Forms.BindingSource.AddNew%2A>|Добавляет новый элемент в базовый список. Применяется к источникам данных, которые реализуют <xref:System.ComponentModel.IBindingList> интерфейс и позволяют добавлять элементы (т. е <xref:System.Windows.Forms.BindingSource.AllowNew%2A> свойству `true`).|  
+|<xref:System.Windows.Forms.BindingSource.List%2A> свойство;|Получает список, полученный в результате вычисления <xref:System.Windows.Forms.BindingSource.DataSource%2A> или <xref:System.Windows.Forms.BindingSource.DataMember%2A> свойства.|  
+|<xref:System.Windows.Forms.BindingSource.AddNew%2A> метод|Добавляет новый элемент в базовый список. Применяется к источникам данных, которые реализуют <xref:System.ComponentModel.IBindingList> интерфейс и позволяют добавлять элементы (т. е <xref:System.Windows.Forms.BindingSource.AllowNew%2A> свойству `true`).|  
   
 ### <a name="custom-item-creation"></a>Создание пользовательских элементов  
  Можно обрабатывать <xref:System.Windows.Forms.BindingSource.AddingNew> событие, чтобы предоставить свою собственную логику создания элементов. <xref:System.Windows.Forms.BindingSource.AddingNew> Событие возникает перед добавлением нового объекта <xref:System.Windows.Forms.BindingSource>. Это событие возникает после <xref:System.Windows.Forms.BindingSource.AddNew%2A> вызывается метод, но перед добавлением нового элемента в базовый список. Обрабатывая это событие, можно указать поведение создания пользовательского элемента не на основе <xref:System.Windows.Forms.BindingSource> класса. Дополнительные сведения см. в разделе [Как Настройка добавления элемента с помощью компонента BindingSource в Windows Forms](how-to-customize-item-addition-with-the-windows-forms-bindingsource.md).  
@@ -162,18 +162,19 @@ ms.locfileid: "57707824"
   
 |Член|Описание|  
 |------------|-----------------|  
-|Свойство <xref:System.Windows.Forms.BindingSource.Filter%2A>|Если источником данных является <xref:System.ComponentModel.IBindingListView>, то возвращает или задает выражение, используемое для фильтрации просматриваемых строк.|  
-|Свойство <xref:System.Windows.Forms.BindingSource.Sort%2A>|Если источником данных является <xref:System.ComponentModel.IBindingList>, то возвращает или задает имя столбца, используемого для сортировки, и порядок сортировки.<br /><br /> - или -<br /><br /> Если источником данных является <xref:System.ComponentModel.IBindingListView> и поддерживается Расширенная сортировка, получает имя столбца, используемого для сортировки и порядок сортировки|  
+|<xref:System.Windows.Forms.BindingSource.Filter%2A> свойство;|Если источником данных является <xref:System.ComponentModel.IBindingListView>, то возвращает или задает выражение, используемое для фильтрации просматриваемых строк.|  
+|<xref:System.Windows.Forms.BindingSource.Sort%2A> свойство;|Если источником данных является <xref:System.ComponentModel.IBindingList>, то возвращает или задает имя столбца, используемого для сортировки, и порядок сортировки.<br /><br /> -или-<br /><br /> Если источником данных является <xref:System.ComponentModel.IBindingListView> и поддерживается Расширенная сортировка, получает имя столбца, используемого для сортировки и порядок сортировки|  
   
 ### <a name="integration-with-bindingnavigator"></a>Интеграция с BindingNavigator  
  Можно использовать <xref:System.Windows.Forms.BindingSource> компонента для привязки любого элемента управления Windows Forms к источнику данных, но <xref:System.Windows.Forms.BindingNavigator> элемент управления предназначен специально для работы с <xref:System.Windows.Forms.BindingSource> компонента. <xref:System.Windows.Forms.BindingNavigator> Управления предоставляет пользовательский интерфейс для управления <xref:System.Windows.Forms.BindingSource> компонента текущего элемента. По умолчанию <xref:System.Windows.Forms.BindingNavigator> управления содержит кнопки, которые соответствуют методам навигации на <xref:System.Windows.Forms.BindingSource> компонента. Дополнительные сведения см. в разделе [Как Навигация по набору данных с помощью элемента управления BindingNavigator в Windows Forms](how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.BindingNavigator>
 - [Общие сведения о компоненте BindingSource](bindingsource-component-overview.md)
-- [Элемент управления BindingNavigator](bindingnavigator-control-windows-forms.md)
+- [BindingNavigator — элемент управления](bindingnavigator-control-windows-forms.md)
 - [Привязка данных Windows Forms](../windows-forms-data-binding.md)
-- [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)
-- [Практическое руководство. Привязка элемента управления Windows Forms к типу](how-to-bind-a-windows-forms-control-to-a-type.md)
-- [Практическое руководство. Отражение обновились в источнике данных в элементе управления Windows Forms с использованием компонента BindingSource](reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md)
+- [Элементы управления для использования в формах Windows Forms](controls-to-use-on-windows-forms.md)
+- [Практическое руководство. Связывание элемента управления с типом в Windows Forms](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [Практическое руководство. Отражения в элементе управления данных, которые обновились в источнике, с использованием компонента BindingSource в Windows Forms](reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md)

@@ -8,17 +8,16 @@ helpviewer_keywords:
 - geometry classes [WPF]
 - graphics [WPF], geometry classes
 ms.assetid: 9fba8934-98b7-4af6-82f6-f4ef887f963a
-ms.openlocfilehash: e002c07953320ac5e7c0854fe521896c3bca225c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f4f109b51ed566d1996b0c59b4ecbe51caa022cc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353014"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180002"
 ---
 # <a name="geometry-overview"></a>Общие сведения о классе Geometry
 В этом обзоре описывается использование [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Media.Geometry> классов для описания фигур. В этом разделе также приведены различия между <xref:System.Windows.Media.Geometry> объектов и <xref:System.Windows.Shapes.Shape> элементов.  
-  
-  
+
 <a name="wcpsdk_graphics_geometry_introduction"></a>   
 ## <a name="what-is-a-geometry"></a>Что такое класс Geometry?  
  <xref:System.Windows.Media.Geometry> Класс и классы, производные от него, такие как <xref:System.Windows.Media.EllipseGeometry>, <xref:System.Windows.Media.PathGeometry>, и <xref:System.Windows.Media.CombinedGeometry>, позволяют описывать геометрию двумерной фигуры. Данные геометрические описания имеют множество применений, например определение фигуры для рисования на экране или определение областей проверки нажатия и областей обрезки. Геометрию можно даже использовать для определения пути анимации.  
@@ -42,7 +41,7 @@ ms.locfileid: "57353014"
 ## <a name="common-properties-that-take-a-geometry"></a>Общие свойства, принимающие объект класса Geometry  
  В предыдущих разделах упоминалось, что объекты класса Geometry могут использоваться с другими объектами для различных целей, например для рисования фигур, анимации и обрезки. В следующей таблице перечислены несколько классов, имеющих свойства, принимающие <xref:System.Windows.Media.Geometry> объекта.  
   
-|Тип|Свойство.|  
+|Тип|Свойство|  
 |----------|--------------|  
 |<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath.PathGeometry%2A>|  
 |<xref:System.Windows.Media.DrawingGroup>|<xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>|  
@@ -112,7 +111,7 @@ ms.locfileid: "57353014"
   
  Существует несколько типов сегментов.  
   
-|Тип сегмента|Описание:|Пример|  
+|Тип сегмента|Описание|Пример|  
 |------------------|-----------------|-------------|  
 |<xref:System.Windows.Media.ArcSegment>|Создает эллиптическую дугу между двумя точками.|[Создание эллиптической дуги](how-to-create-an-elliptical-arc.md).|  
 |<xref:System.Windows.Media.BezierSegment>|Создает кривую Безье третьего порядка между двумя точками.|[Создание кривой Безье третьего порядка](how-to-create-a-cubic-bezier-curve.md).|  
@@ -217,13 +216,14 @@ ms.locfileid: "57353014"
  См. в разделе <xref:System.Windows.Media.Geometry> класс полный список методов.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Media.Geometry>
 - <xref:System.Windows.Media.PathGeometry>
 - <xref:System.Windows.Shapes.Path>
 - <xref:System.Windows.Media.GeometryDrawing>
 - [Двумерная графика и изображения](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [Синтаксис разметки пути](path-markup-syntax.md)
-- [Разделы практического руководства](geometries-how-to-topics.md)
+- [Практические руководства](geometries-how-to-topics.md)
 - [Общие сведения об эффектах анимации](animation-overview.md)
 - [Обзор фигур и базовых средств рисования в приложении WPF](shapes-and-basic-drawing-in-wpf-overview.md)
 - [Обзор объектов Drawing](drawing-objects-overview.md)

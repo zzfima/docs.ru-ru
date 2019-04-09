@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Убедитесь, что выбранной строки в дочерней таблице остается в правильном положении
+title: Практическое руководство. Правильное позиционирование выделенной строки в дочерней таблице
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - child tables row selection
 - current child position
 ms.assetid: c5fa2562-43a4-46fa-a604-52d8526a87bd
-ms.openlocfilehash: 930d0dc28a4ab0e34a6229a4b74617084918a275
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 514931b0d2da6a70d9a2206fb71ec85525ede978
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713466"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149114"
 ---
-# <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>Практическое руководство. Убедитесь, что выбранной строки в дочерней таблице остается в правильном положении
+# <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>Практическое руководство. Правильное позиционирование выделенной строки в дочерней таблице
 Зачастую при работе с привязкой данных в формах Windows Forms, данные будут отображаться в виде представлений «родительский-дочерний» или «основной-подробности». Это относится к сценариям привязки данных, где отображаются данные из одного источника в двух элементах управления. Изменение выделения в одном элементе управления вызывает изменение данных, отображаемых во втором элементе управления. Например, первый элемент управления может содержать список клиентов, а второй — список заказов, связанных с выбранным клиентом из первого элемента управления.  
   
  Начиная с .NET Framework версии 2.0, при отображении данных в представлении «родительский-дочерний» может потребоваться предпринять дополнительные действия, чтобы убедиться в том, что выбранная строка в дочерней таблице не сбрасывается на первую строку таблицы. Для этого необходимо кэшировать позицию дочерней таблицы и сбрасывать ее после изменения родительской таблицы. Обычно сброс дочерних таблиц происходит после первого изменения поля в строке родительской таблицы.  
@@ -84,6 +84,7 @@ ms.locfileid: "57713466"
  Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки построение с помощью csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  
   
 ## <a name="see-also"></a>См. также
-- [Практическое руководство. Элементов управления с привязкой к тому же источнику данных будут синхронизированы](multiple-controls-bound-to-data-source-synchronized.md)
+
+- [Практическое руководство. Синхронизация элементов управления, связанных с одним источником данных](multiple-controls-bound-to-data-source-synchronized.md)
 - [Компонент BindingSource](./controls/bindingsource-component.md)
-- [Привязка данных и Windows Forms](data-binding-and-windows-forms.md)
+- [Связывание данных и Windows Forms](data-binding-and-windows-forms.md)

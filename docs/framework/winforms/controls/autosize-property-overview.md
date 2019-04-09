@@ -7,12 +7,12 @@ helpviewer_keywords:
 - automatic sizing
 - AutoSizeMode property
 ms.assetid: 62fd82a2-9565-4f65-925b-9d1e66dc4e7d
-ms.openlocfilehash: 2fc06bef2434e87b7fbd3ec79e7671c4e32b7b3b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d5c4a22f186ddc5811c4a4d5e79776decea9e50
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649834"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173632"
 ---
 # <a name="autosize-property-overview"></a>Свойство AutoSize
 <xref:System.Windows.Forms.Control.AutoSize%2A> Свойство включает элемент управления изменить его размер, при необходимости, чтобы достичь значению, заданному в <xref:System.Windows.Forms.Control.PreferredSize%2A> свойство. Настроить поведение при изменении размера для определенного элемента управления, присвоив `AutoSizeMode` свойство.  
@@ -22,7 +22,7 @@ ms.locfileid: "54649834"
   
  <xref:System.Windows.Forms.Control.AutoSize%2A> Свойство такое поведение, немного отличаются, в зависимости от типа элемента управления и значение `AutoSizeMode` свойства, если свойство существует. В следующей таблице описаны особенности поведения, которые всегда являются true и предоставляет краткое описание каждого из них:  
   
-|Всегда значение true, поведение|Описание:|  
+|Всегда значение true, поведение|Описание|  
 |--------------------------|-----------------|  
 |Автоматическое изменение размеров — это функция времени выполнения.|Это означает, что он никогда не роста или уменьшения размеров элемента управления и затем имеет не влияет.|  
 |Если элемент управления изменяет свой размер значение его <xref:System.Windows.Forms.Control.Location%2A> свойства всегда остается постоянным.|Если содержимое элемента управления приводит ему увеличиваться, размеры элемента управления, направо и сверху вниз. Элементы управления не задействуют слева.|  
@@ -67,6 +67,7 @@ ms.locfileid: "54649834"
 >  Для достижения максимальной производительности, конструктор Windows Forms теней <xref:System.Windows.Forms.Control.AutoSize%2A> свойство <xref:System.Windows.Forms.Form> класса. Во время разработки, как если бы поведение формы <xref:System.Windows.Forms.Control.AutoSize%2A> свойству `false`, независимо от фактической настройки. Во время выполнения, оптимизация не производится и <xref:System.Windows.Forms.Control.AutoSize%2A> свойство применяется, заданные значения этого свойства.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.Control.AutoSize%2A>
 - <xref:System.Windows.Forms.Control.PreferredSize%2A>
 - <xref:System.Windows.Forms.Control.GetPreferredSize%2A>

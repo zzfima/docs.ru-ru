@@ -9,12 +9,12 @@ helpviewer_keywords:
 - graphics [Windows Forms], printing
 - printing [Windows Forms], graphics
 ms.assetid: 32b891e6-52ff-4fea-a9ff-2ce5db20a4c6
-ms.openlocfilehash: cb8c9f291103915c82fb31af5c6668fbd0648f66
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: ab2a230b7c6e303d712df058f450334b50c8a676
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721323"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167210"
 ---
 # <a name="how-to-print-graphics-in-windows-forms"></a>Практическое руководство. Печать графических изображений в Windows Forms
 Часто требуется печать графических изображений в приложении Windows. <xref:System.Drawing.Graphics> Класс предоставляет методы для рисования объектов на таких устройствах, как экран или принтер.  
@@ -67,6 +67,7 @@ ms.locfileid: "57721323"
     ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Drawing.Graphics>
 - <xref:System.Drawing.Brush>
 - [Поддержка печати в Windows Forms](windows-forms-print-support.md)

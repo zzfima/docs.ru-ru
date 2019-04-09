@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e4241f2057ce77713f91e969eda7765739613333
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c6a65eae91bf3b44fc2b49588ead5ed178d7326f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732847"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180405"
 ---
 # <a name="imetadataimport-interface"></a>Интерфейс IMetaDataImport
 Предоставляет методы для импорта существующих метаданных из переносимого исполняемого (PE) файла или другого источника, такого как библиотека типов или отдельный двоичный файл метаданных среды выполнения, а также управления этим метаданными.  
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание:|  
+|Метод|Описание|  
 |------------|-----------------|  
 |[Метод CloseEnum](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-closeenum-method.md)|Закрывает перечислитель с указанным дескриптором.|  
 |[Метод CountEnum](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-countenum-method.md)|Возвращает число элементов в перечислителе с указанным дескриптором.|  
@@ -62,8 +62,8 @@ ms.locfileid: "54732847"
 |[Метод FindTypeRef](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findtyperef-method.md)|Возвращает указатель на токен метаданных TypeRef, который ссылается на тип в заданной области поиска с указанным именем.|  
 |[Метод GetClassLayout](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getclasslayout-method.md)|Возвращает сведения о структуре для класса, на который ссылается указанный токен TypeDef.|  
 |[Метод GetCustomAttributeByName](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getcustomattributebyname-method.md)|Возвращает значение настраиваемого атрибута по указанному имени.|  
-|[Метод GetCustomAttributeProps](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getcustomattributeprops-method.md)|Возвращает значение настраиваемого атрибута по указанному токену метаданных.|  
-|[Метод GetEventProps](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-geteventprops-method.md)|Возвращает сведения о метаданных (включая объявляющий тип, методы добавления и удаления для делегатов, а также всевозможные флаги и другие связанные с ними данные) для события, представленного указанным токеном события.|  
+|[Метод GetCustomAttributeProps](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getcustomattributeprops-method.md)|Возвращает значение пользовательского атрибута по указанному токену метаданных.|  
+|[Метод GetEventProps](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-geteventprops-method.md)|Возвращает сведения о метаданных (включая объявленный тип, методы добавления и удаления для делегатов, а также всевозможные флаги и другие связанные с ними данные) для события, представленного указанным токеном события.|  
 |[Метод GetFieldMarshal](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getfieldmarshal-method.md)|Возвращает указатель на машинный неуправляемый тип поля, представленного заданным токеном метаданных Field.|  
 |[Метод GetFieldProps](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getfieldprops-method.md)|Возвращает метаданные, связанные с полем, на которое ссылается указанный токен FieldDef.|  
 |[Метод GetInterfaceImplProps](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getinterfaceimplprops-method.md)|Возвращает указатель на токены метаданных для типа, который реализует заданный метод, и интерфейса, который объявляет этот метод.|  
@@ -114,5 +114,6 @@ ms.locfileid: "54732847"
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейсы метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
 - [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

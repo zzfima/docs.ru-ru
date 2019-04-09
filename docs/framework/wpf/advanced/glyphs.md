@@ -10,12 +10,12 @@ helpviewer_keywords:
 - GlyphRunDrawing objects [WPF]
 - glyphs [WPF]
 ms.assetid: d5d9274c-23b3-4859-8869-6e64403c9ca7
-ms.openlocfilehash: 03c05d45fae22273429b9ec80e2dcbbb22e82d65
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a887e83babd6126d298170c6aead45c5370c1916
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353183"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193152"
 ---
 # <a name="glyphs"></a>Глифы
 Глифы являются низкоуровневые иллюстрацию символ для отображения на экране. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет прямой доступ к глифам для клиентов, которым требуется перехватывать и сохранять текст после форматирования.  
@@ -25,6 +25,7 @@ ms.locfileid: "57353183"
   [Практическое руководство. Рисование текста с помощью глифов](draw-text-using-glyphs.md)  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Media.GlyphRun>
 - <xref:System.Windows.Media.DrawingContext.DrawText%2A>
 - <xref:System.Windows.Documents.Glyphs>

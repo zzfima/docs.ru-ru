@@ -3,12 +3,12 @@ title: <issuerTokenResolver>
 ms.date: 03/30/2017
 ms.assetid: f74392f6-3f5b-4880-bd8a-3a9130d31e65
 author: BrucePerlerMS
-ms.openlocfilehash: a37935fa9302493c0ecaab0f56e1414d44637af6
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 08082d2e6647f07f33df72ab79dac00c15a1cd1b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55269228"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200822"
 ---
 # <a name="issuertokenresolver"></a>\<issuerTokenResolver>
 Регистрирует Сопоставитель токенов издателей, используемый обработчиками в коллекцию обработчиков токенов. Сопоставитель токенов издателей используется для разрешения токена подписывания на входящих токенов и сообщений.  
@@ -48,7 +48,7 @@ ms.locfileid: "55269228"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Предоставляет конфигурацию для коллекции безопасности обработчиков маркеров.|  
   
@@ -88,4 +88,5 @@ public override void LoadCustomConfiguration(System.Xml.XmlNodeList nodelist)
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.IdentityModel.Tokens.IssuerTokenResolver>

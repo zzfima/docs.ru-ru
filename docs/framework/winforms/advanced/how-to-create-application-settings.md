@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], creating
 ms.assetid: 1e7aa347-af75-41e5-89ca-f53cab704f72
-ms.openlocfilehash: d540715c0b4c69b2981cc65f55b0fa950c5a4eaf
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: a6b63e5e48e64491e5f33e7aec4abf92ccf48708
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721246"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166404"
 ---
 # <a name="how-to-create-application-settings"></a>Практическое руководство. Создание параметров приложения
 С помощью управляемого кода можно создавать параметры приложения и привязывать их к свойствам формы или ее элементов управления, чтобы эти параметры загружались и сохранялись автоматически во время выполнения.  
@@ -47,6 +47,7 @@ ms.locfileid: "57721246"
  Поставщик параметров по умолчанию, <xref:System.Configuration.LocalFileSettingsProvider>, сохраняет сведения в файлах конфигурации в виде обычного текста. В результате безопасность зависит от уровня разрешений на доступ к файлу, предоставляемого операционной системой текущему пользователю. Поэтому при хранении информации в файлах конфигурации необходимо соблюдать осторожность. Например, параметры приложения часто используются для хранения строк подключений, которые указывают на хранилище данных приложения. Однако в целях безопасности в таких строках не должны содержаться пароли. Подробнее о строках подключения см. в разделе <xref:System.Configuration.SpecialSetting>.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Configuration.SpecialSettingAttribute>
 - <xref:System.Configuration.LocalFileSettingsProvider>
 - [Общие сведения о параметрах приложений](application-settings-overview.md)

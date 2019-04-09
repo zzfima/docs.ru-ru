@@ -12,18 +12,16 @@ helpviewer_keywords:
 - syntax [WPF], object elements
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
-ms.openlocfilehash: 2ef632ee1335d1ee0e94eaa1a7f25cbe34ed4e6f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c0fcbc8054272356c39ba7925041ecef05a0322c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363430"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165273"
 ---
 # <a name="binding-declarations-overview"></a>Общие сведения об объявлении привязок
 В этом разделе описываются различные способы объявления привязок.  
-  
- 
-  
+
 <a name="Prereq"></a>   
 ## <a name="prerequisites"></a>Предварительные требования  
  Важно, чтобы перед прочтением этого раздела вы были знакомы с основными понятиями и принципами использования расширений разметки. Подробнее о расширениях разметки см. в разделе [Расширения разметки и XAML WPF](../advanced/markup-extensions-and-wpf-xaml.md).  
@@ -81,7 +79,7 @@ ms.locfileid: "57363430"
   
 -   Индексаторы свойства можно указать в квадратных скобках после имени свойства, для которого применяется индексатор. Например, предложение `Path=ShoppingCart[0]` задает привязку к индексу, который соответствует способу, который внутренняя индексация свойства использует для обработки символьной строки "0". Также поддерживаются вложенные индексаторы.  
   
--   Индексаторы и вложенные свойства могут сочетаться в предложении `Path`, например, `Path=ShoppingCart.ShippingInfo[MailingAddress,Street].`  
+-   Индексаторы и вложенные свойства могут сочетаться в `Path` предложения, например `Path=ShoppingCart.ShippingInfo[MailingAddress,Street].`  
   
 -   Индексаторы могут иметь несколько внутренних параметров, разделенных запятыми (,). Тип каждого параметра указывается в скобках. Например, вы можете задать предложение `Path="[(sys:Int32)42,(sys:Int32)24]"`, где `sys` сопоставляется с пространством имен `System`.  
   
@@ -126,7 +124,8 @@ ms.locfileid: "57363430"
 -   Значение по умолчанию <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> значение зависит от используемого <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged> и <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus> в зависимости от связанного свойства зависимостей также. Значение по умолчанию для большинства свойств зависимостей — <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>, а свойство <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> имеет значение по умолчанию <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>.  
   
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения о привязке данных](data-binding-overview.md)
-- [Разделы практического руководства](data-binding-how-to-topics.md)
+- [Практические руководства](data-binding-how-to-topics.md)
 - [Привязка данных](../advanced/optimizing-performance-data-binding.md)
-- [Синтаксис PropertyPath в XAML](../advanced/propertypath-xaml-syntax.md)
+- [Синтаксис PropertyPath XAML](../advanced/propertypath-xaml-syntax.md)

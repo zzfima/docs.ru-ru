@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Закрашивание области с помощью видео
+title: Практическое руководство. Заливка области с помощью видео
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - video [WPF], painting with
 - brushes [WPF], painting with a video
 ms.assetid: 04dd6600-4a6e-4b43-a93e-21cce7dfbcb8
-ms.openlocfilehash: 0756a9e87840648b55ecad4b3f1ce6e0e5452eb7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: be09d1310847cd7214ea795a704c25d994f07b7a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363297"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151181"
 ---
-# <a name="how-to-paint-an-area-with-a-video"></a>Практическое руководство. Закрашивание области с помощью видео
+# <a name="how-to-paint-an-area-with-a-video"></a>Практическое руководство. Заливка области с помощью видео
 В этом примере показано, как заливка области с медиа-носителями. Закраска области с медиа-носителями один из способов является использование <xref:System.Windows.Controls.MediaElement> вместе с <xref:System.Windows.Media.VisualBrush>. Используйте <xref:System.Windows.Controls.MediaElement> для загрузки и воспроизведения мультимедиа и затем использовать его для задания <xref:System.Windows.Media.VisualBrush.Visual%2A> свойство <xref:System.Windows.Media.VisualBrush>. Затем можно использовать <xref:System.Windows.Media.VisualBrush> для закраски области с загруженным мультимедиа.  
   
 ## <a name="example"></a>Пример  
@@ -38,7 +38,8 @@ ms.locfileid: "57363297"
  Сведения о том, как добавить файл содержимого, такие как файл мультимедиа в приложение, см. в разделе [ресурса приложения WPF, содержимое и файлы данных](../app-development/wpf-application-resource-content-and-data-files.md). При добавлении файла мультимедиа, необходимо добавить его как файл содержимого, а не как файл ресурсов.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Media.VisualBrush>
-- [Заполнение с использованием изображений, рисунков и визуальных элементов](painting-with-images-drawings-and-visuals.md)
-- [Общие сведения об объекте TileBrush](tilebrush-overview.md)
+- [Рисование с помощью объектов Image, Drawing и Visual](painting-with-images-drawings-and-visuals.md)
+- [Общие сведения о TileBrush](tilebrush-overview.md)
 - [Общие сведения о мультимедиа](multimedia-overview.md)

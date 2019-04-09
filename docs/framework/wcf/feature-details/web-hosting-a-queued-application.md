@@ -2,12 +2,12 @@
 title: Размещение веб-узлов в приложении, использующем очереди
 ms.date: 03/30/2017
 ms.assetid: c7a539fa-e442-4c08-a7f1-17b7f5a03e88
-ms.openlocfilehash: 957a97c263f44302b66b6fb57b8330f63a178fa1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c44a6b5059f5294646d95b4281dcf7845b369929
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700212"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126026"
 ---
 # <a name="web-hosting-a-queued-application"></a>Размещение веб-узлов в приложении, использующем очереди
 Служба активации процессов Windows (WAS) управляет активацией и временем существования рабочих процессов, содержащих приложения, размещения служб Windows Communication Foundation (WCF). Модель процесса WAS обобщает модель процесса [!INCLUDE[iis601](../../../../includes/iis601-md.md)] для HTTP-сервера путем устранения зависимости от HTTP. Это позволяет службам WCF использовать как HTTP, так и отличные от HTTP протоколы, такие как net.msmq и msmq.formatname, в среде размещения, которая поддерживает активацию на основе сообщений и предоставляет возможность размещать большое количество приложений на данном компьютере.  
@@ -42,5 +42,6 @@ ms.locfileid: "54700212"
  Приложение, размещенное WAS не может быть активировано посредством сообщений из системных очередей, таких как общесистемная очередь недоставленных сообщений или вложенных очередей, таких как вложенные очереди подозрительных сообщений. Это ограничение для данной версии продукта.  
   
 ## <a name="see-also"></a>См. также
+
 - [Обработка подозрительных сообщений](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
 - [Конечные точки служб и адресация очереди](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)

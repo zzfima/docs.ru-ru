@@ -8,12 +8,12 @@ helpviewer_keywords:
 - timelines [WPF]
 - timing events [WPF]
 ms.assetid: 597e3280-0867-4359-a97b-5b2f4149e350
-ms.openlocfilehash: 2ce4794c5f0abfc31ae9d6f813bcfd7a9d375611
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 91e335f4d5adaa5279fb16805604f2e2848eeb8b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379579"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167171"
 ---
 # <a name="timing-events-overview"></a>Общие сведения о временных событиях
 В этом разделе описываются способы использования пяти временных событий, доступных на <xref:System.Windows.Media.Animation.Timeline> и <xref:System.Windows.Media.Animation.Clock> объектов.  
@@ -56,7 +56,7 @@ ms.locfileid: "57379579"
   
 |событие|Интерактивная операция, вызывающая событие|Другие условия|  
 |-----------|--------------------------------------|--------------------|  
-|**Completed**|Переход к заполнению|Часы останавливаются.|  
+|**Завершено**|Переход к заполнению|Часы останавливаются.|  
 |**CurrentGlobalSpeedInvalidated**|Пауза, возобновление, поиск, установка соотношения скорости, переход к заполнению|Часы запускаются в обратном направлении, ускоряются, запускаются в обычном направлении или останавливаются.|  
 |**CurrentStateInvalidated**|Начало, переход к заполнению, остановка|Часы запускаются, останавливаются, или выполняется заполнение.|  
 |**CurrentTimeInvalidated**|Начало, поиск, переход к заполнению, остановка|Часы работают.|  
@@ -77,6 +77,7 @@ ms.locfileid: "57379579"
  При регистрации для <xref:System.Windows.Media.Animation.Timeline.Completed> события на временной шкале, например, фактически дается система для регистрации <xref:System.Windows.Media.Animation.Clock.Completed> событий всех часов, которая создается для временной шкалы. В коде, необходимо зарегистрировать для этого события перед <xref:System.Windows.Media.Animation.Clock> создается для этой шкалы времени; в противном случае вы не получите уведомление. Это происходит автоматически в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]; средство синтаксического анализа автоматически регистрирует событие до <xref:System.Windows.Media.Animation.Clock> создается.  
   
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения об анимации и системе управления временем](animation-and-timing-system-overview.md)
 - [Общие сведения об эффектах анимации](animation-overview.md)
 - [Общие сведения о характере поведения во времени](timing-behaviors-overview.md)

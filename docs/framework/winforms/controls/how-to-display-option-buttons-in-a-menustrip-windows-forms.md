@@ -9,12 +9,12 @@ helpviewer_keywords:
 - displaying option buttons [Windows Forms], MenuStrip [Windows Forms]
 - option buttons [Windows Forms], displaying in MenuStrip
 ms.assetid: 8b596af2-9ff8-4f7b-93d7-cba830e167f4
-ms.openlocfilehash: c64dd88915fdd17deee415b4d6c3fd088fbcfbfd
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 61feda3f49c9a9e03a606c0284629f809d6876b7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718874"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115535"
 ---
 # <a name="how-to-display-option-buttons-in-a-menustrip-windows-forms"></a>Практическое руководство. Отображение переключателей в элементе управления MenuStrip (Windows Forms)
 Похожи переключателей, также известный как переключатели, флажки, за исключением того, что пользователи могут выбрать только один раз. Несмотря на то что по умолчанию <xref:System.Windows.Forms.ToolStripMenuItem> класс не предоставляет поведение переключателей, класс обеспечивает поведение "флажок", которое можно настроить для реализации поведения переключателей для пунктов меню в <xref:System.Windows.Forms.MenuStrip> элемента управления.  
@@ -81,6 +81,7 @@ ms.locfileid: "57718874"
 -   ссылки на сборки System, System.Drawing и System.Windows.Forms.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
 - <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A?displayProperty=nameWithType>
@@ -90,4 +91,4 @@ ms.locfileid: "57718874"
 - <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.RadioButtonRenderer>
 - [Элемент управления MenuStrip](menustrip-control-windows-forms.md)
-- [Практическое руководство. Практическое](how-to-implement-a-custom-toolstriprenderer.md)
+- [Практическое руководство. Реализация пользовательского класса, производного от ToolStripRenderer](how-to-implement-a-custom-toolstriprenderer.md)

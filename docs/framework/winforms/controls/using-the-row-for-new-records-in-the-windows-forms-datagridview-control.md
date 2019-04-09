@@ -6,12 +6,12 @@ helpviewer_keywords:
 - rows [Windows Forms], new records
 - DataGridView control [Windows Forms], data entry
 ms.assetid: 6110f1ea-9794-442c-a98a-f104a1feeaf4
-ms.openlocfilehash: 041738ba375022be7c80526f25e5761314dffbf1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 67c87b28f04b028f329663d6cf8215370a00ef2f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703924"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184825"
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>Использование строки элемента управления DataGridView, предназначенной для ввода новых данных, в Windows Forms
 При использовании <xref:System.Windows.Forms.DataGridView> для редактирования данных в приложении, часто требуется предоставить пользователям возможность добавлять новые строки данных в хранилище данных. <xref:System.Windows.Forms.DataGridView> Элемент управления поддерживает данную функцию, предоставляя строку для новых записей, которая всегда находится в последней строке. Оно помечено символ звездочки (*) в заголовке строки. В следующих разделах рассматриваются некоторые аспекты, следует учитывать при включении программы со строкой для новых записей.  
@@ -58,7 +58,8 @@ ms.locfileid: "57703924"
  Если вы реализуете виртуальный режим, необходимо отслеживать, когда требуется строку для новых записей в модели данных, а также когда откатывать добавления строки. Конкретная реализация этих функций зависит от реализации модели данных и соответствующей семантики транзакций, например, является ли область фиксации на уровне ячейки или строки. Дополнительные сведения см. в разделе [виртуальный режим в элементе управления DataGridView Windows Forms](virtual-mode-in-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded?displayProperty=nameWithType>
 - [Ввод данных с помощью элемента управления DataGridView в Windows Forms](data-entry-in-the-windows-forms-datagridview-control.md)
-- [Практическое руководство. Определение значения по умолчанию для новых строк в элементе управления DataGridView Windows Forms](specify-default-values-for-new-rows-in-the-datagrid.md)
+- [Практическое руководство. Определение значений по умолчанию для новых строк элемента управления DataGridView в Windows Forms](specify-default-values-for-new-rows-in-the-datagrid.md)

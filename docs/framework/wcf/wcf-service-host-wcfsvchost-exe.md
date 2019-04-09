@@ -2,12 +2,12 @@
 title: Узел службы WCF (WcfSvcHost.exe)
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-ms.openlocfilehash: 6a8ed677ceaf9b86b67ec2558eb4e31c23d4c57e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d9a086b3a6ae0ece3b1b45161402ce058e1fb447
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505644"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193022"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>Узел службы WCF (WcfSvcHost.exe)
 Узел службы Windows Communication Foundation (WCF) (WcfSvcHost.exe) позволяет запустить отладчик Visual Studio (F5) для автоматического размещения и проверки службы, реализованный. Затем можно проверить службу, используя тестовый клиент WCF (WcfTestClient.exe) или своего собственного клиента для поиска и устранения потенциальных ошибок.  
@@ -111,4 +111,5 @@ netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>
  Дополнительные сведения о netsh.exe см. в разделе "[способы использования средства Netsh.exe и переключателей командной строки](https://go.microsoft.com/fwlink/?LinkId=97877)«.  
   
 ## <a name="see-also"></a>См. также
-- [Тестовый клиент WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)
+
+- [Тестовый клиент WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

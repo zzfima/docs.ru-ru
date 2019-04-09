@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Привязка к данным Windows Forms ComboBox или ListBox-элемент управления
+title: Практическое руководство. Связывание элемента управления ComboBox или ListBox с данными в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: dfd7f081-8bea-4a41-86a3-86a1934828ef
-ms.openlocfilehash: c8eb224cbb8ec7ab271edaed8bb25f9cc7fb8ddc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 949b63f435289d486f445bad01d0bc6cc33e6f08
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709930"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197195"
 ---
-# <a name="how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data"></a>Практическое руководство. Привязка к данным Windows Forms ComboBox или ListBox-элемент управления
+# <a name="how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data"></a>Практическое руководство. Связывание элемента управления ComboBox или ListBox с данными в Windows Forms
 Можно привязать <xref:System.Windows.Forms.ComboBox> и <xref:System.Windows.Forms.ListBox> к данным для выполнения задач, таких как просмотр данных в базе данных, ввод новых данных и изменение существующих данных.  
   
 ### <a name="to-bind-a-combobox-or-listbox-control"></a>Для привязки элемента управления ComboBox или ListBox  
@@ -54,8 +54,9 @@ ms.locfileid: "57709930"
     >  Если имеется привязка к источнику данных, который не реализует <xref:System.ComponentModel.IBindingList> интерфейса, такие как <xref:System.Collections.ArrayList>, привязанного элемента управления не обновляются при обновлении источника данных. Например, если у вас есть поле со списком привязать к <xref:System.Collections.ArrayList> и добавлении данных <xref:System.Collections.ArrayList>, эти новые элементы не будут отображаться в поле со списком. Тем не менее, вы можете принудительно поле со списком обновления путем вызова <xref:System.Windows.Forms.BindingManagerBase.SuspendBinding%2A> и <xref:System.Windows.Forms.BindingManagerBase.ResumeBinding%2A> методы в экземпляре <xref:System.Windows.Forms.BindingContext> класса, к которому привязан элемент управления.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
 - [Привязка данных Windows Forms](../windows-forms-data-binding.md)
-- [Привязка данных и Windows Forms](../data-binding-and-windows-forms.md)
+- [Связывание данных и Windows Forms](../data-binding-and-windows-forms.md)
 - [Создание списка для выбора элементов в Windows Forms](windows-forms-controls-used-to-list-options.md)

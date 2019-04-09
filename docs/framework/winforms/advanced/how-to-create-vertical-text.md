@@ -10,12 +10,12 @@ helpviewer_keywords:
 - strings [Windows Forms], drawing vertical
 - vertical text [Windows Forms], drawing
 ms.assetid: 50c69046-4188-47d9-b949-cc2610ffd337
-ms.openlocfilehash: 720e343f1b3b20fe3df96a03fbd67ee473ec13f6
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 75f5d8faa4dc4b7e022cd6de2e6db49f4fa9030c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125412"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190227"
 ---
 # <a name="how-to-create-vertical-text"></a>Практическое руководство. Вывод текста по вертикали
 Можно использовать <xref:System.Drawing.StringFormat> для указания, что текст должен выводиться по вертикали, а не по горизонтали.  
@@ -32,7 +32,8 @@ ms.locfileid: "58125412"
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
   
--   Предыдущий пример предназначен для работы с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs> `e` , который является параметром <xref:System.Windows.Forms.PaintEventHandler>.  
+-   Предыдущий пример предназначен для работы с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs>`e` , который является параметром <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>См. также
+
 - [Практическое руководство. Рисование текста с использованием GDI](how-to-draw-text-with-gdi.md)

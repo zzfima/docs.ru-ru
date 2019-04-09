@@ -10,18 +10,18 @@ helpviewer_keywords:
 - UI (user interface), automation
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
-ms.openlocfilehash: 4b2988314afbe501623fd050a989876842f68601
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: MT
+ms.openlocfilehash: 8c2477e5e7086e1bbfaab1e4b116c9e6bb4e2d30
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674540"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194073"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>Модель автоматизации пользовательского интерфейса и масштабирование экрана
 > [!NOTE]
 >  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Для получения последних сведений о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], см. в разделе [API автоматизации Windows: Модели автоматизации пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] предоставляет пользователям возможность изменять параметр [!INCLUDE[TLA#tla_dpi](../../../includes/tlasharptla-dpi-md.md)] таким образом, чтобы большинство элементов [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] на экране отображалось большего размера. Хотя эта возможность уже давно была доступна в [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)], в предыдущих версиях масштабирование должно было реализовываться в приложениях. В [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]диспетчер окон рабочего стола выполняет масштабирование по умолчанию для всех приложений, которые не обрабатывают собственное масштабирование. Клиентские приложения модели автоматизации пользовательского интерфейса должны учитывать эту функцию.  
+ [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] Пользователи могут изменять [!INCLUDE[TLA#tla_dpi](../../../includes/tlasharptla-dpi-md.md)] параметр таким образом, чтобы большинство [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] элементов на экране отображалось большего размера. Хотя эта возможность уже давно была доступна в [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)], в предыдущих версиях масштабирование должно было реализовываться в приложениях. В [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]диспетчер окон рабочего стола выполняет масштабирование по умолчанию для всех приложений, которые не обрабатывают собственное масштабирование. Клиентские приложения модели автоматизации пользовательского интерфейса должны учитывать эту функцию.  
   
 <a name="Scaling_in_Windows_Vista"></a>   
 ## <a name="scaling-in-windows-vista"></a>Масштабирование в Windows Vista  
@@ -76,4 +76,5 @@ ms.locfileid: "57674540"
  Если приложение выполняет прямое межпроцессное взаимодействие с приложениями без поддержки [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], то возможно придется выполнять преобразование между логическими и физическими координатами с помощью функций [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] `PhysicalToLogicalPoint` и `LogicalToPhysicalPoint`.  
   
 ## <a name="see-also"></a>См. также
-- [Highlighter Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter)
+
+- [Пример маркера](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter)

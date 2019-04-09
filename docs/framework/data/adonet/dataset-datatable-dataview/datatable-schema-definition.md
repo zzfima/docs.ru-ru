@@ -2,12 +2,12 @@
 title: Определение схемы таблицы данных
 ms.date: 03/30/2017
 ms.assetid: efbcdda4-f5a9-421d-8be2-4c194c74552f
-ms.openlocfilehash: aa275e0a9cbd4f8fb3e851865b9de49eca327727
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e8710e7d92558f525a6feaedf8d0635c5ce6e2c7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545388"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163076"
 ---
 # <a name="datatable-schema-definition"></a>Определение схемы таблицы данных
 Схема, или структура, таблицы представляется столбцами и ограничениями. Схема <xref:System.Data.DataTable> определяется с использованием объектов <xref:System.Data.DataColumn>, а также объектов <xref:System.Data.ForeignKeyConstraint> и <xref:System.Data.UniqueConstraint>. Столбцы таблицы могут сопоставляться со столбцами источника данных, содержать вычисляемые значения выражений, автоматически увеличивать значения или содержать значения первичного ключа.  
@@ -20,7 +20,7 @@ ms.locfileid: "54545388"
 >  <xref:System.Data.DataTable.CaseSensitive%2A> Свойство **DataTable** не влияет на это поведение. **CaseSensitive** свойство применяется к данным в таблице и влияет на сортировку, поиск, фильтрацию, принудительное применение ограничений и т. д., но не на ссылки на столбцы, связи и ограничения.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Добавление столбцов в DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-columns-to-a-datatable.md)  
+ [Добавление столбцов в таблицу данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-columns-to-a-datatable.md)  
  Описывает, как определить столбцы таблицы с использованием **DataColumn** объектов.  
   
  [Создание столбцов выражений](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-expression-columns.md)  
@@ -32,9 +32,10 @@ ms.locfileid: "54545388"
  [Определение первичных ключей](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)  
  Описывает способ указания первичного ключа таблицы из одного или нескольких **DataColumn** объектов.  
   
- [Ограничения DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)  
+ [Ограничения таблиц данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)  
  Описывает, как определить внешний ключ и ограничения уникальности для столбцов в таблице.  
   
 ## <a name="see-also"></a>См. также
+
 - [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

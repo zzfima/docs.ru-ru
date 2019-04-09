@@ -1,17 +1,17 @@
 ---
-title: Как выполнить Установка и настройка компонентов активации WCF
+title: Практическое руководство. Установка и настройка компонентов активации WCF
 ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: 0bc624bcacf5ab85a5ae0e833ea6b7a979946a27
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: bcd725963986d8a70584409e1ef15c42f04f0033
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726901"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199223"
 ---
-# <a name="how-to-install-and-configure-wcf-activation-components"></a>Как выполнить Установка и настройка компонентов активации WCF
+# <a name="how-to-install-and-configure-wcf-activation-components"></a>Практическое руководство. Установка и настройка компонентов активации WCF
 В этом разделе описываются шаги, необходимые для настройки службы активации Windows (WAS) на [!INCLUDE[wv](../../../../includes/wv-md.md)] для размещения Windows Communication Foundation (WCF) служб, которые не поддерживают связь по протоколу HTTP сетевые протоколы. Настройка предполагает следующие шаги.  
   
 -   Установите (или подтвердить установку) компонентов активации WCF.  
@@ -101,7 +101,8 @@ ms.locfileid: "54726901"
     >  Эта команда представляет собой одну строку текста.  
   
 ## <a name="see-also"></a>См. также
+
 - [Активация TCP](../../../../docs/framework/wcf/samples/tcp-activation.md)
 - [Активация MSMQ](../../../../docs/framework/wcf/samples/msmq-activation.md)
 - [Активация NamedPipe](../../../../docs/framework/wcf/samples/namedpipe-activation.md)
-- [Функции размещения Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)
+- [Возможности размещения Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)

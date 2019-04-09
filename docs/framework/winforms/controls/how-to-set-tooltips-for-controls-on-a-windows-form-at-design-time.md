@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Определение всплывающих подсказок для элементов управления формы Windows во время разработки
+title: Практическое руководство. Определение всплывающих подсказок для элементов управления в Windows Forms во время разработки
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - tooltips [Windows Forms], for controls
 - examples [Windows Forms], tooltips
 ms.assetid: c4b60637-4c0a-44c2-a103-f66dff887936
-ms.openlocfilehash: 541e50a8ee9c5338acc7c5e347549fd03a0f6323
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: d2bca517e98a8258d4f510c64593de2ad9646e13
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710723"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157609"
 ---
-# <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a>Практическое руководство. Определение всплывающих подсказок для элементов управления формы Windows во время разработки
+# <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a>Практическое руководство. Определение всплывающих подсказок для элементов управления в Windows Forms во время разработки
 Можно задать <xref:System.Windows.Forms.ToolTip> строку в коде или в конструкторе Windows Forms. Дополнительные сведения о <xref:System.Windows.Forms.ToolTip> компонента, см. в разделе [Общие сведения о компоненте ToolTip](tooltip-component-overview-windows-forms.md).  
   
 > [!NOTE]
@@ -77,6 +77,7 @@ ms.locfileid: "57710723"
 2.  В **свойства** окно, удалите текст в **во всплывающей подсказке над ToolTip1**.  
 
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения об элементе управления ToolTip](tooltip-component-overview-windows-forms.md)
 - [Практическое руководство. Изменение значения задержки для компонента ToolTip в Windows Forms](how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)
 - [Компонент ToolTip](tooltip-component-windows-forms.md)

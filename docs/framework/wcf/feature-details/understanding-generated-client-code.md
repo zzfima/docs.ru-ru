@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c3f6e4b0-1131-4c94-aa39-a197c5c2f2ca
-ms.openlocfilehash: 929b0ee8b0904d43f44857e8051ff52fc04a4f82
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 226b77d1c638ec4f8505140332ad35d4029ef0b0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734452"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189164"
 ---
 # <a name="understanding-generated-client-code"></a>Основные сведения о созданном коде клиента
 [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) создает код клиента и файл конфигурации клиентского приложения для использования при сборке клиентских приложений. В этом разделе содержатся примеры созданного кода для стандартных сценариев контрактов служб. Дополнительные сведения о создании клиентского приложения с помощью созданного кода, см. в разделе [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md).  
@@ -31,7 +31,7 @@ ms.locfileid: "54734452"
 -   Определение интерфейса канала контракта службы поддержки.  
   
 ### <a name="finding-service-contract-interfaces"></a>Поиск интерфейсов контрактов служб  
- Чтобы найти интерфейсы, которые моделируют контракты служб, необходимо искать интерфейсы, отмеченные атрибутом <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType>. Зачастую этот атрибут сложно найти при быстром прочтении из-за наличия других атрибутов и явных свойств, установленных на сам атрибут. Не следует забывать, что интерфейс контракта службы и интерфейс контракта клиента - это разные типы интерфейса. В следующем примере кода показан исходный контракт службы.  
+ Чтобы найти интерфейсы, которые моделируют контракты служб, необходимо искать интерфейсы, отмеченные атрибутом <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType> . Зачастую этот атрибут сложно найти при быстром прочтении из-за наличия других атрибутов и явных свойств, установленных на сам атрибут. Не следует забывать, что интерфейс контракта службы и интерфейс контракта клиента - это разные типы интерфейса. В следующем примере кода показан исходный контракт службы.  
   
  [!code-csharp[C_GeneratedCodeFiles#22](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#22)]  
   
@@ -63,7 +63,7 @@ ms.locfileid: "54734452"
  В этом случае тип данных представляет собой тип сведений, вызванный конкретным исключением со стороны клиента <xref:System.ServiceModel.FaultException%601> , где параметром типа сведений является `microsoft.wcf.documentation.SampleFault`. Дополнительные сведения о типах данных см. в разделе [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md). Дополнительные сведения об обработке исключений в клиентских приложениях см. в разделе [Sending and Receiving Faults](../../../../docs/framework/wcf/sending-and-receiving-faults.md).  
   
 ### <a name="finding-callback-contracts-for-duplex-services"></a>Поиск контрактов обратного вызова для дуплексных служб  
- Если определяется местоположение контракта службы, для которого интерфейс контракта задает значение свойства <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType>, то этот контракт задает дуплексный контракт. Дуплексные контракты требуют, чтобы клиентское приложение создавало класс обратного вызова, реализующий контракт обратного вызова, и передавало экземпляр этого класса в <xref:System.ServiceModel.DuplexClientBase%601?displayProperty=nameWithType> или <xref:System.ServiceModel.DuplexChannelFactory%601?displayProperty=nameWithType> , которые используются для общения со службой. Дополнительные сведения о дуплексных клиентах см. в разделе [как: Доступ к службам с дуплексным контрактом](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md).  
+ Если определяется местоположение контракта службы, для которого интерфейс контракта задает значение свойства <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> , то этот контракт задает дуплексный контракт. Дуплексные контракты требуют, чтобы клиентское приложение создавало класс обратного вызова, реализующий контракт обратного вызова, и передавало экземпляр этого класса в <xref:System.ServiceModel.DuplexClientBase%601?displayProperty=nameWithType> или <xref:System.ServiceModel.DuplexChannelFactory%601?displayProperty=nameWithType> , которые используются для общения со службой. Дополнительные сведения о дуплексных клиентах см. в разделе [как: Доступ к службам с дуплексным контрактом](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md).  
   
  Следующий контракт задает контракт обратного вызова типа `SampleDuplexHelloCallback`.  
   
@@ -76,9 +76,10 @@ ms.locfileid: "54734452"
  [!code-vb[C_GeneratedCodeFiles#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_generatedcodefiles/vb/duplexproxycode.vb#4)]  
   
 ### <a name="finding-service-contract-channel-interfaces"></a>Поиск интерфейсов каналов контрактов служб  
- При использовании класса <xref:System.ServiceModel.ChannelFactory> с интерфейсом контракта службы следует перейти к интерфейсу <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType>, чтобы явно открыть, закрыть канал или прервать его работу. Для упрощения работы средство Svcutil.exe создает также вспомогательный интерфейс, реализующий и интерфейс контракта службы, и интерфейс <xref:System.ServiceModel.IClientChannel> , чтобы можно было взаимодействовать с инфраструктурой клиентских каналов без переходов. В следующем коде показано определение вспомогательного клиентского канала, который реализует указанный выше контракт службы.  
+ При использовании класса <xref:System.ServiceModel.ChannelFactory> с интерфейсом контракта службы следует перейти к интерфейсу <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> , чтобы явно открыть, закрыть канал или прервать его работу. Для упрощения работы средство Svcutil.exe создает также вспомогательный интерфейс, реализующий и интерфейс контракта службы, и интерфейс <xref:System.ServiceModel.IClientChannel> , чтобы можно было взаимодействовать с инфраструктурой клиентских каналов без переходов. В следующем коде показано определение вспомогательного клиентского канала, который реализует указанный выше контракт службы.  
   
  [!code-csharp[C_GeneratedCodeFiles#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#13)]  
   
 ## <a name="see-also"></a>См. также
-- [Общие сведения о клиентах WCF](../../../../docs/framework/wcf/wcf-client-overview.md)
+
+- [Общие сведения о клиентах WCF](../../../../docs/framework/wcf/wcf-client-overview.md)

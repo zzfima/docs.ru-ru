@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 634f30186c552f0e5330dd94f78c585da7d450c9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d90aeb22a945f4fa1576009c700c420704dd891b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57493834"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144785"
 ---
 # <a name="isymunmanagedscopegetparent-method"></a>Метод ISymUnmanagedScope::GetParent
 Получает родительскую область этой области.  
@@ -45,5 +45,6 @@ HRESULT GetParent(
  **Заголовок.** CorSym.idl CorSym.h  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
 - [Метод GetChildren](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getchildren-method.md)

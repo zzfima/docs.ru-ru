@@ -1,19 +1,19 @@
 ---
-title: Практическое руководство. Добавление или удаление изображений из компонента ImageList с помощью конструктора
+title: Практическое руководство. Добавление и удаление изображений из компонента ImageList с помощью конструктора
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ImageList component [Windows Forms], adding images
 - ImageList component [Windows Forms], removing images
 - images [Windows Forms], adding to ImageList component
 ms.assetid: 5699b244-e37c-4d20-bc35-7441e55c1e3a
-ms.openlocfilehash: 370bd05ac014b625d9581cc285daf6724f459b73
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: b85b4d39235d49966b5f3c108986c8dd04bed5fe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723751"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161529"
 ---
-# <a name="how-to-add-or-remove-imagelist-images-with-the-designer"></a>Практическое руководство. Добавление или удаление изображений из компонента ImageList с помощью конструктора
+# <a name="how-to-add-or-remove-imagelist-images-with-the-designer"></a>Практическое руководство. Добавление и удаление изображений из компонента ImageList с помощью конструктора
 Можно добавить изображения для <xref:System.Windows.Forms.ImageList> компонент несколькими различными способами. Можно добавлять изображения очень быстро с помощью смарт-тег, связанный с <xref:System.Windows.Forms.ImageList>, или при установке на несколько других свойств <xref:System.Windows.Forms.ImageList>, может оказаться более удобным для добавления изображений в окне "Свойства". Также можно добавлять изображения с помощью кода. Дополнительные сведения о способах добавления изображений в коде см. в разделе [как: Добавление и удаление изображений с помощью Windows Forms компонента ImageList](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md). Обычно заполняется <xref:System.Windows.Forms.ImageList> компонент с изображениями, прежде чем он связан с элементом управления, но это не является обязательным.  
   
 > [!NOTE]
@@ -38,6 +38,7 @@ ms.locfileid: "57723751"
 4.  В **Editor Kolekce Images** щелкните **добавить** или **удалить** на добавление и удаление изображений из списка.  
   
 ## <a name="see-also"></a>См. также
-- [Изображения, точечные рисунки и метафайлы](../advanced/images-bitmaps-and-metafiles.md)
-- [Пошаговое руководство: Выполнение типичных задач с помощью смарт-тегов в Windows Forms элементы управления](performing-common-tasks-using-smart-tags-on-wf-controls.md)
+
+- [Работа с растровыми и векторными изображениями с использованием классов Image, Bitmap и Metafile](../advanced/images-bitmaps-and-metafiles.md)
+- [Пошаговое руководство. Выполнение типичных задач с помощью смарт-тегов в элементах управления Windows Forms](performing-common-tasks-using-smart-tags-on-wf-controls.md)
 - [Компонент ImageList](imagelist-component-windows-forms.md)

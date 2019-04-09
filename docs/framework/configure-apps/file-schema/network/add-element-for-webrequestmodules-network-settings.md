@@ -1,5 +1,5 @@
 ---
-title: Элемент <add> для webRequestModules (параметры сети)
+title: <add> Элемент для webRequestModules (параметры сети)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/add
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - add element, webRequestModules
 - <add> element, webRequestModules
 ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
-ms.openlocfilehash: ff564571f3f606ac526c5b9efdb904d237348ffe
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 4c1116c088c12ad3859714c8d75704d0156c12f7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55287135"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188256"
 ---
 # <a name="add-element-for-webrequestmodules-network-settings"></a>\<Добавить > элемент для webRequestModules (параметры сети)
 Добавляет пользовательский модуль веб-запросов к приложению.  
@@ -39,7 +39,7 @@ ms.locfileid: "55287135"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|**Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))|**Описание**|  
+|**Атрибут**|**Описание**|  
 |-------------------|---------------------|  
 |`prefix`|Префикс URI для запросов, обрабатываемых этот модуль веб-запросов.|  
 |`type`|Полное имя типа (обозначается <xref:System.Type.FullName%2A> свойства) и имя сборки (обозначается <xref:System.Reflection.Assembly.FullName%2A> свойство), разделенные запятыми, который реализует этот модуль веб-запросов.|  
@@ -82,5 +82,6 @@ ms.locfileid: "55287135"
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Net.WebRequest>
 - [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

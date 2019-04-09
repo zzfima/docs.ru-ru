@@ -5,15 +5,15 @@ helpviewer_keywords:
 - XAML [XAML Services], XamlServices class
 - XamlServices class [XAML Services], how to use
 ms.assetid: 6ac27fad-3687-4d7a-add1-3e90675fdfde
-ms.openlocfilehash: 68211babbce2e9512689fa329dcf33be0afa4a0c
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: c9ef6a215587750f66d2cf8b5b54cbc51f89037e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58027129"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162272"
 ---
 # <a name="xamlservices-class-and-basic-xaml-reading-or-writing"></a>Класс XAMLServices и чтение или запись базового кода XAML
-<xref:System.Xaml.XamlServices> — это класс, предоставляемый службами XAML .NET Framework XAML, который может использоваться для сценариев  XAML, в которых не требуется отдельный доступ к потоку узлов XAML, или для информации о системе типов XAML, полученной из этих узлов. <xref:System.Xaml.XamlServices> API можно описать следующим образом: `Load` или `Parse` для поддержки пути загрузки XAML, `Save` для поддержки пути сохранения XAML, `Transform` — для предоставления метода объединения пути загрузки и пути сохранения. Можно использовать`Transform` для изменения одной схемы XAML на другую. В этом разделе собраны все классификации этих API и приведены различия между определенными перегрузками методов.  
+<xref:System.Xaml.XamlServices> — Это класс, предоставляемый службами XAML платформы .NET Framework, который может использоваться для сценариев XAML, которые не требуется отдельный доступ к потоку узлов XAML, или о системе типов XAML, получаемым от этих узлов. <xref:System.Xaml.XamlServices> API можно описать следующим образом: `Load` или `Parse` для поддержки пути загрузки XAML, `Save` для поддержки XAML путь, сохранения и `Transform` для предоставления метода объединения пути загрузки и сохранения пути. `Transform` можно использовать для изменения из одной схемы XAML, в другой. В этом разделе собраны все классификации этих API и приведены различия между определенными перегрузками методов.  
   
 <a name="load"></a>   
 ## <a name="load"></a>Load  
@@ -23,7 +23,7 @@ ms.locfileid: "58027129"
   
  <xref:System.Xaml.XamlServices.Load%28System.IO.Stream%29> используется в аналогичных сценариях. Эта перегрузка может быть полезна, если пользователю предоставляется возможность выбора файлов для загрузки, так как <xref:System.IO.Stream> часто представляет собой выходные данные других API <xref:System.IO> , которые могут получить доступ к файловой системе. Также можно получать доступ к источникам XAML посредством асинхронных загрузок или другими сетевыми способами, также предоставляющими потоки. (Загрузка из потока или выбранного пользователем источника может повлиять на безопасность. Дополнительные сведения см. в разделе [XAML Security Considerations](xaml-security-considerations.md).)  
   
- Перегрузки<xref:System.Xaml.XamlServices.Load%28System.IO.TextReader%29> и <xref:System.Xaml.XamlServices.Load%28System.Xml.XmlReader%29> опираются на средства чтения форматов из предыдущих версий .NET Framework. Для использования этих перегрузок нужно создать экземпляр средства чтения и использовать его API `Create` для загрузки XAML в соответствующей форме (текст или XML). Это не имеет значения, если вы уже переместили указатели записей в других средствах чтения или выполняли другие операции с ними. Логика пути загрузки из <xref:System.Xaml.XamlServices.Load%2A> всегда обрабатывает все входные данные XAML, начиная с корневого элемента. Возможны следующие сценарии использования этих перегрузок:  
+ <xref:System.Xaml.XamlServices.Load%28System.IO.TextReader%29> и <xref:System.Xaml.XamlServices.Load%28System.Xml.XmlReader%29> перегрузок, которые зависят от средства чтения форматов из предыдущих версий платформы .NET Framework. Для использования этих перегрузок нужно создать экземпляр средства чтения и использовать его API `Create` для загрузки XAML в соответствующей форме (текст или XML). Это не имеет значения, если вы уже переместили указатели записей в других средствах чтения или выполняли другие операции с ними. Логика пути загрузки из <xref:System.Xaml.XamlServices.Load%2A> всегда обрабатывает все входные данные XAML, начиная с корневого элемента. Возможны следующие сценарии использования этих перегрузок:  
   
 -   Рабочие области, где реализуются простые возможности редактирования XAML с помощью существующего текстового редактора, поддерживающего XML.  
   
@@ -43,10 +43,10 @@ ms.locfileid: "58027129"
   
 <a name="parse"></a>   
 ## <a name="parse"></a>Parse  
- <xref:System.Xaml.XamlServices.Parse%2A> и `Load` схожи, поскольку это путь загрузки API, который создает поток узлов XAML из входных данных XAML. Однако в этом случае входные данные XAML предоставляются непосредственно в виде строки, содержащей весь код XAML для загрузки. <xref:System.Xaml.XamlServices.Parse%2A> — упрощенный подход, который больше подходит для сценариев приложений, чем для сценариев платформ. Для получения дополнительной информации см. <xref:System.Xaml.XamlServices.Parse%2A>. <xref:System.Xaml.XamlServices.Parse%2A> представляет собой вызов <xref:System.Xaml.XamlServices.Load%28System.Xml.XmlReader%29> в оболочке, содержащий <xref:System.IO.StringReader> внутри.  
+ <xref:System.Xaml.XamlServices.Parse%2A> Подобно `Load` так как это путь загрузки API, который создает поток узлов XAML из входных данных XAML. Однако в этом случае входные данные XAML предоставляются непосредственно в виде строки, содержащей весь код XAML для загрузки. <xref:System.Xaml.XamlServices.Parse%2A> — упрощенный подход, который более подходит для сценариев приложений, чем для сценариев платформ. Дополнительные сведения см. в разделе <xref:System.Xaml.XamlServices.Parse%2A>. <xref:System.Xaml.XamlServices.Parse%2A> является просто оболочкой <xref:System.Xaml.XamlServices.Load%28System.Xml.XmlReader%29> вызов, который включает в себя <xref:System.IO.StringReader> внутренним образом.  
   
 <a name="save"></a>   
-## <a name="save"></a>Save  
+## <a name="save"></a>Сохранение  
  Различные перегрузки <xref:System.Xaml.XamlServices.Save%2A> реализуют путь сохранения. Все методы <xref:System.Xaml.XamlServices.Save%2A> принимают граф объекта на вход, а выходом является поток, файл или экземпляр <xref:System.Xml.XmlWriter>/<xref:System.IO.TextWriter> .  
   
  Входной объект должен быть корневым объектом какого-либо объектного представления. Это может быть единственный корневой элемент бизнес-объекта, корневой объект дерева объектов страницы в сценарии с пользовательским интерфейсом, рабочая область редактирования в средстве разработки или другие подходящие виды корневых объектов.  
@@ -57,11 +57,12 @@ ms.locfileid: "58027129"
   
 <a name="transform"></a>   
 ## <a name="transform"></a>Transform  
- <xref:System.Xaml.XamlServices.Transform%2A> преобразует XAML, связывая путь загрузки и путь сохранения в одну операцию. Для <xref:System.Xaml.XamlReader> и <xref:System.Xaml.XamlWriter>может использоваться другой контекст схемы или другая система резервных типов, что повлияет на преобразование полученного XAML-кода. Это хорошо подходит для операций широкого преобразования.  
+ <xref:System.Xaml.XamlServices.Transform%2A> Преобразует или преобразует XAML, связывая путь загрузки и сохранения пути в рамках одной операции. Для <xref:System.Xaml.XamlReader> и <xref:System.Xaml.XamlWriter>может использоваться другой контекст схемы или другая система резервных типов, что повлияет на преобразование полученного XAML-кода. Это хорошо подходит для операций широкого преобразования.  
   
  <xref:System.Xaml.XamlServices.Transform%2A>обычно не используется для операций, зависящих от проверки каждого узла в потоке узлов XAML, Вместо этого необходимо определить собственную серию операций с путями загрузки и сохранения и использовать собственную логику. В одном из путей используйте пару из средства чтения и средства записи XAML в собственном цикле узлов. Например, можно загрузить исходный XAML с помощью <xref:System.Xaml.XamlXmlReader> , а затем переходить в узлы при помощи последовательных вызовов <xref:System.Xaml.XamlXmlReader.Read%2A> . Работая на уровне потока узлов XAML, можно настраивать отдельные узлы (типы, члены, другие узлы) для применения преобразований или оставить узлы как есть. Затем можно передать узел дальше в соответствующий API `Write` <xref:System.Xaml.XamlObjectWriter> и записать объект. Для получения дополнительной информации см. [Understanding XAML Node Stream Structures and Concepts](understanding-xaml-node-stream-structures-and-concepts.md).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Xaml.XamlObjectWriter>
 - <xref:System.Xaml.XamlServices>
 - [Службы XAML](index.md)

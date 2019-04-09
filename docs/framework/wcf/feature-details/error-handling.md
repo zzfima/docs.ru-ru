@@ -2,12 +2,12 @@
 title: Обработка ошибок
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-ms.openlocfilehash: ddc3921fbb6b453db43ed3939134650395ade670
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
-ms.translationtype: MT
+ms.openlocfilehash: da2ae3db0ff0432a49fcbf6de674bfb730be1286
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261158"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136439"
 ---
 # <a name="error-handling"></a>Обработка ошибок
 ## <a name="error-handling-in-windows-communication-foundation"></a>Обработка ошибок в Windows Communication Foundation  
@@ -68,4 +68,5 @@ ms.locfileid: "56261158"
  Наличие ошибок подготовки к отправке при преобразовании типов можно проверить так же, как многие другие типы ошибок отправки - путем установки обработчика ошибки. Для обработки исключения уровня службы вызывается точка расширения IErrorHandler. Там можно выбрать, будет ли ответ отправлен обратно в вызывающий код, или будут выполнены какие-либо пользовательские задачи или действия с отчетами.  
   
 ## <a name="see-also"></a>См. также
-- [Базовое программирование для WCF](../basic-wcf-programming.md)
+
+- [Базовое программирование WCF](../basic-wcf-programming.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c8329832-bf66-4064-9034-bf39f153fc2d
-ms.openlocfilehash: 03b37dae72be0ffa589159b2aedc2ac16e35139e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 127b06b32e597f8c2ea7e2bfdb1caca850fb5e3b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583211"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194530"
 ---
 # <a name="accessing-services-using-a-client"></a>Обращение к службам с использованием клиента
 Клиентские приложения необходимо создать, настроить и использовать объекты клиента или каналов WCF для взаимодействия со службами. [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md) разделе представлен обзор объектов и шаги по созданию базовых объектов клиента и канала и их использованию.  
@@ -94,10 +94,11 @@ ms.locfileid: "54583211"
  Приложения, использующие неявный подход, вызывают инициализаторы интерфейса пользователя, но если пользователь приложения не сможет ответить в отведенный период времени привязки для отправки, то при возвращении пользовательского интерфейса создается исключение.  
   
 ## <a name="see-also"></a>См. также
+
 - [Дуплексные службы](../../../../docs/framework/wcf/feature-details/duplex-services.md)
-- [Практическое руководство. Доступ к службам с односторонним контрактом и контрактом типа запрос ответ](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
-- [Практическое руководство. Службы доступа с дуплексным контрактом](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
-- [Практическое руководство. Доступ к WSE 3.0 служба](../../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
+- [Практическое руководство. Доступ к службам с односторонним контрактом и контрактом типа "запрос — ответ"](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
+- [Практическое руководство. Доступ к службам с дуплексным контрактом](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [Практическое руководство. Доступ к службе WSE 3.0](../../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
 - [Практическое руководство. Использование ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
 - [Практическое руководство. Асинхронный вызов операций службы](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
 - [Клиентские приложения среднего уровня](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)

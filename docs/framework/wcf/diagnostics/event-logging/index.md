@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - event logging [WCF]
 ms.assetid: aac0530d-f44c-45a1-bada-e30e0677b41f
-ms.openlocfilehash: d8bc1f06308fba41f622307ff65d8fc3f9720a5a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2dd4f82e8a100074850b21d298e91dc5dc15c59d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653662"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175283"
 ---
 # <a name="event-logging-in-wcf"></a>Ведение журнала событий в WCF
 Windows Communication Foundation (WCF) отслеживает внутренние события в журнале событий Windows.  
@@ -48,5 +48,6 @@ Windows Communication Foundation (WCF) отслеживает внутренни
  При нажатии кнопки «подробнее» при просмотре события в средстве просмотра событий, средство просмотра событий может отправить информацию через Интернет. Дополнительные сведения см. в справке по средству "Просмотр событий".  
   
 ## <a name="see-also"></a>См. также
+
 - [Администрирование и диагностика](../../../../../docs/framework/wcf/diagnostics/index.md)
 - [Общие справочные сведения о событиях](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - documents [WPF], tables
 - tables [WPF]
 ms.assetid: 5e1105f4-8fc4-473a-ba55-88c8e71386e6
-ms.openlocfilehash: 4abb6368946f9dac5fdefd6ca44f3adeed55f78f
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: eb16f633f78e9d345d20c93847e2c22173267960
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410827"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161438"
 ---
 # <a name="table-overview"></a>Общие сведения о таблицах
 <xref:System.Windows.Documents.Table> представляет собой элемент уровня блока, который поддерживает представление на основе сетки содержимого документа. Гибкость этого элемента делает его очень полезным, но также и более сложным для понимания и правильного использования.  
@@ -35,7 +35,7 @@ ms.locfileid: "58410827"
   
 -   [Объединение строк или столбцов](#spanning_rows_or_columns)  
   
--   [Создание таблицы с помощью кода](#building_a_table_with_code)  
+-   [Построение таблицы с помощью кода](#building_a_table_with_code)  
   
 -   [Связанные разделы] 
   
@@ -176,6 +176,7 @@ ms.locfileid: "58410827"
  [!code-vb[TableSnippets#_TableAddFooterRow](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddfooterrow)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения о документах нефиксированного формата](flow-document-overview.md)
 - [Определение таблицы с помощью XAML](how-to-define-a-table-with-xaml.md)
 - [Документы в WPF](documents-in-wpf.md)

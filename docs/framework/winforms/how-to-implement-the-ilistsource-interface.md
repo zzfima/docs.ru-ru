@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], implementing
 - IListSource interface
 ms.assetid: 63ce27aa-2e23-4fbd-8228-0c1726f6c421
-ms.openlocfilehash: ee63d092eb14bd5c8ab928852e02d30e653baf48
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: bd4e554b7e4be51847496307b50be3084d0115d5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713180"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159787"
 ---
 # <a name="how-to-implement-the-ilistsource-interface"></a>Практическое руководство. Реализация интерфейса IListSource
 Реализовать <xref:System.ComponentModel.IListSource> интерфейс, чтобы создать связываемый класс, который не реализует <xref:System.Collections.IList> , но вместо этого предоставляет список из другого расположения.  
@@ -39,8 +39,9 @@ ms.locfileid: "57713180"
 -   ссылки на сборки System.Drawing и System.Windows.Forms.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ComponentModel.IListSource>
 - <xref:System.ComponentModel.ITypedList>
 - <xref:System.ComponentModel.BindingList%601>
 - <xref:System.ComponentModel.IBindingList>
-- [Привязка данных и Windows Forms](data-binding-and-windows-forms.md)
+- [Связывание данных и Windows Forms](data-binding-and-windows-forms.md)

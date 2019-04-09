@@ -9,23 +9,24 @@ helpviewer_keywords:
 - rendering support with Visual objects [WPF]
 - visual layer [WPF]
 ms.assetid: d82c89db-077f-4c3c-a4f8-310ebfbe0fe2
-ms.openlocfilehash: b49ba43a163db9e6e94b531aa99123dde9f09b4e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 599ef73e2e8c772559badb3a562a12f8311e9c60
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376862"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172072"
 ---
 # <a name="visual-layer-programming"></a>Программирование визуального слоя
-<xref:System.Windows.Media.Visual> Объект — это основное [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] объекта, Главная роль которого заключается в поддержке отрисовки. Элементы управления пользовательского интерфейса, такие как <xref:System.Windows.Controls.Button> и <xref:System.Windows.Controls.TextBox>, являются производными от <xref:System.Windows.Media.Visual> класса и использовать его для сохранения данных отрисовки.  
+Объект <xref:System.Windows.Media.Visual> — это основной объект [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], главная роль которого заключается в поддержке отрисовки. Элементы управления пользовательского интерфейса, такие как <xref:System.Windows.Controls.Button> и <xref:System.Windows.Controls.TextBox>, являются производными от класса <xref:System.Windows.Media.Visual> и используют его для сохранения данных отрисовки.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Проверка нажатия на визуальном уровне](hit-testing-in-the-visual-layer.md)  
+ [Проверка попадания на визуальном уровне](hit-testing-in-the-visual-layer.md)  
  [Использование объектов DrawingVisual](using-drawingvisual-objects.md)  
- [Учебник. По размещению визуальных объектов в приложении Win32](tutorial-hosting-visual-objects-in-a-win32-application.md)  
- [Разделы практического руководства](visual-layer-programming-how-to-topics.md)  
+ [Учебник. Размещение визуальных объектов в приложении Win32](tutorial-hosting-visual-objects-in-a-win32-application.md)  
+ [Практические руководства](visual-layer-programming-how-to-topics.md)  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.Media.VisualTreeHelper>
 - <xref:System.Windows.Media.DrawingVisual>

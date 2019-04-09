@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 64774fb5-7447-4296-ad3b-8a94346f99a1
-ms.openlocfilehash: d1f4c1c4a561c893b5846e6ae0b08b2d78c3589d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d75c9b9123b52b3e241bea1bbd1d302c406715e8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509601"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190384"
 ---
 # <a name="convert-a-type-to-a-generic-ienumerable"></a>Практическое руководство. Преобразование типа в универсальный интерфейс IEnumerable
 Для возвращения аргумента с типом универсальный <xref:System.Linq.Enumerable.AsEnumerable%2A> используется `IEnumerable`.  
@@ -24,4 +24,5 @@ ms.locfileid: "54509601"
  [!code-vb[DLinqQueryExamples#46](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#46)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Примеры запросов](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)

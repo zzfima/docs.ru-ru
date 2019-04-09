@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: a9ac7fcc3ea4da699111ac288a5786e9f9f8b572
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: 5d7e3788ee05c14cc24bf5084b4c3b94b9fe98bc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410165"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194816"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Общие сведения о приложениях браузера WPF XAML
 <a name="introduction"></a>
@@ -187,5 +187,6 @@ ms.locfileid: "58410165"
  Кроме того улучшенный параллелизм последовательности загрузки ClickOnce сокращает время запуска почти на десять процентов. После ClickOnce загрузит и проверит манифесты, запускается загрузка приложения и индикатор выполнения начинает обновляться.  
   
 ## <a name="see-also"></a>См. также
+
 - [Настройка Visual Studio для отладки приложений браузера XAML для вызова веб-службы](configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)
-- [Развертывание приложений WPF](deploying-a-wpf-application-wpf.md)
+- [Развертывание приложения WPF](deploying-a-wpf-application-wpf.md)

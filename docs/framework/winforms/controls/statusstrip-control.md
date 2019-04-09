@@ -5,15 +5,15 @@ helpviewer_keywords:
 - StatusStrip control [Windows Forms]
 - status bars
 ms.assetid: eb1e59da-0a48-4ce5-af7d-13b8e75af4b1
-ms.openlocfilehash: 42d695a521e1d320c8287dba141afd2aade710b9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e4146cf1897a2d83128a97fc3900aa7a10d59109
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708162"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159696"
 ---
 # <a name="statusstrip-control"></a>Элемент управления StatusStrip
-Элемент управления Windows Forms `StatusStrip` используется в формах в качестве области, обычно отображаемой в нижней части окна, в которой выводятся различные сведения о состоянии приложения. Элементы управления `StatusStrip` обычно имеют встроенные элементы управления `ToolStripStatusLabel`, отображающие текст или значки, которые показывают состояние, или <xref:System.Windows.Forms.ToolStripProgressBar>, который  отображает состояние завершения процесса графически.  
+Элемент управления Windows Forms `StatusStrip` используется в формах в качестве области, обычно отображаемой в нижней части окна, в которой выводятся различные сведения о состоянии приложения. `StatusStrip` элементы управления обычно имеют `ToolStripStatusLabel` в них элементы управления, отображающие текст или значки, показывающие состояние, или <xref:System.Windows.Forms.ToolStripProgressBar> , графически отображает состояние завершения процесса.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения об элементе управления StatusStrip](statusstrip-control-overview.md)  
@@ -32,4 +32,5 @@ ms.locfileid: "57708162"
  Справочная информация о классе и его членах.  
   
 ## <a name="see-also"></a>См. также
-- [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)
+
+- [Элементы управления для использования в формах Windows Forms](controls-to-use-on-windows-forms.md)

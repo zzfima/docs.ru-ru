@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. создать службу рабочего процесса с помощью действий обмена сообщениями
+title: Практическое руководство. Как создать службу рабочего процесса с помощью действий обмена сообщениями
 ms.date: 03/30/2017
 ms.assetid: 53d094e2-6901-4aa1-88b8-024b27ccf78b
-ms.openlocfilehash: 83e96a91348cd8f703801252109bd474df58a679
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: d40273fe637e673456453ba72bdf6da282505488
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466209"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192836"
 ---
-# <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Практическое руководство. создать службу рабочего процесса с помощью действий обмена сообщениями
+# <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Практическое руководство. Как создать службу рабочего процесса с помощью действий обмена сообщениями
 В этом разделе приведены сведения о том, как создать простую службу рабочего процесса с помощью действий обмена сообщениями. В нем рассматривается механизм создания службы рабочего процесса, когда служба состоит только из действий обмена сообщениями. В реальных службах рабочий процесс содержит множество других действий. Служба реализует одну операцию с именем Echo, которая принимает строку и возвращает строку вызывающему коду. Это первый из двух разделов. Следующий раздел [How To: Доступ к службе из рабочего процесса приложения](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) рассматривается процесс создания приложения рабочего процесса, способного обращаться к службе, созданной в этом разделе.  
   
 ### <a name="to-create-a-workflow-service-project"></a>Создание проекта службы рабочего процесса  
@@ -90,6 +90,7 @@ ms.locfileid: "58466209"
 4.  Перейдите к [как: Доступ к службе из рабочего процесса приложения](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) раздела, чтобы создать клиент рабочего процесса, вызывающего эту службу.  
   
 ## <a name="see-also"></a>См. также
-- [Службы рабочих процессов](../../../../docs/framework/wcf/feature-details/workflow-services.md)
+
+- [Службы рабочего процесса](../../../../docs/framework/wcf/feature-details/workflow-services.md)
 - [Общие сведения о размещении служб рабочих процессов](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)
 - [Действия обмена сообщениями](../../../../docs/framework/wcf/feature-details/messaging-activities.md)

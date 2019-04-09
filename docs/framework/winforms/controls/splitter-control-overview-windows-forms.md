@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Splitter control [Windows Forms], about Splitter control
 ms.assetid: e2b6ab83-dfdd-40ec-9762-850702c82dcb
-ms.openlocfilehash: 2e3e46c9d4cf118bb846e5d9efefeb0d57fea567
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0477f68aaf67d4b29c491052999ff7784e736669
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703203"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176414"
 ---
 # <a name="splitter-control-overview-windows-forms"></a>Общие сведения об элементе управления Splitter (Windows Forms)
 > [!IMPORTANT]
@@ -23,6 +23,7 @@ ms.locfileid: "57703203"
  Когда пользователь наводит указатель мыши на незакрепленный край элемента управления, для которого могут быть изменены при помощи разделителя, указатель примет вид, показывая, что может быть изменены размеры элемента управления. С элементом управления разделителем, пользователь может изменять размеры пристыкованного элемента управления, которая находится непосредственно перед его. Таким образом чтобы разрешить пользователю изменять размер закрепленного элемента управления во время выполнения, закрепить элемент управления, изменять размер на край контейнера и затем закрепите элемент управления разделителя к той же стороне контейнера.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.SplitContainer>
 - [Практическое руководство. Закрепление элементов управления в формах Windows Forms](how-to-dock-controls-on-windows-forms.md)
-- [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)
+- [Элементы управления для использования в формах Windows Forms](controls-to-use-on-windows-forms.md)

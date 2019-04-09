@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Web pages [Windows Forms], hosting in applications
 - Web pages [Windows Forms], Windows Forms controls
 ms.assetid: 12667861-5b5b-46bc-8fb5-675e25264c9f
-ms.openlocfilehash: 6607ec9754f708d2c1e5abfd61cd77013efec4e0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 34194bf707cd309768b00fd903d1f46aff7dd170
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720999"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174828"
 ---
 # <a name="webbrowser-control-windows-forms"></a>Общие сведения об элементе управления WebBrowser (Windows Forms)
 Windows Forms `WebBrowser` элемент управления содержит веб-страницы и предоставляет приложению возможности работы в Интернете.  
@@ -23,16 +23,16 @@ Windows Forms `WebBrowser` элемент управления содержит 
  [Безопасность элемента управления WebBrowser](webbrowser-security.md)  
  Описание вопросов безопасности, связанных с элементом управления.  
   
- [Практическое руководство. Перейдите на URL-адрес с элементом управления WebBrowser](how-to-navigate-to-a-url-with-the-webbrowser-control.md)  
+ [Практическое руководство. Переход по заданному URL с помощью элемента управления WebBrowser](how-to-navigate-to-a-url-with-the-webbrowser-control.md)  
  В этой статье демонстрируется использование элемента управления для перехода к определенному URL-АДРЕСУ.  
   
- [Практическое руководство. Печать с элементом управления WebBrowser](how-to-print-with-a-webbrowser-control.md)  
+ [Практическое руководство. Печать с использованием элемента управления WebBrowser](how-to-print-with-a-webbrowser-control.md)  
  Демонстрируется способ печати веб-страницы без его отображения.  
   
  [Практическое руководство. Добавление функциональности веб-браузера в приложения Windows Forms](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)  
  Описывает способ инициализации элемента управления для использования в качестве веб-браузер.  
   
- [Практическое руководство. Создание средства просмотра HTML-документ в приложении Windows Forms](how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)  
+ [Практическое руководство. Создание средства просмотра HTML-документов в приложении Windows Forms](how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)  
  Описывает процесс инициализации элемента управления для просмотра HTML.  
   
  [Практическое руководство. Реализация двунаправленного взаимодействия между кодом DHTML и клиентским кодом приложений](implement-two-way-com-between-dhtml-and-client.md)  
@@ -42,7 +42,7 @@ Windows Forms `WebBrowser` элемент управления содержит 
  Содержит разделы, описывающие способы управления или создания HTML-страниц, размещаемая <xref:System.Windows.Forms.WebBrowser> элемента управления.  
   
 ## <a name="reference"></a>Ссылка  
- Класс <xref:System.Windows.Forms.WebBrowser>  
+ <xref:System.Windows.Forms.WebBrowser> класс  
  Описание класса и всех его членов.  
   
  <xref:System.Windows.Forms.WebBrowserDocumentCompletedEventArgs>  
@@ -79,4 +79,5 @@ Windows Forms `WebBrowser` элемент управления содержит 
  Описывается это перечисление и все его значения.  
   
 ## <a name="see-also"></a>См. также
-- [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)
+
+- [Элементы управления для использования в формах Windows Forms](controls-to-use-on-windows-forms.md)

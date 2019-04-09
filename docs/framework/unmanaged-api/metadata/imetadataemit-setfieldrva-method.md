@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9a38de994575bf0191ff2ab5ce1c7b047540289f
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 4ebde1d506a120a99e1c637c660b45d698994f5a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57470592"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181679"
 ---
 # <a name="imetadataemitsetfieldrva-method"></a>Метод IMetaDataEmit::SetFieldRVA
 Задает значение глобальной переменной для относительного виртуального адреса поля, который ссылается указанный токен.  
@@ -53,5 +53,6 @@ HRESULT SetFieldRVA (
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

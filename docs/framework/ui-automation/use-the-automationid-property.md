@@ -9,12 +9,12 @@ helpviewer_keywords:
 - UI Automation, AutomationId property
 - properties, AutomationId
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
-ms.openlocfilehash: 88e703d6cee608676be541961614403cf34a53c7
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 1f487e9d686ab82adb40cdc31aad68390fbdff3f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674839"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173099"
 ---
 # <a name="use-the-automationid-property"></a>Использование свойства AutomationID
 > [!NOTE]
@@ -22,16 +22,16 @@ ms.locfileid: "57674839"
   
  В этом разделе содержатся сценарии и примеры кода, которые показывают, как и когда можно использовать <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> для поиска элемента в дереве [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .  
   
- <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> уникально идентифицирует элемент модели автоматизации пользовательского интерфейса среди элементов того же уровня. Дополнительные сведения об идентификаторах свойств, связанных с идентификацией элементов управления, см. в разделе [UI Automation Properties Overview](../../../docs/framework/ui-automation/ui-automation-properties-overview.md).  
+ <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> уникально идентифицирует элемент автоматизации пользовательского интерфейса из одноуровневых элементов. Дополнительные сведения об идентификаторах свойств, связанных с идентификацией элементов управления, см. в разделе [UI Automation Properties Overview](../../../docs/framework/ui-automation/ui-automation-properties-overview.md).  
   
 > [!NOTE]
->  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> не гарантирует уникальную идентификацию по всему дереву; обычно для его использования требуются сведения о контейнере и области. Например, приложение может содержать элемент управления меню с несколькими пунктами меню верхнего уровня, которые, в свою очередь, имеют несколько дочерних пунктов меню. Эти пункты меню второго уровня могут идентифицироваться по универсальной схеме, такой как "элемент1", "элемент2" и т. д., что допускает повторяющиеся идентификаторы дочерних элементов в разных пунктах меню верхнего уровня.  
+>  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> не гарантирует уникальную идентификацию по всему дереву; как правило, она должна контейнер и сведения об области, чтобы быть полезным. Например, приложение может содержать элемент управления меню с несколькими пунктами меню верхнего уровня, которые, в свою очередь, имеют несколько дочерних пунктов меню. Эти пункты меню второго уровня могут идентифицироваться по универсальной схеме, такой как "элемент1", "элемент2" и т. д., что допускает повторяющиеся идентификаторы дочерних элементов в разных пунктах меню верхнего уровня.  
   
 ## <a name="scenarios"></a>Сценарии  
  Были определены три основных сценария клиентского приложения модели автоматизации пользовательского интерфейса, в которых необходимо использовать <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> для получения точных и согласованных результатов при поиске элементов.  
   
 > [!NOTE]
->  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> поддерживается всеми элементами модели автоматизации пользовательского интерфейса в представлении элемента управления, за исключением окон приложений верхнего уровня, элементов модели автоматизации пользовательского интерфейса, производных от элементов управления [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] , не имеющих идентификатора или x:Uid, и элементов модели автоматизации пользовательского интерфейса, производных от элементов управления [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] , не имеющих идентификатора элемента управления.  
+>  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> поддерживается всеми элементами модели автоматизации пользовательского интерфейса в представлении элемента управления, за исключением окон приложений верхнего уровня, элементов автоматизации пользовательского интерфейса, производного от [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] элементов управления, у которых нет идентификатора или x: Uid и элементов автоматизации пользовательского интерфейса, производного от [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] элементов управления, отсутствует идентификатор элемента управления.  
   
 #### <a name="use-a-unique-and-discoverable-automationid-to-locate-a-specific-element-in-the-ui-automation-tree"></a>Для поиска определенного элемента в дереве модели автоматизации пользовательского интерфейса используйте уникальный и обнаруживаемый AutomationID.  
   
@@ -57,6 +57,7 @@ ms.locfileid: "57674839"
 -   В некоторых случаях несколько элементов в дереве модели автоматизации пользовательского интерфейса могут иметь одинаковые значения свойств AutomationID, поскольку AutomationID гарантированно уникален только среди элементов того же уровня. В этих случаях элементы можно однозначно идентифицировать на основе родителя и при необходимости прародителя. Например, разработчик может создать строку меню с несколькими пунктами меню, каждый из которых имеет несколько дочерних пунктов меню, где дочерние пункты идентифицируются с помощью последовательных идентификаторов AutomationID, например Item1, Item2 и т. д. Каждый пункт меню может затем быть однозначно идентифицирован по его идентификатору AutomationID вместе с AutomationID его родителя и при необходимости его прародителя.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>
 - [Общие сведения о дереве модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [Нахождение элемента модели автоматизации пользовательского интерфейса в зависимости от состояния свойства](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
+- [Нахождение Элемента Автоматизации Пользовательского Интерфейса в Зависимости от Состояния Свойства](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)

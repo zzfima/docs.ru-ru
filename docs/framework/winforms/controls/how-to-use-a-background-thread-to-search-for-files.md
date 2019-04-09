@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Используйте фоновый поток для поиска файлов
+title: Практическое руководство. Применение фонового потока для поиска файлов
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - threading [Windows Forms], custom controls
 - custom controls [Windows Forms], samples
 ms.assetid: 7fe3956f-5b8f-4f78-8aae-c9eb0b28f13a
-ms.openlocfilehash: 5bf345e4195c64d3cf7fab7bf9a826dc99d47463
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 806cb2b69d83fae2f73583111d0094c7e86e3c61
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723170"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157797"
 ---
-# <a name="how-to-use-a-background-thread-to-search-for-files"></a>Практическое руководство. Используйте фоновый поток для поиска файлов
+# <a name="how-to-use-a-background-thread-to-search-for-files"></a>Практическое руководство. Применение фонового потока для поиска файлов
 <xref:System.ComponentModel.BackgroundWorker> Компонент заменяет и расширяет его функциональные возможности <xref:System.Threading> пространства имен, однако <xref:System.Threading> пространство имен сохраняется для обратной совместимости и использования в будущем, если выбран. Дополнительные сведения см. в разделе [Общие сведения о компоненте BackgroundWorker](backgroundworker-component-overview.md).  
   
  Windows Forms использует однопотоковое подразделение (STA) модели так, как Windows Forms основан на Win32 для windows, которые являются по своей природе поддержкой потоков. Модель STA подразумевает окна могут создаваться в любом потоке, но не может переключать созданные потоки, что все вызовы функций к нему должно находиться в своем потоке создания. За пределами Windows Forms классы в .NET Framework используют бесплатный потоковой модели. Сведения о работе с потоками в платформе .NET Framework, см. в разделе [работа с потоками](../../../standard/threading/index.md).  
@@ -763,6 +763,7 @@ namespace SampleUsage
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ComponentModel.BackgroundWorker>
 - [Разработка пользовательских элементов управления Windows Forms в .NET Framework](developing-custom-windows-forms-controls.md)
 - [Обзор асинхронной модели, основанной на событиях](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

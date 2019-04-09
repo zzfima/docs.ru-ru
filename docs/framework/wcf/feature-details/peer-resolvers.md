@@ -2,12 +2,12 @@
 title: Одноранговые распознаватели
 ms.date: 03/30/2017
 ms.assetid: d86d12a1-7358-450f-9727-b6afb95adb9c
-ms.openlocfilehash: f7d7b055312fe82bd628f8b07304dc9bb188fffb
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: de19e08c1c001076c56e26020584d17079f1a45f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333382"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151623"
 ---
 # <a name="peer-resolvers"></a>Одноранговые распознаватели
 Чтобы подключиться к сетке, одноранговому узлу требуются IP-адреса других узлов. Получение IP-адресов обычно происходит в результате обращения к службе арбитра, которая принимает идентификатор сетки и возвращает список адресов, соответствующих узлам, зарегистрированным для конкретного идентификатора сетки. Арбитр сохраняет список зарегистрированных адресов, которые он создает при регистрации в службе всех узлов сетки.  
@@ -35,9 +35,10 @@ ms.locfileid: "56333382"
  Показывает, как реализовать пользовательский Сопоставитель, см. в разделе [одноранговых каналов пользовательского распознавателя одноранговых узлов](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751466(v=vs.90)).  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Внутри CustomPeerResolverService: Регистрация клиентов](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md)  
+ [Подробная информация о CustomPeerResolverService: регистрация клиентов](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md)  
   
 ## <a name="see-also"></a>См. также
+
 - [Основные понятия одноранговых каналов](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)
 - [Безопасность одноранговых каналов](../../../../docs/framework/wcf/feature-details/peer-channel-security.md)
 - [Создание приложения одноранговых каналов](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

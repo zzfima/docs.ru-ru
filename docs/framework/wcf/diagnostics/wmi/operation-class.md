@@ -1,15 +1,15 @@
 ---
-title: Класс Operation
+title: Класс операции
 ms.date: 03/30/2017
 ms.assetid: b19d1496-ef06-4d0c-b2ae-e728ec00cca0
-ms.openlocfilehash: 9453d67854bb8439891661b07e3ab3aa373e23eb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9696a7f026e54afacb5ccbfa8703a2ba617a9f3d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668305"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165084"
 ---
-# <a name="operation-class"></a>Класс Operation
+# <a name="operation-class"></a>Класс операции
 Операция  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -129,4 +129,5 @@ class Operation
 |Пространство имен|Определено в root\ServiceModel.|  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.Description.OperationDescription>

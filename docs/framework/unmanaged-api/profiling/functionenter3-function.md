@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9f2073ed1ba2ed8644d825d24f36166e4f2ed3b4
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a731df84af0991f80c560db417df0ffe053a5e2b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57478379"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200783"
 ---
 # <a name="functionenter3-function"></a>Функция FunctionEnter3
 Уведомляет профилировщик, что элемент управления передается в функцию.  
@@ -57,6 +57,7 @@ void __stdcall FunctionEnter3(FunctionOrRemappedID functionOrRemappedID);
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [FunctionLeave3](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md)
 - [FunctionTailcall3](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md)
 - [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 027c7b0b9ee7902c81b620549b335cd123d8b277
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: aa341c726ba84dc1d12b6c5628253a100d65a719
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57491377"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167106"
 ---
 # <a name="icordebugmoduleenumnext-method"></a>Метод ICorDebugModuleEnum::Next
 Возвращает число экземпляров «ICorDebugModule», определяемое `celt` из перечисления, начиная с текущей позиции.  
@@ -58,4 +58,3 @@ HRESULT Next (
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
-

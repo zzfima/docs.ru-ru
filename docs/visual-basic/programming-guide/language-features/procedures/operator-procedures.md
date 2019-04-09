@@ -11,12 +11,12 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-ms.openlocfilehash: e6e65b1a75d7a80caff3e7cbacdb9dd706e46cdf
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 80c9a77494be95365899c6a25435fcfc5d2a7293
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58815574"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175023"
 ---
 # <a name="operator-procedures-visual-basic"></a>Процедуры операторов (Visual Basic)
 Процедура оператора — это последовательность операторов Visual Basic, которые определяют поведение стандартного оператора (такие как `*`, `<>`, или `And`) для класса или структуры, которые вы определили. Это также называется *перегрузка операторов*.  
@@ -44,7 +44,7 @@ ms.locfileid: "58815574"
 ## <a name="declaration-syntax"></a>Синтаксис объявления  
  Ниже приведен синтаксис объявления процедуры оператора:  
   
- `Public Shared`   `[Widening | Narrowing]`   `Operator`  *символ_оператора* `(` *операнд1*`[,`*операнд2* `]) As` *тип данных*  
+ `Public Shared`   `[Widening | Narrowing]`   `Operator`  *символ_оператора* `(` *операнд1*`[,`*операнд2* `]) As` *тип данных*   
   
  `' Statements of the operator procedure.`  
   
@@ -68,7 +68,7 @@ ms.locfileid: "58815574"
   
  `Dim testStruct As`  *Имя структуры*  
   
- `Dim testNewStruct As`  *Имя структуры*`= testStruct`*символ_оператора*  `10`  
+ `Dim testNewStruct As`  *Имя структуры*`= testStruct`*символ_оператора*   `10`  
   
 ### <a name="illustration-of-declaration-and-call"></a>Пример объявления и вызова  
  Следующая структура сохраняет значение 128-битового знакового целого числа в качестве составных частей старшие и младшие. Он определяет `+` оператора для добавления двух `veryLong` значения и сформировать результирующий `veryLong` значение.  
@@ -78,8 +78,7 @@ ms.locfileid: "58815574"
  В следующем примере показано типичный вызов `+` оператора, определенного в `veryLong`.  
   
  [!code-vb[VbVbcnProcedures#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#24)]  
-  
-  
+
 ## <a name="see-also"></a>См. также
 
 - [Процедуры](./index.md)
@@ -87,8 +86,8 @@ ms.locfileid: "58815574"
 - [Процедуры функций](./function-procedures.md)
 - [Процедуры свойств](./property-procedures.md)
 - [Параметры и аргументы процедуры](./procedure-parameters-and-arguments.md)
-- [Оператор Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Практическое руководство. Определение оператора](./how-to-define-an-operator.md)
 - [Практическое руководство. Определение оператора преобразования](./how-to-define-a-conversion-operator.md)
 - [Практическое руководство. Вызов процедуры оператора](./how-to-call-an-operator-procedure.md)
-- [Практическое руководство. Используйте класс, в котором определяются операторы](./how-to-use-a-class-that-defines-operators.md)
+- [Практическое руководство. Использование класса, в котором определяются операторы](./how-to-use-a-class-that-defines-operators.md)

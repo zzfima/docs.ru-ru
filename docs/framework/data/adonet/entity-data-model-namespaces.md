@@ -1,15 +1,15 @@
 ---
-title: Модель EDM. Пространства имен
+title: 'EDM (модель данных с использованием сущностей): Пространства имен'
 ms.date: 03/30/2017
 ms.assetid: 98ab4226-bb9f-44e7-af46-61a9b1a4e47c
-ms.openlocfilehash: aa11902ece5197905c20e7e572562643c57f51c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7772172512d35b9ce9cf07a992c1c5f0ecd8c55b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590111"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180581"
 ---
-# <a name="entity-data-model-namespaces"></a>Модель EDM. Пространства имен
+# <a name="entity-data-model-namespaces"></a>EDM (модель данных с использованием сущностей): Пространства имен
 Пространство имен в Entity Data Model (EDM) — это абстрактный контейнер для [типы сущностей](../../../../docs/framework/data/adonet/entity-type.md), [сложные типы](../../../../docs/framework/data/adonet/complex-type.md), и [ассоциации](../../../../docs/framework/data/adonet/association-type.md). Пространства имен в модели EDM схожи с пространствами имен в языке программирования: они обеспечивают контекст для объектов, которые они содержат, а также являются способом устранения неопределенности в отношении объектов, которые имеют одно и то же имя (но содержатся в разных пространствах имен).  
   
 ## <a name="example"></a>Пример  
@@ -18,5 +18,6 @@ ms.locfileid: "54590111"
  [!code-xml[EDM_Example_Model#ImportedNamespace](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books6.edmx#importednamespace)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Основные понятия модели EDM](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [Сущностная модель данных](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [EDM (модель данных с использованием сущностей)](../../../../docs/framework/data/adonet/entity-data-model.md)

@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Использование проверки орфографии при помощи контекстного меню
+title: Практическое руководство. Использование проверки орфографии с помощью контекстного меню
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - reenabling spell checking in a text box [WPF]
 - spell checking with a context menu [WPF]
 ms.assetid: 61f69a20-2ff3-4056-9060-e32f4483ec5e
-ms.openlocfilehash: 38d41aa6710fd13ffd2a5d13a6900a1a05303f35
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 72b24c386eb99140c9c2729688994b81f92e1a6f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377811"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192983"
 ---
-# <a name="how-to-use-spell-checking-with-a-context-menu"></a>Практическое руководство. Использование проверки орфографии при помощи контекстного меню
+# <a name="how-to-use-spell-checking-with-a-context-menu"></a>Практическое руководство. Использование проверки орфографии с помощью контекстного меню
 По умолчанию при включении орфографии в элементе управления редактирования, такие как <xref:System.Windows.Controls.TextBox> или <xref:System.Windows.Controls.RichTextBox>, можно выбрать варианты правописания в контекстном меню. Например, если пользователи неправильно написанное слово, щелкните правой кнопкой мыши, они получают набор вариантов правописания или возможность **пропустить все**. Тем не менее при переопределении отобразится контекстное меню по умолчанию с собственного пользовательского контекстного меню, эта функция теряется, и вам нужно написать код, чтобы включить средство проверки орфографии в контекстном меню. В следующем примере показано, как включить эту функцию для <xref:System.Windows.Controls.TextBox>.  
   
 ## <a name="example"></a>Пример  
@@ -39,6 +39,7 @@ ms.locfileid: "57377811"
  `spellingError = myRichTextBox.GetSpellingError(myRichTextBox.CaretPosition);`  
   
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения о TextBox](textbox-overview.md)
 - [Общие сведения о RichTextBox](richtextbox-overview.md)
 - [Включение проверки орфографии в элементе управления редактирования текста](how-to-enable-spell-checking-in-a-text-editing-control.md)

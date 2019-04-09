@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Создание заданий печати стандартный Windows Forms
+title: Практическое руководство. Создание стандартных задания печати в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - printing [Windows Forms], creating print jobs
 - printing [Visual Basic], in Windows applications
 ms.assetid: 03342b90-9cfe-40b2-838b-b479a13c5dea
-ms.openlocfilehash: b0568472dadceb46257a8d35211034a718aef74c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 7ccebf128d533a0e0cf0a17e5702807371e1bea7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705233"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170980"
 ---
-# <a name="how-to-create-standard-windows-forms-print-jobs"></a>Практическое руководство. Создание заданий печати стандартный Windows Forms
+# <a name="how-to-create-standard-windows-forms-print-jobs"></a>Практическое руководство. Создание стандартных задания печати в Windows Forms
 Печать в Windows Forms лежит <xref:System.Drawing.Printing.PrintDocument> компонент — в частности, <xref:System.Drawing.Printing.PrintDocument.PrintPage> событий. Путем написания кода для обработки <xref:System.Drawing.Printing.PrintDocument.PrintPage> событий, можно указать, что нужно вывести и способ печати.  
   
 ### <a name="to-create-a-print-job"></a>Чтобы создать задание на печать  
@@ -77,5 +77,6 @@ ms.locfileid: "57705233"
      Дополнительные сведения об особенностях Windows Forms задания печати, включая создание задание на печать программным способом, см. в разделе <xref:System.Drawing.Printing.PrintPageEventArgs>.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Drawing.Printing.PrintDocument>
 - [Поддержка печати в Windows Forms](windows-forms-print-support.md)

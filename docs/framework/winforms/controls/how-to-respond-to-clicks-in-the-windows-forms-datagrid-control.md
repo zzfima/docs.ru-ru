@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Обработка щелчка мыши в элементе управления DataGrid Windows Forms
+title: Практическое руководство. Обработка щелчка мыши элементом управления DataGrid в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - examples [Windows Forms], DataGrid control
 - DataGrid control [Windows Forms], click events
 ms.assetid: a0aa204b-8351-4d82-9933-ee21a5c9e409
-ms.openlocfilehash: 7310557bad7e845c4b193debdefba68db2e1d116
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 55ca52390cd6c5d5af4a764ea4438d8ce935dfbb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708219"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191904"
 ---
-# <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a>Практическое руководство. Обработка щелчка мыши в элементе управления DataGrid Windows Forms
+# <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a>Практическое руководство. Обработка щелчка мыши элементом управления DataGrid в Windows Forms
 > [!NOTE]
 >  Элемент управления <xref:System.Windows.Forms.DataGridView> заменяет элемент управления <xref:System.Windows.Forms.DataGrid> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.DataGrid> можно сохранить для обратной совместимости и использования в будущем. Дополнительные сведения см. в разделе [Различия элементов управления DataGridView и DataGrid в Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
@@ -141,5 +141,6 @@ ms.locfileid: "57708219"
     ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Элемент управления DataGrid](datagrid-control-windows-forms.md)
-- [Практическое руководство. Изменение данных, отображаемых в элементе управления DataGrid Windows Forms во время выполнения](change-displayed-data-at-run-time-wf-datagrid-control.md)
+- [Практическое руководство. Изменение данных, отображаемых во время выполнения, в элементе управления DataGrid в Windows Forms](change-displayed-data-at-run-time-wf-datagrid-control.md)

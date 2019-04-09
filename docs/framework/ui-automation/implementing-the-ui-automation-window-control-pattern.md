@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Window control pattern
 - Window control pattern
 ms.assetid: a28cb286-296e-4a62-b4cb-55ad636ebccc
-ms.openlocfilehash: eca3b597f556115adb34adc6507151e0bd03a53c
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 4f11f82b628ac020cbda70d65adf7813291c60a6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677733"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168042"
 ---
 # <a name="implementing-the-ui-automation-window-control-pattern"></a>Реализация шаблона элемента управления Window автоматизированного пользовательского интерфейса
 > [!NOTE]
@@ -41,18 +41,18 @@ ms.locfileid: "57677733"
   
 |Обязательный член|Тип члена|Примечания|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|Свойство.|Нет|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|Свойство.|Нет|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|Свойство.|Нет|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|Свойство.|Нет|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|Свойство.|Нет|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|Свойство.|Нет|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|Свойство|Нет|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|Свойство|Нет|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|Свойство|Нет|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|Свойство|Нет|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|Свойство|Нет|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|Свойство|Нет|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|Метод|Нет|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|Метод|Нет|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|Метод|Нет|  
 |<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|событие|Нет|  
 |<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|событие|Нет|  
-|<xref:System.Windows.Automation.WindowInteractionState>|событие|Не гарантируется, что будет <xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
+|<xref:System.Windows.Automation.WindowInteractionState>|событие|Не гарантируется <xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Исключения  
@@ -64,8 +64,9 @@ ms.locfileid: "57677733"
 |<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A><br /><br /> — Если параметр не является допустимым числом.|  
   
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения о шаблонах элементов управления модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [Поддержка шаблонов элементов управления в поставщике автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
+- [Поддержка шаблонов элементов управления в поставщике модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
 - [Шаблоны элементов управления модели автоматизации пользовательского интерфейса для клиентов](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
 - [Общие сведения о дереве модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
 - [Использование кэширования в модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

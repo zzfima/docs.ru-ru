@@ -15,12 +15,12 @@ helpviewer_keywords:
 - shapes [Windows Forms], drawing
 - forms [Windows Forms], drawing ellipses
 ms.assetid: 781db806-950d-4c5b-b022-493f7fd0c4a8
-ms.openlocfilehash: 42316cd0d55b5154b21b4462157e044b30674ebd
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2e7be3f2c4c710bb24568dd2e70f6f5cc4706c63
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716300"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171013"
 ---
 # <a name="how-to-draw-a-filled-ellipse-on-a-windows-form"></a>Практическое руководство. Рисование заполненного эллипса в Windows Forms
 В этом примере рисование заполненного эллипса в форме.  
@@ -37,6 +37,7 @@ ms.locfileid: "57716300"
  Следует всегда вызывать <xref:System.IDisposable.Dispose%2A> на любые объекты, которые потребляют системные ресурсы, такие как <xref:System.Drawing.Brush> и <xref:System.Drawing.Graphics> объектов.  
   
 ## <a name="see-also"></a>См. также
+
 - [Объекты Graphics и Drawing в Windows Forms](graphics-and-drawing-in-windows-forms.md)
 - [Приступая к программированию графики](getting-started-with-graphics-programming.md)
 - [Альфа-смешение цвета для линий и заливок](alpha-blending-lines-and-fills.md)

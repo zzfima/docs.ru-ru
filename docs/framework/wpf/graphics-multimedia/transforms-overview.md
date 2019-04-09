@@ -12,17 +12,16 @@ helpviewer_keywords:
 - Transforms [WPF], about Transforms
 - FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
-ms.openlocfilehash: e3169a34f676d65a3af50bfc9177095c9996c1a2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6f7cbd91be83c96b25248f87ddc377159ba39b64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355653"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162208"
 ---
 # <a name="transforms-overview"></a>Общие сведения о классах Transform
 В этом разделе описывается использование [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> классы для поворота, масштабирования, сдвига и наклона <xref:System.Windows.FrameworkElement> объектов.  
-  
-  
+
 <a name="whatIsATransformSection"></a>   
 ## <a name="what-is-a-transform"></a>Что такое преобразование?  
  Объект <xref:System.Windows.Media.Transform> определяет способ сопоставления или преобразования точек из одного пространства координат в другом пространстве координат. Это сопоставление описывается с помощью матрицы преобразования <xref:System.Windows.Media.Matrix>, который является коллекцией из трех строк и трех столбцов со <xref:System.Double> значения.  
@@ -150,7 +149,8 @@ ms.locfileid: "57355653"
  Так как он наследует от <xref:System.Windows.Freezable> класс, <xref:System.Windows.Media.Transform> предоставляет ряд специальных возможностей: <xref:System.Windows.Media.Transform> объекты могут быть объявлены как [ресурсы](../advanced/xaml-resources.md), общие для нескольких объектов, делать доступными только для чтения с целью повышения производительности, клонировать и делать потокобезопасными. Дополнительные сведения о различных функциях, предоставляемых <xref:System.Windows.Freezable> объектов, см. в разделе [Freezable Общие сведения об объектах](../advanced/freezable-objects-overview.md).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.Matrix>
-- [Разделы практического руководства](transformations-how-to-topics.md)
+- [Практические руководства](transformations-how-to-topics.md)
 - [Пример двумерных преобразований](https://go.microsoft.com/fwlink/?LinkID=158252)

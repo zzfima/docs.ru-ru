@@ -5,12 +5,12 @@ helpviewer_keywords:
 - accumulating animation values across repeating cycles [WPF]
 - animation [WPF], accumulating values across repeating cycles
 ms.assetid: 548df369-c7cc-4dab-b569-08b95ced2e7e
-ms.openlocfilehash: e38e1601e2f4eeab2b53918924bc21e05163d948
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4b739883322751e2df86e13bfd07249abdb10a08
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357265"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146020"
 ---
 # <a name="how-to-accumulate-animation-values-during-repeat-cycles"></a>Практическое руководство. Накапливание значений анимации в повторяющихся циклах
 В этом примере показано, как использовать <xref:System.Windows.Media.Animation.DoubleAnimation.IsCumulative%2A> свойство к накоплению значений анимации в повторяющихся циклах.  
@@ -33,8 +33,9 @@ ms.locfileid: "57357265"
  [!code-xaml[timingbehaviors_snip#IsCumulativeWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/IsCumulativeExample.xaml#iscumulativewholepage)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Добавление выходного значения анимации к начальному значению анимации](how-to-add-an-animation-output-value-to-an-animation-starting-value.md)
 - [Повторение анимации](how-to-repeat-an-animation.md)
 - [Общие сведения об эффектах анимации](animation-overview.md)
 - [Общие сведения об анимации по ключевым кадрам](key-frame-animations-overview.md)
-- [Разделы практического руководства](animation-and-timing-how-to-topics.md)
+- [Практические руководства](animation-and-timing-how-to-topics.md)

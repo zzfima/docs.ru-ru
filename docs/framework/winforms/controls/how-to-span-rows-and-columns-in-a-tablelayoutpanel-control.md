@@ -10,12 +10,12 @@ helpviewer_keywords:
 - rows [Windows Forms], spanning
 - cells [Windows Forms], merging
 ms.assetid: a8a2fdd3-a848-48b0-a4cd-4e85ebded87e
-ms.openlocfilehash: e4fc00c3966d44ba36a0c59b37ae2fa1cd431014
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 2b2a46bf53dd6ec9bc93a74cca37dffaaaf79751
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703040"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193139"
 ---
 # <a name="how-to-span-rows-and-columns-in-a-tablelayoutpanel-control"></a>Практическое руководство. Объединение строк и столбцов в элементе управления TableLayoutPanel
 Элементы управления в <xref:System.Windows.Forms.TableLayoutPanel> элемент управления может охватывать соседних строк и столбцов.  
@@ -36,4 +36,5 @@ ms.locfileid: "57703040"
 5.  Задайте <xref:System.Windows.Forms.Button> элемента управления **ColumnSpan** свойства **1**. Обратите внимание, что <xref:System.Windows.Forms.Button> управления перемещается в первый столбец, но охватывает первую и вторую строку.  
   
 ## <a name="see-also"></a>См. также
+
 - [Элемент управления TableLayoutPanel](tablelayoutpanel-control-windows-forms.md)

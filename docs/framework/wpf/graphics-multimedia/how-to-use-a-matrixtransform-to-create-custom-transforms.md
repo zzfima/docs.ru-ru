@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - graphics [WPF], custom Transforms
 ms.assetid: 919381ca-989f-47cf-86b4-1094060236e4
-ms.openlocfilehash: 179c7986b6a7021f4e1245aef01eb555108ebf4f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: aeccb961db539d4cc6dea75fb487fba06e59d6de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358864"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182316"
 ---
 # <a name="how-to-use-a-matrixtransform-to-create-custom-transforms"></a>Практическое руководство. Использование MatrixTransform для создания пользовательских преобразований
 В этом примере показано, как использовать <xref:System.Windows.Media.MatrixTransform> для переноса (перемещения) положение, растяжения и отклонение по <xref:System.Windows.Controls.Button>.  
@@ -21,8 +21,9 @@ ms.locfileid: "57358864"
  [!code-xaml[Transforms_snip#MatrixTransform](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/MatrixTransformExample.xaml#matrixtransform)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Media.MatrixTransform>
 - <xref:System.Windows.Media.Transform>
 - [Общие сведения о классах Transform](transforms-overview.md)
-- [Разделы практического руководства](transformations-how-to-topics.md)
+- [Практические руководства](transformations-how-to-topics.md)
 - [Обзор фигур и базовых средств рисования в приложении WPF](shapes-and-basic-drawing-in-wpf-overview.md)

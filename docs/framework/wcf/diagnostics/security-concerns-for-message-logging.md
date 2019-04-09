@@ -2,12 +2,12 @@
 title: Проблемы безопасности при ведении журналов сообщений
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: 0bee1543a6c29dc34abcb2af08ee520923766175
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 372449c816f32ee30b89bf4ba2e46f82c56b3228
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732002"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170668"
 ---
 # <a name="security-concerns-for-message-logging"></a>Проблемы безопасности при ведении журналов сообщений
 В этом разделе описываются способы защиты конфиденциальных данных от раскрытия в журналах сообщений, а также в событиях, формируемых посредством ведения журнала сообщений.  
@@ -110,5 +110,6 @@ ms.locfileid: "54732002"
  Эти события можно просмотреть с помощью средства просмотра событий, входящего в состав Windows. Дополнительные сведения об этом см. в разделе [ведение журнала событий](../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Ведение журналов сообщений](../../../../docs/framework/wcf/diagnostics/message-logging.md)
 - [Проблемы безопасности и полезные советы при трассировке](../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)

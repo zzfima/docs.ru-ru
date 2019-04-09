@@ -9,18 +9,16 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 9b5ce5c0-e204-4320-a7a8-0b2210d62f88
-ms.openlocfilehash: 3589ba1d13c4ec57cfcec8c52b61556344e8def2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 51ff0317172d545c746d35808d7c672e9586eeae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368341"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144031"
 ---
 # <a name="drawing-objects-overview"></a>Обзор объектов Drawing
 В данном разделе представлены <xref:System.Windows.Media.Drawing> объектов и описывает их использование для эффективного рисования фигур, точечных рисунков, текста и мультимедиа. Используйте <xref:System.Windows.Media.Drawing> объектов при создании коллекции картинок, рисовании с помощью <xref:System.Windows.Media.DrawingBrush>, или использовать <xref:System.Windows.Media.Visual> объектов.  
-  
- 
-  
+
 <a name="whatisadrawingsection"></a>   
 ## <a name="what-is-a-drawing-object"></a>Что такое объект-рисунок?  
  Объект <xref:System.Windows.Media.Drawing> объект описывает отображаемое содержимое, например фигуру, растровое изображение, видео или строку текста. Различные типы рисунков описывают различные типы содержимого. Ниже приведен список различных типов объектов-рисунков.  
@@ -178,7 +176,7 @@ ImageDrawing размером 100 на 100
   
  В следующей таблице описаны свойства, можно использовать для управления <xref:System.Windows.Media.DrawingGroup> содержимое объекта.  
   
-|Свойство.|Описание:|Рисунки|  
+|Свойство|Описание|Рисунки|  
 |--------------|-----------------|------------------|  
 |<xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>|Изменяет прозрачность выбранных частей <xref:System.Windows.Media.DrawingGroup> содержимое. Пример см. в статье [Практическое руководство. Управление прозрачностью рисунка](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms748242(v=vs.90)).|![DrawingGroup с маской непрозрачности ](./media/graphicsmm-opmask.png "graphicsmm_opmask")|  
 |<xref:System.Windows.Media.DrawingGroup.Opacity%2A>|Однородно изменяет прозрачность <xref:System.Windows.Media.DrawingGroup> содержимое. Это свойство используется, чтобы сделать <xref:System.Windows.Media.Drawing> прозрачным или полупрозрачным. Пример см. в статье [Практическое руководство. Применение маски непрозрачности к рисунку](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms753195(v=vs.90)).|![DrawingGroups с различными параметрами прозрачности ](./media/graphicsmm-opacity.png "graphicsmm_opacity")|  
@@ -223,23 +221,24 @@ GeometryDrawing с DrawingBrush
   
  Несмотря на то что <xref:System.Windows.Media.DrawingContext> методы рисования выглядеть методы рисования <xref:System.Drawing.Graphics?displayProperty=nameWithType> типа, они фактически сильно отличаются. <xref:System.Windows.Media.DrawingContext> — используется с графической системой сохраненного режима, а <xref:System.Drawing.Graphics?displayProperty=nameWithType> тип используется с графической системой непосредственного режима. При использовании <xref:System.Windows.Media.DrawingContext> команд рисования объекта, фактически сохраняется набор инструкций отрисовки (хотя фактический механизм сохранения зависит от типа объекта, предоставляющего <xref:System.Windows.Media.DrawingContext>), будет использоваться позже по графику системы; не выполняется рисование на экране в режиме реального времени. Дополнительные сведения о том, как работает графическая система Windows Presentation Foundation (WPF), см. в разделе [Обзор отрисовки графики WPF](wpf-graphics-rendering-overview.md).  
   
- Вы никогда не непосредственно создать экземпляр <xref:System.Windows.Media.DrawingContext>; тем не менее, можно получить контекст рисования с помощью определенных методов, таких как <xref:System.Windows.Media.DrawingGroup.Open%2A?displayProperty=nameWithType> и <xref:System.Windows.Media.DrawingVisual.RenderOpen%2A?displayProperty=nameWithType>.  
+ Вы никогда непосредственно не создаете экземпляр <xref:System.Windows.Media.DrawingContext>, однако можете получить контекст рисования с помощью определенных методов, например <xref:System.Windows.Media.DrawingGroup.Open%2A?displayProperty=nameWithType> и <xref:System.Windows.Media.DrawingVisual.RenderOpen%2A?displayProperty=nameWithType>.  
   
 <a name="enumeratevisualcontents"></a>   
 ## <a name="enumerate-the-contents-of-a-visual"></a>Перечисление содержимого визуального элемента  
- Наряду с другими <xref:System.Windows.Media.Drawing> объекты также предоставляют объектную модель для перечисления содержимого <xref:System.Windows.Media.Visual>.  
+ Наряду с другими своими возможностями, объекты <xref:System.Windows.Media.Drawing> также предоставляют объектную модель для перечисления содержимого <xref:System.Windows.Media.Visual>.  
   
- В следующем примере используется <xref:System.Windows.Media.VisualTreeHelper.GetDrawing%2A> метод для извлечения <xref:System.Windows.Media.DrawingGroup> значение <xref:System.Windows.Media.Visual> и для его перечисления.  
+ В следующем примере метод <xref:System.Windows.Media.VisualTreeHelper.GetDrawing%2A> используется для извлечения значения <xref:System.Windows.Media.DrawingGroup> из <xref:System.Windows.Media.Visual> и перечисления содержимого группы.  
   
  [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMRetrieveDrawings](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/EnumerateDrawingsExample.xaml.cs#graphicsmmretrievedrawings)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Media.Drawing>
 - <xref:System.Windows.Media.DrawingGroup>
 - [Двумерная графика и изображения](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Заполнение с использованием изображений, рисунков и визуальных элементов](painting-with-images-drawings-and-visuals.md)
+- [Рисование с помощью объектов Image, Drawing и Visual](painting-with-images-drawings-and-visuals.md)
 - [Общие сведения о классе Geometry](geometry-overview.md)
 - [Обзор фигур и базовых средств рисования в приложении WPF](shapes-and-basic-drawing-in-wpf-overview.md)
 - [Общие сведения об отрисовке графики в WPF](wpf-graphics-rendering-overview.md)
 - [Общие сведения об объектах класса Freezable](../advanced/freezable-objects-overview.md)
-- [Разделы практического руководства](drawings-how-to-topics.md)
+- [Практические руководства](drawings-how-to-topics.md)

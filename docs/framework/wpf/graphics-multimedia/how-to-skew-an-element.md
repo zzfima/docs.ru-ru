@@ -1,19 +1,19 @@
 ---
-title: Практическое руководство. Отклонение элемента
+title: Практическое руководство. Наклон элемента
 ms.date: 03/30/2017
 helpviewer_keywords:
 - skewing elements [WPF]
 - graphics [WPF], skewing elements
 - classes [WPF], SkewTransform
 ms.assetid: 56b65f2f-dc6e-4238-923f-ca44ec53c52f
-ms.openlocfilehash: fec3ec38a19b552e988d26ea57c6f9beed6ce06e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 47f671f493e7b379c36f9bf4b50ec9d185d10b8a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359380"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144967"
 ---
-# <a name="how-to-skew-an-element"></a>Практическое руководство. Отклонение элемента
+# <a name="how-to-skew-an-element"></a>Практическое руководство. Наклон элемента
 В этом примере показано, как использовать <xref:System.Windows.Media.SkewTransform> для отклонения элемента. Отклонение (или срез) — это преобразование, которое неравномерно растягивает пространство координат. Одним из примеров использования <xref:System.Windows.Media.SkewTransform> является имитация [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] глубины в [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] объектов.  
   
  Используйте <xref:System.Windows.Media.SkewTransform.CenterX%2A> и <xref:System.Windows.Media.SkewTransform.CenterY%2A> точка свойства для указания центра <xref:System.Windows.Media.SkewTransform>.  
@@ -43,7 +43,8 @@ ms.locfileid: "57359380"
  Полный пример см. в разделе [Примеры двумерных преобразований](https://go.microsoft.com/fwlink/?LinkID=158252).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.SkewTransform>
 - [Общие сведения о классах Transform](transforms-overview.md)
-- [Разделы практического руководства](transformations-how-to-topics.md)
+- [Практические руководства](transformations-how-to-topics.md)

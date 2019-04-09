@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic layout [WPF interoperability]
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
-ms.openlocfilehash: 891254ff44926a719bb0c124e5dc098fd3f3e82e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: ff52d3bbf7bf5d9d85f7a6fd5f73d9730dde8fad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366547"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168991"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>Вопросы, связанные с макетом элемента WindowsFormsHost
 Здесь описывается, как <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемент взаимодействует с [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] система макета.  
@@ -28,7 +28,7 @@ ms.locfileid: "57366547"
   
  Макет в [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] зависящие от устройства и скорее всего, будут статическими. Как правило [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] абсолютного позиционирования элементов управления формы с помощью измерений, указанных в аппаратно зависимые пиксели. Тем не менее [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] поддерживают некоторые функции динамического макета, как описано в следующей таблице.  
   
-|Функция макета|Описание:|  
+|Функция макета|Описание|  
 |--------------------|-----------------|  
 |Автоматическое изменение размера|Некоторые [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] изменение размера элементов управления, с целью отображения их содержимое должным образом. Дополнительные сведения см. в разделе [Общие](../../winforms/controls/autosize-property-overview.md).|  
 |Привязка и закрепление|[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элементы управления поддерживают размещение и изменение размера, основанное на родительском контейнере. Дополнительные сведения см. в разделах <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType> и <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>.|  
@@ -40,7 +40,7 @@ ms.locfileid: "57366547"
   
 -   В некоторых случаях размеры элемента управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] изменять нельзя, или же их можно изменять, но только в фиксированных пределах. Например [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.ComboBox> элемент управления поддерживает только одну высоту, которая определяется размером шрифта элемента управления. В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] динамический макет, где элементы можно растянуть по вертикали, вложенный <xref:System.Windows.Forms.ComboBox> управления не растягивается, как ожидалось.  
   
--   Элементы управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] нельзя поворачивать или наклонять. <xref:System.Windows.Forms.Integration.WindowsFormsHost> — Вызывает <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> событий при применении преобразования Искажение или поворот. Если не обработать <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> событий, <xref:System.InvalidOperationException> возникает.  
+-   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элементы управления нельзя поворачивать или неравномерным. <xref:System.Windows.Forms.Integration.WindowsFormsHost> — Вызывает <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> событий при применении преобразования Искажение или поворот. Если не обработать <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> событий, <xref:System.InvalidOperationException> возникает.  
   
 -   В большинстве случаев элементы управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] не поддерживают пропорциональное масштабирование. Несмотря на то, что общий размер элемента управления масштабируется, дочерние элементы управления и компоненты элемента управления могут изменять размеры не так, как ожидается. Это ограничение зависит от поддержки масштабирования каждым элементом управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]. Кроме того, нельзя масштабировать [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элементов управления до размера, равные 0 пикселей.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "57366547"
   
  Кроме масштабирования, <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемент обрабатывает случаи округления и переполнения, как описано в следующей таблице.  
   
-|Проблема преобразования|Описание:|  
+|Проблема преобразования|Описание|  
 |----------------------|-----------------|  
 |Округление|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] аппаратно независимых пикселах задаются в виде `double`, и [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] оборудования размеры указываются в виде `int`. В случаях, где `double`-измерения, основанные на преобразуются в `int`-на основе измерения, <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемент использует стандартное округление, таким образом, чтобы меньше 0,5 дробные значения округляются до 0.|  
 |Переполнение|При <xref:System.Windows.Forms.Integration.WindowsFormsHost> преобразует элемент из `double` значения `int` значения, возможна переполнения. Значения, размер которых превышает <xref:System.Int32.MaxValue> присваивается <xref:System.Int32.MaxValue>.|  
@@ -99,9 +99,10 @@ ms.locfileid: "57366547"
 -   Если <xref:System.Windows.Forms.Control.Size%2A> свойство возвращает меньший размер, чем указанное ограничение, <xref:System.Windows.Forms.Integration.WindowsFormsHost> принимает это значение размера и возвращает значение для [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] системы макета.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Пошаговое руководство: Упорядочение Windows Forms элементы управления в WPF](walkthrough-arranging-windows-forms-controls-in-wpf.md)
+- [Пошаговое руководство. Упорядочение элементов управления Windows Forms в WPF](walkthrough-arranging-windows-forms-controls-in-wpf.md)
 - [Элементы управления упорядочение Windows Forms в WPF](https://go.microsoft.com/fwlink/?LinkID=159971)
 - [Сопоставление свойств Windows Forms и WPF](windows-forms-and-wpf-property-mapping.md)
 - [Миграция и взаимодействие систем](migration-and-interoperability.md)

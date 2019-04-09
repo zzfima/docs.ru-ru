@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 15606b8db740e79ad2bc0deb33afcb63ad839905
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d66d24da05bc3b8f0c3d0a828456d7c61613d219
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466093"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188315"
 ---
 # <a name="imetadataimportenummodulerefs-method"></a>Метод IMetaDataImport::EnumModuleRefs
 Перечисляет токены ModuleRef, представляющие импортируемые модули.  
@@ -53,7 +53,7 @@ HRESULT EnumModuleRefs (
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
-|HRESULT|Описание:|  
+|HRESULT|Описание|  
 |-------------|-----------------|  
 |`S_OK`|`EnumModuleRefs` успешно возвращен.|  
 |`S_FALSE`|Существуют маркеры для перечисления отсутствуют. В этом случае `pcModuleRefs` равно нулю.|  
@@ -68,5 +68,6 @@ HRESULT EnumModuleRefs (
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

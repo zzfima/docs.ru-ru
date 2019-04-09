@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6b42c558009c25adfd7d282da905e7182dfd3342
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 410fd7a702d3aa3812b4ea053c43fdaa507a474a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57467029"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176041"
 ---
 # <a name="imetadataimportenumproperties-method"></a>Метод IMetaDataImport::EnumProperties
 Перечисляет токены PropertyDef, представляющие свойства типа, на который ссылается указанный токен TypeDef.  
@@ -57,7 +57,7 @@ HRESULT EnumProperties (
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
-|HRESULT|Описание:|  
+|HRESULT|Описание|  
 |-------------|-----------------|  
 |`S_OK`|`EnumProperties` успешно возвращен.|  
 |`S_FALSE`|Существуют маркеры для перечисления отсутствуют. В этом случае `pcProperties` равно нулю.|  
@@ -72,5 +72,6 @@ HRESULT EnumProperties (
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

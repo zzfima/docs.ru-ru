@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XAML 2009 [XAML Services]
 - XAML [XAML Services], XAML 2009
 ms.assetid: f6bb18d8-c86a-4549-8862-323e6b32a8dd
-ms.openlocfilehash: 6de103d9b5b59ec1a47098e44e07ee95a3db166e
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 05f811cd0d95f7605963dae851430fb6bf0e9f7a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58039572"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162284"
 ---
 # <a name="xaml-2009-language-features"></a>Возможности языка XAML 2009
 XAML 2009 — это сокращение для новых компонентов языка XAML, которые расширяют существующую спецификацию языка XAML. XAML 2009 содержит ряд новых директив и конструкций. К ним относятся [x: Arguments Directive](x-arguments-directive.md); [директива x: FactoryMethod](x-factorymethod-directive.md); [x: Reference Markup Extension](x-reference-markup-extension.md); [директива x: TypeArguments ](x-typearguments-directive.md); и встроенные типы для общих примитивов языка (например `x:Char`).  
@@ -33,4 +33,5 @@ XAML 2009 — это сокращение для новых компоненто
  Для атрибутов, связанных с событиями, в XAML 2006 предполагается, что используется компиляция разметки, поэтому события подаются на компиляцию разметки. XAML 2009 поддерживает форму разметки, схожую с расширением разметки. Она дает возможность откладывать связывание событий до анализа и загрузки XAML. При этом приложения WPF и сценарии XAML для пользовательского интерфейса WPF обычно не используют эту возможность. WPF и его реализация в XAML 2006 используют сочетание связывания обработчика событий для перенаправленных событий, определенных на уровне <xref:System.Windows.UIElement> , и этап компилятора разметки для основной обработки атрибутов событий. Компилятор разметки также выполняет предварительную обработку всех атрибутов событий, найденных в XAML, где действия сборки объявляют, что используется компилятор разметки.  
   
 ## <a name="see-also"></a>См. также
-- [Общие сведения о языке XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+
+- [Обзор XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)

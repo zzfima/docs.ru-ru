@@ -2,12 +2,12 @@
 title: Неподдерживаемые сценарии
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: 381175a95b696145df8a1e19b9a40f2e697eef1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 12012f3e0c0c3b0d10c5faebfb2de881f5de3917
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631274"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178780"
 ---
 # <a name="unsupported-scenarios"></a>Неподдерживаемые сценарии
 По различным причинам Windows Communication Foundation (WCF) не поддерживает некоторые сценарии безопасности. Например [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition не реализует протоколы проверки подлинности SSPI и Kerberos, и поэтому WCF не поддерживает запуск службы с проверкой подлинности Windows на этой платформе. При выполнении WCF под Windows XP Home Edition, поддерживаются другие механизмы проверки подлинности, такие как имя пользователя и пароль и встроенная проверка подлинности HTTP/HTTPS.  
@@ -30,7 +30,7 @@ ms.locfileid: "54631274"
   
  Маркер SCT с отслеживанием состояния создается только с использованием пользовательской привязки. Дополнительные сведения см. в разделе [Как Создайте контекст безопасности маркера для безопасного сеанса](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).) В коде маркер включается путем создания элемента привязки безопасности (<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> или <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>) с помощью метода <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> или <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> и присвоения параметру `requireCancellation` значения `false`. Параметр относится к кэшированию маркера SCT. Задание значения `false` включает функцию маркера SCT с отслеживанием состояния.  
   
- Аналогично, маркер включается в конфигурации путем создания привязки <`customBinding`>, последующего добавления элемента <`security`>, присвоения атрибуту `authenticationMode` значения SecureConversation и присвоения атрибуту `requireSecurityContextCancellation` значения `true`.  
+ Кроме того, в конфигурации, маркер включается путем создания <`customBinding`>, добавив <`security`> и задав `authenticationMode` атрибут SecureConversation и `requireSecurityContextCancellation` атрибут `true`.  
   
 > [!NOTE]
 >  Эти требования зависят от конкретной ситуации. Например, метод <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> создает элемент привязки, который имеет результатом удостоверение Windows, однако не устанавливает маркер SCT. Поэтому его можно использовать с параметром `Required` в ОС [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
@@ -75,7 +75,7 @@ ms.locfileid: "54631274"
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>Сбой безопасности сообщений при использовании олицетворения ASP.NET и режима совместимости ASP.NET  
  WCF не поддерживает следующую комбинацию параметров, так как они могут помешать выполняться проверка подлинности клиента:  
   
--   Включено олицетворение [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Для этого в файле Web.config атрибуту `impersonate` элемента <`identity`> присвоено значение `true`.  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Включено олицетворение. Это делается в файле Web.config, задав `impersonate` атрибут <`identity`> элемент `true`.  
   
 -   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] режим совместимости можно включить, задав `aspNetCompatibilityEnabled` атрибут [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) для `true`.  
   
@@ -109,6 +109,7 @@ ms.locfileid: "54631274"
  Для устранения этой проблемы необходимо изменить привязку непосредственно в клиенте после выполнения импорта.  
   
 ## <a name="see-also"></a>См. также
+
 - [Вопросы безопасности](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
 - [Раскрытие информации](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
 - [Повышение привилегий](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)

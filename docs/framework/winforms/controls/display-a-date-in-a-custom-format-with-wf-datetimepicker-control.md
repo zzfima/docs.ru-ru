@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Отображение даты в пользовательском формате с элемента управления DateTimePicker в Windows Forms
+title: Практическое руководство. Отображение даты в пользовательском формате с помощью элемента управления DateTimePicker в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - examples [Windows Forms], DateTimePicker control
 - dates [Windows Forms], displaying in DateTimePicker control
 ms.assetid: 39767691-2d2b-46b6-a663-b7901e581a6e
-ms.openlocfilehash: c201455acaa9bde521afd623424d0cfc403b1bff
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 0c454580c6f3aa1fadb6e98d2ee715da948364b1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705883"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192996"
 ---
-# <a name="how-to-display-a-date-in-a-custom-format-with-the-windows-forms-datetimepicker-control"></a>Практическое руководство. Отображение даты в пользовательском формате с элемента управления DateTimePicker в Windows Forms
+# <a name="how-to-display-a-date-in-a-custom-format-with-the-windows-forms-datetimepicker-control"></a>Практическое руководство. Отображение даты в пользовательском формате с помощью элемента управления DateTimePicker в Windows Forms
 Windows Forms <xref:System.Windows.Forms.DateTimePicker> управления обеспечивает гибкость при форматировании отображение дат и времени в элементе управления. <xref:System.Windows.Forms.DateTimePicker.Format%2A> Свойство позволяет выбрать из предопределенных форматов, перечисленных в <xref:System.Windows.Forms.DateTimePickerFormat>. Если ни один из них не подходит для ваших целей, можно создать собственный стиль формата, используя символы форматирования, перечисленные в <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A>.  
   
 ### <a name="to-display-a-custom-format"></a>Для отображения в пользовательском формате  
@@ -64,5 +64,6 @@ Windows Forms <xref:System.Windows.Forms.DateTimePicker> управления о
      В зависимости от языка и региональных параметров, можно изменить любые символы, не заключаются в одинарные кавычки. Например, строка формата отображает текущую дату в формате «сегодня является: 05:30:31 марта пятница 02, 2012" английского языка (США). Обратите внимание на то, что первое двоеточие заключено в одинарные кавычки, поскольку он не используется в разделителя, как в «чч: мм:». В другой язык и региональные параметры, формат может отображаться как «сегодня является: 05.30.31 пятница март 02, 2012".  
   
 ## <a name="see-also"></a>См. также
+
 - [Элемент управления DateTimePicker](datetimepicker-control-windows-forms.md)
-- [Практическое руководство. Задайте и возвращаемого значения дат с помощью элемента управления DateTimePicker в Windows Forms](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)
+- [Практическое руководство. Отображение и ввод дат с помощью элемента управления DateTimePicker в Windows Forms](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)

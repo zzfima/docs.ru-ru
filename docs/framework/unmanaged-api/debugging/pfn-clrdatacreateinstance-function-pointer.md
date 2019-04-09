@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 19d7284399719dd848af43765a392802a589fc33
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: ff2ddb1e98f3455c6915acf8149f528176228425
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492534"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177987"
 ---
 # <a name="pfnclrdatacreateinstance-function-pointer"></a>Указатель функции PFN_CLRDataCreateInstance
 Указывает на функцию, которая создает объект интерфейса для заданного целевого элемента.  
@@ -59,4 +59,5 @@ typedef HRESULT (STDAPICALLTYPE* PFN_CLRDataCreateInstance) (
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Глобальные статические функции отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

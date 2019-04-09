@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], validation of binding
 - binding [WPF], validation of
 ms.assetid: eb98b33d-9866-49ae-b981-bc5ff20d607a
-ms.openlocfilehash: eefdb3b1205a64221e3e9352f70e3d06dc074eff
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3950df8b6f4b48a035c6ebf37d8d65c18cb82e1e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368549"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197221"
 ---
 # <a name="how-to-implement-binding-validation"></a>Практическое руководство. Реализация проверки привязки
 В этом примере показано, как использовать <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> и триггер стиля для предоставления визуальной обратной связи, чтобы информировать пользователей, если введено недопустимое значение, на основании пользовательского правила проверки.  
@@ -38,5 +38,6 @@ ms.locfileid: "57368549"
  Обратите внимание, что если вы не предоставите пользовательский <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> отображается шаблон ошибки по умолчанию для предоставления пользователю визуальной обратной связи при ошибке проверки. См. "Проверка данных" в разделе [Общие сведения о привязке данных](data-binding-overview.md). Кроме того, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет встроенное правило проверки, которое отслеживает исключения, получаемые во время обновления свойства источника привязки. Дополнительные сведения см. в разделе <xref:System.Windows.Controls.ExceptionValidationRule>.  
   
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения о привязке данных](data-binding-overview.md)
-- [Разделы практического руководства](data-binding-how-to-topics.md)
+- [Практические руководства](data-binding-how-to-topics.md)

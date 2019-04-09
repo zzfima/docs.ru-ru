@@ -2,12 +2,12 @@
 title: Обработка неупорядоченных сообщений
 ms.date: 03/30/2017
 ms.assetid: 33fc62a5-5d59-461c-a37a-0e1b51ac763d
-ms.openlocfilehash: 7d908be84f22835bea744de74d278689516f3185
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4e1864b25a4dbe8192cd5c692c75645bebbb92d2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698015"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141405"
 ---
 # <a name="out-of-order-message-processing"></a>Обработка неупорядоченных сообщений
 Службы рабочих процессов могут зависеть от порядка отправки сообщений. Служба рабочих процессов содержит одно или несколько действий <xref:System.ServiceModel.Activities.Receive>. Каждое из этих действий <xref:System.ServiceModel.Activities.Receive> рассчитано на определенное сообщение. Поскольку доставка данных не гарантируется, отправляемые клиентами сообщения могут задерживаться и доставляться в порядке, на который служба рабочих процессов не рассчитана. Реализация службы рабочих процессов, которая не требует отправки сообщений в определенном порядке, обычно осуществляется с использованием параллельных действий. В результате усложнения протокола приложения рабочий процесс также слишком быстро становится сложным.  Из неупорядоченные сообщения, обработке функции в Windows Communication Foundation (WCF) позволяет создавать такой рабочий процесс исключив сложности реализации вложенных параллельных действий. Обработка сообщений из неупорядоченные поддерживается только каналами, поддерживающими <xref:System.ServiceModel.Channels.ReceiveContext> например привязок WCF MSMQ.  
@@ -35,6 +35,7 @@ WorkflowService service = new WorkflowService
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.Channels.ReceiveContext>
-- [Службы рабочих процессов](../../../../docs/framework/wcf/feature-details/workflow-services.md)
+- [Службы рабочего процесса](../../../../docs/framework/wcf/feature-details/workflow-services.md)
 - [Очереди и надежные сеансы](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md)

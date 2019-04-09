@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 860295a3d10acd67f5fb7665a7213dc90e4a4829
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 543cc63b3e2188c11a6a8bf1eaa846461375be99
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713179"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180080"
 ---
 # <a name="qualifiersetdelete-function"></a>Функция QualifierSet_Delete
 Удаляет указанный квалификатор по имени.  
@@ -53,7 +53,7 @@ HRESULT QualifierSet_Delete (
 
 Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файл заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание:  |
+|Константа  |Значение  |Описание  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Недопустимый параметр `wszName`. |
 |`WBEM_E_INVALID_OPERATION` | 0x80041016 | Удаление этот квалификатор является недопустимым. |
@@ -75,4 +75,5 @@ HRESULT QualifierSet_Delete (
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>См. также
-- [WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)
+
+- [WMI и счетчики производительности (справочник по неуправляемым API)](index.md)

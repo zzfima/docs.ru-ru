@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Рисование контурной фигуры
+title: Практическое руководство. Рисование линии или контурной фигуры
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - drawing [Windows Forms], circular shapes
 - shapes [Windows Forms], drawing
 ms.assetid: f4f9214c-607e-407d-8cdd-6549f0278451
-ms.openlocfilehash: 598706b381d12b8e820747ca872146bdb5e300c7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 019bbc19cc4b26c42f8539eccd93ec4ff87fab12
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722637"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192212"
 ---
-# <a name="how-to-draw-an-outlined-shape"></a>Практическое руководство. Рисование контурной фигуры
+# <a name="how-to-draw-an-outlined-shape"></a>Практическое руководство. Рисование линии или контурной фигуры
 В этом примере рисование контуров эллипсы и прямоугольники в форме.  
   
 ## <a name="example"></a>Пример  
@@ -41,6 +41,7 @@ ms.locfileid: "57722637"
  Следует всегда вызывать <xref:System.IDisposable.Dispose%2A> на любые объекты, которые потребляют системные ресурсы, такие как <xref:System.Drawing.Pen> и <xref:System.Drawing.Graphics> объектов.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Drawing.Graphics.DrawEllipse%2A>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
 - <xref:System.Drawing.Graphics.DrawRectangle%2A>

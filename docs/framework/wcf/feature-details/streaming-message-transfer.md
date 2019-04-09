@@ -2,12 +2,12 @@
 title: Потоковая передача сообщений
 ms.date: 03/30/2017
 ms.assetid: 72a47a51-e5e7-4b76-b24a-299d51e0ae5a
-ms.openlocfilehash: 5a146b9f0bd2eb74b5ef4b5877e6cb925d386abc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e58b0ce698df310a5e18bcd24201fb2e27a9c1aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643823"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136881"
 ---
 # <a name="streaming-message-transfer"></a>Потоковая передача сообщений
 Windows Communication Foundation (WCF) транспорты поддерживают два режима передачи сообщений:  
@@ -30,7 +30,7 @@ Windows Communication Foundation (WCF) транспорты поддержива
  Примеры кода, см. в разделе [как: Включение потоковой передачи](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md).  
   
 ## <a name="enabling-asynchronous-streaming"></a>Включение асинхронной потоковой передачи  
- Чтобы включить поддержку асинхронной потоковой передачи данных, добавьте поведение конечной точки <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior> в ведущее приложение службы и установите свойству <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.AsynchronousSendEnabled%2A> значение `true`.  
+ Чтобы включить поддержку асинхронной потоковой передачи данных, добавьте поведение конечной точки <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior> в основное приложение службы и установите свойству <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.AsynchronousSendEnabled%2A> значение `true`.  
   
  Эта версия WCF также добавляет возможность истинной асинхронной потоковой передачи на стороне отправки. Это повышает масштабируемость службы в сценариях, когда обрабатываются потоковые сообщения для нескольких клиентов. Некоторые из этих сообщений считываются медленно, возможно, из-за перегрузки сети или не считываются совсем. В этих сценариях WCF больше не блокирует поклиентно отдельные потоки службы. Это гарантирует, что служба может обрабатывать гораздо больше клиентов, повышая таким образом масштабируемость службы.  
   
@@ -47,4 +47,5 @@ Windows Communication Foundation (WCF) транспорты поддержива
  Изменение режима передачи с буферизованного на потоковый также приводит к изменению собственной формы канала для транспортов TCP и именованных каналов. При буферизованной передаче собственная форма канала представлена интерфейсом <xref:System.ServiceModel.Channels.IDuplexSessionChannel>. При потоковой передаче собственные каналы представлены интерфейсами <xref:System.ServiceModel.Channels.IRequestChannel> и <xref:System.ServiceModel.Channels.IReplyChannel>. Изменение режима передачи в существующем приложении, использующем эти транспорты напрямую (т.е. не через контракт службы), требует изменения ожидаемой формы канала для производств и прослушивателей каналов.  
   
 ## <a name="see-also"></a>См. также
+
 - [Практическое руководство. Включение потоковой передачи](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - frames [Windows Forms], accessing
 - DOM [Windows Forms], accessing frames in managed HTML
 ms.assetid: cdeeaa22-0be4-4bbf-9a75-4ddc79199f8d
-ms.openlocfilehash: f02e5cf054f8891b134ee914b54e22e975d835a9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 32f4df947926a0c69963d5f4c6872dc38ceeed1b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723794"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173502"
 ---
 # <a name="accessing-frames-in-the-managed-html-document-object-model"></a>Доступ к фреймам с использованием управляемой объектной модели HTML-документов
 Некоторые HTML-документы состоят из *кадров*, или windows, которые могут содержать другие документы HTML. Использование фреймов упрощает создание HTML-страниц, в которых одна или несколько частей страницы остаются статичными, например панель навигации, а в остальных фреймах содержимое постоянно изменяется.  
@@ -31,7 +31,7 @@ ms.locfileid: "57723794"
   
 2.  При доступе к тегу `FRAME` или `IFRAME` с использованием коллекции Frames <xref:System.Windows.Forms.HtmlWindow>, необходимо извлечь элемент-окно, соответствующий фрейму. Он представляет все динамические свойства фрейма, такие как текущий URL-адрес, документ и размер.  
   
-3.  При доступе к тегу `FRAME` или `IFRAME` с помощью свойства <xref:System.Windows.Forms.HtmlWindow.WindowFrameElement%2A> <xref:System.Windows.Forms.HtmlWindow>, коллекции <xref:System.Windows.Forms.HtmlElement.Children%2A> или таких методов, как <xref:System.Windows.Forms.HtmlElementCollection.GetElementsByName%2A> или <xref:System.Windows.Forms.HtmlDocument.GetElementById%2A>, происходит извлечение элемента фрейма. Он представляет статические свойства фрейма, включая URL-адрес, указанный в исходном HTML-файле.  
+3.  При доступе к тегу `FRAME` или `IFRAME` с помощью свойства <xref:System.Windows.Forms.HtmlWindow.WindowFrameElement%2A><xref:System.Windows.Forms.HtmlWindow>, коллекции <xref:System.Windows.Forms.HtmlElement.Children%2A> или таких методов, как <xref:System.Windows.Forms.HtmlElementCollection.GetElementsByName%2A> или <xref:System.Windows.Forms.HtmlDocument.GetElementById%2A>, происходит извлечение элемента фрейма. Он представляет статические свойства фрейма, включая URL-адрес, указанный в исходном HTML-файле.  
   
 ## <a name="frames-and-security"></a>Фреймы и безопасность  
  Доступ к фреймам усложняется тем фактом, что управляемая модель HTML DOM реализует меры безопасности, называемые *сценария безопасности между рамками*. Если документ содержит `FRAMESET` с двумя или более `FRAME` в различных доменах, эти `FRAME` не смогут взаимодействовать друг с другом. Другими словами `FRAME` , отображает содержимое с веб-сайт не может получить доступ к `FRAME` , на котором размещается сторонний сайт например `http://www.adatum.com/`. Безопасность реализуется на уровне класса <xref:System.Windows.Forms.HtmlWindow>. Можно получать общие сведения о размещении другого веб-сайта в `FRAME`, например его URL-адрес, но невозможно получить доступ к его <xref:System.Windows.Forms.HtmlWindow.Document%2A>, изменить размер или расположение `FRAME` или `IFRAME`, в которых он размещен.  
@@ -39,5 +39,6 @@ ms.locfileid: "57723794"
  Это правило также применяется к окнам, которые можно открыть с помощью методов <xref:System.Windows.Forms.HtmlWindow.Open%2A> и <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A>. Если открываемое окно относится к другому домену, отличающемуся от домена страницы, размещенной в элементе управления <xref:System.Windows.Forms.WebBrowser>, то перемещение окна или доступ к его содержимому невозможны. Эти ограничения также применяются принудительно при использовании элемента управления <xref:System.Windows.Forms.WebBrowser> для отображения веб-сайта, который отличается от веб-сайта, на котором развернуто приложение Windows Forms. Если используется технология развертывания [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] для установки приложения с веб-сайта A и используется <xref:System.Windows.Forms.WebBrowser> для отображения веб-сайта Б, то доступ к данным веб-сайта Б будет отсутствовать.  
   
 ## <a name="see-also"></a>См. также
+
 - [\<кадр > элемент](https://developer.mozilla.org/docs/Web/HTML/Element/frame)
 - [Использование управляемой объектной модели HTML-документов](using-the-managed-html-document-object-model.md)

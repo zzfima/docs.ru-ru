@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5280e816-ae17-48c4-8de0-a1e6895dd8f0
-ms.openlocfilehash: 3991c16e00f1cbb4f8c1f2c8391f89ea51c1e6f2
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: de6608d0b3fc0ba4113b8fa7c65881983aabf0c8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463804"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189304"
 ---
 # <a name="how-to-create-a-sequential-workflow"></a>Практическое руководство. Создание последовательного рабочего процесса
 Рабочие процессы могут создаваться как из встроенных, так и из пользовательских действий. В этом разделе действия по созданию рабочего процесса, который использует как встроенные действия, например <xref:System.Activities.Statements.Sequence> действия и пользовательские действия из предыдущего [как: Создание действия](how-to-create-an-activity.md) раздела. Рабочий процесс моделирует игру по угадыванию числа.  
@@ -158,10 +158,11 @@ ms.locfileid: "58463804"
      Для указания о том, как запустить рабочий процесс, см. следующий раздел, [как: Запуск рабочего процесса](how-to-run-a-workflow.md). Если вы уже выполнили [как: Запуск рабочего процесса](how-to-run-a-workflow.md) шаг с другим стилем рабочего процесса и планируете запустить его с помощью последовательного рабочего процесса, начиная с этого шага, сразу перейти к [построение и запуск приложения](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) раздел [как: Запуск рабочего процесса](how-to-run-a-workflow.md).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Activities.Statements.Flowchart>
 - <xref:System.Activities.Statements.FlowDecision>
-- [Программирование в Windows Workflow Foundation](programming.md)
+- [Программирование в Windows Workflow Foundation](programming.md)
 - [Разработка рабочих процессов](designing-workflows.md)
-- [Руководство по началу работы](getting-started-tutorial.md)
+- [Учебник по началу работы](getting-started-tutorial.md)
 - [Практическое руководство. Создание действия](how-to-create-an-activity.md)
 - [Практическое руководство. Запуск рабочего процесса](how-to-run-a-workflow.md)

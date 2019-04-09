@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Определить, какие элементы в элементе управления CheckedListBox Windows Forms
+title: Практическое руководство. Определение отмеченных элементов в элементе управления CheckedListBox в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - check boxes [Windows Forms], determining checked state
 - CheckedListBox control [Windows Forms], determining checked state
 ms.assetid: 178b477d-27c9-489c-8914-44a9623a4d41
-ms.openlocfilehash: 2936a64338f47107b11b5f6eb85c5e94707bf926
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 0cfb34d058486c44ffb01e6c105134e3ca4c2175
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707967"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184682"
 ---
-# <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a>Практическое руководство. Определить, какие элементы в элементе управления CheckedListBox Windows Forms
+# <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a>Практическое руководство. Определение отмеченных элементов в элементе управления CheckedListBox в Windows Forms
 При представлении данных в формах Windows <xref:System.Windows.Forms.CheckedListBox> элемента управления, вы можете либо прохода по коллекции хранятся в <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> свойство или Пройдите по списку с помощью <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> метод, чтобы определить, какие элементы установлены. <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> Метод принимает номер элемента в качестве аргумента и возвращает `true` или `false`. Вопреки ожиданиям <xref:System.Windows.Forms.ListBox.SelectedItems%2A> и <xref:System.Windows.Forms.ListBox.SelectedIndices%2A> свойства не определяют элементы, которые проверяются; они определяют, какие элементы будут выделены.  
   
 ### <a name="to-determine-checked-items-in-a-checkedlistbox-control"></a>Чтобы определить, какие элементы в элементе управления CheckedListBox  
@@ -112,4 +112,5 @@ ms.locfileid: "57707967"
     ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Создание списка для выбора элементов в Windows Forms](windows-forms-controls-used-to-list-options.md)

@@ -1,5 +1,5 @@
 ---
-title: Пошаговое руководство. Выполнение операции перетаскивания и вставки в Windows Forms
+title: Пошаговое руководство. Выполнение операции перетаскивания в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Windows Forms, drag and drop operations
 - drag and drop [Windows Forms], Windows Forms
 ms.assetid: eb66f6bf-4a7d-4c2d-b276-40fefb2d3b6c
-ms.openlocfilehash: 664c78ce3fff9651acf6ad720360cdb077f23108
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: e9b21d7bfa188ebb053f36e2637ffce5d6fa0dd7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715247"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189031"
 ---
-# <a name="walkthrough-performing-a-drag-and-drop-operation-in-windows-forms"></a>Пошаговое руководство. Выполнение операции перетаскивания и вставки в Windows Forms
+# <a name="walkthrough-performing-a-drag-and-drop-operation-in-windows-forms"></a>Пошаговое руководство. Выполнение операции перетаскивания в Windows Forms
 Для выполнения операций перетаскивания и вставки в приложениях Windows необходимо обрабатывать последовательность событий, особенно <xref:System.Windows.Forms.Control.DragEnter>, <xref:System.Windows.Forms.Control.DragLeave>, и <xref:System.Windows.Forms.Control.DragDrop> события. Работая со сведениями, доступными через аргументы этих событий, можно значительно упростить операции перетаскивания.  
   
 ## <a name="dragging-data"></a>Перетаскивание данных  
@@ -107,6 +107,7 @@ ms.locfileid: "57715247"
     >  Кроме того, вы можете работать с <xref:System.Windows.Forms.DragEventArgs.KeyState%2A> свойство, поэтому, в зависимости от клавиш, нажатых во время операции перетаскивания и вставки, происходили определенные действия (например, происходит копирование переносимых данных при нажатии клавиши CTRL).  
   
 ## <a name="see-also"></a>См. также
+
 - [Практическое руководство. Добавление данных в буфер обмена](how-to-add-data-to-the-clipboard.md)
-- [Практическое руководство. Получить данные из буфера обмена](how-to-retrieve-data-from-the-clipboard.md)
+- [Практическое руководство. Извлечение данных из буфера обмена](how-to-retrieve-data-from-the-clipboard.md)
 - [Операции перетаскивания и поддержка буфера обмена](drag-and-drop-operations-and-clipboard-support.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: cd3a9cd8cf7862bfa3128b81f5ecf6d380e20c32
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: fe48c8a2a7df74b1a9e28b514ba9258d2aa23ae9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554690"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191475"
 ---
 # <a name="handling-null-values"></a>Обработка значений NULL
 Значение NULL в реляционной базе данных используется, если значение в столбце неизвестно или отсутствует. Значение Null не является ни пустой строкой (для символьного типа данных или типа данных datetime), ни нулевым значением (для числовых типов данных). Спецификация ANSI SQL-92 устанавливает, что значение NULL должно быть одинаково для всех типов данных, так чтобы все значения NULL обрабатывались согласованно. Пространство имен <xref:System.Data.SqlTypes> предоставляет семантику NULL при реализации интерфейса <xref:System.Data.SqlTypes.INullable>. Каждый из типов данных в <xref:System.Data.SqlTypes> имеет свое собственное свойство `IsNull` и значение `Null`, которое может быть присвоено экземпляру этого типа данных.  
@@ -35,7 +35,7 @@ ms.locfileid: "54554690"
  ![Таблица истинности](../../../../../docs/framework/data/adonet/sql/media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
   
 ### <a name="understanding-the-ansinulls-option"></a>Основные сведения о параметре ANSI_NULLS  
- <xref:System.Data.SqlTypes> предоставляет ту же семантику, что и в случае, когда параметр ANSI_NULLS установлен в SQL Server. Все арифметические операторы (+, -, *, /, %), битовые операторы (~ &, &#124;), и большинство функций возвращают null, если любой из операндов или аргументов равно null, за исключением свойства `IsNull`.  
+ <xref:System.Data.SqlTypes> предоставляет ту же семантику, что при параметре ANSI_NULLS установлен в SQL Server. Все арифметические операторы (+, -, *, /, %), битовые операторы (~ &, &#124;), и большинство функций возвращают null, если любой из операндов или аргументов равно null, за исключением свойства `IsNull`.  
   
  Стандарт ANSI SQL-92 не поддерживает *columnName* = NULL в предложении WHERE. В SQL Server параметр ANSI_NULLS контролирует как допустимость значений NULL по умолчанию, так и оценку сравнений со значениями NULL. Если параметр ANSI_NULLS установлен в значение ON (по умолчанию), в выражениях при проверке на значения NULL должен использоваться оператор IS NULL. Например, при параметре ANSI_NULLS, установленном в значение ON, результатом следующего сравнения всегда является UNKNOWN:  
   
@@ -83,7 +83,7 @@ WHERE TerritoryID IN (1, 2, 3)
 >  Структура `Nullable<T>` или <xref:System.Nullable> в настоящее время в `DataSet` не поддерживается.  
   
 ### <a name="multiple-column-row-assignment"></a>Присвоение для многих столбцов или строк  
- `DataTable.Add`, `DataTable.LoadDataRow` или другие API, которые принимают <xref:System.Data.DataRow.ItemArray%2A>, которые сопоставлены со строкой, сопоставляют «NULL» значению по умолчанию для DataColumn. Если объект в массиве содержит `DbNull.Value` или его строго типизированный аналог, применяются те же вышеописанные правила.  
+ `DataTable.Add`, `DataTable.LoadDataRow`, или другие API, которые принимают <xref:System.Data.DataRow.ItemArray%2A> , которые сопоставлены со строкой, сопоставляют «null» значению по умолчанию элемента DataColumn. Если объект в массиве содержит `DbNull.Value` или его строго типизированный аналог, применяются те же вышеописанные правила.  
   
  Кроме того, следующие правила применяются для экземпляра присваивания `DataRow.["columnName"]` значений NULL.  
   
@@ -118,7 +118,7 @@ isColumnNull=True, ID=Null, Description=Null
 ```  
   
 ## <a name="comparing-null-values-with-sqltypes-and-clr-types"></a>Сравнение значений NULL с типами SqlType и CLR  
- При сравнении значений NULL важно понимать разницу между способом, которым метод `Equals` оценивает значения NULL в <xref:System.Data.SqlTypes>, и способом его работы с типами среды CLR. Все <xref:System.Data.SqlTypes> `Equals` методы используют семантику базы данных для оценки значений null: Если оба значения равны null, то результатом сравнения является null. С другой стороны, результатом использования метода среды CLR `Equals` на двух <xref:System.Data.SqlTypes> является true, если оба значения являются NULL. Это отражает разницу между использованием метода экземпляра, например метода среды CLR `String.Equals`, и использованием статического или общего метода `SqlString.Equals`.  
+ При сравнении значений NULL важно понимать разницу между способом, которым метод `Equals` оценивает значения NULL в <xref:System.Data.SqlTypes>, и способом его работы с типами среды CLR. Все <xref:System.Data.SqlTypes>`Equals` методы используют семантику базы данных для оценки значений null: Если оба значения равны null, то результатом сравнения является null. С другой стороны, результатом использования метода среды CLR `Equals` на двух <xref:System.Data.SqlTypes> является true, если оба значения являются NULL. Это отражает разницу между использованием метода экземпляра, например метода среды CLR `String.Equals`, и использованием статического или общего метода `SqlString.Equals`.  
   
  Следующий пример демонстрирует разницу в результатах методов `SqlString.Equals` и `String.Equals`, если каждому посылается пара значений NULL, а затем пара пустых строк.  
   
@@ -142,5 +142,6 @@ String.Equals instance method:
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Типы данных SQL Server и ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

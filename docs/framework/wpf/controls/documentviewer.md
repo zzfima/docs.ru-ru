@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [WPF], DocumentViewer
 - DocumentViewer control [WPF]
 ms.assetid: c21eb322-d6b3-474b-ab05-94527bd1b0fa
-ms.openlocfilehash: dd87b81dbfc412168566f5b58bb2040c0e05b080
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: cc9031a19cb49736cf039d53d02ff2bc571ff978
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365429"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167860"
 ---
 # <a name="documentviewer"></a>DocumentViewer
 <xref:System.Windows.Controls.DocumentViewer> Управления используется для просмотра <xref:System.Windows.Documents.FixedDocument> содержимое (например, [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] документов) в формате с разбиением на страницы.  
@@ -23,6 +23,7 @@ ms.locfileid: "57365429"
  <xref:System.Windows.Documents.FixedDocument>  
   
 ## <a name="see-also"></a>См. также
+
 - [Документы](../advanced/documents.md)
 - [Сериализация и хранение документов](../advanced/document-serialization-and-storage.md)
 - [Общие сведения о печати](../advanced/printing-overview.md)

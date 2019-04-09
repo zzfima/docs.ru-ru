@@ -5,12 +5,12 @@ helpviewer_keywords:
 - security [XAML Services], .NET XAML services
 - XAML security [XAML Services]
 ms.assetid: 544296d4-f38e-4498-af49-c9f4dad28964
-ms.openlocfilehash: 6cd09295f9dac26011652d6b0a33318841b04072
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 124310497cc2a8e8a816ba90b2c68a16ed342ae6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648366"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162676"
 ---
 # <a name="xaml-security-considerations"></a>Соображения безопасности XAML
 В этом разделе описываются рекомендации по обеспечению безопасности в приложениях, при использовании XAML и API служб XAML .NET Framework.  
@@ -42,4 +42,5 @@ ms.locfileid: "54648366"
  XAML поддерживает свою собственную систему типов, который во многом похожа на том, как среда CLR реализует базовую систему типов CLR. Тем не менее для определенных аспектов распознавания типов, принимая решения о доверии, о типе, в зависимости от сведений о ее типе, следует обратиться к сведения о типах в CLR резервных типов. Это обусловлено тем, некоторые специальные возможности создания отчетов системы типов XAML, остаются открытыми виртуальными методами и, следовательно, не полностью в системе управления исходными реализациями служб XAML .NET Framework. Эти точки расширения существуют, поскольку система типов XAML является расширяемой, в соответствии с расширяемость сам XAML и его возможных альтернативных стратегий сопоставления типов и поддержкой CLR реализация по умолчанию и контекст схемы XAML по умолчанию. Дополнительные сведения см. в разделе заметки, относящиеся к на нескольких свойств <xref:System.Xaml.XamlType> и <xref:System.Xaml.XamlMember>.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Xaml.Permissions.XamlAccessLevel>

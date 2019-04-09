@@ -5,17 +5,16 @@ helpviewer_keywords:
 - Menu control [WPF]
 - controls [WPF], Menu
 ms.assetid: 67df6de5-db96-4c71-b752-af90729a6537
-ms.openlocfilehash: d5f53603ea22b2ae12a9846ba6bdce525790ce15
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a3250cfd3fd651cb4ed3c4fd6975f5b5c89195f9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360953"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166378"
 ---
 # <a name="menu-overview"></a>Обзор меню
 <xref:System.Windows.Controls.Menu> Класс позволяет организовывать элементы, связанные с командами и обработчиками событий в иерархическом порядке. Каждый <xref:System.Windows.Controls.Menu> элемент содержит коллекцию <xref:System.Windows.Controls.MenuItem> элементов.  
-  
-  
+
 <a name="menu_control"></a>   
 ## <a name="menu-control"></a>Элемент управления меню  
  <xref:System.Windows.Controls.Menu> Элемент управления представляет список элементов, определяющих команды или параметры для приложения. Как правило, щелкнув <xref:System.Windows.Controls.MenuItem> открывается подменю или вызывает приложение для выполнения команды.  
@@ -60,4 +59,5 @@ ms.locfileid: "57360953"
  [!code-xaml[MenuStylesSnippet#2](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuStylesSnippet/CS/app.xaml#2)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Пример коллекции элементов управления WPF](https://go.microsoft.com/fwlink/?LinkID=160053)

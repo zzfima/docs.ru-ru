@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 713913fa046fc1bef12b8849ac82e4399a8dc534
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f1a0fff266e964b506b2dc7c4030caa54abaa5ed
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577588"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171825"
 ---
 # <a name="corpropertyattr-enumeration"></a>Перечисление CorPropertyAttr
 Содержит значения, описывающие метаданные свойства.  
@@ -42,7 +42,7 @@ typedef enum CorPropertyAttr {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |`prSpecialName`|Указывает, что это специальное свойство, и указывает его имя как.|  
 |`prReservedMask`|Зарезервировано для внутреннего использования средой CLR.|  
@@ -58,4 +58,5 @@ typedef enum CorPropertyAttr {
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

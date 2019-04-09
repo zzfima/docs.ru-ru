@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
-ms.openlocfilehash: b8dae094655e7bf2a52848d449a5f604f846e052
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2f15bf569da6127d6c9d27be255590ce3784d7a5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497096"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174620"
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>Использование очередей недоставленных сообщений для обработки сбоев при передаче сообщений
 Сообщения в очереди могут вызвать сбой доставки. Сообщения, во время доставки которых произошел сбой, записываются в очередь недоставленных сообщений. Сбой доставки может быть вызван такими причинами, как сбои сети, удаленная очередь, заполнение очереди, сбой проверки подлинности или сбой доставки по времени.  
@@ -61,19 +61,16 @@ ms.locfileid: "54497096"
  [!code-vb[S_DeadLetter#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_deadletter/vb/client.vb#1)]  
   
  В следующем примере показан код для файла конфигурации клиента.  
-  
-  
-  
+
  В следующем примере показан код для службы обработки сообщений из очереди недоставленных сообщений.  
   
  [!code-csharp[S_DeadLetter#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_deadletter/cs/dlservice.cs#3)]
  [!code-vb[S_DeadLetter#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_deadletter/vb/dlservice.vb#3)]  
   
  В следующем примере показан код для файла конфигурации службы очереди недоставленных сообщений.  
-  
-  
-  
+
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения об очередях](../../../../docs/framework/wcf/feature-details/queues-overview.md)
-- [Практическое руководство. Обмен сообщениями с конечными точками WCF в очереди](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
+- [Практическое руководство. Обмен сообщениями в очереди с конечными точками WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
 - [Обработка подозрительных сообщений](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)

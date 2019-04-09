@@ -6,12 +6,12 @@ helpviewer_keywords:
 - quadratic Bezier curves [WPF], creating
 - graphics [WPF], quadratic Bezier curves
 ms.assetid: cd8fca4a-504e-4fd8-92ea-2969065a6e02
-ms.openlocfilehash: 8adb5d0348fe53cecbdabf8ffa3b244fe34831e5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a0b2145b4a5bba11186419fe680f2eca41949d6a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363726"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134879"
 ---
 # <a name="how-to-create-a-quadratic-bezier-curve"></a>Практическое руководство. Создание кривой Безье второго порядка
 В этом примере демонстрируется создание кривой Безье второго порядка.  Создание кривой Безье второго порядка, используйте <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, и <xref:System.Windows.Media.QuadraticBezierSegment> классы.  
@@ -36,5 +36,6 @@ ms.locfileid: "57363726"
  Этот пример является частью большего примера; полный пример см. в разделе [Пример геометрических объектов](https://go.microsoft.com/fwlink/?LinkID=159989).  
   
 ## <a name="see-also"></a>См. также
+
 - [Создание эллиптической дуги](how-to-create-an-elliptical-arc.md)
 - [Создание кривой Безье третьего порядка](how-to-create-a-cubic-bezier-curve.md)

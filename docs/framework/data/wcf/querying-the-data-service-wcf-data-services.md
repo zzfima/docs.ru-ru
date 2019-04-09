@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 823e9444-27aa-4f1f-be8e-0486d67f54c0
-ms.openlocfilehash: da015fcd20745ef67831b7133242d66392f923e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3283ec1661138a636914d6b1ca5e7adb5d5d52d3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620413"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175985"
 ---
 # <a name="querying-the-data-service-wcf-data-services"></a>Выполнение запросов к службе данных (службы данных WCF)
 Клиентская библиотека служб [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] позволяет выполнять запросы службы данных, используя знакомые шаблоны программирования [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], включая использование языка LINQ. Клиентская библиотека преобразует запрос, определенный на клиенте как экземпляр класса <xref:System.Data.Services.Client.DataServiceQuery%601>, в сообщение запроса HTTP GET. Библиотека получает ответное сообщение и преобразует его в экземпляры классов клиентской службы данных. Эти классы отслеживаются с помощью <xref:System.Data.Services.Client.DataServiceContext>, которому принадлежит объект <xref:System.Data.Services.Client.DataServiceQuery%601>.  
@@ -63,7 +63,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
  Дополнительные сведения см. в разделе [рекомендации по LINQ](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md).  
   
 ## <a name="adding-query-options"></a>Добавление параметров запроса  
- Запросы службы данных поддерживают все параметры запроса, которые предоставляют службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Метод <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> вызывается для присоединения параметров запроса к экземпляру <xref:System.Data.Services.Client.DataServiceQuery%601>. <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> возвращает новый экземпляр <xref:System.Data.Services.Client.DataServiceQuery%601>, эквивалентный исходному запросу, но с новым набором параметров запроса. Следующий запрос, если он выполняется, возвращает объект `Orders`, отфильтрованный по значению `Freight` и упорядоченный по `OrderID` по убыванию.  
+ Запросы службы данных поддерживают все параметры запроса, которые предоставляют службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Метод <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> вызывается для присоединения параметров запроса к экземпляру <xref:System.Data.Services.Client.DataServiceQuery%601>. <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> Возвращает новый <xref:System.Data.Services.Client.DataServiceQuery%601> экземпляра, эквивалентный исходному запросу с учетом нового запроса набор параметров. Следующий запрос, если он выполняется, возвращает объект `Orders`, отфильтрованный по значению `Freight` и упорядоченный по `OrderID` по убыванию.  
   
  [!code-csharp[Astoria Northwind Client#AddQueryOptionsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#addqueryoptionsspecific)]  
  [!code-vb[Astoria Northwind Client#AddQueryOptionsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#addqueryoptionsspecific)]  
@@ -99,17 +99,17 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
  Объект <xref:System.Data.Services.Client.QueryOperationResponse%601> имеет также следующие члены, позволяющие производить доступ к дополнительным сведениям о результате запроса.  
   
--   <xref:System.Data.Services.Client.OperationResponse.Error%2A> — возвращает ошибку, инициируемую операцией, если ошибка возникает.  
+-   <xref:System.Data.Services.Client.OperationResponse.Error%2A> — Возвращает ошибку, активированную операцией, если ошибка.  
   
--   <xref:System.Data.Services.Client.OperationResponse.Headers%2A> — содержит коллекцию заголовков ответов HTTP, связанных с ответом на запрос.  
+-   <xref:System.Data.Services.Client.OperationResponse.Headers%2A> -содержит коллекцию заголовков ответов HTTP, связанный с ответом на запрос.  
   
--   <xref:System.Data.Services.Client.QueryOperationResponse.Query%2A> — возвращает исходный объект <xref:System.Data.Services.Client.DataServiceQuery%601>, создавший ответ <xref:System.Data.Services.Client.QueryOperationResponse%601>.  
+-   <xref:System.Data.Services.Client.QueryOperationResponse.Query%2A> — Возвращает исходный <xref:System.Data.Services.Client.DataServiceQuery%601> , создавшего <xref:System.Data.Services.Client.QueryOperationResponse%601>.  
   
--   <xref:System.Data.Services.Client.OperationResponse.StatusCode%2A> — возвращает код ответа HTTP для ответа на запрос.  
+-   <xref:System.Data.Services.Client.OperationResponse.StatusCode%2A> — Возвращает код ответа HTTP для ответа на запрос.  
   
--   <xref:System.Data.Services.Client.QueryOperationResponse%601.TotalCount%2A> — возвращает общее число сущностей в наборе сущностей, если метод <xref:System.Data.Services.Client.DataServiceQuery%601.IncludeTotalCount%2A> вызван на клиенте <xref:System.Data.Services.Client.DataServiceQuery%601>.  
+-   <xref:System.Data.Services.Client.QueryOperationResponse%601.TotalCount%2A> — Возвращает общее количество сущностей в сущности устанавливается, когда <xref:System.Data.Services.Client.DataServiceQuery%601.IncludeTotalCount%2A> метод был вызван для <xref:System.Data.Services.Client.DataServiceQuery%601>.  
   
--   <xref:System.Data.Services.Client.QueryOperationResponse.GetContinuation%2A> — возвращает объект <xref:System.Data.Services.Client.DataServiceQueryContinuation>, который содержит URI следующей страницы результатов.  
+-   <xref:System.Data.Services.Client.QueryOperationResponse.GetContinuation%2A> — Возвращает <xref:System.Data.Services.Client.DataServiceQueryContinuation> объект, который содержит URI следующей страницы результатов.  
   
  По умолчанию [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] возвращает только данные, явно выбранные URI запроса. Это дает возможность явно загрузить дополнительные данные из службы данных, если это необходимо. Запрос отправляется в службу данных при каждой явной загрузке данных из службы данных. Данные, которые можно явно загрузить, включают связанные сущности, разбитые на страницы данные ответа и потоки двоичных данных.  
   
@@ -134,13 +134,14 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
  [Практическое руководство. Добавление параметров запроса к запросу службы данных](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)  
   
- [Практическое руководство. Определения количества сущностей, возвращаемых запросом](../../../../docs/framework/data/wcf/number-of-entities-returned-by-a-query-wcf.md)  
+ [Практическое руководство. Определение количества сущностей, возвращаемых запросом](../../../../docs/framework/data/wcf/number-of-entities-returned-by-a-query-wcf.md)  
   
- [Практическое руководство. Укажите, что запрос учетных данных клиента для службы данных](../../../../docs/framework/data/wcf/specify-client-creds-for-a-data-service-request-wcf.md)  
+ [Практическое руководство. Указание учетных данных клиента для запроса службы данных](../../../../docs/framework/data/wcf/specify-client-creds-for-a-data-service-request-wcf.md)  
   
- [Практическое руководство. Задать заголовки в клиентском запросе](../../../../docs/framework/data/wcf/how-to-set-headers-in-the-client-request-wcf-data-services.md)  
+ [Практическое руководство. Установка заголовков в клиентском запросе](../../../../docs/framework/data/wcf/how-to-set-headers-in-the-client-request-wcf-data-services.md)  
   
- [Практическое руководство. Спроецировать результаты запроса](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)  
+ [Практическое руководство. Проекция результатов запроса](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)  
   
 ## <a name="see-also"></a>См. также
+
 - [Библиотека клиентов служб данных WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

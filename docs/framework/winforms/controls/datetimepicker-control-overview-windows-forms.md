@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DateTimePicker control [Windows Forms], about
 - date and time picker controls
 ms.assetid: 501af106-e9fc-4efc-b9b3-c9d8dcaf8c5c
-ms.openlocfilehash: 1d2e286e3ce91c722be24f059a874b9db5f2ba82
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 451172b51427e4932470c53737c7bc276920271c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703184"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173603"
 ---
 # <a name="datetimepicker-control-overview-windows-forms"></a>Общие сведения об элементе управления DateTimePicker (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.DateTimePicker> управления позволяет пользователю выбрать один элемент из списка дат или времени. При использовании для представления даты, он отображается в виде двух частей: раскрывающегося списка с датой, представленных в текст и сетки, которая появляется, если щелкнуть стрелку вниз рядом со списком. Сетка выглядит аналогично <xref:System.Windows.Forms.MonthCalendar> элемент управления, который может использоваться для выбора нескольких дат. Дополнительные сведения о <xref:System.Windows.Forms.MonthCalendar> управления, см. в разделе [Обзор элемента управления MonthCalendar](monthcalendar-control-overview-windows-forms.md).  
@@ -25,5 +25,6 @@ Windows Forms <xref:System.Windows.Forms.DateTimePicker> управления п
  Элемент управления <xref:System.Windows.Forms.DateTimePicker.MaxDate%2A> и <xref:System.Windows.Forms.DateTimePicker.MinDate%2A> определяют диапазон дат и времени. <xref:System.Windows.Forms.DateTimePicker.Value%2A> Свойство содержит текущую дату и время, элемент управления имеет значение. Подробную информацию см. в разделе [Практическое руководство. Отображение и ввод дат с помощью Windows Forms элемента управления DateTimePicker](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md). Значения могут отображаться в четырех форматов, которые задаются <xref:System.Windows.Forms.DateTimePicker.Format%2A> свойство: <xref:System.Windows.Forms.DateTimePickerFormat.Long>, <xref:System.Windows.Forms.DateTimePickerFormat.Short>, <xref:System.Windows.Forms.DateTimePickerFormat.Time>, или <xref:System.Windows.Forms.DateTimePickerFormat.Custom>. Если выбран пользовательский формат, необходимо задать <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> свойство соответствующую строку. Подробную информацию см. в разделе [Практическое руководство. Отображение даты в пользовательском формате с элемента управления DateTimePicker в Windows Forms](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md).  
   
 ## <a name="see-also"></a>См. также
-- [Практическое руководство. Отображение даты в пользовательском формате с элемента управления DateTimePicker в Windows Forms](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)
-- [Практическое руководство. Задайте и возвращаемого значения дат с помощью элемента управления DateTimePicker в Windows Forms](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)
+
+- [Практическое руководство. Отображение даты в пользовательском формате с помощью элемента управления DateTimePicker в Windows Forms](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)
+- [Практическое руководство. Отображение и ввод дат с помощью элемента управления DateTimePicker в Windows Forms](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)

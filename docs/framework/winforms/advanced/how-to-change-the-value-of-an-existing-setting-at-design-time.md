@@ -1,18 +1,18 @@
 ---
-title: 'Как выполнить: Изменить значение существующего параметра во время разработки'
+title: 'Как выполнить: Изменение значения существующего параметра во время разработки'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application settings [Windows Forms], design time
 - application settings [Windows Forms], changing
 ms.assetid: 5da91272-ad7e-49e7-9d1f-eb64439a1e4d
-ms.openlocfilehash: f9a7f5aefc07bb9700e0b0b59684e5882d7109b2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 00c1a58bd58b67f35d6e5782f53eb15693485ca5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722702"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194244"
 ---
-# <a name="how-to-change-the-value-of-an-existing-setting-at-design-time"></a>Как выполнить: Изменить значение существующего параметра во время разработки
+# <a name="how-to-change-the-value-of-an-existing-setting-at-design-time"></a>Как выполнить: Изменение значения существующего параметра во время разработки
 Visual Studio можно использовать для изменения значений существующих параметров в проекте.  
   
 ### <a name="to-change-the-value-of-an-existing-setting-at-design-time-in-c"></a>Чтобы изменить значение существующего параметра во время разработки на языке C\#
@@ -32,6 +32,7 @@ Visual Studio можно использовать для изменения зн
 3.  В конструкторе параметров найти нужный параметр, для которого требуется изменить значение и введите новое значение в столбце.  
   
 ## <a name="see-also"></a>См. также
+
 - [Использование параметров приложения и параметров пользователя](using-application-settings-and-user-settings.md)
-- [Практическое руководство. Создание новых параметров во время разработки](how-to-create-a-new-setting-at-design-time.md)
+- [Как выполнить: Создание нового параметра во время разработки](how-to-create-a-new-setting-at-design-time.md)
 - [Общие сведения о параметрах приложений](application-settings-overview.md)

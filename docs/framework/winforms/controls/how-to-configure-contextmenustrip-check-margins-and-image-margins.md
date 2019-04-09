@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Руководство Настройка полей флажков и значков
+title: Практическое руководство. Настройка полей флажков и значков для объекта ContextMenuStrip
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - ContextMenuStrips [Windows Forms], configuring check and image margins
 - margins [Windows Forms], setting check and image in Windows Forms ContextMenuStrips
 ms.assetid: 3391c4c2-0c9e-4aa4-9492-13ff7644bdf2
-ms.openlocfilehash: 8527c8f2195c586ba7d9c61c5c2ea1fa26bf53f8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0e78ed960904baaead8e8d23b51c97cf2edfd4ee
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715222"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189650"
 ---
-# <a name="how-to-configure-contextmenustrip-check-margins-and-image-margins"></a>Практическое руководство. Руководство Настройка полей флажков и значков
+# <a name="how-to-configure-contextmenustrip-check-margins-and-image-margins"></a>Практическое руководство. Настройка полей флажков и значков для объекта ContextMenuStrip
 Элемент управления <xref:System.Windows.Forms.ContextMenuStrip> можно настраивать, устанавливая свойства <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowImageMargin%2A> и <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowCheckMargin%2A> в различных сочетаниях.   
   
 ## <a name="example"></a>Пример  
@@ -35,6 +35,7 @@ ms.locfileid: "57715222"
  Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.ContextMenuStrip>
 - <xref:System.Windows.Forms.ToolStripDropDown>
 - [Элемент управления ToolStrip](toolstrip-control-windows-forms.md)

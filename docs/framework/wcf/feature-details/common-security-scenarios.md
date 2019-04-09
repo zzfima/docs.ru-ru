@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WCF], scenarios
 ms.assetid: 201923b5-5162-4a8a-8d4c-e7bd242748d5
-ms.openlocfilehash: 094e71d2f84dff482c689ef1475697d93ce889b2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af58d6b529fba32380bedb9a892a2b1fd4807d96
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596167"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199275"
 ---
 # <a name="common-security-scenarios"></a>Типовые сценарии безопасности
 В подразделах этого раздела рассматривается множество возможных конфигураций безопасности клиентов и служб. Конфигурация зависит от ряда факторов: например, находится ли служба или клиент в интрасети, или чем обеспечивается безопасность - Windows или транспортом (таким как HTTPS).  
@@ -48,7 +48,7 @@ ms.locfileid: "54596167"
  [Безопасность сообщений с использованием клиента Windows без согласования учетных данных](../../../../docs/framework/wcf/feature-details/message-security-with-a-windows-client-without-credential-negotiation.md)  
  Клиент и служба, защищенные доменом Kerberos.  
   
- [Безопасность сообщений с взаимными сертификатами](../../../../docs/framework/wcf/feature-details/message-security-with-mutual-certificates.md)  
+ [Безопасность сообщений с использованием взаимных сертификатов](../../../../docs/framework/wcf/feature-details/message-security-with-mutual-certificates.md)  
  Серверы имеют сертификаты и каждый клиент имеет сертификат. Сертификат сервера распространяется вместе с приложением и доступен внештатно.  
   
  [Безопасность сообщений с использованием выданных маркеров](../../../../docs/framework/wcf/feature-details/message-security-with-issued-tokens.md)  
@@ -71,7 +71,7 @@ ms.locfileid: "54596167"
   
  [Защита служб и клиентов](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
   
- [Authentication](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
+ [Проверка подлинности](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
   
  [Авторизация](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
   
@@ -80,5 +80,6 @@ ms.locfileid: "54596167"
  [Аудит](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
   
 ## <a name="see-also"></a>См. также
+
 - [Руководство и рекомендации по безопасности](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)
 - [Модель безопасности для Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

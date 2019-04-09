@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
-ms.openlocfilehash: 759a5dd4cecbaf804d1ccf29fa504c2f5e1ad7f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9fa6e4114e9579079705700708840f2814b03b99
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566747"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186879"
 ---
 # <a name="specifying-service-run-time-behavior"></a>Указание поведения службы во время выполнения
 После создания ([Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)) и реализации ([Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)) контракта службы можно переходить к настройке рабочего поведения для среды выполнения службы. В этом разделе рассматриваются предоставляемые системой поведения служб и операций, а также указывается, где можно найти дополнительные сведения по созданию новых поведений. Хотя некоторые поведения применяются как атрибуты, многие поведения применяются с помощью файла конфигурации приложения или программно. Дополнительные сведения о настройке приложения службы, см. в разделе [Настройка служб](../../../docs/framework/wcf/configuring-services.md).  
@@ -121,5 +121,6 @@ ms.locfileid: "54566747"
 -   <xref:System.ServiceModel.TransactionFlowAttribute>. Задает уровень, на котором операция службы принимает заголовок транзакции.  
   
 ## <a name="see-also"></a>См. также
+
 - [Настройка служб](../../../docs/framework/wcf/configuring-services.md)
 - [Практическое руководство. Управление созданием экземпляров служб](../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)

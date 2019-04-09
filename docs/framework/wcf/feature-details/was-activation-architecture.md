@@ -2,12 +2,12 @@
 title: Архитектура активации WAS
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-ms.openlocfilehash: 71546bf6fb13c9d2fecf09b79460a953f60e4e3b
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 9c1af21782b377a9fb01cbd05e4fe61f6a69f3ac
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465763"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134060"
 ---
 # <a name="was-activation-architecture"></a>Архитектура активации WAS
 В настоящем разделе перечисляются и обсуждаются компоненты службы активации процесса Windows (также известной как WAS).  
@@ -86,5 +86,6 @@ ms.locfileid: "58465763"
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Настройка WAS для использования с WCF](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)
-- [Функции размещения Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)
+- [Возможности размещения Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)

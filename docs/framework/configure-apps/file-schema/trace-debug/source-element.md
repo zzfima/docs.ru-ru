@@ -1,5 +1,5 @@
 ---
-title: Элемент <source>
+title: <source> Элемент
 ms.date: 09/29/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source
@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - <source> element
 - source element
-ms.openlocfilehash: a528e0f77efea6df7379a0f01495bc09d2ed0b24
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 8860f5d3ed7ee0c04d1e8afd7614f3f73b470808
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254487"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186554"
 ---
 # <a name="source-element"></a>\<Источник > элемент
 Содержит источник трассировки, который инициирует сообщения трассировки.  
@@ -44,13 +44,13 @@ ms.locfileid: "55254487"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
-|[\<listeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-source.md)|Содержит прослушиватели, сбора, хранения и маршрутизации сообщений.|  
+|[\<прослушиватели >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-source.md)|Содержит прослушиватели, сбора, хранения и маршрутизации сообщений.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`system.diagnostics`|Задает прослушиватели трассировки, собирающие, хранящие и маршрутизирующие сообщения, а также уровень, на котором установлен ключ трассировки.|  
@@ -83,5 +83,6 @@ ms.locfileid: "55254487"
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Схема параметров трассировки и отладки](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
 - [Переключатели трассировки](../../../../../docs/framework/debug-trace-profile/trace-switches.md)

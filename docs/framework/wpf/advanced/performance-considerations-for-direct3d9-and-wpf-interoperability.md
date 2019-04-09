@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF [WPF], Direct3D9 interop performance
 - Direct3D9 [WPF interoperability], performance
 ms.assetid: ea8baf91-12fe-4b44-ac4d-477110ab14dd
-ms.openlocfilehash: fd3c99f22a1d097c82494ba6eff344820162ed87
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 1371fa901bebc503a0091f3229a8fd7e6ccc2c86
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356732"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162637"
 ---
 # <a name="performance-considerations-for-direct3d9-and-wpf-interoperability"></a>Вопросы производительности, связанные с взаимодействием Direct3D9 и WPF
 С помощью можно разместить содержимого Direct3D9 <xref:System.Windows.Interop.D3DImage> класса. Размещение содержимого Direct3D9 может повлиять на производительность приложения. В этом разделе описываются рекомендации по оптимизации производительности при размещении содержимого Direct3D9 в приложении Windows Presentation Foundation (WPF). Эти рекомендации о том, как использовать <xref:System.Windows.Interop.D3DImage> и рекомендации, когда вы используете Windows Vista, Windows XP, и нескольких мониторов.  
@@ -60,7 +60,8 @@ ms.locfileid: "57356732"
 |D3DFMT_A8R8G8B8 (блокируемый)|**Обновление оборудования**|Обновление программного обеспечения|**Обновление оборудования**|Обновление программного обеспечения|  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Interop.D3DImage>
 - [Взаимодействие WPF и Direct3D9](wpf-and-direct3d9-interoperation.md)
-- [Пошаговое руководство: Создание содержимого Direct3D9 для размещения в WPF](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
-- [Пошаговое руководство: Размещение содержимого Direct3D9 в WPF](walkthrough-hosting-direct3d9-content-in-wpf.md)
+- [Пошаговое руководство. Создание содержимого Direct3D9 для размещения в WPF](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
+- [Пошаговое руководство. Размещение содержимого Direct3D9 в WPF](walkthrough-hosting-direct3d9-content-in-wpf.md)

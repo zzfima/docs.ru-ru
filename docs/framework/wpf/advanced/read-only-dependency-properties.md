@@ -5,18 +5,16 @@ helpviewer_keywords:
 - dependency properties [WPF], read-only
 - read-only dependency properties [WPF]
 ms.assetid: f23d6ec9-3780-4c09-a2ff-b2f0a2deddf1
-ms.openlocfilehash: 9aeeab95342bce94c53e89229003f55009118f96
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 45385e3e3eb8e756008a0d9ef560e061f9a31964
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379016"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162427"
 ---
 # <a name="read-only-dependency-properties"></a>Свойства зависимости "только для чтения"
 В этом разделе описываются свойства зависимостей "только для чтения", включая существующие свойства зависимостей "только для чтения", а также сценарии и методы создания настраиваемого свойства зависимостей "только для чтения".  
-  
 
-  
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Предварительные требования  
  В этом разделе предполагается, что вы понимаете основные сценарии реализации свойства зависимостей и способы применения метаданных к настраиваемому свойству зависимостей. Дополнительные сведения см. в разделах [Пользовательские свойства зависимостей](custom-dependency-properties.md) и [Метаданные свойства зависимостей](dependency-property-metadata.md).  
@@ -44,6 +42,7 @@ ms.locfileid: "57379016"
  Поскольку <xref:System.Windows.DependencyPropertyKey> является закрытым и не распространяется системой свойств вне кода, свойство зависимостей только для чтения иметь лучшую безопасность настройки, чем свойство зависимости для чтения и записи. Для свойства зависимостей с возможностью чтения и записи идентифицирующее поле является явно или неявно общим, и таким образом, свойство является широко устанавливаемым. Дополнительные сведения см. в разделе [Безопасность свойства зависимостей](dependency-property-security.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения о свойствах зависимости](dependency-properties-overview.md)
 - [Пользовательские свойства зависимостей](custom-dependency-properties.md)
 - [Стилизация и использование шаблонов](../controls/styling-and-templating.md)

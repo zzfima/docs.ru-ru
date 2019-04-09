@@ -2,12 +2,12 @@
 title: Разработка каналов
 ms.date: 03/30/2017
 ms.assetid: 0513af9f-a0c2-457b-9a50-5b6bfee48513
-ms.openlocfilehash: 74a54972ffa7d00d702a2339665d18acdcbf93ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 1922f5158d72bc5bc443e92c6eabb28510dec0ae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519142"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175205"
 ---
 # <a name="developing-channels"></a>Разработка каналов
 Для разработки протокола или транспорта канала, который может использоваться с Windows Communication Foundation (WCF) уровня приложений необходимо выполнить несколько действий. В этом разделе описываются эти действия и указываются конкретные разделы для получения дополнительных сведений. Чтобы понять модель каналов и различных типов, описанных в этом разделе, см. в разделе [Общие сведения о модели каналов](../../../../docs/framework/wcf/extending/channel-model-overview.md). Пример канала транспорта полный, см. в разделе [транспорта: UDP](../../../../docs/framework/wcf/samples/transport-udp.md).  
@@ -34,4 +34,5 @@ ms.locfileid: "54519142"
 4.  Добавьте раздел привязки и элемент конфигурации привязки, чтобы представить привязку системе конфигурации. Дополнительные сведения см. в разделе [конфигурация и поддержка метаданных](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Расширение привязок](../../../../docs/framework/wcf/extending/extending-bindings.md)

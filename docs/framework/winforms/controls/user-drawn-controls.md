@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - user-drawn controls [Windows Forms]
 ms.assetid: 034af4b5-457f-4160-a937-22891817faa8
-ms.openlocfilehash: 1529d4d62004becca4495d96fa893da20caa3954
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 06513fc44782c78d2d69b82130542949519c0107
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709682"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158448"
 ---
 # <a name="user-drawn-controls"></a>Элементы управления, разработанные пользователем
 .NET Framework дает возможность легко разрабатывать собственные элементы управления. Вы можете создать пользовательский элемент управления, который представляет собой набор стандартных элементов управления, связанных с помощью кода, или можно разработать собственный элемент управления с нуля вверх. Можно даже использовать наследование создать элемент управления, который наследует от существующего элемента управления и добавить его функциональные возможности. Какой бы подход, вы используете, платформа .NET Framework предоставляет функциональные возможности для создания пользовательского интерфейса для любого элемента управления, которые можно создать.  
@@ -76,11 +76,12 @@ SetStyle(ControlStyles.ResizeRedraw, true);
 >  Используйте <xref:System.Windows.Forms.Control.Region%2A?displayProperty=nameWithType> свойство для реализации непрямоугольных управления.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.Control.Region%2A>
 - <xref:System.Windows.Forms.ControlStyles>
 - <xref:System.Drawing.Graphics>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
 - <xref:System.Windows.Forms.PaintEventArgs>
-- [Практическое руководство. Создание объектов Graphics для рисования](../advanced/how-to-create-graphics-objects-for-drawing.md)
+- [Практическое руководство. Создание графических объектов для рисования](../advanced/how-to-create-graphics-objects-for-drawing.md)
 - [Составные элементы управления](constituent-controls.md)
-- [Разновидности пользовательских элементов управления](varieties-of-custom-controls.md)
+- [Создание собственных элементов управления](varieties-of-custom-controls.md)

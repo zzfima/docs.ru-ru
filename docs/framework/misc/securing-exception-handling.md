@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c406edcef393d3c2b9e4cf6dbeee9d572c0951f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bc8cd20a4183ffd002f1399b6b50c8956208a21b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679387"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173684"
 ---
 # <a name="securing-exception-handling"></a>Безопасность обработки исключений
 В Visual C++ и Visual Basic, выражение фильтра, расположенное вверх по стеку, выполняется до любого **наконец** инструкции. **Catch** блока, связанного с этим фильтром, выполняется после **наконец** инструкции. Дополнительные сведения см. в разделе [Using User-Filtered исключения](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md). В этом разделе рассматривается влияние на безопасность этого заказа. Рассмотрим следующий пример псевдокода, демонстрирующий порядок, в какие инструкции фильтра и **наконец** запуска инструкций.  
@@ -161,4 +161,5 @@ YourObject.YourMethod()
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Правила написания безопасного кода](../../../docs/standard/security/secure-coding-guidelines.md)

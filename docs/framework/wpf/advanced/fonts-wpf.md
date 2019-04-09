@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - fonts [WPF]
 ms.assetid: 6c766a95-ad03-475e-a36f-2243e9495941
-ms.openlocfilehash: fd3c815b3acd857b193aa02d632a33c96e324885
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: eb8a02445511935d64ebaa6d78d4b05c0b75167e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360983"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169251"
 ---
 # <a name="fonts-wpf"></a>Шрифты (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] включает поддержку представление форматированного текста с помощью [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] шрифты. Стандартный пакет [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] шрифты входит в состав [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)].  
@@ -19,10 +19,11 @@ ms.locfileid: "57360983"
 ## <a name="in-this-section"></a>В этом разделе  
  [Возможности шрифта OpenType](opentype-font-features.md)  
  [Упаковка шрифтов с приложениями](packaging-fonts-with-applications.md)  
- [Пакет образцов шрифтов OpenType](sample-opentype-font-pack.md)  
- [Разделы практического руководства](fonts-how-to-topics.md)  
+ [Образец пакета шрифтов OpenType](sample-opentype-font-pack.md)  
+ [Практические руководства](fonts-how-to-topics.md)  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.FontStyle>
 - <xref:System.Windows.SystemFonts>
 - [Документы в WPF](documents-in-wpf.md)

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: 33f6e5f7929c5a4231c0779964db177f45af6743
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
-ms.translationtype: MT
+ms.openlocfilehash: 7fdc14257d140c92cb2450fc21b44c1f95c75ba8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055213"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189317"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>Общие сведения об элементе управления DataGrid (Windows Forms)
 > [!NOTE]
@@ -140,6 +140,7 @@ ms.locfileid: "59055213"
  Помимо общих событий управления, таких как <xref:System.Windows.Forms.Control.MouseDown>, <xref:System.Windows.Forms.Control.Enter> и <xref:System.Windows.Forms.DataGrid.Scroll>, элемент управления <xref:System.Windows.Forms.DataGrid> поддерживает события, связанные с редактированием и навигацией в сетке. Свойство <xref:System.Windows.Forms.DataGrid.CurrentCell%2A> определяет, какая ячейка выбрана. Событие <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> вызывается, когда пользователь переходит к новой ячейке. При переходе к новой таблице через отношение "родительская-дочерняя" вызывается событие <xref:System.Windows.Forms.DataGrid.Navigate>. Событие <xref:System.Windows.Forms.DataGrid.BackButtonClick> возникает, когда пользователь нажимает кнопку "Назад" при просмотре дочерней таблицы, а событие <xref:System.Windows.Forms.DataGrid.ShowParentDetailsButtonClick> возникает при нажатии значка "показать/скрыть" для родительских строк.  
   
 ## <a name="see-also"></a>См. также
+
 - [Элемент управления DataGrid](datagrid-control-windows-forms.md)
 - [Практическое руководство. Привязка элемента управления DataGrid в Windows Forms к источнику данных](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
 - [Практическое руководство. Добавление таблиц и столбцов в элемент управления DataGrid в Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - graphics [WPF], rendering tiers
 - software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
-ms.openlocfilehash: 1e0050dbf6ec5ade22e3f09ceee66f69826e56df
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 683804acf43065543fa5d4ffb1a5ecf7e5b4c49a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374262"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163180"
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a>Оптимизация производительности: Использование преимуществ оборудования
 Внутренняя архитектура [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] имеет два конвейера отрисовки, оборудования и программного обеспечения. В этом разделе сведения об этих конвейера отрисовки для принятия решений об оптимизации производительности приложений.  
@@ -55,12 +55,13 @@ ms.locfileid: "57374262"
  Дополнительные сведения о [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] уровнях отрисовки см. в разделе [уровни графической отрисовки](graphics-rendering-tiers.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Улучшение производительности приложений WPF](optimizing-wpf-application-performance.md)
 - [Планирование производительности приложения](planning-for-application-performance.md)
 - [Разметка и разработка](optimizing-performance-layout-and-design.md)
 - [Двумерная графика и изображения](optimizing-performance-2d-graphics-and-imaging.md)
 - [Поведение объекта](optimizing-performance-object-behavior.md)
 - [Ресурсы приложений](optimizing-performance-application-resources.md)
-- [Text](optimizing-performance-text.md)
+- [Текста](optimizing-performance-text.md)
 - [Привязка данных](optimizing-performance-data-binding.md)
 - [Дополнительные рекомендации по повышению производительности](optimizing-performance-other-recommendations.md)

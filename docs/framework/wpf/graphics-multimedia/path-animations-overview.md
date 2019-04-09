@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], paths
 - path animations [WPF]
 ms.assetid: 979c732c-df74-47a6-be96-8e07b3707d53
-ms.openlocfilehash: c8e628e11debadb88c365ac95d355f1ee641bdbc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 195af217ddf3a78a0ef1bb54957a65b6ce62deae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367860"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182472"
 ---
 # <a name="path-animations-overview"></a>Общие сведения об анимация с использованием пути
 <a name="introduction"></a> В этом разделе представлены общие сведения об анимациях по контуру, которые позволяют использовать геометрические контуры для формирования выходных значений. Анимации по контуру можно использовать для перемещения или вращения объектов по сложным траекториям.  
@@ -45,11 +45,11 @@ ms.locfileid: "57367860"
   
  Классы анимации по контуру принадлежат <xref:System.Windows.Media.Animation> пространства имен и используется следующее соглашение об именовании:  
   
- *\<Тип>* `AnimationUsingPath`  
+ *\<Тип >* `AnimationUsingPath`  
   
  Где *\<Type>* — тип значения, которое выполняет анимацию класса.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет следующие классы анимации по контуру.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет классы анимации по следующему пути.  
   
 |Тип свойства|Соответствующий класс анимации по контуру|Пример|  
 |-------------------|----------------------------------------|-------------|  
@@ -90,8 +90,9 @@ ms.locfileid: "57367860"
  Дополнительные сведения о синтаксисе пути, который используется в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] пример, см. в разделе [синтаксис разметки пути](path-markup-syntax.md) Обзор.  
   
 ## <a name="see-also"></a>См. также
+
 - [Пример анимации вдоль пути](https://go.microsoft.com/fwlink/?LinkID=160028)
 - [Синтаксис разметки пути](path-markup-syntax.md)
-- [Практические руководства, посвященные анимации по контуру](path-animation-how-to-topics.md)
+- [Практические руководства, посвященные анимации пути](path-animation-how-to-topics.md)
 - [Общие сведения об эффектах анимации](animation-overview.md)
 - [Общие сведения о методах анимации свойств](property-animation-techniques-overview.md)

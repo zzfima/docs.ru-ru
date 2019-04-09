@@ -5,30 +5,30 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 11515b25-ee49-4b1d-9294-a142147c1ec5
-ms.openlocfilehash: adda1bd1f16a43087d43382f9b7476856f4bc5c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 864a9072b38054557b2583f505e6e7827c02d2de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692708"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180756"
 ---
 # <a name="handling-dataadapter-events"></a>Обработка событий DataAdapter
 В ADO.NET <xref:System.Data.Common.DataAdapter> доступно три события, с помощью которых можно реагировать на изменения, внесенные в источник данных. В следующей таблице показаны события `DataAdapter`.  
   
-|Событие|Описание|  
+|событие|Описание|  
 |-----------|-----------------|  
 |`RowUpdating`|Операция UPDATE, INSERT или DELETE над строкой (путем вызова одного из методов `Update`) готова к работе.|  
 |`RowUpdated`|Операция UPDATE, INSERT или DELETE над строкой (путем вызова одного из методов `Update`) завершена.|  
 |`FillError`|Во время операции `Fill` произошла ошибка.|  
   
 ## <a name="rowupdating-and-rowupdated"></a>RowUpdating и RowUpdated  
- Событие `RowUpdating` вызывается перед тем, как любое обновление строки в <xref:System.Data.DataSet> будет обработано в источнике данных. Событие `RowUpdated` вызывается после того, как любое обновление строки из `DataSet` было обработано в источнике данных. Поэтому событие `RowUpdating` позволяет изменить операцию обновления до ее выполнения - выполнить дополнительную обработку при обновлении, сохранить ссылку на обновленную строку, отменить текущее обновление, запланировать его для пакетной обработки впоследствии и т. д. Событие `RowUpdated` может оказаться полезным для обработки ошибок и исключений, возникших в ходе обновления. Сведения об ошибке можно добавить в объект `DataSet`, а также в логику повторов и т. д.  
+ `RowUpdating` Происходит перед выполнением любое обновление строки из <xref:System.Data.DataSet> было обработано в источнике данных. `RowUpdated` возникает после любое обновление строки из `DataSet` было обработано в источнике данных. Поэтому событие `RowUpdating` позволяет изменить операцию обновления до ее выполнения - выполнить дополнительную обработку при обновлении, сохранить ссылку на обновленную строку, отменить текущее обновление, запланировать его для пакетной обработки впоследствии и т. д. `RowUpdated` можно использовать для обработки ошибок и исключений, возникающих во время обновления. Сведения об ошибке можно добавить в объект `DataSet`, а также в логику повторов и т. д.  
   
  К аргументам <xref:System.Data.Common.RowUpdatingEventArgs> и <xref:System.Data.Common.RowUpdatedEventArgs>, передаваемым событиям `RowUpdating` и `RowUpdated`, относятся свойство `Command` со ссылкой на объект `Command`, применяемый для выполнения обновлений, свойство `Row` со ссылкой на объект `DataRow`, содержащий обновленные сведения, свойство `StatementType`, указывающее тип выполняемого обновления, свойство `TableMapping` (если применимо) и свойство `Status` операции.  
   
  С помощью свойства `Status` можно определить, возникла ли в ходе операции ошибка, и при необходимости управлять действиями с текущими и результирующими строками. При выполнении события свойство `Status` совпадает с `Continue` или `ErrorsOccurred`. В следующей таблице показаны значения, которые можно назначить свойству `Status` для управления последующими действиями в ходе обновления.  
   
-|Состояние|Описание|  
+|Status|Описание|  
 |------------|-----------------|  
 |`Continue`|Продолжить операцию обновления.|  
 |`ErrorsOccurred`|Прервать операцию обновления и вызвать исключение.|  
@@ -187,8 +187,9 @@ protected static void FillError(object sender, FillErrorEventArgs args)
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Объекты DataAdapter и DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [Обработка событий наборов данных](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)
-- [Обработка событий DataTable](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)
+- [Обработка событий таблиц данных](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)
 - [События](../../../../docs/standard/events/index.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

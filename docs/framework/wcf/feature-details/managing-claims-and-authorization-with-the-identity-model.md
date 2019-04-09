@@ -8,12 +8,12 @@ helpviewer_keywords:
 - claims [WCF]
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
-ms.openlocfilehash: 1f9881cd1a63e00aaf414f93c91885e57ea0b145
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 568fb1c2a18cfde5b15b844754f4356af0a576a3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540572"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155094"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Управление утверждениями и авторизацией с помощью модели удостоверения
 Авторизация - это процесс определения сущностей, имеющих право изменять, просматривать компьютерный ресурс или получать доступ к нему. Например, в организации только менеджерам может быть разрешен доступ к файлам их сотрудников. Windows Communication Foundation (WCF) поддерживает два механизма выполнения авторизации. Первый механизм позволяет управлять авторизацией с помощью существующих конструкций среды CLR. Второй — модель на основе утверждений, называется *модели удостоверения*. WCF использует модель удостоверения для создания утверждений из входящих сообщений; Классы модели удостоверения можно расширить для поддержки новых типов утверждений для пользовательских схем авторизации. В этом разделе приводятся общие сведения об основных принципах программирования возможности "Модель удостоверения", а также перечисляются наиболее важные классы, используемые этой возможностью.  
@@ -130,7 +130,7 @@ ms.locfileid: "54540572"
 ## <a name="identity-model-programming"></a>Программирование модели удостоверения  
  В приведенной ниже таблице описана объектная модель для программирования расширений модели удостоверения. Все указанные классы существуют в пространстве имен <xref:System.IdentityModel.Policy> или <xref:System.IdentityModel.Claims>.  
   
-|Класс|Описание:|  
+|Класс|Описание|  
 |-----------|-----------------|  
 |Компонент авторизации|Класс модели удостоверения, реализующий интерфейс <xref:System.IdentityModel.Policy.IAuthorizationComponent>.|  
 |<xref:System.IdentityModel.Policy.IAuthorizationComponent>|Интерфейс, обеспечивающий единственное доступное только для чтения свойство строки: Идентификатор Значение этого свойства уникально для каждого экземпляра в системе, которая реализует данный интерфейс.|  
@@ -144,7 +144,7 @@ ms.locfileid: "54540572"
   
  Представленные ниже классы также используются для программирования модели удостоверения, но в пространствах имен <xref:System.IdentityModel.Policy> и <xref:System.IdentityModel.Claims> отсутствуют.  
   
-|Класс|Описание:|  
+|Класс|Описание|  
 |-----------|-----------------|  
 |<xref:System.ServiceModel.ServiceAuthorizationManager>|Класс, предоставляющий метод (<xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>) для выполнения проверок авторизации на основе утверждений для каждой операции в службе. Необходимо выполнить наследование от этого класса и переопределить данный метод.|  
 |<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>|Запечатанный класс, предоставляющий различные свойства, связанные с поведением службы, когда оно относится к авторизации.|  
@@ -153,13 +153,14 @@ ms.locfileid: "54540572"
 ### <a name="significant-members"></a>Важные члены  
  Представленные ниже члены обычно используются для создания новых типов утверждений.  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |<xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>|Производные классы реализуют этот метод для выполнения проверок доступа на основе утверждений до выполнения операций в службе. При принятии решения по проверке доступа могут рассматриваться любые или все сведения в предоставленном контексте <xref:System.ServiceModel.OperationContext> или где-то в другом месте. Если <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> возвращает значение `true`, доступ предоставляется и разрешается выполнение операции. Если `CheckAccessCore` возвращает значение `false`, доступ отклоняется и операция не выполняется. Пример см. в статье [Практическое руководство. Создание пользовательского диспетчера авторизации для службы](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md).|  
 |<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ServiceAuthorizationManager%2A>|Возвращает <xref:System.ServiceModel.ServiceAuthorizationManager> для службы. <xref:System.ServiceModel.ServiceAuthorizationManager> отвечает за принятие решений по авторизации.|  
 |<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ExternalAuthorizationPolicies%2A>|Коллекция пользовательских политик авторизации, заданных для службы. Эти политики оцениваются в дополнение к политикам, связанным с учетными данными во входящих сообщениях.|  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.IdentityModel.Policy.AuthorizationContext>
 - <xref:System.IdentityModel.Claims.Claim>
 - <xref:System.IdentityModel.Policy.EvaluationContext>

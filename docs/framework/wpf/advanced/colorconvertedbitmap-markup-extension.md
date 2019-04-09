@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XAML [WPF], ColorConvertedBitmap markup extension
 - ColorConvertedBitmap markup extension [WPF]
 ms.assetid: 18321c18-c898-4470-93fa-a702b47770c1
-ms.openlocfilehash: e51a39b6516d88f53b54f8ab7c1c0d1ad4c025e1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e8a36a1b8592146eb2474805638cdc3697adb0c4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363882"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172943"
 ---
 # <a name="colorconvertedbitmap-markup-extension"></a>Расширение разметки ColorConvertedBitmap
 Предоставляет способ для указания источника точечного рисунка, который не имеет внедренного профиля. Цвет контекста или профиля определяется [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)], так как источник изображения [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].  
@@ -37,6 +37,7 @@ ms.locfileid: "57363882"
  `ColorConvertedBitmap` является расширением разметки. Расширения разметки обычно реализуются, если требуется заменить значения атрибутов на нелитеральные значения или имена обработчиков и если требуется больше, чем простая настройка преобразователей типов на работу с определенными типами или свойствами. Все расширения разметки в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] используют символы "{" и "}" в синтаксисе их атрибутов, который является соглашением, по которому обработчик [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] распознает, что расширение разметки должно обработать атрибут. Дополнительные сведения см. в разделе [Расширения разметки и XAML WPF](markup-extensions-and-wpf-xaml.md).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Media.Imaging.BitmapImage.UriSource%2A>
 - [Расширения разметки и XAML WPF](markup-extensions-and-wpf-xaml.md)
 - [Общие сведения об обработке изображений](../graphics-multimedia/imaging-overview.md)

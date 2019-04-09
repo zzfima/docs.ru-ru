@@ -2,15 +2,15 @@
 title: Безопасность SQL Server, экспресс-выпуск
 ms.date: 03/30/2017
 ms.assetid: cf9cf6d9-4b05-43e9-ac7b-6cefbfcd6d4e
-ms.openlocfilehash: 73f94d25e90197ade5e27ab6d9ff13602a5c854f
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: f4291de89b397f60aedd35b89d6aa3130d348be5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664254"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174555"
 ---
 # <a name="sql-server-express-security"></a>Безопасность SQL Server, экспресс-выпуск
-Выпуск Microsoft SQL Server Express (SQL Server Express) основан на версии Microsoft SQL Server и поддерживает большинство средств ядра базы данных этой версии. Этот выпуск спроектирован так, что несущественные функции и средства обеспечения сетевого взаимодействия отменены по умолчанию. Благодаря этому уменьшается контактная зона, доступная для атаки со стороны злонамеренного пользователя.  
+Выпуск Microsoft SQL Server Express (SQL Server Express) основан на версии Microsoft SQL Server и поддерживает большинство средств ядра базы данных этой версии. Этот выпуск спроектирован так, что несущественные возможности и средства обеспечения сетевого взаимодействия отменены по умолчанию. Благодаря этому уменьшается контактная зона, доступная для атаки со стороны злонамеренного пользователя.  
   
  Программное обеспечение SQL Server Express обычно устанавливается в виде именованного экземпляра. Стандартное имя экземпляра - `SQLExpress`. Именованный экземпляр определяется по сетевому имени компьютера, а также по имени экземпляра, которое указывается во время установки.  
   
@@ -31,11 +31,12 @@ ms.locfileid: "56664254"
   
 |||  
 |-|-|  
-|[Microsoft SQL Server 2005 Express Edition Books Online](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|Полная документация по выпуску SQL Server 2005 Express.|  
+|[Электронная документация по Microsoft SQL Server 2005 Express Edition](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|Полная документация по выпуску SQL Server 2005 Express.|  
 |[Пользовательские экземпляры для администраторов](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms143684(v=sql.100)) в электронной документации по SQL Server|Описывает, как создать и развернуть пользовательские экземпляры.|  
-|[Пользовательские экземпляры SQL Server Express](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)|Описывает возможности пользовательского экземпляра в приложении ADO.NET. Предоставляет сведения о том, как разрешить пользовательский экземпляр, подключиться к пользовательскому экземпляру с помощью <xref:System.Data.SqlClient.SqlConnection>, а также о времени существования пользовательского экземпляра и сценариях пользовательского экземпляра.|  
+|[Пользовательские экземпляры SQL Server, экспресс-выпуск](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)|Описывает возможности пользовательского экземпляра в приложении ADO.NET. Предоставляет сведения о том, как разрешить пользовательский экземпляр, подключиться к пользовательскому экземпляру с помощью <xref:System.Data.SqlClient.SqlConnection>, а также о времени существования пользовательского экземпляра и сценариях пользовательского экземпляра.|  
   
 ## <a name="see-also"></a>См. также
+
 - [Безопасность SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)
-- [Пользовательские экземпляры SQL Server Express](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Пользовательские экземпляры SQL Server, экспресс-выпуск](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

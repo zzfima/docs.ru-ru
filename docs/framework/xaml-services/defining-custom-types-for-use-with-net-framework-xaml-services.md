@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - defining custom types [XAML Services]
 ms.assetid: c2667cbd-2f46-4a7f-9dfc-53696e35e8e4
-ms.openlocfilehash: fa341b7df32823c653df25ddb0dabcb4658b72b5
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: be9c0e26574a15279ce89af2c7862abaa8713360
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58042626"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164441"
 ---
 # <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a>Определение пользовательских типов для использования со службами XAML .NET Framework
 При определении пользовательских типов, которые являются бизнес-объектов или типов, которые не зависят от конкретных платформ, существуют определенные рекомендации для XAML, необходимо выполнить. При выполнении этих рекомендаций, служб XAML .NET Framework и средства чтения XAML и записи XAML может обнаружить характеристики XAML пользовательского типа и предоставить ему соответствующее представление в потоке узлов XAML использование системы типов XAML. В этом разделе описываются рекомендации для определения типов, определения членов и типов или элементов с атрибутами среды CLR.  
@@ -70,7 +70,7 @@ ms.locfileid: "58042626"
 #### <a name="the-getpropertyname-accessor"></a>Метод доступа GetИмяСвойства  
  Сигнатура для метода доступа `Get`*ИмяСвойства* должна быть следующей.  
   
- `public static object Get` *ИмяСвойства* `(object` `target` `)`  
+ `public static object Get` *PropertyName* `(object`  `target` `)`  
   
 -   Объект `target` можно указать как более конкретный тип в реализации. Это можно использовать для определения области использования присоединяемого члена; Использование за пределами этих границ, исключения недопустимого приведения, которые затем отображаются ошибку синтаксического анализа XAML. Имя параметра `target` не является обязательным, но называется `target` по соглашению в большинстве реализаций.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "58042626"
 #### <a name="the-setpropertyname-accessor"></a>Метод доступа SetИмяСвойства  
  Подпись для набора*PropertyName* должен быть метод доступа:  
   
- `public static void Set` *ИмяСвойства* `(object` `target` `, object` `value` `)`  
+ `public static void Set` *PropertyName* `(object`  `target` `, object`  `value` `)`  
   
 -   `target` Объекта можно указать как более конкретный тип в реализации, с тем же логикой и последствия, как описано в предыдущем разделе.  
   
@@ -115,5 +115,6 @@ ms.locfileid: "58042626"
  В терминах XAML WPF *внутренний тип* — это тип, который определен в сборке, которая также включает ссылающейся XAML. Такого типа могут быть сопоставлены через пространство имен XAML, в котором намеренно пропущены сборки = часть сопоставления, например, `xmlns:local="clr-namespace:WPFApplication1"`.  Если BAML ссылается на внутренний тип, и этот тип имеет `internal` обращаться к уровню, это приводит к возникновению ошибки `GeneratedInternalTypeHelper` класса для сборки. Если вы хотите избежать `GeneratedInternalTypeHelper`, необходимо либо использовать `public` обращаться к уровню, или необходимо выносить соответствующий класс в отдельную сборку и сделать зависимым этой сборки.  
   
 ## <a name="see-also"></a>См. также
+
 - [Относящиеся к XAML атрибуты среды CLR для пользовательских типов и библиотек](xaml-related-clr-attributes-for-custom-types-and-libraries.md)
 - [Службы XAML](index.md)

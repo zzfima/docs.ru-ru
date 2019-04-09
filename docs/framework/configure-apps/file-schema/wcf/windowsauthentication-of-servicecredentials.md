@@ -2,12 +2,12 @@
 title: <windowsAuthentication> из <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: e0709473-0997-4de3-8f49-783527309a48
-ms.openlocfilehash: f366c85f895356594cf8bd9049ca41c8fb458c4c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ffddbae7effabcdafdc2638d588bbbf3e42d2c2a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55280968"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200393"
 ---
 # <a name="windowsauthentication-of-servicecredentials"></a>\<windowsAuthentication > из \<serviceCredentials >
 Задает параметры учетной записи службы Windows.  
@@ -41,7 +41,7 @@ ms.locfileid: "55280968"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<serviceCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|Задает учетные данные, используемые при проверке подлинности службы, а также параметры, относящиеся к проверке учетных данных клиента.|  
   
@@ -49,6 +49,7 @@ ms.locfileid: "55280968"
  Этот элемент используется, чтобы указать, разрешается ли доступ анонимных пользователей Windows путем установки атрибута `allowAnonymousLogons`. Также можно указать, включать ли сведения о группе, к которой принадлежат пользователи в AuthorizationContext, путем установки атрибута `includeWindowsGroups`. Если атрибуту задано значение `true` (по умолчанию), служба может определить группы Windows, к которым принадлежит клиент.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.Configuration.WindowsServiceElement>
 - <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.WindowsAuthentication%2A>
 - <xref:System.ServiceModel.Description.ServiceCredentials.WindowsAuthentication%2A>

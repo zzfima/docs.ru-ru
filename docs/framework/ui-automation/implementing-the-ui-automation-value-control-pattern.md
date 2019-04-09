@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Value control pattern
 - Value control pattern
 ms.assetid: b0fcdd87-3add-4345-bca9-e891205e02ba
-ms.openlocfilehash: 8a306fe648c42e1e94126f10b0d4c92f9dfc8831
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: cccaf1afa55d786e43863e094a9745a0a1d00870
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678085"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174958"
 ---
 # <a name="implementing-the-ui-automation-value-control-pattern"></a>Реализация шаблона элемента управления Value модели автоматизации пользовательского интерфейса
 > [!NOTE]
@@ -36,7 +36,7 @@ ms.locfileid: "57678085"
   
 -   <xref:System.Windows.Automation.Provider.IValueProvider> не поддерживает извлечение сведений о форматировании или значений подстроки. Реализуйте <xref:System.Windows.Automation.Provider.ITextProvider> в этих сценариях.  
   
--   <xref:System.Windows.Automation.Provider.IValueProvider> должен быть реализован такими элементами управления, как **Палитра** из [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] (приведенный ниже), который поддерживает строковое сопоставление между значением цвета (например, "желтый") и эквивалентной внутренней структурой [!INCLUDE[TLA#tla_rgb](../../../includes/tlasharptla-rgb-md.md)] .  
+-   <xref:System.Windows.Automation.Provider.IValueProvider> должен быть реализован элементами управления таких как **палитра цветов** элемент управления для выбора из [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] (приведенный ниже), который поддерживает строковое сопоставление между значением цвета (например, «желтый») и эквивалентное внутренней [!INCLUDE[TLA#tla_rgb](../../../includes/tlasharptla-rgb-md.md)]структуры.  
   
  ![Палитра с отмеченным желтым цветом. ](../../../docs/framework/ui-automation/media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 Пример сопоставления строки настройки цвета  
@@ -49,8 +49,8 @@ ms.locfileid: "57678085"
   
 |Обязательные члены|Тип члена|Примечания|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty>|Свойство.|Нет|  
-|<xref:System.Windows.Automation.ValuePattern.ValueProperty>|Свойство.|Нет|  
+|<xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty>|Свойство|Нет|  
+|<xref:System.Windows.Automation.ValuePattern.ValueProperty>|Свойство|Нет|  
 |<xref:System.Windows.Automation.ValuePattern.SetValue%2A>|Метод|Нет|  
   
 <a name="Exceptions"></a>   
@@ -64,8 +64,9 @@ ms.locfileid: "57678085"
 |<xref:System.Windows.Automation.ElementNotEnabledException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> — Если попытка управлять элементом управления не включена.|  
   
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения о шаблонах элементов управления модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [Поддержка шаблонов элементов управления в поставщике автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
+- [Поддержка шаблонов элементов управления в поставщике модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
 - [Шаблоны элементов управления модели автоматизации пользовательского интерфейса для клиентов](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
 - [Пример вставки ValuePattern текста](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InsertText)
 - [Общие сведения о дереве модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)

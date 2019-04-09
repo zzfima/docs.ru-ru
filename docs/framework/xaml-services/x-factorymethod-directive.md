@@ -6,12 +6,12 @@ helpviewer_keywords:
 - FactoryMethod directive in XAML [XAML Services]
 - x:FactoryMethod directive [XAML Services]
 ms.assetid: 829bcbdf-5318-4afb-9a03-c310e0d2f23d
-ms.openlocfilehash: cb78514540f5f44b07b1fdd16283d26c647a3ac4
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 8fff4d62e07bdfd4ecc27d2692c391251afdd6d5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58034541"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190695"
 ---
 # <a name="xfactorymethod-directive"></a>Директива x:FactoryMethod
 Указывает метод, отличный от конструктора, который процессор XAML должен использовать для инициализации объекта после разрешения его резервного типа.  
@@ -57,4 +57,5 @@ ms.locfileid: "58034541"
  `x:FactoryMethod` как элемент должен предшествовать любых других элементов свойств, должны указываться до любой `x:Arguments` также указанные в качестве элементов и должен предшествовать любой текст содержимого "и" внутренний текст/инициализации.  
   
 ## <a name="see-also"></a>См. также
-- [x:Arguments - директива](x-arguments-directive.md)
+
+- [Директива x:Arguments](x-arguments-directive.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a3a174953877d70a295e659220e71c337e45f392
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 26cd30be591c4167fa6a6e4d19ba9d1c909c6428
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57495238"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145773"
 ---
 # <a name="icordebugnativeframegetlocalregistermemoryvalue-method"></a>Метод ICorDebugNativeFrame::GetLocalRegisterMemoryValue
 Получает значение аргумента или локальной переменной, из которых младшее слово и старшее слово хранятся в расположении в памяти и указанный регистр, соответственно, для данного кадра машинного кода.  
@@ -65,4 +65,3 @@ HRESULT GetLocalRegisterMemoryValue (
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
-

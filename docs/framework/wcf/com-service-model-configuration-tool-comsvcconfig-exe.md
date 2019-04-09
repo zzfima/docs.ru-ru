@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: 7717c6c2-85fc-418b-a8ed-bad8e61cec5c
-ms.openlocfilehash: 7c536c9420e94e9b8f8bc2656df284d95a9744c7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d0967355e64640e0fd5c81f04a5bf4f33c7b3f7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568196"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158669"
 ---
 # <a name="com-service-model-configuration-tool-comsvcconfigexe"></a>Программа командной строки настройки модели служб COM+ (ComSvcConfig.exe)
 Программа командной строки для настройки модели служб COM+ (ComSvcConfig.exe) позволяет настраивать интерфейсы COM+, которые нужно предоставить как веб-службы.  
@@ -34,7 +34,7 @@ ComSvcConfig.exe /install | /uninstall | /list [/application:<ApplicationID | Ap
   
  В следующей таблице представлены режимы, которые могут использоваться с ComSvcConfig.exe.  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |------------|-----------------|  
 |`install`|Устанавливает конфигурацию для интерфейса COM+ для интеграции Service Model.<br /><br /> Краткая форма: `/i`.|  
 |`uninstall`|Удаляет конфигурацию для интерфейса COM+ из интеграции Service Model.<br /><br /> Краткая форма: `/u`.|  
@@ -58,7 +58,7 @@ ComSvcConfig.exe /install | /uninstall | /list [/application:<ApplicationID | Ap
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="description"></a>Описание:  
+### <a name="description"></a>Описание  
  В следующем примере с помощью режима размещения COM+ выполняется добавление интерфейса `IFinances` компонента `ItemOrders.IFinancial` (из приложения COM+ OnlineStore) в набор интерфейсов, предоставляемых как веб-службы. В дополнение к любым обнаруженным ошибкам выводятся все предупреждения.  
   
 ### <a name="code"></a>Код  
@@ -67,7 +67,7 @@ ComSvcConfig.exe /install | /uninstall | /list [/application:<ApplicationID | Ap
 ComSvcConfig.exe /install /application:OnlineStore /contract:ItemOrders.Financial,IFinances /hosting:complus /verbose  
 ```  
   
-### <a name="description"></a>Описание:  
+### <a name="description"></a>Описание  
  В следующем примере с помощью режима размещения на веб-сервере выполняется добавление интерфейса `IStockLevels` компонента `ItemInventory.Warehouse` (из приложения COM+ OnlineWarehouse) в набор интерфейсов, предоставляемых как веб-службы. Веб-служба размещается в виртуальном каталоге OnlineWarehouse в IIS.  
   
 ### <a name="code"></a>Код  
@@ -76,7 +76,7 @@ ComSvcConfig.exe /install /application:OnlineStore /contract:ItemOrders.Financia
 ComSvcConfig.exe /install /application:OnlineWarehouse /contract:ItemInventory.Warehouse,IStockLevels /hosting:was /webDirectory:root/OnlineWarehouse  
 ```  
   
-### <a name="description"></a>Описание:  
+### <a name="description"></a>Описание  
  В следующем примере выполняется удаление интерфейса `IFinances` компонента `ItemOrders.Financial` (из приложения COM+ OnlineStore) из набора интерфейсов, предоставляемых как веб-службы.  
   
 ### <a name="code"></a>Код  
@@ -85,7 +85,7 @@ ComSvcConfig.exe /install /application:OnlineWarehouse /contract:ItemInventory.W
 ComSvcConfig.exe /uninstall /application:OnlineStore /interface:ItemOrders.Financial,IFinances /hosting:complus  
 ```  
   
-### <a name="description"></a>Описание:  
+### <a name="description"></a>Описание  
  В следующем примере выводится список предоставляемых в данный момент интерфейсов, размещенных в COM+, а также соответствующий адрес и сведения о привязке для приложения COM+ OnlineStore на локальном компьютере.  
   
 ### <a name="code"></a>Код  
@@ -95,4 +95,5 @@ ComSvcConfig.exe /list /application:OnlineStore /hosting:complus
 ```  
   
 ## <a name="see-also"></a>См. также
-- [Практическое руководство. Используйте средство настройки модели служб COM +](../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)
+
+- [Практическое руководство. Использование программы командной строки настройки модели служб COM+](../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)

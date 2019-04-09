@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [WPF], ObservableCollection class
 - notifications [WPF]
 ms.assetid: 6cf7e275-df76-41c6-a611-53b889b8fd5a
-ms.openlocfilehash: 10cea133651739df8bb8e27c58221b34067782f5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 45f8b097bfdb8d3d7994e53ea05146aa6de0fc21
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376121"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188439"
 ---
 # <a name="how-to-create-and-bind-to-an-observablecollection"></a>Практическое руководство. Создание и привязка ObservableCollection
 В этом примере показано, как создать и выполнить привязку к коллекции, который является производным от <xref:System.Collections.ObjectModel.ObservableCollection%601> класс, который является классом коллекции, которая выдает уведомления при добавлении или удалении элементов.  
@@ -141,8 +141,9 @@ End Class
  Дополнительные сведения см. в разделе "Привязка к коллекциям" в разделе [Общие сведения о привязке данных](data-binding-overview.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Сортировка данных в представлении](how-to-sort-data-in-a-view.md)
 - [Фильтрация данных в представлении](how-to-filter-data-in-a-view.md)
 - [Сортировка и группировка данных с помощью представления в XAML](how-to-sort-and-group-data-using-a-view-in-xaml.md)
 - [Общие сведения о привязке данных](data-binding-overview.md)
-- [Разделы практического руководства](data-binding-how-to-topics.md)
+- [Практические руководства](data-binding-how-to-topics.md)

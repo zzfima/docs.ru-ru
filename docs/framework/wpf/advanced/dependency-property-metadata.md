@@ -7,18 +7,16 @@ helpviewer_keywords:
 - metadata [WPF], for dependency properties
 - overriding metadata [WPF]
 ms.assetid: d01ed009-b722-41bf-b82f-fe1a8cdc50dd
-ms.openlocfilehash: 7a9f4c2c8c9ff6c315b9d7189d5e859a902c3e4d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 98f8c6611340c89409697918ff8a16eaabe3c7a3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352937"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170369"
 ---
 # <a name="dependency-property-metadata"></a>Метаданные свойства зависимости
 Система свойств [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] включает систему отчетности по метаданным, которая выходит за пределы стандартной отчетности о свойстве, отражая общие характеристики [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]. Метаданные для свойства зависимости также можно уникально назначить для отдельного класса, который определяет свойство зависимости, можно изменить, когда свойство зависимости добавляется в другой класс, и можно переопределить, в частности, всеми производными классами, наследующими свойство зависимости от определяющего базового класса.  
-  
- 
-  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Предварительные требования  
  Предполагается, что вы имеете представление о свойствах зависимостей с точки зрения потребителя существующих свойств зависимостей в классах [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] и ознакомились с разделом [Общие сведения о свойствах зависимостей](dependency-properties-overview.md). Чтобы выполнить примеры в этом разделе, следует также иметь представление о [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] и написании приложений [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -92,6 +90,7 @@ ms.locfileid: "57352937"
  Вы можете вызвать <xref:System.Windows.DependencyProperty.AddOwner%2A> для свойства зависимостей, определенный классом-владельцем как вложенное свойство. Обычно так делают, чтобы предоставить ранее вложенное свойство в качестве невложенного свойства зависимости. Затем будет предоставлять <xref:System.Windows.DependencyProperty.AddOwner%2A> возвратить значение `public static readonly` поле для использования в качестве идентификатора свойства зависимости и будут определены соответствующие «оболочки» свойства, чтобы свойство появится в таблице элементов и поддерживает невложенного свойства Использование в вашем классе.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.PropertyMetadata>
 - <xref:System.Windows.DependencyObject>
 - <xref:System.Windows.DependencyProperty>
