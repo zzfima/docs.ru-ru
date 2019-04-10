@@ -12,21 +12,21 @@ helpviewer_keywords:
 - images [Windows Forms], Windows Forms controls
 - examples [Windows Forms], controls
 ms.assetid: 9445af8f-4f62-48b0-a3f6-068058964b9f
-ms.openlocfilehash: 031ddcb3b852e75353fed7420735350e79f23df3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1de835bda5ac906837ac3fbd97b87f68f14d1953
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59085094"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333929"
 ---
-# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a><span data-ttu-id="e13b4-102">Практическое руководство. Задание изображения, отображаемого элементом управления Windows Forms</span><span class="sxs-lookup"><span data-stu-id="e13b4-102">How to: Set the Image Displayed by a Windows Forms Control</span></span>
-<span data-ttu-id="e13b4-103">Несколько элементов управления Windows Forms можно отображать изображения.</span><span class="sxs-lookup"><span data-stu-id="e13b4-103">Several Windows Forms controls can display images.</span></span> <span data-ttu-id="e13b4-104">Эти образы могут использоваться значки, объяснение назначения элемента управления, такие как значок дискеты на кнопку, обозначающая **Сохранить** команды.</span><span class="sxs-lookup"><span data-stu-id="e13b4-104">These images can be icons that clarify the purpose of the control, such as a diskette icon on a button denoting the **Save** command.</span></span> <span data-ttu-id="e13b4-105">Кроме того значок может быть фоновые изображения, чтобы предоставить элемент управления, внешний вид и поведение.</span><span class="sxs-lookup"><span data-stu-id="e13b4-105">Alternatively, the icons can be background images to give the control the appearance and behavior you want.</span></span>  
+# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a><span data-ttu-id="2806f-102">Практическое руководство. Задание изображения, отображаемого элементом управления Windows Forms</span><span class="sxs-lookup"><span data-stu-id="2806f-102">How to: Set the Image Displayed by a Windows Forms Control</span></span>
+<span data-ttu-id="2806f-103">Несколько элементов управления Windows Forms можно отображать изображения.</span><span class="sxs-lookup"><span data-stu-id="2806f-103">Several Windows Forms controls can display images.</span></span> <span data-ttu-id="2806f-104">Эти образы могут использоваться значки, объяснение назначения элемента управления, такие как значок дискеты на кнопку, обозначающая **Сохранить** команды.</span><span class="sxs-lookup"><span data-stu-id="2806f-104">These images can be icons that clarify the purpose of the control, such as a diskette icon on a button denoting the **Save** command.</span></span> <span data-ttu-id="2806f-105">Кроме того значок может быть фоновые изображения, чтобы предоставить элемент управления, внешний вид и поведение.</span><span class="sxs-lookup"><span data-stu-id="2806f-105">Alternatively, the icons can be background images to give the control the appearance and behavior you want.</span></span>  
   
-### <a name="to-set-the-image-displayed-by-a-control"></a><span data-ttu-id="e13b4-106">Чтобы задать изображение, отображаемое элементом управления</span><span class="sxs-lookup"><span data-stu-id="e13b4-106">To set the image displayed by a control</span></span>  
+### <a name="to-set-the-image-displayed-by-a-control"></a><span data-ttu-id="2806f-106">Чтобы задать изображение, отображаемое элементом управления</span><span class="sxs-lookup"><span data-stu-id="2806f-106">To set the image displayed by a control</span></span>  
   
-1.  <span data-ttu-id="e13b4-107">Задайте в качестве `Image` или `BackgroundImage` свойство для объекта типа <xref:System.Drawing.Image>.</span><span class="sxs-lookup"><span data-stu-id="e13b4-107">Set the control's `Image` or `BackgroundImage` property to an object of type <xref:System.Drawing.Image>.</span></span> <span data-ttu-id="e13b4-108">Как правило, будет загружаться изображения из файла с помощью <xref:System.Drawing.Image.FromFile%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="e13b4-108">Generally, you will be loading the image from a file by using the <xref:System.Drawing.Image.FromFile%2A> method.</span></span>  
+1. <span data-ttu-id="2806f-107">Задайте в качестве `Image` или `BackgroundImage` свойство для объекта типа <xref:System.Drawing.Image>.</span><span class="sxs-lookup"><span data-stu-id="2806f-107">Set the control's `Image` or `BackgroundImage` property to an object of type <xref:System.Drawing.Image>.</span></span> <span data-ttu-id="2806f-108">Как правило, будет загружаться изображения из файла с помощью <xref:System.Drawing.Image.FromFile%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="2806f-108">Generally, you will be loading the image from a file by using the <xref:System.Drawing.Image.FromFile%2A> method.</span></span>  
   
-     <span data-ttu-id="e13b4-109">В следующем примере кода, задайте путь — расположение изображения **Мои рисунки** папки.</span><span class="sxs-lookup"><span data-stu-id="e13b4-109">In the following code example, the path set for the location of the image is the **My Pictures** folder.</span></span> <span data-ttu-id="e13b4-110">Большинство компьютеров под управлением операционной системы Windows, содержат эту папку.</span><span class="sxs-lookup"><span data-stu-id="e13b4-110">Most computers running the Windows operating system will include this directory.</span></span> <span data-ttu-id="e13b4-111">Это также позволяет пользователям со систему с минимальным уровнем доступа безопасно работать приложение.</span><span class="sxs-lookup"><span data-stu-id="e13b4-111">This also enables users with minimal system access levels to run the application safely.</span></span> <span data-ttu-id="e13b4-112">В следующем примере кода требуется наличие формы с помощью <xref:System.Windows.Forms.PictureBox> добавлен элемент управления.</span><span class="sxs-lookup"><span data-stu-id="e13b4-112">The following code example requires that you already have a form with a <xref:System.Windows.Forms.PictureBox> control added.</span></span>  
+     <span data-ttu-id="2806f-109">В следующем примере кода, задайте путь — расположение изображения **Мои рисунки** папки.</span><span class="sxs-lookup"><span data-stu-id="2806f-109">In the following code example, the path set for the location of the image is the **My Pictures** folder.</span></span> <span data-ttu-id="2806f-110">Большинство компьютеров под управлением операционной системы Windows, содержат эту папку.</span><span class="sxs-lookup"><span data-stu-id="2806f-110">Most computers running the Windows operating system will include this directory.</span></span> <span data-ttu-id="2806f-111">Это также позволяет пользователям со систему с минимальным уровнем доступа безопасно работать приложение.</span><span class="sxs-lookup"><span data-stu-id="2806f-111">This also enables users with minimal system access levels to run the application safely.</span></span> <span data-ttu-id="2806f-112">В следующем примере кода требуется наличие формы с помощью <xref:System.Windows.Forms.PictureBox> добавлен элемент управления.</span><span class="sxs-lookup"><span data-stu-id="2806f-112">The following code example requires that you already have a form with a <xref:System.Windows.Forms.PictureBox> control added.</span></span>  
   
     ```vb  
     ' Replace the image named below  
@@ -56,7 +56,7 @@ ms.locfileid: "59085094"
        "\\Image.gif"));  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="e13b4-113">См. также</span><span class="sxs-lookup"><span data-stu-id="e13b4-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2806f-113">См. также</span><span class="sxs-lookup"><span data-stu-id="2806f-113">See also</span></span>
 
 - <xref:System.Drawing.Image.FromFile%2A>
 - <xref:System.Drawing.Image>

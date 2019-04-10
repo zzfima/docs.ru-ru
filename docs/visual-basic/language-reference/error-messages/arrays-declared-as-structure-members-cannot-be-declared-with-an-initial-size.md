@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC31043
 ms.assetid: 5bd90c71-1b78-444b-91e1-4789451ef085
-ms.openlocfilehash: 58889809b3d8d0823784279c421a141dc8056984
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 5d58b531b670715716e849cd37227bc899195df6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841970"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335307"
 ---
-# <a name="arrays-declared-as-structure-members-cannot-be-declared-with-an-initial-size"></a><span data-ttu-id="40b27-102">Массивы, объявленные как члены структуры, не могут быть объявлены с указанием начального размера</span><span class="sxs-lookup"><span data-stu-id="40b27-102">Arrays declared as structure members cannot be declared with an initial size</span></span>
-<span data-ttu-id="40b27-103">Массив в структуре объявлена с начальным размером.</span><span class="sxs-lookup"><span data-stu-id="40b27-103">An array in a structure is declared with an initial size.</span></span> <span data-ttu-id="40b27-104">Не удается инициализировать любой элемент структуры и объявить размер массива является одним из инициализации.</span><span class="sxs-lookup"><span data-stu-id="40b27-104">You cannot initialize any structure element, and declaring an array size is one form of initialization.</span></span>  
+# <a name="arrays-declared-as-structure-members-cannot-be-declared-with-an-initial-size"></a><span data-ttu-id="e5351-102">Массивы, объявленные как члены структуры, не могут быть объявлены с указанием начального размера</span><span class="sxs-lookup"><span data-stu-id="e5351-102">Arrays declared as structure members cannot be declared with an initial size</span></span>
+<span data-ttu-id="e5351-103">Массив в структуре объявлена с начальным размером.</span><span class="sxs-lookup"><span data-stu-id="e5351-103">An array in a structure is declared with an initial size.</span></span> <span data-ttu-id="e5351-104">Не удается инициализировать любой элемент структуры и объявить размер массива является одним из инициализации.</span><span class="sxs-lookup"><span data-stu-id="e5351-104">You cannot initialize any structure element, and declaring an array size is one form of initialization.</span></span>  
   
- <span data-ttu-id="40b27-105">**Идентификатор ошибки:** BC31043</span><span class="sxs-lookup"><span data-stu-id="40b27-105">**Error ID:** BC31043</span></span>  
+ <span data-ttu-id="e5351-105">**Идентификатор ошибки:** BC31043</span><span class="sxs-lookup"><span data-stu-id="e5351-105">**Error ID:** BC31043</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="40b27-106">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="40b27-106">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="e5351-106">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="e5351-106">To correct this error</span></span>  
   
-1.  <span data-ttu-id="40b27-107">Определите массив в структуре как динамический (без указания начального размера).</span><span class="sxs-lookup"><span data-stu-id="40b27-107">Define the array in your structure as dynamic (no initial size).</span></span>  
+1. <span data-ttu-id="e5351-107">Определите массив в структуре как динамический (без указания начального размера).</span><span class="sxs-lookup"><span data-stu-id="e5351-107">Define the array in your structure as dynamic (no initial size).</span></span>  
   
-2.  <span data-ttu-id="40b27-108">Если вам требуется определенного размера массива, можно изменить размер динамического массива с [оператор ReDim](../../../visual-basic/language-reference/statements/redim-statement.md) когда ваш код выполняется.</span><span class="sxs-lookup"><span data-stu-id="40b27-108">If you require a certain size of array, you can redimension a dynamic array with a [ReDim Statement](../../../visual-basic/language-reference/statements/redim-statement.md) when your code is running.</span></span> <span data-ttu-id="40b27-109">Это показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="40b27-109">The following example illustrates this.</span></span>  
+2. <span data-ttu-id="e5351-108">Если вам требуется определенного размера массива, можно изменить размер динамического массива с [оператор ReDim](../../../visual-basic/language-reference/statements/redim-statement.md) когда ваш код выполняется.</span><span class="sxs-lookup"><span data-stu-id="e5351-108">If you require a certain size of array, you can redimension a dynamic array with a [ReDim Statement](../../../visual-basic/language-reference/statements/redim-statement.md) when your code is running.</span></span> <span data-ttu-id="e5351-109">Это показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="e5351-109">The following example illustrates this.</span></span>  
   
     ```  
     Structure demoStruct  
@@ -36,7 +36,7 @@ ms.locfileid: "58841970"
     End Sub  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="40b27-110">См. также</span><span class="sxs-lookup"><span data-stu-id="40b27-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e5351-110">См. также</span><span class="sxs-lookup"><span data-stu-id="e5351-110">See also</span></span>
 
-- [<span data-ttu-id="40b27-111">Массивы</span><span class="sxs-lookup"><span data-stu-id="40b27-111">Arrays</span></span>](../../../visual-basic/programming-guide/language-features/arrays/index.md)
-- [<span data-ttu-id="40b27-112">Практическое руководство. Объявление структуры</span><span class="sxs-lookup"><span data-stu-id="40b27-112">How to: Declare a Structure</span></span>](../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
+- [<span data-ttu-id="e5351-111">Массивы</span><span class="sxs-lookup"><span data-stu-id="e5351-111">Arrays</span></span>](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [<span data-ttu-id="e5351-112">Практическое руководство. Объявление структуры</span><span class="sxs-lookup"><span data-stu-id="e5351-112">How to: Declare a Structure</span></span>](../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)

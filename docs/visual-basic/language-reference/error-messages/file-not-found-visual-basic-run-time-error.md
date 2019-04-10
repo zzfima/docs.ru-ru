@@ -4,26 +4,26 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID53
 ms.assetid: 57addb16-6f9a-444d-8af8-dda52431daca
-ms.openlocfilehash: 2cd5bba135284ba72eed595fdfc548cfea63ff70
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: cac84c3fa549760ee92601bbb07a379ea102b6dc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58821898"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333968"
 ---
-# <a name="file-not-found-visual-basic-run-time-error"></a><span data-ttu-id="6b0a9-102">Файл не найден (Ошибка времени выполнения Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6b0a9-102">File not found (Visual Basic Run-Time Error)</span></span>
-<span data-ttu-id="6b0a9-103">Если указано, файл не найден.</span><span class="sxs-lookup"><span data-stu-id="6b0a9-103">The file was not found where specified.</span></span> <span data-ttu-id="6b0a9-104">Ошибка имеет следующие возможные причины:</span><span class="sxs-lookup"><span data-stu-id="6b0a9-104">The error has the following possible causes:</span></span>  
+# <a name="file-not-found-visual-basic-run-time-error"></a><span data-ttu-id="24f79-102">Файл не найден (Ошибка времени выполнения Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="24f79-102">File not found (Visual Basic Run-Time Error)</span></span>
+<span data-ttu-id="24f79-103">Если указано, файл не найден.</span><span class="sxs-lookup"><span data-stu-id="24f79-103">The file was not found where specified.</span></span> <span data-ttu-id="24f79-104">Ошибка имеет следующие возможные причины:</span><span class="sxs-lookup"><span data-stu-id="24f79-104">The error has the following possible causes:</span></span>  
   
--   <span data-ttu-id="6b0a9-105">Инструкция ссылается на файл, который не существует.</span><span class="sxs-lookup"><span data-stu-id="6b0a9-105">A statement refers to a file that does not exist.</span></span>  
+-   <span data-ttu-id="24f79-105">Инструкция ссылается на файл, который не существует.</span><span class="sxs-lookup"><span data-stu-id="24f79-105">A statement refers to a file that does not exist.</span></span>  
   
--   <span data-ttu-id="6b0a9-106">Была предпринята попытка вызова процедуры в библиотеке динамической компоновки (DLL), но библиотека, которая указана в `Lib` предложении `Declare` инструкции не найден.</span><span class="sxs-lookup"><span data-stu-id="6b0a9-106">An attempt was made to call a procedure in a dynamic-link library (DLL), but the library specified in the `Lib` clause of the `Declare` statement cannot be found.</span></span>  
+-   <span data-ttu-id="24f79-106">Была предпринята попытка вызова процедуры в библиотеке динамической компоновки (DLL), но библиотека, которая указана в `Lib` предложении `Declare` инструкции не найден.</span><span class="sxs-lookup"><span data-stu-id="24f79-106">An attempt was made to call a procedure in a dynamic-link library (DLL), but the library specified in the `Lib` clause of the `Declare` statement cannot be found.</span></span>  
   
--   <span data-ttu-id="6b0a9-107">Предпринята попытка открыть проект или загрузить файл, не существует.</span><span class="sxs-lookup"><span data-stu-id="6b0a9-107">You attempted to open a project or load a text file that does not exist.</span></span>  
+-   <span data-ttu-id="24f79-107">Предпринята попытка открыть проект или загрузить файл, не существует.</span><span class="sxs-lookup"><span data-stu-id="24f79-107">You attempted to open a project or load a text file that does not exist.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="6b0a9-108">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="6b0a9-108">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="24f79-108">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="24f79-108">To correct this error</span></span>  
   
-1.  <span data-ttu-id="6b0a9-109">Проверьте правильность написания имени файла и пути.</span><span class="sxs-lookup"><span data-stu-id="6b0a9-109">Check the spelling of the file name and the path specification.</span></span>  
+1. <span data-ttu-id="24f79-109">Проверьте правильность написания имени файла и пути.</span><span class="sxs-lookup"><span data-stu-id="24f79-109">Check the spelling of the file name and the path specification.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6b0a9-110">См. также</span><span class="sxs-lookup"><span data-stu-id="6b0a9-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="24f79-110">См. также</span><span class="sxs-lookup"><span data-stu-id="24f79-110">See also</span></span>
 
-- [<span data-ttu-id="6b0a9-111">Оператор Declare</span><span class="sxs-lookup"><span data-stu-id="6b0a9-111">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [<span data-ttu-id="24f79-111">Declare Statement</span><span class="sxs-lookup"><span data-stu-id="24f79-111">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)
