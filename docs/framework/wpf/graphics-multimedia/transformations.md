@@ -16,22 +16,23 @@ helpviewer_keywords:
 - Transforms [WPF]
 - Transforms [WPF], about Transforms
 ms.assetid: 712b543f-d8b2-4dcf-ba2c-f7921c61c6fd
-ms.openlocfilehash: 614f4fac288e53677d072c6c88edfa46df18f40a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a0b5268d1c7e319a6144a7d551dca45bdc3e64aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352455"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227237"
 ---
-# <a name="transformations"></a><span data-ttu-id="c160e-102">Преобразования</span><span class="sxs-lookup"><span data-stu-id="c160e-102">Transformations</span></span>
-<span data-ttu-id="c160e-103">Преобразования используются для поворота, масштабирования, перевод и наклонять <xref:System.Windows.FrameworkElement> объектов.</span><span class="sxs-lookup"><span data-stu-id="c160e-103">Transforms are used to rotate, scale, translate, or skew <xref:System.Windows.FrameworkElement> objects.</span></span>  
+# <a name="transformations"></a><span data-ttu-id="4bb10-102">Преобразования</span><span class="sxs-lookup"><span data-stu-id="4bb10-102">Transformations</span></span>
+<span data-ttu-id="4bb10-103">Преобразования используются для поворота, масштабирования, перевод и наклонять <xref:System.Windows.FrameworkElement> объектов.</span><span class="sxs-lookup"><span data-stu-id="4bb10-103">Transforms are used to rotate, scale, translate, or skew <xref:System.Windows.FrameworkElement> objects.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="c160e-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="c160e-104">In This Section</span></span>  
- [<span data-ttu-id="c160e-105">Общие сведения о классах Transform</span><span class="sxs-lookup"><span data-stu-id="c160e-105">Transforms Overview</span></span>](transforms-overview.md)  
- [<span data-ttu-id="c160e-106">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="c160e-106">How-to Topics</span></span>](transformations-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="4bb10-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="4bb10-104">In This Section</span></span>  
+ [<span data-ttu-id="4bb10-105">Общие сведения о классах Transform</span><span class="sxs-lookup"><span data-stu-id="4bb10-105">Transforms Overview</span></span>](transforms-overview.md)  
+ [<span data-ttu-id="4bb10-106">Практические руководства</span><span class="sxs-lookup"><span data-stu-id="4bb10-106">How-to Topics</span></span>](transformations-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="c160e-107">См. также</span><span class="sxs-lookup"><span data-stu-id="c160e-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4bb10-107">См. также</span><span class="sxs-lookup"><span data-stu-id="4bb10-107">See also</span></span>
+
 - <xref:System.Windows.Media.Transform>
-- [<span data-ttu-id="c160e-108">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="c160e-108">Graphics and Multimedia</span></span>](index.md)
-- [<span data-ttu-id="c160e-109">Общие сведения об отрисовке графики в WPF</span><span class="sxs-lookup"><span data-stu-id="c160e-109">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
-- [<span data-ttu-id="c160e-110">Макет</span><span class="sxs-lookup"><span data-stu-id="c160e-110">Layout</span></span>](../advanced/layout.md)
+- [<span data-ttu-id="4bb10-108">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="4bb10-108">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="4bb10-109">Общие сведения об отрисовке графики в WPF</span><span class="sxs-lookup"><span data-stu-id="4bb10-109">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="4bb10-110">Макет</span><span class="sxs-lookup"><span data-stu-id="4bb10-110">Layout</span></span>](../advanced/layout.md)

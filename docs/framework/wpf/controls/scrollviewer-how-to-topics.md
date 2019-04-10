@@ -7,26 +7,27 @@ helpviewer_keywords:
 - controls [WPF], ScrollViewer
 - ScrollViewer control [WPF], how-to topics
 ms.assetid: 1e20804b-1d80-4b54-af41-76b3e10a6f89
-ms.openlocfilehash: 0bd8925e2449df7d86502ed3b12385eb6f786063
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: fcb7809c1025997a0e78647c32590e1abee865ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367154"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229418"
 ---
-# <a name="scrollviewer-how-to-topics"></a><span data-ttu-id="5301a-102">Разделы руководства, посвященные элементу ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="5301a-102">ScrollViewer How-to Topics</span></span>
-<span data-ttu-id="5301a-103">В подразделах этого раздела демонстрируется использование <xref:System.Windows.Controls.ScrollViewer> элемент для создания прокручиваемой области в приложениях.</span><span class="sxs-lookup"><span data-stu-id="5301a-103">The topics in this section demonstrate how to use the <xref:System.Windows.Controls.ScrollViewer> element to create scrollable regions in your applications.</span></span>  
+# <a name="scrollviewer-how-to-topics"></a><span data-ttu-id="61633-102">Разделы руководства, посвященные элементу ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="61633-102">ScrollViewer How-to Topics</span></span>
+<span data-ttu-id="61633-103">В подразделах этого раздела демонстрируется использование <xref:System.Windows.Controls.ScrollViewer> элемент для создания прокручиваемой области в приложениях.</span><span class="sxs-lookup"><span data-stu-id="61633-103">The topics in this section demonstrate how to use the <xref:System.Windows.Controls.ScrollViewer> element to create scrollable regions in your applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="5301a-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="5301a-104">In This Section</span></span>  
- [<span data-ttu-id="5301a-105">Обработка события ScrollChanged</span><span class="sxs-lookup"><span data-stu-id="5301a-105">Handle the ScrollChanged Event</span></span>](how-to-handle-the-scrollchanged-event.md)  
- [<span data-ttu-id="5301a-106">Прокручивание содержимого с помощью интерфейса IScrollInfo</span><span class="sxs-lookup"><span data-stu-id="5301a-106">Scroll Content by Using the IScrollInfo Interface</span></span>](how-to-scroll-content-by-using-the-iscrollinfo-interface.md)  
- [<span data-ttu-id="5301a-107">Использование методов прокрутки содержимого ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="5301a-107">Use the Content-Scrolling Methods of ScrollViewer</span></span>](how-to-use-the-content-scrolling-methods-of-scrollviewer.md)  
+## <a name="in-this-section"></a><span data-ttu-id="61633-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="61633-104">In This Section</span></span>  
+ [<span data-ttu-id="61633-105">Обработка события ScrollChanged</span><span class="sxs-lookup"><span data-stu-id="61633-105">Handle the ScrollChanged Event</span></span>](how-to-handle-the-scrollchanged-event.md)  
+ [<span data-ttu-id="61633-106">Прокручивание содержимого с помощью интерфейса IScrollInfo</span><span class="sxs-lookup"><span data-stu-id="61633-106">Scroll Content by Using the IScrollInfo Interface</span></span>](how-to-scroll-content-by-using-the-iscrollinfo-interface.md)  
+ [<span data-ttu-id="61633-107">Использование методов прокрутки содержимого ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="61633-107">Use the Content-Scrolling Methods of ScrollViewer</span></span>](how-to-use-the-content-scrolling-methods-of-scrollviewer.md)  
   
-## <a name="reference"></a><span data-ttu-id="5301a-108">Ссылка</span><span class="sxs-lookup"><span data-stu-id="5301a-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="61633-108">Ссылка</span><span class="sxs-lookup"><span data-stu-id="61633-108">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.ScrollBar>  
   
  <xref:System.Windows.Controls.ScrollViewer>  
   
-## <a name="see-also"></a><span data-ttu-id="5301a-109">См. также</span><span class="sxs-lookup"><span data-stu-id="5301a-109">See also</span></span>
-- [<span data-ttu-id="5301a-110">Общие сведения о панелях</span><span class="sxs-lookup"><span data-stu-id="5301a-110">Panels Overview</span></span>](panels-overview.md)
-- [<span data-ttu-id="5301a-111">Макет</span><span class="sxs-lookup"><span data-stu-id="5301a-111">Layout</span></span>](../advanced/layout.md)
+## <a name="see-also"></a><span data-ttu-id="61633-109">См. также</span><span class="sxs-lookup"><span data-stu-id="61633-109">See also</span></span>
+
+- [<span data-ttu-id="61633-110">Общие сведения о панелях</span><span class="sxs-lookup"><span data-stu-id="61633-110">Panels Overview</span></span>](panels-overview.md)
+- [<span data-ttu-id="61633-111">Макет</span><span class="sxs-lookup"><span data-stu-id="61633-111">Layout</span></span>](../advanced/layout.md)
