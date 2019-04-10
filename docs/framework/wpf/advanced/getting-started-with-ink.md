@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XAML [WPF], procedural code in lieu of
 - InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-ms.openlocfilehash: 2fb3f975fedbae1cf898d5ec2f7c0809e0215ecd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4309b1108b2ea96eb298ff3bb876a0f63b80dc32
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365572"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343601"
 ---
 # <a name="get-started-with-ink-in-wpf"></a>Начало работы с рукописными данными в WPF
 
@@ -22,7 +22,7 @@ Windows Presentation Foundation (WPF) есть функция рукописно
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-Чтобы использовать в следующих примерах, в первую очередь [установите Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). Полезно также знать способы написания базовых приложений WPF. Помощь по началу работы с WPF, см. в разделе [Пошаговое руководство: Создание первого классического приложения WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
+Чтобы использовать в следующих примерах, сначала нужно установить [Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019). Полезно также знать способы написания базовых приложений WPF. Помощь по началу работы с WPF, см. в разделе [Пошаговое руководство: Создание первого классического приложения WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
 
 ## <a name="quick-start"></a>Быстрый запуск
 

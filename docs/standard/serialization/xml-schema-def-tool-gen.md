@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Использование инструмента определения схемы XML для создания классов и документов схемы XML
+title: Практическое руководство. Использование инструмента определения схемы XML для создания классов и документов схемы XML
 ms.date: 03/30/2017
 helpviewer_keywords:
 - generating XML classes using XML Schema Definition tool
@@ -7,21 +7,21 @@ helpviewer_keywords:
 - XML Schema Definition tool, using to generate classes that conform to specific schema
 - XML Schema Definition tool, using to generate XML Schema Document
 ms.assetid: 51f0edc3-993d-4051-b7f2-77753694d3d1
-ms.openlocfilehash: 645d6290ec16a772d8c188e8781097e1d67b14ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 77bb567d2b7b8fff2b1b8de43b2d5fa36fffb3b3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54501554"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59346136"
 ---
-# <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>Как выполнить Использование инструмента определения схемы XML для создания классов и документов схемы XML
+# <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>Практическое руководство. Использование инструмента определения схемы XML для создания классов и документов схемы XML
 С помощью инструмента определения схемы XML (Xsd.exe) можно создать схему XML, которая описывает класс, или создать класс, определенный схемой XML. В процедурах ниже показана методика выполнения таких операций.  
   
 ### <a name="to-generate-classes-that-conform-to-a-specific-schema"></a>Создание классов, соответствующих определенной схеме  
   
-1.  Откройте окно командной строки.  
+1. Откройте окно командной строки.  
   
-2.  Передайте схему XML как аргумент в инструмент определения схемы XML, который создаст набор классов, точно соответствующих схеме XML, например:  
+2. Передайте схему XML как аргумент в инструмент определения схемы XML, который создаст набор классов, точно соответствующих схеме XML, например:  
   
     ```  
     xsd mySchema.xsd  
@@ -34,17 +34,17 @@ ms.locfileid: "54501554"
     <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="" xmlns:xs="http://www.w3.org/2001/XMLSchema">  
     ```  
   
-3.  При необходимости измените классы с методами, свойствами или полями. Дополнительные сведения об изменении класса с помощью атрибутов см. в разделах [Управление сериализацией XML с использованием атрибутов](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md) и [Атрибуты управления сериализацией с кодировкой SOAP](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md).  
+3. При необходимости измените классы с методами, свойствами или полями. Дополнительные сведения об изменении класса с помощью атрибутов см. в разделах [Управление сериализацией XML с использованием атрибутов](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md) и [Атрибуты управления сериализацией с кодировкой SOAP](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md).  
   
  Часто бывает полезным изучить схему потока XML, которая генерируется при сериализации экземпляров класса (или классов). Например, можно опубликовать схему для совместного использования или сравнить ее со схемой, в которой предпринимается попытка обеспечения соответствия.  
   
 #### <a name="to-generate-an-xml-schema-document-from-a-set-of-classes"></a>Создание документа схемы XML из набора классов  
   
-1.  Скомпилируйте класс или классы в библиотеку DLL.  
+1. Скомпилируйте класс или классы в библиотеку DLL.  
   
-2.  Откройте окно командной строки.  
+2. Откройте окно командной строки.  
   
-3.  Передайте библиотеку DLL как аргумент в Xsd.exe, например:  
+3. Передайте библиотеку DLL как аргумент в Xsd.exe, например:  
   
     ```  
     xsd MyFile.dll  
@@ -57,7 +57,7 @@ ms.locfileid: "54501554"
 - <xref:System.Data.DataSet>
 - [Инструмент определения схемы XML и сериализация XML](../../../docs/standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md)
 - [Введение в сериализацию XML](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [Инструмент определения схемы XML (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)
+- [XML Schema Definition Tool (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [Практическое руководство. Сериализация объекта](../../../docs/standard/serialization/how-to-serialize-an-object.md)
 - [Практическое руководство. Десериализация объекта](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

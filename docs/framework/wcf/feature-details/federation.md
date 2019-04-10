@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-ms.openlocfilehash: af3e5c4c33936e809438019f1a8af823ffc3e52b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 382d2aeff98b7d48dbae07dadb04ed644c3f4449
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59114046"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427309"
 ---
 # <a name="federation"></a>Федерация
 В этом разделе приведен краткий обзор концепции федеративной безопасности. Здесь также описываются поддержка развертывания архитектур федеративной безопасности Windows Communication Foundation (WCF). Образец приложения, демонстрирующий федерацию, см. в разделе [пример федерации](../../../../docs/framework/wcf/samples/federation-sample.md).  
@@ -33,9 +33,9 @@ ms.locfileid: "59114046"
 |Служба маркеров безопасности (STS)|Веб-служба, выдающая маркеры безопасности, т. е. делающая утверждения на основании свидетельств, которым она доверяет, перед теми, кто доверяет ей. Эти утверждения образуют основу посредничества с доверием между доменами.|  
   
 ### <a name="example-scenario"></a>Пример сценария  
- На следующем рисунке показан пример федеративной безопасности.  
+ Ниже показан пример федеративной безопасности:  
   
- ![Федерации](../../../../docs/framework/wcf/feature-details/media/typicalfederatedsecurityscenario.gif "TypicalFederatedSecurityScenario")  
+ ![Схема, показывающая сценарий типичный федеративной безопасности.](./media/federation/typical-federated-security-scenario.gif)  
   
  Этот сценарий включает две организации: A и B. Организация B имеет веб-ресурс (веб-службы), некоторые пользователи в организации A находят полезной.  
   
@@ -90,12 +90,12 @@ ms.locfileid: "59114046"
 ## <a name="sample-implementation-using-wcf"></a>Пример реализации с использованием WCF  
  Ниже показан пример реализации архитектуры федеративной безопасности с помощью встроенной поддержки WCF.  
   
- ![Безопасность федерации в WCF](../../../../docs/framework/wcf/feature-details/media/federatedsecurityinwcf.gif "FederatedSecurityInWCF")  
+ ![Схема, показывающая пример реализации безопасности федерации.](./media/federation/federated-security-implementation.gif)  
   
 ### <a name="example-myservice"></a>Служба MyService  
  Служба `MyService` предоставляет одну конечную точку - `MyServiceEndpoint`. На следующем рисунке показаны адрес, привязка и контракт, связанные с конечной точкой.  
   
- ![Федерации](../../../../docs/framework/wcf/feature-details/media/myservice.gif "MyService")  
+ ![Схема, показывающая MyServiceEndpoint сведения.](./media/federation/myserviceendpoint-details.gif)  
   
  Конечная точка службы `MyServiceEndpoint` использует [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) и требует допустимый маркер Security Assertions Markup Language (SAML) с `accessAuthorized` утверждения, выданного службой STS б. Это декларативно указано в конфигурации службы.  
   
@@ -160,7 +160,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 #### <a name="sts-b"></a>Служба STS B  
  На следующем рисунке показана служба STS B. Как говорилось выше, служба маркеров безопасности (STS) также представляет собой веб-службу и может иметь свои конечные точки, политику и т. д.  
   
- ![Федерации](../../../../docs/framework/wcf/feature-details/media/msservicestsb.gif "MsServiceSTSB")  
+ ![Схема, показывающая службы маркеров безопасности б.](./media/federation/myservice-security-token-service-b.gif)  
   
  Служба STS B предоставляет одну конечную точку, `STSEndpoint`, которую можно использовать для запроса маркеров безопасности. В частности, служба STS B выдает маркеры SAML с утверждением `accessAuthorized`, которые могут быть предъявлены на сайте службы `MyService` для доступа к службе. В то же время служба STS B требует от пользователей предъявления допустимого маркера SAML, выданного службой STS A и содержащего утверждение `userAuthenticated`. Это декларативно указано в конфигурации службы STS.  
   
@@ -284,7 +284,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 ### <a name="client-at-organization-a"></a>Клиент в организации A  
  На следующем рисунке показан клиент в организации A и шаги, которые включает в себя вызов функции `MyService`. Для полноты картины включены также другие функциональные компоненты.  
   
- ![Федерации](../../../../docs/framework/wcf/feature-details/media/federationclienta.gif "FederationClientA")  
+ ![Схема showwing действия, описанные в вызов службы MyService.](./media/federation/federation-myservice-service-call-process.gif)  
   
 ## <a name="summary"></a>Сводка  
  Федеративная безопасность обеспечивает четкое разделение ответственности и позволяет выстраивать безопасные, масштабируемые архитектуры служб. Платформа для построения и развертывания распределенных приложений WCF обеспечивает встроенную поддержку для реализации федеративной безопасности.  

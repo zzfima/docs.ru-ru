@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data validation [Windows Forms], Windows Forms
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: a4f1d015-2969-430c-8ea2-b612d179c290
-ms.openlocfilehash: a9572bf469f539fdf52f414b2e0b6aa10f7ea288
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a4bf0850b28b7101ba76f1c1fedc6633eccb81a1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127352"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59346058"
 ---
 # <a name="walkthrough-validating-data-in-the-windows-forms-datagridview-control"></a>Пошаговое руководство. Проверка данных в элементе управления DataGridView в Windows Forms
 При отображении функциональных возможностей ввода данных для пользователей, часто нужно проверить данные, введенные в форму. <xref:System.Windows.Forms.DataGridView> Класс предоставляет удобный способ для выполнения проверки, прежде чем данные передаются в хранилище данных. Можно проверять данные, обрабатывая <xref:System.Windows.Forms.DataGridView.CellValidating> событие, которое вызывается <xref:System.Windows.Forms.DataGridView> при изменении текущей ячейки.  
@@ -35,7 +35,7 @@ ms.locfileid: "59127352"
   
 #### <a name="to-validate-data-entered-in-a-datagridview"></a>Чтобы проверить данные, введенные в элементе управления DataGridView  
   
-1.  Создайте класс, производный от <xref:System.Windows.Forms.Form> и содержит <xref:System.Windows.Forms.DataGridView> управления и <xref:System.Windows.Forms.BindingSource> компонента.  
+1. Создайте класс, производный от <xref:System.Windows.Forms.Form> и содержит <xref:System.Windows.Forms.DataGridView> управления и <xref:System.Windows.Forms.BindingSource> компонента.  
   
      В следующем примере представлена базовая реализация и включает в себя `Main` метод.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "59127352"
     [!code-csharp[System.Windows.Forms.DataGridViewDataValidation#02](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/CS/datavalidation.cs#02)]
     [!code-vb[System.Windows.Forms.DataGridViewDataValidation#02](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/VB/datavalidation.vb#02)]  
   
-2.  Реализуйте метод в определении класса формы для обработки сведения о подключении к базе данных.  
+2. Реализуйте метод в определении класса формы для обработки сведения о подключении к базе данных.  
   
      Данный пример кода использует `GetData` метод, возвращающий заполненный <xref:System.Data.DataTable> объекта. Убедитесь, что значение `connectionString` переменной значение, которое подходит для вашей базы данных.  
   
@@ -54,12 +54,12 @@ ms.locfileid: "59127352"
      [!code-csharp[System.Windows.Forms.DataGridViewDataValidation#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/CS/datavalidation.cs#30)]
      [!code-vb[System.Windows.Forms.DataGridViewDataValidation#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/VB/datavalidation.vb#30)]  
   
-3.  Реализовать обработчик для формы <xref:System.Windows.Forms.Form.Load> событие, которое инициализирует <xref:System.Windows.Forms.DataGridView> и <xref:System.Windows.Forms.BindingSource> и устанавливает привязку данных.  
+3. Реализовать обработчик для формы <xref:System.Windows.Forms.Form.Load> событие, которое инициализирует <xref:System.Windows.Forms.DataGridView> и <xref:System.Windows.Forms.BindingSource> и устанавливает привязку данных.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewDataValidation#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/CS/datavalidation.cs#10)]
      [!code-vb[System.Windows.Forms.DataGridViewDataValidation#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/VB/datavalidation.vb#10)]  
   
-4.  Реализовать обработчики для <xref:System.Windows.Forms.DataGridView> элемента управления <xref:System.Windows.Forms.DataGridView.CellValidating> и <xref:System.Windows.Forms.DataGridView.CellEndEdit> события.  
+4. Реализовать обработчики для <xref:System.Windows.Forms.DataGridView> элемента управления <xref:System.Windows.Forms.DataGridView.CellValidating> и <xref:System.Windows.Forms.DataGridView.CellEndEdit> события.  
   
      <xref:System.Windows.Forms.DataGridView.CellValidating> Обработчик событий определяется ли значение ячейки в `CompanyName` столбец пуст. Если значение ячейки не проходит проверку, задайте <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> свойство <xref:System.Windows.Forms.DataGridViewCellValidatingEventArgs?displayProperty=nameWithType> класс `true`. В результате <xref:System.Windows.Forms.DataGridView> управления для предотвращения курсора из ячейки. Задайте <xref:System.Windows.Forms.DataGridViewRow.ErrorText%2A> в строке пояснительный строку. Отобразится значок ошибки появляется всплывающая подсказка, содержащая текст ошибки. В <xref:System.Windows.Forms.DataGridView.CellEndEdit> задать обработчик событий, <xref:System.Windows.Forms.DataGridViewRow.ErrorText%2A> в строке, пустой строкой. <xref:System.Windows.Forms.DataGridView.CellEndEdit> Событие возникает только в том случае, когда ячейка завершается режим редактирования, если он не проходит проверку.  
   

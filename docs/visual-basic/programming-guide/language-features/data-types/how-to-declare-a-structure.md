@@ -7,12 +7,12 @@ helpviewer_keywords:
 - statements [Visual Basic], structure
 - structures [Visual Basic], declaring
 ms.assetid: d5e98381-eb81-47d4-af83-48cc534a2572
-ms.openlocfilehash: 7fc4aed4d405729b64a2f7ba772cdd794df40f2a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: a52daddaa8701ccca9bd9b5b4a48535a6ffa19ed
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825101"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343562"
 ---
 # <a name="how-to-declare-a-structure-visual-basic"></a>Практическое руководство. Объявление структуры (Visual Basic)
 Начать объявление структуры [оператор Structure](../../../../visual-basic/language-reference/statements/structure-statement.md), и завершается с `End Structure` инструкции. Между этими двумя операторами должен быть объявлен по крайней мере *элемент*. Элементы могут быть любого типа данных, но по крайней мере один должен быть не являющаяся общей переменная или непользовательским событий.  
@@ -25,7 +25,7 @@ ms.locfileid: "58825101"
   
 ### <a name="to-declare-a-structure"></a>Объявление структуры  
   
-1.  Создайте начальный и конечный инструкции для структуры.  
+1. Создайте начальный и конечный инструкции для структуры.  
   
      Можно указать уровень доступа структуры с помощью [открытый](../../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../../visual-basic/language-reference/modifiers/friend.md), или [частного](../../../../visual-basic/language-reference/modifiers/private.md) ключевое слово, или можно разрешить его по умолчанию `Public`.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "58825101"
     End Structure  
     ```  
   
-2.  Добавьте элементы в тексте структуры.  
+2. Добавьте элементы в тексте структуры.  
   
      Структуры должны иметь хотя бы один элемент. Необходимо объявить каждый элемент и указать уровень доступа для него. Если вы используете [оператор Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) без любые ключевые слова, доступность по умолчанию `Public`.  
   

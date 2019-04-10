@@ -7,12 +7,12 @@ helpviewer_keywords:
 - IsTrue operator [Visual Basic]
 - OrElse operator [Visual Basic]
 ms.assetid: b6cec0f2-61b1-4331-a7f0-4d07ee3179d6
-ms.openlocfilehash: cb8ad8cb4a1ec13611edfcc3de7f4b7eb33fc553
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 6c5ec6d953d174b525dee7ad3034d2d01ae4950f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829932"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344953"
 ---
 # <a name="istrue-operator-visual-basic"></a>Оператор IsTrue (Visual Basic)
 Определяет, является ли выражение `True`.  
@@ -24,15 +24,15 @@ ms.locfileid: "58829932"
 ## <a name="compiler-use-of-istrue"></a>Использование IsTrue компилятором  
  После определения класса или структуры, можно использовать переменную этого типа в `For`, `If`, `Else If`, или `While` инструкции, либо в `When` предложение. После этого компилятор требует оператор, который преобразует тип в `Boolean` значение, чтобы проверить условие. Он выполняет поиск подходящего оператора в следующем порядке:  
   
-1.  Оператор расширяющего преобразования от класса или структуры `Boolean`.  
+1. Оператор расширяющего преобразования от класса или структуры `Boolean`.  
   
-2.  Оператор расширяющего преобразования от класса или структуры `Boolean?`.  
+2. Оператор расширяющего преобразования от класса или структуры `Boolean?`.  
   
-3.  `IsTrue` Оператора для класса или структуры.  
+3. `IsTrue` Оператора для класса или структуры.  
   
-4.  Сужающее преобразование к типу `Boolean?` , не включает преобразование из `Boolean` для `Boolean?`.  
+4. Сужающее преобразование к типу `Boolean?` , не включает преобразование из `Boolean` для `Boolean?`.  
   
-5.  Оператор сужающего преобразования от класса или структуры `Boolean`.  
+5. Оператор сужающего преобразования от класса или структуры `Boolean`.  
   
  Если не определены никакие преобразования в `Boolean` или `IsTrue` оператор, компилятор сообщает об ошибке.  
   

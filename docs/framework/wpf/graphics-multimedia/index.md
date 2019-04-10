@@ -12,12 +12,12 @@ helpviewer_keywords:
 - graphics features [WPF]
 - transition effects [WPF]
 ms.assetid: 1817d9dc-3d6c-46cb-afc8-63b0bae35e37
-ms.openlocfilehash: 1416b07818ecaeb75e8389c053344b8a367ea69d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c9ddc1a1060b7d70ee7a6c9050971709a433961a
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59190656"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427205"
 ---
 # <a name="graphics-and-multimedia"></a>Графика и мультимедиа
 <a name="introduction"></a>
@@ -55,7 +55,7 @@ ms.locfileid: "59190656"
 ### <a name="2-d-shapes"></a>Двумерные фигуры  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] предоставляет библиотеку часто используемые, векторных [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] фигур, таких как прямоугольники и эллипсы, которые показаны на следующем рисунке.  
   
- ![Эллипсы и прямоугольники](./media/wpfintrofigure4.PNG "WPFIntroFigure4")  
+ ![Схема отображение эллипсы и прямоугольники.](./media/index/two-deminsional-shapes-ellipses-rectangles.png)  
   
  Эти встроенные фигуры [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] являются не просто фигурами: это программируемые элементы, в которых реализованы многие возможности, ожидаемые от наиболее распространенных элементов управления, включая клавиатуру и мышь. В следующем примере показано, как обрабатывать <xref:System.Windows.UIElement.MouseUp> события, возникающего при щелчке <xref:System.Windows.Shapes.Ellipse> элемент.  
   
@@ -89,21 +89,21 @@ End Class
   
  На следующем рисунке показан результат выполнения предыдущей разметки [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] и кода.  
   
- ![Окно с текстом "Вы щелкнули эллипс!"](./media/wpfintrofigure12.png "WPFIntroFigure12")  
+ ![Окно сообщения, сообщение, «You clicked the ellipse!»](./media/index/messagebox-text-output.png)  
   
  Более подробную информацию см. в разделе [Обзор фигур и базовых средств рисования в приложении WPF](shapes-and-basic-drawing-in-wpf-overview.md). Вводный пример см. в разделе [Пример элементов-фигур](https://go.microsoft.com/fwlink/?LinkID=160037).  
   
 ### <a name="2-d-geometries"></a>Двумерные геометрические объекты  
  Когда фигур [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)], предоставляемых [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], недостаточно, можно использовать поддержку [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] геометрических фигур и путей для создания собственных. Ниже показано, как можно использовать геометрические объекты для создания фигур (например, кисти рисования) и обрезки других элементов [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
   
- ![Различные способы использования Path](./media/wpfintrofigure5.PNG "WPFIntroFigure5")  
+ ![Снимок экрана, показывающий, как можно использовать геометрические объекты для создания фигур.](./media/index/use-geometries-create-shapes.png)  
   
  Более подробную информацию см. в разделе [Общие сведения о классе Geometry](geometry-overview.md). Вводный пример в разделе [Примеры геометрических объектов](https://go.microsoft.com/fwlink/?LinkID=159989).  
   
 ### <a name="2-d-effects"></a>Двумерные эффекты  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] предоставляет библиотеку [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] классы, которые можно использовать для создания различных эффектов. Возможности отрисовки в [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] для [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] позволяют рисовать элементы [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], имеющие градиентные заливки, растровые изображения, рисунки и видео, а также управлять ими с помощью вращения, масштабирования и наклона. На следующем рисунке приведен пример многих эффектов, которых можно добиться с помощью кисти [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
   
- ![Иллюстрации различных кистей](./media/wpfintrofigure6.PNG "WPFIntroFigure6")  
+ ![Иллюстрация различных кистей WPF и элементов заливкой.](./media/index/brushes-paint-elements.png)  
   
  Более подробную информацию см. в разделе [Общие сведения о кистях WPF](wpf-brushes-overview.md). Вводный пример см. в разделе [Пример использования кистей](https://go.microsoft.com/fwlink/?LinkID=159973).  
   
@@ -111,7 +111,8 @@ End Class
 ## <a name="3-d-rendering"></a>Трехмерная отрисовка  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] предоставляет набор [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] возможности отрисовки, которые интегрируются с [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] поддержки графики в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] в порядке для создания более интересного макета, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]и визуализации данных. С одной стороны, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] позволяет отрисовывать изображения [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] на поверхностях фигур [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)], что показано на рисунке ниже.  
   
- ![Снимок экрана примера Visual3D](./media/wpfintrofigure13.png "WPFIntroFigure13")  
+
+ ![Снимок экрана: пример, показывающий трехмерных фигур с помощью различных текстур.](./media/index/visual-three-dimensional-shape.png)  
   
  Более подробную информацию см. в разделе [Обзор трехмерной графики](3-d-graphics-overview.md). Вводный пример см. в разделе [Пример трехмерных тел](https://go.microsoft.com/fwlink/?LinkID=159964).  
   
@@ -119,7 +120,7 @@ End Class
 ## <a name="animation"></a>Анимация  
  Использование анимации позволяет применять к элементам управления и графическим элементам такие эффекты, как увеличение, дрожание, вращение и исчезание, создавать интересные эффекты смены страниц и другие эффекты. Поскольку [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] позволяет анимировать большинство свойств, можно анимировать не только большинство объектов [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], но и использовать [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] для анимации пользовательских объектов.  
   
- ![Изображения анимированного куба](./media/wpfintrofigure7.png "WPFIntroFigure7")  
+ ![Снимок экрана анимированного куба.](./media/index/animate-custom-objects.png)  
   
  Более подробную информацию см. в разделе [Общие сведения об эффектах анимации](animation-overview.md). Вводный пример в разделе [Коллекция примеров анимации](https://go.microsoft.com/fwlink/?LinkID=159969).  
   

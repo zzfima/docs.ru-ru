@@ -5,46 +5,46 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b6c4dfd0-f270-43ec-961a-e16eb6af2f2c
-ms.openlocfilehash: bd6543e1e22b7a2cb0b870fe2fdb34011f0d2a4f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6bf2eb3d295f9cbf6a7e13a612d5846ceaa75ab4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162793"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345512"
 ---
 # <a name="how-to-export-metadata-from-service-endpoints"></a>Практическое руководство. Экспорт метаданных из конечных точек службы
 В этом разделе объясняется, как экспортировать метаданные из конечных точек службы.  
   
 ### <a name="to-export-metadata-from-service-endpoints"></a>Экспорт метаданных из конечных точек службы  
   
-1.  Создайте новый проект "Консольное приложение" в Visual Studio. Добавьте в созданный внутри метода main() файл Program.cs приведенный в описании следующих шагов код.  
+1. Создайте новый проект "Консольное приложение" в Visual Studio. Добавьте в созданный внутри метода main() файл Program.cs приведенный в описании следующих шагов код.  
   
-2.  Создайте таблицу <xref:System.ServiceModel.Description.WsdlExporter>.  
+2. Создайте таблицу <xref:System.ServiceModel.Description.WsdlExporter>.  
   
      [!code-csharp[S_UEWsdlExporter#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_uewsdlexporter/cs/program.cs#1)]
      [!code-vb[S_UEWsdlExporter#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_uewsdlexporter/vb/program.vb#1)]  
   
-3.  Присвойте свойству <xref:System.ServiceModel.Description.MetadataExporter.PolicyVersion%2A> одно из значений из перечисления <xref:System.ServiceModel.Description.PolicyVersion>. В этом примере свойству задается значение <xref:System.ServiceModel.Description.PolicyVersion.Policy15%2A>, что соответствует WS-Policy 1.5.  
+3. Присвойте свойству <xref:System.ServiceModel.Description.MetadataExporter.PolicyVersion%2A> одно из значений из перечисления <xref:System.ServiceModel.Description.PolicyVersion>. В этом примере свойству задается значение <xref:System.ServiceModel.Description.PolicyVersion.Policy15%2A>, что соответствует WS-Policy 1.5.  
   
      [!code-csharp[S_UEWsdlExporter#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_uewsdlexporter/cs/program.cs#2)]
      [!code-vb[S_UEWsdlExporter#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_uewsdlexporter/vb/program.vb#2)]  
   
-4.  Создайте массив объектов <xref:System.ServiceModel.Description.ServiceEndpoint>.  
+4. Создайте массив объектов <xref:System.ServiceModel.Description.ServiceEndpoint>.  
   
      [!code-csharp[S_UEWsdlExporter#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_uewsdlexporter/cs/program.cs#3)]
      [!code-vb[S_UEWsdlExporter#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_uewsdlexporter/vb/program.vb#3)]  
   
-5.  Экспортируйте метаданные для каждой конечной точки службы.  
+5. Экспортируйте метаданные для каждой конечной точки службы.  
   
      [!code-csharp[S_UEWsdlExporter#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_uewsdlexporter/cs/program.cs#4)]
      [!code-vb[S_UEWsdlExporter#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_uewsdlexporter/vb/program.vb#4)]  
   
-6.  Убедитесь, что в процессе экспорта не произошло ошибок, и извлеките метаданные.  
+6. Убедитесь, что в процессе экспорта не произошло ошибок, и извлеките метаданные.  
   
      [!code-csharp[S_UEWsdlExporter#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_uewsdlexporter/cs/program.cs#5)]
      [!code-vb[S_UEWsdlExporter#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_uewsdlexporter/vb/program.vb#5)]  
   
-7.  После этого можно использовать метаданные, например записать их в файл, вызвав метод <xref:System.ServiceModel.Description.MetadataSet.WriteTo%28System.Xml.XmlWriter%29>.  
+7. После этого можно использовать метаданные, например записать их в файл, вызвав метод <xref:System.ServiceModel.Description.MetadataSet.WriteTo%28System.Xml.XmlWriter%29>.  
   
 ## <a name="example"></a>Пример  
  Ниже приведен полный код этого примера.  

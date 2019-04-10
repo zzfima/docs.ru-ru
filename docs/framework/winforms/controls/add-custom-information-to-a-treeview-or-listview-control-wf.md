@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding custom information
 - TreeView control [Windows Forms], adding custom information
 ms.assetid: 68be11de-1d5b-430e-901f-cfbe48d14b19
-ms.openlocfilehash: 15533b2b1fb13ad43bba645d3f52dbad53b17033
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 302eb1b88d4e43b4e2bd6395e27a3a6489320085
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59188940"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344160"
 ---
 # <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>Практическое руководство. Добавление пользовательских данных в элемент управления TreeView или ListView (Windows Forms)
 В Windows Forms можно создать производный узел <xref:System.Windows.Forms.TreeView> управления или производный элемент в <xref:System.Windows.Forms.ListView> элемента управления. Наследование позволяет добавлять любые необходимые поля, а также пользовательские методы и конструкторы для их обработки. Эту возможность можно использовать для присоединения объекта Customer к каждому узлу дерева или элементу списка. Приведенные ниже примеры предназначены для <xref:System.Windows.Forms.TreeView> элемента управления, но тот же подход можно использовать для <xref:System.Windows.Forms.ListView> элемента управления.  
@@ -70,7 +70,7 @@ ms.locfileid: "59188940"
   
 ### <a name="to-use-a-derived-tree-node"></a>Использование производного узла дерева  
   
-1.  Новый производный узел дерева можно использовать в качестве параметра для вызовов функций.  
+1. Новый производный узел дерева можно использовать в качестве параметра для вызовов функций.  
   
      В следующем примере в качестве расположения текстового файла выбрана папка "Мои документы". Это сделано, поскольку предполагается, что большинство компьютеров, работающих под управлением операционной системы Windows, содержат эту папку. Это также позволяет пользователям с минимальным уровнем доступа к системе безопасно запускать приложение.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "59188940"
        "\\TextFile.txt")));  
     ```  
   
-2.  Если передается узел дерева, и он введен как <xref:System.Windows.Forms.TreeNode> класса, а затем будет необходимо выполнить приведение к своему производному классу. Приведение представляет собой явное преобразование из одного типа объекта в другой. Дополнительные сведения о приведении см. в разделе [явные и неявные преобразования](~/docs/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) (Visual Basic), [оператор ()](~/docs/csharp/language-reference/operators/invocation-operator.md) (Visual C#), или [оператор Cast: ()](/cpp/cpp/cast-operator-parens) ([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) .  
+2. Если передается узел дерева, и он введен как <xref:System.Windows.Forms.TreeNode> класса, а затем будет необходимо выполнить приведение к своему производному классу. Приведение представляет собой явное преобразование из одного типа объекта в другой. Дополнительные сведения о приведении см. в разделе [явные и неявные преобразования](~/docs/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) (Visual Basic), [оператор ()](~/docs/csharp/language-reference/operators/invocation-operator.md) (Visual C#), или [оператор Cast: ()](/cpp/cpp/cast-operator-parens) ([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) .  
   
     ```vb  
     Public Sub TreeView1_AfterSelect(ByVal sender As Object, ByVal e As System.Windows.Forms.TreeViewEventArgs) Handles TreeView1.AfterSelect  

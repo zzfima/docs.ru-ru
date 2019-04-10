@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /libpath compiler option [Visual Basic]
 - -libpath compiler option [Visual Basic]
 ms.assetid: 5f1c26c9-3455-4e89-bdf3-b12d6c2e655b
-ms.openlocfilehash: b8e28b821f6536ddb5c7612e8706e024dd79a0bd
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b7bfcb0f2034145822922126fe61efea8d8ef269
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58833327"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344212"
 ---
 # <a name="-libpath"></a>-libpath
 Указывает расположение сборок, на которую указывает ссылка.  
@@ -33,13 +33,13 @@ ms.locfileid: "58833327"
   
  Компилятор выполняет поиск связанных сборок, для которых не указано полное имя, в следующем порядке:  
   
-1.  Текущая рабочая папка. Это папка, из которой был вызван компилятор.  
+1. Текущая рабочая папка. Это папка, из которой был вызван компилятор.  
   
-2.  Системный каталог среды CLR.  
+2. Системный каталог среды CLR.  
   
-3.  Каталоги, заданные параметром `/libpath`.  
+3. Каталоги, заданные параметром `/libpath`.  
   
-4.  Каталоги, указанные переменной среды LIB.  
+4. Каталоги, указанные переменной среды LIB.  
   
  `-libpath` Параметр аддитивные; каждое следующее указание этого параметра присоединяется к предыдущим значениям.  
   

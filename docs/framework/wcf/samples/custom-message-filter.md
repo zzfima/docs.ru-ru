@@ -2,12 +2,12 @@
 title: Пользовательский фильтр сообщений
 ms.date: 03/30/2017
 ms.assetid: 98dd0af8-fce6-4255-ac32-42eb547eea67
-ms.openlocfilehash: 31816ae67e3273e033b53951ff78d662ef8192c4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 34e6d851bd0aa3515c5c43521be6213451b7ed12
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59172839"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345824"
 ---
 # <a name="custom-message-filter"></a>Пользовательский фильтр сообщений
 В этом примере показано, как заменить фильтры сообщений, используемые для перенаправления сообщений в конечные точки Windows Communication Foundation (WCF).  
@@ -119,11 +119,11 @@ Hello
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1.  Чтобы построить решение, следуйте инструкциям в [сборка образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+1. Чтобы построить решение, следуйте инструкциям в [сборка образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-2.  Чтобы выполнить образец на одном компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+2. Чтобы выполнить образец на одном компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-3.  Чтобы выполнить образец на нескольких компьютерах, следуйте инструкциям, приведенным в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md) и измените следующую строку в файле Client.cs.  
+3. Чтобы выполнить образец на нескольких компьютерах, следуйте инструкциям, приведенным в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md) и измените следующую строку в файле Client.cs.  
   
     ```  
     Uri serviceVia = new Uri("http://localhost/ServiceModelSamples/service.svc");  

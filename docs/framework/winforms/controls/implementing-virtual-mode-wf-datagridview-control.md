@@ -12,12 +12,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], large data sets
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 74eb5276-5ab8-4ce0-8005-dae751d85f7c
-ms.openlocfilehash: 7509e2f5035cb05c20af379f9f6a141177d540d4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7f6bf1703a6536f4d22b3a2fbe412579c59d39dd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127053"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344329"
 ---
 # <a name="walkthrough-implementing-virtual-mode-in-the-windows-forms-datagridview-control"></a>Пошаговое руководство. Реализация виртуального режима для элемента управления DataGridView в Windows Forms
 Если вы хотите отобразить очень большому количеству табличные данные в <xref:System.Windows.Forms.DataGridView> элемента управления, можно задать <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> свойства `true` и явно управлять взаимодействием элемента управления с хранилищем данных. Это позволяет оптимизировать производительность элемента управления в этой ситуации.  
@@ -30,7 +30,7 @@ ms.locfileid: "59127053"
   
 #### <a name="to-implement-virtual-mode"></a>Реализация виртуального режима  
   
-1.  Создайте класс, производный от <xref:System.Windows.Forms.Form> и содержит <xref:System.Windows.Forms.DataGridView> элемента управления.  
+1. Создайте класс, производный от <xref:System.Windows.Forms.Form> и содержит <xref:System.Windows.Forms.DataGridView> элемента управления.  
   
      Следующий код содержит некоторые основные инициализации. Он объявляется несколько переменных, которые будут использоваться на последующих этапах, предоставляет `Main` метод и предоставляет простой макет формы в конструкторе класса.  
   
@@ -41,13 +41,13 @@ ms.locfileid: "59127053"
     [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#002](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#002)]
     [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#002](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#002)]  
   
-2.  Реализовать обработчик для формы <xref:System.Windows.Forms.Form.Load> событие, которое инициализирует <xref:System.Windows.Forms.DataGridView> управления и заполняет хранилище данных с помощью образцов значений.  
+2. Реализовать обработчик для формы <xref:System.Windows.Forms.Form.Load> событие, которое инициализирует <xref:System.Windows.Forms.DataGridView> управления и заполняет хранилище данных с помощью образцов значений.  
   
      [!code-cpp[System.Windows.Forms.DataGridView.VirtualMode#110](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CPP/virtualmode.cpp#110)]
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#110](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#110)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#110](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#110)]  
   
-3.  Реализовать обработчик для <xref:System.Windows.Forms.DataGridView.CellValueNeeded> событие, которое извлекает запрошенное значение ячейки из хранилища данных или `Customer` объекта, находящегося в режиме редактирования.  
+3. Реализовать обработчик для <xref:System.Windows.Forms.DataGridView.CellValueNeeded> событие, которое извлекает запрошенное значение ячейки из хранилища данных или `Customer` объекта, находящегося в режиме редактирования.  
   
      Это событие возникает каждый раз, когда <xref:System.Windows.Forms.DataGridView> элемента управления требуется прорисовать ячейку.  
   
@@ -55,13 +55,13 @@ ms.locfileid: "59127053"
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#120](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#120)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#120](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#120)]  
   
-4.  Реализовать обработчик для <xref:System.Windows.Forms.DataGridView.CellValuePushed> события, которое сохраняет измененное значение ячейки в `Customer` объект, представляющий редактируемой строки. Это событие возникает каждый раз, когда пользователь фиксирует изменение значения ячейки.  
+4. Реализовать обработчик для <xref:System.Windows.Forms.DataGridView.CellValuePushed> события, которое сохраняет измененное значение ячейки в `Customer` объект, представляющий редактируемой строки. Это событие возникает каждый раз, когда пользователь фиксирует изменение значения ячейки.  
   
      [!code-cpp[System.Windows.Forms.DataGridView.VirtualMode#130](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CPP/virtualmode.cpp#130)]
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#130](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#130)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#130](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#130)]  
   
-5.  Реализовать обработчик для <xref:System.Windows.Forms.DataGridView.NewRowNeeded> событие, которое создает новый `Customer` объект, представляющий только что созданной строки.  
+5. Реализовать обработчик для <xref:System.Windows.Forms.DataGridView.NewRowNeeded> событие, которое создает новый `Customer` объект, представляющий только что созданной строки.  
   
      Это событие возникает каждый раз, когда пользователь вводит строку для новых записей.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "59127053"
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#140](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#140)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#140](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#140)]  
   
-6.  Реализовать обработчик для <xref:System.Windows.Forms.DataGridView.RowValidated> событие, которое сохраняет новые или измененные строки в хранилище данных.  
+6. Реализовать обработчик для <xref:System.Windows.Forms.DataGridView.RowValidated> событие, которое сохраняет новые или измененные строки в хранилище данных.  
   
      Это событие возникает каждый раз, когда пользователь изменяет текущую строку.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "59127053"
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#150](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#150)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#150](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#150)]  
   
-7.  Реализовать обработчик для <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded> событие, указывающее, является ли <xref:System.Windows.Forms.DataGridView.CancelRowEdit> событие произойдет в том случае, если пользователь восстанавливает строку, нажав клавишу ESC, дважды в режиме редактирования или один раз в другом режиме.  
+7. Реализовать обработчик для <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded> событие, указывающее, является ли <xref:System.Windows.Forms.DataGridView.CancelRowEdit> событие произойдет в том случае, если пользователь восстанавливает строку, нажав клавишу ESC, дважды в режиме редактирования или один раз в другом режиме.  
   
      По умолчанию <xref:System.Windows.Forms.DataGridView.CancelRowEdit> происходит при восстановлении строки, если ни одной из ячеек в текущей строке были изменены, если не <xref:System.Windows.Forms.QuestionEventArgs.Response%2A?displayProperty=nameWithType> свойству `true` в <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded> обработчик событий. Это событие полезно в тех случаях, когда область фиксации определяется во время выполнения.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "59127053"
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#160](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#160)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#160](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#160)]  
   
-8.  Реализовать обработчик для <xref:System.Windows.Forms.DataGridView.CancelRowEdit> событий, который удаляет значения `Customer` объект, представляющий текущую строку.  
+8. Реализовать обработчик для <xref:System.Windows.Forms.DataGridView.CancelRowEdit> событий, который удаляет значения `Customer` объект, представляющий текущую строку.  
   
      Это событие происходит, если пользователь восстанавливает строку, нажав клавишу ESC, дважды в режиме редактирования или один раз в другом режиме. Это событие не происходит, если ячейки отсутствуют в текущей строке были изменены или если значение <xref:System.Windows.Forms.QuestionEventArgs.Response%2A?displayProperty=nameWithType> было присвоено свойство `false` в <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded> обработчик событий.  
   

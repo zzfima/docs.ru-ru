@@ -6,12 +6,12 @@ title: Документация по .NET
 description: Сведения об использовании .NET для создания различных приложений на любой платформе с помощью C#, Visual Basic и F#. Ознакомьтесь со справочником по API, образцами кода, учебниками и другими материалами.
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
-ms.openlocfilehash: 132cab6f7c196f88fdc02259e55d0fcb5fbbfd10
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 61b3e6f2aae2ad2633f82360b227a876f685fcc1
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/09/2019
-ms.locfileid: "59297273"
+ms.locfileid: "59427491"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -231,8 +231,8 @@ ms.locfileid: "59297273"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/machine-learning">Руководство по ML.NET</a></h3>
-                                                <p><a href="/dotnet/machine-learning/index#tutorials">Учебники</a></p>
-                                                <p><a href="/dotnet/machine-learning/index#resources">Ресурсы</a></p>
+                                                <p><a href="/dotnet/machine-learning/tutorials">Учебники</a></p>
+                                                <p><a href="/dotnet/machine-learning/resources">Ресурсы</a></p>
                                                 <p><a href="/dotnet/machine-learning/resources/glossary">Глоссарий</a></p>
                                                 <p><a href="/dotnet/api?view=ml-dotnet">Справочник по ML.NET API</a></p>
                                             </div>

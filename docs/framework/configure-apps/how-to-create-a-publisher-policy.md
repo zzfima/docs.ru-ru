@@ -7,23 +7,23 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: ed73b9c15d5d9279b97063077f210d3ac5dc68e4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ce2df9d4cea601652ebde2032758137b01faacdc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227396"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344667"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Практическое руководство. Создание политики издателя
 Поставщики сборок можно указать, что приложения должны использовать более новой версии сборки, включая файл политики издателя с обновленной сборкой. Файл политики издателя указывает перенаправление сборки и параметры базы кода и используется тот же формат, что и файл конфигурации приложения. Файл политики издателя компилируется в сборку и помещен в глобальном кэше сборок.  
   
  Существует три действия, связанные с созданием политики издателя:  
   
-1.  Создайте файл политики издателя.  
+1. Создайте файл политики издателя.  
   
-2.  Создание сборки политики издателя.  
+2. Создание сборки политики издателя.  
   
-3.  Добавьте сборку в глобальный кэш сборок.  
+3. Добавьте сборку в глобальный кэш сборок.  
   
  Схема для политики издателя описана в [Перенаправление версий сборки](../../../docs/framework/configure-apps/redirect-assembly-versions.md). В следующем примере показано издателя файл политики, который перенаправляет одну версию `myAssembly` в другой.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "59227396"
   
 #### <a name="to-create-a-publisher-policy-assembly"></a>Для создания сборки политики издателя  
   
-1.  Введите следующую команду в командной строке:  
+1. Введите следующую команду в командной строке:  
   
      **Al/LINK:** *publisherPolicyFile* **/out:** *publisherPolicyAssemblyFile* **/keyfile:**  *keyPairFile* **/Platform:** *processorArchitecture*  
   
@@ -87,7 +87,7 @@ ms.locfileid: "59227396"
   
 #### <a name="to-add-the-publisher-policy-assembly-to-the-global-assembly-cache"></a>Чтобы добавить сборку в глобальный кэш сборок  
   
-1.  Введите следующую команду в командной строке:  
+1. Введите следующую команду в командной строке:  
   
      **gacutil /i**  *publisherPolicyAssemblyFile*  
   

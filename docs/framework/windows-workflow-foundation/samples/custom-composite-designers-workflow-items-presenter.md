@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
-ms.openlocfilehash: f4db3325081a820a37a8791849d2ad9697d15151
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 61f61962e06e94572b7eb564ab08b829ba2c864f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59118109"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344875"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>Пользовательские составные конструкторы - средство представления элементов рабочего процесса
 <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> является типом ключа в модели программирования конструктора WF, позволяющим редактирование коллекции содержащихся элементов. В этом образце показано, как построить конструктор действий, который предоставляет доступ к такой изменяемой коллекции.
@@ -25,9 +25,9 @@ ms.locfileid: "59118109"
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца
 
-1.  Откройте **UsingWorkflowItemsPresenter.sln** образец решения для C# или VB в Visual Studio 2010.
+1. Откройте **UsingWorkflowItemsPresenter.sln** образец решения для C# или VB в Visual Studio 2010.
 
-2.  Постройте и запустите это решение. Должно открыться повторно размещенное приложение конструктора рабочих процессов, после чего действия можно перетащить на полотно.
+2. Постройте и запустите это решение. Должно открыться повторно размещенное приложение конструктора рабочих процессов, после чего действия можно перетащить на полотно.
 
 ## <a name="sample-highlights"></a>Описание образца
  Код для этого образца показывает следующее.

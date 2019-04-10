@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: c323687e-b196-487b-beba-f38f9b3f961b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d5193756861f407315ec82e4419f1d04495c7dd2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5f33be207dd6166b16a04844f3d92b6e017d1c7a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606037"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345447"
 ---
 # <a name="replacing-a-principal-object"></a>Замена объекта Principal
 Приложения, предоставляющие службы проверки подлинности, должны иметь возможность заменять объект **Principal** (<xref:System.Security.Principal.IPrincipal>) для данного потока. Более того, система безопасности должна защищать возможность замены объектов **Principal** , так как злонамеренно подключенный неправильный **Principal** является угрозой безопасности приложения, предоставляя неверное удостоверение или роль. Таким образом, приложениям, которым требуется возможность замены объектов **Principal** , должен быть предоставлен объект <xref:System.Security.Permissions.SecurityPermission?displayProperty=nameWithType> для элемента управления "Участник". (Обратите внимание, что это разрешение не требуется для выполнения проверок безопасности на основе ролей или для создания объектов **Principal** .)  
   
  Текущий объект **Principal** можно заменить, выполнив следующие задачи.  
   
-1.  Создайте замещающий объект **Principal** и связанный объект **Identity** (удостоверение).  
+1. Создайте замещающий объект **Principal** и связанный объект **Identity** (удостоверение).  
   
-2.  Подключите новый объект **Principal** к контексту вызова.  
+2. Подключите новый объект **Principal** к контексту вызова.  
   
 ## <a name="example"></a>Пример  
  В следующем примере показывается, как создать универсальный объект Principal и использовать его для задания участника потока.  

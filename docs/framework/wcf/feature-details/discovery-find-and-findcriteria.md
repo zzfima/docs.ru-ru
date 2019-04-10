@@ -2,12 +2,12 @@
 title: Объекты обнаружения Find и FindCriteria
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-ms.openlocfilehash: c95f8e1b48c4e58c6d521bd06df4a470999fa375
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6efbfe34bbe5b15696d247c291f1d88006a53a36
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59095780"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345785"
 ---
 # <a name="discovery-find-and-findcriteria"></a>Объекты обнаружения Find и FindCriteria
 Операция поиска объектов обнаружения инициируется клиентом для обнаружения одной или нескольких служб и является одним из основных действий, выполняемых при обнаружении. При операции поиска выполняется отправка сообщения зонда WS-Discovery по сети. Службы, которые соответствуют указанному критерию, отвечают сообщениями WS-Discovery ProbeMatch. Дополнительные сведения о сообщениях обнаружения см. в разделе [спецификации WS-Discovery](https://go.microsoft.com/fwlink/?LinkID=122347).  
@@ -40,9 +40,9 @@ ms.locfileid: "59095780"
   
  К критериям прекращения относятся следующие.  
   
-1.  <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> -Максимальное время ожидания ответов от служб в сети. Значение времени ожидания по умолчанию - 20 секунд.  
+1. <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> -Максимальное время ожидания ответов от служб в сети. Значение времени ожидания по умолчанию - 20 секунд.  
   
-2.  <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> -Максимальное количество ожидаемых ответов. Если ответы <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> получены до истечения <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A>, операция поиска завершается.  
+2. <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> -Максимальное количество ожидаемых ответов. Если ответы <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> получены до истечения <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A>, операция поиска завершается.  
   
 ## <a name="findresponse"></a>FindResponse  
  <xref:System.ServiceModel.Discovery.FindResponse> имеет <xref:System.ServiceModel.Discovery.FindResponse.Endpoints%2A> свойство коллекции, в котором содержатся все ответы, отправленные соответствующими службами в сети. Если ни одна служба не отправила ответ, коллекция пустая. Если ответила одна или несколько служб, все ответы сохраняются в объекте <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>, в котором содержится адрес, контракт и дополнительные сведения о службе.  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e39e9b3cf83be03d9bb3a55e3741915588e755a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7a60f03d85997d20b54366360f104519c9c75f5e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499581"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343874"
 ---
 # <a name="net-framework-cryptography-model"></a>Модель криптографии .NET Framework
 Платформа .NET Framework предоставляет реализации многих стандартных алгоритмов шифрования. Эти алгоритмы просты в использовании и имеют максимально безопасные свойства по умолчанию. Кроме того, криптографическая модель наследования объектов, поточно-ориентированная структура и конфигурация платформы .NET Framework являются чрезвычайно расширяемыми.  
@@ -32,15 +32,15 @@ ms.locfileid: "54499581"
 ## <a name="how-algorithms-are-implemented-in-the-net-framework"></a>Реализация алгоритмов в платформе .NET Framework  
  В качестве примера различных реализаций, доступных для алгоритма, рассмотрим симметричные алгоритмы. Основой для всех симметричных алгоритмов является <xref:System.Security.Cryptography.SymmetricAlgorithm>, который наследуется следующими алгоритмами:  
   
-1.  <xref:System.Security.Cryptography.Aes>  
+1. <xref:System.Security.Cryptography.Aes>  
   
-2.  <xref:System.Security.Cryptography.DES>  
+2. <xref:System.Security.Cryptography.DES>  
   
-3.  <xref:System.Security.Cryptography.RC2>  
+3. <xref:System.Security.Cryptography.RC2>  
   
-4.  <xref:System.Security.Cryptography.Rijndael>  
+4. <xref:System.Security.Cryptography.Rijndael>  
   
-5.  <xref:System.Security.Cryptography.TripleDES>  
+5. <xref:System.Security.Cryptography.TripleDES>  
   
  <xref:System.Security.Cryptography.Aes> наследуется двумя классами: <xref:System.Security.Cryptography.AesCryptoServiceProvider> и <xref:System.Security.Cryptography.AesManaged>. Класс <xref:System.Security.Cryptography.AesCryptoServiceProvider> является оболочкой реализации CAPI (Windows Cryptography API) для AES, тогда как класс <xref:System.Security.Cryptography.AesManaged> написан полностью в управляемом коде. Имеется также и третий тип реализации — CNG (Cryptography Next Generation), который дополняет реализацию в управляемом коде и реализацию CAPI. Примером алгоритма CNG является <xref:System.Security.Cryptography.ECDiffieHellmanCng>. Алгоритмы CNG доступны в Windows Vista и более поздних версий.  
   
@@ -89,4 +89,4 @@ ms.locfileid: "54499581"
   
 ## <a name="see-also"></a>См. также
 
-- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+- [службы шифрования](../../../docs/standard/security/cryptographic-services.md)

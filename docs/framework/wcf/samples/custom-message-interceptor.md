@@ -2,12 +2,12 @@
 title: Пользовательский перехватчик сообщений
 ms.date: 03/30/2017
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-ms.openlocfilehash: c756b9947b48fbf7cd902bf570c6d29f52fdaad6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d585e60c9b31e56873b0501425f55541bd647e02
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59181419"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344277"
 ---
 # <a name="custom-message-interceptor"></a>Пользовательский перехватчик сообщений
 Данный образец демонстрирует использование модели расширяемости канала. В частности, показано, как реализовать пользовательский элемент привязки, который создает фабрики и прослушиватели каналов для перехвата всех входящих и исходящих сообщений в определенной точке стека времени выполнения. В состав образца входят клиент и сервер, которые демонстрируют использование этих пользовательских фабрик.  
@@ -28,13 +28,13 @@ ms.locfileid: "59181419"
   
  Образец описана процедура, предлагаемая для создания пользовательского многоуровневого канала в Windows Communication Foundation (WCF), с помощью инфраструктуры канала и согласно рекомендации по WCF. Чтобы создать пользовательский многоуровневый канал, выполните следующие действия.  
   
-1.  Выберите формы канала, которые будут поддерживать фабрика и прослушиватель каналов.  
+1. Выберите формы канала, которые будут поддерживать фабрика и прослушиватель каналов.  
   
-2.  Создайте фабрику и прослушиватель каналов, которые поддерживают выбранную форму канала.  
+2. Создайте фабрику и прослушиватель каналов, которые поддерживают выбранную форму канала.  
   
-3.  Присоедините элемент привязки, добавляющий пользовательский многоуровневый канал в стек каналов.  
+3. Присоедините элемент привязки, добавляющий пользовательский многоуровневый канал в стек каналов.  
   
-4.  Добавьте раздел расширения элементов привязки, чтобы представить новый элемент привязки системе конфигурации.  
+4. Добавьте раздел расширения элементов привязки, чтобы представить новый элемент привязки системе конфигурации.  
   
 ## <a name="channel-shapes"></a>Формы каналов  
  При создании пользовательского многоуровневого канала в первую очередь необходимо решить, какие формы требуются для канала. Данным инспектором сообщений поддерживается любая форма, поддерживаемая уровнем ниже (например, если уровень ниже может выполнить построение метода <xref:System.ServiceModel.Channels.IOutputChannel> и интерфейса <xref:System.ServiceModel.Channels.IDuplexSessionChannel>, то также предоставляется метод <xref:System.ServiceModel.Channels.IOutputChannel> и интерфейс <xref:System.ServiceModel.Channels.IDuplexSessionChannel>).  
@@ -147,16 +147,16 @@ Dangerous wind detected! Reported speed (70) is greater than 64 kph.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1.  Установите [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0, выполнив следующую команду.  
+1. Установите [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0, выполнив следующую команду.  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2. Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3.  Чтобы построить решение, следуйте инструкциям в [сборка образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3. Чтобы построить решение, следуйте инструкциям в [сборка образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-5.  Первым запустите файл Service.exe, затем Client.exe и наблюдайте результат в обоих окнах консоли.  
+5. Первым запустите файл Service.exe, затем Client.exe и наблюдайте результат в обоих окнах консоли.  

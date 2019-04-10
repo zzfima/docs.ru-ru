@@ -2,12 +2,12 @@
 title: Пример WebContentTypeMapper
 ms.date: 03/30/2017
 ms.assetid: a4fe59e7-44d8-43c6-a1f8-40c45223adca
-ms.openlocfilehash: 7858b07c3da8684326b931b54f825c87a6e35717
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 381fc4a3084b1a2620384a04de85b9085e02ae16
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59131512"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344680"
 ---
 # <a name="webcontenttypemapper-sample"></a>Пример WebContentTypeMapper
 В этом примере показано, как сопоставить новые типы содержимого с форматами тела сообщения Windows Communication Foundation (WCF).  
@@ -54,11 +54,11 @@ public class JsonContentTypeMapper : WebContentTypeMapper
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1.  Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Построение решения webcontenttypemappersample.sln, описанное в разделе [сборка образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Построение решения webcontenttypemappersample.sln, описанное в разделе [сборка образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Перейдите к `http://localhost/ServiceModelSamples/JCTMClientPage.htm` (не открывайте страницу JCTMClientPage.htm в браузере из каталога проекта).  
+3. Перейдите к `http://localhost/ServiceModelSamples/JCTMClientPage.htm` (не открывайте страницу JCTMClientPage.htm в браузере из каталога проекта).  
   
 > [!IMPORTANT]
 >  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  

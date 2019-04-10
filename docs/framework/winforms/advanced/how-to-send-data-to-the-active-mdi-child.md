@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], pasting
 - Clipboard [Windows Forms], getting data from
 ms.assetid: 1047d2fe-1235-46db-aad9-563aea1d743b
-ms.openlocfilehash: 0ffe87d55f7325f77bd33bdbf5d5fbab9f321f93
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f4399d8548eff76aaa4effae6da7239cd3b0284b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59203331"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343718"
 ---
 # <a name="how-to-send-data-to-the-active-mdi-child"></a>Практическое руководство. Отправка данных в активную дочернюю MDI-форму
 Часто в контексте [приложений многодокументного интерфейса (MDI)](multiple-document-interface-mdi-applications.md), вам потребуется для отправки данных в активное дочернее окно, например когда пользователь вставляет данные из буфера обмена в приложении MDI.  
@@ -25,7 +25,7 @@ ms.locfileid: "59203331"
   
 ### <a name="to-send-data-to-the-active-mdi-child-window-from-the-clipboard"></a>Для отправки данных в активную дочернюю MDI из буфера обмена  
   
-1.  Внутри метода скопируйте текст в буфер обмена для активного элемента управления активной дочерней формы.  
+1. Внутри метода скопируйте текст в буфер обмена для активного элемента управления активной дочерней формы.  
   
     > [!NOTE]
     >  В этом примере предполагается, имеется родительская форма MDI (`Form1`), имеет один или несколько дочерних MDI-окон содержащий <xref:System.Windows.Forms.RichTextBox> элемента управления. Дополнительные сведения см. в разделе [Создание родительских MDI-форм](how-to-create-mdi-parent-forms.md).  

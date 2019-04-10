@@ -2,12 +2,12 @@
 title: Использование ExpressionTextBox в пользовательском конструкторе действия
 ms.date: 03/30/2017
 ms.assetid: f82e73e7-a256-4a4d-82b7-c0d62f4ab5e7
-ms.openlocfilehash: 7c1ba262046a665b8d63157fe3cdb4b1a41c37bf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c85254f1ae7ba8a269568cf1a14acf367b595e33
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59229385"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344979"
 ---
 # <a name="using-the-expressiontextbox-in-a-custom-activity-designer"></a>Использование ExpressionTextBox в пользовательском конструкторе действия
 В этом образце показано, как использовать <xref:System.Activities.Presentation.View.ExpressionTextBox> в настраиваемом конструкторе действий. Пользовательское действие `MultiAssign` присваивает два строковых значения двум строковым переменным. Некоторые элементы управления <xref:System.Activities.Presentation.View.ExpressionTextBox> привязываются к аргументу <xref:System.Activities.InArgument>, а некоторые - к аргументу <xref:System.Activities.OutArgument>.
@@ -23,19 +23,19 @@ ms.locfileid: "59229385"
 
 #### <a name="to-use-this-sample"></a>Использование этого образца
 
-1.  С помощью Visual Studio 2010, откройте файл ExpressionTextBoxSample.sln.
+1. С помощью Visual Studio 2010, откройте файл ExpressionTextBoxSample.sln.
 
-2.  Для построения решения нажмите CTRL+SHIFT+B.
+2. Для построения решения нажмите CTRL+SHIFT+B.
 
 #### <a name="to-run-this-sample"></a>Запуск образца
 
-1.  Добавьте в решение новое консольное приложение рабочего процесса.
+1. Добавьте в решение новое консольное приложение рабочего процесса.
 
-2.  Добавьте ссылку на **ExpressionTextBoxSample** проекта из нового проекта консольного приложения рабочего процесса.
+2. Добавьте ссылку на **ExpressionTextBoxSample** проекта из нового проекта консольного приложения рабочего процесса.
 
-3.  Постройте решение.
+3. Постройте решение.
 
-4.  Перетащите **MultiAssign** из области элементов и поместите его в рабочий процесс.
+4. Перетащите **MultiAssign** из области элементов и поместите его в рабочий процесс.
 
 > [!IMPORTANT]
 >  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  

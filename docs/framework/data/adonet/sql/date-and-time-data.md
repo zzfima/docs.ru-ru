@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-ms.openlocfilehash: a4bbed1f115ef5cfb6b7b63156f2d84b071cf224
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 80b7df4922e1398c7290e769e53627a1d46ebc83
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127118"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344183"
 ---
 # <a name="date-and-time-data"></a>Данные даты и времени
 В SQL Server 2008 появились указанные ниже новые типы данных для обработки сведений о дате и времени. Новые типы данных включают отдельные типы для даты и времени, а также расширенные типы данных, обладающие большим диапазоном, большей точностью и учитывающие часовые пояса. Начиная с .NET Framework 3.5 с пакетом обновления 1 (SP1), поставщик данных .NET Framework для SQL Server (<xref:System.Data.SqlClient>) полностью поддерживает все новые возможности ядра СУБД SQL Server 2008. Для использования новых возможностей с SqlClient необходимо установить .NET Framework 3.5 с пакетом обновления 1 (SP1) или более поздней версии.  
@@ -21,7 +21,7 @@ ms.locfileid: "59127118"
   
  **Электронная документация по SQL Server**  
   
-1.  [Использование данных даты и времени](https://go.microsoft.com/fwlink/?LinkID=98361)  
+1. [Использование данных даты и времени](https://go.microsoft.com/fwlink/?LinkID=98361)  
   
 ## <a name="datetime-data-types-introduced-in-sql-server-2008"></a>Типы данных даты и времени и только даты, появившиеся в SQL Server 2008  
  В приведенной ниже таблице описаны новые типы данных даты и времени.  

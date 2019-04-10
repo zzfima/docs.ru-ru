@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column freezing
 - data [Windows Forms], displaying
 ms.assetid: 87412dd2-478f-4751-af87-dafc591fc215
-ms.openlocfilehash: 437e49a1f8e5a154f1a54fc7a266579cb5f0122c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 397a2c5a7879be8c1bef7e04e72cf675f25d0fb8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59100006"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344316"
 ---
 # <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>Практическое руководство. Замораживание столбцов элемента управления DataGridView в формах Windows Forms с помощью конструктора
 При просмотре пользователями данных, отображаемых в элементе управления Windows Forms <xref:System.Windows.Forms.DataGridView>, им порой требуется часто обращаться к одному столбцу или набору столбцов. Например при просмотре таблицы сведений о пользователе, содержащей много столбцов, это полезно для отображения имени клиента постоянно при прокручивании остальных столбцов за пределы видимой области.  
@@ -26,11 +26,11 @@ ms.locfileid: "59100006"
   
 ### <a name="to-freeze-a-column-using-the-designer"></a>Чтобы заморозить столбец с помощью конструктора  
   
-1.  Щелкните глиф смарт-тега (![глиф смарт-тега](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) в правом верхнем углу <xref:System.Windows.Forms.DataGridView> управления, а затем выберите **Правка столбцов**.  
+1. Щелкните глиф смарт-тега (![глиф смарт-тега](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) в правом верхнем углу <xref:System.Windows.Forms.DataGridView> управления, а затем выберите **Правка столбцов**.  
   
-2.  Выберите столбец из **выбранные столбцы** списка.  
+2. Выберите столбец из **выбранные столбцы** списка.  
   
-3.  В **свойства столбца** сетки, задайте <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A> свойства `true`.  
+3. В **свойства столбца** сетки, задайте <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A> свойства `true`.  
   
     > [!NOTE]
     >  Можно также закрепить заголовок столбца при его добавлении, выбрав **операций ввода-вывода** поле **добавить столбец** диалоговое окно.  
