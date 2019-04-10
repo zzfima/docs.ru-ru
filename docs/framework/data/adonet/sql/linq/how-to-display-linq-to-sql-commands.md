@@ -1,27 +1,27 @@
 ---
-title: Как выполнить отображать команды LINQ to SQL
+title: Практическое руководство. Как отображать команды LINQ to SQL
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1decb05e-37ad-4ed6-ab2f-071eb4c4f628
-ms.openlocfilehash: a70f1e0dd471e86afe2e744c157d4aed2a217deb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d71eaf834ebf36d462f8581f0074b2f6a90bae17
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630831"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211612"
 ---
-# <a name="how-to-display-linq-to-sql-commands"></a><span data-ttu-id="f1136-102">Как выполнить отображать команды LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="f1136-102">How to: Display LINQ to SQL Commands</span></span>
-<span data-ttu-id="f1136-103">Для отображения команд SQL и других сведений используется оператор <xref:System.Data.Linq.DataContext.GetCommand%2A>.</span><span class="sxs-lookup"><span data-stu-id="f1136-103">Use <xref:System.Data.Linq.DataContext.GetCommand%2A> to display SQL commands and other information.</span></span>  
+# <a name="how-to-display-linq-to-sql-commands"></a><span data-ttu-id="6fa4b-102">Практическое руководство. Как отображать команды LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="6fa4b-102">How to: Display LINQ to SQL Commands</span></span>
+<span data-ttu-id="6fa4b-103">Для отображения команд SQL и других сведений используется оператор <xref:System.Data.Linq.DataContext.GetCommand%2A>.</span><span class="sxs-lookup"><span data-stu-id="6fa4b-103">Use <xref:System.Data.Linq.DataContext.GetCommand%2A> to display SQL commands and other information.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f1136-104">Пример</span><span class="sxs-lookup"><span data-stu-id="f1136-104">Example</span></span>  
- <span data-ttu-id="f1136-105">В следующем примере в окне консоли отображается результат запроса, за которым следуют созданные команды SQL, тип команд и тип подключения.</span><span class="sxs-lookup"><span data-stu-id="f1136-105">In the following example, the console window displays the output from the query, followed by the SQL commands that are generated, the type of commands, and the type of connection.</span></span>  
+## <a name="example"></a><span data-ttu-id="6fa4b-104">Пример</span><span class="sxs-lookup"><span data-stu-id="6fa4b-104">Example</span></span>  
+ <span data-ttu-id="6fa4b-105">В следующем примере в окне консоли отображается результат запроса, за которым следуют созданные команды SQL, тип команд и тип подключения.</span><span class="sxs-lookup"><span data-stu-id="6fa4b-105">In the following example, the console window displays the output from the query, followed by the SQL commands that are generated, the type of commands, and the type of connection.</span></span>  
   
  [!code-csharp[DLinqDebuggingSupport#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqDebuggingSupport/cs/Program.cs#3)]
  [!code-vb[DLinqDebuggingSupport#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqDebuggingSupport/vb/Module1.vb#3)]  
   
- <span data-ttu-id="f1136-106">Выводится следующий результат.</span><span class="sxs-lookup"><span data-stu-id="f1136-106">Output appears as follows:</span></span>  
+ <span data-ttu-id="6fa4b-106">Выводится следующий результат.</span><span class="sxs-lookup"><span data-stu-id="6fa4b-106">Output appears as follows:</span></span>  
   
 ```  
 Customers from London:  
@@ -48,5 +48,6 @@ Command Type: Text
 Connection: System.Data.SqlClient.SqlConnection  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="f1136-107">См. также</span><span class="sxs-lookup"><span data-stu-id="f1136-107">See also</span></span>
-- [<span data-ttu-id="f1136-108">Поддержка отладки</span><span class="sxs-lookup"><span data-stu-id="f1136-108">Debugging Support</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
+## <a name="see-also"></a><span data-ttu-id="6fa4b-107">См. также</span><span class="sxs-lookup"><span data-stu-id="6fa4b-107">See also</span></span>
+
+- [<span data-ttu-id="6fa4b-108">Поддержка отладки</span><span class="sxs-lookup"><span data-stu-id="6fa4b-108">Debugging Support</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
