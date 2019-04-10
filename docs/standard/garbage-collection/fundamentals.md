@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9bb09571ea8c9fb3a6d16a9f16c5269326d7f7da
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f6dcd8e47fcbbee1e17e9e9ca1cb93f6076b4475
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712478"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826604"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Основы сборки мусора
 <a name="top"></a> В среде CLR сборщик мусора выполняет функции автоматического диспетчера памяти. Это предоставляет следующие преимущества:  
@@ -261,11 +261,10 @@ ms.locfileid: "57712478"
   
  Фоновая сборка мусора удаляет ограничения на распределение, наложенные параллельной сборкой мусора, так как эфемерные сборки мусора могут выполняться во время фоновой сборки мусора. Это означает, что фоновая сборка мусора может удалить неиспользуемые объекты в эфемерных поколениях, а также при необходимости может расширить во время сборки мусора для поколения 1.  
   
- На следующем рисунке показана фоновая сборка мусора в отдельном выделенном потоке на рабочей станции.  
+На следующем рисунке показана фоновая сборка мусора в отдельном выделенном потоке на рабочей станции.
   
- ![Фоновая сборка мусора рабочей станции](../../../docs/standard/garbage-collection/media/backgroundworkstn.png "BackgroundWorkstn")  
-Фоновая сборка мусора рабочей станции  
-  
+ ![Схема, иллюстрирующая фоновую сборку мусора на рабочей станции.](./media/fundamentals/background-workstation-garbage-collection.png)
+   
  [К началу](#top)  
   
 <a name="background_server_garbage_collection"></a>   
@@ -274,8 +273,7 @@ ms.locfileid: "57712478"
   
  На следующем рисунке показана фоновая сборка мусора в отдельном выделенном потоке на сервере.  
   
- ![Фоновая сборка мусора сервера](../../../docs/standard/garbage-collection/media/backgroundserver.png "BackgroundServer")  
-Фоновая сборка мусора сервера  
+ ![Схема, иллюстрирующая фоновую сборку мусора на сервере.](./media/fundamentals/background-server-garbage-collection.png)  
   
 ## <a name="see-also"></a>См. также
 

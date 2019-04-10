@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: f6ebb1a1-f2ca-49b9-92c9-0150940cf6e6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d86c590f2d5fe6bc970c2f8ac6de43d3e8485650
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: fbc381395720b6b63a8cdfb44c55808d4608e77f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44183149"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831986"
 ---
 # <a name="xml-integration-with-relational-data-and-adonet"></a>Интеграция XML с реляционными данными и ADO.NET
 Класс **XmlDataDocument** является производным от класса **XmlDocument** и содержит XML-данные. Класс **XmlDataDocument** полезен тем, что он организует связь между реляционными и иерархическими данными. Этот класс **XmlDocument** можно привязать к объекту **DataSet**, после чего любые изменения их данных будут одновременно отображаться в обоих классах. Класс **XmlDocument**, привязанный к объекту **DataSet**, позволяет интегрировать XML-данные с реляционными данными, не преобразуя все данные в формат XML или в реляционный формат. Можно использовать оба формата, не ограничиваясь единым способом представления данных.  
@@ -29,9 +29,9 @@ ms.locfileid: "44183149"
   
  Так как класс **XmlDataDocument** наследуется от класса **XmlDocument**, он содержит реализацию модели W3C DOM. Тот факт, что класс **XmlDataDocument** связан с объектом **DataSet** и хранит в нем часть своих данных, ни в коей мере не ограничивает и не изменяет его использование в качестве класса **XmlDocument**. Код, написанный для обработки событий класса **XmlDocument**, работает с классом **XmlDataDocument** без изменений. Объект **DataSet** обеспечивает реляционное представление тех же данных, определяя таблицы, столбцы, связи и ограничения, и является изолированным хранилищем пользовательских данных в памяти.  
   
- На следующем рисунке показаны различные связи между XML-данными, объектом **DataSet** и классом **XmlDataDocument**.  
+ На рисунке ниже показаны различные связи между XML-данными, объектом **DataSet** и классом **XmlDataDocument**. 
   
- ![XML DataSet](../../../../docs/standard/data/xml/media/xmlintegrationwithrelationaldataandadodotnet.gif "xmlIntegrationWithRelationalDataAndADOdotNet")  
+ ![Схема, иллюстрирующая разные связи с объектом XML DataSet.](./media/xml-integration-with-relational-data-and-adonet/xml-integration-relational-data-adodotnet.gif)  
   
  На рисунке вы видите, что XML-данные можно загрузить непосредственно в объект **DataSet**, что позволяет использовать реляционные методы для работы с ними. Также XML-данные можно загрузить в класс **XmlDataDocument**, производный от модели DOM, а затем загрузить в объект **DataSet** и синхронизировать. Поскольку объект **DataSet** и класс **XmlDataDocument** синхронизируются по одному набору данных, то все изменения в любом из этих хранилищ отражаются и в другом хранилище.  
   

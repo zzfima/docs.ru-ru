@@ -4,12 +4,12 @@ description: На примере двоичной классификации с 
 ms.date: 03/07/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: a88ed38b76a230095f35304aa2b52af0a7c9c22d
-ms.sourcegitcommit: 77854e8704b9689b73103d691db34d71c2bf1dad
+ms.openlocfilehash: c5373f63927ff39e7c819cd1fc0bc2bec1843b3e
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58307945"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58921121"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Учебник. Использование ML.NET для анализа тональности методом двоичной классификации
 
@@ -41,7 +41,7 @@ ms.locfileid: "58307945"
 
 * [Visual Studio 2017 15.6 или более поздней версии](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) с установленной рабочей нагрузкой "Кроссплатформенная разработка .NET Core".
 
-* [ZIP-файл набора данных предложений с меткой тональности UCI](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip).
+* [ZIP-файл набора данных предложений с меткой тональности UCI](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)
 
 ## <a name="machine-learning-workflow"></a>Рабочий процесс машинного обучения
 
@@ -49,13 +49,13 @@ ms.locfileid: "58307945"
 
 Вот основные этапы этого рабочего процесса:
 
-1. **определение проблемы**;
-2. **Подготовка данных**.
-   * **Загрузка данных**.
-   * **Извлечение компонентов (преобразование данных)**.
-3. **Сборка и обучение**. 
-   * **Обучение модели**.
-   * **оценка модели**;
+1. **Определение проблемы**
+2. **подготавливать данные;**
+   * **Загрузка данных**
+   * **Извлечение компонентов (преобразование данных)**
+3. **Сборка и обучение** 
+   * **Обучение модели**
+   * **Оценка модели**
 4. **Развертывание модели**
    * **Использование модели для прогнозирования**
 
@@ -125,7 +125,7 @@ ms.locfileid: "58307945"
 
 Добавьте следующие новые операторы `using` в начало файла *Program.cs*:
 
-[!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#AddUsings "Add necessary usings")]
+[!code-csharp[AddUsings](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#AddUsings "Add necessary usings")]
 
 Создайте два глобальных поля для хранения пути к недавно скачанному файлу набора данных и файлу сохраненной модели:
 
@@ -134,7 +134,7 @@ ms.locfileid: "58307945"
 
 Добавьте следующий код в строку прямо перед методом `Main`, чтобы указать эти пути:
 
-[!code-csharp[Declare global variables](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#DeclareGlobalVariables "Declare global variables")]
+[!code-csharp[Declare global variables](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#DeclareGlobalVariables "Declare global variables")]
 
 Вам потребуется создать несколько классов для входных данных и прогнозов. Добавьте в проект новый класс:
 
@@ -144,25 +144,25 @@ ms.locfileid: "58307945"
 
     Файл *SentimentData.cs* откроется в редакторе кода. Добавьте следующий оператор `using` в начало файла *SentimentData.cs*.
 
-[!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/SentimentAnalysis/SentimentData.cs#AddUsings "Add necessary usings")]
+[!code-csharp[AddUsings](~/samples/machine-learning/tutorials/SentimentAnalysis/SentimentData.cs#AddUsings "Add necessary usings")]
 
 Удалите из файла *SentimentData.cs* существующее определение класса и добавьте следующий код с двумя классами `SentimentData` и `SentimentPrediction`:
 
-[!code-csharp[DeclareTypes](../../../samples/machine-learning/tutorials/SentimentAnalysis/SentimentData.cs#DeclareTypes "Declare data record types")]
+[!code-csharp[DeclareTypes](~/samples/machine-learning/tutorials/SentimentAnalysis/SentimentData.cs#DeclareTypes "Declare data record types")]
 
-Класс входного набора данных `SentimentData` содержит параметры `string` — для комментария (`SentimentText`) и `bool` (`Sentiment`) — для определения положительной или отрицательной тональности. Для обоих полей указаны атрибуты <xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29>. Этот атрибут позволяет описать порядок полей в файле данных.  Кроме того, свойство `Sentiment` имеет атрибут <xref:Microsoft.ML.Data.ColumnNameAttribute.%23ctor%2A>, который позволяет обозначить его как поле `Label`. Класс `SentimentPrediction` используется для прогнозирования после обучения модели. Он имеет один параметр типа boolean (`Sentiment`) и атрибут `PredictedLabel` `ColumnName`. Параметр `Label` используется для создания и обучения модели, а также для оценки модели по разделенному набору данных для тестирования. `PredictedLabel` используется для прогнозирования и оценки. Для оценки применяются входные обучающие данные, прогнозируемые значения и модель.
+Класс входного набора данных `SentimentData` содержит параметры `string` — для комментария (`SentimentText`) и `bool` (`Sentiment`) — для определения положительной или отрицательной тональности. Для обоих полей указаны атрибуты <xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29>. Этот атрибут позволяет описать порядок полей в файле данных.  Кроме того, свойство `Sentiment` имеет атрибут <xref:Microsoft.ML.Data.ColumnNameAttribute.%23ctor%2A>, который позволяет обозначить его как поле `Label`. `SentimentPrediction` используется для прогнозирования после обучения модели. Он имеет один параметр типа boolean (`Sentiment`) и атрибут `PredictedLabel` `ColumnName`. Параметр `Label` используется для создания и обучения модели, а также для оценки модели по разделенному набору данных для тестирования. `PredictedLabel` используется для прогнозирования и оценки. Для оценки применяются входные обучающие данные, прогнозируемые значения и модель.
 
-При создании модели с использованием ML.NET сначала необходимо создать <xref:Microsoft.ML.MLContext>. Концептуально `MLContext` сопоставимо с использованием `DbContext` в Entity Framework. Среда предоставляет контекст для вашего задания Машинного обучения, который можно использовать для отслеживания исключений и ведения журнала.
+При создании модели с использованием ML.NET сначала необходимо создать <xref:Microsoft.ML.MLContext>. `MLContext` сопоставимо с использованием `DbContext` в Entity Framework. Среда предоставляет контекст для вашего задания Машинного обучения, который можно использовать для отслеживания исключений и ведения журнала.
 
 ### <a name="initialize-variables-in-main"></a>Инициализация переменных в методе Main
 
 Создайте переменную с именем `mlContext` и инициализируйте ее с новым экземпляром `MLContext`.  Замените строку `Console.WriteLine("Hello World!")` в методе `Main` следующим кодом:
 
-[!code-csharp[CreateMLContext](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CreateMLContext "Create the ML Context")]
+[!code-csharp[CreateMLContext](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CreateMLContext "Create the ML Context")]
 
 Добавьте в следующую строку метода `Main` приведенный ниже код:
 
-[!code-csharp[CallLoadData](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CallLoadData)]
+[!code-csharp[CallLoadData](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CallLoadData)]
 
 Метод `LoadData` выполняет следующие задачи:
 
@@ -188,7 +188,7 @@ public static TrainCatalogBase.TrainTestData LoadData(MLContext mlContext)
 
  Добавьте следующий код в первую строку метода `LoadData`:
 
-[!code-csharp[LoadData](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#LoadData "loading dataset")]
+[!code-csharp[LoadData](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#LoadData "loading dataset")]
 
 ### <a name="split-the-dataset-for-model-training-and-testing"></a>Разделение набора данных для обучения и тестирования модели
 
@@ -196,17 +196,17 @@ public static TrainCatalogBase.TrainTestData LoadData(MLContext mlContext)
 
 Чтобы разделить скачанные данные на необходимые наборы данных, добавьте код в следующей строке метода `LoadData`:
 
-[!code-csharp[SplitData](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#SplitData "Split the Data")]
+[!code-csharp[SplitData](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#SplitData "Split the Data")]
 
 Верните `splitDataView` в конце метода `LoadData`.
 
-[!code-csharp[ReturnSplitData](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#ReturnSplitData)]
+[!code-csharp[ReturnSplitData](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#ReturnSplitData)]
 
 ## <a name="build-and-train-the-model"></a>Сборка и обучение модели
 
 В следующей строке кода в методе `Main` добавьте приведенный ниже вызов метода `BuildAndTrainModel`:
 
-[!code-csharp[CallBuildAndTrainModel](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CallBuildAndTrainModel)]
+[!code-csharp[CallBuildAndTrainModel](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CallBuildAndTrainModel)]
 
 Метод `BuildAndTrainModel` выполняет следующие задачи:
 
@@ -234,7 +234,7 @@ public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView spl
 
 Далее вызовите `mlContext.Transforms.Text.FeaturizeText`, который преобразовывает текстовый столбец (`SentimentText`) в числовой вектор под названием `Features`, используемый в алгоритмах Машинного обучения. Это вызов программы-оболочки, возвращающий <xref:Microsoft.ML.Data.EstimatorChain%601>, который фактически будет конвейером. Присвойте ему имя `pipeline`, так как затем вы добавите обучающую систему в `EstimatorChain`. Добавьте следующую строку кода:
 
-[!code-csharp[FeaturizeText](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#FeaturizeText "Featurize the text")]
+[!code-csharp[FeaturizeText](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#FeaturizeText "Featurize the text")]
 
 >[!WARNING]
 > В ML.NET версии 0.10 изменился порядок параметров преобразования. Процесс будет происходить без ошибок, пока вы не запустите приложение и не создадите модель. Используйте имена параметров для преобразования, как показано в предыдущем фрагменте кода.
@@ -247,7 +247,7 @@ public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView spl
 
 Добавьте следующий код в метод `BuildAndTrainModel`:
 
-[!code-csharp[FastTreeBinaryClassificationTrainer](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#AddTrainer "Add a FastTreeBinaryClassificationTrainer")]
+[!code-csharp[FastTreeBinaryClassificationTrainer](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#AddTrainer "Add a FastTreeBinaryClassificationTrainer")]
 
 ## <a name="train-the-model"></a>Обучение модели
 
@@ -255,13 +255,13 @@ public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView spl
 
 Добавьте следующий код в метод `BuildAndTrainModel`:
 
-[!code-csharp[TrainModel](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#TrainModel "Train the model")]
+[!code-csharp[TrainModel](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#TrainModel "Train the model")]
 
 ### <a name="save-and-return-the-model-trained-to-use-for-evaluation"></a>Сохранение и возврат обученной модели для оценки
 
 На этом этапе у вас есть модель типа <xref:Microsoft.ML.Data.TransformerChain%601>, которую можно интегрировать с любыми имеющимися или новыми приложениями .NET. Выполните возврат модели в конце метода `BuildAndTrainModel`.
 
-[!code-csharp[ReturnModel](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#ReturnModel "Return the model")]
+[!code-csharp[ReturnModel](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#ReturnModel "Return the model")]
 
 ## <a name="evaluate-the-model"></a>Оценка модели
 
@@ -283,25 +283,25 @@ public static void Evaluate(MLContext mlContext, ITransformer model, IDataView s
 
 Добавьте вызов нового метода из метода `Main`, сразу после вызова метода `Train`, используя следующий код:
 
-[!code-csharp[CallEvaluate](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CallEvaluate "Call the Evaluate method")]
+[!code-csharp[CallEvaluate](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CallEvaluate "Call the Evaluate method")]
 
 Далее вы будете использовать параметр машинного обучения `model` (преобразователь) и параметр `splitTestSet` для ввода признаков и возврата прогнозов. В качестве следующей строки в методе `Evaluate` добавьте приведенный ниже код:
 
-[!code-csharp[PredictWithTransformer](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#TransformData "Predict using the Transformer")]
+[!code-csharp[PredictWithTransformer](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#TransformData "Predict using the Transformer")]
 
 Метод `mlContext.BinaryClassification.Evaluate` вычисляет метрики качества для `PredictionModel` на основе указанного набора данных. Он возвращает объект <xref:Microsoft.ML.Data.CalibratedBinaryClassificationMetrics>, содержащий общие метрики, вычисляемые с помощью средств оценки двоичной классификации. Чтобы отобразить их для оценки качества модели, сначала метрики необходимо получить. Добавьте в следующую строку метода `Evaluate` приведенный ниже код:
 
-[!code-csharp[ComputeMetrics](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#Evaluate "Compute Metrics")]
+[!code-csharp[ComputeMetrics](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#Evaluate "Compute Metrics")]
 
 ### <a name="displaying-the-metrics-for-model-validation"></a>Отображение метрик для проверки модели
 
 Используйте следующий код для отображения метрик, передачи результатов и выполнения действий по ним:
 
-[!code-csharp[DisplayMetrics](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#DisplayMetrics "Display selected metrics")]
+[!code-csharp[DisplayMetrics](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#DisplayMetrics "Display selected metrics")]
 
 Чтобы сохранить модель в ZIP-файл, для вызова метода `SaveModelAsFile` добавьте в качестве следующей строки в `Evaluate` приведенный ниже код:
 
-[!code-csharp[SaveModel](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CallSaveModel "Save the model")]
+[!code-csharp[SaveModel](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CallSaveModel "Save the model")]
 
 ## <a name="save-the-model-as-azip-file"></a>Сохранение модели в качестве ZIP-файла
 
@@ -320,7 +320,7 @@ private static void SaveModelAsFile(MLContext mlContext, ITransformer model)
 
 Далее создайте метод для сохранения модели, чтобы ее можно было использовать повторно, а также применять в других приложениях. `ITransformer` содержит метод <xref:Microsoft.ML.Data.TransformerChain%601.SaveTo(Microsoft.ML.IHostEnvironment,System.IO.Stream)>, который принимает глобальное поле `_modelPath`, и <xref:System.IO.Stream>. Чтобы сохранить модель в качестве ZIP-файла, мы создадим `FileStream` непосредственно перед вызовом метода `SaveTo`. В качестве следующей строки в методе `SaveModelAsFile` добавьте приведенный ниже код:
 
-[!code-csharp[SaveToMethod](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#SaveModel "Add the SaveTo Method")]
+[!code-csharp[SaveToMethod](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#SaveModel "Add the SaveTo Method")]
 
 Вы также можете просмотреть, куда был записан файл, написав консольное сообщение с `_modelPath`, используя следующий код:
 
@@ -348,25 +348,25 @@ private static void UseModelWithSingleItem(MLContext mlContext, ITransformer mod
 
 Добавьте вызов нового метода из метода `Main`, сразу после вызова метода `Evaluate`, используя следующий код:
 
-[!code-csharp[CallUseModelWithSingleItem](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CallUseModelWithSingleItem "Call the UseModelWithSingleItem method")]
+[!code-csharp[CallUseModelWithSingleItem](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CallUseModelWithSingleItem "Call the UseModelWithSingleItem method")]
 
 Несмотря на то что `model` представляет собой `transformer`, который обрабатывает многочисленные строки данных, достаточно распространенным сценарием рабочей среды является прогнозирование на основе отдельных примеров. <xref:Microsoft.ML.PredictionEngine%602> — это программа-оболочка, возвращаемая из метода `CreatePredictionEngine`. Давайте добавим следующий код в качестве первой строки в методе `Predict` для создания `PredictionEngine`:
 
-[!code-csharp[CreatePredictionEngine](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CreatePredictionEngine1 "Create the PredictionEngine")]
+[!code-csharp[CreatePredictionEngine](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CreatePredictionEngine1 "Create the PredictionEngine")]
   
 Добавьте комментарий для проверки прогнозирования обученной модели в методе `Predict`, создав экземпляр `SentimentData`:
 
-[!code-csharp[PredictionData](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CreateTestIssue1 "Create test data for single prediction")]
+[!code-csharp[PredictionData](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CreateTestIssue1 "Create test data for single prediction")]
 
  Это можно использовать для прогнозирования положительной или отрицательной тональности одного экземпляра данных комментария. Чтобы получить прогноз, примените <xref:Microsoft.ML.PredictionEngine%602.Predict%2A> для данных. Обратите внимание, что входные данные имеют строковый формат, а модель выполняет присвоение признаков. Конвейер синхронизируется во время обучения и прогнозирования. Вам не нужно писать для прогнозирования отдельный код предварительной обработки и присвоения признаков. Кроме того, этот API выполняет как пакетное, так и разовое прогнозирование.
 
-[!code-csharp[Predict](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#Predict "Create a prediction of sentiment")]
+[!code-csharp[Predict](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#Predict "Create a prediction of sentiment")]
 
 ### <a name="use-the-model-prediction"></a>Использование модели. Прогнозирование
 
 Отобразите `SentimentText` и соответствующие прогнозы тональности, чтобы поделиться результатами и выполнить соответствующие действия. Этот этап называется вводом в эксплуатацию, после которого возвращаемые данные можно включить в операционные политики. Создайте отображение для результатов с помощью следующего кода <xref:System.Console.WriteLine?displayProperty=nameWithType>:
 
-[!code-csharp[OutputPrediction](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#OutputPrediction "Display prediction output")]
+[!code-csharp[OutputPrediction](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#OutputPrediction "Display prediction output")]
 
 ## <a name="deploy-and-predict-with-a-loaded-model"></a>Развертывание и прогнозирование с помощью загруженной модели
 
@@ -388,33 +388,33 @@ public static void UseLoadedModelWithBatchItems(MLContext mlContext)
 
 Добавьте вызов нового метода из метода `Main`, сразу после вызова метода `UseModelWithSingleItem`, используя следующий код:
 
-[!code-csharp[CallPredictModelLoaded](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CallUseLoadedModelWithBatchItems "Call the CallUseLoadedModelWithBatchItems method")]
+[!code-csharp[CallPredictModelLoaded](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CallUseLoadedModelWithBatchItems "Call the CallUseLoadedModelWithBatchItems method")]
 
 Добавьте новые комментарии, чтобы проверить прогнозы обученной модели, в метод `UseLoadedModelWithBatchItems`:
 
-[!code-csharp[PredictionData](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CreateTestIssues "Create test data for predictions")]
+[!code-csharp[PredictionData](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CreateTestIssues "Create test data for predictions")]
 
 Загрузите модель
 
-[!code-csharp[LoadTheModel](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#LoadModel "Load the model")]
+[!code-csharp[LoadTheModel](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#LoadModel "Load the model")]
 
 Теперь у вас есть готовая модель, и ее можно использовать для прогнозирования токсичной или нетоксичной тональности по данным комментариев с помощью метода <xref:Microsoft.ML.ITransformer.Transform%2A>. Чтобы получить прогноз, примените `Predict` для новых данных. Обратите внимание, что входные данные имеют строковый формат, а модель выполняет присвоение признаков. Конвейер синхронизируется во время обучения и прогнозирования. Вам не нужно писать для прогнозирования отдельный код предварительной обработки и присвоения признаков. Кроме того, этот API выполняет как пакетное, так и разовое прогнозирование. Добавьте в метод `UseLoadedModelWithBatchItems` приведенный ниже код для прогнозирования:
 
-[!code-csharp[Predict](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#Prediction "Create predictions of sentiments")]
+[!code-csharp[Predict](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#Prediction "Create predictions of sentiments")]
 
 ### <a name="use-the-loaded-model-for-prediction"></a>Использование загруженной модели для прогнозирования
 
 Отобразите `SentimentText` и соответствующие прогнозы тональности, чтобы поделиться результатами и выполнить соответствующие действия. Этот этап называется вводом в эксплуатацию, после которого возвращаемые данные можно включить в операционные политики. Создайте заголовок для результатов с помощью следующего кода <xref:System.Console.WriteLine?displayProperty=nameWithType>:
 
-[!code-csharp[OutputHeaders](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#AddInfoMessage "Display prediction outputs")]
+[!code-csharp[OutputHeaders](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#AddInfoMessage "Display prediction outputs")]
 
 Перед отображением результатов прогнозирования объедините данные о тональности с прогнозами, чтобы просмотреть исходные комментарии и прогнозы тональности. В следующем коде для этого используется метод <xref:System.Linq.Enumerable.Zip%2A>, а после него нужно добавить следующий код:
 
-[!code-csharp[BuildTuples](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#BuildSentimentPredictionPairs "Build the pairs of sentiment data and predictions")]
+[!code-csharp[BuildTuples](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#BuildSentimentPredictionPairs "Build the pairs of sentiment data and predictions")]
 
 Теперь, когда вы объединили в один класс `SentimentText` и `Sentiment`, можно отобразить результаты с помощью метода <xref:System.Console.WriteLine?displayProperty=nameWithType>:
 
-[!code-csharp[DisplayPredictions](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#DisplayResults "Display the predictions")]
+[!code-csharp[DisplayPredictions](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#DisplayResults "Display the predictions")]
 
 Так как выводимые имена элементов кортежа появились только в C# версии 7.1, а для этого проекта по умолчанию устанавливается версия языка C# 7.0, необходимо изменить это значение до C# 7.1 или более поздней версии.
 Для этого в **обозревателе решений** щелкните узел проекта правой кнопкой мыши и выберите пункт **Свойства**. Откройте вкладку **Сборка** и нажмите на кнопку **Дополнительно**. В раскрывающемся списке выберите **C# 7.1** (или более позднюю версию). Нажмите кнопку **OK**.
@@ -471,4 +471,4 @@ Press any key to continue . . .
 
 Переходите к следующему руководству:
 > [!div class="nextstepaction"]
-> [Классификация задач](github-issue-classification.md)
+> [Классификация проблем](github-issue-classification.md)

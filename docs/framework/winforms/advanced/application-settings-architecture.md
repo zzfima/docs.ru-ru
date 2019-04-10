@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: f686fa00662ad29323c1883c45ed0e790b133f2c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c2a62b61cb7b31c978a84a3d3f41c24f9fafb84d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59099785"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312570"
 ---
 # <a name="application-settings-architecture"></a>Архитектура параметров приложения
 В этом разделе описываются принципы работы архитектуры параметров приложения и рассматриваются дополнительные возможности архитектуры, такие как сгруппированные параметры и ключи параметров.  
@@ -100,11 +100,11 @@ ms.locfileid: "59099785"
 ### <a name="settings-serialization"></a>Сериализация параметров  
  Когда <xref:System.Configuration.LocalFileSettingsProvider> необходимо сохранить параметры на диск, он выполняет следующие действия:  
   
-1.  Использует отражение для проверки всех свойств, определенных для вашего <xref:System.Configuration.ApplicationSettingsBase> производного класса, поиск, примененные с помощью <xref:System.Configuration.ApplicationScopedSettingAttribute> или <xref:System.Configuration.UserScopedSettingAttribute>.  
+1. Использует отражение для проверки всех свойств, определенных для вашего <xref:System.Configuration.ApplicationSettingsBase> производного класса, поиск, примененные с помощью <xref:System.Configuration.ApplicationScopedSettingAttribute> или <xref:System.Configuration.UserScopedSettingAttribute>.  
   
-2.  Сериализует свойство на диск. Сначала пытается вызвать <xref:System.ComponentModel.TypeConverter.ConvertToString%2A> или <xref:System.ComponentModel.TypeConverter.ConvertFromString%2A> на тип, связанного с <xref:System.ComponentModel.TypeConverter>. Если это не удается, использует XML-сериализацию.  
+2. Сериализует свойство на диск. Сначала пытается вызвать <xref:System.ComponentModel.TypeConverter.ConvertToString%2A> или <xref:System.ComponentModel.TypeConverter.ConvertFromString%2A> на тип, связанного с <xref:System.ComponentModel.TypeConverter>. Если это не удается, использует XML-сериализацию.  
   
-3.  Распределяет параметры по файлам на основе атрибута параметра.  
+3. Распределяет параметры по файлам на основе атрибута параметра.  
   
  При реализации собственного класса параметров можно использовать <xref:System.Configuration.SettingsSerializeAsAttribute> чтобы отметить параметр для настраиваемой или двоичной сериализации с помощью <xref:System.Configuration.SettingsSerializeAs> перечисления. Дополнительные сведения о создании собственных классов параметров в коде, см. в разделе [как: Создание параметров приложения](how-to-create-application-settings.md).  
   

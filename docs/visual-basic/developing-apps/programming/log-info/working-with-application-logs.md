@@ -6,12 +6,12 @@ helpviewer_keywords:
 - application event logs, Visual Basic
 - application event logs
 ms.assetid: 2581afd1-5791-4bc4-86b2-46244e9fe468
-ms.openlocfilehash: afd35b67fc11cb556159ed0d37130cd86d72c30f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 00c54a59ccfe2a49dcf35b322ca077a10a48ae7d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354834"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839643"
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a>Работа с журналами приложения в Visual Basic
 
@@ -23,11 +23,11 @@ ms.locfileid: "57354834"
 
 На приведенной ниже схеме показан способ передачи сообщения, записанного методом `WriteEntry` , в методы `WriteLine` прослушивателей трассировки журнала.
 
-![Вызов журнала My](../../../../visual-basic/developing-apps/programming/log-info/media/mylogcall.png "MyLogCall")
+![Схема, иллюстрирующая вызов My log.](./media/working-with-application-logs/my-log-call-messages.png)
 
 Поведение журнала и прослушивателей трассировки можно изменить путем изменения файла конфигурации приложения. На приведенной ниже схеме показано соответствие между элементами журнала и файла конфигурации.
 
-![Конфигурация журнала My](../../../../visual-basic/developing-apps/programming/log-info/media/mylogconfig.png "MyLogConfig")
+![Схема, иллюстрирующая настройку My log.](./media/working-with-application-logs/my-log-configuration.png)
 
 ## <a name="where-messages-are-logged"></a>Куда записываются сообщения
 

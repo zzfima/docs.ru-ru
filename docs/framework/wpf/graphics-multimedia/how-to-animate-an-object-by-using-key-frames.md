@@ -5,12 +5,12 @@ helpviewer_keywords:
 - animation [WPF], objects with key frames
 - key frames [WPF], animating objects with
 ms.assetid: b1f15ba9-cac7-4cea-8699-5c6b55c05c5e
-ms.openlocfilehash: 0b2b517410c6cbc4f3deca13e5948c8de583fd3d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b0a0f7c00125a43228a2658415b72f4d541f37be
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59177805"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315846"
 ---
 # <a name="how-to-animate-an-object-by-using-key-frames"></a>Практическое руководство. Анимация объекта с помощью ключевых кадров
 В этом примере показано, как анимировать объект, который в этом примере является <xref:System.Windows.Controls.Page.Background%2A> свойство <xref:System.Windows.Controls.Page> элемента управления, с помощью ключевых кадров.  
@@ -18,13 +18,13 @@ ms.locfileid: "59177805"
 ## <a name="example"></a>Пример  
  В следующем примере используется <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> изменения в класс анимация цвета <xref:System.Windows.Controls.Page.Background%2A> свойство <xref:System.Windows.Controls.Page> элемента управления. Пример изменяется цвет кисти фона с регулярными интервалами. Эта анимация использует <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame> класс, чтобы создать три различных ключевых кадров. Анимация использует ключевых кадра следующим образом:  
   
-1.  В конце первой секунды, анимирует экземпляр <xref:System.Windows.Media.LinearGradientBrush> класса. В этом разделе примере применяется линейный градиент к цвету фона, таким образом, чтобы переход цвета с желтого на оранжевый, красный.  
+1. В конце первой секунды, анимирует экземпляр <xref:System.Windows.Media.LinearGradientBrush> класса. В этом разделе примере применяется линейный градиент к цвету фона, таким образом, чтобы переход цвета с желтого на оранжевый, красный.  
   
-2.  В конце следующей секунды, анимирует экземпляр <xref:System.Windows.Media.RadialGradientBrush> класса. Этот раздел примера относится радиального градиента к цвет фона, определяющий цвет переход от белого к синему на черный.  
+2. В конце следующей секунды, анимирует экземпляр <xref:System.Windows.Media.RadialGradientBrush> класса. Этот раздел примера относится радиального градиента к цвет фона, определяющий цвет переход от белого к синему на черный.  
   
-3.  В конце третьей секунды, анимирует экземпляр <xref:System.Windows.Media.DrawingBrush> класса. В этом разделе примере применяется шахматной в фоновом режиме.  
+3. В конце третьей секунды, анимирует экземпляр <xref:System.Windows.Media.DrawingBrush> класса. В этом разделе примере применяется шахматной в фоновом режиме.  
   
-4.  Анимация начинается снова и повторяется бесконечно.  
+4. Анимация начинается снова и повторяется бесконечно.  
   
 > [!NOTE]
 >  <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame> Это единственный тип ключевого кадра, который можно использовать с <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> класса. Опорные кадры, например <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame> , создают резкие изменения значений, то есть, изменения цвета в этом примере происходит внезапное.  

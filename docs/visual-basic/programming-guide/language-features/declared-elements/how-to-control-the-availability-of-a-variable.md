@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], access level
 - Protected keyword [Visual Basic], accessing variables
 ms.assetid: eaf4f073-7922-43ce-ae1e-90ff376ae947
-ms.openlocfilehash: fb7c04ac6c24648dfb2a8cfa5e01bf97c6b0b3be
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: fb400b113e3f3305f5b724734b2bf9aa9425d03f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841697"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311530"
 ---
 # <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a>Практическое руководство. Управление доступностью переменной (Visual Basic)
 Управление доступностью переменной, указав его *уровень доступа*. Уровень доступа определяет, какой код имеет разрешение на чтение или запись в переменную.  
@@ -31,25 +31,25 @@ ms.locfileid: "58841697"
   
 #### <a name="to-make-a-variable-accessible-only-from-within-its-module-class-or-structure"></a>Чтобы сделать переменную доступной только из модуля, класса или структуры  
   
-1.  Место [оператор Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) для переменной внутри модуля, класса или структуры, но вне любой процедуры.  
+1. Место [оператор Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) для переменной внутри модуля, класса или структуры, но вне любой процедуры.  
   
-2.  Включить [частного](../../../../visual-basic/language-reference/modifiers/private.md) ключевое слово в `Dim` инструкции.  
+2. Включить [частного](../../../../visual-basic/language-reference/modifiers/private.md) ключевое слово в `Dim` инструкции.  
   
      Можно считывать или записывать значение переменной из любого места внутри модуля, класса или структуры, но не из за его пределами.  
   
 #### <a name="to-make-a-variable-accessible-from-any-code-that-can-see-it"></a>Чтобы сделать переменную доступной из любой код, который можно увидеть его  
   
-1.  Переменную-член, поместите `Dim` инструкцию для переменной внутри модуля, класса или структуры, но вне любой процедуры.  
+1. Переменную-член, поместите `Dim` инструкцию для переменной внутри модуля, класса или структуры, но вне любой процедуры.  
   
-2.  Включить [открытый](../../../../visual-basic/language-reference/modifiers/public.md) ключевое слово в `Dim` инструкции.  
+2. Включить [открытый](../../../../visual-basic/language-reference/modifiers/public.md) ключевое слово в `Dim` инструкции.  
   
      Можно считывать или записывать значение переменной из любого кода, который взаимодействует со сборкой.  
   
- - или -  
+ -или-  
   
-1.  Для локальной переменной, поместите `Dim` инструкцию для переменной внутри процедуры.  
+1. Для локальной переменной, поместите `Dim` инструкцию для переменной внутри процедуры.  
   
-2.  Не используйте `Public` ключевое слово в `Dim` инструкции.  
+2. Не используйте `Public` ключевое слово в `Dim` инструкции.  
   
      Можно считывать или записывать значение переменной из любого места внутри процедуры, но не из за его пределами.  
   
@@ -58,17 +58,17 @@ ms.locfileid: "58841697"
   
 #### <a name="to-make-a-variable-accessible-only-from-within-its-class-and-any-derived-classes"></a>Чтобы сделать переменную доступной только из своего класса и его производные классы  
   
-1.  Место `Dim` инструкцию для переменной внутри класса, но вне любой процедуры.  
+1. Место `Dim` инструкцию для переменной внутри класса, но вне любой процедуры.  
   
-2.  Включить [Protected](../../../../visual-basic/language-reference/modifiers/protected.md) ключевое слово в `Dim` инструкции.  
+2. Включить [Protected](../../../../visual-basic/language-reference/modifiers/protected.md) ключевое слово в `Dim` инструкции.  
   
      Можно считывать или записывать значение переменной из любого места внутри класса, а также внутри любого класса, производного от него, но не из за пределами любого класса в иерархии наследования.  
   
 #### <a name="to-make-a-variable-accessible-only-from-within-the-same-assembly"></a>Чтобы сделать переменную доступной только из той же сборки  
   
-1.  Место `Dim` инструкцию для переменной внутри модуля, класса или структуры, но вне любой процедуры.  
+1. Место `Dim` инструкцию для переменной внутри модуля, класса или структуры, но вне любой процедуры.  
   
-2.  Включить [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) ключевое слово в `Dim` инструкции.  
+2. Включить [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) ключевое слово в `Dim` инструкции.  
   
      Можно считывать или записывать значение переменной из любого места внутри модуля, класса или структуры, а также из любого кода в той же сборке, но не из за пределов сборки.  
   
@@ -91,6 +91,6 @@ Private numberForMeOnly As Integer
 - [Уровни доступа в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Оператор Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)
 - [Public](../../../../visual-basic/language-reference/modifiers/public.md)
-- [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)
+- [Защищенный](../../../../visual-basic/language-reference/modifiers/protected.md)
 - [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)
-- [Закрытые](../../../../visual-basic/language-reference/modifiers/private.md)
+- [Private](../../../../visual-basic/language-reference/modifiers/private.md)

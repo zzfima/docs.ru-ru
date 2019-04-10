@@ -2,12 +2,12 @@
 title: Новые возможности C# 6. Руководство по языку C#
 description: Сведения о новых возможностях в C# 6
 ms.date: 12/12/2018
-ms.openlocfilehash: 1c8c8003f81d4c15f2abdc26dc15849d88582843
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 478fd512f6b6facfce6d7f70f9691ce15e418d6e
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654579"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920679"
 ---
 # <a name="whats-new-in-c-6"></a>Новые возможности C# 6
 
@@ -127,7 +127,7 @@ FormattableString str = $"Average grade is {s.Grades.Average()}";
 var gradeStr = str.ToString(new System.Globalization.CultureInfo("de-DE"));
 ```
 
-Чтобы начать работу с интерполяцией строк, см. интерактивный учебник [Интерполяция строк в C#](../tutorials/intro-to-csharp/interpolated-strings.yml), статью [Интерполяция](../language-reference/tokens/interpolated.md) и учебник [Интерполяция строк в C#](../tutorials/string-interpolation.md).
+Чтобы начать работу с интерполяцией строк, см. интерактивный учебник [Интерполяция строк в C#](../tutorials/exploration/interpolated-strings.yml), статью [Интерполяция](../language-reference/tokens/interpolated.md) и учебник [Интерполяция строк в C#](../tutorials/string-interpolation.md).
 
 ## <a name="exception-filters"></a>Фильтры исключений
 

@@ -4,12 +4,12 @@ description: Разработка современных веб-приложен
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 05d696f5cbceaedb35e3e4e97f8c4e89124d43dc
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 68f88d29a6c88f4ce261a0a2794035d43db1fc0c
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826737"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58921108"
 ---
 # <a name="common-web-application-architectures"></a>Общие архитектуры веб-приложений
 
@@ -30,7 +30,7 @@ ms.locfileid: "55826737"
 
 ![](./media/image5-1.png)
 
-**Рис. 5-1**. Приложение ASP.NET Core, состоящее из одного проекта.
+**Рис. 5-1.** Приложение ASP.NET Core, состоящее из одного проекта.
 
 В сценарии с одним проектом разделение задач реализуется с помощью папок. Используемый по умолчанию шаблон включает отдельные папки для обязанностей шаблона MVC (модели, представления и контроллеры), а также дополнительные папки для данных и служб. При такой организации детали презентации данных в максимально возможной степени размещаются в папке представлений (Views), а детали реализации доступа к данным должны быть ограничены классами, содержащимися в папке данных (Data). Бизнес-логика при этом размещается в службах и классах, находящихся в папке моделей (Models).
 
@@ -93,7 +93,7 @@ ms.locfileid: "55826737"
 
 ![](./media/image5-6.png)
 
-**Рис. 5-6**. Масштабирование плана службы приложений в Azure.
+**Рис. 5-6.** Масштабирование плана службы приложений в Azure.
 
 ## <a name="clean-architecture"></a>Чистая архитектура
 
@@ -263,7 +263,7 @@ networks:
 Файл `docker-compose.yml` ссылается на `Dockerfile` в проекте `Web`. С помощью `Dockerfile` можно указать, какой базовый контейнер будет использоваться и как приложение будет настроено на нем. `Dockerfile` `Web`:
 
 ```
-FROM microsoft/dotnet:2.2-sdk AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
 WORKDIR /app
 
 COPY *.sln .
@@ -273,7 +273,7 @@ RUN dotnet restore
 
 RUN dotnet publish -c Release -o out
 
-FROM microsoft/dotnet:2.2-aspnetcore-runtime AS runtime
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.2 AS runtime
 WORKDIR /app
 COPY --from=build /app/src/Web/out ./
 
