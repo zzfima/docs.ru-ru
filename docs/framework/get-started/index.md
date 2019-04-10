@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad380b5e411a61db648495875a5b697df54e2849
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: d6604beca5c0031b55fc22fc48e0c23d27c8a37e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304691"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314975"
 ---
 # <a name="get-started-with-the-net-framework"></a>Начало работы с .NET Framework
 
@@ -71,7 +71,7 @@ ms.locfileid: "56304691"
 
 2. Выберите язык или языки, поддерживаемые платформой .NET Framework, которые вы хотите использовать для разработки приложений. Поддерживается целый ряд языков, в том числе [Visual Basic](../../visual-basic/index.md), [C#](../../csharp/index.md), [F#](../../fsharp/index.md) и [C++/CLI](/cpp/dotnet/dotnet-programming-with-cpp-cli-visual-cpp) от Майкрософт. (Язык программирования, позволяющий разрабатывать приложения для .NET Framework, соответствует [спецификации Common Language Infrastructure (CLI)](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/).)
 
-3. Выберите и установите среду разработки, которая будет использоваться для создания приложений и которая поддерживает выбранные язык или языки программирования. Интегрированной средой разработки Майкрософт для приложений .NET Framework является [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). Доступны разные выпуски.
+3. Выберите и установите среду разработки, которая будет использоваться для создания приложений и которая поддерживает выбранные язык или языки программирования. Интегрированной средой разработки Майкрософт для приложений .NET Framework является [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link). Доступны разные выпуски.
 
 Дополнительные сведения о разработке приложений, предназначенных для .NET Framework, см. в [руководстве по разработке](../development-guide.md).
 
@@ -81,9 +81,9 @@ ms.locfileid: "56304691"
 | ----- |------------ |
 | [Обзор](overview.md) | Содержит подробные сведения для разработчиков, которые занимаются созданием приложений, предназначенных для платформы .NET Framework. |
 | [Руководство по установке](../install/index.md) | Содержит сведения об установке платформы .NET Framework. |  
-| [.NET Framework и отдельные выпуски](the-net-framework-and-out-of-band-releases.md) | Содержит описание внештатных выпусков платформы .NET Framework и порядка их использования в приложении. |
+| [.NET Framework и внештатные выпуски](the-net-framework-and-out-of-band-releases.md) | Содержит описание внештатных выпусков платформы .NET Framework и порядка их использования в приложении. |
 | [Требования к системе](system-requirements.md) | Содержит требования к оборудованию и операционной системе для использования платформы .NET Framework. |
-| [.NET Core и открытый исходный код](net-core-and-open-source.md) | Описание .NET Core относительно .NET Framework и сведения о получении доступа к проектам .NET Core с открытым исходным кодом. |
+| [Ядро .NET и открытый исходный код](net-core-and-open-source.md) | Описание .NET Core относительно .NET Framework и сведения о получении доступа к проектам .NET Core с открытым исходным кодом. |
 | [Документация по .NET Core](../../core/index.md) | Концептуальная и справочная документация по API для .NET Core. |
 | [.NET Standard](../../standard/net-standard.md) | Описывает стандарт .NET, который представляет собой спецификацию с возможностью управления версиями, поддерживаемую отдельными реализациями платформы .NET, что позволяет гарантировать наличие согласованного набора API-интерфейсов на различных платформах.
 

@@ -1,15 +1,15 @@
 ---
-title: Как выполнить Публикация метаданных для службы с помощью файла конфигурации
+title: Практическое руководство. Публикация метаданных для службы с использованием файла конфигурации
 ms.date: 03/30/2017
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
-ms.openlocfilehash: 81bf7db9ec25ae112127712dcd0443d3e045bc10
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 2aa85aa9682f1f5f4b6c13465034000bb01f0e62
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552805"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075207"
 ---
-# <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>Как выполнить Публикация метаданных для службы с помощью файла конфигурации
+# <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>Практическое руководство. Публикация метаданных для службы с использованием файла конфигурации
 Это один из двух практических руководств, в которых демонстрируется публикация метаданных для службы Windows Communication Foundation (WCF). Существуют два способа указать, как служба должна публиковать метаданные: с помощью файла конфигурации и с помощью кода. В этом разделе показано, как публиковать метаданные для службы с помощью файла конфигурации.  
   
 > [!CAUTION]
@@ -92,23 +92,15 @@ namespace Metadata.Samples
   
 ### <a name="to-publish-metadata-for-a-wcf-service-using-an-application-configuration-file"></a>Публикация метаданных для службы WCF с помощью файла конфигурации приложения  
   
-1.  В файле App.config после закрывающего элемента `</services>` создайте элемент `<behaviors>`.  
-  
-  
-  
+1.  В файле App.config после закрывающего элемента &lt;behaviors&gt; создайте элемент`</services>`.  
+
 2.  Внутри элемента `<behaviors>` добавьте элемент `<serviceBehaviors>`.  
-  
-  
-  
-3.  Добавьте элемент `<behavior>``name` в элемент `<serviceBehaviors>``<behavior>` и задайте значение для атрибута  элемента .  
-  
-  
-  
-4.  Добавьте элемент `<serviceMetadata>` в элемент `<behavior>`. Задайте атрибуту `httpGetEnabled` значение `true`, а атрибуту `policyVersion` значение Policy15. `httpGetEnabled` позволяет службе отвечать на запросы метаданных, переданные с помощью запроса HTTP GET. `policyVersion` сообщает службе, что формируемые метаданные должны соответствовать спецификации WS-Policy 1.5.  
-  
-  
-  
-5.  Добавьте атрибут `behaviorConfiguration` элементу `<service>``<behavior>` и задайте атрибут `name` элемента , добавленного на шаге 1, как показано в следующем примере кода.  
+
+3.  Добавьте элемент &lt;serviceBehaviors&gt; в элемент`<behavior>`и задайте значение для атрибута &lt;behavior&gt;`<serviceBehaviors>` элемента .  
+
+4.  Добавьте элемент `<serviceMetadata>` в элемент `<behavior>`. Задайте атрибуту `httpGetEnabled` значение `true`, а атрибуту `policyVersion` значение Policy15. `httpGetEnabled` позволяет службе отвечать на запросы метаданных, переданные с помощью запроса HTTP GET. `policyVersion` Сообщает службе для обеспечения соответствия спецификации WS-Policy 1.5, при создании метаданных.  
+
+5.  Добавьте атрибут `behaviorConfiguration` элементу name и задайте атрибут`<service>`&lt;behavior&gt; элемента`name`, добавленного на шаге 1, как показано в следующем примере кода.  
   
     ```xml  
     <services>  
@@ -127,7 +119,7 @@ namespace Metadata.Samples
     </behaviors>  
     ```  
   
-6.  Добавьте один или несколько элементов `<endpoint>` с контрактом `IMetadataExchange`, как показано в следующем примере кода.  
+6.  Добавьте один или несколько элементов IMetadataExchange с контрактом`<endpoint>`, как показано в следующем примере кода.  
   
     ```xml  
     <services>  
@@ -148,11 +140,11 @@ namespace Metadata.Samples
   
 7.  В конечных точках метаданных, добавленных на предыдущем шаге, присвойте атрибуту `binding` одно из следующих значений:  
   
-    -   `mexHttpBinding` для публикации по HTTP;  
+    -   `mexHttpBinding` для публикации по HTTP.  
   
-    -   `mexHttpsBinding` для публикации по HTTPS;  
+    -   `mexHttpsBinding` для публикации по HTTPS.  
   
-    -   `mexNamedPipeBinding` для публикации по именованному каналу;  
+    -   `mexNamedPipeBinding` для публикации по именованному каналу.  
   
     -   `mexTcpBinding` для публикации по TCP.  
   
@@ -262,9 +254,10 @@ namespace Metadata.Samples
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior>
 - [Практическое руководство. Размещение службы WCF в управляемом приложении](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
 - [Резидентное размещение](../../../../docs/framework/wcf/samples/self-host.md)
 - [Общие сведения об архитектуре метаданных](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
 - [Использование метаданных](../../../../docs/framework/wcf/feature-details/using-metadata.md)
-- [Практическое руководство. Публикация метаданных для службы в коде](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)
+- [Практическое руководство. Публикация метаданных для службы с использованием кода](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)

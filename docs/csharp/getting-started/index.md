@@ -6,21 +6,22 @@ helpviewer_keywords:
 - getting started, Visual C#
 author: rpetrusha
 ms.author: ronpet
-ms.date: 08/23/2017
-ms.openlocfilehash: 9894d96c74741477b871d6073d78ea95413b8299
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.date: 04/05/2019
+ms.custom: seoapril2019
+ms.openlocfilehash: 5c502c3832ca9afc30599d47d0890fae168fa998
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675670"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130976"
 ---
 # <a name="get-started-with-c"></a>Начало работы с C\#
 
-В этом разделе собраны короткие и простые руководства, которые позволяют быстро создать приложение с помощью C# и .NET Core. Это статьи по началу работы с Visual Studio 2017 и Visual Studio Code. Вы можете создать простое приложение Hello World, а если у вас есть Visual Studio 2017, еще и простую библиотеку классов, которую затем можно использовать в других приложениях.
+В этом разделе собраны короткие и простые руководства, которые позволяют быстро создать приложение с помощью C# и .NET Core. Это статьи по началу работы с Visual Studio 2017 и Visual Studio Code. Для изучения этих статей требуется некоторый опыт программирования. Если вы знакомы с программированием, рекомендуем поработать с нашими интерактивными [вводными руководствами по C# ](../tutorials/intro-to-csharp/index.md).
 
 Рассматриваются следующие темы:
 
-* [Введение в язык C# и платформу .NET Framework](introduction-to-the-csharp-language-and-the-net-framework.md)
+* [Введение в язык C# и .NET Framework](introduction-to-the-csharp-language-and-the-net-framework.md)
 
      Содержит общие сведения о языке C# и .NET.
 

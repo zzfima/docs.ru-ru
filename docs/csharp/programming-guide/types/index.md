@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 2017e7ed1df18ea0b469207cd06396c74125cb19
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 92156bcd05ba1eb559714a71a23efacfdd29fc52
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465507"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219516"
 ---
 # <a name="types-c-programming-guide"></a>Типы (Руководство по программированию на C#)
 ## <a name="types-variables-and-values"></a>Типы, переменные и значения  
@@ -75,8 +75,7 @@ ms.locfileid: "58465507"
  Ниже показаны взаимоотношения между типами значения и ссылочными типами в CTS.
 
  На следующем изображении показаны типы значений и ссылочные типы в CTS: 
-  
-  
+
  ![Снимок экрана, где показаны типы значений и ссылочные типы в CTS.](./media/index/value-reference-types-common-type-system.png)  
   
 > [!NOTE]
@@ -169,7 +168,7 @@ stringList.Add(4);
   
 -   [Приведение и преобразование типов](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
   
--   [Упаковка-преобразование и распаковка-преобразование](../../../csharp/programming-guide/types/boxing-and-unboxing.md)  
+-   [Упаковка–преобразование и распаковка–преобразование](../../../csharp/programming-guide/types/boxing-and-unboxing.md)  
   
 -   [Использование типа dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)  
   
@@ -191,4 +190,4 @@ stringList.Add(4);
 - [Справочник по C#](../../../csharp/language-reference/index.md)
 - [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
 - [Преобразование типов XML-данных](../../../standard/data/xml/conversion-of-xml-data-types.md)
-- [Таблица целых типов](../../../csharp/language-reference/keywords/integral-types-table.md)
+- [Таблица целочисленных типов](../../../csharp/language-reference/keywords/integral-types-table.md)

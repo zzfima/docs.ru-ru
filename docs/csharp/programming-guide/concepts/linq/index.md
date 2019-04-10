@@ -2,12 +2,12 @@
 title: LINQ (C#)
 ms.date: 02/02/2017
 ms.assetid: 19dd1782-905b-4a9d-a3e9-618453037fa2
-ms.openlocfilehash: 108dc60285e51ab4cd703e668127a4ffd5fc1c74
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: c7dbe1bdef85de6028d37f8005dc5edea6c07925
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347816"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186632"
 ---
 # <a name="language-integrated-query-linq"></a>Синтаксис LINQ
 
@@ -35,20 +35,17 @@ ms.locfileid: "49347816"
   
 -   Некоторых операции запросов, например <xref:System.Linq.Enumerable.Count%2A> или <xref:System.Linq.Enumerable.Max%2A>, не имеют эквивалентных предложений выражения для запросов и должны выражаться как вызовы методов. Синтаксис запросов и синтаксис методов можно сочетать друг с другом различными способами. Дополнительные сведения см. в статье [Query syntax and method syntax in LINQ](query-syntax-and-method-syntax-in-linq.md) (Синтаксис запросов и синтаксис методов в LINQ).  
   
--   Выражения запросов могут компилироваться в деревья выражений или в делегаты, в зависимости от типа, к которому применяется конкретный запрос. Запросы <xref:System.Collections.Generic.IEnumerable%601> компилируются в делегаты. Запросы <xref:System.Linq.IQueryable> и <xref:System.Linq.IQueryable%601> компилируются в деревья выражений. Дополнительные сведения см. в статье [Expression trees](../../../expression-trees.md) (Деревья выражений).  
+-   Выражения запросов могут компилироваться в деревья выражений или в делегаты, в зависимости от типа, к которому применяется конкретный запрос. <xref:System.Collections.Generic.IEnumerable%601> компилируются в делегаты. <xref:System.Linq.IQueryable> и <xref:System.Linq.IQueryable%601> компилируются в деревья выражений. Дополнительные сведения см. в статье [Expression trees](../../../expression-trees.md) (Деревья выражений).  
 
 ## <a name="next-steps"></a>Следующие шаги
 
 Чтобы получить дополнительные сведения о LINQ, сначала ознакомьтесь с некоторыми основным понятиями в статье [Query expression basics](../../../linq/query-expression-basics.md) (Базовая информация о выражении запроса), а затем переходите к документации по интересующей вас технологии LINQ.   
 -   XML-документы: [LINQ to XML](linq-to-xml.md)  
   
--   Платформа Entity Framework для ADO.NET: [LINQ to Entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md)  
+-   Платформа ADO.NET Entity Framework: [LINQ to Entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md)  
   
--   Коллекции, файлы, строки и другие сущности .NET: [LINQ to Objects](linq-to-objects.md)
+-   Коллекции, файлы, строки и другие сущности .NET: [LINQ to Objects (C#)](linq-to-objects.md)
 
 Чтобы глубже разобраться в базовой концепции LINQ изучите [статью о LINQ в C#](../../../linq/linq-in-csharp.md).
 
 Чтобы быстрее приступить к работе с LINQ в C#, переходите к руководству [Working with LINQ](../../../tutorials/working-with-linq.md) (Работа с LINQ).
-
-
-

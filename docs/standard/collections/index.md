@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bed202d927cc026b903cb006220620210893056e
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: d6b9e3d3f5ebc122e2031dac5999a80445ee03a8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836154"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083846"
 ---
 # <a name="collections-and-data-structures"></a>Коллекции и структуры данных
 Связанные данные могут обрабатываться более эффективно, если они объединены в коллекцию. Вы можете использовать класс <xref:System.Array?displayProperty=nameWithType> или классы в пространствах имен <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent> и System.Collections.Immutable, чтобы добавлять, удалять и изменять отдельные элементы или диапазон элементов в коллекции.  
@@ -25,23 +25,22 @@ ms.locfileid: "56836154"
  Существует два основных типа коллекций — универсальные и неуниверсальные коллекции. Универсальные коллекции были добавлены в платформе .NET Framework 2.0 и являются строготипизированными во время компиляции. Таким образом, универсальные коллекции обычно обеспечивают более высокую производительность. Универсальные коллекции принимают параметр типа во время создания и не требуют приведение в тип <xref:System.Object> и из него при добавлении или удалении элементов.  Кроме того, большая часть универсальных коллекций поддерживается в приложениях [!INCLUDE[win8_appstore_long](../../../includes/win8-appstore-long-md.md)]. Неуниверсальные коллекции хранят такие элементы, как <xref:System.Object>, требуют приведения. Большая их часть не поддерживается для разработки приложений [!INCLUDE[win8_appstore_long](../../../includes/win8-appstore-long-md.md)]. Однако неуниверсальные коллекции можно наблюдать в старом коде.  
   
  Начиная с [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] коллекции в пространстве имен <xref:System.Collections.Concurrent> предоставляют эффективные потокобезопасные операции для доступа к элементам коллекций из нескольких потоков. Неизменяемые классы коллекций в пространстве имен System.Collections.Immutable ([пакет NuGet](https://www.nuget.org/packages/System.Collections.Immutable)) являются по своей природе потокобезопасными, поскольку операции выполняются с копией исходной коллекции, а исходная коллекция неизменяема.  
-  
-  
+
 <a name="BKMK_Commoncollectionfeatures"></a>   
 ## <a name="common-collection-features"></a>Общие возможности коллекций  
  Все коллекции предоставляют методы для добавления, удаления или поиска элементов в коллекции. Кроме того, все коллекции прямо или косвенно реализуют интерфейс <xref:System.Collections.ICollection> или интерфейс <xref:System.Collections.Generic.ICollection%601> с совместным использованием следующих функций.  
   
--   **Возможность перечисления коллекции**  
+-   **Возможность перечисления коллекции.**  
   
      Чтобы обеспечить итерацию по коллекции, коллекции .NET Framework реализуют либо <xref:System.Collections.IEnumerable?displayProperty=nameWithType>, либо <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. Перечислитель может рассматриваться как перемещаемый указатель на любой элемент в коллекции. Оператор [foreach, in](../../csharp/language-reference/keywords/foreach-in.md) и [For Each...Next Statement](../../visual-basic/language-reference/statements/for-each-next-statement.md) использует итератор, предоставляемый методом <xref:System.Collections.IEnumerable.GetEnumerator%2A>, и скрывает сложность работы с итератором. Кроме того, любая коллекция, реализующая <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>, считается *запрашиваемым типом*, и к ней можно создавать запросы LINQ. Запросы LINQ предоставляют общий шаблон для доступа к данным. Обычно они являются более четкими и удобочитаемыми, чем стандартные циклы `foreach`, и предлагают возможности фильтрации, упорядочения и группировки. LINQ запросы также могут повысить производительность. Дополнительные сведения см. в разделах [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md), [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md), [Введение в запросы LINQ (C#)](../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md) и [Базовые операции с запросами (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  
   
--   **Возможность копирования содержимого коллекции в массив**  
+-   **Возможность копирования содержимого коллекции в массив.**  
   
      Все коллекции могут быть скопированы в массив с помощью метода **CopyTo**. Однако порядок элементов в новом массиве зависит от того, в какой последовательности их возвращает перечислитель. Результирующий массив всегда является одномерным массивом с нижней границей, равной нулю.  
   
  Кроме того, во многих классах коллекций реализованы следующие возможности.  
   
--   **Свойства "Емкость и количество элементов"**  
+-   **Свойства "Емкость и количество элементов".**  
   
      Емкость коллекции — это число элементов, которое она может содержать. Количество элементов коллекции — это число элементов, которое она реально содержит. В некоторых коллекциях емкость или количество элементов скрыты.  
   
@@ -49,9 +48,9 @@ ms.locfileid: "56836154"
   
      <xref:System.Collections.BitArray> является особым случаем; его емкость совпадает с его длиной, которая совпадает с количеством элементов.  
   
--   **Согласованная нижняя граница**  
+-   **Согласованная нижняя граница.**  
   
-     Нижняя граница коллекции — это индекс ее первого элемента. Все индексированные коллекции в пространствах имен <xref:System.Collections> имеют нижнюю границу, равную нулю. Класс <xref:System.Array> по умолчанию имеет нижнюю границу, равную нулю, но при создании экземпляра класса **Array** с помощью <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> может быть задана другая нижняя граница.  
+     Нижняя граница коллекции — это индекс ее первого элемента. Все индексированные коллекции в пространствах имен <xref:System.Collections> имеют нижнюю границу, равную нулю. <xref:System.Array> по умолчанию имеет нижнюю границу, равную нулю, но при создании экземпляра класса **Array** с помощью <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> можно задать другую нижнюю границу.  
   
 -   **Синхронизация для доступа из нескольких потоков** (только классы <xref:System.Collections>).  
   
