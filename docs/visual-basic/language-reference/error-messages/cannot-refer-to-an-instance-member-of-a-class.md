@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Shared
 - BC30369
 ms.assetid: 39d9466b-c1f3-4406-91a5-3d6c52d23a3d
-ms.openlocfilehash: fc54bbf8053c07cc3b48a762b6f1c60344de9921
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: aad068b5857eb956ded63fa2a57cb163d3cf5c58
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822578"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322697"
 ---
 # <a name="cannot-refer-to-an-instance-member-of-a-class-from-within-a-shared-method-or-shared-member-initializer-without-an-explicit-instance-of-the-class"></a>Не удается обратиться к члену экземпляра класса из совместно используемого метода или совместно используемого инициализатора без явного указания экземпляра этого класса
 Вы попытались ссылается на член, не являющийся общим класса из общей процедуры. Ниже приведен пример такой ситуации.  
@@ -37,12 +37,12 @@ End Class
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
-1.  Должен ли элемент общим для всех экземпляров класса, или хранить отдельно для каждого экземпляра.  
+1. Должен ли элемент общим для всех экземпляров класса, или хранить отдельно для каждого экземпляра.  
   
-2.  Одна копия элемент общим для всех экземпляров, добавьте `Shared` ключевое слово в объявлении члена. Сохранить `Shared` ключевое слово в объявлении процедуры.  
+2. Одна копия элемент общим для всех экземпляров, добавьте `Shared` ключевое слово в объявлении члена. Сохранить `Shared` ключевое слово в объявлении процедуры.  
   
-3.  Если требуется, чтобы каждый экземпляр для отдельных копия элемента, не указывайте `Shared` для объявления элемента. Удалить `Shared` ключевое слово из объявления процедуры.  
+3. Если требуется, чтобы каждый экземпляр для отдельных копия элемента, не указывайте `Shared` для объявления элемента. Удалить `Shared` ключевое слово из объявления процедуры.  
   
 ## <a name="see-also"></a>См. также
 
-- [Общие](../../../visual-basic/language-reference/modifiers/shared.md)
+- [Shared](../../../visual-basic/language-reference/modifiers/shared.md)

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: d8eb22c4de9dc28f332b220dd4703b0c681904f3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9553a66538297db9c2fa134e018f35ab9e2ddf37
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59090044"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320019"
 ---
 # <a name="input-overview"></a>Общие сведения о входных данных
 <a name="introduction"></a> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Подсистема предоставляет мощный [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] для получения входных данных из широкого спектра устройств, включая мышь, клавиатура, сенсорного ввода и пера. В этом разделе описываются службы, предоставляемые [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], и объясняется архитектура систем ввода.
@@ -217,15 +217,15 @@ ms.locfileid: "59090044"
 
  Последовательность событий на предыдущем рисунке приведена в следующем списке.
 
-1.  <xref:System.Windows.UIElement.TouchEnter> Событие происходит один раз, когда пользователь помещает палец в элемент.
+1. <xref:System.Windows.UIElement.TouchEnter> Событие происходит один раз, когда пользователь помещает палец в элемент.
 
-2.  <xref:System.Windows.UIElement.TouchDown> Событие происходит один раз.
+2. <xref:System.Windows.UIElement.TouchDown> Событие происходит один раз.
 
-3.  <xref:System.Windows.UIElement.TouchMove> Событие возникает несколько раз, когда пользователь перемещает палец в пределах элемента.
+3. <xref:System.Windows.UIElement.TouchMove> Событие возникает несколько раз, когда пользователь перемещает палец в пределах элемента.
 
-4.  <xref:System.Windows.UIElement.TouchUp> Событие происходит один раз, когда пользователь убирает палец из этого элемента.
+4. <xref:System.Windows.UIElement.TouchUp> Событие происходит один раз, когда пользователь убирает палец из этого элемента.
 
-5.  <xref:System.Windows.UIElement.TouchLeave> Событие происходит один раз.
+5. <xref:System.Windows.UIElement.TouchLeave> Событие происходит один раз.
 
  При использовании более двух пальцев, события возникают для каждого пальца.
 
@@ -269,17 +269,17 @@ ms.locfileid: "59090044"
 
  Последовательность событий на предыдущем рисунке приведена в следующем списке.
 
-1.  <xref:System.Windows.UIElement.ManipulationStarting> Событие происходит, когда пользователь ставит палец на объект. Помимо прочего, это событие позволяет задать <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A> свойства. В последующих событиях позиция манипуляции будет относительно <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A>. В событиях, отличных от <xref:System.Windows.UIElement.ManipulationStarting>, это свойство доступно только для чтения, поэтому <xref:System.Windows.UIElement.ManipulationStarting> событий — это единственный случай, когда это свойство можно задать.
+1. <xref:System.Windows.UIElement.ManipulationStarting> Событие происходит, когда пользователь ставит палец на объект. Помимо прочего, это событие позволяет задать <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A> свойства. В последующих событиях позиция манипуляции будет относительно <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A>. В событиях, отличных от <xref:System.Windows.UIElement.ManipulationStarting>, это свойство доступно только для чтения, поэтому <xref:System.Windows.UIElement.ManipulationStarting> событий — это единственный случай, когда это свойство можно задать.
 
-2.  <xref:System.Windows.UIElement.ManipulationStarted> Далее возникает событие. Это событие сообщает исходную точку манипуляции.
+2. <xref:System.Windows.UIElement.ManipulationStarted> Далее возникает событие. Это событие сообщает исходную точку манипуляции.
 
-3.  <xref:System.Windows.UIElement.ManipulationDelta> Событие возникает несколько раз, как пальцы пользователя двигаются по сенсорному экрану. <xref:System.Windows.Input.ManipulationDeltaEventArgs.DeltaManipulation%2A> Свойство <xref:System.Windows.Input.ManipulationDeltaEventArgs> класса сообщает ли интерпретируется манипуляция — как движение, расширение или преобразование. Здесь вы выполняете большую часть манипуляций с объектом.
+3. <xref:System.Windows.UIElement.ManipulationDelta> Событие возникает несколько раз, как пальцы пользователя двигаются по сенсорному экрану. <xref:System.Windows.Input.ManipulationDeltaEventArgs.DeltaManipulation%2A> Свойство <xref:System.Windows.Input.ManipulationDeltaEventArgs> класса сообщает ли интерпретируется манипуляция — как движение, расширение или преобразование. Здесь вы выполняете большую часть манипуляций с объектом.
 
-4.  <xref:System.Windows.UIElement.ManipulationInertiaStarting> Событие происходит, когда палец пользователя теряет контакт с объектом. Это событие позволяет указать замедление манипуляции во время инерции. Так объект может имитировать разные физические расстояния или атрибуты при вашем желании. Например, предположим, что в приложении имеются два объекта, представляющие элементы в физическом мире, один из которых тяжелее другого. Можно сделать так, чтобы более тяжелый объект замедлялся быстрее, чем более легкий.
+4. <xref:System.Windows.UIElement.ManipulationInertiaStarting> Событие происходит, когда палец пользователя теряет контакт с объектом. Это событие позволяет указать замедление манипуляции во время инерции. Так объект может имитировать разные физические расстояния или атрибуты при вашем желании. Например, предположим, что в приложении имеются два объекта, представляющие элементы в физическом мире, один из которых тяжелее другого. Можно сделать так, чтобы более тяжелый объект замедлялся быстрее, чем более легкий.
 
-5.  <xref:System.Windows.UIElement.ManipulationDelta> Событие возникает несколько раз, как происходит инерции. Обратите внимание, что это событие возникает, и когда пальцы пользователя двигаются по сенсорному экрану, и когда [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] имитирует инерцию. Другими словами <xref:System.Windows.UIElement.ManipulationDelta> возникает до и после <xref:System.Windows.UIElement.ManipulationInertiaStarting> событий. <xref:System.Windows.Input.ManipulationDeltaEventArgs.IsInertial%2A?displayProperty=nameWithType> Отчеты свойство ли <xref:System.Windows.UIElement.ManipulationDelta> событие возникает во время инерции, чтобы можно было проверять это свойство и выполнять разные действия в зависимости от его значения.
+5. <xref:System.Windows.UIElement.ManipulationDelta> Событие возникает несколько раз, как происходит инерции. Обратите внимание, что это событие возникает, и когда пальцы пользователя двигаются по сенсорному экрану, и когда [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] имитирует инерцию. Другими словами <xref:System.Windows.UIElement.ManipulationDelta> возникает до и после <xref:System.Windows.UIElement.ManipulationInertiaStarting> событий. <xref:System.Windows.Input.ManipulationDeltaEventArgs.IsInertial%2A?displayProperty=nameWithType> Отчеты свойство ли <xref:System.Windows.UIElement.ManipulationDelta> событие возникает во время инерции, чтобы можно было проверять это свойство и выполнять разные действия в зависимости от его значения.
 
-6.  <xref:System.Windows.UIElement.ManipulationCompleted> Событие возникает при завершении манипуляции и инерция. То есть после всех <xref:System.Windows.UIElement.ManipulationDelta> событиями, <xref:System.Windows.UIElement.ManipulationCompleted> возникает событие завершении манипуляции.
+6. <xref:System.Windows.UIElement.ManipulationCompleted> Событие возникает при завершении манипуляции и инерция. То есть после всех <xref:System.Windows.UIElement.ManipulationDelta> событиями, <xref:System.Windows.UIElement.ManipulationCompleted> возникает событие завершении манипуляции.
 
  <xref:System.Windows.UIElement> Также определяет <xref:System.Windows.UIElement.ManipulationBoundaryFeedback> событий. Это событие возникает, когда <xref:System.Windows.Input.ManipulationDeltaEventArgs.ReportBoundaryFeedback%2A> метод вызывается в <xref:System.Windows.UIElement.ManipulationDelta> событий. <xref:System.Windows.UIElement.ManipulationBoundaryFeedback> Событий позволяет приложениям или компонентам обеспечивать визуальную обратную связь, когда объект достигает границы. Например <xref:System.Windows.Window> класса дескрипторов <xref:System.Windows.UIElement.ManipulationBoundaryFeedback> событие, чтобы окно слегка перемещения при достижении его границы.
 

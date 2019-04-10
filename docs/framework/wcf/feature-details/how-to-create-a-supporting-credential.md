@@ -2,12 +2,12 @@
 title: Практическое руководство. Создание подтверждающих учетных данных
 ms.date: 03/30/2017
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-ms.openlocfilehash: 3ae2b59abf59b0256741ef4e908305d9f4350b4a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7c6c4ea777f62541f8ca8fa79fdd024e5f5cf2ad
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59093713"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326051"
 ---
 # <a name="how-to-create-a-supporting-credential"></a>Практическое руководство. Создание подтверждающих учетных данных
 Некоторые пользовательские схемы безопасности требуют нескольких учетных данных. Например, служба может потребовать от клиента не только имя пользователя и пароль, но и учетные данные, доказывающие, что возраст клиента старше 18 лет. Вторые учетные данные являются *вспомогательными учетными данными*. В этом разделе объясняется, как реализовать эти учетные данные в клиентском приложении Windows Communication Foundation (WCF).  
@@ -68,9 +68,9 @@ ms.locfileid: "59093713"
   
 #### <a name="to-create-a-custom-binding-that-includes-supporting-credentials"></a>Создание пользовательской привязки, которая включает вспомогательные учетные данные  
   
-1.  Создайте элемент привязки безопасности. В следующем примере продемонстрировано создание элемента привязки безопасности <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> в режиме проверки подлинности `UserNameForCertificate`. Воспользуйтесь методом <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateUserNameForCertificateBindingElement%2A>.  
+1. Создайте элемент привязки безопасности. В следующем примере продемонстрировано создание элемента привязки безопасности <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> в режиме проверки подлинности `UserNameForCertificate`. Воспользуйтесь методом <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateUserNameForCertificateBindingElement%2A>.  
   
-2.  Добавьте вспомогательный параметр в коллекцию типов, возвращаемых соответствующим свойством (`Endorsing`, `Signed`, `SignedEncrypted` или `SignedEndorsed`). Типы в пространстве имен <xref:System.ServiceModel.Security.Tokens> включают наиболее часто используемые типы, такие как <xref:System.ServiceModel.Security.Tokens.X509SecurityTokenParameters>.  
+2. Добавьте вспомогательный параметр в коллекцию типов, возвращаемых соответствующим свойством (`Endorsing`, `Signed`, `SignedEncrypted` или `SignedEndorsed`). Типы в пространстве имен <xref:System.ServiceModel.Security.Tokens> включают наиболее часто используемые типы, такие как <xref:System.ServiceModel.Security.Tokens.X509SecurityTokenParameters>.  
   
 ## <a name="example"></a>Пример  
   

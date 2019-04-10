@@ -2,12 +2,12 @@
 title: Использование действий .NET Framework 3.0 WF на платформе .NET Framework 4 с действием «Interop»
 ms.date: 03/30/2017
 ms.assetid: 71f112ba-abb0-46f7-b05f-a5d2eb9d0c5c
-ms.openlocfilehash: 386f71f21a4164f6f0ffc0ed19aab68abbe5a0b5
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 33140ac85cd50140c0aa34d1986365fefc005c78
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086691"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329418"
 ---
 # <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a>Использование действий .NET Framework 3.0 WF на платформе .NET Framework 4 с действием «Interop»
 Действие <xref:System.Activities.Statements.Interop> - это действие [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] (WF 4.5), служащее оболочкой для действия [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] (WF 3.5) в рабочем процессе [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]. Действие WF 3 может быть отдельным действием или целым деревом действий. Выполнение (включая отмену и обработку исключений) и сохраняемость действий [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] происходят в контексте выполняющегося экземпляра рабочего процесса [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)].  
@@ -34,22 +34,22 @@ ms.locfileid: "49086691"
 ## <a name="limitations-of-using-a-wf-3-activity-within-an-interop-activity"></a>Ограничения использования действия WF 3 в действии взаимодействия  
  Действия WF 3, предоставленные системой, могут быть непосредственно обернуты в оболочку действия <xref:System.Activities.Statements.Interop>. Для некоторых действий WF 3, например для <xref:System.Workflow.Activities.DelayActivity>, это вызвано тем, что существует аналогичное действие WF 4.5. Для других это вызвано тем, что функциональные возможности действия не поддерживаются. Многие действия WF 3, предоставляемые системой, могут быть использованы в рабочих процессах, обернутых в оболочку действия <xref:System.Activities.Statements.Interop>, со следующими ограничениями:  
   
-1.  Действия <xref:System.ServiceModel.Activities.Send> и <xref:System.ServiceModel.Activities.Receive> не могут использоваться в действии <xref:System.Activities.Statements.Interop>.  
+1. <xref:System.ServiceModel.Activities.Send> и <xref:System.ServiceModel.Activities.Receive> не может использоваться в <xref:System.Activities.Statements.Interop> действия.  
   
-2.  Действия <xref:System.Workflow.Activities.WebServiceInputActivity>, <xref:System.Workflow.Activities.WebServiceOutputActivity> и <xref:System.Workflow.Activities.WebServiceFaultActivity> не могут использоваться внутри действия <xref:System.Activities.Statements.Interop>.  
+2. <xref:System.Workflow.Activities.WebServiceInputActivity>, <xref:System.Workflow.Activities.WebServiceOutputActivity>, и <xref:System.Workflow.Activities.WebServiceFaultActivity> нельзя использовать в <xref:System.Activities.Statements.Interop> действия.  
   
-3.  Действие <xref:System.Workflow.Activities.InvokeWorkflowActivity> не может быть использовано внутри действия <xref:System.Activities.Statements.Interop>.  
+3. <xref:System.Workflow.Activities.InvokeWorkflowActivity> нельзя использовать в <xref:System.Activities.Statements.Interop> действия.  
   
-4.  Действие <xref:System.Workflow.ComponentModel.SuspendActivity> не может быть использовано внутри действия <xref:System.Activities.Statements.Interop>.  
+4. <xref:System.Workflow.ComponentModel.SuspendActivity> нельзя использовать в <xref:System.Activities.Statements.Interop> действия.  
   
-5.  Действия, связанные с компенсацией, не могут использоваться внутри действия <xref:System.Activities.Statements.Interop>.  
+5. Действия, связанные с компенсацией, не могут использоваться внутри действия <xref:System.Activities.Statements.Interop>.  
   
  Существуют некоторые особенности поведения действий WF 3, используемых в действии <xref:System.Activities.Statements.Interop>:  
   
-1.  Действия WF 3, содержащиеся в действии <xref:System.Activities.Statements.Interop>, инициализируются при выполнении действия <xref:System.Activities.Statements.Interop>. В WF 4.5 отсутствует фаза инициализации экземпляра рабочего процесса до его выполнения.  
+1. Действия WF 3, содержащиеся в действии <xref:System.Activities.Statements.Interop>, инициализируются при выполнении действия <xref:System.Activities.Statements.Interop>. В WF 4.5 отсутствует фаза инициализации экземпляра рабочего процесса до его выполнения.  
   
-2.  Среда выполнения WF 4.5 не расставляет контрольные точки состояния экземпляра рабочего процесса при запуске транзакции вне зависимости от того, где начинается транзакция (в действии <xref:System.Activities.Statements.Interop> или за его границами).  
+2. Среда выполнения WF 4.5 не расставляет контрольные точки состояния экземпляра рабочего процесса при запуске транзакции вне зависимости от того, где начинается транзакция (в действии <xref:System.Activities.Statements.Interop> или за его границами).  
   
-3.  Записи отслеживания WF 3 для действий в действии <xref:System.Activities.Statements.Interop> предоставляются участникам отслеживания WF 4.5 в виде объектов <xref:System.Activities.Tracking.InteropTrackingRecord>. <xref:System.Activities.Tracking.InteropTrackingRecord> является производным от <xref:System.Activities.Tracking.CustomTrackingRecord>.  
+3. Записи отслеживания WF 3 для действий в действии <xref:System.Activities.Statements.Interop> предоставляются участникам отслеживания WF 4.5 в виде объектов <xref:System.Activities.Tracking.InteropTrackingRecord>. <xref:System.Activities.Tracking.InteropTrackingRecord> является производным от <xref:System.Activities.Tracking.CustomTrackingRecord>.  
   
-4.  Пользовательское действие WF 3 может осуществлять доступ к данным, используя очереди рабочего процесса в среде взаимодействия точно таким же образом, что и в среде выполнения рабочего процесса в WF 3. Вносить изменения в пользовательский код действия не требуется. В ведущем приложении данные вносятся в очередь рабочего процесса WF 3 посредством возобновления закладки <xref:System.Activities.Bookmark>. Имя закладки - это строковая форма имени очереди рабочего процесса <xref:System.IComparable>.
+4. Пользовательское действие WF 3 может осуществлять доступ к данным, используя очереди рабочего процесса в среде взаимодействия точно таким же образом, что и в среде выполнения рабочего процесса в WF 3. Вносить изменения в пользовательский код действия не требуется. В ведущем приложении данные вносятся в очередь рабочего процесса WF 3 посредством возобновления закладки <xref:System.Activities.Bookmark>. Имя закладки - это строковая форма имени очереди рабочего процесса <xref:System.IComparable>.

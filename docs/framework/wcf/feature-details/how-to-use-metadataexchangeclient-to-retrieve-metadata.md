@@ -2,12 +2,12 @@
 title: Практическое руководство. Использование MetadataExchangeClient для получения метаданных
 ms.date: 03/30/2017
 ms.assetid: 0754e9dc-13c5-45c2-81b5-f3da466e5a87
-ms.openlocfilehash: ec4177e71c7d46dc5c908f01a051dc5a0df6baa4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 32acef65ee30d7b80b37c11bdd024e3c09a935ef
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168627"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327884"
 ---
 # <a name="how-to-use-metadataexchangeclient-to-retrieve-metadata"></a>Практическое руководство. Использование MetadataExchangeClient для получения метаданных
 Используйте класс <xref:System.ServiceModel.Description.MetadataExchangeClient> для загрузки метаданных по протоколу WS-MetadataExchange (MEX). Извлеченные файлы метаданных возвращаются в виде объекта <xref:System.ServiceModel.Description.MetadataSet>. Возвращенный объект <xref:System.ServiceModel.Description.MetadataSet> содержит коллекцию объектов <xref:System.ServiceModel.Description.MetadataSection>, каждый из которых содержит конкретный диалект метаданных и идентификатор. Возвращенные метаданные можно записать в файлы или (если метаданные содержат документы WSDL) импортировать с помощью <xref:System.ServiceModel.Description.WsdlImporter>.  
@@ -21,11 +21,11 @@ ms.locfileid: "59168627"
   
 ### <a name="to-use-metadataexchangeclient-to-obtain-metadata"></a>Использование MetadataExchangeClient для получения метаданных  
   
-1.  Создайте новый объект <xref:System.ServiceModel.Description.MetadataExchangeClient>, явно задав привязку, имя конфигурации конечной точки или адрес метаданных.  
+1. Создайте новый объект <xref:System.ServiceModel.Description.MetadataExchangeClient>, явно задав привязку, имя конфигурации конечной точки или адрес метаданных.  
   
-2.  Настройте <xref:System.ServiceModel.Description.MetadataExchangeClient> в соответствии с требованиями. Например, можно задать учетные данные, которые должны использоваться при запросе метаданных, указать способ распознавания ссылок на метаданные и задать свойство <xref:System.ServiceModel.Description.MetadataExchangeClient.OperationTimeout%2A> для определения времени ожидания ответа на запрос метаданных.  
+2. Настройте <xref:System.ServiceModel.Description.MetadataExchangeClient> в соответствии с требованиями. Например, можно задать учетные данные, которые должны использоваться при запросе метаданных, указать способ распознавания ссылок на метаданные и задать свойство <xref:System.ServiceModel.Description.MetadataExchangeClient.OperationTimeout%2A> для определения времени ожидания ответа на запрос метаданных.  
   
-3.  Получите объект <xref:System.ServiceModel.Description.MetadataSet>, который содержит извлеченные метаданные, вызвав один из методов <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A>. Обратите внимание, что если при создании <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> явно задан адрес, можно использовать только перегрузку <xref:System.ServiceModel.Description.MetadataExchangeClient>, которая не получает аргументов.  
+3. Получите объект <xref:System.ServiceModel.Description.MetadataSet>, который содержит извлеченные метаданные, вызвав один из методов <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A>. Обратите внимание, что если при создании <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> явно задан адрес, можно использовать только перегрузку <xref:System.ServiceModel.Description.MetadataExchangeClient>, которая не получает аргументов.  
   
 ## <a name="example"></a>Пример  
  В следующем коде показано использование <xref:System.ServiceModel.Description.MetadataExchangeClient> для загрузки и перечисления файлов метаданных.  

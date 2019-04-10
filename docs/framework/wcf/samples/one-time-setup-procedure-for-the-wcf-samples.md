@@ -2,12 +2,12 @@
 title: Процедура однократной настройки образцов Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: 76cf2c7ec7edbfaaa186b45f4b810c7d4c0b1d47
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 2b9d84089cdd987f2e2b1e3d23354505520a80f8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825174"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326714"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Процедура однократной настройки образцов Windows Communication Foundation
 Большинство примеров Windows Communication Foundation (WCF) размещаются в Internet Information Services (IIS) и выполняются из общего виртуального каталога. Эта процедура однократной настройки создает папку на диске; Он также добавляет виртуальный каталог IIS с именем **ServiceModelSamples**.
@@ -19,13 +19,13 @@ ms.locfileid: "58825174"
   
 ### <a name="one-time-setup-procedure-for-wcf-samples"></a>Однократно настраиваемая процедура для образцов WCF  
   
-1.  Убедитесь, что [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] установлена. Дополнительные сведения о настройке [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], см. в разделе [инструкции по размещению сведения службы IIS](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md).  
+1. Убедитесь, что [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] установлена. Дополнительные сведения о настройке [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], см. в разделе [инструкции по размещению сведения службы IIS](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md).  
   
-2.  Убедитесь, что установлена платформа [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]. Найдите для версии 4.0 (или более поздней версии): **\Windows\Microsoft.NET\Framework**  
+2. Убедитесь, что установлена платформа [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]. Найдите для версии 4.0 (или более поздней версии): **\Windows\Microsoft.NET\Framework**  
   
-3.  Если не установлена Visual Studio 2012, и операционная система не Windows Server 2008 SP2 или более поздней версии, установите [пакет исправлений 251798](https://go.microsoft.com/fwlink/?LinkId=184693).  
+3. Если не установлена Visual Studio 2012, и операционная система не Windows Server 2008 SP2 или более поздней версии, установите [пакет исправлений 251798](https://go.microsoft.com/fwlink/?LinkId=184693).  
   
-4.  Выполните следующие команды. Дополнительные сведения о почему необходимо запустить следующие команды, см. в разделе [сбоя размещенной службы IIS](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752252(v=vs.90)).  
+4. Выполните следующие команды. Дополнительные сведения о почему необходимо запустить следующие команды, см. в разделе [сбоя размещенной службы IIS](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752252(v=vs.90)).  
   
     > [!WARNING]
     >  Если IIS был переустановлен, необходимо вновь выполнить следующие команды.
@@ -38,13 +38,13 @@ ms.locfileid: "58825174"
     > [!WARNING]
     >  Выполнив команду `aspnet_regiis –i –enable` сделает пул приложений по умолчанию выполняться с использованием [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], что может привести к проблем с совместимостью для других приложений на одном компьютере.  
   
-5.  Выполните [инструкции брандмауэра](../../../../docs/framework/wcf/samples/firewall-instructions.md) включить порты, используемые в образцах.  
+5. Выполните [инструкции брандмауэра](../../../../docs/framework/wcf/samples/firewall-instructions.md) включить порты, используемые в образцах.  
   
-6.  Проверьте следующий каталог по умолчанию: \<Диск_установки >:**\WF_WCF_Samples**. Если образцы были предварительно установлены, этот каталог будет выбран по умолчанию.  
+6. Проверьте следующий каталог по умолчанию: \<Диск_установки >:**\WF_WCF_Samples**. Если образцы были предварительно установлены, этот каталог будет выбран по умолчанию.  
   
-7.  Если образцы не установлены, установите их из загрузочного каталога для [Visual C#](https://go.microsoft.com/fwlink/?LinkId=190939) или [Visual Basic](https://go.microsoft.com/fwlink/?LinkID=193373).  
+7. Если образцы не установлены, установите их из загрузочного каталога для [Visual C#](https://go.microsoft.com/fwlink/?LinkId=190939) или [Visual Basic](https://go.microsoft.com/fwlink/?LinkID=193373).  
   
-8.  После установки образцов перейдите на страницу: \<InstallDrive>:**\WF_WCF_Samples\WCF\Setup\\**  
+8. После установки образцов перейдите на страницу: \<InstallDrive>:**\WF_WCF_Samples\WCF\Setup\\**  
   
 9. Запустите **Setupvroot.bat** пакетный файл. Выполняются следующие действия.  
   

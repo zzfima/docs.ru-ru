@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Direct3D9 [WPF interoperability], hosting Direct3D9 content
 - WPF [WPF], hosting Direct3D9 content
 ms.assetid: 60983736-0ab5-42cc-8b16-e9fbde261a43
-ms.openlocfilehash: 90d0c578c6797342c667f16afdb523b1b4ad6685
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 07cfa5bed6e5af131a60a303f0702f18413043e8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59145916"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320239"
 ---
 # <a name="walkthrough-hosting-direct3d9-content-in-wpf"></a>Пошаговое руководство. Размещение содержимого Direct3D9 в WPF
 В этом пошаговом руководстве показано, как размещение содержимого Direct3D9 в приложении Windows Presentation Foundation (WPF).  
@@ -48,9 +48,9 @@ ms.locfileid: "59145916"
   
 #### <a name="to-import-direct3d9-content"></a>Для импорта содержимого Direct3D9  
   
-1.  Откройте файл MainWindow.xaml.cs в редакторе кода.  
+1. Откройте файл MainWindow.xaml.cs в редакторе кода.  
   
-2.  Замените автоматически созданный код следующим кодом.  
+2. Замените автоматически созданный код следующим кодом.  
   
      [!code-csharp[System.Windows.Interop.D3DImage#1](~/samples/snippets/csharp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/CS/window1.xaml.cs#1)]  
   
@@ -59,15 +59,15 @@ ms.locfileid: "59145916"
   
 #### <a name="to-host-the-direct3d9-content"></a>Для размещения содержимого Direct3D9  
   
-1.  В файле MainWindow.xaml замените автоматически созданный XAML следующий XAML.  
+1. В файле MainWindow.xaml замените автоматически созданный XAML следующий XAML.  
   
      [!code-xaml[System.Windows.Interop.D3DImage#10](~/samples/snippets/csharp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/CS/window1.xaml#10)]  
   
-2.  Выполните построение проекта.  
+2. Выполните построение проекта.  
   
-3.  Скопируйте библиотеку DLL, содержащую содержимого Direct3D9 в папку bin/Debug.  
+3. Скопируйте библиотеку DLL, содержащую содержимого Direct3D9 в папку bin/Debug.  
   
-4.  Нажмите клавишу F5, чтобы запустить проект.  
+4. Нажмите клавишу F5, чтобы запустить проект.  
   
      Содержимое Direct3D9 в WPF-приложении.  
   

@@ -2,12 +2,12 @@
 title: Атрибут KnownAssemblyAttribute
 ms.date: 03/30/2017
 ms.assetid: b3bc7f31-95ff-46e1-8308-d206ec426f6e
-ms.openlocfilehash: 7b5484ee7b8d98ce3ac449fb9d23029f27c8932a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d6ed22790f5abc01b44accc05e09e75d105df429
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59196870"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325778"
 ---
 # <a name="knownassemblyattribute"></a>Атрибут KnownAssemblyAttribute
 В этом образце показано, как можно настроить процессы сериализации и десериализации с помощью класса <xref:System.Runtime.Serialization.DataContractResolver>. В этом образце показано, как динамически добавлять известные типы во время сериализации и десериализации.  
@@ -346,21 +346,21 @@ Lists combined:
   
 #### <a name="to-set-up-run-and-build-the-sample"></a>Настройка, выполнение и сборка образца  
   
-1.  Щелкните правой кнопкой мыши решение **KnownAssemblyAttribute** и выберите **свойства**.  
+1. Щелкните правой кнопкой мыши решение **KnownAssemblyAttribute** и выберите **свойства**.  
   
-2.  В **общие свойства**выберите **запускаемым проектом**, а затем нажмите кнопку **несколько запускаемых проектов**.  
+2. В **общие свойства**выберите **запускаемым проектом**, а затем нажмите кнопку **несколько запускаемых проектов**.  
   
-3.  Добавить **запустить** действие **службы** и **клиента** проектов.  
+3. Добавить **запустить** действие **службы** и **клиента** проектов.  
   
-4.  Нажмите кнопку **ОК**и нажмите клавишу **F5** для запуска примера.  
+4. Нажмите кнопку **ОК**и нажмите клавишу **F5** для запуска примера.  
   
-5.  Если приложение выполняется неправильно, убедитесь в правильности настройки среды, выполнив следующие шаги.  
+5. Если приложение выполняется неправильно, убедитесь в правильности настройки среды, выполнив следующие шаги.  
   
-6.  Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](https://go.microsoft.com/fwlink/?LinkId=150774).  
+6. Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](https://go.microsoft.com/fwlink/?LinkId=150774).  
   
-7.  Чтобы построить решение, следуйте инструкциям в [построение образца Windows Communication Foundation](https://go.microsoft.com/fwlink/?LinkId=150775).  
+7. Чтобы построить решение, следуйте инструкциям в [построение образца Windows Communication Foundation](https://go.microsoft.com/fwlink/?LinkId=150775).  
   
-8.  Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](https://go.microsoft.com/fwlink/?LinkId=150776).  
+8. Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](https://go.microsoft.com/fwlink/?LinkId=150776).  
   
 > [!IMPORTANT]
 >  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  

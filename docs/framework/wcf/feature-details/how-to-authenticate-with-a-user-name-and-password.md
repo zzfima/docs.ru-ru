@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
-ms.openlocfilehash: 08703209fd465f87e9dbc5e81a6ed90a4056324c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 11a146e387171d6af95a7710fe96d6f35f6c611f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59174139"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321045"
 ---
 # <a name="how-to-authenticate-with-a-user-name-and-password"></a>Практическое руководство. Проверка подлинности с использованием имени и пароля пользователя
 
@@ -21,7 +21,7 @@ ms.locfileid: "59174139"
   
 ## <a name="to-configure-a-wcf-service-to-authenticate-using-windows-domain-username-and-password"></a>Чтобы настроить службу WCF для проверки подлинности имя пользователя домена Windows и пароль
   
-1.  Создайте экземпляр <xref:System.ServiceModel.WSHttpBinding>, установите режим безопасности привязки в <xref:System.ServiceModel.WSHttpSecurity.Message?displayProperty=nameWithType>, установите `ClientCredentialType` привязки в значение <xref:System.ServiceModel.MessageCredentialType.UserName?displayProperty=nameWithType> и добавьте в узел службы конечную точку службы с помощью заданной привязки, как показано в следующем коде:  
+1. Создайте экземпляр <xref:System.ServiceModel.WSHttpBinding>, установите режим безопасности привязки в <xref:System.ServiceModel.WSHttpSecurity.Message?displayProperty=nameWithType>, установите `ClientCredentialType` привязки в значение <xref:System.ServiceModel.MessageCredentialType.UserName?displayProperty=nameWithType> и добавьте в узел службы конечную точку службы с помощью заданной привязки, как показано в следующем коде:  
   
     ```  
     // ...  
@@ -32,7 +32,7 @@ ms.locfileid: "59174139"
     // ...  
     ```  
   
-2.  Задает сертификат сервера, используемый для шифрования имени пользователя и пароля, передаваемых по сети. Этот код должен непосредственно следовать за показанным выше кодом. В следующем примере используется сертификат, созданный файлом setup.bat из [имя пользователя безопасности сообщения](../../../../docs/framework/wcf/samples/message-security-user-name.md) пример:  
+2. Задает сертификат сервера, используемый для шифрования имени пользователя и пароля, передаваемых по сети. Этот код должен непосредственно следовать за показанным выше кодом. В следующем примере используется сертификат, созданный файлом setup.bat из [имя пользователя безопасности сообщения](../../../../docs/framework/wcf/samples/message-security-user-name.md) пример:  
   
     ```  
     // ...  
@@ -44,7 +44,7 @@ ms.locfileid: "59174139"
   
 ## <a name="to-call-the-service-passing-username-and-password"></a>Вызов службы с передачей имени пользователя и пароля  
   
-1.  Клиентское приложение должно предложить пользователю ввести имя пользователя и пароль. Следующий код запрашивает у пользователя имя пользователя и пароль.  
+1. Клиентское приложение должно предложить пользователю ввести имя пользователя и пароль. Следующий код запрашивает у пользователя имя пользователя и пароль.  
   
     > [!WARNING]
     >  Этот код не следует использовать в рабочей среде, так как пароль во время ввода отображается на экране.  
@@ -61,7 +61,7 @@ ms.locfileid: "59174139"
             }  
     ```  
   
-2.  Создайте экземпляр клиентского класса-посредника, указав учетные данные клиента, как показано в следующем коде:  
+2. Создайте экземпляр клиентского класса-посредника, указав учетные данные клиента, как показано в следующем коде:  
   
     ```  
     string username;  

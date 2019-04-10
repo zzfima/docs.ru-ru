@@ -2,25 +2,25 @@
 title: Практическое руководство. Создание контракта типа "запрос — ответ"
 ms.date: 03/30/2017
 ms.assetid: 801d90da-3d45-4284-9c9f-56c8aadb4060
-ms.openlocfilehash: 9954be556df13193c290a55616ad83ef07e0af7b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7a446db49dcc6a12b900292f1b19c9973835f2c1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59141080"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327481"
 ---
 # <a name="how-to-create-a-request-reply-contract"></a>Практическое руководство. Создание контракта типа "запрос — ответ"
 Контракт «запрос-ответ» указывает метод, который возвращает ответ. Необходима отправка ответа и его корреляция запросу согласно условиям этого контракта. Даже если метод не возвращает ответ (`void` в C# или `Sub` в Visual Basic), инфраструктура создает и отправляет вызывающему объекту пустое сообщение. Чтобы запретить отправку пустого ответного сообщения, используйте для операции односторонний контракт.  
   
 ### <a name="to-create-a-request-reply-contract"></a>Создание контракта типа запрос-ответ  
   
-1.  Создайте интерфейс на любом языке программирования.  
+1. Создайте интерфейс на любом языке программирования.  
   
-2.  Примените атрибут <xref:System.ServiceModel.ServiceContractAttribute> к интерфейсу.  
+2. Примените атрибут <xref:System.ServiceModel.ServiceContractAttribute> к интерфейсу.  
   
-3.  Примените атрибут <xref:System.ServiceModel.OperationContractAttribute> к каждому методу, который могут вызывать клиенты.  
+3. Примените атрибут <xref:System.ServiceModel.OperationContractAttribute> к каждому методу, который могут вызывать клиенты.  
   
-4.  Необязательный параметр. Установите свойство <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> в значение `true`, чтобы избежать отправки пустого ответного сообщения. По умолчанию все операции используют контракты «запрос-ответ».  
+4. Необязательный параметр. Установите свойство <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> в значение `true`, чтобы избежать отправки пустого ответного сообщения. По умолчанию все операции используют контракты «запрос-ответ».  
   
 ## <a name="example"></a>Пример  
  В следующем примере определяется контракт для службы калькулятора, предоставляющей методы `Add` и `Subtract`. Метод `Multiply` не является частью контракта, поскольку он не отмечен классом <xref:System.ServiceModel.OperationContractAttribute>, а потому недоступен клиентам.  

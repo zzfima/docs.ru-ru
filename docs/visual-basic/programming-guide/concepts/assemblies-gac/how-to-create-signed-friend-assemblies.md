@@ -2,21 +2,21 @@
 title: Практическое руководство. Создание подписанных дружественных сборок (Visual Basic)
 ms.date: 03/14/2018
 ms.assetid: f2afd83d-b044-484b-a56d-56d0a8a40647
-ms.openlocfilehash: 28cbd0c538441978464033df896d69f80a8396a6
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4ff32015647a565f7f68e944ae028deb7f738e28
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58836744"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324673"
 ---
 # <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>Практическое руководство. Создание подписанных дружественных сборок (Visual Basic)
 В этом примере демонстрируется использование дружественных сборок со сборками, имеющими строгие имена. Обе сборки должны иметь строгое имя. Хотя обе сборки в этом примере используют одинаковые ключи, вы можете использовать для двух сборок разные ключи.  
   
 ### <a name="to-create-a-signed-assembly-and-a-friend-assembly"></a>Создание подписанной и дружественной сборки  
   
-1.  Откройте окно командной строки.  
+1. Откройте окно командной строки.  
   
-2.  Используйте следующую последовательность команд в средстве задания строгих имен для формирования файла ключа и отображения его открытого ключа. Дополнительные сведения см. в разделе [Sn.exe (средство строгих имен)](../../../../framework/tools/sn-exe-strong-name-tool.md)).  
+2. Используйте следующую последовательность команд в средстве задания строгих имен для формирования файла ключа и отображения его открытого ключа. Дополнительные сведения см. в разделе [Sn.exe (средство строгих имен)](../../../../framework/tools/sn-exe-strong-name-tool.md)).  
   
     1.  Создайте ключ строгого имени для этого примера и сохраните его в файле FriendAssemblies.snk:  
   
@@ -30,7 +30,7 @@ ms.locfileid: "58836744"
   
          `sn -tp FriendAssemblies.publickey`  
   
-3.  Создайте файл Visual Basic `friend_signed_A` , содержащий следующий код. Атрибут <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> используется в коде для объявления friend_signed_B в качестве дружественной сборки.  
+3. Создайте файл Visual Basic `friend_signed_A` , содержащий следующий код. Атрибут <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> используется в коде для объявления friend_signed_B в качестве дружественной сборки.  
   
      Средство задания строгих имен создает новый открытый ключ при каждом запуске. Таким образом, необходимо заменить открытый ключ в следующем коде только что созданным открытым ключом, как показано в следующем примере.  
   
@@ -49,13 +49,13 @@ ms.locfileid: "58836744"
     End Class  
     ```  
   
-4.  Скомпилируйте и подпишите сборку friend_signed_A с помощью приведенной ниже команды.  
+4. Скомпилируйте и подпишите сборку friend_signed_A с помощью приведенной ниже команды.  
   
     ```console  
     Vbc -target:library -keyfile:FriendAssemblies.snk friend_signed_A.vb  
     ```  
   
-5.  Создайте файл Visual Basic с именем `friend_signed_B` и содержит следующий код. Поскольку сборка friend_signed_A указывает сборку friend_signed_B в качестве дружественной сборки, код в сборке friend_signed_B может обращаться к типам и членам `Friend` в сборке friend_signed_A. Файл содержит следующий код.  
+5. Создайте файл Visual Basic с именем `friend_signed_B` и содержит следующий код. Поскольку сборка friend_signed_A указывает сборку friend_signed_B в качестве дружественной сборки, код в сборке friend_signed_B может обращаться к типам и членам `Friend` в сборке friend_signed_A. Файл содержит следующий код.  
   
     ```vb  
     ' friend_signed_B.vb  
@@ -69,7 +69,7 @@ ms.locfileid: "58836744"
     End Module  
     ```  
   
-6.  Откомпилируйте и подпишите сборку friend_signed_B с помощью следующей команды.  
+6. Откомпилируйте и подпишите сборку friend_signed_B с помощью следующей команды.  
   
     ```console  
     vbc -keyfile:FriendAssemblies.snk -r:friend_signed_A.dll friend_signed_B.vb  
@@ -77,7 +77,7 @@ ms.locfileid: "58836744"
   
      Имя сборки, созданной компилятором, должно соответствовать имени дружественной сборки, передаваемой атрибуту <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. Можно явно задать сборку с помощью `-out` параметр компилятора. Дополнительные сведения см. в разделе [-out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md).  
   
-7.  Запустите файл friend_signed_B.exe.  
+7. Запустите файл friend_signed_B.exe.  
   
      Программа отображает строку «Class1.Test».  
   

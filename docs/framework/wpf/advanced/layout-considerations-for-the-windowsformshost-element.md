@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic layout [WPF interoperability]
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
-ms.openlocfilehash: ff52d3bbf7bf5d9d85f7a6fd5f73d9730dde8fad
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 93aaa8e21ef483fc21297e29189d86f93fbe138a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168991"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327858"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>Вопросы, связанные с макетом элемента WindowsFormsHost
 Здесь описывается, как <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемент взаимодействует с [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] система макета.  
@@ -84,13 +84,13 @@ ms.locfileid: "59168991"
 ### <a name="sizing-algorithm"></a>Алгоритм определения  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost> Элемент использует следующую процедуру для изменения размера размещенного элемента управления:  
   
-1.  <xref:System.Windows.Forms.Integration.WindowsFormsHost> Переопределяет <xref:System.Windows.FrameworkElement.MeasureOverride%2A> и <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> методы.  
+1. <xref:System.Windows.Forms.Integration.WindowsFormsHost> Переопределяет <xref:System.Windows.FrameworkElement.MeasureOverride%2A> и <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> методы.  
   
-2.  Чтобы определить размер размещаемого элемента управления, <xref:System.Windows.FrameworkElement.MeasureOverride%2A> размещенного элемента управления вызывает метод <xref:System.Windows.Forms.Control.GetPreferredSize%2A> метод с ограничением, полученным от ограничения, передаваемый <xref:System.Windows.FrameworkElement.MeasureOverride%2A> метод.  
+2. Чтобы определить размер размещаемого элемента управления, <xref:System.Windows.FrameworkElement.MeasureOverride%2A> размещенного элемента управления вызывает метод <xref:System.Windows.Forms.Control.GetPreferredSize%2A> метод с ограничением, полученным от ограничения, передаваемый <xref:System.Windows.FrameworkElement.MeasureOverride%2A> метод.  
   
-3.  <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> Метод пытается присвоить ограничения заданного размера размещенного элемента управления.  
+3. <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> Метод пытается присвоить ограничения заданного размера размещенного элемента управления.  
   
-4.  Если размещенного элемента управления <xref:System.Windows.Forms.Control.Size%2A> соответствует указанным ограничениям, размещаемого элемента управления изменяется в соответствии с ограничением.  
+4. Если размещенного элемента управления <xref:System.Windows.Forms.Control.Size%2A> соответствует указанным ограничениям, размещаемого элемента управления изменяется в соответствии с ограничением.  
   
  Если <xref:System.Windows.Forms.Control.Size%2A> свойство не соответствует указанным ограничениям, размещаемый элемент управления не поддерживает постоянное изменение размера. Например <xref:System.Windows.Forms.MonthCalendar> элемент управления допускает только дискретные размеры. Допустимые размеры для данного элемента управления состоят из целых чисел (который представляет количество месяцев) для высоты и ширины. В подобных случаях <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемент ведет себя следующим образом:  
   

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30205
 ms.assetid: 53c7f825-a737-4b76-a1fa-f67745b8bd40
-ms.openlocfilehash: ab6a4a0e6736e2af9c1fa0dd170b6aa4c42d9e4a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 1ce5c793a09df34ac17e70e3253e98108bf76fb8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58817158"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321484"
 ---
 # <a name="end-of-statement-expected"></a>Ожидается окончание оператора
 Оператор является синтаксически завершенным, однако дополнительный программный элемент элементом, выполненной инструкции. Признак конца строки является обязательным в конце каждой инструкции.
@@ -23,9 +23,9 @@ ms.locfileid: "58817158"
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки
   
-1.  Установите этот флажок, чтобы увидеть, если два отдельных оператора случайно помещенных в той же строке.
+1. Установите этот флажок, чтобы увидеть, если два отдельных оператора случайно помещенных в той же строке.
   
-2.  Вставьте знак завершения строки после элемента, выполняемой инструкции.
+2. Вставьте знак завершения строки после элемента, выполняемой инструкции.
   
 ## <a name="see-also"></a>См. также
 

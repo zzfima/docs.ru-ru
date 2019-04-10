@@ -5,33 +5,33 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 1d1d0ad559442ecfc595dfb8cdee112a22a77479
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4327e8bb07cb03a91f7384f7fe82bc2e47f6fcb9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168136"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320006"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>Примеры устранения неполадок WCF
 В этом разделе приведено несколько известных проблем, с которыми столкнулись пользователи при разработке клиентов и служб WCF. Если проблема, с которой столкнулись вы, отсутствует в этом списке, рекомендуется настроить трассировку для данной службы. При этом будет создан файл трассировки, который можно просмотреть с помощью средства просмотра файлов трассировки и получить подробные сведения об исключениях, которые могут возникать в службе. Дополнительные сведения о настройке трассировки см. в разделе: [Настройка трассировки](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). Дополнительные сведения о средстве просмотра файлов трассировки см. в разделе: [Службы программа Trace Viewer (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
   
-1.  [После установки Windows 7 и IIS при попытке перейти к службе WCF выдается следующее сообщение об ошибке: Ошибка HTTP 404.3-не найдено](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#bkmk_0)  
+1. [После установки Windows 7 и IIS при попытке перейти к службе WCF выдается следующее сообщение об ошибке: Ошибка HTTP 404.3-не найдено](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#bkmk_0)  
   
      Ошибка HTTP 404.3 - не найдено. Запрашиваемая страница не может быть выдана из-за конфигурации расширения. Если страница - скрипт, добавьте обработчик. Если файл должен загружаться, добавьте MIME-сопоставление. Подробное описание ошибки InformationModule StaticFileModule.  
   
-2.  [Иногда при втором запросе возникает исключение MessageSecurityException, если клиент бездействует некоторое время после первого запроса. В чем причина?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q1)  
+2. [Иногда при втором запросе возникает исключение MessageSecurityException, если клиент бездействует некоторое время после первого запроса. В чем причина?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q1)  
   
-3.  [Когда со службой взаимодействует около 10 клиентов, она отклоняет подключение новых клиентов. В чем причина?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q2)  
+3. [Когда со службой взаимодействует около 10 клиентов, она отклоняет подключение новых клиентов. В чем причина?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q2)  
   
-4.  [Можно ли загружать конфигурацию службы из расположения, отличного от файла конфигурации приложения WCF?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q3)  
+4. [Можно ли загружать конфигурацию службы из расположения, отличного от файла конфигурации приложения WCF?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q3)  
   
-5.  [Служба и клиент работают нормально, но их не удается запустить, если клиент находится на другом компьютере. В чем причина?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q4)  
+5. [Служба и клиент работают нормально, но их не удается запустить, если клиент находится на другом компьютере. В чем причина?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q4)  
   
-6.  [Когда должно выдаваться исключение FaultException\<исключение > где типом является исключение, всегда получает общий тип FaultException на стороне клиента, а не универсального типа. В чем причина?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q5)  
+6. [Когда должно выдаваться исключение FaultException\<исключение > где типом является исключение, всегда получает общий тип FaultException на стороне клиента, а не универсального типа. В чем причина?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q5)  
   
-7.  [Создается впечатление, что односторонние операции, а также операции запроса-ответа возвращаются примерно с той же скоростью, что и ответы без данных. В чем причина?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q6)  
+7. [Создается впечатление, что односторонние операции, а также операции запроса-ответа возвращаются примерно с той же скоростью, что и ответы без данных. В чем причина?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q6)  
   
-8.  [В службе используется сертификат X.509, при этом получается исключение System.Security.Cryptography.CryptographicException. В чем причина?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q77)  
+8. [В службе используется сертификат X.509, при этом получается исключение System.Security.Cryptography.CryptographicException. В чем причина?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q77)  
   
 9. [В имени первого параметра операции прописные буквы были заменены на строчные, и теперь в клиенте выдается исключение. В чем причина?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q88)  
   

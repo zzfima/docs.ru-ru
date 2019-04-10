@@ -7,12 +7,12 @@ helpviewer_keywords:
 - tree nodes in TreeView control
 - TreeView control [Windows Forms], adding nodes
 ms.assetid: 35bf1750-045e-4ec5-97cb-b47b0dbdaa2c
-ms.openlocfilehash: cfac0d02ec1effdd521ca68ae4cb44b5a5a7a597
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ecf0b758a9c45a0354a68b6cbfecdb1c49ab390f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59124856"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322632"
 ---
 # <a name="how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control-using-the-designer"></a>Практическое руководство. Добавление и удаление узлов с использованием элемента управления TreeView в формах Windows Forms с помощью конструктора
 Так как Windows Forms <xref:System.Windows.Forms.TreeView> элемент управления отображает узлы в виде иерархии, при добавлении узла следует обращать внимание на является его родительским узлом.  
@@ -24,15 +24,15 @@ ms.locfileid: "59124856"
   
 ### <a name="to-add-or-remove-nodes-in-the-designer"></a>Для добавления или удаления узлов в конструкторе  
   
-1.  Выберите элемент управления <xref:System.Windows.Forms.TreeView>.  
+1. Выберите элемент управления <xref:System.Windows.Forms.TreeView>.  
   
-2.  В **свойства** окно, нажмите кнопку **кнопку с многоточием** (![экрана VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) рядом с полем <xref:System.Windows.Forms.TreeView.Nodes%2A> свойство.  
+2. В **свойства** окно, нажмите кнопку **кнопку с многоточием** (![экрана VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) рядом с полем <xref:System.Windows.Forms.TreeView.Nodes%2A> свойство.  
   
      **Редактор TreeNode** отображается.  
   
-3.  Чтобы добавить узлы, необходимо наличие корневого узла; Если она отсутствует, вы должны сначала добавить его, нажав кнопку **Добавить корень** кнопки. После этого можно добавить дочерний узел, выделив корневой или любой другой узел и нажав кнопку **добавить дочерний элемент** кнопки.  
+3. Чтобы добавить узлы, необходимо наличие корневого узла; Если она отсутствует, вы должны сначала добавить его, нажав кнопку **Добавить корень** кнопки. После этого можно добавить дочерний узел, выделив корневой или любой другой узел и нажав кнопку **добавить дочерний элемент** кнопки.  
   
-4.  Чтобы удалить узлы, выберите узел, чтобы удалить, а затем нажмите кнопку **удалить** кнопки.  
+4. Чтобы удалить узлы, выберите узел, чтобы удалить, а затем нажмите кнопку **удалить** кнопки.  
   
 ## <a name="see-also"></a>См. также
 

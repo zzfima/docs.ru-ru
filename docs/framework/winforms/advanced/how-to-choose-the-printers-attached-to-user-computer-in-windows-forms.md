@@ -9,12 +9,12 @@ helpviewer_keywords:
 - printing [Windows Forms], choosing printers
 - printers [Windows Forms], choosing
 ms.assetid: 63c1172b-2931-4ac0-953f-37f629494bbf
-ms.openlocfilehash: bebb879020e6e45e77f109bf9c377b7322d5e8f3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: efd65ff6417b1a63a7f87917c4d9a95dedc464ad
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59184032"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318810"
 ---
 # <a name="how-to-choose-the-printers-attached-to-a-users-computer-in-windows-forms"></a>Практическое руководство. Выбор принтера, подключенного к компьютеру пользователя, в Windows Forms
 Часто для печати пользователям требуется выбрать принтер, отличный от используемого по умолчанию. С помощью компонента <xref:System.Windows.Forms.PrintDialog> можно разрешить пользователям выбрать один из установленных принтеров. Компонент <xref:System.Windows.Forms.PrintDialog> позволяет зафиксировать <xref:System.Windows.Forms.DialogResult> компонента <xref:System.Windows.Forms.PrintDialog> и использовать его для выбора принтера.  
@@ -23,7 +23,7 @@ ms.locfileid: "59184032"
   
 ### <a name="to-choose-a-printer-and-then-print-a-file"></a>Выбор принтера и печать файла  
   
-1.  Выберите принтер для использования с помощью <xref:System.Windows.Forms.PrintDialog> компонента.  
+1. Выберите принтер для использования с помощью <xref:System.Windows.Forms.PrintDialog> компонента.  
   
      В следующем примере кода обрабатываются два события. В первом <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Click> событий, <xref:System.Windows.Forms.PrintDialog> создается экземпляр класса, а выбранный пользователем принтер фиксируется в <xref:System.Windows.Forms.DialogResult> свойство.  
   

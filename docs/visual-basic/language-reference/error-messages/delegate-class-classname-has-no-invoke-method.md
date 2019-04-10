@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30220
 ms.assetid: 6be0d61c-f2f9-4f9b-ab90-8871a0d7206d
-ms.openlocfilehash: 463b4f50e8c431bbbc113509e5fd9dd1756b5928
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 3fe164d868ee7bde0e687e1d592f4d5a17565aea
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822522"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321306"
 ---
 # <a name="delegate-class-classname-has-no-invoke-method-so-an-expression-of-this-type-cannot-be-the-target-of-a-method-call"></a>Класс делегата\<имя_класса > "не содержит метода Invoke, поэтому выражение этого типа не может быть результатом вызова метода
 Вызов `Invoke` через делегат не выполнено, поскольку `Invoke` не реализован в классе делегата.  
@@ -21,9 +21,9 @@ ms.locfileid: "58822522"
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
-1.  Убедитесь, что создания экземпляра класса делегата с `Dim` инструкции и что процедура была назначена экземпляру делегата с `AddressOf` оператор.  
+1. Убедитесь, что создания экземпляра класса делегата с `Dim` инструкции и что процедура была назначена экземпляру делегата с `AddressOf` оператор.  
   
-2.  Найдите код, который реализует класс делегата и убедитесь, что он реализует `Invoke` процедуры.  
+2. Найдите код, который реализует класс делегата и убедитесь, что он реализует `Invoke` процедуры.  
   
 ## <a name="see-also"></a>См. также
 

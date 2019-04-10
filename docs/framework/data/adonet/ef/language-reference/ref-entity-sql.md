@@ -2,12 +2,12 @@
 title: REF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c5f4cb35-69e9-44cc-b63b-ee38922bbda1
-ms.openlocfilehash: c3bb22badcfadb92c8687a4eff3a5c7aad1ff1ee
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 05e687f951930d92797a863410181585278b067d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59090317"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330666"
 ---
 # <a name="ref-entity-sql"></a>REF (Entity SQL)
 Возвращает ссылку на экземпляр сущности.  
@@ -33,9 +33,9 @@ REF( expression )
 ## <a name="example"></a>Пример  
  В следующем запросе Entity SQL используется оператор REF в целях получения ссылки для входного аргумента сущности. Тот же запрос разыменовывает ссылку, поскольку для доступа к свойству сущности Product используется оператор получения свойства (.). Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.  
   
-1.  Выполните процедуру, описанную в [как: Выполнение запроса, возвращающего результаты PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
+1. Выполните процедуру, описанную в [как: Выполнение запроса, возвращающего результаты PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
   
-2.  Передайте следующий запрос в качестве аргумента методу `ExecutePrimitiveTypeQuery` :  
+2. Передайте следующий запрос в качестве аргумента методу `ExecutePrimitiveTypeQuery` :  
   
  [!code-csharp[DP EntityServices Concepts 2#REF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#ref)]  
   

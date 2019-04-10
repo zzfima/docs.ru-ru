@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30577
 ms.assetid: c2c55640-5c61-4e66-97a4-4322020c6001
-ms.openlocfilehash: af1ce858108785fa4dac6352c9e80531e86fbb23
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b8c67c2390df91c6a4af66e020365544e6bf369b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58813968"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323828"
 ---
 # <a name="addressof-operand-must-be-the-name-of-a-method-without-parentheses"></a>Операнд оператора AddressOf должен быть именем метода (без скобок)
 Оператор `AddressOf` создает экземпляр делегата процедуры, ссылающийся на конкретную процедуру. Синтаксис выглядит следующим образом.  
@@ -25,9 +25,9 @@ ms.locfileid: "58813968"
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
-1.  Удалите круглые скобки вокруг аргумента `AddressOf`.  
+1. Удалите круглые скобки вокруг аргумента `AddressOf`.  
   
-2.  Убедитесь, что аргумент является имя метода.  
+2. Убедитесь, что аргумент является имя метода.  
   
 ## <a name="see-also"></a>См. также
 

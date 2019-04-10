@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - bound controls [Windows Forms]
 ms.assetid: 4e96e3d0-b1cc-4de1-8774-bc9970ec4554
-ms.openlocfilehash: a7b03ab5417eacf7962f2a05b674ceb45c7d558c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: fe54c650e1d19f36d681053c7da47e12527c5827
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115736"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320890"
 ---
 # <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source-using-the-designer"></a>Практическое руководство. Привязка элемента управления DataGrid в Windows Forms к источнику данных с помощью конструктора
 
@@ -37,11 +37,11 @@ ms.locfileid: "59115736"
   
 ### <a name="to-data-bind-the-datagrid-control-to-a-single-table-in-the-designer"></a>Чтобы выполнить привязку данных элемента управления DataGrid к одной таблице в конструкторе  
   
-1.  Задайте в качестве <xref:System.Windows.Forms.DataGrid.DataSource%2A> объект, содержащие элементы данных, необходимо выполнить привязку к свойству.  
+1. Задайте в качестве <xref:System.Windows.Forms.DataGrid.DataSource%2A> объект, содержащие элементы данных, необходимо выполнить привязку к свойству.  
   
-2.  Если источник данных представляет собой набор данных, задайте <xref:System.Windows.Forms.DataGrid.DataMember%2A> имя таблицы для привязки.  
+2. Если источник данных представляет собой набор данных, задайте <xref:System.Windows.Forms.DataGrid.DataMember%2A> имя таблицы для привязки.  
   
-3.  Если источником данных является набор данных или представление данных, на основе таблицы набора данных, добавьте код в форму для заполнения набора данных.  
+3. Если источником данных является набор данных или представление данных, на основе таблицы набора данных, добавьте код в форму для заполнения набора данных.  
   
      Использовании программы зависит от того, где данные поступают в набор. Если набор данных заполняется непосредственно из базы данных, обычно вызывается `Fill` метод адаптера данных, как показано в следующем примере кода, который заполняет набор данных с именем `DsCategories1`:  
   
@@ -57,17 +57,17 @@ ms.locfileid: "59115736"
     sqlDataAdapter1->Fill(dsCategories1);  
     ```  
   
-4.  (Необязательно) Добавьте соответствующую таблицу стилей и столбцов в сетку.  
+4. (Необязательно) Добавьте соответствующую таблицу стилей и столбцов в сетку.  
   
      Если стили таблиц отсутствуют, вы увидите таблицу с минимальным форматированием и со всеми столбцами видимым.  
   
 ### <a name="to-data-bind-the-datagrid-control-to-multiple-tables-in-a-dataset-in-the-designer"></a>Чтобы выполнить привязку данных элемента управления DataGrid с несколькими таблицами в наборе данных в конструкторе  
   
-1.  Задайте в качестве <xref:System.Windows.Forms.DataGrid.DataSource%2A> объект, содержащие элементы данных, необходимо выполнить привязку к свойству.  
+1. Задайте в качестве <xref:System.Windows.Forms.DataGrid.DataSource%2A> объект, содержащие элементы данных, необходимо выполнить привязку к свойству.  
   
-2.  Если набор данных содержит связанные таблицы (то есть, если он содержит объект связи), задайте <xref:System.Windows.Forms.DataGrid.DataMember%2A> имя родительской таблицы.  
+2. Если набор данных содержит связанные таблицы (то есть, если он содержит объект связи), задайте <xref:System.Windows.Forms.DataGrid.DataMember%2A> имя родительской таблицы.  
   
-3.  Напишите код для заполнения набора данных.  
+3. Напишите код для заполнения набора данных.  
   
 ## <a name="see-also"></a>См. также
 

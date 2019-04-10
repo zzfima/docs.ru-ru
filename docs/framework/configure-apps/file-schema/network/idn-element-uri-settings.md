@@ -2,12 +2,12 @@
 title: <idn> (Параметры Uri)
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
-ms.openlocfilehash: 3940f30f2ef90a77560a82edc909071f0ee8e130
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2d2729f9120d6b6fe673904ad2bf6d005ddf5469
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59129406"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321761"
 ---
 # <a name="idn-element-uri-settings"></a>\<IDN > (параметры Uri)
 Указывает, применяется ли синтаксический анализ международных доменных имен (IDN) к имени домена.  
@@ -50,13 +50,13 @@ ms.locfileid: "59129406"
   
  Чтобы включить поддержку IRI, необходимы следующие два изменения:  
   
-1.  Добавьте следующую строку в файл machine.config в каталоге .NET Framework 2.0  
+1. Добавьте следующую строку в файл machine.config в каталоге .NET Framework 2.0  
   
     ```xml  
     <section name="uri" type="System.Configuration.UriSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
     ```  
   
-2.  Укажите, нужно ли синтаксический анализ международных доменных имен (IDN), применяемый к имени домена и должны ли применяться правила синтаксического анализа IRI. Это можно сделать в файле machine.config или в файле app.config.  
+2. Укажите, нужно ли синтаксический анализ международных доменных имен (IDN), применяемый к имени домена и должны ли применяться правила синтаксического анализа IRI. Это можно сделать в файле machine.config или в файле app.config.  
   
  Существует три возможных значения для IDN в зависимости от DNS-серверы, которые используются:  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], event handlers
 - procedures [Visual Basic], calling
 ms.assetid: 72e18ef8-144e-40df-a1f4-066a57271e28
-ms.openlocfilehash: dd21f80e4b3892cbd9db901b619ecff98f6b70bd
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 3690d1c2eb8ece9059b8b25b5a14bef2021bc8f6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837771"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320175"
 ---
 # <a name="how-to-call-an-event-handler-in-visual-basic"></a>Практическое руководство. Вызов обработчика событий в Visual Basic
 *Событий* — это действие или условие, например мышью, щелчок или это кредитный лимит превышение, которое распознается некоторым компонентом программы и для которого можно написать код для реагирования. *Обработчик событий* — это код, предназначенный для ответа на событие.  
@@ -26,13 +26,13 @@ ms.locfileid: "58837771"
   
 ### <a name="to-call-an-event-handler-using-handles-and-withevents"></a>Для вызова обработчика событий с помощью дескрипторы и WithEvents  
   
-1.  Убедитесь, что событие объявляется с [оператор Event](../../../../visual-basic/language-reference/statements/event-statement.md).  
+1. Убедитесь, что событие объявляется с [оператор Event](../../../../visual-basic/language-reference/statements/event-statement.md).  
   
-2.  Объявление объектной переменной в модуле или классе уровня, с помощью [WithEvents](../../../../visual-basic/language-reference/modifiers/withevents.md) ключевое слово. `As` Предложение для этой переменной необходимо указать класс, который вызывает событие.  
+2. Объявление объектной переменной в модуле или классе уровня, с помощью [WithEvents](../../../../visual-basic/language-reference/modifiers/withevents.md) ключевое слово. `As` Предложение для этой переменной необходимо указать класс, который вызывает событие.  
   
-3.  В объявлении обработки события `Sub` процедуру, добавьте [обрабатывает](../../../../visual-basic/language-reference/statements/handles-clause.md) предложение, определяющее `WithEvents` переменной и имя события.  
+3. В объявлении обработки события `Sub` процедуру, добавьте [обрабатывает](../../../../visual-basic/language-reference/statements/handles-clause.md) предложение, определяющее `WithEvents` переменной и имя события.  
   
-4.  При возникновении события, Visual Basic автоматически вызывает `Sub` процедуры. Код может использовать `RaiseEvent` инструкцию, чтобы создавать событие.  
+4. При возникновении события, Visual Basic автоматически вызывает `Sub` процедуры. Код может использовать `RaiseEvent` инструкцию, чтобы создавать событие.  
   
      В следующем примере определяется событие и `WithEvents` переменную, которая ссылается на класс, который вызывает событие. Обработка событий `Sub` процедуры используется `Handles` предложение для указания класса и события, которые он обрабатывает.  
   
@@ -40,11 +40,11 @@ ms.locfileid: "58837771"
   
 ### <a name="to-call-an-event-handler-using-addhandler"></a>Для вызова обработчика событий с помощью AddHandler  
   
-1.  Убедитесь, что событие объявляется с `Event` инструкции.  
+1. Убедитесь, что событие объявляется с `Event` инструкции.  
   
-2.  Выполнение [оператор AddHandler](../../../../visual-basic/language-reference/statements/addhandler-statement.md) динамически подключиться обработки события `Sub` процедуры с событием.  
+2. Выполнение [оператор AddHandler](../../../../visual-basic/language-reference/statements/addhandler-statement.md) динамически подключиться обработки события `Sub` процедуры с событием.  
   
-3.  При возникновении события, Visual Basic автоматически вызывает `Sub` процедуры. Код может использовать `RaiseEvent` инструкцию, чтобы создавать событие.  
+3. При возникновении события, Visual Basic автоматически вызывает `Sub` процедуры. Код может использовать `RaiseEvent` инструкцию, чтобы создавать событие.  
   
      В следующем примере определяется `Sub` процедура будет обрабатывать <xref:System.Windows.Forms.Form.Closing> события формы. Затем он использует [оператор AddHandler](../../../../visual-basic/language-reference/statements/addhandler-statement.md) связываемый `catchClose` процедуры в качестве обработчика событий для <xref:System.Windows.Forms.Form.Closing>.  
   

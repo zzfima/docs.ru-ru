@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1bb93652-d687-46ff-bff6-69ecdcf97437
-ms.openlocfilehash: d3fc95e7e92d3fc7c149790d4af00a464ab427f7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a676f03b4e6f9dd210b843a6f3bf00c735889500
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59164025"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330159"
 ---
 # <a name="how-to-configure-idle-behavior-with-workflowservicehost"></a>Практическое руководство. Как настроить неактивное поведение с помощью WorkflowServiceHost
 Рабочие процессы переходят в режим бездействия, когда обнаруживают закладку, выполнение которой должно быть возобновлено по внешнему сигналу, например когда экземпляр рабочего процесса ожидает доставки сообщения с помощью действия <xref:System.ServiceModel.Activities.Receive> . <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> Это поведение, которое позволяет указать время между переходом экземпляра службы в состояние бездействия и сохранением или выгрузкой экземпляра. Содержит два свойства, которые позволяют задавать значения для этих периодов времени. <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A> Указывает интервал времени между переходом экземпляра службы рабочего процесса в состояние бездействия и сохранением экземпляра службы рабочего процесса. <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> Указывает период времени между когда экземпляру службы рабочего процесса переходит в состояние бездействия и при выгрузке экземпляра службы рабочего процесса, где выгрузка означает сохранение экземпляра в хранилище экземпляров и удаление его из памяти. В этом разделе описана настройка <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> в файле конфигурации.  
   
 ### <a name="to-configure-workflowidlebehavior"></a>Настройка WorkflowIdleBehavior  
   
-1.  Добавьте <`workflowIdle`> элемента <`behavior`> элемента <`serviceBehaviors`> элемента, как показано в следующем примере.  
+1. Добавьте <`workflowIdle`> элемента <`behavior`> элемента <`serviceBehaviors`> элемента, как показано в следующем примере.  
   
     ```xml  
     <behaviors>  

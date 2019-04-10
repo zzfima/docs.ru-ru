@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 761f1c66-631c-47af-aa86-ad9c50cfa453
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 060bc53efa175314e00f487776c43124c39f33c0
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 890216fa8cc9915ffa640b6330994c5f1ee2e611
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970978"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327338"
 ---
 # <a name="how-to-encrypt-xml-elements-with-x509-certificates"></a>Практическое руководство. Шифрование XML-элементов с помощью сертификатов X.509
 Классы можно использовать в пространстве имен <xref:System.Security.Cryptography.Xml> для шифрования элемента XML-документа.  Шифрование XML-данных — это стандартный способ обмена зашифрованными XML-данными и их хранения, позволяющий не беспокоиться о том, что эти данные могут быть прочитаны.  Дополнительные сведения о стандарте XML-шифрования, см. в спецификации консорциума World Wide Web (W3C) XML-шифрования, расположенным в <https://www.w3.org/TR/xmldsig-core/>.  
@@ -36,43 +36,43 @@ ms.locfileid: "56970978"
   
 ### <a name="to-encrypt-an-xml-element-with-an-x509-certificate"></a>Шифрование XML-элемента с использованием сертификата X.509  
   
-1.  Используйте [инструмент для создания сертификатов (Makecert.exe)](/windows/desktop/SecCrypto/makecert), чтобы создать тестовый сертификат X.509 и поместить его в хранилище локального пользователя.  Необходимо создать ключ обмена и сделать его экспортируемым. Выполните следующую команду:  
+1. Используйте [инструмент для создания сертификатов (Makecert.exe)](/windows/desktop/SecCrypto/makecert), чтобы создать тестовый сертификат X.509 и поместить его в хранилище локального пользователя.  Необходимо создать ключ обмена и сделать его экспортируемым. Выполните следующую команду:  
   
     ```  
     makecert -r -pe -n "CN=XML_ENC_TEST_CERT" -b 01/01/2005 -e 01/01/2010 -sky exchange -ss my  
     ```  
   
-2.  Создайте объект <xref:System.Security.Cryptography.X509Certificates.X509Store> и инициализируйте его, чтобы открыть хранилище текущего пользователя.  
+2. Создайте объект <xref:System.Security.Cryptography.X509Certificates.X509Store> и инициализируйте его, чтобы открыть хранилище текущего пользователя.  
   
      [!code-csharp[HowToEncryptXMLElementX509#2](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementX509/cs/sample.cs#2)]
      [!code-vb[HowToEncryptXMLElementX509#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementX509/vb/sample.vb#2)]  
   
-3.  Откройте хранилище в режиме только для чтения.  
+3. Откройте хранилище в режиме только для чтения.  
   
      [!code-csharp[HowToEncryptXMLElementX509#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementX509/cs/sample.cs#3)]
      [!code-vb[HowToEncryptXMLElementX509#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementX509/vb/sample.vb#3)]  
   
-4.  Инициализируйте <xref:System.Security.Cryptography.X509Certificates.X509Certificate2Collection> всеми сертификатами в хранилище.  
+4. Инициализируйте <xref:System.Security.Cryptography.X509Certificates.X509Certificate2Collection> всеми сертификатами в хранилище.  
   
      [!code-csharp[HowToEncryptXMLElementX509#4](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementX509/cs/sample.cs#4)]
      [!code-vb[HowToEncryptXMLElementX509#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementX509/vb/sample.vb#4)]  
   
-5.  Выполните перечисление сертификатов в хранилище, чтобы найти сертификат с соответствующим именем.  В этом примере сертификат имеет имя `"CN=XML_ENC_TEST_CERT"`.  
+5. Выполните перечисление сертификатов в хранилище, чтобы найти сертификат с соответствующим именем.  В этом примере сертификат имеет имя `"CN=XML_ENC_TEST_CERT"`.  
   
      [!code-csharp[HowToEncryptXMLElementX509#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementX509/cs/sample.cs#5)]
      [!code-vb[HowToEncryptXMLElementX509#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementX509/vb/sample.vb#5)]  
   
-6.  Закройте хранилище после нахождения сертификата.  
+6. Закройте хранилище после нахождения сертификата.  
   
      [!code-csharp[HowToEncryptXMLElementX509#6](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementX509/cs/sample.cs#6)]
      [!code-vb[HowToEncryptXMLElementX509#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementX509/vb/sample.vb#6)]  
   
-7.  Создайте объект <xref:System.Xml.XmlDocument>, загрузив XML-файл с диска.  Объект <xref:System.Xml.XmlDocument> содержит XML-элемент для шифрования.  
+7. Создайте объект <xref:System.Xml.XmlDocument>, загрузив XML-файл с диска.  Объект <xref:System.Xml.XmlDocument> содержит XML-элемент для шифрования.  
   
      [!code-csharp[HowToEncryptXMLElementX509#7](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementX509/cs/sample.cs#7)]
      [!code-vb[HowToEncryptXMLElementX509#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementX509/vb/sample.vb#7)]  
   
-8.  Найдите указанный элемент в объекте <xref:System.Xml.XmlDocument> и создайте новый объект <xref:System.Xml.XmlElement> для представления того элемента, который требуется зашифровать.  В этом примере выполняется шифрование элемента `"creditcard"`.  
+8. Найдите указанный элемент в объекте <xref:System.Xml.XmlDocument> и создайте новый объект <xref:System.Xml.XmlElement> для представления того элемента, который требуется зашифровать.  В этом примере выполняется шифрование элемента `"creditcard"`.  
   
      [!code-csharp[HowToEncryptXMLElementX509#8](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementX509/cs/sample.cs#8)]
      [!code-vb[HowToEncryptXMLElementX509#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementX509/vb/sample.vb#8)]  
@@ -119,4 +119,4 @@ ms.locfileid: "56970978"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Security.Cryptography.Xml>
-- [Практическое руководство. Расшифровка XML-элементов с помощью сертификатов X.509](../../../docs/standard/security/how-to-decrypt-xml-elements-with-x-509-certificates.md)
+- [Практическое руководство. Дешифровка XML-элементов с помощью сертификатов X.509](../../../docs/standard/security/how-to-decrypt-xml-elements-with-x-509-certificates.md)

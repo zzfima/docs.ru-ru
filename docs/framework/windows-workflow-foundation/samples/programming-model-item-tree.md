@@ -2,12 +2,12 @@
 title: Программирование дерева элементов модели
 ms.date: 03/30/2017
 ms.assetid: 0229efde-19ac-4bdc-a187-c6227a7bd1a5
-ms.openlocfilehash: f3def07ecbc60362b2a8c1d38689dc686cd5bbd5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1aaa1aa9922a7f57138782effe9492ec84198c8a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59086472"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321137"
 ---
 # <a name="programming-model-item-tree"></a>Программирование дерева элементов модели
 В этом примере демонстрируется переход <xref:System.Activities.Presentation.Model.ModelItem> дерева, используя привязку декларативных данных из представления дерева Windows Presentation Foundation (WPF).
@@ -29,15 +29,15 @@ justAdded.Properties["DisplayName"].SetValue("new name");
 
 #### <a name="to-use-this-sample"></a>Использование этого образца
 
-1.  Откройте решение ProgrammingModelItemTree.sln в Visual Studio 2010.
+1. Откройте решение ProgrammingModelItemTree.sln в Visual Studio 2010.
 
-2.  Постройте решение, выбрав **построить решение** из **построения** меню.
+2. Постройте решение, выбрав **построить решение** из **построения** меню.
 
-3.  Нажмите клавишу F5 для запуска приложения. Будет показана форма [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)].
+3. Нажмите клавишу F5 для запуска приложения. Будет показана форма [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)].
 
-4.  Нажмите кнопку **загрузить WF** кнопку, чтобы загрузить <xref:System.Activities.Presentation.Model.ModelItem> и привязать его к представлении в виде дерева.
+4. Нажмите кнопку **загрузить WF** кнопку, чтобы загрузить <xref:System.Activities.Presentation.Model.ModelItem> и привязать его к представлении в виде дерева.
 
-5.  Щелкнув **изменить дерево элементов модели** кнопки выполняется предшествующий код, чтобы добавить элемент в дерево и задает свойство.
+5. Щелкнув **изменить дерево элементов модели** кнопки выполняется предшествующий код, чтобы добавить элемент в дерево и задает свойство.
 
 > [!IMPORTANT]
 >  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  

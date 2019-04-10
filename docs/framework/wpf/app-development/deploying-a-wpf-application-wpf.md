@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: 35515d37756c46d7d38ca272d76da3126fde385f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0ffd4fb05a5a409d74f8a9401a5fb021db0cd99b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59132364"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320656"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Развертывание приложений WPF
 После построения приложения Windows Presentation Foundation (WPF), они должны быть развернуты. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] и .NET Framework поддерживают несколько технологий развертывания. Технология развертывания, используемая для развертывания приложения [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], зависит от типа приложения. Этот раздел содержит краткое описание каждой из технологий развертывания и их использования в сочетании с требованиями к развертыванию для каждого типа приложения [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
@@ -102,9 +102,9 @@ ms.locfileid: "59132364"
   
  [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] можно развернуть для клиентов с помощью любого из методов развертывания. Однако рекомендуется использовать технологию [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)], так как она имеет следующие возможности:  
   
-1.  автоматическое обновление при публикации новой версии;  
+1. автоматическое обновление при публикации новой версии;  
   
-2.  повышенные привилегии при выполнении [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] в режиме полного доверия.  
+2. повышенные привилегии при выполнении [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] в режиме полного доверия.  
   
  По умолчанию средство ClickOnce публикует файлы приложений с расширением DEPLOY. Это поведение может привести к затруднениям, но его можно отключить. Дополнительные сведения см. в разделе [Вопросы настройки сервера и клиента в развертываниях ClickOnce](/visualstudio/deployment/server-and-client-configuration-issues-in-clickonce-deployments).  
   

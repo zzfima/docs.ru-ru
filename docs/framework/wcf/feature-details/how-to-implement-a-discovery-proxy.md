@@ -1,16 +1,16 @@
 ---
-title: Как выполнить реализовать прокси-сервер обнаружения
+title: Практическое руководство. Как реализовать прокси-сервер обнаружения
 ms.date: 03/30/2017
 ms.assetid: 78d70e0a-f6c3-4cfb-a7ca-f66ebddadde0
-ms.openlocfilehash: 12adc7215e929bb56aafe104546eb6e58af52ddb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b3e0b5cef01998c1e509586ba1fab3924eb7bc0b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608918"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321020"
 ---
-# <a name="how-to-implement-a-discovery-proxy"></a>Как выполнить реализовать прокси-сервер обнаружения
-В этом разделе приведены сведения о реализации прокси-сервера обнаружения. Дополнительные сведения о функции обнаружения в Windows Communication Foundation (WCF), см. в разделе [Общие сведения об обнаружении WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md). Прокси-сервер обнаружения реализуется созданием класса, расширяющего абстрактный класс <xref:System.ServiceModel.Discovery.DiscoveryProxy>. В этом образце определены и использованы несколько других вспомогательных классов. `OnResolveAsyncResult`, `OnFindAsyncResult` и `AsyncResult`. Эти классы реализуют интерфейс <xref:System.IAsyncResult>. Дополнительные сведения о <xref:System.IAsyncResult> см. в разделе [интерфейс System.IAsyncResult](xref:System.IAsyncResult).
+# <a name="how-to-implement-a-discovery-proxy"></a>Практическое руководство. Как реализовать прокси-сервер обнаружения
+В этом разделе приведены сведения о реализации прокси-сервера обнаружения. Дополнительные сведения о функции обнаружения в Windows Communication Foundation (WCF), см. в разделе [Общие сведения об обнаружении WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md). Прокси-сервер обнаружения реализуется созданием класса, расширяющего абстрактный класс <xref:System.ServiceModel.Discovery.DiscoveryProxy>. В этом образце определены и использованы несколько других вспомогательных классов. `OnResolveAsyncResult`, `OnFindAsyncResult`, и `AsyncResult`. Эти классы реализуют интерфейс <xref:System.IAsyncResult>. Дополнительные сведения о <xref:System.IAsyncResult> см. в разделе [интерфейс System.IAsyncResult](xref:System.IAsyncResult).
 
  В данном разделе реализация прокси-сервера обнаружения разделена на три основные части.
 
@@ -22,11 +22,11 @@ ms.locfileid: "54608918"
 
 ### <a name="to-create-a-new-console-application-project"></a>Создание нового проекта консольного приложения
 
-1.  Запустите Visual Studio 2012.
+1. Запустите Visual Studio 2012.
 
-2.  Создайте новый проект консольного приложения. Задайте имя `DiscoveryProxy` для проекта и имя `DiscoveryProxyExample` для решения.
+2. Создайте новый проект консольного приложения. Задайте имя `DiscoveryProxy` для проекта и имя `DiscoveryProxyExample` для решения.
 
-3.  Добавьте в проект следующие ссылки
+3. Добавьте в проект следующие ссылки
 
     1.  System.ServiceModel.dll
 
@@ -37,9 +37,9 @@ ms.locfileid: "54608918"
 
 ### <a name="to-implement-the-proxydiscoveryservice-class"></a>Реализация класса ProxyDiscoveryService
 
-1.  Добавьте новый файл кода в проект и назовите его DiscoveryProxy.cs.
+1. Добавьте новый файл кода в проект и назовите его DiscoveryProxy.cs.
 
-2.  Добавьте следующие операторы `using` в файл DiscoveryProxy.cs.
+2. Добавьте следующие операторы `using` в файл DiscoveryProxy.cs.
 
     ```
     using System;
@@ -49,7 +49,7 @@ ms.locfileid: "54608918"
     using System.Xml;
     ```
 
-3.  Создайте класс `DiscoveryProxyService`, производный от <xref:System.ServiceModel.Discovery.DiscoveryProxy>. Примените атрибут `ServiceBehavior` к классу, как показано в следующем примере.
+3. Создайте класс `DiscoveryProxyService`, производный от <xref:System.ServiceModel.Discovery.DiscoveryProxy>. Примените атрибут `ServiceBehavior` к классу, как показано в следующем примере.
 
     ```
     // Implement DiscoveryProxy by extending the DiscoveryProxy class and overriding the abstract methods
@@ -59,14 +59,14 @@ ms.locfileid: "54608918"
     }
     ```
 
-4.  Определите в пределах класса `DiscoveryProxy` словарь для хранения зарегистрированных служб.
+4. Определите в пределах класса `DiscoveryProxy` словарь для хранения зарегистрированных служб.
 
     ```
     // Repository to store EndpointDiscoveryMetadata.
     Dictionary<EndpointAddress, EndpointDiscoveryMetadata> onlineServices;
     ```
 
-5.  Определите конструктор, который инициализирует словарь.
+5. Определите конструктор, который инициализирует словарь.
 
     ```
     public DiscoveryProxyService()
@@ -77,7 +77,7 @@ ms.locfileid: "54608918"
 
 ### <a name="to-define-the-methods-used-to-update-the-discovery-proxy-cache"></a>Определение методов для обновления кэша прокси-сервера обнаружения
 
-1.  Реализуйте метод `AddOnlineservice` для добавления служб в кэш. Он вызывается каждый раз, когда прокси-сервер получает сообщение объявления.
+1. Реализуйте метод `AddOnlineservice` для добавления служб в кэш. Он вызывается каждый раз, когда прокси-сервер получает сообщение объявления.
 
     ```
     void AddOnlineService(EndpointDiscoveryMetadata endpointDiscoveryMetadata)
@@ -91,7 +91,7 @@ ms.locfileid: "54608918"
             }
     ```
 
-2.  Реализуйте метод `RemoveOnlineService`, который используется для удаления служб из кэша.
+2. Реализуйте метод `RemoveOnlineService`, который используется для удаления служб из кэша.
 
     ```
     void RemoveOnlineService(EndpointDiscoveryMetadata endpointDiscoveryMetadata)
@@ -108,7 +108,7 @@ ms.locfileid: "54608918"
             }
     ```
 
-3.  Реализуйте методы `MatchFromOnlineService`, которые выполняют сопоставление службы со службой из словаря.
+3. Реализуйте методы `MatchFromOnlineService`, которые выполняют сопоставление службы со службой из словаря.
 
     ```
     void MatchFromOnlineService(FindRequestContext findRequestContext)
@@ -144,7 +144,7 @@ ms.locfileid: "54608918"
             }
     ```
 
-4.  Реализуйте метод `PrintDiscoveryMetadata`, который выводит пользователю на консоль текстовые данные об операциях прокси-сервера обнаружения.
+4. Реализуйте метод `PrintDiscoveryMetadata`, который выводит пользователю на консоль текстовые данные об операциях прокси-сервера обнаружения.
 
     ```
     void PrintDiscoveryMetadata(EndpointDiscoveryMetadata endpointDiscoveryMetadata, string verb)
@@ -159,7 +159,7 @@ ms.locfileid: "54608918"
             }
     ```
 
-5.  Добавьте следующие классы AsyncResult в DiscoveryProxyService. Эти классы позволяют различать результаты асинхронных операций.
+5. Добавьте следующие классы AsyncResult в DiscoveryProxyService. Эти классы позволяют различать результаты асинхронных операций.
 
     ```
     sealed class OnOnlineAnnouncementAsyncResult : AsyncResult
@@ -225,7 +225,7 @@ ms.locfileid: "54608918"
 
 ### <a name="to-define-the-methods-that-implement-the-discovery-proxy-functionality"></a>Определение методов, реализующих функции прокси-сервера обнаружения
 
-1.  Переопределите метод <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOnlineAnnouncement%2A?displayProperty=nameWithType> . Этот метод вызывается, когда прокси-сервер обнаружения получает оперативное сообщение объявления.
+1. Переопределите метод <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOnlineAnnouncement%2A?displayProperty=nameWithType> . Этот метод вызывается, когда прокси-сервер обнаружения получает оперативное сообщение объявления.
 
     ```
     // OnBeginOnlineAnnouncement method is called when a Hello message is received by the Proxy
@@ -236,7 +236,7 @@ ms.locfileid: "54608918"
             }
     ```
 
-2.  Переопределите метод <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOnlineAnnouncement%2A?displayProperty=nameWithType> . Этот метод вызывается, когда прокси-сервер обнаружения завершает обработку сообщения объявления.
+2. Переопределите метод <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOnlineAnnouncement%2A?displayProperty=nameWithType> . Этот метод вызывается, когда прокси-сервер обнаружения завершает обработку сообщения объявления.
 
     ```
     protected override void OnEndOnlineAnnouncement(IAsyncResult result)
@@ -245,7 +245,7 @@ ms.locfileid: "54608918"
             }
     ```
 
-3.  Переопределите метод <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOfflineAnnouncement%2A?displayProperty=nameWithType> . Этот метод вызывается вместе с получением прокси-сервером обнаружения автономного сообщение объявления.
+3. Переопределите метод <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOfflineAnnouncement%2A?displayProperty=nameWithType> . Этот метод вызывается вместе с получением прокси-сервером обнаружения автономного сообщение объявления.
 
     ```
     // OnBeginOfflineAnnouncement method is called when a Bye message is received by the Proxy
@@ -256,7 +256,7 @@ ms.locfileid: "54608918"
             }
     ```
 
-4.  Переопределите метод <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOfflineAnnouncement%2A?displayProperty=nameWithType> . Этот метод вызывается, когда прокси-сервер обнаружения завершает обработку автономного сообщения объявления.
+4. Переопределите метод <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOfflineAnnouncement%2A?displayProperty=nameWithType> . Этот метод вызывается, когда прокси-сервер обнаружения завершает обработку автономного сообщения объявления.
 
     ```
     protected override void OnEndOfflineAnnouncement(IAsyncResult result)
@@ -265,7 +265,7 @@ ms.locfileid: "54608918"
             }
     ```
 
-5.  Переопределите метод <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A?displayProperty=nameWithType> . Этот метод вызывается, когда прокси-сервер обнаружения получает запрос поиска.
+5. Переопределите метод <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A?displayProperty=nameWithType> . Этот метод вызывается, когда прокси-сервер обнаружения получает запрос поиска.
 
     ```
     // OnBeginFind method is called when a Probe request message is received by the Proxy
@@ -284,7 +284,7 @@ ms.locfileid: "54608918"
     }
     ```
 
-6.  Переопределите метод <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A?displayProperty=nameWithType> . Этот метод вызывается, когда прокси-сервер обнаружения завершает обработку запроса поиска.
+6. Переопределите метод <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A?displayProperty=nameWithType> . Этот метод вызывается, когда прокси-сервер обнаружения завершает обработку запроса поиска.
 
     ```
     protected override void OnEndFind(IAsyncResult result)
@@ -293,7 +293,7 @@ ms.locfileid: "54608918"
             }
     ```
 
-7.  Переопределите метод <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginResolve%2A?displayProperty=nameWithType> . Этот метод вызывается, когда прокси-сервер обнаружения получает сообщение разрешения.
+7. Переопределите метод <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginResolve%2A?displayProperty=nameWithType> . Этот метод вызывается, когда прокси-сервер обнаружения получает сообщение разрешения.
 
     ```
     // OnBeginFind method is called when a Resolve request message is received by the Proxy
@@ -310,7 +310,7 @@ ms.locfileid: "54608918"
     }
     ```
 
-8.  Переопределите метод <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndResolve%2A?displayProperty=nameWithType> . Этот метод вызывается, когда прокси-сервер обнаружения завершает обработку сообщения разрешения.
+8. Переопределите метод <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndResolve%2A?displayProperty=nameWithType> . Этот метод вызывается, когда прокси-сервер обнаружения завершает обработку сообщения разрешения.
 
     ```
     protected override EndpointDiscoveryMetadata OnEndResolve(IAsyncResult result)
@@ -323,18 +323,18 @@ ms.locfileid: "54608918"
 
 ### <a name="to-implement-the-asyncresult-class"></a>Реализация класса AsyncResult
 
-1.  Определите абстрактный базовый класс AsyncResult. Различные классы асинхронных результатов будут производными от него.
+1. Определите абстрактный базовый класс AsyncResult. Различные классы асинхронных результатов будут производными от него.
 
-2.  Создайте новый файл кода с именем AsyncResult.cs.
+2. Создайте новый файл кода с именем AsyncResult.cs.
 
-3.  Добавьте в файл AsyncResult.cs следующие операторы `using`.
+3. Добавьте в файл AsyncResult.cs следующие операторы `using`.
 
     ```
     using System;
     using System.Threading;
     ```
 
-4.  Добавьте следующий класс AsyncResult.
+4. Добавьте следующий класс AsyncResult.
 
     ```
     abstract class AsyncResult : IAsyncResult
@@ -487,9 +487,9 @@ ms.locfileid: "54608918"
 
 ### <a name="to-host-the-discoveryproxy"></a>Размещение прокси-сервера обнаружения
 
-1.  Откройте файл Program.cs в проекте DiscoveryProxyExample.
+1. Откройте файл Program.cs в проекте DiscoveryProxyExample.
 
-2.  Добавьте следующие инструкции `using`.
+2. Добавьте следующие инструкции `using`.
 
     ```
     using System;
@@ -497,7 +497,7 @@ ms.locfileid: "54608918"
     using System.ServiceModel.Discovery;
     ```
 
-3.  В метод `Main()` добавьте следующий код. Он создает экземпляр класса `DiscoveryProxy`.
+3. В метод `Main()` добавьте следующий код. Он создает экземпляр класса `DiscoveryProxy`.
 
     ```
     Uri probeEndpointAddress = new Uri("net.tcp://localhost:8001/Probe");
@@ -507,7 +507,7 @@ ms.locfileid: "54608918"
                 ServiceHost proxyServiceHost = new ServiceHost(new DiscoveryProxyService());
     ```
 
-4.  Затем добавьте следующий код, который добавляет конечную точку обнаружения и конечную точку объявления.
+4. Затем добавьте следующий код, который добавляет конечную точку обнаружения и конечную точку объявления.
 
     ```
     try
@@ -980,6 +980,6 @@ namespace Microsoft.Samples.Discovery
 ## <a name="see-also"></a>См. также
 
 - [Общие сведения об обнаружении WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [Практическое руководство. Реализовать Обнаружимую службу, которая регистрируется на прокси-сервера обнаружения](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
-- [Практическое руководство. Реализовать клиентское приложение, которое использует прокси-сервер обнаружения для поиска службы](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
-- [Практическое руководство. Проверить прокси-сервер обнаружения](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)
+- [Практическое руководство. Как реализовать обнаружимую службу, которая регистрируется в прокси-сервере обнаружения](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+- [Практическое руководство. Как реализовать клиентское приложение, которое для поиска служб использует прокси-сервер обнаружения](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+- [Практическое руководство. Как проверить прокси-сервер обнаружения](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)

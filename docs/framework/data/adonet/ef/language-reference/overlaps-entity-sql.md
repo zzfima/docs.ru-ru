@@ -2,12 +2,12 @@
 title: OVERLAPS (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 41743e89-79cb-4d7b-8a27-355b45024b61
-ms.openlocfilehash: 74399c4c5701fcf039666ef3de19de2cf9a6b50e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9d909fb7efbb29619351cfc866b0f84381d0b80b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59104212"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319642"
 ---
 # <a name="overlaps-entity-sql"></a>OVERLAPS (Entity SQL)
 Определяет, содержат ли две коллекции общие элементы.  
@@ -35,9 +35,9 @@ expression OVERLAPS expression
 ## <a name="example"></a>Пример  
  В следующем запросе Entity SQL оператор OVERLAPS используется для определения, имеют ли две коллекции общее значение. Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.  
   
-1.  Выполните процедуру, описанную в [как: Выполнение запроса, возвращающего результаты StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Выполните процедуру, описанную в [как: Выполнение запроса, возвращающего результаты StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
-2.  Передайте следующий запрос в качестве аргумента методу `ExecuteStructuralTypeQuery` :  
+2. Передайте следующий запрос в качестве аргумента методу `ExecuteStructuralTypeQuery` :  
   
  [!code-csharp[DP EntityServices Concepts 2#OVERLAPS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#overlaps)]  
   

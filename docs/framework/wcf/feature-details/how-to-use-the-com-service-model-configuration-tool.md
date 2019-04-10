@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
-ms.openlocfilehash: 0dc126cf6528504cacd18ae29c31541833ddb5f8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5b330a727c0a4a20de13f43fd2844d0b745e5060
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59196896"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322593"
 ---
 # <a name="how-to-use-the-com-service-model-configuration-tool"></a>Практическое руководство. Использование программы командной строки настройки модели служб COM+
 Выбрав нужный режим размещения, с помощью программы командной строки настройки модели служб COM+ (ComSvcConfig.exe) сконфигурируйте интерфейсы приложения, предоставляемые как веб-службы.  
@@ -19,11 +19,11 @@ ms.locfileid: "59196896"
   
  При использовании ComSvcConfig.exe на компьютере под управлением Windows 7 для настройки веб-службы на использование последней версии модели службы (в настоящее время v4.5) выполните следующие действия.  
   
-1.  Настройте раздел реестра `[HKEY_LOCAL_COMPUTER\SOFTWARE\Microsoft\.NETFramework]\OnlyUseLatestCLR` значение DWORD 0x00000001  
+1. Настройте раздел реестра `[HKEY_LOCAL_COMPUTER\SOFTWARE\Microsoft\.NETFramework]\OnlyUseLatestCLR` значение DWORD 0x00000001  
   
-2.  Запустите comsvcconfig.exe  
+2. Запустите comsvcconfig.exe  
   
-3.  Верните ключу реестра, добавленному на шаге 1, исходное значение или удалите его, если нет.  
+3. Верните ключу реестра, добавленному на шаге 1, исходное значение или удалите его, если нет.  
   
 > [!IMPORTANT]
 >  Восстановление значения ключа - важно. Это ключ совместимости. Если не восстановить значение ключа, могут возникнуть проблемы в работе других приложений .NET на данном компьютере.  

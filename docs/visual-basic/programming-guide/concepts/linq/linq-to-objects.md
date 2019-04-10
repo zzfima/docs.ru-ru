@@ -2,12 +2,12 @@
 title: LINQ to Objects (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: dd4c30bc-1c9b-4781-a482-b5eada38deb2
-ms.openlocfilehash: 87c804a831272b2a0c08ac85a552fec86d665e7f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: c1e2e8fbaaf984fec69322a459fc7c55890965ad
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44185471"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326883"
 ---
 # <a name="linq-to-objects-visual-basic"></a>LINQ to Objects (Visual Basic)
 Термин "LINQ to Objects" означает использование запросов LINQ с любой коллекцией <xref:System.Collections.IEnumerable> или <xref:System.Collections.Generic.IEnumerable%601> напрямую, без привлечения промежуточного поставщика LINQ, API [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md) или [LINQ to XML](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md). Вы можете выполнить запрос LINQ к любой перечислимой коллекции, такой как <xref:System.Collections.Generic.List%601>, <xref:System.Array> или <xref:System.Collections.Generic.Dictionary%602>. Коллекция может быть определена пользователем или возвращена API .NET Framework.  
@@ -16,11 +16,11 @@ ms.locfileid: "44185471"
   
  Кроме того, запросы LINQ предлагают три основных преимущества по сравнению с традиционными циклами `For Each`:  
   
-1.  Они более краткие и удобочитаемые, особенно при фильтрации нескольких условий.  
+1. Они более краткие и удобочитаемые, особенно при фильтрации нескольких условий.  
   
-2.  Они предоставляют широкие возможности фильтрации, упорядочивания и группировки с минимумом кода приложения.  
+2. Они предоставляют широкие возможности фильтрации, упорядочивания и группировки с минимумом кода приложения.  
   
-3.  Они могут переноситься в другие источники данных практически без изменений.  
+3. Они могут переноситься в другие источники данных практически без изменений.  
   
  В общем, чем сложнее операция, которую нужно выполнить с данными, тем больше преимуществ вы получаете при использовании LINQ вместо традиционных способов итерации.  
   
@@ -36,11 +36,11 @@ ms.locfileid: "44185471"
  [LINQ и каталоги файлов (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)  
  Использование LINQ для взаимодействия с файловыми системами. Ссылки на разделы, демонстрирующие эти понятия.  
   
- [Практическое: выполнение запроса к ArrayList с помощью LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)  
+ [Практическое руководство. Выполнение запроса к ArrayList с помощью LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)  
  Выполнение запроса ArrayList в C#.  
   
- [Практическое: Добавление настраиваемых методов для запросов LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-add-custom-methods-for-linq-queries.md)  
+ [Практическое руководство. Добавление настраиваемых методов для запросов LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-add-custom-methods-for-linq-queries.md)  
  Расширение набора методов, которые можно использовать для запросов LINQ путем добавления методов расширения в интерфейс <xref:System.Collections.Generic.IEnumerable%601>.  
   
- [Синтаксис LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)  
+ [LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)  
  Ссылки на разделы, рассказывающие LINQ и содержащие примеры кода выполнения запросов.

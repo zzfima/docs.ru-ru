@@ -2,12 +2,12 @@
 title: 'Пользовательский кодировщик сообщений: Пользовательский кодировщик текстовых - WCF'
 ms.date: 03/30/2017
 ms.assetid: 68ff5c74-3d33-4b44-bcae-e1d2f5dea0de
-ms.openlocfilehash: acfd3b50e46bda7ff995383caf2d7bbf432b5ce5
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.openlocfilehash: a1523c854bbae09b2ac5cb0565962b394ec9b70e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58890414"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320708"
 ---
 # <a name="custom-message-encoder-custom-text-encoder"></a>Пользовательский кодировщик сообщений: пользовательский кодировщик текста
 
@@ -36,17 +36,17 @@ ms.locfileid: "58890414"
 
 ## <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца
 
-1.  Установите [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0, выполнив следующую команду.
+1. Установите [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0, выполнив следующую команду.
 
     ```
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable
     ```
 
-2.  Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+2. Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
-3.  Чтобы построить решение, следуйте инструкциям в [сборка образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+3. Чтобы построить решение, следуйте инструкциям в [сборка образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
-4.  Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+4. Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
 ## <a name="message-encoder-factory-and-the-message-encoder"></a>Фабрика кодировщика сообщений и кодировщик сообщений
 

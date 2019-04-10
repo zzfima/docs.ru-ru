@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Points [WPF], animating with key frames
 - animation [WPF], Points with key frames
 ms.assetid: d2e2ef10-0773-4133-856e-d41c09f60ded
-ms.openlocfilehash: 2e34ba035c8d7f9132915a9269d545f32033cbed
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b706568a0e8221aac737780592882f728f0f9e9c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59132591"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328781"
 ---
 # <a name="how-to-animate-a-point-by-using-key-frames"></a>Практическое руководство. Анимация точки с помощью ключевых кадров
 В этом примере показано, как использовать <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames> класс для анимации <xref:System.Windows.Point>.  
@@ -22,11 +22,11 @@ ms.locfileid: "59132591"
 ## <a name="example"></a>Пример  
  В следующем примере эллипс перемещается по треугольному пути. В примере используется <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames> класс для анимации <xref:System.Windows.Media.EllipseGeometry.Center%2A> свойство <xref:System.Windows.Media.EllipseGeometry>. Эта анимация использует три ключевых кадра следующим образом:  
   
-1.  В течение первой половины секунды используется экземпляр <xref:System.Windows.Media.Animation.LinearPointKeyFrame> класс для перемещения эллипса вдоль пути с постоянной скоростью из его начальной позиции. Линейные ключевые кадры, например <xref:System.Windows.Media.Animation.LinearPointKeyFrame> Создание smooth линейной интерполяции между значениями.  
+1. В течение первой половины секунды используется экземпляр <xref:System.Windows.Media.Animation.LinearPointKeyFrame> класс для перемещения эллипса вдоль пути с постоянной скоростью из его начальной позиции. Линейные ключевые кадры, например <xref:System.Windows.Media.Animation.LinearPointKeyFrame> Создание smooth линейной интерполяции между значениями.  
   
-2.  В конце следующей половины секунды используется экземпляр <xref:System.Windows.Media.Animation.DiscretePointKeyFrame> класс для резкого перемещения эллипса вдоль пути в следующую позицию. Дискретные ключевые кадры, например <xref:System.Windows.Media.Animation.DiscretePointKeyFrame> , создают скачкообразные переходы между значениями.  
+2. В конце следующей половины секунды используется экземпляр <xref:System.Windows.Media.Animation.DiscretePointKeyFrame> класс для резкого перемещения эллипса вдоль пути в следующую позицию. Дискретные ключевые кадры, например <xref:System.Windows.Media.Animation.DiscretePointKeyFrame> , создают скачкообразные переходы между значениями.  
   
-3.  В течение последних двух секунд используется экземпляр <xref:System.Windows.Media.Animation.SplinePointKeyFrame> класс для перемещения эллипса обратно в исходное положение. Ключевые кадры сплайна, например <xref:System.Windows.Media.Animation.SplinePointKeyFrame> , создают переменный переход между значениями в соответствии со значениями из <xref:System.Windows.Media.Animation.SplinePointKeyFrame.KeySpline%2A> свойство. В этом примере анимация начинается медленно и ускоряется экспоненциально к концу временного отрезка.  
+3. В течение последних двух секунд используется экземпляр <xref:System.Windows.Media.Animation.SplinePointKeyFrame> класс для перемещения эллипса обратно в исходное положение. Ключевые кадры сплайна, например <xref:System.Windows.Media.Animation.SplinePointKeyFrame> , создают переменный переход между значениями в соответствии со значениями из <xref:System.Windows.Media.Animation.SplinePointKeyFrame.KeySpline%2A> свойство. В этом примере анимация начинается медленно и ускоряется экспоненциально к концу временного отрезка.  
   
  [!code-csharp[keyframes_snip#PointAnimationUsingKeyFramesWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/PointAnimationUsingKeyFramesExample.cs#pointanimationusingkeyframeswholepage)]
  [!code-vb[keyframes_snip#PointAnimationUsingKeyFramesWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/pointanimationusingkeyframesexample.vb#pointanimationusingkeyframeswholepage)]

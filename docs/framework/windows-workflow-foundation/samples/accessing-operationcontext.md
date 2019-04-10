@@ -2,12 +2,12 @@
 title: Доступ к контексту OperationContext
 ms.date: 03/30/2017
 ms.assetid: 4e92efe8-7e79-41f3-b50e-bdc38b9f41f8
-ms.openlocfilehash: 3c7ce1c9c37ee93b58a07376e0aeae045f0ca408
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: c104ceb22117d7cc53050a6513a4aea58fdff8c1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864304"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327962"
 ---
 # <a name="accessing-operationcontext"></a>Доступ к контексту OperationContext
 В этом образце показано как действия обмена сообщениями (<xref:System.ServiceModel.Activities.Receive> и <xref:System.ServiceModel.Activities.Send>) можно использовать с действием пользовательской области для доступа к <xref:System.ServiceModel.OperationContext.Current%2A> и подключить или извлечь пользовательского заголовка сообщения исходящего или входящего сообщения.  
@@ -20,13 +20,13 @@ ms.locfileid: "43864304"
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1.  В этом образце доступ к службе рабочего процесса предоставляется через конечные точки HTTP. Для выполнения этого образца, соответствующие URL ACL необходимо добавить (см. в разделе [Настройка HTTP и HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) сведения), запустив Visual Studio от имени администратора или выполните следующую команду в строке с повышенными привилегиями, чтобы добавить нужные списки управления доступом. Убедитесь, что подставлены нужный домен и имя пользователя.  
+1. В этом образце доступ к службе рабочего процесса предоставляется через конечные точки HTTP. Для выполнения этого образца, соответствующие URL ACL необходимо добавить (см. в разделе [Настройка HTTP и HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) сведения), запустив Visual Studio от имени администратора или выполните следующую команду в строке с повышенными привилегиями, чтобы добавить нужные списки управления доступом. Убедитесь, что подставлены нужный домен и имя пользователя.  
   
     ```  
     netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%  
     ```  
   
-2.  После добавления списков управления доступом по URL-адресу выполните следующие действия.  
+2. После добавления списков управления доступом по URL-адресу выполните следующие действия.  
   
     1.  Постройте решение.  
   

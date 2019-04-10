@@ -2,12 +2,12 @@
 title: Пользовательская конечная точка защищенных метаданных
 ms.date: 03/30/2017
 ms.assetid: 9e369e99-ea4a-49ff-aed2-9fdf61091a48
-ms.openlocfilehash: f025f76289705899e45db6f693f3678df3ed6b7c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c835cfecab38a76f285767f918dfc082915ffcfc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59104498"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325973"
 ---
 # <a name="custom-secure-metadata-endpoint"></a>Пользовательская конечная точка защищенных метаданных
 В этом примере демонстрируется, как реализовать службу с защищенной конечной точкой метаданных, использующий одну из привязок не metadata exchange и как настроить [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) или клиенты на извлечение метаданные из такой конечной точки метаданных. Существует две системные привязки для предоставления конечных точек метаданных: mexHttpBinding и mexHttpsBinding. Привязка mexHttpBinding используется для предоставления конечной точки метаданных через HTTP в незащищенном режиме. Привязка mexHttpsBinding используется для предоставления конечной точки метаданных через HTTP в защищенном режиме. В этом образце описывается предоставление защищенной конечной точки метаданных с использованием объекта <xref:System.ServiceModel.WSHttpBinding>. Такой подход следует использовать, если требуется изменить параметры безопасности привязки, но при этом нежелательно использовать протокол HTTPS. При использовании привязки mexHttpsBinding конечная точка метаданных будет защищена, но изменение параметров привязки окажется невозможным.  
@@ -132,37 +132,37 @@ ChannelFactory<ICalculator> cf = new    ChannelFactory<ICalculator>(endpoint.Bin
   
 #### <a name="to-set-up-and-build-the-sample"></a>Настройка и сборка образца  
   
-1.  Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Чтобы построить решение, следуйте инструкциям в [сборка образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Чтобы построить решение, следуйте инструкциям в [сборка образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 #### <a name="to-run-the-sample-on-the-same-machine"></a>Запуск образца на том же компьютере  
   
-1.  Запустите файл Setup.bat из папки установки примера. При этом устанавливаются все сертификаты, необходимые для выполнения образца. Обратите внимание, что файл Setup.bat использует средство FindPrivateKey.exe, которое устанавливается путем запуска файла setupCertTool.bat [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Запустите файл Setup.bat из папки установки примера. При этом устанавливаются все сертификаты, необходимые для выполнения образца. Обратите внимание, что файл Setup.bat использует средство FindPrivateKey.exe, которое устанавливается путем запуска файла setupCertTool.bat [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Запустите клиентское приложение из каталога \MetadataResolverClient\bin или \SvcutilClient\bin. Действия клиента отображаются в консольном приложении клиента.  
+2. Запустите клиентское приложение из каталога \MetadataResolverClient\bin или \SvcutilClient\bin. Действия клиента отображаются в консольном приложении клиента.  
   
-3.  Если клиент и служба не может взаимодействовать, см. в разделе [советы по устранению неполадок для образцов WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+3. Если клиент и служба не может взаимодействовать, см. в разделе [советы по устранению неполадок для образцов WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
-4.  После завершения работы образца запустите файл Cleanup.bat, чтобы удалить сертификаты. В других образцах обеспечения безопасности используются те же сертификаты.  
+4. После завершения работы образца запустите файл Cleanup.bat, чтобы удалить сертификаты. В других образцах обеспечения безопасности используются те же сертификаты.  
   
 #### <a name="to-run-the-sample-across-machines"></a>Выполнение примера на нескольких компьютерах  
   
-1.  На сервере выполните команду `setup.bat service`. Под управлением `setup.bat` с `service` аргумент создается сертификат службы с полным доменным именем компьютера и экспортируется в файл с именем Service.cer.  
+1. На сервере выполните команду `setup.bat service`. Под управлением `setup.bat` с `service` аргумент создается сертификат службы с полным доменным именем компьютера и экспортируется в файл с именем Service.cer.  
   
-2.  Измените Web.config на сервере так, чтобы в файле отражалось новое имя сертификата. То есть изменить `findValue` атрибут в [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md) элемент на полное доменное имя компьютера.  
+2. Измените Web.config на сервере так, чтобы в файле отражалось новое имя сертификата. То есть изменить `findValue` атрибут в [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md) элемент на полное доменное имя компьютера.  
   
-3.  Скопируйте файл Service.cer из каталога службы в клиентский каталог на клиентском компьютере.  
+3. Скопируйте файл Service.cer из каталога службы в клиентский каталог на клиентском компьютере.  
   
-4.  На клиенте выполните команду `setup.bat client`. Под управлением `setup.bat` с `client` аргумент создается сертификат клиента с именем Client.com и этот сертификат клиента экспортируется в файл с именем Client.cer.  
+4. На клиенте выполните команду `setup.bat client`. Под управлением `setup.bat` с `client` аргумент создается сертификат клиента с именем Client.com и этот сертификат клиента экспортируется в файл с именем Client.cer.  
   
-5.  В файле App.config клиента `MetadataResolverClient` на клиентском компьютере измените значение адреса конечной точки обмена метаданными, чтобы оно соответствовало новому адресу службы. Для этого замените имя localhost полным именем домена сервера. Кроме того, замените вхождение "localhost" в файле metadataResolverClient.cs новым именем сертификата службы (полным доменным именем сервера). Выполните то же самое для файла App.config проекта SvcutilClient.  
+5. В файле App.config клиента `MetadataResolverClient` на клиентском компьютере измените значение адреса конечной точки обмена метаданными, чтобы оно соответствовало новому адресу службы. Для этого замените имя localhost полным именем домена сервера. Кроме того, замените вхождение "localhost" в файле metadataResolverClient.cs новым именем сертификата службы (полным доменным именем сервера). Выполните то же самое для файла App.config проекта SvcutilClient.  
   
-6.  Скопируйте файл Client.cer из клиентского каталога в каталог службы на сервере.  
+6. Скопируйте файл Client.cer из клиентского каталога в каталог службы на сервере.  
   
-7.  На клиенте выполните команду `ImportServiceCert.bat`. Он импортирует сертификат службы из файла Service.cer в хранилище CurrentUser - TrustedPeople.  
+7. На клиенте выполните команду `ImportServiceCert.bat`. Он импортирует сертификат службы из файла Service.cer в хранилище CurrentUser - TrustedPeople.  
   
-8.  На сервере запустите файл `ImportClientCert.bat`. Он импортирует сертификат клиента из файла Client.cer в хранилище LocalMachine - TrustedPeople.  
+8. На сервере запустите файл `ImportClientCert.bat`. Он импортирует сертификат клиента из файла Client.cer в хранилище LocalMachine - TrustedPeople.  
   
 9. На компьютере службы выполните построение проекта службы в Visual Studio и выберите страницу справки в веб-браузере, чтобы проверить что она запущена.  
   

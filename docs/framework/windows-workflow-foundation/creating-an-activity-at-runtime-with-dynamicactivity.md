@@ -2,18 +2,18 @@
 title: Создание действия в среде выполнения с динамическим действием
 ms.date: 03/30/2017
 ms.assetid: 1af85cc6-912d-449e-90c5-c5db3eca5ace
-ms.openlocfilehash: 58dea5f6e469f871da35fc57aa4d9d8a1266bfed
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ed133e972caa9a3a62ab2ac1310cb1bd666947ce
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724637"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321238"
 ---
 # <a name="creating-an-activity-at-runtime-with-dynamicactivity"></a>Создание действия в среде выполнения с динамическим действием
-<xref:System.Activities.DynamicActivity> представляет собой конкретный запечатанный класс с открытым конструктором. <xref:System.Activities.DynamicActivity> может использоваться для объединения функций действий во время выполнения с помощью действия DOM.  
+<xref:System.Activities.DynamicActivity> представляет собой конкретный запечатанный класс с открытым конструктором. <xref:System.Activities.DynamicActivity> можно использовать для объединения функций действий во время выполнения с помощью действия DOM.  
   
-## <a name="dynamicactivity-features"></a>Функции DynamicActivity  
- <xref:System.Activities.DynamicActivity> имеет доступ к свойствам, аргументам и переменным выполнения, но не имеет доступа к службам среды выполнения, таким как дочерние действия планирования и отслеживание.  
+## <a name="dynamicactivity-features"></a>Возможности DynamicActivity  
+ <xref:System.Activities.DynamicActivity> имеет доступ к свойствам выполнения, аргументов и переменных, но нет доступа к службам среды выполнения, таким как дочерние действия планирования и отслеживания.  
   
  Значения свойств верхнего уровня можно задавать при помощи объектов рабочих процессов <xref:System.Activities.Argument>. В императивном коде эти аргументы создаются при помощи свойств среды CLR в новом типе. На языке XAML такие аргументы объявляются при помощи тегов `x:Class` и `x:Member`.  
   
@@ -21,19 +21,19 @@ ms.locfileid: "57724637"
   
 #### <a name="to-create-an-activity-at-runtime-using-imperative-code"></a>Создание действия во время выполнения при помощи императивного кода  
   
-1.  OpenVisual Studio 2010.  
+1. OpenVisual Studio 2010.  
   
-2.  Выберите **файл**, **новый**, **проекта**. Выберите **Workflow 4.0** под **Visual C#** в **типы проектов** затем выберите **v2010** узла. Выберите **консольного приложения последовательного рабочего процесса** в **шаблоны** окна. Задайте имя для нового проекта DynamicActivitySample.  
+2. Выберите **файл**, **новый**, **проекта**. Выберите **Workflow 4.0** под **Visual C#** в **типы проектов** затем выберите **v2010** узла. Выберите **консольного приложения последовательного рабочего процесса** в **шаблоны** окна. Задайте имя для нового проекта DynamicActivitySample.  
   
-3.  Щелкните правой кнопкой мыши файл Workflow1.xaml в проекте HelloActivity и выберите **удалить**.  
+3. Щелкните правой кнопкой мыши файл Workflow1.xaml в проекте HelloActivity и выберите **удалить**.  
   
-4.  Откройте файл Program.cs. Добавьте следующую директиву в начало файла.  
+4. Откройте файл Program.cs. Добавьте следующую директиву в начало файла.  
   
     ```  
     using System.Collections.Generic;  
     ```  
   
-5.  Замените содержимое метода `Main` следующим кодом, который создаст действие <xref:System.Activities.Statements.Sequence>, содержащее отдельное действие <xref:System.Activities.Statements.WriteLine>, и назначит его свойству <xref:System.Activities.DynamicActivity.Implementation%2A> нового динамического действия.  
+5. Замените содержимое метода `Main` следующим кодом, который создаст действие <xref:System.Activities.Statements.Sequence>, содержащее отдельное действие <xref:System.Activities.Statements.WriteLine>, и назначит его свойству <xref:System.Activities.DynamicActivity.Implementation%2A> нового динамического действия.  
   
     ```csharp  
     //Define the input argument for the activity  
@@ -66,25 +66,25 @@ ms.locfileid: "57724637"
                 Console.ReadLine();  
     ```  
   
-6.  Выполните приложение. Окно консоли с текстом «Hello World!» Отображает.  
+6. Выполните приложение. Окно консоли с текстом «Hello World!» Отображает.  
   
 #### <a name="to-create-an-activity-at-runtime-using-xaml"></a>Создание действия во время выполнения при помощи языка XAML  
   
-1.  Откройте Visual Studio 2010.  
+1. Откройте Visual Studio 2010.  
   
-2.  Выберите **файл**, **новый**, **проекта**. Выберите **Workflow 4.0** под **Visual C#** в **типы проектов** затем выберите **v2010** узла. Выберите **консольное приложение рабочего процесса** в **шаблоны** окна. Задайте имя для нового проекта DynamicActivitySample.  
+2. Выберите **файл**, **новый**, **проекта**. Выберите **Workflow 4.0** под **Visual C#** в **типы проектов** затем выберите **v2010** узла. Выберите **консольное приложение рабочего процесса** в **шаблоны** окна. Задайте имя для нового проекта DynamicActivitySample.  
   
-3.  Откройте файл Workflow1.xaml в проекте HelloActivity. Нажмите кнопку **аргументы** в нижней части конструктора. Создайте новый аргумент `In`, вызываемый методом `TextToWrite` типа `String`.  
+3. Откройте файл Workflow1.xaml в проекте HelloActivity. Нажмите кнопку **аргументы** в нижней части конструктора. Создайте новый аргумент `In`, вызываемый методом `TextToWrite` типа `String`.  
   
-4.  Перетащите **WriteLine** действия из **примитивы** разделе области элементов в область конструктора. Назначьте `TextToWrite` для **текст** свойства действия.  
+4. Перетащите **WriteLine** действия из **примитивы** разделе области элементов в область конструктора. Назначьте `TextToWrite` для **текст** свойства действия.  
   
-5.  Откройте файл Program.cs. Добавьте следующую директиву в начало файла.  
+5. Откройте файл Program.cs. Добавьте следующую директиву в начало файла.  
   
     ```  
     using System.Activities.XamlIntegration;  
     ```  
   
-6.  Замените содержимое метода `Main` следующим кодом.  
+6. Замените содержимое метода `Main` следующим кодом.  
   
     ```  
     Activity act2 = ActivityXamlServices.Load(@"Workflow1.xaml");  
@@ -92,10 +92,10 @@ ms.locfileid: "57724637"
     Console.ReadLine();  
     ```  
   
-7.  Выполните приложение. Окно консоли с текстом «Hello World!» отображается.  
+7. Выполните приложение. Окно консоли с текстом «Hello World!» отображается.  
   
-8.  Щелкните правой кнопкой мыши файл Workflow1.xaml в **обозревателе решений** и выберите **Просмотр кода**. Следует отметить, что класс действия создается при помощи `x:Class`, а свойство - при помощи `x:Property`.  
+8. Щелкните правой кнопкой мыши файл Workflow1.xaml в **обозревателе решений** и выберите **Просмотр кода**. Следует отметить, что класс действия создается при помощи `x:Class`, а свойство - при помощи `x:Property`.  
   
 ## <a name="see-also"></a>См. также
 
-- [Разработка рабочих процессов, действий и выражений с использованием императивного кода](authoring-workflows-activities-and-expressions-using-imperative-code.md)
+- [Разработка рабочих процессов, действий и выражений с помощью императивного кода](authoring-workflows-activities-and-expressions-using-imperative-code.md)

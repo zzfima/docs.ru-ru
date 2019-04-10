@@ -2,12 +2,12 @@
 title: Использование клиентского канала обнаружения
 ms.date: 03/30/2017
 ms.assetid: 1494242a-1d64-4035-8ecd-eb4f06c8d2ba
-ms.openlocfilehash: ecade2eedb167e216655a4b7b270806c04b25024
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 298cafe34b20a3644f967acf15f831be5b0b90ac
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499751"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329939"
 ---
 # <a name="using-the-discovery-client-channel"></a>Использование клиентского канала обнаружения
 При написании клиентского приложения WCF необходимо знать адрес конечной точки вызываемой службы. Во многих случаях адрес конечной точки службы неизвестен заранее или может измениться со временем. Клиентский канал обнаружения позволяет создать клиентское приложение WCF, описать службу, которую необходимо вызвать, после чего клиентский канал автоматически отправит зондирующий запрос. После ответа службы клиентский канал обнаружения извлекает адрес конечной точки службы из ответа запроса и пользуется им для вызова службы.  
@@ -20,9 +20,9 @@ ms.locfileid: "33499751"
   
  Класс <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> содержит два открытых свойства.  
   
-1.  <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.FindCriteria%2A>, которое используется для описания вызываемой службы.  
+1. <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.FindCriteria%2A>, который используется для описания службы, которую требуется вызвать.  
   
-2.  <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpointProvider%2A> который указывает конечную точку обнаружения для отправки сообщений обнаружения.  
+2. <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpointProvider%2A> который указывает конечную точку обнаружения для отправки сообщений обнаружения.  
   
  Свойство <xref:System.ServiceModel.Discovery.FindCriteria.%23ctor%2A> позволяет указать искомый контракт службы, все необходимые URI области и максимальное количество попыток открытия канала. Тип контракта указывается путем вызова конструктора <xref:System.ServiceModel.Discovery.FindCriteria>. URI области могут быть добавлены в свойство <xref:System.ServiceModel.Discovery.FindCriteria.Scopes%2A>. Свойство <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> позволяет задать максимальное количество результатов, с которыми клиент пытается установить соединение. При получении ответа на зондирующий запрос клиент выполняет попытку открытия канала по адресу конечной точки, полученному из ответа запроса. Если возникло исключение, то клиент переходит к следующему ответу зондирующего запроса и при необходимости ожидает получения дополнительных ответов. Это продолжается до тех пор, пока не будет успешно открыт канал или достигнуто максимальное количество результатов. Дополнительные сведения об этих параметрах см. в разделе <xref:System.ServiceModel.Discovery.FindCriteria>.  
   
@@ -60,4 +60,4 @@ catch (EndpointNotFoundException ex)
 ```  
   
 ## <a name="security-and-the-discovery-client-channel"></a>Безопасность и клиентский канал обнаружения  
- При использовании клиентского канала обнаружения указываются две конечные точки. Одна из этих точек служит для передачи сообщений обнаружения (обычно это <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>), а другая является конечной точкой приложения. При реализации службы безопасности необходимо соблюдать предосторожность и защищать обе конечные точки. Дополнительные сведения о безопасности см. в разделе [Защита служб и клиентов](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md).
+ При использовании клиентского канала обнаружения указываются две конечные точки. Одна из этих точек служит для передачи сообщений обнаружения (обычно это <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>), а другая является конечной точкой приложения. При реализации службы безопасности необходимо соблюдать предосторожность и защищать обе конечные точки. Дополнительные сведения о безопасности см. в разделе [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md).

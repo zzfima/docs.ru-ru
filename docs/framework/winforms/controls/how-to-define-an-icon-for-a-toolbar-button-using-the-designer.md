@@ -9,12 +9,12 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: d848f38e-67f2-49d4-8e88-01c845c06c02
-ms.openlocfilehash: 6657a9bbb850a24ae47be11854d6affd2a02f9b7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 19d0b284238ed662b25627d6077c1ebe6ecc6e86
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59118278"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323711"
 ---
 # <a name="how-to-define-an-icon-for-a-toolbar-button-using-the-designer"></a>Практическое руководство. Определение значка для кнопки на панели инструментов с помощью конструктора
 > [!NOTE]
@@ -29,17 +29,17 @@ ms.locfileid: "59118278"
   
 ### <a name="to-set-an-icon-for-a-toolbar-button-at-design-time"></a>Чтобы задать значок для кнопки панели инструментов во время разработки  
   
-1.  Добавление изображений к <xref:System.Windows.Forms.ImageList> компонента. Дополнительные сведения см. в разделе [Как Добавление или удаление изображений из компонента ImageList с помощью конструктора](how-to-add-or-remove-imagelist-images-with-the-designer.md).  
+1. Добавление изображений к <xref:System.Windows.Forms.ImageList> компонента. Дополнительные сведения см. в разделе [Как Добавление или удаление изображений из компонента ImageList с помощью конструктора](how-to-add-or-remove-imagelist-images-with-the-designer.md).  
   
-2.  Выберите <xref:System.Windows.Forms.ToolBar> элемент управления в форме.  
+2. Выберите <xref:System.Windows.Forms.ToolBar> элемент управления в форме.  
   
-3.  В **свойства** окне <xref:System.Windows.Forms.ToolBar> элемента управления <xref:System.Windows.Forms.ToolBar.ImageList%2A> свойства <xref:System.Windows.Forms.ImageList> компонента.  
+3. В **свойства** окне <xref:System.Windows.Forms.ToolBar> элемента управления <xref:System.Windows.Forms.ToolBar.ImageList%2A> свойства <xref:System.Windows.Forms.ImageList> компонента.  
   
-4.  Нажмите кнопку <xref:System.Windows.Forms.ToolBar> элемента управления <xref:System.Windows.Forms.ToolBar.Buttons%2A> свойство, чтобы выбрать его и нажмите кнопку с многоточием (![экрана VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) кнопку, чтобы открыть **Редактора коллекции**.  
+4. Нажмите кнопку <xref:System.Windows.Forms.ToolBar> элемента управления <xref:System.Windows.Forms.ToolBar.Buttons%2A> свойство, чтобы выбрать его и нажмите кнопку с многоточием (![экрана VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) кнопку, чтобы открыть **Редактора коллекции**.  
   
-5.  Используйте **добавить** , чтобы добавить кнопки для <xref:System.Windows.Forms.ToolBar> элемента управления.  
+5. Используйте **добавить** , чтобы добавить кнопки для <xref:System.Windows.Forms.ToolBar> элемента управления.  
   
-6.  В **свойства** окно, которое появляется на правой стороне панели **редактора коллекции**, задайте <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> свойства каждой кнопки панели инструментов, одно из значений в списке, который извлекается из образов, добавленных к <xref:System.Windows.Forms.ImageList> компонента.  
+6. В **свойства** окно, которое появляется на правой стороне панели **редактора коллекции**, задайте <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> свойства каждой кнопки панели инструментов, одно из значений в списке, который извлекается из образов, добавленных к <xref:System.Windows.Forms.ImageList> компонента.  
   
 ## <a name="see-also"></a>См. также
 

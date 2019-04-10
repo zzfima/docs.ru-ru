@@ -6,12 +6,12 @@ helpviewer_keywords:
 - grouping
 - groups [Windows Forms], in Windows Forms controls
 ms.assetid: 8b615000-69d9-4c64-acaf-b54fa09b69e3
-ms.openlocfilehash: 223c2a639fdb7a05506eca333a44ca31c0dae75f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7c25c012798adcf90c652beb91a7550406e5f8ff
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59136660"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321436"
 ---
 # <a name="how-to-group-items-in-a-windows-forms-listview-control-using-the-designer"></a>Практическое руководство. Группирование элементов в элементе управления ListView в формах Windows Forms с помощью конструктора
 Функция группирования элемента <xref:System.Windows.Forms.ListView> управления позволяет отображать соответствующие наборы элементов в группах. Эти группы, разделенных на экране группу горизонтальных заголовков, содержащих заголовки групп. Можно использовать <xref:System.Windows.Forms.ListView> группы для упрощения просмотра больших списков, сгруппировав элементы по алфавиту, по дате или по другим критериям. На следующем рисунке показана некоторые сгруппированных элементов.  
@@ -29,21 +29,21 @@ ms.locfileid: "59136660"
   
 ### <a name="to-add-or-remove-groups-in-the-designer"></a>Для добавления или удаления групп в конструкторе  
   
-1.  В **свойства** окно, нажмите кнопку **кнопку с многоточием** (![экрана VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) рядом с полем <xref:System.Windows.Forms.ListView.Groups%2A> свойство.  
+1. В **свойства** окно, нажмите кнопку **кнопку с многоточием** (![экрана VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) рядом с полем <xref:System.Windows.Forms.ListView.Groups%2A> свойство.  
   
      **Редактор коллекции ListViewGroup** отображается.  
   
-2.  Чтобы добавить группу, нажмите кнопку **добавить** кнопки. Затем можно задать свойства новой группы, такие как <xref:System.Windows.Forms.ListViewGroup.Header%2A> и <xref:System.Windows.Forms.ListViewGroup.HeaderAlignment%2A> свойства. Чтобы удалить группу, выберите его и нажмите кнопку **удалить** кнопки.  
+2. Чтобы добавить группу, нажмите кнопку **добавить** кнопки. Затем можно задать свойства новой группы, такие как <xref:System.Windows.Forms.ListViewGroup.Header%2A> и <xref:System.Windows.Forms.ListViewGroup.HeaderAlignment%2A> свойства. Чтобы удалить группу, выберите его и нажмите кнопку **удалить** кнопки.  
   
 ### <a name="to-assign-items-to-groups-in-the-designer"></a>Назначение элементов группам в конструкторе  
   
-1.  В **свойства** окно, нажмите кнопку **кнопку с многоточием** (![экрана VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) рядом с полем <xref:System.Windows.Forms.ListView.Items%2A> свойство.  
+1. В **свойства** окно, нажмите кнопку **кнопку с многоточием** (![экрана VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) рядом с полем <xref:System.Windows.Forms.ListView.Items%2A> свойство.  
   
      **Редактор коллекции ListViewItem** отображается.  
   
-2.  Чтобы добавить новый элемент, щелкните **добавить** кнопки. Затем можно задать свойства нового элемента, такие как <xref:System.Windows.Forms.ListViewItem.Text%2A> и <xref:System.Windows.Forms.ListViewItem.ImageIndex%2A> свойства.  
+2. Чтобы добавить новый элемент, щелкните **добавить** кнопки. Затем можно задать свойства нового элемента, такие как <xref:System.Windows.Forms.ListViewItem.Text%2A> и <xref:System.Windows.Forms.ListViewItem.ImageIndex%2A> свойства.  
   
-3.  Выберите <xref:System.Windows.Forms.ListViewItem.Group%2A> свойство и выберите группу из раскрывающегося списка.  
+3. Выберите <xref:System.Windows.Forms.ListViewItem.Group%2A> свойство и выберите группу из раскрывающегося списка.  
   
 ## <a name="see-also"></a>См. также
 

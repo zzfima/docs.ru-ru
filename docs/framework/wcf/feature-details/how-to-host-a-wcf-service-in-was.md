@@ -2,12 +2,12 @@
 title: Практическое руководство. Размещение службы WCF в WAS
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-ms.openlocfilehash: 9c60248342c9cfa0e1b70d86df47a478dd34a60f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 157c18d1640ccf1a61f871e5e3e9fef70b6a7e79
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59195453"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326506"
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>Практическое руководство. Размещение службы WCF в WAS
 В этой статье описаны основные шаги, необходимые для создания служб активации процесса Windows (WAS) размещенной службы Windows Communication Foundation (WCF). WAS является службой активации нового процесса, представляющей собой обобщение возможностей Internet Information Services (IIS), которые работают с транспортными протоколами, отличными от HTTP. WCF использует интерфейс адаптера прослушивателя для передачи запросов на активацию, полученных через протоколы отличные от HTTP, поддерживаемые WCF, таких как TCP, именованные каналы и очередь сообщений.  
@@ -39,15 +39,15 @@ ms.locfileid: "59195453"
   
 ### <a name="to-create-a-basic-service-hosted-by-was"></a>Создание базовой службы, размещенной на WAS  
   
-1.  Определите контракт службы для данного типа службы.  
+1. Определите контракт службы для данного типа службы.  
   
      [!code-csharp[C_HowTo_HostInWAS#1121](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/service.cs#1121)]  
   
-2.  Реализуйте контракт службы в классе службы. Обратите внимание, что информация об адресе или привязке не указывается внутри реализации службы. Кроме того, для извлечения этих сведений из файла конфигурации не требуется писать код.  
+2. Реализуйте контракт службы в классе службы. Обратите внимание, что информация об адресе или привязке не указывается внутри реализации службы. Кроме того, для извлечения этих сведений из файла конфигурации не требуется писать код.  
   
      [!code-csharp[C_HowTo_HostInWAS#1122](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/service.cs#1122)]  
   
-3.  Создайте файл Web.config, чтобы определить привязку <xref:System.ServiceModel.NetTcpBinding> для использования конечными точками `CalculatorService`.  
+3. Создайте файл Web.config, чтобы определить привязку <xref:System.ServiceModel.NetTcpBinding> для использования конечными точками `CalculatorService`.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -64,39 +64,39 @@ ms.locfileid: "59195453"
     </configuration>  
     ```  
   
-4.  Создайте файл Service.svc, содержащий следующий код.  
+4. Создайте файл Service.svc, содержащий следующий код.  
   
     ```  
     <%@ServiceHost language=c# Service="CalculatorService" %>   
     ```  
   
-5.  Разместите файл Service.svc в виртуальном каталоге своего IIS.  
+5. Разместите файл Service.svc в виртуальном каталоге своего IIS.  
   
 ### <a name="to-create-a-client-to-use-the-service"></a>Создание клиента для использования службы  
   
-1.  Используйте [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) из командной строки для создания кода из метаданных службы.  
+1. Используйте [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) из командной строки для создания кода из метаданных службы.  
   
     ```  
     Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>   
     ```  
   
-2.  Создаваемый клиент содержит интерфейс `ICalculator`, определяющий контракт службы, которому должна удовлетворять реализация клиента.  
+2. Создаваемый клиент содержит интерфейс `ICalculator`, определяющий контракт службы, которому должна удовлетворять реализация клиента.  
   
      [!code-csharp[C_HowTo_HostInWAS#1221](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/client.cs#1221)]  
   
-3.  Созданное клиентское приложение также содержит реализацию `ClientCalculator`. Обратите внимание, что информация об адресе и привязке нигде внутри реализации службы не указывается. Кроме того, для извлечения этих сведений из файла конфигурации не требуется писать код.  
+3. Созданное клиентское приложение также содержит реализацию `ClientCalculator`. Обратите внимание, что информация об адресе и привязке нигде внутри реализации службы не указывается. Кроме того, для извлечения этих сведений из файла конфигурации не требуется писать код.  
   
      [!code-csharp[C_HowTo_HostInWAS#1222](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/client.cs#1222)]  
   
-4.  Конфигурация для клиента, использующего <xref:System.ServiceModel.NetTcpBinding>, также создается программой Svcutil.exe. Имя этого файла должно задаваться в файле App.config, если используется Visual Studio.  
+4. Конфигурация для клиента, использующего <xref:System.ServiceModel.NetTcpBinding>, также создается программой Svcutil.exe. Имя этого файла должно задаваться в файле App.config, если используется Visual Studio.  
   
      [!code-xml[C_HowTo_HostInWAS#2211](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/common/app.config#2211)]   
   
-5.  Создайте экземпляр класса `ClientCalculator` в приложении и вызовите операции службы.  
+5. Создайте экземпляр класса `ClientCalculator` в приложении и вызовите операции службы.  
   
      [!code-csharp[C_HowTo_HostInWAS#1223](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/client.cs#1223)]  
   
-6.  Скомпилируйте и запустите клиент.  
+6. Скомпилируйте и запустите клиент.  
   
 ## <a name="see-also"></a>См. также
 

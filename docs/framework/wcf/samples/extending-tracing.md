@@ -2,12 +2,12 @@
 title: Расширение трассировки
 ms.date: 03/30/2017
 ms.assetid: 2b971a99-16ec-4949-ad2e-b0c8731a873f
-ms.openlocfilehash: 829ebd2f935135b8765ccd48532d357bf95f805a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c56f886857e8d391a243e3af4a13353f14116247
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59208245"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329717"
 ---
 # <a name="extending-tracing"></a>Расширение трассировки
 В этом примере показано, как расширить возможности трассировки Windows Communication Foundation (WCF), добавив трассировки пользовательских действий в коде клиента и службы. Это позволяет пользователю создавать действия трассировки и группировать трассировки в логические пакеты работ. Кроме того, возможно согласование действий с помощью передач (в рамках одной конечной точки) и распространения (между конечными точками). В этом образце трассировка включается как для клиента, так и для службы. Дополнительные сведения о том, как включить трассировку в файлах конфигурации клиента и службы, см. в разделе [трассировка и ведение журнала сообщений](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md).  
@@ -90,11 +90,11 @@ ms.locfileid: "59208245"
   
 ##### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1.  Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Чтобы запустить образец в конфигурации с одной или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Чтобы запустить образец в конфигурации с одной или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ## <a name="see-also"></a>См. также
 

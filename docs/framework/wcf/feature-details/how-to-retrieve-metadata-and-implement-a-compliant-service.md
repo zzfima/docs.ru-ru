@@ -2,12 +2,12 @@
 title: Практическое руководство. Извлечение данных и реализация совместимой службы
 ms.date: 03/30/2017
 ms.assetid: f6f3a2b9-c8aa-4b0b-832c-ec2927bf1163
-ms.openlocfilehash: 2ddc50e2851217002c825163761855d649b56db1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: edf8fe2f174202d19b075ec218f059ea9b988843
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59095975"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322671"
 ---
 # <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>Практическое руководство. Извлечение данных и реализация совместимой службы
 Часто разработку и реализацию служб выполняют разные люди. В средах, в которых приложения с возможностью взаимодействия имеют большое значение, контракты можно разработать или описать на языке WSDL, и разработчик должен реализовать службу, соответствующую предоставляемому контракту. Можно также перенести существующую службу в Windows Communication Foundation (WCF), но сохранить формат подключения. Кроме того, дуплексные контракты требуют, чтобы вызывающие стороны также реализовывали контракт обратного вызова.  
@@ -16,23 +16,23 @@ ms.locfileid: "59095975"
   
 ### <a name="to-retrieve-data-and-implement-a-compliant-service"></a>Извлечение данных и реализация совместимой службы  
   
-1.  Используйте [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для файлов метаданных или конечную точку метаданных для создания файла кода.  
+1. Используйте [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для файлов метаданных или конечную точку метаданных для создания файла кода.  
   
-2.  Найдите часть выходного файла кода, содержащую требуемый интерфейс (если имеется более одного), отмеченный атрибутом <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType>. В следующем примере кода показаны два интерфейса, созданные [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Первый интерфейс (`ISampleService`) представляет собой интерфейс контракта службы, который реализуется, чтобы создать совместимую службу. Второй интерфейс (`ISampleServiceChannel`) представляет собой вспомогательный интерфейс, используемый для клиентов и расширяющий как интерфейс контракта службы, так и канал <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType>, и используется в клиентском приложении.  
+2. Найдите часть выходного файла кода, содержащую требуемый интерфейс (если имеется более одного), отмеченный атрибутом <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType>. В следующем примере кода показаны два интерфейса, созданные [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Первый интерфейс (`ISampleService`) представляет собой интерфейс контракта службы, который реализуется, чтобы создать совместимую службу. Второй интерфейс (`ISampleServiceChannel`) представляет собой вспомогательный интерфейс, используемый для клиентов и расширяющий как интерфейс контракта службы, так и канал <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType>, и используется в клиентском приложении.  
   
      [!code-csharp[ClientProxyCodeSample#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/clientproxycodesample/cs/proxycode.cs#2)]  
   
-3.  Если в языке WSDL не указано ответное действие для всех операций, свойству <xref:System.ServiceModel.OperationContractAttribute.ReplyAction%2A> созданных контрактов операций может быть присвоено значение подстановочного знака (*). Удалите этот параметр свойства. В противном случае при реализации метаданных контракта службы метаданные невозможно будет экспортировать для этих операций.  
+3. Если в языке WSDL не указано ответное действие для всех операций, свойству <xref:System.ServiceModel.OperationContractAttribute.ReplyAction%2A> созданных контрактов операций может быть присвоено значение подстановочного знака (*). Удалите этот параметр свойства. В противном случае при реализации метаданных контракта службы метаданные невозможно будет экспортировать для этих операций.  
   
-4.  Реализуйте интерфейс для класса и разместите службу. Пример см. в статье [Практическое руководство. Реализация контракта службы](../../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md), или см. в разделе простая реализация ниже в разделе "Пример".  
+4. Реализуйте интерфейс для класса и разместите службу. Пример см. в статье [Практическое руководство. Реализация контракта службы](../../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md), или см. в разделе простая реализация ниже в разделе "Пример".  
   
-5.  Файл, который в конфигурации клиента [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) приводит к возникновению ошибки, изменить [ \<клиента >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md) раздел конфигурации для [ \<services >](../../../../docs/framework/configure-apps/file-schema/wcf/services.md) раздел конфигурации. (Пример созданного файла конфигурации клиентского приложения см. в следующем разделе "Пример".)  
+5. Файл, который в конфигурации клиента [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) приводит к возникновению ошибки, изменить [ \<клиента >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md) раздел конфигурации для [ \<services >](../../../../docs/framework/configure-apps/file-schema/wcf/services.md) раздел конфигурации. (Пример созданного файла конфигурации клиентского приложения см. в следующем разделе "Пример".)  
   
-6.  В рамках [ \<служб >](../../../../docs/framework/configure-apps/file-schema/wcf/services.md) конфигурации разделе, создайте `name` атрибут в [ \<services >](../../../../docs/framework/configure-apps/file-schema/wcf/services.md) раздел конфигурации для службы Реализация.  
+6. В рамках [ \<служб >](../../../../docs/framework/configure-apps/file-schema/wcf/services.md) конфигурации разделе, создайте `name` атрибут в [ \<services >](../../../../docs/framework/configure-apps/file-schema/wcf/services.md) раздел конфигурации для службы Реализация.  
   
-7.  Присвойте атрибуту `name` службы имя конфигурации для реализации службы.  
+7. Присвойте атрибуту `name` службы имя конфигурации для реализации службы.  
   
-8.  Добавьте элементы конфигурации конечной точки, использующие реализованный контракт службы, в раздел конфигурации службы.  
+8. Добавьте элементы конфигурации конечной точки, использующие реализованный контракт службы, в раздел конфигурации службы.  
   
 ## <a name="example"></a>Пример  
  В следующем примере кода показано, большая часть файла кода, созданного путем запуска [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для файлов метаданных.  

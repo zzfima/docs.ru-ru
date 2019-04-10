@@ -12,29 +12,29 @@ helpviewer_keywords:
 - controls [Windows Forms], binding to Web service
 - BindingSource component [Windows Forms], examples
 ms.assetid: ee261207-4573-4cb9-a8cb-5185037e0fba
-ms.openlocfilehash: cf5352ff60aabe45473c3c9103e8369597db2e8d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2f97a8c9b0d3f29ada108afaea92f39af3ac6b3e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59106760"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331004"
 ---
 # <a name="how-to-bind-to-a-web-service-using-the-windows-forms-bindingsource"></a>Практическое руководство. Связывание с веб-службой с помощью компонента BindingSource в Windows Forms
 Компонент <xref:System.Windows.Forms.BindingSource> можно использовать, если необходимо привязать элемент управления Windows Form к результатам вызова веб-служб XML.  Эта процедура аналогична привязке компонента <xref:System.Windows.Forms.BindingSource> к типу. Необходимо создать клиентский прокси, который содержит методы и типы, предоставляемые веб-службой. Клиентский прокси веб-службы можно создать либо непосредственно в самой веб-службе (ASMX-файл) или с помощью файла языка описания веб-служб (WSDL-файл). Кроме того, клиентский прокси должен предоставлять доступ к полям сложных типов, используемых веб-службой, в виде общих свойств. Затем <xref:System.Windows.Forms.BindingSource> привязывается к одному из типов, доступных в прокси веб-службы.  
   
 ### <a name="to-create-and-bind-to-a-client-side-proxy"></a>Создание и привязка к прокси на стороне клиента  
   
-1.  Создайте форму Windows Forms в каталоге по своему усмотрению с подходящим пространством имен.  
+1. Создайте форму Windows Forms в каталоге по своему усмотрению с подходящим пространством имен.  
   
-2.  Добавьте в форму компонент <xref:System.Windows.Forms.BindingSource>.  
+2. Добавьте в форму компонент <xref:System.Windows.Forms.BindingSource>.  
   
-3.  Откройте командную строку [!INCLUDE[winsdklong](../../../../includes/winsdklong-md.md)] и перейдите к каталогу, в котором расположена форма.  
+3. Откройте командную строку [!INCLUDE[winsdklong](../../../../includes/winsdklong-md.md)] и перейдите к каталогу, в котором расположена форма.  
   
-4.  С помощью средства WSDL введите `wsdl` и URL-адрес для ASMX- или WSDL-файла веб-службы, пространство имен приложения и при необходимости язык, с которым вы работаете.  
+4. С помощью средства WSDL введите `wsdl` и URL-адрес для ASMX- или WSDL-файла веб-службы, пространство имен приложения и при необходимости язык, с которым вы работаете.  
   
      В следующем примере кода используется веб-службы, расположенный `http://webservices.eraserver.net/zipcoderesolver/zipcoderesolver.asmx`. Например, для C# типа `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService` или для Visual Basic введите `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService /language:VB`. Передача пути в качестве аргумента для средства WSDL создаст клиентский прокси в том же каталоге и с тем пространством имен, что и у приложения, и на указанном языке. Если вы используете Visual Studio, добавьте файл в проект.  
   
-5.  Выберите тип для привязки в клиентском прокси.  
+5. Выберите тип для привязки в клиентском прокси.  
   
      Обычно это тип, возвращаемый методом, предлагаемым веб-службой. Поля выбранного типа должны предоставляться как общие свойства для привязки.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "59106760"
      [!code-csharp[System.Windows.Forms.DataConnectorWebService#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorWebService/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.DataConnectorWebService#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorWebService/VB/form1.vb#4)]  
   
-6.  Задайте для свойства <xref:System.Windows.Forms.BindingSource.DataSource%2A> в <xref:System.Windows.Forms.BindingSource> нужный тип, содержащийся в клиентском прокси веб-службы.  
+6. Задайте для свойства <xref:System.Windows.Forms.BindingSource.DataSource%2A> в <xref:System.Windows.Forms.BindingSource> нужный тип, содержащийся в клиентском прокси веб-службы.  
   
      [!code-cpp[System.Windows.Forms.DataConnectorWebService#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorWebService/CPP/form1.cpp#2)]
      [!code-csharp[System.Windows.Forms.DataConnectorWebService#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorWebService/CS/form1.cs#2)]

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1f45259623d4a481e635ac1b54ecb9a17497ab5e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b39646655c175497533aa6dc358c6966acc27344
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59204098"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325596"
 ---
 # <a name="how-to-add-trace-statements-to-application-code"></a>Практическое руководство. Добавление операторов трассировки в код приложения
 Методы, наиболее часто используемые для отслеживания приведены методы для записи выходных данных в прослушиватели. **Запись**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert**, и **ошибкой**. Эти методы можно разделить на две категории: **Запись**, **WriteLine**, и **ошибкой** выдают выходные данные безусловно, тогда как **WriteIf**, **WriteLineIf**и  **Assert** тестируют условие Boolean и выполняют или не запись в зависимости от значения условия. **WriteIf** и **WriteLineIf** выдают выходные данные, если условие равно `true`, а **Assert** выдает выходные данные, если условие равно `false`.  
@@ -29,7 +29,7 @@ ms.locfileid: "59204098"
   
 ### <a name="to-write-a-complete-line"></a>Запись полной строки  
   
-1.  Вызовите метод <xref:System.Diagnostics.Trace.WriteLine%2A> или <xref:System.Diagnostics.Trace.WriteLineIf%2A>.  
+1. Вызовите метод <xref:System.Diagnostics.Trace.WriteLine%2A> или <xref:System.Diagnostics.Trace.WriteLineIf%2A>.  
   
      Символ возврата каретки добавляется в конец сообщения, возвращаемого этим методом, чтобы следующее сообщение, возвращаемое методом **Write**, **WriteIf**, **WriteLine** или **WriteLineIf**, начиналось со следующей строки:  
   
@@ -48,7 +48,7 @@ ms.locfileid: "59204098"
   
 ### <a name="to-write-a-partial-line"></a>Запись частичной строки  
   
-1.  Вызовите метод <xref:System.Diagnostics.Trace.Write%2A> или <xref:System.Diagnostics.Trace.WriteIf%2A>.  
+1. Вызовите метод <xref:System.Diagnostics.Trace.Write%2A> или <xref:System.Diagnostics.Trace.WriteIf%2A>.  
   
      Следующее сообщение, выдаваемое оператором **Write**, **WriteIf**, **WriteLine** или **WriteLineIf**, начинается на той же строке, что и сообщение, выданное оператором **Write** или **WriteIf**:  
   
@@ -69,7 +69,7 @@ ms.locfileid: "59204098"
   
 ### <a name="to-verify-that-certain-conditions-exist-either-before-or-after-you-execute-a-method"></a>Проверка наличия определенного условия до или после выполнения метода  
   
-1.  Вызовите метод <xref:System.Diagnostics.Trace.Assert%2A>.  
+1. Вызовите метод <xref:System.Diagnostics.Trace.Assert%2A>.  
   
     ```vb  
     Dim i As Integer = 4  

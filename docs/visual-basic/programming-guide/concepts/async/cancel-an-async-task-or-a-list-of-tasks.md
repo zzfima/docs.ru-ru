@@ -2,12 +2,12 @@
 title: Отмена асинхронной задачи или списка задач (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
-ms.openlocfilehash: deb469f2c083870fc96c9217fa862d189629df1f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 62321a5fc011f71ed6125fbaa315573d13667488
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58834989"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324764"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>Отмена асинхронной задачи или списка задач (Visual Basic)
 Вы можете настроить кнопку, которая позволит отменить асинхронное приложение в случае, если вы не захотите дожидаться его завершения. Выполнив код в приведенных ниже примерах, вы сможете добавить в приложение кнопку отмены, загружающую содержимое одного веб-сайта или список веб-сайтов.  
@@ -23,15 +23,15 @@ ms.locfileid: "58834989"
 ### <a name="downloading-the-example"></a>Загрузка примера  
  Скачать полный проект Windows Presentation Foundation (WPF) можно со страницы [Пример асинхронности. Тонкая настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea). Затем выполните следующие шаги.  
   
-1.  Распакуйте загруженный файл, а затем запустите Visual Studio.  
+1. Распакуйте загруженный файл, а затем запустите Visual Studio.  
   
-2.  В строке меню выберите **Файл**, **Открыть**, **Проект/Решение**.  
+2. В строке меню выберите **Файл**, **Открыть**, **Проект/Решение**.  
   
-3.  В диалоговом окне **Открытие проекта** откройте папку с примером кода, который вы распаковали, а затем откройте файл решения (с разрешением .sln) для AsyncFineTuningVB.  
+3. В диалоговом окне **Открытие проекта** откройте папку с примером кода, который вы распаковали, а затем откройте файл решения (с разрешением .sln) для AsyncFineTuningVB.  
   
-4.  В **обозревателе решений** откройте контекстное меню проекта **CancelATask** и выберите команду **Назначить запускаемым проектом**.  
+4. В **обозревателе решений** откройте контекстное меню проекта **CancelATask** и выберите команду **Назначить запускаемым проектом**.  
   
-5.  Нажмите клавишу F5, чтобы запустить проект.  
+5. Нажмите клавишу F5, чтобы запустить проект.  
   
      Нажмите сочетание клавиш CTRL+F5, чтобы запустить проект без отладки.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "58834989"
   
  Затем добавьте следующие изменения в файл MainWindow.xaml.vb этого проекта.  
   
-1.  Объявите переменную `CancellationTokenSource`, `cts`, которая находится в области действия всех методов, имеющих к ней доступ.  
+1. Объявите переменную `CancellationTokenSource`, `cts`, которая находится в области действия всех методов, имеющих к ней доступ.  
   
     ```vb  
     Class MainWindow  
@@ -53,7 +53,7 @@ ms.locfileid: "58834989"
         Dim cts As CancellationTokenSource  
     ```  
   
-2.  Добавьте следующий обработчик событий для кнопки **Отмена**. Этот обработчик событий использует метод <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> для отправки уведомления в `cts` при запросе отмены пользователем.  
+2. Добавьте следующий обработчик событий для кнопки **Отмена**. Этот обработчик событий использует метод <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> для отправки уведомления в `cts` при запросе отмены пользователем.  
   
     ```vb  
     ' ***Add an event handler for the Cancel button.  
@@ -65,7 +65,7 @@ ms.locfileid: "58834989"
     End Sub  
     ```  
   
-3.  Внесите в обработчик событий указанные ниже изменения для кнопки **Пуск**, `startButton_Click`.  
+3. Внесите в обработчик событий указанные ниже изменения для кнопки **Пуск**, `startButton_Click`.  
   
     -   Создайте экземпляр `CancellationTokenSource`, `cts`.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "58834989"
         End Try  
         ```  
   
-4.  В `AccessTheWebAsync` используйте перегрузку <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> метода `GetAsync` в типе <xref:System.Net.Http.HttpClient> для скачивания содержимого веб-сайта. Передайте `ct` параметр <xref:System.Threading.CancellationToken> метода `AccessTheWebAsync` в качестве второго аргумента. Благодаря токену, если пользователь нажмет кнопку **Отмена**, будет выведено соответствующее сообщение.  
+4. В `AccessTheWebAsync` используйте перегрузку <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> метода `GetAsync` в типе <xref:System.Net.Http.HttpClient> для скачивания содержимого веб-сайта. Передайте `ct` параметр <xref:System.Threading.CancellationToken> метода `AccessTheWebAsync` в качестве второго аргумента. Благодаря токену, если пользователь нажмет кнопку **Отмена**, будет выведено соответствующее сообщение.  
   
      Эти изменения в `AccessTheWebAsync` показаны в следующем примере кода.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "58834989"
     End Function  
     ```  
   
-5.  Если программа не отменяется, она выдает представленный ниже результат.  
+5. Если программа не отменяется, она выдает представленный ниже результат.  
   
     ```  
     Ready to download.  
@@ -141,15 +141,15 @@ ms.locfileid: "58834989"
 ### <a name="downloading-the-example"></a>Загрузка примера  
  Скачать полный проект Windows Presentation Foundation (WPF) можно со страницы [Пример асинхронности. Тонкая настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea). Затем выполните следующие шаги.  
   
-1.  Распакуйте загруженный файл, а затем запустите Visual Studio.  
+1. Распакуйте загруженный файл, а затем запустите Visual Studio.  
   
-2.  В строке меню выберите **Файл**, **Открыть**, **Проект/Решение**.  
+2. В строке меню выберите **Файл**, **Открыть**, **Проект/Решение**.  
   
-3.  В диалоговом окне **Открытие проекта** откройте папку с примером кода, который вы распаковали, а затем откройте файл решения (с разрешением .sln) для AsyncFineTuningVB.  
+3. В диалоговом окне **Открытие проекта** откройте папку с примером кода, который вы распаковали, а затем откройте файл решения (с разрешением .sln) для AsyncFineTuningVB.  
   
-4.  В **обозревателе решений** откройте контекстное меню проекта **CancelAListOfTasks** и выберите команду **Назначить запускаемым проектом**.  
+4. В **обозревателе решений** откройте контекстное меню проекта **CancelAListOfTasks** и выберите команду **Назначить запускаемым проектом**.  
   
-5.  Нажмите клавишу F5, чтобы запустить проект.  
+5. Нажмите клавишу F5, чтобы запустить проект.  
   
      Нажмите сочетание клавиш CTRL+F5, чтобы запустить проект без отладки.  
   
@@ -158,7 +158,7 @@ ms.locfileid: "58834989"
 ### <a name="building-the-example"></a>Построение примера  
  Для самостоятельного построения примера шаг за шагом выполните инструкции в разделе "Загрузка примера", но выберите **CancelATask** как **запускаемый проект**. Добавьте в проект указанные ниже изменения. Звездочками отмечены изменения в программе.  
   
-1.  Добавьте метод для создания списка веб-адресов.  
+1. Добавьте метод для создания списка веб-адресов.  
   
     ```vb  
     ' ***Add a method that creates a list of web addresses.  
@@ -178,14 +178,14 @@ ms.locfileid: "58834989"
     End Function  
     ```  
   
-2.  Вызовите метод в `AccessTheWebAsync`.  
+2. Вызовите метод в `AccessTheWebAsync`.  
   
     ```vb  
     ' ***Call SetUpURLList to make a list of web addresses.  
     Dim urlList As List(Of String) = SetUpURLList()  
     ```  
   
-3.  Добавьте в `AccessTheWebAsync` следующий цикл для обработки каждого веб-адреса в списке.  
+3. Добавьте в `AccessTheWebAsync` следующий цикл для обработки каждого веб-адреса в списке.  
   
     ```vb  
     ' ***Add a loop to process the list of web addresses.  
@@ -203,7 +203,7 @@ ms.locfileid: "58834989"
     Next  
     ```  
   
-4.  Поскольку `AccessTheWebAsync` отображает длину, метод не должен ничего возвращать. Удалите инструкцию return и измените тип возвращаемого значения на <xref:System.Threading.Tasks.Task> вместо <xref:System.Threading.Tasks.Task%601>.  
+4. Поскольку `AccessTheWebAsync` отображает длину, метод не должен ничего возвращать. Удалите инструкцию return и измените тип возвращаемого значения на <xref:System.Threading.Tasks.Task> вместо <xref:System.Threading.Tasks.Task%601>.  
   
     ```vb  
     Async Function AccessTheWebAsync(ct As CancellationToken) As Task  
@@ -215,7 +215,7 @@ ms.locfileid: "58834989"
     Await AccessTheWebAsync(cts.Token)  
     ```  
   
-5.  Если программа не отменяется, она выдает представленный ниже результат.  
+5. Если программа не отменяется, она выдает представленный ниже результат.  
   
     ```  
     Length of the downloaded string: 35939.  
@@ -459,5 +459,5 @@ End Class
 - <xref:System.Threading.CancellationTokenSource>
 - <xref:System.Threading.CancellationToken>
 - [Асинхронное программирование с использованием ключевых слов Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [Fine-Tuning Your Async Application (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) (Настройка асинхронного приложения (Visual Basic))
-- [Пример использования Async. Настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [Настройка асинхронного приложения (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
+- [Пример асинхронности. Тонкая настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

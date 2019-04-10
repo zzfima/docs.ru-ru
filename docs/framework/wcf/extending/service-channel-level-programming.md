@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8d8dcd85-0a05-4c44-8861-4a0b3b90cca9
-ms.openlocfilehash: e00b5ae2c72a4d4dcd2140e9c280d5bfda3531c2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: be5c73e2ac9fcc45d136280c869148326cd91315
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197201"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329134"
 ---
 # <a name="service-channel-level-programming"></a>Программирование служб на уровне канала
 В этом разделе описывается создание приложения службы Windows Communication Foundation (WCF) без использования <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> и его связанной объектной модели.  
@@ -18,15 +18,15 @@ ms.locfileid: "50197201"
 ## <a name="receiving-messages"></a>Получение сообщений  
  Для того чтобы подготовиться к получению и обработке сообщений, необходимо выполнить следующие действия.  
   
-1.  Создайте привязку.  
+1. Создайте привязку.  
   
-2.  Создайте прослушиватель каналов.  
+2. Создайте прослушиватель каналов.  
   
-3.  Откройте прослушиватель каналов.  
+3. Откройте прослушиватель каналов.  
   
-4.  Прочтите запрос и отправьте ответ.  
+4. Прочтите запрос и отправьте ответ.  
   
-5.  Закройте все объекты каналов.  
+5. Закройте все объекты каналов.  
   
 #### <a name="creating-a-binding"></a>Создание привязки  
  Первым шагом для прослушивания и получения сообщений является создание привязки. WCF поставляется с несколькими встроенными или предоставляемыми привязками, которые могут использоваться непосредственно, просто создав одну из них. Кроме того, всегда можно создать собственную пользовательскую привязку, создав класс CustomBinding, что и делает код в примере 1.  
@@ -34,9 +34,9 @@ ms.locfileid: "50197201"
  Пример кода, показанный ниже, создает экземпляр класса <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> и добавляет элемент <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> в его коллекцию элементов, то есть коллекцию элементов привязки, используемую для построения стека канала. Поскольку коллекция элементов в этом примере состоит только из экземпляров класса <xref:System.ServiceModel.Channels.HttpTransportBindingElement>, у получившегося стека канала имеется только канал транспорта HTTP.  
   
 #### <a name="building-a-channellistener"></a>Создание прослушивателя каналов  
- После создания привязки вызывается метод <xref:System.ServiceModel.Channels.Binding.BuildChannelListener%2A?displayProperty=nameWithType>, с помощью которого создается прослушиватель канала, параметр типа которого указывает форму создаваемого канала. В этом примере используется интерфейс <xref:System.ServiceModel.Channels.IReplyChannel?displayProperty=nameWithType>, поскольку требуется ожидать передачи данных для входящих сообщений в рамках шаблона обмена сообщениями запрос-ответ.  
+ После создания привязки вызывается метод <xref:System.ServiceModel.Channels.Binding.BuildChannelListener%2A?displayProperty=nameWithType>, с помощью которого создается прослушиватель канала, параметр Type которого указывает форму создаваемого канала. В этом примере используется интерфейс <xref:System.ServiceModel.Channels.IReplyChannel?displayProperty=nameWithType>, поскольку требуется ожидать передачи данных для входящих сообщений в рамках шаблона обмена сообщениями запрос-ответ.  
   
- Интерфейс <xref:System.ServiceModel.Channels.IReplyChannel> используется для приема сообщений запросов и отправки обратно сообщений ответов. Вызов метода <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A?displayProperty=nameWithType> возвращает интерфейс <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>, с помощью которого можно принимать сообщения запросов и отправлять обратно сообщения ответов.  
+ <xref:System.ServiceModel.Channels.IReplyChannel> используется для отправки сообщений и отправки обратно сообщений ответов на запрос. Вызов метода <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A?displayProperty=nameWithType> возвращает интерфейс <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>, с помощью которого можно принимать сообщения запросов и отправлять обратно сообщения ответов.  
   
  При создании прослушивателя передается сетевой адрес, на котором он ожидает передачи данных, в данном случае `http://localhost:8080/channelapp`. В общем случае каждый канал транспорта поддерживает одну или, возможно, несколько схем адресов, например HTTP-транспорт поддерживает как схему HTTP, так и HTTPS.  
   

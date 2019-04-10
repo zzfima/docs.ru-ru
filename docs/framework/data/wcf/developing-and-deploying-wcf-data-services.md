@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: 826adbde9129a51f67636d51bd7714335a840525
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: a3eaea7218b3226fde43aa76bbafe602fc198947
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093090"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329327"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Разработка и развертывание службы WCF Data Services
 
@@ -22,15 +22,15 @@ ms.locfileid: "56093090"
 
 При использовании служб данных WCF для создания службы данных, которая поддерживает [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)], во время разработки необходимо выполнить следующие основные задачи:
 
-1.  **Определение модели данных**
+1. **Определение модели данных**
 
      Службы данных WCF поддерживают разнообразные поставщики служб данных, которые позволяют определить модель данных на основе данных из различных источников данных из реляционных баз данных в типы данных с поздним связыванием. Дополнительные сведения см. в разделе [поставщики служб данных](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).
 
-2.  **Создание службы данных**
+2. **Создание службы данных**
 
      Самая базовая служба данных предоставляет класс, производный от класса <xref:System.Data.Services.DataService%601> , с типом `T` , представляющим имя контейнера сущностей, квалифицированное пространством имен. Дополнительные сведения см. в разделе [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md).
 
-3.  **Настройка службы данных**
+3. **Настройка службы данных**
 
      По умолчанию службы данных WCF запрещает доступ к ресурсам, предоставляемым контейнером сущностей. <xref:System.Data.Services.DataServiceConfiguration> Интерфейс позволяет настроить доступ к ресурсам и операциям службы, задать поддерживаемую версию OData и определить другие особенности поведения службы, такие как использование пакетирования или максимальное количество сущностей, которые могут быть возвращены в одном ответе веб-канале. Дополнительные сведения см. в разделе [Настройка службы данных](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md).
 
@@ -40,14 +40,14 @@ ms.locfileid: "56093090"
 
 При разработке службы данных WCF в качестве [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] приложения или [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] веб-сайта с помощью Visual Studio 2015, вы увидите список веб-серверов, на котором работает служба данных во время разработки. Следующие веб-серверы интеграции с Visual Studio, чтобы упростить тестирование и отладку служб данных на локальном компьютере.
 
-1.  **Локальный сервер служб IIS**
+1. **Локальный сервер служб IIS**
 
      При создании службы данных, которая является приложением [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] или веб-узлом [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] , работающим на базе служб IIS, рекомендуется разрабатывать и тестировать службу данных с помощью IIS на локальном компьютере. Запуск службы данных в IIS упрощает трассировку HTTP-запросов во время отладки. Это также позволяет заранее определить необходимые права, которые требуются службам IIS для доступа к файлам, базам данных и другим ресурсам для службы данных. Чтобы запустить службу данных в службах IIS, необходимо проверить наличие, что службы IIS и Windows Communication Foundation (WCF) установлены и настроены правильно и предоставить доступ к учетным записям служб IIS в файловой системе и баз данных. Дополнительные сведения см. в разделе [Как Разработке службы данных WCF, выполняющегося на сервере IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).
 
     > [!NOTE]
     > Необходимо запустить Visual Studio с правами администратора, чтобы позволить среде разработки настроить локальный сервер IIS.
 
-2.  **Сервер разработки Visual Studio**
+2. **Сервер разработки Visual Studio**
 
      Visual Studio включает в себя встроенный веб-сервер Visual Studio Development Server, который является сервером по умолчанию для [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] проектов. Этот веб-сервер предназначен для запуска проектов [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] на локальном компьютере во время разработки. [Краткое руководство по службам данных WCF](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) показано, как создать службу данных, которая выполняется в Visual Studio Development Server.
 
@@ -68,7 +68,7 @@ ms.locfileid: "56093090"
     > [!TIP]
     > Несмотря на то, что Visual Studio Development Server можно использовать для тестирования служб данных во время разработки, вам следует повторно их протестировать после развертывания на веб-сервере, где работают службы IIS.
 
-3.  **Среда разработки Microsoft Azure**
+3. **Среда разработки Microsoft Azure**
 
      Windows Azure Tools для Visual Studio включает набор интегрированных средств для разработки служб Windows Azure в Visual Studio. С помощью этих средств можно разрабатывать службы данных, которые могут развертываться на Microsoft Azure, а также тестировать службу данных на локальном компьютере перед развертыванием. Эти средства можно используйте, при использовании Visual Studio разработке службы данных, которая работает на платформе Windows Azure. Вы можете скачать инструменты Windows Azure для Visual Studio из [центра загрузки Майкрософт](https://go.microsoft.com/fwlink/?LinkID=201848). Дополнительные сведения о разработке службы данных для запуска в Windows Azure см. в публикации [Deploying an OData Service в Windows Azure](https://go.microsoft.com/fwlink/?LinkId=201847).
 
@@ -106,7 +106,7 @@ ms.locfileid: "56093090"
 
         -   [Практическое руководство. Публикация веб-сайтов](https://docs.microsoft.com/previous-versions/aspnet/20yh9f1b(v=vs.100))
 
-        -   [Пошаговое руководство: Развертывание веб-приложения ASP.NET с помощью XCOPY](https://docs.microsoft.com/previous-versions/aspnet/f735abw9(v=vs.100))
+        -   [Пошаговое руководство. Развертывание веб-приложения ASP.NET с помощью XCOPY](https://docs.microsoft.com/previous-versions/aspnet/f735abw9(v=vs.100))
 
      Дополнительные сведения о вариантах развертывания для [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] приложения, см. в разделе [Обзор веб-развертывания для Visual Studio и ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/dd394698(v=vs.110)).
 
@@ -127,6 +127,6 @@ ms.locfileid: "56093090"
 
 ## <a name="see-also"></a>См. также
 
-- [Размещение служб данных](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)
+- [Размещение службы данных](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)
 - [Защита служб WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)
 - [Определение служб данных WCF](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)

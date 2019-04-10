@@ -7,34 +7,34 @@ helpviewer_keywords:
 - controls [Windows Forms], child
 - child controls [Windows Forms], anchoring and docking
 ms.assetid: a2bcdfca-9b63-45e6-9c0e-3411015cba98
-ms.openlocfilehash: 679333186d9f9b791e5ad9c2e1cb74f69e051a62
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 255ac50ae79d6931c9b82b50677c450c0834fdea
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168550"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329041"
 ---
 # <a name="how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>Практическое руководство. Привязка и закрепление дочерних элементов управления в элементе управления FlowLayoutPanel
 Элемент управления <xref:System.Windows.Forms.FlowLayoutPanel> поддерживает свойства <xref:System.Windows.Forms.Control.Anchor%2A> и <xref:System.Windows.Forms.Control.Dock%2A> в своих дочерних элементах управления.  
   
 ### <a name="to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>Привязка и закрепление дочерних элементов управления в элементе управления FlowLayoutPanel  
   
-1.  Создание элемента управления <xref:System.Windows.Forms.FlowLayoutPanel> в форме.  
+1. Создание элемента управления <xref:System.Windows.Forms.FlowLayoutPanel> в форме.  
   
-2.  Задайте <xref:System.Windows.Forms.Control.Width%2A> из <xref:System.Windows.Forms.FlowLayoutPanel> управления **300**и задайте его <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> для <xref:System.Windows.Forms.FlowDirection.TopDown>.  
+2. Задайте <xref:System.Windows.Forms.Control.Width%2A> из <xref:System.Windows.Forms.FlowLayoutPanel> управления **300**и задайте его <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> для <xref:System.Windows.Forms.FlowDirection.TopDown>.  
   
-3.  Создайте два элемента управления <xref:System.Windows.Forms.Button> и поместите их в элемент управления <xref:System.Windows.Forms.FlowLayoutPanel>.  
+3. Создайте два элемента управления <xref:System.Windows.Forms.Button> и поместите их в элемент управления <xref:System.Windows.Forms.FlowLayoutPanel>.  
   
-4.  Задайте <xref:System.Windows.Forms.Control.Width%2A> первой кнопки значение **200**.  
+4. Задайте <xref:System.Windows.Forms.Control.Width%2A> первой кнопки значение **200**.  
   
-5.  Присвойте свойству <xref:System.Windows.Forms.Control.Dock%2A> первой кнопки значение <xref:System.Windows.Forms.DockStyle.Fill>.  
+5. Присвойте свойству <xref:System.Windows.Forms.Control.Dock%2A> первой кнопки значение <xref:System.Windows.Forms.DockStyle.Fill>.  
   
     > [!NOTE]
     >  Вторая кнопка принимает ту же ширину, что и первая кнопка. Она не растягивается по ширине элемента управления <xref:System.Windows.Forms.FlowLayoutPanel>.  
   
-6.  Присвойте свойству <xref:System.Windows.Forms.Control.Dock%2A> первой кнопки значение `None`. При этом кнопка примет исходную ширину.  
+6. Присвойте свойству <xref:System.Windows.Forms.Control.Dock%2A> первой кнопки значение `None`. При этом кнопка примет исходную ширину.  
   
-7.  Присвойте свойству <xref:System.Windows.Forms.Control.Anchor%2A> первой кнопки значение `Left, Right`.  
+7. Присвойте свойству <xref:System.Windows.Forms.Control.Anchor%2A> первой кнопки значение `Left, Right`.  
   
     > [!IMPORTANT]
     >  Вторая кнопка принимает ту же ширину, что и первая кнопка. Она не растягивается по ширине элемента управления <xref:System.Windows.Forms.FlowLayoutPanel>. Общее правило для привязки и закрепления в элементе управления <xref:System.Windows.Forms.FlowLayoutPanel>: в вертикальном направлении элемент управления <xref:System.Windows.Forms.FlowLayoutPanel> вычисляет ширину предполагаемого столбца исходя из ширины самого широкого элемента управления в столбце. Другие элементы управления в этом столбце со свойствами <xref:System.Windows.Forms.Control.Anchor%2A> или <xref:System.Windows.Forms.Control.Dock%2A> выравниваются или растягиваются до этого предполагаемого столбца. Аналогичное поведение работает и в горизонтальном направлении. Элемент управления <xref:System.Windows.Forms.FlowLayoutPanel> вычисляет высоту предполагаемой строки на основе самого высокого дочернего элемента управления в строке, и все закрепленные или привязанные дочерние элементы управления в этой строке выравниваются или их размеры устанавливаются в соответствии с предполагаемой строкой.  

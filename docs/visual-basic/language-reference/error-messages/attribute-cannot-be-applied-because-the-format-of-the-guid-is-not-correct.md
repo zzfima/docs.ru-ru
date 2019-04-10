@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32500
 ms.assetid: 6fa34c55-368e-4d7d-b488-07a3fffe045f
-ms.openlocfilehash: ab821db45ae834e82aa134b6f20ded14d43709ef
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: d27c326b6a88271ba4abf0144e71027f6671b17e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58832272"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330679"
 ---
 # <a name="attribute-cannot-be-applied-because-the-format-of-the-guid-number-is-not-correct"></a>"\<атрибут >" не может использоваться, так как формат GUID "\<номер >" не подходит
 Объект `COMClassAttribute` блок атрибутов задает глобальный уникальный идентификатор (GUID), который не соответствует правильному формату для GUID. `COMClassAttribute` идентификаторы GUID используются для однозначной идентификации класса, интерфейса и события создания.  
@@ -23,11 +23,11 @@ ms.locfileid: "58832272"
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
-1.  Определите правильный идентификатор GUID или идентификаторы GUID, необходимые для идентификации COM-объекта.  
+1. Определите правильный идентификатор GUID или идентификаторы GUID, необходимые для идентификации COM-объекта.  
   
-2.  Убедитесь в том, что строки GUID, представленные в блоке атрибутов `COMClassAttribute` , скопированы правильно.  
+2. Убедитесь в том, что строки GUID, представленные в блоке атрибутов `COMClassAttribute` , скопированы правильно.  
   
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Guid>
-- [Обзор атрибутов](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [Общие сведения об атрибутах](../../../visual-basic/programming-guide/concepts/attributes/index.md)

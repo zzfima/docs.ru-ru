@@ -11,12 +11,12 @@ helpviewer_keywords:
 - PictureBox control [Windows Forms], picture size and alignment
 - pictures [Windows Forms], controlling placement in PictureBox control [Windows Forms]
 ms.assetid: d0b332a3-fae2-4891-957c-dc3e17743326
-ms.openlocfilehash: 5d817d34e47253b2e35afa7bb41c59eea06e1f94
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d0a86d7fe53dba3da6bd63587561f82877bc2f06
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59178832"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328339"
 ---
 # <a name="how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms"></a>Практическое руководство. Изменение размера или размещения изображения во время выполнения (Windows Forms)
 При использовании Windows Forms <xref:System.Windows.Forms.PictureBox> элемента управления в форме, можно задать <xref:System.Windows.Forms.PictureBox.SizeMode%2A> свойства:  
@@ -33,7 +33,7 @@ ms.locfileid: "59178832"
   
 ### <a name="to-set-the-sizemode-property-at-run-time"></a>Чтобы задать свойство размеров во время выполнения  
   
-1.  Задайте <xref:System.Windows.Forms.PictureBox.SizeMode%2A> для <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> (по умолчанию), <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize>, <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>, или <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>. <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> означает, что изображение размещается в левом верхнем углу элемента управления; Если изображение больше, чем элемент управления, его нижняя и правая границы обрезаются. <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage> означает, что изображение по центру элемента управления; Если изображение больше, чем элемент управления, его внешние края обрезаются. <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize> означает, что размер элемента управления имеет размер изображения. <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage> является обратным и означает, что размер изображения размер элемента управления.  
+1. Задайте <xref:System.Windows.Forms.PictureBox.SizeMode%2A> для <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> (по умолчанию), <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize>, <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>, или <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>. <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> означает, что изображение размещается в левом верхнем углу элемента управления; Если изображение больше, чем элемент управления, его нижняя и правая границы обрезаются. <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage> означает, что изображение по центру элемента управления; Если изображение больше, чем элемент управления, его внешние края обрезаются. <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize> означает, что размер элемента управления имеет размер изображения. <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage> является обратным и означает, что размер изображения размер элемента управления.  
   
      В следующем примере в расположение образа выбрана папка «Мои документы». Это делается, поскольку предполагается, что большинство компьютеров под управлением операционной системы Windows, содержат эту папку. Это также позволяет пользователям с минимальным уровнем доступа к системе безопасно запускать приложение. В приведенном ниже примере предполагается, что форма <xref:System.Windows.Forms.PictureBox> управления уже добавлен.  
   

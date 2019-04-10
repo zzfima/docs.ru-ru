@@ -2,12 +2,12 @@
 title: Блокировка безопасности PII
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: 38ca91ab969624ab2128e3cfad1d8151cb8d1f88
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 13ed280e9b7de2b205e0878761dbf97e168f06d3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59122061"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326649"
 ---
 # <a name="pii-security-lockdown"></a>Блокировка безопасности PII
 В этом примере показано, как управлять некоторыми возможностями безопасности службы Windows Communication Foundation (WCF) по:  
@@ -41,11 +41,11 @@ ms.locfileid: "59122061"
   
 #### <a name="to-encrypt-the-values-in-the-appsettings-section-in-webconfig-for-the-sample"></a>Шифрование значений в разделе appSettings файла Web.config для данного образца  
   
-1.  Откройте командную строку с помощью Пуск -> выполнить... Введите в `cmd` и нажмите кнопку **ОК**.  
+1. Откройте командную строку с помощью Пуск -> выполнить... Введите в `cmd` и нажмите кнопку **ОК**.  
   
-2.  Перейдите в каталог текущей версии .NET Framework с помощью следующей команды: `cd %WINDIR%\Microsoft.NET\Framework\v4.0.20728`.  
+2. Перейдите в каталог текущей версии .NET Framework с помощью следующей команды: `cd %WINDIR%\Microsoft.NET\Framework\v4.0.20728`.  
   
-3.  Зашифруйте параметры конфигурации appSettings в папке Web.config с помощью следующей команды: `aspnet_regiis -pe "appSettings" -app "/servicemodelsamples" -prov "DataProtectionConfigurationProvider"`.  
+3. Зашифруйте параметры конфигурации appSettings в папке Web.config с помощью следующей команды: `aspnet_regiis -pe "appSettings" -app "/servicemodelsamples" -prov "DataProtectionConfigurationProvider"`.  
   
  Дополнительные сведения о шифровании разделов файлов конфигурации можно найти в практическом на DPAPI в конфигурации ASP.NET ([построение безопасных приложений ASP.NET: Проверка подлинности, авторизация и безопасное взаимодействие](https://go.microsoft.com/fwlink/?LinkId=95137)) и практическом руководстве по использованию RSA в конфигурации ASP.NET ([How To: Шифрование разделов конфигурации в ASP.NET 2.0 с помощью RSA](https://go.microsoft.com/fwlink/?LinkId=95138)).  
   
@@ -130,17 +130,17 @@ ms.locfileid: "59122061"
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, построение и выполнение примера  
   
-1.  Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Измените файл Machine.config, присвоив атрибуту `enableLoggingKnownPii` значение `true` и добавив родительские узлы при необходимости.  
+2. Измените файл Machine.config, присвоив атрибуту `enableLoggingKnownPii` значение `true` и добавив родительские узлы при необходимости.  
   
-3.  Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3. Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Чтобы запустить образец в конфигурации с одной или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Чтобы запустить образец в конфигурации с одной или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 #### <a name="to-clean-up-the-sample"></a>Очистка после образца  
   
-1.  Измените файл Machine.config, присвоив атрибуту `enableLoggingKnownPii` значение `false`.  
+1. Измените файл Machine.config, присвоив атрибуту `enableLoggingKnownPii` значение `false`.  
   
 ## <a name="see-also"></a>См. также
 

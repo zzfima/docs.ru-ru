@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 ms.assetid: 1aef42cb-4cfb-44b4-9a7a-c02632d3d9c7
-ms.openlocfilehash: 61a234a679d9937cb38a753a3d73f2ecc9ec891a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 10554145de9725bb4cfc655ed88195dce28d739c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59190372"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321618"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-control-in-wpf-by-using-xaml"></a>Пошаговое руководство. Размещение элемента управления Windows Forms в приложении WPF с помощью XAML
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет множество элементов управления с богатым набором функций. Тем не менее, иногда можно использовать [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элементов управления в вашей [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] страниц. Например, может получить значительные преимущества в существующих [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элементов управления, или имеете [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элемента управления, предоставляющий уникальную функциональность.  
@@ -26,29 +26,29 @@ ms.locfileid: "59190372"
   
 #### <a name="to-host-the-maskedtextbox-control"></a>Чтобы разместить элемент управления MaskedTextBox, выполните следующие действия.  
   
-1.  Создание проекта приложения WPF с именем `HostingWfInWpfWithXaml`.  
+1. Создание проекта приложения WPF с именем `HostingWfInWpfWithXaml`.  
   
-2.  Добавьте ссылки на следующие сборки.  
+2. Добавьте ссылки на следующие сборки.  
   
     -   WindowsFormsIntegration  
   
     -   System.Windows.Forms.  
   
-3.  Откройте файл MainWindow.xaml в [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].  
+3. Откройте файл MainWindow.xaml в [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].  
   
-4.  В <xref:System.Windows.Window> элемента, добавьте следующее сопоставление пространства имен. `wf` Сопоставление пространства имен устанавливает ссылку на сборку, содержащую элемент управления Windows Forms.  
+4. В <xref:System.Windows.Window> элемента, добавьте следующее сопоставление пространства имен. `wf` Сопоставление пространства имен устанавливает ссылку на сборку, содержащую элемент управления Windows Forms.  
   
     ```xaml  
     xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"  
     ```  
   
-5.  В <xref:System.Windows.Controls.Grid> элемент добавьте следующий XAML.  
+5. В <xref:System.Windows.Controls.Grid> элемент добавьте следующий XAML.  
   
      <xref:System.Windows.Forms.MaskedTextBox> Элемент управления создается в качестве дочернего элемента <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемента управления.  
   
      [!code-xaml[HostingWfInWpfWithXaml#3](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingWfInWpfWithXaml/CSharp/HostingWfInWpf/Window1.xaml#3)]  
   
-6.  Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его.  
+6. Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его.  
   
 ## <a name="see-also"></a>См. также
 

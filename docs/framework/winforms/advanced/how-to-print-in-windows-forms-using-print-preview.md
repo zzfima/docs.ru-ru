@@ -9,29 +9,29 @@ helpviewer_keywords:
 - printing [Windows Forms], with print preview
 - print preview
 ms.assetid: 4a16f7e2-ae10-4485-b0ae-3d558334d0fe
-ms.openlocfilehash: 48391465bf199f8a212a575c64227958385eeae8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: db9269978f3a77920778ab120a6ace11d6dd111c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59073615"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325765"
 ---
 # <a name="how-to-print-in-windows-forms-using-print-preview"></a>Практическое руководство. Печать в Windows Forms с использованием предварительного просмотра
 При программировании с использованием Windows Forms в качестве дополнения к службам печати часто предлагается возможность предварительного просмотра. Легким способом добавления предварительного просмотра в приложение является использование элемента управления <xref:System.Windows.Forms.PrintPreviewDialog> в сочетании с логикой обработки событий <xref:System.Drawing.Printing.PrintDocument.PrintPage> для печати файла.  
   
 ### <a name="to-preview-a-text-document-with-a-printpreviewdialog-control"></a>Предварительный просмотр текстового документа с помощью элемента управления PrintPreviewDialog  
   
-1.  Добавьте в форму элемент управления <xref:System.Windows.Forms.PrintPreviewDialog>, <xref:System.Drawing.Printing.PrintDocument>и две строки.  
+1. Добавьте в форму элемент управления <xref:System.Windows.Forms.PrintPreviewDialog>, <xref:System.Drawing.Printing.PrintDocument>и две строки.  
   
      [!code-csharp[System.Drawing.Printing.PrintPreviewExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/CS/Form1.cs#1)]
      [!code-vb[System.Drawing.Printing.PrintPreviewExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/VB/Form1.vb#1)]  
   
-2.  Укажите в качестве значения свойства <xref:System.Drawing.Printing.PrintDocument.DocumentName%2A> документ, который нужно напечатать, а затем откройте документ и прочтите его содержимое в строку, добавленную ранее.  
+2. Укажите в качестве значения свойства <xref:System.Drawing.Printing.PrintDocument.DocumentName%2A> документ, который нужно напечатать, а затем откройте документ и прочтите его содержимое в строку, добавленную ранее.  
   
      [!code-csharp[System.Drawing.Printing.PrintPreviewExample#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/CS/Form1.cs#2)]
      [!code-vb[System.Drawing.Printing.PrintPreviewExample#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/VB/Form1.vb#2)]  
   
-3.  Как и при печати документа, для расчета числа строк на странице и отрисовки содержимого документа в обработчике событий <xref:System.Drawing.Printing.PrintDocument.PrintPage> используется свойство <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> класса <xref:System.Drawing.Printing.PrintPageEventArgs> и содержимое файла. Нарисовав очередную страницу, проверьте, является ли она последней, и установите соответствующим образом свойство <xref:System.Drawing.Printing.PrintPageEventArgs.HasMorePages%2A> класса <xref:System.Drawing.Printing.PrintPageEventArgs> . Событие <xref:System.Drawing.Printing.PrintDocument.PrintPage> возникает до тех пор, пока значение свойства <xref:System.Drawing.Printing.PrintPageEventArgs.HasMorePages%2A> не станет равно `false`. После завершения отрисовки документа сбросьте строку, подлежащую отрисовке. Кроме того, убедитесь в том, что событие <xref:System.Drawing.Printing.PrintDocument.PrintPage> связано со своим методом обработки событий.  
+3. Как и при печати документа, для расчета числа строк на странице и отрисовки содержимого документа в обработчике событий <xref:System.Drawing.Printing.PrintDocument.PrintPage> используется свойство <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> класса <xref:System.Drawing.Printing.PrintPageEventArgs> и содержимое файла. Нарисовав очередную страницу, проверьте, является ли она последней, и установите соответствующим образом свойство <xref:System.Drawing.Printing.PrintPageEventArgs.HasMorePages%2A> класса <xref:System.Drawing.Printing.PrintPageEventArgs> . Событие <xref:System.Drawing.Printing.PrintDocument.PrintPage> возникает до тех пор, пока значение свойства <xref:System.Drawing.Printing.PrintPageEventArgs.HasMorePages%2A> не станет равно `false`. После завершения отрисовки документа сбросьте строку, подлежащую отрисовке. Кроме того, убедитесь в том, что событие <xref:System.Drawing.Printing.PrintDocument.PrintPage> связано со своим методом обработки событий.  
   
     > [!NOTE]
     >  Если поддержка печати уже реализована в приложении, то, возможно, шаги 2 и 3 были выполнены ранее.  
@@ -41,12 +41,12 @@ ms.locfileid: "59073615"
      [!code-csharp[System.Drawing.Printing.PrintPreviewExample#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/CS/Form1.cs#3)]
      [!code-vb[System.Drawing.Printing.PrintPreviewExample#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/VB/Form1.vb#3)]  
   
-4.  Присвойте свойству <xref:System.Windows.Forms.PrintPreviewDialog.Document%2A> элемента управления <xref:System.Windows.Forms.PrintPreviewDialog> значение компонента <xref:System.Drawing.Printing.PrintDocument> в форме.  
+4. Присвойте свойству <xref:System.Windows.Forms.PrintPreviewDialog.Document%2A> элемента управления <xref:System.Windows.Forms.PrintPreviewDialog> значение компонента <xref:System.Drawing.Printing.PrintDocument> в форме.  
   
      [!code-csharp[System.Drawing.Printing.PrintPreviewExample#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/CS/Form1.cs#5)]
      [!code-vb[System.Drawing.Printing.PrintPreviewExample#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/VB/Form1.vb#5)]  
   
-5.  Вызовите метод <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> элемента управления <xref:System.Windows.Forms.PrintPreviewDialog> . Как правило, метод <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> вызывается из метода обработки событий <xref:System.Windows.Forms.Control.Click> кнопки. Вызов метода <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> приводит к возникновению события <xref:System.Drawing.Printing.PrintDocument.PrintPage> и отрисовке выходных данных в элементе управления <xref:System.Windows.Forms.PrintPreviewDialog> . Когда пользователь нажимает на значок печати в диалоговом окне, событие <xref:System.Drawing.Printing.PrintDocument.PrintPage> вызывается снова. При этом выходные данные отправляются на принтер, а не в диалоговое окно предварительного просмотра. Вот почему в шаге 3 в конце процесса отрисовки сбрасывалась строка.  
+5. Вызовите метод <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> элемента управления <xref:System.Windows.Forms.PrintPreviewDialog> . Как правило, метод <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> вызывается из метода обработки событий <xref:System.Windows.Forms.Control.Click> кнопки. Вызов метода <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> приводит к возникновению события <xref:System.Drawing.Printing.PrintDocument.PrintPage> и отрисовке выходных данных в элементе управления <xref:System.Windows.Forms.PrintPreviewDialog> . Когда пользователь нажимает на значок печати в диалоговом окне, событие <xref:System.Drawing.Printing.PrintDocument.PrintPage> вызывается снова. При этом выходные данные отправляются на принтер, а не в диалоговое окно предварительного просмотра. Вот почему в шаге 3 в конце процесса отрисовки сбрасывалась строка.  
   
      В примере ниже показан метод обработки событий <xref:System.Windows.Forms.Control.Click> для кнопки в форме. Этот метод вызывает методы для чтения документа и вывода окна предварительного просмотра.  
   

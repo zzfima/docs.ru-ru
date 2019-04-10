@@ -2,12 +2,12 @@
 title: Обработка ошибок в действии блок-схемы с помощью TryCatch
 ms.date: 03/30/2017
 ms.assetid: 50922964-bfe0-4ba8-9422-0e7220d514fd
-ms.openlocfilehash: e515248594088f9888c3488d83d8079ce5d13089
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 81bfeb911658a6f363a9f0f95ecc7db68a02dbe2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119812"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331264"
 ---
 # <a name="fault-handling-in-a-flowchart-activity-using-trycatch"></a>Обработка ошибок в действии блок-схемы с помощью TryCatch
 В этом образце показано использование действия <xref:System.Activities.Statements.TryCatch> в рамках действия сложного потока управления.
@@ -31,11 +31,11 @@ ms.locfileid: "59119812"
 
 #### <a name="to-use-this-sample"></a>Использование этого образца
 
-1.  Откройте файл решения FlowchartWithFaultHandling.sln в Visual Studio 2010.
+1. Откройте файл решения FlowchartWithFaultHandling.sln в Visual Studio 2010.
 
-2.  Для построения решения нажмите CTRL+SHIFT+B.
+2. Для построения решения нажмите CTRL+SHIFT+B.
 
-3.  Чтобы запустить решение, нажмите клавишу F5.
+3. Чтобы запустить решение, нажмите клавишу F5.
 
 > [!IMPORTANT]
 >  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  

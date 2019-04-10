@@ -15,12 +15,12 @@ helpviewer_keywords:
 - form inheritance
 - Windows Forms, inheritance
 ms.assetid: 3381a5e4-e1a3-44e2-a765-a0b758937b85
-ms.openlocfilehash: 612d323305c2dbd4698c6d687fb19ec36983bde4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6194ef288bd43267c2b00fa6d7c6250e90b37c75
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59143914"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322645"
 ---
 # <a name="how-to-use-the-modifiers-and-generatemember-properties"></a>Практическое руководство. Использование свойств Modifiers и GenerateMember
 При размещении компонента в форму Windows, в среде разработки предоставляются два свойства: `GenerateMember` и `Modifiers`. `GenerateMember` Свойство указывает, когда конструктор Windows Forms создает переменную-член для компонента. `Modifiers` Свойство — это модификатор доступа, назначенный этой переменной члена. Если значение `GenerateMember` свойство `false`, значение `Modifiers` не оказывает никакого влияния.  
@@ -30,11 +30,11 @@ ms.locfileid: "59143914"
   
 ### <a name="to-specify-whether-a-component-is-a-member-of-the-form"></a>Для указания, является ли компонент членом формы  
   
-1.  В конструкторе Windows Forms откройте форму.  
+1. В конструкторе Windows Forms откройте форму.  
   
-2.  Откройте **элементов**и в форме, поместите три <xref:System.Windows.Forms.Button> элементов управления.  
+2. Откройте **элементов**и в форме, поместите три <xref:System.Windows.Forms.Button> элементов управления.  
   
-3.  Задайте `GenerateMember` и `Modifiers` свойства для каждого <xref:System.Windows.Forms.Button> управления согласно следующей таблице.  
+3. Задайте `GenerateMember` и `Modifiers` свойства для каждого <xref:System.Windows.Forms.Button> управления согласно следующей таблице.  
   
     |Имя кнопки|Значение GenerateMember|Значение модификаторов|  
     |-----------------|--------------------------|---------------------|  
@@ -42,13 +42,13 @@ ms.locfileid: "59143914"
     |`button2`|`true`|`protected`|  
     |`button3`|`false`|Без изменений|  
   
-4.  Постройте решение.  
+4. Постройте решение.  
   
-5.  В **обозревателе решений** нажмите кнопку **Показать все файлы**.  
+5. В **обозревателе решений** нажмите кнопку **Показать все файлы**.  
   
-6.  Откройте **Form1** узел и в **редактор кода**откройте **Form1.Designer.vb** или **Form1.Designer.cs** файл. Этот файл содержит код, созданный конструктором Windows Forms.  
+6. Откройте **Form1** узел и в **редактор кода**откройте **Form1.Designer.vb** или **Form1.Designer.cs** файл. Этот файл содержит код, созданный конструктором Windows Forms.  
   
-7.  Найдите объявления для содержатся три кнопки. В следующем примере кода показаны различия, определяемое `GenerateMember` и `Modifiers` свойства.  
+7. Найдите объявления для содержатся три кнопки. В следующем примере кода показаны различия, определяемое `GenerateMember` и `Modifiers` свойства.  
   
      [!code-csharp[System.Windows.Forms.GenerateMember#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.GenerateMember#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/VB/Form1.vb#3)]  

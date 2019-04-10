@@ -1,20 +1,20 @@
 ---
-title: Как выполнить  Создание транзакционной службы
+title: Практическое руководство. Создание транзакционной службы
 ms.date: 03/30/2017
 ms.assetid: 1bd2e4ed-a557-43f9-ba98-4c70cb75c154
-ms.openlocfilehash: 98346c0fd8990d3122ceb7c25950dc815bd5bed5
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 7f7f060db5a4ffd66524e220e3e3291debd8a3fc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261148"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329496"
 ---
-# <a name="how-to-create-a-transactional-service"></a>Как выполнить  Создание транзакционной службы
+# <a name="how-to-create-a-transactional-service"></a>Практическое руководство. Создание транзакционной службы
 В этом примере показаны различные аспекты создания транзакционной службы и использования инициируемых клиентом транзакций для координации операций службы.  
   
 ### <a name="creating-a-transactional-service"></a>Создание транзакционной службы  
   
-1.  Создайте контракт службы и аннотируйте операции с выбранным параметром из перечисления <xref:System.ServiceModel.TransactionFlowOption>, чтобы задать требования входящих транзакций. Обратите внимание, что в реализуемый класс службы также можно включить атрибут <xref:System.ServiceModel.TransactionFlowAttribute>. Это позволит одной реализации интерфейса, а не всем реализациям, использовать эти параметры транзакции.  
+1. Создайте контракт службы и аннотируйте операции с выбранным параметром из перечисления <xref:System.ServiceModel.TransactionFlowOption>, чтобы задать требования входящих транзакций. Обратите внимание, что в реализуемый класс службы также можно включить атрибут <xref:System.ServiceModel.TransactionFlowAttribute>. Это позволит одной реализации интерфейса, а не всем реализациям, использовать эти параметры транзакции.  
   
     ```csharp
     [ServiceContract]  
@@ -31,7 +31,7 @@ ms.locfileid: "56261148"
     }  
     ```  
   
-2.  Создайте класс реализации и воспользуйтесь атрибутом <xref:System.ServiceModel.ServiceBehaviorAttribute>, чтобы задать значения свойств <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> и <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A> (необязательно). Обратите внимание, что во многих случаях можно использовать значения по умолчанию для свойств <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A> (60 секунд) и <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> (`Unspecified`). Для каждой операции можно с помощью атрибута <xref:System.ServiceModel.OperationBehaviorAttribute> определить, должны ли операции, расположенные внутри метода, выполняться в области действия транзакции в соответствии со значением атрибута <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A>. В этом случае транзакция, используемая для метода `Add`, будет совпадать с обязательной входящей транзакцией, которая поступает от клиента, а транзакция, используемая для метода `Subtract`, либо совпадает со входящей транзакцией, если она поступила от клиента, либо является новой созданной явно локальной транзакцией.  
+2. Создайте класс реализации и воспользуйтесь атрибутом <xref:System.ServiceModel.ServiceBehaviorAttribute>, чтобы задать значения свойств <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> и <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A> (необязательно). Обратите внимание, что во многих случаях можно использовать значения по умолчанию для свойств <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A> (60 секунд) и <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> (`Unspecified`). Для каждой операции можно с помощью атрибута <xref:System.ServiceModel.OperationBehaviorAttribute> определить, должны ли операции, расположенные внутри метода, выполняться в области действия транзакции в соответствии со значением атрибута <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A>. В этом случае транзакция, используемая для метода `Add`, будет совпадать с обязательной входящей транзакцией, которая поступает от клиента, а транзакция, используемая для метода `Subtract`, либо совпадает со входящей транзакцией, если она поступила от клиента, либо является новой созданной явно локальной транзакцией.  
   
     ```csharp
     [ServiceBehavior(  
@@ -65,7 +65,7 @@ ms.locfileid: "56261148"
     }  
     ```  
   
-3.  Настройте привязки в файле конфигурации, указав, что контекст транзакций должен передаваться, и необходимые для этого протоколы. Дополнительные сведения см. в разделе [конфигурация транзакции ServiceModel](servicemodel-transaction-configuration.md). В частности тип привязки задается в атрибуте `binding` элемента конечной точки. [ \<Конечной точки >](../../configure-apps/file-schema/wcf/endpoint-element.md) элемент содержит `bindingConfiguration` атрибут, который ссылается на конфигурацию привязки с именем `transactionalOleTransactionsTcpBinding`, как показано в следующем образце конфигурации.  
+3. Настройте привязки в файле конфигурации, указав, что контекст транзакций должен передаваться, и необходимые для этого протоколы. Дополнительные сведения см. в разделе [конфигурация транзакции ServiceModel](servicemodel-transaction-configuration.md). В частности тип привязки задается в атрибуте `binding` элемента конечной точки. [ \<Конечной точки >](../../configure-apps/file-schema/wcf/endpoint-element.md) элемент содержит `bindingConfiguration` атрибут, который ссылается на конфигурацию привязки с именем `transactionalOleTransactionsTcpBinding`, как показано в следующем образце конфигурации.  
   
     ```xml  
     <service name="CalculatorService">  
@@ -91,7 +91,7 @@ ms.locfileid: "56261148"
   
 ### <a name="supporting-multiple-transaction-protocols"></a>Поддержка нескольких протоколов транзакций  
   
-1.  Для обеспечения оптимальной производительности следует использовать протокол OleTransactions для сценариев, включающих клиенты и службы, написанные с использованием Windows Communication Foundation (WCF). Однако в сценариях, требующих взаимодействия со сторонним стеком протоколов, удобно использовать протокол WS-AtomicTransaction (WS-AT). Можно настроить службы WCF, чтобы они поддерживали оба протокола, предоставляя несколько конечных точек с помощью соответствующих привязок определенного протокола, как показано в следующем образце конфигурации.  
+1. Для обеспечения оптимальной производительности следует использовать протокол OleTransactions для сценариев, включающих клиенты и службы, написанные с использованием Windows Communication Foundation (WCF). Однако в сценариях, требующих взаимодействия со сторонним стеком протоколов, удобно использовать протокол WS-AtomicTransaction (WS-AT). Можно настроить службы WCF, чтобы они поддерживали оба протокола, предоставляя несколько конечных точек с помощью соответствующих привязок определенного протокола, как показано в следующем образце конфигурации.  
   
     ```xml  
     <service name="CalculatorService">  
@@ -126,7 +126,7 @@ ms.locfileid: "56261148"
   
 ### <a name="controlling-the-completion-of-a-transaction"></a>Управление завершением транзакций  
   
-1.  По умолчанию операций WCF автоматически завершают транзакции, если нет необработанных исключений. Такое поведение можно изменить с помощью свойства <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> и метода <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A>. Если операция должна произойти в той же транзакции, что и другая операция (например, операции дебета и кредита), можно отключить автоматическое завершение, задав для свойства <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> значение `false`, как показано в приведенном ниже примере операции `Debit`. Транзакция, используемая операцией `Debit`, остается незавершенной, пока не будет вызван метод, у которого свойство <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> имеет значение `true`, как показано в операции `Credit1`, или пока не будет вызван метод <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A>, явным образом показывающий, что транзакция завершена, как показано в операции `Credit2`. Обратите внимание, что две операции кредита показаны в этом примере для иллюстрации, и в реальной ситуации обычно используется одна операция кредита.  
+1. По умолчанию операций WCF автоматически завершают транзакции, если нет необработанных исключений. Такое поведение можно изменить с помощью свойства <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> и метода <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A>. Если операция должна произойти в той же транзакции, что и другая операция (например, операции дебета и кредита), можно отключить автоматическое завершение, задав для свойства <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> значение `false`, как показано в приведенном ниже примере операции `Debit`. Транзакция, используемая операцией `Debit`, остается незавершенной, пока не будет вызван метод, у которого свойство <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> имеет значение `true`, как показано в операции `Credit1`, или пока не будет вызван метод <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A>, явным образом показывающий, что транзакция завершена, как показано в операции `Credit2`. Обратите внимание, что две операции кредита показаны в этом примере для иллюстрации, и в реальной ситуации обычно используется одна операция кредита.  
   
     ```csharp
     [ServiceBehavior]  
@@ -162,7 +162,7 @@ ms.locfileid: "56261148"
     }  
     ```  
   
-2.  Если для согласования транзакций свойству <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> присваивается значение `false`, необходимо использовать привязку с отслеживанием состояния. Это требование задается с помощью свойства `SessionMode` класса <xref:System.ServiceModel.ServiceContractAttribute>.  
+2. Если для согласования транзакций свойству <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> присваивается значение `false`, необходимо использовать привязку с отслеживанием состояния. Это требование задается с помощью свойства `SessionMode` класса <xref:System.ServiceModel.ServiceContractAttribute>.  
   
     ```csharp
     [ServiceContract(SessionMode = SessionMode.Required)]  
@@ -182,7 +182,7 @@ ms.locfileid: "56261148"
   
 ### <a name="controlling-the-lifetime-of-a-transactional-service-instance"></a>Управление временем существования экземпляра транзакционной службы  
   
-1.  WCF использует <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> свойство, чтобы указать, является ли соответствующий экземпляр службы освобождается при завершении транзакции. Поскольку по умолчанию используется `true`, если иное не настроено в противном случае поведение активации WCF выставки эффективный и предсказуемый «just-in-time». При вызове службы в последующей транзакции используется новый экземпляр службы, который не содержит признаков состояний предыдущих транзакций. Хотя такой подход зачастую бывает удобным, иногда может возникнуть необходимость сохранения состояния службы после завершения транзакции. Например, такая ситуация возникает, если извлечение или восстановление требуемого состояния или дескриптора требует большого объема ресурсов. В этом случае можно задать для свойства <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> значение `false`. Если этот параметр задан, экземпляр и связанное состояние будут доступны в последующих вызовах. При использовании этого сценария необходимо внимательно следить за тем, как и когда происходят очистка и завершение состояний и транзакций. В следующем примере показано, как реализовать это, поддерживая экземпляр с помощью переменной `runningTotal`.  
+1. WCF использует <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> свойство, чтобы указать, является ли соответствующий экземпляр службы освобождается при завершении транзакции. Поскольку по умолчанию используется `true`, если иное не настроено в противном случае поведение активации WCF выставки эффективный и предсказуемый «just-in-time». При вызове службы в последующей транзакции используется новый экземпляр службы, который не содержит признаков состояний предыдущих транзакций. Хотя такой подход зачастую бывает удобным, иногда может возникнуть необходимость сохранения состояния службы после завершения транзакции. Например, такая ситуация возникает, если извлечение или восстановление требуемого состояния или дескриптора требует большого объема ресурсов. В этом случае можно задать для свойства <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> значение `false`. Если этот параметр задан, экземпляр и связанное состояние будут доступны в последующих вызовах. При использовании этого сценария необходимо внимательно следить за тем, как и когда происходят очистка и завершение состояний и транзакций. В следующем примере показано, как реализовать это, поддерживая экземпляр с помощью переменной `runningTotal`.  
   
     ```csharp
     [ServiceBehavior(TransactionIsolationLevel = [ServiceBehavior(  

@@ -14,19 +14,19 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], removing items
 - CheckedListBox control [Windows Forms], adding and removing items
 ms.assetid: 7224c8d2-4118-443e-ae1e-d7c17d1e69ee
-ms.openlocfilehash: 13f1e18753ad5b49a9cc530cf340579087908b4e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: bd6614c76c63a44a7367ac7c7113c4db260c9a02
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59188888"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322736"
 ---
 # <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Практическое руководство. Добавление и удаление элементов, отображаемых в элементах управления ComboBox, ListBox и CheckedListBox в Windows Forms
 Элементы добавляются в поле со списком Windows Forms, поле со списком или проверить поле со списком в различными способами, в том случае, поскольку эти элементы управления могут быть привязаны к различным источникам данных. Однако в этом разделе показан простейший способ и привязка к данным не требуется. Элементы, отображаемые обычно представляют собой строки; Тем не менее можно использовать любой объект. Текст, отображаемый в элементе управления является значение, возвращенное объекта `ToString` метод.  
   
 ### <a name="to-add-items"></a>Добавление элементов  
   
-1.  Добавьте строку или объект в список с помощью `Add` метод `ObjectCollection` класса. Коллекция указывается с помощью `Items` свойство:  
+1. Добавьте строку или объект в список с помощью `Add` метод `ObjectCollection` класса. Коллекция указывается с помощью `Items` свойство:  
   
     ```vb  
     ComboBox1.Items.Add("Tokyo")  
@@ -42,7 +42,7 @@ ms.locfileid: "59188888"
   
      - или  
   
-2.  Вставьте строку или объект в нужную точку в списке с `Insert` метод:  
+2. Вставьте строку или объект в нужную точку в списке с `Insert` метод:  
   
     ```vb  
     CheckedListBox1.Items.Insert(0, "Copenhagen")  
@@ -58,7 +58,7 @@ ms.locfileid: "59188888"
   
      - или  
   
-3.  Назначить полный массив `Items` коллекции:  
+3. Назначить полный массив `Items` коллекции:  
   
     ```vb  
     Dim ItemObject(9) As System.Object  
@@ -89,7 +89,7 @@ ms.locfileid: "59188888"
   
 ### <a name="to-remove-an-item"></a>Удаление элемента  
   
-1.  Вызовите `Remove` или `RemoveAt` метод для удаления элементов.  
+1. Вызовите `Remove` или `RemoveAt` метод для удаления элементов.  
   
      `Remove` имеет один аргумент, который задает удаляемый элемент.`RemoveAt` Удаляет элемент с указанным номером индекса.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "59188888"
   
 ### <a name="to-remove-all-items"></a>Чтобы удалить все элементы  
   
-1.  Вызовите `Clear` метод для удаления всех элементов из коллекции:  
+1. Вызовите `Clear` метод для удаления всех элементов из коллекции:  
   
     ```vb  
     ListBox1.Items.Clear()  

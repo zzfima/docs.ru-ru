@@ -2,12 +2,12 @@
 title: Пример UriTemplate
 ms.date: 03/30/2017
 ms.assetid: 0aaf91d0-ce18-468d-8006-bc9bc2e48231
-ms.openlocfilehash: 0d0fa339cb4c8feab3c8341b4508826ca75d4259
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5f8a969a9ddea633d12ebe2d922c152dbb0d7241
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59083781"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322619"
 ---
 # <a name="uritemplate-sample"></a>Пример UriTemplate
 Класс <xref:System.UriTemplate> предоставляет методы для работы с наборами кодов URI, использующих общую структуру. Данный образец демонстрирует следующие ключевые понятия, связанные с `UriTemplate`.  
@@ -20,9 +20,9 @@ ms.locfileid: "59083781"
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1.  Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+1. Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-2.  Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+2. Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 >  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  

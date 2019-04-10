@@ -2,12 +2,12 @@
 title: Пошаговое руководство. Запросы по связям (C#)
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
-ms.openlocfilehash: 52623b79492908a6c387715fef002d4b8927169c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6bd3255b49676b61a99f8416ab71c217d342e799
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59184890"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325375"
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>Пошаговое руководство. Запросы по связям (C#)
 В этом пошаговом руководстве демонстрируется использование [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *ассоциации* для представления связей по внешнему ключу в базе данных.  
@@ -51,16 +51,16 @@ ms.locfileid: "59184890"
   
 #### <a name="to-access-order-objects-by-using-customer-objects"></a>Получение доступа к объектам "Order" с помощью объектов "Customer"  
   
-1.  Измените метод `Main` посредством ввода или вставки в метод следующего кода:  
+1. Измените метод `Main` посредством ввода или вставки в метод следующего кода:  
   
      [!code-csharp[DLinqWalk2CS#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#3)]  
   
-2.  Нажмите клавишу F5, чтобы начать отладку приложения.  
+2. Нажмите клавишу F5, чтобы начать отладку приложения.  
   
     > [!NOTE]
     >  Чтобы избежать отображения кода SQL в окне "Консоль", преобразуйте `db.Log = Console.Out;` в комментарий.  
   
-3.  Чтобы остановить отладку, в окне консоли нажмите клавишу ВВОД.  
+3. Чтобы остановить отладку, в окне консоли нажмите клавишу ВВОД.  
   
 ## <a name="creating-a-strongly-typed-view-of-your-database"></a>Создание строго типизированного представления базы данных  
  Общая процедура становится гораздо проще, если в начале использовать строго типизированное представление базы данных. Задавая строгую типизацию объекта <xref:System.Data.Linq.DataContext>, можно избежать вызовов метода <xref:System.Data.Linq.DataContext.GetTable%2A>. Строго типизированные таблицы можно использовать в запросах только при использовании строго типизированного объекта <xref:System.Data.Linq.DataContext>.  
@@ -69,21 +69,21 @@ ms.locfileid: "59184890"
   
 #### <a name="to-strongly-type-the-datacontext-object"></a>Установка строгой типизации объекта "DataContext"  
   
-1.  Добавьте следующий код непосредственно перед объявлением класса `Customer`.  
+1. Добавьте следующий код непосредственно перед объявлением класса `Customer`.  
   
      [!code-csharp[DLinqWalk2CS#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#4)]  
   
-2.  Измените метод `Main`, чтобы использовать строго типизированный объект <xref:System.Data.Linq.DataContext>, как показано далее.  
+2. Измените метод `Main`, чтобы использовать строго типизированный объект <xref:System.Data.Linq.DataContext>, как показано далее.  
   
      [!code-csharp[DLinqWalk2CS#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#5)]  
   
-3.  Нажмите клавишу F5, чтобы начать отладку приложения.  
+3. Нажмите клавишу F5, чтобы начать отладку приложения.  
   
      В окне «Консоль"» отобразится следующее.  
   
      `ID=WHITC`  
   
-4.  Чтобы остановить отладку, в окне консоли нажмите клавишу ВВОД.  
+4. Чтобы остановить отладку, в окне консоли нажмите клавишу ВВОД.  
   
 ## <a name="next-steps"></a>Следующие шаги  
  Следующего пошагового руководства ([Пошаговое руководство: Обработка данных (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)) демонстрирует способ обработки данных. Для этого пошагового руководства не требуется сохранять два пошаговых руководства, которые уже выполнены в этой серии.  

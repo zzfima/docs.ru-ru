@@ -2,12 +2,12 @@
 title: Сведения о производительности (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
-ms.openlocfilehash: d0ee92b96a22b0ecb59ee76fb2f2e9d64442ce22
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ec7f3571f60dc7f10816cad90911e50d271a9ce1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59087954"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324049"
 ---
 # <a name="performance-considerations-entity-framework"></a>Сведения о производительности (Entity Framework)
 В этом подразделе описаны характеристики производительности платформы ADO.NET Entity Framework, а также приведены соображения по повышению производительности приложений платформы Entity Framework.  
@@ -82,11 +82,11 @@ ms.locfileid: "59087954"
 ### <a name="query-paths"></a>Пути запроса  
  По умолчанию при выполнении запроса <xref:System.Data.Objects.ObjectQuery%601> связанные объекты не возвращаются (хотя возвращаются объекты, представляющие сами связи). Связанные объекты можно загрузить одним из трех способов.  
   
-1.  Задайте путь запроса до выполнения <xref:System.Data.Objects.ObjectQuery%601>.  
+1. Задайте путь запроса до выполнения <xref:System.Data.Objects.ObjectQuery%601>.  
   
-2.  Вызовите метод `Load` для свойства навигации, доступного для объекта.  
+2. Вызовите метод `Load` для свойства навигации, доступного для объекта.  
   
-3.  Установите параметр <xref:System.Data.Objects.ObjectContextOptions.LazyLoadingEnabled%2A> объекта <xref:System.Data.Objects.ObjectContext> в значение `true`. Обратите внимание, что это выполняется автоматически при создании кода уровня объекта с [конструктора моделей EDM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716685(v=vs.100)). Дополнительные сведения см. в разделе [созданные общие сведения о коде](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982041(v=vs.100)).  
+3. Установите параметр <xref:System.Data.Objects.ObjectContextOptions.LazyLoadingEnabled%2A> объекта <xref:System.Data.Objects.ObjectContext> в значение `true`. Обратите внимание, что это выполняется автоматически при создании кода уровня объекта с [конструктора моделей EDM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716685(v=vs.100)). Дополнительные сведения см. в разделе [созданные общие сведения о коде](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982041(v=vs.100)).  
   
  При выборе параметра помните, что придется соблюдать баланс между числом запросов к базе данных и объемом данных, возвращаемых в одном запросе. Дополнительные сведения см. в разделе [загрузка связанных объектов](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896272(v=vs.100)).  
   

@@ -1,5 +1,5 @@
 ---
-title: Пошаговое руководство. Создание первого приложения для сенсорного ввода
+title: Пошаговое руководство. Создание первого приложения для обработки касаний
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - touch-sensitive applications [WPF], creating
 - creating a touchscreen application [WPF]
 ms.assetid: d69e602e-9a25-4e24-950b-e89eaa2a906b
-ms.openlocfilehash: 2ebf22775ab9308bc896829be0b4e8cc147a3b4c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 53ae737394d76d9f293f6e03fbf04cbb46d2adbb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374158"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326987"
 ---
-# <a name="walkthrough-creating-your-first-touch-application"></a>Пошаговое руководство. Создание первого приложения для сенсорного ввода
+# <a name="walkthrough-creating-your-first-touch-application"></a>Пошаговое руководство. Создание первого приложения для обработки касаний
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] позволяет приложениям реагировать на касание. Например может взаимодействовать с приложением с помощью одного или более пальцами сенсорные устройства, например сенсорный экран, в этом пошаговом руководстве создается приложение, которое позволяет пользователю перемещать, изменять размер или поворот объекта с использованием сенсорного ввода.  
   
 ## <a name="prerequisites"></a>Предварительные требования  
@@ -33,24 +33,24 @@ ms.locfileid: "57374158"
   
 #### <a name="to-create-the-application"></a>Создание приложения  
   
-1.  Создайте проект приложения WPF на Visual Basic или Visual C# с именем `BasicManipulation`. Дополнительные сведения см. в разделе [Пошаговое руководство: Создание первого классического приложения WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).  
+1. Создайте проект приложения WPF на Visual Basic или Visual C# с именем `BasicManipulation`. Дополнительные сведения см. в разделе [Пошаговое руководство: Создание первого классического приложения WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
-2.  Замените содержимое файла MainWindow.XAML на следующий XAML.  
+2. Замените содержимое файла MainWindow.XAML на следующий XAML.  
   
      Эта разметка создает простое приложение, содержащей красный <xref:System.Windows.Shapes.Rectangle> на <xref:System.Windows.Controls.Canvas>. <xref:System.Windows.UIElement.IsManipulationEnabled%2A> Свойство <xref:System.Windows.Shapes.Rectangle> имеет значение true, чтобы он будет получать события манипуляции. Приложение подписывается на <xref:System.Windows.UIElement.ManipulationStarting>, <xref:System.Windows.UIElement.ManipulationDelta>, и <xref:System.Windows.UIElement.ManipulationInertiaStarting> события. Эти события содержат логику перемещения <xref:System.Windows.Shapes.Rectangle> когда пользователь выполняет операции с ним.  
   
      [!code-xaml[BasicManipulation#UI](~/samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml#ui)]  
   
-3.  Если вы используете Visual Basic, в первой строке файла MainWindow.XAML, замените `x:Class="BasicManipulation.MainWindow"` с `x:Class="MainWindow"`.  
+3. Если вы используете Visual Basic, в первой строке файла MainWindow.XAML, замените `x:Class="BasicManipulation.MainWindow"` с `x:Class="MainWindow"`.  
   
-4.  В `MainWindow` класса, добавьте следующий <xref:System.Windows.UIElement.ManipulationStarting> обработчик событий.  
+4. В `MainWindow` класса, добавьте следующий <xref:System.Windows.UIElement.ManipulationStarting> обработчик событий.  
   
      <xref:System.Windows.UIElement.ManipulationStarting> Событие возникает при [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] обнаруживает, что сенсорный ввод начал доступ к объекту. Код указывает, что позиция манипуляции относительно <xref:System.Windows.Window> , задав <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A> свойство.  
   
      [!code-csharp[BasicManipulation#ManipulationStarting](~/samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml.cs#manipulationstarting)]
      [!code-vb[BasicManipulation#ManipulationStarting](~/samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationstarting)]
 
-5.  В `MainWindow` класса, добавьте следующий <xref:System.Windows.Input.ManipulationDelta> обработчик событий.
+5. В `MainWindow` класса, добавьте следующий <xref:System.Windows.Input.ManipulationDelta> обработчик событий.
 
      <xref:System.Windows.Input.ManipulationDelta> Событие возникает, когда сенсорный ввод изменяет положение и может встречаться несколько раз во время манипуляции. Это событие также может возникать после возникновения палец. Например, если пользователь перемещает палец по экрану <xref:System.Windows.Input.ManipulationDelta> событие возникает несколько раз как перемещения пальца. Когда пользователь отрывает палец с экрана, <xref:System.Windows.Input.ManipulationDelta> событие продолжает возникать для имитации инерции.
 
@@ -59,14 +59,14 @@ ms.locfileid: "57374158"
      [!code-csharp[BasicManipulation#ManipulationDelta](~/samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml.cs#manipulationdelta)]
      [!code-vb[BasicManipulation#ManipulationDelta](~/samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationdelta)]
 
-6.  В `MainWindow` класса, добавьте следующий <xref:System.Windows.UIElement.ManipulationInertiaStarting> обработчик событий.
+6. В `MainWindow` класса, добавьте следующий <xref:System.Windows.UIElement.ManipulationInertiaStarting> обработчик событий.
 
      <xref:System.Windows.UIElement.ManipulationInertiaStarting> Событие происходит, когда пользователь вызывает все пальцы на экране. Код задает начальную скорость и замедление для перемещения, расширения и поворота прямоугольника.
 
      [!code-csharp[BasicManipulation#ManipulationInertiaStarting](~/samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml.cs#manipulationinertiastarting)]
      [!code-vb[BasicManipulation#ManipulationInertiaStarting](~/samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationinertiastarting)]
 
-7.  Постройте и запустите проект.
+7. Постройте и запустите проект.
 
      Вы увидите красный квадрат в окне.
 

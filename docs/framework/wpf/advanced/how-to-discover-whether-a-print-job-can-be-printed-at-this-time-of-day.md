@@ -10,12 +10,12 @@ helpviewer_keywords:
 - printers [WPF], availability
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
-ms.openlocfilehash: dab836af8ba3d177719d910142cd93f8f6de0002
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7eed5400744f1010cbf52dc8d3b3d0bc24aa4371
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59099863"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326870"
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>Практическое руководство. Определение возможности печати в заданное время суток
 Очереди печати не всегда доступны для 24 часа в сутки. Они имеют свойства времени начала и окончания, которые могут устанавливаться отключив их в определенное время суток. Эту функцию можно, например, чтобы зарезервировать принтер для использования только определенным подразделением после 17: 00. Этот отдел будет иметь другой очереди обслуживания принтера от других отделов использовать. Устанавливается в очередь для других отделов станет недоступной после 17: 00, то время как очередь для привилегированного отдела может быть быть доступна в любое время.  
@@ -29,9 +29,9 @@ ms.locfileid: "59099863"
   
  Существует два основных действия для этого вида функции следующим образом.  
   
-1.  Чтение <xref:System.Printing.PrintQueue.StartTimeOfDay%2A> и <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> свойства <xref:System.Printing.PrintQueue> для определения, является ли текущее время между ними.  
+1. Чтение <xref:System.Printing.PrintQueue.StartTimeOfDay%2A> и <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> свойства <xref:System.Printing.PrintQueue> для определения, является ли текущее время между ними.  
   
-2.  Чтение <xref:System.Printing.PrintSystemJobInfo.StartTimeOfDay%2A> и <xref:System.Printing.PrintSystemJobInfo.UntilTimeOfDay%2A> свойства <xref:System.Printing.PrintSystemJobInfo> для определения, является ли текущее время между ними.  
+2. Чтение <xref:System.Printing.PrintSystemJobInfo.StartTimeOfDay%2A> и <xref:System.Printing.PrintSystemJobInfo.UntilTimeOfDay%2A> свойства <xref:System.Printing.PrintSystemJobInfo> для определения, является ли текущее время между ними.  
   
  Сложности возникают потому, что эти свойства не являются <xref:System.DateTime> объектов. Они представляют собой <xref:System.Int32> объекты, представляющие время суток, как количество минут после полуночи. Кроме того это не полночь в текущем часовом поясе, но полуночи в формате UTC (время по Гринвичу).  
   

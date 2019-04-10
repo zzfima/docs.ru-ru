@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF, authorization
 - WCF, security
 ms.assetid: 5162f5c4-8781-4cc4-9425-bb7620eaeaf4
-ms.openlocfilehash: 2bbdcc8e5a55f9d2cdbb80bf83443f0ad8850452
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ae2aa4c5629096ee7d888e7c4e334c3b6696db3f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59105291"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323321"
 ---
 # <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>Практическое руководство. Ограничение доступа с использованием класса PrincipalPermissionAttribute
 Управление доступом к ресурсам компьютера Windows-домена - это базовая задача обеспечения безопасности. Например, только определенные пользователи должны иметь возможность просматривать конфиденциальные данные, такие как платежные ведомости. В этом разделе рассматривается, как ограничить доступ к методу, потребовав, чтобы пользователь принадлежал к заранее заданной группе. Работающий пример см. в разделе [авторизации доступа к операциям службы](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md).  
@@ -23,25 +23,25 @@ ms.locfileid: "59105291"
   
 ### <a name="to-create-a-windows-group"></a>Создание группы Windows  
   
-1.  Откройте **Управление компьютером** консоли.  
+1. Откройте **Управление компьютером** консоли.  
   
-2.  На панели слева щелкните **локальные пользователи и группы**.  
+2. На панели слева щелкните **локальные пользователи и группы**.  
   
-3.  Щелкните правой кнопкой мыши **группы**и нажмите кнопку **новая группа**.  
+3. Щелкните правой кнопкой мыши **группы**и нажмите кнопку **новая группа**.  
   
-4.  В **имя группы** введите имя для новой группы.  
+4. В **имя группы** введите имя для новой группы.  
   
-5.  В **описание** введите описание новой группы.  
+5. В **описание** введите описание новой группы.  
   
-6.  Нажмите кнопку **добавить** кнопку, чтобы добавить новых участников в группу.  
+6. Нажмите кнопку **добавить** кнопку, чтобы добавить новых участников в группу.  
   
-7.  Если вы добавили себя в группу и хотите протестировать приведенный ниже код, необходимо выйти из системы и снова войти в нее, чтобы быть включенным в группу.  
+7. Если вы добавили себя в группу и хотите протестировать приведенный ниже код, необходимо выйти из системы и снова войти в нее, чтобы быть включенным в группу.  
   
 ### <a name="to-demand-user-membership"></a>Требование членства пользователя  
   
-1.  Откройте файл кода Windows Communication Foundation (WCF), содержащий реализованный код контракта службы. Дополнительные сведения о реализации контракта см. в разделе [Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md).  
+1. Откройте файл кода Windows Communication Foundation (WCF), содержащий реализованный код контракта службы. Дополнительные сведения о реализации контракта см. в разделе [Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md).  
   
-2.  Примените атрибут <xref:System.Security.Permissions.PrincipalPermissionAttribute> к каждому методу, доступ к которому необходимо ограничить определенной группой. Задайте для свойства <xref:System.Security.Permissions.SecurityAttribute.Action%2A> значение <xref:System.Security.Permissions.SecurityAction.Demand>, а для свойства <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A> задайте имя группы. Пример:  
+2. Примените атрибут <xref:System.Security.Permissions.PrincipalPermissionAttribute> к каждому методу, доступ к которому необходимо ограничить определенной группой. Задайте для свойства <xref:System.Security.Permissions.SecurityAttribute.Action%2A> значение <xref:System.Security.Permissions.SecurityAction.Demand>, а для свойства <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A> задайте имя группы. Пример:  
   
      [!code-csharp[c_PrincipalPermissionAttribute#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_principalpermissionattribute/cs/source.cs#1)]
      [!code-vb[c_PrincipalPermissionAttribute#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_principalpermissionattribute/vb/source.vb#1)]  
@@ -56,16 +56,16 @@ ms.locfileid: "59105291"
   
 #### <a name="to-control-access-using-a-certificate"></a>Управление доступом с помощью сертификата  
   
-1.  Примените класс <xref:System.Security.Permissions.PrincipalPermissionAttribute> к методу, доступ к которому требуется ограничить.  
+1. Примените класс <xref:System.Security.Permissions.PrincipalPermissionAttribute> к методу, доступ к которому требуется ограничить.  
   
-2.  Задайте для действия атрибута значение <xref:System.Security.Permissions.SecurityAction.Demand?displayProperty=nameWithType>.  
+2. Задайте для действия атрибута значение <xref:System.Security.Permissions.SecurityAction.Demand?displayProperty=nameWithType>.  
   
-3.  Задайте для свойства `Name` строку, состоящую из имени субъект и отпечатка сертификата. Эти два значения должны разделяться точкой с запятой и пробелом, как показано в следующем примере:  
+3. Задайте для свойства `Name` строку, состоящую из имени субъект и отпечатка сертификата. Эти два значения должны разделяться точкой с запятой и пробелом, как показано в следующем примере:  
   
      [!code-csharp[c_PrincipalPermissionAttribute#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_principalpermissionattribute/cs/source.cs#2)]
      [!code-vb[c_PrincipalPermissionAttribute#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_principalpermissionattribute/vb/source.vb#2)]  
   
-4.  Задайте для свойства <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A> значение <xref:System.ServiceModel.Description.PrincipalPermissionMode.UseAspNetRoles>, как показано в следующем примере конфигурации:  
+4. Задайте для свойства <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A> значение <xref:System.ServiceModel.Description.PrincipalPermissionMode.UseAspNetRoles>, как показано в следующем примере конфигурации:  
   
     ```xml  
     <behaviors>  

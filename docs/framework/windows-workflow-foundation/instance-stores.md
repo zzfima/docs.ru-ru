@@ -2,12 +2,12 @@
 title: Хранилища экземпляров
 ms.date: 03/30/2017
 ms.assetid: f2629668-0923-4987-b943-67477131c1e0
-ms.openlocfilehash: 7ea29c3604042d773590448e31ce4ea95125ca1f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 352ffad56c77d0bd16f7e3b9aa1d82090f3a29b1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519582"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323334"
 ---
 # <a name="instance-stores"></a>Хранилища экземпляров
 Хранилище экземпляров - это логический контейнер для экземпляров. Здесь хранятся данные и метаданные экземпляра. Хранилище экземпляров не предполагает выделения физического пространства. Хранилище экземпляра может содержать постоянные сведения в базе данных SQL Server или непостоянные сведения о состоянии в памяти. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] поставляется с хранилищем экземпляров рабочего процесса SQL - конкретной реализацией хранилища экземпляров, которая позволяет рабочему процессу хранить данные и метаданные в базе данных SQL Server 2005 или SQL Server 2008. Кроме того, Windows Server App Fabric также предоставляет конкретную реализацию хранилища экземпляров. Дополнительные сведения см. в разделе [Windows Server App Fabric экземпляр Store, запрос и поставщики управления](https://go.microsoft.com/fwlink/?LinkID=201201&clcid=0x409).  
@@ -22,10 +22,10 @@ ms.locfileid: "43519582"
   
  Следующий список содержит важные этапы взаимодействия узла с хранилищем экземпляров.  
   
-1.  Получить **InstanceStore** от поставщика сохраняемости.  
+1. Получить **InstanceStore** от поставщика сохраняемости.  
 
-2.  Получите дескриптор экземпляра путем вызова <xref:System.Runtime.DurableInstancing.InstanceStore.CreateInstanceHandle%2A> метод **InstanceStore**.  
+2. Получите дескриптор экземпляра путем вызова <xref:System.Runtime.DurableInstancing.InstanceStore.CreateInstanceHandle%2A> метод **InstanceStore**.  
   
-3.  Вызовите команды для дескриптор экземпляра путем вызова <xref:System.Runtime.DurableInstancing.InstanceStore.Execute%2A> метод **InstanceStore**.  
+3. Вызовите команды для дескриптор экземпляра путем вызова <xref:System.Runtime.DurableInstancing.InstanceStore.Execute%2A> метод **InstanceStore**.  
   
-4.  Изучите <xref:System.Runtime.DurableInstancing.InstanceView> возвращаемые **InstanceStore.Execute** чтобы определить результаты команд.
+4. Изучите <xref:System.Runtime.DurableInstancing.InstanceView> возвращаемые **InstanceStore.Execute** чтобы определить результаты команд.

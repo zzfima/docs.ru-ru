@@ -4,12 +4,12 @@ description: Узнайте о наиболее важные параметры 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 38a9f8209200635c752f60af90e22ef916796525
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 3a2fcbe3b9380083622b6ce72cea4bab17d7c2ea
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677244"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318826"
 ---
 # <a name="development-environment-for-docker-apps"></a>Среда разработки приложений Docker
 
@@ -33,7 +33,7 @@ ms.locfileid: "57677244"
 
 ### <a name="visual-studio-for-mac-mac-development-machine"></a>Visual Studio для Mac (компьютер разработки Mac)
 
-Можно использовать [Visual Studio для Mac](https://visualstudio.microsoft.com/vs/mac/) при разработке приложений на основе Docker. Visual Studio для Mac предлагает более широкие интегрированной среды разработки, по сравнению с Visual Studio Code для Mac.
+Можно использовать [Visual Studio для Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) при разработке приложений на основе Docker. Visual Studio для Mac предлагает более широкие интегрированной среды разработки, по сравнению с Visual Studio Code для Mac.
 
 ## <a name="language-and-framework-choices"></a>Выбор языка и платформы
 

@@ -2,32 +2,32 @@
 title: Практическое руководство. Как реализовать клиентское приложение, которое для поиска служб использует прокси-сервер обнаружения
 ms.date: 03/30/2017
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
-ms.openlocfilehash: 42dc2e8269e36161904f69880712924d4789333e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 12b3fa03a1f259df8ee8c970463fa9ccee7267fa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115977"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321007"
 ---
 # <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>Практическое руководство. Как реализовать клиентское приложение, которое для поиска служб использует прокси-сервер обнаружения
 Это последний из трех разделов, в которых рассматривается реализация прокси-сервера обнаружения. В предыдущем разделе [как: Реализовать Обнаружимую службу, которая регистрируется на прокси-сервер обнаружения](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), реализации службы WCF, которая регистрирует себя с помощью прокси-сервера обнаружения. В этой статье вы создадите клиента WCF, который использует прокси-сервер обнаружения для поиска службы WCF.  
   
 ### <a name="implement-the-client"></a>Реализация клиента  
   
-1.  Добавьте новый проект консольного приложения с именем `DiscoveryProxyExample` в решение `Client`.  
+1. Добавьте новый проект консольного приложения с именем `DiscoveryProxyExample` в решение `Client`.  
   
-2.  Добавьте ссылки на следующие сборки:  
+2. Добавьте ссылки на следующие сборки:  
   
     1.  System.ServiceModel  
   
     2.  System.ServiceModel.Discovery  
   
-3.  Добавьте в проект файл GeneratedClient.cs, приведенный в конце этого раздела.  
+3. Добавьте в проект файл GeneratedClient.cs, приведенный в конце этого раздела.  
   
     > [!NOTE]
     >  Этот файл обычно создается с помощью программы Svcutil.exe. В этом разделе он приведен для того, чтобы упростить задачу.  
   
-4.  Откройте файл Program.cs и добавьте следующий метод: Этот метод принимает адрес конечной точки и использует его для инициализации клиента службы (прокси-сервера).  
+4. Откройте файл Program.cs и добавьте следующий метод: Этот метод принимает адрес конечной точки и использует его для инициализации клиента службы (прокси-сервера).  
   
     ```csharp  
     static void InvokeCalculatorService(EndpointAddress endpointAddress)  
@@ -62,7 +62,7 @@ ms.locfileid: "59115977"
     }  
     ```  
   
-5.  Добавьте следующий код в метод `Main` .  
+5. Добавьте следующий код в метод `Main` .  
   
     ```csharp  
     public static void Main()  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms, anchoring and docking WPF content
 - interoperability [WPF]
 ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
-ms.openlocfilehash: a9c549a9014e328e8083704971dfd5323adcea41
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 306c042fe432f0c087ceb1b5ff6b5aec0fe0bbc7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59193204"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327312"
 ---
 # <a name="walkthrough-arranging-wpf-content-on-windows-forms-at-design-time"></a>Пошаговое руководство. Упорядочение содержимого WPF для формы Windows Forms во время разработки
 В этом пошаговом руководстве показано, как использовать функции структуры Windows Forms, такие как закрепление и линии привязки, для размещения элементов управления Windows Presentation Foundation (WPF).
@@ -54,38 +54,38 @@ ms.locfileid: "59193204"
   
 #### <a name="to-create-wpf-controls"></a>Создание элементов управления WPF  
   
-1.  Добавьте в проект новый элемент управления WPF <xref:System.Windows.Controls.UserControl>. Используйте имя по умолчанию для этого типа элемента управления (`UserControl1.xaml`). Дополнительные сведения см. в разделе [Пошаговое руководство: Создание нового содержимого WPF в формах Windows Forms во время разработки](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).  
+1. Добавьте в проект новый элемент управления WPF <xref:System.Windows.Controls.UserControl>. Используйте имя по умолчанию для этого типа элемента управления (`UserControl1.xaml`). Дополнительные сведения см. в разделе [Пошаговое руководство: Создание нового содержимого WPF в формах Windows Forms во время разработки](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).  
   
-2.  Убедитесь в том, что элемент `UserControl1` выбран в представлении конструирования. Дополнительные сведения см. в разделе [Как Выберите и перемещать элементы в области конструктора](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100)).  
+2. Убедитесь в том, что элемент `UserControl1` выбран в представлении конструирования. Дополнительные сведения см. в разделе [Как Выберите и перемещать элементы в области конструктора](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100)).  
   
-3.  В **свойства** окна, установите для параметра <xref:System.Windows.FrameworkElement.Width%2A> и <xref:System.Windows.FrameworkElement.Height%2A> свойства `200`.  
+3. В **свойства** окна, установите для параметра <xref:System.Windows.FrameworkElement.Width%2A> и <xref:System.Windows.FrameworkElement.Height%2A> свойства `200`.  
   
-4.  Задайте для свойства <xref:System.Windows.Controls.Control.Background%2A> значение `Blue`.  
+4. Задайте для свойства <xref:System.Windows.Controls.Control.Background%2A> значение `Blue`.  
   
-5.  Выполните построение проекта.  
+5. Выполните построение проекта.  
   
 ## <a name="hosting-wpf-controls-in-a-layout-panel"></a>Размещение элементов управления WPF на панели макета  
  Элементы управления WPF можно использовать на панели макета так же, как и другие элементы управления Windows Forms.  
   
 #### <a name="to-host-wpf-controls-in-a-layout-panel"></a>Размещение элементов управления WPF на панели макета  
   
-1.  Откройте `Form1` в конструкторе Windows Forms.  
+1. Откройте `Form1` в конструкторе Windows Forms.  
   
-2.  В **элементов**, перетащите <xref:System.Windows.Forms.TableLayoutPanel> на форму.  
+2. В **элементов**, перетащите <xref:System.Windows.Forms.TableLayoutPanel> на форму.  
   
-3.  На <xref:System.Windows.Forms.TableLayoutPanel> панель смарт-тега элемента управления, выберите **удалить последнюю строку**.  
+3. На <xref:System.Windows.Forms.TableLayoutPanel> панель смарт-тега элемента управления, выберите **удалить последнюю строку**.  
   
-4.  Увеличьте высоту и ширину элемента управления <xref:System.Windows.Forms.TableLayoutPanel>.  
+4. Увеличьте высоту и ширину элемента управления <xref:System.Windows.Forms.TableLayoutPanel>.  
   
-5.  В **элементов**, дважды щелкните `UserControl1` для создания экземпляра `UserControl1` в первой ячейке <xref:System.Windows.Forms.TableLayoutPanel> элемента управления.  
+5. В **элементов**, дважды щелкните `UserControl1` для создания экземпляра `UserControl1` в первой ячейке <xref:System.Windows.Forms.TableLayoutPanel> элемента управления.  
   
      Экземпляр `UserControl1` разместится в новом элементе управления <xref:System.Windows.Forms.Integration.ElementHost> с именем `elementHost1`.  
   
-6.  В **элементов**, дважды щелкните `UserControl1` для создания другого экземпляра в во вторую ячейку <xref:System.Windows.Forms.TableLayoutPanel> элемента управления.  
+6. В **элементов**, дважды щелкните `UserControl1` для создания другого экземпляра в во вторую ячейку <xref:System.Windows.Forms.TableLayoutPanel> элемента управления.  
   
-7.  В **Структура документа** выберите `tableLayoutPanel1`. Дополнительные сведения см. в разделе [окно структуры документа](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/46xf4h0w(v=vs.100)#using-the-document-outline-window-for-silverlight-and-wpf).  
+7. В **Структура документа** выберите `tableLayoutPanel1`. Дополнительные сведения см. в разделе [окно структуры документа](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/46xf4h0w(v=vs.100)#using-the-document-outline-window-for-silverlight-and-wpf).  
   
-8.  В **свойства** окна, установите для параметра <xref:System.Windows.Forms.Control.Padding%2A> свойства `10, 10, 10, 10`.  
+8. В **свойства** окна, установите для параметра <xref:System.Windows.Forms.Control.Padding%2A> свойства `10, 10, 10, 10`.  
   
      Размер обоих элементов управления <xref:System.Windows.Forms.Integration.ElementHost> изменится в соответствии с новой структурой.  
   
@@ -94,48 +94,48 @@ ms.locfileid: "59193204"
   
 #### <a name="to-use-snaplines-to-align-wpf-controls"></a>Выравнивание элементов управления WPF с помощью линий привязки  
   
-1.  Из **элементов**, перетащите экземпляр `UserControl1` на форму и поместите его под <xref:System.Windows.Forms.TableLayoutPanel> элемента управления.  
+1. Из **элементов**, перетащите экземпляр `UserControl1` на форму и поместите его под <xref:System.Windows.Forms.TableLayoutPanel> элемента управления.  
   
      Экземпляр `UserControl1` разместится в новом элементе управления <xref:System.Windows.Forms.Integration.ElementHost> с именем `elementHost3`.  
   
-2.  С помощью линий привязки выровняйте левый край `elementHost3` относительно левого края элемента управления <xref:System.Windows.Forms.TableLayoutPanel>.  
+2. С помощью линий привязки выровняйте левый край `elementHost3` относительно левого края элемента управления <xref:System.Windows.Forms.TableLayoutPanel>.  
   
-3.  С помощью линий привязки установите для `elementHost3` ту же ширину, что и для элемента управления <xref:System.Windows.Forms.TableLayoutPanel>.  
+3. С помощью линий привязки установите для `elementHost3` ту же ширину, что и для элемента управления <xref:System.Windows.Forms.TableLayoutPanel>.  
   
-4.  Перемещайте `elementHost3` в сторону элемента управления <xref:System.Windows.Forms.TableLayoutPanel> до тех пор, пока между элементами управления не появится центральная линия привязки.  
+4. Перемещайте `elementHost3` в сторону элемента управления <xref:System.Windows.Forms.TableLayoutPanel> до тех пор, пока между элементами управления не появится центральная линия привязки.  
   
-5.  В **свойства** окна, задайте значение свойства Margin `20, 20, 20, 20`.  
+5. В **свойства** окна, задайте значение свойства Margin `20, 20, 20, 20`.  
   
-6.  Перемещайте `elementHost3` от элемента управления <xref:System.Windows.Forms.TableLayoutPanel> до тех пор, пока между элементами управления снова не появится центральная линия привязки. Теперь центральная линия привязки указывает на поле шириной в 20 точек.  
+6. Перемещайте `elementHost3` от элемента управления <xref:System.Windows.Forms.TableLayoutPanel> до тех пор, пока между элементами управления снова не появится центральная линия привязки. Теперь центральная линия привязки указывает на поле шириной в 20 точек.  
   
-7.  Перемещайте элемент управления `elementHost3` вправо до тех пор, пока его левый край не будет выровнен относительно левого края элемента управления `elementHost1`.  
+7. Перемещайте элемент управления `elementHost3` вправо до тех пор, пока его левый край не будет выровнен относительно левого края элемента управления `elementHost1`.  
   
-8.  Изменяйте ширину элемента `elementHost3` до тех пор, пока его правый край не будет выровнен относительно правого края элемента управления `elementHost2`.  
+8. Изменяйте ширину элемента `elementHost3` до тех пор, пока его правый край не будет выровнен относительно правого края элемента управления `elementHost2`.  
   
 ## <a name="anchoring-and-docking-wpf-controls"></a>Привязка и закрепление элементов управления WPF  
  Поведение размещенного в форме элемента управления WPF при привязке и закреплении не отличается от поведения других элементов управления Windows Forms.  
   
 #### <a name="to-anchor-and-dock-wpf-controls"></a>Привязка и закрепление элементов управления WPF  
   
-1.  Выберите `elementHost1`.  
+1. Выберите `elementHost1`.  
   
-2.  В **свойства** окне <xref:System.Windows.Forms.Control.Anchor%2A> свойства **верхнего, нижнего, Left, Right**.  
+2. В **свойства** окне <xref:System.Windows.Forms.Control.Anchor%2A> свойства **верхнего, нижнего, Left, Right**.  
   
-3.  Увеличьте размер элемента управления <xref:System.Windows.Forms.TableLayoutPanel>.  
+3. Увеличьте размер элемента управления <xref:System.Windows.Forms.TableLayoutPanel>.  
   
      Элемент управления `elementHost1` заполнит всю ячейку.  
   
-4.  Выберите `elementHost2`.  
+4. Выберите `elementHost2`.  
   
-5.  В **свойства** окна, установите для параметра <xref:System.Windows.Forms.Control.Dock%2A> свойства <xref:System.Windows.Forms.DockStyle.Fill>.  
+5. В **свойства** окна, установите для параметра <xref:System.Windows.Forms.Control.Dock%2A> свойства <xref:System.Windows.Forms.DockStyle.Fill>.  
   
      Элемент управления `elementHost2` заполнит всю ячейку.  
   
-6.  Выберите элемент управления <xref:System.Windows.Forms.TableLayoutPanel>.  
+6. Выберите элемент управления <xref:System.Windows.Forms.TableLayoutPanel>.  
   
-7.  Задайте для его свойства <xref:System.Windows.Forms.Control.Dock%2A> значение <xref:System.Windows.Forms.DockStyle.Top>.  
+7. Задайте для его свойства <xref:System.Windows.Forms.Control.Dock%2A> значение <xref:System.Windows.Forms.DockStyle.Top>.  
   
-8.  Выберите `elementHost3`.  
+8. Выберите `elementHost3`.  
   
 9. Задайте для его свойства <xref:System.Windows.Forms.Control.Dock%2A> значение <xref:System.Windows.Forms.DockStyle.Fill>.  
   

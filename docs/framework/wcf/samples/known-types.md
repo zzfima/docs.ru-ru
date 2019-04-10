@@ -2,12 +2,12 @@
 title: Известные типы
 ms.date: 03/30/2017
 ms.assetid: 88d83720-ca38-4b2c-86a6-f149ed1d89ec
-ms.openlocfilehash: 2d2818dc78829bd201aeeba9b0df1d2f3b356250
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f2a5e6d5f5755d15bdc642ea3e64fb44af05cdab
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59203604"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327741"
 ---
 # <a name="known-types"></a>Известные типы
 В данном образце демонстрируется, как задать информацию о наследованных типах в контракте данных. Контракты данных позволяют передавать структурированные данные в службы и из служб. В объектно-ориентированном программировании тип, унаследованный от другого типа, может использоваться вместо оригинального типа. В объектно-ориентированном программировании отслеживаются скорее типы, а не схемы, и поэтому отношение между типами не сохраняется. Атрибут <xref:System.Runtime.Serialization.KnownTypeAttribute> позволяет включать в контракт данных информацию об унаследованных типах. Если этот механизм не используется, унаследованный тип не может быть отправлен или получен там, где ожидается базовый тип.  
@@ -156,11 +156,11 @@ No magnitude was sent from the service
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1.  Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 >  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  

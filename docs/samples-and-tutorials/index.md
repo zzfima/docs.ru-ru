@@ -4,12 +4,12 @@ description: Сведения о примерах и руководствах д
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: 682c60ca4a0e801ec8e138a88124b86b88f39615
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 265ac7aa996014ea24e9c128076e12c937de0857
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "57558952"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330822"
 ---
 # <a name="net-samples-and-tutorials"></a>Примеры и руководства .NET
 
@@ -112,6 +112,6 @@ ms.locfileid: "57558952"
 1. Откройте в репозитории папку с примером. Относительный путь к папке с примером отображается в адресной строке браузера при переходе по ссылке на пример.
 1. Запустить пример можно несколькими способами:
    * Используйте [средства интерфейса командной строки dotnet](../core/tools/index.md): в окне консоли перейдите в папку с примером и используйте команды интерфейса командной строки dotnet.
-   * Воспользуйтесь программой [Visual Studio](https://visualstudio.microsoft.com/) или [Visual Studio для Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/): откройте пример, последовательно щелкнув **"Файл" > "Открыть" > "Проект/решение"**, перейдите в папку проекта, содержащую пример, и выберите файл проекта (*.csproj* или *.fsproj*).
+   * Воспользуйтесь программой [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) или [Visual Studio для Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link): откройте пример, последовательно щелкнув **"Файл" > "Открыть" > "Проект/решение"**, перейдите в папку проекта, содержащую пример, и выберите файл проекта (*.csproj* или *.fsproj*).
    * Воспользуйтесь программой [Visual Studio Code](https://code.visualstudio.com/): откройте пример, последовательно щелкнув **"Файл" > "Открыть папку"** и выбрав папку проекта, содержащую пример.
    * Воспользуйтесь другой средой IDE, которая поддерживает проекты .NET Core.

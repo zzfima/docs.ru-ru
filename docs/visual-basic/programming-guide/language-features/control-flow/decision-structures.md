@@ -9,20 +9,19 @@ helpviewer_keywords:
 - decision structures [Visual Basic]
 - conditional statements [Visual Basic], decision structures
 ms.assetid: 2e2e0895-4483-442a-b17c-26aead751ec2
-ms.openlocfilehash: 20b60fb425278dacb56ee5f888967554a1f76aeb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4a76b2565c343e69ac3c11441035a7682a8f08ec
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825382"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318940"
 ---
 # <a name="decision-structures-visual-basic"></a>Структуры решений (Visual Basic)
 Visual Basic позволяет проверять условия и выполнять различные операции в зависимости от результата этого теста. Можно проверить условие true или false, для различных значений выражения, или для различных исключений, сформированных при выполнении последовательности инструкций.  
   
  На следующем рисунке структуру выбора, который проверяет условие и выполняет различные действия в зависимости от того, является ли это значение true или false.  
   
- ![Блок-схема If... Затем... Else конструкции](../../../../visual-basic/programming-guide/language-features/control-flow/media/ifthenelse.gif "IfThenElse")  
-Выполняет различные действия, если условие имеет значение true, а также если он имеет значение false  
+ ![Блок-схема If... Затем... Другой конструкции.](./media/decision-structures/if-then-else-construction.gif)  
   
 ## <a name="ifthenelse-construction"></a>If... Затем... Else построения  
  `If...Then...Else` позволяют проверить одно или несколько условий и запустить один или несколько операторов для каждого условия. Можно проверить условия и действий одним из следующих способов:  

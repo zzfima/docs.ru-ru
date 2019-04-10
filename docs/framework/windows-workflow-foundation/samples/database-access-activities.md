@@ -2,12 +2,12 @@
 title: Действия доступа к базе данных
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
-ms.openlocfilehash: db79f2d7605a71997ede134152b12395b9193f95
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 2463c3a87be7f7e248572d45e018b72661f4f8c7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066094"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322606"
 ---
 # <a name="database-access-activities"></a>Действия доступа к базе данных
 Действия доступа к базе данных позволяют обращаться к базе данных из рабочего процесса. Эти действия позволяют доступ к базам данных, чтобы вернуть или изменить сведения, а также использовать [ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081) для доступа к базе данных.  
@@ -242,7 +242,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 |CommandType|Тип выполняемой команды <xref:System.Data.Common.DbCommand>.|
 |Sql|Выполняемая команда SQL.|
 |Параметры|Коллекция параметров SQL-запроса.|
-|Результат|<xref:System.Data.DataSet>, полученный после выполнения запроса.|
+|Результат|<xref:System.Data.DataSet> полученный после выполнения запроса.|
 
 ## <a name="configuring-connection-information"></a>Настройка сведений о соединении
  Все DbActivities используют одни и те же параметры конфигурации. Их можно настроить двумя способами.
@@ -299,26 +299,26 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 
 ##### <a name="to-run-setupcmd"></a>Запуск команды Setup.cmd
 
-1.  Откройте окно командной строки.
+1. Откройте окно командной строки.
 
-2.  Перейдите в папку образца DbActivities.
+2. Перейдите в папку образца DbActivities.
 
-3.  Введите «setup.cmd» и нажмите клавишу ВВОД.
+3. Введите «setup.cmd» и нажмите клавишу ВВОД.
 
     > [!NOTE]
     >  Скрипт Setup.cmd пытается установить образец базы данных на экземпляр SQLExpress на локальном компьютере. Если образец необходимо установить на другом экземпляре сервера SQL, измените Setup.cmd, указав другое имя экземпляра.
 
 ##### <a name="to-uninstall-the-sample-database"></a>Удаление образца базы данных
 
-1.  Выполните в командной строке файл Cleanup.cmd из папки образца.
+1. Выполните в командной строке файл Cleanup.cmd из папки образца.
 
 ##### <a name="to-run-the-sample"></a>Выполнение образца
 
-1.  Откройте решение в Visual Studio 2010
+1. Откройте решение в Visual Studio 2010
 
-2.  Для компиляции решения нажмите CTRL+SHIFT+B.
+2. Для компиляции решения нажмите CTRL+SHIFT+B.
 
-3.  Чтобы запустить образец без отладки, нажмите сочетание клавиш CTRL+F5.
+3. Чтобы запустить образец без отладки, нажмите сочетание клавиш CTRL+F5.
 
 > [!IMPORTANT]
 >  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  

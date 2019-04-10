@@ -10,12 +10,12 @@ helpviewer_keywords:
 - controls [Windows Forms], aligning on forms
 - custom controls [Windows Forms], docking using code
 ms.assetid: 5994cb59-242b-4e75-bd0e-62879c34d702
-ms.openlocfilehash: 990fc996cfb5ecf4d9fde255ad026e3f46a24718
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: beb8881dbd2aedaefe66510c2942ce6c082b9729
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59185787"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329977"
 ---
 # <a name="how-to-align-a-control-to-the-edges-of-forms"></a>Практическое руководство. Выравнивание элементов управления по границам формы
 Элемент управления можно выровнять по границе формы с помощью свойства <xref:System.Windows.Forms.Control.Dock%2A>. Это свойство определяет, в каком месте формы будет размещаться элемент управления. Свойство <xref:System.Windows.Forms.Control.Dock%2A> может принимать указанные ниже значения.  
@@ -33,7 +33,7 @@ ms.locfileid: "59185787"
   
 ### <a name="to-set-the-dock-property-for-your-control-at-run-time"></a>Задание свойства Dock для элемента управления во время выполнения  
   
-1.  Присвойте свойству <xref:System.Windows.Forms.Control.Dock%2A> соответствующее значение в коде.  
+1. Присвойте свойству <xref:System.Windows.Forms.Control.Dock%2A> соответствующее значение в коде.  
   
     ```vb  
     ' To set the Dock property internally.  

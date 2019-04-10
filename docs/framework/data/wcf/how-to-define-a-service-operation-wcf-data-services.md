@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Service Operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: dfcd3cb1-2f07-4d0b-b16a-6b056c4f45fa
-ms.openlocfilehash: 75691a49624c179166d18225fac9fdc6c17a2308
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 88e9b20f3ecefbd39789dfbc942af3938a9a2117
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59138103"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326402"
 ---
 # <a name="how-to-define-a-service-operation-wcf-data-services"></a>Практическое руководство. Определение операции службы (службы данных WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] предоставляют методы, определенные на сервере в качестве операций службы. Операции службы позволяют службе данных предоставить доступ через URI-адрес метода, который определен на сервере. Чтобы определить операцию службы, примените [`WebGet]` или `[WebInvoke]` к методу атрибут. Для поддержки операторов запросов операция службы должна возвращать <xref:System.Linq.IQueryable%601> экземпляра. Операции службы могут обращаться к базовому источнику данных через свойство <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> объекта <xref:System.Data.Services.DataService%601>. Дополнительные сведения см. в разделе [операций службы](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md).  
@@ -22,14 +22,14 @@ ms.locfileid: "59138103"
   
 ### <a name="to-define-a-service-operation-in-the-northwind-data-service"></a>Определение операции службы в службе данных Northwind  
   
-1.  Откройте в проекте службы данных Northwind файл Northwind.svc.  
+1. Откройте в проекте службы данных Northwind файл Northwind.svc.  
   
-2.  Определите в классе `Northwind` метод операции службы с именем `GetOrdersByCity`, как показано дальше:  
+2. Определите в классе `Northwind` метод операции службы с именем `GetOrdersByCity`, как показано дальше:  
   
      [!code-csharp[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#serviceoperationdef)]
      [!code-vb[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#serviceoperationdef)]  
   
-3.  Добавьте в метод `InitializeService` класса `Northwind` следующий код, разрешающий доступ к операции службы:  
+3. Добавьте в метод `InitializeService` класса `Northwind` следующий код, разрешающий доступ к операции службы:  
   
      [!code-csharp[Astoria Northwind Service#ServiceOperationConfig](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#serviceoperationconfig)]
      [!code-vb[Astoria Northwind Service#ServiceOperationConfig](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#serviceoperationconfig)]  

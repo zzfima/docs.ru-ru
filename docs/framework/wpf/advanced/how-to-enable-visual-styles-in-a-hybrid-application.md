@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - visual styles [Windows Forms]
 ms.assetid: 95de9b9c-d804-405c-b2d1-49a88c1e0fe1
-ms.openlocfilehash: 76055358f9dede9749d1575a5f43d5593c1c9b51
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7aa5208a4f378408a01a08a2f4c9dbf2edfa5243
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59176375"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323607"
 ---
 # <a name="how-to-enable-visual-styles-in-a-hybrid-application"></a>Практическое руководство. Включение визуальных стилей в гибридном приложении
 В этом разделе показано, как включить [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] визуальные стили на [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] размещение элементов управления в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-приложения на основе.  
@@ -26,25 +26,25 @@ ms.locfileid: "59176375"
   
 #### <a name="to-enable-windows-forms-visual-styles"></a>Чтобы включить визуальные стили Windows Forms, выполните следующие действия.  
   
-1.  Создание [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] проект приложения с именем `HostingWfWithVisualStyles`.  
+1. Создание [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] проект приложения с именем `HostingWfWithVisualStyles`.  
   
-2.  В обозревателе решений добавьте ссылки на следующие сборки.  
+2. В обозревателе решений добавьте ссылки на следующие сборки.  
   
     -   WindowsFormsIntegration  
   
     -   System.Windows.Forms.  
   
-3.  В области элементов дважды щелкните <xref:System.Windows.Controls.Grid> значок, чтобы поместить <xref:System.Windows.Controls.Grid> элемента в рабочей области конструирования.  
+3. В области элементов дважды щелкните <xref:System.Windows.Controls.Grid> значок, чтобы поместить <xref:System.Windows.Controls.Grid> элемента в рабочей области конструирования.  
   
-4.  В окне «Свойства» задайте значения <xref:System.Windows.FrameworkElement.Height%2A> и <xref:System.Windows.FrameworkElement.Width%2A> свойства **автоматически**.  
+4. В окне «Свойства» задайте значения <xref:System.Windows.FrameworkElement.Height%2A> и <xref:System.Windows.FrameworkElement.Width%2A> свойства **автоматически**.  
   
-5.  В представлении конструирования или XAML, выберите <xref:System.Windows.Window>.  
+5. В представлении конструирования или XAML, выберите <xref:System.Windows.Window>.  
   
-6.  В окне «Свойства» щелкните **события** вкладки.  
+6. В окне «Свойства» щелкните **события** вкладки.  
   
-7.  Дважды щелкните <xref:System.Windows.FrameworkElement.Loaded> событий.
+7. Дважды щелкните <xref:System.Windows.FrameworkElement.Loaded> событий.
   
-8.  В файле MainWindow.xaml.vb или MainWindow.xaml.cs вставьте следующий код для обработки <xref:System.Windows.FrameworkElement.Loaded> событий.  
+8. В файле MainWindow.xaml.vb или MainWindow.xaml.cs вставьте следующий код для обработки <xref:System.Windows.FrameworkElement.Loaded> событий.  
   
      [!code-csharp[HostingWfWithVisualStyles#11](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingWfWithVisualStyles/CSharp/HostingWfWithVisualStyles/Window1.xaml.cs#11)]
      [!code-vb[HostingWfWithVisualStyles#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HostingWfWithVisualStyles/VisualBasic/HostingWfWithVisualStyles/Window1.xaml.vb#11)]  
@@ -58,11 +58,11 @@ ms.locfileid: "59176375"
   
 #### <a name="to-disable-windows-forms-visual-styles"></a>Чтобы отключить визуальные стили Windows Forms, выполните следующие действия.  
   
-1.  Откройте файл MainWindow.xaml.vb или MainWindow.xaml.cs в редакторе кода.  
+1. Откройте файл MainWindow.xaml.vb или MainWindow.xaml.cs в редакторе кода.  
   
-2.  Закомментируйте вызов <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> метод.  
+2. Закомментируйте вызов <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> метод.  
   
-3.  Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его.  
+3. Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его.  
   
      [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Элемент управления отрисовывается с системным стилем по умолчанию.  
   

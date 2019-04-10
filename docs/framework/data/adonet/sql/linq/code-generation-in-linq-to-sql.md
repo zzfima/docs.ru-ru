@@ -2,21 +2,21 @@
 title: Создание кода в LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: ddcbdaa1-e7fa-4d85-a379-313b49965c07
-ms.openlocfilehash: 48035b0f7b4a8c9a37fade5dfc2e2c45ea779dba
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6565655cdb3222a8c9fa7e7759bac09d57ee269b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59174893"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321592"
 ---
 # <a name="code-generation-in-linq-to-sql"></a>Создание кода в LINQ to SQL
 Создание кода, представляющего базу данных, можно выполнить с помощью конструктора [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] или программы командной строки SQLMetal. В любом случае полный процесс создания кода включает три этапа.  
   
-1.  *Средство извлечения DBML* извлекает сведения о схеме из базы данных и перекомпилирует эти сведения в XML-файл DBML.  
+1. *Средство извлечения DBML* извлекает сведения о схеме из базы данных и перекомпилирует эти сведения в XML-файл DBML.  
   
-2.  Файл DBML сканируется *средством проверки DBML* наличие ошибок.  
+2. Файл DBML сканируется *средством проверки DBML* наличие ошибок.  
   
-3.  Если ошибки не обнаружены, файл передается в генератор кода.  
+3. Если ошибки не обнаружены, файл передается в генератор кода.  
   
  Дополнительные сведения см. в разделе [SQLMetal.exe (средство создания кода)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md). Разработчики, использующие Visual Studio можно также использовать [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] для создания кода. См. в разделе [средства LINQ to SQL в Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
