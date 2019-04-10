@@ -7,29 +7,30 @@ helpviewer_keywords:
 - controls [WPF], Image
 - Image control [WPF]
 ms.assetid: e6e51cf9-8fa1-457e-856b-a5e513bc5caf
-ms.openlocfilehash: f55036d4fdf4576faab50be7b42cf7a4077e6a3b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5c300df2c63f4fa852c8cce318a5461f3be5f226
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376277"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227565"
 ---
-# <a name="image-how-to-topics"></a><span data-ttu-id="4152f-102">Разделы пошагового руководства, посвященные изображениям</span><span class="sxs-lookup"><span data-stu-id="4152f-102">Image How-to Topics</span></span>
-<span data-ttu-id="4152f-103">В этом разделе описываются способы использования <xref:System.Windows.Controls.Image> элемент.</span><span class="sxs-lookup"><span data-stu-id="4152f-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Image> element.</span></span>  
+# <a name="image-how-to-topics"></a><span data-ttu-id="d7e00-102">Разделы пошагового руководства, посвященные изображениям</span><span class="sxs-lookup"><span data-stu-id="d7e00-102">Image How-to Topics</span></span>
+<span data-ttu-id="d7e00-103">В этом разделе описываются способы использования <xref:System.Windows.Controls.Image> элемент.</span><span class="sxs-lookup"><span data-stu-id="d7e00-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Image> element.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="4152f-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="4152f-104">In This Section</span></span>  
- [<span data-ttu-id="4152f-105">Использование элемента изображения</span><span class="sxs-lookup"><span data-stu-id="4152f-105">Use the Image Element</span></span>](how-to-use-the-image-element.md)  
-  [<span data-ttu-id="4152f-106">Преобразование изображения в оттенки серого</span><span class="sxs-lookup"><span data-stu-id="4152f-106">Convert an Image to Greyscale</span></span>](how-to-convert-an-image-to-greyscale.md)  
-  [<span data-ttu-id="4152f-107">Обрезка изображения</span><span class="sxs-lookup"><span data-stu-id="4152f-107">Crop an Image</span></span>](how-to-crop-an-image.md)  
-  [<span data-ttu-id="4152f-108">Поворот изображения</span><span class="sxs-lookup"><span data-stu-id="4152f-108">Rotate an Image</span></span>](how-to-rotate-an-image.md)  
+## <a name="in-this-section"></a><span data-ttu-id="d7e00-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="d7e00-104">In This Section</span></span>  
+ [<span data-ttu-id="d7e00-105">Использование элемента изображения</span><span class="sxs-lookup"><span data-stu-id="d7e00-105">Use the Image Element</span></span>](how-to-use-the-image-element.md)  
+  [<span data-ttu-id="d7e00-106">Преобразование изображения в оттенки серого</span><span class="sxs-lookup"><span data-stu-id="d7e00-106">Convert an Image to Greyscale</span></span>](how-to-convert-an-image-to-greyscale.md)  
+  [<span data-ttu-id="d7e00-107">Обрезка изображения</span><span class="sxs-lookup"><span data-stu-id="d7e00-107">Crop an Image</span></span>](how-to-crop-an-image.md)  
+  [<span data-ttu-id="d7e00-108">Поворот изображения</span><span class="sxs-lookup"><span data-stu-id="d7e00-108">Rotate an Image</span></span>](how-to-rotate-an-image.md)  
   
-## <a name="reference"></a><span data-ttu-id="4152f-109">Ссылка</span><span class="sxs-lookup"><span data-stu-id="4152f-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="d7e00-109">Ссылка</span><span class="sxs-lookup"><span data-stu-id="d7e00-109">Reference</span></span>  
  <xref:System.Windows.Controls.Image>  
   
  <xref:System.Windows.Media.Imaging.BitmapImage>  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a><span data-ttu-id="4152f-110">См. также</span><span class="sxs-lookup"><span data-stu-id="4152f-110">See also</span></span>
-- [<span data-ttu-id="4152f-111">Общие сведения об обработке изображений</span><span class="sxs-lookup"><span data-stu-id="4152f-111">Imaging Overview</span></span>](../graphics-multimedia/imaging-overview.md)
-- [<span data-ttu-id="4152f-112">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="4152f-112">How-to Topics</span></span>](../graphics-multimedia/imaging-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="d7e00-110">См. также</span><span class="sxs-lookup"><span data-stu-id="d7e00-110">See also</span></span>
+
+- [<span data-ttu-id="d7e00-111">Общие сведения об обработке изображений</span><span class="sxs-lookup"><span data-stu-id="d7e00-111">Imaging Overview</span></span>](../graphics-multimedia/imaging-overview.md)
+- [<span data-ttu-id="d7e00-112">Практические руководства</span><span class="sxs-lookup"><span data-stu-id="d7e00-112">How-to Topics</span></span>](../graphics-multimedia/imaging-how-to-topics.md)

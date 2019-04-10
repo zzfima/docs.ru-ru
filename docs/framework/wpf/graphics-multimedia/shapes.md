@@ -14,21 +14,22 @@ helpviewer_keywords:
 - stretchable Shapes [WPF]
 - Shape objects [WPF]
 ms.assetid: 893253b8-c2df-4f22-961d-cbc533d64c79
-ms.openlocfilehash: 5c4f76ee753ed6caa30d15a51c341a2edb64011d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c25e26130adc7f012d375f35a173a4b5dc9871f0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57350713"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217774"
 ---
-# <a name="shapes"></a><span data-ttu-id="401fe-102">Фигур</span><span class="sxs-lookup"><span data-stu-id="401fe-102">Shapes</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="401fe-103">предоставляет поддержку для рисования основных фигур с помощью <xref:System.Windows.Shapes.Shape> класса.</span><span class="sxs-lookup"><span data-stu-id="401fe-103">provides support for drawing basic shapes using the <xref:System.Windows.Shapes.Shape> class.</span></span> <span data-ttu-id="401fe-104">Объекты фигур являются производными от <xref:System.Windows.FrameworkElement> и таким образом, участвовать в системе макета и можно ли рисовать просто с помощью [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="401fe-104">Shape objects derive from <xref:System.Windows.FrameworkElement> and as such, participate in the layout system and can be drawn simply using [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span></span>  
+# <a name="shapes"></a><span data-ttu-id="97f54-102">Фигур</span><span class="sxs-lookup"><span data-stu-id="97f54-102">Shapes</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="97f54-103">предоставляет поддержку для рисования основных фигур с помощью <xref:System.Windows.Shapes.Shape> класса.</span><span class="sxs-lookup"><span data-stu-id="97f54-103">provides support for drawing basic shapes using the <xref:System.Windows.Shapes.Shape> class.</span></span> <span data-ttu-id="97f54-104">Объекты фигур являются производными от <xref:System.Windows.FrameworkElement> и таким образом, участвовать в системе макета и можно ли рисовать просто с помощью [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="97f54-104">Shape objects derive from <xref:System.Windows.FrameworkElement> and as such, participate in the layout system and can be drawn simply using [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="401fe-105">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="401fe-105">In This Section</span></span>  
- [<span data-ttu-id="401fe-106">Обзор фигур и базовых средств рисования в приложении WPF</span><span class="sxs-lookup"><span data-stu-id="401fe-106">Shapes and Basic Drawing in WPF Overview</span></span>](shapes-and-basic-drawing-in-wpf-overview.md)  
- [<span data-ttu-id="401fe-107">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="401fe-107">How-to Topics</span></span>](shapes-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="97f54-105">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="97f54-105">In This Section</span></span>  
+ [<span data-ttu-id="97f54-106">Обзор фигур и базовых средств рисования в приложении WPF</span><span class="sxs-lookup"><span data-stu-id="97f54-106">Shapes and Basic Drawing in WPF Overview</span></span>](shapes-and-basic-drawing-in-wpf-overview.md)  
+ [<span data-ttu-id="97f54-107">Практические руководства</span><span class="sxs-lookup"><span data-stu-id="97f54-107">How-to Topics</span></span>](shapes-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="401fe-108">См. также</span><span class="sxs-lookup"><span data-stu-id="401fe-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="97f54-108">См. также</span><span class="sxs-lookup"><span data-stu-id="97f54-108">See also</span></span>
+
 - <xref:System.Windows.Shapes.Shape>
-- [<span data-ttu-id="401fe-109">Двумерная графика и изображения</span><span class="sxs-lookup"><span data-stu-id="401fe-109">2D Graphics and Imaging</span></span>](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [<span data-ttu-id="401fe-110">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="401fe-110">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="97f54-109">Двумерная графика и изображения</span><span class="sxs-lookup"><span data-stu-id="97f54-109">2D Graphics and Imaging</span></span>](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [<span data-ttu-id="97f54-110">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="97f54-110">Graphics and Multimedia</span></span>](index.md)

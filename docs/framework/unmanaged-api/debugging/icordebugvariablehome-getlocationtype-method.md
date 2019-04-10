@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ba0387b84f8d32831b79dd6c361bcdbb78f8bbba
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: af879cbbf8edfd05e79d9b77b0c1fb71b2c835c3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57499503"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224303"
 ---
-# <a name="icordebugvariablehomegetlocationtype-method"></a><span data-ttu-id="926c3-102">Метод ICorDebugVariableHome::GetLocationType</span><span class="sxs-lookup"><span data-stu-id="926c3-102">ICorDebugVariableHome::GetLocationType Method</span></span>
-<span data-ttu-id="926c3-103">Получает тип переменной собственному расположению.</span><span class="sxs-lookup"><span data-stu-id="926c3-103">Gets the type of the variable's native location.</span></span>  
+# <a name="icordebugvariablehomegetlocationtype-method"></a><span data-ttu-id="baf04-102">Метод ICorDebugVariableHome::GetLocationType</span><span class="sxs-lookup"><span data-stu-id="baf04-102">ICorDebugVariableHome::GetLocationType Method</span></span>
+<span data-ttu-id="baf04-103">Получает тип переменной собственному расположению.</span><span class="sxs-lookup"><span data-stu-id="baf04-103">Gets the type of the variable's native location.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="926c3-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="926c3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="baf04-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="baf04-104">Syntax</span></span>  
   
 ```  
 HRESULT GetLocationType(  
@@ -35,19 +35,20 @@ HRESULT GetLocationType(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="926c3-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="926c3-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="baf04-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="baf04-105">Parameters</span></span>  
  `pLocationType`  
- <span data-ttu-id="926c3-106">[out] Указатель на тип переменной собственному расположению.</span><span class="sxs-lookup"><span data-stu-id="926c3-106">[out] A pointer to the type of the variable's native location.</span></span>  <span data-ttu-id="926c3-107">См. в разделе [VariableLocationType](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md) перечисления Дополнительные сведения.</span><span class="sxs-lookup"><span data-stu-id="926c3-107">See the [VariableLocationType](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md) enumeration for more information.</span></span>  
+ <span data-ttu-id="baf04-106">[out] Указатель на тип переменной собственному расположению.</span><span class="sxs-lookup"><span data-stu-id="baf04-106">[out] A pointer to the type of the variable's native location.</span></span>  <span data-ttu-id="baf04-107">См. в разделе [VariableLocationType](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md) перечисления Дополнительные сведения.</span><span class="sxs-lookup"><span data-stu-id="baf04-107">See the [VariableLocationType](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md) enumeration for more information.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="926c3-108">Требования</span><span class="sxs-lookup"><span data-stu-id="926c3-108">Requirements</span></span>  
- <span data-ttu-id="926c3-109">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="926c3-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="baf04-108">Требования</span><span class="sxs-lookup"><span data-stu-id="baf04-108">Requirements</span></span>  
+ <span data-ttu-id="baf04-109">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="baf04-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="926c3-110">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="926c3-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="baf04-110">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="baf04-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="926c3-111">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="926c3-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="baf04-111">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="baf04-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="926c3-112">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="926c3-112">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
+ **<span data-ttu-id="baf04-112">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="baf04-112">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="926c3-113">См. также</span><span class="sxs-lookup"><span data-stu-id="926c3-113">See also</span></span>
-- [<span data-ttu-id="926c3-114">Интерфейс ICorDebugVariableHome</span><span class="sxs-lookup"><span data-stu-id="926c3-114">ICorDebugVariableHome Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
-- [<span data-ttu-id="926c3-115">Перечисление VariableLocationType</span><span class="sxs-lookup"><span data-stu-id="926c3-115">VariableLocationType Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md)
+## <a name="see-also"></a><span data-ttu-id="baf04-113">См. также</span><span class="sxs-lookup"><span data-stu-id="baf04-113">See also</span></span>
+
+- [<span data-ttu-id="baf04-114">Интерфейс ICorDebugVariableHome</span><span class="sxs-lookup"><span data-stu-id="baf04-114">ICorDebugVariableHome Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+- [<span data-ttu-id="baf04-115">Перечисление VariableLocationType</span><span class="sxs-lookup"><span data-stu-id="baf04-115">VariableLocationType Enumeration</span></span>](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md)

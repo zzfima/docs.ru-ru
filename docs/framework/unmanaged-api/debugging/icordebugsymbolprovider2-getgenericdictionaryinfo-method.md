@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: ba28fe4e-5491-4670-bff7-7fde572d7593
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5696dc8fcf4b5c84e12ca60f93679f7b67d5f7e9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: f171af8dbfa4e812711e95e5587b314753cd9350
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57476325"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216825"
 ---
-# <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a><span data-ttu-id="f9398-102">Метод ICorDebugSymbolProvider2::GetGenericDictionaryInfo</span><span class="sxs-lookup"><span data-stu-id="f9398-102">ICorDebugSymbolProvider2::GetGenericDictionaryInfo Method</span></span>
-<span data-ttu-id="f9398-103">Получает универсальную карту словаря</span><span class="sxs-lookup"><span data-stu-id="f9398-103">Retrieves a generic dictionary map.</span></span>  
+# <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a><span data-ttu-id="ec33e-102">Метод ICorDebugSymbolProvider2::GetGenericDictionaryInfo</span><span class="sxs-lookup"><span data-stu-id="ec33e-102">ICorDebugSymbolProvider2::GetGenericDictionaryInfo Method</span></span>
+<span data-ttu-id="ec33e-103">Получает универсальную карту словаря</span><span class="sxs-lookup"><span data-stu-id="ec33e-103">Retrieves a generic dictionary map.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f9398-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f9398-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ec33e-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="ec33e-104">Syntax</span></span>  
   
 ```  
 HRESULT GetGenericDictionaryInfo(  
@@ -22,64 +22,65 @@ HRESULT GetGenericDictionaryInfo(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f9398-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="f9398-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ec33e-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="ec33e-105">Parameters</span></span>  
  `ppMemoryBuffer`  
- <span data-ttu-id="f9398-106">[out] Указатель на адрес [ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md) объекта, содержащего универсальную карту словаря.</span><span class="sxs-lookup"><span data-stu-id="f9398-106">[out] A pointer to the address of an [ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md) object containing the generic dictionary map.</span></span> <span data-ttu-id="f9398-107">Дополнительные сведения см. в разделе "Примечания".</span><span class="sxs-lookup"><span data-stu-id="f9398-107">See the Remarks section for more information.</span></span>  
+ <span data-ttu-id="ec33e-106">[out] Указатель на адрес [ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md) объекта, содержащего универсальную карту словаря.</span><span class="sxs-lookup"><span data-stu-id="ec33e-106">[out] A pointer to the address of an [ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md) object containing the generic dictionary map.</span></span> <span data-ttu-id="ec33e-107">Дополнительные сведения см. в разделе "Примечания".</span><span class="sxs-lookup"><span data-stu-id="ec33e-107">See the Remarks section for more information.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f9398-108">Примечания</span><span class="sxs-lookup"><span data-stu-id="f9398-108">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ec33e-108">Примечания</span><span class="sxs-lookup"><span data-stu-id="ec33e-108">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="f9398-109">Этот метод доступен только в машинном коде .NET.</span><span class="sxs-lookup"><span data-stu-id="f9398-109">This method is available with .NET Native only.</span></span>  
+>  <span data-ttu-id="ec33e-109">Этот метод доступен только в машинном коде .NET.</span><span class="sxs-lookup"><span data-stu-id="ec33e-109">This method is available with .NET Native only.</span></span>  
   
- <span data-ttu-id="f9398-110">Карта состоит из двух разделов верхнего уровня.</span><span class="sxs-lookup"><span data-stu-id="f9398-110">The map consists of two top-level sections:</span></span>  
+ <span data-ttu-id="ec33e-110">Карта состоит из двух разделов верхнего уровня.</span><span class="sxs-lookup"><span data-stu-id="ec33e-110">The map consists of two top-level sections:</span></span>  
   
--   <span data-ttu-id="f9398-111">Объект [directory](#Directory) содержащий относительные виртуальные адреса (RVA) всех словарей, включенных в эту карту.</span><span class="sxs-lookup"><span data-stu-id="f9398-111">A [directory](#Directory) containing the relative virtual addresses (RVA) of all dictionaries included in this map.</span></span>  
+-   <span data-ttu-id="ec33e-111">Объект [directory](#Directory) содержащий относительные виртуальные адреса (RVA) всех словарей, включенных в эту карту.</span><span class="sxs-lookup"><span data-stu-id="ec33e-111">A [directory](#Directory) containing the relative virtual addresses (RVA) of all dictionaries included in this map.</span></span>  
   
--   <span data-ttu-id="f9398-112">Байт синхронизированная [кучи](#Heap) , содержащий сведения о создании экземпляра объекта.</span><span class="sxs-lookup"><span data-stu-id="f9398-112">A byte-aligned [heap](#Heap) that contains object instantiation information.</span></span> <span data-ttu-id="f9398-113">Она запускается сразу после последней записи каталога.</span><span class="sxs-lookup"><span data-stu-id="f9398-113">It starts immediately after the last directory entry.</span></span>  
+-   <span data-ttu-id="ec33e-112">Байт синхронизированная [кучи](#Heap) , содержащий сведения о создании экземпляра объекта.</span><span class="sxs-lookup"><span data-stu-id="ec33e-112">A byte-aligned [heap](#Heap) that contains object instantiation information.</span></span> <span data-ttu-id="ec33e-113">Она запускается сразу после последней записи каталога.</span><span class="sxs-lookup"><span data-stu-id="ec33e-113">It starts immediately after the last directory entry.</span></span>  
   
 <a name="Directory"></a>   
-## <a name="the-directory"></a><span data-ttu-id="f9398-114">Каталог</span><span class="sxs-lookup"><span data-stu-id="f9398-114">The Directory</span></span>  
- <span data-ttu-id="f9398-115">Каждая запись в каталоге ссылается на смещение в куче; то есть это смещение относительно начала кучи.</span><span class="sxs-lookup"><span data-stu-id="f9398-115">Each entry in the directory refers to an offset inside the heap; that is, it is an offset that is relative to the start of the heap.</span></span> <span data-ttu-id="f9398-116">Значения отдельных записей, не обязательно должны быть уникальными; несколько записей каталога могут указывать на одно и то же смещение в куче.</span><span class="sxs-lookup"><span data-stu-id="f9398-116">The value of individual entries is not necessarily unique; it is possible for multiple directory entries to point to the same offset in the heap.</span></span>  
+## <a name="the-directory"></a><span data-ttu-id="ec33e-114">Каталог</span><span class="sxs-lookup"><span data-stu-id="ec33e-114">The Directory</span></span>  
+ <span data-ttu-id="ec33e-115">Каждая запись в каталоге ссылается на смещение в куче; то есть это смещение относительно начала кучи.</span><span class="sxs-lookup"><span data-stu-id="ec33e-115">Each entry in the directory refers to an offset inside the heap; that is, it is an offset that is relative to the start of the heap.</span></span> <span data-ttu-id="ec33e-116">Значения отдельных записей, не обязательно должны быть уникальными; несколько записей каталога могут указывать на одно и то же смещение в куче.</span><span class="sxs-lookup"><span data-stu-id="ec33e-116">The value of individual entries is not necessarily unique; it is possible for multiple directory entries to point to the same offset in the heap.</span></span>  
   
- <span data-ttu-id="f9398-117">Часть каталога универсальной карты словаря имеет следующую структуру.</span><span class="sxs-lookup"><span data-stu-id="f9398-117">The directory portion of the generic dictionary map has the following structure:</span></span>  
+ <span data-ttu-id="ec33e-117">Часть каталога универсальной карты словаря имеет следующую структуру.</span><span class="sxs-lookup"><span data-stu-id="ec33e-117">The directory portion of the generic dictionary map has the following structure:</span></span>  
   
--   <span data-ttu-id="f9398-118">Первые 4 байта содержит число записей словаря (т. е. число относительных виртуальных адресов в словаре).</span><span class="sxs-lookup"><span data-stu-id="f9398-118">The first 4 bytes contains the number of dictionary entries (that is, the number of relative virtual addresses in the dictionary).</span></span> <span data-ttu-id="f9398-119">Мы будем называть это значение как *N*. Если старший бит установлен, записи сортируются по относительному виртуальному адресу в порядке возрастания.</span><span class="sxs-lookup"><span data-stu-id="f9398-119">We will refer to this value as *N*. If the high bit is set, the entries are sorted by relative virtual address in ascending order.</span></span>  
+-   <span data-ttu-id="ec33e-118">Первые 4 байта содержит число записей словаря (т. е. число относительных виртуальных адресов в словаре).</span><span class="sxs-lookup"><span data-stu-id="ec33e-118">The first 4 bytes contains the number of dictionary entries (that is, the number of relative virtual addresses in the dictionary).</span></span> <span data-ttu-id="ec33e-119">Мы будем называть это значение как *N*. Если старший бит установлен, записи сортируются по относительному виртуальному адресу в порядке возрастания.</span><span class="sxs-lookup"><span data-stu-id="ec33e-119">We will refer to this value as *N*. If the high bit is set, the entries are sorted by relative virtual address in ascending order.</span></span>  
   
--   <span data-ttu-id="f9398-120">*N* записей каталога.</span><span class="sxs-lookup"><span data-stu-id="f9398-120">The *N* directory entries follow.</span></span> <span data-ttu-id="f9398-121">Каждая запись состоит из 8 байт в двух 4-байтовых сегментах.</span><span class="sxs-lookup"><span data-stu-id="f9398-121">Each entry consists of 8 bytes, in two 4-byte segments:</span></span>  
+-   <span data-ttu-id="ec33e-120">*N* записей каталога.</span><span class="sxs-lookup"><span data-stu-id="ec33e-120">The *N* directory entries follow.</span></span> <span data-ttu-id="ec33e-121">Каждая запись состоит из 8 байт в двух 4-байтовых сегментах.</span><span class="sxs-lookup"><span data-stu-id="ec33e-121">Each entry consists of 8 bytes, in two 4-byte segments:</span></span>  
   
-    -   <span data-ttu-id="f9398-122">Байт 0-3: RVA; относительный виртуальный адрес словаря.</span><span class="sxs-lookup"><span data-stu-id="f9398-122">Bytes 0-3: RVA; the dictionary's relative virtual address.</span></span>  
+    -   <span data-ttu-id="ec33e-122">Байт 0-3: RVA; относительный виртуальный адрес словаря.</span><span class="sxs-lookup"><span data-stu-id="ec33e-122">Bytes 0-3: RVA; the dictionary's relative virtual address.</span></span>  
   
-    -   <span data-ttu-id="f9398-123">Байты 4 – 7: Смещение; смещение относительно начала кучи.</span><span class="sxs-lookup"><span data-stu-id="f9398-123">Bytes 4-7: Offset; an offset relative to the start of the heap.</span></span>  
+    -   <span data-ttu-id="ec33e-123">Байты 4 – 7: Смещение; смещение относительно начала кучи.</span><span class="sxs-lookup"><span data-stu-id="ec33e-123">Bytes 4-7: Offset; an offset relative to the start of the heap.</span></span>  
   
 <a name="Heap"></a>   
-## <a name="the-heap"></a><span data-ttu-id="f9398-124">Куча</span><span class="sxs-lookup"><span data-stu-id="f9398-124">The Heap</span></span>  
- <span data-ttu-id="f9398-125">Размер кучи может быть вычислен модулем чтения потока путем вычитания длины потока из размера каталога + 4.</span><span class="sxs-lookup"><span data-stu-id="f9398-125">The heap’s size can be computed by a stream reader by subtracting the length of the stream from the directory size + 4.</span></span> <span data-ttu-id="f9398-126">Другими словами:</span><span class="sxs-lookup"><span data-stu-id="f9398-126">In other words:</span></span>  
+## <a name="the-heap"></a><span data-ttu-id="ec33e-124">Куча</span><span class="sxs-lookup"><span data-stu-id="ec33e-124">The Heap</span></span>  
+ <span data-ttu-id="ec33e-125">Размер кучи может быть вычислен модулем чтения потока путем вычитания длины потока из размера каталога + 4.</span><span class="sxs-lookup"><span data-stu-id="ec33e-125">The heap’s size can be computed by a stream reader by subtracting the length of the stream from the directory size + 4.</span></span> <span data-ttu-id="ec33e-126">Другими словами:</span><span class="sxs-lookup"><span data-stu-id="ec33e-126">In other words:</span></span>  
   
 ```  
 Heap Size = Stream.Length – (Directory Size + 4)  
 ```  
   
- <span data-ttu-id="f9398-127">где размер каталога равен `N * 8`.</span><span class="sxs-lookup"><span data-stu-id="f9398-127">where the directory size is `N * 8`.</span></span>  
+ <span data-ttu-id="ec33e-127">где размер каталога равен `N * 8`.</span><span class="sxs-lookup"><span data-stu-id="ec33e-127">where the directory size is `N * 8`.</span></span>  
   
- <span data-ttu-id="f9398-128">Формат каждого элемента сведений о создании экземпляра в куче выглядит следующим образом.</span><span class="sxs-lookup"><span data-stu-id="f9398-128">The format for each instantiation information item on the heap is:</span></span>  
+ <span data-ttu-id="ec33e-128">Формат каждого элемента сведений о создании экземпляра в куче выглядит следующим образом.</span><span class="sxs-lookup"><span data-stu-id="ec33e-128">The format for each instantiation information item on the heap is:</span></span>  
   
--   <span data-ttu-id="f9398-129">Длина этого элемента сведений о создании экземпляра в байтах в сжатом формате ECMA метаданных.</span><span class="sxs-lookup"><span data-stu-id="f9398-129">The length of this instantiation information item in bytes in compressed ECMA metadata format.</span></span> <span data-ttu-id="f9398-130">Значение исключает эти сведения о длине.</span><span class="sxs-lookup"><span data-stu-id="f9398-130">The value excludes this length information.</span></span>  
+-   <span data-ttu-id="ec33e-129">Длина этого элемента сведений о создании экземпляра в байтах в сжатом формате ECMA метаданных.</span><span class="sxs-lookup"><span data-stu-id="ec33e-129">The length of this instantiation information item in bytes in compressed ECMA metadata format.</span></span> <span data-ttu-id="ec33e-130">Значение исключает эти сведения о длине.</span><span class="sxs-lookup"><span data-stu-id="ec33e-130">The value excludes this length information.</span></span>  
   
--   <span data-ttu-id="f9398-131">Количество типов универсального создания экземпляра или *T*, в сжатом формате ECMA метаданных.</span><span class="sxs-lookup"><span data-stu-id="f9398-131">The number of generic instantiation types, or *T*, in compressed ECMA metadata format.</span></span>  
+-   <span data-ttu-id="ec33e-131">Количество типов универсального создания экземпляра или *T*, в сжатом формате ECMA метаданных.</span><span class="sxs-lookup"><span data-stu-id="ec33e-131">The number of generic instantiation types, or *T*, in compressed ECMA metadata format.</span></span>  
   
--   <span data-ttu-id="f9398-132">*T* типов, каждый из которых представлен в формате ECMA сигнатуры типа.</span><span class="sxs-lookup"><span data-stu-id="f9398-132">*T* types, each represented in ECMA type signature format.</span></span>  
+-   <span data-ttu-id="ec33e-132">*T* типов, каждый из которых представлен в формате ECMA сигнатуры типа.</span><span class="sxs-lookup"><span data-stu-id="ec33e-132">*T* types, each represented in ECMA type signature format.</span></span>  
   
- <span data-ttu-id="f9398-133">Включение длины для каждого элемента кучи позволяет простую сортировку раздела каталога без влияния на кучу.</span><span class="sxs-lookup"><span data-stu-id="f9398-133">The inclusion of the length for each heap element enables simple sorting of the directory section without affecting the heap.</span></span>  
+ <span data-ttu-id="ec33e-133">Включение длины для каждого элемента кучи позволяет простую сортировку раздела каталога без влияния на кучу.</span><span class="sxs-lookup"><span data-stu-id="ec33e-133">The inclusion of the length for each heap element enables simple sorting of the directory section without affecting the heap.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f9398-134">Требования</span><span class="sxs-lookup"><span data-stu-id="f9398-134">Requirements</span></span>  
- <span data-ttu-id="f9398-135">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f9398-135">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ec33e-134">Требования</span><span class="sxs-lookup"><span data-stu-id="ec33e-134">Requirements</span></span>  
+ <span data-ttu-id="ec33e-135">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ec33e-135">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f9398-136">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f9398-136">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="ec33e-136">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ec33e-136">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f9398-137">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f9398-137">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ec33e-137">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ec33e-137">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f9398-138">**Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f9398-138">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ **<span data-ttu-id="ec33e-138">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="ec33e-138">.NET Framework Versions:</span></span>** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="f9398-139">См. также</span><span class="sxs-lookup"><span data-stu-id="f9398-139">See also</span></span>
-- [<span data-ttu-id="f9398-140">Интерфейс ICorDebugSymbolProvider2</span><span class="sxs-lookup"><span data-stu-id="f9398-140">ICorDebugSymbolProvider2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider2-interface.md)
-- [<span data-ttu-id="f9398-141">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="f9398-141">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="ec33e-139">См. также</span><span class="sxs-lookup"><span data-stu-id="ec33e-139">See also</span></span>
+
+- [<span data-ttu-id="ec33e-140">Интерфейс ICorDebugSymbolProvider2</span><span class="sxs-lookup"><span data-stu-id="ec33e-140">ICorDebugSymbolProvider2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider2-interface.md)
+- [<span data-ttu-id="ec33e-141">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="ec33e-141">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

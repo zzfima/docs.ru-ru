@@ -16,36 +16,37 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f7238574334b599c7922693c7e9a476a51785491
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1a9a647a9c77a3c1f82ae3691e2a5e5b2f544cad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967334"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221968"
 ---
-# <a name="icordebugboxvalue-interface"></a><span data-ttu-id="f420c-102">Интерфейс ICorDebugBoxValue</span><span class="sxs-lookup"><span data-stu-id="f420c-102">ICorDebugBoxValue Interface</span></span>
+# <a name="icordebugboxvalue-interface"></a><span data-ttu-id="90cb0-102">Интерфейс ICorDebugBoxValue</span><span class="sxs-lookup"><span data-stu-id="90cb0-102">ICorDebugBoxValue Interface</span></span>
 
-<span data-ttu-id="f420c-103">Подкласс «ICorDebugHeapValue», представляющий упакованное значение объектов класса.</span><span class="sxs-lookup"><span data-stu-id="f420c-103">A subclass of "ICorDebugHeapValue" that represents a boxed value class object.</span></span>  
+<span data-ttu-id="90cb0-103">Подкласс «ICorDebugHeapValue», представляющий упакованное значение объектов класса.</span><span class="sxs-lookup"><span data-stu-id="90cb0-103">A subclass of "ICorDebugHeapValue" that represents a boxed value class object.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="f420c-104">Методы</span><span class="sxs-lookup"><span data-stu-id="f420c-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="90cb0-104">Методы</span><span class="sxs-lookup"><span data-stu-id="90cb0-104">Methods</span></span>  
   
-|<span data-ttu-id="f420c-105">Метод</span><span class="sxs-lookup"><span data-stu-id="f420c-105">Method</span></span>|<span data-ttu-id="f420c-106">Описание:</span><span class="sxs-lookup"><span data-stu-id="f420c-106">Description</span></span>|  
+|<span data-ttu-id="90cb0-105">Метод</span><span class="sxs-lookup"><span data-stu-id="90cb0-105">Method</span></span>|<span data-ttu-id="90cb0-106">Описание</span><span class="sxs-lookup"><span data-stu-id="90cb0-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="f420c-107">Метод GetObject</span><span class="sxs-lookup"><span data-stu-id="f420c-107">GetObject Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugboxvalue-getobject-method.md)|<span data-ttu-id="f420c-108">Получает указатель интерфейса на упакованный экземпляр «ICorDebugObjectValue».</span><span class="sxs-lookup"><span data-stu-id="f420c-108">Gets an interface pointer to the boxed "ICorDebugObjectValue" instance.</span></span>|  
+|[<span data-ttu-id="90cb0-107">Метод GetObject</span><span class="sxs-lookup"><span data-stu-id="90cb0-107">GetObject Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugboxvalue-getobject-method.md)|<span data-ttu-id="90cb0-108">Получает указатель интерфейса на упакованный экземпляр «ICorDebugObjectValue».</span><span class="sxs-lookup"><span data-stu-id="90cb0-108">Gets an interface pointer to the boxed "ICorDebugObjectValue" instance.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="f420c-109">Примечания</span><span class="sxs-lookup"><span data-stu-id="f420c-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="90cb0-109">Примечания</span><span class="sxs-lookup"><span data-stu-id="90cb0-109">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="f420c-110">Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.</span><span class="sxs-lookup"><span data-stu-id="f420c-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="90cb0-110">Этот интерфейс не поддерживает удаленные вызовы между компьютерами или между процессами.</span><span class="sxs-lookup"><span data-stu-id="90cb0-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f420c-111">Требования</span><span class="sxs-lookup"><span data-stu-id="f420c-111">Requirements</span></span>  
- <span data-ttu-id="f420c-112">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f420c-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="90cb0-111">Требования</span><span class="sxs-lookup"><span data-stu-id="90cb0-111">Requirements</span></span>  
+ <span data-ttu-id="90cb0-112">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="90cb0-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f420c-113">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f420c-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="90cb0-113">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="90cb0-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f420c-114">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f420c-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="90cb0-114">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="90cb0-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f420c-115">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f420c-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="90cb0-115">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="90cb0-115">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="f420c-116">См. также</span><span class="sxs-lookup"><span data-stu-id="f420c-116">See also</span></span>
-- [<span data-ttu-id="f420c-117">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="f420c-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="90cb0-116">См. также</span><span class="sxs-lookup"><span data-stu-id="90cb0-116">See also</span></span>
+
+- [<span data-ttu-id="90cb0-117">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="90cb0-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

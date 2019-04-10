@@ -1,68 +1,68 @@
 ---
-title: Как выполнить Настройка службы WCF, размещенной в IIS с помощью протокола SSL
+title: Практическое руководство. Как настраивать протокол SSL в службе WCF, размещенной в IIS
 ms.date: 03/30/2017
 ms.assetid: df2fe31f-a4bb-4024-92ca-b74ba055e038
-ms.openlocfilehash: ca7343f14215d89b29636776437f5e4a6a8089a1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 336c3800fc033cc12bd9c3fe168ae219b72cab91
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54639982"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214122"
 ---
-# <a name="how-to-configure-an-iis-hosted-wcf-service-with-ssl"></a><span data-ttu-id="f7558-102">Как выполнить Настройка службы WCF, размещенной в IIS с помощью протокола SSL</span><span class="sxs-lookup"><span data-stu-id="f7558-102">How to: Configure an IIS-hosted WCF service with SSL</span></span>
-<span data-ttu-id="f7558-103">В этом разделе описано, как настроить размещенную в IIS службу WCF для использования безопасности транспорта HTTP.</span><span class="sxs-lookup"><span data-stu-id="f7558-103">This topic describes how to set up an IIS-hosted WCF service to use HTTP transport security.</span></span> <span data-ttu-id="f7558-104">Для безопасности транспорта HTTP требуется, чтобы SSL-сертификат был зарегистрирован в службах IIS.</span><span class="sxs-lookup"><span data-stu-id="f7558-104">HTTP transport security requires an SSL certificate to be registered with IIS.</span></span> <span data-ttu-id="f7558-105">Если SSL-сертификат не установлен, для создания тестового сертификата можно использовать службы IIS.</span><span class="sxs-lookup"><span data-stu-id="f7558-105">If you do not have an SSL certificate you can use IIS to generate a test certificate.</span></span> <span data-ttu-id="f7558-106">Затем необходимо добавить SSL-привязку для проекта веб-сайта и установить свойства проверки подлинности веб-сайта.</span><span class="sxs-lookup"><span data-stu-id="f7558-106">Next you must add an SSL binding to the web site and configure the web site’s authentication properties.</span></span> <span data-ttu-id="f7558-107">Наконец, необходимо настроить службу WCF на использование протокола HTTPS.</span><span class="sxs-lookup"><span data-stu-id="f7558-107">Finally you need to configure the WCF service to use HTTPS.</span></span>  
+# <a name="how-to-configure-an-iis-hosted-wcf-service-with-ssl"></a><span data-ttu-id="cd689-102">Практическое руководство. Как настраивать протокол SSL в службе WCF, размещенной в IIS</span><span class="sxs-lookup"><span data-stu-id="cd689-102">How to: Configure an IIS-hosted WCF service with SSL</span></span>
+<span data-ttu-id="cd689-103">В этом разделе описано, как настроить размещенную в IIS службу WCF для использования безопасности транспорта HTTP.</span><span class="sxs-lookup"><span data-stu-id="cd689-103">This topic describes how to set up an IIS-hosted WCF service to use HTTP transport security.</span></span> <span data-ttu-id="cd689-104">Для безопасности транспорта HTTP требуется, чтобы SSL-сертификат был зарегистрирован в службах IIS.</span><span class="sxs-lookup"><span data-stu-id="cd689-104">HTTP transport security requires an SSL certificate to be registered with IIS.</span></span> <span data-ttu-id="cd689-105">Если SSL-сертификат не установлен, для создания тестового сертификата можно использовать службы IIS.</span><span class="sxs-lookup"><span data-stu-id="cd689-105">If you do not have an SSL certificate you can use IIS to generate a test certificate.</span></span> <span data-ttu-id="cd689-106">Затем необходимо добавить SSL-привязку для проекта веб-сайта и установить свойства проверки подлинности веб-сайта.</span><span class="sxs-lookup"><span data-stu-id="cd689-106">Next you must add an SSL binding to the web site and configure the web site’s authentication properties.</span></span> <span data-ttu-id="cd689-107">Наконец, необходимо настроить службу WCF на использование протокола HTTPS.</span><span class="sxs-lookup"><span data-stu-id="cd689-107">Finally you need to configure the WCF service to use HTTPS.</span></span>  
   
-### <a name="creating-a-self-signed-certificate"></a><span data-ttu-id="f7558-108">Создание самозаверяющего сертификата</span><span class="sxs-lookup"><span data-stu-id="f7558-108">Creating a Self-Signed Certificate</span></span>  
+### <a name="creating-a-self-signed-certificate"></a><span data-ttu-id="cd689-108">Создание самозаверяющего сертификата</span><span class="sxs-lookup"><span data-stu-id="cd689-108">Creating a Self-Signed Certificate</span></span>  
   
-1.  <span data-ttu-id="f7558-109">Откройте диспетчер служб IIS (inetmgr.exe) и выберите имя компьютера в левой части представления в виде дерева.</span><span class="sxs-lookup"><span data-stu-id="f7558-109">Open Internet Information Services Manager (inetmgr.exe), and select your computer name in the left-hand tree view.</span></span> <span data-ttu-id="f7558-110">В правой части экрана выберите сертификаты сервера</span><span class="sxs-lookup"><span data-stu-id="f7558-110">On the right-hand side of the screen select Server Certificates</span></span>  
+1.  <span data-ttu-id="cd689-109">Откройте диспетчер служб IIS (inetmgr.exe) и выберите имя компьютера в левой части представления в виде дерева.</span><span class="sxs-lookup"><span data-stu-id="cd689-109">Open Internet Information Services Manager (inetmgr.exe), and select your computer name in the left-hand tree view.</span></span> <span data-ttu-id="cd689-110">В правой части экрана выберите сертификаты сервера</span><span class="sxs-lookup"><span data-stu-id="cd689-110">On the right-hand side of the screen select Server Certificates</span></span>  
   
-     <span data-ttu-id="f7558-111">![Главный экран диспетчера IIS](../../../../docs/framework/wcf/feature-details/media/mg-inetmgrhome.jpg "mg_INetMgrHome")</span><span class="sxs-lookup"><span data-stu-id="f7558-111">![IIS Manager Home Screen](../../../../docs/framework/wcf/feature-details/media/mg-inetmgrhome.jpg "mg_INetMgrHome")</span></span>  
+     <span data-ttu-id="cd689-111">![Главный экран диспетчера IIS](../../../../docs/framework/wcf/feature-details/media/mg-inetmgrhome.jpg "mg_INetMgrHome")</span><span class="sxs-lookup"><span data-stu-id="cd689-111">![IIS Manager Home Screen](../../../../docs/framework/wcf/feature-details/media/mg-inetmgrhome.jpg "mg_INetMgrHome")</span></span>  
   
-2.  <span data-ttu-id="f7558-112">В окне сертификатов сервера щелкните **создать самозаверяющий сертификат...**</span><span class="sxs-lookup"><span data-stu-id="f7558-112">In the Server Certificates window click the **Create Self-Signed Certificate….**</span></span> <span data-ttu-id="f7558-113">Связь.</span><span class="sxs-lookup"><span data-stu-id="f7558-113">Link.</span></span>  
+2.  <span data-ttu-id="cd689-112">В окне сертификатов сервера щелкните **создать самозаверяющий сертификат...**</span><span class="sxs-lookup"><span data-stu-id="cd689-112">In the Server Certificates window click the **Create Self-Signed Certificate….**</span></span> <span data-ttu-id="cd689-113">Связь.</span><span class="sxs-lookup"><span data-stu-id="cd689-113">Link.</span></span>  
   
-     <span data-ttu-id="f7558-114">![Создание самозаверяющего&#45;сертификата со службами IIS](../../../../docs/framework/wcf/feature-details/media/mg-createselfsignedcert.jpg "mg_CreateSelfSignedCert")</span><span class="sxs-lookup"><span data-stu-id="f7558-114">![Creating a self&#45;signed certificate with IIS](../../../../docs/framework/wcf/feature-details/media/mg-createselfsignedcert.jpg "mg_CreateSelfSignedCert")</span></span>  
+     <span data-ttu-id="cd689-114">![Создание самозаверяющего&#45;сертификата со службами IIS](../../../../docs/framework/wcf/feature-details/media/mg-createselfsignedcert.jpg "mg_CreateSelfSignedCert")</span><span class="sxs-lookup"><span data-stu-id="cd689-114">![Creating a self&#45;signed certificate with IIS](../../../../docs/framework/wcf/feature-details/media/mg-createselfsignedcert.jpg "mg_CreateSelfSignedCert")</span></span>  
   
-3.  <span data-ttu-id="f7558-115">Введите понятное имя для самозаверяющего сертификата и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="f7558-115">Enter a friendly name for the self-signed certificate and click **OK**.</span></span>  
+3.  <span data-ttu-id="cd689-115">Введите понятное имя для самозаверяющего сертификата и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="cd689-115">Enter a friendly name for the self-signed certificate and click **OK**.</span></span>  
   
-     <span data-ttu-id="f7558-116">![Создание собственные&#45;диалоговое окно сертификата подписи](../../../../docs/framework/wcf/feature-details/media/mg-mycert.jpg "mg_MyCert")</span><span class="sxs-lookup"><span data-stu-id="f7558-116">![Create Self&#45;Signed Certificate Dialog](../../../../docs/framework/wcf/feature-details/media/mg-mycert.jpg "mg_MyCert")</span></span>  
+     <span data-ttu-id="cd689-116">![Создание собственные&#45;диалоговое окно сертификата подписи](../../../../docs/framework/wcf/feature-details/media/mg-mycert.jpg "mg_MyCert")</span><span class="sxs-lookup"><span data-stu-id="cd689-116">![Create Self&#45;Signed Certificate Dialog](../../../../docs/framework/wcf/feature-details/media/mg-mycert.jpg "mg_MyCert")</span></span>  
   
-     <span data-ttu-id="f7558-117">Сведения о только что созданный самозаверяющий сертификат теперь отображаются в **сертификаты сервера** окна.</span><span class="sxs-lookup"><span data-stu-id="f7558-117">The newly created self-signed certificate details are now shown in the **Server Certificates** window.</span></span>  
+     <span data-ttu-id="cd689-117">Сведения о только что созданный самозаверяющий сертификат теперь отображаются в **сертификаты сервера** окна.</span><span class="sxs-lookup"><span data-stu-id="cd689-117">The newly created self-signed certificate details are now shown in the **Server Certificates** window.</span></span>  
   
-     <span data-ttu-id="f7558-118">![Окно "сертификат сервера"](../../../../docs/framework/wcf/feature-details/media/mg-servercertificatewindow.jpg "mg_ServerCertificateWindow")</span><span class="sxs-lookup"><span data-stu-id="f7558-118">![Server Certificate Window](../../../../docs/framework/wcf/feature-details/media/mg-servercertificatewindow.jpg "mg_ServerCertificateWindow")</span></span>  
+     <span data-ttu-id="cd689-118">![Окно "сертификат сервера"](../../../../docs/framework/wcf/feature-details/media/mg-servercertificatewindow.jpg "mg_ServerCertificateWindow")</span><span class="sxs-lookup"><span data-stu-id="cd689-118">![Server Certificate Window](../../../../docs/framework/wcf/feature-details/media/mg-servercertificatewindow.jpg "mg_ServerCertificateWindow")</span></span>  
   
-     <span data-ttu-id="f7558-119">Созданный сертификат устанавливается в хранилище доверенных корневых центров сертификации.</span><span class="sxs-lookup"><span data-stu-id="f7558-119">The generated certificate is installed in the Trusted Root Certification Authorities store.</span></span>  
+     <span data-ttu-id="cd689-119">Созданный сертификат устанавливается в хранилище доверенных корневых центров сертификации.</span><span class="sxs-lookup"><span data-stu-id="cd689-119">The generated certificate is installed in the Trusted Root Certification Authorities store.</span></span>  
   
-### <a name="add-ssl-binding"></a><span data-ttu-id="f7558-120">Добавление привязки SSL</span><span class="sxs-lookup"><span data-stu-id="f7558-120">Add SSL Binding</span></span>  
+### <a name="add-ssl-binding"></a><span data-ttu-id="cd689-120">Добавление привязки SSL</span><span class="sxs-lookup"><span data-stu-id="cd689-120">Add SSL Binding</span></span>  
   
-1.  <span data-ttu-id="f7558-121">По-прежнему в диспетчер служб IIS, разверните **сайты** папку и затем **Default Web Site** папку в представлении в виде дерева в левой части экрана.</span><span class="sxs-lookup"><span data-stu-id="f7558-121">Still in Internet Information Services Manager, expand the **Sites** folder and then the **Default Web Site** folder in the tree view on the left-hand side of the screen.</span></span>  
+1.  <span data-ttu-id="cd689-121">По-прежнему в диспетчер служб IIS, разверните **сайты** папку и затем **Default Web Site** папку в представлении в виде дерева в левой части экрана.</span><span class="sxs-lookup"><span data-stu-id="cd689-121">Still in Internet Information Services Manager, expand the **Sites** folder and then the **Default Web Site** folder in the tree view on the left-hand side of the screen.</span></span>  
   
-2.  <span data-ttu-id="f7558-122">Нажмите кнопку **привязки...**</span><span class="sxs-lookup"><span data-stu-id="f7558-122">Click the **Bindings….**</span></span> <span data-ttu-id="f7558-123">Ссылка в **действия** в правой верхней части окна.</span><span class="sxs-lookup"><span data-stu-id="f7558-123">Link in the **Actions** section in the upper right hand portion of the window.</span></span>  
+2.  <span data-ttu-id="cd689-122">Нажмите кнопку **привязки...**</span><span class="sxs-lookup"><span data-stu-id="cd689-122">Click the **Bindings….**</span></span> <span data-ttu-id="cd689-123">Ссылка в **действия** в правой верхней части окна.</span><span class="sxs-lookup"><span data-stu-id="cd689-123">Link in the **Actions** section in the upper right hand portion of the window.</span></span>  
   
-     <span data-ttu-id="f7558-124">![Добавление привязки SSL](../../../../docs/framework/wcf/feature-details/media/mg-addsslbinding.jpg "mg_AddSSLBinding")</span><span class="sxs-lookup"><span data-stu-id="f7558-124">![Adding an SSL binding](../../../../docs/framework/wcf/feature-details/media/mg-addsslbinding.jpg "mg_AddSSLBinding")</span></span>  
+     <span data-ttu-id="cd689-124">![Добавление привязки SSL](../../../../docs/framework/wcf/feature-details/media/mg-addsslbinding.jpg "mg_AddSSLBinding")</span><span class="sxs-lookup"><span data-stu-id="cd689-124">![Adding an SSL binding](../../../../docs/framework/wcf/feature-details/media/mg-addsslbinding.jpg "mg_AddSSLBinding")</span></span>  
   
-3.  <span data-ttu-id="f7558-125">В окне «привязки сайта» щелкните **добавить** кнопки.</span><span class="sxs-lookup"><span data-stu-id="f7558-125">In the Site Bindings window click the **Add** button.</span></span>  
+3.  <span data-ttu-id="cd689-125">В окне «привязки сайта» щелкните **добавить** кнопки.</span><span class="sxs-lookup"><span data-stu-id="cd689-125">In the Site Bindings window click the **Add** button.</span></span>  
   
-     <span data-ttu-id="f7558-126">![Диалоговое окно привязки сайта](../../../../docs/framework/wcf/feature-details/media/mg-sitebindingsdialog.jpg "mg_SiteBindingsDialog")</span><span class="sxs-lookup"><span data-stu-id="f7558-126">![Site Bindings Dialog](../../../../docs/framework/wcf/feature-details/media/mg-sitebindingsdialog.jpg "mg_SiteBindingsDialog")</span></span>  
+     <span data-ttu-id="cd689-126">![Диалоговое окно привязки сайта](../../../../docs/framework/wcf/feature-details/media/mg-sitebindingsdialog.jpg "mg_SiteBindingsDialog")</span><span class="sxs-lookup"><span data-stu-id="cd689-126">![Site Bindings Dialog](../../../../docs/framework/wcf/feature-details/media/mg-sitebindingsdialog.jpg "mg_SiteBindingsDialog")</span></span>  
   
-4.  <span data-ttu-id="f7558-127">В **Добавление привязки сайта** диалоговом окне выберите https в качестве типа и понятное имя самозаверяющего сертификата, который вы только что создан.</span><span class="sxs-lookup"><span data-stu-id="f7558-127">In the **Add Site Binding** dialog, select https for the type and the friendly name of the self-signed certificate you just created.</span></span>  
+4.  <span data-ttu-id="cd689-127">В **Добавление привязки сайта** диалоговом окне выберите https в качестве типа и понятное имя самозаверяющего сертификата, который вы только что создан.</span><span class="sxs-lookup"><span data-stu-id="cd689-127">In the **Add Site Binding** dialog, select https for the type and the friendly name of the self-signed certificate you just created.</span></span>  
   
-     <span data-ttu-id="f7558-128">![Пример привязки сайта](../../../../docs/framework/wcf/feature-details/media/mg-mycertbinding.jpg "mg_MyCertBinding")</span><span class="sxs-lookup"><span data-stu-id="f7558-128">![Site binding example](../../../../docs/framework/wcf/feature-details/media/mg-mycertbinding.jpg "mg_MyCertBinding")</span></span>  
+     <span data-ttu-id="cd689-128">![Пример привязки сайта](../../../../docs/framework/wcf/feature-details/media/mg-mycertbinding.jpg "mg_MyCertBinding")</span><span class="sxs-lookup"><span data-stu-id="cd689-128">![Site binding example](../../../../docs/framework/wcf/feature-details/media/mg-mycertbinding.jpg "mg_MyCertBinding")</span></span>  
   
-### <a name="configure-virtual-directory-for-ssl"></a><span data-ttu-id="f7558-129">Настройка виртуального каталога для SSL</span><span class="sxs-lookup"><span data-stu-id="f7558-129">Configure Virtual Directory for SSL</span></span>  
+### <a name="configure-virtual-directory-for-ssl"></a><span data-ttu-id="cd689-129">Настройка виртуального каталога для SSL</span><span class="sxs-lookup"><span data-stu-id="cd689-129">Configure Virtual Directory for SSL</span></span>  
   
-1.  <span data-ttu-id="f7558-130">В диспетчере служб IIS выберите виртуальный каталог, содержащий безопасную службу WCF.</span><span class="sxs-lookup"><span data-stu-id="f7558-130">Still in Internet Information Services Manager, select the virtual directory that contains your WCF secure service.</span></span>  
+1.  <span data-ttu-id="cd689-130">В диспетчере служб IIS выберите виртуальный каталог, содержащий безопасную службу WCF.</span><span class="sxs-lookup"><span data-stu-id="cd689-130">Still in Internet Information Services Manager, select the virtual directory that contains your WCF secure service.</span></span>  
   
-2.  <span data-ttu-id="f7558-131">В центральной области окна, выберите **параметры SSL** в разделе IIS.</span><span class="sxs-lookup"><span data-stu-id="f7558-131">In the center pane of the window, select **SSL Settings** in the IIS section.</span></span>  
+2.  <span data-ttu-id="cd689-131">В центральной области окна, выберите **параметры SSL** в разделе IIS.</span><span class="sxs-lookup"><span data-stu-id="cd689-131">In the center pane of the window, select **SSL Settings** in the IIS section.</span></span>  
   
-     <span data-ttu-id="f7558-132">![Параметры SSL для виртуального каталога](../../../../docs/framework/wcf/feature-details/media/mg-sslsettingsforvdir.jpg "mg_SSLSettingsForVDir")</span><span class="sxs-lookup"><span data-stu-id="f7558-132">![SSL Settings for virtual directory](../../../../docs/framework/wcf/feature-details/media/mg-sslsettingsforvdir.jpg "mg_SSLSettingsForVDir")</span></span>  
+     <span data-ttu-id="cd689-132">![Параметры SSL для виртуального каталога](../../../../docs/framework/wcf/feature-details/media/mg-sslsettingsforvdir.jpg "mg_SSLSettingsForVDir")</span><span class="sxs-lookup"><span data-stu-id="cd689-132">![SSL Settings for virtual directory](../../../../docs/framework/wcf/feature-details/media/mg-sslsettingsforvdir.jpg "mg_SSLSettingsForVDir")</span></span>  
   
-3.  <span data-ttu-id="f7558-133">На панели параметров SSL выберите **Требовать SSL** флажок и нажмите кнопку **применить** ссылку в **действия** разделе правой стороны экрана.</span><span class="sxs-lookup"><span data-stu-id="f7558-133">In the SSL Settings pane, select the **Require SSL** checkbox and click the **Apply** link in the **Actions** section on the right hand side of the screen.</span></span>  
+3.  <span data-ttu-id="cd689-133">На панели параметров SSL выберите **Требовать SSL** флажок и нажмите кнопку **применить** ссылку в **действия** разделе правой стороны экрана.</span><span class="sxs-lookup"><span data-stu-id="cd689-133">In the SSL Settings pane, select the **Require SSL** checkbox and click the **Apply** link in the **Actions** section on the right hand side of the screen.</span></span>  
   
-     <span data-ttu-id="f7558-134">![Параметры SSL виртуального каталога](../../../../docs/framework/wcf/feature-details/media/mg-vdirsslsettings.JPG "mg_VDirSSLSettings")</span><span class="sxs-lookup"><span data-stu-id="f7558-134">![Virtual directory SSL settings](../../../../docs/framework/wcf/feature-details/media/mg-vdirsslsettings.JPG "mg_VDirSSLSettings")</span></span>  
+     <span data-ttu-id="cd689-134">![Параметры SSL виртуального каталога](../../../../docs/framework/wcf/feature-details/media/mg-vdirsslsettings.JPG "mg_VDirSSLSettings")</span><span class="sxs-lookup"><span data-stu-id="cd689-134">![Virtual directory SSL settings](../../../../docs/framework/wcf/feature-details/media/mg-vdirsslsettings.JPG "mg_VDirSSLSettings")</span></span>  
   
-### <a name="configure-wcf-service-for-http-transport-security"></a><span data-ttu-id="f7558-135">Настройка службы WCF для безопасности транспорта HTTP</span><span class="sxs-lookup"><span data-stu-id="f7558-135">Configure WCF Service for HTTP Transport Security</span></span>  
+### <a name="configure-wcf-service-for-http-transport-security"></a><span data-ttu-id="cd689-135">Настройка службы WCF для безопасности транспорта HTTP</span><span class="sxs-lookup"><span data-stu-id="cd689-135">Configure WCF Service for HTTP Transport Security</span></span>  
   
-1.  <span data-ttu-id="f7558-136">В файле web.config службы WCF настройте привязку HTTP на использование безопасности транспорта, как показано в следующем фрагменте XML.</span><span class="sxs-lookup"><span data-stu-id="f7558-136">In the WCF service’s web.config configure the HTTP binding to use transport security as shown in the following XML.</span></span>  
+1.  <span data-ttu-id="cd689-136">В файле web.config службы WCF настройте привязку HTTP на использование безопасности транспорта, как показано в следующем фрагменте XML.</span><span class="sxs-lookup"><span data-stu-id="cd689-136">In the WCF service’s web.config configure the HTTP binding to use transport security as shown in the following XML.</span></span>  
   
     ```xml  
     <bindings>  
@@ -76,7 +76,7 @@ ms.locfileid: "54639982"
     </bindings>  
     ```  
   
-2.  <span data-ttu-id="f7558-137">Укажите службу и конечную точку службы, как показано в следующем фрагменте XML.</span><span class="sxs-lookup"><span data-stu-id="f7558-137">Specify your service and service endpoint as shown in the following XML.</span></span>  
+2.  <span data-ttu-id="cd689-137">Укажите службу и конечную точку службы, как показано в следующем фрагменте XML.</span><span class="sxs-lookup"><span data-stu-id="cd689-137">Specify your service and service endpoint as shown in the following XML.</span></span>  
   
     ```xml  
     <services>  
@@ -93,8 +93,8 @@ ms.locfileid: "54639982"
     </services>  
     ```  
   
-## <a name="example"></a><span data-ttu-id="f7558-138">Пример</span><span class="sxs-lookup"><span data-stu-id="f7558-138">Example</span></span>  
- <span data-ttu-id="f7558-139">Ниже приведен полный пример файла web.config для службы WCF, использующей безопасность транспорта HTTP</span><span class="sxs-lookup"><span data-stu-id="f7558-139">The following is a complete example of a web.config file for a WCF service using HTTP transport security</span></span>  
+## <a name="example"></a><span data-ttu-id="cd689-138">Пример</span><span class="sxs-lookup"><span data-stu-id="cd689-138">Example</span></span>  
+ <span data-ttu-id="cd689-139">Ниже приведен полный пример файла web.config для службы WCF, использующей безопасность транспорта HTTP</span><span class="sxs-lookup"><span data-stu-id="cd689-139">The following is a complete example of a web.config file for a WCF service using HTTP transport security</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -144,8 +144,9 @@ ms.locfileid: "54639982"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="f7558-140">См. также</span><span class="sxs-lookup"><span data-stu-id="f7558-140">See also</span></span>
-- [<span data-ttu-id="f7558-141">Размещение в службах IIS</span><span class="sxs-lookup"><span data-stu-id="f7558-141">Hosting in Internet Information Services</span></span>](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)
-- [<span data-ttu-id="f7558-142">Инструкции по размещению в службах IIS</span><span class="sxs-lookup"><span data-stu-id="f7558-142">Internet Information Service Hosting Instructions</span></span>](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)
-- [<span data-ttu-id="f7558-143">Рекомендации по размещению в службах IIS</span><span class="sxs-lookup"><span data-stu-id="f7558-143">Internet Information Services Hosting Best Practices</span></span>](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)
-- [<span data-ttu-id="f7558-144">Размещение в службах IIS с использованием встроенного кода</span><span class="sxs-lookup"><span data-stu-id="f7558-144">IIS Hosting Using Inline Code</span></span>](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)
+## <a name="see-also"></a><span data-ttu-id="cd689-140">См. также</span><span class="sxs-lookup"><span data-stu-id="cd689-140">See also</span></span>
+
+- [<span data-ttu-id="cd689-141">Размещение в службах IIS</span><span class="sxs-lookup"><span data-stu-id="cd689-141">Hosting in Internet Information Services</span></span>](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)
+- [<span data-ttu-id="cd689-142">Инструкции по размещению в службах IIS</span><span class="sxs-lookup"><span data-stu-id="cd689-142">Internet Information Service Hosting Instructions</span></span>](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)
+- [<span data-ttu-id="cd689-143">Рекомендации по размещению в службах IIS</span><span class="sxs-lookup"><span data-stu-id="cd689-143">Internet Information Services Hosting Best Practices</span></span>](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)
+- [<span data-ttu-id="cd689-144">Размещение в службах IIS с использованием встроенного кода</span><span class="sxs-lookup"><span data-stu-id="cd689-144">IIS Hosting Using Inline Code</span></span>](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)

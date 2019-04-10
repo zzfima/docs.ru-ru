@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: 2cacdb85-e7b8-42e7-b310-c3e8c22e5d33
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 985d98059c0c763f560d5e0f06133c45e75fa51a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 973442a969746671e4d85c5d7881f51c5dfba535
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57490428"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222267"
 ---
-# <a name="icordebugappdomain4getobjectforccw-method"></a><span data-ttu-id="b1c6f-102">Метод ICorDebugAppDomain4::GetObjectForCCW</span><span class="sxs-lookup"><span data-stu-id="b1c6f-102">ICorDebugAppDomain4::GetObjectForCCW Method</span></span>
-<span data-ttu-id="b1c6f-103">Возвращает управляемый объект из вызываемой оболочки COMr (CCW).</span><span class="sxs-lookup"><span data-stu-id="b1c6f-103">Gets a managed object from a COM callable wrapper (CCW) pointer.</span></span>  
+# <a name="icordebugappdomain4getobjectforccw-method"></a><span data-ttu-id="30ee5-102">Метод ICorDebugAppDomain4::GetObjectForCCW</span><span class="sxs-lookup"><span data-stu-id="30ee5-102">ICorDebugAppDomain4::GetObjectForCCW Method</span></span>
+<span data-ttu-id="30ee5-103">Возвращает управляемый объект из вызываемой оболочки COMr (CCW).</span><span class="sxs-lookup"><span data-stu-id="30ee5-103">Gets a managed object from a COM callable wrapper (CCW) pointer.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b1c6f-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b1c6f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="30ee5-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="30ee5-104">Syntax</span></span>  
   
 ```  
 HRESULT GetObjectForCCW(  
@@ -23,24 +23,25 @@ HRESULT GetObjectForCCW(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b1c6f-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="b1c6f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="30ee5-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="30ee5-105">Parameters</span></span>  
  `ccwPointer`  
- <span data-ttu-id="b1c6f-106">[in] Указатель вызываемой оболочки COM (CCW).</span><span class="sxs-lookup"><span data-stu-id="b1c6f-106">[in] A COM callable wrapper (CCW) pointer.</span></span>  
+ <span data-ttu-id="30ee5-106">[in] Указатель вызываемой оболочки COM (CCW).</span><span class="sxs-lookup"><span data-stu-id="30ee5-106">[in] A COM callable wrapper (CCW) pointer.</span></span>  
   
  `ppManagedObject`  
- <span data-ttu-id="b1c6f-107">[out] Указатель на адрес объекта «ICorDebugValue», который представляет управляемый объект, соответствующий заданной указателю на вызываемую Оболочку.</span><span class="sxs-lookup"><span data-stu-id="b1c6f-107">[out] A pointer to the address of an "ICorDebugValue" object that represents the managed object that corresponds to the given CCW pointer.</span></span>  
+ <span data-ttu-id="30ee5-107">[out] Указатель на адрес объекта «ICorDebugValue», который представляет управляемый объект, соответствующий заданной указателю на вызываемую Оболочку.</span><span class="sxs-lookup"><span data-stu-id="30ee5-107">[out] A pointer to the address of an "ICorDebugValue" object that represents the managed object that corresponds to the given CCW pointer.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b1c6f-108">Примечания</span><span class="sxs-lookup"><span data-stu-id="b1c6f-108">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="30ee5-108">Примечания</span><span class="sxs-lookup"><span data-stu-id="30ee5-108">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b1c6f-109">Требования</span><span class="sxs-lookup"><span data-stu-id="b1c6f-109">Requirements</span></span>  
- <span data-ttu-id="b1c6f-110">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b1c6f-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="30ee5-109">Требования</span><span class="sxs-lookup"><span data-stu-id="30ee5-109">Requirements</span></span>  
+ <span data-ttu-id="30ee5-110">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="30ee5-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b1c6f-111">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b1c6f-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="30ee5-111">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="30ee5-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="b1c6f-112">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b1c6f-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="30ee5-112">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="30ee5-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b1c6f-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b1c6f-113">**.NET Framework Versions:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]</span></span>  
+ **<span data-ttu-id="30ee5-113">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="30ee5-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="b1c6f-114">См. также</span><span class="sxs-lookup"><span data-stu-id="b1c6f-114">See also</span></span>
-- [<span data-ttu-id="b1c6f-115">Интерфейс ICorDebugAppDomain4</span><span class="sxs-lookup"><span data-stu-id="b1c6f-115">ICorDebugAppDomain4 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain4-interface.md)
-- [<span data-ttu-id="b1c6f-116">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="b1c6f-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="30ee5-114">См. также</span><span class="sxs-lookup"><span data-stu-id="30ee5-114">See also</span></span>
+
+- [<span data-ttu-id="30ee5-115">Интерфейс ICorDebugAppDomain4</span><span class="sxs-lookup"><span data-stu-id="30ee5-115">ICorDebugAppDomain4 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain4-interface.md)
+- [<span data-ttu-id="30ee5-116">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="30ee5-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bba8d887bc516149135aae61c4f9bdb9a9e0c9d9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 66efe5ae1fe2154684d2ac6791895b7fcbe4f7b6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57470540"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225925"
 ---
-# <a name="isymunmanagedwriterdefineglobalvariable-method"></a><span data-ttu-id="27a1f-102">Метод ISymUnmanagedWriter::DefineGlobalVariable</span><span class="sxs-lookup"><span data-stu-id="27a1f-102">ISymUnmanagedWriter::DefineGlobalVariable Method</span></span>
-<span data-ttu-id="27a1f-103">Определяет одну глобальную переменную.</span><span class="sxs-lookup"><span data-stu-id="27a1f-103">Defines a single global variable.</span></span>  
+# <a name="isymunmanagedwriterdefineglobalvariable-method"></a><span data-ttu-id="07219-102">Метод ISymUnmanagedWriter::DefineGlobalVariable</span><span class="sxs-lookup"><span data-stu-id="07219-102">ISymUnmanagedWriter::DefineGlobalVariable Method</span></span>
+<span data-ttu-id="07219-103">Определяет одну глобальную переменную.</span><span class="sxs-lookup"><span data-stu-id="07219-103">Defines a single global variable.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="27a1f-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="27a1f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="07219-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="07219-104">Syntax</span></span>  
   
 ```  
 HRESULT DefineGlobalVariable(  
@@ -41,38 +41,39 @@ HRESULT DefineGlobalVariable(
     [in] ULONG32      addr3);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="27a1f-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="27a1f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="07219-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="07219-105">Parameters</span></span>  
  `name`  
- <span data-ttu-id="27a1f-106">[in] Указатель на `WCHAR` , определяющий имя глобальной переменной.</span><span class="sxs-lookup"><span data-stu-id="27a1f-106">[in] A pointer to a `WCHAR` that defines the global variable name.</span></span>  
+ <span data-ttu-id="07219-106">[in] Указатель на `WCHAR` , определяющий имя глобальной переменной.</span><span class="sxs-lookup"><span data-stu-id="07219-106">[in] A pointer to a `WCHAR` that defines the global variable name.</span></span>  
   
  `attributes`  
- <span data-ttu-id="27a1f-107">[in] Атрибутов глобальной переменной.</span><span class="sxs-lookup"><span data-stu-id="27a1f-107">[in] The global variable attributes.</span></span>  
+ <span data-ttu-id="07219-107">[in] Атрибутов глобальной переменной.</span><span class="sxs-lookup"><span data-stu-id="07219-107">[in] The global variable attributes.</span></span>  
   
  `cSig`  
- <span data-ttu-id="27a1f-108">[in] Объект `ULONG32` указывает размер, в символах, из `signature` буфера.</span><span class="sxs-lookup"><span data-stu-id="27a1f-108">[in] A `ULONG32` that indicates the size, in characters, of the `signature` buffer.</span></span>  
+ <span data-ttu-id="07219-108">[in] Объект `ULONG32` указывает размер, в символах, из `signature` буфера.</span><span class="sxs-lookup"><span data-stu-id="07219-108">[in] A `ULONG32` that indicates the size, in characters, of the `signature` buffer.</span></span>  
   
  `signature`  
- <span data-ttu-id="27a1f-109">[in] Подпись глобальной переменной.</span><span class="sxs-lookup"><span data-stu-id="27a1f-109">[in] The global variable signature.</span></span>  
+ <span data-ttu-id="07219-109">[in] Подпись глобальной переменной.</span><span class="sxs-lookup"><span data-stu-id="07219-109">[in] The global variable signature.</span></span>  
   
  `addrKind`  
- <span data-ttu-id="27a1f-110">[in] Тип адреса.</span><span class="sxs-lookup"><span data-stu-id="27a1f-110">[in] The address type.</span></span>  
+ <span data-ttu-id="07219-110">[in] Тип адреса.</span><span class="sxs-lookup"><span data-stu-id="07219-110">[in] The address type.</span></span>  
   
  `addr1`  
- <span data-ttu-id="27a1f-111">[in] Первый адрес для спецификации параметра.</span><span class="sxs-lookup"><span data-stu-id="27a1f-111">[in] The first address for the parameter specification.</span></span>  
+ <span data-ttu-id="07219-111">[in] Первый адрес для спецификации параметра.</span><span class="sxs-lookup"><span data-stu-id="07219-111">[in] The first address for the parameter specification.</span></span>  
   
  `addr2`  
- <span data-ttu-id="27a1f-112">[in] Второй адрес для спецификации параметра.</span><span class="sxs-lookup"><span data-stu-id="27a1f-112">[in] The second address for the parameter specification.</span></span>  
+ <span data-ttu-id="07219-112">[in] Второй адрес для спецификации параметра.</span><span class="sxs-lookup"><span data-stu-id="07219-112">[in] The second address for the parameter specification.</span></span>  
   
  `addr3`  
- <span data-ttu-id="27a1f-113">[in] Третий адрес для спецификации параметра.</span><span class="sxs-lookup"><span data-stu-id="27a1f-113">[in] The third address for the parameter specification.</span></span>  
+ <span data-ttu-id="07219-113">[in] Третий адрес для спецификации параметра.</span><span class="sxs-lookup"><span data-stu-id="07219-113">[in] The third address for the parameter specification.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="27a1f-114">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="27a1f-114">Return Value</span></span>  
- <span data-ttu-id="27a1f-115">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="27a1f-115">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="07219-114">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="07219-114">Return Value</span></span>  
+ <span data-ttu-id="07219-115">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="07219-115">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="27a1f-116">Требования</span><span class="sxs-lookup"><span data-stu-id="27a1f-116">Requirements</span></span>  
- <span data-ttu-id="27a1f-117">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="27a1f-117">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="07219-116">Требования</span><span class="sxs-lookup"><span data-stu-id="07219-116">Requirements</span></span>  
+ <span data-ttu-id="07219-117">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="07219-117">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="27a1f-118">См. также</span><span class="sxs-lookup"><span data-stu-id="27a1f-118">See also</span></span>
-- [<span data-ttu-id="27a1f-119">Интерфейс ISymUnmanagedWriter</span><span class="sxs-lookup"><span data-stu-id="27a1f-119">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [<span data-ttu-id="27a1f-120">Метод DefineLocalVariable</span><span class="sxs-lookup"><span data-stu-id="27a1f-120">DefineLocalVariable Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-definelocalvariable-method.md)
-- [<span data-ttu-id="27a1f-121">Метод DefineGlobalVariable2</span><span class="sxs-lookup"><span data-stu-id="27a1f-121">DefineGlobalVariable2 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-defineglobalvariable2-method.md)
+## <a name="see-also"></a><span data-ttu-id="07219-118">См. также</span><span class="sxs-lookup"><span data-stu-id="07219-118">See also</span></span>
+
+- [<span data-ttu-id="07219-119">Интерфейс ISymUnmanagedWriter</span><span class="sxs-lookup"><span data-stu-id="07219-119">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="07219-120">Метод DefineLocalVariable</span><span class="sxs-lookup"><span data-stu-id="07219-120">DefineLocalVariable Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-definelocalvariable-method.md)
+- [<span data-ttu-id="07219-121">Метод DefineGlobalVariable2</span><span class="sxs-lookup"><span data-stu-id="07219-121">DefineGlobalVariable2 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-defineglobalvariable2-method.md)

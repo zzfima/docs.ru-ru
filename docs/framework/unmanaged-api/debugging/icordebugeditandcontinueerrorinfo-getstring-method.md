@@ -17,15 +17,16 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 56273146670dc2f4efde06a2f96e755f6fb86d99
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af2512800b7903d3142a48ae17d22a2e19683e5d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712759"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222241"
 ---
-# <a name="icordebugeditandcontinueerrorinfogetstring-method"></a><span data-ttu-id="0813e-102">Метод ICorDebugEditAndContinueErrorInfo::GetString</span><span class="sxs-lookup"><span data-stu-id="0813e-102">ICorDebugEditAndContinueErrorInfo::GetString Method</span></span>
-<span data-ttu-id="0813e-103">`GetString` устарел.</span><span class="sxs-lookup"><span data-stu-id="0813e-103">`GetString` is obsolete.</span></span> <span data-ttu-id="0813e-104">Этот метод не вызывается.</span><span class="sxs-lookup"><span data-stu-id="0813e-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinueerrorinfogetstring-method"></a><span data-ttu-id="1c618-102">Метод ICorDebugEditAndContinueErrorInfo::GetString</span><span class="sxs-lookup"><span data-stu-id="1c618-102">ICorDebugEditAndContinueErrorInfo::GetString Method</span></span>
+`GetString` <span data-ttu-id="1c618-103">является устаревшим.</span><span class="sxs-lookup"><span data-stu-id="1c618-103">is obsolete.</span></span> <span data-ttu-id="1c618-104">Этот метод не вызывается.</span><span class="sxs-lookup"><span data-stu-id="1c618-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0813e-105">См. также</span><span class="sxs-lookup"><span data-stu-id="0813e-105">See also</span></span>
-- [<span data-ttu-id="0813e-106">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="0813e-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="1c618-105">См. также</span><span class="sxs-lookup"><span data-stu-id="1c618-105">See also</span></span>
+
+- [<span data-ttu-id="1c618-106">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="1c618-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

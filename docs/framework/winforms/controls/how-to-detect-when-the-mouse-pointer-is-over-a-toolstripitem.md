@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Обнаружить, когда указатель мыши находится над ToolStripItem
+title: Практическое руководство. Отслеживание наведения указателя мыши на элемент ToolStripItem
 ms.date: 03/30/2017
 helpviewer_keywords:
 - toolbars [Windows Forms], detecting mouse movement
@@ -7,23 +7,24 @@ helpviewer_keywords:
 - ToolStripItem class [Windows Forms], detecting mouse movement
 - mouse [Windows Forms], detecting movement on toolbars
 ms.assetid: d38b5082-aba7-4f6c-841b-bd9714e307fd
-ms.openlocfilehash: 39173490c31711cca9f26f5f0cb2ab493546dda3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 09fd9f2f9b8cc44b6c04b829bf2854bea4aa8cf7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720817"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220050"
 ---
-# <a name="how-to-detect-when-the-mouse-pointer-is-over-a-toolstripitem"></a><span data-ttu-id="106ee-102">Практическое руководство. Обнаружить, когда указатель мыши находится над ToolStripItem</span><span class="sxs-lookup"><span data-stu-id="106ee-102">How to: Detect When the Mouse Pointer Is Over a ToolStripItem</span></span>
-<span data-ttu-id="106ee-103">Используйте следующую процедуру, чтобы определить, когда указатель мыши находится над <xref:System.Windows.Forms.ToolStripItem>.</span><span class="sxs-lookup"><span data-stu-id="106ee-103">Use the following procedure to detect when the mouse pointer is over a <xref:System.Windows.Forms.ToolStripItem>.</span></span>  
+# <a name="how-to-detect-when-the-mouse-pointer-is-over-a-toolstripitem"></a><span data-ttu-id="16da9-102">Практическое руководство. Отслеживание наведения указателя мыши на элемент ToolStripItem</span><span class="sxs-lookup"><span data-stu-id="16da9-102">How to: Detect When the Mouse Pointer Is Over a ToolStripItem</span></span>
+<span data-ttu-id="16da9-103">Используйте следующую процедуру, чтобы определить, когда указатель мыши находится над <xref:System.Windows.Forms.ToolStripItem>.</span><span class="sxs-lookup"><span data-stu-id="16da9-103">Use the following procedure to detect when the mouse pointer is over a <xref:System.Windows.Forms.ToolStripItem>.</span></span>  
   
-### <a name="to-detect-when-the-pointer-is-over-a-toolstripitem"></a><span data-ttu-id="106ee-104">Чтобы определить, когда указатель наведен на элемент ToolStripItem</span><span class="sxs-lookup"><span data-stu-id="106ee-104">To detect when the pointer is over a ToolStripItem</span></span>  
+### <a name="to-detect-when-the-pointer-is-over-a-toolstripitem"></a><span data-ttu-id="16da9-104">Чтобы определить, когда указатель наведен на элемент ToolStripItem</span><span class="sxs-lookup"><span data-stu-id="16da9-104">To detect when the pointer is over a ToolStripItem</span></span>  
   
--   <span data-ttu-id="106ee-105">Используйте <xref:System.Windows.Forms.ToolStripItem.Selected%2A> свойства для элементов, в котором <xref:System.Windows.Forms.ToolStripItem.CanSelect%2A> является `true`.</span><span class="sxs-lookup"><span data-stu-id="106ee-105">Use the <xref:System.Windows.Forms.ToolStripItem.Selected%2A> property for items in which <xref:System.Windows.Forms.ToolStripItem.CanSelect%2A> is `true`.</span></span>  
+-   <span data-ttu-id="16da9-105">Используйте <xref:System.Windows.Forms.ToolStripItem.Selected%2A> свойства для элементов, в котором <xref:System.Windows.Forms.ToolStripItem.CanSelect%2A> является `true`.</span><span class="sxs-lookup"><span data-stu-id="16da9-105">Use the <xref:System.Windows.Forms.ToolStripItem.Selected%2A> property for items in which <xref:System.Windows.Forms.ToolStripItem.CanSelect%2A> is `true`.</span></span>  
   
-     <span data-ttu-id="106ee-106">Это избавит вас от необходимости синхронизации <xref:System.Windows.Forms.ToolStripItem.MouseEnter> и <xref:System.Windows.Forms.ToolStripItem.MouseLeave> события.</span><span class="sxs-lookup"><span data-stu-id="106ee-106">This will prevent you from having to synchronize the <xref:System.Windows.Forms.ToolStripItem.MouseEnter> and <xref:System.Windows.Forms.ToolStripItem.MouseLeave> events.</span></span>  
+     <span data-ttu-id="16da9-106">Это избавит вас от необходимости синхронизации <xref:System.Windows.Forms.ToolStripItem.MouseEnter> и <xref:System.Windows.Forms.ToolStripItem.MouseLeave> события.</span><span class="sxs-lookup"><span data-stu-id="16da9-106">This will prevent you from having to synchronize the <xref:System.Windows.Forms.ToolStripItem.MouseEnter> and <xref:System.Windows.Forms.ToolStripItem.MouseLeave> events.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="106ee-107">См. также</span><span class="sxs-lookup"><span data-stu-id="106ee-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="16da9-107">См. также</span><span class="sxs-lookup"><span data-stu-id="16da9-107">See also</span></span>
+
 - <xref:System.Windows.Forms.ToolStripItem>
 - <xref:System.Windows.Forms.ToolStripItem.Selected%2A>
-- [<span data-ttu-id="106ee-108">Общие сведения об элементе управления ToolStrip</span><span class="sxs-lookup"><span data-stu-id="106ee-108">ToolStrip Control Overview</span></span>](toolstrip-control-overview-windows-forms.md)
+- [<span data-ttu-id="16da9-108">Общие сведения об элементе управления ToolStrip</span><span class="sxs-lookup"><span data-stu-id="16da9-108">ToolStrip Control Overview</span></span>](toolstrip-control-overview-windows-forms.md)

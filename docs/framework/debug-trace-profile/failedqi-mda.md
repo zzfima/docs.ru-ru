@@ -10,37 +10,37 @@ helpviewer_keywords:
 ms.assetid: 902dc863-34b3-477c-b433-b8a6bb6133c6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9a3338595e8b541fcda93b091eeddf17919a483c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0ac478644561d2aab13d10811987d8d02c8d7608
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614397"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217631"
 ---
-# <a name="failedqi-mda"></a><span data-ttu-id="c68fa-102">Помощник по отладке управляемого кода failedQI</span><span class="sxs-lookup"><span data-stu-id="c68fa-102">failedQI MDA</span></span>
-<span data-ttu-id="c68fa-103">Помощник по отладке управляемого кода (MDA) `failedQI` активируется, когда среда выполнения вызывает `QueryInterface`в указателе интерфейса СОМ от имени вызываемой оболочки времени выполнения (RCW), и вызов `QueryInterface` завершается с ошибкой.</span><span class="sxs-lookup"><span data-stu-id="c68fa-103">The `failedQI` managed debugging assistant (MDA) is activated when the runtime calls `QueryInterface` on a COM interface pointer on behalf of a runtime callable wrapper (RCW), and the `QueryInterface` call fails.</span></span>  
+# <a name="failedqi-mda"></a><span data-ttu-id="4fb4f-102">Помощник по отладке управляемого кода failedQI</span><span class="sxs-lookup"><span data-stu-id="4fb4f-102">failedQI MDA</span></span>
+<span data-ttu-id="4fb4f-103">Помощник по отладке управляемого кода (MDA) `failedQI` активируется, когда среда выполнения вызывает `QueryInterface`в указателе интерфейса СОМ от имени вызываемой оболочки времени выполнения (RCW), и вызов `QueryInterface` завершается с ошибкой.</span><span class="sxs-lookup"><span data-stu-id="4fb4f-103">The `failedQI` managed debugging assistant (MDA) is activated when the runtime calls `QueryInterface` on a COM interface pointer on behalf of a runtime callable wrapper (RCW), and the `QueryInterface` call fails.</span></span>  
   
-## <a name="symptoms"></a><span data-ttu-id="c68fa-104">Признаки</span><span class="sxs-lookup"><span data-stu-id="c68fa-104">Symptoms</span></span>  
- <span data-ttu-id="c68fa-105">Произошел сбой приведения в RCW, или вызов COM из RCW неожиданно завершается ошибкой.</span><span class="sxs-lookup"><span data-stu-id="c68fa-105">A cast on an RCW fails, or a call to COM from an RCW fails unexpectedly.</span></span>  
+## <a name="symptoms"></a><span data-ttu-id="4fb4f-104">Симптомы</span><span class="sxs-lookup"><span data-stu-id="4fb4f-104">Symptoms</span></span>  
+ <span data-ttu-id="4fb4f-105">Произошел сбой приведения в RCW, или вызов COM из RCW неожиданно завершается ошибкой.</span><span class="sxs-lookup"><span data-stu-id="4fb4f-105">A cast on an RCW fails, or a call to COM from an RCW fails unexpectedly.</span></span>  
   
-## <a name="cause"></a><span data-ttu-id="c68fa-106">Причина</span><span class="sxs-lookup"><span data-stu-id="c68fa-106">Cause</span></span>  
+## <a name="cause"></a><span data-ttu-id="4fb4f-106">Причина</span><span class="sxs-lookup"><span data-stu-id="4fb4f-106">Cause</span></span>  
   
--   <span data-ttu-id="c68fa-107">Вызов выполняется из неправильного контекста.</span><span class="sxs-lookup"><span data-stu-id="c68fa-107">The call is made from the wrong context.</span></span>  
+-   <span data-ttu-id="4fb4f-107">Вызов выполняется из неправильного контекста.</span><span class="sxs-lookup"><span data-stu-id="4fb4f-107">The call is made from the wrong context.</span></span>  
   
--   <span data-ttu-id="c68fa-108">Зарегистрированному прокси-серверу не удается выполнить вызов `QueryInterface`, поскольку вызов выполнялся из неправильного контекста.</span><span class="sxs-lookup"><span data-stu-id="c68fa-108">The registered proxy is failing the `QueryInterface` call because the call was attempted in the wrong context.</span></span>  
+-   <span data-ttu-id="4fb4f-108">Зарегистрированному прокси-серверу не удается выполнить вызов `QueryInterface`, поскольку вызов выполнялся из неправильного контекста.</span><span class="sxs-lookup"><span data-stu-id="4fb4f-108">The registered proxy is failing the `QueryInterface` call because the call was attempted in the wrong context.</span></span>  
   
--   <span data-ttu-id="c68fa-109">Прокси-сервер, принадлежащий OLE, возвратил значение HRESULT, указывающее на сбой.</span><span class="sxs-lookup"><span data-stu-id="c68fa-109">An OLE-owned proxy returned a failure HRESULT.</span></span>  
+-   <span data-ttu-id="4fb4f-109">Прокси-сервер, принадлежащий OLE, возвратил значение HRESULT, указывающее на сбой.</span><span class="sxs-lookup"><span data-stu-id="4fb4f-109">An OLE-owned proxy returned a failure HRESULT.</span></span>  
   
-## <a name="resolution"></a><span data-ttu-id="c68fa-110">Решение</span><span class="sxs-lookup"><span data-stu-id="c68fa-110">Resolution</span></span>  
- <span data-ttu-id="c68fa-111">Правила COM см. в документации MSDN.</span><span class="sxs-lookup"><span data-stu-id="c68fa-111">See the MSDN documentation on COM rules.</span></span>  
+## <a name="resolution"></a><span data-ttu-id="4fb4f-110">Решение</span><span class="sxs-lookup"><span data-stu-id="4fb4f-110">Resolution</span></span>  
+ <span data-ttu-id="4fb4f-111">Правила COM см. в документации MSDN.</span><span class="sxs-lookup"><span data-stu-id="4fb4f-111">See the MSDN documentation on COM rules.</span></span>  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="c68fa-112">Влияние на среду выполнения</span><span class="sxs-lookup"><span data-stu-id="c68fa-112">Effect on the Runtime</span></span>  
- <span data-ttu-id="c68fa-113">Если вызов `QueryInterface` завершается с ошибкой, контекст переключается и предпринимается попытка повторно выполнить вызов `QueryInterface`, чтобы увидеть, не использовался ли при сбое неправильный контекст.</span><span class="sxs-lookup"><span data-stu-id="c68fa-113">If a `QueryInterface` call fails, the context is switched and the `QueryInterface` call is attempted again to see if an incorrect context was at fault.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="4fb4f-112">Влияние на среду выполнения</span><span class="sxs-lookup"><span data-stu-id="4fb4f-112">Effect on the Runtime</span></span>  
+ <span data-ttu-id="4fb4f-113">Если вызов `QueryInterface` завершается с ошибкой, контекст переключается и предпринимается попытка повторно выполнить вызов `QueryInterface`, чтобы увидеть, не использовался ли при сбое неправильный контекст.</span><span class="sxs-lookup"><span data-stu-id="4fb4f-113">If a `QueryInterface` call fails, the context is switched and the `QueryInterface` call is attempted again to see if an incorrect context was at fault.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="c68fa-114">Вывод</span><span class="sxs-lookup"><span data-stu-id="c68fa-114">Output</span></span>  
- <span data-ttu-id="c68fa-115">Управляемое имя интерфейса, идентификатор GUID интерфейса и значение HRESULT ошибки.</span><span class="sxs-lookup"><span data-stu-id="c68fa-115">The managed name of the interface, the GUID of the interface, and the HRESULT of the failure.</span></span>  
+## <a name="output"></a><span data-ttu-id="4fb4f-114">Вывод</span><span class="sxs-lookup"><span data-stu-id="4fb4f-114">Output</span></span>  
+ <span data-ttu-id="4fb4f-115">Управляемое имя интерфейса, идентификатор GUID интерфейса и значение HRESULT ошибки.</span><span class="sxs-lookup"><span data-stu-id="4fb4f-115">The managed name of the interface, the GUID of the interface, and the HRESULT of the failure.</span></span>  
   
-## <a name="configuration"></a><span data-ttu-id="c68fa-116">Конфигурация</span><span class="sxs-lookup"><span data-stu-id="c68fa-116">Configuration</span></span>  
+## <a name="configuration"></a><span data-ttu-id="4fb4f-116">Параметр Configuration</span><span class="sxs-lookup"><span data-stu-id="4fb4f-116">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -50,7 +50,8 @@ ms.locfileid: "54614397"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="c68fa-117">См. также</span><span class="sxs-lookup"><span data-stu-id="c68fa-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4fb4f-117">См. также</span><span class="sxs-lookup"><span data-stu-id="4fb4f-117">See also</span></span>
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [<span data-ttu-id="c68fa-118">Диагностика ошибок посредством помощников по отладке управляемого кода</span><span class="sxs-lookup"><span data-stu-id="c68fa-118">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [<span data-ttu-id="c68fa-119">Маршалинг взаимодействия</span><span class="sxs-lookup"><span data-stu-id="c68fa-119">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)
+- [<span data-ttu-id="4fb4f-118">Диагностика ошибок посредством управляемых помощников по отладке</span><span class="sxs-lookup"><span data-stu-id="4fb4f-118">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [<span data-ttu-id="4fb4f-119">Маршалинг взаимодействия</span><span class="sxs-lookup"><span data-stu-id="4fb4f-119">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)
