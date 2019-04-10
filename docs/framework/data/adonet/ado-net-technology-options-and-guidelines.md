@@ -2,12 +2,12 @@
 title: Возможности технологии и рекомендации по ADO.NET
 ms.date: 03/30/2017
 ms.assetid: c8577281-38e6-4ce5-b036-572039a4c3d8
-ms.openlocfilehash: b24e06fef52397a550717893876e1e1cf33f371f
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 0d0e8f7bd779ce7a8290594887630dd192301fe1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664800"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212535"
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>Возможности технологии и рекомендации по ADO.NET
 Платформа данных ADO.NET представляет собой стратегию многократного выпуска, целью которой является снижение объемов кодирования и обслуживания. Эта платформа позволяет разработчикам программировать на основе концептуальных моделей EDM (entity data model). Данная платформа включает платформу ADO.NET Entity Framework и связанные с нею технологии.  
@@ -37,9 +37,10 @@ ms.locfileid: "56664800"
  LINQ to SQL является реализацией объектно-реляционного сопоставления (OR/M), которое позволяет моделировать базу данных SQL Server с использованием классов .NET Framework. LINQ to SQL позволяет запрашивать базу данных с помощью LINQ, а также обновлять, вставлять и удалять данные из нее. LINQ to SQL поддерживает транзакции, представления и хранимые процедуры, предоставляя несложный способ интеграции проверки данных и правил бизнес-логики в модель данных. Реляционный конструктор объектов (конструктор O/R) можно использовать для моделирования классов сущностей и ассоциаций, основанных на объектах в базе данных. Дополнительные сведения см. в разделе [Средства LINQ to SQL в Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
 ## <a name="wcf-data-services"></a>Службы данных WCF  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] развертывает службы данных в Интернете или интрасети. Данные структурируются как сущности и отношения согласно спецификациям модели EDM. Данные, развертываемые в данной модели, адресуются по стандартному протоколу HTTP. Дополнительные сведения см. в разделе [Службы данных WCF 4.5](../../../../docs/framework/data/wcf/index.md).  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Развертывает службы данных в Интернете или интрасети. Данные структурируются как сущности и отношения согласно спецификациям модели EDM. Данные, развертываемые в данной модели, адресуются по стандартному протоколу HTTP. Дополнительные сведения см. в разделе [Службы данных WCF 4.5](../../../../docs/framework/data/wcf/index.md).  
   
 ## <a name="see-also"></a>См. также
-- [Общие сведения об ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
+
+- [Общие сведения о ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [Новые возможности в ADO.NET](../../../../docs/framework/data/adonet/whats-new.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60cbc6f6649db28d06321b59c26c45668628d9ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c631a0a3abb3cb2a342dfd44fdffb147b742ae3c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712224"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212470"
 ---
 # <a name="corgcthreadstatstypes-enumeration"></a>Перечисление COR_GC_THREAD_STATS_TYPES
 Указывает, статистика сборки мусора для потока.  
@@ -36,7 +36,7 @@ typedef enum {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |`COR_GC_THREAD_HAS_PROMOTED_BYTES`|Поток имеет байт, которые были переданы в последней сборке мусора.|  
   
@@ -48,4 +48,5 @@ typedef enum {
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Размещение перечислений](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - private font collections [Windows Forms], creating
 - fonts [Windows Forms], creating private collections
 ms.assetid: 6533d5e5-a8dc-4b76-9fc4-3bf75c8b9212
-ms.openlocfilehash: 7cfd2a1fd29b58019d49c8cd5df9adb5b0873302
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f78d48c88b72388676f5e7ae963b98d8f1b4beac
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723782"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210695"
 ---
 # <a name="how-to-create-a-private-font-collection"></a>Практическое руководство. Создание частной коллекции шрифтов
 <xref:System.Drawing.Text.PrivateFontCollection> Класс наследует от <xref:System.Drawing.Text.FontCollection> абстрактного базового класса. Можно использовать <xref:System.Drawing.Text.PrivateFontCollection> объект для сохранения набора шрифты, специально для вашего приложения. Частной коллекции может включать установленных системных шрифтов, а также шрифты, которые не были установлены на компьютере. Чтобы добавить файл шрифта частной коллекции, вызовите <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile%2A> метод <xref:System.Drawing.Text.PrivateFontCollection> объекта.  
@@ -37,9 +37,9 @@ ms.locfileid: "57723782"
   
  Если сочетание заданного семейства/стиля, <xref:System.Drawing.Font> создается с помощью этого и начертанием. Первый аргумент, переданный <xref:System.Drawing.Font.%23ctor%2A> конструктор является имя семейства шрифтов (не <xref:System.Drawing.FontFamily> объекта, как в случае других вариантах <xref:System.Drawing.Font.%23ctor%2A> конструктор). После <xref:System.Drawing.Font> объект создан, он передается <xref:System.Drawing.Graphics.DrawString%2A> метод <xref:System.Drawing.Graphics> класса, чтобы отобразить имя семейства, а также имя стиля.  
   
- Выходные данные следующий код аналогичен результат, показанный на следующем рисунке.  
+ Выходные данные следующий код аналогичен результат, показанный на следующем рисунке:  
   
- ![Текст шрифтов](./media/csfontstext7.png "csfontstext7")  
+ ![Снимок экрана: текст в различные шрифты.](./media/how-to-create-a-private-font-collection/various-fonts-text-output.png)  
   
  Arial.tff (который был добавлен в частную коллекцию шрифтов в следующем примере кода) — это файл шрифта Arial обычного стиля. Обратите внимание, что выходные данные программы показано несколько доступные стили, кроме обычных шрифт Arial семейства. Это потому, что [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] может имитировать полужирный, курсив и полужирный курсив обычного начертания. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Можно также создавать, зачеркивание и подчеркивание обычного начертания.  
   
@@ -49,8 +49,9 @@ ms.locfileid: "57723782"
  [!code-vb[System.Drawing.FontsAndText#51](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#51)]  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Предыдущий пример кода предназначен для работы с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs> `e`, который является параметром <xref:System.Windows.Forms.PaintEventHandler>.  
+ Предыдущий пример предназначен для работы с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs> `e`, который является параметром <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Drawing.Text.PrivateFontCollection>
-- [Работами со шрифтами и текстом](using-fonts-and-text.md)
+- [Шрифты и текст](using-fonts-and-text.md)

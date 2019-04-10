@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ExpandCollapse control pattern
 - control patterns, ExpandCollapse
 ms.assetid: 1dbabb8c-0d68-47c1-a35e-1c01cb01af26
-ms.openlocfilehash: ddc2219b0ef6593b6bfa9ab40936cc7b0fff120b
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: ff07f5264ccb3ec699e3676a2e9ba64443b2875f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678404"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211664"
 ---
 # <a name="implementing-the-ui-automation-expandcollapse-control-pattern"></a>Реализация шаблона элемента управления ExpandCollapse модели автоматизации пользовательского интерфейса
 > [!NOTE]
@@ -32,7 +32,7 @@ ms.locfileid: "57678404"
   
 -   Когда <xref:System.Windows.Automation.ExpandCollapseState> элемента управления имеет значение <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>, в это время для него неактивны все функциональные возможности <xref:System.Windows.Automation.ExpandCollapsePattern> и с помощью этого шаблона элемента управления можно получить только сведения <xref:System.Windows.Automation.ExpandCollapseState>. Если впоследствии добавляются какие-либо дочерние объекты, <xref:System.Windows.Automation.ExpandCollapseState> изменяется и функциональность <xref:System.Windows.Automation.ExpandCollapsePattern> активируется.  
   
--   <xref:System.Windows.Automation.ExpandCollapseState> относится только к видимости непосредственных дочерних объектов; этот параметр не относится к видимости всех дочерних объектов.  
+-   <xref:System.Windows.Automation.ExpandCollapseState> относится к видимости непосредственных дочерних объектов. он не относится к видимости всех дочерних объектов.  
   
 -   Функциональность развертывания и свертывания определяется элементом управления. Ниже представлены примеры такого поведения.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "57678404"
   
 |Обязательные члены|Тип члена|Примечания|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|Свойство.|Нет|  
+|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|Свойство|Нет|  
 |<xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A>|Метод|Нет|  
 |<xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A>|Метод|Нет|  
 |<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|событие|Этот элемент управления не имеет связанных событий; используйте этот универсальный делегат.|  
@@ -64,9 +64,10 @@ ms.locfileid: "57678404"
 |<xref:System.InvalidOperationException>|Вызывается <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> или <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> , когда <xref:System.Windows.Automation.ExpandCollapseState> = <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>.|  
   
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения о шаблонах элементов управления модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [Поддержка шаблонов элементов управления в поставщике автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
+- [Поддержка шаблонов элементов управления в поставщике модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
 - [Шаблоны элементов управления модели автоматизации пользовательского интерфейса для клиентов](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [Навигация между элементами модели автоматизации пользовательского интерфейса с помощью TreeWalker](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)
+- [Навигация между элементами автоматизированного пользовательского интерфейса с помощью TreeWalker](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)
 - [Общие сведения о дереве модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
 - [Использование кэширования в модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

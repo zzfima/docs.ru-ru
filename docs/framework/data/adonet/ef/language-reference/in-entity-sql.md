@@ -2,12 +2,12 @@
 title: IN (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 51662950-ee01-4857-b7b9-311dd8515966
-ms.openlocfilehash: a8c028bf0fc2890b932c62aa9efe94cab153503d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: f4fa8cbc07513321e59b93503b59af172c0a6f05
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693494"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211326"
 ---
 # <a name="in-entity-sql"></a>IN (Entity SQL)
 Определяет, совпадает ли значение с каким-либо значением в коллекции.  
@@ -29,7 +29,7 @@ value [ NOT ] IN expression
  Любое допустимое выражение, возвращающее коллекцию для проверки соответствия. Все выражения должны иметь тот же тип, что и аргумент `value`, или принадлежать к базовому или производному типу для типа этого аргумента.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Значение `true`, если значение найдено в коллекции. Значение NULL, если параметр value имеет значение NULL или коллекция пуста. В противном случае - значение `false`. Использование NOT IN логически инвертирует результат IN.  
+ `true` Если значение найдено в коллекции; значение NULL, если значение равно null, либо в коллекции имеет значение null; в противном случае `false`. Использование NOT IN логически инвертирует результат IN.  
   
 ## <a name="example"></a>Пример  
  В следующем запросе на языке Entity SQL оператор IN используется для определения, совпадает ли значение с каким-либо значением в коллекции. Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.  
@@ -41,4 +41,5 @@ value [ NOT ] IN expression
  [!code-csharp[DP EntityServices Concepts 2#IN](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#in)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Справочник по Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

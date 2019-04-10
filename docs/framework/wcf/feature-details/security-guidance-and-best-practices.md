@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - secure applications [WCF]
 ms.assetid: 79e4e6f7-0c00-4045-b0f0-e6a7c37c7788
-ms.openlocfilehash: 1a102de6780b59295b12bbaca50bca8ff170febe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dbe460888400735e0950e7a34372d8540e236303
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538483"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210715"
 ---
 # <a name="security-guidance-and-best-practices"></a>Руководство и рекомендации по безопасности
 Подразделы этого раздела предоставляют рекомендации по и которые необходимо учитывать при создании безопасных приложений Windows Communication Foundation (WCF). Дополнительные сведения о Windows Server AppFabric и безопасности см. [безопасности модели для Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
@@ -25,5 +25,6 @@ ms.locfileid: "54538483"
  Сведения, касающиеся производительности и безопасности.  
   
 ## <a name="see-also"></a>См. также
-- [Базовое программирование для WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)
+
+- [Базовое программирование WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)
 - [Модель безопасности для Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 97aded59f880412a6a26e7e3d664c50ff1c2f103
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 695f69c8d9c3a295a705971743733339cf8aab13
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557413"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211950"
 ---
 # <a name="malloctype-enumeration"></a>MALLOC_TYPE - перечисление
 Содержит значения, определяющие характеристики выделяемой памяти.  
@@ -37,7 +37,7 @@ typedef enum {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |`MALLOC_EXECUTABLE`|Используемый объем выделенной памяти может содержать исполняемый файл.|  
 |`MALLOC_THREADSAFE`|Используемый объем выделенной памяти является поточно ориентированной. То есть память может осуществляться несколькими потоками без всякой синхронизации.<br /><br /> Если этот флаг не установлен, вызовы объекта должны быть сериализованы.|  
@@ -52,4 +52,5 @@ typedef enum {
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Размещение перечислений](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

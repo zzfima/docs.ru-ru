@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 27e2f194d252baa2e2ca185d905c945d26a177a0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 321318b63368ed6e57d235cf97d94485352f8686
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590095"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211365"
 ---
 # <a name="corprfcodegenflags-enumeration"></a>Перечисление COR_PRF_CODEGEN_FLAGS
 Определяет флаги создания кода, которые могут устанавливаться с [ICorProfilerFunctionControl::SetCodegenFlags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md) метод.  
@@ -37,7 +37,7 @@ typedef enum {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |`COR_PRF_CODEGEN_DISABLE_INLINING`|Нет функций, будет встроенным в теле этой функции. Однако сама функция может быть в его вызывающие объекты.|  
 |`COR_PRF_CODEGEN_DISABLE_ALL_OPTIMIZATIONS`|Все оптимизации будет отключена для тела функции. Однако сама функция по-прежнему может быть в его вызывающие объекты.|  
@@ -55,4 +55,5 @@ typedef enum {
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Перечисления профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [WPF], TextBox
 - TextBox control [WPF], how-to topics
 ms.assetid: 006aa461-fe37-4cd8-860a-d38d76e8b9f7
-ms.openlocfilehash: d99528dcfbf2229b57e81f9dedc5bc0aa50c5b75
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d3d5116a2fa2198661050a1c1adbae9512cd078a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375230"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211430"
 ---
 # <a name="textbox-how-to-topics"></a>Разделы руководства, посвященные TextBox
 В этом разделе содержатся примеры, демонстрирующие способы выполнения типичных задач с помощью <xref:System.Windows.Controls.TextBox> элемента управления.  
@@ -24,7 +24,7 @@ ms.locfileid: "57375230"
  [Получение коллекции строк из элемента TextBox](how-to-get-a-collection-of-lines-from-a-textbox.md)  
  [Перевод элемента управления TextBox в режим только для чтения](how-to-make-a-textbox-control-read-only.md)  
  [Позиционирование курсора в начале или конце текста в элементе управления TextBox](position-the-cursor-at-the-beginning-or-end-of-text.md)  
- [Извлечение выделенного текста](how-to-retrieve-a-text-selection.md)  
+ [Получение выделенного текста](how-to-retrieve-a-text-selection.md)  
  [Установка фокуса в элементе управления TextBox](how-to-set-focus-in-a-textbox-control.md)  
  [Установка текстового содержимого для элемента управления TextBox](how-to-set-the-text-content-of-a-textbox-control.md)  
  [Включение проверки орфографии в элементе управления редактирования текста](how-to-enable-spell-checking-in-a-text-editing-control.md)  
@@ -42,5 +42,6 @@ ms.locfileid: "57375230"
  <xref:System.Windows.Controls.PasswordBox>  
   
 ## <a name="see-also"></a>См. также
+
 - [Пример коллекции элементов управления WPF](https://go.microsoft.com/fwlink/?LinkID=160053)
 - [Стили и шаблоны элемента TextBox](textbox-styles-and-templates.md)

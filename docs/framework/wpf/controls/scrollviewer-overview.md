@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], ScrollViewer
 - ScrollViewer control [WPF], about ScrollViewer control
 ms.assetid: 94a13b94-cfdf-4b12-a1aa-90cb50c6e9b9
-ms.openlocfilehash: 2685be197d6b47cf174c5fbd062bd3c37a19f5eb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a3302d9c360b0918a1fce956af3e3aa14f29361b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356914"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212431"
 ---
 # <a name="scrollviewer-overview"></a>Общие сведения об элементе управления ScrollViewer
 Часто содержимое в пользовательском интерфейсе занимает больше места, чем вмещает область отображения на экране компьютера. <xref:System.Windows.Controls.ScrollViewer> Элемент управления предоставляет удобный способ включить прокрутку содержимого в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] приложений. В данном разделе представлены <xref:System.Windows.Controls.ScrollViewer> элемент и приводится несколько примеров использования.  
@@ -61,6 +61,7 @@ ms.locfileid: "57356914"
  Дополнительные сведения о форматах документа и параметрах представления см. в разделе [Документы в WPF](../advanced/documents-in-wpf.md).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Controls.ScrollViewer>
 - <xref:System.Windows.Controls.Primitives.ScrollBar>
 - <xref:System.Windows.Controls.Primitives.IScrollInfo>

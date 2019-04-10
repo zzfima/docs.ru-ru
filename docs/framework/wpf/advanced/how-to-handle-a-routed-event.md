@@ -8,12 +8,12 @@ helpviewer_keywords:
 - routed events [WPF], handling
 - bubbling events [WPF]
 ms.assetid: 157787b4-f469-4047-8777-5b034145f32e
-ms.openlocfilehash: 42f5f247e775fbf0bd323fc693a74d6149c87bb3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: edb3d6724af89b7e85986c50b579084e3c4e5070
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368198"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211599"
 ---
 # <a name="how-to-handle-a-routed-event"></a>Практическое руководство. Обработка перенаправленных событий
 В этом примере показаны принципы работы восходящей маршрутизации событий и создания обработчика, который может обрабатывать данные перенаправленных событий.  
@@ -35,8 +35,9 @@ ms.locfileid: "57368198"
  [!code-vb[RoutedEventHandle#Handler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventHandle/VisualBasic/MainWindow.xaml.vb#handler)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.RoutedEvent>
 - [Общие сведения о входных данных](input-overview.md)
 - [Общие сведения о перенаправленных событиях](routed-events-overview.md)
-- [Разделы практического руководства](events-how-to-topics.md)
+- [Практические руководства](events-how-to-topics.md)
 - [Подробное описание синтаксиса XAML](xaml-syntax-in-detail.md)

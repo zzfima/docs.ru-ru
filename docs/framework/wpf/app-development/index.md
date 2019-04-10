@@ -5,19 +5,19 @@ helpviewer_keywords:
 - WPF [WPF], about application development
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
-ms.openlocfilehash: 979a5324fe9cb6c3469660e061d5df7f312ef2c4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3b7e1d04173741088935104e8d4225691927a27b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365139"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211066"
 ---
 # <a name="application-development"></a>Разработка приложений
 <a name="introduction"></a> Windows Presentation Foundation (WPF) — это платформа представления, которую можно использовать для разработки приложений следующих типов:  
   
 -   автономные приложения (традиционные приложения [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], созданные как исполняемые сборки, которые устанавливаются и запускаются с клиентского компьютера);  
   
--   [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] (приложения, состоящие из страниц навигации, созданных как исполняемые сборки, которые размещаются в веб-браузерах, таких как [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] и Mozilla Firefox);  
+-   [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] (приложения, состоящие из страниц навигации, созданных как исполняемые сборки и размещенные веб-браузеров, таких как [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] или Mozilla Firefox).  
   
 -   пользовательские библиотеки элементов управления (неисполняемые сборки, содержащие многократно используемые элементы управления);  
   
@@ -27,9 +27,7 @@ ms.locfileid: "57365139"
 >  Использование типов WPF в службе Windows настоятельно не рекомендуется. При попытке использовать эти возможности в службе Windows они могут не работать должным образом.  
   
  Для создания этого набора приложений [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] реализует множество служб. Этот раздел предоставляет обзор этих служб и место, где искать дополнительные сведения.  
-  
 
-  
 <a name="Application_Management"></a>   
 ## <a name="application-management"></a>Управление приложениями  
  Исполняемые приложения [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] часто требуют основной набор функциональных возможностей, включающий следующее:  
@@ -74,7 +72,7 @@ ms.locfileid: "57365139"
   
  Дополнительные сведения см. в разделе [Общие сведения об окнах WPF](wpf-windows-overview.md).  
   
- <xref:System.Windows.Window> поддерживает возможность создать особый тип окна, известный как диалоговое окно. Можно создавать модальные и немодальные типы диалоговых окон.  
+ <xref:System.Windows.Window> поддерживает возможность создания особого типа окна, известный как диалоговое окно. Можно создавать модальные и немодальные типы диалоговых окон.  
   
  Для удобства, а также преимущества от повторного использования и согласованного пользовательского интерфейса между приложениями [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] предоставляет три общих диалоговых окон Windows: <xref:Microsoft.Win32.OpenFileDialog>, <xref:Microsoft.Win32.SaveFileDialog>, и <xref:System.Windows.Controls.PrintDialog>.  
   
@@ -84,7 +82,7 @@ ms.locfileid: "57365139"
   
 <a name="Navigation"></a>   
 ## <a name="navigation"></a>Навигация  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] поддерживает навигацию в стиле веб, реализуя страницы (<xref:System.Windows.Controls.Page>) и гиперссылки (<xref:System.Windows.Documents.Hyperlink>). Навигация может быть реализована разнообразными способами, включая следующие:  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] поддерживает навигацию по веб-страницах (<xref:System.Windows.Controls.Page>) и гиперссылок (<xref:System.Windows.Documents.Hyperlink>). Навигация может быть реализована разнообразными способами, включая следующие:  
   
 -   автономные страницы, размещенные в веб-браузере;  
   
@@ -96,7 +94,7 @@ ms.locfileid: "57365139"
   
  Для облегчения навигации [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] реализует следующее:  
   
--   совместно используемый обработчик переходов <xref:System.Windows.Navigation.NavigationService> для обработки запросов перемещения, который используют <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Navigation.NavigationWindow> и [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] для поддержки переходов внутри приложения;  
+-   <xref:System.Windows.Navigation.NavigationService>, совместно используемый обработчик переходов для обработки запросов перемещения, который используется службами <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Navigation.NavigationWindow>, и [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] для поддержки переходов внутри приложения.  
   
 -   методы навигации для инициирования навигации;  
   
@@ -106,11 +104,11 @@ ms.locfileid: "57365139"
   
  Сведения см. в разделе [Общие сведения о переходах](navigation-overview.md).  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] также поддерживает специальный тип навигации, известный как структурированная навигация. Структурированная навигация может использоваться для вызова одной или нескольких страниц, которые возвращают данные структурированным и предсказуемым способом, согласованным с вызывающими функциями. Эта возможность зависит от класса <xref:System.Windows.Navigation.PageFunction%601>, который описан далее в разделе [Общие сведения о структурной навигации](structured-navigation-overview.md). <xref:System.Windows.Navigation.PageFunction%601> также позволяет упростить создание сложных топологий переходов, которые описаны в разделе [Общие сведения о топологии переходов](navigation-topologies-overview.md).  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] также поддерживает специальный тип навигации, известный как структурированная навигация. Структурированная навигация может использоваться для вызова одной или нескольких страниц, которые возвращают данные структурированным и предсказуемым способом, согласованным с вызывающими функциями. Эта возможность зависит от класса <xref:System.Windows.Navigation.PageFunction%601>, который описан далее в разделе [Общие сведения о структурной навигации](structured-navigation-overview.md). <xref:System.Windows.Navigation.PageFunction%601> также служит для упрощения создания сложных топологий переходов, которые описаны в [Общие сведения о топологии переходов](navigation-topologies-overview.md).  
   
 <a name="Hosting"></a>   
 ## <a name="hosting"></a>Размещение  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] может размещаться в браузере [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] или Firefox. Каждая модель размещения имеет свой собственный набор разрешений и ограничений, которые рассматриваются в разделе [Размещение](hosting-wpf-applications.md).  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] можно ли поместить в [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] или Firefox. Каждая модель размещения имеет свой собственный набор разрешений и ограничений, которые рассматриваются в разделе [Размещение](hosting-wpf-applications.md).  
   
 <a name="Build_and_Deploy"></a>   
 ## <a name="build-and-deploy"></a>Построение и Развертывание  
@@ -121,12 +119,12 @@ ms.locfileid: "57365139"
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>См. также  
   
-|Заголовок|Описание:|  
+|Заголовок|Описание|  
 |-----------|-----------------|  
 |[Общие сведения об управлении приложением](application-management-overview.md)|Общие сведения о классе <xref:System.Windows.Application>, включая управление временем существования приложения, окнами, ресурсами приложений и навигацией.|  
-|[Windows в WPF](windows-in-wpf-applications.md)|Сведения об управлении окнами в приложении, включая способы использования класса <xref:System.Windows.Window> и диалоговых окон.|  
+|[Окна в WPF](windows-in-wpf-applications.md)|Сведения об управлении окнами в приложении, включая способы использования класса <xref:System.Windows.Window> и диалоговых окон.|  
 |[Общие сведения о переходах](navigation-overview.md)|Общие сведения об управлении навигацией по страницам приложения.|  
 |[Размещение](hosting-wpf-applications.md)|Предоставляет общие сведения о [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].|  
-|[Сборка и развертывание](building-and-deploying-wpf-applications.md)|Описание процесса сборки и развертывания приложения WPF.|  
+|[Построение и Развертывание](building-and-deploying-wpf-applications.md)|Описание процесса сборки и развертывания приложения WPF.|  
 |[Введение в WPF в Visual Studio](../getting-started/introduction-to-wpf-in-vs.md)|Описание основных возможностей WPF.|  
-|[Пошаговое руководство: My first WPF desktop application](../getting-started/walkthrough-my-first-wpf-desktop-application.md) (Пошаговое руководство. Создание классического приложения WPF)|Пошаговое руководство, в котором демонстрируется создание приложения WPF с использованием навигации по страницам, макета, элементов управления, изображений, стилей и привязок.|
+|[Пошаговое руководство. Создание классического приложения WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)|Пошаговое руководство, в котором демонстрируется создание приложения WPF с использованием навигации по страницам, макета, элементов управления, изображений, стилей и привязок.|

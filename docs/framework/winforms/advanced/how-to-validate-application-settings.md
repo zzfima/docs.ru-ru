@@ -9,12 +9,12 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
-ms.openlocfilehash: 96323e0edd643e20338bd10a9eb1744c3b0aef2f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 2fef6c924498003bc9ea393ba2117a1cb5f2afab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705835"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212093"
 ---
 # <a name="how-to-validate-application-settings"></a>Практическое руководство. Проверка параметров приложения
 В этом разделе показано, как проверить параметры приложения перед их сохранением.  
@@ -58,11 +58,11 @@ ms.locfileid: "57705835"
         MySettings.Default   
         ```  
   
-         - или -  
+         -или-  
   
     -   Если вы являетесь разработчиком на Visual Basic и создали параметры приложения с помощью конструктора проектов, для извлечения параметров можно использовать [объект My.Settings](~/docs/visual-basic/language-reference/objects/my-settings-object.md).  
   
-         - или -  
+         -или-  
   
     -   Если параметры были созданы путем наследования от <xref:System.Configuration.ApplicationSettingsBase> напрямую, необходимо создать экземпляр класса вручную.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "57705835"
   
 1.  Если вы являетесь C# developer, в формы или элемента управления `Load` событий, добавьте обработчик событий для <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> событий.  
   
-     - или -  
+     -или-  
   
      Если вы являетесь разработчиком на Visual Basic, объявите переменную `Settings` с помощью ключевого слова `WithEvents`.  
   
@@ -161,5 +161,6 @@ ms.locfileid: "57705835"
     ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Создание обработчиков событий в Windows Forms](../creating-event-handlers-in-windows-forms.md)
 - [Практическое руководство. Создание параметров приложения](how-to-create-application-settings.md)
