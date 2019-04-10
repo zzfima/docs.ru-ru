@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 44d99680-69c7-4879-a732-f6771b334211
-ms.openlocfilehash: cc9f276cc278d4a9c376d72f1ab38d89ea6dd5b4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cb2319d51e0518114a04eea2fc7ab6b5a836b7ff
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169602"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328599"
 ---
 # <a name="how-to-insert-rows-into-the-database"></a>Практическое руководство. Как вставить строки в базу данных
 Вставка строк в базу данных, добавив объекты в связанный [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601> коллекции и затем отправив эти изменения в базу данных. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Преобразует изменения в соответствующие SQL `INSERT` команды.  
@@ -24,11 +24,11 @@ ms.locfileid: "59169602"
   
 ### <a name="to-insert-a-row-into-the-database"></a>Вставка строки в базу данных  
   
-1.  Создайте новый объект, содержащий столбец данных для отправки.  
+1. Создайте новый объект, содержащий столбец данных для отправки.  
   
-2.  Добавьте новый объект, который [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] `Table` коллекцию, связанную с целевой таблицей в базе данных.  
+2. Добавьте новый объект, который [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] `Table` коллекцию, связанную с целевой таблицей в базе данных.  
   
-3.  Отправьте изменение в базу данных.  
+3. Отправьте изменение в базу данных.  
   
 ## <a name="example"></a>Пример  
  В следующем примере кода создается новый объект с типом `Order` и заполняется соответствующими значениями. Затем новый объект добавляется в коллекцию `Order`. И наконец, изменение отправляется в базу данных в виде новой строки в таблице`Orders`.  

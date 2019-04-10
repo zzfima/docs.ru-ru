@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MDI [Windows Forms], activating forms
 - MDI [Windows Forms], locating focus
 ms.assetid: 33880ec3-0207-4c2b-a616-ff140443cc0f
-ms.openlocfilehash: 81cb9b55f53c152e755ada1803e4ba5731498627
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9b70824670b8f47a2346135cb31ad39bd55694d1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59229476"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300610"
 ---
 # <a name="how-to-determine-the-active-mdi-child"></a>Практическое руководство. Определение активной дочерней MDI-формы
 В некоторых случаях требуется предоставить это команда, работающая на элементе управления, имеющий фокус на данный момент активной дочерней формы. Например предположим, что вы хотите копировать выделенный текст из текстового поля дочерней формы в буфер обмена. Необходимо создать процедуру, которая копирует выделенный текст в буфер обмена с помощью <xref:System.Windows.Forms.Control.Click> событие копию элемента меню на стандартные меню "Правка".  
@@ -27,7 +27,7 @@ ms.locfileid: "59229476"
   
 ### <a name="to-determine-the-active-mdi-child-to-copy-its-text-to-the-clipboard"></a>Для определения активной дочерней MDI-формы (чтобы скопировать его текст в буфер обмена)  
   
-1.  В методе скопируйте текст активного элемента управления активной дочерней формы в буфер обмена.  
+1. В методе скопируйте текст активного элемента управления активной дочерней формы в буфер обмена.  
   
     > [!NOTE]
     >  В этом примере предполагается, имеется родительская форма MDI (`Form1`), имеет один или несколько дочерних MDI-окон содержащий <xref:System.Windows.Forms.RichTextBox> элемента управления. Дополнительные сведения см. в разделе [Создание родительских MDI-форм](how-to-create-mdi-parent-forms.md).  

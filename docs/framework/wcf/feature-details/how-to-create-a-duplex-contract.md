@@ -7,45 +7,45 @@ dev_langs:
 helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 500a75b6-998a-47d5-8e3b-24e3aba2a434
-ms.openlocfilehash: 002c94f2cb69e330e8d2796a9f93d977b10f53f9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c00e5d8e50de89d3d4d346ccddc50282f24735b2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59078178"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332135"
 ---
 # <a name="how-to-create-a-duplex-contract"></a>Практическое руководство. Создание двухстороннего контракта
 В этом разделе приведены основные этапы создания методов, использующих дуплексные (двухсторонние) контракты. Дуплексный контракт позволяет клиентам и серверам взаимодействовать друг с другом независимо (клиент может инициировать вызовы сервера, а сервер - вызовы клиента). Дуплексный контракт-это один из трех шаблонов сообщений, доступных для служб Windows Communication Foundation (WCF). Две другие схемы обмена сообщениями - это односторонний обмен и запрос-ответ. Дуплексный контракт состоит из двух односторонних контрактов между клиентом и сервером, при этом не требуется корреляция между вызовами методов. Контракт этого типа следует использовать, если служба должна запрашивать у клиента дополнительную информацию или в явном виде создавать события в клиенте. Дополнительные сведения о создании клиентского приложения для дуплексного контракта см. в разделе [как: Доступ к службам с дуплексным контрактом](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md). Работающий пример см. в разделе [дуплексного](../../../../docs/framework/wcf/samples/duplex.md) образца.  
   
 ### <a name="to-create-a-duplex-contract"></a>Создание двухстороннего контракта  
   
-1.  Создайте интерфейс, образующий серверную часть дуплексного контракта.  
+1. Создайте интерфейс, образующий серверную часть дуплексного контракта.  
   
-2.  Примените класс <xref:System.ServiceModel.ServiceContractAttribute> к интерфейсу.  
+2. Примените класс <xref:System.ServiceModel.ServiceContractAttribute> к интерфейсу.  
   
      [!code-csharp[S_WS_DualHttp#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ws_dualhttp/cs/service.cs#3)]
      [!code-vb[S_WS_DualHttp#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_ws_dualhttp/vb/service.vb#3)]  
   
-3.  Объявите в интерфейсе подписи методов.  
+3. Объявите в интерфейсе подписи методов.  
   
-4.  Примените класс <xref:System.ServiceModel.OperationContractAttribute> к каждой подписи метода, которая должна входить в открытый контракт.  
+4. Примените класс <xref:System.ServiceModel.OperationContractAttribute> к каждой подписи метода, которая должна входить в открытый контракт.  
   
-5.  Создайте интерфейс обратного вызова, определяющий набор операций, которые служба может вызывать в клиенте.  
+5. Создайте интерфейс обратного вызова, определяющий набор операций, которые служба может вызывать в клиенте.  
   
      [!code-csharp[S_WS_DualHttp#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ws_dualhttp/cs/service.cs#4)]
      [!code-vb[S_WS_DualHttp#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_ws_dualhttp/vb/service.vb#4)]  
   
-6.  Объявите подписи методов в интерфейсе обратного вызова.  
+6. Объявите подписи методов в интерфейсе обратного вызова.  
   
-7.  Примените класс <xref:System.ServiceModel.OperationContractAttribute> к каждой подписи метода, которая должна входить в открытый контракт.  
+7. Примените класс <xref:System.ServiceModel.OperationContractAttribute> к каждой подписи метода, которая должна входить в открытый контракт.  
   
-8.  Объедините эти два интерфейса в дуплексный контракт, задав для свойства <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A> в основном интерфейсе тип интерфейса обратного вызова.  
+8. Объедините эти два интерфейса в дуплексный контракт, задав для свойства <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A> в основном интерфейсе тип интерфейса обратного вызова.  
   
 ### <a name="to-call-methods-on-the-client"></a>Вызов методов в клиенте  
   
-1.  В реализации основного контракта на стороне службы объявите переменную для интерфейса обратного вызова.  
+1. В реализации основного контракта на стороне службы объявите переменную для интерфейса обратного вызова.  
   
-2.  Присвойте переменной ссылку на объект, возвращаемый методом <xref:System.ServiceModel.OperationContext.GetCallbackChannel%2A> класса <xref:System.ServiceModel.OperationContext>.  
+2. Присвойте переменной ссылку на объект, возвращаемый методом <xref:System.ServiceModel.OperationContext.GetCallbackChannel%2A> класса <xref:System.ServiceModel.OperationContext>.  
   
      [!code-csharp[S_WS_DualHttp#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ws_dualhttp/cs/service.cs#1)]
      [!code-vb[S_WS_DualHttp#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_ws_dualhttp/vb/service.vb#1)]  
@@ -53,7 +53,7 @@ ms.locfileid: "59078178"
      [!code-csharp[S_WS_DualHttp#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ws_dualhttp/cs/service.cs#2)]
      [!code-vb[S_WS_DualHttp#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_ws_dualhttp/vb/service.vb#2)]  
   
-3.  Вызовите методы, определенные в интерфейсе обратного вызова.  
+3. Вызовите методы, определенные в интерфейсе обратного вызова.  
   
 ## <a name="example"></a>Пример  
  В следующем примере кода демонстрируется дуплексное взаимодействие. Контракт службы содержит операции службы для перемещения вперед или назад. Контракт клиента содержит операцию службы для сообщения о положении.  

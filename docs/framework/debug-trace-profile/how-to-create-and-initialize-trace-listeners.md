@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 21726de1-61ee-4fdc-9dd0-3be49324d066
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 58edf1c6f2dca5c2b269370139533f1f8da17813
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 85cf8f32a3dbf283e75052548f5963e8a7da0ed2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59222722"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321059"
 ---
 # <a name="how-to-create-and-initialize-trace-listeners"></a>Практическое руководство. Создание и инициализация прослушивателей трассировки
 Классы <xref:System.Diagnostics.Debug?displayProperty=nameWithType> и <xref:System.Diagnostics.Trace?displayProperty=nameWithType> отправляют сообщения объектам, которые называются прослушивателями. Эти объекты получают и обрабатывают эти сообщения. Один из таких прослушивателей, <xref:System.Diagnostics.DefaultTraceListener?displayProperty=nameWithType>, автоматически создается и инициализируется при включении трассировки или отладки. Если требуется направить выходные данные типа <xref:System.Diagnostics.Trace> или <xref:System.Diagnostics.Debug> каким-либо дополнительным источникам, необходимо создать и инициализировать дополнительные прослушиватели трассировки.  
@@ -29,7 +29,7 @@ ms.locfileid: "59222722"
   
 ### <a name="to-create-and-use-a-trace-listener-by-using-a-configuration-file"></a>Создание и использование прослушивателя трассировки с использованием файла конфигурации  
   
-1.  Объявите прослушиватель трассировки в файле конфигурации приложения. Если создаваемый прослушиватель требует какие-либо другие объекты, также объявите их. В следующем примере показано создание прослушивателя с именем `myListener`, записывающего данные в текстовый файл `TextWriterOutput.log`.  
+1. Объявите прослушиватель трассировки в файле конфигурации приложения. Если создаваемый прослушиватель требует какие-либо другие объекты, также объявите их. В следующем примере показано создание прослушивателя с именем `myListener`, записывающего данные в текстовый файл `TextWriterOutput.log`.  
   
     ```xml  
     <configuration>  
@@ -44,7 +44,7 @@ ms.locfileid: "59222722"
     </configuration>  
     ```  
   
-2.  Используйте класс <xref:System.Diagnostics.Trace> в своем коде для записи сообщения в прослушиватели трассировки.  
+2. Используйте класс <xref:System.Diagnostics.Trace> в своем коде для записи сообщения в прослушиватели трассировки.  
   
     ```vb  
     Trace.TraceInformation("Test message.")  

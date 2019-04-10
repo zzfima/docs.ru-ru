@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ClientCredentials class
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
-ms.openlocfilehash: 9a6b043420554e41d0804e32313b87f05cf54631
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f95274861f58d1581e4c5439861ebf186b1b3489
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160944"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332564"
 ---
 # <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>Практическое руководство. Использование отдельных сертификатов X.509 для подписывания и шифрования
 В этом разделе показано, как настроить Windows Communication Foundation (WCF) использовать разные сертификаты для подписывания и шифрования на клиенте и службе сообщений.  
@@ -47,34 +47,34 @@ ms.locfileid: "59160944"
   
 ### <a name="to-use-separate-certificates-for-signing-and-encryption"></a>Использование отдельных сертификатов для подписывания и шифрования  
   
-1.  Определите новый класс учетных данных клиента, который наследуется от класса <xref:System.ServiceModel.Description.ClientCredentials>. Реализуйте четыре новых свойства, чтобы разрешить спецификацию нескольких сертификатов: `ClientSigningCertificate`, `ClientEncryptingCertificate`, `ServiceSigningCertificate` и `ServiceEncryptingCertificate`. Кроме того, переопределите метод <xref:System.ServiceModel.Description.ClientCredentials.CreateSecurityTokenManager%2A> для возврата экземпляра пользовательского класса <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>, который определяется на следующем шаге.  
+1. Определите новый класс учетных данных клиента, который наследуется от класса <xref:System.ServiceModel.Description.ClientCredentials>. Реализуйте четыре новых свойства, чтобы разрешить спецификацию нескольких сертификатов: `ClientSigningCertificate`, `ClientEncryptingCertificate`, `ServiceSigningCertificate` и `ServiceEncryptingCertificate`. Кроме того, переопределите метод <xref:System.ServiceModel.Description.ClientCredentials.CreateSecurityTokenManager%2A> для возврата экземпляра пользовательского класса <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>, который определяется на следующем шаге.  
   
      [!code-csharp[c_FourCerts#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#1)]
      [!code-vb[c_FourCerts#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#1)]  
   
-2.  Определите новый диспетчер маркеров безопасности клиента, который наследуется от класса <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>. Переопределите метод <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A>, чтобы создать соответствующий поставщик маркеров безопасности. Параметр `requirement` (<xref:System.IdentityModel.Selectors.SecurityTokenRequirement>) обеспечивает направление сообщения и использование ключа.  
+2. Определите новый диспетчер маркеров безопасности клиента, который наследуется от класса <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>. Переопределите метод <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A>, чтобы создать соответствующий поставщик маркеров безопасности. Параметр `requirement` (<xref:System.IdentityModel.Selectors.SecurityTokenRequirement>) обеспечивает направление сообщения и использование ключа.  
   
      [!code-csharp[c_FourCerts#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#2)]
      [!code-vb[c_FourCerts#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#2)]  
   
-3.  Определите новый класс учетных данных службы, который наследуется от класса <xref:System.ServiceModel.Description.ServiceCredentials>. Реализуйте четыре новых свойства, чтобы разрешить спецификацию нескольких сертификатов: `ClientSigningCertificate`, `ClientEncryptingCertificate`, `ServiceSigningCertificate` и `ServiceEncryptingCertificate`. Кроме того, переопределите метод <xref:System.ServiceModel.Description.ServiceCredentials.CreateSecurityTokenManager%2A> для возврата экземпляра пользовательского класса <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>, который определяется на следующем шаге.  
+3. Определите новый класс учетных данных службы, который наследуется от класса <xref:System.ServiceModel.Description.ServiceCredentials>. Реализуйте четыре новых свойства, чтобы разрешить спецификацию нескольких сертификатов: `ClientSigningCertificate`, `ClientEncryptingCertificate`, `ServiceSigningCertificate` и `ServiceEncryptingCertificate`. Кроме того, переопределите метод <xref:System.ServiceModel.Description.ServiceCredentials.CreateSecurityTokenManager%2A> для возврата экземпляра пользовательского класса <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>, который определяется на следующем шаге.  
   
      [!code-csharp[c_FourCerts#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#3)]
      [!code-vb[c_FourCerts#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#3)]  
   
-4.  Определите новый диспетчер маркеров безопасности службы, который наследуется от класса <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>. Переопределите метод <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A> для создания соответствующего поставщика маркеров безопасности при условии переданных в него направления сообщения и использования ключа.  
+4. Определите новый диспетчер маркеров безопасности службы, который наследуется от класса <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>. Переопределите метод <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A> для создания соответствующего поставщика маркеров безопасности при условии переданных в него направления сообщения и использования ключа.  
   
      [!code-csharp[c_FourCerts#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#4)]
      [!code-vb[c_FourCerts#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#4)]  
   
 ### <a name="to-use-multiple-certificates-on-the-client"></a>Использование нескольких сертификатов на клиенте  
   
-1.  Создайте специальную привязку. Элемент привязки безопасности должен работать в дуплексном режиме, чтобы обеспечить наличие разных поставщиков маркеров безопасности для запросов и ответов. Это можно реализовать, например, посредством использования дуплексного транспорта или применения элемента <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>, как показано в следующем коде. Свяжите пользовательское средство <xref:System.ServiceModel.Security.IdentityVerifier>, которое определяется на следующем шаге, с элементом привязки безопасности. Замените учетные данные клиента по умолчанию на ранее созданные пользовательские учетные данные клиента.  
+1. Создайте специальную привязку. Элемент привязки безопасности должен работать в дуплексном режиме, чтобы обеспечить наличие разных поставщиков маркеров безопасности для запросов и ответов. Это можно реализовать, например, посредством использования дуплексного транспорта или применения элемента <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>, как показано в следующем коде. Свяжите пользовательское средство <xref:System.ServiceModel.Security.IdentityVerifier>, которое определяется на следующем шаге, с элементом привязки безопасности. Замените учетные данные клиента по умолчанию на ранее созданные пользовательские учетные данные клиента.  
   
      [!code-csharp[c_FourCerts#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#5)]
      [!code-vb[c_FourCerts#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#5)]  
   
-2.  Определите пользовательское средство <xref:System.ServiceModel.Security.IdentityVerifier>. Служба имеет несколько идентификаторов, поскольку для шифрования запроса и подписывания ответа используются разные сертификаты.  
+2. Определите пользовательское средство <xref:System.ServiceModel.Security.IdentityVerifier>. Служба имеет несколько идентификаторов, поскольку для шифрования запроса и подписывания ответа используются разные сертификаты.  
   
     > [!NOTE]
     >  В следующем примере предоставленное пользовательское средство проверки идентификации в демонстрационных целях не выполняет никакой проверки идентификации конечных точек. Для рабочего кода так делать не рекомендуется.  
@@ -84,7 +84,7 @@ ms.locfileid: "59160944"
   
 ### <a name="to-use-multiple-certificates-on-the-service"></a>Использование нескольких сертификатов в службе  
   
-1.  Создайте специальную привязку. Элемент привязки безопасности должен работать в дуплексном режиме, чтобы обеспечить наличие разных поставщиков маркеров безопасности для запросов и ответов. Так же как для клиента, используйте дуплексный транспорт или элемент <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>, как показано в следующем коде. Замените учетные данные службы по умолчанию на ранее созданные пользовательские учетные данные службы.  
+1. Создайте специальную привязку. Элемент привязки безопасности должен работать в дуплексном режиме, чтобы обеспечить наличие разных поставщиков маркеров безопасности для запросов и ответов. Так же как для клиента, используйте дуплексный транспорт или элемент <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>, как показано в следующем коде. Замените учетные данные службы по умолчанию на ранее созданные пользовательские учетные данные службы.  
   
      [!code-csharp[c_FourCerts#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#7)]
      [!code-vb[c_FourCerts#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#7)]  

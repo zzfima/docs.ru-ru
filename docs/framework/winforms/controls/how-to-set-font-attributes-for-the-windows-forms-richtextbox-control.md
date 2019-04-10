@@ -14,23 +14,23 @@ helpviewer_keywords:
 - text boxes [Windows Forms], formatting text
 - formatting [Windows Forms]
 ms.assetid: 2bc23ddb-0529-4489-a1a2-ad253cb43f9a
-ms.openlocfilehash: 50a65a6828968f7bd9f1b17f5b8c8b1e4f70d051
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a6fe5b30c457fae2d53c946092b214f492fe5e9b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59182914"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331212"
 ---
 # <a name="how-to-set-font-attributes-for-the-windows-forms-richtextbox-control"></a>Практическое руководство. Задание атрибутов шрифта для элемента управления RichTextBox в Windows Forms
 Windows Forms <xref:System.Windows.Forms.RichTextBox> элемент управления имеет разнообразные варианты форматирования отображаемого в нем текста. Вы можете выделить выбранные символы полужирным, подчеркнутым шрифтом или курсивом, с помощью <xref:System.Windows.Forms.RichTextBox.SelectionFont%2A> свойство. Это свойство также может использоваться для изменения размера и начертания выбранных символов. <xref:System.Windows.Forms.RichTextBox.SelectionColor%2A> Свойства можно изменить цвет выбранных символов.  
   
 ### <a name="to-change-the-appearance-of-characters"></a>Изменение внешнего вида символов  
   
-1.  Задайте <xref:System.Windows.Forms.RichTextBox.SelectionFont%2A> свойство соответствующий шрифт.  
+1. Задайте <xref:System.Windows.Forms.RichTextBox.SelectionFont%2A> свойство соответствующий шрифт.  
   
      Чтобы обеспечить пользователям возможность выбора семейства шрифтов, размера и начертания в приложении, обычно используется <xref:System.Windows.Forms.FontDialog> компонента. Его обзор приведен в разделе [Общие сведения о компоненте FontDialog](fontdialog-component-overview-windows-forms.md).  
   
-2.  Задайте <xref:System.Windows.Forms.RichTextBox.SelectionColor%2A> свойство соответствующий цвет.  
+2. Задайте <xref:System.Windows.Forms.RichTextBox.SelectionColor%2A> свойство соответствующий цвет.  
   
      Чтобы пользователи могли установить цвет в приложении, обычно используется <xref:System.Windows.Forms.ColorDialog> компонента. Его обзор приведен в разделе [Общие сведения о компоненте ColorDialog](colordialog-component-overview-windows-forms.md).  
   

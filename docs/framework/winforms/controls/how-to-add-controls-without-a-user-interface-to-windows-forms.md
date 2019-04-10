@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Windows Forms controls, nonvisual
 - nonvisual controls [Windows Forms]
 ms.assetid: 52134d9c-cff6-4eed-8e2b-3d5eb3bd494e
-ms.openlocfilehash: 90166821181e6562d0bef3ff85f7e7a95c479be0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0768f811653543b3370310ccc0b59890273baf52
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59223697"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330107"
 ---
 # <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>Практическое руководство. Добавление элементов управления, для которых не существует пользовательского интерфейса, в формы Windows Forms
 Невизуального элемента управления (или компонент) предоставляет функциональные возможности приложения. В отличие от других элементов управления компоненты не предоставляют пользовательский интерфейс для пользователя и таким образом не обязательно должны отображаться в рабочей области конструктора Windows Forms. При добавлении компонента в форму, в конструкторе Windows Forms отображает изменяемого в нижней части формы, в которой отображаются все компоненты. После добавления элемента управления в область компонентов, можно выбрать компонент и задайте свойства, как и любой другой элемент управления в форме.  
@@ -29,9 +29,9 @@ ms.locfileid: "59223697"
   
 ### <a name="to-add-a-component-to-a-windows-form"></a>Добавление компонента в форму Windows  
   
-1.  Откройте форму. Подробную информацию см. в разделе [Практическое руководство. Отображение в конструкторе Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).  
+1. Откройте форму. Подробную информацию см. в разделе [Практическое руководство. Отображение в конструкторе Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).  
   
-2.  На **панели элементов** щелкните компонент и перетащите его на форму.  
+2. На **панели элементов** щелкните компонент и перетащите его на форму.  
   
      Компонент появится в области компонентов.  
   
@@ -42,11 +42,11 @@ ms.locfileid: "59223697"
   
 #### <a name="to-add-a-component-to-a-windows-form-programmatically"></a>Добавление компонента в форму Windows программными средствами  
   
-1.  Создайте экземпляр класса <xref:System.Windows.Forms.Timer> в коде.  
+1. Создайте экземпляр класса <xref:System.Windows.Forms.Timer> в коде.  
   
-2.  Задайте свойство `Interval` для определения времени между тактами таймера.  
+2. Задайте свойство `Interval` для определения времени между тактами таймера.  
   
-3.  Настройте другие необходимые свойства компонента.  
+3. Настройте другие необходимые свойства компонента.  
   
      В следующем коде показано создание <xref:System.Windows.Forms.Timer> и установка его свойства `Interval`.  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], docking using designer
 - Dock property [Windows Forms], aligning controls (using designer)
 ms.assetid: 51f08998-5e3b-4330-be58-a4edd0eb60f4
-ms.openlocfilehash: 8f74a6b56e99e016bfb27bbe1b271f6c71af8f87
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8ca6fd64edbd73301fd298f42c3d4d97d021888a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59140899"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331868"
 ---
 # <a name="how-to-align-a-control-to-the-edges-of-forms-at-design-time"></a>Практическое руководство. Выравнивание элементов управления по границам формы во время выполнения
 Чтобы выровнять по границе формы, задав элемент управления <xref:System.Windows.Forms.Control.Dock%2A>. Это свойство определяет, в каком месте формы будет размещаться элемент управления. Свойство <xref:System.Windows.Forms.Control.Dock%2A> может принимать указанные ниже значения.  
@@ -31,15 +31,15 @@ ms.locfileid: "59140899"
   
 ### <a name="to-set-the-dock-property-for-your-control-at-design-time"></a>Чтобы задать свойства Dock для элемента управления во время разработки  
   
-1.  В конструкторе Windows Forms выберите элемент управления.  
+1. В конструкторе Windows Forms выберите элемент управления.  
   
-2.  В **свойства** окно, щелкните в раскрывающемся поле рядом с <xref:System.Windows.Forms.Control.Dock%2A> свойство.  
+2. В **свойства** окно, щелкните в раскрывающемся поле рядом с <xref:System.Windows.Forms.Control.Dock%2A> свойство.  
   
      Графический интерфейс с шестью возможными <xref:System.Windows.Forms.Control.Dock%2A> параметров отображается.  
   
-3.  Выберите соответствующий параметр.  
+3. Выберите соответствующий параметр.  
   
-4.  Элемент управления будет зафиксировано в отношении, определенном с помощью параметра.  
+4. Элемент управления будет зафиксировано в отношении, определенном с помощью параметра.  
   
 ## <a name="see-also"></a>См. также
 

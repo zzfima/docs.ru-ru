@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6400bc71-a858-4ac2-8d5a-caa72d3b5482
-ms.openlocfilehash: 30c9719c7c53b2e0e99043bd8ff2cb5d7da393a0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: bc0c822659ee57ac8dd87a2adddcd32e934ea4fb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59218957"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302408"
 ---
 # <a name="how-to-configure-a-windows-communication-foundation-service-to-use-port-sharing"></a>Практическое руководство. Настройка службы Windows Communication Foundation на совместное использование портов
 — Это самый простой способ использования порта net.tcp:// в приложении Windows Communication Foundation (WCF) для предоставления службы с помощью <xref:System.ServiceModel.NetTcpBinding>.  
@@ -21,17 +21,17 @@ ms.locfileid: "59218957"
   
 ### <a name="to-enable-nettcp-port-sharing-on-a-nettcpbinding-in-code"></a>Включение совместного использования порта net.tcp:// в привязке NetTcpBinding с помощью кода  
   
-1.  Создать службу, реализующую контракт с именем `IMyService` и назовите его `MyService`,.  
+1. Создать службу, реализующую контракт с именем `IMyService` и назовите его `MyService`,.  
   
      [!code-csharp[c_ConfigurePortSharing#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_configureportsharing/cs/source.cs#1)]
      [!code-vb[c_ConfigurePortSharing#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_configureportsharing/vb/source.vb#1)]  
   
-2.  Создайте экземпляр класса <xref:System.ServiceModel.NetTcpBinding> и задайте для свойства <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> значение `true`.  
+2. Создайте экземпляр класса <xref:System.ServiceModel.NetTcpBinding> и задайте для свойства <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> значение `true`.  
   
      [!code-csharp[c_ConfigurePortSharing#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_configureportsharing/cs/source.cs#2)]
      [!code-vb[c_ConfigurePortSharing#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_configureportsharing/vb/source.vb#2)]  
   
-3.  Создайте <xref:System.ServiceModel.ServiceHost> и добавьте в него конечную точку службы для `MyService`, использующей привязку <xref:System.ServiceModel.NetTcpBinding>, поддерживающую совместное использование порта, и ожидающей передачи данных по универсальному коду ресурса (URI) адреса конечной точки "net.tcp://localhost/MyService".  
+3. Создайте <xref:System.ServiceModel.ServiceHost> и добавьте в него конечную точку службы для `MyService`, использующей привязку <xref:System.ServiceModel.NetTcpBinding>, поддерживающую совместное использование порта, и ожидающей передачи данных по универсальному коду ресурса (URI) адреса конечной точки "net.tcp://localhost/MyService".  
   
      [!code-csharp[c_ConfigurePortSharing#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_configureportsharing/cs/source.cs#3)]
      [!code-vb[c_ConfigurePortSharing#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_configureportsharing/vb/source.vb#3)]  
@@ -41,7 +41,7 @@ ms.locfileid: "59218957"
   
 ### <a name="to-enable-nettcp-port-sharing-on-a-nettcpbinding-in-configuration"></a>Включение совместного использования порта net.tcp:// в привязке NetTcpBinding с помощью конфигурации  
   
-1.  В следующем примере показано, как включить совместное использование порта и добавить конечную точку службы с помощью элементов конфигурации.  
+1. В следующем примере показано, как включить совместное использование порта и добавить конечную точку службы с помощью элементов конфигурации.  
   
 ```xml  
 <system.serviceModel>  

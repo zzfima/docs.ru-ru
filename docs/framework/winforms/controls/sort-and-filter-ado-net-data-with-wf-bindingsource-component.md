@@ -13,12 +13,12 @@ helpviewer_keywords:
 - data [Windows Forms], sorting
 - ADO.NET [Windows Forms]
 ms.assetid: 6c206daf-d706-4602-9dbe-435343052063
-ms.openlocfilehash: 1f8a5e9be40c8a2d00b05ea42097e397afd0e1b6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8904eff39b7278b2a185cc5e2f738ece1e8e88e4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59163258"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306512"
 ---
 # <a name="how-to-sort-and-filter-adonet-data-with-the-windows-forms-bindingsource-component"></a>Практическое руководство. Сортировка и фильтрация данных ADO.NET с помощью компонента BindingSource в Windows Forms
 Можно предоставить возможность фильтрации и сортировки <xref:System.Windows.Forms.BindingSource> управлять через <xref:System.Windows.Forms.BindingSource.Sort%2A> и <xref:System.Windows.Forms.BindingSource.Filter%2A> свойства. Можно применить простую сортировку, когда в источнике данных <xref:System.ComponentModel.IBindingList>, и можно применить фильтрацию и если источником данных является <xref:System.ComponentModel.IBindingListView>. <xref:System.Windows.Forms.BindingSource.Sort%2A> Свойства требуется стандартный [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] синтаксис: строка, представляющая имя столбца данных в источнике данных, за которым следует `ASC` или `DESC` для указания ли списка должны быть отсортированы в порядке возрастания или убывания. Можно задать дополнительные возможности сортировки или несколько столбцов сортировки, каждый столбец отделяется разделителем запятой. <xref:System.Windows.Forms.BindingSource.Filter%2A> Свойство принимает строковое выражение.  
@@ -37,9 +37,9 @@ ms.locfileid: "59163258"
   
 ### <a name="to-sort-data-with-the-bindingsource"></a>Для сортировки данных с использованием компонента BindingSource  
   
-1.  Задайте <xref:System.Windows.Forms.BindingSource.Sort%2A> свойства к имени столбца, который будет следуют `ASC` или `DESC` для указания по возрастанию или убыванию.  
+1. Задайте <xref:System.Windows.Forms.BindingSource.Sort%2A> свойства к имени столбца, который будет следуют `ASC` или `DESC` для указания по возрастанию или убыванию.  
   
-2.  Несколько столбцов разделяются запятыми.  
+2. Несколько столбцов разделяются запятыми.  
   
  [!code-csharp[System.Windows.Forms.DataConnectorFilterAndSort#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/CS/form1.cs#12)]
  [!code-vb[System.Windows.Forms.DataConnectorFilterAndSort#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/VB/form1.vb#12)]  

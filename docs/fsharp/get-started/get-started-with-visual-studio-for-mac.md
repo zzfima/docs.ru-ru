@@ -2,12 +2,12 @@
 title: Начало работы с F# в Visual Studio для Mac
 description: Сведения об использовании F# с помощью Visual Studio для Mac.
 ms.date: 07/03/2018
-ms.openlocfilehash: e37600b2ca8f845ec1068a55ff1f9964d2527742
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a6997f139d7e6c5fdf77878442db0b0b75b3d727
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604175"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331875"
 ---
 # <a name="get-started-with-f-in-visual-studio-for-mac"></a>Начало работы с F# в Visual Studio для Mac
 
@@ -19,7 +19,7 @@ F#и визуальный F# инструментарий поддерживаю
 
 1. На **файл** последовательно выберите пункты **новое решение**.
 
-2.  В диалоговом окне нового проекта существует 2 различных шаблонов для консольного приложения.  Имеется один под другими "->".NET, предназначенный для .NET Framework.  Другие шаблон находится в .NET Core "->" приложения, который нацелен на .NET Core.  Либо они должны работать в этой статье.
+2. В диалоговом окне нового проекта существует 2 различных шаблонов для консольного приложения.  Имеется один под другими "->".NET, предназначенный для .NET Framework.  Другие шаблон находится в .NET Core "->" приложения, который нацелен на .NET Core.  Либо они должны работать в этой статье.
 
 3. В консольном приложении, изменить C# для F# при необходимости.  Выберите **Далее** кнопки для перемещения вперед!  
 
@@ -116,7 +116,7 @@ val it : bool = true
 ## <a name="see-also"></a>См. также
 
 - [Visual F#](../index.md)
-- [Обзор языка F#](../tour.md)
+- [Обзор языка F#](../tour.md)
 - [F#Справочник по языку](../language-reference/index.md)
 - [Вывод типа](../language-reference/type-inference.md)
 - [Справочник символов и оператор](../language-reference/symbol-and-operator-reference/index.md)

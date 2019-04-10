@@ -9,12 +9,12 @@ helpviewer_keywords:
 - splitter windows [Windows Forms], resizing
 - SplitContainer control [Windows Forms], resizing
 ms.assetid: 9bf73f36-ed2d-4a02-b15a-0770eff4fdfa
-ms.openlocfilehash: 4ed1d2a5230502bc598906da0db5164396986e66
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8cdcfdfaa135a92ed6a6e96d4a72de2c97f2493d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59217072"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328677"
 ---
 # <a name="how-to-define-resize-and-positioning-behavior-in-a-split-window"></a>Практическое руководство. Определение способа изменения размеров и позиционирования в окне с перемещаемым разделителем
 Панели элемента <xref:System.Windows.Forms.SplitContainer> управления поддаются, размеров и управлению пользователями. Тем не менее, будет существовать раз, когда необходимо программно управлять разделителем, где он размещается, и определить, каким образом его можно переместить.  
@@ -31,7 +31,7 @@ ms.locfileid: "59217072"
   
 ### <a name="to-define-splitcontainer-resize-behavior"></a>Для определения поведения размера SplitContainer  
   
-1.  В процедуре, задайте <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> свойство до нужного размера, таким образом, чтобы реализовать поведение «привязка» разделителя.  
+1. В процедуре, задайте <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> свойство до нужного размера, таким образом, чтобы реализовать поведение «привязка» разделителя.  
   
      В следующем примере кода, в форме <xref:System.Windows.Forms.Form.Load> событие, разделителя в <xref:System.Windows.Forms.SplitContainer> элемента управления задано значение для перехода 10 пикселей при перетаскивании.  
   

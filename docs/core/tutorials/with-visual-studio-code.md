@@ -4,12 +4,12 @@ description: Узнайте, как создать и отладить в Visual
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: 8df26651a7b35e5b6c9bdcb54d09c97525e12426
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: d91427197662d61c1c3ffc242de9b1128b81b9c6
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788340"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890557"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Начало работы с C# и Visual Studio Code
 
@@ -91,14 +91,14 @@ ms.locfileid: "57788340"
 ## <a name="add-a-class"></a>Добавление класса
 
 1. Чтобы добавить новый класс, щелкните правой кнопкой мыши в обозревателе VSCode и выберите **Новый файл**. Так вы добавите новый файл в папку, открытую в VSCode.
-2. Назовите файл `Class1.cs`. Необходимо сохранить его с расширением `.cs`, чтобы он распознавался как файл С#.
+2. Назовите файл `MyClass.cs`. Необходимо сохранить его с расширением `.cs`, чтобы он распознавался как файл С#.
 3. Добавьте приведенный ниже код для создания класса. Включите правильное пространство имен, на которое будет создана ссылка из файла `Program.cs`.
 ``` csharp
 using System;
 
 namespace HelloWorld
 {
-    public class Class1
+    public class MyClass
     {
         public string ReturnMessage()
         {
@@ -119,7 +119,7 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            Class1 c1 = new Class1();
+            MyClass c1 = new MyClass();
             Console.WriteLine($"Hello World! {c1.ReturnMessage()}");
         }
     }
@@ -140,5 +140,5 @@ Hello World! Happy coding!
 
 ## <a name="see-also"></a>См. также
 
-- [Setting up Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview) (Настройка Visual Studio Code)
-- [Debugging in Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging) (Отладка в Visual Studio Code)
+- [Настройка Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)
+- [Debugging in Visual Studio Code (Отладка в Visual Studio Code)](https://code.visualstudio.com/Docs/editor/debugging)

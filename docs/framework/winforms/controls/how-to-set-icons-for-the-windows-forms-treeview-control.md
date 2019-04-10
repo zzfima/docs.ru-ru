@@ -12,12 +12,12 @@ helpviewer_keywords:
 - icons [Windows Forms], setting for TreeView control
 - tree nodes in TreeView control [Windows Forms], icons
 ms.assetid: c14ddcc0-e5a6-4c21-a2d5-6799fd491781
-ms.openlocfilehash: 12b8354890f0ba613b35615dc5cf3a5b3555e7ca
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1a857aade86d2366bb68ce14d716b3ce532ecb05
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59097631"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328417"
 ---
 # <a name="how-to-set-icons-for-the-windows-forms-treeview-control"></a>Практическое руководство. Определение значков для элемента управления TreeView в Windows Forms
 Windows Forms <xref:System.Windows.Forms.TreeView> элемент управления может отображать значки рядом с каждым узлом. Значки располагаются непосредственно слева от текста узла. Чтобы отобразить эти значки, необходимо связать представлении в виде дерева с <xref:System.Windows.Forms.ImageList> элемента управления. Дополнительные сведения о списках изображений, см. в разделе [компонента ImageList](imagelist-component-windows-forms.md) и [как: Добавление и удаление изображений с помощью Windows Forms компонента ImageList](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).  
@@ -27,7 +27,7 @@ Windows Forms <xref:System.Windows.Forms.TreeView> элемент управле
   
 ### <a name="to-display-images-in-a-tree-view"></a>Для отображения изображений в виде дерева  
   
-1.  Задайте <xref:System.Windows.Forms.TreeView> элемента управления <xref:System.Windows.Forms.TreeView.ImageList%2A> к существующему полю <xref:System.Windows.Forms.ImageList> элемента управления, которые вы хотите использовать.  
+1. Задайте <xref:System.Windows.Forms.TreeView> элемента управления <xref:System.Windows.Forms.TreeView.ImageList%2A> к существующему полю <xref:System.Windows.Forms.ImageList> элемента управления, которые вы хотите использовать.  
   
      Эти свойства можно задать в конструкторе с помощью окна «Свойства» или в коде.  
   
@@ -43,7 +43,7 @@ Windows Forms <xref:System.Windows.Forms.TreeView> элемент управле
     treeView1->ImageList = imageList1;  
     ```  
   
-2.  Узел набора <xref:System.Windows.Forms.TreeNode.ImageIndex%2A> и <xref:System.Windows.Forms.TreeNode.SelectedImageIndex%2A> свойства. <xref:System.Windows.Forms.TreeNode.ImageIndex%2A> Свойство определяет, изображения, отображаемого для обычного и развернутого состояний узла и <xref:System.Windows.Forms.TreeNode.SelectedImageIndex%2A> свойство определяет, изображения, отображаемого для выделенного узла.  
+2. Узел набора <xref:System.Windows.Forms.TreeNode.ImageIndex%2A> и <xref:System.Windows.Forms.TreeNode.SelectedImageIndex%2A> свойства. <xref:System.Windows.Forms.TreeNode.ImageIndex%2A> Свойство определяет, изображения, отображаемого для обычного и развернутого состояний узла и <xref:System.Windows.Forms.TreeNode.SelectedImageIndex%2A> свойство определяет, изображения, отображаемого для выделенного узла.  
   
      Эти свойства можно задать в коде или в редактор узлов дерева. Чтобы открыть редактор узлов дерева, нажмите кнопку с многоточием ( ![экрана VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) рядом с полем <xref:System.Windows.Forms.TreeView.Nodes%2A> свойство в окне «Свойства».  
   

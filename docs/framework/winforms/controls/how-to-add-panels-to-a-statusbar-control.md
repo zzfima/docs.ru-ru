@@ -10,12 +10,12 @@ helpviewer_keywords:
 - status bars [Windows Forms], adding panels
 - StatusBar control [Windows Forms], adding panels
 ms.assetid: 835e3902-288c-4c38-9d69-0696d8695009
-ms.openlocfilehash: 9adcbeb29ca7d3d9bad1ad9cdb6279d826af1f6b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9d7a21ee686b0c6faa05f68f13eccc6a39d49164
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227799"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319863"
 ---
 # <a name="how-to-add-panels-to-a-statusbar-control"></a>Практическое руководство. Добавление панелей в элемент управления StatusBar
 > [!IMPORTANT]
@@ -25,7 +25,7 @@ ms.locfileid: "59227799"
   
 ### <a name="to-add-panels-to-a-status-bar"></a>Чтобы добавить панели в строке состояния  
   
-1.  В процедуре создания панелей строки состояния, добавив их в <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>. Задайте значения свойств для отдельных панелей с помощью его индекса, переданного через <xref:System.Windows.Forms.StatusBar.Panels%2A> свойство.  
+1. В процедуре создания панелей строки состояния, добавив их в <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>. Задайте значения свойств для отдельных панелей с помощью его индекса, переданного через <xref:System.Windows.Forms.StatusBar.Panels%2A> свойство.  
   
      В следующем примере кода, задайте путь — расположение значка **Мои документы** папки. Это расположение используется в том случае, так как можно предположить, что большинство компьютеров под управлением ОС Windows будет включать эту папку. Эта папка также пользователи со систему с минимальным уровнем доступа могут безопасно запускать приложение. В следующем примере требуется форма с <xref:System.Windows.Forms.StatusBar> управления уже добавлен.  
   

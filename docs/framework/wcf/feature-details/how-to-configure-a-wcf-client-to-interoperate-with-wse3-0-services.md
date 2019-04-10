@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3dadd7f1-d207-4ea5-a73b-3e8aa44407f8
-ms.openlocfilehash: 0136fa7c3a51a7d64340c6251e9f5eb63017ffd4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 62642651516274a27c44abfc19e94dc529690ea9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59220699"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304549"
 ---
 # <a name="how-to-configure-a-wcf-client-to-interoperate-with-wse30-services"></a>Практическое руководство. Настройка клиента WCF для взаимодействия со службами WSE 3.0
 Клиенты Windows Communication Foundation (WCF) являются уровне линий связи совместимы с Web Services Enhancements 3.0 для служб Microsoft .NET (WSE), если WCF клиенты настроены для использования версии спецификации WS-Addressing от августа 2004 г.  
   
 ### <a name="to-configure-a-wcf-client-to-interoperate-with-a-wse-30-web-service"></a>Настройка клиента WCF для взаимодействия с веб-службой WSE 3.0  
   
-1.  Запустите [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) создание клиента WCF для WSE 3.0 веб-службы.  
+1. Запустите [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) создание клиента WCF для WSE 3.0 веб-службы.  
   
      Для веб-службы WSE создается класс клиента WCF.  
   
      Дополнительные сведения о создании клиента WCF, см. в разделе [как: Создание клиента](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
   
-2.  Создайте класс, представляющий привязку, которая может обмениваться данными с веб-службами WSE 3.0.  
+2. Создайте класс, представляющий привязку, которая может обмениваться данными с веб-службами WSE 3.0.  
   
      Следующий класс является частью [взаимодействие с WSE](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29) образца.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "59220699"
          [!code-csharp[c_WCFClientToWSEService#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wcfclienttowseservice/cs/wsehttpbinding.cs#2)]
          [!code-vb[c_WCFClientToWSEService#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wcfclienttowseservice/vb/wsehttpbinding.vb#2)]  
   
-3.  В коде клиентского приложения добавьте код для задания свойств привязки.  
+3. В коде клиентского приложения добавьте код для задания свойств привязки.  
   
      В следующем примере кода указывает, что клиент WCF должна использовать защиту сообщений и проверки подлинности, как определено в WSE 3.0 `AnonymousForCertificate` утверждение готовое к использованию безопасности. Кроме того, требуются безопасные сеансы и производные ключи.  
   

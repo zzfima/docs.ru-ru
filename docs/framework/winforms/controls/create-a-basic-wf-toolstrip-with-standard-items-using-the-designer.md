@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], adding items
 - ToolStrip control [Windows Forms], adding standard items
 ms.assetid: 028deb1a-acf8-4911-979a-ba8431cd9d82
-ms.openlocfilehash: 9f0224a9360d7ce31a85883902c9668b4a1158b6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: df6fe22eef338732c14d6f1ff56f25e6d1aa8a2a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119292"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332174"
 ---
 # <a name="how-to-create-a-basic-windows-forms-toolstrip-with-standard-items-using-the-designer"></a>Практическое руководство. Создать базовый Windows Forms элемента управления ToolStrip со стандартными элементами с помощью конструктора
 Следующая процедура демонстрирует создание <xref:System.Windows.Forms.ToolStrip> и добавление семи <xref:System.Windows.Forms.ToolStripButton> элементов управления, которые представляют типичные задачи.  
@@ -22,11 +22,11 @@ ms.locfileid: "59119292"
   
 ### <a name="to-add-standard-items-in-the-designer"></a>Чтобы добавить стандартные элементы в конструкторе  
   
-1.  Создание <xref:System.Windows.Forms.ToolStrip> элемента управления.  
+1. Создание <xref:System.Windows.Forms.ToolStrip> элемента управления.  
   
-2.  В правом верхнем углу <xref:System.Windows.Forms.ToolStrip>, щелкните стрелку одноименное **задач элемента управления ToolStrip** области.  
+2. В правом верхнем углу <xref:System.Windows.Forms.ToolStrip>, щелкните стрелку одноименное **задач элемента управления ToolStrip** области.  
   
-3.  В **задач элемента управления ToolStrip** панели выберите **вставить стандартные элементы**.  
+3. В **задач элемента управления ToolStrip** панели выберите **вставить стандартные элементы**.  
   
 ## <a name="see-also"></a>См. также
 

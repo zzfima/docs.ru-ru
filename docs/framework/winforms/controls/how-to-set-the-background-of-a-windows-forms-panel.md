@@ -11,19 +11,19 @@ helpviewer_keywords:
 - Panel control [Windows Forms], background
 - colors [Windows Forms], Windows Forms Panel controls
 ms.assetid: 096cbd8d-45cc-47b8-b1ef-a27f60ea8be0
-ms.openlocfilehash: 289a91481c832a36b4b77d56ba6b18921ef02d5b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9336be2aebb10e5c0bd0bf4648cae34a3b5fe7c3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59228013"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300411"
 ---
 # <a name="how-to-set-the-background-of-a-windows-forms-panel"></a>Практическое руководство. Меняем цвет фона панели формы Windows Forms
 Windows Forms <xref:System.Windows.Forms.Panel> может отображать элемент управления цветом фона и фоновое изображение. <xref:System.Windows.Forms.Control.BackColor%2A> Свойство задает цвет фона для вложенные элементы управления, такие как метки и переключатели. Если <xref:System.Windows.Forms.Control.BackgroundImage%2A> свойство не задано, <xref:System.Windows.Forms.Control.BackColor%2A> выбора заполнит всей панели. Если <xref:System.Windows.Forms.Control.BackgroundImage%2A> свойству, осуществляющая отображается изображение.  
   
 ### <a name="to-set-the-background-programmatically"></a>Для установки фона программным способом  
   
-1.  Задайте для свойства панели <xref:System.Windows.Forms.Control.BackColor%2A> свойства со значением типа <xref:System.Drawing.Color?displayProperty=nameWithType>.  
+1. Задайте для свойства панели <xref:System.Windows.Forms.Control.BackColor%2A> свойства со значением типа <xref:System.Drawing.Color?displayProperty=nameWithType>.  
   
     ```vb  
     Panel1.BackColor = Color.AliceBlue  
@@ -37,7 +37,7 @@ Windows Forms <xref:System.Windows.Forms.Panel> может отображать 
     panel1->BackColor = Color::AliceBlue;  
     ```  
   
-2.  Задайте для свойства панели <xref:System.Windows.Forms.Control.BackgroundImage%2A> свойства с помощью <xref:System.Drawing.Image.FromFile%2A> метод <xref:System.Drawing.Image?displayProperty=nameWithType> класса.  
+2. Задайте для свойства панели <xref:System.Windows.Forms.Control.BackgroundImage%2A> свойства с помощью <xref:System.Drawing.Image.FromFile%2A> метод <xref:System.Drawing.Image?displayProperty=nameWithType> класса.  
   
     ```vb  
     ' You should replace the bolded image   

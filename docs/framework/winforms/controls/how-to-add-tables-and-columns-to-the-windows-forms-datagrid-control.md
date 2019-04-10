@@ -10,12 +10,12 @@ helpviewer_keywords:
 - tables [Windows Forms], adding to DataGrid control
 - DataGrid control [Windows Forms], adding tables and columns
 ms.assetid: 2fe661b9-aa06-49b9-a314-a0d3cbfdcb4d
-ms.openlocfilehash: 55a8d28d04dd05d4dba7ab2b1edbcfbcce97cecb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cc364f3609f8041378b0b03b8e1bc8f312fade18
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59222046"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319915"
 ---
 # <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control"></a>Практическое руководство. Добавление таблиц и столбцов в элемент управления DataGrid в Windows Forms
 > [!NOTE]
@@ -25,12 +25,12 @@ ms.locfileid: "59222046"
   
 ### <a name="to-add-a-table-and-column-to-a-datagrid-programmatically"></a>Добавление таблиц и столбцов в элемент управления DataGrid программными средствами  
   
-1.  Для отображения данных в таблице, необходимо сначала привязать <xref:System.Windows.Forms.DataGrid> элемента управления к набору данных. Дополнительные сведения см. в разделе [Как Привязка элемента управления DataGrid в Windows Forms к источнику данных](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).  
+1. Для отображения данных в таблице, необходимо сначала привязать <xref:System.Windows.Forms.DataGrid> элемента управления к набору данных. Дополнительные сведения см. в разделе [Как Привязка элемента управления DataGrid в Windows Forms к источнику данных](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).  
   
     > [!CAUTION]
     >  Указывая программно стили столбцов, всегда создавайте **DataGridColumnStyle** объектов и добавить их к **GridColumnStylesCollection** объект перед добавлением  **Styl DataGridTableStyle** объектов **GridTableStylesCollection** объекта. При добавлении пустого **DataGridTableStyle** в коллекцию **DataGridColumnStyle** объекты создаются автоматически для вас. Следовательно, будет создано исключение при попытке добавить новый **DataGridColumnStyle** объекты с повторяющимися **MappingName** значения **GridColumnStylesCollection**объекта.  
   
-2.  Объявите новый стиль таблицы и присвойте ему имя сопоставления.  
+2. Объявите новый стиль таблицы и присвойте ему имя сопоставления.  
   
     ```vb  
     Dim ts1 As New DataGridTableStyle()  
@@ -47,7 +47,7 @@ ms.locfileid: "59222046"
     ts1->MappingName = S"Customers";  
     ```  
   
-3.  Объявите новый стиль столбца и задайте его имя сопоставления и другие свойства.  
+3. Объявите новый стиль столбца и задайте его имя сопоставления и другие свойства.  
   
     ```vb  
     Dim myDataCol As New DataGridBoolColumn()  
@@ -67,7 +67,7 @@ ms.locfileid: "59222046"
     myDataCol->MappingName = "Current";  
     ```  
   
-4.  Вызовите **добавить** метод **GridColumnStylesCollection** объект для добавления столбца стиль таблицы  
+4. Вызовите **добавить** метод **GridColumnStylesCollection** объект для добавления столбца стиль таблицы  
   
     ```vb  
     ts1.GridColumnStyles.Add(myDataCol)  
@@ -81,7 +81,7 @@ ms.locfileid: "59222046"
     ts1->GridColumnStyles->Add(myDataCol);  
     ```  
   
-5.  Вызовите **добавить** метод **GridTableStylesCollection** объект добавляемый стиль таблицы в сетке данных.  
+5. Вызовите **добавить** метод **GridTableStylesCollection** объект добавляемый стиль таблицы в сетке данных.  
   
     ```vb  
     DataGrid1.TableStyles.Add(ts1)  

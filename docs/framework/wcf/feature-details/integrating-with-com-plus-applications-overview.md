@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-ms.openlocfilehash: 7a1747860a081fbbfc54b8657d5db6b57cdf168e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b5294080d0cc76fdb98bc0908f4273dbb011f982
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59153248"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328729"
 ---
 # <a name="integrating-with-com-applications-overview"></a>Общие сведения об интеграции с приложениями COM+
 Windows Communication Foundation (WCF) предоставляет среду с широкими возможностями для создания распределенных приложений. Если вы уже используете логики компонентно ориентированного приложения, размещенного на COM +, WCF можно использовать для расширения существующей логики вместо ее переписывания. Стандартный сценарий - предоставление доступа существующему приложению COM+ или бизнес-логике Enterprise Services службы через веб-службы.  
@@ -36,13 +36,13 @@ Windows Communication Foundation (WCF) предоставляет среду с 
   
  Чтобы предоставить доступ к интерфейсу компонента COM+ через веб-службу без изменения компонента, необходимо выполнить следующие действия.  
   
-1.  Определите, можно ли предоставить доступ к интерфейсу компонента COM+ через веб-службу.  
+1. Определите, можно ли предоставить доступ к интерфейсу компонента COM+ через веб-службу.  
   
-2.  Выберите подходящий режим размещения.  
+2. Выберите подходящий режим размещения.  
   
-3.  С помощью средства настройки модели службы COM+ (ComSvcConfig.exe) добавьте веб-службу для нужного интерфейса. Дополнительные сведения об использовании ComSvcConfig.exe см. в разделе [как: Используйте средство настройки модели служб COM +](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md).  
+3. С помощью средства настройки модели службы COM+ (ComSvcConfig.exe) добавьте веб-службу для нужного интерфейса. Дополнительные сведения об использовании ComSvcConfig.exe см. в разделе [как: Используйте средство настройки модели служб COM +](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md).  
   
-4.  Задайте необходимые дополнительные параметры службы в файле конфигурации приложения. Дополнительные сведения о том, как настроить компонент, см. в разделе [как: Настройка параметров службы COM +](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md).  
+4. Задайте необходимые дополнительные параметры службы в файле конфигурации приложения. Дополнительные сведения о том, как настроить компонент, см. в разделе [как: Настройка параметров службы COM +](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md).  
   
 ## <a name="supported-interfaces"></a>Поддерживаемые интерфейсы  
  На интерфейсы, которые можно делать доступными через веб-службы, накладываются определенные ограничения. Следующие типы интерфейсов не поддерживаются:  

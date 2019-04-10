@@ -11,21 +11,21 @@ helpviewer_keywords:
 - text [WPF], performance
 - glyphs [WPF]
 ms.assetid: 66b1b9a7-8618-48db-b616-c57ea4327b98
-ms.openlocfilehash: e5dfa170d2744e634ed456de491d61c0e442eb45
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0cc1ac9adf40948a5109b37336d45a2be833e54f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59225967"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317211"
 ---
 # <a name="optimizing-performance-text"></a>Оптимизация производительности: Текста
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] включает поддержку представления текстового контента с помощью многофункциональных [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] элементов управления. В целом можно разделить отрисовку текста на три уровня.  
   
-1.  С помощью <xref:System.Windows.Documents.Glyphs> и <xref:System.Windows.Media.GlyphRun> объекты непосредственно.  
+1. С помощью <xref:System.Windows.Documents.Glyphs> и <xref:System.Windows.Media.GlyphRun> объекты непосредственно.  
   
-2.  С помощью <xref:System.Windows.Media.FormattedText> объекта.  
+2. С помощью <xref:System.Windows.Media.FormattedText> объекта.  
   
-3.  Использование высокоуровневых элементов управления, таких как <xref:System.Windows.Controls.TextBlock> и <xref:System.Windows.Documents.FlowDocument> объектов.  
+3. Использование высокоуровневых элементов управления, таких как <xref:System.Windows.Controls.TextBlock> и <xref:System.Windows.Documents.FlowDocument> объектов.  
   
  В этом разделе даются рекомендации по повышению производительности отрисовки текста.  
 

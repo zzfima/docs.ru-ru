@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ToolBar control [Windows Forms], coding button click events
 - toolbars [Windows Forms], click event handlers
 ms.assetid: 98374f70-993d-4ca4-89fb-48fea6ce5b45
-ms.openlocfilehash: 5256185104f7d22514eac2db93856d7c58f51fb6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0f5afde1cc0be772baff373c84c82f81df284b9b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59228358"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303990"
 ---
 # <a name="how-to-trigger-menu-events-for-toolbar-buttons"></a>Практическое руководство. Генерирование событий меню для кнопок элемента управления Toolbar
 > [!NOTE]
@@ -30,7 +30,7 @@ ms.locfileid: "59228358"
   
 ### <a name="to-handle-the-click-event-on-a-toolbar"></a>Обработка события Click на панели инструментов  
   
-1.  В процедуре, добавив кнопки панели инструментов для <xref:System.Windows.Forms.ToolBar> элемента управления.  
+1. В процедуре, добавив кнопки панели инструментов для <xref:System.Windows.Forms.ToolBar> элемента управления.  
   
     ```vb  
     Public Sub ToolBarConfig()  
@@ -70,7 +70,7 @@ ms.locfileid: "59228358"
        }  
     ```  
   
-2.  Добавьте обработчик событий для <xref:System.Windows.Forms.ToolBar> элемента управления <xref:System.Windows.Forms.ToolBar.ButtonClick> событий. Используйте оператор переключения регистра и <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> класс, чтобы определить кнопку панели инструментов, которая была нажата. В зависимости от результатов отображается соответствующее окно сообщения.  
+2. Добавьте обработчик событий для <xref:System.Windows.Forms.ToolBar> элемента управления <xref:System.Windows.Forms.ToolBar.ButtonClick> событий. Используйте оператор переключения регистра и <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> класс, чтобы определить кнопку панели инструментов, которая была нажата. В зависимости от результатов отображается соответствующее окно сообщения.  
   
     > [!NOTE]
     >  Окно сообщения в этом примере используется исключительно в качестве шаблона. Вы можете добавить другой код, выполняемый при нажатии кнопки панели инструментов.  

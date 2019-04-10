@@ -2,12 +2,12 @@
 title: Практическое руководство. Использование Svcutil.exe для загрузки документов метаданных
 ms.date: 03/30/2017
 ms.assetid: 15524274-3167-4627-b722-d6cedb9fa8c6
-ms.openlocfilehash: 01a27c21948e3030059ddd1416d8c7727ac6435c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cc9fc4acaeafe4583b1e85a24cab97af1689c638
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194465"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328352"
 ---
 # <a name="how-to-use-svcutilexe-to-download-metadata-documents"></a>Практическое руководство. Использование Svcutil.exe для загрузки документов метаданных
 Средство Svcutil.exe позволяет загружать метаданные из выполняющихся служб и сохранять эти метаданные в локальных файлах. Для схем HTTP и HTTPS URL-адрес Svcutil.exe предпринимает попытку извлечь метаданные с помощью WS-MetadataExchange и [обнаружение веб-служб XML](https://go.microsoft.com/fwlink/?LinkId=94950). Для всех остальных URL-схем средство Svcutil.exe использует только протокол WS-MetadataExchange.  
@@ -23,11 +23,11 @@ ms.locfileid: "59194465"
   
 ## <a name="to-download-metadata-using-svcutilexe"></a>Загрузка метаданных с помощью средства Svcutil.exe  
   
-1.  Найдите средство Svcutil.exe в следующей папке:  
+1. Найдите средство Svcutil.exe в следующей папке:  
   
      C:\Program Files\Microsoft SDKs\Windows\v1.0.\bin  
   
-2.  Из командной строки запустите средство, используя следующий формат.  
+2. Из командной строки запустите средство, используя следующий формат.  
   
     ```  
     svcutil.exe /t:metadata  <url>* | <epr>  
@@ -35,7 +35,7 @@ ms.locfileid: "59194465"
   
      Параметр `/t:metadata` необходимо указать, чтобы загружались метаданные. В противном случае будут созданы код и конфигурация клиента.  
   
-3.  <`url`> Аргумент задает URL-адрес конечной точки службы, которая предоставляет метаданные или документ метаданных, размещенного в сети. <`epr`> Аргумент задает путь к XML-файл, содержащий WS-Addressing `EndpointAddress` для конечной точки службы, поддерживающей протокол WS-MetadataExchange.  
+3. <`url`> Аргумент задает URL-адрес конечной точки службы, которая предоставляет метаданные или документ метаданных, размещенного в сети. <`epr`> Аргумент задает путь к XML-файл, содержащий WS-Addressing `EndpointAddress` для конечной точки службы, поддерживающей протокол WS-MetadataExchange.  
   
  Дополнительные сведения об использовании этого средства для загрузки метаданных, см. в разделе [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   

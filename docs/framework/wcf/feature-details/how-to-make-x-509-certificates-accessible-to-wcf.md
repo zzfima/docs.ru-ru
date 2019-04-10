@@ -9,19 +9,19 @@ helpviewer_keywords:
 - certificates [WCF], making X.509 certificates accessible to WCF
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
-ms.openlocfilehash: 85f572f021f1613e0a2bb70cc090f58d2833182e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0177533f11b7dfa6c2561f1f519eacf8073bcd45
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59219919"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331082"
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>Практическое руководство. Предоставление доступа к сертификатам X.509 для WCF
 Чтобы сделать сертификат X.509, доступной в Windows Communication Foundation (WCF), код приложения необходимо указать имя хранилища сертификатов и расположение. В некоторых случаях идентификатор процесса должен иметь доступ к файлу, который содержит закрытый ключ, связанный с сертификатом X.509. Чтобы получить закрытый ключ, связанный с сертификатом X.509 в хранилище сертификатов, WCF должно иметь разрешение на это. По умолчанию доступ к закрытому ключу сертификата имеют только владелец и системная учетная запись.  
   
 ### <a name="to-make-x509-certificates-accessible-to-wcf"></a>Предоставление доступа к сертификатам X.509 для WCF  
   
-1.  Предоставьте учетной записи, под какой WCF выполняется доступ на чтение к файлу, который содержит закрытый ключ, связанный с сертификатом X.509.  
+1. Предоставьте учетной записи, под какой WCF выполняется доступ на чтение к файлу, который содержит закрытый ключ, связанный с сертификатом X.509.  
   
     1.  Определите, требуется ли WCF доступ на чтение к закрытому ключу для сертификата X.509.  
   

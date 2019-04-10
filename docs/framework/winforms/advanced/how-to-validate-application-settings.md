@@ -9,12 +9,12 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
-ms.openlocfilehash: 2fef6c924498003bc9ea393ba2117a1cb5f2afab
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b7aba4935756fc218a1fadaa1dd9f20a5bc3034f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59212093"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317896"
 ---
 # <a name="how-to-validate-application-settings"></a>Практическое руководство. Проверка параметров приложения
 В этом разделе показано, как проверить параметры приложения перед их сохранением.  
@@ -78,7 +78,7 @@ ms.locfileid: "59212093"
   
 ### <a name="to-validate-application-settings-when-a-setting-is-changing"></a>Проверка параметров приложения при изменении параметра  
   
-1.  Если вы являетесь C# developer, в формы или элемента управления `Load` событий, добавьте обработчик событий для <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> событий.  
+1. Если вы являетесь C# developer, в формы или элемента управления `Load` событий, добавьте обработчик событий для <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> событий.  
   
      -или-  
   
@@ -97,7 +97,7 @@ ms.locfileid: "59212093"
     End Sub   
     ```  
   
-2.  Определите обработчик событий и напишите внутри него код для выполнения проверки границ для даты рождения.  
+2. Определите обработчик событий и напишите внутри него код для выполнения проверки границ для даты рождения.  
   
     ```csharp  
     private void MyCustomSettings_SettingChanging(Object sender, SettingChangingEventArgs e)  
@@ -126,7 +126,7 @@ ms.locfileid: "59212093"
   
 ### <a name="to-validate-application-settings-when-a-save-occurs"></a>Проверка параметров приложения в ходе сохранения  
   
-1.  В своей форме или элемента управления `Load` событий, добавьте обработчик событий для <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> событий.  
+1. В своей форме или элемента управления `Load` событий, добавьте обработчик событий для <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> событий.  
   
     ```csharp  
     public void Form1_Load(Object sender, EventArgs e)   
@@ -141,7 +141,7 @@ ms.locfileid: "59212093"
     End Sub  
     ```  
   
-2.  Определите обработчик событий и напишите внутри него код для выполнения проверки границ для даты рождения.  
+2. Определите обработчик событий и напишите внутри него код для выполнения проверки границ для даты рождения.  
   
     ```csharp  
     private void MyCustomSettings_SettingsSaving(Object sender, SettingsSavingEventArgs e)  

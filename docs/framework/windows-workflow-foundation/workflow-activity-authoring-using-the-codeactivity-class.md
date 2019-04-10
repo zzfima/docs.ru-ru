@@ -2,12 +2,12 @@
 title: Разработка действий рабочих процессов с помощью класса CodeActivity
 ms.date: 03/30/2017
 ms.assetid: cfe315c1-f86d-43ec-b9ce-2f8c469b1106
-ms.openlocfilehash: 4954dfa5dba03823d119a456149f0f16cf5ed410
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 549acec8b8101312d48bd20e63a4a988b798ff38
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127099"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331290"
 ---
 # <a name="workflow-activity-authoring-using-the-codeactivity-class"></a>Разработка действий рабочих процессов с помощью класса CodeActivity
 Действия, созданные путем наследования от <xref:System.Activities.CodeActivity>, могут реализовывать базовое императивное поведение путем переопределения метода <xref:System.Activities.CodeActivity.Execute%2A>.
@@ -23,28 +23,28 @@ ms.locfileid: "53127099"
 
 #### <a name="to-create-a-custom-activity-that-inherits-from-codeactivity"></a>Создание настраиваемого действия, которое наследуется от CodeActivity
 
-1.  Откройте Visual Studio 2010.
+1. Откройте Visual Studio 2010.
 
-2.  Выберите **файл**, **новый**, а затем **проекта**. Выберите **Workflow 4.0** под **Visual C#** в **типы проектов** затем выберите **v2010** узла. Выберите **библиотеки действий** в **шаблоны** окна. Задайте имя для нового проекта HelloActivity.
+2. Выберите **файл**, **новый**, а затем **проекта**. Выберите **Workflow 4.0** под **Visual C#** в **типы проектов** затем выберите **v2010** узла. Выберите **библиотеки действий** в **шаблоны** окна. Задайте имя для нового проекта HelloActivity.
 
-3.  Щелкните правой кнопкой мыши Activity1.xaml в проекте HelloActivity и выберите **удалить**.
+3. Щелкните правой кнопкой мыши Activity1.xaml в проекте HelloActivity и выберите **удалить**.
 
-4.  Щелкните правой кнопкой мыши проект HelloActivity и выберите **добавить** , а затем **класс**. Задайте имя для нового класса HelloActivity.cs.
+4. Щелкните правой кнопкой мыши проект HelloActivity и выберите **добавить** , а затем **класс**. Задайте имя для нового класса HelloActivity.cs.
 
-5.  В файле HelloActivity.cs добавьте следующие директивы `using`.
+5. В файле HelloActivity.cs добавьте следующие директивы `using`.
 
     ```csharp
     using System.Activities;
     using System.Activities.Statements;
     ```
 
-6.  Сделайте так, чтобы новый класс наследовал от действия <xref:System.Activities.CodeActivity> путем добавления базового класса к объявлению класса.
+6. Сделайте так, чтобы новый класс наследовал от действия <xref:System.Activities.CodeActivity> путем добавления базового класса к объявлению класса.
 
     ```csharp
     class HelloActivity : CodeActivity
     ```
 
-7.  Добавьте функциональные возможности к классу путем добавления метода <xref:System.Activities.CodeActivity.Execute%2A>.
+7. Добавьте функциональные возможности к классу путем добавления метода <xref:System.Activities.CodeActivity.Execute%2A>.
 
     ```csharp
     protected override void Execute(CodeActivityContext context)
@@ -53,7 +53,7 @@ ms.locfileid: "53127099"
     }
     ```
 
-8.  Используйте объект <xref:System.Activities.CodeActivityContext> для создания записи отслеживания.
+8. Используйте объект <xref:System.Activities.CodeActivityContext> для создания записи отслеживания.
 
     ```csharp
     protected override void Execute(CodeActivityContext context)

@@ -10,21 +10,21 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
-ms.openlocfilehash: 5682b2f0183cbeb8bae377423bb76caa0fbaf7cb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 79eae4d37c056fc95ac73c78e00dd1a2b68bcd24
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59223632"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324205"
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>Практическое руководство. Создание графических объектов для рисования
 Перед тем как рисовать линии и фигуры, отображать текст или изображения и управлять ими с помощью [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], необходимо создать объект <xref:System.Drawing.Graphics>. <xref:System.Drawing.Graphics> представляет поверхность для рисования [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] и является объектом, который используется для создания графических изображений.  
   
  Работа с графикой состоит из двух этапов:  
   
-1.  Создание объекта <xref:System.Drawing.Graphics>.  
+1. Создание объекта <xref:System.Drawing.Graphics>.  
   
-2.  Использование объекта <xref:System.Drawing.Graphics> для рисования линий и фигур, отображения текста или изображений и управления ими.  
+2. Использование объекта <xref:System.Drawing.Graphics> для рисования линий и фигур, отображения текста или изображений и управления ими.  
   
 ## <a name="creating-a-graphics-object"></a>Создание объектов Graphics  
  Объекты Graphics могут создаваться различными способами.  
@@ -48,11 +48,11 @@ ms.locfileid: "59223632"
   
 #### <a name="to-obtain-a-reference-to-a-graphics-object-from-the-painteventargs-in-the-paint-event"></a>Для получения ссылки на объект Graphics из PaintEventArgs в событии рисования  
   
-1.  Объявите объект <xref:System.Drawing.Graphics>.  
+1. Объявите объект <xref:System.Drawing.Graphics>.  
   
-2.  Присвойте переменной ссылку на объект <xref:System.Drawing.Graphics>, передаваемый как часть <xref:System.Windows.Forms.PaintEventArgs>.  
+2. Присвойте переменной ссылку на объект <xref:System.Drawing.Graphics>, передаваемый как часть <xref:System.Windows.Forms.PaintEventArgs>.  
   
-3.  Вставьте код для рисования формы или элемента управления.  
+3. Вставьте код для рисования формы или элемента управления.  
   
      В следующем примере показано, как ссылаться на объект <xref:System.Drawing.Graphics> из <xref:System.Windows.Forms.PaintEventArgs> в событии <xref:System.Windows.Forms.Control.Paint>:  
   

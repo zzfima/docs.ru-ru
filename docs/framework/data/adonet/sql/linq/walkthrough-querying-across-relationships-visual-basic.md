@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: a7da43e3-769f-4e07-bcd6-552b8bde66f4
-ms.openlocfilehash: aa6be50e1cdb00acf79c9f9e2c49050ce7bf3b0d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: abd4941697639ec7bdda545b1ead8d57091e9e7f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213354"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314663"
 ---
 # <a name="walkthrough-querying-across-relationships-visual-basic"></a>Пошаговое руководство. Выполнение запросов со связями (Visual Basic)
 В этом пошаговом руководстве демонстрируется использование [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *ассоциации* для представления связей по внешнему ключу в базе данных.  
@@ -53,15 +53,15 @@ ms.locfileid: "59213354"
   
 #### <a name="to-access-order-objects-by-using-customer-objects"></a>Получение доступа к объектам "Order" с помощью объектов "Customer"  
   
-1.  Измените метод `Sub Main` посредством ввода или вставки в метод следующего кода:  
+1. Измените метод `Sub Main` посредством ввода или вставки в метод следующего кода:  
   
      [!code-vb[DLinqWalk2VB#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#3)]  
   
-2.  Нажмите клавишу F5, чтобы начать отладку приложения.  
+2. Нажмите клавишу F5, чтобы начать отладку приложения.  
   
      В окне сообщения отобразятся два имени, и в окне "Консоль" появится созданный код SQL.  
   
-3.  Закройте окно сообщения, чтобы остановить отладку.  
+3. Закройте окно сообщения, чтобы остановить отладку.  
   
 ## <a name="creating-a-strongly-typed-view-of-your-database"></a>Создание строго типизированного представления базы данных  
  Общая процедура становится гораздо проще, если в начале использовать строго типизированное представление базы данных. Задавая строгую типизацию объекта <xref:System.Data.Linq.DataContext>, можно избежать вызовов метода <xref:System.Data.Linq.DataContext.GetTable%2A>. Строго типизированные таблицы можно использовать в запросах только при использовании строго типизированного объекта <xref:System.Data.Linq.DataContext>.  
@@ -70,23 +70,23 @@ ms.locfileid: "59213354"
   
 #### <a name="to-strongly-type-the-datacontext-object"></a>Установка строгой типизации объекта "DataContext"  
   
-1.  Добавьте следующий код непосредственно перед объявлением класса `Customer`.  
+1. Добавьте следующий код непосредственно перед объявлением класса `Customer`.  
   
      [!code-vb[DLinqWalk2VB#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#4)]  
   
-2.  Измените метод `Sub Main`, чтобы использовать строго типизированный объект <xref:System.Data.Linq.DataContext>, как показано ниже:  
+2. Измените метод `Sub Main`, чтобы использовать строго типизированный объект <xref:System.Data.Linq.DataContext>, как показано ниже:  
   
      [!code-vb[DLinqWalk2VB#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#5)]  
   
-3.  Нажмите клавишу F5, чтобы начать отладку приложения.  
+3. Нажмите клавишу F5, чтобы начать отладку приложения.  
   
      В окне «Консоль"» отобразится следующее.  
   
      `ID=WHITC`  
   
-4.  Чтобы закрыть приложение, в окне "Консоль" нажмите клавишу ВВОД.  
+4. Чтобы закрыть приложение, в окне "Консоль" нажмите клавишу ВВОД.  
   
-5.  На **файл** меню, щелкните **сохранить все** Если вы хотите сохранить приложение.  
+5. На **файл** меню, щелкните **сохранить все** Если вы хотите сохранить приложение.  
   
 ## <a name="next-steps"></a>Следующие шаги  
  Следующего пошагового руководства ([Пошаговое руководство: Обработка данных (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)) демонстрирует способ обработки данных. Для этого пошагового руководства не требуется сохранять два пошаговых руководства, которые уже выполнены в этой серии.  

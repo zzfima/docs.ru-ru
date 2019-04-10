@@ -10,12 +10,12 @@ helpviewer_keywords:
 - page setup
 - PageSetupDialog component
 ms.assetid: 6dae05bc-c0fd-4357-bb93-841a1631d98f
-ms.openlocfilehash: 6eefe7dd69d02712b650d95ddf14394c10792807
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7c65eb54bb95b9a20cd1e43f0d491af47985f2e0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213707"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329210"
 ---
 # <a name="how-to-determine-page-properties-using-the-pagesetupdialog-component"></a>Практическое руководство. Определение свойств страницы с помощью компонента PageSetupDialog
 Компонент [PageSetupDialog](pagesetupdialog-component-windows-forms.md) предоставляет пользователю макет, размер бумаги и другие параметры разметки страницы для документа.  
@@ -26,7 +26,7 @@ ms.locfileid: "59213707"
   
 ### <a name="to-set-page-properties-using-the-pagesetupdialog-component"></a>Задание свойств страницы с помощью компонента PageSetupDialog  
   
-1.  Используйте метод <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> для отображения диалогового окна, указав используемый <xref:System.Drawing.Printing.PrintDocument> .  
+1. Используйте метод <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> для отображения диалогового окна, указав используемый <xref:System.Drawing.Printing.PrintDocument> .  
   
      В следующем примере обработчик событий <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Click> открывает экземпляр компонента <xref:System.Windows.Forms.PageSetupDialog> . Существующий документ указывается в свойстве <xref:System.Windows.Forms.PageSetupDialog.Document%2A> , а его свойство <xref:System.Drawing.Printing.PageSettings.Color%2A?displayProperty=nameWithType> имеет значение `false`.  
   

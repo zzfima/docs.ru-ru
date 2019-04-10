@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: 45f4185df1c55ff40fce3e33fe5e0e497fa54654
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 28c70ca860083808c93fa58b498e22ea4e4ca6cb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59228268"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299453"
 ---
 # <a name="debugging-windows-authentication-errors"></a>Отладка ошибок проверки подлинности Windows
 При использовании в качестве механизма обеспечения безопасности проверки подлинности Windows процессы безопасности обрабатываются интерфейсом поставщика поддержки безопасности SSPI. Когда на уровне SSPI происходят ошибки безопасности, они регистрируются в Windows Communication Foundation (WCF). В этом разделе описаны общие принципы и некоторые вопросы, помогающие диагностировать такие ошибки.  
@@ -25,11 +25,11 @@ ms.locfileid: "59228268"
 ## <a name="debugging-methodology"></a>Методология отладки  
  Базовый метод отладки состоит в следующем.  
   
-1.  Определите, используется ли проверка подлинности Windows. Если используется какая-либо другая схема, этот раздел неприменим к такому сценарию.  
+1. Определите, используется ли проверка подлинности Windows. Если используется какая-либо другая схема, этот раздел неприменим к такому сценарию.  
   
-2.  Если вы уверены, что вы используете проверку подлинности Windows, определите, использует ли конфигурации WCF, протокол Kerberos или Negotiate.  
+2. Если вы уверены, что вы используете проверку подлинности Windows, определите, использует ли конфигурации WCF, протокол Kerberos или Negotiate.  
   
-3.  После определения протокола, который используется в текущей конфигурации (Kerberos или NTLM), можно рассматривать сообщения об ошибках в правильном контексте.  
+3. После определения протокола, который используется в текущей конфигурации (Kerberos или NTLM), можно рассматривать сообщения об ошибках в правильном контексте.  
   
 ### <a name="availability-of-the-kerberos-protocol-and-ntlm"></a>Доступность протокола Kerberos и NTLM  
  Поставщику SSP Kerberos необходимо, чтоб контроллер домена выступал в роли центра распространения ключей Kerberos. Протокол Kerberos доступен только в том случае, если и клиент, и служба используют удостоверения домена. При других сочетаниях учетных записей используется протокол NTLM, что подтверждается следующей таблицей.  
@@ -81,15 +81,15 @@ ms.locfileid: "59228268"
   
  Чтобы реализовать протокол Kerberos с согласованием учетных данных, выполните следующие действия.  
   
-1.  Реализуйте делегирование, присвоив свойству <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> значение <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>.  
+1. Реализуйте делегирование, присвоив свойству <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> значение <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>.  
   
-2.  Потребуйте согласования SSPI:  
+2. Потребуйте согласования SSPI:  
   
     1.  если используются стандартные привязки, установите свойство `NegotiateServiceCredential` равным `true`;  
   
     2.  если используются пользовательские привязки, установите атрибут `AuthenticationMode` элемента `Security` равным `SspiNegotiated`.  
   
-3.  Потребуйте, чтобы при согласовании SSPI использовался протокол Kerberos, запретив использование NTLM:  
+3. Потребуйте, чтобы при согласовании SSPI использовался протокол Kerberos, запретив использование NTLM:  
   
     1.  Для этого в коде, с помощью следующей инструкции: `ChannelFactory.Credentials.Windows.AllowNtlm = false`  
   

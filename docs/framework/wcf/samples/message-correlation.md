@@ -2,12 +2,12 @@
 title: Корреляция сообщений
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-ms.openlocfilehash: 8db7793064cb94b21feee73353b9ab5e40290fb9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ed6fc8f5d16ae2d604cdbdf4659ecfaaa83bfa02
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59157822"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333279"
 ---
 # <a name="message-correlation"></a>Корреляция сообщений
 Этот образец демонстрирует, как приложение очереди сообщений (MSMQ) может отправлять сообщения MSMQ к службе Windows Communication Foundation (WCF) и как можно коррелировать сообщения между приложениями отправителя и получателя в сценарии запроса/ответа. В этом образце используется привязка msmqIntegrationBinding. В данном случае служба представляет собой резидентное консольное приложение, позволяющее наблюдать за тем, как служба получает сообщения из очереди. k  
@@ -271,9 +271,9 @@ static void DisplayOrderStatus()
 
 ### <a name="to-setup-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца
 
-1.  Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
-2.  При первом запуске служба проверит наличие очереди. Если очередь отсутствует, служба ее создаст. Можно сначала запустить службу, чтобы создать очередь, либо создать ее с помощью диспетчера очередей MSMQ. Чтобы создать очередь в Windows 2008, выполните следующие шаги.
+2. При первом запуске служба проверит наличие очереди. Если очередь отсутствует, служба ее создаст. Можно сначала запустить службу, чтобы создать очередь, либо создать ее с помощью диспетчера очередей MSMQ. Чтобы создать очередь в Windows 2008, выполните следующие шаги.
 
     1.  Откройте диспетчер серверов в Visual Studio 2012.
 
@@ -285,23 +285,23 @@ static void DisplayOrderStatus()
 
     5.  Введите `ServiceModelSamplesTransacted` как имя новой очереди.
 
-3.  Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
+3. Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
-4.  Чтобы запустить образец в конфигурации с одним компьютером, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+4. Чтобы запустить образец в конфигурации с одним компьютером, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
 ### <a name="to-run-the-sample-across-computers"></a>Запуск образца на нескольких компьютерах
 
-1.  Скопируйте на компьютер службы файлы служебной программы из папки \service\bin\ в папку языка.
+1. Скопируйте на компьютер службы файлы служебной программы из папки \service\bin\ в папку языка.
 
-2.  Скопируйте на клиентские компьютеры файлы из папки \client\bin\ в папку языка.
+2. Скопируйте на клиентские компьютеры файлы из папки \client\bin\ в папку языка.
 
-3.  В файле Client.exe.config измените orderQueueName, указав имя компьютера службы вместо «.».
+3. В файле Client.exe.config измените orderQueueName, указав имя компьютера службы вместо «.».
 
-4.  В файле Service.exe.config измените адрес конечной точки клиента, указав имя клиентского компьютера вместо «.».
+4. В файле Service.exe.config измените адрес конечной точки клиента, указав имя клиентского компьютера вместо «.».
 
-5.  На компьютере службы запустите из командной строки программу Service.exe.
+5. На компьютере службы запустите из командной строки программу Service.exe.
 
-6.  На клиентском компьютере из командной строки запустите программу Client.exe.
+6. На клиентском компьютере из командной строки запустите программу Client.exe.
 
 > [!IMPORTANT]
 >  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 7fc69ff0434a26dc196d24395bbd1e2f441008de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1ffc665cb7ec5893dddf4efff5021e600b16fc45
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59231127"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330497"
 ---
 # <a name="layout"></a>Макет
 В этом разделе описывается система макета [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Для создания пользовательских интерфейсов в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] важно понимание того, как и когда происходят вычисления макета.  
@@ -64,17 +64,17 @@ ms.locfileid: "59231127"
   
  Каждый раз, дочерний элемент <xref:System.Windows.UIElement> изменяет свое положение, он потенциально имеет возможность запустить новый проход системы макета. Таким образом, важно понимать события, которые может вызывать система макета, так как ненужный вызов может привести к ухудшению производительности приложения. Далее описывается процесс, который происходит при вызове системы макета.  
   
-1.  Дочерний элемент <xref:System.Windows.UIElement> начинает процесс разметки первым, задав его основные измеряемые свойства.  
+1. Дочерний элемент <xref:System.Windows.UIElement> начинает процесс разметки первым, задав его основные измеряемые свойства.  
   
-2.  Свойства, определенные для размера <xref:System.Windows.FrameworkElement> вычисляются, такие как <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, и <xref:System.Windows.FrameworkElement.Margin%2A>.  
+2. Свойства, определенные для размера <xref:System.Windows.FrameworkElement> вычисляются, такие как <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, и <xref:System.Windows.FrameworkElement.Margin%2A>.  
   
-3.  <xref:System.Windows.Controls.Panel>-применяется специальная логика, такие как <xref:System.Windows.Controls.Dock> направление или наложение <xref:System.Windows.Controls.StackPanel.Orientation%2A>.  
+3. <xref:System.Windows.Controls.Panel>-применяется специальная логика, такие как <xref:System.Windows.Controls.Dock> направление или наложение <xref:System.Windows.Controls.StackPanel.Orientation%2A>.  
   
-4.  Содержимое располагается после того, как все потомки были измерены.  
+4. Содержимое располагается после того, как все потомки были измерены.  
   
-5.  <xref:System.Windows.Controls.Panel.Children%2A> Коллекции рисуется на экране.  
+5. <xref:System.Windows.Controls.Panel.Children%2A> Коллекции рисуется на экране.  
   
-6.  Процесс вызывается снова, если дополнительные <xref:System.Windows.Controls.Panel.Children%2A> добавляются в коллекцию <xref:System.Windows.FrameworkElement.LayoutTransform%2A> применяется, или <xref:System.Windows.UIElement.UpdateLayout%2A> вызывается метод.  
+6. Процесс вызывается снова, если дополнительные <xref:System.Windows.Controls.Panel.Children%2A> добавляются в коллекцию <xref:System.Windows.FrameworkElement.LayoutTransform%2A> применяется, или <xref:System.Windows.UIElement.UpdateLayout%2A> вызывается метод.  
   
  Этот процесс и порядок его вызова более подробно рассматриваются в следующих разделах.  
   

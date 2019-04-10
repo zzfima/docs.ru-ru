@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2144c99b-8055-4080-a5c6-1ea14335e2a3
-ms.openlocfilehash: 80340bcf25ec3299629af34f7fafe53877ad571c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 401d445e49e3712b8c59fa9bc9a2e53500a5db16
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213302"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331680"
 ---
 # <a name="how-to-delete-rows-from-the-database"></a>Практическое руководство. Как удалить строки из базы данных
 Можно удалить строки в базе данных, удалив соответствующий [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] объекты из их коллекции, связанной с таблицей. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Преобразует изменения в соответствующие SQL `DELETE` команды.  
@@ -32,11 +32,11 @@ ms.locfileid: "59213302"
   
 ### <a name="to-delete-a-row-in-the-database"></a>Удаление строки в базе данных  
   
-1.  Отправьте в базу данных запрос на удаляемую строку.  
+1. Отправьте в базу данных запрос на удаляемую строку.  
   
-2.  Вызовите метод <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>.  
+2. Вызовите метод <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>.  
   
-3.  Отправьте изменение в базу данных.  
+3. Отправьте изменение в базу данных.  
   
 ## <a name="example"></a>Пример  
  В первом примере кода в базу данных отправляется запрос на сведения о заказе "Order #11000", помечаются сведения для удаления, а изменения отправляются в базу данных.  

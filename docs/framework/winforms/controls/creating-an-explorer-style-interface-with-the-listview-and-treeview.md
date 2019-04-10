@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer style interface
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
-ms.openlocfilehash: 21a3f7f687f72fe6e73b5d2420675634ff834d2d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8192151aa7cd5eddd99d39adb485e460074fdb99
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59117992"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332122"
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>Пошаговое руководство. Создание интерфейса в стиле проводника с использованием элементов управления ListView и TreeView с помощью конструктора
 Одним из преимуществ Visual Studio является возможность создания профессиональных приложений Windows Forms в короткие сроки. Распространенным сценарием Создание пользовательского интерфейса (UI) с <xref:System.Windows.Forms.ListView> и <xref:System.Windows.Forms.TreeView> элементы управления похож на функцию Windows Explorer операционных систем Windows. Windows Explorer отображает иерархическую структуру файлов и папок на компьютере пользователя.  
@@ -28,27 +28,27 @@ ms.locfileid: "59117992"
   
 ### <a name="to-create-the-form-containing-a-listview-and-treeview-control"></a>Чтобы создать форму, содержащую элемент управления ListView и TreeView  
   
-1.  В меню **Файл** выберите пункт **Создать**, а затем команду **Проект**.  
+1. В меню **Файл** выберите пункт **Создать**, а затем команду **Проект**.  
   
-2.  В **новый проект** диалоговом окне сделайте следующее:  
+2. В **новый проект** диалоговом окне сделайте следующее:  
   
     1.  В категориях, выбрав **Visual Basic** или **Visual C#**.  
   
     2.  В списке шаблонов выберите **приложение Windows Forms**.  
   
-3.  Нажмите кнопку **ОК**. Создается новый проект Windows Forms.  
+3. Нажмите кнопку **ОК**. Создается новый проект Windows Forms.  
   
-4.  Добавить <xref:System.Windows.Forms.SplitContainer> управления в форму и задайте его <xref:System.Windows.Forms.SplitContainer.Dock%2A> свойства <xref:System.Windows.Forms.DockStyle.Fill>.  
+4. Добавить <xref:System.Windows.Forms.SplitContainer> управления в форму и задайте его <xref:System.Windows.Forms.SplitContainer.Dock%2A> свойства <xref:System.Windows.Forms.DockStyle.Fill>.  
   
-5.  Добавить <xref:System.Windows.Forms.ImageList> с именем `imageList1` в форму и используйте окно свойств для добавления двух изображений: папки и документа, в указанном порядке.  
+5. Добавить <xref:System.Windows.Forms.ImageList> с именем `imageList1` в форму и используйте окно свойств для добавления двух изображений: папки и документа, в указанном порядке.  
   
-6.  Добавить <xref:System.Windows.Forms.TreeView> управления с именем `treeview1` в форму и расположите его в левой части <xref:System.Windows.Forms.SplitContainer> элемента управления. В окне «Свойства» для `treeView1` выполните следующие действия:  
+6. Добавить <xref:System.Windows.Forms.TreeView> управления с именем `treeview1` в форму и расположите его в левой части <xref:System.Windows.Forms.SplitContainer> элемента управления. В окне «Свойства» для `treeView1` выполните следующие действия:  
   
     1.  Задайте для свойства <xref:System.Windows.Forms.Control.Dock%2A> значение <xref:System.Windows.Forms.DockStyle.Fill>.  
   
     2.  Задать <xref:System.Windows.Forms.TreeView.ImageList%2A> свойства `imagelist1.`  
   
-7.  Добавить <xref:System.Windows.Forms.ListView> управления с именем `listView1` в форму и разместите его справа от <xref:System.Windows.Forms.SplitContainer> элемента управления. В окне «Свойства» для `listview1` выполните следующие действия:  
+7. Добавить <xref:System.Windows.Forms.ListView> управления с именем `listView1` в форму и разместите его справа от <xref:System.Windows.Forms.SplitContainer> элемента управления. В окне «Свойства» для `listview1` выполните следующие действия:  
   
     1.  Задайте для свойства <xref:System.Windows.Forms.Control.Dock%2A> значение <xref:System.Windows.Forms.DockStyle.Fill>.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "59117992"
   
     4.  Задать <xref:System.Windows.Forms.ListView.SmallImageList%2A> свойства `imageList1.`  
   
-8.  Реализуйте код для заполнения <xref:System.Windows.Forms.TreeView> с узлов и подузлов. Добавьте следующий код в `Form1` класса.  
+8. Реализуйте код для заполнения <xref:System.Windows.Forms.TreeView> с узлов и подузлов. Добавьте следующий код в `Form1` класса.  
   
      [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#1)]
      [!code-vb[System.Windows.Forms.ExplorerStyleInterface#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#1)]  

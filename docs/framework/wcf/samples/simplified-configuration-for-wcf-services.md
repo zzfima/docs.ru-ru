@@ -2,12 +2,12 @@
 title: Упрощенная конфигурация служб WCF
 ms.date: 03/30/2017
 ms.assetid: 1e39ec25-18a3-4fdc-b6a3-9dfafbd60112
-ms.openlocfilehash: 50693062b201c9cf2e0d87f796f3e935e1fd8e66
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 47af8dcba35ba31f25597c946596b0cbcac93b4d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59220725"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304263"
 ---
 # <a name="simplified-configuration-for-wcf-services"></a>Упрощенная конфигурация служб WCF
 В этом примере показано, как реализовать и настроить типизированные службы и клиента с помощью Windows Communication Foundation (WCF). Этот образец является основой для всех остальных базовых образцов технологий.  
@@ -57,11 +57,11 @@ ms.locfileid: "59220725"
   
 ### <a name="to-use-this-sample"></a>Использование этого образца  
   
-1.  Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Чтобы построить решение, следуйте инструкциям в [сборка образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Чтобы построить решение, следуйте инструкциям в [сборка образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Запустите образец, выполнив следующие шаги.  
+3. Запустите образец, выполнив следующие шаги.  
   
     1.  Щелкните правой кнопкой мыши **службы** проекта и выберите **Назначить запускаемым проектом**, затем нажмите клавишу **Ctrl + F5**.  
   

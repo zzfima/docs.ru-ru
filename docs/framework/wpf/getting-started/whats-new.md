@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], what's new
 - WPF [WPF], what's new
 ms.assetid: db086ae4-70bb-4862-95db-2eaca5216bc3
-ms.openlocfilehash: 5e9194dc4dc8ef3246870dc1fd71fa53d3ad143f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 03f785da018cacdec643fa196bdd0c6d5d7c7f70
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227487"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325830"
 ---
 # <a name="whats-new-in-wpf-version-45"></a>Новые возможности WPF версии 4.5
 <a name="introduction"></a> Этот раздел содержит сведения о новых и усовершенствованных возможностях [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] версии 4.5.  
@@ -56,9 +56,9 @@ ms.locfileid: "59227487"
 <a name="VirtualizingPanel"></a>   
 ## <a name="new-features-for-the-virtualizingpanel"></a>Новые возможности VirtualizingPanel  
   
-1.  Можно указать ли <xref:System.Windows.Controls.VirtualizingPanel>, такие как <xref:System.Windows.Controls.VirtualizingStackPanel>, отображать частичные элементы с помощью <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> вложенного свойства зависимостей. Если <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> присваивается <xref:System.Windows.Controls.ScrollUnit.Item>, <xref:System.Windows.Controls.VirtualizingPanel> будут отображаться только полностью видимые элементы. Если <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> присваивается <xref:System.Windows.Controls.ScrollUnit.Pixel>, <xref:System.Windows.Controls.VirtualizingPanel> можно отобразить частично видимые элементы.  
+1. Можно указать ли <xref:System.Windows.Controls.VirtualizingPanel>, такие как <xref:System.Windows.Controls.VirtualizingStackPanel>, отображать частичные элементы с помощью <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> вложенного свойства зависимостей. Если <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> присваивается <xref:System.Windows.Controls.ScrollUnit.Item>, <xref:System.Windows.Controls.VirtualizingPanel> будут отображаться только полностью видимые элементы. Если <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> присваивается <xref:System.Windows.Controls.ScrollUnit.Pixel>, <xref:System.Windows.Controls.VirtualizingPanel> можно отобразить частично видимые элементы.  
   
-2.  Можно указать размер кэша до и после окна просмотра при <xref:System.Windows.Controls.VirtualizingPanel> с помощью <xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A> вложенного свойства зависимостей.  Кэш — это объем области, расположенной выше или ниже окна просмотра, элементы в котором не являются виртуальными.  Используя кэш, чтобы предотвратить создание элементов пользовательского интерфейса по мере их прокрутки, можно повысить производительность. Кэш заполняется с низким приоритетом, так что приложение не перестает отвечать на запросы во время этой операции. <xref:System.Windows.Controls.VirtualizingPanel.CacheLengthUnit%2A?displayProperty=nameWithType> Свойство определяет единицу измерения, которая используется <xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A?displayProperty=nameWithType>.  
+2. Можно указать размер кэша до и после окна просмотра при <xref:System.Windows.Controls.VirtualizingPanel> с помощью <xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A> вложенного свойства зависимостей.  Кэш — это объем области, расположенной выше или ниже окна просмотра, элементы в котором не являются виртуальными.  Используя кэш, чтобы предотвратить создание элементов пользовательского интерфейса по мере их прокрутки, можно повысить производительность. Кэш заполняется с низким приоритетом, так что приложение не перестает отвечать на запросы во время этой операции. <xref:System.Windows.Controls.VirtualizingPanel.CacheLengthUnit%2A?displayProperty=nameWithType> Свойство определяет единицу измерения, которая используется <xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A?displayProperty=nameWithType>.  
   
 <a name="static_properties"></a>   
 ## <a name="binding-to-static-properties"></a>Привязка к статическим свойствам  
@@ -86,11 +86,11 @@ ms.locfileid: "59227487"
 ## <a name="binding-to-types-that-implement-icustomtypeprovider"></a>Привязки к типам, реализующим ICustomTypeProvider  
  WPF поддерживает привязку данных к объектам, реализующим <xref:System.Reflection.ICustomTypeProvider>, известной также как пользовательские типы.  Пользовательские типы можно использовать в следующих случаях:  
   
-1.  Как <xref:System.Windows.PropertyPath> в привязке данных. Например <xref:System.Windows.Data.Binding.Path%2A> свойство <xref:System.Windows.Data.Binding> может ссылаться на свойство пользовательского типа.  
+1. Как <xref:System.Windows.PropertyPath> в привязке данных. Например <xref:System.Windows.Data.Binding.Path%2A> свойство <xref:System.Windows.Data.Binding> может ссылаться на свойство пользовательского типа.  
   
-2.  Для параметра <xref:System.Windows.DataTemplate.DataType%2A> свойство.  
+2. Для параметра <xref:System.Windows.DataTemplate.DataType%2A> свойство.  
   
-3.  Как тип, определяющий автоматически создаваемые столбцы в <xref:System.Windows.Controls.DataGrid>.  
+3. Как тип, определяющий автоматически создаваемые столбцы в <xref:System.Windows.Controls.DataGrid>.  
   
 <a name="binding_state"></a>   
 ## <a name="retrieving-data-binding-information-from-a-binding-expression"></a>Получение сведений о привязке данных из выражения привязки  

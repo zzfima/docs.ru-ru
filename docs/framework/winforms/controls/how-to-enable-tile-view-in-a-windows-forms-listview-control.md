@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Windows Forms, controls
 - ListView control [Windows Forms], tile view
 ms.assetid: c20e67a3-2d94-413d-9fcf-ecbd0fe251da
-ms.openlocfilehash: 0d47eddbc1d9a4efc7f1e4644136ac6621088396
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 14eb21fa0285275e510b865c5cee7d1fc82fd0fd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59215031"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327000"
 ---
 # <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control"></a>Практическое руководство. Отображение содержимого элемента управления ListView в Windows Forms в виде мозаичного представления
 Функция мозаичного представления элемента управления <xref:System.Windows.Forms.ListView> обеспечивает визуальный баланс между графическими и текстовыми представлениями информации. Текстовые данные, отображаемые для мозаичного представления элемента совпадают с данными о столбцах, определенных для подробного представления. Мозаичное представление работает в сочетании с возможностями группирования или вставки метки элемента управления <xref:System.Windows.Forms.ListView>.  
@@ -32,7 +32,7 @@ ms.locfileid: "59215031"
   
 ### <a name="to-set-tile-view-programmatically"></a>Выбор мозаичного представления программными средствами  
   
-1.  Используйте перечисление <xref:System.Windows.Forms.View> элемента управления <xref:System.Windows.Forms.ListView>.  
+1. Используйте перечисление <xref:System.Windows.Forms.View> элемента управления <xref:System.Windows.Forms.ListView>.  
   
     ```vb  
     ListView1.View = View.Tile  

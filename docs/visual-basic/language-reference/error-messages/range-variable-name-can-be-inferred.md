@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36599
 ms.assetid: 17763dbe-f74f-4ccb-8086-cb7e45ec4d12
-ms.openlocfilehash: 344a813907483dcb0e9f531b54db68a88d77f3dc
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: a0b5633bb0efb3c67f73810552ef9a14ac3d0c70
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842386"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331654"
 ---
 # <a name="range-variable-name-can-be-inferred-only-from-a-simple-or-qualified-name-with-no-arguments"></a>Имя переменной диапазона может быть выведено только из простого или полного имени без аргументов
 Программный элемент, который принимает один или несколько аргументов включается в запрос LINQ. Компилятор не может определить переменную диапазона из этого элемента программирования.  
@@ -21,7 +21,7 @@ ms.locfileid: "58842386"
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
-1.  Предоставьте явное имя переменной для элемента программирования, как показано в следующем коде:  
+1. Предоставьте явное имя переменной для элемента программирования, как показано в следующем коде:  
   
 ```  
 Dim query = From var1 In collection1   
@@ -30,5 +30,5 @@ Dim query = From var1 In collection1
   
 ## <a name="see-also"></a>См. также
 
-- [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)
+- [Знакомство с LINQ в Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [Предложение Select](../../../visual-basic/language-reference/queries/select-clause.md)

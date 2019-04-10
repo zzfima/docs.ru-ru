@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 12300bf4-c730-4405-9f65-d286f68b5a43
-ms.openlocfilehash: 9c8b2cb0417db6481ce0171d85b225ef3a784c1b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2aed766e6b2da7ebaf7b5b863375ee95b99eb159
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119760"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330341"
 ---
 # <a name="securitybindingelement-authentication-modes"></a>Режимы проверки подлинности SecurityBindingElement
 Windows Communication Foundation (WCF) предоставляет несколько режимов, по которым клиенты и службы проверяют подлинность друг друга. Для этих режимов проверки подлинности можно создать привязки безопасности с помощью статических методов класса <xref:System.ServiceModel.Channels.SecurityBindingElement> или с помощью конфигурации. В этом разделе кратко описано 18 режимов проверки подлинности.  
@@ -22,13 +22,13 @@ Windows Communication Foundation (WCF) предоставляет несколь
   
 #### <a name="to-set-the-authentication-mode-in-configuration"></a>Задание режима проверки подлинности в файле конфигурации  
   
-1.  Чтобы [ \<привязки >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) элемента, добавьте [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
+1. Чтобы [ \<привязки >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) элемента, добавьте [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
   
-2.  Как дочерний элемент, добавьте [ \<привязки >](../../../../docs/framework/misc/binding.md) элемент `<customBinding>` элемент.  
+2. Как дочерний элемент, добавьте [ \<привязки >](../../../../docs/framework/misc/binding.md) элемент `<customBinding>` элемент.  
   
-3.  Добавьте элемент `<security>` в элемент `<binding>`.  
+3. Добавьте элемент `<security>` в элемент `<binding>`.  
   
-4.  Задайте для атрибута `authenticationMode` одно из описанных ниже значений. Например, следующий код задает режим `AnonymousForCertificate`.  
+4. Задайте для атрибута `authenticationMode` одно из описанных ниже значений. Например, следующий код задает режим `AnonymousForCertificate`.  
   
     ```xml  
     <bindings>  
@@ -42,14 +42,14 @@ Windows Communication Foundation (WCF) предоставляет несколь
   
 #### <a name="to-set-the-mode-programmatically"></a>Задание режима программным образом  
   
-1.  Определите возвращаемый тип, который может быть следующим: <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>, <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>, <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> или <xref:System.ServiceModel.Channels.SecurityBindingElement>.  
+1. Определите возвращаемый тип, который может быть следующим: <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>, <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>, <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> или <xref:System.ServiceModel.Channels.SecurityBindingElement>.  
   
-2.  Вызовите соответствующий статический метод класса <xref:System.ServiceModel.Channels.SecurityBindingElement>. Например, в следующем фрагменте кода вызывается метод <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateAnonymousForCertificateBindingElement%2A>.  
+2. Вызовите соответствующий статический метод класса <xref:System.ServiceModel.Channels.SecurityBindingElement>. Например, в следующем фрагменте кода вызывается метод <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateAnonymousForCertificateBindingElement%2A>.  
   
      [!code-csharp[c_CustomBindingsAuthMode#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombindingsauthmode/cs/source.cs#3)]
      [!code-vb[c_CustomBindingsAuthMode#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_custombindingsauthmode/vb/source.vb#3)]  
   
-3.  С помощью элемента привязки создайте пользовательскую привязку. Дополнительные сведения см. в разделе [пользовательские привязки](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+3. С помощью элемента привязки создайте пользовательскую привязку. Дополнительные сведения см. в разделе [пользовательские привязки](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 ## <a name="mode-descriptions"></a>Описание режимов  
   

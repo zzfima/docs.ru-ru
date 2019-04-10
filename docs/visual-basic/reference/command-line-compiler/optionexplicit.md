@@ -9,12 +9,12 @@ helpviewer_keywords:
 - optionexplicit compiler option [Visual Basic]
 - -optionexplicit compiler option [Visual Basic]
 ms.assetid: 5d296ab3-bafe-4c4d-9887-78f162ed86c7
-ms.openlocfilehash: 4aca6e9c20dbce7aa8a94067c96fcf44329a6fe4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 54d438541e8840e4394b24b20b4f394ff8cdb820
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814878"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332395"
 ---
 # <a name="-optionexplicit"></a>-optionexplicit
 Указывает компилятору для сообщения об ошибках, если переменные не объявлены, прежде чем они используются.  
@@ -34,11 +34,11 @@ ms.locfileid: "58814878"
   
 ### <a name="to-set--optionexplicit-in-the-visual-studio-ide"></a>Чтобы задать - optionexplicit в Интегрированной среде разработки Visual Studio  
   
-1.  Выберите проект в **Обозревателе решений**. В меню **Проект** выберите пункт **Свойства**.   
+1. Выберите проект в **Обозревателе решений**. В меню **Проект** выберите пункт **Свойства**.   
   
-2.  Откройте вкладку **Компиляция**.  
+2. Откройте вкладку **Компиляция**.  
   
-3.  Измените значение в **Option Explicit** поле.  
+3. Измените значение в **Option Explicit** поле.  
   
 ## <a name="example"></a>Пример  
  Следующий код компилируется при `-optionexplicit-` используется.  

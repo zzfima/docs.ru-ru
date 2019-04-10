@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], master-details lists
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 19438ba2-f687-4417-a2fb-ab1cd69d4ded
-ms.openlocfilehash: 1d9e01ab1fbabeb7b20fb5d2449ca7bba5f1853a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f586572c850927ffe71566287986e6db6112c689
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59125980"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332083"
 ---
 # <a name="how-to-create-master-details-lists-with-the-windows-forms-datagrid-control-using-the-designer"></a>Практическое руководство. Создание списков основных сведений с использованием элемента управления DataGrid в формах Windows Forms с помощью конструктора
 
@@ -27,26 +27,26 @@ ms.locfileid: "59125980"
   
 ### <a name="to-create-a-master-details-list-in-the-designer"></a>Чтобы создать список основных сведений в конструкторе  
   
-1.  Добавьте два <xref:System.Windows.Forms.DataGrid> элементов управления в форму. Дополнительные сведения см. в разделе [Как Добавление элементов управления в Windows Forms](how-to-add-controls-to-windows-forms.md). В Visual Studio 2005 <xref:System.Windows.Forms.DataGrid> элемент управления отсутствует в **элементов** по умолчанию. Дополнительные сведения см. в разделе [Как Добавление элементов на панель инструментов](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165355(v=vs.100)).  
+1. Добавьте два <xref:System.Windows.Forms.DataGrid> элементов управления в форму. Дополнительные сведения см. в разделе [Как Добавление элементов управления в Windows Forms](how-to-add-controls-to-windows-forms.md). В Visual Studio 2005 <xref:System.Windows.Forms.DataGrid> элемент управления отсутствует в **элементов** по умолчанию. Дополнительные сведения см. в разделе [Как Добавление элементов на панель инструментов](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165355(v=vs.100)).  
   
     > [!NOTE]
     >  Следующие действия не применяются к Visual Studio 2005, который использует **источников данных** окно для привязки данных во время разработки. Дополнительные сведения см. в разделе [привязка элементов управления к данным в Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio) и [как: Отображение связанных данных в Windows Forms Application](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/57tx3hhe(v=vs.120)).  
   
-2.  Перетащите несколько таблиц из **обозревателя серверов** в форму.  
+2. Перетащите несколько таблиц из **обозревателя серверов** в форму.  
   
-3.  Из **данных** меню, выберите **создать набор данных**.  
+3. Из **данных** меню, выберите **создать набор данных**.  
   
-4.  Установите связи между таблицами, с помощью конструктора XML. Дополнительные сведения см. в разделе «как: Создание отношения один ко многим в XML-схемы и наборы данных» в библиотеке MSDN.  
+4. Установите связи между таблицами, с помощью конструктора XML. Дополнительные сведения см. в разделе «как: Создание отношения один ко многим в XML-схемы и наборы данных» в библиотеке MSDN.  
   
-5.  Сохраните отношения, выбрав **сохранить все** из **файл** меню.  
+5. Сохраните отношения, выбрав **сохранить все** из **файл** меню.  
   
-6.  Настройка <xref:System.Windows.Forms.DataGrid> элемент управления, который вы хотите назначить основной сеткой, следующим образом:  
+6. Настройка <xref:System.Windows.Forms.DataGrid> элемент управления, который вы хотите назначить основной сеткой, следующим образом:  
   
     1.  Выберите <xref:System.Data.DataSet> из раскрывающегося списка в <xref:System.Windows.Forms.DataGrid.DataSource%2A> свойство.  
   
     2.  Выберите основную таблицу (например, «Customers») из раскрывающегося списка в <xref:System.Windows.Forms.DataGrid.DataMember%2A> свойство.  
   
-7.  Настройка <xref:System.Windows.Forms.DataGrid> элемент управления, который вы хотите назначить сеткой сведений, следующим образом:  
+7. Настройка <xref:System.Windows.Forms.DataGrid> элемент управления, который вы хотите назначить сеткой сведений, следующим образом:  
   
     1.  Выберите <xref:System.Data.DataSet> из раскрывающегося списка в <xref:System.Windows.Forms.DataGrid.DataSource%2A> свойство.  
   

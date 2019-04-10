@@ -9,12 +9,12 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - toolbars [Windows Forms], aligning items
 ms.assetid: cd483466-0f49-43df-addf-e2b5fcd64027
-ms.openlocfilehash: 2e569f7254c2436a7c05eeeb139bf75bf61f900e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: bed943466348447e30947c170e27027f324342c6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213315"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323178"
 ---
 # <a name="how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms"></a>Практическое руководство. Изменение расстояния между элементами и способа их выравнивания для элемента управления ToolStrip в Windows Forms
 <xref:System.Windows.Forms.ToolStrip> Управления полностью поддерживает функции макета, такие как определения размера, расстояние между <xref:System.Windows.Forms.ToolStripItem> элементов управления относительно друг друга, размещения элементов управления в <xref:System.Windows.Forms.ToolStrip>и расстояние между элементами управления <xref:System.Windows.Forms.ToolStrip>.  
@@ -23,7 +23,7 @@ ms.locfileid: "59213315"
   
 ### <a name="to-manually-size-a-toolstripitem"></a>Чтобы вручную размер ToolStripItem  
   
-1.  Задайте <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> свойства `false` для сопоставленного элемента управления.  
+1. Задайте <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> свойства `false` для сопоставленного элемента управления.  
   
     ```vb  
     ToolStripButton1.AutoSize = False  
@@ -33,11 +33,11 @@ ms.locfileid: "59213315"
     toolStripButton1.AutoSize = false;  
     ```  
   
-2.  Задайте <xref:System.Windows.Forms.ToolStripItem.Size%2A> свойства, как нужно для связанного <xref:System.Windows.Forms.ToolStripItem>.  
+2. Задайте <xref:System.Windows.Forms.ToolStripItem.Size%2A> свойства, как нужно для связанного <xref:System.Windows.Forms.ToolStripItem>.  
   
 ### <a name="to-set-the-spacing-of-a-toolstripitem"></a>Чтобы задать расстояние между ToolStripItem  
   
-1.  Вставьте нужные значения в пикселях <xref:System.Windows.Forms.ToolStripItem.Margin%2A> свойства сопоставленного элемента управления.  
+1. Вставьте нужные значения в пикселях <xref:System.Windows.Forms.ToolStripItem.Margin%2A> свойства сопоставленного элемента управления.  
   
      Значения <xref:System.Windows.Forms.ToolStripItem.Margin%2A> свойства укажите расстояние между элементом и соседними элементами в следующем порядке: Слева, сверху, справа и нижней.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "59213315"
   
 ### <a name="to-align-a-toolstripitem-to-the-right-side-of-the-toolstrip"></a>Чтобы выровнять ToolStripItem в правой части панели инструментов  
   
-1.  Задайте <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> свойства <xref:System.Windows.Forms.ToolStripItemAlignment.Right> для сопоставленного элемента управления. По умолчанию <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> присваивается <xref:System.Windows.Forms.ToolStripItemAlignment.Left>, который элементы управления выравниваются по левому краю <xref:System.Windows.Forms.ToolStrip>.  
+1. Задайте <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> свойства <xref:System.Windows.Forms.ToolStripItemAlignment.Right> для сопоставленного элемента управления. По умолчанию <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> присваивается <xref:System.Windows.Forms.ToolStripItemAlignment.Left>, который элементы управления выравниваются по левому краю <xref:System.Windows.Forms.ToolStrip>.  
   
     ```vb  
     ToolStripSplitButton1.Alignment = _  

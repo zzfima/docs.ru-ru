@@ -16,12 +16,12 @@ helpviewer_keywords:
 - context menus [Windows Forms], examples
 - examples [Windows Forms], context menus
 ms.assetid: 426d1eaf-7fb8-4b0b-8a33-5e8721786ea4
-ms.openlocfilehash: e02a187edc1392f15fe98354bb2e5c43843e430c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cf70a5cc426b6c6075d1deb11aa2685c39a065c0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094467"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332187"
 ---
 # <a name="how-to-add-and-remove-menu-items-with-the-windows-forms-contextmenu-component"></a>Практическое руководство. Добавление и удаление элементов меню с помощью компонента ContextMenu в Windows Forms
 Объясняется, как добавлять и удалять элементы контекстного меню в Windows Forms.  
@@ -35,7 +35,7 @@ ms.locfileid: "59094467"
   
 ### <a name="to-remove-items-from-a-shortcut-menu"></a>Чтобы удалить элементы из контекстного меню  
   
-1.  Используйте <xref:System.Windows.Forms.Menu.MenuItemCollection.Remove%2A> или <xref:System.Windows.Forms.Menu.MenuItemCollection.RemoveAt%2A> метод <xref:System.Windows.Forms.Menu.MenuItems%2A> коллекцию <xref:System.Windows.Forms.ContextMenu> компонента для удаления определенного элемента меню.  
+1. Используйте <xref:System.Windows.Forms.Menu.MenuItemCollection.Remove%2A> или <xref:System.Windows.Forms.Menu.MenuItemCollection.RemoveAt%2A> метод <xref:System.Windows.Forms.Menu.MenuItems%2A> коллекцию <xref:System.Windows.Forms.ContextMenu> компонента для удаления определенного элемента меню.  
   
     ```vb  
     ' Removes the first item in the shortcut menu.  
@@ -60,7 +60,7 @@ ms.locfileid: "59094467"
   
      -или-  
   
-2.  Используйте `Clear` метод `MenuItems` коллекцию <xref:System.Windows.Forms.ContextMenu> компонента для удаления всех элементов в меню.  
+2. Используйте `Clear` метод `MenuItems` коллекцию <xref:System.Windows.Forms.ContextMenu> компонента для удаления всех элементов в меню.  
   
     ```vb  
     ContextMenu1.MenuItems.Clear()  

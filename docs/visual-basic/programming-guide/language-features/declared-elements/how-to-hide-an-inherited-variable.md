@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], about declared elements
 - variables [Visual Basic], hiding inherited
 ms.assetid: 765728d9-7351-4a30-999d-b5f34f024412
-ms.openlocfilehash: 2b052b44043deba85c8b142a2bf1a684c1159809
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: ee147ecd00b88b538ace32844c42ac9c5022b2ef
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842516"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331706"
 ---
 # <a name="how-to-hide-an-inherited-variable-visual-basic"></a>Практическое руководство. Сокрытие наследуемой переменной (Visual Basic)
 Производный класс наследует все определения базового класса. Если вы хотите определить переменную с тем же именем, что элемент базового класса, можно скрыть, или *тени*, этот элемент базового класса при определении переменной в производном классе. После этого код в производном классе получает доступ к переменной, если явно не обходится скрывающий механизм.  
@@ -25,11 +25,11 @@ ms.locfileid: "58842516"
   
 ### <a name="to-hide-an-inherited-variable"></a>Чтобы скрыть наследуемой переменной  
   
-1.  Убедитесь, что переменная, которую вы хотите скрыть объявлен на уровне класса (вне любых процедур). В противном случае не нужно скрыть его.  
+1. Убедитесь, что переменная, которую вы хотите скрыть объявлен на уровне класса (вне любых процедур). В противном случае не нужно скрыть его.  
   
-2.  Внутри производного класса, напишите [оператор Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) объявляющий переменную. Использование тем же именем, что и наследуемой переменной.  
+2. Внутри производного класса, напишите [оператор Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) объявляющий переменную. Использование тем же именем, что и наследуемой переменной.  
   
-3.  Включить [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) ключевое слово в объявлении.  
+3. Включить [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) ключевое слово в объявлении.  
   
      Когда код в производном классе ссылается на имя переменной, компилятор разрешает ссылку на переменную.  
   
@@ -57,11 +57,11 @@ ms.locfileid: "58842516"
   
 ## <a name="see-also"></a>См. также
 
-- [Ссылки на объявленные элементы](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Сокрытие в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
-- [Различия между затемнением и переопределением](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)
+- [Различия между удаленным управлением и переопределением](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)
 - [Практическое руководство. Сокрытие переменной с тем же именем, что и ваша переменная](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)
 - [Практическое руководство. Доступ к переменной, скрытой производным классом](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)
-- [Переопределения](../../../../visual-basic/language-reference/modifiers/overrides.md)
+- [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)
 - [Me, My, MyBase и MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
 - [Основы наследования](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

@@ -12,19 +12,19 @@ helpviewer_keywords:
 - double-clicks
 - check boxes [Windows Forms], responding to events
 ms.assetid: c39f901e-8899-43b6-aa31-939cbf7089fb
-ms.openlocfilehash: 77f93dae2a91f282c6746c3fec3fb5f567cae2e3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ce616f45ceaa3db117c6981d2987ac09bba7b3fb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59211989"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319902"
 ---
 # <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a>Практическое руководство. Обработка события щелчка элемента управления CheckBox в Windows Forms
 Каждый раз, когда пользователь щелкает форм Windows <xref:System.Windows.Forms.CheckBox> управления <xref:System.Windows.Forms.Control.Click> событием. Можно программировать приложения для выполнения некоторых операций, в зависимости от состояния флажка.  
   
 ### <a name="to-respond-to-checkbox-clicks"></a>Реагировать на щелчка элемента управления CheckBox  
   
-1.  В <xref:System.Windows.Forms.Control.Click> обработчик событий, используйте <xref:System.Windows.Forms.CheckBox.Checked%2A> свойство, чтобы определить состояние элемента управления, а также выполнять любые необходимые действия.  
+1. В <xref:System.Windows.Forms.Control.Click> обработчик событий, используйте <xref:System.Windows.Forms.CheckBox.Checked%2A> свойство, чтобы определить состояние элемента управления, а также выполнять любые необходимые действия.  
   
     ```vb  
     Private Sub CheckBox1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles CheckBox1.Click  
@@ -80,7 +80,7 @@ ms.locfileid: "59211989"
   
 ### <a name="to-determine-a-course-of-action-when-a-check-box-is-clicked"></a>Чтобы определить порядок действий при типа "флажок" нажата  
   
-1.  Оператор case для запроса значения <xref:System.Windows.Forms.CheckBox.CheckState%2A> свойства, чтобы определить направление дальнейших действий. Когда <xref:System.Windows.Forms.CheckBox.ThreeState%2A> свойству `true`, <xref:System.Windows.Forms.CheckBox.CheckState%2A> свойство может вернуть три возможных значения, представляющие флажком, поле снятому или сторонним неопределенном состоянии, в котором отображается поле с серым цветом внешний вид, чтобы указать параметр будет недоступен.  
+1. Оператор case для запроса значения <xref:System.Windows.Forms.CheckBox.CheckState%2A> свойства, чтобы определить направление дальнейших действий. Когда <xref:System.Windows.Forms.CheckBox.ThreeState%2A> свойству `true`, <xref:System.Windows.Forms.CheckBox.CheckState%2A> свойство может вернуть три возможных значения, представляющие флажком, поле снятому или сторонним неопределенном состоянии, в котором отображается поле с серым цветом внешний вид, чтобы указать параметр будет недоступен.  
   
     ```vb  
     Private Sub CheckBox1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles CheckBox1.Click  

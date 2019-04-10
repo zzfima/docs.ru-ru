@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Font dialog box [Windows Forms], displaying
 - fonts [Windows Forms], selecting
 ms.assetid: 35692c1b-0937-4b7a-9207-1ae6bdc244a0
-ms.openlocfilehash: fba9caecc71c5cb77c811fc112616647c79689c6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 40679136ea62a437009b308a8b206cf251b46222
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59220192"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307331"
 ---
 # <a name="how-to-show-a-font-list-with-the-fontdialog-component"></a>Практическое руководство. Отображение списка шрифтов с помощью компонента FontDialog
 [FontDialog](fontdialog-component-windows-forms.md) компонент позволяет пользователям выбрать шрифт, а также менять параметры его отображения, например, вес и размер.  
@@ -27,11 +27,11 @@ ms.locfileid: "59220192"
   
 ### <a name="to-select-font-properties-using-the-fontdialog-component"></a>Чтобы выбрать свойства шрифта с помощью компонента FontDialog  
   
-1.  Отобразить диалоговое окно с помощью <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> метод.  
+1. Отобразить диалоговое окно с помощью <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> метод.  
   
-2.  Используйте <xref:System.Windows.Forms.DialogResult> свойства, чтобы определить, как окно было закрыто.  
+2. Используйте <xref:System.Windows.Forms.DialogResult> свойства, чтобы определить, как окно было закрыто.  
   
-3.  Используйте <xref:System.Windows.Forms.FontDialog.Font%2A> свойство, чтобы задать нужный шрифт.  
+3. Используйте <xref:System.Windows.Forms.FontDialog.Font%2A> свойство, чтобы задать нужный шрифт.  
   
      В следующем примере <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Click> обработчик событий открывает <xref:System.Windows.Forms.FontDialog> компонента. Если шрифт — выбран и пользователь нажимает **ОК**, <xref:System.Windows.Forms.FontDialog.Font%2A> свойство <xref:System.Windows.Forms.TextBox> элемент управления на форме имеет значение выбранного шрифта. В примере предполагается, в форме есть <xref:System.Windows.Forms.Button> управления <xref:System.Windows.Forms.TextBox> элемента управления и <xref:System.Windows.Forms.FontDialog> компонента.  
   

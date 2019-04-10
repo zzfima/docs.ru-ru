@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Button control [Windows Forms], designating as default
 - Windows Forms controls, default button on form
 ms.assetid: 22cc9da6-b913-4e04-9554-dee443ac5c3a
-ms.openlocfilehash: 1e24e410681b03a92c8c48b187dde569eccdc1c1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8e608bb2cb4635ef1d29fd7a0aff3ac95fcd9af5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59222150"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309827"
 ---
 # <a name="how-to-designate-a-windows-forms-button-as-the-accept-button"></a>Практическое руководство. Назначение кнопок принятия в Windows Forms
 В любой форме Windows, можно назначить <xref:System.Windows.Forms.Button> отображения элемента управления "Принять", также известный как кнопка по умолчанию. Каждый раз, когда пользователь нажимает клавишу ВВОД, нажатии кнопки по умолчанию, независимо от того, что другой элемент управления в форме имеет фокус.  
@@ -26,7 +26,7 @@ ms.locfileid: "59222150"
   
 ### <a name="to-designate-the-accept-button"></a>Чтобы создать кнопку «принять»  
   
-1.  Формы задайте <xref:System.Windows.Forms.Form.AcceptButton%2A> свойство в соответствующий <xref:System.Windows.Forms.Button> элемента управления.  
+1. Формы задайте <xref:System.Windows.Forms.Form.AcceptButton%2A> свойство в соответствующий <xref:System.Windows.Forms.Button> элемента управления.  
   
     ```vb  
     Private Sub SetDefault(ByVal myDefaultBtn As Button)  

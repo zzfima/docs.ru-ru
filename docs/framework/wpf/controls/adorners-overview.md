@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - adorners [WPF], about adorners
 ms.assetid: 33d4c5c2-2daf-4e45-ba9a-5b673e2b8280
-ms.openlocfilehash: 88dc2a306108959b5627e502aaa67ef7db341417
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6b710df45379ccce4daf340b4dbe2701d3c96604
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227695"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320474"
 ---
 # <a name="adorners-overview"></a>Общие сведения о декоративных элементах
 Графические элементы — это специальный тип <xref:System.Windows.FrameworkElement>, которое используется для предоставления визуальных сигналов пользователю. Помимо прочего, декоративные элементы можно использовать для добавления функциональных дескрипторов к элементам или предоставления информации о состоянии элемента управления.  
@@ -74,9 +74,9 @@ ms.locfileid: "59227695"
 ## <a name="adorning-a-single-uielement"></a>Декорирование одного элемента пользовательского интерфейса  
  Для привязки декоративного элемента к конкретному <xref:System.Windows.UIElement>, выполните следующие действия:  
   
-1.  Вызовите статический метод <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> для получения <xref:System.Windows.Documents.AdornerLayer> для объекта <xref:System.Windows.UIElement> декорируемого. <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> Пошаговое описание вверх по визуальному дереву, начиная с указанного <xref:System.Windows.UIElement>и возвращает первый слой графических элементов, которые найдет. (Если слои декоративных элементов не найдены, метод возвращает значение 0.)  
+1. Вызовите статический метод <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> для получения <xref:System.Windows.Documents.AdornerLayer> для объекта <xref:System.Windows.UIElement> декорируемого. <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> Пошаговое описание вверх по визуальному дереву, начиная с указанного <xref:System.Windows.UIElement>и возвращает первый слой графических элементов, которые найдет. (Если слои декоративных элементов не найдены, метод возвращает значение 0.)  
   
-2.  Вызовите <xref:System.Windows.Documents.AdornerLayer.Add%2A> метод для привязки декоративного элемента к целевому объекту <xref:System.Windows.UIElement>.  
+2. Вызовите <xref:System.Windows.Documents.AdornerLayer.Add%2A> метод для привязки декоративного элемента к целевому объекту <xref:System.Windows.UIElement>.  
   
  Следующий пример связывает SimpleCircleAdorner (как показано выше) для <xref:System.Windows.Controls.TextBox> с именем *myTextBox*.  
   
@@ -90,9 +90,9 @@ ms.locfileid: "59227695"
 ## <a name="adorning-the-children-of-a-panel"></a>Декорирование дочерних объектов панели  
  Для привязки декоративного элемента к дочерним элементам <xref:System.Windows.Controls.Panel>, выполните следующие действия:  
   
-1.  Вызовите `static` метод <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> найти слой графических элементов для элемента, дочерние элементы которого нужно декорировать.  
+1. Вызовите `static` метод <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> найти слой графических элементов для элемента, дочерние элементы которого нужно декорировать.  
   
-2.  Перечислите дочерние элементы родительского элемента и вызовите <xref:System.Windows.Documents.AdornerLayer.Add%2A> метод для привязки декоративного элемента для каждого дочернего элемента.  
+2. Перечислите дочерние элементы родительского элемента и вызовите <xref:System.Windows.Documents.AdornerLayer.Add%2A> метод для привязки декоративного элемента для каждого дочернего элемента.  
   
  Следующий пример связывает SimpleCircleAdorner (как показано выше) к дочерним элементам <xref:System.Windows.Controls.StackPanel> с именем *myStackPanel*.  
   

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF], data transfer
 ms.assetid: 7c5a26c8-89c9-4bcb-a4bc-7131e6d01f0c
-ms.openlocfilehash: a3ac0f321a20624deea1fe382d04a8d4e1b6c510
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 88bdfe6e659e6e83365b3d17c9067581f209d154
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59135204"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331524"
 ---
 # <a name="specifying-data-transfer-in-service-contracts"></a>Задание передачи данных в контрактах служб
 Windows Communication Foundation (WCF) может рассматриваться как инфраструктуру обмена сообщениями. Операции служб могут получать сообщения, обрабатывать их и отправлять. Сообщения описываются с помощью контрактов операций. Например, рассмотрим следующий контракт:  
@@ -566,11 +566,11 @@ Dim serviceHost As ServiceHost = New ServiceHost(GetType(IDataService))
   
  Во всех трех предыдущих случаях (сохранение типов .NET, сохранение графов объектов и сериализация на базе пользовательского сериализатора `XmlObjectSerializer`) требуется подключить пользовательский сериализатор. Для этого выполните следующие действия.  
   
-1.  Самостоятельно составьте код поведения, наследуемого от класса <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>.  
+1. Самостоятельно составьте код поведения, наследуемого от класса <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>.  
   
-2.  Переопределите два метода `CreateSerializer` так, чтобы они возвращали ваш сериализатор (либо <xref:System.Runtime.Serialization.NetDataContractSerializer>, т. е. сериализатор <xref:System.Runtime.Serialization.DataContractSerializer>, у которого для `preserveObjectReferences` задано значение `true`, либо полностью созданный вами сериализатор <xref:System.Runtime.Serialization.XmlObjectSerializer>).  
+2. Переопределите два метода `CreateSerializer` так, чтобы они возвращали ваш сериализатор (либо <xref:System.Runtime.Serialization.NetDataContractSerializer>, т. е. сериализатор <xref:System.Runtime.Serialization.DataContractSerializer>, у которого для `preserveObjectReferences` задано значение `true`, либо полностью созданный вами сериализатор <xref:System.Runtime.Serialization.XmlObjectSerializer>).  
   
-3.  Прежде чем открывать узел службы или создавать канал клиента, удалите существующее поведение <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> и подключите производный пользовательский класс, созданный на предыдущих этапах.  
+3. Прежде чем открывать узел службы или создавать канал клиента, удалите существующее поведение <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> и подключите производный пользовательский класс, созданный на предыдущих этапах.  
   
  Дополнительные сведения о более сложные методы сериализации, см. в разделе [сериализации и десериализации](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
   

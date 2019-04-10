@@ -2,19 +2,19 @@
 title: Практическое руководство. Доступ к службам WCF с односторонним контрактом и контрактом типа запрос ответ
 ms.date: 03/30/2017
 ms.assetid: 7e10d3a5-fcf4-4a4b-a8d6-92ee2c988b3b
-ms.openlocfilehash: 84b8f7c44c8124c1a150304dea0f08a0087752bd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 119a63978f6c45aa940ff999249c654c7cf96d91
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59217033"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309255"
 ---
 # <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>Практическое руководство. Доступ к службам WCF с односторонним контрактом и контрактом типа запрос ответ
 Следующие процедуры описывают, как получить доступ к службе Windows Communication Foundation (WCF), определяющий односторонний контракт и контракт типа запрос ответ и не использует дуплексном обмене данными.  
   
 ### <a name="to-define-the-service"></a>Определение службы  
   
-1.  Объявите контракт службы. Для операций, которые требуется сделать односторонними, необходимо назначить для `IsOneWay` значение `true` в атрибуте <xref:System.ServiceModel.OperationContractAttribute>. В следующем коде объявляется контракт `IOneWayCalculator`, имеющий односторонние операции для `Add`, `Subtract`, `Multiply` и `Divide`. В нем также определяется операция ответа на запрос, называемая `SayHello`.  
+1. Объявите контракт службы. Для операций, которые требуется сделать односторонними, необходимо назначить для `IsOneWay` значение `true` в атрибуте <xref:System.ServiceModel.OperationContractAttribute>. В следующем коде объявляется контракт `IOneWayCalculator`, имеющий односторонние операции для `Add`, `Subtract`, `Multiply` и `Divide`. В нем также определяется операция ответа на запрос, называемая `SayHello`.  
   
     ```csharp  
     [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
@@ -33,7 +33,7 @@ ms.locfileid: "59217033"
     }  
     ```  
   
-2.  Реализуйте контракт службы. В следующем коде реализуется интерфейс `IOnewayCalculator`.  
+2. Реализуйте контракт службы. В следующем коде реализуется интерфейс `IOnewayCalculator`.  
   
     ```csharp  
     [ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Multiple, InstanceContextMode = InstanceContextMode.PerCall)]  
@@ -71,7 +71,7 @@ ms.locfileid: "59217033"
     }  
     ```  
   
-3.  Разместите службу в консольном приложении. В следующем примере кода показано, как это сделать.  
+3. Разместите службу в консольном приложении. В следующем примере кода показано, как это сделать.  
   
     ```csharp  
     // Host the service within this EXE console application.  
@@ -109,7 +109,7 @@ ms.locfileid: "59217033"
   
 ### <a name="to-access-the-service"></a>Доступ к службе  
   
-1.  Запустите [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) с помощью адрес конечной точки обмена метаданными, чтобы создать класс клиента для службы, используя следующую команду: `Svcutil http://localhost:8000/Service` [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) создает набор интерфейсы и классы, как показано в следующем примере кода.  
+1. Запустите [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) с помощью адрес конечной точки обмена метаданными, чтобы создать класс клиента для службы, используя следующую команду: `Svcutil http://localhost:8000/Service` [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) создает набор интерфейсы и классы, как показано в следующем примере кода.  
   
     ```csharp  
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]  
@@ -196,7 +196,7 @@ ms.locfileid: "59217033"
   
      Обратите внимание, что в интерфейсе `IOneWayCalculator` односторонним операциям службы задано значение <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> для атрибута `true`, а операции запроса-ответа службы для этого атрибута задано значение по умолчанию: `false`. Также обратите внимание на класс `OneWayCalculatorClient`. Он используется для вызова службы.  
   
-2.  Создайте клиентский объект.  
+2. Создайте клиентский объект.  
   
     ```csharp  
     // Create a client  
@@ -205,7 +205,7 @@ ms.locfileid: "59217033"
     OneWayCalculatorClient client = new OneWayCalculatorClient(binding, epAddress);  
     ```  
   
-3.  Вызовите операции службы.  
+3. Вызовите операции службы.  
   
     ```csharp  
     // Call the Add service operation.  
@@ -239,7 +239,7 @@ ms.locfileid: "59217033"
     Console.WriteLine("SayHello() returned: " + response);  
     ```  
   
-4.  Закройте клиент, чтобы закрыть соединения и очистить ресурсы.  
+4. Закройте клиент, чтобы закрыть соединения и очистить ресурсы.  
   
     ```csharp  
     //Closing the client gracefully closes the connection and cleans up resources  

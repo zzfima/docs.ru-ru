@@ -5,27 +5,27 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 82293d7f-471a-4549-8f19-0be890e7b074
-ms.openlocfilehash: a1b2627c8e9899a122f27dc652f8c91230fed0b3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ecb8f7ef74f1f0625454eb2d6cebf9d282a5ece3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59225135"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327104"
 ---
 # <a name="how-to-specify-client-credential-values"></a>Практическое руководство. Задание значений учетных данных клиента
 С помощью Windows Communication Foundation (WCF), служба может указать способ проверки подлинности клиента к службе. Например, в службе можно указать, что клиент проходит проверку подлинности с помощью сертификата.  
   
 ### <a name="to-determine-the-client-credential-type"></a>Определение типа учетных данных клиента  
   
-1.  Получите метаданные из конечной точки метаданных службы. Метаданные обычно состоят из двух файлов: код клиента на выбранном языке программирования (по умолчанию - Visual C#) и XML-файл конфигурации. Одним из способов получения метаданных является использование программы Svcutil.exe для возвращения кода клиента и конфигурации клиента. Дополнительные сведения см. в разделе [получение метаданных](../../../docs/framework/wcf/feature-details/retrieving-metadata.md) и [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
+1. Получите метаданные из конечной точки метаданных службы. Метаданные обычно состоят из двух файлов: код клиента на выбранном языке программирования (по умолчанию - Visual C#) и XML-файл конфигурации. Одним из способов получения метаданных является использование программы Svcutil.exe для возвращения кода клиента и конфигурации клиента. Дополнительные сведения см. в разделе [получение метаданных](../../../docs/framework/wcf/feature-details/retrieving-metadata.md) и [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
-2.  Откройте XML-файл конфигурации. Если используется программа Svcutil.exe, то по умолчанию файл имеет имя Output.config.  
+2. Откройте XML-файл конфигурации. Если используется программа Svcutil.exe, то по умолчанию файл имеет имя Output.config.  
   
-3.  Найти  **\<безопасности >** элемент с **режим** атрибут (**< режим безопасности =** `MessageOrTransport` **>** где `MessageOrTransport` задан один из режимов безопасности.  
+3. Найти  **\<безопасности >** элемент с **режим** атрибут (**< режим безопасности =** `MessageOrTransport` **>** где `MessageOrTransport` задан один из режимов безопасности.  
   
-4.  Найдите дочерний элемент, соответствующий значению режима. Например, если выбран режим **сообщение**, найти  **\<сообщения >** элемента, содержащегося в  **\<безопасности >** элемент.  
+4. Найдите дочерний элемент, соответствующий значению режима. Например, если выбран режим **сообщение**, найти  **\<сообщения >** элемента, содержащегося в  **\<безопасности >** элемент.  
   
-5.  Обратите внимание на то значение, присваиваемое **clientCredentialType** атрибута. Фактическое значение зависит от используемого режима - транспорт или сообщение.  
+5. Обратите внимание на то значение, присваиваемое **clientCredentialType** атрибута. Фактическое значение зависит от используемого режима - транспорт или сообщение.  
   
  Следующий XML-код представляет конфигурацию для клиента, использующего безопасность сообщений. Для проверки подлинности клиента требуется сертификат.  
   
@@ -43,11 +43,11 @@ ms.locfileid: "59225135"
   
 #### <a name="to-specify-the-client-credential-value-on-the-client-in-code"></a>Указание значения учетных данных клиента в коде клиента  
   
-1.  Используйте [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для создания кода и конфигурации из службы.  
+1. Используйте [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для создания кода и конфигурации из службы.  
   
-2.  Создайте экземпляр клиента WCF с помощью созданного кода.  
+2. Создайте экземпляр клиента WCF с помощью созданного кода.  
   
-3.  В классе клиента задайте соответствующее значение для свойства <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> класса <xref:System.ServiceModel.ClientBase%601>. В этом примере в качестве значения свойства задается сертификат X.509 с помощью метода <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> класса <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>.  
+3. В классе клиента задайте соответствующее значение для свойства <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> класса <xref:System.ServiceModel.ClientBase%601>. В этом примере в качестве значения свойства задается сертификат X.509 с помощью метода <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> класса <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>.  
   
      [!code-csharp[c_TcpService#4](../../../samples/snippets/csharp/VS_Snippets_CFX/c_tcpservice/cs/source.cs#4)]
      [!code-vb[c_TcpService#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_tcpservice/vb/source.vb#4)]  
@@ -56,13 +56,13 @@ ms.locfileid: "59225135"
   
 #### <a name="to-specify-the-client-credential-value-on-the-client-in-configuration"></a>Указание значения учетных данных клиента в конфигурации клиента  
   
-1.  Добавить [ \<поведение >](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) элемент [ \<поведения >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) элемент.  
+1. Добавить [ \<поведение >](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) элемент [ \<поведения >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) элемент.  
   
-2.  Добавить [ \<clientCredentials >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) элемент [ \<поведения >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) элемент. Необходимо присвоить обязательному атрибуту `name` соответствующее значение.  
+2. Добавить [ \<clientCredentials >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) элемент [ \<поведения >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) элемент. Необходимо присвоить обязательному атрибуту `name` соответствующее значение.  
   
-3.  Добавить [ \<clientCertificate >](../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md) элемент [ \<clientCredentials >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) элемент.  
+3. Добавить [ \<clientCertificate >](../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md) элемент [ \<clientCredentials >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) элемент.  
   
-4.  Присвойте соответствующие значения следующим атрибутам: `storeLocation`, `storeName`, `x509FindType` и `findValue`, как показано в следующем коде. Дополнительные сведения см. в разделе [Работа с сертификатами](../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+4. Присвойте соответствующие значения следующим атрибутам: `storeLocation`, `storeName`, `x509FindType` и `findValue`, как показано в следующем коде. Дополнительные сведения см. в разделе [Работа с сертификатами](../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
     ```xml  
     <behaviors>  
@@ -79,7 +79,7 @@ ms.locfileid: "59225135"
     </behaviors>  
     ```  
   
-5.  При настройке клиента укажите поведение, задав атрибут `behaviorConfiguration` элемента `<endpoint>`, как показано в следующем коде. Элемент конечной точки является дочерним элементом [ \<клиента >](../../../docs/framework/configure-apps/file-schema/wcf/client.md) элемент. Также укажите имя конфигурации привязки, установив привязку для клиента в атрибуте `bindingConfiguration`. Если используется созданный файл конфигурации, имя привязки создается автоматически. В данном примере это имя `"tcpBindingWithCredential"`.  
+5. При настройке клиента укажите поведение, задав атрибут `behaviorConfiguration` элемента `<endpoint>`, как показано в следующем коде. Элемент конечной точки является дочерним элементом [ \<клиента >](../../../docs/framework/configure-apps/file-schema/wcf/client.md) элемент. Также укажите имя конфигурации привязки, установив привязку для клиента в атрибуте `bindingConfiguration`. Если используется созданный файл конфигурации, имя привязки создается автоматически. В данном примере это имя `"tcpBindingWithCredential"`.  
   
     ```xml  
     <client>  
