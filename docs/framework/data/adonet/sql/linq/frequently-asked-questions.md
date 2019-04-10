@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 009115d985c51961bffddaaa3149e15ba9a5502b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 20c5ee3667bf57328a3b6dda6e55dce4ddbbec72
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679765"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224049"
 ---
 # <a name="frequently-asked-questions"></a>Вопросы и ответы
 В следующих разделах даны ответы на некоторые вопросы, которые могут возникнуть при реализации [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
@@ -50,12 +50,12 @@ ms.locfileid: "54679765"
 ## <a name="unexpected-query-results"></a>Неожиданные результаты запроса  
  В. Запрос возвращает непредвиденные результаты. Как узнать, что случилось?  
   
- О. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] предусматривает несколько средств для проверки создаваемого кода SQL. Одним из наиболее важных <xref:System.Data.Linq.DataContext.Log%2A>. Дополнительные сведения см. в разделе [поддержка отладки](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md).  
+ О. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] предоставляет несколько средств для проверки создаваемого кода SQL. Одним из наиболее важных <xref:System.Data.Linq.DataContext.Log%2A>. Дополнительные сведения см. в разделе [поддержка отладки](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md).  
   
 ## <a name="unexpected-stored-procedure-results"></a>Неожиданные результаты хранимой процедуры  
  В. Имеется хранимая процедура, возвращаемое значение которой вычислено с помощью функции `MAX()`. При перетаскивании процедуры в область [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] возвращаемое значение становится неверным.  
   
- О. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] обеспечивает два способа возврата значений, сформированных в базе данных, с помощью хранимых процедур.  
+ О. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] предоставляет два способа возвращения значений, созданных базой данных с помощью хранимых процедур:  
   
 -   Путем именования выходного результата.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "54679765"
 ## <a name="avoiding-explicit-setting-of-database-generated-values-on-insert-or-update"></a>Предупреждение явного задания значений, созданных базой данных, в Insert или Update  
  В. В базе данных имеется таблица со столбцом `DateCreated`, в качестве значения по умолчанию которой указана функция SQL `Getdate()`. При попытке вставить новую запись с помощью [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] возвращается значение `NULL`. Хотя ожидается заданное по умолчанию значение базы данных.  
   
- О. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] автоматически обрабатывает данную ситуацию для столбцов identity (автоувеличение), rowguidcol (формируемые базой данных идентификаторы GUID) и timestamp. В других случаях нужно вручную задать <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> = `true` и <xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> = <xref:System.Data.Linq.Mapping.AutoSync.Always> / <xref:System.Data.Linq.Mapping.AutoSync.OnInsert> / <xref:System.Data.Linq.Mapping.AutoSync.OnUpdate> свойства.  
+ О. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] обрабатывает данную ситуацию автоматически для identity (Автоувеличение) и rowguidcol (формируемые базой данных идентификаторы GUID) и столбцы отметок времени. В других случаях нужно вручную задать <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> = `true` и <xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> = <xref:System.Data.Linq.Mapping.AutoSync.Always> / <xref:System.Data.Linq.Mapping.AutoSync.OnInsert> / <xref:System.Data.Linq.Mapping.AutoSync.OnUpdate> свойства.  
   
 ## <a name="multiple-dataloadoptions"></a>Несколько параметров DataLoadOptions  
  В. Можно ли задать дополнительные параметры загрузки, не переопределяя исходные?  
@@ -149,7 +149,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="sql-injection-attacks"></a>Атаки путем внедрения кода SQL  
  В. Каким образом [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] защищен от атак путем внедрения кода SQL?  
   
- О. Внедрение SQL-кода представляло серьезную угрозу для традиционных SQL-запросов, создаваемых путем объединения данных, вводимых пользователем. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] предотвращает подобное внедрение за счет использования в запросах объектов <xref:System.Data.SqlClient.SqlParameter>. Вводимые данные преобразуются в значения параметров. Этот способ исключает использование вредоносных команд из введенных данных.  
+ О. Внедрение SQL-кода представляло серьезную угрозу для традиционных SQL-запросов, создаваемых путем объединения данных, вводимых пользователем. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] предотвращает подобное внедрение за счет использования <xref:System.Data.SqlClient.SqlParameter> в запросах. Вводимые данные преобразуются в значения параметров. Этот способ исключает использование вредоносных команд из введенных данных.  
   
 ## <a name="changing-read-only-flag-in-dbml-files"></a>Создание флага "Только чтение" в файлах DBML.  
  В. Как можно избавиться от некоторых методов задания свойств при создании объектной модели из файла DBM?  
@@ -175,7 +175,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="mapping-data-from-multiple-tables"></a>Сопоставление данных из нескольких таблиц  
  В. Данные в сущность поступают из нескольких таблиц. Как их сопоставить?  
   
- О. В базе данных можно создать представление и сопоставить с ним сущность. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] создает одинаковый SQL-код для представлений и таблиц.  
+ О. В базе данных можно создать представление и сопоставить с ним сущность. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] создает одинаковый SQL для представлений, как и для таблиц.  
   
 > [!NOTE]
 >  В данном сценарии использование представлений имеет ограничения. Способ работает с максимальной безопасностью, если операции, выполняемые в <xref:System.Data.Linq.Table%601>, поддерживаются базовым представлением. Операции, которые предполагается использовать, известны только вам. Например, большинство приложений доступны только для чтения, и другой значительная часть выполняет `Create` / `Update` / `Delete` операции только с помощью хранимых процедур в представлениях.  
@@ -190,7 +190,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="second-datacontext-is-not-updated"></a>Не выполняется обновление второго DataContext  
  В. Для хранения значения в базе данных использовался один экземпляр <xref:System.Data.Linq.DataContext>. Однако второй <xref:System.Data.Linq.DataContext> в той же базе данных не отражает обновленные значения. Второй экземпляр <xref:System.Data.Linq.DataContext>, вероятно, возвращает кэшированные значения.  
   
- О. Это сделано намеренно. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] по-прежнему возвращает те же экземпляры и значения, которые отображались в первом экземпляре. При выполнении обновлений используется оптимистическая блокировка. Для проверки текущего состояния базы данных используются исходные данные, которые подтверждают неизменность ее состояния. Если состояние изменилось, возникает конфликт, который должен быть устранен приложением. Одним вариантом является сброс исходного состояния до текущего состояния базы данных и повторная попытка обновления. Дополнительные сведения см. в разделе [Как Управление конфликтами изменений](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md).  
+ О. Это сделано намеренно. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] продолжает возвращать те же экземпляры/значения, которые вы видели в первом экземпляре. При выполнении обновлений используется оптимистическая блокировка. Для проверки текущего состояния базы данных используются исходные данные, которые подтверждают неизменность ее состояния. Если состояние изменилось, возникает конфликт, который должен быть устранен приложением. Одним вариантом является сброс исходного состояния до текущего состояния базы данных и повторная попытка обновления. Дополнительные сведения см. в разделе [Как Управление конфликтами изменений](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md).  
   
  Кроме того, <xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A> можно задать значение «false», которое отключает кэширование и отслеживание изменений. После этого самые последние значения можно будет извлекать при каждом запросе.  
   
@@ -200,6 +200,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
  О. Режим только для чтения отключает для контекста возможность отслеживания изменений.  
   
 ## <a name="see-also"></a>См. также
-- [Ссылки](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+
+- [Ссылка](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
 - [Устранение неполадок](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)
 - [Безопасность в LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)

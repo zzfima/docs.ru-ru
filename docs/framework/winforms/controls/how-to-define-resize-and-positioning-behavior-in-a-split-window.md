@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Определение изменения размеров и позиционирования в окне с перемещаемым разделителем
+title: Практическое руководство. Определение способа изменения размеров и позиционирования в окне с перемещаемым разделителем
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - splitter windows [Windows Forms], resizing
 - SplitContainer control [Windows Forms], resizing
 ms.assetid: 9bf73f36-ed2d-4a02-b15a-0770eff4fdfa
-ms.openlocfilehash: a0e16a1961e5eb7fcb81503d0ccead38e08974dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 4ed1d2a5230502bc598906da0db5164396986e66
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628257"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217072"
 ---
-# <a name="how-to-define-resize-and-positioning-behavior-in-a-split-window"></a>Как выполнить Определение изменения размеров и позиционирования в окне с перемещаемым разделителем
+# <a name="how-to-define-resize-and-positioning-behavior-in-a-split-window"></a>Практическое руководство. Определение способа изменения размеров и позиционирования в окне с перемещаемым разделителем
 Панели элемента <xref:System.Windows.Forms.SplitContainer> управления поддаются, размеров и управлению пользователями. Тем не менее, будет существовать раз, когда необходимо программно управлять разделителем, где он размещается, и определить, каким образом его можно переместить.  
   
  <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> Свойства и другие свойства <xref:System.Windows.Forms.SplitContainer> управления позволяют точно контролировать поведение пользовательского интерфейса в соответствии с потребностями. Эти свойства перечислены в следующей таблице.  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
-|Свойство <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A>|Определяет, является ли разделитель при помощи клавиатуры или мыши.|  
-|Свойство <xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A>|Определяет расстояние в пикселях от левого или верхнего края для перемещаемой полосы-разделителя.|  
-|Свойство <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>|Определяет минимальное расстояние в пикселях, что разделитель может быть перемещен пользователем.|  
+|<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> свойство;|Определяет, является ли разделитель при помощи клавиатуры или мыши.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> свойство;|Определяет расстояние в пикселях от левого или верхнего края для перемещаемой полосы-разделителя.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> свойство;|Определяет минимальное расстояние в пикселях, что разделитель может быть перемещен пользователем.|  
   
  Следующий пример изменяет <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> свойство для создания эффекта «привязка разделителем»; когда пользователь перетаскивает разделитель, увеличивается в единицах 10 пикселей, а не по умолчанию 1.  
   
@@ -64,5 +64,6 @@ ms.locfileid: "54628257"
      Плавное перемещение влево или вправо разделителя не будет действовать ощутимого; Тем не менее когда указатель мыши выходит 10 точек в любом направлении, разделитель будет привязана к новой позиции.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.SplitContainer>
 - <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>

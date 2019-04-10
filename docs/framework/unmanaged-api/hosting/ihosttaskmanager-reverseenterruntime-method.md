@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20b6fcd0e5e4ce4055a6678e931dee50a6a4ccc7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6eefdaf5dee423b0a9ae054446224a3ea97e3c9b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496196"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213783"
 ---
 # <a name="ihosttaskmanagerreverseenterruntime-method"></a>Метод IHostTaskManager::ReverseEnterRuntime
 Уведомляет основное приложение, что вызов в среду (CLR) из неуправляемого кода.  
@@ -61,6 +61,7 @@ HRESULT ReverseEnterRuntime ();
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
 - [Интерфейс ICLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
 - [Интерфейс IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)

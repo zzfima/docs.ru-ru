@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c867945f8a75cade5c7405b2908e2819f5d261d9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 54652727b4684d71068a19eb5eeb2e862f413f25
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706976"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215083"
 ---
 # <a name="cordebugblockingreason-enumeration"></a>Перечисление CorDebugBlockingReason
 Указывает возможные причины блокировки потока на данном объекте.  
@@ -43,7 +43,7 @@ Typedef enum CorDebugBlockingReason
 |------------|-----------------|  
 |`BLOCKING_NONE`|Только для внутреннего использования.|  
 |`BLOCKING_MONITOR_CRITICAL_SECTION`|Поток пытается получить критический раздел, связанный с блокировкой монитора на объект. Как правило, это происходит при вызове одного из <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> или <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType> методы.|  
-|`BLOCKING_MONITOR_EVENT`|Поток ожидает события, связанного с блокировкой монитора для объекта. Как правило, это происходит при вызове одного из <xref:System.Threading.Monitor?displayProperty=nameWithType> `Wait` методы.|  
+|`BLOCKING_MONITOR_EVENT`|Поток ожидает события, связанного с блокировкой монитора для объекта. Как правило, это происходит при вызове одного из <xref:System.Threading.Monitor?displayProperty=nameWithType>`Wait` методы.|  
   
 ## <a name="remarks"></a>Примечания  
  Когда `BLOCKING_MONITOR_CRITICAL_SECTION` или `BLOCKING_MONITOR_EVENT` элемент используется в [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) структуры, `pBlockingObject` член структуры точек «ICorDebugValue» интерфейс, который представляет объект, который будет введено . Оно также реализовать [ICorDebugHeapValue3](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue3-interface.md) интерфейс.  
@@ -58,5 +58,6 @@ Typedef enum CorDebugBlockingReason
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Перечисления отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
 - [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)

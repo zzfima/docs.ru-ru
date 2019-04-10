@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Форматирование данных в Windows Forms элемента управления DataGridView
+title: Практическое руководство. Форматирование данных элемента управления DataGridView в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - data grids [Windows Forms], date values
 - cells [Windows Forms], text alignment
 ms.assetid: 8c33543c-9c08-4636-a65a-fdf714a529b7
-ms.openlocfilehash: 0699aec73c0a48efe88fc2901ef11c70d6f639d7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 62701edfdb3cf2729cb401ad12a12ee4f524287b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721285"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221304"
 ---
-# <a name="how-to-format-data-in-the-windows-forms-datagridview-control"></a>Практическое руководство. Форматирование данных в Windows Forms элемента управления DataGridView
+# <a name="how-to-format-data-in-the-windows-forms-datagridview-control"></a>Практическое руководство. Форматирование данных элемента управления DataGridView в Windows Forms
 Следующие процедуры демонстрируют основные элементы форматирования значений ячеек с помощью <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A> свойство <xref:System.Windows.Forms.DataGridView> управления и для определенных столбцов в элементе управления. Сведения о форматировании данных см. в разделе [как: Настройка форматирования данных в элементе управления DataGridView Windows Forms](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md).  
   
 ### <a name="to-format-currency-and-date-values"></a>Для форматирования валюты и значения дат  
@@ -68,11 +68,12 @@ ms.locfileid: "57721285"
  Для максимальной масштабируемости следует распределить <xref:System.Windows.Forms.DataGridViewCellStyle> объекты в нескольких строк, столбцов или ячейкам одинаковыми стилями, а не отдельно задавать свойства стилей для каждого элемента. Дополнительные сведения см. в разделе [масштабирование элемента управления DataGridView в Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewBand.DefaultCellStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>
 - [Базовое форматирование и оформление элемента управления DataGridView в Windows Forms](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
 - [Стили ячеек элемента управления DataGridView в Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)
 - [Форматирование данных в элементе управления DataGridView в Windows Forms](data-formatting-in-the-windows-forms-datagridview-control.md)
-- [Практическое руководство. Настройка форматирования данных в элементе управления DataGridView Windows Forms](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)
+- [Практическое руководство. Настройка форматирования данных элемента управления DataGridView в Windows Forms](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)
 - [Типы форматирования](../../../standard/base-types/formatting-types.md)

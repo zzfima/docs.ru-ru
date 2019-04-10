@@ -2,12 +2,12 @@
 title: Управление параллелизмом с помощью класса DependentTransaction
 ms.date: 03/30/2017
 ms.assetid: b85a97d8-8e02-4555-95df-34c8af095148
-ms.openlocfilehash: 1943c8c8c03bb9598dc0c456d52fa962288d240c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b06470ed76c15208f019874db8573d0ed4778d33
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664464"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216305"
 ---
 # <a name="managing-concurrency-with-dependenttransaction"></a>Управление параллелизмом с помощью класса DependentTransaction
 Объект <xref:System.Transactions.Transaction> создается с помощью метода <xref:System.Transactions.Transaction.DependentClone%2A>. Его единственная цель — гарантировать невозможность фиксации транзакции, пока некоторые фрагменты кода (например рабочий поток) еще выполняют операции над транзакцией. Когда операции в рамках клонированной транзакции завершены и готовы к фиксации, создателю транзакции может быть передано соответствующее уведомление с помощью метода <xref:System.Transactions.DependentTransaction.Complete%2A>. Это позволяет сохранить согласованность и правильность данных.  
@@ -17,9 +17,9 @@ ms.locfileid: "54664464"
 ## <a name="creating-a-dependent-clone"></a>Создание зависимого клона  
  Чтобы создать зависимую транзакцию, вызовите метод <xref:System.Transactions.Transaction.DependentClone%2A>, передав ему в качестве параметра перечисление <xref:System.Transactions.DependentCloneOption>. Этот параметр определяет поведение транзакции, когда метод `Commit` родительской транзакции вызывается до того, как зависимый клон указывает, что он готов к фиксации транзакции (путем вызова метода <xref:System.Transactions.DependentTransaction.Complete%2A>). Этот параметр может принимать следующие значения.  
   
--   <xref:System.Transactions.DependentCloneOption.BlockCommitUntilComplete>. Позволяет создать зависимую транзакцию, блокирующую процесс фиксации родительской транзакции, пока не истечет время ожидания родительской транзакции или пока все зависимые транзакции не вызовут метод <xref:System.Transactions.DependentTransaction.Complete%2A>, указывающий на их завершение. Этот параметр полезно использовать, когда фиксация транзакции должна быть выполнена только после завершения зависимых транзакций. Если родительская транзакция завершает свои операции раньше зависимой транзакции и вызывает метод <xref:System.Transactions.CommittableTransaction.Commit%2A>, процесс фиксации блокируется для выполнения над транзакцией дополнительных операций и создания новых зачислений; блокировка снимается, когда все зависимые транзакции вызовут метод <xref:System.Transactions.DependentTransaction.Complete%2A>. Когда все зависимые транзакции завершат свои операции и вызовут метод <xref:System.Transactions.DependentTransaction.Complete%2A>, начинается процесс фиксации транзакции.  
+-   <xref:System.Transactions.DependentCloneOption.BlockCommitUntilComplete> создать зависимую транзакцию, блокирующую процесс фиксации родительской транзакции до значения родительской транзакции времени ожидания или до <xref:System.Transactions.DependentTransaction.Complete%2A> вызывается для всех зависимых элементов, указывающий на их завершение. Этот параметр полезно использовать, когда фиксация транзакции должна быть выполнена только после завершения зависимых транзакций. Если родительская транзакция завершает свои операции раньше зависимой транзакции и вызывает метод <xref:System.Transactions.CommittableTransaction.Commit%2A>, процесс фиксации блокируется для выполнения над транзакцией дополнительных операций и создания новых зачислений; блокировка снимается, когда все зависимые транзакции вызовут метод <xref:System.Transactions.DependentTransaction.Complete%2A>. Когда все зависимые транзакции завершат свои операции и вызовут метод <xref:System.Transactions.DependentTransaction.Complete%2A>, начинается процесс фиксации транзакции.  
   
--   <xref:System.Transactions.DependentCloneOption.RollbackIfNotComplete>. Этот параметр, напротив, позволяет создать зависимую транзакцию, которая автоматически прерывается, если метод <xref:System.Transactions.CommittableTransaction.Commit%2A> родительской транзакции вызывается до метода <xref:System.Transactions.DependentTransaction.Complete%2A>. В этом случае все операции зависимой транзакции выполняются как один блок, который нельзя зафиксировать частично.  
+-   <xref:System.Transactions.DependentCloneOption.RollbackIfNotComplete>, с другой стороны, создает зависимую транзакцию, которая автоматически прерывается, если <xref:System.Transactions.CommittableTransaction.Commit%2A> называется родительской транзакции до <xref:System.Transactions.DependentTransaction.Complete%2A> вызывается. В этом случае все операции зависимой транзакции выполняются как один блок, который нельзя зафиксировать частично.  
   
  Метод <xref:System.Transactions.DependentTransaction.Complete%2A> должен быть вызван только один раз после завершения обработки зависимой транзакции приложением; в противном случае возникает исключение <xref:System.InvalidOperationException>. Попытка выполнить какие-либо дополнительные операции над транзакцией после вызова этого метода приведет к возникновению исключения.  
   
@@ -82,4 +82,5 @@ using(TransactionScope scope = new TransactionScope())
 -   Если рабочий поток порождает новый рабочий поток, следует создать новый зависимый клон из существующего зависимого клона и передать его новому потоку.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Transactions.DependentTransaction>

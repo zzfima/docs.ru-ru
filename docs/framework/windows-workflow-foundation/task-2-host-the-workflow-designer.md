@@ -2,12 +2,12 @@
 title: Задача 2. Размещение конструктора рабочих процессов
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-ms.openlocfilehash: e02134408b38e5c9aee9c59d86b1dfce032653d1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 4129d53f73c590535dcbee576cea91e7ad3ff37f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708643"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218710"
 ---
 # <a name="task-2-host-the-workflow-designer"></a>Задача 2. Размещение конструктора рабочих процессов
 В этом разделе описывается процедура по размещению экземпляра [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] в приложении Windows Presentation Foundation (WPF).  
@@ -122,6 +122,7 @@ ms.locfileid: "57708643"
 10. См. в разделе [задача 3: Создание элементов и сетки свойств](task-3-create-the-toolbox-and-propertygrid-panes.md) вы научитесь добавлять **элементов** и **PropertyGrid** поддержки в повторно размещенном рабочего процесса конструктор.  
   
 ## <a name="see-also"></a>См. также
-- [Отдельное размещение конструктора рабочих процессов](rehosting-the-workflow-designer.md)
-- [Упражнение 1. Создание нового приложения Windows Presentation Foundation](task-1-create-a-new-wpf-app.md)
-- [Задача 3. Создание элементов и сетки свойств](task-3-create-the-toolbox-and-propertygrid-panes.md)
+
+- [Повторное размещение конструктора рабочих процессов](rehosting-the-workflow-designer.md)
+- [Задача 1. Создание нового приложения Windows Presentation Foundation](task-1-create-a-new-wpf-app.md)
+- [Задача 3. Создание области элементов и сетки свойств](task-3-create-the-toolbox-and-propertygrid-panes.md)

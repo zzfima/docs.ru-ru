@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Предоставление доступа к WCF к сертификатам X.509
+title: Практическое руководство. Предоставление доступа к сертификатам X.509 для WCF
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - certificates [WCF], making X.509 certificates accessible to WCF
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
-ms.openlocfilehash: 7c90d5b0541edfc11145d9373c2554ee4595a7b1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 85f572f021f1613e0a2bb70cc090f58d2833182e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741890"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219919"
 ---
-# <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>Как выполнить Предоставление доступа к WCF к сертификатам X.509
+# <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>Практическое руководство. Предоставление доступа к сертификатам X.509 для WCF
 Чтобы сделать сертификат X.509, доступной в Windows Communication Foundation (WCF), код приложения необходимо указать имя хранилища сертификатов и расположение. В некоторых случаях идентификатор процесса должен иметь доступ к файлу, который содержит закрытый ключ, связанный с сертификатом X.509. Чтобы получить закрытый ключ, связанный с сертификатом X.509 в хранилище сертификатов, WCF должно иметь разрешение на это. По умолчанию доступ к закрытому ключу сертификата имеют только владелец и системная учетная запись.  
   
 ### <a name="to-make-x509-certificates-accessible-to-wcf"></a>Предоставление доступа к сертификатам X.509 для WCF  
@@ -71,6 +71,7 @@ ms.locfileid: "54741890"
         ```  
   
 ## <a name="see-also"></a>См. также
+
 - [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md)
-- [Практическое руководство. Извлечение отпечатка сертификата](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
+- [Практическое руководство. Получение отпечатка сертификата](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
 - [Работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

@@ -2,12 +2,12 @@
 title: Объекты DataView
 ms.date: 03/30/2017
 ms.assetid: 0fe5dfa2-c1cd-435f-90b6-b4dd2e3ef34b
-ms.openlocfilehash: bcf370e30c50bf5d992279c7abe02bfc6262ea40
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: aff4d6f648fa091130bfd9951f2a5001947b09a1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825879"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215915"
 ---
 # <a name="dataviews"></a>Объекты DataView
 <xref:System.Data.DataView> позволяет создавать различные представления данных, которые хранятся в <xref:System.Data.DataTable>. Эта возможность часто используется в приложениях связывания данных. С помощью **DataView**, можно представлять данные в таблице с различными порядками сортировки, и можно фильтровать данные по состоянию строки или на основе критерия фильтра.  
@@ -47,7 +47,7 @@ ms.locfileid: "55825879"
  [Веб-приложения ASP.NET](https://docs.microsoft.com/previous-versions/655cec97(v=vs.100))  
  Описывает обзоры и подробные пошаговые инструкции по созданию приложений ASP.NET, Web Forms и веб-служб.  
   
- [Приложения Windows](https://docs.microsoft.com/previous-versions/ms184421(v=vs.100))  
+ [Windows-приложения](https://docs.microsoft.com/previous-versions/ms184421(v=vs.100))  
  Содержит подробные сведения о работе с консольными приложениями и Windows Forms.  
   
  [Наборы данных, таблицы данных и объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
@@ -60,4 +60,5 @@ ms.locfileid: "55825879"
  Описывает архитектуру и компоненты ADO.NET, а также использование ADO.NET для доступа к существующим источникам данных и управления данными приложений.  
   
 ## <a name="see-also"></a>См. также
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

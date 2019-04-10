@@ -5,12 +5,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], about DataGridView control
 - data grids [Windows Forms], about data grids
 ms.assetid: 094498c3-a126-4a3f-83fe-f69e96c7717b
-ms.openlocfilehash: 9a1738e8be0471e24744a440fee10e5b1152ab10
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ca8268137f2a154c782388d0f13cdd02504cbb64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717639"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217423"
 ---
 # <a name="datagridview-control-technology-summary-windows-forms"></a>Технологическая сводка по элементам управления DataGridView (Windows Forms)
 В этом разделе содержится сводная информация о системе управления `DataGridView` и классах, поддерживающих ее использование.  
@@ -53,7 +53,7 @@ ms.locfileid: "57717639"
 |---------------------|-------------------------------------------------|  
 |Привязка данных|<xref:System.Windows.Forms.BindingSource>|  
 |Представление данных|<xref:System.Windows.Forms.DataGridView><br /><br /> <xref:System.Windows.Forms.DataGridViewCell> и производные классы<br /><br /> <xref:System.Windows.Forms.DataGridViewRow> и производные классы<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn> и производные классы<br /><br /> <xref:System.Windows.Forms.DataGridViewCellStyle>|  
-|<xref:System.Windows.Forms.DataGridView> Расширяемость|<xref:System.Windows.Forms.DataGridViewCell> и производные классы<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn> и производные классы<br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingCell><br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingControl>|  
+|<xref:System.Windows.Forms.DataGridView> Расширение среды|<xref:System.Windows.Forms.DataGridViewCell> и производные классы<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn> и производные классы<br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingCell><br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingControl>|  
   
 ## <a name="whats-new"></a>Новые возможности  
  <xref:System.Windows.Forms.DataGridView> Элемент управления предназначен для законченное решение для отображения табличных данных с помощью Windows Forms. Следует рассмотреть возможность использования <xref:System.Windows.Forms.DataGridView> управлять перед другими решениями, такими как <xref:System.Windows.Forms.DataGrid>, при создании нового приложения. Дополнительные сведения см. в разделе [Различия элементов управления DataGridView и DataGrid в Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
@@ -61,6 +61,7 @@ ms.locfileid: "57717639"
  <xref:System.Windows.Forms.DataGridView> Управления может работать в сочетании с <xref:System.Windows.Forms.BindingSource> компонента. Данный компонент разработан в качестве источника данных формы. Его можно управлять взаимодействием между <xref:System.Windows.Forms.DataGridView> управления и ее источник данных, независимо от того, данные типа источника.  
   
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения об элементе управления DataGridView](datagridview-control-overview-windows-forms.md)
 - [Архитектура элементов управления DataGridView](datagridview-control-architecture-windows-forms.md)
 - [Защита сведений о подключении](../../data/adonet/protecting-connection-information.md)

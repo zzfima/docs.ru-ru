@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 398b0ce0-5cc9-4518-978d-b8263aa21e5b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 31aa9f18729bf5d85e28d484f5fd1f5aac762470
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 459465064fe9db9f2f0aebb4153a3caea173af4e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54593541"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223645"
 ---
 # <a name="callbackoncollecteddelegate-mda"></a>callbackOnCollectedDelegate MDA
 Управляемый помощник по отладке (MDA) `callbackOnCollectedDelegate` активируется, если делегат маршалируется из управляемого в неуправляемый код как указатель функции, и обратный вызов помещается в данный указатель функции после сбора мусора делегата.  
   
-## <a name="symptoms"></a>Признаки  
+## <a name="symptoms"></a>Симптомы  
  Нарушение прав доступа происходит при попытке вызова управляемого кода посредством указателей функций, которые были получены из управляемых делегатов. Такие сбои, не будучи распространенными ошибками среды CLR, могут возникать из-за нарушения прав доступа в коде среды CLR.  
   
  Этот сбой не является постоянным; иногда вызов указателя функции выполняется успешно, а иногда происходит сбой. Этот сбой может возникать только в условиях большой нагрузки или при произвольном числе попыток.  
@@ -47,7 +47,7 @@ ms.locfileid: "54593541"
 ## <a name="output"></a>Вывод  
  MDA сообщает имя типа собранного делегата до попытки обратного вызова в его неуправляемом указателе функции.  
   
-## <a name="configuration"></a>Конфигурация  
+## <a name="configuration"></a>Параметр Configuration  
  В следующем примере показаны параметры конфигурации приложения. В нем устанавливается число преобразователей, которые сохраняются MDA, равное 1500. Значение `listSize` по умолчанию — 1000; минимальное значение — 50; максимальное значение — 2000.  
   
 ```xml  
@@ -112,7 +112,8 @@ public class Entry
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Диагностика ошибок посредством помощников по отладке управляемого кода](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Диагностика ошибок посредством управляемых помощников по отладке](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
 - [Маршалинг взаимодействия](../../../docs/framework/interop/interop-marshaling.md)
 - [gcUnmanagedToManaged](../../../docs/framework/debug-trace-profile/gcunmanagedtomanaged-mda.md)

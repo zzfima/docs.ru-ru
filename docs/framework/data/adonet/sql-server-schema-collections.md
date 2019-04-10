@@ -2,25 +2,25 @@
 title: Коллекции схемы SQL Server
 ms.date: 03/30/2017
 ms.assetid: c6403cc3-d78b-4f85-bab1-ada7a3446ec5
-ms.openlocfilehash: 2445ab2ffbe30b647e256e223f712300bcf19931
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 79bf9f1253b64863d3eabddff8c33b6ffab70f41
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635043"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224576"
 ---
 # <a name="sql-server-schema-collections"></a>Коллекции схемы SQL Server
 Поставщик данных Microsoft .NET Framework для SQL Server поддерживает дополнительные коллекции схем помимо общих коллекций. Коллекции схем незначительно меняются в зависимости от используемой версии SQL Server. Чтобы определить список поддерживаемых коллекций схем, вызовите **GetSchema** метода без аргументов или с именем коллекции схем «MetaDataCollections». При этом будет возвращена <xref:System.Data.DataTable> со списком поддерживаемых коллекций схем, число ограничений, которые каждая из них поддерживает, и число идентификационных частей, которые в них используются.  
   
-## <a name="databases"></a>Databases  
+## <a name="databases"></a>Базы данных  
   
 |ColumnName|DataType|Описание|  
 |----------------|--------------|-----------------|  
-|database_name|Строковое|Имя базы данных|  
+|database_name|String|Имя базы данных|  
 |DBID|Int16|Идентификатор базы данных|  
 |create_date|DateTime|Дата создания базы данных.|  
   
-## <a name="foreign-keys"></a>Foreign Keys  
+## <a name="foreign-keys"></a>Внешние ключи  
   
 |ColumnName|DataType|Описание|  
 |----------------|--------------|-----------------|  
@@ -34,16 +34,16 @@ ms.locfileid: "54635043"
 |IS_DEFERRABLE|String|Указывает, является ли ограничение допускающим задержку. Возвращает NO.|  
 |INITIALLY_DEFERRED|String|Указывает, является ли ограничение первоначально допускающим задержку. Возвращает NO.|  
   
-## <a name="indexes"></a>Indexes  
+## <a name="indexes"></a>Индексы  
   
 |ColumnName|DataType|Описание|  
 |----------------|--------------|-----------------|  
-|constraint_catalog|Строковое|Каталог, которому принадлежит индекс.|  
-|constraint_schema|Строковое|Схема, которая содержит индекс.|  
-|constraint_name|Строковое|Имя индекса.|  
-|table_catalog|Строковое|Имя таблицы, с которой связан индекс.|  
-|table_schema|Строковое|Схема, содержащая таблицу, с которой связан индекс.|  
-|table_name|Строковое|Имя таблицы.|  
+|constraint_catalog|String|Каталог, которому принадлежит индекс.|  
+|constraint_schema|String|Схема, которая содержит индекс.|  
+|constraint_name|String|Имя индекса.|  
+|table_catalog|String|Имя таблицы, с которой связан индекс.|  
+|table_schema|String|Схема, содержащая таблицу, с которой связан индекс.|  
+|table_name|String|Имя таблицы.|  
 |index_name|String|Имя индекса.|  
   
 ### <a name="indexes-sql-server-2008"></a>Indexes (SQL Server 2008)  
@@ -51,19 +51,19 @@ ms.locfileid: "54635043"
   
 |ColumnName|DataType|Описание|  
 |----------------|--------------|-----------------|  
-|type_desc|Строковое|Индекс имеет один из указанных ниже типов.<br /><br /> -HEAP<br />-КЛАСТЕРИЗОВАННЫЙ<br />-НЕКЛАСТЕРИЗОВАННЫЙ<br />-XML<br />-ПРОСТРАНСТВЕННЫХ|  
+|type_desc|String|Индекс имеет один из указанных ниже типов.<br /><br /> -HEAP<br />-КЛАСТЕРИЗОВАННЫЙ<br />-НЕКЛАСТЕРИЗОВАННЫЙ<br />-XML<br />-ПРОСТРАНСТВЕННЫХ|  
   
 ## <a name="indexcolumns"></a>IndexColumns  
   
 |ColumnName|DataType|Описание|  
 |----------------|--------------|-----------------|  
-|constraint_catalog|Строковое|Каталог, которому принадлежит индекс.|  
-|constraint_schema|Строковое|Схема, которая содержит индекс.|  
-|constraint_name|Строковое|Имя индекса.|  
-|table_catalog|Строковое|Имя таблицы, с которой связан индекс.|  
-|table_schema|Строковое|Схема, содержащая таблицу, с которой связан индекс.|  
-|table_name|Строковое|Имя таблицы.|  
-|column_name|Строковое|Имя таблицы, с которой связан индекс.|  
+|constraint_catalog|String|Каталог, которому принадлежит индекс.|  
+|constraint_schema|String|Схема, которая содержит индекс.|  
+|constraint_name|String|Имя индекса.|  
+|table_catalog|String|Имя таблицы, с которой связан индекс.|  
+|table_schema|String|Схема, содержащая таблицу, с которой связан индекс.|  
+|table_name|String|Имя таблицы.|  
+|column_name|String|Имя таблицы, с которой связан индекс.|  
 |ordinal_position|Int32|Порядковая позиция столбца.|  
 |KeyType|Byte|Тип объекта.|  
 |index_name|String|Имя индекса.|  
@@ -84,7 +84,7 @@ ms.locfileid: "54635043"
   
 ## <a name="procedure-parameters"></a>ProcedureParameters  
   
-|ColumnName|DataType|Описание:|  
+|ColumnName|DataType|Описание|  
 |----------------|--------------|-----------------|  
 |SPECIFIC_CATALOG|String|Имя каталога процедуры, для которой это является параметром.|  
 |SPECIFIC_SCHEMA|String|Схема, содержащая процедуру, частью которой является этот параметр.|  
@@ -121,12 +121,12 @@ ms.locfileid: "54635043"
   
 ## <a name="columns"></a>Столбцы  
   
-|ColumnName|DataType|Описание:|  
+|ColumnName|DataType|Описание|  
 |----------------|--------------|-----------------|  
 |TABLE_CATALOG|String|Каталог таблицы.|  
 |TABLE_SCHEMA|String|Схема, которая содержит таблицу.|  
 |TABLE_NAME|String|Имя таблицы.|  
-|COLUMN_NAME|Строковое|Имя столбца.|  
+|COLUMN_NAME|String|Имя столбца.|  
 |ORDINAL_POSITION|Int32|Идентификационный номер столбца.|  
 |COLUMN_DEFAULT|String|Значение столбца по умолчанию.|  
 |IS_NULLABLE|String|Указывает, может ли столбец содержать значение NULL. Если для столбца допустимо значение NULL, этот столбец возвращает значение YES. Иначе возвращается значение NO.|  
@@ -147,21 +147,21 @@ ms.locfileid: "54635043"
   
 |ColumnName|DataType|Описание|  
 |----------------|--------------|-----------------|  
-|IS_FILESTREAM|Строковое|YES, если для столбца установлен атрибут FILESTREAM.<br /><br /> NO, если для столбца не установлен атрибут FILESTREAM.|  
-|IS_SPARSE|Строковое|YES, если столбец является разреженным.<br /><br /> NO, если столбец не является разреженным.|  
-|IS_COLUMN_SET|Строковое|YES, если столбец является набором столбцов.<br /><br /> NO, если столбец не является набором столбцов.|  
+|IS_FILESTREAM|String|YES, если для столбца установлен атрибут FILESTREAM.<br /><br /> NO, если для столбца не установлен атрибут FILESTREAM.|  
+|IS_SPARSE|String|YES, если столбец является разреженным.<br /><br /> NO, если столбец не является разреженным.|  
+|IS_COLUMN_SET|String|YES, если столбец является набором столбцов.<br /><br /> NO, если столбец не является набором столбцов.|  
   
 ### <a name="allcolumns-sql-server-2008"></a>AllColumns (SQL Server 2008)  
  Начиная с .NET Framework 3.5 с пакетом обновления 1 (SP1) и SQL Server 2008, для поддержки разреженных столбцов была добавлена коллекция схем AllColumns. Коллекция схем AllColumns не поддерживается в предыдущих версиях .NET Framework и SQL Server.  
   
  Для коллекции схем AllColumns установлены те же ограничения и результирующая схема DataTable, что и для коллекции схем Columns. Единственное отличие заключается в том, что коллекция схем AllColumns включает столбцы, представляющие наборы столбцов, которые не входят в коллекцию схем Columns. Эти столбцы описаны в приведенной ниже таблице.  
   
-|ColumnName|DataType|Описание:|  
+|ColumnName|DataType|Описание|  
 |----------------|--------------|-----------------|  
 |TABLE_CATALOG|String|Каталог таблицы.|  
 |TABLE_SCHEMA|String|Схема, которая содержит таблицу.|  
 |TABLE_NAME|String|Имя таблицы.|  
-|COLUMN_NAME|Строковое|Имя столбца.|  
+|COLUMN_NAME|String|Имя столбца.|  
 |ORDINAL_POSITION|Int32|Идентификационный номер столбца.|  
 |COLUMN_DEFAULT|String|Значение столбца по умолчанию.|  
 |IS_NULLABLE|String|Указывает, может ли столбец содержать значение NULL. Если для столбца допустимо значение NULL, этот столбец возвращает значение YES. В противном случае возвращается значение NO.|  
@@ -176,19 +176,19 @@ ms.locfileid: "54635043"
 |CHARACTER_SET_SCHEMA|String|Всегда возвращает значение NULL.|  
 |CHARACTER_SET_NAME|String|Возвращает уникальное имя для кодировки, если столбец содержит символьные данные или текстовые данные. В противном случае возвращается значение NULL.|  
 |COLLATION_CATALOG|String|Возвращает значение "master", т.е. имя базы данных, в которой определен параметр сортировки, если столбец имеет символьный тип данных или текстовый тип данных. В противном случае этот столбец содержит значение NULL.|  
-|IS_FILESTREAM|Строковое|YES, если для столбца установлен атрибут FILESTREAM.<br /><br /> NO, если для столбца не установлен атрибут FILESTREAM.|  
-|IS_SPARSE|Строковое|YES, если столбец является разреженным.<br /><br /> NO, если столбец не является разреженным.|  
-|IS_COLUMN_SET|Строковое|YES, если столбец является набором столбцов.<br /><br /> NO, если столбец не является набором столбцов.|  
+|IS_FILESTREAM|String|YES, если для столбца установлен атрибут FILESTREAM.<br /><br /> NO, если для столбца не установлен атрибут FILESTREAM.|  
+|IS_SPARSE|String|YES, если столбец является разреженным.<br /><br /> NO, если столбец не является разреженным.|  
+|IS_COLUMN_SET|String|YES, если столбец является набором столбцов.<br /><br /> NO, если столбец не является набором столбцов.|  
   
 ### <a name="columnsetcolumns-sql-server-2008"></a>ColumnSetColumns (SQL Server 2008)  
  Начиная с .NET Framework 3.5 с пакетом обновления 1 (SP1) и SQL Server 2008, для поддержки разреженных столбцов была добавлена коллекция схем ColumnSetColumns. Коллекция схем ColumnSetColumns не поддерживается в предыдущих версиях .NET Framework и SQL Server. Коллекция схем ColumnSetColumns возвращает схему для всех столбцов в наборе столбцов. Эти столбцы описаны в приведенной ниже таблице.  
   
-|ColumnName|DataType|Описание:|  
+|ColumnName|DataType|Описание|  
 |----------------|--------------|-----------------|  
 |TABLE_CATALOG|String|Каталог таблицы.|  
 |TABLE_SCHEMA|String|Схема, которая содержит таблицу.|  
 |TABLE_NAME|String|Имя таблицы.|  
-|COLUMN_NAME|Строковое|Имя столбца.|  
+|COLUMN_NAME|String|Имя столбца.|  
 |ORDINAL_POSITION|Int32|Идентификационный номер столбца.|  
 |COLUMN_DEFAULT|String|Значение столбца по умолчанию.|  
 |IS_NULLABLE|String|Указывает, может ли столбец содержать значение NULL. Если для столбца допустимо значение NULL, этот столбец возвращает значение YES. В противном случае возвращается значение NO.|  
@@ -203,9 +203,9 @@ ms.locfileid: "54635043"
 |CHARACTER_SET_SCHEMA|String|Всегда возвращает значение NULL.|  
 |CHARACTER_SET_NAME|String|Возвращает уникальное имя для кодировки, если столбец содержит символьные данные или текстовые данные. В противном случае возвращается значение NULL.|  
 |COLLATION_CATALOG|String|Возвращает значение "master", т.е. имя базы данных, в которой определен параметр сортировки, если столбец имеет символьный тип данных или текстовый тип данных. В противном случае этот столбец содержит значение NULL.|  
-|IS_FILESTREAM|Строковое|YES, если для столбца установлен атрибут FILESTREAM.<br /><br /> NO, если для столбца не установлен атрибут FILESTREAM.|  
-|IS_SPARSE|Строковое|YES, если столбец является разреженным.<br /><br /> NO, если столбец не является разреженным.|  
-|IS_COLUMN_SET|Строковое|YES, если столбец является набором столбцов.<br /><br /> NO, если столбец не является набором столбцов.|  
+|IS_FILESTREAM|String|YES, если для столбца установлен атрибут FILESTREAM.<br /><br /> NO, если для столбца не установлен атрибут FILESTREAM.|  
+|IS_SPARSE|String|YES, если столбец является разреженным.<br /><br /> NO, если столбец не является разреженным.|  
+|IS_COLUMN_SET|String|YES, если столбец является набором столбцов.<br /><br /> NO, если столбец не является набором столбцов.|  
   
 ## <a name="users"></a>Users  
   
@@ -228,7 +228,7 @@ ms.locfileid: "54635043"
   
 ## <a name="viewcolumns"></a>ViewColumns  
   
-|ColumnName|DataType|Описание:|  
+|ColumnName|DataType|Описание|  
 |----------------|--------------|-----------------|  
 |VIEW_CATALOG|String|Каталог представления.|  
 |VIEW_SCHEMA|String|Схема, которая содержит представление.|  
@@ -236,18 +236,18 @@ ms.locfileid: "54635043"
 |TABLE_CATALOG|String|Каталог таблицы, которая связана с этим представлением.|  
 |TABLE_SCHEMA|String|Schema, который содержит таблицу, связанную с этим представлением.|  
 |TABLE_NAME|String|Имя таблицы, которая связана с представлением. Базовая таблица.|  
-|COLUMN_NAME|Строковое|Имя столбца.|  
+|COLUMN_NAME|String|Имя столбца.|  
   
 ## <a name="userdefinedtypes"></a>UserDefinedTypes  
   
 |ColumnName|DataType|Описание|  
 |----------------|--------------|-----------------|  
-|assembly_name|Строковое|Имя файла для сборки.|  
+|assembly_name|String|Имя файла для сборки.|  
 |udt_name|String|Имя класса для сборки.|  
-|version_major|Объект|Основной номер версии.|  
-|version_minor|Объект|Дополнительный номер версии.|  
-|version_build|Объект|Номер сборки.|  
-|version_revision|Объект|Номер редакции.|  
+|version_major|Object|Основной номер версии.|  
+|version_minor|Object|Дополнительный номер версии.|  
+|version_build|Object|Номер сборки.|  
+|version_revision|Object|Номер редакции.|  
 |culture_info|Object|Сведения о языке и региональных параметрах, которые связаны с этим определяемым пользователем типом.|  
 |public_key|Object|Открытый ключ, используемый в этой сборке.|  
 |is_fixed_length|Boolean|Указывает, является ли длина данных этого типа всегда равной значению max_length.|  
@@ -256,5 +256,6 @@ ms.locfileid: "54635043"
 |Permission_set_desc|String|Удобное в использовании имя набора разрешений и (или) уровня безопасности для сборки.|  
   
 ## <a name="see-also"></a>См. также
+
 - [Извлечение сведений о схеме базы данных](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

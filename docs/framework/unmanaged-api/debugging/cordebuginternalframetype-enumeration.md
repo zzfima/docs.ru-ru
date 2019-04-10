@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6cf4c0eb3f9bb36cb45aa93c576b4efddaa93482
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 05184ceb3b32eb003951fff5cfdfbfb813992552
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736537"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216058"
 ---
 # <a name="cordebuginternalframetype-enumeration"></a>Перечисление CorDebugInternalFrameType
 Указывает тип кадра стека. Это перечисление используется с [ICorDebugInternalFrame::GetFrameType](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md) метод.  
@@ -47,7 +47,7 @@ typedef enum CorDebugInternalFrameType {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |`STUBFRAME_NONE`|Значение Null. `ICorDebugInternalFrame::GetFrameType` Метод никогда не возвращает это значение.|  
 |`STUBFRAME_M2U`|Кадр управляемого к неуправляемому заглушки.|  
@@ -71,4 +71,5 @@ typedef enum CorDebugInternalFrameType {
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Перечисления отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

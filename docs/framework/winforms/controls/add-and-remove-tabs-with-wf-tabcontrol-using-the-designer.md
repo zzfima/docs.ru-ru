@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Добавление и удаление вкладок с помощью элемента управления TabControl Windows Forms с помощью конструктора
+title: Практическое руководство. Добавление и удаление вкладок с использованием элемента управления TabControl в формах Windows Forms с помощью конструктора
 ms.date: 03/30/2017
 helpviewer_keywords:
 - tabs [Windows Forms], removing from pages
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - tabs [Windows Forms], adding to pages
 - tab pages
 ms.assetid: 480633db-413a-45d2-9c8f-0427cc13adbe
-ms.openlocfilehash: f58121455c346b2b615a5cf6e617e916618b4d6e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 23fe9fa2b8405a6ebe66e8f0cee1d81d45f2395b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720323"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219763"
 ---
-# <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol-using-the-designer"></a>Практическое руководство. Добавление и удаление вкладок с помощью элемента управления TabControl Windows Forms с помощью конструктора
+# <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol-using-the-designer"></a>Практическое руководство. Добавление и удаление вкладок с использованием элемента управления TabControl в формах Windows Forms с помощью конструктора
 При размещении <xref:System.Windows.Forms.TabControl> элемента управления в форме, он содержит две вкладки по умолчанию. Можно добавить или удалить вкладки с помощью конструктора.  
   
  Следующая процедура требуется **приложения Windows** проекта с формой, содержащей <xref:System.Windows.Forms.TabControl> элемента управления. Сведения о настройке такого проекта см. в разделе [как: Создайте проект приложения Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project) и [как: Добавление элементов управления в Windows Forms](how-to-add-controls-to-windows-forms.md).  
@@ -27,11 +27,12 @@ ms.locfileid: "57720323"
   
 -   В смарт-теге элемента управления, нажмите кнопку **добавить вкладку** или **удалить вкладку**  
   
-     - или -  
+     -или-  
   
      В **свойства** окно, нажмите кнопку **кнопку с многоточием** кнопки (![экрана VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) рядом с полем <xref:System.Windows.Forms.TabControl.TabPages%2A> свойства, чтобы открыть **редактор коллекции TabPage**. Нажмите кнопку **добавить** или **удалить** кнопки.  
   
 ## <a name="see-also"></a>См. также
+
 - [Элемент управления TabControl](tabcontrol-control-windows-forms.md)
 - [Общие сведения об элементе управления TabControl](tabcontrol-control-overview-windows-forms.md)
 - [Практическое руководство. Добавление элемента управления на вкладку](how-to-add-a-control-to-a-tab-page.md)

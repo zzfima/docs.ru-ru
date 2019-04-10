@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 55f1c0da651d786dfdcfda6a54ee1b29db35f3d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: faf1be65d308b223490f3ae67eed3d8a2b1688b9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587743"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223073"
 ---
 # <a name="corsegment-structure"></a>Структура COR_SEGMENT
 Содержит сведения об области памяти в управляемой куче.  
@@ -39,7 +39,7 @@ typedef struct _COR_SEGMENT {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |`start`|Начальный адрес области памяти.|  
 |`end`|Конечный адрес области памяти.|  
@@ -47,7 +47,7 @@ typedef struct _COR_SEGMENT {
 |`heap`|Номер кучи, в которой находится область памяти. Дополнительные сведения см. в разделе "Примечания".|  
   
 ## <a name="remarks"></a>Примечания  
- Структура `COR_SEGMENTS` представляет область памяти в управляемой куче.  Объекты `COR_SEGMENTS` являются членами объекта коллекции [ICorDebugHeapRegionEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md), которая заполняется путем вызова метода [ICorDebugProcess5::EnumerateHeapRegions](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheapregions-method.md).  
+ Структура `COR_SEGMENTS` представляет область памяти в управляемой куче.  `COR_SEGMENTS` объекты являются членами [ICorDebugHeapRegionEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md) объекта коллекции, который заполняется путем вызова [ICorDebugProcess5::EnumerateHeapRegions](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheapregions-method.md) метод.  
   
  В поле `heap` указан номер обработчика, который соответствует определенной куче. Для сборщиков мусора на рабочей станции это значение всегда равно нулю, ведь на рабочих станциях только одна куча сборки мусора. Для сборщиков мусора на сервере это значение соответствует обработчику, к которому привязана куча. Куч сборки мусора может быть больше или меньше фактического числа обработчиков в связи с особенностями реализации сборщика мусора.  
   
@@ -61,5 +61,6 @@ typedef struct _COR_SEGMENT {
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Структуры отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
 - [Отладка](../../../../docs/framework/unmanaged-api/debugging/index.md)

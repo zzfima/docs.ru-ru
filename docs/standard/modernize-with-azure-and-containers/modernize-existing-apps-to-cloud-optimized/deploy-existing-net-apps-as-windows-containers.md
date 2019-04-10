@@ -4,12 +4,12 @@ description: Модернизация существующих приложен�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/29/2018
-ms.openlocfilehash: 646acc6fd14c1ff85593dbf6074f0d03d86f04bd
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9d84924317e7c6e3dd4386f851ee902e2b5a7caf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143763"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216669"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Развертывание существующих приложений .NET в качестве контейнеров Windows
 
@@ -96,14 +96,14 @@ ms.locfileid: "53143763"
 > | **Тег** | **Система и версия** |
 > |---|---|
 > | **microsoft/dotnet-framework:4.x-windowsservercore** | .NET framework 4.x в Windows Server Core |
-> | **microsoft/aspnet:4.x-windowsservercore** | .NET framework 4.x дополнительной настройки ASP.NET на Windows Server Core |
+> | **Microsoft/aspnet:4.x-windowsservercore** | .NET framework 4.x дополнительной настройки ASP.NET на Windows Server Core |
 
 Для .NET Core (для нескольких платформ для Linux и Windows) теги будет выглядеть следующим образом:
 
 > | **Тег** | **Система и версия**
 > |---|---|
-> | **microsoft/dotnet:2.0.0-runtime** | .NET core 2.0 доступны только для среды выполнения на платформе Linux |
-> | **microsoft/dotnet:2.0.0-runtime-nanoserver** | На сервере Nano Server Windows только для среды выполнения .NET core 2.0 |
+> | **Microsoft/DotNet:2.0.0-Runtime** | .NET core 2.0 доступны только для среды выполнения на платформе Linux |
+> | **Microsoft/DotNet:2.0.0-Runtime-nanoserver** | На сервере Nano Server Windows только для среды выполнения .NET core 2.0 |
 
 ### <a name="multi-arch-images"></a>Мультиархитектурные образы
 
@@ -135,7 +135,6 @@ ms.locfileid: "53143763"
 
     [https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf](https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf)
 
-
 ## <a name="the-container-ecosystem-in-azure"></a>Экосистема контейнеров в Azure
 
 В предыдущих разделах он были были изложены преимущества контейнеров Docker, а также сведения о образов контейнеров для конкретной для приложений .NET. Все, что к общим сведениям, — это основа для разработки или упаковать приложение в контейнер.
@@ -154,7 +153,7 @@ ms.locfileid: "53143763"
 
 Продукты Azure вспомогательные контейнеров, которые находятся в то же время, более расположен в PaaS (платформа как услуга) уровне предназначены для:
 
--   **служба приложений Azure**;
+-   **Служба приложений Azure**
 -   **Служба Azure Kubernetes (AKS и ACS)**
 -   **Azure Service Fabric** 
 -   **Пакетная служба Azure** 

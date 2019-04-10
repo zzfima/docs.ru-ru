@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], equivalence
 ms.assetid: f06f3c7e-c235-4ec1-b200-68142edf1ed1
-ms.openlocfilehash: ca74650428c4536cd21694a49b74370b07c77667
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a526a58ef801e91775756e6a84a94a066d32d284
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708939"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214940"
 ---
 # <a name="data-contract-equivalence"></a>Эквивалентность контрактов данных
 Чтобы клиент мог успешно отправлять данные определенного типа службе или чтобы служба могла успешно отправлять данные клиенту, отправляемый тип не обязательно должен существовать на принимающей стороне. Единственное требование заключается в эквивалентности контрактов данных обоих типов. (Иногда Строгая эквивалентность не является обязательным, как описано в [управление версиями контракта данных](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).)  
@@ -61,6 +61,7 @@ ms.locfileid: "54708939"
  Если при передаче параметров и возвращаемых значений между приложениями ожидаемый тип представляет собой интерфейс, это эквивалентно тому, что ожидаемый тип принадлежит к типу <xref:System.Object>. Поскольку все типы в конечном итоге наследуются от <xref:System.Object>, все контракты данных в конечном итоге наследуются от контракта данных для <xref:System.Object>. Таким образом, когда ожидается интерфейс, передать можно любой контракт данных. Необходимы дополнительные действия, чтобы успешно работать с интерфейсами; Дополнительные сведения см. в разделе [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - [Порядок членов данных](../../../../docs/framework/wcf/feature-details/data-member-order.md)

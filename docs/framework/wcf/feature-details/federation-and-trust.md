@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - federation [WCF], and trust
 ms.assetid: 4bdec4f2-f8a2-4512-bdcf-14ef54b5877a
-ms.openlocfilehash: 1f0872c9aea11a54860fe3075d2756691590e0d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4e1529db6cc52b6b8cc8881d2b2a35a754b4b311
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532426"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225343"
 ---
 # <a name="federation-and-trust"></a>Федерация и доверие
 В этом разделе рассматриваются различные аспекты, относящиеся к федеративным приложениям, границы доверия и конфигурации и использования маркеров, выданных в Windows Communication Foundation (WCF).  
@@ -38,6 +38,7 @@ ms.locfileid: "54532426"
  Сериализация выданного маркера в сообщении, передаваемом клиентом в федеративную конечную точку, определяется заданием свойства <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.InclusionMode%2A> класса <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters>. Этому свойству можно присвоить одно из значений перечисления <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode>, но в большинстве федеративных сценариев это бесполезно. Значения `SecurityTokenInclusionMode.Never` и `SecurityTokenInclusionMode.AlwaysToInitiator` приводят к тому, что клиент отправляет проверяющей стороне ссылку на маркер, выданный службой маркеров безопасности. Если у проверяющей стороны нет копии выданного токена, проверка подлинности завершится сбоем, так как ссылка на токен не может быть разрешена. Обрабатывает WCF `SecurityTokenInclusionMode.Once` как эквивалент `SecurityTokenInclusionMode.AlwaysToRecipient`.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode>
 - [Практическое руководство. Создание федеративного клиента](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
 - [Практическое руководство. Настройка учетных данных службы федерации](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)

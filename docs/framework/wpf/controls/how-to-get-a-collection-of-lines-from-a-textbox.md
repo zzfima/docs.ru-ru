@@ -5,12 +5,12 @@ helpviewer_keywords:
 - lines [WPF], getting collection of
 - TextBox control [WPF], getting collection of lines
 ms.assetid: a12f529d-b926-47f6-92bf-cad5f17b532a
-ms.openlocfilehash: 1aa73e55a3fdfd658c6a337b598dff96244ace40
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b7b2f1c2e071388635fb50b1e3573fd7f44334dd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354197"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224641"
 ---
 # <a name="how-to-get-a-collection-of-lines-from-a-textbox"></a>Практическое руководство. Получение коллекции строк из элемента TextBox
 В этом примере показано, как получить коллекцию строк текста из <xref:System.Windows.Controls.TextBox>.  
@@ -21,5 +21,6 @@ ms.locfileid: "57354197"
  [!code-csharp[TextBox_MiscCode#_TextBox_GetLines](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml.cs#_textbox_getlines)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения о TextBox](textbox-overview.md)
 - [Общие сведения о RichTextBox](richtextbox-overview.md)

@@ -2,12 +2,12 @@
 title: Инструкции по настройке виртуальных каталогов
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
-ms.openlocfilehash: 0f32fd6d65db529ba1015dedd98f99efd7f408c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 7999a040dc14d75a34b75f320982dd3118eae670
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588116"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225590"
 ---
 # <a name="virtual-directory-setup-instructions"></a>Инструкции по настройке виртуальных каталогов
 Примеры Windows Communication Foundation (WCF) предназначены для совместного использования общего виртуального каталога с именем servicemodelsamples, сопоставленный с папкой %SystemDrive%\inetpub\wwwroot\servicemodelsamples.  
@@ -59,7 +59,7 @@ ms.locfileid: "54588116"
   
 7.  По умолчанию устанавливаются следующие флажки:  
   
-    -   **Read**  
+    -   **Чтение**  
   
     -   **Запуск скриптов (например, ASP)**  
   
@@ -84,7 +84,7 @@ ms.locfileid: "54588116"
   
 2.  По умолчанию устанавливаются следующие флажки:  
   
-    -   **Read**  
+    -   **Чтение**  
   
     -   **Запись в журнал**  
   
@@ -191,4 +191,5 @@ ms.locfileid: "54588116"
     3.  В **группы** столбец, убедитесь, что значение **ASPNET** — «Пользователи».  
   
 ## <a name="see-also"></a>См. также
+
 - [Инструкции по размещению в службах IIS](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)

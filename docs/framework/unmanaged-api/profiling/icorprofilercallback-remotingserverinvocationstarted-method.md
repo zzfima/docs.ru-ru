@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 091851a5729d496fb030f5d09402f524ca712ae6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83c9a4aa165057f1345de2c6f5bda80e4317d06c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556552"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221812"
 ---
 # <a name="icorprofilercallbackremotingserverinvocationstarted-method"></a>Метод ICorProfilerCallback::RemotingServerInvocationStarted
 Уведомляет профилировщика о том, что процесс вызывает метод в ответ на запрос вызова удаленного метода.  
@@ -43,4 +43,5 @@ HRESULT RemotingServerInvocationStarted();
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

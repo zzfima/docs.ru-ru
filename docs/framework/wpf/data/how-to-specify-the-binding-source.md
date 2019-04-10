@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 55d47757-2648-4a52-987f-b767953f168c
-ms.openlocfilehash: 105924fec2956f2f74a2a574ee62f71a37df9366
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8c866502300c50e00f1393b9e3fb64099f027c43
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356725"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222306"
 ---
 # <a name="how-to-specify-the-binding-source"></a>Практическое руководство. Указание источника привязки
 В привязке данных объект источника привязки означает объект, из которого вы получаете данные. В этом разделе описываются различные способы указания источника привязки.  
@@ -37,16 +37,17 @@ ms.locfileid: "57356725"
   
  Кроме того, если вы хотите указать источник в отдельных привязках явным образом, доступны следующие варианты. Они имеют приоритет над наследуемым контекстом данных.  
   
-|Свойство.|Описание|  
+|Свойство|Описание|  
 |--------------|-----------------|  
 |<xref:System.Windows.Data.Binding.Source%2A>|Это свойство используется для задания экземпляра объекта в качестве источника. Если не требуется функциональность установки области видимости, в которой несколько свойств наследуют тот же контекст данных, можно использовать <xref:System.Windows.Data.Binding.Source%2A> вместо свойства `DataContext` свойство. Дополнительные сведения см. в разделе <xref:System.Windows.Data.Binding.Source%2A>.|  
 |<xref:System.Windows.Data.Binding.RelativeSource%2A>|Это полезно, когда требуется указать источник относительно того, где расположен целевой объект привязки. Это свойство можно использовать в некоторых типичных сценариях, например, если вы хотите выполнить привязку одного свойства элемента к другому свойству этого же элемента или при определении привязки в стиле или шаблоне. Дополнительные сведения см. в разделе <xref:System.Windows.Data.Binding.RelativeSource%2A>.|  
 |<xref:System.Windows.Data.Binding.ElementName%2A>|Укажите строку, представляющую элемент, к которому требуется привязать. Это полезно, когда требуется выполнить привязку к свойству другого элемента в вашем приложении. Например, если вы хотите использовать <xref:System.Windows.Controls.Slider> для управления высотой другого элемента управления в приложении, или если вы хотите выполнить привязку <xref:System.Windows.Controls.ContentControl.Content%2A> элемента управления должно <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A> свойство вашей <xref:System.Windows.Controls.ListBox> элемента управления. Дополнительные сведения см. в разделе <xref:System.Windows.Data.Binding.ElementName%2A>.|  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.FrameworkElement.DataContext%2A?displayProperty=nameWithType>
 - <xref:System.Windows.FrameworkContentElement.DataContext%2A?displayProperty=nameWithType>
 - [Наследование значения свойства](../advanced/property-value-inheritance.md)
 - [Общие сведения о привязке данных](data-binding-overview.md)
 - [Общие сведения об объявлении привязок](binding-declarations-overview.md)
-- [Разделы практического руководства](data-binding-how-to-topics.md)
+- [Практические руководства](data-binding-how-to-topics.md)

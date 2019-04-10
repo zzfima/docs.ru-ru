@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data collections [WPF], creating views of
 - data binding [WPF], creating views of data collections
 ms.assetid: b641e96c-c2f6-42ea-9c5d-bac81176ad65
-ms.openlocfilehash: 28a21aae7f8a08efebfd16bacd2a2d82b04de0c1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 746331e69ee1e5eee795a0e35202f4889b72c53f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360073"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222111"
 ---
 # <a name="how-to-get-the-default-view-of-a-data-collection"></a>Практическое руководство. Получение представления по умолчанию для коллекции данных
 Представления позволяют просматривать по-разному в зависимости от сортировки, фильтрации и группировки условий же коллекцию данных. Каждая коллекция имеет одно общее представление по умолчанию, который используется в качестве фактического источника привязки, если привязка задает коллекцию в качестве источника. В этом примере показано, как получение представления по умолчанию для коллекции.  
@@ -33,5 +33,6 @@ ms.locfileid: "57360073"
  Примеры функциональных возможностях, предоставляемых представлением коллекции, см. в разделе [сортировка данных в представлении](how-to-sort-data-in-a-view.md), [данные фильтра в представлении](how-to-filter-data-in-a-view.md), и [перемещение по объектам в Data CollectionView](how-to-navigate-through-the-objects-in-a-data-collectionview.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Сортировка и группировка данных с помощью представления в XAML](how-to-sort-and-group-data-using-a-view-in-xaml.md)
-- [Разделы практического руководства](data-binding-how-to-topics.md)
+- [Практические руководства](data-binding-how-to-topics.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ContextMenuOpening properties [WPF]
 ms.assetid: 789652fb-1951-4217-934a-7843e355adf4
-ms.openlocfilehash: 077a28f345b886fd9ec183b5828c0535ce688cb4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: a6ac0158c4fb9d766fd56ee50d0b1b6cc91e5de3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364844"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219633"
 ---
 # <a name="how-to-handle-the-contextmenuopening-event"></a>Практическое руководство. Обработка события ContextMenuOpening
 <xref:System.Windows.FrameworkElement.ContextMenuOpening> Событие может быть обработано в приложении, либо для корректировки существующего контекстного меню перед для отображения или подавления меню, которое будет отображаться в противном случае, задав <xref:System.Windows.RoutedEventArgs.Handled%2A> свойства `true` в данных события. Типичной причиной для параметра <xref:System.Windows.RoutedEventArgs.Handled%2A> для `true` событий данных — замена меню полностью новый <xref:System.Windows.Controls.ContextMenu> объекта, который иногда требует отмены операции и запуска нового открытия. Если создать обработчики для <xref:System.Windows.FrameworkElement.ContextMenuOpening> событий, следует иметь в виду проблемы синхронизации между <xref:System.Windows.Controls.ContextMenu> control и служба, которая отвечает за открытие и позиционирование контекстных меню для элементов управления в целом. В этом разделе показаны некоторые методы кода для различных скриптов открытия контекстного меню и показан случай, где ошибки синхронизации вступает в действие.  
@@ -56,7 +56,8 @@ ms.locfileid: "57364844"
  [!code-csharp[ContextMenuOpeningHandlers#ReplaceReopen](~/samples/snippets/csharp/VS_Snippets_Wpf/ContextMenuOpeningHandlers/CSharp/Pane1.xaml.cs#replacereopen)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Controls.ContextMenu>
 - <xref:System.Windows.FrameworkElement.ContextMenu%2A?displayProperty=nameWithType>
 - [Общие сведения о базовых элементах](base-elements-overview.md)
-- [Общие сведения об элементе ContextMenu](../controls/contextmenu-overview.md)
+- [Общие сведения о ContextMenu](../controls/contextmenu-overview.md)

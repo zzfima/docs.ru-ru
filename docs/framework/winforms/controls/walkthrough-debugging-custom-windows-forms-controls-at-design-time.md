@@ -15,12 +15,12 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], debugging
 - design-time debugging
 ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
-ms.openlocfilehash: 9bd3f822e5a1f8572ebb7f5991abccde904150b8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: b5c54acc89317104eddc3b1f5b350edcb263d208
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717834"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213693"
 ---
 # <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>Пошаговое руководство. Отладка пользовательских элементов управления Windows Forms во время разработки
 При создании пользовательского элемента управления, вам будет часто понадобиться для отладки его поведение во время разработки. Это особенно верно в случае, если вы создаете пользовательский конструктор для элемента управления. Дополнительные сведения см. в разделе [Пошаговое руководство: Создание Windows Forms элемент управления, который использует преимущества средств разработки Visual Studio](creating-a-wf-control-design-time-features.md).  
@@ -173,6 +173,7 @@ ms.locfileid: "57717834"
 -   Можно написать пользовательский конструктор для элемента управления. Это дает полный контроль над разработкой с помощью расширяемой инфраструктуры конструкторов в Visual Studio. Дополнительные сведения см. в разделе [Пошаговое руководство: Создание Windows Forms элемент управления, который использует преимущества средств разработки Visual Studio](creating-a-wf-control-design-time-features.md).  
   
 ## <a name="see-also"></a>См. также
-- [Пошаговое руководство: Создание элемента управления Windows Forms, используются преимущества функций Visual Studio во время разработки](creating-a-wf-control-design-time-features.md)
+
+- [Пошаговое руководство. Создание элемента управления Windows Forms, в котором используются преимущества функций Visual Studio, применяемых во время разработки](creating-a-wf-control-design-time-features.md)
 - [Практическое руководство. Доступа к службам времени разработки](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171822(v=vs.120))
 - [Практическое руководство. Поддержка разработки доступа в Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171827(v=vs.120))

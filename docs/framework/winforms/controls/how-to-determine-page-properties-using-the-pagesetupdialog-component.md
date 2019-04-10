@@ -10,12 +10,12 @@ helpviewer_keywords:
 - page setup
 - PageSetupDialog component
 ms.assetid: 6dae05bc-c0fd-4357-bb93-841a1631d98f
-ms.openlocfilehash: 482825c1e17811b31c3520a0280d7d0434489bf5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 6eefe7dd69d02712b650d95ddf14394c10792807
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713206"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213707"
 ---
 # <a name="how-to-determine-page-properties-using-the-pagesetupdialog-component"></a>Практическое руководство. Определение свойств страницы с помощью компонента PageSetupDialog
 Компонент [PageSetupDialog](pagesetupdialog-component-windows-forms.md) предоставляет пользователю макет, размер бумаги и другие параметры разметки страницы для документа.  
@@ -88,6 +88,7 @@ ms.locfileid: "57713206"
     ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.PageSetupDialog>
-- [Практическое руководство. Создание заданий печати стандартный Windows Forms](../advanced/how-to-create-standard-windows-forms-print-jobs.md)
+- [Практическое руководство. Создание стандартных задания печати в Windows Forms](../advanced/how-to-create-standard-windows-forms-print-jobs.md)
 - [Компонент PageSetupDialog](pagesetupdialog-component-windows-forms.md)

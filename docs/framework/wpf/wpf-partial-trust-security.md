@@ -15,12 +15,12 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: c0391099d02933cb8a32a2e134dad949034138ad
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 75ebf605e9abb844e7a713b448aefe2ec4cd1a27
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371636"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218385"
 ---
 # <a name="wpf-partial-trust-security"></a>Безопасность частичного доверия в WPF
 <a name="introduction"></a> Как правило, интернет-приложениям следует ограничить прямой доступ к критическим системным ресурсам, чтобы избежать злонамеренного повреждения. По умолчанию [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] и языки сценариев на стороне клиента не могут получить доступ к критическим системным ресурсам. Поскольку Браузерные приложения Windows Presentation Foundation (WPF) может быть запущено из браузера, они должны соответствовать аналогичному набору ограничений. Для принудительного применения этих ограничений [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] полагается на [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] и [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (см. в разделе [стратегия безопасности WPF — безопасность платформы](wpf-security-strategy-platform-security.md)). По умолчанию Браузерные приложения запрашивают зоны Интернета [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] набор разрешений, независимо от того, запускаются ли они из Интернета, локальной интрасети или локального компьютера. Приложения, выполняющиеся с набором разрешений меньшим, чем полный набор, называют выполняющимися с частичным доверием.  
@@ -164,6 +164,7 @@ ms.locfileid: "57371636"
  Кроме того, модель доверенного развертывания ClickOnce можно использовать для полностью доверенного развертывания из любой зоны безопасности. Дополнительные сведения см. в разделе [Trusted Application Deployment Overview](/visualstudio/deployment/trusted-application-deployment-overview) и [безопасности](security-wpf.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Безопасность](security-wpf.md)
-- [Стратегия безопасности WPF — безопасность платформы](wpf-security-strategy-platform-security.md)
+- [Стратегия безопасности WPF — безопасность платформы](wpf-security-strategy-platform-security.md)
 - [Стратегия безопасности WPF — проектирование безопасности](wpf-security-strategy-security-engineering.md)

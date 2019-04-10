@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Создание и инициализация прослушивателей трассировки
+title: Практическое руководство. Создание и инициализация прослушивателей трассировки
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 21726de1-61ee-4fdc-9dd0-3be49324d066
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ee0ad6b34e30b03ec42ff793e37d0e13b448cbfe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 58edf1c6f2dca5c2b269370139533f1f8da17813
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583107"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222722"
 ---
-# <a name="how-to-create-and-initialize-trace-listeners"></a>Как выполнить Создание и инициализация прослушивателей трассировки
+# <a name="how-to-create-and-initialize-trace-listeners"></a>Практическое руководство. Создание и инициализация прослушивателей трассировки
 Классы <xref:System.Diagnostics.Debug?displayProperty=nameWithType> и <xref:System.Diagnostics.Trace?displayProperty=nameWithType> отправляют сообщения объектам, которые называются прослушивателями. Эти объекты получают и обрабатывают эти сообщения. Один из таких прослушивателей, <xref:System.Diagnostics.DefaultTraceListener?displayProperty=nameWithType>, автоматически создается и инициализируется при включении трассировки или отладки. Если требуется направить выходные данные типа <xref:System.Diagnostics.Trace> или <xref:System.Diagnostics.Debug> каким-либо дополнительным источникам, необходимо создать и инициализировать дополнительные прослушиватели трассировки.  
   
  Создаваемые прослушиватели должны соответствовать индивидуальным требованиям приложения. Например, если требуется текстовая запись всех выходных данных трассировки, создайте прослушиватель <xref:System.Diagnostics.TextWriterTraceListener>, который будет записывать все выходные данные в новый текстовый файл, если эта функция включена. С другой стороны, если требуется просмотреть выходные данные только во время исполнения приложения, создайте прослушиватель <xref:System.Diagnostics.ConsoleTraceListener>, направляющий все выходные данные в окно консоли. Прослушиватель <xref:System.Diagnostics.EventLogTraceListener> может направлять выходные данные трассировки в журнал событий. Дополнительные сведения см. в разделе [Прослушиватели трассировки](../../../docs/framework/debug-trace-profile/trace-listeners.md).  
@@ -95,7 +95,8 @@ ms.locfileid: "54583107"
     ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Прослушиватели трассировки](../../../docs/framework/debug-trace-profile/trace-listeners.md)
 - [Переключатели трассировки](../../../docs/framework/debug-trace-profile/trace-switches.md)
 - [Практическое руководство. Добавление операторов трассировки в код приложения](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
-- [Трассировка и инструментирование приложений](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [Трассировка и оборудование приложений](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

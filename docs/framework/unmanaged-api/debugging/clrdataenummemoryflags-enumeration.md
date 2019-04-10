@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6cd385c1176bea41b41a981e743c6104227d8acd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80ea3afef4aee51760e3a2ce6a2b895bca4a6ec5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708198"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224073"
 ---
 # <a name="clrdataenummemoryflags-enumeration"></a>Перечисление CLRDataEnumMemoryFlags
 Указывает области памяти вызов [ICLRDataEnumMemoryRegions::EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) должен включать метод.  
@@ -38,7 +38,7 @@ typedef enum CLRDataEnumMemoryFlags {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |`CLRDATA_ENUM_MEM_DEFAULT`|Минидамп, дамп разреженной памяти.|  
 |`CLRDATA_ENUM_MEM_HEAP`|Дамп полной кучи.|  
@@ -53,4 +53,5 @@ typedef enum CLRDataEnumMemoryFlags {
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Перечисления отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 713591de414c367e415c5bf524c297cfcabb3b6e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9483cf8671b7d3ad5430081d93925af30b3d8368
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555418"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215694"
 ---
 # <a name="runtimeinfoflags-enumeration"></a>Перечисление RUNTIME_INFO_FLAGS
 Содержит значения, указывающие, какие сведения об общеязыковой среде выполнения (CLR) должны быть возвращены.  
@@ -45,7 +45,7 @@ typedef enum {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |`RUNTIME_INFO_DONT_RETURN_DIRECTORY`|Указывает, что сведения о каталоге не будут включены.|  
 |`RUNTIME_INFO_DONT_RETURN_VERSION`|Указывает, что сведения о версии не следует включать.|  
@@ -75,4 +75,5 @@ typedef enum {
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Размещение перечислений](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

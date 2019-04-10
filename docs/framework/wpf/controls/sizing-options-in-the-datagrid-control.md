@@ -6,12 +6,12 @@ helpviewer_keywords:
 - size [WPF], DataGrid
 - automatically size DataGrid [WPF]
 ms.assetid: 96a0e47e-b010-4302-98ef-2daac446d8db
-ms.openlocfilehash: 38cd29720a885f10d093bdb4617c503c16402e6c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d100fb17b1ee3e652985a637d333d9f65e20d36
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672192"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219204"
 ---
 # <a name="sizing-options-in-the-datagrid-control"></a>Параметры изменения размеров элемента управления DataGrid
 Доступны различные варианты для управления как <xref:System.Windows.Controls.DataGrid> изменяет свой размер. <xref:System.Windows.Controls.DataGrid>, А отдельные строки и столбцы в <xref:System.Windows.Controls.DataGrid>, можно задать для определения размера их содержимое автоматически или могут быть присвоены определенные значения. По умолчанию <xref:System.Windows.Controls.DataGrid> будут увеличиваться и уменьшаться в соответствии с размером его содержимого.  
@@ -32,7 +32,7 @@ ms.locfileid: "54672192"
 ### <a name="setting-the-datagrid-size"></a>Задание размера DataGrid  
  <xref:System.Windows.Controls.DataGrid> Можно задать автоматическое изменение размеров в пределах указанных границ или <xref:System.Windows.Controls.DataGrid> может быть присвоено определенного размера. Ниже приведены свойства, которые можно задать для элемента управления <xref:System.Windows.Controls.DataGrid> размер.  
   
-|Свойство.|Описание:|  
+|Свойство|Описание|  
 |--------------|-----------------|  
 |<xref:System.Windows.FrameworkElement.Height%2A>|Задает определенную высоту <xref:System.Windows.Controls.DataGrid>.|  
 |<xref:System.Windows.FrameworkElement.MaxHeight%2A>|Задает верхнюю границу высоту <xref:System.Windows.Controls.DataGrid>. <xref:System.Windows.Controls.DataGrid> Будет увеличиваться по вертикали до достижения этой высоты.|  
@@ -70,7 +70,7 @@ ms.locfileid: "54672192"
   
  Столбцы в <xref:System.Windows.Controls.DataGrid> можно также задать автоматическое изменение размеров только в пределах указанных границ, или столбцы, которые можно установить значение определенного размера. Ниже приведены свойства, которые могут устанавливаться для управления размером столбцов.  
   
-|Свойство.|Описание:|  
+|Свойство|Описание|  
 |--------------|-----------------|  
 |<xref:System.Windows.Controls.DataGrid.MaxColumnWidth%2A?displayProperty=nameWithType>|Задает верхнюю границу для всех столбцов в <xref:System.Windows.Controls.DataGrid>.|  
 |<xref:System.Windows.Controls.DataGridColumn.MaxWidth%2A?displayProperty=nameWithType>|Задает верхнюю границу для отдельного столбца. Переопределяет <xref:System.Windows.Controls.DataGrid.MaxColumnWidth%2A?displayProperty=nameWithType>.|  
@@ -86,6 +86,7 @@ ms.locfileid: "54672192"
  Пользователь может изменять размер <xref:System.Windows.Controls.DataGrid> строк и столбцов, перетаскивая разделители заголовков строк или столбцов. <xref:System.Windows.Controls.DataGrid> Также поддерживает автоматическое изменение размера строк и столбцов, дважды щелкнув разделитель заголовка строки или столбца. Чтобы предотвратить изменение размеров определенных столбцов, задайте <xref:System.Windows.Controls.DataGridColumn.CanUserResize%2A?displayProperty=nameWithType> свойства `false` для каждого столбца. Чтобы запретить пользователям изменять размеры всех столбцов, задайте <xref:System.Windows.Controls.DataGrid.CanUserResizeColumns%2A?displayProperty=nameWithType> свойства `false`. Чтобы запретить пользователям изменять размеры всех строк, задайте <xref:System.Windows.Controls.DataGrid.CanUserResizeRows%2A?displayProperty=nameWithType> свойства `false`.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Controls.DataGrid>
 - <xref:System.Windows.Controls.DataGridColumn>
 - <xref:System.Windows.Controls.DataGridLength>

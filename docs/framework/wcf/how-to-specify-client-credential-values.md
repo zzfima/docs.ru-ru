@@ -1,18 +1,18 @@
 ---
-title: Как выполнить Укажите значения учетных данных клиента
+title: Практическое руководство. Задание значений учетных данных клиента
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 82293d7f-471a-4549-8f19-0be890e7b074
-ms.openlocfilehash: 110b8ffe2fb3e00d7a6787e32d066f62126ebf9a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: a1b2627c8e9899a122f27dc652f8c91230fed0b3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617191"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225135"
 ---
-# <a name="how-to-specify-client-credential-values"></a>Как выполнить Укажите значения учетных данных клиента
+# <a name="how-to-specify-client-credential-values"></a>Практическое руководство. Задание значений учетных данных клиента
 С помощью Windows Communication Foundation (WCF), служба может указать способ проверки подлинности клиента к службе. Например, в службе можно указать, что клиент проходит проверку подлинности с помощью сертификата.  
   
 ### <a name="to-determine-the-client-credential-type"></a>Определение типа учетных данных клиента  
@@ -92,6 +92,7 @@ ms.locfileid: "54617191"
     ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.NetTcpBinding>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential>
@@ -99,13 +100,13 @@ ms.locfileid: "54617191"
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>
 - [Программирование безопасности WCF](../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
 - [Выбор типа учетных данных](../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
-- [Служебная программа для метаданных ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [Служебное средство ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
 - [Работа с сертификатами](../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Практическое руководство. Создание клиента](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
-- [\<netTcpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)
+- [\<netTcpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)
 - [\<Безопасность >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)
 - [\<сообщение >](../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-nettcpbinding.md)
 - [\<поведение >](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)
 - [\<варианты поведения >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)
-- [\<clientCertificate >](../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)
+- [\<clientCertificate>](../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)
 - [\<clientCredentials>](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)

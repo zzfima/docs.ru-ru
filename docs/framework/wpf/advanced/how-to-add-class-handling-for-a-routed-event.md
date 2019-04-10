@@ -9,12 +9,12 @@ helpviewer_keywords:
 - task_core_add_class_handling_routed_properties [WPF]
 - class handlers [WPF], routed events
 ms.assetid: 15b7b06c-9112-4ee5-b30a-65d10c5c5df6
-ms.openlocfilehash: 8c973871336c3389161ce25ae52d2dfaef9c53a5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7b897954cbdab461dc0305c6290e67c1af5282c3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361776"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224277"
 ---
 # <a name="how-to-add-class-handling-for-a-routed-event"></a>Практическое руководство. Добавление обработки классов для перенаправленных событий
 Перенаправленные события могут быть обработаны с помощью обработчики классов или экземпляров на заданного узла в маршруте. Обработчики классов вызываются первыми, а также может использоваться реализациями класса для подавления событий обработчиков экземпляров или введения вариантов поведения других событий для события, которые принадлежат базовых классов. В этом примере показаны два тесно связанные методы для реализации обработчиков класса.  
@@ -33,6 +33,7 @@ ms.locfileid: "57361776"
  [!code-vb[ClassHandling#StaticAndRegisterClassHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ClassHandling/visualbasic/sdksamplelibrary/class1.vb#staticandregisterclasshandler)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.EventManager>
 - [Маркировка перенаправленных событий как обработанных и обработка классов](marking-routed-events-as-handled-and-class-handling.md)
 - [Обработка перенаправленных событий](how-to-handle-a-routed-event.md)

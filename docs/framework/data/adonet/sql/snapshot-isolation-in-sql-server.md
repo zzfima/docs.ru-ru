@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
-ms.openlocfilehash: 873ec2cfdf7e4b0c743a3bcf607abe8500ec4d3f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c06ecd8626b148c4f2143efdfa1e143d6ab3d6bc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643056"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215941"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>Изоляция снимков в SQL Server
 Изоляция моментального снимка приводит к повышению параллелизма для приложений OLTP.  
@@ -142,6 +142,7 @@ SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)
  Если приложение содержит множество конфликтов, то для него изоляция моментального снимка не лучший выбор. Подсказки должны использоваться, только если они действительно нужны. Приложение должно быть создано таким образом, чтобы в ходе его работы не нужно было постоянно полагаться на подсказки блокировок.  
   
 ## <a name="see-also"></a>См. также
+
 - [SQL Server и ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
 - [Руководство по управление версиями строк и блокировке транзакций](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)

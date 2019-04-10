@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - rounting [WCF], scenarios
 ms.assetid: ec22f308-665a-413e-9f94-7267cb665dab
-ms.openlocfilehash: 6803468c8814b229df752e3ed9bc48aa0e632dd6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fa5d588211cfe40cde9e9db3161a931e3287cd39
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699601"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223831"
 ---
 # <a name="routing-scenarios"></a>Сценарии маршрутизации
 Хотя служба маршрутизации является настраиваемой, спроектировать эффективную логику маршрутизации при создании новой конфигурации с нуля может быть достаточно сложным.  Однако существует несколько типичных сценариев, которым следует большинство конфигураций службы маршрутизации. Хотя эти сценарии могут не применяться напрямую к определенной конфигурации, освоение способа настройки службы маршрутизации для управления этими сценариями поможет в понимании работы службы маршрутизации.  
@@ -66,13 +66,14 @@ ms.locfileid: "54699601"
  Шаги, используемые для настройки обработки ошибок, см. в разделе [How To: Обработка ошибок](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md).
   
 ### <a name="in-this-section"></a>В этом разделе  
- [Практическое руководство. Управление версиями службы](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
+ [Как выполнить: Управление версиями службы](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
   
- [Практическое руководство. Секционирование данных служб](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
+ [Как выполнить: Секционирование данных служб](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
   
- [Практическое руководство. Динамическое обновление](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
+ [Как выполнить: Динамическое обновление](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
   
- [Практическое руководство. Обработка ошибок](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)  
+ [Как выполнить: Обработка ошибок](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)  
   
 ## <a name="see-also"></a>См. также
+
 - [Введение в маршрутизацию](../../../../docs/framework/wcf/feature-details/routing-introduction.md)

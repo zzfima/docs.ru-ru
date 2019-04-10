@@ -2,12 +2,12 @@
 title: <basicHttpContextBinding>
 ms.date: 03/30/2017
 ms.assetid: 39b16b82-4ec6-4eff-8031-67e026870961
-ms.openlocfilehash: f454a8b70441473991acffae9db86a09b0658bfb
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: b24b048cb1beae3ab515d9e49353fb1e0123a47f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410489"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219178"
 ---
 # <a name="basichttpcontextbinding"></a>\<basicHttpContextBinding>
 Указание привязки, предоставляющей контекст для обмена <xref:System.ServiceModel.BasicHttpBinding> путем включения файлов Cookie HTTP в качестве механизма обмена.  
@@ -97,6 +97,7 @@ ms.locfileid: "58410489"
  Этот элемент привязки предоставляет уровень защиты и механизм обмена как часть контекста для элемента `BasicHttpBinding`.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.BasicHttpBinding>
 - <xref:System.ServiceModel.BasicHttpContextBinding>
 - <xref:System.ServiceModel.Configuration.BasicHttpContextBindingElement>
@@ -105,4 +106,4 @@ ms.locfileid: "58410489"
 - [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
 - [Использование привязок для настройки служб и клиентов](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<Привязка >](../../../../../docs/framework/misc/binding.md)
-- [\<basicHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)
+- [\<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)

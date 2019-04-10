@@ -1,5 +1,5 @@
 ---
-title: Кокласс CorRuntimeHost
+title: Компонентный класс CorRuntimeHost
 ms.date: 03/30/2017
 api_name:
 - CorRuntimeHost Coclass
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c81a39acee31986421c810e2814a4f7e6c4d970
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2143fc13db1757ac2fa8a9c5a43f104a0c519ca0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597532"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218567"
 ---
-# <a name="corruntimehost-coclass"></a>Кокласс CorRuntimeHost
+# <a name="corruntimehost-coclass"></a>Компонентный класс CorRuntimeHost
 Предоставляет интерфейсы для управления приложениями, которые выполняются в среде CLR.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -40,7 +40,7 @@ coclass CorRuntimeHost {
   
 ## <a name="interfaces"></a>интерфейсов,  
   
-|Интерфейс|Описание:|  
+|Интерфейс|Описание|  
 |---------------|-----------------|  
 |[Интерфейс ICorConfiguration](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)|Предоставляет методы для настройки общеязыковой среды выполнения (CLR).|  
 |[Интерфейс ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)|Предоставляет методы, позволяющие узел для запуска и остановки среда CLR явным образом, для создания и настройки доменов приложений, для доступа к области по умолчанию и для перечисления всех доменов, выполняемых в процессе.|  
@@ -58,4 +58,5 @@ coclass CorRuntimeHost {
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Размещение коклассов](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)

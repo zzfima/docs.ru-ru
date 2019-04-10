@@ -2,12 +2,12 @@
 title: Программа Service Trace Viewer (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: 723b1c6858f0c56d4834dc937b9f4883e22156e6
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: MT
+ms.openlocfilehash: 4697e43ee1ae08d5eec02b042aea0ec69d6eeac4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680390"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213393"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Программа Service Trace Viewer (SvcTraceViewer.exe)
 Средство просмотра трассировки службы Windows Communication Foundation (WCF) помогает анализировать диагностические трассировки, которые создаются платформой WCF. Программа Service Trace Viewer предоставляет возможность легко слияния, просмотра и фильтрации сообщений трассировки в журнале, поэтому диагностика, исправление и проверять неисправности служб WCF.  
@@ -456,6 +456,7 @@ ms.locfileid: "57680390"
  Если открыть журнал трассировки в операционной системе на арабском языке, можно заметить, что фильтр времени не работает. Например, 2005 год соответствует 1427 году в арабском календаре. Однако диапазон времени, поддерживаемый фильтром в программе «Просмотр трассировки службы», не включает даты ранее 1752 г. В результате может оказаться невозможным выбрать правильную дату в фильтре. Чтобы устранить эту проблему, можно создать настраиваемый фильтр (**вид/настраиваемые фильтры**) с использованием выражения XPath для включения конкретный временной диапазон.  
   
 ## <a name="see-also"></a>См. также
+
 - [Использование программы Service Trace Viewer для просмотра скоррелированных трассировок и устранения неполадок](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
 - [Настройка трассировки](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
 - [Сквозная трассировка](./diagnostics/tracing/end-to-end-tracing.md)

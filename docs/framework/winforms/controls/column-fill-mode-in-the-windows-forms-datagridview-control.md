@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column fill mode
 - data grids [Windows Forms], column fill mode
 ms.assetid: b4ef7411-ebf4-4e26-bb33-aecec90de80c
-ms.openlocfilehash: bd6c27203284b392742b766b22f664b08a7b3a40
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a85745d39903719ec1e44ccf70df72d472720b7c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722416"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214732"
 ---
 # <a name="column-fill-mode-in-the-windows-forms-datagridview-control"></a>Установка режимов заполнения для столбцов элемента управления DataGridView в Windows Forms
 В режиме заполнения столбцов элемент управления <xref:System.Windows.Forms.DataGridView> автоматически изменяет размер своих столбцов, чтобы они полностью заполняли доступную область отображения по ширине. Элемент управления не отображает горизонтальную полосу прокрутки, за исключением случаев, когда необходимо сохранить ширину каждого столбца равной или большей, чем значение его свойства <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>.  
@@ -47,7 +47,7 @@ ms.locfileid: "57722416"
   
 -   Измените размер формы. Обратите внимание, как изменяется ширина столбцов и одновременно сохраняются пропорции, указанные значениями свойства <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>.  
   
--   Измените размеры столбцов, перетаскивая разделители столбцов с помощью мыши. Обратите внимание, как изменяются значения <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>.  
+-   Измените размеры столбцов, перетаскивая их разделители с помощью мыши. Обратите внимание, как изменяются значения <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>.  
   
 -   Измените значение <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> для одного столбца, а затем перетащите для изменения размеров формы. Обратите внимание, что при достаточном уменьшении размера формы, значения <xref:System.Windows.Forms.DataGridViewColumn.Width%2A> не становятся меньше значений <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>.  
   
@@ -63,6 +63,7 @@ ms.locfileid: "57722416"
 -   Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A?displayProperty=nameWithType>

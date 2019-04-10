@@ -2,12 +2,12 @@
 title: Владение и отделение пользователей от схем в SQL Server
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
-ms.openlocfilehash: 68a65cb950c54be9a4f9354a6ca20cbeeaafb938
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: b56a2c6f1211a11d2aa55de0cc101f6b90f7f83d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092609"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221864"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>Владение и отделение пользователей от схем в SQL Server
 Основным принципом безопасности SQL Server является то, что владельцы объектов имеют неотзываемые разрешения на их администрирование. Нельзя удалять права доступа у владельцев объектов. Также нельзя удалять пользователей из базы данных, если они владеют в ней объектами.  
@@ -27,7 +27,7 @@ Server.Database.DatabaseSchema.DatabaseObject
  По умолчанию, если разработчик создает объект в схеме, он принадлежит участнику безопасности, являющемуся владельцем схемы, а не разработчику. Владение объектом можно передать с помощью инструкции Transact-SQL ALTER AUTHORIZATION. Схема может также содержать объекты, принадлежащие другим пользователям и иметь более детализированные разрешения, чем назначенные схеме, хотя это не рекомендуется из-за увеличения сложности управления разрешениями. Объекты можно перемещать из одной схемы в другую, а принадлежность схемы передавать от одного участника другому. Пользователей базы данных можно удалять, не влияя этим на схемы.  
   
 ### <a name="built-in-schemas"></a>Встроенные схемы  
- SQL Server поставляется с десятью предварительно определенными схемами, имеющими одинаковое имя со встроенными пользователями и ролями базы данных. Они существуют главным образом ради обратной совместимости. Схемы, имеющие одинаковые имена с предопределенными ролями базы данных, можно удалить, если они не нужны. Можно удалить следующие схемы.  
+ SQL Server поставляется с десятью предварительно определенными схемами, имеющими одинаковое имя со встроенными пользователями и ролями базы данных. Они существуют главным образом ради обратной совместимости. Схемы, имеющие одинаковые имена с предопределенными ролями базы данных, можно удалить, если они не нужны. Нельзя удалить следующие схемы.  
   
 -   `dbo`  
   
@@ -58,9 +58,10 @@ Server.Database.DatabaseSchema.DatabaseObject
 |[Отделение пользователей от схем](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms190387(v=sql.105))|Описывает изменения, возникшие из-за отделения пользователей от схем. Сюда входит новое поведение, его влияние на владение, представления каталогов и разрешения.|  
   
 ## <a name="see-also"></a>См. также
+
 - [Защита приложений ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Сценарии безопасности приложений в SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [Проверка подлинности в SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
+- [Аутентификация в SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
 - [Роли сервера и базы данных в SQL Server](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)
 - [Авторизация и разрешения в SQL Server](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

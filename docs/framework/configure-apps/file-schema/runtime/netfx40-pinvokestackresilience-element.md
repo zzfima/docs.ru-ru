@@ -1,5 +1,5 @@
 ---
-title: Элемент < NetFx40_PInvokeStackResilience >
+title: Элемент <NetFx40_PInvokeStackResilience>
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <NetFx40_PInvokeStackResilience> element
@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 39fb1588-72a4-4479-af74-0605233b68bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8bc0d7c9222c31900cad9a8be05c79f7f8a04719
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 725bd715f6e70dff08929e58d588a3d8561d5011
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55289345"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224238"
 ---
 # <a name="netfx40pinvokestackresilience-element"></a>\<NetFx40_PInvokeStackResilience > элемент
 Указывает, исправляет ли автоматически среда выполнения неправильные объявления вызова неуправляемого кода во время выполнения за счет скорости перехода между управляемыми и неуправляемым кодом.  
   
  \<configuration>  
 \<Среда выполнения >  
-<NetFx40_PInvokeStackResilience>  
+< NetFx40_PInvokeStackResilience >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,7 +38,7 @@ ms.locfileid: "55289345"
   
 ## <a name="enabled-attribute"></a>Атрибут enabled  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |`0`|Среда выполнения использует быстрее маршалинга архитектуры, представленные в [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], который не удается обнаружить и исправить неправильные объявления вызова неуправляемого. Это значение по умолчанию.|  
 |`1`|Среда выполнения использует медленнее переходы, которые обнаружить и исправить неверные объявления вызова неуправляемого кода.|  
@@ -77,6 +77,7 @@ ms.locfileid: "55289345"
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [pInvokeStackImbalance](../../../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md)

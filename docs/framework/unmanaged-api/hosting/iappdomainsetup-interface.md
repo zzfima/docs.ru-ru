@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ef967039450c77b5927d501de63d53a245c90be0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bbde873481aea9de94862117a99079301965f33c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509835"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220075"
 ---
 # <a name="iappdomainsetup-interface"></a>Интерфейс IAppDomainSetup
 Предоставляет свойства, позволяющие узла настроить <xref:System.AppDomain?displayProperty=nameWithType> типа до вызова метода [ICorRuntimeHost::CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) метод для его создания.  
   
 ## <a name="properties"></a>Свойства  
   
-|Свойство|Описание:|  
+|Свойство|Описание|  
 |--------------|-----------------|  
 |<xref:System.AppDomainSetup.ApplicationBase%2A>|Возвращает или задает имя каталога, содержащего приложение.|  
 |<xref:System.AppDomainSetup.ApplicationName%2A>|Возвращает или задает имя приложения.|  
@@ -56,6 +56,7 @@ ms.locfileid: "54509835"
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.AppDomain>
 - <xref:System.AppDomainSetup>
 - <xref:System.IAppDomainSetup>

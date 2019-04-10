@@ -1,18 +1,18 @@
 ---
-title: 'Как выполнить фильтровать взаимосвязанные данные '
+title: Практическое руководство. Как фильтровать взаимосвязанные данные
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: ec8b8f97-5d01-4f31-9b97-d1556df6a4bc
-ms.openlocfilehash: 9a046c94363a1a161e19dcb68e015f8c6791e511
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3dbedfb7065ac4b1a570a3f6cdbcdcc2177f20cf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54703475"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218229"
 ---
-# <a name="how-to-filter-related-data"></a>Как выполнить фильтровать взаимосвязанные данные 
+# <a name="how-to-filter-related-data"></a>Практическое руководство. Как фильтровать взаимосвязанные данные
 Чтобы указать вложенные запросы для ограничения объема извлекаемых данных, используется метод <xref:System.Data.Linq.DataLoadOptions.AssociateWith%2A>.  
   
 ## <a name="example"></a>Пример  
@@ -22,4 +22,5 @@ ms.locfileid: "54703475"
  [!code-vb[System.Data.Linq.DataLoadOptions#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.dataloadoptions/vb/module1.vb#1)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Запрос к базе данных](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)

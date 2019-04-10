@@ -14,12 +14,12 @@ helpviewer_keywords:
 - DynamicRenderer objects [WPF]
 - StylusPlugIn objects [WPF]
 ms.assetid: c31f3a67-cb3f-4ded-af9e-ed21f6575b26
-ms.openlocfilehash: 329bad9d5e0fa24f66fbd63def4936cb047e62e3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 80385b904f4ff5de86bf7e011f6a883b957d0ceb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378071"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219672"
 ---
 # <a name="creating-an-ink-input-control"></a>Создание элемента управления рукописным вводом
 Вы можете создать пользовательский элемент управления, динамически и статически отображает рукописные данные. То есть отрисовку рукописных фрагментов, как пользователь рисует штрих, вызывая рукописный ввод «поток» от планшетного пера и отображения рукописного ввода после него добавляется к элементу управления, либо с помощью пера, вставленный из буфера обмена, или загрузить из файла. Для динамического отображения рукописного ввода, необходимо использовать элемент управления <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>. Для статического отображения рукописного ввода, необходимо переопределить методы событий пера (<xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusMove%2A>, и <xref:System.Windows.UIElement.OnStylusUp%2A>) для сбора <xref:System.Windows.Input.StylusPoint> данные, создавать штрихи и добавить их в <xref:System.Windows.Controls.InkPresenter> (отображает рукописные данные в элементе управления).  
@@ -99,5 +99,6 @@ ms.locfileid: "57378071"
  Можно создать элемент управления, который собирает и отображает рукописные данные, переопределив методы событий пера. Создав собственный элемент управления, создания своих собственных производных <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> классы и их вставка в <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>, можно реализовать практически для любых аспектов поведения, возможное сопоставление с рукописный ввод. У вас есть доступ к <xref:System.Windows.Input.StylusPoint> данных, как оно создается, дает возможность настроить <xref:System.Windows.Input.Stylus> входных данных и их вывода на экран, подходящие для вашего приложения. Так как у вас есть такой низкоуровневый доступ к <xref:System.Windows.Input.StylusPoint> данных, можно реализовать коллекцию рукописного ввода и отображать ее с оптимальной производительности приложения.  
   
 ## <a name="see-also"></a>См. также
-- [Дополнительная обработка рукописных фрагментов](advanced-ink-handling.md)
+
+- [Дополнительная обработка рукописных данных](advanced-ink-handling.md)
 - [Доступ и управление с помощью пера](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)

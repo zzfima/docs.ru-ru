@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ', '
 - ', '
 ms.assetid: 791bb2f0-4e5c-4569-ac3c-211996808d44
-ms.openlocfilehash: 0568e72e6d686ce08e6bd802f273e45dd623524b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5c22c2862ae8b948787fd5e6ca16109aa2f52aef
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374314"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218775"
 ---
 # <a name="intercepting-input-from-the-stylus"></a>Перехват ввода, осуществляемого пером
 <xref:System.Windows.Input.StylusPlugIns> Архитектура предоставляет механизм для реализации низкоуровневого управления <xref:System.Windows.Input.Stylus> входных данных и создание рукописный ввод <xref:System.Windows.Ink.Stroke> объектов. <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Класс предоставляет механизм для реализации пользовательского поведения и применения его к потоку данных, поступающих от устройства пера, для обеспечения оптимальной производительности.  
@@ -71,5 +71,6 @@ ms.locfileid: "57374314"
  Путем наследования своих собственных <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> классы и вставки их в <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> коллекций, можно значительно улучшить обработку цифровых рукописных данных. У вас есть доступ к <xref:System.Windows.Input.StylusPoint> данных, как оно создается, дает возможность настроить <xref:System.Windows.Input.Stylus> ввода. Так как у вас есть такой низкоуровневый доступ к <xref:System.Windows.Input.StylusPoint> данных, можно реализовать коллекцию чернил и подготовки к просмотру, обеспечивающих оптимальную производительность для вашего приложения.  
   
 ## <a name="see-also"></a>См. также
-- [Дополнительная обработка рукописных фрагментов](advanced-ink-handling.md)
+
+- [Дополнительная обработка рукописных данных](advanced-ink-handling.md)
 - [Доступ и управление с помощью пера](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)

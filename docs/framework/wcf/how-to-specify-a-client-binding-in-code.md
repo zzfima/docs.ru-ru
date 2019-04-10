@@ -1,18 +1,18 @@
 ---
-title: Как выполнить Указание привязки клиента в коде
+title: Практическое руководство. Задание привязки клиента в коде
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6bee5da4-adf7-42e6-8f78-63a9e5c6dbad
-ms.openlocfilehash: c04febff886dda57ed86d8410c952926d192026b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 6d8683108ebe87b8533551d212296b13630b4e19
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632846"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218606"
 ---
-# <a name="how-to-specify-a-client-binding-in-code"></a>Как выполнить Указание привязки клиента в коде
+# <a name="how-to-specify-a-client-binding-in-code"></a>Практическое руководство. Задание привязки клиента в коде
 В этом примере создается клиент, предназначенный для использования службы калькулятора, и привязка этого клиента задается императивно в коде. Клиент обращается к службе `CalculatorService`, которая реализует интерфейс `ICalculator`; как служба, так и клиент используют класс <xref:System.ServiceModel.BasicHttpBinding>.  
   
  В приведенной процедуре предполагается, что служба калькулятора выполняется. Сведения о создании службы, см. в разделе [как: Указание привязки службы в конфигурации](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md). Он также использует [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)Windows Communication Foundation (WCF) предоставляет для автоматического создания компонентов клиента. Этот инструмент создает код клиента для доступа к службе.  
@@ -47,4 +47,5 @@ ms.locfileid: "54632846"
 5.  Скомпилируйте и запустите клиент.  
   
 ## <a name="see-also"></a>См. также
+
 - [Использование привязок для настройки служб и клиентов](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

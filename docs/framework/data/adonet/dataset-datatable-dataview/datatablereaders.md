@@ -2,12 +2,12 @@
 title: Объекты DataTableReader
 ms.date: 03/30/2017
 ms.assetid: 97546ae2-0e42-4d26-961d-e0b244d81ded
-ms.openlocfilehash: 9984dc9c215a34ab35524560e4dcbcd6bd12596d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a790335a25327563e3dab6093449345b99afd048
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602849"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214005"
 ---
 # <a name="datatablereaders"></a>Объекты DataTableReader
 <xref:System.Data.DataTableReader> представляет содержимое объекта <xref:System.Data.DataTable> или <xref:System.Data.DataSet> в виде одного или нескольких результирующих наборов, предназначенных только для чтения и только для перенаправления.  
@@ -20,9 +20,10 @@ ms.locfileid: "54602849"
  [Создание объекта DataReader](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-datareader.md)  
  Рассматривается процесс создания **DataTableReader** объекта.  
   
- [Навигация в объектах DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/navigating-datatables.md)  
+ [Навигация по таблицам данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/navigating-datatables.md)  
  Описание использования **чтения** метод для перехода по содержимому объекта **DataTableReader**.  
   
 ## <a name="see-also"></a>См. также
+
 - [Извлечение и изменение данных в ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

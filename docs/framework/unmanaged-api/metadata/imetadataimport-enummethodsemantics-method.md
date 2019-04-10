@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6021cd0126f4dd85b796a3110cd95a83c0f77ff4
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 16cfa6df6251cd67860155cb8092e77a835eaaef
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466795"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223274"
 ---
 # <a name="imetadataimportenummethodsemantics-method"></a>Метод IMetaDataImport::EnumMethodSemantics
 Перечисляет свойства и события их изменения, с которыми связан указанный метод.  
@@ -57,7 +57,7 @@ HRESULT EnumMethodSemantics (
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
-|HRESULT|Описание:|  
+|HRESULT|Описание|  
 |-------------|-----------------|  
 |`S_OK`|`EnumMethodSemantics` успешно возвращен.|  
 |`S_FALSE`|Отсутствуют события или свойства для перечисления. В этом случае `pcEventProp` равно нулю.|  
@@ -75,5 +75,6 @@ HRESULT EnumMethodSemantics (
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Интерфейс IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-ms.openlocfilehash: 22af8cd6a8bdce590736ee14705f73bef1dc4d16
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: f59b8403ecb683dafa6963565da46e517b5a2cbc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261106"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220439"
 ---
 # <a name="endpoint-addresses"></a>Адреса конечных точек
 С каждой конечной точкой связан адрес, который используется для поиска и идентификации этой конечной точки. Этот адрес в первую очередь включает универсальный код ресурса (URI), задающий расположение конечной точки. Адрес конечной точки представляется в модели программирования Windows Communication Foundation (WCF), <xref:System.ServiceModel.EndpointAddress> класс, который содержит необязательное <xref:System.ServiceModel.EndpointAddress.Identity%2A> свойство, которое позволяет выполнять проверку подлинности конечной точки другими конечными точками, обмена с ней сообщениями, а также набор необязательных <xref:System.ServiceModel.EndpointAddress.Headers%2A> свойства, определяющие другие заголовки SOAP, необходимые для доступа к службе. Необязательные заголовки содержат дополнительную и более подробную информацию для идентификации конечной точки службы и взаимодействия с ней. При передаче данных по каналам связи адрес конечной точки представляется ссылкой на конечную точку WS-Addressing.  
@@ -138,5 +138,6 @@ ms.locfileid: "56261106"
  В некоторых сценариях конечная точка получает все сообщения, которые приходят через соответствующий транспорт, а не только те, у которых есть соответствующий заголовок `To`. Чтобы включить такой режим, можно воспользоваться классом <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter>.  
   
 ## <a name="see-also"></a>См. также
-- [Указание адреса конечной точки](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)
+
+- [Задание адреса конечной точки](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)
 - [Идентификация и проверка подлинности службы](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ba0387b84f8d32831b79dd6c361bcdbb78f8bbba
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: af879cbbf8edfd05e79d9b77b0c1fb71b2c835c3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57499503"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224303"
 ---
 # <a name="icordebugvariablehomegetlocationtype-method"></a>Метод ICorDebugVariableHome::GetLocationType
 Получает тип переменной собственному расположению.  
@@ -49,5 +49,6 @@ HRESULT GetLocationType(
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
 - [Перечисление VariableLocationType](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md)

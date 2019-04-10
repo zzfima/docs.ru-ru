@@ -9,12 +9,12 @@ helpviewer_keywords:
 - fonts [WPF], system fonts
 - classes [WPF], SystemFonts
 ms.assetid: 3f46a4ec-2225-408a-8123-8838a8f7057a
-ms.openlocfilehash: 5ed44da316ddee5ea3a83262f913da571bf75276
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5976bc0cb8b34e68d5e89dd70a608d7e52ded332
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378968"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216786"
 ---
 # <a name="how-to-use-systemfonts"></a>Практическое руководство. Использование SystemFonts
 В этом примере показано, как использовать статические ресурсы <xref:System.Windows.SystemFonts> класс для изменения стиля или настроек кнопки.  
@@ -37,11 +37,12 @@ ms.locfileid: "57378968"
  [!code-vb[SystemRes_snip#FontResourcesCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SystemRes_snip/VisualBasic/Pane1.xaml.vb#fontresourcescode)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.SystemFonts>
 - [Заливка области с помощью системной кисти](../graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
 - [Использование SystemParameters](how-to-use-systemparameters.md)
 - [Использование разделов системных шрифтов](how-to-use-system-fonts-keys.md)
-- [Разделы практического руководства](resources-how-to-topics.md)
+- [Практические руководства](resources-how-to-topics.md)
 - [Расширение разметки x:Static](../../xaml-services/x-static-markup-extension.md)
 - [Ресурсы XAML](xaml-resources.md)
 - [Расширение разметки DynamicResource](dynamicresource-markup-extension.md)

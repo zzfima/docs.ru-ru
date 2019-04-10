@@ -8,12 +8,12 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], creating
 - bitmaps [Windows Forms], examples [Visual Basic]
 ms.assetid: 737bae30-e599-4e1d-bf30-bab8280b32be
-ms.openlocfilehash: edcf413bf6b3cb92e4570867afe8222c1f8b84f6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3acaf18afa621a182c26f00c0594516ac573e281
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714220"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213673"
 ---
 # <a name="how-to-create-a-bitmap-at-run-time"></a>Практическое руководство. Создание растрового изображения во время выполнения
 В этом примере создает и отображает <xref:System.Drawing.Bitmap> и выводит его в формах Windows <xref:System.Windows.Forms.PictureBox> элемента управления.  
@@ -28,5 +28,6 @@ ms.locfileid: "57714220"
 -   Форма Windows, которая импортирует сборки System, System.Drawing и System.Windows.Forms.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Drawing.Bitmap>
-- [Изображения, точечные рисунки и метафайлы](images-bitmaps-and-metafiles.md)
+- [Работа с растровыми и векторными изображениями с использованием классов Image, Bitmap и Metafile](images-bitmaps-and-metafiles.md)

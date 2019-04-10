@@ -1,5 +1,5 @@
 ---
-title: Элемент <webProxyScript> (параметры сети)
+title: <webProxyScript> (Сетевые параметры)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#webProxyScript
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <webProxyScript> element
 - webProxyScript element
 ms.assetid: a13c26db-6218-4af3-9696-38f24b23bfac
-ms.openlocfilehash: e823d6065ea23f3a47dad6853a1b9e1237a616c9
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e73ba86cc17fa51cbf4030f2304ab9141fcc0f26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257828"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218671"
 ---
 # <a name="webproxyscript-element-network-settings"></a>\<webProxyScript > (сетевые параметры)
 Настраивает характеристики сценария, используемого для обнаружения веб-прокси.  
@@ -36,7 +36,7 @@ ms.locfileid: "55257828"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание:|  
+|Атрибут|Описание|  
 |---------------|-----------------|  
 |`downloadTimeout`|Указывает максимальное время для загрузки скрипта в часы, минуты и секунды. Значение по умолчанию — одна минута.|  
   
@@ -45,9 +45,9 @@ ms.locfileid: "55257828"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
-|[Параметры](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Настраивает основные параметры сети для пространства имен <xref:System.Net>.|  
+|[параметры](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Настраивает основные параметры сети для пространства имен <xref:System.Net>.|  
   
 ## <a name="remarks"></a>Примечания  
   
@@ -55,4 +55,5 @@ ms.locfileid: "55257828"
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
 ## <a name="see-also"></a>См. также
+
 - [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

@@ -1,5 +1,5 @@
 ---
-title: Пошаговое руководство. Создание не связанного с данными Windows Forms элемента управления DataGridView
+title: Пошаговое руководство. Создание не связанного с данными элемента управления DataGridView в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - data [Windows Forms], unbound
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 5a8d6afa-1b4b-4b24-8db8-501086ffdebe
-ms.openlocfilehash: ebbfeaa2d6a7734aa0f2b214be65e64111d28ac0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 375ac3bd3a178cc059239cf84209ebbf5d6aca11
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708119"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220582"
 ---
-# <a name="walkthrough-creating-an-unbound-windows-forms-datagridview-control"></a>Пошаговое руководство. Создание не связанного с данными Windows Forms элемента управления DataGridView
+# <a name="walkthrough-creating-an-unbound-windows-forms-datagridview-control"></a>Пошаговое руководство. Создание не связанного с данными элемента управления DataGridView в Windows Forms
 Часто можно показать табличные данные, полученные не из базы данных. Например можно отображать содержимое двухмерный массив строк. <xref:System.Windows.Forms.DataGridView> Класс обеспечивает удобный и настраиваемый способ отображения данных без привязки к источнику данных. В этом пошаговом руководстве показано, как для заполнения <xref:System.Windows.Forms.DataGridView> управлять добавлением и удалением строк в режиме «свободный». По умолчанию пользователь может добавлять новые строки. Чтобы запретить добавление строк, задайте <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> свойство `false`.  
   
  Чтобы скопировать код из этого раздела единым блоком, см. раздел [Практическое руководство. Создание элемента управления DataGridView в Windows свободной формы](how-to-create-an-unbound-windows-forms-datagridview-control.md).  
@@ -93,7 +93,8 @@ ms.locfileid: "57708119"
 -   Настройка внешнего вида ячеек. Дополнительные сведения см. в разделе [Как Настройка внешнего вида ячеек элемента управления DataGridView в Windows Forms](customize-the-appearance-of-cells-in-the-datagrid.md) и [как: Установка стилей ячейки по умолчанию для управления DataGridView в Windows Forms](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.DataGridView>
 - [Отображение данных с помощью элемента управления DataGridView в Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Практическое руководство. Создание элемента управления DataGridView в Windows свободной формы](how-to-create-an-unbound-windows-forms-datagridview-control.md)
+- [Практическое руководство. Создание не связанного с данными элемента управления DataGridView в Windows Forms](how-to-create-an-unbound-windows-forms-datagridview-control.md)
 - [Режимы отображения данных в элементе управления DataGridView в Windows Forms](data-display-modes-in-the-windows-forms-datagridview-control.md)

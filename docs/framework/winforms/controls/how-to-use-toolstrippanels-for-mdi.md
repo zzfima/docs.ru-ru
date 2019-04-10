@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Руководство.
+title: Практическое руководство. Использование элементов управления ToolStripPanel при создании форм MDI
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - ToolStripPanel control [Windows Forms], using for MDI
 - toolbars [Windows Forms], using for MDI
 ms.assetid: d6b884fc-0846-465f-83c3-5dc0fe93b00f
-ms.openlocfilehash: a543b9e292f29e54b45327ae77a81676c992f103
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 42d4ed23f477f545c4ff2be53c36d8ea86d3b4f9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722065"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219880"
 ---
-# <a name="how-to-use-toolstrippanels-for-mdi"></a>Практическое руководство. Руководство.
+# <a name="how-to-use-toolstrippanels-for-mdi"></a>Практическое руководство. Использование элементов управления ToolStripPanel при создании форм MDI
 <xref:System.Windows.Forms.ToolStripPanel> обеспечивает гибкость для приложений многодокументного интерфейса (MDI) с помощью метода <xref:System.Windows.Forms.ToolStripPanel.Join%2A>.  
   
 ## <a name="example"></a>Пример  
@@ -33,5 +33,6 @@ ms.locfileid: "57722065"
  Сведения о выполнении сборки этого примера из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.ToolStripPanel>
-- [Практическое руководство. Соединение нескольких ToolStripPanel](how-to-join-toolstrippanels.md)
+- [Практическое руководство. Соединение нескольких элементов управления ToolStripPanel](how-to-join-toolstrippanels.md)

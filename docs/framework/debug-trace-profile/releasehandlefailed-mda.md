@@ -12,23 +12,23 @@ helpviewer_keywords:
 ms.assetid: 44cd98ba-95e5-40a1-874d-e8e163612c51
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 69dea1adb2d751b44f6c8bc529353ff78cad60ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3b149a9b8ee41f5e196fd69258044f9b6563cb99
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54673050"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217878"
 ---
 # <a name="releasehandlefailed-mda"></a>releaseHandleFailed MDA
 Помощник по отладке управляемого кода (MDA) `releaseHandleFailed` активируется для уведомления разработчиков, когда метод <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> класса, производного от <xref:System.Runtime.InteropServices.SafeHandle> или <xref:System.Runtime.InteropServices.CriticalHandle>, возвращает значение `false`.  
   
-## <a name="symptoms"></a>Признаки  
+## <a name="symptoms"></a>Симптомы  
  Утечки памяти или ресурсов  Если метод <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> класса, производного от <xref:System.Runtime.InteropServices.SafeHandle> или <xref:System.Runtime.InteropServices.CriticalHandle> завершается с ошибкой, то ресурс, инкапсулированный этим классом, может быть не освобожден или не очищен.  
   
 ## <a name="cause"></a>Причина  
  Пользователи должны предоставить реализацию метода <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>, если они создают классы, производные от <xref:System.Runtime.InteropServices.SafeHandle> или <xref:System.Runtime.InteropServices.CriticalHandle>; таким образом, эти обстоятельства характерны для отдельных ресурсов. Однако действуют следующие требования.  
   
--   Типы <xref:System.Runtime.InteropServices.SafeHandle> и <xref:System.Runtime.InteropServices.CriticalHandle> представляют оболочки важных ресурсов процессов. Утечка памяти может со временем сделать процесс непригодным для использования.  
+-   <xref:System.Runtime.InteropServices.SafeHandle> и <xref:System.Runtime.InteropServices.CriticalHandle> типы представляют оболочки важных ресурсов процессов. Утечка памяти может со временем сделать процесс непригодным для использования.  
   
 -   Метод <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> должен работать без сбоев для выполнения своих функций. Когда процесс запрашивает такой ресурс, метод <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> является единственным способом для его освобождения. Таким образом, ошибка подразумевает утечку ресурсов.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "54673050"
  Этот помощник отладки управляемого кода не оказывает никакого влияния на среду CLR.  
   
 ## <a name="output"></a>Вывод  
- Сообщение, указывающее, что <xref:System.Runtime.InteropServices.SafeHandle> или <xref:System.Runtime.InteropServices.CriticalHandle> не удалось должным образом освободить дескриптор. Например:  
+ Сообщение, указывающее, что <xref:System.Runtime.InteropServices.SafeHandle> или <xref:System.Runtime.InteropServices.CriticalHandle> не удалось должным образом освободить дескриптор. Пример:  
   
 ```  
 "A SafeHandle or CriticalHandle of type 'MyBrokenSafeHandle'   
@@ -63,7 +63,7 @@ another means (such as extracting the handle using DangerousGetHandle
 and closing it directly or building another SafeHandle around it."  
 ```  
   
-## <a name="configuration"></a>Конфигурация  
+## <a name="configuration"></a>Параметр Configuration  
   
 ```xml  
 <mdaConfig>  
@@ -91,6 +91,7 @@ bool ReleaseHandle()
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Диагностика ошибок посредством помощников по отладке управляемого кода](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Диагностика ошибок посредством управляемых помощников по отладке](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
 - [Маршалинг взаимодействия](../../../docs/framework/interop/interop-marshaling.md)

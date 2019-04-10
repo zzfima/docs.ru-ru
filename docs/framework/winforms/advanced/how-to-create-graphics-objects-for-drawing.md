@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Создание объектов Graphics для рисования
+title: Практическое руководство. Создание графических объектов для рисования
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
-ms.openlocfilehash: e609fbff29d058c04a839a5dcb79aab16a518298
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 5682b2f0183cbeb8bae377423bb76caa0fbaf7cb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709059"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223632"
 ---
-# <a name="how-to-create-graphics-objects-for-drawing"></a>Практическое руководство. Создание объектов Graphics для рисования
+# <a name="how-to-create-graphics-objects-for-drawing"></a>Практическое руководство. Создание графических объектов для рисования
 Перед тем как рисовать линии и фигуры, отображать текст или изображения и управлять ими с помощью [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], необходимо создать объект <xref:System.Drawing.Graphics>. <xref:System.Drawing.Graphics> представляет поверхность для рисования [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] и является объектом, который используется для создания графических изображений.  
   
  Работа с графикой состоит из двух этапов:  
@@ -165,13 +165,14 @@ ms.locfileid: "57709059"
   
     |Для отрисовки|См.|  
     |---------------|---------|  
-    |Прямых линий|[Практическое руководство. Нарисовать линию в форме Windows](how-to-draw-a-line-on-a-windows-form.md)|  
-    |Фигур|[Практическое руководство. Рисование контурной фигуры](how-to-draw-an-outlined-shape.md)|  
-    |Текста|[Практическое руководство. Рисование текста в форме Windows](how-to-draw-text-on-a-windows-form.md)|  
-    |Изображений|[Практическое руководство. Вывод изображений с использованием GDI +](how-to-render-images-with-gdi.md)|  
+    |Прямых линий|[Практическое руководство. Рисований линий в Windows Forms](how-to-draw-a-line-on-a-windows-form.md)|  
+    |Фигур|[Практическое руководство. Рисование линии или контурной фигуры](how-to-draw-an-outlined-shape.md)|  
+    |Текста|[Практическое руководство. Отрисовка текста в Windows Forms](how-to-draw-text-on-a-windows-form.md)|  
+    |Изображений|[Практическое руководство. Отрисовка изображений с использованием GDI+](how-to-render-images-with-gdi.md)|  
   
 ## <a name="see-also"></a>См. также
+
 - [Приступая к программированию графики](getting-started-with-graphics-programming.md)
 - [Объекты Graphics и Drawing в Windows Forms](graphics-and-drawing-in-windows-forms.md)
-- [Линии, кривые и фигуры](lines-curves-and-shapes.md)
-- [Практическое руководство. Вывод изображений с использованием GDI +](how-to-render-images-with-gdi.md)
+- [Прямые и кривые линии и фигуры](lines-curves-and-shapes.md)
+- [Практическое руководство. Отрисовка изображений с использованием GDI+](how-to-render-images-with-gdi.md)

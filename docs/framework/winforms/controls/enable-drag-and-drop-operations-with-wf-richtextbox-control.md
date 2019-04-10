@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Включение операций перетаскивания и вставки с помощью элемента управления RichTextBox в Windows Forms
+title: Практическое руководство. Разрешение операций перетаскивания для элемента управления RichTextBox в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - text boxes [Windows Forms], drag-and-drop operations
 - RichTextBox control [Windows Forms], drag-and-drop operations
 ms.assetid: ca167d1c-2014-4cf0-96a0-20598470be3b
-ms.openlocfilehash: ead61b4b889119b47675e49bc95e9631a8ad664e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: e61f7743d984d99b1c6811cb1980b97705c304a9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711009"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223965"
 ---
-# <a name="how-to-enable-drag-and-drop-operations-with-the-windows-forms-richtextbox-control"></a>Практическое руководство. Включение операций перетаскивания и вставки с помощью элемента управления RichTextBox в Windows Forms
+# <a name="how-to-enable-drag-and-drop-operations-with-the-windows-forms-richtextbox-control"></a>Практическое руководство. Разрешение операций перетаскивания для элемента управления RichTextBox в Windows Forms
 Операции перетаскивания для элемента управления <xref:System.Windows.Forms.RichTextBox> Windows Forms выполняются путем обработки событий <xref:System.Windows.Forms.RichTextBox.DragEnter> и <xref:System.Windows.Forms.RichTextBox.DragDrop> . Таким образом, операции перетаскивания для элемента управления <xref:System.Windows.Forms.RichTextBox> являются очень простыми.  
   
 ### <a name="to-enable-drag-operations-in-a-richtextbox-control"></a>Включение операций перетаскивания в элементе управления RichTextBox  
@@ -165,7 +165,8 @@ ms.locfileid: "57711009"
      После отпускания кнопки мыши выделенный текст удаляется (то есть инициируется событие <xref:System.Windows.Forms.RichTextBox.DragDrop> ) и вставляется в элемент управления <xref:System.Windows.Forms.RichTextBox> .  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.RichTextBox>
-- [Практическое руководство. Выполнение операции перетаскивания и вставки между приложениями](../advanced/how-to-perform-drag-and-drop-operations-between-applications.md)
+- [Практическое руководство. Выполнение операции перетаскивания между приложениями](../advanced/how-to-perform-drag-and-drop-operations-between-applications.md)
 - [Элемент управления RichTextBox](richtextbox-control-windows-forms.md)
-- [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)
+- [Элементы управления для использования в формах Windows Forms](controls-to-use-on-windows-forms.md)

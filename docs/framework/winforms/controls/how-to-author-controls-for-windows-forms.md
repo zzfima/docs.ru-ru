@@ -1,19 +1,19 @@
 ---
-title: Практическое руководство. Автор элементы управления для форм Windows Forms
+title: Практическое руководство. Создание элементов управления для форм Windows Forms
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], creating
 - UserControl class [Windows Forms], Windows Forms
 - custom controls [Windows Forms], creating
 ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
-ms.openlocfilehash: 38416f28546f2aebc04d9ecf2c6995282b4720b8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 5240b9aaaf4d73cb2899a9003f9658dbd8958f3c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713423"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224342"
 ---
-# <a name="how-to-author-controls-for-windows-forms"></a>Практическое руководство. Автор элементы управления для форм Windows Forms
+# <a name="how-to-author-controls-for-windows-forms"></a>Практическое руководство. Создание элементов управления для форм Windows Forms
 Элемент управления выполняет роль визуальной связи между пользователем и программой. Он может предоставлять или обрабатывать данные, принимать входные данные пользователя, реагировать на события или выполнять любые другие функции, устанавливающие связь между пользователем и приложением. Поскольку элемент управления — это по сути компонент с графическим интерфейсом, он может выполнять любую функцию компонента и в то же время обеспечивать взаимодействие с пользователем. Элементы управления создаются для конкретных целей, и процесс их создания входит в процесс программирования. Ниже описан процесс создания элемента управления с учетом всего вышесказанного. Ссылки указывают на дополнительные сведения об отдельных этапах.  
   
 > [!NOTE]
@@ -52,10 +52,11 @@ ms.locfileid: "57713423"
 10. Упакуйте и разверните элемент управления. Дополнительные сведения см. в разделе [Общие сведения о развертывании в Visual Studio](/visualstudio/deployment/deploying-applications-services-and-components).  
   
 ## <a name="see-also"></a>См. также
-- [Пошаговое руководство: Создание составного элемента управления с помощью Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [Пошаговое руководство: Наследование элементов управления Windows Forms с помощью Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
+
+- [Пошаговое руководство. Создание составного элемента управления с помощью Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [Пошаговое руководство. Наследование элементов управления Windows Forms с помощью Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
 - [Практическое руководство. Наследование класса UserControl](how-to-inherit-from-the-usercontrol-class.md)
-- [Практическое руководство. Наследовать от класса Control](how-to-inherit-from-the-control-class.md)
-- [Практическое руководство. Наследование Windows существующих элементов управления формы](how-to-inherit-from-existing-windows-forms-controls.md)
-- [Практическое руководство. Тестирование во время выполнения поведения элемента UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
-- [Разновидности пользовательских элементов управления](varieties-of-custom-controls.md)
+- [Практическое руководство. Наследование класса Control](how-to-inherit-from-the-control-class.md)
+- [Практическое руководство. Наследование существующих элементов управления Windows Forms](how-to-inherit-from-existing-windows-forms-controls.md)
+- [Практическое руководство. Тестирование поведения элемента UserControl во время выполнения](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+- [Создание собственных элементов управления](varieties-of-custom-controls.md)

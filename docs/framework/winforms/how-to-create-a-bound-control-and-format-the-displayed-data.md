@@ -6,12 +6,12 @@ helpviewer_keywords:
 - bound controls [Windows Forms], creating
 - bound controls [Windows Forms], formatting data
 ms.assetid: d5a56228-899d-41d9-8af8-87b3f4ec2f94
-ms.openlocfilehash: 8b1256c1389c6a55f405f0be0d137a8ad170dbec
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 0f56fc5fa345cbe4584b61ae2622dfb0dfb35be8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710502"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225538"
 ---
 # <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>Практическое руководство. Создание связанного элемента управления и форматирование отображаемых данных
 С помощью привязки данных Windows Forms можно форматировать данные, отображаемые в элементе управления с привязкой к данным с помощью **форматирование и дополнительная привязка** диалоговое окно.  
@@ -55,6 +55,7 @@ ms.locfileid: "57710502"
 8.  Нажмите кнопку **ОК** закрыть **форматирование и дополнительная привязка** диалоговое окно и вернуться в окне «Свойства».  
   
 ## <a name="see-also"></a>См. также
-- [Практическое руководство. Создание элемента управления простой привязкой в форме Windows](how-to-create-a-simple-bound-control-on-a-windows-form.md)
+
+- [Практическое руководство. Создание элемента управления с простой привязкой в форме Windows Forms](how-to-create-a-simple-bound-control-on-a-windows-form.md)
 - [Проверка введенных пользователем данных в Windows Forms](user-input-validation-in-windows-forms.md)
 - [Привязка данных Windows Forms](windows-forms-data-binding.md)

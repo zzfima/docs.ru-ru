@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], interfaces
 - IDataErrorInfo interface [Windows Forms], Windows Forms data binding
 ms.assetid: 14e49a2e-3e46-47ca-b491-70d546333277
-ms.openlocfilehash: ec72b67da72bde9392d523787e8c0d4d0981ad7b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ffda85b2704212ea5323117447e0cfe17ffb33db
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703541"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226972"
 ---
 # <a name="interfaces-related-to-data-binding"></a>Интерфейсы, относящиеся к привязке данных
 С помощью [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] можно создать различные структуры данных в соответствии с требованиями привязки приложения и данных, с которыми приходится работать. Можно создать собственные классы, которые предоставляют или используют данные в Windows Forms. Такие объекты могут предоставлять функциональные возможности и обеспечивать сложность различного уровня, такие как базовая привязка данных, поддержка на этапе разработки, проверка ошибок, уведомление об изменениях или даже поддержка структурированного отката изменений, внесенных в сами данные.  
@@ -28,14 +28,14 @@ ms.locfileid: "57703541"
 ### <a name="interfaces-for-implementation-by-data-source-authors"></a>Интерфейсы для реализации авторами источников данных  
  Следующие интерфейсы предназначены для использования элементами управления Windows Forms.  
   
--   <xref:System.Collections.IList> Интерфейс  
+-   <xref:System.Collections.IList> интерфейс  
   
      Класс, реализующий <xref:System.Collections.IList> интерфейс может быть <xref:System.Array>, <xref:System.Collections.ArrayList>, или <xref:System.Collections.CollectionBase>. Они представляют собой индексированные списки элементов типа <xref:System.Object>. Эти списки должны содержать однородные типы, так как первый элемент индекса определяет тип. <xref:System.Collections.IList> будут доступны для привязки только во время выполнения.  
   
     > [!NOTE]
     >  Если вы хотите создать список бизнес-объектов для привязки с Windows Forms, следует рассмотреть возможность использования <xref:System.ComponentModel.BindingList%601>. <xref:System.ComponentModel.BindingList%601> Представляет собой расширяемый класс, реализующий основные интерфейсы, необходимые для двусторонней привязки данных Windows Forms.  
   
--   <xref:System.ComponentModel.IBindingList> Интерфейс  
+-   <xref:System.ComponentModel.IBindingList> интерфейс  
   
      Класс, реализующий <xref:System.ComponentModel.IBindingList> интерфейс обеспечивает более высокого уровня возможностей привязки данных. Благодаря данной реализации у вас есть основные возможности сортировки и уведомлений об изменении как при изменении элементов списка (например, третий элемент в списке заказчиков имеет изменения в поле адреса), так и при изменении самого списка (например, увеличение или уменьшение числа элементов в списке). Уведомление об изменении важно, если вы планируете использовать несколько элементов управления, привязанных к одним и тем же данным, и необходимо, чтобы изменения данных, сделанные в одном из элементов управления, распространялись в другие привязанные элементы управления.  
   
@@ -47,11 +47,11 @@ ms.locfileid: "57703541"
     > [!NOTE]
     >  <xref:System.ComponentModel.BindingList%601> Предоставляет универсальную реализацию <xref:System.ComponentModel.IBindingList> интерфейс.  
   
--   <xref:System.ComponentModel.IBindingListView> Интерфейс  
+-   <xref:System.ComponentModel.IBindingListView> интерфейс  
   
      Класс, реализующий <xref:System.ComponentModel.IBindingListView> интерфейс предоставляет все функциональные возможности реализации <xref:System.ComponentModel.IBindingList>, а также как фильтрации и дополнительные возможности сортировки. Такая реализация обеспечивает фильтрацию на основе строк и сортировку по нескольким столбцам с помощью пары "дескриптор свойства-направление".  
   
--   <xref:System.ComponentModel.IEditableObject> Интерфейс  
+-   <xref:System.ComponentModel.IEditableObject> интерфейс  
   
      Класс, реализующий <xref:System.ComponentModel.IEditableObject> интерфейс обеспечивает связь объекта с целью управления, когда изменения в данном объекте становятся постоянными. Данная реализация предоставляет <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>, <xref:System.ComponentModel.IEditableObject.EndEdit%2A>, и <xref:System.ComponentModel.IEditableObject.CancelEdit%2A> методы, позволяющие выполнять откат изменений, внесенных в объект. Ниже приводится краткое объяснение работы методов <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>, <xref:System.ComponentModel.IEditableObject.EndEdit%2A>, и <xref:System.ComponentModel.IEditableObject.CancelEdit%2A> методы и как они работают в сочетании друг с другом для обеспечения отката изменений, внесенных в данные:  
   
@@ -65,11 +65,11 @@ ms.locfileid: "57703541"
   
      Такой транзакционный характер функциональных возможностей данных используется <xref:System.Windows.Forms.DataGridView> элемента управления.  
   
--   <xref:System.ComponentModel.ICancelAddNew> Интерфейс  
+-   <xref:System.ComponentModel.ICancelAddNew> интерфейс  
   
      Класс, реализующий <xref:System.ComponentModel.ICancelAddNew> обычно реализует интерфейс <xref:System.ComponentModel.IBindingList> интерфейса и позволяет выполнять откат добавлений, сделанных в источнике данных с помощью <xref:System.ComponentModel.IBindingList.AddNew%2A> метод. Если источник данных реализует <xref:System.ComponentModel.IBindingList> интерфейс, вы также должны реализовать <xref:System.ComponentModel.ICancelAddNew> интерфейс.  
   
--   <xref:System.ComponentModel.IDataErrorInfo> Интерфейс  
+-   <xref:System.ComponentModel.IDataErrorInfo> интерфейс  
   
      Класс, реализующий <xref:System.ComponentModel.IDataErrorInfo> интерфейс позволяет объектам предоставлять пользовательские сведения об ошибках в привязанные элементы управления:  
   
@@ -77,39 +77,39 @@ ms.locfileid: "57703541"
   
     -   <xref:System.ComponentModel.IDataErrorInfo.Item%2A> Свойство возвращает строку с сообщение об ошибке из столбца (например, «значение в `State` столбец является недопустимым»).  
   
--   <xref:System.Collections.IEnumerable> Интерфейс  
+-   <xref:System.Collections.IEnumerable> интерфейс  
   
      Класс, реализующий <xref:System.Collections.IEnumerable> интерфейс, обычно используется в [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]. Поддержка Windows Forms для этого интерфейса можно получить только через <xref:System.Windows.Forms.BindingSource> компонента.  
   
     > [!NOTE]
     >  <xref:System.Windows.Forms.BindingSource> Компонент копирует все <xref:System.Collections.IEnumerable> элементы в отдельном списке исключительно для привязки.  
   
--   <xref:System.ComponentModel.ITypedList> Интерфейс  
+-   <xref:System.ComponentModel.ITypedList> интерфейс  
   
      Класс коллекции, реализующий <xref:System.ComponentModel.ITypedList> интерфейс предоставляет возможность управлять порядком и набор свойств, доступных привязанного элемента управления.  
   
     > [!NOTE]
     >  При реализации <xref:System.ComponentModel.ITypedList.GetItemProperties%2A> метод и <xref:System.ComponentModel.PropertyDescriptor> массива не равно null, последней записи в массиве будет дескриптором свойства, описывающим свойство списка, который является другим списком элементов.  
   
--   <xref:System.ComponentModel.ICustomTypeDescriptor> Интерфейс  
+-   <xref:System.ComponentModel.ICustomTypeDescriptor> интерфейс  
   
      Класс, реализующий <xref:System.ComponentModel.ICustomTypeDescriptor> интерфейс предоставляет динамические сведения о себе. Этот интерфейс аналогичен <xref:System.ComponentModel.ITypedList> , но используется для объектов, а не списки. Этот интерфейс используется <xref:System.Data.DataRowView> для проецирования схемы основных строк. Простая реализация <xref:System.ComponentModel.ICustomTypeDescriptor> обеспечивается <xref:System.ComponentModel.CustomTypeDescriptor> класса.  
   
     > [!NOTE]
     >  Для поддержки привязки во время разработки, чтобы типы, реализующие <xref:System.ComponentModel.ICustomTypeDescriptor>, тип должен также реализовывать <xref:System.ComponentModel.IComponent> и существовать в качестве экземпляра формы.  
   
--   <xref:System.ComponentModel.IListSource> Интерфейс  
+-   <xref:System.ComponentModel.IListSource> интерфейс  
   
      Класс, реализующий <xref:System.ComponentModel.IListSource> интерфейс позволяет привязку на основе списка не из списка объектов. <xref:System.ComponentModel.IListSource.GetList%2A> Метод <xref:System.ComponentModel.IListSource> используется для возврата привязываемого списка из объекта, который не является производным от <xref:System.Collections.IList>. <xref:System.ComponentModel.IListSource> используется <xref:System.Data.DataSet> класса.  
   
--   <xref:System.ComponentModel.IRaiseItemChangedEvents> Интерфейс  
+-   <xref:System.ComponentModel.IRaiseItemChangedEvents> интерфейс  
   
      Класс, реализующий <xref:System.ComponentModel.IRaiseItemChangedEvents> интерфейс представляет собой привязываемый список, который также реализует <xref:System.ComponentModel.IBindingList> интерфейс. Этот интерфейс используется для указания того, если ваш тип вызывает <xref:System.ComponentModel.IBindingList.ListChanged> события типа <xref:System.ComponentModel.ListChangedType.ItemChanged> через его <xref:System.ComponentModel.IRaiseItemChangedEvents.RaisesItemChangedEvents%2A> свойство.  
   
     > [!NOTE]
     >  Следует реализовать <xref:System.ComponentModel.IRaiseItemChangedEvents> Если источник данных предоставляет свойство описанное ранее преобразование списка и взаимодействует с <xref:System.Windows.Forms.BindingSource> компонента. В противном случае <xref:System.Windows.Forms.BindingSource> также будет выполнять преобразование свойства в список событий приводит к снижению производительности.  
   
--   <xref:System.ComponentModel.ISupportInitialize> Интерфейс  
+-   <xref:System.ComponentModel.ISupportInitialize> интерфейс  
   
      Компонент, реализующий <xref:System.ComponentModel.ISupportInitialize> интерфейс, использует возможности пакетной оптимизации для задания свойств и инициализации взаимозависимых свойств. <xref:System.ComponentModel.ISupportInitialize> Содержит два метода:  
   
@@ -117,7 +117,7 @@ ms.locfileid: "57703541"
   
     -   <xref:System.ComponentModel.ISupportInitialize.EndInit%2A> подает сигнал о завершении инициализации этого объекта.  
   
--   <xref:System.ComponentModel.ISupportInitializeNotification> Интерфейс  
+-   <xref:System.ComponentModel.ISupportInitializeNotification> интерфейс  
   
      Компонент, реализующий <xref:System.ComponentModel.ISupportInitializeNotification> также интерфейс реализует <xref:System.ComponentModel.ISupportInitialize> интерфейс. Этот интерфейс позволяет уведомлять другие <xref:System.ComponentModel.ISupportInitialize> компоненты завершении инициализации. <xref:System.ComponentModel.ISupportInitializeNotification> Интерфейс содержит два члена:  
   
@@ -125,7 +125,7 @@ ms.locfileid: "57703541"
   
     -   <xref:System.ComponentModel.ISupportInitializeNotification.Initialized> Происходит при <xref:System.ComponentModel.ISupportInitialize.EndInit%2A> вызывается.  
   
--   <xref:System.ComponentModel.INotifyPropertyChanged> Интерфейс  
+-   <xref:System.ComponentModel.INotifyPropertyChanged> интерфейс  
   
      Класс, реализующий этот интерфейс, представляет собой тип, который вызывает событие при изменении любого значения его свойств. Этот интерфейс предназначен для замены шаблона, в рамках которого имеется отдельное событие изменения для каждого свойства элемента управления. При использовании в <xref:System.ComponentModel.BindingList%601>, следует реализовать бизнес-объект <xref:System.ComponentModel.INotifyPropertyChanged> интерфейс, а BindingList\`1 будет преобразовывать <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> событий <xref:System.ComponentModel.BindingList%601.ListChanged> события типа <xref:System.ComponentModel.ListChangedType.ItemChanged>.  
   
@@ -135,14 +135,14 @@ ms.locfileid: "57703541"
 ### <a name="interfaces-for-implementation-by-component-authors"></a>Интерфейсы для реализации авторами компонентов  
  Перечисленные ниже интерфейсы предназначены для использования модулем привязки данных в Windows Forms.  
   
--   <xref:System.Windows.Forms.IBindableComponent> Интерфейс  
+-   <xref:System.Windows.Forms.IBindableComponent> интерфейс  
   
      Класс, реализующий этот интерфейс, является компонентом без элемента управления, который поддерживает привязку данных. Этот класс возвращает привязки данных и контекст привязки компонента через <xref:System.Windows.Forms.IBindableComponent.DataBindings%2A> и <xref:System.Windows.Forms.IBindableComponent.BindingContext%2A> свойства этого интерфейса.  
   
     > [!NOTE]
     >  Если компонент наследуется от <xref:System.Windows.Forms.Control>, необходимо реализовать <xref:System.Windows.Forms.IBindableComponent> интерфейс.  
   
--   <xref:System.Windows.Forms.ICurrencyManagerProvider> Интерфейс  
+-   <xref:System.Windows.Forms.ICurrencyManagerProvider> интерфейс  
   
      Класс, реализующий <xref:System.Windows.Forms.ICurrencyManagerProvider> интерфейс — это компонент, который предоставляет собственный <xref:System.Windows.Forms.CurrencyManager> для управления привязками, связанными с данным конкретным компонентом. Доступ к пользовательскому <xref:System.Windows.Forms.CurrencyManager> обеспечивается <xref:System.Windows.Forms.ICurrencyManagerProvider.CurrencyManager%2A> свойство.  
   
@@ -150,6 +150,7 @@ ms.locfileid: "57703541"
     >  Класс, наследуемый от <xref:System.Windows.Forms.Control> управляет привязками автоматически посредством его <xref:System.Windows.Forms.Control.BindingContext%2A> свойство, поэтому случаев, в которых необходимо реализовать <xref:System.Windows.Forms.ICurrencyManagerProvider> довольно редки.  
   
 ## <a name="see-also"></a>См. также
-- [Привязка данных и Windows Forms](data-binding-and-windows-forms.md)
-- [Практическое руководство. Создание элемента управления простой привязкой в форме Windows](how-to-create-a-simple-bound-control-on-a-windows-form.md)
+
+- [Связывание данных и Windows Forms](data-binding-and-windows-forms.md)
+- [Практическое руководство. Создание элемента управления с простой привязкой в форме Windows Forms](how-to-create-a-simple-bound-control-on-a-windows-form.md)
 - [Привязка данных Windows Forms](windows-forms-data-binding.md)

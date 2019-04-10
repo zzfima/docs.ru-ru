@@ -6,18 +6,16 @@ helpviewer_keywords:
 - documents [WPF], storage
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
-ms.openlocfilehash: fbdd04f40c1d4a29ff1807b8a2760802b0338cb3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 519d3aa218fca734a9159503b4107bdbcfc31652
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379696"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215954"
 ---
 # <a name="document-serialization-and-storage"></a>Сериализация и хранение документов
 Microsoft .NET Framework предоставляет мощную среду для создания и отображения документов высокого качества.  Улучшенные возможности, поддерживающие фиксированные и потоковые документы, улучшенные элементы управления просмотром в сочетании с мощными возможностями двумерной и трехмерной графики позволяют вывести приложения .NET Framework на новый уровень качества и взаимодействия с пользователем.  Возможность гибко управлять представлением документа в памяти является ключевой функцией программы .NET Framework, а также возможность эффективно сохранять и загружать документы из хранилища данных необходима практически во всех приложениях.  Процесс преобразования документа из внутреннего представления в памяти во внешнее хранилище данных называется сериализацией.  Обратный процесс чтения хранилища данных и воссоздания исходного экземпляра в памяти называется десериализацией.  
-  
- 
-  
+
 <a name="AboutSerialization"></a>   
 ## <a name="about-document-serialization"></a>О сериализации документов  
  В идеальном случае процесс сериализации и десериализации документа из памяти и в память прозрачен для приложения.  Приложение вызывает метод write сериализатора для сохранения документа, в то время как метод read десериализатора осуществляет доступ к хранилищу данных и воссоздает исходный экземпляр в памяти.  Как правило, формат хранения данных не имеет значения для приложения при условии, что в процессе сериализации и десериализации воссоздается документ в исходной форме.  
@@ -41,7 +39,7 @@ Microsoft .NET Framework предоставляет мощную среду дл
     -   Поддержка интерфейса пользователя для пользовательских параметров и настроек среды выполнения.  
   
 ### <a name="xps-print-path"></a>Способ печати XPS  
- Microsoft .NET Framework [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] способ печати также предоставляет расширяемый механизм записи документов посредством вывода на печать.  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] служит как формат файла документа и имеет собственный формат очереди печати для [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)].  Документы [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] можно отправлять непосредственно на совместимые с [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] принтеры, без преобразования в промежуточный формат.  См. дополнительные сведения о параметрах и возможностях вывода пути печати в разделе [Общие сведения о печати](printing-overview.md).  
+ Microsoft .NET Framework [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] способ печати также предоставляет расширяемый механизм записи документов посредством вывода на печать.  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] служит как формат файла документа и имеет собственный формат очереди печати для [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)].  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] документы можно отправлять непосредственно на [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-совместимым принтерам без необходимости для преобразования в промежуточный формат.  См. дополнительные сведения о параметрах и возможностях вывода пути печати в разделе [Общие сведения о печати](printing-overview.md).  
   
 <a name="PluginSerializers"></a>   
 ## <a name="plug-in-serializers"></a>Подключаемые сериализаторы  
@@ -50,7 +48,7 @@ Microsoft .NET Framework предоставляет мощную среду дл
  Подключаемые сериализаторы помогают разработчикам приложений, обеспечивая расширяемость новых проектируемых систем хранения и файловых форматов и избавляя от необходимости создавать код напрямую для каждого потенциального формата во время создания.  Подключаемые сериализаторы помогают и сторонним разработчикам, предоставляя стандартизированные средства развертывания, установки и обновления доступных системе подключаемых модулей для пользовательских или собственных форматов файлов.  
   
 ### <a name="using-a-plug-in-serializer"></a>Использование подключаемого сериализатора  
- Использовать подключаемые сериализаторы достаточно просто.  <xref:System.Windows.Documents.Serialization.SerializerProvider> Перечисляет класс <xref:System.Windows.Documents.Serialization.SerializerDescriptor> объекта для каждого подключаемого модуля установлена в системе.  <xref:System.Windows.Documents.Serialization.SerializerDescriptor.IsLoadable%2A> Свойство фильтрует установленные подключаемые модули, на основе текущей конфигурации и проверяет, что сериализатор можно загружать и используемые приложением.  <xref:System.Windows.Documents.Serialization.SerializerDescriptor> Также предоставляет другие свойства, такие как <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DisplayName%2A> и <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DefaultFileExtension%2A>, который приложение может использовать, чтобы предложить пользователю выбрать сериализатор для доступного формата вывода.  Подключаемый модуль сериализатора по умолчанию для [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] входит в состав .NET Framework и всегда перечисляется.  После выбора пользователем формата для вывода, <xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A> метод используется для создания <xref:System.Windows.Documents.Serialization.SerializerWriter> для заданного формата.  Языковой элемент <xref:System.Windows.Documents.Serialization.SerializerWriter>.<xref:System.Windows.Documents.Serialization.SerializerWriter.Write%2A> Затем, метод может вызываться для вывода потока документов в хранилище данных.  
+ Использовать подключаемые сериализаторы достаточно просто.  <xref:System.Windows.Documents.Serialization.SerializerProvider> Перечисляет класс <xref:System.Windows.Documents.Serialization.SerializerDescriptor> объекта для каждого подключаемого модуля установлена в системе.  <xref:System.Windows.Documents.Serialization.SerializerDescriptor.IsLoadable%2A> Свойство фильтрует установленные подключаемые модули, на основе текущей конфигурации и проверяет, что сериализатор можно загружать и используемые приложением.  <xref:System.Windows.Documents.Serialization.SerializerDescriptor> Также предоставляет другие свойства, такие как <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DisplayName%2A> и <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DefaultFileExtension%2A>, который приложение может использовать, чтобы предложить пользователю выбрать сериализатор для доступного формата вывода.  Подключаемый модуль сериализатора по умолчанию для [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] входит в состав .NET Framework и всегда перечисляется.  После выбора пользователем формата для вывода, <xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A> метод используется для создания <xref:System.Windows.Documents.Serialization.SerializerWriter> для заданного формата.  <xref:System.Windows.Documents.Serialization.SerializerWriter>.<xref:System.Windows.Documents.Serialization.SerializerWriter.Write%2A> Затем, метод может вызываться для вывода потока документов в хранилище данных.  
   
  В следующем примере показано приложение, использующее <xref:System.Windows.Documents.Serialization.SerializerProvider> метод в свойстве «Свойство PlugInFileFilter».  Свойство PlugInFileFilter перечисляет установленные подключаемые модули и создает строку фильтра с доступными файловыми параметрами для <xref:Microsoft.Win32.SaveFileDialog>.  
   
@@ -74,9 +72,10 @@ Microsoft .NET Framework предоставляет мощную среду дл
 3.  После создания подключаемого сериализатора сценарий установки реализуется для распространения и установки (и удаления) подключаемого модуля (см. [Установка подключаемых сериализаторов](#InstallingPluginSerializers) выше).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Documents.Serialization>
 - <xref:System.Windows.Xps.XpsDocumentWriter>
 - <xref:System.Windows.Xps.Packaging.XpsDocument>
 - [Документы в WPF](documents-in-wpf.md)
 - [Общие сведения о печати](printing-overview.md)
-- [XML Paper Specification: обзор](https://go.microsoft.com/fwlink?LinkID=106246)
+- [XML Paper Specification: Обзор](https://go.microsoft.com/fwlink?LinkID=106246)

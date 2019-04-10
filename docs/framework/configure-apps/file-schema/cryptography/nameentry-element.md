@@ -1,5 +1,5 @@
 ---
-title: Элемент <nameEntry>
+title: <nameEntry> Элемент
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#nameEntry
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <nameEntry> element
 - nameEntry element
 ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
-ms.openlocfilehash: b5f92ca2956f32382b12c9a1dec4e5d41ea4ee2a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 97521ba9073820beeea62f5fc7cab480b5422fb0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55285939"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225330"
 ---
 # <a name="nameentry-element"></a>\<nameEntry > элемент
 Сопоставляет имя класса с понятным именем алгоритма, что позволяет одному классу иметь несколько понятных имен.  
@@ -37,15 +37,15 @@ ms.locfileid: "55285939"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|**name**|Обязательный атрибут.<br /><br /> Указывает понятное имя алгоритма, который реализует криптографический класс.|  
-|**class**|Обязательный атрибут.<br /><br /> Указывает значение для **имя** атрибут в [ \<cryptoClass >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) элемент.|  
+|**имя**|Обязательный атрибут.<br /><br /> Указывает понятное имя алгоритма, который реализует криптографический класс.|  
+|**класс**|Обязательный атрибут.<br /><br /> Указывает значение для **имя** атрибут в [ \<cryptoClass >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) элемент.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
  Отсутствует.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`system.web`|Задает корневой элемент для раздела конфигурации ASP.NET.|  
@@ -76,7 +76,8 @@ ms.locfileid: "55285939"
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Схема параметров шифрования](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
+- [Схема параметров криптографии](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [службы шифрования](../../../../../docs/standard/security/cryptographic-services.md)
 - [Настройка криптографических классов](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

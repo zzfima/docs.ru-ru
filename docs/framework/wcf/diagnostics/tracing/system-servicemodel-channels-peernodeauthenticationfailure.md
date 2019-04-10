@@ -2,17 +2,17 @@
 title: System.ServiceModel.Channels.PeerNodeAuthenticationFailure
 ms.date: 03/30/2017
 ms.assetid: 0b50f782-ca06-4a82-aa7f-71f78ddc5177
-ms.openlocfilehash: 1ed037c548f1d833f2a20118ee1e017cd19e3391
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 315122914ebcb3e8e4d72c8d976026a126306168
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628244"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219009"
 ---
 # <a name="systemservicemodelchannelspeernodeauthenticationfailure"></a>System.ServiceModel.Channels.PeerNodeAuthenticationFailure
 Подтверждение безопасности с потенциальным соседним узлом завершилось неуспешно.  
   
-## <a name="description"></a>Описание:  
+## <a name="description"></a>Описание  
  Эта трассировка возникает при попытке установить безопасное соединение с соседним узлом. Это может произойти из-за недостаточных или неправильных учетных данных.  
   
  PeerChannel распознает один тип маркеров для строгой идентификации (сертификаты X.509), что обеспечивает строгую модель удостоверения, зависящую от типа проверки подлинности и авторизации, который может быть реализован. PeerChannel также обеспечивает поддержку простых приложений посредством использования паролей. Пароли могут использоваться только для разрешения входа в сеанс; их нельзя использовать для проверки подлинности сообщений. Это связано с тем, что симметричный маркер, общий для участников одноранговой группы, сложно (и не следует) использовать для проверки подлинности источника.  
@@ -21,6 +21,7 @@ ms.locfileid: "54628244"
  Обеспечьте, чтобы все соседние узлы имели соответствующие учетные данные безопасности.  
   
 ## <a name="see-also"></a>См. также
+
 - [Безопасность одноранговых каналов](../../../../../docs/framework/wcf/feature-details/peer-channel-security.md)
 - [Трассировка](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [Использование трассировки для устранения неполадок приложения](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)

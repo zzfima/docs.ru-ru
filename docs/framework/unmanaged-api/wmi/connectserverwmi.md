@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 548c6007d4ed685c521676de87c5a98f56a222a4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8786892d591a98ddcd7f51eddf86fdbcf50f2197
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376992"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214875"
 ---
 # <a name="connectserverwmi-function"></a>Функция ConnectServerWmi
 Создает подключение через DCOM к пространству имен WMI на указанном компьютере.
@@ -61,7 +61,7 @@ HRESULT ConnectServerWmi (
 `lSecurityFlags`\
 [in] Флаги для передачи `ConnectServerWmi` метод. Значение ноль (0) для этого параметра приводит к вызов `ConnectServerWmi` возвращение только после того, как установлено подключение к серверу. В итоге приложение не отвечает на неопределенное время, является ли сервер работает. Другими допустимыми значениями являются:
 
-| Константа  | Значение  | Описание:  |
+| Константа  | Значение  | Описание  |
 |---------|---------|---------|
 | `CONNECT_REPOSITORY_ONLY` | 0x40 | Зарезервировано для внутреннего использования. Не используется. |
 | `WBEM_FLAG_CONNECT_USE_MAX_WAIT` | 0x80 | `ConnectServerWmi` Возвращает за две минуты или меньше. |
@@ -91,7 +91,7 @@ HRESULT ConnectServerWmi (
 
 Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файл заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание:  |
+|Константа  |Значение  |Описание  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | Произошел общий сбой. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Параметр не является допустимым. |
@@ -106,7 +106,6 @@ HRESULT ConnectServerWmi (
 
 `strUser` не может быть пустой строкой. Если домен указан в `strAuthority`, он не также должно быть включено в `strUser`, или функция возвращает `WBEM_E_INVALID_PARAMETER`.
 
-
 ## <a name="requirements"></a>Требования
 
  **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).
@@ -117,4 +116,4 @@ HRESULT ConnectServerWmi (
 
 ## <a name="see-also"></a>См. также
 
-- [WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)
+- [WMI и счетчики производительности (справочник по неуправляемым API)](index.md)

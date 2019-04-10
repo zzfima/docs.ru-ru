@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Key attribute in XAML [XAML Services]
 - XAML [XAML Services], x:Key attribute
 ms.assetid: 1985cd45-f197-42d5-b75e-886add64b248
-ms.openlocfilehash: 8474fd5ee6f9f6e6dccda5fb57fbed9ddd787c26
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 6ac878f24de594f8557ded8b0c3356217021b035
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58046204"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223723"
 ---
 # <a name="xkey-directive"></a>Директива x:Key
 Однозначно определяет элементы, которые создаются и ссылки в словаре, определенные в XAML. Добавление `x:Key` значение для элемента объекта XAML — наиболее распространенный способ идентификации ресурса в словаре ресурсов, например в WPF <xref:System.Windows.ResourceDictionary>.  
@@ -111,6 +111,7 @@ keyObject
  `x:Key` для Silverlight описывается отдельно. Дополнительные сведения см. в разделе [пространства имен XAML (x:) Возможности языка (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081).  
   
 ## <a name="see-also"></a>См. также
+
 - [Ресурсы XAML](../wpf/advanced/xaml-resources.md)
 - [Ресурсы и код](../wpf/advanced/resources-and-code.md)
 - [Расширение разметки StaticResource](../wpf/advanced/staticresource-markup-extension.md)

@@ -2,12 +2,12 @@
 title: Поддержка SqlClient для высокого уровня доступности, аварийного восстановления
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: 50f2e4c46fbb8c043237aac90ffee98112b8cefa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 744b24f0a4826c52908141183875a8a7f8c22f2b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609126"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213796"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Поддержка SqlClient для высокого уровня доступности, аварийного восстановления
 В данном разделе рассматривается поддержка групп доступности AlwaysOn (высокая доступность, аварийное восстановление) в SqlClient, которая появилась в [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)].  Группы доступности AlwaysOn появились в SQL Server 2012. Дополнительные сведения о группах доступности AlwaysOn см. в разделе электронной документации по SQL Server.  
@@ -63,7 +63,7 @@ ms.locfileid: "54609126"
   
 2.  Если приложение использует `ApplicationIntent=ReadWrite` (описано ниже) и адрес вторичной реплики настроен только для чтения.  
   
- <xref:System.Data.SqlClient.SqlDependency> не поддерживается на вторичных репликах только для чтения.  
+ <xref:System.Data.SqlClient.SqlDependency> не поддерживается только для чтения во вторичных репликах.  
   
  Попытка подключения вернет ошибку, если первичная реплика настроена для отклонения рабочих нагрузок и предназначена только для чтения, а строка подключения содержит `ApplicationIntent=ReadOnly`.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "54609126"
   
  Ключевое слово `ApplicationIntent` не работает с базами данных прежних версий, доступными только для чтения.  
   
- База данных может разрешить или запретить рабочие нагрузки для чтения на целевой базе данных в режиме AlwaysOn. (Это выполняется с помощью предложения `ALLOW_CONNECTIONS` инструкций `PRIMARY_ROLE` и `SECONDARY_ROLE`[!INCLUDE[tsql](../../../../../includes/tsql-md.md)].)  
+ База данных может разрешить или запретить рабочие нагрузки для чтения на целевой базе данных в режиме AlwaysOn. (Это делается с помощью `ALLOW_CONNECTIONS` предложении `PRIMARY_ROLE` и `SECONDARY_ROLE`[!INCLUDE[tsql](../../../../../includes/tsql-md.md)] инструкций.)  
   
  Ключевое слово `ApplicationIntent` служит для включения маршрутизации только для чтения.  
   
@@ -97,5 +97,6 @@ ms.locfileid: "54609126"
  Подключение в сценарии с маршрутизацией только для чтения может занять больше времени, чем подключение к первичной реплике, так как в сценарии с маршрутизацией только для чтения в первую очередь осуществляется подключение к первичной реплике, затем выполняется поиск наиболее подходящей и доступной вторичной реплики. В связи с этим следует увеличить максимальное время ожидания входа в систему.  
   
 ## <a name="see-also"></a>См. также
+
 - [Возможности SQL Server и ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

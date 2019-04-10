@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ScrollBarVisibility enumeration [WPF]
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
-ms.openlocfilehash: 05fe4ba4e2125b01637bc9066d23b5738d81f98d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 56d3e3cad09b46090a11b884f3ac590e8d4ba23a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358942"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224290"
 ---
 # <a name="optimizing-performance-other-recommendations"></a>Оптимизация производительности: Другие рекомендации
 <a name="introduction"></a> В этом разделе содержатся рекомендации по улучшению производительности в дополнение к описанным в разделах статьи [Улучшение производительности приложений WPF](optimizing-wpf-application-performance.md).  
@@ -73,12 +73,13 @@ ms.locfileid: "57358942"
  Служба кэширования шрифтов [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] используется для совместной обработки данных шрифтов приложениями [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Первое запускаемое приложение [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] запускает эту службу, если она еще не запущена. Если вы используете [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], можно задать службы «Windows Presentation Foundation (WPF) Font Cache 3.0.0.0» из «Вручную» (по умолчанию) «Автоматически (отложенный запуск)», чтобы уменьшить длительность начального запуска [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложений.  
   
 ## <a name="see-also"></a>См. также
+
 - [Планирование производительности приложения](planning-for-application-performance.md)
 - [Использование преимуществ оборудования](optimizing-performance-taking-advantage-of-hardware.md)
 - [Разметка и разработка](optimizing-performance-layout-and-design.md)
 - [Двумерная графика и изображения](optimizing-performance-2d-graphics-and-imaging.md)
 - [Поведение объекта](optimizing-performance-object-behavior.md)
 - [Ресурсы приложений](optimizing-performance-application-resources.md)
-- [Text](optimizing-performance-text.md)
+- [Текста](optimizing-performance-text.md)
 - [Привязка данных](optimizing-performance-data-binding.md)
 - [Советы и рекомендации по анимации](../graphics-multimedia/animation-tips-and-tricks.md)

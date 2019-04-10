@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Создание средства просмотра HTML-документ в приложении Windows Forms
+title: Практическое руководство. Создание средства просмотра HTML-документов в приложении Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - document viewers
 - Windows Forms, creating document viewers
 ms.assetid: 6a6338fe-f7ee-4f5e-9d8f-0465c57e9039
-ms.openlocfilehash: a25d8bf413614ae71676335c0c8e672caadbf885
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 0eecefd961aed5408e7d02769056dc551e604b02
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717756"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214576"
 ---
-# <a name="how-to-create-an-html-document-viewer-in-a-windows-forms-application"></a>Практическое руководство. Создание средства просмотра HTML-документ в приложении Windows Forms
+# <a name="how-to-create-an-html-document-viewer-in-a-windows-forms-application"></a>Практическое руководство. Создание средства просмотра HTML-документов в приложении Windows Forms
 Можно использовать <xref:System.Windows.Forms.WebBrowser> управления для отображения и печати HTML-документов с ограниченными возможностями обозревателя. Это полезно в том случае, если вы хотите воспользоваться преимуществами возможности форматирования HTML-кода, но запретить пользователям произвольным веб-страницам, которые могут содержать ненадежных веб-элементы управления или потенциально вредоносный код сценария. Может потребоваться ограничить возможность <xref:System.Windows.Forms.WebBrowser> управления таким образом, например, для использования в качестве средстве просмотра HTML по электронной почте или для предоставления справки формате HTML в приложении.  
   
 ### <a name="to-create-an-html-document-viewer"></a>Чтобы создать средство просмотра документа HTML  
@@ -39,10 +39,11 @@ ms.locfileid: "57717756"
 -   ссылки на сборки `System` и `System.Windows.Forms`.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.WebBrowser>
 - <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A>
 - <xref:System.Windows.Forms.WebBrowser.Url%2A>
 - [Общие сведения об элементе управления WebBrowser](webbrowser-control-overview.md)
 - [Безопасность элемента управления WebBrowser](webbrowser-security.md)
-- [Практическое руководство. Перейдите на URL-адрес с элементом управления WebBrowser](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
-- [Практическое руководство. Печать с элементом управления WebBrowser](how-to-print-with-a-webbrowser-control.md)
+- [Практическое руководство. Переход по заданному URL с помощью элемента управления WebBrowser](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
+- [Практическое руководство. Печать с использованием элемента управления WebBrowser](how-to-print-with-a-webbrowser-control.md)

@@ -1,17 +1,17 @@
 ---
-title: Практическое руководство. Выполнение операции перетаскивания и вставки между приложениями
+title: Практическое руководство. Выполнение операции перетаскивания между приложениями
 ms.date: 03/30/2017
 helpviewer_keywords:
 - drag and drop [Windows Forms], between applications
 ms.assetid: fa347436-2b12-4dd6-8507-59d7241f6a06
-ms.openlocfilehash: 1e9556a69f3f5da4a47c5f5b1a6043a9a73dd8ff
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: f7fecf2f90c56e5ac10ea5929f1c23b25bf181bc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713445"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221760"
 ---
-# <a name="how-to-perform-drag-and-drop-operations-between-applications"></a>Практическое руководство. Выполнение операции перетаскивания и вставки между приложениями
+# <a name="how-to-perform-drag-and-drop-operations-between-applications"></a>Практическое руководство. Выполнение операции перетаскивания между приложениями
 Выполнение операций перетаскивания между приложениями не отличается от реализации этой операции внутри приложения до тех пор, пока поведение участвующих приложений соответствует "контракту" между свойствами <xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A> и <xref:System.Windows.Forms.DragEventArgs.Effect%2A>.  
   
  В следующей процедуре будет использоваться созданное вами приложение Windows и текстовый редактора WordPad, который входит в состав операционной системы Windows, для выполнения операций перетаскивания между приложениями. WordPad имеет определенный набор допустимых действий для перетаскивания текста; приложение Windows, для которого будет написан код, будет использовать эти действия для успешного завершения операции перетаскивания.  
@@ -39,6 +39,7 @@ ms.locfileid: "57713445"
      Кроме того, можно настроить элемент управления <xref:System.Windows.Forms.TextBox> так, чтобы можно было перетаскивать текстовые строки в WordPad. Дополнительные сведения см. в разделе [Пошаговое руководство: Выполнение операции перетаскивания и вставки в Windows Forms](walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Практическое руководство. Добавление данных в буфер обмена](how-to-add-data-to-the-clipboard.md)
-- [Практическое руководство. Получить данные из буфера обмена](how-to-retrieve-data-from-the-clipboard.md)
+- [Практическое руководство. Извлечение данных из буфера обмена](how-to-retrieve-data-from-the-clipboard.md)
 - [Операции перетаскивания и поддержка буфера обмена](drag-and-drop-operations-and-clipboard-support.md)

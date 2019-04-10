@@ -2,12 +2,12 @@
 title: Использование арбитра контрактов данных
 ms.date: 03/30/2017
 ms.assetid: 2e68a16c-36f0-4df4-b763-32021bff2b89
-ms.openlocfilehash: 844c4e0861c2cf4e6acb2b128ff1f5cefa0f7fa0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b1c545d84db68f4b13925dd9088cc9d81050b5e7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279153"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222449"
 ---
 # <a name="using-a-data-contract-resolver"></a>Использование арбитра контрактов данных
 Арбитр контрактов данных позволяет динамически настраивать известные типы. Известные типы необходимы для сериализации или десериализации типов, не предусмотренных контрактом данных. Дополнительные сведения об известных типах см. в разделе [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). Известные типы обычно задаются статически. Это означает, что при реализации операции необходимо знать все типы, которые могут быть переданы операции. Существуют сценарии, в которых это не так, и важно иметь возможность динамического задания типов.  
@@ -88,6 +88,7 @@ SerializerBehavior.DataContractResolver = new MyCustomerResolver();
  Сопоставитель контрактов данных можно задать декларативно, реализовав атрибут, применяемый к службе.  Дополнительные сведения см. в разделе [KnownAssemblyAttribute](../../../../docs/framework/wcf/samples/knownassemblyattribute.md) образца. Этот образец реализует атрибут с именем «KnownAssembly», добавляет пользовательский арбитр контрактов данных поведение службы.  
   
 ## <a name="see-also"></a>См. также
+
 - [Известные типы контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
 - [Пример DataContractSerializer](../../../../docs/framework/wcf/samples/datacontractserializer-sample.md)
 - [Атрибут KnownAssemblyAttribute](../../../../docs/framework/wcf/samples/knownassemblyattribute.md)

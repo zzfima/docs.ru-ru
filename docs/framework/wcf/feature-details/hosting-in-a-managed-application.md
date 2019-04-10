@@ -2,12 +2,12 @@
 title: Размещение в управляемом приложении
 ms.date: 03/30/2017
 ms.assetid: af70132d-e9e1-4f32-b20f-f0014629758a
-ms.openlocfilehash: 0210f608be8ef7ff8b2af4b0cc36b308cd3ddbe8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 415a6fef511d7d7397a38882801e5848e2998a11
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617243"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218801"
 ---
 # <a name="hosting-in-a-managed-application"></a>Размещение в управляемом приложении
 Службы Windows Communication Foundation (WCF), которые могут размещаться в любом [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] приложения. Резидентное размещение служб - самый гибкий вариант размещения, так как в этом случае требуется минимальное развертывание инфраструктуры. Тем не менее это наименее надежный вариант размещения, поскольку управляемые приложения не предоставляют расширенные размещения и функции управления другие варианты размещения в WCF, такими как службы Internet Information Services (IIS) и Windows.  
@@ -25,5 +25,6 @@ ms.locfileid: "54617243"
  Других стандартных сценариев, обеспечиваемых резидентным размещением полнофункциональных клиентских приложений, например тех, на основе Windows Presentation Foundation (WPF) или Windows Forms (WinForms). Кроме того, этот вариант размещения упрощает взаимодействие функционально насыщенных клиентских приложений, таких как приложения [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] и WinForms, с внешними системами. Например, клиент peer-to-peer совместной работы, использующий [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] для пользовательского интерфейса и также размещается служба WCF, позволяющую другим клиентам подключаться к нему и обмениваться информацией.  
   
 ## <a name="see-also"></a>См. также
+
 - [Размещение служб](../../../../docs/framework/wcf/hosting-services.md)
-- [Руководство по началу работы](../../../../docs/framework/wcf/getting-started-tutorial.md)
+- [Учебник по началу работы](../../../../docs/framework/wcf/getting-started-tutorial.md)

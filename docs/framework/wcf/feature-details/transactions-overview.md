@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, transactions
 - Windows Communication Foundation, transactions
 ms.assetid: c7757854-1207-4019-8b31-552578b7d570
-ms.openlocfilehash: c58a5ebc033f75413a975e6b1de4ed71d23a141b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 42276a9b450b6f0664901747239195ab13f7c44d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548486"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223112"
 ---
 # <a name="windows-communication-foundation-transactions-overview"></a>Общие сведения о транзакциях Windows Communication Foundation
 Транзакции обеспечивают способ группировки набора действий или операций в одну неделимую единицу выполнения. Транзакция является коллекцией операций с перечисленными ниже свойствами.  
@@ -41,5 +41,6 @@ ms.locfileid: "54548486"
  Дополнительные сведения см. в разделе [атрибуты транзакции ServiceModel](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Атрибуты транзакции ServiceModel](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)
 - [Включение потока транзакций](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)

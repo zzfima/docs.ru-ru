@@ -2,12 +2,12 @@
 title: <transport> из <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 49462e0a-66e1-463f-b3e1-c83a441673c6
-ms.openlocfilehash: de1f87d8074bbf3d85f6092a4ac316f5fd20052c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 97139b6bea21e4d908c06f5210e54756865d3c46
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355606"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217800"
 ---
 # <a name="transport-of-nettcpbinding"></a>\<Транспорт > из \<netTcpBinding >
 Определяет тип требований безопасности уровня сообщений для конечной точки, настроенной с [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
@@ -46,8 +46,8 @@ ms.locfileid: "57355606"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|clientCredentialType|Необязательно. Задает тип учетных данных, используемых при проверке подлинности клиента с помощью безопасности транспорта.<br /><br /> -Значение по умолчанию — `Windows`.<br />— Этот атрибут имеет тип <xref:System.ServiceModel.TcpClientCredentialType>.|  
-|protectionLevel|Необязательно. Определяет безопасность на уровне транспорта TCP. Подпись сообщений уменьшает риск подделки сообщения сторонними лицами при его передаче. Шифрование обеспечивает конфиденциальность на уровне данных во время транспортировки.<br /><br /> Значение по умолчанию — `EncryptAndSign`.|  
+|clientCredentialType|Необязательный параметр. Задает тип учетных данных, используемых при проверке подлинности клиента с помощью безопасности транспорта.<br /><br /> -Значение по умолчанию — `Windows`.<br />— Этот атрибут имеет тип <xref:System.ServiceModel.TcpClientCredentialType>.|  
+|protectionLevel|Необязательный параметр. Определяет безопасность на уровне транспорта TCP. Подпись сообщений уменьшает риск подделки сообщения сторонними лицами при его передаче. Шифрование обеспечивает конфиденциальность на уровне данных во время транспортировки.<br /><br /> Значение по умолчанию — `EncryptAndSign`.|  
 |sslProtocols|Значение флага перечисления SslProtocols, указывающее, какие протоколы SslProtocols поддерживаются. По умолчанию используется Tls&#124;Tls11&#124;Tls12.|  
 |policyEnforcement|Это перечисление указывает, когда следует применять <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy>.<br /><br /> 1.  Never - политика никогда не применяется (расширенная защита отключена).<br />2.  WhenSupported - политика применяется только тогда, когда клиент поддерживает расширенную защиту.<br />3.  Always - политика применяется всегда. Клиенты, которые не поддерживают расширенную защиту, не смогут пройти проверку подлинности.|  
   
@@ -72,7 +72,7 @@ ms.locfileid: "57355606"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<Безопасность >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)|Задает возможности безопасности [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).|  
   
@@ -80,6 +80,7 @@ ms.locfileid: "57355606"
  Безопасность транспорта используется для обеспечения целостности и конфиденциальности сообщений SOAP и для взаимной проверки подлинности. Если этот режим безопасности выбран для какой-либо привязки, стек каналов настраивается с использованием безопасного транспорта, а сообщения SOAP защищаются с использованием безопасности транспорта, например Windows (Negotiate) или SSL по TCP.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.TcpTransportSecurity>
 - <xref:System.ServiceModel.Configuration.NetTcpSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.NetTcpSecurity.Transport%2A>

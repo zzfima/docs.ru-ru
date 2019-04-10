@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - data binding, WCF Data Services
 ms.assetid: b32e1d49-c214-4cb1-867e-88fbb3d08c8d
-ms.openlocfilehash: 1207a25a6718fddf9d18206a4cc09089806edecc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8e6b0d9c9b5d2b473aebc00063bd0a343b8708c6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538535"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226668"
 ---
 # <a name="binding-data-to-controls-wcf-data-services"></a>Привязка данных к элементам управления (службы данных WCF)
 С помощью служб [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] можно привязывать элементы управления, такие как `ComboBox` и `ListView`, к экземпляру класса <xref:System.Data.Services.Client.DataServiceCollection%601>. Эта коллекция, наследуемая от класса <xref:System.Collections.ObjectModel.ObservableCollection%601>, содержит данные из канала [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. Этот класс представляет коллекцию динамических данных, обеспечивающих выдачу уведомлений при добавлении и удалении элементов. При использовании экземпляра <xref:System.Data.Services.Client.DataServiceCollection%601> для привязки данных, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] клиентские библиотеки обрабатывать эти события для объектов, отслеживаемых контекстом <xref:System.Data.Services.Client.DataServiceContext> будут синхронизированы с данными в привязанном элементе пользовательского интерфейса.  
@@ -81,12 +81,12 @@ ms.locfileid: "54538535"
   
  При создании нового экземпляра <xref:System.Data.Services.Client.DataServiceCollection%601> имеется возможность указать следующие параметры, определяющие делегаты методов для обработки событий, возникающих при изменении привязанных объектов.  
   
--   `entityChanged` — метод, вызываемый при изменении свойства привязанного объекта. Делегат <xref:System.Func%602> принимает объект <xref:System.Data.Services.Client.EntityChangedParams> и возвращает логическое значение, указывающее, должно ли по-прежнему применяться поведение по умолчанию, то есть вызов метода <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> контекста <xref:System.Data.Services.Client.DataServiceContext>.  
+-   `entityChanged` -метод, который вызывается при изменении свойства привязанного объекта. Делегат <xref:System.Func%602> принимает объект <xref:System.Data.Services.Client.EntityChangedParams> и возвращает логическое значение, указывающее, должно ли по-прежнему применяться поведение по умолчанию, то есть вызов метода <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> контекста <xref:System.Data.Services.Client.DataServiceContext>.  
   
--   `entityCollectionChanged` — метод, вызываемый при добавлении или удалении объекта из коллекции привязок. Делегат <xref:System.Func%602> принимает объект <xref:System.Data.Services.Client.EntityCollectionChangedParams> и возвращает логическое значение, указывающее, должно ли по-прежнему применяться поведение по умолчанию, то есть вызов метода <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> для действия <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Add> или метода <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> для действия <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove> применительно к контексту <xref:System.Data.Services.Client.DataServiceContext>.  
+-   `entityCollectionChanged` -метод, который вызывается, когда объект добавляется или удаляется из коллекции привязок. Делегат <xref:System.Func%602> принимает объект <xref:System.Data.Services.Client.EntityCollectionChangedParams> и возвращает логическое значение, указывающее, должно ли по-прежнему применяться поведение по умолчанию, то есть вызов метода <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> для действия <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Add> или метода <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> для действия <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove> применительно к контексту <xref:System.Data.Services.Client.DataServiceContext>.  
   
 > [!NOTE]
->  Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] не выполняют никаких проверок специализированного поведения, реализованного в этих делегатах.  
+>  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] не выполняют никаких проверок специализированного поведения, реализованного в этих делегатах.  
   
  В следующем примере задано специализированное действие <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove>, вызывающее метод <xref:System.Data.Services.Client.DataServiceContext.DeleteLink%2A> и <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> для удаления сущностей `Orders_Details`, принадлежащих удаленной сущности `Orders`. Это специализированное действие выполняется, поскольку зависимые сущности не удаляются автоматически при удалении родительской сущности.  
   
@@ -101,18 +101,19 @@ ms.locfileid: "54538535"
 ## <a name="data-binding-with-custom-client-data-classes"></a>Привязка данных с помощью специализированных клиентских классов данных  
  Для загрузки объектов в коллекцию <xref:System.Data.Services.Client.DataServiceCollection%601> эти объекты сами должны реализовывать интерфейс <xref:System.ComponentModel.INotifyPropertyChanged>. Клиентские классы, которые создаются при использовании службы данных **Add Service Reference** диалоговое окно или [DataSvcUtil.exe](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md) реализуют данный интерфейс. При предоставлении собственных клиентских классов данных необходимо использовать другой тип коллекции для привязки данных. При изменении объектов необходимо обрабатывать события в элементах управления с привязанными данными для вызова следующих методов класса <xref:System.Data.Services.Client.DataServiceContext>.  
   
--   <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> — при добавлении в коллекцию нового объекта.  
+-   <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> -При добавлении объекта в коллекцию.  
   
--   <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> — при удалении объекта из коллекции.  
+-   <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> — При удалении объекта из коллекции.  
   
--   <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> — при изменении свойства объекта в коллекции.  
+-   <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> -При изменении свойства объекта в коллекции.  
   
--   <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> — при добавлении объекта в коллекцию связанного объекта.  
+-   <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> -При добавлении объекта в коллекцию связанного объекта.  
   
--   <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> — при добавлении объекта в коллекцию связанных объектов.  
+-   <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> -При добавлении объекта в коллекцию связанных объектов.  
   
  Дополнительные сведения см. в разделе [обновление службы данных](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  
   
 ## <a name="see-also"></a>См. также
-- [Практическое руководство. Создание клиентских классов службы данных вручную](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md)
-- [Практическое руководство. Добавьте ссылку на службу данных](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)
+
+- [Практическое руководство. Создание клиентских классов служб данных вручную](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md)
+- [Практическое руководство. Добавление ссылки на службу данных](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)

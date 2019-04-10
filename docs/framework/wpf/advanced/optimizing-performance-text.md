@@ -11,15 +11,15 @@ helpviewer_keywords:
 - text [WPF], performance
 - glyphs [WPF]
 ms.assetid: 66b1b9a7-8618-48db-b616-c57ea4327b98
-ms.openlocfilehash: 14751d8241dabd0cf7c41f2920fab32e21dc43e2
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: e5dfa170d2744e634ed456de491d61c0e442eb45
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409410"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225967"
 ---
 # <a name="optimizing-performance-text"></a>Оптимизация производительности: Текста
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]включает поддержку представления текстового контента с помощью многофункциональных элементов управления [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. В целом можно разделить отрисовку текста на три уровня.  
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] включает поддержку представления текстового контента с помощью многофункциональных [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] элементов управления. В целом можно разделить отрисовку текста на три уровня.  
   
 1.  С помощью <xref:System.Windows.Documents.Glyphs> и <xref:System.Windows.Media.GlyphRun> объекты непосредственно.  
   
@@ -28,8 +28,7 @@ ms.locfileid: "58409410"
 3.  Использование высокоуровневых элементов управления, таких как <xref:System.Windows.Controls.TextBlock> и <xref:System.Windows.Documents.FlowDocument> объектов.  
   
  В этом разделе даются рекомендации по повышению производительности отрисовки текста.  
-  
-  
+
 <a name="Glyph_Level"></a>   
 ## <a name="rendering-text-at-the-glyph-level"></a>Отрисовка текста на уровне глифа  
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] обеспечивает расширенную поддержку текста включая разметку на уровне глифа с прямым доступом к <xref:System.Windows.Documents.Glyphs> для клиентов, которым требуется перехватывать и сохранять текст после форматирования. Эти функции обеспечивают критически важную поддержку различных требований к отрисовке текста в каждом из следующих сценариев.  
@@ -75,7 +74,7 @@ ms.locfileid: "58409410"
   
 <a name="FlowDocument_TextBlock_Label"></a>   
 ## <a name="flowdocument-textblock-and-label-controls"></a>Элементы управления FlowDocument, TextBlock и Label  
- В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] имеется множество элементов управления для рисования текста на экране. Каждый элемент управления предназначен для различных сценариев и имеет свой собственный список функций и ограничений.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] содержит несколько элементов управления для рисования текста на экране. Каждый элемент управления предназначен для своего сценария и имеет собственный список функций и ограничений.  
   
 ### <a name="flowdocument-impacts-performance-more-than-textblock-or-label"></a>FlowDocument влияет на производительность больше, чем TextBlock и Label  
  В общем случае <xref:System.Windows.Controls.TextBlock> элемент должен использоваться при необходимости, например короткого предложения в ограниченная поддержка текста [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label> может использоваться, если требуется Минимальная текстовая поддержка. <xref:System.Windows.Documents.FlowDocument> Элемент — это контейнер для документов плавающей верстки, поддерживающих представление форматированного контента и таким образом, имеет большее влияние на производительность, чем при использовании <xref:System.Windows.Controls.TextBlock> или <xref:System.Windows.Controls.Label> элементов управления.  
@@ -150,7 +149,7 @@ ms.locfileid: "58409410"
   
 <a name="Text_Formatting_Features"></a>   
 ## <a name="text-formatting-features"></a>Возможности форматирования текста  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет службы форматирования RTF, такие как автоматическая расстановка переносов. Эти службы могут влиять на производительность приложения и должны использоваться только при необходимости.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет службы, такие как автоматическая расстановка переносов форматирования RTF. Эти службы могут влиять на производительность приложения и должны использоваться только при необходимости.  
   
 ### <a name="avoid-unnecessary-use-of-hyphenation"></a>Избегайте излишнего использования расстановки переносов  
  Автоматическая расстановка переносов находит точки останова дефиса для строк текста и разрешает дополнительные позиции разрыва для строк в <xref:System.Windows.Controls.TextBlock> и <xref:System.Windows.Documents.FlowDocument> объектов. По умолчанию возможность автоматического переноса в этих объектах отключена. Эту функцию можно включить, установив свойство IsHyphenationEnabled объекта в значение `true`. Однако включение этой функции заставляет [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] инициировать взаимодействие [!INCLUDE[TLA#tla_com](../../../../includes/tlasharptla-com-md.md)], которое может повлиять на производительность приложения. Рекомендуется не использовать автоматическую расстановку переносов, если это не является обязательным.  
@@ -162,6 +161,7 @@ ms.locfileid: "58409410"
  Средство оптимального абзаца из <xref:System.Windows.Documents.FlowDocument> размещает абзацы, чтобы пустое пространство распределялось максимально равномерно. По умолчанию средство оптимального абзаца отключено. Вы можете включить эту функцию, задав объекта <xref:System.Windows.Documents.FlowDocument.IsOptimalParagraphEnabled%2A> свойства `true`. Однако включение этой функции влияет на производительность приложения. Рекомендуется не использовать средство оптимального абзаца без необходимости.  
   
 ## <a name="see-also"></a>См. также
+
 - [Улучшение производительности приложений WPF](optimizing-wpf-application-performance.md)
 - [Планирование производительности приложения](planning-for-application-performance.md)
 - [Использование преимуществ оборудования](optimizing-performance-taking-advantage-of-hardware.md)
