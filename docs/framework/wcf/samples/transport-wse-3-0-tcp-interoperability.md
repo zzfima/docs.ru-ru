@@ -2,25 +2,25 @@
 title: 'Транспорт: TCP-взаимодействие WSE 3.0'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: 9b2fcc2e7d96d2cfbb3b55934fa19ec24487bce7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cc483e44e625534d87ea94e84fc984f0aff880f9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162180"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324218"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>Транспорт: TCP-взаимодействие WSE 3.0
 В примере транспорта взаимодействия TCP WSE 3.0 демонстрируется реализация дуплексного сеанса TCP в качестве пользовательского транспорта Windows Communication Foundation (WCF). Также демонстрируется использование расширяемости уровня канала для создания интерфейса по сети с существующими развернутыми системами. Ниже показано, как построить этот пользовательский транспорт WCF:  
   
-1.  Начиная с сокета TCP, создайте клиентские и серверные реализации интерфейса <xref:System.ServiceModel.Channels.IDuplexSessionChannel>, использующие кадрирование DIME для разграничения границ сообщений.  
+1. Начиная с сокета TCP, создайте клиентские и серверные реализации интерфейса <xref:System.ServiceModel.Channels.IDuplexSessionChannel>, использующие кадрирование DIME для разграничения границ сообщений.  
   
-2.  Создайте фабрику каналов, которая подключается к службе TCP WSE и передает кадрированные сообщения через клиентские интерфейсы <xref:System.ServiceModel.Channels.IDuplexSessionChannel>.  
+2. Создайте фабрику каналов, которая подключается к службе TCP WSE и передает кадрированные сообщения через клиентские интерфейсы <xref:System.ServiceModel.Channels.IDuplexSessionChannel>.  
   
-3.  Создайте прослушиватель канала для приема входящих подключений TCP и создания соответствующих каналов.  
+3. Создайте прослушиватель канала для приема входящих подключений TCP и создания соответствующих каналов.  
   
-4.  Убедитесь, что все исключения, связанные с сетью, нормализованы в соответствующий класс, унаследованный от <xref:System.ServiceModel.CommunicationException>.  
+4. Убедитесь, что все исключения, связанные с сетью, нормализованы в соответствующий класс, унаследованный от <xref:System.ServiceModel.CommunicationException>.  
   
-5.  Добавьте элемент привязки, добавляющий пользовательский транспорт в стек каналов. Дополнительные сведения см. в разделе [Добавление элемента привязки].  
+5. Добавьте элемент привязки, добавляющий пользовательский транспорт в стек каналов. Дополнительные сведения см. в разделе [Добавление элемента привязки].  
   
 ## <a name="creating-iduplexsessionchannel"></a>Создание IDuplexSessionChannel  
  Первый этап создания транспорта взаимодействия TCP WSE 3.0 - это реализация интерфейса <xref:System.ServiceModel.Channels.IDuplexSessionChannel> на основе класса <xref:System.Net.Sockets.Socket>. `WseTcpDuplexSessionChannel` Является производным от <xref:System.ServiceModel.Channels.ChannelBase>. Логика передачи сообщения состоит из двух основных частей: (1) кодирование сообщения в байтах и (2) Кадрирование этих байтов и отправки их по сети.  
@@ -172,12 +172,12 @@ Symbols:
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1.  Для выполнения этого примера необходимо, чтобы были установлены WSE 3.0 и пример WSE `TcpSyncStockService`. Вы можете скачать [WSE 3.0 из MSDN](https://go.microsoft.com/fwlink/?LinkId=95000).  
+1. Для выполнения этого примера необходимо, чтобы были установлены WSE 3.0 и пример WSE `TcpSyncStockService`. Вы можете скачать [WSE 3.0 из MSDN](https://go.microsoft.com/fwlink/?LinkId=95000).  
   
 > [!NOTE]
 >  Так как WSE 3.0 не поддерживается в [!INCLUDE[lserver](../../../../includes/lserver-md.md)], пример `TcpSyncStockService` невозможно установить или выполнить в этой операционной системе.  
   
-1.  После установки примера `TcpSyncStockService` выполните следующие операции.  
+1. После установки примера `TcpSyncStockService` выполните следующие операции.  
   
     1.  Откройте `TcpSyncStockService` в Visual Studio (Обратите внимание, что пример TcpSyncStockService устанавливается с WSE 3.0. Он не является частью кода данного примера.).  
   

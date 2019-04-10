@@ -12,12 +12,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 - visibility [Visual Basic], variables
 ms.assetid: 44b7f62a-cb5c-4d50-bce9-60ae68f87072
-ms.openlocfilehash: ef7957a991718112fe01c4fa3a85f29b9226abd3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 24a7ae3b8f3400beeaedb20ea6352ea44bdb7597
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58818727"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324322"
 ---
 # <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>Практическое руководство. Управление областью действия переменной (Visual Basic)
 Как правило, переменная находится в *область*, или доступна для ссылки на протяжении всего региона, в котором она объявлена. В некоторых случаях переменная элемента *уровень доступа* может влиять на ее область действия.  
@@ -43,19 +43,19 @@ ms.locfileid: "58818727"
   
 #### <a name="to-make-a-variable-visible-throughout-a-module-class-or-structure"></a>Чтобы сделать переменную видимой во всей модуля, класса или структуры  
   
-1.  Место `Dim` инструкцию для переменной внутри модуля, класса или структуры, но вне любой процедуры.  
+1. Место `Dim` инструкцию для переменной внутри модуля, класса или структуры, но вне любой процедуры.  
   
-2.  Включить [частного](../../../../visual-basic/language-reference/modifiers/private.md) ключевое слово в `Dim` инструкции.  
+2. Включить [частного](../../../../visual-basic/language-reference/modifiers/private.md) ключевое слово в `Dim` инструкции.  
   
-3.  Можно ссылаться на значение переменной из любого места внутри модуля, класса или структуры, но не из за его пределами.  
+3. Можно ссылаться на значение переменной из любого места внутри модуля, класса или структуры, но не из за его пределами.  
   
 #### <a name="to-make-a-variable-visible-throughout-a-namespace"></a>Чтобы сделать переменную видимой во всей пространства имен  
   
-1.  Место `Dim` инструкцию для переменной внутри модуля, класса или структуры, но вне любой процедуры.  
+1. Место `Dim` инструкцию для переменной внутри модуля, класса или структуры, но вне любой процедуры.  
   
-2.  Включить [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) или [открытый](../../../../visual-basic/language-reference/modifiers/public.md) ключевое слово в `Dim` инструкции.  
+2. Включить [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) или [открытый](../../../../visual-basic/language-reference/modifiers/public.md) ключевое слово в `Dim` инструкции.  
   
-3.  В переменную можно ссылаться из любого места в пространство имен, содержащее модуля, класса или структуры.  
+3. В переменную можно ссылаться из любого места в пространство имен, содержащее модуля, класса или структуры.  
   
 ## <a name="example"></a>Пример  
  В следующем примере объявляется переменная на уровне модуля и ограничивает видимость для кода в модуле.  
@@ -88,9 +88,9 @@ Public strMsg As String
   
 ## <a name="see-also"></a>См. также
 
-- [Область, в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Область видимости в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
 - [Время существования в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
 - [Уровни доступа в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Переменные](../../../../visual-basic/programming-guide/language-features/variables/index.md)
-- [Объявление переменных](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [Объявление переменной](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [Оператор Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)

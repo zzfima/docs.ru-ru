@@ -10,27 +10,27 @@ helpviewer_keywords:
 - text boxes [Windows Forms], selecting text programmatically
 - text [Windows Forms], selecting in text boxes programmatically
 ms.assetid: 8c591546-6a01-45c7-8e03-f78431f903b1
-ms.openlocfilehash: f96ac69f16eefb5bf4a0625ff83e207c289a105b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3bb1245cd47084935d632ff345a32058db6074e1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59111440"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321720"
 ---
 # <a name="how-to-select-text-in-the-windows-forms-textbox-control"></a>Практическое руководство. Выделение текста в элементе управления TextBox в Windows Forms
 Выделите текст программными средствами в Windows Forms <xref:System.Windows.Forms.TextBox> элемента управления. Например создав функцию, которая ищет текст для определенной строки, можно выбрать текст, который визуально уведомления позицию найденной строки.  
   
 ### <a name="to-select-text-programmatically"></a>Выделение текста программными средствами  
   
-1.  Задайте <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> свойство в начале текста, который вы хотите выбрать.  
+1. Задайте <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> свойство в начале текста, который вы хотите выбрать.  
   
      <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> Свойство является число, указывающее точку вставки в текстовой строке, причем 0 крайней левой позиции. Если <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> свойству присвоено значение меньше, чем количество символов в текстовом поле, курсор помещается после последнего символа.  
   
-2.  Задать <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> свойства длину текста, который вы хотите выбрать.  
+2. Задать <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> свойства длину текста, который вы хотите выбрать.  
   
      <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> Свойство — это числовое значение, которое задает ширину курсора. Параметр <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> больше нуля, это число выделяемых знаков, начиная с текущей позиции курсора.  
   
-3.  (Необязательно) Доступ к выделенный текст через <xref:System.Windows.Forms.TextBoxBase.SelectedText%2A> свойство.  
+3. (Необязательно) Доступ к выделенный текст через <xref:System.Windows.Forms.TextBoxBase.SelectedText%2A> свойство.  
   
      В следующем примере выделяется содержимое текстового поля при элемента управления <xref:System.Windows.Forms.Control.Enter> событием. В этом примере проверяется, если текстовое поле имеет значение <xref:System.Windows.Forms.TextBox.Text%2A> свойство, которое не является `null` или является пустой строкой. Когда текстовое поле получает фокус, выбран текущий текст в текстовом поле. `TextBox1_Enter` Обработчик событий должен быть привязан к элементу управления; Дополнительные сведения, см. в разделе [как: Создание обработчиков событий во время выполнения для форм Windows Forms](../how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Timer component [Windows Forms], initializing
 - procedures [Windows Forms], specific time intervals
 ms.assetid: 8025247a-2de4-4d86-b8ab-a8cb8aeab2ea
-ms.openlocfilehash: ed433ee03bc82931e9b640f45ebd798e0ef73204
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ac2f89619c3e87ebfe5e568bbf27274834b0866d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127040"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325024"
 ---
 # <a name="how-to-run-procedures-at-set-intervals-with-the-windows-forms-timer-component"></a>Практическое руководство. Выполнение операций с заданной периодичностью с помощью компонента Timer в Windows Forms
 Иногда может потребоваться создать процедуру, которая выполняется через определенные интервалы времени до окончания цикла или запускается по истечении установленного интервала. Создание такой процедуры возможно благодаря компоненту <xref:System.Windows.Forms.Timer>.  
@@ -30,18 +30,18 @@ ms.locfileid: "59127040"
   
 ## <a name="to-run-a-procedure-at-set-intervals-with-the-timer-component"></a>Выполнение процедуры через заданные интервалы времени с помощью компонента Timer  
   
-1.  Добавьте элемент <xref:System.Windows.Forms.Timer> в форму. В следующем разделе "Пример" показано, как сделать это программным путем. Visual Studio также поддерживает добавление компонентов в форму. Также см. раздел [Как Добавление элементов управления без пользовательского интерфейса в Windows Forms](how-to-add-controls-without-a-user-interface-to-windows-forms.md).  
+1. Добавьте элемент <xref:System.Windows.Forms.Timer> в форму. В следующем разделе "Пример" показано, как сделать это программным путем. Visual Studio также поддерживает добавление компонентов в форму. Также см. раздел [Как Добавление элементов управления без пользовательского интерфейса в Windows Forms](how-to-add-controls-without-a-user-interface-to-windows-forms.md).  
   
-2.  Задайте значение свойства <xref:System.Windows.Forms.Timer.Interval%2A> (в миллисекундах) для таймера. Это свойство определяет, сколько времени пройдет до момента повторного запуска процедуры.  
+2. Задайте значение свойства <xref:System.Windows.Forms.Timer.Interval%2A> (в миллисекундах) для таймера. Это свойство определяет, сколько времени пройдет до момента повторного запуска процедуры.  
   
     > [!NOTE]
     >  Чем чаще происходит событие таймера, тем выше загрузка процессора при ответе на событие. Это может снизить общую производительность. Не устанавливайте значение интервала меньше, чем необходимо.  
   
-3.  Напишите соответствующий код в обработчике событий <xref:System.Windows.Forms.Timer.Tick>. Код, написанный в этом событии, будет выполняться с интервалом, указанным в свойстве <xref:System.Windows.Forms.Timer.Interval%2A>.  
+3. Напишите соответствующий код в обработчике событий <xref:System.Windows.Forms.Timer.Tick>. Код, написанный в этом событии, будет выполняться с интервалом, указанным в свойстве <xref:System.Windows.Forms.Timer.Interval%2A>.  
   
-4.  Задайте для свойства <xref:System.Windows.Forms.Timer.Enabled%2A> значение `true`, чтобы запустить таймер. Событие <xref:System.Windows.Forms.Timer.Tick> начнет возникать, запуская процедуру с заданным интервалом.  
+4. Задайте для свойства <xref:System.Windows.Forms.Timer.Enabled%2A> значение `true`, чтобы запустить таймер. Событие <xref:System.Windows.Forms.Timer.Tick> начнет возникать, запуская процедуру с заданным интервалом.  
   
-5.  В соответствующее время задайте для свойства <xref:System.Windows.Forms.Timer.Enabled%2A> значение `false`, чтобы остановить повторный запуск процедуры. Установка интервала `0` не приводит к остановке таймера.  
+5. В соответствующее время задайте для свойства <xref:System.Windows.Forms.Timer.Enabled%2A> значение `false`, чтобы остановить повторный запуск процедуры. Установка интервала `0` не приводит к остановке таймера.  
   
 ## <a name="example"></a>Пример  
  В первом примере кода отслеживается время дня с шагом в одну секунду. В нем используются <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.Label> и компонент <xref:System.Windows.Forms.Timer> в форме. Свойству <xref:System.Windows.Forms.Timer.Interval%2A> присваивается значение 1000 (эквивалентно одной секунде). В событии <xref:System.Windows.Forms.Timer.Tick> для подписи метки задается текущее время. При нажатии кнопки свойству <xref:System.Windows.Forms.Timer.Enabled%2A> присваивается значение `false`, после чего таймер перестает обновлять подпись метки. В следующем примере кода требуется наличие формы с помощью <xref:System.Windows.Forms.Button> управления с именем `Button1`, <xref:System.Windows.Forms.Timer> управления с именем `Timer1`и <xref:System.Windows.Forms.Label> управления с именем `Label1`.  

@@ -2,12 +2,12 @@
 title: Привязка HTTP для федерации WS 2007
 ms.date: 03/30/2017
 ms.assetid: 91c1b477-a96e-4bf5-9330-5e9312113371
-ms.openlocfilehash: 07becd0fc5cbbd9a8b90de2d20654a63b62e3085
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 550a88552658864e3eedb70463e676ad6f9a2511
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59153404"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324946"
 ---
 # <a name="ws-2007-federation-http-binding"></a>Привязка HTTP для федерации WS 2007
 В этом примере показано, как использовать <xref:System.ServiceModel.WS2007FederationHttpBinding> — стандартную привязку для создания федеративных сценариев, поддерживающих версию 1.3 спецификации WS-Trust.  
@@ -110,15 +110,15 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1.  Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Откройте командную строку разработчика для Visual Studio с правами администратора и запустите файл Setup.bat, чтобы создать требуемые сертификаты.  
+2. Откройте командную строку разработчика для Visual Studio с правами администратора и запустите файл Setup.bat, чтобы создать требуемые сертификаты.  
   
  Этот пакетный файл использует средства Certmgr.exe и Makecert.exe, поставляемые с пакетом Windows SDK. Однако файл Setup.bat необходимо запускать из командной строки Visual Studio, чтобы скрипт смог найти эти средства.  
   
-1.  Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+1. Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-2.  Чтобы запустить образец в конфигурации с одной или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md). Если вы используете [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)], необходимо запускать Service.exe, Client.exe и SecurityTokenService.exe с повышенными привилегиями (щелкните правой кнопкой мыши файлы, а затем нажмите кнопку **Запуск от имени администратора**).  
+2. Чтобы запустить образец в конфигурации с одной или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md). Если вы используете [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)], необходимо запускать Service.exe, Client.exe и SecurityTokenService.exe с повышенными привилегиями (щелкните правой кнопкой мыши файлы, а затем нажмите кнопку **Запуск от имени администратора**).  
   
 > [!IMPORTANT]
 >  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
