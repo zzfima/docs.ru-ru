@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-ms.openlocfilehash: 2a8b515f500884d743b7dcca41ffe8c1607375a9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 2ae32f0ac31c504e86d5cf39ed6a36cc5523a4a0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58840930"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308566"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>Пошаговое руководство. Обработка событий (Visual Basic)
 Это второе из двух разделов, которые демонстрируют, как работать с событиями. Первый раздел [Пошаговое руководство: Объявление и создание событий](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), показано, как объявлять и создавать события. Чтобы показать, как обрабатывать события при их возникновении в этом разделе используется форма и класс из предыдущего примера.  
@@ -23,7 +23,7 @@ ms.locfileid: "58840930"
   
 ### <a name="to-handle-the-percentdone-event-of-the-widget-class"></a>Для обработки события PercentDone класса мини-приложения  
   
-1.  Поместите следующий код в `Form1`:  
+1. Поместите следующий код в `Form1`:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#4)]  
   
@@ -38,20 +38,20 @@ ms.locfileid: "58840930"
   
 #### <a name="to-handle-an-event"></a>Чтобы обработать событие  
   
-1.  Выберите `mWidget` из левой стрелку раскрывающегося списка в **редактор кода**.  
+1. Выберите `mWidget` из левой стрелку раскрывающегося списка в **редактор кода**.  
   
-2.  Выберите `PercentDone` событий из правого раскрывающегося списка. **Редактор кода** открывает `mWidget_PercentDone` процедуру обработки события.  
+2. Выберите `PercentDone` событий из правого раскрывающегося списка. **Редактор кода** открывает `mWidget_PercentDone` процедуру обработки события.  
   
     > [!NOTE]
     >  **Редактор кода** может быть полезным, но не обязательно для вставки новых обработчиков событий. В этом пошаговом руководстве более прямолинеен в просто скопируйте обработчики событий непосредственно в код.  
   
-3.  Добавьте следующий код в обработчик событий `mWidget_PercentDone` .  
+3. Добавьте следующий код в обработчик событий `mWidget_PercentDone` .  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#5)]  
   
      Каждый раз, когда `PercentDone` события, процедура события отображает процент выполнения в `Label` элемента управления. `DoEvents` Метод позволяет обновить надпись, а также предоставляет пользователю возможность воспользоваться **отменить** кнопки.  
   
-4.  Добавьте следующий код для `Button2_Click` обработчик событий:  
+4. Добавьте следующий код для `Button2_Click` обработчик событий:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#6)]  
   
@@ -64,11 +64,11 @@ ms.locfileid: "58840930"
   
 #### <a name="to-create-an-object-and-assign-a-reference-to-it"></a>Чтобы создать объект и назначить ссылку на него  
   
-1.  Выберите **(события Form1)** из левой стрелку раскрывающегося списка в **редактор кода**.  
+1. Выберите **(события Form1)** из левой стрелку раскрывающегося списка в **редактор кода**.  
   
-2.  Выберите `Load` событий из правого раскрывающегося списка. **Редактор кода** открывает `Form1_Load` процедуру обработки события.  
+2. Выберите `Load` событий из правого раскрывающегося списка. **Редактор кода** открывает `Form1_Load` процедуру обработки события.  
   
-3.  Добавьте следующий код для `Form1_Load` процедуру обработки события для создания `Widget`:  
+3. Добавьте следующий код для `Form1_Load` процедуру обработки события для создания `Widget`:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#7)]  
   
@@ -88,11 +88,11 @@ ms.locfileid: "58840930"
   
 #### <a name="to-run-the-program"></a>Чтобы выполнить программу, выполните следующие действия.  
   
-1.  Нажмите клавишу F5, чтобы включить проект в режиме выполнения.  
+1. Нажмите клавишу F5, чтобы включить проект в режиме выполнения.  
   
-2.  Нажмите кнопку **запустить задачу** кнопки. Каждый раз `PercentDone` события, метка обновляется процент завершения задачи.  
+2. Нажмите кнопку **запустить задачу** кнопки. Каждый раз `PercentDone` события, метка обновляется процент завершения задачи.  
   
-3.  Нажмите кнопку **отменить** кнопку, чтобы остановить задачу. Обратите внимание, что внешний вид **отменить** сразу после нажатия кнопки не изменяется. `Click` Событие не происходит до `My.Application.DoEvents` оператор разрешает обработку событий.  
+3. Нажмите кнопку **отменить** кнопку, чтобы остановить задачу. Обратите внимание, что внешний вид **отменить** сразу после нажатия кнопки не изменяется. `Click` Событие не происходит до `My.Application.DoEvents` оператор разрешает обработку событий.  
   
     > [!NOTE]
     >  `My.Application.DoEvents` Метод отличается от обработки событий в точно так же, как и форму. Например, в этом пошаговом руководстве, необходимо нажать кнопку **отменить** дважды кнопку. Чтобы разрешить форме обрабатывать события напрямую, можно использовать многопоточность. Дополнительные сведения см. в разделе [управляемых потоков](../../../../standard/threading/index.md).
@@ -118,5 +118,5 @@ ms.locfileid: "58840930"
   
 ## <a name="see-also"></a>См. также
 
-- [Пошаговое руководство: Объявление и вызов событий](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)
+- [Пошаговое руководство. Объявление и вызов событий](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)
 - [События](../../../../visual-basic/programming-guide/language-features/events/index.md)

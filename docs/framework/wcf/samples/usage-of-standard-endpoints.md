@@ -2,12 +2,12 @@
 title: Использование стандартных конечных точек
 ms.date: 03/30/2017
 ms.assetid: ecd6a62f-9619-4778-a497-6f888087a9ea
-ms.openlocfilehash: 5502d42d6a576509c826e05c8781662d374fbff4
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 4ef0714acad12db1414e34fbb476b4ae7d1d9fb2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584290"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304614"
 ---
 # <a name="usage-of-standard-endpoints"></a>Использование стандартных конечных точек
 
@@ -139,9 +139,9 @@ public class CustomEndpoint : ServiceEndpoint
 
 #### <a name="to-use-this-sample"></a>Использование этого образца
 
-1.  С помощью Visual Studio 2012, откройте файл StandardEndpoints.sln.
+1. С помощью Visual Studio 2012, откройте файл StandardEndpoints.sln.
 
-2.  Разрешите запуск нескольких проектов.
+2. Разрешите запуск нескольких проектов.
 
     1.  В **обозревателе решений**, щелкните правой кнопкой мыши решение стандартные конечные точки, а затем выберите **свойства**.
 
@@ -153,7 +153,7 @@ public class CustomEndpoint : ServiceEndpoint
 
          Это указывает, что проект «Client» выполняется после проекта «Service».
 
-3.  Чтобы запустить решение, нажмите клавишу F5.
+3. Чтобы запустить решение, нажмите клавишу F5.
 
 > [!NOTE]
 > Если эти шаги не работают, убедитесь в том, что вашей среде должным образом настроен, выполнив следующие действия:

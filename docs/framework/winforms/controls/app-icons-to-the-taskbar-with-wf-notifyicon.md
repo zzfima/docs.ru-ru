@@ -13,12 +13,12 @@ helpviewer_keywords:
 - NotifyIcon component
 - taskbar [Windows Forms], adding icons
 ms.assetid: d28c0fe6-aaf2-4df7-ad74-928d861a8510
-ms.openlocfilehash: 18a78b7ecb5268463607508869e77fa163cbd06f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 52c18b959361079aac6b95dc5d4584bf464a306a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59146449"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304523"
 ---
 # <a name="how-to-add-application-icons-to-the-taskbar-with-the-windows-forms-notifyicon-component"></a>Практическое руководство. Добавление значков приложения на панель задач с помощью компонента NotifyIcon в Windows Forms
 Windows Forms <xref:System.Windows.Forms.NotifyIcon> компонент отображает один значок в области уведомлений панели задач. Чтобы отобразить несколько значков в области состояния, необходимо иметь несколько <xref:System.Windows.Forms.NotifyIcon> компонентов в форме. Чтобы задать значок, отображаемый для элемента управления, используйте <xref:System.Windows.Forms.NotifyIcon.Icon%2A> свойство. Можно также написать код <xref:System.Windows.Forms.NotifyIcon.DoubleClick> обработчик событий, так что-то происходит, когда пользователь дважды щелкает значок. Например вы можете создать диалоговое окно отображается для пользователя настроить фоновый процесс, представленный этим значком.  
@@ -28,11 +28,11 @@ Windows Forms <xref:System.Windows.Forms.NotifyIcon> компонент отоб
   
 ### <a name="to-set-the-icon"></a>Чтобы задать значок  
   
-1.  Присвойте значение <xref:System.Windows.Forms.NotifyIcon.Icon%2A> свойства. Значение должно быть типа `System.Drawing.Icon` и может быть загружена из ICO-файл. Файл значка можно указать в коде или нажав кнопку с многоточием (![экрана VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) рядом с полем <xref:System.Windows.Forms.NotifyIcon.Icon%2A> свойство в  **Свойства** окна, а затем выбрав файл в **откройте** диалоговое окно, которое отображается.  
+1. Присвойте значение <xref:System.Windows.Forms.NotifyIcon.Icon%2A> свойства. Значение должно быть типа `System.Drawing.Icon` и может быть загружена из ICO-файл. Файл значка можно указать в коде или нажав кнопку с многоточием (![экрана VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) рядом с полем <xref:System.Windows.Forms.NotifyIcon.Icon%2A> свойство в  **Свойства** окна, а затем выбрав файл в **откройте** диалоговое окно, которое отображается.  
   
-2.  Задайте для свойства <xref:System.Windows.Forms.NotifyIcon.Visible%2A> значение `true`.  
+2. Задайте для свойства <xref:System.Windows.Forms.NotifyIcon.Visible%2A> значение `true`.  
   
-3.  Задайте <xref:System.Windows.Forms.NotifyIcon.Text%2A> свойство соответствующую строку всплывающей подсказки.  
+3. Задайте <xref:System.Windows.Forms.NotifyIcon.Text%2A> свойство соответствующую строку всплывающей подсказки.  
   
      В следующем примере кода, задайте путь — расположение значка **Мои документы** папки. Это расположение используется в том случае, так как можно предположить, что большинство компьютеров под управлением ОС Windows будет включать эту папку. Эта папка также позволяет уровень доступа к минимальным системе безопасно запускать приложение. В следующем примере требуется форма с <xref:System.Windows.Forms.NotifyIcon> управления уже добавлен. Он также требуется файл значка с именем `Icon.ico`.  
   

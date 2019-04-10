@@ -2,36 +2,36 @@
 title: Практическое руководство. Как реализовать обнаружимую службу, которая регистрируется в прокси-сервере обнаружения
 ms.date: 03/30/2017
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
-ms.openlocfilehash: 6cfafbc06fc4a7c37805fa1d158a41625390174a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 31c89aeed2577c5dd11ae59ee4a4d692210e5f37
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59177831"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302199"
 ---
 # <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>Практическое руководство. Как реализовать обнаружимую службу, которая регистрируется в прокси-сервере обнаружения
 Данный раздел является вторым из четырех разделов, в которых обсуждается реализация прокси-сервера обнаружения. В предыдущем разделе [как: Реализовать прокси-сервер обнаружения](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), реализации прокси-сервера обнаружения. В этом разделе, создание службы WCF, которая отправляет сообщения объявления (`Hello` и `Bye`) прокси-сервер обнаружения, вызывая ее регистрацию и отмену регистрации прокси-сервера обнаружения.
 
 ### <a name="to-define-the-service-contract"></a>Определение контракта службы
 
-1.  Добавьте новый проект консольного приложения с именем `DiscoveryProxyExample` в решение `Service`.
+1. Добавьте новый проект консольного приложения с именем `DiscoveryProxyExample` в решение `Service`.
 
-2.  Добавьте ссылки на следующие сборки:
+2. Добавьте ссылки на следующие сборки:
 
     1.  System.ServiceModel
 
     2.  System.ServiceModel.Discovery
 
-3.  Добавьте в проект новый класс с именем `CalculatorService`.
+3. Добавьте в проект новый класс с именем `CalculatorService`.
 
-4.  Добавьте следующие инструкции using.
+4. Добавьте следующие инструкции using.
 
     ```csharp
     using System;
     using System.ServiceModel;
     ```
 
-5.  В файле CalculatorService.cs определите контракт службы.
+5. В файле CalculatorService.cs определите контракт службы.
 
     ```csharp
     // Define a service contract.
@@ -49,7 +49,7 @@ ms.locfileid: "59177831"
     }
     ```
 
-6.  Также в файле CalculatorService.cs реализуйте контракт службы.
+6. Также в файле CalculatorService.cs реализуйте контракт службы.
 
     ```csharp
     // Service class which implements the service contract.
@@ -91,9 +91,9 @@ ms.locfileid: "59177831"
 
 ### <a name="to-host-the-service"></a>Размещение службы
 
-1.  Откройте файл Program.cs, сформированный при создании проекта.
+1. Откройте файл Program.cs, сформированный при создании проекта.
 
-2.  Добавьте следующие инструкции using.
+2. Добавьте следующие инструкции using.
 
     ```csharp
     using System;
@@ -102,7 +102,7 @@ ms.locfileid: "59177831"
     using System.ServiceModel.Discovery;
     ```
 
-3.  В метод `Main()` добавьте следующий код.
+3. В метод `Main()` добавьте следующий код.
 
     ```csharp
     // Define the base address of the service

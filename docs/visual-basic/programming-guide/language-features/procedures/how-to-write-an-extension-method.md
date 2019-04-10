@@ -6,33 +6,33 @@ helpviewer_keywords:
 - writing extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: fb2739cc-958d-4ef4-a38b-214a74c93413
-ms.openlocfilehash: d6f8b85945bd400d1f4b54a50260d72c750add8b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 00d62d275f7afc06e066a375dc1ffcd74b23c9ed
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819122"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313766"
 ---
 # <a name="how-to-write-an-extension-method-visual-basic"></a>Практическое руководство. Написание метода расширения (Visual Basic)
 Методы расширения позволяют добавлять методы к существующему классу. Метод расширения может вызываться, как если бы это был экземпляр этого класса.  
   
 ### <a name="to-define-an-extension-method"></a>Для определения метода расширения  
   
-1.  Откройте новые или существующие приложения Visual Basic в Visual Studio.  
+1. Откройте новые или существующие приложения Visual Basic в Visual Studio.  
   
-2.  В верхней части файла, в котором вы хотите определить метод расширения включите следующую инструкцию import:  
+2. В верхней части файла, в котором вы хотите определить метод расширения включите следующую инструкцию import:  
   
     ```  
     Imports System.Runtime.CompilerServices  
     ```  
   
-3.  В модуле нового или существующего приложения определите метод атрибутом расширения:  
+3. В модуле нового или существующего приложения определите метод атрибутом расширения:  
   
     ```  
     <Extension()>  
     ```  
   
-4.  Объявите метод обычным способом, за исключением того, что тип первого параметра должен быть тип данных, который требуется расширить.  
+4. Объявите метод обычным способом, за исключением того, что тип первого параметра должен быть тип данных, который требуется расширить.  
   
     ```  
     <Extension()>   
@@ -87,4 +87,4 @@ End Module
 - [Методы расширения](./extension-methods.md)
 - [Оператор Module](../../../../visual-basic/language-reference/statements/module-statement.md)
 - [Параметры и аргументы процедуры](./procedure-parameters-and-arguments.md)
-- [Область, в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Область видимости в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

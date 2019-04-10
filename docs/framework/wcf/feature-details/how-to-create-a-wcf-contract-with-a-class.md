@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1ad69393-3915-4e7f-9b91-b6fc59c6f5ba
-ms.openlocfilehash: a514134ed0af3b691a2e66720f81594a51747b6f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 37d0e6fae8ad0f3a91f1bead23fb5823fc52d420
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59089527"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313229"
 ---
 # <a name="how-to-create-a-windows-communication-foundation-contract-with-a-class"></a>Практическое руководство. Создание контракта Windows Communication Foundation с помощью класса
 С помощью интерфейса является предпочтительным способом Создание контракта Windows Communication Foundation (WCF). Дополнительные сведения см. в разделе [Как Определите контракт службы](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md). Описанный здесь альтернативный способ предполагает создание класса и последующее применение атрибута <xref:System.ServiceModel.ServiceContractAttribute> непосредственно к классу, а атрибута <xref:System.ServiceModel.OperationContractAttribute> к каждому из методов класса, являющихся частью контракта.  
@@ -22,13 +22,13 @@ ms.locfileid: "59089527"
   
 ### <a name="creating-a-windows-communication-foundation-contract-with-a-class"></a>Создание контракта Windows Communication Foundation с помощью класса  
   
-1.  Создайте новый класс с помощью Visual Basic, C#, или любые другие языка среды CLR.  
+1. Создайте новый класс с помощью Visual Basic, C#, или любые другие языка среды CLR.  
   
-2.  Примените класс <xref:System.ServiceModel.ServiceContractAttribute> к созданному классу.  
+2. Примените класс <xref:System.ServiceModel.ServiceContractAttribute> к созданному классу.  
   
-3.  Создайте методы класса.  
+3. Создайте методы класса.  
   
-4.  Применить <xref:System.ServiceModel.OperationContractAttribute> класса к каждому методу, который должен предоставляться как часть общедоступного контракта WCF.  
+4. Применить <xref:System.ServiceModel.OperationContractAttribute> класса к каждому методу, который должен предоставляться как часть общедоступного контракта WCF.  
   
 ## <a name="example"></a>Пример  
  В следующем примере кода показан класс, определяющий контракт службы.  

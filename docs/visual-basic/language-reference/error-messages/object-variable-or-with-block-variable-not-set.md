@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID91
 ms.assetid: 2f03e611-f0ed-465c-99a2-a816e034faa3
-ms.openlocfilehash: 1b24bec6dd7c4b5af10349cf523d9a7e93b385fe
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b2c0c47b359e218111c1629ea574303a6d663046
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831661"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297932"
 ---
 # <a name="object-variable-or-with-block-variable-not-set"></a>Не задана переменная объекта или переменная блока With
 Указан недопустимый объектной переменной.   Эта ошибка может возникать по нескольким причинам:  
@@ -36,7 +36,7 @@ ms.locfileid: "58831661"
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
-1.  Задайте `Option Strict` для `On` , добавив следующий код в начало файла:  
+1. Задайте `Option Strict` для `On` , добавив следующий код в начало файла:  
   
 ```vb  
 Option Strict On  
@@ -44,16 +44,16 @@ Option Strict On
 
      When you run the project, a compiler error will appear in the **Error List** for any variable that was specified without a type.  
   
-2.  Если вы не хотите включить `Option Strict`, найдите в коде всех переменных, которые были заданы без типа (`Dim x` вместо `Dim x As String`) и добавьте тип, предназначенный для объявления.  
+2. Если вы не хотите включить `Option Strict`, найдите в коде всех переменных, которые были заданы без типа (`Dim x` вместо `Dim x As String`) и добавьте тип, предназначенный для объявления.  
   
-3.  Убедитесь, что вы не ссылаетесь на переменную объекта, было присвоено `Nothing`.  Поиск по коду для ключевого слова `Nothing`и изменить код таким образом, чтобы объект не задано значение `Nothing` до после создания ссылки на его.  
+3. Убедитесь, что вы не ссылаетесь на переменную объекта, было присвоено `Nothing`.  Поиск по коду для ключевого слова `Nothing`и изменить код таким образом, чтобы объект не задано значение `Nothing` до после создания ссылки на его.  
   
-4.  Убедитесь, что все переменные массива измеряются, прежде чем доступ к ним. При создании массива можно либо назначить измерения (`Dim x(5) As String` вместо `Dim x() As String`), или использовать `ReDim` ключевое слово, чтобы задать измерений массива, прежде чем вы впервые обращаетесь.  
+4. Убедитесь, что все переменные массива измеряются, прежде чем доступ к ним. При создании массива можно либо назначить измерения (`Dim x(5) As String` вместо `Dim x() As String`), или использовать `ReDim` ключевое слово, чтобы задать измерений массива, прежде чем вы впервые обращаетесь.  
   
-5.  Убедитесь, что ваш `With` блок инициализируется посредством выполнения `With` точки входа оператора.  
+5. Убедитесь, что ваш `With` блок инициализируется посредством выполнения `With` точки входа оператора.  
   
 ## <a name="see-also"></a>См. также
 
 - [Объявление объектной переменной](../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
-- [Оператор reDim](../../../visual-basic/language-reference/statements/redim-statement.md)
+- [Оператор ReDim](../../../visual-basic/language-reference/statements/redim-statement.md)
 - [Оператор With...End With](../../../visual-basic/language-reference/statements/with-end-with-statement.md)

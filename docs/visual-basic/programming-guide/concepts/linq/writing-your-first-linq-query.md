@@ -6,12 +6,12 @@ helpviewer_keywords:
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-ms.openlocfilehash: 362d241d1da01ea935ab3bb3dcdfcba30cb8c67e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6f6968713fdb1c0ec0ee9f9da3b199a649938de5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975151"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295878"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>Написание первого запроса LINQ (Visual Basic)
 *Запрос* представляет собой выражение, извлекающее данные из источника данных. Запросы выражаются на языке запросов выделенного. Со временем различных языков были разработаны для различных типов источников данных, например, SQL для реляционных баз данных и XQuery для XML. Поэтому для разработчиков приложений изучать новый язык запросов для каждого типа источника данных или формата данных, который поддерживается.  
@@ -21,11 +21,11 @@ ms.locfileid: "56975151"
 ## <a name="three-stages-of-a-query-operation"></a>Три этапа операции запроса  
  [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] операции запроса состоят из трех действий:  
   
-1.  Получение одного или нескольких источника данных.  
+1. Получение одного или нескольких источника данных.  
   
-2.  создание запроса;  
+2. создание запроса;  
   
-3.  выполнение запроса.  
+3. выполнение запроса.  
   
  В [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], выполнение запроса отличается от создания запроса. Все данные не извлекаются только путем создания запроса. Эта особенность обсуждается более подробно далее в этом разделе.  
   
@@ -122,7 +122,7 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
 
 - [Приступая к работе с LINQ в Visual Basic](getting-started-with-linq.md)
 - [Вывод локального типа](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [Общие сведения о стандартных операторах запроса (Visual Basic)](standard-query-operators-overview.md)
-- [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)
+- [Общие сведения о стандартных операторах (Visual Basic)](standard-query-operators-overview.md)
+- [Знакомство с LINQ в Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Запросы](../../../../visual-basic/language-reference/queries/index.md)

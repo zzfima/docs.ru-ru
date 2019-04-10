@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 74a897c1fca51c92e8290f6362d947730349344c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: caa9afcb1ab2ca53bba849c39651ca4cba3a9c77
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59104862"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316535"
 ---
 # <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Практическое руководство. Выполнение частично доверенного кода в изолированной среде
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -48,7 +48,7 @@ AppDomain.CreateDomain( string friendlyName,
   
 ### <a name="to-run-an-application-in-a-sandbox"></a>Запуск приложения в песочнице  
   
-1.  Создайте набор разрешений, которые нужно предоставить ненадежному приложению. Минимальное разрешение, которое можно предоставить, — <xref:System.Security.Permissions.SecurityPermissionFlag.Execution>. Кроме того, можно предоставить дополнительные разрешения, которые, по вашему мнению, будут безопасными для ненадежного кода, например разрешение <xref:System.Security.Permissions.IsolatedStorageFilePermission>. Во фрагменте кода ниже показано создание набора разрешений, в котором содержится только одно разрешение <xref:System.Security.Permissions.SecurityPermissionFlag.Execution>.  
+1. Создайте набор разрешений, которые нужно предоставить ненадежному приложению. Минимальное разрешение, которое можно предоставить, — <xref:System.Security.Permissions.SecurityPermissionFlag.Execution>. Кроме того, можно предоставить дополнительные разрешения, которые, по вашему мнению, будут безопасными для ненадежного кода, например разрешение <xref:System.Security.Permissions.IsolatedStorageFilePermission>. Во фрагменте кода ниже показано создание набора разрешений, в котором содержится только одно разрешение <xref:System.Security.Permissions.SecurityPermissionFlag.Execution>.  
   
     ```csharp
     PermissionSet permSet = new PermissionSet(PermissionState.None);  
@@ -65,7 +65,7 @@ AppDomain.CreateDomain( string friendlyName,
   
      Метод <xref:System.Security.SecurityManager.GetStandardSandbox%2A> возвращает набор разрешений `Internet` или `LocalIntranet` в зависимости от зоны в свидетельстве. <xref:System.Security.SecurityManager.GetStandardSandbox%2A> также создает разрешения идентификации для некоторых объектов свидетельства, переданных по ссылке.  
   
-2.  Подпишите сборку, которая содержит размещающий класс (в этом примере это класс `Sandboxer`), вызывающий ненадежный код. Добавьте объект <xref:System.Security.Policy.StrongName>, используемый для подписания сборки, в массив <xref:System.Security.Policy.StrongName> в параметре `fullTrustAssemblies` вызова метода <xref:System.AppDomain.CreateDomain%2A>. Чтобы разрешить выполнение кода с частичным доверием или предложить службы приложению с частичным доверием, нужно запустить размещающий класс как полностью доверенный. Ниже показано, как читается строгое имя <xref:System.Security.Policy.StrongName> сборки.  
+2. Подпишите сборку, которая содержит размещающий класс (в этом примере это класс `Sandboxer`), вызывающий ненадежный код. Добавьте объект <xref:System.Security.Policy.StrongName>, используемый для подписания сборки, в массив <xref:System.Security.Policy.StrongName> в параметре `fullTrustAssemblies` вызова метода <xref:System.AppDomain.CreateDomain%2A>. Чтобы разрешить выполнение кода с частичным доверием или предложить службы приложению с частичным доверием, нужно запустить размещающий класс как полностью доверенный. Ниже показано, как читается строгое имя <xref:System.Security.Policy.StrongName> сборки.  
   
     ```csharp
     StrongName fullTrustAssembly = typeof(Sandboxer).Assembly.Evidence.GetHostEvidence<StrongName>();  
@@ -73,14 +73,14 @@ AppDomain.CreateDomain( string friendlyName,
   
      Сборки .NET Framework, такие как mscorlib и System.dll, не обязательно добавлять в список полностью доверенных сборок, так как они загружаются как полностью доверенные из глобального кэша сборок.  
   
-3.  Инициализируйте параметр <xref:System.AppDomainSetup> метода <xref:System.AppDomain.CreateDomain%2A>. С помощью этого параметра можно управлять многими настройками нового домена <xref:System.AppDomain>. Свойство <xref:System.AppDomainSetup.ApplicationBase%2A> является важной настройкой и должно отличаться от свойства <xref:System.AppDomainSetup.ApplicationBase%2A> домена <xref:System.AppDomain> основного приложения. Если значения <xref:System.AppDomainSetup.ApplicationBase%2A> совпадают, частично доверенное приложение может заставить ведущее приложение загрузить (как полностью доверенное) определяемое им исключение, тем самым создав угрозу безопасности. Это еще одна причина, по которой не рекомендуется выполнять перехват исключения. Чтобы снизить риск злоумышленного использования, необходимо задать для основного и изолированного приложений разные базовые папки.  
+3. Инициализируйте параметр <xref:System.AppDomainSetup> метода <xref:System.AppDomain.CreateDomain%2A>. С помощью этого параметра можно управлять многими настройками нового домена <xref:System.AppDomain>. Свойство <xref:System.AppDomainSetup.ApplicationBase%2A> является важной настройкой и должно отличаться от свойства <xref:System.AppDomainSetup.ApplicationBase%2A> домена <xref:System.AppDomain> основного приложения. Если значения <xref:System.AppDomainSetup.ApplicationBase%2A> совпадают, частично доверенное приложение может заставить ведущее приложение загрузить (как полностью доверенное) определяемое им исключение, тем самым создав угрозу безопасности. Это еще одна причина, по которой не рекомендуется выполнять перехват исключения. Чтобы снизить риск злоумышленного использования, необходимо задать для основного и изолированного приложений разные базовые папки.  
   
     ```csharp
     AppDomainSetup adSetup = new AppDomainSetup();  
     adSetup.ApplicationBase = Path.GetFullPath(pathToUntrusted);  
     ```  
   
-4.  Чтобы создать домен приложения с использованием заданных параметров, вызовите перегрузку метода <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29>.  
+4. Чтобы создать домен приложения с использованием заданных параметров, вызовите перегрузку метода <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29>.  
   
      Подпись этого метода следующая:  
   
@@ -106,7 +106,7 @@ AppDomain.CreateDomain( string friendlyName,
     AppDomain newDomain = AppDomain.CreateDomain("Sandbox", null, adSetup, permSet, fullTrustAssembly);  
     ```  
   
-5.  Загрузите код в созданный ранее изолирующий домен <xref:System.AppDomain>. Это можно сделать двумя способами.  
+5. Загрузите код в созданный ранее изолирующий домен <xref:System.AppDomain>. Это можно сделать двумя способами.  
   
     -   Вызовите для сборки метод <xref:System.AppDomain.ExecuteAssembly%2A>.  
   
@@ -130,13 +130,13 @@ AppDomain.CreateDomain( string friendlyName,
     class Sandboxer:MarshalByRefObject  
     ```  
   
-6.  Распакуйте новый экземпляр домена в ссылку в этом домене. Эта ссылка используется для выполнения ненадежного кода.  
+6. Распакуйте новый экземпляр домена в ссылку в этом домене. Эта ссылка используется для выполнения ненадежного кода.  
   
     ```csharp
     Sandboxer newDomainInstance = (Sandboxer) handle.Unwrap();  
     ```  
   
-7.  Вызовите метод `ExecuteUntrustedCode` в созданном экземпляре класса `Sandboxer`.  
+7. Вызовите метод `ExecuteUntrustedCode` в созданном экземпляре класса `Sandboxer`.  
   
     ```csharp
     newDomainInstance.ExecuteUntrustedCode(untrustedAssembly, untrustedClass, entryPoint, parameters);  

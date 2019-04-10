@@ -2,12 +2,12 @@
 title: Построение примеров Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 2899e7a5-9cb2-4e8d-b8d2-f31391549198
-ms.openlocfilehash: b6b541b93661f3da656e36d65ef3f94d76cae0c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b1f1005e32687d2683f757d847d9fa19e098f290
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658875"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317861"
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>Построение примеров Windows Communication Foundation
 
@@ -18,9 +18,9 @@ ms.locfileid: "54658875"
 
 ## <a name="to-build-the-sample-using-a-command-prompt"></a>Сборка образца с использованием командной строки
 
-1.  Откройте командную строку разработчика для Visual Studio и перейдите к языковому подкаталогу в каталоге, где установлен пример.
+1. Откройте командную строку разработчика для Visual Studio и перейдите к языковому подкаталогу в каталоге, где установлен пример.
 
-2.  Тип `msbuild` в командной строке. Файлы программы клиента предназначены для *client\bin* и встроенных файлы служебной программы *service\bin*. Если служба размещается в Internet Information Services (IIS), файлы служебной программы также копируются *servicemodelsamples* каталог и его *\bin* подкаталог.
+2. Тип `msbuild` в командной строке. Файлы программы клиента предназначены для *client\bin* и встроенных файлы служебной программы *service\bin*. Если служба размещается в Internet Information Services (IIS), файлы служебной программы также копируются *servicemodelsamples* каталог и его *\bin* подкаталог.
 
 > [!NOTE]
 > Необходимо задать списки управления доступом на *%systemdrive%\inetpub\wwwroot* предоставление измененных разрешений для учетной записи, под которой выполняется. В противном случае некоторые события построения могут завершиться сбоем. Либо можно оставить списки управления доступом неизменными и запускать командную строку пакета SDK от имени администратора.
@@ -50,9 +50,9 @@ ms.locfileid: "54658875"
 
 ### <a name="to-regenerate-the-client-and-configuration-files"></a>Восстановление клиента и файлов конфигурации
 
-1.  Откройте окно командной строки SDK и перейдите к языковому подкаталогу в каталоге, где установлен образец.
+1. Откройте окно командной строки SDK и перейдите к языковому подкаталогу в каталоге, где установлен образец.
 
-2.  Если служба размещается на веб-сервере, воспользуйтесь следующей командой.
+2. Если служба размещается на веб-сервере, воспользуйтесь следующей командой.
 
     ```
     svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost/servicemodelsamples/service.svc/mex /out:generatedClient.cs
@@ -84,4 +84,4 @@ ms.locfileid: "54658875"
 ## <a name="see-also"></a>См. также
 
 - [Выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md)
-- [Служебная программа для метаданных ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [Служебное средство ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

@@ -2,12 +2,12 @@
 title: 'Планирование перехода на платформу Windows Communication Foundation: упрощение будущей интеграции'
 ms.date: 03/30/2017
 ms.assetid: 3028bba8-6355-4ee0-9ecd-c56e614cb474
-ms.openlocfilehash: 2f733f9cc33846913539fee4afdd95efa9224058
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c6e749c32947a4159d6bfd56c4d30a06f6ef0b7f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59124804"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316340"
 ---
 # <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-integration"></a>Планирование перехода на платформу Windows Communication Foundation: упрощение будущей интеграции
 Если вы используете ASP.NET уже сегодня и ожидается в будущем с помощью WCF, этот раздел содержит рекомендации, чтобы убедиться, что новый веб-служб ASP.NET будет работать хорошо вместе с приложениями WCF.  
@@ -34,9 +34,9 @@ public interface IEcho
 ## <a name="data-representation"></a>Представление данных  
  XML-код, в который тип сериализуется сериализатором <xref:System.Xml.Serialization.XmlSerializer>, по умолчанию семантически идентичен XML-коду, в который тип сериализуется сериализатором <xref:System.Runtime.Serialization.DataContractSerializer>, при условии, что пространство имен для XML задано явным образом. При задании типа данных для использования с веб-служб ASP.NET в ближайшем будущем внедрения WCF в будущем, сделайте следующее:  
   
-1.  Задавайте тип с использованием классов .NET Framework, а не схемы XML.  
+1. Задавайте тип с использованием классов .NET Framework, а не схемы XML.  
   
-2.  Добавляйте в класс только атрибуты <xref:System.SerializableAttribute> и <xref:System.Xml.Serialization.XmlRootAttribute>, используя последний для явного задания пространства имен для типа. Не добавляйте дополнительные атрибуты из пространства имен <xref:System.Xml.Serialization> для задания способа преобразования класса .NET Framework в XML.  
+2. Добавляйте в класс только атрибуты <xref:System.SerializableAttribute> и <xref:System.Xml.Serialization.XmlRootAttribute>, используя последний для явного задания пространства имен для типа. Не добавляйте дополнительные атрибуты из пространства имен <xref:System.Xml.Serialization> для задания способа преобразования класса .NET Framework в XML.  
   
  Используя этот подход, вы впоследствии сможете превратить классы .NET в контракты данных, добавив атрибуты <xref:System.Runtime.Serialization.DataContractAttribute> и <xref:System.Runtime.Serialization.DataMemberAttribute>, без значительного изменения XML-кода, в который классы сериализуются для передачи. Типы, используемые в сообщениях веб-службами ASP.NET будут иметь возможность обрабатывать как контракты данных в случае приложений WCF, что, помимо прочих преимуществ, повышения производительности в приложениях WCF.  
   

@@ -2,12 +2,12 @@
 title: <iriParsing> (Параметры Uri)
 ms.date: 03/30/2017
 ms.assetid: 953d0b53-445e-41f9-b302-77c4030852ce
-ms.openlocfilehash: 710d82b70eb16e88404d4d8bbf38d2d030693103
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7033f4dcda7d2fe73310ae0d36d9b05c090d13d4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59092504"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299674"
 ---
 # <a name="iriparsing-element-uri-settings"></a>\<iriParsing > (параметры Uri)
 Определяет, применяется ли к <xref:System.Uri> анализ международных идентификаторов ресурсов (IRI) и применяются ли правила анализа IRI.  
@@ -50,13 +50,13 @@ ms.locfileid: "59092504"
   
  Чтобы включить поддержку IRI, необходимы следующие два изменения:  
   
-1.  Добавьте следующую строку в файл machine.config в каталоге .NET Framework 2.0  
+1. Добавьте следующую строку в файл machine.config в каталоге .NET Framework 2.0  
   
     ```xml  
     <section name="uri" type="System.Configuration.UriSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
     ```  
   
-2.  Укажите, должна ли применяться правила синтаксического анализа IRI. Это можно сделать в файле machine.config или в файле app.config.  
+2. Укажите, должна ли применяться правила синтаксического анализа IRI. Это можно сделать в файле machine.config или в файле app.config.  
   
  Включение синтаксического анализа IRI (iriParsing включена = `true`) нормализация и проверка символов в соответствии с последней IRI правилами в RFC 3987. Значение по умолчанию — `false` и нормализации и символов проверку в соответствии с RFC 2396 и RFC 3986 (для литералов IPv6).  
   

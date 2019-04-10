@@ -12,23 +12,23 @@ helpviewer_keywords:
 - passwords [Windows Forms], input mask
 - passwords [Windows Forms], password text box
 ms.assetid: d105d6b9-3d50-44cd-80d8-2c0e2f486727
-ms.openlocfilehash: f2017ccfd6d8320d6afc7b5e8a2ce8349c4fbd17
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ab5df1233c16a7ce076efa817fb14808b588ebcd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59110616"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300987"
 ---
 # <a name="how-to-create-a-password-text-box-with-the-windows-forms-textbox-control"></a>Практическое руководство. Создание текстового поля для ввода пароля с помощью элемента управления TextBox в Windows Forms
 Поле пароля представляет собой текстовое поле Windows Forms, который отображает заполнителем, пока пользователь вводит строку.  
   
 ### <a name="to-create-a-password-text-box"></a>Чтобы создать текстовое поле пароля  
   
-1.  Задайте <xref:System.Windows.Forms.TextBox.PasswordChar%2A> свойство <xref:System.Windows.Forms.TextBox> элемента управления к определенному символу.  
+1. Задайте <xref:System.Windows.Forms.TextBox.PasswordChar%2A> свойство <xref:System.Windows.Forms.TextBox> элемента управления к определенному символу.  
   
      <xref:System.Windows.Forms.TextBox.PasswordChar%2A> Свойство определяет знак, используемый в текстовом поле. Например, вы звездочки, отображаемый в поле "пароль", укажите * для <xref:System.Windows.Forms.TextBox.PasswordChar%2A> свойства в окне «Свойства». Затем независимо от того, какой символ, который пользователь вводит в текстовое поле, отображается звездочка.  
   
-2.  (Необязательно) Задайте <xref:System.Windows.Forms.TextBoxBase.MaxLength%2A> свойство. Свойство определяет, сколько символов можно ввести в текстовом поле. При превышении максимальную длину, система выдает звукового сигнала, и текстовое поле не принимает любые дополнительные символы. Обратите внимание на то, что вы не можете это сделать, как максимальная длина пароля может быть использована злоумышленниками, пытающимися угадать пароль.  
+2. (Необязательно) Задайте <xref:System.Windows.Forms.TextBoxBase.MaxLength%2A> свойство. Свойство определяет, сколько символов можно ввести в текстовом поле. При превышении максимальную длину, система выдает звукового сигнала, и текстовое поле не принимает любые дополнительные символы. Обратите внимание на то, что вы не можете это сделать, как максимальная длина пароля может быть использована злоумышленниками, пытающимися угадать пароль.  
   
      В следующем примере кода показано, как инициализировать текстовое поле, которое будет принимать строку длиной до 14 знаков и отображать звездочками вместо строки. `InitializeMyControl` Процедуры не выполняется автоматически; его необходимо вызывать.  
   

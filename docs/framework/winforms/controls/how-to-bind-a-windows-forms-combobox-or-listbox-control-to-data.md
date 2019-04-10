@@ -15,21 +15,21 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: dfd7f081-8bea-4a41-86a3-86a1934828ef
-ms.openlocfilehash: 949b63f435289d486f445bad01d0bc6cc33e6f08
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b869898a20008343b6c6cbe4bc7e399fc86fb232
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59197195"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306057"
 ---
 # <a name="how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data"></a>Практическое руководство. Связывание элемента управления ComboBox или ListBox с данными в Windows Forms
 Можно привязать <xref:System.Windows.Forms.ComboBox> и <xref:System.Windows.Forms.ListBox> к данным для выполнения задач, таких как просмотр данных в базе данных, ввод новых данных и изменение существующих данных.  
   
 ### <a name="to-bind-a-combobox-or-listbox-control"></a>Для привязки элемента управления ComboBox или ListBox  
   
-1.  Задайте `DataSource` свойство для объекта источника данных. Возможные источники данных <xref:System.Windows.Forms.BindingSource> привязаны к данным, таблицу данных, представление данных, набор данных, представление данных диспетчера, массив или любой класс, реализующий <xref:System.Collections.IList> интерфейс. Дополнительные сведения см. в разделе [Data Sources Supported by Windows Forms](../data-sources-supported-by-windows-forms.md).  
+1. Задайте `DataSource` свойство для объекта источника данных. Возможные источники данных <xref:System.Windows.Forms.BindingSource> привязаны к данным, таблицу данных, представление данных, набор данных, представление данных диспетчера, массив или любой класс, реализующий <xref:System.Collections.IList> интерфейс. Дополнительные сведения см. в разделе [Data Sources Supported by Windows Forms](../data-sources-supported-by-windows-forms.md).  
   
-2.  Если выполнить привязку к таблице, задать `DisplayMember` значения свойства имя столбца в источнике данных.  
+2. Если выполнить привязку к таблице, задать `DisplayMember` значения свойства имя столбца в источнике данных.  
   
      \- или -  
   

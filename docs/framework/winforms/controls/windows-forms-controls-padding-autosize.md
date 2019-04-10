@@ -15,12 +15,12 @@ helpviewer_keywords:
 - layout [Windows Forms], margins and padding
 - Windows Forms, layout
 ms.assetid: f8ae2a6b-db13-4630-8e25-d104091205c7
-ms.openlocfilehash: c07afa1e408c2950ea45f206f43125fc9329ad14
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 230c7cb80ce6b8a29f7334ed0f8d297fd829faf9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59167873"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302469"
 ---
 # <a name="walkthrough-laying-out-windows-forms-controls-with-padding-margins-and-the-autosize-property"></a>Пошаговое руководство. Создание структуры элементов управления Windows Forms с помощью свойств Padding, Margins и AutoSize
 Точное расположение элементов управления на форме является важным для многих приложений. **Конструктор Windows Forms** предоставляет множество средств форматирования для выполнения этой задачи. Три наиболее важными являются <xref:System.Windows.Forms.Control.Margin%2A>, <xref:System.Windows.Forms.Control.Padding%2A>, и <xref:System.Windows.Forms.Control.AutoSize%2A> свойства, которые присутствуют на все элементы управления Windows Forms.  
@@ -60,53 +60,53 @@ ms.locfileid: "59167873"
   
 #### <a name="to-create-the-project"></a>Создание проекта  
   
-1.  Создание **приложения Windows** проект с именем `LayoutExample`. Дополнительные сведения см. в разделе [Как Создайте проект приложения Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project) .  
+1. Создание **приложения Windows** проект с именем `LayoutExample`. Дополнительные сведения см. в разделе [Как Создайте проект приложения Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project) .  
   
-2.  Выберите форму в **конструктор Windows Forms**.  
+2. Выберите форму в **конструктор Windows Forms**.  
   
 ## <a name="setting-margins-for-your-controls"></a>Установка полей для элементов управления  
  Можно задать значение по умолчанию расстояние между элементами управления с помощью <xref:System.Windows.Forms.Control.Margin%2A> свойство. При перемещении элемента управления как можно ближе к другому элементу управления, вы увидите линии привязки, показывающий поля для двух элементов управления. Элемент управления, который вы перемещаете будет привязан к расстояние, определяемое поля.  
   
 #### <a name="to-arrange-controls-on-your-form-using-the-margin-property"></a>Размещение элементов управления на форме с помощью свойства полей  
   
-1.  Перетащите два <xref:System.Windows.Forms.Button> управляет из **элементов** на форму.  
+1. Перетащите два <xref:System.Windows.Forms.Button> управляет из **элементов** на форму.  
   
-2.  Выберите один из <xref:System.Windows.Forms.Button> управляет и переместите его к другому, пока они обращаются к почти.  
+2. Выберите один из <xref:System.Windows.Forms.Button> управляет и переместите его к другому, пока они обращаются к почти.  
   
      Наблюдайте за привязки между ними. Это расстояние складывается из двух элементов управления <xref:System.Windows.Forms.Control.Margin%2A> значения. Элемент управления, который вы перемещаете привязывается это расстояние. Дополнительные сведения см. в разделе [Пошаговое руководство: Упорядочение элементов управления в Windows Forms с помощью линий привязки](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
   
-3.  Изменение <xref:System.Windows.Forms.Control.Margin%2A> свойство одного из элементов управления, развернув <xref:System.Windows.Forms.Control.Margin%2A> запись в **свойства** и установив <xref:System.Windows.Forms.Padding.All%2A> до 20.  
+3. Изменение <xref:System.Windows.Forms.Control.Margin%2A> свойство одного из элементов управления, развернув <xref:System.Windows.Forms.Control.Margin%2A> запись в **свойства** и установив <xref:System.Windows.Forms.Padding.All%2A> до 20.  
   
-4.  Выберите один из <xref:System.Windows.Forms.Button> управляет и переместите его к другому.  
+4. Выберите один из <xref:System.Windows.Forms.Button> управляет и переместите его к другому.  
   
      Линии привязки определение суммы значений полей длиннее и элемент управления привязывается к больше расстояние от другого элемента управления.  
   
-5.  Изменение <xref:System.Windows.Forms.Control.Margin%2A> свойства выделенного элемента управления, развернув <xref:System.Windows.Forms.Control.Margin%2A> запись в **свойства** и установив <xref:System.Windows.Forms.Padding.Top%2A> значение 5.  
+5. Изменение <xref:System.Windows.Forms.Control.Margin%2A> свойства выделенного элемента управления, развернув <xref:System.Windows.Forms.Control.Margin%2A> запись в **свойства** и установив <xref:System.Windows.Forms.Padding.Top%2A> значение 5.  
   
-6.  Переместите выбранный элемент управления под другой элемент управления и обратите внимание, что линия привязки является более короткие. Переместите выбранный элемент управления слева от другого элемента управления и обратите внимание, что линии привязки сохраняет значение, наблюдаемое в шаге 4.  
+6. Переместите выбранный элемент управления под другой элемент управления и обратите внимание, что линия привязки является более короткие. Переместите выбранный элемент управления слева от другого элемента управления и обратите внимание, что линии привязки сохраняет значение, наблюдаемое в шаге 4.  
   
-7.  Можно задать каждый из аспектов <xref:System.Windows.Forms.Control.Margin%2A> свойство, <xref:System.Windows.Forms.Padding.Left%2A>, <xref:System.Windows.Forms.Padding.Top%2A>, <xref:System.Windows.Forms.Padding.Right%2A>, <xref:System.Windows.Forms.Padding.Bottom%2A>, чтобы разные значения, или можно задать их все в то же значение, с помощью <xref:System.Windows.Forms.Padding.All%2A> свойство.  
+7. Можно задать каждый из аспектов <xref:System.Windows.Forms.Control.Margin%2A> свойство, <xref:System.Windows.Forms.Padding.Left%2A>, <xref:System.Windows.Forms.Padding.Top%2A>, <xref:System.Windows.Forms.Padding.Right%2A>, <xref:System.Windows.Forms.Padding.Bottom%2A>, чтобы разные значения, или можно задать их все в то же значение, с помощью <xref:System.Windows.Forms.Padding.All%2A> свойство.  
   
 ## <a name="setting-padding-for-your-controls"></a>Установка заполнения элементов управления  
  Чтобы обеспечить точную разметку, необходимую для приложения, элементы управления часто будет содержать дочерние элементы управления. Если вы хотите указать расстояния от границы дочернего элемента управления к границе родительского элемента управления, использовать родительского элемента управления <xref:System.Windows.Forms.Control.Padding%2A> свойство в сочетании с дочернего элемента управления <xref:System.Windows.Forms.Control.Margin%2A> свойство. <xref:System.Windows.Forms.Control.Padding%2A> Свойство также используется для управления расстоянием между содержимым элемента управления (например, <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Text%2A> свойства) и его границами.  
   
 #### <a name="to-arrange-controls-on-your-form-using-padding"></a>Размещение элементов управления в форме с помощью заполнения  
   
-1.  Перетащите элемент управления <xref:System.Windows.Forms.Button> из **панели элементов** в свою форму.  
+1. Перетащите элемент управления <xref:System.Windows.Forms.Button> из **панели элементов** в свою форму.  
   
-2.  Измените значение свойства <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.AutoSize%2A> на `true`.  
+2. Измените значение свойства <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.AutoSize%2A> на `true`.  
   
-3.  Изменение <xref:System.Windows.Forms.Control.Padding%2A> , развернув <xref:System.Windows.Forms.Control.Padding%2A> запись в **свойства** и установив <xref:System.Windows.Forms.Padding.All%2A> значение 5.  
+3. Изменение <xref:System.Windows.Forms.Control.Padding%2A> , развернув <xref:System.Windows.Forms.Control.Padding%2A> запись в **свойства** и установив <xref:System.Windows.Forms.Padding.All%2A> значение 5.  
   
      Элемент управления расширяется для предоставления места для новых внутренних полей.  
   
-4.  Перетащите элемент управления <xref:System.Windows.Forms.GroupBox> из **панели элементов** в свою форму. Перетащите <xref:System.Windows.Forms.Button> управления из **элементов** в <xref:System.Windows.Forms.GroupBox> элемента управления. Позиция <xref:System.Windows.Forms.Button> управления его записи на диск с в правом нижнем углу <xref:System.Windows.Forms.GroupBox> элемента управления.  
+4. Перетащите элемент управления <xref:System.Windows.Forms.GroupBox> из **панели элементов** в свою форму. Перетащите <xref:System.Windows.Forms.Button> управления из **элементов** в <xref:System.Windows.Forms.GroupBox> элемента управления. Позиция <xref:System.Windows.Forms.Button> управления его записи на диск с в правом нижнем углу <xref:System.Windows.Forms.GroupBox> элемента управления.  
   
      Обратите внимание на линии привязки, как <xref:System.Windows.Forms.Button> управления приближается к нижней и правой границам <xref:System.Windows.Forms.GroupBox> элемента управления. Эти линии привязки соответствуют <xref:System.Windows.Forms.Control.Margin%2A> свойство <xref:System.Windows.Forms.Button>.  
   
-5.  Изменение <xref:System.Windows.Forms.GroupBox> элемента управления <xref:System.Windows.Forms.Control.Padding%2A> , развернув <xref:System.Windows.Forms.Control.Padding%2A> запись в **свойства** и установив <xref:System.Windows.Forms.Padding.All%2A> до 20.  
+5. Изменение <xref:System.Windows.Forms.GroupBox> элемента управления <xref:System.Windows.Forms.Control.Padding%2A> , развернув <xref:System.Windows.Forms.Control.Padding%2A> запись в **свойства** и установив <xref:System.Windows.Forms.Padding.All%2A> до 20.  
   
-6.  Выберите <xref:System.Windows.Forms.Button> элементе управления <xref:System.Windows.Forms.GroupBox> управления и переместите его к центру <xref:System.Windows.Forms.GroupBox>.  
+6. Выберите <xref:System.Windows.Forms.Button> элементе управления <xref:System.Windows.Forms.GroupBox> управления и переместите его к центру <xref:System.Windows.Forms.GroupBox>.  
   
      В появляются линии привязки на большем расстоянии от границ элемента <xref:System.Windows.Forms.GroupBox> элемента управления. Это расстояние равно сумме <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Margin%2A> свойство и <xref:System.Windows.Forms.GroupBox> элемента управления <xref:System.Windows.Forms.Control.Padding%2A> свойство.  
   
@@ -117,29 +117,29 @@ ms.locfileid: "59167873"
   
 #### <a name="to-arrange-controls-on-your-form-using-the-autosize-property"></a>Размещение элементов управления на форме с помощью свойства AutoSize  
   
-1.  Перетащите элемент управления <xref:System.Windows.Forms.Button> из **панели элементов** в свою форму.  
+1. Перетащите элемент управления <xref:System.Windows.Forms.Button> из **панели элементов** в свою форму.  
   
-2.  Измените значение свойства <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.AutoSize%2A> на `true`.  
+2. Измените значение свойства <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.AutoSize%2A> на `true`.  
   
-3.  Изменение <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Text%2A> свойства "**на этой кнопке изображен длинную строку для свойства Text**.»  
+3. Изменение <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Text%2A> свойства "**на этой кнопке изображен длинную строку для свойства Text**.»  
   
      При фиксации изменений, <xref:System.Windows.Forms.Button> элемент управления изменяет свои размеры в соответствии с новым текстом.  
   
-4.  Перетащите еще один <xref:System.Windows.Forms.Button> управления из **элементов** на форму.  
+4. Перетащите еще один <xref:System.Windows.Forms.Button> управления из **элементов** на форму.  
   
-5.  Изменение <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Text%2A> свойства "**на этой кнопке изображен длинную строку для свойства Text.**"  
+5. Изменение <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Text%2A> свойства "**на этой кнопке изображен длинную строку для свойства Text.**"  
   
      При фиксации изменений, <xref:System.Windows.Forms.Button> элемент управления не будет изменен автоматически, и текст обрезается по правому краю элемента управления.  
   
-6.  Изменение <xref:System.Windows.Forms.Control.Padding%2A> , развернув <xref:System.Windows.Forms.Control.Padding%2A> запись в **свойства** и установив <xref:System.Windows.Forms.Padding.All%2A> значение 5.  
+6. Изменение <xref:System.Windows.Forms.Control.Padding%2A> , развернув <xref:System.Windows.Forms.Control.Padding%2A> запись в **свойства** и установив <xref:System.Windows.Forms.Padding.All%2A> значение 5.  
   
      Текст элемента управления обрезается по всем четырем сторонам.  
   
-7.  Изменение <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.AutoSize%2A> свойства `true`.  
+7. Изменение <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.AutoSize%2A> свойства `true`.  
   
      <xref:System.Windows.Forms.Button> Элемент управления изменяет свои размеры вплоть до охватывающих всю строку. Кроме того, был добавлен внутренние поля вокруг текста, вызывая <xref:System.Windows.Forms.Button> элемента управления, чтобы развернуть во всех четырех направлениях.  
   
-8.  Перетащите элемент управления <xref:System.Windows.Forms.Button> из **панели элементов** в свою форму. Разместите его в правом нижнем углу формы.  
+8. Перетащите элемент управления <xref:System.Windows.Forms.Button> из **панели элементов** в свою форму. Разместите его в правом нижнем углу формы.  
   
 9. Измените значение свойства <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.AutoSize%2A> на `true`.  
   
@@ -154,24 +154,24 @@ ms.locfileid: "59167873"
   
 #### <a name="to-use-the-autosizemode-property"></a>Чтобы использовать AutoSizeMode-свойство  
   
-1.  Перетащите элемент управления <xref:System.Windows.Forms.Panel> из **панели элементов** в свою форму.  
+1. Перетащите элемент управления <xref:System.Windows.Forms.Panel> из **панели элементов** в свою форму.  
   
-2.  Установите для параметра <xref:System.Windows.Forms.Panel> элемента управления <xref:System.Windows.Forms.Control.AutoSize%2A> свойства `true`.  
+2. Установите для параметра <xref:System.Windows.Forms.Panel> элемента управления <xref:System.Windows.Forms.Control.AutoSize%2A> свойства `true`.  
   
-3.  Перетащите <xref:System.Windows.Forms.Button> управления из **элементов** в <xref:System.Windows.Forms.Panel> элемента управления.  
+3. Перетащите <xref:System.Windows.Forms.Button> управления из **элементов** в <xref:System.Windows.Forms.Panel> элемента управления.  
   
-4.  Место <xref:System.Windows.Forms.Button> элемента управления в правом нижнем углу <xref:System.Windows.Forms.Panel> элемента управления.  
+4. Место <xref:System.Windows.Forms.Button> элемента управления в правом нижнем углу <xref:System.Windows.Forms.Panel> элемента управления.  
   
-5.  Выберите <xref:System.Windows.Forms.Panel> управления и изменения размера нижний правый маркер захвата. Изменение размера <xref:System.Windows.Forms.Panel> элемент управления будет более крупные и мелкие.  
+5. Выберите <xref:System.Windows.Forms.Panel> управления и изменения размера нижний правый маркер захвата. Изменение размера <xref:System.Windows.Forms.Panel> элемент управления будет более крупные и мелкие.  
   
     > [!NOTE]
     >  Вы можете свободно изменить размер <xref:System.Windows.Forms.Panel> элемента управления, но размер не может быть он меньше, чем положение <xref:System.Windows.Forms.Button> нижний правый угол элемента управления. Такое поведение определяется по значению по умолчанию `AutoSizeMode` свойство, являющееся <xref:System.Windows.Forms.AutoSizeMode.GrowOnly>.  
   
-6.  Установите для параметра <xref:System.Windows.Forms.Panel> элемента управления `AutoSizeMode` свойства <xref:System.Windows.Forms.AutoSizeMode.GrowAndShrink>.  
+6. Установите для параметра <xref:System.Windows.Forms.Panel> элемента управления `AutoSizeMode` свойства <xref:System.Windows.Forms.AutoSizeMode.GrowAndShrink>.  
   
      <xref:System.Windows.Forms.Panel> Размера элемента управления вокруг <xref:System.Windows.Forms.Button> элемента управления. Нельзя изменить размер <xref:System.Windows.Forms.Panel> элемента управления.  
   
-7.  Перетащите <xref:System.Windows.Forms.Button> управления сторону в верхнем левом углу <xref:System.Windows.Forms.Panel> элемента управления.  
+7. Перетащите <xref:System.Windows.Forms.Button> управления сторону в верхнем левом углу <xref:System.Windows.Forms.Panel> элемента управления.  
   
      <xref:System.Windows.Forms.Panel> Изменение размера элемента управления <xref:System.Windows.Forms.Button> новое положение элемента управления.  
   

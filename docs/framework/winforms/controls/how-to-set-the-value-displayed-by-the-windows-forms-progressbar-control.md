@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ProgressBar control [Windows Forms], setting value displayed
 - progress controls [Windows Forms], setting value displayed
 ms.assetid: 0e5010ad-1e9a-4271-895e-5a3d24d37a26
-ms.openlocfilehash: 292a70658e37839897b39d4d58fdf98903d2d963
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 42a9e0f67f00c1a706b72ab0eeb522e99d8a8dfe
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59196883"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300480"
 ---
 # <a name="how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control"></a>Практическое руководство. Установка значения, отображаемого c помощью элемента управления ProgressBar в Windows Forms
 > [!IMPORTANT]
@@ -31,9 +31,9 @@ ms.locfileid: "59196883"
   
 ### <a name="to-set-the-progressbar-value-directly"></a>Чтобы задать значение элемента управления ProgressBar напрямую  
   
-1.  Задайте <xref:System.Windows.Forms.ProgressBar> элемента управления <xref:System.Windows.Forms.ProgressBar.Minimum%2A> и <xref:System.Windows.Forms.ProgressBar.Maximum%2A> значения.  
+1. Задайте <xref:System.Windows.Forms.ProgressBar> элемента управления <xref:System.Windows.Forms.ProgressBar.Minimum%2A> и <xref:System.Windows.Forms.ProgressBar.Maximum%2A> значения.  
   
-2.  В коде, задайте в качестве <xref:System.Windows.Forms.ProgressBar.Value%2A> свойство в целочисленное значение между минимальным и максимальным значениями установки.  
+2. В коде, задайте в качестве <xref:System.Windows.Forms.ProgressBar.Value%2A> свойство в целочисленное значение между минимальным и максимальным значениями установки.  
   
     > [!NOTE]
     >  Если задать <xref:System.Windows.Forms.ProgressBar.Value%2A> свойство за пределами диапазона, установленного <xref:System.Windows.Forms.ProgressBar.Minimum%2A> и <xref:System.Windows.Forms.ProgressBar.Maximum%2A> свойства, элемент управления создает <xref:System.ArgumentException> исключение.  
@@ -87,11 +87,11 @@ ms.locfileid: "59196883"
   
 ### <a name="to-increase-the-progress-bar-by-a-fixed-value"></a>Для увеличения индикатора хода выполнения на фиксированную величину  
   
-1.  Задайте <xref:System.Windows.Forms.ProgressBar> элемента управления <xref:System.Windows.Forms.ProgressBar.Minimum%2A> и <xref:System.Windows.Forms.ProgressBar.Maximum%2A> значения.  
+1. Задайте <xref:System.Windows.Forms.ProgressBar> элемента управления <xref:System.Windows.Forms.ProgressBar.Minimum%2A> и <xref:System.Windows.Forms.ProgressBar.Maximum%2A> значения.  
   
-2.  Задайте в качестве <xref:System.Windows.Forms.ProgressBar.Step%2A> свойство в целое число, представляющее сумму для увеличения индикатора хода выполнения отображается значение.  
+2. Задайте в качестве <xref:System.Windows.Forms.ProgressBar.Step%2A> свойство в целое число, представляющее сумму для увеличения индикатора хода выполнения отображается значение.  
   
-3.  Вызовите <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> метод, чтобы изменить значения, отображаемого в, заданного параметром <xref:System.Windows.Forms.ProgressBar.Step%2A> свойство.  
+3. Вызовите <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> метод, чтобы изменить значения, отображаемого в, заданного параметром <xref:System.Windows.Forms.ProgressBar.Step%2A> свойство.  
   
      В следующем примере кода показано, как индикатор хода выполнения обеспечить число файлов в ходе операции копирования.  
   
@@ -153,9 +153,9 @@ ms.locfileid: "59196883"
   
 ### <a name="to-increase-the-progress-bar-by-a-dynamic-value"></a>Чтобы увеличить индикатор хода выполнения на динамическое значение  
   
-1.  Задайте <xref:System.Windows.Forms.ProgressBar> элемента управления <xref:System.Windows.Forms.ProgressBar.Minimum%2A> и <xref:System.Windows.Forms.ProgressBar.Maximum%2A> значения.  
+1. Задайте <xref:System.Windows.Forms.ProgressBar> элемента управления <xref:System.Windows.Forms.ProgressBar.Minimum%2A> и <xref:System.Windows.Forms.ProgressBar.Maximum%2A> значения.  
   
-2.  Вызовите <xref:System.Windows.Forms.ProgressBar.Increment%2A> метод, чтобы изменить значения, отображаемого в целое число, указываемое.  
+2. Вызовите <xref:System.Windows.Forms.ProgressBar.Increment%2A> метод, чтобы изменить значения, отображаемого в целое число, указываемое.  
   
      В следующем примере кода показано, как индикатор хода выполнения можно рассчитать, объем дискового пространства, использованного в ходе операции копирования.  
   

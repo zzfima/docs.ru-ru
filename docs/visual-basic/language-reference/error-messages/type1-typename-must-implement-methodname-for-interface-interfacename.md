@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30149
 ms.assetid: 29d1b7f4-dca7-478c-bbe7-c657f342c183
-ms.openlocfilehash: b8bcb16798284a09608ba6942226ef07c6859d4f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 432f089bc77928308820d7456d930fba8dc513f7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58824209"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304913"
 ---
 # <a name="type1typename-must-implement-methodname-for-interface-interfacename"></a>\<тип1 > "\<typename >" должен реализовывать "\<имя_метода >" для интерфейса "\<имя_интерфейса >"
 Класс или структура объявляет о реализации интерфейса, но не реализует процедуры, определенные в интерфейсе. Каждый член интерфейса должен быть реализован.  
@@ -21,9 +21,9 @@ ms.locfileid: "58824209"
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
-1.  Объявите процедуру с тем же именем и подписью, как определено в интерфейсе. Не забудьте включить по крайней мере `End Function` или `End Sub` инструкции.  
+1. Объявите процедуру с тем же именем и подписью, как определено в интерфейсе. Не забудьте включить по крайней мере `End Function` или `End Sub` инструкции.  
   
-2.  Добавить `Implements` предложение в конец `Function` или `Sub` инструкции. Пример:  
+2. Добавить `Implements` предложение в конец `Function` или `Sub` инструкции. Пример:  
   
     ```  
     Public Sub DoSomething() Implements IBaseInterface.DoSomething  
@@ -32,4 +32,4 @@ ms.locfileid: "58824209"
 ## <a name="see-also"></a>См. также
 
 - [Оператор Implements](../../../visual-basic/language-reference/statements/implements-statement.md)
-- [Интерфейсы](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+- [интерфейсов,](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

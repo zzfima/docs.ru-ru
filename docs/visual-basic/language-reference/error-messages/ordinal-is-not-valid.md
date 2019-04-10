@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID452
 ms.assetid: 7459562b-cd4f-4590-95e0-6126ae3589a5
-ms.openlocfilehash: f3207c2cc237ae22c295c2b3ed56f18601625226
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 28f78161e14604c1f59872801855ccc918faec58
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822280"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299258"
 ---
 # <a name="ordinal-is-not-valid"></a>Недопустимый порядковый номер
 При вызове библиотеки динамической компоновки (DLL) использовался использовать номер, а не имя процедуры, с помощью `#num` синтаксис. Эта ошибка имеет следующие возможные причины:  
@@ -22,12 +22,12 @@ ms.locfileid: "58822280"
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
-1.  Убедитесь, что выражение представляет допустимый номер, или вызовите процедуру по имени.  
+1. Убедитесь, что выражение представляет допустимый номер, или вызовите процедуру по имени.  
   
-2.  Убедитесь, что `#num` определяет допустимую функцию в библиотеке DLL.  
+2. Убедитесь, что `#num` определяет допустимую функцию в библиотеке DLL.  
   
-3.  Изолируйте проблемный закомментировать код вызова процедуры. Запись `Declare` инструкции для процедуры и сообщите об ошибке разработчику библиотеки типов.  
+3. Изолируйте проблемный закомментировать код вызова процедуры. Запись `Declare` инструкции для процедуры и сообщите об ошибке разработчику библиотеки типов.  
   
 ## <a name="see-also"></a>См. также
 
-- [Оператор Declare](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)

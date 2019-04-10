@@ -36,12 +36,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: 343c5c8e2625a1bd4279e0c97b7079482af0e8c6
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 768f7704851a5f54f4b4a7535fe2584e20bfaa0f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831440"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301234"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Универсальные типы в Visual Basic (Visual Basic)
 *Универсальный тип* является одиночным элементом программирования, который используется для выполнения одинаковой функциональности для различных типов данных. При определении универсальных классов или процедур не нужно определять отдельную версию для каждого типа данных, для которых может потребоваться выполнение этой функциональности.  
@@ -83,15 +83,15 @@ ms.locfileid: "58831440"
 ## <a name="advantages-of-generic-types"></a>Преимущества универсальных типов  
  Универсальный тип служит в качестве основы для объявления нескольких различных программных элементов, каждый из которых работает с определенным типом данных. Альтернативы для универсального типа:  
   
-1.  одиночный тип, работающий с типом данных `Object` .  
+1. одиночный тип, работающий с типом данных `Object` .  
   
-2.  Набор *типозависимых* версий типа; каждая версия кодируется индивидуально и работает с одним конкретным типом данных (например `String`, `Integer`) или с определяемым пользователем типом, например `customer`.  
+2. Набор *типозависимых* версий типа; каждая версия кодируется индивидуально и работает с одним конкретным типом данных (например `String`, `Integer`) или с определяемым пользователем типом, например `customer`.  
   
  Универсальный тип имеет следующие преимущества по сравнению с этими альтернативами.  
   
 -   **Безопасность.** Универсальные типы обеспечивают проверку типов во время компиляции. Типы на основе `Object` принимают любой тип данных, и необходимо написать код, чтобы проверить, является ли тип входных данных приемлемым. При использовании универсальных типов компилятор может перехватить несоответствие типов до выполнения.  
   
--   **Производительность.** Универсальные типы не должны *упаковывать* и *распаковывать* данные, так как каждый из них является специальным для одного типа данных. Операции, основанные на `Object` , должны упаковывать типы входных данных для их преобразования в `Object` и распаковать данные, предназначенные для вывода. Упаковка и распаковка снижают производительность.  
+-   **Производительность.** Универсальные типы не должны *упаковывать* и *unупаковывать* данные, так как каждый из них является специальным для одного типа данных. Операции, основанные на `Object` , должны упаковывать типы входных данных для их преобразования в `Object` и распаковать данные, предназначенные для вывода. Упаковка и распаковка снижают производительность.  
   
      Типы на основе `Object` имеют позднее связывание, а значит, для доступа к их элементам требуется дополнительный код во время выполнения. Это также снижает производительность.  
   
@@ -149,13 +149,13 @@ ms.locfileid: "58831440"
 ## <a name="see-also"></a>См. также
 
 - [Типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Знаки типов](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+- [Символы типов](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
 - [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
 - [Преобразование типов в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Устранение неполадок, связанных с типами данных](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
 - [Типы данных](../../../../visual-basic/language-reference/data-types/index.md)
 - [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
 - [As](../../../../visual-basic/language-reference/statements/as-clause.md)
-- [Тип данных Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)
-- [Ковариация и контрвариантность](../../concepts/covariance-contravariance/index.md)
+- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Ковариация и контрвариация](../../concepts/covariance-contravariance/index.md)
 - [Итераторы](../../../../visual-basic/programming-guide/concepts/iterators.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - WebBrowser control [Windows Forms], communication between DHTML and client application
 - DHTML [Windows Forms], embedding in Windows Forms
 ms.assetid: 55353a32-b09e-4479-a521-ff3a5ff9a708
-ms.openlocfilehash: 4823bf482e785b1e9d03ca57010a832cb0e26dd9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cf1391e88c03095e0851d75ae6d50f8e809d13e9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59199795"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295618"
 ---
 # <a name="how-to-implement-two-way-communication-between-dhtml-code-and-client-application-code"></a>Практическое руководство. Реализация двунаправленного взаимодействия между кодом DHTML и клиентским кодом приложений
 Элемент управления <xref:System.Windows.Forms.WebBrowser> можно использовать для добавления существующего динамического кода веб-приложений HTML (DHTML) в клиентские приложения Windows Forms. Это полезно, если на разработку элементов управления DHTML затрачено немало времени и нужно воспользоваться широкими возможностями интерфейса Windows Forms, не тратя время на переписывание существующего кода.  
@@ -28,22 +28,22 @@ ms.locfileid: "59199795"
   
 ### <a name="to-embed-dhtml-in-your-windows-forms-application"></a>Внедрение DHTML в приложение Windows Forms  
   
-1.  Присвойте свойству <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A> элемента управления <xref:System.Windows.Forms.WebBrowser> значение `false`, чтобы элемент управления <xref:System.Windows.Forms.WebBrowser> не открывал файлы, которые перетаскиваются в него мышью.  
+1. Присвойте свойству <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A> элемента управления <xref:System.Windows.Forms.WebBrowser> значение `false`, чтобы элемент управления <xref:System.Windows.Forms.WebBrowser> не открывал файлы, которые перетаскиваются в него мышью.  
   
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#1)]
      [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#1)]  
   
-2.  Присвойте свойству <xref:System.Windows.Forms.WebBrowser.IsWebBrowserContextMenuEnabled%2A> значение `false`, чтобы элемент управления <xref:System.Windows.Forms.WebBrowser> не выводил контекстное меню при щелчке правой кнопкой мыши.  
+2. Присвойте свойству <xref:System.Windows.Forms.WebBrowser.IsWebBrowserContextMenuEnabled%2A> значение `false`, чтобы элемент управления <xref:System.Windows.Forms.WebBrowser> не выводил контекстное меню при щелчке правой кнопкой мыши.  
   
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#2)]
      [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#2)]  
   
-3.  Присвойте свойству <xref:System.Windows.Forms.WebBrowser.WebBrowserShortcutsEnabled%2A> значение `false`, чтобы элемент управления <xref:System.Windows.Forms.WebBrowser> не отвечал на нажатие сочетаний клавиш.  
+3. Присвойте свойству <xref:System.Windows.Forms.WebBrowser.WebBrowserShortcutsEnabled%2A> значение `false`, чтобы элемент управления <xref:System.Windows.Forms.WebBrowser> не отвечал на нажатие сочетаний клавиш.  
   
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#3)]
      [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#3)]  
   
-4.  Задайте свойство <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A> в конструкторе формы или в обработчике событий <xref:System.Windows.Forms.Form.Load>.  
+4. Задайте свойство <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A> в конструкторе формы или в обработчике событий <xref:System.Windows.Forms.Form.Load>.  
   
      В приведенном ниже коде для объекта скрипта используется класс формы.  
   
@@ -53,14 +53,14 @@ ms.locfileid: "59199795"
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#4)]  
   
-5.  Реализуйте в коде приложения открытые свойства или методы, которые будет использовать код скрипта.  
+5. Реализуйте в коде приложения открытые свойства или методы, которые будет использовать код скрипта.  
   
      Например, если для объекта скрипта используется класс формы, добавьте в этот класс приведенный ниже код.  
   
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#5)]
      [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#5)]  
   
-6.  Используйте объект `window.external` в коде скрипта для доступа к открытым свойствам и методам указанного объекта.  
+6. Используйте объект `window.external` в коде скрипта для доступа к открытым свойствам и методам указанного объекта.  
   
      Во фрагменте кода HTML ниже показано, как вызвать метод объекта скрипта после нажатия на кнопку. Скопируйте этот код в элемент BODY документа HTML, загруженного с помощью метода <xref:System.Windows.Forms.WebBrowser.Navigate%2A> элемента управления или назначенного свойству <xref:System.Windows.Forms.WebBrowser.DocumentText%2A>.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "59199795"
     </button>  
     ```  
   
-7.  Реализуйте в коде скрипта функции, которые будет использовать код приложения.  
+7. Реализуйте в коде скрипта функции, которые будет использовать код приложения.  
   
      Пример такой функции представлен в HTML-элементе SCRIPT ниже. Скопируйте этот код в элемент HEAD документа HTML, загруженного с помощью метода <xref:System.Windows.Forms.WebBrowser.Navigate%2A> элемента управления или назначенного свойству <xref:System.Windows.Forms.WebBrowser.DocumentText%2A>.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "59199795"
     </script>  
     ```  
   
-8.  Используйте свойство <xref:System.Windows.Forms.WebBrowser.Document%2A> для доступа к коду скрипта из кода клиентского приложения.  
+8. Используйте свойство <xref:System.Windows.Forms.WebBrowser.Document%2A> для доступа к коду скрипта из кода клиентского приложения.  
   
      Например, добавьте приведенный ниже код в обработчик событий кнопки <xref:System.Windows.Forms.Control.Click>.  
   

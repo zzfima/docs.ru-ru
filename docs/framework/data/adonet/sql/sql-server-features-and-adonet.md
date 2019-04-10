@@ -2,12 +2,12 @@
 title: Возможности SQL Server и ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 2839529b-a79b-4450-be5d-07a98dbc7a0f
-ms.openlocfilehash: b07f5e1e62744e4301acd64034481cf391100af8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4f2d93ca2abc15e4c7af8489d5b875c0a46d7185
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59107527"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294903"
 ---
 # <a name="sql-server-features-and-adonet"></a>Возможности SQL Server и ADO.NET
 В подразделах данного раздела рассматриваются возможности SQL Server, предназначенные для разработки приложений баз данных с использованием ADO.NET.  
@@ -16,7 +16,7 @@ ms.locfileid: "59107527"
   
  **Электронная документация по SQL Server**  
   
-1.  [Разработка (компонент Database Engine)](https://go.microsoft.com/fwlink/?LinkId=115245)  
+1. [Разработка (компонент Database Engine)](https://go.microsoft.com/fwlink/?LinkId=115245)  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Перечисление экземпляров SQL Server (ADO.NET)](../../../../../docs/framework/data/adonet/sql/enumerating-instances-of-sql-server.md)  

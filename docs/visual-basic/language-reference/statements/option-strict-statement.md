@@ -11,12 +11,12 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-ms.openlocfilehash: adfac0eebc0d50ed3c8c523c0442636b05901c18
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8547e8e1eaf73b266d737e33acd79dd4ec539c6f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355133"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310191"
 ---
 # <a name="option-strict-statement"></a>Option Strict Statement
 Ограничивает неявное преобразование типов данных расширяющими преобразованиями, запрещает позднее связывание и неявную типизацию, которые приводят к `Object` типа.  
@@ -69,9 +69,9 @@ Option Strict { On | Off }
   
 -   [Оператор +=](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
   
--   [\ Оператор (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
+-   [Оператор \ (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
   
--   [/ =-Оператор (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
+-   [Оператор /= (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
   
 -   [Тип данных Char](../../../visual-basic/language-reference/data-types/char-data-type.md)  
   
@@ -96,8 +96,8 @@ Option Strict { On | Off }
   
 |Указан тип данных?|Указан инициализатор?|Пример|Результат|  
 |---|---|---|---|  
-|Нет|Нет|`Dim qty`|Если `Option Strict` отключен (по умолчанию), для переменной устанавливается значение `Nothing`.<br /><br /> Если параметр `Option Strict` включен, при компиляции возникает ошибка.|  
-|Нет|Да|`Dim qty = 5`|Если параметр `Option Infer` включен (по умолчанию), переменная получает тип данных инициализатора. См. в разделе [вывод локального типа](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> Если параметры `Option Infer` и `Option Strict` отключены, переменная получает тип данных `Object`.<br /><br /> Если параметр `Option Infer` отключен, а параметр `Option Strict` включен, при компиляции возникает ошибка.|  
+|Нет|Нет|`Dim qty`|Если `Option Strict` отключен (по умолчанию), для переменной устанавливается значение `Nothing`.<br /><br /> Если параметр `Option Strict` включен, возникает ошибка времени при компиляции.|  
+|Нет|Да|`Dim qty = 5`|Если параметр `Option Infer` включен (по умолчанию), переменная получает тип данных инициализатора. См. в разделе [вывод локального типа](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> Если параметры `Option Infer` и `Option Strict` отключены, переменная получает тип данных `Object`.<br /><br /> Если параметр `Option Infer` отключен, а параметр `Option Strict` включен, возникает ошибка времени компиляции.|  
 |Да|Нет|`Dim qty As Integer`|Переменная инициализируется со значением по умолчанию для типа данных. Дополнительные сведения см. в разделе [оператор Dim](../../../visual-basic/language-reference/statements/dim-statement.md).|  
 |Да|Да|`Dim qty  As Integer = 5`|Если тип данных инициализатора нельзя преобразовать в указанный тип данных, возникает ошибка времени компиляции.|  
   
@@ -109,9 +109,9 @@ Option Strict { On | Off }
 ### <a name="to-set-option-strict-in-the-ide"></a>Чтобы включить режим Strict в интегрированной среде разработки  
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-1.  Выберите проект в **обозревателе решений**. В меню **Проект** выберите пункт **Свойства**.  
+1. Выберите проект в **обозревателе решений**. В меню **Проект** выберите пункт **Свойства**.  
   
-2.  На **компиляции** вкладку, задайте значение в **Option Strict** поле.  
+2. На **компиляции** вкладку, задайте значение в **Option Strict** поле.  
   
 ### <a name="conditions"></a> Чтобы задать конфигурации предупреждений в интегрированной среде разработки  
  При использовании [компиляция, конструктор проектов (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) вместо `Option Strict` инструкции, вы получите дополнительный контроль условиями, которые выдают сообщения об ошибках. **Конфигурации предупреждений** раздел **страница "Компиляция"** имеет параметры, которые соответствуют три условия, которые вызывают ошибку времени компиляции при `Option Strict` включен. Ниже приведены эти параметры.  
@@ -153,11 +153,11 @@ Option Strict { On | Off }
   
 ## <a name="see-also"></a>См. также
 
-- [Расширяющие и сужающие преобразования](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [Явные и неявные преобразования](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
 - [Страница "Компиляция" в конструкторе проектов (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
 - [Оператор Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
-- [Функции преобразования типов](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [Практическое руководство. Доступ к членам объекта](../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)
 - [Встроенные выражения в XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
 - [Неявное преобразование делегата](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)

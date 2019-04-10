@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Указание имени альтернативного элемента для XML Stream
+title: Практическое руководство. Указание имени альтернативного элемента для потока XML
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,34 +12,34 @@ helpviewer_keywords:
 - classes, overriding
 - overriding classes
 ms.assetid: 5cc1c0b0-f94b-4525-9a41-88a582cd6668
-ms.openlocfilehash: d11fd0353faccdb19e1a39b7a57df9fe3bca3190
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 577b96517632ca1ae06891540f22c2c3c3886cd1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465481"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317796"
 ---
-# <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>Практическое руководство. Указание имени альтернативного элемента для XML Stream
+# <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>Практическое руководство. Указание имени альтернативного элемента для потока XML
   
 Используя <xref:System.Xml.Serialization.XmlSerializer>, можно создать несколько потоков XML с одним и тем же набором классов. Это может понадобиться, поскольку для двух разных XML-веб-служб требуется одинаковая основная информация с незначительными различиями. Допустим, две веб-службы XML обрабатывают заказы на книги, и поэтому для каждой из них требуются номера ISBN. Одна служба использует тег \<ISBN>, а другая — тег \<BookID>. Имеется класс с именем `Book`, содержащий поле с именем `ISBN`. При сериализации экземпляра класса `Book` имя члена (ISBN) будет по умолчанию использоваться в качестве имени элемента для тега. Первая XML-веб-служба работает, как и предполагалось. Но чтобы отправить поток XML во вторую XML-веб-службу, необходимо переопределить сериализацию, чтобы именем элемента для тега стало `BookID`.  
   
 ## <a name="to-create-an-xml-stream-with-an-alternate-element-name"></a>Создание потока XML с именем альтернативного элемента  
   
-1.  Создайте экземпляр класса <xref:System.Xml.Serialization.XmlElementAttribute>.  
+1. Создайте экземпляр класса <xref:System.Xml.Serialization.XmlElementAttribute>.  
   
-2.  Задайте <xref:System.Xml.Serialization.XmlElementAttribute.ElementName%2A> атрибута <xref:System.Xml.Serialization.XmlElementAttribute> как "BookID".  
+2. Задайте <xref:System.Xml.Serialization.XmlElementAttribute.ElementName%2A> атрибута <xref:System.Xml.Serialization.XmlElementAttribute> как "BookID".  
   
-3.  Создайте экземпляр класса <xref:System.Xml.Serialization.XmlAttributes>.  
+3. Создайте экземпляр класса <xref:System.Xml.Serialization.XmlAttributes>.  
   
-4.  Добавьте объект `XmlElementAttribute` в коллекцию, доступ к которой осуществляется через свойство <xref:System.Xml.Serialization.XmlAttributes.XmlElements%2A> атрибута <xref:System.Xml.Serialization.XmlAttributes>.  
+4. Добавьте объект `XmlElementAttribute` в коллекцию, доступ к которой осуществляется через свойство <xref:System.Xml.Serialization.XmlAttributes.XmlElements%2A> атрибута <xref:System.Xml.Serialization.XmlAttributes>.  
   
-5.  Создайте экземпляр класса <xref:System.Xml.Serialization.XmlAttributeOverrides>.  
+5. Создайте экземпляр класса <xref:System.Xml.Serialization.XmlAttributeOverrides>.  
   
-6.  Добавьте `XmlAttributes` к <xref:System.Xml.Serialization.XmlAttributeOverrides>, передавая тип переопределяемого объекта и имя переопределяемого члена.  
+6. Добавьте `XmlAttributes` к <xref:System.Xml.Serialization.XmlAttributeOverrides>, передавая тип переопределяемого объекта и имя переопределяемого члена.  
   
-7.  Создайте экземпляр класса `XmlSerializer` с `XmlAttributeOverrides`.  
+7. Создайте экземпляр класса `XmlSerializer` с `XmlAttributeOverrides`.  
   
-8.  Создайте экземпляр класса `Book`, сериализуйте или десериализуйте его.  
+8. Создайте экземпляр класса `Book`, сериализуйте или десериализуйте его.  
   
 ## <a name="example"></a>Пример  
   

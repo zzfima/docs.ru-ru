@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-ms.openlocfilehash: 49795235d489ebc70cec11332e6be4a9452bc21d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e0cd6837de626fa6bcd560811c6a70f7f6604daa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139260"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316171"
 ---
 # <a name="weak-event-patterns"></a>Шаблоны слабых событий
 В приложениях возможно, что обработчики, присоединенные к источникам событий, не будут уничтожены в соответствии с объектом прослушиватель, который присоединил обработчик к источнику. Это может привести к утечке памяти. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] представляет шаблон, который может использоваться для решения этой проблемы путем предоставления выделенного класса диспетчера для конкретных событий и реализации интерфейса прослушивателей для данного события. Этот шаблон разработки называется *шаблоне слабых событий*.  
@@ -50,11 +50,11 @@ ms.locfileid: "59139260"
   
 ### <a name="using-an-existing-weak-event-manager-class"></a>С помощью существующего класса слабого диспетчера событий  
   
-1.  Найдите событие слабые manager.  
+1. Найдите событие слабые manager.  
   
      Список диспетчеров слабых событий, которые входят в состав WPF, см. в разделе иерархии наследования в <xref:System.Windows.WeakEventManager> класса.  
   
-2.  Использование нового диспетчера слабых событий вместо обычной привязке события.  
+2. Использование нового диспетчера слабых событий вместо обычной привязке события.  
   
      Например, если ваш код использует следующий шаблон для подписки на событие:  
   
@@ -82,7 +82,7 @@ ms.locfileid: "59139260"
   
 ### <a name="using-the-generic-weak-event-manager-class"></a>Использование универсального класса слабого диспетчера событий  
   
-1.  Использование универсального <xref:System.Windows.WeakEventManager%602> класса вместо обычной привязке события.  
+1. Использование универсального <xref:System.Windows.WeakEventManager%602> класса вместо обычной привязке события.  
   
      При использовании <xref:System.Windows.WeakEventManager%602> Чтобы зарегистрировать прослушивателей событий, необходимо указать источник события и <xref:System.EventArgs> тип как параметры типа для класса и вызове <xref:System.Windows.WeakEventManager%602.AddHandler%2A> как показано в следующем коде:  
   
@@ -92,19 +92,19 @@ ms.locfileid: "59139260"
   
 ### <a name="creating-a-custom-weak-event-manager-class"></a>Создание пользовательского класса слабого диспетчера событий  
   
-1.  Скопируйте следующий шаблон класса в проект.  
+1. Скопируйте следующий шаблон класса в проект.  
   
      Этот класс наследует от <xref:System.Windows.WeakEventManager> класса.  
   
      [!code-csharp[WeakEvents#WeakEventManagerTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/WeakEvents/CSharp/WeakEventManagerTemplate.cs#weakeventmanagertemplate)]  
   
-2.  Замените `SomeEventWeakEventManager` с собственным именем.  
+2. Замените `SomeEventWeakEventManager` с собственным именем.  
   
-3.  Замените имена трех, описанные ранее, с соответствующими именами для события. (`SomeEvent`, `EventSource`, и `SomeEventEventArgs`)  
+3. Замените имена трех, описанные ранее, с соответствующими именами для события. (`SomeEvent`, `EventSource`, и `SomeEventEventArgs`)  
   
-4.  Настроить видимость (открытый / внутренней / закрытый) для класса manager слабых событий в ту же видимость, что событие, которыми она управляет.  
+4. Настроить видимость (открытый / внутренней / закрытый) для класса manager слабых событий в ту же видимость, что событие, которыми она управляет.  
   
-5.  Использование нового диспетчера слабых событий вместо обычной привязке события.  
+5. Использование нового диспетчера слабых событий вместо обычной привязке события.  
   
      Например, если ваш код использует следующий шаблон для подписки на событие:  
   

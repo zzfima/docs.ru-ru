@@ -2,19 +2,19 @@
 title: Поддержка запросов
 ms.date: 03/30/2017
 ms.assetid: 093c22f5-3294-4642-857a-5252233d6796
-ms.openlocfilehash: 2314a111cb4c4b82cacd91b7638ef0c8eaba5c3c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 30695fcd791a0d69c31a897068d69838c80c3957
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712028"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307955"
 ---
 # <a name="support-for-queries"></a>Поддержка запросов
 Хранилище экземпляров рабочих процессов SQL записывает набор известных свойств в хранилище. Пользователи могут выполнить запрос экземпляров на основе этих свойств. В следующем списке приведены некоторые из этих известных свойств.  
   
--   **Имя сайта.** Имя веб-узла, содержащего службу.  
+-   **Имя узла.** Имя веб-узла, содержащего службу.  
   
--   **Путь относительно приложения.** Путь приложения относительно веб-узла.  
+-   **Относительный путь приложения.** Путь приложения относительно веб-узла.  
   
 -   **Относительный путь службы.** Путь службы относительно приложения.  
   
@@ -39,21 +39,21 @@ ms.locfileid: "57712028"
 ### <a name="the-instances-view"></a>Представление экземпляров  
  Представление экземпляров содержит следующие поля:  
   
-1.  **Идентификатор**  
+1. **Идентификатор**  
   
-2.  **PendingTimer**  
+2. **PendingTimer**  
   
-3.  **CreationTime**  
+3. **CreationTime**  
   
-4.  **LastUpdatedTime**  
+4. **LastUpdatedTime**  
   
-5.  **ServiceDeploymentId**  
+5. **ServiceDeploymentId**  
   
-6.  **SuspensionExceptionName**  
+6. **SuspensionExceptionName**  
   
-7.  **SuspensionReason**  
+7. **SuspensionReason**  
   
-8.  **ActiveBookmarks**  
+8. **ActiveBookmarks**  
   
 9. **CurrentMachine**  
   
@@ -80,23 +80,23 @@ ms.locfileid: "57712028"
 ### <a name="the-servicedeployments-view"></a>Представление ServiceDeployments  
  Представление ServiceDeployments содержит следующие поля:  
   
-1.  **Имя сайта:**  
+1. **SiteName**  
   
-2.  **RelativeServicePath**  
+2. **RelativeServicePath**  
   
-3.  **RelativeApplicationPath**  
+3. **RelativeApplicationPath**  
   
-4.  **ServiceName**  
+4. **ServiceName**  
   
-5.  **ServiceNamespace**  
+5. **ServiceNamespace**  
   
 ### <a name="the-instancepromotedproperties-view"></a>Представление InstancePromotedProperties  
  Представление InstancePromotedProperties содержит следующие поля. Дополнительные сведения о свойствах повышенного уровня см. в разделе [расширяемости Store](store-extensibility.md) раздела.  
   
-1.  **InstanceId**  
+1. **InstanceId**  
   
-2.  **EncodingOption**  
+2. **EncodingOption**  
   
-3.  **PromotionName**  
+3. **PromotionName**  
   
-4.  **Значение #** (ряд полей от **значение1** для **Value64**).
+4. **Значение #** (ряд полей от **значение1** для **Value64**).

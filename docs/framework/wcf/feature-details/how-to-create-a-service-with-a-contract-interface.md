@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7b6803f6-d6f9-4cc2-9f1b-6f4c920475d5
-ms.openlocfilehash: c31a954d659b3f686f8b9780276a4719064e60cc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0aa5429d771aeda0b392b89ec4cc1a07de30973f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59128717"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298543"
 ---
 # <a name="how-to-create-a-service-with-a-contract-interface"></a>Практическое руководство. Создание службы с помощью интерфейса контракта
 С помощью интерфейса является предпочтительным способом создания контракта Windows Communication Foundation (WCF). Такой контракт определяет набор и структуру сообщений, необходимых для доступа к операциям, предлагаемым службой. Этот интерфейс определяет типы входных и выходных данных путем применения класса <xref:System.ServiceModel.ServiceContractAttribute> к интерфейсу и класса <xref:System.ServiceModel.OperationContractAttribute> к методам, которые требуется предоставить.  
@@ -19,13 +19,13 @@ ms.locfileid: "59128717"
   
 ### <a name="creating-a-wcf-contract-with-an-interface"></a>Создание контракта WCF с интерфейсом  
   
-1.  Создать новый интерфейс с помощью Visual Basic, C#, или любые другие языка среды CLR.  
+1. Создать новый интерфейс с помощью Visual Basic, C#, или любые другие языка среды CLR.  
   
-2.  Примените класс <xref:System.ServiceModel.ServiceContractAttribute> к интерфейсу.  
+2. Примените класс <xref:System.ServiceModel.ServiceContractAttribute> к интерфейсу.  
   
-3.  Определите методы интерфейса.  
+3. Определите методы интерфейса.  
   
-4.  Применить <xref:System.ServiceModel.OperationContractAttribute> класса к каждому методу, который должен предоставляться как часть общедоступного контракта WCF.  
+4. Применить <xref:System.ServiceModel.OperationContractAttribute> класса к каждому методу, который должен предоставляться как часть общедоступного контракта WCF.  
   
 ## <a name="example"></a>Пример  
  В следующем примере кода показан интерфейс, определяющий контракт службы.  

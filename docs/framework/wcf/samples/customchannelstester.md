@@ -2,21 +2,21 @@
 title: CustomChannelsTester
 ms.date: 03/30/2017
 ms.assetid: ee1fa307-98b1-4647-8860-2e9217ba6082
-ms.openlocfilehash: c91632c1967645b4319bca14be66fb0052ad741f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7402ac9ccc0e5e1777fa77f339d7605e1d306e13
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59192838"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312674"
 ---
 # <a name="customchannelstester"></a>CustomChannelsTester
 `CustomChannelsTester` - это средство, позволяющее проверять реализации пользовательских каналов на соответствие набору предопределенных контрактов службы. Можно выбрать набор контрактов службы и передать его средству с помощью XML-файла. Затем средство создает службу и клиента, использующих реализации пользовательского канала во время обмена сообщениями.  
   
 ### <a name="to-build-the-tool"></a>Построение средства  
   
-1.  Чтобы построить решение, следуйте инструкциям в [сборка образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+1. Чтобы построить решение, следуйте инструкциям в [сборка образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-2.  Построении решения создается три файла: CustomChannelsTester.exe, TestSpec.xml и SampleRun.cmd. В файле SampleRun.cmd имеется пример командной строки, в котором показано, как использовать это средство для тестирования [транспорта: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) образца.  
+2. Построении решения создается три файла: CustomChannelsTester.exe, TestSpec.xml и SampleRun.cmd. В файле SampleRun.cmd имеется пример командной строки, в котором показано, как использовать это средство для тестирования [транспорта: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) образца.  
   
 ### <a name="to-run-the-tool"></a>Запуск средства  
   

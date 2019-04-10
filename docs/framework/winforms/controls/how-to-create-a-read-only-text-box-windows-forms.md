@@ -6,19 +6,19 @@ helpviewer_keywords:
 - read-only text boxes
 - text boxes [Windows Forms], read-only
 ms.assetid: 60baa9ab-fa57-44ad-bb7c-61b05aa64296
-ms.openlocfilehash: be85eedf272e596ceb10e7510b8c99ce6aed0727
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 72dc188993474ad4b39f0cfa74cadffdb99ff46f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59130732"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308579"
 ---
 # <a name="how-to-create-a-read-only-text-box-windows-forms"></a>Практическое руководство. Создать только для чтения текстовое поле (Windows Forms)
 Изменяемое поле текста в Windows Forms можно преобразовать в элемент управления только для чтения. Например текстовое поле может отобразить значение обычно изменяется, но в настоящее время не может быть из-за состояния приложения.  
   
 ### <a name="to-create-a-read-only-text-box"></a>Чтобы создать поле только для чтения текста  
   
-1.  Задайте <xref:System.Windows.Forms.TextBox> элемента управления <xref:System.Windows.Forms.TextBoxBase.ReadOnly%2A> свойства `true`. Со свойством, имеющим значение `true`, пользователи могут прокручивать и выделите текст в текстовом поле, не позволяя изменять. Объект **копирования** команда работает в текстовом поле, но **Вырезать** и **вставить** команд не.  
+1. Задайте <xref:System.Windows.Forms.TextBox> элемента управления <xref:System.Windows.Forms.TextBoxBase.ReadOnly%2A> свойства `true`. Со свойством, имеющим значение `true`, пользователи могут прокручивать и выделите текст в текстовом поле, не позволяя изменять. Объект **копирования** команда работает в текстовом поле, но **Вырезать** и **вставить** команд не.  
   
     > [!NOTE]
     >  <xref:System.Windows.Forms.TextBoxBase.ReadOnly%2A> Свойство оказывает влияние на взаимодействие с пользователем во время выполнения. По-прежнему изменением содержимого текстового поля программными средствами во время выполнения, изменив <xref:System.Windows.Forms.TextBox.Text%2A> свойства текстового поля.  

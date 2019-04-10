@@ -8,19 +8,19 @@ helpviewer_keywords:
 - labels [Windows Forms], sizing to fit contents
 - Label control [Windows Forms], sizing to fit contents
 ms.assetid: 99648964-63b2-438c-980e-d24103ad602b
-ms.openlocfilehash: f9e7fad1f8b2b4e962f46a1e32522f47f01de2b4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 110aab0c0826bb4b06e22158afd6af37b5406be4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59191878"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312193"
 ---
 # <a name="how-to-size-a-windows-forms-label-control-to-fit-its-contents"></a>Практическое руководство. Приведение размера элемента управления Label в соответствие с его содержимым в Windows Forms
 Windows Forms <xref:System.Windows.Forms.Label> элемент управления может быть одной или несколькими строками, которая может быть либо фиксированного размера или может автоматически изменять свой размер надписи. <xref:System.Windows.Forms.Label.AutoSize%2A> Свойство помогает определить размер элементов управления в соответствии с размером надписи, который является особенно удобно в том случае, если заголовок будет изменяться во время выполнения.  
   
 ### <a name="to-make-a-label-control-resize-dynamically-to-fit-its-contents"></a>Чтобы сделать элемент управления label динамически изменить размер, чтобы вместить его содержимое  
   
-1.  Задайте его <xref:System.Windows.Forms.Label.AutoSize%2A> свойства `true`.  
+1. Задайте его <xref:System.Windows.Forms.Label.AutoSize%2A> свойства `true`.  
   
  Если <xref:System.Windows.Forms.Label.AutoSize%2A> присваивается `false`, слова, указанные в <xref:System.Windows.Forms.Label.Text%2A> свойство будет переносится на следующую строку, если это возможно, но элемент управления не будет увеличиваться.  
   

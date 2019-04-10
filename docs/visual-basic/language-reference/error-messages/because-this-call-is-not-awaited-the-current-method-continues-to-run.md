@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
-ms.openlocfilehash: 5c8767db154c79d9e3b37a22410ac1e4705b7a44
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ba0838d562ac0ec0ea531161c437dec5ce66c3f5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609803"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304237"
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>Поскольку этот вызов не ожидается, выполнение текущего метода продолжается до завершения вызова.
 Так как этот вызов не ожидается, выполнение существующего метода продолжается до тех пор, пока вызов не будет завершен. Рассмотрите возможность применения оператора Await к результату вызова.  
@@ -95,13 +95,13 @@ ms.locfileid: "54609803"
 ## <a name="example"></a>Пример  
  Следующее приложение Windows Presentation Foundation (WPF) содержит методы из предыдущего примера. Ниже описана настройка приложения.  
   
-1.  Создайте приложение WPF с именем `AsyncWarning`.  
+1. Создайте приложение WPF с именем `AsyncWarning`.  
   
-2.  В редакторе кода Visual Studio перейдите на вкладку **MainWindow.xaml** .  
+2. В редакторе кода Visual Studio перейдите на вкладку **MainWindow.xaml** .  
   
      Если вкладка не отображается, откройте контекстное меню для MainWindow.xaml в **Обозревателе решений**и выберите пункт **Просмотреть код**.  
   
-3.  Замените код в представлении **XAML** файла MainWindow.xaml на следующий.  
+3. Замените код в представлении **XAML** файла MainWindow.xaml на следующий.  
   
     ```vb  
     <Window x:Class="MainWindow"  
@@ -117,9 +117,9 @@ ms.locfileid: "54609803"
   
      В представлении **Конструктор** файла MainWindow.xaml появится простое окно, содержащее кнопку и текстовое поле.  
   
-     Дополнительные сведения о конструкторе XAML см. в разделе [Создание пользовательского интерфейса с помощью конструктора XAML](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio). Сведения о том, как построить собственный простой пользовательский Интерфейс, см. в разделе «Создание приложения WPF» и «создание простого MainWindow WPF» разделы [Пошаговое руководство: Получение доступа к Интернету с помощью модификатора Async и оператора Await (C#)](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
+     Дополнительные сведения о конструкторе XAML см. в разделе [Создание пользовательского интерфейса с помощью конструктора XAML](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio). Сведения о том, как построить собственный простой пользовательский интерфейс, см. в подразделах "Создание приложений WPF" и "Создание простого MainWindow WPF" в разделе [Практическое руководство. Получение доступа к Интернету с помощью модификатора Async и оператора Await (C#)](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
-4.  Замените код в MainWindow.xaml.vb на приведенный далее.  
+4. Замените код в MainWindow.xaml.vb на приведенный далее.  
   
     ```vb  
     Class MainWindow   
@@ -199,7 +199,7 @@ ms.locfileid: "54609803"
     ' Exiting the Click event handler.  
     ```  
   
-5.  Нажмите клавишу F5, чтобы запустить программу, а затем нажмите кнопку **Start** .  
+5. Нажмите клавишу F5, чтобы запустить программу, а затем нажмите кнопку **Start** .  
   
      Ожидаемый результат отобразится в конце кода.  
   

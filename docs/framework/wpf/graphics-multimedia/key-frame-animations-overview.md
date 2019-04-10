@@ -6,12 +6,12 @@ helpviewer_keywords:
 - key frames [WPF], about key-frame animations
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
-ms.openlocfilehash: caad7d5694139729ebe89e686ea70a981a0a94d2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: eda91ab6d81150749dc542139949fb92684c0fe1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59191592"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316743"
 ---
 # <a name="key-frame-animations-overview"></a>Общие сведения об анимации по ключевым кадрам
 В этом разделе рассказывается об анимации по ключевым кадрам. Методика анимации по ключевым кадрам позволяет использовать более двух целевых значений и контролировать применяемый метод интерполяции.  
@@ -259,9 +259,9 @@ ms.locfileid: "59191592"
   
  Ниже приводятся процедуры, с помощью которых рассчитывается время кадра при анимации по ключевым кадрам.  
   
-1.  Разрешить <xref:System.TimeSpan> <xref:System.Windows.Media.Animation.KeyTime> значения.  
+1. Разрешить <xref:System.TimeSpan> <xref:System.Windows.Media.Animation.KeyTime> значения.  
   
-2.  Определение *общего времени интерполяции* анимации (общего времени, необходимого для выполнения прямой итерации при анимации по ключевым кадрам).  
+2. Определение *общего времени интерполяции* анимации (общего времени, необходимого для выполнения прямой итерации при анимации по ключевым кадрам).  
   
     1.  Если продолжительность анимации <xref:System.Windows.Media.Animation.Timeline.Duration%2A> не <xref:System.Windows.Duration.Automatic%2A> или <xref:System.Windows.Duration.Forever%2A>, общее время интерполяции является значением анимации <xref:System.Windows.Media.Animation.Timeline.Duration%2A> свойство.  
   
@@ -269,19 +269,19 @@ ms.locfileid: "59191592"
   
     3.  В остальных случаях общее время интерполяции равно 1 секунде.  
   
-3.  Использовать значения времени интерполяции для разрешения <xref:System.Windows.Media.Animation.KeyTimeType.Percent> <xref:System.Windows.Media.Animation.KeyTime> значения.  
+3. Использовать значения времени интерполяции для разрешения <xref:System.Windows.Media.Animation.KeyTimeType.Percent> <xref:System.Windows.Media.Animation.KeyTime> значения.  
   
-4.  Расчет времени последнего кадра в случае, если оно не было рассчитано на предыдущих шагах. Если <xref:System.Windows.Media.Animation.KeyTime> последнего ключевого кадра является <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> или <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>, его расчетное время будет равно общему времени интерполяции.  
+4. Расчет времени последнего кадра в случае, если оно не было рассчитано на предыдущих шагах. Если <xref:System.Windows.Media.Animation.KeyTime> последнего ключевого кадра является <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> или <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>, его расчетное время будет равно общему времени интерполяции.  
   
      Если <xref:System.Windows.Media.Animation.KeyTime> первого ключевого кадра является <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> и эта анимация имеет более одного ключевого кадра, устраните ее <xref:System.Windows.Media.Animation.KeyTime> значение равно нулю, в том случае, если имеется только один ключевой кадр и его <xref:System.Windows.Media.Animation.KeyTime> значение <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>, он разрешен в общей сумме время интерполяции, как описано в предыдущем шаге.  
   
-5.  Определите оставшиеся <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> значения: каждое из них получает равную долю доступного времени.  В ходе этого процесса неразрешенных <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> значения считаются временно <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> значения и получают временно определенное время.  
+5. Определите оставшиеся <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> значения: каждое из них получает равную долю доступного времени.  В ходе этого процесса неразрешенных <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> значения считаются временно <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> значения и получают временно определенное время.  
   
-6.  Разрешить <xref:System.Windows.Media.Animation.KeyTime> значения ключевых кадров с неуказанным временем кадра с использованием соседних объявленных ключевых кадров, которые были устранены <xref:System.Windows.Media.Animation.KeyTime> значения.  
+6. Разрешить <xref:System.Windows.Media.Animation.KeyTime> значения ключевых кадров с неуказанным временем кадра с использованием соседних объявленных ключевых кадров, которые были устранены <xref:System.Windows.Media.Animation.KeyTime> значения.  
   
-7.  Определите оставшиеся <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> значения. <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> использовать <xref:System.Windows.Media.Animation.KeyTime> значений соседних ключевые кадры для определения их расчетного времени.  Цель — убедиться, что скорость анимации является постоянной в течение расчетного времени этого ключевого кадра.  
+7. Определите оставшиеся <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> значения. <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> использовать <xref:System.Windows.Media.Animation.KeyTime> значений соседних ключевые кадры для определения их расчетного времени.  Цель — убедиться, что скорость анимации является постоянной в течение расчетного времени этого ключевого кадра.  
   
-8.  Сортировка ключевых кадров в порядке расчетного времени (первичный ключ) и в порядке объявления (вторичный ключ), т. е., использование строгой сортировки в зависимости от полных кадров <xref:System.Windows.Media.Animation.KeyTime> значения.  
+8. Сортировка ключевых кадров в порядке расчетного времени (первичный ключ) и в порядке объявления (вторичный ключ), т. е., использование строгой сортировки в зависимости от полных кадров <xref:System.Windows.Media.Animation.KeyTime> значения.  
   
 ## <a name="see-also"></a>См. также
 

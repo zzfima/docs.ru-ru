@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30920
 ms.assetid: e47dc755-4294-4368-b813-2177b7677957
-ms.openlocfilehash: 737f9119814e784ebabcbb4629ab6948ce164168
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 89b6c241bb637f2efc6014c4640b3b463c4facfa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814098"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313481"
 ---
 # <a name="first-statement-of-this-sub-new-must-be-an-explicit-call-to-mybasenew-or-myclassnew-because-the-constructorname-in-the-base-class-baseclassname-of-derivedclassname-is-marked-obsolete-errormessage"></a>Первый оператор в «Sub New» должен иметь явный вызов в «MyBase.New» или «MyClass.New», так как "\<имя_конструктора >" в базовом классе\<имя_базового_класса > "из"\<имя_производного_класса > "помечен как устаревший:"\< сообщение об ошибке > "
 Конструктор класса не вызывает явно конструктор базового класса, а вызванный неявно конструктор базового класса помечается атрибутом <xref:System.ObsoleteAttribute> , что является причиной возникновения ошибки.  
@@ -25,10 +25,10 @@ ms.locfileid: "58814098"
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
-1.  Проверьте указанное сообщение об ошибке и выполните соответствующее действие.  
+1. Проверьте указанное сообщение об ошибке и выполните соответствующее действие.  
   
-2.  Включите вызов `MyBase.New()` или `MyClass.New()` в качестве первого оператора `Sub New` в производном классе.  
+2. Включите вызов `MyBase.New()` или `MyClass.New()` в качестве первого оператора `Sub New` в производном классе.  
   
 ## <a name="see-also"></a>См. также
 
-- [Обзор атрибутов](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [Общие сведения об атрибутах](../../../visual-basic/programming-guide/concepts/attributes/index.md)

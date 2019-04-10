@@ -10,12 +10,12 @@ helpviewer_keywords:
 - master-details lists [Windows Forms], displaying on Windows Forms
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: c5fa29e8-47f7-4691-829b-0e697a691f36
-ms.openlocfilehash: 66807287dcaffae4bd310040312e0f56e8fda5d0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a887dacfcb83b4b6ea4cb2690ab09b0d1b20b4fa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59078881"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295800"
 ---
 # <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>Пошаговое руководство. Создание главного и подчиненного представлений данных с использованием двух элементов управления DataGridView в Windows Forms
 Один из наиболее распространенных сценариев использования <xref:System.Windows.Forms.DataGridView> элемент управления является *"основной/подробности"* формы, в котором отображается отношение "родители потомки" между двумя таблицами базы данных. Выбор строк в главной таблице приводит детализации таблицы с помощью соответствующих дочерних данных.  
@@ -33,14 +33,14 @@ ms.locfileid: "59078881"
   
 #### <a name="to-create-a-masterdetail-form"></a>Для создания формы «основной/подробности»  
   
-1.  Создайте класс, производный от <xref:System.Windows.Forms.Form> и содержит два <xref:System.Windows.Forms.DataGridView> элементов управления и два <xref:System.Windows.Forms.BindingSource> компонентов. Ниже представлена базовая реализация формы и включает в себя `Main` метод. При использовании в конструкторе Visual Studio для создания формы, то можно использовать созданный код конструктора вместо этого кода, обязательно используйте имена, показанные в объявлениях переменных.  
+1. Создайте класс, производный от <xref:System.Windows.Forms.Form> и содержит два <xref:System.Windows.Forms.DataGridView> элементов управления и два <xref:System.Windows.Forms.BindingSource> компонентов. Ниже представлена базовая реализация формы и включает в себя `Main` метод. При использовании в конструкторе Visual Studio для создания формы, то можно использовать созданный код конструктора вместо этого кода, обязательно используйте имена, показанные в объявлениях переменных.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#01](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#01)]
      [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#01](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#01)]  
     [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#02](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#02)]
     [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#02](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#02)]  
   
-2.  Реализуйте метод в определении класса формы для обработки подробные сведения о подключении к базе данных. В этом примере используется `GetData` метод, который заполняет <xref:System.Data.DataSet> , добавляет <xref:System.Data.DataRelation> объект набора данных и привязывает <xref:System.Windows.Forms.BindingSource> компонентов. Убедитесь, что переменной `connectionString` присвоено значение, соответствующее базе данных.  
+2. Реализуйте метод в определении класса формы для обработки подробные сведения о подключении к базе данных. В этом примере используется `GetData` метод, который заполняет <xref:System.Data.DataSet> , добавляет <xref:System.Data.DataRelation> объект набора данных и привязывает <xref:System.Windows.Forms.BindingSource> компонентов. Убедитесь, что переменной `connectionString` присвоено значение, соответствующее базе данных.  
   
     > [!IMPORTANT]
     >  Хранение конфиденциальных сведений (например, пароля) в строке подключения может повлиять на безопасность приложения. Использование проверки подлинности Windows (также называемой встроенными средствами безопасности) — более безопасный способ управления доступом к базе данных. Дополнительные сведения см. в разделе [Защита сведений о подключении](../../data/adonet/protecting-connection-information.md).  
@@ -48,7 +48,7 @@ ms.locfileid: "59078881"
      [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#20)]
      [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#20)]  
   
-3.  Реализовать обработчик для формы <xref:System.Windows.Forms.Form.Load> событие, которое привязывает <xref:System.Windows.Forms.DataGridView> элементы управления <xref:System.Windows.Forms.BindingSource> компоненты и вызывает метод `GetData` метод. Следующий пример содержит код, который изменяет размер <xref:System.Windows.Forms.DataGridView> столбцы в соответствии с отображаемых данных.  
+3. Реализовать обработчик для формы <xref:System.Windows.Forms.Form.Load> событие, которое привязывает <xref:System.Windows.Forms.DataGridView> элементы управления <xref:System.Windows.Forms.BindingSource> компоненты и вызывает метод `GetData` метод. Следующий пример содержит код, который изменяет размер <xref:System.Windows.Forms.DataGridView> столбцы в соответствии с отображаемых данных.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#10)]
      [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#10)]  

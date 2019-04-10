@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3889e48019f30f93a9eaa677de26445dbcc33d80
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 13bf7342157de48e0183537afea2f2e53d1498dd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59198807"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300311"
 ---
 # <a name="iclrtaskreset-method"></a>Метод ICLRTask::Reset
 Информирует общеязыковой среды выполнения (CLR), что узел завершения задачи и обеспечивает работу CLR для повторного использования текущего [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) экземпляра для представления другой задачи.  
@@ -55,15 +55,15 @@ HRESULT Reset (
 ## <a name="remarks"></a>Примечания  
  Среда CLR может повторно использовать ранее созданный `ICLRTask` экземпляры, чтобы избежать создания новых экземпляров каждый раз при выполнении новой задачи. Узел включает эту функцию, вызвав `ICLRTask::Reset` вместо [ICLRTask::ExitTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-exittask-method.md) после его завершения задачи. В следующем списке перечислены обычный жизненный цикл `ICLRTask` экземпляр:  
   
-1.  Среда выполнения создает новый `ICLRTask` экземпляра.  
+1. Среда выполнения создает новый `ICLRTask` экземпляра.  
   
-2.  Среда выполнения вызывает [IHostTaskManager::GetCurrentTask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getcurrenttask-method.md) для получения ссылки на текущую задачу узла.  
+2. Среда выполнения вызывает [IHostTaskManager::GetCurrentTask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getcurrenttask-method.md) для получения ссылки на текущую задачу узла.  
   
-3.  Среда выполнения вызывает [IHostTask::SetCLRTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-setclrtask-method.md) должен быть сопоставлен новому экземпляру задачи.  
+3. Среда выполнения вызывает [IHostTask::SetCLRTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-setclrtask-method.md) должен быть сопоставлен новому экземпляру задачи.  
   
-4.  Задача выполняет и завершается.  
+4. Задача выполняет и завершается.  
   
-5.  Узел уничтожает задачи путем вызова `ICLRTask::ExitTask`.  
+5. Узел уничтожает задачи путем вызова `ICLRTask::ExitTask`.  
   
  `Reset` изменяет этот сценарий следующим образом. В шаге 5 выше, сервер вызывает функцию `Reset` для сброса задачи в исходное состояние и затем разрывает связь между `ICLRTask` экземпляр из сопоставленного ему [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) экземпляра. При желании также можно кэшировать узла `IHostTask` экземпляра для повторного использования. На шаге 1 выше, среда выполнения извлекает перезапущен `ICLRTask` из кэша вместо создания нового экземпляра.  
   

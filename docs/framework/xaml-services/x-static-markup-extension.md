@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Static markup extension in XAML [XAML Services]
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
-ms.openlocfilehash: eb0c34f259220a0326238b27ab43efd3078b0bcc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3da2f6afc7e7ecf20c91f0badca38bc26083d3ae
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59207088"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295714"
 ---
 # <a name="xstatic-markup-extension"></a>Расширение разметки x:Static
 Ссылается на любой сущности кода статический по значению, определенному в [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]— надлежащим способом. Статическое свойство, которое указывается может использоваться для предоставления значения свойства в XAML.  
@@ -55,13 +55,13 @@ ms.locfileid: "59207088"
 
 Существует два сценария XAML, которые являются технически возможно. Тем не менее эти данные об использовании применяется реже, поскольку они являются излишним:  
 
-1.  Синтаксис объектных элементов.
+1. Синтаксис объектных элементов.
 
     ```xaml
     <x:Static Member="prefix:typeName.staticMemberName" ... />
     ```
 
-2.  Синтаксис атрибута с явным свойством элемента для строки инициализации.
+2. Синтаксис атрибута с явным свойством элемента для строки инициализации.
 
     ```xaml
     <object property="{x:Static Member=prefix:typeName.staticMemberName}" ... />

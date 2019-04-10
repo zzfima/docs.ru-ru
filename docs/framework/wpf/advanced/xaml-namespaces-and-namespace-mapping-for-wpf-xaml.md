@@ -14,12 +14,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: cf09415e9203c82d26bccf4e84db5607047b6f35
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c238bd3c014c07c541bed0c8f7bc12fc5a910f1b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59176921"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301039"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>Пространства имен XAML и сопоставление пространств имен для WPF XAML
 В этом разделе обосновывается наличие и рассматриваются цели сопоставления двух пространств имен XAML, обычно содержащихся в корневом теге файла WPF XAML. Также описываются способы создания аналогичных сопоставлений для использования элементов, заданных в коде и/или в отдельных сборках.  
@@ -119,15 +119,15 @@ End Namespace
 ## <a name="wpf-and-assembly-loading"></a>WPF и загрузка сборок  
  Контекст схемы XAML для WPF интегрируется с моделью приложения WPF, которая в свою очередь, использует определенное в среде CLR понятие <xref:System.AppDomain>. Ниже описана последовательность действий как контекст схемы XAML интерпретирует либо порядок загрузки сборок либо поиска типов во время выполнения или во время разработки, основываясь на работу с WPF <xref:System.AppDomain> и других факторов.  
   
-1.  Итерации по <xref:System.AppDomain>, целью поиска уже загруженной сборки, соответствующей всем аспектам имени, начиная с последней загруженной сборки.  
+1. Итерации по <xref:System.AppDomain>, целью поиска уже загруженной сборки, соответствующей всем аспектам имени, начиная с последней загруженной сборки.  
   
-2.  Если определено полное имя, вызовите <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> для полного имени.  
+2. Если определено полное имя, вызовите <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> для полного имени.  
   
-3.  Если сборке, из которой была загружена разметка, соответствует сочетание "короткое имя + токен открытого ключа полного имени", возвратите эту сборку.  
+3. Если сборке, из которой была загружена разметка, соответствует сочетание "короткое имя + токен открытого ключа полного имени", возвратите эту сборку.  
   
-4.  Использовать короткое имя + токен открытого ключа для вызова <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
+4. Использовать короткое имя + токен открытого ключа для вызова <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
   
-5.  Если определено неполное имя, вызовите <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>.  
+5. Если определено неполное имя, вызовите <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>.  
   
  Свободный XAML не использует шаг 3, так как нет сборки, из которой выполнялась загрузка.  
   

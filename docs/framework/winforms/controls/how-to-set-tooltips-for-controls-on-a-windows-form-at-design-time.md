@@ -9,12 +9,12 @@ helpviewer_keywords:
 - tooltips [Windows Forms], for controls
 - examples [Windows Forms], tooltips
 ms.assetid: c4b60637-4c0a-44c2-a103-f66dff887936
-ms.openlocfilehash: d2bca517e98a8258d4f510c64593de2ad9646e13
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cc8f8c620516a943d6d70187e19b72f5a2a99888
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59157609"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301338"
 ---
 # <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a>Практическое руководство. Определение всплывающих подсказок для элементов управления в Windows Forms во время разработки
 Можно задать <xref:System.Windows.Forms.ToolTip> строку в коде или в конструкторе Windows Forms. Дополнительные сведения о <xref:System.Windows.Forms.ToolTip> компонента, см. в разделе [Общие сведения о компоненте ToolTip](tooltip-component-overview-windows-forms.md).  
@@ -24,9 +24,9 @@ ms.locfileid: "59157609"
   
 ### <a name="to-set-a-tooltip-programmatically"></a>Чтобы задать подсказку программным способом  
   
-1.  Добавьте элемент управления, который будет отображаться объект ToolTip.  
+1. Добавьте элемент управления, который будет отображаться объект ToolTip.  
   
-2.  Используйте <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> метод <xref:System.Windows.Forms.ToolTip> компонента.  
+2. Используйте <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> метод <xref:System.Windows.Forms.ToolTip> компонента.  
   
     ```vb  
     ' In this example, Button1 is the control to display the ToolTip.  
@@ -45,15 +45,15 @@ ms.locfileid: "59157609"
   
 ### <a name="to-set-a-tooltip-in-the-designer"></a>Для задания подсказки в конструкторе  
   
-1.  Добавьте в форму компонент <xref:System.Windows.Forms.ToolTip>.  
+1. Добавьте в форму компонент <xref:System.Windows.Forms.ToolTip>.  
   
-2.  Выберите элемент управления, который будет отображаться объект ToolTip, или добавьте его в форму.  
+2. Выберите элемент управления, который будет отображаться объект ToolTip, или добавьте его в форму.  
   
-3.  В **свойства** окне **во всплывающей подсказке над ToolTip1** значение соответствующую строку текста.  
+3. В **свойства** окне **во всплывающей подсказке над ToolTip1** значение соответствующую строку текста.  
 
 ### <a name="to-remove-a-tooltip-programmatically"></a>Чтобы удалить подсказки программными средствами  
   
-1.  Используйте <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> метод <xref:System.Windows.Forms.ToolTip> компонента.  
+1. Используйте <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> метод <xref:System.Windows.Forms.ToolTip> компонента.  
   
     ```vb  
     ' In this example, Button1 is the control displaying the ToolTip.  
@@ -72,9 +72,9 @@ ms.locfileid: "59157609"
   
 ### <a name="to-remove-a-tooltip-in-the-designer"></a>Чтобы удалить всплывающей подсказки в конструкторе  
   
-1.  Выберите элемент управления, который отображает подсказку.  
+1. Выберите элемент управления, который отображает подсказку.  
   
-2.  В **свойства** окно, удалите текст в **во всплывающей подсказке над ToolTip1**.  
+2. В **свойства** окно, удалите текст в **во всплывающей подсказке над ToolTip1**.  
 
 ## <a name="see-also"></a>См. также
 

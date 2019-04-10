@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40057
 ms.assetid: 4ae3506e-2ebe-4ff3-995d-14ac60db5e9f
-ms.openlocfilehash: 554300f87dbfca351ebcd2d544051968e84880ab
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 105fa8da838938d13022c210c1f65cdafd251003
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816831"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308488"
 ---
 # <a name="namespace-or-type-specified-in-the-project-level-imports-qualifiedelementname-doesnt-contain-any-public-member-or-cannot-be-found"></a>Пространство имен или тип, указанный в Imports на уровне проекта\<полное_имя_элемента > "не содержат открытые члены или не найден
 Пространство имен или тип, указанный в Imports на уровне проекта\<полное_имя_элемента > "не содержат открытые члены или не найден. Убедитесь, что пространство имен или тип определены и содержат хотя бы один открытый член. Убедитесь, что псевдоним не может содержать другие псевдонимы.  
@@ -31,16 +31,16 @@ ms.locfileid: "58816831"
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
-1.  Откройте **конструктор проектов** и переключиться в режим **ссылку** страницы.  
+1. Откройте **конструктор проектов** и переключиться в режим **ссылку** страницы.  
   
-2.  В **импортированные пространства имен** разделе, убедитесь, что содержащий элемент доступен из проекта.  
+2. В **импортированные пространства имен** разделе, убедитесь, что содержащий элемент доступен из проекта.  
   
-3.  Убедитесь, что элемент, имеющий предоставляет по крайней мере `Public` член.  
+3. Убедитесь, что элемент, имеющий предоставляет по крайней мере `Public` член.  
   
 ## <a name="see-also"></a>См. также
 
 - [Страница "Ссылки" в конструкторе проектов (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic)
-- [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)
+- [Управление свойствами проекта и решения](/visualstudio/ide/managing-project-and-solution-properties)
 - [Public](../../../visual-basic/language-reference/modifiers/public.md)
 - [Пространства имен в Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)
-- [Ссылки на объявленные элементы](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)

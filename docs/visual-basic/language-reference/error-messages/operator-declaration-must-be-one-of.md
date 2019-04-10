@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC33000
 ms.assetid: 15c5d8eb-3a8c-4141-8f41-33151afabf97
-ms.openlocfilehash: dac8613d79e3262e4d1fd6ad1599fd01182e329b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4283547109ec312cc4fe07a054bbb8db3bff660f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819376"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299193"
 ---
 # <a name="operator-declaration-must-be-one-of----amp-like-mod-and-or-xor-not--"></a>Объявлении оператора должен быть одним из: +,-, *,\,/, ^, &amp;, например, Mod и, Or, Xor, не, \< \<, >>...
 Можно объявить только оператор, который подходит для перегрузки. В следующей таблице перечислены операторы, которые можно объявить.  
@@ -20,7 +20,7 @@ ms.locfileid: "58819376"
 |Тип|Операторы|  
 |----------|---------------|  
 |Унарный|`+`, `-`, `IsFalse`, `IsTrue`, `Not`|  
-|Binary|`+`, `-`, `*`, `/`, `\`, `&`, `^`, `>>`, `<<`, `=`, `<>`, `>`, `>=`, `<`, `<=`, `And`, `Like`, `Mod`, `Or`, `Xor`|  
+|Бинарный|`+`, `-`, `*`, `/`, `\`, `&`, `^`, `>>`, `<<`, `=`, `<>`, `>`, `>=`, `<`, `<=`, `And`, `Like`, `Mod`, `Or`, `Xor`|  
 |Преобразование (унарный)|`CType`|  
   
  Обратите внимание, что `=` оператор в списке бинарных операторов является оператором сравнения, не оператором присваивания.  
@@ -29,13 +29,13 @@ ms.locfileid: "58819376"
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
-1.  Выберите оператор из набора перегружаемых операторов.  
+1. Выберите оператор из набора перегружаемых операторов.  
   
-2.  Если требуется возможность перегрузки оператора, который нельзя перегрузить непосредственно, создайте процедуру `Function` , которая принимает соответствующие параметры и возвращает соответствующее значение.  
+2. Если требуется возможность перегрузки оператора, который нельзя перегрузить непосредственно, создайте процедуру `Function` , которая принимает соответствующие параметры и возвращает соответствующее значение.  
   
 ## <a name="see-also"></a>См. также
 
-- [Оператор Statement](../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Процедуры операторов](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)
 - [Практическое руководство. Определение оператора](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
 - [Практическое руководство. Определение оператора преобразования](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)

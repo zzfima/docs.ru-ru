@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Web service binding [WPF]
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
-ms.openlocfilehash: 66e91190e68d9610dd95d677edb276e117ec6abb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2c3bc1f2142f07aba3df2da6c46117d3907443a5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59098584"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304991"
 ---
 # <a name="how-to-bind-to-a-web-service"></a>Практическое руководство. Привязка к веб-службе
 В этом примере показано, как выполнить привязку для объектов, возвращенных вызовов метода веб-службы.  
@@ -24,13 +24,13 @@ ms.locfileid: "59098584"
   
  Перед вызовом метода веб-службы, необходимо создать ссылку на него. Для создания веб-ссылки MTPS службе, используя [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], выполните следующие действия:  
   
-1.  Откройте проект в [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)].  
+1. Откройте проект в [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)].  
   
-2.  Из **проекта** меню, щелкните **Add Web Reference**.  
+2. Из **проекта** меню, щелкните **Add Web Reference**.  
   
-3.  В диалоговом окне задайте **URL-адрес** для [ http://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl ](https://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl).  
+3. В диалоговом окне задайте **URL-адрес** для [ http://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl ](https://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl).  
   
-4.  Нажмите клавишу **Go** и затем **добавьте ссылку на**.  
+4. Нажмите клавишу **Go** и затем **добавьте ссылку на**.  
   
  Затем вызовите метод веб-службы и задайте <xref:System.Windows.FrameworkElement.DataContext%2A> соответствующий элемент управления или окно, чтобы возвращенный объект. **GetContent** метод службы MTPS принимает ссылку на **getContentRequest** объекта. Таким образом в следующем примере сначала задается объект запроса:  
   

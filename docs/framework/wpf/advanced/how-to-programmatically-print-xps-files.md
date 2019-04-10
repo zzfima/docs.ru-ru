@@ -8,12 +8,12 @@ helpviewer_keywords:
 - printing XPS files programmatically [WPF]
 - XPS files [WPF], printing programmatically
 ms.assetid: 0b1c0a3f-b19e-43d6-bcc9-eb3ec4e555ad
-ms.openlocfilehash: f113516fd96b88ea04b5ee155f808200dd2c893d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1d6d45289c9278271a7c7bef5225ad024a5ab0fe
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59114300"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312076"
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>Практическое руководство. Печать XPS-файлов программным способом
 Можно использовать перегрузку <xref:System.Printing.PrintQueue.AddJob%2A> способ печати [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] файлы, не открывая <xref:System.Windows.Controls.PrintDialog> или, в принципе, все [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] вообще.  
@@ -25,13 +25,13 @@ ms.locfileid: "59114300"
 ## <a name="example"></a>Пример  
  Основные действия с помощью с тремя параметрами <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> метод, как показано ниже. Подробные сведения см. в примере.  
   
-1.  Определите, является ли принтер принтером XPSDrv. (Дополнительные сведения о XPSDrv см. в разделе [Обзор печати](printing-overview.md).)  
+1. Определите, является ли принтер принтером XPSDrv. (Дополнительные сведения о XPSDrv см. в разделе [Обзор печати](printing-overview.md).)  
   
-2.  Если принтер не является принтером XPSDrv, задайте однопотоковое подразделение потока.  
+2. Если принтер не является принтером XPSDrv, задайте однопотоковое подразделение потока.  
   
-3.  Создайте экземпляр сервера печати и объект очереди печати.  
+3. Создайте экземпляр сервера печати и объект очереди печати.  
   
-4.  Вызовите метод, указав имя задания, файл для печати и <xref:System.Boolean> флаг, указывающий, будет ли принтер принтером XPSDrv.  
+4. Вызовите метод, указав имя задания, файл для печати и <xref:System.Boolean> флаг, указывающий, будет ли принтер принтером XPSDrv.  
   
  В приведенном ниже примере показано, как выполнить пакетную печать всех файлов [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] в каталоге. Несмотря на то, что приложение предлагает пользователю указать каталог, с тремя параметрами <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> метод не требует [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. Его можно использовать в любом пути кода при условии, что вы знаете имя файла [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] и путь, который вы можете ему передать.  
   

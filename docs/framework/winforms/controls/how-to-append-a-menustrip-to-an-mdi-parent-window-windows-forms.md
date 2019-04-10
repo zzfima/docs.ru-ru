@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], appending
 - MDI [Windows Forms], merging menu items
 ms.assetid: ab70c936-b452-4653-b417-17be57bb795b
-ms.openlocfilehash: 9c39b80c06cae91c43c7a79390cef71ae781489e
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: a335531b090983de4e2b3daccc9f956930cbad6e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442754"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298946"
 ---
 # <a name="how-to-append-a-menustrip-to-an-mdi-parent-window-windows-forms"></a>Практическое руководство. Добавление элемента управления в родительское окно MDI (Windows Forms)
 В некоторых приложениях вид дочернего окна многодокументного интерфейса (MDI) может отличаться от родительского окна MDI. Например, родительским окном MDI может быть электронная таблица, а дочерним окном MDI — диаграмма. В этом случае может потребоваться дополнить содержимое меню родительского окна MDI содержимым меню дочерней MDI-формы, по мере того как активируются дочерние окна MDI различных типов.  
@@ -25,25 +25,25 @@ ms.locfileid: "56442754"
   
 ### <a name="to-append-a-menu-item-to-an-mdi-parent"></a>Добавление пункта меню в родительское окно MDI  
   
-1.  Создайте форму и присвойте ее свойству <xref:System.Windows.Forms.Form.IsMdiContainer%2A> значение `true`.  
+1. Создайте форму и присвойте ее свойству <xref:System.Windows.Forms.Form.IsMdiContainer%2A> значение `true`.  
   
-2.  Добавьте <xref:System.Windows.Forms.MenuStrip> на `Form1` и присвойте свойству <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> для элемента <xref:System.Windows.Forms.MenuStrip> значение `true`.  
+2. Добавьте <xref:System.Windows.Forms.MenuStrip> на `Form1` и присвойте свойству <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> для элемента <xref:System.Windows.Forms.MenuStrip> значение `true`.  
   
-3.  Присвойте свойству <xref:System.Windows.Forms.ToolStripItem.Visible%2A> элемента `Form1`<xref:System.Windows.Forms.MenuStrip> значение `false`.  
+3. Задайте <xref:System.Windows.Forms.ToolStripItem.Visible%2A> свойство `Form1`<xref:System.Windows.Forms.MenuStrip> для `false`.  
   
-4.  Добавьте пункт меню верхнего уровня в `Form1`<xref:System.Windows.Forms.MenuStrip> и присвойте его свойству <xref:System.Windows.Forms.Control.Text%2A> значение `&File`.  
+4. Добавьте пункт меню верхнего уровня для `Form1`<xref:System.Windows.Forms.MenuStrip> и задайте его <xref:System.Windows.Forms.Control.Text%2A> свойства `&File`.  
   
-5.  Добавьте пункт подменю в элемент меню `&File` и присвойте его свойству <xref:System.Windows.Forms.Form.Text%2A> значение `&Open`.  
+5. Добавьте пункт подменю в элемент меню `&File` и присвойте его свойству <xref:System.Windows.Forms.Form.Text%2A> значение `&Open`.  
   
-6.  Добавьте в проект форму, добавьте <xref:System.Windows.Forms.MenuStrip> на форму и присвойте его свойству <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> элемента `Form2`<xref:System.Windows.Forms.MenuStrip> значение `true`.  
+6. Добавьте в проект форму, добавьте <xref:System.Windows.Forms.MenuStrip> в форму и задайте <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> свойство `Form2`<xref:System.Windows.Forms.MenuStrip> для `true`.  
   
-7.  Добавьте пункт меню верхнего уровня в `Form2`<xref:System.Windows.Forms.MenuStrip> и присвойте его свойству <xref:System.Windows.Forms.Form.Text%2A> значение `&Special`.  
+7. Добавьте пункт меню верхнего уровня для `Form2`<xref:System.Windows.Forms.MenuStrip> и задайте его <xref:System.Windows.Forms.Form.Text%2A> свойства `&Special`.  
   
-8.  Добавьте два подменю к пункту меню `&Special` и присвойте их свойствам <xref:System.Windows.Forms.Form.Text%2A> значения `Command&1` и `Command&2` соответственно.  
+8. Добавьте два подменю к пункту меню `&Special` и присвойте их свойствам <xref:System.Windows.Forms.Form.Text%2A> значения `Command&1` и `Command&2` соответственно.  
   
 9. Присвойте свойству <xref:System.Windows.Forms.MergeAction> элементов меню `&Special`, `Command&1` и `Command&2` значение <xref:System.Windows.Forms.MergeAction.Append>.  
   
-10. Создайте обработчик событий для события <xref:System.Windows.Forms.Control.Click> элемента `&New`<xref:System.Windows.Forms.ToolStripMenuItem>.  
+10. Создайте обработчик событий для <xref:System.Windows.Forms.Control.Click> событие `&New`<xref:System.Windows.Forms.ToolStripMenuItem>.  
   
 11. В обработчик событий вставьте код, аналогичный приведенному в следующем примере для создания и отображения новых экземпляров `Form2` в качестве дочерних окон MDI `Form1`.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "56442754"
     }  
     ```  
   
-12. Поместите код, аналогичный приведенному в следующем примере, в `&Open`<xref:System.Windows.Forms.ToolStripMenuItem>, для регистрации обработчика событий.  
+12. Поместите код, аналогичный приведенному ниже код в `&Open`<xref:System.Windows.Forms.ToolStripMenuItem> для регистрации обработчика событий.  
   
     ```vb  
     Private Sub openToolStripMenuItem_Click(sender As Object, e As _  

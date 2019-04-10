@@ -2,12 +2,12 @@
 title: Практическое руководство. Блокировка конечных точек в среде предприятия
 ms.date: 03/30/2017
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-ms.openlocfilehash: 9bfd077abf0956f014c78a7c398670822724f7e5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: da90c2e9d096d32c819590058f1e513224fd9242
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59181367"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305972"
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Практическое руководство. Блокировка конечных точек в среде предприятия
 Крупным предприятиям часто требуется, чтобы приложения разрабатывались в соответствии с политиками безопасности предприятия. Следующий раздел описывает, как разрабатывать и устанавливать проверяющий элемент конечной точки клиента, который может использоваться для проверки всех клиентских приложений Windows Communication Foundation (WCF), установленного на компьютерах.  
@@ -25,23 +25,23 @@ ms.locfileid: "59181367"
   
 ### <a name="to-create-the-endpoint-validator"></a>Создание проверяющего элемента конечной точки  
   
-1.  Создайте расширение <xref:System.ServiceModel.Description.IEndpointBehavior>, в методе <xref:System.ServiceModel.Description.IEndpointBehavior.Validate%2A> которого выполняются необходимые действия по проверке. Ниже приведен пример кода. ( `InternetClientValidatorBehavior` Берется из [проверки безопасности](../../../../docs/framework/wcf/samples/security-validation.md) пример.)  
+1. Создайте расширение <xref:System.ServiceModel.Description.IEndpointBehavior>, в методе <xref:System.ServiceModel.Description.IEndpointBehavior.Validate%2A> которого выполняются необходимые действия по проверке. Ниже приведен пример кода. ( `InternetClientValidatorBehavior` Берется из [проверки безопасности](../../../../docs/framework/wcf/samples/security-validation.md) пример.)  
   
      [!code-csharp[LockdownValidation#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/internetclientvalidatorbehavior.cs#2)]  
   
-2.  Создает новый класс <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>, который регистрирует проверяющий элемент управления конечной точки на шаге 1. Это показано в следующем примере кода. (Исходный код для этого примера находится в [проверки безопасности](../../../../docs/framework/wcf/samples/security-validation.md) пример.)  
+2. Создает новый класс <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>, который регистрирует проверяющий элемент управления конечной точки на шаге 1. Это показано в следующем примере кода. (Исходный код для этого примера находится в [проверки безопасности](../../../../docs/framework/wcf/samples/security-validation.md) пример.)  
   
      [!code-csharp[LockdownValidation#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/internetclientvalidatorelement.cs#3)]  
   
-3.  Проверьте, что скомпилированная сборка подписана строгим именем. Дополнительные сведения см. в разделе [Strong Name Tool (SN. (EXE)](https://go.microsoft.com/fwlink/?LinkId=248217) и команд компилятора для вашего языка.  
+3. Проверьте, что скомпилированная сборка подписана строгим именем. Дополнительные сведения см. в разделе [Strong Name Tool (SN. (EXE)](https://go.microsoft.com/fwlink/?LinkId=248217) и команд компилятора для вашего языка.  
   
 ### <a name="to-install-the-validator-into-the-target-computer"></a>Установка проверяющего элемента управления на целевом компьютере  
   
-1.  Установите проверяющий элемент конечной точки, используя соответствующую процедуру. На предприятии для этого можно использовать групповую политику или сервер Systems Management Server (SMS).  
+1. Установите проверяющий элемент конечной точки, используя соответствующую процедуру. На предприятии для этого можно использовать групповую политику или сервер Systems Management Server (SMS).  
   
-2.  Установите сборку со строгим именем в глобальный кэш с помощью [Gacutil.exe (программа глобального кэша сборок)](../../../../docs/framework/tools/gacutil-exe-gac-tool.md).  
+2. Установите сборку со строгим именем в глобальный кэш с помощью [Gacutil.exe (программа глобального кэша сборок)](../../../../docs/framework/tools/gacutil-exe-gac-tool.md).  
   
-3.  С помощью типов из пространства имен <xref:System.Configuration?displayProperty=nameWithType> выполните следующие действия.  
+3. С помощью типов из пространства имен <xref:System.Configuration?displayProperty=nameWithType> выполните следующие действия.  
   
     1.  Добавить расширение для [ \<behaviorExtensions >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviorextensions.md) с помощью имени типа, полное и заблокируйте элемент.  
   

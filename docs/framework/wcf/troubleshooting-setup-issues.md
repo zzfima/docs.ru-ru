@@ -2,12 +2,12 @@
 title: Устранение неполадок с установкой
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 41e266ba5b54bfb37313f9588515f7ae9cc6f79d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 69242ec745f2a5b945ae64eb558070dbf0d39c10
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59153079"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299622"
 ---
 # <a name="troubleshooting-setup-issues"></a>Устранение неполадок с установкой
 В этом разделе описывается устранение неполадок Windows Communication Foundation (WCF) неполадки установки.  
@@ -30,13 +30,13 @@ ms.locfileid: "59153079"
 ## <a name="wmi-service-corruption-blocks-installation-of-the-windows-communication-foundation-wmi-provider-during-installation-of-net-framework-30-package"></a>Повреждение службы WMI блокирует установку поставщика инструментария WMI для Windows Communication Foundation во время установки пакета .NET Framework 3.0  
  Повреждение службы WMI может заблокировать установку поставщика инструментария WMI для Windows Communication Foundation. Во время установки установщику Windows Communication Foundation не удается зарегистрировать MOF-файл WCF с помощью компонента mofcomp.exe. Ниже приведен список признаков возникновения такой ситуации.  
   
-1.  Установка .NET Framework 3.0 завершается успешно, но поставщик инструментария WMI для WCF не зарегистрирован.  
+1. Установка .NET Framework 3.0 завершается успешно, но поставщик инструментария WMI для WCF не зарегистрирован.  
   
-2.  В журнале событий приложения появляется запись об ошибке, связанной с проблемами при регистрации поставщика инструментария WMI для WCF или при запуске средства mofcomp.exe.  
+2. В журнале событий приложения появляется запись об ошибке, связанной с проблемами при регистрации поставщика инструментария WMI для WCF или при запуске средства mofcomp.exe.  
   
-3.  В файле журнала установки с именем dd_wcf_retCA* в каталоге %temp% пользователя содержатся сведения о том, что не удалось зарегистрировать поставщик инструментария WMI для WCF.  
+3. В файле журнала установки с именем dd_wcf_retCA* в каталоге %temp% пользователя содержатся сведения о том, что не удалось зарегистрировать поставщик инструментария WMI для WCF.  
   
-4.  В журнале событий или в файле журнала трассировки установки может быть зарегистрировано исключение, например одно из приведенных ниже.  
+4. В журнале событий или в файле журнала трассировки установки может быть зарегистрировано исключение, например одно из приведенных ниже.  
   
      ServiceModelReg [11:09:59:046]: System.ApplicationException: Неожиданный результат 3 выполнение E:\WINDOWS\system32\wbem\mofcomp.exe с «Foundation\ServiceModel.mof E:\WINDOWS\Microsoft.NET\Framework\v3.0\Windows связи»  
   
@@ -52,7 +52,7 @@ ms.locfileid: "59153079"
   
  Чтобы решить описанную выше проблему, необходимо выполнить следующие действия.  
   
-1.  Запустите [диагностики WMI Diagnosis Utility, версии 2.0](https://go.microsoft.com/fwlink/?LinkId=94685) для восстановления службы WMI. Дополнительные сведения об использовании этого инструмента см. в разделе [WMI Diagnosis Utility](https://go.microsoft.com/fwlink/?LinkId=94686) раздела.  
+1. Запустите [диагностики WMI Diagnosis Utility, версии 2.0](https://go.microsoft.com/fwlink/?LinkId=94685) для восстановления службы WMI. Дополнительные сведения об использовании этого инструмента см. в разделе [WMI Diagnosis Utility](https://go.microsoft.com/fwlink/?LinkId=94686) раздела.  
   
  Восстановите установку .NET Framework 3.0 с помощью **Add/Remove Programs** приложения находятся в **панели управления**, или удалите и переустановите .NET Framework 3.0.  
   

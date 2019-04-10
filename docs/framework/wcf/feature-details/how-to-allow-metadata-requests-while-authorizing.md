@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - allowing metadata requests while authorizing [WCF]
 ms.assetid: 90cec34f-b619-452b-a056-8b1c0de49d05
-ms.openlocfilehash: 4d549bb953ecdcbddd0ea4730a766538b2205d0f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: bea4f7e90df29678697fe6708bdc6a73145522db
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59082676"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317705"
 ---
 # <a name="how-to-allow-metadata-requests-while-authorizing"></a>Как выполнить: Разрешение запросов метаданных в процессе авторизации
 В процессе настраиваемой авторизации может потребоваться разрешить обработку запроса для метаданных. Следующий раздел содержит пошаговое руководство для проверки такого запроса.  
@@ -21,13 +21,13 @@ ms.locfileid: "59082676"
   
 ### <a name="to-allow-metadata-requests-during-authorization"></a>Разрешение запросов метаданных в процессе авторизации  
   
-1.  Создайте расширение класса <xref:System.ServiceModel.ServiceAuthorizationManager>.  
+1. Создайте расширение класса <xref:System.ServiceModel.ServiceAuthorizationManager>.  
   
-2.  Переопределите метод <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> . Метод возвращает логическое значение `true` или `false`, в зависимости от того, разрешена ли авторизация. Информация о текущей процедуре находится в классе <xref:System.ServiceModel.OperationContext> и передается как параметр методу.  
+2. Переопределите метод <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> . Метод возвращает логическое значение `true` или `false`, в зависимости от того, разрешена ли авторизация. Информация о текущей процедуре находится в классе <xref:System.ServiceModel.OperationContext> и передается как параметр методу.  
   
-3.  При переопределении проверяются имя контракта, пространство имен и действие, как показано в следующем примере. Если условия являются допустимыми, то верните `true.`  
+3. При переопределении проверяются имя контракта, пространство имен и действие, как показано в следующем примере. Если условия являются допустимыми, то верните `true.`  
   
-4.  Используйте точку расширения для использования класса. Дополнительные сведения см. в разделе [Как Создание пользовательского диспетчера авторизации для службы](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md).  
+4. Используйте точку расширения для использования класса. Дополнительные сведения см. в разделе [Как Создание пользовательского диспетчера авторизации для службы](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md).  
   
 ## <a name="example"></a>Пример  
  В следующем примере показано переопределение метода <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>.  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - calling extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: df07750f-40f4-4c07-a79e-1113a27cfbea
-ms.openlocfilehash: 2543694e6bf8da5b67ecaccc92633a8448154063
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 5cb0684637a716dfec947740ba345c62eaabddd7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837138"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313805"
 ---
 # <a name="how-to-call-an-extension-method-visual-basic"></a>Практическое руководство. Вызов метода расширения (Visual Basic)
 Методы расширения позволяют добавлять методы к существующему классу. После объявления и добавлены в область действия методом расширения, его можно вызывать как метод экземпляра типа, который он расширяет. Дополнительные сведения о том, как написание метода расширения, см. в разделе [как: Написание метода расширения](./how-to-write-an-extension-method.md).  
@@ -34,13 +34,13 @@ End Module
   
 ### <a name="to-call-an-extension-method"></a>Для вызова метода расширения  
   
-1.  Объявите переменную, которая имеет тип данных первого параметра метода расширения. Для `PrintAndPunctuate`, вам потребуется <xref:System.String> переменной:  
+1. Объявите переменную, которая имеет тип данных первого параметра метода расширения. Для `PrintAndPunctuate`, вам потребуется <xref:System.String> переменной:  
   
     ```  
     Dim example = "Ready"  
     ```  
   
-2.  Переменная будет вызвать метод расширения, что его значение, привязанное к первому параметру `aString`. Следующая инструкция вызова будет отображать `Ready?`.  
+2. Переменная будет вызвать метод расширения, что его значение, привязанное к первому параметру `aString`. Следующая инструкция вызова будет отображать `Ready?`.  
   
     ```  
     example.PrintAndPunctuate("?")  
@@ -53,7 +53,7 @@ End Module
     example.IndexOf("R")  
     ```  
   
-3.  Объявите другую строковую переменную и вызовите метод еще раз, чтобы увидеть, что он работает с любой строкой.  
+3. Объявите другую строковую переменную и вызовите метод еще раз, чтобы увидеть, что он работает с любой строкой.  
   
     ```  
     Dim example2 = " or not"  
@@ -98,4 +98,4 @@ End Module
 
 - [Практическое руководство. Написание метода расширения](./how-to-write-an-extension-method.md)
 - [Методы расширения](./extension-methods.md)
-- [Область, в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Область видимости в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

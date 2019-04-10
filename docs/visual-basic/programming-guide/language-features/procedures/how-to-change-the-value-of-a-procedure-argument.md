@@ -13,12 +13,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: 6fad2368-5da7-4c07-8bf8-0f4e65a1be67
-ms.openlocfilehash: 6aee795fefe36c2ad19390c0ac6d1613b2199415
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: a56bdf888163c9559b87e857abb33522c547ed45
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837506"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316626"
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>Практическое руководство. Изменение значения аргумента процедуры (Visual Basic)
 При вызове процедуры, каждый аргумент соответствует одному из параметров, определенных в процедуре. В некоторых случаях код процедуры можно изменить значение базового аргумента в вызывающем коде. В других случаях процедуру можно изменить только свою локальную копию аргумента.  
@@ -31,13 +31,13 @@ ms.locfileid: "58837506"
   
 #### <a name="to-change-the-underlying-value-of-a-procedure-argument-in-the-calling-code"></a>Чтобы изменить базовое значение аргумента в вызывающем коде процедуры  
   
-1.  В объявлении процедуры, указывать [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) для параметра, соответствующего аргументу.  
+1. В объявлении процедуры, указывать [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) для параметра, соответствующего аргументу.  
   
-2.  В вызывающем коде передайте изменяемый элемент программирования в качестве аргумента.  
+2. В вызывающем коде передайте изменяемый элемент программирования в качестве аргумента.  
   
-3.  В вызывающем коде не заключайте аргумент в списке аргументов в скобках.  
+3. В вызывающем коде не заключайте аргумент в списке аргументов в скобках.  
   
-4.  В коде процедуры используйте имя параметра для присвоения значения базового элемента в вызывающем коде.  
+4. В коде процедуры используйте имя параметра для присвоения значения базового элемента в вызывающем коде.  
   
  См. в примере ниже для демонстрации.  
   
@@ -46,13 +46,13 @@ ms.locfileid: "58837506"
   
 #### <a name="to-change-the-copy-of-a-procedure-argument-in-the-procedure-code"></a>Чтобы изменить копию аргумента процедуры в коде процедуры  
   
-1.  В объявлении процедуры, указывать [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) для параметра, соответствующего аргументу.  
+1. В объявлении процедуры, указывать [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) для параметра, соответствующего аргументу.  
   
-     - или -  
+     -или-  
   
      В вызывающем коде заключите аргумент в списке аргументов в скобках. Это заставляет Visual Basic для передачи аргумента по значению, даже если соответствующий параметр указывает `ByRef`.  
   
-2.  В коде процедуры используйте имя параметра для присвоения значения аргумента в локальной копии. Базовое значение в вызывающий код не изменяется.  
+2. В коде процедуры используйте имя параметра для присвоения значения аргумента в локальной копии. Базовое значение в вызывающий код не изменяется.  
   
 ## <a name="example"></a>Пример  
  Следующий пример показывает две процедуры, которые принимают переменную массива и работают на его элементы. `increase` Процедура добавляет единицу к каждому элементу. `replace` Процедура присваивает новый массив в параметре `a()` и добавляет единицу к каждому элементу.  
@@ -85,7 +85,7 @@ ms.locfileid: "58837506"
 - [Передача аргументов по значению и по ссылке](./passing-arguments-by-value-and-by-reference.md)
 - [Различия между изменяемыми и неизменяемыми аргументами](./differences-between-modifiable-and-nonmodifiable-arguments.md)
 - [Различия между передачей аргумента по значению и по ссылке](./differences-between-passing-an-argument-by-value-and-by-reference.md)
-- [Практическое руководство. Защита аргумента процедуры от изменения значения](./how-to-protect-a-procedure-argument-against-value-changes.md)
-- [Практическое руководство. Принудительная передаваться по значению аргумента](./how-to-force-an-argument-to-be-passed-by-value.md)
+- [Практическое руководство. Защита аргумента процедуры от изменений значения](./how-to-protect-a-procedure-argument-against-value-changes.md)
+- [Практическое руководство. Принудительная передача аргумента по значению](./how-to-force-an-argument-to-be-passed-by-value.md)
 - [Передача аргументов по позиции и по имени](./passing-arguments-by-position-and-by-name.md)
 - [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

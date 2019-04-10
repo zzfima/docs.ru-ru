@@ -1,30 +1,30 @@
 ---
-title: Как выполнить Определить, является ли файл сборкой (Visual Basic)
+title: Практическое руководство. Определить, является ли файл сборкой (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: de26f410-9bd1-4b55-a343-cc82f81684be
-ms.openlocfilehash: b8627c64398afdef00fde71121f870b337ac072f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47ac7f29509af86819006a4394ca661140b95ab0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520098"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316067"
 ---
-# <a name="how-to-determine-if-a-file-is-an-assembly-visual-basic"></a>Как выполнить Определить, является ли файл сборкой (Visual Basic)
+# <a name="how-to-determine-if-a-file-is-an-assembly-visual-basic"></a>Практическое руководство. Определить, является ли файл сборкой (Visual Basic)
 Файл является сборкой только в том случае, если он является управляемым и содержит запись сборки в своих метаданных. Дополнительные сведения о сборках и метаданных см. в разделе [Манифест сборки](../../../../framework/app-domains/assembly-manifest.md).  
   
 ## <a name="how-to-manually-determine-if-a-file-is-an-assembly"></a>Как вручную определить, является ли файл сборкой  
   
-1.  Запустите [Ildasm.exe (дизассемблер IL)](../../../../framework/tools/ildasm-exe-il-disassembler.md).  
+1. Запустите [Ildasm.exe (дизассемблер IL)](../../../../framework/tools/ildasm-exe-il-disassembler.md).  
   
-2.  Загрузите файл, который нужно протестировать.  
+2. Загрузите файл, который нужно протестировать.  
   
-3.  Если программа **ILDASM** сообщает, что файл не является переносимым исполняемым файлом (PE), то он не является сборкой. Дополнительные сведения см. в разделе [как: просмотреть одержимое сборки](../../../../framework/app-domains/how-to-view-assembly-contents.md).  
+3. Если программа **ILDASM** сообщает, что файл не является переносимым исполняемым файлом (PE), то он не является сборкой. Дополнительные сведения см. в разделе [Практическое руководство. просмотреть одержимое сборки](../../../../framework/app-domains/how-to-view-assembly-contents.md).  
   
 ## <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a>Как программно определить, является ли файл сборкой  
   
-1.  Вызовите метод <xref:System.Reflection.AssemblyName.GetAssemblyName%2A>, указав полный путь к файлу и имя файла, который вы тестируете.  
+1. Вызовите метод <xref:System.Reflection.AssemblyName.GetAssemblyName%2A>, указав полный путь к файлу и имя файла, который вы тестируете.  
   
-2.  Если возникает исключение <xref:System.BadImageFormatException>, значит файл не является сборкой.  
+2. Если возникает исключение <xref:System.BadImageFormatException>, значит файл не является сборкой.  
   
 ## <a name="example"></a>Пример  
  Этот пример кода проверяет, является ли библиотека DLL сборкой.  

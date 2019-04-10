@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31122
 ms.assetid: 6911f0d1-641a-473b-906d-8ee5681194be
-ms.openlocfilehash: 0fc645671eb899faff0dbb5c6d745ba23faf4557
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 169cb49cc5abc76b7c52785392d0083b81a99450
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58827228"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300948"
 ---
 # <a name="custom-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types"></a>Модификатор Custom недопустим для событий, объявленных без явных делегируемых типов
 В отличие от событий ненастраиваемых `Custom Event` требует `As` предложение после имени события, которая явно задает тип делегата для события.  
@@ -23,13 +23,13 @@ ms.locfileid: "58827228"
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
-1.  Определите делегат с такой же список параметров, как пользовательское событие.  
+1. Определите делегат с такой же список параметров, как пользовательское событие.  
   
      Например если `Custom Event` определен с помощью `Custom Event Test(ByVal sender As Object, ByVal i As Integer)`, а затем соответствующий делегат будет следующим.  
   
      [!code-vb[VbVbalrEventError#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEventError/VB/VbVbalrEventError.vb#18)]  
   
-2.  Замените список параметров пользовательского события с `As` предложение, определяющее тип делегата.  
+2. Замените список параметров пользовательского события с `As` предложение, определяющее тип делегата.  
   
      В примере `Custom Event` объявление можно переписать следующим образом.  
   

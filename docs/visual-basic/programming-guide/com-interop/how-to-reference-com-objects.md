@@ -8,12 +8,12 @@ helpviewer_keywords:
 - COM objects, referencing
 - interop assemblies
 ms.assetid: 9c518fb4-27d9-4112-9e6a-5a7d0210af6f
-ms.openlocfilehash: 9e88f5f093ce55d3d80da9b38689016872ea12cb
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 0327c497025630747e526503556f4a1705948850
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980195"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295267"
 ---
 # <a name="how-to-reference-com-objects-from-visual-basic"></a>Практическое руководство. Ссылаться на COM-объекты из Visual Basic
 В Visual Basic Добавление ссылок на COM-объекты, имеющие библиотеки типов необходимо создать сборку взаимодействия для COM-библиотеки. Ссылки на члены объекта COM направляются в сборку взаимодействия и затем перенаправляется на фактический объект COM. Ответы от COM-объекта направляются в сборку взаимодействия и пересылаются в вашей [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] приложения.  
@@ -24,19 +24,19 @@ ms.locfileid: "56980195"
   
 ### <a name="to-add-references-to-com-objects"></a>Добавление ссылок на COM-объекты  
   
-1.  На **проекта** меню, выберите **добавить ссылку** и нажмите кнопку **COM** вкладки в диалоговом окне.  
+1. На **проекта** меню, выберите **добавить ссылку** и нажмите кнопку **COM** вкладки в диалоговом окне.  
   
-2.  Выберите компонент, который вы хотите использовать в списке COM-объектов.  
+2. Выберите компонент, который вы хотите использовать в списке COM-объектов.  
   
-3.  Чтобы упростить доступ к сборке взаимодействия, добавьте `Imports` в начало класса или модуля, в котором используется COM-объекта. Например, в следующем примере кода импортирует пространство имен `INKEDLib` для объектов, на которые ссылается `Microsoft InkEdit Control 1.0` библиотеки.  
+3. Чтобы упростить доступ к сборке взаимодействия, добавьте `Imports` в начало класса или модуля, в котором используется COM-объекта. Например, в следующем примере кода импортирует пространство имен `INKEDLib` для объектов, на которые ссылается `Microsoft InkEdit Control 1.0` библиотеки.  
   
      [!code-vb[VbVbalrInterop#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#40)]  
   
 ### <a name="to-create-an-interop-assembly-using-tlbimp"></a>Чтобы создать сборку взаимодействия, при помощи средства Tlbimp  
   
-1.  Добавьте расположение Tlbimp в путь поиска, если он уже не является частью пути поиска, и вы находитесь не в настоящее время в каталоге, в котором он находится.  
+1. Добавьте расположение Tlbimp в путь поиска, если он уже не является частью пути поиска, и вы находитесь не в настоящее время в каталоге, в котором он находится.  
   
-2.  Вызовите программу Tlbimp из командной строки, указав следующие сведения:  
+2. Вызовите программу Tlbimp из командной строки, указав следующие сведения:  
   
     -   Имя и расположение библиотеки DLL, которая содержит библиотеки типов  
   
@@ -57,6 +57,6 @@ ms.locfileid: "56980195"
 - [COM-взаимодействие](../../../visual-basic/programming-guide/com-interop/index.md)
 - [Tlbimp.exe (программа экспорта библиотек типов)](../../../framework/tools/tlbimp-exe-type-library-importer.md)
 - [Tlbexp.exe (программа экспорта библиотек типов)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)
-- [Пошаговое руководство: Реализация наследования с использованием COM-объектов](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
+- [Пошаговое руководство. Реализация наследования с использованием COM-объектов](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
 - [Устранение неполадок взаимодействия](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)
-- [Оператор Imports (пространство имен и тип .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [Оператор Imports (пространство имен .NET и тип)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)

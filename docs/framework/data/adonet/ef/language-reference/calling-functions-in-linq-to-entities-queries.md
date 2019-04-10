@@ -2,12 +2,12 @@
 title: Вызов функций в запросах LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 12a525a9-727c-4464-a0c7-71a0ef541792
-ms.openlocfilehash: 69a0d11893b528d53dfe5bdca97fa36a65b0a45b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6fa1a7204a91a62c30e8683c449cc2be44132b4f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59180886"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312089"
 ---
 # <a name="calling-functions-in-linq-to-entities-queries"></a>Вызов функций в запросах LINQ to Entities
 В подразделах этого раздела описывается вызов функций в запросах LINQ to Entities.  
@@ -16,11 +16,11 @@ ms.locfileid: "59180886"
   
  Процесс вызова пользовательской функции состоит из трех основных шагов.  
   
-1.  Определите функцию в концептуальной модели или объявите функцию в модели хранения.  
+1. Определите функцию в концептуальной модели или объявите функцию в модели хранения.  
   
-2.  Добавьте метод в приложение и сопоставьте его с функцией в модели с помощью <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>.  
+2. Добавьте метод в приложение и сопоставьте его с функцией в модели с помощью <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>.  
   
-3.  Вызовите функцию в запросе LINQ to Entities.  
+3. Вызовите функцию в запросе LINQ to Entities.  
   
  Дополнительные сведения см. в подразделах этого раздела.  
   

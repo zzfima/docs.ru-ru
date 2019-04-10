@@ -10,12 +10,12 @@ helpviewer_keywords:
 - WSSecurityTokenSerializer class
 - SecurityToken class
 ms.assetid: 6d892973-1558-4115-a9e1-696777776125
-ms.openlocfilehash: 4f2f2d3a1d4263dfc068193f832369b0d82e69fc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9fae195247dea4cbd049f7157f04e87bb97d6f4d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59095663"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304666"
 ---
 # <a name="how-to-create-a-custom-token"></a>Практическое руководство. Создание пользовательского токена
 В этом разделе показано, как создать пользовательский маркер безопасности с помощью класса <xref:System.IdentityModel.Tokens.SecurityToken> и интегрировать его с поставщиком пользовательских маркеров безопасности и структурой проверки подлинности. Полный пример кода см. в разделе [пользовательских маркеров](../../../../docs/framework/wcf/samples/custom-token.md) образца.  
@@ -35,9 +35,9 @@ ms.locfileid: "59095663"
   
 #### <a name="to-create-a-class-that-represents-credit-card-information-inside-client-credentials"></a>Создание класса, представляющего данные кредитной карты в учетных данных клиента  
   
-1.  Определите новый класс, представляющий данные кредитной карты для приложения. В следующем примере создается класс с именем `CreditCardInfo`.  
+1. Определите новый класс, представляющий данные кредитной карты для приложения. В следующем примере создается класс с именем `CreditCardInfo`.  
   
-2.  Добавьте в класс соответствующие свойства, чтобы разрешить приложению указывать данные, необходимые для пользовательского маркера. В этом примере класс имеет три свойства: `CardNumber`, `CardIssuer` и `ExpirationDate`.  
+2. Добавьте в класс соответствующие свойства, чтобы разрешить приложению указывать данные, необходимые для пользовательского маркера. В этом примере класс имеет три свойства: `CardNumber`, `CardIssuer` и `ExpirationDate`.  
   
      [!code-csharp[c_CustomToken#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#4)]
      [!code-vb[c_CustomToken#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#4)]  
@@ -46,13 +46,13 @@ ms.locfileid: "59095663"
   
 #### <a name="to-create-a-custom-security-token-class"></a>Создание класса пользовательского маркера безопасности  
   
-1.  Определите новый класс, производный от класса <xref:System.IdentityModel.Tokens.SecurityToken>. В этом примере создается класс с именем `CreditCardToken`.  
+1. Определите новый класс, производный от класса <xref:System.IdentityModel.Tokens.SecurityToken>. В этом примере создается класс с именем `CreditCardToken`.  
   
-2.  Переопределите свойство <xref:System.IdentityModel.Tokens.SecurityToken.Id%2A>. Это свойство используется для получения локального идентификатора маркера безопасности, используемого для указания XML-представления маркера безопасности из других элементов в сообщении SOAP. В этом примере идентификатор маркера может быть передан в качестве параметра конструктора или новый случайный идентификатор может создаваться при каждом создании экземпляра маркера безопасности.  
+2. Переопределите свойство <xref:System.IdentityModel.Tokens.SecurityToken.Id%2A>. Это свойство используется для получения локального идентификатора маркера безопасности, используемого для указания XML-представления маркера безопасности из других элементов в сообщении SOAP. В этом примере идентификатор маркера может быть передан в качестве параметра конструктора или новый случайный идентификатор может создаваться при каждом создании экземпляра маркера безопасности.  
   
-3.  Реализуйте свойство <xref:System.IdentityModel.Tokens.SecurityToken.SecurityKeys%2A>. Это свойство возвращает коллекцию ключей безопасности, представляемую экземпляром маркера безопасности. Таких ключей может использоваться платформой WCF для подписи или шифрования частей сообщения SOAP. В этом примере маркер безопасности кредитной карты не может содержать какие-либо ключи безопасности, поэтому реализация всегда возвращает пустую коллекцию.  
+3. Реализуйте свойство <xref:System.IdentityModel.Tokens.SecurityToken.SecurityKeys%2A>. Это свойство возвращает коллекцию ключей безопасности, представляемую экземпляром маркера безопасности. Таких ключей может использоваться платформой WCF для подписи или шифрования частей сообщения SOAP. В этом примере маркер безопасности кредитной карты не может содержать какие-либо ключи безопасности, поэтому реализация всегда возвращает пустую коллекцию.  
   
-4.  Переопределите свойства <xref:System.IdentityModel.Tokens.SecurityToken.ValidFrom%2A> и <xref:System.IdentityModel.Tokens.SecurityToken.ValidTo%2A>. Эти свойства используются платформой WCF для определения допустимости экземпляра маркера безопасности. В этом примере для маркера безопасности кредитной карты задана только дата истечения срока действия, поэтому свойство `ValidFrom` возвращает объект <xref:System.DateTime>, представляющий дату и время создания экземпляра.  
+4. Переопределите свойства <xref:System.IdentityModel.Tokens.SecurityToken.ValidFrom%2A> и <xref:System.IdentityModel.Tokens.SecurityToken.ValidTo%2A>. Эти свойства используются платформой WCF для определения допустимости экземпляра маркера безопасности. В этом примере для маркера безопасности кредитной карты задана только дата истечения срока действия, поэтому свойство `ValidFrom` возвращает объект <xref:System.DateTime>, представляющий дату и время создания экземпляра.  
   
      [!code-csharp[c_CustomToken#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#1)]
      [!code-vb[c_CustomToken#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#1)]  
@@ -61,19 +61,19 @@ ms.locfileid: "59095663"
   
 #### <a name="to-create-a-custom-security-token-parameters-class"></a>Создание класса параметров пользовательского маркера безопасности  
   
-1.  Определите новый класс, производный от класса <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters>.  
+1. Определите новый класс, производный от класса <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters>.  
   
-2.  Выполните метод <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.CloneCore%2A>. Скопируйте все внутренние поля, определенные в классе (при их наличии). В этом примере дополнительные поля не определены.  
+2. Выполните метод <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.CloneCore%2A>. Скопируйте все внутренние поля, определенные в классе (при их наличии). В этом примере дополнительные поля не определены.  
   
-3.  Реализуйте свойство <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.SupportsClientAuthentication%2A>, доступное только для чтения. Это свойство возвращает значение `true`, если тип маркера безопасности, представленный данным классом, можно использовать для проверки подлинности клиента при подключении к службе. В этом примере маркер безопасности кредитной карты можно использовать для проверки подлинности клиента при подключении к службе.  
+3. Реализуйте свойство <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.SupportsClientAuthentication%2A>, доступное только для чтения. Это свойство возвращает значение `true`, если тип маркера безопасности, представленный данным классом, можно использовать для проверки подлинности клиента при подключении к службе. В этом примере маркер безопасности кредитной карты можно использовать для проверки подлинности клиента при подключении к службе.  
   
-4.  Реализуйте свойство <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.SupportsServerAuthentication%2A>, доступное только для чтения. Это свойство возвращает значение `true`, если тип маркера безопасности, представленный данным классом, можно использовать для проверки подлинности службы при подключении клиента. В этом примере маркер безопасности кредитной карты нельзя использовать для проверки подлинности службы при подключении клиента.  
+4. Реализуйте свойство <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.SupportsServerAuthentication%2A>, доступное только для чтения. Это свойство возвращает значение `true`, если тип маркера безопасности, представленный данным классом, можно использовать для проверки подлинности службы при подключении клиента. В этом примере маркер безопасности кредитной карты нельзя использовать для проверки подлинности службы при подключении клиента.  
   
-5.  Реализуйте свойство <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.SupportsClientWindowsIdentity%2A>, доступное только для чтения. Это свойство возвращает значение `true`, если тип маркера безопасности, представленный данным классом, можно сопоставить с учетной записью Windows. В этом случае результат проверки подлинности будет представлен экземпляром класса <xref:System.Security.Principal.WindowsIdentity>. В этом примере маркер нельзя сопоставить с учетной записью Windows.  
+5. Реализуйте свойство <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.SupportsClientWindowsIdentity%2A>, доступное только для чтения. Это свойство возвращает значение `true`, если тип маркера безопасности, представленный данным классом, можно сопоставить с учетной записью Windows. В этом случае результат проверки подлинности будет представлен экземпляром класса <xref:System.Security.Principal.WindowsIdentity>. В этом примере маркер нельзя сопоставить с учетной записью Windows.  
   
-6.  Выполните метод <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.CreateKeyIdentifierClause%28System.IdentityModel.Tokens.SecurityToken%2CSystem.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle%29>. Этот метод вызывается инфраструктурой безопасности WCF, когда она необходима ссылка на экземпляр маркера безопасности, представленный данным классом параметров маркера безопасности. Фактический экземпляр маркера безопасности и объект <xref:System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle>, определяющий тип запрашиваемой ссылки, передаются данному методу в качестве аргументов. В этом примере маркером безопасности кредитной карты поддерживаются только внутренние ссылки. Класс <xref:System.IdentityModel.Tokens.SecurityToken> предоставляет возможность создания внутренних ссылок, поэтому для реализации не требуется дополнительный код.  
+6. Выполните метод <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.CreateKeyIdentifierClause%28System.IdentityModel.Tokens.SecurityToken%2CSystem.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle%29>. Этот метод вызывается инфраструктурой безопасности WCF, когда она необходима ссылка на экземпляр маркера безопасности, представленный данным классом параметров маркера безопасности. Фактический экземпляр маркера безопасности и объект <xref:System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle>, определяющий тип запрашиваемой ссылки, передаются данному методу в качестве аргументов. В этом примере маркером безопасности кредитной карты поддерживаются только внутренние ссылки. Класс <xref:System.IdentityModel.Tokens.SecurityToken> предоставляет возможность создания внутренних ссылок, поэтому для реализации не требуется дополнительный код.  
   
-7.  Выполните метод <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.InitializeSecurityTokenRequirement%28System.IdentityModel.Selectors.SecurityTokenRequirement%29>. Этот метод вызывается платформой WCF для преобразования экземпляра класса параметров маркера безопасности в экземпляр <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> класса. Результат используется поставщиками маркеров безопасности для создания соответствующего экземпляра маркера безопасности.  
+7. Выполните метод <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.InitializeSecurityTokenRequirement%28System.IdentityModel.Selectors.SecurityTokenRequirement%29>. Этот метод вызывается платформой WCF для преобразования экземпляра класса параметров маркера безопасности в экземпляр <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> класса. Результат используется поставщиками маркеров безопасности для создания соответствующего экземпляра маркера безопасности.  
   
      [!code-csharp[c_CustomToken#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#2)]
      [!code-vb[c_CustomToken#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#2)]  
@@ -85,15 +85,15 @@ ms.locfileid: "59095663"
   
 #### <a name="to-create-a-custom-security-token-serializer"></a>Создание сериализатора пользовательских маркеров безопасности  
   
-1.  Определите новый класс, производный от класса <xref:System.ServiceModel.Security.WSSecurityTokenSerializer>.  
+1. Определите новый класс, производный от класса <xref:System.ServiceModel.Security.WSSecurityTokenSerializer>.  
   
-2.  Переопределите метод <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.CanReadTokenCore%28System.Xml.XmlReader%29>, основанный на объекте <xref:System.Xml.XmlReader> для чтения потока XML. Этот метод возвращает значение `true`, если реализация сериализатора может десериализовать маркер безопасности при наличии его текущего элемента. В этом примере данный метод проверяет, задано ли для XML-элемента средства чтения XML правильное имя и пространство имен. В случае отрицательного результата для обработки XML-элемента вызывается базовая реализация данного метода.  
+2. Переопределите метод <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.CanReadTokenCore%28System.Xml.XmlReader%29>, основанный на объекте <xref:System.Xml.XmlReader> для чтения потока XML. Этот метод возвращает значение `true`, если реализация сериализатора может десериализовать маркер безопасности при наличии его текущего элемента. В этом примере данный метод проверяет, задано ли для XML-элемента средства чтения XML правильное имя и пространство имен. В случае отрицательного результата для обработки XML-элемента вызывается базовая реализация данного метода.  
   
-3.  Переопределите метод <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.ReadTokenCore%28System.Xml.XmlReader%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%29> . Этот метод считывает содержимое XML маркера безопасности и создает для него представление, хранимое в памяти. Если метод не распознает XML-элемент, на котором основано переданное средство чтения XML, он вызывает реализацию базового класса для обработки предоставленных системой типов маркеров.  
+3. Переопределите метод <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.ReadTokenCore%28System.Xml.XmlReader%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%29> . Этот метод считывает содержимое XML маркера безопасности и создает для него представление, хранимое в памяти. Если метод не распознает XML-элемент, на котором основано переданное средство чтения XML, он вызывает реализацию базового класса для обработки предоставленных системой типов маркеров.  
   
-4.  Переопределите метод <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.CanWriteTokenCore%28System.IdentityModel.Tokens.SecurityToken%29> . Этот метод возвращает значение `true`, если он может преобразовать хранимое в памяти представление маркера (переданное в качестве аргумента) в XML-представление. Если преобразование невозможно, он вызывает реализацию базового класса.  
+4. Переопределите метод <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.CanWriteTokenCore%28System.IdentityModel.Tokens.SecurityToken%29> . Этот метод возвращает значение `true`, если он может преобразовать хранимое в памяти представление маркера (переданное в качестве аргумента) в XML-представление. Если преобразование невозможно, он вызывает реализацию базового класса.  
   
-5.  Переопределите метод <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.WriteTokenCore%28System.Xml.XmlWriter%2CSystem.IdentityModel.Tokens.SecurityToken%29> . Этот метод преобразует хранимое в памяти представление маркера безопасности в XML-представление. Если преобразование невозможно, он вызывает реализацию базового класса.  
+5. Переопределите метод <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.WriteTokenCore%28System.Xml.XmlWriter%2CSystem.IdentityModel.Tokens.SecurityToken%29> . Этот метод преобразует хранимое в памяти представление маркера безопасности в XML-представление. Если преобразование невозможно, он вызывает реализацию базового класса.  
   
      [!code-csharp[c_CustomToken#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#3)]
      [!code-vb[c_CustomToken#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#3)]  
@@ -102,14 +102,14 @@ ms.locfileid: "59095663"
   
 #### <a name="to-integrate-the-custom-security-token-with-a-security-token-provider"></a>Интеграция пользовательского маркера безопасности с поставщиком маркеров безопасности  
   
-1.  Поставщик маркеров безопасности создает, изменяет (при необходимости) и возвращает экземпляр маркера. Чтобы создать пользовательский поставщик для пользовательского маркера безопасности, создайте класс, наследуемый от класса <xref:System.IdentityModel.Selectors.SecurityTokenProvider>. В следующем примере переопределяется метод <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> для возврата экземпляра `CreditCardToken`. Дополнительные сведения о пользовательских поставщиках маркеров безопасности, см. в разделе [как: Создание поставщика маркеров безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md).  
+1. Поставщик маркеров безопасности создает, изменяет (при необходимости) и возвращает экземпляр маркера. Чтобы создать пользовательский поставщик для пользовательского маркера безопасности, создайте класс, наследуемый от класса <xref:System.IdentityModel.Selectors.SecurityTokenProvider>. В следующем примере переопределяется метод <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> для возврата экземпляра `CreditCardToken`. Дополнительные сведения о пользовательских поставщиках маркеров безопасности, см. в разделе [как: Создание поставщика маркеров безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md).  
   
      [!code-csharp[c_CustomToken#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#6)]
      [!code-vb[c_CustomToken#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#6)]  
   
 #### <a name="to-integrate-the-custom-security-token-with-a-security-token-authenticator"></a>Интеграция пользовательского маркера безопасности со структурой проверки подлинности маркеров безопасности  
   
-1.  Структура проверки подлинности маркеров безопасности проверяет содержимое маркера безопасности при его извлечении из сообщения. Чтобы создать пользовательскую структуру проверки подлинности для пользовательского маркера безопасности, создайте класс, наследуемый от класса <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator>. В следующем примере демонстрируется метод переопределения <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A>. Дополнительные сведения о структурах проверки подлинности маркеров безопасности, см. в разделе [как: Создать структуру проверки подлинности маркеров безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md).  
+1. Структура проверки подлинности маркеров безопасности проверяет содержимое маркера безопасности при его извлечении из сообщения. Чтобы создать пользовательскую структуру проверки подлинности для пользовательского маркера безопасности, создайте класс, наследуемый от класса <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator>. В следующем примере демонстрируется метод переопределения <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A>. Дополнительные сведения о структурах проверки подлинности маркеров безопасности, см. в разделе [как: Создать структуру проверки подлинности маркеров безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md).  
   
      [!code-csharp[c_CustomToken#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#7)]
      [!code-vb[c_CustomToken#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#7)]  
@@ -119,7 +119,7 @@ ms.locfileid: "59095663"
   
 #### <a name="to-integrate-the-custom-security-token-with-a-security-token-manager"></a>Интеграция пользовательского маркера безопасности с диспетчером маркеров безопасности  
   
-1.  Диспетчер маркеров безопасности создает соответствующие экземпляры поставщика, структуры проверки подлинности и сериализатора маркеров безопасности. Чтобы создать диспетчер пользовательских маркеров, создайте класс, наследуемый от класса <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>. Основные методы класса используют <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> для создания соответствующего поставщика и клиента или учетных данных службы. Дополнительные сведения о диспетчерах пользовательских маркеров безопасности, см. в разделе [Пошаговое руководство: Создание пользовательских клиента и учетные данные службы](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
+1. Диспетчер маркеров безопасности создает соответствующие экземпляры поставщика, структуры проверки подлинности и сериализатора маркеров безопасности. Чтобы создать диспетчер пользовательских маркеров, создайте класс, наследуемый от класса <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>. Основные методы класса используют <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> для создания соответствующего поставщика и клиента или учетных данных службы. Дополнительные сведения о диспетчерах пользовательских маркеров безопасности, см. в разделе [Пошаговое руководство: Создание пользовательских клиента и учетные данные службы](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
   
      [!code-csharp[c_CustomToken#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#8)]
      [!code-vb[c_CustomToken#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#8)]  
@@ -129,7 +129,7 @@ ms.locfileid: "59095663"
   
 #### <a name="to-integrate-the-custom-security-token-with-custom-client-and-service-credentials"></a>Интеграция пользовательского маркера безопасности с пользовательскими учетными данными клиента и службы  
   
-1.  Учетные данные клиента и службы необходимо добавить для предоставления интерфейса API приложению, чтобы обеспечить возможность указания данных пользовательского маркера, которые используются инфраструктурой пользовательских маркеров безопасности, предварительно созданной для предоставления и проверки подлинности содержимого пользовательских маркеров безопасности. В следующих образцах показано, как это можно сделать. Дополнительные сведения о настраиваемых клиентских учетных данных и службы, см. в разделе [Пошаговое руководство: Создание пользовательских клиента и учетные данные службы](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
+1. Учетные данные клиента и службы необходимо добавить для предоставления интерфейса API приложению, чтобы обеспечить возможность указания данных пользовательского маркера, которые используются инфраструктурой пользовательских маркеров безопасности, предварительно созданной для предоставления и проверки подлинности содержимого пользовательских маркеров безопасности. В следующих образцах показано, как это можно сделать. Дополнительные сведения о настраиваемых клиентских учетных данных и службы, см. в разделе [Пошаговое руководство: Создание пользовательских клиента и учетные данные службы](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
   
      [!code-csharp[c_CustomToken#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#10)]
      [!code-vb[c_CustomToken#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#10)]  
@@ -141,7 +141,7 @@ ms.locfileid: "59095663"
   
 #### <a name="to-integrate-the-custom-security-token-with-the-binding"></a>Интеграция пользовательского маркера безопасности с привязкой  
   
-1.  Класс параметров пользовательского маркера безопасности необходимо задать в одной из коллекций параметров маркера, предоставляемых классом <xref:System.ServiceModel.Channels.SecurityBindingElement>. В следующем примере используется коллекция, возвращаемая методом `SignedEncrypted`. Код добавляет пользовательский маркер кредитной карты в каждое сообщение, передаваемое клиентом службе; при этом содержимое автоматически подписывается и шифруется.  
+1. Класс параметров пользовательского маркера безопасности необходимо задать в одной из коллекций параметров маркера, предоставляемых классом <xref:System.ServiceModel.Channels.SecurityBindingElement>. В следующем примере используется коллекция, возвращаемая методом `SignedEncrypted`. Код добавляет пользовательский маркер кредитной карты в каждое сообщение, передаваемое клиентом службе; при этом содержимое автоматически подписывается и шифруется.  
   
      [!code-csharp[c_CustomToken#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#13)]
      [!code-vb[c_CustomToken#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#13)]  

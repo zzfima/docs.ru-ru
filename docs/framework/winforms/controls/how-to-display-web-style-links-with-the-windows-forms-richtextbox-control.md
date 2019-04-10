@@ -10,25 +10,25 @@ helpviewer_keywords:
 - examples [Windows Forms], text boxes
 - RichTextBox control [Windows Forms], linking to Web pages
 ms.assetid: 95089a37-a202-4f7a-94ee-6ee312908851
-ms.openlocfilehash: 1902557e5dbdcee3c1facc18b6f5c3037c266a8e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: faaa48051c80b6dfd330f15f72a38297ff2d1b9f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59148243"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301884"
 ---
 # <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a>Практическое руководство. Отображение ссылок веб-типа с помощью элемента управления RichTextBox в Windows Forms
 Windows Forms <xref:System.Windows.Forms.RichTextBox> веб-ссылок может отображать элемент управления цветом и подчеркиванием. Можно написать код, который открывает окно браузера, веб-узлом, указанный в тексте ссылки, при щелчке ссылки.  
   
 ### <a name="to-link-to-a-web-page-with-the-richtextbox-control"></a>Чтобы связать веб-страницу с элементом управления RichTextBox  
   
-1.  Задайте <xref:System.Windows.Forms.RichTextBox.Text%2A> свойство на строку, которая содержит допустимый URL-адрес (например, "http://www.microsoft.com/«).  
+1. Задайте <xref:System.Windows.Forms.RichTextBox.Text%2A> свойство на строку, которая содержит допустимый URL-адрес (например, "http://www.microsoft.com/«).  
   
-2.  Убедитесь, что <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> свойству `true` (по умолчанию).  
+2. Убедитесь, что <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> свойству `true` (по умолчанию).  
   
-3.  Создать новый глобальный экземпляр <xref:System.Diagnostics.Process> объекта.  
+3. Создать новый глобальный экземпляр <xref:System.Diagnostics.Process> объекта.  
   
-4.  Написать обработчик событий для <xref:System.Windows.Forms.RichTextBox.LinkClicked> событий, который отправляет браузер требуемый текст.  
+4. Написать обработчик событий для <xref:System.Windows.Forms.RichTextBox.LinkClicked> событий, который отправляет браузер требуемый текст.  
   
      В следующем примере <xref:System.Windows.Forms.RichTextBox.LinkClicked> событий открывает экземпляр Internet Explorer на URL-адрес, указанный в <xref:System.Windows.Forms.RichTextBox.Text%2A> свойство <xref:System.Windows.Forms.RichTextBox> элемента управления. В этом примере предполагается, что форма <xref:System.Windows.Forms.RichTextBox> элемента управления.  
   

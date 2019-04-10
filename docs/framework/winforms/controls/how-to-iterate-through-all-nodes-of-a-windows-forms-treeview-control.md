@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], iterating through nodes
 - tree nodes in TreeView control [Windows Forms], iterating through
 ms.assetid: 427f8928-ebcf-4beb-887f-695b905d5134
-ms.openlocfilehash: e8e5ef299ca7b5555a02e86e4422ca9f5b8a584f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4b287cecddd63ec6535feb70118c3466c8960531
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59199717"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314234"
 ---
 # <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a>Практическое руководство. Перебор узлов элемента управления TreeView в Windows Forms
 Иногда полезно изучить каждый узел в формах Windows <xref:System.Windows.Forms.TreeView> управления для выполнения определенных расчетов со значениями узлов. Выполнить эту операции можно с помощью рекурсивной процедуры (рекурсивного метода в C# и C++), которая перебирает каждый узел в каждой коллекции дерева.  
@@ -24,9 +24,9 @@ ms.locfileid: "59199717"
   
 ### <a name="to-iterate-through-all-nodes-of-the-treeview-control"></a>Перебор всех узлов элемента управления в представлении в виде дерева  
   
-1.  Создайте рекурсивную процедуру (рекурсивный метод в C# и C++) для проверки каждого узла.  
+1. Создайте рекурсивную процедуру (рекурсивный метод в C# и C++) для проверки каждого узла.  
   
-2.  Вызовите процедуру.  
+2. Вызовите процедуру.  
   
      Следующий пример описывает печать каждый <xref:System.Windows.Forms.TreeNode> объекта <xref:System.Windows.Forms.TreeNode.Text%2A> свойство:  
   

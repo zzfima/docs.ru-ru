@@ -2,15 +2,15 @@
 title: Образец технологии базовой сериализации
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
-ms.openlocfilehash: 43e69ce90b86053badad91b62ec288378e63e2ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc190a93e45bf2b682aff0158ccd42bc09762d9a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681707"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315014"
 ---
 # <a name="basic-serialization-technology-sample"></a>Образец технологии базовой сериализации
-[Скачать образец](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/Basic.zip.exe)  
+[Загрузить образец](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/Basic.zip.exe)  
   
  В этом образце демонстрируется возможность среды CLR выполнять сериализацию графа объекта в поток. Для сериализации в примере могут использоваться классы <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> или <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Связанный список, заполненный данными, сериализируется в поток файла или десериализируется из потока файла. В любом случае этот список отображается для того, чтобы можно было видеть результаты. Связанный список является списком типа `LinkedList`, который определен в этом примере.  
   
@@ -18,25 +18,25 @@ ms.locfileid: "54681707"
   
 ### <a name="to-build-the-sample-using-the-command-prompt"></a>Сборка образца с использованием командной строки  
   
-1.  С помощью командной строки перейдите к одной из вложенных папок в каталоге Technologies\Serialization\Runtime Serialization\Basic, соответствующей выбранному языку.  
+1. С помощью командной строки перейдите к одной из вложенных папок в каталоге Technologies\Serialization\Runtime Serialization\Basic, соответствующей выбранному языку.  
   
-2.  В командной строке введите **msbuild SerializationCS.sln**, **msbuild SerializationJSL.sln** или **msbuild SerializationVB.sln**, в зависимости от выбранного языка программирования.  
+2. В командной строке введите **msbuild SerializationCS.sln**, **msbuild SerializationJSL.sln** или **msbuild SerializationVB.sln**, в зависимости от выбранного языка программирования.  
   
 ### <a name="to-build-the-sample-using-visual-studio"></a>Сборка образца с использованием Visual Studio  
   
-1.  Откройте [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] и перейдите к вложенной папке для данного образца, соответствующей выбранному языку.  
+1. Откройте [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] и перейдите к вложенной папке для данного образца, соответствующей выбранному языку.  
   
-2.  Дважды щелкните значок файла SerializationCS.sln, SerializationJSL.sln или SerializationVB.sln file, в зависимости от выбранного языка программирования, чтобы открыть файл в Visual Studio.  
+2. Дважды щелкните значок файла SerializationCS.sln, SerializationJSL.sln или SerializationVB.sln file, в зависимости от выбранного языка программирования, чтобы открыть файл в Visual Studio.  
   
-3.  В меню **Построение** выберите команду **Построить решение**.  
+3. В меню **Построение** выберите команду **Построить решение**.  
   
  По умолчанию сборка образца приложения помещается в подкаталог \bin или \bin\Debug.  
   
 ### <a name="to-run-the-sample"></a>Выполнение образца  
   
-1.  Перейдите в каталог, содержащий построенный исполняемый файл.  
+1. Перейдите в каталог, содержащий построенный исполняемый файл.  
   
-2.  В командной строке введите **Serialization.exe** вместе с необходимыми значениями параметров.  
+2. В командной строке введите **Serialization.exe** вместе с необходимыми значениями параметров.  
   
     > [!NOTE]
     >  В данном образце выполняется построение консольного приложения. Чтобы просмотреть выводимые им данные, необходимо запустить его в командной строке.  
@@ -64,9 +64,9 @@ ms.locfileid: "54681707"
   
 -   Сериализация во время выполнения  
   
-    -   <xref:System.Runtime.Serialization.IFormatter> Используется для ссылки на объект <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> или <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>.  
+    -   <xref:System.Runtime.Serialization.IFormatter> Используется для ссылки на <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> или <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> объекта.  
   
-    -   <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> Используется для сериализации связанного списка в поток двоичного формата. Двоичный модуль форматирования использует формат, который понятен только типу <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Однако данные являются краткими.  
+    -   <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> Используется для сериализации связанного списка в поток в двоичном формате. Двоичный модуль форматирования использует формат, который понятен только типу <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Однако данные являются краткими.  
   
     -   <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> Используется для сериализации связанного списка в поток формата SOAP. SOAP является стандартным форматом.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "54681707"
   
     -   <xref:System.IO.Stream> Используется для сериализации и десериализации. Особый тип потока, который используется в этом примере, является типом <xref:System.IO.FileStream>. Однако сериализация может быть использована с любым типом, производным от <xref:System.IO.Stream>.  
   
-    -   <xref:System.IO.File> Используется для создания объектов <xref:System.IO.FileStream> для чтения и создания файлов на диске.  
+    -   <xref:System.IO.File> Используется для создания <xref:System.IO.FileStream> объектов для чтения и создания файлов на диске.  
   
     -   <xref:System.IO.FileStream> Используется для сериализации и десериализации связанных списков.  
   

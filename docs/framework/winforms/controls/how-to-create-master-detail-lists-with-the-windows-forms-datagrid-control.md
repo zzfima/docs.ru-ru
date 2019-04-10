@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], master-details lists
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 20388c6a-94f9-4d96-be18-8c200491247f
-ms.openlocfilehash: f1acfab747c2309a2860870f8bcec9c0cf3b7bf0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 92b4a7d9513ce0ec9b7c02f57c23fa4267fb26ad
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094987"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302417"
 ---
 # <a name="how-to-create-masterdetail-lists-with-the-windows-forms-datagrid-control"></a>Практическое руководство. Создание основных или подробных списков с помощью элемента управления DataGrid в Windows Forms
 > [!NOTE]
@@ -25,17 +25,17 @@ ms.locfileid: "59094987"
   
 ### <a name="to-set-a-masterdetail-relationship-programmatically"></a>Чтобы установить отношение «основной/подробности» программными средствами  
   
-1.  Создайте два новых <xref:System.Windows.Forms.DataGrid> элементы управления и задавать их свойства.  
+1. Создайте два новых <xref:System.Windows.Forms.DataGrid> элементы управления и задавать их свойства.  
   
-2.  Добавление таблиц в наборе данных.  
+2. Добавление таблиц в наборе данных.  
   
-3.  Объявите переменную типа <xref:System.Data.DataRelation> для представления связи, вы хотите создать.  
+3. Объявите переменную типа <xref:System.Data.DataRelation> для представления связи, вы хотите создать.  
   
-4.  Создайте экземпляр связи, указав имя для связи и указав таблицу, столбец и элемент, который будет связывать две таблицы.  
+4. Создайте экземпляр связи, указав имя для связи и указав таблицу, столбец и элемент, который будет связывать две таблицы.  
   
-5.  Добавить связь с <xref:System.Data.DataSet> объекта <xref:System.Data.DataSet.Relations%2A> коллекции.  
+5. Добавить связь с <xref:System.Data.DataSet> объекта <xref:System.Data.DataSet.Relations%2A> коллекции.  
   
-6.  Используйте <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> метод <xref:System.Windows.Forms.DataGrid> для каждой сетки для привязки <xref:System.Data.DataSet>.  
+6. Используйте <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> метод <xref:System.Windows.Forms.DataGrid> для каждой сетки для привязки <xref:System.Data.DataSet>.  
   
      В следующем примере демонстрируется задание отношение «основной/подробности» между таблицами Customers и Orders в ранее созданный <xref:System.Data.DataSet> (`ds`).  
   

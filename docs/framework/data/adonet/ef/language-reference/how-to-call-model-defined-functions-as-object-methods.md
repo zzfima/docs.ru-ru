@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 33bae8a8-4ed8-4a1f-85d1-c62ff288cc61
-ms.openlocfilehash: 2b3e25187d2865a8e754c553f8057c3c8e3cff37
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 933baf39845caa2bc96828738d30f41613f69470
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59151233"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304835"
 ---
 # <a name="how-to-call-model-defined-functions-as-object-methods"></a>Практическое руководство. Вызов определенных моделью функций как методов объектов
 В данном разделе описывается, как вызвать определяемую в модели функцию в качестве метода для объекта <xref:System.Data.Objects.ObjectContext> или в качестве статического метода для пользовательского класса. Объект *определяемой моделью функции* — это функция, которая определена в концептуальной модели. В данном разделе показываются процедуры вызова этих функций напрямую, а не с помощью запросов LINQ to Entities. Сведения о вызов определенных моделью функций в LINQ для запросов сущностей, см. в разделе [как: Вызов определенных моделью функций в запросах](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md).  
@@ -21,19 +21,19 @@ ms.locfileid: "59151233"
   
 ### <a name="to-call-a-model-defined-function-as-a-method-on-an-objectcontext-object"></a>Вызов определяемой в модели функции в качестве метода объекта ObjectContext  
   
-1.  Добавьте исходный файл, чтобы расширить разделяемый класс, производный от класса <xref:System.Data.Objects.ObjectContext>, автоматически созданный средствами платформы Entity Framework. Если заглушка CLR определена в отдельном исходном файле, это поможет предотвратить потерю изменений при повторном создании файла.  
+1. Добавьте исходный файл, чтобы расширить разделяемый класс, производный от класса <xref:System.Data.Objects.ObjectContext>, автоматически созданный средствами платформы Entity Framework. Если заглушка CLR определена в отдельном исходном файле, это поможет предотвратить потерю изменений при повторном создании файла.  
   
-2.  Добавьте к классу <xref:System.Data.Objects.ObjectContext> метод среды CLR, выполняющий следующие действия:  
+2. Добавьте к классу <xref:System.Data.Objects.ObjectContext> метод среды CLR, выполняющий следующие действия:  
   
     -   Устанавливает сопоставление с функцией, определяемой в концептуальной модели. Для сопоставления метода к нему необходимо применить атрибут <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>. Обратите внимание, что параметры атрибута <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> и <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> представляют собой имя пространства имен концептуальной модели и имя функции концептуальной модели соответственно. При разрешении имени функции для LINQ учитывается регистр.  
   
     -   Возвращает результаты метода <xref:System.Linq.IQueryProvider.Execute%2A>, возвращаемого свойством <xref:System.Data.Objects.ObjectContext.QueryProvider%2A>.  
   
-3.  Вызовите метод в качестве элемента экземпляра класса <xref:System.Data.Objects.ObjectContext>.  
+3. Вызовите метод в качестве элемента экземпляра класса <xref:System.Data.Objects.ObjectContext>.  
   
 ### <a name="to-call-a-model-defined-function-as-static-method-on-a-custom-class"></a>Вызов определяемой в модели функции в качестве статического метода из пользовательского класса  
   
-1.  Добавьте к приложению класс со статическим методом, выполняющий следующие действия:  
+1. Добавьте к приложению класс со статическим методом, выполняющий следующие действия:  
   
     -   Устанавливает сопоставление с функцией, определяемой в концептуальной модели. Для сопоставления метода к нему необходимо применить атрибут <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>. Обратите внимание, что параметры атрибута <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> и <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> представляют собой имя пространства имен концептуальной модели и имя функции концептуальной модели соответственно.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "59151233"
   
     -   Возвращает результаты метода <xref:System.Linq.IQueryProvider.Execute%2A>, возвращаемого свойством <xref:System.Linq.IQueryable.Provider%2A>.  
   
-2.  Вызовите метод в качестве члена статического метода из пользовательского класса  
+2. Вызовите метод в качестве члена статического метода из пользовательского класса  
   
 ## <a name="example"></a>Пример  
  **Вызов определяемой в модели функции в качестве метода объекта ObjectContext**  

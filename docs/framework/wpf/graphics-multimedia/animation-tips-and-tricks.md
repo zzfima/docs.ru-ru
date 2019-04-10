@@ -14,12 +14,12 @@ helpviewer_keywords:
 - performance troubleshooting [WPF], animation
 - animations [WPF], use of system resources
 ms.assetid: e467796b-d5d4-45a6-a108-8c5d7ff69a0f
-ms.openlocfilehash: 1337dac083ad9d52a4cfd99bddee80baebf474de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3a22c83eb739a735d42fa0f670716a0e75bbd54c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59202148"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295956"
 ---
 # <a name="animation-tips-and-tricks"></a>Советы и рекомендации по анимации
 При работе с анимацией в [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], существует ряд советов и приемов, которые анимациям работают лучше и сэкономить разочарований.  
@@ -71,9 +71,9 @@ ms.locfileid: "59202148"
   
  При нажатии второй кнопки во время первого <xref:System.Windows.Media.Animation.Storyboard> — воспроизведение, можно предположить следующее поведение:  
   
-1.  Первая раскадровка заканчивается и отправляет прямоугольник в исходное положение, поскольку анимация имеет <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> из <xref:System.Windows.Media.Animation.FillBehavior.Stop>.  
+1. Первая раскадровка заканчивается и отправляет прямоугольник в исходное положение, поскольку анимация имеет <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> из <xref:System.Windows.Media.Animation.FillBehavior.Stop>.  
   
-2.  Вторая раскадровка вступает в силу и анимируется от текущей позиции, которая теперь имеет значение 0, до 500.  
+2. Вторая раскадровка вступает в силу и анимируется от текущей позиции, которая теперь имеет значение 0, до 500.  
   
  **Но это не происходит.** Прямоугольник не прыгает обратно; он продолжает перемещаться вправо. Это происходит потому, что вторая анимация использует текущее значение первой анимации в качестве своего начального значения и анимируется от этого значения до 500. Когда вторая анимация заменяет первый, так как <xref:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace><xref:System.Windows.Media.Animation.HandoffBehavior> используется, <xref:System.Windows.Media.Animation.FillBehavior> первой анимации не имеет значения.  
   

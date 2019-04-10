@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c8329832-bf66-4064-9034-bf39f153fc2d
-ms.openlocfilehash: 127b06b32e597f8c2ea7e2bfdb1caca850fb5e3b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a94864563491b5bd2d50a6df59858f4b7235fd75
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194530"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314884"
 ---
 # <a name="accessing-services-using-a-client"></a>Обращение к службам с использованием клиента
 Клиентские приложения необходимо создать, настроить и использовать объекты клиента или каналов WCF для взаимодействия со службами. [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md) разделе представлен обзор объектов и шаги по созданию базовых объектов клиента и канала и их использованию.  
@@ -83,11 +83,11 @@ ms.locfileid: "59194530"
   
  Если использовать явный подход, то приложение должно выполнить следующие шаги по порядку:  
   
-1.  Вызывать либо <xref:System.ServiceModel.ClientBase%601.DisplayInitializationUI%2A?displayProperty=nameWithType>, либо <xref:System.ServiceModel.IClientChannel.DisplayInitializationUI%2A?displayProperty=nameWithType> (или асинхронную версию).  
+1. Вызывать либо <xref:System.ServiceModel.ClientBase%601.DisplayInitializationUI%2A?displayProperty=nameWithType>, либо <xref:System.ServiceModel.IClientChannel.DisplayInitializationUI%2A?displayProperty=nameWithType> (или асинхронную версию).  
   
-2.  После возвращения инициализаторов вызвать либо метод <xref:System.ServiceModel.ICommunicationObject.Open%2A> в объекте <xref:System.ServiceModel.IClientChannel>, либо в объекте <xref:System.ServiceModel.IClientChannel>, возвращенном из свойства <xref:System.ServiceModel.ClientBase%601.InnerChannel%2A?displayProperty=nameWithType>.  
+2. После возвращения инициализаторов вызвать либо метод <xref:System.ServiceModel.ICommunicationObject.Open%2A> в объекте <xref:System.ServiceModel.IClientChannel>, либо в объекте <xref:System.ServiceModel.IClientChannel>, возвращенном из свойства <xref:System.ServiceModel.ClientBase%601.InnerChannel%2A?displayProperty=nameWithType>.  
   
-3.  Вызовите операции.  
+3. Вызовите операции.  
   
  Рекомендуется, чтобы приложения для промышленного применения управляли процессом пользовательского интерфейса в соответствии с явным подходом.  
   

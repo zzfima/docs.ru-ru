@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30140
 ms.assetid: 1beb5aa0-7b79-4c85-946b-5c2d0a41d1d2
-ms.openlocfilehash: f9d7867157b65d746809d9b2f50797285d7fcd9c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 0f67b772bab3104c00510954d01b200aadfa9e8a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831971"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296294"
 ---
 # <a name="error-creating-assembly-manifest-error-message"></a>Ошибка при создании манифеста сборки: \<сообщение об ошибке >
 Компилятор Visual Basic вызывает компоновщик сборок (Al.exe, который также называется Alink) для создания сборки с манифестом. Компоновщик сообщил об ошибке на этапе предварительного выпуска процедуры создания сборки.  
@@ -23,13 +23,13 @@ ms.locfileid: "58831971"
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
-1.  Изучите приведенное сообщение об ошибке и обратитесь к разделу [Al.exe](../../../framework/tools/al-exe-assembly-linker.md). по ошибке AL1019 дополнительные пояснения и рекомендации  
+1. Изучите приведенное сообщение об ошибке и обратитесь к разделу [Al.exe](../../../framework/tools/al-exe-assembly-linker.md). по ошибке AL1019 дополнительные пояснения и рекомендации  
   
-2.  Если ошибка не устранена, соберите сведения об условиях ее возникновения и уведомите службу технической поддержки Майкрософт.  
+2. Если ошибка не устранена, соберите сведения об условиях ее возникновения и уведомите службу технической поддержки Майкрософт.  
   
 ## <a name="see-also"></a>См. также
 
 - [Практическое руководство. Подписание сборки строгим именем](../../../framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)
 - [Страница "Подписывание" в конструкторе проектов](/visualstudio/ide/reference/signing-page-project-designer)
 - [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
-- [Обращайтесь к нам](/visualstudio/ide/talk-to-us)
+- [Talk to Us](/visualstudio/ide/talk-to-us)

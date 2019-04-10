@@ -13,12 +13,12 @@ helpviewer_keywords:
 - managing control states [WPF], VisualStateManager
 - VisualStateManager [WPF], best practice
 ms.assetid: 9e356d3d-a3d0-4b01-a25f-2d43e4d53fe5
-ms.openlocfilehash: 17b6fd604b5eca54d6323701dafdd38f9f6e7328
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a5d7c06502b66298d530d0180ffaf63862b9fc28
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59131026"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298348"
 ---
 # <a name="creating-a-control-that-has-a-customizable-appearance"></a>Создание элемента управления с настраиваемым внешним видом
 <a name="introduction"></a>
@@ -94,15 +94,15 @@ ms.locfileid: "59131026"
   
  Следующие рекомендации убедитесь, что элемент управления правильно реагирует на отсутствует <xref:System.Windows.FrameworkElement> объектов:  
   
-1.  Задайте `x:Name` атрибут для каждого <xref:System.Windows.FrameworkElement> , необходимо ссылаться в коде.  
+1. Задайте `x:Name` атрибут для каждого <xref:System.Windows.FrameworkElement> , необходимо ссылаться в коде.  
   
-2.  Определите частные свойства для каждого <xref:System.Windows.FrameworkElement> , вам понадобится взаимодействовать с.  
+2. Определите частные свойства для каждого <xref:System.Windows.FrameworkElement> , вам понадобится взаимодействовать с.  
   
-3.  Подписаться и Отмена подписки на события, которые обрабатывает элемент управления в <xref:System.Windows.FrameworkElement> доступа set свойства.  
+3. Подписаться и Отмена подписки на события, которые обрабатывает элемент управления в <xref:System.Windows.FrameworkElement> доступа set свойства.  
   
-4.  Задайте <xref:System.Windows.FrameworkElement> свойства, которые были определены на этапе 2 в <xref:System.Windows.FrameworkElement.OnApplyTemplate%2A> метод. Это связано с самой ранней, <xref:System.Windows.FrameworkElement> в <xref:System.Windows.Controls.ControlTemplate> доступен для элемента управления. Используйте `x:Name` из <xref:System.Windows.FrameworkElement> для получения их из <xref:System.Windows.Controls.ControlTemplate>.  
+4. Задайте <xref:System.Windows.FrameworkElement> свойства, которые были определены на этапе 2 в <xref:System.Windows.FrameworkElement.OnApplyTemplate%2A> метод. Это связано с самой ранней, <xref:System.Windows.FrameworkElement> в <xref:System.Windows.Controls.ControlTemplate> доступен для элемента управления. Используйте `x:Name` из <xref:System.Windows.FrameworkElement> для получения их из <xref:System.Windows.Controls.ControlTemplate>.  
   
-5.  Убедитесь, что <xref:System.Windows.FrameworkElement> не `null` перед обращением к их элементам.  Если это `null`, не сообщает об ошибке.  
+5. Убедитесь, что <xref:System.Windows.FrameworkElement> не `null` перед обращением к их элементам.  Если это `null`, не сообщает об ошибке.  
   
  В следующих примерах показывается как `NumericUpDown` элемент управления взаимодействует с <xref:System.Windows.FrameworkElement> объектов в соответствии с рекомендациями в списке выше.  
   

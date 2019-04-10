@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
-ms.openlocfilehash: 684ce075155d3da9bae3f7828e84d34399928875
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f97826cb5154035b535b5eac3a8818d8b366d639
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59158630"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315352"
 ---
 # <a name="data-contract-surrogates"></a>Суррогаты контрактов данных
 Контракт данных *суррогат* является дополнительным, построенных на основе модели контракта данных. Эта возможность предназначена для настройки и подстановки типов, когда необходимо изменить способ сериализации типа, десериализации или преобразования типа в метаданные. Например, суррогат может использоваться в сценариях, когда для типа не задан контракт данных, поля и свойства не помечены атрибутом <xref:System.Runtime.Serialization.DataMemberAttribute> или пользователи хотят динамически создавать вариации схемы.  
@@ -141,15 +141,15 @@ ms.locfileid: "59158630"
   
 ##### <a name="to-implement-serialization-and-deserialization"></a>Реализация сериализации и десериализации  
   
-1.  Создайте экземпляр <xref:System.ServiceModel.ServiceHost> для службы. Полные инструкции см. в разделе [базовое Программирование WCF](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+1. Создайте экземпляр <xref:System.ServiceModel.ServiceHost> для службы. Полные инструкции см. в разделе [базовое Программирование WCF](../../../../docs/framework/wcf/basic-wcf-programming.md).  
   
-2.  Для каждого объекта <xref:System.ServiceModel.Description.ServiceEndpoint> заданного узла службы найдите соответствующий объект <xref:System.ServiceModel.Description.OperationDescription>.  
+2. Для каждого объекта <xref:System.ServiceModel.Description.ServiceEndpoint> заданного узла службы найдите соответствующий объект <xref:System.ServiceModel.Description.OperationDescription>.  
   
-3.  Выполните поиск экземпляра <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> в поведениях операций.  
+3. Выполните поиск экземпляра <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> в поведениях операций.  
   
-4.  Если найден экземпляр <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>, задайте в его свойстве <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractSurrogate%2A> новый экземпляр суррогата. Если экземпляр <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> не найден, создайте новый экземпляр и задайте для элемента <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractSurrogate%2A> нового расширения новый экземпляр суррогата.  
+4. Если найден экземпляр <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>, задайте в его свойстве <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractSurrogate%2A> новый экземпляр суррогата. Если экземпляр <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> не найден, создайте новый экземпляр и задайте для элемента <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractSurrogate%2A> нового расширения новый экземпляр суррогата.  
   
-5.  Наконец, добавьте это новое поведение в текущие поведения операций, как показано в примере:  
+5. Наконец, добавьте это новое поведение в текущие поведения операций, как показано в примере:  
   
      [!code-csharp[C_IDataContractSurrogate#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#8)]  
   
@@ -158,19 +158,19 @@ ms.locfileid: "59158630"
   
 ##### <a name="to-implement-a-surrogate-for-metadata-importation"></a>Реализация суррогата для импорта метаданных  
   
-1.  Импортируйте метаданные при помощи класса <xref:System.ServiceModel.Description.WsdlImporter>.  
+1. Импортируйте метаданные при помощи класса <xref:System.ServiceModel.Description.WsdlImporter>.  
   
-2.  Чтобы проверить, определен ли объект <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A>, воспользуйтесь методом <xref:System.Runtime.Serialization.XsdDataContractImporter>.  
+2. Чтобы проверить, определен ли объект <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A>, воспользуйтесь методом <xref:System.Runtime.Serialization.XsdDataContractImporter>.  
   
-3.  Если метод <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> возвращает значение `false`, создайте новый объект <xref:System.Runtime.Serialization.XsdDataContractImporter> и задайте в его свойстве <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A> новый экземпляр класса <xref:System.Runtime.Serialization.ImportOptions>. В противном случае используйте импортер, возвращенный параметром `out` метода <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A>.  
+3. Если метод <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> возвращает значение `false`, создайте новый объект <xref:System.Runtime.Serialization.XsdDataContractImporter> и задайте в его свойстве <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A> новый экземпляр класса <xref:System.Runtime.Serialization.ImportOptions>. В противном случае используйте импортер, возвращенный параметром `out` метода <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A>.  
   
-4.  Если для импортера <xref:System.Runtime.Serialization.XsdDataContractImporter> не определено свойство <xref:System.Runtime.Serialization.ImportOptions>, задайте для свойства новый экземпляр класса <xref:System.Runtime.Serialization.ImportOptions>.  
+4. Если для импортера <xref:System.Runtime.Serialization.XsdDataContractImporter> не определено свойство <xref:System.Runtime.Serialization.ImportOptions>, задайте для свойства новый экземпляр класса <xref:System.Runtime.Serialization.ImportOptions>.  
   
-5.  Задайте для свойства <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> объекта <xref:System.Runtime.Serialization.ImportOptions> импортера <xref:System.Runtime.Serialization.XsdDataContractImporter> в качестве значения новый экземпляр суррогата.  
+5. Задайте для свойства <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> объекта <xref:System.Runtime.Serialization.ImportOptions> импортера <xref:System.Runtime.Serialization.XsdDataContractImporter> в качестве значения новый экземпляр суррогата.  
   
-6.  Добавьте объект <xref:System.Runtime.Serialization.XsdDataContractImporter> в коллекцию, возвращенную свойством <xref:System.ServiceModel.Description.MetadataExporter.State%2A> объекта <xref:System.ServiceModel.Description.WsdlImporter> (унаследован от класса <xref:System.ServiceModel.Description.MetadataExporter>).  
+6. Добавьте объект <xref:System.Runtime.Serialization.XsdDataContractImporter> в коллекцию, возвращенную свойством <xref:System.ServiceModel.Description.MetadataExporter.State%2A> объекта <xref:System.ServiceModel.Description.WsdlImporter> (унаследован от класса <xref:System.ServiceModel.Description.MetadataExporter>).  
   
-7.  Используйте метод <xref:System.ServiceModel.Description.WsdlImporter.ImportAllContracts%2A> объекта <xref:System.ServiceModel.Description.WsdlImporter> для импорта всех контрактов данных схемы. Во время последнего действия генерируется код из схем, загруженных при вызове суррогата.  
+7. Используйте метод <xref:System.ServiceModel.Description.WsdlImporter.ImportAllContracts%2A> объекта <xref:System.ServiceModel.Description.WsdlImporter> для импорта всех контрактов данных схемы. Во время последнего действия генерируется код из схем, загруженных при вызове суррогата.  
   
      [!code-csharp[C_IDataContractSurrogate#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#9)]  
   
@@ -179,15 +179,15 @@ ms.locfileid: "59158630"
   
 ##### <a name="to-use-a-surrogate-for-metadata-export"></a>Использование суррогата для экспорта метаданных  
   
-1.  Создайте новый объект <xref:System.ServiceModel.Description.WsdlExporter> или используйте параметр `wsdlExporter`, переданный методу <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%2A>.  
+1. Создайте новый объект <xref:System.ServiceModel.Description.WsdlExporter> или используйте параметр `wsdlExporter`, переданный методу <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%2A>.  
   
-2.  Чтобы проверить, определен ли объект <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A>, воспользуйтесь функцией <xref:System.Runtime.Serialization.XsdDataContractExporter>.  
+2. Чтобы проверить, определен ли объект <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A>, воспользуйтесь функцией <xref:System.Runtime.Serialization.XsdDataContractExporter>.  
   
-3.  Если метод <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> возвращает значение `false`, создайте новый объект <xref:System.Runtime.Serialization.XsdDataContractExporter> со сгенерированными схемами XML из объекта <xref:System.ServiceModel.Description.WsdlExporter>, и добавьте его в коллекцию, возвращенную свойством <xref:System.ServiceModel.Description.MetadataExporter.State%2A> объекта <xref:System.ServiceModel.Description.WsdlExporter>. В противном случае используйте экспортер, возвращенный параметром `out` метода <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A>.  
+3. Если метод <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> возвращает значение `false`, создайте новый объект <xref:System.Runtime.Serialization.XsdDataContractExporter> со сгенерированными схемами XML из объекта <xref:System.ServiceModel.Description.WsdlExporter>, и добавьте его в коллекцию, возвращенную свойством <xref:System.ServiceModel.Description.MetadataExporter.State%2A> объекта <xref:System.ServiceModel.Description.WsdlExporter>. В противном случае используйте экспортер, возвращенный параметром `out` метода <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A>.  
   
-4.  Если для экспортера <xref:System.Runtime.Serialization.XsdDataContractExporter> не определен объект <xref:System.Runtime.Serialization.ExportOptions>, задайте для свойства <xref:System.Runtime.Serialization.XsdDataContractExporter.Options%2A> в качестве значения новый экземпляр класса <xref:System.Runtime.Serialization.ExportOptions>.  
+4. Если для экспортера <xref:System.Runtime.Serialization.XsdDataContractExporter> не определен объект <xref:System.Runtime.Serialization.ExportOptions>, задайте для свойства <xref:System.Runtime.Serialization.XsdDataContractExporter.Options%2A> в качестве значения новый экземпляр класса <xref:System.Runtime.Serialization.ExportOptions>.  
   
-5.  Задайте для свойства <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A> объекта <xref:System.Runtime.Serialization.ExportOptions> импортера <xref:System.Runtime.Serialization.XsdDataContractExporter> в качестве значения новый экземпляр суррогата. Дальнейшие шаги по экспорту метаданных остаются без изменений.  
+5. Задайте для свойства <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A> объекта <xref:System.Runtime.Serialization.ExportOptions> импортера <xref:System.Runtime.Serialization.XsdDataContractExporter> в качестве значения новый экземпляр суррогата. Дальнейшие шаги по экспорту метаданных остаются без изменений.  
   
      [!code-csharp[C_IDataContractSurrogate#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#10)]  
   

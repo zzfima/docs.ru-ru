@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30969
 ms.assetid: 1b29dbc5-8268-45fe-bfc2-b2070a5c845c
-ms.openlocfilehash: 3cfdf8150c8ccd9e1b4f047cd1ce8ee4ad6bbc1a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 9868598b32ae17ef5bfb5dd738f8a7541515f5ec
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58813409"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310675"
 ---
 # <a name="reference-required-to-assembly-assemblyidentity-containing-type-typename-but-a-suitable-reference-could-not-be-found-due-to-ambiguity-between-projects-projectname1-and-projectname2"></a>Требуется ссылка на сборку "\<удостоверение_сборки >" содержащий тип "\<typename >", но подходящая ссылка не удалось найти из-за неоднозначности между проектами\<имя_проекта1 > "и"\< имя_проекта2 > "
 Выражение использует тип, например класс, структуру, интерфейс, перечисление или делегат, который определен за пределами проекта. Однако имеются ссылки проекта на несколько сборок, определяющих этот тип.  
@@ -25,14 +25,14 @@ ms.locfileid: "58813409"
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
-1.  Определите, какой проект создает наиболее подходящую сборку для проекта, чтобы ссылаться на нее в дальнейшем. Для этого можно использовать такие критерии, как простота доступа к файлам и частота обновления.  
+1. Определите, какой проект создает наиболее подходящую сборку для проекта, чтобы ссылаться на нее в дальнейшем. Для этого можно использовать такие критерии, как простота доступа к файлам и частота обновления.  
   
-2.  В свойствах проекта добавьте ссылку на файл, содержащий сборку, определяющую используемый тип.  
+2. В свойствах проекта добавьте ссылку на файл, содержащий сборку, определяющую используемый тип.  
   
 ## <a name="see-also"></a>См. также
 
 - [Управление ссылками в проекте](/visualstudio/ide/managing-references-in-a-project)
-- [Ссылки на объявленные элементы](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 
-- [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)
-- [Диагностика неработающих ссылок](/visualstudio/ide/troubleshooting-broken-references)
+- [Управление свойствами проекта и решения](/visualstudio/ide/managing-project-and-solution-properties)
+- [Troubleshooting Broken References](/visualstudio/ide/troubleshooting-broken-references)

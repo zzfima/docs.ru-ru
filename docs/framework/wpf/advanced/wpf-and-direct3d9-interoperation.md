@@ -7,12 +7,12 @@ helpviewer_keywords:
 - WPF [WPF], creating Direct3D9 content
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 1b14b823-69c4-4e8d-99e4-f6dade58f89a
-ms.openlocfilehash: 04a668ea18177d2a174569f064d9102239dd5e7d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 38f5eb36e3e5c055c5a354a67e15cde8049a2967
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59199327"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307734"
 ---
 # <a name="wpf-and-direct3d9-interoperation"></a>Взаимодействие WPF и Direct3D9
 Можно включить содержимого Direct3D9 в приложении Windows Presentation Foundation (WPF). В этом разделе описывается создание содержимого Direct3D9 таким образом, чтобы эффективно взаимодействовать с WPF.  
@@ -112,13 +112,13 @@ ms.locfileid: "59199327"
   
  Чтобы избежать снижения производительности, напишите код, специально для случая нескольких мониторов. Ниже показан один способ написания кода для нескольких мониторов.  
   
-1.  Найти точку <xref:System.Windows.Interop.D3DImage> в пространстве экрана с `Visual.ProjectToScreen` метод.  
+1. Найти точку <xref:System.Windows.Interop.D3DImage> в пространстве экрана с `Visual.ProjectToScreen` метод.  
   
-2.  Используйте `MonitorFromPoint` GDI-способ найти монитор, отображающий эту точку.  
+2. Используйте `MonitorFromPoint` GDI-способ найти монитор, отображающий эту точку.  
   
-3.  Используйте `IDirect3D9::GetAdapterMonitor` метод, чтобы найти адаптер Direct3D9 монитор включен.  
+3. Используйте `IDirect3D9::GetAdapterMonitor` метод, чтобы найти адаптер Direct3D9 монитор включен.  
   
-4.  Если адаптер не так же, как адаптер с задним буфером, создайте новый задний буфер для нового монитора и назначьте его <xref:System.Windows.Interop.D3DImage> задний буфер.  
+4. Если адаптер не так же, как адаптер с задним буфером, создайте новый задний буфер для нового монитора и назначьте его <xref:System.Windows.Interop.D3DImage> задний буфер.  
   
 > [!NOTE]
 >  Если <xref:System.Windows.Interop.D3DImage> распределяется между несколькими мониторами, производительность будет снижена, за исключением использования WDDM и `IDirect3D9Ex` в одном адаптере. Нет способа для повышения производительности в этой ситуации.  

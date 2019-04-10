@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], custom classes
 - custom animation classes [WPF]
 ms.assetid: 9be69d50-3384-4938-886f-08ce00e4a7a6
-ms.openlocfilehash: 78c32c8aa1cf63ad6b9c9c51d856b02ccec68384
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 268d218097233aee795154226cc6f7c3ce318f5c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59190734"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313948"
 ---
 # <a name="custom-animations-overview"></a>Общие сведения о пользовательской анимации
 В этом разделе описывается, как и когда расширять систему анимации [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] путем создания пользовательских ключевых кадров и классов анимации или путем использования покадрового обратного вызова, чтобы пропустить ее.  
@@ -99,9 +99,9 @@ ms.locfileid: "59190734"
   
  Рекомендуемой концепцией (используемой анимациями [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]) является использование двух уровней наследования.  
   
-1.  Создание абстрактного  *\<тип >* AnimationBase класс, производный от <xref:System.Windows.Media.Animation.AnimationTimeline>. Этот класс должен переопределить <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> метод. Он должен также представить новый абстрактный метод GetCurrentValueCore и переопределить <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> таким образом, чтобы он проверял типы параметров значение по умолчанию назначения и начальное значение по умолчанию, затем метод GetCurrentValueCore.  
+1. Создание абстрактного  *\<тип >* AnimationBase класс, производный от <xref:System.Windows.Media.Animation.AnimationTimeline>. Этот класс должен переопределить <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> метод. Он должен также представить новый абстрактный метод GetCurrentValueCore и переопределить <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> таким образом, чтобы он проверял типы параметров значение по умолчанию назначения и начальное значение по умолчанию, затем метод GetCurrentValueCore.  
   
-2.  Создайте еще один класс, который наследует от нового  *\<тип >* класс AnimationBase и переопределяет <xref:System.Windows.Freezable.CreateInstanceCore%2A> метод, представленный, метод GetCurrentValueCore и <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> свойство.  
+2. Создайте еще один класс, который наследует от нового  *\<тип >* класс AnimationBase и переопределяет <xref:System.Windows.Freezable.CreateInstanceCore%2A> метод, представленный, метод GetCurrentValueCore и <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> свойство.  
   
  **Альтернативные подходы**  
   

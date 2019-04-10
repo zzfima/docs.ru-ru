@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: 3db7d6b072c7803d96deb17b33a06af3d55aca12
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3d7e44a468388f6d9a8f30d7fea29ec465cd8664
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59148958"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297711"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Синхронные и асинхронные операции
 В этом разделе описывается реализация и вызов асинхронных операций службы.  
@@ -49,11 +49,11 @@ ms.locfileid: "59148958"
 ### <a name="implementing-an-asynchronous-service-operation"></a>Реализация асинхронной операции службы  
  Асинхронные операции могут быть реализованы с помощью одного из трех следующих методов:  
   
-1.  асинхронная модель на основе задач;  
+1. асинхронная модель на основе задач;  
   
-2.  асинхронная модель на основе событий;  
+2. асинхронная модель на основе событий;  
   
-3.  асинхронная модель IAsyncResult.  
+3. асинхронная модель IAsyncResult.  
   
 #### <a name="task-based-asynchronous-pattern"></a>Асинхронная модель на основе задач  
  Асинхронная модель на основе задач - это предпочтительный способ реализации асинхронных операций в силу его чрезвычайного удобства и простоты. Чтобы использовать этот метод, реализуйте операцию службы и укажите для нее тип возвращаемого значения Task\<T>, где T — это тип, возвращенный логической операцией. Пример:  

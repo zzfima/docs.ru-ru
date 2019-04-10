@@ -2,12 +2,12 @@
 title: Асинхронные типы возвращаемых значений (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
-ms.openlocfilehash: 7a8bc3ba98da830c8415284771460a25e0927895
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 227a187f7046d128a7170b272f90f77cfaac61c7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58838356"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313285"
 ---
 # <a name="async-return-types-visual-basic"></a>Асинхронные типы возвращаемых значений (Visual Basic)
 Асинхронные методы имеют три возможных типа возврата: <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task> и void. В Visual Basic тип возвращаемого значения void записывается как процедура [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md). Дополнительные сведения об асинхронных методах см. в разделе [асинхронное программирование с использованием Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).  
@@ -98,7 +98,7 @@ Async Function Task_MethodAsync() As Task
 End Function  
 ```  
   
- `Task_MethodAsync` вызывается и ожидается с помощью оператора await (вместо выражения await), похожего на оператор вызова для синхронного метода, возвращающего `Sub` или void. Применение `Await` оператор в этом случае не возвращает значение.  
+ `Task_MethodAsync` вызывается и ожидается с помощью оператора await вместо выражения await, похожего на оператор вызова для синхронного `Sub` или метода, возвращающего void. Применение `Await` оператор в этом случае не возвращает значение.  
   
  В следующем коде вызывается и ожидается метод `Task_MethodAsync`.  
   
@@ -150,23 +150,23 @@ End Sub
   
  Чтобы запустить проект, выполните следующие действия.  
   
-1.  Запустите Visual Studio.  
+1. Запустите Visual Studio.  
   
-2.  В строке меню выберите **Файл**, **Создать**, **Проект**.  
+2. В строке меню выберите **Файл**, **Создать**, **Проект**.  
   
      Откроется диалоговое окно **Новый проект** .  
   
-3.  В **установленные**, **шаблоны** категории, выберите **Visual Basic**, а затем выберите **Windows**. В списке типов проектов выберите **Приложение WPF**.  
+3. В **установленные**, **шаблоны** категории, выберите **Visual Basic**, а затем выберите **Windows**. В списке типов проектов выберите **Приложение WPF**.  
   
-4.  Введите `AsyncReturnTypes` в качестве имени проекта и нажмите кнопку **ОК**.  
+4. Введите `AsyncReturnTypes` в качестве имени проекта и нажмите кнопку **ОК**.  
   
      В **обозревателе решений** появится новый проект.  
   
-5.  В редакторе кода Visual Studio перейдите на вкладку **MainWindow.xaml** .  
+5. В редакторе кода Visual Studio перейдите на вкладку **MainWindow.xaml** .  
   
      Если вкладка не отображается, откройте контекстное меню для MainWindow.xaml в **обозревателе решений** и выберите пункт **Открыть**.  
   
-6.  В окне **XAML** MainWindow.xaml замените код на следующий.  
+6. В окне **XAML** MainWindow.xaml замените код на следующий.  
   
     ```vb  
     <Window x:Class="MainWindow"  
@@ -183,9 +183,9 @@ End Sub
   
      Простое окно, содержащее текстовое поле и кнопку, отобразится в окне **конструктора** для MainWindow.xaml.  
   
-7.  В **обозревателе решений**, откройте контекстное меню для MainWindow.xaml.vb и затем выберите **Просмотр кода**.  
+7. В **обозревателе решений**, откройте контекстное меню для MainWindow.xaml.vb и затем выберите **Просмотр кода**.  
   
-8.  Замените код в MainWindow.xaml.vb на приведенный далее.  
+8. Замените код в MainWindow.xaml.vb на приведенный далее.  
   
     ```vb  
     Class MainWindow  
@@ -295,7 +295,7 @@ End Sub
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Threading.Tasks.Task.FromResult%2A>
-- [Пошаговое руководство: Доступ к Интернету с использованием Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Control Flow in Async Programs (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md) (Поток управления в асинхронных программах (Visual Basic))
+- [Пошаговое руководство. Доступ к Интернету с использованием Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Поток управления в асинхронных программах (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)
 - [Async](../../../../visual-basic/language-reference/modifiers/async.md)
 - [Оператор Await](../../../../visual-basic/language-reference/operators/await-operator.md)

@@ -2,17 +2,17 @@
 title: Неуниверсальное действие ForEach
 ms.date: 03/30/2017
 ms.assetid: 576cd07a-d58d-4536-b514-77bad60bff38
-ms.openlocfilehash: 0274cd5b87e6039ff40afa3108986ffd113fc4fb
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 353128d1c313be62222e091c084e5b5e37a92b58
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199566"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303548"
 ---
 # <a name="non-generic-foreach"></a>Неуниверсальное действие ForEach
-В область элементов [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] входит набор действий потока управления, включая элемент <xref:System.Activities.Statements.ForEach%601>, который позволяет проходить по коллекциям <xref:System.Collections.Generic.IEnumerable%601>.  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] в область элементов поставляется набор действий потока управления, включая <xref:System.Activities.Statements.ForEach%601>, который позволяет проходить по <xref:System.Collections.Generic.IEnumerable%601> коллекций.  
   
- Свойство <xref:System.Activities.Statements.ForEach%601> элемента <xref:System.Activities.Statements.ForEach%601.Values%2A> должно иметь тип <xref:System.Collections.Generic.IEnumerable%601>. Это запрещает пользователям проходить по структурам данных, в которых реализован интерфейс <xref:System.Collections.Generic.IEnumerable%601> (например, <xref:System.Collections.ArrayList>). Неуниверсальная версия <xref:System.Activities.Statements.ForEach%601> выполняет это требование за счет большей гибкости во время выполнения, чтобы обеспечить совместимость типов значений в коллекции.  
+ <xref:System.Activities.Statements.ForEach%601> требуется его <xref:System.Activities.Statements.ForEach%601.Values%2A> свойство типа <xref:System.Collections.Generic.IEnumerable%601>. Это запрещает пользователям проходить по структурам данных, в которых реализован интерфейс <xref:System.Collections.Generic.IEnumerable%601> (например, <xref:System.Collections.ArrayList>). Неуниверсальная версия <xref:System.Activities.Statements.ForEach%601> выполняет это требование за счет большей гибкости во время выполнения, чтобы обеспечить совместимость типов значений в коллекции.  
   
  В этом образце показано, как реализовать неуниверсальное действие <xref:System.Activities.Statements.ForEach%601> и конструктор для него. Это действие позволяет проходить по <xref:System.Collections.ArrayList>.  
   
@@ -67,9 +67,9 @@ Activity sampleUsage =
    };  
 ```  
   
-|Условие|Сообщение|Важность|Тип исключения|  
+|Условие|Сообщение|Серьезность|Тип исключения|  
 |---------------|-------------|--------------|--------------------|  
-|Значением является `null`|Не указано значение необходимого аргумента действия "Values".|Ошибка|<xref:System.InvalidOperationException>|  
+|Значения — `null`|Не указано значение необходимого аргумента действия "Values".|Error|<xref:System.InvalidOperationException>|  
   
 ## <a name="foreach-designer"></a>Конструктор ForEach  
  Конструктор действий для образца аналогичен конструктору, предоставляемому для встроенного действия <xref:System.Activities.Statements.ForEach%601>. Конструктор отображается в области элементов в **примеры**, **неуниверсальные действия** категории. Конструктор называется **ForEachWithBodyFactory** на панели элементов, поскольку это действие предоставляет <xref:System.Activities.Presentation.IActivityTemplateFactory> на панели элементов, который создает действие с настроенным <xref:System.Activities.ActivityAction>.  
@@ -95,13 +95,13 @@ public sealed class ForEachWithBodyFactory : IActivityTemplateFactory
   
 #### <a name="to-run-this-sample"></a>Запуск образца  
   
-1.  Установите выбранный проект в качестве проекта для запуска решения.  
+1. Установите выбранный проект в качестве проекта для запуска решения.  
   
     1.  **CodeTestClient** показано, как с помощью действия, с помощью кода.  
   
     2.  **DesignerTestClient** показано, как с помощью действия в конструкторе.  
   
-2.  Постройте и запустите проект.  
+2. Постройте и запустите проект.  
   
 > [!IMPORTANT]
 >  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  

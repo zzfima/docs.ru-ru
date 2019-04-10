@@ -2,12 +2,12 @@
 title: Пример автономного веб-канала диагностики
 ms.date: 03/30/2017
 ms.assetid: d31c6c1f-292c-4d95-8e23-ed8565970ea5
-ms.openlocfilehash: 841bcd38516251fe1de306cbf52371d027b8cb36
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2737621a98f6a7e89ef3aee01fd1ad7a2a60f9b5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59102145"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316561"
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>Пример автономного веб-канала диагностики
 В этом образце демонстрируется создание RSS/Atom-канал синдикации с помощью Windows Communication Foundation (WCF). Это простая программа «Hello, World!», которая показывает, с основами объектной модели и как настроить проверку подлинности в службе Windows Communication Foundation (WCF).  
@@ -76,13 +76,13 @@ foreach (SyndicationItem i in feed.Items)
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1.  Убедитесь, что правильное разрешение регистрации адреса для HTTP и HTTPS на компьютере, как описано в инструкциям по установке в [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Убедитесь, что правильное разрешение регистрации адреса для HTTP и HTTPS на компьютере, как описано в инструкциям по установке в [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Постройте решение.  
+2. Постройте решение.  
   
-3.  Запустите консольное приложение.  
+3. Запустите консольное приложение.  
   
-4.  Пока выполняется в консольном приложении, перейдите к `http://localhost:8000/diagnostics/feed/?format=atom` или `http://localhost:8000/diagnostics/feed/?format=rss` с помощью браузера поддержкой RSS.  
+4. Пока выполняется в консольном приложении, перейдите к `http://localhost:8000/diagnostics/feed/?format=atom` или `http://localhost:8000/diagnostics/feed/?format=rss` с помощью браузера поддержкой RSS.  
   
 > [!IMPORTANT]
 >  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  

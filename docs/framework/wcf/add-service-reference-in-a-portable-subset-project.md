@@ -2,12 +2,12 @@
 title: Добавление ссылки на службу в проект переносного вложенного набора
 ms.date: 03/30/2017
 ms.assetid: 61ccfe0f-a34b-40ca-8f5e-725fa1b8095e
-ms.openlocfilehash: e1d65df46c0ed6d9d271727ad04a661c5e34a1ef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 92ee180da531259b005b5782c180a139fd66847b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59145435"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316730"
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>Добавление ссылки на службу в проект переносного вложенного набора
 Проекты переносимого подмножества позволяют программистам, создающим сборки .NET поддерживать одно дерево исходного кода и система сборки, продолжая поддерживать несколько реализаций .NET (рабочий стол, Silverlight, Windows Phone и XBOX). Проекты переносимого подмножества ссылаться только на переносимые библиотеки .NET, которые являются сборкой .NET framework, который может использоваться в любой реализации .NET.  
@@ -15,21 +15,21 @@ ms.locfileid: "59145435"
 ## <a name="add-service-reference-details"></a>Диалоговое окно «Добавление ссылки на службу»  
  При добавлении ссылки на службу в проект переносного подмножества применяются следующие ограничения.  
   
-1.  Для <xref:System.Xml.Serialization.XmlSerializer> разрешены только символьные кодирования. Кодировки SOAP приводят к ошибке во время импорта.  
+1. Для <xref:System.Xml.Serialization.XmlSerializer> разрешены только символьные кодирования. Кодировки SOAP приводят к ошибке во время импорта.  
   
-2.  Для служб, использующих сценарии <xref:System.Runtime.Serialization.DataContractSerializer>, предоставляется суррогат контракта данных, гарантирующий что повторно используемые типы находятся в переносимом подмножестве.  
+2. Для служб, использующих сценарии <xref:System.Runtime.Serialization.DataContractSerializer>, предоставляется суррогат контракта данных, гарантирующий что повторно используемые типы находятся в переносимом подмножестве.  
   
-3.  Конечные точки, которые зависят от привязок, неподдерживаемых в переносимых библиотеках (все привязки, кроме <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WSHttpBinding>, за исключением привязок потока транзакций, надежных сеансов или кодирования MTOM и соответствующих пользовательских привязок), не учитываются.  
+3. Конечные точки, которые зависят от привязок, неподдерживаемых в переносимых библиотеках (все привязки, кроме <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WSHttpBinding>, за исключением привязок потока транзакций, надежных сеансов или кодирования MTOM и соответствующих пользовательских привязок), не учитываются.  
   
-4.  Перед импортом во всех операциях заголовки сообщений удаляются из всех описаний сообщений.  
+4. Перед импортом во всех операциях заголовки сообщений удаляются из всех описаний сообщений.  
   
-5.  Непереносимые атрибуты <xref:System.ComponentModel.DesignerCategoryAttribute>, <xref:System.SerializableAttribute>и <xref:System.ServiceModel.TransactionFlowAttribute> удаляются из созданного прокси-кода клиентов.  
+5. Непереносимые атрибуты <xref:System.ComponentModel.DesignerCategoryAttribute>, <xref:System.SerializableAttribute>и <xref:System.ServiceModel.TransactionFlowAttribute> удаляются из созданного прокси-кода клиентов.  
   
-6.  Непереносимые свойства ProtectionLevel, SessionMode, IsInitiating, IsTerminating удаляются из <xref:System.ServiceModel.ServiceContractAttribute>, <xref:System.ServiceModel.OperationContractAttribute> и <xref:System.ServiceModel.FaultContractAttribute>.  
+6. Непереносимые свойства ProtectionLevel, SessionMode, IsInitiating, IsTerminating удаляются из <xref:System.ServiceModel.ServiceContractAttribute>, <xref:System.ServiceModel.OperationContractAttribute> и <xref:System.ServiceModel.FaultContractAttribute>.  
   
-7.  Все операции службы создаются в виде асинхронных операций в прокси клиента.  
+7. Все операции службы создаются в виде асинхронных операций в прокси клиента.  
   
-8.  Удаляются конструкторы клиента, которые используют непереносимые типы.  
+8. Удаляются конструкторы клиента, которые используют непереносимые типы.  
   
 9. Экземпляр <xref:System.Net.CookieContainer> предоставляется в созданном клиенте.  
   

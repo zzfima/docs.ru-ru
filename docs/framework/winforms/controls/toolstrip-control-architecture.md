@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStrip control [Windows Forms], architecture
 ms.assetid: 71df2d18-862e-4701-9ff9-c1fe606f94f2
-ms.openlocfilehash: 1032b282801db485253da18536b448e8d3b65ae7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 91813928344f9210ce1383daa9ba7f765117833a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59186671"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296216"
 ---
 # <a name="toolstrip-control-architecture"></a>Архитектура элемента управления ToolStrip
 <xref:System.Windows.Forms.ToolStrip> И <xref:System.Windows.Forms.ToolStripItem> классы предоставляют гибкую, расширяемую систему для отображения элементов панели инструментов, состояния и меню. Все эти классы содержатся в <xref:System.Windows.Forms> пространство имен и они обычно именуются с префиксом «ToolStrip» (такие как <xref:System.Windows.Forms.ToolStripOverflow>) или с суффиксом «Лента» (такие как <xref:System.Windows.Forms.MenuStrip>).  
@@ -121,19 +121,19 @@ ms.locfileid: "59186671"
 #### <a name="toolstripcontainer-support-of-inheritance"></a>Поддержка наследования элемента управления ToolStripContainer  
  <xref:System.Windows.Forms.ToolStripContainer> Элемент управления поддерживает ограниченные сценарии наследования, аналогичный приведенному ниже:  
   
-1.  Создайте новое приложение Windows Forms.  
+1. Создайте новое приложение Windows Forms.  
   
-2.  Добавьте на форму элемент <xref:System.Windows.Forms.ToolStripContainer>.  
+2. Добавьте на форму элемент <xref:System.Windows.Forms.ToolStripContainer>.  
   
-3.  Задайте модификатор доступа для <xref:System.Windows.Forms.ToolStripContainer> для `public` или `protected`.  
+3. Задайте модификатор доступа для <xref:System.Windows.Forms.ToolStripContainer> для `public` или `protected`.  
   
-4.  Добавлять любые сочетания <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, и <xref:System.Windows.Forms.ContextMenuStrip> элементы управления <xref:System.Windows.Forms.ToolStripPanel> областей <xref:System.Windows.Forms.ToolStripContainer>.  
+4. Добавлять любые сочетания <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, и <xref:System.Windows.Forms.ContextMenuStrip> элементы управления <xref:System.Windows.Forms.ToolStripPanel> областей <xref:System.Windows.Forms.ToolStripContainer>.  
   
-5.  Выполните построение проекта.  
+5. Выполните построение проекта.  
   
-6.  Добавите форму, которая наследуется из первой формы.  
+6. Добавите форму, которая наследуется из первой формы.  
   
-7.  Выберите наследуемого <xref:System.Windows.Forms.ToolStripContainer> в форме.  
+7. Выберите наследуемого <xref:System.Windows.Forms.ToolStripContainer> в форме.  
   
 #### <a name="inherited-behavior-of-child-controls"></a>Унаследованное поведение дочерних элементов управления  
  После выполнения предыдущих шагов, наследуемых происходит следующее:  

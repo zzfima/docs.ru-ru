@@ -7,12 +7,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], structure
 - Visual Basic code, program structure
 ms.assetid: ad0c6531-d762-4c77-a700-de16b07b6119
-ms.openlocfilehash: 5817d4d37610c87bb7e4ade407421ddce7a3a862
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 42e366a844f9c5e80a8f617bf73dfd869608540d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828125"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295774"
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Структура программы Visual Basic
 Программы на Visual Basic — это результат из стандартных блоков. Объект *решение* состоит из одного или нескольких проектов. Объект *проекта* в свою очередь может содержать одну или несколько сборок. Каждый *сборки* компилируется из одного или нескольких исходных файлов. Объект *исходный файл* предоставляет определение и реализацию классов, структур, модулей и интерфейсов, которые в конечном счете содержит весь код.  
@@ -22,11 +22,11 @@ ms.locfileid: "58828125"
 ## <a name="file-level-programming-elements"></a>Элементы программирования на уровне файлов  
  При запуске проекта или файла и открыть редактор кода, вы увидите некоторые код уже на месте и в правильном порядке. Любой код, написанный следует придерживаться следующей последовательности:  
   
-1.  `Option` Инструкции  
+1. `Option` операторы  
   
-2.  `Imports` Инструкции  
+2. `Imports` операторы  
   
-3.  `Namespace` инструкции и элементы уровня пространства имен  
+3. `Namespace` инструкции и элементы уровня пространства имен  
   
  При вводе инструкций в другом порядке, это может привести к ошибкам компиляции.  
   
@@ -64,11 +64,11 @@ ms.locfileid: "58828125"
   
 -   [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
--   [Оператор Declare](../../../visual-basic/language-reference/statements/declare-statement.md)  
+-   [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
--   [Оператор Statement](../../../visual-basic/language-reference/statements/operator-statement.md)  
+-   [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
--   [Оператор Property](../../../visual-basic/language-reference/statements/property-statement.md)  
+-   [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md)  
   
 -   [Оператор Event](../../../visual-basic/language-reference/statements/event-statement.md)  
   

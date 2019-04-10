@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b044b1c9-c1e5-4c9f-84d8-0f02f4537f8b
-ms.openlocfilehash: 8b2ebc108bf3eef60e8877e617acec782da38fa4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f106ce1bca67f8b88df0835496eea0b3297ac946
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59124557"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309684"
 ---
 # <a name="how-to-host-a-wcf-service-in-iis"></a>Практическое руководство. Размещение службы WCF в IIS
 В этом разделе описаны основные шаги для создания службы Windows Communication Foundation (WCF), размещенного в Internet Information Services (IIS). Предполагается, что читатель знаком со службами IIS и может использовать средство управления IIS для создания приложений служб IIS и управления такими приложениями. Дополнительные сведения о службах IIS см. в разделе [Internet Information Services](https://go.microsoft.com/fwlink/?LinkId=132449). Службы WCF, которая выполняется в среде IIS использует все преимущества функции IIS, такие как перезапуск процессов, бездействует, завершение работы, наблюдение за работоспособностью процессов и активация на основе сообщений. Для реализации этого варианта размещения требуется правильно настроить службу IIS, но не требуется включать в приложение код размещения. Размещение в службах IIS возможно только при использовании транспорта HTTP.  
@@ -21,28 +21,28 @@ ms.locfileid: "59124557"
   
 ### <a name="to-create-a-service-hosted-by-iis"></a>Создание службы, размещенной в IIS  
   
-1.  Убедитесь, что службы IIS установлены и выполняются на компьютере. Дополнительные сведения об установке и настройке служб IIS см. в разделе [Установка и настройка IIS 7.0](https://go.microsoft.com/fwlink/?LinkID=132128)  
+1. Убедитесь, что службы IIS установлены и выполняются на компьютере. Дополнительные сведения об установке и настройке служб IIS см. в разделе [Установка и настройка IIS 7.0](https://go.microsoft.com/fwlink/?LinkID=132128)  
   
-2.  Создайте новую папку с именем IISHostedCalcService для файлов приложения, убедитесь, что [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] имеет доступ к содержимому этой папки, и воспользуйтесь средством управления IIS для создания нового приложения служб IIS, которое физически расположено в каталоге этого приложения. Создайте для каталога приложения псевдоним «IISHostedCalc».  
+2. Создайте новую папку с именем IISHostedCalcService для файлов приложения, убедитесь, что [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] имеет доступ к содержимому этой папки, и воспользуйтесь средством управления IIS для создания нового приложения служб IIS, которое физически расположено в каталоге этого приложения. Создайте для каталога приложения псевдоним «IISHostedCalc».  
   
-3.  Создайте в каталоге приложения новый файл с именем «service.svc». Измените этот файл, добавив следующий @ServiceHost элемент.  
+3. Создайте в каталоге приложения новый файл с именем «service.svc». Измените этот файл, добавив следующий @ServiceHost элемент.  
   
     ```  
     <%@ServiceHost language=c# Debug="true" Service="Microsoft.ServiceModel.Samples.CalculatorService"%>  
     ```  
   
-4.  В каталоге приложения создайте подкаталог App_Code.  
+4. В каталоге приложения создайте подкаталог App_Code.  
   
-5.  Создайте файл кода с именем Service.cs во вложенном каталоге App_Code.  
+5. Создайте файл кода с именем Service.cs во вложенном каталоге App_Code.  
   
-6.  Добавьте следующие операторы using в начало файла Service.cs.  
+6. Добавьте следующие операторы using в начало файла Service.cs.  
   
     ```csharp  
     using System;  
     using System.ServiceModel;  
     ```  
   
-7.  Добавьте следующее объявление пространства имен после операторов using.  
+7. Добавьте следующее объявление пространства имен после операторов using.  
   
     ```csharp  
     namespace Microsoft.ServiceModel.Samples  
@@ -50,7 +50,7 @@ ms.locfileid: "59124557"
     }  
     ```  
   
-8.  Определите контракт службы в пределах объявления пространства имен, как показано в следующем коде.  
+8. Определите контракт службы в пределах объявления пространства имен, как показано в следующем коде.  
   
      [!code-csharp[c_HowTo_HostInIIS#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostiniis/cs/source.cs#11)]
      [!code-vb[c_HowTo_HostInIIS#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostiniis/vb/source.vb#11)]  

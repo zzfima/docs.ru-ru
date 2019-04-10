@@ -1,5 +1,5 @@
 ---
-title: Пошаговое руководство. Размещение элемента управления Windows Forms в WPF
+title: Пошаговое руководство. Размещение элементов управления Windows Forms в WPF
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 ms.assetid: 9cb88415-39b0-4c46-80c4-ff325b674286
-ms.openlocfilehash: 8ef13ef89072f91c847a05facbcce344dda6ade2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4e9b42738ff661425b05a63f2a5e5790c5cbd84b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374897"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311920"
 ---
-# <a name="walkthrough-hosting-a-windows-forms-control-in-wpf"></a>Пошаговое руководство. Размещение элемента управления Windows Forms в WPF
+# <a name="walkthrough-hosting-a-windows-forms-control-in-wpf"></a>Пошаговое руководство. Размещение элементов управления Windows Forms в WPF
 
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет множество элементов управления с богатым набором функций. Тем не менее, иногда можно использовать [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элементов управления в вашей [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] страниц. Например, может получить значительные преимущества в существующих [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элементов управления, или имеете [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элемента управления, предоставляющий уникальную функциональность.
 
@@ -30,27 +30,27 @@ ms.locfileid: "57374897"
 
 ### <a name="to-host-the-maskedtextbox-control"></a>Чтобы разместить элемент управления MaskedTextBox, выполните следующие действия.
 
-1.  Создание проекта приложения WPF с именем `HostingWfInWpf`.
+1. Создание проекта приложения WPF с именем `HostingWfInWpf`.
 
-2.  Добавьте ссылки на следующие сборки.
+2. Добавьте ссылки на следующие сборки.
 
     -   WindowsFormsIntegration
 
     -   System.Windows.Forms.
 
-3.  Откройте файл MainWindow.xaml в [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].
+3. Откройте файл MainWindow.xaml в [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].
 
-4.  Имя <xref:System.Windows.Controls.Grid> элемент `grid1`.
+4. Имя <xref:System.Windows.Controls.Grid> элемент `grid1`.
 
      [!code-xaml[HostingWfInWPF#1](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingWfInWPF/CSharp/HostingWfInWPF/Window1.xaml#1)]
 
-5.  В представлении конструирования или XAML, выберите <xref:System.Windows.Window> элемент.
+5. В представлении конструирования или XAML, выберите <xref:System.Windows.Window> элемент.
 
-6.  В окне «Свойства» щелкните **события** вкладки.
+6. В окне «Свойства» щелкните **события** вкладки.
 
-7.  Дважды щелкните <xref:System.Windows.FrameworkElement.Loaded> событий.
+7. Дважды щелкните <xref:System.Windows.FrameworkElement.Loaded> событий.
 
-8.  Вставьте следующий код для обработки <xref:System.Windows.FrameworkElement.Loaded> событий.
+8. Вставьте следующий код для обработки <xref:System.Windows.FrameworkElement.Loaded> событий.
 
      [!code-csharp[HostingWfInWPF#10](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingWfInWPF/CSharp/HostingWfInWPF/Window1.xaml.cs#10)]
      [!code-vb[HostingWfInWPF#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HostingWfInWPF/VisualBasic/HostingWfInWpf/Window1.xaml.vb#10)]
@@ -67,8 +67,8 @@ ms.locfileid: "57374897"
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Проектирование XAML в Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [Пошаговое руководство: Размещение элемента управления Windows Forms в WPF с помощью XAML](walkthrough-hosting-a-windows-forms-control-in-wpf-by-using-xaml.md)
-- [Пошаговое руководство: Размещение Windows Forms составного элемента управления в WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [Пошаговое руководство: Размещение составного элемента управления WPF в Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [Пошаговое руководство. Размещение элемента управления Windows Forms в приложении WPF с помощью XAML](walkthrough-hosting-a-windows-forms-control-in-wpf-by-using-xaml.md)
+- [Пошаговое руководство. Размещение составного элемента управления Windows Forms в приложении WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [Пошаговое руководство. Размещение составного элемента управления WPF в форме Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
 - [Элементы управления Windows Forms и эквивалентные элементы управления WPF](windows-forms-controls-and-equivalent-wpf-controls.md)
-- [Пример размещения элемента управления Windows Forms в приложении WPF](https://go.microsoft.com/fwlink/?LinkID=160057)
+- [Размещение элемента управления Windows Forms в WPF](https://go.microsoft.com/fwlink/?LinkID=160057)

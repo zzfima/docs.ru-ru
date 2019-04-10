@@ -3,12 +3,12 @@ title: Пользовательские обработчики маркеров
 ms.date: 03/30/2017
 ms.assetid: 5062669f-8bfc-420a-a25d-d8ab992ab10e
 author: BrucePerlerMS
-ms.openlocfilehash: c27abb5df7f895a9dec5f7f784f1a3ff0b31edb7
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b6b84271fc450a325270bad5f9e0355fe81a8a5c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200884"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312115"
 ---
 # <a name="custom-token-handlers"></a>Пользовательские обработчики маркеров
 В этом разделе описываются обработчики маркеров на платформе WIF и рассказывается о том, как использовать их для обработки маркеров. Кроме того, здесь рассматривается, что необходимо для создания пользовательских обработчиков для типов маркеров, которые по умолчанию не поддерживаются на платформе WIF.  
@@ -42,9 +42,9 @@ ms.locfileid: "47200884"
   
 #### <a name="adding-a-custom-token-handler"></a>Добавление пользовательского обработчика маркеров  
   
-1.  Создайте новый класс, производный от <xref:System.IdentityModel.Tokens.SecurityTokenHandler>.  
+1. Создайте новый класс, производный от <xref:System.IdentityModel.Tokens.SecurityTokenHandler>.  
   
-2.  Переопределите следующие методы и предоставьте их собственную реализацию:  
+2. Переопределите следующие методы и предоставьте их собственную реализацию:  
   
     -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken%2A>  
   
@@ -58,7 +58,7 @@ ms.locfileid: "47200884"
   
     -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>  
   
-3.  Добавьте ссылку на новый пользовательский обработчик маркеров в файл *Web.config* или *App.config* в разделе **\<system.identityModel>**, который определяет параметры платформы WIF. Например, следующая разметка конфигурации задает новый обработчик маркеров **MyCustomTokenHandler**, который размещается в пространстве имен **CustomToken**.  
+3. Добавьте ссылку на новый пользовательский обработчик маркеров в файл *Web.config* или *App.config* в разделе **\<system.identityModel>**, который определяет параметры платформы WIF. Например, следующая разметка конфигурации задает новый обработчик маркеров **MyCustomTokenHandler**, который размещается в пространстве имен **CustomToken**.  
   
     ```xml  
     <system.identityModel>  

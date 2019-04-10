@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], changing column type
 - data [Windows Forms], displaying
 ms.assetid: 7f994d45-600d-4190-a187-35803214b40c
-ms.openlocfilehash: f42bfe9b407e8f81c0eaf5a654d246f7b83567c9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e87017f3698bc88a123d8a0ba0df5dbe2b7bbfd9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59208557"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314871"
 ---
 # <a name="how-to-change-the-type-of-a-windows-forms-datagridview-column-using-the-designer"></a>Практическое руководство. Изменение типа столбца DataGridView в формах Windows Forms с помощью конструктора
 Иногда требуется изменить тип столбца, который уже был добавлен к формам Windows <xref:System.Windows.Forms.DataGridView> элемента управления. Например может потребоваться изменить типы некоторых столбцов, которые создаются автоматически при привязке элемента управления к источнику данных. Это полезно в тех случаях, когда в таблице, которые отображены есть столбцы, содержащие внешние ключи для строк в связанной таблице. В этом случае необходимо заменить столбцы с текстовыми полями, которые отображают эти внешние ключи, со столбцами поле со списком, отобразить более понятные значения из связанной таблицы.  
@@ -24,11 +24,11 @@ ms.locfileid: "59208557"
   
 ### <a name="to-change-the-type-of-a-column-using-the-designer"></a>Чтобы изменить тип столбца с помощью конструктора  
   
-1.  Щелкните глиф смарт-тега (![глиф смарт-тега](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) в правом верхнем углу <xref:System.Windows.Forms.DataGridView> управления, а затем выберите **Правка столбцов**.  
+1. Щелкните глиф смарт-тега (![глиф смарт-тега](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) в правом верхнем углу <xref:System.Windows.Forms.DataGridView> управления, а затем выберите **Правка столбцов**.  
   
-2.  Выберите столбец из **выбранные столбцы** списка.  
+2. Выберите столбец из **выбранные столбцы** списка.  
   
-3.  В **свойства столбца** сетки, задайте `ColumnType` свойство в новый тип столбца.  
+3. В **свойства столбца** сетки, задайте `ColumnType` свойство в новый тип столбца.  
   
     > [!NOTE]
     >  `ColumnType` Свойство является свойством только во время разработки, который указывает класс, представляющий тип столбца. Это не фактическое свойство, определенное в классе столбца.  

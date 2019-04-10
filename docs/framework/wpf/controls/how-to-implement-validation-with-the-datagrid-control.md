@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DataGrid [WPF], validation
 - validation [WPF], DataGrid
 ms.assetid: ec6078a8-1e42-4648-b414-f4348e81bda1
-ms.openlocfilehash: aead8cbd500262a4cba535fd023dd9701d50257a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 00d09c62aae67e3438816409c95ccf96050b3206
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59086812"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305961"
 ---
 # <a name="how-to-implement-validation-with-the-datagrid-control"></a>Практическое руководство. Реализация проверки с помощью элемента управления DataGrid
 <xref:System.Windows.Controls.DataGrid> Элемент управления позволяет выполнять проверку на уровне строк и ячеек. Когда пользователь обновляет значение проверки на уровне ячейки проверяются отдельные свойства объекта привязки данных. Когда пользователь вносит изменения в строку проверки на уровне строк проверяются целые объекты данных. Также можно реализовать визуальную реакцию на ошибки проверки или использовать визуальную обратную связь по умолчанию, <xref:System.Windows.Controls.DataGrid> предоставляет элемент управления.  
@@ -42,14 +42,14 @@ ms.locfileid: "59086812"
   
 ### <a name="to-validate-multiple-values-in-a-single-row"></a>Для проверки нескольких значений в одной строке  
   
-1.  Реализуйте <xref:System.Windows.Controls.ValidationRule> подкласса, который проверяет несколько свойств объекта привязки данных. В вашей <xref:System.Windows.Controls.ValidationRule.Validate%2A> привести реализацию метода `value` значение параметра для <xref:System.Windows.Data.BindingGroup> экземпляра. Вы можете обращаться к объекту данных, используя <xref:System.Windows.Data.BindingGroup.Items%2A> свойство.  
+1. Реализуйте <xref:System.Windows.Controls.ValidationRule> подкласса, который проверяет несколько свойств объекта привязки данных. В вашей <xref:System.Windows.Controls.ValidationRule.Validate%2A> привести реализацию метода `value` значение параметра для <xref:System.Windows.Data.BindingGroup> экземпляра. Вы можете обращаться к объекту данных, используя <xref:System.Windows.Data.BindingGroup.Items%2A> свойство.  
   
      В следующем примере демонстрируется этот процесс проверки ли `StartDate` значение свойства для `Course` объекта более ранняя, чем его `EndDate` значение свойства.  
   
      [!code-csharp[DataGrid_Validation#CourseValidationRule](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml.cs#coursevalidationrule)]
      [!code-vb[DataGrid_Validation#CourseValidationRule](~/samples/snippets/visualbasic/VS_Snippets_Wpf/datagrid_validation/vb/mainwindow.xaml.vb#coursevalidationrule)]  
   
-2.  Добавить правило проверки к <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A?displayProperty=nameWithType> коллекции. <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A> Свойство обеспечивает прямой доступ к <xref:System.Windows.Data.BindingGroup.ValidationRules%2A> свойство <xref:System.Windows.Data.BindingGroup> экземпляр, который группирует все привязки, используемые элементом управления.  
+2. Добавить правило проверки к <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A?displayProperty=nameWithType> коллекции. <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A> Свойство обеспечивает прямой доступ к <xref:System.Windows.Data.BindingGroup.ValidationRules%2A> свойство <xref:System.Windows.Data.BindingGroup> экземпляр, который группирует все привязки, используемые элементом управления.  
   
      В следующем примере задается <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A> свойства в XAML. <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> Свойству <xref:System.Windows.Controls.ValidationStep.UpdatedValue> таким образом, чтобы проверка осуществляется только после обновления объект привязанных данных.  
   

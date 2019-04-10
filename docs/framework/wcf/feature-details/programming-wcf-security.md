@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-ms.openlocfilehash: 41157d12f1133878e133895ed0f803bc7018af51
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d327605c084cd5fb1c65fbb786e871b421730b83
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59087811"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313324"
 ---
 # <a name="programming-wcf-security"></a>Программирование безопасности WCF
 В этом разделе описаны основные задачи программирования, используемый для создания безопасного приложения Windows Communication Foundation (WCF). В этом разделе рассматриваются только проверки подлинности, конфиденциальность и целостность, которые в совокупности называются *безопасность передачи*. В этом разделе не рассматривается авторизация (Управление доступом к ресурсам и службам); сведения об авторизации см. в разделе [авторизации](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
@@ -25,11 +25,11 @@ ms.locfileid: "59087811"
 ## <a name="setting-the-security-mode"></a>Задание режима безопасности  
  Ниже рассматриваются общие действия по программированию с использованием режима безопасности в WCF:  
   
-1.  Выберите одну из предопределенных привязок, отвечающих требованиям приложения. Список привязок, см. в разделе [System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md). По умолчанию практически во всех привязках включены функции безопасности. Единственным исключением является <xref:System.ServiceModel.BasicHttpBinding> класса (с помощью конфигурации, [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)).  
+1. Выберите одну из предопределенных привязок, отвечающих требованиям приложения. Список привязок, см. в разделе [System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md). По умолчанию практически во всех привязках включены функции безопасности. Единственным исключением является <xref:System.ServiceModel.BasicHttpBinding> класса (с помощью конфигурации, [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)).  
   
      Выбранная привязка определяет транспорт. Например, привязка <xref:System.ServiceModel.WSHttpBinding> использует протокол HTTP в качестве транспорта; привязка <xref:System.ServiceModel.NetTcpBinding> использует протокол TCP.  
   
-2.  Выберите один из режимов безопасности привязки. Обратите внимание, что выбранная привязка определяет выбор доступных режимов. Например, привязка <xref:System.ServiceModel.WSDualHttpBinding> не позволяет обеспечить безопасность транспорта (это изменить нельзя). Аналогично, привязки <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> и <xref:System.ServiceModel.NetNamedPipeBinding> не обеспечивают безопасность сообщений.  
+2. Выберите один из режимов безопасности привязки. Обратите внимание, что выбранная привязка определяет выбор доступных режимов. Например, привязка <xref:System.ServiceModel.WSDualHttpBinding> не позволяет обеспечить безопасность транспорта (это изменить нельзя). Аналогично, привязки <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> и <xref:System.ServiceModel.NetNamedPipeBinding> не обеспечивают безопасность сообщений.  
   
      Доступны три варианта.  
   
@@ -47,9 +47,9 @@ ms.locfileid: "59087811"
   
          В этом случае транспортный уровень используется для защиты передачи сообщений. При этом каждое сообщение включает расширенные учетные данные, необходимые другим службам. Этот способ сочетает повышение производительности механизма безопасности транспорта с наличием различных учетных данных механизма безопасности сообщений. Его можно использовать со следующими привязками: <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WSFederationHttpBinding>, <xref:System.ServiceModel.NetPeerTcpBinding> и <xref:System.ServiceModel.WSHttpBinding>.  
   
-3.  Если принято решение использовать безопасность транспорта для протокола HTTP (т.е. протокол HTTPS), необходимо настроить узел с сертификатом SSL и включить SSL для порта. Дополнительные сведения см. в разделе [безопасности транспорта HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+3. Если принято решение использовать безопасность транспорта для протокола HTTP (т.е. протокол HTTPS), необходимо настроить узел с сертификатом SSL и включить SSL для порта. Дополнительные сведения см. в разделе [безопасности транспорта HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
-4.  Если используется привязка <xref:System.ServiceModel.WSHttpBinding> и при этом не требуется устанавливать безопасный сеанс, следует присвоить свойству <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> значение `false`.  
+4. Если используется привязка <xref:System.ServiceModel.WSHttpBinding> и при этом не требуется устанавливать безопасный сеанс, следует присвоить свойству <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> значение `false`.  
   
      Безопасный сеанс создается, когда клиент и служба создают канал с использованием симметричного ключа (клиент и служба используют один и тот же ключ в течение всего диалога вплоть до его завершения).  
   

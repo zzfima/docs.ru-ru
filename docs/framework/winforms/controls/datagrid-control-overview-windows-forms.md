@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: 7fdc14257d140c92cb2450fc21b44c1f95c75ba8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 34bf38a59e4f2b1f975cf1836973d24d8a3bae32
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59189317"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304743"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>Общие сведения об элементе управления DataGrid (Windows Forms)
 > [!NOTE]
@@ -35,10 +35,9 @@ ms.locfileid: "59189317"
   
  Если элемент <xref:System.Windows.Forms.DataGrid> привязан к данным с помощью нескольких связанных таблиц и в сетке включена навигация, в каждой строке сетки будут отображаться расширители. С помощью расширителя пользователь может переходить из родительской таблицы в дочернюю. При щелчке узла отображается дочерняя таблица, а при нажатии кнопки "Назад" — исходная родительская таблица. Таким образом в сетке отображаются иерархические связи между таблицами.  
   
- На следующем снимке экрана показана управления DataGrid, привязанный к данным с помощью нескольких таблиц.  
+ На следующем снимке экрана показана управления DataGrid, привязанный к данным с помощью нескольких таблиц:  
   
- ![Управления DataGrid, привязанный к данным с помощью нескольких таблиц](./media/vbcontrol1.gif "vbControl1")  
-Элемент управления DataGrid, привязанный к данным с помощью нескольких таблиц  
+ ![Приложения WinForms, показывающий элемент управления DataGrid привязан к данным с помощью нескольких таблиц.](./media/datagrid-control-overview-windows-forms/datagrid-bound-multiple-tables.gif)  
   
  Элемент управления <xref:System.Windows.Forms.DataGrid> может предоставлять пользовательский интерфейс для набора данных, навигацию между связанными таблицами и широкие возможности форматирования и редактирования.  
   
@@ -94,15 +93,16 @@ ms.locfileid: "59189317"
   
  Когда элемент управления <xref:System.Windows.Forms.DataGrid> отображает таблицу и свойству <xref:System.Windows.Forms.DataGrid.AllowSorting%2A> присвоено значение `true`, данные можно сортировать, щелкая заголовки столбцов. Пользователь также может добавлять строки и редактировать ячейки.  
   
- Связи между наборами таблиц отображаются для пользователей с помощью структуры навигации "родительская-дочерняя". Родительские таблицы представляют высший уровень данных, а дочерние таблицы — это таблицы данных, производные от отдельных листингов в родительских таблицах. В каждой родительской строке, содержащей дочернюю таблицу, отображаются расширители. При щелчке расширителя создается список гиперссылок на дочерние таблицы. Когда пользователь переходит по ссылке, отображается дочерняя таблица. При щелчке значка "показать/скрыть" для родительских строк (![значок "показать/скрыть" для родительских строк](./media/vbicon.gif "vbIcon")) сведения о родительской таблице будут скрываться или вновь выводиться на экран, если пользователь скрыл их ранее. Пользователь может нажать кнопку "Назад", чтобы вернуться к предыдущей таблице.  
+ Связи между наборами таблиц отображаются для пользователей с помощью структуры навигации "родительская-дочерняя". Родительские таблицы представляют высший уровень данных, а дочерние таблицы — это таблицы данных, производные от отдельных листингов в родительских таблицах. В каждой родительской строке, содержащей дочернюю таблицу, отображаются расширители. При щелчке расширителя создается список гиперссылок на дочерние таблицы. Когда пользователь переходит по ссылке, отображается дочерняя таблица. Щелкнув значок (Показать/скрыть родительской строки![Показать/скрыть значок родительских строк](./media/datagrid-control-overview-windows-forms/show-hide-parent-rows.gif)) будут скрываться сведения о родительской таблице или вновь выводиться на экран, если пользователь скрыл их ранее. Пользователь может нажать кнопку "Назад", чтобы вернуться к предыдущей таблице.  
   
 ## <a name="columns-and-rows"></a>Столбцы и строки  
  <xref:System.Windows.Forms.DataGrid> состоит из коллекции объектов <xref:System.Windows.Forms.DataGridTableStyle>, содержащихся в свойстве <xref:System.Windows.Forms.DataGrid.TableStyles%2A> элемента управления <xref:System.Windows.Forms.DataGrid>. Стиль таблицы может содержать коллекцию объектов <xref:System.Windows.Forms.DataGridColumnStyle>, содержащихся в свойстве <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> класса <xref:System.Windows.Forms.DataGridTableStyle>. Можно изменить <xref:System.Windows.Forms.DataGrid.TableStyles%2A> и <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> свойств с помощью редакторов коллекций, доступных через **свойства** окна.  
   
  К любому классу <xref:System.Windows.Forms.DataGridTableStyle>, связанному с элементом управления <xref:System.Windows.Forms.DataGrid>, можно получить доступ через коллекцию <xref:System.Windows.Forms.GridTableStylesCollection>. Коллекцию <xref:System.Windows.Forms.GridTableStylesCollection> можно изменить в конструкторе с помощью редактора коллекции <xref:System.Windows.Forms.DataGridTableStyle> или программным путем с помощью свойства <xref:System.Windows.Forms.DataGrid.TableStyles%2A> элемента управления <xref:System.Windows.Forms.DataGrid>.  
-  
- ![Объекты, включенные в элементе управления DataGrid](./media/vbcolumns1.gif "vbColumns1")  
-На рисунке показаны объекты, включенные в элемент управления DataGrid.  
+
+ На следующем рисунке показан объекты, включенные в элементе управления DataGrid:
+
+ ![Схема, показывающая объекты, включенные в элементе управления DataGrid.](./media/datagrid-control-overview-windows-forms/visual-basic-columns.gif)  
   
  Стили таблиц и столбцов синхронизируются с объектами <xref:System.Data.DataTable> и <xref:System.Data.DataColumn> путем задания для их свойства `MappingName` соответствующих свойств <xref:System.Data.DataTable.TableName%2A> и <xref:System.Data.DataColumn.ColumnName%2A>. Когда класс <xref:System.Windows.Forms.DataGridTableStyle>, не имеющий стилей столбцов, добавляется в элемент управления <xref:System.Windows.Forms.DataGrid>, привязанный к допустимому источнику данных, и для свойства <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> этого стиля таблицы задается допустимое свойство <xref:System.Data.DataTable.TableName%2A>, для этого стиля таблицы создается коллекция объектов <xref:System.Windows.Forms.DataGridColumnStyle>. Для каждого объекта <xref:System.Data.DataColumn> в коллекции <xref:System.Data.DataTable.Columns%2A> объекта <xref:System.Data.DataTable> в коллекцию <xref:System.Windows.Forms.GridColumnStylesCollection> добавляется соответствующий класс <xref:System.Windows.Forms.DataGridColumnStyle>. <xref:System.Windows.Forms.GridColumnStylesCollection> осуществляется с помощью <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> свойство <xref:System.Windows.Forms.DataGridTableStyle>. Столбцы можно добавлять или удалять из сетки, используя метод <xref:System.Windows.Forms.GridColumnStylesCollection.Add%2A> или <xref:System.Windows.Forms.GridColumnStylesCollection.Remove%2A> для коллекции <xref:System.Windows.Forms.GridColumnStylesCollection>. Дополнительные сведения см. в разделе [Как Добавление таблиц и столбцов в Windows Forms элемента управления DataGrid](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md) и [как: Удаление или скрытие столбцов в Windows Forms элемента управления DataGrid](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md).  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - signature confirmation
 - WCF, security
 ms.assetid: 2424c137-c7c2-4aa9-8d5d-a066e12fefda
-ms.openlocfilehash: 78ad6a88d5c123272e1796f1a75e2bd226bfc8f5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 56e8720a6130d2908fbfb83bd243a54fae9a2406
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59176167"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315820"
 ---
 # <a name="how-to-set-up-a-signature-confirmation"></a>Практическое руководство. Настройка подтверждения сигнатуры
 *Подтверждение подписи* — это механизм для инициатору сообщения убедиться, что полученный ответ был создан в ответ на исходное сообщение отправителя. Подтверждение подписи определено в спецификации WS-Security 1.1. Если конечная точка поддерживает WS-Security 1.0, использовать подтверждение подписи нельзя.  
@@ -22,29 +22,29 @@ ms.locfileid: "59176167"
   
 ### <a name="to-enable-signature-confirmation-in-code"></a>Включение подтверждения подписи в коде  
   
-1.  Создайте экземпляр класса <xref:System.ServiceModel.Channels.BindingElementCollection>.  
+1. Создайте экземпляр класса <xref:System.ServiceModel.Channels.BindingElementCollection>.  
   
-2.  Создайте экземпляр <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> класса.  
+2. Создайте экземпляр <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> класса.  
   
-3.  Присвойте свойству <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.RequireSignatureConfirmation%2A> значение `true`.  
+3. Присвойте свойству <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.RequireSignatureConfirmation%2A> значение `true`.  
   
-4.  Добавьте элемент безопасности в коллекцию элементов привязки.  
+4. Добавьте элемент безопасности в коллекцию элементов привязки.  
   
-5.  Создание пользовательской привязки, как указано в [как: Создание пользовательской привязки с использованием элемента SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
+5. Создание пользовательской привязки, как указано в [как: Создание пользовательской привязки с использованием элемента SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
   
 ### <a name="to-enable-signature-confirmation-in-configuration"></a>Включение подтверждения подписи в конфигурации  
   
-1.  Добавьте элемент `<customBinding>` в раздел `<bindings>` файла конфигурации.  
+1. Добавьте элемент `<customBinding>` в раздел `<bindings>` файла конфигурации.  
   
-2.  Добавьте элемент `<binding>` и присвойте атрибуту имени соответствующее значение.  
+2. Добавьте элемент `<binding>` и присвойте атрибуту имени соответствующее значение.  
   
-3.  Добавьте соответствующий элемент кодирования. В следующем примере добавляется элемент `<TextMessageEncoding>`.  
+3. Добавьте соответствующий элемент кодирования. В следующем примере добавляется элемент `<TextMessageEncoding>`.  
   
-4.  Добавьте дочерний элемент `<security>` и присвойте атрибуту `requireSignatureConfirmation` значение `true`.  
+4. Добавьте дочерний элемент `<security>` и присвойте атрибуту `requireSignatureConfirmation` значение `true`.  
   
-5.  Необязательный параметр. Чтобы включить подтверждение подписи во время начальной загрузки, добавьте [ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) дочерний элемент и набор `equireSignatureConfirmation` атрибут `true`.  
+5. Необязательный параметр. Чтобы включить подтверждение подписи во время начальной загрузки, добавьте [ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) дочерний элемент и набор `equireSignatureConfirmation` атрибут `true`.  
   
-6.  Добавьте соответствующий элемент транспорта. В следующем примере добавляется [ \<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md):  
+6. Добавьте соответствующий элемент транспорта. В следующем примере добавляется [ \<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md):  
   
     ```xml  
     <bindings>  

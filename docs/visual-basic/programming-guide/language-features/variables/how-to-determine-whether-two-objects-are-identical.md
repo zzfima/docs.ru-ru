@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [Visual Basic], comparing
 - object variables [Visual Basic], determining identity
 ms.assetid: 7829f817-0d1f-4749-a707-de0b95e0cf5c
-ms.openlocfilehash: 2b2c43811cbb3a06ed1e8c092ca42e50a4d037c0
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: aae053ae0473ed6ced0f28da3d5e5afc0be629df
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816087"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295045"
 ---
 # <a name="how-to-determine-whether-two-objects-are-identical-visual-basic"></a>Практическое руководство. Определить, являются ли два объекта идентичны (Visual Basic)
 В Visual Basic две ссылки на переменные, считаются идентичными, если их указатели совпадают, то есть, если обе переменные указывают на один и тот же экземпляр класса в памяти. Например, в приложении Windows Forms, может потребоваться сделать сравнение с целью определения ли текущий экземпляр (`Me`) совпадает со значением конкретного экземпляра, такие как `Form2`.  
@@ -22,9 +22,9 @@ ms.locfileid: "58816087"
   
 #### <a name="to-determine-if-two-objects-are-identical"></a>Для определения идентичности двух объектов  
   
-1.  Настройка `Boolean` выражение для проверки двух объектов.  
+1. Настройка `Boolean` выражение для проверки двух объектов.  
   
-2.  В проверяемом выражении используется `Is` оператора с двумя объектами в качестве операндов.  
+2. В проверяемом выражении используется `Is` оператора с двумя объектами в качестве операндов.  
   
      `Is` Возвращает `True` Если объекты указывают на один и тот же экземпляр класса.  
   
@@ -33,9 +33,9 @@ ms.locfileid: "58816087"
   
 #### <a name="to-determine-if-two-objects-are-not-identical"></a>Чтобы определить, если два объекта не совпадают  
   
-1.  Настройка `Boolean` выражение для проверки двух объектов.  
+1. Настройка `Boolean` выражение для проверки двух объектов.  
   
-2.  В проверяемом выражении используется `IsNot` оператора с двумя объектами в качестве операндов.  
+2. В проверяемом выражении используется `IsNot` оператора с двумя объектами в качестве операндов.  
   
      `IsNot` Возвращает `True` Если объекты не указывают на один и тот же экземпляр класса.  
   
@@ -52,10 +52,10 @@ ms.locfileid: "58816087"
   
 ## <a name="see-also"></a>См. также
 
-- [Тип данных Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [Объектные переменные](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Значения объектных переменных](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
 - [Оператор Is](../../../../visual-basic/language-reference/operators/is-operator.md)
 - [Оператор IsNot](../../../../visual-basic/language-reference/operators/isnot-operator.md)
-- [Практическое руководство. Определение связи между двумя объектами](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)
+- [Практическое руководство. Определение наличия связи между двумя объектами](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)
 - [Me, My, MyBase и MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

@@ -7,17 +7,15 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: dee1df1e122e47ea67618da5a1e4349e28d90447
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9a08fdeaa3517b1483af3f9958ad2db1c64648b8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377369"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084171"
 ---
 # <a name="globalization-for-wpf"></a>Глобализация для WPF
 В этом разделе рассматриваются проблемы, которые следует иметь в виду при написании [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] приложений для мирового рынка. Элементы программирования глобализации определяются в [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] в `System.Globalization`.
-
-
 
 <a name="xaml_globalization"></a>
 ## <a name="xaml-globalization"></a>Глобализация XAML
@@ -133,7 +131,7 @@ ms.locfileid: "57377369"
 
 <a name="intl_layout"></a>
 ### <a name="international-layout"></a>Международный макет
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет очень удобный способ поддержки горизонтальных, двунаправленных и вертикальных макетов. В инфраструктуре представления <xref:System.Windows.FrameworkElement.FlowDirection%2A> свойство может использоваться для определения макета. Ниже перечислены шаблоны направления текста:
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет очень удобный способ поддержки горизонтальной, двунаправленной и вертикальной разметки. В инфраструктуре представления <xref:System.Windows.FrameworkElement.FlowDirection%2A> свойство может использоваться для определения макета. Ниже перечислены шаблоны направления текста:
 
 -   *LeftToRight* — горизонтальная разметка для латиницы, восточноазиатских языков и т. д.
 
@@ -149,12 +147,12 @@ ms.locfileid: "57377369"
 
 <a name="localizable_ui"></a>
 ### <a name="localizable-user-interface"></a>Локализуемый пользовательский интерфейс
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения используют [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] для определения их [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] позволяет разработчикам задавать иерархию объектов с набором свойств и определенной логикой. Главным образом используется [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] является разработка [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения, но его можно использовать для задания иерархии любых [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] объектов. Большинство разработчиков используют [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] для указания своего приложения [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] и использовать язык программирования, например C# для реагирования на действия пользователя.
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения используют [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] для определения их [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] позволяет разработчикам задавать иерархию объектов с набором свойств и логику. Главным образом используется [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] является разработка [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения, но его можно использовать для задания иерархии любых [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] объектов. Большинство разработчиков используют [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] для указания своего приложения [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] и использовать язык программирования, например C# для реагирования на действия пользователя.
 
  С точки зрения ресурсов [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] разработанный для описания зависящий от языка [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] элемент ресурсов и поэтому должны быть локализуемыми для поддержки международных языков окончательный формат распространения. Так как [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] не может обрабатывать события, многие [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] приложения содержат блоки кода, чтобы сделать это. Дополнительные сведения см. в разделе [Обзор XAML (WPF)](xaml-overview-wpf.md). Код исключается и компилируется в разные двоичные файлы при [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] файл преобразуется в BAML-форму XAML. Форма BAML файлов XAML, изображения и другие типы управляемых объектов ресурсов внедряются во вспомогательную сборку ресурсов, которая может быть локализована на другие языки, или в основную сборку, если локализация не требуется.
 
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения поддерживают все [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)] [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] ресурсы, включая таблицы строк, изображений и т. д.
+>  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложения поддерживают все [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)][!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] ресурсы, включая таблицы строк, изображений и т. д.
 
 <a name="building_localizable_apps"></a>
 ### <a name="building-localizable-applications"></a>Разработка локализуемых приложений
@@ -181,4 +179,5 @@ ms.locfileid: "57377369"
 ```
 
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения о глобализации и локализации WPF](wpf-globalization-and-localization-overview.md)

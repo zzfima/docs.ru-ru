@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /optioninfer compiler option [Visual Basic]
 - optioninfer compiler option [Visual Basic]
 ms.assetid: f6c09db1-0553-464a-abe3-d4510c61d6ed
-ms.openlocfilehash: 89fcd981dbb5442f6150f539db4c7d404fe8d691
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: f1dcc03a67880727893e55c13d65a804586b3f56
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58839851"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315508"
 ---
 # <a name="-optioninfer"></a>-optioninfer
 Включает использование локального определения типов в различных объявлениях.  
@@ -38,9 +38,9 @@ ms.locfileid: "58839851"
   
 ### <a name="to-set--optioninfer-in-the-visual-studio-ide"></a>Чтобы задать - optioninfer в СРЕДЕ Visual Studio  
   
-1.  Выберите проект в **обозревателе решений**. В меню **Проект** выберите пункт **Свойства**.  
+1. Выберите проект в **обозревателе решений**. В меню **Проект** выберите пункт **Свойства**.  
   
-2.  На **компиляции** вкладке, измените значение в **Option infer** поле.  
+2. На **компиляции** вкладке, измените значение в **Option infer** поле.  
   
 ## <a name="example"></a>Пример  
  Следующий код компилирует `test.vb` с включенным локальным определением типов.  
@@ -56,7 +56,7 @@ vbc -optioninfer+ test.vb
 - [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
 - [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
 - [Примеры командных строк компиляции](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Оператор Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md)
+- [Option Infer - оператор](../../../visual-basic/language-reference/statements/option-infer-statement.md)
 - [Вывод локального типа](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Страница "Параметры Visual Basic по умолчанию", папка "Проекты", диалоговое окно "Параметры"](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
 - [Страница "Компиляция" в конструкторе проектов (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)

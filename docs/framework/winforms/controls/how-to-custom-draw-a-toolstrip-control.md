@@ -16,12 +16,12 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 94e7d7bd-a752-441c-b5b3-7acf98881163
-ms.openlocfilehash: 74092fdcd72c09670db53dc79d43d9d52f0dcf4b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9b3d6b9391971d4c2d012345b96c2ed64d33a998
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59172191"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311049"
 ---
 # <a name="how-to-custom-draw-a-toolstrip-control"></a>Практическое руководство. Пользовательская прорисовка элемента управления ToolStrip
 Элементы управления <xref:System.Windows.Forms.ToolStrip> имеют следующие связанные классы отрисовки:  
@@ -107,11 +107,11 @@ ms.locfileid: "59172191"
   
 ### <a name="to-change-the-rendering-for-all-toolstrip-controls-in-your-application"></a>Изменение отрисовки для всех элементов управления ToolStrip в приложении  
   
-1.  С помощью свойства <xref:System.Windows.Forms.ToolStripManager.RenderMode%2A?displayProperty=nameWithType> выберите одно из доступных средств отрисовки.  
+1. С помощью свойства <xref:System.Windows.Forms.ToolStripManager.RenderMode%2A?displayProperty=nameWithType> выберите одно из доступных средств отрисовки.  
   
-2.  Используйте <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> для назначения пользовательского средства отрисовки.  
+2. Используйте <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> для назначения пользовательского средства отрисовки.  
   
-3.  Убедитесь в том, что свойству <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType> присвоено значение по умолчанию <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>.  
+3. Убедитесь в том, что свойству <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType> присвоено значение по умолчанию <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>.  
   
 ### <a name="to-turn-off-the-microsoft-office-colors-for-the-entire-application"></a>Отключение цветов в стиле Microsoft Office для всего приложения  
   

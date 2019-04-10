@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
-ms.openlocfilehash: f25d590442e789f6e7197e6b4b33c817a4dc8d78
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7966c1fe4cd94408455c6bb146fdd3ea55757702
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59175595"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316808"
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Практическое руководство. Создание пользовательской привязки с использованием элемента SecurityBindingElement
 Windows Communication Foundation (WCF) включает в себя несколько предоставляемых системой привязок, которые можно настроить, но не предоставляют полную гибкость при настройке все параметры безопасности, которые поддерживает WCF. В этом разделе описывается создание пользовательской привязки непосредственно из отдельных элементов привязки с рассмотрением некоторых из параметров безопасности, которые могут быть заданы при создании такой привязки. Дополнительные сведения о создании пользовательских привязок см. в разделе [расширение привязок](../../../../docs/framework/wcf/extending/extending-bindings.md).  
@@ -83,19 +83,19 @@ Windows Communication Foundation (WCF) включает в себя нескол
   
 #### <a name="to-create-a-custom-binding-that-uses-a-symmetricsecuritybindingelement"></a>Создание пользовательской привязки с использованием элемента SymmetricSecurityBindingElement  
   
-1.  Создайте экземпляр класса <xref:System.ServiceModel.Channels.BindingElementCollection> с именем `outputBec`.  
+1. Создайте экземпляр класса <xref:System.ServiceModel.Channels.BindingElementCollection> с именем `outputBec`.  
   
-2.  Вызовите статический метод `M:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement(true)`, который возвращает экземпляр класса <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
+2. Вызовите статический метод `M:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement(true)`, который возвращает экземпляр класса <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
   
-3.  Добавьте объект <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> в коллекцию (`outputBec`), вызвав метод `Add` класса <xref:System.Collections.ObjectModel.Collection%601> класса <xref:System.ServiceModel.Channels.BindingElement>.  
+3. Добавьте объект <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> в коллекцию (`outputBec`), вызвав метод `Add` класса <xref:System.Collections.ObjectModel.Collection%601> класса <xref:System.ServiceModel.Channels.BindingElement>.  
   
-4.  Создайте экземпляр класса <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> и добавьте его в коллекцию (`outputBec`). Этим задается кодирование, используемое привязкой.  
+4. Создайте экземпляр класса <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> и добавьте его в коллекцию (`outputBec`). Этим задается кодирование, используемое привязкой.  
   
-5.  Создайте объект <xref:System.ServiceModel.Channels.HttpTransportBindingElement> и добавьте его в коллекцию (`outputBec`). Этим указывается, что привязка использует транспорт по протоколу HTTP.  
+5. Создайте объект <xref:System.ServiceModel.Channels.HttpTransportBindingElement> и добавьте его в коллекцию (`outputBec`). Этим указывается, что привязка использует транспорт по протоколу HTTP.  
   
-6.  Создайте новую пользовательскую привязку путем создания экземпляра класса <xref:System.ServiceModel.Channels.CustomBinding> и передачи коллекции `outputBec` конструктору.  
+6. Создайте новую пользовательскую привязку путем создания экземпляра класса <xref:System.ServiceModel.Channels.CustomBinding> и передачи коллекции `outputBec` конструктору.  
   
-7.  Полученная пользовательская привязка обладает многими из характеристик стандартной привязки <xref:System.ServiceModel.WSHttpBinding>. Она предусматривает безопасность уровня сообщений и учетные данные Windows (однако отключает безопасные сеансы), требует внештатного задания учетных данных службы и не шифрует подписи. Последним можно управлять, только если определить свойство <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A>, как показано на шаге 4. Другими двумя можно управлять с помощью параметров стандартной привязки.  
+7. Полученная пользовательская привязка обладает многими из характеристик стандартной привязки <xref:System.ServiceModel.WSHttpBinding>. Она предусматривает безопасность уровня сообщений и учетные данные Windows (однако отключает безопасные сеансы), требует внештатного задания учетных данных службы и не шифрует подписи. Последним можно управлять, только если определить свойство <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A>, как показано на шаге 4. Другими двумя можно управлять с помощью параметров стандартной привязки.  
   
 ## <a name="example"></a>Пример  
   

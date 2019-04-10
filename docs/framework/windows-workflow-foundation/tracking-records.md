@@ -2,12 +2,12 @@
 title: Записи отслеживания
 ms.date: 03/30/2017
 ms.assetid: 51adbda3-bd8b-4892-a8ea-d343186472d2
-ms.openlocfilehash: f8b79cad7161e780f336a9c5902e69d9826b23d9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 46b52f6b774d1d692c0e7dec400d369428a9607e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59163921"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298361"
 ---
 # <a name="tracking-records"></a>Записи отслеживания
 Среда выполнения рабочего процесса инструментирована для создания записей отслеживания выполнения экземпляра рабочего процесса.  
@@ -50,15 +50,15 @@ ms.locfileid: "59163921"
   
  Например, простое действие <xref:System.Activities.Statements.Sequence> может содержать операцию <xref:System.Activities.Statements.WriteLine> с записями отслеживания, выдаваемыми в следующем порядке.  
   
-1.  <xref:System.Activities.Tracking.WorkflowInstanceRecord> Указывает, что рабочий процесс запускается.  
+1. <xref:System.Activities.Tracking.WorkflowInstanceRecord> Указывает, что рабочий процесс запускается.  
   
-2.  <xref:System.Activities.Tracking.ActivityScheduledRecord> Указывает, что действия был запланирован. В данном случае этим действием является <xref:System.Activities.Statements.Sequence>.  
+2. <xref:System.Activities.Tracking.ActivityScheduledRecord> Указывает, что действия был запланирован. В данном случае этим действием является <xref:System.Activities.Statements.Sequence>.  
   
-3.  <xref:System.Activities.Tracking.ActivityScheduledRecord> Представляет <xref:System.Activities.Statements.WriteLine> действия.  
+3. <xref:System.Activities.Tracking.ActivityScheduledRecord> Представляет <xref:System.Activities.Statements.WriteLine> действия.  
   
-4.  Присутствуют две записи <xref:System.Activities.Tracking.ActivityStateRecord>, представляющие завершение двух действий.  
+4. Присутствуют две записи <xref:System.Activities.Tracking.ActivityStateRecord>, представляющие завершение двух действий.  
   
-5.  <xref:System.Activities.Tracking.WorkflowInstanceRecord> Указывает, что рабочий процесс завершается.  
+5. <xref:System.Activities.Tracking.WorkflowInstanceRecord> Указывает, что рабочий процесс завершается.  
   
 ## <a name="see-also"></a>См. также
 

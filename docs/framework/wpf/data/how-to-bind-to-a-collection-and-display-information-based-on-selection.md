@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], selecting data for views
 - data binding [WPF], binding to collections
 ms.assetid: 952a7d76-dd29-49e5-86f5-32c4530e70eb
-ms.openlocfilehash: 61ced27ed80adf8ac5d543584f71794b9ee59676
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: bb7d4c89e63982a3052857dcb50d04d36d9517dd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59188751"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314399"
 ---
 # <a name="how-to-bind-to-a-collection-and-display-information-based-on-selection"></a>Практическое руководство. Привязка к коллекции и вывод сведений в зависимости от выделенного элемента
 В простом сценарии «основной-подробности», у вас есть привязкой к данным <xref:System.Windows.Controls.ItemsControl> например <xref:System.Windows.Controls.ListBox>. В зависимости от выбора пользователя можно отобразить дополнительные сведения о выбранном элементе. В этом примере показано, как реализовать этот сценарий.  
@@ -36,9 +36,9 @@ ms.locfileid: "59188751"
   
  В этом примере следует обратить внимание на два обстоятельства:  
   
-1.  <xref:System.Windows.Controls.ListBox> И <xref:System.Windows.Controls.ContentControl> привязать к одному источнику. <xref:System.Windows.Data.Binding.Path%2A> Свойства обе привязки не заданы, так как оба элемента управления привязаны к всему объекту коллекции.  
+1. <xref:System.Windows.Controls.ListBox> И <xref:System.Windows.Controls.ContentControl> привязать к одному источнику. <xref:System.Windows.Data.Binding.Path%2A> Свойства обе привязки не заданы, так как оба элемента управления привязаны к всему объекту коллекции.  
   
-2.  Необходимо задать <xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A> свойства `true` для правильной работы. Задание этого свойства гарантирует, что выбранный элемент всегда задается как <xref:System.Windows.Controls.ItemCollection.CurrentItem%2A>. Кроме того Если <xref:System.Windows.Controls.ListBox> получает данные от <xref:System.Windows.Data.CollectionViewSource>, он автоматически синхронизирует Выбор и денежные единицы.  
+2. Необходимо задать <xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A> свойства `true` для правильной работы. Задание этого свойства гарантирует, что выбранный элемент всегда задается как <xref:System.Windows.Controls.ItemCollection.CurrentItem%2A>. Кроме того Если <xref:System.Windows.Controls.ListBox> получает данные от <xref:System.Windows.Data.CollectionViewSource>, он автоматически синхронизирует Выбор и денежные единицы.  
   
  Обратите внимание, что `Person` класса переопределения `ToString` метод следующим образом. По умолчанию <xref:System.Windows.Controls.ListBox> вызовы `ToString` и отображает строковое представление каждого объекта в привязанной коллекции. Вот почему каждый `Person` отображается как имя в <xref:System.Windows.Controls.ListBox>.  
   

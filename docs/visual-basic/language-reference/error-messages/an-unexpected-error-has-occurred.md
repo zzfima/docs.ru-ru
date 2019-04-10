@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrAppModel_CantGetMemoryMappedFile
 ms.assetid: 0d9f2a30-ff72-4355-8060-744f22339359
-ms.openlocfilehash: 82b513b89d661e49853e55f26df13eb354945038
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 9aa7ba0babe0a89942e320a76e07c05162b31700
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828601"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313616"
 ---
 # <a name="an-unexpected-error-has-occurred-because-an-operating-system-resource-required-for-single-instance-startup-cannot-be-acquired"></a>Непредвиденная ошибка, так как операционная система не может получить ресурсы, требуемые для запуска одного экземпляра.
 Приложению не удалось получить требуемый ресурс операционной системы. Вот некоторые возможные причины этой проблемы.  
@@ -22,16 +22,16 @@ ms.locfileid: "58828601"
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
-1.  Убедитесь, что у приложения достаточно прав на создание именованных объектов операционной системы.  
+1. Убедитесь, что у приложения достаточно прав на создание именованных объектов операционной системы.  
   
-2.  Убедитесь, что у среды CLR достаточно прав на создание размещенных в памяти файлов.  
+2. Убедитесь, что у среды CLR достаточно прав на создание размещенных в памяти файлов.  
   
-3.  Перезапустите компьютер, чтобы очистить все процессы, которые могут использовать ресурс, необходимый для подключения к приложению исходного экземпляра.  
+3. Перезапустите компьютер, чтобы очистить все процессы, которые могут использовать ресурс, необходимый для подключения к приложению исходного экземпляра.  
   
-4.  Запомните, при каких условиях произошла ошибка, и обратитесь в службу технической поддержки Майкрософт.  
+4. Запомните, при каких условиях произошла ошибка, и обратитесь в службу технической поддержки Майкрософт.  
   
 ## <a name="see-also"></a>См. также
 
-- [Страница "Приложение" в конструкторе проектов (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
+- [Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
 - [Основы отладки](/visualstudio/debugger/debugger-basics)
-- [Обращайтесь к нам](/visualstudio/ide/talk-to-us)
+- [Talk to Us](/visualstudio/ide/talk-to-us)

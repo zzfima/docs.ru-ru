@@ -10,12 +10,12 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolStrip control [Windows Forms], rendering
 ms.assetid: 88a804ba-679f-4ba3-938a-0dc396199c5b
-ms.openlocfilehash: d8a85edf8c001b19191fdfd74d1f9ebdf87024ab
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ca1a7444c029632f83b1600e5855a13c83777594
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59195492"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296385"
 ---
 # <a name="how-to-create-and-set-a-custom-renderer-for-the-toolstrip-control-in-windows-forms"></a>Практическое руководство. Создание и определение пользовательского средства визуализации для элемента управления ToolStrip в Windows Forms
 <xref:System.Windows.Forms.ToolStrip> элементы управления обеспечивают удобную поддержку тем и стилей. Полностью настраиваемый внешний вид и поведение (оформление) можно добиться путем задания либо <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> свойство или <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> свойства для пользовательского средства визуализации.  
@@ -27,9 +27,9 @@ ms.locfileid: "59195492"
   
 ### <a name="to-create-a-custom-renderer"></a>Чтобы создать пользовательское средство отрисовки  
   
-1.  Расширить <xref:System.Windows.Forms.ToolStripRenderer> класса.  
+1. Расширить <xref:System.Windows.Forms.ToolStripRenderer> класса.  
   
-2.  Реализуйте требуемого пользовательской отрисовки путем переопределения соответствующих *на...* члены  
+2. Реализуйте требуемого пользовательской отрисовки путем переопределения соответствующих *на...* члены  
   
     ```vb  
     Public Class RedTextRenderer  
@@ -59,7 +59,7 @@ ms.locfileid: "59195492"
   
 ### <a name="to-set-the-custom-renderer-to-be-the-current-renderer"></a>Чтобы задать пользовательское средство отрисовки к быть текущий модуль подготовки отчетов  
   
-1.  Чтобы задать пользовательское средство отрисовки для одного <xref:System.Windows.Forms.ToolStrip>, задайте <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> свойство пользовательского средства визуализации.  
+1. Чтобы задать пользовательское средство отрисовки для одного <xref:System.Windows.Forms.ToolStrip>, задайте <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> свойство пользовательского средства визуализации.  
   
     ```vb  
     toolStrip1.Renderer = New RedTextRenderer()  
@@ -69,7 +69,7 @@ ms.locfileid: "59195492"
     toolStrip1.Renderer = new RedTextRenderer();  
     ```  
   
-2.  Или задать пользовательское средство отрисовки для всех <xref:System.Windows.Forms.ToolStrip> классов, содержащихся в приложении: Задайте <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> свойства в пользовательское средство отрисовки и задайте <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> свойства <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>.  
+2. Или задать пользовательское средство отрисовки для всех <xref:System.Windows.Forms.ToolStrip> классов, содержащихся в приложении: Задайте <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> свойства в пользовательское средство отрисовки и задайте <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> свойства <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>.  
   
     ```vb  
     toolStrip1.RenderMode = ToolStripRenderMode.ManagerRenderMode  

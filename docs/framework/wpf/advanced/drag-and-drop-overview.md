@@ -12,12 +12,12 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-ms.openlocfilehash: 4fb80f749e203c5763f0aa56af4cbf066c7ffa37
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2b76c8fd3e2c6961b6ebdddc9b7ff9649f5196f4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139221"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301403"
 ---
 # <a name="drag-and-drop-overview"></a>Общие сведения о перетаскивании
 В этой статье приведены общие сведения о поддержке перетаскивания в приложениях [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Перетаскиванием обычно называют метод передачи данных, который реализуется с помощью мыши (или другого указывающего устройства) для выбора одного или нескольких объектов и перетаскивания их в цель перетаскивания в [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  
@@ -181,11 +181,11 @@ ms.locfileid: "59139221"
   
  Чтобы указать, что элемент является целью перетаскивания, его свойство <xref:System.Windows.UIElement.AllowDrop%2A> устанавливается в значение `true`. Затем в этом элементе будут возникать события цели перетаскивания, чтобы их можно было обработать. Во время операции перетаскивания в цели перетаскивания возникает следующая последовательность событий:  
   
-1.  <xref:System.Windows.DragDrop.DragEnter>  
+1. <xref:System.Windows.DragDrop.DragEnter>  
   
-2.  <xref:System.Windows.DragDrop.DragOver>  
+2. <xref:System.Windows.DragDrop.DragOver>  
   
-3.  <xref:System.Windows.DragDrop.DragLeave> или <xref:System.Windows.DragDrop.Drop>  
+3. <xref:System.Windows.DragDrop.DragLeave> или <xref:System.Windows.DragDrop.Drop>  
   
  Событие <xref:System.Windows.DragDrop.DragEnter> возникает, когда данные перетаскиваются в границы цели перетаскивания. Обычно вы обрабатываете это событие, чтобы обеспечить предварительный просмотр эффектов операции перетаскивания, если это требуется для вашего приложения. Не устанавливайте свойство <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> в событии <xref:System.Windows.DragDrop.DragEnter>, так как оно будет переопределено в событии <xref:System.Windows.DragDrop.DragOver>.  
   

@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cda9f6c71361d3865b40669c7ba09f2c2fb0c253
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 074cca51cee2b0227e1d124f1d40a2ffc31e3c85
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59102990"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314078"
 ---
 # <a name="identityattributeblob-structure"></a>Структура IDENTITY_ATTRIBUTE_BLOB
 Содержит сведения об отдельном атрибуте в сборке и состоит из трех `DWORD`s. Каждый `DWORD` — это смещение в буфер символов, полученных при `CurrentIntoBuffer` метод [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md) интерфейса  
@@ -49,13 +49,13 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
 ## <a name="sample"></a>Пример  
  В следующем примере показано несколько основных шагов, которые в конечном итоге привести заполненного `IDENTITY_ATTRIBUTE_BLOB` структуры:  
   
-1.  Получить [IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md) для сборки.  
+1. Получить [IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md) для сборки.  
   
-2.  Вызовите `IReferenceIdentity::EnumAttributes` метод и получить [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md).  
+2. Вызовите `IReferenceIdentity::EnumAttributes` метод и получить [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md).  
   
-3.  Создание буфера символов и приведите его как `IDENTITY_ATTRIBUTE_BLOB` структуры.  
+3. Создание буфера символов и приведите его как `IDENTITY_ATTRIBUTE_BLOB` структуры.  
   
-4.  Вызовите `CurrentIntoBuffer` метод `IEnumIDENTITY_ATTRIBUTE` интерфейс. Этот метод копирует атрибуты `Namespace`, `Name`, и `Value` в буфере символов. Три смещения в эти строки будут доступны в `IDENTITY_ATTRIBUTE_BLOB` структуры.  
+4. Вызовите `CurrentIntoBuffer` метод `IEnumIDENTITY_ATTRIBUTE` интерфейс. Этот метод копирует атрибуты `Namespace`, `Name`, и `Value` в буфере символов. Три смещения в эти строки будут доступны в `IDENTITY_ATTRIBUTE_BLOB` структуры.  
   
 ```  
 // EnumAssemblyAttributes.cpp : main project file.  

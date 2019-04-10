@@ -8,52 +8,52 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 149ab165-0ef3-490a-83a9-4322a07bd98a
-ms.openlocfilehash: 43347e3afdf55277ee8969954626d02192a10ec5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 33df685b4d14130ae00d59012706b7637924c9be
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59112571"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295436"
 ---
 # <a name="how-to-configure-credentials-on-a-federation-service"></a>Практическое руководство. Настройка учетных данных службы федерации
 В Windows Communication Foundation (WCF), создания федеративной службы состоит из следующих основных процедур:  
   
-1.  Настройка <xref:System.ServiceModel.WSFederationHttpBinding> или аналогичной пользовательской привязки. Дополнительные сведения о создании соответствующей привязки см. в разделе [как: Создание WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md).  
+1. Настройка <xref:System.ServiceModel.WSFederationHttpBinding> или аналогичной пользовательской привязки. Дополнительные сведения о создании соответствующей привязки см. в разделе [как: Создание WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md).  
   
-2.  Настройка объекта <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>, который определяет порядок проверки подлинности выданных маркеров, которые предоставляются службе.  
+2. Настройка объекта <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>, который определяет порядок проверки подлинности выданных маркеров, которые предоставляются службе.  
   
  В этом разделе описывается второй этап. Дополнительные сведения о работе федеративной службы см. в разделе [федерации](../../../../docs/framework/wcf/feature-details/federation.md).  
   
 ### <a name="to-set-the-properties-of-issuedtokenservicecredential-in-code"></a>Задание свойств объекта IssuedTokenServiceCredential в коде  
   
-1.  Свойство <xref:System.ServiceModel.Description.ServiceCredentials.IssuedTokenAuthentication%2A> класса <xref:System.ServiceModel.Description.ServiceCredentials> служит для возврата ссылки на экземпляр <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>. Доступ к этому свойству осуществляется через свойство <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> класса <xref:System.ServiceModel.ServiceHostBase>.  
+1. Свойство <xref:System.ServiceModel.Description.ServiceCredentials.IssuedTokenAuthentication%2A> класса <xref:System.ServiceModel.Description.ServiceCredentials> служит для возврата ссылки на экземпляр <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>. Доступ к этому свойству осуществляется через свойство <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> класса <xref:System.ServiceModel.ServiceHostBase>.  
   
-2.  Задайте для свойства <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A> значение `true`, если требуется проверять подлинность самостоятельно выданных маркеров, например карт [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. Значение по умолчанию — `false`.  
+2. Задайте для свойства <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A> значение `true`, если требуется проверять подлинность самостоятельно выданных маркеров, например карт [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. Значение по умолчанию — `false`.  
   
-3.  Заполните коллекцию, возвращаемую свойством <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A>, экземплярами класса <xref:System.Security.Cryptography.X509Certificates.X509Certificate2>. Каждый экземпляр представляет издателя, для которого служба будет проверять подлинность маркеров.  
+3. Заполните коллекцию, возвращаемую свойством <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A>, экземплярами класса <xref:System.Security.Cryptography.X509Certificates.X509Certificate2>. Каждый экземпляр представляет издателя, для которого служба будет проверять подлинность маркеров.  
   
     > [!NOTE]
     >  В отличие от клиентской коллекции, возвращаемой свойством <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A>, коллекция известных сертификатов не является коллекцией с ключом. Служба принимает маркеры, выдаваемые заданным сертификатом, независимо от адреса клиента, который отправил сообщение с выданным маркером (на него накладываются дополнительные ограничения, описанные ниже в этом разделе).  
   
-4.  Присвойте свойству <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> одно из значений перечисления <xref:System.ServiceModel.Security.X509CertificateValidationMode>. Это можно сделать только в коде. Значение по умолчанию — <xref:System.IdentityModel.Selectors.X509CertificateValidator.ChainTrust%2A>.  
+4. Присвойте свойству <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> одно из значений перечисления <xref:System.ServiceModel.Security.X509CertificateValidationMode>. Это можно сделать только в коде. Значение по умолчанию — <xref:System.IdentityModel.Selectors.X509CertificateValidator.ChainTrust%2A>.  
   
-5.  Если свойство <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> имеет значение <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>, присвойте экземпляр пользовательского класса <xref:System.IdentityModel.Selectors.X509CertificateValidator> свойству <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CustomCertificateValidator%2A>.  
+5. Если свойство <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> имеет значение <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>, присвойте экземпляр пользовательского класса <xref:System.IdentityModel.Selectors.X509CertificateValidator> свойству <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CustomCertificateValidator%2A>.  
   
-6.  Если свойство <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> имеет значение `ChainTrust` или `PeerOrChainTrust`, присвойте свойству <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.RevocationMode%2A> соответствующее значение из перечисления <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode>. Обратите внимание, что в режимах проверки `PeerTrust` и `Custom`, режим отзыва не используется.  
+6. Если свойство <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> имеет значение `ChainTrust` или `PeerOrChainTrust`, присвойте свойству <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.RevocationMode%2A> соответствующее значение из перечисления <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode>. Обратите внимание, что в режимах проверки `PeerTrust` и `Custom`, режим отзыва не используется.  
   
-7.  Если необходимо, присвойте экземпляр пользовательского класса <xref:System.IdentityModel.Tokens.SamlSerializer> свойству <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.SamlSerializer%2A>. Пользовательский сериализатор языка Security Assertions Markup Language (SAML) требуется, например, для анализа пользовательских утверждений SAML.  
+7. Если необходимо, присвойте экземпляр пользовательского класса <xref:System.IdentityModel.Tokens.SamlSerializer> свойству <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.SamlSerializer%2A>. Пользовательский сериализатор языка Security Assertions Markup Language (SAML) требуется, например, для анализа пользовательских утверждений SAML.  
   
 ### <a name="to-set-the-properties-of-issuedtokenservicecredential-in-configuration"></a>Задание свойств объекта IssuedTokenServiceCredential в файле конфигурации  
   
-1.  Создание `<issuedTokenAuthentication>` как дочерний элемент элемента <`serviceCredentials`> элемента.  
+1. Создание `<issuedTokenAuthentication>` как дочерний элемент элемента <`serviceCredentials`> элемента.  
   
-2.  Задайте для атрибута `allowUntrustedRsaIssuers` элемента `<issuedTokenAuthentication>` значение `true`, если проверяется подлинность выданного самостоятельно маркера, например карты [!INCLUDE[infocard](../../../../includes/infocard-md.md)].  
+2. Задайте для атрибута `allowUntrustedRsaIssuers` элемента `<issuedTokenAuthentication>` значение `true`, если проверяется подлинность выданного самостоятельно маркера, например карты [!INCLUDE[infocard](../../../../includes/infocard-md.md)].  
   
-3.  Создайте элемент `<knownCertificates>`, являющийся дочерним для элемента `<issuedTokenAuthentication>`.  
+3. Создайте элемент `<knownCertificates>`, являющийся дочерним для элемента `<issuedTokenAuthentication>`.  
   
-4.  Создайте ноль или несколько элементов `<add>`, являющих дочерними для элемента `<knownCertificates>`, и с помощью атрибутов `storeLocation`, `storeName`, `x509FindType` и `findValue` укажите, каким образом обнаружить сертификат.  
+4. Создайте ноль или несколько элементов `<add>`, являющих дочерними для элемента `<knownCertificates>`, и с помощью атрибутов `storeLocation`, `storeName`, `x509FindType` и `findValue` укажите, каким образом обнаружить сертификат.  
   
-5.  При необходимости задайте `samlSerializer` атрибут <`issuedTokenAuthentication`> элемент как имя типа пользовательского <xref:System.IdentityModel.Tokens.SamlSerializer> класса.  
+5. При необходимости задайте `samlSerializer` атрибут <`issuedTokenAuthentication`> элемент как имя типа пользовательского <xref:System.IdentityModel.Tokens.SamlSerializer> класса.  
   
 ## <a name="example"></a>Пример  
  В следующем примере свойства объекта <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> задаются в коде.  

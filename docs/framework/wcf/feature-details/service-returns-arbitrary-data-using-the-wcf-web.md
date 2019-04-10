@@ -2,19 +2,19 @@
 title: Практическое руководство. Как создать службу, возвращающую произвольные данные, с использованием модели программирования WCF Web HTTP
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-ms.openlocfilehash: f5735f4d596e17afc32b1419e9f41fd8a56af410
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 55fdc6824ab82bdf3b5913cd600815ed05bd909c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59157487"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303925"
 ---
 # <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Практическое руководство. Как создать службу, возвращающую произвольные данные, с использованием модели программирования WCF Web HTTP
 Иногда разработчики должны полностью управлять тем, как данные возвращаются из операции службы. Это происходит, когда операция службы должна возвращать данные в формате, не поддерживаемом платформой WCF. В этом разделе рассматривается использование модели программирования HTTP WCF WEB для создания такой службы. В этой службе имеется одна операция, которая возвращает поток.  
   
 ### <a name="to-implement-the-service-contract"></a>Реализация контракта службы  
   
-1.  Определите контракт службы. Контракт называется `IImageServer` и в нем имеется один метод под названием `GetImage`, который возвращает поток <xref:System.IO.Stream>.  
+1. Определите контракт службы. Контракт называется `IImageServer` и в нем имеется один метод под названием `GetImage`, который возвращает поток <xref:System.IO.Stream>.  
   
     ```  
     [ServiceContract]  
@@ -27,7 +27,7 @@ ms.locfileid: "59157487"
   
      Поскольку этот метод возвращает <xref:System.IO.Stream>, WCF предполагает, что операция имеет полный контроль над байты, которые возвращаются из операции службы, и никак не форматирует возвращаемых данных.  
   
-2.  Реализуйте контракт службы. В контракте есть только одна операция (`GetImage`). Этот метод создает растровое изображение и сохраняет его в потоке <xref:System.IO.MemoryStream> в формате JPG. Операция затем возвращает этот поток вызывающему объекту.  
+2. Реализуйте контракт службы. В контракте есть только одна операция (`GetImage`). Этот метод создает растровое изображение и сохраняет его в потоке <xref:System.IO.MemoryStream> в формате JPG. Операция затем возвращает этот поток вызывающему объекту.  
   
     ```  
     public class Service : IImageServer  
@@ -57,7 +57,7 @@ ms.locfileid: "59157487"
   
 ### <a name="to-host-the-service"></a>Размещение службы  
   
-1.  Создайте консольное приложение для размещения службы.  
+1. Создайте консольное приложение для размещения службы.  
   
     ```  
     class Program  
@@ -68,31 +68,31 @@ ms.locfileid: "59157487"
     }  
     ```  
   
-2.  Создайте переменную для хранения базового адреса службы в методе `Main`.  
+2. Создайте переменную для хранения базового адреса службы в методе `Main`.  
   
     ```  
     string baseAddress = "http://" + Environment.MachineName + ":8000/Service";  
     ```  
   
-3.  Создайте экземпляр <xref:System.ServiceModel.ServiceHost> для службы, задав класс службы и базовый адрес.  
+3. Создайте экземпляр <xref:System.ServiceModel.ServiceHost> для службы, задав класс службы и базовый адрес.  
   
     ```  
     ServiceHost host = new ServiceHost(typeof(Service), new Uri(baseAddress));  
     ```  
   
-4.  Добавьте конечную точку, используя <xref:System.ServiceModel.WebHttpBinding> и <xref:System.ServiceModel.Description.WebHttpBehavior>.  
+4. Добавьте конечную точку, используя <xref:System.ServiceModel.WebHttpBinding> и <xref:System.ServiceModel.Description.WebHttpBehavior>.  
   
     ```  
     host.AddServiceEndpoint(typeof(IImageServer), new WebHttpBinding(), "").Behaviors.Add(new WebHttpBehavior());  
     ```  
   
-5.  Откройте узел службы.  
+5. Откройте узел службы.  
   
     ```  
     host.Open()  
     ```  
   
-6.  Подождите, пока пользователь нажмет клавишу ВВОД, чтобы завершить работу службы.  
+6. Подождите, пока пользователь нажмет клавишу ВВОД, чтобы завершить работу службы.  
   
     ```  
     Console.WriteLine("Service is running");  
@@ -103,9 +103,9 @@ ms.locfileid: "59157487"
   
 ### <a name="to-call-the-raw-service-using-internet-explorer"></a>Вызов необработанной службы с помощью Internet Explorer  
   
-1.  Запустите службу. От службы должно появиться следующее сообщение: `Service is running Press ENTER to close the host`  
+1. Запустите службу. От службы должно появиться следующее сообщение: `Service is running Press ENTER to close the host`  
   
-2.  Откройте Internet Explorer и введите `http://localhost:8000/Service/GetImage?width=50&height=40`. Должен появиться желтый прямоугольник с синей диагональной линией, проходящей через центр.  
+2. Откройте Internet Explorer и введите `http://localhost:8000/Service/GetImage?width=50&height=40`. Должен появиться желтый прямоугольник с синей диагональной линией, проходящей через центр.  
   
 ## <a name="example"></a>Пример  
  Ниже приведен полный листинг кода для данного раздела.  

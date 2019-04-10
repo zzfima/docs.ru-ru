@@ -2,12 +2,12 @@
 title: Практическое руководство. Как представить первичные ключи
 ms.date: 03/30/2017
 ms.assetid: 63c65289-6539-42b2-8493-891c232018fa
-ms.openlocfilehash: 714211046afcafab4c2b67bf9318cfbede314476
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dcb8929c9cd9a7b88f19d760b70117a1092760f9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59173216"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295592"
 ---
 # <a name="how-to-represent-primary-keys"></a>Практическое руководство. Как представить первичные ключи
 Используйте [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A> свойство <xref:System.Data.Linq.Mapping.ColumnAttribute> атрибут, чтобы назначить свойство или поле, которые представляют первичный ключ для столбца базы данных.  
@@ -19,9 +19,9 @@ ms.locfileid: "59173216"
   
 ### <a name="to-designate-a-property-or-field-as-a-primary-key"></a>Назначение свойства или поля в качестве первичного ключа  
   
-1.  Добавьте свойство <xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A> атрибуту <xref:System.Data.Linq.Mapping.ColumnAttribute>.  
+1. Добавьте свойство <xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A> атрибуту <xref:System.Data.Linq.Mapping.ColumnAttribute>.  
   
-2.  В качестве значения задайте `true`.  
+2. В качестве значения задайте `true`.  
   
 ## <a name="see-also"></a>См. также
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - query interceptors [WCF Data Services]
 ms.assetid: 24b9df1b-b54b-4795-a033-edf333675de6
-ms.openlocfilehash: 56e4a3f95c7449ae5693172728c9d777113679bf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a11334abc83db20bec06fd2459d7b8598f672f2f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59101304"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317484"
 ---
 # <a name="how-to-intercept-data-service-messages-wcf-data-services"></a>Практическое руководство. Перехват сообщений службы данных (службы данных WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] позволяет приложению перехватывать сообщения запросов, что дает возможность добавить в операцию специализированную логику. Для перехвата сообщений используются методы со специальными атрибутами в службе данных. Дополнительные сведения см. в разделе [перехватчики](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md).  
@@ -22,23 +22,23 @@ ms.locfileid: "59101304"
   
 ### <a name="to-define-a-query-interceptor-for-the-orders-entity-set"></a>Определение перехватчика запросов для набора сущностей Orders  
   
-1.  Откройте в проекте службы данных Northwind файл Northwind.svc.  
+1. Откройте в проекте службы данных Northwind файл Northwind.svc.  
   
-2.  На странице кода класса `Northwind` добавьте следующую инструкцию `using` (`Imports` в коде Visual Basic):  
+2. На странице кода класса `Northwind` добавьте следующую инструкцию `using` (`Imports` в коде Visual Basic):  
   
      [!code-csharp[Astoria Northwind Service#UsingLinqExpressions](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#usinglinqexpressions)]
      [!code-vb[Astoria Northwind Service#UsingLinqExpressions](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#usinglinqexpressions)]  
   
-3.  Определите в классе `Northwind` метод операции службы с именем `OnQueryOrders`, как показано дальше:  
+3. Определите в классе `Northwind` метод операции службы с именем `OnQueryOrders`, как показано дальше:  
   
      [!code-csharp[Astoria Northwind Service#QueryInterceptorDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#queryinterceptordef)]
      [!code-vb[Astoria Northwind Service#QueryInterceptorDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#queryinterceptordef)]  
   
 ### <a name="to-define-a-change-interceptor-for-the-products-entity-set"></a>Определение перехватчика изменений для набора сущностей Products  
   
-1.  Откройте в проекте службы данных Northwind файл Northwind.svc.  
+1. Откройте в проекте службы данных Northwind файл Northwind.svc.  
   
-2.  Определите в классе `Northwind` метод операции службы с именем `OnChangeProducts`, как показано дальше:  
+2. Определите в классе `Northwind` метод операции службы с именем `OnChangeProducts`, как показано дальше:  
   
      [!code-csharp[Astoria Northwind Service#ChangeInterceptorDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#changeinterceptordef)]
      [!code-vb[Astoria Northwind Service#ChangeInterceptorDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#changeinterceptordef)]  

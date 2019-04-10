@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32098
 ms.assetid: bab05325-dde8-4621-a5f6-368b5b7b2d76
-ms.openlocfilehash: 974d2935e64151109b688f576229fb008b59b229
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: ba7348ae50965ffcf2719b20934451916c8fa95a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819805"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296359"
 ---
 # <a name="type-parameters-cannot-be-used-as-qualifiers"></a>Параметры типа нельзя использовать в качестве квалификаторов
 Программный элемент квалифицируется с помощью уточняющей строке, которая включает параметр типа.  
@@ -34,12 +34,12 @@ End Function
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
-1.  Удалите параметр типа из уточняющей строке или замените его определенного типа.  
+1. Удалите параметр типа из уточняющей строке или замените его определенного типа.  
   
-2.  Если вам нужно использовать для поиска элемента программирования имен сконструированный тип, необходимо использовать дополнительную логику программы.  
+2. Если вам нужно использовать для поиска элемента программирования имен сконструированный тип, необходимо использовать дополнительную логику программы.  
   
 ## <a name="see-also"></a>См. также
 
-- [Ссылки на объявленные элементы](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [Список типов](../../../visual-basic/language-reference/statements/type-list.md)
+- [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [Универсальные типы в Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Type List](../../../visual-basic/language-reference/statements/type-list.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ee807ae17e4d53d3f6f3963f5a91df0a2dddd0c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1522d643a69c47eec03770a8f51756dd4250075a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59099876"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309424"
 ---
 # <a name="icordebugregisterset2getregistersavailable-method"></a>Метод ICorDebugRegisterSet2::GetRegistersAvailable
 Возвращает массив байтов, предоставляет битовую схему, доступных регистров.  
@@ -46,11 +46,11 @@ HRESULT GetRegistersAvailable (
 ## <a name="remarks"></a>Примечания  
  Значения перечисления CorDebugRegister указывают регистры различных микропроцессоров. Старшие разряды пять каждому значению типа являются порядковым номером в `availableRegChunks` массив байтов. Нижние три бит каждого значения идентифицируют положение бита в индексируемом байте. Учитывая `CorDebugRegister` значение, указывающее определенный регистр, положение регистра в маске определяется следующим образом:  
   
-1.  Извлечь индекс, необходимые для доступа к правильный байта в `availableRegChunks` массива:  
+1. Извлечь индекс, необходимые для доступа к правильный байта в `availableRegChunks` массива:  
   
      `CorDebugRegister` Значение >> 3  
   
-2.  Извлеките положение бита в индексированных байт, где нулевой бит — наименее значимым битом.  
+2. Извлеките положение бита в индексированных байт, где нулевой бит — наименее значимым битом.  
   
      `CorDebugRegister` значение & 7  
   

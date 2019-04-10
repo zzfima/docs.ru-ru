@@ -2,19 +2,19 @@
 title: Практическое руководство. Настройка служб WCF для взаимодействия с клиентами WSE 3.0
 ms.date: 03/30/2017
 ms.assetid: 0f38c4a0-49a6-437c-bdde-ad1d138d3c4a
-ms.openlocfilehash: 24c44f415eff8518bcd73696c5cd9302371ad0c0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8f4407f66095f97a213d6cd987b4bd9a3ed340fa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59177298"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303899"
 ---
 # <a name="how-to-configure-wcf-services-to-interoperate-with-wse-30-clients"></a>Практическое руководство. Настройка служб WCF для взаимодействия с клиентами WSE 3.0
 Службы Windows Communication Foundation (WCF) совместимы на уровне линий связи с Web Services Enhancements 3.0 для клиентов Microsoft .NET (WSE) при настройке службы WCF для использования версии спецификации WS-Addressing от августа 2004 г.  
   
 ### <a name="to-enable-a-wcf-service-to-interoperate-with-wse-30-clients"></a>Включение службы WCF для взаимодействия с клиентами WSE 3.0  
   
-1.  Определите пользовательскую привязку для службы WCF.  
+1. Определите пользовательскую привязку для службы WCF.  
   
      Чтобы указать, что для кодирования сообщений используется версия спецификации WS-Addressing от августа 2004 г., необходимо создать пользовательскую привязку.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "59177298"
         > [!NOTE]
         >  При использовании протокола SOAP 1.2 задайте для атрибута `messageVersion` значение <xref:System.ServiceModel.Channels.MessageVersion.Soap12WSAddressingAugust2004%2A>.  
   
-2.  Укажите, что служба использует пользовательскую привязку.  
+2. Укажите, что служба использует пользовательскую привязку.  
   
     1.  Задайте `binding` атрибут [ \<конечной точки >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) элемент `customBinding`.  
   

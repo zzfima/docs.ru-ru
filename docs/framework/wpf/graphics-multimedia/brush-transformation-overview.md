@@ -9,12 +9,12 @@ helpviewer_keywords:
 - properties [WPF], transformation
 - transformation properties of brushes [WPF]
 ms.assetid: 8b9bfc09-12fd-4cd5-b445-99949f27bc39
-ms.openlocfilehash: 0b55d2000b8a70bc42373cb976a84ff54ebc4245
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 39b3ad9bebfc56002f77ad6e9026a4446c95455b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169576"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298335"
 ---
 # <a name="brush-transformation-overview"></a>Общие сведения о преобразованиях объекта Brush
 Класс Brush предоставляет два свойства для преобразований: <xref:System.Windows.Media.Brush.Transform%2A> и <xref:System.Windows.Media.Brush.RelativeTransform%2A>. Эти свойства позволяют выполнять поворот, масштабирование, наклон и преобразовывать содержимое кисти. В этом разделе описываются различия между этими двумя свойствами и приводятся примеры их использования.  
@@ -29,15 +29,15 @@ ms.locfileid: "59169576"
   
  При применении преобразования к кисти <xref:System.Windows.Media.Brush.RelativeTransform%2A> свойство, это преобразование применяется к кисти перед сопоставлением ее выходного значения закрашиваемой области. Следующий список описывает порядок обработки и преобразования содержимого кисти.  
   
-1.  Обработка содержимого кисти. Для <xref:System.Windows.Media.GradientBrush>, это означает определение области градиента. Для <xref:System.Windows.Media.TileBrush>, <xref:System.Windows.Media.TileBrush.Viewbox%2A> сопоставляется <xref:System.Windows.Media.TileBrush.Viewport%2A>. Это становится результатом работы кисти.  
+1. Обработка содержимого кисти. Для <xref:System.Windows.Media.GradientBrush>, это означает определение области градиента. Для <xref:System.Windows.Media.TileBrush>, <xref:System.Windows.Media.TileBrush.Viewbox%2A> сопоставляется <xref:System.Windows.Media.TileBrush.Viewport%2A>. Это становится результатом работы кисти.  
   
-2.  Проекция результата работы кисти на прямоугольник преобразования 1 x 1.  
+2. Проекция результата работы кисти на прямоугольник преобразования 1 x 1.  
   
-3.  Применение кисти <xref:System.Windows.Media.Brush.RelativeTransform%2A>, если он имеется.  
+3. Применение кисти <xref:System.Windows.Media.Brush.RelativeTransform%2A>, если он имеется.  
   
-4.  Проекция преобразованного результата работы на закрашиваемую область.  
+4. Проекция преобразованного результата работы на закрашиваемую область.  
   
-5.  Применение кисти <xref:System.Windows.Media.Transform>, если он имеется.  
+5. Применение кисти <xref:System.Windows.Media.Transform>, если он имеется.  
   
  Так как <xref:System.Windows.Media.Brush.RelativeTransform%2A> применяется при сопоставлении кисти результата прямоугольнику 1 x 1, центра преобразования и значения смещения считаются относительными. Например, если вы использовали <xref:System.Windows.Media.RotateTransform> Чтобы повернуть кисть выходных данных на 45 градусов относительно ее центра, то <xref:System.Windows.Media.RotateTransform> <xref:System.Windows.Media.RotateTransform.CenterX%2A> 0,5 и <xref:System.Windows.Media.RotateTransform.CenterY%2A> 0,5.  
   
@@ -61,19 +61,19 @@ ms.locfileid: "59169576"
   
  Обратите внимание на то, что изображение искажено, даже если кисти <xref:System.Windows.Media.TileBrush.Stretch%2A> было присвоено <xref:System.Windows.Media.Stretch.UniformToFill>. Это потому, что относительное преобразование применяется после кисти <xref:System.Windows.Media.TileBrush.Viewbox%2A> сопоставляется с его <xref:System.Windows.Media.TileBrush.Viewport%2A>. В следующем списке описан каждый шаг процесса:  
   
-1.  Проект содержимого кисти (<xref:System.Windows.Media.TileBrush.Viewbox%2A>) на базовую плитку (<xref:System.Windows.Media.TileBrush.Viewport%2A>) с помощью кисти <xref:System.Windows.Media.TileBrush.Stretch%2A> параметр.  
+1. Проект содержимого кисти (<xref:System.Windows.Media.TileBrush.Viewbox%2A>) на базовую плитку (<xref:System.Windows.Media.TileBrush.Viewport%2A>) с помощью кисти <xref:System.Windows.Media.TileBrush.Stretch%2A> параметр.  
   
      ![Растягивание Viewbox для заполнения Viewport](./media/graphicsmm-reltransform-2-viewbox-to-viewport.png "graphicsmm_reltransform_2_viewbox_to_viewport")  
   
-2.  Проекция базового мозаичного элемента на прямоугольник преобразования 1 x 1.  
+2. Проекция базового мозаичного элемента на прямоугольник преобразования 1 x 1.  
   
      ![Сопоставление Viewport и прямоугольника преобразования](./media/graphicsmm-reltransform-3-output-to-transform.png "graphicsmm_reltransform_3_output_to_transform")  
   
-3.  Применить <xref:System.Windows.Media.RotateTransform>.  
+3. Применить <xref:System.Windows.Media.RotateTransform>.  
   
      ![Применение относительного преобразования](./media/graphicsmm-reltransform-4-transform-rotate.png "graphicsmm_reltransform_4_transform_rotate")  
   
-4.  Проекция преобразованного базового мозаичного элемента на закрашиваемую область.  
+4. Проекция преобразованного базового мозаичного элемента на закрашиваемую область.  
   
      ![Проекция преобразованной кисти на закрашиваемую область](./media/graphicsmm-reltransform-5-transform-to-output.png "graphicsmm_reltransform_5_transform_to_output")  
   

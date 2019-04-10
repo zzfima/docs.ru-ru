@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TypeName function
 - objects [Visual Basic], type determining
 ms.assetid: d95e7ad1-cd63-41d6-9a28-d7a1380d49c1
-ms.openlocfilehash: 625ddb8fc153708a80e8cf475f48d595efbe4df2
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4014bef2e0c27a0f6a684bc1ed95019f392062a5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842633"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302716"
 ---
 # <a name="determining-object-type-visual-basic"></a>Определение типа объекта (Visual Basic)
 Универсальные объектные переменные (то есть переменные необходимо обозначить как `Object`) может содержать объекты любого класса. При использовании переменных типа `Object`, может потребоваться предпринять различные действия на основе класса объекта; например, некоторые объекты могут не поддерживать определенное свойство или метод. Visual Basic предоставляет два средства определения типа объекта, хранящегося в переменной объекта: `TypeName` функции и `TypeOf...Is` оператор.  
@@ -36,11 +36,11 @@ ms.locfileid: "58842633"
   
 #### <a name="to-run-the-example"></a>Запуск примера  
   
-1.  Создайте новый проект приложения Windows и добавьте <xref:System.Windows.Forms.Button> управления <xref:System.Windows.Forms.CheckBox> элемента управления и <xref:System.Windows.Forms.RadioButton> на форму элемент управления.  
+1. Создайте новый проект приложения Windows и добавьте <xref:System.Windows.Forms.Button> управления <xref:System.Windows.Forms.CheckBox> элемента управления и <xref:System.Windows.Forms.RadioButton> на форму элемент управления.  
   
-2.  С помощью кнопки на форме, вызовите `TestObject` процедуры.  
+2. С помощью кнопки на форме, вызовите `TestObject` процедуры.  
   
-3.  Добавьте следующий код в форму:  
+3. Добавьте следующий код в форму:  
   
      [!code-vb[VbVbalrOOP#95](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#95)]  
   
@@ -48,7 +48,7 @@ ms.locfileid: "58842633"
 
 - <xref:Microsoft.VisualBasic.Information.TypeName%2A>
 - [Вызов свойства или метода с помощью строкового имени](../../../../visual-basic/programming-guide/language-features/early-late-binding/calling-a-property-or-method-using-a-string-name.md)
-- [Тип данных Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [Оператор If...Then...Else](../../../../visual-basic/language-reference/statements/if-then-else-statement.md)
 - [Тип данных String](../../../../visual-basic/language-reference/data-types/string-data-type.md)
 - [Тип данных Integer](../../../../visual-basic/language-reference/data-types/integer-data-type.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], examples
 - Splitter control [Windows Forms], examples
 ms.assetid: e79f6bcc-3740-4d1e-b46a-c5594d9b7327
-ms.openlocfilehash: d75d96f8db216ab78e13ba5f8409ea5aa535d685
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8650ba3b8011e50779080e31d94727609f2d08f1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59192698"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315158"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>Практическое руководство. Создание пользовательского интерфейса с несколькими областями с помощью Windows Forms
 В следующей процедуре вы создадите несколькими областями пользовательский интерфейс, который аналогичен используемому в Microsoft Outlook с **папку** списке **сообщений** области и **предварительнойверсии** области. Это упорядочение достигается главным образом за счет закрепления элементов управления формы.  
@@ -30,7 +30,7 @@ ms.locfileid: "59192698"
   
 ### <a name="to-create-an-outlook-style-user-interface-programmatically"></a>Чтобы создать пользовательский интерфейс в стиле Outlook программным способом  
   
-1.  В форме объявите каждый элемент управления, который состоит из пользовательского интерфейса. В этом примере используйте <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.SplitContainer>, и <xref:System.Windows.Forms.RichTextBox> элементы управления для имитации пользовательского интерфейса Microsoft Outlook.  
+1. В форме объявите каждый элемент управления, который состоит из пользовательского интерфейса. В этом примере используйте <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.SplitContainer>, и <xref:System.Windows.Forms.RichTextBox> элементы управления для имитации пользовательского интерфейса Microsoft Outlook.  
   
     ```vb  
     Private WithEvents treeView1 As System.Windows.Forms.TreeView  
@@ -50,7 +50,7 @@ ms.locfileid: "59192698"
     private System.Windows.Forms. SplitContainer splitContainer1;  
     ```  
   
-2.  Создайте процедуру, которая определяет пользовательский интерфейс. Следующий код задает свойства, чтобы форма будет вид, схожий с Microsoft Outlook. Тем не менее с помощью других элементов управления или закрепления их по-разному, так же просто, для создания других пользовательских интерфейсах, не менее гибкие.  
+2. Создайте процедуру, которая определяет пользовательский интерфейс. Следующий код задает свойства, чтобы форма будет вид, схожий с Microsoft Outlook. Тем не менее с помощью других элементов управления или закрепления их по-разному, так же просто, для создания других пользовательских интерфейсах, не менее гибкие.  
   
     ```vb  
     Public Sub CreateOutlookUI()  
@@ -164,7 +164,7 @@ ms.locfileid: "59192698"
     }  
     ```  
   
-3.  В Visual Basic добавьте вызов процедуры, созданные в `New()` процедуры. В визуальном элементе C#, добавьте следующую строку кода в конструктор для класса формы.  
+3. В Visual Basic добавьте вызов процедуры, созданные в `New()` процедуры. В визуальном элементе C#, добавьте следующую строку кода в конструктор для класса формы.  
   
     ```vb  
     ' Add this to the New procedure.  

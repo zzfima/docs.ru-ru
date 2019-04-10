@@ -2,40 +2,40 @@
 title: Отслеживание SQL
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-ms.openlocfilehash: 6d3974cbf181734f2a3cab0fbc7d8f32c16699bf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f3c48b40e2d3d7dec2b9008b3de738f9b2983610
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59146345"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308930"
 ---
 # <a name="sql-tracking"></a>Отслеживание SQL
 Этот образец показывает, как создать настраиваемый участник отслеживания SQL, который вносит записи отслеживания в базу данных SQL. Windows Workflow Foundation (WF) предоставляет отслеживание для обеспечения видимости выполнения экземпляра рабочего процесса рабочего процесса. Среда выполнения отслеживания выдает записи отслеживания рабочего процесса в ходе его выполнения. Дополнительные сведения об отслеживании рабочего процесса см. в разделе [отслеживание и трассировка рабочих процессов](../workflow-tracking-and-tracing.md).
 
 #### <a name="to-use-this-sample"></a>Использование этого образца
 
-1.  Убедитесь, что на компьютере установлен SQL Server 2008, SQL Server 2008 Express или более новая версия. Скрипты, упакованные в состав образца, предполагают использование экземпляра SQL Express на локальном компьютере пользователя. Если вы работаете с другим экземпляром, до запуска образца следует внести изменения в скрипты, относящиеся к базе данных.
+1. Убедитесь, что на компьютере установлен SQL Server 2008, SQL Server 2008 Express или более новая версия. Скрипты, упакованные в состав образца, предполагают использование экземпляра SQL Express на локальном компьютере пользователя. Если вы работаете с другим экземпляром, до запуска образца следует внести изменения в скрипты, относящиеся к базе данных.
 
-2.  Создание базы данных отслеживания на SQL Server посредством запуска команды Trackingsetup.cmd в каталоге скриптов (\WF\Basic\Tracking\SqlTracking\CS\Scripts). Создает базу данных с именем TrackingSample.
+2. Создание базы данных отслеживания на SQL Server посредством запуска команды Trackingsetup.cmd в каталоге скриптов (\WF\Basic\Tracking\SqlTracking\CS\Scripts). Создает базу данных с именем TrackingSample.
 
     > [!NOTE]
     >  Этот скрипт создает базу данных на экземпляре SQL Express по умолчанию. Если установку необходимо произвести на другом экземпляре базы данных, внесите изменения в скрипт Trackingsetup.cmd.  
   
-3.  Откройте SqlTrackingSample.sln в Visual Studio 2010.  
+3. Откройте SqlTrackingSample.sln в Visual Studio 2010.  
   
-4.  Чтобы построить решение, нажмите CTRL+SHIFT+B.  
+4. Чтобы построить решение, нажмите CTRL+SHIFT+B.  
   
-5.  Нажмите клавишу F5 для запуска приложения.  
+5. Нажмите клавишу F5 для запуска приложения.  
   
      Откроется окно браузера со списком каталогов для приложения.  
   
-6.  Щелкните файл StockPriceService.xamlx в браузере.  
+6. Щелкните файл StockPriceService.xamlx в браузере.  
   
-7.  В браузере отображается страница StockPriceService, содержащая адрес WSDL локальной службы. Скопируйте этот адрес.  
+7. В браузере отображается страница StockPriceService, содержащая адрес WSDL локальной службы. Скопируйте этот адрес.  
   
      Примером адреса WSDL локальной службы является `http://localhost:65193/StockPriceService.xamlx?wsdl`.  
   
-8.  С помощью [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] запустите клиент тестирования WCF (WcfTestClient.exe). Этот файл размещается в каталоге Microsoft Visual Studio 10.0\Common7\IDE.  
+8. С помощью [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] запустите клиент тестирования WCF (WcfTestClient.exe). Этот файл размещается в каталоге Microsoft Visual Studio 10.0\Common7\IDE.  
   
 9. В тестовом клиенте WCF выберите **файл** меню и выберите **добавить службу**. Вставьте в текстовое поле адрес локальной службы. Нажмите кнопку **ОК** чтобы закрыть диалоговое окно.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "59146345"
   
 #### <a name="to-uninstall-the-sample"></a>Удаление образца  
   
-1.  Запустите скрипт Trackingcleanup.cmd, расположенный в каталоге образцов (\WF\Basic\Tracking\SqlTracking).  
+1. Запустите скрипт Trackingcleanup.cmd, расположенный в каталоге образцов (\WF\Basic\Tracking\SqlTracking).  
   
     > [!NOTE]
     >  Скрипт Trackingcleanup.cmd пытается удалить базу данных, хранящуюся в SQL Express вашего локального компьютера. При использовании другого экземпляра сервера SQL следует внести изменения в скрипт Trackingcleanup.cmd.

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - animation [WPF], properties [WPF], methods for
 - properties [WPF], methods for animating
 ms.assetid: 74f61413-f8c0-4e75-bf04-951886426c8b
-ms.openlocfilehash: 5ec401aea139a868b3633afce4c74558aafcaa1e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ebee350f69b5c5e4f9d38c452b9c87bf003528ee
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59165442"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317913"
 ---
 # <a name="property-animation-techniques-overview"></a>Общие сведения о методах анимации свойств
 В этом разделе описываются различные подходы к анимации свойств: раскадровки, локальные анимации, часы и покадровая анимация.  
@@ -42,13 +42,13 @@ ms.locfileid: "59165442"
   
  Объект <xref:System.Windows.Media.Animation.Storyboard> — это специальный тип контейнера <xref:System.Windows.Media.Animation.Timeline> , предоставляющей сведения об анимации, которую она содержит. Для анимации с <xref:System.Windows.Media.Animation.Storyboard>, выполните следующие три действия.  
   
-1.  Объявите <xref:System.Windows.Media.Animation.Storyboard> и одну или несколько анимаций.  
+1. Объявите <xref:System.Windows.Media.Animation.Storyboard> и одну или несколько анимаций.  
   
-2.  Используйте <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> и <xref:System.Windows.Media.Animation.Storyboard.TargetProperty> присоединенного свойства для указания целевого объекта и свойства каждой анимации.  
+2. Используйте <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> и <xref:System.Windows.Media.Animation.Storyboard.TargetProperty> присоединенного свойства для указания целевого объекта и свойства каждой анимации.  
   
-3.  (Только код) Определение <xref:System.Windows.NameScope> для <xref:System.Windows.FrameworkElement> или <xref:System.Windows.FrameworkContentElement>. Зарегистрируйте имена объектов для анимации с помощью <xref:System.Windows.FrameworkElement> или <xref:System.Windows.FrameworkContentElement>.  
+3. (Только код) Определение <xref:System.Windows.NameScope> для <xref:System.Windows.FrameworkElement> или <xref:System.Windows.FrameworkContentElement>. Зарегистрируйте имена объектов для анимации с помощью <xref:System.Windows.FrameworkElement> или <xref:System.Windows.FrameworkContentElement>.  
   
-4.  Начать <xref:System.Windows.Media.Animation.Storyboard>.  
+4. Начать <xref:System.Windows.Media.Animation.Storyboard>.  
   
  Начиная <xref:System.Windows.Media.Animation.Storyboard> анимация применяется к анимируемым свойствам и запускает их. Существует два способа, чтобы начать <xref:System.Windows.Media.Animation.Storyboard>: можно использовать <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> метод <xref:System.Windows.Media.Animation.Storyboard> класс, или же можно использовать <xref:System.Windows.Media.Animation.BeginStoryboard> действие. Единственным способом для анимации в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] заключается в использовании <xref:System.Windows.Media.Animation.BeginStoryboard> действие. Объект <xref:System.Windows.Media.Animation.BeginStoryboard> действие может использоваться в <xref:System.Windows.EventTrigger>, свойство <xref:System.Windows.Trigger>, или <xref:System.Windows.DataTrigger>.  
   
@@ -70,9 +70,9 @@ ms.locfileid: "59165442"
   
  Для анимации с помощью локальной анимации выполните следующие действия.  
   
-1.  Создание <xref:System.Windows.Media.Animation.AnimationTimeline> объекта.  
+1. Создание <xref:System.Windows.Media.Animation.AnimationTimeline> объекта.  
   
-2.  Используйте <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> метод объекта, который вы хотите анимировать, чтобы применить <xref:System.Windows.Media.Animation.AnimationTimeline> к свойству, которое можно указать.  
+2. Используйте <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> метод объекта, который вы хотите анимировать, чтобы применить <xref:System.Windows.Media.Animation.AnimationTimeline> к свойству, которое можно указать.  
   
  В следующем примере показано, как анимировать ширину и цвет фона для <xref:System.Windows.Controls.Button>.  
   
@@ -87,11 +87,11 @@ ms.locfileid: "59165442"
   
  Для применения одного <xref:System.Windows.Media.Animation.Clock> к свойству, выполните следующие действия.  
   
-1.  Создание <xref:System.Windows.Media.Animation.AnimationTimeline> объекта.  
+1. Создание <xref:System.Windows.Media.Animation.AnimationTimeline> объекта.  
   
-2.  Используйте <xref:System.Windows.Media.Animation.AnimationTimeline.CreateClock%2A> метод <xref:System.Windows.Media.Animation.AnimationTimeline> для создания <xref:System.Windows.Media.Animation.AnimationClock>.  
+2. Используйте <xref:System.Windows.Media.Animation.AnimationTimeline.CreateClock%2A> метод <xref:System.Windows.Media.Animation.AnimationTimeline> для создания <xref:System.Windows.Media.Animation.AnimationClock>.  
   
-3.  Используйте <xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%2A> метод объекта, который вы хотите анимировать, чтобы применить <xref:System.Windows.Media.Animation.AnimationClock> к указанному свойству.  
+3. Используйте <xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%2A> метод объекта, который вы хотите анимировать, чтобы применить <xref:System.Windows.Media.Animation.AnimationClock> к указанному свойству.  
   
  В следующем примере показано, как создать <xref:System.Windows.Media.Animation.AnimationClock> и применить его к двум похожим свойствам.  
   
@@ -100,11 +100,11 @@ ms.locfileid: "59165442"
   
  Чтобы создать дерево временной шкалы и использовать его анимации свойств, выполните следующие действия.  
   
-1.  Используйте <xref:System.Windows.Media.Animation.ParallelTimeline> и <xref:System.Windows.Media.Animation.AnimationTimeline> объекты для создания дерева времени.  
+1. Используйте <xref:System.Windows.Media.Animation.ParallelTimeline> и <xref:System.Windows.Media.Animation.AnimationTimeline> объекты для создания дерева времени.  
   
-2.  Используйте <xref:System.Windows.Media.Animation.TimelineGroup.CreateClock%2A> корневого <xref:System.Windows.Media.Animation.ParallelTimeline> для создания <xref:System.Windows.Media.Animation.ClockGroup>.  
+2. Используйте <xref:System.Windows.Media.Animation.TimelineGroup.CreateClock%2A> корневого <xref:System.Windows.Media.Animation.ParallelTimeline> для создания <xref:System.Windows.Media.Animation.ClockGroup>.  
   
-3.  Итерации по <xref:System.Windows.Media.Animation.ClockGroup.Children%2A> из <xref:System.Windows.Media.Animation.ClockGroup> и примените его дочерние <xref:System.Windows.Media.Animation.Clock> объектов. Для каждого <xref:System.Windows.Media.Animation.AnimationClock> дочерний элемент, используйте <xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%2A> метод объекта, который вы хотите анимировать, чтобы применить <xref:System.Windows.Media.Animation.AnimationClock> к указанному свойству  
+3. Итерации по <xref:System.Windows.Media.Animation.ClockGroup.Children%2A> из <xref:System.Windows.Media.Animation.ClockGroup> и примените его дочерние <xref:System.Windows.Media.Animation.Clock> объектов. Для каждого <xref:System.Windows.Media.Animation.AnimationClock> дочерний элемент, используйте <xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%2A> метод объекта, который вы хотите анимировать, чтобы применить <xref:System.Windows.Media.Animation.AnimationClock> к указанному свойству  
   
  Дополнительные сведения об объектах часов см. в разделе [Общие сведения об анимации и системе управления временем](animation-and-timing-system-overview.md).  
   

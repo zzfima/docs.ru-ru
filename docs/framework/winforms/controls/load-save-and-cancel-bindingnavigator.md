@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [Windows Forms], manipulating
 - BindingNavigator control [Windows Forms], adding buttons
 ms.assetid: faa33042-186e-4bb2-8798-17ceb987ec62
-ms.openlocfilehash: 52d4fc32836a5d20bd99d8ebfd3119c761376e30
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4d5cc91ca8bf71b2d5893f591652d777041e1a4d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59098719"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304783"
 ---
 # <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>Практическое руководство. Добавление кнопок загрузки, сохранения и отмены в элемент управления BindingNavigator в формах Windows Forms
 <xref:System.Windows.Forms.BindingNavigator> Элемент управления является специализированным <xref:System.Windows.Forms.ToolStrip> элемент управления, который предназначен для навигации и управление элементами управления в форме, привязанных к данным.  
@@ -24,21 +24,21 @@ ms.locfileid: "59098719"
   
 ### <a name="to-add-load-save-and-cancel-buttons-to-the-bindingnavigator-component"></a>Чтобы добавить нагрузки, сохранить и Отмена кнопок к компоненту BindingNavigator  
   
-1.  Добавьте элемент управления <xref:System.Windows.Forms.TextBox> в форму.  
+1. Добавьте элемент управления <xref:System.Windows.Forms.TextBox> в форму.  
   
-2.  Привяжите его к <xref:System.Windows.Forms.BindingSource>, который привязан к источнику данных. В этом примере <xref:System.Windows.Forms.BindingSource> привязан к базе данных.  
+2. Привяжите его к <xref:System.Windows.Forms.BindingSource>, который привязан к источнику данных. В этом примере <xref:System.Windows.Forms.BindingSource> привязан к базе данных.  
   
-3.  После создания набора данных и адаптер таблицы, перетащите <xref:System.Windows.Forms.BindingNavigator> на форму элемент управления.  
+3. После создания набора данных и адаптер таблицы, перетащите <xref:System.Windows.Forms.BindingNavigator> на форму элемент управления.  
   
-4.  Задайте <xref:System.Windows.Forms.BindingNavigator> элемента управления <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> свойства <xref:System.Windows.Forms.BindingSource> на форме, которая привязывается к элементам управления.  
+4. Задайте <xref:System.Windows.Forms.BindingNavigator> элемента управления <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> свойства <xref:System.Windows.Forms.BindingSource> на форме, которая привязывается к элементам управления.  
   
-5.  Выберите элемент управления <xref:System.Windows.Forms.BindingNavigator>.  
+5. Выберите элемент управления <xref:System.Windows.Forms.BindingNavigator>.  
   
-6.  Щелкните глиф смарт-тега (![глиф смарт-тега](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) поэтому **задачи BindingNavigator** диалоговое окно и выберите пункт **изменение элементов**.  
+6. Щелкните глиф смарт-тега (![глиф смарт-тега](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) поэтому **задачи BindingNavigator** диалоговое окно и выберите пункт **изменение элементов**.  
   
      **Редактор коллекции элементов** отображается.  
   
-7.  В **редактор коллекции элементов**, воспользуйтесь одним из следующих:  
+7. В **редактор коллекции элементов**, воспользуйтесь одним из следующих:  
   
     1.  Добавить <xref:System.Windows.Forms.ToolStripSeparator> и три <xref:System.Windows.Forms.ToolStripButton> элементы, выбрав соответствующий тип <xref:System.Windows.Forms.ToolStripItem> и щелкнув **добавить** кнопки.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "59098719"
   
     5.  Нажмите кнопку **ОК** чтобы закрыть диалоговое окно. Добавляются кнопки <xref:System.Windows.Forms.ToolStrip>.  
   
-8.  Щелкните форму правой кнопкой мыши и выберите **Просмотр кода**.  
+8. Щелкните форму правой кнопкой мыши и выберите **Просмотр кода**.  
   
 9. В редакторе кода найдите строку кода, который загружает данные в адаптер таблицы. Этот код был создан при настройке привязки данных на шаге 2. Код должен быть следующего вида: `TableAdapterName.Fill(DataSetName.TableName)`. Он, скорее всего может быть в форме <xref:System.Windows.Forms.Form.Load> событий.  
   

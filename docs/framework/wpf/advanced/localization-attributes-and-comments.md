@@ -5,12 +5,12 @@ helpviewer_keywords:
 - localization [WPF], attributes
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
-ms.openlocfilehash: 4e4c4891a905a5e4458ad5fc21a512c1dfe6f74e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a9d01b7cebea845ad67d846af5b08f59977b8cd6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59092920"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301858"
 ---
 # <a name="localization-attributes-and-comments"></a>Атрибуты и комментарии локализации
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] комментарии локализации являются свойствами в [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] исходный код, предоставленными разработчиками для обеспечения правил и подсказок при локализации. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] комментарии локализации содержат два набора данных: атрибуты локализуемости и комментарии локализации в свободной форме. Атрибуты локализуемости используются API локализации [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] для указания того, какие ресурсы должны быть локализованы. Комментарии произвольной формы представляют собой любые сведения, которые автор приложения хочет указать.  
@@ -19,13 +19,13 @@ ms.locfileid: "59092920"
 ## <a name="localization-comments"></a>Комментарии локализации  
  Если авторы приложения разметки имеют особые требования для определенных элементов в [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)], например ограничения длины текста, семейства шрифтов или размера шрифта, они могут передать эту информацию локализаторам с помощью комментариев в коде [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]. Процесс добавления комментариев к исходному коду выглядит следующим образом.  
   
-1.  Разработчик приложения добавляет комментарии локализации в исходный код [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)].  
+1. Разработчик приложения добавляет комментарии локализации в исходный код [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)].  
   
-2.  Во время процесса построения разработчик может указать в PROJ-файле, следует ли оставить комментарии произвольной локализации в сборке либо вынести за пределы файла часть комментариев или все комментарии. Вынесенные комментарии помещаются в отдельный файл. Параметр указывается с помощью тега `LocalizationDirectivesToLocFile`, например:  
+2. Во время процесса построения разработчик может указать в PROJ-файле, следует ли оставить комментарии произвольной локализации в сборке либо вынести за пределы файла часть комментариев или все комментарии. Вынесенные комментарии помещаются в отдельный файл. Параметр указывается с помощью тега `LocalizationDirectivesToLocFile`, например:  
   
      `<LocalizationDirectivesToLocFile>` *value* `</LocalizationDirectivesToLocFile>`  
   
-3.  Могут быть назначены следующие значения:  
+3. Могут быть назначены следующие значения:  
   
     -   **None** — комментарии и атрибуты остаются внутри сборки, отдельный файл не создается.  
   
@@ -33,9 +33,9 @@ ms.locfileid: "59092920"
   
     -   **All** — из сборки выносятся комментарии и атрибуты, которые помещаются в отдельный файл LocFile.  
   
-4.  При извлечении локализуемых ресурсов из [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] атрибуты локализуемости учитываются API локализации [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)].  
+4. При извлечении локализуемых ресурсов из [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] атрибуты локализуемости учитываются API локализации [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)].  
   
-5.  Файлы локализации комментариев, содержащие только комментарии в произвольной форме, включаются в процесс локализации на более поздней стадии.  
+5. Файлы локализации комментариев, содержащие только комментарии в произвольной форме, включаются в процесс локализации на более поздней стадии.  
   
  В следующем примере показано добавление комментариев локализации в файл [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)].  
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - columns [Windows Forms], deleting in data grids
 - DataGrid control [Windows Forms], hiding columns
 ms.assetid: bcd0dd96-6687-4c48-b0e1-d5287b93ac91
-ms.openlocfilehash: e6e8a4a5908d890d34ab6de952917cd97be2b433
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d3f1f013cbb5e41c997014f556602b01bab62914
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59120150"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297516"
 ---
 # <a name="how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control"></a>Практическое руководство. Удаление или скрытие столбцов элемента управления DataGrid в Windows Forms
 > [!NOTE]
@@ -32,13 +32,13 @@ ms.locfileid: "59120150"
   
 ### <a name="to-delete-a-column-from-the-datagrid-programmatically"></a>Чтобы программно удалить столбец из элемента управления DataGrid  
   
-1.  В области объявлений формы объявить новый экземпляр класса <xref:System.Windows.Forms.DataGridTableStyle> класса.  
+1. В области объявлений формы объявить новый экземпляр класса <xref:System.Windows.Forms.DataGridTableStyle> класса.  
   
-2.  Задайте <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A?displayProperty=nameWithType> свойство к таблице в источнике данных, который вы хотите применить стиль. В следующем примере используется <xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType> свойство, которое предполагается, что уже задан.  
+2. Задайте <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A?displayProperty=nameWithType> свойство к таблице в источнике данных, который вы хотите применить стиль. В следующем примере используется <xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType> свойство, которое предполагается, что уже задан.  
   
-3.  Добавьте новые <xref:System.Windows.Forms.DataGridTableStyle> объект в коллекцию стилей таблиц элемента управления datagrid.  
+3. Добавьте новые <xref:System.Windows.Forms.DataGridTableStyle> объект в коллекцию стилей таблиц элемента управления datagrid.  
   
-4.  Вызовите <xref:System.Windows.Forms.GridColumnStylesCollection.RemoveAt%2A> метод <xref:System.Windows.Forms.DataGrid>в <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> коллекции, указав индекс столбца для удаления.  
+4. Вызовите <xref:System.Windows.Forms.GridColumnStylesCollection.RemoveAt%2A> метод <xref:System.Windows.Forms.DataGrid>в <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> коллекции, указав индекс столбца для удаления.  
   
     ```vb  
     ' Declare a new DataGridTableStyle in the  
@@ -79,13 +79,13 @@ ms.locfileid: "59120150"
   
 ### <a name="to-hide-a-column-in-the-datagrid-programmatically"></a>Чтобы скрыть столбец в сетке данных программными средствами  
   
-1.  В области объявлений формы объявить новый экземпляр класса <xref:System.Windows.Forms.DataGridTableStyle> класса.  
+1. В области объявлений формы объявить новый экземпляр класса <xref:System.Windows.Forms.DataGridTableStyle> класса.  
   
-2.  Задайте <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> свойство <xref:System.Windows.Forms.DataGridTableStyle> в таблицу в источнике данных, который вы хотите применить стиль. В следующем примере кода используется <xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType> свойство, которое предполагается, что уже задан.  
+2. Задайте <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> свойство <xref:System.Windows.Forms.DataGridTableStyle> в таблицу в источнике данных, который вы хотите применить стиль. В следующем примере кода используется <xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType> свойство, которое предполагается, что уже задан.  
   
-3.  Добавьте новые <xref:System.Windows.Forms.DataGridTableStyle> объект в коллекцию стилей таблиц элемента управления datagrid.  
+3. Добавьте новые <xref:System.Windows.Forms.DataGridTableStyle> объект в коллекцию стилей таблиц элемента управления datagrid.  
   
-4.  Скрыть столбец, задав его `Width` значение 0, указывающее индекс столбца для столбца.  
+4. Скрыть столбец, задав его `Width` значение 0, указывающее индекс столбца для столбца.  
   
     ```vb  
     ' Declare a new DataGridTableStyle in the  

@@ -5,31 +5,31 @@ helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: 364329954591199c4b0d3123c662c4e124c242fc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dfac833cc7517af00d0264fc5d11fc83ae543569
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59141925"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313584"
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>Практическое руководство. Регистрация и настройка моникера службы
 Перед использованием моникера службы Windows Communication Foundation (WCF) в рамках приложения COM с типизированным контрактом, необходимо зарегистрировать необходимые типы с атрибутами с помощью COM и настроить приложение COM и моникер в соответствии с требуемую привязку Конфигурация.  
   
 ### <a name="to-register-the-required-attributed-types-with-com"></a>Регистрация необходимых типов с атрибутами с помощью COM  
   
-1.  Используйте [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) средство для получения метаданных контракта службы WCF. Это создает исходный код для клиентской сборки WCF и файле конфигурации клиентского приложения.  
+1. Используйте [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) средство для получения метаданных контракта службы WCF. Это создает исходный код для клиентской сборки WCF и файле конфигурации клиентского приложения.  
   
-2.  Убедитесь, что все типы в сборке имеют пометку `ComVisible`. Для этого добавьте в файл AssemblyInfo.cs в проекте Visual Studio следующий атрибут.  
+2. Убедитесь, что все типы в сборке имеют пометку `ComVisible`. Для этого добавьте в файл AssemblyInfo.cs в проекте Visual Studio следующий атрибут.  
   
     ```  
     [assembly: ComVisible(true)]  
     ```  
   
-3.  Скомпилируйте управляемый клиент WCF виде сборки со строгими именами. Для этого нужно подписать ее с помощью пары ключей шифрования. Дополнительные сведения см. в разделе [подпись сборки строгим именем](https://go.microsoft.com/fwlink/?LinkId=94874) руководства для разработчиков .NET.  
+3. Скомпилируйте управляемый клиент WCF виде сборки со строгими именами. Для этого нужно подписать ее с помощью пары ключей шифрования. Дополнительные сведения см. в разделе [подпись сборки строгим именем](https://go.microsoft.com/fwlink/?LinkId=94874) руководства для разработчиков .NET.  
   
-4.  С помощью средства регистрации сборок (Regasm.exe) с параметром `/tlb` зарегистрируйте типы сборки в COM.  
+4. С помощью средства регистрации сборок (Regasm.exe) с параметром `/tlb` зарегистрируйте типы сборки в COM.  
   
-5.  Чтобы добавить сборку в глобальный кэш сборок, используйте средство глобального кэша сборок (Gacutil.exe).  
+5. Чтобы добавить сборку в глобальный кэш сборок, используйте средство глобального кэша сборок (Gacutil.exe).  
   
     > [!NOTE]
     >  Подписывание сборки и ее добавление в глобальный кэш сборок являются необязательными шагами, однако они могут упростить процесс загрузки сборки из правильного расположения во время выполнения.  

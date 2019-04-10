@@ -9,12 +9,12 @@ helpviewer_keywords:
 - inheritance [Windows Forms], forms
 - Windows Forms, inheritance
 ms.assetid: cb3e1c0f-3d2a-4cdc-b0d1-c92eae567ffb
-ms.openlocfilehash: 20473c844c6fc93724d9e1aacab9b6687f3a7637
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0d8799359a12b9bb64331d83df2500bede8c0ff2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59112753"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314548"
 ---
 # <a name="how-to-inherit-windows-forms"></a>Практическое руководство. Наследование форм Windows Forms
 Создание новых форм Windows Forms путем наследования базовых форм является удобным способом для дублирования уже созданного, минуя процесс повторного создания формы с нуля каждый раз, когда она необходима.  
@@ -25,9 +25,9 @@ ms.locfileid: "59112753"
   
 ### <a name="to-inherit-a-form-programmatically"></a>Наследование формы программными средствами  
   
-1.  В классе добавьте ссылку на пространство имен, содержащее форму, которую вы хотите наследовать.  
+1. В классе добавьте ссылку на пространство имен, содержащее форму, которую вы хотите наследовать.  
   
-2.  В определении класса добавьте ссылку на форму для наследования. Ссылка должна содержать пространство имен, в котором содержится форма, точку, а затем имя базовой формы.  
+2. В определении класса добавьте ссылку на форму для наследования. Ссылка должна содержать пространство имен, в котором содержится форма, точку, а затем имя базовой формы.  
   
     ```vb  
     Public Class Form2  

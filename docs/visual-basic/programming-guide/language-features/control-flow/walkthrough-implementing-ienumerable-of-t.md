@@ -7,12 +7,12 @@ helpviewer_keywords:
 - loop structures [Visual Basic], optimizing performance
 - control flow [Visual Basic]
 ms.assetid: c60d7589-51f2-4463-a2d5-22506bbc1554
-ms.openlocfilehash: 5fc96e1ae3624adc197b5b13029498b9aa90c95e
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b13fd85ae01fd0b6f3c963d87a372add930be99d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819506"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302586"
 ---
 # <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>Пошаговое руководство. Реализация IEnumerable(Of T) в Visual Basic
 <xref:System.Collections.Generic.IEnumerable%601> Интерфейс реализуется классами, которые могут возвращать последовательность значений по одному элементу за раз. Преимущество возвращения данных одного элемента за раз в том, что не нужно загрузить полный набор данных в памяти для работы с ним. Необходимо использовать достаточно памяти для загрузки одного элемента из данных. Классы, реализующие `IEnumerable(T)` интерфейс можно использовать с `For Each` циклы или запросов LINQ.  
@@ -29,13 +29,13 @@ ms.locfileid: "58819506"
   
 **Создайте проект класса enumerable**
 
-1.  В Visual Basic на **файл** последовательно выберите пункты **New** и нажмите кнопку **проекта**.
+1. В Visual Basic на **файл** последовательно выберите пункты **New** и нажмите кнопку **проекта**.
 
-1.  Убедитесь, что в диалоговом окне **Создание проекта** в области **Типы проектов** выбран пункт **Windows**. Выберите **Библиотеки классов** в области **Шаблоны**. В поле **Имя** введите `StreamReaderEnumerable` и нажмите кнопку **ОК**. Откроется новый проект.
+1. Убедитесь, что в диалоговом окне **Создание проекта** в области **Типы проектов** выбран пункт **Windows**. Выберите **Библиотеки классов** в области **Шаблоны**. В поле **Имя** введите `StreamReaderEnumerable` и нажмите кнопку **ОК**. Откроется новый проект.
 
-1.  В **обозревателе решений**, щелкните правой кнопкой мыши файл Class1.vb и нажмите кнопку **Переименовать**. Измените имя файла на `StreamReaderEnumerable.vb` и нажмите клавишу ВВОД. При переименовании файла класс также будет переименован в `StreamReaderEnumerable`. Этот класс реализует интерфейс `IEnumerable(Of String)`.
+1. В **обозревателе решений**, щелкните правой кнопкой мыши файл Class1.vb и нажмите кнопку **Переименовать**. Измените имя файла на `StreamReaderEnumerable.vb` и нажмите клавишу ВВОД. При переименовании файла класс также будет переименован в `StreamReaderEnumerable`. Этот класс реализует интерфейс `IEnumerable(Of String)`.
 
-1.  Щелкните правой кнопкой мыши проект StreamReaderEnumerable, выберите пункт **добавить**, а затем нажмите кнопку **новый элемент**. Выберите **класс** шаблона. В **имя** введите `StreamReaderEnumerator.vb` и нажмите кнопку **ОК**.
+1. Щелкните правой кнопкой мыши проект StreamReaderEnumerable, выберите пункт **добавить**, а затем нажмите кнопку **новый элемент**. Выберите **класс** шаблона. В **имя** введите `StreamReaderEnumerator.vb` и нажмите кнопку **ОК**.
 
  Первый класс в этом проекте представляет класс enumerable и будет реализовывать `IEnumerable(Of String)` интерфейс. Этот универсальный интерфейс реализует <xref:System.Collections.IEnumerable> интерфейс и гарантии, что потребители этого класса можно обращаться к значениям, типизированный как `String`.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "58819506"
   
 ## <a name="see-also"></a>См. также
 
-- [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)
+- [Знакомство с LINQ в Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [Поток управления](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
 - [Циклические структуры](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
 - [Оператор For Each...Next](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)

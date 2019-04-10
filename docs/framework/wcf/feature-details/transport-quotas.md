@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
-ms.openlocfilehash: 44bda0838689fcf8096017060be970f2291a86e0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 12c266a473aa7c20ab35d6047fedafbfa04dac4a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59174633"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299310"
 ---
 # <a name="transport-quotas"></a>Квоты транспорта
 Квоты транспорта - это механизм политики, позволяющий принимать решения о чрезмерном потреблении ресурсов подключением. Квота - это строгое ограничение, предотвращающее использование дополнительных ресурсов после превышения значения квоты. Квоты транспорта препятствуют злонамеренным или неумышленным атакам типа "отказ в обслуживании".  
@@ -100,9 +100,9 @@ ms.locfileid: "59174633"
 |`ReceiveTimeout`|X|X|X|  
 |`SendTimeout`|X|X|X|  
   
-1.  Квота транспорта `MaxBufferSize` доступна только в привязке `BasicHttp`. Привязки `WSHttp` предназначены для сценариев, которые не поддерживают режимы потоковых транспортов.  
+1. Квота транспорта `MaxBufferSize` доступна только в привязке `BasicHttp`. Привязки `WSHttp` предназначены для сценариев, которые не поддерживают режимы потоковых транспортов.  
   
-2.  Квоты транспорта `MaxPendingConnections` и `MaxOutboundConnectionsPerEndpoint` объединяются в одну квоту транспорта, называемую `MaxConnections`.  
+2. Квоты транспорта `MaxPendingConnections` и `MaxOutboundConnectionsPerEndpoint` объединяются в одну квоту транспорта, называемую `MaxConnections`.  
   
 ### <a name="controlling-transport-quotas-from-configuration"></a>Управление квотами транспорта из конфигурации  
  С помощью конфигурации приложения можно задавать те же квоты транспорта, что и посредством прямого доступа к свойствам в привязке. В файлах конфигурации имя квоты транспорта всегда начинается со строчной буквы. Например, свойство `CloseTimeout` в привязке соответствует параметру `closeTimeout` в конфигурации, а свойство `MaxConnections` в привязке - параметру `maxConnections` в конфигурации.  

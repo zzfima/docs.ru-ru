@@ -2,12 +2,12 @@
 title: Поток управления в асинхронных программах (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b0443af7-c586-4cb0-b476-742ae4098a96
-ms.openlocfilehash: 57c83021551ab386f62c8d22b90db8da8054df7f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: ed993943bcf7341f900c575744a1faa53a4a8a2e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837433"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300935"
 ---
 # <a name="control-flow-in-async-programs-visual-basic"></a>Поток управления в асинхронных программах (Visual Basic)
 Можно намного проще создавать и обслуживать асинхронные программы с помощью ключевых слов `Async` и `Await`. Однако при непонимании механизма работы асинхронной программы результаты могут удивить. В этом разделе выполняется трассировка потока управления с помощью простой асинхронной программы, чтобы продемонстрировать переход потока управления от одного метода к другому, включая данные, передаваемые в каждом случае.  
@@ -19,9 +19,9 @@ ms.locfileid: "58837433"
   
  В следующем примере асинхронные методы используются для загрузки содержимого указанного веб-сайта в виде строки и отображения длины строки. Пример содержит следующие два метода:  
   
--   `startButton_Click`, который вызывает метод `AccessTheWebAsync` и выводит результат;  
+-   `startButton_Click`, который вызывает `AccessTheWebAsync` и отображает результат.  
   
--   `AccessTheWebAsync`, который загружает содержимое веб-сайта в виде строки и возвращает длину строки. `AccessTheWebAsync` использует для загрузки содержимого асинхронный метод <xref:System.Net.Http.HttpClient> <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>.  
+-   `AccessTheWebAsync`, который загружает содержимое веб-сайта в виде строки и возвращает длину строки. `AccessTheWebAsync` использует асинхронную <xref:System.Net.Http.HttpClient> метод, <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>, чтобы загрузить содержимое.  
   
  Выводимые строки помечены номерами на стратегических этапах программы, чтобы помочь вам понять, как работает программа и что происходит на каждом отмеченном этапе. Выводимые строки обозначены номерами от ONE (один) до SIX (шесть). Метки представляют порядок, в котором программа достигает эти строки кода.  
   
@@ -100,34 +100,34 @@ Length of the downloaded string: 33946.
 ### <a name="download-the-program"></a>Скачайте программу  
  Можно загрузить приложение для этого раздела на [пример асинхронности: Поток управления в асинхронных программах](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0). Следующие шаги описывают процесс открытия и запуска программы.  
   
-1.  Распакуйте загруженный файл, а затем запустите Visual Studio.  
+1. Распакуйте загруженный файл, а затем запустите Visual Studio.  
   
-2.  В строке меню выберите **Файл**, **Открыть**, **Проект/Решение**.  
+2. В строке меню выберите **Файл**, **Открыть**, **Проект/Решение**.  
   
-3.  Перейдите к папке, содержащей распакованный пример кода, откройте файл решения (SLN), а затем нажмите клавишу F5 для сборки и выполнения проекта.  
+3. Перейдите к папке, содержащей распакованный пример кода, откройте файл решения (SLN), а затем нажмите клавишу F5 для сборки и выполнения проекта.  
   
 ### <a name="build-the-program-yourself"></a>Самостоятельное построение программы  
  Следующий проект Windows Presentation Foundation (WPF) содержит примеры кода для этого раздела.  
   
  Чтобы запустить проект, выполните следующие действия.  
   
-1.  Запустите Visual Studio.  
+1. Запустите Visual Studio.  
   
-2.  В строке меню выберите **Файл**, **Создать**, **Проект**.  
+2. В строке меню выберите **Файл**, **Создать**, **Проект**.  
   
      Откроется диалоговое окно **Новый проект** .  
   
-3.  В **установленные шаблоны** панели выберите **Visual Basic**, а затем выберите **приложение WPF** в списке типов проектов.  
+3. В **установленные шаблоны** панели выберите **Visual Basic**, а затем выберите **приложение WPF** в списке типов проектов.  
   
-4.  Введите `AsyncTracer` в качестве имени проекта и нажмите кнопку **ОК**.  
+4. Введите `AsyncTracer` в качестве имени проекта и нажмите кнопку **ОК**.  
   
      В **обозревателе решений** появится новый проект.  
   
-5.  В редакторе кода Visual Studio перейдите на вкладку **MainWindow.xaml** .  
+5. В редакторе кода Visual Studio перейдите на вкладку **MainWindow.xaml** .  
   
      Если вкладка не отображается, откройте контекстное меню для MainWindow.xaml в **обозревателе решений** и выберите пункт **Просмотреть код**.  
   
-6.  Замените код в представлении **XAML** файла MainWindow.xaml на следующий.  
+6. Замените код в представлении **XAML** файла MainWindow.xaml на следующий.  
   
     ```vb  
     <Window  
@@ -145,9 +145,9 @@ Length of the downloaded string: 33946.
   
      В представлении **Конструктор** файла MainWindow.xaml появится простое окно, содержащее кнопку и текстовое поле.  
   
-7.  Добавьте ссылку для <xref:System.Net.Http>.  
+7. Добавьте ссылку для <xref:System.Net.Http>.  
   
-8.  В **обозревателе решений**, откройте контекстное меню для MainWindow.xaml.vb и затем выберите **Просмотр кода**.  
+8. В **обозревателе решений**, откройте контекстное меню для MainWindow.xaml.vb и затем выберите **Просмотр кода**.  
   
 9. В файле MainWindow.xaml.vb замените код следующим кодом.  
   
@@ -334,7 +334,7 @@ FIVE:  Back in AccessTheWebAsync.
   
  ![Шаг FIVE (пять)](../../../../csharp/programming-guide/concepts/async/media/asynctrace-five.png "AsyncTrace-FIVE")  
   
- `AccessTheWebAsync` выполняется до завершения, и управление возвращается к `startButton_Click`, который ожидает завершения.  
+ `AccessTheWebAsync` Возвращает выполняется до завершения и элемент управления `startButton_Click`, который ожидает завершения.  
   
 ### <a name="step-six"></a>Шаг ШЕСТЬ  
  Когда `AccessTheWebAsync` уведомляет о завершении, обработка может продолжаться после оператора await в `startButton_Async`. Фактически, на этом работа программы завершается.  
@@ -361,6 +361,6 @@ Dim contentLength As Integer = Await getLengthTask
 ## <a name="see-also"></a>См. также
 
 - [Асинхронное программирование с использованием ключевых слов Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [Async Return Types (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md) (Типы возвращаемых значений Async (Visual Basic))
-- [Пошаговое руководство: Доступ к Интернету с использованием Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Пример использования Async. Поток управления в асинхронных программах (C# и Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)
+- [Асинхронные типы возвращаемых значений (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)
+- [Пошаговое руководство. Доступ к Интернету с использованием Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Пример асинхронности. Поток управления в асинхронных программах (C# и Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)

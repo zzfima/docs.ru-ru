@@ -2,12 +2,12 @@
 title: BFILE в Oracle
 ms.date: 03/30/2017
 ms.assetid: 341bbf84-4734-4d44-8723-ccedee954e21
-ms.openlocfilehash: 07a7f28e08ed43672e94151cd9de88301069e1ec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5bb9f7e67016cf4b1d467935fe302ab4a40edbfa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59142393"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304471"
 ---
 # <a name="oracle-bfiles"></a>BFILE в Oracle
 Поставщик данных .NET Framework для Oracle содержит класс <xref:System.Data.OracleClient.OracleBFile>, который используется для работы с типом данных Oracle <xref:System.Data.OracleClient.OracleType.BFile>.  
@@ -26,9 +26,9 @@ ms.locfileid: "59142393"
   
  Каждого НЕНУЛЕВОГО **OracleBFile** объект связан с двумя сущностями, определяющими местоположение базового физического файла:  
   
-1.  Объект Oracle DIRECTORY, который является псевдонимом базы данных для каталога в файловой системе.  
+1. Объект Oracle DIRECTORY, который является псевдонимом базы данных для каталога в файловой системе.  
   
-2.  Имя файла базового физического файла, расположенного в каталоге, связанном с объектом DIRECTORY.  
+2. Имя файла базового физического файла, расположенного в каталоге, связанном с объектом DIRECTORY.  
   
 ## <a name="example"></a>Пример  
  В следующем примере C# показано, как создать **BFILE** в таблице Oracle, а затем извлеките его в виде **OracleBFile** объекта. В примере показано использование <xref:System.Data.OracleClient.OracleDataReader> объекта и **OracleBFile** **Seek** и **чтения** методы. Обратите внимание, что для использования этого образца, необходимо сначала создать каталог с именем «c:\\\bfiles» и файл с именем «MyFile.jpg» на сервере Oracle.  

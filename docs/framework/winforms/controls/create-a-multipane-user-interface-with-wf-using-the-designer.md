@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], using the designer
 - multipane user interface
 ms.assetid: c3f9294d-a26c-4198-9242-f237f55f7573
-ms.openlocfilehash: 2b72d972d679a47213c0d5ed4270d2c623d713ca
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9f3350e32c0fbff58678052d26be954d30d512a7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59082936"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301299"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>Практическое руководство. Создание пользовательского интерфейса с несколькими областями с использованием форм Windows Forms с помощью конструктора
 В следующей процедуре вы создадите несколькими областями пользовательский интерфейс, который аналогичен используемому в Microsoft Outlook с **папку** списке **сообщений** области и **предварительнойверсии** области. Это упорядочение достигается главным образом за счет закрепления элементов управления формы.  
@@ -27,17 +27,17 @@ ms.locfileid: "59082936"
   
 ### <a name="to-create-an-outlook-style-user-interface-at-design-time"></a>Чтобы создать пользовательский интерфейс в стиле Outlook во время разработки  
   
-1.  Создайте новый проект приложения Windows (**файл** > **New** > **проекта** > **Visual C#** или **Visual Basic** > **классический рабочий стол** > **Windows Forms Application**).  
+1. Создайте новый проект приложения Windows (**файл** > **New** > **проекта** > **Visual C#** или **Visual Basic** > **классический рабочий стол** > **Windows Forms Application**).  
   
-2.  Перетащите <xref:System.Windows.Forms.SplitContainer> управления из **элементов** в форму. В окне **Свойства** присвойте свойству <xref:System.Windows.Forms.SplitContainer.Dock%2A> значение <xref:System.Windows.Forms.DockStyle.Fill>.  
+2. Перетащите <xref:System.Windows.Forms.SplitContainer> управления из **элементов** в форму. В окне **Свойства** присвойте свойству <xref:System.Windows.Forms.SplitContainer.Dock%2A> значение <xref:System.Windows.Forms.DockStyle.Fill>.  
   
-3.  Перетащите <xref:System.Windows.Forms.TreeView> управления из **элементов** к левой панели <xref:System.Windows.Forms.SplitContainer> элемента управления. В **свойства** окне <xref:System.Windows.Forms.SplitContainer.Dock%2A> свойства <xref:System.Windows.Forms.DockStyle.Left> , нажав кнопку на панели слева в редакторе значений, открывается при нажатии кнопки со стрелкой вниз.  
+3. Перетащите <xref:System.Windows.Forms.TreeView> управления из **элементов** к левой панели <xref:System.Windows.Forms.SplitContainer> элемента управления. В **свойства** окне <xref:System.Windows.Forms.SplitContainer.Dock%2A> свойства <xref:System.Windows.Forms.DockStyle.Left> , нажав кнопку на панели слева в редакторе значений, открывается при нажатии кнопки со стрелкой вниз.  
   
-4.  Перетащите еще один <xref:System.Windows.Forms.SplitContainer> управления из **элементов**; поместите его в правой панели <xref:System.Windows.Forms.SplitContainer> добавленного в форму элемента управления. В **свойства** окне <xref:System.Windows.Forms.SplitContainer.Dock%2A> свойства <xref:System.Windows.Forms.DockStyle.Fill> и <xref:System.Windows.Forms.SplitContainer.Orientation%2A> свойства <xref:System.Windows.Forms.Orientation.Horizontal>.  
+4. Перетащите еще один <xref:System.Windows.Forms.SplitContainer> управления из **элементов**; поместите его в правой панели <xref:System.Windows.Forms.SplitContainer> добавленного в форму элемента управления. В **свойства** окне <xref:System.Windows.Forms.SplitContainer.Dock%2A> свойства <xref:System.Windows.Forms.DockStyle.Fill> и <xref:System.Windows.Forms.SplitContainer.Orientation%2A> свойства <xref:System.Windows.Forms.Orientation.Horizontal>.  
   
-5.  Перетащите <xref:System.Windows.Forms.ListView> управления из **элементов** на верхней панели второго <xref:System.Windows.Forms.SplitContainer> добавленного в форму элемента управления. Задайте для свойства <xref:System.Windows.Forms.SplitContainer.Dock%2A> элемента управления <xref:System.Windows.Forms.ListView> значение <xref:System.Windows.Forms.DockStyle.Fill>.  
+5. Перетащите <xref:System.Windows.Forms.ListView> управления из **элементов** на верхней панели второго <xref:System.Windows.Forms.SplitContainer> добавленного в форму элемента управления. Задайте для свойства <xref:System.Windows.Forms.SplitContainer.Dock%2A> элемента управления <xref:System.Windows.Forms.ListView> значение <xref:System.Windows.Forms.DockStyle.Fill>.  
   
-6.  Перетащите <xref:System.Windows.Forms.RichTextBox> управления из **элементов** нижней панели второго <xref:System.Windows.Forms.SplitContainer> элемента управления. Задайте для свойства <xref:System.Windows.Forms.SplitContainer.Dock%2A> элемента управления <xref:System.Windows.Forms.RichTextBox> значение <xref:System.Windows.Forms.DockStyle.Fill>.  
+6. Перетащите <xref:System.Windows.Forms.RichTextBox> управления из **элементов** нижней панели второго <xref:System.Windows.Forms.SplitContainer> элемента управления. Задайте для свойства <xref:System.Windows.Forms.SplitContainer.Dock%2A> элемента управления <xref:System.Windows.Forms.RichTextBox> значение <xref:System.Windows.Forms.DockStyle.Fill>.  
   
      На этом этапе Если нажать клавишу F5, чтобы запустить приложение, форма отображает трех частей пользовательского интерфейса, аналогичную Microsoft Outlook.  
   

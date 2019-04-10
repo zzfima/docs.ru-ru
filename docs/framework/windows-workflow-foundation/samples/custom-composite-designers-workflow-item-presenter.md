@@ -2,12 +2,12 @@
 title: Пользовательские составные конструкторы - средство представления элементов рабочего процесса
 ms.date: 03/30/2017
 ms.assetid: f85224cf-9e30-44a5-9a81-3bc438a34364
-ms.openlocfilehash: 4c1258a49ac3ef2227d520fe11f341819f8663a0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f3c7620f719b8412b6b34bda7be5d607dccda75f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59089202"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311127"
 ---
 # <a name="custom-composite-designers---workflow-item-presenter"></a>Пользовательские составные конструкторы - средство представления элементов рабочего процесса
 <xref:System.Activities.Presentation.WorkflowItemPresenter> Является ключевым типом в модели программирования конструктора WF, позволяет создавать «зону перетаскивания» для размещения произвольное действие. В этом примере показано, как построить конструктор действий, который предоставляет доступ к «зону сброса.»
@@ -67,9 +67,9 @@ ms.locfileid: "59089202"
 
 #### <a name="to-setup-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца
 
-1.  Откройте решение в Visual Studio 2010.
+1. Откройте решение в Visual Studio 2010.
 
-2.  Чтобы скомпилировать и запустить приложение, нажмите клавишу F5.
+2. Чтобы скомпилировать и запустить приложение, нажмите клавишу F5.
 
 > [!IMPORTANT]
 >  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  

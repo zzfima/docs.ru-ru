@@ -8,12 +8,12 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - forms [Windows Forms], providing Help
 ms.assetid: 7c4e5cec-2bd2-4f0b-8d75-c2b88929bd61
-ms.openlocfilehash: 5cda0517e8653e89aabde3a9c0459a2dbae61616
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cbecb82acb22915af96fa26f08e441b4f6686c4a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59129484"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312724"
 ---
 # <a name="how-to-provide-help-in-a-windows-application"></a>Практическое руководство. Предоставление справки в приложении Windows
 Можно использовать для включения <xref:System.Windows.Forms.HelpProvider> компонента для присоединения разделов справки в файле справки для определенных элементов управления в формах Windows Forms. Файл справки может быть в формате HTML, HTMLHelp 1.x или следующих версий.  
@@ -23,17 +23,17 @@ ms.locfileid: "59129484"
   
 ### <a name="to-provide-help"></a>Предоставление справки  
   
-1.  Из **элементов**, перетащите <xref:System.Windows.Forms.HelpProvider> форму компонента.  
+1. Из **элементов**, перетащите <xref:System.Windows.Forms.HelpProvider> форму компонента.  
   
      Компонент разместится в нижней части конструктора Windows Forms.  
   
-2.  В **свойства** окне <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> свойства к файлу справки, CHM, формате или .htm.  
+2. В **свойства** окне <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> свойства к файлу справки, CHM, формате или .htm.  
   
-3.  Выберите другой элемент управления на форме и в **свойства** окне <xref:System.Windows.Forms.HelpProvider.SetHelpKeyword%2A> свойство.  
+3. Выберите другой элемент управления на форме и в **свойства** окне <xref:System.Windows.Forms.HelpProvider.SetHelpKeyword%2A> свойство.  
   
      Это строка, передаваемая через <xref:System.Windows.Forms.HelpProvider> компонент имеющийся файл справки для вызова соответствующего раздела справки.  
   
-4.  В **свойства** окне <xref:System.Windows.Forms.HelpProvider.SetHelpNavigator%2A> свойство в значение <xref:System.Windows.Forms.HelpNavigator> перечисления.  
+4. В **свойства** окне <xref:System.Windows.Forms.HelpProvider.SetHelpNavigator%2A> свойство в значение <xref:System.Windows.Forms.HelpNavigator> перечисления.  
   
      Этот параметр определяет способ, которым свойство **HelpKeyword** передается в справочную систему. В следующей таблице показаны возможные настройки и их описания.  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], data binding
 - cells [Windows Forms], changing DataGrid cell values
 ms.assetid: 0c7a6d00-30de-416e-8223-0a81ddb4c1f8
-ms.openlocfilehash: 27608a7fbce5e9aa815b43e1d7202fa11e52ee1c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 60ba1e9304320346d505f3f73e1ba93ff6edab63
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59175608"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315859"
 ---
 # <a name="how-to-change-displayed-data-at-run-time-in-the-windows-forms-datagrid-control"></a>Практическое руководство. Изменение данных, отображаемых во время выполнения, в элементе управления DataGrid в Windows Forms
 > [!NOTE]
@@ -25,7 +25,7 @@ ms.locfileid: "59175608"
   
 ### <a name="to-change-data-programmatically"></a>Изменение данных программными средствами  
   
-1.  Выберите требуемую таблицу из <xref:System.Data.DataSet> объекта и требуемыми строк и поле в таблице и укажите в ячейке новое значение.  
+1. Выберите требуемую таблицу из <xref:System.Data.DataSet> объекта и требуемыми строк и поле в таблице и укажите в ячейке новое значение.  
   
     > [!NOTE]
     >  Для указания первой таблицы <xref:System.Data.DataSet> или первую строку таблицы, укажите 0.  
@@ -68,7 +68,7 @@ ms.locfileid: "59175608"
   
 ### <a name="to-change-the-datasource-programmatically"></a>Чтобы изменить источник данных программными средствами  
   
-1.  Задайте <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> метод имя источника данных и вы хотите выполнить привязку к таблице.  
+1. Задайте <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> метод имя источника данных и вы хотите выполнить привязку к таблице.  
   
      Приведенный ниже показано, как изменить дату источника с помощью <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> метод [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] управления данных (adoPubsAuthors), который подключен к таблицы Authors базы данных Pubs.  
   

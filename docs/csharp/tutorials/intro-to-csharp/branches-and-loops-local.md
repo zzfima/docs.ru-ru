@@ -3,12 +3,12 @@ title: Ветви и циклы. Вводное руководство по C#
 description: В рамках этого руководства, посвященного ветвям и циклам, вы создадите пример кода на C#, который демонстрирует возможности языка для организации условного ветвления и циклического выполнения операторов.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: c9e2ede3ee8632304a86efdf25bb2a8db5354a13
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: ad5891c11c516a7c5e3d46bea9c17c85b4a8536e
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677790"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920952"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Изучение условной логики с операторами ветви и цикла
 
@@ -249,7 +249,7 @@ for(int index = 0; index < 10; index++)
 
 Вы ознакомились с руководством по ветвям и циклам.
 
-Теперь вы можете выполнить задачи руководства по [интерполяции строк](interpolated-strings-local.md) в своей среде разработки.
+Теперь вы можете перейти к ознакомлению с руководством [Массивы и коллекции](arrays-and-collections.md) в своей среде разработки.
 
 Дополнительные сведения об этих понятиях см. в следующих разделах:
 

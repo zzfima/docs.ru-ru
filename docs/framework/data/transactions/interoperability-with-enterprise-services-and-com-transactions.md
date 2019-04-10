@@ -2,32 +2,32 @@
 title: Взаимодействие с транзакциями Enterprise Services и COM+
 ms.date: 03/30/2017
 ms.assetid: d0fd0d26-fe86-443b-b208-4d57d39fa4aa
-ms.openlocfilehash: 8b88fd60b2e70496009be2670e8e1e87f8d55201
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8b86a032e7cbc27332864c9cc96009f12b72c53d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362754"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301910"
 ---
 # <a name="interoperability-with-enterprise-services-and-com-transactions"></a>Взаимодействие с транзакциями Enterprise Services и COM+
 Пространство имен <xref:System.Transactions> поддерживает взаимодействие между объектами транзакций, созданными с помощью этого пространства имен, и транзакциями, созданными с помощью модели COM+.  
   
  Чтобы задать уровень взаимодействия с транзакциями COM+ при создании нового экземпляра <xref:System.Transactions.EnterpriseServicesInteropOption>, можно использовать перечисление <xref:System.Transactions.TransactionScope>.  
   
- По умолчанию, когда код приложения проверяет статический <xref:System.Transactions.Transaction.Current%2A> свойства <xref:System.Transactions> пытается найти транзакции, которая в противном случае значение текущего или <xref:System.Transactions.TransactionScope> объект, который определяет, <xref:System.Transactions.Transaction.Current%2A> — **null**. Если ни один из этих элементов не найден, <xref:System.Transactions> запрашивает транзакцию в контексте COM+. Обратите внимание, что даже если инфраструктура <xref:System.Transactions> находит транзакцию в контексте COM+, она по-прежнему отдает предпочтение транзакциям, присущим инфраструктуре <xref:System.Transactions>.  
+ По умолчанию, когда код приложения проверяет статическое <xref:System.Transactions.Transaction.Current%2A> свойство, <xref:System.Transactions> пытается найти транзакцию, которая является текущей, или <xref:System.Transactions.TransactionScope> объект, указывающий, что <xref:System.Transactions.Transaction.Current%2A> является **null**. Если ни один из этих элементов не найден, <xref:System.Transactions> запрашивает транзакцию в контексте COM+. Обратите внимание, что даже если инфраструктура <xref:System.Transactions> находит транзакцию в контексте COM+, она по-прежнему отдает предпочтение транзакциям, присущим инфраструктуре <xref:System.Transactions>.  
   
 ## <a name="interoperability-levels"></a>Уровни взаимодействия  
  Перечисление <xref:System.Transactions.EnterpriseServicesInteropOption> определяет следующие уровни взаимодействия: <xref:System.Transactions.EnterpriseServicesInteropOption.None>, <xref:System.Transactions.EnterpriseServicesInteropOption.Full> и <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>.  
   
  Класс <xref:System.Transactions.TransactionScope> предоставляет конструкторы, принимающие перечисление <xref:System.Transactions.EnterpriseServicesInteropOption> в качестве параметра.  
   
- Значение <xref:System.Transactions.EnterpriseServicesInteropOption.None> указывает на отсутствие взаимодействия между контекстами и областями транзакций <xref:System.EnterpriseServices>. После создания объекта <xref:System.Transactions.TransactionScope> со значением <xref:System.Transactions.EnterpriseServicesInteropOption.None> никакие изменения свойства <xref:System.Transactions.Transaction.Current%2A> не отражаются в контексте COM+. Аналогичным образом, изменения транзакции в контексте COM+ не отражаются в свойстве <xref:System.Transactions.Transaction.Current%2A>. Это самый быстрый режим работы <xref:System.Transactions>, поскольку никакая дополнительная синхронизация не требуется. <xref:System.Transactions.EnterpriseServicesInteropOption.None> - это значение по умолчанию, используемое объектом <xref:System.Transactions.TransactionScope> со всеми конструкторами, не принимающими <xref:System.Transactions.EnterpriseServicesInteropOption> в качестве параметра.  
+ <xref:System.Transactions.EnterpriseServicesInteropOption.None>, как и предполагает название, значит, что отсутствие взаимодействия между <xref:System.EnterpriseServices> контекстами и областями транзакций. После создания объекта <xref:System.Transactions.TransactionScope> со значением <xref:System.Transactions.EnterpriseServicesInteropOption.None> никакие изменения свойства <xref:System.Transactions.Transaction.Current%2A> не отражаются в контексте COM+. Аналогичным образом, изменения транзакции в контексте COM+ не отражаются в свойстве <xref:System.Transactions.Transaction.Current%2A>. Это самый быстрый режим работы <xref:System.Transactions>, поскольку никакая дополнительная синхронизация не требуется. <xref:System.Transactions.EnterpriseServicesInteropOption.None> значение по умолчанию используется <xref:System.Transactions.TransactionScope> со всеми конструкторами, которые не принимают <xref:System.Transactions.EnterpriseServicesInteropOption> как параметр.  
   
  Чтобы объединить транзакции <xref:System.EnterpriseServices> с внешней транзакцией, необходимо использовать значение <xref:System.Transactions.EnterpriseServicesInteropOption.Full> или <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>. Оба этих значения основываются на функции "бескомпонентные службы", поэтому их использование возможно на компьютерах под управлением операционных систем Windows XP с пакетом обновления 2 (SP2) или Windows Server 2003.  
   
- Значение <xref:System.Transactions.EnterpriseServicesInteropOption.Full> указывает, что внешние транзакции для <xref:System.Transactions> и <xref:System.EnterpriseServices> всегда одинаковы. В результате создается новый транзакционный контекст <xref:System.EnterpriseServices>, и транзакция, являющаяся текущей для объекта <xref:System.Transactions.TransactionScope>, становится текущей для этого контекста. Транзакция в <xref:System.Transactions.Transaction.Current%2A> полностью синхронизирована с транзакцией в <xref:System.EnterpriseServices.ContextUtil.Transaction%2A>. Использование данного значения приводит к снижению производительности, поскольку может потребоваться создание новых контекстов COM+.  
+ <xref:System.Transactions.EnterpriseServicesInteropOption.Full> Указывает, что внешние транзакции для <xref:System.Transactions> и <xref:System.EnterpriseServices> всегда одинаковы. В результате создается новый транзакционный контекст <xref:System.EnterpriseServices>, и транзакция, являющаяся текущей для объекта <xref:System.Transactions.TransactionScope>, становится текущей для этого контекста. Транзакция в <xref:System.Transactions.Transaction.Current%2A> полностью синхронизирована с транзакцией в <xref:System.EnterpriseServices.ContextUtil.Transaction%2A>. Использование данного значения приводит к снижению производительности, поскольку может потребоваться создание новых контекстов COM+.  
   
- Значение <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> определяет следующие требования.  
+ <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> определяет следующие требования:  
   
 -   При проверке свойства <xref:System.Transactions.Transaction.Current%2A> инфраструктура <xref:System.Transactions> должна поддерживать транзакции в контексте COM+, если обнаруживается, что данный объект выполняется в контексте, отличном от контекста по умолчанию. Обратите внимание, что транзакция не может содержаться в контексте по умолчанию. Таким образом, в контексте по умолчанию для свойства <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> возвращается транзакция, которая хранится в локальной памяти потока, используемой инфраструктурой <xref:System.Transactions>, даже если задано значение <xref:System.Transactions.Transaction.Current%2A>.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "33362754"
   
  При создании новой области транзакции применяются следующие правила:  
   
-1.  Свойство <xref:System.Transactions.Transaction.Current%2A> проверяется с целью определения существования транзакции. Эта проверка заключается в выполнении следующих действий.  
+1. <xref:System.Transactions.Transaction.Current%2A> проверяется, чтобы выяснить, имеется транзакция. Эта проверка заключается в выполнении следующих действий.  
   
     -   Проверяется существование области.  
   
@@ -49,26 +49,26 @@ ms.locfileid: "33362754"
   
          В случае значения <xref:System.Transactions.EnterpriseServicesInteropOption.Full> существует только одна транзакция - транзакция COM+.  
   
-2.  Проверяется значение перечисления <xref:System.Transactions.TransactionScopeOption>, переданное конструктором <xref:System.Transactions.TransactionScope>. Это позволяет определить необходимость создания новой транзакции.  
+2. Проверяется значение перечисления <xref:System.Transactions.TransactionScopeOption>, переданное конструктором <xref:System.Transactions.TransactionScope>. Это позволяет определить необходимость создания новой транзакции.  
   
-3.  Если необходимо создать новую транзакцию, в зависимости от желаемого результата используются различные значения перечисления <xref:System.Transactions.EnterpriseServicesInteropOption>.  
+3. Если необходимо создать новую транзакцию, в зависимости от желаемого результата используются различные значения перечисления <xref:System.Transactions.EnterpriseServicesInteropOption>.  
   
-    -   <xref:System.Transactions.EnterpriseServicesInteropOption.Full>: позволяет создать транзакцию, связанную с контекстом COM+.  
+    -   <xref:System.Transactions.EnterpriseServicesInteropOption.Full>: создается транзакция, связанная с контекстом COM +.  
   
-    -   <xref:System.Transactions.EnterpriseServicesInteropOption.None>: позволяет создать транзакцию <xref:System.Transactions>.  
+    -   <xref:System.Transactions.EnterpriseServicesInteropOption.None>: <xref:System.Transactions> создана транзакция.  
   
-    -   <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>: в случае существования контекста COM+ позволяет создать транзакцию и присоединить ее к контексту.  
+    -   <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>: Если имеется контекст COM + и присоединен к контексту транзакции.  
   
  В следующей таблице представлены контекст Enterprise Services (ES) и область транзакции, запрашивающая транзакцию с помощью перечисления <xref:System.Transactions.EnterpriseServicesInteropOption>.  
   
-|Контекст ES|Нет|Automatic|Полный|  
+|Контекст ES|Нет|Автоматический|Полная архивация|  
 |----------------|----------|---------------|----------|  
 |Контекст по умолчанию|Контекст по умолчанию|Контекст по умолчанию|Создать <br />транзакционный контекст|  
 |Контекст, отличный от контекста по умолчанию|Сохранить контекст клиента|Создать новый транзакционный контекст|Создать новый транзакционный контекст|  
   
  В следующей таблице показано, что представляют собой внешняя транзакция в случае конкретного контекста <xref:System.EnterpriseServices> и область транзакции, запрашивающая транзакцию с помощью перечисления <xref:System.Transactions.EnterpriseServicesInteropOption>.  
   
-|Контекст ES|Нет|Automatic|Полный|  
+|Контекст ES|Нет|Автоматический|Полная архивация|  
 |----------------|----------|---------------|----------|  
 |Контекст по умолчанию|ST|ST|ES|  
 |Контекст, отличный от контекста по умолчанию|ST|ES|ES|  

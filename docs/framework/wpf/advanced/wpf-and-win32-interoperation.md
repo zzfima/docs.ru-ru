@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 0ffbde0d-701d-45a3-a6fa-dd71f4d9772e
-ms.openlocfilehash: 72f05621c96f1b6938b67d19f862a8d28b6df352
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 71c454edc6a124f732f1e6b56e25c28671fa11b6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59171896"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314416"
 ---
 # <a name="wpf-and-win32-interoperation"></a>Взаимодействие WPF и Win32
 В этом разделе приводится общее описание метода обеспечения взаимодействия [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и кода [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет среду с широкими возможностями для создания приложений. Однако если имеется сложный код [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], возможно, более эффективным будет повторное использование части этого кода.  
@@ -58,15 +58,15 @@ ms.locfileid: "59171896"
 ## <a name="hosting-wpf-content-in-a-microsoft-win32-window"></a>Размещение содержимого WPF в окне Microsoft Win32  
  Ключом к размещению [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] на [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] окно <xref:System.Windows.Interop.HwndSource> класса. Этот класс заключает содержимое [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] в окно [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] таким образом, что содержимое [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] может быть включено в [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] в качестве дочернего окна. Следующий подход объединяет [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] и [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] в одном приложении.  
   
-1.  Реализуйте содержимое [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] (содержимое корневого элемента) в виде управляемого класса. Как правило, класс наследуется от одного из классов, которые может содержать несколько дочерних элементов или использоваться в качестве корневого элемента, например <xref:System.Windows.Controls.DockPanel> или <xref:System.Windows.Controls.Page>. В последующих шагах этот класс называется классом содержимого [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], а его экземпляры называются объектами содержимого [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+1. Реализуйте содержимое [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] (содержимое корневого элемента) в виде управляемого класса. Как правило, класс наследуется от одного из классов, которые может содержать несколько дочерних элементов или использоваться в качестве корневого элемента, например <xref:System.Windows.Controls.DockPanel> или <xref:System.Windows.Controls.Page>. В последующих шагах этот класс называется классом содержимого [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], а его экземпляры называются объектами содержимого [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
-2.  Реализуйте приложение [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] с помощью [!INCLUDE[TLA2#tla_cppcli](../../../../includes/tla2sharptla-cppcli-md.md)]. При запуске существующего неуправляемого приложения [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)], как правило, можно разрешить ему вызывать управляемый код путем изменения параметров проекта с целью включения флага компилятора `/clr` (полное описание объектов, необходимых для поддержки компиляции `/clr`, в этом разделе не приводится).  
+2. Реализуйте приложение [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] с помощью [!INCLUDE[TLA2#tla_cppcli](../../../../includes/tla2sharptla-cppcli-md.md)]. При запуске существующего неуправляемого приложения [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)], как правило, можно разрешить ему вызывать управляемый код путем изменения параметров проекта с целью включения флага компилятора `/clr` (полное описание объектов, необходимых для поддержки компиляции `/clr`, в этом разделе не приводится).  
   
-3.  Установите в качестве потоковой модели однопотоковое подразделение (STA). [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Эта потоковая модель используется.  
+3. Установите в качестве потоковой модели однопотоковое подразделение (STA). [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Эта потоковая модель используется.  
   
-4.  Обработайте уведомления WM_CREATE в процедуре окна.  
+4. Обработайте уведомления WM_CREATE в процедуре окна.  
   
-5.  В обработчике (или функции, которую вызывает обработчик) выполните указанные ниже действия.  
+5. В обработчике (или функции, которую вызывает обработчик) выполните указанные ниже действия.  
   
     1.  Создайте новый <xref:System.Windows.Interop.HwndSource> объект с HWND родительского окна как его `parent` параметра.  
   
@@ -76,11 +76,11 @@ ms.locfileid: "59171896"
   
     4.  <xref:System.Windows.Interop.HwndSource> Объект <xref:System.Windows.Interop.HwndSource.Handle%2A> свойство содержит дескриптор окна (HWND). Чтобы получить HWND, который можно использовать в неуправляемой части приложения, приведите `Handle.ToPointer()` к HWND.  
   
-6.  Реализуйте управляемый класс, содержащий статическое поле, которое хранит ссылку на объект содержимого [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Этот класс позволяет получить ссылку на [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] объекта содержимого из вашей [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] код, но более важно, защищает ваш <xref:System.Windows.Interop.HwndSource> от случайного удаления сборщиком мусора.  
+6. Реализуйте управляемый класс, содержащий статическое поле, которое хранит ссылку на объект содержимого [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Этот класс позволяет получить ссылку на [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] объекта содержимого из вашей [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] код, но более важно, защищает ваш <xref:System.Windows.Interop.HwndSource> от случайного удаления сборщиком мусора.  
   
-7.  Получите уведомления от объекта содержимого [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], присоединив обработчик к одному или нескольким событиям объекта содержимого [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+7. Получите уведомления от объекта содержимого [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], присоединив обработчик к одному или нескольким событиям объекта содержимого [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
-8.  Для взаимодействия с объектом содержимого [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] используйте ссылку, которую сохранили в статическом поле, чтобы задать свойства, методы вызова и т. д.  
+8. Для взаимодействия с объектом содержимого [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] используйте ссылку, которую сохранили в статическом поле, чтобы задать свойства, методы вызова и т. д.  
   
 > [!NOTE]
 >  Определить класс содержимого [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] для шага 1 можно частично или полностью в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] с помощью разделяемого класса по умолчанию класса содержимого. Для этого нужно создать отдельную сборку и сослаться на нее. Несмотря на то, что обычно содержат <xref:System.Windows.Application> объекта в процессе компиляции [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] в сборку, вы не доходят до использования его <xref:System.Windows.Application> как часть взаимодействие, просто используйте один или несколько корневых классов для [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] файлов называется Чтобы для приложения и ссылаться на их разделяемые классы. Оставшаяся часть процедуры практически аналогична описанной выше.  
@@ -91,17 +91,17 @@ ms.locfileid: "59171896"
 ## <a name="hosting-a-microsoft-win32-window-in-wpf"></a>Размещение окна Microsoft Win32 в WPF  
  Ключом к размещению [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] окно в другие [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] содержимое <xref:System.Windows.Interop.HwndHost> класса. Он заключает окно в элемент [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], который можно добавить в дерево элементов [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. <xref:System.Windows.Interop.HwndHost> также поддерживает [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] , которые позволяют выполнять такие задачи, как обработка сообщений для размещенного окна. Ниже описываются основные действия.  
   
-1.  Создайте дерево элементов для приложения [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] (посредством кода или разметки). Найдите соответствующую и допустимую точку в дереве элементов, где <xref:System.Windows.Interop.HwndHost> реализация может быть добавлен как дочерний элемент. В оставшихся действиях процедуры этот элемент называется элементом резервирования.  
+1. Создайте дерево элементов для приложения [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] (посредством кода или разметки). Найдите соответствующую и допустимую точку в дереве элементов, где <xref:System.Windows.Interop.HwndHost> реализация может быть добавлен как дочерний элемент. В оставшихся действиях процедуры этот элемент называется элементом резервирования.  
   
-2.  Являются производными от <xref:System.Windows.Interop.HwndHost> для создания объекта, который содержит ваши [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] содержимого.  
+2. Являются производными от <xref:System.Windows.Interop.HwndHost> для создания объекта, который содержит ваши [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] содержимого.  
   
-3.  В размещаемом классе переопределите <xref:System.Windows.Interop.HwndHost> метод <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>. Возвратите HWND размещенного окна. Вероятно, вам может потребоваться заключить существующие элементы управления в дочернее окно возвращаемого окна. Заключение элементов управления в основное окно представляет собой простой способ получения уведомлений от элементов управления для содержимого [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Этот способ позволяет избежать некоторых проблем [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)], касающихся обработки сообщений на границе размещаемых элементов управления.  
+3. В размещаемом классе переопределите <xref:System.Windows.Interop.HwndHost> метод <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>. Возвратите HWND размещенного окна. Вероятно, вам может потребоваться заключить существующие элементы управления в дочернее окно возвращаемого окна. Заключение элементов управления в основное окно представляет собой простой способ получения уведомлений от элементов управления для содержимого [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Этот способ позволяет избежать некоторых проблем [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)], касающихся обработки сообщений на границе размещаемых элементов управления.  
   
-4.  Переопределить <xref:System.Windows.Interop.HwndHost> методы <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> и <xref:System.Windows.Interop.HwndHost.WndProc%2A>. Цель этого — выполнить очистку и удалить ссылки на размещаемое содержимое, особенно если созданы ссылки на неуправляемые объекты.  
+4. Переопределить <xref:System.Windows.Interop.HwndHost> методы <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> и <xref:System.Windows.Interop.HwndHost.WndProc%2A>. Цель этого — выполнить очистку и удалить ссылки на размещаемое содержимое, особенно если созданы ссылки на неуправляемые объекты.  
   
-5.  В файле кода программной части создайте экземпляр класса, размещающего элемент управления, и сделайте его дочерним классом элемента резервирования. Обычно используется обработчик событий например <xref:System.Windows.FrameworkElement.Loaded>, или использовать конструктор разделяемого класса. Но можно также добавить содержимое взаимодействия с помощью поведения среды выполнения.  
+5. В файле кода программной части создайте экземпляр класса, размещающего элемент управления, и сделайте его дочерним классом элемента резервирования. Обычно используется обработчик событий например <xref:System.Windows.FrameworkElement.Loaded>, или использовать конструктор разделяемого класса. Но можно также добавить содержимое взаимодействия с помощью поведения среды выполнения.  
   
-6.  Обработайте сообщения выбранного окна, такие как уведомления элементов управления. Существуют два подхода. Оба предоставляют идентичный доступ к потоку сообщений, поэтому выбор во многом определяется удобством программирования.  
+6. Обработайте сообщения выбранного окна, такие как уведомления элементов управления. Существуют два подхода. Оба предоставляют идентичный доступ к потоку сообщений, поэтому выбор во многом определяется удобством программирования.  
   
     -   Реализуйте обработку сообщений для всех сообщений (не только сообщений о завершении работы) в переопределении <xref:System.Windows.Interop.HwndHost> метод <xref:System.Windows.Interop.HwndHost.WndProc%2A>.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "59171896"
   
     -   Не удается обработать сообщения от windows, которые не соответствуют процесс, используя <xref:System.Windows.Interop.HwndHost.WndProc%2A>.  
   
-7.  Для взаимодействия с размещенным окном используйте вызов неуправляемого кода с целью вызова неуправляемой функции `SendMessage`.  
+7. Для взаимодействия с размещенным окном используйте вызов неуправляемого кода с целью вызова неуправляемой функции `SendMessage`.  
   
  Следующие действия создают приложение, которое работает с вводом мыши. Вы можете добавить поддержку табуляции для размещенного окна, реализовав <xref:System.Windows.Interop.IKeyboardInputSink> интерфейс.  
   

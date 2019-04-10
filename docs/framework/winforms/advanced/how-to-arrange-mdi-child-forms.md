@@ -8,12 +8,12 @@ helpviewer_keywords:
 - child forms [Windows Forms], arranging
 - MDI [Windows Forms], arranging child forms
 ms.assetid: a0786378-3206-4ccc-898e-7d3b38cc5089
-ms.openlocfilehash: 60cba801446d043fa8c0b36d97628e9b0f8df11d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c7a9d03ef60586e1162f088d662dfe44bbdcb591
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160112"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317237"
 ---
 # <a name="how-to-arrange-mdi-child-forms"></a>Практическое руководство. Упорядочение дочерних MDI-форм
 Во многих случаях приложения будут иметь команды меню для таких действий как «Мозаика», «Каскад» и «Упорядочить», которые позволяют управлять компоновкой открытых дочерних MDI-форм. Для изменения порядка дочерних форм в родительской MDI-форме можно использовать метод <xref:System.Windows.Forms.Form.LayoutMdi%2A> с одним из значений перечисления <xref:System.Windows.Forms.MdiLayout>.  
@@ -24,7 +24,7 @@ ms.locfileid: "59160112"
   
 ### <a name="to-arrange-child-forms"></a>Упорядочение дочерних форм  
   
-1.  В методе для родительской MDI-формы используйте перечисление <xref:System.Windows.Forms.Form.LayoutMdi%2A> для задания метода<xref:System.Windows.Forms.MdiLayout>. В следующем примере используется значение перечисления <xref:System.Windows.Forms.MdiLayout.Cascade?displayProperty=nameWithType> для дочерних окон родительской MDI-формы (`Form1`). Перечисление используется в коде во время работы обработчика событий для <xref:System.Windows.Forms.Control.Click> событие **Cascade Windows** пункта меню.  
+1. В методе для родительской MDI-формы используйте перечисление <xref:System.Windows.Forms.Form.LayoutMdi%2A> для задания метода<xref:System.Windows.Forms.MdiLayout>. В следующем примере используется значение перечисления <xref:System.Windows.Forms.MdiLayout.Cascade?displayProperty=nameWithType> для дочерних окон родительской MDI-формы (`Form1`). Перечисление используется в коде во время работы обработчика событий для <xref:System.Windows.Forms.Control.Click> событие **Cascade Windows** пункта меню.  
   
     ```vb  
     Protected Sub CascadeWindows_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)  
@@ -41,7 +41,7 @@ ms.locfileid: "59160112"
     > [!NOTE]
     >  Путем изменения значения перечисления <xref:System.Windows.Forms.MdiLayout> можно также мозаично размещать окна и упорядочивать их в виде значков.  
   
-2.  В случае использования Visual C# поместите следующий код в конструктор формы для регистрации обработчика событий.  
+2. В случае использования Visual C# поместите следующий код в конструктор формы для регистрации обработчика событий.  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  

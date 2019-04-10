@@ -3,12 +3,12 @@ title: <federationConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
-ms.openlocfilehash: e1e92fccfad792fc1b9df86a582f0406a87f34e9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e0ac3b663b2a65e00524fe0fba7997125721487c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59195297"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297491"
 ---
 # <a name="federationconfiguration"></a>\<federationConfiguration>
 Настраивает <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) и <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM), при использовании Федеративная проверка подлинности по протоколу WS-Federation. Настраивает <xref:System.Security.Claims.ClaimsAuthorizationManager> при использовании <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> или <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> класс, чтобы обеспечить управление доступом на основе утверждений.  
@@ -58,13 +58,13 @@ ms.locfileid: "59195297"
   
  Независимо от сценария среда выполнения загружает конфигурации федерации по умолчанию. Поведение определяется следующим образом:  
   
-1.  Если нет `<federationConfiguration>` элемент присутствует, среда выполнения создает конфигурацию федерации и заполняет его значения по умолчанию. Эта конфигурация федерации будет ссылаться на конфигурацию удостоверения по умолчанию.  
+1. Если нет `<federationConfiguration>` элемент присутствует, среда выполнения создает конфигурацию федерации и заполняет его значения по умолчанию. Эта конфигурация федерации будет ссылаться на конфигурацию удостоверения по умолчанию.  
   
-2.  Если одно `<federationConfiguration>` элемент присутствует, он является конфигурацией федерации по умолчанию независимо от того, независимо от того, является ли она с именем или без имени. Если его `identityConfiguration` атрибут указан, на который приведена ссылка на конфигурацию удостоверения именованный; в противном случае используется конфигурация по умолчанию.  
+2. Если одно `<federationConfiguration>` элемент присутствует, он является конфигурацией федерации по умолчанию независимо от того, независимо от того, является ли она с именем или без имени. Если его `identityConfiguration` атрибут указан, на который приведена ссылка на конфигурацию удостоверения именованный; в противном случае используется конфигурация по умолчанию.  
   
-3.  Если неименованный `<federationConfiguration>` элемент присутствует, это конфигурация по умолчанию федерации. Если его `identityConfiguration` атрибут указан, на который приведена ссылка на конфигурацию удостоверения именованный; в противном случае используется конфигурация по умолчанию.  
+3. Если неименованный `<federationConfiguration>` элемент присутствует, это конфигурация по умолчанию федерации. Если его `identityConfiguration` атрибут указан, на который приведена ссылка на конфигурацию удостоверения именованный; в противном случае используется конфигурация по умолчанию.  
   
-4.  Если несколько с именем `<federationConfiguration>` элементы являются присутствует и нет неименованных `<federationConfiguration>` присутствует элемент, возникает исключение.  
+4. Если несколько с именем `<federationConfiguration>` элементы являются присутствует и нет неименованных `<federationConfiguration>` присутствует элемент, возникает исключение.  
   
  Как правило, только один `<federationConfiguration>` определен раздел. Этот раздел представляет конфигурацию федерации по умолчанию. Можно указать несколько, с уникальным именем `<federationConfiguration>` элементов; Однако в этом случае, если вы хотите загрузить конфигурацию федерации, отличном от того, без имени, необходимо указать обработчик для. <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated> событие и набор <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> свойство внутри обработчика <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> объект инициализирован со значениями из соответствующих `<federationConfiguration>` элемент в файле конфигурации.  
   

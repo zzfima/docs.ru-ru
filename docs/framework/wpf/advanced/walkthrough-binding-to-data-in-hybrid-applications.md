@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: d497dfd5580f1d2741e0edafa86e9dd39ec374ec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f6fd1f2f5d0a729ee5610b81d4bfdca052a6e01e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59191995"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300870"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>Пошаговое руководство. Привязка к данным в гибридных приложениях
 Привязка источника данных к элементу управления необходима для предоставления пользователям доступа к базовым данным независимо от используемой [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] или [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. В этом пошаговом руководстве показано, как можно использовать привязку данных в гибридных приложениях, которые включают [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] и [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] элементов управления.  
@@ -49,23 +49,23 @@ ms.locfileid: "59191995"
   
 #### <a name="to-create-and-set-up-the-project"></a>Создание и настройка проекта  
   
-1.  Создание проекта приложения WPF с именем `WPFWithWFAndDatabinding`.  
+1. Создание проекта приложения WPF с именем `WPFWithWFAndDatabinding`.  
   
-2.  В обозревателе решений добавьте ссылки на следующие сборки.  
+2. В обозревателе решений добавьте ссылки на следующие сборки.  
   
     -   WindowsFormsIntegration  
   
     -   System.Windows.Forms.  
   
-3.  Откройте файл MainWindow.xaml в [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].  
+3. Откройте файл MainWindow.xaml в [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].  
   
-4.  В <xref:System.Windows.Window> элемента, добавьте следующий [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] сопоставление пространств имен.  
+4. В <xref:System.Windows.Window> элемента, добавьте следующий [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] сопоставление пространств имен.  
   
     ```xaml  
     xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"  
     ```  
   
-5.  По умолчанию имя <xref:System.Windows.Controls.Grid> элемент `mainGrid` , назначив <xref:System.Windows.FrameworkElement.Name%2A> свойство.  
+5. По умолчанию имя <xref:System.Windows.Controls.Grid> элемент `mainGrid` , назначив <xref:System.Windows.FrameworkElement.Name%2A> свойство.  
   
      [!code-xaml[WPFWithWFAndDatabinding#8](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#8)]  
   
@@ -120,44 +120,44 @@ ms.locfileid: "59191995"
   
 #### <a name="to-add-the-data-source"></a>Добавление источника данных  
   
-1.  Из **данных** меню, выберите **добавить новый источник данных**.  
+1. Из **данных** меню, выберите **добавить новый источник данных**.  
   
-2.  В **мастер настройки источника данных**, создать подключение к базе данных "Борей" с помощью набора данных. Дополнительные сведения см. в разделе [Как Подключение к данным в базе данных](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fxk9yw1t(v=vs.120)).  
+2. В **мастер настройки источника данных**, создать подключение к базе данных "Борей" с помощью набора данных. Дополнительные сведения см. в разделе [Как Подключение к данным в базе данных](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fxk9yw1t(v=vs.120)).  
   
-3.  При появлении запроса с **мастер настройки источника данных**, сохранить строку подключения в качестве `NorthwindConnectionString`.  
+3. При появлении запроса с **мастер настройки источника данных**, сохранить строку подключения в качестве `NorthwindConnectionString`.  
   
-4.  При появлении запроса на выбор объектов базы данных, выберите `Customers` и `Orders` таблицы и имя созданного набора данных `NorthwindDataSet`.  
+4. При появлении запроса на выбор объектов базы данных, выберите `Customers` и `Orders` таблицы и имя созданного набора данных `NorthwindDataSet`.  
   
 ## <a name="binding-to-the-data-source"></a>Подключение к источнику данных  
  <xref:System.Windows.Forms.BindingSource?displayProperty=nameWithType> Компонент предоставляет единый интерфейс для источника данных приложения. Привязка к источнику данных реализована в файле кода программной части.  
   
 #### <a name="to-bind-to-the-data-source"></a>Чтобы создать привязку к источнику данных, выполните следующие действия.  
   
-1.  Откройте файл кода программной части с именем MainWindow.xaml.vb или MainWindow.xaml.cs.  
+1. Откройте файл кода программной части с именем MainWindow.xaml.vb или MainWindow.xaml.cs.  
   
-2.  Скопируйте следующий код в `MainWindow` определение класса.  
+2. Скопируйте следующий код в `MainWindow` определение класса.  
   
      Этот код объявляет <xref:System.Windows.Forms.BindingSource> компонента и связывает вспомогательные классы, которые подключаются к базе данных.  
   
      [!code-csharp[WPFWithWFAndDatabinding#11](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#11)]
      [!code-vb[WPFWithWFAndDatabinding#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#11)]
 
-3.  Копируйте в конструктор следующий код.
+3. Копируйте в конструктор следующий код.
 
      Этот код создает и инициализирует <xref:System.Windows.Forms.BindingSource> компонента.
 
      [!code-csharp[WPFWithWFAndDatabinding#12](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#12)]
      [!code-vb[WPFWithWFAndDatabinding#12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#12)]
 
-4.  Откройте файл MainWindow.xaml.
+4. Откройте файл MainWindow.xaml.
 
-5.  В представлении конструирования или XAML, выберите <xref:System.Windows.Window> элемент.
+5. В представлении конструирования или XAML, выберите <xref:System.Windows.Window> элемент.
 
-6.  В окне «Свойства» щелкните **события** вкладки.
+6. В окне «Свойства» щелкните **события** вкладки.
 
-7.  Дважды щелкните <xref:System.Windows.FrameworkElement.Loaded> событий.
+7. Дважды щелкните <xref:System.Windows.FrameworkElement.Loaded> событий.
 
-8.  Скопируйте следующий код в <xref:System.Windows.FrameworkElement.Loaded> обработчик событий.
+8. Скопируйте следующий код в <xref:System.Windows.FrameworkElement.Loaded> обработчик событий.
 
      Этот код присваивает <xref:System.Windows.Forms.BindingSource> компонент в качестве контекста данных и заполняет `Customers` и `Orders` объекты адаптера.
 

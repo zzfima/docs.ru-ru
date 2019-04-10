@@ -8,12 +8,12 @@ helpviewer_keywords:
 - With block
 - object variables [Visual Basic], accessing
 ms.assetid: 3eb7657f-c9fe-4e05-8bc3-4bb14d5ae585
-ms.openlocfilehash: b10876c22d2f6dd5832baa0d498db7c4205a3fcb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 94c838a69aab9fcae9dc0c79b6038ee90e2369e7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816295"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299141"
 ---
 # <a name="how-to-speed-up-access-to-an-object-with-a-long-qualification-path-visual-basic"></a>Практическое руководство. Увеличение скорости доступа к объекту с длинным классификационным путем (Visual Basic)
 Если вы обращаетесь чаще всего объекта, который требует классификационным путем несколько методов и свойств, можно ускорить код, не повторяя путь квалификации.  
@@ -22,13 +22,13 @@ ms.locfileid: "58816295"
   
 ### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-assigning-it-to-a-variable"></a>Чтобы ускорить доступ к сильно уточненный объект, присвоив его переменной  
   
-1.  Объявите переменную типа объекта, который вы обращаетесь к часто. Укажите путь квалификации в части инициализации объявления.  
+1. Объявите переменную типа объекта, который вы обращаетесь к часто. Укажите путь квалификации в части инициализации объявления.  
   
     ```  
     Dim ctrlActv As Control = someForm.ActiveForm.ActiveControl  
     ```  
   
-2.  Используйте переменную для доступа к членам объекта.  
+2. Используйте переменную для доступа к членам объекта.  
   
     ```  
     ctrlActv.Text = "Test"  
@@ -38,13 +38,13 @@ ms.locfileid: "58816295"
   
 ### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-using-a-withend-with-block"></a>Чтобы ускорить доступ к сильно уточненный объект с помощью аргумента With... Блок End With  
   
-1.  Поместить путь квалификации в `With` инструкции.  
+1. Поместить путь квалификации в `With` инструкции.  
   
     ```  
     With someForm.ActiveForm.ActiveControl  
     ```  
   
-2.  Доступ к членам объекта внутри `With` блокируется, прежде чем `End With` инструкции.  
+2. Доступ к членам объекта внутри `With` блокируется, прежде чем `End With` инструкции.  
   
     ```  
         .Text = "Test"  

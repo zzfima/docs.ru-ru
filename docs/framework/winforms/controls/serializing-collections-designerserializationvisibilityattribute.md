@@ -11,12 +11,12 @@ helpviewer_keywords:
 - collections [Windows Forms], serializing
 - collections [Windows Forms], standard types
 ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
-ms.openlocfilehash: 04eb56fe78aa2d9ef5ab0daae4ba1c873cfc2b26
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 791b2ea1497b8b884d066894e925785fd1bb6f7d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59097763"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305212"
 ---
 # <a name="walkthrough-serializing-collections-of-standard-types-with-the-designerserializationvisibilityattribute"></a>Пошаговое руководство. Сериализация коллекций стандартных типов с использованием атрибута DesignerSerializationVisibilityAttribute
 Пользовательские элементы управления, иногда будет предоставлять коллекции как свойство. В этом пошаговом руководстве демонстрируется использование <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> класс для управления способом сериализации коллекции во время разработки. Применение <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> значение для свойства коллекции гарантирует, что будет сериализовано свойство.  
@@ -36,15 +36,15 @@ ms.locfileid: "59097763"
   
 #### <a name="to-create-a-control-with-a-serializable-collection"></a>Создание элемента управления с сериализуемой коллекцией  
   
-1.  Создайте проект библиотеки элементов управления Windows с именем `SerializationDemoControlLib`. Дополнительные сведения см. в разделе [шаблон библиотеки элементов управления Windows](https://docs.microsoft.com/previous-versions/kxczf775(v=vs.100)).  
+1. Создайте проект библиотеки элементов управления Windows с именем `SerializationDemoControlLib`. Дополнительные сведения см. в разделе [шаблон библиотеки элементов управления Windows](https://docs.microsoft.com/previous-versions/kxczf775(v=vs.100)).  
   
-2.  Переименуйте `UserControl1` для `SerializationDemoControl`. Дополнительные сведения см. в разделе [переименование рефакторинга кода символа](/visualstudio/ide/reference/rename).  
+2. Переименуйте `UserControl1` для `SerializationDemoControl`. Дополнительные сведения см. в разделе [переименование рефакторинга кода символа](/visualstudio/ide/reference/rename).  
   
-3.  В **свойства** окна, установите для параметра <xref:System.Windows.Forms.Padding.All%2A?displayProperty=nameWithType> свойства `10`.  
+3. В **свойства** окна, установите для параметра <xref:System.Windows.Forms.Padding.All%2A?displayProperty=nameWithType> свойства `10`.  
   
-4.  Место <xref:System.Windows.Forms.TextBox> контролировать `SerializationDemoControl`.  
+4. Место <xref:System.Windows.Forms.TextBox> контролировать `SerializationDemoControl`.  
   
-5.  Выберите элемент управления <xref:System.Windows.Forms.TextBox>. В **свойства** окна, задайте следующие свойства.  
+5. Выберите элемент управления <xref:System.Windows.Forms.TextBox>. В **свойства** окна, задайте следующие свойства.  
   
     |Свойство|Измените на|  
     |--------------|---------------|  
@@ -53,13 +53,13 @@ ms.locfileid: "59097763"
     |**ScrollBars**|<xref:System.Windows.Forms.ScrollBars.Vertical>|  
     |**ReadOnly**|`true`|  
   
-6.  В **редактор кода**, объявите поле строкового массива с именем `stringsValue` в `SerializationDemoControl`.  
+6. В **редактор кода**, объявите поле строкового массива с именем `stringsValue` в `SerializationDemoControl`.  
   
      [!code-cpp[System.ComponentModel.DesignerSerializationVisibilityAttribute#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/cpp/form1.cpp#4)]
      [!code-csharp[System.ComponentModel.DesignerSerializationVisibilityAttribute#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/CS/form1.cs#4)]
      [!code-vb[System.ComponentModel.DesignerSerializationVisibilityAttribute#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/VB/form1.vb#4)]  
   
-7.  Определение `Strings` свойство `SerializationDemoControl`.  
+7. Определение `Strings` свойство `SerializationDemoControl`.  
   
 > [!NOTE]
 >  <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> Значение используется для включения сериализации коллекции.  
@@ -68,11 +68,11 @@ ms.locfileid: "59097763"
  [!code-csharp[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/CS/form1.cs#5)]
  [!code-vb[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/VB/form1.vb#5)]  
   
-1.  Нажмите клавишу F5, чтобы собрать проект и запустить элемент управления в **тестовом контейнере элементов управления**.  
+1. Нажмите клавишу F5, чтобы собрать проект и запустить элемент управления в **тестовом контейнере элементов управления**.  
   
-2.  Найти `Strings` свойство в <xref:System.Windows.Forms.PropertyGrid> из **тестовом контейнере элементов управления**. Нажмите кнопку `Strings` свойство, нажмите кнопку обзора (![экрана VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) кнопку, чтобы открыть **редактор коллекции строк**.  
+2. Найти `Strings` свойство в <xref:System.Windows.Forms.PropertyGrid> из **тестовом контейнере элементов управления**. Нажмите кнопку `Strings` свойство, нажмите кнопку обзора (![экрана VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) кнопку, чтобы открыть **редактор коллекции строк**.  
   
-3.  Введите несколько строк в **редактор коллекции строк**. Разделяйте их, нажав клавишу ВВОД в конце каждой строки. Нажмите кнопку **ОК** при завершении.  
+3. Введите несколько строк в **редактор коллекции строк**. Разделяйте их, нажав клавишу ВВОД в конце каждой строки. Нажмите кнопку **ОК** при завершении.  
   
 > [!NOTE]
 >  Строки отображаются в <xref:System.Windows.Forms.TextBox> из `SerializationDemoControl`.  
@@ -82,24 +82,24 @@ ms.locfileid: "59097763"
   
 #### <a name="to-serialize-a-collection"></a>Для сериализации коллекции  
   
-1.  Добавьте в решение проект приложения Windows. Задайте для проекта имя `SerializationDemoControlTest`.  
+1. Добавьте в решение проект приложения Windows. Задайте для проекта имя `SerializationDemoControlTest`.  
   
-2.  В **элементов**, найдите вкладку с именем **компоненты SerializationDemoControlLib**. На этой вкладке вы найдете `SerializationDemoControl`. Дополнительные сведения см. в разделе [Пошаговое руководство: Автоматическое заполнение панели элементов пользовательскими компонентами](walkthrough-automatically-populating-the-toolbox-with-custom-components.md).  
+2. В **элементов**, найдите вкладку с именем **компоненты SerializationDemoControlLib**. На этой вкладке вы найдете `SerializationDemoControl`. Дополнительные сведения см. в разделе [Пошаговое руководство: Автоматическое заполнение панели элементов пользовательскими компонентами](walkthrough-automatically-populating-the-toolbox-with-custom-components.md).  
   
-3.  Место `SerializationDemoControl` в форме.  
+3. Место `SerializationDemoControl` в форме.  
   
-4.  Найти `Strings` свойство в **свойства** окна. Нажмите кнопку `Strings` свойство, нажмите кнопку обзора (![экрана VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) кнопку, чтобы открыть **редактор коллекции строк**.  
+4. Найти `Strings` свойство в **свойства** окна. Нажмите кнопку `Strings` свойство, нажмите кнопку обзора (![экрана VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) кнопку, чтобы открыть **редактор коллекции строк**.  
   
-5.  Введите несколько строк в **редактор коллекции строк**. Разделяйте их, нажав клавишу ВВОД в конце каждой строки. Нажмите кнопку **ОК** при завершении.  
+5. Введите несколько строк в **редактор коллекции строк**. Разделяйте их, нажав клавишу ВВОД в конце каждой строки. Нажмите кнопку **ОК** при завершении.  
   
 > [!NOTE]
 >  Строки отображаются в <xref:System.Windows.Forms.TextBox> из `SerializationDemoControl`.  
   
-1.  В **обозревателе решений** нажмите кнопку **Показать все файлы**.  
+1. В **обозревателе решений** нажмите кнопку **Показать все файлы**.  
   
-2.  Откройте **Form1** узла. Ниже это файл с именем **Form1.Designer.cs** или **Form1.Designer.vb**. Это файл, в который **конструктор Windows Forms** выдает код, представляющий состояние разработки формы и его дочерним элементам. Откройте этот файл в **редакторе кода**.  
+2. Откройте **Form1** узла. Ниже это файл с именем **Form1.Designer.cs** или **Form1.Designer.vb**. Это файл, в который **конструктор Windows Forms** выдает код, представляющий состояние разработки формы и его дочерним элементам. Откройте этот файл в **редакторе кода**.  
   
-3.  Откройте область, называемую **код, созданный конструктором форм Windows** и найдите раздел **serializationDemoControl1**. Под этой метки — это код, представляющий сериализованное состояние элемента управления. Строки, введенного в шаге 5 будут отображаться в операторе присваивания для `Strings` свойство. В следующих примерах кода в C# и Visual Basic, Показывать код, аналогичны тем, что отображается при вводе строки «red», «оранжевый» и «желтый».  
+3. Откройте область, называемую **код, созданный конструктором форм Windows** и найдите раздел **serializationDemoControl1**. Под этой метки — это код, представляющий сериализованное состояние элемента управления. Строки, введенного в шаге 5 будут отображаться в операторе присваивания для `Strings` свойство. В следующих примерах кода в C# и Visual Basic, Показывать код, аналогичны тем, что отображается при вводе строки «red», «оранжевый» и «желтый».  
   
     ```csharp  
     this.serializationDemoControl1.Strings = new string[] {  
@@ -112,7 +112,7 @@ ms.locfileid: "59097763"
     Me.serializationDemoControl1.Strings = New String() {"red", "orange", "yellow"}  
     ```
   
-4.  В **редактор кода**, измените значение свойства <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> на `Strings` свойства <xref:System.ComponentModel.DesignerSerializationVisibility.Hidden>.  
+4. В **редактор кода**, измените значение свойства <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> на `Strings` свойства <xref:System.ComponentModel.DesignerSerializationVisibility.Hidden>.  
   
     ```csharp  
     [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]  
