@@ -4,22 +4,22 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID383
 ms.assetid: 0b97b683-6626-42ec-af0b-aaa3c973a76b
-ms.openlocfilehash: 664da4d6eee4dd6d86f355c4a9560f2d9d9c12a8
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: d3dd928f65bc4939e6e204d71a3a5544a30a4293
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58051173"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318903"
 ---
-# <a name="set-not-supported-read-only-property"></a><span data-ttu-id="3d366-102">Set не поддерживается (свойство доступно только для чтения)</span><span class="sxs-lookup"><span data-stu-id="3d366-102">Set not supported (read-only property)</span></span>
-<span data-ttu-id="3d366-103">Вы попытались задать или изменить свойство, доступное только для чтения.</span><span class="sxs-lookup"><span data-stu-id="3d366-103">You tried to set or change a property that is read only.</span></span>  
+# <a name="set-not-supported-read-only-property"></a><span data-ttu-id="48068-102">Set не поддерживается (свойство доступно только для чтения)</span><span class="sxs-lookup"><span data-stu-id="48068-102">Set not supported (read-only property)</span></span>
+<span data-ttu-id="48068-103">Вы попытались задать или изменить свойство, доступное только для чтения.</span><span class="sxs-lookup"><span data-stu-id="48068-103">You tried to set or change a property that is read only.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="3d366-104">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="3d366-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="48068-104">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="48068-104">To correct this error</span></span>  
   
-1.  <span data-ttu-id="3d366-105">Удалите из кода ссылку на свойство.</span><span class="sxs-lookup"><span data-stu-id="3d366-105">Remove the reference to the property from your code.</span></span>  
+1. <span data-ttu-id="48068-105">Удалите из кода ссылку на свойство.</span><span class="sxs-lookup"><span data-stu-id="48068-105">Remove the reference to the property from your code.</span></span>  
   
-2.  <span data-ttu-id="3d366-106">Измените ссылку, чтобы значение свойства возвращалось только во время разработки.</span><span class="sxs-lookup"><span data-stu-id="3d366-106">Change the reference to only return the value of the property at run time.</span></span>  
+2. <span data-ttu-id="48068-106">Измените ссылку, чтобы значение свойства возвращалось только во время разработки.</span><span class="sxs-lookup"><span data-stu-id="48068-106">Change the reference to only return the value of the property at run time.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3d366-107">См. также</span><span class="sxs-lookup"><span data-stu-id="3d366-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="48068-107">См. также</span><span class="sxs-lookup"><span data-stu-id="48068-107">See also</span></span>
 
-- [<span data-ttu-id="3d366-108">Управление свойствами проектов и решений</span><span class="sxs-lookup"><span data-stu-id="3d366-108">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
+- [<span data-ttu-id="48068-108">Управление свойствами проекта и решения</span><span class="sxs-lookup"><span data-stu-id="48068-108">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)

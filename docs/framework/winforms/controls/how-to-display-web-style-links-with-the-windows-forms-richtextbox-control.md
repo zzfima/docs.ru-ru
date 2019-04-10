@@ -10,30 +10,30 @@ helpviewer_keywords:
 - examples [Windows Forms], text boxes
 - RichTextBox control [Windows Forms], linking to Web pages
 ms.assetid: 95089a37-a202-4f7a-94ee-6ee312908851
-ms.openlocfilehash: 1902557e5dbdcee3c1facc18b6f5c3037c266a8e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: faaa48051c80b6dfd330f15f72a38297ff2d1b9f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59148243"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301884"
 ---
-# <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a><span data-ttu-id="f5dc2-102">Практическое руководство. Отображение ссылок веб-типа с помощью элемента управления RichTextBox в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="f5dc2-102">How to: Display Web-Style Links with the Windows Forms RichTextBox Control</span></span>
-<span data-ttu-id="f5dc2-103">Windows Forms <xref:System.Windows.Forms.RichTextBox> веб-ссылок может отображать элемент управления цветом и подчеркиванием.</span><span class="sxs-lookup"><span data-stu-id="f5dc2-103">The Windows Forms <xref:System.Windows.Forms.RichTextBox> control can display Web links as colored and underlined.</span></span> <span data-ttu-id="f5dc2-104">Можно написать код, который открывает окно браузера, веб-узлом, указанный в тексте ссылки, при щелчке ссылки.</span><span class="sxs-lookup"><span data-stu-id="f5dc2-104">You can write code that opens a browser window showing the Web site specified in the link text when the link is clicked.</span></span>  
+# <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a><span data-ttu-id="7187e-102">Практическое руководство. Отображение ссылок веб-типа с помощью элемента управления RichTextBox в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="7187e-102">How to: Display Web-Style Links with the Windows Forms RichTextBox Control</span></span>
+<span data-ttu-id="7187e-103">Windows Forms <xref:System.Windows.Forms.RichTextBox> веб-ссылок может отображать элемент управления цветом и подчеркиванием.</span><span class="sxs-lookup"><span data-stu-id="7187e-103">The Windows Forms <xref:System.Windows.Forms.RichTextBox> control can display Web links as colored and underlined.</span></span> <span data-ttu-id="7187e-104">Можно написать код, который открывает окно браузера, веб-узлом, указанный в тексте ссылки, при щелчке ссылки.</span><span class="sxs-lookup"><span data-stu-id="7187e-104">You can write code that opens a browser window showing the Web site specified in the link text when the link is clicked.</span></span>  
   
-### <a name="to-link-to-a-web-page-with-the-richtextbox-control"></a><span data-ttu-id="f5dc2-105">Чтобы связать веб-страницу с элементом управления RichTextBox</span><span class="sxs-lookup"><span data-stu-id="f5dc2-105">To link to a Web page with the RichTextBox control</span></span>  
+### <a name="to-link-to-a-web-page-with-the-richtextbox-control"></a><span data-ttu-id="7187e-105">Чтобы связать веб-страницу с элементом управления RichTextBox</span><span class="sxs-lookup"><span data-stu-id="7187e-105">To link to a Web page with the RichTextBox control</span></span>  
   
-1.  <span data-ttu-id="f5dc2-106">Задайте <xref:System.Windows.Forms.RichTextBox.Text%2A> свойство на строку, которая содержит допустимый URL-адрес (например, "http://www.microsoft.com/«).</span><span class="sxs-lookup"><span data-stu-id="f5dc2-106">Set the <xref:System.Windows.Forms.RichTextBox.Text%2A> property to a string that includes a valid URL (for example, "http://www.microsoft.com/").</span></span>  
+1. <span data-ttu-id="7187e-106">Задайте <xref:System.Windows.Forms.RichTextBox.Text%2A> свойство на строку, которая содержит допустимый URL-адрес (например, "http://www.microsoft.com/«).</span><span class="sxs-lookup"><span data-stu-id="7187e-106">Set the <xref:System.Windows.Forms.RichTextBox.Text%2A> property to a string that includes a valid URL (for example, "http://www.microsoft.com/").</span></span>  
   
-2.  <span data-ttu-id="f5dc2-107">Убедитесь, что <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> свойству `true` (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="f5dc2-107">Make sure the <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> property is set to `true` (the default).</span></span>  
+2. <span data-ttu-id="7187e-107">Убедитесь, что <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> свойству `true` (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="7187e-107">Make sure the <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> property is set to `true` (the default).</span></span>  
   
-3.  <span data-ttu-id="f5dc2-108">Создать новый глобальный экземпляр <xref:System.Diagnostics.Process> объекта.</span><span class="sxs-lookup"><span data-stu-id="f5dc2-108">Create a new global instance of the <xref:System.Diagnostics.Process> object.</span></span>  
+3. <span data-ttu-id="7187e-108">Создать новый глобальный экземпляр <xref:System.Diagnostics.Process> объекта.</span><span class="sxs-lookup"><span data-stu-id="7187e-108">Create a new global instance of the <xref:System.Diagnostics.Process> object.</span></span>  
   
-4.  <span data-ttu-id="f5dc2-109">Написать обработчик событий для <xref:System.Windows.Forms.RichTextBox.LinkClicked> событий, который отправляет браузер требуемый текст.</span><span class="sxs-lookup"><span data-stu-id="f5dc2-109">Write an event handler for the <xref:System.Windows.Forms.RichTextBox.LinkClicked> event that sends the browser the desired text.</span></span>  
+4. <span data-ttu-id="7187e-109">Написать обработчик событий для <xref:System.Windows.Forms.RichTextBox.LinkClicked> событий, который отправляет браузер требуемый текст.</span><span class="sxs-lookup"><span data-stu-id="7187e-109">Write an event handler for the <xref:System.Windows.Forms.RichTextBox.LinkClicked> event that sends the browser the desired text.</span></span>  
   
-     <span data-ttu-id="f5dc2-110">В следующем примере <xref:System.Windows.Forms.RichTextBox.LinkClicked> событий открывает экземпляр Internet Explorer на URL-адрес, указанный в <xref:System.Windows.Forms.RichTextBox.Text%2A> свойство <xref:System.Windows.Forms.RichTextBox> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="f5dc2-110">In the example below, the <xref:System.Windows.Forms.RichTextBox.LinkClicked> event opens an instance of Internet Explorer to the URL specified in the <xref:System.Windows.Forms.RichTextBox.Text%2A> property of the <xref:System.Windows.Forms.RichTextBox> control.</span></span> <span data-ttu-id="f5dc2-111">В этом примере предполагается, что форма <xref:System.Windows.Forms.RichTextBox> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="f5dc2-111">This example assumes a form with a <xref:System.Windows.Forms.RichTextBox> control.</span></span>  
+     <span data-ttu-id="7187e-110">В следующем примере <xref:System.Windows.Forms.RichTextBox.LinkClicked> событий открывает экземпляр Internet Explorer на URL-адрес, указанный в <xref:System.Windows.Forms.RichTextBox.Text%2A> свойство <xref:System.Windows.Forms.RichTextBox> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="7187e-110">In the example below, the <xref:System.Windows.Forms.RichTextBox.LinkClicked> event opens an instance of Internet Explorer to the URL specified in the <xref:System.Windows.Forms.RichTextBox.Text%2A> property of the <xref:System.Windows.Forms.RichTextBox> control.</span></span> <span data-ttu-id="7187e-111">В этом примере предполагается, что форма <xref:System.Windows.Forms.RichTextBox> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="7187e-111">This example assumes a form with a <xref:System.Windows.Forms.RichTextBox> control.</span></span>  
   
     > [!IMPORTANT]
-    >  <span data-ttu-id="f5dc2-112">В вызывающем <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> метод, вы столкнетесь <xref:System.Security.SecurityException> исключение, если код выполняется в контексте частичного доверия из-за недостатка прав.</span><span class="sxs-lookup"><span data-stu-id="f5dc2-112">In calling the <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> method, you will encounter a <xref:System.Security.SecurityException> exception if you are running the code in a partial-trust context because of insufficient privileges.</span></span> <span data-ttu-id="f5dc2-113">Дополнительные сведения см. в разделе [Основы управления доступом для кода](../../misc/code-access-security-basics.md).</span><span class="sxs-lookup"><span data-stu-id="f5dc2-113">For more information, see [Code Access Security Basics](../../misc/code-access-security-basics.md).</span></span>  
+    >  <span data-ttu-id="7187e-112">В вызывающем <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> метод, вы столкнетесь <xref:System.Security.SecurityException> исключение, если код выполняется в контексте частичного доверия из-за недостатка прав.</span><span class="sxs-lookup"><span data-stu-id="7187e-112">In calling the <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> method, you will encounter a <xref:System.Security.SecurityException> exception if you are running the code in a partial-trust context because of insufficient privileges.</span></span> <span data-ttu-id="7187e-113">Дополнительные сведения см. в разделе [Основы управления доступом для кода](../../misc/code-access-security-basics.md).</span><span class="sxs-lookup"><span data-stu-id="7187e-113">For more information, see [Code Access Security Basics](../../misc/code-access-security-basics.md).</span></span>  
   
     ```vb  
     Public p As New System.Diagnostics.Process  
@@ -74,13 +74,13 @@ ms.locfileid: "59148243"
        }  
     ```  
   
-     <span data-ttu-id="f5dc2-114">([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Необходимо инициализировать процесс `p`, что можно сделать, включив в конструктор формы следующую инструкцию:</span><span class="sxs-lookup"><span data-stu-id="f5dc2-114">([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) You must initialize process `p`, which you can do by including the following statement in the constructor of your form:</span></span>  
+     <span data-ttu-id="7187e-114">([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Необходимо инициализировать процесс `p`, что можно сделать, включив в конструктор формы следующую инструкцию:</span><span class="sxs-lookup"><span data-stu-id="7187e-114">([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) You must initialize process `p`, which you can do by including the following statement in the constructor of your form:</span></span>  
   
     ```cpp  
     p = gcnew System::Diagnostics::Process();  
     ```  
   
-     <span data-ttu-id="f5dc2-115">(Visual C# [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) поместите следующий код в конструктор формы для регистрации обработчика событий.</span><span class="sxs-lookup"><span data-stu-id="f5dc2-115">(Visual C#, [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
+     <span data-ttu-id="7187e-115">(Visual C# [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) поместите следующий код в конструктор формы для регистрации обработчика событий.</span><span class="sxs-lookup"><span data-stu-id="7187e-115">(Visual C#, [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.richTextBox1.LinkClicked += new   
@@ -94,7 +94,7 @@ ms.locfileid: "59148243"
        (this, &Form1::richTextBox1_LinkClicked);  
     ```  
   
-     <span data-ttu-id="f5dc2-116">Важно, чтобы немедленно остановить процесс, который вы создали после завершения работы с ним.</span><span class="sxs-lookup"><span data-stu-id="f5dc2-116">It is important to immediately stop the process you have created once you have finished working with it.</span></span> <span data-ttu-id="f5dc2-117">Ссылка на код, представленный выше, код, чтобы остановить процесс может выглядеть следующим образом:</span><span class="sxs-lookup"><span data-stu-id="f5dc2-117">Referring to the code presented above, your code to stop the process might look like this:</span></span>  
+     <span data-ttu-id="7187e-116">Важно, чтобы немедленно остановить процесс, который вы создали после завершения работы с ним.</span><span class="sxs-lookup"><span data-stu-id="7187e-116">It is important to immediately stop the process you have created once you have finished working with it.</span></span> <span data-ttu-id="7187e-117">Ссылка на код, представленный выше, код, чтобы остановить процесс может выглядеть следующим образом:</span><span class="sxs-lookup"><span data-stu-id="7187e-117">Referring to the code presented above, your code to stop the process might look like this:</span></span>  
   
     ```vb  
     Public Sub StopWebProcess()  
@@ -116,10 +116,10 @@ ms.locfileid: "59148243"
     }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="f5dc2-118">См. также</span><span class="sxs-lookup"><span data-stu-id="f5dc2-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7187e-118">См. также</span><span class="sxs-lookup"><span data-stu-id="7187e-118">See also</span></span>
 
 - <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>
 - <xref:System.Windows.Forms.RichTextBox.LinkClicked>
 - <xref:System.Windows.Forms.RichTextBox>
-- [<span data-ttu-id="f5dc2-119">Элемент управления RichTextBox</span><span class="sxs-lookup"><span data-stu-id="f5dc2-119">RichTextBox Control</span></span>](richtextbox-control-windows-forms.md)
-- [<span data-ttu-id="f5dc2-120">Элементы управления для использования в формах Windows Forms</span><span class="sxs-lookup"><span data-stu-id="f5dc2-120">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)
+- [<span data-ttu-id="7187e-119">Элемент управления RichTextBox</span><span class="sxs-lookup"><span data-stu-id="7187e-119">RichTextBox Control</span></span>](richtextbox-control-windows-forms.md)
+- [<span data-ttu-id="7187e-120">Элементы управления для использования в формах Windows Forms</span><span class="sxs-lookup"><span data-stu-id="7187e-120">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)
