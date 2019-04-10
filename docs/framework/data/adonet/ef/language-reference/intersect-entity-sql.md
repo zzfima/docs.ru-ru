@@ -2,12 +2,12 @@
 title: INTERSECT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 93c6fe33-f341-4b52-911e-adf503891951
-ms.openlocfilehash: 4d2111425dc3222f86fdb46109442c8b365e841b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 85b0abb03161b2df0cfc4ddf6cafc92fb7de9d95
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59128470"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296983"
 ---
 # <a name="intersect-entity-sql"></a>INTERSECT (Entity SQL)
 Возвращает коллекцию различных значений, возвращаемых выражениями запроса, указанных как слева, так и справа от операнда INTERSECT. Все выражения должны иметь тот же тип, что и аргумент `expression`, или принадлежать к базовому или производному типу для типа этого аргумента.  
@@ -31,9 +31,9 @@ expression INTERSECT expression
 ## <a name="example"></a>Пример  
  Следующий запрос Entity SQL использует оператор INTERSECT, чтобы вернуть коллекцию различных значений, возвращаемых выражениями запроса, указанных как слева, так и справа от операнда INTERSECT. Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.  
   
-1.  Выполните процедуру, описанную в [как: Выполнение запроса, возвращающего результаты StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Выполните процедуру, описанную в [как: Выполнение запроса, возвращающего результаты StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
-2.  Передайте следующий запрос в качестве аргумента методу `ExecuteStructuralTypeQuery` :  
+2. Передайте следующий запрос в качестве аргумента методу `ExecuteStructuralTypeQuery` :  
   
  [!code-csharp[DP EntityServices Concepts 2#INTERSECT](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#intersect)]  
   

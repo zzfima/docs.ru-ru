@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ProgressBar control [Windows Forms], about ProgressBar control
 - progress controls [Windows Forms], about progress controls
 ms.assetid: a05d9cba-3a6a-4f8f-94b8-8ec12799fb80
-ms.openlocfilehash: db0a43534080d630323d8c1c95759fd2dcc04a85
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 24b47669cdf8ed0a8f0f936b0b3b9c354e62445f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707950"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227500"
 ---
 # <a name="progressbar-control-overview-windows-forms"></a>Общие сведения об элементе управления ProgressBar (Windows Forms)
 > [!IMPORTANT]
@@ -36,5 +36,6 @@ ms.locfileid: "57707950"
 >  <xref:System.Windows.Forms.StatusStrip> И <xref:System.Windows.Forms.ToolStripStatusLabel> элементы управления заменяют и расширяют функциональные возможности для <xref:System.Windows.Forms.StatusBar> и <xref:System.Windows.Forms.StatusBarPanel> управляет; Однако <xref:System.Windows.Forms.StatusBar> и <xref:System.Windows.Forms.StatusBarPanel> элементы управления сохраняются для обеспечения обратной совместимости и использования в будущем, если вы Выберите этот параметр.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.ProgressBar>
 - [Элемент управления ProgressBar](progressbar-control-windows-forms.md)

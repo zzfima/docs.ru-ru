@@ -2,18 +2,18 @@
 title: Использование ExpressionTextBox в пользовательском конструкторе действия
 ms.date: 03/30/2017
 ms.assetid: f82e73e7-a256-4a4d-82b7-c0d62f4ab5e7
-ms.openlocfilehash: 87f1052b5bf2c7c4e260aa606cb03b978726bb77
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 7c1ba262046a665b8d63157fe3cdb4b1a41c37bf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587873"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229385"
 ---
 # <a name="using-the-expressiontextbox-in-a-custom-activity-designer"></a>Использование ExpressionTextBox в пользовательском конструкторе действия
 В этом образце показано, как использовать <xref:System.Activities.Presentation.View.ExpressionTextBox> в настраиваемом конструкторе действий. Пользовательское действие `MultiAssign` присваивает два строковых значения двум строковым переменным. Некоторые элементы управления <xref:System.Activities.Presentation.View.ExpressionTextBox> привязываются к аргументу <xref:System.Activities.InArgument>, а некоторые - к аргументу <xref:System.Activities.OutArgument>.
 
 ## <a name="sample-details"></a>Подробные сведения об образце
- `ArgumentToExpressionConverter` - это преобразователь типов, используемый для привязки выражений к аргументам. Параметр `ConverterParameter` необходимо установить в соответствующее значение `In` или `Out`. Тип `InOut` не поддерживается.
+ `ArgumentToExpressionConverter` - это преобразователь типов, используемый для привязки выражений к аргументам. Параметр `ConverterParameter` необходимо установить в соответствующее значение `In` или `Out`. `InOut` не поддерживается.
 
  `UseLocationExpression` Атрибут используется на `OutArgument`, чтобы указать, что выражение должно быть выражение L-значение («левое значение» или «значение расположения»). В большинстве случаев левостороннее выражение является допустимым идентификатором Visual Basic, используемым для указания того, что возвращаемый аргумент `OutArgument` является переменной или именем аргумента.
 
@@ -47,5 +47,6 @@ ms.locfileid: "54587873"
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\ExpressionTextBox`  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Activities.Presentation.View.ExpressionTextBox>
 - [Разработка приложений с помощью конструктора рабочего процесса](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)

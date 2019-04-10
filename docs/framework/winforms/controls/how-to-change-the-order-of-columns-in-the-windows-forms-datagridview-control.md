@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column order
 - data grids [Windows Forms], changing column order
 ms.assetid: 5e9ac3bc-b0f0-48cb-a3d5-b005af905395
-ms.openlocfilehash: 0e49107193d546e590582ca6bab798149d7064a7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 90d262e738f092215e88e38e31169d74059e4401
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711269"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228800"
 ---
 # <a name="how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control"></a>Практическое руководство. Изменение порядка столбцов элемента управления DataGridView в Windows Forms
 При использовании <xref:System.Windows.Forms.DataGridView> для отображения данных из источника данных столбцы в схеме данных не всегда выводятся в нужном порядке. Порядок отображения столбцов можно изменить с помощью свойства <xref:System.Windows.Forms.DataGridViewColumn.DisplayIndex%2A> класса <xref:System.Windows.Forms.DataGridViewColumn>.  
@@ -35,9 +35,10 @@ ms.locfileid: "57711269"
 -   ссылки на сборки <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, <xref:System.Data?displayProperty=nameWithType> и <xref:System.Xml?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn>
 - <xref:System.Windows.Forms.DataGridViewColumn.DisplayIndex%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A?displayProperty=nameWithType>
 - [Отображение данных с помощью элемента управления DataGridView в Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Практическое руководство. Привязка данных к элементу управления DataGridView Windows Forms](how-to-bind-data-to-the-windows-forms-datagridview-control.md)
+- [Практическое руководство. Привязка данных к элементу управления DataGridView в Windows Forms](how-to-bind-data-to-the-windows-forms-datagridview-control.md)

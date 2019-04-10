@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eaf5a0061b068d9adea3f6aeb28f9b6bb20c3174
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 238b054d240437df64a83a9c4daad34d4bd5d36a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710263"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228890"
 ---
 # <a name="ihostgcmanager-interface"></a>Интерфейс IHostGCManager
 Предоставляет методы, которые уведомить узел событий в механизм сборки мусора, реализуемый общеязыковой среды выполнения (CLR).  
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |[Метод SuspensionEnding](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md)|Уведомляет основное приложение, что среда CLR возобновляет выполнение задачи в потоках, которые были приостановлены для сборки мусора.|  
 |[Метод SuspensionStarting](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionstarting-method.md)|Уведомляет основное приложение, что CLR приостанавливает выполнение задачи для выполнения сборки мусора.|  
@@ -44,6 +44,7 @@ ms.locfileid: "54710263"
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
 - [Интерфейс ICLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
 - [Интерфейс IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)

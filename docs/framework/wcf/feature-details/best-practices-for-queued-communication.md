@@ -5,12 +5,12 @@ helpviewer_keywords:
 - queues [WCF], best practices
 - best practices [WCF], queued communication
 ms.assetid: 446a6383-cae3-4338-b193-a33c14a49948
-ms.openlocfilehash: 03b2366f531c0a7f8fd296ee2a685c38fd62ca82
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 27b9c6e117b6ba809daae87d376b03e27bc2b0f5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719824"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230100"
 ---
 # <a name="best-practices-for-queued-communication"></a>Рекомендации по взаимодействию с использованием очередей
 В этом разделе приведены рекомендации по взаимодействию с использованием очередей в Windows Communication Foundation (WCF). В последующих разделах рассматриваются рекомендации с точки зрения сценариев.  
@@ -29,7 +29,7 @@ ms.locfileid: "54719824"
  Для сквозной надежности установите для свойства <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> значение `true`, чтобы обеспечить передачу. Для свойства <xref:System.ServiceModel.MsmqBindingBase.Durable%2A> можно задать значение `true` или `false`, в зависимости от требований (значение по умолчанию - `true`). Как правило, для свойства <xref:System.ServiceModel.MsmqBindingBase.Durable%2A> задается значение `true` как составная часть сквозной надежности. Компромисс достигается за счет производительности, но сообщения становятся устойчивыми и не теряются в случае сбоя диспетчера очередей.  
   
 ### <a name="use-of-transactions"></a>Использование транзакций  
- Необходимо использовать транзакции для обеспечения сквозной надежности. Гарантии `ExactlyOnce` обеспечивают только доставку сообщений в целевую очередь. Чтобы гарантировать получение сообщений, используйте транзакции. Без транзакций в случае сбоя службы будет потеряно сообщение, находящееся в процессе доставки, но фактически доставленное в приложение.  
+ Необходимо использовать транзакции для обеспечения сквозной надежности. `ExactlyOnce` гарантии обеспечивают только доставку сообщений в целевую очередь. Чтобы гарантировать получение сообщений, используйте транзакции. Без транзакций в случае сбоя службы будет потеряно сообщение, находящееся в процессе доставки, но фактически доставленное в приложение.  
   
 ### <a name="use-of-dead-letter-queues"></a>Использование очередей недоставленных сообщений  
  Очереди недоставленных сообщений обеспечивают уведомления в случаях, когда не удалось доставить сообщение в целевую очередь. Можно использовать системную очередь недоставленных сообщений или пользовательскую очередь недоставленных сообщений. Как правило, лучше использовать пользовательскую очередь недоставленных сообщений, так как она позволяет отправлять недоставленные сообщения из одного приложения в отдельную очередь недоставленных сообщений. В противном случае все недоставленные сообщения из всех работающих в системе приложений будут доставляться в одну очередь. Затем каждое приложение должно просматривать очередь недоставленных сообщений, чтобы найти недоставленные сообщения, относящиеся к этому приложению. Иногда использование пользовательской очереди недоставленных сообщений невозможно, например, при использовании MSMQ 3.0.  
@@ -41,7 +41,7 @@ ms.locfileid: "54719824"
 ### <a name="use-of-poison-message-handling"></a>Использование обработки подозрительных сообщений  
  Обработка подозрительных сообщений обеспечивает возможность восстановления после сбоя при обработке сообщений.  
   
- При использовании возможности обработки подозрительных сообщений убедитесь, что для свойства <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> задано подходящее значение. Если свойству присвоено значение <xref:System.ServiceModel.ReceiveErrorHandling.Drop>, это означает потерю данных. С другой стороны, значение <xref:System.ServiceModel.ReceiveErrorHandling.Fault> этого свойства вызывает сбой узла службы в случае обнаружения подозрительного сообщения. При использовании MSMQ 3.0 значение <xref:System.ServiceModel.ReceiveErrorHandling.Fault> - это наилучший способ избежать потери данных и избавиться от подозрительного сообщения. При использовании MSMQ 4.0 <xref:System.ServiceModel.ReceiveErrorHandling.Move> является рекомендуемым способом. Операция <xref:System.ServiceModel.ReceiveErrorHandling.Move> обеспечивает перемещение подозрительного сообщения из очереди, чтобы служба могла продолжать обрабатывать новые сообщения. Затем служба подозрительных сообщений может отдельно обработать подозрительное сообщение.  
+ При использовании возможности обработки подозрительных сообщений убедитесь, что для свойства <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> задано подходящее значение. Если свойству присвоено значение <xref:System.ServiceModel.ReceiveErrorHandling.Drop>, это означает потерю данных. С другой стороны, значение <xref:System.ServiceModel.ReceiveErrorHandling.Fault> этого свойства вызывает сбой узла службы в случае обнаружения подозрительного сообщения. При использовании MSMQ 3.0 значение <xref:System.ServiceModel.ReceiveErrorHandling.Fault> - это наилучший способ избежать потери данных и избавиться от подозрительного сообщения. При использовании MSMQ 4.0 <xref:System.ServiceModel.ReceiveErrorHandling.Move> является рекомендуемым способом. <xref:System.ServiceModel.ReceiveErrorHandling.Move> обеспечивает перемещение подозрительного сообщения из очереди, чтобы служба могла продолжать обрабатывать новые сообщения. Затем служба подозрительных сообщений может отдельно обработать подозрительное сообщение.  
   
  Дополнительные сведения см. в разделе [обработка подозрительных сообщений](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
   
@@ -77,14 +77,15 @@ ms.locfileid: "54719824"
   
 -   Сообщение WCF не совпадает с телом сообщения MSMQ. При отправке сообщения WCF с помощью привязки, поддерживающей очередь, тело сообщения WCF помещается в сообщение MSMQ. Инфраструктура MSMQ не замечает эту дополнительную информацию - она видит только сообщение MSMQ.  
   
--   Класс `MsmqIntegrationBinding` поддерживает распространенные типы сериализации. На основе типа сериализации тип тела универсального сообщения, <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>, принимает параметры разных типов. Например, для <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.ByteArray> требуется `MsmqMessage\<byte[]>`, а для <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.Stream> требуется `MsmqMessage<Stream>`.  
+-   `MsmqIntegrationBinding` поддерживает распространенные типы сериализации. На основе типа сериализации тип тела универсального сообщения, <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>, принимает параметры разных типов. Например, для <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.ByteArray> требуется `MsmqMessage\<byte[]>`, а для <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.Stream> требуется `MsmqMessage<Stream>`.  
   
 -   С помощью сериализации XML, можно указать известный тип с помощью `KnownTypes` атрибут [ \<поведение >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) элемент, который затем используется для определения способа десериализации сообщения XML.  
   
 ## <a name="see-also"></a>См. также
+
 - [Очереди в WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
-- [Практическое руководство. Обмен сообщениями с конечными точками WCF в очереди](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
-- [Практическое руководство. Обмен сообщениями с конечными точками WCF и приложений с очередями сообщений](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
+- [Практическое руководство. Обмен сообщениями в очереди с конечными точками WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
+- [Практическое руководство. Обмен сообщениями с конечными точками WCF и приложениями очереди сообщений](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
 - [Группирование сообщений в очереди в рамках сеанса](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)
 - [Объединение сообщений в одну транзакцию](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)
 - [Использование очередей недоставленных сообщений для обработки сбоев при передаче сообщений](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)

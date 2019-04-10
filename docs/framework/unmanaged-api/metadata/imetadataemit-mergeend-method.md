@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a8602405a743f1ced6485d84a34a267771716d9b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 277e7e57ae01128039c3a280158110acde3363a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57469018"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230009"
 ---
 # <a name="imetadataemitmergeend-method"></a>Метод IMetaDataEmit::MergeEnd
 Выполняет слияние в текущей области все области метаданных, определяемое один или несколько предыдущих вызовов [IMetaDataEmit::Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md).  
@@ -71,5 +71,6 @@ HRESULT MergeEnd ();
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Интерфейс IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - queues [WCF]. grouping messages
 ms.assetid: 63b23b36-261f-4c37-99a2-cc323cd72a1a
-ms.openlocfilehash: 0246f059079b2024dd1bd16ae6afc4950d08e0a9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 37f0874ea99ee928e49a54a3e6a05ea4ef06f84e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115275"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294669"
 ---
 # <a name="grouping-queued-messages-in-a-session"></a>Группирование сообщений в очереди в рамках сеанса
 Windows Communication Foundation (WCF) предоставляет сеанс, позволяющий сгруппировать набор связанных сообщений для обработки одного принимающим приложением. Сообщения, являющиеся частью сеанса, должны быть часть одной транзакции. Так как все сообщения являются частью одной транзакции, в случае сбоя обработки одного сообщения производится откат всего сеанса. Сеансы имеют аналогичные поведения в отношении очередей недоставленных сообщений и очередей подозрительных сообщений. Свойство "срок жизни" (TTL), заданное в настроенной для сеансов привязке, поддерживающей очередь, применяется ко всему сеансу. Если до истечения срока TTL отправлена только часть сообщений из сеанса, весь сеанс помещается в очередь недоставленных сообщений. Аналогично, если сообщения из сеанса не отправлены приложению из очереди приложения, весь сеанс помещается в очередь подозрительных сообщений (при наличии).  
@@ -24,49 +24,49 @@ Windows Communication Foundation (WCF) предоставляет сеанс, п
   
 #### <a name="to-set-up-a-service-contract-to-use-sessions"></a>Настройка контракта службы для использования сеансов  
   
-1.  Определите контракт службы, для которого требуются сеансы. Для этого используйте атрибут <xref:System.ServiceModel.OperationContractAttribute> и укажите:  
+1. Определите контракт службы, для которого требуются сеансы. Для этого используйте атрибут <xref:System.ServiceModel.OperationContractAttribute> и укажите:  
   
     ```  
     SessionMode=SessionMode.Required  
     ```  
   
-2.  Пометьте операции в контракте как односторонние, так как эти методы ничего не возвращают. Для этого используйте атрибут <xref:System.ServiceModel.OperationContractAttribute> и укажите:  
+2. Пометьте операции в контракте как односторонние, так как эти методы ничего не возвращают. Для этого используйте атрибут <xref:System.ServiceModel.OperationContractAttribute> и укажите:  
   
     ```  
     [OperationContract(IsOneWay = true)]  
     ```  
   
-3.  Реализуйте контракт службы и укажите для `InstanceContextMode` значение `PerSession`. В результате для каждого сеанса создается только один экземпляр службы.  
+3. Реализуйте контракт службы и укажите для `InstanceContextMode` значение `PerSession`. В результате для каждого сеанса создается только один экземпляр службы.  
   
     ```  
     [ServiceBehavior(InstanceContextMode=InstanceContextMode.PerSession)]  
     ```  
   
-4.  Для каждой операции службы требуется транзакция. Это задается с помощью атрибута <xref:System.ServiceModel.OperationBehaviorAttribute>. Для операции, завершающей транзакцию, параметр `TransactionAutoComplete` должен иметь значение `true`.  
+4. Для каждой операции службы требуется транзакция. Это задается с помощью атрибута <xref:System.ServiceModel.OperationBehaviorAttribute>. Для операции, завершающей транзакцию, параметр `TransactionAutoComplete` должен иметь значение `true`.  
   
     ```  
     [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]   
     ```  
   
-5.  Настройте конечную точку, использующую предоставляемую системой привязку `NetMsmqBinding`.  
+5. Настройте конечную точку, использующую предоставляемую системой привязку `NetMsmqBinding`.  
   
-6.  Создайте очередь транзакций с использованием <xref:System.Messaging>. Можно также создать очередь с помощью MSMQ или MMC. В таком случае создайте транзакционную очередь.  
+6. Создайте очередь транзакций с использованием <xref:System.Messaging>. Можно также создать очередь с помощью MSMQ или MMC. В таком случае создайте транзакционную очередь.  
   
-7.  Создайте узел для данной службы с помощью <xref:System.ServiceModel.ServiceHost>.  
+7. Создайте узел для данной службы с помощью <xref:System.ServiceModel.ServiceHost>.  
   
-8.  Откройте узел службы для обеспечения доступности службы.  
+8. Откройте узел службы для обеспечения доступности службы.  
   
 9. Закройте узел службы.  
   
 #### <a name="to-set-up-a-client"></a>Настройка клиента  
   
-1.  Создайте область транзакции для записи в транзакционную очередь.  
+1. Создайте область транзакции для записи в транзакционную очередь.  
   
-2.  Создание клиента WCF, с помощью [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) средство.  
+2. Создание клиента WCF, с помощью [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) средство.  
   
-3.  Сделайте заказ.  
+3. Сделайте заказ.  
   
-4.  Закройте клиент WCF.  
+4. Закройте клиент WCF.  
   
 ## <a name="example"></a>Пример  
   

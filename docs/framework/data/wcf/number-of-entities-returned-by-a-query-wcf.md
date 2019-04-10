@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Определения количества сущностей, возвращаемых запросом (службы данных WCF)
+title: Практическое руководство. Определения количества сущностей, возвращаемых запросом (службы данных WCF)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, row count
 ms.assetid: 03d41a82-df95-40ac-8439-a6c327d37ba8
-ms.openlocfilehash: cc4ada3dabe20927f4c3a27dbb0fda78e41452c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1df3c685940562bfdf1ed84030be9f9e1c283f10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683077"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228787"
 ---
-# <a name="how-to-determine-the-number-of-entities-returned-by-a-query-wcf-data-services"></a>Как выполнить Определения количества сущностей, возвращаемых запросом (службы данных WCF)
+# <a name="how-to-determine-the-number-of-entities-returned-by-a-query-wcf-data-services"></a>Практическое руководство. Определения количества сущностей, возвращаемых запросом (службы данных WCF)
 В [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] можно определить число сущностей в наборе сущностей, заданном в URI запроса. Это число можно включить в результат запроса или представить как целое значение. Дополнительные сведения см. в разделе [запросы к службе данных](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
   
  Пример в этом разделе использует образец службы данных Northwind и автоматически сформированные клиентские классы службы данных. Эта служба и клиентские классы данных создаются при завершении [краткое руководство по службам данных WCF](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
@@ -32,4 +32,5 @@ ms.locfileid: "54683077"
  [!code-vb[Astoria Northwind Client#CountAllCustomersValueOnly](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#countallcustomersvalueonly)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Выполнение запросов к службе данных](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)

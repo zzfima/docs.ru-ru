@@ -2,12 +2,12 @@
 title: Базовый класс NativeActivity
 ms.date: 03/30/2017
 ms.assetid: 254a4c50-425b-426d-a32f-0f7234925bac
-ms.openlocfilehash: 40eff2e597763fd492b3051df1a91622e7a60672
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: f718d247e7110b46cdd13038c7c93c1e45612c75
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842039"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296593"
 ---
 # <a name="nativeactivity-base-class"></a>Базовый класс NativeActivity
 
@@ -34,28 +34,28 @@ ms.locfileid: "48842039"
 
 ### <a name="to-create-a-custom-activity-that-inherits-from-nativeactivity"></a>Создание пользовательского действия, которое наследуется от NativeActivity
 
-1.  Откройте Visual Studio 2010.
+1. OpenVisual Studio 2010.
 
-2.  Выберите **файл**, **новый**, а затем **проекта**. Выберите **Workflow 4.0** под **Visual C#** в **типы проектов** затем выберите **v2010** узла. Выберите **библиотеки действий** в **шаблоны** окна. Задайте имя для нового проекта HelloActivity.
+2. Выберите **файл**, **новый**, а затем **проекта**. Выберите **Workflow 4.0** под **Visual C#** в **типы проектов** затем выберите **v2010** узла. Выберите **библиотеки действий** в **шаблоны** окна. Задайте имя для нового проекта HelloActivity.
 
-3.  Щелкните правой кнопкой мыши Activity1.xaml в проекте HelloActivity и выберите **удалить**.
+3. Щелкните правой кнопкой мыши Activity1.xaml в проекте HelloActivity и выберите **удалить**.
 
-4.  Щелкните правой кнопкой мыши проект HelloActivity и выберите **добавить**, а затем **класс**. Задайте имя для нового класса HelloActivity.cs.
+4. Щелкните правой кнопкой мыши проект HelloActivity и выберите **добавить**, а затем **класс**. Задайте имя для нового класса HelloActivity.cs.
 
-5.  В файле HelloActivity.cs добавьте следующие директивы `using`.
+5. В файле HelloActivity.cs добавьте следующие директивы `using`.
 
     ```csharp
     using System.Activities;
     using System.Activities.Statements;
     ```
 
-6.  Сделайте так, чтобы новый класс наследовал от действия <xref:System.Activities.NativeActivity> путем добавления базового класса к объявлению класса.
+6. Сделайте так, чтобы новый класс наследовал от действия <xref:System.Activities.NativeActivity> путем добавления базового класса к объявлению класса.
 
     ```csharp
     class HelloActivity : NativeActivity
     ```
 
-7.  Добавьте функциональные возможности к классу путем добавления метода <xref:System.Activities.NativeActivity.Execute%2A>.
+7. Добавьте функциональные возможности к классу путем добавления метода <xref:System.Activities.NativeActivity.Execute%2A>.
 
     ```csharp
     protected override void Execute(NativeActivityContext context)
@@ -64,7 +64,7 @@ ms.locfileid: "48842039"
     }
     ```
 
-8.  Переопределите метод <xref:System.Activities.NativeActivity.CacheMetadata%2A> и вызовите соответствующий метод Add, чтобы сообщить среде выполнения рабочего процесса о переменных, аргументах, дочерних элементах и делегатах пользовательского действия. Дополнительные сведения см. в описании класса <xref:System.Activities.NativeActivityMetadata>.
+8. Переопределите метод <xref:System.Activities.NativeActivity.CacheMetadata%2A> и вызовите соответствующий метод Add, чтобы сообщить среде выполнения рабочего процесса о переменных, аргументах, дочерних элементах и делегатах пользовательского действия. Дополнительные сведения см. в описании класса <xref:System.Activities.NativeActivityMetadata>.
 
 9. Для планирования закладок используйте объект <xref:System.Activities.NativeActivityContext>. Подробные сведения о том, как создавать, планировать и возобновлять закладки, см. в разделе <xref:System.Activities.WorkflowApplicationIdleEventArgs.Bookmarks%2A>.
 

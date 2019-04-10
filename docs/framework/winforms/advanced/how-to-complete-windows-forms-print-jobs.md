@@ -9,12 +9,12 @@ helpviewer_keywords:
 - print jobs [Windows Forms], completing in Windows Forms
 - printing [Windows Forms], print jobs
 ms.assetid: 23ec74f7-34c5-4710-82a0-ee2914518548
-ms.openlocfilehash: f8d0f1f067efbae6e2b667328e75996179b91737
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 256b9a3d8842aaa4b032e67ebac9ca6a9e1ef34a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59159826"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293759"
 ---
 # <a name="how-to-complete-windows-forms-print-jobs"></a>Практическое руководство. Выполнение заданий печати в Windows Forms
 Часто текстовые редакторы и другие приложения, использующие печать предоставит возможность отобразить сообщение для пользователей, что задание на печать завершена. Можно предоставить эти функции в формах Windows путем обработки <xref:System.Drawing.Printing.PrintDocument.EndPrint> событие <xref:System.Drawing.Printing.PrintDocument> компонента.  
@@ -23,7 +23,7 @@ ms.locfileid: "59159826"
   
 ### <a name="to-complete-a-print-job"></a>Чтобы выполнить задание печати  
   
-1.  Задайте <xref:System.Drawing.Printing.PrintDocument.DocumentName%2A> свойство <xref:System.Drawing.Printing.PrintDocument> компонента.  
+1. Задайте <xref:System.Drawing.Printing.PrintDocument.DocumentName%2A> свойство <xref:System.Drawing.Printing.PrintDocument> компонента.  
   
     ```vb  
     PrintDocument1.DocumentName = "MyTextFile"  
@@ -37,7 +37,7 @@ ms.locfileid: "59159826"
     printDocument1->DocumentName = "MyTextFile";  
     ```  
   
-2.  Напишите код для обработки события <xref:System.Drawing.Printing.PrintDocument.EndPrint> .  
+2. Напишите код для обработки события <xref:System.Drawing.Printing.PrintDocument.EndPrint> .  
   
      В следующем примере кода отображается окно сообщения, указывающее, что завершении печати документа.  
   

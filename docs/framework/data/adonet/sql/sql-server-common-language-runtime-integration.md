@@ -2,12 +2,12 @@
 title: Интеграция среды CLR и SQL Server
 ms.date: 03/30/2017
 ms.assetid: c7a324c4-160d-44c2-b593-641af06eca61
-ms.openlocfilehash: d87f2b89583747b80ef103f419bd9bd2e3b1e0da
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: fd043aa6c7e5b9246a36146e000e5cba9e090d3e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59089839"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297504"
 ---
 # <a name="sql-server-common-language-runtime-integration"></a>Интеграция среды CLR и SQL Server
 В версии SQL Server 2005 появилась поддержка интеграции сервера со средой CLR инфраструктуры .NET Framework для Microsoft Windows. Это означает, что хранимые процедуры, триггеры, определяемые пользователем типы, определяемые пользователем функции, определяемые пользователем агрегатные функции и возвращающие табличные значение потоковые функции теперь можно разрабатывать с использованием любого языка .NET Framework, включая Microsoft Visual Basic .NET и Microsoft Visual C#. Пространство имен <xref:Microsoft.SqlServer.Server> содержит ряд новых API-интерфейсов, что позволяет обеспечить взаимодействие управляемого кода со средой Microsoft SQL Server.  
@@ -18,7 +18,7 @@ ms.locfileid: "59089839"
   
  **Электронная документация по SQL Server**  
   
-1.  [Основные понятия программирования при интеграции со средой CLR](https://go.microsoft.com/fwlink/?LinkId=115240)  
+1. [Основные понятия программирования при интеграции со средой CLR](https://go.microsoft.com/fwlink/?LinkId=115240)  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Знакомство с интеграцией CLR в SQL Server](../../../../../docs/framework/data/adonet/sql/introduction-to-sql-server-clr-integration.md)  

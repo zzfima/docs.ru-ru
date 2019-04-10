@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Explorer-style applications [Windows Forms], creating
 - Windows Forms controls, filling client area
 ms.assetid: bc11f2e4-e90a-4830-b0e2-f43b6e2b8bec
-ms.openlocfilehash: 4acda9149dd147a823eb42d3962a22b75df93802
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 61ccad615eec81eb1aa77e6a99d48ef29ecb5be2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720279"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231530"
 ---
 # <a name="how-to-dock-controls-on-windows-forms"></a>Практическое руководство. Закрепление элементов управления в формах Windows Forms
 Вы можете закрепление элементов управления по границам формы или заполнить ими контейнера элемента управления (форму или контейнерный элемент управления). Например, Windows Explorer закрепляет его <xref:System.Windows.Forms.TreeView> элемента управления в левой части окна и его <xref:System.Windows.Forms.ListView> элемента управления в правой части окна. Используйте <xref:System.Windows.Forms.Control.Dock%2A> свойство для всех видимых элементов управления Windows Forms для определения режима закрепления.  
@@ -37,10 +37,11 @@ ms.locfileid: "57720279"
     >  Наследуемые элементы управления должны быть `Protected` могла быть закреплено. Чтобы изменить уровень доступа для элемента управления, установите его **модификатор** свойства в окне «Свойства».  
   
 ## <a name="see-also"></a>См. также
+
 - [Элементы управления Windows Forms](index.md)
-- [Упорядочение элементов управления в формах Windows Forms](arranging-controls-on-windows-forms.md)
+- [Расположение элементов управления в формах Windows Forms](arranging-controls-on-windows-forms.md)
 - [Создание меток и назначение сочетаний клавиш для элементов управления Windows Forms](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)
+- [Элементы управления для использования в формах Windows Forms](controls-to-use-on-windows-forms.md)
 - [Функциональная классификация элементов управления Windows Forms](windows-forms-controls-by-function.md)
 - [Практическое руководство. Привязка и закрепление дочерних элементов управления в элементе управления FlowLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
 - [Практическое руководство. Привязка и закрепление дочерних элементов управления в элементе управления TableLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)

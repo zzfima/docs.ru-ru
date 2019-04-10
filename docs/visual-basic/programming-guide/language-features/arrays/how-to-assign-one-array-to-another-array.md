@@ -6,21 +6,21 @@ helpviewer_keywords:
 - arrays [Visual Basic], assigning
 - arrays [Visual Basic], covariance
 ms.assetid: 1ae89ea5-f292-4282-bcfc-e9b06b37fbd5
-ms.openlocfilehash: 834dad07ec1f4116aca72a184ccffc664d0a42ed
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 78497de3a9aea55320639c55a151a1260a960159
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835288"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303096"
 ---
 # <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>Практическое руководство. Присвоение одного массива другому (Visual Basic)
 Поскольку массивы являются объектами, их можно использовать в инструкциях присваивания, как и другие типы объектов. Переменную массива содержит указатель на данные, содержащие элементы массива и ранг и длина информацию и присваивания копирует только этот указатель.  
   
 ### <a name="to-assign-one-array-to-another-array"></a>Чтобы присвоение одного массива другому  
   
-1.  Убедитесь, что два массива имеют одинаковый ранг (число измерений) и совместимый тип данных элементов.  
+1. Убедитесь, что два массива имеют одинаковый ранг (число измерений) и совместимый тип данных элементов.  
   
-2.  Используйте стандартный оператор присваивания для назначения исходного массива в массив назначения. Не выполняйте либо имя массива в круглые скобки.  
+2. Используйте стандартный оператор присваивания для назначения исходного массива в массив назначения. Не выполняйте либо имя массива в круглые скобки.  
   
     ```  
     Dim formArray() As System.Windows.Forms.Form  

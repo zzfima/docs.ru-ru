@@ -6,12 +6,12 @@ helpviewer_keywords:
 - references [Visual Basic], declared elements
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
-ms.openlocfilehash: 5aea43c2dab4eb44ab40449ee6e970a28fdc4abb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 0fca02ab2dcb507c1129f18f31a25c7809fc9710
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58821456"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296710"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>Ссылки на объявленные элементы (Visual Basic)
 Когда код ссылается на объявленный элемент, компилятор Visual Basic совпадает с именем в ссылке соответствующий объявлению. Если более чем один элемент объявлен с тем же именем, вы можете контролировать, какие из этих элементов — на них ссылается *удовлетворяющим требованиям* его имя.  
@@ -50,7 +50,7 @@ End Module
   
 #### <a name="to-access-a-declared-element-by-qualifying-its-name"></a>Для доступа к объявленного элемента, указав его имя  
   
-1.  Определите расположение, в котором был определен элемент. Это может включать пространство имен или даже иерархии пространств имен. В пространстве имен самого низкого уровня элемент должен содержаться в модуля, класса или структуры.  
+1. Определите расположение, в котором был определен элемент. Это может включать пространство имен или даже иерархии пространств имен. В пространстве имен самого низкого уровня элемент должен содержаться в модуля, класса или структуры.  
   
     ```vb  
     ' Assume the following hierarchy exists outside your code.  
@@ -66,23 +66,23 @@ End Module
     End Namespace  
     ```  
   
-2.  Определите путь квалификации, в зависимости от расположения целевого элемента. Начнем с самого верхнего уровня пространства имен, перейдите к пространству имен самого низкого уровня и заканчиваться модуль, класс или структура, содержащая целевой элемент. Каждый элемент в пути должен содержать элемент, следующий за ним.  
+2. Определите путь квалификации, в зависимости от расположения целевого элемента. Начнем с самого верхнего уровня пространства имен, перейдите к пространству имен самого низкого уровня и заканчиваться модуль, класс или структура, содержащая целевой элемент. Каждый элемент в пути должен содержать элемент, следующий за ним.  
   
      `outerSpace` → `innerSpace` → `holdsTotals` → `totals`  
   
-3.  Подготовка уточняющей строки для целевого элемента. Поместите точку (`.`) после каждого элемента в пути. Приложение должно иметь доступ к каждому элементу уточняющей строки.  
+3. Подготовка уточняющей строки для целевого элемента. Поместите точку (`.`) после каждого элемента в пути. Приложение должно иметь доступ к каждому элементу уточняющей строки.  
   
     ```vb  
     outerSpace.innerSpace.holdsTotals.totals.  
     ```  
   
-4.  Напишите выражение или оператор присваивания, ссылающийся на целевой элемент обычным способом.  
+4. Напишите выражение или оператор присваивания, ссылающийся на целевой элемент обычным способом.  
   
     ```vb  
     grandTotal = 9000  
     ```  
   
-5.  Перед именем целевой элемент в уточняющей строке. Имя должно следовать сразу за период (`.`), который следует за модуля, класса или структуры, которая содержит элемент.  
+5. Перед именем целевой элемент в уточняющей строке. Имя должно следовать сразу за период (`.`), который следует за модуля, класса или структуры, которая содержит элемент.  
   
     ```vb  
     ' Assume the following module is part of your code.  
@@ -93,7 +93,7 @@ End Module
     End Module  
     ```  
   
-6.  Компилятор использует уточняющей строке, чтобы найти точное, однозначное объявление, к которому она может соответствовать ссылку на целевой элемент.  
+6. Компилятор использует уточняющей строке, чтобы найти точное, однозначное объявление, к которому она может соответствовать ссылку на целевой элемент.  
   
  Кроме того, может потребоваться уточнять ссылки на имена, если приложение имеет доступ к более одного элемента программирования, который имеет то же имя. Например <xref:System.Windows.Forms> и <xref:System.Web.UI.WebControls> пространства имен оба содержат `Label` класс (<xref:System.Windows.Forms.Label?displayProperty=nameWithType> и <xref:System.Web.UI.WebControls.Label?displayProperty=nameWithType>). Если приложение использует оба или определяет собственный `Label` класса, необходимо различать разные `Label` объектов. Включите пространство имен или псевдоним в объявлении переменной. В следующем примере используется псевдоним импорта.  
   
@@ -195,10 +195,10 @@ Dim xDoc As xD.XmlDocument
   
 ## <a name="see-also"></a>См. также
 
-- [Имена объявленных элементов](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [Declared Element Names](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [Характеристики объявленных элементов](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
-- [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)
+- [Управление свойствами проекта и решения](/visualstudio/ide/managing-project-and-solution-properties)
 - [Переменные](../../../../visual-basic/programming-guide/language-features/variables/index.md)
-- [Оператор Imports (пространство имен и тип .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [Оператор Imports (пространство имен .NET и тип)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
 - [Оператор New](../../../../visual-basic/language-reference/operators/new-operator.md)
 - [Public](../../../../visual-basic/language-reference/modifiers/public.md)

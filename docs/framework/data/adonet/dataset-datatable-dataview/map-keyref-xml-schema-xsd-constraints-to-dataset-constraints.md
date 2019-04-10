@@ -2,22 +2,22 @@
 title: Сопоставление ограничений XML-схемы (XSD) keyref с ограничениями набора данных
 ms.date: 03/30/2017
 ms.assetid: 5b634fea-cc1e-4f6b-9454-10858105b1c8
-ms.openlocfilehash: bc3863bbe6fd7c290c25056e2420107ed2d8bff3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dcb295aef6d93222e682ef7f720c83963036e795
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732808"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229749"
 ---
 # <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a>Сопоставление ограничений XML-схемы (XSD) keyref с ограничениями набора данных
 **Keyref** элемент позволяет устанавливать ссылки между элементами внутри документа. Это похоже на связь по внешнему ключу в реляционной базе данных. Если в схеме **keyref** элемент преобразуется в процессе сопоставления схемы для соответствующего ограничения внешнего ключа на столбцы в таблицах <xref:System.Data.DataSet>. По умолчанию **keyref** элемент также формирует связь с **ParentTable**, **ChildTable**, **ParentColumn**и  **ChildColumn** свойства, указанными в этой связи.  
   
  В следующей таблице описываются **msdata** атрибуты, можно указать в **keyref** элемент.  
   
-|Имя атрибута|Описание:|  
+|Имя атрибута|Описание|  
 |--------------------|-----------------|  
-|**msdata: constraintonly**|Если **ConstraintOnly = «true»** заметка указывается для **keyref** элемент в схеме, создается ограничение, но не создается связь. Если этот атрибут не указан (или имеет значение **False**), ограничения и отношения создаются в **набора данных**.|  
-|**msdata: ConstraintName**|Если **ConstraintName** атрибут указан, его значение используется в качестве имени ограничения. В противном случае **имя** атрибут **keyref** элемент в схеме предоставляет имя ограничения в **набора данных**.|  
+|**msdata:ConstraintOnly**|Если **ConstraintOnly = «true»** заметка указывается для **keyref** элемент в схеме, создается ограничение, но не создается связь. Если этот атрибут не указан (или имеет значение **False**), ограничения и отношения создаются в **набора данных**.|  
+|**msdata:ConstraintName**|Если **ConstraintName** атрибут указан, его значение используется в качестве имени ограничения. В противном случае **имя** атрибут **keyref** элемент в схеме предоставляет имя ограничения в **набора данных**.|  
 |**msdata:UpdateRule**|Если **UpdateRule** атрибут указан в **keyref** элемента в схеме, его значение будет назначено **UpdateRule** свойство ограничения в  **Набор данных**. В противном случае **UpdateRule** свойству **Cascade**.|  
 |**msdata:DeleteRule**|Если **DeleteRule** атрибут указан в **keyref** элемента в схеме, его значение будет назначено **DeleteRule** свойство ограничения в  **Набор данных**. В противном случае **DeleteRule** свойству **Cascade**.|  
 |**msdata:AcceptRejectRule**|Если **AcceptRejectRule** атрибут указан в **keyref** элемента в схеме, его значение будет назначено **AcceptRejectRule** свойство ограничения в  **Набор данных**. В противном случае **AcceptRejectRule** свойству **None**.|  
@@ -110,6 +110,7 @@ Order(OrderNumber, EmpNumber)
     ```  
   
 ## <a name="see-also"></a>См. также
-- [Сопоставление ограничений схемы XML (XSD) с ограничениями DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
-- [Создание отношений DataSet из схемы XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+
+- [Сопоставление ограничений XML-схемы (XSD) с ограничениями набора данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
+- [Создание отношений наборов данных из схемы XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

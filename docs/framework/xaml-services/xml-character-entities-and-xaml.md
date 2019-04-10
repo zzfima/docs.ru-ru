@@ -20,12 +20,12 @@ helpviewer_keywords:
 - quotation mark (") [XAML Services]
 - less-than (<) character [XAML Services]
 ms.assetid: 6896d0ce-74f7-420a-9ab4-de9bbf390e8d
-ms.openlocfilehash: 3fefbe9696ba7618dc811c6ac8f600bb6322dad5
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: b4621da21200e6c9e2b174a0e2ba508a4f6bab92
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58048051"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228202"
 ---
 # <a name="xml-character-entities-and-xaml"></a>Сущности знаков XML и XAML
 XAML использует сущности символов, определенные в XML для специальных символов. В этом разделе описываются некоторые особые сущности знаков и общие вопросы, связанные с другими концепциями XML в XAML.  
@@ -63,7 +63,8 @@ XAML использует сущности символов, определен�
  XAML обрабатывает инструкции по обработке XML в соответствии со спецификациями XML, в которых указано, что инструкции должны передаваться. Обработка в службах XAML .NET Framework XAML не использует инструкции по обработке. Другие существующие платформы, использующие XAML, также не применяют инструкции по обработке из XAML.  
   
 ## <a name="see-also"></a>См. также
-- [Общие сведения о языке XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+
+- [Обзор XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
 - [Расширения разметки и XAML WPF](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
 - [Грамматика XamlName](xamlname-grammar.md)
-- [Обработки пробелов в XAML](whitespace-processing-in-xaml.md)
+- [Обработка пробелов в XAML](whitespace-processing-in-xaml.md)

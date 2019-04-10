@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], what's new
 - WPF [WPF], what's new
 ms.assetid: db086ae4-70bb-4862-95db-2eaca5216bc3
-ms.openlocfilehash: 92f69d0f9ad962dff231308ed3f5d59a0d406792
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 5e9194dc4dc8ef3246870dc1fd71fa53d3ad143f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368172"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227487"
 ---
 # <a name="whats-new-in-wpf-version-45"></a>Новые возможности WPF версии 4.5
 <a name="introduction"></a> Этот раздел содержит сведения о новых и усовершенствованных возможностях [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] версии 4.5.  
@@ -37,7 +37,7 @@ ms.locfileid: "57368172"
   
 -   [Проверка наличия допустимого объекта DataContext](#DisconnectedSource)  
   
--   [Изменение расположения данных по мере изменение их значений (формирование данных в реальном времени)](#live_shaping)  
+-   [Изменение расположения данных по мере изменения их значений (формирование данных в реальном времени)](#live_shaping)  
   
 -   [Улучшенная поддержка установления слабой ссылки на событие](#weak_event_pattern)  
   
@@ -126,4 +126,5 @@ ms.locfileid: "57368172"
  WPF 4.5 поддерживает расширения разметки для событий.  Несмотря на то, что WPF не определяет расширение разметки для применения с событиями, третьи стороны могут создавать расширение разметки, которое можно использовать с событиями.  
   
 ## <a name="see-also"></a>См. также
+
 - [Новые возможности .NET Framework](../../whats-new/index.md)

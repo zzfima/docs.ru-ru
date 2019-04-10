@@ -6,12 +6,12 @@ helpviewer_keywords:
 - converting [WPF], shape to button
 - Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
-ms.openlocfilehash: f969e13ba50c2aadd170bdb28716213056d62cad
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3cf9d133aee5a2c3d93c1a464c96fdaebcf230f3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59100123"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300465"
 ---
 # <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>Пошаговое руководство. Создание кнопки с помощью Microsoft Expression Blend
 В этом пошаговом руководстве пошагово продемонстрирует процесс создания [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] настраиваемая кнопка, с помощью Microsoft Expression Blend.  
@@ -28,37 +28,37 @@ ms.locfileid: "59100123"
   
 #### <a name="to-create-a-new-project-in-expression-blend"></a>Чтобы создать новый проект в Expression Blend  
   
-1.  Запустите Expression Blend. (Щелкните **запустить**, пункты **все программы**, пункты **Microsoft Expression**, а затем нажмите кнопку **Microsoft Expression Blend**.)  
+1. Запустите Expression Blend. (Щелкните **запустить**, пункты **все программы**, пункты **Microsoft Expression**, а затем нажмите кнопку **Microsoft Expression Blend**.)  
   
-2.  Разверните приложение, при необходимости.  
+2. Разверните приложение, при необходимости.  
   
-3.  В меню **Файл** выберите пункт **Создать проект**.  
+3. В меню **Файл** выберите пункт **Создать проект**.  
   
-4.  Выберите **стандартное приложение (.exe)**.  
+4. Выберите **стандартное приложение (.exe)**.  
   
-5.  Назовите проект `CustomButton` и нажмите клавишу **ОК**.  
+5. Назовите проект `CustomButton` и нажмите клавишу **ОК**.  
   
  На этом этапе имеется пустой [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] проекта. Можно нажать F5, чтобы запустить приложение. Как можно догадаться, приложение состоит из пустое окно. Затем создайте прямоугольник с закругленными углами и преобразовать его в кнопку.  
   
 #### <a name="to-convert-a-rectangle-to-a-button"></a>Преобразуемый прямоугольник к кнопке  
   
-1.  **Задайте для свойства фона окна на черный.** Выберите окно, нажмите кнопку **вкладка "Свойства"** и задайте <xref:System.Windows.Controls.Control.Background%2A> свойства `Black`.  
+1. **Задайте для свойства фона окна на черный.** Выберите окно, нажмите кнопку **вкладка "Свойства"** и задайте <xref:System.Windows.Controls.Control.Background%2A> свойства `Black`.  
   
      ![Как задать фоновый цвет кнопки на черный](./media/custom-button-blend-changebackground.png "custom_button_blend_ChangeBackground")  
   
-2.  **Нарисуйте прямоугольник приблизительного размера кнопки в окне:** Выберите прямоугольник на панели инструментов слева и перетащите прямоугольник в окне.  
+2. **Нарисуйте прямоугольник приблизительного размера кнопки в окне:** Выберите прямоугольник на панели инструментов слева и перетащите прямоугольник в окне.  
   
      ![Рисование прямоугольника](./media/custom-button-blend-drawrect.png "custom_button_blend_DrawRect")  
   
-3.  **Скруглите углы прямоугольника:** Перетащите контрольные точки прямоугольника или непосредственная установка <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> и <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> свойства. Задайте значения свойств <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> и <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> до 20.  
+3. **Скруглите углы прямоугольника:** Перетащите контрольные точки прямоугольника или непосредственная установка <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> и <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> свойства. Задайте значения свойств <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> и <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> до 20.  
   
      ![Как сделать углов прямоугольника round](./media/custom-button-blend-roundcorners.png "custom_button_blend_RoundCorners")  
   
-4.  **Измените прямоугольник в кнопке:** Выберите прямоугольник. На **средства** меню, щелкните **создать кнопку**.  
+4. **Измените прямоугольник в кнопке:** Выберите прямоугольник. На **средства** меню, щелкните **создать кнопку**.  
   
      ![Как сделать фигуры в кнопку](./media/custom-button-blend-makebutton.png "custom_button_blend_MakeButton")  
   
-5.  **Укажите область стиля или шаблона:** Откроется диалоговое окно следующим образом.  
+5. **Укажите область стиля или шаблона:** Откроется диалоговое окно следующим образом.  
   
      ![Диалоговое окно «Создание ресурса стиля»](./media/custom-button-blend-makebutton2.gif "custom_button_blend_MakeButton2")  
   
@@ -69,7 +69,7 @@ ms.locfileid: "59100123"
   
 #### <a name="to-edit-the-button-template-to-change-the-button-appearance"></a>Чтобы изменить шаблон кнопки, чтобы изменить внешний вид кнопки  
   
-1.  **Перейдите в представление редактирования шаблона:** Чтобы настроить внешний вид кнопки, необходимо изменить шаблон кнопки. Этот шаблон был создан в результате преобразования прямоугольника в кнопку. Чтобы изменить шаблон кнопки, правой кнопкой мыши и выберите **изменить части элемента управления (шаблон)** и затем **изменить шаблон**.  
+1. **Перейдите в представление редактирования шаблона:** Чтобы настроить внешний вид кнопки, необходимо изменить шаблон кнопки. Этот шаблон был создан в результате преобразования прямоугольника в кнопку. Чтобы изменить шаблон кнопки, правой кнопкой мыши и выберите **изменить части элемента управления (шаблон)** и затем **изменить шаблон**.  
   
      ![Изменение шаблона](./media/custom-button-blend-edittemplate.jpg "custom_button_blend_EditTemplate")  
   
@@ -77,11 +77,11 @@ ms.locfileid: "59100123"
   
      ![Компоненты в представлении прямоугольника](./media/custom-button-blend-templatepanel.png "custom_button_blend_TemplatePanel")  
   
-2.  **Измените имена компонентов шаблона:** Щелкните правой кнопкой мыши прямоугольник в перечне шаблона, изменение <xref:System.Windows.Shapes.Rectangle> имя из «[прямоугольник]» на «скопировав outerRectangle» и измените «[ContentPresenter]» на «myContentPresenter».  
+2. **Измените имена компонентов шаблона:** Щелкните правой кнопкой мыши прямоугольник в перечне шаблона, изменение <xref:System.Windows.Shapes.Rectangle> имя из «[прямоугольник]» на «скопировав outerRectangle» и измените «[ContentPresenter]» на «myContentPresenter».  
   
      ![Переименование компонента шаблона](./media/custom-button-blend-renamecomponents.png "custom_button_blend_RenameComponents")  
   
-3.  **ALTER прямоугольника, так как это пустой внутри (например, кольцо):** Выберите **скопировав outerRectangle** и задайте <xref:System.Windows.Shapes.Shape.Fill%2A> «Transparent» и <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> до 5.  
+3. **ALTER прямоугольника, так как это пустой внутри (например, кольцо):** Выберите **скопировав outerRectangle** и задайте <xref:System.Windows.Shapes.Shape.Fill%2A> «Transparent» и <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> до 5.  
   
      ![Как сделать пустым прямоугольник](./media/custom-button-blend-changerectproperties.png "custom_button_blend_ChangeRectProperties")  
   
@@ -89,27 +89,27 @@ ms.locfileid: "59100123"
   
      ![Как задать использование цвета шаблона](./media/custom-button-blend-templatestroke.png "custom_button_blend_TemplateStroke")  
   
-4.  **Создайте внутренний прямоугольник:** Теперь создайте другого прямоугольника (назовите его «innerRectangle») и разместите его симметрично внутри **скопировав outerRectangle** . Для такой работы может потребоваться установить масштаб увеличить кнопку в области редактирования.  
+4. **Создайте внутренний прямоугольник:** Теперь создайте другого прямоугольника (назовите его «innerRectangle») и разместите его симметрично внутри **скопировав outerRectangle** . Для такой работы может потребоваться установить масштаб увеличить кнопку в области редактирования.  
   
     > [!NOTE]
     >  Прямоугольник может выглядеть отличается от того, на рисунке (например, он может иметь скругленные углы).  
   
      ![Создание прямоугольника в прямоугольнике](./media/custom-button-blend-innerrectangleproperties.png "custom_button_blend_innerRectangleProperties")  
   
-5.  **Переместите вверх ContentPresenter:** На этом этапе вполне возможно, что текст «Button» не будет отображаться больше. Если Да, это обусловлено **innerRectangle** — на основе **myContentPresenter**. Чтобы устранить эту проблему, перетащите **myContentPresenter** ниже **innerRectangle**. Изменить положение прямоугольников и **myContentPresenter** чтобы выглядеть аналогично приведенному ниже.  
+5. **Переместите вверх ContentPresenter:** На этом этапе вполне возможно, что текст «Button» не будет отображаться больше. Если Да, это обусловлено **innerRectangle** — на основе **myContentPresenter**. Чтобы устранить эту проблему, перетащите **myContentPresenter** ниже **innerRectangle**. Изменить положение прямоугольников и **myContentPresenter** чтобы выглядеть аналогично приведенному ниже.  
   
     > [!NOTE]
     >  Кроме того, можно также разместить **myContentPresenter** в верхней части, щелкнув его и нажав клавишу **отправить Далее**.  
   
      ![Перемещение одной кнопки на другую](./media/custom-button-blend-innerrectangle2.png "custom_button_blend_innerRectangle2")  
   
-6.  **Изменение внешнего вида innerRectangle:** Задайте <xref:System.Windows.Shapes.Rectangle.RadiusX%2A>, <xref:System.Windows.Shapes.Rectangle.RadiusY%2A>, и <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> значения до 20. Кроме того, задайте <xref:System.Windows.Shapes.Shape.Fill%2A> фона для шаблона с помощью пользовательского выражения «{TemplateBinding фона}») и задайте <xref:System.Windows.Shapes.Shape.Stroke%2A> для «прозрачный». Обратите внимание, что параметры для <xref:System.Windows.Shapes.Shape.Fill%2A> и <xref:System.Windows.Shapes.Shape.Stroke%2A> из **innerRectangle** противоположны для **скопировав outerRectangle**.  
+6. **Изменение внешнего вида innerRectangle:** Задайте <xref:System.Windows.Shapes.Rectangle.RadiusX%2A>, <xref:System.Windows.Shapes.Rectangle.RadiusY%2A>, и <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> значения до 20. Кроме того, задайте <xref:System.Windows.Shapes.Shape.Fill%2A> фона для шаблона с помощью пользовательского выражения «{TemplateBinding фона}») и задайте <xref:System.Windows.Shapes.Shape.Stroke%2A> для «прозрачный». Обратите внимание, что параметры для <xref:System.Windows.Shapes.Shape.Fill%2A> и <xref:System.Windows.Shapes.Shape.Stroke%2A> из **innerRectangle** противоположны для **скопировав outerRectangle**.  
   
      ![Как изменить внешний вид прямоугольника](./media/custom-button-blend-glassrectangleproperties1.png "custom_button_blend_glassRectangleProperties1")  
   
-7.  **Добавьте прозрачный слой в верхней части:** Заключительная часть настройки внешнего вида кнопки является добавление прозрачный слой в верхней части. Этот прозрачный слой состоит из третьего прямоугольника. Так как прозрачный будут рассмотрены всю кнопку, прозрачный прямоугольник аналогична по измерения, которые необходимо **скопировав outerRectangle**. Таким образом, создать прямоугольник, просто копию **скопировав outerRectangle**. Выделите **скопировав outerRectangle** и используйте сочетание клавиш CTRL + C и CTRL + V для создания копии. Назовите этот новый прямоугольник «glassCube».  
+7. **Добавьте прозрачный слой в верхней части:** Заключительная часть настройки внешнего вида кнопки является добавление прозрачный слой в верхней части. Этот прозрачный слой состоит из третьего прямоугольника. Так как прозрачный будут рассмотрены всю кнопку, прозрачный прямоугольник аналогична по измерения, которые необходимо **скопировав outerRectangle**. Таким образом, создать прямоугольник, просто копию **скопировав outerRectangle**. Выделите **скопировав outerRectangle** и используйте сочетание клавиш CTRL + C и CTRL + V для создания копии. Назовите этот новый прямоугольник «glassCube».  
   
-8.  **При необходимости изменить положение glassCube:** Если **glassCube** — еще не находится, чтобы он охватывал весь кнопки, перетащите его в нужное место.  
+8. **При необходимости изменить положение glassCube:** Если **glassCube** — еще не находится, чтобы он охватывал весь кнопки, перетащите его в нужное место.  
   
 9. **Присвойте glassCube немного другой форме по сравнению скопировав outerRectangle:** Изменение свойств **glassCube**. Начните с изменения <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> и <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> свойства до 10 и <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> до 2.  
   
@@ -142,13 +142,13 @@ ms.locfileid: "59100123"
   
 #### <a name="to-set-property-triggers"></a>Чтобы задать триггеры свойств  
   
-1.  **Создайте новый триггер свойства:** С помощью **glassCube** , щелкните **+ свойство** в **триггеры** панели (см. в разделе к рисунку, который следует за следующий шаг). Это создает триггер свойства с триггером свойства по умолчанию.  
+1. **Создайте новый триггер свойства:** С помощью **glassCube** , щелкните **+ свойство** в **триггеры** панели (см. в разделе к рисунку, который следует за следующий шаг). Это создает триггер свойства с триггером свойства по умолчанию.  
   
-2.  **Создайте свойство IsMouseOver, используемое триггером:** Измените значение свойства на <xref:System.Windows.UIElement.IsMouseOver%2A>. В результате при активации триггера свойств <xref:System.Windows.UIElement.IsMouseOver%2A> свойство `true` (при наведении указателя мыши на кнопку мыши).  
+2. **Создайте свойство IsMouseOver, используемое триггером:** Измените значение свойства на <xref:System.Windows.UIElement.IsMouseOver%2A>. В результате при активации триггера свойств <xref:System.Windows.UIElement.IsMouseOver%2A> свойство `true` (при наведении указателя мыши на кнопку мыши).  
   
      ![Практическое задание триггера свойства](./media/custom-button-blend-ismousedoverpropertytrigger.png "custom_button_blend_IsMousedOverPropertyTrigger")  
   
-3.  **Непрозрачность 100% для glassCube триггеров IsMouseOver:** Обратите внимание, что **записи триггера** (см. предыдущий рисунок). Это означает, что любые изменения, внесенные в значения свойств **glassCube** во время записи станет действие, происходящее при <xref:System.Windows.UIElement.IsMouseOver%2A> является `true`. Во время записи, изменить <xref:System.Windows.UIElement.Opacity%2A> из **glassCube** до 100%.  
+3. **Непрозрачность 100% для glassCube триггеров IsMouseOver:** Обратите внимание, что **записи триггера** (см. предыдущий рисунок). Это означает, что любые изменения, внесенные в значения свойств **glassCube** во время записи станет действие, происходящее при <xref:System.Windows.UIElement.IsMouseOver%2A> является `true`. Во время записи, изменить <xref:System.Windows.UIElement.Opacity%2A> из **glassCube** до 100%.  
   
      ![Как задать прозрачность кнопки](./media/custom-button-blend-ismousedoverpropertytrigger2.gif "custom_button_blend_IsMousedOverPropertyTrigger2")  
   
@@ -158,11 +158,11 @@ ms.locfileid: "59100123"
   
      Нажмите клавишу F5, чтобы запустить приложение и наведите указатель мыши над и кнопки включения и выключения. Вы должны увидеть прозрачный слой отображается, когда вы Наведение указателя мыши для кнопки и исчезают, когда указатель покидает.  
   
-4.  **Изменение значения штриха триггеров IsMouseOver:** Давайте свяжем некоторые другие действия с <xref:System.Windows.UIElement.IsMouseOver%2A> триггера. Во время записи, переключение сделанный выбор из **glassCube** для **скопировав outerRectangle**. Затем установите <xref:System.Windows.Shapes.Shape.Stroke%2A> из **скопировав outerRectangle** на пользовательское выражение «{DynamicResource {x: Static SystemColors.HighlightBrushKey}}». Этот параметр задает <xref:System.Windows.Shapes.Shape.Stroke%2A> чтобы типичное выделите цвет кнопок. Нажмите клавишу F5, чтобы увидеть результат, когда указатель мыши находится над кнопкой.  
+4. **Изменение значения штриха триггеров IsMouseOver:** Давайте свяжем некоторые другие действия с <xref:System.Windows.UIElement.IsMouseOver%2A> триггера. Во время записи, переключение сделанный выбор из **glassCube** для **скопировав outerRectangle**. Затем установите <xref:System.Windows.Shapes.Shape.Stroke%2A> из **скопировав outerRectangle** на пользовательское выражение «{DynamicResource {x: Static SystemColors.HighlightBrushKey}}». Этот параметр задает <xref:System.Windows.Shapes.Shape.Stroke%2A> чтобы типичное выделите цвет кнопок. Нажмите клавишу F5, чтобы увидеть результат, когда указатель мыши находится над кнопкой.  
   
      ![Установка штриха цвет выделения для](./media/custom-button-blend-ismousedoverpropertytrigger3.png "custom_button_blend_IsMousedOverPropertyTrigger3")  
   
-5.  **Размытый текст триггеров IsMouseOver:** Давайте свяжем одного дополнительные действия для <xref:System.Windows.UIElement.IsMouseOver%2A> триггер свойства. Сделайте содержимое кнопки быть немного нечеткими, когда появляется прозрачный над ней. Чтобы сделать это, мы применяем размытия <xref:System.Windows.Media.Effects.BitmapEffect> для <xref:System.Windows.Controls.ContentPresenter> (**myContentPresenter**).  
+5. **Размытый текст триггеров IsMouseOver:** Давайте свяжем одного дополнительные действия для <xref:System.Windows.UIElement.IsMouseOver%2A> триггер свойства. Сделайте содержимое кнопки быть немного нечеткими, когда появляется прозрачный над ней. Чтобы сделать это, мы применяем размытия <xref:System.Windows.Media.Effects.BitmapEffect> для <xref:System.Windows.Controls.ContentPresenter> (**myContentPresenter**).  
   
      ![Размытие содержимого кнопки](./media/custom-button-blend-propertytriggerwithbitmapeffect.png "custom_button_blend_PropertyTriggerWithBitMapEffect")  
   
@@ -171,7 +171,7 @@ ms.locfileid: "59100123"
   
      На этом этапе мы использовали триггер свойства с несколькими связанными действиями для создания поведения для, когда указатель мыши входит и покидает область кнопок. Другим обычным поведением для кнопки — Выделить с фокусом (например, после щелчка). Мы можем добавить такое поведение, добавив еще один триггер свойства для <xref:System.Windows.UIElement.IsFocused%2A> свойство.  
   
-6.  **Создание триггера свойств для IsFocused:** Используя ту же процедуру, что и для <xref:System.Windows.UIElement.IsMouseOver%2A> (см. первый шаг в этом разделе), создайте другой триггер свойства для <xref:System.Windows.UIElement.IsFocused%2A> свойство. Хотя **записи триггера**, добавьте следующие действия в триггер:  
+6. **Создание триггера свойств для IsFocused:** Используя ту же процедуру, что и для <xref:System.Windows.UIElement.IsMouseOver%2A> (см. первый шаг в этом разделе), создайте другой триггер свойства для <xref:System.Windows.UIElement.IsFocused%2A> свойство. Хотя **записи триггера**, добавьте следующие действия в триггер:  
   
     -   **glassCube** получает <xref:System.Windows.UIElement.Opacity%2A> 100%.  
   
@@ -181,11 +181,11 @@ ms.locfileid: "59100123"
   
 #### <a name="to-use-event-triggers-and-animations-to-add-interactivity"></a>Использование триггеров событий и анимации для обеспечения интерактивности  
   
-1.  **Создание триггера события MouseEnter:** Добавьте новый триггер события и выберите <xref:System.Windows.UIElement.MouseEnter> как событие для использования в триггере.  
+1. **Создание триггера события MouseEnter:** Добавьте новый триггер события и выберите <xref:System.Windows.UIElement.MouseEnter> как событие для использования в триггере.  
   
      ![Создание триггера события MouseEnter](./media/custom-button-blend-mouseovereventtrigger.png "custom_button_blend_MouseOverEventTrigger")  
   
-2.  **Создайте временную шкалу анимации.** Теперь необходимо связать временную шкалу анимации для <xref:System.Windows.UIElement.MouseEnter> событий.  
+2. **Создайте временную шкалу анимации.** Теперь необходимо связать временную шкалу анимации для <xref:System.Windows.UIElement.MouseEnter> событий.  
   
      ![Как добавить временную шкалу анимации на событие](./media/custom-button-blend-mouseovereventtrigger2.png "custom_button_blend_MouseOverEventTrigger2")  
   
@@ -196,17 +196,17 @@ ms.locfileid: "59100123"
   
      ![Временная шкала](./media/custom-button-blend-mouseovereventtrigger3.png "custom_button_blend_MouseOverEventTrigger3")  
   
-3.  **Создание опорного кадра:** Для создания анимации, выделите объект, который вы хотите анимировать, создание двух или более опорные кадры на временной шкале, а также для этих опорных кадров, задайте значения свойств, анимация для интерполяции. Следующий рисунок поможет выполнить создание опорного кадра.  
+3. **Создание опорного кадра:** Для создания анимации, выделите объект, который вы хотите анимировать, создание двух или более опорные кадры на временной шкале, а также для этих опорных кадров, задайте значения свойств, анимация для интерполяции. Следующий рисунок поможет выполнить создание опорного кадра.  
   
      ![Создание опорного кадра](./media/custom-button-blend-mouseovereventtrigger4.png "custom_button_blend_MouseOverEventTrigger4")  
   
-4.  **Сжать glassCube в данного опорного кадра:** Второй ключевой кадр выбран, уменьшить размер **glassCube** 90 процентов от его полный размер с помощью **преобразования размер**.  
+4. **Сжать glassCube в данного опорного кадра:** Второй ключевой кадр выбран, уменьшить размер **glassCube** 90 процентов от его полный размер с помощью **преобразования размер**.  
   
      ![Как уменьшить размер кнопки](./media/custom-button-blend-sizetransform.png "custom_button_blend_SizeTransform")  
   
      Нажмите клавишу F5 для запуска приложения. Наведите указатель мыши на кнопку. Обратите внимание, что прозрачный слой сжимается поверх кнопки.  
   
-5.  **Создайте еще один триггер события и свяжите с ним другой анимации:** Давайте добавим одну анимацию. Используйте аналогичную процедуру, чтобы вы использовали для создания предыдущей анимации триггера события:  
+5. **Создайте еще один триггер события и свяжите с ним другой анимации:** Давайте добавим одну анимацию. Используйте аналогичную процедуру, чтобы вы использовали для создания предыдущей анимации триггера события:  
   
     1.  Создать новый триггер события с помощью <xref:System.Windows.Controls.Primitives.ButtonBase.Click> событий.  
   

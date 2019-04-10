@@ -2,12 +2,12 @@
 title: <namedPipeTransport>
 ms.date: 03/30/2017
 ms.assetid: 9fc3f42f-43e2-4ab1-8bc7-3c95a9220df1
-ms.openlocfilehash: e30fcd5952fadc3b6cf30cb352a3bb51c86cc117
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: fd7dc38e229b6135f91fc159596ed1669d43701a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55285935"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228241"
 ---
 # <a name="namedpipetransport"></a>\<namedPipeTransport >
 Задает транспорт, принуждающий канал передавать сообщения с использованием именованных каналов, когда он включается в пользовательскую привязку.  
@@ -73,12 +73,13 @@ ms.locfileid: "55285935"
 Элемент `namedPipeTransport` является отправной точкой для создания пользовательской привязки, реализующей именованные каналы транспорта HTTPS. Этот транспорт используется для взаимодействия служб WCF на компьютере.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.Configuration.NamedPipeTransportElement>
 - <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>
 - <xref:System.ServiceModel.Channels.TransportBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - [Транспорты](../../../../../docs/framework/wcf/feature-details/transports.md)
-- [Выбор транспорта](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [Выбор транспортов](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
 - [Привязки](../../../../../docs/framework/wcf/bindings.md)
 - [Расширение привязок](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [Пользовательские привязки](../../../../../docs/framework/wcf/extending/custom-bindings.md)

@@ -2,12 +2,12 @@
 title: Отслеживание переменной и аргумента
 ms.date: 03/30/2017
 ms.assetid: 8f3d9d30-d899-49aa-b7ce-a8d0d32c4ff0
-ms.openlocfilehash: 4e59a6838d93a57302f0c894445ab9da5d4252ac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ef2d6111d5c123ac6c684df09f03398340a5522c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625215"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231042"
 ---
 # <a name="variable-and-argument-tracking"></a>Отслеживание переменной и аргумента
 При отслеживании выполнения рабочего процесса часто бывает полезно извлекать данные. Это обеспечивает дополнительный контекст при доступе к последующему выполнению записи отслеживания. В [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] можно извлекать любую видимую переменную или аргумент, находящиеся в рамках области любого действия в рабочем процессе, при помощи отслеживания. Профили отслеживания упрощают извлечение данных.  
@@ -47,5 +47,6 @@ ms.locfileid: "54625215"
 3.  Для пользовательских участников отслеживания убедитесь, что код WF не раскрывает конфиденциальные сведения, сохраняемую в переменных и аргументах.  
   
 ## <a name="see-also"></a>См. также
+
 - [Мониторинг Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201273)
 - [Мониторинг приложений с помощью фабрики приложения](https://go.microsoft.com/fwlink/?LinkId=201275)

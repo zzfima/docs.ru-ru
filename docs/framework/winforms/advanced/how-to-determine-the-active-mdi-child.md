@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Определить активную дочернюю форму MDI
+title: Практическое руководство. Определение активной дочерней MDI-формы
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - MDI [Windows Forms], activating forms
 - MDI [Windows Forms], locating focus
 ms.assetid: 33880ec3-0207-4c2b-a616-ff140443cc0f
-ms.openlocfilehash: 95958491d624052922df9af37b188b9515480397
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 81cb9b55f53c152e755ada1803e4ba5731498627
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714334"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229476"
 ---
-# <a name="how-to-determine-the-active-mdi-child"></a>Практическое руководство. Определить активную дочернюю форму MDI
+# <a name="how-to-determine-the-active-mdi-child"></a>Практическое руководство. Определение активной дочерней MDI-формы
 В некоторых случаях требуется предоставить это команда, работающая на элементе управления, имеющий фокус на данный момент активной дочерней формы. Например предположим, что вы хотите копировать выделенный текст из текстового поля дочерней формы в буфер обмена. Необходимо создать процедуру, которая копирует выделенный текст в буфер обмена с помощью <xref:System.Windows.Forms.Control.Click> событие копию элемента меню на стандартные меню "Правка".  
   
  Поскольку MDI-приложения можно создать несколько экземпляров того же дочерней формы, процедура должна знать, какую форму для использования. Чтобы указать требуемую форму, используйте <xref:System.Windows.Forms.Form.ActiveMdiChild%2A> свойство, которое возвращает, имеющий фокус, или это было самую последнюю активную дочернюю форму.  
@@ -84,8 +84,9 @@ ms.locfileid: "57714334"
     ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Приложения с интерфейсом MDI](multiple-document-interface-mdi-applications.md)
 - [Практическое руководство. Создание родительских MDI-форм](how-to-create-mdi-parent-forms.md)
-- [Практическое руководство. Создание дочерних MDI-форм](how-to-create-mdi-child-forms.md)
-- [Практическое руководство. Отправки данных в активную дочернюю форму MDI](how-to-send-data-to-the-active-mdi-child.md)
-- [Практическое руководство. Упорядочение дочерних форм MDI](how-to-arrange-mdi-child-forms.md)
+- [Практическое руководство. Создание дочерних форм MDI](how-to-create-mdi-child-forms.md)
+- [Практическое руководство. Отправка данных в активную дочернюю MDI-форму](how-to-send-data-to-the-active-mdi-child.md)
+- [Практическое руководство. Упорядочение дочерних MDI-форм](how-to-arrange-mdi-child-forms.md)

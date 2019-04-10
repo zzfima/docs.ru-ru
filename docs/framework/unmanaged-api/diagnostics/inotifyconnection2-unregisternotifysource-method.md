@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8b7125ad38bcec773fa2afa8eca09c1d56d90591
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 742be1467d2f1e6eb7d8567ddf85f8e65ea4b8d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57475779"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229463"
 ---
 # <a name="inotifyconnection2unregisternotifysource-method"></a>Метод INotifyConnection2::UnregisterNotifySource
 Удаляет заданный исходный объект уведомлений из соединения.  
@@ -47,6 +47,7 @@ HRESULT UnregisterNotifySource
  **Заголовок.** ProtocolNotify2.idl  
   
 ## <a name="see-also"></a>См. также
+
 - [Интерфейс INotifyConnection2](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
 - [Интерфейс INotifySource2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
 - [Интерфейс INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)

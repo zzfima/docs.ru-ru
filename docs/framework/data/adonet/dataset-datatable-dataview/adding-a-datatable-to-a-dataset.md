@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 556d29a3-8fc9-4e38-b3ee-c188f7e7b155
-ms.openlocfilehash: 16b60b2973524c8e600f5efebb3f2b291377ffcc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 392855e3db2ea10c90784a6f9003805b79db74a6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732717"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230581"
 ---
 # <a name="adding-a-datatable-to-a-dataset"></a>Добавление новой таблицы данных в набор данных
 ADO.NET позволяет создавать объекты <xref:System.Data.DataTable> и добавлять их к существующему <xref:System.Data.DataSet>. Можно задать данные ограничения для <xref:System.Data.DataTable>, используя свойства <xref:System.Data.DataTable.PrimaryKey%2A> и <xref:System.Data.DataColumn.Unique%2A>.  
@@ -33,5 +33,6 @@ ADO.NET позволяет создавать объекты <xref:System.Data.D
  В версиях ADO.NET, выпущенных до версии 2.0, две таблицы не могли иметь одинаковое имя, даже если находились в разных пространствах имен. Это ограничение было снято в ADO.NET 2.0. Набор данных <xref:System.Data.DataSet> может содержать две таблицы, имеющие одинаковое значение свойства <xref:System.Data.DataTable.TableName%2A>, но различные значения свойства <xref:System.Data.DataTable.Namespace%2A>.  
   
 ## <a name="see-also"></a>См. также
+
 - [Наборы данных, таблицы данных и объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

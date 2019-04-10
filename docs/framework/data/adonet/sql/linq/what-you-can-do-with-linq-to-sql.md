@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 061d98b2-baa7-4336-8ad2-c14de8134d91
-ms.openlocfilehash: 1c589ddbc7276ca13fc82513effd3bcae3cd61fd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: efb7b86c3add99e596e6798c8267c09689899d56
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718745"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231582"
 ---
 # <a name="what-you-can-do-with-linq-to-sql"></a>Возможности LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] поддерживает все основные возможности, необходимые для разработчиков на SQL. Можно запрашивать данные, вставлять, обновлять и удалять сведения из таблиц.  
   
 ## <a name="selecting"></a>Выбор  
- Выборка (*проекция*) достигается написанием запроса [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] на выбранном языке программирования, последующим выполнением этого запроса и получением результатов. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] автоматически преобразует все необходимые операции в привычные операции SQL. Для получения дополнительной информации см. [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md).  
+ Выборка (*проекция*) достигается написанием запроса [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] на выбранном языке программирования, последующим выполнением этого запроса и получением результатов. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] автоматически преобразует все необходимые операции в требуемые операции SQL, которые вам знакомы. Дополнительные сведения см. в разделе [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md).  
   
  В следующем примере извлекаются названий компаний клиентов из Лондона, которые затем отображаются в окне консоли.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "54718745"
  [!code-csharp[DLinqGettingStarted#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqGettingStarted/cs/Program.cs#3)]
  [!code-vb[DLinqGettingStarted#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqGettingStarted/vb/Module1.vb#3)]  
   
-## <a name="deleting"></a>Deleting  
+## <a name="deleting"></a>Удаление  
  Чтобы `Delete` элемент, удалите его из коллекции, в которую он входит, а затем вызовите метод <xref:System.Data.Linq.DataContext.SubmitChanges%2A> в <xref:System.Data.Linq.DataContext> , чтобы применить изменение.  
   
 > [!NOTE]
@@ -51,6 +51,7 @@ ms.locfileid: "54718745"
  [!code-vb[DLinqGettingStarted#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqGettingStarted/vb/Module1.vb#4)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Руководство по программированию](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)
 - [Модель объектов LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
 - [Начало работы](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)

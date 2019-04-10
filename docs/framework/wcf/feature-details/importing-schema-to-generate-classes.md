@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, schema import and export
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
-ms.openlocfilehash: e12b4967a84797432ec30cdc88863f8530ea9afd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68890a5d86d2781e3c8079c86e941144e3796ea6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620530"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228592"
 ---
 # <a name="importing-schema-to-generate-classes"></a>Импорт схемы для создания классов
 Для создания классов из схемы, которые могут использоваться с Windows Communication Foundation (WCF), используйте <xref:System.Runtime.Serialization.XsdDataContractImporter> класса. В данном разделе описывается процесс и параметры импорта.  
@@ -29,15 +29,15 @@ ms.locfileid: "54620530"
   
 1. Создайте экземпляр класса <xref:System.Runtime.Serialization.XsdDataContractImporter>.  
   
-2. Необязательно. Передайте объект `CodeCompileUnit` в конструктор. Типы, созданные во время импорта схемы, добавляются в этот экземпляр класса `CodeCompileUnit` вместо создания нового пустого экземпляра класса `CodeCompileUnit`.  
+2. Необязательный параметр. Передайте объект `CodeCompileUnit` в конструктор. Типы, созданные во время импорта схемы, добавляются в этот экземпляр класса `CodeCompileUnit` вместо создания нового пустого экземпляра класса `CodeCompileUnit`.  
   
-3. Необязательно. Вызовите один из методов <xref:System.Runtime.Serialization.XsdDataContractImporter.CanImport%2A>. Метод определяет, является ли данная схема действительной схемой контракта данных и можно ли ее импортировать. Метод `CanImport` имеет те же перегрузки, что метод `Import` (см. следующий шаг).  
+3. Необязательный параметр. Вызовите один из методов <xref:System.Runtime.Serialization.XsdDataContractImporter.CanImport%2A> . Метод определяет, является ли данная схема действительной схемой контракта данных и можно ли ее импортировать. Метод `CanImport` имеет те же перегрузки, что метод `Import` (см. следующий шаг).  
   
 4. Вызовите один из перегруженных методов `Import`, например метод <xref:System.Runtime.Serialization.XsdDataContractImporter.Import%28System.Xml.Schema.XmlSchemaSet%29>.  
   
      Простейшая перегрузка принимает объект `XmlSchemaSet` и импортирует все типы, включая анонимные, найденные в данном наборе схем. Другие перегрузки позволяют указывать тип XSD или список типов для импорта (в виде объекта <xref:System.Xml.XmlQualifiedName> или коллекции объектов `XmlQualifiedName`). В этом случае импортируются только указанные типы. Перегрузка принимает объект <xref:System.Xml.Schema.XmlSchemaElement>, импортирующий определенный элемент из объекта `XmlSchemaSet` и его связанный тип (анонимный или нет). Эта перегрузка возвращает объект `XmlQualifiedName`, представляющий имя контракта данных типа, созданного для этого элемента.  
   
-     При нескольких вызовах метода `Import` в один и тот же объект `CodeCompileUnit` добавляется несколько типов. Тип не создается в объекте `CodeCompileUnit`, если он уже имеется в нем. Вызовите метод `Import` несколько раз для одного и того же объекта `XsdDataContractImporter` вместо использования нескольких объектов `XsdDataContractImporter`. Этот метод рекомендуется использовать, чтобы избежать создания повторяющихся типов.  
+     При нескольких вызовах метода `Import` в один и тот же объект `CodeCompileUnit` добавляется несколько типов. Тип не создается в объекте `CodeCompileUnit` , если он уже имеется в нем. Вызовите метод `Import` несколько раз для одного и того же объекта `XsdDataContractImporter` вместо использования нескольких объектов `XsdDataContractImporter`. Этот метод рекомендуется использовать, чтобы избежать создания повторяющихся типов.  
   
     > [!NOTE]
     > В случае сбоя при импорте объект `CodeCompileUnit` будет находиться в непредсказуемом состоянии. Использование объекта `CodeCompileUnit`, возникшего после сбоя импорта, может привести к образованию уязвимых мест в системе безопасности.  
@@ -52,7 +52,7 @@ ms.locfileid: "54620530"
   
  Как правило, открытые типы создаются из схемы с закрытыми полями и соответствующими свойствами открытых членов данных. Чтобы вместо этого создать внутренние типы, присвойте свойству <xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A> значение `true`.  
   
- В следующем примере показана схема, преобразованная во внутренний класс после присвоения свойству <xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A> значения `true.`  
+ В следующем примере показано схема, преобразованная во внутренний класс, если <xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A> свойство имеет значение `true.`  
   
  [!code-csharp[c_SchemaImportExport#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/cs/source.cs#2)]
  [!code-vb[c_SchemaImportExport#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#2)]  
@@ -170,16 +170,17 @@ ms.locfileid: "54620530"
  Это достигается путем применения <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> атрибут в созданный `IXmlSerializable` классы и указанию метода, который вызывает <xref:System.Runtime.Serialization.XmlSerializableServices.AddDefaultSchema%2A> метод для создания типа «anyType».  
   
 > [!NOTE]
->  Тип <xref:System.Runtime.Serialization.XmlSerializableServices> существует только для поддержки этой конкретной возможности. Не рекомендуется использовать его для других целей.  
+>  Тип <xref:System.Runtime.Serialization.XmlSerializableServices> существует только для поддержки этой конкретной функции. Не рекомендуется использовать его для других целей.  
   
 #### <a name="import-options-advanced-options"></a>Параметры импорта. Дополнительные параметры  
  Ниже представлены дополнительные параметры импорта.  
   
--   Свойство <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>. Укажите класс <xref:System.CodeDom.Compiler.CodeDomProvider>, используемый для создания кода для созданных классов. Механизм импорта пытается избежать возможностей, не поддерживаемых классом <xref:System.CodeDom.Compiler.CodeDomProvider>. Если для свойства <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> значение не задано, используется полный набор возможностей [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] без ограничений.  
+-   <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> . Укажите класс <xref:System.CodeDom.Compiler.CodeDomProvider>, используемый для создания кода для созданных классов. Механизм импорта пытается избежать возможностей, не поддерживаемых классом <xref:System.CodeDom.Compiler.CodeDomProvider>. Если для свойства <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> значение не задано, используется полный набор функций [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] без ограничений.  
   
--   Свойство <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A>. С помощью этого свойства можно указать реализацию <xref:System.Runtime.Serialization.IDataContractSurrogate>. В реализации <xref:System.Runtime.Serialization.IDataContractSurrogate> настраивается процесс импорта. Дополнительные сведения см. в разделе [суррогаты контрактов данных](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). По умолчанию суррогат не используется.  
+-   <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> . С помощью этого свойства можно указать реализацию <xref:System.Runtime.Serialization.IDataContractSurrogate>. В реализации <xref:System.Runtime.Serialization.IDataContractSurrogate> настраивается процесс импорта. Дополнительные сведения см. в разделе [суррогаты контрактов данных](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). По умолчанию суррогат не используется.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.XsdDataContractImporter>
 - <xref:System.Runtime.Serialization.XsdDataContractExporter>

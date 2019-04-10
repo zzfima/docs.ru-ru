@@ -6,17 +6,17 @@ helpviewer_keywords:
 - DataServiceQuery class, about DataServiceQuery class
 - DataServiceContext class, about DataServiceContext class
 ms.assetid: 21075e50-8917-413e-a8ea-35a0f6e65aa5
-ms.openlocfilehash: 9af19f2ef552c5871d488c968368a9192bae9edb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5d14a1be3cd40ace2e31fec6f44a86707e5c4476
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656223"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230204"
 ---
 # <a name="wcf-data-services-client-library"></a>Библиотека клиентов служб данных WCF
 Со службами данных, основанными на [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)], может взаимодействовать любое приложение, которое способно отправить HTTP-запрос и обработать канал [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], возвращаемый службой данных. Эта возможность взаимодействия позволяет обращаться к службам, основанным на [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], из широкого спектра веб-приложений. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] включает в себя клиентские библиотеки, предоставляющие более широкие возможности программирования, при использовании [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-каналов из .NET Framework или приложений на основе Silverlight.  
   
- Клиентская библиотека содержит два основных класса: <xref:System.Data.Services.Client.DataServiceContext> и <xref:System.Data.Services.Client.DataServiceQuery%601>. Класс <xref:System.Data.Services.Client.DataServiceContext> инкапсулирует операции, поддерживающие работу с конкретной службой данных. Хотя службы [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] не учитывают состояние, контекст его учитывает. Таким образом, можно использовать <xref:System.Data.Services.Client.DataServiceContext> класса для поддержания состояния на стороне клиента между взаимодействиями со службой данных для поддержки функции, такие как управление изменениями. Этот класс также управляет идентификаторами и отслеживает изменения. Класс <xref:System.Data.Services.Client.DataServiceQuery%601> представляет запрос к определенному набору сущностей.  
+ Клиентская библиотека содержит два основных класса: <xref:System.Data.Services.Client.DataServiceContext> и <xref:System.Data.Services.Client.DataServiceQuery%601>. Класс <xref:System.Data.Services.Client.DataServiceContext> инкапсулирует операции, поддерживающие работу с конкретной службой данных. Хотя службы [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] не сохраняют состояние, контекст его сохраняет. Таким образом, можно использовать <xref:System.Data.Services.Client.DataServiceContext> класса для поддержания состояния на стороне клиента между взаимодействиями со службой данных для поддержки функции, такие как управление изменениями. Этот класс также управляет идентификаторами и отслеживает изменения. Класс <xref:System.Data.Services.Client.DataServiceQuery%601> представляет запрос к определенному набору сущностей.  
   
  Этот раздел описывает использование клиентских библиотек для доступа и изменения данных из клиентского приложения .NET Framework. Дополнительные сведения об использовании [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] клиентской библиотеки с приложением на основе Silverlight см. в разделе [WCF Data Services (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=186016). Доступны другие клиентские библиотеки, позволяющие использовать [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-канала в приложениях других видов. Дополнительные сведения см. в разделе [OData SDK](https://go.microsoft.com/fwlink/?LinkID=185796).  
   
@@ -52,5 +52,6 @@ ms.locfileid: "54656223"
  Описывает доступ к двоичным данным, возвращенным службой данных в виде потока данных, и их изменение.  
   
 ## <a name="see-also"></a>См. также
+
 - [Определение служб данных WCF](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
 - [Начало работы](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)

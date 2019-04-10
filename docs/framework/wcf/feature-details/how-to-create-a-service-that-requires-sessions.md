@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8a7613ef-0df9-47c3-b8dc-47f42cb1fd8b
-ms.openlocfilehash: c104798fa3ef0e8b9dc43ad9cc68599b71de4011
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 53b6c809103a2a32d544b8317164a5fa3aa81596
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59140495"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300558"
 ---
 # <a name="how-to-create-a-service-that-requires-sessions"></a>Практическое руководство. Создание службы, для которой требуются сеансы
 Сеансы создают общее состояние между двумя и более конечными точками, что обеспечивает полезные функции, такие как обратные вызовы, безопасность по всем участкам передачи и ассоциации между клиентами и экземплярами служб. Дополнительные сведения о сеансах в приложениях Windows Communication Foundation (WCF), см. в разделе [с использованием сеансов](../../../../docs/framework/wcf/using-sessions.md).  
   
 ### <a name="to-specify-that-a-contract-require-its-binding-to-support-sessions"></a>Указание требования контракта о необходимости поддержки сеанса его привязкой  
   
-1.  Создайте контракт службы как минимум с одной операцией. Пример создания контракта службы, см. в разделе [как: Определите контракт службы](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md).  
+1. Создайте контракт службы как минимум с одной операцией. Пример создания контракта службы, см. в разделе [как: Определите контракт службы](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md).  
   
-2.  Измените элемент <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType>, объявляющий контракт, присвоив свойству <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> одно из следующих значений:  
+2. Измените элемент <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType>, объявляющий контракт, присвоив свойству <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> одно из следующих значений:  
   
     -   <xref:System.ServiceModel.SessionMode.Required?displayProperty=nameWithType> Если этот контракт выполнялся в сеансе.  
   
@@ -27,7 +27,7 @@ ms.locfileid: "59140495"
   
     -   <xref:System.ServiceModel.SessionMode.NotAllowed?displayProperty=nameWithType> Если этот контракт не должна выполняться в рамках сеанса.  
   
-3.  Настройте конечную точку службы так, чтобы она использовала привязку, поддерживающую сеансы. В следующем примере конфигурации показано использование привязки <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>, поддерживающей сеанс WS`-`ReliableMessaging.  
+3. Настройте конечную точку службы так, чтобы она использовала привязку, поддерживающую сеансы. В следующем примере конфигурации показано использование привязки <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>, поддерживающей сеанс WS`-`ReliableMessaging.  
   
      [!code-xml[SCA.Session#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/sca.session/cs/hostapplication.exe.config#2)]   
   

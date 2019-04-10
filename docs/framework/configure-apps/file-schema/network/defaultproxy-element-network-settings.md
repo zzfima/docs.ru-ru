@@ -1,5 +1,5 @@
 ---
-title: Элемент <defaultProxy> (параметры сети)
+title: <defaultProxy> (Сетевые параметры)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#defaultProxy
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - defaultProxy element
 - <defaultProxy> element
 ms.assetid: 9d663c4b-07b4-4f6f-9b12-efbd3630354f
-ms.openlocfilehash: 9d9e96296cb764d3fbb3cdcd561e036f9ad6aa2b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ce08dadb0fb7b986c0573b1514f9ecbbe2961c3a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257217"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228351"
 ---
 # <a name="defaultproxy-element-network-settings"></a>\<defaultProxy > (сетевые параметры)
 Настраивает прокси-сервер протокола передачи гипертекста (HTTP).  
@@ -50,13 +50,13 @@ ms.locfileid: "55257217"
 |-----------------|---------------------|  
 |[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Предоставляет набор регулярных выражений, описывающих адреса, которые не используют прокси-сервер.|  
 |[module](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md)|Добавляет в приложение новый модуль прокси-сервера.|  
-|[Прокси-сервера](../../../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md)|Определяет прокси-сервер.|  
+|[прокси](../../../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md)|Определяет прокси-сервер.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |**Элемент**|**Описание**|  
 |-----------------|---------------------|  
-|[System.NET](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Содержит параметры сети, определяющие способ подключения .NET Framework к Интернету.|  
+|[system.net](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Содержит параметры сети, определяющие способ подключения .NET Framework к Интернету.|  
   
 ## <a name="remarks"></a>Примечания  
  Если элемент defaultProxy пуст, будут использоваться параметры прокси-сервера из Internet Explorer. Это поведение отличается от поведения в .NET Framework версии 1.1.  
@@ -87,5 +87,6 @@ ms.locfileid: "55257217"
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

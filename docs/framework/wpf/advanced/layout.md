@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 4c967bf34c66cd2dcc4365a2a3ec214c9bac5623
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: 7fc69ff0434a26dc196d24395bbd1e2f441008de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464571"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231127"
 ---
 # <a name="layout"></a>Макет
 В этом разделе описывается система макета [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Для создания пользовательских интерфейсов в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] важно понимание того, как и когда происходят вычисления макета.  
@@ -33,7 +33,7 @@ ms.locfileid: "58464571"
   
 -   [Субпиксельная отрисовка и округление макета](#LayoutSystem_LayoutRounding)  
   
--   [Дальнейшие действия](#LayoutSystem_whatsnext)  
+-   [Что дальше?](#LayoutSystem_whatsnext)  
   
 <a name="LayoutSystem_BoundingBox"></a>   
 ## <a name="element-bounding-boxes"></a>Ограничивающие прямоугольники элемента  
@@ -149,6 +149,7 @@ ms.locfileid: "58464571"
  Понимание механизма измерения и упорядочивания элементов — это первый шаг к пониманию макета. Дополнительные сведения о доступных <xref:System.Windows.Controls.Panel> элементов, см. в разделе [Общие сведения о панелях](../controls/panels-overview.md). Чтобы лучше понять различные свойства размещения, которые могут повлиять на макет, см. раздел [Общие сведения о свойствах Alignment, Margin, Padding](alignment-margins-and-padding-overview.md). Пример настраиваемого <xref:System.Windows.Controls.Panel> элемент, см. в разделе [пример Custom Radial Panel](https://go.microsoft.com/fwlink/?LinkID=159982). Когда будете готовы к помещению все вместе в облегченное приложение, см. в разделе [Пошаговое руководство: Создание первого классического приложения WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.FrameworkElement>
 - <xref:System.Windows.UIElement>
 - [Общие сведения о панелях](../controls/panels-overview.md)

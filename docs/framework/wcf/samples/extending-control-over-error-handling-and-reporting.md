@@ -2,12 +2,12 @@
 title: Повышение управляемости обработки ошибок и формирования сообщений об ошибках
 ms.date: 03/30/2017
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
-ms.openlocfilehash: 520a939c5527fa341a6c3a609297c69ec05dd7ce
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4a12ab62a9ec25d207a88b041bcdf498eaff7228
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094116"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303210"
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>Повышение управляемости обработки ошибок и формирования сообщений об ошибках
 В этом примере показано, как расширить управление обработкой ошибок и ошибок на службу Windows Communication Foundation (WCF) с помощью <xref:System.ServiceModel.Dispatcher.IErrorHandler> интерфейс. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) некоторые дополнительный код, добавленный в службу для обработки ошибок. Клиент вызывает несколько ошибок. Служба перехватывает эти ошибки и регистрирует их в файле.  
@@ -141,13 +141,13 @@ Fault: Reason = Invalid Argument: The argument must be greater than zero.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1.  Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Чтобы построить решение, следуйте инструкциям в [сборка образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Чтобы построить решение, следуйте инструкциям в [сборка образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Проверьте, что создан каталог c:\logs для файла error.txt. Либо измените имя файла, используемое в `CalculatorErrorHandler.HandleError`.  
+3. Проверьте, что создан каталог c:\logs для файла error.txt. Либо измените имя файла, используемое в `CalculatorErrorHandler.HandleError`.  
   
-4.  Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 >  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  

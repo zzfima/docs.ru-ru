@@ -7,12 +7,12 @@ helpviewer_keywords:
 - white-space processing in XAML [XAML Services]
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
-ms.openlocfilehash: ca628a366b000b23a2abe38b1c8b7272299bff16
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dadfab948aff73714a2cf253100f89de3b4a2d57
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59102236"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294929"
 ---
 # <a name="white-space-processing-in-xaml"></a>Обработка пробелов в XAML
 Состояние согласно правилам языка XAML, значащим пробелом должны обрабатываться [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] реализации обработчика. В этом разделе описываются эти правила языка XAML. Здесь также описывается обработка дополнительных пробелов, определяемое [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] реализация обработчика XAML и записи XAML для сериализации.  
@@ -25,15 +25,15 @@ ms.locfileid: "59102236"
 ## <a name="white-space-normalization"></a>Нормализация пробелов  
  По умолчанию выполняется следующая нормализации пробелов при [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] процессора процессы [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] файла:  
   
-1.  Символы перевода строки между восточно-азиатскими символами удаляются. Определение этого термина см. в разделе "Символы восточно-азиатских языков" далее.  
+1. Символы перевода строки между восточно-азиатскими символами удаляются. Определение этого термина см. в разделе "Символы восточно-азиатских языков" далее.  
   
-2.  Все символы пробелов (пробел, перевод строки, вкладке) преобразуются в пробелы.  
+2. Все символы пробелов (пробел, перевод строки, вкладке) преобразуются в пробелы.  
   
-3.  Все последовательные пробелы удаляются и заменяется одним пробелом.  
+3. Все последовательные пробелы удаляются и заменяется одним пробелом.  
   
-4.  Пробел после открывающего тега удаляется.  
+4. Пробел после открывающего тега удаляется.  
   
-5.  Пробел перед закрывающим тегом удаляется.  
+5. Пробел перед закрывающим тегом удаляется.  
   
  "Default" соответствует состоянию, обозначаемому значением атрибута [XML: space](xml-space-handling-in-xaml.md) по умолчанию.  
   

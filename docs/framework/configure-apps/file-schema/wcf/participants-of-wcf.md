@@ -2,12 +2,12 @@
 title: <participants> для WCF
 ms.date: 03/30/2017
 ms.assetid: d99dbddc-0057-4e18-8e42-f91411d39970
-ms.openlocfilehash: c1f43fc425a172ce630b48d046ed75d09c74c2e3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f714d7992266dbd6fc0c50a2bfadd61588179577
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362855"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227435"
 ---
 # <a name="participants-of-wcf"></a>\<Участники > из WCF
 Настройте список участников отслеживания, которые будут прослушивать записи отслеживания, прямо исходящие из среды выполнения, и обрабатывать их (в зависимости от настройки). Включает запись результата в определенном виде (например, в виде файла, консоли, ETW), обработку или сбор записей или любое другое требуемое сочетание.  
@@ -86,6 +86,7 @@ ms.locfileid: "57362855"
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection>
 - <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>
 - [Отслеживание и трассировка рабочих процессов](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)

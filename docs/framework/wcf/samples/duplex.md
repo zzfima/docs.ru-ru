@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Duplex Service Contract
 ms.assetid: bc5de6b6-1a63-42a3-919a-67d21bae24e0
-ms.openlocfilehash: 1135cf211c3a858f495cd1424d3a28f3a6c37f7e
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
-ms.translationtype: MT
+ms.openlocfilehash: c03398e897bae16dbe90ed2ce00b8412f47f0549
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59054966"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230828"
 ---
 # <a name="duplex"></a>Дуплекс
 Этот образец демонстрирует, как определить и реализовать дуплексный контракт. Дуплексная связь имеет место, когда клиент устанавливает сеанс со службой и предоставляет службе канал, по которому служба может отправлять сообщения обратно клиенту. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md). Дуплексный контракт определяется в виде пары интерфейсов - основной интерфейс от клиента к службе и интерфейс обратного вызова от службы к клиенту. В этом образце интерфейс `ICalculatorDuplex` позволяет клиенту выполнять математические операции, вычисляя результат в ходе сеанса. Служба возвращает результаты в интерфейсе `ICalculatorDuplexCallback`. Для дуплексного контракта требуется сеанс, поскольку необходимо установить контекст для корреляции набора сообщений, передаваемых между клиентом и службой.  
@@ -193,4 +193,3 @@ client.Close();
 >  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Duplex`  
-  

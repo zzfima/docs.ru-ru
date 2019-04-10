@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
-ms.openlocfilehash: 97340f8583ef0900645f6db5c453475e85549c55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6bf683cdd0a03a5d1dbc452c28e7b33911464f09
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620203"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297256"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>Обращение к службам с использованием клиента WCF
 
@@ -20,11 +20,11 @@ ms.locfileid: "54620203"
 
  Ниже приведены основные шаги для создания клиента WCF:
 
-1.  Скомпилируйте код службы.
+1. Скомпилируйте код службы.
 
-2.  Создайте прокси клиента WCF.
+2. Создайте прокси клиента WCF.
 
-3.  Создайте экземпляр клиентского прокси-класса WCF.
+3. Создайте экземпляр клиентского прокси-класса WCF.
 
 Клиентский прокси WCF можно создать вручную с помощью Service Model Metadata Utility Tool (SvcUtil.exe) Дополнительные сведения см. [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Клиентский прокси WCF также может возникать в Visual Studio с помощью **Add Service Reference** функции. Для создания клиентского прокси-класса WCF любым методом выбранная служба должна быть запущена. Если служба размещается резидентно, то необходимо запустить узел. Если служба размещена на веб-сервере IIS/WAS, то больше ничего делать не нужно.
 
@@ -189,11 +189,11 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
 ## <a name="see-also"></a>См. также
 
 - [Практическое руководство. Создание клиента](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
-- [Практическое руководство. Службы доступа с дуплексным контрактом](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [Практическое руководство. Доступ к службам с дуплексным контрактом](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
 - [Практическое руководство. Асинхронный вызов операций службы](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
-- [Практическое руководство. Доступ к службам с односторонним контрактом и контрактом типа запрос ответ](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
-- [Практическое руководство. Доступ к WSE 3.0 служба](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
+- [Практическое руководство. Доступ к службам с односторонним контрактом и контрактом типа "запрос — ответ"](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
+- [Практическое руководство. Доступ к службе WSE 3.0](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
 - [Основные сведения о созданном коде клиента](../../../docs/framework/wcf/feature-details/understanding-generated-client-code.md)
-- [Практическое руководство. Улучшения запуска время клиентских приложений WCF с использованием XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
-- [Указание поведения клиента во время выполнения](../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
-- [Настройка поведения клиентов](../../../docs/framework/wcf/configuring-client-behaviors.md)
+- [Практическое руководство. Сокращение времени запуска клиентских приложений WCF с использованием XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
+- [Задание поведения клиента во время выполнения](../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
+- [Настройка поведений клиентов](../../../docs/framework/wcf/configuring-client-behaviors.md)

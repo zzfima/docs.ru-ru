@@ -2,12 +2,12 @@
 title: Сеансы, экземпляры и параллелизм
 ms.date: 03/30/2017
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
-ms.openlocfilehash: 5ccd6fe5e07b2a1bc36b89d1fe14f7990dc7231d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 994b95bb8ebc14a9997e1e9510389fdf16098d12
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661829"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229073"
 ---
 # <a name="sessions-instancing-and-concurrency"></a>Сеансы, экземпляры и параллелизм
 Под *сеансом* понимается скоррелированный набор всех сообщений, переданных между двумя конечными точками. *Создание экземпляров* означает управление временем жизни определенных пользователем объектов службы и связанных с ними объектов <xref:System.ServiceModel.InstanceContext> . Термин*параллелизм* означает управление количеством потоков, одновременно выполняющихся в некотором контексте <xref:System.ServiceModel.InstanceContext> .  
@@ -29,11 +29,11 @@ ms.locfileid: "54661829"
   
  Если вы знакомы с <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> в класс [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] приложения и функциональные возможности она предоставляет, можно отметить следующие различия между его сеансами и сеансами WCF:  
   
--   Сеансы[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] всегда инициируются сервером.  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] сеансы будут всегда инициированного сервером.  
   
--   Сеансы[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] явным образом неупорядочены.  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] сеансы явным образом неупорядочены.  
   
--   Сеансы[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] обеспечивают общий механизм хранения данных для запросов.  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] сеансы обеспечивают общий механизм хранения данных для запросов.  
   
  Клиентские приложения и приложения служб взаимодействуют с сеансами разными способами. Клиентское приложение инициирует сеансы, а затем получает и обрабатывает сообщения, передаваемые в рамках этого сеанса. Приложения служб могут использовать сеансы как точки расширяемости для добавления дополнительного поведения. Это можно сделать, работая непосредственно с контекстом <xref:System.ServiceModel.InstanceContext> , или реализовав пользовательский поставщик контекста экземпляров.  
   
@@ -108,9 +108,10 @@ public class CalculatorService : ICalculatorConcurrency
 |Single|-Поведение с сеансовым каналом: Сеанс и один <xref:System.ServiceModel.InstanceContext> для всех вызовов.<br />-Поведение с каналом: Возникает исключение.|-Поведение с сеансовым каналом: Сеанс и <xref:System.ServiceModel.InstanceContext> для созданной или указанной пользователем одноэлементной.<br />-Поведение с каналом: <xref:System.ServiceModel.InstanceContext> Для созданной или указанной пользователем одноэлементной.|-Поведение с сеансовым каналом: Возникает исключение.<br />-Поведение с каналом: <xref:System.ServiceModel.InstanceContext> Для каждой созданной или указанной пользователем одноэлементной.|  
   
 ## <a name="see-also"></a>См. также
+
 - [Использование сеансов](../../../../docs/framework/wcf/using-sessions.md)
-- [Практическое руководство. Создание службы, которой требуются сеансы](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)
+- [Практическое руководство. Создание службы, для которой требуются сеансы](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)
 - [Практическое руководство. Управление созданием экземпляров служб](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
-- [Параллелизм](../../../../docs/framework/wcf/samples/concurrency.md)
+- [параллелизм](../../../../docs/framework/wcf/samples/concurrency.md)
 - [Создание экземпляров](../../../../docs/framework/wcf/samples/instancing.md)
-- [Session](../../../../docs/framework/wcf/samples/session.md)
+- [Сеанс](../../../../docs/framework/wcf/samples/session.md)

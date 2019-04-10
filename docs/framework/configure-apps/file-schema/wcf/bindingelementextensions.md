@@ -2,12 +2,12 @@
 title: <bindingElementExtensions>
 ms.date: 03/30/2017
 ms.assetid: bb597fc0-c947-451c-afda-bf23d42f4f4d
-ms.openlocfilehash: 9a2a3af093949c1d724fdea13655bbb80fe71048
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 775f93f319c136a29a32ffaa1dfabc12ee081b29
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270476"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227513"
 ---
 # <a name="bindingelementextensions"></a>\<bindingElementExtensions >
 В этом разделе описывается, как обеспечивается использование пользовательского элемента привязки в файле конфигурации компьютера или приложения. Элемент пользовательской привязки можно добавить в эту коллекцию, используя ключевое слово `add`, присвоив атрибуту `type` элемента значение, соответствующее расширению элемента привязки, и указав в атрибуте `name` пользовательский элемент привязки.  
@@ -44,5 +44,6 @@ ms.locfileid: "55270476"
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>
 - [Расширение привязок](../../../../../docs/framework/wcf/extending/extending-bindings.md)

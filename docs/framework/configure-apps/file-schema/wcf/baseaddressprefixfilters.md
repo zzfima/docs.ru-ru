@@ -2,12 +2,12 @@
 title: <baseAddressPrefixFilters>
 ms.date: 03/30/2017
 ms.assetid: 8cab2a9a-c51f-4283-bb60-2ad0c274fd46
-ms.openlocfilehash: 303e1d0ab9150c16cb36439940ade73cf012b2d1
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 378db238d647be2248c0303f45aece42f7ea5b31
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261814"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227630"
 ---
 # <a name="baseaddressprefixfilters"></a>\<baseAddressPrefixFilters>
 Представляет коллекцию конфигурации, которые элементы, которые задают пройти фильтров, которые обеспечивают механизм для выбора необходимых привязок служб Internet Information Services (IIS), при размещении приложения Windows Communication Foundation (WCF) в службах IIS.  
@@ -36,15 +36,15 @@ ms.locfileid: "55261814"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-baseaddressprefixfilter.md)|Добавляет элемент конфигурации, который задает префиксный фильтр для базовых адресов, используемых узлом службы.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
-|[\<serviceHostingEnvironment >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|Определяет, какой тип среда размещения служб создает для конкретного транспорта.|  
+|[\<serviceHostingEnvironment>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|Определяет, какой тип среда размещения служб создает для конкретного транспорта.|  
   
 ## <a name="remarks"></a>Примечания  
  Префиксный фильтр предоставляет способ для общих поставщиков услуг размещения задать, какие URI должны использоваться службой. Это дает возможность общим узлам размещать несколько приложений с разными базовыми адресами для одной схемы на одном узле.  
@@ -81,6 +81,7 @@ http://test2.fabrikam.com/Service.svc
 >  Фильтр не поддерживает какие-либо подстановочные знаки. Кроме того, среди базовых адресов, предоставляемых IIS, могут присутствовать адреса, привязанные к другим схемам, не представленным в списке `baseAddressPrefixFilters`. Эти адреса не фильтруются.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.Configuration.BaseAddressPrefixFilterElementCollection>
 - <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
 - <xref:System.ServiceModel.ServiceHostingEnvironment>

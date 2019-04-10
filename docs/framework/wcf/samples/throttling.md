@@ -5,12 +5,12 @@ helpviewer_keywords:
 - service behaviors, throttling sample
 - Throttling Sample [Windows Communication Foundation]
 ms.assetid: 40bb3582-8ae9-4410-96f0-6c515bfaf47c
-ms.openlocfilehash: 38f42b925bad88afe973d922c163bf3bd50f0520
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 1611a45efb1cc7bbef524e4a23cc3287b7f51d3f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58832376"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231309"
 ---
 # <a name="throttling"></a>Регулирование
 В образце регулирования демонстрируется использование элементов управления регулированием. Элементы регулирования ограничивают число одновременных вызовов, экземпляров или сеансов, чтобы предотвратить чрезмерное потребление ресурсов. Поведение регулирования задается параметрами файла конфигурации службы. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) , реализующем службу калькулятора.  
@@ -81,4 +81,3 @@ Press any key to continue . . .
 >  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Throttling`  
-  

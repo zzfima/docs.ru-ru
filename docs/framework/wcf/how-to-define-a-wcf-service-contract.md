@@ -7,12 +7,12 @@ dev_langs:
 - CSharp
 - VB
 ms.assetid: 67bf05b7-1d08-4911-83b7-a45d0b036fc3
-ms.openlocfilehash: f93ef787c74a4581d45c24c5a704cc5fb044bd46
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: a1908339460191fcb81d03d45c56dd57b2cf4c4e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409969"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228397"
 ---
 # <a name="tutorial-define-a-windows-communication-foundation-service-contract"></a>Учебник. Определение контракта службы Windows Communication Foundation
 
@@ -29,10 +29,9 @@ ms.locfileid: "58409969"
 > - Создание **библиотека службы WCF** проекта.
 > - Определите интерфейс контракта службы.
 
-
 ## <a name="create-a-wcf-service-library-project-and-define-a-service-contract-interface"></a>Создайте проект библиотеки служб WCF и определить интерфейс контракта службы
 
-1. Откройте Visual Studio с правами администратора. Чтобы сделать это, выберите в программе Visual Studio в **запустить** меню, а затем выберите **дополнительные** > **Запуск от имени администратора** в контекстном меню.
+1. Откройте Visual Studio от имени администратора. Чтобы сделать это, выберите в программе Visual Studio в **запустить** меню, а затем выберите **дополнительные** > **Запуск от имени администратора** в контекстном меню.
 
 2. Создание **библиотека службы WCF** проекта.
 
@@ -54,7 +53,6 @@ ms.locfileid: "58409969"
 
       > [!NOTE]
       > Если вы установили Visual Studio с параметрами среды разработки Visual Basic, решение может быть скрыт. Если это так, выберите **параметры** из **средства** меню, затем выберите **проекты и решения** > **Общие** в **параметры** окна. Выберите **всегда показывать решение**. Кроме того, убедитесь, что **сохранять новые проекты при создании** выбран.
-
 
 3. Из **обозревателе решений**откройте **IService1.cs** или **IService1.vb** файл и замените его код следующим кодом:
 

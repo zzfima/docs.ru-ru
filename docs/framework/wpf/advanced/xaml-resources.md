@@ -7,20 +7,19 @@ helpviewer_keywords:
 - reusing commonly defined objects [WPF]
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
-ms.openlocfilehash: f5d6ae2d21058e7e6dd9fa9736800237082766d1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: d736d80a05469dafecbdaf196701c14528ee7d26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364753"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230022"
 ---
 # <a name="xaml-resources"></a>Ресурсы XAML
 Ресурс — это объект, который можно повторно использовать в разных местах приложения. Примерами ресурсов являются кисти и стили. В этом обзоре описывается использование ресурсов в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Можно также создать и доступ к ресурсам с помощью кода или попеременно между кодом и [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Дополнительные сведения см. в разделе [ресурсы и код](resources-and-code.md).  
   
 > [!NOTE]
 >  Файлы ресурсов, описанных в этом разделе, отличаются от файлов ресурсов, описанных в [ресурса приложения WPF, содержимое и файлы данных](../app-development/wpf-application-resource-content-and-data-files.md) и отличаются от внедренных или связанных ресурсов, описанных в [управление Ресурсами приложения (.NET)](/visualstudio/ide/managing-application-resources-dotnet).  
-  
-  
+
 <a name="usingresources"></a>   
 ## <a name="using-resources-in-xaml"></a>Использование ресурсов в XAML  
  В следующем примере определяется <xref:System.Windows.Media.SolidColorBrush> как ресурс в корневом элементе страницы. Затем ссылается на ресурс и использует его для задания свойства нескольких дочерних элементов, включая <xref:System.Windows.Shapes.Ellipse>, <xref:System.Windows.Controls.TextBlock>и <xref:System.Windows.Controls.Button>.  
@@ -129,7 +128,7 @@ ms.locfileid: "57364753"
   
 -   Задаваемое свойство должно быть свойством на <xref:System.Windows.FrameworkElement> или <xref:System.Windows.FrameworkContentElement>. Что свойство должно поддерживаться <xref:System.Windows.DependencyProperty>.  
   
--   Ссылка указывает на значение в <xref:System.Windows.Style> <xref:System.Windows.Setter>.  
+-   Ссылка указывает на значение в <xref:System.Windows.Style><xref:System.Windows.Setter>.  
   
 -   Задаваемое свойство должно быть свойством на <xref:System.Windows.Freezable> , предоставляется как значение либо <xref:System.Windows.FrameworkElement> или <xref:System.Windows.FrameworkContentElement> свойство, или <xref:System.Windows.Setter> значение.  
   
@@ -145,7 +144,7 @@ ms.locfileid: "57364753"
   
  [!code-xaml[FEResourceSH_snip#ImplicitStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page2.xaml#implicitstyle)]  
   
- Что стиля на самом деле есть ключ: неявный ключ `typeof(` <xref:System.Windows.Controls.Button> `)`. В разметке, можно указать <xref:System.Windows.Style.TargetType%2A> непосредственно в качестве типа имени (или при необходимости можно использовать [{x: Type...}](../../xaml-services/x-type-markup-extension.md) для возврата <xref:System.Type>.  
+ Что стиля на самом деле есть ключ: неявный ключ `typeof(`<xref:System.Windows.Controls.Button>`)`. В разметке, можно указать <xref:System.Windows.Style.TargetType%2A> непосредственно в качестве типа имени (или при необходимости можно использовать [{x: Type...}](../../xaml-services/x-type-markup-extension.md) для возврата <xref:System.Type>.  
   
  Через механизмах стилей темы по умолчанию, используемые [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], что стиль будет применен как стиль среды выполнения для <xref:System.Windows.Controls.Button> на странице, несмотря на то что <xref:System.Windows.Controls.Button> сам пытается задать его <xref:System.Windows.FrameworkElement.Style%2A> свойство или конкретного ресурса ссылка на стиль. Стиль, определенный на странице, находится в последовательности подстановки, чем стиль словаря темы, используя тот же ключ, который имеет стиль словаря темы. Вы можете просто указать `<Button>Hello</Button>` в любом месте страницы и стиль, определенный с помощью <xref:System.Windows.Style.TargetType%2A> из `Button` будет применен к этой кнопке. Если требуется, можно по-прежнему явно ключ стиля с тем же значением типа, как <xref:System.Windows.Style.TargetType%2A>для ясности в разметке, но это не является обязательным.  
   
@@ -154,6 +153,7 @@ ms.locfileid: "57364753"
  <xref:System.Windows.DataTemplate> также имеет неявный ключ. Неявным ключом для <xref:System.Windows.DataTemplate> является <xref:System.Windows.DataTemplate.DataType%2A> значение свойства. <xref:System.Windows.DataTemplate.DataType%2A> также можно указать как имя типа, а не явным образом с помощью [{x: Type...} ](../../xaml-services/x-type-markup-extension.md). Дополнительные сведения см. в разделе [Общие сведения о шаблонах данных](../data/data-templating-overview.md).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.ResourceDictionary>
 - [Ресурсы приложений](optimizing-performance-application-resources.md)
 - [Ресурсы и код](resources-and-code.md)

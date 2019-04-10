@@ -1,18 +1,18 @@
 ---
-title: Как выполнить Указание привязки службы в конфигурации
+title: Практическое руководство. Задание привязки службы в конфигурации
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 885037f7-1c2b-4d7a-90d9-06b89be172f2
-ms.openlocfilehash: 2152398cecccdf1f949baf30217b7f5ac19ae22f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 5471e6d5610fd74a71a53624392d757f85304236
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527137"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229866"
 ---
-# <a name="how-to-specify-a-service-binding-in-configuration"></a>Как выполнить Указание привязки службы в конфигурации
+# <a name="how-to-specify-a-service-binding-in-configuration"></a>Практическое руководство. Задание привязки службы в конфигурации
 В этом примере контракт `ICalculator` определен для базовой службы калькулятора, служба реализуется в классе `CalculatorService`, а затем ее конечная точка настраивается в файле Web.config с указанием того, что служба использует класс <xref:System.ServiceModel.BasicHttpBinding>. Описание способов настройки этой службы с помощью кода вместо файла конфигурации, см. в разделе [как: Указание привязки службы в коде](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md).  
   
  В большинстве случаев рекомендуется указывать привязку и адрес декларативно в конфигурации, а не принудительно в коде. Как правило, определять конечные точки в коде непрактично, поскольку привязки и адреса для развернутой службы чаще всего отличаются от привязок и адресов, используемых в процессе разработки службы. В общем случае, если не указывать привязку и адрес в коде, их можно изменять без повторной компиляции или повторного развертывания приложения.  
@@ -93,5 +93,6 @@ ms.locfileid: "54527137"
     ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Использование привязок для настройки служб и клиентов](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [Указание адреса конечной точки](../../../docs/framework/wcf/specifying-an-endpoint-address.md)
+- [Задание адреса конечной точки](../../../docs/framework/wcf/specifying-an-endpoint-address.md)

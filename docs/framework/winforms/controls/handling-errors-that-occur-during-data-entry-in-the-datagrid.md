@@ -1,5 +1,5 @@
 ---
-title: Пошаговое руководство. Обработка ошибок, возникающих во время ввода данных в элементе управления DataGridView Windows Forms
+title: Пошаговое руководство. Обработка ошибок, связанных с вводом данных с помощью элемента управления DataGridView, в Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - error handling [Windows Forms], data entry
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 30a68b85-d3af-4946-83c1-1e2d010d0511
-ms.openlocfilehash: a8eb4584060924684eacc99d46b88408451f1c82
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: dfd0753895a937ccef9a8bc14b2f692219eb7f06
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708240"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230477"
 ---
-# <a name="walkthrough-handling-errors-that-occur-during-data-entry-in-the-windows-forms-datagridview-control"></a>Пошаговое руководство. Обработка ошибок, возникающих во время ввода данных в элементе управления DataGridView Windows Forms
+# <a name="walkthrough-handling-errors-that-occur-during-data-entry-in-the-windows-forms-datagridview-control"></a>Пошаговое руководство. Обработка ошибок, связанных с вводом данных с помощью элемента управления DataGridView, в Windows Forms
 Обработка ошибок из базового хранилища данных — это обязательный компонент для ввода данных приложения. Windows Forms <xref:System.Windows.Forms.DataGridView> управления упрощает этот процесс, предоставляя <xref:System.Windows.Forms.DataGridView.DataError> событие, которое возникает, когда хранилище данных обнаруживает нарушение ограничения или бизнес-правила.  
   
  В этом пошаговом руководстве, вы получите строки из `Customers` таблицы в базе данных Northwind и отобразить их в <xref:System.Windows.Forms.DataGridView> элемента управления. Когда дубликат `CustomerID` значение обнаруживается в новой строке или измененной существующей строке, <xref:System.Windows.Forms.DataGridView.DataError> произойдет событие, которое будет обработано, отображая <xref:System.Windows.Forms.MessageBox> , описывающая исключение.  
@@ -89,9 +89,10 @@ ms.locfileid: "57708240"
 -   Настройка внешнего вида ячеек. Дополнительные сведения см. в разделе [Как Настройка внешнего вида ячеек элемента управления DataGridView в Windows Forms](customize-the-appearance-of-cells-in-the-datagrid.md) и [как: Установка стилей ячейки по умолчанию для управления DataGridView в Windows Forms](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
 - [Ввод данных с помощью элемента управления DataGridView в Windows Forms](data-entry-in-the-windows-forms-datagridview-control.md)
-- [Практическое руководство. Обработка ошибок, возникающих во время ввода данных в элементе управления DataGridView Windows Forms](handle-errors-that-occur-during-data-entry-in-the-datagrid.md)
-- [Пошаговое руководство: Проверка данных в элементе управления DataGridView Windows Forms](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)
+- [Практическое руководство. Обработка ошибок, связанных с вводом данных с помощью элемента управления DataGridView, в Windows Forms](handle-errors-that-occur-during-data-entry-in-the-datagrid.md)
+- [Пошаговое руководство. Проверка данных в элементе управления DataGridView в Windows Forms](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)
 - [Защита сведений о подключении](../../data/adonet/protecting-connection-information.md)

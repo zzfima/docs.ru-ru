@@ -2,12 +2,12 @@
 title: <xmlElement>
 ms.date: 03/30/2017
 ms.assetid: 395205c2-d8c0-4a5e-90f3-7ce3c085fccd
-ms.openlocfilehash: 648147a7e3977648ac3c26c9dfc469629f3b70c3
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: a72641b438801cfd493c322297e7c384e83e687c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55278295"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230503"
 ---
 # <a name="xmlelement"></a>\<xmlElement >
 Указывает элемент XML, отправляемый в тексте сообщения службе маркеров безопасности при запросе маркера.  
@@ -44,9 +44,10 @@ ms.locfileid: "55278295"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<tokenRequestParameters >](../../../../../docs/framework/configure-apps/file-schema/wcf/tokenrequestparameters.md)|Коллекция параметров запроса маркера. Каждый параметр представляет собой элемент XML.|  
+|[\<tokenRequestParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/tokenrequestparameters.md)|Коллекция параметров запроса маркера. Каждый параметр представляет собой элемент XML.|  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.TokenRequestParameters%2A>
 - <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.TokenRequestParameters%2A>
 - [Идентификация и проверка подлинности службы](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

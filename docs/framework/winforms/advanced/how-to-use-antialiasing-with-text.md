@@ -11,12 +11,12 @@ helpviewer_keywords:
 - text [Windows Forms], antialiasing
 - strings [Windows Forms], antialiasing when drawing
 ms.assetid: 48fc34f3-f236-4b01-a0cb-f0752e6d22ae
-ms.openlocfilehash: ffd8600c730baca54a9cbd098dd2f37ce5ecb728
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 24d1b1dfbe955bcfa98a16c3be592ab837ec0182
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464727"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227617"
 ---
 # <a name="how-to-use-antialiasing-with-text"></a>Практическое руководство. Сглаживание текста
 *Сглаживание* ссылается на сглаживания неровные края графических элементов и текста для улучшения их внешнего вида и удобства чтения. Управляемые [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] классы, можно отображать текст со сглаживанием высокого качества, а также текст низкого качества. Как правило более качественная визуализация занимает больше времени обработки, чем менее качественная. Чтобы задать уровень качества текста, задайте <xref:System.Drawing.Graphics.TextRenderingHint%2A> свойство <xref:System.Drawing.Graphics> к одному из элементов <xref:System.Drawing.Text.TextRenderingHint> перечисления  
@@ -35,4 +35,5 @@ ms.locfileid: "58464727"
  Предыдущий пример кода предназначен для работы с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs> `e`, который является параметром <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>См. также
-- [Работами со шрифтами и текстом](using-fonts-and-text.md)
+
+- [Шрифты и текст](using-fonts-and-text.md)

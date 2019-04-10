@@ -1,18 +1,18 @@
 ---
-title: Как выполнить отобразить набор изменений
+title: Практическое руководство. Как отобразить набор изменений
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 126e7245-c5a0-4ebf-800d-cc1fcf9cd0ab
-ms.openlocfilehash: e6030a48a773dcf985eee5c4c113b02386780707
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 92acee0d36634ea09c245418fcc7a8b97d208aa6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55065821"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228638"
 ---
-# <a name="how-to-display-a-changeset"></a>Как выполнить отобразить набор изменений
+# <a name="how-to-display-a-changeset"></a>Практическое руководство. Как отобразить набор изменений
 Для просмотра изменений, отслеживаемых <xref:System.Data.Linq.DataContext>, можно воспользоваться методом <xref:System.Data.Linq.DataContext.GetChangeSet%2A>.  
   
 ## <a name="example"></a>Пример  
@@ -52,4 +52,5 @@ Total changes: {Added: 0, Removed: 0, Modified: 8}
 ```
   
 ## <a name="see-also"></a>См. также
+
 - [Поддержка отладки](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)

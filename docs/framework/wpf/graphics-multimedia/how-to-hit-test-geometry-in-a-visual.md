@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Геометрия проверки нажатия в визуальном объекте
+title: Практическое руководство. Проверка попадания геометрического объекта в визуальный объект
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - visual objects [WPF], hit tests on
 - Geometry objects [WPF], visual objects comprising
 ms.assetid: 8bf2643f-d7f9-4cb4-9ea6-5b893c23200d
-ms.openlocfilehash: e51dd73a65666ffee5958325079e8f06f13ac61b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 87b626e575d889447ef061d1ed62ef28efe5dfeb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363804"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227344"
 ---
-# <a name="how-to-hit-test-geometry-in-a-visual"></a>Практическое руководство. Геометрия проверки нажатия в визуальном объекте
+# <a name="how-to-hit-test-geometry-in-a-visual"></a>Практическое руководство. Проверка попадания геометрического объекта в визуальный объект
 В этом примере показано, как выполнить проверку попадания для визуального объекта, который состоит из одного или нескольких <xref:System.Windows.Media.Geometry> объектов.  
   
 ## <a name="example"></a>Пример  
@@ -36,5 +36,6 @@ ms.locfileid: "57363804"
 >  В этом примере не учитываются преобразования или обрезка, которые могут быть применены к геометрическому объекту. Кроме того этот пример не будет работать с элементом управления со стилями, поскольку он не имеет никаких рисунков, непосредственно связанных с ним.  
   
 ## <a name="see-also"></a>См. также
-- [Проверка нажатия на визуальном уровне](hit-testing-in-the-visual-layer.md)
+
+- [Проверка попадания на визуальном уровне](hit-testing-in-the-visual-layer.md)
 - [Проверка нажатия с использованием геометрии в качестве параметра](how-to-hit-test-using-geometry-as-a-parameter.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: a68a291b1974e86c9a4f16f9d90a879649076533
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 45f4185df1c55ff40fce3e33fe5e0e497fa54654
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595140"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228268"
 ---
 # <a name="debugging-windows-authentication-errors"></a>Отладка ошибок проверки подлинности Windows
 При использовании в качестве механизма обеспечения безопасности проверки подлинности Windows процессы безопасности обрабатываются интерфейсом поставщика поддержки безопасности SSPI. Когда на уровне SSPI происходят ошибки безопасности, они регистрируются в Windows Communication Foundation (WCF). В этом разделе описаны общие принципы и некоторые вопросы, помогающие диагностировать такие ошибки.  
@@ -91,7 +91,7 @@ ms.locfileid: "54595140"
   
 3.  Потребуйте, чтобы при согласовании SSPI использовался протокол Kerberos, запретив использование NTLM:  
   
-    1.  для этого в коде воспользуйтесь инструкцией: `ChannelFactory.Credentials.Windows.AllowNtlm = false`;  
+    1.  Для этого в коде, с помощью следующей инструкции: `ChannelFactory.Credentials.Windows.AllowNtlm = false`  
   
     2.  либо в файле конфигурации установите атрибут `allowNtlm` равным `false`. Этот атрибут содержится в [ \<windows >](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md).  
   
@@ -145,6 +145,7 @@ ms.locfileid: "54595140"
  В случае разработки приложения на одном компьютере и его развертывания на другом компьютере с использованием для проверки подлинности на каждом из компьютеров учетных записей различных типов работа приложения может различаться. Предположим, приложение разрабатывается на компьютере под управлением Windows XP Professional Edition с использованием режима проверки подлинности `SSPI Negotiated`. Если для проверки подлинности используется учетная запись локального пользователя, будет использоваться протокол NTLM. После разработки приложения служба развертывается на компьютере под управлением Windows Server 2003, где она выполняется от имени учетной записи домена. В этом случае клиент не сможет пройти проверку подлинности на стороне службы, поскольку будут использоваться протокол Kerberos и контроллер домена.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.Security.WindowsClientCredential>
 - <xref:System.ServiceModel.Security.WindowsServiceCredential>
 - <xref:System.ServiceModel.Security.WindowsClientCredential>

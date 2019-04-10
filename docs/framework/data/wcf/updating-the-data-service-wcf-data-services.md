@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
-ms.openlocfilehash: ddc9e3ec1a07e52e366ff5c17d4dd2ce3a3192a0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b8fa13bf5db7f3c3df97febe4bb6f9ee4c184a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569171"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231296"
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>Обновление службы данных (службы данных WCF)
 При использовании [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] клиентскую библиотеку для использования [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] веб-канала, эта библиотека преобразует записи из канала в экземпляры классов клиентской службы данных. Эти классы службы данных отслеживаются с помощью объекта <xref:System.Data.Services.Client.DataServiceContext>, которому принадлежит объект <xref:System.Data.Services.Client.DataServiceQuery%601>. Клиент отслеживает изменения сущностей, указанных с помощью методов объекта <xref:System.Data.Services.Client.DataServiceContext>. Эти методы позволяют клиенту отслеживать добавленные и удаленные сущности, а также изменения, вносимые в значения свойств или в связи между экземплярами сущностей. При вызове метода <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> отслеженные изменения отправляются назад в службу данных в виде операций, основанных на REST.  
@@ -73,7 +73,7 @@ ms.locfileid: "54569171"
 |------------|-----------------|  
 |<xref:System.Data.Services.Client.DataServiceContext.AddRelatedObject%2A>|Создает новую ссылку между двумя связанными объектами сущностей. Вызов этого метода эквивалентен вызову <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> и <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> и позволяет создать новый объект и определить связь с существующим объектом.|  
 |<xref:System.Data.Services.Client.DataServiceContext.AddLink%2A>|Создает новую ссылку между двумя связанными объектами сущностей.|  
-|<xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>|Обновляет существующую связь между двумя объектами связанной сущности. <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> также используется для удаления связи с количеством элементов «0 или 1 к 1» (`0..1:1`) и «1 к 1» (`1:1`). Это можно сделать, задав связанному объекту значение `null`.|  
+|<xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>|Обновляет существующую связь между двумя объектами связанной сущности. <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> также используется для удаления связей с количеством элементов ноль или один к одному (`0..1:1`) и один к одному (`1:1`). Это можно сделать, задав связанному объекту значение `null`.|  
 |<xref:System.Data.Services.Client.DataServiceContext.DeleteLink%2A>|Помечает ссылку, отслеживаемую контекстом, для удаления при вызове метода <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>. Используйте этот метод при удалении связанного объекта или изменения связи путем удаления ссылки на существующий объект и последующего добавления ссылки на другой связанный объект.|  
 |<xref:System.Data.Services.Client.DataServiceContext.AttachLink%2A>|Уведомляет контекст о существовании ссылки между двумя объектами сущностей. Контекст предполагает, что эта связь уже существует в службе данных, и не пытается создать связь при вызове метода <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>. Используйте этот метод при присоединении объектов к контексту, если необходимо также присоединить ссылку между двумя из них. При определении новой связи лучше использовать объект <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A>.|  
 |<xref:System.Data.Services.Client.DataServiceContext.DetachLink%2A>|Прекращает отслеживание указанной ссылки в контексте. Этот метод используется для удаления связей «один ко многим» (`*:*`). Для связей с количеством элементов, равным одному, следует использовать объект <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>.|  
@@ -94,6 +94,7 @@ ms.locfileid: "54569171"
  Изменения отслеживаются в экземпляре <xref:System.Data.Services.Client.DataServiceContext>, но не отправляются на сервер немедленно. После завершения изменений для указанного действия вызовите метод <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>, чтобы передать все изменения в службу данных. Дополнительные сведения см. в разделе [управление контекстом службы данных](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md). Изменения можно сохранить и асинхронно с помощью методов <xref:System.Data.Services.Client.DataServiceContext.BeginSaveChanges%2A> и <xref:System.Data.Services.Client.DataServiceContext.EndSaveChanges%2A>. Дополнительные сведения см. в разделе [асинхронных операций](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Библиотека клиентов служб данных WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
 - [Выполнение запросов к службе данных](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
 - [Асинхронные операции](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)

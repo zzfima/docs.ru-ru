@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MenuStrip [Windows Forms], merging
 - merging [Windows Forms], general concepts
 ms.assetid: 95e113ba-f362-4dda-8a76-6d95ddc45cee
-ms.openlocfilehash: 292c299bd15cd62eabd9a13db1abab1ed07fe57e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: dbe1c0325499e7b925d504fc80f9034f9e387475
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722368"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231569"
 ---
 # <a name="merging-menu-items-in-the-windows-forms-menustrip-control"></a>Слияние элементов меню в элементе управления MenuStrip в Windows Forms
 Если у вас есть приложения многодокументного интерфейса (MDI), можно объединить пункты меню или целые меню из дочерней формы в меню родительской формы.  
@@ -37,7 +37,7 @@ ms.locfileid: "57722368"
   
  В следующей таблице описаны значение и типичные случаи применения доступных операций слияния.  
   
-|Значение MergeAction|Описание:|Типичные случаи использования|  
+|Значение MergeAction|Описание|Типичные случаи использования|  
 |-----------------------|-----------------|-----------------|  
 |<xref:System.Windows.Forms.MergeAction.Append>|(По умолчанию) Добавляет исходный элемент в конец элемента целевой коллекции.|Добавление пунктов меню в конец меню при активации некоторые части программы.|  
 |<xref:System.Windows.Forms.MergeAction.Insert>|Добавляет элемент источника конечный элемент коллекции, в расположении, заданном параметром <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> свойство, заданное для исходного элемента.|Добавление пунктов меню в середину или начало меню при активации некоторые части программы.<br /><br /> Если значение <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> одинаков для обеих пунктов меню, они добавляются в обратном порядке. Задайте <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> соответствующим образом, чтобы восстановить исходный порядок.|  
@@ -54,8 +54,9 @@ ms.locfileid: "57722368"
  Вы можете активировать автоматического слияния, активировав <xref:System.Windows.Forms.MenuStrip> в источнике MDI. После активации, источник <xref:System.Windows.Forms.MenuStrip> объединяются в целевую MDI. Когда новая форма становится активным, слияния отменяется на последней формы и запущено на новую форму. Этим поведением можно управлять, задав <xref:System.Windows.Forms.ToolStripItem.MergeAction%2A> свойства при необходимости на каждом <xref:System.Windows.Forms.ToolStripItem>и установив <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> свойство на каждом <xref:System.Windows.Forms.MenuStrip>.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Forms.ToolStripManager>
 - <xref:System.Windows.Forms.MenuStrip>
 - [Элемент управления MenuStrip](menustrip-control-windows-forms.md)
 - [Практическое руководство. Создание списка в окне интерфейса MDI с помощью MenuStrip](how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)
-- [Практическое руководство. Задайте автоматическое слияние меню приложениях MDI](how-to-set-up-automatic-menu-merging-for-mdi-applications.md)
+- [Практическое руководство. Автоматическое слияние меню в приложениях MDI](how-to-set-up-automatic-menu-merging-for-mdi-applications.md)

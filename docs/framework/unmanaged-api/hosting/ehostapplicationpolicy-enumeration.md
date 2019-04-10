@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4956a763c9a5b2fc1ad74463fdfdeef2b5dc379e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b3fb71686c3d708de7a2cc71f65a32c22e52f26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620049"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229431"
 ---
 # <a name="ehostapplicationpolicy-enumeration"></a>Перечисление EHostApplicationPolicy
 Указывает, как изменить [IHostAssemblyManager](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md) объект интерфейса. Это перечисление является устаревшим.  
@@ -44,4 +44,5 @@ typedef enum _HostApplicationPolicy {
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Размещение перечислений](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

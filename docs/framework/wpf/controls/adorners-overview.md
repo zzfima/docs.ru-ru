@@ -7,18 +7,16 @@ dev_langs:
 helpviewer_keywords:
 - adorners [WPF], about adorners
 ms.assetid: 33d4c5c2-2daf-4e45-ba9a-5b673e2b8280
-ms.openlocfilehash: 94075189d82e5d446b3058b944c789a4288c26ca
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
-ms.translationtype: MT
+ms.openlocfilehash: 88dc2a306108959b5627e502aaa67ef7db341417
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634535"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227695"
 ---
 # <a name="adorners-overview"></a>Общие сведения о декоративных элементах
 Графические элементы — это специальный тип <xref:System.Windows.FrameworkElement>, которое используется для предоставления визуальных сигналов пользователю. Помимо прочего, декоративные элементы можно использовать для добавления функциональных дескрипторов к элементам или предоставления информации о состоянии элемента управления.  
-  
-  
-  
+
 <a name="about_Adorners"></a>   
 ## <a name="about-adorners"></a>Сведения о декоративных элементах  
  <xref:System.Windows.Documents.Adorner> Является пользовательским <xref:System.Windows.FrameworkElement> , привязанный к <xref:System.Windows.UIElement>. Графические элементы отображаются в <xref:System.Windows.Documents.AdornerLayer>, который является поверхностью отрисовки, всегда находится на вершине декорируемого элемента или коллекции настроенных элементов. Отрисовка декоративного элемента не зависит от отрисовки <xref:System.Windows.UIElement> , к которому привязан декоративный элемент. Декоративный элемент обычно располагается относительно элемента, к которому он привязан, с использованием стандартной двухмерной системы координат с началом отсчета в левом верхнем углу графического элемента.  
@@ -33,7 +31,7 @@ ms.locfileid: "58634535"
   
 -   Визуальная маскировка или переопределение, частично или полностью <xref:System.Windows.UIElement>.  
   
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет базовую среду для декоративных визуальных элементов. В следующей таблице перечислены основные типы, используемые при настройке объектов, и их назначение. Ниже приведено несколько примеров использования.  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Предоставляет базовую среду для декоративных визуальных элементов. В следующей таблице перечислены основные типы, используемые при настройке объектов, и их назначение. Ниже приведено несколько примеров использования.  
   
 |||  
 |-|-|  
@@ -102,8 +100,9 @@ ms.locfileid: "58634535"
  [!code-vb[Adorners_SimpleCircleAdorner#_AdornChildren](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/VisualBasic/Window1.xaml.vb#_adornchildren)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.Media.AdornerHitTestResult>
 - [Обзор фигур и базовых средств рисования в приложении WPF](../graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
-- [Заполнение с использованием изображений, рисунков и визуальных элементов](../graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+- [Рисование с помощью объектов Image, Drawing и Visual](../graphics-multimedia/painting-with-images-drawings-and-visuals.md)
 - [Обзор объектов Drawing](../graphics-multimedia/drawing-objects-overview.md)
-- [Разделы практического руководства](adorners-how-to-topics.md)
+- [Практические руководства](adorners-how-to-topics.md)

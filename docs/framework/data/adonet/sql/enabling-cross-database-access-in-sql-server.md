@@ -2,12 +2,12 @@
 title: Организация межбазового доступа в SQL Server
 ms.date: 03/30/2017
 ms.assetid: 10663fb6-434c-4c81-8178-ec894b9cf895
-ms.openlocfilehash: 5b98d06e3f8ff8e34530be8e9ffbf13a788f3147
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 70b4b7b55311bfc5dba1b537a603e0d15d7f3d9b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093857"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229671"
 ---
 # <a name="enabling-cross-database-access-in-sql-server"></a>Организация межбазового доступа в SQL Server
 Межбазовые цепочки владения возникают, когда процедура в одной базе данных зависит от объектов в другой базе данных. Межбазовая цепочка владения работает так же, как цепочка владения внутри единой базы данных, но для непрерывной цепочки владения необходимо, чтобы все владельцы объекта были сопоставлены с одной учетной записью входа. Если одна учетная запись входа является владельцем исходного объекта в исходной базе данных и целевых объектов в целевых базах данных, то SQL Server не проверяет наличие разрешений в целевых объектах.  
@@ -20,7 +20,7 @@ ms.locfileid: "56093857"
 -   Пользователи с разрешением CREATE DATABASE могут создавать новые базы данных и присоединять существующие базы данных. Если межбазовые цепочки владения включены, то эти пользователи могут обращаться к объектам в других базах данных, в которых у них нет прав доступа, из вновь созданных или присоединенных баз данных, которые они создали.  
   
 ## <a name="enabling-cross-database-ownership-chaining"></a>Включение межбазовых цепочек владения  
- Межбазовые цепочки владения нужно включать только в среде с привилегированными пользователями, имеющими полный уровень доверия. Их можно настроить во время установки всех баз данных или выборочно для определенных баз данных с помощью команд [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] `sp_configure` и `ALTER DATABASE`.  
+ Межбазовые цепочки владения нужно включать только в среде с привилегированными пользователями, имеющими полный уровень доверия. Их можно настроить во время установки всех баз данных или выборочно для определенных баз данных с помощью команд [!INCLUDE[tsql](../../../../../includes/tsql-md.md)]`sp_configure` и `ALTER DATABASE`.  
   
  Для выборочной настройки межбазовых цепочек владения служит хранимая процедура `sp_configure`, с помощью которой эти цепочки отключаются для сервера. Затем с помощью команды ALTER DATABASE с параметром SET DB_CHAINING ON настраиваются межбазовые цепочки владения только в требуемых базах данных.  
   
@@ -46,14 +46,15 @@ ALTER DATABASE Database2 SET DB_CHAINING ON;
 ## <a name="external-resources"></a>Внешние ресурсы  
  Дополнительные сведения см. в следующих ресурсах.  
   
-|Ресурс|Описание:|  
+|Ресурс|Описание|  
 |--------------|-----------------|  
 |[Расширение олицетворения базы данных с помощью инструкции EXECUTE AS](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms188304(v=sql.105)) и [параметр Cross DB Ownership Chaining](/sql/database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option).|Статьи описывают, как настроить межбазовые цепочки владения для экземпляра SQL Server.|  
   
 ## <a name="see-also"></a>См. также
+
 - [Защита приложений ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Общие сведения о безопасности SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
 - [Управление разрешениями с использованием хранимых процедур в SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)
 - [Написание безопасного динамического кода SQL в SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)
 - [Подписывание хранимых процедур в SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)
-- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

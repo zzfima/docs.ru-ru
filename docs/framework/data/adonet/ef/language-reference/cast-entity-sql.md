@@ -2,12 +2,12 @@
 title: CAST (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 07b6d750-dfd4-48a9-b86c-3badcbba6f70
-ms.openlocfilehash: afa92cc46aba9def65dddd490a2df3350c163af9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 51de041a4b06d5da31071ea2b3cb31c86feff137
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59143166"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294449"
 ---
 # <a name="cast-entity-sql"></a>CAST (Entity SQL)
 Преобразует выражение одного типа данных в другой.  
@@ -53,9 +53,9 @@ CAST( e as T )
 ## <a name="example"></a>Пример  
  В следующем запросе [!INCLUDE[esql](../../../../../../includes/esql-md.md)] оператор CAST используется для явного приведения выражения одного типа данных к другому. Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.  
   
-1.  Выполните процедуру, описанную в [как: Выполнение запроса, возвращающего результаты PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
+1. Выполните процедуру, описанную в [как: Выполнение запроса, возвращающего результаты PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
   
-2.  Передайте следующий запрос в качестве аргумента методу `ExecutePrimitiveTypeQuery` :  
+2. Передайте следующий запрос в качестве аргумента методу `ExecutePrimitiveTypeQuery` :  
   
  [!code-csharp[DP EntityServices Concepts 2#CAST](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#cast)]  
   

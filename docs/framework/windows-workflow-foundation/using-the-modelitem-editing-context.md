@@ -2,37 +2,37 @@
 title: Использование контекста редактирования ModelItem
 ms.date: 03/30/2017
 ms.assetid: 7f9f1ea5-0147-4079-8eca-be94f00d3aa1
-ms.openlocfilehash: d8d2e7d055099a6aedd13dd48dd78403cdff2a50
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: a2628bbbf2f6684e5d484b05cd5a2ac622f3b664
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846276"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296893"
 ---
 # <a name="using-the-modelitem-editing-context"></a>Использование контекста редактирования ModelItem
-Контекст редактирования <xref:System.Activities.Presentation.Model.ModelItem> является объектом, используемым ведущим приложением для взаимодействия с конструктором. <xref:System.Activities.Presentation.EditingContext> предоставляет два метода, <xref:System.Activities.Presentation.EditingContext.Items%2A> и <xref:System.Activities.Presentation.EditingContext.Services%2A>, которые могут использоваться  
+Контекст редактирования <xref:System.Activities.Presentation.Model.ModelItem> является объектом, используемым ведущим приложением для взаимодействия с конструктором. <xref:System.Activities.Presentation.EditingContext> предоставляет два метода <xref:System.Activities.Presentation.EditingContext.Items%2A> и <xref:System.Activities.Presentation.EditingContext.Services%2A>, который может использоваться  
   
 ## <a name="the-items-collection"></a>Коллекция элементов  
- Коллекция <xref:System.Activities.Presentation.EditingContext.Items%2A> служит для доступа к данным, совместно используемым основным приложением и конструктором, либо к данным, доступным для всех конструкторов. Эта коллекция имеет следующие возможности, доступ к которым осуществляется через класс <xref:System.Activities.Presentation.ContextItemManager>:  
+ Коллекция <xref:System.Activities.Presentation.EditingContext.Items%2A> служит для доступа к данным, совместно используемым ведущим приложением и конструктором, либо к данным, доступным для всех конструкторов. Эта коллекция имеет следующие возможности, доступ к которым осуществляется через класс <xref:System.Activities.Presentation.ContextItemManager>:  
   
-1.  <xref:System.Activities.Presentation.ContextItemManager.GetValue%2A>  
+1. <xref:System.Activities.Presentation.ContextItemManager.GetValue%2A>  
   
-2.  <xref:System.Activities.Presentation.ContextItemManager.Subscribe%2A>  
+2. <xref:System.Activities.Presentation.ContextItemManager.Subscribe%2A>  
   
-3.  <xref:System.Activities.Presentation.ContextItemManager.Unsubscribe%2A>  
+3. <xref:System.Activities.Presentation.ContextItemManager.Unsubscribe%2A>  
   
-4.  <xref:System.Activities.Presentation.ContextItemManager.SetValue%2A>  
+4. <xref:System.Activities.Presentation.ContextItemManager.SetValue%2A>  
   
 ## <a name="the-services-collection"></a>Коллекция служб  
  Коллекция <xref:System.Activities.Presentation.EditingContext.Services%2A> предназначена для доступа к службам, используемым конструктором для взаимодействия с узлом, либо к службам, используемым всеми конструкторами. Эта коллекция содержит следующие методы, на которые нужно обратить внимание:  
   
-1.  <xref:System.Activities.Presentation.ServiceManager.Publish%2A>  
+1. <xref:System.Activities.Presentation.ServiceManager.Publish%2A>  
   
-2.  <xref:System.Activities.Presentation.ServiceManager.Subscribe%2A>  
+2. <xref:System.Activities.Presentation.ServiceManager.Subscribe%2A>  
   
-3.  <xref:System.Activities.Presentation.ServiceManager.Unsubscribe%2A>  
+3. <xref:System.Activities.Presentation.ServiceManager.Unsubscribe%2A>  
   
-4.  <xref:System.Activities.Presentation.ServiceManager.GetService%2A>  
+4. <xref:System.Activities.Presentation.ServiceManager.GetService%2A>  
   
 ## <a name="assigning-a-designer-an-activity"></a>Назначение конструктора действию  
  Чтобы указать, какой конструктор используется действием, служит атрибут Designer.  

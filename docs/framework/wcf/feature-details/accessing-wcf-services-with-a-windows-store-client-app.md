@@ -2,12 +2,12 @@
 title: Доступ к службам WCF из клиентского приложения Магазина Windows
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: 6617a8cd207b68505396db7fdb4c9d08fd759d06
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a7d87e6014f26842c35b0d1bf5028682a4cf69e5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59167652"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294864"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>Доступ к службам WCF из клиентского приложения Магазина Windows
 В Windows 8 появился новый тип приложения - приложения Магазина Windows. Эти приложения предназначены для работы с сенсорным экраном. .NET Framework 4.5 позволяет приложениям Магазина Windows вызывать службы WCF.  
@@ -24,31 +24,31 @@ ms.locfileid: "59167652"
 ### <a name="supported-bindings"></a>Поддерживаемые привязки  
  Поддерживаются следующие привязки WCF в приложениях Магазина Windows:  
   
-1.  <xref:System.ServiceModel.BasicHttpBinding>  
+1. <xref:System.ServiceModel.BasicHttpBinding>  
   
-2.  <xref:System.ServiceModel.NetTcpBinding>  
+2. <xref:System.ServiceModel.NetTcpBinding>  
   
-3.  <xref:System.ServiceModel.NetHttpBinding>  
+3. <xref:System.ServiceModel.NetHttpBinding>  
   
-4.  <xref:System.ServiceModel.Channels.CustomBinding>
+4. <xref:System.ServiceModel.Channels.CustomBinding>
   
  Поддерживаются следующие элементы привязки в приложениях Магазина Windows  
   
-1.  <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>  
+1. <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>  
   
-2.  <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>  
+2. <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>  
   
-3.  <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>  
+3. <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>  
   
-4.  <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
+4. <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
   
-5.  <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
+5. <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
   
-6.  <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
+6. <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
   
-7.  <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
+7. <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
   
-8.  <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
+8. <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
   
 9. <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>  
   
@@ -97,11 +97,11 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
 ### <a name="serialization"></a>Сериализация  
  Поддерживаются следующие сериализаторы WCF в приложениях Магазина Windows:  
   
-1.  DataContractSerializer  
+1. DataContractSerializer  
   
-2.  DataContractJsonSerializer  
+2. DataContractJsonSerializer  
   
-3.  XmlSerializer  
+3. XmlSerializer  
   
 > [!WARNING]
 >  XmlDictionaryWriter.Write (DateTime) теперь записывает объект DateTime в виде строки.  
@@ -120,21 +120,21 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
   
 В приложениях Windows Store поддерживаются следующие типы учетных данных клиента:
   
-1.  Нет  
+1. Нет  
   
-2.  Basic  
+2. Basic  
   
-3.  Digest  
+3. Digest  
   
-4.  Negotiate  
+4. Negotiate  
   
-5.  NTLM  
+5. NTLM  
   
-6.  Windows  
+6. Windows  
   
-7.  Имя пользователя (безопасность сообщений)  
+7. Имя пользователя (безопасность сообщений)  
   
-8.  Windows (безопасность транспорта)  
+8. Windows (безопасность транспорта)  
   
  Чтобы приложения Магазина Windows могли получать и передавать учетные данные Windows по умолчанию, необходимо включить эту возможность в файле Package.appmanifest. Откройте этот файл и выберите вкладку «возможности» и выберите «По умолчанию учетные данные Windows». Это позволит приложению подключаться к ресурсам интрасети, для доступа к которым требуются учетные данные домена.  
   
@@ -144,11 +144,11 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
 ### <a name="misc"></a>Прочее  
  Поддерживается использование следующих классов для приложений Магазина Windows:  
   
-1.  <xref:System.ServiceModel.ChannelFactory>  
+1. <xref:System.ServiceModel.ChannelFactory>  
   
-2.  <xref:System.ServiceModel.DuplexChannelFactory%601>
+2. <xref:System.ServiceModel.DuplexChannelFactory%601>
   
-3.  <xref:System.ServiceModel.CallbackBehaviorAttribute>  
+3. <xref:System.ServiceModel.CallbackBehaviorAttribute>  
   
 ### <a name="defining-service-contracts"></a>Определение контрактов службы  
  Рекомендуется определять только асинхронные операции службы с помощью асинхронной модели на основе событий. Это гарантирует, что приложения Магазина Windows сохранят высокую скорость отклика при вызове операции службы.  

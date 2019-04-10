@@ -2,12 +2,12 @@
 title: Аналитическая трассировка WCF
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: 6d4db9a8ec11e215ef18dcab6b7940526bc24927
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 3c9f878a22c928daa9c7dbc142efb3958b1657c8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54748146"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229177"
 ---
 # <a name="wcf-analytic-tracing"></a>Аналитическая трассировка WCF
 Этот образец демонстрирует способы добавления собственных событий трассировки событий в поток трассировки, которые записывает трассировки событий Windows в Windows Communication Foundation (WCF) [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Аналитически отслеживаемые события предназначены для упрощения добавления видимости в службы без ущерба для производительности. В этом примере показано, как использовать <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API писать события, которые интегрируются со службами WCF.  
@@ -35,7 +35,7 @@ ms.locfileid: "54748146"
 ## <a name="custom-event-details"></a>Данные пользовательских событий  
  Манифест поставщика событий ETW WCF определяет три события, которые предназначены для выдачи авторами службы WCF в коде службы. В следующей таблице приведена разбивка этих трех событий.  
   
-|событие|Описание:|Идентификатор события|  
+|событие|Описание|Идентификатор события|  
 |-----------|-----------------|--------------|  
 |UserDefinedInformationEventOccurred|Это событие выдается, когда в службе происходит что-то примечательное, что не является проблемой. Например, можно выдать событие после успешного вызова базы данных.|301|  
 |UserDefinedWarningOccurred|Это событие выдается, когда возникает проблема, которая в будущем может привести к сбою. Например, можно выдавать событие предупреждения, когда вызов базы данных завершается неудачей, но удалось выполнить восстановление, переключившись на резервное хранилище данных.|302|  
@@ -118,4 +118,5 @@ ms.locfileid: "54748146"
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTrace`  
   
 ## <a name="see-also"></a>См. также
+
 - [Образцы наблюдения за AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

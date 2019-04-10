@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Calendar [WPF], styles and templates
 - ControlTemplate [WPF], Calendar
 ms.assetid: f4fcf046-7a8f-41b8-b5a8-534b64e0345c
-ms.openlocfilehash: beba15f12b0ae2b819c641de9af8485767ad1a78
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 18bef548b11f1a680c1361027b86f6952bedaad0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373417"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227126"
 ---
 # <a name="calendar-styles-and-templates"></a>Стили и шаблоны элемента Calendar
 В этом разделе описываются стили и шаблоны для <xref:System.Windows.Controls.Calendar> элемента управления. Вы можете изменить значение по умолчанию <xref:System.Windows.Controls.ControlTemplate> предоставить уникальный внешний вид элемента управления. Подробнее см. в разделе [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
@@ -22,7 +22,7 @@ ms.locfileid: "57373417"
 ## <a name="calendar-parts"></a>Элементы календаря  
  В следующей таблице перечислены именованные части <xref:System.Windows.Controls.Calendar> элемента управления.  
   
-|Отделение|Тип|Описание:|  
+|Отделение|Тип|Описание|  
 |-|-|-|  
 |PART_CalendarItem|<xref:System.Windows.Controls.Primitives.CalendarItem>|Текущий отображаемый месяц или год в <xref:System.Windows.Controls.Calendar>.|  
 |PART_Root|<xref:System.Windows.Controls.Panel>|Панель, содержащую <xref:System.Windows.Controls.Primitives.CalendarItem>.|  
@@ -39,7 +39,7 @@ ms.locfileid: "57373417"
 ## <a name="calendaritem-parts"></a>CalendarItem частей  
  В следующей таблице перечислены именованные части <xref:System.Windows.Controls.Primitives.CalendarItem> элемента управления.  
   
-|Отделение|Тип|Описание:|  
+|Отделение|Тип|Описание|  
 |-|-|-|  
 |PART_Root|<xref:System.Windows.FrameworkElement>|Корневой элемент управления.|  
 |PART_PreviousButton|<xref:System.Windows.Controls.Button>|Кнопка, которая отображает предыдущую страницу календаря, при щелчке.|  
@@ -70,7 +70,7 @@ ms.locfileid: "57373417"
 ## <a name="calendardaybutton-states"></a>CalendarDayButton состояний  
  В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.Primitives.CalendarDayButton> элемента управления.  
   
-|Имя VisualState|Имя VisualStateGroup|Описание:|  
+|Имя VisualState|Имя VisualStateGroup|Описание|  
 |-|-|-|  
 |Норм.|CommonStates|Состояние по умолчанию.|  
 |Отключено|CommonStates|<xref:System.Windows.Controls.Primitives.CalendarDayButton> Отключена.|  
@@ -83,7 +83,7 @@ ms.locfileid: "57373417"
 |Focused|FocusStates|Кнопка имеет фокус.|  
 |Без фокуса ввода|FocusStates|Кнопка имеет фокус.|  
 |Активная|ActiveStates|Кнопка активна.|  
-|Неактивные|ActiveStates|Кнопка будет неактивна.|  
+|Неактивно|ActiveStates|Кнопка будет неактивна.|  
 |RegularDay|DayStates|Кнопки не представляет <xref:System.DateTime.Today%2A?displayProperty=nameWithType>.|  
 |Сегодня|DayStates|Кнопка представляет <xref:System.DateTime.Today%2A?displayProperty=nameWithType>.|  
 |NormalDay|BlackoutDayStates|Кнопка представляет день, который может быть выбран.|  
@@ -98,7 +98,7 @@ ms.locfileid: "57373417"
 ## <a name="calendarbutton-states"></a>CalendarButton состояний  
  В следующей таблице перечислены визуальные состояния <xref:System.Windows.Controls.Primitives.CalendarButton> элемента управления.  
   
-|Имя VisualState|Имя VisualStateGroup|Описание:|  
+|Имя VisualState|Имя VisualStateGroup|Описание|  
 |-|-|-|  
 |Норм.|CommonStates|Состояние по умолчанию.|  
 |Отключено|CommonStates|<xref:System.Windows.Controls.Primitives.CalendarButton> Отключена.|  
@@ -111,7 +111,7 @@ ms.locfileid: "57373417"
 |Focused|FocusStates|Кнопка имеет фокус.|  
 |Без фокуса ввода|FocusStates|Кнопка имеет фокус.|  
 |Активная|ActiveStates|Кнопка активна.|  
-|Неактивные|ActiveStates|Кнопка будет неактивна.|  
+|Неактивно|ActiveStates|Кнопка будет неактивна.|  
 |Valid|ValidationStates|Элемент управления использует <xref:System.Windows.Controls.Validation> класс и <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> присоединенное свойство `false`.|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Присоединенное свойство `true` имеет элемент управления имеет фокус.|  
 |InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Присоединенное свойство `true` имеет элемент управления не имеет фокуса.|  
@@ -128,9 +128,10 @@ ms.locfileid: "57373417"
  Полный пример см. в разделе [Пример задания стиля с помощью ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
-- [Стили и шаблоны элемента управления](control-styles-and-templates.md)
+- [Стили и шаблоны элемента Control](control-styles-and-templates.md)
 - [Настройка элементов управления](control-customization.md)
 - [Стилизация и использование шаблонов](styling-and-templating.md)
 - [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

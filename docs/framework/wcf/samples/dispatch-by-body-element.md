@@ -2,12 +2,12 @@
 title: Передача по элементу тела сообщения
 ms.date: 03/30/2017
 ms.assetid: f64a3c04-62b4-47b2-91d9-747a3af1659f
-ms.openlocfilehash: 376dfc0dcca3c3278ee4d4afefbe4756dd631212
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 44e70a5344d7ab0fc324c6bc5948f367227c869d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58817062"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227734"
 ---
 # <a name="dispatch-by-body-element"></a>Передача по элементу тела сообщения
 В образце демонстрируется реализация альтернативного алгоритма для присвоения операциям входящих сообщений.  
@@ -34,7 +34,7 @@ class DispatchByBodyElementOperationSelector : IDispatchOperationSelector
 }
 ```  
   
- Реализации <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> являются очень простыми в построении, так как есть только один метод в интерфейсе: <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A>. Этот метод отвечает за проверку входящих сообщений и возврат строки, которая равна имени метода контракта службы для текущей конечной точки.  
+ <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> реализации являются очень простыми в построении как есть только один метод в интерфейсе: <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A>. Этот метод отвечает за проверку входящих сообщений и возврат строки, которая равна имени метода контракта службы для текущей конечной точки.  
   
  В этом образце селектор операций приобретает класс <xref:System.Xml.XmlDictionaryReader> для тела входящего сообщения, используя метод <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A>. Этот метод уже расположил средство чтения на первом дочернем элементе тела сообщения, поэтому достаточно получить имя текущего элемента, универсальный код ресурса (URI) пространства имен и объединить их в `XmlQualifiedName`, чтобы затем использовать для поиска соответствующей операции в словаре, хранящемся в селекторе операций.  
   
@@ -178,4 +178,3 @@ public interface IDispatchedByBody
 >  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Interop\AdvancedDispatchByBody`  
-  

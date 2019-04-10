@@ -2,12 +2,12 @@
 title: <netTcpContextBinding>
 ms.date: 03/30/2017
 ms.assetid: 1d4715e1-5fff-4c3d-a226-18f21d0b30c4
-ms.openlocfilehash: f508d814fb1e23c59606fcf78ad38f7661609c26
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 35a7f322a38135ae2f728993f29b570c1fa94e8d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411295"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228449"
 ---
 # <a name="nettcpcontextbinding"></a>\<netTcpContextBinding >
 Задает контекст для <xref:System.ServiceModel.NetTcpBinding>, который требует, чтобы уровень защиты был подписан. Механизмом contextExchangeMechanism для привязки NetTcpContextBinding является SOAPHeader.  
@@ -99,11 +99,12 @@ ms.locfileid: "58411295"
 |[\<привязки >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Этот элемент содержит коллекцию стандартных и пользовательских привязок.|  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceModel.NetTcpBinding>
 - <xref:System.ServiceModel.NetTcpContextBinding>
 - <xref:System.ServiceModel.Configuration.NetTcpContextBindingElement>
 - <xref:System.ServiceModel.Channels.ContextBindingElement>
-- [\<netTcpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)
+- [\<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)
 - [Привязки](../../../../../docs/framework/wcf/bindings.md)
 - [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
 - [Использование привязок для настройки служб и клиентов](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

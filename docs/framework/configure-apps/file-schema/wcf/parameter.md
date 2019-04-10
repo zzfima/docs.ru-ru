@@ -2,12 +2,12 @@
 title: <parameter>
 ms.date: 03/30/2017
 ms.assetid: 0fb41e2d-64f7-44ab-993e-05892eac6d82
-ms.openlocfilehash: 8b14dc1908ef3a06549154f70efb2d4e5cb10076
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 22ef3c3c6d23d6c68c27d6b5d1ed35b7c9910d48
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55289443"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230802"
 ---
 # <a name="parameter"></a>\<Параметр >
 Указывает общий параметр, если объявленный тип является общим типом.  
@@ -34,7 +34,7 @@ ms.locfileid: "55289443"
 |Атрибут|Описание|  
 |---------------|-----------------|  
 |индекс|Если объявленный тип является общим типом, указывает общий параметр, который возвращает известный тип.|  
-|тип|Строка, которая описывает известный тип, используемый для сериализации и десериализации.|  
+|type|Строка, которая описывает известный тип, используемый для сериализации и десериализации.|  
   
 ## <a name="index-attribute"></a>Атрибут index  
   
@@ -48,7 +48,7 @@ ms.locfileid: "55289443"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<knownType >](../../../../../docs/framework/configure-apps/file-schema/wcf/knowntype.md)|Указывает известный тип, который может возвращаться полем или свойством объявленного типа.|  
   
@@ -60,6 +60,7 @@ ms.locfileid: "55289443"
  У данного элемента конфигурации не может одновременно быть оба атрибута. Если заданы оба атрибута, возникает исключение <xref:System.Configuration.ConfigurationErrorsException>.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - [Известные типы контрактов данных](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
 - [\<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)

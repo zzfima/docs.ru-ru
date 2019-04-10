@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
-ms.openlocfilehash: 8c8a9dc17af5809ce1e3b97304535361c2cc5e58
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 1393879c58609c501da5b2d413073328bee6d05d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465715"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227720"
 ---
 # <a name="message-security-with-a-certificate-client"></a>Безопасность сообщений при использовании клиентом сертификата
 В следующем сценарии показаны клиент Windows Communication Foundation (WCF) и служба, защищенные с помощью режима безопасности сообщений. Проверка подлинности клиента и службы выполняется с помощью сертификатов. Дополнительные сведения см. в разделе [Distributed Application Security](../../../../docs/framework/wcf/feature-details/distributed-application-security.md).
@@ -18,8 +18,7 @@ ms.locfileid: "58465715"
  ![Снимок экрана с клиента с помощью сертификата.](./media/message-security-with-a-certificate-client/client-with-certificate.gif)  
   
  Образец приложения, см. в разделе [сертификат безопасности сообщений](../../../../docs/framework/wcf/samples/message-security-certificate.md).  
-  
-  
+
 |Характеристика|Описание|  
 |--------------------|-----------------|  
 |Режим безопасности|Сообщение|  
@@ -44,7 +43,7 @@ ms.locfileid: "58465715"
  [!code-csharp[C_SecurityScenarios#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#10)]
  [!code-vb[C_SecurityScenarios#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#10)]  
   
-### <a name="configuration"></a>Конфигурация  
+### <a name="configuration"></a>Параметр Configuration  
  Вместо кода можно использовать следующую конфигурацию.  
   
 ```xml  
@@ -101,7 +100,7 @@ ms.locfileid: "58465715"
  [!code-csharp[C_SecurityScenarios#17](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#17)]
  [!code-vb[C_SecurityScenarios#17](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#17)]  
   
-### <a name="configuration"></a>Конфигурация  
+### <a name="configuration"></a>Параметр Configuration  
  В следующей конфигурации задается сертификат клиента с помощью поведения конечной точки. Дополнительные сведения см. в разделе [Работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md). В коде также используется <`identity`> элемент для указания доменных имен (DNS) из ожидаемой идентификации сервера. Дополнительные сведения об удостоверении см. в разделе [службы идентификации и проверки подлинности](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 ```xml  
@@ -145,6 +144,7 @@ ms.locfileid: "58465715"
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Идентификация и проверка подлинности службы](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
 - [Работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
