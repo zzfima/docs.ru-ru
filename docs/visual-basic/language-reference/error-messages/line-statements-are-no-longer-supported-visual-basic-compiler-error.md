@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30830
 ms.assetid: 4734bc1d-882e-4555-b498-1f1ec0399d16
-ms.openlocfilehash: 7616bcdc39ab479049586534fac22f1e2d96a700
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: c7a3e6bcd0db268a0e0acfc74c570e26f89cff6a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831843"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339077"
 ---
 # <a name="line-statements-are-no-longer-supported-visual-basic-compiler-error"></a>Операторы Line больше не поддерживаются (ошибка компилятора Visual Basic)
 Операторы Line больше не поддерживаются. Функциональность файлового ввода-вывода доступна как `Microsoft.VisualBasic.FileSystem.LineInput` и графические функции доступен в виде `System.Drawing.Graphics.DrawLine`.  
@@ -21,9 +21,9 @@ ms.locfileid: "58831843"
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
-1.  Если выполняется доступ к файлу, используйте `Microsoft.VisualBasic.FileSystem.LineInput`.  
+1. Если выполняется доступ к файлу, используйте `Microsoft.VisualBasic.FileSystem.LineInput`.  
   
-2.  Если выполняется вывод графики, используйте `System.Drawing.Graphics.Drawline`.  
+2. Если выполняется вывод графики, используйте `System.Drawing.Graphics.Drawline`.  
   
 ## <a name="see-also"></a>См. также
 

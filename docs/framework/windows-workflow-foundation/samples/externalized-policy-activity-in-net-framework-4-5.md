@@ -2,12 +2,12 @@
 title: Реализованное действие политики в .NET Framework 4.5
 ms.date: 03/30/2017
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
-ms.openlocfilehash: 2ec358dbe2ba2b60df707d1ce580bb88e4c4ba1b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 622b0f14281d5b068700d9e4fe03485aa1a60fcb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57706380"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338284"
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>Реализованное действие политики в .NET Framework 4.5
 
@@ -66,21 +66,21 @@ public class ExternalizedPolicy4Activity<TResult>: CodeActivity
 
 ### <a name="run-the-imperativecodeclientsample-application"></a>Запуск клиентского приложения ImperativeCodeClientSample
 
-1.  С помощью Visual Studio откройте *Policy4sample.sln* файл решения.
+1. С помощью Visual Studio откройте *Policy4sample.sln* файл решения.
 
-2.  В **обозревателе решений**, щелкните правой кнопкой мыши **ImperativeCodeClientSample** проекта, а затем выберите **Назначить запускаемым проектом**.
+2. В **обозревателе решений**, щелкните правой кнопкой мыши **ImperativeCodeClientSample** проекта, а затем выберите **Назначить запускаемым проектом**.
 
-3.  Чтобы запустить проект, нажмите клавишу **Ctrl**+**F5**.
+3. Чтобы запустить проект, нажмите клавишу **Ctrl**+**F5**.
 
 ### <a name="run-the-designerclientsample-application"></a>Запустить приложение DesignerClientSample.
 
-1.  С помощью Visual Studio откройте *Policy4sample.sln* файл решения.
+1. С помощью Visual Studio откройте *Policy4sample.sln* файл решения.
 
-2.  В **обозревателе решений**, щелкните правой кнопкой мыши **DesignerClientSample** проекта, а затем выберите **Назначить запускаемым проектом**.
+2. В **обозревателе решений**, щелкните правой кнопкой мыши **DesignerClientSample** проекта, а затем выберите **Назначить запускаемым проектом**.
 
-3.  Нажмите клавишу **Ctrl**+**Shift**+**B** Чтобы скомпилировать проект.
+3. Нажмите клавишу **Ctrl**+**Shift**+**B** Чтобы скомпилировать проект.
 
-4.  Нажмите клавишу **Ctrl**+**F5** для запуска проекта.
+4. Нажмите клавишу **Ctrl**+**F5** для запуска проекта.
 
 > [!IMPORTANT]
 > Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).

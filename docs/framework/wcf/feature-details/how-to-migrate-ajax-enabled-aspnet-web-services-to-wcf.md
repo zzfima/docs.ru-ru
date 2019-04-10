@@ -2,12 +2,12 @@
 title: Практическое руководство. Миграция веб-служб ASP.NET с поддержкой AJAX на платформу WCF
 ms.date: 03/30/2017
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
-ms.openlocfilehash: dfbb32a751623fb1e3753cfd8bbbaf5910d571b2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6114fa90b10a5d0cacb60a7ad40f63fae776e174
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59143004"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337426"
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Практическое руководство. Миграция веб-служб ASP.NET с поддержкой AJAX на платформу WCF
 В этом разделе описаны процедуры по переносу базовой службы ASP.NET AJAX для службы с поддержкой AJAX Windows Communication Foundation (WCF). В этом примере показано создание функционально эквивалентны WCF версию службы ASP.NET AJAX. Две службы затем используется рядом друг с другом или службы WCF можно использовать для замены службы ASP.NET AJAX.
@@ -26,21 +26,21 @@ ms.locfileid: "59143004"
 
 ### <a name="to-create-and-test-the-aspnet-web-service-application"></a>Создание и тестирование приложения веб-службы ASP.NET
 
-1.  Откройте Visual Studio 2012.
+1. Откройте Visual Studio 2012.
 
-2.  Из **файл** меню, выберите **New**, затем **проекта**, затем **Web**, а затем выберите **приложения веб-службы ASP.NET** .
+2. Из **файл** меню, выберите **New**, затем **проекта**, затем **Web**, а затем выберите **приложения веб-службы ASP.NET** .
 
-3.  Назовите проект `ASPHello` и нажмите кнопку **ОК**.
+3. Назовите проект `ASPHello` и нажмите кнопку **ОК**.
 
-4.  В файле Service1.asmx.cs снимите знаки комментария со строки, содержащей `System.Web.Script.Services.ScriptService]`, чтобы включить для этой службы поддержку AJAX.
+4. В файле Service1.asmx.cs снимите знаки комментария со строки, содержащей `System.Web.Script.Services.ScriptService]`, чтобы включить для этой службы поддержку AJAX.
 
-5.  Из **построения** меню, выберите **построить решение**.
+5. Из **построения** меню, выберите **построить решение**.
 
-6.  В меню **Отладка** выберите пункт **Запуск без отладки**.
+6. В меню **Отладка** выберите пункт **Запуск без отладки**.
 
-7.  На созданной веб-странице выберите операцию `HelloWorld`.
+7. На созданной веб-странице выберите операцию `HelloWorld`.
 
-8.  Нажмите кнопку **Invoke** кнопку `HelloWorld` тестовую страницу. Должен появиться следующий XML-ответ.
+8. Нажмите кнопку **Invoke** кнопку `HelloWorld` тестовую страницу. Должен появиться следующий XML-ответ.
 
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -53,13 +53,13 @@ ms.locfileid: "59143004"
 
 ### <a name="to-create-an-equivalent-wcf-ajax-service-application"></a>Создание эквивалентного приложения службы AJAX WCF
 
-1.  Щелкните правой кнопкой мыши **ASPHello** проекта и выберите **добавить**, затем **новый элемент**, а затем **служба WCF с поддержкой AJAX**.
+1. Щелкните правой кнопкой мыши **ASPHello** проекта и выберите **добавить**, затем **новый элемент**, а затем **служба WCF с поддержкой AJAX**.
 
-2.  Назовите службу `WCFHello` и нажмите кнопку **добавить**.
+2. Назовите службу `WCFHello` и нажмите кнопку **добавить**.
 
-3.  Откройте файл WCFHello.svc.cs.
+3. Откройте файл WCFHello.svc.cs.
 
-4.  Из файла Service1.asmx.cs скопируйте следующую реализацию `HelloWorld` операции.
+4. Из файла Service1.asmx.cs скопируйте следующую реализацию `HelloWorld` операции.
 
     ```
     public string HelloWorld()
@@ -68,7 +68,7 @@ ms.locfileid: "59143004"
     }
     ```
 
-5.  Вставьте скопированную реализацию `HelloWorld` операции в файл WCFHello.svc.cs вместо следующего кода.
+5. Вставьте скопированную реализацию `HelloWorld` операции в файл WCFHello.svc.cs вместо следующего кода.
 
     ```
     public void DoWork()
@@ -78,7 +78,7 @@ ms.locfileid: "59143004"
     }
     ```
 
-6.  Укажите `Namespace` для атрибута <xref:System.ServiceModel.ServiceContractAttribute> как `WCFHello`.
+6. Укажите `Namespace` для атрибута <xref:System.ServiceModel.ServiceContractAttribute> как `WCFHello`.
 
     ```
     [ServiceContract(Namespace="WCFHello")]
@@ -87,7 +87,7 @@ ms.locfileid: "59143004"
     { … }
     ```
 
-7.  Добавить <xref:System.ServiceModel.Web.WebInvokeAttribute> для `HelloWorld` операции и набор <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A> возвращаемое свойство <xref:System.ServiceModel.Web.WebMessageFormat.Xml>. Обратите внимание, что если это свойство не задано, будет возвращаться тип <xref:System.ServiceModel.Web.WebMessageFormat.Json>.
+7. Добавить <xref:System.ServiceModel.Web.WebInvokeAttribute> для `HelloWorld` операции и набор <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A> возвращаемое свойство <xref:System.ServiceModel.Web.WebMessageFormat.Xml>. Обратите внимание, что если это свойство не задано, будет возвращаться тип <xref:System.ServiceModel.Web.WebMessageFormat.Json>.
 
     ```
     [OperationContract]
@@ -98,7 +98,7 @@ ms.locfileid: "59143004"
     }
     ```
 
-8.  Из **построения** меню, выберите **построить решение**.
+8. Из **построения** меню, выберите **построить решение**.
 
 9. Откройте файл WCFHello.svc и из **Отладка** меню, выберите **Запуск без отладки**.
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - tables [Windows Forms], formatting in DataGrid control
 - formatting [Windows Forms]
 ms.assetid: a50fcc3b-8abf-47ec-9029-7f268af4ddb1
-ms.openlocfilehash: a07fde63463d209e0006de9be677636f19fd93a8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8e5c41d6f146e6abef8d7670e6191b587ac86c92
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59147905"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336126"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control"></a>Практическое руководство. Форматирование элемента управления DataGrid в Windows Forms
 > [!NOTE]
@@ -33,7 +33,7 @@ ms.locfileid: "59147905"
   
 ### <a name="to-establish-a-default-style-for-the-datagrid-control"></a>Чтобы создать стиль по умолчанию для элемента управления DataGrid  
   
-1.  Задайте следующие свойства соответствующим образом:  
+1. Задайте следующие свойства соответствующим образом:  
   
     |Свойство|Описание|  
     |--------------|-----------------|  
@@ -68,19 +68,19 @@ ms.locfileid: "59147905"
   
 ### <a name="to-set-the-table-and-column-style-of-a-data-table-programmatically"></a>Если требуется задать стиль таблицы и столбца таблицы данных программным способом  
   
-1.  Создать новый стиль таблицы и задать его свойства.  
+1. Создать новый стиль таблицы и задать его свойства.  
   
-2.  Создайте стиль столбца и задайте его свойства.  
+2. Создайте стиль столбца и задайте его свойства.  
   
-3.  Добавьте стиль столбца в коллекцию стилей столбцов стиль таблицы.  
+3. Добавьте стиль столбца в коллекцию стилей столбцов стиль таблицы.  
   
-4.  Добавьте стиль таблицы в коллекцию стилей таблиц в сетке данных.  
+4. Добавьте стиль таблицы в коллекцию стилей таблиц в сетке данных.  
   
-5.  В следующем примере, создайте экземпляр нового <xref:System.Windows.Forms.DataGridTableStyle> и задайте его <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> свойство.  
+5. В следующем примере, создайте экземпляр нового <xref:System.Windows.Forms.DataGridTableStyle> и задайте его <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> свойство.  
   
-6.  Создайте новый экземпляр класса **GridColumnStyle** и задайте его **MappingName** (и некоторые другие свойства отображения и макета).  
+6. Создайте новый экземпляр класса **GridColumnStyle** и задайте его **MappingName** (и некоторые другие свойства отображения и макета).  
   
-7.  Повторите шаги 2 – 6 для каждого стиля столбца, который вы хотите создать.  
+7. Повторите шаги 2 – 6 для каждого стиля столбца, который вы хотите создать.  
   
      В следующем примере показано как <xref:System.Windows.Forms.DataGridTextBoxColumn> создается, поскольку имя будет отображаться в столбце. Кроме того, добавьте стиль столбца <xref:System.Windows.Forms.GridColumnStylesCollection> стиля таблицы, и добавьте стиль таблицы для <xref:System.Windows.Forms.GridTableStylesCollection> сетки данных.  
   

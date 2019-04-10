@@ -8,12 +8,12 @@ helpviewer_keywords:
 - optionstrict compiler option [Visual Basic]
 - /optionstrict compiler option [Visual Basic]
 ms.assetid: c7b10086-0fa4-49db-b3c8-4ae0db5957da
-ms.openlocfilehash: 5479c312ae7eb7a166803a6e1238806aae9bd656
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e18fe451ea4a80ac959ed61b66394920f8bf177f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835665"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336087"
 ---
 # <a name="-optionstrict"></a>-optionstrict
 Требовать строгой семантики для ограничения неявного преобразования типов.  
@@ -39,11 +39,11 @@ ms.locfileid: "58835665"
   
 ### <a name="to-set--optionstrict-in-the-visual-studio-ide"></a>Чтобы задать - optionstrict в Интегрированной среде разработки Visual Studio  
   
-1.  Выберите проект в **Обозревателе решений**. На **проекта** меню, щелкните **свойства.**   
+1. Выберите проект в **Обозревателе решений**. На **проекта** меню, щелкните **свойства.**   
   
-2.  Откройте вкладку **Компиляция**.  
+2. Откройте вкладку **Компиляция**.  
   
-3.  Измените значение в **Option Strict** поле.  
+3. Измените значение в **Option Strict** поле.  
   
 ### <a name="to-set--optionstrict-programmatically"></a>Чтобы установить - optionstrict программными средствами  
   
@@ -65,5 +65,5 @@ vbc -optionstrict+ test.vb
 - [-nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md)
 - [-warnaserror (Visual Basic)](../../../visual-basic/reference/command-line-compiler/warnaserror.md)
 - [Примеры командных строк компиляции](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Оператор Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [Страница "Параметры Visual Basic по умолчанию", папка "Проекты", диалоговое окно "Параметры"](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

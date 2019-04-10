@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /main compiler option [Visual Basic]
 - -main compiler option [Visual Basic]
 ms.assetid: 83fc339d-6652-415d-b205-b5133319b5b0
-ms.openlocfilehash: d1676cea520c42a40082e31cce9de9797b06e9ee
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: fd6240faf702ccb5e543bfd6a7779284f38d8850
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814046"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337244"
 ---
 # <a name="-main"></a>-main
 Задает класс или модуль, содержащий процедуру `Sub Main`.  
@@ -37,13 +37,13 @@ ms.locfileid: "58814046"
   
 ### <a name="to-set--main-in-the-visual-studio-integrated-development-environment"></a>Чтобы задать - основной в среде разработки Visual Studio  
   
-1.  Выберите проект в **Обозревателе решений**. В меню **Проект** выберите пункт **Свойства**.  
+1. Выберите проект в **Обозревателе решений**. В меню **Проект** выберите пункт **Свойства**.  
   
-2.  Перейдите на вкладку **Приложение** .  
+2. Перейдите на вкладку **Приложение** .  
   
-3.  Убедитесь, что **Включить исполняющую** не установлен флажок.  
+3. Убедитесь, что **Включить исполняющую** не установлен флажок.  
   
-4.  Измените значение в **автоматически запускаемый объект** поле.  
+4. Измените значение в **автоматически запускаемый объект** поле.  
   
 ## <a name="example"></a>Пример  
  Следующий код компилирует `T2.vb` и `T3.vb`, указав, `Sub Main` процедуры будут находиться в `Test2` класса.  

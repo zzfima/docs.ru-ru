@@ -2,23 +2,23 @@
 title: Практическое руководство. Как генерировать настраиваемый код путем изменения DBML-файла
 ms.date: 03/30/2017
 ms.assetid: 50ad597a-8598-42d3-82dd-fc7d702ebc37
-ms.openlocfilehash: f64d323abf124f3bd8aeb684563a08289fa47f7d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c3fa4d9db4076309ab7d6066cc7072797eaead54
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59084080"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338427"
 ---
 # <a name="how-to-generate-customized-code-by-modifying-a-dbml-file"></a>Практическое руководство. Как генерировать настраиваемый код путем изменения DBML-файла
 Вы можете создать Visual Basic или C# исходный код из файла метаданных DBML-разметки базы данных. Этот способ предоставляет возможность настройки заданного по умолчанию DBML-файла до создания кода сопоставления приложений. Данная возможность является дополнительной.  
   
  Ниже указаны действия, необходимые для выполнения данного процесса.  
   
-1.  Создайте DBML-файл.  
+1. Создайте DBML-файл.  
   
-2.  Для изменения DBML-файла используйте редактор. Обратите внимание, что DBML-файл проверен на соответствие файлу определения схемы (XSD) для [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] DBML-файлы. Дополнительные сведения см. в разделе [создание кода в LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
+2. Для изменения DBML-файла используйте редактор. Обратите внимание, что DBML-файл проверен на соответствие файлу определения схемы (XSD) для [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] DBML-файлы. Дополнительные сведения см. в разделе [создание кода в LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
   
-3.  Создать в Visual Basic или C# исходный код.  
+3. Создать в Visual Basic или C# исходный код.  
   
  В следующих примерах используется средства командной строки SQLMetal. Дополнительные сведения см. в разделе [SQLMetal.exe (средство создания кода)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: Пошаговое руководство. Реализация формы, в который выполняется фоновая операция
+title: Пошаговое руководство. Реализация формы, в которой выполняется фоновая операция
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
-ms.openlocfilehash: cb19dfb59ba36eea94f65005c2711ad58d098144
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 6399fb853162174895d892399fd3eb5226101515
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717002"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343406"
 ---
-# <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>Пошаговое руководство. Реализация формы, в который выполняется фоновая операция
+# <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>Пошаговое руководство. Реализация формы, в которой выполняется фоновая операция
 Если у вас есть операция будет выполняться долго для завершения, и не требуется пользовательский интерфейс (UI) перестает отвечать на запросы или «зависания», можно использовать <xref:System.ComponentModel.BackgroundWorker> класс для выполнения операции в другом потоке.  
   
  В этом пошаговом руководстве показано, как использовать <xref:System.ComponentModel.BackgroundWorker> класса для выполнения длительных вычислений «в фоновом режиме», а пользовательский интерфейс продолжает отвечать.  По завершении работы будет создано приложение, вычисляющее числа Фибоначчи в асинхронном режиме. Несмотря на то что вычисление крупных чисел Фибоначчи может занимать много времени, основной поток пользовательского интерфейса в результате этой задержки прерываться не будет, а форма в ходе вычисления останется рабочей.  
@@ -47,21 +47,21 @@ ms.locfileid: "57717002"
   
 #### <a name="to-create-a-form-that-uses-a-background-operation"></a>Создание формы, в которой выполняется фоновая операция  
   
-1.  Создайте проект приложения на основе Windows с именем `BackgroundWorkerExample` (**файл** > **New** > **проекта**  >  **Visual C#** или **Visual Basic** > **классический рабочий стол** > **Windows Forms Application**).  
+1. Создайте проект приложения на основе Windows с именем `BackgroundWorkerExample` (**файл** > **New** > **проекта**  >  **Visual C#** или **Visual Basic** > **классический рабочий стол** > **Windows Forms Application**).  
   
-2.  В **обозревателе решений** щелкните правой кнопкой мыши **Form1** и выберите в контекстном меню команду **Переименовать**. Измените имя файла на `FibonacciCalculator`. Чтобы переименовать все ссылки на элемент кода '`Form1`', в соответствующем запросе нажмите кнопку **Да**.  
+2. В **обозревателе решений** щелкните правой кнопкой мыши **Form1** и выберите в контекстном меню команду **Переименовать**. Измените имя файла на `FibonacciCalculator`. Чтобы переименовать все ссылки на элемент кода '`Form1`', в соответствующем запросе нажмите кнопку **Да**.  
   
-3.  Перетащите <xref:System.Windows.Forms.NumericUpDown> управления из **элементов** на форму. Задайте <xref:System.Windows.Forms.NumericUpDown.Minimum%2A> свойства `1` и <xref:System.Windows.Forms.NumericUpDown.Maximum%2A> свойства `91`.  
+3. Перетащите <xref:System.Windows.Forms.NumericUpDown> управления из **элементов** на форму. Задайте <xref:System.Windows.Forms.NumericUpDown.Minimum%2A> свойства `1` и <xref:System.Windows.Forms.NumericUpDown.Maximum%2A> свойства `91`.  
   
-4.  Добавьте два <xref:System.Windows.Forms.Button> элементов управления в форму.  
+4. Добавьте два <xref:System.Windows.Forms.Button> элементов управления в форму.  
   
-5.  Переименуйте первый <xref:System.Windows.Forms.Button> управления `startAsyncButton` и задайте <xref:System.Windows.Forms.Control.Text%2A> свойства `Start Async`. Переименуйте второй <xref:System.Windows.Forms.Button> управления `cancelAsyncButton`и задайте <xref:System.Windows.Forms.Control.Text%2A> свойства `Cancel Async`. Задайте его <xref:System.Windows.Forms.Control.Enabled%2A> свойства `false`.  
+5. Переименуйте первый <xref:System.Windows.Forms.Button> управления `startAsyncButton` и задайте <xref:System.Windows.Forms.Control.Text%2A> свойства `Start Async`. Переименуйте второй <xref:System.Windows.Forms.Button> управления `cancelAsyncButton`и задайте <xref:System.Windows.Forms.Control.Text%2A> свойства `Cancel Async`. Задайте его <xref:System.Windows.Forms.Control.Enabled%2A> свойства `false`.  
   
-6.  Создайте обработчик событий для обоих <xref:System.Windows.Forms.Button> элементов управления <xref:System.Windows.Forms.Control.Click> события. Подробную информацию см. в разделе [Практическое руководство. Создание обработчиков событий с помощью конструктора](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/zwwsdtbk(v=vs.100)).  
+6. Создайте обработчик событий для обоих <xref:System.Windows.Forms.Button> элементов управления <xref:System.Windows.Forms.Control.Click> события. Подробную информацию см. в разделе [Практическое руководство. Создание обработчиков событий с помощью конструктора](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/zwwsdtbk(v=vs.100)).  
   
-7.  Перетащите <xref:System.Windows.Forms.Label> управления из **элементов** на форму и переименуйте его `resultLabel`.  
+7. Перетащите <xref:System.Windows.Forms.Label> управления из **элементов** на форму и переименуйте его `resultLabel`.  
   
-8.  Перетащите <xref:System.Windows.Forms.ProgressBar> управления из **элементов** на форму.  
+8. Перетащите <xref:System.Windows.Forms.ProgressBar> управления из **элементов** на форму.  
   
 ## <a name="creating-a-backgroundworker-in-your-form"></a>Создание BackgroundWorker в форме  
  Можно создать <xref:System.ComponentModel.BackgroundWorker> для асинхронной операции с помощью **Windows** **конструктора**.  
@@ -75,15 +75,15 @@ ms.locfileid: "57717002"
   
 #### <a name="to-implement-asynchronous-event-handlers"></a>Реализация обработчиков асинхронных событий  
   
-1.  В **свойства** окне с <xref:System.ComponentModel.BackgroundWorker> компонент все еще выбран, щелкните **события** кнопки. Дважды щелкните <xref:System.ComponentModel.BackgroundWorker.DoWork> и <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> событий, чтобы создать обработчики событий. Дополнительные сведения об использовании обработчиков событий см. в разделе [как: Создание обработчиков событий с помощью конструктора](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/zwwsdtbk(v=vs.100)).  
+1. В **свойства** окне с <xref:System.ComponentModel.BackgroundWorker> компонент все еще выбран, щелкните **события** кнопки. Дважды щелкните <xref:System.ComponentModel.BackgroundWorker.DoWork> и <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> событий, чтобы создать обработчики событий. Дополнительные сведения об использовании обработчиков событий см. в разделе [как: Создание обработчиков событий с помощью конструктора](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/zwwsdtbk(v=vs.100)).  
   
-2.  Создайте в форме новый метод с именем `ComputeFibonacci`. Этот метод выполняет фактическую работу и делает это в фоновом режиме. Данный код демонстрирует рекурсивную реализацию алгоритма Фибоначчи — она довольно неэффективна и занимает в разы больше времени при работе с большими числами. Он приводится в иллюстративных целях, чтобы показать, что операция может значительно замедлить работу вашего приложения.  
+2. Создайте в форме новый метод с именем `ComputeFibonacci`. Этот метод выполняет фактическую работу и делает это в фоновом режиме. Данный код демонстрирует рекурсивную реализацию алгоритма Фибоначчи — она довольно неэффективна и занимает в разы больше времени при работе с большими числами. Он приводится в иллюстративных целях, чтобы показать, что операция может значительно замедлить работу вашего приложения.  
   
      [!code-cpp[System.ComponentModel.BackgroundWorker#10](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#10)]
      [!code-csharp[System.ComponentModel.BackgroundWorker#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#10)]
      [!code-vb[System.ComponentModel.BackgroundWorker#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/VB/fibonacciform.vb#10)]  
   
-3.  В <xref:System.ComponentModel.BackgroundWorker.DoWork> обработчик событий, добавьте вызов `ComputeFibonacci` метод. Возьмите первый параметр `ComputeFibonacci` из <xref:System.ComponentModel.DoWorkEventArgs.Argument%2A> свойство <xref:System.ComponentModel.DoWorkEventArgs>. <xref:System.ComponentModel.BackgroundWorker> И <xref:System.ComponentModel.DoWorkEventArgs> параметры будут использоваться позже для отчетов о ходе выполнения и отмены поддержки. Присвойте возвращаемое значение из `ComputeFibonacci` для <xref:System.ComponentModel.DoWorkEventArgs.Result%2A> свойство <xref:System.ComponentModel.DoWorkEventArgs>. Этот результат будет доступен для <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> обработчик событий.  
+3. В <xref:System.ComponentModel.BackgroundWorker.DoWork> обработчик событий, добавьте вызов `ComputeFibonacci` метод. Возьмите первый параметр `ComputeFibonacci` из <xref:System.ComponentModel.DoWorkEventArgs.Argument%2A> свойство <xref:System.ComponentModel.DoWorkEventArgs>. <xref:System.ComponentModel.BackgroundWorker> И <xref:System.ComponentModel.DoWorkEventArgs> параметры будут использоваться позже для отчетов о ходе выполнения и отмены поддержки. Присвойте возвращаемое значение из `ComputeFibonacci` для <xref:System.ComponentModel.DoWorkEventArgs.Result%2A> свойство <xref:System.ComponentModel.DoWorkEventArgs>. Этот результат будет доступен для <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> обработчик событий.  
   
     > [!NOTE]
     >  <xref:System.ComponentModel.BackgroundWorker.DoWork> Не ссылается на обработчик событий `backgroundWorker1` переменную экземпляра напрямую, так как это может привязать этот обработчик событий для определенного экземпляра <xref:System.ComponentModel.BackgroundWorker>. Вместо этого ссылка <xref:System.ComponentModel.BackgroundWorker> , создавший событие, берется из `sender` параметра. Это важно, если в форме размещено несколько <xref:System.ComponentModel.BackgroundWorker>. Это также не следует выполнять операции все объекты пользовательского интерфейса в вашей <xref:System.ComponentModel.BackgroundWorker.DoWork> обработчик событий. Вместо этого для взаимодействия в пользовательский интерфейс, через <xref:System.ComponentModel.BackgroundWorker> события.  
@@ -92,13 +92,13 @@ ms.locfileid: "57717002"
      [!code-csharp[System.ComponentModel.BackgroundWorker#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#5)]
      [!code-vb[System.ComponentModel.BackgroundWorker#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/VB/fibonacciform.vb#5)]  
   
-4.  В `startAsyncButton` элемента управления <xref:System.Windows.Forms.Control.Click> обработчик событий, добавьте код, который запускает асинхронную операцию.  
+4. В `startAsyncButton` элемента управления <xref:System.Windows.Forms.Control.Click> обработчик событий, добавьте код, который запускает асинхронную операцию.  
   
      [!code-cpp[System.ComponentModel.BackgroundWorker#13](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#13)]
      [!code-csharp[System.ComponentModel.BackgroundWorker#13](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#13)]
      [!code-vb[System.ComponentModel.BackgroundWorker#13](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/VB/fibonacciform.vb#13)]  
   
-5.  В <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> обработчик событий, результат вычисления, которое необходимо присвоить `resultLabel` элемента управления.  
+5. В <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> обработчик событий, результат вычисления, которое необходимо присвоить `resultLabel` элемента управления.  
   
      [!code-cpp[System.ComponentModel.BackgroundWorker#6](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#6)]
      [!code-csharp[System.ComponentModel.BackgroundWorker#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#6)]
@@ -109,15 +109,15 @@ ms.locfileid: "57717002"
   
 #### <a name="to-implement-progress-reporting"></a>Реализация отчета о ходе выполнения  
   
-1.  В окне **Свойства** выберите `backgroundWorker1`. Задайте для свойств <xref:System.ComponentModel.BackgroundWorker.WorkerReportsProgress%2A> и <xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A> значение `true`.  
+1. В окне **Свойства** выберите `backgroundWorker1`. Задайте для свойств <xref:System.ComponentModel.BackgroundWorker.WorkerReportsProgress%2A> и <xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A> значение `true`.  
   
-2.  Объявите две переменные в форме `FibonacciCalculator`. Они будут использоваться для отслеживания хода выполнения.  
+2. Объявите две переменные в форме `FibonacciCalculator`. Они будут использоваться для отслеживания хода выполнения.  
   
      [!code-cpp[System.ComponentModel.BackgroundWorker#14](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#14)]
      [!code-csharp[System.ComponentModel.BackgroundWorker#14](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#14)]
      [!code-vb[System.ComponentModel.BackgroundWorker#14](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/VB/fibonacciform.vb#14)]  
   
-3.  Добавьте обработчик для события <xref:System.ComponentModel.BackgroundWorker.ProgressChanged>. В <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> обработчик событий, обновите <xref:System.Windows.Forms.ProgressBar> с <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A> свойство <xref:System.ComponentModel.ProgressChangedEventArgs> параметр.  
+3. Добавьте обработчик для события <xref:System.ComponentModel.BackgroundWorker.ProgressChanged>. В <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> обработчик событий, обновите <xref:System.Windows.Forms.ProgressBar> с <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A> свойство <xref:System.ComponentModel.ProgressChangedEventArgs> параметр.  
   
      [!code-cpp[System.ComponentModel.BackgroundWorker#7](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#7)]
      [!code-csharp[System.ComponentModel.BackgroundWorker#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#7)]
@@ -125,13 +125,13 @@ ms.locfileid: "57717002"
   
 #### <a name="to-implement-support-for-cancellation"></a>Реализация поддержки отмены  
   
-1.  В `cancelAsyncButton` элемента управления <xref:System.Windows.Forms.Control.Click> обработчик событий, добавьте код, отменяющий асинхронную операцию.  
+1. В `cancelAsyncButton` элемента управления <xref:System.Windows.Forms.Control.Click> обработчик событий, добавьте код, отменяющий асинхронную операцию.  
   
      [!code-cpp[System.ComponentModel.BackgroundWorker#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#4)]
      [!code-csharp[System.ComponentModel.BackgroundWorker#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#4)]
      [!code-vb[System.ComponentModel.BackgroundWorker#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/VB/fibonacciform.vb#4)]  
   
-2.  Следующие фрагменты кода в методе `ComputeFibonacci` сообщают о ходе выполнения и поддерживают отмену.  
+2. Следующие фрагменты кода в методе `ComputeFibonacci` сообщают о ходе выполнения и поддерживают отмену.  
   
      [!code-cpp[System.ComponentModel.BackgroundWorker#11](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#11)]
      [!code-csharp[System.ComponentModel.BackgroundWorker#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#11)]
@@ -170,5 +170,5 @@ ms.locfileid: "57717002"
 - [Рекомендации по работе с потоками](../../../standard/threading/managed-threading-best-practices.md)
 - [Обзор асинхронной модели, основанной на событиях](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
 - [Практическое руководство. Реализация формы, в которой выполняется фоновая операция](how-to-implement-a-form-that-uses-a-background-operation.md)
-- [Пошаговое руководство: Выполнение операции в фоновом режиме](walkthrough-running-an-operation-in-the-background.md)
+- [Пошаговое руководство. Фоновое выполнение операции](walkthrough-running-an-operation-in-the-background.md)
 - [Компонент BackgroundWorker](backgroundworker-component.md)

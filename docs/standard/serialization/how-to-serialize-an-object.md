@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Сериализация объекта
+title: Практическое руководство. Сериализация объекта
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - serializing objects
 - objects, serializing steps
 ms.assetid: a1207d05-32b2-4953-8582-959607991227
-ms.openlocfilehash: 0924d8038edf70cd493b94c165edda607fc0027b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ff00151d7aaba27faeee1c9d315cac0c8afc0b0d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600652"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336321"
 ---
-# <a name="how-to-serialize-an-object"></a>Как выполнить Сериализация объекта
+# <a name="how-to-serialize-an-object"></a>Практическое руководство. Сериализация объекта
 Для сериализации объекта сначала следует создать сериализуемый объект и задать открытые свойства и поля. Для этого необходимо выбрать формат передачи, в котором будет храниться поток XML: поток или файл. Например, если поток XML должен храниться в неизменном виде, создайте объект <xref:System.IO.FileStream>.  
   
 > [!NOTE]
@@ -23,11 +23,11 @@ ms.locfileid: "54600652"
   
 ### <a name="to-serialize-an-object"></a>Сериализация объекта  
   
-1.  Создайте объект и задайте его открытые поля и свойства.  
+1. Создайте объект и задайте его открытые поля и свойства.  
   
-2.  Постройте <xref:System.Xml.Serialization.XmlSerializer> с использованием типа объекта. Дополнительные сведения см. в разделе конструкторов класса <xref:System.Xml.Serialization.XmlSerializer>.  
+2. Постройте <xref:System.Xml.Serialization.XmlSerializer> с использованием типа объекта. Дополнительные сведения см. в разделе конструкторов класса <xref:System.Xml.Serialization.XmlSerializer>.  
   
-3.  Вызовите метод <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A>, чтобы создать либо поток XML, либо файловое представление открытых свойств и полей объекта. В следующем примере создается файл.  
+3. Вызовите метод <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A>, чтобы создать либо поток XML, либо файловое представление открытых свойств и полей объекта. В следующем примере создается файл.  
   
     ```vb  
     Dim myObject As MySerializableClass = New MySerializableClass()  

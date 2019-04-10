@@ -5,12 +5,12 @@ helpviewer_keywords:
 - variables [Visual Basic], read-only
 - variables [Visual Basic], constant value
 ms.assetid: 86b59266-25df-4635-ae15-9b59c411d036
-ms.openlocfilehash: 57792db826caa996e163bc0a51b01a6bbd6a4858
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 7180e5141572d219ed02c57103e9d4b80cde536e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58823328"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342938"
 ---
 # <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a>Практическое руководство. Создание переменной, которая не изменяет значение (Visual Basic)
 Понятие переменной, которая не изменяет его значение может показаться противоречивым. Но существуют ситуации, когда константа не представляется возможным, и полезно иметь переменную с фиксированным значением. В этом случае можно определить переменную-член с [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) ключевое слово.  
@@ -25,7 +25,7 @@ ms.locfileid: "58823328"
   
 ### <a name="to-create-a-variable-that-does-not-change-in-value"></a>Для создание переменной, которая не изменяет значение  
   
-1.  На уровне модуля, объявите переменную-член с [оператор Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)и включают [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) ключевое слово.  
+1. На уровне модуля, объявите переменную-член с [оператор Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)и включают [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) ключевое слово.  
   
     ```  
     Dim ReadOnly timeStarted  
@@ -33,7 +33,7 @@ ms.locfileid: "58823328"
   
      Можно указать `ReadOnly` только на переменную-член. Это означает, что необходимо определить переменную уровня модуля, вне любой процедуры.  
   
-2.  Если вы можете вычислить значение в одной инструкции во время компиляции, используйте предложение инициализации в `Dim` инструкции. Выполните [как](../../../../visual-basic/language-reference/statements/as-clause.md) предложение со знака равенства (`=`), за которым следует выражение. Убедитесь, что компилятор может вычислить это выражение с постоянным значением.  
+2. Если вы можете вычислить значение в одной инструкции во время компиляции, используйте предложение инициализации в `Dim` инструкции. Выполните [как](../../../../visual-basic/language-reference/statements/as-clause.md) предложение со знака равенства (`=`), за которым следует выражение. Убедитесь, что компилятор может вычислить это выражение с постоянным значением.  
   
     ```  
     Dim ReadOnly timeStarted As Date = Now  

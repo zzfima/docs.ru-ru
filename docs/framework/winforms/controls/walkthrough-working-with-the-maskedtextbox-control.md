@@ -11,12 +11,12 @@ helpviewer_keywords:
 - user input [Windows Forms], controlling
 - text [Windows Forms], controls for input
 ms.assetid: df60565e-5447-4110-92a6-be1f6ff5faa3
-ms.openlocfilehash: ca505b062be8c60c1dd9b08fead4855eb1eb4cd6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ff9a0edb44a95f5853edf711e0a1559e3b2e3b15
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59103848"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342473"
 ---
 # <a name="walkthrough-working-with-the-maskedtextbox-control"></a>Пошаговое руководство. Работа с элементом управления MaskedTextBox
 В данном пошаговом руководстве представлены следующие задачи.  
@@ -31,15 +31,15 @@ ms.locfileid: "59103848"
   
 #### <a name="to-add-a-maskedtextbox-control-to-your-form"></a>Для добавления в форму элемент управления MaskedTextBox  
   
-1.  Откройте форму, на котором вы хотите поместить <xref:System.Windows.Forms.MaskedTextBox> элемента управления.  
+1. Откройте форму, на котором вы хотите поместить <xref:System.Windows.Forms.MaskedTextBox> элемента управления.  
   
-2.  Перетащите <xref:System.Windows.Forms.MaskedTextBox> управления из **элементов** в форму.  
+2. Перетащите <xref:System.Windows.Forms.MaskedTextBox> управления из **элементов** в форму.  
   
-3.  Щелкните правой кнопкой мыши элемент управления и выберите **свойства**. В **свойства** выберите **маска** свойство и нажмите кнопку **...**  (многоточие) рядом с именем свойства.  
+3. Щелкните правой кнопкой мыши элемент управления и выберите **свойства**. В **свойства** выберите **маска** свойство и нажмите кнопку **...**  (многоточие) рядом с именем свойства.  
   
-4.  В **маска ввода** выберите **короткого формата даты** замаскированы, а затем нажмите кнопку **ОК**.  
+4. В **маска ввода** выберите **короткого формата даты** замаскированы, а затем нажмите кнопку **ОК**.  
   
-5.  В **свойства** задайте <xref:System.Windows.Forms.MaskedTextBox.BeepOnError%2A> свойства `true`. Это свойство создает короткий звуковой сигнал всякий раз пользователь пытается ввести знак, не соответствует определению маски.  
+5. В **свойства** задайте <xref:System.Windows.Forms.MaskedTextBox.BeepOnError%2A> свойства `true`. Это свойство создает короткий звуковой сигнал всякий раз пользователь пытается ввести знак, не соответствует определению маски.  
   
  Сводка символы, которые поддерживает свойство маски, см. в разделе "Примечания" <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> свойство.  
   
@@ -47,9 +47,9 @@ ms.locfileid: "59103848"
   
 #### <a name="add-a-balloon-tip-for-rejected-mask-input"></a>Добавьте всплывающую подсказку об отклоненном вводе  
   
-1.  Вернитесь к **элементов** и добавьте <xref:System.Windows.Forms.ToolTip> в форму.  
+1. Вернитесь к **элементов** и добавьте <xref:System.Windows.Forms.ToolTip> в форму.  
   
-2.  Создайте обработчик событий для <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> событие, которое вызывает <xref:System.Windows.Forms.ToolTip> при возникновении ошибки ввода. Всплывающая подсказка остается видимым, в течение пяти секунд, или пока пользователь не щелкнет его.  
+2. Создайте обработчик событий для <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> событие, которое вызывает <xref:System.Windows.Forms.ToolTip> при возникновении ошибки ввода. Всплывающая подсказка остается видимым, в течение пяти секунд, или пока пользователь не щелкнет его.  
   
     ```csharp  
     public void Form1_Load(Object sender, EventArgs e)   
@@ -82,7 +82,7 @@ ms.locfileid: "59103848"
   
 #### <a name="add-a-balloon-tip-for-invalid-data-types"></a>Добавьте всплывающую подсказку для недопустимые типы данных  
   
-1.  В вашей форме <xref:System.Windows.Forms.Form.Load> обработчик событий, назначить <xref:System.Type> объект, представляющий <xref:System.DateTime> тип <xref:System.Windows.Forms.MaskedTextBox> элемента управления <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> свойство:  
+1. В вашей форме <xref:System.Windows.Forms.Form.Load> обработчик событий, назначить <xref:System.Type> объект, представляющий <xref:System.DateTime> тип <xref:System.Windows.Forms.MaskedTextBox> элемента управления <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> свойство:  
   
     ```csharp  
     private void Form1_Load(Object sender, EventArgs e)  
@@ -100,7 +100,7 @@ ms.locfileid: "59103848"
     End Sub  
     ```  
   
-2.  Добавьте обработчик событий для события <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted>.  
+2. Добавьте обработчик событий для события <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted>.  
   
     ```csharp  
     public void maskedTextBox1_TypeValidationCompleted(object sender, TypeValidationEventArgs e)  

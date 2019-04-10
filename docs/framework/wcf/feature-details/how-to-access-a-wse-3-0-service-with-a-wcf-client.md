@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f9bcd9b-8f8f-47fa-8f1e-0d47236eb800
-ms.openlocfilehash: 1b8b344c713fdd27c67cf98c51c8c69198fd508f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 83507a95dbc4bc7499b94a516f569703f21a2726
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127469"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341066"
 ---
 # <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>Практическое руководство. Доступ к WSE 3.0 службы с помощью клиента WCF
 Клиенты Windows Communication Foundation (WCF) — уровне линий связи совместимы с Web Services Enhancements (WSE) 3.0 для служб Microsoft .NET, если WCF клиенты настроены для использования версии спецификации WS-Addressing от августа 2004 г. Тем не менее, службы WSE 3.0 не поддерживают протокол exchange (MEX) метаданных, поэтому при использовании [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для создания класса клиента WCF, не применяются параметры безопасности в созданный Клиент WCF. Таким образом, необходимо указать параметры безопасности, служба WSE 3.0 требует после создания клиента WCF.  
@@ -19,13 +19,13 @@ ms.locfileid: "59127469"
   
 ### <a name="to-access-a-wse-30-web-service-with-a-wcf-client"></a>Обращение к веб-службе WSE 3.0 с помощью клиента WCF  
   
-1.  Запустите [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) создание клиента WCF для WSE 3.0 веб-службы.  
+1. Запустите [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) создание клиента WCF для WSE 3.0 веб-службы.  
   
      Для службы WSE 3.0 Web создается клиент WCF. Поскольку WSE 3.0 не поддерживает протокол MEX, использовать SvcUtil.exe для извлечения требований безопасности для веб-службы нельзя. Добавить параметры безопасности для клиента должен разработчик приложения.  
   
      Дополнительные сведения о создании клиента WCF, см. в разделе [как: Создание клиента](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
   
-2.  Создайте класс, представляющий привязку, которая может обмениваться данными с веб-службами WSE 3.0.  
+2. Создайте класс, представляющий привязку, которая может обмениваться данными с веб-службами WSE 3.0.  
   
      Следующий класс является частью [взаимодействие с WSE](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29) пример:  
   
@@ -50,7 +50,7 @@ ms.locfileid: "59127469"
          [!code-csharp[c_WCFClientToWSEService#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wcfclienttowseservice/cs/wsehttpbinding.cs#2)]
          [!code-vb[c_WCFClientToWSEService#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wcfclienttowseservice/vb/wsehttpbinding.vb#2)]  
   
-3.  В коде клиентского приложения добавьте код для задания свойств привязки.  
+3. В коде клиентского приложения добавьте код для задания свойств привязки.  
   
      В следующем примере кода указывает, что клиент WCF должна использовать защиту сообщений и проверки подлинности, как определено в WSE 3.0 `AnonymousForCertificate` утверждение готовое к использованию безопасности. Кроме того, требуются безопасные сеансы и производные ключи.  
   

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
-ms.openlocfilehash: df726d71880d135adb883f834acfa9839641eae3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ac20e24eb9148ed9d403b7a9c2c260009f39d492
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162728"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335034"
 ---
 # <a name="extending-dispatchers"></a>Расширение диспетчеров
 Диспетчеры отвечают за удаление входящих сообщений из базовых каналов, их перевод в вызовы метода в коде приложения и отправку результатов обратно вызывающему коду. Расширения диспетчера позволяют изменить эту процедуру.  Можно реализовать инспекторы сообщений или параметров, которые инспектируют или изменяют содержимое сообщений или параметров.  Можно изменить способ перенаправления сообщений в операции или обеспечить какие-либо другие функции.  
@@ -76,13 +76,13 @@ ms.locfileid: "59162728"
   
  Класс <xref:System.ServiceModel.Dispatcher.DispatchRuntime> предоставляет четыре основных области расширяемости диспетчера.  
   
-1.  Компоненты канала используют свойства объекта <xref:System.ServiceModel.Dispatcher.DispatchRuntime> и сопоставленного диспетчера каналов, возвращаемого свойством <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ChannelDispatcher%2A>, для настройки приема и закрытия каналов диспетчером каналов. Эта категория содержит свойства <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.ChannelInitializers%2A> и <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InputSessionShutdownHandlers%2A>.  
+1. Компоненты канала используют свойства объекта <xref:System.ServiceModel.Dispatcher.DispatchRuntime> и сопоставленного диспетчера каналов, возвращаемого свойством <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ChannelDispatcher%2A>, для настройки приема и закрытия каналов диспетчером каналов. Эта категория содержит свойства <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.ChannelInitializers%2A> и <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InputSessionShutdownHandlers%2A>.  
   
-2.  Компоненты сообщения настраиваются для каждого обрабатываемого сообщения. Эта категория содержит свойства <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageInspectors%2A>, <xref:System.ServiceModel.Dispatcher.DispatchRuntime.OperationSelector%2A>, <xref:System.ServiceModel.Dispatcher.DispatchRuntime.Operations%2A> и <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.ErrorHandlers%2A>.  
+2. Компоненты сообщения настраиваются для каждого обрабатываемого сообщения. Эта категория содержит свойства <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageInspectors%2A>, <xref:System.ServiceModel.Dispatcher.DispatchRuntime.OperationSelector%2A>, <xref:System.ServiceModel.Dispatcher.DispatchRuntime.Operations%2A> и <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.ErrorHandlers%2A>.  
   
-3.  Компоненты экземпляра настраивают создание, время жизни и удаление экземпляров типа службы. За дополнительными сведениями о времени жизни объектов служб обратитесь к свойству <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>. Эта категория содержит свойства <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceContextInitializers%2A> и <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A>.  
+3. Компоненты экземпляра настраивают создание, время жизни и удаление экземпляров типа службы. За дополнительными сведениями о времени жизни объектов служб обратитесь к свойству <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>. Эта категория содержит свойства <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceContextInitializers%2A> и <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A>.  
   
-4.  Компоненты, относящиеся к безопасности, могут использовать следующие свойства:  
+4. Компоненты, относящиеся к безопасности, могут использовать следующие свойства:  
   
     -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A> Указывает, куда записываются события аудита.  
   

@@ -2,29 +2,29 @@
 title: Практическое руководство. Как программно добавить возможность обнаружения к службе и клиенту WCF
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: 821e45d41a1a91b6884a73abcbdf3ea04e938e25
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 54d838967fcc19501ff7385aba29e8d79025ce70
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59224212"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336594"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Практическое руководство. Как программно добавить возможность обнаружения к службе и клиенту WCF
 В этом разделе объясняется, как сделать обнаруживаемой службы Windows Communication Foundation (WCF). Он основан на [резидентного размещения](https://go.microsoft.com/fwlink/?LinkId=145523) образца.  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>Настройка образца службы существующего резидентного размещения для обнаружения  
   
-1.  Откройте решение резидентного размещения в Visual Studio 2012. Образец находится в каталоге TechnologySamples\Basic\Service\Hosting\SelfHost.  
+1. Откройте решение резидентного размещения в Visual Studio 2012. Образец находится в каталоге TechnologySamples\Basic\Service\Hosting\SelfHost.  
   
-2.  Добавьте ссылку на проект службы `System.ServiceModel.Discovery.dll`. Может появиться сообщение об ошибке «System. ServiceModel.Discovery.dll или одна из его зависимостей требует более поздней версии [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] отличной от указанной в проекте...» Если вы видите это сообщение, щелкните правой кнопкой мыши проект в обозревателе решений и выберите **свойства**. В **свойства проекта** окна, убедитесь, что **требуемой версии .NET Framework** является [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
+2. Добавьте ссылку на проект службы `System.ServiceModel.Discovery.dll`. Может появиться сообщение об ошибке «System. ServiceModel.Discovery.dll или одна из его зависимостей требует более поздней версии [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] отличной от указанной в проекте...» Если вы видите это сообщение, щелкните правой кнопкой мыши проект в обозревателе решений и выберите **свойства**. В **свойства проекта** окна, убедитесь, что **требуемой версии .NET Framework** является [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
   
-3.  Откройте файл Service.cs и добавьте следующую инструкцию `using`.  
+3. Откройте файл Service.cs и добавьте следующую инструкцию `using`.  
   
     ```csharp  
     using System.ServiceModel.Discovery;  
     ```  
   
-4.  В методе `Main()` в инструкции `using` добавьте экземпляр <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> в узел службы.  
+4. В методе `Main()` в инструкции `using` добавьте экземпляр <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> в узел службы.  
   
     ```csharp  
     public static void Main()  
@@ -42,7 +42,7 @@ ms.locfileid: "59224212"
   
      <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> указывает, что служба, к которой оно применяется, доступна для обнаружения.  
   
-5.  Добавьте <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> в узел службы сразу после кода, добавляющего <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>.  
+5. Добавьте <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> в узел службы сразу после кода, добавляющего <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>.  
   
     ```csharp  
     // Add ServiceDiscoveryBehavior  
@@ -56,15 +56,15 @@ ms.locfileid: "59224212"
   
 ### <a name="to-create-a-client-application-that-uses-discovery-to-call-the-service"></a>Создание клиентского приложения, использующего обнаружение при вызове службы  
   
-1.  Добавьте в решение новое консольное приложение с именем `DiscoveryClientApp`.  
+1. Добавьте в решение новое консольное приложение с именем `DiscoveryClientApp`.  
   
-2.  Добавьте ссылку на `System.ServiceModel.dll` и `System.ServiceModel.Discovery.dll`  
+2. Добавьте ссылку на `System.ServiceModel.dll` и `System.ServiceModel.Discovery.dll`  
   
-3.  Скопируйте файлы GeneratedClient.cs и App.config из существующего проекта клиента в новый проект DiscoveryClientApp. Для этого щелкните правой кнопкой мыши файлы в **обозревателе решений**выберите **копирования**, а затем выберите **DiscoveryClientApp** проекта, щелкните правой кнопкой мыши и выберите **Вставить**.  
+3. Скопируйте файлы GeneratedClient.cs и App.config из существующего проекта клиента в новый проект DiscoveryClientApp. Для этого щелкните правой кнопкой мыши файлы в **обозревателе решений**выберите **копирования**, а затем выберите **DiscoveryClientApp** проекта, щелкните правой кнопкой мыши и выберите **Вставить**.  
   
-4.  Откройте файл Program.cs.  
+4. Откройте файл Program.cs.  
   
-5.  Добавьте следующие инструкции `using`.  
+5. Добавьте следующие инструкции `using`.  
   
     ```csharp  
     using System.ServiceModel;  
@@ -72,7 +72,7 @@ ms.locfileid: "59224212"
     using Microsoft.ServiceModel.Samples;  
     ```  
   
-6.  Добавьте статический метод с именем `FindCalculatorServiceAddress()` в класс `Program`.  
+6. Добавьте статический метод с именем `FindCalculatorServiceAddress()` в класс `Program`.  
   
     ```csharp  
     static EndpointAddress FindCalculatorServiceAddress()  
@@ -82,7 +82,7 @@ ms.locfileid: "59224212"
   
      Этот метод использует обнаружение для поиска службы `CalculatorService`.  
   
-7.  Внутри метода `FindCalculatorServiceAddress` создайте новый экземпляр <xref:System.ServiceModel.Discovery.DiscoveryClient>, передав <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> в конструктор.  
+7. Внутри метода `FindCalculatorServiceAddress` создайте новый экземпляр <xref:System.ServiceModel.Discovery.DiscoveryClient>, передав <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> в конструктор.  
   
     ```csharp  
     static EndpointAddress FindCalculatorServiceAddress()  
@@ -94,7 +94,7 @@ ms.locfileid: "59224212"
   
      Оно говорит WCF <xref:System.ServiceModel.Discovery.DiscoveryClient> класс следует использовать стандартную конечную точку обнаружения UDP для отправки и получения сообщений обнаружения.  
   
-8.  В следующей строке вызовите метод <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> и укажите экземпляр <xref:System.ServiceModel.Discovery.FindCriteria>, содержащий контракт службы, который необходимо найти. В данном случае укажите `ICalculator`.  
+8. В следующей строке вызовите метод <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> и укажите экземпляр <xref:System.ServiceModel.Discovery.FindCriteria>, содержащий контракт службы, который необходимо найти. В данном случае укажите `ICalculator`.  
   
     ```csharp  
     // Find ICalculatorService endpoints              
@@ -190,11 +190,11 @@ ms.locfileid: "59224212"
   
 ### <a name="to-test-the-application"></a>Тестирование приложения  
   
-1.  Откройте командную строку с правами администратора и запустите программу Service.exe.  
+1. Откройте командную строку с правами администратора и запустите программу Service.exe.  
   
-2.  Откройте окно командной строки и запустите программу Discoveryclientapp.exe.  
+2. Откройте окно командной строки и запустите программу Discoveryclientapp.exe.  
   
-3.  Результатом выполнения service.exe должен быть следующий вывод.  
+3. Результатом выполнения service.exe должен быть следующий вывод.  
   
     ```Output  
     Received Add(100,15.99)  
@@ -207,7 +207,7 @@ ms.locfileid: "59224212"
     Return: 6.25390869293308  
     ```  
   
-4.  Результатом выполнения Discoveryclientapp.exe должен быть следующий вывод.  
+4. Результатом выполнения Discoveryclientapp.exe должен быть следующий вывод.  
   
     ```Output  
     Invoking CalculatorService at http://localhost:8000/ServiceModelSamples/service  

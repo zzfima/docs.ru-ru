@@ -14,12 +14,12 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-ms.openlocfilehash: a81aa6ac0716b94625c0ce7868730d55d062e3e4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: a8094397ff2a076cf474d735e65298b3d2f0a9cd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814644"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343016"
 ---
 # <a name="comments-in-code-visual-basic"></a>Комментарии в коде (Visual Basic)
 В примерах кодов часто встречается символ начала комментария (`'`). Этот символ дает компилятору Visual Basic проигнорировать последующий текст, или *комментарий*. Комментарии — это краткие заметки, внесенные в код, чтобы сделать чтение кода более легким.  
@@ -54,7 +54,7 @@ ms.locfileid: "58814644"
   
 -   Комментарии не могут располагаться за последовательностью продолжения строки в той же строке.  
   
- Можно добавить или удалить символы начала комментария для блока кода, щелкнув один или несколько строк кода и выбрав **комментарий** (![VisualBasicWinAppCodeEditorCommentButton](../../../visual-basic/programming-guide/program-structure/media/vacommentbutton.gif "vaCommentButton ")) и **Uncomment** (![VisualStudioWinAppProjectUncommentButton](../../../visual-basic/programming-guide/program-structure/media/vauncommentbutton.gif "vaUncommentButton")) кнопки на **изменение**  панели инструментов.  
+ Можно добавить или удалить символы начала комментария для блока кода, щелкнув один или несколько строк кода и выбрав **комментарий** (![кнопки комментария Visual Basic в Visual Studio.](./media/comments-in-code/visual-basic-comment-button.gif)) и **Uncomment**  (![Кнопку раскомментируйте Visual Basic в Visual Studio.](./media/comments-in-code/visual-basic-uncomment-button.gif)) кнопки на **изменить** панели инструментов.  
   
 > [!NOTE]
 >  Кроме того, можно добавить в код комментарии, поставив в начале текста ключевое слово `REM`. Тем не менее `'` символов и **комментарий**/**Uncomment** кнопки гораздо проще использовать и требует меньше места и памяти.  

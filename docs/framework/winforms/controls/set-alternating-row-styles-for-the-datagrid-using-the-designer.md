@@ -8,12 +8,12 @@ helpviewer_keywords:
 - rows [Windows Forms], alternating
 - data [Windows Forms], displaying
 ms.assetid: 02373442-bf94-4470-9f8a-e44c4a9d5b88
-ms.openlocfilehash: 52105a933efc8bccde8d01aa707ade0a2af6be96
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: fb338a3616bc20542ec940db5977c4ffdab9654c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59072940"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335632"
 ---
 # <a name="how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control-using-the-designer"></a>Практическое руководство. Установка стилей для чередующихся строк в элементе управления DataGridView формы Windows Forms с помощью конструктора
 Данные в таблицах часто представлены в виде подобном бухгалтерским книгам: в чередующихся строках используется разный цвет фона. Такой формат позволяет проще определять, какие ячейки находятся в какой строке, что особенно удобно в широких таблицах со множеством столбцов.  
@@ -27,13 +27,13 @@ ms.locfileid: "59072940"
   
 ### <a name="define-styles-for-alternating-rows"></a>Определение стилей для чередующихся строк  
   
-1.  Выберите <xref:System.Windows.Forms.DataGridView> управления в конструкторе.  
+1. Выберите <xref:System.Windows.Forms.DataGridView> управления в конструкторе.  
   
-2.  В **свойства** окно, нажмите кнопку с многоточием (![экрана VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) рядом с полем <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A> свойство.  
+2. В **свойства** окно, нажмите кнопку с многоточием (![экрана VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) рядом с полем <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A> свойство.  
   
-3.  В **построителя CellStyle** диалоговом окне определения стиля, устанавливая свойства и использовать **предварительной версии** панели, чтобы подтвердить выбранные параметры. Для каждой строки, отображаемый в элементе управления, начиная со второй используются стили вами.  
+3. В **построителя CellStyle** диалоговом окне определения стиля, устанавливая свойства и использовать **предварительной версии** панели, чтобы подтвердить выбранные параметры. Для каждой строки, отображаемый в элементе управления, начиная со второй используются стили вами.  
   
-4.  Чтобы определить стили для оставшихся строк, повторите шаги 2 и 3. Использование <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A> свойство.  
+4. Чтобы определить стили для оставшихся строк, повторите шаги 2 и 3. Использование <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A> свойство.  
   
     > [!NOTE]
     >  Для отображения ячеек с помощью стилей, унаследованные от различных свойств. Дополнительные сведения о наследовании стилей см. в разделе [стили ячеек элемента управления DataGridView Windows Forms в](cell-styles-in-the-windows-forms-datagridview-control.md).  

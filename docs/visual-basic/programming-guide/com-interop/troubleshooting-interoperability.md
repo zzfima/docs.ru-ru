@@ -16,12 +16,12 @@ helpviewer_keywords:
 - interoperability, sharing components
 - shared components, using with assemblies
 ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
-ms.openlocfilehash: 197361020ad8c6a88a5fc8617b8e24f420799e14
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 147c61badd680277480226b809df97d46b636c7d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377320"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341196"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>Устранение неполадок взаимодействия (Visual Basic)
 При взаимодействии между COM и управляемым кодом [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], может появиться один или несколько из следующих распространенных проблем.  
@@ -42,9 +42,9 @@ ms.locfileid: "57377320"
   
  Переименование может вызвать две проблемы для потребителей COM-объекта.  
   
-1.  Клиенты могут не ожидать имена созданных методов.  
+1. Клиенты могут не ожидать имена созданных методов.  
   
-2.  Имена созданных методов в классе, в виде COM-объекта можно изменить при добавлении новых перегрузок для класса или его базовый класс. Это может вызвать проблемы управления версиями.  
+2. Имена созданных методов в классе, в виде COM-объекта можно изменить при добавлении новых перегрузок для класса или его базовый класс. Это может вызвать проблемы управления версиями.  
   
  Чтобы устранить обе проблемы, присвойте каждому методу уникальное имя, вместо того чтобы использовать перегрузку, при разработке объектов, которым будет предоставляться в виде COM-объектов.  
   
@@ -132,6 +132,6 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
 - [COM-взаимодействие](../../../visual-basic/programming-guide/com-interop/index.md)
 - [Tlbimp.exe (программа экспорта библиотек типов)](../../../framework/tools/tlbimp-exe-type-library-importer.md)
 - [Tlbexp.exe (программа экспорта библиотек типов)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)
-- [Пошаговое руководство: Реализация наследования с использованием COM-объектов](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
-- [Оператор Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md)
-- [Глобальный кэш сборок](../../../framework/app-domains/gac.md)
+- [Пошаговое руководство. Реализация наследования с использованием COM-объектов](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
+- [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md)
+- [глобальный кэш сборок](../../../framework/app-domains/gac.md)

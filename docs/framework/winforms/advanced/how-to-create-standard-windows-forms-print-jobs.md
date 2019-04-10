@@ -10,21 +10,21 @@ helpviewer_keywords:
 - printing [Windows Forms], creating print jobs
 - printing [Visual Basic], in Windows applications
 ms.assetid: 03342b90-9cfe-40b2-838b-b479a13c5dea
-ms.openlocfilehash: 7ccebf128d533a0e0cf0a17e5702807371e1bea7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 816da93218e20f73f16c14769ed1a549dd3d8eb3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59170980"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335411"
 ---
 # <a name="how-to-create-standard-windows-forms-print-jobs"></a>Практическое руководство. Создание стандартных задания печати в Windows Forms
 Печать в Windows Forms лежит <xref:System.Drawing.Printing.PrintDocument> компонент — в частности, <xref:System.Drawing.Printing.PrintDocument.PrintPage> событий. Путем написания кода для обработки <xref:System.Drawing.Printing.PrintDocument.PrintPage> событий, можно указать, что нужно вывести и способ печати.  
   
 ### <a name="to-create-a-print-job"></a>Чтобы создать задание на печать  
   
-1.  Добавление <xref:System.Drawing.Printing.PrintDocument> форму компонента.  
+1. Добавление <xref:System.Drawing.Printing.PrintDocument> форму компонента.  
   
-2.  Напишите код для обработки события <xref:System.Drawing.Printing.PrintDocument.PrintPage> .  
+2. Напишите код для обработки события <xref:System.Drawing.Printing.PrintDocument.PrintPage> .  
   
      Как будет нужно код логики печати. Кроме того необходимо указать материала для печати.  
   

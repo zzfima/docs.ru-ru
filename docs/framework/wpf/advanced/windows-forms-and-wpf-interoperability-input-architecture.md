@@ -13,12 +13,12 @@ helpviewer_keywords:
 - WindowsFormsHost keyboard and messages [WPF]
 - modeless dialog boxes [WPF]
 ms.assetid: 0eb6f137-f088-4c5e-9e37-f96afd28f235
-ms.openlocfilehash: f9fb5a0d2a23d2ad23aa3886ce25edb999b50678
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2df754c0c47ea99c0892e0b9365da5589f2eab76
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160983"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335723"
 ---
 # <a name="windows-forms-and-wpf-interoperability-input-architecture"></a>Windows Forms и архитектура ввода взаимодействия WPF
 Взаимодействия между [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] должна иметь обработки ввода сочетания обеих технологий. В этом разделе описывается, как реализовать эти технологии, клавиатуры и обработки сообщений с целью обеспечить корректное взаимодействие в гибридных приложениях.  
@@ -57,13 +57,13 @@ ms.locfileid: "59160983"
 ### <a name="surrogate-windows-forms-message-loop"></a>Цикл обработки сообщений суррогат Windows Forms  
  По умолчанию <xref:System.Windows.Forms.Application?displayProperty=nameWithType> класс содержит цикл основного сообщения для [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] приложений. Во время взаимодействия [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] сообщение, цикл не обрабатывает сообщения. Таким образом эта логика должна быть воспроизведена. Обработчик <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=nameWithType> событий выполняет следующие действия:  
   
-1.  Фильтрует сообщения с помощью <xref:System.Windows.Forms.IMessageFilter> интерфейс.  
+1. Фильтрует сообщения с помощью <xref:System.Windows.Forms.IMessageFilter> интерфейс.  
   
-2.  Вызывает метод <xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=nameWithType>.  
+2. Вызывает метод <xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=nameWithType>.  
   
-3.  Преобразует и отправляет сообщение, если это необходимо.  
+3. Преобразует и отправляет сообщение, если это необходимо.  
   
-4.  Передает сообщение для размещения элемента управления, если нет других элементов управления обработки сообщения.  
+4. Передает сообщение для размещения элемента управления, если нет других элементов управления обработки сообщения.  
   
 ### <a name="ikeyboardinputsink-implementation"></a>Реализация IKeyboardInputSink  
  Суррогатный цикл обработки сообщений обрабатывает управление клавиатуры. Таким образом <xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A?displayProperty=nameWithType> метод является единственным <xref:System.Windows.Interop.IKeyboardInputSink> член, требующий реализацию в <xref:System.Windows.Forms.Integration.WindowsFormsHost> класса.  
@@ -72,11 +72,11 @@ ms.locfileid: "59160983"
   
  <xref:System.Windows.Forms.Integration.WindowsFormsHost> Реализация <xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A?displayProperty=nameWithType> метод выполняет следующие действия:  
   
-1.  Находит первый или последний [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] управления, содержащийся в <xref:System.Windows.Forms.Integration.WindowsFormsHost> и может получать фокус. Выбор элемента управления зависит от обхода сведений.  
+1. Находит первый или последний [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] управления, содержащийся в <xref:System.Windows.Forms.Integration.WindowsFormsHost> и может получать фокус. Выбор элемента управления зависит от обхода сведений.  
   
-2.  Устанавливает фокус на элементе управления и возвращает `true`.  
+2. Устанавливает фокус на элементе управления и возвращает `true`.  
   
-3.  Если элемент управления не может получать фокус, возвращает `false`.  
+3. Если элемент управления не может получать фокус, возвращает `false`.  
   
 ### <a name="windowsformshost-registration"></a>WindowsFormsHost регистрации  
  Когда дескриптор окна <xref:System.Windows.Forms.Integration.WindowsFormsHost> создается элемент управления, <xref:System.Windows.Forms.Integration.WindowsFormsHost> управления вызывает внутренний статический метод, который регистрирует его присутствие для цикла обработки сообщений.  

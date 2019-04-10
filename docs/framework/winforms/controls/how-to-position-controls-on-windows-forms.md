@@ -15,12 +15,12 @@ helpviewer_keywords:
 - snaplines
 - controls [Windows Forms], positioning
 ms.assetid: 4693977e-34a4-4f19-8221-68c3120c2b2b
-ms.openlocfilehash: 22225c97ec082022cb609e47d3cafcdcc052143d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a0b97073b2f9363a64bfc4a4ede7ffa69e2bce42
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59132799"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334007"
 ---
 # <a name="how-to-position-controls-on-windows-forms"></a>Практическое руководство. Размещение элементов управления в формах Windows Forms
 Размещение элементов управления, использовать конструктор Windows Forms или задайте <xref:System.Windows.Forms.Control.Location%2A> свойство.  
@@ -37,9 +37,9 @@ ms.locfileid: "59132799"
   
 ### <a name="to-position-a-control-using-the-properties-window"></a>Чтобы разместить элемент управления, с помощью окна свойств  
   
-1.  Щелкните элемент управления, который можно разместить.  
+1. Щелкните элемент управления, который можно разместить.  
   
-2.  В **свойства** окне значения типов <xref:System.Windows.Forms.Control.Location%2A> свойств, разделенных запятыми, чтобы разместить элемент управления внутри контейнера.  
+2. В **свойства** окне значения типов <xref:System.Windows.Forms.Control.Location%2A> свойств, разделенных запятыми, чтобы разместить элемент управления внутри контейнера.  
   
      Первое число (X) является расстоянием от левой границы контейнера; второе число (Y) — это расстояние от верхней границы области контейнера, измеряется в пикселах.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "59132799"
   
 ### <a name="to-position-a-control-programmatically"></a>Чтобы разместить элемент управления программными средствами  
   
-1.  Задайте <xref:System.Windows.Forms.Control.Location%2A> свойство элемента управления, <xref:System.Drawing.Point>.  
+1. Задайте <xref:System.Windows.Forms.Control.Location%2A> свойство элемента управления, <xref:System.Drawing.Point>.  
   
     ```vb  
     Button1.Location = New Point(100, 100)  
@@ -62,7 +62,7 @@ ms.locfileid: "59132799"
     button1->Location = Point(100, 100);  
     ```  
   
-2.  Измените значение координаты X местоположения элемента управления с помощью <xref:System.Windows.Forms.Control.Left%2A> подсвойства.  
+2. Измените значение координаты X местоположения элемента управления с помощью <xref:System.Windows.Forms.Control.Left%2A> подсвойства.  
   
     ```vb  
     Button1.Left = 300  
@@ -78,7 +78,7 @@ ms.locfileid: "59132799"
   
 ### <a name="to-increment-a-controls-location-programmatically"></a>Увеличиваемый расположение элемента управления программными средствами  
   
-1.  Задайте <xref:System.Windows.Forms.Control.Left%2A> подсвойств координату X элемента управления.  
+1. Задайте <xref:System.Windows.Forms.Control.Left%2A> подсвойств координату X элемента управления.  
   
     ```vb  
     Button1.Left += 200  

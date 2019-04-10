@@ -11,12 +11,12 @@ helpviewer_keywords:
 - data [Windows Forms], unbound
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 5a8d6afa-1b4b-4b24-8db8-501086ffdebe
-ms.openlocfilehash: 375ac3bd3a178cc059239cf84209ebbf5d6aca11
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 99561490786f3f3569f272138001ea5ad8937410
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59220582"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343473"
 ---
 # <a name="walkthrough-creating-an-unbound-windows-forms-datagridview-control"></a>Пошаговое руководство. Создание не связанного с данными элемента управления DataGridView в Windows Forms
 Часто можно показать табличные данные, полученные не из базы данных. Например можно отображать содержимое двухмерный массив строк. <xref:System.Windows.Forms.DataGridView> Класс обеспечивает удобный и настраиваемый способ отображения данных без привязки к источнику данных. В этом пошаговом руководстве показано, как для заполнения <xref:System.Windows.Forms.DataGridView> управлять добавлением и удалением строк в режиме «свободный». По умолчанию пользователь может добавлять новые строки. Чтобы запретить добавление строк, задайте <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> свойство `false`.  
@@ -27,19 +27,19 @@ ms.locfileid: "59220582"
   
 #### <a name="to-use-an-unbound-datagridview-control"></a>Чтобы использовать свободный элемент управления DataGridView  
   
-1.  Создайте класс, производный от <xref:System.Windows.Forms.Form> и содержит следующие объявления переменных и `Main` метод.  
+1. Создайте класс, производный от <xref:System.Windows.Forms.Form> и содержит следующие объявления переменных и `Main` метод.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#01](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#01)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#01](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#01)]  
     [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#02](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#02)]
     [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#02](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#02)]  
   
-2.  Реализуйте `SetupLayout` метод в определении класса формы для настройки макета.  
+2. Реализуйте `SetupLayout` метод в определении класса формы для настройки макета.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#20)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#20)]  
   
-3.  Создание `SetupDataGridView` метод настройки <xref:System.Windows.Forms.DataGridView> столбцами и свойствами.  
+3. Создание `SetupDataGridView` метод настройки <xref:System.Windows.Forms.DataGridView> столбцами и свойствами.  
   
      Во-первых, этот метод добавляет <xref:System.Windows.Forms.DataGridView> на форму элемент управления <xref:System.Windows.Forms.Control.Controls%2A> коллекции. Далее число столбцов для отображения задается с помощью <xref:System.Windows.Forms.DataGridView.ColumnCount%2A> свойство. Стиль по умолчанию для заголовков столбцов задается параметр <xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A>, <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A>, и <xref:System.Windows.Forms.DataGridViewCellStyle.Font%2A> свойства <xref:System.Windows.Forms.DataGridViewCellStyle> возвращаемые <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A> свойство.  
   
@@ -48,14 +48,14 @@ ms.locfileid: "59220582"
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#30)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#30)]  
   
-4.  Создание `PopulateDataGridView` метод для добавления строк в <xref:System.Windows.Forms.DataGridView> элемента управления.  
+4. Создание `PopulateDataGridView` метод для добавления строк в <xref:System.Windows.Forms.DataGridView> элемента управления.  
   
      Каждая строка представляет песни и соответствующие сведения.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#40](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#40)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#40](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#40)]  
   
-5.  С помощью вспомогательных методов можно присоединять обработчики событий.  
+5. С помощью вспомогательных методов можно присоединять обработчики событий.  
   
      Будет обрабатывать **добавить** и **удалить** кнопок <xref:System.Windows.Forms.Control.Click> событий, формы <xref:System.Windows.Forms.Form.Load> событий и <xref:System.Windows.Forms.DataGridView> элемента управления <xref:System.Windows.Forms.DataGridView.CellFormatting> событий.  
   

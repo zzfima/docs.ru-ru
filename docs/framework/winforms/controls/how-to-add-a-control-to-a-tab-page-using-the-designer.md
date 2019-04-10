@@ -6,12 +6,12 @@ helpviewer_keywords:
 - tab controls [Windows Forms], tab order
 - tab pages [Windows Forms], adding controls
 ms.assetid: 7ee734e1-e31e-4ed0-bbc0-a7e8a1f20fef
-ms.openlocfilehash: 609dfb93e2327ffd6013230cf5d54572e0f9b420
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f30db784a51c98aebaa8b95926bc8c62003ee390
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59132717"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340975"
 ---
 # <a name="how-to-add-a-control-to-a-tab-page-using-the-designer"></a>Практическое руководство. Добавление элемента управления на вкладку с помощью конструктора
 Использование Windows Forms <xref:System.Windows.Forms.TabControl> является отображение других элементов управления в структуру предприятия. Эти инструкции можно использовать для отображения рисунка в основной части вкладки. Сведения о добавлении значка в часть метки страницы вкладки, см. в разделе [как: Изменение внешнего вида элемента управления TabControl в Windows Forms](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md).  
@@ -23,9 +23,9 @@ ms.locfileid: "59132717"
   
 ### <a name="to-add-a-control-using-the-designer"></a>Добавление элемента управления с помощью конструктора  
   
-1.  Щелкните соответствующую вкладку, чтобы он отображался в верхней части.  
+1. Щелкните соответствующую вкладку, чтобы он отображался в верхней части.  
   
-2.  Нарисуйте элемент управления на странице вкладки.  
+2. Нарисуйте элемент управления на странице вкладки.  
   
 ## <a name="see-also"></a>См. также
 

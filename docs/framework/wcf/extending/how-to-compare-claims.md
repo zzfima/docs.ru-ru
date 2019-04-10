@@ -8,12 +8,12 @@ helpviewer_keywords:
 - claims [WCF], comparing
 - claims [WCF]
 ms.assetid: 0c4ec84d-53df-408f-8953-9bc437f56c28
-ms.openlocfilehash: c6230d7618b7885d72ddfebc67157bb48ff9cb38
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 932ad347730b35a936e040e116e5aa6af36cd3dc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59122022"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343315"
 ---
 # <a name="how-to-compare-claims"></a>Практическое руководство. Сравнение утверждений
 Инфраструктура модели удостоверения в Windows Communication Foundation (WCF) используется для выполнения проверки авторизации. По существу общей задачей является сравнение утверждений в контексте авторизации с утверждениями, необходимыми для выполнения затребованного действия или доступа к затребованному ресурсу. В этом разделе описывается сравнение утверждений, включая встроенные и пользовательские типы утверждений. Дополнительные сведения об инфраструктуре модели удостоверения см. в разделе [управление утверждениями и авторизацией с моделью идентификации](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  
@@ -36,33 +36,33 @@ ms.locfileid: "59122022"
   
 ### <a name="comparing-built-in-claims"></a>Сравнение встроенных утверждений  
   
-1.  Пусть заданы два экземпляра класса <xref:System.IdentityModel.Claims.Claim>. Используйте метод <xref:System.IdentityModel.Claims.Claim.Equals%2A> для выполнения сравнения, как показано в следующем коде.  
+1. Пусть заданы два экземпляра класса <xref:System.IdentityModel.Claims.Claim>. Используйте метод <xref:System.IdentityModel.Claims.Claim.Equals%2A> для выполнения сравнения, как показано в следующем коде.  
   
      [!code-csharp[c_CustomClaimComparison#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaimcomparison/cs/c_customclaimcomparison.cs#5)]
      [!code-vb[c_CustomClaimComparison#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#5)]  
   
 ### <a name="comparing-custom-claims-with-primitive-resource-types"></a>Сравнение пользовательских утверждений с типами-примитивами ресурсов  
   
-1.  Для пользовательских утверждений с типами-примитивами ресурсов сравнение может выполняться аналогично сравнению для встроенных утверждений, как показано в следующем коде.  
+1. Для пользовательских утверждений с типами-примитивами ресурсов сравнение может выполняться аналогично сравнению для встроенных утверждений, как показано в следующем коде.  
   
      [!code-csharp[c_CustomClaimComparison#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaimcomparison/cs/c_customclaimcomparison.cs#6)]
      [!code-vb[c_CustomClaimComparison#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#6)]  
   
-2.  Для пользовательских утверждений с типами ресурсов на основе структур или классов тип ресурса должен переопределить метод <xref:System.IdentityModel.Claims.Claim.Equals%2A>.  
+2. Для пользовательских утверждений с типами ресурсов на основе структур или классов тип ресурса должен переопределить метод <xref:System.IdentityModel.Claims.Claim.Equals%2A>.  
   
-3.  Сначала проверьте, имеет ли параметр `obj` значение `null`. Если да, верните значение `false`.  
+3. Сначала проверьте, имеет ли параметр `obj` значение `null`. Если да, верните значение `false`.  
   
      [!code-csharp[c_CustomClaimComparison#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaimcomparison/cs/c_customclaimcomparison.cs#7)]
      [!code-vb[c_CustomClaimComparison#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#7)]  
   
-4.  Затем вызовите метод <xref:System.Object.ReferenceEquals%2A> и передайте `this` и `obj` в качестве параметров. Если этот метод возвращает значение `true`, верните значение `true`.  
+4. Затем вызовите метод <xref:System.Object.ReferenceEquals%2A> и передайте `this` и `obj` в качестве параметров. Если этот метод возвращает значение `true`, верните значение `true`.  
   
      [!code-csharp[c_CustomClaimComparison#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaimcomparison/cs/c_customclaimcomparison.cs#8)]
      [!code-vb[c_CustomClaimComparison#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#8)]  
   
-5.  Затем попытайтесь присвоить значение `obj` локальной переменной типа класса. Если эта попытка завершается неуспешно, ссылка имеет значение `null`. В этом случае верните значение `false`.  
+5. Затем попытайтесь присвоить значение `obj` локальной переменной типа класса. Если эта попытка завершается неуспешно, ссылка имеет значение `null`. В этом случае верните значение `false`.  
   
-6.  Выполните пользовательское сравнение, необходимое для правильного сравнения текущего утверждения с предоставленным утверждением.  
+6. Выполните пользовательское сравнение, необходимое для правильного сравнения текущего утверждения с предоставленным утверждением.  
   
 ## <a name="example"></a>Пример  
  В следующем примере показано сравнение пользовательских утверждений, где ресурсом утверждения является тип, отличный от типа-примитива.  

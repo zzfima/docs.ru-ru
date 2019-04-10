@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30971
 ms.assetid: 75d2e8b5-2fdc-4623-8b32-cba805dab7db
-ms.openlocfilehash: 0f2e7040de5ea74f3793129d23d4ae8c80b71f25
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 951f90a9209ff31896f4426ceb75f05b012897a6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841554"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335151"
 ---
 # <a name="message-this-error-could-also-be-due-to-mixing-a-file-reference-with-a-project-reference-to-assembly-assemblyname"></a>\<сообщение > Эта ошибка также может быть вызвана смешением ссылки на файл в проект ссылку на сборку "\<имя_сборки >"
 \<сообщение > Эта ошибка также может быть вызвана смешением ссылки на файл в проект ссылку на сборку "\<assemblyname >. В этом случае попробуйте заменить ссылку на файл "\<имя_файла_сборки >" в проекте "\<имя_проекта1 >" со ссылкой проекта "\<имя_проекта2 >".  
@@ -25,14 +25,14 @@ ms.locfileid: "58841554"
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
-1.  Определите, какой проект создает наиболее подходящую сборку для проекта, чтобы ссылаться на нее в дальнейшем. Для этого можно использовать такие критерии, как простота доступа к файлам и частота обновления.  
+1. Определите, какой проект создает наиболее подходящую сборку для проекта, чтобы ссылаться на нее в дальнейшем. Для этого можно использовать такие критерии, как простота доступа к файлам и частота обновления.  
   
-2.  В свойствах проекта добавьте ссылку на проект, содержащий сборку, определяющую используемый тип.  
+2. В свойствах проекта добавьте ссылку на проект, содержащий сборку, определяющую используемый тип.  
   
 ## <a name="see-also"></a>См. также
 
 - [Управление ссылками в проекте](/visualstudio/ide/managing-references-in-a-project)
-- [Ссылки на объявленные элементы](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 
-- [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)
-- [Диагностика неработающих ссылок](/visualstudio/ide/troubleshooting-broken-references)
+- [Управление свойствами проекта и решения](/visualstudio/ide/managing-project-and-solution-properties)
+- [Troubleshooting Broken References](/visualstudio/ide/troubleshooting-broken-references)

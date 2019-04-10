@@ -9,21 +9,21 @@ helpviewer_keywords:
 - graphics [Windows Forms], printing
 - printing [Windows Forms], graphics
 ms.assetid: 32b891e6-52ff-4fea-a9ff-2ce5db20a4c6
-ms.openlocfilehash: ab2a230b7c6e303d712df058f450334b50c8a676
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 55459482d0994c581164128b17c08a7ca90d0717
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59167210"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339103"
 ---
 # <a name="how-to-print-graphics-in-windows-forms"></a>Практическое руководство. Печать графических изображений в Windows Forms
 Часто требуется печать графических изображений в приложении Windows. <xref:System.Drawing.Graphics> Класс предоставляет методы для рисования объектов на таких устройствах, как экран или принтер.  
   
 ### <a name="to-print-graphics"></a>Чтобы печать графических изображений  
   
-1.  Добавление <xref:System.Drawing.Printing.PrintDocument> форму компонента.  
+1. Добавление <xref:System.Drawing.Printing.PrintDocument> форму компонента.  
   
-2.  В <xref:System.Drawing.Printing.PrintDocument.PrintPage> обработчик событий, используйте <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> свойство <xref:System.Drawing.Printing.PrintPageEventArgs> класса, чтобы сообщить принтеру на какого рода графики для печати.  
+2. В <xref:System.Drawing.Printing.PrintDocument.PrintPage> обработчик событий, используйте <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> свойство <xref:System.Drawing.Printing.PrintPageEventArgs> класса, чтобы сообщить принтеру на какого рода графики для печати.  
   
      В следующем примере кода показан обработчик событий, используемый для создания синего эллипса внутри ограничивающего прямоугольника. Прямоугольник имеет следующее расположение и размеры: начиная со 100, 150, 250 в ширину и высоту 250.  
   

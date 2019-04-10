@@ -1,15 +1,15 @@
 ---
-title: Как выполнить  Обмен сообщениями в рамках надежного сеанса
+title: Практическое руководство. Обмен сообщениями в рамках надежного сеанса
 ms.date: 03/30/2017
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
-ms.openlocfilehash: 145224655d1ec76c9deb5afc3c1a8ec9a1975f4f
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: aad4eae870e3ba603c56a28a620fe8bc0e31ceb6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56260690"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342991"
 ---
-# <a name="how-to-exchange-messages-within-a-reliable-session"></a>Как выполнить  Обмен сообщениями в рамках надежного сеанса
+# <a name="how-to-exchange-messages-within-a-reliable-session"></a>Практическое руководство. Обмен сообщениями в рамках надежного сеанса
 
 В этом разделе описываются действия, необходимые, чтобы разрешить надежные сеансы с помощью одной из привязок, предоставляемых системой, которая поддерживает такие сеансы, но не по умолчанию. Включение надежного сеанса императивно с помощью кода или декларативно в файле конфигурации. Эта процедура использует файлы конфигурации клиента и службы для разрешения надежного сеанса и обеспечивается доставка сообщений в том же порядке, в котором они были отправлены.
 
@@ -37,7 +37,7 @@ ms.locfileid: "56260690"
    <%@ServiceHost language=c# Service="CalculatorService" %>
    ```
 
-1.  Место *Service.svc* файла в виртуальный каталог Internet Information Services (IIS).
+1. Место *Service.svc* файла в виртуальный каталог Internet Information Services (IIS).
 
 ### <a name="configure-the-client-with-a-wshttpbinding-to-use-a-reliable-session"></a>Настройка клиента с привязкой WSHttpBinding использования надежного сеанса
 

@@ -2,21 +2,21 @@
 title: Задание пользовательского алгоритма шифрования
 ms.date: 03/30/2017
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
-ms.openlocfilehash: c92ce463f885e9784913b07eb11941ecd7d78d09
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b365c3c8e74adcad03246a227d6593c49f8b3993
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59113715"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342834"
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>Задание пользовательского алгоритма шифрования
 WCF позволяет указывать пользовательский алгоритм шифрования для использования при шифровании данных или вычислении цифровых подписей. Для этого выполните следующие действия.  
   
-1.  Производный от класса <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>  
+1. Производный от класса <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>  
   
-2.  Регистрация алгоритма  
+2. Регистрация алгоритма  
   
-3.  Настройте привязку с классом, который является производным от класса <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>.  
+3. Настройте привязку с классом, который является производным от класса <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>.  
   
 ## <a name="derive-a-class-from-securityalgorithmsuite"></a>Создание производного класса от класса SecurityAlgorithmSuite  
  <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> является абстрактным базовым классом, позволяющим указывать алгоритм, используемый при выполнении различных операций, связанных с безопасностью. Например, вычисление хэша для цифровой подписи или шифрование сообщения. В следующем коде показано, как наследовать класс от класса <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>.  

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31020
 ms.assetid: 23996dca-250f-4320-8211-1560e90172df
-ms.openlocfilehash: e40ef34676b287d401363fcebfaa9eb28adadc30
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 510488e9dd18d8bf274a8fe5cd00666c4c26fcf5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829009"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342769"
 ---
 # <a name="unable-to-write-output-to-memory"></a>Не удается выполнить запись выходных данных в память
 Возникла проблема с выводом в память.  
@@ -21,14 +21,14 @@ ms.locfileid: "58829009"
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
-1.  Скомпилируйте программу еще раз, чтобы узнать, повторится ли ошибка.  
+1. Скомпилируйте программу еще раз, чтобы узнать, повторится ли ошибка.  
   
-2.  Если ошибка продолжает появляться, сохраните работу и перезапустите Visual Studio.  
+2. Если ошибка продолжает появляться, сохраните работу и перезапустите Visual Studio.  
   
-3.  Если ошибка повторяется, переустановите Visual Basic.  
+3. Если ошибка повторяется, переустановите Visual Basic.  
   
-4.  Если после переустановки ошибка не устранена, уведомите службу технической поддержки Майкрософт.  
+4. Если после переустановки ошибка не устранена, уведомите службу технической поддержки Майкрософт.  
   
 ## <a name="see-also"></a>См. также
 
-- [Обращайтесь к нам](/visualstudio/ide/talk-to-us)
+- [Talk to Us](/visualstudio/ide/talk-to-us)

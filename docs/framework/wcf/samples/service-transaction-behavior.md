@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Service Transaction Behavior Sample [Windows Communication Foundation]
 ms.assetid: 1a9842a3-e84d-427c-b6ac-6999cbbc2612
-ms.openlocfilehash: c4082c7f8ebea54a9abf2f80c992dc871f8408ef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: db120df1b2efd28cc484c3749bb22fc2196e9dd4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59183642"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339948"
 ---
 # <a name="service-transaction-behavior"></a>Транзакционное поведение службы
 В этом образце показано использование координируемой клиентом транзакции и параметры ServiceBehaviorAttribute и OperationBehaviorAttribute, управляющие поведением транзакции службы. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) , реализующем службу калькулятора, но ведется журнал выполненных операций в таблицу базы данных, а также нарастающий итог операций калькулятора. Операции записи в таблицу журнала сервера зависят от результата координируемой клиентом транзакции - если транзакция клиента не была завершена, транзакция веб-службы подтверждает, что обновления базы данных не будут зафиксированы.  
@@ -206,17 +206,17 @@ Creating new service instance...
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1.  Убедитесь, что установлен SQL Server 2005 Express Edition или SQL Server 2005. В файле службы App.config может быть задано значение `connectionString` базы данных либо взаимодействие с базой данных может быть отключено (значение appSettings `usingSql` равно `false`).  
+1. Убедитесь, что установлен SQL Server 2005 Express Edition или SQL Server 2005. В файле службы App.config может быть задано значение `connectionString` базы данных либо взаимодействие с базой данных может быть отключено (значение appSettings `usingSql` равно `false`).  
   
-2.  Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
  Если запустить образец на компьютерах, необходимо настроить Майкрософт распределенных транзакций координатора) (MSDTC) включив поток сетевых транзакций, и используйте средство WsatConfig.exe Включение сети транзакций Windows Communication Foundation (WCF) Поддержка.  
   
 ### <a name="to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-to-support-running-the-sample-across-machines"></a>Настройка координатора распределенных транзакций (Майкрософт) на поддержку выполнения образца на нескольких компьютерах  
   
-1.  На компьютере службы настройте координатор MSDTC на разрешение входящих сетевых транзакций.  
+1. На компьютере службы настройте координатор MSDTC на разрешение входящих сетевых транзакций.  
   
     1.  Из **запустить** меню перейдите к **панели управления**, затем **Администрирование**, а затем **службы компонентов**.  
   
@@ -230,7 +230,7 @@ Creating new service instance...
   
     6.  Нажмите кнопку **ОК**, чтобы закрыть диалоговое окно.  
   
-2.  На компьютере службы и на клиентском компьютере настройте брандмауэр Windows, чтобы включить координатор распределенных транзакций (Майкрософт) в список исключений.  
+2. На компьютере службы и на клиентском компьютере настройте брандмауэр Windows, чтобы включить координатор распределенных транзакций (Майкрософт) в список исключений.  
   
     1.  С панели управления запустите брандмауэр Windows.  
   
@@ -242,7 +242,7 @@ Creating new service instance...
   
     5.  Нажмите кнопку **ОК** закрыть **добавить программу** диалоговое окно и нажмите кнопку **ОК** еще раз, чтобы закрыть приложение брандмауэра Windows.  
   
-3.  На клиентском компьютере настройте координатор распределенных транзакций, чтобы он разрешал исходящие сетевые транзакции.  
+3. На клиентском компьютере настройте координатор распределенных транзакций, чтобы он разрешал исходящие сетевые транзакции.  
   
     1.  Из **запустить** меню перейдите к **панели управления**, затем **Администрирование**, а затем **службы компонентов**.  
   

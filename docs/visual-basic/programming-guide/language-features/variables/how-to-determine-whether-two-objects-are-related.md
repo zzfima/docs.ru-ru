@@ -6,23 +6,23 @@ helpviewer_keywords:
 - objects [Visual Basic], inheritance
 - object variables [Visual Basic], determining relation
 ms.assetid: da002e3f-6616-4bad-a229-f842d06652bb
-ms.openlocfilehash: c4ff7c8e616c9126eae11a23e001c219dcbc0907
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: f59e00d80d28fc4bf24874d25b5c12643649c834
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819207"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342106"
 ---
 # <a name="how-to-determine-whether-two-objects-are-related-visual-basic"></a>Практическое руководство. Определение связи между двумя объектами (Visual Basic)
 Вы можете сравнить два объекта для определения связи между классами, из которых они создаются. <xref:System.Type.IsInstanceOfType%2A> Метод <xref:System.Type?displayProperty=nameWithType> возвращает `True` Если класс наследует от текущего класса или если текущий тип является интерфейсом, поддерживаемым указанного класса.  
   
 ### <a name="to-determine-if-one-object-inherits-from-another-objects-class-or-interface"></a>Чтобы определить, если один объект наследует от класса или интерфейса другого объекта  
   
-1.  В объекте, который вы считаете может быть базового типа, вызывают <xref:System.Object.GetType%2A> метод.  
+1. В объекте, который вы считаете может быть базового типа, вызывают <xref:System.Object.GetType%2A> метод.  
   
-2.  На <xref:System.Type?displayProperty=nameWithType> объект, возвращаемый <xref:System.Object.GetType%2A>, вызвать <xref:System.Type.IsInstanceOfType%2A> метод.  
+2. На <xref:System.Type?displayProperty=nameWithType> объект, возвращаемый <xref:System.Object.GetType%2A>, вызвать <xref:System.Type.IsInstanceOfType%2A> метод.  
   
-3.  В списке аргументов для <xref:System.Type.IsInstanceOfType%2A>, укажите объект, вы думаете, может быть производного типа.  
+3. В списке аргументов для <xref:System.Type.IsInstanceOfType%2A>, укажите объект, вы думаете, может быть производного типа.  
   
      <xref:System.Type.IsInstanceOfType%2A> Возвращает `True` Если тип аргумента наследует из <xref:System.Type?displayProperty=nameWithType> тип объекта.  
   
@@ -52,7 +52,7 @@ End Class
 - <xref:System.Object.GetType%2A>
 - <xref:System.Type?displayProperty=nameWithType>
 - <xref:System.Type.IsInstanceOfType%2A>
-- [Тип данных Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [Объектные переменные](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Значения объектных переменных](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
 - [Практическое руководство. Определение идентичности двух объектов](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)

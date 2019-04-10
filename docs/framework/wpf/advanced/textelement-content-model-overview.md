@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TextElement content model [WPF]
 - flow content elements [WPF], TextElement content model
 ms.assetid: d0a7791c-b090-438c-812f-b9d009d83ee9
-ms.openlocfilehash: ecb9441bc63eae41cfbbadf3bf81b0e5392bd0cb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 990642d288481fff8eeef900a86070d54790f151
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59125124"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336191"
 ---
 # <a name="textelement-content-model-overview"></a>Общие сведения о модели содержимого TextElement
 В этом обзоре модель содержимого описываются поддерживаемом содержимом для <xref:System.Windows.Documents.TextElement>. <xref:System.Windows.Documents.Paragraph> Класс — это разновидность <xref:System.Windows.Documents.TextElement>. Модель содержимого описывает объекты/элементы, которые могут содержаться в других объектах. В этом обзоре представлена модель содержимого для объектов, производных от <xref:System.Windows.Documents.TextElement>. Дополнительные сведения см. в разделе [Общие сведения о документе нефиксированного](flow-document-overview.md).  
@@ -27,7 +27,7 @@ ms.locfileid: "59125124"
   
  Как видно из предыдущей диаграммы, потомки для элемента не обязательно определяются тем, класс, производный от <xref:System.Windows.Documents.Block> класса или <xref:System.Windows.Documents.Inline> класса. Например <xref:System.Windows.Documents.Span> ( <xref:System.Windows.Documents.Inline>-производный класс) может иметь только <xref:System.Windows.Documents.Inline> дочерние элементы, но <xref:System.Windows.Documents.Figure> (также <xref:System.Windows.Documents.Inline>-производный класс) может иметь только <xref:System.Windows.Documents.Block> дочерних элементов. Таким образом, схему можно использовать для быстрого определения элемента, который может содержаться в другом элементе. В качестве примера используем схему, чтобы определить, как создать содержимое нефиксированного <xref:System.Windows.Controls.RichTextBox>.  
   
-1.  Объект <xref:System.Windows.Controls.RichTextBox> должен содержать <xref:System.Windows.Documents.FlowDocument> который в свою очередь, должен содержать <xref:System.Windows.Documents.Block>-объект, производный от. Ниже приведен соответствующий сегмент из предыдущей диаграммы.  
+1. Объект <xref:System.Windows.Controls.RichTextBox> должен содержать <xref:System.Windows.Documents.FlowDocument> который в свою очередь, должен содержать <xref:System.Windows.Documents.Block>-объект, производный от. Ниже приведен соответствующий сегмент из предыдущей диаграммы.  
   
      ![Схема: Правила вместимости RichTextBox](./media/flow-ovw-schemawalkthrough1.png "Flow_Ovw_SchemaWalkThrough1")  
   
@@ -35,7 +35,7 @@ ms.locfileid: "59125124"
   
      [!code-xaml[FlowOvwSnippets_snip#SchemaWalkThrough1](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/MiscSnippets.xaml#schemawalkthrough1)]  
   
-2.  Согласно схеме, существует несколько <xref:System.Windows.Documents.Block> элементов для выбора из в том числе <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.Table>, <xref:System.Windows.Documents.List>, и <xref:System.Windows.Documents.BlockUIContainer> (см. классы, производные от Block на схеме выше). Предположим, мы хотим <xref:System.Windows.Documents.Table>. В соответствии с предыдущей схеме <xref:System.Windows.Documents.Table> содержит <xref:System.Windows.Documents.TableRowGroup> содержащий <xref:System.Windows.Documents.TableRow> элементы, которые содержат <xref:System.Windows.Documents.TableCell> элементы, которые содержат <xref:System.Windows.Documents.Block>-объект, производный от. Ниже приведен соответствующий сегмент для <xref:System.Windows.Documents.Table> из предыдущей схемы.  
+2. Согласно схеме, существует несколько <xref:System.Windows.Documents.Block> элементов для выбора из в том числе <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.Table>, <xref:System.Windows.Documents.List>, и <xref:System.Windows.Documents.BlockUIContainer> (см. классы, производные от Block на схеме выше). Предположим, мы хотим <xref:System.Windows.Documents.Table>. В соответствии с предыдущей схеме <xref:System.Windows.Documents.Table> содержит <xref:System.Windows.Documents.TableRowGroup> содержащий <xref:System.Windows.Documents.TableRow> элементы, которые содержат <xref:System.Windows.Documents.TableCell> элементы, которые содержат <xref:System.Windows.Documents.Block>-объект, производный от. Ниже приведен соответствующий сегмент для <xref:System.Windows.Documents.Table> из предыдущей схемы.  
   
      ![Схема: Родительский&#47;дочерний элементы для таблицы](./media/flow-ovw-schemawalkthrough2.png "Flow_Ovw_SchemaWalkThrough2")  
   
@@ -43,7 +43,7 @@ ms.locfileid: "59125124"
   
      [!code-xaml[FlowOvwSnippets_snip#SchemaWalkThrough2](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/MiscSnippets.xaml#schemawalkthrough2)]  
   
-3.  Опять же один или несколько <xref:System.Windows.Documents.Block> требуются элементы <xref:System.Windows.Documents.TableCell>. Для удобства поместим часть текста в ячейку. Это можно сделать с помощью <xref:System.Windows.Documents.Paragraph> с <xref:System.Windows.Documents.Run> элемент. Ниже приведен соответствующий сегмент из схемы, показывающий, что <xref:System.Windows.Documents.Paragraph> может занять <xref:System.Windows.Documents.Inline> элемент, который <xref:System.Windows.Documents.Run> ( <xref:System.Windows.Documents.Inline> элемент) может принять только обычный текст.  
+3. Опять же один или несколько <xref:System.Windows.Documents.Block> требуются элементы <xref:System.Windows.Documents.TableCell>. Для удобства поместим часть текста в ячейку. Это можно сделать с помощью <xref:System.Windows.Documents.Paragraph> с <xref:System.Windows.Documents.Run> элемент. Ниже приведен соответствующий сегмент из схемы, показывающий, что <xref:System.Windows.Documents.Paragraph> может занять <xref:System.Windows.Documents.Inline> элемент, который <xref:System.Windows.Documents.Run> ( <xref:System.Windows.Documents.Inline> элемент) может принять только обычный текст.  
   
      ![Схема: Родительский&#47;дочерний элементы для параграфа](./media/flow-ovw-schemawalkthrough3.png "Flow_Ovw_SchemaWalkThrough3")  
   

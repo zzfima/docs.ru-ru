@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42033
 ms.assetid: 4575554d-3615-46e4-9c6a-18e9c338e4ed
-ms.openlocfilehash: 211f07e7c9dbc7e0583272d46c493ad99628d283
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 81156fd7b1c9957486bcdd898c90a2bad2945829
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724113"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340312"
 ---
 # <a name="bad-checksum-value-non-hex-digits-or-odd-number-of-hex-digits"></a>Неверное значение контрольной суммы, не шестнадцатеричные цифры или нечетное число шестнадцатеричных цифр
 Значение контрольной суммы содержит недопустимые шестнадцатеричные цифры или содержит нечетное число цифр.  
@@ -25,13 +25,13 @@ ms.locfileid: "54724113"
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
-1.  Если ASP.NET создает исходный файл Visual Basic, перезапустите сборку проекта.  
+1. Если ASP.NET создает исходный файл Visual Basic, перезапустите сборку проекта.  
   
-2.  Если предупреждение продолжает выводиться после перезапуска, переустановите ASP.NET и повторите попытку сборки.  
+2. Если предупреждение продолжает выводиться после перезапуска, переустановите ASP.NET и повторите попытку сборки.  
   
-3.  Если предупреждение не пропадает или вы не используете ASP.NET, соберите сведения об условиях ее возникновения и уведомите службу технической поддержки Майкрософт.  
+3. Если предупреждение не пропадает или вы не используете ASP.NET, соберите сведения об условиях ее возникновения и уведомите службу технической поддержки Майкрософт.  
   
 ## <a name="see-also"></a>См. также
 
-- [Обзор ASP.NET](/aspnet/overview)
-- [Обращайтесь к нам](/visualstudio/ide/talk-to-us)
+- [Общие сведения о ASP.NET](/aspnet/overview)
+- [Talk to Us](/visualstudio/ide/talk-to-us)

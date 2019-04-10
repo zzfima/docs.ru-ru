@@ -2,12 +2,12 @@
 title: Практическое руководство. Разработка расширения для ServiceContractGenerator
 ms.date: 03/30/2017
 ms.assetid: 876ca823-bd16-4bdf-9e0f-02092df90e51
-ms.openlocfilehash: 104f65f76429701dbf02c1c7a5d737e50b080394
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c9e10efccf0d51e6b78aace1296d227a78a9f91d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59111596"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340624"
 ---
 # <a name="how-to-write-an-extension-for-the-servicecontractgenerator"></a>Практическое руководство. Разработка расширения для ServiceContractGenerator
 В этом разделе описывается, как разработать расширение для <xref:System.ServiceModel.Description.ServiceContractGenerator>. Это можно сделать путем реализации интерфейса <xref:System.ServiceModel.Description.IOperationContractGenerationExtension> для поведения операции или интерфейса <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> для поведения контракта. Здесь показана реализация интерфейса <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> для поведения контракта.  
@@ -16,7 +16,7 @@ ms.locfileid: "59111596"
   
 ### <a name="to-write-an-extension-for-the-servicecontractgenerator"></a>Разработка расширения для ServiceContractGenerator  
   
-1.  Реализуйте расширение <xref:System.ServiceModel.Description.IServiceContractGenerationExtension>. Чтобы изменить сгенерированный контракт службы, воспользуйтесь экземпляром <xref:System.ServiceModel.Description.ServiceContractGenerationContext>, переданным методу <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29>.  
+1. Реализуйте расширение <xref:System.ServiceModel.Description.IServiceContractGenerationExtension>. Чтобы изменить сгенерированный контракт службы, воспользуйтесь экземпляром <xref:System.ServiceModel.Description.ServiceContractGenerationContext>, переданным методу <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29>.  
   
     ```  
     public void GenerateContract(ServiceContractGenerationContext context)  
@@ -26,7 +26,7 @@ ms.locfileid: "59111596"
     }  
     ```  
   
-2.  Реализуйте расширение <xref:System.ServiceModel.Description.IWsdlImportExtension> в том же классе. Метод <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> может обработать определенное расширение WSDL (в данном случае заметки WSDL), добавив расширение создания кода в импортированный экземпляр <xref:System.ServiceModel.Description.ContractDescription>.  
+2. Реализуйте расширение <xref:System.ServiceModel.Description.IWsdlImportExtension> в том же классе. Метод <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> может обработать определенное расширение WSDL (в данном случае заметки WSDL), добавив расширение создания кода в импортированный экземпляр <xref:System.ServiceModel.Description.ContractDescription>.  
   
     ```  
     public void ImportContract(WsdlImporter importer, WsdlContractConversionContext context)  
@@ -60,7 +60,7 @@ ms.locfileid: "59111596"
             }  
     ```  
   
-3.  Добавьте средство импорта WSDL в конфигурацию клиента.  
+3. Добавьте средство импорта WSDL в конфигурацию клиента.  
   
     ```xml  
     <metadata>  
@@ -70,7 +70,7 @@ ms.locfileid: "59111596"
     </metadata>  
     ```  
   
-4.  Создайте объект `MetadataExchangeClient` и вызовите метод `GetMetadata` в коде клиента.  
+4. Создайте объект `MetadataExchangeClient` и вызовите метод `GetMetadata` в коде клиента.  
   
     ```  
     MetadataExchangeClient mexClient = new MetadataExchangeClient(metadataAddress);  
@@ -78,13 +78,13 @@ ms.locfileid: "59111596"
     MetadataSet metaDocs = mexClient.GetMetadata();  
     ```  
   
-5.  Создайте объект `WsdlImporter` и вызовите метод `ImportAllContracts`.  
+5. Создайте объект `WsdlImporter` и вызовите метод `ImportAllContracts`.  
   
     ```  
     WsdlImporter importer = new WsdlImporter(metaDocs);            System.Collections.ObjectModel.Collection<ContractDescription> contracts = importer.ImportAllContracts();  
     ```  
   
-6.  Создайте объект `ServiceContractGenerator` и вызовите метод `GenerateServiceContractType` для каждого контракта.  
+6. Создайте объект `ServiceContractGenerator` и вызовите метод `GenerateServiceContractType` для каждого контракта.  
   
     ```  
     ServiceContractGenerator generator = new ServiceContractGenerator();  
@@ -96,7 +96,7 @@ ms.locfileid: "59111596"
        throw new Exception("There were errors during code compilation.");  
     ```  
   
-7.  <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> вызывается автоматически для каждого поведения контракта, реализующего <xref:System.ServiceModel.Description.IServiceContractGenerationExtension>. Затем этот метод может изменить передаваемый контекст <xref:System.ServiceModel.Description.ServiceContractGenerationContext>. В данном примере добавлены комментарии.  
+7. <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> вызывается автоматически для каждого поведения контракта, реализующего <xref:System.ServiceModel.Description.IServiceContractGenerationExtension>. Затем этот метод может изменить передаваемый контекст <xref:System.ServiceModel.Description.ServiceContractGenerationContext>. В данном примере добавлены комментарии.  
   
 ## <a name="see-also"></a>См. также
 

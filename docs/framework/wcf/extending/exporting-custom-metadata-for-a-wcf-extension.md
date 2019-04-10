@@ -2,12 +2,12 @@
 title: Экспорт пользовательских метаданных для расширения WCF
 ms.date: 03/30/2017
 ms.assetid: 53c93882-f8ba-4192-965b-787b5e3f09c0
-ms.openlocfilehash: 5107e4d079a51ee94d59aa872c8a4c74f229ea8a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5134b57c59268b139239021bc2b4f6f4538ad27d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59201251"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334514"
 ---
 # <a name="exporting-custom-metadata-for-a-wcf-extension"></a>Экспорт пользовательских метаданных для расширения WCF
 В Windows Communication Foundation (WCF), экспорта метаданных — это процесс описания конечных точек службы и проецирования их в параллельное, стандартизованное представление, клиенты могут использовать, чтобы понять, как использовать службу. Пользовательские метаданные состоят из элементов XML, которые не могут быть экспортированы с помощью средств экспорта метаданных, предоставляемых системой. Обычно сюда входят пользовательские элементы WSDL для определенных пользователем поведений, элементов привязки и утверждений политики о возможностях и требованиях привязок и контрактов.  
@@ -19,9 +19,9 @@ ms.locfileid: "59201251"
   
  В данном разделе рассматриваются следующие вопросы.  
   
-1.  Реализация и использование интерфейса <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType>, который предоставляет данные создания WSDL перед публикацией WSDL.  
+1. Реализация и использование интерфейса <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType>, который предоставляет данные создания WSDL перед публикацией WSDL.  
   
-2.  Реализация и использование интерфейса <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType>, который предоставляет данные политики для экспорта утверждений политики в данные WSDL.  
+2. Реализация и использование интерфейса <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType>, который предоставляет данные политики для экспорта утверждений политики в данные WSDL.  
   
  Дополнительные сведения об импорте пользовательского языка WSDL и утверждений политики см. в разделе [Импорт пользовательских метаданных для расширения WCF](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md).  
   

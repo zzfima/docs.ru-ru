@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], MaskedTextBox control [Windows Forms]
 - MaskedTextBox control [Windows Forms], binding data
 ms.assetid: 34b29f07-e8df-48d4-b08b-53fcca524708
-ms.openlocfilehash: 0350d6e690d54d6176ede3b858f75829326b7556
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ebc8eaf63c6b5280961a80ef11afb919810dbdb8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59090606"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342236"
 ---
 # <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>Практическое руководство. Связывание данных с элементом управления MaskedTextBox
 Вы можете привязывать данные к <xref:System.Windows.Forms.MaskedTextBox> управления так же, как и любым другим элементом управления Windows Forms. Тем не менее если формат данных в базе данных не соответствует формату, ожидаемому определения маски, необходимо будет изменять формат данных. Ниже описано, как это сделать с помощью <xref:System.Windows.Forms.Binding.Format> и <xref:System.Windows.Forms.Binding.Parse> события <xref:System.Windows.Forms.Binding> класс для отображения отдельных телефонный номер и телефон расширение поля базы данных, одного изменяемого поля.  
@@ -24,15 +24,15 @@ ms.locfileid: "59090606"
   
 ### <a name="to-bind-data-to-a-maskedtextbox-control"></a>Привязка данных к элементу управления MaskedTextBox  
   
-1.  Создайте проект Windows Forms.  
+1. Создайте проект Windows Forms.  
   
-2.  Перетащите два <xref:System.Windows.Forms.TextBox> элементов управления на форму; присвойте им названия `FirstName` и `LastName`.  
+2. Перетащите два <xref:System.Windows.Forms.TextBox> элементов управления на форму; присвойте им названия `FirstName` и `LastName`.  
   
-3.  Перетащите <xref:System.Windows.Forms.MaskedTextBox> управления на форму, назовите его `PhoneMask`.  
+3. Перетащите <xref:System.Windows.Forms.MaskedTextBox> управления на форму, назовите его `PhoneMask`.  
   
-4.  Задайте <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> свойство `PhoneMask` для `(000) 000-0000 x9999`.  
+4. Задайте <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> свойство `PhoneMask` для `(000) 000-0000 x9999`.  
   
-5.  Добавьте следующее пространство имен импортируется в форму.  
+5. Добавьте следующее пространство имен импортируется в форму.  
   
     ```csharp  
     using System.Data.SqlClient;  
@@ -42,7 +42,7 @@ ms.locfileid: "59090606"
     Imports System.Data.SqlClient  
     ```  
   
-6.  Щелкните форму правой кнопкой мыши и выберите **Просмотр кода**. Этот код в любом помещается в класс.  
+6. Щелкните форму правой кнопкой мыши и выберите **Просмотр кода**. Этот код в любом помещается в класс.  
   
     ```csharp  
     Binding currentBinding, phoneBinding;  
@@ -136,7 +136,7 @@ ms.locfileid: "59090606"
     End Sub  
     ```  
   
-7.  Добавьте обработчики событий для <xref:System.Windows.Forms.Binding.Format> и <xref:System.Windows.Forms.Binding.Parse> события для объединения и отделения `PhoneNumber` и `Extension` поля из границы <xref:System.Data.DataSet>.  
+7. Добавьте обработчики событий для <xref:System.Windows.Forms.Binding.Format> и <xref:System.Windows.Forms.Binding.Parse> события для объединения и отделения `PhoneNumber` и `Extension` поля из границы <xref:System.Data.DataSet>.  
   
     ```csharp  
     private void phoneBinding_Format(Object sender, ConvertEventArgs e)  
@@ -204,7 +204,7 @@ ms.locfileid: "59090606"
     End Sub  
     ```  
   
-8.  Добавьте два <xref:System.Windows.Forms.Button> элементов управления в форму. Присвойте им названия `previousButton` и `nextButton`. Дважды щелкните каждую кнопку, чтобы добавить <xref:System.Windows.Forms.Control.Click> обработчик событий и заполните обработчики событий, как показано в следующем примере кода.  
+8. Добавьте два <xref:System.Windows.Forms.Button> элементов управления в форму. Присвойте им названия `previousButton` и `nextButton`. Дважды щелкните каждую кнопку, чтобы добавить <xref:System.Windows.Forms.Control.Click> обработчик событий и заполните обработчики событий, как показано в следующем примере кода.  
   
     ```csharp  
     private void previousButton_Click(object sender, EventArgs e)  

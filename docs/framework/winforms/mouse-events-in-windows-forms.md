@@ -15,12 +15,12 @@ helpviewer_keywords:
 - mouse [Windows Forms], events
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
-ms.openlocfilehash: 62309bb9965d1aa538e211dc66c44876671e0242
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 671e37c7d6dc40046d6d717d7785b03b6b545c7e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59134983"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333682"
 ---
 # <a name="mouse-events-in-windows-forms"></a>События мыши в формах Windows Forms
 При обработке ввода данных с помощью мыши обычно необходимо знать положение указателя и состояние кнопок мыши. В этом разделе приводится подробная информация о получении этих сведений из событий мыши и описывается порядок, в котором вызываются события щелчка мыши в элементах управления Windows Forms. Список и описание всех событий мыши, см. в разделе [принцип работы мыши ввода в Windows Forms](how-mouse-input-works-in-windows-forms.md).  Также см. в разделе [Обзор обработчиков событий (Windows Forms)](event-handlers-overview-windows-forms.md) и [Общие сведения о событиях (Windows Forms)](events-overview-windows-forms.md).  
@@ -36,31 +36,31 @@ ms.locfileid: "59134983"
 ## <a name="standard-click-event-behavior"></a>Стандартное поведение события щелчка  
  Если требуется обрабатывать события щелчка мыши в определенном порядке, необходимо знать порядок, в котором вызываются события щелчка в элементах управления Windows Forms. Когда кнопка мыши (любая) нажимается и отпускается, все элементы управления Windows Forms, кроме отмеченных в списке ниже, вызывают события щелчка в одном и том же порядке. Ниже приведен порядок событий, вызываемых одинарным щелчком мыши.  
   
-1.  <xref:System.Windows.Forms.Control.MouseDown> .  
+1. <xref:System.Windows.Forms.Control.MouseDown> .  
   
-2.  <xref:System.Windows.Forms.Control.Click> .  
+2. <xref:System.Windows.Forms.Control.Click> .  
   
-3.  <xref:System.Windows.Forms.Control.MouseClick> .  
+3. <xref:System.Windows.Forms.Control.MouseClick> .  
   
-4.  <xref:System.Windows.Forms.Control.MouseUp> .  
+4. <xref:System.Windows.Forms.Control.MouseUp> .  
   
  Ниже приведен порядок событий, вызываемых двойным щелчком мыши.  
   
-1.  <xref:System.Windows.Forms.Control.MouseDown> .  
+1. <xref:System.Windows.Forms.Control.MouseDown> .  
   
-2.  <xref:System.Windows.Forms.Control.Click> .  
+2. <xref:System.Windows.Forms.Control.Click> .  
   
-3.  <xref:System.Windows.Forms.Control.MouseClick> .  
+3. <xref:System.Windows.Forms.Control.MouseClick> .  
   
-4.  <xref:System.Windows.Forms.Control.MouseUp> .  
+4. <xref:System.Windows.Forms.Control.MouseUp> .  
   
-5.  <xref:System.Windows.Forms.Control.MouseDown> .  
+5. <xref:System.Windows.Forms.Control.MouseDown> .  
   
-6.  <xref:System.Windows.Forms.Control.DoubleClick> . (Может изменяться в зависимости от того, установлено ли для бита стиля <xref:System.Windows.Forms.ControlStyles.StandardDoubleClick> элемента управления значение `true`. Подробнее о настройке бита <xref:System.Windows.Forms.ControlStyles> см. в разделе, посвященном методу <xref:System.Windows.Forms.Control.SetStyle%2A>.)  
+6. <xref:System.Windows.Forms.Control.DoubleClick> . (Может изменяться в зависимости от того, установлено ли для бита стиля <xref:System.Windows.Forms.ControlStyles.StandardDoubleClick> элемента управления значение `true`. Подробнее о настройке бита <xref:System.Windows.Forms.ControlStyles> см. в разделе, посвященном методу <xref:System.Windows.Forms.Control.SetStyle%2A>.)  
   
-7.  <xref:System.Windows.Forms.Control.MouseDoubleClick> .  
+7. <xref:System.Windows.Forms.Control.MouseDoubleClick> .  
   
-8.  <xref:System.Windows.Forms.Control.MouseUp> .  
+8. <xref:System.Windows.Forms.Control.MouseUp> .  
   
  Пример кода, который демонстрирует порядок мыши события щелчка мыши, см. в разделе [как: Дескриптор пользовательского ввода, события в Windows Forms, элементы управления](how-to-handle-user-input-events-in-windows-forms-controls.md).  
   
@@ -122,21 +122,21 @@ ms.locfileid: "59134983"
 ### <a name="painting-behavior-of-toggle-controls"></a>Поведение отрисовки для переключателей  
  Переключатели, такие как элементы управления, производные от класса <xref:System.Windows.Forms.ButtonBase>, имеют описанное ниже нестандартное поведение отрисовки в сочетании с событиями щелчка.  
   
-1.  Пользователь нажимает кнопку мыши.  
+1. Пользователь нажимает кнопку мыши.  
   
-2.  Элемент управления отрисовывается в состоянии "нажато".  
+2. Элемент управления отрисовывается в состоянии "нажато".  
   
-3.  Возникает событие <xref:System.Windows.Forms.Control.MouseDown>.  
+3. Возникает событие <xref:System.Windows.Forms.Control.MouseDown>.  
   
-4.  Пользователь отпускает кнопку мыши.  
+4. Пользователь отпускает кнопку мыши.  
   
-5.  Элемент управления отрисовывается в состоянии "отпущено".  
+5. Элемент управления отрисовывается в состоянии "отпущено".  
   
-6.  Возникает событие <xref:System.Windows.Forms.Control.Click>.  
+6. Возникает событие <xref:System.Windows.Forms.Control.Click>.  
   
-7.  Возникает событие <xref:System.Windows.Forms.Control.MouseClick>.  
+7. Возникает событие <xref:System.Windows.Forms.Control.MouseClick>.  
   
-8.  Возникает событие <xref:System.Windows.Forms.Control.MouseUp>.  
+8. Возникает событие <xref:System.Windows.Forms.Control.MouseUp>.  
   
     > [!NOTE]
     >  Если пользователь перемещает указатель за границы переключателя при нажатой кнопке мыши (например, перемещает указатель мыши за границы элемента управления <xref:System.Windows.Forms.Button>, когда он нажат), переключатель будет отрисовываться в состоянии "отпущено" и происходит только событие <xref:System.Windows.Forms.Control.MouseUp>. События <xref:System.Windows.Forms.Control.Click> и <xref:System.Windows.Forms.Control.MouseClick> в этой ситуации не наступают.  

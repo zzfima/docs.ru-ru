@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
-ms.openlocfilehash: 01b150d70c07897f8217ed6958e3654aa28fdf51
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 55925b0f007b1be2f5d46ffc0854601f483b2e2d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971797"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333838"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>Практическое руководство. Определение параметра для процедуры (Visual Basic)
 Объект *параметр* позволяет вызывающему коду значение передается в процедуру при ее вызове. Каждый параметр процедуры объявляется так же, как объявить переменную, указав его имя и тип данных. Можно также указать способ передачи и параметр является необязательным.  
@@ -22,17 +22,17 @@ ms.locfileid: "56971797"
   
 ### <a name="to-define-a-procedure-parameter"></a>Чтобы определить параметр процедуры  
   
-1.  В объявлении процедуры добавьте имя параметра в список параметров процедуры, отделив его от других параметров запятыми.  
+1. В объявлении процедуры добавьте имя параметра в список параметров процедуры, отделив его от других параметров запятыми.  
   
-2.  Выберите тип данных параметра.  
+2. Выберите тип данных параметра.  
   
-3.  После имени параметра `As` предложение для указания типа данных.  
+3. После имени параметра `As` предложение для указания типа данных.  
   
-4.  Определите механизм передачи для параметра. Обычно необходимо передавать параметр по значению, если не требуется, чтобы процедуру, чтобы иметь возможность изменить его значение в вызывающий код.  
+4. Определите механизм передачи для параметра. Обычно необходимо передавать параметр по значению, если не требуется, чтобы процедуру, чтобы иметь возможность изменить его значение в вызывающий код.  
   
-5.  Перед именем параметра с [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) или [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) для указания механизм передачи. Дополнительные сведения см. в разделе [различия между передачей аргумента по значению и по ссылке](./differences-between-passing-an-argument-by-value-and-by-reference.md).  
+5. Перед именем параметра с [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) или [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) для указания механизм передачи. Дополнительные сведения см. в разделе [различия между передачей аргумента по значению и по ссылке](./differences-between-passing-an-argument-by-value-and-by-reference.md).  
   
-6.  Если параметр является необязательным, укажите перед механизмом передачи [необязательно](../../../../visual-basic/language-reference/modifiers/optional.md) и следуйте тип данных параметра со знака равенства (`=`) и значение по умолчанию.  
+6. Если параметр является необязательным, укажите перед механизмом передачи [необязательно](../../../../visual-basic/language-reference/modifiers/optional.md) и следуйте тип данных параметра со знака равенства (`=`) и значение по умолчанию.  
   
      В следующем примере определяется контура `Sub` процедуры с тремя параметрами. Первые два являются обязательными, а третий — необязательным. Объявления параметра в списке параметров разделяются запятыми.  
   
@@ -62,4 +62,4 @@ ms.locfileid: "56971797"
 - [Рекурсивные процедуры](./recursive-procedures.md)
 - [Перегрузка процедур](./procedure-overloading.md)
 - [Объекты и классы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [Object-Oriented Programming (Visual Basic)](../../concepts/object-oriented-programming.md) (Объектно-ориентированное программирование на языке Visual Basic)
+- [Объектно ориентированного программирования (Visual Basic)](../../concepts/object-oriented-programming.md)

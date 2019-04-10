@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -delaysign compiler option [Visual Basic]
 - -delaysign compiler option [Visual Basic]
 ms.assetid: c76e61a4-1884-4252-9fb2-377f99caa690
-ms.openlocfilehash: ccf569aea1363d256728e122818b70284a9e250d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 770dcad385c522a548a0c6fd3b6ef02dfbac82f5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58830374"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334605"
 ---
 # <a name="-delaysign"></a>-delaysign
 Указывает, будет ли сборка полностью или частично подписана.  
@@ -37,11 +37,11 @@ ms.locfileid: "58830374"
   
 ### <a name="to-set--delaysign-in-the-visual-studio-integrated-development-environment"></a>Чтобы задать - delaysign в среде разработки Visual Studio  
   
-1.  Выберите проект в **Обозревателе решений**. В меню **Проект** выберите пункт **Свойства**.   
+1. Выберите проект в **Обозревателе решений**. В меню **Проект** выберите пункт **Свойства**.   
   
-2.  Откройте вкладку **Подписывание**.  
+2. Откройте вкладку **Подписывание**.  
   
-3.  Задайте значение в **только отложенная подпись** поле.  
+3. Задайте значение в **только отложенная подпись** поле.  
   
 ## <a name="see-also"></a>См. также
 

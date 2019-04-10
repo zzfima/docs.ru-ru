@@ -8,12 +8,12 @@ helpviewer_keywords:
 - thumbnail images [Windows Forms], creating
 - images [Windows Forms], creating thumbnails
 ms.assetid: e956242a-1e5b-4217-a3cf-5f3fb45d00ba
-ms.openlocfilehash: 79b6258e7e6d7f16cc7a1e32a0c99dfe0eaeaa0c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b9afbac85dee90938e2bd55ebe19d3b02c0d66d5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59144018"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341495"
 ---
 # <a name="how-to-create-thumbnail-images"></a>Практическое руководство. Создание эскизов изображений
 Эскиз — это компактная версия образа. Можно создать изображение эскиза путем вызова <xref:System.Drawing.Image.GetThumbnailImage%2A> метод <xref:System.Drawing.Image> объекта.  
@@ -34,19 +34,19 @@ ms.locfileid: "59144018"
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Предыдущий пример предназначен для работы с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs> `e`, который является параметром <xref:System.Windows.Forms.Control.Paint> обработчик событий. Чтобы запустить пример, выполните следующие действия.  
   
-1.  Создайте новое приложение Windows Forms.  
+1. Создайте новое приложение Windows Forms.  
   
-2.  В примере кода добавьте в форму.  
+2. В примере кода добавьте в форму.  
   
-3.  Создайте обработчик для формы <xref:System.Windows.Forms.Control.Paint> событий  
+3. Создайте обработчик для формы <xref:System.Windows.Forms.Control.Paint> событий  
   
-4.  В <xref:System.Windows.Forms.Control.Paint> обработчик, вызов `GetThumbnail` метод и передать `e` для <xref:System.Windows.Forms.PaintEventArgs>.  
+4. В <xref:System.Windows.Forms.Control.Paint> обработчик, вызов `GetThumbnail` метод и передать `e` для <xref:System.Windows.Forms.PaintEventArgs>.  
   
-5.  Найдите файл изображения, который требуется создать эскиз.  
+5. Найдите файл изображения, который требуется создать эскиз.  
   
-6.  В `GetThumbnail` метод, укажите путь и имя файла для изображения.  
+6. В `GetThumbnail` метод, укажите путь и имя файла для изображения.  
   
-7.  Нажмите клавишу F5 для запуска примера.  
+7. Нажмите клавишу F5 для запуска примера.  
   
      В форме появится эскиз 100 на 100.  
   

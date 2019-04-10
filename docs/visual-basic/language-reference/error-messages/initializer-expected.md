@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30996
 ms.assetid: 6e183fe0-8888-43ed-a062-01571079455f
-ms.openlocfilehash: 77cfeb57bc313ded2d2c4d5a0c59041c5c19f515
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 0795fdc1c4b177e13979d7555cd7588217b8cb4c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58826084"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334969"
 ---
 # <a name="initializer-expected"></a>Ожидается инициализатор
 Предпринята попытка объявить экземпляр класса с помощью инициализатора объектов, в котором список инициализации пуст, как показано в следующем примере.  
@@ -29,9 +29,9 @@ ms.locfileid: "58826084"
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
-1.  Инициализация по крайней мере одно поле или свойство в инициализаторе или не использовать инициализатор объекта.  
+1. Инициализация по крайней мере одно поле или свойство в инициализаторе или не использовать инициализатор объекта.  
   
 ## <a name="see-also"></a>См. также
 
-- [Инициализаторы объектов. Именованные и анонимные типы](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [Инициализаторы объектов: именованные и анонимные типы](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 - [Практическое руководство. Объявление объекта с помощью инициализатора объектов](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)

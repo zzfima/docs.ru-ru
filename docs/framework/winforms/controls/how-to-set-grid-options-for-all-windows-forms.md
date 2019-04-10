@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - Windows Forms Designer
 ms.assetid: 36967466-1dfd-4fae-a7f1-7bf2cbc94048
-ms.openlocfilehash: 8dec7451aaa84b5ec0f3f5d6210afa82924500fe
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6823b524759bbc8ec252bf2d34a6e428d1bb237b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59199827"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336061"
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>Практическое руководство. Установка параметров сетки для всех форм Windows Forms
 Освоив работу в среде разработки Visual Studio, можно задать настройки для всех форм и проектов, которыми вы работаете в конструкторе Windows Forms.  
@@ -23,9 +23,9 @@ ms.locfileid: "59199827"
   
 ### <a name="to-set-global-windows-forms-options"></a>Чтобы задать глобальные параметры Windows Forms  
   
-1.  Из **средства** меню, выберите **параметры**.  
+1. Из **средства** меню, выберите **параметры**.  
   
-2.  В левой части **параметры** диалоговом окне щелкните **конструктор Windows Forms**.  
+2. В левой части **параметры** диалоговом окне щелкните **конструктор Windows Forms**.  
   
      В области справа в разделе **параметры макета** заголовок, можно задать значение по умолчанию параметры сетки для всех новых форм, создании. Эти параметры включают размер сетки, наличие привязки элементов управления к нему и является ли оно включено по умолчанию. Кроме того, можно выбрать между **SnapToGrid** и **линии привязки** режима макета. Дополнительные сведения о линии привязки, см. в разделе [Пошаговое руководство: Упорядочение элементов управления в Windows Forms с помощью линий привязки](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
   

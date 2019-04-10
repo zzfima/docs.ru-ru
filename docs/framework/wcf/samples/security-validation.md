@@ -2,12 +2,12 @@
 title: Проверка безопасности
 ms.date: 03/30/2017
 ms.assetid: 48dcd496-0c4f-48ce-8b9b-0e25b77ffa58
-ms.openlocfilehash: b6e97b7b8662a13628bd8b0b353e4d28c0c84a9f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1ad52431d68af847d7c26a0a3bd42dbcb3ce51c0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59202876"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334657"
 ---
 # <a name="security-validation"></a>Проверка безопасности
 Этот образец показывает, как с помощью пользовательского поведения проверять службы на компьютере на соответствие определенным условиям. В этом образце службы проверяются с помощью пользовательского поведения путем сканирования каждой конечной точки службы и проверки, содержат ли они безопасные элементы привязки. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -81,21 +81,21 @@ public void Validate(ServiceDescription serviceDescription,
   
 #### <a name="to-view-failed-endpoint-validation-exception-messages-in-the-event-viewer"></a>Просмотр сообщений исключения сбоя проверки конечной точки в программе Просмотр событий  
   
-1.  Нажмите кнопку **запустить** меню и выберите **запуска...** .  
+1. Нажмите кнопку **запустить** меню и выберите **запуска...** .  
   
-2.  Тип `eventvwr` и нажмите кнопку **ОК**.  
+2. Тип `eventvwr` и нажмите кнопку **ОК**.  
   
-3.  В окне просмотра событий щелкните **приложения**.  
+3. В окне просмотра событий щелкните **приложения**.  
   
-4.  Дважды щелкните событие недавно добавленных «System.ServiceModel 4.0.0.0» в категории «WebHost» в **приложения** окно, чтобы просмотреть сообщения о небезопасных конечных точках.  
+4. Дважды щелкните событие недавно добавленных «System.ServiceModel 4.0.0.0» в категории «WebHost» в **приложения** окно, чтобы просмотреть сообщения о небезопасных конечных точках.  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1.  Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 >  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: bb57b962-70c1-45a9-93d5-e721e340a13f
-ms.openlocfilehash: f69fb25df4ed2af79cc5ffa59f0969a1616d38ca
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dcbccbea279796fdaec1227b7575cf39e47f9e4f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59185442"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336880"
 ---
 # <a name="exporting-schemas-from-classes"></a>Экспорт схем из классов
 Чтобы создать схемы языка определения схемы XML (XSD) из классов, используемых в модели контракта данных, используйте класс <xref:System.Runtime.Serialization.XsdDataContractExporter> . В данном разделе описывается процесс создания схем.  
@@ -25,20 +25,20 @@ ms.locfileid: "59185442"
   
 #### <a name="to-export-schemas"></a>Экспорт схем  
   
-1.  Создайте экземпляр класса <xref:System.Runtime.Serialization.XsdDataContractExporter>.  
+1. Создайте экземпляр класса <xref:System.Runtime.Serialization.XsdDataContractExporter>.  
   
-2.  Необязательный параметр. Передайте объект <xref:System.Xml.Schema.XmlSchemaSet> в конструктор. В этом случае схема, созданная во время экспорта схемы, добавляется в этот экземпляр класса <xref:System.Xml.Schema.XmlSchemaSet> вместо создания нового пустого экземпляра класса <xref:System.Xml.Schema.XmlSchemaSet>.  
+2. Необязательный параметр. Передайте объект <xref:System.Xml.Schema.XmlSchemaSet> в конструктор. В этом случае схема, созданная во время экспорта схемы, добавляется в этот экземпляр класса <xref:System.Xml.Schema.XmlSchemaSet> вместо создания нового пустого экземпляра класса <xref:System.Xml.Schema.XmlSchemaSet>.  
   
-3.  Необязательный параметр. Вызовите один из методов <xref:System.Runtime.Serialization.XsdDataContractExporter.CanExport%2A> . Этот метод определяет, можно ли экспортировать заданный тип. Этот метод имеет те же перегрузки, что метод `Export` в следующем шаге.  
+3. Необязательный параметр. Вызовите один из методов <xref:System.Runtime.Serialization.XsdDataContractExporter.CanExport%2A> . Этот метод определяет, можно ли экспортировать заданный тип. Этот метод имеет те же перегрузки, что метод `Export` в следующем шаге.  
   
-4.  Вызовите один из методов <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%2A> . Существует три перегрузки, получающие <xref:System.Type>и <xref:System.Collections.Generic.List%601> объектов `Type` или <xref:System.Collections.Generic.List%601> объектов <xref:System.Reflection.Assembly> . В последнем случае, экспортируются все типы во всех указанных сборках.  
+4. Вызовите один из методов <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%2A> . Существует три перегрузки, получающие <xref:System.Type>и <xref:System.Collections.Generic.List%601> объектов `Type` или <xref:System.Collections.Generic.List%601> объектов <xref:System.Reflection.Assembly> . В последнем случае, экспортируются все типы во всех указанных сборках.  
   
      При нескольких вызовах метода `Export` в один и тот же объект `XmlSchemaSet`добавляется несколько типов. Тип не создается в объекте `XmlSchemaSet` , если он уже имеется в нем. Следовательно, рекомендуется вызывать метод `Export` несколько раз в одном и том же классе `XsdDataContractExporter` , а не создавать несколько экземпляров класса `XsdDataContractExporter` . Это помогает избежать создания повторяющихся типов схем.  
   
     > [!NOTE]
     >  В случае сбоя при экспорте объект `XmlSchemaSet` будет находиться в непредсказуемом состоянии.  
   
-5.  Для доступа к объекту <xref:System.Xml.Schema.XmlSchemaSet> используется свойство <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas%2A> .  
+5. Для доступа к объекту <xref:System.Xml.Schema.XmlSchemaSet> используется свойство <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas%2A> .  
   
 ## <a name="export-options"></a>Параметры экспорта  
  Можно присвоить свойство <xref:System.Runtime.Serialization.XsdDataContractExporter.Options%2A> объекта <xref:System.Runtime.Serialization.XsdDataContractExporter> экземпляру класса <xref:System.Runtime.Serialization.ExportOptions> для управления различными аспектами процесса экспорта. В частности, можно задать следующие параметры.  

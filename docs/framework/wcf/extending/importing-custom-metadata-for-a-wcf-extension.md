@@ -2,12 +2,12 @@
 title: Импорт пользовательских метаданных для расширения WCF
 ms.date: 03/30/2017
 ms.assetid: 78beb28f-408a-4c75-9c3c-caefe9595b1a
-ms.openlocfilehash: 021790a256448d9c81e7a53a2845edf839ff3534
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 830829be98202c97a9fc2b34e31da25967292efb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59090073"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339974"
 ---
 # <a name="importing-custom-metadata-for-a-wcf-extension"></a>Импорт пользовательских метаданных для расширения WCF
 В Windows Communication Foundation (WCF), метаданные импорта — это процесс создается абстрактное представление службы или ее компонентов из метаданных. Например, можно импортировать WCF <xref:System.ServiceModel.Description.ServiceEndpoint> экземпляров, <xref:System.ServiceModel.Channels.Binding> экземпляров или <xref:System.ServiceModel.Description.ContractDescription> документов экземпляров из WSDL для службы. Чтобы импортировать метаданные службы в WCF, используется реализация <xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType> абстрактного класса. Типы, производные от <xref:System.ServiceModel.Description.MetadataImporter> класса реализуют поддержку для импорта форматов метаданных, которые используют преимущества WS-Policy Импорт логики в WCF.  
@@ -21,9 +21,9 @@ ms.locfileid: "59090073"
   
  В данном разделе рассматриваются следующие вопросы.  
   
-1.  Реализация и использование интерфейса <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType>, который предоставляет данные WSDL пользовательским средствам импорта до создания описаний и создания кода. Этот интерфейс можно использовать для проверки или изменения типов описаний и компиляции кода с использованием заданного набора метаданных.  
+1. Реализация и использование интерфейса <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType>, который предоставляет данные WSDL пользовательским средствам импорта до создания описаний и создания кода. Этот интерфейс можно использовать для проверки или изменения типов описаний и компиляции кода с использованием заданного набора метаданных.  
   
-2.  Реализация и использование интерфейса <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType>, который предоставляет утверждения политики средствам импорта до создания объектов описания. Этот интерфейс можно использовать для проверки или изменения привязки или контракта на основании загруженных политик.  
+2. Реализация и использование интерфейса <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType>, который предоставляет утверждения политики средствам импорта до создания объектов описания. Этот интерфейс можно использовать для проверки или изменения привязки или контракта на основании загруженных политик.  
   
  Дополнительные сведения об экспорте пользовательских расширений WSDL и утверждений политики см. в разделе [экспорт пользовательских метаданных для расширения WCF](../../../../docs/framework/wcf/extending/exporting-custom-metadata-for-a-wcf-extension.md).  
   

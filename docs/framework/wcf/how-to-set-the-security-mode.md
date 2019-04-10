@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: 6e01dd9f-b5dd-4474-b24c-06e124de4ff7
-ms.openlocfilehash: 652fcef75f8d5a8dee824bb89bf4695f1629fed8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5a4550e4c914dcdbc9908e766c67a2efa53e6e9e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59116406"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339389"
 ---
 # <a name="how-to-set-the-security-mode"></a>Практическое руководство. Задание режима безопасности
 Безопасность Windows Communication Foundation (WCF) имеет три наиболее распространенных режима безопасности, которые находятся на большинстве предварительно определенных привязок: транспорт, сообщение и «транспорт с учетными данными сообщения». Два дополнительных режима характерны для двух привязок: режим "Только учетные данные транспорта", используемый в <xref:System.ServiceModel.BasicHttpBinding>, режим "Оба", используемый в <xref:System.ServiceModel.NetMsmqBinding>. Однако в этом разделе основное внимание уделяется трем наиболее распространенным режимам безопасности: <xref:System.ServiceModel.SecurityMode.Transport>, <xref:System.ServiceModel.SecurityMode.Message> и <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.  
@@ -25,9 +25,9 @@ ms.locfileid: "59116406"
   
 ### <a name="to-set-the-security-mode-in-code"></a>Задание режима безопасности в коде  
   
-1.  Создайте экземпляр используемого класса привязки. Список предварительно определенных привязок см. в разделе [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md). В данном примере создается экземпляр класса <xref:System.ServiceModel.WSHttpBinding>.  
+1. Создайте экземпляр используемого класса привязки. Список предварительно определенных привязок см. в разделе [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md). В данном примере создается экземпляр класса <xref:System.ServiceModel.WSHttpBinding>.  
   
-2.  Задайте свойство `Mode` объекта, возвращаемого свойством `Security`.  
+2. Задайте свойство `Mode` объекта, возвращаемого свойством `Security`.  
   
      [!code-csharp[c_SettingSecurityMode#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#1)]
      [!code-vb[c_SettingSecurityMode#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#1)]  
@@ -42,7 +42,7 @@ ms.locfileid: "59116406"
      [!code-csharp[c_SettingSecurityMode#3](../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#3)]
      [!code-vb[c_SettingSecurityMode#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#3)]  
   
-3.  Также можно задать режим в конструкторе привязки, как показано в следующем примере кода.  
+3. Также можно задать режим в конструкторе привязки, как показано в следующем примере кода.  
   
      [!code-csharp[c_SettingSecurityMode#4](../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#4)]
      [!code-vb[c_SettingSecurityMode#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#4)]  
@@ -52,35 +52,35 @@ ms.locfileid: "59116406"
   
 #### <a name="to-set-the-clientcredentialtype-property-for-transport-mode"></a>Задание свойства ClientCredentialType для режима Transport  
   
-1.  Создайте экземпляр привязки.  
+1. Создайте экземпляр привязки.  
   
-2.  Задайте для свойства `Mode` значение `Transport`.  
+2. Задайте для свойства `Mode` значение `Transport`.  
   
-3.  Присвойте свойству `ClientCredential` соответствующее значение. В следующем примере кода показано, как присвоить свойству значение `Windows`.  
+3. Присвойте свойству `ClientCredential` соответствующее значение. В следующем примере кода показано, как присвоить свойству значение `Windows`.  
   
      [!code-csharp[c_SettingSecurityMode#5](../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#5)]
      [!code-vb[c_SettingSecurityMode#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#5)]  
   
 #### <a name="to-set-the-clientcredentialtype-property-for-message-mode"></a>Задание свойства ClientCredentialType для режима Message  
   
-1.  Создайте экземпляр привязки.  
+1. Создайте экземпляр привязки.  
   
-2.  Задайте для свойства `Mode` значение `Message`.  
+2. Задайте для свойства `Mode` значение `Message`.  
   
-3.  Присвойте свойству `ClientCredential` соответствующее значение. В следующем примере кода показано, как присвоить свойству значение `Certificate`.  
+3. Присвойте свойству `ClientCredential` соответствующее значение. В следующем примере кода показано, как присвоить свойству значение `Certificate`.  
   
      [!code-csharp[c_SettingSecurityMode#6](../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#6)]
      [!code-vb[c_SettingSecurityMode#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#6)]  
   
 #### <a name="to-set-the-mode-and-clientcredentialtype-property-in-configuration"></a>Задание режима и свойства ClientCredentialType в конфигурации  
   
-1.  Добавьте соответствующий элемент привязки для [ \<привязки >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) элемент файла конфигурации. В следующем примере добавляется [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) элемент.  
+1. Добавьте соответствующий элемент привязки для [ \<привязки >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) элемент файла конфигурации. В следующем примере добавляется [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) элемент.  
   
-2.  Добавить `<binding>` и присвойте его `name` атрибут соответствующее значение.  
+2. Добавить `<binding>` и присвойте его `name` атрибут соответствующее значение.  
   
-3.  Добавьте элемент `<security>` и присвойте атрибуту `mode` значение `Message`, `Transport` или `TransportWithMessageCredential`.  
+3. Добавьте элемент `<security>` и присвойте атрибуту `mode` значение `Message`, `Transport` или `TransportWithMessageCredential`.  
   
-4.  Если задан режим `Transport`, добавьте элемент `<transport>` и присвойте атрибуту `clientCredential` соответствующее значение.  
+4. Если задан режим `Transport`, добавьте элемент `<transport>` и присвойте атрибуту `clientCredential` соответствующее значение.  
   
      В следующем примере задается режим "`Transport"`, а затем атрибуту `clientCredentialType` элемента `<transport>` присваивается значение "`Windows"`.  
   

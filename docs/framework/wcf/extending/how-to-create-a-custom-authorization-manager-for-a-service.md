@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, extending
 - OperationRequirement class
 ms.assetid: 6214afde-44c1-4bf5-ba07-5ad6493620ea
-ms.openlocfilehash: 6a168902b79bd27345c9d9e2371947cc9d64233c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e3d0143cd68bc94c6ff07e65ca5a3c8971b45f23
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59156498"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337842"
 ---
 # <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>Практическое руководство. Создание пользовательского диспетчера авторизации для службы
 Инфраструктура модели удостоверения в Windows Communication Foundation (WCF) поддерживает модель расширяемый авторизации на основе утверждений. Утверждения извлекаются из маркеров, дополнительно обрабатываемых пользовательской политикой авторизации, и затем помещаются в контекст <xref:System.IdentityModel.Policy.AuthorizationContext>. Диспетчер авторизации проверяет утверждения в контексте <xref:System.IdentityModel.Policy.AuthorizationContext> для принятия решений об авторизации.  
@@ -28,12 +28,12 @@ ms.locfileid: "59156498"
   
 ### <a name="to-create-a-custom-authorization-manager"></a>Создание пользовательского диспетчера авторизации  
   
-1.  Создайте класс, производный от класса <xref:System.ServiceModel.ServiceAuthorizationManager>.  
+1. Создайте класс, производный от класса <xref:System.ServiceModel.ServiceAuthorizationManager>.  
   
      [!code-csharp[c_CustomAuthMgr#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customauthmgr/cs/c_customauthmgr.cs#5)]
      [!code-vb[c_CustomAuthMgr#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthmgr/vb/c_customauthmgr.vb#5)]  
   
-2.  Переопределите метод <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%28System.ServiceModel.OperationContext%29> .  
+2. Переопределите метод <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%28System.ServiceModel.OperationContext%29> .  
   
      Для принятия решения об авторизации используйте метод <xref:System.ServiceModel.OperationContext>, передаваемый в метод <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%28System.ServiceModel.OperationContext%29>.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "59156498"
   
 ### <a name="to-register-a-custom-authorization-manager-using-code"></a>Регистрация пользовательского диспетчера авторизации с помощью кода  
   
-1.  Создайте экземпляр пользовательского диспетчера авторизации и назначьте его свойству <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ServiceAuthorizationManager%2A>.  
+1. Создайте экземпляр пользовательского диспетчера авторизации и назначьте его свойству <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ServiceAuthorizationManager%2A>.  
   
      Доступ к поведению <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> возможен с помощью свойства <xref:System.ServiceModel.ServiceHostBase.Authorization%2A>.  
   
@@ -55,17 +55,17 @@ ms.locfileid: "59156498"
   
 ### <a name="to-register-a-custom-authorization-manager-using-configuration"></a>Регистрация пользовательского диспетчера авторизации с помощью конфигурации  
   
-1.  Откройте файл конфигурации службы.  
+1. Откройте файл конфигурации службы.  
   
-2.  Добавить [ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) для [ \<поведения >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md).  
+2. Добавить [ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) для [ \<поведения >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md).  
   
      Чтобы [ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md), добавьте `serviceAuthorizationManagerType` атрибут и присвойте ему значение типа, представляющего пользовательский диспетчер авторизации.  
   
-3.  Добавьте привязку, обеспечивающую безопасность связи между клиентом и службой.  
+3. Добавьте привязку, обеспечивающую безопасность связи между клиентом и службой.  
   
      Привязка, выбранная для этой связи, определяет утверждения, добавляемые в контекст <xref:System.IdentityModel.Policy.AuthorizationContext> и используемые пользовательским диспетчером авторизации для принятия решений об авторизации. Дополнительные сведения о предоставляемых системой привязок см. в разделе [System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md).  
   
-4.  Свяжите поведение с конечной точкой службы, добавив [ \<службы >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) элемент и установите для параметра `behaviorConfiguration` значение атрибута имени для атрибута [ \<поведение >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) элемент.  
+4. Свяжите поведение с конечной точкой службы, добавив [ \<службы >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) элемент и установите для параметра `behaviorConfiguration` значение атрибута имени для атрибута [ \<поведение >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) элемент.  
   
      Дополнительные сведения о настройке конечной точки службы, см. в разделе [как: Создать конечную точку службы в конфигурации](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md).  
   

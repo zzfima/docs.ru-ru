@@ -11,12 +11,12 @@ helpviewer_keywords:
 - overloaded operators [Visual Basic], calling
 - operator overloading
 ms.assetid: 0dce42cc-f0b0-4c14-9f62-018b21f33497
-ms.openlocfilehash: 46614ad43e7be72c8396f47ba7f5d02185f62827
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: d68781aa12ab7c1c717031ca252c5f3120649edc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837095"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335489"
 ---
 # <a name="how-to-call-an-operator-procedure-visual-basic"></a>Практическое руководство. Вызов процедуры оператора (Visual Basic)
 Вызов процедуры оператора, используя символ оператора в выражении. При наличии оператора преобразования следует вызвать [функция CType](../../../../visual-basic/language-reference/functions/ctype-function.md) для преобразования значения из одного типа в другой.  
@@ -27,19 +27,19 @@ ms.locfileid: "58837095"
   
 ### <a name="to-call-an-operator-procedure"></a>Вызов процедуры оператора  
   
-1.  Используйте символ оператора в выражении обычным образом.  
+1. Используйте символ оператора в выражении обычным образом.  
   
-2.  Убедитесь, что типы данных операндов подходят для оператора и в правильном порядке.  
+2. Убедитесь, что типы данных операндов подходят для оператора и в правильном порядке.  
   
-3.  Оператор относится к значению выражения должным образом.  
+3. Оператор относится к значению выражения должным образом.  
   
 ### <a name="to-call-a-conversion-operator-procedure"></a>Вызов процедуры оператора преобразования  
   
-1.  Используйте `CType` внутри выражения.  
+1. Используйте `CType` внутри выражения.  
   
-2.  Убедитесь, что типы данных операндов подходят для преобразования и в правильном порядке.  
+2. Убедитесь, что типы данных операндов подходят для преобразования и в правильном порядке.  
   
-3.  `CType` вызывает процедуру оператора преобразования и возвращает преобразованное значение.  
+3. `CType` вызывает процедуру оператора преобразования и возвращает преобразованное значение.  
   
 ## <a name="example"></a>Пример  
  В следующем примере создается два <xref:System.TimeSpan> структуры, складывает их и сохраняет результат в третьей <xref:System.TimeSpan> структуры. <xref:System.TimeSpan> Структура определяет процедуры оператора для перегрузки нескольких стандартных операторов.  
@@ -58,10 +58,10 @@ ms.locfileid: "58837095"
 - [Процедуры операторов](./operator-procedures.md)
 - [Практическое руководство. Определение оператора](./how-to-define-an-operator.md)
 - [Практическое руководство. Определение оператора преобразования](./how-to-define-a-conversion-operator.md)
-- [Оператор Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)
-- [Расширение](../../../../visual-basic/language-reference/modifiers/widening.md)
+- [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Widening](../../../../visual-basic/language-reference/modifiers/widening.md)
 - [Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md)
 - [Оператор Structure](../../../../visual-basic/language-reference/statements/structure-statement.md)
 - [Практическое руководство. Объявление структуры](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
 - [Явные и неявные преобразования](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
-- [Расширяющие и сужающие преобразования](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

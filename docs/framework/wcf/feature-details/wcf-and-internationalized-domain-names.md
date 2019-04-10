@@ -2,12 +2,12 @@
 title: WCF и международные доменные имена
 ms.date: 03/30/2017
 ms.assetid: c8a3e10a-8bc2-4a78-8d86-a562ba6e65fa
-ms.openlocfilehash: c166f497117314dd8cea3b04b9b1072203374c52
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c53c22e388ec352b1275018c0b945c9608565084
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59112610"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335385"
 ---
 # <a name="wcf-and-internationalized-domain-names"></a>WCF и международные доменные имена
 Добавлена поддержка служб WCF с интернационализированными именами домена (IDN). Интернационализированное имя домена представляет собой имя домена, содержащее символы, не входящие в набор символов ASCII. Данная поддержка включает в себя как возможность размещения службы WCF с именем IDN, так и возможность диалога клиента WCF с веб-службой с именем IDN.  
@@ -27,11 +27,11 @@ ms.locfileid: "59112610"
   
  \<Idn > содержит включенный атрибут, который может быть присвоено одно из следующих значений:  
   
-1.  «None»  
+1. «None»  
   
-2.  "AllExceptIntranet"  
+2. "AllExceptIntranet"  
   
-3.  «Все»  
+3. «Все»  
   
  Если параметру IDN присвоено «None», преобразование не выполняется, Uri.Host и Uri.DnsSafeHost. Если параметру IDN присвоено «All», uri. Узел остается Юникода и uri. DnsSafeHost преобразуется в Punycode. Если параметру IDN присвоено значение «AllExceptIntranet», uri. DnsSafeHost преобразуется в Punycode для адресов Интернета и остается в формате Юникода для адресов интрасети. Этот параметр важен для верного разрешения имен DNS. Обратите внимание, что он не требует настройки в Windows 8 и более поздних версиях.  
   

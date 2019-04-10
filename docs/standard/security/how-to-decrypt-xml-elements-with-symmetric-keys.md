@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Расшифровка XML-элементов с помощью симметричного ключа
+title: Практическое руководство. Расшифровка XML-элементов с помощью симметричных ключей
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 6038aff0-f92c-4e29-a618-d793410410d8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 19ee0e3244d9a9bf7d7eddc9be4eb7c50b467cf5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c569407bac247e60075834e67fde9327ce6bc4a0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502628"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334631"
 ---
-# <a name="how-to-decrypt-xml-elements-with-symmetric-keys"></a>Как выполнить Расшифровка XML-элементов с помощью симметричного ключа
+# <a name="how-to-decrypt-xml-elements-with-symmetric-keys"></a>Практическое руководство. Расшифровка XML-элементов с помощью симметричных ключей
 Классы можно использовать в пространстве имен <xref:System.Security.Cryptography.Xml> для шифрования элемента XML-документа.  Шифрование XML-данных позволяет хранить или передавать важные XML-данные, не беспокоясь о том, что они могут быть прочитаны.  Этот пример кода выполняет расшифровку XML-элемента при помощи алгоритма AES, также известного как Rijndael.  
   
  Сведения о способах шифрования XML-элемента с помощью этой процедуры см. в разделе [как: Шифрование XML-элементов с помощью симметричного ключа](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md).  
@@ -33,24 +33,24 @@ ms.locfileid: "54502628"
   
 ### <a name="to-decrypt-an-xml-element-with-a-symmetric-key"></a>Расшифровка XML-элемента при помощи симметричного ключа  
   
-1.  Шифрование XML-элемента с помощью ранее созданного ключа, используя методики, описанные в [как: Шифрование XML-элементов с помощью симметричного ключа](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md).  
+1. Шифрование XML-элемента с помощью ранее созданного ключа, используя методики, описанные в [как: Шифрование XML-элементов с помощью симметричного ключа](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md).  
   
-2.  Найдите элемент <`EncryptedData`> (определенный стандартом шифрования XML-данных) в объекте <xref:System.Xml.XmlDocument>, содержащем зашифрованные XML-данные, и создайте новый объект <xref:System.Xml.XmlElement> для представления этого элемента.  
+2. Найдите <`EncryptedData`> элемент (определенный стандартом шифрования XML) в <xref:System.Xml.XmlDocument> , содержащий зашифрованный XML-документ, а затем создайте <xref:System.Xml.XmlElement> объект для представления этого элемента.  
   
      [!code-csharp[HowToEncryptXMLElementSymmetric#10](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#10)]
      [!code-vb[HowToEncryptXMLElementSymmetric#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#10)]  
   
-3.  Создайте объект <xref:System.Security.Cryptography.Xml.EncryptedData>, загрузив необработанные XML-данные из ранее созданного объекта <xref:System.Xml.XmlElement>.  
+3. Создайте объект <xref:System.Security.Cryptography.Xml.EncryptedData>, загрузив необработанные XML-данные из ранее созданного объекта <xref:System.Xml.XmlElement>.  
   
      [!code-csharp[HowToEncryptXMLElementSymmetric#11](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#11)]
      [!code-vb[HowToEncryptXMLElementSymmetric#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#11)]  
   
-4.  Создайте новый объект <xref:System.Security.Cryptography.Xml.EncryptedXml> и используйте его для расшифровки XML-данных при помощи того же ключа, который использовался для шифрования.  
+4. Создайте новый объект <xref:System.Security.Cryptography.Xml.EncryptedXml> и используйте его для расшифровки XML-данных при помощи того же ключа, который использовался для шифрования.  
   
      [!code-csharp[HowToEncryptXMLElementSymmetric#12](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#12)]
      [!code-vb[HowToEncryptXMLElementSymmetric#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#12)]  
   
-5.  Замените зашифрованный элемент на вновь расшифрованный элемент в формате открытого текста в XML-документе.  
+5. Замените зашифрованный элемент на вновь расшифрованный элемент в формате открытого текста в XML-документе.  
   
      [!code-csharp[HowToEncryptXMLElementSymmetric#13](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#13)]
      [!code-vb[HowToEncryptXMLElementSymmetric#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#13)]  

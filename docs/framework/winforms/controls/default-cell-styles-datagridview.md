@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data formats
 - data [Windows Forms], setting formats
 ms.assetid: fc6da49f-8942-41da-b49f-b2afc38cc656
-ms.openlocfilehash: 0e5664707d12fd45c73f3585d07660fc732965fb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8939a182032cfac1beac6c1e5cb3c9de9792114c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59179898"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333617"
 ---
 # <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a>Практическое руководство. Установка стилей для ячейки по умолчанию и форматов данных в элементе управления DataGridView формы Windows Forms с помощью конструктора
 <xref:System.Windows.Forms.DataGridView> Элемент управления позволяет указать стилей ячейки по умолчанию и форматы данных для всего элемента управления, для определенных столбцов, для заголовков строк и столбцов и для чередующихся строк для создания эффекта книги ячейки. По умолчанию, установленным стилей для чередующихся строк и столбцов переопределены стили по умолчанию для всего элемента управления. Кроме того стили, заданные в коде для отдельных строк и ячеек, переопределяют стили по умолчанию.  
@@ -28,11 +28,11 @@ ms.locfileid: "59179898"
   
 ### <a name="to-set-default-styles-for-all-cells-in-the-control"></a>Установка стилей по умолчанию для всех ячеек в элементе управления  
   
-1.  Выберите <xref:System.Windows.Forms.DataGridView> управления в конструкторе.  
+1. Выберите <xref:System.Windows.Forms.DataGridView> управления в конструкторе.  
   
-2.  В **свойства** окно, нажмите кнопку с многоточием (![экрана VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) рядом с полем <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>, <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>, или <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A> свойство. **Построителя CellStyle** откроется диалоговое окно.  
+2. В **свойства** окно, нажмите кнопку с многоточием (![экрана VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) рядом с полем <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>, <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>, или <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A> свойство. **Построителя CellStyle** откроется диалоговое окно.  
   
-3.  Определите стиль путем установки свойств, используя **предварительной версии** панели, чтобы подтвердить выбранные параметры.  
+3. Определите стиль путем установки свойств, используя **предварительной версии** панели, чтобы подтвердить выбранные параметры.  
   
 > [!NOTE]
 >  Если стили оформления включены, заголовки строк и столбцов (за исключением <xref:System.Windows.Forms.DataGridView.TopLeftHeaderCell%2A>) автоматически определяются текущей темой, переопределяя <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A> и <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A> значения свойств.  
@@ -41,23 +41,23 @@ ms.locfileid: "59179898"
   
 ### <a name="to-set-default-styles-for-cells-in-individual-columns"></a>Установка стилей по умолчанию для ячеек в отдельных столбцах  
   
-1.  Щелкните правой кнопкой мыши <xref:System.Windows.Forms.DataGridView> в конструкторе и выберите **Правка столбцов**.  
+1. Щелкните правой кнопкой мыши <xref:System.Windows.Forms.DataGridView> в конструкторе и выберите **Правка столбцов**.  
   
-2.  Выберите столбец из **выбранные столбцы** списка.  
+2. Выберите столбец из **выбранные столбцы** списка.  
   
-3.  В **свойства столбца** сетки, нажмите кнопку с многоточием (![экрана VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) рядом с полем <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> свойство. **Построителя CellStyle** откроется диалоговое окно.  
+3. В **свойства столбца** сетки, нажмите кнопку с многоточием (![экрана VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) рядом с полем <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> свойство. **Построителя CellStyle** откроется диалоговое окно.  
   
-4.  Определите стиль путем установки свойств, используя **предварительной версии** панели, чтобы подтвердить выбранные параметры.  
+4. Определите стиль путем установки свойств, используя **предварительной версии** панели, чтобы подтвердить выбранные параметры.  
   
 ### <a name="to-format-data-in-cells"></a>Для форматирования данных в ячейках  
   
-1.  Используйте один из приведенных выше процедур для отображения **построителя CellStyle** диалоговое окно, связанные со свойством стиль ячейки по умолчанию.  
+1. Используйте один из приведенных выше процедур для отображения **построителя CellStyle** диалоговое окно, связанные со свойством стиль ячейки по умолчанию.  
   
-2.  В **построителя CellStyle** диалоговом окне нажмите кнопку с многоточием (![экрана VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) рядом с полем <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> свойство. **Строка формата** откроется диалоговое окно.  
+2. В **построителя CellStyle** диалоговом окне нажмите кнопку с многоточием (![экрана VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) рядом с полем <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> свойство. **Строка формата** откроется диалоговое окно.  
   
-3.  Выберите тип формата, а затем изменить сведения о типах (например, число десятичных разрядов), с помощью **пример** поле, чтобы подтвердить выбранные параметры.  
+3. Выберите тип формата, а затем изменить сведения о типах (например, число десятичных разрядов), с помощью **пример** поле, чтобы подтвердить выбранные параметры.  
   
-4.  При связывании <xref:System.Windows.Forms.DataGridView> элемента управления к источнику данных, которая, вероятнее всего содержать значения null, заполните **значение Null** текстовое поле. Это значение отображается в том случае, если значение ячейки равным пустой ссылкой (`Nothing` в Visual Basic) или <xref:System.DBNull.Value?displayProperty=nameWithType>.  
+4. При связывании <xref:System.Windows.Forms.DataGridView> элемента управления к источнику данных, которая, вероятнее всего содержать значения null, заполните **значение Null** текстовое поле. Это значение отображается в том случае, если значение ячейки равным пустой ссылкой (`Nothing` в Visual Basic) или <xref:System.DBNull.Value?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>См. также
 

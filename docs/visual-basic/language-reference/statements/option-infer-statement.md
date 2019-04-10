@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declaring variables [Visual Basic], inferred
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
-ms.openlocfilehash: a3846c952969a4814151757c5210d9df6f3c97b4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 59766999c5b03aac7aec13b293feaa8c17f2ced0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58823497"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338570"
 ---
 # <a name="option-infer-statement"></a>Option Infer - оператор
 Включает использование локального определения типов при объявлении переменных.  
@@ -63,11 +63,11 @@ Option Infer { On | Off }
   
 #### <a name="to-set-option-infer-in-the-ide"></a>Чтобы включить Option Infer в среде разработки  
   
-1.  Выберите проект в **обозревателе решений**. В меню **Проект** выберите пункт **Свойства**.  
+1. Выберите проект в **обозревателе решений**. В меню **Проект** выберите пункт **Свойства**.  
   
-2.  Откройте вкладку **Компиляция**.  
+2. Откройте вкладку **Компиляция**.  
   
-3.  Задайте значение в **Option infer** поле.  
+3. Задайте значение в **Option infer** поле.  
   
  При создании нового проекта, **Option Infer** на **компиляции** набор вкладок **Option Infer** в **Visual Basic по умолчанию** диалоговое окно. Чтобы получить доступ к **Visual Basic по умолчанию** диалоговом окне **средства** меню, щелкните **параметры**. В диалоговом окне **Параметры** разверните узел **Проекты и решения** и выберите пункт **Параметры Visual Basic по умолчанию**. Начальная настройка по умолчанию в **параметры Visualbasic по умолчанию** является `On`.  
   
@@ -101,7 +101,7 @@ Option Infer { On | Off }
 - [Вывод локального типа](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Оператор Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)
 - [Оператор Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
-- [Оператор Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [Страница "Параметры Visual Basic по умолчанию", папка "Проекты", диалоговое окно "Параметры"](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
 - [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
-- [Упаковка-преобразование и распаковка-преобразование](../../../csharp/programming-guide/types/boxing-and-unboxing.md)
+- [Упаковка–преобразование и распаковка–преобразование](../../../csharp/programming-guide/types/boxing-and-unboxing.md)

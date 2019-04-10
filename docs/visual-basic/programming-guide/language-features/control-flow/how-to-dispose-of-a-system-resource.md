@@ -10,23 +10,23 @@ helpviewer_keywords:
 - Using statement [Visual Basic], Using...End Using
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
-ms.openlocfilehash: 2a399b92c66c8a88d10d661ff41aef58a82bbc2a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e3594db036edc3a6288b0373737c1ee26a691a57
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829919"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341911"
 ---
 # <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Практическое руководство. Удаление ресурса системы (Visual Basic)
 Можно использовать `Using` блок, чтобы гарантировать, что система удаляет ресурс, когда код выходит из блока. Это полезно, если вы используете системный ресурс, которые используют большой объем памяти или других компонентов также требуется использовать.  
   
 ### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>Для удаления подключения к базе данных после завершения вашего кода с ним  
   
-1.  Убедитесь, что вы включить соответствующую [оператор Imports (пространство имен .NET и тип)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) для подключения к базе данных в начале файла исходного кода (в данном случае <xref:System.Data.SqlClient>).  
+1. Убедитесь, что вы включить соответствующую [оператор Imports (пространство имен .NET и тип)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) для подключения к базе данных в начале файла исходного кода (в данном случае <xref:System.Data.SqlClient>).  
   
-2.  Создание `Using` блоке с `Using` и `End Using` инструкций. Внутри блока поместите код, который имеет дело с подключения к базе данных.  
+2. Создание `Using` блоке с `Using` и `End Using` инструкций. Внутри блока поместите код, который имеет дело с подключения к базе данных.  
   
-3.  Объявите соединение и создайте его экземпляр как часть `Using` инструкции.  
+3. Объявите соединение и создайте его экземпляр как часть `Using` инструкции.  
   
     ```  
     ' Insert the following line at the beginning of your source file.  

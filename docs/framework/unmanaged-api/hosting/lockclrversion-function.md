@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 571a676496683ba3251f13c41600bb017e1ced5d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 91bb1a9416e577dbb5cc96e8be87033c53232811
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59156108"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336698"
 ---
 # <a name="lockclrversion-function"></a>Функция LockClrVersion
 Позволяет основному приложению определить, какую версию общеязыковой среды выполнения (CLR), которая будет использоваться в процессе до явной инициализации среды CLR.  
@@ -66,11 +66,11 @@ typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();
   
  При инициализации среды выполнения, выполняются следующие действия:  
   
-1.  Узел вызывает метод [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) или одну из функций инициализации среды выполнения. Кроме того узел может инициализировать среду выполнения, с помощью активации COM-объекта.  
+1. Узел вызывает метод [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) или одну из функций инициализации среды выполнения. Кроме того узел может инициализировать среду выполнения, с помощью активации COM-объекта.  
   
-2.  Среда выполнения вызывает функцию, указанную аргументом `hostCallback` параметра.  
+2. Среда выполнения вызывает функцию, указанную аргументом `hostCallback` параметра.  
   
-3.  Функцию, указанную аргументом `hostCallback` затем выполняет следующую последовательность вызовов:  
+3. Функцию, указанную аргументом `hostCallback` затем выполняет следующую последовательность вызовов:  
   
     -   Функцию, указанную аргументом `pBeginHostSetup` параметра.  
   

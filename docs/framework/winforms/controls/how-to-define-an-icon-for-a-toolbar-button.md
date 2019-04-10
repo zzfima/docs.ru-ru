@@ -13,12 +13,12 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: 84db98b4-8566-49ce-b2c8-1fd66a5eb3a0
-ms.openlocfilehash: 0d4a17528ca3eb81f93419491766e370be551b1e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2c1c3d8529662c1e1f1a3d28e3853d31f5d940ed
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59153131"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336514"
 ---
 # <a name="how-to-define-an-icon-for-a-toolbar-button"></a>Практическое руководство. Определение значка для кнопки элемента управления ToolBar
 > [!NOTE]
@@ -28,11 +28,11 @@ ms.locfileid: "59153131"
   
 ### <a name="to-set-an-icon-for-a-toolbar-button-programmatically"></a>Чтобы задать значок для кнопки панели инструментов программным способом  
   
-1.  В процедуре создания экземпляра <xref:System.Windows.Forms.ImageList> компонента и <xref:System.Windows.Forms.ToolBar> элемента управления.  
+1. В процедуре создания экземпляра <xref:System.Windows.Forms.ImageList> компонента и <xref:System.Windows.Forms.ToolBar> элемента управления.  
   
-2.  В той же процедуры, назначить изображение для <xref:System.Windows.Forms.ImageList> компонента.  
+2. В той же процедуры, назначить изображение для <xref:System.Windows.Forms.ImageList> компонента.  
   
-3.  В той же процедуры, назначить <xref:System.Windows.Forms.ImageList> управления <xref:System.Windows.Forms.ToolBar> управления и назначить <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> свойство из отдельных кнопок панели инструментов.  
+3. В той же процедуры, назначить <xref:System.Windows.Forms.ImageList> управления <xref:System.Windows.Forms.ToolBar> управления и назначить <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> свойство из отдельных кнопок панели инструментов.  
   
      В следующем примере кода, задайте путь — расположение изображения **Мои документы** папки. Это делается, поскольку предполагается, что большинство компьютеров под управлением операционной системы Windows, содержат эту папку. Это также позволяет пользователям с минимальным уровнем доступа к системе безопасно запускать приложение. В приведенном ниже примере предполагается, что форма <xref:System.Windows.Forms.PictureBox> управления уже добавлен.  
   

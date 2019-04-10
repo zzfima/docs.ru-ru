@@ -2,12 +2,12 @@
 title: Создание исходного документа Open XML Office (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 61ccd6fb-0c47-4075-afdf-5b5021330f21
-ms.openlocfilehash: dad832aeef4d6519c272589033acc6d2fe3c2676
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 83cb7d0a325e11c9669f1331e57bed7bf09f27c6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58838863"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333695"
 ---
 # <a name="creating-the-source-office-open-xml-document-visual-basic"></a>Создание исходного документа Open XML Office (Visual Basic)
 В этом разделе показано создание документа Office Open XML WordprocessingML, который используется в примерах этого учебника. Если следовать приведенным ниже инструкциям, выходные данные будут соответствовать выходным данным каждого примера.  
@@ -20,9 +20,9 @@ ms.locfileid: "58838863"
   
 #### <a name="to-create-the-wordprocessingml-document"></a>Создание документа WordprocessingML  
   
-1.  Создайте документ Microsoft Word.  
+1. Создайте документ Microsoft Word.  
   
-2.  Вставьте в новый документ следующий текст.  
+2. Вставьте в новый документ следующий текст.  
   
     ```  
     Parsing WordprocessingML with LINQ to XML  
@@ -42,13 +42,13 @@ ms.locfileid: "58838863"
     Hello World  
     ```  
   
-3.  Отформатируйте первую строку стилем «Заголовок 1».  
+3. Отформатируйте первую строку стилем «Заголовок 1».  
   
-4.  Выберите строки, содержащие код Visual Basic. Первая строка начинается с ключевого слова `Imports`. Последняя строка — «End Class». Отформатируйте эти строки шрифтом courier. Создайте из них новый стиль и присвойте ему имя «Code».  
+4. Выберите строки, содержащие код Visual Basic. Первая строка начинается с ключевого слова `Imports`. Последняя строка — «End Class». Отформатируйте эти строки шрифтом courier. Создайте из них новый стиль и присвойте ему имя «Code».  
   
-5.  Наконец, выделите всю строку, содержащую выходные данные, и отформатируйте ее стилем `Code`.  
+5. Наконец, выделите всю строку, содержащую выходные данные, и отформатируйте ее стилем `Code`.  
   
-6.  Сохраните документ с именем SampleDoc.docx.  
+6. Сохраните документ с именем SampleDoc.docx.  
   
     > [!NOTE]
     >  Если используется Microsoft Word 2003, в раскрывающемся списке **Тип файла** выберите **Документ Word 2007**.  
