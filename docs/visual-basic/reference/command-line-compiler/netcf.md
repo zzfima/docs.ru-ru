@@ -9,87 +9,90 @@ helpviewer_keywords:
 - netcf compiler option [Visual Basic]
 - /netcf compiler option [Visual Basic]
 ms.assetid: db7cfa59-c315-401c-a59b-0daf355343d6
-ms.openlocfilehash: 7b9485c1bc2f87ca9f007a4e1ce2f63c055100c1
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: d7c3bcba8e62d62904ed778a48d0e8ae6738ce00
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58815983"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480772"
 ---
-# <a name="-netcf"></a><span data-ttu-id="41097-102">-netcf</span><span class="sxs-lookup"><span data-stu-id="41097-102">-netcf</span></span>
-<span data-ttu-id="41097-103">Задает для компилятора целевой объект [!INCLUDE[Compact](~/includes/compact-md.md)].</span><span class="sxs-lookup"><span data-stu-id="41097-103">Sets the compiler to target the [!INCLUDE[Compact](~/includes/compact-md.md)].</span></span>  
-  
-## <a name="syntax"></a><span data-ttu-id="41097-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="41097-104">Syntax</span></span>  
-  
-```  
--netcf  
-```  
-  
-## <a name="remarks"></a><span data-ttu-id="41097-105">Примечания</span><span class="sxs-lookup"><span data-stu-id="41097-105">Remarks</span></span>  
- <span data-ttu-id="41097-106">`-netcf` Компилятору Visual Basic к целевому объекту [!INCLUDE[Compact](~/includes/compact-md.md)] вместо полной [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="41097-106">The `-netcf` option causes the Visual Basic compiler to target the [!INCLUDE[Compact](~/includes/compact-md.md)] rather than the full [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span></span> <span data-ttu-id="41097-107">Функциональные возможности языка, которая присутствует только в полной [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] отключена.</span><span class="sxs-lookup"><span data-stu-id="41097-107">Language functionality that is present only in the full [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] is disabled.</span></span>  
-  
- <span data-ttu-id="41097-108">`-netcf` Параметр предназначен для использования с [- sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md).</span><span class="sxs-lookup"><span data-stu-id="41097-108">The `-netcf` option is designed to be used with [-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md).</span></span> <span data-ttu-id="41097-109">Языковые возможности, отключенные по `-netcf` являются те же функции языка, не представленным в файлах `-sdkpath`.</span><span class="sxs-lookup"><span data-stu-id="41097-109">The language features disabled by `-netcf` are the same language features not present in the files targeted with `-sdkpath`.</span></span>  
-  
-> [!NOTE]
->  <span data-ttu-id="41097-110">`-netcf` Не доступна из среды разработки Visual Studio; она доступна только при компиляции из командной строки.</span><span class="sxs-lookup"><span data-stu-id="41097-110">The `-netcf` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span></span> <span data-ttu-id="41097-111">`-netcf` Был установлен при загрузке проекта Visual Basic для устройства.</span><span class="sxs-lookup"><span data-stu-id="41097-111">The `-netcf` option is set when a Visual Basic device project is loaded.</span></span>  
-  
- <span data-ttu-id="41097-112">`-netcf` Параметр изменяет следующие функции языка:</span><span class="sxs-lookup"><span data-stu-id="41097-112">The `-netcf` option changes the following language features:</span></span>  
-  
--   <span data-ttu-id="41097-113">[Окончания \<ключевое слово > инструкции](../../../visual-basic/language-reference/statements/end-keyword-statement.md) ключевое слово, которое завершает выполнение программы, отключен.</span><span class="sxs-lookup"><span data-stu-id="41097-113">The [End \<keyword> Statement](../../../visual-basic/language-reference/statements/end-keyword-statement.md) keyword, which terminates execution of a program, is disabled.</span></span> <span data-ttu-id="41097-114">Следующая программа компилируется и выполняется без `-netcf` , но во время компиляции с `-netcf`.</span><span class="sxs-lookup"><span data-stu-id="41097-114">The following program compiles and runs without `-netcf` but fails at compile time with `-netcf`.</span></span>  
-  
-     [!code-vb[VbVbalrCompiler#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/netcf.vb#34)]  
-  
--   <span data-ttu-id="41097-115">Позднее связывание, во всех формах, отключен.</span><span class="sxs-lookup"><span data-stu-id="41097-115">Late binding, in all forms, is disabled.</span></span> <span data-ttu-id="41097-116">Ошибки времени компиляции создаются при обнаружении распознанных сценариев позднего связывания.</span><span class="sxs-lookup"><span data-stu-id="41097-116">Compile-time errors are generated when recognized late-binding scenarios are encountered.</span></span> <span data-ttu-id="41097-117">Следующая программа компилируется и выполняется без `-netcf` , но во время компиляции с `-netcf`.</span><span class="sxs-lookup"><span data-stu-id="41097-117">The following program compiles and runs without `-netcf` but fails at compile time with `-netcf`.</span></span>  
-  
-     [!code-vb[VbVbalrCompiler#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionStrictOff.vb#35)]  
-  
--   <span data-ttu-id="41097-118">[Автоматически](../../../visual-basic/language-reference/modifiers/auto.md), [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md), и [Юникода](../../../visual-basic/language-reference/modifiers/unicode.md) модификаторы отключены.</span><span class="sxs-lookup"><span data-stu-id="41097-118">The [Auto](../../../visual-basic/language-reference/modifiers/auto.md), [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md), and [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md) modifiers are disabled.</span></span> <span data-ttu-id="41097-119">Синтаксис [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) инструкции также изменяется — `Declare Sub|Function name Lib "library" [Alias "alias"] [([arglist])]`.</span><span class="sxs-lookup"><span data-stu-id="41097-119">The syntax of the [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) statement is also modified to `Declare Sub|Function name Lib "library" [Alias "alias"] [([arglist])]`.</span></span> <span data-ttu-id="41097-120">В следующем коде показано влияние `-netcf` на процесс компиляции.</span><span class="sxs-lookup"><span data-stu-id="41097-120">The following code shows the effect of `-netcf` on a compilation.</span></span>  
-  
-     [!code-vb[VbVbalrCompiler#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionStrictOff.vb#36)]  
-  
--   <span data-ttu-id="41097-121">Использование ключевых слов Visual Basic 6.0, которые были удалены из Visual Basic создает различные ошибки при `-netcf` используется.</span><span class="sxs-lookup"><span data-stu-id="41097-121">Using Visual Basic 6.0 keywords that were removed from Visual Basic generates a different error when `-netcf` is used.</span></span> <span data-ttu-id="41097-122">Это влияет на сообщения об ошибках для следующих ключевых слов:</span><span class="sxs-lookup"><span data-stu-id="41097-122">This affects the error messages for the following keywords:</span></span>  
-  
-    -   `Open`  
-  
-    -   `Close`  
-  
-    -   `Put`  
-  
-    -   `Print`  
-  
-    -   `Write`  
-  
-    -   `Input`  
-  
-    -   `Lock`  
-  
-    -   `Unlock`  
-  
-    -   `Seek`  
-  
-    -   `Width`  
-  
-    -   `Name`  
-  
-    -   `FreeFile`  
-  
-    -   `EOF`  
-  
-    -   `Loc`  
-  
-    -   `LOF`  
-  
-    -   `Line`  
-  
-## <a name="example"></a><span data-ttu-id="41097-123">Пример</span><span class="sxs-lookup"><span data-stu-id="41097-123">Example</span></span>  
- <span data-ttu-id="41097-124">Следующий код компилирует `Myfile.vb` с [!INCLUDE[Compact](~/includes/compact-md.md)], с помощью версии библиотеки mscorlib.dll и Microsoft.VisualBasic.dll см. в каталог установки по умолчанию для [!INCLUDE[Compact](~/includes/compact-md.md)] на диске C:.</span><span class="sxs-lookup"><span data-stu-id="41097-124">The following code compiles `Myfile.vb` with the [!INCLUDE[Compact](~/includes/compact-md.md)], using the versions of mscorlib.dll and Microsoft.VisualBasic.dll found in the default installation directory of the [!INCLUDE[Compact](~/includes/compact-md.md)] on the C drive.</span></span> <span data-ttu-id="41097-125">Как правило, используется самую последнюю версию [!INCLUDE[Compact](~/includes/compact-md.md)].</span><span class="sxs-lookup"><span data-stu-id="41097-125">Typically, you would use the most recent version of the [!INCLUDE[Compact](~/includes/compact-md.md)].</span></span>  
-  
-```console  
-vbc -netcf -sdkpath:"c:\Program Files\Microsoft Visual Studio .NET 2003\CompactFrameworkSDK\v1.0.5000\Windows CE " myfile.vb  
-```  
-  
-## <a name="see-also"></a><span data-ttu-id="41097-126">См. также</span><span class="sxs-lookup"><span data-stu-id="41097-126">See also</span></span>
+# <a name="-netcf"></a><span data-ttu-id="91686-102">-netcf</span><span class="sxs-lookup"><span data-stu-id="91686-102">-netcf</span></span>
 
-- [<span data-ttu-id="41097-127">Компилятор Visual Basic с интерфейсом командной строки</span><span class="sxs-lookup"><span data-stu-id="41097-127">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
-- [<span data-ttu-id="41097-128">Примеры командных строк компиляции</span><span class="sxs-lookup"><span data-stu-id="41097-128">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [<span data-ttu-id="41097-129">-sdkpath</span><span class="sxs-lookup"><span data-stu-id="41097-129">-sdkpath</span></span>](../../../visual-basic/reference/command-line-compiler/sdkpath.md)
+<span data-ttu-id="91686-103">Задает для компилятора целевой объект [!INCLUDE[Compact](~/includes/compact-md.md)].</span><span class="sxs-lookup"><span data-stu-id="91686-103">Sets the compiler to target the [!INCLUDE[Compact](~/includes/compact-md.md)].</span></span>
+
+## <a name="syntax"></a><span data-ttu-id="91686-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="91686-104">Syntax</span></span>
+
+```
+-netcf
+```
+
+## <a name="remarks"></a><span data-ttu-id="91686-105">Примечания</span><span class="sxs-lookup"><span data-stu-id="91686-105">Remarks</span></span>
+
+<span data-ttu-id="91686-106">`-netcf` Компилятору Visual Basic к целевому объекту [!INCLUDE[Compact](~/includes/compact-md.md)] вместо полной [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="91686-106">The `-netcf` option causes the Visual Basic compiler to target the [!INCLUDE[Compact](~/includes/compact-md.md)] rather than the full [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span></span> <span data-ttu-id="91686-107">Функциональные возможности языка, которая присутствует только в полной [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] отключена.</span><span class="sxs-lookup"><span data-stu-id="91686-107">Language functionality that is present only in the full [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] is disabled.</span></span>
+
+<span data-ttu-id="91686-108">`-netcf` Параметр предназначен для использования с [- sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md).</span><span class="sxs-lookup"><span data-stu-id="91686-108">The `-netcf` option is designed to be used with [-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md).</span></span> <span data-ttu-id="91686-109">Языковые возможности, отключенные по `-netcf` являются те же функции языка, не представленным в файлах `-sdkpath`.</span><span class="sxs-lookup"><span data-stu-id="91686-109">The language features disabled by `-netcf` are the same language features not present in the files targeted with `-sdkpath`.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="91686-110">`-netcf` Не доступна из среды разработки Visual Studio; она доступна только при компиляции из командной строки.</span><span class="sxs-lookup"><span data-stu-id="91686-110">The `-netcf` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span></span> <span data-ttu-id="91686-111">`-netcf` Был установлен при загрузке проекта Visual Basic для устройства.</span><span class="sxs-lookup"><span data-stu-id="91686-111">The `-netcf` option is set when a Visual Basic device project is loaded.</span></span>
+
+<span data-ttu-id="91686-112">`-netcf` Параметр изменяет следующие функции языка:</span><span class="sxs-lookup"><span data-stu-id="91686-112">The `-netcf` option changes the following language features:</span></span>
+
+- <span data-ttu-id="91686-113">[Окончания \<ключевое слово > инструкции](../../../visual-basic/language-reference/statements/end-keyword-statement.md) ключевое слово, которое завершает выполнение программы, отключен.</span><span class="sxs-lookup"><span data-stu-id="91686-113">The [End \<keyword> Statement](../../../visual-basic/language-reference/statements/end-keyword-statement.md) keyword, which terminates execution of a program, is disabled.</span></span> <span data-ttu-id="91686-114">Следующая программа компилируется и выполняется без `-netcf` , но во время компиляции с `-netcf`.</span><span class="sxs-lookup"><span data-stu-id="91686-114">The following program compiles and runs without `-netcf` but fails at compile time with `-netcf`.</span></span>
+
+  [!code-vb[VbVbalrCompiler#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/netcf.vb#34)]
+
+- <span data-ttu-id="91686-115">Позднее связывание, во всех формах, отключен.</span><span class="sxs-lookup"><span data-stu-id="91686-115">Late binding, in all forms, is disabled.</span></span> <span data-ttu-id="91686-116">Ошибки времени компиляции создаются при обнаружении распознанных сценариев позднего связывания.</span><span class="sxs-lookup"><span data-stu-id="91686-116">Compile-time errors are generated when recognized late-binding scenarios are encountered.</span></span> <span data-ttu-id="91686-117">Следующая программа компилируется и выполняется без `-netcf` , но во время компиляции с `-netcf`.</span><span class="sxs-lookup"><span data-stu-id="91686-117">The following program compiles and runs without `-netcf` but fails at compile time with `-netcf`.</span></span>
+
+  [!code-vb[VbVbalrCompiler#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionStrictOff.vb#35)]
+
+- <span data-ttu-id="91686-118">[Автоматически](../../../visual-basic/language-reference/modifiers/auto.md), [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md), и [Юникода](../../../visual-basic/language-reference/modifiers/unicode.md) модификаторы отключены.</span><span class="sxs-lookup"><span data-stu-id="91686-118">The [Auto](../../../visual-basic/language-reference/modifiers/auto.md), [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md), and [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md) modifiers are disabled.</span></span> <span data-ttu-id="91686-119">Синтаксис [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) инструкции также изменяется — `Declare Sub|Function name Lib "library" [Alias "alias"] [([arglist])]`.</span><span class="sxs-lookup"><span data-stu-id="91686-119">The syntax of the [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) statement is also modified to `Declare Sub|Function name Lib "library" [Alias "alias"] [([arglist])]`.</span></span> <span data-ttu-id="91686-120">В следующем коде показано влияние `-netcf` на процесс компиляции.</span><span class="sxs-lookup"><span data-stu-id="91686-120">The following code shows the effect of `-netcf` on a compilation.</span></span>
+
+  [!code-vb[VbVbalrCompiler#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionStrictOff.vb#36)]
+
+- <span data-ttu-id="91686-121">Использование ключевых слов Visual Basic 6.0, которые были удалены из Visual Basic создает различные ошибки при `-netcf` используется.</span><span class="sxs-lookup"><span data-stu-id="91686-121">Using Visual Basic 6.0 keywords that were removed from Visual Basic generates a different error when `-netcf` is used.</span></span> <span data-ttu-id="91686-122">Это влияет на сообщения об ошибках для следующих ключевых слов:</span><span class="sxs-lookup"><span data-stu-id="91686-122">This affects the error messages for the following keywords:</span></span>
+
+  - `Open`
+
+  - `Close`
+
+  - `Put`
+
+  - `Print`
+
+  - `Write`
+
+  - `Input`
+
+  - `Lock`
+
+  - `Unlock`
+
+  - `Seek`
+
+  - `Width`
+
+  - `Name`
+
+  - `FreeFile`
+
+  - `EOF`
+
+  - `Loc`
+
+  - `LOF`
+
+  - `Line`
+
+## <a name="example"></a><span data-ttu-id="91686-123">Пример</span><span class="sxs-lookup"><span data-stu-id="91686-123">Example</span></span>
+
+<span data-ttu-id="91686-124">Следующий код компилирует `Myfile.vb` с [!INCLUDE[Compact](~/includes/compact-md.md)], с помощью версии библиотеки mscorlib.dll и Microsoft.VisualBasic.dll см. в каталог установки по умолчанию для [!INCLUDE[Compact](~/includes/compact-md.md)] на диске C:.</span><span class="sxs-lookup"><span data-stu-id="91686-124">The following code compiles `Myfile.vb` with the [!INCLUDE[Compact](~/includes/compact-md.md)], using the versions of mscorlib.dll and Microsoft.VisualBasic.dll found in the default installation directory of the [!INCLUDE[Compact](~/includes/compact-md.md)] on the C drive.</span></span> <span data-ttu-id="91686-125">Как правило, используется самую последнюю версию [!INCLUDE[Compact](~/includes/compact-md.md)].</span><span class="sxs-lookup"><span data-stu-id="91686-125">Typically, you would use the most recent version of the [!INCLUDE[Compact](~/includes/compact-md.md)].</span></span>
+
+```console
+vbc -netcf -sdkpath:"c:\Program Files\Microsoft Visual Studio .NET 2003\CompactFrameworkSDK\v1.0.5000\Windows CE " myfile.vb
+```
+
+## <a name="see-also"></a><span data-ttu-id="91686-126">См. также</span><span class="sxs-lookup"><span data-stu-id="91686-126">See also</span></span>
+
+- [<span data-ttu-id="91686-127">Компилятор Visual Basic с интерфейсом командной строки</span><span class="sxs-lookup"><span data-stu-id="91686-127">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
+- [<span data-ttu-id="91686-128">Примеры командных строк компиляции</span><span class="sxs-lookup"><span data-stu-id="91686-128">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [<span data-ttu-id="91686-129">-sdkpath</span><span class="sxs-lookup"><span data-stu-id="91686-129">-sdkpath</span></span>](../../../visual-basic/reference/command-line-compiler/sdkpath.md)
