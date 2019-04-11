@@ -10,12 +10,12 @@ helpviewer_keywords:
 - UI (user interface), automation
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
-ms.openlocfilehash: 8c2477e5e7086e1bbfaab1e4b116c9e6bb4e2d30
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 18cb28de04737973876e70cdb7b87e720836bcba
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194073"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332698"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>Модель автоматизации пользовательского интерфейса и масштабирование экрана
 > [!NOTE]
@@ -58,14 +58,14 @@ ms.locfileid: "59194073"
   
  Решение состоит из двух частей.  
   
-1.  Во-первых, включите в клиентском приложении поддержку [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]. Для этого вызовите функцию [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] `SetProcessDPIAware` во время запуска. В управляемом коде следующее объявление сделает эту функцию доступной.  
+1. Во-первых, включите в клиентском приложении поддержку [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]. Для этого вызовите функцию [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] `SetProcessDPIAware` во время запуска. В управляемом коде следующее объявление сделает эту функцию доступной.  
   
      [!code-csharp[Highlighter#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/Highlighter/CSharp/NativeMethods.cs#101)]
      [!code-vb[Highlighter#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Highlighter/VisualBasic/NativeMethods.vb#101)]  
   
      Эта функция упрощает весь процесс, поддерживающего определение dpi, это означает, что все окна, принадлежащие к процессу, являются немасштабируемыми. В [Highlighter Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter), например, четыре окна, входящие в прямоугольник выделения находятся в физических координатах, полученных из модели автоматизации пользовательского интерфейса, а не в логических координатах. Если пример не поддерживающего определение dpi, выделение будет выполнено в логических координатах на рабочем столе, что привело бы к неверному размещению в среде 96 dpi.  
   
-2.  Чтобы получить координаты курсора, вызовите функцию [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] `GetPhysicalCursorPos`. В следующем примере показано, как объявлять и использовать эту функцию.  
+2. Чтобы получить координаты курсора, вызовите функцию [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] `GetPhysicalCursorPos`. В следующем примере показано, как объявлять и использовать эту функцию.  
   
      [!code-csharp[UIAClient_snip#185](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#185)]
      [!code-vb[UIAClient_snip#185](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#185)]  
