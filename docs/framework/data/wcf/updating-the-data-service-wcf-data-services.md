@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
-ms.openlocfilehash: 5b8fa13bf5db7f3c3df97febe4bb6f9ee4c184a4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 42980aa4691d8ecb9868336ecb270c9ad937b5a3
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59231296"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517113"
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>Обновление службы данных (службы данных WCF)
 При использовании [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] клиентскую библиотеку для использования [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] веб-канала, эта библиотека преобразует записи из канала в экземпляры классов клиентской службы данных. Эти классы службы данных отслеживаются с помощью объекта <xref:System.Data.Services.Client.DataServiceContext>, которому принадлежит объект <xref:System.Data.Services.Client.DataServiceQuery%601>. Клиент отслеживает изменения сущностей, указанных с помощью методов объекта <xref:System.Data.Services.Client.DataServiceContext>. Эти методы позволяют клиенту отслеживать добавленные и удаленные сущности, а также изменения, вносимые в значения свойств или в связи между экземплярами сущностей. При вызове метода <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> отслеженные изменения отправляются назад в службу данных в виде операций, основанных на REST.  
@@ -24,33 +24,33 @@ ms.locfileid: "59231296"
 ## <a name="adding-modifying-and-changing-entities"></a>Добавление, модификация и изменение сущностей  
  При использовании **Add Service Reference** диалоговое окно в Visual Studio для добавления ссылки на [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-канала, полученный клиентские классы службы данных каждый имеют статический *создать* метод, который принимает один параметр на каждое свойство сущности, не допускающие значения NULL. Этот метод можно использовать для создания экземпляров классов типа сущности, как показано в следующем примере.  
   
- [!code-csharp[Astoria Northwind Client#CreateNewProduct](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#createnewproduct)]
- [!code-vb[Astoria Northwind Client#CreateNewProduct](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#createnewproduct)]  
+ [!code-csharp[Astoria Northwind Client#CreateNewProduct](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#createnewproduct)]
+ [!code-vb[Astoria Northwind Client#CreateNewProduct](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#createnewproduct)]  
   
  Для добавления экземпляра сущности вызовите соответствующий *AddTo* метод <xref:System.Data.Services.Client.DataServiceContext> классом, создаваемым **Add Service Reference** диалоговое окно, как показано в следующем примере:  
   
- [!code-csharp[Astoria Northwind Client#AddProductSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#addproductspecific)]
- [!code-vb[Astoria Northwind Client#AddProductSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#addproductspecific)]  
+ [!code-csharp[Astoria Northwind Client#AddProductSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addproductspecific)]
+ [!code-vb[Astoria Northwind Client#AddProductSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addproductspecific)]  
   
  При этом объект добавляется в контекст и в соответствующий набор сущностей. Можно также вызвать метод <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>, но при этом придется передать имя набора сущностей. Если добавляемая сущность имеет одну или несколько связей с другими сущностями, можно использовать либо метод <xref:System.Data.Services.Client.DataServiceContext.AddRelatedObject%2A>, либо один из предыдущих методов и явно задать эти связи. Эти операции обсуждаются дальше в данном разделе.  
   
  Для изменения существующего экземпляра сущности запросите сущность, произведите необходимые изменения ее свойств, а затем вызовите метод <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> объекта <xref:System.Data.Services.Client.DataServiceContext>, чтобы указать клиентской библиотеке на необходимость отправки обновления объекта, как показано в следующем примере.  
   
- [!code-csharp[Astoria Northwind Client#ModifyCustomerSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#modifycustomerspecific)]
- [!code-vb[Astoria Northwind Client#ModifyCustomerSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#modifycustomerspecific)]  
+ [!code-csharp[Astoria Northwind Client#ModifyCustomerSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#modifycustomerspecific)]
+ [!code-vb[Astoria Northwind Client#ModifyCustomerSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#modifycustomerspecific)]  
   
  Для удаления экземпляра сущности вызовите метод <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> объекта <xref:System.Data.Services.Client.DataServiceContext>, как показано в следующем примере.  
   
- [!code-csharp[Astoria Northwind Client#DeleteProductSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#deleteproductspecific)]
- [!code-vb[Astoria Northwind Client#DeleteProductSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#deleteproductspecific)]  
+ [!code-csharp[Astoria Northwind Client#DeleteProductSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#deleteproductspecific)]
+ [!code-vb[Astoria Northwind Client#DeleteProductSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#deleteproductspecific)]  
   
  Дополнительные сведения см. в разделе [Как Добавление, изменение и удаление сущностей](../../../../docs/framework/data/wcf/how-to-add-modify-and-delete-entities-wcf-data-services.md).  
   
 ## <a name="attaching-entities"></a>Присоединение сущностей  
  Клиентская библиотека позволяет сохранить обновления, произведенные в сущности, без выполнения запроса для загрузки сущности в контекст <xref:System.Data.Services.Client.DataServiceContext>. Используйте метод <xref:System.Data.Services.Client.DataServiceContext.AttachTo%2A> для присоединения существующего объекта к определенному набору сущностей в контексте <xref:System.Data.Services.Client.DataServiceContext>. Затем этот объект можно изменить и сохранить изменения в службе данных. В следующем примере измененный пользовательский объект присоединяется к контексту, после чего вызывается метод <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> для пометки присоединенного объекта атрибутом <xref:System.Data.Services.Client.EntityStates.Modified> перед вызовом метода <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>.  
   
- [!code-csharp[Astoria Northwind Client#AttachObjectSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#attachobjectspecific)]
- [!code-vb[Astoria Northwind Client#AttachObjectSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#attachobjectspecific)]  
+ [!code-csharp[Astoria Northwind Client#AttachObjectSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#attachobjectspecific)]
+ [!code-vb[Astoria Northwind Client#AttachObjectSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#attachobjectspecific)]  
   
  Во время присоединения объектов следует принимать во внимание следующие соображения.  
   
@@ -73,20 +73,20 @@ ms.locfileid: "59231296"
 |------------|-----------------|  
 |<xref:System.Data.Services.Client.DataServiceContext.AddRelatedObject%2A>|Создает новую ссылку между двумя связанными объектами сущностей. Вызов этого метода эквивалентен вызову <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> и <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> и позволяет создать новый объект и определить связь с существующим объектом.|  
 |<xref:System.Data.Services.Client.DataServiceContext.AddLink%2A>|Создает новую ссылку между двумя связанными объектами сущностей.|  
-|<xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>|Обновляет существующую связь между двумя объектами связанной сущности. <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> также используется для удаления связей с количеством элементов ноль или один к одному (`0..1:1`) и один к одному (`1:1`). Это можно сделать, задав связанному объекту значение `null`.|  
+|<xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>|Обновляет существующую связь между двумя объектами связанной сущности. <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> также используется для удаления связи с количеством элементов «0 или 1 к 1» (`0..1:1`) и «1 к 1» (`1:1`). Это можно сделать, задав связанному объекту значение `null`.|  
 |<xref:System.Data.Services.Client.DataServiceContext.DeleteLink%2A>|Помечает ссылку, отслеживаемую контекстом, для удаления при вызове метода <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>. Используйте этот метод при удалении связанного объекта или изменения связи путем удаления ссылки на существующий объект и последующего добавления ссылки на другой связанный объект.|  
 |<xref:System.Data.Services.Client.DataServiceContext.AttachLink%2A>|Уведомляет контекст о существовании ссылки между двумя объектами сущностей. Контекст предполагает, что эта связь уже существует в службе данных, и не пытается создать связь при вызове метода <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>. Используйте этот метод при присоединении объектов к контексту, если необходимо также присоединить ссылку между двумя из них. При определении новой связи лучше использовать объект <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A>.|  
 |<xref:System.Data.Services.Client.DataServiceContext.DetachLink%2A>|Прекращает отслеживание указанной ссылки в контексте. Этот метод используется для удаления связей «один ко многим» (`*:*`). Для связей с количеством элементов, равным одному, следует использовать объект <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>.|  
   
  Следующий пример иллюстрирует использование метода <xref:System.Data.Services.Client.DataServiceContext.AddRelatedObject%2A> для добавления нового объекта `Order_Detail`, связанного с имеющейся сущностью `Orders`. Поскольку новый объект `Order_Details` отслеживается с помощью метода <xref:System.Data.Services.Client.DataServiceContext>, связь добавленного объекта `Order_Details` с существующей сущностью `Products` определяется методом<xref:System.Data.Services.Client.DataServiceContext.AddLink%2A>:  
   
- [!code-csharp[Astoria Northwind Client#AddOrderDetailToOrderSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#addorderdetailtoorderspecific)]
- [!code-vb[Astoria Northwind Client#AddOrderDetailToOrderSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#addorderdetailtoorderspecific)]  
+ [!code-csharp[Astoria Northwind Client#AddOrderDetailToOrderSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addorderdetailtoorderspecific)]
+ [!code-vb[Astoria Northwind Client#AddOrderDetailToOrderSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addorderdetailtoorderspecific)]  
   
  В то время как метод <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> определяет связи, которые необходимо создать в службе данных, чтобы эти связи были отражены в объектах, присутствующих в контексте, для самих объектов необходимо задать свойства навигации. В предыдущем примере необходимо задать свойства навигации следующим образом.  
   
- [!code-csharp[Astoria Northwind Client#SetNavProps](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#setnavprops)]
- [!code-vb[Astoria Northwind Client#SetNavProps](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#setnavprops)]  
+ [!code-csharp[Astoria Northwind Client#SetNavProps](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#setnavprops)]
+ [!code-vb[Astoria Northwind Client#SetNavProps](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#setnavprops)]  
   
  Дополнительные сведения см. в разделе [Как Определение связей сущностей](../../../../docs/framework/data/wcf/how-to-define-entity-relationships-wcf-data-services.md).  
   
