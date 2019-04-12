@@ -1,5 +1,5 @@
 ---
-title: Как разработать службу данных WCF Data Service, работающую на IIS
+title: Практическое руководство. Разработка службы данных WCF Data Service, работающей на IIS
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,29 +9,29 @@ helpviewer_keywords:
 - WCF Data Services, deploying
 - WCF Data Services, hosting
 ms.assetid: f6f768c5-4989-49e3-a36f-896ab4ded86e
-ms.openlocfilehash: af81e65dfd4661d62d7aa4a3e6075be312765cb7
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 78e8c3cacd89f88cbfa062cb30e5b3474c2614ca
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47201080"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517853"
 ---
-# <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>Практическое: разработке службы данных WCF, выполняющегося на сервере IIS
+# <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>Практическое руководство. Разработке службы данных WCF, выполняющегося на сервере IIS
 
 В этом разделе показано, как использовать службы данных WCF для создания службы данных, основанный на образце базы данных "Борей", которая размещена в веб-приложения ASP.NET, на котором выполняется на Internet Information Services (IIS). Пример создания службы данных Northwind в качестве веб-приложения ASP.NET, выполняющегося на сервере разработки ASP.NET, см. в разделе [краткое руководство по службам данных WCF](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).
 
 > [!NOTE]
-> Для создания службы данных Northwind необходимо установить образец базы данных Northwind на локальный компьютер. Чтобы скачать этот образец базы данных, см. на странице загрузки [образцы баз данных для SQL Server](https://go.microsoft.com/fwlink/?linkid=24758).
+> Для создания службы данных Northwind необходимо установить образец базы данных Northwind на локальный компьютер. Чтобы скачать этот образец базы данных, см. страницу скачивания [Sample Databases for SQL Server](https://go.microsoft.com/fwlink/?linkid=24758)(Образцы баз данных для SQL Server).
 
  Данный раздел иллюстрирует создание службы данных с помощью поставщика Entity Framework. Доступны другие поставщики служб данных. Дополнительные сведения см. в разделе [поставщики служб данных](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).
 
- После создания службы требуется явно предоставить доступ к ресурсам службы данных. Дополнительные сведения см. в разделе [как: разрешить доступ к службе данных](../../../../docs/framework/data/wcf/how-to-enable-access-to-the-data-service-wcf-data-services.md).
+ После создания службы требуется явно предоставить доступ к ресурсам службы данных. Дополнительные сведения см. в разделе [Как Включение доступа к службе данных](../../../../docs/framework/data/wcf/how-to-enable-access-to-the-data-service-wcf-data-services.md).
 
 ## <a name="create-the-aspnet-web-application-that-runs-on-iis"></a>Создание веб-приложение ASP.NET, который выполняется на IIS
 
 1. В Visual Studio на **файл** меню, выберите **New** > **проекта**.
 
-2. В **новый проект** выберите **установленные** > [**Visual C#** или **Visual Basic**] > **Web** категории.
+2. В **новый проект** выберите **установленные** > [**Visual C#**  или **Visual Basic**] > **Web**  категории.
 
 3. Выберите **веб-приложение ASP.NET** шаблона.
 
@@ -132,7 +132,7 @@ ms.locfileid: "47201080"
 
 5. Подключите модель данных в базу данных, выполнив одно из следующих действий, а затем нажмите кнопку **Далее**:
 
-    -   Если у вас нет подключения к базе данных уже настроена, нажмите кнопку **новое подключение** и создайте новое соединение. Дополнительные сведения см. в разделе [как: создание подключений к базам данных SQL Server](https://go.microsoft.com/fwlink/?LinkId=123631). Этот экземпляр SQL Server должен содержать присоединенный образец базы данных Northwind.
+    -   Если у вас нет подключения к базе данных уже настроена, нажмите кнопку **новое подключение** и создайте новое соединение. Дополнительные сведения см. в разделе [Как Создание подключений к базам данных SQL Server](https://go.microsoft.com/fwlink/?LinkId=123631). Этот экземпляр SQL Server должен содержать присоединенный образец базы данных Northwind.
 
          \- или -
 
@@ -159,8 +159,8 @@ ms.locfileid: "47201080"
 
 4. В коде службы данных замените комментарий `/* TODO: put your data source class name here */` в определении класса, задающего службу данных, типом контейнера сущностей модели данных, который в данном случае равен `NorthwindEntities`. Определение класса должно выглядеть следующим образом.
 
-     [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria quickstart service/cs/northwind.svc.cs#servicedefinition)]
-     [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart service/vb/northwind.svc.vb#servicedefinition)]
+     [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_service/cs/northwind.svc.cs#servicedefinition)]
+     [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_service/vb/northwind.svc.vb#servicedefinition)]
 
 ## <a name="see-also"></a>См. также
 
