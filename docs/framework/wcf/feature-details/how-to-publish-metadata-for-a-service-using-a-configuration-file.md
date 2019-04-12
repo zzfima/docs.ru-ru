@@ -2,12 +2,12 @@
 title: Практическое руководство. Публикация метаданных для службы с использованием файла конфигурации
 ms.date: 03/30/2017
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
-ms.openlocfilehash: 2aa85aa9682f1f5f4b6c13465034000bb01f0e62
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 367ebeee5c12d809a758f1bee73dfaadda85788d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59075207"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295540"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>Практическое руководство. Публикация метаданных для службы с использованием файла конфигурации
 Это один из двух практических руководств, в которых демонстрируется публикация метаданных для службы Windows Communication Foundation (WCF). Существуют два способа указать, как служба должна публиковать метаданные: с помощью файла конфигурации и с помощью кода. В этом разделе показано, как публиковать метаданные для службы с помощью файла конфигурации.  
@@ -92,15 +92,15 @@ namespace Metadata.Samples
   
 ### <a name="to-publish-metadata-for-a-wcf-service-using-an-application-configuration-file"></a>Публикация метаданных для службы WCF с помощью файла конфигурации приложения  
   
-1.  В файле App.config после закрывающего элемента &lt;behaviors&gt; создайте элемент`</services>`.  
+1. В файле App.config после закрывающего элемента `</services>`behaviors&gt; создайте элемент`<behaviors>`.  
 
-2.  Внутри элемента `<behaviors>` добавьте элемент `<serviceBehaviors>`.  
+2. Внутри элемента `<behaviors>` добавьте элемент `<serviceBehaviors>`.  
 
-3.  Добавьте элемент &lt;serviceBehaviors&gt; в элемент`<behavior>`и задайте значение для атрибута &lt;behavior&gt;`<serviceBehaviors>` элемента .  
+3. Добавить `<behavior>` элемент `<serviceBehaviors>` элемент и указать значение для `name` атрибут `<behavior>` элемента.  
 
-4.  Добавьте элемент `<serviceMetadata>` в элемент `<behavior>`. Задайте атрибуту `httpGetEnabled` значение `true`, а атрибуту `policyVersion` значение Policy15. `httpGetEnabled` позволяет службе отвечать на запросы метаданных, переданные с помощью запроса HTTP GET. `policyVersion` Сообщает службе для обеспечения соответствия спецификации WS-Policy 1.5, при создании метаданных.  
+4. Добавьте элемент `<serviceMetadata>` в элемент `<behavior>`. Задайте атрибуту `httpGetEnabled` значение `true`, а атрибуту `policyVersion` значение Policy15. `httpGetEnabled` позволяет службе отвечать на запросы метаданных, переданные с помощью запроса HTTP GET. `policyVersion` Сообщает службе для обеспечения соответствия спецификации WS-Policy 1.5, при создании метаданных.  
 
-5.  Добавьте атрибут `behaviorConfiguration` элементу name и задайте атрибут`<service>`&lt;behavior&gt; элемента`name`, добавленного на шаге 1, как показано в следующем примере кода.  
+5. Добавьте атрибут `behaviorConfiguration` элементу `<service>`name и задайте атрибут`name`&lt;behavior&gt; элемента`<behavior>`, добавленного на шаге 1, как показано в следующем примере кода.  
   
     ```xml  
     <services>  
@@ -119,7 +119,7 @@ namespace Metadata.Samples
     </behaviors>  
     ```  
   
-6.  Добавьте один или несколько элементов IMetadataExchange с контрактом`<endpoint>`, как показано в следующем примере кода.  
+6. Добавьте один или несколько элементов `<endpoint>`IMetadataExchange с контрактом`IMetadataExchange`, как показано в следующем примере кода.  
   
     ```xml  
     <services>  
@@ -138,7 +138,7 @@ namespace Metadata.Samples
     </services>  
     ```  
   
-7.  В конечных точках метаданных, добавленных на предыдущем шаге, присвойте атрибуту `binding` одно из следующих значений:  
+7. В конечных точках метаданных, добавленных на предыдущем шаге, присвойте атрибуту `binding` одно из следующих значений:  
   
     -   `mexHttpBinding` для публикации по HTTP.  
   
@@ -148,7 +148,7 @@ namespace Metadata.Samples
   
     -   `mexTcpBinding` для публикации по TCP.  
   
-8.  В конечных точках метаданных, добавленных на предыдущем шаге, задайте для адреса одно из следующих значений:  
+8. В конечных точках метаданных, добавленных на предыдущем шаге, задайте для адреса одно из следующих значений:  
   
     -   пустую строку, чтобы использовать в качестве точки публикации базовый адрес ведущего приложения, если базовый адрес совпадает с привязкой метаданных;  
   
@@ -162,7 +162,7 @@ namespace Metadata.Samples
   
 ### <a name="to-use-default-endpoints"></a>Использование конечных точек по умолчанию  
   
-1.  Чтобы настроить метаданные в службе, которая использует конечные точки по умолчанию, укажите <xref:System.ServiceModel.Description.ServiceMetadataBehavior> в файле конфигурации, как показано в предыдущем примере, но не указывайте конечные точки. Файл конфигурации будет иметь следующий вид.  
+1. Чтобы настроить метаданные в службе, которая использует конечные точки по умолчанию, укажите <xref:System.ServiceModel.Description.ServiceMetadataBehavior> в файле конфигурации, как показано в предыдущем примере, но не указывайте конечные точки. Файл конфигурации будет иметь следующий вид.  
   
     ```xml  
     <configuration>  
