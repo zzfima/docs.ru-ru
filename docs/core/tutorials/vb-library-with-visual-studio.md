@@ -7,12 +7,12 @@ ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 1fddbfd84164a95505cff1783e241ea9001231f5
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: f14e4ffbebfe0d7e01d548a6d4f2dc8924633682
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362045"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157304"
 ---
 # <a name="build-a-net-standard-library-with-visual-basic-and-the-net-core-sdk-in-visual-studio-2017"></a>Создание библиотеки .NET Standard с помощью Visual Basic и пакета SDK для .NET Core в Visual Studio 2017
 
@@ -62,8 +62,6 @@ ms.locfileid: "54362045"
 1. В строке меню выберите **Сборка** > **Собрать решение**. Проект должен скомпилироваться без ошибок.
 
    ![Область вывода, показывающая успешное завершение сборки](./media/library-with-visual-studio/output-pane-successful-build.png)
-
-
 
 ## <a name="next-step"></a>Дальнейшие действия
 

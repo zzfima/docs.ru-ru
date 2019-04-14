@@ -4,12 +4,12 @@ description: Обзор инструмента Microsoft WCF Web Service Referen
 author: mlacouture
 ms.date: 04/19/2018
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 3566a92e05c03cc77e59a14e3b2521a1d6d0758a
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 3452a6a598e255dd9a32629d8ef0589b88f9c00f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245578"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197078"
 ---
 # <a name="use-the-wcf-web-service-reference-provider-tool"></a>Использование инструмента WCF Web Service Reference Provider
 
@@ -54,7 +54,6 @@ ms.locfileid: "53245578"
     
     3в. Нажмите кнопку **Далее**, чтобы открыть страницы **Параметры типа данных** и **Параметры клиента**. Можно также нажать кнопку **Готово**, чтобы использовать параметры по умолчанию.
 
-
 4. Форма **Параметры типа данных** позволяет уточнить созданные параметры конфигурации для ссылок на службу:
 
 ![Вкладка параметров типов данных в Visual Studio для .NET Core](./media/wcf-web-service-reference-guide/wcfcs-DataTypesPage.png)
@@ -65,7 +64,6 @@ ms.locfileid: "53245578"
 При загрузке сведений о типах может возникнуть задержка, которая зависит от числа зависимостей проекта и других факторов, связанных с производительностью системы. Кнопка **Готово** во время загрузки недоступна, если только не снят флажок **Повторно использовать типы в сборках, на которые есть ссылки**.
 
 5. По завершении нажмите кнопку **Готово**.
-
 
 Отображая ход выполнения, инструмент:
 

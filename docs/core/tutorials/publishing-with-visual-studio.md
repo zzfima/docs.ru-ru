@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 10/05/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: ae202d8102d470e4260394f427e861750d4f0ee6
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 0322d44ca37ab8e7faa3188887069c2e04ec755b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362474"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110270"
 ---
 # <a name="publish-your-net-core-hello-world-application-with-visual-studio-2017"></a>Публикация приложения Hello World .NET Core в Visual Studio 2017
 
@@ -25,7 +25,6 @@ ms.locfileid: "54362474"
 1. Щелкните проект **HelloWorld** (не решение HelloWorld) правой кнопкой мыши и выберите **Опубликовать**. Также можно выбрать **Публикация HelloWorld** из раздела **Сборка** в главном меню Visual Studio.
 
    ![Контекстное меню "Опубликовать" в Visual Studio](media/publishing-with-visual-studio/publish-context-menu.png)
-
 
    ![Окно публикации в Visual Studio](media/publishing-with-visual-studio/publish-settings-window.png)
 
