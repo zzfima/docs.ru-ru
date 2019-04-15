@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Удаление сборки из глобального кэша сборок
+title: Практическое руководство. Удаление сборки из глобального кэша сборок
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: acdcc588-b458-436d-876c-726de68244c1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a8077125ac99fa1d8f5b22ac3864fcc17213fa6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ff00e2f1d266243f0453f004564f2ed802d26c85
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54639651"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338726"
 ---
-# <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a>Как выполнить Удаление сборки из глобального кэша сборок
+# <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a>Практическое руководство. Удаление сборки из глобального кэша сборок
 Существует два способа удаления сборки из глобального кэша сборок.  
   
 -   С помощью [средства глобального кэша сборок (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md). Этот вариант можно использовать для удаления сборок, помещенных в глобальный кэш сборок во время разработки и тестирования.  
@@ -29,7 +29,7 @@ ms.locfileid: "54639651"
   
 ### <a name="removing-an-assembly-with-gacutilexe"></a>Удаление сборки с помощью Gacutil.exe  
   
-1.  В командной строке введите следующую команду:  
+1. В командной строке введите следующую команду:  
   
      **gacutil –u** \<*имя_сборки*>  
   
@@ -46,12 +46,13 @@ gacutil -u hello
   
 ### <a name="removing-an-assembly-with-windows-installer"></a>Удаление сборки с помощью установщика Windows  
   
-1.  В разделе **Программы и компоненты** на **панели управления** выберите приложение, которое нужно удалить. Если пакет установки разместил сборки в глобальном кэше сборок, установщик Windows удалит их, если они не используются другим приложением.  
+1. В разделе **Программы и компоненты** на **панели управления** выберите приложение, которое нужно удалить. Если пакет установки разместил сборки в глобальном кэше сборок, установщик Windows удалит их, если они не используются другим приложением.  
   
     > [!NOTE]
     >  Установщик Windows ведет счетчик ссылок для сборок, установленных в глобальном кэше сборок. Сборка удаляется из глобального кэша сборок только в том случае, если число ссылок на нее достигает нуля, то есть если она не используется ни одним приложением, установленным с помощью пакета установщика Windows.  
   
 ## <a name="see-also"></a>См. также
+
 - [Работа со сборками и глобальным кэшем сборок](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)
 - [Практическое руководство. Установка сборки в глобальный кэш сборок](../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)
 - [Gacutil.exe (программа глобального кэша сборок)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)

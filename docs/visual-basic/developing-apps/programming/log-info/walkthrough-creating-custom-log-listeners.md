@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom log listeners
 - My.Application.Log object, custom log listeners
 ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
-ms.openlocfilehash: c38b6d227859a962c320a0fb2f059294ccacfcfb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 07c13d22235f1198188d26122c137db1d91e64e8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831930"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342464"
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>Пошаговое руководство. Создание пользовательских прослушивателей журнала (Visual Basic)
 В этом пошаговом руководстве демонстрируется создание пользовательского прослушивателя журнала и его настройка на прослушивание выходных данных объекта `My.Application.Log`.  
@@ -37,23 +37,23 @@ ms.locfileid: "58831930"
   
 #### <a name="to-strongly-name-the-log-listener-assembly"></a>Задание строгого имени сборке прослушивателя журнала  
   
-1.  Выберите проект в **Обозревателе решений**. В меню **Проект** выберите пункт **Свойства**.   
+1. Выберите проект в **Обозревателе решений**. В меню **Проект** выберите пункт **Свойства**.   
   
-2.  Откройте вкладку **Подписывание**.  
+2. Откройте вкладку **Подписывание**.  
   
-3.  Выберите поле **Подписать сборку**.  
+3. Выберите поле **Подписать сборку**.  
   
-4.  В раскрывающемся списке **Выберите файл ключа строгого имени** щелкните **\<Новый...>**.  
+4. В раскрывающемся списке **Выберите файл ключа строгого имени** щелкните **\<Новый...>**.  
   
      Откроется диалоговое окно **Создание ключа строгого имени**.  
   
-5.  Укажите имя для файла ключа в поле **Имя файла ключа**.  
+5. Укажите имя для файла ключа в поле **Имя файла ключа**.  
   
-6.  Введите пароль в поля **Введите пароль** и **Подтверждение пароля**.  
+6. Введите пароль в поля **Введите пароль** и **Подтверждение пароля**.  
   
-7.  Нажмите кнопку **ОК**.  
+7. Нажмите кнопку **ОК**.  
   
-8.  Перестройте приложение.  
+8. Перестройте приложение.  
   
 ## <a name="adding-the-listener"></a>Добавление прослушивателя  
  Теперь, когда сборка имеет строгое имя, необходимо определить строгое имя прослушивателя, чтобы объект `My.Application.Log` использовал прослушиватель журнала.  
@@ -74,7 +74,7 @@ ms.locfileid: "58831930"
   
 #### <a name="to-add-the-listener-to-myapplicationlog"></a>Добавление прослушивателя в My.Application.Log  
   
-1.  Щелкните правой кнопкой мыши файл app.config в **обозревателе решений** и выберите команду **Открыть**.  
+1. Щелкните правой кнопкой мыши файл app.config в **обозревателе решений** и выберите команду **Открыть**.  
   
      - или -  
   
@@ -86,17 +86,17 @@ ms.locfileid: "58831930"
   
     3.  Нажмите кнопку **Добавить**.  
   
-2.  Найдите раздел `<listeners>` в разделе `<source>` с атрибутом `name` , равным DefaultSource, в разделе `<sources>` . Раздел `<sources>` находится в разделе `<system.diagnostics>` в разделе `<configuration>` верхнего уровня.  
+2. Найдите раздел `<listeners>` в разделе `<source>` с атрибутом `name` , равным DefaultSource, в разделе `<sources>` . Раздел `<sources>` находится в разделе `<system.diagnostics>` в разделе `<configuration>` верхнего уровня.  
   
-3.  Добавьте этот элемент в раздел `<listeners>`:  
+3. Добавьте этот элемент в раздел `<listeners>`:  
   
     ```xml  
     <add name="SimpleLog" />  
     ```  
   
-4.  Найдите раздел `<sharedListeners>` в разделе `<system.diagnostics>` в разделе `<configuration>` верхнего уровня.  
+4. Найдите раздел `<sharedListeners>` в разделе `<system.diagnostics>` в разделе `<configuration>` верхнего уровня.  
   
-5.  Добавьте в этот раздел `<sharedListeners>` следующий элемент:  
+5. Добавьте в этот раздел `<sharedListeners>` следующий элемент:  
   
     ```xml  
     <add name="SimpleLog" type="SimpleLogStrongName" />  
@@ -108,6 +108,6 @@ ms.locfileid: "58831930"
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - [Работа с журналами приложения](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [Практическое руководство. Исплючения журналов](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
+- [Практическое руководство. Запись исключений в журнал](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
 - [Практическое руководство. Запись сообщений в журнал](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
-- [Пошаговое руководство: Изменение места записи сведений для My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+- [Пошаговое руководство. Изменение места записи сведений для My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)

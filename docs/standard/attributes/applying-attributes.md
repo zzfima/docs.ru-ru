@@ -12,23 +12,23 @@ helpviewer_keywords:
 ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83fe9180e222dd71c9d94810e4eedbac398acad4
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 2a2e34d0544c8105b539d36a4231c6efb4df0ee5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836478"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337699"
 ---
 # <a name="applying-attributes"></a>Применение атрибутов
 Чтобы применить атрибут к элементу кода, выполните указанные ниже действия.  
   
-1.  Определите новый атрибут или используйте уже существующий, импортировав его пространство имен из .NET Framework.  
+1. Определите новый атрибут или используйте уже существующий, импортировав его пространство имен из .NET Framework.  
   
-2.  Примените атрибут к элементу кода, поместив его непосредственно перед элементом.  
+2. Примените атрибут к элементу кода, поместив его непосредственно перед элементом.  
   
      Каждый язык имеет собственный синтаксис атрибутов. В C++ и C# атрибут заключается в квадратные скобки и отделяется от элемента пробелами (к которым относится и разрыв строк). В Visual Basic атрибут заключается в угловые скобки и должен находиться на той же логической строке; если строку необходимо разбить, можно использовать символ продолжения строки.
   
-3.  Укажите позиционные и именованные параметры атрибута.  
+3. Укажите позиционные и именованные параметры атрибута.  
   
      Позиционные параметры обязательны и должны быть указаны перед именованными параметрами; они соответствуют параметрам одного из конструкторов атрибута. Именованные параметры необязательны и соответствуют свойствам чтения и записи атрибута. В C++ и C# укажите `name`=`value` для каждого необязательного параметра, где `name` — это имя свойства. В Visual Basic укажите `name`:=`value`.  
   
@@ -57,5 +57,5 @@ ms.locfileid: "56836478"
 - [Атрибуты](../../../docs/standard/attributes/index.md)
 - [Извлечение информации, сохраненной в атрибуте](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)
 - [Основные понятия](/cpp/windows/attributed-programming-concepts)
-- [Атрибуты (C#)](../../csharp/programming-guide/concepts/attributes/index.md)
+- [Атрибуты (C#)](../../csharp/programming-guide/concepts/attributes/index.md)
 - [Общие сведения об атрибутах (Visual Basic)](../../visual-basic/programming-guide/concepts/attributes/index.md)

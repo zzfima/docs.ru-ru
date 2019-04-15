@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Изучение универсальных типов и создание их экземпляров при помощи отражения
+title: Практическое руководство. Изучение универсальных типов и создание их экземпляров при помощи отражения
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,63 +11,63 @@ helpviewer_keywords:
 ms.assetid: f93b03b0-1778-43fc-bc6d-35983d210e74
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 69864e647a7cf4e6193f4eb76ce2b7bc93b09404
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ddddc746eb29c526adb8a15fc6ac40acc22954cf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622056"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337231"
 ---
-# <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>Как выполнить Изучение универсальных типов и создание их экземпляров при помощи отражения
+# <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>Практическое руководство. Изучение универсальных типов и создание их экземпляров при помощи отражения
 Сведения об универсальных типах получаются аналогично сведениям о других типах: путем изучения объекта <xref:System.Type>, который представляет универсальный тип. Принципиальная разница заключается в том, что универсальный тип имеет список объектов <xref:System.Type>, представляющих его параметры универсального типа. В первой процедуре данного раздела изучаются универсальные типы.  
   
  Можно создать объект <xref:System.Type>, представляющий сконструированный тип, путем привязки аргументов типа к параметрам типа определения универсального типа. Это демонстрируется во второй процедуре.  
   
 ### <a name="to-examine-a-generic-type-and-its-type-parameters"></a>Изучение универсального типа и его параметров типа  
   
-1.  Получите экземпляр класса <xref:System.Type>, который представляет этот универсальный тип. В следующем коде этот тип получается с помощью оператора C# `typeof` (`GetType` в Visual Basic, `typeid` в Visual C++). Другие способы получения объекта <xref:System.Type> см. в теме, посвященной объекту <xref:System.Type>. Обратите внимание, что в оставшейся части этой процедуры этот тип содержится в параметре метода с именем `t`.  
+1. Получите экземпляр класса <xref:System.Type>, который представляет этот универсальный тип. В следующем коде этот тип получается с помощью оператора C# `typeof` (`GetType` в Visual Basic, `typeid` в Visual C++). Другие способы получения объекта <xref:System.Type> см. в теме, посвященной объекту <xref:System.Type>. Обратите внимание, что в оставшейся части этой процедуры этот тип содержится в параметре метода с именем `t`.  
   
      [!code-cpp[HowToGeneric#2](../../../samples/snippets/cpp/VS_Snippets_CLR/HowToGeneric/cpp/ur.cpp#2)]
      [!code-csharp[HowToGeneric#2](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/ur.cs#2)]
      [!code-vb[HowToGeneric#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/ur.vb#2)]  
   
-2.  Для определения того, является ли тип универсальным, используется свойство <xref:System.Type.IsGenericType%2A>, а для определения того, является ли тип определением универсального типа, свойство <xref:System.Type.IsGenericTypeDefinition%2A>.  
+2. Для определения того, является ли тип универсальным, используется свойство <xref:System.Type.IsGenericType%2A>, а для определения того, является ли тип определением универсального типа, свойство <xref:System.Type.IsGenericTypeDefinition%2A>.  
   
      [!code-cpp[HowToGeneric#3](../../../samples/snippets/cpp/VS_Snippets_CLR/HowToGeneric/cpp/ur.cpp#3)]
      [!code-csharp[HowToGeneric#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/ur.cs#3)]
      [!code-vb[HowToGeneric#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/ur.vb#3)]  
   
-3.  Получите массив, содержащий аргументы универсального типа, с использованием метода <xref:System.Type.GetGenericArguments%2A>.  
+3. Получите массив, содержащий аргументы универсального типа, с использованием метода <xref:System.Type.GetGenericArguments%2A>.  
   
      [!code-cpp[HowToGeneric#4](../../../samples/snippets/cpp/VS_Snippets_CLR/HowToGeneric/cpp/ur.cpp#4)]
      [!code-csharp[HowToGeneric#4](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/ur.cs#4)]
      [!code-vb[HowToGeneric#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/ur.vb#4)]  
   
-4.  Для каждого аргумента типа следует определить, является ли он параметром типа (например, в определении универсального типа) или типом, который был задан для параметра типа (например, в сконструированном типе) с использованием свойства <xref:System.Type.IsGenericParameter%2A>.  
+4. Для каждого аргумента типа следует определить, является ли он параметром типа (например, в определении универсального типа) или типом, который был задан для параметра типа (например, в сконструированном типе) с использованием свойства <xref:System.Type.IsGenericParameter%2A>.  
   
      [!code-cpp[HowToGeneric#5](../../../samples/snippets/cpp/VS_Snippets_CLR/HowToGeneric/cpp/ur.cpp#5)]
      [!code-csharp[HowToGeneric#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/ur.cs#5)]
      [!code-vb[HowToGeneric#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/ur.vb#5)]  
   
-5.  В системе типов параметр универсального типа представлен экземпляром класса <xref:System.Type>, как обычные типы. В следующем примере показано имя и расположение параметра для объекта <xref:System.Type>, который представляет параметр универсального типа. В этом примере определить положение параметра не представляет труда; эти сведения более важны при изучении параметра типа, который используется в качестве аргумента типа для другого универсального типа.  
+5. В системе типов параметр универсального типа представлен экземпляром класса <xref:System.Type>, как обычные типы. В следующем примере показано имя и расположение параметра для объекта <xref:System.Type>, который представляет параметр универсального типа. В этом примере определить положение параметра не представляет труда; эти сведения более важны при изучении параметра типа, который используется в качестве аргумента типа для другого универсального типа.  
   
      [!code-cpp[HowToGeneric#6](../../../samples/snippets/cpp/VS_Snippets_CLR/HowToGeneric/cpp/ur.cpp#6)]
      [!code-csharp[HowToGeneric#6](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/ur.cs#6)]
      [!code-vb[HowToGeneric#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/ur.vb#6)]  
   
-6.  Определите ограничение базового типа и ограничения интерфейса параметра универсального типа с использованием метода <xref:System.Type.GetGenericParameterConstraints%2A>, чтобы получить все ограничения в одном массиве. Расположение ограничений в конкретном порядке не гарантируется.  
+6. Определите ограничение базового типа и ограничения интерфейса параметра универсального типа с использованием метода <xref:System.Type.GetGenericParameterConstraints%2A>, чтобы получить все ограничения в одном массиве. Расположение ограничений в конкретном порядке не гарантируется.  
   
      [!code-cpp[HowToGeneric#7](../../../samples/snippets/cpp/VS_Snippets_CLR/HowToGeneric/cpp/ur.cpp#7)]
      [!code-csharp[HowToGeneric#7](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/ur.cs#7)]
      [!code-vb[HowToGeneric#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/ur.vb#7)]  
   
-7.  При помощи свойства <xref:System.Type.GenericParameterAttributes%2A> выявите особые ограничения для параметра типа, например требования, чтобы он являлся ссылочным типом. Это свойство содержит значения, представляющие расхождение, которое можно замаскировать, как показано в следующем коде.  
+7. При помощи свойства <xref:System.Type.GenericParameterAttributes%2A> выявите особые ограничения для параметра типа, например требования, чтобы он являлся ссылочным типом. Это свойство содержит значения, представляющие расхождение, которое можно замаскировать, как показано в следующем коде.  
   
      [!code-cpp[HowToGeneric#8](../../../samples/snippets/cpp/VS_Snippets_CLR/HowToGeneric/cpp/ur.cpp#8)]
      [!code-csharp[HowToGeneric#8](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/ur.cs#8)]
      [!code-vb[HowToGeneric#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/ur.vb#8)]  
   
-8.  Атрибуты особого ограничения являются флагами, флаг (<xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>), который не представляет особые ограничения, также не представляет ковариацию или контрвариацию. Таким образом, для проверки любого из этих условий необходимо использовать подходящую маску. В этом случае следует использовать свойство <xref:System.Reflection.GenericParameterAttributes.SpecialConstraintMask?displayProperty=nameWithType> для изоляции флагов особых ограничений.  
+8. Атрибуты особого ограничения являются флагами, флаг (<xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>), который не представляет особые ограничения, также не представляет ковариацию или контрвариацию. Таким образом, для проверки любого из этих условий необходимо использовать подходящую маску. В этом случае следует использовать свойство <xref:System.Reflection.GenericParameterAttributes.SpecialConstraintMask?displayProperty=nameWithType> для изоляции флагов особых ограничений.  
   
      [!code-cpp[HowToGeneric#9](../../../samples/snippets/cpp/VS_Snippets_CLR/HowToGeneric/cpp/ur.cpp#9)]
      [!code-csharp[HowToGeneric#9](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/ur.cs#9)]
@@ -78,25 +78,25 @@ ms.locfileid: "54622056"
   
 #### <a name="to-construct-an-instance-of-a-generic-type"></a>Конструирование экземпляра универсального типа  
   
-1.  Получите объект <xref:System.Type>, который представляет универсальный тип. В следующем примере получается универсальный тип <xref:System.Collections.Generic.Dictionary%602> двумя разными способами: с использованием перегруженной версии метода <xref:System.Type.GetType%28System.String%29?displayProperty=nameWithType> со строкой, описывающей этот тип, а также путем вызова метода <xref:System.Type.GetGenericTypeDefinition%2A> для сконструированного типа `Dictionary\<String, Example>` (`Dictionary(Of String, Example)` в Visual Basic). Для метода <xref:System.Type.MakeGenericType%2A> требуется определение универсального типа.  
+1. Получите объект <xref:System.Type>, который представляет универсальный тип. В следующем примере получается универсальный тип <xref:System.Collections.Generic.Dictionary%602> двумя разными способами: с использованием перегруженной версии метода <xref:System.Type.GetType%28System.String%29?displayProperty=nameWithType> со строкой, описывающей этот тип, а также путем вызова метода <xref:System.Type.GetGenericTypeDefinition%2A> для сконструированного типа `Dictionary\<String, Example>` (`Dictionary(Of String, Example)` в Visual Basic). Для метода <xref:System.Type.MakeGenericType%2A> требуется определение универсального типа.  
   
      [!code-cpp[HowToGeneric#10](../../../samples/snippets/cpp/VS_Snippets_CLR/HowToGeneric/cpp/ur.cpp#10)]
      [!code-csharp[HowToGeneric#10](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/ur.cs#10)]
      [!code-vb[HowToGeneric#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/ur.vb#10)]  
   
-2.  Создайте массив аргументов типа, на который будут заменены параметры типа. Этот массив должен содержать правильное количество объектов <xref:System.Type> в том же порядке, в котором они отображаются в списке параметров типа. В этом случае ключ (первый параметр типа) имеет тип <xref:System.String>, а значения в словаре являются экземплярами класса с именем `Example`.  
+2. Создайте массив аргументов типа, на который будут заменены параметры типа. Этот массив должен содержать правильное количество объектов <xref:System.Type> в том же порядке, в котором они отображаются в списке параметров типа. В этом случае ключ (первый параметр типа) имеет тип <xref:System.String>, а значения в словаре являются экземплярами класса с именем `Example`.  
   
      [!code-cpp[HowToGeneric#11](../../../samples/snippets/cpp/VS_Snippets_CLR/HowToGeneric/cpp/ur.cpp#11)]
      [!code-csharp[HowToGeneric#11](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/ur.cs#11)]
      [!code-vb[HowToGeneric#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/ur.vb#11)]  
   
-3.  Вызовите метод <xref:System.Type.MakeGenericType%2A>, чтобы привязать аргументы типа к параметрам типа и сконструировать тип.  
+3. Вызовите метод <xref:System.Type.MakeGenericType%2A>, чтобы привязать аргументы типа к параметрам типа и сконструировать тип.  
   
      [!code-cpp[HowToGeneric#12](../../../samples/snippets/cpp/VS_Snippets_CLR/HowToGeneric/cpp/ur.cpp#12)]
      [!code-csharp[HowToGeneric#12](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/ur.cs#12)]
      [!code-vb[HowToGeneric#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/ur.vb#12)]  
   
-4.  Для создания объекта сконструированного типа используется перегруженная версия метода <xref:System.Activator.CreateInstance%28System.Type%29>. В следующем примере кода два экземпляра класса `Example` сохраняются в итоговом объекте `Dictionary<String, Example>`.  
+4. Для создания объекта сконструированного типа используется перегруженная версия метода <xref:System.Activator.CreateInstance%28System.Type%29>. В следующем примере кода два экземпляра класса `Example` сохраняются в итоговом объекте `Dictionary<String, Example>`.  
   
      [!code-cpp[HowToGeneric#13](../../../samples/snippets/cpp/VS_Snippets_CLR/HowToGeneric/cpp/ur.cpp#13)]
      [!code-csharp[HowToGeneric#13](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/ur.cs#13)]
@@ -124,6 +124,7 @@ ms.locfileid: "54622056"
 -   Скомпилируйте код из командной строки с помощью команд csc.exe, vbc.exe или cl.exe. Для компиляции кода в Visual Studio поместите его в шаблон проекта консольного приложения.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Type>
 - <xref:System.Reflection.MethodInfo>
 - [Отражение и универсальные типы](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)

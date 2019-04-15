@@ -1,5 +1,5 @@
 ---
-title: Как преобразовать фрагмент узла
+title: Практическое руководство. Преобразование фрагмента узла
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,27 +8,27 @@ dev_langs:
 ms.assetid: 73a6c582-b9d7-4fa7-9a05-6d931e1f3de8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eb258b61664e1fdbf6604afdf69074c48cf5bda4
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: fabf7983a1887fb318bfb8d111b3911f4d90c545
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45597301"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345174"
 ---
-# <a name="how-to-transform-a-node-fragment"></a>Как преобразовать фрагмент узла
+# <a name="how-to-transform-a-node-fragment"></a>Практическое руководство. Преобразование фрагмента узла
 Во время преобразования данных, содержащихся в объекте <xref:System.Xml.XmlDocument> или <xref:System.Xml.XPath.XPathDocument>, преобразования XSLT применяются к документу в целом. Иными словами, если передать узел, отличный от корневого узла документа, это не помешает процессу преобразования обратиться ко всем узлам загружаемого документа. Чтобы преобразовать фрагмент узла, необходимо создать отдельный объект, содержащий только этот фрагмент, и передать его методу <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.  
   
 ## <a name="procedures"></a>Процедуры  
   
 #### <a name="to-transform-a-node-fragment"></a>Преобразование фрагмента узла  
   
-1.  Создайте объект, содержащий исходный документ.  
+1. Создайте объект, содержащий исходный документ.  
   
-2.  Определите расположение фрагмента узла для преобразования.  
+2. Определите расположение фрагмента узла для преобразования.  
   
-3.  Создайте отдельный объект, содержащий только фрагмент узла.  
+3. Создайте отдельный объект, содержащий только фрагмент узла.  
   
-4.  Передайте фрагмент узла методу <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.  
+4. Передайте фрагмент узла методу <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.  
   
 ## <a name="example"></a>Пример  
  В следующем примере преобразуется фрагмент узла, а результаты выводятся на консоль.  

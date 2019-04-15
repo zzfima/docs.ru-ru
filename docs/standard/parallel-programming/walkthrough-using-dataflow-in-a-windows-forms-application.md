@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6d27500332c59f24e121c9c15ac27a36ed93d07
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: fd75bd14b2393d9b316d90070894f214dfa60c88
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465806"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344381"
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>Пошаговое руководство. Использование потока данных в приложении Windows Forms
 В этом документе демонстрируется способ создания сети блоков потока данных, которые выполняют обработку изображений в приложении Windows Forms.  
@@ -43,15 +43,15 @@ ms.locfileid: "58465806"
   
 #### <a name="to-create-the-windows-forms-application"></a>Создание приложения Windows Forms  
   
-1.  В Visual Studio создайте проект **Приложение Windows Forms** на Visual C# или Visual Basic. В этом документе проект называется `CompositeImages`.  
+1. В Visual Studio создайте проект **Приложение Windows Forms** на Visual C# или Visual Basic. В этом документе проект называется `CompositeImages`.  
   
-2.  В конструкторе форм главной формы Form1.cs (Form1.vb для Visual Basic) добавьте элемент управления <xref:System.Windows.Forms.ToolStrip>.  
+2. В конструкторе форм главной формы Form1.cs (Form1.vb для Visual Basic) добавьте элемент управления <xref:System.Windows.Forms.ToolStrip>.  
   
-3.  Добавьте элемент управления <xref:System.Windows.Forms.ToolStripButton> к элементу управления <xref:System.Windows.Forms.ToolStrip>. Задайте свойству <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> значение <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>, а свойству <xref:System.Windows.Forms.ToolStripItem.Text%2A> — **Выбрать папку**.  
+3. Добавьте элемент управления <xref:System.Windows.Forms.ToolStripButton> к элементу управления <xref:System.Windows.Forms.ToolStrip>. Задайте свойству <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> значение <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>, а свойству <xref:System.Windows.Forms.ToolStripItem.Text%2A> — **Выбрать папку**.  
   
-4.  Добавьте второй элемент управления <xref:System.Windows.Forms.ToolStripButton> к элементу управления <xref:System.Windows.Forms.ToolStrip>. Задайте свойству <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>значение <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>, свойству <xref:System.Windows.Forms.ToolStripItem.Text%2A> значение **Отмена**, а свойству <xref:System.Windows.Forms.ToolStripItem.Enabled%2A> — значение `False`.  
+4. Добавьте второй элемент управления <xref:System.Windows.Forms.ToolStripButton> к элементу управления <xref:System.Windows.Forms.ToolStrip>. Задайте свойству <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>значение <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>, свойству <xref:System.Windows.Forms.ToolStripItem.Text%2A> значение **Отмена**, а свойству <xref:System.Windows.Forms.ToolStripItem.Enabled%2A> — значение `False`.  
   
-5.  Добавьте объект <xref:System.Windows.Forms.PictureBox> на главную форму. Задайте для свойства <xref:System.Windows.Forms.Control.Dock%2A> значение <xref:System.Windows.Forms.DockStyle.Fill>.  
+5. Добавьте объект <xref:System.Windows.Forms.PictureBox> на главную форму. Задайте для свойства <xref:System.Windows.Forms.Control.Dock%2A> значение <xref:System.Windows.Forms.DockStyle.Fill>.  
   
 <a name="network"></a>   
 ## <a name="creating-the-dataflow-network"></a>Создание сети потока данных  
@@ -59,25 +59,25 @@ ms.locfileid: "58465806"
   
 #### <a name="to-create-the-dataflow-network"></a>Создание сети потока данных  
   
-1.  В своем проекте добавьте ссылку на System.Threading.Tasks.Dataflow.dll.  
+1. В своем проекте добавьте ссылку на System.Threading.Tasks.Dataflow.dll.  
   
-2.  Убедитесь, что Form1.cs (Form1.vb для Visual Basic) содержит следующие операторы `using` (`Using` в Visual Basic).  
+2. Убедитесь, что Form1.cs (Form1.vb для Visual Basic) содержит следующие операторы `using` (`Using` в Visual Basic).  
   
      [!code-csharp[TPLDataflow_CompositeImages#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#1)]  
   
-3.  Добавьте в класс `Form1` следующие данные-члены.  
+3. Добавьте в класс `Form1` следующие данные-члены.  
   
      [!code-csharp[TPLDataflow_CompositeImages#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#2)]  
   
-4.  Добавьте в класс `CreateImageProcessingNetwork` метод `Form1`. Этот метод создает сеть обработки изображений.  
+4. Добавьте в класс `CreateImageProcessingNetwork` метод `Form1`. Этот метод создает сеть обработки изображений.  
   
      [!code-csharp[TPLDataflow_CompositeImages#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#3)]  
   
-5.  Выполните метод `LoadBitmaps`.  
+5. Выполните метод `LoadBitmaps`.  
   
      [!code-csharp[TPLDataflow_CompositeImages#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#4)]  
   
-6.  Выполните метод `CreateCompositeBitmap`.  
+6. Выполните метод `CreateCompositeBitmap`.  
   
      [!code-csharp[TPLDataflow_CompositeImages#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#5)]  
   
@@ -109,15 +109,15 @@ ms.locfileid: "58465806"
   
 #### <a name="to-connect-the-dataflow-network-to-the-user-interface"></a>Подключение сети потока данных к пользовательскому интерфейсу  
   
-1.  В конструкторе форм главной формы создайте обработчик событий для события <xref:System.Windows.Forms.ToolStripItem.Click> кнопки **Выбрать папку**.  
+1. В конструкторе форм главной формы создайте обработчик событий для события <xref:System.Windows.Forms.ToolStripItem.Click> кнопки **Выбрать папку**.  
   
-2.  Реализуйте событие <xref:System.Windows.Forms.ToolStripItem.Click> кнопки **Выбрать папку**.  
+2. Реализуйте событие <xref:System.Windows.Forms.ToolStripItem.Click> кнопки **Выбрать папку**.  
   
      [!code-csharp[TPLDataflow_CompositeImages#6](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#6)]  
   
-3.  В конструкторе форм главной формы создайте обработчик событий для события <xref:System.Windows.Forms.ToolStripItem.Click> кнопки **Отмена**.  
+3. В конструкторе форм главной формы создайте обработчик событий для события <xref:System.Windows.Forms.ToolStripItem.Click> кнопки **Отмена**.  
   
-4.  Реализуйте событие <xref:System.Windows.Forms.ToolStripItem.Click> для кнопки **Отмена**.  
+4. Реализуйте событие <xref:System.Windows.Forms.ToolStripItem.Click> для кнопки **Отмена**.  
   
      [!code-csharp[TPLDataflow_CompositeImages#7](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#7)]  
   
