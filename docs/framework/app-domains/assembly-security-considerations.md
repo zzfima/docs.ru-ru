@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 862488a157c1030335c5f8e3d02f9f411be6d9a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e74d7a4a72b9595d6a280a16ad9bbc4118648404
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589575"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218074"
 ---
 # <a name="assembly-security-considerations"></a>Вопросы безопасности сборок
 <a name="top"></a> При создании сборки можно указать набор разрешений, который требуется для ее выполнения. От свидетельства зависит, предоставляются ли сборке определенные разрешения.  
@@ -63,6 +63,7 @@ ms.locfileid: "54589575"
  Так как строгое именование и подпись с помощью [SignTool.exe (программы подписывания)](../../../docs/framework/tools/signtool-exe.md) гарантирует целостность, политику управления доступом для кода можно основать на этих двух видах свидетельства сборки. Строгое именование и подпись с помощью [SignTool.exe (программы подписывания)](../../../docs/framework/tools/signtool-exe.md) гарантируют целостность благодаря цифровым подписям и сертификатам. Все перечисленные технологии (проверка хэша, использование строгих имен и цифровая подпись с помощью [SignTool.exe (программы подписывания)](../../../docs/framework/tools/signtool-exe.md)) используются вместе, чтобы гарантировать, что сборка не была каким-либо образом изменена.  
   
 ## <a name="see-also"></a>См. также
+
 - [Сборки со строгими именами](../../../docs/framework/app-domains/strong-named-assemblies.md)
 - [Сборки в среде CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
 - [SignTool.exe (программа подписывания)](../../../docs/framework/tools/signtool-exe.md)

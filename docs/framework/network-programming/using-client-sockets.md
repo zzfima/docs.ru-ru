@@ -16,12 +16,12 @@ helpviewer_keywords:
 - sockets, client sockets
 - client sockets
 ms.assetid: 81de9f59-8177-4d98-b25d-43fc32a98383
-ms.openlocfilehash: 42cea87576ca4c5cbca685c6d71272649eabb844
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b99720b9653b8454419acd35085bfe9a7ac4b5af
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562857"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171396"
 ---
 # <a name="using-client-sockets"></a>Использование сокетов клиента
 Перед инициацией взаимодействия через <xref:System.Net.Sockets.Socket> необходимо создать канал передачи данных между приложением и удаленным устройством. В этом примере показано, как создать подключение TCP/IP к удаленном устройству (хотя существуют и другие семейства сетевых адресов и протоколы).  
@@ -78,7 +78,8 @@ try {
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Использование синхронного сокета клиента](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)
 - [Использование асинхронных сокетов клиента](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)
 - [Практическое руководство. Создание сокета](../../../docs/framework/network-programming/how-to-create-a-socket.md)
-- [Сокеты](../../../docs/framework/network-programming/sockets.md)
+- [сокеты](../../../docs/framework/network-programming/sockets.md)

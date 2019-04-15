@@ -7,12 +7,12 @@ dev_langs:
 ms.assetid: 33f97d13-3022-43da-8b18-cdb5c88df9c2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: abfbea052072f0b90c9d018b520b67878d235701
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 70fab3dc418e3eb92e39a7c2b1365e8582b81834
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506814"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125098"
 ---
 # <a name="mitigation-tls-protocols"></a>Устранение рисков. Протоколы TLS
 Начиная с версии .NET Framework 4.6 классы <xref:System.Net.ServicePointManager?displayProperty=nameWithType> и <xref:System.Net.Security.SslStream?displayProperty=nameWithType> могут использовать один из трех протоколов: Tls1.0, Tls1.1 или Tls 1.2. Протокол SSL 3.0 и шифрование RC4 не поддерживаются.  
@@ -43,4 +43,5 @@ ms.locfileid: "54506814"
  Следует, тем не менее, заметить, что отказ от поведения по умолчанию не рекомендуется, поскольку приводит к снижению безопасности приложения.  
   
 ## <a name="see-also"></a>См. также
+
 - [Изменение целевой платформы](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)

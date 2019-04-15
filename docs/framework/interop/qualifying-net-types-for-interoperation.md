@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a40b9524990213eaaf2ed78503b6f831776306ec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8cad67f52a4ca977606d7b5a307868ff129570e6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524316"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097981"
 ---
 # <a name="qualifying-net-types-for-interoperation"></a>Уточнение типов .NET для взаимодействия
 Если вы планируете предоставлять типы в сборке COM-приложениям, во время разработки необходимо учитывать требования COM-взаимодействия. Управляемые типы (класс, интерфейс, структура и перечисление) легко интегрируются с COM-типами, если следовать приведенным ниже рекомендациям:  
@@ -48,8 +48,9 @@ ms.locfileid: "54524316"
  При экспорте в модель COM иерархия наследования управляемого типа преобразуется в плоскую структуру. Кроме того, в управляемой и неуправляемой средах существуют различия в управлении версиями. Типы, предоставляемые модели COM, имеют характеристики управления версиями, отличные от других управляемых типов.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Runtime.InteropServices.ComVisibleAttribute>
-- [Предоставление компонентов .NET Framework клиентам COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
-- [Introducing the class interface](com-callable-wrapper.md#introducing-the-class-interface) (Введение в интерфейс класса)
+- [Предоставление COM-клиентам доступа к компонентам .NET Framework](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
+- [Введение в интерфейс класса](com-callable-wrapper.md#introducing-the-class-interface)
 - [Применение атрибутов взаимодействия](../../../docs/framework/interop/applying-interop-attributes.md)
 - [Упаковка сборки для модели COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md)

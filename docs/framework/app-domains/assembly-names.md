@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9b210ea2126058d38c2586c5bdd0d94af2abab30
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6bdd27511de18c6cb119ddbf8621c43606c82ad4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529821"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195830"
 ---
 # <a name="assembly-names"></a>Имена сборок
 Имя сборки хранится в метаданных и в значительной степени влияет на ее область определения и использование в приложениях. Сборки со строгим именем имеют полное имя, в состав которого входит имя сборки, язык и региональные параметры, открытый ключ и номер версии. Оно часто называется отображаемым именем; у загружаемых сборок его можно получить через свойство <xref:System.Reflection.Assembly.FullName%2A>.  
@@ -58,9 +58,10 @@ System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e08
 >  Если сборка со строгим именем помещается в глобальный кэш сборок, то имя файла сборки должно соответствовать имени сборки (без учета расширения файла — например EXE или DLL). Так, если имя файла сборки — myAssembly.dll, то именем сборки должно быть myAssembly. Имена закрытых сборок, развертываемых только в корневом каталоге приложения, могут отличаться от соответствующих файловых имен.  
   
 ## <a name="see-also"></a>См. также
-- [Практическое руководство. Определение полного имени сборки](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)
+
+- [Практическое руководство. определение полного имени сборки](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)
 - [Создание сборок](../../../docs/framework/app-domains/create-assemblies.md)
 - [Сборки со строгими именами](../../../docs/framework/app-domains/strong-named-assemblies.md)
-- [Глобальный кэш сборок](../../../docs/framework/app-domains/gac.md)
+- [глобальный кэш сборок](../../../docs/framework/app-domains/gac.md)
 - [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Программирование с использованием сборок](../../../docs/framework/app-domains/programming-with-assemblies.md)

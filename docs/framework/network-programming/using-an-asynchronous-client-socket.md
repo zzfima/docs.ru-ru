@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: fd85bc88-e06c-467d-a30d-9fd7cffcfca1
-ms.openlocfilehash: 54a8209c7dee2d1c26b4a66223b5f727d7765c11
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d7020b6bc5049101ec08329d53d966771e38035
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497450"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168900"
 ---
 # <a name="using-an-asynchronous-client-socket"></a>Использование асинхронных сокетов клиента
 Асинхронный сокет клиента не приостанавливает работу приложения на то время, пока выполняются сетевые операции. Вместо этого он использует стандартную модель асинхронного программирования .NET Framework для обработки операций сетевого подключения в одном потоке, пока приложение продолжает работу в изначальном потоке. Асинхронные сокеты подходят для приложений, которые интенсивно используют сеть или не могут ждать, пока сетевые операции завершатся.  
@@ -286,6 +286,7 @@ private static void ReceiveCallback( IAsyncResult ar ) {
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Использование синхронного сокета клиента](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)
-- [Прослушивание с помощью сокетов](../../../docs/framework/network-programming/listening-with-sockets.md)
+- [прослушивание с помощью сокетов](../../../docs/framework/network-programming/listening-with-sockets.md)
 - [Примеры асинхронных сокетов клиента](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)

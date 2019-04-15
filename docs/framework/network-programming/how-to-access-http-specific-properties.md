@@ -1,18 +1,18 @@
 ---
-title: Как выполнить Доступ к свойствам, относящимся с HTTP
+title: Практическое руководство. Доступ к свойствам, относящимся с HTTP
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f8848c7e-f5c5-4d42-b86d-9951ff8f4146
-ms.openlocfilehash: da696e40248a077e6b8e32e077509bc8a0b589b6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 107e57ca947012f5e2f65835d684f5e6068b3681
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619731"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176596"
 ---
-# <a name="how-to-access-http-specific-properties"></a>Как выполнить Доступ к свойствам, относящимся с HTTP
+# <a name="how-to-access-http-specific-properties"></a>Практическое руководство. Доступ к свойствам, относящимся с HTTP
 В этом примере показано, как отключить функции HTTP **Keep-alive** и получить номер версии протокола с веб-сервера.  
   
 ## <a name="example"></a>Пример  
@@ -50,6 +50,7 @@ HttpWResp.Close();
 -   Ссылки на пространство имен **System.Net**.  
   
 ## <a name="see-also"></a>См. также
+
 - [Доступ к Интернету через прокси-сервер](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)
 - [Использование протоколов приложений](../../../docs/framework/network-programming/using-application-protocols.md)
 - [HTTP](../../../docs/framework/network-programming/http.md)

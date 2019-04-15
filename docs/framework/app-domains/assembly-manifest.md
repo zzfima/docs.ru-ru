@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8acf811b835d5afd8686701fe269b16d4b766458
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 5cce67b36330714a821012082457e0297395a09c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58676073"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087538"
 ---
 # <a name="assembly-manifest"></a>Манифест сборки
 Любая сборка, статическая или динамическая, содержит коллекцию данных с описанием того, как ее элементы связаны друг с другом. Эти метаданные содержатся в манифесте сборки. Манифест сборки содержит все метаданные, необходимые для задания требований сборки к версиям и удостоверения безопасности, а также все метаданные, необходимые для определения области действия сборки и разрешения ссылок на ресурсы и классы. Манифест сборки может храниться в PE-файле (EXE или DLL) с кодом MSIL или же в отдельном PE-файле, содержащем только данные манифеста.  
@@ -54,6 +54,7 @@ ms.locfileid: "58676073"
  С помощью задания атрибутов сборки в коде можно добавить или изменить некоторые данные в манифесте сборки. Можно изменить данные о версии и информационные атрибуты, включая сведения о товарном знаке, авторском праве, продукте, компании и информационной версии. Полный список атрибутов сборки см. в разделе [Настройка атрибутов сборки](../../../docs/framework/app-domains/set-assembly-attributes.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Содержимое сборок](../../../docs/framework/app-domains/assembly-contents.md)
 - [Управление версиями сборок](../../../docs/framework/app-domains/assembly-versioning.md)
 - [Создание вспомогательных сборок](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)

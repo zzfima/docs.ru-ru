@@ -11,12 +11,12 @@ helpviewer_keywords:
 - logs, trace
 - destination for tracing output
 ms.assetid: 5fff458c-51a6-4134-ba47-8a6137ddc41e
-ms.openlocfilehash: 29d0f33960534e8a5521b36eb6cc11655ab89c6d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50ad01376f3de9cda26f6b00e2d32fc8d3dabdcd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540264"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169719"
 ---
 # <a name="enabling-network-tracing"></a>Включение сетевой трассировки
 Трассировка сети предоставляет доступ к сведениям о вызовах методов и о сетевом трафике, созданном управляемым приложением. Чтобы включить трассировку сети в приложении, выполните следующие действия:  
@@ -46,6 +46,7 @@ ms.locfileid: "54540264"
 ```  
   
 ## <a name="see-also"></a>См. также
-- [Интерпретация трассировки сети](../../../docs/framework/network-programming/interpreting-network-tracing.md)
+
+- [Интерпретация сетевой трассировки](../../../docs/framework/network-programming/interpreting-network-tracing.md)
 - [Трассировка сети в .NET Framework](../../../docs/framework/network-programming/network-tracing.md)
-- [Трассировка и инструментирование приложений](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [Трассировка и оборудование приложений](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

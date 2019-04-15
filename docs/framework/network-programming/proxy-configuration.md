@@ -11,12 +11,12 @@ helpviewer_keywords:
 - network, proxy configuration
 - proxies, configuring
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
-ms.openlocfilehash: 30b61a662170b87a557a1a2ea094301ba6401742
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c6b3808a2d73070cc07b31eb0fca7ca9d6af8cdb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608690"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200549"
 ---
 # <a name="proxy-configuration"></a>Настройка прокси-сервера
 Прокси-сервер обрабатывает клиентские запросы на ресурсы. Прокси-сервер может возвращать запрошенный ресурс из своего кэша или пересылать запрос на сервер, на котором находится данный ресурс. Прокси-серверы могут повышать производительность сети, благодаря уменьшению числа запросов, отправляемых на удаленные серверы. Прокси-серверы также можно использовать для ограничения доступа к ресурсам.  
@@ -76,6 +76,7 @@ ms.locfileid: "54608690"
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Net.WebProxy>
 - <xref:System.Net.GlobalProxySelection>
 - [Автоматическое обнаружение прокси-сервера](../../../docs/framework/network-programming/automatic-proxy-detection.md)

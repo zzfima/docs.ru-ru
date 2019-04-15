@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3e3f6780-6d90-4413-bad7-ba641220364d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cfe2be8784fd4baf6ce9e603da1c6e2388126b5a
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 0ca01234bf7adaca1337053bbc2bbba0731be3cd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409332"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132045"
 ---
 # <a name="identifying-functions-in-dlls"></a>Идентификация функций в библиотеках DLL
 Идентификатор функции DLL состоит из следующих элементов:  
@@ -46,6 +46,7 @@ ms.locfileid: "58409332"
  Полную документацию по API Windows см. в разделе "Пакет SDK платформы". Примеры, демонстрирующие создание объявлений на основе .NET, которые используются с вызовом неуправляемого кода, см. в разделе [Маршалинг данных при вызове неуправляемого кода](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Использование неуправляемых функций DLL](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)
 - [Задание точки входа](../../../docs/framework/interop/specifying-an-entry-point.md)
 - [Создание класса, содержащего функции DLL](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)

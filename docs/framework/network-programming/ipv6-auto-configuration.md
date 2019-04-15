@@ -2,12 +2,12 @@
 title: Автоматическая настройка IPv6
 ms.date: 03/30/2017
 ms.assetid: 581c1d21-1013-43a3-bf3e-2d9ead62b79c
-ms.openlocfilehash: 2184b02f6f4c8ba4e8a79279f212ffca2cb41959
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4dc7a148364c9f96a0f6c68c8af71f7668e797b6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726355"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170083"
 ---
 # <a name="ipv6-auto-configuration"></a>Автоматическая настройка IPv6
 Одна из важнейших целей IPv6 заключается в поддержке самонастраивающегося узла. То есть можно подключить узел к сети IPv6 и автоматически настроить его без вмешательства человека.  
@@ -25,5 +25,6 @@ ms.locfileid: "54726355"
  В связи с распространением мобильных устройств появилось новое требование: устройство должно иметь возможность произвольным образом менять расположения на базе протокола IPv6 и при этом сохранять имеющиеся подключения. Для поддержки этой функции мобильному узлу присваивается домашний адрес, по которому его всегда можно найти. Если мобильный узел находится дома, он подключается к домашнему каналу и использует свой домашний адрес. Если мобильный узел находится вне дома, домашний агент, который обычно является маршрутизатором, передает сообщения между мобильным узлом и узлами, с которыми он взаимодействует.  
   
 ## <a name="see-also"></a>См. также
-- [Протокол IP версии 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
-- [Сокеты](../../../docs/framework/network-programming/sockets.md)
+
+- [протокол IP версии 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
+- [сокеты](../../../docs/framework/network-programming/sockets.md)

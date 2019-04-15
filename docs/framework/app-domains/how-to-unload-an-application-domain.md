@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Выгрузка домена приложения
+title: Практическое руководство. Выгрузка домена приложения
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: f356116d-e415-4f7c-a332-6e6a60227192
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 42356348ba454ffe0c3778e23dc9a0ff272c9f64
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f3011bd0327440cd04d5eccf5f88c036ddd76267
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727746"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212184"
 ---
-# <a name="how-to-unload-an-application-domain"></a>Как выполнить Выгрузка домена приложения
+# <a name="how-to-unload-an-application-domain"></a>Практическое руководство. Выгрузка домена приложения
 После завершения использования домена приложения выгрузите его с помощью метода <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType>. Метод **Unload** безопасно завершает работу указанного домена приложения. В процессе выгрузки новые потоки не могут получить доступ к домену приложения, и освобождаются все структуры данных, определяемые доменом приложения.  
   
  Сборки, загруженные в домен приложения, удаляются и становятся недоступными. Если сборка в домене приложения не зависит от домена, данные для сборки остаются в памяти, пока не будет завершен весь процесс. Не существует механизма для выгрузки независящей от домена сборки, кроме закрытия всего процесса. Существуют ситуации, когда запрос на выгрузку домена приложения не работает и возникает исключение <xref:System.CannotUnloadAppDomainException>.  
@@ -32,6 +32,7 @@ ms.locfileid: "54727746"
  [!code-vb[System.AppDomain.Load#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.load/vb/source3.vb#3)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Программирование с использованием доменов приложений](application-domains.md#programming-with-application-domains)
 - [Практическое руководство. Создание домена приложения](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)
 - [Использование доменов приложений](../../../docs/framework/app-domains/use.md)

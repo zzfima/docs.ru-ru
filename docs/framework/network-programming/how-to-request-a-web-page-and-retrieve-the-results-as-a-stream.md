@@ -1,18 +1,18 @@
 ---
-title: Как выполнить Запрос веб-страницы и получение результатов в виде потока
+title: Практическое руководство. Запрос веб-страницы и получение результатов в виде потока
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d32b7f35-29d8-4fb7-ad71-d219edc5e359
-ms.openlocfilehash: 5ef1867d84b619c58a7b3e29ed0f81f9db0c07a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 23c094f0a3f528750c9589dbc99a0ada86236967
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54578589"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097204"
 ---
-# <a name="how-to-request-a-web-page-and-retrieve-the-results-as-a-stream"></a>Как выполнить Запрос веб-страницы и получение результатов в виде потока
+# <a name="how-to-request-a-web-page-and-retrieve-the-results-as-a-stream"></a>Практическое руководство. Запрос веб-страницы и получение результатов в виде потока
 В этом примере показано, как запросить веб-страницу и получить результаты в виде потока.  
   
 ## <a name="example"></a>Пример  
@@ -37,4 +37,5 @@ response.Close()
 -   Ссылки на пространства имен <xref:System.IO> и <xref:System.Net>.  
   
 ## <a name="see-also"></a>См. также
+
 - [Запрос данных](../../../docs/framework/network-programming/requesting-data.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - content cache policies
 - expired content
 ms.assetid: 1a7e04ec-7872-41c2-96c6-52566dcb412b
-ms.openlocfilehash: fd0321debc4aeee782c782b7e31fb8518aae2e96
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 33043652e11beb374843d43c9683ff4b7928eb3d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740896"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112805"
 ---
 # <a name="cache-policy"></a>Политика кэша
 Политика кэша определяет правила, согласно которым определяется возможность выполнения запроса с помощью кэшированной копии запрашиваемого ресурса. В приложениях указываются требования к кэшу клиента в плане актуальности, однако фактическая политика кэша определяется требованиями к кэшу клиента, требованиями сервера к сроку действия и требованиями сервера к повторной проверке. Чтобы обеспечить возврат клиентскому приложению самого актуального содержимого, в результате взаимодействия политики кэша клиента и требований сервера всегда применяется наиболее консервативная политика кэша.  
@@ -39,7 +39,8 @@ ms.locfileid: "54740896"
  Примеры кода, демонстрирующие создание и использование политик кэша, см. в разделе [Настройка кэширования в сетевых приложениях](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Управление кэшем для сетевых приложений](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
-- [Политики кэша на основе расположения](../../../docs/framework/network-programming/location-based-cache-policies.md)
-- [Политики кэша на основе времени](../../../docs/framework/network-programming/time-based-cache-policies.md)
+- [политики кэша на основе расположения](../../../docs/framework/network-programming/location-based-cache-policies.md)
+- [политики кэша на основе времени](../../../docs/framework/network-programming/time-based-cache-policies.md)
 - [Настройка кэширования в сетевых приложениях](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)

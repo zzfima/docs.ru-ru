@@ -10,12 +10,12 @@ helpviewer_keywords:
 - best practices, data requests
 - receiving data, best practices
 ms.assetid: 716decc6-5952-47b7-9c5a-ba6fc5698684
-ms.openlocfilehash: 0ed97626d86b380565453191f7840c1d1a180dfe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5bb3ac545613da68d5f370fefbf94b674b70fe64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689082"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200952"
 ---
 # <a name="best-practices-for-systemnet-classes"></a>Рекомендации по использованию классов System.Net
 В этом разделе приводятся рекомендации по наиболее эффективному использованию классов, содержащихся в <xref:System.Net>:  
@@ -33,4 +33,5 @@ ms.locfileid: "54689082"
 -   При доступе к узлам, требующим ввода учетных данных, используйте класс <xref:System.Net.CredentialCache> для создания кэша учетных данных вместо того, чтобы предоставлять их с каждым запросом. Класс **CredentialCache** выполняет поиск соответствующих запросу учетных данных в кэше, освобождая вас от необходимости создавать и предоставлять учетные данные на основе URL.  
   
 ## <a name="see-also"></a>См. также
+
 - [Сетевое программирование в .NET Framework](../../../docs/framework/network-programming/index.md)

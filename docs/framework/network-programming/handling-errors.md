@@ -31,12 +31,12 @@ helpviewer_keywords:
 - ConnectionClosed enumeration member
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
-ms.openlocfilehash: 4e3bcf279ae3de066d1d1306a574c76fc95b2840
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 26e2a25855485bdd19d30e8497d0f75b7d4432e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599790"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097165"
 ---
 # <a name="handling-errors"></a>Обработка ошибок
 Классы <xref:System.Net.WebRequest> и <xref:System.Net.WebResponse> вызывают одновременно системные исключения (например, <xref:System.ArgumentException>) и веб-исключения (исключения <xref:System.Net.WebException>, вызываемые методом <xref:System.Net.WebRequest.GetResponse%2A>).  
@@ -168,5 +168,6 @@ End Try
  Если возникает исключение **SocketException**, класс **SocketException** присваивает свойству <xref:System.Net.Sockets.SocketException.ErrorCode%2A> значение, отражающее последнюю ошибку сокета операционной системы. Дополнительные сведения о кодах ошибок сокета см. в документации по кодам ошибок API Winsock 2.0 на веб-сайте MSDN.  
   
 ## <a name="see-also"></a>См. также
+
 - [Основы обработки исключений](../../../docs/standard/exceptions/exception-handling-fundamentals.md)
 - [Запрос данных](../../../docs/framework/network-programming/requesting-data.md)

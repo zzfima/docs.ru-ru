@@ -9,12 +9,12 @@ helpviewer_keywords:
 - staleness of cached resources
 - age of cached resources
 ms.assetid: 7f775925-89a1-4956-ba90-c869c1749a94
-ms.openlocfilehash: bb44aca802f6a0323e69fb33f64d8238406f8b48
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 18a73a46bc4b463d0a5f5690afe6d1109e06171c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653649"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207140"
 ---
 # <a name="cache-policy-interactionmaximum-age-and-maximum-staleness"></a>Взаимодействие с политикой кэша: максимальный возраст и устаревание
 Чтобы обеспечить возврат клиентскому приложению самого актуального содержимого, в результате взаимодействия политики кэша клиента и требований к повторной проверке сервера всегда применяется наиболее консервативная политика кэша. Все примеры в этом разделе иллюстрируют политику кэша для ресурса, который кэшируется 1 января и срок действия которого истекает 4 января.  
@@ -36,9 +36,10 @@ ms.locfileid: "54653649"
 -   Если политика кэша задает значения `maxAge` и `maxStale` равными 1 дню, содержимое повторно проверяется 2 января.  
   
 ## <a name="see-also"></a>См. также
+
 - [Управление кэшем для сетевых приложений](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
 - [Политика кэша](../../../docs/framework/network-programming/cache-policy.md)
-- [Политики кэша на основе расположения](../../../docs/framework/network-programming/location-based-cache-policies.md)
-- [Политики кэша на основе времени](../../../docs/framework/network-programming/time-based-cache-policies.md)
+- [политики кэша на основе расположения](../../../docs/framework/network-programming/location-based-cache-policies.md)
+- [политики кэша на основе времени](../../../docs/framework/network-programming/time-based-cache-policies.md)
 - [Настройка кэширования в сетевых приложениях](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)
 - [Взаимодействие с политикой кэша: максимальный возраст и минимальная актуальность](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-minimum-freshness.md)

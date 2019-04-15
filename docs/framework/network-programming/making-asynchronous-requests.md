@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Network Resources
 - WebRequest class, asynchronous access
 ms.assetid: 735d3fce-f80c-437f-b02c-5c47f5739674
-ms.openlocfilehash: 1023d7213c665619f5417eb1016aa50c73def2c0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b812db3259cbd2313cdf172950f51ab34679b460
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669137"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208570"
 ---
 # <a name="making-asynchronous-requests"></a>Выполнение асинхронных запросов
 В классах <xref:System.Net> используется стандартная асинхронная модель программирования .NET Framework для асинхронного доступа к ресурсам в Интернете. Методы <xref:System.Net.WebRequest.BeginGetResponse%2A> и <xref:System.Net.WebRequest.EndGetResponse%2A> класса <xref:System.Net.WebRequest> запускают и завершают асинхронные запросы к интернет-ресурсу.  
@@ -335,4 +335,5 @@ End Class
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Запрос данных](../../../docs/framework/network-programming/requesting-data.md)

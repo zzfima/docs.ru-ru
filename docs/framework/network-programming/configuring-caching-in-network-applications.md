@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - cache [.NET Framework], configuring
 ms.assetid: 3f694a1c-de5d-47cf-a6eb-cfc369fb8a9f
-ms.openlocfilehash: 45e12e72945e8cf894b3f3be96b47e4e73828c09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b112f2061ba11c95780ec00ac34ecda24d272e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589718"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146124"
 ---
 # <a name="configuring-caching-in-network-applications"></a>Настройка кэширования в сетевых приложениях
 Чтобы настроить кэширование, необходимо указать политику кэширования на уровне приложения или <xref:System.Net.WebRequest>. В следующих разделах приводятся примеры кода, которые демонстрируют настройку приложений и запросов для использования кэширования.  
@@ -25,7 +25,8 @@ ms.locfileid: "54589718"
  Также для настройки политики кэширования можно использовать файлы конфигурации приложения или компьютера. Дополнительные сведения см. в разделе [Элемент \<requestCaching> (сетевые параметры)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Управление кэшем для сетевых приложений](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
 - [Политика кэша](../../../docs/framework/network-programming/cache-policy.md)
-- [Политики кэша на основе расположения](../../../docs/framework/network-programming/location-based-cache-policies.md)
-- [Политики кэша на основе времени](../../../docs/framework/network-programming/time-based-cache-policies.md)
+- [политики кэша на основе расположения](../../../docs/framework/network-programming/location-based-cache-policies.md)
+- [политики кэша на основе времени](../../../docs/framework/network-programming/time-based-cache-policies.md)

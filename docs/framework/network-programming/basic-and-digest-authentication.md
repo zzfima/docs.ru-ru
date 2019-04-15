@@ -19,12 +19,12 @@ helpviewer_keywords:
 - network resources, authentication
 - user authentication, digest
 ms.assetid: 8cce2742-8d52-4643-9dd2-64ddf38aa878
-ms.openlocfilehash: 2c764909514eac74cb930df055cdb846bab7b249
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4f70d2aef3bb064a3df9db9c87671040776332a7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502936"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089826"
 ---
 # <a name="basic-and-digest-authentication"></a>Обычная и дайджест-аутентификация
 Реализация базовой аутентификации и аутентификации с использованием дайджеста в <xref:System.Net> соответствует требованиям документа RFC2617 – HTTP Authentication: Basic and Digest Authentication (RFC2617 — аутентификация HTTP: базовая аутентификация и аутентификация с использованием дайджеста), который доступен на веб-сайте [консорциума World Wide Web](https://www.w3.org).  
@@ -47,5 +47,6 @@ WReq.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword);
 >  Данные, отправляемые с помощью базовой и дайджест-проверки подлинности, не шифруются, поэтому злоумышленник может их видеть. Кроме того, базовые учетные данные аутентификации (имя пользователя и пароль) передаются в открытом виде и могут быть перехвачены.  
   
 ## <a name="see-also"></a>См. также
-- [Проверка подлинности NTLM и Kerberos](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)
-- [Проверка подлинности в Интернете](../../../docs/framework/network-programming/internet-authentication.md)
+
+- [проверка подлинности NTLM и Kerberos](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)
+- [Аутентификация в Интернете](../../../docs/framework/network-programming/internet-authentication.md)

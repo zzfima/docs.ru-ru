@@ -16,12 +16,12 @@ helpviewer_keywords:
 - requesting data from Internet, TCP/UDP
 - Internet, TCP/UDP
 ms.assetid: df29b4b0-49e8-4923-82b9-13150dfc40f5
-ms.openlocfilehash: 261350349497168e3f41b2f6887838d167c3e977
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e074a487c39dfaf1c4704f9dadf7ed8e430fb630
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692549"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172553"
 ---
 # <a name="tcp-udp"></a>TCP-UDP
 Приложения могут использовать службы TCP и UDP с классами <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener> и <xref:System.Net.Sockets.UdpClient>. Эти классы протоколов основаны на классе <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> и управляют различными аспектами передачи данных.  
@@ -33,6 +33,7 @@ ms.locfileid: "54692549"
  Класс **UdpClient** использует массив байтов для хранения датаграммы UDP. С помощью метода <xref:System.Net.Sockets.UdpClient.Send%2A> данные отправляются в сеть, а с помощью метода <xref:System.Net.Sockets.UdpClient.Receive%2A> принимается входящая датаграмма.  
   
 ## <a name="see-also"></a>См. также
+
 - [Использование служб TCP](../../../docs/framework/network-programming/using-tcp-services.md)
 - [Использование служб UDP](../../../docs/framework/network-programming/using-udp-services.md)
 - [Использование потоков в сети](../../../docs/framework/network-programming/using-streams-on-the-network.md)

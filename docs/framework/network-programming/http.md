@@ -13,12 +13,12 @@ helpviewer_keywords:
 - HTTP, about HTTP
 - HttpWebRequest class, sending and receiving data
 ms.assetid: 985fe5d8-eb71-4024-b361-41fbdc1618d8
-ms.openlocfilehash: c0c8bcca55dc54b2dd89be2e45dade4d09a67362
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: abbb02b7bd22c4b301c5565037f55aa1019fc3ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574135"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170603"
 ---
 # <a name="http"></a>HTTP
 Платформа .NET предоставляет полную поддержку протокола HTTP, на который приходит большая часть интернет-трафика, с помощью классов <xref:System.Net.HttpWebRequest> и <xref:System.Net.HttpWebResponse>. Эти классы, производные от <xref:System.Net.WebRequest> и <xref:System.Net.WebResponse>, возвращаются по умолчанию всякий раз, когда статический метод <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> обнаруживает URI, начинающийся с "http" или "https". В большинстве случаев классы **WebRequest** и **WebResponse** предоставляют все необходимое для выполнения запроса, но если вам необходим доступ к возможностям HTTP-протокола, представленным в виде свойств, можно выполнить приведение этих классов к **HttpWebRequest** или **HttpWebResponse**.  
@@ -32,6 +32,7 @@ ms.locfileid: "54574135"
  Приложения получают ошибки протокола HTTP, перехватывая <xref:System.Net.WebException> со свойством <xref:System.Net.WebException.Status%2A>, установленным в значение <xref:System.Net.WebExceptionStatus>. Свойство <xref:System.Net.WebException.Response%2A> означает фактическую обнаруженную ошибку HTTP и содержит объект **WebResponse**, отправленный сервером.  
   
 ## <a name="see-also"></a>См. также
+
 - [Доступ к Интернету через прокси-сервер](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)
 - [Использование протоколов приложений](../../../docs/framework/network-programming/using-application-protocols.md)
-- [Практическое руководство. Доступ к свойствам, относящимся к HTTP](../../../docs/framework/network-programming/how-to-access-http-specific-properties.md)
+- [Практическое руководство. Доступ к свойствам, относящимся с HTTP](../../../docs/framework/network-programming/how-to-access-http-specific-properties.md)

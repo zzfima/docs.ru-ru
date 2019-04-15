@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Internet, requesting data
 - data requests, creating requests
 ms.assetid: faab683e-3f1e-4eee-b5e9-59f7245033d5
-ms.openlocfilehash: 07c15614f22409f427c6f75cd4ddb8cfa218beba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2a4915796310e4f6899d833f20bc5260e0ee032b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706959"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171038"
 ---
 # <a name="creating-internet-requests"></a>Создание интернет-запросов
 Приложения создают экземпляры <xref:System.Net.WebRequest> с помощью метода <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType>. Этот статический метод создает класс, производный от **WebRequest**, на основе переданной ему схемы URI.  
@@ -28,5 +28,6 @@ ms.locfileid: "54706959"
  Для обработки запросов, использующих другие протоколы уровня приложений, необходимо реализовать классы для определенного протокола, производные от **WebRequest** и **WebResponse**. Дополнительные сведения см. в разделе [Программирование подключаемых протоколов](../../../docs/framework/network-programming/programming-pluggable-protocols.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Практическое руководство. Запрос данных с помощью класса WebRequest](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)
 - [Запрос данных](../../../docs/framework/network-programming/requesting-data.md)

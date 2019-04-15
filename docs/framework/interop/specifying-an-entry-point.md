@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: d1247f08-0965-416a-b978-e0b50652dfe3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 787406b1fa7e5beb59ff3f8715c1215a734ed895
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 15a441ea7b0b16c83c590289d04cf0c10623fb85
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411308"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086069"
 ---
 # <a name="specifying-an-entry-point"></a>Задание точки входа
 Точка входа определяет расположение функции в библиотеке DLL. В управляемом проекте исходное имя или порядковый номер точки входа целевой функции определяет эту функцию в границах взаимодействия. Вы можете сопоставить точку входа с другим именем, чтобы фактически переименовать функцию.  
@@ -95,6 +95,7 @@ extern "C" int MsgBox(
 ```
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
 - [Создание прототипов в управляемом коде](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
 - [Примеры вызовов неуправляемого кода](../../../docs/framework/interop/platform-invoke-examples.md)

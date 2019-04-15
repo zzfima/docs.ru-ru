@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 7aa8cb72-dee9-4716-ac54-b17b9ae8218f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a4affda0abdf46d298e6f1dac87b6a17a7a2e857
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9b7e8a4d92661b974fba7c88989891b30e54e94d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596765"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218456"
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>Уменьшение числа перезагрузок при установке платформы .NET Framework 4.5
 Установщик [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] использует [Диспетчер перезагрузки](https://go.microsoft.com/fwlink/?LinkId=231425) для предотвращения перезагрузки системы во время установки, если это возможно. Если программа установки устанавливает платформу .NET Framework, она может взаимодействовать с диспетчером перезапуска, чтобы воспользоваться преимуществами этой функции. Дополнительные сведения см. в разделе [Как Получение хода выполнения установщика .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md).  
@@ -35,6 +35,7 @@ ms.locfileid: "54596765"
  При использовании цепочечного установщика, если не требуется предоставлять собственное окно сообщения для завершения приложений, можно использовать параметры `/showrmui` и `/passive` в командной строке при добавлении платформы .NET Framework в процесс установки. При использовании этих параметров вместе установщик отображает окно сообщения для закрытия приложений, чтобы избежать перезапуска системы. Это диалоговое окно работает в пассивном режиме так же, как и при полном пользовательском интерфейсе. Полный набор параметров командной строки для распространяемого пакета .NET Framework см. в разделе [Руководство по развертыванию для разработчиков](../../../docs/framework/deployment/deployment-guide-for-developers.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Развертывание](../../../docs/framework/deployment/index.md)
 - [Руководство по развертыванию для разработчиков](../../../docs/framework/deployment/deployment-guide-for-developers.md)
-- [Практическое руководство. Получение хода выполнения установщика .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
+- [Практическое руководство. Получение хода выполнения установщика .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)

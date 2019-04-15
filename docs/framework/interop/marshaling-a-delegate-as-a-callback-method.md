@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6ddd7866-9804-4571-84de-83f5cc017a5a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2fc265e4a7ceec291d645346bb012e2ed4600d22
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.openlocfilehash: 4cc9d592bc2030cdd17e7f87d7c5ac458dc01106
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58890388"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124817"
 ---
 # <a name="marshaling-a-delegate-as-a-callback-method"></a>Маршалинг делегата как метода обратного вызова
 В этом примере показан способ передачи делегатов в неуправляемую функцию, ожидающую указатели на функции. Делегат — это класс, который может содержать ссылку на метод. Делегат эквивалентен типобезопасному указателю на функцию или функции обратного вызова.
@@ -53,6 +53,7 @@ ms.locfileid: "58890388"
 [!code-vb[Conceptual.Interop.Marshaling#38](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/callback.vb#38)]
 
 ## <a name="see-also"></a>См. также
+
 - [Разные примеры маршалинга](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ss9sb93t(v=vs.100))
 - [Типы данных в вызове неуправляемого кода](marshaling-data-with-platform-invoke.md#platform-invoke-data-types)
 - [Создание прототипов в управляемом коде](creating-prototypes-in-managed-code.md)

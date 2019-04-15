@@ -26,12 +26,12 @@ helpviewer_keywords:
 - IPv6, addresses in
 - IPv6, disabling
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
-ms.openlocfilehash: 2da6622fbb15e7214f928d2471d32283b87bb2f7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50df0e0710c1f722d4e769ad89b653f6a8d5e394
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54633856"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121957"
 ---
 # <a name="ipv6-addressing"></a>Адресация IPv6
 Длина IPv6-адресов составляет 128 бит. Одна из причин такого большого адресного пространства заключается в том, чтобы разделить доступные адреса на иерархию доменов маршрутизации, отражающих топологию Интернета. Другая причина состоит в том, чтобы сопоставить адреса сетевых адаптеров (или интерфейсов), которые подключают устройства к сети. IPv6 обладает встроенной возможностью разрешать адреса на их самом низком уровне, который находится на уровне сетевого интерфейса, а также позволяет выполнять автоматическую настройку.  
@@ -73,5 +73,6 @@ ms.locfileid: "54633856"
  Как правило, узел всегда имеет адрес локального канала. У него может быть адрес локального узла и один или несколько глобальных адресов.  
   
 ## <a name="see-also"></a>См. также
-- [Протокол IP версии 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
-- [Сокеты](../../../docs/framework/network-programming/sockets.md)
+
+- [протокол IP версии 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
+- [сокеты](../../../docs/framework/network-programming/sockets.md)

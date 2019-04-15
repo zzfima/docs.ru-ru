@@ -15,12 +15,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - positions [.NET Framework], granting
 ms.assetid: d51ad8cb-03ae-4a51-bfcd-cfcf6b98afa9
-ms.openlocfilehash: b4395d26114425556f0457f03667d0f95f786ca7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 78ad06107155408b2aca854a8251c21a24c6577a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677645"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166859"
 ---
 # <a name="web-and-socket-permissions"></a>Веб-разрешения и разрешения сокетов
 Безопасность приложений, использующих пространство имен <xref:System.Net>, в Интернете обеспечивается классами <xref:System.Net.WebPermission> и <xref:System.Net.SocketPermission>. Класс **WebPermission** определяет право приложения на запрос данных из универсального кода ресурса (URI) или предоставления кода URI в Интернете. Класс **SocketPermission** определяет право приложения на использование <xref:System.Net.Sockets.Socket> для приема данных через локальный порт или на связь с удаленными устройствами с помощью транспортного протокола по другому адресу в соответствии с узлом, номером порта и транспортным протоколом сокета.  
@@ -34,5 +34,6 @@ ms.locfileid: "54677645"
  Для экземпляров **WebPermission** разрешение на прием означает, что приложение может экспортировать код URI, контролируемый экземпляром **WebPermission**, во внешнюю сеть. Разрешение на подключение означает, что приложение может получать доступ к этому коду URI (удаленному или локальному).  
   
 ## <a name="see-also"></a>См. также
+
 - [Безопасность](../../../docs/standard/security/index.md)
 - [Безопасность в сетевом программировании](../../../docs/framework/network-programming/security-in-network-programming.md)

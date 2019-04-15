@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Windows Service applications, troubleshooting
 ms.assetid: 45c48e2e-b97d-44bc-8896-14f328e0ce33
 author: ghogen
-ms.openlocfilehash: ecbaa3b2fb0e0fc85ed383385368617bf361f497
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: f75a2f33ecde408d2d8e2f2343197ba56c4b8c21
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55289444"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143823"
 ---
 # <a name="troubleshooting-service-application-wont-install"></a>Устранение неполадок: невозможно установить приложение-службу
 Если приложение-служба не устанавливается надлежащим образом, убедитесь, что для свойства <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> класса службы задано значение, которое отображается в установщике этой службы. Для правильной установки службы необходимо, чтобы эти значения совпадали.  
@@ -26,4 +26,5 @@ ms.locfileid: "55289444"
  Также убедитесь, что у вас не установлена другая служба с таким же именем. Для успешной установки необходимо, чтобы у каждой службы было уникальное имя.  
   
 ## <a name="see-also"></a>См. также
+
 - [Знакомство с приложениями служб Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)

@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Приостановка выполнения службы Windows (Visual Basic)
+title: Практическое руководство. Приостановка выполнения службы Windows (Visual Basic)
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - pausing Windows Service applications
 ms.assetid: eddb9409-942b-46b6-a2ce-fbd4c65f2790
 author: ghogen
-ms.openlocfilehash: 8d378aba5ad09a38d24359fda8b50de072c58035
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f0b0ad1b18a57ca9a2c069ab172966730b62e84e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612727"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136192"
 ---
-# <a name="how-to-pause-a-windows-service-visual-basic"></a>Как выполнить Приостановка выполнения службы Windows (Visual Basic)
+# <a name="how-to-pause-a-windows-service-visual-basic"></a>Практическое руководство. Приостановка выполнения службы Windows (Visual Basic)
 В этом примере для приостановки работы службы администрирования IIS на локальном компьютере используется компонент <xref:System.ServiceProcess.ServiceController>.  
   
 ## <a name="example"></a>Пример  
@@ -48,7 +48,8 @@ ms.locfileid: "54612727"
  Чтобы ограничить доступ к сведениям о службе, с помощью <xref:System.Security.Permissions.PermissionState> настройте в <xref:System.Security.Permissions.SecurityPermission> необходимые разрешения.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.ServiceProcess.ServiceController>
 - <xref:System.ServiceProcess.ServiceControllerStatus>
 - <xref:System.ServiceProcess.ServiceController.WaitForStatus%2A>
-- [Практическое руководство. Возобновление выполнения службы Windows (Visual Basic)](../../../docs/framework/windows-services/how-to-continue-a-windows-service-visual-basic.md)
+- [Практическое руководство. Возобновление выполнения службы Windows (Visual Basic)](../../../docs/framework/windows-services/how-to-continue-a-windows-service-visual-basic.md)

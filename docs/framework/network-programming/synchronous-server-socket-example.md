@@ -9,12 +9,12 @@ helpviewer_keywords:
 - sockets, code examples
 - sockets, synchronous server sockets
 ms.assetid: 5916c764-879f-4716-99fb-1d21c6237f1c
-ms.openlocfilehash: c908568f2297d5f4f6e8c3d1c924a4a0f653d5a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 637301385562247ef9c3dee4d01da319c0cd4d37
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669072"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095452"
 ---
 # <a name="synchronous-server-socket-example"></a>Пример синхронного сокета сервера
 Приведенная ниже программа создает сервер, который принимает запросы на соединение от клиентов. Сервер создается с использованием синхронного сокета, поэтому выполнение серверного приложения приостанавливается, пока оно ожидает подключения от клиента. Приложение получает строку от клиента, выводит ее в консоли, а затем отправляет строку обратно клиенту. В строке, полученной от клиента, конец сообщения должен быть помечен строкой "\<EOF>".  
@@ -156,6 +156,7 @@ public class SynchronousSocketListener {
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Пример синхронного сокета клиента](../../../docs/framework/network-programming/synchronous-client-socket-example.md)
 - [Использование синхронного сокета сервера](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
 - [Примеры кода сокетов](../../../docs/framework/network-programming/socket-code-examples.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - type conversion [C#], as keyword
 - as keyword [C#]
 ms.assetid: a9be126b-cbf4-4990-a70d-d0e1983cad0e
-ms.openlocfilehash: 33f7971a95b8573168da11d2bd2abc80fa74370e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b87e75bd4866a191e84465e44d53850e6e2e9723
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736472"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169927"
 ---
 # <a name="as-c-reference"></a>as (Справочник по C#)
 Оператор `as` можно использовать для выполнения определенных типов преобразований между совместимыми ссылочными типами или [типами, допускающими значение NULL](../../../csharp/programming-guide/nullable-types/index.md). Вот пример кода:  
@@ -47,9 +47,10 @@ expression is type ? (type)expression : (type)null
 Дополнительные сведения см. в разделе [Оператор as](~/_csharplang/spec/expressions.md#the-as-operator) в [Спецификации языка C#](../language-specification/index.md). Спецификация языка является предписывающим источником информации о синтаксисе и использовании языка C#.
  
 ## <a name="see-also"></a>См. также
+
 - [Справочник по C#](../../../csharp/language-reference/index.md)
 - [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)
-- [is](../../../csharp/language-reference/keywords/is.md)
+- [Ключевые слова C#](../../../csharp/language-reference/keywords/index.md)
+- [является](../../../csharp/language-reference/keywords/is.md)
 - [?: Оператор](../../../csharp/language-reference/operators/conditional-operator.md)
 - [Ключевые слова операторов](../../../csharp/language-reference/keywords/operator-keywords.md)

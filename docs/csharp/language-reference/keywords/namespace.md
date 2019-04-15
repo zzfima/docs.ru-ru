@@ -1,6 +1,6 @@
 ---
 title: Ключевое слово namespace. Справочник по C#
-ms.custom: seodec18
+ms.custom: seoapril2019
 ms.date: 07/20/2015
 f1_keywords:
 - namespace_CSharpKeyword
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - namespace keyword [C#]
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
-ms.openlocfilehash: b5c6b8081c188d5b184930222d54ad8f4b5d7a71
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 4859c361b3321c1144204f63896152694f6ac5c9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242767"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148763"
 ---
 # <a name="namespace-c-reference"></a>namespace (Справочник по C#)
 
@@ -28,15 +28,15 @@ ms.locfileid: "53242767"
 
 - другое пространство имен
 
-- [class](class.md)
+- [класс](class.md)
 
-- [interface](interface.md)
+- [интерфейс](interface.md)
 
-- [struct](struct.md)
+- [структура](struct.md)
 
-- [enum](enum.md)
+- [перечисление](enum.md)
 
-- [delegate](delegate.md)
+- [делегат](delegate.md)
 
 Независимо от того, было ли пространство имен объявлено явным образом в исходном файле на языке C#, компилятор добавляет пространство имен по умолчанию. Это безымянное пространство имен, иногда называемое глобальным пространством имен, существует в каждом файле. Любой идентификатор в глобальном пространстве имен доступен для использования в именованном пространстве имен.
 
@@ -60,7 +60,7 @@ ms.locfileid: "53242767"
 
 - [Использование пространств имен](../../programming-guide/namespaces/using-namespaces.md)
 
-- [Практическое руководство. Использование псевдонима глобального пространства имен](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)
+- [Практическое руководство. Использованию псевдонима глобального пространства имен](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)
 
 ## <a name="c-language-specification"></a>Спецификация языка C#
 
@@ -70,6 +70,7 @@ ms.locfileid: "53242767"
 
 - [Справочник по C#](../../language-reference/index.md)
 - [Руководство по программированию на C#](../../programming-guide/index.md)
-- [Ключевые слова в C#](index.md)
+- [Ключевые слова C#](index.md)
 - [Ключевые слова, используемые для пространств имен](namespace-keywords.md)
-- [using](using.md)
+- [using](using-directive.md)
+- [using static](using-static.md)

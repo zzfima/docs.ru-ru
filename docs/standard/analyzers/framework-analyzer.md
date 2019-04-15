@@ -5,12 +5,12 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 01/25/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: 562d85d47791ca253655dd05a1c9a268767ba949
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: cbd9bcdb12a423f54aa4ff82d88f07c20023c48f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634470"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197657"
 ---
 # <a name="the-net-framework-analyzer"></a>Анализатор .NET Framework
 
@@ -114,7 +114,6 @@ public class MyItemType
 
 Дополнительные сведения: [A3075. Небезопасная обработка DTD в формате XML](/visualstudio/code-quality/ca2237-mark-iserializable-types-with-serializableattribute)
 
-
 ### <a name="ca5350-do-not-use-weak-cryptographic-algorithms"></a>CA5350. Не используйте ненадежные алгоритмы шифрования
 
 С течением времени надежность алгоритмов шифрования снижается, так как атаки становятся более сложными. В зависимости от типа и применения этого алгоритма шифрования дальнейшее снижение его криптографической стойкости может привести к тому, что злоумышленники смогут читать зашифрованные сообщения, искажать зашифрованные сообщения, подделывать цифровые подписи, незаконно использовать хэшированное содержимое или иным образом нарушать безопасность криптосистемы, основанной на данном алгоритме. В целях шифрования используйте алгоритм AES (AES-256, AES 192 и AES-128) с длиной ключа не меньше 128 бит. В целях хэширования используйте функцию хэширования семейства SHA-2, например SHA-2 512, SHA-2 384 или SHA-2 256.
@@ -134,5 +133,3 @@ public class MyItemType
 **Серьезность**. Предупреждение
 
 Дополнительные сведения: [CA5351. Не используйте взломанные алгоритмы шифрования](/visualstudio/code-quality/ca5351-do-not-use-broken-cryptographic-algorithms)
-
-

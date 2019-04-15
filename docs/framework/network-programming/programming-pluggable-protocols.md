@@ -15,12 +15,12 @@ helpviewer_keywords:
 - receiving data, pluggable protocols
 - protocols, pluggable
 ms.assetid: 66ef8456-7576-4e97-8956-959b216373db
-ms.openlocfilehash: 1becdc227995064a3f34d712834ab358cc41754b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d14eb426c8e142f56d9f024dcbf37a1d2d78664d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646598"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072345"
 ---
 # <a name="programming-pluggable-protocols"></a>программирование подключаемых протоколов
 Абстрактные классы <xref:System.Net.WebRequest> и <xref:System.Net.WebResponse> реализуют основу для подключаемых протоколов. Создавая производные классы для определенных протоколов на основе классов <xref:System.Net.WebRequest> и <xref:System.Net.WebResponse>, приложение может запрашивать данные интернет-ресурса и считывать ответ, не указывая используемый протокол.  
@@ -32,6 +32,7 @@ ms.locfileid: "54646598"
  Чтобы использовать преимущества подключаемых протоколов, потомки класса <xref:System.Net.WebRequest> должны предоставлять применяемую по умолчанию операцию "запрос-ответ", для которой не требуется задавать свойства определенного протокола. Например, класс <xref:System.Net.HttpWebRequest>, который реализует класс <xref:System.Net.WebRequest> для HTTP, предоставляет запрос `GET` по умолчанию и возвращает <xref:System.Net.HttpWebResponse>, который содержит поток, возвращенный веб-сервером.  
   
 ## <a name="see-also"></a>См. также
+
 - [Наследование от WebResponse](../../../docs/framework/network-programming/deriving-from-webrequest.md)
 - [Наследование от класса WebResponse](../../../docs/framework/network-programming/deriving-from-webresponse.md)
 - [Сетевое программирование в .NET Framework](../../../docs/framework/network-programming/index.md)

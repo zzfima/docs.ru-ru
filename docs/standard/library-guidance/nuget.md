@@ -4,12 +4,12 @@ description: Практические рекомендации по упаков
 author: jamesnk
 ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: a721c642dd92eb299eef3b62fc845afa99f81ddc
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: e08629adb8074fdfb73865d2dc156cbf6e46ab9c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204617"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198183"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -119,7 +119,6 @@ NuGet.org размещает свой собственный [репозитор
 > Благодаря пакетам символов (`*.snupkg`) разработчики получают эффективную среду отладки по требованию, причем при этом не увеличивается размер основного пакета и не снижается производительность восстановления в тех случаях, когда отладка пакета NuGet не предполагается.
 >
 > Недостаток заключается в том, что разработчикам необходимо однократно в процессе настройки находить и настраивать сервер символов NuGet в своей интегрированной среде разработки, чтобы получить файлы символов. В Visual Studio 2019 сервер символов NuGet.org будет реализован как одна из опций в готовой среде. 
-
 
 >[!div class="step-by-step"]
 >[Назад](strong-naming.md)

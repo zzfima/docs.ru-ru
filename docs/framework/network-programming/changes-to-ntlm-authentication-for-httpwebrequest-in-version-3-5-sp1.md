@@ -2,12 +2,12 @@
 title: Изменения в аутентификации NTLM для HttpWebRequest в версии 3.5 с пакетом обновления 1 (SP1)
 ms.date: 03/30/2017
 ms.assetid: 8bf0b428-5a21-4299-8d6e-bf8251fd978a
-ms.openlocfilehash: 40e041f17a07e17aad3d5f10f7920b0466e2b1b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0105cc762696c54a65cd06b3ffcb5fb4c8530a41
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589562"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216721"
 ---
 # <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>Изменения в аутентификации NTLM для HttpWebRequest в версии 3.5 с пакетом обновления 1 (SP1)
 В .NET Framework версии 3.5 с пакетом обновления 1 (SP1) и более поздних внесены касающиеся безопасности изменения, влияющие на обработку встроенной проверки подлинности Windows классами <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Security.NegotiateStream> и связанными классами в пространстве имен System.Net. Эти изменения могут влиять на приложения, которые используют данные классы для выполнения веб-запросов и получения ответов с применением встроенной проверки подлинности Windows на основе NTLM. Они также могут повлиять на веб-серверы и клиентские приложения, в которых используется встроенная проверка подлинности Windows.  
@@ -51,6 +51,7 @@ ms.locfileid: "54589562"
  Менее безопасный способ — отключить проверку замыкания на себя, как описано на странице <https://support.microsoft.com/kb/896861>. При этом отключается защита от атак отражением. Поэтому лучше ограничить набор альтернативных имен только теми, которые действительно будут использоваться компьютером.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType>
 - <xref:System.Net.HttpRequestHeader?displayProperty=nameWithType>
 - <xref:System.Net.HttpWebRequest.Host%2A?displayProperty=nameWithType>

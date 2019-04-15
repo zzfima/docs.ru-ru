@@ -1,5 +1,5 @@
 ---
-title: Как выполнить  определение полного имени сборки
+title: Практическое руководство. определение полного имени сборки
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 009dae23-e1f6-4a64-9a9a-32e4c34802b0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 32beb648bed37281e798f51e6b4a316197c23845
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 60a4ef1f5bde121d5773925437307b2749aa7282
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55283521"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097542"
 ---
-# <a name="how-to-determine-an-assemblys-fully-qualified-name"></a>Как выполнить  определение полного имени сборки
+# <a name="how-to-determine-an-assemblys-fully-qualified-name"></a>Практическое руководство. определение полного имени сборки
 Чтобы получить полное имя сборки в глобальном кэше сборок, используйте средство глобального кэша сборок ([Gacutil.exe](../../../docs/framework/tools/gacutil-exe-gac-tool.md)). См. практическое руководство по [ Просмотр содержимого глобального кэша сборок](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md).  
   
  Получить полное имя сборки, которая отсутствует в глобальном кэше сборок, можно несколькими способами: использовать код для вывода данных в консоль или в переменную либо применить [дизассемблер IL Ildasm.exe](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) для просмотра метаданных сборки, которые содержат полное имя.  
@@ -43,9 +43,10 @@ ms.locfileid: "55283521"
  [!code-vb[Assembly.Fullname#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Assembly.FullName/VB/example2.vb#2)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Имена сборок](../../../docs/framework/app-domains/assembly-names.md)
 - [Создание сборок](../../../docs/framework/app-domains/create-assemblies.md)
 - [Создание и использование сборок со строгими именами](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
-- [Глобальный кэш сборок](../../../docs/framework/app-domains/gac.md)
+- [глобальный кэш сборок](../../../docs/framework/app-domains/gac.md)
 - [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Программирование с использованием сборок](../../../docs/framework/app-domains/programming-with-assemblies.md)

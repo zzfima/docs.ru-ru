@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 3423e5d9-234c-4571-8161-e35f6d130128
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60d42fa296585d26186a2e75a49c5b3cf761e846
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4bb09f827726f759383598d18fb80657a7e2ff04
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583250"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179066"
 ---
 # <a name="using-serviced-components-with-the-global-assembly-cache"></a>Использование обслуживаемых компонентов с глобальным кэшем сборок
 Обслуживаемые компоненты (компоненты управляемого кода COM+) следует помещать в глобальный кэш сборок. В некоторых ситуациях среда CLR и службы COM+ могут обрабатывать обслуживаемые компоненты, не входящие в глобальный кэш сборок; в других сценариях это невозможно. Это иллюстрируется в следующих примерах.  
@@ -26,5 +26,6 @@ ms.locfileid: "54583250"
 -   Ситуация отличается для обслуживаемых компонентов в приложении ASP.NET. Если поместить сборку, содержащую обслуживаемые компоненты, в каталог bin базовой папки приложения и использовать регистрацию по требованию, будет выполняться теневое копирование сборки в кэш загрузки, так как ASP.NET использует возможности теневого копирования среды выполнения.  
   
 ## <a name="see-also"></a>См. также
+
 - [Работа со сборками и глобальным кэшем сборок](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)
 - [Gacutil.exe (программа глобального кэша сборок)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)

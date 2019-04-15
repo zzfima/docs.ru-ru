@@ -17,12 +17,12 @@ helpviewer_keywords:
 - protocols, sockets
 - Internet, sockets
 ms.assetid: 813489a9-3efd-41b6-a33f-371d55397676
-ms.openlocfilehash: 5bc4e6e43d346c1543cf43d9782fd22718b4fef4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 32a2a99d5f71cb500dca467433f138a893d01e5b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701902"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119929"
 ---
 # <a name="using-an-asynchronous-server-socket"></a>Использование асинхронных сокетов сервера
 Асинхронные сокеты сервера используют асинхронную модель программирования платформы .NET Framework для обработки запросов сетевых служб. Класс <xref:System.Net.Sockets.Socket> соответствует стандартному шаблону асинхронного именования платформы .NET Framework. Например, синхронный метод <xref:System.Net.Sockets.Socket.Accept%2A> соответствует асинхронным методам <xref:System.Net.Sockets.Socket.BeginAccept%2A> и <xref:System.Net.Sockets.Socket.EndAccept%2A>.  
@@ -269,7 +269,8 @@ public static void ReadCallback(IAsyncResult ar)
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Использование синхронного сокета сервера](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
 - [Пример асинхронного сокета сервера](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)
-- [Работа с потоками](../../../docs/standard/threading/index.md)
-- [Прослушивание с помощью сокетов](../../../docs/framework/network-programming/listening-with-sockets.md)
+- [Потоки](../../../docs/standard/threading/index.md)
+- [прослушивание с помощью сокетов](../../../docs/framework/network-programming/listening-with-sockets.md)

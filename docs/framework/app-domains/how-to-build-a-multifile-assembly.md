@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Создание многофайловой сборки
+title: Практическое руководство. Создание многофайловой сборки
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 68f525244f2238ebdc44116fc91c3ddcb0a79bfd
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: bcc451903f7fbf7f82e2ed64834d26e605a0c069
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975060"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187802"
 ---
-# <a name="how-to-build-a-multifile-assembly"></a>Как выполнить Создание многофайловой сборки
+# <a name="how-to-build-a-multifile-assembly"></a>Практическое руководство. Создание многофайловой сборки
 В этой статье рассматривается порядок создания многофайловой сборки и приводится код, иллюстрирующий каждый шаг процедуры.
 
 > [!NOTE]
@@ -98,6 +98,7 @@ ms.locfileid: "56975060"
     Для проверки содержимого сборки или определения, является ли файл сборкой или модулем, можно использовать средство [MSIL Disassembler (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md).
 
 ## <a name="see-also"></a>См. также
+
 - [Создание сборок](../../../docs/framework/app-domains/create-assemblies.md)
 - [Практическое руководство. Просмотр содержимого сборки](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)
 - [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

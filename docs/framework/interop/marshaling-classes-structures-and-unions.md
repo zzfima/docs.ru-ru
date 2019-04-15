@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c481b6889c1f10124465a4e851adfb25a1ba2eff
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.openlocfilehash: 0d08056780fe3042983ea021e5a4cd82a14d252a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58890297"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113728"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>Маршалинг классов, структур и объединений
 Классы и структуры в .NET Framework похожи. И те и другие могут иметь поля, свойства и события. Они также могут иметь статические и нестатические методы. Примечательным отличием является то, что структуры являются типами значений, а классы — ссылочными типами.  
@@ -289,6 +289,7 @@ typedef struct _MYSTRSTRUCT2
  [!code-vb[Conceptual.Interop.Marshaling#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/outarrayofstructs.vb#21)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Маршалинг данных при вызове неуправляемого кода](marshaling-data-with-platform-invoke.md)
 - [Маршалинг строк](marshaling-strings.md)
 - [Маршалинг различных типов массивов](marshaling-different-types-of-arrays.md)

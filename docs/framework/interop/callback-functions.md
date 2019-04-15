@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c0aa8533-3b3b-42e8-9f60-84919793098c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 81a502ab3c0f9f2faf4685c5d61c66f2eab83e7f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 65f5e11a8fb40527387c14cdd8dec7f0bfc5c697
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58820889"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197000"
 ---
 # <a name="callback-functions"></a>Функции обратного вызова
 Функция обратного вызова — это программный код в управляемом приложении, который помогает неуправляемой функции DLL выполнить задачу. Вызовы функции обратного вызова косвенно, через функцию DLL, передаются из управляемого приложения и возвращаются в управляемую реализацию. Лишь некоторые из многих функций DLL, вызываемых в вызове неуправляемого кода, требуют для своего выполнения наличия в управляемом коде функции обратного вызова.  
@@ -28,5 +28,6 @@ ms.locfileid: "58820889"
  Функции обратного вызова — идеальное средство для многократного выполнения некоторой задачи. Другая область их применения — с функциями перечисления API Windows, такими как **EnumFontFamilies**, **EnumPrinters** и **EnumWindows**. Функция **EnumWindows** выполняет перечисление всех существующих на компьютере окон, используя функцию обратного вызова, чтобы выполнить задачу для каждого окна. Инструкции и примеры см. в разделе [Практическое руководство. Реализация функций обратного вызова](../../../docs/framework/interop/how-to-implement-callback-functions.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Практическое руководство. Реализация функций обратного вызова](../../../docs/framework/interop/how-to-implement-callback-functions.md)
 - [Вызов функции DLL](../../../docs/framework/interop/calling-a-dll-function.md)

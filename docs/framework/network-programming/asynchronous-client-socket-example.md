@@ -9,12 +9,12 @@ helpviewer_keywords:
 - sockets, code examples
 - sockets, asynchronous client sockets
 ms.assetid: d4ac53a0-b50b-4232-9726-d47d25fcc38a
-ms.openlocfilehash: cf34b32a9d159c193f9ea1319afec073d62e8ca4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 736deb1a0c360163521b866a788f1ac077f74508
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722093"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172098"
 ---
 # <a name="asynchronous-client-socket-example"></a>Примеры асинхронных сокетов клиента
 Приведенная ниже программа создает клиент, который подключается к серверу. Клиент создается с использованием асинхронного сокета, поэтому выполнение клиентского приложения не приостанавливается до тех пор, пока сервер возвращает ответ. Приложение отправляет строку на сервер, а затем выводит возвращенную им строку в консоли.  
@@ -322,6 +322,7 @@ public class AsynchronousClient {
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Пример асинхронного сокета сервера](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)
 - [Использование синхронного сокета сервера](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
 - [Примеры кода сокетов](../../../docs/framework/network-programming/socket-code-examples.md)

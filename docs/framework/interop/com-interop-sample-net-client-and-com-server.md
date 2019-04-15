@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a3f752bb-8945-4e1b-8163-71def6e9f137
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c7e2f0f239ffded3d9f16a32b1f8e6601e27d06
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ddbb7581ab254b428af621bc4412f60aa70bfb08
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685860"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134528"
 ---
 # <a name="com-interop-sample-net-client-and-com-server"></a>Пример COM-взаимодействия. Клиент .NET и COM-сервер
 В этом примере демонстрируется, как [клиент .NET](#cpconcominteropsamplenetclientcomserveranchor1), построенный для доступа к [COM-серверу](#cpconcominteropsamplenetclientcomserveranchor2), создает экземпляр кокласса COM и вызывает члены класса для расчета выплат по ипотечному кредиту.  
@@ -300,4 +300,5 @@ static double Round(double value, short digits)
 ```  
   
 ## <a name="see-also"></a>См. также
-- [Предоставление COM-компонентов платформе .NET Framework](../../../docs/framework/interop/exposing-com-components.md)
+
+- [Предоставление клиентам .NET Framework доступа к COM-компонентам](../../../docs/framework/interop/exposing-com-components.md)
