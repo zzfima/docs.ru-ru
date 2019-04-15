@@ -1,22 +1,22 @@
 ---
-title: Как выполнить Изменение порядка полей файла с разделителями (LINQ) (C#)
+title: Практическое руководство. Изменение порядка полей файла с разделителями (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4e62d82c-61b7-4f18-b9a1-86723746d7d2
-ms.openlocfilehash: 47bdb9a2c3e1042443480bc2308c0039dfb19e74
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ff8782571bccabe17e9c01331339cf729ff6620a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738645"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314988"
 ---
-# <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-c"></a><span data-ttu-id="2ef03-102">Как выполнить Изменение порядка полей файла с разделителями (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="2ef03-102">How to: Reorder the Fields of a Delimited File (LINQ) (C#)</span></span>
-<span data-ttu-id="2ef03-103">CSV-файл — это текстовый файл, который часто используется для хранения данных электронных таблиц или других табличных данных, представленных строками и столбцами.</span><span class="sxs-lookup"><span data-stu-id="2ef03-103">A comma-separated value (CSV) file is a text file that is often used to store spreadsheet data or other tabular data that is represented by rows and columns.</span></span> <span data-ttu-id="2ef03-104">Использование метода <xref:System.String.Split%2A> для разделения полей упрощает создание запросов к CSV-файлам и управление ими с помощью LINQ.</span><span class="sxs-lookup"><span data-stu-id="2ef03-104">By using the <xref:System.String.Split%2A> method to separate the fields, it is very easy to query and manipulate CSV files by using LINQ.</span></span> <span data-ttu-id="2ef03-105">Фактически та же технология может использоваться для изменения порядка частей любой структурированной строки текста, а не только CSV-файлов.</span><span class="sxs-lookup"><span data-stu-id="2ef03-105">In fact, the same technique can be used to reorder the parts of any structured line of text; it is not limited to CSV files.</span></span>  
+# <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-c"></a><span data-ttu-id="70b1c-102">Практическое руководство. Изменение порядка полей файла с разделителями (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="70b1c-102">How to: Reorder the Fields of a Delimited File (LINQ) (C#)</span></span>
+<span data-ttu-id="70b1c-103">CSV-файл — это текстовый файл, который часто используется для хранения данных электронных таблиц или других табличных данных, представленных строками и столбцами.</span><span class="sxs-lookup"><span data-stu-id="70b1c-103">A comma-separated value (CSV) file is a text file that is often used to store spreadsheet data or other tabular data that is represented by rows and columns.</span></span> <span data-ttu-id="70b1c-104">Использование метода <xref:System.String.Split%2A> для разделения полей упрощает создание запросов к CSV-файлам и управление ими с помощью LINQ.</span><span class="sxs-lookup"><span data-stu-id="70b1c-104">By using the <xref:System.String.Split%2A> method to separate the fields, it is very easy to query and manipulate CSV files by using LINQ.</span></span> <span data-ttu-id="70b1c-105">Фактически та же технология может использоваться для изменения порядка частей любой структурированной строки текста, а не только CSV-файлов.</span><span class="sxs-lookup"><span data-stu-id="70b1c-105">In fact, the same technique can be used to reorder the parts of any structured line of text; it is not limited to CSV files.</span></span>  
   
- <span data-ttu-id="2ef03-106">В следующем примере предполагается, что три столбца представляют "фамилию", "имя" и "идентификатор" учащихся.</span><span class="sxs-lookup"><span data-stu-id="2ef03-106">In the following example, assume that the three columns represent students' "last name," "first name", and "ID."</span></span> <span data-ttu-id="2ef03-107">Поля группируются в алфавитном порядке по фамилии учащихся.</span><span class="sxs-lookup"><span data-stu-id="2ef03-107">The fields are in alphabetical order based on the students' last names.</span></span> <span data-ttu-id="2ef03-108">Запрос создает новую последовательность, в которой столбец идентификатора отображается первым, за ним следует второй столбец, который объединяет имя и фамилию учащегося.</span><span class="sxs-lookup"><span data-stu-id="2ef03-108">The query produces a new sequence in which the ID column appears first, followed by a second column that combines the student's first name and last name.</span></span> <span data-ttu-id="2ef03-109">Порядок строк изменен в соответствии с полем идентификатора.</span><span class="sxs-lookup"><span data-stu-id="2ef03-109">The lines are reordered according to the ID field.</span></span> <span data-ttu-id="2ef03-110">Результаты сохраняются в новый файл, и исходные данные не изменяются.</span><span class="sxs-lookup"><span data-stu-id="2ef03-110">The results are saved into a new file and the original data is not modified.</span></span>  
+ <span data-ttu-id="70b1c-106">В следующем примере предполагается, что три столбца представляют "фамилию", "имя" и "идентификатор" учащихся.</span><span class="sxs-lookup"><span data-stu-id="70b1c-106">In the following example, assume that the three columns represent students' "last name," "first name", and "ID."</span></span> <span data-ttu-id="70b1c-107">Поля группируются в алфавитном порядке по фамилии учащихся.</span><span class="sxs-lookup"><span data-stu-id="70b1c-107">The fields are in alphabetical order based on the students' last names.</span></span> <span data-ttu-id="70b1c-108">Запрос создает новую последовательность, в которой столбец идентификатора отображается первым, за ним следует второй столбец, который объединяет имя и фамилию учащегося.</span><span class="sxs-lookup"><span data-stu-id="70b1c-108">The query produces a new sequence in which the ID column appears first, followed by a second column that combines the student's first name and last name.</span></span> <span data-ttu-id="70b1c-109">Порядок строк изменен в соответствии с полем идентификатора.</span><span class="sxs-lookup"><span data-stu-id="70b1c-109">The lines are reordered according to the ID field.</span></span> <span data-ttu-id="70b1c-110">Результаты сохраняются в новый файл, и исходные данные не изменяются.</span><span class="sxs-lookup"><span data-stu-id="70b1c-110">The results are saved into a new file and the original data is not modified.</span></span>  
   
-### <a name="to-create-the-data-file"></a><span data-ttu-id="2ef03-111">Создание файла данных</span><span class="sxs-lookup"><span data-stu-id="2ef03-111">To create the data file</span></span>  
+### <a name="to-create-the-data-file"></a><span data-ttu-id="70b1c-111">Создание файла данных</span><span class="sxs-lookup"><span data-stu-id="70b1c-111">To create the data file</span></span>  
   
-1.  <span data-ttu-id="2ef03-112">Скопируйте следующие строки в обычный текстовый файл с именем spreadsheet1.csv.</span><span class="sxs-lookup"><span data-stu-id="2ef03-112">Copy the following lines into a plain text file that is named spreadsheet1.csv.</span></span> <span data-ttu-id="2ef03-113">Сохраните файл в папке проекта.</span><span class="sxs-lookup"><span data-stu-id="2ef03-113">Save the file in your project folder.</span></span>  
+1. <span data-ttu-id="70b1c-112">Скопируйте следующие строки в обычный текстовый файл с именем spreadsheet1.csv.</span><span class="sxs-lookup"><span data-stu-id="70b1c-112">Copy the following lines into a plain text file that is named spreadsheet1.csv.</span></span> <span data-ttu-id="70b1c-113">Сохраните файл в папке проекта.</span><span class="sxs-lookup"><span data-stu-id="70b1c-113">Save the file in your project folder.</span></span>  
   
     ```  
     Adams,Terry,120  
@@ -33,7 +33,7 @@ ms.locfileid: "54738645"
     Zabokritski,Eugene,121  
     ```  
   
-## <a name="example"></a><span data-ttu-id="2ef03-114">Пример</span><span class="sxs-lookup"><span data-stu-id="2ef03-114">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="70b1c-114">Пример</span><span class="sxs-lookup"><span data-stu-id="70b1c-114">Example</span></span>  
   
 ```csharp  
 class CSVFiles  
@@ -75,11 +75,11 @@ class CSVFiles
  */  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="2ef03-115">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="2ef03-115">Compiling the Code</span></span>  
- <span data-ttu-id="2ef03-116">Создайте проект, предназначенный для .NET Framework 3.5 или более поздней версии, со ссылкой на библиотеку System.Core.dll и директивы `using` для пространств имен System.Linq и System.IO.</span><span class="sxs-lookup"><span data-stu-id="2ef03-116">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="70b1c-115">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="70b1c-115">Compiling the Code</span></span>  
+ <span data-ttu-id="70b1c-116">Создайте проект, предназначенный для .NET Framework 3.5 или более поздней версии, со ссылкой на библиотеку System.Core.dll и директивы `using` для пространств имен System.Linq и System.IO.</span><span class="sxs-lookup"><span data-stu-id="70b1c-116">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2ef03-117">См. также</span><span class="sxs-lookup"><span data-stu-id="2ef03-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="70b1c-117">См. также</span><span class="sxs-lookup"><span data-stu-id="70b1c-117">See also</span></span>
 
-- [<span data-ttu-id="2ef03-118">LINQ и строки (C#)</span><span class="sxs-lookup"><span data-stu-id="2ef03-118">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
-- [<span data-ttu-id="2ef03-119">LINQ и каталоги файлов (C#)</span><span class="sxs-lookup"><span data-stu-id="2ef03-119">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
-- [<span data-ttu-id="2ef03-120">Практическое руководство. Создание XML из CSV-файлов (C#)</span><span class="sxs-lookup"><span data-stu-id="2ef03-120">How to: Generate XML from CSV Files (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-generate-xml-from-csv-files.md)
+- [<span data-ttu-id="70b1c-118">LINQ и строки (C#)</span><span class="sxs-lookup"><span data-stu-id="70b1c-118">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
+- [<span data-ttu-id="70b1c-119">LINQ и каталоги файлов (C#)</span><span class="sxs-lookup"><span data-stu-id="70b1c-119">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [<span data-ttu-id="70b1c-120">Практическое руководство. Создание XML из CSV-файлов (C#)</span><span class="sxs-lookup"><span data-stu-id="70b1c-120">How to: Generate XML from CSV Files (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-generate-xml-from-csv-files.md)

@@ -8,49 +8,49 @@ helpviewer_keywords:
 - /win32icon compiler option [C#]
 - -win32icon compiler option [C#]
 ms.assetid: 756d9b6d-ab07-41b7-ba58-5bd88f711138
-ms.openlocfilehash: e4558084357c8ce07004a8ed71aef586a707f1a1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7bc7da8121ec1190908d9b94fc7c987f9888c020
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591751"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317458"
 ---
-# <a name="-win32icon-c-compiler-options"></a><span data-ttu-id="43fd2-102">-win32icon (параметры компилятора C#)</span><span class="sxs-lookup"><span data-stu-id="43fd2-102">-win32icon (C# Compiler Options)</span></span>
-<span data-ttu-id="43fd2-103">Параметр **-win32icon** вставляет в выходной файл ICO-файл, который придает выходному файлу необходимый вид в проводнике.</span><span class="sxs-lookup"><span data-stu-id="43fd2-103">The **-win32icon** option inserts an .ico file in the output file, which gives the output file the desired appearance in the File Explorer.</span></span>  
+# <a name="-win32icon-c-compiler-options"></a><span data-ttu-id="2e7c4-102">-win32icon (параметры компилятора C#)</span><span class="sxs-lookup"><span data-stu-id="2e7c4-102">-win32icon (C# Compiler Options)</span></span>
+<span data-ttu-id="2e7c4-103">Параметр **-win32icon** вставляет в выходной файл ICO-файл, который придает выходному файлу необходимый вид в проводнике.</span><span class="sxs-lookup"><span data-stu-id="2e7c4-103">The **-win32icon** option inserts an .ico file in the output file, which gives the output file the desired appearance in the File Explorer.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="43fd2-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="43fd2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2e7c4-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="2e7c4-104">Syntax</span></span>  
   
 ```console  
 -win32icon:filename  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="43fd2-105">Аргументы</span><span class="sxs-lookup"><span data-stu-id="43fd2-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="2e7c4-105">Аргументы</span><span class="sxs-lookup"><span data-stu-id="2e7c4-105">Arguments</span></span>  
  `filename`  
- <span data-ttu-id="43fd2-106">ICO-файл, который требуется добавить в выходной файл.</span><span class="sxs-lookup"><span data-stu-id="43fd2-106">The .ico file that you want to add to your output file.</span></span>  
+ <span data-ttu-id="2e7c4-106">ICO-файл, который требуется добавить в выходной файл.</span><span class="sxs-lookup"><span data-stu-id="2e7c4-106">The .ico file that you want to add to your output file.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="43fd2-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="43fd2-107">Remarks</span></span>  
- <span data-ttu-id="43fd2-108">ICO-файл можно создать с помощью [компилятора ресурсов](/windows/desktop/menurc/resource-compiler).</span><span class="sxs-lookup"><span data-stu-id="43fd2-108">An .ico file can be created with the [Resource Compiler](/windows/desktop/menurc/resource-compiler).</span></span> <span data-ttu-id="43fd2-109">Компилятор ресурсов вызывается при компиляции программы Visual C++; ICO-файл создается из RC-файла.</span><span class="sxs-lookup"><span data-stu-id="43fd2-109">The Resource Compiler is invoked when you compile a Visual C++ program; an .ico file is created from the .rc file.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2e7c4-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="2e7c4-107">Remarks</span></span>  
+ <span data-ttu-id="2e7c4-108">ICO-файл можно создать с помощью [компилятора ресурсов](/windows/desktop/menurc/resource-compiler).</span><span class="sxs-lookup"><span data-stu-id="2e7c4-108">An .ico file can be created with the [Resource Compiler](/windows/desktop/menurc/resource-compiler).</span></span> <span data-ttu-id="2e7c4-109">Компилятор ресурсов вызывается при компиляции программы Visual C++; ICO-файл создается из RC-файла.</span><span class="sxs-lookup"><span data-stu-id="2e7c4-109">The Resource Compiler is invoked when you compile a Visual C++ program; an .ico file is created from the .rc file.</span></span>  
   
- <span data-ttu-id="43fd2-110">Дополнительные сведения о ссылках на файлы ресурсов .NET Framework и их присоединении см. в разделах [-linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) и [-resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) соответственно.</span><span class="sxs-lookup"><span data-stu-id="43fd2-110">See [-linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) (to reference) or [-resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) (to attach) a .NET Framework resource file.</span></span> <span data-ttu-id="43fd2-111">Дополнительные сведения об импорте RES-файла см. в разделе [-win32res](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="43fd2-111">See [-win32res](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md) to import a .res file.</span></span>  
+ <span data-ttu-id="2e7c4-110">Дополнительные сведения о ссылках на файлы ресурсов .NET Framework и их присоединении см. в разделах [-linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) и [-resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) соответственно.</span><span class="sxs-lookup"><span data-stu-id="2e7c4-110">See [-linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) (to reference) or [-resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) (to attach) a .NET Framework resource file.</span></span> <span data-ttu-id="2e7c4-111">Дополнительные сведения об импорте RES-файла см. в разделе [-win32res](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="2e7c4-111">See [-win32res](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md) to import a .res file.</span></span>  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="43fd2-112">Установка данного параметра компилятора в среде разработки Visual Studio</span><span class="sxs-lookup"><span data-stu-id="43fd2-112">To set this compiler option in the Visual Studio development environment</span></span>  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="2e7c4-112">Установка данного параметра компилятора в среде разработки Visual Studio</span><span class="sxs-lookup"><span data-stu-id="2e7c4-112">To set this compiler option in the Visual Studio development environment</span></span>  
   
-1.  <span data-ttu-id="43fd2-113">Откройте страницу **Свойства** проекта.</span><span class="sxs-lookup"><span data-stu-id="43fd2-113">Open the project's **Properties** pages.</span></span>  
+1. <span data-ttu-id="2e7c4-113">Откройте страницу **Свойства** проекта.</span><span class="sxs-lookup"><span data-stu-id="2e7c4-113">Open the project's **Properties** pages.</span></span>  
   
-2.  <span data-ttu-id="43fd2-114">Перейдите на страницу свойств **Приложение**.</span><span class="sxs-lookup"><span data-stu-id="43fd2-114">Click the **Application** property page.</span></span>  
+2. <span data-ttu-id="2e7c4-114">Перейдите на страницу свойств **Приложение**.</span><span class="sxs-lookup"><span data-stu-id="2e7c4-114">Click the **Application** property page.</span></span>  
   
-3.  <span data-ttu-id="43fd2-115">Измените свойство **Значок приложения**.</span><span class="sxs-lookup"><span data-stu-id="43fd2-115">Modify the **Application icon** property.</span></span>  
+3. <span data-ttu-id="2e7c4-115">Измените свойство **Значок приложения**.</span><span class="sxs-lookup"><span data-stu-id="2e7c4-115">Modify the **Application icon** property.</span></span>  
   
- <span data-ttu-id="43fd2-116">Сведения об установке этого параметра компилятора программными средствами см. в разделе <xref:VSLangProj80.ProjectProperties3.ApplicationIcon%2A>.</span><span class="sxs-lookup"><span data-stu-id="43fd2-116">For information on how to set this compiler option programmatically, see <xref:VSLangProj80.ProjectProperties3.ApplicationIcon%2A>.</span></span>  
+ <span data-ttu-id="2e7c4-116">Сведения об установке этого параметра компилятора программными средствами см. в разделе <xref:VSLangProj80.ProjectProperties3.ApplicationIcon%2A>.</span><span class="sxs-lookup"><span data-stu-id="2e7c4-116">For information on how to set this compiler option programmatically, see <xref:VSLangProj80.ProjectProperties3.ApplicationIcon%2A>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="43fd2-117">Пример</span><span class="sxs-lookup"><span data-stu-id="43fd2-117">Example</span></span>  
- <span data-ttu-id="43fd2-118">Скомпилируйте `in.cs` и присоедините ICO-файл `rf.ico`, чтобы получить файл `in.exe`:</span><span class="sxs-lookup"><span data-stu-id="43fd2-118">Compile `in.cs` and attach an .ico file `rf.ico` to produce `in.exe`:</span></span>  
+## <a name="example"></a><span data-ttu-id="2e7c4-117">Пример</span><span class="sxs-lookup"><span data-stu-id="2e7c4-117">Example</span></span>  
+ <span data-ttu-id="2e7c4-118">Скомпилируйте `in.cs` и присоедините ICO-файл `rf.ico`, чтобы получить файл `in.exe`:</span><span class="sxs-lookup"><span data-stu-id="2e7c4-118">Compile `in.cs` and attach an .ico file `rf.ico` to produce `in.exe`:</span></span>  
   
 ```console  
 csc -win32icon:rf.ico in.cs  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="43fd2-119">См. также</span><span class="sxs-lookup"><span data-stu-id="43fd2-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2e7c4-119">См. также</span><span class="sxs-lookup"><span data-stu-id="2e7c4-119">See also</span></span>
 
-- [<span data-ttu-id="43fd2-120">Параметры компилятора C# </span><span class="sxs-lookup"><span data-stu-id="43fd2-120">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)
-- [<span data-ttu-id="43fd2-121">Управление свойствами проектов и решений</span><span class="sxs-lookup"><span data-stu-id="43fd2-121">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
+- [<span data-ttu-id="2e7c4-120">Параметры компилятора C#</span><span class="sxs-lookup"><span data-stu-id="2e7c4-120">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)
+- [<span data-ttu-id="2e7c4-121">Управление свойствами проекта и решения</span><span class="sxs-lookup"><span data-stu-id="2e7c4-121">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
