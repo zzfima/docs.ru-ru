@@ -1,20 +1,20 @@
 ---
-title: Как выполнить Разделение файла на несколько файлов с помощью групп (LINQ) (C#)
+title: Практическое руководство. Разделение файла на несколько файлов с помощью групп (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 8179b91c-d778-4e57-884f-77fe5a8e4e40
-ms.openlocfilehash: bba3cf5e1e6d4aa7b88ddbb7f3454be511982f74
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a78274a51bfec59147d97f88596a6ec60e40a997
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626066"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337374"
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a><span data-ttu-id="9b993-102">Как выполнить Разделение файла на несколько файлов с помощью групп (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="9b993-102">How to: Split a File Into Many Files by Using Groups (LINQ) (C#)</span></span>
-<span data-ttu-id="9b993-103">В этом примере показан один из способов объединения содержимого двух файлов и последующего создания набора новых файлов, данные в котором будут организованы иначе.</span><span class="sxs-lookup"><span data-stu-id="9b993-103">This example shows one way to merge the contents of two files and then create a set of new files that organize the data in a new way.</span></span>  
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a><span data-ttu-id="e0268-102">Практическое руководство. Разделение файла на несколько файлов с помощью групп (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="e0268-102">How to: Split a File Into Many Files by Using Groups (LINQ) (C#)</span></span>
+<span data-ttu-id="e0268-103">В этом примере показан один из способов объединения содержимого двух файлов и последующего создания набора новых файлов, данные в котором будут организованы иначе.</span><span class="sxs-lookup"><span data-stu-id="e0268-103">This example shows one way to merge the contents of two files and then create a set of new files that organize the data in a new way.</span></span>  
   
-### <a name="to-create-the-data-files"></a><span data-ttu-id="9b993-104">Создание файлов данных</span><span class="sxs-lookup"><span data-stu-id="9b993-104">To create the data files</span></span>  
+### <a name="to-create-the-data-files"></a><span data-ttu-id="e0268-104">Создание файлов данных</span><span class="sxs-lookup"><span data-stu-id="e0268-104">To create the data files</span></span>  
   
-1.  <span data-ttu-id="9b993-105">Скопируйте эти имена в текстовый файл с именем names1.txt и сохраните его в папке проекта:</span><span class="sxs-lookup"><span data-stu-id="9b993-105">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>  
+1. <span data-ttu-id="e0268-105">Скопируйте эти имена в текстовый файл с именем names1.txt и сохраните его в папке проекта:</span><span class="sxs-lookup"><span data-stu-id="e0268-105">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>  
   
     ```  
     Bankov, Peter  
@@ -29,7 +29,7 @@ ms.locfileid: "54626066"
     Garcia, Debra  
     ```  
   
-2.  <span data-ttu-id="9b993-106">Скопируйте эти имена в текстовый файл с именем names2.txt и сохраните его в папке проекта: Обратите внимание, что в этих двух файлах имеются общие имена.</span><span class="sxs-lookup"><span data-stu-id="9b993-106">Copy these names into a text file that is named names2.txt and save it in your project folder: Note that the two files have some names in common.</span></span>  
+2. <span data-ttu-id="e0268-106">Скопируйте эти имена в текстовый файл с именем names2.txt и сохраните его в папке проекта: Обратите внимание, что в этих двух файлах имеются общие имена.</span><span class="sxs-lookup"><span data-stu-id="e0268-106">Copy these names into a text file that is named names2.txt and save it in your project folder: Note that the two files have some names in common.</span></span>  
   
     ```  
     Liu, Jinghao  
@@ -44,7 +44,7 @@ ms.locfileid: "54626066"
     El Yassir, Mehdi  
     ```  
   
-## <a name="example"></a><span data-ttu-id="9b993-107">Пример</span><span class="sxs-lookup"><span data-stu-id="9b993-107">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="e0268-107">Пример</span><span class="sxs-lookup"><span data-stu-id="e0268-107">Example</span></span>  
   
 ```csharp  
 class SplitWithGroups  
@@ -122,13 +122,13 @@ class SplitWithGroups
  */  
 ```  
   
- <span data-ttu-id="9b993-108">Программа записывает отдельный файл для каждой группы в ту же папку, где находятся файлы данных.</span><span class="sxs-lookup"><span data-stu-id="9b993-108">The program writes a separate file for each group in the same folder as the data files.</span></span>  
+ <span data-ttu-id="e0268-108">Программа записывает отдельный файл для каждой группы в ту же папку, где находятся файлы данных.</span><span class="sxs-lookup"><span data-stu-id="e0268-108">The program writes a separate file for each group in the same folder as the data files.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="9b993-109">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="9b993-109">Compiling the Code</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="e0268-109">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="e0268-109">Compiling the Code</span></span>
 
- <span data-ttu-id="9b993-110">Создайте проект, предназначенный для .NET Framework 3.5 или более поздней версии, со ссылкой на библиотеку System.Core.dll и директивы `using` для пространств имен System.Linq и System.IO.</span><span class="sxs-lookup"><span data-stu-id="9b993-110">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+ <span data-ttu-id="e0268-110">Создайте проект, предназначенный для .NET Framework 3.5 или более поздней версии, со ссылкой на библиотеку System.Core.dll и директивы `using` для пространств имен System.Linq и System.IO.</span><span class="sxs-lookup"><span data-stu-id="e0268-110">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9b993-111">См. также</span><span class="sxs-lookup"><span data-stu-id="9b993-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e0268-111">См. также</span><span class="sxs-lookup"><span data-stu-id="e0268-111">See also</span></span>
 
-- [<span data-ttu-id="9b993-112">LINQ и строки (C#)</span><span class="sxs-lookup"><span data-stu-id="9b993-112">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
-- [<span data-ttu-id="9b993-113">LINQ и каталоги файлов (C#)</span><span class="sxs-lookup"><span data-stu-id="9b993-113">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [<span data-ttu-id="e0268-112">LINQ и строки (C#)</span><span class="sxs-lookup"><span data-stu-id="e0268-112">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
+- [<span data-ttu-id="e0268-113">LINQ и каталоги файлов (C#)</span><span class="sxs-lookup"><span data-stu-id="e0268-113">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
