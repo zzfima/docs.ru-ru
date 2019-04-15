@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Настройка переменных среды для командной строки Visual Studio
+title: Практическое руководство. Настройка переменных среды для командной строки Visual Studio
 ms.date: 09/29/2017
 f1_keywords:
 - cs.build.commandline
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Visual C# compiler, enabling
 - compiling source code, from command line
 ms.assetid: 7ec09480-5612-4f6a-8d00-ad90ea9bca5d
-ms.openlocfilehash: ffc75a01230df078073f163c97a8c77229d3b2a1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1c906a2274f57f5a89fb16198c8f6ed2e3a335e2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590881"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322125"
 ---
-# <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>Как выполнить Настройка переменных среды для командной строки Visual Studio
+# <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>Практическое руководство. Настройка переменных среды для командной строки Visual Studio
 
 Файл VsDevCmd.bat задает переменные среды для поддержки построения из командной строки.
 
@@ -33,11 +33,11 @@ ms.locfileid: "54590881"
   
 ### <a name="to-run-vsdevcmdbat"></a>Выполнение файла VsDevCmd.BAT  
   
-1.  В меню **Пуск** выберите пункт **Командная строка разработчика для VS 2017**.  Он находится в папке **Visual Studio 2017**.
+1. В меню **Пуск** выберите пункт **Командная строка разработчика для VS 2017**.  Он находится в папке **Visual Studio 2017**.
   
-2.  Перейдите в подкаталог \Program Files\Microsoft Visual Studio\\*Version*\\*Offering*\Common7\Tools или \Program Files (x86)\Microsoft Visual Studio\\*Version*\\*Offering*\Common7\Tools в зависимости от вашей установки.  (Текущая версия: *Версия* — *2017*. *Предложение* — *Enterprise*, *Professional* или *Community*.)
+2. Перейдите в подкаталог \Program Files\Microsoft Visual Studio\\*Version*\\*Offering*\Common7\Tools или \Program Files (x86)\Microsoft Visual Studio\\*Version*\\*Offering*\Common7\Tools в зависимости от вашей установки.  (Текущая версия: *Версия* — *2017*. *Предложение* — *Enterprise*, *Professional* или *Community*.)
   
-3.  Чтобы выполнить файл VsDevCmd.bat, введите **VsDevCmd**.  
+3. Чтобы выполнить файл VsDevCmd.bat, введите **VsDevCmd**.  
   
     > [!CAUTION]
     >  Файл VsDevCmd.bat может иметь отличия на разных компьютерах. Не заменяйте отсутствующий или поврежденный файл VsDevCmd.bat файлом VsDevCmd.bat с другого компьютера. Вместо этого повторите установку, чтобы заменить отсутствующий файл.  
@@ -51,4 +51,4 @@ VsDevCmd.bat -help
 
 ## <a name="see-also"></a>См. также
 
-- [Сборка из командной строки с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
+- [Построение из командной строки с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)

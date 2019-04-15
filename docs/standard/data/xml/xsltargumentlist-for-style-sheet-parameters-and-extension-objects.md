@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1fb973dcde1ca31a57fbc3022d3eb1c92a2a9d0f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: e6209df7d226d7e3acb938801d1fb77afbe1249b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45988092"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322413"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>XsltArgumentList для параметров таблицы стилей и объектов расширения
 Класс <xref:System.Xml.Xsl.XsltArgumentList> содержит параметры языка XSLT и объекты расширения XSLT. При передаче в метод <xref:System.Xml.Xsl.XslTransform.Transform%2A> эти параметры и объекты расширения могут вызываться из таблиц стилей.  
@@ -50,11 +50,11 @@ ms.locfileid: "45988092"
   
 #### <a name="to-use-the-xslt-parameter-the-user-needs-to-do-the-following"></a>Чтобы использовать параметр XSLT, пользователь должен выполнить следующие действия.  
   
-1.  Создать объект <xref:System.Xml.Xsl.XsltArgumentList> и добавить объекты с помощью метода <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>.  
+1. Создать объект <xref:System.Xml.Xsl.XsltArgumentList> и добавить объекты с помощью метода <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>.  
   
-2.  Вызвать параметры из таблицы стилей.  
+2. Вызвать параметры из таблицы стилей.  
   
-3.  Передать <xref:System.Xml.Xsl.XsltArgumentList> методу <xref:System.Xml.Xsl.XslTransform.Transform%2A>.  
+3. Передать <xref:System.Xml.Xsl.XsltArgumentList> методу <xref:System.Xml.Xsl.XslTransform.Transform%2A>.  
   
 ### <a name="example"></a>Пример  
  В следующем примере используется метод <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> для создания параметра, хранящего вычисленную дату скидки. Дата скидки вычисляется как 20 дней после даты заказа.  
@@ -191,11 +191,11 @@ public class Sample
   
 #### <a name="to-use-the-xslt-extension-object-the-user-needs-to-do-the-following"></a>Чтобы использовать объект расширения XSLT, пользователь должен выполнить следующие действия  
   
-1.  Создать объект <xref:System.Xml.Xsl.XsltArgumentList> и добавить объект расширения с помощью метода <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>.  
+1. Создать объект <xref:System.Xml.Xsl.XsltArgumentList> и добавить объект расширения с помощью метода <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>.  
   
-2.  Вызвать объект расширения из таблицы стилей.  
+2. Вызвать объект расширения из таблицы стилей.  
   
-3.  Передать <xref:System.Xml.Xsl.XsltArgumentList> методу <xref:System.Xml.Xsl.XslTransform.Transform%2A>.  
+3. Передать <xref:System.Xml.Xsl.XsltArgumentList> методу <xref:System.Xml.Xsl.XslTransform.Transform%2A>.  
   
 ### <a name="example"></a>Пример  
  В следующем примере вычисляется длина окружности по заданному радиусу.  

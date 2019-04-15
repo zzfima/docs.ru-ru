@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: 7d0ceb0cddc49722d7122e4fde6149fe1ea86208
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 0b2af8c41bc6411d2665d2cf37bd48040fc8d8dc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545472"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307478"
 ---
 # <a name="operators-c-programming-guide"></a>Операторы (Руководство по программированию на C#)
 
@@ -63,7 +63,7 @@ ms.locfileid: "58545472"
 |----------------|-----------------|  
 |[+](../../../csharp/language-reference/operators/addition-operator.md)x|идентификации|  
 |[-](../../../csharp/language-reference/operators/subtraction-operator.md)x|Отрицание|  
-|[\!](../../../csharp/language-reference/operators/logical-negation-operator.md)x|Логическое отрицание|  
+|[\!](../../../csharp/language-reference/operators/boolean-logical-operators.md#logical-negation-operator-)x|Логическое отрицание|  
 |[~](../../../csharp/language-reference/operators/bitwise-complement-operator.md)x|Поразрядное отрицание|  
 |[++](../../../csharp/language-reference/operators/arithmetic-operators.md#increment-operator-)x|Префиксный инкремент|  
 |[--](../../../csharp/language-reference/operators/arithmetic-operators.md#decrement-operator---)x|Префиксный декремент|  
@@ -91,7 +91,7 @@ ms.locfileid: "58545472"
 |x [<\<](../../../csharp/language-reference/operators/left-shift-operator.md) y|Сдвиг влево|  
 |x [>>](../../../csharp/language-reference/operators/right-shift-operator.md) y|Сдвиг вправо|  
   
- **Относительные операторы и операторы типов**  
+ **Операторы отношения и типа**  
   
 |Выражение|Описание|  
 |----------------|-----------------|  
@@ -116,8 +116,8 @@ ms.locfileid: "58545472"
 |Логическое И|x [&](../../../csharp/language-reference/operators/and-operator.md) y|Поразрядное И для операндов целочисленного типа, логическое И для операндов логического типа|  
 |Логическое исключающее ИЛИ|x [^](../../../csharp/language-reference/operators/xor-operator.md) y|Поразрядное исключающее ИЛИ для операндов целочисленного типа, логическое исключающее ИЛИ для операндов логического типа|  
 |Логическое ИЛИ|x [&#124;](../../../csharp/language-reference/operators/or-operator.md) y|Поразрядное ИЛИ для операндов целочисленного типа, логическое ИЛИ для операндов логического типа|  
-|Условное И|x [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) y|Равно y, только если x имеет значение true|  
-|Условное ИЛИ|x [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) y|Равно y, только если x имеет значение false|  
+|Условное И|x [&&](../../../csharp/language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) y|Равно y, только если x имеет значение true|  
+|Условное ИЛИ|x [&#124;&#124;](../../../csharp/language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) y|Равно y, только если x имеет значение false|  
 |Объединение со значением NULL|x [??](../../../csharp/language-reference/operators/null-coalescing-operator.md) Y|Равно y, если x имеет значение NULL, в противном случае равно x|  
 |Условие|x [?](../../../csharp/language-reference/operators/conditional-operator.md) y : z|Равно y, если x имеет значение true, и z, если x имеет значение false|  
   

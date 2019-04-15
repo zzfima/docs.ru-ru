@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -win32res compiler option [C#]
 - win32res compiler option [C#]
 ms.assetid: 3c33f750-6948-4c7e-a27e-bef98f77255b
-ms.openlocfilehash: 522d80ce6be277c048fa62cc1a7b077d8bb08bfe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4026fcbd7dc2ef29c1e7ee01a0f37b3ff471b187
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544709"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322386"
 ---
 # <a name="-win32res-c-compiler-options"></a>-win32res (параметры компилятора C#)
 Параметр **-win32res** вставляет ресурс Win32 в выходной файл.  
@@ -38,11 +38,11 @@ ms.locfileid: "54544709"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio  
   
-1.  Откройте страницу **Свойства** проекта.  
+1. Откройте страницу **Свойства** проекта.  
   
-2.  Перейдите на страницу свойств **Приложение**.  
+2. Перейдите на страницу свойств **Приложение**.  
   
-3.  Чтобы выбрать файл в поле со списком, нажмите кнопку **Файл ресурсов**.  
+3. Чтобы выбрать файл в поле со списком, нажмите кнопку **Файл ресурсов**.  
   
 ## <a name="example"></a>Пример  
  Скомпилируйте `in.cs` и присоедините файл ресурсов Win32 `rf.res`, чтобы создать `in.exe`:  
@@ -53,5 +53,5 @@ csc -win32res:rf.res in.cs
   
 ## <a name="see-also"></a>См. также
 
-- [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)
-- [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)
+- [Параметры компилятора C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Управление свойствами проекта и решения](/visualstudio/ide/managing-project-and-solution-properties)

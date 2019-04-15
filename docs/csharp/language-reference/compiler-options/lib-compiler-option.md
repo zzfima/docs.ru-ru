@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -lib compiler option [C#]
 - /lib compiler option [C#]
 ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
-ms.openlocfilehash: f3ea4a323fa57a49499c4fa6dea43aa22c3475df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 49920a46f1d970c3f00025c3dc3eb384c937aa99
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677879"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319408"
 ---
 # <a name="-lib-c-compiler-options"></a>-lib (параметры компилятора C#)
 Параметр **-lib** указывает расположение сборок, на которые ссылается параметр [-reference (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md).  
@@ -34,13 +34,13 @@ ms.locfileid: "54677879"
 ## <a name="remarks"></a>Примечания  
  Компилятор выполняет поиск связанных сборок, для которых не указано полное имя, в следующем порядке:  
   
-1.  Текущая рабочая папка. Это папка, из которой был вызван компилятор.  
+1. Текущая рабочая папка. Это папка, из которой был вызван компилятор.  
   
-2.  Системный каталог среды CLR.  
+2. Системный каталог среды CLR.  
   
-3.  Каталоги, заданные параметром **-lib**.  
+3. Каталоги, заданные параметром **-lib**.  
   
-4.  Каталоги, указанные переменной среды LIB.  
+4. Каталоги, указанные переменной среды LIB.  
   
  Для указания ссылки на сборку используется параметр **-reference**.  
   
@@ -52,11 +52,11 @@ ms.locfileid: "54677879"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio  
   
-1.  Откройте диалоговое окно **Страницы свойств** проекта.  
+1. Откройте диалоговое окно **Страницы свойств** проекта.  
   
-2.  Откройте страницу свойств **Путь ссылок**.  
+2. Откройте страницу свойств **Путь ссылок**.  
   
-3.  Измените содержимое поля со списком.  
+3. Измените содержимое поля со списком.  
   
  Сведения об установке этого параметра компилятора программными средствами см. в разделе <xref:VSLangProj80.ProjectProperties3.ReferencePath%2A>.  
   
@@ -69,5 +69,5 @@ csc -lib:c:\ -reference:t2.dll t2.cs
   
 ## <a name="see-also"></a>См. также
 
-- [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)
-- [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)
+- [Параметры компилятора C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Управление свойствами проекта и решения](/visualstudio/ide/managing-project-and-solution-properties)

@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Получение уведомлений о первом этапе обработки исключений
+title: Практическое руководство. Получение уведомлений о первом этапе обработки исключений
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 66f002b8-a97d-4a6e-a503-2cec01689113
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed8aaa12e91654dcf0b688b14d7d2f38bc9096ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f6f70b4c67de892c3b66a0099dae9f618a99b3f1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677760"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314117"
 ---
-# <a name="how-to-receive-first-chance-exception-notifications"></a>Как выполнить Получение уведомлений о первом этапе обработки исключений
+# <a name="how-to-receive-first-chance-exception-notifications"></a>Практическое руководство. Получение уведомлений о первом этапе обработки исключений
 Событие <xref:System.AppDomain.FirstChanceException> класса <xref:System.AppDomain> позволяет получать уведомления о порождении исключений до того, как среда CLR начнет искать обработчики исключений.
 
  Событие возникает на уровне домена приложения. Поток выполнения может проходить несколько доменов приложения, поэтому необработанное в одном домене исключение может быть обработано в другом домене. Уведомление происходит во всех доменах приложения, добавивших обработчик для этого события, пока исключение не будет обработано.
@@ -31,17 +31,17 @@ ms.locfileid: "54677760"
 
 #### <a name="to-demonstrate-first-chance-exception-notifications-in-the-default-application-domain"></a>Получение уведомлений о первом этапе обработки исключений в домене приложения по умолчанию
 
-1.  Определите обработчик событий для события <xref:System.AppDomain.FirstChanceException>, используя лямбда-функцию, и присоедините его к событию. В этом примере обработчик событий выводит имя домена приложения, где событие было обработано, а также свойство исключения <xref:System.Exception.Message%2A>.
+1. Определите обработчик событий для события <xref:System.AppDomain.FirstChanceException>, используя лямбда-функцию, и присоедините его к событию. В этом примере обработчик событий выводит имя домена приложения, где событие было обработано, а также свойство исключения <xref:System.Exception.Message%2A>.
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto_simple#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/cs/example.cs#2)]
      [!code-vb[System.AppDomain.FirstChanceException_howto_simple#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/vb/example.vb#2)]
 
-2.  Вызовите исключение и перехватите его. Еще до того, как среда выполнения найдет обработчик исключений, будет вызвано событие <xref:System.AppDomain.FirstChanceException>, которое отобразит сообщение. За ним последует это сообщение, которое отображается обработчиком исключений.
+2. Вызовите исключение и перехватите его. Еще до того, как среда выполнения найдет обработчик исключений, будет вызвано событие <xref:System.AppDomain.FirstChanceException>, которое отобразит сообщение. За ним последует это сообщение, которое отображается обработчиком исключений.
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto_simple#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/cs/example.cs#3)]
      [!code-vb[System.AppDomain.FirstChanceException_howto_simple#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/vb/example.vb#3)]
 
-3.  Вызовите исключение, но не перехватывайте его. Еще до того, как среда выполнения найдет обработчик исключений, будет вызвано событие <xref:System.AppDomain.FirstChanceException>, которое отобразит сообщение. Обработчика исключений нет, поэтому приложение завершит работу.
+3. Вызовите исключение, но не перехватывайте его. Еще до того, как среда выполнения найдет обработчик исключений, будет вызвано событие <xref:System.AppDomain.FirstChanceException>, которое отобразит сообщение. Обработчика исключений нет, поэтому приложение завершит работу.
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto_simple#4](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/cs/example.cs#4)]
      [!code-vb[System.AppDomain.FirstChanceException_howto_simple#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/vb/example.vb#4)]
@@ -56,12 +56,12 @@ ms.locfileid: "54677760"
 
 #### <a name="to-receive-first-chance-exception-notifications-in-an-application-domain-that-you-create"></a>Получение уведомлений о первом этапе обработки исключений в созданном пользователем домене приложения
 
-1.  Определите обработчик событий для события <xref:System.AppDomain.FirstChanceException>. В этом примере используется метод `static` (`Shared` в Visual Basic), выводящий имя домена приложения, обработавшего исключение, и свойство <xref:System.Exception.Message%2A> исключения.
+1. Определите обработчик событий для события <xref:System.AppDomain.FirstChanceException>. В этом примере используется метод `static` (`Shared` в Visual Basic), выводящий имя домена приложения, обработавшего исключение, и свойство <xref:System.Exception.Message%2A> исключения.
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#3)]
      [!code-vb[System.AppDomain.FirstChanceException_howto#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#3)]
 
-2.  Создайте домен приложения и добавьте обработчик событий <xref:System.AppDomain.FirstChanceException> для этого домена приложения. В этом примере домен приложения называется `AD1`.
+2. Создайте домен приложения и добавьте обработчик событий <xref:System.AppDomain.FirstChanceException> для этого домена приложения. В этом примере домен приложения называется `AD1`.
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#2)]
      [!code-vb[System.AppDomain.FirstChanceException_howto#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#2)]
@@ -70,17 +70,17 @@ ms.locfileid: "54677760"
 
 #### <a name="to-demonstrate-first-chance-exception-notifications-in-the-application-domain"></a>Демонстрация уведомлений о первом этапе обработки исключений в домене приложения
 
-1.  Создайте объект `Worker` в домене приложения, созданном в предыдущей процедуре. Класс `Worker` должен быть открытым наследником <xref:System.MarshalByRefObject>, как показано в полном примере в конце статьи.
+1. Создайте объект `Worker` в домене приложения, созданном в предыдущей процедуре. Класс `Worker` должен быть открытым наследником <xref:System.MarshalByRefObject>, как показано в полном примере в конце статьи.
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto#4](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#4)]
      [!code-vb[System.AppDomain.FirstChanceException_howto#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#4)]
 
-2.  Вызовите метод объекта `Worker`, который создает исключение. В этом примере метод `Thrower` вызывается дважды. В первый раз аргумент метода равен `true`, в результате чего метод перехватывает собственное исключение самостоятельно. Во второй раз аргумент равен `false`, и метод `Main()` перехватывает исключение в домене приложения по умолчанию.
+2. Вызовите метод объекта `Worker`, который создает исключение. В этом примере метод `Thrower` вызывается дважды. В первый раз аргумент метода равен `true`, в результате чего метод перехватывает собственное исключение самостоятельно. Во второй раз аргумент равен `false`, и метод `Main()` перехватывает исключение в домене приложения по умолчанию.
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#6)]
      [!code-vb[System.AppDomain.FirstChanceException_howto#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#6)]
 
-3.  Поместите в метод `Thrower` код, отвечающий за то, будет ли метод обрабатывать собственное исключение.
+3. Поместите в метод `Thrower` код, отвечающий за то, будет ли метод обрабатывать собственное исключение.
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#5)]
      [!code-vb[System.AppDomain.FirstChanceException_howto#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#5)]
@@ -103,4 +103,5 @@ ms.locfileid: "54677760"
 -   Этот пример представляет собой приложение командной строки. Чтобы скомпилировать и выполнить этот код в Visual Studio, добавьте код на C# `Console.ReadLine();` (в Visual Basic — `Console.ReadLine()`) в конец метода `Main()`, чтобы предотвратить закрытие командного окна до того, как вы успеете прочитать выходные данные.
 
 ## <a name="see-also"></a>См. также
+
 - <xref:System.AppDomain.FirstChanceException>

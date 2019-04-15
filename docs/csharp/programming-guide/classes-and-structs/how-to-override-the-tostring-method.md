@@ -1,19 +1,19 @@
 ---
-title: Как выполнить Руководство по программированию на C#. Переопределение метода ToString
+title: Практическое руководство. Руководство по программированию на C#. Переопределение метода ToString
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - ToString method, overriding in C#
 - inheritance [C#], overriding OnPaint and ToString
 ms.assetid: 8016db69-1f19-420c-8e17-98e8bebb7749
-ms.openlocfilehash: fd73deb4682ec12b982740f6e9e9c1e38a5688a3
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 18734627e299c696e23bb0ec9bc63ed37fe3e601
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202435"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294981"
 ---
-# <a name="how-to-override-the-tostring-method-c-programming-guide"></a>Как выполнить Руководство по программированию на C#. Переопределение метода ToString
+# <a name="how-to-override-the-tostring-method-c-programming-guide"></a>Практическое руководство. Руководство по программированию на C#. Переопределение метода ToString
 Каждый класс или структура в языке C# неявно наследует класс <xref:System.Object>. Поэтому каждый объект в языке C# получает метод <xref:System.Object.ToString%2A>, который возвращает строковое представление данного объекта. Например, все переменные типа `int` имеют метод `ToString`, который позволяет им возвращать их содержимое в виде строки:  
   
  [!code-csharp[csProgGuideInheritance#37](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#37)]  
@@ -27,13 +27,13 @@ ms.locfileid: "57202435"
   
 ### <a name="to-override-the-tostring-method-in-your-class-or-struct"></a>Переопределение метода ToString в классе или структуре  
   
-1.  Объявите метод `ToString` со следующими модификаторами и типом возвращаемого значения:  
+1. Объявите метод `ToString` со следующими модификаторами и типом возвращаемого значения:  
   
     ```csharp  
     public override string ToString(){}  
     ```  
   
-2.  Реализуйте этот метод таким образом, чтобы он возвращал строку.  
+2. Реализуйте этот метод таким образом, чтобы он возвращал строку.  
   
      В приведенном ниже примере возвращается не только имя класса, но и специфические данные для конкретного экземпляра класса.  
   
@@ -52,5 +52,5 @@ ms.locfileid: "57202435"
 - [string](../../../csharp/language-reference/keywords/string.md)
 - [new](../../../csharp/language-reference/keywords/new.md)
 - [override](../../../csharp/language-reference/keywords/override.md)
-- [virtual](../../../csharp/language-reference/keywords/virtual.md)
+- [виртуальный](../../../csharp/language-reference/keywords/virtual.md)
 - [Типы форматирования](../../../standard/base-types/formatting-types.md)

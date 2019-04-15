@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -checked compiler option [C#]
 - /checked compiler option [C#]
 ms.assetid: fb7475d3-e6a6-4e6d-b86c-69e7a74c854b
-ms.openlocfilehash: 44a86a2e1ab9346280f655d4ee75e7282c6c9cd5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 814e8f3aa7130c6a64e7e27951854bed7b7cbe6c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54578394"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333942"
 ---
 # <a name="-checked-c-compiler-options"></a>-checked (параметры компилятора C#)
 Параметр **-checked** указывает, будет ли находящийся вне области действия ключевых слов [checked](../../../csharp/language-reference/keywords/checked.md) или [unchecked](../../../csharp/language-reference/keywords/unchecked.md) целочисленный арифметический оператор, в результате выполнения которого получено значение, выходящее за установленный для данного типа данных диапазон значений, приводить к возникновению исключения во время выполнения.  
@@ -35,13 +35,13 @@ ms.locfileid: "54578394"
  
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio  
   
-1.  Откройте страницу **Свойства** проекта. Дополнительные сведения см. в разделе [Страница "Сборка" в конструкторе проектов (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
+1. Откройте страницу **Свойства** проекта. Дополнительные сведения см. в разделе [Страница "Сборка" в конструкторе проектов (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
   
-2.  Щелкните страницу свойств **Сборка**.  
+2. Щелкните страницу свойств **Сборка**.  
   
-3.  Нажмите кнопку **Дополнительно** .  
+3. Нажмите кнопку **Дополнительно** .  
   
-4.  Измените свойство **Проверять арифметические переполнения и потери точности**.  
+4. Измените свойство **Проверять арифметические переполнения и потери точности**.  
   
  Программный доступ к этому параметру компилятора описан в статье <xref:VSLangProj80.CSharpProjectConfigurationProperties3.CheckForOverflowUnderflow%2A>.  
   
@@ -54,5 +54,5 @@ csc t2.cs -checked
   
 ## <a name="see-also"></a>См. также
 
-- [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)
-- [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)
+- [Параметры компилятора C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Управление свойствами проекта и решения](/visualstudio/ide/managing-project-and-solution-properties)

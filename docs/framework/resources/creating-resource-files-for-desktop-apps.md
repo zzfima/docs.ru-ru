@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1e5ca80de113785904562ff1cef953de8a5a9460
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: c7ff34285220fd1e3c17503a8387104e91ec08b1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442143"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313662"
 ---
 # <a name="create-resource-files-for-net-apps"></a>Создание файлов ресурсов для приложений .NET
 
@@ -31,7 +31,7 @@ ms.locfileid: "56442143"
 
 - Создайте двоичный файл ресурсов (RESOURCES-файл) программным способом. Затем этот файл можно внедрить в исполняемый файл приложения или библиотеку приложения с помощью компилятора языка или во вспомогательную сборку с помощью [компоновщика сборок (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md). Дополнительные сведения см. в разделе [Ресурсы в RESOURCES-файлах](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#ResourcesFiles).
 
-- Создайте файл ресурсов в [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) и включите этот файл в проект. В Visual Studio есть редактор ресурсов,с помощью которого можно добавлять, удалять и изменять ресурсы. Во время компиляции файл ресурсов автоматически преобразуется в двоичный RESOURCES-файл и внедряется в сборку приложения или вспомогательную сборку. Дополнительные сведения см. в разделе [Файлы ресурсов в Visual Studio](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#VSResFiles).
+- Создайте файл ресурсов в [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) и включите этот файл в проект. В Visual Studio есть редактор ресурсов,с помощью которого можно добавлять, удалять и изменять ресурсы. Во время компиляции файл ресурсов автоматически преобразуется в двоичный RESOURCES-файл и внедряется в сборку приложения или вспомогательную сборку. Дополнительные сведения см. в разделе [Файлы ресурсов в Visual Studio](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#VSResFiles).
 
 <a name="TextFiles"></a>
 ## <a name="resources-in-text-files"></a>Ресурсы в формате текстовых файлов
@@ -172,7 +172,7 @@ csc greeting.cs -resource:GreetingResources.resources
 ```
 
 > [!IMPORTANT]
-> Так как RESX-файлы должны представлять собой XML-код с правильным, заранее определенным форматом, с ними не рекомендуется работать вручную, особенно если они содержат нестроковые ресурсы. Вместо этого в [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) предусмотрен прозрачный интерфейс для создания RESX-файлов и управления ими. Дополнительные сведения см. в разделе [Файлы ресурсов в Visual Studio](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#VSResFiles). Создавать RESX-файлы и управлять ими можно также программно. Дополнительные сведения см. в разделе [Работа с RESX-файлами программным способом](../../../docs/framework/resources/working-with-resx-files-programmatically.md).
+> Так как RESX-файлы должны представлять собой XML-код с правильным, заранее определенным форматом, с ними не рекомендуется работать вручную, особенно если они содержат нестроковые ресурсы. Вместо этого в [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) предусмотрен прозрачный интерфейс для создания RESX-файлов и управления ими. Дополнительные сведения см. в разделе [Файлы ресурсов в Visual Studio](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#VSResFiles). Создавать RESX-файлы и управлять ими можно также программно. Дополнительные сведения см. в разделе [Работа с RESX-файлами программным способом](../../../docs/framework/resources/working-with-resx-files-programmatically.md).
 
 <a name="ResourcesFiles"></a>
 ## <a name="resources-in-resources-files"></a>Ресурсы в RESOURCES-файлах
@@ -198,7 +198,7 @@ csc greeting.cs -resource:GreetingResources.resources
 <a name="VSResFiles"></a>
 ## <a name="resource-files-in-visual-studio"></a>Файлы ресурсов в Visual Studio
 
-При добавлении файла ресурсов в проект [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) среда Visual Studio создает RESX-файл в каталоге проекта. В Visual Studio имеются редакторы ресурсов, позволяющие добавлять строки, изображения и двоичные объекты. Так как редакторы предназначены для обработки только статических данных, их нельзя использовать для хранения программных объектов; данные объектов необходимо записывать в RESX- или RESOURCES-файл программным способом. Дополнительные сведения см. в статье [Работа с RESX-файлами программным способом](../../../docs/framework/resources/working-with-resx-files-programmatically.md) и разделе [Ресурсы в RESOURCES-файлах](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#ResourcesFiles).
+При добавлении файла ресурсов в проект [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) среда Visual Studio создает RESX-файл в каталоге проекта. В Visual Studio имеются редакторы ресурсов, позволяющие добавлять строки, изображения и двоичные объекты. Так как редакторы предназначены для обработки только статических данных, их нельзя использовать для хранения программных объектов; данные объектов необходимо записывать в RESX- или RESOURCES-файл программным способом. Дополнительные сведения см. в статье [Работа с RESX-файлами программным способом](../../../docs/framework/resources/working-with-resx-files-programmatically.md) и разделе [Ресурсы в RESOURCES-файлах](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#ResourcesFiles).
 
 При добавлении локализованных ресурсов указывайте для них то же имя корневого файла, что и для основного файла ресурсов. Также в имени файла необходимо указать язык и региональные параметры. Например, при добавлении файла ресурсов с именем Resources.resx можно также создать файлы ресурсов с именами Resources.en-US.resx и Resources.fr-FR.resx, чтобы сохранить локализованные ресурсы для английского (США) и французского (Франция) языков и региональных параметров соответственно. Следует также указать язык и региональные параметры по умолчанию для приложения. Это язык и региональные параметры, ресурсы которых используются в том случае, если для конкретного языка и региональных параметров никаких локализованных ресурсов обнаружить не удается. Чтобы задать язык и региональные параметры по умолчанию, в обозревателе решений Visual Studio щелкните правой кнопкой мыши имя проекта, выберите "Приложение", щелкните **Сведения о сборке** и в списке **Нейтральный язык** выберите соответствующий язык и региональные параметры.
 

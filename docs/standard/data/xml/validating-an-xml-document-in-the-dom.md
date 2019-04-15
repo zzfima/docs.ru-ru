@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5688559bcadea309bb0ddb4b156f94540e7be624
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd60916302877692ac011e6c0743fae40a10dd34
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664334"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298426"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>Проверка XML-документа в DOM
 По умолчанию класс <xref:System.Xml.XmlDocument> не сверяет код XML в модели DOM ни с данными схемы XSD, ни c определением типа документа (DTD). Код XML проверяется только на правильность формата.  
@@ -29,15 +29,15 @@ ms.locfileid: "54664334"
 ### <a name="creating-an-xml-schema-validating-xmlreader"></a>Создание объекта XmlReader с проверкой по схеме  
  Для создания объекта <xref:System.Xml.XmlReader> с проверкой по схеме выполните следующие действия.  
   
-1.  Сформируйте новый экземпляр класса <xref:System.Xml.XmlReaderSettings>.  
+1. Сформируйте новый экземпляр класса <xref:System.Xml.XmlReaderSettings>.  
   
-2.  Добавьте схему XML к свойству <xref:System.Xml.XmlReaderSettings.Schemas%2A> экземпляра <xref:System.Xml.XmlReaderSettings>.  
+2. Добавьте схему XML к свойству <xref:System.Xml.XmlReaderSettings.Schemas%2A> экземпляра <xref:System.Xml.XmlReaderSettings>.  
   
-3.  Укажите `Schema` в качестве <xref:System.Xml.XmlReaderSettings.ValidationType%2A>.  
+3. Укажите `Schema` в качестве <xref:System.Xml.XmlReaderSettings.ValidationType%2A>.  
   
-4.  Дополнительно можно указать <xref:System.Xml.XmlReaderSettings.ValidationFlags%2A> и <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> для обработки ошибок проверки по схеме, а также предупреждений, выданных в процессе проверки.  
+4. Дополнительно можно указать <xref:System.Xml.XmlReaderSettings.ValidationFlags%2A> и <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> для обработки ошибок проверки по схеме, а также предупреждений, выданных в процессе проверки.  
   
-5.  Наконец, передайте объект <xref:System.Xml.XmlReaderSettings> методу <xref:System.Xml.XmlReader.Create%2A> класса <xref:System.Xml.XmlReader> вместе с XML-документом; в результате будет создан объект <xref:System.Xml.XmlReader> с проверкой по схеме.  
+5. Наконец, передайте объект <xref:System.Xml.XmlReaderSettings> методу <xref:System.Xml.XmlReader.Create%2A> класса <xref:System.Xml.XmlReader> вместе с XML-документом; в результате будет создан объект <xref:System.Xml.XmlReader> с проверкой по схеме.  
   
 ### <a name="example"></a>Пример  
  В следующем примере кода объект <xref:System.Xml.XmlReader> с проверкой по схеме проверяет XML-данные, загружаемые в модель DOM. В XML-документ вносятся недействительные изменения; документ вновь подвергается проверке, что приводит к появлению ошибок проверки схемы. Наконец, одна из ошибок исправляется, после чего часть XML-документа подвергается частичной проверке.  

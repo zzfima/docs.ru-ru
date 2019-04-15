@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 0ab6be6f2c6d8ebbe67051e4e3f967a325e654c8
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: e600b8249096eecb13f63ea00343a771a8c12b60
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58761151"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234545"
 ---
 ### <a name="htmltextwriter-does-not-render-br-element-correctly"></a>HtmlTextWriter неправильно отображает элемент `<br/>`
 
@@ -16,4 +16,3 @@ ms.locfileid: "58761151"
 |Версия|4.6|
 |Тип|Изменение целевой платформы|
 |Затронутые API|<ul><li><xref:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.String)?displayProperty=nameWithType></li><li><xref:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.Web.UI.HtmlTextWriterTag)?displayProperty=nameWithType></li></ul>|
-

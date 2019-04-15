@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms, control licenses
 - licensed controls [Windows Forms]
 ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
-ms.openlocfilehash: 527a0bc6591dc4146ec94b2a46777d6ca533ec74
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6c4432d94372ce10ee9ecdf6e441eda3318a20d7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601705"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298972"
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe (компилятор лицензий)
 Компилятор лицензий считывает текстовые файлы, содержащие сведения о лицензиях, и создает двоичный файл, который может быть внедрен в исполняемый файл среды CLR в качестве ресурса.  
@@ -52,19 +52,19 @@ ms.locfileid: "54601705"
   
 ## <a name="example"></a>Пример  
   
-1.  Если применяется лицензированный элемент управления `MyCompany.Samples.LicControl1`, который содержится в библиотеке `Samples.DLL` приложения `HostApp.exe`*, `HostAppLic.txt` можно создать файл* , содержащий указанные ниже сведения.  
+1. Если применяется лицензированный элемент управления `MyCompany.Samples.LicControl1`, который содержится в библиотеке `Samples.DLL` приложения `HostApp.exe`*, `HostAppLic.txt` можно создать файл* , содержащий указанные ниже сведения.  
   
     ```  
     MyCompany.Samples.LicControl1, Samples.DLL  
     ```  
   
-2.  Создайте LICENSES-файл с именем `HostApp.exe.licenses`, используя следующую команду.  
+2. Создайте LICENSES-файл с именем `HostApp.exe.licenses`, используя следующую команду.  
   
     ```  
     lc /target:HostApp.exe /complist:hostapplic.txt /i:Samples.DLL /outdir:c:\bindir  
     ```  
   
-3.  Создайте `HostApp.exe`, включив в него LICENSES-файл в качестве ресурса. Для создания приложения на языке C# используется следующая команда.  
+3. Создайте `HostApp.exe`, включив в него LICENSES-файл в качестве ресурса. Для создания приложения на языке C# используется следующая команда.  
   
     ```  
     csc /res:HostApp.exe.licenses /out:HostApp.exe *.cs  
@@ -93,6 +93,7 @@ lc @response.rsp
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Инструменты](../../../docs/framework/tools/index.md)
 - [Al.exe (компоновщик сборок)](../../../docs/framework/tools/al-exe-assembly-linker.md)
 - [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - main compiler option [C#]
 - /main compiler option [C#]
 ms.assetid: 975cf4d5-36ac-4530-826c-4aad0c7f2049
-ms.openlocfilehash: 36e5f10a61711e3245fa4b69dc583f4bb78e55e0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 133aa22f16285f94f58722cb18c83b96f1ff885c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558592"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302794"
 ---
 # <a name="-main-c-compiler-options"></a>-main (параметры компилятора C#)
 Этот параметр определяет класс, который содержит точку входа в программу, если метод **Main** содержит сразу несколько классов.  
@@ -36,11 +36,11 @@ ms.locfileid: "54558592"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio  
   
-1.  Откройте страницу **Свойства** проекта.  
+1. Откройте страницу **Свойства** проекта.  
   
-2.  Перейдите на страницу свойств **Приложение**.  
+2. Перейдите на страницу свойств **Приложение**.  
   
-3.  Измените свойство **Автоматически запускаемый объект**.  
+3. Измените свойство **Автоматически запускаемый объект**.  
   
      Сведения об установке этого параметра компилятора программными средствами см. в разделе <xref:VSLangProj80.ProjectProperties3.StartupObject%2A>.  
   
@@ -53,5 +53,5 @@ csc t2.cs t3.cs -main:Test2
   
 ## <a name="see-also"></a>См. также
 
-- [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)
-- [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)
+- [Параметры компилятора C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Управление свойствами проекта и решения](/visualstudio/ide/managing-project-and-solution-properties)

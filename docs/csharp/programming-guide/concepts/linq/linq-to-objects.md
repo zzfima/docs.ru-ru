@@ -2,12 +2,12 @@
 title: LINQ to Objects (C#)
 ms.date: 07/20/2015
 ms.assetid: c5c2c178-3529-4f6c-b3df-2d5267af7f22
-ms.openlocfilehash: 19dd15fdd7e818e0619647205f2369a55f3bc2b0
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.openlocfilehash: b82d21a7de4f596afb5e41487221498dd5ca9f98
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45528543"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326636"
 ---
 # <a name="linq-to-objects-c"></a>LINQ to Objects (C#)
 Термин "LINQ to Objects" означает использование запросов LINQ с любой коллекцией <xref:System.Collections.IEnumerable> или <xref:System.Collections.Generic.IEnumerable%601> напрямую, без привлечения промежуточного поставщика LINQ, API [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md) или [LINQ to XML](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md). Вы можете выполнить запрос LINQ к любой перечислимой коллекции, такой как <xref:System.Collections.Generic.List%601>, <xref:System.Array> или <xref:System.Collections.Generic.Dictionary%602>. Коллекция может быть определена пользователем или возвращена API .NET Framework.  
@@ -16,11 +16,11 @@ ms.locfileid: "45528543"
   
  Кроме того, запросы LINQ предлагают три основных преимущества по сравнению с традиционными циклами `foreach`:  
   
-1.  Они более краткие и удобочитаемые, особенно при фильтрации нескольких условий.  
+1. Они более краткие и удобочитаемые, особенно при фильтрации нескольких условий.  
   
-2.  Они предоставляют широкие возможности фильтрации, упорядочивания и группировки с минимумом кода приложения.  
+2. Они предоставляют широкие возможности фильтрации, упорядочивания и группировки с минимумом кода приложения.  
   
-3.  Они могут переноситься в другие источники данных практически без изменений.  
+3. Они могут переноситься в другие источники данных практически без изменений.  
   
  В общем, чем сложнее операция, которую нужно выполнить с данными, тем больше преимуществ вы получаете при использовании LINQ вместо традиционных способов итерации.  
   
@@ -42,5 +42,5 @@ ms.locfileid: "45528543"
  [Практическое руководство. Добавление настраиваемых методов для запросов LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-add-custom-methods-for-linq-queries.md)  
  Расширение набора методов, которые можно использовать для запросов LINQ путем добавления методов расширения в интерфейс <xref:System.Collections.Generic.IEnumerable%601>.  
   
- [LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)  
+ [LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)  
  Ссылки на разделы, рассказывающие LINQ и содержащие примеры кода выполнения запросов.

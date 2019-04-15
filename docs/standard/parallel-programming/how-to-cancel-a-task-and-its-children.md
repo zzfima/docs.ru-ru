@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Отмена задачи и ее дочерних элементов
+title: Практическое руководство. Отмена задачи и ее дочерних элементов
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: 08574301-8331-4719-ad50-9cf7f6ff3048
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed3129364d73d196b2e25b962b8c42325a144dfd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 08e5712db60fb09b48d6be9f35737c9a884d1ce8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642835"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324480"
 ---
-# <a name="how-to-cancel-a-task-and-its-children"></a>Как выполнить Отмена задачи и ее дочерних элементов
+# <a name="how-to-cancel-a-task-and-its-children"></a>Практическое руководство. Отмена задачи и ее дочерних элементов
 В следующих примерах показано выполнение таких задач:  
   
-1.  Создание и запуск задачи с возможностью отмены.  
+1. Создание и запуск задачи с возможностью отмены.  
   
-2.  Передача маркера отмены пользовательскому делегату, и дополнительно — экземпляру задачи.  
+2. Передача маркера отмены пользовательскому делегату, и дополнительно — экземпляру задачи.  
   
-3.  Перехват запросов на отмену и реагирование на них в пользовательском делегате.  
+3. Перехват запросов на отмену и реагирование на них в пользовательском делегате.  
   
-4.  Опциональное оповещение вызывающего потока об отмене задачи.  
+4. Опциональное оповещение вызывающего потока об отмене задачи.  
   
  Вызывающий поток не может принудительно завершить задачу. Он только передает ей запрос на отмену. Если задача уже выполняется, то именно пользовательский делегат получает такой запрос и принимает соответствующие меры. Если запрос на отмену поступает до запуска задачи, пользовательский делегат даже не выполняется и объект задачи сразу переходит в состояние Canceled (Отменено).  
   
@@ -46,4 +46,4 @@ ms.locfileid: "54642835"
 - <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>
 - [Асинхронное программирование на основе задач](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)
 - [Присоединенные и отсоединенные дочерние задачи](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)
-- [Лямбда-выражения в PLINQ и TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)
+- [Лямбда-выражения в PLINQ и библиотеке параллельных задач](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f08169c7-aad8-4ec3-9a21-9ebd3b89986c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a42a568e7c3f3a1a5c84d2ceae49c262f77d275d
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: d96e223b85178c7f2784a523e5609057d1432488
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442494"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310542"
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>Рекомендации по разработке международных приложений
 
@@ -71,7 +71,7 @@ ms.locfileid: "56442494"
 
 8. Для извлечения ресурсов для конкретного языка и региона следует использовать класс <xref:System.Resources.ResourceManager?displayProperty=nameWithType>.
 
-9. Используйте [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) для создания диалоговых окон Windows Forms, чтобы эти диалоговые окна можно было локализовать с помощью [редактора ресурсов форм Windows (Winres.exe)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md). Не следует кодировать диалоговые окна форм Windows Forms вручную.
+9. Используйте [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) для создания диалоговых окон Windows Forms, чтобы эти диалоговые окна можно было локализовать с помощью [редактора ресурсов форм Windows (Winres.exe)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md). Не следует кодировать диалоговые окна форм Windows Forms вручную.
 
 10. Следует систематизировать создаваемое приложение с учетом возможности профессиональной локализации (перевода).
 

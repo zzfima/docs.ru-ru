@@ -9,12 +9,12 @@ helpviewer_keywords:
 - '| operator [C#]'
 - binary operator (|) [C#]
 ms.assetid: 82d6bb78-54c8-40bf-b679-531180ddaf70
-ms.openlocfilehash: 185ea3aabff4794ec08cca541773dbec3574ab4b
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: 38f8e21dbd07868441e0c4fbb6074f9897905222
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333516"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312882"
 ---
 # <a name="-operator-c-reference"></a>Справочник по C#. Оператор |
 
@@ -22,7 +22,7 @@ ms.locfileid: "54333516"
 
 ## <a name="remarks"></a>Примечания
 
-Бинарный оператор `|` вычисляет оба операнда независимо от значения первого из них, в отличие от [условного оператора OR](conditional-or-operator.md)`||`.
+Бинарный оператор `|` вычисляет оба операнда независимо от значения первого из них, в отличие от [условного оператора OR](boolean-logical-operators.md#conditional-logical-or-operator-)`||`.
 
 Определяемые пользователем типы могут вызвать перегрузку оператора `|` (см. раздел [operator](../keywords/operator.md)) .
 

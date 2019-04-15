@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /target compiler options [C#], /target:exe
 - -target compiler options [C#], /target:exe
 ms.assetid: bda5717d-1b91-4848-956b-fcf85c30e432
-ms.openlocfilehash: b9efa25870e11e0140cba2ad39c3bc4515056ce3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7d34a25fd614a209761714e1f4eff3042ca240c0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54697885"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331316"
 ---
 # <a name="-targetexe-c-compiler-options"></a>-target:exe (параметры компилятора C#)
 Параметр **-target:exe** предписывает компилятору создать исполняемое (EXE) консольное приложение.  
@@ -37,11 +37,11 @@ ms.locfileid: "54697885"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio  
   
-1.  Откройте страницу **Свойства** проекта.  
+1. Откройте страницу **Свойства** проекта.  
   
-2.  Перейдите на страницу свойств **Приложение**.  
+2. Перейдите на страницу свойств **Приложение**.  
   
-3.  Измените значение свойства **Тип выходных данных**.  
+3. Измените значение свойства **Тип выходных данных**.  
   
  Сведения об установке этого параметра компилятора программными средствами см. в разделе <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
   
@@ -56,4 +56,4 @@ csc in.cs
 ## <a name="see-also"></a>См. также
 
 - [-target (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)
-- [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)
+- [Параметры компилятора C#](../../../csharp/language-reference/compiler-options/index.md)

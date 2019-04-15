@@ -11,19 +11,19 @@ helpviewer_keywords:
 - I/O [Visual Basic], reading text files
 - text files [Visual Basic], reading
 ms.assetid: 8d185eb2-79ca-42cd-95a7-d3ff44a5a0f8
-ms.openlocfilehash: d6326bb44d6a84c455c972fcbd191dc957844b74
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 3ad34864e162f8f62fed3754bdbcd39c75f7b3f8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58830101"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334306"
 ---
 # <a name="how-to-read-from-text-files-with-multiple-formats-in-visual-basic"></a>Практическое руководство. Чтение текстовых файлов различных форматов в Visual Basic
 Объект <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> позволяет легко и эффективно анализировать структурированные текстовые файлы, например файлы журналов. Обработать файл, имеющий содержимое в нескольких форматах, можно с помощью метода `PeekChars`, который позволяет определять формат каждой анализируемой строки на протяжении всего файла.  
   
 ### <a name="to-parse-a-text-file-with-multiple-formats"></a>Анализ текстового файла с содержимым в нескольких форматах  
   
-1.  Добавьте текстовый файл с именем testfile.txt в проект. Добавьте в текстовый файл следующее содержимое.  
+1. Добавьте текстовый файл с именем testfile.txt в проект. Добавьте в текстовый файл следующее содержимое.  
   
     ```  
     Err  1001 Cannot access resource.  
@@ -34,19 +34,19 @@ ms.locfileid: "58830101"
     Acc  10/04/2009User2      Standard user.  
     ```  
   
-2.  Определите ожидаемый формат и формат, используемый при сообщении об ошибке. Последним элементом в каждом массиве является -1, поэтому предполагается, что ширина последнего поля может изменяться. Это происходит, когда последний элемент массива меньше или равен нулю.  
+2. Определите ожидаемый формат и формат, используемый при сообщении об ошибке. Последним элементом в каждом массиве является -1, поэтому предполагается, что ширина последнего поля может изменяться. Это происходит, когда последний элемент массива меньше или равен нулю.  
   
      [!code-vb[VbFileIORead#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#4)]  
   
-3.  Создайте объект <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>, определив ширину и формат.  
+3. Создайте объект <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>, определив ширину и формат.  
   
      [!code-vb[VbFileIORead#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#5)]  
   
-4.  Переберите в цикле строки, проверяя формат перед чтением.  
+4. Переберите в цикле строки, проверяя формат перед чтением.  
   
      [!code-vb[VbFileIORead#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#6)]  
   
-5.  Выведите сообщения об ошибках на консоль.  
+5. Выведите сообщения об ошибках на консоль.  
   
      [!code-vb[VbFileIORead#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#7)]  
   

@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Запись сведений о службах в журнал
+title: Практическое руководство. Запись сведений о службах в журнал
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - logs, service applications
 ms.assetid: c0d8140f-c055-4d8e-a2e0-37358a550116
 author: ghogen
-ms.openlocfilehash: ff3eb0dd27f097899fc19f57142034ffd2bb382a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dfcfb7370ffd59a50cf6d0b01e84e581ddc6fc52
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660151"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306525"
 ---
-# <a name="how-to-log-information-about-services"></a>Как выполнить Запись сведений о службах в журнал
+# <a name="how-to-log-information-about-services"></a>Практическое руководство. Запись сведений о службах в журнал
 По умолчанию все проекты служб Windows могут взаимодействовать с журналом событий приложения и записывать в него сведения и исключения. Чтобы указать, что эта функциональность должна быть в вашем приложении, можно использовать свойство <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> . По умолчанию ведение журнала включено для любой службы, созданной с помощью шаблона проекта службы Windows. Можно использовать статическую форму класса <xref:System.Diagnostics.EventLog> для записи сведений в журнал, и тогда не потребуется создавать экземпляр компонента <xref:System.Diagnostics.EventLog> или вручную регистрировать источник.  
   
  Установщик службы автоматически регистрирует каждую службу в проекте как допустимый источник событий для журнала приложений на компьютере, где установлена служба, если включено ведение журнала. Служба записывает сведения каждый раз, когда служба запускается, останавливается, приостанавливается, возобновляется, устанавливается или удаляется. Она также записывает все возникающие ошибки. Вам не нужно писать никакой код для записи в журнал при использовании этого поведения по умолчанию; служба обрабатывает это автоматически.  
@@ -46,18 +46,18 @@ ms.locfileid: "54660151"
   
 ### <a name="to-set-up-logging-to-a-custom-log"></a>Настройка ведения пользовательского журнала  
   
-1.  Задайте для свойства <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> значение `false`.  
+1. Задайте для свойства <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> значение `false`.  
   
     > [!NOTE]
     >  Чтобы использовать пользовательский журнал, необходимо задать в свойстве <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> значение false.  
   
-2.  Настройте экземпляр компонента <xref:System.Diagnostics.EventLog> в приложении службы Windows.  
+2. Настройте экземпляр компонента <xref:System.Diagnostics.EventLog> в приложении службы Windows.  
   
-3.  Создайте пользовательский журнал, вызвав метод <xref:System.Diagnostics.EventLog.CreateEventSource%2A> и задав исходную строку и имя файла журнала, который хотите создать.  
+3. Создайте пользовательский журнал, вызвав метод <xref:System.Diagnostics.EventLog.CreateEventSource%2A> и задав исходную строку и имя файла журнала, который хотите создать.  
   
-4.  Укажите в свойстве <xref:System.Diagnostics.EventLog.Source%2A> компонента <xref:System.Diagnostics.EventLog> исходную строку, созданную на шаге 3.  
+4. Укажите в свойстве <xref:System.Diagnostics.EventLog.Source%2A> компонента <xref:System.Diagnostics.EventLog> исходную строку, созданную на шаге 3.  
   
-5.  Выполняйте запись в журнал, вызывая метод <xref:System.Diagnostics.EventLog.WriteEntry%2A> в экземпляре компонента <xref:System.Diagnostics.EventLog> .  
+5. Выполняйте запись в журнал, вызывая метод <xref:System.Diagnostics.EventLog.WriteEntry%2A> в экземпляре компонента <xref:System.Diagnostics.EventLog> .  
   
      Следующий код показывает, как настроить ведение пользовательского журнала.  
   
@@ -70,4 +70,5 @@ ms.locfileid: "54660151"
     [!code-vb[VbRadconService#15](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#15)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Знакомство с приложениями служб Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)

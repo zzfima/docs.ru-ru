@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 74f00821f2304664729faa8de2f0163c6611f513
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235887"
+---
 ### <a name="data-written-to-printsystemjobinfojobstream-must-be-in-xps-format"></a>Данные, записанные в PrintSystemJobInfo.JobStream, должны иметь формат XPS
 
 |   |   |
@@ -8,4 +16,3 @@
 |Версия|4.5|
 |Тип|Среда выполнения|
 |Затронутые API|<ul><li><xref:System.Printing.PrintSystemJobInfo.JobStream?displayProperty=nameWithType></li></ul>|
-

@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Добавление установщиков в приложение-службу
+title: Практическое руководство. Добавление установщиков в приложение-службу
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, deploying
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ServiceProcessInstaller class, adding installers to services
 ms.assetid: 8b698e9a-b88e-4f44-ae45-e0c5ea0ae5a8
 author: ghogen
-ms.openlocfilehash: 3316f3b292f6a9597b62a802b489459ee2f0a952
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af56e01c1c8c1e23bb80413ce6f52a5f6d467b4b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743521"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307267"
 ---
-# <a name="how-to-add-installers-to-your-service-application"></a>Как выполнить Добавление установщиков в приложение-службу
+# <a name="how-to-add-installers-to-your-service-application"></a>Практическое руководство. Добавление установщиков в приложение-службу
 В состав Visual Studio входят компоненты установки, которые могут устанавливать ресурсы, связанные с приложениями-службами. Компоненты установки регистрируют отдельную службу в целевой системе и сообщают диспетчеру служб об этой службе. При работе с приложением-службой можно выбрать ссылку в окне свойств для автоматического добавления соответствующих установщиков в проект.  
   
 > [!NOTE]
@@ -33,17 +33,17 @@ ms.locfileid: "54743521"
   
 ### <a name="to-add-installers-to-your-service-application"></a>Добавление установщиков в приложение-службу  
   
-1.  В **обозревателе решений** откройте **конструктор** для службы, в которую нужно добавить компонент установки.  
+1. В **обозревателе решений** откройте **конструктор** для службы, в которую нужно добавить компонент установки.  
   
-2.  Щелкните фон конструктора, чтобы выбрать саму службу, а не один из ее элементов.  
+2. Щелкните фон конструктора, чтобы выбрать саму службу, а не один из ее элементов.  
   
-3.  Щелкните правой кнопкой мыши в активном окне конструктора и выберите команду **Добавить установщик**.  
+3. Щелкните правой кнопкой мыши в активном окне конструктора и выберите команду **Добавить установщик**.  
   
      В проект будут добавлены новый класс `ProjectInstaller` и два компонента установки <xref:System.ServiceProcess.ServiceProcessInstaller> и <xref:System.ServiceProcess.ServiceInstaller>, в которые будут скопированы значения свойств для службы.  
   
-4.  Щелкните компонент <xref:System.ServiceProcess.ServiceInstaller> и убедитесь, что для свойства <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> задано то же значение, что и для свойства <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> в службе.  
+4. Щелкните компонент <xref:System.ServiceProcess.ServiceInstaller> и убедитесь, что для свойства <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> задано то же значение, что и для свойства <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> в службе.  
   
-5.  Чтобы определить, как будет запущена служба, щелкните компонент <xref:System.ServiceProcess.ServiceInstaller> и задайте для свойства <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> соответствующее значение.  
+5. Чтобы определить, как будет запущена служба, щелкните компонент <xref:System.ServiceProcess.ServiceInstaller> и задайте для свойства <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> соответствующее значение.  
   
     |Значение|Результат|  
     |-----------|------------|  
@@ -51,16 +51,17 @@ ms.locfileid: "54743521"
     |<xref:System.ServiceProcess.ServiceStartMode.Automatic>|Служба будет запускаться сама при перезагрузке компьютера.|  
     |<xref:System.ServiceProcess.ServiceStartMode.Disabled>|Запуск службы невозможен.|  
   
-6.  Чтобы определить контекст безопасности, в котором будет запущена служба, щелкните компонент <xref:System.ServiceProcess.ServiceProcessInstaller> и задайте соответствующие значения свойств. Дополнительные сведения см. в разделе [Как Назначение службам контекста безопасности](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md).  
+6. Чтобы определить контекст безопасности, в котором будет запущена служба, щелкните компонент <xref:System.ServiceProcess.ServiceProcessInstaller> и задайте соответствующие значения свойств. Дополнительные сведения см. в разделе [Как Назначение службам контекста безопасности](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md).  
   
-7.  Переопределите все методы, для которых нужно выполнить дополнительную обработку.  
+7. Переопределите все методы, для которых нужно выполнить дополнительную обработку.  
   
-8.  Повторите шаги 1–7 для каждой дополнительной службы в проекте.  
+8. Повторите шаги 1–7 для каждой дополнительной службы в проекте.  
   
     > [!NOTE]
     >  Для каждой дополнительной службы в проекте необходимо добавить в класс `ProjectInstaller` проекта дополнительный компонент <xref:System.ServiceProcess.ServiceInstaller>. Компонент <xref:System.ServiceProcess.ServiceProcessInstaller>, добавленный на шаге 3, работает со всеми отдельными установщиками служб в проекте.  
   
 ## <a name="see-also"></a>См. также
+
 - [Знакомство с приложениями служб Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
 - [Практическое руководство. Установка и удаление служб](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
 - [Практическое руководство. Запуск служб](../../../docs/framework/windows-services/how-to-start-services.md)

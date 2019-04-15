@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5f52b34e6fb99b52e5775482dec3c59ed6738b31
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: ff1bc6f0aa29742f61129ff9acb9980658f118a4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920562"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327871"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Установка .NET Framework для разработчиков
 
@@ -107,7 +107,7 @@ ms.locfileid: "58920562"
 
 Автономный установщик и веб-установщик предназначены для компьютеров x86 и x64 (см. раздел [Требования к системе](~/docs/framework/get-started/system-requirements.md)), но не поддерживают компьютеры на основе Itanium.
 
-1.  Откройте страницу загрузки требуемой версии платформы .NET Framework:
+1. Откройте страницу загрузки требуемой версии платформы .NET Framework:
 
     - .NET Framework 4.7.2 ([веб-установщик](https://go.microsoft.com/fwlink/?LinkId=863262) или [автономный установщик](https://go.microsoft.com/fwlink/p/?LinkId=863265))
 
@@ -163,7 +163,7 @@ ms.locfileid: "58920562"
 > [!IMPORTANT]
 > Языковые пакеты не содержат компоненты платформы .NET Framework, необходимые для запуска приложения, поэтому перед установкой языкового пакета необходимо запустить веб-установщик или автономный установщик. Если вы уже установили языковой пакет, удалите его, установите .NET Framework и переустановите языковой пакет.
 
-1.  Откройте страницу загрузки языковых пакетов для установленной версии платформы .NET Framework:
+1. Откройте страницу загрузки языковых пакетов для установленной версии платформы .NET Framework:
 
     - [Языковые пакеты .NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863258)
 
@@ -183,9 +183,9 @@ ms.locfileid: "58920562"
 
     - [Языковые пакеты .NET Framework 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245451)
 
-2.  Выберите требуемый язык в списке и подождите несколько секунд, чтобы страница перезагрузилась на этом языке.
+2. Выберите требуемый язык в списке и подождите несколько секунд, чтобы страница перезагрузилась на этом языке.
 
-3.  Выберите **Загрузить**.
+3. Выберите **Загрузить**.
 
 В приведенной ниже таблице перечислены поддерживаемые языки.
 

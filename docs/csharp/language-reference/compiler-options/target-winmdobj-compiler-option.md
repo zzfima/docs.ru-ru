@@ -2,12 +2,12 @@
 title: -target:winmdobj (параметры компилятора C#)
 ms.date: 07/20/2015
 ms.assetid: 1819a045-659d-498a-9457-c466e902986f
-ms.openlocfilehash: 4000394a35c8990d3c5793c1313fc768a61c3271
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9cc85bf582d737114bc0e621a9568bbb9acb791b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608970"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319304"
 ---
 # <a name="-targetwinmdobj-c-compiler-options"></a>-target:winmdobj (параметры компилятора C#)
 Если используется параметр компилятора **-target:winmdobj**, компилятор создает промежуточный WINMDOBJ-файл, который можно преобразовать в двоичный WINMD-файл среды выполнения Windows. Затем WINMD-файл можно использовать в программах на языках JavaScript и C++ в дополнение к программам, использующим управляемые языки.  
@@ -29,11 +29,11 @@ ms.locfileid: "54608970"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-ide-for-a-windows-store-app"></a>Установка данного параметра компилятора в интегрированной среде разработки Visual Studio для приложения для Магазина Windows  
   
-1.  В **обозревателе решений** откройте контекстное меню своего проекта и выберите пункт **Свойства**.  
+1. В **обозревателе решений** откройте контекстное меню своего проекта и выберите пункт **Свойства**.  
   
-2.  Перейдите на вкладку **Приложение**.  
+2. Перейдите на вкладку **Приложение**.  
   
-3.  В списке **Тип выходных данных** выберите **Файл WinMD**.  
+3. В списке **Тип выходных данных** выберите **Файл WinMD**.  
   
      Параметр **Файл WinMD[!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] доступен только для шаблонов приложений для** .  
   
@@ -49,4 +49,4 @@ csc -target:winmdobj filename.cs
 ## <a name="see-also"></a>См. также
 
 - [-target (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)
-- [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)
+- [Параметры компилятора C#](../../../csharp/language-reference/compiler-options/index.md)

@@ -2,12 +2,12 @@
 title: -target:appcontainerexe (параметры компилятора C#)
 ms.date: 07/20/2015
 ms.assetid: e7e62229-23ea-4e53-bef5-380d951bf95f
-ms.openlocfilehash: 4f8c59d94b76dd0f3415846f7e682d62cc1771ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b3819c0582c414e1f1e3b75ab5bfe517873a1eb3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707613"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311075"
 ---
 # <a name="-targetappcontainerexe-c-compiler-options"></a>-target:appcontainerexe (параметры компилятора C#)
 Если используется параметр компилятора **-target:appcontainerexe**, компилятор создает исполняемый файл Windows (EXE-файл), который должен запускаться в контейнере приложения. Этот параметр аналогичен [-target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md), но предназначен для приложений [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)].  
@@ -27,9 +27,9 @@ ms.locfileid: "54707613"
   
 ### <a name="to-set-this-compiler-option-in-the-ide"></a>Установка данного параметра компилятора в интегрированной среде разработки  
   
-1.  В **обозревателе решений** откройте контекстное меню своего проекта и выберите пункт **Свойства**.  
+1. В **обозревателе решений** откройте контекстное меню своего проекта и выберите пункт **Свойства**.  
   
-2.  На вкладке **Приложение** в списке **Тип выходных данных** выберите **Приложение для Магазина Windows**.  
+2. На вкладке **Приложение** в списке **Тип выходных данных** выберите **Приложение для Магазина Windows**.  
   
      Этот параметр доступен только для шаблонов приложений под [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)].  
   
@@ -46,4 +46,4 @@ csc -target:appcontainerexe filename.cs
 
 - [-target (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)
 - [-target:winexe (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md)
-- [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)
+- [Параметры компилятора C#](../../../csharp/language-reference/compiler-options/index.md)

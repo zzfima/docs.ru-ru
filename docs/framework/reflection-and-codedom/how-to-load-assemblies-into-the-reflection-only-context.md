@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Загрузка сборок в контекст, предназначенный только для отражения
+title: Практическое руководство. Загрузка сборок в контекст, предназначенный только для отражения
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,28 +14,28 @@ helpviewer_keywords:
 ms.assetid: 9818b660-52f5-423d-a9af-e75163aa7068
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7eeef33745ebc8209fc7f69a9337af4093c1e8a1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8dc05d27b0316c82c5314a766fcad929dc5f3698
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567052"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331056"
 ---
-# <a name="how-to-load-assemblies-into-the-reflection-only-context"></a>Как выполнить Загрузка сборок в контекст, предназначенный только для отражения
+# <a name="how-to-load-assemblies-into-the-reflection-only-context"></a>Практическое руководство. Загрузка сборок в контекст, предназначенный только для отражения
 Контекст загрузки, предназначенный только для отражения, позволяет просматривать сборки, скомпилированные для других платформ или для других версий .NET Framework. Код, загруженный в этот контекст, может быть просмотрен, но не может быть выполнен. Это означает, что объекты не могут быть созданы, так как невозможно будет запустить конструкторы. Так как код не может быть выполнен, зависимости не будут загружены автоматически. Если следует их просмотреть, придется загрузить их самостоятельно.  
   
 ### <a name="to-load-an-assembly-into-the-reflection-only-load-context"></a>Загрузка сборки в контекст загрузки, предназначенный только для отражения  
   
-1.  Используйте перегрузку метода <xref:System.Reflection.Assembly.ReflectionOnlyLoad%28System.String%29> для загрузки сборки по ее отображаемому имени или метод <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> для загрузки сборки по ее пути. Если сборка является двоичным образом, используйте перегрузку метода <xref:System.Reflection.Assembly.ReflectionOnlyLoad%28System.Byte%5B%5D%29>.  
+1. Используйте перегрузку метода <xref:System.Reflection.Assembly.ReflectionOnlyLoad%28System.String%29> для загрузки сборки по ее отображаемому имени или метод <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> для загрузки сборки по ее пути. Если сборка является двоичным образом, используйте перегрузку метода <xref:System.Reflection.Assembly.ReflectionOnlyLoad%28System.Byte%5B%5D%29>.  
   
     > [!NOTE]
     >  Невозможно использовать контекст, предназначенный только для отражения, для загрузки версии mscorlib.dll из версии .NET Framework, отличной от версии контекста выполнения.  
   
-2.  Если сборка имеет зависимости, метод <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> их не загружает. Если следует их просмотреть, придется загрузить их самостоятельно.  
+2. Если сборка имеет зависимости, метод <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> их не загружает. Если следует их просмотреть, придется загрузить их самостоятельно.  
   
-3.  Определите, загружена ли сборка в контекст, предназначенный только для отражения, с помощью свойства сборки <xref:System.Reflection.Assembly.ReflectionOnly%2A>.  
+3. Определите, загружена ли сборка в контекст, предназначенный только для отражения, с помощью свойства сборки <xref:System.Reflection.Assembly.ReflectionOnly%2A>.  
   
-4.  Если атрибуты были применены к сборке или к типам сборки, просмотрите эти атрибуты с помощью класса <xref:System.Reflection.CustomAttributeData>, чтобы убедиться в отсутствии попыток выполнения кода в контексте, предназначенном только для отражения. Используйте соответствующую перегрузку метода <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A?displayProperty=nameWithType> для получения объектов <xref:System.Reflection.CustomAttributeData>, представляющих атрибуты, применимые к сборке, элементу, модулю или параметру.  
+4. Если атрибуты были применены к сборке или к типам сборки, просмотрите эти атрибуты с помощью класса <xref:System.Reflection.CustomAttributeData>, чтобы убедиться в отсутствии попыток выполнения кода в контексте, предназначенном только для отражения. Используйте соответствующую перегрузку метода <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A?displayProperty=nameWithType> для получения объектов <xref:System.Reflection.CustomAttributeData>, представляющих атрибуты, применимые к сборке, элементу, модулю или параметру.  
   
     > [!NOTE]
     >  Атрибуты, применяемые к сборке или ее содержимому, могут быть определены в сборке или в другой сборке, загруженной в контекст, предназначенный только для отражения. Невозможно заведомо узнать, где определены атрибуты.  
@@ -53,6 +53,7 @@ ms.locfileid: "54567052"
  [!code-vb[CustomAttributeData#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>
 - <xref:System.Reflection.Assembly.ReflectionOnly%2A>
 - <xref:System.Reflection.CustomAttributeData>

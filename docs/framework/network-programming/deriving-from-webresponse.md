@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Deriving from WebResponse
 ms.assetid: f11d4866-a199-4087-9306-a5a4c18b13db
-ms.openlocfilehash: f07e20bc3d81c328390ad5da43e55aab457a62a8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6bdb21b8aaf8deb39e3abd68a69a9a5a10247e6f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54598871"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226049"
 ---
 # <a name="deriving-from-webresponse"></a>Наследование от класса WebResponse
 <xref:System.Net.WebResponse> — это абстрактный базовый класс, который предоставляет базовые методы и свойства для создания обработчика ответов определенного протокола в соответствии с требованиями модели подключаемых протоколов .NET Framework. Приложения, использующие класс <xref:System.Net.WebRequest> для запроса данных ресурсов, получают ответы в **WebResponse**. Потомки класса **WebResponse** для определенных протоколов должны реализовывать абстрактные члены класса **WebResponse**.  
@@ -39,8 +39,9 @@ ms.locfileid: "54598871"
  Экземпляр потока, возвращаемый методом **GetResponseStream**, принадлежит приложению. Его можно закрыть, не закрывая **WebResponse**. По соглашению вызов метода **WebResponse.Close** также закрывает поток, возвращаемый методом **GetResponse**.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Net.WebResponse>
 - <xref:System.Net.HttpWebResponse>
 - <xref:System.Net.FileWebResponse>
-- [Программирование подключаемых протоколов](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
+- [программирование подключаемых протоколов](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
 - [Наследование от WebResponse](../../../docs/framework/network-programming/deriving-from-webrequest.md)

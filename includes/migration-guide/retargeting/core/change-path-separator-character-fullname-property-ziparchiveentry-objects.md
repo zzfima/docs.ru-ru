@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 707d26865114729cd6cec46735baa8ba6266834f
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: dc1bc68a219faa8d17afbe58a07bab1a5c38231c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58761052"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234518"
 ---
 ### <a name="change-in-path-separator-character-in-fullname-property-of-ziparchiveentry-objects"></a>Изменение знака разделения пути в свойстве FullName объектов ZipArchiveEntry
 
@@ -16,4 +16,3 @@ ms.locfileid: "58761052"
 |Версия|4.6.1|
 |Тип|Изменение целевой платформы|
 |Затронутые API|<ul><li><xref:System.IO.Compression.ZipFile.CreateFromDirectory(System.String,System.String)?displayProperty=nameWithType></li><li><xref:System.IO.Compression.ZipFile.CreateFromDirectory(System.String,System.String,System.IO.Compression.CompressionLevel,System.Boolean)?displayProperty=nameWithType></li><li><xref:System.IO.Compression.ZipFile.CreateFromDirectory(System.String,System.String,System.IO.Compression.CompressionLevel,System.Boolean,System.Text.Encoding)?displayProperty=nameWithType></li></ul>|
-

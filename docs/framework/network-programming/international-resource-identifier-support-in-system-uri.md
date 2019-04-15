@@ -2,12 +2,12 @@
 title: Поддержка международного кода ресурса в System.Uri
 ms.date: 03/30/2017
 ms.assetid: b5e994c3-3535-4aff-8e1b-b69be22e9a22
-ms.openlocfilehash: 56d31b13b94b68719c355335a0598ab8b11d1ecc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 589c49859592cba55cb5110fe65fdc49e451f478
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651075"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230789"
 ---
 # <a name="international-resource-identifier-support-in-systemuri"></a>Поддержка международного кода ресурса в System.Uri
 Класс <xref:System.Uri?displayProperty=nameWithType> был расширен за счет поддержки международного идентификатора ресурса (IRI) и международных доменных имен (IDN). Эти улучшения доступны в .NET Framework 3.5, 3.0 с пакетом обновления 1 (SP1) и 2.0 с пакетом обновления 1 (SP1).  
@@ -44,6 +44,7 @@ ms.locfileid: "54651075"
  Параметр конфигурации для классов конфигурации <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType> и <xref:System.Configuration.IdnElement?displayProperty=nameWithType> будет считан, когда будет создан первый класс <xref:System.Uri?displayProperty=nameWithType>. Изменения, внесенные в параметры конфигурации после этого, игнорируются.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Configuration.IdnElement?displayProperty=nameWithType>
 - <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType>
 - <xref:System.Uri?displayProperty=nameWithType>

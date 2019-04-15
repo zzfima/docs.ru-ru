@@ -11,12 +11,12 @@ helpviewer_keywords:
 - res compiler option [C#]
 - resource compiler option [C#]
 ms.assetid: 5212666e-98ab-47e4-a497-b5545ab15c7f
-ms.openlocfilehash: 056207185f89aa219faf1b721598d372394e1061
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ed9f4648ae632786ce860ce2c02637977f709c55
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725705"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302573"
 ---
 # <a name="-resource-c-compiler-options"></a>-resource (параметры компилятора C#)
 Внедряет указанный ресурс в выходной файл.  
@@ -50,13 +50,13 @@ ms.locfileid: "54725705"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio  
   
-1.  Добавьте файл ресурсов в проект.  
+1. Добавьте файл ресурсов в проект.  
   
-2.  Выберите файл, который требуется внедрить, в **обозревателе решений**.  
+2. Выберите файл, который требуется внедрить, в **обозревателе решений**.  
   
-3.  Выберите **Действие сборки** для файла в окне **Свойства**.  
+3. Выберите **Действие сборки** для файла в окне **Свойства**.  
   
-4.  Присвойте параметру **Действие сборки** значение **Внедренный ресурс**.  
+4. Присвойте параметру **Действие сборки** значение **Внедренный ресурс**.  
   
  Дополнительные сведения об установке этого параметра компилятора программным путем см. в разделе <xref:VSLangProj80.FileProperties2.BuildAction%2A>.  
   
@@ -69,5 +69,5 @@ csc -resource:rf.resource in.cs
   
 ## <a name="see-also"></a>См. также
 
-- [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)
-- [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)
+- [Параметры компилятора C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Управление свойствами проекта и решения](/visualstudio/ide/managing-project-and-solution-properties)

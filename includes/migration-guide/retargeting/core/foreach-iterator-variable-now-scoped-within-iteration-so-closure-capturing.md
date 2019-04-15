@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 1805c26f1eff46719f30de8a14ca6d35f01948a6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234853"
+---
 ### <a name="foreach-iterator-variable-is-now-scoped-within-the-iteration-so-closure-capturing-semantics-are-different-in-c5"></a>Переменная-итератор Foreach теперь ограничена областью итерации, поэтому используется другая семантика захвата замыкания (в C# 5)
 
 |   |   |
@@ -7,4 +15,3 @@
 |Область|Значительно|
 |Версия|4.5|
 |Тип|Изменение целевой платформы|
-

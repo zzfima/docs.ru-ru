@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Создание пары открытого и закрытого ключей
+title: Практическое руководство. Создание пары открытого и закрытого ключей
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 05026813-f3bd-4d7c-9e0b-fc588eb3d114
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce346bfe0c20e94673009adb0134fbaab62cf551
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 71eaaa85b8bd287c37f59116e75cf99b030d63ac
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653922"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297841"
 ---
-# <a name="how-to-create-a-public-private-key-pair"></a>Как выполнить Создание пары открытого и закрытого ключей
+# <a name="how-to-create-a-public-private-key-pair"></a>Практическое руководство. Создание пары открытого и закрытого ключей
 
 Для подписи сборки строгим именем необходимо иметь пару, состоящую из открытого и закрытого ключа. Эта пара криптографических ключей используется во время компиляции для создания сборки со строгим именем. Пару ключей можно создать с помощью [средства для работы со строгими именами (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md). Файлы пары ключей обычно имеют расширение SNK.
 
@@ -33,7 +33,7 @@ ms.locfileid: "54653922"
 
 ## <a name="to-create-a-key-pair"></a>Создание пары ключей
 
-1.  В командной строке введите следующую команду:
+1. В командной строке введите следующую команду:
 
      **sn –k** \<*имя файла*>
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - out compiler option [C#]
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
-ms.openlocfilehash: 6d1134367cbbe494f5ab882d88cc083110ffd5c7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 459f83ee52d0ab6421fe7be4a597d8e5174b4fd9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362361"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331303"
 ---
 # <a name="-out-c-compiler-options"></a>-out (параметры компилятора C#)
 Параметр **-out** задает имя выходного файла.  
@@ -49,11 +49,11 @@ ms.locfileid: "57362361"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio  
   
-1.  Откройте страницу **Свойства** проекта.  
+1. Откройте страницу **Свойства** проекта.  
   
-2.  Перейдите на страницу свойств **Приложение**.  
+2. Перейдите на страницу свойств **Приложение**.  
   
-3.  Измените свойство **Имя сборки**.  
+3. Измените свойство **Имя сборки**.  
   
      Установка этого параметра компилятора программным способом: свойство <xref:VSLangProj80.ProjectProperties3.OutputFileName%2A> доступно только для чтения и определяется сочетанием типа проекта (исполняемый файл, библиотека и т. д.) и именем сборки. Чтобы задать имя выходного файла, необходимо изменить одно из этих свойств или одновременно оба свойства.  
   
@@ -66,6 +66,6 @@ csc t.cs -out:mymodule.netmodule -target:module t2.cs
   
 ## <a name="see-also"></a>См. также
 
-- [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)
+- [Параметры компилятора C#](../../../csharp/language-reference/compiler-options/index.md)
 - [Дружественные сборки](../../../standard/assembly/friend-assemblies.md)
-- [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)
+- [Управление свойствами проекта и решения](/visualstudio/ide/managing-project-and-solution-properties)

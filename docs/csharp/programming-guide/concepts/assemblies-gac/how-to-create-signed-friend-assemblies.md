@@ -1,22 +1,22 @@
 ---
-title: Как выполнить Создание подписанных дружественных сборок в (C#)
+title: Практическое руководство. Создание подписанных дружественных сборок в (C#)
 ms.date: 07/20/2015
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
-ms.openlocfilehash: 13b99cd1118071e7c403828260003c80b9417792
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b80d22aa68a969a5468aa1395195058e47f300c7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354496"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325206"
 ---
-# <a name="how-to-create-signed-friend-assemblies-c"></a>Как выполнить Создание подписанных дружественных сборок в (C#)
+# <a name="how-to-create-signed-friend-assemblies-c"></a>Практическое руководство. Создание подписанных дружественных сборок в (C#)
 В этом примере демонстрируется использование дружественных сборок со сборками, имеющими строгие имена. Обе сборки должны иметь строгое имя. Хотя обе сборки в этом примере используют одинаковые ключи, вы можете использовать для двух сборок разные ключи.  
   
 ### <a name="to-create-a-signed-assembly-and-a-friend-assembly"></a>Создание подписанной и дружественной сборки  
   
-1.  Откройте окно командной строки.  
+1. Откройте окно командной строки.  
   
-2.  Используйте следующую последовательность команд в средстве задания строгих имен для формирования файла ключа и отображения его открытого ключа. Дополнительные сведения см. на странице [Sn.exe (Strong Name Tool)](../../../../framework/tools/sn-exe-strong-name-tool.md) (Sn.exe: средство строгих имен).  
+2. Используйте следующую последовательность команд в средстве задания строгих имен для формирования файла ключа и отображения его открытого ключа. Дополнительные сведения см. на странице [Sn.exe (Strong Name Tool)](../../../../framework/tools/sn-exe-strong-name-tool.md) (Sn.exe: средство строгих имен).  
   
     1.  Создайте ключ строгого имени для этого примера и сохраните его в файле FriendAssemblies.snk:  
   
@@ -30,7 +30,7 @@ ms.locfileid: "57354496"
   
          `sn -tp FriendAssemblies.publickey`  
   
-3.  Создайте файл C# с именем `friend_signed_A`, содержащий приведенный ниже код. Атрибут <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> используется в коде для объявления friend_signed_B в качестве дружественной сборки.  
+3. Создайте файл C# с именем `friend_signed_A`, содержащий приведенный ниже код. Атрибут <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> используется в коде для объявления friend_signed_B в качестве дружественной сборки.  
   
      Средство задания строгих имен создает новый открытый ключ при каждом запуске. Таким образом, необходимо заменить открытый ключ в следующем коде только что созданным открытым ключом, как показано в следующем примере.  
   
@@ -51,13 +51,13 @@ ms.locfileid: "57354496"
     }  
     ```  
   
-4.  Скомпилируйте и подпишите сборку friend_signed_A с помощью приведенной ниже команды.  
+4. Скомпилируйте и подпишите сборку friend_signed_A с помощью приведенной ниже команды.  
   
     ```csharp  
     csc /target:library /keyfile:FriendAssemblies.snk friend_signed_A.cs  
     ```  
   
-5.  Создайте файл C# с именем `friend_signed_B`, содержащий следующий код. Поскольку сборка friend_signed_A указывает сборку friend_signed_B в качестве дружественной сборки, код в сборке friend_signed_B может обращаться к типам и членам `internal` в сборке friend_signed_A. Файл содержит следующий код.  
+5. Создайте файл C# с именем `friend_signed_B`, содержащий следующий код. Поскольку сборка friend_signed_A указывает сборку friend_signed_B в качестве дружественной сборки, код в сборке friend_signed_B может обращаться к типам и членам `internal` в сборке friend_signed_A. Файл содержит следующий код.  
   
     ```csharp  
     // friend_signed_B.cs  
@@ -73,7 +73,7 @@ ms.locfileid: "57354496"
     }  
     ```  
   
-6.  Откомпилируйте и подпишите сборку friend_signed_B с помощью следующей команды.  
+6. Откомпилируйте и подпишите сборку friend_signed_B с помощью следующей команды.  
   
     ```csharp  
     csc /keyfile:FriendAssemblies.snk /r:friend_signed_A.dll /out:friend_signed_B.exe friend_signed_B.cs  
@@ -81,7 +81,7 @@ ms.locfileid: "57354496"
   
      Имя сборки, созданной компилятором, должно соответствовать имени дружественной сборки, передаваемой атрибуту <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. Необходимо явно указать имя выходной сборки (EXE или DLL) с помощью параметра компилятора `/out`.  Дополнительные сведения см. в разделе [/out (параметры компилятора C#)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md).  
   
-7.  Запустите файл friend_signed_B.exe.  
+7. Запустите файл friend_signed_B.exe.  
   
      Программа выводит строку "Class1.Test".  
   

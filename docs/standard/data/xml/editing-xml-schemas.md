@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: fa09c8e5-c2b9-49d2-bb0d-40330cd13e4d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e2cf9e1b4349d83a378f6b17e8740c95546bbe4f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 119c4c13c90aeca8c14d2725d927c38be32212a6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573971"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308722"
 ---
 # <a name="editing-xml-schemas"></a>Изменение XML-схем
 Изменение схем XML является одной из самых важных возможностей модели SOM. Все свойства модели SOM, относящиеся к работе перед компиляцией схемы, можно использовать для изменения существующих значений в схеме XML. Затем можно повторно скомпилировать схему XML, чтобы изменения вступили в силу.  
@@ -27,19 +27,19 @@ ms.locfileid: "54573971"
 ### <a name="phonenumber-element-example"></a>Пример элемента PhoneNumber  
  В первом примере кода добавляется новый элемент `PhoneNumber` в элемент `Customer` пользовательской схемы. Пример кода изменяет пользовательскую схему посредством следующих шагов.  
   
-1.  Добавление пользовательской схемы в новый объект <xref:System.Xml.Schema.XmlSchemaSet>, а затем ее компиляция. Любые предупреждения и ошибки проверки схемы, обнаруженные в процессе ее чтения или компиляции, обрабатываются делегатом <xref:System.Xml.Schema.ValidationEventHandler>.  
+1. Добавление пользовательской схемы в новый объект <xref:System.Xml.Schema.XmlSchemaSet>, а затем ее компиляция. Любые предупреждения и ошибки проверки схемы, обнаруженные в процессе ее чтения или компиляции, обрабатываются делегатом <xref:System.Xml.Schema.ValidationEventHandler>.  
   
-2.  Получение скомпилированного объекта <xref:System.Xml.Schema.XmlSchema> из <xref:System.Xml.Schema.XmlSchemaSet> путем итерации по свойству <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>. Так как схема компилируется, свойства Post-Schema-Compilation-Infoset (PSCI) доступны.  
+2. Получение скомпилированного объекта <xref:System.Xml.Schema.XmlSchema> из <xref:System.Xml.Schema.XmlSchemaSet> путем итерации по свойству <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>. Так как схема компилируется, свойства Post-Schema-Compilation-Infoset (PSCI) доступны.  
   
-3.  Создание элемента `PhoneNumber` с использованием класса <xref:System.Xml.Schema.XmlSchemaElement>, ограничение простого типа `xs:string` с использованием классов <xref:System.Xml.Schema.XmlSchemaSimpleType> и <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction>, добавление аспекта шаблона в свойство <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction.Facets%2A> ограничения, добавление ограничения в свойство <xref:System.Xml.Schema.XmlSchemaSimpleType.Content%2A> простого типа и добавление простого типа в свойство <xref:System.Xml.Schema.XmlSchemaElement.SchemaType%2A> элемента `PhoneNumber`.  
+3. Создание элемента `PhoneNumber` с использованием класса <xref:System.Xml.Schema.XmlSchemaElement>, ограничение простого типа `xs:string` с использованием классов <xref:System.Xml.Schema.XmlSchemaSimpleType> и <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction>, добавление аспекта шаблона в свойство <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction.Facets%2A> ограничения, добавление ограничения в свойство <xref:System.Xml.Schema.XmlSchemaSimpleType.Content%2A> простого типа и добавление простого типа в свойство <xref:System.Xml.Schema.XmlSchemaElement.SchemaType%2A> элемента `PhoneNumber`.  
   
-4.  Проход по всем элементам <xref:System.Xml.Schema.XmlSchemaElement> в коллекции <xref:System.Xml.Schema.XmlSchemaObjectTable.Values%2A> для коллекции <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> типа «после компиляции схемы».  
+4. Проход по всем элементам <xref:System.Xml.Schema.XmlSchemaElement> в коллекции <xref:System.Xml.Schema.XmlSchemaObjectTable.Values%2A> для коллекции <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> типа «после компиляции схемы».  
   
-5.  Если свойство <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> элемента имеет значение `"Customer"`, возвращается сложный тип элемента `Customer` с использованием класса <xref:System.Xml.Schema.XmlSchemaComplexType> и примитив sequence сложного типа с использованием класса <xref:System.Xml.Schema.XmlSchemaSequence>.  
+5. Если свойство <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> элемента имеет значение `"Customer"`, возвращается сложный тип элемента `Customer` с использованием класса <xref:System.Xml.Schema.XmlSchemaComplexType> и примитив sequence сложного типа с использованием класса <xref:System.Xml.Schema.XmlSchemaSequence>.  
   
-6.  Добавление нового элемента `PhoneNumber` в последовательность, содержащую существующие элементы `FirstName` и `LastName`, с использованием коллекции <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A> типа «перед компиляцией схемы» для последовательности.  
+6. Добавление нового элемента `PhoneNumber` в последовательность, содержащую существующие элементы `FirstName` и `LastName`, с использованием коллекции <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A> типа «перед компиляцией схемы» для последовательности.  
   
-7.  Наконец, повторная обработка и компиляция измененного объекта <xref:System.Xml.Schema.XmlSchema> с помощью методов <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> и <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> класса <xref:System.Xml.Schema.XmlSchemaSet> и запись его в консоль.  
+7. Наконец, повторная обработка и компиляция измененного объекта <xref:System.Xml.Schema.XmlSchema> с помощью методов <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> и <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> класса <xref:System.Xml.Schema.XmlSchemaSet> и запись его в консоль.  
   
  Ниже приведен полный пример кода.  
   
@@ -76,34 +76,34 @@ ms.locfileid: "54573971"
   
  Пример кода изменяет пользовательскую схему посредством следующих шагов.  
   
-1.  Добавление пользовательской схемы в новый объект <xref:System.Xml.Schema.XmlSchemaSet>, а затем ее компиляция. Любые предупреждения и ошибки проверки схемы, обнаруженные в процессе ее чтения или компиляции, обрабатываются делегатом <xref:System.Xml.Schema.ValidationEventHandler>.  
+1. Добавление пользовательской схемы в новый объект <xref:System.Xml.Schema.XmlSchemaSet>, а затем ее компиляция. Любые предупреждения и ошибки проверки схемы, обнаруженные в процессе ее чтения или компиляции, обрабатываются делегатом <xref:System.Xml.Schema.ValidationEventHandler>.  
   
-2.  Получение скомпилированного объекта <xref:System.Xml.Schema.XmlSchema> из <xref:System.Xml.Schema.XmlSchemaSet> путем итерации по свойству <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>. Так как схема компилируется, свойства Post-Schema-Compilation-Infoset (PSCI) доступны.  
+2. Получение скомпилированного объекта <xref:System.Xml.Schema.XmlSchema> из <xref:System.Xml.Schema.XmlSchemaSet> путем итерации по свойству <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>. Так как схема компилируется, свойства Post-Schema-Compilation-Infoset (PSCI) доступны.  
   
-3.  Создание нового сложного типа для элемента `FirstName` с использованием класса <xref:System.Xml.Schema.XmlSchemaComplexType>.  
+3. Создание нового сложного типа для элемента `FirstName` с использованием класса <xref:System.Xml.Schema.XmlSchemaComplexType>.  
   
-4.  Создание нового простого расширения содержимого с базовым типом `xs:string` с использованием классов <xref:System.Xml.Schema.XmlSchemaSimpleContent> и <xref:System.Xml.Schema.XmlSchemaSimpleContentExtension>.  
+4. Создание нового простого расширения содержимого с базовым типом `xs:string` с использованием классов <xref:System.Xml.Schema.XmlSchemaSimpleContent> и <xref:System.Xml.Schema.XmlSchemaSimpleContentExtension>.  
   
-5.  Создание нового атрибута `Title` с использованием класса <xref:System.Xml.Schema.XmlSchemaAttribute> со значением <xref:System.Xml.Schema.XmlSchemaAttribute.SchemaTypeName%2A> для `xs:string`, и добавление атрибута в простое расширение содержимого.  
+5. Создание нового атрибута `Title` с использованием класса <xref:System.Xml.Schema.XmlSchemaAttribute> со значением <xref:System.Xml.Schema.XmlSchemaAttribute.SchemaTypeName%2A> для `xs:string`, и добавление атрибута в простое расширение содержимого.  
   
-6.  Установка простого расширения содержимого для модели простого содержимого и простого содержимого для модели сложного типа.  
+6. Установка простого расширения содержимого для модели простого содержимого и простого содержимого для модели сложного типа.  
   
-7.  Добавление нового сложного типа в коллекцию <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> типа «перед компиляцией схемы».  
+7. Добавление нового сложного типа в коллекцию <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> типа «перед компиляцией схемы».  
   
-8.  Выполнение итерации по каждому <xref:System.Xml.Schema.XmlSchemaObject> в коллекции <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> перед компиляцией схемы.  
+8. Выполнение итерации по каждому <xref:System.Xml.Schema.XmlSchemaObject> в коллекции <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> перед компиляцией схемы.  
   
 > [!NOTE]
 >  Поскольку элемент `FirstName` не является глобальным в схеме, он недоступен в коллекциях <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> и <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>. Пример кода определяет расположение элемента `FirstName` по расположению элемента `Customer`.  
 >   
 >  В первом примере кода обзор схемы выполняется с помощью коллекции <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> типа «после компиляции схемы». В этом образце для обзора схемы используется коллекция <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> типа «перед компиляцией схемы». Обе коллекции предоставляют доступ к глобальным элементам схемы, но проход по коллекции <xref:System.Xml.Schema.XmlSchema.Items%2A> занимает больше времени, поскольку необходимо проходить по всем глобальным элементам в схеме, а в схеме отсутствуют свойства PSCI. Коллекции PSCI (<xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>, <xref:System.Xml.Schema.XmlSchema.Attributes%2A?displayProperty=nameWithType>, <xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A?displayProperty=nameWithType> и т. д.) предоставляют прямой доступ к своим глобальным элементам, атрибутам, типам и их свойствам PSCI.  
   
-1.  Если объект <xref:System.Xml.Schema.XmlSchemaObject> является элементом, значением <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> которого является `"Customer"`, возвращается сложный тип элемента `Customer` с использованием класса <xref:System.Xml.Schema.XmlSchemaComplexType> и примитив sequence сложного типа с использованием класса <xref:System.Xml.Schema.XmlSchemaSequence>.  
+1. Если объект <xref:System.Xml.Schema.XmlSchemaObject> является элементом, значением <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> которого является `"Customer"`, возвращается сложный тип элемента `Customer` с использованием класса <xref:System.Xml.Schema.XmlSchemaComplexType> и примитив sequence сложного типа с использованием класса <xref:System.Xml.Schema.XmlSchemaSequence>.  
   
-2.  Выполнение итерации по каждому <xref:System.Xml.Schema.XmlSchemaParticle> в коллекции <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A?displayProperty=nameWithType> перед компиляцией схемы.  
+2. Выполнение итерации по каждому <xref:System.Xml.Schema.XmlSchemaParticle> в коллекции <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A?displayProperty=nameWithType> перед компиляцией схемы.  
   
-3.  Если объект <xref:System.Xml.Schema.XmlSchemaParticle> является элементом, значением <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> которого является `"FirstName"`, в свойстве <xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> элемента `FirstName` задается новый сложный тип `FirstName`.  
+3. Если объект <xref:System.Xml.Schema.XmlSchemaParticle> является элементом, значением <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> которого является `"FirstName"`, в свойстве <xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> элемента `FirstName` задается новый сложный тип `FirstName`.  
   
-4.  Наконец, повторная обработка и компиляция измененного объекта <xref:System.Xml.Schema.XmlSchema> с помощью методов <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> и <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> класса <xref:System.Xml.Schema.XmlSchemaSet> и запись его в консоль.  
+4. Наконец, повторная обработка и компиляция измененного объекта <xref:System.Xml.Schema.XmlSchema> с помощью методов <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> и <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> класса <xref:System.Xml.Schema.XmlSchemaSet> и запись его в консоль.  
   
  Ниже приведен полный пример кода.  
   

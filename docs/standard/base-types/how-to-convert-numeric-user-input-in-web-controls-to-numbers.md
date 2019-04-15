@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Преобразование числовых данных, введенных пользователем в веб-элементах управления, в числа
+title: Практическое руководство. Преобразование числовых данных, введенных пользователем в веб-элементах управления, в числа
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,33 +15,33 @@ helpviewer_keywords:
 ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c66235d866bd7c276d049d9415015dd6f9aa9fb6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f732f5bf61ed65fe7e62d110494d874262e30fd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722365"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296164"
 ---
-# <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>Как выполнить Преобразование числовых данных, введенных пользователем в веб-элементах управления, в числа
+# <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>Практическое руководство. Преобразование числовых данных, введенных пользователем в веб-элементах управления, в числа
 Веб-страницы могут отображаться в любой части света, а значит пользователи будут вводить числовые данные в элемент управления <xref:System.Web.UI.WebControls.TextBox> в самых разных форматах. Поэтому очень важно правильно определить язык и региональные параметры каждого посетителя веб-страницы. Тогда вы сможете применить соглашения о форматировании, соответствующие языку и региональным параметрам пользователя, при синтаксическом анализе вводимых данных.  
   
 ### <a name="to-convert-numeric-input-from-a-web-textbox-control-to-a-number"></a>Преобразование входных данных из элемента управления Web TextBox в числовое значение  
   
-1.  Определите, заполнен ли массив строк, возвращаемый в свойстве <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType>. Если нет, перейдите к шагу 6.  
+1. Определите, заполнен ли массив строк, возвращаемый в свойстве <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType>. Если нет, перейдите к шагу 6.  
   
-2.  Если массив строк, возвращаемый в свойстве <xref:System.Web.HttpRequest.UserLanguages%2A>, заполнен, извлеките его первый элемент. Первый элемент определяет язык и регион, установленные для пользователя по умолчанию или выбранные им в настройках.  
+2. Если массив строк, возвращаемый в свойстве <xref:System.Web.HttpRequest.UserLanguages%2A>, заполнен, извлеките его первый элемент. Первый элемент определяет язык и регион, установленные для пользователя по умолчанию или выбранные им в настройках.  
   
-3.  Создайте экземпляр объекта <xref:System.Globalization.CultureInfo>, который представляет выбранные пользователем язык и региональные параметры, вызвав конструктор <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>.  
+3. Создайте экземпляр объекта <xref:System.Globalization.CultureInfo>, который представляет выбранные пользователем язык и региональные параметры, вызвав конструктор <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>.  
   
-4.  Вызовите метод `TryParse` или `Parse` для числового типа, в который вы хотите преобразовать пользовательские данные. Используйте перегрузку метода `TryParse` или `Parse` с параметром `provider` и передайте в него один из следующих объектов:  
+4. Вызовите метод `TryParse` или `Parse` для числового типа, в который вы хотите преобразовать пользовательские данные. Используйте перегрузку метода `TryParse` или `Parse` с параметром `provider` и передайте в него один из следующих объектов:  
   
     -   объект <xref:System.Globalization.CultureInfo>, созданный на шаге 3;  
   
     -   объект <xref:System.Globalization.NumberFormatInfo> из свойства <xref:System.Globalization.CultureInfo.NumberFormat%2A> объекта <xref:System.Globalization.CultureInfo>, созданного на шаге 3.  
   
-5.  Если преобразование завершается сбоем, повторите шаги 2–4 поочередно для каждого из остальных элементов в массиве строк, полученных в свойстве <xref:System.Web.HttpRequest.UserLanguages%2A>.  
+5. Если преобразование завершается сбоем, повторите шаги 2–4 поочередно для каждого из остальных элементов в массиве строк, полученных в свойстве <xref:System.Web.HttpRequest.UserLanguages%2A>.  
   
-6.  Если все преобразования завершатся сбоем или свойство <xref:System.Web.HttpRequest.UserLanguages%2A> вернет пустой массив строк, используйте для синтаксического анализа инвариантные язык и региональные параметры, которые возвращаются в свойстве <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>.  
+6. Если все преобразования завершатся сбоем или свойство <xref:System.Web.HttpRequest.UserLanguages%2A> вернет пустой массив строк, используйте для синтаксического анализа инвариантные язык и региональные параметры, которые возвращаются в свойстве <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>.  
   
 ## <a name="example"></a>Пример  
  Ниже приведен полный пример кода программной части для веб-формы, которая предлагает пользователю ввести числовое значение в элемент управления <xref:System.Web.UI.WebControls.TextBox>, а затем преобразует эти данные в число. Затем программа удваивает полученное число и отображает его с использованием тех же правил форматирования, которые применялись для входных данных.  

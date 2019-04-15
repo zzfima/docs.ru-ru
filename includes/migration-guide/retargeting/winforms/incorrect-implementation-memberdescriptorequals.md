@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 01c0689bbfb102f8f4d9455f9d258e8ea5515d9e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235018"
+---
 ### <a name="incorrect-implementation-of-memberdescriptorequals"></a>Неправильная реализация MemberDescriptor.Equals
 
 |   |   |
@@ -8,4 +16,3 @@
 |Версия|4.6.2|
 |Тип|Изменение целевой платформы|
 |Затронутые API|<ul><li><xref:System.ComponentModel.MemberDescriptor.Equals(System.Object)?displayProperty=nameWithType></li></ul>|
-

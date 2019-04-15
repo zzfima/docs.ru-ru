@@ -15,12 +15,12 @@ helpviewer_keywords:
 - NetworkCredential class, about NetworkCredential class
 - client authentication, classes for authentication
 ms.assetid: d342e87c-f672-4660-a513-41a2f2b80c4a
-ms.openlocfilehash: 9ec1a003d981db99bec20778790fa4a3507ad0b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8b17f5a7167eb539e04a19db797bc1b0cc6c5eaa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587964"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295462"
 ---
 # <a name="internet-authentication"></a>Аутентификация в Интернете
 Классы <xref:System.Net> поддерживают ряд механизмов проверки подлинности клиентов, включая стандартные методы проверки подлинности в Интернете: базовая проверка подлинности, дайджест-проверка подлинности, проверка подлинности согласованием, проверка подлинности NTLM, проверка подлинности Kerberos, а также создаваемые пользовательские методы.  
@@ -33,13 +33,14 @@ ms.locfileid: "54587964"
   
  Когда интернет-ресурс запрашивает проверку подлинности, метод <xref:System.Net.WebRequest.GetResponse%2A?displayProperty=nameWithType> отправляет <xref:System.Net.WebRequest> в **AuthenticationManager** вместе с запросом учетных данных. Затем запрос проходит проверку подлинности согласно следующей процедуре.  
   
-1.  **AuthenticationManager** вызывает метод <xref:System.Net.IAuthenticationModule.Authenticate%2A> в каждом из зарегистрированных модулей проверки подлинности в порядке их регистрации. **AuthenticationManager** использует первый модуль, который не возвращает **null**, для выполнения процесса проверки подлинности. Детали процесса зависят от типа используемого модуля проверки подлинности.  
+1. **AuthenticationManager** вызывает метод <xref:System.Net.IAuthenticationModule.Authenticate%2A> в каждом из зарегистрированных модулей проверки подлинности в порядке их регистрации. **AuthenticationManager** использует первый модуль, который не возвращает **null**, для выполнения процесса проверки подлинности. Детали процесса зависят от типа используемого модуля проверки подлинности.  
   
-2.  По завершении процесса проверки подлинности модуль проверки подлинности возвращает <xref:System.Net.Authorization> в класс **WebRequest**, содержащий сведения, необходимые для доступа к интернет-ресурсу.  
+2. По завершении процесса проверки подлинности модуль проверки подлинности возвращает <xref:System.Net.Authorization> в класс **WebRequest**, содержащий сведения, необходимые для доступа к интернет-ресурсу.  
   
  Некоторые схемы проверки могут проверять пользователя без выполнения запроса на доступ к ресурсу. Приложение может сэкономить время за счет предварительной проверки подлинности пользователя на доступ к ресурсу, устраняя по меньшей мере один цикл обращения к серверу. Или оно может провести проверку подлинности во время запуска программы для более оперативного реагирования на запросы пользователя позднее. Схемы проверки подлинности, которые могут использовать предварительную проверку подлинности, задают для свойства <xref:System.Net.IAuthenticationModule.PreAuthenticate%2A> значение **true**.  
   
 ## <a name="see-also"></a>См. также
-- [Обычная и дайджест-проверка подлинности](../../../docs/framework/network-programming/basic-and-digest-authentication.md)
-- [Проверка подлинности NTLM и Kerberos](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)
+
+- [Обычная и дайджест-аутентификация](../../../docs/framework/network-programming/basic-and-digest-authentication.md)
+- [проверка подлинности NTLM и Kerberos](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)
 - [Безопасность в сетевом программировании](../../../docs/framework/network-programming/security-in-network-programming.md)

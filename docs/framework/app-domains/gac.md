@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cf5eacd0-d3ec-4879-b6da-5fd5e4372202
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15b258f0392275ffd18c52d11df3bc266a55ce3f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d19410bd83605e6c7325a61e64a32a828846b7df
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566298"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222579"
 ---
 # <a name="global-assembly-cache"></a>глобальный кэш сборок
 На каждом компьютере с установленной средой CLR имеется кэш кода на уровне компьютера, называемый глобальным кэшем сборок. В глобальном кэше сборок сохраняются сборки, специально предназначенные для совместного использования на компьютере несколькими приложениями.  
@@ -43,6 +43,7 @@ ms.locfileid: "54566298"
  Сборки, развернутые в глобальном кэше сборок, должны иметь строгие имена. При добавлении сборки в глобальный кэш сборок выполняется проверка целостности всех входящих в нее файлов. Кэш выполняет такую проверку целостности, чтобы гарантировать, что сборка не была изменена (например, если файл был изменен, но изменения не были отражены в манифесте сборки).  
   
 ## <a name="see-also"></a>См. также
+
 - [Сборки в среде CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
 - [Работа со сборками и глобальным кэшем сборок](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)
 - [Сборки со строгими именами](../../../docs/framework/app-domains/strong-named-assemblies.md)

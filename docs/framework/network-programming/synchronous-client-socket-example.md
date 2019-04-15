@@ -9,12 +9,12 @@ helpviewer_keywords:
 - synchronous client sockets
 - sockets, synchronous client sockets
 ms.assetid: 2c7d5be7-2221-467c-a839-5744ec4d576d
-ms.openlocfilehash: 3d1e2c24cbbdcecd9daefab4312076099816ba70
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef8669e9e78f65451ffb250283a1f14c89d61270
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596063"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219750"
 ---
 # <a name="synchronous-client-socket-example"></a>Пример синхронного сокета клиента
 Приведенная ниже программа создает клиент, который подключается к серверу. Клиент создается с использованием синхронного сокета, поэтому выполнение клиентского приложения приостанавливается до тех пор, пока сервер не вернет ответ. Приложение отправляет строку на сервер, а затем выводит возвращенную им строку в консоли.  
@@ -136,6 +136,7 @@ public class SynchronousSocketClient {
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Пример синхронного сокета сервера](../../../docs/framework/network-programming/synchronous-server-socket-example.md)
 - [Использование синхронного сокета клиента](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)
 - [Примеры кода сокетов](../../../docs/framework/network-programming/socket-code-examples.md)

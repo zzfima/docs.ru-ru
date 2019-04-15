@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Отображение сведений о локализованной дате и времени для веб-пользователей
+title: Практическое руководство. Отображение сведений о локализованной дате и времени для веб-пользователей
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -15,51 +15,51 @@ dev_langs:
 - vb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d46b2634096cf71701458ca7ecb6f66a01ebffbe
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.openlocfilehash: e97bc095332e626d79561ab5fdc7bad531e3ba31
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857662"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320162"
 ---
-# <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Как выполнить Отображение сведений о локализованной дате и времени для веб-пользователей
+# <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Практическое руководство. Отображение сведений о локализованной дате и времени для веб-пользователей
 Веб-страницы могут отображаться в любой точке мира, поэтому в операциях синтаксического анализа и форматирования значений даты и времени при взаимодействии с пользователем не должен использоваться формат по умолчанию (который обычно определяется форматом языка и региональных параметров, установленным для веб-сервера). Вместо этого при обработке строк даты и времени, вводимых пользователем, веб-формы должны выполнять их синтаксический анализ с учетом значений языка и региональных параметров, установленных для пользователя. Аналогичным образом, отображать данные даты и времени для пользователя следует в формате, соответствующем языку и региональным параметрам пользователя. В настоящем разделе показано, как это делается.  
   
 ## <a name="to-parse-date-and-time-strings-input-by-the-user"></a>Синтаксический анализ строк даты и времени, вводимых пользователем  
   
-1.  Определите, заполнен ли массив строк, возвращаемый в свойстве <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType>. Если нет, перейдите к шагу 6.  
+1. Определите, заполнен ли массив строк, возвращаемый в свойстве <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType>. Если нет, перейдите к шагу 6.  
   
-2.  Если массив строк, возвращаемый в свойстве <xref:System.Web.HttpRequest.UserLanguages%2A>, заполнен, извлеките его первый элемент. Первый элемент определяет язык и регион, установленные для пользователя по умолчанию или выбранные им в настройках.  
+2. Если массив строк, возвращаемый в свойстве <xref:System.Web.HttpRequest.UserLanguages%2A>, заполнен, извлеките его первый элемент. Первый элемент определяет язык и регион, установленные для пользователя по умолчанию или выбранные им в настройках.  
   
-3.  Создайте экземпляр объекта <xref:System.Globalization.CultureInfo>, который представляет выбранные пользователем язык и региональные параметры, вызвав конструктор <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>.  
+3. Создайте экземпляр объекта <xref:System.Globalization.CultureInfo>, который представляет выбранные пользователем язык и региональные параметры, вызвав конструктор <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>.  
   
-4.  Вызовите метод `TryParse` или `Parse` для типа <xref:System.DateTime> или <xref:System.DateTimeOffset>, чтобы выполнить преобразование. Используйте перегрузку метода `TryParse` или `Parse` с параметром `provider` и передайте в него один из следующих объектов:  
+4. Вызовите метод `TryParse` или `Parse` для типа <xref:System.DateTime> или <xref:System.DateTimeOffset>, чтобы выполнить преобразование. Используйте перегрузку метода `TryParse` или `Parse` с параметром `provider` и передайте в него один из следующих объектов:  
   
     -   объект <xref:System.Globalization.CultureInfo>, созданный на шаге 3;  
   
     -   объект <xref:System.Globalization.DateTimeFormatInfo> из свойства <xref:System.Globalization.CultureInfo.DateTimeFormat%2A> объекта <xref:System.Globalization.CultureInfo>, созданного на шаге 3.  
   
-5.  Если преобразование завершается сбоем, повторите шаги 2–4 поочередно для каждого из остальных элементов в массиве строк, полученных в свойстве <xref:System.Web.HttpRequest.UserLanguages%2A>.  
+5. Если преобразование завершается сбоем, повторите шаги 2–4 поочередно для каждого из остальных элементов в массиве строк, полученных в свойстве <xref:System.Web.HttpRequest.UserLanguages%2A>.  
   
-6.  Если преобразование по-прежнему завершается сбоем или свойство <xref:System.Web.HttpRequest.UserLanguages%2A> содержит пустой массив строк, используйте для синтаксического анализа инвариантные язык и региональные параметры, которые возвращаются в свойстве <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>.  
+6. Если преобразование по-прежнему завершается сбоем или свойство <xref:System.Web.HttpRequest.UserLanguages%2A> содержит пустой массив строк, используйте для синтаксического анализа инвариантные язык и региональные параметры, которые возвращаются в свойстве <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>.  
   
 ## <a name="to-parse-the-local-date-and-time-of-the-users-request"></a>Синтаксический анализ локальной даты и времени из запроса пользователя  
   
-1.  Добавьте элемент управления <xref:System.Web.UI.WebControls.HiddenField> в веб-форму.  
+1. Добавьте элемент управления <xref:System.Web.UI.WebControls.HiddenField> в веб-форму.  
   
-2.  Создайте функцию JavaScript, которая обрабатывает событие `onClick` для кнопки `Submit`, сохраняя в свойство <xref:System.Web.UI.WebControls.HiddenField.Value%2A> текущую дату и время, а также сдвиг часового пояса (разницу между местным часовым поясом и временем в формате UTC). Поместите разделитель (например, точку с запятой) между двумя компонентами строки.  
+2. Создайте функцию JavaScript, которая обрабатывает событие `onClick` для кнопки `Submit`, сохраняя в свойство <xref:System.Web.UI.WebControls.HiddenField.Value%2A> текущую дату и время, а также сдвиг часового пояса (разницу между местным часовым поясом и временем в формате UTC). Поместите разделитель (например, точку с запятой) между двумя компонентами строки.  
   
-3.  Примените событие веб-формы <xref:System.Web.UI.Control.PreRender>, чтобы вставить эту функцию в выходной поток HTML, передав методу <xref:System.Web.UI.ClientScriptManager.RegisterClientScriptBlock%28System.Type%2CSystem.String%2CSystem.String%2CSystem.Boolean%29?displayProperty=nameWithType> текст скрипта.  
+3. Примените событие веб-формы <xref:System.Web.UI.Control.PreRender>, чтобы вставить эту функцию в выходной поток HTML, передав методу <xref:System.Web.UI.ClientScriptManager.RegisterClientScriptBlock%28System.Type%2CSystem.String%2CSystem.String%2CSystem.Boolean%29?displayProperty=nameWithType> текст скрипта.  
   
-4.  Подключите обработчик событий к событию `onClick`кнопки `Submit`, указав имя функции JavaScript в атрибуте `OnClientClick` кнопки `Submit`.  
+4. Подключите обработчик событий к событию `onClick`кнопки `Submit`, указав имя функции JavaScript в атрибуте `OnClientClick` кнопки `Submit`.  
   
-5.  Создайте обработчик для события <xref:System.Web.UI.WebControls.Button.Click> кнопки `Submit`.  
+5. Создайте обработчик для события <xref:System.Web.UI.WebControls.Button.Click> кнопки `Submit`.  
   
-6.  В этом обработчике определите, заполнен ли массив строк, возвращаемый в свойстве <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType>. Если нет, перейдите к шагу 14.  
+6. В этом обработчике определите, заполнен ли массив строк, возвращаемый в свойстве <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType>. Если нет, перейдите к шагу 14.  
   
-7.  Если массив строк, возвращаемый в свойстве <xref:System.Web.HttpRequest.UserLanguages%2A>, заполнен, извлеките его первый элемент. Первый элемент определяет язык и регион, установленные для пользователя по умолчанию или выбранные им в настройках.  
+7. Если массив строк, возвращаемый в свойстве <xref:System.Web.HttpRequest.UserLanguages%2A>, заполнен, извлеките его первый элемент. Первый элемент определяет язык и регион, установленные для пользователя по умолчанию или выбранные им в настройках.  
   
-8.  Создайте экземпляр объекта <xref:System.Globalization.CultureInfo>, который представляет выбранные пользователем язык и региональные параметры, вызвав конструктор <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>.  
+8. Создайте экземпляр объекта <xref:System.Globalization.CultureInfo>, который представляет выбранные пользователем язык и региональные параметры, вызвав конструктор <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>.  
   
 9. Передайте строку, назначенную свойству <xref:System.Web.UI.WebControls.HiddenField.Value%2A>, в метод <xref:System.String.Split%2A>, чтобы сохранить в отдельных элементах массива строковое представление локальной даты и времени пользователя, а также строковое представление сдвига часового пояса пользователя.  
   

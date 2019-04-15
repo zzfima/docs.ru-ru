@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 9c2ee4ba66deb7c3b33698963add2b8a7e70069f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235971"
+---
 ### <a name="intermittently-unable-to-scroll-to-bottom-item-in-itemscontrols-like-listbox-and-datagrid-when-using-custom-datatemplates"></a>Периодически не удается выполнить прокрутку до нижнего элемента в ItemsControls (таких как ListBox и DataGrid) при использовании пользовательских DataTemplates
 
 |   |   |
@@ -7,4 +15,3 @@
 |Область|Дополнительный номер|
 |Версия|4.5|
 |Тип|Среда выполнения|
-

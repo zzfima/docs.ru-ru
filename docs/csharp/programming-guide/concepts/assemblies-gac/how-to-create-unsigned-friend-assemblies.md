@@ -1,22 +1,22 @@
 ---
-title: Как выполнить Создание неподписанных дружественных сборок (C#)
+title: Практическое руководство. Создание неподписанных дружественных сборок (C#)
 ms.date: 07/20/2015
 ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
-ms.openlocfilehash: 5b376266581def9bdd4315ccbee04b71b7c8bc08
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6bc2d807b3d1cf6c82a9ba6303139b9758581f35
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365065"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318238"
 ---
-# <a name="how-to-create-unsigned-friend-assemblies-c"></a>Как выполнить Создание неподписанных дружественных сборок (C#)
+# <a name="how-to-create-unsigned-friend-assemblies-c"></a>Практическое руководство. Создание неподписанных дружественных сборок (C#)
 В этом примере показано использование дружественных сборок с неподписанными сборками.  
   
 ### <a name="to-create-an-assembly-and-a-friend-assembly"></a>Создание сборки и дружественной сборки  
   
-1.  Откройте окно командной строки.  
+1. Откройте окно командной строки.  
   
-2.  Создайте файл C# с именем `friend_unsigned_A.`, содержащий приведенный ниже код. Атрибут <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> используется в коде для объявления friend_unsigned_В в качестве дружественной сборки.  
+2. Создайте файл C# с именем `friend_unsigned_A.`, содержащий приведенный ниже код. Атрибут <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> используется в коде для объявления friend_unsigned_В в качестве дружественной сборки.  
   
     ```csharp  
     // friend_unsigned_A.cs  
@@ -46,13 +46,13 @@ ms.locfileid: "57365065"
     }  
     ```  
   
-3.  Скомпилируйте и подпишите сборку friend_unsigned_A с помощью следующей команды.  
+3. Скомпилируйте и подпишите сборку friend_unsigned_A с помощью следующей команды.  
   
     ```csharp  
     csc /target:library friend_unsigned_A.cs  
     ```  
   
-4.  Создайте файл C# с именем `friend_unsigned_B`, содержащий приведенный ниже код. Так как файл friend_unsigned_A задает friend_unsigned_B в качестве дружественной сборки, код friend_unsigned_B может обращаться к типам и членам `internal` из friend_unsigned_A.  
+4. Создайте файл C# с именем `friend_unsigned_B`, содержащий приведенный ниже код. Так как файл friend_unsigned_A задает friend_unsigned_B в качестве дружественной сборки, код friend_unsigned_B может обращаться к типам и членам `internal` из friend_unsigned_A.  
   
     ```csharp  
     // friend_unsigned_B.cs  
@@ -75,7 +75,7 @@ ms.locfileid: "57365065"
     }  
     ```  
   
-5.  Скомпилируйте сборку friend_unsigned_В с помощью следующей команды.  
+5. Скомпилируйте сборку friend_unsigned_В с помощью следующей команды.  
   
     ```csharp  
     csc /r:friend_unsigned_A.dll /out:friend_unsigned_B.exe friend_unsigned_B.cs  
@@ -83,7 +83,7 @@ ms.locfileid: "57365065"
   
      Имя сборки, созданной компилятором, должно соответствовать имени дружественной сборки, передаваемой атрибуту <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. Необходимо явно указать имя выходной сборки (EXE или DLL) с помощью параметра компилятора `/out`. Дополнительные сведения см. в разделе [/out (параметры компилятора C#)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md).  
   
-6.  Запустите файл friend_unsigned_B.exe.  
+6. Запустите файл friend_unsigned_B.exe.  
   
      Программа выведет две строки: Class1.Test и Class2.Test.  
   
@@ -95,5 +95,5 @@ ms.locfileid: "57365065"
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [Сборки в .NET](../../../../standard/assembly/index.md)
 - [Дружественные сборки](../../../../standard/assembly/friend-assemblies.md)
-- [Практическое руководство. Создание подписанных дружественных сборок в C#](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
+- [Практическое руководство. Создание подписанных дружественных сборок в (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
 - [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)

@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Использование компонентов, поддерживающих асинхронную модель, основанную на событиях
+title: Практическое руководство. Использование компонентов, поддерживающих асинхронную модель, основанную на событиях
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 35e9549c-1568-4768-ad07-17cc6dff11e1
-ms.openlocfilehash: f7e7139aeebea4441f851f7ed28484ba293e9c3a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9ac98b5c576c065f8944714c72b492539e0d2f05
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543254"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330887"
 ---
-# <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a>Как выполнить Использование компонентов, поддерживающих асинхронную модель, основанную на событиях
+# <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a>Практическое руководство. Использование компонентов, поддерживающих асинхронную модель, основанную на событиях
 Многие компоненты предоставляют возможность выполнять работу асинхронно. Например, компоненты <xref:System.Media.SoundPlayer> и <xref:System.Windows.Forms.PictureBox> позволяют загружать звуки и изображения в фоновом режиме, не прерывая работу основного потока.  
   
  Чтобы применить асинхронные методы для класса, поддерживающего [асинхронную модель на основе событий](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md), зачастую достаточно присоединить обработчик события к событию _имя_метода_**Completed** нужного компонента, как для любого другого события. При вызове метода _имя_метода_**Async** приложение будет работать без прерывания, пока не будет создано событие _имя_метода_**Completed**. В обработчике событий вы можете проверить параметр <xref:System.ComponentModel.AsyncCompletedEventArgs>, чтобы определить, была ли асинхронная операция выполнена успешно или отменена.  
@@ -36,9 +36,9 @@ ms.locfileid: "54543254"
   
 ### <a name="to-enable-a-picturebox-control-to-asynchronously-load-an-image"></a>Асинхронная загрузка изображений для элемента управления PictureBox  
   
-1.  Создайте в форме экземпляр компонента <xref:System.Windows.Forms.PictureBox>.  
+1. Создайте в форме экземпляр компонента <xref:System.Windows.Forms.PictureBox>.  
   
-2.  Назначьте обработчик событий для события <xref:System.Windows.Forms.PictureBox.LoadCompleted>.  
+2. Назначьте обработчик событий для события <xref:System.Windows.Forms.PictureBox.LoadCompleted>.  
   
      Проверьте в нем наличие ошибок, которые могли произойти во время асинхронной загрузки. Также здесь нужно проверить, не запрошена ли отмена.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "54543254"
      [!code-csharp[System.Windows.Forms.PictureBox.LoadAsync#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/CS/Form1.cs#5)]
      [!code-vb[System.Windows.Forms.PictureBox.LoadAsync#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/VB/Form1.vb#5)]  
   
-3.  Добавьте в форму две кнопки с именами `loadButton` и `cancelLoadButton`. Добавьте обработчики событий <xref:System.Windows.Forms.Control.Click> для запуска и отмены загрузки.  
+3. Добавьте в форму две кнопки с именами `loadButton` и `cancelLoadButton`. Добавьте обработчики событий <xref:System.Windows.Forms.Control.Click> для запуска и отмены загрузки.  
   
      [!code-csharp[System.Windows.Forms.PictureBox.LoadAsync#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.PictureBox.LoadAsync#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/VB/Form1.vb#3)]  
@@ -56,7 +56,7 @@ ms.locfileid: "54543254"
      [!code-csharp[System.Windows.Forms.PictureBox.LoadAsync#4](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.PictureBox.LoadAsync#4](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/VB/Form1.vb#4)]  
   
-4.  Запустите приложение.  
+4. Запустите приложение.  
   
      В процессе загрузки изображения вы сможете свободно перемещаться по форме, сворачивать ее и разворачивать.  
   

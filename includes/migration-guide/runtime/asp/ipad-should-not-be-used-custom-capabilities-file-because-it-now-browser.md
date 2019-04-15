@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 84f570cbbd97be79426e117d4c97ec182a397fd4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235542"
+---
 ### <a name="ipad-should-not-be-used-in-custom-capabilities-file-because-it-is-now-a-browser-capability"></a>Не следует использовать iPad в файле пользовательских возможностей, так как теперь это функция браузера
 
 |   |   |
@@ -7,4 +15,3 @@
 |Область|Пограничный случай|
 |Версия|4.5|
 |Тип|Среда выполнения|
-

@@ -3,12 +3,12 @@ title: Развертывание модели ML.NET в Функциях Azure
 description: Использование модели машинного обучения ML.NET для анализа тональности и прогнозирования через Интернет с помощью Функций Azure
 ms.date: 03/08/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: db29e37660665b02ab93a07b37418f0c4c20a608
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: 4681b37da64097dd8e537b4c956917277ecff96b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788648"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330640"
 ---
 # <a name="how-to-use-mlnet-model-in-azure-functions"></a>Руководство. Использование модели ML.NET в Функциях Azure
 
@@ -21,8 +21,8 @@ ms.locfileid: "57788648"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-- [Visual Studio 2017 версии 15.6 и выше](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) с установленной рабочей нагрузкой "Кроссплатформенная разработка .NET Core" и "Разработка в Azure". 
-- [Средства Функций Azure](/azure/azure-functions/functions-develop-vs#check-your-tools-version).
+- [Visual Studio 2017 версии 15.6 и выше](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) с установленной рабочей нагрузкой "Кроссплатформенная разработка .NET Core" и "Разработка в Azure". 
+- [Средства функций Azure](/azure/azure-functions/functions-develop-vs#check-your-tools-version)
 - PowerShell.
 - Предварительно обученная модель. 
     - Используйте [руководство по анализу тональности ML.NET](../tutorials/sentiment-analysis.md), чтобы создать собственную модель.

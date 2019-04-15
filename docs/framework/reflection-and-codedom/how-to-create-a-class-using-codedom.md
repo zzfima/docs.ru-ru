@@ -1,5 +1,5 @@
 ---
-title: Как выполнить Создание класса с помощью CodeDOM
+title: Практическое руководство. Создание класса с помощью CodeDOM
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,27 +13,27 @@ helpviewer_keywords:
 ms.assetid: 0ceb70fe-36e1-49bb-922b-e9f615c20a14
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78c50b3813ebb0bb65955e411eb84e4cd9e0a001
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5d431fd472df329dd0a8421483eb36b573dce775
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54581955"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333175"
 ---
-# <a name="how-to-create-a-class-using-codedom"></a>Как выполнить Создание класса с помощью CodeDOM
+# <a name="how-to-create-a-class-using-codedom"></a>Практическое руководство. Создание класса с помощью CodeDOM
 В следующих процедурах демонстрируется создание и компиляция графа CodeDOM, который создает класс, содержащий два поля, три свойства, метод, конструктор и точку входа.  
   
-1.  Создайте приложение консоли, которое будет использовать код CodeDOM для создания исходного кода класса.  
+1. Создайте приложение консоли, которое будет использовать код CodeDOM для создания исходного кода класса.  
   
      В этом примере создающий класс называется `Sample`, а созданный код — это класс `CodeDOMCreatedClass` в файле с именем SampleCode.  
   
-2.  В создающем классе инициализируйте граф CodeDOM и используйте методы CodeDOM для определения элементов, конструктора и точки входа (метод `Main`) созданного класса.  
+2. В создающем классе инициализируйте граф CodeDOM и используйте методы CodeDOM для определения элементов, конструктора и точки входа (метод `Main`) созданного класса.  
   
      В этом примере созданный класс имеет два поля, три свойства, конструктор, метод и метод `Main`.  
   
-3.  В создающем классе создайте поставщик кода определенного языка и вызовите его метод <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> для создания кода из графа.  
+3. В создающем классе создайте поставщик кода определенного языка и вызовите его метод <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> для создания кода из графа.  
   
-4.  Скомпилируйте и выполните приложение для создания кода.  
+4. Скомпилируйте и выполните приложение для создания кода.  
   
      В этом примере созданный код находится в файле с именем SampleCode. Скомпилируйте и выполните этот код для просмотра выходных данных примера.  
   
@@ -87,12 +87,12 @@ ms.locfileid: "54581955"
   
 ### <a name="to-create-the-graph-and-generate-the-code"></a>Создание графа и генерация кода  
   
-1.  Добавьте методы, созданные на предыдущих этапах, в метод `Main`, определенный на первом этапе.  
+1. Добавьте методы, созданные на предыдущих этапах, в метод `Main`, определенный на первом этапе.  
   
      [!code-csharp[CodeDOM Class Sample#9](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#9)]
      [!code-vb[CodeDOM Class Sample#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#9)]  
   
-2.  Скомпилируйте и выполните создающий класс.  
+2. Скомпилируйте и выполните создающий класс.  
   
 ## <a name="example"></a>Пример  
  В следующем примере кода представлен код, созданный на предыдущих этапах.  
@@ -119,5 +119,6 @@ The object:
 -   Для выполнения этого кода должно быть установлено разрешение `FullTrust`.  
   
 ## <a name="see-also"></a>См. также
+
 - [Использование CodeDOM](../../../docs/framework/reflection-and-codedom/using-the-codedom.md)
 - [Создание и компиляция исходного кода из графа CodeDOM](../../../docs/framework/reflection-and-codedom/generating-and-compiling-source-code-from-a-codedom-graph.md)

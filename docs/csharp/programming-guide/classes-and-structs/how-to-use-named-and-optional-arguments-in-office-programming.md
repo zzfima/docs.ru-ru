@@ -7,12 +7,12 @@ helpviewer_keywords:
 - optional arguments [C#], Office programming
 - named arguments [C#], Office programming
 ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
-ms.openlocfilehash: aecac583e509d2a08fae55d911a26134330c74c7
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 3ecea9d55ef61d2158da0dabeca22a58460b3bea
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760083"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313974"
 ---
 # <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Практическое руководство. Руководство по программированию на C#. Использование именованных и необязательных аргументов в программировании для Office
 Появившиеся в [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] именованные и необязательные аргументы повышают удобство, гибкость и удобочитаемость программирования на C#. Кроме того, эти функции значительно упрощают доступ к COM-интерфейсам, таким как интерфейсы API автоматизации Microsoft Office.  
@@ -25,59 +25,59 @@ ms.locfileid: "58760083"
   
 ### <a name="to-create-a-new-console-application"></a>Создание нового проекта консольного приложения  
   
-1.  Запустите Visual Studio.  
+1. Запустите Visual Studio.  
   
-2.  В меню **Файл** выберите пункт **Создать**, а затем команду **Проект**.  
+2. В меню **Файл** выберите пункт **Создать**, а затем команду **Проект**.  
   
-3.  В области **Категории шаблонов** разверните узел **Visual C#** и выберите **Windows**.  
+3. В области **Категории шаблонов** разверните узел **Visual C#** и выберите **Windows**.  
   
-4.  В верхней части области **Шаблоны** в поле **Требуемая версия .NET Framework** должно отображаться значение **.NET Framework 4**.  
+4. В верхней части области **Шаблоны** в поле **Требуемая версия .NET Framework** должно отображаться значение **.NET Framework 4**.  
   
-5.  В области **Шаблоны** щелкните **Консольное приложение**.  
+5. В области **Шаблоны** щелкните **Консольное приложение**.  
   
-6.  Введите имя проекта в поле **Имя**.  
+6. Введите имя проекта в поле **Имя**.  
   
-7.  Нажмите кнопку **ОК**.  
+7. Нажмите кнопку **ОК**.  
   
      В **обозревателе решений** появится новый проект.  
   
 ### <a name="to-add-a-reference"></a>Добавление ссылки  
   
-1.  В **обозревателе решений** щелкните имя проекта правой кнопкой мыши и выберите пункт **Добавить ссылку**. Откроется диалоговое окно **Добавление ссылки**.  
+1. В **обозревателе решений** щелкните имя проекта правой кнопкой мыши и выберите пункт **Добавить ссылку**. Откроется диалоговое окно **Добавление ссылки**.  
   
-2.  На странице **.NET** выберите **Microsoft.Office.Interop.Word** в списке **Имя компонента**.  
+2. На странице **.NET** выберите **Microsoft.Office.Interop.Word** в списке **Имя компонента**.  
   
-3.  Нажмите кнопку **ОК**.  
+3. Нажмите кнопку **ОК**.  
   
 ### <a name="to-add-necessary-using-directives"></a>Добавление необходимых директив using  
   
-1.  В **обозревателе решений** щелкните правой кнопкой мыши файл **Program.cs** и выберите пункт **Просмотреть код**.  
+1. В **обозревателе решений** щелкните правой кнопкой мыши файл **Program.cs** и выберите пункт **Просмотреть код**.  
   
-2.  В начало файла кода добавьте следующие директивы `using`.  
+2. В начало файла кода добавьте следующие директивы `using`.  
   
      [!code-csharp[csProgGuideNamedAndOptional#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#4)]  
   
 ### <a name="to-display-text-in-a-word-document"></a>Отображение текста в документ Word  
   
-1.  В класс `Program` в файле Program.cs добавьте следующий метод для создания приложения Word и документа Word. Метод [Add](<xref:Microsoft.Office.Interop.Word.Documents.Add%2A>) имеет четыре необязательных параметра. В этом примере используются значения по умолчанию. Поэтому в операторе вызова указывать аргументы не требуется.  
+1. В класс `Program` в файле Program.cs добавьте следующий метод для создания приложения Word и документа Word. Метод [Add](<xref:Microsoft.Office.Interop.Word.Documents.Add%2A>) имеет четыре необязательных параметра. В этом примере используются значения по умолчанию. Поэтому в операторе вызова указывать аргументы не требуется.  
   
      [!code-csharp[csProgGuideNamedAndOptional#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#6)]  
   
-2.  Добавьте в конец метода следующий код, чтобы определить место отображения текста в документе и текст для отображения.  
+2. Добавьте в конец метода следующий код, чтобы определить место отображения текста в документе и текст для отображения.  
   
      [!code-csharp[csProgGuideNamedAndOptional#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#7)]  
   
 ### <a name="to-run-the-application"></a>Запуск приложения  
   
-1.  Добавьте в метод Main следующую инструкцию.  
+1. Добавьте в метод Main следующую инструкцию.  
   
      [!code-csharp[csProgGuideNamedAndOptional#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#8)]  
   
-2.  Нажмите клавиши CTRL+F5, чтобы запустить проект. Появится документ Word, содержащий указанный текст.  
+2. Нажмите клавиши CTRL+F5, чтобы запустить проект. Появится документ Word, содержащий указанный текст.  
   
 ### <a name="to-change-the-text-to-a-table"></a>Замена текста на таблицу  
   
-1.  Метод `ConvertToTable` служит для преобразования текста в таблицу. У метода имеется шестнадцать необязательных параметров. IntelliSense заключает необязательные параметры в квадратные скобки, как показано на следующем рисунке.  
+1. Метод `ConvertToTable` служит для преобразования текста в таблицу. У метода имеется шестнадцать необязательных параметров. IntelliSense заключает необязательные параметры в квадратные скобки, как показано на следующем рисунке.  
   
      ![Список параметров для метода ConvertToTable](./media/how-to-use-named-and-optional-arguments-in-office-programming/convert-table-parameters.png)  
   
@@ -89,15 +89,15 @@ ms.locfileid: "58760083"
   
      [!code-csharp[csProgGuideNamedAndOptional#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#14)]  
   
-2.  Нажмите клавиши CTRL+F5, чтобы запустить проект.  
+2. Нажмите клавиши CTRL+F5, чтобы запустить проект.  
   
 ### <a name="to-experiment-with-other-parameters"></a>Экспериментирование с другими параметрами  
   
-1.  Для изменения таблицы, чтобы она содержала один столбец и три строки, замените последнюю строку метода `DisplayInWord` следующей инструкцией и нажмите сочетание клавиш CTRL+F5.  
+1. Для изменения таблицы, чтобы она содержала один столбец и три строки, замените последнюю строку метода `DisplayInWord` следующей инструкцией и нажмите сочетание клавиш CTRL+F5.  
   
      [!code-csharp[csProgGuideNamedAndOptional#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#10)]  
   
-2.  Чтобы использовать заранее определенный формат таблицы, замените последнюю строку метода `DisplayInWord` следующей инструкцией и нажмите сочетание клавиш CTRL+F5. В качестве формата можно использовать любую из констант [WdTableFormat](<xref:Microsoft.Office.Interop.Word.WdTableFormat>).  
+2. Чтобы использовать заранее определенный формат таблицы, замените последнюю строку метода `DisplayInWord` следующей инструкцией и нажмите сочетание клавиш CTRL+F5. В качестве формата можно использовать любую из констант [WdTableFormat](<xref:Microsoft.Office.Interop.Word.WdTableFormat>).  
   
      [!code-csharp[csProgGuideNamedAndOptional#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#11)]  
   
