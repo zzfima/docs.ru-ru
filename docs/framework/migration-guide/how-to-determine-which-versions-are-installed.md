@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 570cbd49fd8a8ea42d1c43ebe067a0d2d3f9dc27
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.openlocfilehash: 364d28d5df8e284445d825fbbeb963c54b7b9e27
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055239"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176310"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Практическое руководство. Определение установленных версий платформы .NET Framework
 
@@ -37,7 +37,6 @@ ms.locfileid: "59055239"
 >
 > Дополнительные сведения о версиях см. в статье [Версии и зависимости платформы .NET Framework](versions-and-dependencies.md).
 
-
 Получить список версий .NET Framework, установленных на компьютере, можно из реестра. Вы можете просмотреть реестр в редакторе реестра или отправить запрос с помощью кода.
  
 - Поиск .NET Framework 4.5 и более поздних версий: 
@@ -54,7 +53,6 @@ ms.locfileid: "59055239"
 - [Использование кода для отправки запроса в класс Environment](#clr_b)  
 
 Сведения об определении установленных обновлений для каждой версии платформы .NET Framework см. в статье [Практическое руководство. Определение установленных обновлений платформы .NET Framework](how-to-determine-which-net-framework-updates-are-installed.md). 
-  
 
 ## <a name="find-newer-net-framework-versions-45-and-later"></a>Поиск .NET Framework 4.5 и более поздних версий
 
@@ -171,7 +169,6 @@ ms.locfileid: "59055239"
 [!code-csharp[ListVersions](../../../samples/snippets/csharp/framework/migration-guide/versions-installed1.cs)]
 [!code-vb[ListVersions](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed1.vb)]
 
-
 ## <a name="find-clr-versions"></a>Поиск версий CLR
   
 <a name="clr_a"></a> 
@@ -208,8 +205,6 @@ ms.locfileid: "59055239"
    - Чтобы получить идентификатор дополнительной версии (например, *0* в случае версии 4.0), используйте свойство <xref:System.Version.Minor%2A?displayProperty=nameWithType>.
 
    - Чтобы получить всю строку версии (например, *4.0.30319.18010*), используйте метод <xref:System.Version.ToString%2A?displayProperty=nameWithType>. Он возвращает одно значение, соответствующее версии среды выполнения, в которой выполняется код. Он не возвращает версий сборок или других версий среды выполнения, которые установлены на компьютере.
-
-
 
 В следующем примере свойство <xref:System.Environment.Version%2A?displayProperty=nameWithType> используется для получения сведений о версии среды CLR:
 
