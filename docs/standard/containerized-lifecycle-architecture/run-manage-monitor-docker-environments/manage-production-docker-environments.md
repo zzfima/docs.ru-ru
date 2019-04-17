@@ -4,12 +4,12 @@ description: Узнайте о ключевые аспекты управлен�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: f3cf9bc281e94f342cecb1083d886daba03c019d
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 3f8c51b95f52a655de470ac237c51dd4ee9c13eb
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836621"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672104"
 ---
 # <a name="manage-production-docker-environments"></a>Управление рабочими средами Docker
 
@@ -25,12 +25,12 @@ ms.locfileid: "56836621"
 
 **В таблице 6-1**. Средства управления docker
 
-| Средства управления | Описание: | Связанные оркестраторов |
+| Средства управления | Описание | Связанные оркестраторов |
 |------------------|-------------|-----------------------|
 | [Azure Monitor для контейнеров](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview) | Azure уровня dedicated средство управления Kubernetes | Службы Azure Kubernetes (AKS) |
 | [Веб-интерфейса Kubernetes (панель мониторинга)](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) | Средства управления Kubernetes, можно отслеживать и управлять локального кластера Kubernetes | Служба Azure Kubernetes (AKS)<br/>Локальный Kubernetes |
 | [Портал Azure для Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-creation-via-portal)<br/>[Azure Service Fabric Explorer](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster) | Версия Online и рабочего стола для кластеров Service Fabric в Azure, локально, локальной разработки, а также других облаках | Azure Service Fabric |
-| [Контейнер мониторинга (Log Analytics)](https://docs.microsoft.com/azure/azure-monitor/insights/containers) | Y управления общие контейнера решение для мониторинга. Позволяет управлять кластерами Kubernetes через [Azure Monitor для контейнеров](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview). | Azure Service Fabric<br/>Служба Azure Kubernetes (AKS)<br/>Mesosphere DC/OS и другим пользователям. |
+| [Контейнер мониторинга (Azure Monitor)](https://docs.microsoft.com/azure/azure-monitor/insights/containers) | Y управления общие контейнера решение для мониторинга. Позволяет управлять кластерами Kubernetes через [Azure Monitor для контейнеров](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview). | Azure Service Fabric<br/>Служба Azure Kubernetes (AKS)<br/>Mesosphere DC/OS и другим пользователям. |
 
 ## <a name="azure-service-fabric"></a>Azure Service Fabric
 
