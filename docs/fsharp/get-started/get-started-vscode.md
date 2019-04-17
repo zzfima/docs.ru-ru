@@ -2,12 +2,12 @@
 title: Начало работы с F# в Visual Studio Code
 description: Сведения об использовании F# с Visual Studio Code и Ionide suite подключаемого модуля.
 ms.date: 12/23/2018
-ms.openlocfilehash: 3e526d33a8b52e3c1241ed861d5ceb37eac10451
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 7c2ecab14b3351d441249e7fc7cb3188a4ee7eba
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846575"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612892"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Начало работы с F# в Visual Studio Code
 
@@ -153,6 +153,7 @@ val toPigLatin : word:string -> string
 #load "ClassLibraryDemo.fs"
 open ClassLibraryDemo
 ```
+
 Выберите обе строки текста и нажмите клавиши Alt + ВВОД, чтобы выполнить эти строки в FSI. Это будет загружать содержимое библиотеки Pig Latin в процесс FSI и `open` `ClassLibraryDemo` пространства имен таким образом, чтобы у вас есть доступ к функциям.
 
 Затем в окне «FSI» вызовите функцию с `PigLatin` модуль, который вы задали ранее:

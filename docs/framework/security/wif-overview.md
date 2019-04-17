@@ -3,15 +3,15 @@ title: Обзор Windows Identity Foundation 4.5
 ms.date: 03/30/2017
 ms.assetid: 5f723345-7270-49e2-b638-b3a34bd40517
 author: BrucePerlerMS
-ms.openlocfilehash: 41829bee3df3e47c0ccd712ecc9a314e5971aba0
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 6165dbf32b777a8d82e756f84ed2415d6ed3d774
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838992"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613036"
 ---
 # <a name="windows-identity-foundation-45-overview"></a>Обзор Windows Identity Foundation 4.5
-Windows Identity Foundation 4.5 — это набор классов .NET Framework для реализации в приложениях удостоверений на основе утверждений. С его помощью вам будет гораздо проще воспользоваться преимуществами приложений и служб, поддерживающих утверждения. WIF 4.5 можно использовать в любом веб-приложении или в любой веб-службе, использующей NET Framework 4.5 или более поздней версии. WIF — один из компонентов семейства ПО Microsoft Federated Identity, реализующего общую отраслевую концепцию на основе открытых стандартов. Семейство Federated Identity состоит из трех компонентов: [служб федерации Active Directory®](https://go.microsoft.com/fwlink/?LinkID=247516) (AD FS) 2.0, [службы контроля доступа (ACS) Microsoft Azure](https://go.microsoft.com/fwlink/?LinkID=247517) и WIF. В совокупности эти 3 компонента формируют основу новой облачной платформы удостоверений и доступа на основе утверждений.  
+Windows Identity Foundation 4.5 — это набор классов .NET Framework для реализации в приложениях удостоверений на основе утверждений. С его помощью вам будет гораздо проще воспользоваться преимуществами приложений и служб, поддерживающих утверждения. WIF 4.5 можно использовать в любом веб-приложении или в любой веб-службе, использующей NET Framework 4.5 или более поздней версии. WIF — один из компонентов семейства ПО Microsoft Federated Identity, реализующего общую отраслевую концепцию на основе открытых стандартов. Федеративная Идентификация состоит из трех компонентов: [Службы федерации Active Directory®](https://go.microsoft.com/fwlink/?LinkID=247516) (AD FS) 2.0, [службы управления Windows Azure доступ](https://go.microsoft.com/fwlink/?LinkID=247517) (ACS) и WIF. В совокупности эти 3 компонента формируют основу новой облачной платформы удостоверений и доступа на основе утверждений.  
   
  Дополнительные сведения о WIF см. в разделе [Windows Identity Foundation, веб-сайт](https://go.microsoft.com/fwlink/?LinkId=149009) в центре разработчиков безопасности на сайте MSDN. Введение в создание приложений с помощью WIF, см. в разделе [Programming Windows Identity Foundation](https://go.microsoft.com/fwlink/?LinkId=210158) , Витторио Берточчи (опубликованных издательством Microsoft Press).  
   
@@ -28,7 +28,7 @@ Windows Identity Foundation 4.5 — это набор классов .NET Frame
   
      Кроме того, данная платформа также обеспечивает возможность создания службы STS с поддержкой WS-Federation для клиентов на основе веб-браузера. Такая служба STS также именуется "пассивной".  
   
--   Новое средство удостоверения и доступа для Visual Studio 11, предоставляющее возможность защитить приложение с помощью удостоверений на основе утверждений и принять пользователей от различных поставщиков удостоверений. Это средство STS можно загрузить со следующего URL: [ https://go.microsoft.com/fwlink/?LinkID=245849 ](https://go.microsoft.com/fwlink/?LinkID=245849) или непосредственно из Visual Studio 11, выполнив поиск «identity» в диспетчере расширений. Дополнительные сведения см. в разделе [Средство Identity and Access Tool для Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md).  
+-   Новое средство удостоверения и доступа для Visual Studio 11, предоставляющее возможность защитить приложение с помощью удостоверений на основе утверждений и принять пользователей от различных поставщиков удостоверений. Это средство STS можно загрузить со следующего URL: <https://go.microsoft.com/fwlink/?LinkID=245849> или непосредственно из Visual Studio 11, выполнив поиск «identity» в диспетчере расширений. Дополнительные сведения см. в разделе [Средство Identity and Access Tool для Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md).  
   
  STS поддерживает следующие основные сценарии:  
   

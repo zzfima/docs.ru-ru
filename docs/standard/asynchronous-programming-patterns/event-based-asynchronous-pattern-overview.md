@@ -124,7 +124,7 @@ public class AsyncExample
   
  Методы, которые одновременно поддерживают только одну ожидающую операцию, такие как `Method1Async(string param)`, не допускают отмену.  
   
-### <a name="receiving-progress-updates-and-incremental-results"></a>Получение обновлений ходы выполнения и добавочных результатов  
+### <a name="receiving-progress-updates-and-incremental-results"></a>Получение обновлений хода выполнения и добавочных результатов  
  Класс, поддерживающий асинхронную модель на основе событий, может дополнительно предоставлять событие для отслеживания хода выполнения и добавочных результатов. Обычно оно имеет имя `ProgressChanged` или _MethodName_**ProgressChanged**, а соответствующий обработчик событий принимает параметр <xref:System.ComponentModel.ProgressChangedEventArgs>.  
   
  Обработчик событий для события `ProgressChanged` может проверить свойство <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A?displayProperty=nameWithType>, чтобы определить, какой процент асинхронной задачи уже выполнен. Это свойство находится в диапазоне от 0 до 100 и может использоваться для обновления свойства <xref:System.Windows.Forms.ProgressBar.Value%2A> элемента <xref:System.Windows.Forms.ProgressBar>. Если имеется несколько ожидающих асинхронных операций, вы можете использовать свойство <xref:System.ComponentModel.ProgressChangedEventArgs.UserState%2A?displayProperty=nameWithType>, чтобы определить, какая операция сообщает о ходе выполнения.  

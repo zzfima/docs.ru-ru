@@ -4,12 +4,12 @@ description: Модернизация существующих приложен�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/29/2018
-ms.openlocfilehash: 9d84924317e7c6e3dd4386f851ee902e2b5a7caf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ad0da9f7f0412c14b5362e3f631a7aa4af1f8260
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59216669"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611254"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Развертывание существующих приложений .NET в качестве контейнеров Windows
 
@@ -96,14 +96,14 @@ ms.locfileid: "59216669"
 > | **Тег** | **Система и версия** |
 > |---|---|
 > | **microsoft/dotnet-framework:4.x-windowsservercore** | .NET framework 4.x в Windows Server Core |
-> | **Microsoft/aspnet:4.x-windowsservercore** | .NET framework 4.x дополнительной настройки ASP.NET на Windows Server Core |
+> | **microsoft/aspnet:4.x-windowsservercore** | .NET framework 4.x дополнительной настройки ASP.NET на Windows Server Core |
 
 Для .NET Core (для нескольких платформ для Linux и Windows) теги будет выглядеть следующим образом:
 
 > | **Тег** | **Система и версия**
 > |---|---|
-> | **Microsoft/DotNet:2.0.0-Runtime** | .NET core 2.0 доступны только для среды выполнения на платформе Linux |
-> | **Microsoft/DotNet:2.0.0-Runtime-nanoserver** | На сервере Nano Server Windows только для среды выполнения .NET core 2.0 |
+> | **microsoft/dotnet:2.0.0-runtime** | .NET core 2.0 доступны только для среды выполнения на платформе Linux |
+> | **microsoft/dotnet:2.0.0-runtime-nanoserver** | На сервере Nano Server Windows только для среды выполнения .NET core 2.0 |
 
 ### <a name="multi-arch-images"></a>Мультиархитектурные образы
 
@@ -125,15 +125,15 @@ ms.locfileid: "59216669"
 
 -   **Документация по контейнерам Windows**
 
-    [https://docs.microsoft.com/virtualization/windowscontainers/](https://docs.microsoft.com/virtualization/windowscontainers/)
+    <https://docs.microsoft.com/virtualization/windowscontainers/>
 
 -   **Принципы работы контейнеров Windows**
 
-    [https://docs.microsoft.com/virtualization/windowscontainers/about/](https://docs.microsoft.com/virtualization/windowscontainers/about/)
+    <https://docs.microsoft.com/virtualization/windowscontainers/about/>
 
 -   **Инфографика: Корпорация Майкрософт и контейнеры**
 
-    [https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf](https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf)
+    <https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf>
 
 ## <a name="the-container-ecosystem-in-azure"></a>Экосистема контейнеров в Azure
 
@@ -153,7 +153,7 @@ ms.locfileid: "59216669"
 
 Продукты Azure вспомогательные контейнеров, которые находятся в то же время, более расположен в PaaS (платформа как услуга) уровне предназначены для:
 
--   **Служба приложений Azure**
+-   **служба приложений Azure**;
 -   **Служба Azure Kubernetes (AKS и ACS)**
 -   **Azure Service Fabric** 
 -   **Пакетная служба Azure** 

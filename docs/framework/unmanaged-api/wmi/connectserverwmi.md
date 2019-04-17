@@ -16,21 +16,22 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8786892d591a98ddcd7f51eddf86fdbcf50f2197
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ff9ea8cdc8aea66b1dd1f54c8be881882f6e27f7
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59214875"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611540"
 ---
 # <a name="connectserverwmi-function"></a>Функция ConnectServerWmi
+
 Создает подключение через DCOM к пространству имен WMI на указанном компьютере.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 HRESULT ConnectServerWmi (
    [in] BSTR               strNetworkResource,
    [in] BSTR               strUser,
@@ -40,10 +41,11 @@ HRESULT ConnectServerWmi (
    [in] BSTR               strAuthority,
    [in] IWbemContext*      pCtx,
    [out] IWbemServices**   ppNamespace,
-   [in] DWORD              impLevel, 
+   [in] DWORD              impLevel,
    [in] DWORD              authLevel
 );
 ```
+
 ## <a name="parameters"></a>Параметры
 
 `strNetworkResource`\
@@ -56,8 +58,8 @@ HRESULT ConnectServerWmi (
 [in] Указатель на допустимую `BSTR` , содержащее пароль. Объект `null` указывает текущий контекст безопасности. Пустая строка ("») указывает допустимый пароль нулевой длины.
 
 `strLocale`\
-[in] Указатель на допустимую `BSTR` указывает нужный языковой стандарт для получения сведений. Для кодов языка Microsoft имеет следующий формат строки «MS\_*xxx*«, где *xxx* — это строка в шестнадцатеричной форме, указывающее идентификатор языка (LCID). Если указан недопустимый код языка, метод возвращает `WBEM_E_INVALID_PARAMETER` кроме как на Windows 7, где вместо него используется локаль по умолчанию сервера. Если "используется null1, текущий языковой стандарт. 
- 
+[in] Указатель на допустимую `BSTR` указывает нужный языковой стандарт для получения сведений. Для кодов языка Microsoft имеет следующий формат строки «MS\_*xxx*«, где *xxx* — это строка в шестнадцатеричной форме, указывающее идентификатор языка (LCID). Если указан недопустимый код языка, метод возвращает `WBEM_E_INVALID_PARAMETER` кроме как на Windows 7, где вместо него используется локаль по умолчанию сервера. Если "используется null1, текущий языковой стандарт.
+
 `lSecurityFlags`\
 [in] Флаги для передачи `ConnectServerWmi` метод. Значение ноль (0) для этого параметра приводит к вызов `ConnectServerWmi` возвращение только после того, как установлено подключение к серверу. В итоге приложение не отвечает на неопределенное время, является ли сервер работает. Другими допустимыми значениями являются:
 
@@ -76,7 +78,7 @@ HRESULT ConnectServerWmi (
 | Значение NTLMDOMAIN:*доменное имя* | Используется проверка подлинности NT LAN Manager, и этот параметр содержит доменное имя NTLM. |
 
 `pCtx`\
-[in] Как правило, этот параметр является `null`. В противном случае он является указателем на [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) объект, необходимый для одного или нескольких поставщиков динамического класса. 
+[in] Как правило, этот параметр является `null`. В противном случае он является указателем на [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) объект, необходимый для одного или нескольких поставщиков динамического класса.
 
 `ppNamespace`\
 [out] Если функция возвращает, получает указатель на [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) объект привязан к указанным пространством имен. Ему будет присвоено пункты `null` при наличии ошибки.
@@ -116,4 +118,4 @@ HRESULT ConnectServerWmi (
 
 ## <a name="see-also"></a>См. также
 
-- [WMI и счетчики производительности (справочник по неуправляемым API)](index.md)
+- [WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)

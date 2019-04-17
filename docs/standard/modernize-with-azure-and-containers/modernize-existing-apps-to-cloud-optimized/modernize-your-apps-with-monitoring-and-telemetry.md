@@ -1,17 +1,17 @@
 ---
-title: Модернизация приложений с помощью мониторинга и телеметрии
+title: Модернизация приложений с помощью мониторинга и данных телеметрии
 description: Модернизация существующих приложений .NET с помощью облака Azure и Windows контейнерах | Модернизация приложений с помощью мониторинга и телеметрии
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 7776edd91f73aa6ca74b82ae4d144635bb6c36a4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: cd54861600127191b852e0a966baae6e0fe7914e
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147480"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613880"
 ---
-# <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>Модернизация приложений с помощью мониторинга и телеметрии
+# <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>Модернизация приложений с помощью мониторинга и данных телеметрии
 
 При запуске приложения в рабочей среде, крайне важно, что у вас есть ценные сведения о том, как работает приложение. Работает на высоком уровне? Пользователи получают ошибки или нестабильной или ненадежной, — это приложение? Требуется мощные функции мониторинга производительности, эффективные предупреждений и панелей мониторинга, чтобы гарантировать наличие приложения нормальной работе и производительности, должным образом. Необходимо также иметь возможность быстро выяснить, имеется проблема, определить, сколько клиентов затрагиваются и анализ причин, чтобы найти и устранить проблему.
 
@@ -69,31 +69,31 @@ Application Insights — это расширяемая служба управл
 
 -   **Обзор мониторинга в Microsoft Azure**
 
-[https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview)
+<https://docs.microsoft.com/azure/azure-monitor/overview>
 
--   **Что такое Application Insights?**
+-   **Что такое Azure Application Insights?**
 
-[https://docs.microsoft.com/azure/application-insights/app-insights-overview](https://docs.microsoft.com/azure/application-insights/app-insights-overview)
+<https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview>
 
 -   **Что такое Log Analytics?**
 
-[https://docs.microsoft.com/azure/log-analytics/log-analytics-overview](https://docs.microsoft.com/azure/log-analytics/log-analytics-overview)
+<https://docs.microsoft.com/azure/log-analytics/log-analytics-overview>
 
--   **Решение для мониторинга контейнеров в Log Analytics**
+-   **Решение для мониторинга контейнеров в Azure Monitor**
 
-[https://docs.microsoft.com/azure/log-analytics/log-analytics-containers](https://docs.microsoft.com/azure/log-analytics/log-analytics-containers)
+<https://docs.microsoft.com/azure/azure-monitor/insights/containers>
 
 -   **Обзор Azure Monitor**
 
-[https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor)
+<https://docs.microsoft.com/azure/azure-monitor/overview>
 
 -   **Что такое Operations Management Suite (OMS)?**
 
-[https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview)
+<https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview>
 
 -   **Отслеживание контейнеров Windows Server в Service Fabric с помощью OMS**
 
-[https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver](https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver)
+<https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver>
 
 >[!div class="step-by-step"]
 >[Назад](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)

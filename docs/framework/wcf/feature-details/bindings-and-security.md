@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-ms.openlocfilehash: bdefc543e90db708ae6c8be29b69381d66235154
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 5e3a8bc58d0828f50feb7752eb438d41695460fa
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59122152"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611918"
 ---
 # <a name="bindings-and-security"></a>Привязки и безопасность
 Предоставляемые системой привязки, включенные с помощью Windows Communication Foundation (WCF) позволяют быстро программировании приложений WCF. За одним исключением, во всех привязках включена схема безопасности по умолчанию. Этот раздел поможет выбрать привязку, соответствующую требованиям к безопасности.  
@@ -39,7 +39,7 @@ ms.locfileid: "59122152"
   
 -   Приложения расширений веб-служб (WSE).  
   
--   Профиль Basic Profile, определенный в взаимодействия веб-служб (WS-I) спецификации ([https://go.microsoft.com/fwlink/?LinkId=38955](https://go.microsoft.com/fwlink/?LinkId=38955)).  
+-   Профиль Basic Profile, определенный в взаимодействия веб-служб (WS-I) спецификации (<https://go.microsoft.com/fwlink/?LinkId=38955>).  
   
 -   Базовый профиль безопасности, определенный в спецификации WS-I.  
   
@@ -205,8 +205,8 @@ ms.locfileid: "59122152"
 |Тип|Описание|  
 |----------|-----------------|  
 |Нет|Указывает, что клиенту не требуется предоставлять учетные данные. Это означает, что клиент является анонимным.|  
-|Basic|Обычная проверка подлинности. Дополнительные сведения см. в разделе RFC 2617 – проверка подлинности HTTP: Основные и дайджест-проверки подлинности, доступных в [ https://go.microsoft.com/fwlink/?LinkId=84023 ](https://go.microsoft.com/fwlink/?LinkId=84023).|  
-|Digest|Дайджест-проверка подлинности. Дополнительные сведения см. в разделе RFC 2617 – проверка подлинности HTTP: Основные и дайджест-проверки подлинности, доступных в [ https://go.microsoft.com/fwlink/?LinkId=84023 ](https://go.microsoft.com/fwlink/?LinkId=84023).|  
+|Basic|Обычная проверка подлинности. Дополнительные сведения см. в разделе RFC 2617 – проверка подлинности HTTP: Основные и дайджест-проверки подлинности, доступных в <https://go.microsoft.com/fwlink/?LinkId=84023>.|  
+|Digest|Дайджест-проверка подлинности. Дополнительные сведения см. в разделе RFC 2617 – проверка подлинности HTTP: Основные и дайджест-проверки подлинности, доступных в <https://go.microsoft.com/fwlink/?LinkId=84023>.|  
 |NTLM|Проверка подлинности NTLM (NT LAN Manager).|  
 |Windows|Проверка подлинности Windows.|  
 |Сертификат|Проверка подлинности производится с использованием сертификата.|  
@@ -229,5 +229,5 @@ ms.locfileid: "59122152"
 - [Защита служб и клиентов](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [Выбор типа учетных данных](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
 - [Возможности безопасности при использовании пользовательских привязок](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
-- [Поведение безопасности](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+- [Поведения безопасности](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
 - [Модель безопасности для Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

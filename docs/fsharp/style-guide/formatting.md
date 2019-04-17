@@ -2,12 +2,12 @@
 title: F#рекомендации по форматированию кода
 description: Дополнительные сведения, касающиеся форматирования F# кода.
 ms.date: 02/08/2019
-ms.openlocfilehash: 0a72f96119181650837657afea6ca9d555ce9e5a
-ms.sourcegitcommit: 8080271c246b57f4fb68c28369634bff46843424
+ms.openlocfilehash: 259d4bb2147d1fc8bc5d35d7ff2e3c34ec2185d0
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59553866"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613828"
 ---
 # <a name="f-code-formatting-guidelines"></a>F#рекомендации по форматированию кода
 
@@ -285,6 +285,7 @@ let update model msg =
     | 1 -> model + 1, []
     | _ -> model, [ msg ]
 ```
+
 Таким образом, предпочитать экземпляров кортежа заключенные в круглые скобки, но при использовании кортежей для сопоставления шаблонов или возвращаемое значение, он считается можно избежать круглые скобки.
 
 ## <a name="formatting-discriminated-union-declarations"></a>Форматирование размеченные объявления объединений
@@ -344,10 +345,10 @@ type PostalAddress =
     City: string
     Zip: string }
     member x.ZipAndCity = sprintf "%s %s" x.Zip x.City
-    
+
 // Unusual in F#
 type PostalAddress =
-    { 
+    {
         Address: string
         City: string
         Zip: string
@@ -359,13 +360,13 @@ type PostalAddress =
 ```fsharp
 // Declaring additional members on PostalAddress
 type PostalAddress =
-    { 
+    {
         Address: string
         City: string
         Zip: string
     } with
     member x.ZipAndCity = sprintf "%s %s" x.Zip x.City
-    
+
 type MyRecord =
     {
         SomeField: int
@@ -407,7 +408,7 @@ let rainbow =
         Boss8 = "Jeffrey"
         Lackeys = ["Zippy"; "George"; "Bungle"]
     }
-    
+
 type MyRecord =
     {
         SomeField: int
@@ -445,12 +446,12 @@ let rainbow2 =
 
 И как с рекомендациями записи, может потребоваться выделить отдельные строки для фигурных скобок и отступ одну область справа с выражением. Обратите внимание на то, что в некоторых особых случаях, например упаковки значение с необязательным без скобок, может потребоваться сохранить фигурную скобку в одной строке:
 
-```fsharp    
+```fsharp
 type S = { F1: int; F2: string }
 type State = { F:  S option }
 
 let state = { F = Some { F1 = 1; F2 = "Hello" } }
-let newState = 
+let newState =
     {
         state with
             F = Some {

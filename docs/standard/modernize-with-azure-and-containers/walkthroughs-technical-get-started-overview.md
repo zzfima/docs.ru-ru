@@ -1,27 +1,27 @@
 ---
-title: Пошаговые руководства и Технический обзор работы
+title: Обзор пошаговых руководств и технических описаний по началу работы
 description: Модернизация существующих приложений .NET с помощью облака Azure и контейнеров Windows | Пошаговые руководства и Технический обзор работы
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: e89f1e79eec16919b2e70952392b6f640433156b
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 2202e2f972951e4074ed1941f0a0cfe352ab4b85
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846263"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612957"
 ---
-# <a name="walkthroughs-and-technical-get-started-overview"></a>Пошаговые руководства и Технический обзор работы
+# <a name="walkthroughs-and-technical-get-started-overview"></a>Обзор пошаговых руководств и технических описаний по началу работы
 
 Чтобы ограничить размер этой электронной книге, Дополнительная техническая документация и полные руководства содержат были доступны в репозитории GitHub. Online ряд пошаговых руководств, описанный в этой главе рассматриваются пошаговой настройки нескольких сред, основанных на контейнеры Windows и развертывания в Azure.
 
-Что каждого пошагового руководства о его цели и высокоуровневые концепции и предоставляет схему задачи, которые участвуют в следующих разделах. Вы можете получить пошаговые руководства, самостоятельно в *eShopModernizing* вики-сайт репозитория GitHub приложения в [ https://github.com/dotnet-architecture/eShopModernizing/wiki ](https://github.com/dotnet-architecture/eShopModernizing/wiki).
+Что каждого пошагового руководства о его цели и высокоуровневые концепции и предоставляет схему задачи, которые участвуют в следующих разделах. Вы можете получить пошаговые руководства, самостоятельно в *eShopModernizing* вики-сайт репозитория GitHub приложения в <https://github.com/dotnet-architecture/eShopModernizing/wiki>.
 
 ## <a name="technical-walkthrough-list"></a>Список техническим руководством
 
 Следующие пошаговые руководства начало предоставить согласованный и всесторонний обзор Технические рекомендации для примеров приложений, которые можно перенести и shift с помощью контейнеров, а затем переместите с помощью нескольких вариантов развертывания в Azure.
 
-Каждый из приведенных ниже пошаговых руководств использует новые примеры eShopLegacy и eShopModernizing приложений, которые можно найти на сайте GitHub [ https://github.com/dotnet-architecture/eShopModernizing ](https://github.com/dotnet-architecture/eShopModernizing).
+Каждый из приведенных ниже пошаговых руководств использует новые примеры eShopLegacy и eShopModernizing приложений, которые доступны на сайте GitHub в <https://github.com/dotnet-architecture/eShopModernizing>.
 
 - **Обзор eShop устаревших приложений (приложения для базовых показателей для модернизации)**
 
@@ -136,7 +136,7 @@ ms.locfileid: "57846263"
 
 ### <a name="technical-walkthrough-availability"></a>Доступность техническим руководством
 
-Полной технической руководство доступно в репозитории GitHub eShopModernizing вики-сайте: [https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD))
+Полной технической руководство доступно в репозитории GitHub eShopModernizing вики-сайте: <https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)>
 
 ### <a name="overview"></a>Обзор
 
@@ -182,7 +182,7 @@ Azure в настоящее время предоставляет виртуал
 
 Это содержимое более подробный обзор на вики-сайте GitHub:
 
-[https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD))
+<https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)>
 
 ## <a name="walkthrough-4-deploy-your-windows-containers-based-apps-to-azure-container-instances-aci"></a>Пошаговое руководство 4. Развертывание приложений на базе контейнеров Windows в экземпляры контейнеров Azure (ACI)
 
@@ -228,7 +228,7 @@ Azure в настоящее время предоставляет виртуал
 
 Полной технической руководство доступно в репозитории GitHub eShopModernizing вики-сайте:
 
-[https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD))
+<https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD)>
 
 ### <a name="overview"></a>Обзор
 
@@ -280,7 +280,7 @@ Azure в настоящее время предоставляет виртуал
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Это содержимое более подробный обзор на вики-сайте GitHub: [https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD))
+Это содержимое более подробный обзор на вики-сайте GitHub: <https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD)>
 
 ## <a name="walkthrough-6-deploy-your-windows-containers-based-apps-to-azure-service-fabric"></a>Пошаговое руководство. 6. Развертывание приложений на базе контейнеров Windows в Azure Service Fabric
 
@@ -288,7 +288,7 @@ Azure в настоящее время предоставляет виртуал
 
 Полной технической руководство доступно в репозитории GitHub eShopModernizing вики-сайте:
 
-[https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD))
+<https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD)>
 
 ### <a name="overview"></a>Обзор
 
@@ -354,7 +354,7 @@ Azure Service Fabric обеспечивает переносимость как 
 
 Это содержимое более подробный обзор на вики-сайте GitHub:
 
-[https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD))
+<https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD)>
 
 > [!div class="step-by-step"]
 > [Назад](lift-and-shift-existing-apps-devops/migrate-to-hybrid-cloud-scenarios.md)
