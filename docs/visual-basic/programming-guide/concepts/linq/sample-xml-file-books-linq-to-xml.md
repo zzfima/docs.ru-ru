@@ -3,16 +3,16 @@ title: 'Пример XML-файла: книги (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 27ca5847-2289-40c0-8331-ede67ec59d1c
 ms.openlocfilehash: d16a67ba95f7fa9f940c12c61f9ab128abd55a57
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58817088"
 ---
-# <a name="sample-xml-file-books-linq-to-xml"></a><span data-ttu-id="d6e6b-102">Пример XML-файла: книги (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="d6e6b-102">Sample XML File: Books (LINQ to XML)</span></span>
-<span data-ttu-id="d6e6b-103">Следующий XML-файл используется в различных примерах в документации [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d6e6b-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="d6e6b-104">Этот файл содержит сведения о книгах.</span><span class="sxs-lookup"><span data-stu-id="d6e6b-104">The file contains information about books.</span></span>  
+# <a name="sample-xml-file-books-linq-to-xml"></a><span data-ttu-id="e0875-102">Пример XML-файла: книги (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="e0875-102">Sample XML File: Books (LINQ to XML)</span></span>
+<span data-ttu-id="e0875-103">Следующий XML-файл используется в различных примерах в документации [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="e0875-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="e0875-104">Этот файл содержит сведения о книгах.</span><span class="sxs-lookup"><span data-stu-id="e0875-104">The file contains information about books.</span></span>  
   
-## <a name="booksxml"></a><span data-ttu-id="d6e6b-105">books.xml</span><span class="sxs-lookup"><span data-stu-id="d6e6b-105">books.xml</span></span>  
+## <a name="booksxml"></a><span data-ttu-id="e0875-105">books.xml</span><span class="sxs-lookup"><span data-stu-id="e0875-105">books.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -39,6 +39,6 @@ ms.locfileid: "58817088"
 </Catalog>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d6e6b-106">См. также</span><span class="sxs-lookup"><span data-stu-id="d6e6b-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e0875-106">См. также</span><span class="sxs-lookup"><span data-stu-id="e0875-106">See also</span></span>
 
-- [<span data-ttu-id="d6e6b-107">Примеры XML-документов (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="d6e6b-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+- [<span data-ttu-id="e0875-107">Примеры XML-документов (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="e0875-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

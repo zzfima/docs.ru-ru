@@ -8,20 +8,20 @@ helpviewer_keywords:
 - BC30812
 ms.assetid: 5091a250-be66-413b-98a3-2a9974c4d600
 ms.openlocfilehash: 01c0abb366e8605a9b153333e645fc3276b6bd16
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58821729"
 ---
-# <a name="optional-parameters-must-specify-a-default-value"></a><span data-ttu-id="104a6-102">Для необязательных параметров должно быть задано значение по умолчанию</span><span class="sxs-lookup"><span data-stu-id="104a6-102">Optional parameters must specify a default value</span></span>
-<span data-ttu-id="104a6-103">Необязательные параметры необходимо предоставить значения по умолчанию, которые могут использоваться, если параметр не указан в вызывающей процедуре.</span><span class="sxs-lookup"><span data-stu-id="104a6-103">Optional parameters must provide default values that can be used if no parameter is supplied by a calling procedure.</span></span>  
+# <a name="optional-parameters-must-specify-a-default-value"></a><span data-ttu-id="1f4db-102">Для необязательных параметров должно быть задано значение по умолчанию</span><span class="sxs-lookup"><span data-stu-id="1f4db-102">Optional parameters must specify a default value</span></span>
+<span data-ttu-id="1f4db-103">Необязательные параметры необходимо предоставить значения по умолчанию, которые могут использоваться, если параметр не указан в вызывающей процедуре.</span><span class="sxs-lookup"><span data-stu-id="1f4db-103">Optional parameters must provide default values that can be used if no parameter is supplied by a calling procedure.</span></span>  
   
- <span data-ttu-id="104a6-104">**Идентификатор ошибки:** BC30812</span><span class="sxs-lookup"><span data-stu-id="104a6-104">**Error ID:** BC30812</span></span>  
+ <span data-ttu-id="1f4db-104">**Идентификатор ошибки:** BC30812</span><span class="sxs-lookup"><span data-stu-id="1f4db-104">**Error ID:** BC30812</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="104a6-105">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="104a6-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="1f4db-105">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="1f4db-105">To correct this error</span></span>  
   
--   <span data-ttu-id="104a6-106">Указание значений по умолчанию для необязательных параметров; Например:</span><span class="sxs-lookup"><span data-stu-id="104a6-106">Specify default values for optional parameters; for example:</span></span>  
+-   <span data-ttu-id="1f4db-106">Указание значений по умолчанию для необязательных параметров; Например:</span><span class="sxs-lookup"><span data-stu-id="1f4db-106">Specify default values for optional parameters; for example:</span></span>  
   
     ```  
     Sub Proc1(ByVal X As Integer,   
@@ -30,6 +30,6 @@ ms.locfileid: "58821729"
     End Sub  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="104a6-107">См. также</span><span class="sxs-lookup"><span data-stu-id="104a6-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1f4db-107">См. также</span><span class="sxs-lookup"><span data-stu-id="1f4db-107">See also</span></span>
 
-- [<span data-ttu-id="104a6-108">Необязательный</span><span class="sxs-lookup"><span data-stu-id="104a6-108">Optional</span></span>](../../../visual-basic/language-reference/modifiers/optional.md)
+- [<span data-ttu-id="1f4db-108">Необязательный</span><span class="sxs-lookup"><span data-stu-id="1f4db-108">Optional</span></span>](../../../visual-basic/language-reference/modifiers/optional.md)

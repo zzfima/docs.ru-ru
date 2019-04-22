@@ -3,17 +3,17 @@ title: Практическое руководство. Поиск всех уз
 ms.date: 07/20/2015
 ms.assetid: b735d7da-5727-48a3-ab57-a16378adc32e
 ms.openlocfilehash: c04447df1d4a3e29558a3bad172715d2bdee340b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58813852"
 ---
-# <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a><span data-ttu-id="e8682-102">Практическое руководство. Поиск всех узлов в пространстве имен (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e8682-102">How to: Find All Nodes in a Namespace (Visual Basic)</span></span>
-<span data-ttu-id="e8682-103">Для поиска всех узлов в отдельном пространстве имен можно применить к нему фильтр по каждому элементу или атрибуту.</span><span class="sxs-lookup"><span data-stu-id="e8682-103">You can filter on the namespace of each element or attribute to find all nodes in that particular namespace.</span></span>  
+# <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a><span data-ttu-id="0b530-102">Практическое руководство. Поиск всех узлов в пространстве имен (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0b530-102">How to: Find All Nodes in a Namespace (Visual Basic)</span></span>
+<span data-ttu-id="0b530-103">Для поиска всех узлов в отдельном пространстве имен можно применить к нему фильтр по каждому элементу или атрибуту.</span><span class="sxs-lookup"><span data-stu-id="0b530-103">You can filter on the namespace of each element or attribute to find all nodes in that particular namespace.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="e8682-104">Пример</span><span class="sxs-lookup"><span data-stu-id="e8682-104">Example</span></span>  
- <span data-ttu-id="e8682-105">В следующем примере создается XML-дерево с двумя пространствами имен.</span><span class="sxs-lookup"><span data-stu-id="e8682-105">The following example creates an XML tree with two namespaces.</span></span> <span data-ttu-id="e8682-106">Затем в нем выполняется итерация по дереву и печать имен всех элементов и атрибутов в одном из этих пространств имен.</span><span class="sxs-lookup"><span data-stu-id="e8682-106">It then iterates through the tree and prints the names of all the elements and attributes in one of those namespaces.</span></span>  
+## <a name="example"></a><span data-ttu-id="0b530-104">Пример</span><span class="sxs-lookup"><span data-stu-id="0b530-104">Example</span></span>  
+ <span data-ttu-id="0b530-105">В следующем примере создается XML-дерево с двумя пространствами имен.</span><span class="sxs-lookup"><span data-stu-id="0b530-105">The following example creates an XML tree with two namespaces.</span></span> <span data-ttu-id="0b530-106">Затем в нем выполняется итерация по дереву и печать имен всех элементов и атрибутов в одном из этих пространств имен.</span><span class="sxs-lookup"><span data-stu-id="0b530-106">It then iterates through the tree and prints the names of all the elements and attributes in one of those namespaces.</span></span>  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -43,7 +43,7 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="e8682-107">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="e8682-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="0b530-107">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="0b530-107">This code produces the following output:</span></span>  
   
 ```  
 Nodes in the http://www.adventure-works.com namespace  
@@ -51,10 +51,10 @@ Nodes in the http://www.adventure-works.com namespace
 {http://www.adventure-works.com}GrandChild2  
 ```  
   
-## <a name="example"></a><span data-ttu-id="e8682-108">Пример</span><span class="sxs-lookup"><span data-stu-id="e8682-108">Example</span></span>  
- <span data-ttu-id="e8682-109">Для доступа к XML-файлу применяется следующий запрос, содержащий заказы на покупку в двух разных пространствах имен.</span><span class="sxs-lookup"><span data-stu-id="e8682-109">The XML file accessed by the following query contains purchase orders in two different namespaces.</span></span> <span data-ttu-id="e8682-110">В запросе создается новое дерево с элементами одного из пространств имен.</span><span class="sxs-lookup"><span data-stu-id="e8682-110">The query creates a new tree with just the elements in one of the namespaces.</span></span>  
+## <a name="example"></a><span data-ttu-id="0b530-108">Пример</span><span class="sxs-lookup"><span data-stu-id="0b530-108">Example</span></span>  
+ <span data-ttu-id="0b530-109">Для доступа к XML-файлу применяется следующий запрос, содержащий заказы на покупку в двух разных пространствах имен.</span><span class="sxs-lookup"><span data-stu-id="0b530-109">The XML file accessed by the following query contains purchase orders in two different namespaces.</span></span> <span data-ttu-id="0b530-110">В запросе создается новое дерево с элементами одного из пространств имен.</span><span class="sxs-lookup"><span data-stu-id="0b530-110">The query creates a new tree with just the elements in one of the namespaces.</span></span>  
   
- <span data-ttu-id="e8682-111">В этом примере используется следующий XML-документ: [Пример XML-файла. Консолидированные заказы на покупку](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).</span><span class="sxs-lookup"><span data-stu-id="e8682-111">This example uses the following XML document: [Sample XML File: Consolidated Purchase Orders](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).</span></span>  
+ <span data-ttu-id="0b530-111">В этом примере используется следующий XML-документ: [Пример XML-файла. Консолидированные заказы на покупку](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).</span><span class="sxs-lookup"><span data-stu-id="0b530-111">This example uses the following XML document: [Sample XML File: Consolidated Purchase Orders](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).</span></span>  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -73,7 +73,7 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="e8682-112">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="e8682-112">This code produces the following output:</span></span>  
+ <span data-ttu-id="0b530-112">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="0b530-112">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -109,6 +109,6 @@ End Module
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="e8682-113">См. также</span><span class="sxs-lookup"><span data-stu-id="e8682-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0b530-113">См. также</span><span class="sxs-lookup"><span data-stu-id="0b530-113">See also</span></span>
 
-- [<span data-ttu-id="e8682-114">Базовые запросы (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e8682-114">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [<span data-ttu-id="0b530-114">Базовые запросы (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0b530-114">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
