@@ -9,10 +9,10 @@ helpviewer_keywords:
 - data types [Visual Basic], improving speed with
 ms.assetid: 5e1b9aaf-c7ca-4b29-9b22-0e82ed8e85e2
 ms.openlocfilehash: 192ced1da400372f877cb54aaa29d60fcd0bbcad
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58829204"
 ---
 # <a name="data-types-in-visual-basic"></a>Типы данных в Visual Basic
@@ -27,7 +27,7 @@ ms.locfileid: "58829204"
 |Литерал|С помощью символа типа литерала; см. [символы типов](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)<br /><br /> `Dim searchChar As Char = "."`  `C`|  
 |Константа|В [операторе Const](../../../../visual-basic/language-reference/statements/const-statement.md)<br /><br /> `Const`   `modulus As Single = 4.17825F`|  
 |Перечисление|В [операторе Enum](../../../../visual-basic/language-reference/statements/enum-statement.md)<br /><br /> `Public`   `Enum`   `colors`|  
-|Свойство.|В [операторе Property](../../../../visual-basic/language-reference/statements/property-statement.md)<br /><br /> `Property`   `region() As String`|  
+|Свойство|В [операторе Property](../../../../visual-basic/language-reference/statements/property-statement.md)<br /><br /> `Property`   `region() As String`|  
 |Параметр процедуры|В [операторе Sub](../../../../visual-basic/language-reference/statements/sub-statement.md), [инструкции Function](../../../../visual-basic/language-reference/statements/function-statement.md) или [инструкции Operator](../../../../visual-basic/language-reference/statements/operator-statement.md)<br /><br /> `Sub addSale(ByVal`   `amount`   `As Double)`|  
 |Аргумент процедуры|В вызывающем коде; все аргументы являются уже объявленными элементами программирования или выражениями, содержащими объявленные элементы<br /><br /> `subString = Left(`  `inputString`  `,`   `5`  `)`|  
 |Возвращаемое значение процедуры|В [инструкции Function](../../../../visual-basic/language-reference/statements/function-statement.md) или [инструкции Operator](../../../../visual-basic/language-reference/statements/operator-statement.md)<br /><br /> `Function convert(ByVal b As Byte)`   `As String`|  

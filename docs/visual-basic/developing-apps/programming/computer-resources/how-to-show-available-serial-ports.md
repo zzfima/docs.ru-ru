@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Отображение доступных последовательных портов в Visual Basic
+title: Как выполнить Отображение доступных последовательных портов в Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - serial ports, availability
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - ports, serial port availability
 ms.assetid: eaf2ee5a-8103-4e10-a205-ed1d4db120ba
 ms.openlocfilehash: 57b3a33fecb6128a10ce903fd26724de98acb8c1
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58834651"
 ---
-# <a name="how-to-show-available-serial-ports-in-visual-basic"></a>Практическое руководство. Отображение доступных последовательных портов в Visual Basic
+# <a name="how-to-show-available-serial-ports-in-visual-basic"></a>Как выполнить Отображение доступных последовательных портов в Visual Basic
 В этом разделе описывается использование объекта `My.Computer.Ports` для отображения доступных последовательных портов компьютера в Visual Basic.  
   
  Чтобы дать пользователю возможность выбрать используемый порт, имена последовательных портов отображаются в элементе управления <xref:System.Windows.Forms.ListBox>.  

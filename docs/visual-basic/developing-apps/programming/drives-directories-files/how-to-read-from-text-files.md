@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Чтение из текстовых файлов в Visual Basic
+title: Как выполнить Чтение из текстовых файлов в Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - extended characters [Visual Basic], reading
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - text files [Visual Basic], reading
 ms.assetid: 735fe9d7-0f7a-4185-ba02-f35e580ec4b8
 ms.openlocfilehash: 813928fbcf67f269d99d418ab16e202bd19f25fc
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58836887"
 ---
-# <a name="how-to-read-from-text-files-in-visual-basic"></a>Практическое руководство. Чтение из текстовых файлов в Visual Basic
+# <a name="how-to-read-from-text-files-in-visual-basic"></a>Как выполнить Чтение из текстовых файлов в Visual Basic
 Метод <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.ReadAllText%2A> объекта `My.Computer.FileSystem` позволяет считывать данные из текстового файла. Если содержимое файла имеет определенную кодировку, например ASCII или UTF-8, ее можно указать в аргументе.  
   
  Если вы производите чтение из файла с символами национальных алфавитов, необходимо указать кодировку файла.  

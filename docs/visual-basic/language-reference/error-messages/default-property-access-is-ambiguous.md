@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
 ms.openlocfilehash: 5f058c8e7d480b9145452ae85f186a6ac2ed0d56
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58836354"
 ---
 # <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a>Доступ к свойству по умолчанию определяется неоднозначно между членами наследуемых интерфейсов\<defaultpropertyname > "интерфейса"\<имя_интерфейса1 > "и"\<defaultpropertyname > "интерфейса"\< имя_интерфейса2 > "
@@ -47,7 +47,7 @@ End Class
     Dim testObj As Iface1  
     ```  
   
-     - или -  
+     -или-  
   
 -   Реализуйте наследуемый интерфейс в классе. Затем можно реализовать все наследуемые свойства с разными именами. Однако только один из них может быть свойство по умолчанию, реализующего класса. Это показано в следующем примере.  
   

@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Создание копии файла в том же каталоге в Visual Basic
+title: Как выполнить Создание копии файла в том же каталоге в Visual Basic
 ms.date: 07/20/2015
 f1_keywords:
 - File.Copy
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - I/O [Visual Basic], copying files
 ms.assetid: b2fdda86-e666-42c2-9706-9527e9fa68ff
 ms.openlocfilehash: b038cd0f780332e195e2f80c2f77cccac01dcc74
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58830088"
 ---
-# <a name="how-to-create-a-copy-of-a-file-in-the-same-directory-in-visual-basic"></a>Практическое руководство. Создание копии файла в том же каталоге в Visual Basic
+# <a name="how-to-create-a-copy-of-a-file-in-the-same-directory-in-visual-basic"></a>Как выполнить Создание копии файла в том же каталоге в Visual Basic
 Для копирования файлов используйте метод `My.Computer.FileSystem.CopyFile`. Эти параметры обеспечивают возможность перезаписи существующих файлов, переименования файлов и отображения хода выполнения операции, а также отмены операции пользователем.  
   
 ### <a name="to-create-a-copy-of-a-file-in-the-same-folder"></a>Создание копии файла в том же каталоге  
