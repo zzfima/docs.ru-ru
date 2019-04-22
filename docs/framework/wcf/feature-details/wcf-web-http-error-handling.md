@@ -3,10 +3,10 @@ title: Обработка ошибок веб-протокола HTTP WCF
 ms.date: 03/30/2017
 ms.assetid: 02891563-0fce-4c32-84dc-d794b1a5c040
 ms.openlocfilehash: 834c642e36e1551081dbe1f14529ed7596df1360
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59152702"
 ---
 # <a name="wcf-web-http-error-handling"></a>Обработка ошибок веб-протокола HTTP WCF
@@ -23,7 +23,7 @@ Public string Operation1()
 }  
 ```  
   
- В следующем примере показано, как вернуть код состояния HTTP и дополнительные сведения в типе, определяемом пользователем. `MyErrorDetail` является определяемого пользователем типа, который содержит дополнительные сведения о возникшей ошибке.  
+ В следующем примере показано, как вернуть код состояния HTTP и дополнительные сведения в типе, определяемом пользователем. `MyErrorDetail` - определяемый пользователем тип, который содержит дополнительные сведения о возникшей ошибке.  
   
 ```  
 Public string Operation2()  
@@ -47,12 +47,12 @@ Public string Operation2()
   
  Дополнительные сведения о том, как эти значения влияют на форматирование операции см. в разделе [WCF Web HTTP форматирование](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md).  
   
- <xref:System.ServiceModel.Web.WebFaultException> является <xref:System.ServiceModel.FaultException> и поэтому может использоваться как модель программирования исключения сбоя для служб, предоставляющих конечные точки SOAP, а также сетевые конечные точки HTTP.  
+ Исключение <xref:System.ServiceModel.Web.WebFaultException> является <xref:System.ServiceModel.FaultException> и, следовательно, может быть использовано в качестве модели программирования ошибок для служб, предоставляющих конечные точки SOAP, а также сетевые конечные точки HTTP.  
   
 ## <a name="see-also"></a>См. также
 
 - [Модель веб-программирования HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
 - [Форматирование веб-объектов HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)
-- [Определение и задание сбоев](../../../../docs/framework/wcf/defining-and-specifying-faults.md)
+- [Определение и указание сбоев](../../../../docs/framework/wcf/defining-and-specifying-faults.md)
 - [Обработка исключений и сбоев](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)
 - [Сбои при отправке и получении](../../../../docs/framework/wcf/sending-and-receiving-faults.md)

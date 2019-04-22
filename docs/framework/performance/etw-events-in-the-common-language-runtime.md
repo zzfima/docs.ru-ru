@@ -9,10 +9,10 @@ ms.assetid: 5bb9b6a2-7b57-4aea-8809-32b28bc73e88
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1d059a5d4df402b309f628bf3e9393114c4cdeec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191397"
 ---
 # <a name="etw-events-in-the-common-language-runtime"></a>События в среде CLR (трассировка событий Windows)
@@ -26,7 +26,7 @@ ms.locfileid: "59191397"
  [Контроль ведения журнала .NET Framework](../../../docs/framework/performance/controlling-logging.md)  
  Описывает средства и команды для захвата и просмотра событий трассировки событий Windows.  
   
- [Поставщики ETW среды CLR](../../../docs/framework/performance/clr-etw-providers.md)  
+ [Поставщики трассировки событий Windows в среде CLR](../../../docs/framework/performance/clr-etw-providers.md)  
  Содержит сведения о поставщиках среды выполнения и очистки, а также о том, как использовать их для сбора данных трассировки событий Windows.  
   
  [Ключевые слова и уровни среды CLR (трассировка событий Windows)](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)  
@@ -37,4 +37,4 @@ ms.locfileid: "59191397"
   
 ## <a name="see-also"></a>См. также
 
-- [ETW Events in the .NET Framework](../../../docs/framework/performance/etw-events.md)
+- [События трассировки событий Windows в .NET Framework](../../../docs/framework/performance/etw-events.md)

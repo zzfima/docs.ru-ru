@@ -3,12 +3,12 @@ title: Локальные функции или лямбда-выражения
 description: Узнайте, чем локальные функции могут быть лучше лямбда-выражений.
 ms.date: 06/27/2016
 ms.assetid: 368d1752-3659-489a-97b4-f15d87e49ae3
-ms.openlocfilehash: 17ad1e8782adbf9e0f892d72849e58ef9c5ddce1
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 7577950314f8c57fba635db8b2bcd69e8d427dc3
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58125776"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611449"
 ---
 # <a name="local-functions-compared-to-lambda-expressions"></a>Сравнение локальных функций и лямбда-выражений
 
@@ -59,7 +59,7 @@ int M()
 > [!NOTE]
 > В эквивалентном этому методе на основе локальной функции также используется класс для замыкания. Реализация замыкания для локальной функции в формате `class` или `struct` зависит от особенностей реализации. Локальная функция может использовать `struct`, тогда как в лямбда-выражениях всегда используется `class`.
 
-[!code-csharp[TaskLocalFunctionExample](../../samples/snippets/csharp/new-in-7/AsyncWork.cs#29_TaskExample "Task returning method with local function")]
+[!code-csharp[TaskLocalFunctionExample](../../samples/snippets/csharp/new-in-7/AsyncWork.cs#TaskExample "Task returning method with local function")]
 
 Еще одно преимущество локальных функций, которое не показано в этом примере, заключается в том, что они могут быть реализованы в качестве итераторов с использованием синтаксиса `yield return` для создания последовательности значений. В лямбда-выражениях не допускается использование оператора `yield return`.
 

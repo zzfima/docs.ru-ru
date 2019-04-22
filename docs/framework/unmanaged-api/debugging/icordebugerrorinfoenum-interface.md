@@ -17,15 +17,15 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 88f3c270d2ab0adc0b683fda0e0f4bc1d474fb09
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59144148"
 ---
 # <a name="icordebugerrorinfoenum-interface"></a>Интерфейс ICorDebugErrorInfoEnum
 
-`ICorDebugErrorInfoEnum` является устаревшим. Не следует использовать данный интерфейс.  
+`ICorDebugErrorInfoEnum` устарел. Не следует использовать данный интерфейс.  
   
 ## <a name="see-also"></a>См. также
 

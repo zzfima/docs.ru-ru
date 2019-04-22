@@ -3,10 +3,10 @@ title: Распределенные транзакции
 ms.date: 03/30/2017
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
 ms.openlocfilehash: 89d94e94ea74c73a7f68f6052291c95a7c96f0d6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150206"
 ---
 # <a name="distributed-transactions"></a>Распределенные транзакции
@@ -39,7 +39,7 @@ ms.locfileid: "59150206"
 >  После явного прикрепления соединения к транзакции нельзя отменить его прикрепление или прикрепить к другой транзакции до завершения первой транзакции.  
   
 > [!CAUTION]
->  `EnlistTransaction` создает исключение, если соединение уже запустило транзакцию с помощью подключения <xref:System.Data.Common.DbConnection.BeginTransaction%2A> метод. Однако, если транзакция является локальной и запущенной из источника данных (например, явно выполнив инструкцию BEGIN TRANSACTION с помощью <xref:System.Data.SqlClient.SqlCommand>), `EnlistTransaction` выполнит откат локальной транзакции и прикрепит к существующей распределенной транзакции. Уведомления об откате локальной транзакции не высылается, и управление любыми незапущенными локальными транзакциями осуществляется с помощью <xref:System.Data.Common.DbConnection.BeginTransaction%2A>. При использовании поставщика данных .NET Framework для SQL Server (`SqlClient`) с SQL Server попытка прикрепления вызовет исключение. Все остальные случаи исключений не вызовут.  
+>  Если соединение уже запустило транзакцию с помощью метода соединений `EnlistTransaction`, то <xref:System.Data.Common.DbConnection.BeginTransaction%2A> вызовет исключение. Однако, если транзакция является локальной и запущенной из источника данных (например, явно выполнив инструкцию BEGIN TRANSACTION с помощью <xref:System.Data.SqlClient.SqlCommand>), `EnlistTransaction` выполнит откат локальной транзакции и прикрепит к существующей распределенной транзакции. Уведомления об откате локальной транзакции не высылается, и управление любыми незапущенными локальными транзакциями осуществляется с помощью <xref:System.Data.Common.DbConnection.BeginTransaction%2A>. При использовании поставщика данных .NET Framework для SQL Server (`SqlClient`) с SQL Server попытка прикрепления вызовет исключение. Все остальные случаи исключений не вызовут.  
   
 ## <a name="promotable-transactions-in-sql-server"></a>Повышаемые транзакции в SQL Server  
  SQL Server поддерживает повышаемые транзакции, в которых локальная упрощенная транзакция может быть автоматически повышена до распределенной, если потребуется. Повышаемая транзакция не вызывает дополнительную нагрузку распределенной транзакции, если таковая не требуется. Дополнительные сведения и пример кода, см. в разделе [интеграция System.Transactions с SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md).  
@@ -51,4 +51,4 @@ ms.locfileid: "59150206"
 
 - [Транзакции и параллельность](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
 - [Интеграция System.Transactions с SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)
-- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - dialog boxes [Windows Forms], displaying for Windows Forms
 ms.assetid: aaac1b38-c651-495a-8d3d-5a9bfb32fee3
 ms.openlocfilehash: b99f2273dae88faf86448da6e1d2986a83803abf
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59311088"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773822"
 ---
 # <a name="how-to-display-dialog-boxes-for-windows-forms"></a>Практическое руководство. Отображение диалоговых окон для Windows Forms
 Отображать диалоговое окно таким же образом, как отобразить любые другие формы в приложении. Начальная форма загружается автоматически при запуске приложения. Чтобы сделать вторую форму или диалоговое окно отображаться в приложении, напишите код для загрузки и отображения. Аналогичным образом чтобы форма или диалоговое окно поле исчезают, напишите код для выгрузки его или скрывать.  

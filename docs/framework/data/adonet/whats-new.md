@@ -3,10 +3,10 @@ title: Новые возможности в ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
 ms.openlocfilehash: 90352d3e3d52430d515460cdcc9b6d177976c0b8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191466"
 ---
 # <a name="whats-new-in-adonet"></a>Новые возможности в ADO.NET
@@ -41,7 +41,7 @@ ms.locfileid: "59191466"
   
 -   SqlClient поддерживает соединения с базами данных LocalDB. Дополнительные сведения см. в разделе [поддержка SqlClient для LocalDB](../../../../docs/framework/data/adonet/sql/sqlclient-support-for-localdb.md).  
   
--   `Type System Version=SQL Server 2012;` Это новое значение для передачи `Type System Version` свойство соединения. Значение `Type System Version=Latest;` теперь устарело и заменено эквивалентным `Type System Version=SQL Server 2008;`. Дополнительные сведения см. в разделе <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
+-   `Type System Version=SQL Server 2012;` - это новое значение, которое должно быть передано в свойство соединения `Type System Version`. Значение `Type System Version=Latest;` теперь устарело и заменено эквивалентным `Type System Version=SQL Server 2008;`. Дополнительные сведения см. в разделе <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
   
 -   SqlClient обеспечивает дополнительную поддержку разреженных столбцов - средство, которое было добавлено в SQL Server 2008. Если приложение уже имеет доступ к данным в таблице, в которой используется поддержка разреженных столбцов, должно быть обнаружено повышение производительности. Столбец IsColumnSet в <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> указывает, является ли столбец разреженным столбцом, который является элементом набора столбцов. <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> Указывает, является ли столбец разреженным (см. в разделе [коллекции схемы SQL Server](../../../../docs/framework/data/adonet/sql-server-schema-collections.md) Дополнительные сведения). Дополнительные сведения о разреженных столбцах см. в разделе [Использование разреженных столбцов](https://go.microsoft.com/fwlink/?LinkId=224244).  
   
@@ -53,7 +53,7 @@ ms.locfileid: "59191466"
 ## <a name="see-also"></a>См. также
 
 - [ADO.NET](../../../../docs/framework/data/adonet/index.md)
-- [Общие сведения о ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [Общие сведения об ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [SQL Server и ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)
 - [Новые возможности в службах WCF Data Services 5.0](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee373845(v=vs.103))
-- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

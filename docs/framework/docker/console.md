@@ -4,12 +4,12 @@ description: Узнайте, как запускать существующее 
 author: spboyer
 ms.date: 09/28/2016
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: 481f62b21e223a13e06fe0cb68e4276968992aca
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: da3c814e2ae3ae646072deaf7aa932272160ce49
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58633846"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611501"
 ---
 # <a name="running-console-applications-in-windows-containers"></a>Запуск консольных приложений в контейнерах Windows
 
@@ -25,16 +25,18 @@ ms.locfileid: "58633846"
 
 Перед началом перемещения приложения в контейнер необходимо знать некоторые термины Docker.
 
+> [!NOTE]
 > *Образ Docker* — это шаблон только для чтения, который определяет среду для запуска контейнера, включая операционную систему (ОС), системные компоненты и приложения.
 
-Одной из важных особенностей образов Docker является то, что они формируются из базового образа. Каждый новый образ включает небольшой набор компонентов в дополнение к существующему образу. 
+Одной из важных особенностей образов Docker является то, что они формируются из базового образа. Каждый новый образ включает небольшой набор компонентов в дополнение к существующему образу.
 
-> *Контейнер Docker* — это запущенный экземпляр образа. 
+> [!NOTE]
+> *Контейнер Docker* — это запущенный экземпляр образа.
 
 Масштабирование приложения осуществляется путем запуска одного образа в нескольких контейнерах.
 По существу, это похоже на запуск одного приложения на нескольких узлах.
 
-Дополнительные сведения об архитектуре Docker можно найти в [Обзоре Docker](https://docs.docker.com/engine/understanding-docker/) на сайте Docker. 
+Дополнительные сведения об архитектуре Docker можно найти в [Обзоре Docker](https://docs.docker.com/engine/understanding-docker/) на сайте Docker.
 
 Перемещение консольного приложения происходит буквально за пару действий.
 
@@ -43,6 +45,7 @@ ms.locfileid: "58633846"
 1. [Сборка и запуск контейнера Docker](#creating-the-image)
 
 ## <a name="prerequisites"></a>Предварительные требования
+
 Контейнеры Windows поддерживаются в [Windows 10 Anniversary Update](https://www.microsoft.com/en-us/software-download/windows10/) и [Windows Server 2016](https://www.microsoft.com/en-us/cloud-platform/windows-server).
 
 > [!NOTE]
@@ -53,13 +56,14 @@ ms.locfileid: "58633846"
 ![Снимок экрана с пунктом меню контейнера Windows.](./media/console/windows-container-option.png)
 
 ## <a name="building-the-application"></a>Построение приложения
+
 Обычно консольные приложения распространяются с помощью установщика, через FTP или в рамках развертывания через общую папку. При развертывании в контейнер необходимо скомпилировать ресурсы и поместить их в промежуточное расположение, которое можно будет использовать при создании образа Docker.
 
 Ниже приведен пример приложения: [ConsoleRandomAnswerGenerator](https://github.com/dotnet/samples/tree/master/framework/docker/ConsoleRandomAnswerGenerator)
 
 В скрипте *build.ps1*<sup>[[источник]](https://github.com/dotnet/samples/blob/master/framework/docker/ConsoleRandomAnswerGenerator/ConsoleRandomAnswerGenerator/build.ps1)</sup> приложение компилируется с помощью [MSBuild](/visualstudio/msbuild/msbuild), чем завершается этап создания ресурсов. Для окончательного включения нужных ресурсов в MSBuild передаются некоторые параметры. Имя файла компилируемого проекта или решения, расположение выходных данных и, наконец, конфигурация (окончательная или отладочная).
 
-В вызове `Invoke-MSBuild` `OutputPath` имеет значение **publish**, а `Configuration` — значение **Release**. 
+В вызове `Invoke-MSBuild` `OutputPath` имеет значение **publish**, а `Configuration` — значение **Release**.
 
 ```powershell
 function Invoke-MSBuild ([string]$MSBuildPath, [string]$MSBuildParameters) {
@@ -72,14 +76,16 @@ Invoke-MSBuild -MSBuildPath "MSBuild.exe" -MSBuildParameters ".\ConsoleRandomAns
 ## <a name="creating-the-dockerfile"></a>Создание Dockerfile
 Базовым образом, который используется для консольного приложения .NET Framework, является `microsoft/windowsservercore`, доступный в [Docker Hub](https://hub.docker.com/r/microsoft/windowsservercore/). Базовый образ содержит минимальную установку Windows Server 2016 .NET Framework 4.6.2 и выступает в роли основного образа операционной системы для контейнеров Windows.
 
-```
+```Dockerfile
 FROM microsoft/windowsservercore
 ADD publish/ /
 ENTRYPOINT ConsoleRandomAnswerGenerator.exe
 ```
-В первой строке Dockerfile с помощью инструкции [`FROM`](https://docs.docker.com/engine/reference/builder/#/from) определяется базовый образ. Следующая инструкция файла, [`ADD`](https://docs.docker.com/engine/reference/builder/#/add), копирует ресурсы приложения из папки **publish** в корневую папку контейнера, и, наконец, параметр [`ENTRYPOINT`](https://docs.docker.com/engine/reference/builder/#/entrypoint) образа объявляет, что этот образ является командой или приложением, которое будет запускаться при запуске контейнера. 
+
+В первой строке Dockerfile с помощью инструкции [`FROM`](https://docs.docker.com/engine/reference/builder/#/from) определяется базовый образ. Следующая инструкция файла, [`ADD`](https://docs.docker.com/engine/reference/builder/#/add), копирует ресурсы приложения из папки **publish** в корневую папку контейнера, и, наконец, параметр [`ENTRYPOINT`](https://docs.docker.com/engine/reference/builder/#/entrypoint) образа объявляет, что этот образ является командой или приложением, которое будет запускаться при запуске контейнера.
 
 ## <a name="creating-the-image"></a>Создание образа
+
 Чтобы создать образ Docker, в скрипт *build.ps1* добавляется следующий код. При запуске скрипта создается образ `console-random-answer-generator` с использованием ресурсов, скомпилированных MSBuild (см. раздел [Построение приложения](#building-the-application)).
 
 ```powershell
@@ -103,6 +109,7 @@ console-random-answer-generator   latest              8f7c807db1b5        8 seco
 ```
 
 ## <a name="running-the-container"></a>Запуск контейнера
+
 Контейнер можно запустить из командной строки с помощью команд Docker.
 
 ```
@@ -118,8 +125,8 @@ The answer to your question: 'Are you a square container?' is Concentrate and as
 При запуске команды `docker ps -a` в PowerShell видно, что контейнер по-прежнему существует.
 
 ```
-CONTAINER ID        IMAGE                             COMMAND                  CREATED             STATUS                          
-70c3d48f4343        console-random-answer-generator   "cmd /S /C ConsoleRan"   2 minutes ago       Exited (0) About a minute ago      
+CONTAINER ID        IMAGE                             COMMAND                  CREATED             STATUS
+70c3d48f4343        console-random-answer-generator   "cmd /S /C ConsoleRan"   2 minutes ago       Exited (0) About a minute ago
 ```
 
 В столбце STATUS указывается, что приложение завершило работу "About a minute ago" (около минуты назад) и может быть закрыто. Если команда была выполнена сто раз, в наличии будет иметься сто статических контейнеров, не выполняющих никакую работу. В обучающем сценарии оптимальным вариантом действий является выполнение работы и завершение работы или проведение очистки. Для этого добавьте параметр `--rm` в команду `docker run`, чтобы удалить контейнер сразу же после получения сигнала `Exited`.
@@ -131,6 +138,7 @@ docker run --rm console-random-answer-generator "Are you a square container?"
 Выполните команду с этим параметром и посмотрите на выходные данные команды `docker ps -a`. Обратите внимание, что идентификатор контейнера (`Environment.MachineName`) в списке отсутствует.
 
 ### <a name="running-the-container-using-powershell"></a>Запуск контейнера с помощью PowerShell
+
 В файлах примера проекта также есть скрипт *run.ps1*, который демонстрирует использование PowerShell для запуска приложения с указанием аргументов.
 
 Чтобы запустить его, откройте PowerShell и выполните следующую команду:
@@ -140,4 +148,5 @@ docker run --rm console-random-answer-generator "Are you a square container?"
 ```
 
 ## <a name="summary"></a>Сводка
+
 С помощью простого добавления Dockerfile и публикации консольное приложение .NET Framework можно поместить в контейнер и запускать несколько экземпляров, выполнять чистые запуск и завершение работы и использовать многие другие возможности Windows Server 2016 без какого-либо изменения кода приложения.

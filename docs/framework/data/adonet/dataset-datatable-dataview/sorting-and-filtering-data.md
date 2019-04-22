@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: fdd9c753-39df-48cd-9822-2781afe76200
 ms.openlocfilehash: 8d8bd85f65adfde5f239e1e2dd79d65517b745a8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59166248"
 ---
 # <a name="sorting-and-filtering-data"></a>Сортировка и фильтрация данных
@@ -30,13 +30,13 @@ ms.locfileid: "59166248"
     |Параметры DataViewRowState|Описание|  
     |------------------------------|-----------------|  
     |**CurrentRows**|**Текущей** из всех **Unchanged**, **Added**, и **Modified** строк. Это значение по умолчанию.|  
-    |**Added**|**Текущей** из всех **Added** строк.|  
-    |**Deleted**|**Исходного** из всех **Deleted** строк.|  
+    |**Добавлен**|**Текущей** из всех **Added** строк.|  
+    |**Удален**|**Исходного** из всех **Deleted** строк.|  
     |**ModifiedCurrent**|**Текущей** из всех **Modified** строк.|  
     |**ModifiedOriginal**|**Исходного** из всех **Modified** строк.|  
-    |**Нет**|Нет строк.|  
+    |**None**|Нет строк.|  
     |**OriginalRows**|**Исходного** из всех **Unchanged**, **Modified**, и **Deleted** строк.|  
-    |**Unchanged**|**Текущей** из всех **Unchanged** строк.|  
+    |**без изменений**|**Текущей** из всех **Unchanged** строк.|  
   
  Дополнительные сведения о состояниях и версиях строк см. в разделе [строки состояния и версии строк](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
   
@@ -63,4 +63,4 @@ DataView prodView = new DataView(prodDS.Tables["Products"],
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataView>
 - [Объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
-- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

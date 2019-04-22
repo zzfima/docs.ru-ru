@@ -6,10 +6,10 @@ helpviewer_keywords:
 - data transfer [WCF]
 ms.assetid: 0f03c635-f3e7-4c5c-9463-3cb0135e221e
 ms.openlocfilehash: 1eefd82a149d0bc215ca441e92c7d737a744b1e0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59088409"
 ---
 # <a name="data-transfer-and-serialization"></a>Передача данных и сериализация
@@ -62,5 +62,5 @@ ms.locfileid: "59088409"
   
 ## <a name="see-also"></a>См. также
 
-- [Рекомендации. Управление версиями контракта данных](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
-- [Управление версиями службы](../../../../docs/framework/wcf/service-versioning.md)
+- [Советы и рекомендации: Управление версиями контракта данных](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
+- [Управление версиями служб](../../../../docs/framework/wcf/service-versioning.md)

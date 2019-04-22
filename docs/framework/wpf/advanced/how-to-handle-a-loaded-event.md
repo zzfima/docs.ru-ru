@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Loaded events [WPF]
 ms.assetid: 0cf8d003-8441-4df4-807a-6db09347e829
 ms.openlocfilehash: b8cd2f5e9d848cebb712e7b4930ca39efe48ecc0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59122555"
 ---
 # <a name="how-to-handle-a-loaded-event"></a>Практическое руководство. Обработка загруженного события
@@ -32,4 +32,4 @@ ms.locfileid: "59122555"
 - <xref:System.Windows.FrameworkElement>
 - [События времени жизни объекта](object-lifetime-events.md)
 - [Общие сведения о перенаправленных событиях](routed-events-overview.md)
-- [Практические руководства](base-elements-how-to-topics.md)
+- [Разделы практического руководства](base-elements-how-to-topics.md)
