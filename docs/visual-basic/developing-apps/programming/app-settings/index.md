@@ -2,9 +2,15 @@
 title: Доступ к параметрам приложения (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'My.Settings object [Visual Basic], application settings'
-  - 'examples [Visual Basic], application settings'
+- My.Settings object [Visual Basic], application settings
+- examples [Visual Basic], application settings
 ms.assetid: e38d0cc7-247a-46ca-ba04-f2913f0adb2e
+ms.openlocfilehash: 56bce47aa37b536c494e43d26bead3114e7dcfa1
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58822775"
 ---
 # <a name="accessing-application-settings-visual-basic"></a>Доступ к параметрам приложения (Visual Basic)
 В этом разделе содержатся ссылки на разделы с описанием объекта `My.Settings` и задач, которые он позволяет выполнить.  

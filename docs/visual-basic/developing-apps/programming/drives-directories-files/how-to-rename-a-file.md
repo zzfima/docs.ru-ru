@@ -1,18 +1,18 @@
 ---
-title: Практическое руководство. Переименование файла в Visual Basic
+title: Как выполнить Переименование файла в Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - I/O [Visual Basic], renaming files
 - files [Visual Basic], renaming
 ms.assetid: 0ea7e0c8-2cb2-4bf5-a00d-7b6e3c08a3bc
 ms.openlocfilehash: b86797018e1471590fd4c89848921e696afbc819
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58814159"
 ---
-# <a name="how-to-rename-a-file-in-visual-basic"></a>Практическое руководство. Переименование файла в Visual Basic
+# <a name="how-to-rename-a-file-in-visual-basic"></a>Как выполнить Переименование файла в Visual Basic
 Метод `RenameFile` объекта `My.Computer.FileSystem` можно использовать, чтобы переименовать файл, указав текущее расположение, имя файла и новое имя файла. Этот метод нельзя использовать для перемещения файла. Для перемещения и переименования файла используется метод `MoveFile`.  
   
 ### <a name="to-rename-a-file"></a>Переименование файла  

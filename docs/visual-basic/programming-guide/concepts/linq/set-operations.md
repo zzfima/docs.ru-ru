@@ -3,10 +3,10 @@ title: Операции с множествами (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2b06e822-e030-438f-9db7-ee402bd3a706
 ms.openlocfilehash: 59ab09607462c762758e6a246ec218a92e01f5de
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58825787"
 ---
 # <a name="set-operations-visual-basic"></a>Операции с множествами (Visual Basic)
@@ -38,11 +38,11 @@ ms.locfileid: "58825787"
 ### <a name="intersect"></a>Пересечение  
  На следующем рисунке показано поведение <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType>. Возвращаемая последовательность содержит элементы, общие для обеих входных последовательностей.  
   
- ![График, отображающий пересечение двух пакетов.](./media/set-operations/intersection-two-sequences.png)    
+ ![График, отображающий пересечение двух последовательностей.](./media/set-operations/intersection-two-sequences.png)    
 ### <a name="union"></a>Объединение  
  На следующем рисунке показана операция объединения двух последовательностей символов. Возвращаемая последовательность содержит уникальные элементы из обеих входных последовательностей.  
   
- ![График, показывающий объединение двух пакетов.](./media/set-operations/union-operation-two-sequences.png)    
+ ![График, показывающий объединение двух последовательностей.](./media/set-operations/union-operation-two-sequences.png)    
 ## <a name="query-expression-syntax-example"></a>Пример синтаксиса выражения запроса  
  В следующем примере используется `Distinct` предложение в запросе LINQ для возврата уникальных чисел из списка целых чисел.  
   

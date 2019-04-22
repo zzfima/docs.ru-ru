@@ -3,10 +3,10 @@ title: Операции проекции (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b8d38e6d-21cf-4619-8dbb-94476f4badc7
 ms.openlocfilehash: e2af45f9cbbed9eb88095a30e2b77a7730740898
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58820988"
 ---
 # <a name="projection-operations-visual-basic"></a>Операции проекции (Visual Basic)
@@ -85,7 +85,7 @@ MsgBox(sb.ToString())
   
  На этом рисунке представлено, как `Select()` возвращает коллекцию, которая имеет то же количество элементов, что и исходная коллекция.  
   
- ![Рисунок, показывающий действие Select&#40;&#41;](./media/projection-operations/select-action-graphic.png)  
+ ![График, отображающий действие Select&#40;&#41;](./media/projection-operations/select-action-graphic.png)  
   
  На этом рисунке показано, как `SelectMany()` объединяет промежуточные последовательности массивов в один конечный результат, содержащий все значения из промежуточных массивов.  
   

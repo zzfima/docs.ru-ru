@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Inherits statement [Visual Basic], syntax
 ms.assetid: 9e6fe042-9af3-4341-8093-fc3537770cf2
 ms.openlocfilehash: 5ab90e44e2809c1e71d7f100970b7be73af4a732
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58817101"
 ---
 # <a name="inherits-statement"></a>Inherits Statement
@@ -28,7 +28,7 @@ Inherits basetypenames
   
 |Термин|Определение|  
 |---|---|  
-|`basetypenames`|Обязательный. Имя класса, из которого происходит данный класс.<br /><br /> - или -<br /><br /> Имена интерфейсов, от которых наследует этот интерфейс. Используйте запятые для разделения нескольких имен.|  
+|`basetypenames`|Обязательный. Имя класса, из которого происходит данный класс.<br /><br /> -или-<br /><br /> Имена интерфейсов, от которых наследует этот интерфейс. Используйте запятые для разделения нескольких имен.|  
   
 ## <a name="remarks"></a>Примечания  
  При использовании `Inherits` инструкция должна быть первой непустой строкой, не являющихся комментариями строки в определении класса или интерфейса. Он должен следовать непосредственно за `Class` или `Interface` инструкции.  

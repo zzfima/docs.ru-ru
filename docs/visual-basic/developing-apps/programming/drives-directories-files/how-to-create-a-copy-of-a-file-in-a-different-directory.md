@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Создание копии файла в другом каталоге в Visual Basic
+title: Как выполнить Создание копии файла в другом каталоге в Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.FileSystem.CopyFile method, copying files [Visual Basic]
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - I/O [Visual Basic], copying files
 ms.assetid: 88e2145c-d414-45a5-ad03-6f5d58ecca26
 ms.openlocfilehash: 25b9ff1e3a97acd69b6a885788dbc83ce19e71f9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58813423"
 ---
-# <a name="how-to-create-a-copy-of-a-file-in-a-different-directory-in-visual-basic"></a>Практическое руководство. Создание копии файла в другом каталоге в Visual Basic
+# <a name="how-to-create-a-copy-of-a-file-in-a-different-directory-in-visual-basic"></a>Как выполнить Создание копии файла в другом каталоге в Visual Basic
 Метод `My.Computer.FileSystem.CopyFile` позволяет копировать файлы. Его параметры обеспечивают возможность перезаписи существующих файлов, переименования файлов и отображения хода выполнения операции, а также отмены операции пользователем.  
   
 ### <a name="to-copy-a-text-file-to-another-folder"></a>Копирование текстового файла в другую папку  
