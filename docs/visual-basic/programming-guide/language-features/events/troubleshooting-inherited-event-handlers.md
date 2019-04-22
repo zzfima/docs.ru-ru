@@ -9,25 +9,25 @@ helpviewer_keywords:
 - event handlers, troubleshooting
 ms.assetid: e1c8759f-5370-4308-8476-8c48b73509bf
 ms.openlocfilehash: 704ca667a6d14ade7be0192e872f5e40791cb864
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58830192"
 ---
-# <a name="troubleshooting-inherited-event-handlers-in-visual-basic"></a><span data-ttu-id="de4c4-102">Устранение неполадок, связанных с унаследованными обработчиками событий, в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="de4c4-102">Troubleshooting Inherited Event Handlers in Visual Basic</span></span>
-<span data-ttu-id="de4c4-103">В этом разделе перечислены распространенные проблемы, связанные с обработчиками событий в наследуемых компонентах.</span><span class="sxs-lookup"><span data-stu-id="de4c4-103">This topic lists common issues that arise with event handlers in inherited components.</span></span>  
+# <a name="troubleshooting-inherited-event-handlers-in-visual-basic"></a><span data-ttu-id="90020-102">Устранение неполадок, связанных с унаследованными обработчиками событий, в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="90020-102">Troubleshooting Inherited Event Handlers in Visual Basic</span></span>
+<span data-ttu-id="90020-103">В этом разделе перечислены распространенные проблемы, связанные с обработчиками событий в наследуемых компонентах.</span><span class="sxs-lookup"><span data-stu-id="90020-103">This topic lists common issues that arise with event handlers in inherited components.</span></span>  
   
-## <a name="procedures"></a><span data-ttu-id="de4c4-104">Процедуры</span><span class="sxs-lookup"><span data-stu-id="de4c4-104">Procedures</span></span>  
+## <a name="procedures"></a><span data-ttu-id="90020-104">Процедуры</span><span class="sxs-lookup"><span data-stu-id="90020-104">Procedures</span></span>  
   
-#### <a name="code-in-event-handler-executes-twice-for-every-call"></a><span data-ttu-id="de4c4-105">Код в обработчике событий выполняется дважды для каждого вызова</span><span class="sxs-lookup"><span data-stu-id="de4c4-105">Code in Event Handler Executes Twice for Every Call</span></span>  
+#### <a name="code-in-event-handler-executes-twice-for-every-call"></a><span data-ttu-id="90020-105">Код в обработчике событий выполняется дважды для каждого вызова</span><span class="sxs-lookup"><span data-stu-id="90020-105">Code in Event Handler Executes Twice for Every Call</span></span>  
   
--   <span data-ttu-id="de4c4-106">Производный обработчик событий не должны содержать [обрабатывает](../../../../visual-basic/language-reference/statements/handles-clause.md) предложение.</span><span class="sxs-lookup"><span data-stu-id="de4c4-106">An inherited event handler must not include a [Handles](../../../../visual-basic/language-reference/statements/handles-clause.md) clause.</span></span> <span data-ttu-id="de4c4-107">Метод в базовом классе уже связан с событием и будет запущен.</span><span class="sxs-lookup"><span data-stu-id="de4c4-107">The method in the base class is already associated with the event and will fire accordingly.</span></span> <span data-ttu-id="de4c4-108">Удалить `Handles` предложение из унаследованного метода.</span><span class="sxs-lookup"><span data-stu-id="de4c4-108">Remove the `Handles` clause from the inherited method.</span></span>  
+-   <span data-ttu-id="90020-106">Производный обработчик событий не должны содержать [обрабатывает](../../../../visual-basic/language-reference/statements/handles-clause.md) предложение.</span><span class="sxs-lookup"><span data-stu-id="90020-106">An inherited event handler must not include a [Handles](../../../../visual-basic/language-reference/statements/handles-clause.md) clause.</span></span> <span data-ttu-id="90020-107">Метод в базовом классе уже связан с событием и будет запущен.</span><span class="sxs-lookup"><span data-stu-id="90020-107">The method in the base class is already associated with the event and will fire accordingly.</span></span> <span data-ttu-id="90020-108">Удалить `Handles` предложение из унаследованного метода.</span><span class="sxs-lookup"><span data-stu-id="90020-108">Remove the `Handles` clause from the inherited method.</span></span>  
   
      [!code-vb[VbVbalrEvents#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#32)]  
   
--   <span data-ttu-id="de4c4-109">Если нет унаследованный метод `Handles` ключевое слово, убедитесь, что ваш код не содержит лишних [оператор AddHandler](../../../../visual-basic/language-reference/statements/addhandler-statement.md) или все дополнительные методы, которые обрабатывают то же событие.</span><span class="sxs-lookup"><span data-stu-id="de4c4-109">If the inherited method does not have a `Handles` keyword, verify that your code does not contain an extra [AddHandler Statement](../../../../visual-basic/language-reference/statements/addhandler-statement.md) or any additional methods that handle the same event.</span></span>  
+-   <span data-ttu-id="90020-109">Если нет унаследованный метод `Handles` ключевое слово, убедитесь, что ваш код не содержит лишних [оператор AddHandler](../../../../visual-basic/language-reference/statements/addhandler-statement.md) или все дополнительные методы, которые обрабатывают то же событие.</span><span class="sxs-lookup"><span data-stu-id="90020-109">If the inherited method does not have a `Handles` keyword, verify that your code does not contain an extra [AddHandler Statement](../../../../visual-basic/language-reference/statements/addhandler-statement.md) or any additional methods that handle the same event.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="de4c4-110">См. также</span><span class="sxs-lookup"><span data-stu-id="de4c4-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="90020-110">См. также</span><span class="sxs-lookup"><span data-stu-id="90020-110">See also</span></span>
 
-- [<span data-ttu-id="de4c4-111">События</span><span class="sxs-lookup"><span data-stu-id="de4c4-111">Events</span></span>](../../../../visual-basic/programming-guide/language-features/events/index.md)
+- [<span data-ttu-id="90020-111">События</span><span class="sxs-lookup"><span data-stu-id="90020-111">Events</span></span>](../../../../visual-basic/programming-guide/language-features/events/index.md)
