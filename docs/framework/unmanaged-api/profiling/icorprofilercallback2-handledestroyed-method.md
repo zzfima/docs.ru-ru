@@ -18,36 +18,36 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bc6b086b444a769afbf01369b50c69e242a21050
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59090489"
 ---
-# <a name="icorprofilercallback2handledestroyed-method"></a><span data-ttu-id="966df-102">Метод ICorProfilerCallback2::HandleDestroyed</span><span class="sxs-lookup"><span data-stu-id="966df-102">ICorProfilerCallback2::HandleDestroyed Method</span></span>
-<span data-ttu-id="966df-103">Уведомляет профилировщик кода, что дескриптор сборки мусора был удален.</span><span class="sxs-lookup"><span data-stu-id="966df-103">Notifies the code profiler that a garbage collection handle has been destroyed.</span></span>  
+# <a name="icorprofilercallback2handledestroyed-method"></a><span data-ttu-id="54836-102">Метод ICorProfilerCallback2::HandleDestroyed</span><span class="sxs-lookup"><span data-stu-id="54836-102">ICorProfilerCallback2::HandleDestroyed Method</span></span>
+<span data-ttu-id="54836-103">Уведомляет профилировщик кода, что дескриптор сборки мусора был удален.</span><span class="sxs-lookup"><span data-stu-id="54836-103">Notifies the code profiler that a garbage collection handle has been destroyed.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="966df-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="966df-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="54836-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="54836-104">Syntax</span></span>  
   
 ```  
 HRESULT HandleDestroyed(  
     [in] GCHandleID handleId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="966df-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="966df-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="54836-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="54836-105">Parameters</span></span>  
  `handleId`  
- <span data-ttu-id="966df-106">[in] Идентификатор дескриптора для сборки мусора.</span><span class="sxs-lookup"><span data-stu-id="966df-106">[in] The ID of the handle for the garbage collection.</span></span>  
+ <span data-ttu-id="54836-106">[in] Идентификатор дескриптора для сборки мусора.</span><span class="sxs-lookup"><span data-stu-id="54836-106">[in] The ID of the handle for the garbage collection.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="966df-107">Требования</span><span class="sxs-lookup"><span data-stu-id="966df-107">Requirements</span></span>  
- <span data-ttu-id="966df-108">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="966df-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="54836-107">Требования</span><span class="sxs-lookup"><span data-stu-id="54836-107">Requirements</span></span>  
+ <span data-ttu-id="54836-108">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="54836-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="966df-109">**Заголовок.** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="966df-109">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="54836-109">**Заголовок.** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="54836-109">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="966df-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="966df-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="54836-110">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="54836-110">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="966df-111">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="966df-111">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="54836-111">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="54836-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="966df-112">См. также</span><span class="sxs-lookup"><span data-stu-id="966df-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="54836-112">См. также</span><span class="sxs-lookup"><span data-stu-id="54836-112">See also</span></span>
 
-- [<span data-ttu-id="966df-113">Интерфейс ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="966df-113">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="966df-114">Интерфейс ICorProfilerCallback2</span><span class="sxs-lookup"><span data-stu-id="966df-114">ICorProfilerCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+- [<span data-ttu-id="54836-113">Интерфейс ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="54836-113">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="54836-114">Интерфейс ICorProfilerCallback2</span><span class="sxs-lookup"><span data-stu-id="54836-114">ICorProfilerCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)

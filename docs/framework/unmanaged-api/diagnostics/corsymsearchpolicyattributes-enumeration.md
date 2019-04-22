@@ -17,19 +17,19 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8a9b0f085820bac12638c0310ab23b2eafacb23b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59186177"
 ---
-# <a name="corsymsearchpolicyattributes-enumeration"></a><span data-ttu-id="757e0-102">Перечисление CorSymSearchPolicyAttributes</span><span class="sxs-lookup"><span data-stu-id="757e0-102">CorSymSearchPolicyAttributes Enumeration</span></span>
-<span data-ttu-id="757e0-103">Указывает политику, используемую при выполнении поиска для средства чтения символов.</span><span class="sxs-lookup"><span data-stu-id="757e0-103">Specifies the policy to be used when doing a search for a symbol reader.</span></span> <span data-ttu-id="757e0-104">Эти константы используются [ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) и [ISymUnmanagedBinder3::GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md) методы.</span><span class="sxs-lookup"><span data-stu-id="757e0-104">These constants are used by the [ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) and [ISymUnmanagedBinder3::GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md) methods.</span></span>  
+# <a name="corsymsearchpolicyattributes-enumeration"></a><span data-ttu-id="87f7e-102">Перечисление CorSymSearchPolicyAttributes</span><span class="sxs-lookup"><span data-stu-id="87f7e-102">CorSymSearchPolicyAttributes Enumeration</span></span>
+<span data-ttu-id="87f7e-103">Указывает политику, используемую при выполнении поиска для средства чтения символов.</span><span class="sxs-lookup"><span data-stu-id="87f7e-103">Specifies the policy to be used when doing a search for a symbol reader.</span></span> <span data-ttu-id="87f7e-104">Эти константы используются [ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) и [ISymUnmanagedBinder3::GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md) методы.</span><span class="sxs-lookup"><span data-stu-id="87f7e-104">These constants are used by the [ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) and [ISymUnmanagedBinder3::GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md) methods.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="757e0-105">Он представляет угрозу безопасности, чтобы открыть файл базы данных (PDB) программы из ненадежного источника.</span><span class="sxs-lookup"><span data-stu-id="757e0-105">It is a security risk to open a program database (PDB) file from an untrusted source.</span></span>  
+>  <span data-ttu-id="87f7e-105">Он представляет угрозу безопасности, чтобы открыть файл базы данных (PDB) программы из ненадежного источника.</span><span class="sxs-lookup"><span data-stu-id="87f7e-105">It is a security risk to open a program database (PDB) file from an untrusted source.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="757e0-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="757e0-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="87f7e-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="87f7e-106">Syntax</span></span>  
   
 ```  
 typedef enum CorSymSearchPolicyAttributes  
@@ -41,18 +41,18 @@ typedef enum CorSymSearchPolicyAttributes
 } CorSymSearchPolicyAttributes;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="757e0-107">Участники</span><span class="sxs-lookup"><span data-stu-id="757e0-107">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="87f7e-107">Участники</span><span class="sxs-lookup"><span data-stu-id="87f7e-107">Members</span></span>  
   
-|<span data-ttu-id="757e0-108">Член</span><span class="sxs-lookup"><span data-stu-id="757e0-108">Member</span></span>|<span data-ttu-id="757e0-109">Описание</span><span class="sxs-lookup"><span data-stu-id="757e0-109">Description</span></span>|  
+|<span data-ttu-id="87f7e-108">Член</span><span class="sxs-lookup"><span data-stu-id="87f7e-108">Member</span></span>|<span data-ttu-id="87f7e-109">Описание</span><span class="sxs-lookup"><span data-stu-id="87f7e-109">Description</span></span>|  
 |------------|-----------------|  
-|`AllowRegistryAccess`|<span data-ttu-id="757e0-110">Запрашивает в реестре для пути поиска символов.</span><span class="sxs-lookup"><span data-stu-id="757e0-110">Queries the registry for symbol search paths.</span></span>|  
-|`AllowSymbolServerAccess`|<span data-ttu-id="757e0-111">Обращается к серверу символов.</span><span class="sxs-lookup"><span data-stu-id="757e0-111">Accesses a symbol server.</span></span>|  
-|`AllowOriginalPathAccess`|<span data-ttu-id="757e0-112">Выполняет поиск путь, указанный в каталоге отладки.</span><span class="sxs-lookup"><span data-stu-id="757e0-112">Searches the path specified in the Debug directory.</span></span>|  
-|`AllowReferencePathAccess`|<span data-ttu-id="757e0-113">Выполняет поиск PDB-ФАЙЛ в месте расположения файла .exe.</span><span class="sxs-lookup"><span data-stu-id="757e0-113">Searches for the PDB in the place where the .exe file is.</span></span>|  
+|`AllowRegistryAccess`|<span data-ttu-id="87f7e-110">Запрашивает в реестре для пути поиска символов.</span><span class="sxs-lookup"><span data-stu-id="87f7e-110">Queries the registry for symbol search paths.</span></span>|  
+|`AllowSymbolServerAccess`|<span data-ttu-id="87f7e-111">Обращается к серверу символов.</span><span class="sxs-lookup"><span data-stu-id="87f7e-111">Accesses a symbol server.</span></span>|  
+|`AllowOriginalPathAccess`|<span data-ttu-id="87f7e-112">Выполняет поиск путь, указанный в каталоге отладки.</span><span class="sxs-lookup"><span data-stu-id="87f7e-112">Searches the path specified in the Debug directory.</span></span>|  
+|`AllowReferencePathAccess`|<span data-ttu-id="87f7e-113">Выполняет поиск PDB-ФАЙЛ в месте расположения файла .exe.</span><span class="sxs-lookup"><span data-stu-id="87f7e-113">Searches for the PDB in the place where the .exe file is.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="757e0-114">Требования</span><span class="sxs-lookup"><span data-stu-id="757e0-114">Requirements</span></span>  
- <span data-ttu-id="757e0-115">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="757e0-115">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="87f7e-114">Требования</span><span class="sxs-lookup"><span data-stu-id="87f7e-114">Requirements</span></span>  
+ <span data-ttu-id="87f7e-115">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="87f7e-115">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="757e0-116">См. также</span><span class="sxs-lookup"><span data-stu-id="757e0-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="87f7e-116">См. также</span><span class="sxs-lookup"><span data-stu-id="87f7e-116">See also</span></span>
 
-- [<span data-ttu-id="757e0-117">Перечисления хранилища символов диагностики</span><span class="sxs-lookup"><span data-stu-id="757e0-117">Diagnostics Symbol Store Enumerations</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+- [<span data-ttu-id="87f7e-117">Перечисления хранилища символов диагностики</span><span class="sxs-lookup"><span data-stu-id="87f7e-117">Diagnostics Symbol Store Enumerations</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

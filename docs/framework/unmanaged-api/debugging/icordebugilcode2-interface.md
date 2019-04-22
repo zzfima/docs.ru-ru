@@ -13,35 +13,35 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3a27dbd8b5013937bb97f37113687405c988c1fe
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59142666"
 ---
-# <a name="icordebugilcode2-interface"></a><span data-ttu-id="bc7ee-102">Интерфейс ICorDebugILCode2</span><span class="sxs-lookup"><span data-stu-id="bc7ee-102">ICorDebugILCode2 Interface</span></span>
-<span data-ttu-id="bc7ee-103">[Поддерживается в .NET Framework 4.5.2 и более поздних версиях.]</span><span class="sxs-lookup"><span data-stu-id="bc7ee-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
+# <a name="icordebugilcode2-interface"></a><span data-ttu-id="c9f79-102">Интерфейс ICorDebugILCode2</span><span class="sxs-lookup"><span data-stu-id="c9f79-102">ICorDebugILCode2 Interface</span></span>
+<span data-ttu-id="c9f79-103">[Поддерживается в .NET Framework 4.5.2 и более поздних версиях.]</span><span class="sxs-lookup"><span data-stu-id="c9f79-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
   
- <span data-ttu-id="bc7ee-104">Логически расширяет [ICorDebugILCode](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md) интерфейс, чтобы предоставить методы, возвращающие маркер для подписи локальной переменной функции и сопоставлены инструментированного профилировщиком промежуточного языка (IL) смещений в исходный метод IL смещения.</span><span class="sxs-lookup"><span data-stu-id="bc7ee-104">Logically extends the [ICorDebugILCode](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md) interface to provide methods that return the token for a function's local variable signature, and that map a profiler's instrumented intermediate language (IL) offsets to original method IL offsets.</span></span>  
+ <span data-ttu-id="c9f79-104">Логически расширяет [ICorDebugILCode](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md) интерфейс, чтобы предоставить методы, возвращающие маркер для подписи локальной переменной функции и сопоставлены инструментированного профилировщиком промежуточного языка (IL) смещений в исходный метод IL смещения.</span><span class="sxs-lookup"><span data-stu-id="c9f79-104">Logically extends the [ICorDebugILCode](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md) interface to provide methods that return the token for a function's local variable signature, and that map a profiler's instrumented intermediate language (IL) offsets to original method IL offsets.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="bc7ee-105">Методы</span><span class="sxs-lookup"><span data-stu-id="bc7ee-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="c9f79-105">Методы</span><span class="sxs-lookup"><span data-stu-id="c9f79-105">Methods</span></span>  
   
-|<span data-ttu-id="bc7ee-106">Метод</span><span class="sxs-lookup"><span data-stu-id="bc7ee-106">Method</span></span>|<span data-ttu-id="bc7ee-107">Описание</span><span class="sxs-lookup"><span data-stu-id="bc7ee-107">Description</span></span>|  
+|<span data-ttu-id="c9f79-106">Метод</span><span class="sxs-lookup"><span data-stu-id="c9f79-106">Method</span></span>|<span data-ttu-id="c9f79-107">Описание</span><span class="sxs-lookup"><span data-stu-id="c9f79-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="bc7ee-108">Метод GetInstrumentedILMap</span><span class="sxs-lookup"><span data-stu-id="bc7ee-108">GetInstrumentedILMap Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-getinstrumentedilmap-method.md)|<span data-ttu-id="bc7ee-109">Возвращает сопоставление смещений инструментированного профилировщиком промежуточного языка со смещениями промежуточного языка исходного метода для этого экземпляра.</span><span class="sxs-lookup"><span data-stu-id="bc7ee-109">Returns a map from profiler instrumented IL offsets to original method IL offsets for this instance.</span></span>|  
-|[<span data-ttu-id="bc7ee-110">Метод GetLocalVarSigToken</span><span class="sxs-lookup"><span data-stu-id="bc7ee-110">GetLocalVarSigToken Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-getlocalvarsigtoken-method.md)|<span data-ttu-id="bc7ee-111">Получает маркер метаданных для подписи локальной переменной, предназначенной для представленной этим экземпляром функции.</span><span class="sxs-lookup"><span data-stu-id="bc7ee-111">Gets the metadata token for the local variable signature for the function that is represented by this instance.</span></span>|  
+|[<span data-ttu-id="c9f79-108">Метод GetInstrumentedILMap</span><span class="sxs-lookup"><span data-stu-id="c9f79-108">GetInstrumentedILMap Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-getinstrumentedilmap-method.md)|<span data-ttu-id="c9f79-109">Возвращает сопоставление смещений инструментированного профилировщиком промежуточного языка со смещениями промежуточного языка исходного метода для этого экземпляра.</span><span class="sxs-lookup"><span data-stu-id="c9f79-109">Returns a map from profiler instrumented IL offsets to original method IL offsets for this instance.</span></span>|  
+|[<span data-ttu-id="c9f79-110">Метод GetLocalVarSigToken</span><span class="sxs-lookup"><span data-stu-id="c9f79-110">GetLocalVarSigToken Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-getlocalvarsigtoken-method.md)|<span data-ttu-id="c9f79-111">Получает маркер метаданных для подписи локальной переменной, предназначенной для представленной этим экземпляром функции.</span><span class="sxs-lookup"><span data-stu-id="c9f79-111">Gets the metadata token for the local variable signature for the function that is represented by this instance.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="bc7ee-112">Требования</span><span class="sxs-lookup"><span data-stu-id="bc7ee-112">Requirements</span></span>  
- <span data-ttu-id="bc7ee-113">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bc7ee-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c9f79-112">Требования</span><span class="sxs-lookup"><span data-stu-id="c9f79-112">Requirements</span></span>  
+ <span data-ttu-id="c9f79-113">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c9f79-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bc7ee-114">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="bc7ee-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c9f79-114">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c9f79-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="bc7ee-115">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="bc7ee-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c9f79-115">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c9f79-115">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="bc7ee-116">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="bc7ee-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ <span data-ttu-id="c9f79-116">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c9f79-116">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bc7ee-117">См. также</span><span class="sxs-lookup"><span data-stu-id="bc7ee-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c9f79-117">См. также</span><span class="sxs-lookup"><span data-stu-id="c9f79-117">See also</span></span>
 
-- [<span data-ttu-id="bc7ee-118">Интерфейс ICorDebugILCode</span><span class="sxs-lookup"><span data-stu-id="bc7ee-118">ICorDebugILCode Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md)
-- [<span data-ttu-id="bc7ee-119">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="bc7ee-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="bc7ee-120">Отладка</span><span class="sxs-lookup"><span data-stu-id="bc7ee-120">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="c9f79-118">Интерфейс ICorDebugILCode</span><span class="sxs-lookup"><span data-stu-id="c9f79-118">ICorDebugILCode Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md)
+- [<span data-ttu-id="c9f79-119">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="c9f79-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="c9f79-120">Отладка</span><span class="sxs-lookup"><span data-stu-id="c9f79-120">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

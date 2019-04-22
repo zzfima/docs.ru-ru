@@ -9,17 +9,17 @@ helpviewer_keywords:
 - notifications [WPF]
 ms.assetid: 6cf7e275-df76-41c6-a611-53b889b8fd5a
 ms.openlocfilehash: 45f8b097bfdb8d3d7994e53ea05146aa6de0fc21
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59188439"
 ---
-# <a name="how-to-create-and-bind-to-an-observablecollection"></a><span data-ttu-id="ffab9-102">Практическое руководство. Создание и привязка ObservableCollection</span><span class="sxs-lookup"><span data-stu-id="ffab9-102">How to: Create and Bind to an ObservableCollection</span></span>
-<span data-ttu-id="ffab9-103">В этом примере показано, как создать и выполнить привязку к коллекции, который является производным от <xref:System.Collections.ObjectModel.ObservableCollection%601> класс, который является классом коллекции, которая выдает уведомления при добавлении или удалении элементов.</span><span class="sxs-lookup"><span data-stu-id="ffab9-103">This example shows how to create and bind to a collection that derives from the <xref:System.Collections.ObjectModel.ObservableCollection%601> class, which is a collection class that provides notifications when items get added or removed.</span></span>  
+# <a name="how-to-create-and-bind-to-an-observablecollection"></a><span data-ttu-id="21908-102">Практическое руководство. Создание и привязка ObservableCollection</span><span class="sxs-lookup"><span data-stu-id="21908-102">How to: Create and Bind to an ObservableCollection</span></span>
+<span data-ttu-id="21908-103">В этом примере показано, как создать и выполнить привязку к коллекции, который является производным от <xref:System.Collections.ObjectModel.ObservableCollection%601> класс, который является классом коллекции, которая выдает уведомления при добавлении или удалении элементов.</span><span class="sxs-lookup"><span data-stu-id="21908-103">This example shows how to create and bind to a collection that derives from the <xref:System.Collections.ObjectModel.ObservableCollection%601> class, which is a collection class that provides notifications when items get added or removed.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ffab9-104">Пример</span><span class="sxs-lookup"><span data-stu-id="ffab9-104">Example</span></span>  
- <span data-ttu-id="ffab9-105">В следующем примере показана реализация коллекции `NameList`.</span><span class="sxs-lookup"><span data-stu-id="ffab9-105">The following example shows the implementation of a `NameList` collection:</span></span>  
+## <a name="example"></a><span data-ttu-id="21908-104">Пример</span><span class="sxs-lookup"><span data-stu-id="21908-104">Example</span></span>  
+ <span data-ttu-id="21908-105">В следующем примере показана реализация коллекции `NameList`.</span><span class="sxs-lookup"><span data-stu-id="21908-105">The following example shows the implementation of a `NameList` collection:</span></span>  
   
 ```csharp  
 public class NameList : ObservableCollection<PersonName>  
@@ -104,7 +104,7 @@ Public Class PersonName
 End Class  
 ```  
   
- <span data-ttu-id="ffab9-106">Коллекции можно сделать доступными для привязки так же, как с другими объектами [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)], как описано в разделе [Обеспечение доступности данных для привязки в XAML](how-to-make-data-available-for-binding-in-xaml.md).</span><span class="sxs-lookup"><span data-stu-id="ffab9-106">You can make the collection available for binding the same way you would with other [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] objects, as described in [Make Data Available for Binding in XAML](how-to-make-data-available-for-binding-in-xaml.md).</span></span> <span data-ttu-id="ffab9-107">Например, можно создать экземпляр коллекции в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] и указать коллекцию в качестве ресурса, как показано ниже.</span><span class="sxs-lookup"><span data-stu-id="ffab9-107">For example, you can instantiate the collection in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] and specify the collection as a resource, as shown here:</span></span>  
+ <span data-ttu-id="21908-106">Коллекции можно сделать доступными для привязки так же, как с другими объектами [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)], как описано в разделе [Обеспечение доступности данных для привязки в XAML](how-to-make-data-available-for-binding-in-xaml.md).</span><span class="sxs-lookup"><span data-stu-id="21908-106">You can make the collection available for binding the same way you would with other [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] objects, as described in [Make Data Available for Binding in XAML](how-to-make-data-available-for-binding-in-xaml.md).</span></span> <span data-ttu-id="21908-107">Например, можно создать экземпляр коллекции в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] и указать коллекцию в качестве ресурса, как показано ниже.</span><span class="sxs-lookup"><span data-stu-id="21908-107">For example, you can instantiate the collection in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] and specify the collection as a resource, as shown here:</span></span>  
   
 ```xaml  
 <Window  
@@ -124,7 +124,7 @@ End Class
 </Window.Resources>  
 ```  
   
- <span data-ttu-id="ffab9-108">Затем можно выполнить привязку к коллекции:</span><span class="sxs-lookup"><span data-stu-id="ffab9-108">You can then bind to the collection:</span></span>  
+ <span data-ttu-id="21908-108">Затем можно выполнить привязку к коллекции:</span><span class="sxs-lookup"><span data-stu-id="21908-108">You can then bind to the collection:</span></span>  
   
 ```xaml  
 <ListBox Width="200"  
@@ -133,17 +133,17 @@ End Class
          IsSynchronizedWithCurrentItem="True"/>  
 ```  
   
- <span data-ttu-id="ffab9-109">Определение `NameItemTemplate` здесь не показано.</span><span class="sxs-lookup"><span data-stu-id="ffab9-109">The definition of `NameItemTemplate` is not shown here.</span></span>  
+ <span data-ttu-id="21908-109">Определение `NameItemTemplate` здесь не показано.</span><span class="sxs-lookup"><span data-stu-id="21908-109">The definition of `NameItemTemplate` is not shown here.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="ffab9-110">Объекты в коллекции должны удовлетворять требованиям, описанным в разделе [Общие сведения об источниках привязки](binding-sources-overview.md).</span><span class="sxs-lookup"><span data-stu-id="ffab9-110">The objects in your collection must satisfy the requirements described in the [Binding Sources Overview](binding-sources-overview.md).</span></span> <span data-ttu-id="ffab9-111">В частности, если вы используете <xref:System.Windows.Data.BindingMode.OneWay> или <xref:System.Windows.Data.BindingMode.TwoWay> (например, требуется вашей [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] обновление при динамическом изменении свойств источника), необходимо реализовать механизм уведомлений об подходящий изменения свойств, таких как <xref:System.ComponentModel.INotifyPropertyChanged>интерфейс.</span><span class="sxs-lookup"><span data-stu-id="ffab9-111">In particular, if you are using <xref:System.Windows.Data.BindingMode.OneWay> or <xref:System.Windows.Data.BindingMode.TwoWay> (for example, you want your [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] to update when the source properties change dynamically), you must implement a suitable property changed notification mechanism such as the <xref:System.ComponentModel.INotifyPropertyChanged> interface.</span></span>  
+>  <span data-ttu-id="21908-110">Объекты в коллекции должны удовлетворять требованиям, описанным в разделе [Общие сведения об источниках привязки](binding-sources-overview.md).</span><span class="sxs-lookup"><span data-stu-id="21908-110">The objects in your collection must satisfy the requirements described in the [Binding Sources Overview](binding-sources-overview.md).</span></span> <span data-ttu-id="21908-111">В частности, если вы используете <xref:System.Windows.Data.BindingMode.OneWay> или <xref:System.Windows.Data.BindingMode.TwoWay> (например, требуется вашей [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] обновление при динамическом изменении свойств источника), необходимо реализовать механизм уведомлений об подходящий изменения свойств, таких как <xref:System.ComponentModel.INotifyPropertyChanged>интерфейс.</span><span class="sxs-lookup"><span data-stu-id="21908-111">In particular, if you are using <xref:System.Windows.Data.BindingMode.OneWay> or <xref:System.Windows.Data.BindingMode.TwoWay> (for example, you want your [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] to update when the source properties change dynamically), you must implement a suitable property changed notification mechanism such as the <xref:System.ComponentModel.INotifyPropertyChanged> interface.</span></span>  
   
- <span data-ttu-id="ffab9-112">Дополнительные сведения см. в разделе "Привязка к коллекциям" в разделе [Общие сведения о привязке данных](data-binding-overview.md).</span><span class="sxs-lookup"><span data-stu-id="ffab9-112">For more information, see the Binding to Collections section in the [Data Binding Overview](data-binding-overview.md).</span></span>  
+ <span data-ttu-id="21908-112">Дополнительные сведения см. в разделе "Привязка к коллекциям" в разделе [Общие сведения о привязке данных](data-binding-overview.md).</span><span class="sxs-lookup"><span data-stu-id="21908-112">For more information, see the Binding to Collections section in the [Data Binding Overview](data-binding-overview.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ffab9-113">См. также</span><span class="sxs-lookup"><span data-stu-id="ffab9-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="21908-113">См. также</span><span class="sxs-lookup"><span data-stu-id="21908-113">See also</span></span>
 
-- [<span data-ttu-id="ffab9-114">Сортировка данных в представлении</span><span class="sxs-lookup"><span data-stu-id="ffab9-114">Sort Data in a View</span></span>](how-to-sort-data-in-a-view.md)
-- [<span data-ttu-id="ffab9-115">Фильтрация данных в представлении</span><span class="sxs-lookup"><span data-stu-id="ffab9-115">Filter Data in a View</span></span>](how-to-filter-data-in-a-view.md)
-- [<span data-ttu-id="ffab9-116">Сортировка и группировка данных с помощью представления в XAML</span><span class="sxs-lookup"><span data-stu-id="ffab9-116">Sort and Group Data Using a View in XAML</span></span>](how-to-sort-and-group-data-using-a-view-in-xaml.md)
-- [<span data-ttu-id="ffab9-117">Общие сведения о привязке данных</span><span class="sxs-lookup"><span data-stu-id="ffab9-117">Data Binding Overview</span></span>](data-binding-overview.md)
-- [<span data-ttu-id="ffab9-118">Практические руководства</span><span class="sxs-lookup"><span data-stu-id="ffab9-118">How-to Topics</span></span>](data-binding-how-to-topics.md)
+- [<span data-ttu-id="21908-114">Сортировка данных в представлении</span><span class="sxs-lookup"><span data-stu-id="21908-114">Sort Data in a View</span></span>](how-to-sort-data-in-a-view.md)
+- [<span data-ttu-id="21908-115">Фильтрация данных в представлении</span><span class="sxs-lookup"><span data-stu-id="21908-115">Filter Data in a View</span></span>](how-to-filter-data-in-a-view.md)
+- [<span data-ttu-id="21908-116">Сортировка и группировка данных с помощью представления в XAML</span><span class="sxs-lookup"><span data-stu-id="21908-116">Sort and Group Data Using a View in XAML</span></span>](how-to-sort-and-group-data-using-a-view-in-xaml.md)
+- [<span data-ttu-id="21908-117">Общие сведения о привязке данных</span><span class="sxs-lookup"><span data-stu-id="21908-117">Data Binding Overview</span></span>](data-binding-overview.md)
+- [<span data-ttu-id="21908-118">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="21908-118">How-to Topics</span></span>](data-binding-how-to-topics.md)

@@ -8,21 +8,21 @@ helpviewer_keywords:
 - XML [Visual Basic], accessing
 ms.assetid: 66cd704f-990c-4f8d-9b49-2b6aa76ca8fd
 ms.openlocfilehash: ce22781584ad31766058f59a7ebf3081cb5e11cf
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58836913"
 ---
-# <a name="how-to-access-xml-attributes-visual-basic"></a><span data-ttu-id="66d8b-102">Практическое руководство. Доступа к XML-атрибуты (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="66d8b-102">How to: Access XML Attributes (Visual Basic)</span></span>
-<span data-ttu-id="66d8b-103">В этом примере показано, как использовать свойства оси атрибута для доступа к XML-атрибуты в XML-элемента по имени.</span><span class="sxs-lookup"><span data-stu-id="66d8b-103">This example shows how to use an attribute axis property to access XML attributes in an XML element by name.</span></span> <span data-ttu-id="66d8b-104">В частности, он использует `type` свойство оси для доступа к атрибуту с именем атрибута `type` в `phone` объекта.</span><span class="sxs-lookup"><span data-stu-id="66d8b-104">In particular, it uses the `type` attribute axis property to access the attribute named `type` in the `phone` object.</span></span>  
+# <a name="how-to-access-xml-attributes-visual-basic"></a><span data-ttu-id="8fb5c-102">Практическое руководство. Доступа к XML-атрибуты (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8fb5c-102">How to: Access XML Attributes (Visual Basic)</span></span>
+<span data-ttu-id="8fb5c-103">В этом примере показано, как использовать свойства оси атрибута для доступа к XML-атрибуты в XML-элемента по имени.</span><span class="sxs-lookup"><span data-stu-id="8fb5c-103">This example shows how to use an attribute axis property to access XML attributes in an XML element by name.</span></span> <span data-ttu-id="8fb5c-104">В частности, он использует `type` свойство оси для доступа к атрибуту с именем атрибута `type` в `phone` объекта.</span><span class="sxs-lookup"><span data-stu-id="8fb5c-104">In particular, it uses the `type` attribute axis property to access the attribute named `type` in the `phone` object.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="66d8b-105">Пример</span><span class="sxs-lookup"><span data-stu-id="66d8b-105">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="8fb5c-105">Пример</span><span class="sxs-lookup"><span data-stu-id="8fb5c-105">Example</span></span>  
  [!code-vb[VbXMLSamples#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples5.vb#11)]  
   
-## <a name="see-also"></a><span data-ttu-id="66d8b-106">См. также</span><span class="sxs-lookup"><span data-stu-id="66d8b-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8fb5c-106">См. также</span><span class="sxs-lookup"><span data-stu-id="8fb5c-106">See also</span></span>
 
 - <xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="66d8b-107">Свойство оси атрибута XML</span><span class="sxs-lookup"><span data-stu-id="66d8b-107">XML Attribute Axis Property</span></span>](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)
-- [<span data-ttu-id="66d8b-108">Доступ к XML в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="66d8b-108">Accessing XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)
-- [<span data-ttu-id="66d8b-109">XML</span><span class="sxs-lookup"><span data-stu-id="66d8b-109">XML</span></span>](../../../../visual-basic/programming-guide/language-features/xml/index.md)
+- [<span data-ttu-id="8fb5c-107">Свойство оси атрибута XML</span><span class="sxs-lookup"><span data-stu-id="8fb5c-107">XML Attribute Axis Property</span></span>](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)
+- [<span data-ttu-id="8fb5c-108">Доступ к XML в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="8fb5c-108">Accessing XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)
+- [<span data-ttu-id="8fb5c-109">XML</span><span class="sxs-lookup"><span data-stu-id="8fb5c-109">XML</span></span>](../../../../visual-basic/programming-guide/language-features/xml/index.md)
