@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Отправка файла в Visual Basic
+title: Как выполнить Отправка файла в Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - networks, uploading files
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - My.Computer.Network.UploadFile method
 ms.assetid: a8b37924-c523-4fd3-b5ca-cb0074df29cd
 ms.openlocfilehash: 486351bc140a2bbf18bb8f85f761fc491f028bba
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58840358"
 ---
-# <a name="how-to-upload-a-file-in-visual-basic"></a>Практическое руководство. Отправка файла в Visual Basic
+# <a name="how-to-upload-a-file-in-visual-basic"></a>Как выполнить Отправка файла в Visual Basic
 Метод <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A> можно использовать для отправки файла и сохранения его в удаленном расположении. Если для параметра `ShowUI` установлено значение `True`, отображается диалоговое окно, показывающее ход загрузки и позволяющее пользователю отменить операцию.  
   
 ### <a name="to-upload-a-file"></a>Передача файла  

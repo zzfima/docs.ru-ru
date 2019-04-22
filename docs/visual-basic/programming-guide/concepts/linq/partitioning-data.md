@@ -3,10 +3,10 @@ title: Секционирование данных (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 69c59379-b66e-422c-b324-5b5c07760ef7
 ms.openlocfilehash: 2da63a1f6b73c8592d6036a90fa374a0d4385f4c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58839578"
 ---
 # <a name="partitioning-data-visual-basic"></a>Секционирование данных (Visual Basic)
@@ -14,7 +14,7 @@ ms.locfileid: "58839578"
   
  На следующем рисунке показаны результаты трех различных операций секционирования в последовательности символов. Первая операция возвращает первые три элемента в последовательности. Вторая операция пропускает первые три элемента и возвращает остальные элементы. Третья операция пропускает первые два элемента в последовательности и возвращает три следующих элемента.  
   
- ![Рисунок, показывающий три операции секционирования LINQ.](./media/partitioning-data/linq-partitioning-operations.png)  
+ ![Рисунок иллюстрирующий три операции секционирования LINQ.](./media/partitioning-data/linq-partitioning-operations.png)  
   
  Далее перечислены методы стандартных операторов запроса, которые секционируют последовательности.  
   

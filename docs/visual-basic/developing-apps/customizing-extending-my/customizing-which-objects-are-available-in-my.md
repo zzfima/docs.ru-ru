@@ -6,10 +6,10 @@ helpviewer_keywords:
 - My namespace
 ms.assetid: 4e8279c2-ed5b-4681-8903-8a6671874000
 ms.openlocfilehash: c0b47521c6a62071466ae4193cd8553bdfb3dcde
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58890375"
 ---
 # <a name="customizing-which-objects-are-available-in-my-visual-basic"></a>Настройка доступа к объектам через My (Visual Basic)
@@ -80,7 +80,7 @@ ms.locfileid: "58890375"
 - <xref:Microsoft.VisualBasic.ApplicationServices.User>
 - [Зависимость My от типа проекта](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)
 - [Условная компиляция](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
-- [/define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)
+- [/ define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)
 - [Объект My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md)
 - [Объект My.Request](../../../visual-basic/language-reference/objects/my-request-object.md)
 - [Объект My.Response](../../../visual-basic/language-reference/objects/my-response-object.md)
