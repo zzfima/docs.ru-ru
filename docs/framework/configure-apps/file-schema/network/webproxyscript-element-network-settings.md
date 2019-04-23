@@ -1,5 +1,5 @@
 ---
-title: <webProxyScript> (Сетевые параметры)
+title: Элемент <webProxyScript> (параметры сети)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#webProxyScript
@@ -9,21 +9,21 @@ helpviewer_keywords:
 - webProxyScript element
 ms.assetid: a13c26db-6218-4af3-9696-38f24b23bfac
 ms.openlocfilehash: e73ba86cc17fa51cbf4030f2304ab9141fcc0f26
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59218671"
 ---
-# <a name="webproxyscript-element-network-settings"></a><span data-ttu-id="64a11-102">\<webProxyScript > (сетевые параметры)</span><span class="sxs-lookup"><span data-stu-id="64a11-102">\<webProxyScript> Element (Network Settings)</span></span>
-<span data-ttu-id="64a11-103">Настраивает характеристики сценария, используемого для обнаружения веб-прокси.</span><span class="sxs-lookup"><span data-stu-id="64a11-103">Configures the characteristics of the script used to discover Web proxies.</span></span>  
+# <a name="webproxyscript-element-network-settings"></a><span data-ttu-id="cf161-102">\<webProxyScript > (сетевые параметры)</span><span class="sxs-lookup"><span data-stu-id="cf161-102">\<webProxyScript> Element (Network Settings)</span></span>
+<span data-ttu-id="cf161-103">Настраивает характеристики сценария, используемого для обнаружения веб-прокси.</span><span class="sxs-lookup"><span data-stu-id="cf161-103">Configures the characteristics of the script used to discover Web proxies.</span></span>  
   
- <span data-ttu-id="64a11-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="64a11-104">\<configuration></span></span>  
-<span data-ttu-id="64a11-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="64a11-105">\<system.net></span></span>  
-<span data-ttu-id="64a11-106">\<Параметры ></span><span class="sxs-lookup"><span data-stu-id="64a11-106">\<settings></span></span>  
-<span data-ttu-id="64a11-107">\<webProxyScript ></span><span class="sxs-lookup"><span data-stu-id="64a11-107">\<webProxyScript></span></span>  
+ <span data-ttu-id="cf161-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="cf161-104">\<configuration></span></span>  
+<span data-ttu-id="cf161-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="cf161-105">\<system.net></span></span>  
+<span data-ttu-id="cf161-106">\<Параметры ></span><span class="sxs-lookup"><span data-stu-id="cf161-106">\<settings></span></span>  
+<span data-ttu-id="cf161-107">\<webProxyScript ></span><span class="sxs-lookup"><span data-stu-id="cf161-107">\<webProxyScript></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="64a11-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="64a11-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cf161-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="cf161-108">Syntax</span></span>  
   
 ```xml  
 <webProxyScript  
@@ -31,29 +31,29 @@ ms.locfileid: "59218671"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="64a11-109">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="64a11-109">Attributes and Elements</span></span>  
- <span data-ttu-id="64a11-110">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="64a11-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="cf161-109">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="cf161-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="cf161-110">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="cf161-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="64a11-111">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="64a11-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="cf161-111">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="cf161-111">Attributes</span></span>  
   
-|<span data-ttu-id="64a11-112">Атрибут</span><span class="sxs-lookup"><span data-stu-id="64a11-112">Attribute</span></span>|<span data-ttu-id="64a11-113">Описание</span><span class="sxs-lookup"><span data-stu-id="64a11-113">Description</span></span>|  
+|<span data-ttu-id="cf161-112">Атрибут</span><span class="sxs-lookup"><span data-stu-id="cf161-112">Attribute</span></span>|<span data-ttu-id="cf161-113">Описание</span><span class="sxs-lookup"><span data-stu-id="cf161-113">Description</span></span>|  
 |---------------|-----------------|  
-|`downloadTimeout`|<span data-ttu-id="64a11-114">Указывает максимальное время для загрузки скрипта в часы, минуты и секунды.</span><span class="sxs-lookup"><span data-stu-id="64a11-114">Specifies the maximum time to download the script in hours, minutes, and seconds.</span></span> <span data-ttu-id="64a11-115">Значение по умолчанию — одна минута.</span><span class="sxs-lookup"><span data-stu-id="64a11-115">The default value is one minute.</span></span>|  
+|`downloadTimeout`|<span data-ttu-id="cf161-114">Указывает максимальное время для загрузки скрипта в часы, минуты и секунды.</span><span class="sxs-lookup"><span data-stu-id="cf161-114">Specifies the maximum time to download the script in hours, minutes, and seconds.</span></span> <span data-ttu-id="cf161-115">Значение по умолчанию — одна минута.</span><span class="sxs-lookup"><span data-stu-id="cf161-115">The default value is one minute.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="64a11-116">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="64a11-116">Child Elements</span></span>  
- <span data-ttu-id="64a11-117">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="64a11-117">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="cf161-116">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="cf161-116">Child Elements</span></span>  
+ <span data-ttu-id="cf161-117">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="cf161-117">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="64a11-118">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="64a11-118">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="cf161-118">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="cf161-118">Parent Elements</span></span>  
   
-|<span data-ttu-id="64a11-119">Элемент</span><span class="sxs-lookup"><span data-stu-id="64a11-119">Element</span></span>|<span data-ttu-id="64a11-120">Описание</span><span class="sxs-lookup"><span data-stu-id="64a11-120">Description</span></span>|  
+|<span data-ttu-id="cf161-119">Элемент</span><span class="sxs-lookup"><span data-stu-id="cf161-119">Element</span></span>|<span data-ttu-id="cf161-120">Описание</span><span class="sxs-lookup"><span data-stu-id="cf161-120">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="64a11-121">параметры</span><span class="sxs-lookup"><span data-stu-id="64a11-121">settings</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<span data-ttu-id="64a11-122">Настраивает основные параметры сети для пространства имен <xref:System.Net>.</span><span class="sxs-lookup"><span data-stu-id="64a11-122">Configures basic network options for the <xref:System.Net> namespace.</span></span>|  
+|[<span data-ttu-id="cf161-121">Параметры</span><span class="sxs-lookup"><span data-stu-id="cf161-121">settings</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<span data-ttu-id="cf161-122">Настраивает основные параметры сети для пространства имен <xref:System.Net>.</span><span class="sxs-lookup"><span data-stu-id="cf161-122">Configures basic network options for the <xref:System.Net> namespace.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="64a11-123">Примечания</span><span class="sxs-lookup"><span data-stu-id="64a11-123">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="cf161-123">Примечания</span><span class="sxs-lookup"><span data-stu-id="cf161-123">Remarks</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="64a11-124">Файлы конфигурации</span><span class="sxs-lookup"><span data-stu-id="64a11-124">Configuration Files</span></span>  
- <span data-ttu-id="64a11-125">Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="64a11-125">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="cf161-124">Файлы конфигурации</span><span class="sxs-lookup"><span data-stu-id="cf161-124">Configuration Files</span></span>  
+ <span data-ttu-id="cf161-125">Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="cf161-125">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="64a11-126">См. также</span><span class="sxs-lookup"><span data-stu-id="64a11-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cf161-126">См. также</span><span class="sxs-lookup"><span data-stu-id="cf161-126">See also</span></span>
 
-- [<span data-ttu-id="64a11-127">Схема параметров сети</span><span class="sxs-lookup"><span data-stu-id="64a11-127">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [<span data-ttu-id="cf161-127">Схема параметров сети</span><span class="sxs-lookup"><span data-stu-id="cf161-127">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

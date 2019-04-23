@@ -3,20 +3,20 @@ title: System.ServiceModel.Channels.SslClientCertMissing
 ms.date: 03/30/2017
 ms.assetid: d09f5336-c1e6-4b92-a04d-af556546bc69
 ms.openlocfilehash: 8c5e38d19aa64186d962597df5af90cd6cf886a2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59228735"
 ---
-# <a name="systemservicemodelchannelssslclientcertmissing"></a><span data-ttu-id="5be57-102">System.ServiceModel.Channels.SslClientCertMissing</span><span class="sxs-lookup"><span data-stu-id="5be57-102">System.ServiceModel.Channels.SslClientCertMissing</span></span>
-<span data-ttu-id="5be57-103">System.ServiceModel.Channels.SslClientCertMissing</span><span class="sxs-lookup"><span data-stu-id="5be57-103">System.ServiceModel.Channels.SslClientCertMissing</span></span>  
+# <a name="systemservicemodelchannelssslclientcertmissing"></a><span data-ttu-id="d40d6-102">System.ServiceModel.Channels.SslClientCertMissing</span><span class="sxs-lookup"><span data-stu-id="d40d6-102">System.ServiceModel.Channels.SslClientCertMissing</span></span>
+<span data-ttu-id="d40d6-103">System.ServiceModel.Channels.SslClientCertMissing</span><span class="sxs-lookup"><span data-stu-id="d40d6-103">System.ServiceModel.Channels.SslClientCertMissing</span></span>  
   
-## <a name="description"></a><span data-ttu-id="5be57-104">Описание</span><span class="sxs-lookup"><span data-stu-id="5be57-104">Description</span></span>  
- <span data-ttu-id="5be57-105">Удаленному SSL-клиенту не удалось предоставить требуемый сертификат.</span><span class="sxs-lookup"><span data-stu-id="5be57-105">The remote SSL client failed to provide a required certificate.</span></span>  
+## <a name="description"></a><span data-ttu-id="d40d6-104">Описание</span><span class="sxs-lookup"><span data-stu-id="d40d6-104">Description</span></span>  
+ <span data-ttu-id="d40d6-105">Удаленному SSL-клиенту не удалось предоставить требуемый сертификат.</span><span class="sxs-lookup"><span data-stu-id="d40d6-105">The remote SSL client failed to provide a required certificate.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5be57-106">См. также</span><span class="sxs-lookup"><span data-stu-id="5be57-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d40d6-106">См. также</span><span class="sxs-lookup"><span data-stu-id="d40d6-106">See also</span></span>
 
-- [<span data-ttu-id="5be57-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="5be57-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="5be57-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="5be57-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="5be57-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="5be57-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="d40d6-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="d40d6-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="d40d6-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="d40d6-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="d40d6-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="d40d6-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

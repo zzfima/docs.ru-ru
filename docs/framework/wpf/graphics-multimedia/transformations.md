@@ -17,22 +17,22 @@ helpviewer_keywords:
 - Transforms [WPF], about Transforms
 ms.assetid: 712b543f-d8b2-4dcf-ba2c-f7921c61c6fd
 ms.openlocfilehash: a0b5268d1c7e319a6144a7d551dca45bdc3e64aa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59227237"
 ---
-# <a name="transformations"></a><span data-ttu-id="4bb10-102">Преобразования</span><span class="sxs-lookup"><span data-stu-id="4bb10-102">Transformations</span></span>
-<span data-ttu-id="4bb10-103">Преобразования используются для поворота, масштабирования, перевод и наклонять <xref:System.Windows.FrameworkElement> объектов.</span><span class="sxs-lookup"><span data-stu-id="4bb10-103">Transforms are used to rotate, scale, translate, or skew <xref:System.Windows.FrameworkElement> objects.</span></span>  
+# <a name="transformations"></a><span data-ttu-id="a5972-102">Преобразования</span><span class="sxs-lookup"><span data-stu-id="a5972-102">Transformations</span></span>
+<span data-ttu-id="a5972-103">Преобразования используются для поворота, масштабирования, перевод и наклонять <xref:System.Windows.FrameworkElement> объектов.</span><span class="sxs-lookup"><span data-stu-id="a5972-103">Transforms are used to rotate, scale, translate, or skew <xref:System.Windows.FrameworkElement> objects.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="4bb10-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="4bb10-104">In This Section</span></span>  
- [<span data-ttu-id="4bb10-105">Общие сведения о классах Transform</span><span class="sxs-lookup"><span data-stu-id="4bb10-105">Transforms Overview</span></span>](transforms-overview.md)  
- [<span data-ttu-id="4bb10-106">Практические руководства</span><span class="sxs-lookup"><span data-stu-id="4bb10-106">How-to Topics</span></span>](transformations-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="a5972-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="a5972-104">In This Section</span></span>  
+ [<span data-ttu-id="a5972-105">Общие сведения о классах Transform</span><span class="sxs-lookup"><span data-stu-id="a5972-105">Transforms Overview</span></span>](transforms-overview.md)  
+ [<span data-ttu-id="a5972-106">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="a5972-106">How-to Topics</span></span>](transformations-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="4bb10-107">См. также</span><span class="sxs-lookup"><span data-stu-id="4bb10-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a5972-107">См. также</span><span class="sxs-lookup"><span data-stu-id="a5972-107">See also</span></span>
 
 - <xref:System.Windows.Media.Transform>
-- [<span data-ttu-id="4bb10-108">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="4bb10-108">Graphics and Multimedia</span></span>](index.md)
-- [<span data-ttu-id="4bb10-109">Общие сведения об отрисовке графики в WPF</span><span class="sxs-lookup"><span data-stu-id="4bb10-109">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
-- [<span data-ttu-id="4bb10-110">Макет</span><span class="sxs-lookup"><span data-stu-id="4bb10-110">Layout</span></span>](../advanced/layout.md)
+- [<span data-ttu-id="a5972-108">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="a5972-108">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="a5972-109">Общие сведения об отрисовке графики в WPF</span><span class="sxs-lookup"><span data-stu-id="a5972-109">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="a5972-110">Макет</span><span class="sxs-lookup"><span data-stu-id="a5972-110">Layout</span></span>](../advanced/layout.md)
