@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c587f4248205251824be851c135d93784e86c2f1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f444dd512dc27f1b7cda017e2c2848ac41eb56de
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646637"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59305043"
 ---
 # <a name="traversing-xml-schemas"></a>Обход XML-схем
 Обзор схемы XML с помощью API-интерфейса объектной модели схемы XML (SOM) предоставляет доступ к элементам, атрибутам и типам, хранящимся в модели SOM. Проход по схеме XML, загружаемой в SOM, представляет собой также первый шаг в изменении схемы XML с помощью SOM API.  
@@ -43,19 +43,19 @@ ms.locfileid: "54646637"
   
  В данном примере схема Customer просматривается с помощью следующих шагов.  
   
-1.  Добавление пользовательской схемы в новый объект <xref:System.Xml.Schema.XmlSchemaSet>, а затем ее компиляция. Любые предупреждения и ошибки проверки схемы, обнаруженные в процессе ее чтения или компиляции, обрабатываются делегатом <xref:System.Xml.Schema.ValidationEventHandler>.  
+1. Добавление пользовательской схемы в новый объект <xref:System.Xml.Schema.XmlSchemaSet>, а затем ее компиляция. Любые предупреждения и ошибки проверки схемы, обнаруженные в процессе ее чтения или компиляции, обрабатываются делегатом <xref:System.Xml.Schema.ValidationEventHandler>.  
   
-2.  Получение скомпилированного объекта <xref:System.Xml.Schema.XmlSchema> из <xref:System.Xml.Schema.XmlSchemaSet> путем итерации по свойству <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>. Так как схема компилируется, свойства Post-Schema-Compilation-Infoset (PSCI) доступны.  
+2. Получение скомпилированного объекта <xref:System.Xml.Schema.XmlSchema> из <xref:System.Xml.Schema.XmlSchemaSet> путем итерации по свойству <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>. Так как схема компилируется, свойства Post-Schema-Compilation-Infoset (PSCI) доступны.  
   
-3.  Выполняется проход по каждому элементу <xref:System.Xml.Schema.XmlSchemaElement> в коллекции <xref:System.Xml.Schema.XmlSchemaObjectTable.Values%2A> коллекции PSCI <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> и выводится имя каждого элемента в консоль.  
+3. Выполняется проход по каждому элементу <xref:System.Xml.Schema.XmlSchemaElement> в коллекции <xref:System.Xml.Schema.XmlSchemaObjectTable.Values%2A> коллекции PSCI <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> и выводится имя каждого элемента в консоль.  
   
-4.  Возвращается сложный тип элемента `Customer` с помощью класса <xref:System.Xml.Schema.XmlSchemaComplexType>.  
+4. Возвращается сложный тип элемента `Customer` с помощью класса <xref:System.Xml.Schema.XmlSchemaComplexType>.  
   
-5.  Если у сложного типа есть атрибуты, возвращается объект <xref:System.Collections.IDictionaryEnumerator> для перечисления всех атрибутов <xref:System.Xml.Schema.XmlSchemaAttribute> и вывода их имен в консоль.  
+5. Если у сложного типа есть атрибуты, возвращается объект <xref:System.Collections.IDictionaryEnumerator> для перечисления всех атрибутов <xref:System.Xml.Schema.XmlSchemaAttribute> и вывода их имен в консоль.  
   
-6.  Возвращается примитив sequence сложного типа с помощью класса <xref:System.Xml.Schema.XmlSchemaSequence>.  
+6. Возвращается примитив sequence сложного типа с помощью класса <xref:System.Xml.Schema.XmlSchemaSequence>.  
   
-7.  Выполняется проход по каждому элементу <xref:System.Xml.Schema.XmlSchemaElement> в коллекции <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A?displayProperty=nameWithType> и выводится имя каждого элемента в консоль.  
+7. Выполняется проход по каждому элементу <xref:System.Xml.Schema.XmlSchemaElement> в коллекции <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A?displayProperty=nameWithType> и выводится имя каждого элемента в консоль.  
   
  Ниже приведен полный пример кода.  
   

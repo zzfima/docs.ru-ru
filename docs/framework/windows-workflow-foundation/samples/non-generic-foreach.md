@@ -3,16 +3,16 @@ title: Неуниверсальное действие ForEach
 ms.date: 03/30/2017
 ms.assetid: 576cd07a-d58d-4536-b514-77bad60bff38
 ms.openlocfilehash: 353128d1c313be62222e091c084e5b5e37a92b58
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303548"
 ---
 # <a name="non-generic-foreach"></a>Неуниверсальное действие ForEach
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] в область элементов поставляется набор действий потока управления, включая <xref:System.Activities.Statements.ForEach%601>, который позволяет проходить по <xref:System.Collections.Generic.IEnumerable%601> коллекций.  
+В область элементов [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] входит набор действий потока управления, включая элемент <xref:System.Activities.Statements.ForEach%601>, который позволяет проходить по коллекциям <xref:System.Collections.Generic.IEnumerable%601>.  
   
- <xref:System.Activities.Statements.ForEach%601> требуется его <xref:System.Activities.Statements.ForEach%601.Values%2A> свойство типа <xref:System.Collections.Generic.IEnumerable%601>. Это запрещает пользователям проходить по структурам данных, в которых реализован интерфейс <xref:System.Collections.Generic.IEnumerable%601> (например, <xref:System.Collections.ArrayList>). Неуниверсальная версия <xref:System.Activities.Statements.ForEach%601> выполняет это требование за счет большей гибкости во время выполнения, чтобы обеспечить совместимость типов значений в коллекции.  
+ Свойство <xref:System.Activities.Statements.ForEach%601> элемента <xref:System.Activities.Statements.ForEach%601.Values%2A> должно иметь тип <xref:System.Collections.Generic.IEnumerable%601>. Это запрещает пользователям проходить по структурам данных, в которых реализован интерфейс <xref:System.Collections.Generic.IEnumerable%601> (например, <xref:System.Collections.ArrayList>). Неуниверсальная версия <xref:System.Activities.Statements.ForEach%601> выполняет это требование за счет большей гибкости во время выполнения, чтобы обеспечить совместимость типов значений в коллекции.  
   
  В этом образце показано, как реализовать неуниверсальное действие <xref:System.Activities.Statements.ForEach%601> и конструктор для него. Это действие позволяет проходить по <xref:System.Collections.ArrayList>.  
   
@@ -69,7 +69,7 @@ Activity sampleUsage =
   
 |Условие|Сообщение|Серьезность|Тип исключения|  
 |---------------|-------------|--------------|--------------------|  
-|Значения — `null`|Не указано значение необходимого аргумента действия "Values".|Error|<xref:System.InvalidOperationException>|  
+|Значением является `null`|Не указано значение необходимого аргумента действия "Values".|Error|<xref:System.InvalidOperationException>|  
   
 ## <a name="foreach-designer"></a>Конструктор ForEach  
  Конструктор действий для образца аналогичен конструктору, предоставляемому для встроенного действия <xref:System.Activities.Statements.ForEach%601>. Конструктор отображается в области элементов в **примеры**, **неуниверсальные действия** категории. Конструктор называется **ForEachWithBodyFactory** на панели элементов, поскольку это действие предоставляет <xref:System.Activities.Presentation.IActivityTemplateFactory> на панели элементов, который создает действие с настроенным <xref:System.Activities.ActivityAction>.  

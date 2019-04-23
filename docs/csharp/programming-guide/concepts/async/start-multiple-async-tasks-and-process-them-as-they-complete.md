@@ -2,12 +2,12 @@
 title: Обработка асинхронных задач по мере завершения
 ms.date: 09/12/2018
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: ec5729eaa8d63eb18b1ac4dea5820cbf834d001b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 335eb5dce74a7f0a2b8af550250105d460212b6a
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152372"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59304862"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>Запуск нескольких асинхронных задач и их обработка по мере завершения (C#)
 
@@ -20,22 +20,22 @@ ms.locfileid: "53152372"
 
 ## <a name="download-an-example-solution"></a>Скачивание примера решения
 
-Вы можете скачать весь проект Windows Presentation Foundation (WPF) со страницы [Пример асинхронности. Тонкая настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea), а затем выполнить необходимые действия.
+Скачать полный проект Windows Presentation Foundation (WPF) можно со страницы [Пример асинхронности. Тонкая настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea). Затем выполните следующие шаги.
 
 > [!TIP]
 > Если вы не хотите скачивать проект, просто изучите файл MainWindow.xaml.cs в конце этого раздела.
 
-1.  Извлеките файлы из скачанного ZIP-файла и запустите Visual Studio.
+1. Извлеките файлы из скачанного ZIP-файла и запустите Visual Studio.
 
-2.  В строке меню выберите **Файл** > **Открыть** > **Решение или проект**.
+2. В строке меню выберите **Файл** > **Открыть** > **Решение или проект**.
 
-3.  В диалоговом окне **Открытие проекта** откройте папку с примером кода, который вы скачали, а затем откройте SLN-файл решения AsyncFineTuningCS.
+3. В диалоговом окне **Открытие проекта** откройте папку с примером кода, который вы скачали, а затем откройте SLN-файл решения AsyncFineTuningCS.
 
-4.  В **обозревателе решений** откройте контекстное меню проекта **ProcessTasksAsTheyFinish** и выберите команду **Назначить запускаемым проектом**.
+4. В **обозревателе решений** откройте контекстное меню проекта **ProcessTasksAsTheyFinish** и выберите команду **Назначить запускаемым проектом**.
 
-5.  Нажмите клавишу **F5**, чтобы запустить программу (или нажмите сочетание клавиш **Ctrl**+**F5**, чтобы запустить программу без отладки).
+5. Нажмите клавишу **F5**, чтобы запустить программу (или нажмите сочетание клавиш **Ctrl**+**F5**, чтобы запустить программу без отладки).
 
-6.  Запустите проект несколько раз, чтобы проверить, что загруженные размеры не всегда отображаются в одинаковом порядке.
+6. Запустите проект несколько раз, чтобы проверить, что загруженные размеры не всегда отображаются в одинаковом порядке.
 
 ## <a name="create-the-program-yourself"></a>Самостоятельное создание программы
 
@@ -87,7 +87,7 @@ IEnumerable<Task<int>> downloadTasksQuery = from url in urlList select ProcessUR
 
 Приведенный ниже код — полный текст файла MainWindow.xaml.cs для примера. Звездочками помечаются элементы, добавленные для этого примера. Также обратите внимание, что необходимо добавить ссылку для <xref:System.Net.Http>.
 
-Можно загрузить проект со страницы [Пример асинхронности. Тонкая настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).
+Вы можете скачать проект из статьи [Пример асинхронности. Тонкая настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).
 
 ```csharp
 using System;
@@ -230,4 +230,4 @@ namespace ProcessTasksAsTheyFinish
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
 - [Fine-Tuning Your Async Application (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md) (Тонкая настройка асинхронного приложения в C#)
 - [Асинхронное программирование с использованием ключевых слов async и await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
-- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Пример использования async. Тонкая настройка асинхронного приложения)
+- [Пример использования Async. Настройка приложения](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

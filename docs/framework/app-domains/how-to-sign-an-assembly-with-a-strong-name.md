@@ -1,5 +1,5 @@
 ---
-title: Как выполнить  Подписание сборки строгим именем
+title: Как выполнить Подписание сборки строгим именем
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6bd250caae1bd98d238f8d99702a97f0cdbc7448
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 5580b6d8af7319397ad7eb6416941c2be0dcdb76
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826906"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59303437"
 ---
-# <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Как выполнить  Подписание сборки строгим именем
+# <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Как выполнить Подписание сборки строгим именем
 Существует несколько способов подписать сборку строгим именем:  
   
 -   С использованием **Подписывание** в диалоговом окне **Свойства** проекта в Visual Studio. Это самый простой и удобный способ подписать сборку строгим именем.  
@@ -35,13 +35,13 @@ ms.locfileid: "55826906"
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-visual-studio"></a>Создание и подпись сборки строгим именем с помощью Visual Studio  
   
-1.  В **обозревателе решений**откройте контекстное меню проекта и выберите **Свойства**.  
+1. В **обозревателе решений**откройте контекстное меню проекта и выберите **Свойства**.  
   
-2.  Перейдите на вкладку **Подписывание** .  
+2. Перейдите на вкладку **Подписывание** .  
   
-3.  Выберите поле **Подписать сборку** .  
+3. Выберите поле **Подписать сборку** .  
   
-4.  В поле **Выберите файл ключей строгого имени** нажмите **\<Обзор…>**, после чего выберите файл ключей. Чтобы создать новый файл ключей, выберите **\<Создать…>** и введите его имя в диалоговом окне **Создание ключа строгого имени**.  
+4. В поле **Выберите файл ключей строгого имени** нажмите **\<Обзор…>**, после чего выберите файл ключей. Чтобы создать новый файл ключей, выберите **\<Создать…>** и введите его имя в диалоговом окне **Создание ключа строгого имени**.  
   
 > [!NOTE]
 >  Чтобы [отложить подпись сборки](../../../docs/framework/app-domains/delay-sign-assembly.md), выберите файл открытого ключа.  
@@ -73,9 +73,9 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
   
 #### <a name="to-sign-an-assembly-with-a-strong-name-by-using-attributes"></a>Подпись сборки строгим именем с помощью атрибутов  
   
-1.  Добавьте <xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=nameWithType> или <xref:System.Reflection.AssemblyKeyNameAttribute> в файл исходного кода и укажите имя файла или контейнера, содержащего пару ключей, которая используется при подписи сборки строгим именем.  
+1. Добавьте <xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=nameWithType> или <xref:System.Reflection.AssemblyKeyNameAttribute> в файл исходного кода и укажите имя файла или контейнера, содержащего пару ключей, которая используется при подписи сборки строгим именем.  
   
-2.  Компилируйте файл исходного кода в обычном режиме.  
+2. Компилируйте файл исходного кода в обычном режиме.  
   
 > [!NOTE]
 >  Компиляторы C# и Visual Basic выдают предупреждения (CS1699 и BC41008, соответственно), если в исходном коде встречается <xref:System.Reflection.AssemblyKeyFileAttribute> или <xref:System.Reflection.AssemblyKeyNameAttribute> . Эти предупреждения можно игнорировать.  
@@ -101,6 +101,7 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
     ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Создание и использование сборок со строгими именами](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
 - [Практическое руководство. Создание пары открытого и закрытого ключей](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)
 - [Al.exe (компоновщик сборок)](../../../docs/framework/tools/al-exe-assembly-linker.md)

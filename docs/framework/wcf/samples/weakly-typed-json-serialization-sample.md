@@ -3,10 +3,10 @@ title: Пример сериализации слабо типизированн
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
 ms.openlocfilehash: b0e9617ad5d616e8921fbf142085f2758f3e0cd4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303691"
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>Пример сериализации слабо типизированных данных JSON
@@ -58,7 +58,7 @@ ms.locfileid: "59303691"
   
  Эта задача может быть громоздкой, особенно если клиент должен обрабатывать более одного типа объектов JSON.  
   
- Тип `JsonObject` в этом образце является слабо типизированным представлением объекта JSON. `JsonObject` использует естественное сопоставление между объектами JSON и [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] словари и сопоставление между массивами JSON и [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] массивов. В следующем примере кода демонстрируется тип `JsonObject` .  
+ Тип `JsonObject` в этом образце является слабо типизированным представлением объекта JSON. `JsonObject` использует естественное сопоставление между объектами JSON и словарями [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] и сопоставление между массивами JSON и массивами [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] . В следующем примере кода демонстрируется тип `JsonObject` .  
   
 ```  
 // Instantiation of JsonObject json omitted  

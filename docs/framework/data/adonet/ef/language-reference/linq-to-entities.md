@@ -3,10 +3,10 @@ title: LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
 ms.openlocfilehash: da9529da9b45fc8ac2fdf0b19d65634dd33450fc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304588"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
@@ -80,18 +80,18 @@ LINQ to Entities обеспечивает поддержку LINQ при зап�
   
  [Результаты запроса](../../../../../../docs/framework/data/adonet/ef/language-reference/query-results.md)  
   
- [Стандартные операторы в запросах LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)  
+ [Стандартные операторы запроса в запросах LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)  
   
  [Сопоставление методов CLR с каноническими функциями](../../../../../../docs/framework/data/adonet/ef/language-reference/clr-method-to-canonical-function-mapping.md)  
   
  [Поддерживаемые и неподдерживаемые методы LINQ (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)  
   
- [LINQ to Entities: рекомендации и известные проблемы](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)  
+ [Рекомендации и известные проблемы в LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)  
   
 ## <a name="see-also"></a>См. также
 
-- [LINQ to Entities: рекомендации и известные проблемы](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)
-- [Language-Integrated Query (LINQ):C#](../../../../../csharp/programming-guide/concepts/linq/index.md)
-- [Language-Integrated Query (LINQ): Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)
+- [Рекомендации и известные проблемы в LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)
+- [LINQ — C#](../../../../../csharp/programming-guide/concepts/linq/index.md)
+- [LINQ — Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)
 - [LINQ и ADO.NET](../../../../../../docs/framework/data/adonet/linq-and-ado-net.md)
 - [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)

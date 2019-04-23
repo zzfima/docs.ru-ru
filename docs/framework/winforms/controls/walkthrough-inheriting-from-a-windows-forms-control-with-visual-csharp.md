@@ -9,10 +9,10 @@ helpviewer_keywords:
 - custom controls [Windows Forms], inheritance
 ms.assetid: 09476da0-8d4c-4a4c-b969-649519dfb438
 ms.openlocfilehash: cafd8685f34537f8efb372967dc45682afbe8fa0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306382"
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-c"></a>Пошаговое руководство. Наследование элементов управления Windows Forms с помощью Visual C\#
@@ -135,7 +135,7 @@ ms.locfileid: "59306382"
   
 11. В меню **Отладка** выберите пункт **Начать отладку**.  
   
-     `Form1` отображается.  
+     Появится `Form1`.  
   
 12. Нажмите кнопку `valueButton1`.  
   
@@ -143,5 +143,5 @@ ms.locfileid: "59306382"
   
 ## <a name="see-also"></a>См. также
 
-- [Практическое руководство. Отображение элемента управления в диалоговом окне выбора элементов панели элементов](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
-- [Пошаговое руководство. Создание составного элемента управления с помощью C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [Практическое руководство. Отображение элемента управления в Выбор элементов панели элементов-диалоговое окно](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [Пошаговое руководство: Создание составного элемента управления с помощью VisualC#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)

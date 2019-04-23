@@ -10,10 +10,10 @@ helpviewer_keywords:
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
 ms.openlocfilehash: f8e5a7475765bffb76e7b07e81db25b4a62ae038
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303496"
 ---
 # <a name="flow-document-overview"></a>Общие сведения о документах нефиксированного формата
@@ -96,7 +96,7 @@ ms.locfileid: "59303496"
  Ниже кратко описан каждый класс этих категорий.  
   
 ### <a name="block-derived-classes"></a>Классы, производные от блока  
- **Абзац**  
+ **Paragraph**  
   
  <xref:System.Windows.Documents.Paragraph> обычно используется для группировки содержимого в абзац. Самый простой и распространенный способ использования класса Paragraph — составление текстового абзаца.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "59303496"
   
  ![Снимок экрана: UIElement вставленный в поток содержимого.](./media/flow-document-overview/embedded-blockuicontainer.png)  
   
- **Список**  
+ **List**  
   
  <xref:System.Windows.Documents.List> используется для создания маркированного или нумерованного списка. Задайте <xref:System.Windows.Documents.List.MarkerStyle%2A> свойства <xref:System.Windows.TextMarkerStyle> значение перечисления, чтобы определить стиль списка. В приведенном ниже примере показано, как создать простой список.  
   
@@ -154,7 +154,7 @@ ms.locfileid: "59303496"
   
  **Примечание.**  Начиная с версии [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)], <xref:System.Windows.Documents.Run.Text%2A> свойство <xref:System.Windows.Documents.Run> объект является свойством зависимостей. Можно привязать <xref:System.Windows.Documents.Run.Text%2A> свойства к данным источника, такое как <xref:System.Windows.Controls.TextBlock>. <xref:System.Windows.Documents.Run.Text%2A> Свойство полностью поддерживает одностороннюю привязку. <xref:System.Windows.Documents.Run.Text%2A> Свойство также поддерживает двухстороннюю привязку, за исключением <xref:System.Windows.Controls.RichTextBox>. Пример см. в разделе <xref:System.Windows.Documents.Run.Text%2A?displayProperty=nameWithType>.  
   
- **диапазон**  
+ **Span**  
   
  <xref:System.Windows.Documents.Span> Группирует другие встроенные элементы содержимого. Никакая обязательная отрисовка не применяется к содержимому в рамках <xref:System.Windows.Documents.Span> элемент. Тем не менее, элементы, наследующие от <xref:System.Windows.Documents.Span> включая <xref:System.Windows.Documents.Hyperlink>, <xref:System.Windows.Documents.Bold>, <xref:System.Windows.Documents.Italic> и <xref:System.Windows.Documents.Underline> применить форматирование к тексту.  
   
@@ -194,7 +194,7 @@ ms.locfileid: "59303496"
   
  <xref:System.Windows.Documents.Figure> и <xref:System.Windows.Documents.Floater> отличаются несколькими способами и используются для разных сценариев.  
   
- **Рисунок.**  
+ **Figure:**  
   
 -   Можно разместить: Можно задать его горизонтальных и вертикальных якорей можно закрепить элемент относительно страницы, содержимого, столбца или абзаца. Можно также использовать его <xref:System.Windows.Documents.Figure.HorizontalOffset%2A> и <xref:System.Windows.Documents.Figure.VerticalOffset%2A> свойства, чтобы задать произвольные смещения.  
   
@@ -202,7 +202,7 @@ ms.locfileid: "59303496"
   
 -   Не разбивать на страницы: Если содержимое внутри <xref:System.Windows.Documents.Figure> не помещается <xref:System.Windows.Documents.Figure>, он будет обрабатывать в соответствии с любым содержимым, и остальное содержимое теряется  
   
- **Плавающий объект:**  
+ **Floater:**  
   
 -   Невозможно указать местоположение, отрисовывается в любом доступном пространстве. Невозможно задать смещение или прикрепить <xref:System.Windows.Documents.Floater>.  
   
@@ -348,9 +348,9 @@ ms.locfileid: "59303496"
   
 ## <a name="see-also"></a>См. также
 
-- [Текста](optimizing-performance-text.md)
+- [Text](optimizing-performance-text.md)
 - [Оформление в WPF](typography-in-wpf.md)
-- [Практические руководства](flow-content-elements-how-to-topics.md)
+- [Разделы практического руководства](flow-content-elements-how-to-topics.md)
 - [Общие сведения о модели содержимого TextElement](textelement-content-model-overview.md)
 - [Общие сведения о RichTextBox](../controls/richtextbox-overview.md)
 - [Документы в WPF](documents-in-wpf.md)

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 67ab5dd8-79c1-4e62-aa75-828ea918a53a
 ms.openlocfilehash: 9f3320b031141246a394191a1924509204707dc1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303457"
 ---
 # <a name="how-to-specify-a-service-binding-in-code"></a>Практическое руководство. Задание привязки службы в коде
@@ -51,4 +51,4 @@ ms.locfileid: "59303457"
 ## <a name="see-also"></a>См. также
 
 - [Использование привязок для настройки служб и клиентов](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [Задание адреса конечной точки](../../../docs/framework/wcf/specifying-an-endpoint-address.md)
+- [Указание адреса конечной точки](../../../docs/framework/wcf/specifying-an-endpoint-address.md)

@@ -13,10 +13,10 @@ helpviewer_keywords:
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
 ms.openlocfilehash: 7c02ddca01260a68880630bcb014c5cc4dc4370b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304809"
 ---
 # <a name="wpf-add-ins-overview"></a>Общие сведения о надстройках WPF
@@ -165,7 +165,7 @@ ms.locfileid: "59304809"
  Эти задачи подробно описаны в следующих подразделах.  
   
 ### <a name="configuring-the-pipeline-and-add-in-for-clickonce-deployment"></a>Настройка конвейера и надстройки для развертывания ClickOnce  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] скачиваются и запускать из безопасную папку в [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] кэше развертывания. Для размещения надстройки в [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] конвейер и сборка надстройки также должны быть загружены в безопасную папку. Для этого нужно настроить манифест приложения для включения и конвейера и сборки надстройки для загрузки. Проще всего это сделать в [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)], хотя сборка конвейера и надстройки должна находиться в корневой папке проекта [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], чтобы [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] мог обнаружить сборочные узлы конвейера.  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] загружается в безопасную папку в [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] кэше развертывания и запускается из нее. Для размещения надстройки в [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] конвейер и сборка надстройки также должны быть загружены в безопасную папку. Для этого нужно настроить манифест приложения для включения и конвейера и сборки надстройки для загрузки. Проще всего это сделать в [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)], хотя сборка конвейера и надстройки должна находиться в корневой папке проекта [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], чтобы [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] мог обнаружить сборочные узлы конвейера.  
   
  Следовательно, первый шаг — создать сборку конвейера и надстройки в корне проекта [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], настроив выходные данные построения для каждого проекта сборки конвейера и сборки надстройки. В следующей таблице показаны выходные пути построения для проектов сборки конвейера и проекта сборки надстройки, которые находятся в том же решении и корневой папке, что и проект ведущего приложения [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)].  
   
@@ -285,6 +285,6 @@ ms.locfileid: "59304809"
 - <xref:System.LoaderOptimizationAttribute>
 - [Надстройки и расширения среды](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [Домены приложений](../../app-domains/application-domains.md)
-- [Общие сведения о средствах удаленного взаимодействия платформы .NET Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
+- [Обзор удаленного взаимодействия .NET framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
 - [Обеспечение поддержки удаленного взаимодействия объектами](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
-- [Практические руководства](how-to-topics.md)
+- [Разделы практического руководства](how-to-topics.md)

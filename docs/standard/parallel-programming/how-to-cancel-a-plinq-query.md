@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Отмена запроса PLINQ
+title: Как выполнить Отмена запроса PLINQ
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,13 +12,13 @@ ms.assetid: 80b14640-edfa-4153-be1b-3e003d3e9c1a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 80dc5f72bac436d4935c1697347d588b1a302f86
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59305342"
 ---
-# <a name="how-to-cancel-a-plinq-query"></a>Практическое руководство. Отмена запроса PLINQ
+# <a name="how-to-cancel-a-plinq-query"></a>Как выполнить Отмена запроса PLINQ
 В приведенных ниже примерах показаны два способа отмены запроса PLINQ. В первом примере отменяется запрос, который состоит в основном из обхода данных. Во втором примере отменяется запрос, который содержит ресурсоемкую функцию.  
   
 > [!NOTE]

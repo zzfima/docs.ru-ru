@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Сортировка или фильтрация текстовых данных по любому слову или полю (LINQ) (C#)
+title: Как выполнить Сортировка или фильтрация текстовых данных по любому слову или полю (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c04d42f-4a78-42c8-9ec8-57ef18fe13a9
 ms.openlocfilehash: 243ff37e38b2e88b55962980e91a1ab6dcebab3c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304874"
 ---
-# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-c"></a>Практическое руководство. Сортировка или фильтрация текстовых данных по любому слову или полю (LINQ) (C#)
+# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-c"></a>Как выполнить Сортировка или фильтрация текстовых данных по любому слову или полю (LINQ) (C#)
 В следующем примере демонстрируется сортировка строк структурированного текста, таких как значения, разделенные запятыми, по любому полю в строке. Поле можно указывать в среде выполнения динамически. Допустим, поля в файле scores.csv содержат идентификационные номера учащихся и баллы, которые они набрали в результате четырех тестов.  
   
 ### <a name="to-create-a-file-that-contains-data"></a>Создание файла с данными  
