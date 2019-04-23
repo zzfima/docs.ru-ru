@@ -11,80 +11,80 @@ helpviewer_keywords:
 - properties [WPF], RowGroups [WPF], manipulating row groups
 ms.assetid: ea61440f-08ae-44ed-b314-5716aaaae3ed
 ms.openlocfilehash: edc5fbe552a04387fc3f152cb53444605d142624
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59209974"
 ---
-# <a name="how-to-manipulate-a-tables-row-groups-through-the-rowgroups-property"></a><span data-ttu-id="9383f-102">Практическое руководство. Управление группами строк таблицы пользователя с помощью свойства RowGroups</span><span class="sxs-lookup"><span data-stu-id="9383f-102">How to: Manipulate a Table's Row Groups through the RowGroups Property</span></span>
-<span data-ttu-id="9383f-103">В этом примере показаны некоторые из наиболее распространенных операций, которые могут выполняться над группами строк таблицы пользователя с помощью <xref:System.Windows.Documents.Table.RowGroups%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="9383f-103">This example demonstrates some of the more common operations that can be performed on a table's row groups through the <xref:System.Windows.Documents.Table.RowGroups%2A> property.</span></span>  
+# <a name="how-to-manipulate-a-tables-row-groups-through-the-rowgroups-property"></a><span data-ttu-id="daeb6-102">Практическое руководство. Управление группами строк таблицы пользователя с помощью свойства RowGroups</span><span class="sxs-lookup"><span data-stu-id="daeb6-102">How to: Manipulate a Table's Row Groups through the RowGroups Property</span></span>
+<span data-ttu-id="daeb6-103">В этом примере показаны некоторые из наиболее распространенных операций, которые могут выполняться над группами строк таблицы пользователя с помощью <xref:System.Windows.Documents.Table.RowGroups%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="daeb6-103">This example demonstrates some of the more common operations that can be performed on a table's row groups through the <xref:System.Windows.Documents.Table.RowGroups%2A> property.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9383f-104">Пример</span><span class="sxs-lookup"><span data-stu-id="9383f-104">Example</span></span>  
- <span data-ttu-id="9383f-105">В следующем примере создается новая таблица и затем использует <xref:System.Windows.Documents.TableRowGroupCollection.Add%2A> метод для добавления столбцов в таблицу <xref:System.Windows.Documents.Table.RowGroups%2A> коллекции.</span><span class="sxs-lookup"><span data-stu-id="9383f-105">The following example creates a new table and then uses the <xref:System.Windows.Documents.TableRowGroupCollection.Add%2A> method to add columns to the table's <xref:System.Windows.Documents.Table.RowGroups%2A> collection.</span></span>  
+## <a name="example"></a><span data-ttu-id="daeb6-104">Пример</span><span class="sxs-lookup"><span data-stu-id="daeb6-104">Example</span></span>  
+ <span data-ttu-id="daeb6-105">В следующем примере создается новая таблица и затем использует <xref:System.Windows.Documents.TableRowGroupCollection.Add%2A> метод для добавления столбцов в таблицу <xref:System.Windows.Documents.Table.RowGroups%2A> коллекции.</span><span class="sxs-lookup"><span data-stu-id="daeb6-105">The following example creates a new table and then uses the <xref:System.Windows.Documents.TableRowGroupCollection.Add%2A> method to add columns to the table's <xref:System.Windows.Documents.Table.RowGroups%2A> collection.</span></span>  
   
  [!code-csharp[TableSnippets2#_Table_RowGroups_Add](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_rowgroups_add)]
  [!code-vb[TableSnippets2#_Table_RowGroups_Add](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_add)]  
   
-## <a name="example"></a><span data-ttu-id="9383f-106">Пример</span><span class="sxs-lookup"><span data-stu-id="9383f-106">Example</span></span>  
- <span data-ttu-id="9383f-107">В следующем примере вставляется новый <xref:System.Windows.Documents.TableRowGroup>.</span><span class="sxs-lookup"><span data-stu-id="9383f-107">The following example inserts a new <xref:System.Windows.Documents.TableRowGroup>.</span></span>  <span data-ttu-id="9383f-108">Новый столбец вставляется в позиции индекса 0, делая новый первой строки в таблице.</span><span class="sxs-lookup"><span data-stu-id="9383f-108">The new column is inserted at index position 0, making it the new first row group in the table.</span></span>  
+## <a name="example"></a><span data-ttu-id="daeb6-106">Пример</span><span class="sxs-lookup"><span data-stu-id="daeb6-106">Example</span></span>  
+ <span data-ttu-id="daeb6-107">В следующем примере вставляется новый <xref:System.Windows.Documents.TableRowGroup>.</span><span class="sxs-lookup"><span data-stu-id="daeb6-107">The following example inserts a new <xref:System.Windows.Documents.TableRowGroup>.</span></span>  <span data-ttu-id="daeb6-108">Новый столбец вставляется в позиции индекса 0, делая новый первой строки в таблице.</span><span class="sxs-lookup"><span data-stu-id="daeb6-108">The new column is inserted at index position 0, making it the new first row group in the table.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="9383f-109"><xref:System.Windows.Documents.TableRowGroupCollection> Коллекция использует стандартную индексацию с нуля.</span><span class="sxs-lookup"><span data-stu-id="9383f-109">The <xref:System.Windows.Documents.TableRowGroupCollection> collection uses standard zero-based indexing.</span></span>  
+>  <span data-ttu-id="daeb6-109"><xref:System.Windows.Documents.TableRowGroupCollection> Коллекция использует стандартную индексацию с нуля.</span><span class="sxs-lookup"><span data-stu-id="daeb6-109">The <xref:System.Windows.Documents.TableRowGroupCollection> collection uses standard zero-based indexing.</span></span>  
   
  [!code-csharp[TableSnippets2#_Table_RowGroups_Insert](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_rowgroups_insert)]
  [!code-vb[TableSnippets2#_Table_RowGroups_Insert](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_insert)]  
   
-## <a name="example"></a><span data-ttu-id="9383f-110">Пример</span><span class="sxs-lookup"><span data-stu-id="9383f-110">Example</span></span>  
- <span data-ttu-id="9383f-111">В следующем примере добавляется несколько строк с определенным <xref:System.Windows.Documents.TableRowGroup> (указанного по индексу) в таблице.</span><span class="sxs-lookup"><span data-stu-id="9383f-111">The following example adds several rows to a particular <xref:System.Windows.Documents.TableRowGroup> (specified by index) in the table.</span></span>  
+## <a name="example"></a><span data-ttu-id="daeb6-110">Пример</span><span class="sxs-lookup"><span data-stu-id="daeb6-110">Example</span></span>  
+ <span data-ttu-id="daeb6-111">В следующем примере добавляется несколько строк с определенным <xref:System.Windows.Documents.TableRowGroup> (указанного по индексу) в таблице.</span><span class="sxs-lookup"><span data-stu-id="daeb6-111">The following example adds several rows to a particular <xref:System.Windows.Documents.TableRowGroup> (specified by index) in the table.</span></span>  
   
  [!code-csharp[TableSnippets2#_Table_RowGroups_AddRows](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_rowgroups_addrows)]
  [!code-vb[TableSnippets2#_Table_RowGroups_AddRows](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_addrows)]  
   
-## <a name="example"></a><span data-ttu-id="9383f-112">Пример</span><span class="sxs-lookup"><span data-stu-id="9383f-112">Example</span></span>  
- <span data-ttu-id="9383f-113">Следующий пример обращается к некоторые произвольные свойства для строк в первой группе строк в таблице.</span><span class="sxs-lookup"><span data-stu-id="9383f-113">The following example accesses some arbitrary properties on rows in the first row group in the table.</span></span>  
+## <a name="example"></a><span data-ttu-id="daeb6-112">Пример</span><span class="sxs-lookup"><span data-stu-id="daeb6-112">Example</span></span>  
+ <span data-ttu-id="daeb6-113">Следующий пример обращается к некоторые произвольные свойства для строк в первой группе строк в таблице.</span><span class="sxs-lookup"><span data-stu-id="daeb6-113">The following example accesses some arbitrary properties on rows in the first row group in the table.</span></span>  
   
  [!code-csharp[TableSnippets2#_Table_RowGroups_ManipRows](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_rowgroups_maniprows)]
  [!code-vb[TableSnippets2#_Table_RowGroups_ManipRows](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_maniprows)]  
   
-## <a name="example"></a><span data-ttu-id="9383f-114">Пример</span><span class="sxs-lookup"><span data-stu-id="9383f-114">Example</span></span>  
- <span data-ttu-id="9383f-115">В следующем примере добавляется несколько ячеек с определенным <xref:System.Windows.Documents.TableRow> (указанного по индексу) в таблице.</span><span class="sxs-lookup"><span data-stu-id="9383f-115">The following example adds several cells to a particular <xref:System.Windows.Documents.TableRow> (specified by index) in the table.</span></span>  
+## <a name="example"></a><span data-ttu-id="daeb6-114">Пример</span><span class="sxs-lookup"><span data-stu-id="daeb6-114">Example</span></span>  
+ <span data-ttu-id="daeb6-115">В следующем примере добавляется несколько ячеек с определенным <xref:System.Windows.Documents.TableRow> (указанного по индексу) в таблице.</span><span class="sxs-lookup"><span data-stu-id="daeb6-115">The following example adds several cells to a particular <xref:System.Windows.Documents.TableRow> (specified by index) in the table.</span></span>  
   
  [!code-csharp[TableSnippets2#_Table_RowGroups_AddCells](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_rowgroups_addcells)]
  [!code-vb[TableSnippets2#_Table_RowGroups_AddCells](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_addcells)]  
   
-## <a name="example"></a><span data-ttu-id="9383f-116">Пример</span><span class="sxs-lookup"><span data-stu-id="9383f-116">Example</span></span>  
- <span data-ttu-id="9383f-117">Получить доступ к следующим, некоторые произвольные методы и свойства для ячеек в первой строке в первой группе строк.</span><span class="sxs-lookup"><span data-stu-id="9383f-117">The following example access some arbitrary methods and properties on cells in the first row in the first row group.</span></span>  
+## <a name="example"></a><span data-ttu-id="daeb6-116">Пример</span><span class="sxs-lookup"><span data-stu-id="daeb6-116">Example</span></span>  
+ <span data-ttu-id="daeb6-117">Получить доступ к следующим, некоторые произвольные методы и свойства для ячеек в первой строке в первой группе строк.</span><span class="sxs-lookup"><span data-stu-id="daeb6-117">The following example access some arbitrary methods and properties on cells in the first row in the first row group.</span></span>  
   
  [!code-csharp[TableSnippets2#_Table_RowGroups_ManipCells](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_rowgroups_manipcells)]
  [!code-vb[TableSnippets2#_Table_RowGroups_ManipCells](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_manipcells)]  
   
-## <a name="example"></a><span data-ttu-id="9383f-118">Пример</span><span class="sxs-lookup"><span data-stu-id="9383f-118">Example</span></span>  
- <span data-ttu-id="9383f-119">Следующий пример возвращает количество <xref:System.Windows.Documents.TableRowGroup> элементы, размещенные в таблице.</span><span class="sxs-lookup"><span data-stu-id="9383f-119">The following example returns the number of <xref:System.Windows.Documents.TableRowGroup> elements hosted by the table.</span></span>  
+## <a name="example"></a><span data-ttu-id="daeb6-118">Пример</span><span class="sxs-lookup"><span data-stu-id="daeb6-118">Example</span></span>  
+ <span data-ttu-id="daeb6-119">Следующий пример возвращает количество <xref:System.Windows.Documents.TableRowGroup> элементы, размещенные в таблице.</span><span class="sxs-lookup"><span data-stu-id="daeb6-119">The following example returns the number of <xref:System.Windows.Documents.TableRowGroup> elements hosted by the table.</span></span>  
   
  [!code-csharp[TableSnippets2#_Table_RowGroups_Count](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_rowgroups_count)]
  [!code-vb[TableSnippets2#_Table_RowGroups_Count](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_count)]  
   
-## <a name="example"></a><span data-ttu-id="9383f-120">Пример</span><span class="sxs-lookup"><span data-stu-id="9383f-120">Example</span></span>  
- <span data-ttu-id="9383f-121">Следующий пример удаляет определенная группа строк по ссылке.</span><span class="sxs-lookup"><span data-stu-id="9383f-121">The following example removes a particular row group by reference.</span></span>  
+## <a name="example"></a><span data-ttu-id="daeb6-120">Пример</span><span class="sxs-lookup"><span data-stu-id="daeb6-120">Example</span></span>  
+ <span data-ttu-id="daeb6-121">Следующий пример удаляет определенная группа строк по ссылке.</span><span class="sxs-lookup"><span data-stu-id="daeb6-121">The following example removes a particular row group by reference.</span></span>  
   
  [!code-csharp[TableSnippets2#_Table_RowGroups_DelRef](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_rowgroups_delref)]
  [!code-vb[TableSnippets2#_Table_RowGroups_DelRef](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_delref)]  
   
-## <a name="example"></a><span data-ttu-id="9383f-122">Пример</span><span class="sxs-lookup"><span data-stu-id="9383f-122">Example</span></span>  
- <span data-ttu-id="9383f-123">Следующий пример удаляет определенная группа строк по индексу.</span><span class="sxs-lookup"><span data-stu-id="9383f-123">The following example removes a particular row group by index.</span></span>  
+## <a name="example"></a><span data-ttu-id="daeb6-122">Пример</span><span class="sxs-lookup"><span data-stu-id="daeb6-122">Example</span></span>  
+ <span data-ttu-id="daeb6-123">Следующий пример удаляет определенная группа строк по индексу.</span><span class="sxs-lookup"><span data-stu-id="daeb6-123">The following example removes a particular row group by index.</span></span>  
   
  [!code-csharp[TableSnippets2#_Table_RowGroups_DelIndex](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_rowgroups_delindex)]
  [!code-vb[TableSnippets2#_Table_RowGroups_DelIndex](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_delindex)]  
   
-## <a name="example"></a><span data-ttu-id="9383f-124">Пример</span><span class="sxs-lookup"><span data-stu-id="9383f-124">Example</span></span>  
- <span data-ttu-id="9383f-125">Следующий пример удаляет все группы строк из коллекции группы строк таблицы.</span><span class="sxs-lookup"><span data-stu-id="9383f-125">The following example removes all row groups from the table's row groups collection.</span></span>  
+## <a name="example"></a><span data-ttu-id="daeb6-124">Пример</span><span class="sxs-lookup"><span data-stu-id="daeb6-124">Example</span></span>  
+ <span data-ttu-id="daeb6-125">Следующий пример удаляет все группы строк из коллекции группы строк таблицы.</span><span class="sxs-lookup"><span data-stu-id="daeb6-125">The following example removes all row groups from the table's row groups collection.</span></span>  
   
  [!code-csharp[TableSnippets2#_Table_RowGroups_Clear](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_rowgroups_clear)]
  [!code-vb[TableSnippets2#_Table_RowGroups_Clear](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_clear)]  
   
-## <a name="see-also"></a><span data-ttu-id="9383f-126">См. также</span><span class="sxs-lookup"><span data-stu-id="9383f-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="daeb6-126">См. также</span><span class="sxs-lookup"><span data-stu-id="daeb6-126">See also</span></span>
 
-- [<span data-ttu-id="9383f-127">Практическое руководство. Управление элементами потокового содержимого с помощью свойства Inlines</span><span class="sxs-lookup"><span data-stu-id="9383f-127">How-to: Manipulate Flow Content Elements through the Inlines Property</span></span>](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
-- [<span data-ttu-id="9383f-128">Управление FlowDocument с помощью свойства Blocks</span><span class="sxs-lookup"><span data-stu-id="9383f-128">Manipulate a FlowDocument through the Blocks Property</span></span>](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)
-- [<span data-ttu-id="9383f-129">Управление столбцами таблицы с помощью свойства Columns</span><span class="sxs-lookup"><span data-stu-id="9383f-129">Manipulate a Table's Columns through the Columns Property</span></span>](how-to-manipulate-table-columns-through-the-columns-property.md)
+- [<span data-ttu-id="daeb6-127">Практическое руководство. Управление элементами потокового содержимого через свойство Inlines</span><span class="sxs-lookup"><span data-stu-id="daeb6-127">How-to: Manipulate Flow Content Elements through the Inlines Property</span></span>](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
+- [<span data-ttu-id="daeb6-128">Управление FlowDocument с помощью свойства Blocks</span><span class="sxs-lookup"><span data-stu-id="daeb6-128">Manipulate a FlowDocument through the Blocks Property</span></span>](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)
+- [<span data-ttu-id="daeb6-129">Управление столбцами таблицы с помощью свойства Columns</span><span class="sxs-lookup"><span data-stu-id="daeb6-129">Manipulate a Table's Columns through the Columns Property</span></span>](how-to-manipulate-table-columns-through-the-columns-property.md)

@@ -3,21 +3,21 @@ title: Триггеры CLR
 ms.date: 03/30/2017
 ms.assetid: defe379c-30c7-487f-9abd-9c5e12ff49be
 ms.openlocfilehash: 70ba8e072761df561f94c7343fa75c0398f1b5e1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59215330"
 ---
-# <a name="clr-triggers"></a><span data-ttu-id="f63fa-102">Триггеры CLR</span><span class="sxs-lookup"><span data-stu-id="f63fa-102">CLR Triggers</span></span>
-<span data-ttu-id="f63fa-103">Триггер представляет собой специальный тип хранимой процедуры, которая запускается автоматически при возникновении определенного языкового события.</span><span class="sxs-lookup"><span data-stu-id="f63fa-103">A trigger is a special type of stored procedure that automatically runs when a language event executes.</span></span> <span data-ttu-id="f63fa-104">Благодаря интеграции Microsoft SQL Server со средой CLR инфраструктуры .NET Framework обеспечивается возможность использовать любой язык .NET Framework для создания триггеров CLR.</span><span class="sxs-lookup"><span data-stu-id="f63fa-104">Because of the Microsoft SQL Server integration with the .NET Framework common language runtime (CLR), you can use any .NET Framework language to create CLR triggers.</span></span>  
+# <a name="clr-triggers"></a><span data-ttu-id="f0bf9-102">Триггеры CLR</span><span class="sxs-lookup"><span data-stu-id="f0bf9-102">CLR Triggers</span></span>
+<span data-ttu-id="f0bf9-103">Триггер представляет собой специальный тип хранимой процедуры, которая запускается автоматически при возникновении определенного языкового события.</span><span class="sxs-lookup"><span data-stu-id="f0bf9-103">A trigger is a special type of stored procedure that automatically runs when a language event executes.</span></span> <span data-ttu-id="f0bf9-104">Благодаря интеграции Microsoft SQL Server со средой CLR инфраструктуры .NET Framework обеспечивается возможность использовать любой язык .NET Framework для создания триггеров CLR.</span><span class="sxs-lookup"><span data-stu-id="f0bf9-104">Because of the Microsoft SQL Server integration with the .NET Framework common language runtime (CLR), you can use any .NET Framework language to create CLR triggers.</span></span>  
   
- <span data-ttu-id="f63fa-105">Дополнительные сведения см. в разделе [документации по SQL Server](/sql) для версии SQL Server, вы используете.</span><span class="sxs-lookup"><span data-stu-id="f63fa-105">For more detailed information, see the [SQL Server documentation](/sql) for the version of SQL Server you're using.</span></span>
+ <span data-ttu-id="f0bf9-105">Дополнительные сведения см. в разделе [документации по SQL Server](/sql) для версии SQL Server, вы используете.</span><span class="sxs-lookup"><span data-stu-id="f0bf9-105">For more detailed information, see the [SQL Server documentation](/sql) for the version of SQL Server you're using.</span></span>
   
- **<span data-ttu-id="f63fa-106">Документация по SQL Server</span><span class="sxs-lookup"><span data-stu-id="f63fa-106">SQL Server documentation</span></span>**
+ <span data-ttu-id="f0bf9-106">**Документация по SQL Server**</span><span class="sxs-lookup"><span data-stu-id="f0bf9-106">**SQL Server documentation**</span></span>
   
-1. [<span data-ttu-id="f63fa-107">Триггеры CLR</span><span class="sxs-lookup"><span data-stu-id="f63fa-107">CLR Triggers</span></span>](/sql/database-engine/dev-guide/clr-triggers)
+1. [<span data-ttu-id="f0bf9-107">Триггеры CLR</span><span class="sxs-lookup"><span data-stu-id="f0bf9-107">CLR Triggers</span></span>](/sql/database-engine/dev-guide/clr-triggers)
   
-## <a name="see-also"></a><span data-ttu-id="f63fa-108">См. также</span><span class="sxs-lookup"><span data-stu-id="f63fa-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f0bf9-108">См. также</span><span class="sxs-lookup"><span data-stu-id="f0bf9-108">See also</span></span>
 
-- [<span data-ttu-id="f63fa-109">Управляемые поставщики ADO.NET и центр разработчиков DataSet</span><span class="sxs-lookup"><span data-stu-id="f63fa-109">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [<span data-ttu-id="f0bf9-109">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="f0bf9-109">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
