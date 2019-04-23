@@ -3,20 +3,20 @@ title: Практическое руководство. Нахождение р�
 ms.date: 07/20/2015
 ms.assetid: b5b25474-10a8-4df6-aab5-75621bb6b68e
 ms.openlocfilehash: 3757a588ed37805d6dd2569e1d25b07bd166c2d5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324062"
 ---
-# <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a><span data-ttu-id="dc615-102">Практическое руководство. Нахождение разности множеств между двумя списками (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="dc615-102">How to: Find the Set Difference Between Two Lists (LINQ) (Visual Basic)</span></span>
-<span data-ttu-id="dc615-103">В этом примере показано, как использовать LINQ для сравнения двух списков строк и вывода тех строк, которые содержатся в файле names1.txt, но не в файле names2.txt.</span><span class="sxs-lookup"><span data-stu-id="dc615-103">This example shows how to use LINQ to compare two lists of strings and output those lines that are in names1.txt but not in names2.txt.</span></span>  
+# <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a><span data-ttu-id="d5aa6-102">Практическое руководство. Нахождение разности множеств между двумя списками (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d5aa6-102">How to: Find the Set Difference Between Two Lists (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="d5aa6-103">В этом примере показано, как использовать LINQ для сравнения двух списков строк и вывода тех строк, которые содержатся в файле names1.txt, но не в файле names2.txt.</span><span class="sxs-lookup"><span data-stu-id="d5aa6-103">This example shows how to use LINQ to compare two lists of strings and output those lines that are in names1.txt but not in names2.txt.</span></span>  
   
-### <a name="to-create-the-data-files"></a><span data-ttu-id="dc615-104">Создание файлов данных</span><span class="sxs-lookup"><span data-stu-id="dc615-104">To create the data files</span></span>  
+### <a name="to-create-the-data-files"></a><span data-ttu-id="d5aa6-104">Создание файлов данных</span><span class="sxs-lookup"><span data-stu-id="d5aa6-104">To create the data files</span></span>  
   
-1. <span data-ttu-id="dc615-105">Скопируйте файлы names1.txt и names2.txt в папку решения, как показано в разделе [Практическое руководство. Объединение и сравнение коллекций строк (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).</span><span class="sxs-lookup"><span data-stu-id="dc615-105">Copy names1.txt and names2.txt to your solution folder as shown in [How to: Combine and Compare String Collections (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).</span></span>  
+1. <span data-ttu-id="d5aa6-105">Скопируйте файлы names1.txt и names2.txt в папку решения, как показано в разделе [Практическое руководство. Объединение и сравнение коллекций строк (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).</span><span class="sxs-lookup"><span data-stu-id="d5aa6-105">Copy names1.txt and names2.txt to your solution folder as shown in [How to: Combine and Compare String Collections (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="dc615-106">Пример</span><span class="sxs-lookup"><span data-stu-id="dc615-106">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="d5aa6-106">Пример</span><span class="sxs-lookup"><span data-stu-id="d5aa6-106">Example</span></span>  
   
 ```vb  
 Class CompareLists  
@@ -51,11 +51,11 @@ End Class
 ' Garcia, Debra  
 ```  
   
- <span data-ttu-id="dc615-107">Некоторые типы операторов запроса в Visual Basic, такие как <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, и <xref:System.Linq.Enumerable.Concat%2A>, могут быть выражены только в синтаксисе на основе методов.</span><span class="sxs-lookup"><span data-stu-id="dc615-107">Some types of query operations in Visual Basic, such as <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, and <xref:System.Linq.Enumerable.Concat%2A>, can only be expressed in method-based syntax.</span></span>  
+ <span data-ttu-id="d5aa6-107">Некоторые типы операторов запроса в Visual Basic, такие как <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, и <xref:System.Linq.Enumerable.Concat%2A>, могут быть выражены только в синтаксисе на основе методов.</span><span class="sxs-lookup"><span data-stu-id="d5aa6-107">Some types of query operations in Visual Basic, such as <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, and <xref:System.Linq.Enumerable.Concat%2A>, can only be expressed in method-based syntax.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="dc615-108">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="dc615-108">Compiling the Code</span></span>  
- <span data-ttu-id="dc615-109">Создайте проект, предназначенный для .NET Framework 3.5 или более поздней версии, со ссылкой на библиотеку System.Core.dll и директивой `Imports` для пространства имен System.Linq.</span><span class="sxs-lookup"><span data-stu-id="dc615-109">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="d5aa6-108">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="d5aa6-108">Compiling the Code</span></span>  
+ <span data-ttu-id="d5aa6-109">Создайте проект, предназначенный для .NET Framework 3.5 или более поздней версии, со ссылкой на библиотеку System.Core.dll и директивой `Imports` для пространства имен System.Linq.</span><span class="sxs-lookup"><span data-stu-id="d5aa6-109">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dc615-110">См. также</span><span class="sxs-lookup"><span data-stu-id="dc615-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d5aa6-110">См. также</span><span class="sxs-lookup"><span data-stu-id="d5aa6-110">See also</span></span>
 
-- [<span data-ttu-id="dc615-111">LINQ и строки (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="dc615-111">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [<span data-ttu-id="d5aa6-111">LINQ и строки (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d5aa6-111">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

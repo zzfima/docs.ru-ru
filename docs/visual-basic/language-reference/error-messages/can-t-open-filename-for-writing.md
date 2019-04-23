@@ -8,25 +8,25 @@ helpviewer_keywords:
 - BC2012
 ms.assetid: 73270fe4-a638-42c7-be21-5e156e2b18f6
 ms.openlocfilehash: b92a2c6f3de02a1a31ad131004dd613b15f01f19
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59325167"
 ---
-# <a name="cant-open-filename-for-writing"></a><span data-ttu-id="33f5f-102">Не удается открыть "\<имя_файла >" для записи</span><span class="sxs-lookup"><span data-stu-id="33f5f-102">Can't open '\<filename>' for writing</span></span>
-<span data-ttu-id="33f5f-103">Указанный файл не удалось открыть для записи, возможно, так как он уже открыт.</span><span class="sxs-lookup"><span data-stu-id="33f5f-103">The specified file cannot be opened for writing, perhaps because it has already been opened.</span></span>  
+# <a name="cant-open-filename-for-writing"></a><span data-ttu-id="b1afe-102">Не удается открыть "\<имя_файла >" для записи</span><span class="sxs-lookup"><span data-stu-id="b1afe-102">Can't open '\<filename>' for writing</span></span>
+<span data-ttu-id="b1afe-103">Указанный файл не удалось открыть для записи, возможно, так как он уже открыт.</span><span class="sxs-lookup"><span data-stu-id="b1afe-103">The specified file cannot be opened for writing, perhaps because it has already been opened.</span></span>  
   
- <span data-ttu-id="33f5f-104">**Идентификатор ошибки:** BC2012</span><span class="sxs-lookup"><span data-stu-id="33f5f-104">**Error ID:** BC2012</span></span>  
+ <span data-ttu-id="b1afe-104">**Идентификатор ошибки:** BC2012</span><span class="sxs-lookup"><span data-stu-id="b1afe-104">**Error ID:** BC2012</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="33f5f-105">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="33f5f-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="b1afe-105">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="b1afe-105">To correct this error</span></span>  
   
-1. <span data-ttu-id="33f5f-106">Закройте файл и откройте его снова.</span><span class="sxs-lookup"><span data-stu-id="33f5f-106">Close the file and reopen it.</span></span>  
+1. <span data-ttu-id="b1afe-106">Закройте файл и откройте его снова.</span><span class="sxs-lookup"><span data-stu-id="b1afe-106">Close the file and reopen it.</span></span>  
   
-2. <span data-ttu-id="33f5f-107">Проверка разрешений для файла.</span><span class="sxs-lookup"><span data-stu-id="33f5f-107">Check the file's permissions.</span></span>  
+2. <span data-ttu-id="b1afe-107">Проверка разрешений для файла.</span><span class="sxs-lookup"><span data-stu-id="b1afe-107">Check the file's permissions.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="33f5f-108">См. также</span><span class="sxs-lookup"><span data-stu-id="33f5f-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b1afe-108">См. также</span><span class="sxs-lookup"><span data-stu-id="b1afe-108">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A>
-- [<span data-ttu-id="33f5f-109">Запись в файлы</span><span class="sxs-lookup"><span data-stu-id="33f5f-109">Writing to Files</span></span>](../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)
+- [<span data-ttu-id="b1afe-109">Запись в файлы</span><span class="sxs-lookup"><span data-stu-id="b1afe-109">Writing to Files</span></span>](../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)
