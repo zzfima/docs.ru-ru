@@ -1,5 +1,5 @@
 ---
-title: <servicePointManager> (Сетевые параметры)
+title: Элемент <servicePointManager> (параметры сети)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#servicePointManager
@@ -9,10 +9,10 @@ helpviewer_keywords:
 - <servicePointManager> element
 ms.assetid: 6e5def51-3646-4ef6-a7bd-c69151321bec
 ms.openlocfilehash: 407ed85de109a671030eccff8ddd92af91628014
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59202213"
 ---
 # <a name="servicepointmanager-element-network-settings"></a>\<servicePointManager > (сетевые параметры)
@@ -42,7 +42,7 @@ ms.locfileid: "59202213"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|**Атрибут**|**Описание**|  
+|**Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))|**Описание**|  
 |-------------------|---------------------|  
 |`checkCertificateName`|Указывает, должен ли система проверить соответствие имени узла сервера имен на сертификат перед использованием сертификата. Значение по умолчанию — `true`.|  
 |`checkCertificateRevocationList`|Указывает, должна ли система проверять был отозван ли сертификат, прежде чем использовать сертификат. Значение по умолчанию — `false`.|  

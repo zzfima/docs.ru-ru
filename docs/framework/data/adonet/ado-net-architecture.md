@@ -3,10 +3,10 @@ title: Архитектура ADO.NET
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
 ms.openlocfilehash: 3f3fc0c8c125c57116da4f1de467d738ac36ca29
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59202642"
 ---
 # <a name="adonet-architecture"></a>Архитектура ADO.NET
@@ -52,11 +52,11 @@ ms.locfileid: "59202642"
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] используется для развертывания служб данных в Интернете или интрасети. Данные структурируются как сущности и отношения согласно спецификациям модели EDM. Данные, развертываемые в данной модели, адресуются по стандартному протоколу HTTP. Дополнительные сведения см. в разделе [Службы данных WCF 4.5](../../../../docs/framework/data/wcf/index.md).  
   
 ## <a name="xml-and-adonet"></a>XML и ADO.NET  
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] использует возможности XML для предоставления отключенный доступ к данным. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] был спроектированный руки идут рука об руку с классами XML в [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]; оба они являются компонентами одной архитектуры.  
+ [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] использует возможности XML для предоставления доступа к данным без сетевого соединения. Разработка [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] производилась одновременно с XML-классами платформы [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]; оба они являются компонентами одной архитектуры.  
   
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] и классы XML в [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] сходятся в `DataSet` объекта. Объект `DataSet` может заполняться данными из XML-источника, будь то файл или поток XML-данных. Объект `DataSet` может быть записан в виде XML-кода, соответствующего спецификациям консорциума W3C, который включает в себя схему в виде XSD, независимо от источника данных, находящихся в `DataSet`. Так как в `DataSet` собственным форматом сериализации является XML, он является отличным способом перемещения данных между уровнями. Это делает `DataSet` оптимальным решением для удаленного взаимодействия с контекстом данных и схемы как в направлении к веб-службе XML, так и в обратном направлении. Дополнительные сведения см. в разделе [XML-документы и данные](../../../../docs/standard/data/xml/index.md).  
+ [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] и классы XML в [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] сходятся в объекте `DataSet`. Объект `DataSet` может заполняться данными из XML-источника, будь то файл или поток XML-данных. Объект `DataSet` может быть записан в виде XML-кода, соответствующего спецификациям консорциума W3C, который включает в себя схему в виде XSD, независимо от источника данных, находящихся в `DataSet`. Так как в `DataSet` собственным форматом сериализации является XML, он является отличным способом перемещения данных между уровнями. Это делает `DataSet` оптимальным решением для удаленного взаимодействия с контекстом данных и схемы как в направлении к веб-службе XML, так и в обратном направлении. Дополнительные сведения см. в разделе [XML-документы и данные](../../../../docs/standard/data/xml/index.md).  
   
 ## <a name="see-also"></a>См. также
 
-- [Общие сведения о ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
-- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Общие сведения об ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

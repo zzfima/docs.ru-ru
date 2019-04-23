@@ -3,10 +3,10 @@ title: DataTables
 ms.date: 03/30/2017
 ms.assetid: 52ff0e32-3e5a-41de-9a3b-7b04ea52b83e
 ms.openlocfilehash: f6509400d7f6633749155f778e3ba58ec6c27ec2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207322"
 ---
 # <a name="datatables"></a>DataTables
@@ -21,16 +21,16 @@ ms.locfileid: "59207322"
  С помощью одного или нескольких связанных столбцов таблицы между таблицами можно создавать связи типа «родители-потомки». Создать связь между **DataTable** объектов с помощью <xref:System.Data.DataRelation>. **DataRelation** объекты могут затем использоваться для возврата связанных дочерних или родительских строк определенной строки. Дополнительные сведения см. в разделе [Добавление отношений DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md).  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Создание таблицы данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-datatable.md)  
+ [Создание DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-datatable.md)  
  Описание способов создания **DataTable** и добавьте его в **набора данных**.  
   
- [Определение схемы таблицы данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
+ [Определение схемы DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
  Предоставляет сведения о создании и использовании **DataColumn** объектов и ограничений.  
   
- [Управление данными в таблице данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
+ [Управление данными в DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
  Описывает, как добавлять, изменять и удалять данные таблицы. Содержит сведения об использовании **DataTable** событий для изучения изменений данных в таблице.  
   
- [Обработка событий таблиц данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
+ [Обработка событий DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
  Предоставляет сведения о событиях, доступных для использования с **DataTable**, включая события, связанные с изменением значений столбцов и добавлением или удалением строк.  
   
 ## <a name="related-sections"></a>Связанные разделы  
@@ -57,4 +57,4 @@ ms.locfileid: "59207322"
   
 ## <a name="see-also"></a>См. также
 
-- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

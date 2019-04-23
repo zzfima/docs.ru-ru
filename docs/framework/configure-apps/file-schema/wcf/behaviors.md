@@ -3,10 +3,10 @@ title: <behaviors>
 ms.date: 03/30/2017
 ms.assetid: 0e5da4e6-1aa5-466c-924e-f10efee57f0b
 ms.openlocfilehash: 108c349a44ed3ac902652f86241c1e96a622549b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59204241"
 ---
 # <a name="behaviors"></a>\<варианты поведения >
@@ -35,7 +35,7 @@ ms.locfileid: "59204241"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<endpointBehaviors>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)|Данный раздел конфигурации представляет все типы поведения, определенные для конкретной конечной точки.|  
+|[\<endpointBehaviors >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)|Данный раздел конфигурации представляет все типы поведения, определенные для конкретной конечной точки.|  
 |[\<serviceBehaviors >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)|В данном разделе конфигурации представлены все поведения, определенные для конкретной службы.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
@@ -55,7 +55,7 @@ ms.locfileid: "59204241"
 - <xref:System.ServiceModel.Configuration.ServiceBehaviorElementCollection>
 - <xref:System.ServiceModel.Configuration.ServiceBehaviorElement>
 - [Настройка и расширение среды выполнения с помощью поведений](../../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)
-- [Настройка поведений клиентов](../../../../../docs/framework/wcf/configuring-client-behaviors.md)
-- [Задание поведения клиента во время выполнения](../../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
+- [Настройка поведения клиентов](../../../../../docs/framework/wcf/configuring-client-behaviors.md)
+- [Указание поведения клиента во время выполнения](../../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
 - [Указание поведения службы во время выполнения](../../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)
-- [Поведение безопасности](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+- [Поведения безопасности](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)

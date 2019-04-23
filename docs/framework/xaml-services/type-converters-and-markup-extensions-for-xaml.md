@@ -9,10 +9,10 @@ helpviewer_keywords:
 - XAML [XAML Services], service context
 ms.assetid: db07a952-05ce-4aa4-b6f9-aac7397d0326
 ms.openlocfilehash: e6f8ed3b893319e771eb0af96da7a58a7fad5c9b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59200991"
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>Преобразователи типов или расширения разметки для XAML
@@ -71,4 +71,4 @@ ms.locfileid: "59200991"
 - <xref:System.Xaml.XamlObjectWriter>
 - [Общие сведения о расширениях разметки для XAML](markup-extensions-for-xaml-overview.md)
 - [Общие сведения о преобразователях типов для XAML](type-converters-for-xaml-overview.md)
-- [Служебные контексты, доступные для расширений разметки и преобразователей типов](service-contexts-available-to-type-converters-and-markup-extensions.md)
+- [Service Contexts Available to Type Converters and Markup Extensions](service-contexts-available-to-type-converters-and-markup-extensions.md)

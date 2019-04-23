@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3daf0a1cf2d1ae55780a16612aa33a0fdb70a52b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e5320bc6c5105c95d63b1888e1adbc2ecf1bc5fb
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55282039"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59200003"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe (отладчик командной строки для .NET Framework)
 Отладчик командной строки для платформы NET Framework помогает разработчикам программ и приложений в поиске и исправлении ошибок в программах, работающих в среде CLR платформы .NET Framework. Этот инструмент использует отладочный API-интерфейс среды выполнения. Программа MDbg.exe может использоваться только для отладки управляемого кода, отладка неуправляемого кода не поддерживается.  
@@ -105,5 +105,6 @@ mdbg>
  После входа в отладчик используйте команды и аргументы, описанные в предыдущем разделе.  
   
 ## <a name="see-also"></a>См. также
+
 - [Инструменты](../../../docs/framework/tools/index.md)
 - [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

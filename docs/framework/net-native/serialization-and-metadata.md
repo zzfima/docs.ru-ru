@@ -5,10 +5,10 @@ ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c82d32fe5b1e62a19ff5e2920c5943f1303b2d64
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207036"
 ---
 # <a name="serialization-and-metadata"></a>Сериализация и метаданные
@@ -66,7 +66,7 @@ ms.locfileid: "59207036"
   
 ## <a name="see-also"></a>См. также
 
-- [Ссылка на файл конфигурации директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Элементы директив среды выполнения](../../../docs/framework/net-native/runtime-directive-elements.md)
 - [\<Тип > элемент](../../../docs/framework/net-native/type-element-net-native.md)
-- [\<Пространство имен > элемент](../../../docs/framework/net-native/namespace-element-net-native.md)
+- [Элемент \<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)

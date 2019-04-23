@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: c9631ed7ecc854fe6f355eb4bbc2bfb5097ea770
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80e0bcd341f9059fc6787756f8e743aedc5dc43e
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540628"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59206425"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (средство создания кода)
 Программа командной строки SqlMetal создает код и сопоставление для компонента [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] платформы [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. С помощью описанных ниже параметров можно настраивать SqlMetal на выполнение различных действий, включая следующие.  
@@ -133,6 +133,7 @@ sqlmetal [options] [<input file>]
 >  При использовании параметра **/pluralize** вместе с учебной базой данных Northwind необходимо иметь в виду следующее. Когда SqlMetal создает имена типов строк для таблиц, имена таблиц представляются в единственном числе. При создании свойств <xref:System.Data.Linq.DataContext> для таблиц имена таблиц представляются во множественном числе. Однако таблицы в учебной базе данных Northwind уже имеют имена в форме множественного числа. Поэтому данная часть процедуры не будет иметь видимого эффекта. Если таблицам базы данных принято присваивать имена в единственном числе, то коллекциям .NET принято присваивать имена во множественном числе.  
   
 ## <a name="see-also"></a>См. также
+
 - [Практическое руководство. Создание модели объектов на языке Visual Basic или C#](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
 - [Создание кода в LINQ to SQL](../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
 - [Внешнее сопоставление](../../../docs/framework/data/adonet/sql/linq/external-mapping.md)

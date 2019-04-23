@@ -14,10 +14,10 @@ helpviewer_keywords:
 - DrawingGroup objects [WPF]
 ms.assetid: 6ab1fe6b-3eed-4432-a248-b487e7234e5b
 ms.openlocfilehash: 975fafebe255d5ff4848fde2c0b0ff08b68d4f7b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59206412"
 ---
 # <a name="drawings"></a>Объекты рисования
@@ -25,7 +25,7 @@ ms.locfileid: "59206412"
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Обзор объектов Drawing](drawing-objects-overview.md)  
-  [Практические руководства](drawings-how-to-topics.md)  
+  [Разделы практического руководства](drawings-how-to-topics.md)  
   
 ## <a name="see-also"></a>См. также
 

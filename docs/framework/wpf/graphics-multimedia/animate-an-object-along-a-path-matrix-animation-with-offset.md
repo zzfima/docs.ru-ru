@@ -10,10 +10,10 @@ helpviewer_keywords:
 - matrix animation with offset accumulation [WPF]
 ms.assetid: 1bca90ef-9832-4128-8ed6-62908e7ec146
 ms.openlocfilehash: 3e7b892e2a2215d26512850477844d71bce7fe09
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207374"
 ---
 # <a name="how-to-animate-an-object-along-a-path-matrix-animation-with-offset-accumulation"></a>Практическое руководство. Анимация объектов по всему пути (матричная анимации с накоплением смещения)
@@ -36,4 +36,4 @@ ms.locfileid: "59207374"
 ## <a name="see-also"></a>См. также
 
 - [Общие сведения об эффектах анимации](animation-overview.md)
-- [Практические руководства, посвященные анимации пути](path-animation-how-to-topics.md)
+- [Практические руководства, посвященные анимации по контуру](path-animation-how-to-topics.md)

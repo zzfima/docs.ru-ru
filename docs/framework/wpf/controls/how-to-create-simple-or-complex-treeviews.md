@@ -6,10 +6,10 @@ helpviewer_keywords:
 - Control class [WPF], TreeView [WPF], creating
 ms.assetid: 1defbb78-b8e7-4c0e-b650-576453ac828d
 ms.openlocfilehash: 7edb4933ebcc0f0d2cb02754238c2342ee9dd4a2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59205151"
 ---
 # <a name="how-to-create-simple-or-complex-treeviews"></a>Практическое руководство. Создание простых или сложных элементов TreeView
@@ -44,5 +44,5 @@ ms.locfileid: "59205151"
 
 - <xref:System.Windows.Controls.TreeView>
 - <xref:System.Windows.Controls.TreeViewItem>
-- [Обзор элемента управления "TreeView"](treeview-overview.md)
-- [Практические руководства](treeview-how-to-topics.md)
+- [Обзор элемента управления TreeView](treeview-overview.md)
+- [Разделы практического руководства](treeview-how-to-topics.md)

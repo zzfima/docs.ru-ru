@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da36cfb86aae52af90451e92b8b17088e29481da
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 314977cb55d9c927ddf96a9279ebb83d8f69e936
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57481759"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59200926"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe (программа экспорта библиотек типов)
 Программа импорта библиотек типов преобразует определения типов, содержащиеся в библиотеке типов COM, в эквивалентные определения сборки среды CLR. Tlbimp.exe выводит двоичный файл (сборку), содержащий метаданные среды выполнения для типов, определенных в исходной библиотеке типов. Этот файл можно просмотреть с помощью таких средств, как [Ildasm.exe](ildasm-exe-il-disassembler.md).  
@@ -126,6 +126,7 @@ void SomeMethod(out bool x);
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Инструменты](index.md)
 - [Tlbexp.exe (программа экспорта библиотек типов)](tlbexp-exe-type-library-exporter.md)
 - [Импорт библиотеки типов в виде сборки](../interop/importing-a-type-library-as-an-assembly.md)

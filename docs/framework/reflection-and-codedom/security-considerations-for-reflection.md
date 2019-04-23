@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7e3a4a2208f669dc4fc0589f08b32aeb2c5e4423
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8c238f0aebd7c81443eb55fe0ee84844f0c9aee8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509324"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59207517"
 ---
 # <a name="security-considerations-for-reflection"></a>Соображения о безопасности для отражения
 Отражение дает возможность получать информацию о типах и членах, а также обращаться к членам (то есть вызывать методы и конструкторы для получения и задания значений свойств, добавления и удаления обработчиков событий и т. д.). Использование отражения для получения информации о типах и членах не ограничено. В любом коде отражение можно использовать для выполнения следующих задач:  
@@ -105,6 +105,7 @@ ms.locfileid: "54509324"
 -   Начиная с версии [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] использование отражения для получения сведений о закрытых типах и членах не требует никаких разрешений. В более ранних версиях для этого требовалось разрешение <xref:System.Security.Permissions.ReflectionPermission> с флагом <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.Security.Permissions.ReflectionPermissionFlag>
 - <xref:System.Security.Permissions.ReflectionPermission>
 - <xref:System.Security.Permissions.SecurityPermission>

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - age of cached resources
 ms.assetid: 7f775925-89a1-4956-ba90-c869c1749a94
 ms.openlocfilehash: 18a73a46bc4b463d0a5f5690afe6d1109e06171c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207140"
 ---
 # <a name="cache-policy-interactionmaximum-age-and-maximum-staleness"></a>Взаимодействие с политикой кэша: максимальный возраст и устаревание
@@ -39,7 +39,7 @@ ms.locfileid: "59207140"
 
 - [Управление кэшем для сетевых приложений](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
 - [Политика кэша](../../../docs/framework/network-programming/cache-policy.md)
-- [политики кэша на основе расположения](../../../docs/framework/network-programming/location-based-cache-policies.md)
-- [политики кэша на основе времени](../../../docs/framework/network-programming/time-based-cache-policies.md)
+- [Политики кэша на основе расположения](../../../docs/framework/network-programming/location-based-cache-policies.md)
+- [Политики кэша на основе времени](../../../docs/framework/network-programming/time-based-cache-policies.md)
 - [Настройка кэширования в сетевых приложениях](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)
 - [Взаимодействие с политикой кэша: максимальный возраст и минимальная актуальность](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-minimum-freshness.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ebec8c880f5b40ed3294585b9be0e83972ac12a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f1f9a88a347650474c7a63b41984e3346e0ce205
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741710"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59204566"
 ---
 # <a name="shadow-copying-assemblies"></a>Теневое копирование сборок
 Теневое копирование позволяет обновлять используемые в домене приложения сборки без выгрузки домена приложения. Это особенно полезно для приложений, которые должны быть доступны постоянно, таких как сайты ASP.NET.  
@@ -78,6 +78,7 @@ ms.locfileid: "54741710"
  Класс <xref:System.AppDomain> имеет несколько методов, например <xref:System.AppDomain.SetShadowCopyFiles%2A> и <xref:System.AppDomain.ClearShadowCopyPath%2A>, которые можно использовать для управления теневым копированием в домене приложения, но в .NET Framework версии 2.0 они были помечены как устаревшие. Рекомендуемый способ настройки теневого копирования для домена приложения — это использование свойств класса <xref:System.AppDomainSetup>.  
   
 ## <a name="see-also"></a>См. также
+
 - <xref:System.AppDomainSetup.ShadowCopyFiles%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.CachePath%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.ApplicationName%2A?displayProperty=nameWithType>

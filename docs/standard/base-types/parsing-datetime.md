@@ -16,12 +16,12 @@ helpviewer_keywords:
 - time strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c8aa10c25fd7459bebb1de6d71a54b6e361e20e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 413a04d6ccdfff4b9cbf937821683ab7f7b37361
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560820"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59208128"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>Синтаксический анализ строк даты и времени в .NET
 
@@ -32,7 +32,6 @@ ms.locfileid: "54560820"
 1. Можно указать, как отсутствующие в тексте компоненты задаются в значениях даты и времени.
 
 Методы <xref:System.DateTime.Parse%2A> и <xref:System.DateTime.TryParse%2A> позволяют преобразовать много стандартных представлений даты и времени. Методы <xref:System.DateTime.ParseExact%2A>и <xref:System.DateTime.TryParseExact%2A> позволяют преобразовать строковое представление, соответствующее шаблону, указанному в строке формата даты и времени. (Дополнительные сведения см. в статьях [Строки стандартных форматов даты и времени](standard-date-and-time-format-strings.md) и [Строки настраиваемых форматов даты и времени](custom-date-and-time-format-strings.md).)
-
 
 Текущий объект <xref:System.Globalization.DateTimeFormatInfo> обеспечивает более точный контроль над тем, как текст должен интерпретироваться в качестве даты и времени. В свойствах <xref:System.Globalization.DateTimeFormatInfo> описываются разделители даты и времени, названия месяцев, дней и эр, а также формат для обозначения AM и PM. Объект <xref:System.Globalization.DateTimeFormatInfo> в текущем потоке представляет текущие язык и региональные параметры. Если требуется задать определенные язык и региональные параметры или настраиваемые параметры, укажите для метода анализа параметр <xref:System.IFormatProvider>. Для параметра <xref:System.IFormatProvider> следует указать объект <xref:System.Globalization.CultureInfo>, представляющий язык и региональные параметры, или объект <xref:System.Globalization.DateTimeFormatInfo>.
 

@@ -11,10 +11,10 @@ ms.assetid: d60f19fe-7bec-47ba-b60e-ba9ce66abf8c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 49476a4417e5431842f8e2ba0371c53c5c9f03e9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207829"
 ---
 # <a name="axlrsakeyvaluetopublickeytoken-function"></a>\_Функция AxlRSAKeyValueToPublicKeyToken
@@ -42,7 +42,7 @@ HRESULT _AxlRSAKeyValueToPublicKeyToken (
  [из] Указатель на WCHAR * для получения шестнадцатеричного кодированного маркера открытого ключа.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `S_OK` Если функция выполняется успешно. В противном случае возвращается код ошибки.  
+ `S_OK`, если функция выполняется успешно. В противном случае возвращается код ошибки.  
   
 ## <a name="see-also"></a>См. также
 

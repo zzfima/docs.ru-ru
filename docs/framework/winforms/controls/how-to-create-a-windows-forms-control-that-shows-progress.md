@@ -11,10 +11,10 @@ helpviewer_keywords:
 - FlashTrackBar custom control
 ms.assetid: 24c5a2e3-058c-4b8d-a217-c06e6a130c2f
 ms.openlocfilehash: 1f457d6e2b0eb73da7a16dc93ea80a14ddb4b2c2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59202018"
 ---
 # <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a>Практическое руководство. Создание элемента управления, показывающего прогресс в форме Windows Forms
@@ -28,9 +28,9 @@ ms.locfileid: "59202018"
   
 -   Переопределение <xref:System.Windows.Forms.Control.OnPaint%2A> метод для предоставления логики для отрисовки элемента управления.  
   
--   Расчет области, доступной для рисования элемента управления с помощью его <xref:System.Windows.Forms.Control.ClientRectangle%2A> свойство. `FlashTrackBar` делает это в его `OptimizedInvalidate` метод.  
+-   Расчет области, доступной для рисования элемента управления с помощью его <xref:System.Windows.Forms.Control.ClientRectangle%2A> свойство. `FlashTrackBar` выполняет это действие в методе `OptimizedInvalidate`.  
   
--   Реализация сериализации (устойчивости) для свойства при его изменении в конструкторе Windows Forms. `FlashTrackBar` Определяет `ShouldSerializeStartColor` и `ShouldSerializeEndColor` методы для сериализации его `StartColor` и `EndColor` свойства.  
+-   Реализация сериализации (устойчивости) для свойства при его изменении в конструкторе Windows Forms. `FlashTrackBar` определяет методы `ShouldSerializeStartColor` и `ShouldSerializeEndColor` для сериализации свойств `StartColor` и `EndColor`.  
   
  В приведенной ниже таблице показаны пользовательские свойства, которые определяет `FlashTrackBar`.  
   
@@ -94,5 +94,5 @@ ms.locfileid: "59202018"
   
 ## <a name="see-also"></a>См. также
 
-- [Расширение поддержки времени разработки](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
+- [Расширения поддержки времени разработки](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
 - [Основы разработки элементов управления форм Windows Forms](windows-forms-control-development-basics.md)

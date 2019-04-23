@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1ee737f4c6d34e77996f5ba08ce4d84132a99238
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207335"
 ---
 # <a name="getrequestedruntimeversion-function"></a>Функция GetRequestedRuntimeVersion
@@ -60,7 +60,7 @@ HRESULT GetRequestedRuntimeVersion (
 |-----------------|-----------------|  
 |S_OK|Метод завершился успешно.|  
 |ERROR_INSUFFICIENT_BUFFER|Версии буфера недостаточен для хранения строки версии.|  
-|E_POINTER|`pdwLength` имеет значение null.|  
+|E_POINTER|Параметр `pdwLength` имеет значение null.|  
   
 ## <a name="requirements"></a>Требования  
  **Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  

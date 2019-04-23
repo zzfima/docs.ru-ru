@@ -3,10 +3,10 @@ title: Поддержка SqlClient LocalDB
 ms.date: 03/30/2017
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
 ms.openlocfilehash: 416945964af7fda5ed5aaab2f5aae1bbc8928556
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59204761"
 ---
 # <a name="sqlclient-support-for-localdb"></a>Поддержка SqlClient LocalDB
@@ -29,7 +29,7 @@ ms.locfileid: "59204761"
     server=(localdb)\\myInstance  
     ```  
   
- `User Instance=True` не допускается при подключении к базе данных LocalDB.  
+ Указание`User Instance=True` недопустимо, если производится соединение с базой данных LocalDB.  
   
  Базу данных LocalDB можно скачать из [пакета дополнительных компонентов Microsoft SQL Server 2012](https://www.microsoft.com/download/en/details.aspx?id=29065). Если вы будете использовать sqlcmd.exe для изменения данных в экземпляре LocalDB, вам потребуется sqlcmd из SQL Server 2012, который также можно получить из пакета дополнительных компонентов SQL Server 2012.  
   
@@ -61,4 +61,4 @@ ms.locfileid: "59204761"
 ## <a name="see-also"></a>См. также
 
 - [Возможности SQL Server и ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
-- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
