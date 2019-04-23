@@ -2,11 +2,17 @@
 title: Сетевое программирование в .NET Framework
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - Networking
-  - Internet
-  - 'Internet, .NET Framework Internet services'
-  - Network Resources
+- Networking
+- Internet
+- Internet, .NET Framework Internet services
+- Network Resources
 ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
+ms.openlocfilehash: 74084b8eef46f700733ad44e04cf8b3811456b85
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61642416"
 ---
 # <a name="network-programming-in-the-net-framework"></a>Сетевое программирование в .NET Framework
 Microsoft .NET Framework обеспечивает многоуровневую, расширяемую и управляемую реализацию служб Интернета, которую можно легко и быстро интегрировать в приложения. В сетевых приложениях можно использовать подключаемые протоколы, которые позволяют автоматически применять новые протоколы Интернета, или управляемую реализацию интерфейса сокетов Windows, дающую возможность работать с сетью на уровне сокетов.  

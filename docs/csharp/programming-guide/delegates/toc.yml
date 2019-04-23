@@ -1,18 +1,11 @@
-items:
 - name: Делегаты
   href: index.md
   items:
-  - name: Использование делегатов
-    href: using-delegates.md
-  - name: Делегаты с именованными методами и Анонимные методы
-    href: delegates-with-named-vs-anonymous-methods.md
-  - name: Практическое руководство. Руководство по программированию на C#. Объединение делегатов (многоадресные делегаты)
-    href: how-to-combine-delegates-multicast-delegates.md
-  - name: Практическое руководство. Объявление, создание и использование делегата
-    href: how-to-declare-instantiate-and-use-a-delegate.md
-ms.openlocfilehash: f9857a805966b3b3c9d1c6776027c77c6183235b
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470768"
+    - name: Использование делегатов
+      href: using-delegates.md
+    - name: Делегаты с именованными методами и Анонимные методы
+      href: delegates-with-named-vs-anonymous-methods.md
+    - name: 'Как выполнить Руководство по программированию на C#. Объединение делегатов (многоадресные делегаты)'
+      href: how-to-combine-delegates-multicast-delegates.md
+    - name: 'Как выполнить Объявление, создание и использование делегата'
+      href: how-to-declare-instantiate-and-use-a-delegate.md
