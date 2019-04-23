@@ -9,10 +9,10 @@ helpviewer_keywords:
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
 ms.openlocfilehash: 72207861850875f08786401aacf7b911b2a5b1f6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59173034"
 ---
 # <a name="application-startup-time"></a>Время запуска приложения
@@ -65,7 +65,7 @@ ms.locfileid: "59173034"
  Одновременное присутствие модулей Ngen и JIT может вызвать противоположный эффект. Это связано с тем, что при этом требуется загрузка mscorjit.dll, а когда JIT-компилятор работает с вашим кодом и считывает метаданные сборок, происходит обращение к многим страницам в образах Ngen.  
   
 ### <a name="ngen-and-clickonce"></a>NGen и ClickOnce  
- Время загрузки вашего приложения может также зависеть от выбранного способа его развертывания. [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] развертывание приложений не поддерживает Ngen. Если вы решите использовать Ngen.exe для своего приложения, выберите другой механизм развертывания, например установщик Windows.  
+ Время загрузки вашего приложения может также зависеть от выбранного способа его развертывания. Развертывание приложений [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] не поддерживает Ngen. Если вы решите использовать Ngen.exe для своего приложения, выберите другой механизм развертывания, например установщик Windows.  
   
  См. дополнительные сведения о [файле Ngen.exe (генераторе образов в машинном коде)](../../tools/ngen-exe-native-image-generator.md).  
   
@@ -130,4 +130,4 @@ ms.locfileid: "59173034"
 - <xref:System.Resources.ResourceManager>
 - [Добавление в WPF-приложение экрана-заставки](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)
 - [Ngen.exe (генератор образов в машинном коде)](../../tools/ngen-exe-native-image-generator.md)
-- [\<generatePublisherEvidence > элемент](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md)
+- [\<Элемент generatePublisherEvidence>](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md)

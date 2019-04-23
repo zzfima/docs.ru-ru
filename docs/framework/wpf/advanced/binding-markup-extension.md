@@ -8,10 +8,10 @@ helpviewer_keywords:
 - XAML [WPF], Binding markup extension
 ms.assetid: 83d6e2a4-1b0c-4fc8-bd96-b5e98800ab63
 ms.openlocfilehash: 3455c7ccdedb432fc05c7dc9e80f0f7509f4fa0c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59170317"
 ---
 # <a name="binding-markup-extension"></a>Привязка расширения разметки
@@ -126,5 +126,5 @@ ms.locfileid: "59170317"
 
 - <xref:System.Windows.Data.Binding>
 - [Общие сведения о привязке данных](../data/data-binding-overview.md)
-- [Обзор XAML (WPF)](xaml-overview-wpf.md)
+- [Общие сведения о языке XAML (WPF)](xaml-overview-wpf.md)
 - [Расширения разметки и XAML WPF](markup-extensions-and-wpf-xaml.md)

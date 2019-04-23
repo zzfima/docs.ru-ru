@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d98829b29100824e5d606e23aaf287c9f6e81d69
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59170967"
 ---
 # <a name="createapplicationcontext-function"></a>Функция CreateApplicationContext
@@ -55,4 +55,4 @@ HRESULT CreateApplicationContext (
 
 - [Интерфейс IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
 - [Глобальные статические функции Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
-- [глобальный кэш сборок](../../../../docs/framework/app-domains/gac.md)
+- [Глобальный кэш сборок](../../../../docs/framework/app-domains/gac.md)

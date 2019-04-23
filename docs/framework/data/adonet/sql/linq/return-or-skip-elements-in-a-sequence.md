@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 81a31acd-e0f1-4bca-9a12-fa1ad5752374
 ms.openlocfilehash: 885e6bc011041320a3dc7b17d84b2541bf030adf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59168315"
 ---
 # <a name="return-or-skip-elements-in-a-sequence"></a>Возврат или пропуск элементов последовательности
@@ -18,7 +18,7 @@ ms.locfileid: "59168315"
  Для пропуска заданного числа элементов последовательности и возвращения оставшихся используется оператор <xref:System.Linq.Queryable.Skip%2A>.  
   
 > [!NOTE]
->  <xref:System.Linq.Enumerable.Take%2A> и <xref:System.Linq.Enumerable.Skip%2A> накладываются некоторые ограничения, когда они используются в запросах к SQL Server 2000. Дополнительные сведения см. в записи «"Skip и делаются исключения в SQL Server 2000» в [Устранение неполадок](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
+>  На методы <xref:System.Linq.Enumerable.Take%2A> и <xref:System.Linq.Enumerable.Skip%2A> накладываются некоторые ограничения при их использовании в запросах для SQL Server 2000. Дополнительные сведения см. в записи «"Skip и делаются исключения в SQL Server 2000» в [Устранение неполадок](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Преобразует <xref:System.Linq.Queryable.Skip%2A> с помощью вложенного запроса с помощью SQL `NOT EXISTS` предложение. Это преобразование имеет следующие ограничения.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "59168315"
  [!code-csharp[DLinqQueryExamples#18](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#18)]
  [!code-vb[DLinqQueryExamples#18](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#18)]  
   
- <xref:System.Linq.Queryable.Take%2A> и <xref:System.Linq.Queryable.Skip%2A> правильно определяются только для упорядоченных наборов. Семантика для неупорядоченных наборов или множественных наборов не определена.  
+ Методы <xref:System.Linq.Queryable.Take%2A> и <xref:System.Linq.Queryable.Skip%2A> правильно определяются только для упорядоченных наборов. Семантика для неупорядоченных наборов или множественных наборов не определена.  
   
  Из-за ограничений, накладываемых на упорядочение в SQL, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] предпринимает попытку переместить упорядочение аргументов оператора <xref:System.Linq.Queryable.Take%2A> или <xref:System.Linq.Queryable.Skip%2A>в результат оператора.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "59168315"
  [!code-csharp[DLinqQueryExamples#19](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#19)]
  [!code-vb[DLinqQueryExamples#19](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#19)]  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Перемещает упорядочение в конец кода SQL, как показано ниже:  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] перемещает упорядочение в конец кода SQL, как показано далее.  
   
 ```  
 SELECT TOP 1 [t0].[CustomerID], [t0].[CompanyName],  
@@ -81,4 +81,4 @@ ORDER BY [t0].[CustomerID]
 ## <a name="see-also"></a>См. также
 
 - [Примеры запросов](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
-- [Трансляция стандартных операторов запросов](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)
+- [Преобразование стандартных операторов запросов](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)

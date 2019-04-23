@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 87925795-a3ae-4833-b138-125413478551
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e5d6c063fedf14559b20d1de49c1855d0fe1304
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 834652318d4cb1cbcebe27a922d210ef87026ed5
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219325"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59169030"
 ---
 # <a name="registering-assemblies-with-com"></a>Регистрация сборок в COM
 С помощью программы командной строки, которая называется [средством регистрации сборок (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md), можно регистрировать сборки для использования с моделью COM и отменять их регистрацию. Программа Regasm.exe добавляет сведения о классе в системный реестр, что обеспечивает прозрачное использование класса .NET Framework COM-клиентами. Класс <xref:System.Runtime.InteropServices.RegistrationServices> реализует эквивалентные функциональные возможности.  
@@ -44,6 +44,7 @@ ms.locfileid: "56219325"
  В подразделе `InprocServer32` вместо традиционной библиотеки типов COM указывается ссылка на библиотеку Mscoree.dll. Это указывает на то, что общеязыковая среда выполнения создает объект.  
   
 ## <a name="see-also"></a>См. также
+
 - [Предоставление компонентов .NET Framework клиентам COM](exposing-dotnet-components-to-com.md)
 - [Практическое руководство. Создание ссылки на типы .NET из COM](how-to-reference-net-types-from-com.md)
 - [Вызов объекта .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))

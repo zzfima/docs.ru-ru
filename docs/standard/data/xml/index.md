@@ -6,10 +6,10 @@ ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2e96515240cdbc1cb05c4d58aee6eb2500e0e313
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59171175"
 ---
 # <a name="xml-documents-and-data"></a>XML-документы и данные
@@ -39,11 +39,11 @@ ms.locfileid: "59171175"
   
  Классы XML в платформе .NET Framework предоставляют следующие преимущества.  
   
--   **Производительность.** [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) и [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) упрощает программирование с использованием XML и обеспечивает работу с запросами, похожую на работу в SQL.  
+-   **Производительность** [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) и [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) упрощает программирование с использованием XML и обеспечивает работу с запросами, похожую на работу в SQL.  
   
--   **Расширяемость.** XML-классы в .NET Framework являются расширяемыми, что было достигнуто за счет использования абстрактных базовых классов и виртуальных методов. Например, можно создать класс, производный от класса <xref:System.Xml.XmlUrlResolver>, который будет сохранять поток кэширования на локальном диске.  
+-   **Расширяемость** XML-классы в .NET Framework являются расширяемыми, что было достигнуто за счет использования абстрактных базовых классов и виртуальных методов. Например, можно создать класс, производный от класса <xref:System.Xml.XmlUrlResolver>, который будет сохранять поток кэширования на локальном диске.  
   
--   **Модульная архитектура.** Платформа .NET Framework обеспечивает архитектуру, в которой компоненты могут использовать друг друга, а данные можно передавать в потоках между компонентами. Например, хранилище данных, такое как объект <xref:System.Xml.XPath.XPathDocument> или <xref:System.Xml.XmlDocument>, можно преобразовать с помощью класса <xref:System.Xml.Xsl.XslCompiledTransform>, а выходные данные затем могут быть переданы в виде потока в другое хранилище или возвращены в виде потока из веб-службы XML.  
+-   **Модульная архитектура** Платформа .NET Framework обеспечивает архитектуру, в которой компоненты могут использовать друг друга, а данные можно передавать в потоках между компонентами. Например, хранилище данных, такое как объект <xref:System.Xml.XPath.XPathDocument> или <xref:System.Xml.XmlDocument>, можно преобразовать с помощью класса <xref:System.Xml.Xsl.XslCompiledTransform>, а выходные данные затем могут быть переданы в виде потока в другое хранилище или возвращены в виде потока из веб-службы XML.  
   
 -   **Производительность.** С целью повышения быстродействия приложений некоторые XML-классы в .NET Framework поддерживают модель на основе потоковой передачи со следующими характеристиками.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "59171175"
   
      В случае если требуется обработка XSLT, для повышения производительности можно использовать класс <xref:System.Xml.XPath.XPathDocument>, который является оптимизированным хранилищем «только для чтения» для запросов XPath, обеспечивающих эффективное взаимодействие с классом <xref:System.Xml.Xsl.XslCompiledTransform>.  
   
--   **Интеграция с ADO.NET.** Классы XML и [ADO.NET](../../../../docs/framework/data/adonet/index.md) тесно интегрированы для сведения воедино реляционных данных и XML. Класс <xref:System.Data.DataSet> представляет собой кэш «в памяти» для данных, полученных из базы данных. Класс <xref:System.Data.DataSet> позволяет считывать и записывать код XML с помощью классов <xref:System.Xml.XmlReader> и <xref:System.Xml.XmlWriter>, сохранять внутреннюю реляционную структуру в виде схем XML (XSD) и логически выводить структуру схем XML-документов.  
+-   **Интеграция с ADO.NET** Классы XML и [ADO.NET](../../../../docs/framework/data/adonet/index.md) тесно интегрированы для сведения воедино реляционных данных и XML. Класс <xref:System.Data.DataSet> представляет собой кэш «в памяти» для данных, полученных из базы данных. Класс <xref:System.Data.DataSet> позволяет считывать и записывать код XML с помощью классов <xref:System.Xml.XmlReader> и <xref:System.Xml.XmlWriter>, сохранять внутреннюю реляционную структуру в виде схем XML (XSD) и логически выводить структуру схем XML-документов.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Параметры обработки XML](../../../../docs/standard/data/xml/xml-processing-options.md)  

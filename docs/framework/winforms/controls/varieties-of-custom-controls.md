@@ -12,10 +12,10 @@ helpviewer_keywords:
 - controls [Windows Forms], composite
 ms.assetid: 3cea09e5-4344-4ccb-9858-b66ccac210ff
 ms.openlocfilehash: 765befcf88247e4b2101b13c4937352ba4b070fa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59170711"
 ---
 # <a name="varieties-of-custom-controls"></a>Создание собственных элементов управления
@@ -109,7 +109,7 @@ ms.locfileid: "59170711"
 ## <a name="see-also"></a>См. также
 
 - [Разработка пользовательских элементов управления Windows Forms в .NET Framework](developing-custom-windows-forms-controls.md)
-- [Практическое руководство. Разработка простого элемента управления форм Windows Forms](how-to-develop-a-simple-windows-forms-control.md)
+- [Практическое руководство. Разработка элемента управления простого Windows Forms](how-to-develop-a-simple-windows-forms-control.md)
 - [Разработка составного элемента Windows Forms](developing-a-composite-windows-forms-control.md)
-- [Расширение поддержки времени разработки](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
+- [Расширения поддержки времени разработки](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
 - [Практическое руководство. Создание элемента управления Windows Forms, используются преимущества функций времени разработки](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))

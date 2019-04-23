@@ -3,11 +3,11 @@ title: Визуальное отслеживание рабочего проце
 ms.date: 03/30/2017
 ms.assetid: 0143448f-2044-40a0-8a3d-941f6d12468b
 ms.openlocfilehash: 6e87b0ef5a0d6fa97c87c99a63fe0e23c389140c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59296463"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59772847"
 ---
 # <a name="visual-workflow-tracking"></a>Визуальное отслеживание рабочего процесса
 В этом образце показано, как подготовить приложение для визуального отслеживания рабочих процессов с использованием функции отладки, доступной через [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)].

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WS Security
 ms.assetid: d2221d1c-c9cb-48d1-b044-a3b4445c7f05
 ms.openlocfilehash: eed16f6231717119b30003451cef5eb54016678c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59318316"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59772606"
 ---
 # <a name="message-security-windows"></a>Безопасность сообщений с использованием механизмов Windows
 В этом образце показывается, как настраивать привязку <xref:System.ServiceModel.WSHttpBinding> для использования безопасности на уровне сообщений с проверкой подлинности Windows. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md). В этом образце служба размещается в службах IIS, а клиентом является консольное приложение (EXE).  

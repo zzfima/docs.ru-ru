@@ -3,11 +3,11 @@ title: Практическое руководство. Включение со�
 ms.date: 03/30/2017
 ms.assetid: 2b1c8bf3-9866-45a4-b06d-ee562393e503
 ms.openlocfilehash: 6a2a8d73298e14f92f376b97b9637db91532e937
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59340156"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59772710"
 ---
 # <a name="how-to-enable-persistence-for-workflows-and-workflow-services"></a>Практическое руководство. Включение сохраняемости для рабочих процессов и служб рабочих процессов
 В этом разделе описывается процесс включения сохраняемости для рабочих процессов и служб рабочих процессов.  

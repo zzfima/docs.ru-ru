@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c65634a1046b193d500e505d945784504285f93a
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: e642f6507016dd1d62b4889f8a8dbcf0470a2202
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412335"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59168172"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Создание прототипов в управляемом коде
 В этом разделе описывается доступ к неуправляемым функциям и представлено несколько полей атрибутов, которые уточняют определение метода в управляемом коде. Примеры, демонстрирующие создание объявлений на основе .NET, которые используются с вызовом неуправляемого кода, см. в разделе [Маршалинг данных при вызове неуправляемого кода](marshaling-data-with-platform-invoke.md).  
@@ -235,6 +235,7 @@ interface IDemandStubsItf
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Использование неуправляемых функций DLL](consuming-unmanaged-dll-functions.md)
 - [Задание точки входа](specifying-an-entry-point.md)
 - [Определение кодировки](specifying-a-character-set.md)
