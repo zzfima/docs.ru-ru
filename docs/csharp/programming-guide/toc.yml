@@ -1,52 +1,45 @@
-items:
-- name: Руководство по программированию на C#
+- name: 'Руководство по программированию на C#'
   href: index.md
   items:
-  - name: Структура программы C#
-    href: inside-a-program/
-  - name: Main() и аргументы командной строки
-    href: main-and-command-args/
-  - name: Основные понятия программирования
-    href: concepts/
-  - name: Инструкции, выражения и операторы
-    href: statements-expressions-operators/
-  - name: Типы
-    href: types/
-  - name: Классы и структуры
-    href: classes-and-structs/
-  - name: интерфейсов,
-    href: interfaces/
-  - name: Типы перечисления
-    href: enumeration-types.md
-  - name: Делегаты
-    href: delegates/index.md
-  - name: Массивы
-    href: arrays/
-  - name: Строки
-    href: strings/
-  - name: Индексаторы
-    href: indexers/
-  - name: События
-    href: events/
-  - name: Универсальные шаблоны
-    href: generics/
-  - name: Пространства имен
-    href: namespaces/
-  - name: Типы, допускающие значения NULL
-    href: nullable-types/
-  - name: Небезопасный код и указатели
-    href: unsafe-code-pointers/
-  - name: Комментарии к XML-документации
-    href: xmldoc/
-  - name: Исключения и обработка исключений
-    href: exceptions/
-  - name: Файловая система и реестр
-    href: file-system/
-  - name: Взаимодействие
-    href: interop/
-ms.openlocfilehash: 735c939dd903ff7e713fc9870afeda99786f8e77
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471051"
+    - name: 'Структура программы C#'
+      href: inside-a-program/
+    - name: Main() и аргументы командной строки
+      href: main-and-command-args/
+    - name: Основные понятия программирования
+      href: concepts/
+    - name: 'Инструкции, выражения и операторы'
+      href: statements-expressions-operators/
+    - name: Типы
+      href: types/
+    - name: Классы и структуры
+      href: classes-and-structs/
+    - name: 'интерфейсов,'
+      href: interfaces/
+    - name: Типы перечисления
+      href: enumeration-types.md
+    - name: Делегаты
+      href: delegates/index.md
+    - name: Массивы
+      href: arrays/
+    - name: Строки
+      href: strings/
+    - name: Индексаторы
+      href: indexers/
+    - name: События
+      href: events/
+    - name: Универсальные шаблоны
+      href: generics/
+    - name: Пространства имен
+      href: namespaces/
+    - name: 'Типы, допускающие значения NULL'
+      href: nullable-types/
+    - name: Небезопасный код и указатели
+      href: unsafe-code-pointers/
+    - name: Комментарии к XML-документации
+      href: xmldoc/
+    - name: Исключения и обработка исключений
+      href: exceptions/
+    - name: Файловая система и реестр
+      href: file-system/
+    - name: Взаимодействие
+      href: interop/

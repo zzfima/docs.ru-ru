@@ -1,336 +1,329 @@
-items:
-- name: Ключевые слова C#
+- name: 'Ключевые слова C#'
   href: index.md
   items:
-  - name: Типы
-    href: types.md
-    items:
-    - name: Типы значений
-      href: value-types.md
+    - name: Типы
+      href: types.md
       items:
-      - name: bool
-        href: bool.md
-      - name: byte
-        href: byte.md
-      - name: char
-        href: char.md
-      - name: decimal
-        href: decimal.md
-      - name: double
-        href: double.md
-      - name: перечисление
-        href: enum.md
-      - name: float
-        href: float.md
-      - name: int
-        href: int.md
-      - name: long
-        href: long.md
-      - name: sbyte
-        href: sbyte.md
-      - name: short
-        href: short.md
-      - name: структура
-        href: struct.md
-      - name: uint
-        href: uint.md
-      - name: ulong
-        href: ulong.md
-      - name: ushort
-        href: ushort.md
-    - name: Ссылочные типы
-      href: reference-types.md
+        - name: Типы значений
+          href: value-types.md
+          items:
+            - name: bool
+              href: bool.md
+            - name: byte
+              href: byte.md
+            - name: char
+              href: char.md
+            - name: decimal
+              href: decimal.md
+            - name: double
+              href: double.md
+            - name: перечисление
+              href: enum.md
+            - name: float
+              href: float.md
+            - name: int
+              href: int.md
+            - name: long
+              href: long.md
+            - name: sbyte
+              href: sbyte.md
+            - name: short
+              href: short.md
+            - name: структура
+              href: struct.md
+            - name: uint
+              href: uint.md
+            - name: ulong
+              href: ulong.md
+            - name: ushort
+              href: ushort.md
+        - name: Ссылочные типы
+          href: reference-types.md
+          items:
+            - name: класс
+              href: class.md
+            - name: делегат
+              href: delegate.md
+            - name: dynamic
+              href: dynamic.md
+            - name: интерфейс
+              href: interface.md
+            - name: object
+              href: object.md
+            - name: string
+              href: string.md
+        - name: void
+          href: void.md
+        - name: var
+          href: var.md
+        - name: Справочные таблицы по типам
+          href: reference-tables-for-types.md
+          items:
+            - name: Таблица встроенных типов
+              href: built-in-types-table.md
+            - name: Таблица целочисленных типов
+              href: integral-types-table.md
+            - name: Таблица типов с плавающей запятой
+              href: floating-point-types-table.md
+            - name: Таблица типов значений
+              href: value-types-table.md
+            - name: Таблица значений по умолчанию
+              href: default-values-table.md
+            - name: Таблица неявных числовых преобразований
+              href: implicit-numeric-conversions-table.md
+            - name: Таблица явных числовых преобразований
+              href: explicit-numeric-conversions-table.md
+            - name: Таблица форматирования числовых результатов
+              href: formatting-numeric-results-table.md
+    - name: Модификаторы
+      href: modifiers.md
       items:
-      - name: класс
-        href: class.md
-      - name: делегат
-        href: delegate.md
-      - name: dynamic
-        href: dynamic.md
-      - name: интерфейс
-        href: interface.md
-      - name: object
-        href: object.md
-      - name: string
-        href: string.md
-    - name: void
-      href: void.md
-    - name: var
-      href: var.md
-    - name: Справочные таблицы по типам
-      href: reference-tables-for-types.md
+        - name: Модификаторы доступа
+          href: access-modifiers.md
+          items:
+            - name: Уровни доступности
+              href: accessibility-levels.md
+            - name: Домен доступности
+              href: accessibility-domain.md
+            - name: Ограничения на использование уровней доступности
+              href: restrictions-on-using-accessibility-levels.md
+            - name: internal
+              href: internal.md
+            - name: private
+              href: private.md
+            - name: protected
+              href: protected.md
+            - name: public
+              href: public.md
+            - name: protected internal
+              href: protected-internal.md
+            - name: private protected
+              href: private-protected.md
+        - name: abstract
+          href: abstract.md
+        - name: async
+          href: async.md
+        - name: const
+          href: const.md
+        - name: событие
+          href: event.md
+        - name: extern
+          href: extern.md
+        - name: in (универсальный модификатор)
+          href: in-generic-modifier.md
+        - name: out (универсальный модификатор)
+          href: out-generic-modifier.md
+        - name: override
+          href: override.md
+        - name: readonly
+          href: readonly.md
+        - name: sealed
+          href: sealed.md
+        - name: статический
+          href: static.md
+        - name: unsafe
+          href: unsafe.md
+        - name: виртуальный
+          href: virtual.md
+        - name: volatile
+          href: volatile.md
+    - name: Ключевые слова операторов
+      href: statement-keywords.md
       items:
-      - name: Таблица встроенных типов
-        href: built-in-types-table.md
-      - name: Таблица целочисленных типов
-        href: integral-types-table.md
-      - name: Таблица типов с плавающей запятой
-        href: floating-point-types-table.md
-      - name: Таблица типов значений
-        href: value-types-table.md
-      - name: Таблица значений по умолчанию
-        href: default-values-table.md
-      - name: Таблица неявных числовых преобразований
-        href: implicit-numeric-conversions-table.md
-      - name: Таблица явных числовых преобразований
-        href: explicit-numeric-conversions-table.md
-      - name: Таблица форматирования числовых результатов
-        href: formatting-numeric-results-table.md
-  - name: Модификаторы
-    href: modifiers.md
-    items:
-    - name: Модификаторы доступа
-      href: access-modifiers.md
+        - name: Операторы выбора
+          href: selection-statements.md
+          items:
+            - name: if-else
+              href: if-else.md
+            - name: switch
+              href: switch.md
+        - name: Операторы итерации
+          href: iteration-statements.md
+          items:
+            - name: do
+              href: do.md
+            - name: for
+              href: for.md
+            - name: 'foreach, in'
+              href: foreach-in.md
+            - name: while
+              href: while.md
+        - name: Операторы перехода
+          href: jump-statements.md
+          items:
+            - name: break
+              href: break.md
+            - name: continue
+              href: continue.md
+            - name: goto
+              href: goto.md
+            - name: return
+              href: return.md
+        - name: Операторы обработки исключений
+          href: exception-handling-statements.md
+          items:
+            - name: throw
+              href: throw.md
+            - name: try-catch
+              href: try-catch.md
+            - name: try-finally
+              href: try-finally.md
+            - name: try-catch-finally
+              href: try-catch-finally.md
+        - name: Операторы checked и unchecked
+          href: checked-and-unchecked.md
+          items:
+            - name: checked
+              href: checked.md
+            - name: unchecked
+              href: unchecked.md
+        - name: Оператор fixed
+          href: fixed-statement.md
+        - name: Оператор lock
+          href: lock-statement.md
+    - name: Параметры методов
+      href: method-parameters.md
       items:
-      - name: Уровни доступности
-        href: accessibility-levels.md
-      - name: Домен доступности
-        href: accessibility-domain.md
-      - name: Ограничения на использование уровней доступности
-        href: restrictions-on-using-accessibility-levels.md
-      - name: internal
-        href: internal.md
-      - name: private
-        href: private.md
-      - name: protected
-        href: protected.md
-      - name: public
-        href: public.md
-      - name: protected internal
-        href: protected-internal.md
-      - name: private protected
-        href: private-protected.md
-    - name: abstract
-      href: abstract.md
-    - name: async
-      href: async.md
-    - name: const
-      href: const.md
-    - name: событие
-      href: event.md
-    - name: extern
-      href: extern.md
-    - name: in (универсальный модификатор)
-      href: in-generic-modifier.md
-    - name: out (универсальный модификатор)
-      href: out-generic-modifier.md
-    - name: override
-      href: override.md
-    - name: readonly
-      href: readonly.md
-    - name: sealed
-      href: sealed.md
-    - name: статический
-      href: static.md
-    - name: unsafe
-      href: unsafe.md
-    - name: виртуальный
-      href: virtual.md
-    - name: volatile
-      href: volatile.md
-  - name: Ключевые слова операторов
-    href: statement-keywords.md
-    items:
-    - name: Операторы выбора
-      href: selection-statements.md
+        - name: params
+          href: params.md
+        - name: in (модификатор параметров)
+          href: in-parameter-modifier.md
+        - name: ref
+          href: ref.md
+        - name: out (модификатор параметров)
+          href: out-parameter-modifier.md
+    - name: 'Ключевые слова, используемые для пространств имен'
+      href: namespace-keywords.md
       items:
-      - name: if-else
-        href: if-else.md
-      - name: switch
-        href: switch.md
-    - name: Операторы итерации
-      href: iteration-statements.md
+        - name: namespace
+          href: namespace.md
+        - name: using
+          href: using.md
+          items:
+            - name: Директива using
+              href: using-directive.md
+            - name: Директива using static
+              href: using-static.md
+            - name: Оператор using
+              href: using-statement.md
+        - name: Псевдоним extern
+          href: extern-alias.md
+    - name: Ключевые слова операторов
+      href: operator-keywords.md
       items:
-      - name: do
-        href: do.md
-      - name: for
-        href: for.md
-      - name: foreach, in
-        href: foreach-in.md
-      - name: while
-        href: while.md
-    - name: Операторы перехода
-      href: jump-statements.md
+        - name: as
+          href: as.md
+        - name: await
+          href: await.md
+        - name: является
+          href: is.md
+        - name: new
+          href: new.md
+          items:
+            - name: Оператор new
+              href: new-operator.md
+            - name: Модификатор new
+              href: new-modifier.md
+            - name: Ограничение New
+              href: new-constraint.md
+        - name: sizeof
+          href: sizeof.md
+        - name: typeof
+          href: typeof.md
+        - name: 'true'
+          href: true.md
+          items:
+            - name: Оператор true
+              href: true-false-operators.md
+            - name: Литерал true
+              href: true-literal.md
+        - name: 'False'
+          href: false.md
+          items:
+            - name: Оператор false
+              href: true-false-operators.md
+            - name: Литерал false
+              href: false-literal.md
+        - name: stackalloc
+          href: stackalloc.md
+        - name: nameof
+          href: nameof.md
+    - name: Ключевые слова преобразований
+      href: conversion-keywords.md
       items:
-      - name: break
-        href: break.md
-      - name: continue
-        href: continue.md
-      - name: goto
-        href: goto.md
-      - name: return
-        href: return.md
-    - name: Операторы обработки исключений
-      href: exception-handling-statements.md
+        - name: explicit
+          href: explicit.md
+        - name: implicit
+          href: implicit.md
+        - name: оператор
+          href: operator.md
+    - name: Ключевые слова доступа
+      href: access-keywords.md
       items:
-      - name: throw
-        href: throw.md
-      - name: try-catch
-        href: try-catch.md
-      - name: try-finally
-        href: try-finally.md
-      - name: try-catch-finally
-        href: try-catch-finally.md
-    - name: Операторы checked и unchecked
-      href: checked-and-unchecked.md
+        - name: базовые
+          href: base.md
+        - name: this
+          href: this.md
+    - name: Ключевые слова литералов
+      href: literal-keywords.md
       items:
-      - name: checked
-        href: checked.md
-      - name: unchecked
-        href: unchecked.md
-    - name: Оператор fixed
-      href: fixed-statement.md
-    - name: Оператор lock
-      href: lock-statement.md
-  - name: Параметры методов
-    href: method-parameters.md
-    items:
-    - name: params
-      href: params.md
-    - name: in (модификатор параметров)
-      href: in-parameter-modifier.md
-    - name: ref
-      href: ref.md
-    - name: out (модификатор параметров)
-      href: out-parameter-modifier.md
-  - name: Ключевые слова, используемые для пространств имен
-    href: namespace-keywords.md
-    items:
-    - name: namespace
-      href: namespace.md
-    - name: using
-      href: using.md
+        - name: 'null'
+          href: null.md
+        - name: default
+          href: default.md
+    - name: Контекстные ключевые слова
+      href: contextual-keywords.md
       items:
-      - name: Директива using
-        href: using-directive.md
-      - name: Директива using static
-        href: using-static.md
-      - name: Оператор using
-        href: using-statement.md
-    - name: Псевдоним extern
-      href: extern-alias.md
-  - name: Ключевые слова операторов
-    href: operator-keywords.md
-    items:
-    - name: as
-      href: as.md
-    - name: await
-      href: await.md
-    - name: является
-      href: is.md
-    - name: new
-      href: new.md
+        - name: add
+          href: add.md
+        - name: get
+          href: get.md
+        - name: global
+          href: global.md
+        - name: partial (тип)
+          href: partial-type.md
+        - name: partial (метод)
+          href: partial-method.md
+        - name: remove
+          href: remove.md
+        - name: set
+          href: set.md
+        - name: when (условие фильтра)
+          href: when.md
+        - name: where (ограничение универсального типа)
+          href: where-generic-type-constraint.md
+        - name: value
+          href: value.md
+        - name: yield
+          href: yield.md
+    - name: Ключевые слова запроса
+      href: query-keywords.md
       items:
-      - name: Оператор new
-        href: new-operator.md
-      - name: Модификатор new
-        href: new-modifier.md
-      - name: Ограничение New
-        href: new-constraint.md
-    - name: sizeof
-      href: sizeof.md
-    - name: typeof
-      href: typeof.md
-    - name: "true"
-      href: true.md
-      items:
-      - name: Оператор true
-        href: true-false-operators.md
-      - name: Литерал true
-        href: true-literal.md
-    - name: "False"
-      href: false.md
-      items:
-      - name: Оператор false
-        href: true-false-operators.md
-      - name: Литерал false
-        href: false-literal.md
-    - name: stackalloc
-      href: stackalloc.md
-    - name: nameof
-      href: nameof.md
-  - name: Ключевые слова преобразований
-    href: conversion-keywords.md
-    items:
-    - name: explicit
-      href: explicit.md
-    - name: implicit
-      href: implicit.md
-    - name: оператор
-      href: operator.md
-  - name: Ключевые слова доступа
-    href: access-keywords.md
-    items:
-    - name: базовые
-      href: base.md
-    - name: this
-      href: this.md
-  - name: Ключевые слова литералов
-    href: literal-keywords.md
-    items:
-    - name: "null"
-      href: null.md
-    - name: default
-      href: default.md
-  - name: Контекстные ключевые слова
-    href: contextual-keywords.md
-    items:
-    - name: add
-      href: add.md
-    - name: get
-      href: get.md
-    - name: global
-      href: global.md
-    - name: partial (тип)
-      href: partial-type.md
-    - name: partial (метод)
-      href: partial-method.md
-    - name: remove
-      href: remove.md
-    - name: set
-      href: set.md
-    - name: when (условие фильтра)
-      href: when.md
-    - name: where (ограничение универсального типа)
-      href: where-generic-type-constraint.md
-    - name: value
-      href: value.md
-    - name: yield
-      href: yield.md
-  - name: Ключевые слова запроса
-    href: query-keywords.md
-    items:
-    - name: Предложение from
-      href: from-clause.md
-    - name: Предложение where
-      href: where-clause.md
-    - name: Предложение select
-      href: select-clause.md
-    - name: Предложение group
-      href: group-clause.md
-    - name: into
-      href: into.md
-    - name: Предложение orderby
-      href: orderby-clause.md
-    - name: Предложение join
-      href: join-clause.md
-    - name: Предложение let
-      href: let-clause.md
-    - name: по возрастанию
-      href: ascending.md
-    - name: по убыванию
-      href: descending.md
-    - name: вкл.
-      href: on.md
-    - name: equals
-      href: equals.md
-    - name: by
-      href: by.md
-    - name: в
-      href: in.md
-ms.openlocfilehash: a87c28c8c586d1169a98f3f71361d34eb8680d99
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470285"
+        - name: Предложение from
+          href: from-clause.md
+        - name: Предложение where
+          href: where-clause.md
+        - name: Предложение select
+          href: select-clause.md
+        - name: Предложение group
+          href: group-clause.md
+        - name: into
+          href: into.md
+        - name: Предложение orderby
+          href: orderby-clause.md
+        - name: Предложение join
+          href: join-clause.md
+        - name: Предложение let
+          href: let-clause.md
+        - name: по возрастанию
+          href: ascending.md
+        - name: по убыванию
+          href: descending.md
+        - name: вкл.
+          href: on.md
+        - name: equals
+          href: equals.md
+        - name: by
+          href: by.md
+        - name: в
+          href: in.md

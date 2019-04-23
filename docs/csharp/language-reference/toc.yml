@@ -1,138 +1,131 @@
-items:
 - name: Справочник по языку
   href: index.md
   items:
-  - name: Настройка версии языка
-    href: configure-language-version.md
-  - name: Ключевые слова в C#
-    href: keywords/index.md
-  - name: Операторы в C#
-    href: operators/index.md
-  - name: Специальные символы C#
-    href: tokens/index.md
-  - name: Директивы препроцессора C#
-    href: preprocessor-directives/index.md
-  - name: Параметры компилятора C#
-    href: compiler-options/index.md
-  - name: Ошибки компилятора C#
-    href: compiler-messages/index.md
-  - name: Предварительная спецификация C# 6.0
-    items:
-    - name: Вступление
-      href: ../../../_csharplang/spec/introduction.md
-    - name: Лексическая структура
-      href: ../../../_csharplang/spec/lexical-structure.md
-    - name: Основные понятия
-      href: ../../../_csharplang/spec/basic-concepts.md
-    - name: Типы
-      href: ../../../_csharplang/spec/types.md
-    - name: Переменные
-      href: ../../../_csharplang/spec/variables.md
-    - name: Преобразования
-      href: ../../../_csharplang/spec/conversions.md
-    - name: Выражения
-      href: ../../../_csharplang/spec/expressions.md
-    - name: Операторы
-      href: ../../../_csharplang/spec/statements.md
-    - name: Пространства имен
-      href: ../../../_csharplang/spec/namespaces.md
-    - name: Классы
-      href: ../../../_csharplang/spec/classes.md
-    - name: Структуры
-      href: ../../../_csharplang/spec/structs.md
-    - name: Массивы
-      href: ../../../_csharplang/spec/arrays.md
-    - name: интерфейсов,
-      href: ../../../_csharplang/spec/interfaces.md
-    - name: перечислениям;
-      href: ../../../_csharplang/spec/enums.md
-    - name: Делегаты
-      href: ../../../_csharplang/spec/delegates.md
-    - name: Исключения
-      href: ../../../_csharplang/spec/exceptions.md
-    - name: Атрибуты
-      href: ../../../_csharplang/spec/attributes.md
-    - name: Небезопасный код
-      href: ../../../_csharplang/spec/unsafe-code.md
-    - name: Комментарии для документации
-      href: ../../../_csharplang/spec/documentation-comments.md
-  - name: Предложения для языка C# версии 7.0
-    items:
-    - name: Регулярные выражения
-      href: ../../../_csharplang/proposals/csharp-7.0/pattern-matching.md
-    - name: Локальные функции
-      href: ../../../_csharplang/proposals/csharp-7.0/local-functions.md
-    - name: Объявление выходных переменных
-      href: ../../../_csharplang/proposals/csharp-7.0/out-var.md
-    - name: Выражения throw
-      href: ../../../_csharplang/proposals/csharp-7.0/throw-expression.md
-    - name: Двоичные литералы
-      href: ../../../_csharplang/proposals/csharp-7.0/binary-literals.md
-    - name: Разделители между цифрами
-      href: ../../../_csharplang/proposals/csharp-7.0/digit-separators.md
-  - name: Предложения для языка C# версии 7.1
-    items:
-    - name: Асинхронный метод main
-      href: ../../../_csharplang/proposals/csharp-7.1/async-main.md
-    - name: Стандартные выражения
-      href: ../../../_csharplang/proposals/csharp-7.1/target-typed-default.md
-    - name: Выводимые имена кортежей
-      href: ../../../_csharplang/proposals/csharp-7.1/infer-tuple-names.md
-    - name: Сопоставление шаблонов с универсальными шаблонами
-      href: ../../../_csharplang/proposals/csharp-7.1/generics-pattern-match.md
-  - name: Предложения для языка C# версии 7.2
-    items:
-    - name: Ссылки только для чтения
-      href: ../../../_csharplang/proposals/csharp-7.2/readonly-ref.md
-    - name: Безопасность во время компиляции для типов, схожих с ссылочными
-      href: ../../../_csharplang/proposals/csharp-7.2/span-safety.md
-    - name: Неконечные именованные аргументы
-      href: ../../../_csharplang/proposals/csharp-7.2/non-trailing-named-arguments.md
-    - name: Частный защищенный
-      href: ../../../_csharplang/proposals/csharp-7.2/private-protected.md
-    - name: Условная ссылочная переменная
-      href: ../../../_csharplang/proposals/csharp-7.2/conditional-ref.md
-    - name: Разделитель начальных цифр
-      href: ../../../_csharplang/proposals/csharp-7.2/leading-separator.md
-  - name: Предложения для языка C# версии 7.3
-    items:
-    - name: Ограничения неуправляемых универсальных типов
-      href: ../../../_csharplang/proposals/csharp-7.3/blittable.md
-    - name: Индексирование полей `fixed` не требует закрепления независимо от перемещаемого или неперемещаемого контекста
-      href: ../../../_csharplang/proposals/csharp-7.3/indexing-movable-fixed-fields.md
-    - name: Инструкция `fixed` на основе шаблона
-      href: ../../../_csharplang/proposals/csharp-7.3/pattern-based-fixed.md
-    - name: Переназначение ссылочных локальных переменных
-      href: ../../../_csharplang/proposals/csharp-7.3/ref-local-reassignment.md
-    - name: Инициализаторы массивов stackalloc
-      href: ../../../_csharplang/proposals/csharp-7.3/stackalloc-array-initializers.md
-    - name: Нацеленные на поле атрибуты автоматически реализуемых свойств
-      href: ../../../_csharplang/proposals/csharp-7.3/auto-prop-field-attrs.md
-    - name: Переменные выражений в инициализаторах
-      href: ../../../_csharplang/proposals/csharp-7.3/expression-variables-in-initializers.md
-    - name: Равенство (==) и неравенство (!=) кортежей
-      href: ../../../_csharplang/proposals/csharp-7.3/tuple-equality.md
-    - name: Улучшенный отбор потенциальных перегрузок
-      href: ../../../_csharplang/proposals/csharp-7.3/improved-overload-candidates.md
-  - name: Предложения для языка C# версии 8.0
-    items:
-    - name: Типы пустых ссылок — предложение
-      href: ../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md
-    - name: Типы пустых ссылок — спецификация
-      href: ../../../_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md
-    - name: Рекурсивное сопоставление шаблонов
-      href: ../../../_csharplang/proposals/csharp-8.0/patterns.md
-    - name: Асинхронные потоки
-      href: ../../../_csharplang/proposals/csharp-8.0/async-streams.md
-    - name: Диапазоны
-      href: ../../../_csharplang/proposals/csharp-8.0/ranges.md
-    - name: Использование шаблонов и объявлений using
-      href: ../../../_csharplang/proposals/csharp-8.0/using.md
-    - name: Присваивание объединения со значением NULL
-      href: ../../../_csharplang/proposals/csharp-8.0/null-coalescing-assignment.md
-ms.openlocfilehash: a2c2b2377b093b542f9d45ae688de121db1c1959
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470544"
+    - name: Настройка версии языка
+      href: configure-language-version.md
+    - name: 'Ключевые слова в C#'
+      href: keywords/index.md
+    - name: 'Операторы в C#'
+      href: operators/index.md
+    - name: 'Специальные символы C#'
+      href: tokens/index.md
+    - name: "Директивы препроцессора\_C#"
+      href: preprocessor-directives/index.md
+    - name: 'Параметры компилятора C#'
+      href: compiler-options/index.md
+    - name: 'Ошибки компилятора C#'
+      href: compiler-messages/index.md
+    - name: "Предварительная спецификация C#\_6.0"
+      items:
+        - name: Вступление
+          href: ../../../_csharplang/spec/introduction.md
+        - name: Лексическая структура
+          href: ../../../_csharplang/spec/lexical-structure.md
+        - name: Основные понятия
+          href: ../../../_csharplang/spec/basic-concepts.md
+        - name: Типы
+          href: ../../../_csharplang/spec/types.md
+        - name: Переменные
+          href: ../../../_csharplang/spec/variables.md
+        - name: Преобразования
+          href: ../../../_csharplang/spec/conversions.md
+        - name: Выражения
+          href: ../../../_csharplang/spec/expressions.md
+        - name: Операторы
+          href: ../../../_csharplang/spec/statements.md
+        - name: Пространства имен
+          href: ../../../_csharplang/spec/namespaces.md
+        - name: Классы
+          href: ../../../_csharplang/spec/classes.md
+        - name: Структуры
+          href: ../../../_csharplang/spec/structs.md
+        - name: Массивы
+          href: ../../../_csharplang/spec/arrays.md
+        - name: 'интерфейсов,'
+          href: ../../../_csharplang/spec/interfaces.md
+        - name: перечислениям;
+          href: ../../../_csharplang/spec/enums.md
+        - name: Делегаты
+          href: ../../../_csharplang/spec/delegates.md
+        - name: Исключения
+          href: ../../../_csharplang/spec/exceptions.md
+        - name: Атрибуты
+          href: ../../../_csharplang/spec/attributes.md
+        - name: Небезопасный код
+          href: ../../../_csharplang/spec/unsafe-code.md
+        - name: Комментарии для документации
+          href: ../../../_csharplang/spec/documentation-comments.md
+    - name: "Предложения для языка\_C# версии\_7.0"
+      items:
+        - name: Регулярные выражения
+          href: ../../../_csharplang/proposals/csharp-7.0/pattern-matching.md
+        - name: Локальные функции
+          href: ../../../_csharplang/proposals/csharp-7.0/local-functions.md
+        - name: Объявление выходных переменных
+          href: ../../../_csharplang/proposals/csharp-7.0/out-var.md
+        - name: Выражения throw
+          href: ../../../_csharplang/proposals/csharp-7.0/throw-expression.md
+        - name: Двоичные литералы
+          href: ../../../_csharplang/proposals/csharp-7.0/binary-literals.md
+        - name: Разделители между цифрами
+          href: ../../../_csharplang/proposals/csharp-7.0/digit-separators.md
+    - name: "Предложения для языка\_C# версии\_7.1"
+      items:
+        - name: Асинхронный метод main
+          href: ../../../_csharplang/proposals/csharp-7.1/async-main.md
+        - name: Стандартные выражения
+          href: ../../../_csharplang/proposals/csharp-7.1/target-typed-default.md
+        - name: Выводимые имена кортежей
+          href: ../../../_csharplang/proposals/csharp-7.1/infer-tuple-names.md
+        - name: Сопоставление шаблонов с универсальными шаблонами
+          href: ../../../_csharplang/proposals/csharp-7.1/generics-pattern-match.md
+    - name: "Предложения для языка\_C# версии\_7.2"
+      items:
+        - name: Ссылки только для чтения
+          href: ../../../_csharplang/proposals/csharp-7.2/readonly-ref.md
+        - name: 'Безопасность во время компиляции для типов, схожих с ссылочными'
+          href: ../../../_csharplang/proposals/csharp-7.2/span-safety.md
+        - name: Неконечные именованные аргументы
+          href: ../../../_csharplang/proposals/csharp-7.2/non-trailing-named-arguments.md
+        - name: Частный защищенный
+          href: ../../../_csharplang/proposals/csharp-7.2/private-protected.md
+        - name: Условная ссылочная переменная
+          href: ../../../_csharplang/proposals/csharp-7.2/conditional-ref.md
+        - name: Разделитель начальных цифр
+          href: ../../../_csharplang/proposals/csharp-7.2/leading-separator.md
+    - name: "Предложения для языка\_C# версии\_7.3"
+      items:
+        - name: Ограничения неуправляемых универсальных типов
+          href: ../../../_csharplang/proposals/csharp-7.3/blittable.md
+        - name: Индексирование полей `fixed` не требует закрепления независимо от перемещаемого или неперемещаемого контекста
+          href: ../../../_csharplang/proposals/csharp-7.3/indexing-movable-fixed-fields.md
+        - name: Инструкция `fixed` на основе шаблона
+          href: ../../../_csharplang/proposals/csharp-7.3/pattern-based-fixed.md
+        - name: Переназначение ссылочных локальных переменных
+          href: ../../../_csharplang/proposals/csharp-7.3/ref-local-reassignment.md
+        - name: Инициализаторы массивов stackalloc
+          href: ../../../_csharplang/proposals/csharp-7.3/stackalloc-array-initializers.md
+        - name: Нацеленные на поле атрибуты автоматически реализуемых свойств
+          href: ../../../_csharplang/proposals/csharp-7.3/auto-prop-field-attrs.md
+        - name: Переменные выражений в инициализаторах
+          href: ../../../_csharplang/proposals/csharp-7.3/expression-variables-in-initializers.md
+        - name: Равенство (==) и неравенство (!=) кортежей
+          href: ../../../_csharplang/proposals/csharp-7.3/tuple-equality.md
+        - name: Улучшенный отбор потенциальных перегрузок
+          href: ../../../_csharplang/proposals/csharp-7.3/improved-overload-candidates.md
+    - name: "Предложения для языка\_C# версии\_8.0"
+      items:
+        - name: "Типы пустых ссылок\_— предложение"
+          href: ../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md
+        - name: "Типы пустых ссылок\_— спецификация"
+          href: ../../../_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md
+        - name: Рекурсивное сопоставление шаблонов
+          href: ../../../_csharplang/proposals/csharp-8.0/patterns.md
+        - name: Асинхронные потоки
+          href: ../../../_csharplang/proposals/csharp-8.0/async-streams.md
+        - name: Диапазоны
+          href: ../../../_csharplang/proposals/csharp-8.0/ranges.md
+        - name: Использование шаблонов и объявлений using
+          href: ../../../_csharplang/proposals/csharp-8.0/using.md
+        - name: Присваивание объединения со значением NULL
+          href: ../../../_csharplang/proposals/csharp-8.0/null-coalescing-assignment.md

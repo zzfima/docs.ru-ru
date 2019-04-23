@@ -1,153 +1,146 @@
-items:
 - name: Расширение WCF
   href: index.md
   items:
-  - name: Расширение ServiceHost и уровень модели службы
-    href: extending-servicehost-and-the-service-model-layer.md
-    items:
-    - name: Расширение клиентов
-      href: extending-clients.md
+    - name: Расширение ServiceHost и уровень модели службы
+      href: extending-servicehost-and-the-service-model-layer.md
       items:
-      - name: Практическое руководство. Проверка или изменение сообщений на клиенте
-        href: how-to-inspect-or-modify-messages-on-the-client.md
-      - name: Практическое руководство. Проверка или изменение параметров
-        href: how-to-inspect-or-modify-parameters.md
-    - name: Расширение диспетчеров
-      href: extending-dispatchers.md
+        - name: Расширение клиентов
+          href: extending-clients.md
+          items:
+            - name: Как выполнить Проверка или изменение сообщений на клиенте
+              href: how-to-inspect-or-modify-messages-on-the-client.md
+            - name: Как выполнить Проверка или изменение параметров
+              href: how-to-inspect-or-modify-parameters.md
+        - name: Расширение диспетчеров
+          href: extending-dispatchers.md
+          items:
+            - name: Как выполнить Проверка и изменение сообщений в службе
+              href: how-to-inspect-and-modify-messages-on-the-service.md
+            - name: Как выполнить Блокировка конечных точек в среде предприятия
+              href: how-to-lock-down-endpoints-in-the-enterprise.md
+        - name: Расширяемые объекты
+          href: extensible-objects.md
+        - name: Настройка и расширение среды выполнения с помощью поведений
+          href: configuring-and-extending-the-runtime-with-behaviors.md
+        - name: Расширение размещения с использованием ServiceHostFactory
+          href: extending-hosting-using-servicehostfactory.md
+    - name: Расширение привязок
+      href: extending-bindings.md
       items:
-      - name: Практическое руководство. Проверка и изменение сообщений в службе
-        href: how-to-inspect-and-modify-messages-on-the-service.md
-      - name: Практическое руководство. Блокировка конечных точек в среде предприятия
-        href: how-to-lock-down-endpoints-in-the-enterprise.md
-    - name: Расширяемые объекты
-      href: extensible-objects.md
-    - name: Настройка и расширение среды выполнения с помощью поведений
-      href: configuring-and-extending-the-runtime-with-behaviors.md
-    - name: Расширение размещения с использованием ServiceHostFactory
-      href: extending-hosting-using-servicehostfactory.md
-  - name: Расширение привязок
-    href: extending-bindings.md
-    items:
-    - name: Привязки и элементы привязки
-      href: bindings-and-binding-elements.md
-    - name: Пользовательские привязки
-      href: custom-bindings.md
+        - name: Привязки и элементы привязки
+          href: bindings-and-binding-elements.md
+        - name: Пользовательские привязки
+          href: custom-bindings.md
+          items:
+            - name: 'Как выполнить Изменение привязки, предоставляемой системой'
+              href: how-to-customize-a-system-provided-binding.md
+        - name: Создание пользовательских привязок
+          href: creating-user-defined-bindings.md
+    - name: Расширение уровня каналов
+      href: extending-the-channel-layer.md
       items:
-      - name: Практическое руководство. Изменение привязки, предоставляемой системой
-        href: how-to-customize-a-system-provided-binding.md
-    - name: Создание пользовательских привязок
-      href: creating-user-defined-bindings.md
-  - name: Расширение уровня каналов
-    href: extending-the-channel-layer.md
-    items:
-    - name: Общие сведения о модели каналов
-      href: channel-model-overview.md
+        - name: Общие сведения о модели каналов
+          href: channel-model-overview.md
+          items:
+            - name: Программирование клиентов на уровне канала
+              href: client-channel-level-programming.md
+            - name: Программирование служб на уровне канала
+              href: service-channel-level-programming.md
+            - name: Основные сведения об изменении состояния
+              href: understanding-state-changes.md
+            - name: Выбор шаблона обмена сообщениями
+              href: choosing-a-message-exchange-pattern.md
+            - name: Обработка исключений и сбоев
+              href: handling-exceptions-and-faults.md
+        - name: Разработка каналов
+          href: developing-channels.md
+          items:
+            - name: 'Служба: прослушиватели каналов и каналы'
+              href: service-channel-listeners-and-channels.md
+            - name: 'Клиент: Фабрики каналов и каналы'
+              href: client-channel-factories-and-channels.md
+            - name: Создание элемента привязки BindingElement
+              href: creating-a-bindingelement.md
+            - name: Конфигурация и поддержка метаданных
+              href: configuration-and-metadata-support.md
+        - name: Пользовательские кодировщики
+          href: custom-encoders.md
+        - name: Пользовательские обновления потоков
+          href: custom-stream-upgrades.md
+    - name: Расширение безопасности
+      href: extending-security.md
       items:
-      - name: Программирование клиентов на уровне канала
-        href: client-channel-level-programming.md
-      - name: Программирование служб на уровне канала
-        href: service-channel-level-programming.md
-      - name: Основные сведения об изменении состояния
-        href: understanding-state-changes.md
-      - name: Выбор шаблона обмена сообщениями
-        href: choosing-a-message-exchange-pattern.md
-      - name: Обработка исключений и сбоев
-        href: handling-exceptions-and-faults.md
-    - name: Разработка каналов
-      href: developing-channels.md
+        - name: Задание пользовательского алгоритма шифрования
+          href: specifying-a-custom-crypto-algorithm.md
+        - name: Пользовательские учетные данные и проверка учетных данных
+          href: custom-credential-and-credential-validation.md
+          items:
+            - name: Пошаговое руководство. Создание пользовательских учетных данных для клиента и службы
+              href: walkthrough-creating-custom-client-and-service-credentials.md
+            - name: 'Как выполнить Создание службы, использующей пользовательский проверяющий элемент управления для сертификатов'
+              href: how-to-create-a-service-that-employs-a-custom-certificate-validator.md
+            - name: Как выполнить Создание поставщика пользовательских маркеров безопасности
+              href: how-to-create-a-custom-security-token-provider.md
+            - name: Как выполнить Создание пользовательской структуры проверки подлинности маркера безопасности
+              href: how-to-create-a-custom-security-token-authenticator.md
+        - name: Пользовательские маркеры
+          href: custom-tokens.md
+          items:
+            - name: Как выполнить Создание пользовательского токена
+              href: how-to-create-a-custom-token.md
+        - name: Пользовательская авторизация
+          href: custom-authorization.md
+          items:
+            - name: Как выполнить Создание пользовательской политики авторизации
+              href: how-to-create-a-custom-authorization-policy.md
+            - name: Как выполнить Создание пользовательского диспетчера авторизации для службы
+              href: how-to-create-a-custom-authorization-manager-for-a-service.md
+            - name: Как выполнить Создание пользовательского утверждения
+              href: how-to-create-a-custom-claim.md
+            - name: Как выполнить Сравнение утверждений
+              href: how-to-compare-claims.md
+            - name: Как выполнить Создание пользовательского идентификатора участника
+              href: how-to-create-a-custom-principal-identity.md
+        - name: Переопределение идентификатора службы для проверки подлинности
+          href: overriding-the-identity-of-a-service-for-authentication.md
+        - name: Как выполнить Создание пользовательского средства проверки идентификации клиентов
+          href: how-to-create-a-custom-client-identity-verifier.md
+        - name: Как выполнить Использование отдельных сертификатов X.509 для подписывания и шифрования
+          href: how-to-use-separate-x-509-certificates-for-signing-and-encryption.md
+        - name: Как выполнить Изменение поставщика служб шифрования для закрытого ключа сертификата X.509
+          href: change-cryptographic-provider-x509-certificate-private-key.md
+    - name: Расширение системы метаданных
+      href: extending-the-metadata-system.md
       items:
-      - name: 'Служба: прослушиватели каналов и каналы'
-        href: service-channel-listeners-and-channels.md
-      - name: 'Клиент: Фабрики каналов и каналы'
-        href: client-channel-factories-and-channels.md
-      - name: Создание элемента привязки BindingElement
-        href: creating-a-bindingelement.md
-      - name: Конфигурация и поддержка метаданных
-        href: configuration-and-metadata-support.md
-    - name: Пользовательские кодировщики
-      href: custom-encoders.md
-    - name: Пользовательские обновления потоков
-      href: custom-stream-upgrades.md
-  - name: Расширение безопасности
-    href: extending-security.md
-    items:
-    - name: Задание пользовательского алгоритма шифрования
-      href: specifying-a-custom-crypto-algorithm.md
-    - name: Пользовательские учетные данные и проверка учетных данных
-      href: custom-credential-and-credential-validation.md
+        - name: Экспорт пользовательских метаданных для расширения WCF
+          href: exporting-custom-metadata-for-a-wcf-extension.md
+          items:
+            - name: Как выполнить Экспорт пользовательской информации WSDL
+              href: how-to-export-custom-wsdl.md
+            - name: Как выполнить Экспорт проверочных утверждений пользовательской политики
+              href: how-to-export-custom-policy-assertions.md
+        - name: Импорт пользовательских метаданных для расширения WCF
+          href: importing-custom-metadata-for-a-wcf-extension.md
+          items:
+            - name: Как выполнить Импорт пользовательской информации WSDL
+              href: how-to-import-custom-wsdl.md
+            - name: Как выполнить Импорт проверочных утверждений пользовательской политики
+              href: how-to-import-custom-policy-assertions.md
+            - name: Как выполнить Разработка расширения для ServiceContractGenerator
+              href: how-to-write-an-extension-for-the-servicecontractgenerator.md
+        - name: Публикация и получение метаданных через пользовательскую привязку
+          href: publishing-and-retrieving-metadata-over-a-custom-binding.md
+          items:
+            - name: Привязки WS-MetadataExchange
+              href: ws-metadataexchange-bindings.md
+            - name: Как выполнить Настройка пользовательской привязки для обмена WS-Metadata
+              href: how-to-configure-a-custom-ws-metadata-exchange-binding.md
+            - name: 'Как выполнить Получение метаданных через привязку, не использующую MEX'
+              href: how-to-retrieve-metadata-over-a-non-mex-binding.md
+    - name: Расширение кодировщиков и сериализаторов
+      href: extending-encoders-and-serializers.md
       items:
-      - name: Пошаговое руководство. Создание пользовательских учетных данных для клиента и службы
-        href: walkthrough-creating-custom-client-and-service-credentials.md
-      - name: Практическое руководство. Создание службы, использующей пользовательский проверяющий элемент управления для сертификатов
-        href: how-to-create-a-service-that-employs-a-custom-certificate-validator.md
-      - name: Практическое руководство. Создание поставщика пользовательских маркеров безопасности
-        href: how-to-create-a-custom-security-token-provider.md
-      - name: Практическое руководство. Создание пользовательской структуры проверки подлинности маркера безопасности
-        href: how-to-create-a-custom-security-token-authenticator.md
-    - name: Пользовательские маркеры
-      href: custom-tokens.md
-      items:
-      - name: Практическое руководство. Создание пользовательского токена
-        href: how-to-create-a-custom-token.md
-    - name: Пользовательская авторизация
-      href: custom-authorization.md
-      items:
-      - name: Практическое руководство. Создание пользовательской политики авторизации
-        href: how-to-create-a-custom-authorization-policy.md
-      - name: Практическое руководство. Создание пользовательского диспетчера авторизации для службы
-        href: how-to-create-a-custom-authorization-manager-for-a-service.md
-      - name: Практическое руководство. Создание пользовательского утверждения
-        href: how-to-create-a-custom-claim.md
-      - name: Практическое руководство. Сравнение утверждений
-        href: how-to-compare-claims.md
-      - name: Практическое руководство. Создание пользовательского идентификатора участника
-        href: how-to-create-a-custom-principal-identity.md
-    - name: Переопределение идентификатора службы для проверки подлинности
-      href: overriding-the-identity-of-a-service-for-authentication.md
-    - name: Практическое руководство. Создание пользовательского средства проверки идентификации клиентов
-      href: how-to-create-a-custom-client-identity-verifier.md
-    - name: Практическое руководство. Использование отдельных сертификатов X.509 для подписывания и шифрования
-      href: how-to-use-separate-x-509-certificates-for-signing-and-encryption.md
-    - name: Практическое руководство. Изменение поставщика служб шифрования для закрытого ключа сертификата X.509
-      href: change-cryptographic-provider-x509-certificate-private-key.md
-  - name: Расширение системы метаданных
-    href: extending-the-metadata-system.md
-    items:
-    - name: Экспорт пользовательских метаданных для расширения WCF
-      href: exporting-custom-metadata-for-a-wcf-extension.md
-      items:
-      - name: Практическое руководство. Экспорт пользовательской информации WSDL
-        href: how-to-export-custom-wsdl.md
-      - name: Практическое руководство. Экспорт проверочных утверждений пользовательской политики
-        href: how-to-export-custom-policy-assertions.md
-    - name: Импорт пользовательских метаданных для расширения WCF
-      href: importing-custom-metadata-for-a-wcf-extension.md
-      items:
-      - name: Практическое руководство. Импорт пользовательской информации WSDL
-        href: how-to-import-custom-wsdl.md
-      - name: Практическое руководство. Импорт проверочных утверждений пользовательской политики
-        href: how-to-import-custom-policy-assertions.md
-      - name: Практическое руководство. Разработка расширения для ServiceContractGenerator
-        href: how-to-write-an-extension-for-the-servicecontractgenerator.md
-    - name: Публикация и получение метаданных через пользовательскую привязку
-      href: publishing-and-retrieving-metadata-over-a-custom-binding.md
-      items:
-      - name: Привязки WS-MetadataExchange
-        href: ws-metadataexchange-bindings.md
-      - name: Практическое руководство. Настройка пользовательской привязки для обмена WS-Metadata
-        href: how-to-configure-a-custom-ws-metadata-exchange-binding.md
-      - name: Практическое руководство. Получение метаданных через привязку, не использующую MEX
-        href: how-to-retrieve-metadata-over-a-non-mex-binding.md
-  - name: Расширение кодировщиков и сериализаторов
-    href: extending-encoders-and-serializers.md
-    items:
-    - name: Суррогаты контрактов данных
-      href: data-contract-surrogates.md
-    - name: Пользовательские модули форматирования сообщений
-      href: custom-message-formatters.md
-ms.openlocfilehash: 0d1efdeca48a3bf64f26a69635707398737420fd
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470485"
+        - name: Суррогаты контрактов данных
+          href: data-contract-surrogates.md
+        - name: Пользовательские модули форматирования сообщений
+          href: custom-message-formatters.md
