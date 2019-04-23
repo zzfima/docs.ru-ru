@@ -3,10 +3,10 @@ title: WCF и ASP.NET Web API
 ms.date: 03/30/2017
 ms.assetid: 08ceded3-fd9a-4467-9715-c4cbd9c7228e
 ms.openlocfilehash: d805c09bef45932ba006a213343429ae7c9303df
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59192008"
 ---
 # <a name="wcf-and-aspnet-web-api"></a>WCF и ASP.NET Web API
@@ -28,5 +28,5 @@ WCF является единой моделью программировани�
   
 ## <a name="see-also"></a>См. также
 
-- [Что такое Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
-- [Основные понятия Windows Communication Foundation](../../../docs/framework/wcf/fundamental-concepts.md)
+- [Что такое Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
+- [Основные понятия Windows Communication Foundation](../../../docs/framework/wcf/fundamental-concepts.md)

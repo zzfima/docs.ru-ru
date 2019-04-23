@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1bdb51d38109cf4c072a9841983e86a444e964b0
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 24a8c7ce090b286db9d86e0fc6c54ae33e7e2d5e
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492639"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59191891"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (средство строгих имен)
 Программа строгих имен (Sn.exe) позволяет подписывать сборки [строгими именами](../../../docs/framework/app-domains/strong-named-assemblies.md). Программа Sn.exe предусматривает параметры для управления ключами, создания подписи и ее проверки.  
@@ -125,6 +125,7 @@ sn -d MyContainer
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Инструменты](../../../docs/framework/tools/index.md)
 - [Al.exe (компоновщик сборок)](../../../docs/framework/tools/al-exe-assembly-linker.md)
 - [Сборки со строгими именами](../../../docs/framework/app-domains/strong-named-assemblies.md)

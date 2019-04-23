@@ -7,10 +7,10 @@ helpviewer_keywords:
 - assemblies [.NET Framework], specifying location
 ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
 ms.openlocfilehash: f7d09e315f2ccc7ecdcf22719ca6dce1ee1411b4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59186294"
 ---
 # <a name="specifying-an-assemblys-location"></a>Указание расположения сборки
@@ -70,4 +70,4 @@ ms.locfileid: "59186294"
 - [Сборки в среде CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
 - [Программирование с использованием сборок](../../../docs/framework/app-domains/programming-with-assemblies.md)
 - [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [Настройка приложений с использованием файлов конфигурации](index.md)
+- [Настройка приложений с помощью файлов конфигурации](index.md)

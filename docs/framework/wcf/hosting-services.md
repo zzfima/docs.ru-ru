@@ -5,10 +5,10 @@ helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
 ms.openlocfilehash: 4342b3d6219f0c996264bb7ed190b1204338ba64
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59185540"
 ---
 # <a name="hosting-services"></a>Размещение служб
@@ -45,7 +45,7 @@ ms.locfileid: "59185540"
 |-------------------------|----------------------|----------------------------------|  
 |Управляемое приложение (резидентное размещение)|— Консольное приложение, используемое во время разработки.<br />-Насыщенное WinForm и [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] клиентских приложений, доступ к службам.|-Гибкие.<br />-Проста в развертывании.<br />-Не корпоративного решения для служб.|  
 |Службы Windows (прежнее название - службы NT)|-Долго выполняющейся службой WCF, размещенной за пределами служб IIS.|-Управлять операционной системой, не активируется сообщениями время существования процесса службы.<br />-Поддерживается всеми версиями Windows.<br />— Безопасная среда.|  
-|IIS 5.1 [!INCLUDE[iis601](../../../includes/iis601-md.md)]|— Выполнение WCF службы side-by-side, с помощью [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] содержимого в Интернете по протоколу HTTP.|-Перезапуск процессов.<br />-Shutdown простоя.<br />— Мониторинг работоспособности процессов.<br />-Активация основе сообщений.<br />— Только для HTTP.|  
+|IIS 5.1, [!INCLUDE[iis601](../../../includes/iis601-md.md)]|— Выполнение WCF службы side-by-side, с помощью [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] содержимого в Интернете по протоколу HTTP.|-Перезапуск процессов.<br />-Shutdown простоя.<br />— Мониторинг работоспособности процессов.<br />-Активация основе сообщений.<br />— Только для HTTP.|  
 |Служба активации Windows (WAS)|-Запуск службы WCF без установки IIS в Интернет с использованием различных транспортных протоколов.|— Службы IIS не требуются.<br />-Перезапуск процессов.<br />-Shutdown простоя.<br />— Мониторинг работоспособности процессов.<br />-Активация основе сообщений.<br />-Работает с HTTP, TCP, именованные каналы и MSMQ.|  
 |IIS 7.0|— Выполнение WCF службы [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] содержимого.<br />-Запуск службы WCF в Интернете с использованием различных транспортных протоколов.|-Это приложение было преимущества.<br />-Интегрированные с [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] содержимым IIS и.|  
   
@@ -68,5 +68,5 @@ ms.locfileid: "59185540"
 - [Реализация контрактов служб](../../../docs/framework/wcf/implementing-service-contracts.md)
 - [Практическое руководство. Размещение службы WCF в IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
 - [Практическое руководство. Размещение службы WCF в WAS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)
-- [Практическое руководство. Размещение службы WCF в управляемой службе Windows](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)
+- [Практическое руководство. Размещение службы WCF в службе Windows, управляемых](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)
 - [Практическое руководство. Размещение службы WCF в управляемом приложении](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)

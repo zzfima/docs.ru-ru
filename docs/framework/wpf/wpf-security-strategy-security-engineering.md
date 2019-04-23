@@ -11,10 +11,10 @@ helpviewer_keywords:
 - threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
 ms.openlocfilehash: 27258110a8852c00990d73cd9ca8685c3ead315d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59300571"
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>Стратегия безопасности WPF — проектирование безопасности
@@ -75,7 +75,7 @@ Trustworthy Computing (защищенные информационные сис�
   
 <a name="techniques"></a>   
 ### <a name="testing-techniques"></a>Способы тестирования  
- [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] использует различные методы, которые включают тестирование безопасности:  
+ [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] использует различные методы тестирования безопасности, включая следующие.  
   
 -   **Тестирование методом белого ящика**: Тест-инженеры просматривают исходный код и затем создают эксплойт-тесты  
   
@@ -93,6 +93,6 @@ Trustworthy Computing (защищенные информационные сис�
 
 - [Безопасность](security-wpf.md)
 - [Безопасность частичного доверия в WPF](wpf-partial-trust-security.md)
-- [Стратегия безопасности WPF — безопасность платформы](wpf-security-strategy-platform-security.md)
+- [Стратегия безопасности WPF — безопасность платформы](wpf-security-strategy-platform-security.md)
 - [Trustworthy Computing](https://www.microsoft.com/mscorp/twc/default.mspx)
 - [Безопасность в .NET](../../standard/security/index.md)

@@ -5,10 +5,10 @@ helpviewer_keywords:
 - programming [WF], tracking and tracing
 ms.assetid: b965ded6-370a-483d-8790-f794f65b137e
 ms.openlocfilehash: dbc5c0b51024c7b88b8c6cd9a052addd74e6f7e8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191033"
 ---
 # <a name="workflow-tracking-and-tracing"></a>Отслеживание и трассировка рабочих процессов
@@ -22,11 +22,11 @@ ms.locfileid: "59191033"
   
  В этом разделе описаны основные компоненты инфраструктуры отслеживания, которые позволяют понять принципы работы модели программирования:  
   
--   <xref:System.Activities.Tracking.TrackingRecord> объекты, создаваемые выполнения рабочего процесса. Дополнительные сведения см. в разделе [записи отслеживания](tracking-records.md).  
+-   Объекты <xref:System.Activities.Tracking.TrackingRecord>, создаваемые во время выполнения рабочего процесса. Дополнительные сведения см. в разделе [записи отслеживания](tracking-records.md).  
   
--   <xref:System.Activities.Tracking.TrackingParticipant> объекты подписаться на <xref:System.Activities.Tracking.TrackingRecord> объектов. Участники отслеживания содержат логику обработки полезных данных из объектов <xref:System.Activities.Tracking.TrackingRecord> (например, они могут записывать данные в файл). Дополнительные сведения см. в разделе [участники отслеживания](tracking-participants.md).  
+-   Объекты <xref:System.Activities.Tracking.TrackingParticipant> подписываются на объекты <xref:System.Activities.Tracking.TrackingRecord>. Участники отслеживания содержат логику обработки полезных данных из объектов <xref:System.Activities.Tracking.TrackingRecord> (например, они могут записывать данные в файл). Дополнительные сведения см. в разделе [участники отслеживания](tracking-participants.md).  
   
--   <xref:System.Activities.Tracking.TrackingProfile> объекты фильтрации записей отслеживания, созданных из экземпляра рабочего процесса. Дополнительные сведения см. в разделе [профили отслеживания](tracking-profiles.md).  
+-   Записи отслеживания фильтра объекта <xref:System.Activities.Tracking.TrackingProfile>, создаваемые экземпляром рабочего процесса. Дополнительные сведения см. в разделе [профили отслеживания](tracking-profiles.md).  
   
 ## <a name="workflow-tracking-infrastructure"></a>Инфраструктура отслеживания рабочих процессов  
  Инфраструктура отслеживания рабочего процесса основана на принципе публикации и подписки. Экземпляр рабочего процесса является издателем записей отслеживания, а подписчики записей отслеживания регистрируются как расширения рабочего процесса. Эти расширения, подписанные на объекты <xref:System.Activities.Tracking.TrackingRecord>, называются участниками отслеживания. Участниками отслеживания являются точки расширения, обращающиеся к объектам <xref:System.Activities.Tracking.TrackingRecord> и обрабатывающие их с использованием заданных для них способов. Инфраструктура отслеживания позволяет применять к исходящим записям отслеживания фильтр таким образом, что участник может подписаться на определенное подмножество записей. Механизм фильтрации реализуется с помощью файла профиля отслеживания.  
@@ -48,7 +48,7 @@ ms.locfileid: "59191033"
  [Настройка отслеживания рабочего процесса](configuring-tracking-for-a-workflow.md)  
  Описывает настройку отслеживания рабочего процесса.  
   
- [Отслеживание рабочих процессов](workflow-tracing.md)  
+ [Трассировка рабочих процессов](workflow-tracing.md)  
  Описывает два способа включения трассировки отладки рабочего процесса.  
   
 ## <a name="see-also"></a>См. также

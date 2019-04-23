@@ -1,5 +1,5 @@
 ---
-title: <developmentMode> Элемент
+title: Элемент <developmentMode>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/developmentMode
@@ -12,10 +12,10 @@ ms.assetid: 60e79a8c-415a-497d-be29-b9d0fd9bdee3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fdf840035150f08c894c984213af9a0abe6e95af
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59192060"
 ---
 # <a name="developmentmode-element"></a>\<developmentMode > элемент
@@ -45,7 +45,7 @@ ms.locfileid: "59192060"
 |Значение|Описание|  
 |-----------|-----------------|  
 |**true**|Поиск сборок в каталогах, указанных в переменной среды DEVPATH.|  
-|**False**|Не выполняет поиск сборок в каталогах, указанных в переменной среды DEVPATH. Это значение по умолчанию|  
+|**false**|Не выполняет поиск сборок в каталогах, указанных в переменной среды DEVPATH. Это значение по умолчанию|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
  Отсутствует.  

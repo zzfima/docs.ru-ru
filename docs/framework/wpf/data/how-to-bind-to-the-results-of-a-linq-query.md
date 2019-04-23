@@ -6,10 +6,10 @@ helpviewer_keywords:
 - binding to LINQ query results [WPF]
 ms.assetid: ff2844d9-17ed-4ea6-aab1-5111af0bc684
 ms.openlocfilehash: 5464ee9c59a7c99a83774a7535b9b3c422c1d2e1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59185904"
 ---
 # <a name="how-to-bind-to-the-results-of-a-linq-query"></a>Практическое руководство. Привязка к результатам запроса LINQ
@@ -26,12 +26,12 @@ ms.locfileid: "59185904"
 [!code-csharp[LinqExample#Tasks](~/samples/snippets/csharp/VS_Snippets_Wpf/LinqExample/CSharp/Window1.xaml.cs#tasks)]  
 [!code-csharp[LinqExample#Handler](~/samples/snippets/csharp/VS_Snippets_Wpf/LinqExample/CSharp/Window1.xaml.cs#handler)]  
   
- Второй список привязывается к этой коллекции, так как его <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> имеет значение `{Binding}`. Таким образом, он отображает возвращаемой коллекции (на основе `myTaskTemplate`<xref:System.Windows.DataTemplate>).  
+ Второй список привязывается к этой коллекции, так как его <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> имеет значение `{Binding}`. Таким образом, он отображает возвращаемой коллекции (на основе `myTaskTemplate` <xref:System.Windows.DataTemplate>).  
   
 ## <a name="see-also"></a>См. также
 
 - [Обеспечение доступности данных для привязки в XAML](how-to-make-data-available-for-binding-in-xaml.md)
 - [Привязка к коллекции и вывод сведений в зависимости от выделенного элемента](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)
-- [Новые возможности WPF версии 4.5](../getting-started/whats-new.md)
+- [Новые возможности в WPF версии 4.5](../getting-started/whats-new.md)
 - [Общие сведения о привязке данных](data-binding-overview.md)
-- [Практические руководства](data-binding-how-to-topics.md)
+- [Разделы практического руководства](data-binding-how-to-topics.md)

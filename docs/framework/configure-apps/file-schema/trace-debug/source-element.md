@@ -1,5 +1,5 @@
 ---
-title: <source> Элемент
+title: Элемент <source>
 ms.date: 09/29/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source
@@ -8,10 +8,10 @@ helpviewer_keywords:
 - <source> element
 - source element
 ms.openlocfilehash: 8860f5d3ed7ee0c04d1e8afd7614f3f73b470808
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59186554"
 ---
 # <a name="source-element"></a>\<Источник > элемент
@@ -46,7 +46,7 @@ ms.locfileid: "59186554"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<прослушиватели >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-source.md)|Содержит прослушиватели, сбора, хранения и маршрутизации сообщений.|  
+|[\<listeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-source.md)|Содержит прослушиватели, сбора, хранения и маршрутизации сообщений.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   

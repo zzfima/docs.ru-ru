@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Создание многофайловой сборки
+title: Как выполнить Создание многофайловой сборки
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -20,13 +20,13 @@ ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bcc451903f7fbf7f82e2ed64834d26e605a0c069
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59187802"
 ---
-# <a name="how-to-build-a-multifile-assembly"></a>Практическое руководство. Создание многофайловой сборки
+# <a name="how-to-build-a-multifile-assembly"></a>Как выполнить Создание многофайловой сборки
 В этой статье рассматривается порядок создания многофайловой сборки и приводится код, иллюстрирующий каждый шаг процедуры.
 
 > [!NOTE]

@@ -8,10 +8,10 @@ ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6bdd27511de18c6cb119ddbf8621c43606c82ad4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59195830"
 ---
 # <a name="assembly-names"></a>Имена сборок
@@ -59,9 +59,9 @@ System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e08
   
 ## <a name="see-also"></a>См. также
 
-- [Практическое руководство. определение полного имени сборки](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)
+- [Практическое руководство. Определение полного имени сборки](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)
 - [Создание сборок](../../../docs/framework/app-domains/create-assemblies.md)
 - [Сборки со строгими именами](../../../docs/framework/app-domains/strong-named-assemblies.md)
-- [глобальный кэш сборок](../../../docs/framework/app-domains/gac.md)
+- [Глобальный кэш сборок](../../../docs/framework/app-domains/gac.md)
 - [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Программирование с использованием сборок](../../../docs/framework/app-domains/programming-with-assemblies.md)

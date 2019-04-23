@@ -1,5 +1,5 @@
 ---
-title: Как выполнить  Создание ссылки на типы .NET из COM
+title: Как выполнить Создание ссылки на типы .NET из COM
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 54917f6f-cb18-4103-b622-856b55da93f3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c5151d89feccbe68daa5a8de4aa3b75a42511899
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 1e033ba4b3b98367452b355363058adc7f1a5887
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220274"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59198404"
 ---
-# <a name="how-to-reference-net-types-from-com"></a>Как выполнить  Создание ссылки на типы .NET из COM
+# <a name="how-to-reference-net-types-from-com"></a>Как выполнить Создание ссылки на типы .NET из COM
 С точки зрения кода клиента и сервера различия между COM и .NET Framework практически незаметны. Клиенты Microsoft Visual Basic могут просматривать объект .NET в обозревателе объектов, который позволяет просмотреть методы, синтаксис, свойства и поля объекта точно так же, как если бы это был объект COM.  
   
  Процесс импорта библиотеки типов для клиентов C++ несколько сложнее, хотя для экспорта метаданных в библиотеку типов COM можно использовать те же средства. Чтобы получить доступ к элементам объекта .NET из неуправляемого клиента C++, укажите ссылку на TLB-файл (файл, созданный с помощью программы Tlbexp.exe) в директиве **#import**. При указании ссылки на библиотеку типов из C++ необходимо указать параметр **raw_interfaces_only** или импортировать определения из библиотеки базовых классов Mscorlib.tlb.  
@@ -44,6 +44,7 @@ ms.locfileid: "56220274"
     ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Предоставление компонентов .NET Framework клиентам COM](exposing-dotnet-components-to-com.md)
 - [Регистрация сборок в COM](registering-assemblies-with-com.md)
 - [Вызов объекта .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 36a98a81-b5b5-4c19-912a-11f91eff7f4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e6c327aad129f685e44f7b456e4ceef8f99fe12b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f6d07fe8ec61ee4515696eb3cf3d808483b50dfb
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712604"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59186567"
 ---
 # <a name="setting-assembly-attributes"></a>Настройка атрибутов сборки
 Атрибуты сборки — это значения, которые предоставляют сведения о сборке. Атрибуты разделяются на следующие группы.  
@@ -87,5 +87,6 @@ ms.locfileid: "54712604"
  [!code-vb[AssemblyDelaySignAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyDelaySignAttribute/vb/source2.vb#4)]  
   
 ## <a name="see-also"></a>См. также
+
 - [Создание сборок](../../../docs/framework/app-domains/create-assemblies.md)
 - [Программирование с использованием сборок](../../../docs/framework/app-domains/programming-with-assemblies.md)

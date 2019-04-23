@@ -8,10 +8,10 @@ helpviewer_keywords:
 - handling faults [WCF], sending
 ms.assetid: 7be6fb96-ce2a-450b-aebe-f932c6a4bc5d
 ms.openlocfilehash: 2757f98066931ca1b5e3ef147cee2c819ee22606
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59195063"
 ---
 # <a name="sending-and-receiving-faults"></a>Сбои при отправке и получении
@@ -51,15 +51,15 @@ ms.locfileid: "59195063"
   
 -   <xref:System.ServiceModel.CommunicationException>  
   
- <xref:System.TimeoutException> объекты выдаются в том случае, когда операция превысит заданного периода ожидания.  
+ Объекты <xref:System.TimeoutException> выдаются по истечении заданного времени ожидания.  
   
- <xref:System.ServiceModel.CommunicationException> объекты, вызываются при возникновении некоторой ошибки восстанавливаемые связи на стороне службы или клиента.  
+ Объекты <xref:System.ServiceModel.CommunicationException> выдаются в случае возникновения устранимой ошибки передачи данных в службе или клиенте.  
   
  Класс <xref:System.ServiceModel.CommunicationException> имеет два важных производных типа, <xref:System.ServiceModel.FaultException> и универсальный тип <xref:System.ServiceModel.FaultException%601>.  
   
- <xref:System.ServiceModel.FaultException> вызываются исключения, когда прослушиватель получает ошибку, или не указанную в контракте операции; Обычно это происходит при отладке приложения, а служба должна <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> свойство значение `true`.  
+ Исключения <xref:System.ServiceModel.FaultException> выдаются, когда прослушиватель получает неожиданную или не указанную в контракте операции ошибку. Обычно это происходит во время отладки приложения, когда свойству <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> службы присвоено значение `true`.  
   
- <xref:System.ServiceModel.FaultException%601> исключения на стороне клиента при получении ошибки, указанной в контракте операции в ответ на двустороннюю операцию (то есть метод с <xref:System.ServiceModel.OperationContractAttribute> атрибут с <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> присвоено `false`).  
+ Исключения <xref:System.ServiceModel.FaultException%601> выдаются в клиенте при получении ошибки, указанной в контракте операции, в ответ на двустороннюю операцию (т.е. метод с атрибутом <xref:System.ServiceModel.OperationContractAttribute>, у которого свойству <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> присвоено значение `false`).  
   
 > [!NOTE]
 >  Если это служба WCF имеет <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> или <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> свойство значение `true` клиента это выглядит как необъявленный <xref:System.ServiceModel.FaultException%601> типа <xref:System.ServiceModel.ExceptionDetail>. Клиенты могут либо перехватить эту определенную ошибку, либо обработать ее в блоке catch для <xref:System.ServiceModel.FaultException>.  
@@ -110,4 +110,4 @@ ms.locfileid: "59195063"
 - <xref:System.ServiceModel.FaultException%601>
 - <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>
 - [Ожидаемые исключения](../../../docs/framework/wcf/samples/expected-exceptions.md)
-- [Использование Close и Abort для освобождения ресурсов клиента WCF](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)
+- [Используйте Close и Abort для освобождения ресурсов клиента WCF](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 5a4ae2b4-3290-4aa1-bc95-fc70c51b54cf
 ms.openlocfilehash: eedc2e9b997e91ed9fe0038f260aa475d23a0627
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59186840"
 ---
 # <a name="how-to-use-table-valued-user-defined-functions"></a>Практическое руководство. Как применять определяемые пользователем возвращающие табличное значение функции
@@ -28,7 +28,7 @@ RETURN
     WHERE UnitPrice > @cost  
 ```  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Сопоставляет функцию следующим образом:  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] сопоставляет функцию следующим образом.  
   
  [!code-csharp[DLinqUDFS#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqUDFS/cs/northwind-tfunc.cs#1)]
  [!code-vb[DLinqUDFS#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqUDFS/vb/northwind-tfunc.vb#1)]  
@@ -49,4 +49,4 @@ AS p1 INNER JOIN Products AS p2 ON p1.ProductID = p2.ProductID
   
 ## <a name="see-also"></a>См. также
 
-- [Пользовательские функции](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)
+- [Определяемые пользователем функции](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)

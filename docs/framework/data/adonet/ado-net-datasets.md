@@ -3,10 +3,10 @@ title: Наборы данных ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
 ms.openlocfilehash: 50e8e8f5e4b3ee2f5a41cb9dad11b5e701135d9e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59190942"
 ---
 # <a name="adonet-datasets"></a>Наборы данных ADO.NET
@@ -41,13 +41,13 @@ ms.locfileid: "59190942"
  **Набора данных**, **DataTable**, и **DataColumn** все имеют **ExtendedProperties** свойство. **ExtendedProperties** — **PropertyCollection** которых можно размещать пользовательские сведения, например инструкцию SELECT, который был использован для формирования результирующего набора, или время, когда данные были созданы. **ExtendedProperties** сохраняемое коллекции сведения схемы для **набора данных**.  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] предоставляет встроенные в язык возможности запросов к кэшированным данным, хранящимся в объекте DataSet. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] использует стандартный [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] синтаксис и обеспечивает проверку синтаксиса во время компиляции, статическую типизацию и поддержку технологии IntelliSense при использовании Visual Studio IDE.  
+ [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] предоставляет возможности выполнения запросов LINQ к кэшированным данным, хранящимся в объекте DataSet. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] использует стандартный [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] синтаксис и обеспечивает проверку синтаксиса во время компиляции, статическую типизацию и поддержку технологии IntelliSense при использовании Visual Studio IDE.  
   
  Дополнительные сведения см. в разделе [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md).  
   
 ## <a name="see-also"></a>См. также
 
-- [Общие сведения о ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [Общие сведения об ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [Наборы данных, таблицы данных и объекты DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [Извлечение и изменение данных в ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

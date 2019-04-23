@@ -6,10 +6,10 @@ helpviewer_keywords:
 - elements, UI Automation, obtaining
 ms.assetid: c2caaf45-e59c-42a1-bc9b-77a6de520171
 ms.openlocfilehash: 89c9397ba579f04d81eee7af6363f8fee3abfe1d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191280"
 ---
 # <a name="obtaining-ui-automation-elements"></a>Получение элементов автоматизации пользовательского интерфейса
@@ -34,9 +34,9 @@ ms.locfileid: "59191280"
 ## <a name="conditions"></a>Условия  
  В большинстве методик, которые можно использовать для получения элементов [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , вы должны указывать объект <xref:System.Windows.Automation.Condition>, представляющий собой набор условий, определяющих, какие элементы нужно получить.  
   
- Простейшим условием является <xref:System.Windows.Automation.Condition.TrueCondition>, предопределенный объект, указывающий, что должны быть возвращены все элементы в области поиска. <xref:System.Windows.Automation.Condition.FalseCondition>, обратный <xref:System.Windows.Automation.Condition.TrueCondition>, менее полезен, так как он предотвращает найдены какие-либо элементы.  
+ Простейшим условием является <xref:System.Windows.Automation.Condition.TrueCondition>, предопределенный объект, указывающий, что должны быть возвращены все элементы в области поиска. Условие<xref:System.Windows.Automation.Condition.FalseCondition>, противоположное <xref:System.Windows.Automation.Condition.TrueCondition>, менее целесообразно, так как может помешать поиску каких-либо элементов.  
   
- Три прочих предопределенных условия можно использовать отдельно или в сочетании с другими условиями: <xref:System.Windows.Automation.Automation.ContentViewCondition>, <xref:System.Windows.Automation.Automation.ControlViewCondition>и <xref:System.Windows.Automation.Automation.RawViewCondition>. <xref:System.Windows.Automation.Automation.RawViewCondition>, используемый сам по себе, эквивалентно <xref:System.Windows.Automation.Condition.TrueCondition>, так как оно не фильтрует элементы по их <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement%2A> или <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A> свойства.  
+ Три прочих предопределенных условия можно использовать отдельно или в сочетании с другими условиями: <xref:System.Windows.Automation.Automation.ContentViewCondition>, <xref:System.Windows.Automation.Automation.ControlViewCondition>и <xref:System.Windows.Automation.Automation.RawViewCondition>. Условие<xref:System.Windows.Automation.Automation.RawViewCondition>, используемое само по себе, эквивалентно <xref:System.Windows.Automation.Condition.TrueCondition>, так как оно не фильтрует элементы по их свойству <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement%2A> или <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A>.  
   
  Прочие условия создаются из одного или нескольких объектов <xref:System.Windows.Automation.PropertyCondition> , каждый из которых задает значение свойства. Например, <xref:System.Windows.Automation.PropertyCondition> может указывать, что элемент включен или что он поддерживает определенный шаблон элемента управления.  
   
@@ -98,6 +98,6 @@ ms.locfileid: "59191280"
   
 ## <a name="see-also"></a>См. также
 
-- [Нахождение Элемента Автоматизации Пользовательского Интерфейса в Зависимости от Состояния Свойства](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
-- [Навигация между элементами автоматизированного пользовательского интерфейса с помощью TreeWalker](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)
+- [Нахождение элемента модели автоматизации пользовательского интерфейса в зависимости от состояния свойства](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
+- [Навигация между элементами модели автоматизации пользовательского интерфейса с помощью TreeWalker](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)
 - [Общие сведения о дереве модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)

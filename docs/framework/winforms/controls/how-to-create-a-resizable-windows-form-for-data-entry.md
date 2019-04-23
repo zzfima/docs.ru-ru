@@ -12,10 +12,10 @@ helpviewer_keywords:
 - Windows Forms, resizable
 ms.assetid: babdf198-404c-485d-a914-ed370c6ecd99
 ms.openlocfilehash: ebccad248927d8a201bd5758e5ddf2d5414455f9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59189687"
 ---
 # <a name="how-to-create-a-resizable-windows-form-for-data-entry"></a>Практическое руководство. Создание в Windows Forms формы для ввода данных, размер которой можно изменять
@@ -40,5 +40,5 @@ ms.locfileid: "59189687"
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>
 - [Практическое руководство. Привязка и закрепление дочерних элементов управления в элементе управления TableLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
-- [Практическое руководство. Формирование макета формы Windows Forms с учетом будущей локализации](how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)
+- [Практическое руководство. Разработка макета формы Windows, с учетом будущей локализации](how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)
 - [Взаимодействие с пользователем в Microsoft Windows, официальные рекомендации для разработчиков и конструкторов пользовательских интерфейсов. Редмонд, штат Вашингтон: Microsoft Press, 1999. (USBN: 0-7356-0566-1)](https://www.microsoft.com/mspress/southpacific/books/book11588.htm)

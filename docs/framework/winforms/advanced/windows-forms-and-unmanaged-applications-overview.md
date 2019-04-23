@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Windows Forms, interop
 ms.assetid: 0a26d99d-8135-4895-8760-c9a2b5f67f14
 ms.openlocfilehash: 63631378911a9ba95713e68fb19d8d08176c7562
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59195648"
 ---
 # <a name="windows-forms-and-unmanaged-applications-overview"></a>Общие сведения о Windows Forms и неуправляемых приложениях
@@ -57,13 +57,13 @@ ms.locfileid: "59195648"
   
 ## <a name="see-also"></a>См. также
 
-- [Windows Forms и неуправляемые приложения](windows-forms-and-unmanaged-applications.md)
+- [Windows Forms and Unmanaged Applications](windows-forms-and-unmanaged-applications.md)
 - [COM-взаимодействие](../../../visual-basic/programming-guide/com-interop/index.md)
 - [COM-взаимодействие в приложениях .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
 - [Примеры COM-взаимодействия](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/cxcz83xf(v=vs.90))
-- [Aximp.exe (программа импорта элементов ActiveX форм Windows)](../../tools/aximp-exe-windows-forms-activex-control-importer.md)
-- [Предоставление COM-клиентам доступа к компонентам .NET Framework](../../interop/exposing-dotnet-components-to-com.md)
+- [Aximp.exe (программа импорта элементов ActiveX форм Windows Forms)](../../tools/aximp-exe-windows-forms-activex-control-importer.md)
+- [Предоставление компонентов .NET Framework клиентам COM](../../interop/exposing-dotnet-components-to-com.md)
 - [Упаковка сборки для модели COM](../../interop/packaging-an-assembly-for-com.md)
 - [Регистрация сборок в COM](../../interop/registering-assemblies-with-com.md)
-- [Практическое руководство. Обеспечение поддержки COM-взаимодействия путем отображения формы Windows Forms с помощью метода ShowDialog](com-interop-by-displaying-a-windows-form-shadow.md)
+- [Практическое руководство. Поддержка COM-взаимодействия путем отображения формы Windows Forms с помощью метода ShowDialog](com-interop-by-displaying-a-windows-form-shadow.md)
 - [Практическое руководство. Поддержка COM-взаимодействия путем отображения каждой формы Windows Forms в отдельном потоке](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)

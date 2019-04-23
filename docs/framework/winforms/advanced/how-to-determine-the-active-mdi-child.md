@@ -12,10 +12,10 @@ helpviewer_keywords:
 - MDI [Windows Forms], locating focus
 ms.assetid: 33880ec3-0207-4c2b-a616-ff140443cc0f
 ms.openlocfilehash: 9b70824670b8f47a2346135cb31ad39bd55694d1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59300610"
 ---
 # <a name="how-to-determine-the-active-mdi-child"></a>Практическое руководство. Определение активной дочерней MDI-формы
@@ -87,6 +87,6 @@ ms.locfileid: "59300610"
 
 - [Приложения с интерфейсом MDI](multiple-document-interface-mdi-applications.md)
 - [Практическое руководство. Создание родительских MDI-форм](how-to-create-mdi-parent-forms.md)
-- [Практическое руководство. Создание дочерних форм MDI](how-to-create-mdi-child-forms.md)
-- [Практическое руководство. Отправка данных в активную дочернюю MDI-форму](how-to-send-data-to-the-active-mdi-child.md)
-- [Практическое руководство. Упорядочение дочерних MDI-форм](how-to-arrange-mdi-child-forms.md)
+- [Практическое руководство. Создание дочерних MDI-форм](how-to-create-mdi-child-forms.md)
+- [Практическое руководство. Отправки данных в активную дочернюю форму MDI](how-to-send-data-to-the-active-mdi-child.md)
+- [Практическое руководство. Упорядочение дочерних форм MDI](how-to-arrange-mdi-child-forms.md)

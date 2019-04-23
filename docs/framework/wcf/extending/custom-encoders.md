@@ -3,10 +3,10 @@ title: Пользовательские кодировщики
 ms.date: 03/30/2017
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
 ms.openlocfilehash: 7602e18a03f73f66dfd028d810c003db0b6653bb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59190578"
 ---
 # <a name="custom-encoders"></a>Пользовательские кодировщики
@@ -50,7 +50,7 @@ ms.locfileid: "59190578"
 ### <a name="pooling"></a>Pooling  
  В каждой реализации выполняется попытка объединения в пул, насколько это возможно. Снижение выделения памяти- это основной способ улучшения производительности управляемого кода. Для облегчения объединения в пул в реализациях используется класс `SynchronizedPool`. Файл C# содержит описание дополнительных оптимизаций, используемых в этом классе.  
   
- <xref:System.Xml.XmlDictionaryReader> и <xref:System.Xml.XmlDictionaryWriter> экземпляры помещаются в пул и повторно инициализируются, чтобы предотвратить выделение памяти для новых правил для каждого сообщения. В случае средств чтения, обратный вызов `OnClose` закрывает средство чтения при вызове метода `Close()`. Кодировщик также повторно использует некоторые объекты состояния сообщений, используемые при создании сообщений. Размер пулов настраивается с помощью свойств `MaxReadPoolSize` и `MaxWritePoolSize` для каждого из трех классов, унаследованных от класса <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>.  
+ Экземпляры <xref:System.Xml.XmlDictionaryReader> и <xref:System.Xml.XmlDictionaryWriter> объединяются в пул и повторно инициализируются, чтобы предотвратить выделение памяти для новых экземпляров для каждого сообщения. В случае средств чтения, обратный вызов `OnClose` закрывает средство чтения при вызове метода `Close()`. Кодировщик также повторно использует некоторые объекты состояния сообщений, используемые при создании сообщений. Размер пулов настраивается с помощью свойств `MaxReadPoolSize` и `MaxWritePoolSize` для каждого из трех классов, унаследованных от класса <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>.  
   
 ### <a name="binary-encoding"></a>Двоичное кодирование  
  Если при двоичном кодировании используются сеансы, получатель сообщения должен иметь возможность взаимодействия со строкой динамического словаря. Это осуществляется путем задания префикса сообщению со строками динамического словаря. Получатель отсекает строки, добавляет их в сеанс и обрабатывает сообщение. Для правильной передачи строк словаря необходимо, чтобы транспорт был помещен в буфер.  
@@ -79,9 +79,9 @@ ms.locfileid: "59190578"
   
 -   Ниже представлены основные методы этого класса, которые необходимо переопределить.  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A> который принимает <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> и записывает его в <xref:System.IO.Stream> объекта.  
+-   <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A>, который принимает объект <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> и записывает его в объект <xref:System.IO.Stream>.  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A> который принимает <xref:System.IO.Stream> и максимальный размер заголовка и возвращает <xref:System.ServiceModel.Channels.Message> объекта.  
+-   <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A>, который принимает объект <xref:System.IO.Stream> и максимальный размер заголовка и возвращает объект <xref:System.ServiceModel.Channels.Message>.  
   
  Код, записываемый в этих методах, выполняет преобразование между стандартным транспортным протоколом и настроенным кодированием.  
   
@@ -98,4 +98,4 @@ ms.locfileid: "59190578"
 - <xref:System.ServiceModel.Channels.MessageEncoder>
 - [Общие сведения об архитектуре передачи данных](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)
 - [Выбор кодировщика сообщений](../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
-- [Выбор транспортов](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [Выбор транспорта](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)

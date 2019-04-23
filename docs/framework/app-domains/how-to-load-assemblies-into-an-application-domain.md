@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Загрузка сборок в домен приложения
+title: Как выполнить Загрузка сборок в домен приложения
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,13 +12,13 @@ ms.assetid: 1432aa2d-bd83-4346-bf3b-a1b7920e2aa9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 51c1ac87cf9111504ba99efa25f6fca2bb0b63df
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59188530"
 ---
-# <a name="how-to-load-assemblies-into-an-application-domain"></a>Практическое руководство. Загрузка сборок в домен приложения
+# <a name="how-to-load-assemblies-into-an-application-domain"></a>Как выполнить Загрузка сборок в домен приложения
 Существует несколько способов загрузки сборки в домен приложения. Рекомендуется использовать метод <xref:System.Reflection.Assembly.Load%2A> `static` (`Shared` в Visual Basic) класса <xref:System.Reflection.Assembly?displayProperty=nameWithType>. Другими способами загрузки сборок являются:  
   
 -   Метод <xref:System.Reflection.Assembly.LoadFrom%2A> класса <xref:System.Reflection.Assembly> загружает сборку, заданную расположением ее файла. При загрузке сборок с помощью этого метода используется другой контекст загрузки.  
@@ -52,5 +52,5 @@ ms.locfileid: "59188530"
 - [Программирование с использованием доменов приложений](application-domains.md#programming-with-application-domains)
 - [Отражение](../../../docs/framework/reflection-and-codedom/reflection.md)
 - [Использование доменов приложений](../../../docs/framework/app-domains/use.md)
-- [Практическое руководство. Загрузка сборок в контекст, предназначенный только для отражения](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)
+- [Практическое руководство. загрузке сборок в контекст, предназначенный только для отражения](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)
 - [Домены приложений и сборки](application-domains.md#application-domains-and-assemblies)

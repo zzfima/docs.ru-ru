@@ -3,10 +3,10 @@ title: EDM (модель данных с использованием сущно
 ms.date: 03/30/2017
 ms.assetid: 2dda3d5b-4582-4ba0-a91d-fcd7a1498137
 ms.openlocfilehash: 8e96890d97f652295a3fdb67c48ec37710280eec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59197923"
 ---
 # <a name="entity-data-model"></a>EDM (модель данных с использованием сущностей)
@@ -21,11 +21,11 @@ ms.locfileid: "59197923"
   
  [Основные понятия модели EDM](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
   
- [EDM (модель данных с использованием сущностей): Пространства имен](../../../../docs/framework/data/adonet/entity-data-model-namespaces.md)  
+ [Модель EDM. Пространства имен](../../../../docs/framework/data/adonet/entity-data-model-namespaces.md)  
   
- [EDM (модель данных с использованием сущностей): примитивные типы данных](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)  
+ [Модель EDM. Типы-примитивы](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)  
   
- [EDM (модель данных с использованием сущностей): Наследование](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md)  
+ [Модель EDM. Наследование](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md)  
   
  [конечная точка ассоциации](../../../../docs/framework/data/adonet/association-end.md)  
   
@@ -39,11 +39,11 @@ ms.locfileid: "59197923"
   
  [сложный тип](../../../../docs/framework/data/adonet/complex-type.md)  
   
- [контейнер сущностей](../../../../docs/framework/data/adonet/entity-container.md)  
+ [контейнер сущности](../../../../docs/framework/data/adonet/entity-container.md)  
   
  [ключ сущности](../../../../docs/framework/data/adonet/entity-key.md)  
   
- [набор сущностей](../../../../docs/framework/data/adonet/entity-set.md)  
+ [набор сущности](../../../../docs/framework/data/adonet/entity-set.md)  
   
  [тип сущности](../../../../docs/framework/data/adonet/entity-type.md)  
   
@@ -53,16 +53,16 @@ ms.locfileid: "59197923"
   
  [объявляемая моделью функция](../../../../docs/framework/data/adonet/model-declared-function.md)  
   
- [функция определенной модели](../../../../docs/framework/data/adonet/model-defined-function.md)  
+ [определяемая моделью функция](../../../../docs/framework/data/adonet/model-defined-function.md)  
   
  [свойство навигации](../../../../docs/framework/data/adonet/navigation-property.md)  
   
- [свойство;](../../../../docs/framework/data/adonet/property.md)  
+ [свойство](../../../../docs/framework/data/adonet/property.md)  
   
  [ограничение ссылочной целостности](../../../../docs/framework/data/adonet/referential-integrity-constraint.md)  
   
 ## <a name="see-also"></a>См. также
 
-- [Средства работы с моделью EDM ADO.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
-- [Общие сведения о EDMX-файлах](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
+- [Средства модели EDM ADO.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
+- [Обзор файла .edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [Спецификация CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)

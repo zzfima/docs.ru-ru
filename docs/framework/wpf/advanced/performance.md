@@ -7,10 +7,10 @@ helpviewer_keywords:
 - WPF [WPF], performance
 ms.assetid: c649a20f-8b7e-4a38-9b80-74839298d406
 ms.openlocfilehash: 268bb396564db983c293ab1d718171e963ab7aaa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59188491"
 ---
 # <a name="performance"></a>Производительность
@@ -19,7 +19,7 @@ ms.locfileid: "59188491"
 ## <a name="in-this-section"></a>В этом разделе  
  [Уровни графической отрисовки](graphics-rendering-tiers.md)  
  [Улучшение производительности приложений WPF](optimizing-wpf-application-performance.md)  
- [Пошаговое руководство. Кэширование данных приложения WPF](walkthrough-caching-application-data-in-a-wpf-application.md)  
+ [Пошаговое руководство: Кэширование данных приложения WPF](walkthrough-caching-application-data-in-a-wpf-application.md)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Media.RenderCapability>  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ea8a403e-ae03-4faa-9d9b-02179ec72992
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d0efe9234bd61a45fa87e68cdbed1be69957d218
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: e9bacc8f67755319b416c14766204f6eb2be52de
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675164"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59192086"
 ---
 # <a name="deploying-an-interop-application"></a>Развертывание приложения взаимодействия
 Приложения взаимодействия обычно включают клиентскую сборку .NET, одну или несколько сборок взаимодействия (представляющих различные библиотеки типов COM) и один или несколько зарегистрированных COM-компонентов. В Visual Studio и [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] представлены средства для импорта и преобразования библиотеки типов в сборку взаимодействия, которые описываются в разделе [Импорт библиотеки типов в виде сборки](importing-a-type-library-as-an-assembly.md). Приложение взаимодействия можно развернуть двумя способами:  
@@ -46,6 +46,7 @@ ms.locfileid: "57675164"
  Сборки, которые являются общими для нескольких приложений, необходимо устанавливать в централизованный репозиторий, который называется глобальным кэшем сборок. Клиенты .NET могут обращаться к одной копии сборки взаимодействия, которая подписана и установлена в глобальный кэш сборок. Дополнительные сведения о создании и использовании основных сборок взаимодействия см. в разделе [Основные сборки взаимодействия](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).  
   
 ## <a name="see-also"></a>См. также
+
 - [Предоставление COM-компонентов платформе .NET Framework](exposing-com-components.md)
 - [Импорт библиотеки типов в виде сборки](importing-a-type-library-as-an-assembly.md)
 - [Using COM Types in Managed Code](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100)) (Использование COM-типов в управляемом коде)

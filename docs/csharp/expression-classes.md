@@ -3,12 +3,12 @@ title: Типы платформ, поддерживающие деревья в
 description: Сведения о типах платформ, поддерживающих деревья выражений, создании деревьев выражений и способах работы с API деревьев выражений.
 ms.date: 06/20/2016
 ms.assetid: e9c85021-0d36-48af-91b7-aaaa66f22654
-ms.openlocfilehash: 687b521c52c1ca380a12e18469b5f66000049d3c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: c18bbfb1273156a4b070d1f195d9e823256fde9d
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45972563"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59198469"
 ---
 # <a name="framework-types-supporting-expression-trees"></a>Типы платформ, поддерживающие деревья выражений
 
@@ -65,4 +65,3 @@ var addition = Expression.Add(one, two);
 В каждой из этих трех областей доступны и другие возможности. Вы обязательно найдете то, что вам нужно, если начнете с этих трех основных шагов.
  
  [Следующий раздел: "Выполнение деревьев выражений"](expression-trees-execution.md)
- 

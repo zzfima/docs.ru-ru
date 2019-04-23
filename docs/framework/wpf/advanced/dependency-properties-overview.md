@@ -15,10 +15,10 @@ helpviewer_keywords:
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
 ms.openlocfilehash: 443ea9ad56d13d26191231104ce3998b2691fc34
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59188647"
 ---
 # <a name="dependency-properties-overview"></a>Общие сведения о свойствах зависимости
@@ -36,7 +36,7 @@ Windows Presentation Foundation (WPF) предоставляет набор сл
 В справочнике по SDK можно определить, что это свойство является свойством зависимостей по наличию раздела сведений о свойстве зависимостей на странице управляемой ссылки для этого свойства. В разделе сведений о свойстве зависимостей есть ссылка на идентификатор поля для этого свойства зависимостей <xref:System.Windows.DependencyProperty>, список параметров метаданных, заданных для этого свойства, информацию по переопределению для каждого класса и другие сведения.
 
 ## <a name="dependency-properties-back-clr-properties"></a>Свойства зависимостей поддерживают свойства CLR
-Свойства зависимостей и система свойств WPF расширяют функциональные возможности свойства, предоставляя тип, который поддерживает свойство, в качестве альтернативной реализации для стандартного способа обеспечения свойства с помощью закрытого поля. Имя этого типа — <xref:System.Windows.DependencyProperty>. Другим важным типом, который определяет систему свойств WPF, является <xref:System.Windows.DependencyObject>. <xref:System.Windows.DependencyObject> Определяет базовый класс для регистрации и свойства зависимостей.
+Свойства зависимостей и система свойств WPF расширяют функциональные возможности свойства, предоставляя тип, который поддерживает свойство, в качестве альтернативной реализации для стандартного способа обеспечения свойства с помощью закрытого поля. Имя этого типа — <xref:System.Windows.DependencyProperty>. Другим важным типом, который определяет систему свойств WPF, является <xref:System.Windows.DependencyObject>. Тип <xref:System.Windows.DependencyObject> определяет базовый класс для регистрации свойства зависимостей и использования в качестве его владельца.
 
 Далее перечислены термины, используемые для свойств зависимостей.
 
@@ -93,7 +93,7 @@ Windows Presentation Foundation (WPF) предоставляет набор сл
 
 - [Анимации](#animations)
 
-- [Переопределения метаданных](#metadata-overrides)
+- [Переопределение метаданных](#metadata-overrides)
 
 - [Наследование значения свойства](#property-value-inheritance)
 
@@ -200,5 +200,5 @@ Windows Presentation Foundation (WPF) предоставляет набор сл
 
 - [Пользовательские свойства зависимостей](custom-dependency-properties.md)
 - [Свойства зависимости "только для чтения"](read-only-dependency-properties.md)
-- [Обзор XAML (WPF)](xaml-overview-wpf.md)
+- [Общие сведения о языке XAML (WPF)](xaml-overview-wpf.md)
 - [Архитектура WPF](wpf-architecture.md)

@@ -37,10 +37,10 @@ helpviewer_keywords:
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
 ms.openlocfilehash: 768f7704851a5f54f4b4a7535fe2584e20bfaa0f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301234"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Универсальные типы в Visual Basic (Visual Basic)
@@ -91,7 +91,7 @@ ms.locfileid: "59301234"
   
 -   **Безопасность.** Универсальные типы обеспечивают проверку типов во время компиляции. Типы на основе `Object` принимают любой тип данных, и необходимо написать код, чтобы проверить, является ли тип входных данных приемлемым. При использовании универсальных типов компилятор может перехватить несоответствие типов до выполнения.  
   
--   **Производительность.** Универсальные типы не должны *упаковывать* и *unупаковывать* данные, так как каждый из них является специальным для одного типа данных. Операции, основанные на `Object` , должны упаковывать типы входных данных для их преобразования в `Object` и распаковать данные, предназначенные для вывода. Упаковка и распаковка снижают производительность.  
+-   **Производительность.** Универсальные типы не должны *упаковывать* и *распаковывать* данные, так как каждый из них является специальным для одного типа данных. Операции, основанные на `Object` , должны упаковывать типы входных данных для их преобразования в `Object` и распаковать данные, предназначенные для вывода. Упаковка и распаковка снижают производительность.  
   
      Типы на основе `Object` имеют позднее связывание, а значит, для доступа к их элементам требуется дополнительный код во время выполнения. Это также снижает производительность.  
   
@@ -149,13 +149,13 @@ ms.locfileid: "59301234"
 ## <a name="see-also"></a>См. также
 
 - [Типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Символы типов](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+- [Знаки типов](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
 - [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
 - [Преобразование типов в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Устранение неполадок, связанных с типами данных](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
 - [Типы данных](../../../../visual-basic/language-reference/data-types/index.md)
 - [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
 - [As](../../../../visual-basic/language-reference/statements/as-clause.md)
-- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
-- [Ковариация и контрвариация](../../concepts/covariance-contravariance/index.md)
+- [Тип данных Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Ковариация и контрвариантность](../../concepts/covariance-contravariance/index.md)
 - [Итераторы](../../../../visual-basic/programming-guide/concepts/iterators.md)

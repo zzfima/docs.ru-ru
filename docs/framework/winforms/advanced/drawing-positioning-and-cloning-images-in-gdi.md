@@ -16,10 +16,10 @@ helpviewer_keywords:
 - GDI+, positioning images
 ms.assetid: 09f0c07a-19c0-43b4-90a2-862a10545ce8
 ms.openlocfilehash: b5f98e7bdef9ff8ed0a4cd0e040cb92a31f30503
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59188452"
 ---
 # <a name="drawing-positioning-and-cloning-images-in-gdi"></a>Отрисовка, позиционирование и клонирование изображений в GDI+
@@ -53,6 +53,6 @@ ms.locfileid: "59188452"
   
 ## <a name="see-also"></a>См. также
 
-- [Работа с растровыми и векторными изображениями с использованием классов Image, Bitmap и Metafile](images-bitmaps-and-metafiles.md)
-- [Практическое руководство. Создание графических объектов для рисования](how-to-create-graphics-objects-for-drawing.md)
-- [Работа с растровыми и векторными изображениями](working-with-images-bitmaps-icons-and-metafiles.md)
+- [Изображения, точечные рисунки и метафайлы](images-bitmaps-and-metafiles.md)
+- [Практическое руководство. Создание объектов Graphics для рисования](how-to-create-graphics-objects-for-drawing.md)
+- [Работа с растровыми и векторными изображениями, значками и метафайлами](working-with-images-bitmaps-icons-and-metafiles.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - rotating objects [WPF]
 ms.assetid: ee3466cd-e66f-4e8f-8a5a-71d77bc1e390
 ms.openlocfilehash: d1c4700a5dc8f6ed99043552999d8f014116da8f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59189676"
 ---
 # <a name="how-to-rotate-an-object"></a>Практическое руководство. Вращение объекта
@@ -48,4 +48,4 @@ ms.locfileid: "59189676"
 
 - <xref:System.Windows.Media.Transform>
 - [Общие сведения о классах Transform](transforms-overview.md)
-- [Практические руководства](transformations-how-to-topics.md)
+- [Разделы практического руководства](transformations-how-to-topics.md)

@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 75bf52fbf9552dc464d9c646f0a2b1bc01cf89c0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59193100"
 ---
 # <a name="getqualifierset-function"></a>Функция GetQualifierSet
@@ -47,7 +47,7 @@ HRESULT GetQualifierSet (
 [in] Указатель на [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) экземпляра.
 
 `ppQualSet`  
-[out] Получает указатель интерфейса, обеспечивающий доступ к квалификаторы объекта класса. `ppQualSet` Не может быть `null`. Если возникает ошибка, не возвращается новый объект и указатель остается без изменений. 
+[out] Получает указатель интерфейса, обеспечивающий доступ к квалификаторы объекта класса. Параметр `ppQualSet` не может иметь значение `null`. Если возникает ошибка, не возвращается новый объект и указатель остается без изменений. 
 
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -76,4 +76,4 @@ HRESULT GetQualifierSet (
   
 ## <a name="see-also"></a>См. также
 
-- [WMI и счетчики производительности (справочник по неуправляемым API)](index.md)
+- [WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)

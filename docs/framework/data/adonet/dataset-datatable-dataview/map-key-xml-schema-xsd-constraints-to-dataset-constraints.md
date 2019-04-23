@@ -3,10 +3,10 @@ title: Сопоставление ключевых ограничений XML-с
 ms.date: 03/30/2017
 ms.assetid: 22664196-f270-4ebc-a169-70e16a83dfa1
 ms.openlocfilehash: 46a980f06198c6f06bb13824c65cfb5309eec154
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59189921"
 ---
 # <a name="map-key-xml-schema-xsd-constraints-to-dataset-constraints"></a>Сопоставление ключевых ограничений XML-схемы (XSD) с ограничениями набора данных
@@ -18,8 +18,8 @@ ms.locfileid: "59189921"
   
 |Имя атрибута|Описание|  
 |--------------------|-----------------|  
-|**msdata:ConstraintName**|Если этот атрибут указан, его значение используется в качестве имени ограничения. В противном случае **имя** атрибут содержит значение имени ограничения.|  
-|**msdata:PrimaryKey**|Если `PrimaryKey="true"` присутствует, **IsPrimaryKey** ограничение свойству **true**, делая его первичный ключ. **AllowDBNull** столбца задано значение **false**, поскольку первичные ключи не могут иметь значения null.|  
+|**msdata: ConstraintName**|Если этот атрибут указан, его значение используется в качестве имени ограничения. В противном случае **имя** атрибут содержит значение имени ограничения.|  
+|**msdata: PrimaryKey**|Если `PrimaryKey="true"` присутствует, **IsPrimaryKey** ограничение свойству **true**, делая его первичный ключ. **AllowDBNull** столбца задано значение **false**, поскольку первичные ключи не могут иметь значения null.|  
   
  При преобразовании схемы, в котором указывается ограничение ключа, процесс сопоставления создает ограничение уникальности для таблицы с **AllowDBNull** свойство столбца, значение **false** для каждого столбца в ограничение. **IsPrimaryKey** ограничения уникальности также задано значение **false** пока не задана `msdata:PrimaryKey="true"` на **ключ** элемент. Это равнозначно ограничению уникальности в схеме, где `PrimaryKey="true"`.  
   
@@ -80,6 +80,6 @@ TableName: customers
   
 ## <a name="see-also"></a>См. также
 
-- [Сопоставление ограничений XML-схемы (XSD) с ограничениями набора данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
-- [Создание отношений наборов данных из схемы XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
-- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Сопоставление ограничений схемы XML (XSD) с ограничениями DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
+- [Создание отношений DataSet из схемы XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

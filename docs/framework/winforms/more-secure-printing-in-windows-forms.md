@@ -8,10 +8,10 @@ helpviewer_keywords:
 - security [Windows Forms], printing
 ms.assetid: 48fd36ac-872f-4de0-902a-e52969cd4367
 ms.openlocfilehash: 5ee170980ed02d90606c774e2a7055f047292e33
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59197364"
 ---
 # <a name="more-secure-printing-in-windows-forms"></a>Более безопасная печать в Windows Forms
@@ -22,9 +22,9 @@ ms.locfileid: "59197364"
 |PrintingPermissionLevel|Описание|  
 |-----------------------------|-----------------|  
 |<xref:System.Drawing.Printing.PrintingPermissionLevel.AllPrinting>|Предоставляет полный доступ для всех установленных принтеров.|  
-|<xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting>|Обеспечивает программную печать на принтере по умолчанию и более безопасную печать через диалоговое окно печати. <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting> — Это подмножество <xref:System.Drawing.Printing.PrintingPermissionLevel.AllPrinting>.|  
-|<xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting>|Предоставляет возможность печати только из более ограниченного диалоговое окно. <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting> — Это подмножество <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting>.|  
-|<xref:System.Drawing.Printing.PrintingPermissionLevel.NoPrinting>|Запрещает доступ к принтерам. <xref:System.Drawing.Printing.PrintingPermissionLevel.NoPrinting> — Это подмножество <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting>.|  
+|<xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting>|Обеспечивает программную печать на принтере по умолчанию и более безопасную печать через диалоговое окно печати. <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting> является подмножеством <xref:System.Drawing.Printing.PrintingPermissionLevel.AllPrinting>.|  
+|<xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting>|Предоставляет возможность печати только из более ограниченного диалоговое окно. <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting> является подмножеством <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting>.|  
+|<xref:System.Drawing.Printing.PrintingPermissionLevel.NoPrinting>|Запрещает доступ к принтерам. <xref:System.Drawing.Printing.PrintingPermissionLevel.NoPrinting> является подмножеством <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting>.|  
   
 ## <a name="see-also"></a>См. также
 

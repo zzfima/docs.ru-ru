@@ -3,10 +3,10 @@ title: ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
 ms.openlocfilehash: 4105aaba92c73206e7a162415e3bc245507f40e3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191917"
 ---
 # <a name="adonet"></a>ADO.NET
@@ -16,7 +16,7 @@ ADO.NET — это набор классов, предоставляющих с
  [Новые возможности в ADO.NET](../../../../docs/framework/data/adonet/whats-new.md)  
  Представляет новые возможности ADO.NET.  
   
- [Общие сведения о ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)  
+ [Общие сведения об ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)  
  Содержит введение в структуру и компоненты ADO.NET.  
   
  [Entity Framework](https://go.microsoft.com/fwlink/?LinkID=213876)  
@@ -44,22 +44,22 @@ ADO.NET — это набор классов, предоставляющих с
  Описывает функции и варианты поведения, характерные для поставщика данных .NET Framework для Oracle.  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Language-Integrated Query (LINQ):C#](../../../csharp/programming-guide/concepts/linq/index.md)  
+ [LINQ — C#](../../../csharp/programming-guide/concepts/linq/index.md)  
  Ссылки на разделы о LINQ и образцы кода с помощью C#.  
   
- [Language-Integrated Query (LINQ): Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)  
+ [LINQ — Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)  
  Ссылки на разделы о LINQ и примеры с использованием Visual Basic.  
   
- [Службы WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)  
+ [Службы данных WCF 4.5](../../../../docs/framework/data/wcf/index.md)  
  Описывает, как использовать [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] для развертывания служб данных в Интернете или интрасети, которые реализуют протокол Open Data Protocol (OData).  
   
  [Руководство по разработке для .NET Framework](../../development-guide.md)  
  Приводит ссылки на сведения о стандартных задачах разработки с применением платформы .NET Framework.  
   
- [примеры и учебники;](../../../samples-and-tutorials/index.md)  
+ [Примеры и руководства](../../../samples-and-tutorials/index.md)  
  Предоставляет список примеров .NET и учебники.
   
 ## <a name="see-also"></a>См. также
 
 - [Доступ к данным в Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)
-- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

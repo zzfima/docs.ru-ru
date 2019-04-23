@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9300f67e75d40f041a4fba52f6742741ec9f91de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59187351"
 ---
 # <a name="iclrgcmanagergetstats-method"></a>Метод ICLRGCManager::GetStats
@@ -74,7 +74,7 @@ pCLRGCManager->GetStats(&GCStats);
   
 ## <a name="see-also"></a>См. также
 
-- [Automatic Memory Management](../../../../docs/standard/automatic-memory-management.md)
+- [Автоматическое управление памятью](../../../../docs/standard/automatic-memory-management.md)
 - [Структура COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)
 - [Перечисление COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md)
 - [Сборка мусора](../../../../docs/standard/garbage-collection/index.md)

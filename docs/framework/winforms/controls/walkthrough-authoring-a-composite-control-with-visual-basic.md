@@ -14,10 +14,10 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating
 ms.assetid: f50e270e-4db2-409a-8319-6db6ca5c7daf
 ms.openlocfilehash: 6404e5933f886578b4ad8afd0d3da324541fc3f9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59299986"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-basic"></a>Пошаговое руководство. Создание составного элемента управления с помощью Visual Basic
@@ -35,7 +35,7 @@ ms.locfileid: "59299986"
   
 2. В списке проектов Visual Basic, выберите **Windows Control Library** шаблон проекта, тип `ctlClockLib` в **имя** , а затем щелкните **ОК**.  
   
-     Имя проекта, `ctlClockLib`, по умолчанию также назначается корневому пространству имен. Корневое пространство имен используется для определения имен компонентов в сборке. Например, если в двух сборках содержатся компоненты с именем `ctlClock`, можно указать ваш `ctlClock` компонента с помощью `ctlClockLib.ctlClock.`  
+     Имя проекта, `ctlClockLib`, по умолчанию также назначается корневому пространству имен. Корневое пространство имен используется для определения имен компонентов в сборке. Например, если в двух сборках содержатся компоненты с именем `ctlClock`, можно указать компонент `ctlClock`, используя `ctlClockLib.ctlClock.`.  
   
 3. В обозревателе решений щелкните файл **UserControl1.vb** правой кнопкой мыши и выберите команду **Переименовать**. Измените имя файла на `ctlClock.vb`. Чтобы переименовать все ссылки на элемент кода UserControl1, в соответствующем запросе нажмите кнопку **Да**.  
   
@@ -59,8 +59,8 @@ ms.locfileid: "59299986"
   
     |Свойство.|Измените на|  
     |--------------|---------------|  
-    |**name**|`lblDisplay`|  
-    |**Текста**|`(blank space)`|  
+    |**Name**|`lblDisplay`|  
+    |**Text**|`(blank space)`|  
     |**TextAlign**|`MiddleCenter`|  
     |**Font.Size**|`14`|  
   
@@ -244,10 +244,10 @@ ms.locfileid: "59299986"
   
     |Свойство.|Параметр|  
     |--------------|-------------|  
-    |**name**|`lblAlarm`|  
-    |**Текста**|**Сигнал!**|  
+    |**Name**|`lblAlarm`|  
+    |**Text**|**Alarm!**|  
     |**TextAlign**|`MiddleCenter`|  
-    |**Видимый**|`False`|  
+    |**Visible**|`False`|  
   
 ### <a name="adding-the-alarm-functionality"></a>Добавление функциональных возможностей будильника  
  Выполняя предыдущие процедуры, вы добавили свойства и элемент управления, которые обеспечат функциональность будильника в составном элементе управления. В ходе этой процедуры вы добавите код, который будет сравнивать текущее время со временем будильника и, если они совпадают, запускать звуковой сигнал и мигающее оповещение. Переопределив метод `Timer1_Tick` в `ctlClock` и добавив в него дополнительный код, вы расширите возможности `ctlAlarmClock`, сохранив при этом все унаследованные функции `ctlClock`.  
@@ -358,9 +358,9 @@ ms.locfileid: "59299986"
   
     |Элемент управления|Свойство|Значение|  
     |-------------|--------------|-----------|  
-    |`label1`|**Текста**|`(blank space)`|  
-    ||**name**|`lblTest`|  
-    |`dateTimePicker1`|**name**|`dtpTest`|  
+    |`label1`|**Text**|`(blank space)`|  
+    ||**Name**|`lblTest`|  
+    |`dateTimePicker1`|**Name**|`dtpTest`|  
     ||**Формат**|<xref:System.Windows.Forms.DateTimePickerFormat.Time>|  
   
 12. В конструкторе дважды щелкните **dtpTest**.  
@@ -397,6 +397,6 @@ ms.locfileid: "59299986"
   
 ## <a name="see-also"></a>См. также
 
-- [Создание собственных элементов управления](varieties-of-custom-controls.md)
+- [Разновидности пользовательских элементов управления](varieties-of-custom-controls.md)
 - [Практическое руководство. Создание составных элементов управления](how-to-author-composite-controls.md)
-- [Практическое руководство. Отображение элемента управления в диалоговом окне выбора элементов панели элементов](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [Практическое руководство. Отображение элемента управления в Выбор элементов панели элементов-диалоговое окно](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)

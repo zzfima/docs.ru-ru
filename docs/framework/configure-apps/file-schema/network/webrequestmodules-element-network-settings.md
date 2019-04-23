@@ -1,5 +1,5 @@
 ---
-title: <webRequestModules> (Сетевые параметры)
+title: Элемент <webRequestModules> (параметры сети)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules
@@ -9,10 +9,10 @@ helpviewer_keywords:
 - <webRequestModules> element
 ms.assetid: 1263de11-3e0a-4f94-97c9-710b2ae53817
 ms.openlocfilehash: e5d1780a204b2e99593d51179a479845fd49e608
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59187009"
 ---
 # <a name="webrequestmodules-element-network-settings"></a>\<webRequestModules > (сетевые параметры)
@@ -40,14 +40,14 @@ ms.locfileid: "59187009"
 |**Элемент**|**Описание**|  
 |-----------------|---------------------|  
 |[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-webrequestmodules-network-settings.md)|Добавляет пользовательский модуль веб-запросов к приложению.|  
-|[очистить](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-webrequestmodules-network-settings.md)|Удаляет все зарегистрированные модули веб-запросов из приложения.|  
+|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-webrequestmodules-network-settings.md)|Удаляет все зарегистрированные модули веб-запросов из приложения.|  
 |[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-webrequestmodules-network-settings.md)|Удаляет пользовательский модуль веб-запросов из приложения.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |**Элемент**|**Описание**|  
 |-----------------|---------------------|  
-|[system.net](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Содержит параметры сети, определяющие способ подключения .NET Framework к Интернету.|  
+|[System.NET](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Содержит параметры сети, определяющие способ подключения .NET Framework к Интернету.|  
   
 ## <a name="remarks"></a>Примечания  
  Элемент `webRequestModules` регистрирует потомки класса <xref:System.Net.WebRequest>, чтобы обработать запросы информации к сетевым узлам. Модули веб-запросов необходимо реализовать <xref:System.Net.IWebRequestCreate> интерфейс.  

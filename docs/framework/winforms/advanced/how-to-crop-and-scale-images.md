@@ -9,10 +9,10 @@ helpviewer_keywords:
 - images [Windows Forms], scaling
 ms.assetid: 053e3360-bca0-4b25-9afa-0e77a6f17b03
 ms.openlocfilehash: 4257431881565f9160f45795111d374cc680dedd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59189910"
 ---
 # <a name="how-to-crop-and-scale-images"></a>Практическое руководство. Обрезка и масштабирование изображений
@@ -37,5 +37,5 @@ ms.locfileid: "59189910"
   
 ## <a name="see-also"></a>См. также
 
-- [Работа с растровыми и векторными изображениями с использованием классов Image, Bitmap и Metafile](images-bitmaps-and-metafiles.md)
-- [Работа с растровыми и векторными изображениями](working-with-images-bitmaps-icons-and-metafiles.md)
+- [Изображения, точечные рисунки и метафайлы](images-bitmaps-and-metafiles.md)
+- [Работа с растровыми и векторными изображениями, значками и метафайлами](working-with-images-bitmaps-icons-and-metafiles.md)

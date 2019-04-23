@@ -8,10 +8,10 @@ helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
 ms.openlocfilehash: d1aa402ec28fc22654d8f1513366c091215fa4d4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59300961"
 ---
 # <a name="building-a-wpf-application-wpf"></a>Построение приложения WPF
@@ -101,7 +101,7 @@ End Sub
   
 <a name="Pass_2_of_Markup_Compilation"></a>   
 ### <a name="markup-compilationpass-2"></a>Компиляция разметки — шаг 2  
- Не все страницы [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] компилируются на шаге 1 компиляции разметки. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] файлы, имеющие локально определенные типы (ссылки на типы, определенные в коде в том же проекте), исключаются из компиляции на этом этапе. Причина заключается в том, что эти локально определенные типы существуют только в источнике и еще не скомпилированы. Чтобы определить это, синтаксический анализатор использует эвристику, которая включает поиск элементов, таких как `x:Name`, в файле разметки. При обнаружении такого экземпляра компиляция этого файла разметки откладывается, пока не будут скомпилированы файлы кода, после чего второй этап компиляции разметки обрабатывает эти файлы.  
+ Не все страницы [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] компилируются на шаге 1 компиляции разметки. Файлы [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], имеющие локально определенные ссылки на типы (ссылки на типы, определенные где-либо в коде того же проекта), исключаются из компиляции на этом шаге. Причина заключается в том, что эти локально определенные типы существуют только в источнике и еще не скомпилированы. Чтобы определить это, синтаксический анализатор использует эвристику, которая включает поиск элементов, таких как `x:Name`, в файле разметки. При обнаружении такого экземпляра компиляция этого файла разметки откладывается, пока не будут скомпилированы файлы кода, после чего второй этап компиляции разметки обрабатывает эти файлы.  
   
 <a name="File_Classification"></a>   
 ### <a name="file-classification"></a>Классификация файлов  
@@ -167,7 +167,7 @@ End Sub
   
 ## <a name="see-also"></a>См. также
 
-- [Развертывание приложения WPF](deploying-a-wpf-application-wpf.md)
+- [Развертывание приложений WPF](deploying-a-wpf-application-wpf.md)
 - [Справочные сведения о WPF для MSBuild](/visualstudio/msbuild/wpf-msbuild-reference)
 - [URI типа "pack" в WPF](pack-uris-in-wpf.md)
-- [Ресурсы, Содержимое и Файлы данных WPF-приложения](wpf-application-resource-content-and-data-files.md)
+- [Файлы ресурсов, содержимого и данных WPF-приложения](wpf-application-resource-content-and-data-files.md)

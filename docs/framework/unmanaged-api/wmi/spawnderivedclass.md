@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 81f4d5219865bf7f7c9e6d284d74d0c249729dfc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59194426"
 ---
 # <a name="spawnderivedclass-function"></a>Функция SpawnDerivedClass
@@ -62,7 +62,7 @@ HRESULT SpawnDerivedClass (
 | `WBEM_E_INVALID_OPERATION` | 0x80041016 | Запрошена недопустимая операция, например порождение класса от экземпляра. |
 | `WBEM_E_INCOMPLETE_CLASS` | Исходный класс был не полностью определенных или зарегистрированы с помощью службы управления Windows, поэтому новый производный класс не допускается. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Недостаточно памяти для завершения операции. |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass` — `null`. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Свойство `ppNewClass` имеет значение `null`. |
 | `WBEM_S_NO_ERROR` | 0 | Вызов функции был успешным.  |
   
 ## <a name="remarks"></a>Примечания
@@ -82,4 +82,4 @@ HRESULT SpawnDerivedClass (
   
 ## <a name="see-also"></a>См. также
 
-- [WMI и счетчики производительности (справочник по неуправляемым API)](index.md)
+- [WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)

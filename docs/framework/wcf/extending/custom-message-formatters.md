@@ -3,10 +3,10 @@ title: Пользовательские модули форматировани�
 ms.date: 03/30/2017
 ms.assetid: c07435f3-5214-4791-8961-2c2b61306d71
 ms.openlocfilehash: af1596c65fc87a68bc3dc2ab5ab2d82133e0fed4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59196246"
 ---
 # <a name="custom-message-formatters"></a>Пользовательские модули форматирования сообщений

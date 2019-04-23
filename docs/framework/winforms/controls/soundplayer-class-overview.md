@@ -7,10 +7,10 @@ helpviewer_keywords:
 - sounds [Windows Forms], playing
 ms.assetid: fcebb938-62b9-4677-9cbe-6465bc863e22
 ms.openlocfilehash: 3ff23cbfa78b803d4526e7a7c389fd5d458a967c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59195011"
 ---
 # <a name="soundplayer-class-overview"></a>Общие сведения о классе SoundPlayer
@@ -24,15 +24,15 @@ ms.locfileid: "59195011"
   
 |name|Описание|  
 |----------|-----------------|  
-|<xref:System.Media.SoundPlayer.SoundLocation%2A> свойство;|Путь к файлу или веб-адресу звука. Допустимые значения включают UNC- или HTTP-путь.|  
-|<xref:System.Media.SoundPlayer.LoadTimeout%2A> свойство;|Время ожидания программой загрузки звука (в миллисекундах), прежде чем будет создано исключение. По умолчанию используется значение 10 секунд.|  
-|<xref:System.Media.SoundPlayer.IsLoadCompleted%2A> свойство;|Логическое значение, показывающее, завершилась ли загрузка звука.|  
-|<xref:System.Media.SoundPlayer.Load%2A> метод|Загружает звук синхронно.|  
-|<xref:System.Media.SoundPlayer.LoadAsync%2A> метод|Начинает загрузку звука асинхронно. Когда загрузка завершена, он вызывает <xref:System.Media.SoundPlayer.OnLoadCompleted%2A> событий.|  
-|<xref:System.Media.SoundPlayer.Play%2A> метод|Воспроизводит звук, указанный в <xref:System.Media.SoundPlayer.SoundLocation%2A> или <xref:System.Media.SoundPlayer.Stream%2A> свойство в новом потоке.|  
-|<xref:System.Media.SoundPlayer.PlaySync%2A> метод|Воспроизводит звук, указанный в <xref:System.Media.SoundPlayer.SoundLocation%2A> или <xref:System.Media.SoundPlayer.Stream%2A> свойств в текущем потоке.|  
-|<xref:System.Media.SoundPlayer.Stop%2A> метод|Останавливает воспроизведение звука.|  
-|<xref:System.Media.SoundPlayer.LoadCompleted> событие|Возникает после попытки загрузки звука.|  
+|Свойство <xref:System.Media.SoundPlayer.SoundLocation%2A>|Путь к файлу или веб-адресу звука. Допустимые значения включают UNC- или HTTP-путь.|  
+|Свойство <xref:System.Media.SoundPlayer.LoadTimeout%2A>|Время ожидания программой загрузки звука (в миллисекундах), прежде чем будет создано исключение. По умолчанию используется значение 10 секунд.|  
+|Свойство <xref:System.Media.SoundPlayer.IsLoadCompleted%2A>|Логическое значение, показывающее, завершилась ли загрузка звука.|  
+|Метод <xref:System.Media.SoundPlayer.Load%2A>|Загружает звук синхронно.|  
+|Метод <xref:System.Media.SoundPlayer.LoadAsync%2A>|Начинает загрузку звука асинхронно. Когда загрузка завершена, он вызывает <xref:System.Media.SoundPlayer.OnLoadCompleted%2A> событий.|  
+|Метод <xref:System.Media.SoundPlayer.Play%2A>|Воспроизводит звук, указанный в <xref:System.Media.SoundPlayer.SoundLocation%2A> или <xref:System.Media.SoundPlayer.Stream%2A> свойство в новом потоке.|  
+|Метод <xref:System.Media.SoundPlayer.PlaySync%2A>|Воспроизводит звук, указанный в <xref:System.Media.SoundPlayer.SoundLocation%2A> или <xref:System.Media.SoundPlayer.Stream%2A> свойств в текущем потоке.|  
+|Метод <xref:System.Media.SoundPlayer.Stop%2A>|Останавливает воспроизведение звука.|  
+|Событие<xref:System.Media.SoundPlayer.LoadCompleted> |Возникает после попытки загрузки звука.|  
   
 ## <a name="see-also"></a>См. также
 
