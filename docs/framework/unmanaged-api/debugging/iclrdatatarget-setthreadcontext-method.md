@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d3f98ab65512a380ebd4dc0ecd50e36f94a6d6b5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59104160"
 ---
-# <a name="iclrdatatargetsetthreadcontext-method"></a><span data-ttu-id="6c216-102">Метод ICLRDataTarget::SetThreadContext</span><span class="sxs-lookup"><span data-stu-id="6c216-102">ICLRDataTarget::SetThreadContext Method</span></span>
-<span data-ttu-id="6c216-103">Задает текущий контекст заданного потока в целевом процессе.</span><span class="sxs-lookup"><span data-stu-id="6c216-103">Sets the current context of the specified thread in the target process.</span></span> <span data-ttu-id="6c216-104">Этот метод вызывается службами доступа к данным среды CLR.</span><span class="sxs-lookup"><span data-stu-id="6c216-104">This method is called by the common language runtime (CLR) data access services.</span></span>  
+# <a name="iclrdatatargetsetthreadcontext-method"></a><span data-ttu-id="b342b-102">Метод ICLRDataTarget::SetThreadContext</span><span class="sxs-lookup"><span data-stu-id="b342b-102">ICLRDataTarget::SetThreadContext Method</span></span>
+<span data-ttu-id="b342b-103">Задает текущий контекст заданного потока в целевом процессе.</span><span class="sxs-lookup"><span data-stu-id="b342b-103">Sets the current context of the specified thread in the target process.</span></span> <span data-ttu-id="b342b-104">Этот метод вызывается службами доступа к данным среды CLR.</span><span class="sxs-lookup"><span data-stu-id="b342b-104">This method is called by the common language runtime (CLR) data access services.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6c216-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="6c216-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b342b-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b342b-105">Syntax</span></span>  
   
 ```  
 HRESULT SetThreadContext (  
@@ -38,30 +38,30 @@ HRESULT SetThreadContext (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6c216-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="6c216-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b342b-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="b342b-106">Parameters</span></span>  
  `threadID`  
- <span data-ttu-id="6c216-107">[in] Идентификатор потока в целевом процессе операционной системы.</span><span class="sxs-lookup"><span data-stu-id="6c216-107">[in] The operating system identifier of a thread in the target process.</span></span>  
+ <span data-ttu-id="b342b-107">[in] Идентификатор потока в целевом процессе операционной системы.</span><span class="sxs-lookup"><span data-stu-id="b342b-107">[in] The operating system identifier of a thread in the target process.</span></span>  
   
  `contextSize`  
- <span data-ttu-id="6c216-108">[in] Размер контекста.</span><span class="sxs-lookup"><span data-stu-id="6c216-108">[in] The size of the context.</span></span>  
+ <span data-ttu-id="b342b-108">[in] Размер контекста.</span><span class="sxs-lookup"><span data-stu-id="b342b-108">[in] The size of the context.</span></span>  
   
  `context`  
- <span data-ttu-id="6c216-109">[in] Указатель на буфер, содержащий контекст.</span><span class="sxs-lookup"><span data-stu-id="6c216-109">[in] Pointer to a buffer containing the context.</span></span>  
+ <span data-ttu-id="b342b-109">[in] Указатель на буфер, содержащий контекст.</span><span class="sxs-lookup"><span data-stu-id="b342b-109">[in] Pointer to a buffer containing the context.</span></span>  
   
- <span data-ttu-id="6c216-110">Данные в `context` буфера будет иметь формат для Win32 `CONTEXT` структуры.</span><span class="sxs-lookup"><span data-stu-id="6c216-110">The data in the `context` buffer will be in the format of the Win32 `CONTEXT` structure.</span></span> <span data-ttu-id="6c216-111">Контекст задает данные конкретного процессора регистра, поэтому определение Win32 `CONTEXT` структура зависит от архитектуры процессора.</span><span class="sxs-lookup"><span data-stu-id="6c216-111">The context specifies processor-specific register data, so the definition of the Win32 `CONTEXT` structure depends on the processor's architecture.</span></span> <span data-ttu-id="6c216-112">Ссылки на файл заголовка WinNT.h, для определения Win32 `CONTEXT` структуры.</span><span class="sxs-lookup"><span data-stu-id="6c216-112">Refer to the WinNT.h header file for the definition of the Win32 `CONTEXT` structure.</span></span>  
+ <span data-ttu-id="b342b-110">Данные в `context` буфера будет иметь формат для Win32 `CONTEXT` структуры.</span><span class="sxs-lookup"><span data-stu-id="b342b-110">The data in the `context` buffer will be in the format of the Win32 `CONTEXT` structure.</span></span> <span data-ttu-id="b342b-111">Контекст задает данные конкретного процессора регистра, поэтому определение Win32 `CONTEXT` структура зависит от архитектуры процессора.</span><span class="sxs-lookup"><span data-stu-id="b342b-111">The context specifies processor-specific register data, so the definition of the Win32 `CONTEXT` structure depends on the processor's architecture.</span></span> <span data-ttu-id="b342b-112">Ссылки на файл заголовка WinNT.h, для определения Win32 `CONTEXT` структуры.</span><span class="sxs-lookup"><span data-stu-id="b342b-112">Refer to the WinNT.h header file for the definition of the Win32 `CONTEXT` structure.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="6c216-113">Примечания</span><span class="sxs-lookup"><span data-stu-id="6c216-113">Remarks</span></span>  
- <span data-ttu-id="6c216-114">Этот метод реализуется модулем записи отладчика.</span><span class="sxs-lookup"><span data-stu-id="6c216-114">This method is implemented by the writer of the debugging application.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b342b-113">Примечания</span><span class="sxs-lookup"><span data-stu-id="b342b-113">Remarks</span></span>  
+ <span data-ttu-id="b342b-114">Этот метод реализуется модулем записи отладчика.</span><span class="sxs-lookup"><span data-stu-id="b342b-114">This method is implemented by the writer of the debugging application.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6c216-115">Требования</span><span class="sxs-lookup"><span data-stu-id="6c216-115">Requirements</span></span>  
- <span data-ttu-id="6c216-116">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6c216-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b342b-115">Требования</span><span class="sxs-lookup"><span data-stu-id="b342b-115">Requirements</span></span>  
+ <span data-ttu-id="b342b-116">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b342b-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6c216-117">**Заголовок.** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="6c216-117">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="b342b-117">**Заголовок.** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="b342b-117">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="6c216-118">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6c216-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b342b-118">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b342b-118">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="6c216-119">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="6c216-119">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="b342b-119">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b342b-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6c216-120">См. также</span><span class="sxs-lookup"><span data-stu-id="6c216-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b342b-120">См. также</span><span class="sxs-lookup"><span data-stu-id="b342b-120">See also</span></span>
 
-- [<span data-ttu-id="6c216-121">Интерфейс ICLRDataTarget</span><span class="sxs-lookup"><span data-stu-id="6c216-121">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+- [<span data-ttu-id="b342b-121">Интерфейс ICLRDataTarget</span><span class="sxs-lookup"><span data-stu-id="b342b-121">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
