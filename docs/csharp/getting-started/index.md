@@ -9,10 +9,10 @@ ms.author: ronpet
 ms.date: 04/05/2019
 ms.custom: seoapril2019
 ms.openlocfilehash: 5c502c3832ca9afc30599d47d0890fae168fa998
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130976"
 ---
 # <a name="get-started-with-c"></a>Начало работы с C\#
@@ -21,7 +21,7 @@ ms.locfileid: "59130976"
 
 Рассматриваются следующие темы:
 
-* [Введение в язык C# и .NET Framework](introduction-to-the-csharp-language-and-the-net-framework.md)
+* [Введение в язык C# и платформу .NET Framework](introduction-to-the-csharp-language-and-the-net-framework.md)
 
      Содержит общие сведения о языке C# и .NET.
 

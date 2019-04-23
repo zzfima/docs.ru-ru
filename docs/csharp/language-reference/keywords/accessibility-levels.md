@@ -7,10 +7,10 @@ helpviewer_keywords:
 - accessibility levels
 ms.assetid: dc083921-0073-413e-8936-a613e8bb7df4
 ms.openlocfilehash: da49c6f0b44ab0eefbd338963a744a11502f75da
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130472"
 ---
 # <a name="accessibility-levels-c-reference"></a>Уровни доступности (Справочник по C#)
@@ -52,7 +52,7 @@ ms.locfileid: "59130472"
 
 - [Справочник по C#](../../../csharp/language-reference/index.md)
 - [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Ключевые слова C#](../../../csharp/language-reference/keywords/index.md)
+- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)
 - [Модификаторы доступа](../../../csharp/language-reference/keywords/access-modifiers.md)
 - [Домен доступности](../../../csharp/language-reference/keywords/accessibility-domain.md)
 - [Ограничения на использование уровней доступности](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md)

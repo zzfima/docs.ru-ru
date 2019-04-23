@@ -3,10 +3,10 @@ title: UriTemplate и UriTemplateTable
 ms.date: 03/30/2017
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
 ms.openlocfilehash: b0dc3b2b747bc08da239490db7db3ba77d1e7ed8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130251"
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate и UriTemplateTable
@@ -25,22 +25,22 @@ ms.locfileid: "59130251"
  В этой таблице описывает набор, структурно аналогичный универсальным кодам ресурсов (URI). Каждая запись является шаблоном универсального кода ресурса (URI). Сегменты в фигурных скобках описывают переменные. Сегменты без фигурных скобок описывают строки литералов. Классы шаблонов WCF позволяют разработчику принимать входящий URI, например, «/ weather/wa/seattle/циклически переключаются» и сопоставить их в шаблон, описывающим его «/weather/ {state} / {city} / {activity}».  
   
 ## <a name="uritemplate"></a>UriTemplate  
- <xref:System.UriTemplate> — Это класс, инкапсулирующий шаблон URI. Конструктор принимает строковый параметр, задающий шаблон. Эта строка содержит шаблон в формате, приведенном в следующем разделе. Класс <xref:System.UriTemplate> предоставляет методы, позволяющие сопоставлять входящий URI с шаблоном, создавать URI из шаблона, получать коллекцию имен переменных в шаблоне, определять, эквивалентны ли два шаблона, и возвращать строку шаблона.  
+ Класс <xref:System.UriTemplate> является классом, инкапсулирующим шаблон универсального кода ресурса (URI). Конструктор принимает строковый параметр, задающий шаблон. Эта строка содержит шаблон в формате, приведенном в следующем разделе. Класс <xref:System.UriTemplate> предоставляет методы, позволяющие сопоставлять входящий URI с шаблоном, создавать URI из шаблона, получать коллекцию имен переменных в шаблоне, определять, эквивалентны ли два шаблона, и возвращать строку шаблона.  
   
- <xref:System.UriTemplate.Match%28System.Uri%2CSystem.Uri%29> принимает базовый адрес и потенциальный URI и пытается сопоставить с URI в шаблон. Если сопоставление завершается успешно, возвращается экземпляр <xref:System.UriTemplateMatch>. Объект <xref:System.UriTemplateMatch> содержит базовый универсальный код ресурса (URI), потенциальный URI, коллекцию имя/значение параметров запроса, массив сегментов относительного пути, коллекцию имя/значение сопоставленных переменных, экземпляр <xref:System.UriTemplate>, использованный для сопоставления, строку, содержащую несопоставленную часть потенциального URI (используется, если шаблон содержит подстановочный знак) и объект, связанный с этим шаблоном.  
+ Метод <xref:System.UriTemplate.Match%28System.Uri%2CSystem.Uri%29> принимает базовый адрес и потенциальный универсальный код ресурса (URI), после чего пытается сопоставить универсальный код ресурса (URI) с шаблоном. Если сопоставление завершается успешно, возвращается экземпляр <xref:System.UriTemplateMatch>. Объект <xref:System.UriTemplateMatch> содержит базовый универсальный код ресурса (URI), потенциальный URI, коллекцию имя/значение параметров запроса, массив сегментов относительного пути, коллекцию имя/значение сопоставленных переменных, экземпляр <xref:System.UriTemplate>, использованный для сопоставления, строку, содержащую несопоставленную часть потенциального URI (используется, если шаблон содержит подстановочный знак) и объект, связанный с этим шаблоном.  
   
 > [!NOTE]
 >  При сопоставлении потенциального универсального кода ресурса (URI) класс <xref:System.UriTemplate> не учитывает схему и номер порта.  
   
- Есть два метода, позволяющие создавать URI из шаблона, - <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> и <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29>. <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> принимает базовый адрес и коллекцию имя/значение параметров. Эти параметры подставляются вместо переменных при использовании шаблона. <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29> принимает пары имя/значение и подставляет их слева направо.  
+ Есть два метода, позволяющие создавать URI из шаблона, - <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> и <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29>. Метод <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> принимает базовый адрес и коллекцию параметров вида «имя–значение». Эти параметры подставляются вместо переменных при использовании шаблона. Метод <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29> принимает пары «имя–значение» и подставляет их в порядке слева направо.  
   
- <xref:System.UriTemplate.ToString> Возвращает строку шаблона.  
+ Метод <xref:System.UriTemplate.ToString> возвращает строку шаблона.  
   
  Свойство <xref:System.UriTemplate.PathSegmentVariableNames%2A> содержит коллекцию имен переменных, используемых в сегментах пути в строке шаблона.  
   
- <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> принимает <xref:System.UriTemplate> как параметр и возвращает логическое значение, указывающее, эквивалентны ли два шаблона. Дополнительные сведения см. в разделе "эквивалентность шаблонов" Далее в этом разделе.  
+ Метод <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> принимает <xref:System.UriTemplate> в качестве параметра и возвращает логическое значение, указывающее, являются ли два шаблона эквивалентными. Дополнительные сведения см. в разделе "эквивалентность шаблонов" Далее в этом разделе.  
   
- <xref:System.UriTemplate> предназначен для работы с любой схемой URI, которые соответствуют грамматике HTTP URI. Ниже приведены примеры поддерживаемых схем URI.  
+ Класс <xref:System.UriTemplate> предназначен для работы с любой схемой URI, соблюдающей грамматику URI HTTP. Ниже приведены примеры поддерживаемых схем URI.  
   
 - http://  
   
@@ -330,8 +330,8 @@ Console.WriteLine("Bound URI: {0}", boundUri);
   
 ## <a name="see-also"></a>См. также
 
-- [Общие сведения о модели программирования WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
-- [Объектная модель программирования WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
+- [Общие сведения о модели веб-программирования HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+- [Объектная модель веб-программирования HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
 - [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)
 - [Таблица UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)
 - [Диспетчер таблицы UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)

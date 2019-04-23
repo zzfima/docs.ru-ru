@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 1988b79c-3bfc-4c5c-a08a-86cf638bbe17
 ms.openlocfilehash: 429bca7501bd58440ee894345855141a2a2ed12c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130212"
 ---
 # <a name="how-to-resolve-conflicts-by-merging-with-database-values"></a>Практическое руководство. Как разрешать конфликты путем слияния значений базы данных
@@ -42,6 +42,6 @@ ms.locfileid: "59130212"
   
 ## <a name="see-also"></a>См. также
 
-- [Практическое руководство. Как разрешать конфликты путем переписывания значений базы данных](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md)
-- [Практическое руководство. Как разрешать конфликты параллелизма путем сохранения значений базы данных](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md)
-- [Практическое руководство. Как управлять конфликтами изменений](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+- [Практическое руководство. Разрешать конфликты путем переписывания значений базы данных](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md)
+- [Практическое руководство. Разрешение конфликтов за счет сохранения значений базы данных](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md)
+- [Практическое руководство. Управление конфликтами изменений](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
