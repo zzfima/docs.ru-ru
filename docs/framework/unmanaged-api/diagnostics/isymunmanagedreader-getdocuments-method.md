@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: efcf5b6673fbdc37fad99d082f91ab3077abbea9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130602"
 ---
-# <a name="isymunmanagedreadergetdocuments-method"></a><span data-ttu-id="111cf-102">Метод ISymUnmanagedReader::GetDocuments</span><span class="sxs-lookup"><span data-stu-id="111cf-102">ISymUnmanagedReader::GetDocuments Method</span></span>
-<span data-ttu-id="111cf-103">Возвращает массив всех документов, определенных в хранилище символов.</span><span class="sxs-lookup"><span data-stu-id="111cf-103">Returns an array of all the documents defined in the symbol store.</span></span>  
+# <a name="isymunmanagedreadergetdocuments-method"></a><span data-ttu-id="5cf4b-102">Метод ISymUnmanagedReader::GetDocuments</span><span class="sxs-lookup"><span data-stu-id="5cf4b-102">ISymUnmanagedReader::GetDocuments Method</span></span>
+<span data-ttu-id="5cf4b-103">Возвращает массив всех документов, определенных в хранилище символов.</span><span class="sxs-lookup"><span data-stu-id="5cf4b-103">Returns an array of all the documents defined in the symbol store.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="111cf-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="111cf-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5cf4b-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="5cf4b-104">Syntax</span></span>  
   
 ```  
 HRESULT GetDocuments (  
@@ -37,22 +37,22 @@ HRESULT GetDocuments (
         length_is (*pcDocs)] ISymUnmanagedDocument *pDocs[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="111cf-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="111cf-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5cf4b-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="5cf4b-105">Parameters</span></span>  
  `cDocs`  
- <span data-ttu-id="111cf-106">[in] Размер массива `pDocs`.</span><span class="sxs-lookup"><span data-stu-id="111cf-106">[in] The size of the `pDocs` array.</span></span>  
+ <span data-ttu-id="5cf4b-106">[in] Размер массива `pDocs`.</span><span class="sxs-lookup"><span data-stu-id="5cf4b-106">[in] The size of the `pDocs` array.</span></span>  
   
  `pcDocs`  
- <span data-ttu-id="111cf-107">[out] Указатель на переменную, которая получает длину массива.</span><span class="sxs-lookup"><span data-stu-id="111cf-107">[out] A pointer to a variable that receives the array length.</span></span>  
+ <span data-ttu-id="5cf4b-107">[out] Указатель на переменную, которая получает длину массива.</span><span class="sxs-lookup"><span data-stu-id="5cf4b-107">[out] A pointer to a variable that receives the array length.</span></span>  
   
  `pDocs`  
- <span data-ttu-id="111cf-108">[out] Указатель на переменную, которая получает массив документа.</span><span class="sxs-lookup"><span data-stu-id="111cf-108">[out] A pointer to a variable that receives the document array.</span></span>  
+ <span data-ttu-id="5cf4b-108">[out] Указатель на переменную, которая получает массив документа.</span><span class="sxs-lookup"><span data-stu-id="5cf4b-108">[out] A pointer to a variable that receives the document array.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="111cf-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="111cf-109">Return Value</span></span>  
- <span data-ttu-id="111cf-110">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="111cf-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="5cf4b-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="5cf4b-109">Return Value</span></span>  
+ <span data-ttu-id="5cf4b-110">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="5cf4b-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="111cf-111">Требования</span><span class="sxs-lookup"><span data-stu-id="111cf-111">Requirements</span></span>  
- <span data-ttu-id="111cf-112">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="111cf-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5cf4b-111">Требования</span><span class="sxs-lookup"><span data-stu-id="5cf4b-111">Requirements</span></span>  
+ <span data-ttu-id="5cf4b-112">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="5cf4b-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="111cf-113">См. также</span><span class="sxs-lookup"><span data-stu-id="111cf-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5cf4b-113">См. также</span><span class="sxs-lookup"><span data-stu-id="5cf4b-113">See also</span></span>
 
-- [<span data-ttu-id="111cf-114">Интерфейс ISymUnmanagedReader</span><span class="sxs-lookup"><span data-stu-id="111cf-114">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [<span data-ttu-id="5cf4b-114">Интерфейс ISymUnmanagedReader</span><span class="sxs-lookup"><span data-stu-id="5cf4b-114">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
