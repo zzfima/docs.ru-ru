@@ -3,20 +3,20 @@ title: System.ServiceModel.Security.SecurityPendingServerSessionClosed
 ms.date: 03/30/2017
 ms.assetid: 1fa7098b-1724-4524-ad91-be7592951f69
 ms.openlocfilehash: bb149cb13290ebe2866a1dfafab2a745e964289e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59072835"
 ---
-# <a name="systemservicemodelsecuritysecuritypendingserversessionclosed"></a><span data-ttu-id="2840a-102">System.ServiceModel.Security.SecurityPendingServerSessionClosed</span><span class="sxs-lookup"><span data-stu-id="2840a-102">System.ServiceModel.Security.SecurityPendingServerSessionClosed</span></span>
-<span data-ttu-id="2840a-103">System.ServiceModel.Security.SecurityPendingServerSessionClosed</span><span class="sxs-lookup"><span data-stu-id="2840a-103">System.ServiceModel.Security.SecurityPendingServerSessionClosed</span></span>  
+# <a name="systemservicemodelsecuritysecuritypendingserversessionclosed"></a><span data-ttu-id="43286-102">System.ServiceModel.Security.SecurityPendingServerSessionClosed</span><span class="sxs-lookup"><span data-stu-id="43286-102">System.ServiceModel.Security.SecurityPendingServerSessionClosed</span></span>
+<span data-ttu-id="43286-103">System.ServiceModel.Security.SecurityPendingServerSessionClosed</span><span class="sxs-lookup"><span data-stu-id="43286-103">System.ServiceModel.Security.SecurityPendingServerSessionClosed</span></span>  
   
-## <a name="description"></a><span data-ttu-id="2840a-104">Описание</span><span class="sxs-lookup"><span data-stu-id="2840a-104">Description</span></span>  
- <span data-ttu-id="2840a-105">Ожидающий сеанс безопасности был закрыт сервером.</span><span class="sxs-lookup"><span data-stu-id="2840a-105">The pending security session was closed by the server.</span></span>  
+## <a name="description"></a><span data-ttu-id="43286-104">Описание</span><span class="sxs-lookup"><span data-stu-id="43286-104">Description</span></span>  
+ <span data-ttu-id="43286-105">Ожидающий сеанс безопасности был закрыт сервером.</span><span class="sxs-lookup"><span data-stu-id="43286-105">The pending security session was closed by the server.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2840a-106">См. также</span><span class="sxs-lookup"><span data-stu-id="2840a-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="43286-106">См. также</span><span class="sxs-lookup"><span data-stu-id="43286-106">See also</span></span>
 
-- [<span data-ttu-id="2840a-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="2840a-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="2840a-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="2840a-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="2840a-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="2840a-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="43286-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="43286-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="43286-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="43286-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="43286-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="43286-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

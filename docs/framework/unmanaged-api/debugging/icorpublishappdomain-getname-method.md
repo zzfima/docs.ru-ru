@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5de74b52caee27a1a12cff4a7f9165a07e961ce7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59072796"
 ---
-# <a name="icorpublishappdomaingetname-method"></a><span data-ttu-id="80aee-102">Метод ICorPublishAppDomain::GetName</span><span class="sxs-lookup"><span data-stu-id="80aee-102">ICorPublishAppDomain::GetName Method</span></span>
-<span data-ttu-id="80aee-103">Возвращает имя домена приложения, представленного этим [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md).</span><span class="sxs-lookup"><span data-stu-id="80aee-103">Gets the name of the application domain that is represented by this [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md).</span></span>  
+# <a name="icorpublishappdomaingetname-method"></a><span data-ttu-id="28ab5-102">Метод ICorPublishAppDomain::GetName</span><span class="sxs-lookup"><span data-stu-id="28ab5-102">ICorPublishAppDomain::GetName Method</span></span>
+<span data-ttu-id="28ab5-103">Возвращает имя домена приложения, представленного этим [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md).</span><span class="sxs-lookup"><span data-stu-id="28ab5-103">Gets the name of the application domain that is represented by this [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="80aee-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="80aee-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="28ab5-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="28ab5-104">Syntax</span></span>  
   
 ```  
 HRESULT GetName (  
@@ -38,30 +38,30 @@ HRESULT GetName (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="80aee-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="80aee-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="28ab5-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="28ab5-105">Parameters</span></span>  
  `cchName`  
- <span data-ttu-id="80aee-106">[in] Размер массива `szName`.</span><span class="sxs-lookup"><span data-stu-id="80aee-106">[in] The size of the `szName` array.</span></span>  
+ <span data-ttu-id="28ab5-106">[in] Размер массива `szName`.</span><span class="sxs-lookup"><span data-stu-id="28ab5-106">[in] The size of the `szName` array.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="80aee-107">[out] Указатель на число расширенных символов, включая символ null, возвращаются в `szName` массива.</span><span class="sxs-lookup"><span data-stu-id="80aee-107">[out] A pointer to the number of wide characters, including the null character, returned in the `szName` array.</span></span>  
+ <span data-ttu-id="28ab5-107">[out] Указатель на число расширенных символов, включая символ null, возвращаются в `szName` массива.</span><span class="sxs-lookup"><span data-stu-id="28ab5-107">[out] A pointer to the number of wide characters, including the null character, returned in the `szName` array.</span></span>  
   
  `szName`  
- <span data-ttu-id="80aee-108">[out] Массив, в котором для хранения имени.</span><span class="sxs-lookup"><span data-stu-id="80aee-108">[out] An array in which to store the name.</span></span>  
+ <span data-ttu-id="28ab5-108">[out] Массив, в котором для хранения имени.</span><span class="sxs-lookup"><span data-stu-id="28ab5-108">[out] An array in which to store the name.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="80aee-109">Примечания</span><span class="sxs-lookup"><span data-stu-id="80aee-109">Remarks</span></span>  
- <span data-ttu-id="80aee-110">Если `szName` отлично от NULL, `GetName` метод копирует до `cchName` символов (включая завершающий символ null) в `szName`.</span><span class="sxs-lookup"><span data-stu-id="80aee-110">If `szName` is non-null, the `GetName` method copies up to `cchName` characters (including the null terminator) into `szName`.</span></span> <span data-ttu-id="80aee-111">Если возвращается значение `pcchName`, фактическое число символов в имени (включая завершающий символ null) хранится в `szName` массива.</span><span class="sxs-lookup"><span data-stu-id="80aee-111">If a non-null is returned in `pcchName`, the actual number of characters in the name (including the null terminator) is stored in the `szName` array.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="28ab5-109">Примечания</span><span class="sxs-lookup"><span data-stu-id="28ab5-109">Remarks</span></span>  
+ <span data-ttu-id="28ab5-110">Если `szName` отлично от NULL, `GetName` метод копирует до `cchName` символов (включая завершающий символ null) в `szName`.</span><span class="sxs-lookup"><span data-stu-id="28ab5-110">If `szName` is non-null, the `GetName` method copies up to `cchName` characters (including the null terminator) into `szName`.</span></span> <span data-ttu-id="28ab5-111">Если возвращается значение `pcchName`, фактическое число символов в имени (включая завершающий символ null) хранится в `szName` массива.</span><span class="sxs-lookup"><span data-stu-id="28ab5-111">If a non-null is returned in `pcchName`, the actual number of characters in the name (including the null terminator) is stored in the `szName` array.</span></span>  
   
- <span data-ttu-id="80aee-112">`GetName` Метод возвращает значение S_OK HRESULT, независимо от того, сколько символов были скопированы.</span><span class="sxs-lookup"><span data-stu-id="80aee-112">The `GetName` method returns an S_OK HRESULT regardless of how many characters were copied.</span></span>  
+ <span data-ttu-id="28ab5-112">`GetName` Метод возвращает значение S_OK HRESULT, независимо от того, сколько символов были скопированы.</span><span class="sxs-lookup"><span data-stu-id="28ab5-112">The `GetName` method returns an S_OK HRESULT regardless of how many characters were copied.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="80aee-113">Требования</span><span class="sxs-lookup"><span data-stu-id="80aee-113">Requirements</span></span>  
- <span data-ttu-id="80aee-114">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="80aee-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="28ab5-113">Требования</span><span class="sxs-lookup"><span data-stu-id="28ab5-113">Requirements</span></span>  
+ <span data-ttu-id="28ab5-114">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="28ab5-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="80aee-115">**Заголовок.** CorPub.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="80aee-115">**Header:** CorPub.idl, CorPub.h</span></span>  
+ <span data-ttu-id="28ab5-115">**Заголовок.** CorPub.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="28ab5-115">**Header:** CorPub.idl, CorPub.h</span></span>  
   
- <span data-ttu-id="80aee-116">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="80aee-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="28ab5-116">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="28ab5-116">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="80aee-117">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="80aee-117">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="28ab5-117">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="28ab5-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="80aee-118">См. также</span><span class="sxs-lookup"><span data-stu-id="80aee-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="28ab5-118">См. также</span><span class="sxs-lookup"><span data-stu-id="28ab5-118">See also</span></span>
 
-- [<span data-ttu-id="80aee-119">Интерфейс ICorPublishAppDomain</span><span class="sxs-lookup"><span data-stu-id="80aee-119">ICorPublishAppDomain Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)
+- [<span data-ttu-id="28ab5-119">Интерфейс ICorPublishAppDomain</span><span class="sxs-lookup"><span data-stu-id="28ab5-119">ICorPublishAppDomain Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)

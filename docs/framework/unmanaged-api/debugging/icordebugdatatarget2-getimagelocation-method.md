@@ -5,16 +5,16 @@ ms.assetid: 696afe71-5852-478d-a33f-b2d2dbc4b91f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c7acf08262c73df00a96cfb5c244cdfc352e51ea
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59080485"
 ---
-# <a name="icordebugdatatarget2getimagelocation-method"></a><span data-ttu-id="a0879-102">Метод ICorDebugDataTarget2::GetImageLocation</span><span class="sxs-lookup"><span data-stu-id="a0879-102">ICorDebugDataTarget2::GetImageLocation Method</span></span>
-<span data-ttu-id="a0879-103">Возвращает путь для модуля из базового адреса модуля.</span><span class="sxs-lookup"><span data-stu-id="a0879-103">Returns the path of a module from the module's base address.</span></span>  
+# <a name="icordebugdatatarget2getimagelocation-method"></a><span data-ttu-id="be974-102">Метод ICorDebugDataTarget2::GetImageLocation</span><span class="sxs-lookup"><span data-stu-id="be974-102">ICorDebugDataTarget2::GetImageLocation Method</span></span>
+<span data-ttu-id="be974-103">Возвращает путь для модуля из базового адреса модуля.</span><span class="sxs-lookup"><span data-stu-id="be974-103">Returns the path of a module from the module's base address.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a0879-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a0879-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="be974-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="be974-104">Syntax</span></span>  
   
 ```  
 HRESULT GetImageLocation(    [in] CORDB_ADDRESS baseAddress,  
@@ -24,34 +24,34 @@ HRESULT GetImageLocation(    [in] CORDB_ADDRESS baseAddress,
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a0879-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="a0879-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="be974-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="be974-105">Parameters</span></span>  
  `baseAddress`  
- <span data-ttu-id="a0879-106">[in] Объект [CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md) значение, представляющее базовый адрес модуля.</span><span class="sxs-lookup"><span data-stu-id="a0879-106">[in] A [CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md) value that represents the module's base address.</span></span>  
+ <span data-ttu-id="be974-106">[in] Объект [CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md) значение, представляющее базовый адрес модуля.</span><span class="sxs-lookup"><span data-stu-id="be974-106">[in] A [CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md) value that represents the module's base address.</span></span>  
   
  `cchName`  
- <span data-ttu-id="a0879-107">[входной] Число символов в буфере, которые должен получить путь к модулю.</span><span class="sxs-lookup"><span data-stu-id="a0879-107">[in] The number of characters in the buffer that is to receive the module path.</span></span>  
+ <span data-ttu-id="be974-107">[входной] Число символов в буфере, которые должен получить путь к модулю.</span><span class="sxs-lookup"><span data-stu-id="be974-107">[in] The number of characters in the buffer that is to receive the module path.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="a0879-108">[выходной] Указатель на число символов, записанных в буфер `szName`.</span><span class="sxs-lookup"><span data-stu-id="a0879-108">[out] A pointer to the number of characters written to the `szName` buffer.</span></span>  
+ <span data-ttu-id="be974-108">[выходной] Указатель на число символов, записанных в буфер `szName`.</span><span class="sxs-lookup"><span data-stu-id="be974-108">[out] A pointer to the number of characters written to the `szName` buffer.</span></span>  
   
  `szName`  
- <span data-ttu-id="a0879-109">[выходной] Путь к модулю.</span><span class="sxs-lookup"><span data-stu-id="a0879-109">[out] The path of the module.</span></span>  
+ <span data-ttu-id="be974-109">[выходной] Путь к модулю.</span><span class="sxs-lookup"><span data-stu-id="be974-109">[out] The path of the module.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a0879-110">Примечания</span><span class="sxs-lookup"><span data-stu-id="a0879-110">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="be974-110">Примечания</span><span class="sxs-lookup"><span data-stu-id="be974-110">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="a0879-111">Этот метод доступен только в машинном коде .NET.</span><span class="sxs-lookup"><span data-stu-id="a0879-111">This method is available with .NET Native only.</span></span>  
+>  <span data-ttu-id="be974-111">Этот метод доступен только в машинном коде .NET.</span><span class="sxs-lookup"><span data-stu-id="be974-111">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a0879-112">Требования</span><span class="sxs-lookup"><span data-stu-id="a0879-112">Requirements</span></span>  
- <span data-ttu-id="a0879-113">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a0879-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="be974-112">Требования</span><span class="sxs-lookup"><span data-stu-id="be974-112">Requirements</span></span>  
+ <span data-ttu-id="be974-113">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="be974-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a0879-114">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a0879-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="be974-114">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="be974-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="a0879-115">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a0879-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="be974-115">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="be974-115">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="a0879-116">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="a0879-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ <span data-ttu-id="be974-116">**Версии платформы .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="be974-116">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a0879-117">См. также</span><span class="sxs-lookup"><span data-stu-id="a0879-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="be974-117">См. также</span><span class="sxs-lookup"><span data-stu-id="be974-117">See also</span></span>
 
-- [<span data-ttu-id="a0879-118">Интерфейс ICorDebugDataTarget2</span><span class="sxs-lookup"><span data-stu-id="a0879-118">ICorDebugDataTarget2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget2-interface.md)
-- [<span data-ttu-id="a0879-119">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="a0879-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="be974-118">Интерфейс ICorDebugDataTarget2</span><span class="sxs-lookup"><span data-stu-id="be974-118">ICorDebugDataTarget2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget2-interface.md)
+- [<span data-ttu-id="be974-119">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="be974-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
