@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dfc94c2de1a14842cc017e5c4ef6023154c20f2a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59194036"
 ---
-# <a name="idebuggerthreadcontrolstartblockingfordebugger-method"></a><span data-ttu-id="d8fc5-102">Метод IDebuggerThreadControl::StartBlockingForDebugger</span><span class="sxs-lookup"><span data-stu-id="d8fc5-102">IDebuggerThreadControl::StartBlockingForDebugger Method</span></span>
-<span data-ttu-id="d8fc5-103">Уведомляет основное приложение, что службы отладки будут вскоре запущены блокировку всех потоков.</span><span class="sxs-lookup"><span data-stu-id="d8fc5-103">Notifies the host that the debugging services are about to start blocking all threads.</span></span>  
+# <a name="idebuggerthreadcontrolstartblockingfordebugger-method"></a><span data-ttu-id="d34d6-102">Метод IDebuggerThreadControl::StartBlockingForDebugger</span><span class="sxs-lookup"><span data-stu-id="d34d6-102">IDebuggerThreadControl::StartBlockingForDebugger Method</span></span>
+<span data-ttu-id="d34d6-103">Уведомляет основное приложение, что службы отладки будут вскоре запущены блокировку всех потоков.</span><span class="sxs-lookup"><span data-stu-id="d34d6-103">Notifies the host that the debugging services are about to start blocking all threads.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d8fc5-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d8fc5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d34d6-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d34d6-104">Syntax</span></span>  
   
 ```  
 HRESULT StartBlockingForDebugger (  
@@ -35,22 +35,22 @@ HRESULT StartBlockingForDebugger (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d8fc5-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="d8fc5-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d34d6-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="d34d6-105">Parameters</span></span>  
  `dwUnused`  
- <span data-ttu-id="d8fc5-106">[in] Зарезервировано для будущего использования.</span><span class="sxs-lookup"><span data-stu-id="d8fc5-106">[in] Reserved for future use.</span></span>  
+ <span data-ttu-id="d34d6-106">[in] Зарезервировано для будущего использования.</span><span class="sxs-lookup"><span data-stu-id="d34d6-106">[in] Reserved for future use.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d8fc5-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="d8fc5-107">Remarks</span></span>  
- <span data-ttu-id="d8fc5-108">`StartBlockingForDebugger` Метод может вызываться в потоке среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="d8fc5-108">The `StartBlockingForDebugger` method could be called on a runtime thread.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d34d6-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="d34d6-107">Remarks</span></span>  
+ <span data-ttu-id="d34d6-108">`StartBlockingForDebugger` Метод может вызываться в потоке среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="d34d6-108">The `StartBlockingForDebugger` method could be called on a runtime thread.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d8fc5-109">Требования</span><span class="sxs-lookup"><span data-stu-id="d8fc5-109">Requirements</span></span>  
- <span data-ttu-id="d8fc5-110">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d8fc5-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d34d6-109">Требования</span><span class="sxs-lookup"><span data-stu-id="d34d6-109">Requirements</span></span>  
+ <span data-ttu-id="d34d6-110">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d34d6-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d8fc5-111">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="d8fc5-111">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="d34d6-111">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="d34d6-111">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="d8fc5-112">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="d8fc5-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="d34d6-112">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="d34d6-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="d8fc5-113">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="d8fc5-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="d34d6-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d34d6-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d8fc5-114">См. также</span><span class="sxs-lookup"><span data-stu-id="d8fc5-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d34d6-114">См. также</span><span class="sxs-lookup"><span data-stu-id="d34d6-114">See also</span></span>
 
-- [<span data-ttu-id="d8fc5-115">Интерфейс IDebuggerThreadControl</span><span class="sxs-lookup"><span data-stu-id="d8fc5-115">IDebuggerThreadControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-interface.md)
+- [<span data-ttu-id="d34d6-115">Интерфейс IDebuggerThreadControl</span><span class="sxs-lookup"><span data-stu-id="d34d6-115">IDebuggerThreadControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-interface.md)

@@ -18,30 +18,30 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 906442985ac2c5e75d794eba1a91bd90861ee2c8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59197416"
 ---
-# <a name="icorruntimehostdeletelogicalthreadstate-method"></a><span data-ttu-id="f40d4-102">Метод ICorRuntimeHost::DeleteLogicalThreadState</span><span class="sxs-lookup"><span data-stu-id="f40d4-102">ICorRuntimeHost::DeleteLogicalThreadState Method</span></span>
-<span data-ttu-id="f40d4-103">Этот метод поддерживает инфраструктуру .NET Framework и не предназначен для использования непосредственно из программного кода.</span><span class="sxs-lookup"><span data-stu-id="f40d4-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="icorruntimehostdeletelogicalthreadstate-method"></a><span data-ttu-id="0c3ee-102">Метод ICorRuntimeHost::DeleteLogicalThreadState</span><span class="sxs-lookup"><span data-stu-id="0c3ee-102">ICorRuntimeHost::DeleteLogicalThreadState Method</span></span>
+<span data-ttu-id="0c3ee-103">Этот метод поддерживает инфраструктуру .NET Framework и не предназначен для использования непосредственно из программного кода.</span><span class="sxs-lookup"><span data-stu-id="0c3ee-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f40d4-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f40d4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0c3ee-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="0c3ee-104">Syntax</span></span>  
   
 ```  
 HRESULT DeleteLogicalThreadState ( );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="f40d4-105">Требования</span><span class="sxs-lookup"><span data-stu-id="f40d4-105">Requirements</span></span>  
- <span data-ttu-id="f40d4-106">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f40d4-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0c3ee-105">Требования</span><span class="sxs-lookup"><span data-stu-id="0c3ee-105">Requirements</span></span>  
+ <span data-ttu-id="0c3ee-106">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0c3ee-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f40d4-107">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="f40d4-107">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="0c3ee-107">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="0c3ee-107">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="f40d4-108">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="f40d4-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="0c3ee-108">**Библиотека:** Включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="0c3ee-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="f40d4-109">**Версии платформы .NET framework:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="f40d4-109">**.NET Framework Versions:** 1.0, 1.1</span></span>  
+ <span data-ttu-id="0c3ee-109">**Версии платформы .NET framework:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="0c3ee-109">**.NET Framework Versions:** 1.0, 1.1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f40d4-110">См. также</span><span class="sxs-lookup"><span data-stu-id="f40d4-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0c3ee-110">См. также</span><span class="sxs-lookup"><span data-stu-id="0c3ee-110">See also</span></span>
 
-- [<span data-ttu-id="f40d4-111">Интерфейс ICorRuntimeHost</span><span class="sxs-lookup"><span data-stu-id="f40d4-111">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [<span data-ttu-id="0c3ee-111">Интерфейс ICorRuntimeHost</span><span class="sxs-lookup"><span data-stu-id="0c3ee-111">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

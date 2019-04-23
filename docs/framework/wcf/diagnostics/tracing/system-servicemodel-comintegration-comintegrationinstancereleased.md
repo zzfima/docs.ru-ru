@@ -3,20 +3,20 @@ title: System.ServiceModel.ComIntegration.ComIntegrationInstanceReleased
 ms.date: 03/30/2017
 ms.assetid: 21922b4d-9a83-45cb-a6fc-5b1c2f9a2c17
 ms.openlocfilehash: 9f3a26fd4cc817d1e8938401b3fbf0bdf894b217
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59196779"
 ---
-# <a name="systemservicemodelcomintegrationcomintegrationinstancereleased"></a><span data-ttu-id="9d5e0-102">System.ServiceModel.ComIntegration.ComIntegrationInstanceReleased</span><span class="sxs-lookup"><span data-stu-id="9d5e0-102">System.ServiceModel.ComIntegration.ComIntegrationInstanceReleased</span></span>
-<span data-ttu-id="9d5e0-103">System.ServiceModel.ComIntegration.ComIntegrationInstanceReleased</span><span class="sxs-lookup"><span data-stu-id="9d5e0-103">System.ServiceModel.ComIntegration.ComIntegrationInstanceReleased</span></span>  
+# <a name="systemservicemodelcomintegrationcomintegrationinstancereleased"></a><span data-ttu-id="c2b54-102">System.ServiceModel.ComIntegration.ComIntegrationInstanceReleased</span><span class="sxs-lookup"><span data-stu-id="c2b54-102">System.ServiceModel.ComIntegration.ComIntegrationInstanceReleased</span></span>
+<span data-ttu-id="c2b54-103">System.ServiceModel.ComIntegration.ComIntegrationInstanceReleased</span><span class="sxs-lookup"><span data-stu-id="c2b54-103">System.ServiceModel.ComIntegration.ComIntegrationInstanceReleased</span></span>  
   
-## <a name="description"></a><span data-ttu-id="9d5e0-104">Описание</span><span class="sxs-lookup"><span data-stu-id="9d5e0-104">Description</span></span>  
- <span data-ttu-id="9d5e0-105">ComPlus: Выпущено экземпляр.</span><span class="sxs-lookup"><span data-stu-id="9d5e0-105">ComPlus: Released instance.</span></span>  
+## <a name="description"></a><span data-ttu-id="c2b54-104">Описание</span><span class="sxs-lookup"><span data-stu-id="c2b54-104">Description</span></span>  
+ <span data-ttu-id="c2b54-105">ComPlus: Выпущено экземпляр.</span><span class="sxs-lookup"><span data-stu-id="c2b54-105">ComPlus: Released instance.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9d5e0-106">См. также</span><span class="sxs-lookup"><span data-stu-id="9d5e0-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c2b54-106">См. также</span><span class="sxs-lookup"><span data-stu-id="c2b54-106">See also</span></span>
 
-- [<span data-ttu-id="9d5e0-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="9d5e0-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="9d5e0-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="9d5e0-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="9d5e0-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="9d5e0-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="c2b54-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="c2b54-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="c2b54-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="c2b54-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="c2b54-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="c2b54-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

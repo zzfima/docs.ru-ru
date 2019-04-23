@@ -13,35 +13,35 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f0d73da04242bfe5a4958a62d2a48b609b474309
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59195414"
 ---
-# <a name="icordebugprocess7-interface"></a><span data-ttu-id="b96a3-102">Интерфейс ICorDebugProcess7</span><span class="sxs-lookup"><span data-stu-id="b96a3-102">ICorDebugProcess7 Interface</span></span>
-<span data-ttu-id="b96a3-103">[Поддерживается в .NET Framework 4.5.2 и более поздних версиях.]</span><span class="sxs-lookup"><span data-stu-id="b96a3-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
+# <a name="icordebugprocess7-interface"></a><span data-ttu-id="f854d-102">Интерфейс ICorDebugProcess7</span><span class="sxs-lookup"><span data-stu-id="f854d-102">ICorDebugProcess7 Interface</span></span>
+<span data-ttu-id="f854d-103">[Поддерживается в .NET Framework 4.5.2 и более поздних версиях.]</span><span class="sxs-lookup"><span data-stu-id="f854d-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
   
- <span data-ttu-id="b96a3-104">Предоставляет метод, который настраивает отладчик для обработки обновлений находящихся в памяти метаданных в целевом процессе.</span><span class="sxs-lookup"><span data-stu-id="b96a3-104">Provides a method that configures the debugger to handle in-memory metadata updates in the target process.</span></span>  
+ <span data-ttu-id="f854d-104">Предоставляет метод, который настраивает отладчик для обработки обновлений находящихся в памяти метаданных в целевом процессе.</span><span class="sxs-lookup"><span data-stu-id="f854d-104">Provides a method that configures the debugger to handle in-memory metadata updates in the target process.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="b96a3-105">Методы</span><span class="sxs-lookup"><span data-stu-id="b96a3-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="f854d-105">Методы</span><span class="sxs-lookup"><span data-stu-id="f854d-105">Methods</span></span>  
   
-|<span data-ttu-id="b96a3-106">Метод</span><span class="sxs-lookup"><span data-stu-id="b96a3-106">Method</span></span>|<span data-ttu-id="b96a3-107">Описание</span><span class="sxs-lookup"><span data-stu-id="b96a3-107">Description</span></span>|  
+|<span data-ttu-id="f854d-106">Метод</span><span class="sxs-lookup"><span data-stu-id="f854d-106">Method</span></span>|<span data-ttu-id="f854d-107">Описание</span><span class="sxs-lookup"><span data-stu-id="f854d-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="b96a3-108">Метод SetWriteableMetadataUpdateMode</span><span class="sxs-lookup"><span data-stu-id="b96a3-108">SetWriteableMetadataUpdateMode Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess7-setwriteablemetadataupdatemode-method.md)|<span data-ttu-id="b96a3-109">Устанавливает значение, определяющее порядок, согласно которому отладчик обрабатывает обновления находящихся в памяти метаданных в целевом процессе.</span><span class="sxs-lookup"><span data-stu-id="b96a3-109">Sets a value that determines how the debugger handles in-memory updates to metadata within the target process.</span></span>|  
+|[<span data-ttu-id="f854d-108">Метод SetWriteableMetadataUpdateMode</span><span class="sxs-lookup"><span data-stu-id="f854d-108">SetWriteableMetadataUpdateMode Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess7-setwriteablemetadataupdatemode-method.md)|<span data-ttu-id="f854d-109">Устанавливает значение, определяющее порядок, согласно которому отладчик обрабатывает обновления находящихся в памяти метаданных в целевом процессе.</span><span class="sxs-lookup"><span data-stu-id="f854d-109">Sets a value that determines how the debugger handles in-memory updates to metadata within the target process.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="b96a3-110">Примечания</span><span class="sxs-lookup"><span data-stu-id="b96a3-110">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f854d-110">Примечания</span><span class="sxs-lookup"><span data-stu-id="f854d-110">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b96a3-111">Требования</span><span class="sxs-lookup"><span data-stu-id="b96a3-111">Requirements</span></span>  
- <span data-ttu-id="b96a3-112">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b96a3-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f854d-111">Требования</span><span class="sxs-lookup"><span data-stu-id="f854d-111">Requirements</span></span>  
+ <span data-ttu-id="f854d-112">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f854d-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b96a3-113">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b96a3-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="f854d-113">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f854d-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="b96a3-114">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b96a3-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f854d-114">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f854d-114">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="b96a3-115">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="b96a3-115">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ <span data-ttu-id="f854d-115">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f854d-115">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b96a3-116">См. также</span><span class="sxs-lookup"><span data-stu-id="b96a3-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f854d-116">См. также</span><span class="sxs-lookup"><span data-stu-id="f854d-116">See also</span></span>
 
-- [<span data-ttu-id="b96a3-117">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="b96a3-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="b96a3-118">Отладка</span><span class="sxs-lookup"><span data-stu-id="b96a3-118">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="f854d-117">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="f854d-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="f854d-118">Отладка</span><span class="sxs-lookup"><span data-stu-id="f854d-118">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

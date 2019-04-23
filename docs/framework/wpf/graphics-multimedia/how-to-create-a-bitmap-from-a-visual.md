@@ -9,22 +9,22 @@ helpviewer_keywords:
 - visuals [WPF], rendering to bitmaps
 ms.assetid: 103fc7f5-7306-4026-9d61-2005e79959f3
 ms.openlocfilehash: a622d99f7c477f8654526ed399f1eb37288682fe
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59189897"
 ---
-# <a name="how-to-create-a-bitmap-from-a-visual"></a><span data-ttu-id="f9ba9-102">Практическое руководство. Создание растрового изображения из визуального элемента</span><span class="sxs-lookup"><span data-stu-id="f9ba9-102">How to: Create a Bitmap from a Visual</span></span>
-<span data-ttu-id="f9ba9-103">В этом примере показано, как можно создать точечный рисунок из <xref:System.Windows.Media.Visual>.</span><span class="sxs-lookup"><span data-stu-id="f9ba9-103">This example shows how you can create a bitmap from a <xref:System.Windows.Media.Visual>.</span></span> <span data-ttu-id="f9ba9-104">Объект <xref:System.Windows.Media.DrawingVisual> визуализируется с <xref:System.Windows.Media.FormattedText>.</span><span class="sxs-lookup"><span data-stu-id="f9ba9-104">A <xref:System.Windows.Media.DrawingVisual> is rendered with <xref:System.Windows.Media.FormattedText>.</span></span> <span data-ttu-id="f9ba9-105"><xref:System.Windows.Media.Visual> Присваивается <xref:System.Windows.Media.Imaging.RenderTargetBitmap> создании точечного рисунка для заданного текста.</span><span class="sxs-lookup"><span data-stu-id="f9ba9-105">The <xref:System.Windows.Media.Visual> is then rendered to the <xref:System.Windows.Media.Imaging.RenderTargetBitmap> creating a bitmap of the given text.</span></span>  
+# <a name="how-to-create-a-bitmap-from-a-visual"></a><span data-ttu-id="d1ac7-102">Практическое руководство. Создание растрового изображения из визуального элемента</span><span class="sxs-lookup"><span data-stu-id="d1ac7-102">How to: Create a Bitmap from a Visual</span></span>
+<span data-ttu-id="d1ac7-103">В этом примере показано, как можно создать точечный рисунок из <xref:System.Windows.Media.Visual>.</span><span class="sxs-lookup"><span data-stu-id="d1ac7-103">This example shows how you can create a bitmap from a <xref:System.Windows.Media.Visual>.</span></span> <span data-ttu-id="d1ac7-104">Объект <xref:System.Windows.Media.DrawingVisual> визуализируется с <xref:System.Windows.Media.FormattedText>.</span><span class="sxs-lookup"><span data-stu-id="d1ac7-104">A <xref:System.Windows.Media.DrawingVisual> is rendered with <xref:System.Windows.Media.FormattedText>.</span></span> <span data-ttu-id="d1ac7-105"><xref:System.Windows.Media.Visual> Присваивается <xref:System.Windows.Media.Imaging.RenderTargetBitmap> создании точечного рисунка для заданного текста.</span><span class="sxs-lookup"><span data-stu-id="d1ac7-105">The <xref:System.Windows.Media.Visual> is then rendered to the <xref:System.Windows.Media.Imaging.RenderTargetBitmap> creating a bitmap of the given text.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f9ba9-106">Пример</span><span class="sxs-lookup"><span data-stu-id="f9ba9-106">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="d1ac7-106">Пример</span><span class="sxs-lookup"><span data-stu-id="d1ac7-106">Example</span></span>  
  [!code-csharp[ImagingSnippetGallery_procedural_snip#CreateRTBImage](~/samples/snippets/csharp/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/CSharp/RenderTargetBitmapExample.cs#creatertbimage)]
  [!code-vb[ImagingSnippetGallery_procedural_snip#CreateRTBImage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/VB/RenderTargetBitmapExample.vb#creatertbimage)]  
   
-## <a name="see-also"></a><span data-ttu-id="f9ba9-107">См. также</span><span class="sxs-lookup"><span data-stu-id="f9ba9-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d1ac7-107">См. также</span><span class="sxs-lookup"><span data-stu-id="d1ac7-107">See also</span></span>
 
 - <xref:System.Windows.Media.DrawingContext>
-- [<span data-ttu-id="f9ba9-108">Общие сведения об обработке изображений</span><span class="sxs-lookup"><span data-stu-id="f9ba9-108">Imaging Overview</span></span>](imaging-overview.md)
-- [<span data-ttu-id="f9ba9-109">Обзор объектов Drawing</span><span class="sxs-lookup"><span data-stu-id="f9ba9-109">Drawing Objects Overview</span></span>](drawing-objects-overview.md)
-- [<span data-ttu-id="f9ba9-110">Использование объектов DrawingVisual</span><span class="sxs-lookup"><span data-stu-id="f9ba9-110">Using DrawingVisual Objects</span></span>](using-drawingvisual-objects.md)
+- [<span data-ttu-id="d1ac7-108">Общие сведения об обработке изображений</span><span class="sxs-lookup"><span data-stu-id="d1ac7-108">Imaging Overview</span></span>](imaging-overview.md)
+- [<span data-ttu-id="d1ac7-109">Обзор объектов Drawing</span><span class="sxs-lookup"><span data-stu-id="d1ac7-109">Drawing Objects Overview</span></span>](drawing-objects-overview.md)
+- [<span data-ttu-id="d1ac7-110">Использование объектов DrawingVisual</span><span class="sxs-lookup"><span data-stu-id="d1ac7-110">Using DrawingVisual Objects</span></span>](using-drawingvisual-objects.md)
