@@ -6,23 +6,23 @@ dev_langs:
 - vb
 ms.assetid: d48f01b5-582b-4c8b-b547-8adddae7e371
 ms.openlocfilehash: 7d542a3dcae514e75194b49c23a8dec5dd7e8c3b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59298855"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773731"
 ---
-# <a name="how-to-use-the-channelfactory"></a><span data-ttu-id="7ac81-102">Практическое руководство. Использование ChannelFactory</span><span class="sxs-lookup"><span data-stu-id="7ac81-102">How to: Use the ChannelFactory</span></span>
-<span data-ttu-id="7ac81-103">Универсальный класс <xref:System.ServiceModel.ChannelFactory%601> используется в сложных сценариях, требующих создания фабрики каналов, которая может использоваться для создания нескольких каналов.</span><span class="sxs-lookup"><span data-stu-id="7ac81-103">The generic <xref:System.ServiceModel.ChannelFactory%601> class is used in advanced scenarios that require the creation of a channel factory that can be used to create more than one channel.</span></span>  
+# <a name="how-to-use-the-channelfactory"></a><span data-ttu-id="148f6-102">Практическое руководство. Использование ChannelFactory</span><span class="sxs-lookup"><span data-stu-id="148f6-102">How to: Use the ChannelFactory</span></span>
+<span data-ttu-id="148f6-103">Универсальный класс <xref:System.ServiceModel.ChannelFactory%601> используется в сложных сценариях, требующих создания фабрики каналов, которая может использоваться для создания нескольких каналов.</span><span class="sxs-lookup"><span data-stu-id="148f6-103">The generic <xref:System.ServiceModel.ChannelFactory%601> class is used in advanced scenarios that require the creation of a channel factory that can be used to create more than one channel.</span></span>  
   
-### <a name="to-create-and-use-the-channelfactory-class"></a><span data-ttu-id="7ac81-104">Создание и использование класса ChannelFactory</span><span class="sxs-lookup"><span data-stu-id="7ac81-104">To create and use the ChannelFactory class</span></span>  
+### <a name="to-create-and-use-the-channelfactory-class"></a><span data-ttu-id="148f6-104">Создание и использование класса ChannelFactory</span><span class="sxs-lookup"><span data-stu-id="148f6-104">To create and use the ChannelFactory class</span></span>  
   
-1. <span data-ttu-id="7ac81-105">Постройте и запустите службу Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="7ac81-105">Build and run an Windows Communication Foundation (WCF) service.</span></span> <span data-ttu-id="7ac81-106">Дополнительные сведения см. в разделе [проектирование и реализация служб](../../../../docs/framework/wcf/designing-and-implementing-services.md), [Настройка служб](../../../../docs/framework/wcf/configuring-services.md), и [размещение служб](../../../../docs/framework/wcf/hosting-services.md).</span><span class="sxs-lookup"><span data-stu-id="7ac81-106">For more information, see [Designing and Implementing Services](../../../../docs/framework/wcf/designing-and-implementing-services.md), [Configuring Services](../../../../docs/framework/wcf/configuring-services.md), and [Hosting Services](../../../../docs/framework/wcf/hosting-services.md).</span></span>  
+1. <span data-ttu-id="148f6-105">Постройте и запустите службу Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="148f6-105">Build and run an Windows Communication Foundation (WCF) service.</span></span> <span data-ttu-id="148f6-106">Дополнительные сведения см. в разделе [проектирование и реализация служб](../../../../docs/framework/wcf/designing-and-implementing-services.md), [Настройка служб](../../../../docs/framework/wcf/configuring-services.md), и [размещение служб](../../../../docs/framework/wcf/hosting-services.md).</span><span class="sxs-lookup"><span data-stu-id="148f6-106">For more information, see [Designing and Implementing Services](../../../../docs/framework/wcf/designing-and-implementing-services.md), [Configuring Services](../../../../docs/framework/wcf/configuring-services.md), and [Hosting Services](../../../../docs/framework/wcf/hosting-services.md).</span></span>  
   
-2. <span data-ttu-id="7ac81-107">Используйте [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для создания контракта (интерфейс) для клиента.</span><span class="sxs-lookup"><span data-stu-id="7ac81-107">Use the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) to generate the contract (interface) for the client.</span></span>  
+2. <span data-ttu-id="148f6-107">Используйте [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для создания контракта (интерфейс) для клиента.</span><span class="sxs-lookup"><span data-stu-id="148f6-107">Use the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) to generate the contract (interface) for the client.</span></span>  
   
-3. <span data-ttu-id="7ac81-108">В коде клиента для создания нескольких прослушивателей конечной точки используйте класс <xref:System.ServiceModel.ChannelFactory%601>.</span><span class="sxs-lookup"><span data-stu-id="7ac81-108">In the client code, use the <xref:System.ServiceModel.ChannelFactory%601> class to create multiple endpoint listeners.</span></span>  
+3. <span data-ttu-id="148f6-108">В коде клиента для создания нескольких прослушивателей конечной точки используйте класс <xref:System.ServiceModel.ChannelFactory%601>.</span><span class="sxs-lookup"><span data-stu-id="148f6-108">In the client code, use the <xref:System.ServiceModel.ChannelFactory%601> class to create multiple endpoint listeners.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="7ac81-109">Пример</span><span class="sxs-lookup"><span data-stu-id="7ac81-109">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="148f6-109">Пример</span><span class="sxs-lookup"><span data-stu-id="148f6-109">Example</span></span>  
  [!code-csharp[c_HowToUseChannelFactory#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howtousechannelfactory/cs/source.cs#1)]
  [!code-vb[c_HowToUseChannelFactory#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtousechannelfactory/vb/source.vb#1)]

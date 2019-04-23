@@ -5,15 +5,15 @@ f1_keywords:
 - vbrArgument_InvalidVbStrConv
 ms.assetid: a5497ad5-25be-4ac7-91fb-ad117d683efe
 ms.openlocfilehash: c04a481fd15bec2cf4581d4b76859ba1731fbb01
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59306174"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773718"
 ---
-# <a name="argument-conversion-is-not-valid"></a><span data-ttu-id="d8334-102">Аргумент "Conversion" является недопустимым</span><span class="sxs-lookup"><span data-stu-id="d8334-102">Argument 'Conversion' is not valid</span></span>
-<span data-ttu-id="d8334-103">Значение перечисления `VbStrConv` недопустимо, возможно, из-за того, что оно меньше нуля.</span><span class="sxs-lookup"><span data-stu-id="d8334-103">A value for the `VbStrConv` enumeration is not valid, possibly because it is less than zero.</span></span> <span data-ttu-id="d8334-104">Значения перечисления должны быть больше или равны нулю.</span><span class="sxs-lookup"><span data-stu-id="d8334-104">Enumeration values must be greater than or equal to zero.</span></span>  
+# <a name="argument-conversion-is-not-valid"></a><span data-ttu-id="21686-102">Аргумент "Conversion" является недопустимым</span><span class="sxs-lookup"><span data-stu-id="21686-102">Argument 'Conversion' is not valid</span></span>
+<span data-ttu-id="21686-103">Значение перечисления `VbStrConv` недопустимо, возможно, из-за того, что оно меньше нуля.</span><span class="sxs-lookup"><span data-stu-id="21686-103">A value for the `VbStrConv` enumeration is not valid, possibly because it is less than zero.</span></span> <span data-ttu-id="21686-104">Значения перечисления должны быть больше или равны нулю.</span><span class="sxs-lookup"><span data-stu-id="21686-104">Enumeration values must be greater than or equal to zero.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="d8334-105">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="d8334-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="21686-105">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="21686-105">To correct this error</span></span>  
   
-1. <span data-ttu-id="d8334-106">Убедитесь в том, что значение больше или равно нулю.</span><span class="sxs-lookup"><span data-stu-id="d8334-106">Ensure that the value is greater than or equal to zero.</span></span>
+1. <span data-ttu-id="21686-106">Убедитесь в том, что значение больше или равно нулю.</span><span class="sxs-lookup"><span data-stu-id="21686-106">Ensure that the value is greater than or equal to zero.</span></span>

@@ -3,14 +3,14 @@ title: <extensions>
 ms.date: 03/30/2017
 ms.assetid: bcfe5c44-04ef-4a20-96a5-90bfadf39623
 ms.openlocfilehash: bb0df4535560a509d6e3511815196c126a95d0c7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59205255"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59767582"
 ---
-# <a name="extensions"></a><span data-ttu-id="5d787-101">\<расширения ></span><span class="sxs-lookup"><span data-stu-id="5d787-101">\<extensions></span></span>
-<span data-ttu-id="5d787-102">Этот элемент конфигурации содержит коллекцию элементов XML, в которой находятся пользовательские метаданные, публикуемые вместе со стандартными обнаруживаемыми метаданными (EPR, ContractTypeName, BindingName, Scope и ListenURI).</span><span class="sxs-lookup"><span data-stu-id="5d787-102">This configuration element contains a collection of XML elements that contain custom metadata to be published along with the standard discoverable metadata (EPR, ContractTypeName, BindingName, Scope and ListenURI).</span></span> <span data-ttu-id="5d787-103">Далее приводится пример использования этого элемента конфигурации.</span><span class="sxs-lookup"><span data-stu-id="5d787-103">The following is an example of using this configuration element.</span></span>  
+# <a name="extensions"></a><span data-ttu-id="d0920-101">\<расширения ></span><span class="sxs-lookup"><span data-stu-id="d0920-101">\<extensions></span></span>
+<span data-ttu-id="d0920-102">Этот элемент конфигурации содержит коллекцию элементов XML, в которой находятся пользовательские метаданные, публикуемые вместе со стандартными обнаруживаемыми метаданными (EPR, ContractTypeName, BindingName, Scope и ListenURI).</span><span class="sxs-lookup"><span data-stu-id="d0920-102">This configuration element contains a collection of XML elements that contain custom metadata to be published along with the standard discoverable metadata (EPR, ContractTypeName, BindingName, Scope and ListenURI).</span></span> <span data-ttu-id="d0920-103">Далее приводится пример использования этого элемента конфигурации.</span><span class="sxs-lookup"><span data-stu-id="d0920-103">The following is an example of using this configuration element.</span></span>  
   
 ```xml  
 <services>
@@ -45,6 +45,6 @@ ms.locfileid: "59205255"
 </behaviors>
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="5d787-104">См. также</span><span class="sxs-lookup"><span data-stu-id="5d787-104">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d0920-104">См. также</span><span class="sxs-lookup"><span data-stu-id="d0920-104">See also</span></span>
 
 - <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>
