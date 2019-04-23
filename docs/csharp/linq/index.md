@@ -4,11 +4,11 @@ description: Знакомство с LINQ для C#.
 ms.date: 11/30/2016
 ms.assetid: 007cc736-f5cf-4919-b99b-0c00ab2814ce
 ms.openlocfilehash: 18dafaf590697a3c9d669f346c956fd4df3378f0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61688830"
 ---
 # <a name="language-integrated-query-linq"></a>Синтаксис LINQ
 
@@ -44,9 +44,9 @@ ms.locfileid: "50197392"
 
 - XML-документы: [LINQ to XML](../programming-guide/concepts/linq/linq-to-xml.md)
 
-- Платформа Entity Framework для ADO.NET: [LINQ to Entities](../../framework/data/adonet/ef/language-reference/linq-to-entities.md)
+- Платформа ADO.NET Entity Framework: [LINQ to Entities](../../framework/data/adonet/ef/language-reference/linq-to-entities.md)
 
-- Коллекции, файлы, строки и другие сущности .NET: [LINQ to Objects](../programming-guide/concepts/linq/linq-to-objects.md)
+- Коллекции, файлы, строки и другие сущности .NET: [LINQ to Objects (C#)](../programming-guide/concepts/linq/linq-to-objects.md)
 
 Чтобы глубже разобраться в базовой концепции LINQ изучите [статью о LINQ в C#](linq-in-csharp.md).
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - files [C#]
 ms.assetid: 0f2511cf-2b02-4b41-b001-b1754677c38f
 ms.openlocfilehash: 64c852e6fcc034cb56651ffc2d22fa5323bbb54f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61680068"
 ---
 # <a name="file-system-and-the-registry-c-programming-guide"></a>Файловая система и реестр (Руководство по программированию на C#)
 Перечисленные здесь статьи демонстрируют, как использовать C# и .NET Framework для выполнения различных базовых операций над файлами, папками и реестром.  

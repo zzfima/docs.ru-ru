@@ -1,19 +1,12 @@
-items:
 - name: Вспомогательные функции Tlbexp
   href: index.md
   items:
-  - name: Функция GetTypeLibInfo
-    href: gettypelibinfo-function.md
-  - name: Функция LoadTypeLibWithResolver
-    href: loadtypelibwithresolver-function.md
-  - name: Интерфейс ITypeLibResolver
-    href: itypelibresolver-interface.md
-    items:
-    - name: Метод ResolveTypeLib
-      href: resolvetypelib-method.md
-ms.openlocfilehash: 0e93432ddbf8f67674a555cac4be9d07c268d9b7
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470005"
+    - name: Функция GetTypeLibInfo
+      href: gettypelibinfo-function.md
+    - name: Функция LoadTypeLibWithResolver
+      href: loadtypelibwithresolver-function.md
+    - name: Интерфейс ITypeLibResolver
+      href: itypelibresolver-interface.md
+      items:
+        - name: Метод ResolveTypeLib
+          href: resolvetypelib-method.md

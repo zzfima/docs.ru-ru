@@ -1,584 +1,577 @@
-items:
 - name: Профилирование
   href: index.md
   items:
-  - name: Общие сведения о профилировании
-    href: profiling-overview.md
-  - name: Установка профилирующей среды
-    href: setting-up-a-profiling-environment.md
-  - name: Профилировщики CLR и приложения для Магазина Windows
-    href: clr-profilers-and-windows-store-apps.md
-  - name: CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT
-    href: corprof-e-unsupported-call-sequence-hresult.md
-  - name: Профилирующие интерфейсы
-    href: profiling-interfaces.md
-    items:
-    - name: Интерфейс ICLRProfiling
-      href: iclrprofiling-interface.md
+    - name: Общие сведения о профилировании
+      href: profiling-overview.md
+    - name: Установка профилирующей среды
+      href: setting-up-a-profiling-environment.md
+    - name: Профилировщики CLR и приложения для Магазина Windows
+      href: clr-profilers-and-windows-store-apps.md
+    - name: CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT
+      href: corprof-e-unsupported-call-sequence-hresult.md
+    - name: Профилирующие интерфейсы
+      href: profiling-interfaces.md
       items:
-      - name: Метод AttachProfiler
-        href: iclrprofiling-attachprofiler-method.md
-    - name: Интерфейс ICorProfilerAssemblyReferenceProvider
-      href: icorprofilerassemblyreferenceprovider-interface.md
+        - name: Интерфейс ICLRProfiling
+          href: iclrprofiling-interface.md
+          items:
+            - name: Метод AttachProfiler
+              href: iclrprofiling-attachprofiler-method.md
+        - name: Интерфейс ICorProfilerAssemblyReferenceProvider
+          href: icorprofilerassemblyreferenceprovider-interface.md
+          items:
+            - name: Метод AddAssemblyReference
+              href: icorprofilerassemblyreferenceprovider-addassemblyreference-method.md
+        - name: Интерфейс ICorProfilerCallback
+          href: icorprofilercallback-interface.md
+          items:
+            - name: Метод AppDomainCreationFinished
+              href: icorprofilercallback-appdomaincreationfinished-method.md
+            - name: Метод AppDomainCreationStarted
+              href: icorprofilercallback-appdomaincreationstarted-method.md
+            - name: Метод AppDomainShutdownFinished
+              href: icorprofilercallback-appdomainshutdownfinished-method.md
+            - name: Метод AppDomainShutdownStarted
+              href: icorprofilercallback-appdomainshutdownstarted-method.md
+            - name: Метод AssemblyLoadFinished
+              href: icorprofilercallback-assemblyloadfinished-method.md
+            - name: Метод AssemblyLoadStarted
+              href: icorprofilercallback-assemblyloadstarted-method.md
+            - name: Метод AssemblyUnloadFinished
+              href: icorprofilercallback-assemblyunloadfinished-method.md
+            - name: Метод AssemblyUnloadStarted
+              href: icorprofilercallback-assemblyunloadstarted-method.md
+            - name: Метод ClassLoadFinished
+              href: icorprofilercallback-classloadfinished-method.md
+            - name: Метод ClassLoadStarted
+              href: icorprofilercallback-classloadstarted-method.md
+            - name: Метод ClassUnloadFinished
+              href: icorprofilercallback-classunloadfinished-method.md
+            - name: Метод ClassUnloadStarted
+              href: icorprofilercallback-classunloadstarted-method.md
+            - name: Метод COMClassicVTableCreated
+              href: icorprofilercallback-comclassicvtablecreated-method.md
+            - name: Метод COMClassicVTableDestroyed
+              href: icorprofilercallback-comclassicvtabledestroyed-method.md
+            - name: Метод ExceptionCatcherEnter
+              href: icorprofilercallback-exceptioncatcherenter-method.md
+            - name: Метод ExceptionCatcherLeave
+              href: icorprofilercallback-exceptioncatcherleave-method.md
+            - name: Метод ExceptionCLRCatcherExecute
+              href: icorprofilercallback-exceptionclrcatcherexecute-method.md
+            - name: Метод ExceptionCLRCatcherFound
+              href: icorprofilercallback-exceptionclrcatcherfound-method.md
+            - name: Метод ExceptionOSHandlerEnter
+              href: icorprofilercallback-exceptionoshandlerenter-method.md
+            - name: Метод ExceptionOSHandlerLeave
+              href: icorprofilercallback-exceptionoshandlerleave-method.md
+            - name: Метод ExceptionSearchCatcherFound
+              href: icorprofilercallback-exceptionsearchcatcherfound-method.md
+            - name: Метод ExceptionSearchFilterEnter
+              href: icorprofilercallback-exceptionsearchfilterenter-method.md
+            - name: Метод ExceptionSearchFilterLeave
+              href: icorprofilercallback-exceptionsearchfilterleave-method.md
+            - name: Метод ExceptionSearchFunctionEnter
+              href: icorprofilercallback-exceptionsearchfunctionenter-method.md
+            - name: Метод ExceptionSearchFunctionLeave
+              href: icorprofilercallback-exceptionsearchfunctionleave-method.md
+            - name: Метод ExceptionThrown
+              href: icorprofilercallback-exceptionthrown-method.md
+            - name: Метод ExceptionUnwindFinallyEnter
+              href: icorprofilercallback-exceptionunwindfinallyenter-method.md
+            - name: Метод ExceptionUnwindFinallyLeave
+              href: icorprofilercallback-exceptionunwindfinallyleave-method.md
+            - name: Метод ExceptionUnwindFunctionEnter
+              href: icorprofilercallback-exceptionunwindfunctionenter-method.md
+            - name: Метод ExceptionUnwindFunctionLeave
+              href: icorprofilercallback-exceptionunwindfunctionleave-method.md
+            - name: Метод FunctionUnloadStarted
+              href: icorprofilercallback-functionunloadstarted-method.md
+            - name: Метод Initialize
+              href: icorprofilercallback-initialize-method.md
+            - name: Метод JITCachedFunctionSearchFinished
+              href: icorprofilercallback-jitcachedfunctionsearchfinished-method.md
+            - name: Метод JITCachedFunctionSearchStarted
+              href: icorprofilercallback-jitcachedfunctionsearchstarted-method.md
+            - name: Метод JITCompilationFinished
+              href: icorprofilercallback-jitcompilationfinished-method.md
+            - name: Метод JITCompilationStarted
+              href: icorprofilercallback-jitcompilationstarted-method.md
+            - name: Метод JITFunctionPitched
+              href: icorprofilercallback-jitfunctionpitched-method.md
+            - name: Метод JITInlining
+              href: icorprofilercallback-jitinlining-method.md
+            - name: Метод ManagedToUnmanagedTransition
+              href: icorprofilercallback-managedtounmanagedtransition-method.md
+            - name: Метод ModuleAttachedToAssembly
+              href: icorprofilercallback-moduleattachedtoassembly-method.md
+            - name: Метод ModuleLoadFinished
+              href: icorprofilercallback-moduleloadfinished-method.md
+            - name: Метод ModuleLoadStarted
+              href: icorprofilercallback-moduleloadstarted-method.md
+            - name: Метод ModuleUnloadFinished
+              href: icorprofilercallback-moduleunloadfinished-method.md
+            - name: Метод ModuleUnloadStarted
+              href: icorprofilercallback-moduleunloadstarted-method.md
+            - name: Метод MovedReferences
+              href: icorprofilercallback-movedreferences-method.md
+            - name: Метод ObjectAllocated
+              href: icorprofilercallback-objectallocated-method.md
+            - name: Метод ObjectReferences
+              href: icorprofilercallback-objectreferences-method.md
+            - name: Метод ObjectsAllocatedByClass
+              href: icorprofilercallback-objectsallocatedbyclass-method.md
+            - name: Метод RemotingClientInvocationFinished
+              href: icorprofilercallback-remotingclientinvocationfinished-method.md
+            - name: Метод RemotingClientInvocationStarted
+              href: icorprofilercallback-remotingclientinvocationstarted-method.md
+            - name: Метод RemotingClientReceivingReply
+              href: icorprofilercallback-remotingclientreceivingreply-method.md
+            - name: Метод RemotingClientSendingMessage
+              href: icorprofilercallback-remotingclientsendingmessage-method.md
+            - name: Метод RemotingServerInvocationReturned
+              href: icorprofilercallback-remotingserverinvocationreturned-method.md
+            - name: Метод RemotingServerInvocationStarted
+              href: icorprofilercallback-remotingserverinvocationstarted-method.md
+            - name: Метод RemotingServerReceivingMessage
+              href: icorprofilercallback-remotingserverreceivingmessage-method.md
+            - name: Метод RemotingServerSendingReply
+              href: icorprofilercallback-remotingserversendingreply-method.md
+            - name: Метод RootReferences
+              href: icorprofilercallback-rootreferences-method.md
+            - name: Метод RuntimeResumeFinished
+              href: icorprofilercallback-runtimeresumefinished-method.md
+            - name: Метод RuntimeResumeStarted
+              href: icorprofilercallback-runtimeresumestarted-method.md
+            - name: Метод RuntimeSuspendAborted
+              href: icorprofilercallback-runtimesuspendaborted-method.md
+            - name: Метод RuntimeSuspendFinished
+              href: icorprofilercallback-runtimesuspendfinished-method.md
+            - name: Метод RuntimeSuspendStarted
+              href: icorprofilercallback-runtimesuspendstarted-method.md
+            - name: Метод RuntimeThreadResumed
+              href: icorprofilercallback-runtimethreadresumed-method.md
+            - name: Метод RuntimeThreadSuspended
+              href: icorprofilercallback-runtimethreadsuspended-method.md
+            - name: Метод Shutdown
+              href: icorprofilercallback-shutdown-method.md
+            - name: Метод ThreadAssignedToOSThread
+              href: icorprofilercallback-threadassignedtoosthread-method.md
+            - name: Метод ThreadCreated
+              href: icorprofilercallback-threadcreated-method.md
+            - name: Метод ThreadDestroyed
+              href: icorprofilercallback-threaddestroyed-method.md
+            - name: Метод UnmanagedToManagedTransition
+              href: icorprofilercallback-unmanagedtomanagedtransition-method.md
+        - name: Интерфейс ICorProfilerCallback2
+          href: icorprofilercallback2-interface.md
+          items:
+            - name: Метод FinalizeableObjectQueued
+              href: icorprofilercallback2-finalizeableobjectqueued-method.md
+            - name: Метод GarbageCollectionFinished
+              href: icorprofilercallback2-garbagecollectionfinished-method.md
+            - name: Метод GarbageCollectionStarted
+              href: icorprofilercallback2-garbagecollectionstarted-method.md
+            - name: Метод HandleCreated
+              href: icorprofilercallback2-handlecreated-method.md
+            - name: Метод HandleDestroyed
+              href: icorprofilercallback2-handledestroyed-method.md
+            - name: Метод RootReferences2
+              href: icorprofilercallback2-rootreferences2-method.md
+            - name: Метод SurvivingReferences
+              href: icorprofilercallback2-survivingreferences-method.md
+            - name: Метод ThreadNameChanged
+              href: icorprofilercallback2-threadnamechanged-method.md
+        - name: Интерфейс ICorProfilerCallback3
+          href: icorprofilercallback3-interface.md
+          items:
+            - name: Метод InitializeForAttach
+              href: icorprofilercallback3-initializeforattach-method.md
+            - name: Метод ProfilerAttachComplete
+              href: icorprofilercallback3-profilerattachcomplete-method.md
+            - name: Метод ProfilerDetachSucceeded
+              href: icorprofilercallback3-profilerdetachsucceeded-method.md
+        - name: Интерфейс ICorProfilerCallback4
+          href: icorprofilercallback4-interface.md
+          items:
+            - name: Метод GetReJITParameters
+              href: icorprofilercallback4-getrejitparameters-method.md
+            - name: Метод MovedReferences2
+              href: icorprofilercallback4-movedreferences2-method.md
+            - name: Метод ReJITCompilationFinished
+              href: icorprofilercallback4-rejitcompilationfinished-method.md
+            - name: Метод ReJITCompilationStarted
+              href: icorprofilercallback4-rejitcompilationstarted-method.md
+            - name: Метод ReJITError
+              href: icorprofilercallback4-rejiterror-method.md
+            - name: Метод SurvivingReferences2
+              href: icorprofilercallback4-survivingreferences2-method.md
+        - name: Интерфейс ICorProfilerCallback5
+          href: icorprofilercallback5-interface.md
+          items:
+            - name: Метод ConditionalWeakTableElementReferences
+              href: icorprofilercallback5-conditionalweaktableelementreferences-method.md
+        - name: Интерфейс ICorProfilerCallback6
+          href: icorprofilercallback6-interface.md
+          items:
+            - name: Метод GetAssemblyReferences
+              href: icorprofilercallback6-getassemblyreferences-method.md
+        - name: Интерфейс ICorProfilerCallback7
+          href: icorprofilercallback7-interface.md
+          items:
+            - name: Метод ModuleInMemorySymbolsUpdated
+              href: icorprofilercallback7-moduleinmemorysymbolsupdated-method.md
+        - name: Интерфейс ICorProfilerFunctionControl
+          href: icorprofilerfunctioncontrol-interface.md
+          items:
+            - name: Метод SetCodegenFlags
+              href: icorprofilerfunctioncontrol-setcodegenflags-method.md
+            - name: Метод SetILFunctionBody
+              href: icorprofilerfunctioncontrol-setilfunctionbody-method.md
+            - name: Метод SetILInstrumentedCodeMap
+              href: icorprofilerfunctioncontrol-setilinstrumentedcodemap-method.md
+        - name: Интерфейс ICorProfilerCallback8
+          href: icorprofilercallback8-interface.md
+          items:
+            - name: Метод DynamicMethodJITCompilationStarted
+              href: icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md
+            - name: Метод DynamicMethodJITCompilationFinished
+              href: icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md
+        - name: Интерфейс ICorProfilerCallback9
+          href: icorprofilercallback9-interface.md
+          items:
+            - name: Метод DynamicMethodUnloaded
+              href: icorprofilercallback9-dynamicmethodunloaded-method.md
+        - name: Интерфейс ICorProfilerFunctionEnum
+          href: icorprofilerfunctionenum-interface.md
+          items:
+            - name: Метод Clone
+              href: icorprofilerfunctionenum-clone-method.md
+            - name: Метод GetCount
+              href: icorprofilerfunctionenum-getcount-method.md
+            - name: Метод Next
+              href: icorprofilerfunctionenum-next-method.md
+            - name: Метод Reset
+              href: icorprofilerfunctionenum-reset-method.md
+            - name: Метод Skip
+              href: icorprofilerfunctionenum-skip-method.md
+        - name: Интерфейс ICorProfilerInfo
+          href: icorprofilerinfo-interface.md
+          items:
+            - name: Метод BeginInprocDebugging
+              href: icorprofilerinfo-begininprocdebugging-method.md
+            - name: Метод EndInprocDebugging
+              href: icorprofilerinfo-endinprocdebugging-method.md
+            - name: Метод ForceGC
+              href: icorprofilerinfo-forcegc-method.md
+            - name: Метод GetAppDomainInfo
+              href: icorprofilerinfo-getappdomaininfo-method.md
+            - name: Метод GetAssemblyInfo
+              href: icorprofilerinfo-getassemblyinfo-method.md
+            - name: Метод GetClassFromObject
+              href: icorprofilerinfo-getclassfromobject-method.md
+            - name: Метод GetClassFromToken
+              href: icorprofilerinfo-getclassfromtoken-method.md
+            - name: Метод GetClassIDInfo
+              href: icorprofilerinfo-getclassidinfo-method.md
+            - name: Метод GetCodeInfo
+              href: icorprofilerinfo-getcodeinfo-method.md
+            - name: Метод GetCurrentThreadID
+              href: icorprofilerinfo-getcurrentthreadid-method.md
+            - name: Метод GetEventMask
+              href: icorprofilerinfo-geteventmask-method.md
+            - name: Метод GetFunctionFromIP
+              href: icorprofilerinfo-getfunctionfromip-method.md
+            - name: Метод GetFunctionFromToken
+              href: icorprofilerinfo-getfunctionfromtoken-method.md
+            - name: Метод GetFunctionInfo
+              href: icorprofilerinfo-getfunctioninfo-method.md
+            - name: Метод GetHandleFromThread
+              href: icorprofilerinfo-gethandlefromthread-method.md
+            - name: Метод GetILFunctionBody
+              href: icorprofilerinfo-getilfunctionbody-method.md
+            - name: Метод GetILFunctionBodyAllocator
+              href: icorprofilerinfo-getilfunctionbodyallocator-method.md
+            - name: Метод GetILToNativeMapping
+              href: icorprofilerinfo-getiltonativemapping-method.md
+            - name: Метод GetInprocInspectionInterface
+              href: icorprofilerinfo-getinprocinspectioninterface-method.md
+            - name: Метод GetInprocInspectionIThisThread
+              href: icorprofilerinfo-getinprocinspectionithisthread-method.md
+            - name: Метод GetModuleInfo
+              href: icorprofilerinfo-getmoduleinfo-method.md
+            - name: Метод GetModuleMetaData
+              href: icorprofilerinfo-getmodulemetadata-method.md
+            - name: Метод GetObjectSize
+              href: icorprofilerinfo-getobjectsize-method.md
+            - name: Метод GetThreadContext
+              href: icorprofilerinfo-getthreadcontext-method.md
+            - name: Метод GetThreadInfo
+              href: icorprofilerinfo-getthreadinfo-method.md
+            - name: Метод GetTokenAndMetadataFromFunction
+              href: icorprofilerinfo-gettokenandmetadatafromfunction-method.md
+            - name: Метод IsArrayClass
+              href: icorprofilerinfo-isarrayclass-method.md
+            - name: Метод SetEnterLeaveFunctionHooks
+              href: icorprofilerinfo-setenterleavefunctionhooks-method.md
+            - name: Метод SetEventMask
+              href: icorprofilerinfo-seteventmask-method.md
+            - name: Метод SetFunctionIDMapper
+              href: icorprofilerinfo-setfunctionidmapper-method.md
+            - name: Метод SetFunctionReJIT
+              href: icorprofilerinfo-setfunctionrejit-method.md
+            - name: Метод SetILFunctionBody
+              href: icorprofilerinfo-setilfunctionbody-method.md
+            - name: Метод SetILInstrumentedCodeMap
+              href: icorprofilerinfo-setilinstrumentedcodemap-method.md
+        - name: Интерфейс ICorProfilerInfo2
+          href: icorprofilerinfo2-interface.md
+          items:
+            - name: Метод DoStackSnapshot
+              href: icorprofilerinfo2-dostacksnapshot-method.md
+            - name: Метод EnumModuleFrozenObjects
+              href: icorprofilerinfo2-enummodulefrozenobjects-method.md
+            - name: Метод GetAppDomainStaticAddress
+              href: icorprofilerinfo2-getappdomainstaticaddress-method.md
+            - name: Метод GetArrayObjectInfo
+              href: icorprofilerinfo2-getarrayobjectinfo-method.md
+            - name: Метод GetBoxClassLayout
+              href: icorprofilerinfo2-getboxclasslayout-method.md
+            - name: Метод GetClassFromTokenAndTypeArgs
+              href: icorprofilerinfo2-getclassfromtokenandtypeargs-method.md
+            - name: Метод GetClassIDInfo2
+              href: icorprofilerinfo2-getclassidinfo2-method.md
+            - name: Метод GetClassLayout
+              href: icorprofilerinfo2-getclasslayout-method.md
+            - name: Метод GetCodeInfo2
+              href: icorprofilerinfo2-getcodeinfo2-method.md
+            - name: Метод GetContextStaticAddress
+              href: icorprofilerinfo2-getcontextstaticaddress-method.md
+            - name: Метод GetFunctionFromTokenAndTypeArgs
+              href: icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md
+            - name: Метод GetFunctionInfo2
+              href: icorprofilerinfo2-getfunctioninfo2-method.md
+            - name: Метод GetGenerationBounds
+              href: icorprofilerinfo2-getgenerationbounds-method.md
+            - name: Метод GetNotifiedExceptionClauseInfo
+              href: icorprofilerinfo2-getnotifiedexceptionclauseinfo-method.md
+            - name: Метод GetObjectGeneration
+              href: icorprofilerinfo2-getobjectgeneration-method.md
+            - name: Метод GetRVAStaticAddress
+              href: icorprofilerinfo2-getrvastaticaddress-method.md
+            - name: Метод GetStaticFieldInfo
+              href: icorprofilerinfo2-getstaticfieldinfo-method.md
+            - name: Метод GetStringLayout
+              href: icorprofilerinfo2-getstringlayout-method.md
+            - name: Метод GetThreadAppDomain
+              href: icorprofilerinfo2-getthreadappdomain-method.md
+            - name: Метод GetThreadStaticAddress
+              href: icorprofilerinfo2-getthreadstaticaddress-method.md
+            - name: Метод SetEnterLeaveFunctionHooks2
+              href: icorprofilerinfo2-setenterleavefunctionhooks2-method.md
+        - name: Интерфейс ICorProfilerInfo3
+          href: icorprofilerinfo3-interface.md
+          items:
+            - name: Метод EnumJITedFunctions
+              href: icorprofilerinfo3-enumjitedfunctions-method.md
+            - name: Метод EnumModules
+              href: icorprofilerinfo3-enummodules-method.md
+            - name: Метод GetAppDomainsContainingModule
+              href: icorprofilerinfo3-getappdomainscontainingmodule-method.md
+            - name: Метод GetFunctionEnter3Info
+              href: icorprofilerinfo3-getfunctionenter3info-method.md
+            - name: Метод GetFunctionLeave3Info
+              href: icorprofilerinfo3-getfunctionleave3info-method.md
+            - name: Метод GetFunctionTailcall3Info
+              href: icorprofilerinfo3-getfunctiontailcall3info-method.md
+            - name: Метод GetModuleInfo2
+              href: icorprofilerinfo3-getmoduleinfo2-method.md
+            - name: Метод GetRuntimeInformation
+              href: icorprofilerinfo3-getruntimeinformation-method.md
+            - name: Метод GetStringLayout2
+              href: icorprofilerinfo3-getstringlayout2-method.md
+            - name: Метод GetThreadStaticAddress2
+              href: icorprofilerinfo3-getthreadstaticaddress2-method.md
+            - name: Метод RequestProfilerDetach
+              href: icorprofilerinfo3-requestprofilerdetach-method.md
+            - name: Метод SetEnterLeaveFunctionHooks3
+              href: icorprofilerinfo3-setenterleavefunctionhooks3-method.md
+            - name: Метод SetEnterLeaveFunctionHooks3WithInfo
+              href: icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md
+            - name: Метод SetFunctionIDMapper2
+              href: icorprofilerinfo3-setfunctionidmapper2-method.md
+        - name: Интерфейс ICorProfilerInfo4
+          href: icorprofilerinfo4-interface.md
+          items:
+            - name: Метод EnumJITedFunctions2
+              href: icorprofilerinfo4-enumjitedfunctions2-method.md
+            - name: Метод EnumThreads
+              href: icorprofilerinfo4-enumthreads-method.md
+            - name: Метод GetCodeInfo3
+              href: icorprofilerinfo4-getcodeinfo3-method.md
+            - name: Метод GetFunctionFromIP2
+              href: icorprofilerinfo4-getfunctionfromip2-method.md
+            - name: Метод GetILToNativeMapping2
+              href: icorprofilerinfo4-getiltonativemapping2-method.md
+            - name: Метод GetObjectSize2
+              href: icorprofilerinfo4-getobjectsize2-method.md
+            - name: Метод GetReJITIDs
+              href: icorprofilerinfo4-getrejitids-method.md
+            - name: Метод InitializeCurrentThread
+              href: icorprofilerinfo4-initializecurrentthread-method.md
+            - name: Метод RequestReJIT
+              href: icorprofilerinfo4-requestrejit-method.md
+            - name: Метод RequestRevert
+              href: icorprofilerinfo4-requestrevert-method.md
+        - name: Интерфейс ICorProfilerInfo5
+          href: icorprofilerinfo5-interface.md
+          items:
+            - name: Метод GetEventMask2
+              href: icorprofilerinfo5-geteventmask2-method.md
+            - name: Метод SetEventMask2
+              href: icorprofilerinfo5-seteventmask2-method.md
+        - name: Интерфейс ICorProfilerInfo6
+          href: icorprofilerinfo6-interface.md
+          items:
+            - name: 'Метод ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod'
+              href: icorprofilerinfo6-enumngenmodulemethodsinliningthismethod-method.md
+        - name: Интерфейс ICorProfilerInfo7
+          href: icorprofilerinfo7-interface.md
+          items:
+            - name: Метод ApplyMetaData
+              href: icorprofilerinfo7-applymetadata-method.md
+            - name: Метод GetInMemorySymbolsLength
+              href: icorprofilerinfo7-getinmemorysymbolslength-method.md
+            - name: ReadInMemorySymbols
+              href: icorprofilerinfo7-readinmemorysymbols.md
+        - name: Интерфейс ICorProfilerModuleEnum
+          href: icorprofilermoduleenum-interface.md
+          items:
+            - name: Метод Clone
+              href: icorprofilermoduleenum-clone-method.md
+            - name: Метод GetCount
+              href: icorprofilermoduleenum-getcount-method.md
+            - name: Метод Next
+              href: icorprofilermoduleenum-next-method.md
+            - name: Метод Reset
+              href: icorprofilermoduleenum-reset-method.md
+            - name: Метод Skip
+              href: icorprofilermoduleenum-skip-method.md
+        - name: Интерфейс ICorProfilerObjectEnum
+          href: icorprofilerobjectenum-interface.md
+          items:
+            - name: Метод Clone
+              href: icorprofilerobjectenum-clone-method.md
+            - name: Метод GetCount
+              href: icorprofilerobjectenum-getcount-method.md
+            - name: Метод Next
+              href: icorprofilerobjectenum-next-method.md
+            - name: Метод Reset
+              href: icorprofilerobjectenum-reset-method.md
+            - name: Метод Skip
+              href: icorprofilerobjectenum-skip-method.md
+        - name: Интерфейс ICorProfilerThreadEnum
+          href: icorprofilerthreadenum-interface.md
+          items:
+            - name: Метод Clone
+              href: icorprofilerthreadenum-clone-method.md
+            - name: Метод GetCount
+              href: icorprofilerthreadenum-getcount-method.md
+            - name: Метод Next
+              href: icorprofilerthreadenum-next-method.md
+            - name: Метод Reset
+              href: icorprofilerthreadenum-reset-method.md
+            - name: Метод Skip
+              href: icorprofilerthreadenum-skip-method.md
+        - name: Интерфейс IMethodMalloc
+          href: imethodmalloc-interface.md
+          items:
+            - name: Метод Alloc
+              href: imethodmalloc-alloc-method.md
+    - name: Глобальные статические функции профилирования
+      href: profiling-global-static-functions.md
       items:
-      - name: Метод AddAssemblyReference
-        href: icorprofilerassemblyreferenceprovider-addassemblyreference-method.md
-    - name: Интерфейс ICorProfilerCallback
-      href: icorprofilercallback-interface.md
+        - name: Функция FunctionEnter
+          href: functionenter-function.md
+        - name: Функция FunctionEnter2
+          href: functionenter2-function.md
+        - name: Функция FunctionEnter3
+          href: functionenter3-function.md
+        - name: Функция FunctionEnter3WithInfo
+          href: functionenter3withinfo-function.md
+        - name: Функция FunctionIDMapper
+          href: functionidmapper-function.md
+        - name: Функция FunctionIDMapper2
+          href: functionidmapper2-function.md
+        - name: Функция FunctionLeave
+          href: functionleave-function.md
+        - name: Функция FunctionLeave2
+          href: functionleave2-function.md
+        - name: Функция FunctionLeave3
+          href: functionleave3-function.md
+        - name: Функция FunctionLeave3WithInfo
+          href: functionleave3withinfo-function.md
+        - name: Функция FunctionTailcall
+          href: functiontailcall-function.md
+        - name: Функция FunctionTailcall2
+          href: functiontailcall2-function.md
+        - name: Функция FunctionTailcall3
+          href: functiontailcall3-function.md
+        - name: Функция FunctionTailcall3WithInfo
+          href: functiontailcall3withinfo-function.md
+        - name: Функция StackSnapshotCallback
+          href: stacksnapshotcallback-function.md
+    - name: Перечисления профилирования
+      href: profiling-enumerations.md
       items:
-      - name: Метод AppDomainCreationFinished
-        href: icorprofilercallback-appdomaincreationfinished-method.md
-      - name: Метод AppDomainCreationStarted
-        href: icorprofilercallback-appdomaincreationstarted-method.md
-      - name: Метод AppDomainShutdownFinished
-        href: icorprofilercallback-appdomainshutdownfinished-method.md
-      - name: Метод AppDomainShutdownStarted
-        href: icorprofilercallback-appdomainshutdownstarted-method.md
-      - name: Метод AssemblyLoadFinished
-        href: icorprofilercallback-assemblyloadfinished-method.md
-      - name: Метод AssemblyLoadStarted
-        href: icorprofilercallback-assemblyloadstarted-method.md
-      - name: Метод AssemblyUnloadFinished
-        href: icorprofilercallback-assemblyunloadfinished-method.md
-      - name: Метод AssemblyUnloadStarted
-        href: icorprofilercallback-assemblyunloadstarted-method.md
-      - name: Метод ClassLoadFinished
-        href: icorprofilercallback-classloadfinished-method.md
-      - name: Метод ClassLoadStarted
-        href: icorprofilercallback-classloadstarted-method.md
-      - name: Метод ClassUnloadFinished
-        href: icorprofilercallback-classunloadfinished-method.md
-      - name: Метод ClassUnloadStarted
-        href: icorprofilercallback-classunloadstarted-method.md
-      - name: Метод COMClassicVTableCreated
-        href: icorprofilercallback-comclassicvtablecreated-method.md
-      - name: Метод COMClassicVTableDestroyed
-        href: icorprofilercallback-comclassicvtabledestroyed-method.md
-      - name: Метод ExceptionCatcherEnter
-        href: icorprofilercallback-exceptioncatcherenter-method.md
-      - name: Метод ExceptionCatcherLeave
-        href: icorprofilercallback-exceptioncatcherleave-method.md
-      - name: Метод ExceptionCLRCatcherExecute
-        href: icorprofilercallback-exceptionclrcatcherexecute-method.md
-      - name: Метод ExceptionCLRCatcherFound
-        href: icorprofilercallback-exceptionclrcatcherfound-method.md
-      - name: Метод ExceptionOSHandlerEnter
-        href: icorprofilercallback-exceptionoshandlerenter-method.md
-      - name: Метод ExceptionOSHandlerLeave
-        href: icorprofilercallback-exceptionoshandlerleave-method.md
-      - name: Метод ExceptionSearchCatcherFound
-        href: icorprofilercallback-exceptionsearchcatcherfound-method.md
-      - name: Метод ExceptionSearchFilterEnter
-        href: icorprofilercallback-exceptionsearchfilterenter-method.md
-      - name: Метод ExceptionSearchFilterLeave
-        href: icorprofilercallback-exceptionsearchfilterleave-method.md
-      - name: Метод ExceptionSearchFunctionEnter
-        href: icorprofilercallback-exceptionsearchfunctionenter-method.md
-      - name: Метод ExceptionSearchFunctionLeave
-        href: icorprofilercallback-exceptionsearchfunctionleave-method.md
-      - name: Метод ExceptionThrown
-        href: icorprofilercallback-exceptionthrown-method.md
-      - name: Метод ExceptionUnwindFinallyEnter
-        href: icorprofilercallback-exceptionunwindfinallyenter-method.md
-      - name: Метод ExceptionUnwindFinallyLeave
-        href: icorprofilercallback-exceptionunwindfinallyleave-method.md
-      - name: Метод ExceptionUnwindFunctionEnter
-        href: icorprofilercallback-exceptionunwindfunctionenter-method.md
-      - name: Метод ExceptionUnwindFunctionLeave
-        href: icorprofilercallback-exceptionunwindfunctionleave-method.md
-      - name: Метод FunctionUnloadStarted
-        href: icorprofilercallback-functionunloadstarted-method.md
-      - name: Метод Initialize
-        href: icorprofilercallback-initialize-method.md
-      - name: Метод JITCachedFunctionSearchFinished
-        href: icorprofilercallback-jitcachedfunctionsearchfinished-method.md
-      - name: Метод JITCachedFunctionSearchStarted
-        href: icorprofilercallback-jitcachedfunctionsearchstarted-method.md
-      - name: Метод JITCompilationFinished
-        href: icorprofilercallback-jitcompilationfinished-method.md
-      - name: Метод JITCompilationStarted
-        href: icorprofilercallback-jitcompilationstarted-method.md
-      - name: Метод JITFunctionPitched
-        href: icorprofilercallback-jitfunctionpitched-method.md
-      - name: Метод JITInlining
-        href: icorprofilercallback-jitinlining-method.md
-      - name: Метод ManagedToUnmanagedTransition
-        href: icorprofilercallback-managedtounmanagedtransition-method.md
-      - name: Метод ModuleAttachedToAssembly
-        href: icorprofilercallback-moduleattachedtoassembly-method.md
-      - name: Метод ModuleLoadFinished
-        href: icorprofilercallback-moduleloadfinished-method.md
-      - name: Метод ModuleLoadStarted
-        href: icorprofilercallback-moduleloadstarted-method.md
-      - name: Метод ModuleUnloadFinished
-        href: icorprofilercallback-moduleunloadfinished-method.md
-      - name: Метод ModuleUnloadStarted
-        href: icorprofilercallback-moduleunloadstarted-method.md
-      - name: Метод MovedReferences
-        href: icorprofilercallback-movedreferences-method.md
-      - name: Метод ObjectAllocated
-        href: icorprofilercallback-objectallocated-method.md
-      - name: Метод ObjectReferences
-        href: icorprofilercallback-objectreferences-method.md
-      - name: Метод ObjectsAllocatedByClass
-        href: icorprofilercallback-objectsallocatedbyclass-method.md
-      - name: Метод RemotingClientInvocationFinished
-        href: icorprofilercallback-remotingclientinvocationfinished-method.md
-      - name: Метод RemotingClientInvocationStarted
-        href: icorprofilercallback-remotingclientinvocationstarted-method.md
-      - name: Метод RemotingClientReceivingReply
-        href: icorprofilercallback-remotingclientreceivingreply-method.md
-      - name: Метод RemotingClientSendingMessage
-        href: icorprofilercallback-remotingclientsendingmessage-method.md
-      - name: Метод RemotingServerInvocationReturned
-        href: icorprofilercallback-remotingserverinvocationreturned-method.md
-      - name: Метод RemotingServerInvocationStarted
-        href: icorprofilercallback-remotingserverinvocationstarted-method.md
-      - name: Метод RemotingServerReceivingMessage
-        href: icorprofilercallback-remotingserverreceivingmessage-method.md
-      - name: Метод RemotingServerSendingReply
-        href: icorprofilercallback-remotingserversendingreply-method.md
-      - name: Метод RootReferences
-        href: icorprofilercallback-rootreferences-method.md
-      - name: Метод RuntimeResumeFinished
-        href: icorprofilercallback-runtimeresumefinished-method.md
-      - name: Метод RuntimeResumeStarted
-        href: icorprofilercallback-runtimeresumestarted-method.md
-      - name: Метод RuntimeSuspendAborted
-        href: icorprofilercallback-runtimesuspendaborted-method.md
-      - name: Метод RuntimeSuspendFinished
-        href: icorprofilercallback-runtimesuspendfinished-method.md
-      - name: Метод RuntimeSuspendStarted
-        href: icorprofilercallback-runtimesuspendstarted-method.md
-      - name: Метод RuntimeThreadResumed
-        href: icorprofilercallback-runtimethreadresumed-method.md
-      - name: Метод RuntimeThreadSuspended
-        href: icorprofilercallback-runtimethreadsuspended-method.md
-      - name: Метод Shutdown
-        href: icorprofilercallback-shutdown-method.md
-      - name: Метод ThreadAssignedToOSThread
-        href: icorprofilercallback-threadassignedtoosthread-method.md
-      - name: Метод ThreadCreated
-        href: icorprofilercallback-threadcreated-method.md
-      - name: Метод ThreadDestroyed
-        href: icorprofilercallback-threaddestroyed-method.md
-      - name: Метод UnmanagedToManagedTransition
-        href: icorprofilercallback-unmanagedtomanagedtransition-method.md
-    - name: Интерфейс ICorProfilerCallback2
-      href: icorprofilercallback2-interface.md
+        - name: Перечисление COR_PRF_CLAUSE_TYPE
+          href: cor-prf-clause-type-enumeration.md
+        - name: Перечисление COR_PRF_CODEGEN_FLAGS
+          href: cor-prf-codegen-flags-enumeration.md
+        - name: Перечисление COR_PRF_FINALIZER_FLAGS
+          href: cor-prf-finalizer-flags-enumeration.md
+        - name: Перечисление COR_PRF_GC_GENERATION
+          href: cor-prf-gc-generation-enumeration.md
+        - name: Перечисление COR_PRF_GC_REASON
+          href: cor-prf-gc-reason-enumeration.md
+        - name: Перечисление COR_PRF_GC_ROOT_FLAGS
+          href: cor-prf-gc-root-flags-enumeration.md
+        - name: Перечисление COR_PRF_GC_ROOT_KIND
+          href: cor-prf-gc-root-kind-enumeration.md
+        - name: Перечисление COR_PRF_HIGH_MONITOR
+          href: cor-prf-high-monitor-enumeration.md
+        - name: Перечисление COR_PRF_JIT_CACHE
+          href: cor-prf-jit-cache-enumeration.md
+        - name: Перечисление COR_PRF_MISC
+          href: cor-prf-misc-enumeration.md
+        - name: Перечисление COR_PRF_MODULE_FLAGS
+          href: cor-prf-module-flags-enumeration.md
+        - name: Перечисление COR_PRF_MONITOR
+          href: cor-prf-monitor-enumeration.md
+        - name: Перечисление COR_PRF_RUNTIME_TYPE
+          href: cor-prf-runtime-type-enumeration.md
+        - name: Перечисление COR_PRF_SNAPSHOT_INFO
+          href: cor-prf-snapshot-info-enumeration.md
+        - name: Перечисление COR_PRF_STATIC_TYPE
+          href: cor-prf-static-type-enumeration.md
+        - name: Перечисление COR_PRF_SUSPEND_REASON
+          href: cor-prf-suspend-reason-enumeration.md
+        - name: Перечисление COR_PRF_TRANSITION_REASON
+          href: cor-prf-transition-reason-enumeration.md
+    - name: Структуры профилирования
+      href: profiling-structures.md
       items:
-      - name: Метод FinalizeableObjectQueued
-        href: icorprofilercallback2-finalizeableobjectqueued-method.md
-      - name: Метод GarbageCollectionFinished
-        href: icorprofilercallback2-garbagecollectionfinished-method.md
-      - name: Метод GarbageCollectionStarted
-        href: icorprofilercallback2-garbagecollectionstarted-method.md
-      - name: Метод HandleCreated
-        href: icorprofilercallback2-handlecreated-method.md
-      - name: Метод HandleDestroyed
-        href: icorprofilercallback2-handledestroyed-method.md
-      - name: Метод RootReferences2
-        href: icorprofilercallback2-rootreferences2-method.md
-      - name: Метод SurvivingReferences
-        href: icorprofilercallback2-survivingreferences-method.md
-      - name: Метод ThreadNameChanged
-        href: icorprofilercallback2-threadnamechanged-method.md
-    - name: Интерфейс ICorProfilerCallback3
-      href: icorprofilercallback3-interface.md
-      items:
-      - name: Метод InitializeForAttach
-        href: icorprofilercallback3-initializeforattach-method.md
-      - name: Метод ProfilerAttachComplete
-        href: icorprofilercallback3-profilerattachcomplete-method.md
-      - name: Метод ProfilerDetachSucceeded
-        href: icorprofilercallback3-profilerdetachsucceeded-method.md
-    - name: Интерфейс ICorProfilerCallback4
-      href: icorprofilercallback4-interface.md
-      items:
-      - name: Метод GetReJITParameters
-        href: icorprofilercallback4-getrejitparameters-method.md
-      - name: Метод MovedReferences2
-        href: icorprofilercallback4-movedreferences2-method.md
-      - name: Метод ReJITCompilationFinished
-        href: icorprofilercallback4-rejitcompilationfinished-method.md
-      - name: Метод ReJITCompilationStarted
-        href: icorprofilercallback4-rejitcompilationstarted-method.md
-      - name: Метод ReJITError
-        href: icorprofilercallback4-rejiterror-method.md
-      - name: Метод SurvivingReferences2
-        href: icorprofilercallback4-survivingreferences2-method.md
-    - name: Интерфейс ICorProfilerCallback5
-      href: icorprofilercallback5-interface.md
-      items:
-      - name: Метод ConditionalWeakTableElementReferences
-        href: icorprofilercallback5-conditionalweaktableelementreferences-method.md
-    - name: Интерфейс ICorProfilerCallback6
-      href: icorprofilercallback6-interface.md
-      items:
-      - name: Метод GetAssemblyReferences
-        href: icorprofilercallback6-getassemblyreferences-method.md
-    - name: Интерфейс ICorProfilerCallback7
-      href: icorprofilercallback7-interface.md
-      items:
-      - name: Метод ModuleInMemorySymbolsUpdated
-        href: icorprofilercallback7-moduleinmemorysymbolsupdated-method.md
-    - name: Интерфейс ICorProfilerFunctionControl
-      href: icorprofilerfunctioncontrol-interface.md
-      items:
-      - name: Метод SetCodegenFlags
-        href: icorprofilerfunctioncontrol-setcodegenflags-method.md
-      - name: Метод SetILFunctionBody
-        href: icorprofilerfunctioncontrol-setilfunctionbody-method.md
-      - name: Метод SetILInstrumentedCodeMap
-        href: icorprofilerfunctioncontrol-setilinstrumentedcodemap-method.md
-    - name: Интерфейс ICorProfilerCallback8
-      href: icorprofilercallback8-interface.md
-      items:
-      - name: Метод DynamicMethodJITCompilationStarted
-        href: icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md
-      - name: Метод DynamicMethodJITCompilationFinished
-        href: icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md
-    - name: Интерфейс ICorProfilerCallback9
-      href: icorprofilercallback9-interface.md
-      items:
-      - name: Метод DynamicMethodUnloaded
-        href: icorprofilercallback9-dynamicmethodunloaded-method.md
-    - name: Интерфейс ICorProfilerFunctionEnum
-      href: icorprofilerfunctionenum-interface.md
-      items:
-      - name: Метод Clone
-        href: icorprofilerfunctionenum-clone-method.md
-      - name: Метод GetCount
-        href: icorprofilerfunctionenum-getcount-method.md
-      - name: Метод Next
-        href: icorprofilerfunctionenum-next-method.md
-      - name: Метод Reset
-        href: icorprofilerfunctionenum-reset-method.md
-      - name: Метод Skip
-        href: icorprofilerfunctionenum-skip-method.md
-    - name: Интерфейс ICorProfilerInfo
-      href: icorprofilerinfo-interface.md
-      items:
-      - name: Метод BeginInprocDebugging
-        href: icorprofilerinfo-begininprocdebugging-method.md
-      - name: Метод EndInprocDebugging
-        href: icorprofilerinfo-endinprocdebugging-method.md
-      - name: Метод ForceGC
-        href: icorprofilerinfo-forcegc-method.md
-      - name: Метод GetAppDomainInfo
-        href: icorprofilerinfo-getappdomaininfo-method.md
-      - name: Метод GetAssemblyInfo
-        href: icorprofilerinfo-getassemblyinfo-method.md
-      - name: Метод GetClassFromObject
-        href: icorprofilerinfo-getclassfromobject-method.md
-      - name: Метод GetClassFromToken
-        href: icorprofilerinfo-getclassfromtoken-method.md
-      - name: Метод GetClassIDInfo
-        href: icorprofilerinfo-getclassidinfo-method.md
-      - name: Метод GetCodeInfo
-        href: icorprofilerinfo-getcodeinfo-method.md
-      - name: Метод GetCurrentThreadID
-        href: icorprofilerinfo-getcurrentthreadid-method.md
-      - name: Метод GetEventMask
-        href: icorprofilerinfo-geteventmask-method.md
-      - name: Метод GetFunctionFromIP
-        href: icorprofilerinfo-getfunctionfromip-method.md
-      - name: Метод GetFunctionFromToken
-        href: icorprofilerinfo-getfunctionfromtoken-method.md
-      - name: Метод GetFunctionInfo
-        href: icorprofilerinfo-getfunctioninfo-method.md
-      - name: Метод GetHandleFromThread
-        href: icorprofilerinfo-gethandlefromthread-method.md
-      - name: Метод GetILFunctionBody
-        href: icorprofilerinfo-getilfunctionbody-method.md
-      - name: Метод GetILFunctionBodyAllocator
-        href: icorprofilerinfo-getilfunctionbodyallocator-method.md
-      - name: Метод GetILToNativeMapping
-        href: icorprofilerinfo-getiltonativemapping-method.md
-      - name: Метод GetInprocInspectionInterface
-        href: icorprofilerinfo-getinprocinspectioninterface-method.md
-      - name: Метод GetInprocInspectionIThisThread
-        href: icorprofilerinfo-getinprocinspectionithisthread-method.md
-      - name: Метод GetModuleInfo
-        href: icorprofilerinfo-getmoduleinfo-method.md
-      - name: Метод GetModuleMetaData
-        href: icorprofilerinfo-getmodulemetadata-method.md
-      - name: Метод GetObjectSize
-        href: icorprofilerinfo-getobjectsize-method.md
-      - name: Метод GetThreadContext
-        href: icorprofilerinfo-getthreadcontext-method.md
-      - name: Метод GetThreadInfo
-        href: icorprofilerinfo-getthreadinfo-method.md
-      - name: Метод GetTokenAndMetadataFromFunction
-        href: icorprofilerinfo-gettokenandmetadatafromfunction-method.md
-      - name: Метод IsArrayClass
-        href: icorprofilerinfo-isarrayclass-method.md
-      - name: Метод SetEnterLeaveFunctionHooks
-        href: icorprofilerinfo-setenterleavefunctionhooks-method.md
-      - name: Метод SetEventMask
-        href: icorprofilerinfo-seteventmask-method.md
-      - name: Метод SetFunctionIDMapper
-        href: icorprofilerinfo-setfunctionidmapper-method.md
-      - name: Метод SetFunctionReJIT
-        href: icorprofilerinfo-setfunctionrejit-method.md
-      - name: Метод SetILFunctionBody
-        href: icorprofilerinfo-setilfunctionbody-method.md
-      - name: Метод SetILInstrumentedCodeMap
-        href: icorprofilerinfo-setilinstrumentedcodemap-method.md
-    - name: Интерфейс ICorProfilerInfo2
-      href: icorprofilerinfo2-interface.md
-      items:
-      - name: Метод DoStackSnapshot
-        href: icorprofilerinfo2-dostacksnapshot-method.md
-      - name: Метод EnumModuleFrozenObjects
-        href: icorprofilerinfo2-enummodulefrozenobjects-method.md
-      - name: Метод GetAppDomainStaticAddress
-        href: icorprofilerinfo2-getappdomainstaticaddress-method.md
-      - name: Метод GetArrayObjectInfo
-        href: icorprofilerinfo2-getarrayobjectinfo-method.md
-      - name: Метод GetBoxClassLayout
-        href: icorprofilerinfo2-getboxclasslayout-method.md
-      - name: Метод GetClassFromTokenAndTypeArgs
-        href: icorprofilerinfo2-getclassfromtokenandtypeargs-method.md
-      - name: Метод GetClassIDInfo2
-        href: icorprofilerinfo2-getclassidinfo2-method.md
-      - name: Метод GetClassLayout
-        href: icorprofilerinfo2-getclasslayout-method.md
-      - name: Метод GetCodeInfo2
-        href: icorprofilerinfo2-getcodeinfo2-method.md
-      - name: Метод GetContextStaticAddress
-        href: icorprofilerinfo2-getcontextstaticaddress-method.md
-      - name: Метод GetFunctionFromTokenAndTypeArgs
-        href: icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md
-      - name: Метод GetFunctionInfo2
-        href: icorprofilerinfo2-getfunctioninfo2-method.md
-      - name: Метод GetGenerationBounds
-        href: icorprofilerinfo2-getgenerationbounds-method.md
-      - name: Метод GetNotifiedExceptionClauseInfo
-        href: icorprofilerinfo2-getnotifiedexceptionclauseinfo-method.md
-      - name: Метод GetObjectGeneration
-        href: icorprofilerinfo2-getobjectgeneration-method.md
-      - name: Метод GetRVAStaticAddress
-        href: icorprofilerinfo2-getrvastaticaddress-method.md
-      - name: Метод GetStaticFieldInfo
-        href: icorprofilerinfo2-getstaticfieldinfo-method.md
-      - name: Метод GetStringLayout
-        href: icorprofilerinfo2-getstringlayout-method.md
-      - name: Метод GetThreadAppDomain
-        href: icorprofilerinfo2-getthreadappdomain-method.md
-      - name: Метод GetThreadStaticAddress
-        href: icorprofilerinfo2-getthreadstaticaddress-method.md
-      - name: Метод SetEnterLeaveFunctionHooks2
-        href: icorprofilerinfo2-setenterleavefunctionhooks2-method.md
-    - name: Интерфейс ICorProfilerInfo3
-      href: icorprofilerinfo3-interface.md
-      items:
-      - name: Метод EnumJITedFunctions
-        href: icorprofilerinfo3-enumjitedfunctions-method.md
-      - name: Метод EnumModules
-        href: icorprofilerinfo3-enummodules-method.md
-      - name: Метод GetAppDomainsContainingModule
-        href: icorprofilerinfo3-getappdomainscontainingmodule-method.md
-      - name: Метод GetFunctionEnter3Info
-        href: icorprofilerinfo3-getfunctionenter3info-method.md
-      - name: Метод GetFunctionLeave3Info
-        href: icorprofilerinfo3-getfunctionleave3info-method.md
-      - name: Метод GetFunctionTailcall3Info
-        href: icorprofilerinfo3-getfunctiontailcall3info-method.md
-      - name: Метод GetModuleInfo2
-        href: icorprofilerinfo3-getmoduleinfo2-method.md
-      - name: Метод GetRuntimeInformation
-        href: icorprofilerinfo3-getruntimeinformation-method.md
-      - name: Метод GetStringLayout2
-        href: icorprofilerinfo3-getstringlayout2-method.md
-      - name: Метод GetThreadStaticAddress2
-        href: icorprofilerinfo3-getthreadstaticaddress2-method.md
-      - name: Метод RequestProfilerDetach
-        href: icorprofilerinfo3-requestprofilerdetach-method.md
-      - name: Метод SetEnterLeaveFunctionHooks3
-        href: icorprofilerinfo3-setenterleavefunctionhooks3-method.md
-      - name: Метод SetEnterLeaveFunctionHooks3WithInfo
-        href: icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md
-      - name: Метод SetFunctionIDMapper2
-        href: icorprofilerinfo3-setfunctionidmapper2-method.md
-    - name: Интерфейс ICorProfilerInfo4
-      href: icorprofilerinfo4-interface.md
-      items:
-      - name: Метод EnumJITedFunctions2
-        href: icorprofilerinfo4-enumjitedfunctions2-method.md
-      - name: Метод EnumThreads
-        href: icorprofilerinfo4-enumthreads-method.md
-      - name: Метод GetCodeInfo3
-        href: icorprofilerinfo4-getcodeinfo3-method.md
-      - name: Метод GetFunctionFromIP2
-        href: icorprofilerinfo4-getfunctionfromip2-method.md
-      - name: Метод GetILToNativeMapping2
-        href: icorprofilerinfo4-getiltonativemapping2-method.md
-      - name: Метод GetObjectSize2
-        href: icorprofilerinfo4-getobjectsize2-method.md
-      - name: Метод GetReJITIDs
-        href: icorprofilerinfo4-getrejitids-method.md
-      - name: Метод InitializeCurrentThread
-        href: icorprofilerinfo4-initializecurrentthread-method.md
-      - name: Метод RequestReJIT
-        href: icorprofilerinfo4-requestrejit-method.md
-      - name: Метод RequestRevert
-        href: icorprofilerinfo4-requestrevert-method.md
-    - name: Интерфейс ICorProfilerInfo5
-      href: icorprofilerinfo5-interface.md
-      items:
-      - name: Метод GetEventMask2
-        href: icorprofilerinfo5-geteventmask2-method.md
-      - name: Метод SetEventMask2
-        href: icorprofilerinfo5-seteventmask2-method.md
-    - name: Интерфейс ICorProfilerInfo6
-      href: icorprofilerinfo6-interface.md
-      items:
-      - name: Метод ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod
-        href: icorprofilerinfo6-enumngenmodulemethodsinliningthismethod-method.md
-    - name: Интерфейс ICorProfilerInfo7
-      href: icorprofilerinfo7-interface.md
-      items:
-      - name: Метод ApplyMetaData
-        href: icorprofilerinfo7-applymetadata-method.md
-      - name: Метод GetInMemorySymbolsLength
-        href: icorprofilerinfo7-getinmemorysymbolslength-method.md
-      - name: ReadInMemorySymbols
-        href: icorprofilerinfo7-readinmemorysymbols.md
-    - name: Интерфейс ICorProfilerModuleEnum
-      href: icorprofilermoduleenum-interface.md
-      items:
-      - name: Метод Clone
-        href: icorprofilermoduleenum-clone-method.md
-      - name: Метод GetCount
-        href: icorprofilermoduleenum-getcount-method.md
-      - name: Метод Next
-        href: icorprofilermoduleenum-next-method.md
-      - name: Метод Reset
-        href: icorprofilermoduleenum-reset-method.md
-      - name: Метод Skip
-        href: icorprofilermoduleenum-skip-method.md
-    - name: Интерфейс ICorProfilerObjectEnum
-      href: icorprofilerobjectenum-interface.md
-      items:
-      - name: Метод Clone
-        href: icorprofilerobjectenum-clone-method.md
-      - name: Метод GetCount
-        href: icorprofilerobjectenum-getcount-method.md
-      - name: Метод Next
-        href: icorprofilerobjectenum-next-method.md
-      - name: Метод Reset
-        href: icorprofilerobjectenum-reset-method.md
-      - name: Метод Skip
-        href: icorprofilerobjectenum-skip-method.md
-    - name: Интерфейс ICorProfilerThreadEnum
-      href: icorprofilerthreadenum-interface.md
-      items:
-      - name: Метод Clone
-        href: icorprofilerthreadenum-clone-method.md
-      - name: Метод GetCount
-        href: icorprofilerthreadenum-getcount-method.md
-      - name: Метод Next
-        href: icorprofilerthreadenum-next-method.md
-      - name: Метод Reset
-        href: icorprofilerthreadenum-reset-method.md
-      - name: Метод Skip
-        href: icorprofilerthreadenum-skip-method.md
-    - name: Интерфейс IMethodMalloc
-      href: imethodmalloc-interface.md
-      items:
-      - name: Метод Alloc
-        href: imethodmalloc-alloc-method.md
-  - name: Глобальные статические функции профилирования
-    href: profiling-global-static-functions.md
-    items:
-    - name: Функция FunctionEnter
-      href: functionenter-function.md
-    - name: Функция FunctionEnter2
-      href: functionenter2-function.md
-    - name: Функция FunctionEnter3
-      href: functionenter3-function.md
-    - name: Функция FunctionEnter3WithInfo
-      href: functionenter3withinfo-function.md
-    - name: Функция FunctionIDMapper
-      href: functionidmapper-function.md
-    - name: Функция FunctionIDMapper2
-      href: functionidmapper2-function.md
-    - name: Функция FunctionLeave
-      href: functionleave-function.md
-    - name: Функция FunctionLeave2
-      href: functionleave2-function.md
-    - name: Функция FunctionLeave3
-      href: functionleave3-function.md
-    - name: Функция FunctionLeave3WithInfo
-      href: functionleave3withinfo-function.md
-    - name: Функция FunctionTailcall
-      href: functiontailcall-function.md
-    - name: Функция FunctionTailcall2
-      href: functiontailcall2-function.md
-    - name: Функция FunctionTailcall3
-      href: functiontailcall3-function.md
-    - name: Функция FunctionTailcall3WithInfo
-      href: functiontailcall3withinfo-function.md
-    - name: Функция StackSnapshotCallback
-      href: stacksnapshotcallback-function.md
-  - name: Перечисления профилирования
-    href: profiling-enumerations.md
-    items:
-    - name: Перечисление COR_PRF_CLAUSE_TYPE
-      href: cor-prf-clause-type-enumeration.md
-    - name: Перечисление COR_PRF_CODEGEN_FLAGS
-      href: cor-prf-codegen-flags-enumeration.md
-    - name: Перечисление COR_PRF_FINALIZER_FLAGS
-      href: cor-prf-finalizer-flags-enumeration.md
-    - name: Перечисление COR_PRF_GC_GENERATION
-      href: cor-prf-gc-generation-enumeration.md
-    - name: Перечисление COR_PRF_GC_REASON
-      href: cor-prf-gc-reason-enumeration.md
-    - name: Перечисление COR_PRF_GC_ROOT_FLAGS
-      href: cor-prf-gc-root-flags-enumeration.md
-    - name: Перечисление COR_PRF_GC_ROOT_KIND
-      href: cor-prf-gc-root-kind-enumeration.md
-    - name: Перечисление COR_PRF_HIGH_MONITOR
-      href: cor-prf-high-monitor-enumeration.md
-    - name: Перечисление COR_PRF_JIT_CACHE
-      href: cor-prf-jit-cache-enumeration.md
-    - name: Перечисление COR_PRF_MISC
-      href: cor-prf-misc-enumeration.md
-    - name: Перечисление COR_PRF_MODULE_FLAGS
-      href: cor-prf-module-flags-enumeration.md
-    - name: Перечисление COR_PRF_MONITOR
-      href: cor-prf-monitor-enumeration.md
-    - name: Перечисление COR_PRF_RUNTIME_TYPE
-      href: cor-prf-runtime-type-enumeration.md
-    - name: Перечисление COR_PRF_SNAPSHOT_INFO
-      href: cor-prf-snapshot-info-enumeration.md
-    - name: Перечисление COR_PRF_STATIC_TYPE
-      href: cor-prf-static-type-enumeration.md
-    - name: Перечисление COR_PRF_SUSPEND_REASON
-      href: cor-prf-suspend-reason-enumeration.md
-    - name: Перечисление COR_PRF_TRANSITION_REASON
-      href: cor-prf-transition-reason-enumeration.md
-  - name: Структуры профилирования
-    href: profiling-structures.md
-    items:
-    - name: Структура COR_PRF_ASSEMBLY_REFERENCE_INFO
-      href: cor-prf-assembly-reference-info-structure.md
-    - name: Структура COR_PRF_CODE_INFO
-      href: cor-prf-code-info-structure.md
-    - name: Структура COR_PRF_EX_CLAUSE_INFO
-      href: cor-prf-ex-clause-info-structure.md
-    - name: Структура COR_PRF_FUNCTION
-      href: cor-prf-function-structure.md
-    - name: Структура COR_PRF_FUNCTION_ARGUMENT_INFO
-      href: cor-prf-function-argument-info-structure.md
-    - name: Структура COR_PRF_FUNCTION_ARGUMENT_RANGE
-      href: cor-prf-function-argument-range-structure.md
-    - name: Структура COR_PRF_GC_GENERATION_RANGE
-      href: cor-prf-gc-generation-range-structure.md
-ms.openlocfilehash: 78778093792858c085a1c13bb23c6afb6703c129
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470925"
+        - name: Структура COR_PRF_ASSEMBLY_REFERENCE_INFO
+          href: cor-prf-assembly-reference-info-structure.md
+        - name: Структура COR_PRF_CODE_INFO
+          href: cor-prf-code-info-structure.md
+        - name: Структура COR_PRF_EX_CLAUSE_INFO
+          href: cor-prf-ex-clause-info-structure.md
+        - name: Структура COR_PRF_FUNCTION
+          href: cor-prf-function-structure.md
+        - name: Структура COR_PRF_FUNCTION_ARGUMENT_INFO
+          href: cor-prf-function-argument-info-structure.md
+        - name: Структура COR_PRF_FUNCTION_ARGUMENT_RANGE
+          href: cor-prf-function-argument-range-structure.md
+        - name: Структура COR_PRF_GC_GENERATION_RANGE
+          href: cor-prf-gc-generation-range-structure.md

@@ -1,22 +1,15 @@
-items:
 - name: Разработка для нескольких платформ
   href: index.md
   items:
-  - name: Переносимая библиотека классов
-    href: cross-platform-development-with-the-portable-class-library.md
-  - name: Использование переносимой библиотеки классов с MVVM
-    href: using-portable-class-library-with-model-view-view-model.md
-  - name: Ресурсы приложений для библиотек, предназначенных для нескольких платформ
-    href: app-resources-for-libraries-that-target-multiple-platforms.md
-  - name: Поддержка приложений для Магазина Windows и среды выполнения Windows в .NET Framework
-    href: support-for-windows-store-apps-and-windows-runtime.md
-  - name: Передача URI в среду выполнения Windows
-    href: passing-a-uri-to-the-windows-runtime.md
-  - name: Метод WindowsRuntimeStreamExtensions.AsRandomAccessStream(System.IO.Stream)
-    href: windowsruntimestreamextensions-asrandomaccessstream-method.md
-ms.openlocfilehash: 92ecd411bf13b7906d5faaaf459f9b786f3aba0a
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470432"
+    - name: Переносимая библиотека классов
+      href: cross-platform-development-with-the-portable-class-library.md
+    - name: Использование переносимой библиотеки классов с MVVM
+      href: using-portable-class-library-with-model-view-view-model.md
+    - name: 'Ресурсы приложений для библиотек, предназначенных для нескольких платформ'
+      href: app-resources-for-libraries-that-target-multiple-platforms.md
+    - name: Поддержка приложений для Магазина Windows и среды выполнения Windows в .NET Framework
+      href: support-for-windows-store-apps-and-windows-runtime.md
+    - name: Передача URI в среду выполнения Windows
+      href: passing-a-uri-to-the-windows-runtime.md
+    - name: Метод WindowsRuntimeStreamExtensions.AsRandomAccessStream(System.IO.Stream)
+      href: windowsruntimestreamextensions-asrandomaccessstream-method.md

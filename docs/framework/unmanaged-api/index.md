@@ -10,11 +10,11 @@ ms.assetid: 9aa000ee-c04c-492c-ae4f-83ecdf4fdbbe
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bd84d84706a0d61f26b576b7300fae87fbe602e8
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56303402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61984169"
 ---
 # <a name="unmanaged-api-reference"></a>Справочник по неуправляемым API
 В данном разделе содержатся сведения о неуправляемых API, которые могут использоваться приложениями, связанными с управляемым кодом, например хост-приложениями среды выполнения, компиляторами, дизассемблерами, средствами запутывания, отладчиками и профилировщиками.  

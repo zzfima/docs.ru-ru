@@ -2,11 +2,11 @@
 title: Сериализация (C#)
 ms.date: 04/26/2018
 ms.openlocfilehash: 638fdbd31912ffeb284d734e1f8ce2ecd879b540
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61680121"
 ---
 # <a name="serialization-c"></a>Сериализация (C#)
 
@@ -69,7 +69,7 @@ ms.locfileid: "58411581"
 Сериализация конструктора — это особая форма сериализации, при которой применяется способ постоянного хранения объектов, используемый в средствах разработки. Сериализация конструктора выполняет преобразование графа объекта в файл исходного кода, с помощью которого впоследствии можно восстановить граф объекта. Этот файл исходного кода может содержать программный код, разметку или даже информацию из таблицы SQL.
 
 ## <a name="BKMK_RelatedTopics"></a> Связанные разделы и примеры  
-[Пошаговое руководство. Сохранение объекта в Visual Studio (C#)](walkthrough-persisting-an-object-in-visual-studio.md)  
+[Пошаговое руководство: Сохранение объекта в Visual Studio (C#)](walkthrough-persisting-an-object-in-visual-studio.md)  
 Демонстрирует, как с помощью сериализации сохранить данные объекта между экземплярами, чтобы сохранять значения и извлекать их при следующем создании экземпляра объекта.
 
 [Практическое руководство. Чтение данных объекта из XML-файла (C#)](how-to-read-object-data-from-an-xml-file.md)  

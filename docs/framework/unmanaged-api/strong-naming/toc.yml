@@ -1,64 +1,57 @@
-items:
 - name: Строгое именование
   href: index.md
   items:
-  - name: Функция GetHashFromAssemblyFile
-    href: gethashfromassemblyfile-function.md
-  - name: Функция GetHashFromAssemblyFileW
-    href: gethashfromassemblyfilew-function.md
-  - name: Функция GetHashFromBlob
-    href: gethashfromblob-function.md
-  - name: Функция GetHashFromFile
-    href: gethashfromfile-function.md
-  - name: Функция GetHashFromFileW
-    href: gethashfromfilew-function.md
-  - name: Функция GetHashFromHandle
-    href: gethashfromhandle-function.md
-  - name: Структура PublicKeyBlob
-    href: publickeyblob-structure.md
-  - name: Функция StrongNameCompareAssemblies
-    href: strongnamecompareassemblies-function.md
-  - name: Функция StrongNameErrorInfo
-    href: strongnameerrorinfo-function.md
-  - name: Функция StrongNameFreeBuffer
-    href: strongnamefreebuffer-function.md
-  - name: Функция StrongNameGetBlob
-    href: strongnamegetblob-function.md
-  - name: Функция StrongNameGetBlobFromImage
-    href: strongnamegetblobfromimage-function.md
-  - name: Функция StrongNameGetPublicKey
-    href: strongnamegetpublickey-function.md
-  - name: Функция StrongNameHashSize
-    href: strongnamehashsize-function.md
-  - name: Функция StrongNameKeyDelete
-    href: strongnamekeydelete-function.md
-  - name: Функция StrongNameKeyGen
-    href: strongnamekeygen-function.md
-  - name: Функция StrongNameKeyGenEx
-    href: strongnamekeygenex-function.md
-  - name: Функция StrongNameKeyInstall
-    href: strongnamekeyinstall-function.md
-  - name: Функция StrongNameSignatureGeneration
-    href: strongnamesignaturegeneration-function.md
-  - name: Функция StrongNameSignatureGenerationEx
-    href: strongnamesignaturegenerationex-function.md
-  - name: Функция StrongNameSignatureSize
-    href: strongnamesignaturesize-function.md
-  - name: Функция StrongNameSignatureVerification
-    href: strongnamesignatureverification-function.md
-  - name: Функция StrongNameSignatureVerificationEx
-    href: strongnamesignatureverificationex-function.md
-  - name: Функция StrongNameSignatureVerificationFromImage
-    href: strongnamesignatureverificationfromimage-function.md
-  - name: Функция StrongNameTokenFromAssembly
-    href: strongnametokenfromassembly-function.md
-  - name: Функция StrongNameTokenFromAssemblyEx
-    href: strongnametokenfromassemblyex-function.md
-  - name: Функция StrongNameTokenFromPublicKey
-    href: strongnametokenfrompublickey-function.md
-ms.openlocfilehash: 4c06fdc28855b0dadf1aca52c372236ffb30b782
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470045"
+    - name: Функция GetHashFromAssemblyFile
+      href: gethashfromassemblyfile-function.md
+    - name: Функция GetHashFromAssemblyFileW
+      href: gethashfromassemblyfilew-function.md
+    - name: Функция GetHashFromBlob
+      href: gethashfromblob-function.md
+    - name: Функция GetHashFromFile
+      href: gethashfromfile-function.md
+    - name: Функция GetHashFromFileW
+      href: gethashfromfilew-function.md
+    - name: Функция GetHashFromHandle
+      href: gethashfromhandle-function.md
+    - name: Структура PublicKeyBlob
+      href: publickeyblob-structure.md
+    - name: Функция StrongNameCompareAssemblies
+      href: strongnamecompareassemblies-function.md
+    - name: Функция StrongNameErrorInfo
+      href: strongnameerrorinfo-function.md
+    - name: Функция StrongNameFreeBuffer
+      href: strongnamefreebuffer-function.md
+    - name: Функция StrongNameGetBlob
+      href: strongnamegetblob-function.md
+    - name: Функция StrongNameGetBlobFromImage
+      href: strongnamegetblobfromimage-function.md
+    - name: Функция StrongNameGetPublicKey
+      href: strongnamegetpublickey-function.md
+    - name: Функция StrongNameHashSize
+      href: strongnamehashsize-function.md
+    - name: Функция StrongNameKeyDelete
+      href: strongnamekeydelete-function.md
+    - name: Функция StrongNameKeyGen
+      href: strongnamekeygen-function.md
+    - name: Функция StrongNameKeyGenEx
+      href: strongnamekeygenex-function.md
+    - name: Функция StrongNameKeyInstall
+      href: strongnamekeyinstall-function.md
+    - name: Функция StrongNameSignatureGeneration
+      href: strongnamesignaturegeneration-function.md
+    - name: Функция StrongNameSignatureGenerationEx
+      href: strongnamesignaturegenerationex-function.md
+    - name: Функция StrongNameSignatureSize
+      href: strongnamesignaturesize-function.md
+    - name: Функция StrongNameSignatureVerification
+      href: strongnamesignatureverification-function.md
+    - name: Функция StrongNameSignatureVerificationEx
+      href: strongnamesignatureverificationex-function.md
+    - name: Функция StrongNameSignatureVerificationFromImage
+      href: strongnamesignatureverificationfromimage-function.md
+    - name: Функция StrongNameTokenFromAssembly
+      href: strongnametokenfromassembly-function.md
+    - name: Функция StrongNameTokenFromAssemblyEx
+      href: strongnametokenfromassemblyex-function.md
+    - name: Функция StrongNameTokenFromPublicKey
+      href: strongnametokenfrompublickey-function.md

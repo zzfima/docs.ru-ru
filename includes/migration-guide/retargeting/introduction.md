@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: d4f22aa41eb7aeffd655d980cb8418649462273e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757792"
+---
 ## <a name="introduction"></a>Вступление
 Изменения при смене целевой платформы влияют на приложения, которые перекомпилируются с изменением целевой версии среды .NET Framework. В их число входят следующее.
 

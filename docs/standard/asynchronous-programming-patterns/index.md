@@ -9,19 +9,19 @@ ms.assetid: 4ece5c0b-f8fe-4114-9862-ac02cfe5a5d7
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 50d76aef201fead37923a65cfeead16638b09842
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031178"
 ---
 # <a name="asynchronous-programming-patterns"></a>Шаблоны асинхронного программирования
 
 В .NET есть три шаблона для выполнения асинхронных операций:  
 
-- **Асинхронный шаблон на основе задач (TAP)**. Использует один метод для запуска и завершения асинхронной операции. Шаблон TAP был реализован в .NET Framework 4. **Именно его рекомендуется использовать для асинхронного программирования в .NET**. Ключевые слова [async](~/docs/csharp/language-reference/keywords/async.md) и [await](~/docs/csharp/language-reference/keywords/await.md) в C#, а также операторы [Async](~/docs/visual-basic/language-reference/modifiers/async.md) и [Await](~/docs/visual-basic/language-reference/operators/await-operator.md) в Visual Basic добавляют для TAP поддержку языка. Дополнительные сведения см. в разделе [Асинхронный шаблон, основанный на задачах (TAP)](task-based-asynchronous-pattern-tap.md).  
+- **Асинхронный шаблон на основе задач (TAP)**, который использует один метод для запуска и завершения асинхронной операции. Шаблон TAP был реализован в .NET Framework 4. **Именно его рекомендуется использовать для асинхронного программирования в .NET**. Ключевые слова [async](~/docs/csharp/language-reference/keywords/async.md) и [await](~/docs/csharp/language-reference/keywords/await.md) в C#, а также операторы [Async](~/docs/visual-basic/language-reference/modifiers/async.md) и [Await](~/docs/visual-basic/language-reference/operators/await-operator.md) в Visual Basic добавляют для TAP поддержку языка. Дополнительные сведения см. в разделе [Асинхронный шаблон, основанный на задачах (TAP)](task-based-asynchronous-pattern-tap.md).  
 
-- **Асинхронная модель на основе событий (EAP)**. Это устаревшая модель на основе событий, обеспечивающая работу в асинхронном режиме. Для нее требуется метод с суффиксом `Async`, одно или несколько событий, типы делегатов обработчика событий и производные типы `EventArg`. Модель EAP была реализована в .NET Framework 2.0. Ее не рекомендуется использовать для новых разработок. Дополнительные сведения см. в разделе [Асинхронная модель на основе событий (EAP)](event-based-asynchronous-pattern-eap.md).  
+- **Асинхронная модель на основе событий (EAP)**. Это устаревшая модель на основе событий, обеспечивающая работу в асинхронном режиме. Для нее требуется метод с суффиксом `Async`, одно или несколько событий, типы делегатов обработчика событий и производные типы `EventArg`. Протокол EAP был введен в платформа.NET Framework 2.0. Ее не рекомендуется использовать для новых разработок. Дополнительные сведения см. в разделе [Асинхронная модель на основе событий (EAP)](event-based-asynchronous-pattern-eap.md).  
 
 - **Модель асинхронного программирования (APM)** (также называется шаблоном <xref:System.IAsyncResult>). Это устаревшая модель, в которой для реализации асинхронного поведения используется интерфейс <xref:System.IAsyncResult>. В этом шаблоне для синхронных операций требуются методы `Begin` и `End` (например, `BeginWrite` и `EndWrite` позволяют реализовать асинхронную операцию записи). Этот шаблон не рекомендуется использовать для разработки новых приложений. Дополнительные сведения см. в статье [Асинхронная модель программирования (APM)](asynchronous-programming-model-apm.md).  
   
@@ -45,7 +45,7 @@ public class MyClass
 }  
 ```
 
-Этот же метод с EAP предоставит такой набор типов и членов:  
+Аналог EAP будут предоставлять следующий набор типов и членов:  
   
 ```csharp  
 public class MyClass  

@@ -1,4 +1,3 @@
-items:
 - name: ADO.NET Entity Framework
   href: index.md
 - name: Общие сведения об Entity Framework
@@ -6,21 +5,21 @@ items:
 - name: Моделирование и сопоставление
   href: modeling-and-mapping.md
   items:
-  - name: Генератор модели EDM (EdmGen.exe)
-    href: edm-generator-edmgen-exe.md
-    items:
-    - name: Практическое руководство. Использование EdmGen.exe для создания файлов модели и сопоставления
-      href: how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md
-    - name: Практическое руководство. Использование EdmGen.exe для создания кода объектного уровня
-      href: how-to-use-edmgen-exe-to-generate-object-layer-code.md
-    - name: Практическое руководство. Использование EdmGen.exe для проверки файлов модели и сопоставления
-      href: how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md
-  - name: Практическое руководство. Определение строки соединения
-    href: how-to-define-the-connection-string.md
-  - name: Практическое руководство. Создание встроенных ресурсов файлов модели и сопоставления
-    href: how-to-make-model-and-mapping-files-embedded-resources.md
-  - name: Работа с языком описания данных DDL
-    href: working-with-data-definition-language.md
+    - name: Генератор модели EDM (EdmGen.exe)
+      href: edm-generator-edmgen-exe.md
+      items:
+        - name: Как выполнить Использование EdmGen.exe для создания файлов модели и сопоставления
+          href: how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md
+        - name: Как выполнить Использование EdmGen.exe для создания кода объектного уровня
+          href: how-to-use-edmgen-exe-to-generate-object-layer-code.md
+        - name: Как выполнить Использование EdmGen.exe для проверки файлов модели и сопоставления
+          href: how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md
+    - name: Как выполнить Определение строки соединения
+      href: how-to-define-the-connection-string.md
+    - name: Как выполнить Создание встроенных ресурсов файлов модели и сопоставления
+      href: how-to-make-model-and-mapping-files-embedded-resources.md
+    - name: Работа с языком описания данных DDL
+      href: working-with-data-definition-language.md
 - name: Запрос концептуальной модели
   href: querying-a-conceptual-model.md
 - name: Работа с объектами
@@ -28,88 +27,88 @@ items:
 - name: Работа с поставщиками данных
   href: working-with-data-providers.md
   items:
-  - name: Строки подключения
-    href: connection-strings.md
-  - name: Поставщики данных Entity Framework
-    href: data-providers.md
-    items:
-    - name: Поставщик EntityClient для Entity Framework
-      href: entityclient-provider-for-the-entity-framework.md
+    - name: Строки подключения
+      href: connection-strings.md
+    - name: Поставщики данных Entity Framework
+      href: data-providers.md
       items:
-      - name: Практическое руководство. Сборка строки соединения EntityConnection
-        href: how-to-build-an-entityconnection-connection-string.md
-      - name: Практическое руководство. Выполнение запроса, возвращающего типы-примитивы
-        href: how-to-execute-a-query-that-returns-primitivetype-results.md
-      - name: Практическое руководство. Выполнение запроса, возвращающего результаты типа StructuralType
-        href: how-to-execute-a-query-that-returns-structuraltype-results.md
-      - name: Практическое руководство. Выполнение запроса, возвращающего результаты RefType
-        href: how-to-execute-a-query-that-returns-reftype-results.md
-      - name: Практическое руководство. Выполнение запроса, возвращающего сложные типы
-        href: how-to-execute-a-query-that-returns-complex-types.md
-      - name: Практическое руководство. Выполнение запроса, возвращающего вложенные коллекции
-        href: how-to-execute-a-query-that-returns-nested-collections.md
-      - name: Практическое руководство. Выполнение SQL-запроса к параметрическому объекту с использованием EntityCommand
-        href: how-to-execute-a-parameterized-entity-sql-query-using-entitycommand.md
-      - name: Практическое руководство. Выполнение параметризованной хранимой процедуры с использованием EntityCommand
-        href: how-to-execute-a-parameterized-stored-procedure-using-entitycommand.md
-      - name: Практическое руководство. Выполнение полиморфного запроса
-        href: how-to-execute-a-polymorphic-query.md
-      - name: Практическое руководство. Переход по отношениям с помощью оператора Navigate
-        href: how-to-navigate-relationships-with-the-navigate-operator.md
-    - name: SqlClient для Entity Framework
-      href: sqlclient-for-the-entity-framework.md
+        - name: Поставщик EntityClient для Entity Framework
+          href: entityclient-provider-for-the-entity-framework.md
+          items:
+            - name: Как выполнить Сборка строки соединения EntityConnection
+              href: how-to-build-an-entityconnection-connection-string.md
+            - name: 'Как выполнить Выполнение запроса, возвращающего типы-примитивы'
+              href: how-to-execute-a-query-that-returns-primitivetype-results.md
+            - name: 'Как выполнить Выполнение запроса, возвращающего результаты типа StructuralType'
+              href: how-to-execute-a-query-that-returns-structuraltype-results.md
+            - name: 'Как выполнить Выполнение запроса, возвращающего результаты RefType'
+              href: how-to-execute-a-query-that-returns-reftype-results.md
+            - name: 'Как выполнить Выполнение запроса, возвращающего сложные типы'
+              href: how-to-execute-a-query-that-returns-complex-types.md
+            - name: 'Как выполнить Выполнение запроса, возвращающего вложенные коллекции'
+              href: how-to-execute-a-query-that-returns-nested-collections.md
+            - name: Как выполнить Выполнение SQL-запроса к параметрическому объекту с использованием EntityCommand
+              href: how-to-execute-a-parameterized-entity-sql-query-using-entitycommand.md
+            - name: Как выполнить Выполнение параметризованной хранимой процедуры с использованием EntityCommand
+              href: how-to-execute-a-parameterized-stored-procedure-using-entitycommand.md
+            - name: Как выполнить Выполнение полиморфного запроса
+              href: how-to-execute-a-polymorphic-query.md
+            - name: Как выполнить Переход по отношениям с помощью оператора Navigate
+              href: how-to-navigate-relationships-with-the-navigate-operator.md
+        - name: SqlClient для Entity Framework
+          href: sqlclient-for-the-entity-framework.md
+          items:
+            - name: Функции SqlClient для Entity Framework
+              href: sqlclient-for-ef-functions.md
+              items:
+                - name: Сопоставление канонических функций концептуальной модели с функциями SQL Server
+                  href: conceptual-model-canonical-to-sql-server-functions-mapping.md
+                - name: Статистические функции
+                  href: aggregate-functions-sqlclient-for-entity-framework.md
+                - name: Функции даты и времени
+                  href: date-and-time-functions.md
+                - name: Математические функции
+                  href: mathematical-functions.md
+                - name: Строковые функции
+                  href: string-functions.md
+                - name: Системные функции
+                  href: system-functions.md
+            - name: Типы SqlClient для Entity Framework
+              href: sqlclient-for-ef-types.md
+            - name: Известные проблемы SqlClient для Entity Framework
+              href: known-issues-in-sqlclient-for-entity-framework.md
+    - name: Создание поставщика данных Entity Framework
+      href: writing-an-ef-data-provider.md
       items:
-      - name: Функции SqlClient для Entity Framework
-        href: sqlclient-for-ef-functions.md
-        items:
-        - name: Сопоставление канонических функций концептуальной модели с функциями SQL Server
-          href: conceptual-model-canonical-to-sql-server-functions-mapping.md
-        - name: Статистические функции
-          href: aggregate-functions-sqlclient-for-entity-framework.md
-        - name: Функции даты и времени
-          href: date-and-time-functions.md
-        - name: Математические функции
-          href: mathematical-functions.md
-        - name: Строковые функции
-          href: string-functions.md
-        - name: Системные функции
-          href: system-functions.md
-      - name: Типы SqlClient для Entity Framework
-        href: sqlclient-for-ef-types.md
-      - name: Известные проблемы SqlClient для Entity Framework
-        href: known-issues-in-sqlclient-for-entity-framework.md
-  - name: Создание поставщика данных Entity Framework
-    href: writing-an-ef-data-provider.md
-    items:
-    - name: Создание SQL
-      href: sql-generation.md
-      items:
-      - name: Форма деревьев команд
-        href: the-shape-of-the-command-trees.md
-      - name: Создание кода SQL из деревьев команд. Рекомендации
-        href: generating-sql-from-command-trees-best-practices.md
-      - name: Создание кода SQL в образце поставщика
-        href: sql-generation-in-the-sample-provider.md
-        items:
-        - name: Архитектура и разработка
-          href: architecture-and-design.md
-        - name: Пошаговое руководство. Создание SQL
-          href: walkthrough-sql-generation.md
-    - name: Создание кода SQL для изменения данных
-      href: modification-sql-generation.md
-    - name: Спецификация манифеста поставщика
-      href: provider-manifest-specification.md
+        - name: Создание SQL
+          href: sql-generation.md
+          items:
+            - name: Форма деревьев команд
+              href: the-shape-of-the-command-trees.md
+            - name: Создание кода SQL из деревьев команд. Рекомендации
+              href: generating-sql-from-command-trees-best-practices.md
+            - name: Создание кода SQL в образце поставщика
+              href: sql-generation-in-the-sample-provider.md
+              items:
+                - name: Архитектура и разработка
+                  href: architecture-and-design.md
+                - name: Пошаговое руководство. Создание SQL
+                  href: walkthrough-sql-generation.md
+        - name: Создание кода SQL для изменения данных
+          href: modification-sql-generation.md
+        - name: Спецификация манифеста поставщика
+          href: provider-manifest-specification.md
 - name: Вопросы разработки и развертывания
   href: development-and-deployment-considerations.md
   items:
-  - name: Вопросы безопасности
-    href: security-considerations.md
-  - name: Особенности производительности
-    href: performance-considerations.md
-  - name: Вопросы миграции
-    href: migration-considerations.md
-  - name: Требования к развертыванию
-    href: deployment-considerations.md
+    - name: Вопросы безопасности
+      href: security-considerations.md
+    - name: Особенности производительности
+      href: performance-considerations.md
+    - name: Вопросы миграции
+      href: migration-considerations.md
+    - name: Требования к развертыванию
+      href: deployment-considerations.md
 - name: Ресурсы Entity Framework
   href: resources.md
 - name: Терминология платформы Entity Framework
@@ -118,9 +117,3 @@ items:
   href: getting-started.md
 - name: Справочник по языку
   href: language-reference/index.md
-ms.openlocfilehash: 7b6de341e548ca64690cf9a17281fcbb30f160cf
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470733"

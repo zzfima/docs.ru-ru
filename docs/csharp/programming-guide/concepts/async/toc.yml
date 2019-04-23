@@ -1,37 +1,30 @@
-items:
 - name: Асинхронное программирование с использованием ключевых слов async и await
   href: index.md
   items:
-  - name: Асинхронная модель программирования
-    href: task-asynchronous-programming-model.md
-  - name: Пошаговое руководство. Получение доступа к Интернету с помощью модификатора async и оператора await
-    href: walkthrough-accessing-the-web-by-using-async-and-await.md
-  - name: Практическое руководство. Оптимизация производительности асинхронных процедур с использованием метода Task.WhenAll
-    href: how-to-extend-the-async-walkthrough-by-using-task-whenall.md
-  - name: Практическое руководство. Параллельное выполнение нескольких веб-запросов с использованием async и await
-    href: how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md
-  - name: Асинхронные типы возвращаемых значений
-    href: async-return-types.md
-  - name: Поток управления в асинхронных программах
-    href: control-flow-in-async-programs.md
-  - name: Настройка асинхронного приложения
-    href: fine-tuning-your-async-application.md
-    items:
-    - name: Отмена асинхронной задачи или списка задач
-      href: cancel-an-async-task-or-a-list-of-tasks.md
-    - name: Отмена асинхронных задач после определенного периода времени
-      href: cancel-async-tasks-after-a-period-of-time.md
-    - name: Отмена оставшихся асинхронных задач после завершения одной из них
-      href: cancel-remaining-async-tasks-after-one-is-complete.md
-    - name: Запуск нескольких асинхронных задач и их обработка по мере завершения
-      href: start-multiple-async-tasks-and-process-them-as-they-complete.md
-  - name: Обработка повторного входа в асинхронных приложениях
-    href: handling-reentrancy-in-async-apps.md
-  - name: Использование метода async для доступа к файлам
-    href: using-async-for-file-access.md
-ms.openlocfilehash: 72bac78b384a76eb7f9b6e4ed83c299129014223
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470480"
+    - name: Асинхронная модель программирования
+      href: task-asynchronous-programming-model.md
+    - name: Пошаговое руководство. Получение доступа к Интернету с помощью модификатора async и оператора await
+      href: walkthrough-accessing-the-web-by-using-async-and-await.md
+    - name: Как выполнить Оптимизация производительности асинхронных процедур с использованием метода Task.WhenAll
+      href: how-to-extend-the-async-walkthrough-by-using-task-whenall.md
+    - name: Как выполнить Параллельное выполнение нескольких веб-запросов с использованием async и await
+      href: how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md
+    - name: Асинхронные типы возвращаемых значений
+      href: async-return-types.md
+    - name: Поток управления в асинхронных программах
+      href: control-flow-in-async-programs.md
+    - name: Настройка асинхронного приложения
+      href: fine-tuning-your-async-application.md
+      items:
+        - name: Отмена асинхронной задачи или списка задач
+          href: cancel-an-async-task-or-a-list-of-tasks.md
+        - name: Отмена асинхронных задач после определенного периода времени
+          href: cancel-async-tasks-after-a-period-of-time.md
+        - name: Отмена оставшихся асинхронных задач после завершения одной из них
+          href: cancel-remaining-async-tasks-after-one-is-complete.md
+        - name: Запуск нескольких асинхронных задач и их обработка по мере завершения
+          href: start-multiple-async-tasks-and-process-them-as-they-complete.md
+    - name: Обработка повторного входа в асинхронных приложениях
+      href: handling-reentrancy-in-async-apps.md
+    - name: Использование метода async для доступа к файлам
+      href: using-async-for-file-access.md

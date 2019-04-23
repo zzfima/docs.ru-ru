@@ -9,11 +9,11 @@ ms.assetid: 428c68b6-a7b4-44be-b280-75905f46612c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 32e74a76b6b1bedee4efc5715d0710c8efce2455
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59120761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049379"
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>Строгое именование (справочник по управляемым API)
 API строгого именования позволяет клиенту администрировать подписание сборок строгим именем.  

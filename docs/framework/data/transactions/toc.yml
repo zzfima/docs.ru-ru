@@ -1,45 +1,38 @@
-items:
 - name: Обработка транзакций
   href: index.md
   items:
-  - name: Основные сведения о транзакциях
-    href: transaction-fundamentals.md
-  - name: Функциональные возможности, предоставляемые пространством имен System.Transactions
-    href: features-provided-by-system-transactions.md
-    items:
-    - name: Создание транзакционного приложения
-      href: writing-a-transactional-application.md
+    - name: Основные сведения о транзакциях
+      href: transaction-fundamentals.md
+    - name: 'Функциональные возможности, предоставляемые пространством имен System.Transactions'
+      href: features-provided-by-system-transactions.md
       items:
-      - name: Реализация неявной транзакции с использованием области транзакции
-        href: implementing-an-implicit-transaction-using-transaction-scope.md
-      - name: Реализация явной транзакции с помощью класса CommittableTransaction
-        href: implementing-an-explicit-transaction-using-committabletransaction.md
-      - name: Управление параллелизмом с помощью класса DependentTransaction
-        href: managing-concurrency-with-dependenttransaction.md
-      - name: Взаимодействие с транзакциями Enterprise Services и COM+
-        href: interoperability-with-enterprise-services-and-com-transactions.md
-      - name: Передача управления транзакцией на следующий уровень иерархии
-        href: transaction-management-escalation.md
-      - name: Диагностическая трассировка
-        href: diagnostic-traces.md
-      - name: Использование инфраструктуры System.Transactions в среде ASP.NET
-        href: using-system-transactions-in-aspnet.md
-    - name: Реализация диспетчера ресурсов
-      href: implementing-a-resource-manager.md
-      items:
-      - name: Зачисление ресурсов в транзакцию в качестве участников
-        href: enlisting-resources-as-participants-in-a-transaction.md
-      - name: Однофазная и многофазная фиксация транзакции
-        href: committing-a-transaction-in-single-phase-and-multi-phase.md
-      - name: Выполнение восстановления
-        href: performing-recovery.md
-      - name: Уровни доверия, используемые при доступе к ресурсам
-        href: security-trust-levels-in-accessing-resources.md
-      - name: Оптимизация производительности с помощью механизмов уведомления об однофазной фиксации и повышаемого однофазного присоединения
-        href: optimization-spc-and-promotable-spn.md
-ms.openlocfilehash: 9ebce82b22c684bc2cee3892cb53803eef725dee
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470240"
+        - name: Создание транзакционного приложения
+          href: writing-a-transactional-application.md
+          items:
+            - name: Реализация неявной транзакции с использованием области транзакции
+              href: implementing-an-implicit-transaction-using-transaction-scope.md
+            - name: Реализация явной транзакции с помощью класса CommittableTransaction
+              href: implementing-an-explicit-transaction-using-committabletransaction.md
+            - name: Управление параллелизмом с помощью класса DependentTransaction
+              href: managing-concurrency-with-dependenttransaction.md
+            - name: Взаимодействие с транзакциями Enterprise Services и COM+
+              href: interoperability-with-enterprise-services-and-com-transactions.md
+            - name: Передача управления транзакцией на следующий уровень иерархии
+              href: transaction-management-escalation.md
+            - name: Диагностическая трассировка
+              href: diagnostic-traces.md
+            - name: Использование инфраструктуры System.Transactions в среде ASP.NET
+              href: using-system-transactions-in-aspnet.md
+        - name: Реализация диспетчера ресурсов
+          href: implementing-a-resource-manager.md
+          items:
+            - name: Зачисление ресурсов в транзакцию в качестве участников
+              href: enlisting-resources-as-participants-in-a-transaction.md
+            - name: Однофазная и многофазная фиксация транзакции
+              href: committing-a-transaction-in-single-phase-and-multi-phase.md
+            - name: Выполнение восстановления
+              href: performing-recovery.md
+            - name: 'Уровни доверия, используемые при доступе к ресурсам'
+              href: security-trust-levels-in-accessing-resources.md
+            - name: Оптимизация производительности с помощью механизмов уведомления об однофазной фиксации и повышаемого однофазного присоединения
+              href: optimization-spc-and-promotable-spn.md

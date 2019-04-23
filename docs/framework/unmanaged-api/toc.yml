@@ -1,38 +1,31 @@
-items:
 - name: Справочник по неуправляемым API
   href: index.md
   items:
-  - name: Общие типы данных
-    href: common-data-types-unmanaged-api-reference.md
-  - name: API ALink
-    href: alink/
-  - name: Authenticode
-    href: authenticode/
-  - name: Константы
-    href: constants-unmanaged-api-reference.md
-  - name: Отладка
-    href: debugging/
-  - name: Хранилище символов диагностики
-    href: diagnostics/
-  - name: Слияние
-    href: fusion/
-  - name: Размещение
-    href: hosting/
-  - name: Метаданные
-    href: metadata/
-  - name: Профилирование
-    href: profiling/
-  - name: Строгое именование
-    href: strong-naming/
-  - name: WMI и счетчики производительности
-    href: wmi/
-  - name: Вспомогательные функции Tlbexp
-    href: tlbexp/
-  - name: Атрибут GUID_ManagedName
-    href: guid-managedname-attribute.md
-ms.openlocfilehash: 48454d1cf9285a229de8d3b852d33c985c3b53bc
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470896"
+    - name: Общие типы данных
+      href: common-data-types-unmanaged-api-reference.md
+    - name: API ALink
+      href: alink/
+    - name: Authenticode
+      href: authenticode/
+    - name: Константы
+      href: constants-unmanaged-api-reference.md
+    - name: Отладка
+      href: debugging/
+    - name: Хранилище символов диагностики
+      href: diagnostics/
+    - name: Слияние
+      href: fusion/
+    - name: Размещение
+      href: hosting/
+    - name: Метаданные
+      href: metadata/
+    - name: Профилирование
+      href: profiling/
+    - name: Строгое именование
+      href: strong-naming/
+    - name: WMI и счетчики производительности
+      href: wmi/
+    - name: Вспомогательные функции Tlbexp
+      href: tlbexp/
+    - name: Атрибут GUID_ManagedName
+      href: guid-managedname-attribute.md

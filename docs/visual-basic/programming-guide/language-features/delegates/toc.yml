@@ -1,16 +1,9 @@
-items:
 - name: Делегаты
   href: index.md
   items:
-  - name: Практическое руководство. Вызов метода делегата
-    href: how-to-invoke-a-delegate-method.md
-  - name: Практическое руководство. Передача процедур другой процедуре
-    href: how-to-pass-procedures-to-another-procedure.md
-  - name: Неявное преобразование делегата
-    href: relaxed-delegate-conversion.md
-ms.openlocfilehash: 245db8051550fbdaa16338a8f184c0b900b20139
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469872"
+    - name: Как выполнить Вызов метода делегата
+      href: how-to-invoke-a-delegate-method.md
+    - name: Как выполнить Передача процедур другой процедуре
+      href: how-to-pass-procedures-to-another-procedure.md
+    - name: Неявное преобразование делегата
+      href: relaxed-delegate-conversion.md

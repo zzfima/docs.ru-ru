@@ -1,20 +1,13 @@
-items:
 - name: События
   href: index.md
   items:
-  - name: Пошаговое руководство. Объявление и вызов событий
-    href: walkthrough-declaring-and-raising-events.md
-  - name: Пошаговое руководство. Обработка событий
-    href: walkthrough-handling-events.md
-  - name: Практическое руководство. Объявление пользовательских событий для предотвращения блокировки
-    href: how-to-declare-custom-events-to-avoid-blocking.md
-  - name: Практическое руководство. Объявление пользовательских событий для экономии памяти
-    href: how-to-declare-custom-events-to-conserve-memory.md
-  - name: Устранение неполадок, связанных с унаследованными обработчиками событий
-    href: troubleshooting-inherited-event-handlers.md
-ms.openlocfilehash: 1eff7e1b55252c30a97d9e25ee1d21891b770ec5
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471066"
+    - name: Пошаговое руководство. Объявление и вызов событий
+      href: walkthrough-declaring-and-raising-events.md
+    - name: Пошаговое руководство. Обработка событий
+      href: walkthrough-handling-events.md
+    - name: Как выполнить Объявление пользовательских событий для предотвращения блокировки
+      href: how-to-declare-custom-events-to-avoid-blocking.md
+    - name: Как выполнить Объявление пользовательских событий для экономии памяти
+      href: how-to-declare-custom-events-to-conserve-memory.md
+    - name: 'Устранение неполадок, связанных с унаследованными обработчиками событий'
+      href: troubleshooting-inherited-event-handlers.md

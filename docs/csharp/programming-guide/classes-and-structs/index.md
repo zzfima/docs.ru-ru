@@ -1,16 +1,22 @@
 ---
-title: 'Руководство по программированию на C#. Классы и структуры'
+title: Руководство по программированию на C#. Классы и структуры
 ms.custom: seodec18
-description: 'Описание использования классов и структур в C#.'
+description: Описание использования классов и структур в C#.
 ms.date: 01/17/2016
 helpviewer_keywords:
-  - 'structs [C#], about structs'
-  - 'classes [C#], overview'
-  - 'C# language, structs'
-  - 'C# language, objects'
-  - 'objects [C#]'
-  - 'C# language, classes'
+- structs [C#], about structs
+- classes [C#], overview
+- C# language, structs
+- C# language, objects
+- objects [C#]
+- C# language, classes
 ms.assetid: cc39dbda-8754-423e-b5b1-16a1db0734c0
+ms.openlocfilehash: 7b85940f8ce64139d056497a8007379f1658010d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61646336"
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>Классы и структуры (Руководство по программированию в C#)
 Классы и структуры являются двумя основными конструкциями системы общих типов CTS, используемой в платформе .NET Framework. Оба они являются структурами данных, которые инкапсулируют набор данных и поведений в одной логической сущности. Данные и поведение являются *членами* класса или структуры. К ним относятся методы, свойства, события и другие элементы, которые описаны далее в этой статье.  

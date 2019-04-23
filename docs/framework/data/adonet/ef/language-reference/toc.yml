@@ -1,281 +1,274 @@
-items:
 - name: Справочник по языку
   href: index.md
   items:
-  - name: LINQ to Entities
-    href: linq-to-entities.md
-    items:
-    - name: Запросы в LINQ to Entities
-      href: queries-in-linq-to-entities.md
+    - name: LINQ to Entities
+      href: linq-to-entities.md
       items:
-      - name: Примеры синтаксиса запросов на основе методов. Проекция
-        href: method-based-query-syntax-examples-projection.md
-      - name: Примеры синтаксиса запросов на основе методов. Фильтрация
-        href: method-based-query-syntax-examples-filtering.md
-      - name: Примеры синтаксиса запросов на основе методов. Упорядочение
-        href: method-based-query-syntax-examples-ordering.md
-      - name: Примеры синтаксиса запросов на основе методов. Статистические операторы
-        href: method-based-query-syntax-examples-aggregate-operators.md
-      - name: Примеры синтаксиса запросов на основе методов. Секционирование
-        href: method-based-query-syntax-examples-partitioning.md
-      - name: Примеры синтаксиса запросов на основе методов. Преобразование
-        href: method-based-query-syntax-examples-conversion.md
-      - name: Примеры синтаксиса запросов на основе методов. Операторы соединения
-        href: method-based-query-syntax-examples-join-operators.md
-      - name: Примеры синтаксиса запросов на основе методов. Операторы элементов
-        href: method-based-query-syntax-examples-element-operators.md
-      - name: Примеры синтаксиса запросов на основе методов. Группирование
-        href: method-based-query-syntax-examples-grouping.md
-      - name: Примеры синтаксиса запросов на основе методов. Навигация по связям
-        href: method-based-query-syntax-examples-navigating-relationships.md
-      - name: Примеры синтаксиса выражений запросов. Проекция
-        href: query-expression-syntax-examples-projection.md
-      - name: Примеры синтаксиса выражений запросов. Фильтрация
-        href: query-expression-syntax-examples-filtering.md
-      - name: Примеры синтаксиса выражений запросов. Упорядочение
-        href: query-expression-syntax-examples-ordering.md
-      - name: Примеры синтаксиса выражений запросов. Статистические операторы
-        href: query-expression-syntax-examples-aggregate-operators.md
-      - name: Примеры синтаксиса выражений запросов. Секционирование
-        href: query-expression-syntax-examples-partitioning.md
-      - name: Примеры синтаксиса выражений запросов. Операторы соединения
-        href: query-expression-syntax-examples-join-operators.md
-      - name: Примеры синтаксиса выражений запросов. Операторы элементов
-        href: query-expression-syntax-examples-element-operators.md
-      - name: Примеры синтаксиса выражений запросов. Группирование
-        href: query-expression-syntax-examples-grouping.md
-      - name: Примеры синтаксиса выражений запросов. Навигация по связям
-        href: query-expression-syntax-examples-navigating-relationships.md
-    - name: Выражения в запросах LINQ to Entities
-      href: expressions-in-linq-to-entities-queries.md
+        - name: Запросы в LINQ to Entities
+          href: queries-in-linq-to-entities.md
+          items:
+            - name: Примеры синтаксиса запросов на основе методов. Проекция
+              href: method-based-query-syntax-examples-projection.md
+            - name: Примеры синтаксиса запросов на основе методов. Фильтрация
+              href: method-based-query-syntax-examples-filtering.md
+            - name: Примеры синтаксиса запросов на основе методов. Упорядочение
+              href: method-based-query-syntax-examples-ordering.md
+            - name: Примеры синтаксиса запросов на основе методов. Статистические операторы
+              href: method-based-query-syntax-examples-aggregate-operators.md
+            - name: Примеры синтаксиса запросов на основе методов. Секционирование
+              href: method-based-query-syntax-examples-partitioning.md
+            - name: Примеры синтаксиса запросов на основе методов. Преобразование
+              href: method-based-query-syntax-examples-conversion.md
+            - name: Примеры синтаксиса запросов на основе методов. Операторы соединения
+              href: method-based-query-syntax-examples-join-operators.md
+            - name: Примеры синтаксиса запросов на основе методов. Операторы элементов
+              href: method-based-query-syntax-examples-element-operators.md
+            - name: Примеры синтаксиса запросов на основе методов. Группирование
+              href: method-based-query-syntax-examples-grouping.md
+            - name: Примеры синтаксиса запросов на основе методов. Навигация по связям
+              href: method-based-query-syntax-examples-navigating-relationships.md
+            - name: Примеры синтаксиса выражений запросов. Проекция
+              href: query-expression-syntax-examples-projection.md
+            - name: Примеры синтаксиса выражений запросов. Фильтрация
+              href: query-expression-syntax-examples-filtering.md
+            - name: Примеры синтаксиса выражений запросов. Упорядочение
+              href: query-expression-syntax-examples-ordering.md
+            - name: Примеры синтаксиса выражений запросов. Статистические операторы
+              href: query-expression-syntax-examples-aggregate-operators.md
+            - name: Примеры синтаксиса выражений запросов. Секционирование
+              href: query-expression-syntax-examples-partitioning.md
+            - name: Примеры синтаксиса выражений запросов. Операторы соединения
+              href: query-expression-syntax-examples-join-operators.md
+            - name: Примеры синтаксиса выражений запросов. Операторы элементов
+              href: query-expression-syntax-examples-element-operators.md
+            - name: Примеры синтаксиса выражений запросов. Группирование
+              href: query-expression-syntax-examples-grouping.md
+            - name: Примеры синтаксиса выражений запросов. Навигация по связям
+              href: query-expression-syntax-examples-navigating-relationships.md
+        - name: Выражения в запросах LINQ to Entities
+          href: expressions-in-linq-to-entities-queries.md
+          items:
+            - name: Постоянные выражения
+              href: constant-expressions.md
+            - name: Выражения сравнения
+              href: comparison-expressions.md
+            - name: Сравнения NULL
+              href: null-comparisons.md
+            - name: Выражения инициализации
+              href: initialization-expressions.md
+        - name: Вызов функций в запросах LINQ to Entities
+          href: calling-functions-in-linq-to-entities-queries.md
+          items:
+            - name: Как выполнить Вызов канонических функций
+              href: how-to-call-canonical-functions.md
+            - name: Как выполнить Вызов функций базы данных
+              href: how-to-call-database-functions.md
+            - name: Как выполнить Вызов настраиваемых функций базы данных
+              href: how-to-call-custom-database-functions.md
+            - name: Как выполнить Вызов определенных моделью функций в запросах
+              href: how-to-call-model-defined-functions-in-queries.md
+            - name: Как выполнить Вызов определенных моделью функций как методов объектов
+              href: how-to-call-model-defined-functions-as-object-methods.md
+        - name: Компилированные запросы (LINQ to Entities)
+          href: compiled-queries-linq-to-entities.md
+        - name: Выполнение запроса
+          href: query-execution.md
+        - name: Результаты запроса
+          href: query-results.md
+        - name: Стандартные операторы в запросах LINQ to Entities
+          href: standard-query-operators-in-linq-to-entities-queries.md
+        - name: Сопоставление методов CLR с каноническими функциями
+          href: clr-method-to-canonical-function-mapping.md
+        - name: Поддерживаемые и неподдерживаемые методы LINQ (LINQ to Entities)
+          href: supported-and-unsupported-linq-methods-linq-to-entities.md
+        - name: 'LINQ to Entities: рекомендации и известные проблемы'
+          href: known-issues-and-considerations-in-linq-to-entities.md
+    - name: Язык Entity SQL
+      href: entity-sql-language.md
       items:
-      - name: Постоянные выражения
-        href: constant-expressions.md
-      - name: Выражения сравнения
-        href: comparison-expressions.md
-      - name: Сравнения NULL
-        href: null-comparisons.md
-      - name: Выражения инициализации
-        href: initialization-expressions.md
-    - name: Вызов функций в запросах LINQ to Entities
-      href: calling-functions-in-linq-to-entities-queries.md
+        - name: Общие сведения об Entity SQL
+          href: entity-sql-overview.md
+          items:
+            - name: Отличия Entity SQL от Transact-SQL
+              href: how-entity-sql-differs-from-transact-sql.md
+            - name: Краткий справочник по Entity SQL
+              href: entity-sql-quick-reference.md
+            - name: Система типов
+              href: type-system-entity-sql.md
+            - name: Определения типов
+              href: type-definitions-entity-sql.md
+            - name: Сборка типов
+              href: constructing-types-entity-sql.md
+            - name: Кэширование плана запроса
+              href: query-plan-caching-entity-sql.md
+            - name: Пространства имен
+              href: namespaces-entity-sql.md
+            - name: Идентификаторы
+              href: identifiers-entity-sql.md
+            - name: Параметры
+              href: parameters-entity-sql.md
+            - name: Переменные
+              href: variables-entity-sql.md
+            - name: Неподдерживаемые выражения
+              href: unsupported-expressions-entity-sql.md
+            - name: Литералы
+              href: literals-entity-sql.md
+            - name: Литералы NULL и вывод типов
+              href: null-literals-and-type-inference-entity-sql.md
+            - name: Набор символов ввода
+              href: input-character-set-entity-sql.md
+            - name: Выражения запросов
+              href: query-expressions-entity-sql.md
+            - name: Функции
+              href: functions-entity-sql.md
+              items:
+                - name: Пользовательские функции
+                  href: user-defined-functions-entity-sql.md
+                - name: Разрешение перегрузки функций
+                  href: function-overload-resolution-entity-sql.md
+                - name: Статистические функции
+                  href: aggregate-functions-entity-sql.md
+            - name: Приоритет операторов
+              href: operator-precedence-entity-sql.md
+            - name: Разбивка на страницы
+              href: paging-entity-sql.md
+            - name: Семантика сравнения
+              href: comparison-semantics-entity-sql.md
+            - name: Составление вложенных запросов Entity SQL
+              href: composing-nested-entity-sql-queries.md
+            - name: Допускающие значения NULL структурированные типы
+              href: nullable-structured-types-entity-sql.md
+        - name: Справочник по Entity SQL
+          href: entity-sql-reference.md
+          items:
+            - name: + (Добавление)
+              href: add.md
+            - name: + (Объединение строк)
+              href: string-concatenation-entity-sql.md
+            - name: '- (Отрицательное число)'
+              href: negative-entity-sql.md
+            - name: '- (Вычитание)'
+              href: subtract-entity-sql.md
+            - name: '* (Умножение)'
+              href: multiply-entity-sql.md
+            - name: / (Деление)
+              href: divide-entity-sql.md
+            - name: Процент (остаток от деления)
+              href: modulo-entity-sql.md
+            - name: '&& (И)'
+              href: and-entity-sql.md
+            - name: '|| (ИЛИ)'
+              href: or-entity-sql.md
+            - name: '! (НЕ)'
+              href: not-entity-sql.md
+            - name: = (Равно)
+              href: equals-entity-sql.md
+            - name: '> (Больше)'
+              href: greater-than-entity-sql.md
+            - name: '>= (Больше или равно)'
+              href: greater-than-or-equal-to-entity-sql.md
+            - name: < (Меньше)
+              href: less-than-entity-sql.md
+            - name: <= (Меньше или равно)
+              href: less-than-or-equal-to-entity-sql.md
+            - name: '!= (Не равно)'
+              href: not-equal-to-entity-sql.md
+            - name: . (Доступ к членам)
+              href: member-access-entity-sql.md
+            - name: '-- (Комментарий)'
+              href: comment-entity-sql.md
+            - name: ANYELEMENT
+              href: anyelement-entity-sql.md
+            - name: BETWEEN
+              href: between-entity-sql.md
+            - name: CASE
+              href: case-entity-sql.md
+            - name: CAST
+              href: cast-entity-sql.md
+            - name: COLLECTION
+              href: collection-entity-sql.md
+            - name: CREATEREF
+              href: createref-entity-sql.md
+            - name: DEREF
+              href: deref-entity-sql.md
+            - name: EXCEPT
+              href: except-entity-sql.md
+            - name: EXISTS
+              href: exists-entity-sql.md
+            - name: FLATTEN
+              href: flatten-entity-sql.md
+            - name: FROM
+              href: from-entity-sql.md
+            - name: FUNCTION
+              href: function-entity-sql.md
+            - name: GROUP BY
+              href: group-by-entity-sql.md
+            - name: GROUPPARTITION
+              href: grouppartition-entity-sql.md
+            - name: HAVING
+              href: having-entity-sql.md
+            - name: KEY
+              href: key-entity-sql.md
+            - name: IN
+              href: in-entity-sql.md
+            - name: INTERSECT
+              href: intersect-entity-sql.md
+            - name: ISNULL
+              href: isnull-entity-sql.md
+            - name: ISOF
+              href: isof-entity-sql.md
+            - name: LIKE
+              href: like-entity-sql.md
+            - name: LIMIT
+              href: limit-entity-sql.md
+            - name: MULTISET
+              href: multiset-entity-sql.md
+            - name: Конструктор именованных типов
+              href: named-type-constructor-entity-sql.md
+            - name: NAVIGATE
+              href: navigate-entity-sql.md
+            - name: OFTYPE
+              href: oftype-entity-sql.md
+            - name: ORDER BY
+              href: order-by-entity-sql.md
+            - name: OVERLAPS
+              href: overlaps-entity-sql.md
+            - name: REF
+              href: ref-entity-sql.md
+            - name: ROW
+              href: row-entity-sql.md
+            - name: SELECT
+              href: select-entity-sql.md
+            - name: SET
+              href: set-entity-sql.md
+            - name: SKIP
+              href: skip-entity-sql.md
+            - name: THEN
+              href: then-entity-sql.md
+            - name: TOP
+              href: top-entity-sql.md
+            - name: TREAT
+              href: treat-entity-sql.md
+            - name: UNION
+              href: union-entity-sql.md
+            - name: USING
+              href: using-entity-sql.md
+            - name: WHERE
+              href: where-entity-sql.md
+    - name: Канонические функции
+      href: canonical-functions.md
       items:
-      - name: Практическое руководство. Вызов канонических функций
-        href: how-to-call-canonical-functions.md
-      - name: Практическое руководство. Вызов функций базы данных
-        href: how-to-call-database-functions.md
-      - name: Практическое руководство. Вызов настраиваемых функций базы данных
-        href: how-to-call-custom-database-functions.md
-      - name: Практическое руководство. Вызов определенных моделью функций в запросах
-        href: how-to-call-model-defined-functions-in-queries.md
-      - name: Практическое руководство. Вызов определенных моделью функций как методов объектов
-        href: how-to-call-model-defined-functions-as-object-methods.md
-    - name: Компилированные запросы (LINQ to Entities)
-      href: compiled-queries-linq-to-entities.md
-    - name: Выполнение запроса
-      href: query-execution.md
-    - name: Результаты запроса
-      href: query-results.md
-    - name: Стандартные операторы в запросах LINQ to Entities
-      href: standard-query-operators-in-linq-to-entities-queries.md
-    - name: Сопоставление методов CLR с каноническими функциями
-      href: clr-method-to-canonical-function-mapping.md
-    - name: Поддерживаемые и неподдерживаемые методы LINQ (LINQ to Entities)
-      href: supported-and-unsupported-linq-methods-linq-to-entities.md
-    - name: 'LINQ to Entities: рекомендации и известные проблемы'
-      href: known-issues-and-considerations-in-linq-to-entities.md
-  - name: Язык Entity SQL
-    href: entity-sql-language.md
-    items:
-    - name: Общие сведения об Entity SQL
-      href: entity-sql-overview.md
-      items:
-      - name: Отличия Entity SQL от Transact-SQL
-        href: how-entity-sql-differs-from-transact-sql.md
-      - name: Краткий справочник по Entity SQL
-        href: entity-sql-quick-reference.md
-      - name: Система типов
-        href: type-system-entity-sql.md
-      - name: Определения типов
-        href: type-definitions-entity-sql.md
-      - name: Сборка типов
-        href: constructing-types-entity-sql.md
-      - name: Кэширование плана запроса
-        href: query-plan-caching-entity-sql.md
-      - name: Пространства имен
-        href: namespaces-entity-sql.md
-      - name: Идентификаторы
-        href: identifiers-entity-sql.md
-      - name: Параметры
-        href: parameters-entity-sql.md
-      - name: Переменные
-        href: variables-entity-sql.md
-      - name: Неподдерживаемые выражения
-        href: unsupported-expressions-entity-sql.md
-      - name: Литералы
-        href: literals-entity-sql.md
-      - name: Литералы NULL и вывод типов
-        href: null-literals-and-type-inference-entity-sql.md
-      - name: Набор символов ввода
-        href: input-character-set-entity-sql.md
-      - name: Выражения запросов
-        href: query-expressions-entity-sql.md
-      - name: Функции
-        href: functions-entity-sql.md
-        items:
-        - name: Пользовательские функции
-          href: user-defined-functions-entity-sql.md
-        - name: Разрешение перегрузки функций
-          href: function-overload-resolution-entity-sql.md
-        - name: Статистические функции
-          href: aggregate-functions-entity-sql.md
-      - name: Приоритет операторов
-        href: operator-precedence-entity-sql.md
-      - name: Разбивка на страницы
-        href: paging-entity-sql.md
-      - name: Семантика сравнения
-        href: comparison-semantics-entity-sql.md
-      - name: Составление вложенных запросов Entity SQL
-        href: composing-nested-entity-sql-queries.md
-      - name: Допускающие значения NULL структурированные типы
-        href: nullable-structured-types-entity-sql.md
-    - name: Справочник по Entity SQL
-      href: entity-sql-reference.md
-      items:
-      - name: + (Добавление)
-        href: add.md
-      - name: + (Объединение строк)
-        href: string-concatenation-entity-sql.md
-      - name: '- (Отрицательное число)'
-        href: negative-entity-sql.md
-      - name: '- (Вычитание)'
-        href: subtract-entity-sql.md
-      - name: '* (Умножение)'
-        href: multiply-entity-sql.md
-      - name: / (Деление)
-        href: divide-entity-sql.md
-      - name: Процент (остаток от деления)
-        href: modulo-entity-sql.md
-      - name: '&& (И)'
-        href: and-entity-sql.md
-      - name: '|| (ИЛИ)'
-        href: or-entity-sql.md
-      - name: '! (НЕ)'
-        href: not-entity-sql.md
-      - name: = (Равно)
-        href: equals-entity-sql.md
-      - name: '> (Больше)'
-        href: greater-than-entity-sql.md
-      - name: '>= (Больше или равно)'
-        href: greater-than-or-equal-to-entity-sql.md
-      - name: < (Меньше)
-        href: less-than-entity-sql.md
-      - name: <= (Меньше или равно)
-        href: less-than-or-equal-to-entity-sql.md
-      - name: '!= (Не равно)'
-        href: not-equal-to-entity-sql.md
-      - name: . (Доступ к членам)
-        href: member-access-entity-sql.md
-      - name: -- (Комментарий)
-        href: comment-entity-sql.md
-      - name: ANYELEMENT
-        href: anyelement-entity-sql.md
-      - name: BETWEEN
-        href: between-entity-sql.md
-      - name: CASE
-        href: case-entity-sql.md
-      - name: CAST
-        href: cast-entity-sql.md
-      - name: COLLECTION
-        href: collection-entity-sql.md
-      - name: CREATEREF
-        href: createref-entity-sql.md
-      - name: DEREF
-        href: deref-entity-sql.md
-      - name: EXCEPT
-        href: except-entity-sql.md
-      - name: EXISTS
-        href: exists-entity-sql.md
-      - name: FLATTEN
-        href: flatten-entity-sql.md
-      - name: FROM
-        href: from-entity-sql.md
-      - name: FUNCTION
-        href: function-entity-sql.md
-      - name: GROUP BY
-        href: group-by-entity-sql.md
-      - name: GROUPPARTITION
-        href: grouppartition-entity-sql.md
-      - name: HAVING
-        href: having-entity-sql.md
-      - name: KEY
-        href: key-entity-sql.md
-      - name: IN
-        href: in-entity-sql.md
-      - name: INTERSECT
-        href: intersect-entity-sql.md
-      - name: ISNULL
-        href: isnull-entity-sql.md
-      - name: ISOF
-        href: isof-entity-sql.md
-      - name: LIKE
-        href: like-entity-sql.md
-      - name: LIMIT
-        href: limit-entity-sql.md
-      - name: MULTISET
-        href: multiset-entity-sql.md
-      - name: Конструктор именованных типов
-        href: named-type-constructor-entity-sql.md
-      - name: NAVIGATE
-        href: navigate-entity-sql.md
-      - name: OFTYPE
-        href: oftype-entity-sql.md
-      - name: ORDER BY
-        href: order-by-entity-sql.md
-      - name: OVERLAPS
-        href: overlaps-entity-sql.md
-      - name: REF
-        href: ref-entity-sql.md
-      - name: ROW
-        href: row-entity-sql.md
-      - name: SELECT
-        href: select-entity-sql.md
-      - name: SET
-        href: set-entity-sql.md
-      - name: SKIP
-        href: skip-entity-sql.md
-      - name: THEN
-        href: then-entity-sql.md
-      - name: TOP
-        href: top-entity-sql.md
-      - name: TREAT
-        href: treat-entity-sql.md
-      - name: UNION
-        href: union-entity-sql.md
-      - name: USING
-        href: using-entity-sql.md
-      - name: WHERE
-        href: where-entity-sql.md
-  - name: Канонические функции
-    href: canonical-functions.md
-    items:
-    - name: Статистические канонические функции
-      href: aggregate-canonical-functions.md
-    - name: Математические канонические функции
-      href: math-canonical-functions.md
-    - name: Строковые канонические функции
-      href: string-canonical-functions.md
-    - name: Канонические функции даты и времени
-      href: date-and-time-canonical-functions.md
-    - name: Битовые канонические функции
-      href: bitwise-canonical-functions.md
-    - name: Пространственные функции
-      href: spatial-functions.md
-    - name: Прочие канонические функции
-      href: other-canonical-functions.md
-ms.openlocfilehash: 5886642c5f0074893aa960333fa4d85aa5fa1e46
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469957"
+        - name: Статистические канонические функции
+          href: aggregate-canonical-functions.md
+        - name: Математические канонические функции
+          href: math-canonical-functions.md
+        - name: Строковые канонические функции
+          href: string-canonical-functions.md
+        - name: Канонические функции даты и времени
+          href: date-and-time-canonical-functions.md
+        - name: Битовые канонические функции
+          href: bitwise-canonical-functions.md
+        - name: Пространственные функции
+          href: spatial-functions.md
+        - name: Прочие канонические функции
+          href: other-canonical-functions.md
