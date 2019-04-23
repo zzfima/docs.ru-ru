@@ -5,10 +5,10 @@ dev_langs:
 - vb
 ms.assetid: c878e457-f715-46e4-a136-ff14d6c86018
 ms.openlocfilehash: 326caf550e8b138b4b968f0021a7fc475dc58c8d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59338076"
 ---
 # <a name="walkthrough-simple-object-model-and-query-visual-basic"></a>Пошаговое руководство. Простая модель объекта и запрос (Visual Basic)
@@ -91,7 +91,7 @@ ms.locfileid: "59338076"
   
 -   Назначается свойство `CustomerID`, представляющее столбец первичного ключа в базе данных.  
   
--   Назначаются поля `_CustomerID` и `_City` для закрытого хранения. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] можно сохранять и извлекать значения напрямую, вместо использования открытых методов доступа, которые могут содержать бизнес-логики.  
+-   Назначаются поля `_CustomerID` и `_City` для закрытого хранения. После этого [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] сможет напрямую сохранять и извлекать значения, вместо вызова открытых методов доступа, которые могут содержать бизнес-логику.  
   
 #### <a name="to-represent-characteristics-of-two-database-columns"></a>Представление характеристик двух столбцов базы данных  
   
