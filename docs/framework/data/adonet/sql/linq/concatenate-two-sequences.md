@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 76767e7c-0607-4e1d-9ca2-a94f311f45eb
 ms.openlocfilehash: a2f2510cb334f4e22a7b0c6015a0a93b4dc11579
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59142783"
 ---
 # <a name="concatenate-two-sequences"></a>Сцепление двух последовательностей
@@ -34,4 +34,4 @@ ms.locfileid: "59142783"
 ## <a name="see-also"></a>См. также
 
 - [Примеры запросов](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
-- [Трансляция стандартных операторов запросов](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)
+- [Преобразование стандартных операторов запросов](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)

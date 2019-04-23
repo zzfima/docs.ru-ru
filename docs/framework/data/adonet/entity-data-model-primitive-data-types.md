@@ -3,10 +3,10 @@ title: 'EDM (модель данных с использованием сущн�
 ms.date: 03/30/2017
 ms.assetid: 7635168e-0566-4fdd-8391-7941b0d9f787
 ms.openlocfilehash: 044a0ed981bb9cda3550fb3a3a9f1cb9bff96f25
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59142653"
 ---
 # <a name="entity-data-model-primitive-data-types"></a>EDM (модель данных с использованием сущностей): примитивные типы данных
@@ -41,4 +41,4 @@ Entity Data Model (EDM) поддерживает набор абстрактны
 ## <a name="see-also"></a>См. также
 
 - [Основные понятия модели EDM](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [EDM (модель данных с использованием сущностей)](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [Сущностная модель данных](../../../../docs/framework/data/adonet/entity-data-model.md)

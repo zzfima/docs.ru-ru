@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ef9445bb56523f3ef2adf668a4a637868b5d565
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1f27385fadd872d2ff6f84cabe079811142008df
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558921"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59143654"
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>Совместимость версий в .NET Framework
 Обратная совместимость означает, что приложение, разработанное для конкретной версии платформы, будет запускаться и в более поздних версиях этой платформы. На платформе .NET Framework в максимально возможной степени обеспечивается обратная совместимость: исходный код, написанный для одной версии платформы .NET Framework, должен компилироваться в более поздних версиях этой платформы, а двоичные файлы, работающие в одной версии платформы .NET Framework, должны точно так же работать в более поздних версиях этой платформы.  
@@ -66,6 +66,7 @@ ms.locfileid: "54558921"
  Если найти подходящий обходной путь для проблемы не удается, помните, что платформа .NET Framework 4.5 (или один из ее доработанных выпусков) работает параллельно с версиями 1.1, 2.0 и 3.5 и представляет собой обновление "на месте", заменяющее версию 4. Для приложений, предназначенных для версий 1.1, 2.0 и 3.5, можно установить на целевом компьютере соответствующую версию .NET Framework и запускать приложение в оптимальной для него среде. Дополнительные сведения о параллельном выполнении см. в разделе [Параллельное выполнение](../../../docs/framework/deployment/side-by-side-execution.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Новые возможности](../../../docs/framework/whats-new/index.md)
 - [Устаревшие классы библиотеки классов](../../../docs/framework/whats-new/whats-obsolete.md)
 - [Совместимость приложений](../../../docs/framework/migration-guide/application-compatibility.md)
