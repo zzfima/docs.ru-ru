@@ -14,25 +14,25 @@ helpviewer_keywords:
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 045423f0393ff363b94f4c0e4fe0324c061120d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0aef9a1c81172cda9b6df4574edb331e0ed137ca
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628192"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59340611"
 ---
 # <a name="how-to-round-trip-date-and-time-values"></a>Как выполнить Значения даты и времени кругового пути
 Во многих приложениях значение даты и времени предназначено для однозначного определения одного момента времени. В этой статье показано, как правильно сохранять и восстанавливать значения <xref:System.DateTime> и <xref:System.DateTimeOffset>, а также значения времени с информацией о часовом поясе, чтобы восстановленное значение определяло то же время, что и сохраненное значение.  
   
 ### <a name="to-round-trip-a-datetime-value"></a>Выполнение цикла обработки значения DateTime  
   
-1.  Преобразуйте значение <xref:System.DateTime> в строковое представление с помощью метода <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> с описателем формата "o".  
+1. Преобразуйте значение <xref:System.DateTime> в строковое представление с помощью метода <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> с описателем формата "o".  
   
-2.  Сохраните строковое представление значения <xref:System.DateTime> в файл или передайте его между процессами, доменами приложений или компьютерами.  
+2. Сохраните строковое представление значения <xref:System.DateTime> в файл или передайте его между процессами, доменами приложений или компьютерами.  
   
-3.  Получите строку, представляющую значение <xref:System.DateTime>.  
+3. Получите строку, представляющую значение <xref:System.DateTime>.  
   
-4.  Вызовите метод <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%29?displayProperty=nameWithType> и передайте ему значение <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType> в параметре `styles`.  
+4. Вызовите метод <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%29?displayProperty=nameWithType> и передайте ему значение <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType> в параметре `styles`.  
   
  В следующем примере показано, как выполнить цикл обработки значения <xref:System.DateTime>.  
   
@@ -43,13 +43,13 @@ ms.locfileid: "54628192"
   
 ### <a name="to-round-trip-a-datetimeoffset-value"></a>Выполнение цикла обработки значения DateTimeOffset  
   
-1.  Преобразуйте значение <xref:System.DateTimeOffset> в строковое представление с помощью метода <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> с описателем формата "o".  
+1. Преобразуйте значение <xref:System.DateTimeOffset> в строковое представление с помощью метода <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> с описателем формата "o".  
   
-2.  Сохраните строковое представление значения <xref:System.DateTimeOffset> в файл или передайте его между процессами, доменами приложений или компьютерами.  
+2. Сохраните строковое представление значения <xref:System.DateTimeOffset> в файл или передайте его между процессами, доменами приложений или компьютерами.  
   
-3.  Получите строку, представляющую значение <xref:System.DateTimeOffset>.  
+3. Получите строку, представляющую значение <xref:System.DateTimeOffset>.  
   
-4.  Вызовите метод <xref:System.DateTimeOffset.Parse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%29?displayProperty=nameWithType> и передайте ему значение <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType> в параметре `styles`.  
+4. Вызовите метод <xref:System.DateTimeOffset.Parse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%29?displayProperty=nameWithType> и передайте ему значение <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType> в параметре `styles`.  
   
  В следующем примере показано, как выполнить цикл обработки значения <xref:System.DateTimeOffset>.  
   
@@ -60,18 +60,18 @@ ms.locfileid: "54628192"
   
 ### <a name="to-round-trip-a-date-and-time-value-with-its-time-zone"></a>Цикл обработки значения даты и времени с часовым поясом  
   
-1.  Определите класс или структуру с двумя полями. Первое поле содержит объект <xref:System.DateTime> или <xref:System.DateTimeOffset>, а второе — объект <xref:System.TimeZoneInfo>. Следующий пример демонстрирует простой вариант такого типа.  
+1. Определите класс или структуру с двумя полями. Первое поле содержит объект <xref:System.DateTime> или <xref:System.DateTimeOffset>, а второе — объект <xref:System.TimeZoneInfo>. Следующий пример демонстрирует простой вариант такого типа.  
   
      [!code-csharp[Formatting.HowTo.RoundTrip#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.RoundTrip/cs/RoundTrip.cs#3)]
      [!code-vb[Formatting.HowTo.RoundTrip#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.RoundTrip/vb/RoundTrip.vb#3)]  
   
-2.  Отметьте этот класс атрибутом <xref:System.SerializableAttribute>.  
+2. Отметьте этот класс атрибутом <xref:System.SerializableAttribute>.  
   
-3.  Сериализуйте объект с помощью метода <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize%2A?displayProperty=nameWithType>.  
+3. Сериализуйте объект с помощью метода <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize%2A?displayProperty=nameWithType>.  
   
-4.  Восстановите объект с помощью метода <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A>.  
+4. Восстановите объект с помощью метода <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A>.  
   
-5.  Приведите или преобразуйте десериализованный объект (в C#) в объект нужного типа (в Visual Basic).  
+5. Приведите или преобразуйте десериализованный объект (в C#) в объект нужного типа (в Visual Basic).  
   
  В следующем примере описан цикл обработки объекта, позволяющий сохранить сведения о дате, времени и часовом поясе.  
   

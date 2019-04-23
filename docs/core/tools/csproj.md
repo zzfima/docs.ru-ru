@@ -1,13 +1,13 @@
 ---
 title: Дополнения к формату CSPROJ для .NET Core
 description: Различия между существующими файлами и файлами CSPROJ .NET Core
-ms.date: 09/22/2017
-ms.openlocfilehash: e196be28f622873359153f32c5dd9b0b5a514c0f
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.date: 04/08/2019
+ms.openlocfilehash: f72ea279079b4cdb3a06a2ba64925e2a335e1ed2
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654657"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517334"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Дополнения к формату CSPROJ для .NET Core
 
@@ -15,7 +15,7 @@ ms.locfileid: "58654657"
 
 ## <a name="implicit-package-references"></a>Неявные ссылки на пакет
 
-Теперь неявные ссылки на метапакеты указываются в зависимости от целевой платформы, указанной в свойстве `<TargetFramework>` или `<TargetFrameworks>` файла проекта. Если свойство `<TargetFramework>` указано, свойство `<TargetFrameworks>` игнорируется независимо от порядка.
+Теперь неявные ссылки на метапакеты указываются в зависимости от целевой платформы, указанной в свойстве `<TargetFramework>` или `<TargetFrameworks>` файла проекта. Если свойство `<TargetFramework>` указано, свойство `<TargetFrameworks>` игнорируется независимо от порядка. Дополнительную информацию см. в статье [Пакеты, метапакеты и платформы](../packages.md). 
 
 ```xml
  <PropertyGroup>
@@ -31,15 +31,39 @@ ms.locfileid: "58654657"
 
 ### <a name="recommendations"></a>Рекомендации
 
-Так как теперь указываются неявные ссылки на метапакеты `Microsoft.NETCore.App` или `NetStandard.Library`, следует учитывать приведенные ниже рекомендации:
+Так как теперь указываются неявные ссылки на метапакеты `Microsoft.NETCore.App` или `NETStandard.Library`, следует учитывать приведенные ниже рекомендации:
 
-* Ориентируясь на .NET Core или .NET Standard, никогда не указывайте явную ссылку на метапакеты `Microsoft.NETCore.App` или `NetStandard.Library` через элемент `<PackageReference>` в файле проекта.
+* Ориентируясь на .NET Core или .NET Standard, никогда не указывайте явную ссылку на метапакеты `Microsoft.NETCore.App` или `NETStandard.Library` через элемент `<PackageReference>` в файле проекта.
 * Если при ориентации на .NET Core нужна определенная версия среды выполнения, вместо ссылки на метапакет следует использовать свойство `<RuntimeFrameworkVersion>` в проекте (например, `1.0.4`).
-    * Это может произойти, например, когда вы используете [автономные развертывания](../deploying/index.md#self-contained-deployments-scd) и нуждаетесь в определенной версии исправления 1.0.0 LTS для среды выполнения.
-* Если при ориентации на .NET Standard вам нужна конкретная версия метапакета `NetStandard.Library`, можно использовать свойство `<NetStandardImplicitPackageVersion>` и установить требуемую версию.
-* Не добавляйте и не обновляйте ссылки на метапакет `Microsoft.NETCore.App` или `NetStandard.Library` явным образом в проектах .NET Framework. Если при использовании пакета NuGet на основе .NET Standard требуется любая версия `NetStandard.Library`, NuGet автоматически устанавливает ее.
+  * Это может произойти, например, когда вы используете [автономные развертывания](../deploying/index.md#self-contained-deployments-scd) и нуждаетесь в определенной версии исправления 1.0.0 LTS для среды выполнения.
+* Если при ориентации на .NET Standard вам нужна конкретная версия метапакета `NETStandard.Library`, можно использовать свойство `<NetStandardImplicitPackageVersion>` и установить требуемую версию.
+* Не добавляйте и не обновляйте ссылки на метапакет `Microsoft.NETCore.App` или `NETStandard.Library` явным образом в проектах .NET Framework. Если при использовании пакета NuGet на основе .NET Standard требуется любая версия `NETStandard.Library`, NuGet автоматически устанавливает ее.
+
+## <a name="implicit-version-for-some-package-references"></a>Неявное указание версий для некоторых ссылок на пакет
+
+В большинстве случаев при использовании [`<PackageReference>`](#packagereference) требуется указать атрибут `Version`, чтобы определить используемую версию пакета NuGet. Атрибут необязательно указывать, если используется .NET Core 2.1 или 2.2 со ссылкой на [Microsoft.AspNetCore.App](/aspnet/core/fundamentals/metapackage-app) или [Microsoft.AspNetCore.All](/aspnet/core/fundamentals/metapackage). Пакет SDK для .NET Core позволяет автоматически выбрать версию этих пакетов, которая должна использоваться.
+
+### <a name="recommendation"></a>Рекомендация
+
+Если вы ссылаетесь на пакеты `Microsoft.AspNetCore.App` или `Microsoft.AspNetCore.All`, не указывайте их версии. Если версия указана, пакет SDK может выдать предупреждение NETSDK1071. Чтобы устранить это предупреждение, удалите версию пакета, как показано в следующем примере:
+
+```xml
+<ItemGroup>
+  <PackageReference Include="Microsoft.AspNetCore.App" />
+</ItemGroup>
+```
+
+> Известная проблема. Пакет SDK для .NET Core 2.1 поддерживал только такой синтаксис, если в проекте также использовался Microsoft.NET.Sdk.Web. Эта проблема устранена в пакете SDK для .NET Core 2.2.
+
+Эти ссылки на метапакеты ASP.NET Core немного отличаются от ссылок на обычные пакеты NuGet. [Зависящие от платформы развертывания](../deploying/index.md#framework-dependent-deployments-fdd) приложений, для которых используются эти метапакеты, автоматически получают все преимущества общей платформы ASP.NET Core. Если используются метапакеты, с приложением **не** развертываются ресурсы из указанных по ссылке пакетов NuGet ASP.NET Core — общая платформа ASP.NET Core уже содержит эти ресурсы. Для ускорения запуска приложения ресурсы в общей платформе предварительно оптимизируются. Дополнительные сведения об общей платформе см. в статье [Упаковка дистрибутивов .NET Core](../build/distribution-packaging.md).
+
+Если версия *указана*, она рассматривается как *минимальная* версия общей платформы ASP.NET Core для зависимых от платформы развертываний, а также как *точная* версия для автономных развертываний. Это может привести к следующим результатам:
+
+* Если на сервере установлена более ранняя версия ASP.NET Core, чем указанная в PackageReference, процесс .NET Core не удастся запустить. Обновления метапакета часто доступны на сайте NuGet.org раньше, чем в средах размещения, таких как Azure. Обновление версии PackageReference в ASP.NET Core может привести к сбою развернутого приложения.
+* Если приложение развертывается как [автономное развертывание](../deploying/index.md#self-contained-deployments-scd), оно не может содержать последние обновления системы безопасности для .NET Core. Если версия не указана, пакет SDK может автоматически включить последнюю версию ASP.NET Core в автономное развертывание.
 
 ## <a name="default-compilation-includes-in-net-core-projects"></a>Компиляция по умолчанию, включенная в проекты .NET Core
+
 В рамках перехода на формат *CSPROJ* в последних версиях пакета SDK мы перенесли включения и исключения по умолчанию для элементов Compile и внедренные ресурсы в файлы свойств пакета SDK. Это означает, что вам больше не нужно указывать эти элементы в файле проекта.
 
 Основной причиной этого является стремление очистить ваш файл проекта от всего лишнего. Значения по умолчанию в пакете SDK должны охватывать наиболее распространенные варианты использования, поэтому нет необходимости повторять их в каждом создаваемом проекте. Это позволяет уменьшить файлы проекта и гораздо проще читать их, а также вносить правки вручную.
@@ -100,6 +124,7 @@ ms.locfileid: "58654657"
 ## <a name="additions"></a>Добавления
 
 ### <a name="sdk-attribute"></a>Атрибут Sdk
+
 Корневой элемент `<Project>` файла *CSPROJ* имеет новый атрибут `Sdk`. `Sdk` определяет, какой пакет SDK будет использоваться проектом. Пакет SDK, согласно описанию в [документе о слоях](cli-msbuild-architecture.md), является набором [задач](/visualstudio/msbuild/msbuild-tasks) и [целевых объектов](/visualstudio/msbuild/msbuild-targets) MSBuild, способным выполнять сборку кода .NET Core. Мы предоставляем три основных пакета SDK с инструментами для .NET Core:
 
 1. пакет SDK для .NET Core с идентификатором `Microsoft.NET.Sdk`;
@@ -282,7 +307,6 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 ### <a name="packagelicenseurl"></a>PackageLicenseUrl
 
 URL-адрес лицензии, применимой к пакету. (_Отмечено как нерекомендуемое начиная с Visual Studio версии 15.9.4, пакета SDK для .NET 2.1.502 и 2.2.101._)
-
 
 ### <a name="packageiconurl"></a>PackageIconUrl
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 409cea924b8a775621c3073e27009d1f556e4f42
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: c8c9fe05049feff6e15c765212b72e35265fd844
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58838577"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345434"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Строки настраиваемых форматов даты и времени
 
@@ -632,7 +632,7 @@ ms.locfileid: "58838577"
 |C|H|K|M|d|
 |f|н|h|m|s|
 |т|y|з|%|:|
-|/|"|'|\||
+|/|"|'|&#92;||
 
 Все остальные символы всегда интерпретируется как символьные литералы. В операции форматирования они включаются в результирующую строку без изменений.  В операции анализа они должны точно соответствовать символам во входной строке. При сравнении учитывается регистр.
 

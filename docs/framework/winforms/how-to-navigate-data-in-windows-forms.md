@@ -12,10 +12,10 @@ helpviewer_keywords:
 - data [Windows Forms], navigating
 ms.assetid: 97360f7b-b181-4084-966a-4c62518f735b
 ms.openlocfilehash: 2ba33f9ecb3a12a62c41af17d3f9ad6f6e3f8a5d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59345005"
 ---
 # <a name="how-to-navigate-data-in-windows-forms"></a>Практическое руководство. Навигация по набору данных, отображаемых в форме Windows Forms
@@ -53,6 +53,6 @@ ms.locfileid: "59345005"
 ## <a name="see-also"></a>См. также
 
 - [Источники данных, поддерживаемые Windows Forms](data-sources-supported-by-windows-forms.md)
-- [Получение уведомления об изменении данных, связанных с элементом управления, в Windows Forms](change-notification-in-windows-forms-data-binding.md)
-- [Связывание данных и Windows Forms](data-binding-and-windows-forms.md)
+- [Уведомления об изменениях в привязке данных Windows Forms](change-notification-in-windows-forms-data-binding.md)
+- [Привязка данных и Windows Forms](data-binding-and-windows-forms.md)
 - [Привязка данных Windows Forms](windows-forms-data-binding.md)

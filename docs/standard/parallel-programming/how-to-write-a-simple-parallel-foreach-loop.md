@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: cb5fab92-1c19-499e-ae91-8b7525dd875f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3bde7ebcc73c5e9e2d87074b78d78bb63cd441ad
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 599432af178031a85dea4155a8fd2923f879a600
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583645"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59427361"
 ---
 # <a name="how-to-write-a-simple-parallelforeach-loop"></a>Как выполнить написание простого цикла Parallel.ForEach
 
@@ -51,7 +51,7 @@ ms.locfileid: "56583645"
 
 В командной строке можно использовать .NET Core и его средства CLI (например, `dotnet new console` или `dotnet new console -lang vb`) либо вы можете создать файл и использовать компилятор командной строки для приложения .NET Framework.
 
-Для проекта .NET Core необходимо сослаться на пакет NuGet **System.Drawing.Common**. В Visual Studio используйте диспетчер пакетов NuGet для установки пакета. Кроме того, вы можете добавить ссылку на пакет в файл *.* csproj* или *.* vbproj*:
+Для проекта .NET Core необходимо сослаться на пакет NuGet **System.Drawing.Common**. В Visual Studio используйте диспетчер пакетов NuGet для установки пакета. Кроме того, вы можете добавить ссылку на пакет в файл \*.csproj или \*.vbproj:
  
 ```xml
 <ItemGroup>

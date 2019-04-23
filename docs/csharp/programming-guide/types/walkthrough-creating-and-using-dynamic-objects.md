@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-ms.openlocfilehash: f02e2de2ce8e2d4d6c8032e826764fd0383b3b3d
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 71330714658729ed82ba111e9384e6cd9d5ae116
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092648"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59339428"
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>Пошаговое руководство. Создание и использование динамических объектов (C# и Visual Basic)
 
@@ -44,30 +44,30 @@ ms.locfileid: "56092648"
   
 ### <a name="to-create-a-custom-dynamic-class"></a>Создание пользовательского динамического класса  
   
-1.  Запустите Visual Studio.  
+1. Запустите Visual Studio.  
   
-2.  В меню **Файл** выберите пункт **Создать** , а затем команду **Проект**.  
+2. В меню **Файл** выберите пункт **Создать** , а затем команду **Проект**.  
   
-3.  Убедитесь, что в диалоговом окне **Создание проекта** в области **Типы проектов** выбран пункт **Windows**. В области **Шаблоны** выберите пункт **Консольное приложение**. В поле **Имя** введите `DynamicSample` и нажмите кнопку **ОК**. Проект создан.  
+3. Убедитесь, что в диалоговом окне **Создание проекта** в области **Типы проектов** выбран пункт **Windows**. В области **Шаблоны** выберите пункт **Консольное приложение**. В поле **Имя** введите `DynamicSample` и нажмите кнопку **ОК**. Проект создан.  
   
-4.  Щелкните правой кнопкой мыши проект DynamicSample, выберите пункт **Добавить**, а затем щелкните **Класс**. В поле **Имя** введите `ReadOnlyFile` и нажмите кнопку **ОК**. Будет добавлен новый файл, содержащий класс ReadOnlyFile.  
+4. Щелкните правой кнопкой мыши проект DynamicSample, выберите пункт **Добавить**, а затем щелкните **Класс**. В поле **Имя** введите `ReadOnlyFile` и нажмите кнопку **ОК**. Будет добавлен новый файл, содержащий класс ReadOnlyFile.  
   
-5.  В верхней части файла ReadOnlyFile.cs или ReadOnlyFile.vb добавьте следующий код для импорта пространств имен <xref:System.IO?displayProperty=nameWithType> и <xref:System.Dynamic?displayProperty=nameWithType>.  
+5. В верхней части файла ReadOnlyFile.cs или ReadOnlyFile.vb добавьте следующий код для импорта пространств имен <xref:System.IO?displayProperty=nameWithType> и <xref:System.Dynamic?displayProperty=nameWithType>.  
 
     [!code-csharp[VbDynamicWalkthrough#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthrough/cs/readonlyfile.cs#1)]
     [!code-vb[VbDynamicWalkthrough#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthrough/vb/readonlyfile.vb#1)]  
 
-6.  Пользовательский динамический объект использует перечисление для определения условия поиска. Перед оператором класса добавьте следующее определение перечисления.  
+6. Пользовательский динамический объект использует перечисление для определения условия поиска. Перед оператором класса добавьте следующее определение перечисления.  
   
     [!code-csharp[VbDynamicWalkthrough#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthrough/cs/readonlyfile.cs#2)]
     [!code-vb[VbDynamicWalkthrough#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthrough/vb/readonlyfile.vb#2)]
   
-7.  Обновите оператор класса, чтобы он наследовал класс `DynamicObject`, как показано в следующем примере кода.  
+7. Обновите оператор класса, чтобы он наследовал класс `DynamicObject`, как показано в следующем примере кода.  
   
     [!code-csharp[VbDynamicWalkthrough#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthrough/cs/readonlyfile.cs#3)]
     [!code-vb[VbDynamicWalkthrough#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthrough/vb/readonlyfile.vb#3)]
 
-8.  Добавьте в класс `ReadOnlyFile` следующий код, чтобы задать закрытое поле для пути к файлу и конструктор для класса `ReadOnlyFile`.  
+8. Добавьте в класс `ReadOnlyFile` следующий код, чтобы задать закрытое поле для пути к файлу и конструктор для класса `ReadOnlyFile`.  
   
     [!code-csharp[VbDynamicWalkthrough#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthrough/cs/readonlyfile.cs#4)]
     [!code-vb[VbDynamicWalkthrough#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthrough/vb/readonlyfile.vb#4)]
@@ -93,9 +93,9 @@ ms.locfileid: "56092648"
   
 #### <a name="to-create-a-sample-text-file"></a>Создание примера текстового файла  
   
-1.  Щелкните правой кнопкой мыши проект DynamicSample, выберите пункт **Добавить**, а затем щелкните **Новый элемент**. На панели **Установленные шаблоны** выберите **Общие**, а затем шаблон **Текстовый файл**. В поле **Имя** оставьте имя по умолчанию TextFile1.txt и нажмите кнопку **Добавить**. В проект добавится новый текстовый файл.  
+1. Щелкните правой кнопкой мыши проект DynamicSample, выберите пункт **Добавить**, а затем щелкните **Новый элемент**. На панели **Установленные шаблоны** выберите **Общие**, а затем шаблон **Текстовый файл**. В поле **Имя** оставьте имя по умолчанию TextFile1.txt и нажмите кнопку **Добавить**. В проект добавится новый текстовый файл.  
   
-2.  Скопируйте в файл TextFile1.txt следующий текст.  
+2. Скопируйте в файл TextFile1.txt следующий текст.  
   
     ```  
     List of customers and suppliers  
@@ -112,18 +112,18 @@ ms.locfileid: "56092648"
     Customer: Koch, Paul  
     ```  
   
-3.  Сохраните и закройте файл.  
+3. Сохраните и закройте файл.  
   
 #### <a name="to-create-a-sample-application-that-uses-the-custom-dynamic-object"></a>Создание примера приложения, в котором применяется пользовательский динамический объект  
   
-1.  В **обозревателе решений** дважды щелкните файл Module1.vb, если используется Visual Basic, или файл Program.cs, если используется Visual C#.  
+1. В **обозревателе решений** дважды щелкните файл Module1.vb, если используется Visual Basic, или файл Program.cs, если используется Visual C#.  
   
-2.  Добавьте следующий код в процедуру Main, чтобы создать экземпляр класса `ReadOnlyFile` для файла TextFile1.txt. В этом коде используется позднее связывание для вызова динамических элементов и извлечения строк текста, которые содержат строку "Customer".  
+2. Добавьте следующий код в процедуру Main, чтобы создать экземпляр класса `ReadOnlyFile` для файла TextFile1.txt. В этом коде используется позднее связывание для вызова динамических элементов и извлечения строк текста, которые содержат строку "Customer".  
   
      [!code-csharp[VbDynamicWalkthrough#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthrough/cs/program.cs#8)]
      [!code-vb[VbDynamicWalkthrough#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthrough/vb/module1.vb#8)]
   
-3.  Сохраните файл и нажмите сочетание клавиш CTRL+F5 для сборки и запуска приложения.  
+3. Сохраните файл и нажмите сочетание клавиш CTRL+F5 для сборки и запуска приложения.  
   
 ## <a name="calling-a-dynamic-language-library"></a>Вызов библиотеки динамического языка  
 
@@ -131,27 +131,27 @@ ms.locfileid: "56092648"
   
 ### <a name="to-create-a-custom-dynamic-class"></a>Создание пользовательского динамического класса
   
-1.  В меню **Файл** окна Visual Studio наведите указатель мыши на пункт **Создать** и щелкните **Проект**.  
+1. В меню **Файл** окна Visual Studio наведите указатель мыши на пункт **Создать** и щелкните **Проект**.  
   
-2.  Убедитесь, что в диалоговом окне **Создание проекта** в области **Типы проектов** выбран пункт **Windows**. В области **Шаблоны** выберите пункт **Консольное приложение**. В поле **Имя** введите `DynamicIronPythonSample` и нажмите кнопку **ОК**. Проект создан.  
+2. Убедитесь, что в диалоговом окне **Создание проекта** в области **Типы проектов** выбран пункт **Windows**. В области **Шаблоны** выберите пункт **Консольное приложение**. В поле **Имя** введите `DynamicIronPythonSample` и нажмите кнопку **ОК**. Проект создан.  
   
-3.  Если используется Visual Basic, щелкните правой кнопкой мыши проект DynamicIronPythonSample и выберите пункт **Свойства**. Перейдите на вкладку **Ссылки**. Нажмите кнопку **Добавить**. Если используется Visual C#, в **обозревателе решений** щелкните правой кнопкой мыши папку **Ссылки** и выберите пункт **Добавить ссылку**.  
+3. Если используется Visual Basic, щелкните правой кнопкой мыши проект DynamicIronPythonSample и выберите пункт **Свойства**. Перейдите на вкладку **Ссылки**. Нажмите кнопку **Добавить**. Если используется Visual C#, в **обозревателе решений** щелкните правой кнопкой мыши папку **Ссылки** и выберите пункт **Добавить ссылку**.  
   
-4.  На вкладке **Обзор** перейдите к папке, в которой установлены библиотеки IronPython. Например, C:\Program Files\IronPython 2.6 for .NET 4.0. Выберите библиотеки **IronPython.dll**, **IronPython.Modules.dll**, **Microsoft.Scripting.dll** и **Microsoft.Dynamic.dll**. Нажмите кнопку **ОК**.  
+4. На вкладке **Обзор** перейдите к папке, в которой установлены библиотеки IronPython. Например, C:\Program Files\IronPython 2.6 for .NET 4.0. Выберите библиотеки **IronPython.dll**, **IronPython.Modules.dll**, **Microsoft.Scripting.dll** и **Microsoft.Dynamic.dll**. Нажмите кнопку **ОК**.  
   
-5.  Если используется Visual Basic, отредактируйте файл Module1.vb. Если используется Visual C#, отредактируйте файл Program.cs.  
+5. Если используется Visual Basic, отредактируйте файл Module1.vb. Если используется Visual C#, отредактируйте файл Program.cs.  
   
-6.  В верхней части файла добавьте следующий код для импорта пространств имен `Microsoft.Scripting.Hosting` и `IronPython.Hosting` из библиотек IronPython.  
+6. В верхней части файла добавьте следующий код для импорта пространств имен `Microsoft.Scripting.Hosting` и `IronPython.Hosting` из библиотек IronPython.  
   
     [!code-csharp[VbDynamicWalkthroughIronPython#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthroughironpython/cs/program.cs#1)]
     [!code-vb[VbDynamicWalkthroughIronPython#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthroughironpython/vb/module1.vb#1)]
   
-7.  В методе Main добавьте следующий код, чтобы создать объект `Microsoft.Scripting.Hosting.ScriptRuntime`, в котором будут размещены библиотеки IronPython. Объект `ScriptRuntime` загружает модуль библиотеки IronPython random.py.  
+7. В методе Main добавьте следующий код, чтобы создать объект `Microsoft.Scripting.Hosting.ScriptRuntime`, в котором будут размещены библиотеки IronPython. Объект `ScriptRuntime` загружает модуль библиотеки IronPython random.py.  
   
      [!code-csharp[VbDynamicWalkthroughIronPython#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthroughironpython/cs/program.cs#2)]
      [!code-vb[VbDynamicWalkthroughIronPython#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthroughironpython/vb/module1.vb#2)]
   
-8.  После указания в коде необходимости загрузки модуля random.py добавьте следующий код, чтобы создать массив целых чисел. Массив передается методу `shuffle` модуля random.py, который произвольно сортирует значения в массиве.  
+8. После указания в коде необходимости загрузки модуля random.py добавьте следующий код, чтобы создать массив целых чисел. Массив передается методу `shuffle` модуля random.py, который произвольно сортирует значения в массиве.  
   
      [!code-csharp[VbDynamicWalkthroughIronPython#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthroughironpython/cs/program.cs#3)]
      [!code-vb[VbDynamicWalkthroughIronPython#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthroughironpython/vb/module1.vb#3)]

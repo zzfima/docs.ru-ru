@@ -6,10 +6,10 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding list items
 ms.assetid: 217611ee-fd11-4d39-9a54-a37c3e781be1
 ms.openlocfilehash: 6e08a7013242b0dbb433e288c4f8d788cb4e143b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343848"
 ---
 # <a name="how-to-add-and-remove-items-with-the-windows-forms-listview-control-using-the-designer"></a>Практическое руководство. Добавление и удаление элементов с использованием элемента управления ListView в формах Windows Forms с помощью конструктора
@@ -35,8 +35,8 @@ ms.locfileid: "59343848"
 ## <a name="see-also"></a>См. также
 
 - [Общие сведения об элементе управления ListView](listview-control-overview-windows-forms.md)
-- [Практическое руководство. Добавление столбцов в элемент управления ListView в Windows Forms](how-to-add-columns-to-the-windows-forms-listview-control.md)
-- [Практическое руководство. Отображение дополнительных данных в столбцах элемента управления ListView в Windows Forms](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)
-- [Практическое руководство. Отображение значков в элементе управления ListView в Windows Forms](how-to-display-icons-for-the-windows-forms-listview-control.md)
-- [Практическое руководство. Добавление пользовательских данных в элемент управления TreeView или ListView (Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
-- [Практическое руководство. Группирование элементов в элементе управления ListView в формах Windows Forms](how-to-group-items-in-a-windows-forms-listview-control.md)
+- [Практическое руководство. Добавить столбцы для элемента управления ListView в Windows Forms](how-to-add-columns-to-the-windows-forms-listview-control.md)
+- [Практическое руководство. Отображение дополнительных данных в столбцы с помощью элемента управления ListView в Windows Forms](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)
+- [Практическое руководство. Отображение значков для элемента управления ListView в Windows Forms](how-to-display-icons-for-the-windows-forms-listview-control.md)
+- [Практическое руководство. Добавление пользовательских данных в элемент управления TreeView или элемент управления ListView (Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [Практическое руководство. Группирование элементов в элементе управления ListView формы Windows](how-to-group-items-in-a-windows-forms-listview-control.md)

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
 ms.openlocfilehash: 0176ebffe82e60671ea66481b7d659004dc31477
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344927"
 ---
 # <a name="xaml-resources"></a>Ресурсы XAML
@@ -128,7 +128,7 @@ ms.locfileid: "59344927"
   
 -   Задаваемое свойство должно быть свойством на <xref:System.Windows.FrameworkElement> или <xref:System.Windows.FrameworkContentElement>. Что свойство должно поддерживаться <xref:System.Windows.DependencyProperty>.  
   
--   Ссылка указывает на значение в <xref:System.Windows.Style><xref:System.Windows.Setter>.  
+-   Ссылка указывает на значение в <xref:System.Windows.Style> <xref:System.Windows.Setter>.  
   
 -   Задаваемое свойство должно быть свойством на <xref:System.Windows.Freezable> , предоставляется как значение либо <xref:System.Windows.FrameworkElement> или <xref:System.Windows.FrameworkContentElement> свойство, или <xref:System.Windows.Setter> значение.  
   
@@ -144,7 +144,7 @@ ms.locfileid: "59344927"
   
  [!code-xaml[FEResourceSH_snip#ImplicitStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page2.xaml#implicitstyle)]  
   
- Что стиля на самом деле есть ключ: неявный ключ `typeof(`<xref:System.Windows.Controls.Button>`)`. В разметке, можно указать <xref:System.Windows.Style.TargetType%2A> непосредственно в качестве типа имени (или при необходимости можно использовать [{x: Type...}](../../xaml-services/x-type-markup-extension.md) для возврата <xref:System.Type>.  
+ Что стиля на самом деле есть ключ: неявный ключ `typeof(` <xref:System.Windows.Controls.Button> `)`. В разметке, можно указать <xref:System.Windows.Style.TargetType%2A> непосредственно в качестве типа имени (или при необходимости можно использовать [{x: Type...}](../../xaml-services/x-type-markup-extension.md) для возврата <xref:System.Type>.  
   
  Через механизмах стилей темы по умолчанию, используемые [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], что стиль будет применен как стиль среды выполнения для <xref:System.Windows.Controls.Button> на странице, несмотря на то что <xref:System.Windows.Controls.Button> сам пытается задать его <xref:System.Windows.FrameworkElement.Style%2A> свойство или конкретного ресурса ссылка на стиль. Стиль, определенный на странице, находится в последовательности подстановки, чем стиль словаря темы, используя тот же ключ, который имеет стиль словаря темы. Вы можете просто указать `<Button>Hello</Button>` в любом месте страницы и стиль, определенный с помощью <xref:System.Windows.Style.TargetType%2A> из `Button` будет применен к этой кнопке. Если требуется, можно по-прежнему явно ключ стиля с тем же значением типа, как <xref:System.Windows.Style.TargetType%2A>для ясности в разметке, но это не является обязательным.  
   

@@ -5,12 +5,12 @@ author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
 ms.custom: seodec18
-ms.openlocfilehash: b543ab2e200e8169a251db8ddfb1493c5583ed69
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7f4699b5277c5feeac4d9116ac85e096247aa748
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360255"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427452"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>Рекомендации по модульному тестированию для .NET Core и .NET Standard
 
@@ -18,7 +18,7 @@ ms.locfileid: "57360255"
 
 В этом руководстве вы получите некоторые практические рекомендации по написанию модульных тестов, чтобы создавать устойчивые и понятные тесты.
 
-Автор: [Джон Риз (John Reese)](https://reese.dev) с особой благодарностью [Рою Ошерову (Roy Osherove)](http://osherove.com/)
+Автор: [Джон Риз (John Reese)](https://reese.dev) с особой благодарностью [Рою Ошерову (Roy Osherove)](https://osherove.com/)
 
 ## <a name="why-unit-test"></a>Почему именно модульные тесты?
 
@@ -82,7 +82,7 @@ purchase.ValidateOrders();
 Assert.True(purchase.CanBeShipped);
 ```
 
-Если переименовать класс в `FakeOrder`, он будет более универсальным и его можно будет использовать как макет или как заглушку. Это зависит от тестового случая. В приведенном выше примере `FakeOrder` используется в качестве заглушки. Вы никак не используете `FakeOrder` во время проверки. `FakeOrder` был передан в класс `Purchase` для удовлетворения требований конструктора.
+Если переименовать класс в `FakeOrder`, он будет более универсальным и его можно будет использовать как макет или как заглушку. Это зависит от тестового случая. В приведенном выше примере `FakeOrder` используется в качестве заглушки. Вы никак не используете `FakeOrder` во время проверки. `FakeOrder` — передача в класс `Purchase` выполнена для удовлетворения требований конструктора.
 
 Чтобы использовать его как макет, можно сделать нечто подобное:
 
@@ -250,17 +250,17 @@ Assert.True(mockOrder.Validated);
 ```csharp
 public string ParseLogLine(string input)
 {
-    var sanitizedInput = trimInput(input);
+    var sanitizedInput = TrimInput(input);
     return sanitizedInput;
 }
 
-private string trimInput(string input)
+private string TrimInput(string input)
 {
     return input.Trim();
 }
 ```
 
-Возможно, в первую очередь вам захочется написать тест для `trimInput`, поскольку вы хотите убедиться, что метод работает должным образом. Но вполне возможно, что `ParseLogLine` манипулирует `sanitizedInput` неожиданным для вас образом и тестирование `trimInput` окажется бесполезным. 
+Возможно, в первую очередь вам захочется написать тест для `TrimInput`, поскольку вы хотите убедиться, что метод работает должным образом. Но вполне возможно, что `ParseLogLine` манипулирует `sanitizedInput` неожиданным для вас образом и тестирование `TrimInput` окажется бесполезным. 
 
 Настоящий тест нужно провести для открытого метода `ParseLogLine`, потому что в конечном итоге для вас важен именно он. 
 

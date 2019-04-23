@@ -9,10 +9,10 @@ helpviewer_keywords:
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
 ms.openlocfilehash: bb35a4d47f583aad710e178bdb12cb9adf6321e0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340026"
 ---
 # <a name="control-authoring-overview"></a>Общие сведения о разработке элементов управления
@@ -41,7 +41,7 @@ ms.locfileid: "59340026"
   
 <a name="models_for_control_authoring"></a>   
 ## <a name="models-for-control-authoring"></a>Модели для создания элементов управления  
- Модель форматированного содержимого, стили, шаблоны и триггеры уменьшают необходимость создания новых элементов управления. Тем не менее, если необходимо создать новый элемент управления, важно понимать различные модели создания элементов управления в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет три общих модели для создания элементов управления, каждый из которых имеет собственный набор функций и уровень гибкости. Базовыми классами для трех моделей <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Controls.Control>, и <xref:System.Windows.FrameworkElement>.  
+ Модель форматированного содержимого, стили, шаблоны и триггеры уменьшают необходимость создания новых элементов управления. Тем не менее, если необходимо создать новый элемент управления, важно понимать различные модели создания элементов управления в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет три общих модели для создания элемента управления, которые имеют различный набор функций и уровень гибкости. Базовыми классами для трех моделей <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Controls.Control>, и <xref:System.Windows.FrameworkElement>.  
   
 ### <a name="deriving-from-usercontrol"></a>Создание производных классов от UserControl  
  Самый простой способ создания элемента управления в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] является наследование от <xref:System.Windows.Controls.UserControl>. При создании элемента управления, который наследует от <xref:System.Windows.Controls.UserControl>, вы добавляете существующие компоненты к <xref:System.Windows.Controls.UserControl>компонентам имя и ссылки на обработчики событий в [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Затем можно ссылаться на именованные элементы и определять обработчики событий в коде. Эта модель разработки очень схожа с моделью, используемой для разработки приложений в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -182,7 +182,7 @@ ms.locfileid: "59340026"
   
 -   Реализуйте пару методов CLR `public` `static` с именем `Set`*PropertyName* и `Get`*PropertyName*. Оба метода должны принимать производный класс от <xref:System.Windows.DependencyProperty> качестве первого аргумента. Метод `Set`*PropertyName* также принимает аргумент, тип которого соответствует зарегистрированному типу данных для свойства. Метод `Get`*PropertyName* должен возвращать значение такого же типа. Если метод `Set` *PropertyName* отсутствует, свойство отмечается как "только для чтения".  
   
--   `Set` **PropertyName* и `Get` *PropertyName* должны перенаправляться непосредственно в <xref:System.Windows.DependencyObject.GetValue%2A> и <xref:System.Windows.DependencyObject.SetValue%2A> методы от зависимости целевого объекта, соответственно.DРазработчики могут получить доступ к вложенному свойству, вызвав программу-оболочку метода или с помощью прямого вызова целевого объекта зависимостей.  
+-   `Set` *PropertyName* и `Get` *PropertyName* должны перенаправляться непосредственно в <xref:System.Windows.DependencyObject.GetValue%2A> и <xref:System.Windows.DependencyObject.SetValue%2A> методы от зависимости целевого объекта, соответственно. Разработчики могут получить доступ к вложенному свойству, вызвав программу-оболочку метода или с помощью прямого вызова целевого объекта зависимостей.  
   
  Дополнительные сведения о вложенных свойствах см. в разделе [Общие сведения о вложенных свойствах](../advanced/attached-properties-overview.md).  
   

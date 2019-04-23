@@ -8,12 +8,12 @@ helpviewer_keywords:
 - errorreport compiler option [C#]
 - /errorreport compiler option [C#]
 ms.assetid: bd0e7493-b79d-4369-9c3f-ba26ebdfbedf
-ms.openlocfilehash: 27c7500a3d33ec17680896f21f0e44d98fee94c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4797f35a3738955f620fad7a93f8695685d21057
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638474"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59345096"
 ---
 # <a name="-errorreport-c-compiler-options"></a>-errorreport (параметры компилятора C#)
 Этот параметр предоставляет удобный способ для сообщения о внутренней ошибке компилятора C# в корпорацию Майкрософт.  
@@ -51,13 +51,13 @@ ms.locfileid: "54638474"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio  
   
-1.  Откройте страницу **Свойства** проекта. Дополнительные сведения см. в разделе [Страница "Сборка" в конструкторе проектов (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
+1. Откройте страницу **Свойства** проекта. Дополнительные сведения см. в разделе [Страница "Сборка" в конструкторе проектов (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
   
-2.  Щелкните страницу свойств **Сборка**.  
+2. Щелкните страницу свойств **Сборка**.  
   
-3.  Нажмите кнопку **Дополнительно** .  
+3. Нажмите кнопку **Дополнительно** .  
   
-4.  Измените свойство **Отчеты о внутренних ошибках компилятора**.  
+4. Измените свойство **Отчеты о внутренних ошибках компилятора**.  
   
  Дополнительные сведения об установке этого параметра компилятора программным путем см. в разделе <xref:VSLangProj80.CSharpProjectConfigurationProperties3.ErrorReport%2A>.  
   

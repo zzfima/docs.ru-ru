@@ -10,10 +10,10 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7c6d0c7128becb154955664cfdcf96d020de9369
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59480668"
 ---
 # <a name="-deterministic"></a>-deterministic
@@ -56,5 +56,5 @@ ms.locfileid: "59480668"
 
 ## <a name="see-also"></a>См. также
 
-- [Параметры компилятора C#](../../../csharp/language-reference/compiler-options/index.md)
-- [Управление свойствами проекта и решения](/visualstudio/ide/managing-project-and-solution-properties)
+- [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)
+- [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)

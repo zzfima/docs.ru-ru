@@ -7,20 +7,22 @@ f1_keywords:
 - stackalloc
 helpviewer_keywords:
 - stackalloc keyword [C#]
-ms.openlocfilehash: 31fdbacb01d1f6052c86d40c0bffc903130f216c
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 61a27e777a1919a2a6fc5140a311835a8f3daba9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245513"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59480811"
 ---
 # <a name="stackalloc-c-reference"></a>stackalloc (Справочник по C#)
 
-Ключевое слово `stackalloc` используется в контексте небезопасного кода для выделения блока памяти стеку.
+Ключевое слово `stackalloc` используется для выделения блока памяти стеку.
 
 ```csharp
-int* block = stackalloc int[100];
+Span<int> block = stackalloc int[100];
 ```
+
+Назначение выделенного блока <xref:System.Span%601?displayName=nameWithType> вместо `int*` позволяет выделять память стеку в безопасном блоке. Контекст `unsafe` не требуется.
 
 ## <a name="remarks"></a>Примечания
 
@@ -32,24 +34,29 @@ int* block;
 // can use stackalloc only when declaring and initializing a local
 // variable.
 block = stackalloc int[100];
+Span<int> span;
+// The following assignment statement causes compiler errors. You
+// can use stackalloc only when declaring and initializing a local
+// variable.
+span = stackalloc int[100];
 ```
 
-Начиная с версии C# 7.3 для массивов `stackalloc` можно использовать синтаксис инициализатора массива. Во всех следующих примерах объявляется массив с тремя элементами, имеющими целочисленные значения `1`, `2` и `3`:
+Начиная с версии C# 7.3 для массивов `stackalloc` можно использовать синтаксис инициализатора массива. Во всех следующих примерах объявляется массив с тремя элементами, имеющими целочисленные значения `1`, `2` и `3`. Вторая инициализация назначает память <xref:System.ReadOnlySpan%601>, указывая на то, что память не может быть изменена.
 
 ```csharp
 // Valid starting with C# 7.3
-int* first = stackalloc int[3] { 1, 2, 3 };
-int* second = stackalloc int[] { 1, 2, 3 };
-int* third = stackalloc[] { 1, 2, 3 };
+Span<int> first = stackalloc int[3] { 1, 2, 3 };
+ReadOnlySpan<int> second = stackalloc int[] { 1, 2, 3 };
+Span<int> third = stackalloc[] { 1, 2, 3 };
 ```
 
-Так как задаются типы указателей, `stackalloc` требует [небезопасного](unsafe.md) контекста. Дополнительные сведения см. в разделе [Небезопасный код и указатели](../../programming-guide/unsafe-code-pointers/index.md).
+Когда используются типы указателей, для `stackalloc` требуется [небезопасный](unsafe.md) контекст. Дополнительные сведения см. в разделе [Небезопасный код и указатели](../../programming-guide/unsafe-code-pointers/index.md).
 
 `stackalloc` действует как [_alloca](/cpp/c-runtime-library/reference/alloca) в библиотеке времени выполнения C.
 
 ## <a name="examples"></a>Примеры
 
-Представленный ниже код вычисляет и отображает первые 20 чисел в последовательности Фибоначчи. Каждое из них представляет собой сумму двух предыдущих чисел. В этом коде блок памяти, размер которого позволяет сохранить 20 элементов типа `int`, выделяется не куче, а стеку. Адрес блока хранится в указателе `fib`. Эта память не подвергаются сборке мусора, а значит, ее не нужно закреплять (с помощью атрибута [fixed](fixed-statement.md)). Время существования блока памяти ограничивается временем существования метода, который его определяет. Освободить эту память прежде, чем метод выдаст результат, невозможно.
+Представленный ниже код вычисляет и отображает первые 20 чисел в последовательности Фибоначчи. Каждое из них представляет собой сумму двух предыдущих чисел. В этом коде блок памяти, размер которого позволяет сохранить 20 элементов типа `int`, выделяется не куче, а стеку. Адрес блока хранится в `Span` `fib`. Эта память не подвергаются сборке мусора, а значит, ее не нужно закреплять (с помощью атрибута [fixed](fixed-statement.md)). Время существования блока памяти ограничивается временем существования метода, который его определяет. Освободить эту память прежде, чем метод выдаст результат, невозможно.
 
 [!code-csharp[csrefKeywordsOperator#15](~/samples/snippets/csharp/keywords/StackAllocExamples.cs#1)]
 
@@ -59,7 +66,7 @@ int* third = stackalloc[] { 1, 2, 3 };
 
 ## <a name="security"></a>Безопасность
 
-Небезопасный код менее безопасен, чем безопасные аналоги. В то же время при использовании `stackalloc` в среде CLR автоматически включается обнаружение переполнения буфера. Если буфер переполнен, процесс незамедлительно прерывается — это позволяет минимизировать риск исполнения вредоносного кода.
+По возможности следует использовать <xref:System.Span%601> или <xref:System.ReadOnlySpan%601>, так как неуправляемый код менее безопасен, чем безопасные аналоги. Но даже при работе с указателями при использовании `stackalloc` в среде CLR автоматически включается обнаружение переполнения буфера. Если буфер переполнен, процесс незамедлительно прерывается — это позволяет минимизировать риск исполнения вредоносного кода.
 
 ## <a name="c-language-specification"></a>Спецификация языка C#
 
@@ -67,8 +74,8 @@ int* third = stackalloc[] { 1, 2, 3 };
 
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../../../csharp/language-reference/index.md)
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
-- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)
-- [Ключевые слова операторов](../../../csharp/language-reference/keywords/operator-keywords.md)
-- [Небезопасный код и указатели](../../../csharp/programming-guide/unsafe-code-pointers/index.md)
+- [Справочник по C#](../index.md)
+- [Руководство по программированию на C#](../../programming-guide/index.md)
+- [Ключевые слова в C#](index.md)
+- [Ключевые слова операторов](operator-keywords.md)
+- [Небезопасный код и указатели](../../programming-guide/unsafe-code-pointers/index.md)

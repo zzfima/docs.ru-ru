@@ -3,10 +3,10 @@ title: Практическое руководство. Как создать с
 ms.date: 03/30/2017
 ms.assetid: 53d094e2-6901-4aa1-88b8-024b27ccf78b
 ms.openlocfilehash: f5bb8df5936be1890bf744300daa7ccb68e341e3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337777"
 ---
 # <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Практическое руководство. Как создать службу рабочего процесса с помощью действий обмена сообщениями
@@ -91,6 +91,6 @@ ms.locfileid: "59337777"
   
 ## <a name="see-also"></a>См. также
 
-- [Службы рабочего процесса](../../../../docs/framework/wcf/feature-details/workflow-services.md)
+- [Службы рабочих процессов](../../../../docs/framework/wcf/feature-details/workflow-services.md)
 - [Общие сведения о размещении служб рабочих процессов](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)
 - [Действия обмена сообщениями](../../../../docs/framework/wcf/feature-details/messaging-activities.md)

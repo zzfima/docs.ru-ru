@@ -3,10 +3,10 @@ title: Обработка исключений и сбоев
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
 ms.openlocfilehash: c29b3900a36d8d5c41fee49c408a2e3fdf67680b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343432"
 ---
 # <a name="handling-exceptions-and-faults"></a>Обработка исключений и сбоев
@@ -20,7 +20,7 @@ ms.locfileid: "59343432"
   
 |Тип исключения|Значение|Внутреннее содержимое исключения|Стратегия восстановления|  
 |--------------------|-------------|-----------------------------|-----------------------|  
-|<xref:System.ServiceModel.AddressAlreadyInUseException>|Адрес конечной точки, указанный для прослушивания, уже используется.|Если имеется, предоставляет дополнительные сведения об ошибке транспорта, вызвавшей это исключение. Пример. <xref:System.IO.PipeException>, <xref:System.Net.HttpListenerException>, или <xref:System.Net.Sockets.SocketException>.|Повторите попытку с другим адресом.|  
+|<xref:System.ServiceModel.AddressAlreadyInUseException>|Адрес конечной точки, указанный для прослушивания, уже используется.|Если имеется, предоставляет дополнительные сведения об ошибке транспорта, вызвавшей это исключение. Пример. <xref:System.IO.PipeException>, <xref:System.Net.HttpListenerException> или <xref:System.Net.Sockets.SocketException>.|Повторите попытку с другим адресом.|  
 |<xref:System.ServiceModel.AddressAccessDeniedException>|Доступ к адресу конечной точки, указанному для прослушивания, не разрешен процессом.|Если имеется, предоставляет дополнительные сведения об ошибке транспорта, вызвавшей это исключение. Например, <xref:System.IO.PipeException> или <xref:System.Net.HttpListenerException>.|Повторите попытку с другими учетными данными.|  
 |<xref:System.ServiceModel.CommunicationObjectFaultedException>|<xref:System.ServiceModel.ICommunicationObject> Находится в состоянии Faulted (Дополнительные сведения см. в разделе [изменения состояния понимание](../../../../docs/framework/wcf/extending/understanding-state-changes.md)). Обратите внимание, когда объект с несколькими ожидающими вызовами переходит в состояние сбоя, только один вызов создает исключение, относящееся к сбою, а остальные вызовы создают исключение <xref:System.ServiceModel.CommunicationObjectFaultedException>. Это исключение обычно создается потому, что приложение пропускает какое-либо исключение и пытается использовать объект с уже имеющимся сбоем, возможно находящимся не в том потоке, который перехватил исходное исключение.|Если имеется, предоставляет сведения о внутреннем исключении.|Создать новый объект. Обратите внимание, что в зависимости от причины сбоя <xref:System.ServiceModel.ICommunicationObject>, могут потребоваться другие действия для восстановления.|  
 |<xref:System.ServiceModel.CommunicationObjectAbortedException>|<xref:System.ServiceModel.ICommunicationObject> Используется прерван (Дополнительные сведения см. в разделе [основные сведения о состоянии изменения](../../../../docs/framework/wcf/extending/understanding-state-changes.md)). Аналогично исключению <xref:System.ServiceModel.CommunicationObjectFaultedException>, это исключение вызвало для объекта событие <xref:System.ServiceModel.ICommunicationObject.Abort%2A>, возможно, из другого потока, и поэтому объект больше не используется.|Если имеется, предоставляет сведения о внутреннем исключении.|Создать новый объект. Обратите внимание, что в зависимости от причины прерывания <xref:System.ServiceModel.ICommunicationObject>, могут потребоваться другие действия для восстановления.|  
@@ -116,7 +116,7 @@ public class FaultReason
 ### <a name="generating-faults"></a>Создание ошибок  
  В данном разделе объясняется процесс создания ошибки в ответ на условие ошибки, обнаруженное в канале или свойстве сообщения, созданном каналом. Типичным примером является отправка обратно ошибки в ответ на сообщение запроса, содержащее недопустимые данные.  
   
- При создании ошибки пользовательский канал должен не отправлять ее напрямую, а вызвать исключение и позволить вышестоящему уровню решить, необходимо ли преобразовывать это исключение в ошибку и как ее отправлять. Для облегчения данного преобразования канал должен предоставить реализацию `FaultConverter`, которая может преобразовать исключение, вызываемое пользовательским каналом, в соответствующую ошибку. `FaultConverter` определяется следующим образом:  
+ При создании ошибки пользовательский канал должен не отправлять ее напрямую, а вызвать исключение и позволить вышестоящему уровню решить, необходимо ли преобразовывать это исключение в ошибку и как ее отправлять. Для облегчения данного преобразования канал должен предоставить реализацию `FaultConverter`, которая может преобразовать исключение, вызываемое пользовательским каналом, в соответствующую ошибку. `FaultConverter` определяется следующим образом.  
   
 ```  
 public class FaultConverter  
@@ -302,14 +302,14 @@ public class MessageFault
 }  
 ```  
   
- `IsMustUnderstandFault` Возвращает `true` Если ошибка является `mustUnderstand` сбоя. `WasHeaderNotUnderstood` Возвращает `true` Если заголовок с указанным именем и пространством имен включен в ошибку в качестве заголовка NotUnderstood.  В противном случае она возвращает `false`.  
+ `IsMustUnderstandFault` возвращает значение `true`, если это ошибка `mustUnderstand`. `WasHeaderNotUnderstood` возвращает значение `true`, если заголовок с указанным именем и пространством имен включен в ошибку в качестве заголовка NotUnderstood.  В противном случае она возвращает `false`.  
   
  Если канал выдает заголовок со значением MustUnderstand = true, уровень также должен реализовать шаблон API для создания исключения и преобразовать ошибки `mustUnderstand`, вызванные этим заголовком, в более полезное исключение, описанное ранее.  
   
 ## <a name="tracing"></a>Трассировка  
  Платформа .NET Framework обеспечивает механизм для трассировки выполнения программы, который полезен для диагностики приложений в производственной среде или периодических проблем, когда нет возможности использовать отладчик для пошаговой проверки кода. Основные компоненты этого механизма расположены в пространстве имен <xref:System.Diagnostics?displayProperty=nameWithType> и состоят из следующих элементов.  
   
--   <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType>, который является источником сведений трассировки для записи, <xref:System.Diagnostics.TraceListener?displayProperty=nameWithType>, являющийся абстрактным базовым классом для конкретных прослушивателей, получающие данные для трассировки из <xref:System.Diagnostics.TraceSource> и выводят их в место назначения прослушивателя. Например, <xref:System.Diagnostics.XmlWriterTraceListener> выводит данные трассировки в XML-файл. Наконец, класс <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> позволяет пользователю управлять детализацией трассировке и обычно задается в конфигурации.  
+-   <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType>, являющийся источником записываемых данных трассировки, <xref:System.Diagnostics.TraceListener?displayProperty=nameWithType>, являющийся абстрактным базовым классом для конкретных прослушивателей, которые получают подлежащие трассировке сведения из <xref:System.Diagnostics.TraceSource> и выводят их в назначение, зависящее от прослушивателя. Например, <xref:System.Diagnostics.XmlWriterTraceListener> выводит данные трассировки в XML-файл. Наконец, класс <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> позволяет пользователю управлять детализацией трассировке и обычно задается в конфигурации.  
   
 -   Помимо основных компонентов, можно использовать [программа Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) для просмотра и поиска WCF выполняет трассировку. Это средство предназначено специально для файлов трассировки создаются WCF и записанных с помощью <xref:System.Diagnostics.XmlWriterTraceListener>. На следующем рисунке показаны различные компоненты, задействованные с трассировке.  
   
@@ -368,7 +368,7 @@ udpsource.TraceInformation("UdpInputChannel received a message");
 ```  
   
 #### <a name="tracing-structured-data"></a>Трассировка структурированных данных  
- <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> имеет <xref:System.Diagnostics.TraceSource.TraceData%2A> метод, который принимает один или несколько объектов, должны быть включены в запись трассировки. Как правило, метод <xref:System.Object.ToString%2A?displayProperty=nameWithType> вызывается на каждом объекте, и результирующая строка записывается как часть записи. При использовании <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> для вывода данных трассировки можно передавать класс <xref:System.Xml.XPath.IXPathNavigable?displayProperty=nameWithType> в виде объекта данных в <xref:System.Diagnostics.TraceSource.TraceData%2A>. Результирующая запись трассировки содержит данные XML, предоставленные <xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>. Ниже приведен пример записи с данными приложения XML.  
+ В классе <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> имеется метод <xref:System.Diagnostics.TraceSource.TraceData%2A>, который принимает один или несколько объектов для включения в запись трассировки. Как правило, метод <xref:System.Object.ToString%2A?displayProperty=nameWithType> вызывается на каждом объекте, и результирующая строка записывается как часть записи. При использовании <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> для вывода данных трассировки можно передавать класс <xref:System.Xml.XPath.IXPathNavigable?displayProperty=nameWithType> в виде объекта данных в <xref:System.Diagnostics.TraceSource.TraceData%2A>. Результирующая запись трассировки содержит данные XML, предоставленные <xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>. Ниже приведен пример записи с данными приложения XML.  
   
 ```xml  
 <E2ETraceEvent xmlns="http://schemas.microsoft.com/2004/06/E2ETraceEvent">  

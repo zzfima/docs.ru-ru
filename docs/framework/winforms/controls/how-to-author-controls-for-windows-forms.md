@@ -7,10 +7,10 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating
 ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
 ms.openlocfilehash: 844d165cef05e46d25960f113af3bf99dd35e14f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340338"
 ---
 # <a name="how-to-author-controls-for-windows-forms"></a>Практическое руководство. Создание элементов управления для форм Windows Forms
@@ -53,10 +53,10 @@ ms.locfileid: "59340338"
   
 ## <a name="see-also"></a>См. также
 
-- [Пошаговое руководство. Создание составного элемента управления с помощью Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [Пошаговое руководство. Наследование элементов управления Windows Forms с помощью Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
+- [Пошаговое руководство: Создание составного элемента управления с помощью Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [Пошаговое руководство: Наследование элементов управления Windows Forms с помощью Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
 - [Практическое руководство. Наследование класса UserControl](how-to-inherit-from-the-usercontrol-class.md)
-- [Практическое руководство. Наследование класса Control](how-to-inherit-from-the-control-class.md)
-- [Практическое руководство. Наследование существующих элементов управления Windows Forms](how-to-inherit-from-existing-windows-forms-controls.md)
-- [Практическое руководство. Тестирование поведения элемента UserControl во время выполнения](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
-- [Создание собственных элементов управления](varieties-of-custom-controls.md)
+- [Практическое руководство. Наследовать от класса Control](how-to-inherit-from-the-control-class.md)
+- [Практическое руководство. Наследование Windows существующих элементов управления формы](how-to-inherit-from-existing-windows-forms-controls.md)
+- [Практическое руководство. Тестирование во время выполнения поведения элемента UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+- [Разновидности пользовательских элементов управления](varieties-of-custom-controls.md)

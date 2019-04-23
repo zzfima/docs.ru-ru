@@ -9,10 +9,10 @@ helpviewer_keywords:
 - drag and drop [Windows Forms], Windows Forms
 ms.assetid: eb66f6bf-4a7d-4c2d-b276-40fefb2d3b6c
 ms.openlocfilehash: f7551f28d07c9517865f60af99954eb40e57daa2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340728"
 ---
 # <a name="walkthrough-performing-a-drag-and-drop-operation-in-windows-forms"></a>Пошаговое руководство. Выполнение операции перетаскивания в Windows Forms
@@ -109,5 +109,5 @@ ms.locfileid: "59340728"
 ## <a name="see-also"></a>См. также
 
 - [Практическое руководство. Добавление данных в буфер обмена](how-to-add-data-to-the-clipboard.md)
-- [Практическое руководство. Извлечение данных из буфера обмена](how-to-retrieve-data-from-the-clipboard.md)
+- [Практическое руководство. Получить данные из буфера обмена](how-to-retrieve-data-from-the-clipboard.md)
 - [Операции перетаскивания и поддержка буфера обмена](drag-and-drop-operations-and-clipboard-support.md)

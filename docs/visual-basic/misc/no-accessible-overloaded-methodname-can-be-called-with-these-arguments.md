@@ -5,10 +5,10 @@ f1_keywords:
 - vbrAmbiguousMatch_NarrowingConversion1
 ms.assetid: 2fdbadb9-8ef1-404a-a2ed-ce5f5e55cfcb
 ms.openlocfilehash: 5c55a767b1ea61117940b9c6f2a741174297274a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337868"
 ---
 # <a name="no-accessible-overloaded-methodname-can-be-called-with-these-arguments-without-a-narrowing-conversion"></a>Нет доступных перегруженных '\<имя_метода >' может вызываться с этими аргументами без преобразования с сужением
@@ -23,4 +23,4 @@ ms.locfileid: "59337868"
 ## <a name="see-also"></a>См. также
 
 - [Передача аргументов по значению и по ссылке](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
-- [Widening and Narrowing Conversions](../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [Расширяющие и сужающие преобразования](../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

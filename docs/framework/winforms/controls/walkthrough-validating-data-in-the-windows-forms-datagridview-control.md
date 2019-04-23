@@ -13,10 +13,10 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: a4f1d015-2969-430c-8ea2-b612d179c290
 ms.openlocfilehash: a4bf0850b28b7101ba76f1c1fedc6633eccb81a1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59346058"
 ---
 # <a name="walkthrough-validating-data-in-the-windows-forms-datagridview-control"></a>Пошаговое руководство. Проверка данных в элементе управления DataGridView в Windows Forms
@@ -93,6 +93,6 @@ ms.locfileid: "59346058"
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
 - [Ввод данных с помощью элемента управления DataGridView в Windows Forms](data-entry-in-the-windows-forms-datagridview-control.md)
-- [Практическое руководство. Проверка данных в элементе управления DataGridView в Windows Forms](how-to-validate-data-in-the-windows-forms-datagridview-control.md)
-- [Пошаговое руководство. Обработка ошибок, связанных с вводом данных с помощью элемента управления DataGridView, в Windows Forms](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)
+- [Практическое руководство. Проверка данных в элементе управления DataGridView Windows Forms](how-to-validate-data-in-the-windows-forms-datagridview-control.md)
+- [Пошаговое руководство: Обработка ошибок, возникающих во время ввода данных в элементе управления DataGridView Windows Forms](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)
 - [Защита сведений о подключении](../../data/adonet/protecting-connection-information.md)

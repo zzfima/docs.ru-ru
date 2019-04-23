@@ -10,10 +10,10 @@ helpviewer_keywords:
 - GDI+, rendering existing images
 ms.assetid: c128b79a-3e31-47d8-9e66-3470f570a056
 ms.openlocfilehash: e038da545bb3f56cc757710bcaa93aa2c86bfa67
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59342554"
 ---
 # <a name="how-to-render-images-with-gdi"></a>Практическое руководство. Отрисовка изображений с использованием GDI+
@@ -84,9 +84,9 @@ ms.locfileid: "59342554"
 ## <a name="see-also"></a>См. также
 
 - [Приступая к программированию графики](getting-started-with-graphics-programming.md)
-- [Практическое руководство. Создание графических объектов для рисования](how-to-create-graphics-objects-for-drawing.md)
+- [Практическое руководство. Создание объектов Graphics для рисования](how-to-create-graphics-objects-for-drawing.md)
 - [Перья, линии и прямоугольники в GDI+](pens-lines-and-rectangles-in-gdi.md)
-- [Практическое руководство. Отрисовка текста в Windows Forms](how-to-draw-text-on-a-windows-form.md)
+- [Практическое руководство. Рисование текста в форме Windows](how-to-draw-text-on-a-windows-form.md)
 - [Объекты Graphics и Drawing в Windows Forms](graphics-and-drawing-in-windows-forms.md)
 - [Рисование линий и замкнутых фигур](/cpp/windows/drawing-lines-or-closed-figures-image-editor-for-icons)
 - [Редактор изображений для значков](/cpp/windows/image-editor-for-icons)

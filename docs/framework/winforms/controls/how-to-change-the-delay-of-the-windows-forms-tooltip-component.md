@@ -11,10 +11,10 @@ helpviewer_keywords:
 - examples [Windows Forms], tooltips
 ms.assetid: 08979ba7-dd84-477b-ab17-8d06e759be99
 ms.openlocfilehash: cf257cccd272c16c3d7c3d403456265444fc8ac8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59345486"
 ---
 # <a name="how-to-change-the-delay-of-the-windows-forms-tooltip-component"></a>Практическое руководство. Изменение значения задержки для компонента ToolTip в Windows Forms
@@ -45,5 +45,5 @@ ms.locfileid: "59345486"
 ## <a name="see-also"></a>См. также
 
 - [Общие сведения об элементе управления ToolTip](tooltip-component-overview-windows-forms.md)
-- [Практическое руководство. Определение всплывающих подсказок для элементов управления в Windows Forms во время разработки](how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)
+- [Практическое руководство. Определение всплывающих подсказок для элементов управления формы Windows во время разработки](how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)
 - [Компонент ToolTip](tooltip-component-windows-forms.md)

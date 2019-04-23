@@ -11,21 +11,21 @@ helpviewer_keywords:
 - request cache policies
 - cache [.NET Framework], location-based policies
 ms.assetid: 683bb88e-3411-4f46-9686-3411b6ba511c
-ms.openlocfilehash: 4ac0d6449fea4980154eef8c88d03d13230a6a62
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 06d458828c77f61e03d18f635ec00f6a7267bab8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514053"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59341872"
 ---
 # <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>Как выполнить Установка политики кэша для приложения на основе расположения
 Политики кэша на основе расположения позволяют приложению явным образом определить поведение кэша на основе расположения запрошенного ресурса. В этом разделе описана установка политики кэша программным способом. Сведения об установке политики для приложения с помощью файлов конфигурации см. в разделе [Элемент \<requestCaching> (сетевые параметры)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md).  
   
 ### <a name="to-set-a-location-based-cache-policy-for-an-application"></a>Установка политики кэша для приложения на основе расположения  
   
-1.  Создайте объект <xref:System.Net.Cache.RequestCachePolicy> или <xref:System.Net.Cache.HttpRequestCachePolicy>.  
+1. Создайте объект <xref:System.Net.Cache.RequestCachePolicy> или <xref:System.Net.Cache.HttpRequestCachePolicy>.  
   
-2.  Установите этот объект политики как объект по умолчанию для домена приложения.  
+2. Установите этот объект политики как объект по умолчанию для домена приложения.  
   
 ### <a name="to-set-a-policy-that-takes-requested-resources-from-a-cache"></a>Установка политики, которая принимает запрошенные ресурсы из кэша  
   
@@ -154,6 +154,7 @@ ms.locfileid: "54514053"
     ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Управление кэшем для сетевых приложений](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
 - [Политика кэша](../../../docs/framework/network-programming/cache-policy.md)
 - [Политики кэша на основе расположения](../../../docs/framework/network-programming/location-based-cache-policies.md)

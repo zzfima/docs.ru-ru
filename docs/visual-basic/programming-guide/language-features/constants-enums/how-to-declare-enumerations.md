@@ -7,16 +7,16 @@ helpviewer_keywords:
 - declaring enumerations [Visual Basic]
 ms.assetid: db4ca1c3-f429-4c81-ae81-29e0157b29fd
 ms.openlocfilehash: f168d6d9cd6970353e75fa35a7e52cc7156fda72
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343346"
 ---
 # <a name="how-to-declare-enumerations-visual-basic"></a>Практическое руководство. Объявление перечисления (Visual Basic)
 Создать перечисление с `Enum` инструкцию в раздел объявлений класса или модуля. Не удается объявить перечисление в методе. Чтобы указать соответствующий уровень доступа, используйте `Private`, `Protected`, `Friend`, или `Public`.  
   
- `Enum` Тип имеет имя, базовый тип и набор полей, каждый из которых представляет константу. Имя должно быть допустимым квалификатором Visual Basic .NET. Базовый тип должен быть одним из целочисленных типов —`Byte`, `Short`, `Long` или `Integer`. `Integer` значение по умолчанию. Перечисления всегда строго типизированы и не являются взаимозаменяемыми с целочисленными типами.  
+ `Enum` Тип имеет имя, базовый тип и набор полей, каждый из которых представляет константу. Имя должно быть допустимым квалификатором Visual Basic .NET. Базовый тип должен быть одним из целочисленных типов —`Byte`, `Short`, `Long` или `Integer`. Значение по умолчанию — `Integer`. Перечисления всегда строго типизированы и не являются взаимозаменяемыми с целочисленными типами.  
   
  Перечисления не могут иметь значения с плавающей запятой. Если перечислению присваивается значение с плавающей запятой с `Option Strict On`, приведет к ошибке компилятора. Если `Option Strict` — `Off`, значение автоматически преобразуется в `Enum` типа.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "59343346"
 ## <a name="see-also"></a>См. также
 
 - [Перечисления и уточнение имен](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
-- [Практическое руководство. Ссылка на элемент перечисления](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)
+- [Практическое руководство. Ссылка на член перечисления](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)
 - [Практическое руководство. Перебор элементов перечисления в Visual Basic](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)
 - [Практическое руководство. Определение строки, связанной со значением из перечисления](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)
 - [Когда следует использовать перечисление](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)

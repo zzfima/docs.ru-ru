@@ -3,12 +3,12 @@ title: Введение в Docker
 description: Эта статья содержит общие сведения об использовании Docker в контексте приложения .NET Core.
 ms.date: 03/20/2019
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 725d8301a27f1109c85a89945f0fb8403e255ab4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: acf1307c241d9462278bc0fce5cf59fdde0750a3
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58817259"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480733"
 ---
 # <a name="introduction-to-net-and-docker"></a>Введение в .NET и Docker
 
@@ -58,6 +58,9 @@ Docker содержит общедоступный реестр, размеще�
 * [Служба приложений Azure](https://azure.microsoft.com/services/app-service/containers/)\
 Развертывание веб-приложений или API с помощью контейнеров Linux в среде PaaS.
 
+* [Экземпляры контейнеров Azure](https://azure.microsoft.com/services/container-instances/)\
+Разместите контейнер в облаке без служб управления более высокого уровня.
+
 * [Пакетная служба Azure](https://azure.microsoft.com/services/batch/)\
 Выполнение повторяющихся вычислительных заданий с помощью контейнеров.
 
@@ -69,5 +72,5 @@ Docker содержит общедоступный реестр, размеще�
 
 ## <a name="next-steps"></a>Следующие шаги
 
-* [Узнать больше о контейнеризации приложения .NET Core](build-docker-netcore-container.md)
+* [Узнайте о том, как контейнеризировать приложение .NET Core.](build-docker-netcore-container.md)
 * [Ознакомьтесь с руководством по микрослужбам ASP.NET Core.](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)

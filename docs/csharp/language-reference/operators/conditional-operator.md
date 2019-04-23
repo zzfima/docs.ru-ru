@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: 210b7cabb658c6f068d9ab34c83050ad6267e426
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c03fa202b413c98230ba70ca7a0b709d7865cb91
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704912"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427387"
 ---
 # <a name="-operator-c-reference"></a>?: Оператор (ссылка C#)
 
@@ -24,12 +24,12 @@ ms.locfileid: "57704912"
 Для условного оператора используется следующий синтаксис:
 
 ```csharp
-condition ? consequence : alternative
+condition ? consequent : alternative
 ```
 
-Выражение `condition` должно принимать значение `true` или `false`. Если `condition` принимает значение `true`, вычисляется выражение `consequence`, а результат становится результатом операции. Если `condition` принимает значение `false`, вычисляется выражение `alternative`, а результат становится результатом операции. Вычисляется только выражение `consequence` или `alternative`.
+Выражение `condition` должно принимать значение `true` или `false`. Если `condition` принимает значение `true`, вычисляется выражение `consequent`, а результат становится результатом операции. Если `condition` принимает значение `false`, вычисляется выражение `alternative`, а результат становится результатом операции. Вычисляется только выражение `consequent` или `alternative`.
 
-Параметры `consequence` и `alternative` должны быть одинакового типа, или должно существовать неявное преобразование из одного типа в другой.
+Параметры `consequent` и `alternative` должны быть одинакового типа, или должно существовать неявное преобразование из одного типа в другой.
 
 Условный оператор имеет правую ассоциативность, то есть выражение формы.
 
@@ -54,12 +54,12 @@ a ? b : (c ? d : e)
 Для условного выражения REF используется следующий синтаксис:
 
 ```csharp
-condition ? ref consequence : ref alternative
+condition ? ref consequent : ref alternative
 ```
 
-Подобно исходному условному оператору, условное выражение REF вычисляет только одно из двух выражений: `consequence` или `alternative`.
+Подобно исходному условному оператору, условное выражение REF вычисляет только одно из двух выражений: `consequent` или `alternative`.
 
-Для условного выражения REF тип `consequence` и `alternative` должны совпадать.
+Для условного выражения REF тип `consequent` и `alternative` должны совпадать.
 
 В следующем примере иллюстрируется использование условного выражения REF:
 
@@ -85,8 +85,8 @@ condition ? ref consequence : ref alternative
 
 - [Справочник по C#](../index.md)
 - [Руководство по программированию на C#](../../programming-guide/index.md)
-- [Операторы в C#](index.md)
+- [Операторы C#](index.md)
 - [if-else (Справочник по C#)](../keywords/if-else.md)
-- [Операторы ?. и ?[]](null-conditional-operators.md)
+- [?. Операторы ?. и ?[]](null-conditional-operators.md)
 - [?? Оператор](null-coalescing-operator.md)
 - [Ключевое слово ref](../keywords/ref.md)

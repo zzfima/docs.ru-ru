@@ -7,10 +7,10 @@ description: Сведения об использовании .NET для соз
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
 ms.openlocfilehash: 61b3e6f2aae2ad2633f82360b227a876f685fcc1
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59427491"
 ---
 <!-- markdownlint-disable MD033 -->
@@ -77,10 +77,10 @@ ms.locfileid: "59427491"
         <h1>Документация по .NET</h1>
         <ul class="pivots">
             <li>
-                <a data-default="true" href="#docs">Docs</a>
+                <a data-default="true" href="#docs">Документы</a>
                 <ul id="docs">
                     <li>
-                        <a href="#getstarted">Приступая к работе</a>
+                        <a href="#getstarted">Начало работы</a>
                         <ul id="getstarted" class="cardsF">
                             <li>
                                 <div class="cardSize">
@@ -93,7 +93,7 @@ ms.locfileid: "59427491"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/standard/">Руководство по .NET</a></h3>
-                                                <p><a href="/dotnet/standard/get-started">Приступая к работе</a></p>
+                                                <p><a href="/dotnet/standard/get-started">Начало работы</a></p>
                                                 <p><a href="/dotnet/standard/tour">Обзор .NET</a></p>
                                                 <p><a href="/dotnet/standard/components">Основные понятия архитектуры .NET</a></p>
                                             </div>
@@ -112,7 +112,7 @@ ms.locfileid: "59427491"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/core">Руководство по .NET Core</a></h3>
-                                                <p><a href="/dotnet/core/get-started">Приступая к работе</a></p>
+                                                <p><a href="/dotnet/core/get-started">Начало работы</a></p>
                                                 <p><a href="/dotnet/core/tutorials">Учебники</a></p>
                                                 <p><a href="/dotnet/core/porting">Перенос из .NET Framework</a></p>
                                                 <p><a href="/aspnet/core/getting-started">ASP.NET Core</a></p>
@@ -133,7 +133,7 @@ ms.locfileid: "59427491"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/framework/">Руководство по .NET Framework</a></h3>
-                                                <p><a href="/dotnet/framework/get-started/">Приступая к работе</a></p>
+                                                <p><a href="/dotnet/framework/get-started/">Начало работы</a></p>
                                                 <p><a href="/dotnet/framework/development-guide">Руководство по разработке</a></p>
                                                 <p><a href="/dotnet/framework/develop-client-apps">Разработка клиентов</a></p>
                                                 <p><a href="/aspnet/#pivot=aspnet">ASP.NET</a></p>
@@ -172,10 +172,10 @@ ms.locfileid: "59427491"
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/csharp">Руководство по языку C#</a></h3>
-                                                <p><a href="/dotnet/csharp/getting-started">Приступая к работе</a></p>
+                                                <h3><a href="/dotnet/csharp">Руководство по языку C#</a></h3>
+                                                <p><a href="/dotnet/csharp/getting-started">Начало работы</a></p>
                                                 <p><a href="/dotnet/csharp/tour-of-csharp">Обзор языка C#</a></p>
-                                                <p><a href="/dotnet/csharp/whats-new">Новые возможности C#</a></p>
+                                                <p><a href="/dotnet/csharp/whats-new">What's New in C#</a> (Новые возможности C#)</p>
                                                 <p><a href="/dotnet/csharp/language-reference">Справочник по языку C#</a></p>
                                             </div>
                                         </div>
@@ -192,10 +192,10 @@ ms.locfileid: "59427491"
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/fsharp">Руководство по языку F#</a></h3>
-                                                <p><a href="/dotnet/fsharp/tutorials/getting-started">Приступая к работе</a></p>
-                                                <p><a href="/dotnet/fsharp/tour">Обзор языка F#</a></p>
-                                                <p><a href="/dotnet/fsharp/language-reference">Справочник по языку F#</a></p>
+                                                <h3><a href="/dotnet/fsharp">Руководство по языку F#</a></h3>
+                                                <p><a href="/dotnet/fsharp/tutorials/getting-started">Начало работы</a></p>
+                                                <p><a href="/dotnet/fsharp/tour">Обзор языка F#</a></p>
+                                                <p><a href="/dotnet/fsharp/language-reference">Справочник по языку F#</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -212,7 +212,7 @@ ms.locfileid: "59427491"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/visual-basic">Руководство по Visual Basic</a></h3>
-                                                <p><a href="/dotnet/visual-basic/getting-started">Приступая к работе</a></p>
+                                                <p><a href="/dotnet/visual-basic/getting-started">Начало работы</a></p>
                                                 <p><a href="/dotnet/visual-basic/walkthroughs">Обзор Visual Basic</a></p>
                                                 <p><a href="/dotnet/visual-basic/language-reference">Справочник по языку Visual Basic</a></p>
                                             </div>
@@ -249,7 +249,7 @@ ms.locfileid: "59427491"
                         </ul>
                     </li>
                     <li>
-                        <a href="#web">Интернет</a>
+                        <a href="#web">Веб-приложения</a>
                         <ul id="web" class="cardsC">
                             <li>
                                 <a href="https://www.asp.net/get-started">
@@ -369,7 +369,7 @@ ms.locfileid: "59427491"
                         </ul>
                     </li>
                     <li>
-                        <a href="#cloud">Облако</a>
+                        <a href="#cloud">Облачные службы</a>
                         <ul id="cloud" class="cardsC">
                             <li>
                                 <a href="/dotnet/azure/">
@@ -434,7 +434,7 @@ ms.locfileid: "59427491"
                         </ul>
                     </li>
                     <li>
-                        <a href="#mobile">Мобильный</a>
+                        <a href="#mobile">Мобильные приложения</a>
                         <ul id="mobile" class="cardsC">
                             <li>
                                 <a href="/xamarin/ios">
@@ -496,7 +496,7 @@ ms.locfileid: "59427491"
                         </ul>
                     </li>
                     <li>
-                        <a href="#desktop">Рабочий стол</a>
+                        <a href="#desktop">Классические приложения</a>
                         <ul id="desktop" class="cardsC">
                             <li>
                                 <a href="/uwp">
@@ -663,7 +663,7 @@ ms.locfileid: "59427491"
                         </ul>
                     </li>
                     <li>
-                        <a href="#ml-ai">Машинное обучение и ИИ</a>
+                        <a href="#ml-ai">Машинное обучение и искусственный интеллект</a>
                         <ul id="ml-ai" class="cardsC">
                             <li>
                                 <a href="/dotnet/machine-learning">

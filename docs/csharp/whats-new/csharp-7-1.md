@@ -1,32 +1,34 @@
 ---
 title: Новые возможности C# 7.1
 description: Обзор новых возможностей в C# 7.1.
-ms.date: 08/16/2017
-ms.openlocfilehash: 565db102284424f9d8f6fa04ec9c74b52c9da0e6
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.date: 04/09/2019
+ms.openlocfilehash: c79c8576f9cbbd921ebf30bd84ee5a817d6dc6e7
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728658"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480967"
 ---
 # <a name="whats-new-in-c-71"></a>Новые возможности C# 7.1
 
 C# 7.1 — это первая доработанная версия для C#. Это означает, что новые выпуски для этого языка стали выходить чаще. Вы сможете использовать новые возможности раньше. В идеале — как только функция будет готова. В C# 7.1 можно настраивать компилятор в соответствии с указанной версией языка. Это позволяет отделить решение обновить средства от решения обновить версию языка.
 
-В C# 7.1 добавлен элемент конфигурации [выбора версии языка](../language-reference/configure-language-version.md), три новые возможности языка и новое поведение компилятора.
+В C# 7.1 добавлен элемент конфигурации [выбора версии языка](../language-reference/configure-language-version.md), три новые возможности языка и новое поведение компилятора.
 
 Новые языковые функции в этом выпуске
 
-* [`async` метод `Main`](#async-main)
+* [`async` `Main` метод](#async-main)
   - Точка входа для приложения может иметь модификатор `async`.
-* [Литеральные выражения `default`](#default-literal-expressions)
+* [`default` Литеральные выражения](#default-literal-expressions)
   - Литеральные выражения по умолчанию можно использовать в выражениях значения по умолчанию, если можно вывести тип целевого объекта.
 * [Выводимые имена элементов кортежа](#inferred-tuple-element-names)
   - Имена элементов кортежа часто можно вывести из инициализации кортежа.
+* [Сопоставление шаблонов в параметрах универсального типа](#pattern-matching-on-generic-type-parameters)
+  - Выражения сопоставления шаблонов можно использовать с переменными, тип которых является параметром универсального типа.
 
 Наконец, у компилятора есть два параметра `/refout` и `/refonly`, которые управляют [созданием базовой сборки](#reference-assembly-generation).
 
-Чтобы использовать новые возможности доработанной версии, [настройте версию языка компилятора](../language-reference/configure-language-version.md) и выберите версию.
+Чтобы использовать новые возможности доработанного выпуска, [настройте версию языка компилятора](../language-reference/configure-language-version.md), выбрав необходимую.
 
 ## <a name="async-main"></a>Async main
 
@@ -60,7 +62,7 @@ static async Task Main()
 }
 ```
 
-Дополнительные сведения см. в разделе [async main](../programming-guide/main-and-command-args/index.md) в руководстве по программированию.
+См. подробнее в описании [async main](../programming-guide/main-and-command-args/index.md) в руководстве по программированию.
 
 ## <a name="default-literal-expressions"></a>Литеральные выражения по умолчанию
 
@@ -77,7 +79,7 @@ Func<string, bool> whereClause = default(Func<string, bool>);
 Func<string, bool> whereClause = default;
 ```
 
-Дополнительные сведения об этом усовершенствовании см. в разделе о [выражениях значения по умолчанию](../programming-guide/statements-expressions-operators/default-value-expressions.md) в руководстве по программированию на C#.
+См. подробнее об этом усовершенствовании в описании [выражений значений по умолчанию](../programming-guide/statements-expressions-operators/default-value-expressions.md) в руководстве по программированию на C#.
 
 В этом усовершенствовании также изменены некоторые правила синтаксического анализа для [ключевого слова default](../language-reference/keywords/default.md).
 
@@ -99,9 +101,13 @@ string label = "Colors used in the map";
 var pair = (count, label); // element names are "count" and "label"
 ```
 
-Дополнительные сведения об этой функции см. в разделе [Кортежи](../tuples.md).
+См. подробнее об этой функции в описании [кортежей](../tuples.md).
+
+## <a name="pattern-matching-on-generic-type-parameters"></a>Сопоставление шаблонов в параметрах универсального типа
+
+Начиная с версии C# 7.1, выражение шаблона для шаблона типа `is` и `switch` может быть типом параметра универсального типа. Эта возможность особенно полезна при проверке типов, которые могут представлять типы `struct` или `class`, когда вы хотите избежать упаковки-преобразования.
 
 ## <a name="reference-assembly-generation"></a>Создание базовой сборки
 
 Существует два новых параметра компилятора, которые создают *сборки для справки*: [/refout](../language-reference/compiler-options/refout-compiler-option.md) и [/refonly](../language-reference/compiler-options/refonly-compiler-option.md).
-В соответствующих разделах подробно рассматриваются эти параметры и базовые сборки.
+В соответствующих статьях подробно рассматриваются эти параметры и базовые сборки.

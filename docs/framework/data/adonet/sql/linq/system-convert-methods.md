@@ -3,15 +3,15 @@ title: Методы System.Convert
 ms.date: 03/30/2017
 ms.assetid: 3ca6c5b6-ea5d-4ab0-b675-f082135b342c
 ms.openlocfilehash: 9836820f2c084a80fcc0a4856f20597716344dfd
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59480655"
 ---
 # <a name="systemconvert-methods"></a>Методы System.Convert
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] не поддерживает следующие <xref:System.Convert> методы.
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] не поддерживает следующие методы <xref:System.Convert>.
 
 - Версии с параметром <xref:System.IFormatProvider>.
 
@@ -27,9 +27,9 @@ ms.locfileid: "59480655"
 
 - Следующие методы:
 
-  - `public static <Type2> To<Type2>(<Type1> value);` где
+  - `public static <Type2> To<Type2>(<Type1> value);`, где
 
-    `Type1` и `Type2` имеют тип `sbyte`, `uint`, `ulong`, или `ushort`.
+    `Type1` и `Type2` имеют тип `sbyte`, `uint`, `ulong` или `ushort`.
 
   - C#:
 

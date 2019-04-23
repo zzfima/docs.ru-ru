@@ -14,12 +14,12 @@ ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 16154ff6b2fcf6c537126b6ced03c45f6746b57a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e8edc747c003cd5527df509af83325816671ddfb
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649405"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59346110"
 ---
 # <a name="character-encoding-in-net"></a>Кодировка символов в .NET
 Символы — это абстрактные сущности, которые могут быть представлены различными способами. Кодировка — это система, где с каждым символом поддерживаемого набора символов сопоставляется значение, представляющее этот символ. Например, азбука Морзе — это кодировка, в которой каждому символу латинского алфавита соответствует набор точек и тире, которые можно передавать с помощью телеграфа. Компьютерная кодировка — это система, где с каждым символом поддерживаемого набора символов сопоставлено числовое значение, представляющее этот символ. Кодировка состоит из двух компонентов:  
@@ -215,11 +215,11 @@ ms.locfileid: "54649405"
   
  Кроме того, можно реализовать пользовательское решение, использующее резервную стратегию наилучшего соответствия или стратегию исключения, выполнив указанные ниже действия.  
   
-1.  Создайте класс, производный от <xref:System.Text.EncoderFallback> , для операций кодирования и класс, производный от <xref:System.Text.DecoderFallback> , для операций декодирования.  
+1. Создайте класс, производный от <xref:System.Text.EncoderFallback> , для операций кодирования и класс, производный от <xref:System.Text.DecoderFallback> , для операций декодирования.  
   
-2.  Создайте класс, производный от <xref:System.Text.EncoderFallbackBuffer> , для операций кодирования и класс, производный от <xref:System.Text.DecoderFallbackBuffer> , для операций декодирования.  
+2. Создайте класс, производный от <xref:System.Text.EncoderFallbackBuffer> , для операций кодирования и класс, производный от <xref:System.Text.DecoderFallbackBuffer> , для операций декодирования.  
   
-3.  Для задания резервной стратегии исключения, если классы <xref:System.Text.EncoderFallbackException> и <xref:System.Text.DecoderFallbackException> не отвечают вашим требованиям, следует наследовать класс от объекта исключения, например <xref:System.Exception> или <xref:System.ArgumentException>.  
+3. Для задания резервной стратегии исключения, если классы <xref:System.Text.EncoderFallbackException> и <xref:System.Text.DecoderFallbackException> не отвечают вашим требованиям, следует наследовать класс от объекта исключения, например <xref:System.Exception> или <xref:System.ArgumentException>.  
   
 ### <a name="deriving-from-encoderfallback-or-decoderfallback"></a>Наследование от класса EncoderFallback или класса DecoderFallback  
  Для реализации пользовательской резервной стратегии необходимо создать класс, наследующий от <xref:System.Text.EncoderFallback> для операций кодирования и от класса <xref:System.Text.DecoderFallback> для операций декодирования. Экземпляры этих классов передаются в метод <xref:System.Text.Encoding.GetEncoding%28System.String%2CSystem.Text.EncoderFallback%2CSystem.Text.DecoderFallback%29?displayProperty=nameWithType> и служат посредниками между классом кодировки и реализацией резервной стратегии.  

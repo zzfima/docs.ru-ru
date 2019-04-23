@@ -13,10 +13,10 @@ helpviewer_keywords:
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: 78a58a8d-1041-4e38-9219-4096fa6a5c5c
 ms.openlocfilehash: ad4384f8cc2a1d0c15f8c7681e6e5d8bf75e4451
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343692"
 ---
 # <a name="how-to-add-buttons-to-a-toolbar-control"></a>Практическое руководство. Добавление кнопок в элемент управления ToolBar
@@ -151,7 +151,7 @@ ms.locfileid: "59343692"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Windows.Forms.ToolBar>
-- [Практическое руководство. Определение значка для кнопки элемента управления ToolBar](how-to-define-an-icon-for-a-toolbar-button.md)
-- [Практическое руководство. Генерирование событий меню для кнопок элемента управления Toolbar](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [Практическое руководство. Определение значка для кнопки панели инструментов](how-to-define-an-icon-for-a-toolbar-button.md)
+- [Практическое руководство. Триггер событий меню для кнопок панели инструментов](how-to-trigger-menu-events-for-toolbar-buttons.md)
 - [Общие сведения об элементе управления ToolBar](toolbar-control-overview-windows-forms.md)
 - [Элемент управления ToolBar](toolbar-control-windows-forms.md)

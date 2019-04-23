@@ -8,12 +8,12 @@ helpviewer_keywords:
 - where keyword [C#]
 - where clause [C#]
 ms.assetid: 7f9bf952-7744-4f91-b676-cddb55d107c3
-ms.openlocfilehash: 182de6ebf9d22da644f1d19566e8cab0052e8521
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 470fcfde7a5e68887fa3a6e99cb8881073ffeba5
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221691"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59341391"
 ---
 # <a name="where-clause-c-reference"></a>Предложение where (Справочник по C#)
 
@@ -27,7 +27,7 @@ ms.locfileid: "54221691"
 
 ## <a name="example"></a>Пример
 
-В одном предложении `where` можно указать необходимое число предикатов, используя операторы [&&](../operators/conditional-and-operator.md) и [&#124;&#124;](../operators/conditional-or-operator.md). В следующем примере запрос определяет два предиката, позволяющие отобрать только четные номера меньше пяти.
+В одном предложении `where` можно указать необходимое число предикатов, используя операторы [&&](../operators/boolean-logical-operators.md#conditional-logical-and-operator-) и [&#124;&#124;](../operators/boolean-logical-operators.md#conditional-logical-or-operator-). В следующем примере запрос определяет два предиката, позволяющие отобрать только четные номера меньше пяти.
 
 [!code-csharp[cscsrefQueryKeywords#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Where.cs#6)]  
 

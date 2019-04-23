@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
 ms.openlocfilehash: 61f61962e06e94572b7eb564ab08b829ba2c864f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344875"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>Пользовательские составные конструкторы - средство представления элементов рабочего процесса
@@ -32,15 +32,15 @@ ms.locfileid: "59344875"
 ## <a name="sample-highlights"></a>Описание образца
  Код для этого образца показывает следующее.
 
--   Для создания действия конструктора:  `Parallel`
+-   Действие, для которого построен конструктор: `Parallel`
 
 -   Создание настраиваемого конструктора действий с <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>. Некоторые замечания.
 
-    -   Обратите внимание на использование привязки данных WPF для привязки к `ModelItem.Branches`. `ModelItem` Свойство `WorkflowElementDesigner` , относится к базовому объекту которого используется конструктор, в этом случае наш `Parallel`.
+    -   Обратите внимание на использование привязки данных WPF для привязки к `ModelItem.Branches`. `ModelItem` - свойство `WorkflowElementDesigner`, которое относится к базовому объекту, для которого используется конструктор, в данном случае - `Parallel`.
 
     -   Шаблон <xref:System.Activities.Presentation.WorkflowItemsPresenter.SpacerTemplate?displayProperty=nameWithType> может использоваться для указания видимого изображения, отображаемого между отдельными элементами коллекции.
 
-    -   <xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> — Это шаблон, который можно предоставить для определения макета элементов в коллекции. В данном случае используется горизонтальный элемент StackPanel.
+    -   <xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> является шаблоном, который может быть предоставлен для определения макета элементов в коллекции. В данном случае используется горизонтальный элемент StackPanel.
 
  Это показано в следующем примере кода.
 

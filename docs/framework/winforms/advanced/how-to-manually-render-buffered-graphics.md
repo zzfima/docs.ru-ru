@@ -9,10 +9,10 @@ helpviewer_keywords:
 - graphics [Windows Forms], rendering
 ms.assetid: 5192295e-bd8e-45f7-8bd6-5c4f6bd21e61
 ms.openlocfilehash: 48dd1d76a42661df6ba642c032c991be4d6a2900
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59339935"
 ---
 # <a name="how-to-manually-render-buffered-graphics"></a>Практическое руководство. Отрисовка буферизированной графики вручную
@@ -50,4 +50,4 @@ ms.locfileid: "59339935"
 - <xref:System.Drawing.BufferedGraphicsContext>
 - <xref:System.Drawing.BufferedGraphics>
 - [Двойная буферизация графики](double-buffered-graphics.md)
-- [Практическое руководство. Управление буферизацией графики вручную](how-to-manually-manage-buffered-graphics.md)
+- [Практическое руководство. Управление буферизацией графики](how-to-manually-manage-buffered-graphics.md)

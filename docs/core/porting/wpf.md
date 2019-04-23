@@ -5,12 +5,12 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/27/2019
 ms.custom: ''
-ms.openlocfilehash: 29ea308ee5147cfb18df312887e933615e349803
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 5c7e3aca0a473abb831693244d1b194985f2ef7f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58677558"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342210"
 ---
 # <a name="how-to-port-a-wpf-desktop-app-to-net-core"></a>Практическое руководство. Портирование классического приложения WPF в .NET Core
 
@@ -27,7 +27,7 @@ ms.locfileid: "58677558"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-- [Visual Studio 2019](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=wpf+core) для выполнения конструкторских задач.
+- [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) для выполнения конструкторских задач.
 
   Установите следующие рабочие нагрузки Visual Studio:
   - Разработка классических приложений .NET
@@ -37,9 +37,8 @@ ms.locfileid: "58677558"
 - Код проекта должен быть написан на C#. 
 - Установите последнюю предварительную версию [.NET Core 3.0](https://aka.ms/netcore3download).
 
-
 >[!NOTE]
->**Visual Studio 2017** не поддерживает проекты .NET Core 3.0. **Visual Studio 2019 (предварительная версия и релиз-кандидат)** поддерживает проекты .NET Core 3.0, но пока не поддерживает визуальный конструктор для проектов WPF в .NET Core 3.0. Чтобы использовать визуальный конструктор, необходимо, чтобы решение проекта WPF в .NET имело общие файлы с проектом .NET Core.
+>**Visual Studio 2017** не поддерживает проекты .NET Core 3.0. **Visual Studio 2019** поддерживает проекты .NET Core 3.0, но пока не поддерживает визуальный конструктор для проектов WPF в .NET Core 3.0. Чтобы использовать визуальный конструктор, необходимо, чтобы решение проекта WPF в .NET имело общие файлы с проектом .NET Core.
 
 ### <a name="consider"></a>Consider
 
@@ -61,7 +60,7 @@ ms.locfileid: "58677558"
 
     Рекомендуется обновить пакеты NuGet до последней версии перед переносом. Если ваше приложение ссылается на пакеты NuGet, обновите их до последней версии. Убедитесь, что сборка приложения выполняется успешно. Если после обновления возникают ошибки пакетов, установите предыдущую версию пакетов, которая не нарушает работу вашего кода.
 
-01. Visual Studio 2019 (предварительная версия и релиз-кандидат) пока не поддерживает конструктор WPF для .NET Core 3.0.
+01. Visual Studio 2019 пока не поддерживает конструктор WPF для .NET Core 3.0.
 
     Вам необходимо сохранить существующий файл проекта WPF для .NET Framework, если вы хотите использовать конструктор WPF в Visual Studio.
 
@@ -216,7 +215,7 @@ dotnet add .\MyWPFAppCore\MyWPFCore.csproj package Microsoft.Windows.Compatibili
 
 ## <a name="wpf-designer"></a>Конструктор WPF
 
-Как упоминалось выше, Visual Studio 2019 (предварительная версия и релиз-кандидат) поддерживает конструктор WPF только в проектах .NET Framework. Создав параллельный проект .NET Core, можно проверить его работу в .NET Core, используя при этом конструктор форм в проекте .NET Framework. В файле решения будут присутствовать оба проекта — NET Framework и .NET Core. Добавляйте и создавайте формы и элементы управления в проекте .NET Framework, а стандартные маски файлов, добавленные нами в проекты .NET Core, позволят автоматически добавлять новые или измененные файлы в проекты .NET Core.
+Как упоминалось выше, Visual Studio 2019 поддерживает конструктор WPF только в проектах .NET Framework. Создав параллельный проект .NET Core, можно проверить его работу в .NET Core, используя при этом конструктор форм в проекте .NET Framework. В файле решения будут присутствовать оба проекта — NET Framework и .NET Core. Добавляйте и создавайте формы и элементы управления в проекте .NET Framework, а стандартные маски файлов, добавленные нами в проекты .NET Core, позволят автоматически добавлять новые или измененные файлы в проекты .NET Core.
 
 Когда в Visual Studio 2019 будет добавлена поддержка конструктора WPF, можно будет скопировать и вставить содержимое файла проекта .NET Core в файл проекта .NET Framework. Затем можно удалить стандартные маски файлов, добавленные с помощью элементов `<Source>` и `<EmbeddedResource>`. Исправьте пути ссылок проекта, используемых приложением. Это позволит полноценно преобразовать проект .NET Framework в проект .NET Core.
  

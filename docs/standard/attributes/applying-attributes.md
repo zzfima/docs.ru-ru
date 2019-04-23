@@ -13,10 +13,10 @@ ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2a2e34d0544c8105b539d36a4231c6efb4df0ee5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337699"
 ---
 # <a name="applying-attributes"></a>Применение атрибутов
@@ -57,5 +57,5 @@ ms.locfileid: "59337699"
 - [Атрибуты](../../../docs/standard/attributes/index.md)
 - [Извлечение информации, сохраненной в атрибуте](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)
 - [Основные понятия](/cpp/windows/attributed-programming-concepts)
-- [Атрибуты (C#)](../../csharp/programming-guide/concepts/attributes/index.md)
+- [Атрибуты (C#)](../../csharp/programming-guide/concepts/attributes/index.md)
 - [Общие сведения об атрибутах (Visual Basic)](../../visual-basic/programming-guide/concepts/attributes/index.md)

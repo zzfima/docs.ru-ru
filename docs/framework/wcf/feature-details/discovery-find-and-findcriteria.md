@@ -3,10 +3,10 @@ title: Объекты обнаружения Find и FindCriteria
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
 ms.openlocfilehash: 6efbfe34bbe5b15696d247c291f1d88006a53a36
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59345785"
 ---
 # <a name="discovery-find-and-findcriteria"></a>Объекты обнаружения Find и FindCriteria
@@ -16,36 +16,36 @@ ms.locfileid: "59345785"
  Класс <xref:System.ServiceModel.Discovery.DiscoveryClient> обеспечивает механизм выполнения операции поиска и упрощает выполнение операций клиентов обнаружений. Он содержит метод <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A>, который выполняет операцию синхронного поиска с блокировкой, и метод <xref:System.ServiceModel.Discovery.DiscoveryClient.FindAsync%2A>, который инициирует асинхронную операцию поиска без блокировки. Оба метода используют параметр <xref:System.ServiceModel.Discovery.FindCriteria> и передают результаты пользователю с помощью объекта <xref:System.ServiceModel.Discovery.FindResponse>.  
   
 ## <a name="findcriteria"></a>FindCriteria  
- <xref:System.ServiceModel.Discovery.FindCriteria> имеет несколько свойств, которые могут быть сгруппированы в критерии поиска, которые определяют, какие службы вы ищете, и найти критерии завершения (в том, как долго должен длиться поиск данных). Параметр <xref:System.ServiceModel.Discovery.FindCriteria> может содержать несколько критериев поиска. По умолчанию служба должна соответствовать всем компонентам, в противном случае она не будет считаться службой, которая соответствует критериям. Если необходимо найти службы, которые соответствуют только части критериев, для службы можно реализовать пользовательскую логику поиска или использовать несколько критериев.  
+ Параметр <xref:System.ServiceModel.Discovery.FindCriteria> имеет несколько свойств, которые могут быть сгруппированы в критерии поиска (с указанием искомых служб) и критерии прекращения поиска (время выполнения поиска). Параметр <xref:System.ServiceModel.Discovery.FindCriteria> может содержать несколько критериев поиска. По умолчанию служба должна соответствовать всем компонентам, в противном случае она не будет считаться службой, которая соответствует критериям. Если необходимо найти службы, которые соответствуют только части критериев, для службы можно реализовать пользовательскую логику поиска или использовать несколько критериев.  
   
  К критериям поиска относятся следующие.  
   
--   <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> -Необязательно. Имя контракта службы, поиск которой выполняется, и критерий, который обычно используется при поиске служб. Если указано несколько имен контрактов, будет получен ответ только от конечных точек службы, соответствующих всем контрактам. Обратите внимание на то, что в WCF конечной точки поддерживает только один контракт.  
+-   <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> - необязательный. Имя контракта службы, поиск которой выполняется, и критерий, который обычно используется при поиске служб. Если указано несколько имен контрактов, будет получен ответ только от конечных точек службы, соответствующих всем контрактам. Обратите внимание на то, что в WCF конечной точки поддерживает только один контракт.  
   
--   <xref:System.ServiceModel.Discovery.Configuration.ScopeElement> -Необязательно. Области представляют собой абсолютные идентификаторы URI, которые используются для категоризации отдельных конечных точек служб. Их можно использовать в случаях, когда несколько конечных точек используется для предоставления одного контракта и необходим способ поиска подмножества конечных точек. Если указано более одной области, будет получен ответ только от конечных точек службы, соответствующих всем областям.  
+-   <xref:System.ServiceModel.Discovery.Configuration.ScopeElement> - необязательный. Области представляют собой абсолютные идентификаторы URI, которые используются для категоризации отдельных конечных точек служб. Их можно использовать в случаях, когда несколько конечных точек используется для предоставления одного контракта и необходим способ поиска подмножества конечных точек. Если указано более одной области, будет получен ответ только от конечных точек службы, соответствующих всем областям.  
   
--   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchBy%2A> — Указывает алгоритм сопоставления, который используется для сопоставления областей в сообщении зонда с конечной точкой. Существует пять поддерживаемых правил сопоставления областей.  
+-   Параметр <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchBy%2A> указывает алгоритм сопоставления, который используется для сопоставления областей в сообщении зонда с конечной точкой. Существует пять поддерживаемых правил сопоставления областей.  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact?displayProperty=nameWithType> с учетом регистра базовое сравнение строк.  
+    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact?displayProperty=nameWithType> выполняет базовое сравнение строк с учетом регистра.  
   
     -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> выполняет сопоставление по сегментам, разделенных точкой «/». Поиск `http://contoso/building1` со службой с областью `http://contoso/building/floor1`. Обратите внимание, что он не соответствует `http://contoso/building100` поскольку двух последних сегментов не совпадают.  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap?displayProperty=nameWithType> Сопоставляет области по сегментам, используя URL-адресом LDAP.  
+    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap?displayProperty=nameWithType> сопоставляет области по сегментам с помощью URL-адреса LDAP.  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByUuid?displayProperty=nameWithType> Сопоставляет области точно с помощью строки UUID.  
+    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByUuid?displayProperty=nameWithType> выполняет точное сопоставление областей с помощью строки UUID.  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByNone?displayProperty=nameWithType> соответствует только те службы, которые задают области.  
+    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByNone?displayProperty=nameWithType> выполняет сопоставление только тех служб, которые не указывают области.  
   
      Если правило сопоставления областей не указано, используется <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix>.  
   
  К критериям прекращения относятся следующие.  
   
-1. <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> -Максимальное время ожидания ответов от служб в сети. Значение времени ожидания по умолчанию - 20 секунд.  
+1. <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> - максимальное значение времени ожидания ответов от служб в сети. Значение времени ожидания по умолчанию - 20 секунд.  
   
-2. <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> -Максимальное количество ожидаемых ответов. Если ответы <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> получены до истечения <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A>, операция поиска завершается.  
+2. <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> - максимальное количество ожидаемых ответов. Если ответы <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> получены до истечения <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A>, операция поиска завершается.  
   
 ## <a name="findresponse"></a>FindResponse  
- <xref:System.ServiceModel.Discovery.FindResponse> имеет <xref:System.ServiceModel.Discovery.FindResponse.Endpoints%2A> свойство коллекции, в котором содержатся все ответы, отправленные соответствующими службами в сети. Если ни одна служба не отправила ответ, коллекция пустая. Если ответила одна или несколько служб, все ответы сохраняются в объекте <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>, в котором содержится адрес, контракт и дополнительные сведения о службе.  
+ <xref:System.ServiceModel.Discovery.FindResponse> имеет свойство коллекции <xref:System.ServiceModel.Discovery.FindResponse.Endpoints%2A>, в котором содержатся все ответы, отправленные соответствующими службами в сети. Если ни одна служба не отправила ответ, коллекция пустая. Если ответила одна или несколько служб, все ответы сохраняются в объекте <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>, в котором содержится адрес, контракт и дополнительные сведения о службе.  
   
  В следующем примере описывается выполнение операции поиска в коде.  
   
@@ -69,4 +69,4 @@ Console.WriteLine("Found {0} ICalculatorService endpoint(s).", findResponse.Endp
 - [Общие сведения об обнаружении WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
 - [Использование клиентского канала обнаружения](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)
 - [Обнаружение с помощью областей](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)
-- [Basic](../../../../docs/framework/wcf/samples/basic-sample.md)
+- [Основы](../../../../docs/framework/wcf/samples/basic-sample.md)

@@ -12,10 +12,10 @@ ms.assetid: 26ada5af-175c-4576-931a-9f07fa1723e9
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1e904d452b9f4a1b172d35984b752c0d97228338
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59480954"
 ---
 # <a name="bindingfailure-mda"></a>bindingFailure MDA
@@ -52,7 +52,7 @@ ms.locfileid: "59480954"
 
 - Устраните выявленные ранее причины. Возможны следующие варианты решения проблемы:
 
-  - Установите запрошенную сборку в глобальный кэш сборок и вызовите <xref:System.Reflection.Assembly.Load%2A> метод для загрузки сборки по удостоверению.
+  - Установите запрошенную сборку в глобальный кэш сборок и вызовите метод <xref:System.Reflection.Assembly.Load%2A> для загрузки сборки по удостоверению.
 
   - Скопируйте запрошенную сборку в каталог приложения и вызовите метод <xref:System.Reflection.Assembly.Load%2A> для загрузки сборки по удостоверению.
 
@@ -107,4 +107,4 @@ namespace ConsoleApplication1
 
 ## <a name="see-also"></a>См. также
 
-- [Диагностика ошибок посредством управляемых помощников по отладке](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Диагностика ошибок посредством помощников по отладке управляемого кода](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

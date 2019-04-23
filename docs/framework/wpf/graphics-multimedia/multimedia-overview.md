@@ -6,10 +6,10 @@ helpviewer_keywords:
 - media [WPF]
 ms.assetid: feb25b15-d741-4ac3-818f-1b19f63a3562
 ms.openlocfilehash: 66cb28fce9485898711b9029baf8a17dd9b2c011
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340494"
 ---
 # <a name="multimedia-overview"></a>Общие сведения о мультимедиа
@@ -99,7 +99,7 @@ ms.locfileid: "59340494"
 ### <a name="controlling-mediaplayer"></a>Управление объектом MediaPlayer  
  Так как <xref:System.Windows.Media.MediaPlayer> — без отслеживания состояния, существуют только два способа управления воспроизведением мультимедиа.  
   
-1. Интерактивные управляющие методы. В случае независимого режима (`null`<xref:System.Windows.Media.MediaPlayer.Clock%2A> свойство).  
+1. Интерактивные управляющие методы. В случае независимого режима (`null` <xref:System.Windows.Media.MediaPlayer.Clock%2A> свойство).  
   
 2. <xref:System.Windows.Media.MediaClock>. В случае, когда содержимое мультимедиа имеет <xref:System.Windows.Media.MediaPlayer.Clock%2A>.  
   
@@ -114,4 +114,4 @@ ms.locfileid: "59340494"
 
 - <xref:System.Windows.Media.DrawingGroup>
 - [Макет](../advanced/layout.md)
-- [Практические руководства](audio-and-video-how-to-topics.md)
+- [Разделы практического руководства](audio-and-video-how-to-topics.md)
