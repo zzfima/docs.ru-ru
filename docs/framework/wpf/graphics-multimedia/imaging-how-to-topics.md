@@ -8,41 +8,41 @@ helpviewer_keywords:
 - images [WPF], how-to topics
 ms.assetid: 96834ee4-a5fc-4dd0-9948-b9bbc9437a5c
 ms.openlocfilehash: 70294aff4c40bd5ae14b61e6a847155a10d675a1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59183044"
 ---
-# <a name="imaging-how-to-topics"></a><span data-ttu-id="6f288-102">Разделы практического руководства, посвященные обработке изображений</span><span class="sxs-lookup"><span data-stu-id="6f288-102">Imaging How-to Topics</span></span>
-<span data-ttu-id="6f288-103">В подразделах этого раздела демонстрируется использование [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] для отображения или изменения точечных рисунков.</span><span class="sxs-lookup"><span data-stu-id="6f288-103">The topics in this section demonstrate how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] in order to display or alter bitmap images.</span></span>  
+# <a name="imaging-how-to-topics"></a><span data-ttu-id="6d7e8-102">Разделы практического руководства, посвященные обработке изображений</span><span class="sxs-lookup"><span data-stu-id="6d7e8-102">Imaging How-to Topics</span></span>
+<span data-ttu-id="6d7e8-103">В подразделах этого раздела демонстрируется использование [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] для отображения или изменения точечных рисунков.</span><span class="sxs-lookup"><span data-stu-id="6d7e8-103">The topics in this section demonstrate how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] in order to display or alter bitmap images.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="6f288-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="6f288-104">In This Section</span></span>  
- [<span data-ttu-id="6f288-105">Использование объекта BitmapImage в XAML</span><span class="sxs-lookup"><span data-stu-id="6f288-105">Use a BitmapImage in XAML</span></span>](how-to-use-a-bitmapimage.md)  
- [<span data-ttu-id="6f288-106">Загрузка изображения в виде эскиза</span><span class="sxs-lookup"><span data-stu-id="6f288-106">Load an Image as a Thumbnail</span></span>](how-to-load-an-image-as-a-thumbnail.md)  
- [<span data-ttu-id="6f288-107">Применение преобразования к объекту BitmapImage</span><span class="sxs-lookup"><span data-stu-id="6f288-107">Apply a Transform to a Bitmap Image</span></span>](how-to-apply-a-transform-to-a-bitmapimage.md)  
- [<span data-ttu-id="6f288-108">Создание растрового изображения из визуального элемента</span><span class="sxs-lookup"><span data-stu-id="6f288-108">Create a Bitmap from a Visual</span></span>](how-to-create-a-bitmap-from-a-visual.md)  
- [<span data-ttu-id="6f288-109">Кодирование визуального элемента в файл изображения</span><span class="sxs-lookup"><span data-stu-id="6f288-109">Encode a Visual to an Image File</span></span>](how-to-encode-a-visual-to-an-image-file.md)  
- [<span data-ttu-id="6f288-110">Создание объекта BitmapSource</span><span class="sxs-lookup"><span data-stu-id="6f288-110">Create a new BitmapSource</span></span>](how-to-create-a-new-bitmapsource.md)  
- [<span data-ttu-id="6f288-111">Связывание объектов BitmapSource</span><span class="sxs-lookup"><span data-stu-id="6f288-111">Chain BitmapSource Objects Together</span></span>](how-to-chain-bitmapsource-objects-together.md)  
- [<span data-ttu-id="6f288-112">Преобразование объекта BitmapSource в другой индексированный формат PixelFormat</span><span class="sxs-lookup"><span data-stu-id="6f288-112">Convert a BitmapSource to a Different PixelFormat</span></span>](how-to-convert-a-bitmapsource-to-a-different-pixelformat.md)  
- [<span data-ttu-id="6f288-113">Преобразование BitmapSource в индексированный формат пикселей</span><span class="sxs-lookup"><span data-stu-id="6f288-113">Convert a BitmapSource to an Indexed Pixel Format</span></span>](how-to-convert-a-bitmapsource-to-an-indexed-pixel-format.md)  
- [<span data-ttu-id="6f288-114">Кодирование и декодирование изображения в формате JPEG</span><span class="sxs-lookup"><span data-stu-id="6f288-114">Encode and Decode a JPEG Image</span></span>](how-to-encode-and-decode-a-jpeg-image.md)  
- [<span data-ttu-id="6f288-115">Кодирование и декодирование изображения в формате BMP</span><span class="sxs-lookup"><span data-stu-id="6f288-115">Encode and Decode a BMP Image</span></span>](how-to-encode-and-decode-a-bmp-image.md)  
- [<span data-ttu-id="6f288-116">Кодирование и декодирование изображения в формате PNG</span><span class="sxs-lookup"><span data-stu-id="6f288-116">Encode and Decode a PNG Image</span></span>](how-to-encode-and-decode-a-png-image.md)  
- [<span data-ttu-id="6f288-117">Кодирование и декодирование изображения в формате WDP</span><span class="sxs-lookup"><span data-stu-id="6f288-117">Encode and Decode a WDP Image</span></span>](how-to-encode-and-decode-a-wdp-image.md)  
- [<span data-ttu-id="6f288-118">Кодирование и декодирование изображения в формате GIF</span><span class="sxs-lookup"><span data-stu-id="6f288-118">Encode and Decode a GIF Image</span></span>](how-to-encode-and-decode-a-gif-image.md)  
- [<span data-ttu-id="6f288-119">Кодирование и декодирование изображения в формате TIFF</span><span class="sxs-lookup"><span data-stu-id="6f288-119">Encode and Decode a TIFF Image</span></span>](how-to-encode-and-decode-a-tiff-image.md)  
- [<span data-ttu-id="6f288-120">Запись метаданных в растровое изображение</span><span class="sxs-lookup"><span data-stu-id="6f288-120">Write Metadata to a Bitmap</span></span>](how-to-write-metadata-to-a-bitmap.md)  
- [<span data-ttu-id="6f288-121">Чтение метаданных из растрового изображения</span><span class="sxs-lookup"><span data-stu-id="6f288-121">Read Metadata from a Bitmap</span></span>](how-to-read-metadata-from-a-bitmap.md)  
+## <a name="in-this-section"></a><span data-ttu-id="6d7e8-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="6d7e8-104">In This Section</span></span>  
+ [<span data-ttu-id="6d7e8-105">Использование объекта BitmapImage в XAML</span><span class="sxs-lookup"><span data-stu-id="6d7e8-105">Use a BitmapImage in XAML</span></span>](how-to-use-a-bitmapimage.md)  
+ [<span data-ttu-id="6d7e8-106">Загрузка изображения в виде эскиза</span><span class="sxs-lookup"><span data-stu-id="6d7e8-106">Load an Image as a Thumbnail</span></span>](how-to-load-an-image-as-a-thumbnail.md)  
+ [<span data-ttu-id="6d7e8-107">Применение преобразования к объекту BitmapImage</span><span class="sxs-lookup"><span data-stu-id="6d7e8-107">Apply a Transform to a Bitmap Image</span></span>](how-to-apply-a-transform-to-a-bitmapimage.md)  
+ [<span data-ttu-id="6d7e8-108">Создание растрового изображения из визуального элемента</span><span class="sxs-lookup"><span data-stu-id="6d7e8-108">Create a Bitmap from a Visual</span></span>](how-to-create-a-bitmap-from-a-visual.md)  
+ [<span data-ttu-id="6d7e8-109">Кодирование визуального элемента в файл изображения</span><span class="sxs-lookup"><span data-stu-id="6d7e8-109">Encode a Visual to an Image File</span></span>](how-to-encode-a-visual-to-an-image-file.md)  
+ [<span data-ttu-id="6d7e8-110">Создание объекта BitmapSource</span><span class="sxs-lookup"><span data-stu-id="6d7e8-110">Create a new BitmapSource</span></span>](how-to-create-a-new-bitmapsource.md)  
+ [<span data-ttu-id="6d7e8-111">Связывание объектов BitmapSource</span><span class="sxs-lookup"><span data-stu-id="6d7e8-111">Chain BitmapSource Objects Together</span></span>](how-to-chain-bitmapsource-objects-together.md)  
+ [<span data-ttu-id="6d7e8-112">Преобразование объекта BitmapSource в другой индексированный формат PixelFormat</span><span class="sxs-lookup"><span data-stu-id="6d7e8-112">Convert a BitmapSource to a Different PixelFormat</span></span>](how-to-convert-a-bitmapsource-to-a-different-pixelformat.md)  
+ [<span data-ttu-id="6d7e8-113">Преобразование BitmapSource в индексированный формат пикселей</span><span class="sxs-lookup"><span data-stu-id="6d7e8-113">Convert a BitmapSource to an Indexed Pixel Format</span></span>](how-to-convert-a-bitmapsource-to-an-indexed-pixel-format.md)  
+ [<span data-ttu-id="6d7e8-114">Кодирование и декодирование изображения в формате JPEG</span><span class="sxs-lookup"><span data-stu-id="6d7e8-114">Encode and Decode a JPEG Image</span></span>](how-to-encode-and-decode-a-jpeg-image.md)  
+ [<span data-ttu-id="6d7e8-115">Кодирование и декодирование изображения в формате BMP</span><span class="sxs-lookup"><span data-stu-id="6d7e8-115">Encode and Decode a BMP Image</span></span>](how-to-encode-and-decode-a-bmp-image.md)  
+ [<span data-ttu-id="6d7e8-116">Кодирование и декодирование изображения в формате PNG</span><span class="sxs-lookup"><span data-stu-id="6d7e8-116">Encode and Decode a PNG Image</span></span>](how-to-encode-and-decode-a-png-image.md)  
+ [<span data-ttu-id="6d7e8-117">Кодирование и декодирование изображения в формате WDP</span><span class="sxs-lookup"><span data-stu-id="6d7e8-117">Encode and Decode a WDP Image</span></span>](how-to-encode-and-decode-a-wdp-image.md)  
+ [<span data-ttu-id="6d7e8-118">Кодирование и декодирование изображения в формате GIF</span><span class="sxs-lookup"><span data-stu-id="6d7e8-118">Encode and Decode a GIF Image</span></span>](how-to-encode-and-decode-a-gif-image.md)  
+ [<span data-ttu-id="6d7e8-119">Кодирование и декодирование изображения в формате TIFF</span><span class="sxs-lookup"><span data-stu-id="6d7e8-119">Encode and Decode a TIFF Image</span></span>](how-to-encode-and-decode-a-tiff-image.md)  
+ [<span data-ttu-id="6d7e8-120">Запись метаданных в растровое изображение</span><span class="sxs-lookup"><span data-stu-id="6d7e8-120">Write Metadata to a Bitmap</span></span>](how-to-write-metadata-to-a-bitmap.md)  
+ [<span data-ttu-id="6d7e8-121">Чтение метаданных из растрового изображения</span><span class="sxs-lookup"><span data-stu-id="6d7e8-121">Read Metadata from a Bitmap</span></span>](how-to-read-metadata-from-a-bitmap.md)  
   
-## <a name="reference"></a><span data-ttu-id="6f288-122">Ссылка</span><span class="sxs-lookup"><span data-stu-id="6f288-122">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="6d7e8-122">Ссылка</span><span class="sxs-lookup"><span data-stu-id="6d7e8-122">Reference</span></span>  
  <xref:System.Windows.Controls.Image>  
   
  <xref:System.Windows.Media.Imaging.BitmapImage>  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a><span data-ttu-id="6f288-123">См. также</span><span class="sxs-lookup"><span data-stu-id="6f288-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6d7e8-123">См. также</span><span class="sxs-lookup"><span data-stu-id="6d7e8-123">See also</span></span>
 
-- [<span data-ttu-id="6f288-124">Общие сведения об обработке изображений</span><span class="sxs-lookup"><span data-stu-id="6f288-124">Imaging Overview</span></span>](imaging-overview.md)
+- [<span data-ttu-id="6d7e8-124">Общие сведения об обработке изображений</span><span class="sxs-lookup"><span data-stu-id="6d7e8-124">Imaging Overview</span></span>](imaging-overview.md)

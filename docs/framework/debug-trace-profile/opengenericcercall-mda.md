@@ -13,35 +13,35 @@ ms.assetid: da3e4ff3-2e67-4668-9720-fa776c97407e
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a9ea2e274bbcd17bcc129de46c753f091501d4c2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59184292"
 ---
-# <a name="opengenericcercall-mda"></a><span data-ttu-id="0ffb1-102">openGenericCERCall MDA</span><span class="sxs-lookup"><span data-stu-id="0ffb1-102">openGenericCERCall MDA</span></span>
-<span data-ttu-id="0ffb1-103">Помощник по отладке управляемого кода `openGenericCERCall` активируется, чтобы предупредить о том, что граф области ограниченного выполнения (CER) с переменными универсального типа в корневом методе обрабатывается во время JIT-компиляции или генерации образа в машинном коде и при этом как минимум одна из переменных универсального типа представляет собой тип ссылки на объект.</span><span class="sxs-lookup"><span data-stu-id="0ffb1-103">The `openGenericCERCall` managed debugging assistant is activated to warn that a constrained execution region (CER) graph with generic type variables at the root method is being processed at JIT-compilation or native image generation time and at least one of the generic type variables is an object reference type.</span></span>  
+# <a name="opengenericcercall-mda"></a><span data-ttu-id="735b4-102">openGenericCERCall MDA</span><span class="sxs-lookup"><span data-stu-id="735b4-102">openGenericCERCall MDA</span></span>
+<span data-ttu-id="735b4-103">Помощник по отладке управляемого кода `openGenericCERCall` активируется, чтобы предупредить о том, что граф области ограниченного выполнения (CER) с переменными универсального типа в корневом методе обрабатывается во время JIT-компиляции или генерации образа в машинном коде и при этом как минимум одна из переменных универсального типа представляет собой тип ссылки на объект.</span><span class="sxs-lookup"><span data-stu-id="735b4-103">The `openGenericCERCall` managed debugging assistant is activated to warn that a constrained execution region (CER) graph with generic type variables at the root method is being processed at JIT-compilation or native image generation time and at least one of the generic type variables is an object reference type.</span></span>  
   
-## <a name="symptoms"></a><span data-ttu-id="0ffb1-104">Симптомы</span><span class="sxs-lookup"><span data-stu-id="0ffb1-104">Symptoms</span></span>  
- <span data-ttu-id="0ffb1-105">Код в области ограниченного выполнения не выполняется при прерывании потока или при выгрузке домена приложения.</span><span class="sxs-lookup"><span data-stu-id="0ffb1-105">CER code does not run when a thread is aborted or when an application domain is unloaded.</span></span>  
+## <a name="symptoms"></a><span data-ttu-id="735b4-104">Симптомы</span><span class="sxs-lookup"><span data-stu-id="735b4-104">Symptoms</span></span>  
+ <span data-ttu-id="735b4-105">Код в области ограниченного выполнения не выполняется при прерывании потока или при выгрузке домена приложения.</span><span class="sxs-lookup"><span data-stu-id="735b4-105">CER code does not run when a thread is aborted or when an application domain is unloaded.</span></span>  
   
-## <a name="cause"></a><span data-ttu-id="0ffb1-106">Причина</span><span class="sxs-lookup"><span data-stu-id="0ffb1-106">Cause</span></span>  
- <span data-ttu-id="0ffb1-107">Во время JIT-компиляции создание экземпляра типа ссылки на объект носит исключительно репрезентативный характер, поскольку полученный код будет общим, а каждая переменная типа ссылки на объект может быть любого типа ссылки на объект.</span><span class="sxs-lookup"><span data-stu-id="0ffb1-107">At JIT-compilation time, an instantiation containing an object reference type is only representative because the resultant code is shared, and each of the object reference type variables might be any object reference type.</span></span> <span data-ttu-id="0ffb1-108">Это позволяет предотвратить заблаговременную подготовку некоторых ресурсов времени выполнения.</span><span class="sxs-lookup"><span data-stu-id="0ffb1-108">This can prevent the preparation of some run-time resources ahead of time.</span></span>  
+## <a name="cause"></a><span data-ttu-id="735b4-106">Причина</span><span class="sxs-lookup"><span data-stu-id="735b4-106">Cause</span></span>  
+ <span data-ttu-id="735b4-107">Во время JIT-компиляции создание экземпляра типа ссылки на объект носит исключительно репрезентативный характер, поскольку полученный код будет общим, а каждая переменная типа ссылки на объект может быть любого типа ссылки на объект.</span><span class="sxs-lookup"><span data-stu-id="735b4-107">At JIT-compilation time, an instantiation containing an object reference type is only representative because the resultant code is shared, and each of the object reference type variables might be any object reference type.</span></span> <span data-ttu-id="735b4-108">Это позволяет предотвратить заблаговременную подготовку некоторых ресурсов времени выполнения.</span><span class="sxs-lookup"><span data-stu-id="735b4-108">This can prevent the preparation of some run-time resources ahead of time.</span></span>  
   
- <span data-ttu-id="0ffb1-109">В частности, методы с переменными универсального типа могут отложенным образом выделять ресурсы в фоновом режиме.</span><span class="sxs-lookup"><span data-stu-id="0ffb1-109">In particular, methods with generic type variables can lazily allocate resources in the background.</span></span> <span data-ttu-id="0ffb1-110">Это записи универсального словаря.</span><span class="sxs-lookup"><span data-stu-id="0ffb1-110">These are referred to as generic dictionary entries.</span></span> <span data-ttu-id="0ffb1-111">Например, для оператора `List<T> list = new List<T>();`, где `T` — это переменная универсального типа, среда выполнения должна находить и по возможности создавать точный экземпляр, например `List<Object>, List<String>` и т. д.</span><span class="sxs-lookup"><span data-stu-id="0ffb1-111">For instance, for the statement `List<T> list = new List<T>();` where `T` is a generic type variable the runtime must look up and possibly create the exact instantiation at run time, for example, `List<Object>, List<String>`,and so forth.</span></span> <span data-ttu-id="0ffb1-112">Этот процесс может завершаться сбоем по целому ряду причин, которые разработчик не может контролировать, например из-за нехватки памяти.</span><span class="sxs-lookup"><span data-stu-id="0ffb1-112">This can fail for a variety of reasons beyond the developer's control, such as running out of memory.</span></span>  
+ <span data-ttu-id="735b4-109">В частности, методы с переменными универсального типа могут отложенным образом выделять ресурсы в фоновом режиме.</span><span class="sxs-lookup"><span data-stu-id="735b4-109">In particular, methods with generic type variables can lazily allocate resources in the background.</span></span> <span data-ttu-id="735b4-110">Это записи универсального словаря.</span><span class="sxs-lookup"><span data-stu-id="735b4-110">These are referred to as generic dictionary entries.</span></span> <span data-ttu-id="735b4-111">Например, для оператора `List<T> list = new List<T>();`, где `T` — это переменная универсального типа, среда выполнения должна находить и по возможности создавать точный экземпляр, например `List<Object>, List<String>` и т. д.</span><span class="sxs-lookup"><span data-stu-id="735b4-111">For instance, for the statement `List<T> list = new List<T>();` where `T` is a generic type variable the runtime must look up and possibly create the exact instantiation at run time, for example, `List<Object>, List<String>`,and so forth.</span></span> <span data-ttu-id="735b4-112">Этот процесс может завершаться сбоем по целому ряду причин, которые разработчик не может контролировать, например из-за нехватки памяти.</span><span class="sxs-lookup"><span data-stu-id="735b4-112">This can fail for a variety of reasons beyond the developer's control, such as running out of memory.</span></span>  
   
- <span data-ttu-id="0ffb1-113">Этот помощник по отладке управляемого кода следует активировать только во время JIT-компиляции, а не при создании точного экземпляра.</span><span class="sxs-lookup"><span data-stu-id="0ffb1-113">This MDA should only be activated at JIT-compilation time, not when there is an exact instantiation.</span></span>  
+ <span data-ttu-id="735b4-113">Этот помощник по отладке управляемого кода следует активировать только во время JIT-компиляции, а не при создании точного экземпляра.</span><span class="sxs-lookup"><span data-stu-id="735b4-113">This MDA should only be activated at JIT-compilation time, not when there is an exact instantiation.</span></span>  
   
- <span data-ttu-id="0ffb1-114">Как правило, активация этого помощника по отладке управляемого кода вызвана сбоем области ограниченного выполнения для поврежденных экземпляров.</span><span class="sxs-lookup"><span data-stu-id="0ffb1-114">When this MDA is activated, the likely symptoms are that CERs are not functional for the bad instantiations.</span></span> <span data-ttu-id="0ffb1-115">Фактически среда выполнения не пытается реализовать область ограниченного выполнения в ситуации, в которой активируется этот помощник по отладке управляемого кода.</span><span class="sxs-lookup"><span data-stu-id="0ffb1-115">In fact, the runtime has not attempted to implement a CER under the circumstances that caused the MDA to be activated.</span></span> <span data-ttu-id="0ffb1-116">Если разработчик использует общий экземпляр среды ограниченного выполнения, ошибки JIT-компиляции, ошибки загрузки универсальных типов или прерывания потоков в предполагаемой области ограниченного выполнения не перехватываются.</span><span class="sxs-lookup"><span data-stu-id="0ffb1-116">So if the developer uses a shared instantiation of the CER, then JIT-compilation errors, generics type loading errors, or thread aborts within the region of the intended CER are not caught.</span></span>  
+ <span data-ttu-id="735b4-114">Как правило, активация этого помощника по отладке управляемого кода вызвана сбоем области ограниченного выполнения для поврежденных экземпляров.</span><span class="sxs-lookup"><span data-stu-id="735b4-114">When this MDA is activated, the likely symptoms are that CERs are not functional for the bad instantiations.</span></span> <span data-ttu-id="735b4-115">Фактически среда выполнения не пытается реализовать область ограниченного выполнения в ситуации, в которой активируется этот помощник по отладке управляемого кода.</span><span class="sxs-lookup"><span data-stu-id="735b4-115">In fact, the runtime has not attempted to implement a CER under the circumstances that caused the MDA to be activated.</span></span> <span data-ttu-id="735b4-116">Если разработчик использует общий экземпляр среды ограниченного выполнения, ошибки JIT-компиляции, ошибки загрузки универсальных типов или прерывания потоков в предполагаемой области ограниченного выполнения не перехватываются.</span><span class="sxs-lookup"><span data-stu-id="735b4-116">So if the developer uses a shared instantiation of the CER, then JIT-compilation errors, generics type loading errors, or thread aborts within the region of the intended CER are not caught.</span></span>  
   
-## <a name="resolution"></a><span data-ttu-id="0ffb1-117">Решение</span><span class="sxs-lookup"><span data-stu-id="0ffb1-117">Resolution</span></span>  
- <span data-ttu-id="0ffb1-118">Не используйте переменные универсального типа, которые имеют тип ссылки на объект, в методах, которые могут содержать область ограниченного выполнения.</span><span class="sxs-lookup"><span data-stu-id="0ffb1-118">Do not use generic type variables that are of object reference type for methods that may contain a CER.</span></span>  
+## <a name="resolution"></a><span data-ttu-id="735b4-117">Решение</span><span class="sxs-lookup"><span data-stu-id="735b4-117">Resolution</span></span>  
+ <span data-ttu-id="735b4-118">Не используйте переменные универсального типа, которые имеют тип ссылки на объект, в методах, которые могут содержать область ограниченного выполнения.</span><span class="sxs-lookup"><span data-stu-id="735b4-118">Do not use generic type variables that are of object reference type for methods that may contain a CER.</span></span>  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="0ffb1-119">Влияние на среду выполнения</span><span class="sxs-lookup"><span data-stu-id="0ffb1-119">Effect on the Runtime</span></span>  
- <span data-ttu-id="0ffb1-120">Этот помощник отладки управляемого кода не оказывает никакого влияния на среду CLR.</span><span class="sxs-lookup"><span data-stu-id="0ffb1-120">This MDA has no effect on the CLR.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="735b4-119">Влияние на среду выполнения</span><span class="sxs-lookup"><span data-stu-id="735b4-119">Effect on the Runtime</span></span>  
+ <span data-ttu-id="735b4-120">Этот помощник отладки управляемого кода не оказывает никакого влияния на среду CLR.</span><span class="sxs-lookup"><span data-stu-id="735b4-120">This MDA has no effect on the CLR.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="0ffb1-121">Вывод</span><span class="sxs-lookup"><span data-stu-id="0ffb1-121">Output</span></span>  
- <span data-ttu-id="0ffb1-122">Ниже представлен пример выходных данных этого помощника по отладке управляемого кода.</span><span class="sxs-lookup"><span data-stu-id="0ffb1-122">The following is a sample of output from this MDA.</span></span>  
+## <a name="output"></a><span data-ttu-id="735b4-121">Вывод</span><span class="sxs-lookup"><span data-stu-id="735b4-121">Output</span></span>  
+ <span data-ttu-id="735b4-122">Ниже представлен пример выходных данных этого помощника по отладке управляемого кода.</span><span class="sxs-lookup"><span data-stu-id="735b4-122">The following is a sample of output from this MDA.</span></span>  
   
  `Method 'GenericMethodWithCer', which contains at least one constrained execution region, cannot be prepared automatically since it has one or more unbound generic type parameters.`  
   
@@ -51,7 +51,7 @@ ms.locfileid: "59184292"
   
  `declaringType name="OpenGenericCERCall"`  
   
-## <a name="configuration"></a><span data-ttu-id="0ffb1-123">Параметр Configuration</span><span class="sxs-lookup"><span data-stu-id="0ffb1-123">Configuration</span></span>  
+## <a name="configuration"></a><span data-ttu-id="735b4-123">Параметр Configuration</span><span class="sxs-lookup"><span data-stu-id="735b4-123">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -61,8 +61,8 @@ ms.locfileid: "59184292"
 </mdaConfig>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="0ffb1-124">Пример</span><span class="sxs-lookup"><span data-stu-id="0ffb1-124">Example</span></span>  
- <span data-ttu-id="0ffb1-125">Код в области ограниченного выполнения не выполняется.</span><span class="sxs-lookup"><span data-stu-id="0ffb1-125">The CER code is not executed.</span></span>  
+## <a name="example"></a><span data-ttu-id="735b4-124">Пример</span><span class="sxs-lookup"><span data-stu-id="735b4-124">Example</span></span>  
+ <span data-ttu-id="735b4-125">Код в области ограниченного выполнения не выполняется.</span><span class="sxs-lookup"><span data-stu-id="735b4-125">The CER code is not executed.</span></span>  
   
 ```csharp
 using System;  
@@ -106,8 +106,8 @@ class Program
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="0ffb1-126">См. также</span><span class="sxs-lookup"><span data-stu-id="0ffb1-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="735b4-126">См. также</span><span class="sxs-lookup"><span data-stu-id="735b4-126">See also</span></span>
 
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>
 - <xref:System.Runtime.ConstrainedExecution>
-- [<span data-ttu-id="0ffb1-127">Диагностика ошибок посредством управляемых помощников по отладке</span><span class="sxs-lookup"><span data-stu-id="0ffb1-127">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [<span data-ttu-id="735b4-127">Диагностика ошибок посредством помощников по отладке управляемого кода</span><span class="sxs-lookup"><span data-stu-id="735b4-127">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
