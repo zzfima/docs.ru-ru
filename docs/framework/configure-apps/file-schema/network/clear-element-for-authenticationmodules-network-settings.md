@@ -1,5 +1,5 @@
 ---
-title: <clear> Элемент для authenticationModules (параметры сети)
+title: Элемент <clear> для authenticationModules (параметры сети)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/authenticationModules/clear
@@ -11,49 +11,49 @@ helpviewer_keywords:
 - authenticationModules, clear element
 ms.assetid: dc522c45-4a80-4831-8955-f7b68a47edfd
 ms.openlocfilehash: 3c018c7d474286f7a9cde2d070e4b54d164b5b40
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59094376"
 ---
-# <a name="clear-element-for-authenticationmodules-network-settings"></a><span data-ttu-id="cbbbd-102">\<Очистить > элемент для authenticationModules (параметры сети)</span><span class="sxs-lookup"><span data-stu-id="cbbbd-102">\<clear> Element for authenticationModules (Network Settings)</span></span>
-<span data-ttu-id="cbbbd-103">Удаляет все модули проверки подлинности из приложения.</span><span class="sxs-lookup"><span data-stu-id="cbbbd-103">Clears all authentication modules from the application.</span></span>  
+# <a name="clear-element-for-authenticationmodules-network-settings"></a><span data-ttu-id="2dc4f-102">\<Очистить > элемент для authenticationModules (параметры сети)</span><span class="sxs-lookup"><span data-stu-id="2dc4f-102">\<clear> Element for authenticationModules (Network Settings)</span></span>
+<span data-ttu-id="2dc4f-103">Удаляет все модули проверки подлинности из приложения.</span><span class="sxs-lookup"><span data-stu-id="2dc4f-103">Clears all authentication modules from the application.</span></span>  
   
- <span data-ttu-id="cbbbd-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="cbbbd-104">\<configuration></span></span>  
-<span data-ttu-id="cbbbd-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="cbbbd-105">\<system.net></span></span>  
-<span data-ttu-id="cbbbd-106">\<authenticationModules></span><span class="sxs-lookup"><span data-stu-id="cbbbd-106">\<authenticationModules></span></span>  
-<span data-ttu-id="cbbbd-107">\<Очистить ></span><span class="sxs-lookup"><span data-stu-id="cbbbd-107">\<clear></span></span>  
+ <span data-ttu-id="2dc4f-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="2dc4f-104">\<configuration></span></span>  
+<span data-ttu-id="2dc4f-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="2dc4f-105">\<system.net></span></span>  
+<span data-ttu-id="2dc4f-106">\<authenticationModules></span><span class="sxs-lookup"><span data-stu-id="2dc4f-106">\<authenticationModules></span></span>  
+<span data-ttu-id="2dc4f-107">\<Очистить ></span><span class="sxs-lookup"><span data-stu-id="2dc4f-107">\<clear></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cbbbd-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="cbbbd-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2dc4f-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="2dc4f-108">Syntax</span></span>  
   
 ```xml  
 <clear/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="cbbbd-109">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="cbbbd-109">Attributes and Elements</span></span>  
- <span data-ttu-id="cbbbd-110">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="cbbbd-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="2dc4f-109">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="2dc4f-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="2dc4f-110">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="2dc4f-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="cbbbd-111">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="cbbbd-111">Attributes</span></span>  
- <span data-ttu-id="cbbbd-112">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="cbbbd-112">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="2dc4f-111">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="2dc4f-111">Attributes</span></span>  
+ <span data-ttu-id="2dc4f-112">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="2dc4f-112">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="cbbbd-113">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="cbbbd-113">Child Elements</span></span>  
- <span data-ttu-id="cbbbd-114">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="cbbbd-114">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="2dc4f-113">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="2dc4f-113">Child Elements</span></span>  
+ <span data-ttu-id="2dc4f-114">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="2dc4f-114">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="cbbbd-115">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="cbbbd-115">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="2dc4f-115">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="2dc4f-115">Parent Elements</span></span>  
   
-|**<span data-ttu-id="cbbbd-116">Элемент</span><span class="sxs-lookup"><span data-stu-id="cbbbd-116">Element</span></span>**|**<span data-ttu-id="cbbbd-117">Описание</span><span class="sxs-lookup"><span data-stu-id="cbbbd-117">Description</span></span>**|  
+|<span data-ttu-id="2dc4f-116">**Элемент**</span><span class="sxs-lookup"><span data-stu-id="2dc4f-116">**Element**</span></span>|<span data-ttu-id="2dc4f-117">**Описание**</span><span class="sxs-lookup"><span data-stu-id="2dc4f-117">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="cbbbd-118">authenticationModules</span><span class="sxs-lookup"><span data-stu-id="cbbbd-118">authenticationModules</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|<span data-ttu-id="cbbbd-119">Задает модули, используемые для проверки подлинности сетевых запросов.</span><span class="sxs-lookup"><span data-stu-id="cbbbd-119">Specifies modules used to authenticate network requests.</span></span>|  
+|[<span data-ttu-id="2dc4f-118">authenticationModules</span><span class="sxs-lookup"><span data-stu-id="2dc4f-118">authenticationModules</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|<span data-ttu-id="2dc4f-119">Задает модули, используемые для проверки подлинности сетевых запросов.</span><span class="sxs-lookup"><span data-stu-id="2dc4f-119">Specifies modules used to authenticate network requests.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="cbbbd-120">Примечания</span><span class="sxs-lookup"><span data-stu-id="cbbbd-120">Remarks</span></span>  
- <span data-ttu-id="cbbbd-121">`clear` Приводит к удалению всех модулей проверки подлинности, которые были ранее определены в файле конфигурации или на более высоком уровне в иерархии конфигурации.</span><span class="sxs-lookup"><span data-stu-id="cbbbd-121">The `clear` element removes all authentication modules that were defined earlier in the configuration file or at a higher level in the configuration hierarchy.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2dc4f-120">Примечания</span><span class="sxs-lookup"><span data-stu-id="2dc4f-120">Remarks</span></span>  
+ <span data-ttu-id="2dc4f-121">`clear` Приводит к удалению всех модулей проверки подлинности, которые были ранее определены в файле конфигурации или на более высоком уровне в иерархии конфигурации.</span><span class="sxs-lookup"><span data-stu-id="2dc4f-121">The `clear` element removes all authentication modules that were defined earlier in the configuration file or at a higher level in the configuration hierarchy.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="cbbbd-122">Файлы конфигурации</span><span class="sxs-lookup"><span data-stu-id="cbbbd-122">Configuration Files</span></span>  
- <span data-ttu-id="cbbbd-123">Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="cbbbd-123">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="2dc4f-122">Файлы конфигурации</span><span class="sxs-lookup"><span data-stu-id="2dc4f-122">Configuration Files</span></span>  
+ <span data-ttu-id="2dc4f-123">Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="2dc4f-123">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="cbbbd-124">Пример</span><span class="sxs-lookup"><span data-stu-id="cbbbd-124">Example</span></span>  
- <span data-ttu-id="cbbbd-125">В следующем примере удаляется все настроенные модули проверки подлинности.</span><span class="sxs-lookup"><span data-stu-id="cbbbd-125">The following example removes all configured authentication modules.</span></span>  
+## <a name="example"></a><span data-ttu-id="2dc4f-124">Пример</span><span class="sxs-lookup"><span data-stu-id="2dc4f-124">Example</span></span>  
+ <span data-ttu-id="2dc4f-125">В следующем примере удаляется все настроенные модули проверки подлинности.</span><span class="sxs-lookup"><span data-stu-id="2dc4f-125">The following example removes all configured authentication modules.</span></span>  
   
 ```xml  
 <configuration>  
@@ -65,8 +65,8 @@ ms.locfileid: "59094376"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="cbbbd-126">См. также</span><span class="sxs-lookup"><span data-stu-id="cbbbd-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2dc4f-126">См. также</span><span class="sxs-lookup"><span data-stu-id="2dc4f-126">See also</span></span>
 
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>
-- [<span data-ttu-id="cbbbd-127">Схема параметров сети</span><span class="sxs-lookup"><span data-stu-id="cbbbd-127">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [<span data-ttu-id="2dc4f-127">Схема параметров сети</span><span class="sxs-lookup"><span data-stu-id="2dc4f-127">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

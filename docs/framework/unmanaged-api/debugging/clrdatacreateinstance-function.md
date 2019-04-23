@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 73a4a8a2fc737bbf4b49ca859f0549ca7efd54a2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59089774"
 ---
-# <a name="clrdatacreateinstance-function"></a><span data-ttu-id="c8e19-102">Функция CLRDataCreateInstance</span><span class="sxs-lookup"><span data-stu-id="c8e19-102">CLRDataCreateInstance Function</span></span>
-<span data-ttu-id="c8e19-103">Создает объект интерфейса для заданного целевого элемента.</span><span class="sxs-lookup"><span data-stu-id="c8e19-103">Creates an interface object for the specified target item.</span></span>  
+# <a name="clrdatacreateinstance-function"></a><span data-ttu-id="95a91-102">Функция CLRDataCreateInstance</span><span class="sxs-lookup"><span data-stu-id="95a91-102">CLRDataCreateInstance Function</span></span>
+<span data-ttu-id="95a91-103">Создает объект интерфейса для заданного целевого элемента.</span><span class="sxs-lookup"><span data-stu-id="95a91-103">Creates an interface object for the specified target item.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c8e19-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="c8e19-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="95a91-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="95a91-104">Syntax</span></span>  
   
 ```  
 HRESULT CLRDataCreateInstance (  
@@ -37,28 +37,28 @@ HRESULT CLRDataCreateInstance (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c8e19-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="c8e19-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="95a91-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="95a91-105">Parameters</span></span>  
  `iid`  
- <span data-ttu-id="c8e19-106">[in] Идентификатор интерфейса для создания экземпляра.</span><span class="sxs-lookup"><span data-stu-id="c8e19-106">[in] The identifier of the interface to be instantiated.</span></span>  
+ <span data-ttu-id="95a91-106">[in] Идентификатор интерфейса для создания экземпляра.</span><span class="sxs-lookup"><span data-stu-id="95a91-106">[in] The identifier of the interface to be instantiated.</span></span>  
   
  `target`  
- <span data-ttu-id="c8e19-107">[in] Указатель на реализуется пользователем [ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md) , представляющий целевой элемент, для которого создается объект интерфейса.</span><span class="sxs-lookup"><span data-stu-id="c8e19-107">[in] A pointer to a user-implemented [ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md) object that represents the target item for which to create the interface object.</span></span>  
+ <span data-ttu-id="95a91-107">[in] Указатель на реализуется пользователем [ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md) , представляющий целевой элемент, для которого создается объект интерфейса.</span><span class="sxs-lookup"><span data-stu-id="95a91-107">[in] A pointer to a user-implemented [ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md) object that represents the target item for which to create the interface object.</span></span>  
   
  `iface`  
- <span data-ttu-id="c8e19-108">[out] Указатель на адрес объекта возвращенный интерфейс.</span><span class="sxs-lookup"><span data-stu-id="c8e19-108">[out] A pointer to the address of the returned interface object.</span></span>  
+ <span data-ttu-id="95a91-108">[out] Указатель на адрес объекта возвращенный интерфейс.</span><span class="sxs-lookup"><span data-stu-id="95a91-108">[out] A pointer to the address of the returned interface object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="c8e19-109">Примечания</span><span class="sxs-lookup"><span data-stu-id="c8e19-109">Remarks</span></span>  
- <span data-ttu-id="c8e19-110">`ICLRDataTarget` Объект реализуется разработчиком отладки приложения.</span><span class="sxs-lookup"><span data-stu-id="c8e19-110">The `ICLRDataTarget` object is implemented by the writer of the debugging application.</span></span> <span data-ttu-id="c8e19-111">Реализация зависит от тип представляемого целевого элемента.</span><span class="sxs-lookup"><span data-stu-id="c8e19-111">The implementation depends on the type of target item being represented.</span></span> <span data-ttu-id="c8e19-112">Конечный элемент может быть процесс, дамп памяти, удаленный компьютер и т. д.</span><span class="sxs-lookup"><span data-stu-id="c8e19-112">The target item may be a process, memory dump, remote machine, and so on.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="95a91-109">Примечания</span><span class="sxs-lookup"><span data-stu-id="95a91-109">Remarks</span></span>  
+ <span data-ttu-id="95a91-110">`ICLRDataTarget` Объект реализуется разработчиком отладки приложения.</span><span class="sxs-lookup"><span data-stu-id="95a91-110">The `ICLRDataTarget` object is implemented by the writer of the debugging application.</span></span> <span data-ttu-id="95a91-111">Реализация зависит от тип представляемого целевого элемента.</span><span class="sxs-lookup"><span data-stu-id="95a91-111">The implementation depends on the type of target item being represented.</span></span> <span data-ttu-id="95a91-112">Конечный элемент может быть процесс, дамп памяти, удаленный компьютер и т. д.</span><span class="sxs-lookup"><span data-stu-id="95a91-112">The target item may be a process, memory dump, remote machine, and so on.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c8e19-113">Требования</span><span class="sxs-lookup"><span data-stu-id="c8e19-113">Requirements</span></span>  
- <span data-ttu-id="c8e19-114">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c8e19-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="95a91-113">Требования</span><span class="sxs-lookup"><span data-stu-id="95a91-113">Requirements</span></span>  
+ <span data-ttu-id="95a91-114">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="95a91-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c8e19-115">**Заголовок.** ClrData.idl</span><span class="sxs-lookup"><span data-stu-id="c8e19-115">**Header:** ClrData.idl</span></span>  
+ <span data-ttu-id="95a91-115">**Заголовок.** ClrData.idl</span><span class="sxs-lookup"><span data-stu-id="95a91-115">**Header:** ClrData.idl</span></span>  
   
- <span data-ttu-id="c8e19-116">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c8e19-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="95a91-116">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="95a91-116">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="c8e19-117">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="c8e19-117">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="95a91-117">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="95a91-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c8e19-118">См. также</span><span class="sxs-lookup"><span data-stu-id="c8e19-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="95a91-118">См. также</span><span class="sxs-lookup"><span data-stu-id="95a91-118">See also</span></span>
 
-- [<span data-ttu-id="c8e19-119">Глобальные статические функции отладки</span><span class="sxs-lookup"><span data-stu-id="c8e19-119">Debugging Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+- [<span data-ttu-id="95a91-119">Глобальные статические функции отладки</span><span class="sxs-lookup"><span data-stu-id="95a91-119">Debugging Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

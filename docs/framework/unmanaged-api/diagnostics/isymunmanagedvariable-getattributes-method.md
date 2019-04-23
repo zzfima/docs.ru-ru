@@ -18,32 +18,32 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d7ba794060330de3934f8d4ca6434b09672d12bb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59090593"
 ---
-# <a name="isymunmanagedvariablegetattributes-method"></a><span data-ttu-id="3dab7-102">Метод ISymUnmanagedVariable::GetAttributes</span><span class="sxs-lookup"><span data-stu-id="3dab7-102">ISymUnmanagedVariable::GetAttributes Method</span></span>
-<span data-ttu-id="3dab7-103">Возвращает флаги атрибутов для этой переменной.</span><span class="sxs-lookup"><span data-stu-id="3dab7-103">Gets the attribute flags for this variable.</span></span>  
+# <a name="isymunmanagedvariablegetattributes-method"></a><span data-ttu-id="c06bf-102">Метод ISymUnmanagedVariable::GetAttributes</span><span class="sxs-lookup"><span data-stu-id="c06bf-102">ISymUnmanagedVariable::GetAttributes Method</span></span>
+<span data-ttu-id="c06bf-103">Возвращает флаги атрибутов для этой переменной.</span><span class="sxs-lookup"><span data-stu-id="c06bf-103">Gets the attribute flags for this variable.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3dab7-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="3dab7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c06bf-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="c06bf-104">Syntax</span></span>  
   
 ```  
 HRESULT GetAttributes(  
     [out, retval] ULONG32* pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3dab7-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="3dab7-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c06bf-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="c06bf-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="3dab7-106">[out] Указатель на `ULONG32` , получающий атрибуты.</span><span class="sxs-lookup"><span data-stu-id="3dab7-106">[out] A pointer to a `ULONG32` that receives the attributes.</span></span> <span data-ttu-id="3dab7-107">Возвращаемое значение будет иметь одно из значений, определенных в [CorSymVarFlag](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md) перечисления.</span><span class="sxs-lookup"><span data-stu-id="3dab7-107">The returned value will be one of the values defined in the [CorSymVarFlag](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md) enumeration.</span></span>  
+ <span data-ttu-id="c06bf-106">[out] Указатель на `ULONG32` , получающий атрибуты.</span><span class="sxs-lookup"><span data-stu-id="c06bf-106">[out] A pointer to a `ULONG32` that receives the attributes.</span></span> <span data-ttu-id="c06bf-107">Возвращаемое значение будет иметь одно из значений, определенных в [CorSymVarFlag](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md) перечисления.</span><span class="sxs-lookup"><span data-stu-id="c06bf-107">The returned value will be one of the values defined in the [CorSymVarFlag](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md) enumeration.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="3dab7-108">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="3dab7-108">Return Value</span></span>  
- <span data-ttu-id="3dab7-109">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="3dab7-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="c06bf-108">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="c06bf-108">Return Value</span></span>  
+ <span data-ttu-id="c06bf-109">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="c06bf-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3dab7-110">Требования</span><span class="sxs-lookup"><span data-stu-id="3dab7-110">Requirements</span></span>  
- <span data-ttu-id="3dab7-111">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="3dab7-111">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c06bf-110">Требования</span><span class="sxs-lookup"><span data-stu-id="c06bf-110">Requirements</span></span>  
+ <span data-ttu-id="c06bf-111">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="c06bf-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3dab7-112">См. также</span><span class="sxs-lookup"><span data-stu-id="3dab7-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c06bf-112">См. также</span><span class="sxs-lookup"><span data-stu-id="c06bf-112">See also</span></span>
 
-- [<span data-ttu-id="3dab7-113">Интерфейс ISymUnmanagedVariable</span><span class="sxs-lookup"><span data-stu-id="3dab7-113">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
+- [<span data-ttu-id="c06bf-113">Интерфейс ISymUnmanagedVariable</span><span class="sxs-lookup"><span data-stu-id="c06bf-113">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)

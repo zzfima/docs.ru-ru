@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c5b65cdeb36b8abf17c74d41a7fc7dfb34fa5731
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59095806"
 ---
-# <a name="isymunmanagednamespacegetvariables-method"></a><span data-ttu-id="9e097-102">Метод ISymUnmanagedNamespace::GetVariables</span><span class="sxs-lookup"><span data-stu-id="9e097-102">ISymUnmanagedNamespace::GetVariables Method</span></span>
-<span data-ttu-id="9e097-103">Возвращает все переменные, определенные в глобальной области в этом пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="9e097-103">Returns all variables defined at global scope within this namespace.</span></span>  
+# <a name="isymunmanagednamespacegetvariables-method"></a><span data-ttu-id="e25e4-102">Метод ISymUnmanagedNamespace::GetVariables</span><span class="sxs-lookup"><span data-stu-id="e25e4-102">ISymUnmanagedNamespace::GetVariables Method</span></span>
+<span data-ttu-id="e25e4-103">Возвращает все переменные, определенные в глобальной области в этом пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="e25e4-103">Returns all variables defined at global scope within this namespace.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9e097-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="9e097-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e25e4-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="e25e4-104">Syntax</span></span>  
   
 ```  
 HRESULT GetVariables(  
@@ -37,22 +37,22 @@ HRESULT GetVariables(
         ISymUnmanagedVariable *pVars[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9e097-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="9e097-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e25e4-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="e25e4-105">Parameters</span></span>  
  `cVars`  
- <span data-ttu-id="9e097-106">[in] Объект `ULONG32` указывает размер `pVars` массива.</span><span class="sxs-lookup"><span data-stu-id="9e097-106">[in] A `ULONG32` that indicates the size of the `pVars` array.</span></span>  
+ <span data-ttu-id="e25e4-106">[in] Объект `ULONG32` указывает размер `pVars` массива.</span><span class="sxs-lookup"><span data-stu-id="e25e4-106">[in] A `ULONG32` that indicates the size of the `pVars` array.</span></span>  
   
  `pcVars`  
- <span data-ttu-id="9e097-107">[out] Указатель на `ULONG32` , получающий размер буфера, необходимый для пространства имен.</span><span class="sxs-lookup"><span data-stu-id="9e097-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the namespaces.</span></span>  
+ <span data-ttu-id="e25e4-107">[out] Указатель на `ULONG32` , получающий размер буфера, необходимый для пространства имен.</span><span class="sxs-lookup"><span data-stu-id="e25e4-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the namespaces.</span></span>  
   
  `pVars`  
- <span data-ttu-id="9e097-108">[out] Указатель на буфер, содержащий пространства имен.</span><span class="sxs-lookup"><span data-stu-id="9e097-108">[out] A pointer to a buffer that contains the namespaces.</span></span>  
+ <span data-ttu-id="e25e4-108">[out] Указатель на буфер, содержащий пространства имен.</span><span class="sxs-lookup"><span data-stu-id="e25e4-108">[out] A pointer to a buffer that contains the namespaces.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="9e097-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="9e097-109">Return Value</span></span>  
- <span data-ttu-id="9e097-110">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="9e097-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="e25e4-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="e25e4-109">Return Value</span></span>  
+ <span data-ttu-id="e25e4-110">Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.</span><span class="sxs-lookup"><span data-stu-id="e25e4-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9e097-111">Требования</span><span class="sxs-lookup"><span data-stu-id="9e097-111">Requirements</span></span>  
- <span data-ttu-id="9e097-112">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="9e097-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e25e4-111">Требования</span><span class="sxs-lookup"><span data-stu-id="e25e4-111">Requirements</span></span>  
+ <span data-ttu-id="e25e4-112">**Заголовок.** CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="e25e4-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9e097-113">См. также</span><span class="sxs-lookup"><span data-stu-id="9e097-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e25e4-113">См. также</span><span class="sxs-lookup"><span data-stu-id="e25e4-113">See also</span></span>
 
-- [<span data-ttu-id="9e097-114">Интерфейс ISymUnmanagedNamespace</span><span class="sxs-lookup"><span data-stu-id="9e097-114">ISymUnmanagedNamespace Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)
+- [<span data-ttu-id="e25e4-114">Интерфейс ISymUnmanagedNamespace</span><span class="sxs-lookup"><span data-stu-id="e25e4-114">ISymUnmanagedNamespace Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)
