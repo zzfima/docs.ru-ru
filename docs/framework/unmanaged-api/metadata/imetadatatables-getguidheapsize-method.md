@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 812794bc76d475c516effdc950ca6a0b877494c3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59178364"
 ---
-# <a name="imetadatatablesgetguidheapsize-method"></a><span data-ttu-id="030e9-102">Метод IMetaDataTables::GetGuidHeapSize</span><span class="sxs-lookup"><span data-stu-id="030e9-102">IMetaDataTables::GetGuidHeapSize Method</span></span>
-<span data-ttu-id="030e9-103">Возвращает размер в байтах, кучи GUID.</span><span class="sxs-lookup"><span data-stu-id="030e9-103">Gets the size, in bytes, of the GUID heap.</span></span>  
+# <a name="imetadatatablesgetguidheapsize-method"></a><span data-ttu-id="de20e-102">Метод IMetaDataTables::GetGuidHeapSize</span><span class="sxs-lookup"><span data-stu-id="de20e-102">IMetaDataTables::GetGuidHeapSize Method</span></span>
+<span data-ttu-id="de20e-103">Возвращает размер в байтах, кучи GUID.</span><span class="sxs-lookup"><span data-stu-id="de20e-103">Gets the size, in bytes, of the GUID heap.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="030e9-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="030e9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="de20e-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="de20e-104">Syntax</span></span>  
   
 ```  
 HRESULT GetGuidHeapSize (  
@@ -35,20 +35,20 @@ HRESULT GetGuidHeapSize (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="030e9-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="030e9-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="de20e-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="de20e-105">Parameters</span></span>  
  `pcbGuids`  
- <span data-ttu-id="030e9-106">[out] Указатель на размер в байтах, кучи GUID.</span><span class="sxs-lookup"><span data-stu-id="030e9-106">[out] A pointer to the size, in bytes, of the GUID heap.</span></span>  
+ <span data-ttu-id="de20e-106">[out] Указатель на размер в байтах, кучи GUID.</span><span class="sxs-lookup"><span data-stu-id="de20e-106">[out] A pointer to the size, in bytes, of the GUID heap.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="030e9-107">Требования</span><span class="sxs-lookup"><span data-stu-id="030e9-107">Requirements</span></span>  
- <span data-ttu-id="030e9-108">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="030e9-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="de20e-107">Требования</span><span class="sxs-lookup"><span data-stu-id="de20e-107">Requirements</span></span>  
+ <span data-ttu-id="de20e-108">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="de20e-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="030e9-109">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="030e9-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="de20e-109">**Заголовок.** Cor.h</span><span class="sxs-lookup"><span data-stu-id="de20e-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="030e9-110">**Библиотека:** Используется как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="030e9-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="de20e-110">**Библиотека:** Используется как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="de20e-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="030e9-111">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="030e9-111">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="de20e-111">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="de20e-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="030e9-112">См. также</span><span class="sxs-lookup"><span data-stu-id="030e9-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="de20e-112">См. также</span><span class="sxs-lookup"><span data-stu-id="de20e-112">See also</span></span>
 
-- [<span data-ttu-id="030e9-113">Интерфейс IMetaDataTables</span><span class="sxs-lookup"><span data-stu-id="030e9-113">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [<span data-ttu-id="030e9-114">Интерфейс IMetaDataTables2</span><span class="sxs-lookup"><span data-stu-id="030e9-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [<span data-ttu-id="de20e-113">Интерфейс IMetaDataTables</span><span class="sxs-lookup"><span data-stu-id="de20e-113">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="de20e-114">Интерфейс IMetaDataTables2</span><span class="sxs-lookup"><span data-stu-id="de20e-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

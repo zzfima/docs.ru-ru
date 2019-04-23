@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7aeb813cafbf5b18739c4574c386398ac3c7a77b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59180483"
 ---
-# <a name="callfunctionshim-function"></a><span data-ttu-id="e9451-102">Функция CallFunctionShim</span><span class="sxs-lookup"><span data-stu-id="e9451-102">CallFunctionShim Function</span></span>
-<span data-ttu-id="e9451-103">Вызывает функцию, которая имеет указанные имя и параметры в указанной библиотеке.</span><span class="sxs-lookup"><span data-stu-id="e9451-103">Makes a call to the function that has the specified name and parameters in the specified library.</span></span>  
+# <a name="callfunctionshim-function"></a><span data-ttu-id="f7d2e-102">Функция CallFunctionShim</span><span class="sxs-lookup"><span data-stu-id="f7d2e-102">CallFunctionShim Function</span></span>
+<span data-ttu-id="f7d2e-103">Вызывает функцию, которая имеет указанные имя и параметры в указанной библиотеке.</span><span class="sxs-lookup"><span data-stu-id="f7d2e-103">Makes a call to the function that has the specified name and parameters in the specified library.</span></span>  
   
- <span data-ttu-id="e9451-104">Эта функция устарели в [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="e9451-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+ <span data-ttu-id="f7d2e-104">Эта функция устарели в [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f7d2e-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e9451-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="e9451-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f7d2e-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f7d2e-105">Syntax</span></span>  
   
 ```  
 HRESULT CallFunctionShim (  
@@ -41,34 +41,34 @@ HRESULT CallFunctionShim (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e9451-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="e9451-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f7d2e-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="f7d2e-106">Parameters</span></span>  
  `szDllName`  
- <span data-ttu-id="e9451-107">[in] Имя библиотеки, содержащей функцию.</span><span class="sxs-lookup"><span data-stu-id="e9451-107">[in] The name of the library containing the function.</span></span>  
+ <span data-ttu-id="f7d2e-107">[in] Имя библиотеки, содержащей функцию.</span><span class="sxs-lookup"><span data-stu-id="f7d2e-107">[in] The name of the library containing the function.</span></span>  
   
  `szFunctionName`  
- <span data-ttu-id="e9451-108">[in] Имя функции.</span><span class="sxs-lookup"><span data-stu-id="e9451-108">[in] The name of the function.</span></span>  
+ <span data-ttu-id="f7d2e-108">[in] Имя функции.</span><span class="sxs-lookup"><span data-stu-id="f7d2e-108">[in] The name of the function.</span></span>  
   
  `lpvArgument1`  
- <span data-ttu-id="e9451-109">[in] Первый аргумент, передаваемый в функцию.</span><span class="sxs-lookup"><span data-stu-id="e9451-109">[in] The first argument to pass to the function.</span></span>  
+ <span data-ttu-id="f7d2e-109">[in] Первый аргумент, передаваемый в функцию.</span><span class="sxs-lookup"><span data-stu-id="f7d2e-109">[in] The first argument to pass to the function.</span></span>  
   
  `lpvArgument2`  
- <span data-ttu-id="e9451-110">[in] Второй аргумент, передаваемый в функцию.</span><span class="sxs-lookup"><span data-stu-id="e9451-110">[in] The second argument to pass to the function.</span></span>  
+ <span data-ttu-id="f7d2e-110">[in] Второй аргумент, передаваемый в функцию.</span><span class="sxs-lookup"><span data-stu-id="f7d2e-110">[in] The second argument to pass to the function.</span></span>  
   
  `szVersion`  
- <span data-ttu-id="e9451-111">[in] Версия библиотеки, содержащей функцию.</span><span class="sxs-lookup"><span data-stu-id="e9451-111">[in] The version of the library that contains the function.</span></span>  
+ <span data-ttu-id="f7d2e-111">[in] Версия библиотеки, содержащей функцию.</span><span class="sxs-lookup"><span data-stu-id="f7d2e-111">[in] The version of the library that contains the function.</span></span>  
   
  `pvReserved`  
- <span data-ttu-id="e9451-112">[in] Зарезервировано для будущего использования.</span><span class="sxs-lookup"><span data-stu-id="e9451-112">[in] Reserved for future use.</span></span> <span data-ttu-id="e9451-113">Передайте нулевое значение в этом параметре.</span><span class="sxs-lookup"><span data-stu-id="e9451-113">Pass zero in this parameter.</span></span>  
+ <span data-ttu-id="f7d2e-112">[in] Зарезервировано для будущего использования.</span><span class="sxs-lookup"><span data-stu-id="f7d2e-112">[in] Reserved for future use.</span></span> <span data-ttu-id="f7d2e-113">Передайте нулевое значение в этом параметре.</span><span class="sxs-lookup"><span data-stu-id="f7d2e-113">Pass zero in this parameter.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e9451-114">Требования</span><span class="sxs-lookup"><span data-stu-id="e9451-114">Requirements</span></span>  
- <span data-ttu-id="e9451-115">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e9451-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f7d2e-114">Требования</span><span class="sxs-lookup"><span data-stu-id="f7d2e-114">Requirements</span></span>  
+ <span data-ttu-id="f7d2e-115">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f7d2e-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e9451-116">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="e9451-116">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="f7d2e-116">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="f7d2e-116">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="e9451-117">**Библиотека:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="e9451-117">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="f7d2e-117">**Библиотека:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="f7d2e-117">**Library:** MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="e9451-118">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="e9451-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="f7d2e-118">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f7d2e-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e9451-119">См. также</span><span class="sxs-lookup"><span data-stu-id="e9451-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f7d2e-119">См. также</span><span class="sxs-lookup"><span data-stu-id="f7d2e-119">See also</span></span>
 
-- [<span data-ttu-id="e9451-120">Устаревшие функции размещения CLR</span><span class="sxs-lookup"><span data-stu-id="e9451-120">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="f7d2e-120">Устаревшие функции размещения CLR</span><span class="sxs-lookup"><span data-stu-id="f7d2e-120">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

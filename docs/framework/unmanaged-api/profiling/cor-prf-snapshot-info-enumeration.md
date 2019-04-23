@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: fa85fb2cebb47ecbd7b0f091cb79f6ea0936b1cb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59177844"
 ---
-# <a name="corprfsnapshotinfo-enumeration"></a><span data-ttu-id="0cb37-102">Перечисление COR_PRF_SNAPSHOT_INFO</span><span class="sxs-lookup"><span data-stu-id="0cb37-102">COR_PRF_SNAPSHOT_INFO Enumeration</span></span>
-<span data-ttu-id="0cb37-103">Указывает, какой объем данных для обратной передачи со снимком стека в каждом вызове профилировщика [StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md) функции.</span><span class="sxs-lookup"><span data-stu-id="0cb37-103">Specifies how much data to pass back with a stack snapshot in each call to the profiler's [StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md) function.</span></span>  
+# <a name="corprfsnapshotinfo-enumeration"></a><span data-ttu-id="cd604-102">Перечисление COR_PRF_SNAPSHOT_INFO</span><span class="sxs-lookup"><span data-stu-id="cd604-102">COR_PRF_SNAPSHOT_INFO Enumeration</span></span>
+<span data-ttu-id="cd604-103">Указывает, какой объем данных для обратной передачи со снимком стека в каждом вызове профилировщика [StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md) функции.</span><span class="sxs-lookup"><span data-stu-id="cd604-103">Specifies how much data to pass back with a stack snapshot in each call to the profiler's [StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md) function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0cb37-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="0cb37-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cd604-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="cd604-104">Syntax</span></span>  
   
 ```  
 typedef enum _COR_PRF_SNAPSHOT_INFO {  
@@ -36,27 +36,27 @@ typedef enum _COR_PRF_SNAPSHOT_INFO {
 } COR_PRF_SNAPSHOT_INFO;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="0cb37-105">Участники</span><span class="sxs-lookup"><span data-stu-id="0cb37-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="cd604-105">Участники</span><span class="sxs-lookup"><span data-stu-id="cd604-105">Members</span></span>  
   
-|<span data-ttu-id="0cb37-106">Участники</span><span class="sxs-lookup"><span data-stu-id="0cb37-106">Members</span></span>|<span data-ttu-id="0cb37-107">Описание</span><span class="sxs-lookup"><span data-stu-id="0cb37-107">Description</span></span>|  
+|<span data-ttu-id="cd604-106">Участники</span><span class="sxs-lookup"><span data-stu-id="cd604-106">Members</span></span>|<span data-ttu-id="cd604-107">Описание</span><span class="sxs-lookup"><span data-stu-id="cd604-107">Description</span></span>|  
 |-------------|-----------------|  
-|`COR_PRF_SNAPSHOT_DEFAULT`|<span data-ttu-id="0cb37-108">Указывает, что значения должны передаваться для всех `StackSnapshotCallback` параметры, за исключением `context` параметра.</span><span class="sxs-lookup"><span data-stu-id="0cb37-108">Indicates that values must be passed for all `StackSnapshotCallback` parameters, except the `context` parameter.</span></span>|  
-|`COR_PRF_SNAPSHOT_REGISTER_CONTEXT`|<span data-ttu-id="0cb37-109">Указывает, что значения должны передаваться для всех `StackSnapshotCallback` параметров, включая `context` параметра.</span><span class="sxs-lookup"><span data-stu-id="0cb37-109">Indicates that values must be passed for all `StackSnapshotCallback` parameters, including the `context` parameter.</span></span>|  
-|`COR_PRF_SNAPSHOT_X86_OPTIMIZED`|<span data-ttu-id="0cb37-110">Указывает, что будет использоваться простой и альтернативный алгоритм анализа стека.</span><span class="sxs-lookup"><span data-stu-id="0cb37-110">Indicates that a simpler, alternative stack-walking algorithm will be used.</span></span>|  
+|`COR_PRF_SNAPSHOT_DEFAULT`|<span data-ttu-id="cd604-108">Указывает, что значения должны передаваться для всех `StackSnapshotCallback` параметры, за исключением `context` параметра.</span><span class="sxs-lookup"><span data-stu-id="cd604-108">Indicates that values must be passed for all `StackSnapshotCallback` parameters, except the `context` parameter.</span></span>|  
+|`COR_PRF_SNAPSHOT_REGISTER_CONTEXT`|<span data-ttu-id="cd604-109">Указывает, что значения должны передаваться для всех `StackSnapshotCallback` параметров, включая `context` параметра.</span><span class="sxs-lookup"><span data-stu-id="cd604-109">Indicates that values must be passed for all `StackSnapshotCallback` parameters, including the `context` parameter.</span></span>|  
+|`COR_PRF_SNAPSHOT_X86_OPTIMIZED`|<span data-ttu-id="cd604-110">Указывает, что будет использоваться простой и альтернативный алгоритм анализа стека.</span><span class="sxs-lookup"><span data-stu-id="cd604-110">Indicates that a simpler, alternative stack-walking algorithm will be used.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="0cb37-111">Примечания</span><span class="sxs-lookup"><span data-stu-id="0cb37-111">Remarks</span></span>  
- <span data-ttu-id="0cb37-112">Значения, предоставленные `COR_PRF_SNAPSHOT_INFO` перечисления передаются как параметры для [DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="0cb37-112">Values that are provided by the `COR_PRF_SNAPSHOT_INFO` enumeration are passed as parameters to the [DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="cd604-111">Примечания</span><span class="sxs-lookup"><span data-stu-id="cd604-111">Remarks</span></span>  
+ <span data-ttu-id="cd604-112">Значения, предоставленные `COR_PRF_SNAPSHOT_INFO` перечисления передаются как параметры для [DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="cd604-112">Values that are provided by the `COR_PRF_SNAPSHOT_INFO` enumeration are passed as parameters to the [DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0cb37-113">Требования</span><span class="sxs-lookup"><span data-stu-id="0cb37-113">Requirements</span></span>  
- <span data-ttu-id="0cb37-114">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0cb37-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cd604-113">Требования</span><span class="sxs-lookup"><span data-stu-id="cd604-113">Requirements</span></span>  
+ <span data-ttu-id="cd604-114">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cd604-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0cb37-115">**Заголовок.** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="0cb37-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="cd604-115">**Заголовок.** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="cd604-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="0cb37-116">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0cb37-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="cd604-116">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cd604-116">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="0cb37-117">Версии платформы .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="0cb37-117">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="cd604-117">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cd604-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0cb37-118">См. также</span><span class="sxs-lookup"><span data-stu-id="0cb37-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cd604-118">См. также</span><span class="sxs-lookup"><span data-stu-id="cd604-118">See also</span></span>
 
-- [<span data-ttu-id="0cb37-119">Метод DoStackSnapshot</span><span class="sxs-lookup"><span data-stu-id="0cb37-119">DoStackSnapshot Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)
-- [<span data-ttu-id="0cb37-120">Перечисления профилирования</span><span class="sxs-lookup"><span data-stu-id="0cb37-120">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [<span data-ttu-id="cd604-119">Метод DoStackSnapshot</span><span class="sxs-lookup"><span data-stu-id="cd604-119">DoStackSnapshot Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)
+- [<span data-ttu-id="cd604-120">Перечисления профилирования</span><span class="sxs-lookup"><span data-stu-id="cd604-120">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
