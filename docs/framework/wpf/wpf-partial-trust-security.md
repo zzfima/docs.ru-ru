@@ -16,10 +16,10 @@ helpviewer_keywords:
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
 ms.openlocfilehash: 75ebf605e9abb844e7a713b448aefe2ec4cd1a27
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59218385"
 ---
 # <a name="wpf-partial-trust-security"></a>Безопасность частичного доверия в WPF
@@ -166,5 +166,5 @@ ms.locfileid: "59218385"
 ## <a name="see-also"></a>См. также
 
 - [Безопасность](security-wpf.md)
-- [Стратегия безопасности WPF — безопасность платформы](wpf-security-strategy-platform-security.md)
+- [Стратегия безопасности WPF — безопасность платформы](wpf-security-strategy-platform-security.md)
 - [Стратегия безопасности WPF — проектирование безопасности](wpf-security-strategy-security-engineering.md)

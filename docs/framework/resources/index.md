@@ -14,10 +14,10 @@ ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 86efc3a9d9eab5c1529804769af413dd88e71f1c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59220491"
 ---
 # <a name="resources-in-net-apps"></a>Ресурсы в приложениях .NET
@@ -65,7 +65,7 @@ ms.locfileid: "59220491"
 
 - <xref:System.Globalization.CultureInfo>
 - <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>
-- [Основные сведения о приложениях](../../../docs/standard/application-essentials.md)
+- [Основные сведения о приложениях .NET Framework](../../../docs/standard/application-essentials.md)
 - [Создание файлов ресурсов](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
 - [Упаковка и развертывание ресурсов](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
 - [Создание вспомогательных сборок](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)

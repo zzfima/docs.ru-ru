@@ -9,10 +9,10 @@ helpviewer_keywords:
 - rotating objects by geometric paths [WPF]
 ms.assetid: cb31ca4d-f05a-4c6b-9a18-4b6faaf38d45
 ms.openlocfilehash: 3e35169da7297ec62e0114ab21f4ba81c0a656ea
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59229216"
 ---
 # <a name="how-to-rotate-an-object-by-using-a-geometric-path"></a>Практическое руководство. Поворот объекта с использованием геометрического пути
@@ -38,4 +38,4 @@ ms.locfileid: "59229216"
 
 - [Общие сведения об эффектах анимации](animation-overview.md)
 - [Пример анимации вдоль пути](https://go.microsoft.com/fwlink/?LinkID=160028)
-- [Практические руководства, посвященные анимации пути](path-animation-how-to-topics.md)
+- [Практические руководства, посвященные анимации по контуру](path-animation-how-to-topics.md)

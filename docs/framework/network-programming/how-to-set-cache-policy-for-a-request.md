@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - request cache policies
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
-ms.openlocfilehash: 11f36065c02c5ec513e66bff2541536e9290b5c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3da60366ec1a8e2e0242cf78e0418fe76e18da68
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563565"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59226577"
 ---
 # <a name="how-to-set-cache-policy-for-a-request"></a>Как выполнить Задание политики кэширования для запроса
 В следующем примере показана установка политики кэширования для запроса. В качестве входных данных для этого примера используется URI, например `http://www.contoso.com/`.  
@@ -106,6 +106,7 @@ End Namespace
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Управление кэшем для сетевых приложений](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
 - [Политика кэша](../../../docs/framework/network-programming/cache-policy.md)
 - [Политики кэша на основе расположения](../../../docs/framework/network-programming/location-based-cache-policies.md)

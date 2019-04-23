@@ -11,10 +11,10 @@ helpviewer_keywords:
 - ComboBox control [Windows Forms]
 ms.assetid: 86a1bbc3-0469-4290-91c5-99ff61b739ff
 ms.openlocfilehash: 9f9653069606ec81d7ece4372d67a0a0eba4c073
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59227127"
 ---
 # <a name="combobox-control-windows-forms"></a>Элемент управления ComboBox (Windows Forms)
@@ -24,11 +24,11 @@ Windows Forms `ComboBox` элемент управления используе�
  [Общие сведения об элементе управления ComboBox](combobox-control-overview-windows-forms.md)  
  Описание элемента управления, его основных возможностей и свойств.  
   
- [Практическое руководство. Индивидуальное форматирование строк, отображаемых в элементе управления ComboBox](how-to-create-variable-sized-text-in-a-combobox-control.md)  
+ [Практическое руководство. Индивидуальное в элементе управления ComboBox](how-to-create-variable-sized-text-in-a-combobox-control.md)  
  Демонстрирует пользовательское рисование текста в `ComboBox` элемента управления.  
   
 ## <a name="reference"></a>Ссылка  
- <xref:System.Windows.Forms.ComboBox> класс  
+ Класс <xref:System.Windows.Forms.ComboBox>  
  Описание класса и всех его членов.  
   
 ## <a name="related-sections"></a>Связанные разделы  
@@ -37,4 +37,4 @@ Windows Forms `ComboBox` элемент управления используе�
   
 ## <a name="see-also"></a>См. также
 
-- [Элементы управления для использования в формах Windows Forms](controls-to-use-on-windows-forms.md)
+- [Элементы управления для использования в Windows Forms](controls-to-use-on-windows-forms.md)

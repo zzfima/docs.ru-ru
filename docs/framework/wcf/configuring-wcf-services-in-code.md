@@ -3,10 +3,10 @@ title: Настройка служб WCF в коде
 ms.date: 03/30/2017
 ms.assetid: 193c725d-134f-4d31-a8f8-4e575233bff6
 ms.openlocfilehash: 8a1eeff76b02315143fb7b50ccc41aa18bb9eb0c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59225707"
 ---
 # <a name="configuring-wcf-services-in-code"></a>Настройка служб WCF в коде
@@ -96,13 +96,13 @@ public class Service1 : IService1
 ## <a name="see-also"></a>См. также
 
 - [Настройка служб с использованием файлов конфигурации](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)
-- [Настройка поведений клиентов](../../../docs/framework/wcf/configuring-client-behaviors.md)
+- [Настройка поведения клиентов](../../../docs/framework/wcf/configuring-client-behaviors.md)
 - [Упрощенная конфигурация](../../../docs/framework/wcf/simplified-configuration.md)
-- [Параметр Configuration](../../../docs/framework/wcf/samples/configuration-sample.md)
+- [Конфигурация](../../../docs/framework/wcf/samples/configuration-sample.md)
 - [Активация на основе конфигурации в IIS и WAS](../../../docs/framework/wcf/feature-details/configuration-based-activation-in-iis-and-was.md)
 - [Конфигурация и поддержка метаданных](../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)
-- [Параметр Configuration](../../../docs/framework/wcf/diagnostics/exceptions-reference/configuration.md)
-- [Практическое руководство. Задание привязки службы в конфигурации](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
-- [Практическое руководство. Создание конечной точки службы в конфигурации](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
-- [Практическое руководство. Публикация метаданных для службы с использованием файла конфигурации](../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [Конфигурация](../../../docs/framework/wcf/diagnostics/exceptions-reference/configuration.md)
+- [Практическое руководство. Указание привязки службы в конфигурации](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
+- [Практическое руководство. Создать конечную точку службы в конфигурации](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
+- [Практическое руководство. Публикация метаданных для службы с помощью файла конфигурации](../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
 - [Практическое руководство. Указание привязки клиента в конфигурации](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)

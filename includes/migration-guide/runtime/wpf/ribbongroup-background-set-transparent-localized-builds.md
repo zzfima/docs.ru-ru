@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9500907c6a1ba5b27008dcad4c9b47aef9092106
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 921baed7381fad363cc832c6b6af69068c2c8f43
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760683"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59236092"
 ---
 ### <a name="ribbongroup-background-is-set-to-transparent-in-localized-builds"></a>В локализованных сборках для RibbonGroup устанавливается прозрачный фон
 
@@ -15,4 +15,3 @@ ms.locfileid: "58760683"
 |Область|Пограничный случай|
 |Версия|4.6.2|
 |Тип|Среда выполнения|
-

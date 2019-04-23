@@ -5,10 +5,10 @@ helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
 ms.openlocfilehash: 4c49e721ce4934c041b6636776c72db7839a1b1b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59228887"
 ---
 # <a name="denial-of-service"></a>Отказ в обслуживании
@@ -28,13 +28,13 @@ ms.locfileid: "59228887"
   
  Устранение рисков. Используйте следующие свойства <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings> класса:  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxCachedCookies%2A>: определяет максимальное количество ограниченных по времени `SecurityContextToken`s, которые сервер кэширует после `SPNego` или `SSL` согласования.  
+-   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxCachedCookies%2A>: определяет максимальное число привязанных ко времени объектов `SecurityContextToken`, которые сервер кэширует после согласования `SPNego` или `SSL`;  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.IssuedCookieLifetime%2A>: управляет временем существования `SecurityContextTokens` , выдаваемых сервером после `SPNego` или `SSL` согласования. Сервер кэширует объекты `SecurityContextToken` на данный промежуток времени.  
+-   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.IssuedCookieLifetime%2A>: определяет время существования объектов `SecurityContextTokens`, выдаваемых сервером после согласования `SPNego` и `SSL`. Сервер кэширует объекты `SecurityContextToken` на данный промежуток времени.  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxPendingSessions%2A>: определяет максимальное количество защищенных диалогов, установленных на сервере, но для которого сообщения приложения не будут обработаны. Данная квота препятствует установлению клиентами безопасных диалогов в службе; таким образом, служба должна отслеживать состояние каждого из клиентов, но не использовать их.  
+-   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxPendingSessions%2A> управляет максимальным числом безопасных диалогов, установленных на сервере, но для которых ни одно сообщение приложения не было обработано. Данная квота препятствует установлению клиентами безопасных диалогов в службе; таким образом, служба должна отслеживать состояние каждого из клиентов, но не использовать их.  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.InactivityTimeout%2A>: определяет максимальное время, служба поддерживает безопасный диалог, не получая сообщений приложения от клиента для диалога. Данная квота препятствует установлению клиентами безопасных диалогов в службе; таким образом, служба должна отслеживать состояние каждого из клиентов, но не использовать их.  
+-   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.InactivityTimeout%2A>: определяет максимальный срок, в течение которого служба поддерживает безопасный диалог, не получая сообщений приложения от клиента. Данная квота препятствует установлению клиентами безопасных диалогов в службе; таким образом, служба должна отслеживать состояние каждого из клиентов, но не использовать их.  
   
 ## <a name="wsdualhttpbinding-or-dual-custom-bindings-require-client-authentication"></a>Привязки WSDualHttpBinding и Dual Custom Bindings требуют проверки подлинности клиента  
  По умолчанию для привязки <xref:System.ServiceModel.WSDualHttpBinding> включен режим безопасности. Однако существует возможность, что при отключении проверки подлинности клиента путем задания для свойства <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A> значения <xref:System.ServiceModel.MessageCredentialType.None> злоумышленник сможет вызвать атаку типа «отказ в обслуживании» на третьей службе. Это может произойти потому, что вредоносный клиент «заставит» службу отправить поток сообщений третьей службе.  

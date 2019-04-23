@@ -10,10 +10,10 @@ helpviewer_keywords:
 - user controls [Windows Forms], constituent controls
 ms.assetid: 5565e720-198b-4bbd-a2bd-c447ba641798
 ms.openlocfilehash: 76a5a4f9b02a71616d247a1bb0f03cc0aec1d70d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59224881"
 ---
 # <a name="constituent-controls"></a>Составные элементы управления
@@ -48,5 +48,5 @@ System.Windows.Forms.PaintEventArgs e)
 - <xref:System.Windows.Forms.UserControl>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
 - [Элементы управления, разработанные пользователем](user-drawn-controls.md)
-- [Практическое руководство. Создание графических объектов для рисования](../advanced/how-to-create-graphics-objects-for-drawing.md)
-- [Создание собственных элементов управления](varieties-of-custom-controls.md)
+- [Практическое руководство. Создание объектов Graphics для рисования](../advanced/how-to-create-graphics-objects-for-drawing.md)
+- [Разновидности пользовательских элементов управления](varieties-of-custom-controls.md)

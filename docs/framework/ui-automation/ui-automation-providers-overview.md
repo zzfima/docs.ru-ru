@@ -6,10 +6,10 @@ helpviewer_keywords:
 - providers, UI Automation
 ms.assetid: 859557b8-51e1-4d15-92e8-318d2dcdb2f7
 ms.openlocfilehash: 9312f386198459d0d2dac110827cc6c0029eb247
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59222748"
 ---
 # <a name="ui-automation-providers-overview"></a>Общие сведения о поставщиках автоматизации пользовательского интерфейса
@@ -41,10 +41,10 @@ ms.locfileid: "59222748"
  В этом разделе содержится краткое описание некоторых ключевых понятий, которые необходимо знать для реализации поставщиков автоматизации пользовательского интерфейса.  
   
 ### <a name="elements"></a>Элементы  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] элементы — это части [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] , являются видимыми для клиентов автоматизации пользовательского интерфейса. В качестве примеров можно привести окна приложений, панели, кнопки, подсказки, списки и элементы списков.  
+ Элементы[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] — это части [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] , видимые клиентам автоматизации пользовательского интерфейса. В качестве примеров можно привести окна приложений, панели, кнопки, подсказки, списки и элементы списков.  
   
 ### <a name="navigation"></a>Навигация  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] элементы передаются клиентам в виде [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] дерева. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] создает это дерево путем перемещения от одного элемента к другому. Поставщики разрешают навигацию для всех элементов, каждый из которых может указывать на родительский элемент, одноуровневые элементы и дочерние элементы.  
+ Элементы[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] предоставляются клиентам в виде дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] создает это дерево путем перемещения от одного элемента к другому. Поставщики разрешают навигацию для всех элементов, каждый из которых может указывать на родительский элемент, одноуровневые элементы и дочерние элементы.  
   
  Дополнительные сведения о клиентском представлении дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] см. в разделе [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).  
   
@@ -64,7 +64,7 @@ ms.locfileid: "59222748"
 ### <a name="frameworks"></a>Инфраструктуры  
  Инфраструктура — это компонент, который управляет дочерними элементами управления, проверкой попадания и визуализацией в области экрана. Например, окно [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] , которое часто называют HWND, может служить инфраструктурой, которая содержит несколько элементов [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , таких как меню, строка состояния и кнопки.  
   
- [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] контейнер элементов управления, таких как списки и представления в виде дерева, считаются платформ, так как они содержат собственный код для визуализации дочерних элементов и выполнения попадания на них. Напротив, список [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] не является инфраструктурой, поскольку визуализация и проверка попадания обрабатываются содержащим его окном [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] .  
+ Контейнерные элементы управления[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] , такие как списки и представления в виде дерева, считаются инфраструктурами, так как они содержат собственный код для визуализации дочерних элементов и выполнения проверки попадания в них. Напротив, список [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] не является инфраструктурой, поскольку визуализация и проверка попадания обрабатываются содержащим его окном [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] .  
   
  [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] в приложении может состоять из разных инфраструктур. Например, окно приложения HWND может содержать [!INCLUDE[TLA#tla_dhtml](../../../includes/tlasharptla-dhtml-md.md)] , который в свою очередь содержит компонент, например поле со списком в HWND.  
   

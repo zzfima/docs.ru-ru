@@ -3,10 +3,10 @@ title: Рабочие процессы конечного автомата
 ms.date: 03/30/2017
 ms.assetid: 344caacd-bf3b-4716-bd5a-eca74fc5a61d
 ms.openlocfilehash: 85d7fff680b11428173dc2684b30bf2b1f46640b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59222995"
 ---
 # <a name="state-machine-workflows"></a>Рабочие процессы конечного автомата
@@ -103,7 +103,7 @@ ms.locfileid: "59222995"
 ## <a name="see-also"></a>См. также
 
 - [Практическое руководство. Создание рабочего процесса конечного автомата](how-to-create-a-state-machine-workflow.md)
-- [Конструктор действий StateMachine](/visualstudio/workflow-designer/statemachine-activity-designer)
-- [Конструктор State Activity](/visualstudio/workflow-designer/state-activity-designer)
-- [Конструктор FinalState Activity](/visualstudio/workflow-designer/finalstate-activity-designer)
+- [Конструктор действия StateMachine](/visualstudio/workflow-designer/statemachine-activity-designer)
+- [Конструктор действия State](/visualstudio/workflow-designer/state-activity-designer)
+- [Конструктор действия FinalState](/visualstudio/workflow-designer/finalstate-activity-designer)
 - [Конструктор действий переходов](/visualstudio/workflow-designer/transition-activity-designer)

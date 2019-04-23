@@ -3,10 +3,10 @@ title: функция определенной модели
 ms.date: 03/30/2017
 ms.assetid: 8bb2edc8-e8e7-44c2-adc7-f44e11bda4f0
 ms.openlocfilehash: 77152e8f37b009cbc3e72f053ead867914768d3d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59226642"
 ---
 # <a name="model-defined-function"></a>функция определенной модели
@@ -39,5 +39,5 @@ ms.locfileid: "59226642"
 ## <a name="see-also"></a>См. также
 
 - [Основные понятия модели EDM](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [EDM (модель данных с использованием сущностей)](../../../../docs/framework/data/adonet/entity-data-model.md)
-- [EDM (модель данных с использованием сущностей): примитивные типы данных](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)
+- [Сущностная модель данных](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [Модель EDM. Типы-примитивы](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)

@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: a51738fa75ba2dd4574549fce2570df8231c4cae
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59234974"
+---
 ### <a name="path-colon-checks-are-stricter"></a>Более строгие проверки двоеточий в пути
 
 |   |   |
@@ -8,4 +16,3 @@
 |Версия|4.6.2|
 |Тип|Изменение целевой платформы|
 |Затронутые API|<ul><li><xref:System.IO.Path.GetDirectoryName(System.String)?displayProperty=nameWithType></li><li><xref:System.IO.Path.GetPathRoot(System.String)?displayProperty=nameWithType></li></ul>|
-

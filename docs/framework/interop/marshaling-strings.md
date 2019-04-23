@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e21b078b-70fb-4905-be26-c097ab2433ff
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4640d37ad6c30746e203c26c2c1cd71eb70e7579
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 0db33d59d1fc1c19e07567108970db77059cebb7
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56218571"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59223034"
 ---
 # <a name="marshaling-strings"></a>Маршалинг строк
 При вызове неуправляемого кода копируются строковые аргументы, и при необходимости выполняется преобразование этих аргументов из формата .NET Framework (Юникод) в неуправляемый формат (ANSI). Так как управляемые строки являются неизменяемыми, то при вызове неуправляемого кода они не копируются обратно из неуправляемой памяти в управляемую память при возврате из функции.  
@@ -39,6 +39,7 @@ ms.locfileid: "56218571"
 |Как массив структур, содержащих строки по значению.|Создает массив структур, содержащих строки. Массив передается по значению.|[Массивы](marshaling-different-types-of-arrays.md)|  
   
 ## <a name="see-also"></a>См. также
+
 - [Маршалинг данных при вызове неуправляемого кода](marshaling-data-with-platform-invoke.md)
 - [Маршалинг классов, структур и объединений](marshaling-classes-structures-and-unions.md)
 - [Маршалинг различных типов массивов](marshaling-different-types-of-arrays.md)

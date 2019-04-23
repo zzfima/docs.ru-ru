@@ -3,10 +3,10 @@ title: Сопоставление ограничений XML-схемы (XSD) ke
 ms.date: 03/30/2017
 ms.assetid: 5b634fea-cc1e-4f6b-9454-10858105b1c8
 ms.openlocfilehash: dcb295aef6d93222e682ef7f720c83963036e795
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59229749"
 ---
 # <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a>Сопоставление ограничений XML-схемы (XSD) keyref с ограничениями набора данных
@@ -16,8 +16,8 @@ ms.locfileid: "59229749"
   
 |Имя атрибута|Описание|  
 |--------------------|-----------------|  
-|**msdata:ConstraintOnly**|Если **ConstraintOnly = «true»** заметка указывается для **keyref** элемент в схеме, создается ограничение, но не создается связь. Если этот атрибут не указан (или имеет значение **False**), ограничения и отношения создаются в **набора данных**.|  
-|**msdata:ConstraintName**|Если **ConstraintName** атрибут указан, его значение используется в качестве имени ограничения. В противном случае **имя** атрибут **keyref** элемент в схеме предоставляет имя ограничения в **набора данных**.|  
+|**msdata: constraintonly**|Если **ConstraintOnly = «true»** заметка указывается для **keyref** элемент в схеме, создается ограничение, но не создается связь. Если этот атрибут не указан (или имеет значение **False**), ограничения и отношения создаются в **набора данных**.|  
+|**msdata: ConstraintName**|Если **ConstraintName** атрибут указан, его значение используется в качестве имени ограничения. В противном случае **имя** атрибут **keyref** элемент в схеме предоставляет имя ограничения в **набора данных**.|  
 |**msdata:UpdateRule**|Если **UpdateRule** атрибут указан в **keyref** элемента в схеме, его значение будет назначено **UpdateRule** свойство ограничения в  **Набор данных**. В противном случае **UpdateRule** свойству **Cascade**.|  
 |**msdata:DeleteRule**|Если **DeleteRule** атрибут указан в **keyref** элемента в схеме, его значение будет назначено **DeleteRule** свойство ограничения в  **Набор данных**. В противном случае **DeleteRule** свойству **Cascade**.|  
 |**msdata:AcceptRejectRule**|Если **AcceptRejectRule** атрибут указан в **keyref** элемента в схеме, его значение будет назначено **AcceptRejectRule** свойство ограничения в  **Набор данных**. В противном случае **AcceptRejectRule** свойству **None**.|  
@@ -111,6 +111,6 @@ Order(OrderNumber, EmpNumber)
   
 ## <a name="see-also"></a>См. также
 
-- [Сопоставление ограничений XML-схемы (XSD) с ограничениями набора данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
-- [Создание отношений наборов данных из схемы XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
-- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Сопоставление ограничений схемы XML (XSD) с ограничениями DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
+- [Создание отношений DataSet из схемы XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

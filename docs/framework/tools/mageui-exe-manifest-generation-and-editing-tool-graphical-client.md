@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 7b0135e4fc655b0efc3140e388f75ac8f45193cf
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 029e4983ef270bb5272ad0bf541ee34febd9399c
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219767"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59222345"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (средство создания и редактирования манифестов, графический клиент)
 
@@ -191,6 +191,7 @@ ms.locfileid: "56219767"
 |**Выбрать манифест**|Позволяет выбрать манифест приложения. Остальные поля на этой странице заполняются при выборе манифеста приложения.|  
   
 ## <a name="see-also"></a>См. также
+
 - [Развертывание и безопасность технологии ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)
 - [Пошаговое руководство: Развертывание вручную приложения ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)
 - [Mage.exe (средство создания и редактирования манифеста)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)

@@ -3,10 +3,10 @@ title: Внешнее сопоставление
 ms.date: 03/30/2017
 ms.assetid: 076606b8-d889-4ba0-b5da-ae577b146f23
 ms.openlocfilehash: 4b493279307f61847b72048c5bfa9dc14a38fe29
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59218684"
 ---
 # <a name="external-mapping"></a>Внешнее сопоставление
@@ -27,7 +27,7 @@ ms.locfileid: "59218684"
   
 -   Внешнее сопоставление переопределяет сопоставление на основе атрибутов. Другими словами, если для создания <xref:System.Data.Linq.DataContext> используется источник внешнего сопоставления, <xref:System.Data.Linq.DataContext> игнорирует все созданные в классах атрибуты сопоставления. Данная модель работает, если класс включен в файл внешнего сопоставления.  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] не поддерживает комбинированное использование двух типов сопоставлений (на основе атрибутов или внешним).  
+-   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] не поддерживает комбинированное использование двух типов сопоставлений (на основе атрибутов и внешнее).  
   
 ## <a name="xml-schema-definition-file"></a>Файл определения схемы XML  
  Внешнее сопоставление в [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] должно быть проверено на соответствие определению схемы XML.  
@@ -144,5 +144,5 @@ elementFormDefault="qualified" >
 ## <a name="see-also"></a>См. также
 
 - [Создание кода в LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
-- [Ссылка](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
-- [Практическое руководство. Как создать модель объектов в виде внешнего файла](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
+- [Ссылки](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [Практическое руководство. Создание модели объектов в виде внешнего файла](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)

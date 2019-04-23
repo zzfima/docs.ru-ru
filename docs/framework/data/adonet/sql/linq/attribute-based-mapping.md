@@ -3,10 +3,10 @@ title: Сопоставление, основанное на атрибутах
 ms.date: 03/30/2017
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
 ms.openlocfilehash: d7d7c14ca12e40af643d164069cf7b0f3165fa20
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59223567"
 ---
 # <a name="attribute-based-mapping"></a>Сопоставление, основанное на атрибутах
@@ -26,12 +26,12 @@ ms.locfileid: "59223567"
   
 |Свойство|Тип|Значение по умолчанию|Описание|  
 |--------------|----------|-------------|-----------------|  
-|<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|String|См. <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|Используется со свойством <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>, указывает имя базы данных.|  
+|<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|String|См. раздел <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>.|Используется со свойством <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>, указывает имя базы данных.|  
   
  Дополнительные сведения см. в разделе <xref:System.Data.Linq.Mapping.DatabaseAttribute>.  
   
 ## <a name="tableattribute-attribute"></a>Атрибут TableAttribute  
- Чтобы определить класс как класс сущности, связанный с таблицей базы данных или представлением, используется атрибут. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] интерпретирует классы, имеющие данный атрибут, как постоянные классы. В следующей таблице приводится описание свойства <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A>.  
+ Чтобы определить класс как класс сущности, связанный с таблицей базы данных или представлением, используется атрибут. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] интерпретирует классы, имеющие данный атрибут, как постоянные. В следующей таблице приводится описание свойства <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A>.  
   
 |Свойство|Тип|Значение по умолчанию|Описание|  
 |--------------|----------|-------------|-----------------|  
@@ -56,7 +56,7 @@ ms.locfileid: "59223567"
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A>|Boolean|`false`|Указывает, что столбец содержит значение дискриминатора для иерархии наследования [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>|Boolean|`false`|Указывает, что этот член класса представляет столбец, входящий в состав первичных ключей таблицы.|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>|Boolean|`false`|Определяет тип столбца члена как метка времени или номер версии в базе данных.|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>|UpdateCheck|`Always`, если не <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> является `true` для элемента|Указывает, какой подход реализуется в [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] для обнаружения конфликтов оптимистичного параллелизма.|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>|UpdateCheck|`Always`, до тех пор, пока <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> имеет значение `true` для члена|Указывает, какой подход реализуется в [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] для обнаружения конфликтов оптимистичного параллелизма.|  
   
  Дополнительные сведения см. в разделе <xref:System.Data.Linq.Mapping.ColumnAttribute>.  
   
@@ -144,4 +144,4 @@ ms.locfileid: "59223567"
   
 ## <a name="see-also"></a>См. также
 
-- [Ссылка](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [Ссылки](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

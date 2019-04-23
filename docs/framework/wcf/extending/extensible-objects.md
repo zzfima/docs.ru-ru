@@ -5,10 +5,10 @@ helpviewer_keywords:
 - extensible objects [WCF]
 ms.assetid: bc88cefc-31fb-428e-9447-6d20a7d452af
 ms.openlocfilehash: 1af44f2394bbf27f9219831612b4e73d7a1759e1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59220283"
 ---
 # <a name="extensible-objects"></a>Расширяемые объекты
@@ -19,7 +19,7 @@ ms.locfileid: "59220283"
   
  Интерфейс <xref:System.ServiceModel.IExtensibleObject%601> реализуется типами, которые позволяют объектам <xref:System.ServiceModel.IExtension%601> настроить свою функциональность.  
   
- Расширяемые объекты обеспечивают динамическое агрегирование объектов <xref:System.ServiceModel.IExtension%601>. <xref:System.ServiceModel.IExtension%601> объекты характеризуются следующим интерфейсом:  
+ Расширяемые объекты обеспечивают динамическое агрегирование объектов <xref:System.ServiceModel.IExtension%601>. Объекты <xref:System.ServiceModel.IExtension%601> характеризуются следующим интерфейсом:  
   
 ```  
 public interface IExtension<T>  
@@ -30,11 +30,11 @@ where T : IExtensibleObject<T>
 }  
 ```  
   
- Ограничение типов гарантирует, что расширения можно определить только для классов <xref:System.ServiceModel.IExtensibleObject%601>. <xref:System.ServiceModel.IExtension%601.Attach%2A> и <xref:System.ServiceModel.IExtension%601.Detach%2A> предоставляют уведомление об агрегировании или деагрегировании.  
+ Ограничение типов гарантирует, что расширения можно определить только для классов <xref:System.ServiceModel.IExtensibleObject%601>. Методы<xref:System.ServiceModel.IExtension%601.Attach%2A> и <xref:System.ServiceModel.IExtension%601.Detach%2A> предоставляют уведомление об агрегировании или деагрегировании.  
   
  Реализации могут ограничивать, если их можно добавить и удалить из владельца. Например, можно полностью запретить удаление, запретить добавление или удаление расширений, когда владелец или расширение находится в определенном состоянии, запретить одновременное добавление в несколько владельцев или разрешить только одно добавление с последующим одним удалением.  
   
- <xref:System.ServiceModel.IExtension%601> не подразумевает никаких взаимодействий с другими стандартными управляемыми интерфейсами. В частности, метод <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> в объекте владельца, как правило, не отсоединяет его расширения.  
+ В шаблоне <xref:System.ServiceModel.IExtension%601> не подразумевается никаких взаимодействий с другими стандартными управляемыми интерфейсами. В частности, метод <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> в объекте владельца, как правило, не отсоединяет его расширения.  
   
  При добавлении расширения в коллекцию <xref:System.ServiceModel.IExtension%601.Attach%2A> вызывается перед отправкой его в коллекцию. При удалении расширения из коллекции, <xref:System.ServiceModel.IExtension%601.Detach%2A> вызывается после того, он удаляется. Это значит (предполагая соответствующую синхронизацию) расширения могли полагаться на только найден в коллекции, когда элемент находится в диапазоне от <xref:System.ServiceModel.IExtension%601.Attach%2A> и <xref:System.ServiceModel.IExtension%601.Detach%2A>.  
   
@@ -46,16 +46,16 @@ where T : IExtensibleObject<T>
   
  Во втором сценарии свойства <xref:System.ServiceModel.IExtension%601.Attach%2A> и <xref:System.ServiceModel.IExtension%601.Detach%2A> используются для предоставления объекту возможности участвовать в пользовательском поведении, таком как регистрация событий, наблюдение за переходами между состояниями и т. д.  
   
- Интерфейс <xref:System.ServiceModel.IExtensionCollection%601> - это коллекция объектов <xref:System.ServiceModel.IExtension%601>, которая позволяет получить экземпляр <xref:System.ServiceModel.IExtension%601> по его типу. <xref:System.ServiceModel.IExtensionCollection%601.Find%2A?displayProperty=nameWithType> Возвращает последний добавленный объект, являющийся <xref:System.ServiceModel.IExtension%601> этого типа.  
+ Интерфейс <xref:System.ServiceModel.IExtensionCollection%601> - это коллекция объектов <xref:System.ServiceModel.IExtension%601>, которая позволяет получить экземпляр <xref:System.ServiceModel.IExtension%601> по его типу. Метод <xref:System.ServiceModel.IExtensionCollection%601.Find%2A?displayProperty=nameWithType> возвращает последний добавленный объект <xref:System.ServiceModel.IExtension%601> данного типа.  
   
 ### <a name="extensible-objects-in-windows-communication-foundation"></a>Расширяемые объекты в Windows Communication Foundation  
  Существуют четыре расширяемых объекта в Windows Communication Foundation (WCF):  
   
--   <xref:System.ServiceModel.ServiceHostBase> — Это базовый класс для узла службы.  Расширения этого класса можно использовать для расширения поведения самого класса <xref:System.ServiceModel.ServiceHostBase> или для хранения состояния для каждой службы.  
+-   <xref:System.ServiceModel.ServiceHostBase>. Это базовый класс для узла службы.  Расширения этого класса можно использовать для расширения поведения самого класса <xref:System.ServiceModel.ServiceHostBase> или для хранения состояния для каждой службы.  
   
--   <xref:System.ServiceModel.InstanceContext> – Этот класс соединяет экземпляр типа службы времени выполнения службы.  В нем содержится информация об экземпляре, а также ссылка на класс <xref:System.ServiceModel.InstanceContext>, содержащий класс <xref:System.ServiceModel.ServiceHostBase>. Расширения этого класса можно использовать для расширения поведения самого класса <xref:System.ServiceModel.InstanceContext> или для хранения состояния для каждой службы.  
+-   <xref:System.ServiceModel.InstanceContext>. Этот класс соединяет экземпляр типа службы и среду выполнения службы.  В нем содержится информация об экземпляре, а также ссылка на класс <xref:System.ServiceModel.InstanceContext>, содержащий класс <xref:System.ServiceModel.ServiceHostBase>. Расширения этого класса можно использовать для расширения поведения самого класса <xref:System.ServiceModel.InstanceContext> или для хранения состояния для каждой службы.  
   
--   <xref:System.ServiceModel.OperationContext> — Этот класс представляет данные об операциях, собранные средой выполнения для каждой операции.  Сюда входят такие данные как заголовки входящих сообщений, свойства входящих сообщений, идентификация входящих сообщений и др.  Расширения этого класса можно использовать как для расширения поведения класса <xref:System.ServiceModel.OperationContext>, так и для хранения состояния для каждой операции.  
+-   <xref:System.ServiceModel.OperationContext>. Этот класс представляет данные об операциях, собранные средой выполнения для каждой операции.  Сюда входят такие данные как заголовки входящих сообщений, свойства входящих сообщений, идентификация входящих сообщений и др.  Расширения этого класса можно использовать как для расширения поведения класса <xref:System.ServiceModel.OperationContext>, так и для хранения состояния для каждой операции.  
   
 -   <xref:System.ServiceModel.IContextChannel> – Этот интерфейс обеспечивает проверку каждого состояния для каналов и прокси-серверы, созданные средой выполнения WCF.  Расширения этого класса можно использовать как для расширения поведения класса <xref:System.ServiceModel.IClientChannel>, так и для хранения состояния для каждого канала.  
   

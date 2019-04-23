@@ -1,4 +1,12 @@
-### <a name="wf-serializes-expressionsliterallttgt-datetimes-differently-now-breaks-custom-xaml-parsers"></a>Теперь WF сериализует Expressions.Literal&lt;T&gt; DateTimes по-другому (нарушает работу пользовательских средств синтаксического анализа XAML)
+---
+ms.openlocfilehash: 335647f899c79eff22e313fa40b2e2a73e7cfff0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235911"
+---
+### <a name="wf-serializes-expressionsliteralt-datetimes-differently-now-breaks-custom-xaml-parsers"></a>Теперь WF сериализует Expressions.Literal\<T> DateTimes по-другому (нарушает работу пользовательских средств синтаксического анализа XAML)
 
 |   |   |
 |---|---|
@@ -7,4 +15,3 @@
 |Область|Пограничный случай|
 |Версия|4.5|
 |Тип|Среда выполнения|
-

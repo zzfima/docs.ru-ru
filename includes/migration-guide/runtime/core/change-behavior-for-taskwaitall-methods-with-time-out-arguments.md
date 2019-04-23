@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 94fad6fe910da6c528c5e13f529a6db274e07d5c
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59235922"
+---
 ### <a name="change-in-behavior-for-taskwaitall-methods-with-time-out-arguments"></a>Изменение в поведении методов Task.WaitAll с аргументами времени ожидания
 
 |   |   |
@@ -8,4 +16,3 @@
 |Версия|4.5|
 |Тип|Среда выполнения|
 |Затронутые API|<ul><li><xref:System.Threading.Tasks.Task.WaitAll(System.Threading.Tasks.Task[],System.Int32)?displayProperty=nameWithType></li><li><xref:System.Threading.Tasks.Task.WaitAll(System.Threading.Tasks.Task[],System.Int32,System.Threading.CancellationToken)?displayProperty=nameWithType></li><li><xref:System.Threading.Tasks.Task.WaitAll(System.Threading.Tasks.Task[],System.TimeSpan)?displayProperty=nameWithType></li></ul>|
-

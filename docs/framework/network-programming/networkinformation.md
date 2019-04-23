@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Network
 ms.assetid: 31b44dd3-b903-4a48-8419-40419a3e4038
-ms.openlocfilehash: de8cb03e6205a83d2cc93ee300eb3fcac1ac5b74
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0820ad6a6d5000ef7ea575e856d883ba5325b1b0
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497174"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59230984"
 ---
 # <a name="networkinformation"></a>NetworkInformation
 Пространство имен <xref:System.Net.NetworkInformation> содержит классы для программного сбора информации о событиях, изменениях, статистике и свойствах сети. Можно также определить доступность удаленного узла с помощью класса <xref:System.Net.NetworkInformation.Ping?displayProperty=nameWithType>.  
@@ -24,6 +24,7 @@ ms.locfileid: "54497174"
  С помощью класса <xref:System.Net.NetworkInformation.Ping> можно определить, работает ли удаленный узел, находится ли он в сети и возможен ли доступ к нему. Дополнительные сведения см. в разделе [Как Проверка связи с узлом](../../../docs/framework/network-programming/how-to-ping-a-host.md).  
   
 ## <a name="see-also"></a>См. также
+
 - [Примеры сетевого программирования](../../../docs/framework/network-programming/network-programming-samples.md)
 - [Пример сетевых информационных технологий](https://go.microsoft.com/fwlink/?LinkID=179564)
 - [Пример технологии средства NetStat](https://go.microsoft.com/fwlink/?LinkID=179562)

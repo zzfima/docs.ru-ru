@@ -5,10 +5,10 @@ ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5b858b9daad22cdda6df30be7b28cdecfd275b8f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59228306"
 ---
 # <a name="application-element-net-native"></a>\<Приложение > элемент (машинный код .NET)
@@ -60,21 +60,21 @@ ms.locfileid: "59228306"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<Сборка >](../../../docs/framework/net-native/assembly-element-net-native.md)|Применяет политику ко всем типам в определенной сборке.|  
-|[\<Пространство имен >](../../../docs/framework/net-native/namespace-element-net-native.md)|Применяет политику ко всем типам в определенном пространстве имен.|  
-|[\<Тип >](../../../docs/framework/net-native/type-element-net-native.md)|Применяет политику для конкретного типа, например, класса или структуры.|  
-|[\<TypeInstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Применяет политику к сконструированному универсальному типу. Например, элемент [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) можно использовать для определения политики для типа `List<String>`.|  
-|[\<Метод >](../../../docs/framework/net-native/method-element-net-native.md)|Применяет политику к методу определенного типа.|  
-|[\<MethodInstantiation >](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|Применяет политику к сконструированному универсальному методу.|  
-|[\<Свойство >](../../../docs/framework/net-native/property-element-net-native.md)|Применяет политику к свойству определенного типа.|  
-|[\<Поле >](../../../docs/framework/net-native/field-element-net-native.md)|Применяет политику к полю определенного типа.|  
-|[\<Событие >](../../../docs/framework/net-native/event-element-net-native.md)|Применяет политику к событию определенного типа.|  
+|[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|Применяет политику ко всем типам в определенной сборке.|  
+|[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|Применяет политику ко всем типам в определенном пространстве имен.|  
+|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Применяет политику для конкретного типа, например, класса или структуры.|  
+|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Применяет политику к сконструированному универсальному типу. Например, элемент [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) можно использовать для определения политики для типа `List<String>`.|  
+|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|Применяет политику к методу определенного типа.|  
+|[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|Применяет политику к сконструированному универсальному методу.|  
+|[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)|Применяет политику к свойству определенного типа.|  
+|[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)|Применяет политику к полю определенного типа.|  
+|[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)|Применяет политику к событию определенного типа.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<Директивы >](../../../docs/framework/net-native/directives-element-net-native.md)|Корневой элемент файла директив среды выполнения.|  
+|[\<Directives>](../../../docs/framework/net-native/directives-element-net-native.md)|Корневой элемент файла директив среды выполнения.|  
   
 ## <a name="remarks"></a>Примечания  
  Элемент [\<Directives>](../../../docs/framework/net-native/directives-element-net-native.md) может содержать ноль или один элемент `<Application>`. Несколько элементов `<Application>` в одном файле директив отражения не поддерживаются.  
@@ -87,7 +87,7 @@ ms.locfileid: "59228306"
   
 ## <a name="see-also"></a>См. также
 
-- [Элемент \<Library>](../../../docs/framework/net-native/library-element-net-native.md)
-- [Элемент \<Directives>](../../../docs/framework/net-native/directives-element-net-native.md)
+- [\<Библиотека > элемент](../../../docs/framework/net-native/library-element-net-native.md)
+- [\<Директивы > элемент](../../../docs/framework/net-native/directives-element-net-native.md)
 - [Элементы директив среды выполнения](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [Ссылка на файл конфигурации директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

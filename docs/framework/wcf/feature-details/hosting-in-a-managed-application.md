@@ -3,10 +3,10 @@ title: Размещение в управляемом приложении
 ms.date: 03/30/2017
 ms.assetid: af70132d-e9e1-4f32-b20f-f0014629758a
 ms.openlocfilehash: 415a6fef511d7d7397a38882801e5848e2998a11
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59218801"
 ---
 # <a name="hosting-in-a-managed-application"></a>Размещение в управляемом приложении
@@ -27,4 +27,4 @@ ms.locfileid: "59218801"
 ## <a name="see-also"></a>См. также
 
 - [Размещение служб](../../../../docs/framework/wcf/hosting-services.md)
-- [Учебник по началу работы](../../../../docs/framework/wcf/getting-started-tutorial.md)
+- [Руководство по началу работы](../../../../docs/framework/wcf/getting-started-tutorial.md)
