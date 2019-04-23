@@ -8,10 +8,10 @@ ms.assetid: 19df26c5-4008-461d-a7d7-18f4506312d2
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 096c818c1103835110478953d0a0d9082b33569e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59180665"
 ---
 # <a name="deploying-the-net-framework"></a>Развертывание .NET Framework
@@ -24,13 +24,13 @@ ms.locfileid: "59180665"
  [Руководство по развертыванию для администраторов](../../../docs/framework/deployment/guide-for-administrators.md)  
  Описывается развертывание платформы .NET Framework и ее системных зависимостей в сети с помощью System Center Configuration Manager (SCCM).  
   
- [Уменьшение числа перезагрузок при установке платформы .NET Framework 4.5](../../../docs/framework/deployment/reducing-system-restarts.md)  
+ [Уменьшение числа перезагрузок при установке платформы .NET Framework 4.5](../../../docs/framework/deployment/reducing-system-restarts.md)  
  Описывается диспетчер перезапуска, который по возможности предотвращает перезагрузки, и его преимущества для приложений, устанавливающих платформу .NET Framework.  
   
- [Практическое руководство. Получение хода выполнения установщика .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)  
+ [Практическое руководство. Получение хода выполнения установщика .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)  
  Описывается автоматический запуск и отслеживание процесса установки .NET Framework с выводом собственного представления хода выполнения установки.  
   
- [Ошибки инициализации платформы .NET Framework: управление пользовательской средой](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md)  
+ [Ошибки инициализации платформы .NET Framework. Управление пользовательской средой](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md)  
  В этой статье объясняется, что происходит, когда приложению .NET Framework требуется версия среды CLR, которая является недопустимой или не установлена на компьютере пользователя. Также описано, как устранить эти ошибки и как управлять сообщением об ошибке, которое отображается для пользователя.  
   
  [Практическое руководство. Отладка проблем при активации среды CLR](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)  

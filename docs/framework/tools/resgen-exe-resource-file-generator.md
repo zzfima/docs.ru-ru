@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b134b4c875a2360712d14bc0b6c11ad0e13a89e4
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e2cb07389ad68985362993e76f82e58d2a59e237
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57477483"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59178884"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (генератор файлов ресурсов)
 Генератор файлов ресурсов (Resgen.exe) преобразует текстовые файлы (TXT или RESTEXT) и файлы ресурсов на основе XML (RESX) в двоичные файлы среды CLR (RESOURCES), которые можно внедрить в двоичный исполняемый файл среды выполнения или вспомогательную сборку. (См. раздел [Создание файлов ресурсов](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).)  
@@ -330,6 +330,7 @@ resgen StringResources.txt /str:vb,,StringResources
 ```  
   
 ## <a name="see-also"></a>См. также
+
 - [Инструменты](../../../docs/framework/tools/index.md)
 - [Ресурсы в приложениях для настольных систем](../../../docs/framework/resources/index.md)
 - [Создание файлов ресурсов](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)

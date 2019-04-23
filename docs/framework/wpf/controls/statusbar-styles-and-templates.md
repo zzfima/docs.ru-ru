@@ -10,10 +10,10 @@ helpviewer_keywords:
 - StatusBar [WPF], styles and templates
 ms.assetid: 9f5e1c25-81eb-4756-a0ac-d9e1fbe33ee2
 ms.openlocfilehash: 64b5b66f7f32ea31b51b4da990ceede4078c27cf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59177727"
 ---
 # <a name="statusbar-styles-and-templates"></a>Стили и шаблоны элемента StatusBar
@@ -58,7 +58,7 @@ ms.locfileid: "59177727"
 
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
-- [Стили и шаблоны элемента Control](control-styles-and-templates.md)
+- [Стили и шаблоны элемента управления](control-styles-and-templates.md)
 - [Настройка элементов управления](control-customization.md)
 - [Стилизация и использование шаблонов](styling-and-templating.md)
 - [Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

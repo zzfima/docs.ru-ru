@@ -3,10 +3,10 @@ title: Возможности SQL Server и ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 2839529b-a79b-4450-be5d-07a98dbc7a0f
 ms.openlocfilehash: 4f2d93ca2abc15e4c7af8489d5b875c0a46d7185
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59294903"
 ---
 # <a name="sql-server-features-and-adonet"></a>Возможности SQL Server и ADO.NET
@@ -25,7 +25,7 @@ ms.locfileid: "59294903"
  [Статистика поставщика для SQL Server](../../../../../docs/framework/data/adonet/sql/provider-statistics-for-sql-server.md)  
  Описывается получение статистики SQL Server во время выполнения.  
   
- [Пользовательские экземпляры SQL Server, экспресс-выпуск](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)  
+ [Пользовательские экземпляры SQL Server Express](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)  
  Описывается поддержка пользовательских экземпляров SQL Server Express.  
   
  [Зеркальное отображение баз данных в SQL Server](../../../../../docs/framework/data/adonet/sql/database-mirroring-in-sql-server.md)  
@@ -43,7 +43,7 @@ ms.locfileid: "59294903"
  [Поддержка SqlClient для высокого уровня доступности, аварийного восстановления](../../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)  
  Описывается поддержка SqlClient для высокой доступности, групп аварийного восстановления доступности (AlwaysOn).  
   
- [Поддержка SqlClient LocalDB](../../../../../docs/framework/data/adonet/sql/sqlclient-support-for-localdb.md)  
+ [Поддержка SqlClient для LocalDB](../../../../../docs/framework/data/adonet/sql/sqlclient-support-for-localdb.md)  
  Описывается поддержка SqlClient для баз данных LocalDB.  
   
 ## <a name="see-also"></a>См. также
@@ -52,4 +52,4 @@ ms.locfileid: "59294903"
 - [Извлечение и изменение данных в ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)
 - [SQL Server и ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

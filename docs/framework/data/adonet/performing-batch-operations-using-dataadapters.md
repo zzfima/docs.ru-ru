@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: e72ed5af-b24f-486c-8429-c8fd2208f844
 ms.openlocfilehash: bb3f35f17b2dd451b41035c8e34f7b3a886a26e8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59178130"
 ---
 # <a name="performing-batch-operations-using-dataadapters"></a>Выполнение пакетных операций с использованием объектов DataAdapters
@@ -134,7 +134,7 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
 ### <a name="accessing-updated-rows"></a>Доступ к обновленным строкам  
  Если пакетная обработка отключена, доступ к обновляемой строке может быть выполнен при помощи свойства <xref:System.Data.Common.RowUpdatedEventArgs.Row%2A> класса <xref:System.Data.Common.RowUpdatedEventArgs>.  
   
- Если пакетная обработка включена для нескольких строк, формируется одно событие `RowUpdated`. Поэтому значение свойства `Row` для каждой из строк равно NULL. `RowUpdating` события по-прежнему создаются для каждой строки. Метод <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A> класса <xref:System.Data.Common.RowUpdatedEventArgs> позволяет обращаться к обработанным строкам, копируя ссылки на строки в массив. Если строки не обрабатываются, метод `CopyToRows` инициирует исключение <xref:System.ArgumentNullException>. Свойство <xref:System.Data.Common.RowUpdatedEventArgs.RowCount%2A> используется для возврата числа строк, обработанных перед вызовом метода <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A>.  
+ Если пакетная обработка включена для нескольких строк, формируется одно событие `RowUpdated`. Поэтому значение свойства `Row` для каждой из строк равно NULL. События `RowUpdating` по-прежнему вызываются для каждой строки. Метод <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A> класса <xref:System.Data.Common.RowUpdatedEventArgs> позволяет обращаться к обработанным строкам, копируя ссылки на строки в массив. Если строки не обрабатываются, метод `CopyToRows` инициирует исключение <xref:System.ArgumentNullException>. Свойство <xref:System.Data.Common.RowUpdatedEventArgs.RowCount%2A> используется для возврата числа строк, обработанных перед вызовом метода <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A>.  
   
 ### <a name="handling-data-errors"></a>Обработка ошибок данных  
  Пакетное выполнение оказывает то же влияние, что и выполнение каждой отдельной инструкции. Инструкции выполняются в порядке, который инструкции добавили в пакет. Ошибки обрабатываются в пакетном режиме, как если было бы при отключении пакетного режима. Каждая строка обрабатывается отдельно. Только успешно обработанные в базе данных строки будут обновлены в соответствующей строке <xref:System.Data.DataRow> таблицы <xref:System.Data.DataTable>.  
@@ -146,4 +146,4 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
 - [Объекты DataAdapter и DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [Обновление источников данных с объектами DataAdapter](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
 - [Обработка событий DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)
-- [Управляемые поставщики ADO.NET и центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

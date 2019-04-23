@@ -11,12 +11,12 @@ helpviewer_keywords:
 - else keyword [C#]
 - if keyword [C#]
 ms.assetid: d9a1d562-8cf5-4bd4-9ba7-8ad970cd25b2
-ms.openlocfilehash: a205ee04d1b0b68666ca50109001e71288d7f434
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef25b3fb5657d833bbccf5bace71e049623476c9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517842"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59294423"
 ---
 # <a name="if-else-c-reference"></a>if-else (Справочник по C#)
 
@@ -82,7 +82,7 @@ if (condition)
 
 [!code-csharp[csrefKeywordsSelection#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsSelection/CS/csrefKeywordsSelection.cs#6)]
 
-Точно так же как оператор в блоке else или блоке then может быть любым допустимым оператором, в качестве условия можно использовать любое допустимое логическое выражение. Можно использовать такие логические операторы, как [&&](../operators/conditional-and-operator.md), [&](../operators/and-operator.md), [&#124;&#124;](../operators/conditional-or-operator.md), [&#124;](../operators/or-operator.md) и [!](../operators/logical-negation-operator.md) , для формирования составных условий. В коде ниже приведены примеры.
+Точно так же как оператор в блоке else или блоке then может быть любым допустимым оператором, в качестве условия можно использовать любое допустимое логическое выражение. Вы можете использовать [логические операторы](../operators/boolean-logical-operators.md), такие как `!`, `&&`, `||`, `&`, `|`и `^`, для формирования составных условий. В коде ниже приведены примеры.
 
 ```csharp
 // NOT

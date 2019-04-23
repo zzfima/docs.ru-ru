@@ -11,10 +11,10 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
 ms.openlocfilehash: 162414dbd4b0f5e15eceaf73c87c122701fefc4e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59177415"
 ---
 # <a name="dialog-boxes-overview"></a>Общие сведения о диалоговых окнах
@@ -45,7 +45,7 @@ ms.locfileid: "59177415"
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxconfigurecodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxconfigurecodebehind)]  
   
- Чтобы отобразить окно сообщения, вызовите `static`<xref:System.Windows.MessageBox.Show%2A> метод, как показано в следующем коде.  
+ Чтобы отобразить окно сообщения, вызовите `static` <xref:System.Windows.MessageBox.Show%2A> метод, как показано в следующем коде.  
   
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxShowCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxshowcodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxShowCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxshowcodebehind)]  
@@ -63,7 +63,7 @@ ms.locfileid: "59177415"
   
 <a name="Common_Dialogs"></a>   
 ## <a name="common-dialog-boxes"></a>Общие диалоговые окна  
- [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] реализует различные, многократно используемые диалоговые окна, которые являются общими для всех приложений, включая диалоговые окна для открытия, сохранения файлов и печати. Поскольку эти диалоговые окна реализованы операционной системой, они могут совместно использоваться всеми приложениями, работающими в операционной системе, что помогает поддерживать единообразие пользовательского интерфейса; если пользователи знакомы с диалоговым окном, предоставляемым операционной системой в одном приложении, им не нужно учиться пользоваться этим диалоговым окном в других приложениях. Поскольку эти диалоговые доступны для всех приложений и обеспечивают согласованный пользовательский интерфейс, они называются *окон*.  
+ [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] реализует различные, многократно используемые диалоговые окна, которые являются общими для всех приложений, включая диалоговые окна для открытия файлов, сохранения файлов и печати. Поскольку эти диалоговые окна реализованы операционной системой, они могут совместно использоваться всеми приложениями, работающими в операционной системе, что помогает поддерживать единообразие пользовательского интерфейса; если пользователи знакомы с диалоговым окном, предоставляемым операционной системой в одном приложении, им не нужно учиться пользоваться этим диалоговым окном в других приложениях. Поскольку эти диалоговые доступны для всех приложений и обеспечивают согласованный пользовательский интерфейс, они называются *окон*.  
   
  Windows Presentation Foundation (WPF) инкапсулирует открытый файл, сохраните файл и печать общих диалоговых окон и предоставляет их как управляемые классы для использования в автономных приложениях. В этом разделе приводится краткий обзор каждого типа диалоговых окон.  
   
@@ -208,7 +208,7 @@ ms.locfileid: "59177415"
   
  ![Диалоговое окно поля с красной границей вокруг значения недопустимое значение левого поля.](./media/dialog-boxes-overview/invalid-left-margin-dialog.png)  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] не ограничивает пользователя из недопустимого элемента управления, пока не будут введены допустимые данные. Это правильное поведение диалогового окна; пользователь должен иметь возможность свободно перемещаться по элементам управления в диалоговом окне, независимо от того, правильны ли введенные данные. Тем не менее, это означает, что пользователь может ввести недопустимые данные и нажмите клавишу **ОК** кнопки. По этой причине код также должен проверить все элементы управления в диалоговом окне окно при **ОК** нажатии путем обработки <xref:System.Windows.Controls.Primitives.ButtonBase.Click> событий.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] не препятствует выходу пользователя из недопустимого элемента управления до ввода правильных данных. Это правильное поведение диалогового окна; пользователь должен иметь возможность свободно перемещаться по элементам управления в диалоговом окне, независимо от того, правильны ли введенные данные. Тем не менее, это означает, что пользователь может ввести недопустимые данные и нажмите клавишу **ОК** кнопки. По этой причине код также должен проверить все элементы управления в диалоговом окне окно при **ОК** нажатии путем обработки <xref:System.Windows.Controls.Primitives.ButtonBase.Click> событий.  
   
  [!code-csharp[DialogBoxSample#MarginsDialogBoxValidationCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml.cs#marginsdialogboxvalidationcodebehind1)]
  [!code-vb[DialogBoxSample#MarginsDialogBoxValidationCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginsDialogBox.xaml.vb#marginsdialogboxvalidationcodebehind1)]  
@@ -346,4 +346,4 @@ ms.locfileid: "59177415"
 
 - [Общие сведения о контекстном меню](../controls/popup-overview.md)
 - [Пример диалогового окна](https://go.microsoft.com/fwlink/?LinkID=159984)
-- [Пример элемента управления ColorPicker пользовательской](https://go.microsoft.com/fwlink/?LinkID=159977)
+- [Пример пользовательского элемента управления ColorPicker](https://go.microsoft.com/fwlink/?LinkID=159977)

@@ -3,10 +3,10 @@ title: Неподдерживаемые сценарии
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
 ms.openlocfilehash: 12012f3e0c0c3b0d10c5faebfb2de881f5de3917
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59178780"
 ---
 # <a name="unsupported-scenarios"></a>Неподдерживаемые сценарии
@@ -75,7 +75,7 @@ ms.locfileid: "59178780"
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>Сбой безопасности сообщений при использовании олицетворения ASP.NET и режима совместимости ASP.NET  
  WCF не поддерживает следующую комбинацию параметров, так как они могут помешать выполняться проверка подлинности клиента:  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Включено олицетворение. Это делается в файле Web.config, задав `impersonate` атрибут <`identity`> элемент `true`.  
+-   Включено олицетворение [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Это делается в файле Web.config, задав `impersonate` атрибут <`identity`> элемент `true`.  
   
 -   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] режим совместимости можно включить, задав `aspNetCompatibilityEnabled` атрибут [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) для `true`.  
   

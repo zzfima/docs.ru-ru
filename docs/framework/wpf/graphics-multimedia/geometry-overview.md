@@ -9,10 +9,10 @@ helpviewer_keywords:
 - graphics [WPF], geometry classes
 ms.assetid: 9fba8934-98b7-4af6-82f6-f4ef887f963a
 ms.openlocfilehash: f4f109b51ed566d1996b0c59b4ecbe51caa022cc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59180002"
 ---
 # <a name="geometry-overview"></a>Общие сведения о классе Geometry
@@ -223,7 +223,7 @@ ms.locfileid: "59180002"
 - <xref:System.Windows.Media.GeometryDrawing>
 - [Двумерная графика и изображения](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [Синтаксис разметки пути](path-markup-syntax.md)
-- [Практические руководства](geometries-how-to-topics.md)
+- [Разделы практического руководства](geometries-how-to-topics.md)
 - [Общие сведения об эффектах анимации](animation-overview.md)
 - [Обзор фигур и базовых средств рисования в приложении WPF](shapes-and-basic-drawing-in-wpf-overview.md)
 - [Обзор объектов Drawing](drawing-objects-overview.md)

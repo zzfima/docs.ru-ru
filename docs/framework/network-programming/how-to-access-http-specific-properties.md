@@ -1,18 +1,18 @@
 ---
-title: Практическое руководство. Доступ к свойствам, относящимся с HTTP
+title: Как выполнить Доступ к свойствам, относящимся с HTTP
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f8848c7e-f5c5-4d42-b86d-9951ff8f4146
 ms.openlocfilehash: 107e57ca947012f5e2f65835d684f5e6068b3681
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59176596"
 ---
-# <a name="how-to-access-http-specific-properties"></a>Практическое руководство. Доступ к свойствам, относящимся с HTTP
+# <a name="how-to-access-http-specific-properties"></a>Как выполнить Доступ к свойствам, относящимся с HTTP
 В этом примере показано, как отключить функции HTTP **Keep-alive** и получить номер версии протокола с веб-сервера.  
   
 ## <a name="example"></a>Пример  

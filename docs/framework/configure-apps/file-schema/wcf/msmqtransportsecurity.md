@@ -3,10 +3,10 @@ title: <msmqTransportSecurity>
 ms.date: 03/30/2017
 ms.assetid: 092e911b-ab1b-4069-a26e-6134c3299e06
 ms.openlocfilehash: fece74e76f879eff51f154eab8c8edea2c27119e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59180132"
 ---
 # <a name="msmqtransportsecurity"></a>\<msmqTransportSecurity>
@@ -49,7 +49,7 @@ ms.locfileid: "59180132"
 |Элемент|Описание|  
 |-------------|-----------------|  
 |[\<msmqIntegration>](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegration.md)|Задает параметры, необходимые для взаимодействия с отправителем или получателем очереди сообщений (MSMQ).|  
-|[\<msmqTransport>](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqtransport.md)|Задает свойства обмена данными в очереди для службы Windows Communication Foundation (WCF), использующей собственный протокол MSMQ.|  
+|[\<msmqTransport >](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqtransport.md)|Задает свойства обмена данными в очереди для службы Windows Communication Foundation (WCF), использующей собственный протокол MSMQ.|  
   
 ## <a name="remarks"></a>Примечания  
  Дополнительные сведения о безопасности транспорта см. в разделе [безопасность транспорта](../../../../../docs/framework/wcf/feature-details/transport-security.md).  
@@ -61,7 +61,7 @@ ms.locfileid: "59180132"
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - [Очереди в WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
 - [Транспорты](../../../../../docs/framework/wcf/feature-details/transports.md)
-- [Выбор транспортов](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [Выбор транспорта](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
 - [Привязки](../../../../../docs/framework/wcf/bindings.md)
 - [Расширение привязок](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [Пользовательские привязки](../../../../../docs/framework/wcf/extending/custom-bindings.md)

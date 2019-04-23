@@ -1,7 +1,7 @@
 ---
 title: Элемент <AppContextSwitchOverrides>
 ms.custom: updateeachrelease
-ms.date: 03/07/2019
+ms.date: 04/18/2019
 helpviewer_keywords:
 - AppContextSwitchOverrides
 - compatibility switches
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1bc4cd94d3acd37244e1d5b882612e4b1da91b90
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e887747a3f036d10e5e5fec6c0cadaf9f34050df
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59136465"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59978254"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides > элемент
 Определяет один или несколько коммутаторов, используемых классом <xref:System.AppContext> для предоставления механизма отказа от новых функциональных возможностей.  
@@ -98,6 +98,7 @@ ms.locfileid: "59136465"
 |`Switch.System.Security.Cryptography.`<br/>`DoNotAddrOfCspParentWindowHandle`|Элементы управления ли значение [CspParameters.ParentWindowHandle](xref:System.Security.Cryptography.CspParameters.ParentWindowHandle) свойство [IntPtr](xref:System.IntPtr) что представляет область памяти окна обработки, или это дескриптор окна (HWND). Дополнительные сведения см. в разделе [Устранение рисков. CspParameters.ParentWindowHandle ожидает HWND](../../../migration-guide/retargeting/4.6.2-4.7.md#cspparametersparentwindowhandle-now-expects-hwnd-value). |.NET Framework 4.7|   
 |`Switch.System.Security.Cryptography.Pkcs.`<br/>`UseInsecureHashAlgorithms`|Определяет, является ли значение по умолчанию для некоторых операций SignedCMS SHA1 или SHA256.<br>Из-за конфликта с SHA1 корпорация Майкрософт рекомендует использовать SHA256.|.NET Framework 4.7.1|
 |`Switch.System.Security.Cryptography.Xml.`<br/>`UseInsecureHashAlgorithms`|Определяет, является ли значение по умолчанию для некоторых операций SignedXML SHA1 или SHA256.<br>Из-за конфликта с SHA1 корпорация Майкрософт рекомендует использовать SHA256.|.NET Framework 4.7.1|
+|`Switch.System.Security.Cryptography.`<br/>`UseLegacyFipsThrow`|Управляет ли использование управляемых криптографических классов в вызывает исключение режим FIPS <xref:System.Security.Cryptography.CryptographicException> (`true`) или полагается на реализацию системных библиотек (`false`).|.NET framework 4.8|
 |`Switch.System.ServiceModel.`<br/>`AllowUnsignedToHeader`|Определяет, является ли `TransportWithMessageCredential` режим безопасности разрешает сообщения с неподписанным заголовком «to». Это параметр согласием. Дополнительные сведения см. в разделе [изменения среды выполнения в .NET Framework 4.6.1](../../../migration-guide/runtime/4.5.2-4.6.1.md#windows-communication-foundation-wcf).|.NET Framework 4.6.1| 
 |`Switch.System.ServiceModel.`<br/>`DisableAddressHeaderCollectionValidation`>|Элементы управления ли <xref:System.ServiceModel.Channels.AddressHeaderCollection.%23ctor(System.Collections.Generic.IEnumerable{System.ServiceModel.Channels.AddressHeader})> конструктор вызывает <xref:System.ArgumentException> Если один из элементов является `null`.|.NET Framework 4.7.1| 
 |`Switch.System.ServiceModel.`<br />`DisableCngCertificates`|Определяет, вызывает ли попытка использовать X509 сертификатов с помощью поставщика хранилища ключей CSG исключение. Дополнительные сведения см. в разделе [безопасность транспорта WCF поддерживает сертификаты, сохраненные с помощью CNG](../../../migration-guide/retargeting/4.6.1-4.6.2.md#wcf-transport-security-supports-certificates-stored-using-cng).|.NET Framework 4.6.1|
@@ -109,6 +110,7 @@ ms.locfileid: "59136465"
 |`Switch.System.ServiceModel.`<br/>`UseSha1InPipeConnectionGetHashAlgorithm`|Определяет, использует ли WCF, SHA1 или хэш SHA256 для формирования случайных имен для именованных каналов.<br>Из-за конфликта с SHA1 корпорация Майкрософт рекомендует использовать SHA256.|.NET Framework 4.7.1|
 |`Switch.System.ServiceModel.Internals`<br/>`IncludeNullExceptionMessageInETWTrace`|Определяет, следует ли создавать [NullReferenceException](xref:System.NullReferenceException) когда сообщение об исключении принимает значение null.|.NET Framework 4.7|  
 |`Switch.System.ServiceProcess.`<br/>`DontThrowExceptionsOnStart`|Управляет ли исключения, возникшие при запуске службы передаются вызывающему объекту <xref:System.ServiceProcess.ServiceBase.Run%2A?displayProperty=nameWithType> метод.|.NET Framework 4.7.1|
+|`Switch.System.Threading.UseNetCoreTimer`|Элементы управления ли <xref:System.Threading.Timer> экземпляры получают преимущества усовершенствований быстродействия для сред с высоким уровнем масштабирования. Если `true`, повышение производительности включены; Если `false` (значение по умолчанию), они будут отключены.|.NET framework 4.8|
 |`Switch.System.Uri.`<br/>`DontEnableStrictRFC3986ReservedCharacterSets`|Определяет, является ли определенные символы, закодированные процентами, которые иногда декодировались теперь всегда остаются закодированными. Если `true`, они являются декодированный; в противном случае `false`.|.NET Framework 4.7.2|
 |`Switch.System.Uri.`<br/>`DontKeepUnicodeBidiFormattingCharacters`|Определяет обработку двунаправленных символов Юникода в URI. `true` Чтобы убрать их из URI; `false` для сохранения и процентов закодировать их.|.NET Framework 4.7.2|
 |`Switch.System.Windows.Controls.Grid.`<br/>`StarDefinitionsCanExceedAvailableSpace` |Определяет, применяется ли Windows Presentation Foundation старый алгоритм (`true`) или новый алгоритм (`false`) в выделении пространства для \*-столбцов. Дополнительные сведения см. в разделе [Устранение рисков. Выделение пространства элемента управления сетки для столбцов со звездочкой](../../../migration-guide/retargeting/4.6.2-4.7.md#wpf-grid-allocation-of-space-to-star-columns). |.NET Framework 4.7 |

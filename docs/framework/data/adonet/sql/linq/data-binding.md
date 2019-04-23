@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cbec8b02-a1e8-4ae8-a83b-bb5190413ac5
-ms.openlocfilehash: f07053c9fba194138467bbf8664e2f5fe1f667ea
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 66964497159c5c03a9070090ee60b43fa7d31abf
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352829"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59978930"
 ---
 # <a name="data-binding"></a>Привязка данных
 
@@ -42,9 +42,9 @@ ms.locfileid: "57352829"
 
 - Источником данных является интерфейс <xref:System.Linq.IQueryable%601>. Имеется два сценария.
 
-    - Если [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] находит базовый <xref:System.Data.Linq.Table%601> из <xref:System.Linq.IQueryable%601>, источник учитывает версию и ситуация аналогична описанной в первом пункте.
+  - Если [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] находит базовый <xref:System.Data.Linq.Table%601> из <xref:System.Linq.IQueryable%601>, источник учитывает версию и ситуация аналогична описанной в первом пункте.
 
-    - Если [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] не удается найти базовый <xref:System.Data.Linq.Table%601>, источник не поддерживает для выпуска (например, `groupby`). [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] просматривает запрос, чтобы заполнить универсальный `SortableBindingList`, который является простым <xref:System.ComponentModel.BindingList%601> , реализующий возможность сортировки сущностей "T" для заданного свойства.
+  - Если [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] не удается найти базовый <xref:System.Data.Linq.Table%601>, источник не поддерживает для выпуска (например, `groupby`). [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] просматривает запрос, чтобы заполнить универсальный `SortableBindingList`, который является простым <xref:System.ComponentModel.BindingList%601> , реализующий возможность сортировки сущностей "T" для заданного свойства.
 
 ## <a name="specialized-collections"></a>Специализированные коллекции
 
@@ -62,7 +62,7 @@ ms.locfileid: "57352829"
 
 ### <a name="generic-databindinglist"></a>Универсальный класс «DataBindingList»
 
-Этот класс наследует от класса `SortableBindingLIst`. Универсальный класс `DataBindingList` сохраняет ссылку на базовый универсальный класс `Table` универсального интерфейса `IQueryable`, используемого для первоначального заполнения коллекции. Универсальный класс `DatabindingList` обеспечивает отслеживание для добавления и удаления элементов в коллекции посредством переопределения методов `InsertItem`() и `RemoveItem`(). Он также реализует абстрактную функцию приостановки/возобновления, чтобы сделать отслеживание условным. Эта функция позволяет универсальному классу `DataBindingList` воспользоваться всеми преимуществами полиморфного использования функции отслеживания родительских классов.
+Этот класс наследует от класса `SortableBindingLIst`. Универсальный класс `DataBindingList` сохраняет ссылку на базовый универсальный класс `Table` универсального интерфейса `IQueryable`, используемого для первоначального заполнения коллекции. Универсальный класс `DatabindingList` обеспечивает отслеживание для добавления и удаления элементов в коллекции посредством переопределения методов `InsertItem`() и `RemoveItem`(). Он также реализует абстрактную возможность приостановки/возобновления, чтобы сделать отслеживание условным. Эта возможность позволяет универсальному классу `DataBindingList` воспользоваться всеми преимуществами полиморфного использования возможности отслеживания родительских классов.
 
 ## <a name="binding-to-entitysets"></a>Привязка к коллекциям «EntitySet»
 
@@ -90,9 +90,9 @@ ms.locfileid: "57352829"
 
 ## <a name="cancellation"></a>Отмена
 
-Интерфейс <xref:System.ComponentModel.IBindingList> определяет метод <xref:System.ComponentModel.IBindingList.AddNew%2A>, который используется элементами управления для создания нового элемента из связанной коллекции. Элемент управления `DataGridView` прекрасно демонстрирует эту функцию, когда последняя отображаемая строка содержит звездочку в заголовке. Звездочка означает, что можно добавить новый элемент.
+Интерфейс <xref:System.ComponentModel.IBindingList> определяет метод <xref:System.ComponentModel.IBindingList.AddNew%2A>, который используется элементами управления для создания нового элемента из связанной коллекции. Элемент управления `DataGridView` прекрасно демонстрирует эту возможность, когда последняя отображаемая строка содержит звездочку в заголовке. Звездочка означает, что можно добавить новый элемент.
 
-В дополнение к этой функции коллекция может также реализовать интерфейс <xref:System.ComponentModel.ICancelAddNew>. Это позволяет элементам выполнять отмену и проверять, был ли проверен новый измененный элемент.
+В дополнение к этой возможности коллекция может также реализовать интерфейс <xref:System.ComponentModel.ICancelAddNew>. Это позволяет элементам выполнять отмену и проверять, был ли проверен новый измененный элемент.
 
 Интерфейс <xref:System.ComponentModel.ICancelAddNew> реализуется во всех коллекциях привязки данных [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] (универсальном классе `SortableBindingList` и универсальном классе `EntitySet`). В обоих реализациях код выполняет перечисленные ниже задачи.
 

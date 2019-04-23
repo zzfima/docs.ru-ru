@@ -6,14 +6,14 @@ dev_langs:
 - vb
 ms.assetid: 079926c5-e6b5-4fb9-b4cf-9c63886dd626
 ms.openlocfilehash: 9c10c334ae2a10df1f75384ce042781b6f1bd43a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59178039"
 ---
 # <a name="query-expression-syntax-examples-projection"></a>Примеры синтаксиса выражений запросов. Проекция
-Примеры в этом разделе демонстрируют, как использовать `Select` метод и `From … From …` ключевых слов [модели AdventureWorks Sales](https://archive.codeplex.com/?p=msftdbprodsamples) с использованием синтаксиса выражений запроса. `From … From …` это основанный на запросе эквивалент `SelectMany` метод. Модель AdventureWorks Sales, которая используется в этих примерах, состоит из таблиц Contact, Address, Product, SalesOrderHeader и SalesOrderDetail образца базы данных AdventureWorks.  
+Примеры в этом разделе демонстрируют, как использовать `Select` метод и `From … From …` ключевых слов [модели AdventureWorks Sales](https://archive.codeplex.com/?p=msftdbprodsamples) с использованием синтаксиса выражений запроса. `From … From …` - это основанный на запросе эквивалент метода `SelectMany`. Модель AdventureWorks Sales, которая используется в этих примерах, состоит из таблиц Contact, Address, Product, SalesOrderHeader и SalesOrderDetail образца базы данных AdventureWorks.  
   
  В примерах в этом разделе используются следующие `using` / `Imports` инструкции:  
   

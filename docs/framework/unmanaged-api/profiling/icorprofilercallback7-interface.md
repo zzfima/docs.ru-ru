@@ -12,10 +12,10 @@ ms.assetid: a0be019e-aaa1-4036-990f-565f114d4b5c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 81477010b22edee71098edfc1b8557db08b6038f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59178637"
 ---
 # <a name="icorprofilercallback7-interface"></a>Интерфейс ICorProfilerCallback7
@@ -38,4 +38,4 @@ ms.locfileid: "59178637"
   
 ## <a name="see-also"></a>См. также
 
-- [Профилирующие интерфейсы](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Интерфейсы профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

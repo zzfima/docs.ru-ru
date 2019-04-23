@@ -6,10 +6,10 @@ helpviewer_keywords:
 - caching, UI Automation clients
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
 ms.openlocfilehash: 4c403fa6f0de34e970eb0c74df13d807e92f8a05
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59175829"
 ---
 # <a name="caching-in-ui-automation-clients"></a>Кэширование в клиентах автоматизации пользовательского интерфейса
@@ -70,7 +70,7 @@ ms.locfileid: "59175829"
   
  Если запрошенное свойство отсутствует в кэше, возникает исключение.  
   
- <xref:System.Windows.Automation.AutomationElement.Cached%2A>, такие как <xref:System.Windows.Automation.AutomationElement.Current%2A>, предоставляет отдельные свойства как члены структуры. Однако вам не требуется извлекать эту структуру; с отдельными свойствами можно работать напрямую. Например, свойство <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A> можно получить из `element.Cached.Name`, где `element` — <xref:System.Windows.Automation.AutomationElement>.  
+ <xref:System.Windows.Automation.AutomationElement.Cached%2A>, например <xref:System.Windows.Automation.AutomationElement.Current%2A>, предоставляет отдельные свойства как члены структуры. Однако вам не требуется извлекать эту структуру; с отдельными свойствами можно работать напрямую. Например, свойство <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A> можно получить из `element.Cached.Name`, где `element` — <xref:System.Windows.Automation.AutomationElement>.  
   
 <a name="Retrieving_Cached_Control_Patterns"></a>   
 ## <a name="retrieving-cached-control-patterns"></a>Получение кэшированных шаблонов элементов управления  

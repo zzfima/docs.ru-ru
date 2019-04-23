@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 3ec60e8f-fad4-493e-a426-e7962d7aee8c
 ms.openlocfilehash: 654621ab7dd74c26a7fddbd985559a713c0e9df3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59294812"
 ---
 # <a name="how-to-create-a-state-machine-workflow"></a>Практическое руководство. Создание рабочего процесса конечного автомата
@@ -191,8 +191,8 @@ ms.locfileid: "59294812"
 
 - <xref:System.Activities.Statements.Flowchart>
 - <xref:System.Activities.Statements.FlowDecision>
-- [Программирование в Windows Workflow Foundation](programming.md)
+- [Программирование в Windows Workflow Foundation](programming.md)
 - [Разработка рабочих процессов](designing-workflows.md)
-- [Учебник по началу работы](getting-started-tutorial.md)
+- [Руководство по началу работы](getting-started-tutorial.md)
 - [Практическое руководство. Создание действия](how-to-create-an-activity.md)
 - [Практическое руководство. Запуск рабочего процесса](how-to-run-a-workflow.md)

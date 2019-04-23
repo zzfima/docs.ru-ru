@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Руководство по программированию на C#. Переопределение метода ToString
+title: Как выполнить Руководство по программированию на C#. Переопределение метода ToString
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - inheritance [C#], overriding OnPaint and ToString
 ms.assetid: 8016db69-1f19-420c-8e17-98e8bebb7749
 ms.openlocfilehash: 18734627e299c696e23bb0ec9bc63ed37fe3e601
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59294981"
 ---
-# <a name="how-to-override-the-tostring-method-c-programming-guide"></a>Практическое руководство. Руководство по программированию на C#. Переопределение метода ToString
+# <a name="how-to-override-the-tostring-method-c-programming-guide"></a>Как выполнить Руководство по программированию на C#. Переопределение метода ToString
 Каждый класс или структура в языке C# неявно наследует класс <xref:System.Object>. Поэтому каждый объект в языке C# получает метод <xref:System.Object.ToString%2A>, который возвращает строковое представление данного объекта. Например, все переменные типа `int` имеют метод `ToString`, который позволяет им возвращать их содержимое в виде строки:  
   
  [!code-csharp[csProgGuideInheritance#37](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#37)]  
@@ -52,5 +52,5 @@ ms.locfileid: "59294981"
 - [string](../../../csharp/language-reference/keywords/string.md)
 - [new](../../../csharp/language-reference/keywords/new.md)
 - [override](../../../csharp/language-reference/keywords/override.md)
-- [виртуальный](../../../csharp/language-reference/keywords/virtual.md)
+- [virtual](../../../csharp/language-reference/keywords/virtual.md)
 - [Типы форматирования](../../../standard/base-types/formatting-types.md)
